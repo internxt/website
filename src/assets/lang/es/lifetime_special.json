@@ -29,25 +29,25 @@
     "description": "Internxt ofrece una oferta para toda la vida de privacidad y tranquilidad."
   },
   "FeatureSection": {
-    "title": "Almacenamiento seguro en la nube con privacidad inigualable",
-    "description": "¿Qué hace especial a Internxt? Somos un equipo unido de profesionales dedicados por completo a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos contra la explotación.",
-    "cta": "Internxt está comprometido con la privacidad",
+    "title": "¿Por qué elegir Internxt para asegurar tus archivos?",
+    "description": "Internxt te devuelve el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, nos aseguramos de que solo tú tengas las llaves de tus datos cifrados. Tomamos todas las medidas necesarias para garantizar que tu información se mantenga segura.",
+    "cta": "",
     "cards": [
       {
-        "title": "Privacidad por diseño",
-        "description": "No almacenamos contraseñas ni datos de usuario, y todos tus datos están encriptados en tránsito y en reposo. Internxt se asegura de que tengas el control total de tus archivos. Tus datos son tu negocio. Protegerlo es el nuestro."
+        "title": "Privacidad mejorada",
+        "description": "Nuestro potente cifrado protege tus datos contra accesos no autorizados. Nunca almacenamos contraseñas; todos tus datos están cifrados durante la transferencia y en reposo."
       },
       {
-        "title": "Seguridad intransigente",
-        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres absolutamente el único con acceso a tus datos."
+        "title": "Control del usuario",
+        "description": "Para protegerte de las violaciones de datos, Internxt protege tus datos haciéndolos inaccesibles para terceros, incluido Internxt."
       },
       {
-        "title": "Código abierto y transparente",
-        "description": "Estamos orgullosos de lo que hacemos, por lo que nuestro código está disponible en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, excepto tus datos."
+        "title": "Acceso multiplataforma",
+        "description": "Trabaja libremente y accede a todos tus archivos en varios dispositivos y sistemas operativos."
       },
       {
-        "title": "Verificado de forma independiente",
-        "description": "Estamos comprometidos con el RGPD y somos 100% seguros, pero no solo confíes en nuestra palabra. Internxt ha sido auditado y verificado de forma independiente por la principal empresa de pruebas de penetración de Europa, Securitum."
+        "title": "Pago único",
+        "description": "Los planes de por vida de Internxt ofrecen acceso seguro a tus archivos para siempre con un solo pago por adelantado. Paga una vez para proteger tus datos de por vida sin tarifas recurrentes."
       }
     ]
   },

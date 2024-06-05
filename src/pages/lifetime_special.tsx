@@ -43,7 +43,7 @@ const LifetimeSpecial = ({
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 
       <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
 
