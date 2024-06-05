@@ -56,7 +56,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
 
       <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="redeem" />
+      <PaymentSection textContent={langJson.PaymentSection} lang={'en'} lifetimeMode="redeem" />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
