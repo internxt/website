@@ -93,7 +93,19 @@ export const HeroSection = ({ textContent }) => {
               <tr className="relative table-auto">
                 {/* Drag hint */}
                 <th className="pointer-events-none align-bottom">
-                  <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-10 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden"></div>
+                  <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-10 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden">
+                    <img
+                      loading="lazy"
+                      className="h-8 w-8 object-cover object-center"
+                      src="/images/comparison/drag_horizontal.webp"
+                      draggable="false"
+                      alt="Drag horizontal"
+                    />
+                    <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-gray-40">
+                      <span>{textContent.tableSection.drag.line1}</span>
+                      <span>{textContent.tableSection.drag.line2}</span>
+                    </div>
+                  </div>
                 </th>
                 <th className="max-w-sm align-bottom">
                   <div className="flex w-screen max-w-sm flex-col items-center justify-center rounded-t-2xl bg-primary/6 px-20 py-12 ring-1 ring-primary/6">

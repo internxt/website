@@ -38,6 +38,10 @@
         "liveSupport": "No",
         "dataTrackers": "Yes (Facebook pixel, TikTok, Linkedin, etc)",
         "privacyLaws": "Claims Swiss privacy laws"
+      },
+      "drag": {
+        "line1": "Drag horizontally",
+        "line2": "to show competitor"
       }
     }
   },
