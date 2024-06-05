@@ -1,6 +1,8 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Fragment } from 'react';
 import bannerText from '@/assets/lang/en/banners.json';
+import { Info } from '@phosphor-icons/react';
+import { Tooltip } from 'react-tooltip';
 
 export const HeroSection = ({ textContent }) => {
   const competitors = [
@@ -36,33 +38,40 @@ export const HeroSection = ({ textContent }) => {
 
   const table = [
     {
-      name: ``,
+      name: `tableComparison`,
       rows: [
         {
+          id: 0,
           title: `${textContent.tableSection.comparisons.codeTransparency}`,
           feature: getFeature('codeTransparency'),
         },
         {
+          id: 1,
           title: `${textContent.tableSection.comparisons.encryption}`,
           feature: getFeature('encryption'),
         },
         {
+          id: 2,
           title: `${textContent.tableSection.comparisons.pricing}`,
           feature: getFeature('pricing'),
         },
         {
+          id: 3,
           title: `${textContent.tableSection.comparisons.securityAudits}`,
           feature: getFeature('securityAudits'),
         },
         {
+          id: 4,
           title: `${textContent.tableSection.comparisons.liveSupport}`,
           feature: getFeature('liveSupport'),
         },
         {
+          id: 5,
           title: `${textContent.tableSection.comparisons.dataTrackers}`,
           feature: getFeature('dataTrackers'),
         },
         {
+          id: 6,
           title: `${textContent.tableSection.comparisons.privacyLaws}`,
           feature: getFeature('privacyLaws'),
         },
@@ -126,13 +135,29 @@ export const HeroSection = ({ textContent }) => {
                           )}
                         </div>
                       </td>
-                      {row.feature.slice(1).map((feature, columnIndex) => (
-                        <td className="h-14 bg-white md:h-16" key={`${row.title}${columnIndex.toString()}`}>
-                          <div className="flex h-full flex-col items-center justify-center">
-                            {typeof feature === 'string' && <span className="text-gray-100">{feature}</span>}
-                          </div>
-                        </td>
-                      ))}
+                      {row.feature.slice(1).map((feature, columnIndex) => {
+                        console.log(row.id);
+                        return (
+                          <td className="h-14 bg-white md:h-16" key={`${row.title}${columnIndex.toString()}`}>
+                            <div className="flex h-full flex-row items-center justify-center gap-3">
+                              {typeof feature === 'string' && <span className="text-gray-100">{feature}</span>}
+                              {row.id === 6 && (
+                                <div className="hidden lg:flex">
+                                  <Tooltip
+                                    variant="dark"
+                                    id="info-icon"
+                                    delayShow={400}
+                                    className="z-40 max-w-xs rounded-lg drop-shadow-md"
+                                  >
+                                    {textContent.tooltip}
+                                  </Tooltip>
+                                  <Info data-tooltip-id="info-icon" className="text-primary" />
+                                </div>
+                              )}
+                            </div>
+                          </td>
+                        );
+                      })}
                     </tr>
                   ))}
                 </tbody>
