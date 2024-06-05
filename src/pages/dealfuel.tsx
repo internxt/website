@@ -36,7 +36,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Techcult"
+      segmentName="DealFuel"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >

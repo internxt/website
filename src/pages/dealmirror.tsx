@@ -35,7 +35,7 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="StackCommerce"
+      segmentName="DealMirror"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >

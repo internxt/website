@@ -36,7 +36,7 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="StackCommerce"
+      segmentName="MightyDeals"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
