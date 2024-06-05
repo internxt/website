@@ -36,6 +36,10 @@ describe('Lifetime page', () => {
     });
   });
 
+  beforeEach(() => {
+    cy.visit('/lifetime');
+  });
+
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
       cy.get(`#planButton${products.lifetime2TB.storage}`).click();

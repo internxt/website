@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
@@ -41,7 +40,7 @@ const PrivacyDirectory = ({
         description={metatags[0].description}
         lang={lang}
       >
-        {!['en', 'de'].includes(lang) ? (
+        {!['en', 'de', 'zh-tw'].includes(lang) ? (
           <>
             <Navbar textContent={navbarLang} lang={lang} cta={['default']} darkMode />
             <HeroSection

@@ -26,25 +26,25 @@
     "description": "Internxt propose une offre sur son service de cloud privé."
   },
   "FeatureSection": {
-    "title": "Stockage cloud sécurisé avec une confidentialité inégalée",
-    "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiée à votre protection en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données.",
-    "cta": " L'engagement d'Internxt en matière de confidentialité ",
+    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers?",
+    "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul ayez les clés de vos données cryptées. Nous prenons toutes les mesures nécessaires pour garantir la sécurité de vos informations.",
+    "cta": "",
     "cards": [
       {
-        "title": " Privé par conception ",
-        "description": "Nous ne stockons pas les mots de passe ou les données des utilisateurs et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger, c'est notre affaire."
+        "title": "Confidentialité renforcée",
+        "description": "Notre puissant chiffrement protège vos données contre tout accès non autorisé. Nous ne stockons jamais les mots de passe; toutes vos données sont cryptées lors de leur transfert et lorsqu'elles sont stockées."
       },
       {
-        "title": "Sécurité sans compromis",
-        "description": "Vos fichiers sont chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance nulle, vous êtes le seul à avoir accès à vos données."
+        "title": "Contrôle de l'utilisateur",
+        "description": "Pour vous protéger contre les violations de données, Internxt rend vos données inaccessibles aux tiers, y compris à Internxt."
       },
       {
-        "title": "Open source et transparent",
-        "description": "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien d'autre à cacher que vos données."
+        "title": "Accès multiplateforme",
+        "description": "Travaillez librement et accédez à tous vos fichiers sur divers appareils et systèmes d'exploitation."
       },
       {
-        "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+        "title": "Paiement unique",
+        "description": "Les plans à vie d'Internxt offrent un accès sécurisé à vos fichiers pour toujours avec un paiement unique et anticipé. Payez une fois pour sécuriser vos données à vie sans frais récurrents."
       }
     ]
   },

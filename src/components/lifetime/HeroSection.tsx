@@ -9,10 +9,16 @@ interface HeroSectionProps {
   hideTimer?: boolean;
   isCelebrationPage?: boolean;
   previewImg?: string;
-  bgImage: string;
+  bgImage?: string;
 }
 
-const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bgImage }: HeroSectionProps) => {
+const HeroSection = ({
+  textContent,
+  hideTimer,
+  isCelebrationPage,
+  previewImg,
+  bgImage = '/images/lifetime/celebration/normal-bg.png',
+}: HeroSectionProps) => {
   const imageMobile = isCelebrationPage
     ? '/images/lifetime/celebration/image_mobile.webp'
     : '/images/lifetime/image_mobile.webp';
@@ -65,7 +71,7 @@ const HeroSection = ({ textContent, hideTimer, isCelebrationPage, previewImg, bg
                 <Image src={'/images/lifetime/celebration/confetti.svg'} alt="Confetti" width={464} height={603} />
               </div>
             ) : null}
-            <div className="flex h-[580px]">
+            <div className="hidden h-[580px] lg:flex">
               <Animation previewImg={previewImg} />
             </div>
           </div>

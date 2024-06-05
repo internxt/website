@@ -1,45 +1,30 @@
 import { useEffect, useState } from 'react';
 
-import HeroSection from '@/components/dealfuel/HeroSection';
+import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
-import GetLifetimeSection from '@/components/dealfuel/GetLifetimeSection';
-import Footer from '@/components/layout/Footer';
+import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PaymentSection from '@/components/dealfuel/PaymentSection';
+import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
-import CtaSection from '@/components/dealfuel/CtaSection';
+import CtaSection from '@/components/lifetime/CtaSection';
 
-import axios from 'axios';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
+import moment from 'moment';
+import Link from 'next/link';
 
 const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const [country, setCountry] = useState('ES');
+  const year = moment().format('YYYY');
   const [openDialog, setOpenDialog] = useState(false);
-
-  async function getCountryCode() {
-    const countryCode = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
-    return countryCode;
-  }
-
-  useEffect(() => {
-    getCountryCode()
-      .then((res) => {
-        setCountry(res.data.country);
-      })
-      .catch(() => {
-        //NO OP
-      });
-  }, []);
 
   useEffect(() => {
     //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('2TB');
-    const TB5Button = document.getElementById('5TB');
-    const TB10Buton = document.getElementById('10TB');
-    [TB2Button, TB5Button, TB10Buton].forEach((button) =>
+    const TB2Button = document.getElementById('planButton2TB');
+    const TB5Button = document.getElementById('planButton5TB');
+    const TB10Button = document.getElementById('planButton10TB');
+    [TB2Button, TB5Button, TB10Button].forEach((button) =>
       button?.addEventListener('click', () => {
         setOpenDialog(true);
       }),
@@ -50,7 +35,7 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="StackCommerce"
+      segmentName="DealMirror"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
@@ -66,19 +51,26 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
         </div>
       ) : null}
 
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection hideTimer={true} lang={lang} textContent={langJson.HeroSection} />
+      <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} country={country} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="redeem" />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 
       <CtaSection textContent={langJson.CtaSection} />
 
-      <Footer textContent={footerLang} lang={deviceLang} hideNewsletter />
+      <div className="flex w-full flex-row items-center justify-center space-x-4 py-16">
+        <Link href="/" locale={lang} className="flex flex-shrink-0">
+          <img loading="lazy" src={`../../logos/internxt/cool-gray-90.svg`} alt="Internxt logo" />
+        </Link>
+        <p className={`text-xs text-cool-gray-60`}>
+          {footerLang.FooterSection.copyright.line1 + year + footerLang.FooterSection.copyright.line2}
+        </p>
+      </div>
     </Layout>
   );
 };

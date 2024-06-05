@@ -5,13 +5,15 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import { CouponType } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 
+export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
+
 interface PaymentSectionProps {
   lang: string;
   textContent: any;
   discount?: number;
   couponCode?: CouponType;
   percent?: string;
-  lifetimeMode?: 'celebration' | 'custom-disc' | 'normal';
+  lifetimeMode?: LifetimeMode;
 }
 
 const PaymentSection: React.FC<PaymentSectionProps> = ({
@@ -50,7 +52,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
-              {lifetimeMode !== 'normal' ? (
+              {lifetimeMode !== 'normal' && lifetimeMode !== 'redeem' ? (
                 <>
                   <span className="text-primary">
                     {formatText(textContent.title.blueText, {

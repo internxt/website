@@ -1,7 +1,8 @@
-import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
 import { Fire, Star } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
+import { LifetimeMode } from '../lifetime/PaymentSection';
+import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 
 export interface PriceCardProps {
   planType: string;
@@ -18,6 +19,7 @@ export interface PriceCardProps {
   isIframe?: boolean;
   isOffer?: boolean;
   isLifetimePage?: boolean;
+  lifetimeMode?: LifetimeMode;
 }
 
 const STORAGE_LEVELS = {
@@ -41,6 +43,7 @@ export default function PriceCard({
   isIframe,
   isOffer,
   isLifetimePage,
+  lifetimeMode,
 }: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -49,6 +52,30 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
+  function onButtonClicked() {
+    if (lifetimeMode === 'redeem') return;
+
+    if (cta[1] === 'Free plan') {
+      goToSignUpURL();
+    } else {
+      if (isIframe) {
+        checkoutForPcComponentes({
+          planId: cta[1],
+          mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          currency: currencyValue ?? 'eur',
+          couponCode: coupon ?? undefined,
+        });
+      } else {
+        checkout({
+          planId: cta[1],
+          mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          currency: currencyValue ?? 'eur',
+          couponCode: coupon ?? undefined,
+        });
+      }
+    }
+  }
 
   const priceForSubscriptions = (product) => {
     const priceWithDiscount = Number((product * 0.25).toFixed(2));
@@ -129,34 +156,14 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => {
-            if (cta[1] === 'Free plan') {
-              goToSignUpURL();
-            } else {
-              if (isIframe) {
-                checkoutForPcComponentes({
-                  planId: cta[1],
-                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                  currency: currencyValue ?? 'eur',
-                  couponCode: coupon ?? undefined,
-                });
-              } else {
-                checkout({
-                  planId: cta[1],
-                  mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-                  currency: currencyValue ?? 'eur',
-                  couponCode: coupon ?? undefined,
-                });
-              }
-            }
-          }}
+          onClick={onButtonClicked}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
               : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
-          <p className="">{contentText.cta.selectPlan}</p>
+          <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
