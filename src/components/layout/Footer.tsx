@@ -334,6 +334,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/pcloud-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.pCloudAlternative}
+                    </Link>
+
+                    <Link
                       href="/privacy-directory"
                       locale={lang}
                       passHref
@@ -707,28 +716,54 @@ export default function Footer({
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                         target="_blank"
                         rel="noreferrer"
+                        className="hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.blog}
                       </a>
+                      <Link
+                        href="/cloud-storage-comparison"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.comparison}
+                      </Link>
 
-                      <Link href="/privacy-directory" locale={lang} passHref>
+                      <Link
+                        href="/pcloud-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.pCloudAlternative}
+                      </Link>
+
+                      <Link
+                        href="/privacy-directory"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[265px] hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </Link>
 
-                      <Link href="/cyber-awareness" locale={lang} passHref>
+                      <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.resources.cyberAwareness}
                       </Link>
-
-                      <Link href="/what-does-google-know-about-me" locale={lang} passHref>
+                      <Link
+                        href="/what-does-google-know-about-me"
+                        locale={lang}
+                        passHref
+                        className="flex items-center hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>
-
                       {lang === 'en' && (
                         <Link
                           href="/internxt-library"
                           locale={lang}
                           passHref
-                          className="flex items-center hover:text-primary"
+                          className="flex flex-row items-center hover:text-primary"
                         >
                           {textContent.FooterSection.sections.resources.inxtLibrary}
                         </Link>

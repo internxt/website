@@ -5,7 +5,8 @@
       "line2": "pCloud alternative"
     },
     "description": "Worried about pCloud’s hidden source code and extra cost for encryption? Are you certain pCloud doesn’t store your password or access your files? Internxt offers free, built-in encryption and open-source transparency.",
-    "cta": "Try Internxt for free"
+    "useCode": "Use code SPECIAL75 at checkout for 75% off any Internxt plan!",
+    "cta": "Choose plan"
   },
   "HeroSection": {
     "title": "Internxt vs. pCloud comparison",
@@ -176,6 +177,10 @@
       "title": "Switch to Internxt for a more secure, open, cost-effective cloud storage solution",
       "cta": "Try Internxt for free"
     }
+  },
+  "UseCodeSection": {
+    "title": "Use code SPECIAL75 for 75% off secure, encrypted cloud storage",
+    "cta": "Choose plan"
   },
   "isPCloudSafeSection": {
     "title": "Is pCloud safe?",
