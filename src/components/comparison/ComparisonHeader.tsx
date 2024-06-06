@@ -1,6 +1,16 @@
 import Link from 'next/link';
 import Header from '../shared/Header';
 
+const CodeComponent = ({ textContent }) => (
+  <div className="flex flex-col items-center gap-4 text-center text-xl font-bold md:flex-row">
+    <p>
+      {textContent.line1}
+      <label className="mx-4 rounded-full border-2 border-white px-3 py-1">{textContent.code}</label>
+      {textContent.line2}
+    </p>
+  </div>
+);
+
 export const ComparisonHeader = ({ textContent, redirectUrl }) => (
   <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 pt-[130px] text-white">
     <div className="relative z-10 mb-16 flex flex-col items-center justify-center space-y-4 md:mb-8">
@@ -10,7 +20,7 @@ export const ComparisonHeader = ({ textContent, redirectUrl }) => (
       </Header>
 
       <h2 className="max-w-3xl text-center text-xl">{textContent.description}</h2>
-      {textContent.useCode ? <p className="text-center text-xl font-bold">{textContent.useCode}</p> : undefined}
+      {textContent.useCode ? <CodeComponent textContent={textContent.useCode} /> : undefined}
     </div>
 
     <div className="relative z-10 flex flex-col items-center justify-center">

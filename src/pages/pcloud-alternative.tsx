@@ -2,7 +2,7 @@ import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
 import { IsPCloudSafeSection } from '@/components/comparison/pCloud-alternative/IsPCloudSafeSection';
 import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
-import { UseCouponSection } from '@/components/comparison/pCloud-alternative/UseCouponSection';
+import { CouponSection } from '@/components/comparison/pCloud-alternative/CouponSection';
 import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/MinimalFooter';
@@ -24,7 +24,7 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
       <TablesSection textContent={langJson.TablesSection} />
 
-      <UseCouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
+      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
 
       <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
 
