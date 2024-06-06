@@ -11,6 +11,19 @@ import TopBanner from '@/components/banners/TopBanner';
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 const GET_IP_INFO_API = process.env.NEXT_PUBLIC_IP_INFO as string;
 
+const DEFAULT_SNIGEL_BANNERS = [
+  'incontent_1',
+  'incontent_2',
+  'incontent_3',
+  'incontent_4',
+  'adhesive',
+  'top_leaderboard',
+];
+
+const CUSTOM_SNIGEL_BANNERS = ['sidebar_right', 'sidebar_left'];
+
+const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-checker', '/password-generator'];
+
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
   es: 'Internxt es un servicio seguro de almacenamiento en la nube basado en el cifrado y la privacidad absoluta. El conjunto de servicios de código abierto de Internxt protege tu privacidad. Internxt Drive, Photos, Send y mucho más.',
@@ -78,6 +91,10 @@ LayoutProps) {
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const shouldShowBanner = !excludedPaths.includes(pathname);
+
+  const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
+    ? [...DEFAULT_SNIGEL_BANNERS, ...CUSTOM_SNIGEL_BANNERS]
+    : DEFAULT_SNIGEL_BANNERS;
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
@@ -215,7 +232,7 @@ LayoutProps) {
             window.snigelPubConf = {
               "adengine": {
                 "activeAdUnits": (function() {
-                  var adUnits = ["incontent_1", "incontent_2", "incontent_3", "incontent_4", "adhesive", "sidebar_right", "sidebar_left", "top_leaderboard"];
+                  var adUnits = ${snigelBanners};
                   if (window.innerWidth <= 768) {
                     adUnits = adUnits.filter(function(unit) {
                       return unit !== "adhesive" && unit !== "incontent_4";
