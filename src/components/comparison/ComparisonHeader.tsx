@@ -3,7 +3,7 @@ import Header from '../shared/Header';
 
 const CodeComponent = ({ textContent }) => (
   <div className="flex flex-col items-center gap-4 text-center text-xl font-bold md:flex-row">
-    <p>
+    <p className="leading-snug">
       {textContent.line1}
       <label className="mx-4 rounded-full border-2 border-white px-3 py-1">{textContent.code}</label>
       {textContent.line2}
