@@ -6,12 +6,22 @@ interface UseCouponSectionProps {
   redirectUrl: string;
 }
 
-export const UseCouponSection = ({ textContent, redirectUrl }: UseCouponSectionProps) => {
+const CodeComponent = ({ textContent }) => (
+  <div className="flex flex-col items-center gap-4 text-center text-3xl font-semibold leading-tight text-white md:flex-row md:text-5xl">
+    <p>
+      {textContent.line1}
+      <label className="mx-4 rounded-full border-2 border-white px-3 py-1">{textContent.code}</label>
+      {textContent.line2}
+    </p>
+  </div>
+);
+
+export const CouponSection = ({ textContent, redirectUrl }: UseCouponSectionProps) => {
   return (
     <section className="flex flex-col bg-primary-dark py-20 px-5">
       <div className="flex flex-col items-center gap-12 text-center">
         <div className="flex max-w-[810px] flex-col items-center gap-8 text-center">
-          <p className="text-3xl font-semibold text-white md:text-5xl">{textContent.title}</p>
+          <CodeComponent textContent={textContent.title} />
           <Link
             href={redirectUrl}
             target="_blank"

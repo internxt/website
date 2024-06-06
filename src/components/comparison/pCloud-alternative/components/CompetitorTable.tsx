@@ -15,7 +15,7 @@ export const CompetitorTable = ({ textContent }) => (
               <p className="text-gray-100">{item.description}</p>
             </div>
           </div>
-          <div className="mx-auto flex h-full w-max flex-col">
+          <div className="mx-auto flex h-full w-max flex-col justify-center">
             <div className="flex ">
               <X size={32} className="text-red-dark" weight="bold" />
             </div>
