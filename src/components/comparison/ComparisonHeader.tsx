@@ -10,6 +10,7 @@ export const ComparisonHeader = ({ textContent, redirectUrl }) => (
       </Header>
 
       <h2 className="max-w-3xl text-center text-xl">{textContent.description}</h2>
+      {textContent.useCode ? <p className="text-center text-xl font-bold">{textContent.useCode}</p> : undefined}
     </div>
 
     <div className="relative z-10 flex flex-col items-center justify-center">

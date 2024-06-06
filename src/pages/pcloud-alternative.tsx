@@ -2,6 +2,7 @@ import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
 import { IsPCloudSafeSection } from '@/components/comparison/pCloud-alternative/IsPCloudSafeSection';
 import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
+import { UseCouponSection } from '@/components/comparison/pCloud-alternative/UseCouponSection';
 import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/MinimalFooter';
@@ -17,11 +18,13 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={SIGNUP_DRIVE_WEB} />
+      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
 
       <HeroSection textContent={langJson.HeroSection} />
 
       <TablesSection textContent={langJson.TablesSection} />
+
+      <UseCouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
 
       <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
 
