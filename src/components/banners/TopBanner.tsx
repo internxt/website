@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
-import { VPN_CHROME_WEB_STORE } from '@/constants';
 import Link from 'next/link';
 
 const TopBanner = ({ isBannerFixed }) => {
@@ -25,7 +24,7 @@ const TopBanner = ({ isBannerFixed }) => {
             </p>
           </div>
           <Link
-            href={VPN_CHROME_WEB_STORE}
+            href={'/lifetime'}
             target="_blank"
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
@@ -40,7 +39,7 @@ const TopBanner = ({ isBannerFixed }) => {
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
-          <Link className="flex flex-col items-center justify-center" href={VPN_CHROME_WEB_STORE} target="_blank">
+          <Link className="flex flex-col items-center justify-center" href={'/lifetime'} target="_blank">
             <p className="font-normal">
               <span className="font-semibold">{textContent.title.boldText}</span>
               {textContent.title.normalText}

@@ -9,7 +9,7 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
+import LifetimeBanner from '@/components/banners/LifetimeBanner';
 
 const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
@@ -25,6 +25,7 @@ const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime_special',
   '/pccomponentes-products',
   '/lifetime/celebration',
+  '/pcloud-alternative',
 ];
 
 const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
@@ -34,8 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const pathname = router.pathname;
   const lang = router.locale;
 
-  const shouldShowBanner = false;
-  // !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const hideIntercomButton = excludeIntercomPaths.includes(pathname);
 
   useEffect(() => {
@@ -107,7 +107,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? (
             <>
               {/* <BottomBanner /> */}
-              <FeaturesBanner />
+              <LifetimeBanner />
             </>
           ) : undefined}
         </div>
