@@ -232,7 +232,7 @@ LayoutProps) {
             window.snigelPubConf = {
               "adengine": {
                 "activeAdUnits": (function() {
-                  var adUnits = ${snigelBanners};
+                  var adUnits = ${JSON.stringify(snigelBanners)};
                   if (window.innerWidth <= 768) {
                     adUnits = adUnits.filter(function(unit) {
                       return unit !== "adhesive" && unit !== "incontent_4";
