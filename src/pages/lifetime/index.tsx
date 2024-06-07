@@ -7,13 +7,11 @@ import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/MinimalFooter';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const discount = 0.25;
-  const year = moment().format('YYYY');
 
   return (
     <Layout
@@ -27,6 +25,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
+        dt="2024-06-14T00:00:00"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />

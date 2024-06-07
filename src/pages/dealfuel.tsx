@@ -10,9 +10,9 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Link from 'next/link';
 import moment from 'moment';
 import HeroSection from '@/components/lifetime/HeroSection';
+import { MinimalFooter } from '@/components/layout/MinimalFooter';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -61,14 +61,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
 
       <CtaSection textContent={langJson.CtaSection} />
 
-      <div className="flex w-full flex-row items-center justify-center space-x-4 py-16">
-        <Link href="/" locale={lang} className="flex flex-shrink-0">
-          <img loading="lazy" src={`../../logos/internxt/cool-gray-90.svg`} alt="Internxt logo" />
-        </Link>
-        <p className={`text-xs text-cool-gray-60`}>
-          {footerLang.FooterSection.copyright.line1 + year + footerLang.FooterSection.copyright.line2}
-        </p>
-      </div>
+      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
     </Layout>
   );
 };

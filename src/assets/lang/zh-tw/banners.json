@@ -128,8 +128,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "高達 75% 折扣。",
-      "normalText": "感受安全雲存儲的力量！ ",
+      "boldText": "終身計劃最高可享70%優惠！",
+      "normalText": "永遠保護您的文件！",
       "cta": "選擇計劃"
     }
   },
@@ -140,4 +140,3 @@
     "guarantee": "30 天退款保證"
   }
 }
-
