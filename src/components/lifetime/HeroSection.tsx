@@ -7,6 +7,7 @@ import Animation from '../home/components/Animation';
 interface HeroSectionProps {
   textContent: any;
   hideTimer?: boolean;
+  dt?: string;
   isCelebrationPage?: boolean;
   previewImg?: string;
   bgImage?: string;
@@ -18,6 +19,7 @@ const HeroSection = ({
   isCelebrationPage,
   previewImg,
   bgImage = '/images/lifetime/celebration/normal-bg.png',
+  dt,
 }: HeroSectionProps) => {
   const imageMobile = isCelebrationPage
     ? '/images/lifetime/celebration/image_mobile.webp'
@@ -37,7 +39,7 @@ const HeroSection = ({
               {!hideTimer && (
                 <div className="flex flex-row items-center rounded-lg py-2">
                   <Alarm size={32} className="mr-4 text-white" />
-                  <Countdown textColor={'white'} />
+                  <Countdown textColor={'white'} dt={dt} />
                 </div>
               )}
               <div className="flex px-5 lg:hidden">

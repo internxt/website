@@ -7,22 +7,17 @@ import moment from 'moment';
 
 import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
+import {
+  COOKIE_DOMAIN,
+  SNIGEL_BANNERS,
+  EXCLUDED_PATHS_FOR_BANNER,
+  INCLUDED_PATHS_FOR_SNIGEL,
+  INTERNXT_URL,
+  PATHS_WITH_CUSTOM_SNIGEL_BANNERS,
+} from '@/constants';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 const GET_IP_INFO_API = process.env.NEXT_PUBLIC_IP_INFO as string;
-
-const DEFAULT_SNIGEL_BANNERS = [
-  'incontent_1',
-  'incontent_2',
-  'incontent_3',
-  'incontent_4',
-  'adhesive',
-  'top_leaderboard',
-];
-
-const CUSTOM_SNIGEL_BANNERS = ['sidebar_right', 'sidebar_left'];
-
-const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-checker', '/password-generator'];
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -43,35 +38,6 @@ interface LayoutProps {
   readonly lang?: string;
 }
 
-const INTERNXT_URL = 'https://internxt.com';
-const COOKIE_DOMAIN = 'internxt.com';
-
-const INCLUDED_PATHS_FOR_SNIGEL = [
-  '/temporary-email',
-  '/virus-scanner',
-  '/password-generator',
-  '/password-checker',
-  '/byte-converter',
-  '/file-converter',
-  '/file-converter/[filename]',
-];
-
-const excludedPaths = [
-  '/pricing',
-  '/lifetime',
-  '/partner-discount',
-  '/techradar-discount',
-  '/stackcommerce',
-  '/dealfuel',
-  '/mightydeals',
-  '/temporary-email',
-  '/locker',
-  '/startpage',
-  '/oystervpn',
-  '/pccomponentes-products',
-  '/lifetime_special',
-  '/lifetime/celebration',
-];
 const imageLang = ['ES', 'FR', 'EN'];
 
 export default function Layout({
@@ -90,11 +56,11 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !excludedPaths.includes(pathname);
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
 
   const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
-    ? [...DEFAULT_SNIGEL_BANNERS, ...CUSTOM_SNIGEL_BANNERS]
-    : DEFAULT_SNIGEL_BANNERS;
+    ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
+    : SNIGEL_BANNERS.DEFAULT_BANNERS;
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';

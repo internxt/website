@@ -10,25 +10,9 @@ import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import LifetimeBanner from '@/components/banners/LifetimeBanner';
+import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 
-const EXCLUDED_PATHS_FOR_BANNER = [
-  '/lifetime',
-  '/pricing',
-  '/partner-discount',
-  '/techradar-discount',
-  '/stackcommerce',
-  '/dealfuel',
-  '/temporary-email',
-  '/locker',
-  '/startpage',
-  '/oystervpn',
-  '/lifetime_special',
-  '/pccomponentes-products',
-  '/lifetime/celebration',
-  '/pcloud-alternative',
-];
-
-const excludeIntercomPaths = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
+const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -36,7 +20,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const hideIntercomButton = excludeIntercomPaths.includes(pathname);
+  const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
 
   useEffect(() => {
     const handleRouteChange = (url) => {
