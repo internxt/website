@@ -15,11 +15,12 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Risparmia 75%",
-      "title": "Proteggi la tua identità online per tutta la vita",
-      "subtitle": "Abbonati e risparmia con Internxt.",
-      "cta": "Scegli un piano",
-      "guarantee": "Garanzia soddisfatti o rimborsati entro 30 giorni",
-      "lastCta": "*L'offerta è valida solo per gli account gratuiti o i nuovi clienti"
+      "title": "Ottieni grandi risparmi per la tua privacy",
+      "subtitle": "L'obiettivo d'oro della privacy",
+      "cta": "Scegli il piano",
+      "cta2": "Risparmia il 75%",
+      "guarantee": "Garanzia di rimborso di 30 giorni",
+      "lastCta": "*L'offerta è per account gratuiti o nuovi clienti"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",

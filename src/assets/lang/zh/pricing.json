@@ -15,12 +15,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省 75%",
-      "title": "终身保护您的在线身份",
-      "subtitle": "订阅 Internxt 并节省。",
-      "cta": "选择套餐",
-      "guarantee": "30 天退款保证",
-      "lastCta": "*此优惠适用于免费账户或新客户"
+      "label": "节省75%",
+      "title": "为您的隐私获得大幅节省",
+      "subtitle": "隐私的黄金目标",
+      "cta": "选择计划",
+      "cta2": "节省75%",
+      "guarantee": "30天退款保证",
+      "lastCta": "*优惠适用于免费账户或新客户"
     },
     "features": {
       "endToEnd": "端到端加密",

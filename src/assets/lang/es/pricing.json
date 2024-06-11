@@ -14,14 +14,14 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 75%",
-      "title": "Asegura tu identidad en línea de por vida",
-      "subtitle": "Suscríbete y ahorra con Internxt.",
-      "cta": "Elegir plan",
-      "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes"
+      "label": "Spare 75%",
+      "title": "Erzielen Sie große Einsparungen für Ihre Privatsphäre",
+      "subtitle": "Das goldene Ziel der Privatsphäre",
+      "cta": "Plan wählen",
+      "cta2": "75% RABATT erhalten",
+      "guarantee": "30-tägige Geld-zurück-Garantie",
+      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden"
     },
-
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",
       "openSource": "Código abierto y auditado",

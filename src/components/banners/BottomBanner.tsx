@@ -33,17 +33,19 @@ const BottomBanner = () => {
       case 'en':
         return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: '¡Tenemos un buen presentimiento sobre esta oferta!' };
+        return { title1: 'Ahorra un 75%', title2: '¡Marca con seguridad y protege tus datos!' };
       case 'ru':
-        return { title1: 'Экономия 75%', title2: 'У нас хорошее чувство от этой сделки!' };
+        return { title1: 'Сэкономьте 75%', title2: 'Начните свой путь к приватности!' };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Nous avons un bon pressentiment concernant cette offre !' };
+        return { title1: 'Économisez 75%', title2: 'Commencez votre voyage vers la confidentialité!' };
       case 'it':
-        return { title1: 'Risparmia il 75%', title2: 'Abbiamo un buon presentimento su questa offerta!' };
+        return { title1: 'Risparmia 75%', title2: 'Inizia il tuo viaggio verso la privacy!' };
       case 'zh':
-        return { title1: '省 75%', title2: '我们对这个交易有好感！' };
+        return { title1: '节省75%', title2: '开始您的隐私之旅！' };
+      case 'zh-tw':
+        return { title1: '節省75%', title2: '開始您的隱私之旅！' };
       case 'de':
-        return { title1: 'Sparen Sie 75%', title2: 'Wir haben ein gutes Gefühl bei diesem Angebot!' };
+        return { title1: 'Spare 75%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
       default:
         return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
     }
@@ -103,6 +105,7 @@ const BottomBanner = () => {
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
+                handleClose();
               }}
             >
               {ctaText()}
