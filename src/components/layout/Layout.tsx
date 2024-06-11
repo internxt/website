@@ -10,7 +10,6 @@ import TopBanner from '@/components/banners/TopBanner';
 import {
   COOKIE_DOMAIN,
   SNIGEL_BANNERS,
-  EXCLUDED_PATHS_FOR_BANNER,
   INCLUDED_PATHS_FOR_SNIGEL,
   INTERNXT_URL,
   PATHS_WITH_CUSTOM_SNIGEL_BANNERS,
@@ -56,7 +55,8 @@ LayoutProps) {
   const router = useRouter();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBanner = false;
+  // !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
 
   const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
     ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
