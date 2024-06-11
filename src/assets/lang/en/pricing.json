@@ -15,12 +15,11 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Save 75%",
-      "title": "Score big savings for your privacy",
-      "subtitle": "The golden goal of privacy",
-      "cta": "Choose plan",
-      "cta2": "Score 75% OFF",
+      "title": "Protect your data from the dark side",
+      "subtitle": "Subscribe and save with Internxt.",
+      "cta": "Get 75% OFF now",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers"
+      "lastCta": ""
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
