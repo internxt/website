@@ -106,6 +106,10 @@ export enum CouponType {
   starWars5TBLifetime = 'STAR_WARS_5TB_LIFETIME',
   starWars10TBLifetime = 'STAR_WARS_10TB_LIFETIME',
   IndependenceDayItaly = 'INDEPENDENCE_DAY_ITALY_COUPON',
+  euro2024Sub = 'EURO_2024_SUB_COUPON',
+  euro2024twoTB = 'EURO_2024_2TB_COUPON',
+  euro2024fiveTB = 'EURO_2024_5TB_COUPON',
+  euro2024TenTB = 'EURO_2024_10TB_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

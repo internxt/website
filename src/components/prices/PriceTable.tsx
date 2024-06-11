@@ -1,16 +1,17 @@
 /* eslint-disable max-len */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 import PriceCard from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { Interval } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
+import { CouponType } from '@/lib/types';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -21,13 +22,29 @@ interface PriceTableProps {
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
+const LIFETIME_PRICES = {
+  usd: {
+    '2TB': 299,
+    '5TB': 499,
+    '10TB': 799,
+  },
+  eur: {
+    '2TB': 249,
+    '5TB': 449,
+    '10TB': 749,
+  },
+};
+
 export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
 
-  const { products, currency, currencyValue, loadingCards } = usePricing({});
+  const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
+    couponCode: CouponType.euro2024Sub,
+  });
 
+  const [lifetimeCoupons, setLifetimeCoupons] = useState();
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
 
@@ -36,6 +53,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
   const individualPlansTitle = isLifetime ? contentText.planTitles.lifetime : contentText.planTitles.individuals;
+
+  useEffect(() => {
+    stripeService.getLifetimeCoupons().then(setLifetimeCoupons);
+  }, []);
 
   const features = [
     {
@@ -181,18 +202,19 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={product.price}
+                  price={Number(product.price * 0.25).toFixed(2) as unknown as number}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
-                    billingFrequency === Interval.Year
-                      ? products.individuals?.[Interval.Month][product.storage].price * 12
-                      : undefined
+                    // billingFrequency === Interval.Year
+                    //   ? products.individuals?.[Interval.Month][product.storage].price * 12
+                    //   : undefined
+                    product.price
                   }
                   lang={lang}
                   currency={currency}
-                  coupon={undefined}
+                  coupon={coupon}
                   currencyValue={currencyValue}
                 />
               ))}
@@ -217,15 +239,15 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={product.price.split('.')[0]}
-                    priceBefore={undefined}
+                    price={LIFETIME_PRICES[currencyValue][product.storage]}
+                    priceBefore={product.price.split('.')[0]}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '10TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={undefined}
+                    coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                   />
                 );
               })}
