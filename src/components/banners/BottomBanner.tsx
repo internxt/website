@@ -31,7 +31,7 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'We’ve got a good feeling about this deal!' };
+        return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
       case 'es':
         return { title1: 'Ahorra un 75%', title2: '¡Tenemos un buen presentimiento sobre esta oferta!' };
       case 'ru':
@@ -73,7 +73,11 @@ const BottomBanner = () => {
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
         shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg bg-gray-100 px-5 lg:px-0`}
+      } overflow-hidden rounded-lg px-5 lg:px-0`}
+      style={{
+        backgroundImage: "url('/images/home/campaigns/grass.png')",
+        // filter: 'blur(24px)'
+      }}
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
@@ -84,7 +88,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/star-wars/internxt_starwars_promotion_banner.webp"
+              src="/images/home/campaigns/banner.webp"
               width={178}
               height={70}
               className="flex w-full object-fill"
