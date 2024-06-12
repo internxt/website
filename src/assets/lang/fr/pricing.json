@@ -15,11 +15,12 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Économisez 75%",
-      "title": "Protégez votre identité en ligne pour toute la vie",
-      "subtitle": "Abonnez-vous et économisez avec Internxt.",
-      "cta": "Choisissez un plan",
+      "title": "Profitez de grandes économies pour votre confidentialité",
+      "subtitle": "L'objectif en or de la confidentialité",
+      "cta": "Choisir un plan",
+      "cta2": "Économisez 75%",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*L'offre concerne les comptes gratuits ou les nouveaux clients"
+      "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients"
     },
     "features": {
       "endToEnd": "Chiffré de bout en bout",

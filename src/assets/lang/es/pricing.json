@@ -14,14 +14,14 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 75%",
-      "title": "Asegura tu identidad en línea de por vida",
-      "subtitle": "Suscríbete y ahorra con Internxt.",
-      "cta": "Elegir plan",
+      "label": "Ahorra 75%",
+      "title": "Protege tu datos y tu privacidad",
+      "subtitle": "Defiende tu privacidad como un campeón",
+      "cta": "Elige un plan",
+      "cta2": "Obtén un 75% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes"
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
     },
-
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",
       "openSource": "Código abierto y auditado",

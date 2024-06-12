@@ -14,11 +14,14 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full flex-col overflow-hidden rounded-[32px] bg-primary bg-[url('/images/star-wars/bg.webp')] pt-10 md:hidden`}
+      } w-full max-w-md flex-col overflow-hidden rounded-[32px] pt-10 md:hidden`}
+      style={{
+        backgroundImage: "url('/images/campaigns/euro/grass.webp')",
+      }}
     >
-      <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
-        <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white py-2 px-5">
-          <p className="text-4xl font-bold text-primary">{textContent.tableSection.ctaBanner.label}</p>
+      <div className="flex w-full flex-col items-center justify-center space-y-6 pb-5 text-center text-white">
+        <div className="flex items-center gap-1.5 rounded-xl bg-gray-100 py-2 px-5 ring-4 ring-primary">
+          <p className="text-4xl font-bold text-white">{textContent.tableSection.ctaBanner.label}</p>
         </div>
         <div className="flex w-full max-w-[253px] flex-col space-y-4">
           <p className="text-4xl font-bold text-white">{textContent.tableSection.ctaBanner.title}</p>
@@ -28,25 +31,26 @@ export const HomePageBannerForMobile = () => {
             onClick={() => {
               router.push('/pricing');
             }}
-            className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-gray-100 hover:bg-primary"
+            className="flex w-max items-center rounded-lg bg-primary px-3.5 py-1.5 text-lg font-medium text-white hover:bg-primary"
           >
             {textContent.tableSection.ctaBanner.cta}
           </button>
           <div className="flex flex-row items-center space-x-3 text-white">
-            <CheckCircle size={24} className="text-white" />
+            <CheckCircle size={24} className="text-primary" weight="fill" />
             <p className="text-sm font-medium">{textContent.tableSection.ctaBanner.guarantee}</p>
           </div>
         </div>
       </div>
-      <div className="flex h-full flex-col">
-        <Image
-          src="/images/star-wars/internxt_starwars_promotion_mobile.webp"
-          loading="lazy"
-          width={377}
-          height={190}
-          alt="Spring sale image"
-          className="object-cover"
-        />
+      <div className="flex h-full w-full flex-col">
+        <div className="flex h-full w-full flex-col">
+          <Image
+            src="/images/campaigns/euro/mobile.webp"
+            width={377}
+            height={190}
+            alt="Euro 2024 image"
+            className="flex h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   );

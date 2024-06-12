@@ -14,12 +14,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "節省 75%",
-      "title": "保護您的數據免受黑暗面的威脅",
-      "subtitle": "訂閱 Internxt 並節省費用。",
-      "cta": "立即享受 75% 折扣",
-      "guarantee": "30 天退款保證",
-      "lastCta": ""
+      "label": "節省75%",
+      "title": "為您的隱私獲得大幅節省",
+      "subtitle": "隱私的黃金目標",
+      "cta": "選擇計劃",
+      "cta2": "節省75%",
+      "guarantee": "30天退款保證",
+      "lastCta": "*優惠適用於免費帳戶或新客戶"
     },
     "features": {
       "endToEnd": "端到端加密",
@@ -99,66 +100,66 @@
       }
     ]
   },
-    "SchemaMarkupQuestions": {
-      "faq": [
-        {
-          "question": "Internxt 是否有終身計劃？",
-          "answer": [
-            "我們提供從我們的網站購買的終身計劃。這些計劃讓您終身訪問我們的計劃，一次性付款可獲得高達 10TB 的存儲空間。"
-          ]
-        },
-        {
-          "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
-          "answer": [
-            "是的，您可以向您的 Internxt 終身會員賬戶添加任意多的存儲空間。Internxt 終身計劃是可堆疊的。只需使用相同的電子郵件地址購買它們，然後聯繫我們的 hello@internxt.com，我們將在同一帳戶上為您堆疊它們。"
-          ]
-        }
-      ]
+  "SchemaMarkupQuestions": {
+    "faq": [
+      {
+        "question": "Internxt 是否有終身計劃？",
+        "answer": [
+          "我們提供從我們的網站購買的終身計劃。這些計劃讓您終身訪問我們的計劃，一次性付款可獲得高達 10TB 的存儲空間。"
+        ]
+      },
+      {
+        "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
+        "answer": [
+          "是的，您可以向您的 Internxt 終身會員賬戶添加任意多的存儲空間。Internxt 終身計劃是可堆疊的。只需使用相同的電子郵件地址購買它們，然後聯繫我們的 hello@internxt.com，我們將在同一帳戶上為您堆疊它們。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "試用 Internxt，無風險",
+    "description": "註冊並獲得高達 10GB 的 Internxt 端到端加密雲存儲免費使用。",
+    "cta": "創建免費帳戶"
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "核心隱私",
+      "description": "在我們所做的一切中，我們始終把用戶和他們的權利放在首位。我們的使命很簡單，就是創建更好的工具和服務，讓最終用戶重獲主動權。",
+      "cta": "我們對隱私的承諾"
     },
-    "CtaSection": {
-      "title": "試用 Internxt，無風險",
-      "description": "註冊並獲得高達 10GB 的 Internxt 端到端加密雲存儲免費使用。",
+    "card2": {
+      "title": "無縫體驗",
+      "description": "Internxt 在所有平台上都可用，甚至還有 Linux！使用我們的移動應用程序、Web 和桌面應用程序同步您的文件和照片，每個都被設計成在您移動時提供超強加密存儲。",
+      "cta": "下載應用程序"
+    },
+    "card3": {
+      "title": "免費試用 Internxt！",
+      "description": "在全面投入之前，免費獲得高達 10GB 的存儲空間，看看隱私是否適合您！創建帳戶即可獲得 2GB，然後將您的免費存儲擴展到完整的 10GB，以幫助宣傳。",
       "cta": "創建免費帳戶"
+    }
+  },
+  "BestStorageSection": {
+    "title": "為未來而建",
+    "description": "我們希望建立一個更好的全球互聯網，一個對所有人都公平、安全和公正的互聯網。互聯網隱私的未來戰爭正在進行中，我們正處於前沿。",
+    "card1": {
+      "title": "分散式工作"
     },
-    "FirstWhatWeDoSection": {
-      "card1": {
-        "title": "核心隱私",
-        "description": "在我們所做的一切中，我們始終把用戶和他們的權利放在首位。我們的使命很簡單，就是創建更好的工具和服務，讓最終用戶重獲主動權。",
-        "cta": "我們對隱私的承諾"
-      },
-      "card2": {
-        "title": "無縫體驗",
-        "description": "Internxt 在所有平台上都可用，甚至還有 Linux！使用我們的移動應用程序、Web 和桌面應用程序同步您的文件和照片，每個都被設計成在您移動時提供超強加密存儲。",
-        "cta": "下載應用程序"
-      },
-      "card3": {
-        "title": "免費試用 Internxt！",
-        "description": "在全面投入之前，免費獲得高達 10GB 的存儲空間，看看隱私是否適合您！創建帳戶即可獲得 2GB，然後將您的免費存儲擴展到完整的 10GB，以幫助宣傳。",
-        "cta": "創建免費帳戶"
-      }
+    "card2": {
+      "title": "AES-256 加密"
     },
-    "BestStorageSection": {
-      "title": "為未來而建",
-      "description": "我們希望建立一個更好的全球互聯網，一個對所有人都公平、安全和公正的互聯網。互聯網隱私的未來戰爭正在進行中，我們正處於前沿。",
-      "card1": {
-        "title": "分散式工作"
-      },
-      "card2": {
-        "title": "AES-256 加密"
-      },
-      "card3": {
-        "title": "內置冗餘"
-      },
-      "card4": {
-        "title": "開源代碼"
-      },
-      "card5": {
-        "title": "獨立驗證"
-      }
+    "card3": {
+      "title": "內置冗餘"
     },
-    "lastCtaSection": {
-      "title": "全球最私密的雲存儲",
-      "description": "保護 Internxt 安全、私密且加密的雲存儲中的真正重要的內容。",
-      "cta": "立即選擇計劃"
+    "card4": {
+      "title": "開源代碼"
+    },
+    "card5": {
+      "title": "獨立驗證"
+    }
+  },
+  "lastCtaSection": {
+    "title": "全球最私密的雲存儲",
+    "description": "保護 Internxt 安全、私密且加密的雲存儲中的真正重要的內容。",
+    "cta": "立即選擇計劃"
   }
 }

@@ -9,6 +9,8 @@ import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
+import BottomBanner from '@/components/banners/BottomBanner';
+import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 
 const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
@@ -17,8 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const pathname = router.pathname;
   const lang = router.locale;
 
-  const shouldShowBanner = false;
-  // !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
 
   useEffect(() => {
@@ -47,15 +48,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
         ]}
       >
@@ -86,7 +87,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">{shouldShowBanner ? <>{/* <BottomBanner /> */}</> : undefined}</div>
+        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
