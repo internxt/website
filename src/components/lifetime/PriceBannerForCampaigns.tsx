@@ -44,7 +44,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
             src="/images/campaigns/euro/mobile.webp"
             width={377}
             height={190}
-            alt="Spring sale image"
+            alt="Euro 2024 image"
             className="w-full rounded-b-[32px] object-cover"
           />
         </div>

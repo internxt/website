@@ -24,7 +24,7 @@ export default function HeroSection({ textContent, lang }) {
           }}
         /> */}
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between sm:mb-6 lg:flex-row lg:items-stretch">
+        <div className="relative mx-auto mb-6 flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch">
           <div
             className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
             style={{
@@ -72,7 +72,7 @@ export default function HeroSection({ textContent, lang }) {
                 </div>
               </button>
 
-              <div className="z-10 hidden w-full md:flex">
+              <div className="z-10 mb-8 hidden w-full md:flex">
                 <SignUpInline textContent={textContent.SignUp} />
               </div>
             </div>
