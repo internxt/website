@@ -77,7 +77,7 @@ const BottomBanner = () => {
         shouldShowBanner ? 'flex' : 'hidden'
       } overflow-hidden rounded-lg px-5 lg:px-0`}
       style={{
-        backgroundImage: "url('/images/home/campaigns/grass.png')",
+        backgroundImage: "url('/images/campaigns/euro/grass.webp')",
         // filter: 'blur(24px)'
       }}
     >
@@ -90,7 +90,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/home/campaigns/banner.webp"
+              src="/images/campaigns/euro/banner.webp"
               width={178}
               height={70}
               className="flex w-full object-fill"

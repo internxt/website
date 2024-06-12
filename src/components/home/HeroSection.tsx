@@ -19,7 +19,7 @@ export default function HeroSection({ textContent, lang }) {
         {/* <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
           style={{
-            backgroundImage: "url('/images/home/campaigns/grass.png')",
+            backgroundImage: "url('/images/campaigns/grass.png')",
             // filter: 'blur(24px)'
           }}
         /> */}
@@ -28,7 +28,7 @@ export default function HeroSection({ textContent, lang }) {
           <div
             className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
             style={{
-              backgroundImage: "url('/images/home/campaigns/grass.png')",
+              backgroundImage: "url('/images/campaigns/euro/grass.webp')",
               // filter: 'blur(24px)'
             }}
           />
@@ -83,14 +83,14 @@ export default function HeroSection({ textContent, lang }) {
             <div
               className="absolute -left-16 flex h-full w-[1000px] bg-center bg-no-repeat object-cover"
               style={{
-                backgroundImage: "url('images/home/campaigns/mist.png')",
+                backgroundImage: "url('images/campaigns/euro/mist.webp')",
                 backgroundPositionX: '-20px',
                 backgroundSize: '1000px',
               }}
             >
               <img
                 className="relative h-full object-fill object-left"
-                src="/images/home/campaigns/bg_image.png"
+                src="/images/campaigns/euro/bg_image.webp"
                 alt={'Euro Cup Image'}
               />
             </div>

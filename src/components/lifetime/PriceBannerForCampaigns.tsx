@@ -8,7 +8,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
 
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
-      <div className="flex w-full  flex-col justify-between rounded-[32px] bg-white bg-[url('/images/home/campaigns/grass.png')] lg:flex-row">
+      <div className="flex w-full  flex-col justify-between rounded-[32px] bg-white bg-[url('/images/campaigns/euro/grass.webp')] lg:flex-row">
         <div className="flex w-full flex-col gap-6 p-10 lg:py-16 xl:w-full">
           <div className="flex w-max rounded-2xl bg-gray-100 py-2 px-4 ring-4 ring-primary">
             <p className="text-5xl font-bold text-white">{textContent.label}</p>
@@ -32,7 +32,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         </div>
         <div className="w-full max-w-xl flex-row justify-end  xl:flex">
           <img
-            src="/images/home/campaigns/pricing.webp"
+            src="/images/campaigns/euro/pricing.webp"
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
             className="h-full w-full rounded-r-[32px] object-cover"

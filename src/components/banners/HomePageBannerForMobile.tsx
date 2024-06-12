@@ -14,9 +14,9 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden`}
+      } w-full flex-col overflow-hidden rounded-[32px] pt-10 md:hidden`}
       style={{
-        backgroundImage: "url('/images/home/campaigns/grass.png')",
+        backgroundImage: "url('/images/campaigns/euro/grass.webp')",
       }}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 text-center text-white lg:items-start lg:text-left">
@@ -43,8 +43,7 @@ export const HomePageBannerForMobile = () => {
       </div>
       <div className="flex h-full flex-col">
         <Image
-          src="/images/home/campaigns/mobile.webp"
-          loading="lazy"
+          src="/images/campaigns/euro/mobile.webp"
           width={377}
           height={190}
           alt="Spring sale image"
