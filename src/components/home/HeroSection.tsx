@@ -88,7 +88,11 @@ export default function HeroSection({ textContent, lang }) {
                 backgroundSize: '1000px',
               }}
             >
-              <img className="relative h-full object-fill object-left" src="/images/home/campaigns/bg_image.png" />
+              <img
+                className="relative h-full object-fill object-left"
+                src="/images/home/campaigns/bg_image.png"
+                alt={'Euro Cup Image'}
+              />
             </div>
           </div>
         </div>

@@ -50,14 +50,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const router = useRouter();
   const lang = router.locale;
   const getTitles = require(`@/assets/lang/en/navbar.json`);
-  // DIALOG MANAGEMENT
 
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
-  // EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
 
   // SCROLL EFFECTS
-
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
 
   useEffect(() => {
