@@ -14,13 +14,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 75%",
-      "title": "Erzielen Sie große Einsparungen für Ihre Privatsphäre",
-      "subtitle": "Das goldene Ziel der Privatsphäre",
-      "cta": "Plan wählen",
-      "cta2": "75% RABATT erhalten",
-      "guarantee": "30-tägige Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden"
+      "label": "Ahorra 75%",
+      "title": "Protege tu datos y tu privacidad",
+      "subtitle": "Defiende tu privacidad como un campeón",
+      "cta": "Elige un plan",
+      "cta2": "Obtén un 75% de descuento",
+      "guarantee": "Garantía de devolución de dinero de 30 días",
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
     },
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",

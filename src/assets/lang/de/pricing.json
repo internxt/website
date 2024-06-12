@@ -15,11 +15,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "75% sparen",
-      "title": "Sichern Sie Ihre Online-Identität für ein ganzes Leben",
-      "subtitle": "Abonnieren Sie und sparen Sie mit Internxt.",
-      "cta": "Plan auswählen",
-      "guarantee": "30 Tage Geld-zurück-Garantie",
+      "label": "Spare 75%",
+      "title": "Erzielen Sie große Einsparungen für Ihre Privatsphäre",
+      "subtitle": "Das goldene Ziel der Privatsphäre",
+      "cta": "Plan wählen",
+      "cta2": "75% RABATT erhalten",
+      "guarantee": "30-tägige Geld-zurück-Garantie",
       "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden"
     },
     "features": {
