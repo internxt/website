@@ -224,7 +224,7 @@ export default function PriceTable({
                   storage={product.storage}
                   price={Number(product.price * 0.25).toFixed(2) as unknown as number}
                   billingFrequency={billingFrequency}
-                  popular={product.storage === '5TB'}
+                  popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
                     // billingFrequency === Interval.Year
