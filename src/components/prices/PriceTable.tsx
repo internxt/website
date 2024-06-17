@@ -224,7 +224,7 @@ export default function PriceTable({
                   storage={product.storage}
                   price={Number(product.price * 0.25).toFixed(2) as unknown as number}
                   billingFrequency={billingFrequency}
-                  popular={product.storage === '10TB'}
+                  popular={product.storage === '5TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
                     // billingFrequency === Interval.Year
@@ -262,7 +262,7 @@ export default function PriceTable({
                     price={LIFETIME_PRICES[currencyValue][product.storage]}
                     priceBefore={product.price.split('.')[0]}
                     billingFrequency={Interval.Lifetime}
-                    popular={product.storage === '10TB'}
+                    popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}
