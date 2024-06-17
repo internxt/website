@@ -6,6 +6,7 @@
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "planTitles": {
     "individuals": "Planes individuales",
+    "homePage": "Elige el plan adecuado para ti",
     "lifetime": "Planes de por vida",
     "business": "Planes para empresas",
     "lifetimeCampaign": {

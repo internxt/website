@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "Encriptado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "La nube más segura para",

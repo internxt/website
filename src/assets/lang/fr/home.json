@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "Chiffré de bout en bout",
+      "openSource": "Open-source et vérifié",
+      "anonymousAccount": "Création de compte anonyme"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "Le nuage le plus sécurisé pour",

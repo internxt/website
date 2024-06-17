@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione di account anonimi"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "Il cloud più sicuro per tutti",

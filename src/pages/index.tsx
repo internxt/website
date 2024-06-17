@@ -6,6 +6,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import PriceTable from '@/components/prices/PriceTable';
 
 const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
 const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
@@ -28,7 +29,9 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-      <InfoSection textContent={langJson.InfoSection} lang={lang} />
+      {/* <InfoSection textContent={langJson.InfoSection} lang={lang} /> */}
+
+      <PriceTable setSegmentPageName={() => {}} lang={lang} textContent={langJson.tableSection} isTableInHomePage />
 
       <FileParallaxSection />
 
