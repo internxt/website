@@ -18,7 +18,6 @@ function checkIfProductExistAndRedirectWorks(product, interval: Interval = 'Indi
   const buttonId = `#planButton${product.storage}`;
   const planId = product.planId;
 
-  cy.visit('/pricing');
   cy.get('#billingButtons').contains(interval).click();
 
   if (switchButton) {
