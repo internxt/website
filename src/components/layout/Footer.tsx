@@ -226,26 +226,22 @@ export default function Footer({
                       {textContent.FooterSection.sections.company.legal}
                     </Link>
 
-                    {lang === 'en' && (
-                      <>
-                        <Link
-                          href="/media-area"
-                          locale={lang}
-                          passHref
-                          className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                        >
-                          {textContent.FooterSection.sections.company.mediaArea}
-                        </Link>
-                        <Link
-                          href="/use-cases"
-                          locale={lang}
-                          passHref
-                          className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                        >
-                          {textContent.FooterSection.sections.company.useCases}
-                        </Link>
-                      </>
-                    )}
+                    <Link
+                      href="/media-area"
+                      locale={'en'}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.company.mediaArea}
+                    </Link>
+                    <Link
+                      href="/use-cases"
+                      locale={'en'}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.company.useCases}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -362,16 +358,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                     </Link>
-                    {lang === 'en' && (
-                      <Link
-                        href="/internxt-library"
-                        locale={lang}
-                        passHref
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.inxtLibrary}
-                      </Link>
-                    )}
+                    <Link
+                      href="/internxt-library"
+                      locale={'en'}
+                      passHref
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.inxtLibrary}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -624,26 +618,22 @@ export default function Footer({
                         {textContent.FooterSection.sections.company.legal}
                       </Link>
 
-                      {lang === 'en' && (
-                        <>
-                          <Link
-                            href="/media-area"
-                            locale={lang}
-                            passHref
-                            className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                          >
-                            {textContent.FooterSection.sections.company.mediaArea}
-                          </Link>
-                          <Link
-                            href="/use-cases"
-                            locale={lang}
-                            passHref
-                            className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                          >
-                            {textContent.FooterSection.sections.company.useCases}
-                          </Link>
-                        </>
-                      )}
+                      <Link
+                        href="/media-area"
+                        locale={'en'}
+                        passHref
+                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.company.mediaArea}
+                      </Link>
+                      <Link
+                        href="/use-cases"
+                        locale={'en'}
+                        passHref
+                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.company.useCases}
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -758,16 +748,14 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>
-                      {lang === 'en' && (
-                        <Link
-                          href="/internxt-library"
-                          locale={lang}
-                          passHref
-                          className="flex flex-row items-center hover:text-primary"
-                        >
-                          {textContent.FooterSection.sections.resources.inxtLibrary}
-                        </Link>
-                      )}
+                      <Link
+                        href="/internxt-library"
+                        locale={'en'}
+                        passHref
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.inxtLibrary}
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
