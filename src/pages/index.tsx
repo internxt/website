@@ -8,7 +8,6 @@ import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
 
-const InfoSection = dynamic(() => import('@/components/home/InfoSection'));
 const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
 const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
 const FirstWhatWeDoSection = dynamic(() => import('@/components/home/FirstWhatWeDoSection'));
