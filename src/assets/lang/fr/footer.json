@@ -36,7 +36,9 @@
         "security": "Securité",
         "openSource": "Open Source",
         "legal": "Mentions légales",
-        "whyInternxt": "¿Por qué Internxt?"
+        "whyInternxt": "¿Por qué Internxt?",
+        "mediaArea": "Espace Médias",
+        "useCases": "Cas d'utilisation"
       },
       "join": {
         "title": "Rejoindre",
@@ -66,7 +68,8 @@
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "Comparaison des services en nuage"
+        "comparison": "Comparaison des services en nuage",
+        "inxtLibrary": "Bibliothèque"
       },
       "tools": {
         "title": "Free tools",
