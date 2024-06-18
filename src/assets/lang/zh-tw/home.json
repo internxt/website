@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "開源且經過審計",
+      "anonymousAccount": "匿名帳戶創建"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "最安全的雲端存儲，適用於",

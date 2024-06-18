@@ -17,6 +17,7 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
+  isTableInHomePage?: boolean;
   discount?: number;
 }
 
@@ -35,7 +36,13 @@ const LIFETIME_PRICES = {
   },
 };
 
-export default function PriceTable({ setSegmentPageName, lang, textContent, discount }: Readonly<PriceTableProps>) {
+export default function PriceTable({
+  setSegmentPageName,
+  lang,
+  textContent,
+  discount,
+  isTableInHomePage,
+}: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
@@ -49,10 +56,23 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
 
   const isIndividual = activeSwitchPlan !== 'Business';
+  const isBusiness = activeSwitchPlan === 'Business';
   const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
   const individualPlansTitle = isLifetime ? contentText.planTitles.lifetime : contentText.planTitles.individuals;
+  const businessTitle = contentText.planTitles.business;
+  const homePageTitle = contentText.planTitles.homePage;
+
+  const title = () => {
+    if (isTableInHomePage) {
+      return homePageTitle;
+    } else if (isIndividual) {
+      return individualPlansTitle;
+    } else if (isBusiness) {
+      return businessTitle;
+    }
+  };
 
   useEffect(() => {
     stripeService.getLifetimeCoupons().then(setLifetimeCoupons);
@@ -77,10 +97,10 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
     <section className="overflow-hidden bg-white">
       <div className="flex flex-col items-center space-y-10 py-20">
         <div className="flex flex-col items-center space-y-10">
-          <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />
+          {!isTableInHomePage && <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />}
 
           <div id="priceTable" className="flex flex-col items-center px-5 text-center">
-            <Header>{isIndividual ? individualPlansTitle : contentText.planTitles.business}</Header>
+            <Header maxWidth="max-w-4xl">{title()}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!isIndividual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
             </p>
@@ -242,7 +262,7 @@ export default function PriceTable({ setSegmentPageName, lang, textContent, disc
                     price={LIFETIME_PRICES[currencyValue][product.storage]}
                     priceBefore={product.price.split('.')[0]}
                     billingFrequency={Interval.Lifetime}
-                    popular={product.storage === '10TB'}
+                    popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
                     lang={lang}
                     currency={currency}

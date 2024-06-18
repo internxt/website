@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审核",
+      "anonymousAccount": "匿名帐户创建"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "为你的所有文件和照片提供最私密的云服务",

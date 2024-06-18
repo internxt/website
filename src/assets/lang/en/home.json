@@ -42,6 +42,13 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
+  },
   "FirstFeaturesSection": {
     "title": {
       "line1": "The most secure cloud for",

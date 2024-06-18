@@ -42,6 +42,14 @@
       }
     }
   },
+  "tableSection": {
+    "features": {
+      "endToEnd": "Шифрование от конца к концу",
+      "openSource": "Открытый исходный код и проверенный",
+      "anonymousAccount": "Анонимное создание учетной записи"
+    }
+  },
+
   "FirstFeaturesSection": {
     "title": {
       "line1": "Самое безопасное облачное хранилище для",
