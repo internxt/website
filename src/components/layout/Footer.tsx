@@ -228,7 +228,7 @@ export default function Footer({
 
                     <Link
                       href="/media-area"
-                      locale={'en'}
+                      locale={lang}
                       passHref
                       className="flex max-w-[200px] flex-row items-center hover:text-primary"
                     >
@@ -236,7 +236,7 @@ export default function Footer({
                     </Link>
                     <Link
                       href="/use-cases"
-                      locale={'en'}
+                      locale={lang}
                       passHref
                       className="flex max-w-[200px] flex-row items-center hover:text-primary"
                     >
@@ -360,7 +360,7 @@ export default function Footer({
                     </Link>
                     <Link
                       href="/internxt-library"
-                      locale={'en'}
+                      locale={lang}
                       passHref
                       className="flex flex-row items-center hover:text-primary"
                     >
@@ -620,7 +620,7 @@ export default function Footer({
 
                       <Link
                         href="/media-area"
-                        locale={'en'}
+                        locale={lang}
                         passHref
                         className="flex max-w-[200px] flex-row items-center hover:text-primary"
                       >
@@ -628,7 +628,7 @@ export default function Footer({
                       </Link>
                       <Link
                         href="/use-cases"
-                        locale={'en'}
+                        locale={lang}
                         passHref
                         className="flex max-w-[200px] flex-row items-center hover:text-primary"
                       >
@@ -750,7 +750,7 @@ export default function Footer({
                       </Link>
                       <Link
                         href="/internxt-library"
-                        locale={'en'}
+                        locale={lang}
                         passHref
                         className="flex flex-row items-center hover:text-primary"
                       >

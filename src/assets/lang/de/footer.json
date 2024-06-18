@@ -37,7 +37,9 @@
         "security": "Sicherheit",
         "legal": "Legal",
         "whyInternxt": "Warum Internxt?",
-        "comparison": "Vergleich"
+        "comparison": "Vergleich",
+        "mediaArea": "Medienbereich",
+        "useCases": "Anwendungsfälle"
       },
       "join": {
         "title": "Mach mit",
@@ -65,7 +67,8 @@
         "pCloudAlternative": "pCloud-Alternative",
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "Was Google weiß"
+        "whatGoogleKnowsAboutMe": "Was Google weiß",
+        "inxtLibrary": "Bibliothek"
       },
       "tools": {
         "title": "Kostenlose Tools",
