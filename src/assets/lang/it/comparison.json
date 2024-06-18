@@ -5,7 +5,7 @@
       "line2": "Confronto di sicurezza"
     },
     "description": "Confronta tutte le opzioni di sicurezza per scegliere la soluzione di archiviazione cloud giusta.",
-    "cta": "Ottieni 10GB gratuitamente",
+    "cta": "Ottieni 1GB gratuitamente",
     "table": {
       "sections": {
         "encryption_and_security": {
@@ -102,7 +102,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Get up to 10GB for free!",
+    "title": "Get 1GB for free!",
     "description": "Create your free account now and get full access to our suite of online privacy services.",
     "cta": "Get started"
   },

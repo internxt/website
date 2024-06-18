@@ -7,14 +7,14 @@
     },
     "subtitle": "使用我們的開源和加密套件，保護您的隱私。Internxt Drive、Send 等等。",
     "cta": {
-      "title": "獲取多達 10GB",
+      "title": "获取 1 GB",
       "subtitle": "免費！"
     },
     "featuredIn": "在以下平台上推薦",
     "SignUp": {
       "cta": {
         "title": "開始使用 Internxt",
-        "subtitle": "立即創建帳戶，即可免費獲得 10GB"
+        "subtitle": "立即創建帳戶，即可免費獲得 1GB"
       },
       "disclaimer": {
         "text": "創建帳戶即表示您接受",
@@ -36,7 +36,7 @@
           }
         },
         "submit": {
-          "get": "獲取多達 10GB",
+          "get": "获取 1 GB",
           "free": "免費！"
         }
       }
@@ -111,7 +111,7 @@
     },
     "card3": {
       "title": "免費試用 Internxt",
-      "description": "免費獲得高達 10GB 的空間，看看隱私對您是否合適！創建帳戶即可獲得 2GB，然後將您的免費存儲擴展到完整的 10GB，以幫助傳播消息。",
+      "description": "免費獲得高達 1GB 的空間，看看隱私對您是否合適！",
       "cta": "創建免費帳戶"
     }
   },

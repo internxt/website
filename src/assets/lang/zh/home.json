@@ -14,7 +14,7 @@
     "SignUp": {
       "cta": {
         "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 10GB for FREE"
+        "subtitle": "Create an account now and get 1GB for FREE"
       },
       "disclaimer": {
         "text": "通过创建一个账户，",
@@ -179,7 +179,7 @@
   },
 
   "GetStartedSection": {
-    "title": { "line1": "Get started and", "line2": "get up to 10GB for free" },
+    "title": { "line1": "Get started and", "line2": "get 1GB for free" },
     "subtitle": {
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."

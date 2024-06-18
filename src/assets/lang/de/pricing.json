@@ -77,7 +77,7 @@
         "question": "Wie erstelle ich ein Internxt-Konto?",
         "answer": [
           "Um ein kostenloses Internxt-Konto zu erstellen, klicke einfach auf den besten Plan oben und folge den Anweisungen.",
-          "Oder besuche unsere Homepage und klicke auf \"Loslegen\". Dort erhältst sofort 10 GB kostenlosen Speicherplatz für immer mit einer kostenlosen Internxt-Mitgliedschaft. Du kannst deine kostenlose Mitgliedschaft für alle unsere Dienste verwenden. Um dich anzumelden, gib einfach einen Namen und eine E-Mail-Adresse ein. Es ist keine Identitäts- oder E-Mail-Verifizierung erforderlich, um die Dienste von Internxt zu nutzen."
+          "Oder besuche unsere Homepage und klicke auf \"Loslegen\". Dort erhältst sofort 1 GB kostenlosen Speicherplatz für immer mit einer kostenlosen Internxt-Mitgliedschaft. Du kannst deine kostenlose Mitgliedschaft für alle unsere Dienste verwenden. Um dich anzumelden, gib einfach einen Namen und eine E-Mail-Adresse ein. Es ist keine Identitäts- oder E-Mail-Verifizierung erforderlich, um die Dienste von Internxt zu nutzen."
         ]
       },
       {
@@ -121,7 +121,7 @@
     },
     "card3": {
       "title": "Probiere Internxt kostenlos aus!",
-      "description": "Erhalte bis zu 10 GB kostenlos und sieh selbst, ob dir der Datenschutz zusagt, bevor du dich ganz darauf einlassen! Du erhältst 2 GB beim Erstellen eines Kontos und kannst dann deinen kostenlosen Speicher auf volle 10 GB erweitern, indem du dabei hilfst, Internxt bekannt zu machen.",
+      "description": "Erhält 1 GB kostenlos und sieh selbst, ob dir der Datenschutz zusagt, bevor du dich ganz darauf einlassen!",
       "cta": "Kostenloses Konto erstellen"
     }
   },

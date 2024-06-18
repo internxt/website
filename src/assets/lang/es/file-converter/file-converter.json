@@ -169,7 +169,7 @@
       },
       {
         "question": "¿Hay un límite de tamaño de archivo?",
-        "answer": ["Nuestro convertidor de archivos actualmente admite tamaños de archivo de hasta 1 GB."]
+        "answer": ["Nuestro convertidor de archivos actualmente admite tamaños de archivo de 1 GB."]
       },
       {
         "question": "¿Están seguros mis archivos durante la conversión?",
