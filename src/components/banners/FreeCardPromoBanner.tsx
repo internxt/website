@@ -47,10 +47,11 @@ export const FreeCardPromoBanner = () => {
             <div className="flex flex-col gap-4 text-center lg:text-left">
               <h2 className="text-5xl font-bold leading-tight text-gray-100">{bannerText.FreeCardPromoBanner.title}</h2>
               <p className="text-2xl font-semibold leading-tight text-gray-100">
-                {bannerText.FreeCardPromoBanner.subtitle}
+                <span className="text-primary">{bannerText.FreeCardPromoBanner.subtitle.blue}</span>
+                {bannerText.FreeCardPromoBanner.subtitle.normal}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-6 lg:flex-row lg:items-start">
+            <div className="flex flex-col items-center gap-6 lg:flex-row">
               <Button
                 text={bannerText.FreeCardPromoBanner.getDealCta}
                 onClick={() => {

@@ -10,7 +10,10 @@
   },
   "FreeCardPromoBanner": {
     "title": "Obtenez 75% de réduction sur tous nos plans Premium",
-    "subtitle": "Offre spéciale : stockez vos fichiers en toute confidentialité pour moins cher",
+    "subtitle": {
+      "blue": "Offre spéciale :",
+      "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
+    },
     "getDealCta": "Obtenez l'offre",
     "freePlanCta": "Continuer avec le plan gratuit",
     "guarantee": "Garantie de remboursement de 30 jours"
