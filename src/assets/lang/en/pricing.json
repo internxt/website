@@ -57,7 +57,7 @@
         "question": "How do I create an Internxt account?",
         "answer": [
           "To create a free Internxt account, simply click the best plan above and follow the instructions.",
-          "Or head to our homepage and click on “Get started”. There, you will instantly get 10GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
+          "Or head to our homepage and click on “Get started”. There, you will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
         ]
       },
       {
@@ -119,7 +119,7 @@
   },
   "CtaSection": {
     "title": "Try Internxt risk-free",
-    "description": "Sign up and get up to 10GB of Internxt's end-to-end encrypted cloud storage for free.",
+    "description": "Sign up and get 1GB of Internxt's end-to-end encrypted cloud storage for free.",
     "cta": "Create free account"
   },
   "FirstWhatWeDoSection": {
@@ -135,7 +135,7 @@
     },
     "card3": {
       "title": "Try Internxt for free!",
-      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "description": "Get 1GB free and see if privacy suits you before going all in!",
       "cta": "Create free account"
     }
   },

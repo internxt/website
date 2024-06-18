@@ -7,13 +7,13 @@
     },
     "subtitle": "Schütze deine Privatsphäre mit unseren sicheren Cloud-Services, die verschlüsselt und quelloffen sind. Internxt Drive, Send, und vieles mehr.",
     "cta": {
-      "title": "Erhalte bis zu 10 GB",
+      "title": "Erhält 1 GB",
       "subtitle": "Kostenlos!"
     },
     "SignUp": {
       "cta": {
         "title": "Starte jetzt mit Internxt",
-        "subtitle": "Erstelle jetzt ein Konto und erhalte 10GB kostenlos"
+        "subtitle": "Erstelle jetzt ein Konto und erhalte 1GB kostenlos"
       },
       "disclaimer": {
         "text": "Mit der Einrichtung eines Kontos akzeptieren Sie",
@@ -35,7 +35,7 @@
           }
         },
         "submit": {
-          "get": "Erhalte bis zu 10GB",
+          "get": "Erhält 1GB",
           "free": "Kostenlos!"
         }
       }
@@ -100,7 +100,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Erhalte bis zu 10 GB kostenlos!",
+    "title": "Erhält 1 GB kostenlos!",
     "description": "Erstelle jetzt dein kostenloses Konto und erhalte uneingeschränkten Zugriff auf unsere Palette an Online-Datenschutz-Services.",
     "cta": "Starte jetzt"
   },
@@ -117,7 +117,7 @@
     },
     "card3": {
       "title": "Probiere Internxt kostenlos aus",
-      "description": "Erhalte bis zu 10 GB kostenlosen Speicher und prüfe, ob Datenschutz das Richtige für dich ist, bevor du dich vollständig darauf einlässt! Du erhältst 2 GB für die Erstellung eines Kontos und kannst deinen kostenlosen Speicher auf volle 10 GB erweitern, indem du uns dabei hilfst, Internxt bekannt zu machen.",
+      "description": "Erhält 1 GB kostenlosen Speicher und prüfe, ob Datenschutz das Richtige für dich ist, bevor du dich vollständig darauf einlässt! Du erhältst 2 GB für die Erstellung eines Kontos und kannst deinen kostenlosen Speicher auf volle 1 GB erweitern, indem du uns dabei hilfst, Internxt bekannt zu machen.",
       "cta": "Kostenloses Konto erstellen"
     }
   },
@@ -182,7 +182,7 @@
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Starte jetzt und", "line2": "bekomme bis zu 10GB umsonst" },
+    "title": { "line1": "Starte jetzt und", "line2": "1 GB frei" },
     "subtitle": {
       "line1": "Unsere Kunden sind sehr glücklich mit Internxt, aber",
       "line2": "sie sind glücklicher, wenn sie wissen, dass sie absolute Privatsphäre haben."

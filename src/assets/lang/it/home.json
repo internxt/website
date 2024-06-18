@@ -7,14 +7,14 @@
     },
     "subtitle": "Proteggi la tua privacy con la nostra suite open-source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
     "cta": {
-      "title": "Ottieni fino a",
-      "subtitle": "10GB gratis"
+      "title": "Ottieni",
+      "subtitle": "1GB gratis"
     },
     "featuredIn": "Presente in",
     "SignUp": {
       "cta": {
         "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 10GB for FREE"
+        "subtitle": "Create an account now and get 1GB for FREE"
       },
       "disclaimer": {
         "text": "Creando un account, accetti i nostri",
@@ -36,7 +36,7 @@
           }
         },
         "submit": {
-          "get": "Fino a 10 GB",
+          "get": "1 GB",
           "free": "gratis"
         }
       }
@@ -102,7 +102,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Fino a 10 GB gratis!",
+    "title": "1 GB gratis!",
     "description": "Create subito il vostro account gratuito e ottenete l'accesso completo alla nostra suite di servizi per la privacy online.",
     "cta": "Inizia"
   },
@@ -119,7 +119,7 @@
     },
     "card3": {
       "title": "Prova Internxt gratis",
-      "description": "Ottieni fino a 10 GB gratuitamente e verifica se la nostra privacy ti soddisfa, prima di buttartici a capofitto! Ricevi 2 GB alla creazione di un account, per poi espandere il tuo spazio di archiviazione gratuito fino a un massimo di 10 GB, aiutandoci a spargere la voce.",
+      "description": "Ottieni 1 GB gratuitamente e verifica se la nostra privacy ti soddisfa, prima di buttartici a capofitto! Ricevi 2 GB alla creazione di un account, per poi espandere il tuo spazio di archiviazione gratuito di 1 GB, aiutandoci a spargere la voce.",
       "cta": "Crea un account gratuito"
     }
   },
@@ -186,7 +186,7 @@
   },
 
   "GetStartedSection": {
-    "title": { "line1": "Inizia subito", "line2": "get up to 10GB for free" },
+    "title": { "line1": "Inizia subito", "line2": "get 1GB for free" },
     "subtitle": {
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."

@@ -7,14 +7,14 @@
     },
     "subtitle": "Protect your privacy with our open source and encrypted suite of secure services. Internxt Drive, Send, and more.",
     "cta": {
-      "title": "Get up to 10GB",
+      "title": "Get 1GB",
       "subtitle": "For free!"
     },
     "featuredIn": "Featured in",
     "SignUp": {
       "cta": {
         "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 10GB for FREE"
+        "subtitle": "Create an account now and get 1GB for FREE"
       },
       "disclaimer": {
         "text": "By creating an account you accept the",
@@ -36,8 +36,8 @@
           }
         },
         "submit": {
-          "get": "Get up to 10GB",
-          "free": "Free!"
+          "get": "Get 1GB",
+          "free": "For Free!"
         }
       }
     }
@@ -102,7 +102,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Get up to 10GB for free!",
+    "title": "Get 1GB for free!",
     "description": "Create your free account now and get full access to our suite of online privacy services.",
     "cta": "Get started"
   },
@@ -119,7 +119,7 @@
     },
     "card3": {
       "title": "Try Internxt for free",
-      "description": "Get up to 10GB free and see if privacy suits you before going all in! 2GB for creating an account, and then expand your free storage to the full 10GB for helping to get the word out.",
+      "description": "Get 1GB free and see if privacy suits you before going all in!",
       "cta": "Create free account"
     }
   },
@@ -186,7 +186,7 @@
   },
 
   "GetStartedSection": {
-    "title": { "line1": "Get started and", "line2": "get up to 10GB for free" },
+    "title": { "line1": "Get started and", "line2": "get 1GB for free" },
     "subtitle": {
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."

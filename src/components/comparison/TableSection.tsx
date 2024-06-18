@@ -29,7 +29,7 @@ const TableSection = ({ textContent }) => {
         backup_folders_and_files: true,
         file_sharding: true,
         unlimited_bandwidth: true,
-        free_account_storage: '10GB',
+        free_account_storage: '1GB',
         monthly_base_pricing: '$4.99',
         max_storage_amount: '10TB',
         support_center: true,
