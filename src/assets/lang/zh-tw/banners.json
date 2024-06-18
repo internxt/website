@@ -8,6 +8,13 @@
     "actionCta": "獲取新電子郵件",
     "cancelCta": "取消"
   },
+  "FreeCardPromoBanner": {
+    "title": "所有高級計劃享受75%折扣",
+    "subtitle": "特別優惠：更便宜地私人存儲文件",
+    "getDealCta": "獲取優惠",
+    "freePlanCta": "繼續使用免費計劃",
+    "guarantee": "30天退款保證"
+  },
   "LoginBanner": {
     "head": "購買前先試用。",
     "title": "免費獲取 Internxt！",

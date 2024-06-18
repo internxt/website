@@ -8,6 +8,13 @@
     "actionCta": "Ottieni una nuova email",
     "cancelCta": "Annulla"
   },
+  "FreeCardPromoBanner": {
+    "title": "Ottieni il 75% di sconto su tutti i nostri piani Premium",
+    "subtitle": "Offerta speciale: archivia i file in modo privato a meno",
+    "getDealCta": "Ottieni l'offerta",
+    "freePlanCta": "Continua con il piano gratuito",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
+  },
   "LoginBanner": {
     "head": "Try before you buy.",
     "title": "Get Internxt for free!",

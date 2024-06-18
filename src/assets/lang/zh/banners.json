@@ -8,6 +8,13 @@
     "actionCta": "获取新电子邮件",
     "cancelCta": "取消"
   },
+  "FreeCardPromoBanner": {
+    "title": "所有高级计划享受75%折扣",
+    "subtitle": "特别优惠：更便宜地私人存储文件",
+    "getDealCta": "获取优惠",
+    "freePlanCta": "继续使用免费计划",
+    "guarantee": "30天退款保证"
+  },
   "LoginBanner": {
     "head": "Try before you buy.",
     "title": "Get Internxt for free!",
