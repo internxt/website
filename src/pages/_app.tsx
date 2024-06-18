@@ -11,6 +11,7 @@ import * as gtag from '@/lib/gtag';
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
+import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 
 const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
@@ -58,6 +59,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             key: GlobalDialog.BottomBanner,
             isOpen: true,
           },
+          {
+            key: GlobalDialog.FreeSpaceCardBanner,
+            isOpen: false,
+          },
         ]}
       >
         <>
@@ -88,6 +93,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
+        <FreeCardPromoBanner />
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
