@@ -181,7 +181,7 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com'],
+    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST],
   },
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,
