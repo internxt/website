@@ -61,7 +61,7 @@ const HeroSection = ({ textContent }) => (
           <div className="flex flex-auto flex-shrink-0 pb-12 sm:p-0 sm:px-12">
             <div className="flex flex-shrink-0 flex-col items-center space-y-3">
               <Image
-                src={`${process.env.CLOUDFLARE_STATIC_ASSETS_FULL_PATH}/images/about/logos/forbes.webp`}
+                src={`${process.env.NEXT_PUBLIC_CLOUDFLARE_STATIC_ASSETS_FULL_PATH}/images/about/logos/forbes.webp`}
                 width={125}
                 height={32}
                 loading={'lazy'}
