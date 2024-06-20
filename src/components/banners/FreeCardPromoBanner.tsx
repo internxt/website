@@ -3,6 +3,7 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Button from '../shared/Button';
+import { goToSignUpURL } from '@/lib/auth';
 import Image from 'next/image';
 
 export const FreeCardPromoBanner = () => {
@@ -15,13 +16,20 @@ export const FreeCardPromoBanner = () => {
 
   const isDialogOpen = dialogIsOpen(GlobalDialog.FreeSpaceCardBanner);
 
+  useEffect(() => {
+    setShouldShowBanner(dialogIsOpen(GlobalDialog.FreeSpaceCardBanner));
+  }, [isDialogOpen]);
+
   const onCloseBanner = () => {
     closeDialog(GlobalDialog.FreeSpaceCardBanner);
   };
 
-  useEffect(() => {
-    setShouldShowBanner(dialogIsOpen(GlobalDialog.FreeSpaceCardBanner));
-  }, [isDialogOpen]);
+  const onGetTheDealButtonClicked = () => {
+    router.push('/specialoffer/freeuser');
+    onCloseBanner();
+  };
+
+  const onContinueWithFreePlanButtonClicked = () => goToSignUpURL;
 
   return (
     <div
@@ -51,17 +59,10 @@ export const FreeCardPromoBanner = () => {
               </p>
             </div>
             <div className="flex flex-col items-center gap-6 lg:flex-row">
-              <Button
-                text={bannerText.FreeCardPromoBanner.getDealCta}
-                onClick={() => {
-                  router.push('');
-                }}
-              />
+              <Button text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
               <button
                 className="text-xl font-medium text-primary underline hover:no-underline"
-                onClick={() => {
-                  router.push('/specialoffer/freeuser');
-                }}
+                onClick={onContinueWithFreePlanButtonClicked}
               >
                 {bannerText.FreeCardPromoBanner.freePlanCta}
               </button>
