@@ -1,4 +1,5 @@
 import RevealY from '@/components/components/RevealY';
+import { getImage } from '@/lib/getImage';
 
 const WhatIsInternxtSection = ({ textContent }) => {
   return (
@@ -9,15 +10,12 @@ const WhatIsInternxtSection = ({ textContent }) => {
           <p className="text-2xl font-medium text-gray-100">{textContent.subtitle}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <RevealY className="flex h-full w-full flex-col pt-6">
-          <picture>
-            <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-            <img
-              src="/images/home/internxt_secure_cloud_storage.webp"
-              alt="Internxt secure cloud storage"
-              draggable={false}
-            />
-          </picture>
+        <RevealY className="content flex h-full w-full flex-col pt-6">
+          <img
+            src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+            alt="Internxt secure cloud storage"
+            draggable={false}
+          />
         </RevealY>
       </div>
     </section>

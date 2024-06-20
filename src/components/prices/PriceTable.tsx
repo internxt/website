@@ -19,6 +19,7 @@ interface PriceTableProps {
   textContent: any;
   isTableInHomePage?: boolean;
   discount?: number;
+  couponCode?: CouponType;
 }
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
@@ -42,13 +43,14 @@ export default function PriceTable({
   textContent,
   discount,
   isTableInHomePage,
+  couponCode,
 }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.euro2024Sub,
+    couponCode: couponCode ?? CouponType.euro2024Sub,
   });
 
   const [lifetimeCoupons, setLifetimeCoupons] = useState();
@@ -234,7 +236,7 @@ export default function PriceTable({
                   }
                   lang={lang}
                   currency={currency}
-                  coupon={coupon}
+                  coupon={couponCode ?? coupon}
                   currencyValue={currencyValue}
                 />
               ))}
@@ -267,7 +269,7 @@ export default function PriceTable({
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={lifetimeCoupons?.[product.storage] ?? undefined}
+                    coupon={couponCode ? coupon : lifetimeCoupons?.[product.storage] ?? undefined}
                   />
                 );
               })}
@@ -293,7 +295,7 @@ export default function PriceTable({
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
+        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />

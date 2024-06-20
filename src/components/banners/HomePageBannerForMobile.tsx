@@ -1,4 +1,5 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
@@ -16,7 +17,7 @@ export const HomePageBannerForMobile = () => {
         shouldShowBanner ? 'flex' : 'hidden'
       } w-full max-w-md flex-col overflow-hidden rounded-[32px] pt-10 md:hidden`}
       style={{
-        backgroundImage: "url('/images/campaigns/euro/grass.webp')",
+        backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
       }}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 pb-5 text-center text-white">
@@ -44,7 +45,7 @@ export const HomePageBannerForMobile = () => {
       <div className="flex h-full w-full flex-col">
         <div className="flex h-full w-full flex-col">
           <Image
-            src="/images/campaigns/euro/mobile.webp"
+            src={getImage('/images/campaigns/euro/mobile.webp')}
             width={377}
             height={190}
             alt="Euro 2024 image"

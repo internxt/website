@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
-import React from 'react';
 import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
@@ -27,7 +27,7 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
 
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
             <Image
-              src="/images/home/internxt_secure_cloud_storage.webp"
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               alt="Internxt secure cloud storage"
               draggable={false}
               loading="lazy"
