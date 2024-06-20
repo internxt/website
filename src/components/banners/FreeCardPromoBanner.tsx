@@ -3,7 +3,6 @@ import { CheckCircle, X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Button from '../shared/Button';
-import { goToSignUpURL } from '@/lib/auth';
 import Image from 'next/image';
 
 export const FreeCardPromoBanner = () => {
@@ -60,7 +59,9 @@ export const FreeCardPromoBanner = () => {
               />
               <button
                 className="text-xl font-medium text-primary underline hover:no-underline"
-                onClick={() => goToSignUpURL()}
+                onClick={() => {
+                  router.push('/specialoffer/freeuser');
+                }}
               >
                 {bannerText.FreeCardPromoBanner.freePlanCta}
               </button>
