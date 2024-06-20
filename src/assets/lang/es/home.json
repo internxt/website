@@ -7,14 +7,14 @@
     },
     "subtitle": "Protege tu privacidad con nuestros servicios seguros en la nube cifrados Internxt Drive, Send y más.",
     "cta": {
-      "title": "Consigue hasta 10 GB",
+      "title": "Consigue 1 GB",
       "subtitle": "¡Gratis!"
     },
     "featuredIn": "Aparición en",
     "SignUp": {
       "cta": {
         "title": "Empieza a trabajar con Internxt",
-        "subtitle": "Crea una cuenta ahora y consigue 10 GB GRATIS"
+        "subtitle": "Crea una cuenta ahora y consigue 1 GB GRATIS"
       },
       "disclaimer": {
         "text": "Al crear una cuenta aceptas los",
@@ -36,7 +36,7 @@
           }
         },
         "submit": {
-          "get": "Consigue hasta 10 GB",
+          "get": "Consigue 1 GB",
           "free": "¡Gratis!"
         }
       }
@@ -101,7 +101,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "¡Consigue hasta 10 GB gratis!",
+    "title": "¡Consigue 1 GB gratis!",
     "description": "Crea tu cuenta gratuita ahora y tendrás acceso completo a nuestro conjunto de servicios de privacidad en línea.",
     "cta": "Comenzar"
   },
@@ -118,7 +118,7 @@
     },
     "card3": {
       "title": "Prueba Internxt gratis",
-      "description": "Consigue hasta 10 GB gratis y comprueba si la privacidad te conviene antes de lanzarte a por todas. Obtén 2 GB al crearte una cuenta, y luego amplía tu plan de almacenamiento en la nube gratis hasta los 10 GB totales completando unas simples acciones.",
+      "description": "Consigue 1 GB gratis y comprueba si la privacidad te conviene antes de lanzarte a por todas.",
       "cta": "Crear cuenta gratuita"
     }
   },
@@ -183,7 +183,7 @@
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Regístrate y", "line2": "consigue hasta 10 GB gratis" },
+    "title": { "line1": "Regístrate y", "line2": "consigue 1 GB gratis" },
     "subtitle": {
       "line1": "Nuestros clientes están muy contentos con Internxt Drive, pero",
       "line2": "son más felices sabiendo que están bajo total privacidad."

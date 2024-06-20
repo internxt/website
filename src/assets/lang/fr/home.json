@@ -7,14 +7,14 @@
     },
     "subtitle": "Protégez votre vie privée avec notre suite de services cloud sécurisés, open-source et chiffrés. Internxt Drive, Send, et plus encore.",
     "cta": {
-      "title": "Obtenez jusqu'à 10 Go",
+      "title": "Obtenez 1 Go",
       "subtitle": "Gratuitement !"
     },
     "featuredIn": "Présenté dans",
     "SignUp": {
       "cta": {
         "title": "Démarrer avec Internxt",
-        "subtitle": "Créez un compte maintenant et obtenez 10GB GRATUITEMENT"
+        "subtitle": "Créez un compte maintenant et obtenez 1GB GRATUITEMENT"
       },
       "disclaimer": {
         "text": "En créant un compte, vous acceptez les",
@@ -36,7 +36,7 @@
           }
         },
         "submit": {
-          "get": "Obtenez 10 Go",
+          "get": "Obtenez 1 Go",
           "free": "Gratuit !"
         }
       }
@@ -101,7 +101,7 @@
     ]
   },
   "ThirdFeaturesSection": {
-    "title": "Obtenez jusqu'à 10 Go gratuitement !",
+    "title": "Obtenez 1 Go gratuitement !",
     "description": "Créez votre compte gratuit maintenant et obtenez un accès complet à notre suite de services de protection de la vie privée en ligne.",
     "cta": "Commencer"
   },
@@ -118,7 +118,7 @@
     },
     "card3": {
       "title": "Essayez Internxt gratuitement",
-      "description": "Obtenez jusqu'à 10 Go gratuitement et voyez si la confidentialité vous convient avant de vous lancer. 2 Go lors de la création d'un compte, puis jusqu'à 10 Go au total en effectuant quelques actions simples.",
+      "description": "Obtenez 1 Go gratuitement et voyez si la confidentialité vous convient avant de vous lancer. 2 Go lors de la création d'un compte, puis 1 Go au total en effectuant quelques actions simples.",
       "cta": "Créer un compte gratuit"
     }
   },
@@ -183,7 +183,7 @@
     ]
   },
   "GetStartedSection": {
-    "title": { "line1": "Commencez et", "line2": "obtenez jusqu'à 10 Go gratuitement" },
+    "title": { "line1": "Commencez et", "line2": "obtenez 1 Go gratuitement" },
     "subtitle": {
       "line1": "Nos clients sont très satisfaits d'Internxt Drive, mais",
       "line2": "ils sont plus heureux de savoir qu'ils sont dans une totale confidentialité."

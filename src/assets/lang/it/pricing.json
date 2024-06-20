@@ -57,7 +57,7 @@
         "question": "Come si crea un account Internxt?",
         "answer": [
           "Per creare un account Internxt gratuito, è sufficiente fare clic sul piano migliore in alto e seguire le istruzioni.",
-          "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 10 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
+          "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 1 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
         ]
       },
       {
@@ -107,7 +107,7 @@
   },
   "CtaSection": {
     "title": "Prova Internxt senza rischi",
-    "description": "Iscrivetevi e ottenete gratuitamente fino a 10 GB di spazio di archiviazione cloud crittografato end-to-end di Internxt.",
+    "description": "Iscrivetevi e ottenete gratuitamente 1 GB di spazio di archiviazione cloud crittografato end-to-end di Internxt.",
     "cta": "Crea un account gratuito"
   },
   "FirstWhatWeDoSection": {
@@ -123,7 +123,7 @@
     },
     "card3": {
       "title": "Prova Internxt gratuitamente!",
-      "description": "Ottieni fino a 10GB gratuiti e vedi se la privacy ti si addice prima di fare il salto di qualità! 2GB per la creazione di un account, e poi espandi il tuo spazio di archiviazione gratuito fino a 10GB per contribuire a diffondere la notizia",
+      "description": "Ottieni 1GB gratuiti e vedi se la privacy ti si addice prima di fare il salto di qualità!",
       "cta": "Crea un account gratuito"
     }
   },

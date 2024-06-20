@@ -36,7 +36,9 @@
         "openSource": "открытого исходного кода",
         "security": "Безопасность",
         "legal": "Условия и положения",
-        "WhyInternxt": "Почему Internxt?"
+        "WhyInternxt": "Почему Internxt?",
+        "mediaArea": "Медиа-зона",
+        "useCases": "Случаи использования"
       },
       "join": {
         "title": "Присоединяйтесь к нам",
@@ -66,7 +68,8 @@
         "writeForUs": "Написать нам",
         "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
         "cyberAwareness": "Осведомленность о кибербезопасности",
-        "whatGoogleKnowsAboutMe": "Что Google знает обо мне"
+        "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
+        "inxtLibrary": "Библиотека"
       },
       "tools": {
         "title": "Бесплатные инструменты",

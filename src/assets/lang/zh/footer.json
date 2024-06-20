@@ -36,7 +36,9 @@
         "openSource": "通过",
         "security": "安全",
         "legal": "法律",
-        "whyInternxt": "为什么选择 Internxt？"
+        "whyInternxt": "为什么选择 Internxt？",
+        "mediaArea": "媒体区",
+        "useCases": "使用案例"
       },
       "join": {
         "title": "加入我们",
@@ -66,7 +68,8 @@
         "pCloudAlternative": "pCloud 替代方案",
         "cyberAwareness": "网络意识",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "比较"
+        "comparison": "比较",
+        "inxtLibrary": "图书馆"
       },
       "tools": {
         "title": "免费的工具",

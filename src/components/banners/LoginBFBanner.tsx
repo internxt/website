@@ -12,7 +12,7 @@ import { useRouter } from 'next/router';
 
 const cardsTitles = {
   en: {
-    title1: 'Get up to 10GB free',
+    title1: 'Get 1GB free',
     title2: 'Safe and secure cloud storage',
     title3: 'Private file and photo backup',
     title4: 'End-to-end encrypted transfers',
@@ -20,7 +20,7 @@ const cardsTitles = {
     title6: 'Available on all devices',
   },
   es: {
-    title1: 'Consigue hasta 10GB gratis',
+    title1: 'Consigue 1 GB gratis',
     title2: 'Almacenamiento en la nube seguro',
     title3: 'Backups seguros de archivos y fotos',
     title4: 'Encriptación de punto a punto',
@@ -28,7 +28,7 @@ const cardsTitles = {
     title6: 'Disponible en todos los dispositivos',
   },
   fr: {
-    title1: "Obtenez jusqu'à 10GB gratuits",
+    title1: 'Obtenez 1GB gratuits',
     title2: 'Stockage en nuage sécurisé',
     title3: 'Sauvegarde privée des fichiers',
     title4: 'Transferts cryptés de bout en bout',

@@ -189,6 +189,19 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "mthalyzj9s");
+            `,
+          }}
+        />
+
         {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
             <script

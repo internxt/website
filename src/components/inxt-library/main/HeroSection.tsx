@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Header from '../../shared/Header';
 
 const HeroSection = ({ textContent }) => {
@@ -19,6 +19,7 @@ const HeroSection = ({ textContent }) => {
           <Image
             src="/images/inxt-library/Internxt_ebooks.webp"
             quality={100}
+            alt="Internxt eBooks"
             loading="eager"
             width={660}
             height={488}

@@ -27,6 +27,9 @@ describe('Lifetime products in Pricing page', () => {
   });
 
   describe('When the payment plan is lifetime', () => {
+    beforeEach(() => {
+      cy.visit('/pricing');
+    });
     describe('When the plan is 2TB of space', () => {
       it('Redirect to stripe checkout with the correct planId and mode', () => {
         cy.checkIfProductExistAndRedirectWorks(products.lifetime2TB, 'Lifetime');
