@@ -10,7 +10,7 @@ import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSecti
 import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
 import { CouponType } from '@/lib/types';
 
-const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent, couponCode }) => {
+const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
 
   return (
@@ -49,7 +49,6 @@ export async function getServerSideProps(ctx) {
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const homeComponentsLang = require(`@/assets/lang/${lang}/home.json`);
-  const couponCode = process.env.FREE_PROMO_COUPON;
 
   return {
     props: {
@@ -59,7 +58,6 @@ export async function getServerSideProps(ctx) {
       lang,
       textContent,
       homeComponentsLang,
-      couponCode,
     },
   };
 }

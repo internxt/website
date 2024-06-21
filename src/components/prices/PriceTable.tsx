@@ -17,9 +17,9 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
+  couponCode: CouponType;
   isTableInHomePage?: boolean;
   discount?: number;
-  couponCode?: CouponType;
 }
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
@@ -50,7 +50,7 @@ export default function PriceTable({
   const banner = require('@/assets/lang/en/banners.json');
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: couponCode ?? CouponType.euro2024Sub,
+    couponCode: couponCode,
   });
 
   const [lifetimeCoupons, setLifetimeCoupons] = useState();
