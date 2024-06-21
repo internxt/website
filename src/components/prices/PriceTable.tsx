@@ -20,6 +20,7 @@ interface PriceTableProps {
   couponCode: CouponType;
   isTableInHomePage?: boolean;
   useSameCouponForAllPlans?: boolean;
+  hideFreeCard?: boolean;
   discount?: number;
 }
 
@@ -45,6 +46,7 @@ export default function PriceTable({
   discount,
   isTableInHomePage,
   useSameCouponForAllPlans,
+  hideFreeCard,
   couponCode,
 }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -242,9 +244,12 @@ export default function PriceTable({
                 />
               ))}
           </div>
-          <div id="freeAccountCard" className="content flex w-full p-4 pb-10 md:pb-0">
-            <FreePlanCard textContent={contentText.freePlanCard} />
-          </div>
+
+          {!hideFreeCard ? (
+            <div id="freeAccountCard" className="content flex w-full p-4 pb-10 md:pb-0">
+              <FreePlanCard textContent={contentText.freePlanCard} />
+            </div>
+          ) : undefined}
         </Transition>
 
         {/* Lifetime cards */}
