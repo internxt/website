@@ -29,7 +29,7 @@ export const FreeCardPromoBanner = () => {
     onCloseBanner();
   };
 
-  const onContinueWithFreePlanButtonClicked = () => goToSignUpURL;
+  const onContinueWithFreePlanButtonClicked = () => goToSignUpURL();
 
   return (
     <div
