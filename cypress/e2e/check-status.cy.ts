@@ -45,6 +45,7 @@ let nameFiles = [
   'locker',
   'startpage',
   'file-converter',
+  '/specialoffer/freeuser',
 ];
 
 const langs = {
