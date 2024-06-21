@@ -19,6 +19,7 @@ interface PriceTableProps {
   textContent: any;
   couponCode: CouponType;
   isTableInHomePage?: boolean;
+  useSameCouponForAllPlans?: boolean;
   discount?: number;
 }
 
@@ -43,6 +44,7 @@ export default function PriceTable({
   textContent,
   discount,
   isTableInHomePage,
+  useSameCouponForAllPlans,
   couponCode,
 }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -235,7 +237,7 @@ export default function PriceTable({
                   }
                   lang={lang}
                   currency={currency}
-                  coupon={couponCode ?? coupon}
+                  coupon={coupon}
                   currencyValue={currencyValue}
                 />
               ))}
@@ -260,7 +262,11 @@ export default function PriceTable({
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={LIFETIME_PRICES[currencyValue][product.storage]}
+                    price={
+                      useSameCouponForAllPlans
+                        ? (Number(product.price * 0.25).toFixed(0) as unknown as number)
+                        : LIFETIME_PRICES[currencyValue][product.storage]
+                    }
                     priceBefore={product.price.split('.')[0]}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
@@ -268,7 +274,7 @@ export default function PriceTable({
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={couponCode ? coupon : lifetimeCoupons?.[product.storage] ?? undefined}
+                    coupon={useSameCouponForAllPlans ? coupon : lifetimeCoupons?.[product.storage] ?? undefined}
                   />
                 );
               })}

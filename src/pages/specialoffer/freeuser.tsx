@@ -25,6 +25,7 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
         isTableInHomePage
         textContent={textContent.tableSection}
         couponCode={CouponType.freeUserCoupon}
+        useSameCouponForAllPlans={true}
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />
