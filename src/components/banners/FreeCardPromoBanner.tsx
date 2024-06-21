@@ -5,6 +5,7 @@ import { goToSignUpURL } from '@/lib/auth';
 import Button from '../shared/Button';
 import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 export const FreeCardPromoBanner = () => {
   const router = useRouter();
@@ -42,7 +43,7 @@ export const FreeCardPromoBanner = () => {
           className={`relative flex h-auto w-full flex-col overflow-hidden rounded-2xl
         text-neutral-900 lg:w-full lg:max-w-6xl`}
           style={{
-            backgroundImage: 'url(/images/banners/freeCardPromoBanner/bg.webp)',
+            backgroundImage: `url(${getImage('/images/banners/freeCardPromoBanner/bg.webp')})`,
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
@@ -78,7 +79,7 @@ export const FreeCardPromoBanner = () => {
             </div>
             <div className="hidden lg:flex">
               <Image
-                src="/images/banners/freeCardPromoBanner/image_internxt.webp"
+                src={getImage('/images/banners/freeCardPromoBanner/image_internxt.webp')}
                 alt="Free Card Promo Banner"
                 width={500}
                 height={359}
