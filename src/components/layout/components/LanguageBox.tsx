@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
-import { Globe } from '@phosphor-icons/react';
-import { UilAngleDown } from '@iconscout/react-unicons';
+import { CaretDown, Globe } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useState } from 'react';
 import cookies from '@/lib/cookies';
@@ -43,10 +42,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
       <p className={darkMode ? 'text-white' : 'text-gray-60'}>{currentLangText}</p>
-      <UilAngleDown
-        className={`${
-          darkMode ? 'text-white' : 'text-gray-40'
-        } h-6 w-6 translate-y-px transition duration-150 ease-in-out`}
+      <CaretDown
+        size={20}
+        className={`${darkMode ? 'text-white' : 'text-gray-40'} translate-y-px transition duration-150 ease-in-out`}
       />
 
       {/* Menu items */}

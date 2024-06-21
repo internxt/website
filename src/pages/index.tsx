@@ -1,5 +1,3 @@
-import dynamic from 'next/dynamic';
-
 import cookies from '@/lib/cookies';
 
 import Layout from '@/components/layout/Layout';
@@ -8,15 +6,15 @@ import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
 import { CouponType } from '@/lib/types';
-
-const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
-const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
-const FirstWhatWeDoSection = dynamic(() => import('@/components/home/FirstWhatWeDoSection'));
-const SecondWhatWeDoSection = dynamic(() => import('@/components/home/SecondWhatWeDoSection'));
-const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
-const ThirdFeaturesSection = dynamic(() => import('@/components/home/ThirdFeaturesSection'));
-const SocialProofSection = dynamic(() => import('@/components/home/SocialProofSection'));
-const Footer = dynamic(() => import('@/components/layout/Footer'));
+import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
+import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
+import Footer from '@/components/layout/Footer';
+import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import FAQSection from '@/components/shared/FaqSection';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -27,9 +25,17 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
+      <ChooseStorageSizeSection textContent={langJson.ChooseStorageSizeSection} />
+
+      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+
+      <div className="bg-gray-1 py-10">
+        <MarqueeComponent />
+      </div>
+
       <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-      {/* <InfoSection textContent={langJson.InfoSection} lang={lang} /> */}
+      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
 
       <PriceTable
         setSegmentPageName={() => {}}
@@ -39,17 +45,11 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         couponCode={CouponType.euro2024Sub}
       />
 
-      <FileParallaxSection />
-
-      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
-
-      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
+      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
 
       <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
-
-      <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+      <FAQSection textContent={langJson.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
 
       <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 

@@ -11,7 +11,6 @@ import { getImage } from '@/lib/getImage';
 
 const FirstWhatWeDoSection = ({
   textContent,
-  lang,
   backgroundColor,
 }: {
   textContent;
