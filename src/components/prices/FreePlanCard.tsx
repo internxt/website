@@ -17,7 +17,7 @@ const FreePlanCard = ({ textContent }) => {
           <p className="text-sm text-gray-80">{textContent.enjoy10gb}</p>
         </div>
       </div>
-      <div className="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2 text-center ">
         <p className="text-4xl font-bold text-gray-100">{textContent.freeForever}</p>
       </div>
       <div className="flex">

@@ -97,11 +97,10 @@ export default function PriceTable({
 
   return (
     <section className="overflow-hidden bg-white">
-      <div className="flex flex-col items-center space-y-10 py-20">
+      <div className="flex flex-col items-center space-y-10 py-24 px-5">
+        {!isTableInHomePage && <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />}
         <div className="flex flex-col items-center space-y-10">
-          {!isTableInHomePage && <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />}
-
-          <div id="priceTable" className="flex flex-col items-center px-5 text-center">
+          <div id="priceTable" className="flex flex-col items-center text-center">
             <Header maxWidth="max-w-4xl">{title()}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!isIndividual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
@@ -241,7 +240,7 @@ export default function PriceTable({
                 />
               ))}
           </div>
-          <div id="freeAccountCard" className="content flex w-full p-4 px-5 pb-10 md:pb-0">
+          <div id="freeAccountCard" className="content flex w-full p-4 pb-10 md:pb-0">
             <FreePlanCard textContent={contentText.freePlanCard} />
           </div>
         </Transition>
@@ -288,10 +287,7 @@ export default function PriceTable({
           </div>
         </Transition>
 
-        <div
-          id="freeAccountCard"
-          className={`content ${!isSubscription ? 'flex' : 'hidden'} w-full p-4 px-5 pb-10 md:pb-0`}
-        >
+        <div id="freeAccountCard" className={`content ${!isSubscription ? 'flex' : 'hidden'} w-full p-4 pb-10 md:pb-0`}>
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 

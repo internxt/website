@@ -7,7 +7,7 @@ import { MarqueeComponent } from './MarqueeComponent';
 
 export const HeroSectionForSpecialOffer = ({ textContent }) => {
   return (
-    <section className="overflow-hidden pt-10">
+    <section className="overflow-hidden pt-5 lg:pt-10">
       <HeroSectionSafeArea>
         <div className="flex max-w-[550px] flex-col items-center gap-6 text-center lg:items-start lg:text-left">
           <Header>
