@@ -7,6 +7,7 @@ import SignUpInline from '@/components/auth/SignUpInline';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import { CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
+import { getImage } from '@/lib/getImage';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -28,7 +29,7 @@ export default function HeroSection({ textContent, lang }) {
           <div
             className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
             style={{
-              backgroundImage: "url('/images/campaigns/euro/grass.webp')",
+              backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
               // filter: 'blur(24px)'
             }}
           />
@@ -83,14 +84,14 @@ export default function HeroSection({ textContent, lang }) {
             <div
               className="absolute -left-16 flex h-full w-[1000px] bg-center bg-no-repeat object-cover"
               style={{
-                backgroundImage: "url('images/campaigns/euro/mist.webp')",
+                backgroundImage: `url(${getImage('/images/campaigns/euro/mist.webp')})`,
                 backgroundPositionX: '-20px',
                 backgroundSize: '1000px',
               }}
             >
               <img
                 className="relative h-full object-fill object-left"
-                src="/images/campaigns/euro/bg_image.webp"
+                src={getImage('/images/campaigns/euro/bg_image.webp')}
                 alt={'Euro Cup Image'}
               />
             </div>

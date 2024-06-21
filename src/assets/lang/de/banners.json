@@ -8,6 +8,13 @@
     "actionCta": "Holen Sie sich eine neue E-Mail",
     "cancelCta": "Abbrechen"
   },
+  "FreeCardPromoBanner": {
+    "title": "Erhalten Sie 75% Rabatt auf alle unsere Premium-Pläne",
+    "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
+    "getDealCta": "Angebot erhalten",
+    "freePlanCta": "Mit kostenlosem Plan fortfahren",
+    "guarantee": "30-tägige Geld-zurück-Garantie"
+  },
   "LoginBanner": {
     "head": "Vor dem Kauf ausprobieren.",
     "title": "Bekomme Internxt umsonst!",

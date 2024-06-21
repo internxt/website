@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import RevealY from '@/components/components/RevealY';
+import { getImage } from '@/lib/getImage';
 
 const InternxtInTheNews = ({ textContent }) => {
   const data = textContent.cards;
@@ -41,7 +42,7 @@ const InternxtInTheNews = ({ textContent }) => {
               className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start">
-                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={120} />
+                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={120} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
@@ -63,7 +64,7 @@ const InternxtInTheNews = ({ textContent }) => {
               className="card-soft relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 shadow-subtle-hard"
             >
               <div className="flex flex-col items-start justify-center">
-                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
+                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={card.width} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
@@ -85,7 +86,7 @@ const InternxtInTheNews = ({ textContent }) => {
               className="relative flex h-[250px] w-[465px] shrink-0 flex-col space-y-9 rounded-3xl bg-white p-10 opacity-40 drop-shadow-md"
             >
               <div className="flex flex-col items-start justify-center">
-                <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
+                <Image src={getImage(`/images/media-area/${card.img}`)} alt="logo" height={30} width={card.width} />
               </div>
               <p className="text-lg font-normal">{card.title}</p>
             </div>
@@ -103,7 +104,12 @@ const InternxtInTheNews = ({ textContent }) => {
                   <div className="flex w-auto max-w-[300px] flex-col">
                     <div className="flex w-[331px] flex-row">
                       <div className="flex flex-col pl-4">
-                        <Image src={`/images/media-area/${card.img}`} alt="logo" height={30} width={card.width} />
+                        <Image
+                          src={getImage(`/images/media-area/${card.img}`)}
+                          alt="logo"
+                          height={30}
+                          width={card.width}
+                        />
                       </div>
                     </div>
                     <p className="pt-9 text-lg font-normal">{card.title}</p>

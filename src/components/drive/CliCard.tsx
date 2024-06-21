@@ -3,6 +3,7 @@ import { LinkTo } from './components/LinkTo';
 import { CommandTextInputCopy } from '../shared/CommandTextInputCopy';
 import { AppleLogo } from '../shared/icons/AppleIcon';
 import { GH_README_LINK, USER_GUIDE_LINK } from '@/constants';
+import { getImage } from '@/lib/getImage';
 
 export const CliCard = ({ textContent }) => {
   return (
@@ -27,7 +28,7 @@ export const CliCard = ({ textContent }) => {
           </div>
           <div className="flex w-full flex-col space-y-3 pl-5 md:w-max md:pl-0">
             <Image
-              src="/images/drive/Terminal.svg"
+              src={getImage('/images/drive/Terminal.svg')}
               width={256}
               height={256}
               alt="Terminal Image"
@@ -35,7 +36,7 @@ export const CliCard = ({ textContent }) => {
             />
             <div className="flex justify-end md:hidden">
               <Image
-                src="/images/drive/Terminal.svg"
+                src={getImage('/images/drive/Terminal.svg')}
                 width={352}
                 draggable={false}
                 height={353}

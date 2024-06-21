@@ -1,5 +1,5 @@
-import React from 'react';
 import ProductCard from '@/components/shared/ProductCard';
+import { getImage } from '@/lib/getImage';
 
 const ProductsSection = ({ textContent, lang }) => {
   return (
@@ -15,7 +15,7 @@ const ProductsSection = ({ textContent, lang }) => {
           <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
             {/* Internxt Drive */}
             <ProductCard
-              imageUrl={'/images/privacy/Internxt-Drive.webp'}
+              imageUrl={getImage('/images/privacy/Internxt-Drive.webp')}
               redirect="/drive"
               animationDirection={'right'}
               lang={lang}
@@ -24,7 +24,7 @@ const ProductsSection = ({ textContent, lang }) => {
 
             {/* Internxt Send */}
             <ProductCard
-              imageUrl={'/images/privacy/Share-by-email.webp'}
+              imageUrl={getImage('/images/privacy/Share-by-email.webp')}
               redirect={'https://send.internxt.com'}
               animationDirection={'left'}
               lang={lang}

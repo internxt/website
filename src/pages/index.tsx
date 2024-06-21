@@ -7,6 +7,7 @@ import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
+import { CouponType } from '@/lib/types';
 
 const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
 const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
@@ -30,7 +31,13 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       {/* <InfoSection textContent={langJson.InfoSection} lang={lang} /> */}
 
-      <PriceTable setSegmentPageName={() => {}} lang={lang} textContent={langJson.tableSection} isTableInHomePage />
+      <PriceTable
+        setSegmentPageName={() => {}}
+        lang={lang}
+        textContent={langJson.tableSection}
+        isTableInHomePage
+        couponCode={CouponType.euro2024Sub}
+      />
 
       <FileParallaxSection />
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { KitCard } from './components/KitCard';
 
 import downloadItem from '@/lib/downloadItem';
+import { getImage } from '@/lib/getImage';
 
 const KitSection = ({ textContent }) => {
   const [inxtScreenshotMockups, setInxtScreenshotMockups] = useState('');
@@ -25,12 +26,12 @@ const KitSection = ({ textContent }) => {
         <div className="flex flex-row flex-wrap items-stretch gap-10">
           <KitCard
             downloadImagesLink={`https://internxt.com/media-area/internxt-logo-set.zip`}
-            image={'/images/media-area/inxt-logo-set.svg'}
+            image={getImage('/images/media-area/inxt-logo-set.svg')}
             textContent={textContent.firstSection}
           />
           <KitCard
             downloadImagesLink={`${inxtScreenshotMockups}`}
-            image={'/images/media-area/screenshots-mockup.webp'}
+            image={getImage('/images/media-area/screenshots-mockup.webp')}
             textContent={textContent.secondSection}
           />
         </div>

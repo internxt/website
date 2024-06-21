@@ -1,3 +1,5 @@
+import { getImage } from '@/lib/getImage';
+
 const WhatIsOSS = ({ textContent }) => {
   return (
     <section className="overflow-hidden bg-gray-1">
@@ -8,7 +10,11 @@ const WhatIsOSS = ({ textContent }) => {
             <p className="text-xl text-gray-80">{textContent.description}</p>
           </div>
           <p className="text-2xl font-medium text-gray-80">{textContent.imgHeader}</p>
-          <img src="/images/open-source/Internxt-open-source.webp" width={796} alt="Internxt Open Source Software" />
+          <img
+            src={getImage('/images/open-source/Internxt-open-source.webp')}
+            width={796}
+            alt="Internxt Open Source Software"
+          />
           <div className="flex flex-col space-y-6">
             {textContent.section.map((description, index) => (
               <p className="text-xl text-gray-80" key={index}>

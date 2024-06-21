@@ -7,6 +7,7 @@ import RevealX from '@/components/components/RevealX';
 import FileItem from './components/FileItem';
 import { DriveSidenav } from './components/DriveSidenav';
 import { useRouter } from 'next/router';
+import { getImage } from '@/lib/getImage';
 
 const FirstWhatWeDoSection = ({
   textContent,
@@ -25,7 +26,7 @@ const FirstWhatWeDoSection = ({
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative rounded-3xl">
             <Image
-              src="/images/home/Secure-file-upload.webp"
+              src={getImage('/images/home/Secure-file-upload.webp')}
               width={496}
               height={520}
               quality={100}
@@ -39,7 +40,7 @@ const FirstWhatWeDoSection = ({
               className="absolute top-12 -left-20 hidden rounded-lg bg-white shadow-xl lg:flex"
             >
               <Image
-                src="/images/home/TaskLogger.svg"
+                src={getImage('/images/home/TaskLogger.svg')}
                 width={320}
                 height={290}
                 quality={100}
@@ -82,7 +83,7 @@ const FirstWhatWeDoSection = ({
           </div>
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/End-to-end-encrypted-cloud-storage.webp"
+              src={getImage('/images/home/End-to-end-encrypted-cloud-storage.webp')}
               width={444}
               height={520}
               quality={100}
@@ -105,7 +106,7 @@ const FirstWhatWeDoSection = ({
         <RevealY className="flex flex-col-reverse space-y-5 space-y-reverse md:flex-row md:space-y-0 md:space-x-20 lg:items-center lg:justify-center">
           <div className="relative w-full rounded-3xl">
             <Image
-              src="/images/home/Free-cloud-storage-account.webp"
+              src={getImage('/images/home/Free-cloud-storage-account.webp')}
               width={496}
               height={520}
               quality={100}

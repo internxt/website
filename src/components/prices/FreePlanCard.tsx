@@ -1,6 +1,7 @@
-import { goToSignUpURL } from '@/lib/auth';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const FreePlanCard = ({ textContent }) => {
+  const { openDialog } = useGlobalDialog();
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 rounded-2xl border border-gray-10 px-5 py-9 md:flex-row md:justify-between">
       <div className="flex flex-col space-y-5 text-center md:text-left">
@@ -16,14 +17,14 @@ const FreePlanCard = ({ textContent }) => {
           <p className="text-sm text-gray-80">{textContent.enjoy10gb}</p>
         </div>
       </div>
-      <div className="flex flex-col items-center space-y-2">
+      <div className="flex flex-col items-center space-y-2 text-center ">
         <p className="text-4xl font-bold text-gray-100">{textContent.freeForever}</p>
       </div>
       <div className="flex">
         <button
           className="flex w-full flex-col rounded-lg border border-primary px-20 py-2.5 font-medium text-primary hover:bg-gray-1 active:bg-gray-5"
           onClick={() => {
-            goToSignUpURL();
+            openDialog(GlobalDialog.FreeSpaceCardBanner);
           }}
         >
           {textContent.cta}

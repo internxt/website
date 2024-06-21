@@ -26,6 +26,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime/celebration',
   '/pcloud-alternative',
   '/dealmirror',
+  '/specialoffer/freeuser',
 ];
 
 export const SNIGEL_BANNERS = {

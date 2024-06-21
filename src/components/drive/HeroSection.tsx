@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
-import React from 'react';
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import Header from '@/components/shared/Header';
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">
@@ -27,7 +27,7 @@ const HeroSection = ({ textContent, lang, download }) => (
       {/* Main title Mockup */}
       <div className="flex h-full flex-col px-5 py-16">
         <img
-          src="/images/home/internxt_secure_cloud_storage.webp"
+          src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
           width={757}
           height={419}
           alt="Internxt secure cloud storage"

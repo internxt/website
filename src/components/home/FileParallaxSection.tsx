@@ -1,3 +1,4 @@
+import { getImage } from '@/lib/getImage';
 import Image from 'next/legacy/image';
 
 export default function FileParallaxSection() {
@@ -47,7 +48,7 @@ export default function FileParallaxSection() {
             {col.concat(col, col, col).map((item, i) => (
               <div key={i} className="relative h-72 w-36 overflow-hidden rounded-lg md:w-52">
                 <Image
-                  src={`/images/home/files-parallax/${item.url}`}
+                  src={getImage(`/images/home/files-parallax/${item.url}`)}
                   alt={item.alt}
                   layout="fill"
                   loading="lazy"
