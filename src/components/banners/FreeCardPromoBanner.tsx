@@ -26,7 +26,7 @@ export const FreeCardPromoBanner = () => {
   };
 
   const onGetTheDealButtonClicked = () => {
-    router.push('/specialoffer/freeuser');
+    router.push('/specialoffer/freeuser?utm_source=homepage&utm_medium=banner&utm_campaign=freeuser');
     onCloseBanner();
   };
 
