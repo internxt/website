@@ -16,7 +16,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
           backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
         }}
       >
-        <div className="flex w-full flex-col items-center gap-6 px-3 py-10 text-center lg:items-start lg:p-10 lg:py-16 lg:text-left xl:w-full">
+        <div className="flex w-full flex-col items-center gap-6 px-3 py-10 text-center lg:items-start lg:p-10 lg:py-16 lg:text-left">
           <div className="flex w-max rounded-2xl bg-gray-100 py-2 px-4 ring-4 ring-primary">
             <p className="text-3xl font-bold text-white md:text-5xl">{textContent.label}</p>
           </div>

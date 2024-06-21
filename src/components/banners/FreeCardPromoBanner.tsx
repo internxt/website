@@ -73,9 +73,7 @@ export const FreeCardPromoBanner = () => {
               </div>
               <div className="flex flex-row space-x-3 pt-2">
                 <CheckCircle size={24} className="text-primary" weight="bold" />
-                <p className="text-left font-medium text-gray-100 lg:text-lg">
-                  {bannerText.FreeCardPromoBanner.guarantee}
-                </p>
+                <p className="font-medium text-gray-100 lg:text-lg">{bannerText.FreeCardPromoBanner.guarantee}</p>
               </div>
             </div>
             <div className="hidden lg:flex">
