@@ -19,7 +19,7 @@ export const WhatWeDoSectionForSpecialOffer = ({ textContent }) => {
               {textContent.card.features.map((feature) => (
                 <div className="flex flex-row gap-2">
                   <CheckCircle className="mt-0.5 h-6 w-6 text-primary lg:mt-0 lg:h-8 lg:w-8" size={32} />
-                  <p className="font-semibold text-gray-80">{feature}</p>
+                  <p className="text-left font-semibold text-gray-80">{feature}</p>
                 </div>
               ))}
             </div>
