@@ -28,6 +28,7 @@ export enum GlobalDialog {
   TempMailAction = 'TempMailAction',
   MobileBannerForHome = 'MobileBannerForHome',
   PriceBannerForCampaigns = 'PriceBannerForCampaigns',
+  TopBanner = 'TopBanner',
   BottomBanner = 'BottomBanner',
   FreeSpaceCardBanner = 'FreeSpaceCardBanner',
 }

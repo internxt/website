@@ -1,3 +1,4 @@
+import { getImage } from '@/lib/getImage';
 import Image from 'next/legacy/image';
 
 const HeroSection = ({ textContent }) => {
@@ -46,7 +47,7 @@ const HeroSection = ({ textContent }) => {
             <Image
               width={496}
               height={520}
-              src="/images/affiliates/internxt-private-cloud-storage-service.webp"
+              src={getImage('/images/affiliates/internxt-private-cloud-storage-service.webp')}
               alt="hero-section"
               draggable="false"
             />

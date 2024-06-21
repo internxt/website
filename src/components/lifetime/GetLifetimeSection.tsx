@@ -1,4 +1,5 @@
 import RevealY from '@/components/components/RevealY';
+import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
@@ -16,7 +17,12 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
   const secondTitle = splitTitle[1];
 
   return (
-    <section className="overflow-hidden bg-[url('/images/lifetime/celebration/normal-bg.png')] bg-cover bg-no-repeat">
+    <section
+      className="overflow-hidden bg-cover bg-no-repeat"
+      style={{
+        backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
+      }}
+    >
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center py-16">
           <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-white">
@@ -38,7 +44,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
           <RevealY className="content relative flex h-full w-full flex-col items-center px-5 pt-6">
             {isCelebrationPage ? (
               <Image
-                src="/images/lifetime/celebration/confetti-horizontal.svg"
+                src={getImage('/images/lifetime/celebration/confetti-horizontal.svg')}
                 alt="Confetti"
                 width={1103}
                 height={464}
@@ -46,7 +52,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
               />
             ) : null}
             <Image
-              src="/images/home/internxt_secure_cloud_storage.webp"
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               alt="Internxt secure cloud storage"
               draggable={false}
               width={805}

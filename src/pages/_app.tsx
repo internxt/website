@@ -56,6 +56,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             isOpen: true,
           },
           {
+            key: GlobalDialog.TopBanner,
+            isOpen: true,
+          },
+          {
             key: GlobalDialog.BottomBanner,
             isOpen: true,
           },

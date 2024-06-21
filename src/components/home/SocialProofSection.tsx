@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-no-target-blank */
-import React from 'react';
+import { getImage } from '@/lib/getImage';
 
 const SocialProofSection = ({ textContent, lang }) => (
   <section className="overflow-hidden">
@@ -9,12 +9,17 @@ const SocialProofSection = ({ textContent, lang }) => (
 
         <div className="flex flex-row flex-wrap justify-around sm:px-10">
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img loading="lazy" src="../../logos/investors/telefonica.svg" draggable="false" alt="telefonica logo" />
+            <img
+              loading="lazy"
+              src={getImage('/logos/investors/telefonica.svg')}
+              draggable="false"
+              alt="telefonica logo"
+            />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
-              src="../../logos/investors/eset-logo.svg"
+              src={getImage('/logos/investors/eset-logo.svg')}
               className="mx-auto h-7"
               draggable="false"
               alt="eset logo"
@@ -23,7 +28,7 @@ const SocialProofSection = ({ textContent, lang }) => (
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
-              src="../../logos/investors/Revolut.png"
+              src={getImage('/logos/investors/Revolut.png')}
               className="mx-auto h-5"
               draggable="false"
               alt="Revolut logo"
@@ -31,12 +36,17 @@ const SocialProofSection = ({ textContent, lang }) => (
           </div>
 
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
-            <img loading="lazy" src="../../logos/investors/ovhcloud.svg" draggable="false" alt="ovh cloud logo" />
+            <img
+              loading="lazy"
+              src={getImage('/logos/investors/ovhcloud.svg')}
+              draggable="false"
+              alt="ovh cloud logo"
+            />
           </div>
           <div className="flex h-20 w-2/5 flex-shrink-0 items-center justify-center md:w-1/3 xl:w-auto xl:px-6">
             <img
               loading="lazy"
-              src="../../logos/investors/angelscapital.svg"
+              src={getImage('/logos/investors/angelscapital.svg')}
               draggable="false"
               alt="angels capital logo"
             />
@@ -50,7 +60,7 @@ const SocialProofSection = ({ textContent, lang }) => (
             >
               <img
                 loading="lazy"
-                src="../../logos/investors/open–trusted-cloud.png"
+                src={getImage('/logos/investors/open–trusted-cloud.png')}
                 draggable="false"
                 alt="OTC logo"
                 className="mx-auto h-[26px]"
