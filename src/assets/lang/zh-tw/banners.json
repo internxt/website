@@ -135,9 +135,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "在球場和雲端保護你的目標。",
-      "normalText": "75% 折扣。",
-      "cta": "選擇你的計劃"
+      "boldText": "雲存儲高達75%折扣！",
+      "normalText": "",
+      "cta": "選擇存儲大小"
     }
   },
   "lifetimeBanner": {

@@ -81,9 +81,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Assurez vos buts, sur le terrain et dans le cloud.",
-      "normalText": "75% de réduction.",
-      "cta": "Choisissez votre plan"
+      "boldText": "Obtenez jusqu'à 75% de réduction sur le stockage cloud !",
+      "normalText": "",
+      "cta": "Choisir la taille du stockage"
     }
   },
   "lifetimeBanner": {

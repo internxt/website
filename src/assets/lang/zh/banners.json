@@ -103,9 +103,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "在球场和云端保护你的目标。",
-      "normalText": "75% 折扣。",
-      "cta": "选择你的计划"
+      "boldText": "云存储高达75%折扣！",
+      "normalText": "",
+      "cta": "选择存储大小"
     }
   },
   "lifetimeBanner": {

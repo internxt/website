@@ -19,7 +19,7 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              ⚽️ {textContent.title.normalText}
+              {textContent.title.normalText}
               <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
@@ -41,7 +41,7 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <Link className="flex flex-col items-center justify-center" href={'/pricing'} target="_blank">
             <p className="font-normal">
-              ⚽️ {textContent.title.normalText}
+              {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
             </p>
           </Link>
