@@ -18,11 +18,11 @@ export const ChooseStorageSizeSection = ({ textContent }) => {
             draggable={false}
           />
         </div>
-        <div className="flex max-w-[540px] flex-col gap-6">
-          <div className="flex flex-col gap-4">
-            <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-            <p className="text-xl text-gray-80">{textContent.description}</p>
-            <p className="text-xl font-semibold text-gray-80">{textContent.peaceOfMind}</p>
+        <div className="flex max-w-[540px] flex-col items-center gap-6 lg:items-start">
+          <div className="flex flex-col gap-4 text-center lg:text-left">
+            <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+            <p className="text-lg text-gray-80 lg:text-xl">{textContent.description}</p>
+            <p className="text-lg font-semibold text-gray-80 lg:text-xl">{textContent.peaceOfMind}</p>
           </div>
           <Button
             text={textContent.cta}
