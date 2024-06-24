@@ -56,13 +56,10 @@
     "cta": "Choose storage size"
   },
   "FirstFeaturesSection": {
-    "title": {
-      "line1": "The most secure cloud for",
-      "line2": "all your files and photos"
-    },
-    "subtitle": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, Internxt services are built from the ground up using open source software for unparalleled safety and security.",
-
-    "cta": "Create free account"
+    "title": "Why choose Internxt?",
+    "subtitle": "Internxt puts you back in control of your data with zero-knowledge, military-grade encryption. ",
+    "description": "We use open-source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
+    "cta": "Choose storage"
   },
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
@@ -253,7 +250,6 @@
       }
     ]
   },
-
   "GetStartedSection": {
     "title": { "line1": "Get started and", "line2": "get 1GB for free" },
     "subtitle": {

@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const FiveStars = () => (
   <div className="flex flex-row gap-1.5">
-    {new Array(5).fill(0).map(() => (
-      <Star className="text-yellow" weight="fill" size={18} />
+    {new Array(5).fill(0).map((_, index) => (
+      <Star className="text-yellow" weight="fill" size={18} key={index} />
     ))}
   </div>
 );
@@ -54,7 +54,7 @@ const TestimonialsSection = ({ textContent, bgColor }: { textContent: any; bgCol
         </div>
         <div className="flex w-full flex-row  flex-wrap justify-center gap-12">
           {testimonials.map((testimonial) => (
-            <div className="flex max-w-[375px] flex-col justify-between gap-3">
+            <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
               <div className="flex flex-col gap-3">
                 <FiveStars />
                 <p className="text-xl text-gray-80">{testimonial.review}</p>
