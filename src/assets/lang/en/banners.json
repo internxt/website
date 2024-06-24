@@ -134,9 +134,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Up to 75% OFF all plans!",
-      "normalText": "Score big savings on private cloud storage! ",
-      "cta": "Choose plan"
+      "boldText": "Get up to 75% OFF cloud storage!",
+      "normalText": "",
+      "cta": "Choose storage size"
     }
   },
   "lifetimeBanner": {
