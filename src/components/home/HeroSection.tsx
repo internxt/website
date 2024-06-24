@@ -33,7 +33,7 @@ export default function HeroSection({ textContent, lang }) {
             </div>
             <HomePageBannerForMobile />
             <div className="z-10 flex flex-col md:max-w-lg">
-              <Header maxWidth="max-w-[476px]" className="text-gray-100">
+              <Header maxWidth="max-w-[485px]" className="text-gray-100">
                 {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
               </Header>
 
