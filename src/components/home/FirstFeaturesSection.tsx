@@ -3,7 +3,6 @@ import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
@@ -17,7 +16,7 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
           </div>
 
           <Link
-            href={SIGNUP_DRIVE_WEB}
+            href={'/pricing'}
             target="_blank"
             rel="noopener noreferrer"
             className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
