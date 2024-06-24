@@ -27,6 +27,7 @@ export const TitleAndSurvey = ({ textContent }) => {
           <p className="whitespace-nowrap font-semibold text-gray-80">{textContent.upTo}</p>
           <div className="flex h-full border border-gray-10" />
 
+          {/* // TODO: Manage the buttons logic */}
           <div className="flex w-full flex-row gap-4">
             {textContent.buttonLabel.map((label) => (
               <Button text={label} onClick={() => {}} />
