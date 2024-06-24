@@ -8,13 +8,57 @@ import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import { CouponType } from '@/lib/types';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/MinimalFooter';
+import { getImage } from '@/lib/getImage';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, langJson, navbarLang, footerLang }) => {
+const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium'];
+
+const IMAGES_PER_PATH = {
+  canada: {
+    backgroundImage: '/images/lifetime/celebration/canada/canada-bg.webp',
+    previewImage: '/images/lifetime/celebration/canada/canada-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/canada/canada-image-mobile.webp',
+  },
+  usa: {
+    backgroundImage: '/images/lifetime/celebration/usa/us-bg.webp',
+    previewImage: '/images/lifetime/celebration/usa/us-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/usa/us-image-mobile.webp',
+  },
+  france: {
+    backgroundImage: '/images/lifetime/celebration/france/france-bg.webp',
+    previewImage: '/images/lifetime/celebration/france/france-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/france/france-image-mobile.webp',
+  },
+  belgium: {
+    backgroundImage: '/images/lifetime/celebration/belgium/belgium-bg.webp',
+    previewImage: '/images/lifetime/celebration/belgium/belgium-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/belgium/belgium-image-mobile.webp',
+  },
+};
+
+const LifetimeCelebrationTemplate = ({
+  lang,
+  pathname,
+  metatagsDescriptions,
+  testimonialsJson,
+  langJson,
+  navbarLang,
+  footerLang,
+}) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
+  const router = useRouter();
+  const filename = pathname.split('/').pop();
+  const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${filename}`);
+
+  useEffect(() => {
+    if (!selectedPathName) {
+      router.push('/lifetime');
+    }
+  }, [selectedPathName, router]);
+
   const discount = 0.2;
-  const year = moment().format('YYYY');
 
   return (
     <Layout
@@ -29,8 +73,9 @@ const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, lan
       <HeroSection
         textContent={langJson.HeroSection.celebration}
         isCelebrationPage
-        previewImg="/images/lifetime/celebration/file_item.webp"
-        bgImage="/images/lifetime/celebration/swiggles_italy.png"
+        previewImg={getImage(IMAGES_PER_PATH[filename].previewImage)}
+        imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
+        bgImage={getImage(IMAGES_PER_PATH[filename].backgroundImage)}
       />
 
       <PaymentSection
@@ -56,7 +101,8 @@ const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, lan
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = 'it';
+  const lang = 'en';
+  const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
@@ -69,6 +115,7 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
+      pathname,
       metatagsDescriptions,
       langJson,
       testimonialsJson,
@@ -78,4 +125,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default LifetimeCelebration;
+export default LifetimeCelebrationTemplate;
