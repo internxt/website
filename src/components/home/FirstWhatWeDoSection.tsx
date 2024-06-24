@@ -60,6 +60,7 @@ const FirstWhatWeDoSection = ({
             <Link
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
               href={'/privacy'}
+              target="_blank"
               hrefLang={lang}
             >
               <p className="text-lg font-semibold">{textContent.card1.cta}</p>
@@ -75,6 +76,7 @@ const FirstWhatWeDoSection = ({
             <p className="text-xl">{textContent.card2.description}</p>
             <Link
               href={'/drive'}
+              target="_blank"
               hrefLang={lang}
               className="flex cursor-pointer flex-row items-center justify-center space-x-2 text-primary hover:underline lg:justify-start"
             >
