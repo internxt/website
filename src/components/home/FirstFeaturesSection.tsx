@@ -17,7 +17,6 @@ const FirstFeaturesSection = ({ textContent, lang }) => {
 
           <Link
             href={'/pricing'}
-            target="_blank"
             rel="noopener noreferrer"
             className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
           >
