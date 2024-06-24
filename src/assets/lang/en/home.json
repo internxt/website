@@ -40,18 +40,22 @@
           "free": "For Free!"
         }
       }
-    }
-  },
-  "HeroSectionV2": {
-    "title": {
-      "line1": "Store your files safely, now ",
-      "blueText": "75% cheaper"
     },
-    "trustedBy": "Trusted by 330,000+ people",
-    "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
-    "howMuchYouNeed": "How much online storage do you need?",
-    "upTo": "Up to: ",
-    "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "Store your files safely, now ",
+        "blueText": "75% cheaper"
+      },
+      "trustedBy": "Trusted by 330,000+ people",
+      "description": {
+        "normal1": "Protect your work and personal files with ",
+        "bold": "affordable military-grade encrypted ",
+        "normal2": "cloud storage."
+      },
+      "howMuchYouNeed": "How much online storage do you need?",
+      "upTo": "Up to: ",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    }
   },
   "FeatureSectionV2": {
     "title": "Zero-knowledge encryption: only you can see your data",
@@ -283,6 +287,11 @@
         "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
       }
     ]
+  },
+  "CtaSection": {
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Choose your plan"
   },
   "GetStartedSection": {
     "title": { "line1": "Get started and", "line2": "get 1GB for free" },

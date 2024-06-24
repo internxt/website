@@ -4,10 +4,17 @@ import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
+import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
 const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
-export default function HeroSection({ textContent, lang }) {
+interface HeroSectionForHomeProps {
+  textContent: any;
+  lang: string;
+  isHomePageV2?: boolean;
+}
+
+export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps) {
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
@@ -32,7 +39,11 @@ export default function HeroSection({ textContent, lang }) {
             </div>
             <HomePageBannerForMobile />
 
-            <TitleAndSignup textContent={textContent} />
+            {isHomePageV2 ? (
+              <TitleAndSurvey textContent={textContent.TitleAndSurvey} />
+            ) : (
+              <TitleAndSignup textContent={textContent} />
+            )}
           </div>
 
           {/* Desktop animation/image */}
