@@ -37,8 +37,7 @@
         "security": "Безопасность",
         "legal": "Условия и положения",
         "WhyInternxt": "Почему Internxt?",
-        "mediaArea": "Медиа-зона",
-        "useCases": "Случаи использования"
+        "mediaArea": "Медиа-зона"
       },
       "join": {
         "title": "Присоединяйтесь к нам",
@@ -64,12 +63,10 @@
         "comparison": "Сравнение",
         "directoryOfPrivacyOrganizations": "Oрганизации по вопросам конфиденциальности",
         "pCloudAlternative": "Альтернатива pCloud",
-        "library": "Библиотека",
         "writeForUs": "Написать нам",
         "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
         "cyberAwareness": "Осведомленность о кибербезопасности",
-        "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
-        "inxtLibrary": "Библиотека"
+        "whatGoogleKnowsAboutMe": "Что Google знает обо мне"
       },
       "tools": {
         "title": "Бесплатные инструменты",
