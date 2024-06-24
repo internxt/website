@@ -103,9 +103,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Erhalten Sie bis zu 75% Rabatt auf Cloud-Speicher!",
-      "normalText": "",
-      "cta": "Wählen Sie die Speichergröße"
+      "boldText": "Sichern Sie Ihre Ziele, auf dem Feld und in der Cloud.",
+      "normalText": "75% Rabatt.",
+      "cta": "Wählen Sie Ihren Plan"
     }
   },
   "lifetimeBanner": {
