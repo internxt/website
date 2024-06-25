@@ -24,13 +24,15 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
   // TODO: Manage when to show version 2 of the home page
   const isHomePageV2 = true;
 
+  const navbarCta = isHomePageV2 ? 'chooseStorage' : 'default';
+
   const marqueeBgColor = isHomePageV2 ? 'bg-white' : 'bg-gray-1';
   const faqSectionBgColor = !isHomePageV2 ? 'bg-gray-1' : undefined;
   const faqSectionCardColor = !isHomePageV2 ? 'bg-white' : undefined;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={isHomePageV2} />
 

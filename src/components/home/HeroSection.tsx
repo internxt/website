@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
 import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
+import { ArrowCircleDown } from '@phosphor-icons/react';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -22,7 +23,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
+      <div className="relative mx-4 pt-24 pb-12 lg:mx-10 lg:pt-12 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
           style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
@@ -53,6 +54,10 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
           {/* Desktop animation/image */}
           <Animation />
+        </div>
+        <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
+          <ArrowCircleDown size={32} className="animate-bounce text-primary" />
+          <p className="z-50 font-medium text-gray-80">Did you know?</p>
         </div>
       </div>
     </section>

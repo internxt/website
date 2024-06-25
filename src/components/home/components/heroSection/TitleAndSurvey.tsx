@@ -18,7 +18,7 @@ export const TitleAndSurvey = ({ textContent }) => {
             {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
           </Header>
 
-          <div className="flex flex-row items-center gap-3">
+          <div className="flex flex-col items-center gap-3 lg:flex-row">
             <FiveStars totalStars={5} />
             <p className="font-semibold text-gray-70">{textContent.trustedBy}</p>
           </div>
