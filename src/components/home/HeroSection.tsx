@@ -18,12 +18,14 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     ? getImage('/images/home/image_mobileV2.webp')
     : getImage('/images/home/image_mobile.webp');
 
+  const blurBgImage = getImage('/images/home/header/bg.svg');
+
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
-          style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
+          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch lg:py-10">
