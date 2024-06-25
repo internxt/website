@@ -17,9 +17,11 @@ import PriceTable from '@/components/prices/PriceTable';
 import { CouponType } from '@/lib/types';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import { useRouter } from 'next/router';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const router = useRouter();
 
   // TODO: Manage when to show version 2 of the home page
   const isHomePageV2 = true;
@@ -30,13 +32,24 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
   const faqSectionBgColor = !isHomePageV2 ? 'bg-gray-1' : undefined;
   const faqSectionCardColor = !isHomePageV2 ? 'bg-white' : undefined;
 
+  const onChooseStorageButtonClicked = () => {
+    if (isHomePageV2) {
+      router.push('/pricing');
+    } else {
+      window.location.hash = '#priceTable';
+    }
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={isHomePageV2} />
 
-      <ChooseStorageSizeSection textContent={langJson.ChooseStorageSizeSection} />
+      <ChooseStorageSizeSection
+        textContent={langJson.ChooseStorageSizeSection}
+        onButtonClicked={onChooseStorageButtonClicked}
+      />
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 

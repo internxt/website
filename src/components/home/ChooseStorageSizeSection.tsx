@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 
-export const ChooseStorageSizeSection = ({ textContent }) => {
+export const ChooseStorageSizeSection = ({ textContent, onButtonClicked }) => {
   return (
     <section className="overflow-hidden bg-gray-1 py-20 px-5">
       <div className="flex flex-col-reverse items-center justify-center gap-20 lg:flex-row">
@@ -24,12 +24,7 @@ export const ChooseStorageSizeSection = ({ textContent }) => {
             <p className="text-lg text-gray-80 lg:text-xl">{textContent.description}</p>
             <p className="text-lg font-semibold text-gray-80 lg:text-xl">{textContent.peaceOfMind}</p>
           </div>
-          <Button
-            text={textContent.cta}
-            onClick={() => {
-              window.location.hash = '#priceTable';
-            }}
-          />
+          <Button text={textContent.cta} onClick={onButtonClicked} />
         </div>
       </div>
     </section>

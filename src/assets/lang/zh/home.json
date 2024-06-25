@@ -40,7 +40,45 @@
           "free": "的免费容量"
         }
       }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "现在安全存储您的文件，",
+        "blueText": "便宜75%"
+      },
+      "trustedBy": "已被330,000+人信任",
+      "description": {
+        "normal1": "使用 ",
+        "bold": "经济实惠的军用级加密",
+        "normal2": "云存储保护您的工作和个人文件。"
+      },
+      "howMuchYouNeed": "您需要多少在线存储空间？",
+      "upTo": "最多：",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     }
+  },
+  "FeatureSectionV2": {
+    "title": "零知识加密：只有您可以看到您的数据",
+    "description": "通过最安全的云存储应用程序，从您的计算机、智能手机、平板电脑或任何其他连接到互联网的设备安全地访问您的所有文件。",
+    "cta": "选择存储大小",
+    "cards": [
+      {
+        "title": "无法破解和泄漏的数据",
+        "description": "我们不存储密码或用户数据，您的所有数据在传输和静止时均已加密。Internxt让您完全掌控您的文件。您的数据是您的业务。保护它是我们的责任。"
+      },
+      {
+        "title": "毫不妥协的安全性",
+        "description": "在离开您的设备之前，您的文件已端到端加密。感谢零知识AES-256加密，您是唯一能够访问您的数据的人。"
+      },
+      {
+        "title": "开源和透明",
+        "description": "我们为我们的工作感到自豪，因此我们的代码在GitHub上公开，可以由任何人亲自审查、审计和验证。我们没有什么可隐藏的，除了您的数据。"
+      },
+      {
+        "title": "独立验证",
+        "description": "我们完全符合GDPR并且100%安全，但不要仅凭我们的说辞。Internxt已通过欧洲领先的渗透测试公司Securitum的独立审计和验证。"
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -249,6 +287,11 @@
         "review": "我使用Google Drive已经好几年了，但我需要一个可以保证我数据隐私的替代方案。Google或其他知名平台无法做到这一点。因此我选择了Internxt。"
       }
     ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密的云存储",
+    "description": "使用Internxt的安全、私密和加密云存储保护真正重要的东西。",
+    "cta": "选择你的计划"
   },
   "GetStartedSection": {
     "title": { "line1": "Get started and", "line2": "get 1GB for free" },

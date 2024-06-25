@@ -40,7 +40,45 @@
           "free": "免費！"
         }
       }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "現在安全存儲您的文件，",
+        "blueText": "便宜75%"
+      },
+      "trustedBy": "已被330,000+人信任",
+      "description": {
+        "normal1": "使用 ",
+        "bold": "經濟實惠的軍用級加密",
+        "normal2": "雲存儲保護您的工作和個人文件。"
+      },
+      "howMuchYouNeed": "您需要多少線上存儲空間？",
+      "upTo": "最多：",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     }
+  },
+  "FeatureSectionV2": {
+    "title": "零知識加密：只有您可以看到您的數據",
+    "description": "通過最安全的雲存儲應用程序，從您的計算機、智能手機、平板電腦或任何其他連接到互聯網的設備安全地訪問您的所有文件。",
+    "cta": "選擇存儲大小",
+    "cards": [
+      {
+        "title": "無法破解和泄漏的數據",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜止時均已加密。Internxt讓您完全掌控您的文件。您的數據是您的業務。保護它是我們的責任。"
+      },
+      {
+        "title": "毫不妥協的安全性",
+        "description": "在離開您的設備之前，您的文件已端到端加密。感謝零知識AES-256加密，您是唯一能夠訪問您的數據的人。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們為我們的工作感到自豪，因此我們的代碼在GitHub上公開，可以由任何人親自審查、審計和驗證。我們沒有什麼可隱藏的，除了您的數據。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合GDPR並且100%安全，但不要僅憑我們的說辭。Internxt已通過歐洲領先的滲透測試公司Securitum的獨立審計和驗證。"
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -249,6 +287,11 @@
         "review": "我使用Google Drive已經好幾年了，但我需要一個可以保證我數據隱私的替代方案。Google或其他知名平台無法做到這一點。因此我選擇了Internxt。"
       }
     ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密的雲存儲",
+    "description": "使用Internxt的安全、私密和加密雲存儲保護真正重要的東西。",
+    "cta": "選擇你的計劃"
   },
   "GetStartedSection": {
     "title": { "line1": "開始並", "line2": "免費獲得高達10GB" },
