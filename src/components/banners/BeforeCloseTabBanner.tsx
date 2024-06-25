@@ -1,5 +1,6 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
+import { event } from '@/lib/gtag';
 import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -20,8 +21,6 @@ export const BeforeCloseTabBanner = () => {
 
   useEffect(() => {
     const handleMouseLeave = (event) => {
-      console.log('Mouse leave event triggered');
-
       const closeTabBannerInLocalStorage = localStorage.getItem(CLOSE_TAB_BANNER_NAME);
       const todayDate = new Date().getTime();
 
@@ -46,13 +45,20 @@ export const BeforeCloseTabBanner = () => {
     };
   }, []);
 
-  const handleOnClick = () => {
-    router.push('/specialoffer/freeuser');
-  };
-
   const handleCloseBanner = () => {
+    event({
+      action: 'redirect_button',
+      category: 'before-you-go',
+      label: 'User accepts the promo',
+      value: '',
+    });
     localStorage.setItem(CLOSE_TAB_BANNER_NAME, todayDate.toString());
     closeDialog(GlobalDialog.BeforeYouGoBanner);
+  };
+
+  const handleOnClick = () => {
+    router.push('/specialoffer/freeuser');
+    handleCloseBanner();
   };
 
   return (
