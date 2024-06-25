@@ -1,25 +1,17 @@
-import cookies from '@/lib/cookies';
-
+import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
+import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
+import HeroSection from '@/components/home/HeroSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import Footer from '@/components/layout/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
-import HeroSection from '@/components/home/HeroSection';
-import SocialProofSection from '@/components/home/SocialProofSection';
-import Footer from '@/components/layout/Footer';
-import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
-import FAQSection from '@/components/shared/FaqSection';
-import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import CtaSection from '@/components/shared/CtaSection';
-import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
-import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
-import PriceTable from '@/components/prices/PriceTable';
-import { CouponType } from '@/lib/types';
-import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
-import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import FAQSection from '@/components/shared/FaqSection';
+import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import cookies from '@/lib/cookies';
 import { useRouter } from 'next/router';
 
-const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
 
@@ -57,35 +49,11 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      {isHomePageV2 ? (
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
-      ) : (
-        <>
-          <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
-
-          <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
-
-          <PriceTable
-            setSegmentPageName={() => {}}
-            lang={lang}
-            textContent={langJson.tableSection}
-            isTableInHomePage
-            couponCode={CouponType.euro2024Sub}
-          />
-
-          <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
-
-          <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
-        </>
-      )}
+      <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
 
       <FAQSection textContent={langJson.FaqSection} bgColor={faqSectionBgColor} cardColor={faqSectionCardColor} />
 
-      {isHomePageV2 ? (
-        <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
-      ) : (
-        <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
-      )}
+      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -113,4 +81,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Home;
+export default HomePageV2;
