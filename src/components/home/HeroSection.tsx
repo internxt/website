@@ -53,10 +53,12 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
           {/* Desktop animation/image */}
           <Animation />
         </div>
-        <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
-          <ArrowCircleDown size={32} className="animate-bounce text-primary" />
-          <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
-        </div>
+        {isHomePageV2 ? (
+          <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
+            <ArrowCircleDown size={32} className="animate-bounce text-primary" />
+            <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
+          </div>
+        ) : undefined}
       </div>
     </section>
   );
