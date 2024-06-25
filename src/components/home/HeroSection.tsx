@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
 import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
-const Header = dynamic(() => import('@/components/shared/Header'));
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -15,6 +14,10 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps) {
+  const mobileImage = isHomePageV2
+    ? getImage('/images/home/image_mobileV2.webp')
+    : getImage('/images/home/image_mobile.webp');
+
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
@@ -29,7 +32,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <div className="flex lg:hidden">
               <Image
                 loading="eager"
-                src={getImage('/images/home/image_mobile.webp')}
+                src={mobileImage}
                 draggable="false"
                 quality={100}
                 width={600}

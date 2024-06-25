@@ -11,7 +11,6 @@ import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import FAQSection from '@/components/shared/FaqSection';
 import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import CtaSection from '@/components/shared/CtaSection';
-import { SIGNUP_DRIVE_WEB } from '@/constants';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
@@ -68,7 +67,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
       <FAQSection textContent={langJson.FaqSection} bgColor={faqSectionBgColor} cardColor={faqSectionCardColor} />
 
       {isHomePageV2 ? (
-        <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+        <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
       ) : (
         <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
       )}
