@@ -37,7 +37,7 @@ const SocialProofSection = ({ textContent, lang }) => (
               width={101}
               height={23}
               loading="lazy"
-              src={getImage('/logos/investors/Revolut.png')}
+              src={getImage('/logos/investors/revolut.svg')}
               className="mx-auto h-5"
               draggable="false"
               alt="Revolut logo"

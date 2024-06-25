@@ -91,5 +91,15 @@
     "title": "Obtenez un accès à vie sur Internxt",
     "cta": "Choisissez votre plan",
     "guarantee": "Garantie de remboursement de 30 jours"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "Attendez! Offre spéciale ",
+      "blue": "75% DE RÉDUCTION ",
+      "normal2": "!"
+    },
+    "subtitle": "Il y a une offre exclusive qui vous attend.",
+    "cta": "75% DE RÉDUCTION sur tous les plans",
+    "guarantee": "Garantie de remboursement de 30 jours"
   }
 }
