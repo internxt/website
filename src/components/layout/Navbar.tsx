@@ -175,6 +175,17 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             ) : (
               ''
             )}
+            {props.cta[0] === 'chooseStorage' ? (
+              <button
+                onClick={() => router.push('/pricing')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+              >
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+              </button>
+            ) : undefined}
+
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"

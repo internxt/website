@@ -39,7 +39,46 @@
           "free": "Kostenlos!"
         }
       }
-    }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
+        "blueText": "75% günstiger"
+      },
+      "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
+      "description": {
+        "normal1": "Schützen Sie Ihre Arbeits- und persönlichen Dateien mit einer ",
+        "bold": "erschwinglichen, militärischen Verschlüsselung",
+        "normal2": " Cloud-Speicherlösung."
+      },
+      "howMuchYouNeed": "Wie viel Online-Speicher benötigen Sie?",
+      "upTo": "Bis zu:",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "youKnow": "Wussten Sie das?"
+  },
+  "FeatureSectionV2": {
+    "title": "Zero-Knowledge-Verschlüsselung: Nur Sie können Ihre Daten sehen",
+    "description": "Greifen Sie sicher auf alle Ihre Dateien von Ihrem Computer, Smartphone, Tablet oder jedem anderen Gerät mit einer Internetverbindung über die sicherste Cloud-Speicher-App zu.",
+    "cta": "Speichergröße wählen",
+    "cards": [
+      {
+        "title": "Unhackbare und undichte Daten",
+        "description": "Wir speichern keine Passwörter oder Benutzerdaten und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihre Angelegenheit. Sie zu schützen ist unsere."
+      },
+      {
+        "title": "Kompromisslose Sicherheit",
+        "description": "Ihre Dateien werden end-to-end verschlüsselt, bevor sie Ihr Gerät überhaupt verlassen. Dank der Zero-Knowledge-AES-256-Verschlüsselung sind Sie absolut der einzige, der Zugriff auf Ihre Daten hat."
+      },
+      {
+        "title": "Open Source und transparent",
+        "description": "Wir sind stolz auf das, was wir tun, daher wird unser Code auf GitHub veröffentlicht und kann von jedem persönlich überprüft, auditiert und verifiziert werden. Wir haben nichts zu verbergen außer Ihren Daten."
+      },
+      {
+        "title": "Unabhängig verifiziert",
+        "description": "Wir sind vollständig DSGVO-konform und zu 100% sicher, aber nehmen Sie uns nicht einfach beim Wort. Internxt wurde unabhängig von Europas führendem Penetrationstestunternehmen Securitum auditiert und verifiziert."
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -248,6 +287,11 @@
         "review": "Ich habe Google Drive seit mehreren Jahren benutzt, aber ich brauchte eine Alternative, die mir die Privatsphäre meiner Daten garantierte. Etwas, das Google oder andere bekannte Plattformen nicht können. Deshalb bin ich zu Internxt gewechselt."
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Schützen Sie die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Wählen Sie Ihren Plan"
   },
   "GetStartedSection": {
     "title": { "line1": "Starte jetzt und", "line2": "1 GB frei" },

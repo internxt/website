@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/Navbar';

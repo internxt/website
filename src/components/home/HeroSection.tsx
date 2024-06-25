@@ -1,20 +1,32 @@
 import dynamic from 'next/dynamic';
 
-import { goToSignUpURL } from '@/lib/auth';
-import SignUpInline from '@/components/auth/SignUpInline';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-const Header = dynamic(() => import('@/components/shared/Header'));
+import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
+import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
+import { ArrowCircleDown } from '@phosphor-icons/react';
 const Animation = dynamic(() => import('./components/Animation'));
 
-export default function HeroSection({ textContent, lang }) {
+interface HeroSectionForHomeProps {
+  textContent: any;
+  lang: string;
+  isHomePageV2?: boolean;
+}
+
+export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
+  const mobileImage = isHomePageV2
+    ? getImage('/images/home/image_mobileV2.webp')
+    : getImage('/images/home/image_mobile.webp');
+
+  const blurBgImage = getImage('/images/home/header/bg.svg');
+
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
+      <div className="relative mx-4 pt-24 pb-12 lg:mx-10 lg:pt-12 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
-          style={{ backgroundImage: "url('images/home/header/bg.svg')", filter: 'blur(24px)' }}
+          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch lg:py-10">
@@ -23,7 +35,7 @@ export default function HeroSection({ textContent, lang }) {
             <div className="flex lg:hidden">
               <Image
                 loading="eager"
-                src={getImage('/images/home/image_mobile.webp')}
+                src={mobileImage}
                 draggable="false"
                 quality={100}
                 width={600}
@@ -32,32 +44,20 @@ export default function HeroSection({ textContent, lang }) {
               />
             </div>
             <HomePageBannerForMobile />
-            <div className="z-10 flex flex-col md:max-w-lg">
-              <Header maxWidth="max-w-[485px]" className="text-gray-100">
-                {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-              </Header>
 
-              <h2 className="mb-4 text-xl font-normal text-gray-100">{textContent.subtitle}</h2>
-
-              <button
-                className="relative mt-3 flex w-full flex-row items-center justify-center space-x-4 rounded-lg bg-primary px-5 py-2.5 text-lg text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:mt-0 sm:w-auto sm:text-base md:hidden"
-                onClick={() => goToSignUpURL()}
-              >
-                <div className="flex flex-row items-center space-x-2">
-                  <span className="font-medium">{textContent.cta.title}</span>
-                  <span className="opacity-60">{'—'}</span>
-                  <span className="opacity-60">{textContent.cta.subtitle}</span>
-                </div>
-              </button>
-
-              <div className="z-10 mb-8 hidden w-full md:flex">
-                <SignUpInline textContent={textContent.SignUp} />
-              </div>
-            </div>
+            {isHomePageV2 ? (
+              <TitleAndSurvey textContent={textContent.TitleAndSurvey} />
+            ) : (
+              <TitleAndSignup textContent={textContent} />
+            )}
           </div>
 
           {/* Desktop animation/image */}
           <Animation />
+        </div>
+        <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
+          <ArrowCircleDown size={32} className="animate-bounce text-primary" />
+          <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
         </div>
       </div>
     </section>

@@ -40,7 +40,46 @@
           "free": "For Free!"
         }
       }
-    }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "Store your files safely, now ",
+        "blueText": "75% cheaper"
+      },
+      "trustedBy": "Trusted by 330,000+ people",
+      "description": {
+        "normal1": "Protect your work and personal files with ",
+        "bold": "affordable military-grade encrypted ",
+        "normal2": "cloud storage."
+      },
+      "howMuchYouNeed": "How much online storage do you need?",
+      "upTo": "Up to: ",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "youKnow": "Did you know?"
+  },
+  "FeatureSectionV2": {
+    "title": "Zero-knowledge encryption: only you can see your data",
+    "description": "Securely access all your files from your computer, smartphone, tablet, or any other device with a connection to the internet via the most secure cloud storage app. ",
+    "cta": "Choose storage size",
+    "cards": [
+      {
+        "title": "Unhackable and unleakable data",
+        "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can  be personally reviewed, audited, and verified by anyone. We have  nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for  it. Internxt has been independently audited and verified by Europe’s  leading penetration testing company, Securitum."
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -249,6 +288,11 @@
         "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
       }
     ]
+  },
+  "CtaSection": {
+    "title": "The world's most private cloud storage",
+    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+    "cta": "Choose your plan"
   },
   "GetStartedSection": {
     "title": { "line1": "Get started and", "line2": "get 1GB for free" },

@@ -40,7 +40,46 @@
           "free": "gratis"
         }
       }
-    }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "Archivia i tuoi file in modo sicuro, ora ",
+        "blueText": "75% più economico"
+      },
+      "trustedBy": "Affidato da oltre 330.000 persone",
+      "description": {
+        "normal1": "Proteggi i tuoi file di lavoro e personali con un ",
+        "bold": "archiviazione cloud crittografata di grado militare a prezzi accessibili",
+        "normal2": "."
+      },
+      "howMuchYouNeed": "Di quanto spazio di archiviazione online hai bisogno?",
+      "upTo": "Fino a:",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "youKnow": "Lo sapevi?"
+  },
+  "FeatureSectionV2": {
+    "title": "Crittografia a conoscenza zero: solo tu puoi vedere i tuoi dati",
+    "description": "Accedi in modo sicuro a tutti i tuoi file dal tuo computer, smartphone, tablet o qualsiasi altro dispositivo connesso a Internet tramite l'app di archiviazione cloud più sicura.",
+    "cta": "Scegli la dimensione dello storage",
+    "cards": [
+      {
+        "title": "Dati inaccessibili e non divulgabili",
+        "description": "Non memorizziamo password o dati degli utenti e tutti i tuoi dati sono crittografati durante il transito e a riposo. Internxt ti dà il pieno controllo dei tuoi file. I tuoi dati sono affar tuo. Proteggerli è il nostro."
+      },
+      {
+        "title": "Sicurezza senza compromessi",
+        "description": "I tuoi file sono crittografati end-to-end prima ancora di lasciare il tuo dispositivo. Grazie alla crittografia AES-256 a conoscenza zero, sei assolutamente l'unico ad avere accesso ai tuoi dati."
+      },
+      {
+        "title": "Open source e trasparente",
+        "description": "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere esaminato, auditato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati."
+      },
+      {
+        "title": "Verificato indipendentemente",
+        "description": "Siamo completamente conformi al GDPR e al 100% sicuri, ma non prendere solo la nostra parola. Internxt è stato auditato e verificato indipendentemente dalla principale società europea di test di penetrazione, Securitum."
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -249,6 +288,11 @@
         "review": "Ho usato Google Drive per diversi anni, ma avevo bisogno di un'alternativa che mi garantisse la privacy dei miei dati. Qualcosa che Google o altre piattaforme ben conosciute non possono fare. Per questo mi sono trasferito a Internxt."
       }
     ]
+  },
+  "CtaSection": {
+    "title": "Il cloud storage più privato al mondo",
+    "description": "Proteggi le cose davvero importanti con l'archiviazione cloud sicura, privata e crittografata di Internxt.",
+    "cta": "Scegli il tuo piano"
   },
   "GetStartedSection": {
     "title": { "line1": "Inizia subito", "line2": "get 1GB for free" },

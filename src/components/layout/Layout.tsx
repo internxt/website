@@ -192,6 +192,12 @@ LayoutProps) {
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
         <script
+          dangerouslySetInnerHTML={{
+            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
+          }}
+        />
+        <script src="https://app.varify.io/varify.js"></script>
+        <script
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `

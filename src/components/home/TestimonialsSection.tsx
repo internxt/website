@@ -1,14 +1,6 @@
 import { getImage } from '@/lib/getImage';
-import { Star } from '@phosphor-icons/react';
 import Image from 'next/image';
-
-const FiveStars = () => (
-  <div className="flex flex-row gap-1.5">
-    {new Array(5).fill(0).map((_, index) => (
-      <Star className="text-yellow" weight="fill" size={18} key={index} />
-    ))}
-  </div>
-);
+import { FiveStars } from '../shared/StarsRate';
 
 const AvatarAndText = ({ testimonial }) => (
   <div className="flex flex-row items-center gap-3">
@@ -56,7 +48,7 @@ const TestimonialsSection = ({ textContent, bgColor }: { textContent: any; bgCol
           {testimonials.map((testimonial) => (
             <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
               <div className="flex flex-col gap-3">
-                <FiveStars />
+                <FiveStars totalStars={5} />
                 <p className="text-xl text-gray-80">{testimonial.review}</p>
               </div>
               <AvatarAndText testimonial={testimonial} />

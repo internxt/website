@@ -1,5 +1,5 @@
-import React from 'react';
 import { UilAngleRightB } from '@iconscout/react-unicons';
+import { getImage } from '@/lib/getImage';
 
 const CompanySection = ({ textContent }) => (
   <section className="overflow-hidden">
@@ -11,7 +11,7 @@ const CompanySection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/Internxt-headquarters.webp"
+              src={getImage('/images/about/photos/Internxt-headquarters.webp')}
               draggable="false"
               alt="Internxt headquarters"
             />
@@ -20,7 +20,7 @@ const CompanySection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/Internxt-office.webp"
+              src={getImage('/images/about/photos/Internxt-office.webp')}
               draggable="false"
               alt="Internxt office"
             />
@@ -29,7 +29,7 @@ const CompanySection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/Internxt-team.webp"
+              src={getImage('/images/about/photos/Internxt-team.webp')}
               draggable="false"
               alt="Internxt team"
             />
@@ -38,7 +38,7 @@ const CompanySection = ({ textContent }) => (
             <img
               loading="eager"
               className="h-full w-full object-cover object-center"
-              src="/images/about/photos/team-at-Internxt.webp"
+              src={getImage('/images/about/photos/team-at-Internxt.webp')}
               draggable="false"
               alt="Team at Internxt"
             />
@@ -48,7 +48,7 @@ const CompanySection = ({ textContent }) => (
         <img
           loading="lazy"
           className="pointer-events-none absolute top-2/3 right-0 translate-y-1/2 scale-400 select-none blur-xl saturate-150 filter"
-          src="/images/about/assets/stain-small-1.webp"
+          src={getImage('/images/about/assets/stain-small-1.webp')}
           draggable="false"
           alt="stain image"
         />
@@ -100,7 +100,7 @@ const CompanySection = ({ textContent }) => (
         <img
           loading="lazy"
           className="pointer-events-none absolute top-1/2 left-0 translate-y-1/2 scale-400 select-none blur-3xl saturate-150 filter"
-          src="/images/about/assets/stain-small-2.webp"
+          src={getImage('/images/about/assets/stain-small-2.webp')}
           draggable="false"
           alt="stain image"
         />
