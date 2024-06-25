@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.TopBanner,
@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,

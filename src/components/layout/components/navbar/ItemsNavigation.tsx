@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { UilAngleDown } from '@iconscout/react-unicons';
+import { CaretDown } from '@phosphor-icons/react';
 
 export const ItemsNavigation = ({
   lang,
@@ -13,31 +13,6 @@ export const ItemsNavigation = ({
 }) => {
   return (
     <>
-      <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
-        {/* Logo */}
-        <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
-          <img
-            loading="lazy"
-            className="select-none"
-            src={`../../logos/internxt/${
-              (darkMode && !menuState) || (isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-            }.svg`}
-            alt="Internxt logo"
-            width="96"
-            height="10"
-          />
-        </Link>
-        <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
-          <img
-            loading="lazy"
-            className="select-none"
-            src={`../../logos/internxt/${
-              (darkMode && !menuState) || (isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-            }.svg`}
-            alt="Internxt logo"
-          />
-        </Link>
-      </div>
       {/* Desktop links */}
       {!shouldHideItems ? (
         <div className="links">
@@ -52,7 +27,7 @@ export const ItemsNavigation = ({
                     }`
                   : router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase()
                   ? 'text-primary'
-                  : 'text-cool-gray-70 hover:text-primary'
+                  : 'text-gray-60 hover:text-primary'
               }  text-base font-medium`}
             >
               {textContent.links.pricing}
@@ -62,11 +37,14 @@ export const ItemsNavigation = ({
               className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
                   ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                  : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                  : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
               } cursor-default rounded-lg`}
             >
               <span>{textContent.links.products}</span>
-              <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+              <CaretDown
+                size={20}
+                className="translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-gray-30"
+              />
 
               {/* Menu items */}
               <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
@@ -77,7 +55,7 @@ export const ItemsNavigation = ({
                     href="/drive"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.drive}
@@ -88,7 +66,7 @@ export const ItemsNavigation = ({
                     target="_blank"
                     rel="noreferrer"
                     className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     <span>{textContent.products.send}</span>
@@ -98,7 +76,7 @@ export const ItemsNavigation = ({
                     href="/vpn"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.vpn}
@@ -110,12 +88,15 @@ export const ItemsNavigation = ({
             <div
               className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
-                  ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
-                  : 'text-cool-gray-70 hover:bg-cool-gray-100 hover:bg-opacity-5 hover:text-primary'
+                  ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-gray-20'
+                  : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
               } cursor-default rounded-lg`}
             >
               <span>{textContent.links.ourValues}</span>
-              <UilAngleDown className="h-6 w-6 translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30" />
+              <CaretDown
+                size={20}
+                className="translate-y-px text-gray-40 transition duration-150 ease-in-out group-hover:text-cool-gray-30"
+              />
 
               {/* Menu items */}
               <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
@@ -126,7 +107,7 @@ export const ItemsNavigation = ({
                     href="/privacy"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.ourValues.privacy}
@@ -136,7 +117,7 @@ export const ItemsNavigation = ({
                     href="/open-source"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-cool-gray-10' : 'hover:bg-cool-gray-5'
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.ourValues.openSource}
@@ -150,13 +131,13 @@ export const ItemsNavigation = ({
               locale={lang}
               className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
-                  ? `text-white hover:text-cool-gray-20 ${
+                  ? `text-white hover:text-gray-20 ${
                       router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
                       'text-primary'
                     }`
                   : router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase()
                   ? 'text-primary'
-                  : 'text-cool-gray-70 hover:text-primary'
+                  : 'text-gray-60 hover:text-primary'
               }
                   } text-base font-medium`}
             >

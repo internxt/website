@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import RevealX from '@/components/components/RevealX';
 import Image from 'next/legacy/image';
-import { UilAngleRightB } from '@iconscout/react-unicons';
+import { CaretRight } from '@phosphor-icons/react';
 
 interface ProductCard {
   animationDirection: 'left' | 'right';
@@ -23,11 +23,12 @@ const ProductCard = ({ animationDirection, redirect, textContent, lang, imageUrl
         <div className="flex justify-start">
           <Link
             href={redirect}
+            target="_blank"
             locale={lang}
             className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline"
           >
             <span>{textContent.cta}</span>
-            <UilAngleRightB className="h-4 w-4" />
+            <CaretRight size={16} />
           </Link>
         </div>
       </div>

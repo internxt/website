@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const CtaSection = ({
   textContent,
   url,
@@ -21,14 +23,13 @@ const CtaSection = ({
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>
-        <button
+        <Link
+          href={url}
+          target={target}
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
-          onClick={() => {
-            window.open(url, target);
-          }}
         >
           {textContent.cta}
-        </button>
+        </Link>
       </div>
     </section>
   );
