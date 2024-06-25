@@ -63,7 +63,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         <>
           <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-          <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
+          <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
 
           <PriceTable
             setSegmentPageName={() => {}}
