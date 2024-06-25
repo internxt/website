@@ -15,28 +15,19 @@ const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLa
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
 
-  // TODO: Manage when to show version 2 of the home page
-  const isHomePageV2 = false;
+  const navbarCta = 'chooseStorage';
 
-  const navbarCta = isHomePageV2 ? 'chooseStorage' : 'default';
-
-  const marqueeBgColor = isHomePageV2 ? 'bg-white' : 'bg-gray-1';
-  const faqSectionBgColor = !isHomePageV2 ? 'bg-gray-1' : undefined;
-  const faqSectionCardColor = !isHomePageV2 ? 'bg-white' : undefined;
+  const marqueeBgColor = 'bg-white';
 
   const onChooseStorageButtonClicked = () => {
-    if (isHomePageV2) {
-      router.push('/pricing');
-    } else {
-      window.location.hash = '#priceTable';
-    }
+    router.push('/pricing');
   };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={isHomePageV2} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={true} />
 
       <ChooseStorageSizeSection
         textContent={langJson.ChooseStorageSizeSection}
@@ -51,7 +42,7 @@ const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLa
 
       <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
 
-      <FAQSection textContent={langJson.FaqSection} bgColor={faqSectionBgColor} cardColor={faqSectionCardColor} />
+      <FAQSection textContent={langJson.FaqSection} />
 
       <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
 

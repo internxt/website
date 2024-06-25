@@ -62,7 +62,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FAQSection textContent={langJson.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
 
       <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
