@@ -9,8 +9,6 @@ import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSec
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import FAQSection from '@/components/shared/FaqSection';
-import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
-import CtaSection from '@/components/shared/CtaSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
@@ -23,28 +21,19 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
 
-  // TODO: Manage when to show version 2 of the home page
-  const isHomePageV2 = false;
+  const navbarCta = 'default';
 
-  const navbarCta = isHomePageV2 ? 'chooseStorage' : 'default';
-
-  const marqueeBgColor = isHomePageV2 ? 'bg-white' : 'bg-gray-1';
-  const faqSectionBgColor = !isHomePageV2 ? 'bg-gray-1' : undefined;
-  const faqSectionCardColor = !isHomePageV2 ? 'bg-white' : undefined;
+  const marqueeBgColor = 'bg-gray-1';
 
   const onChooseStorageButtonClicked = () => {
-    if (isHomePageV2) {
-      router.push('/pricing');
-    } else {
-      window.location.hash = '#priceTable';
-    }
+    window.location.hash = '#priceTable';
   };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={isHomePageV2} />
+      <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
       <ChooseStorageSizeSection
         textContent={langJson.ChooseStorageSizeSection}
@@ -57,35 +46,25 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      {isHomePageV2 ? (
-        <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
-      ) : (
-        <>
-          <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
+      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
 
-          <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
+      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
 
-          <PriceTable
-            setSegmentPageName={() => {}}
-            lang={lang}
-            textContent={langJson.tableSection}
-            isTableInHomePage
-            couponCode={CouponType.euro2024Sub}
-          />
+      <PriceTable
+        setSegmentPageName={() => {}}
+        lang={lang}
+        textContent={langJson.tableSection}
+        isTableInHomePage
+        couponCode={CouponType.euro2024Sub}
+      />
 
-          <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
+      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
 
-          <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
-        </>
-      )}
+      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
 
-      <FAQSection textContent={langJson.FaqSection} bgColor={faqSectionBgColor} cardColor={faqSectionCardColor} />
+      <FAQSection textContent={langJson.FaqSection} />
 
-      {isHomePageV2 ? (
-        <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
-      ) : (
-        <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
-      )}
+      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
