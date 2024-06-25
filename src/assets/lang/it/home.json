@@ -55,7 +55,8 @@
       "howMuchYouNeed": "Di quanto spazio di archiviazione online hai bisogno?",
       "upTo": "Fino a:",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "Lo sapevi?"
   },
   "FeatureSectionV2": {
     "title": "Crittografia a conoscenza zero: solo tu puoi vedere i tuoi dati",

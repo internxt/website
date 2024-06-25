@@ -55,7 +55,8 @@
       "howMuchYouNeed": "How much online storage do you need?",
       "upTo": "Up to: ",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "Did you know?"
   },
   "FeatureSectionV2": {
     "title": "Zero-knowledge encryption: only you can see your data",

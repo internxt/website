@@ -54,7 +54,8 @@
       "howMuchYouNeed": "Wie viel Online-Speicher benötigen Sie?",
       "upTo": "Bis zu:",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "Wussten Sie das?"
   },
   "FeatureSectionV2": {
     "title": "Zero-Knowledge-Verschlüsselung: Nur Sie können Ihre Daten sehen",

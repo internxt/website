@@ -40,7 +40,46 @@
           "free": "¡Gratis!"
         }
       }
-    }
+    },
+    "TitleAndSurvey": {
+      "title": {
+        "line1": "Protege tus archivos, ahora ",
+        "blueText": "75% más barato"
+      },
+      "trustedBy": "Confiado por más de 330,000 personas",
+      "description": {
+        "normal1": "Protege tus archivos personales y de trabajo con ",
+        "bold": "almacenamiento en la nube cifrado de grado militar",
+        "normal2": "."
+      },
+      "howMuchYouNeed": "¿Cuánto almacenamiento necesitas?",
+      "upTo": "Hasta: ",
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "youKnow": "¿Sabías que?"
+  },
+  "FeatureSectionV2": {
+    "title": "Cifrado de conocimiento cero: solo tú puedes ver tus datos",
+    "description": "Accede de forma segura a todos tus archivos desde tu ordenador, smartphone, tablet o cualquier otro dispositivo con conexión a Internet a través del almacenamiento en la nube más seguro.",
+    "cta": "Elige tu plan",
+    "cards": [
+      {
+        "title": "Datos cifrados y protegidos",
+        "description": "No almacenamos contraseñas ni información de usuarios y todos tus datos están cifrados. Internxt te da el control total de tus archivos. Tus datos son tu responsabilidad. Protegerlos es la nuestra."
+      },
+      {
+        "title": "Seguridad impenetrable",
+        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, tú eres el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por lo que nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar excepto tus datos."
+      },
+      {
+        "title": "Verificado independientemente",
+        "description": "Somos completamente compatibles con el GDPR y 100% seguros, pero no nos creas solo a nosotros. Internxt ha sido auditado y verificado de manera independiente por la principal empresa europea de pruebas de seguridad, Securitum."
+      }
+    ]
   },
   "tableSection": {
     "features": {
@@ -249,6 +288,11 @@
         "review": "He estado usando Google Drive durante varios años, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me mudé a Internxt."
       }
     ]
+  },
+  "CtaSection": {
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "description": "Protege las cosas realmente importantes con el almacenamiento en la nube más seguro, privado y cifrado de Internxt.",
+    "cta": "Elige tu plan"
   },
   "GetStartedSection": {
     "title": { "line1": "Regístrate y", "line2": "consigue 1 GB gratis" },

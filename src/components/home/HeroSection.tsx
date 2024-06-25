@@ -14,7 +14,7 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps) {
+export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
   const mobileImage = isHomePageV2
     ? getImage('/images/home/image_mobileV2.webp')
     : getImage('/images/home/image_mobile.webp');
@@ -57,7 +57,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
         </div>
         <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
           <ArrowCircleDown size={32} className="animate-bounce text-primary" />
-          <p className="z-50 font-medium text-gray-80">Did you know?</p>
+          <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
         </div>
       </div>
     </section>

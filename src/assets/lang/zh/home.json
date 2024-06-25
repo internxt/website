@@ -55,7 +55,8 @@
       "howMuchYouNeed": "您需要多少在线存储空间？",
       "upTo": "最多：",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "你知道吗？"
   },
   "FeatureSectionV2": {
     "title": "零知识加密：只有您可以看到您的数据",

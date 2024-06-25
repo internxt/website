@@ -55,7 +55,8 @@
       "howMuchYouNeed": "您需要多少線上存儲空間？",
       "upTo": "最多：",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "你知道嗎？"
   },
   "FeatureSectionV2": {
     "title": "零知識加密：只有您可以看到您的數據",

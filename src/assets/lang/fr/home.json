@@ -55,7 +55,8 @@
       "howMuchYouNeed": "De combien de stockage en ligne avez-vous besoin?",
       "upTo": "Jusqu'à :",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    }
+    },
+    "youKnow": "Le saviez-vous ?"
   },
   "FeatureSectionV2": {
     "title": "Chiffrement sans connaissance : vous seul pouvez voir vos données",
