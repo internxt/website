@@ -15,9 +15,7 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
-  const mobileImage = isHomePageV2
-    ? getImage('/images/home/image_mobileV2.webp')
-    : getImage('/images/home/image_mobile.webp');
+  const mobileImage = getImage('/images/home/image_mobile.webp');
 
   const blurBgImage = getImage('/images/home/header/bg.svg');
 
