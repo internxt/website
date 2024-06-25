@@ -113,5 +113,15 @@
     "title": "通过Internxt获得终身访问安全的私人云存储！",
     "cta": "选择您的计划",
     "guarantee": "30天退款保证"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "等等！特别优惠 ",
+      "blue": "75% 折扣 ",
+      "normal2": "!"
+    },
+    "subtitle": "有一个独家优惠在等着你。",
+    "cta": "所有计划75% 折扣",
+    "guarantee": "30天退款保证"
   }
 }
