@@ -24,7 +24,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
   const router = useRouter();
 
   // TODO: Manage when to show version 2 of the home page
-  const isHomePageV2 = true;
+  const isHomePageV2 = false;
 
   const navbarCta = isHomePageV2 ? 'chooseStorage' : 'default';
 
