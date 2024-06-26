@@ -16,12 +16,16 @@ import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner'
 
 const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/pcmag', '/affiliates/oneplan', '/cloudwards'];
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
+
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
 
   useEffect(() => {
@@ -102,12 +106,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
-          {shouldShowBanner ? (
-            <>
-              <BottomBanner />
-              <BeforeCloseTabBanner />
-            </>
-          ) : undefined}
+          {shouldShowBanner ? <BottomBanner /> : undefined}
+          {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
         </div>
 
         <FreeCardPromoBanner />
