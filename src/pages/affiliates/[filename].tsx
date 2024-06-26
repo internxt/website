@@ -10,6 +10,10 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
 import { CouponType } from '@/lib/types';
+import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import { FeaturesSectionForOnePlan } from '@/components/affiliates/oneplan/FeaturesSectionForOneplan';
+import { WhyChooseInternxtForOneplan } from '@/components/affiliates/oneplan/WhyChooseInternxtForOneplan';
+import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
 
 export type CardsType = 'all' | 'one';
 
@@ -91,6 +95,13 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
     },
   ];
 
+  const handleOnButtonClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <MinimalNavbar lang={lang} />
@@ -102,37 +113,40 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
         coupon={couponCode[pathname]}
       />
 
-      <SecondFeaturesSection
-        textContent={langJson.SecondFeaturesSection}
-        lang={lang}
-        cards={cardInfo}
-        bgColor="bg-white"
-      />
+      {cardsType === 'all' ? (
+        <>
+          <SecondFeaturesSection
+            textContent={langJson.SecondFeaturesSection}
+            lang={lang}
+            cards={cardInfo}
+            bgColor="bg-white"
+          />
 
-      <DevicesSection textContent={langJson.DevicesSection} />
+          <DevicesSection textContent={langJson.DevicesSection} />
 
-      <TestimonialsSection textContent={homeJson.TestimonialsSection} />
+          <TestimonialsSection textContent={homeJson.TestimonialsSection} />
+        </>
+      ) : undefined}
 
-      <CtaSection textContent={langJson.CtaSection} />
+      {cardsType === 'one' ? (
+        <>
+          <div className="flex w-full shadow-inner">
+            <MarqueeComponent label={langJson.recommendedBy} />
+          </div>
 
-      {/* <FeatureSection textContent={langJson.FeatureSection} />
+          <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
 
-      <WhatIsInternxtSection textContent={langJson.WhatIsInternxtSection} />
+          <WhyChooseInternxtForOneplan textContent={langJson.WhyChooseInternxtForOneplan} />
 
-      <WhyJoinSection textContent={langJson.WhyJoinSection} />
-
-      <FileParallaxSection />
-
-      <WhatWeDoSection textContent={langJson.WhatWeDoSection} />
-
-      <FaqSection textContent={langJson.FaqSection} />
-
-      <CtaSection
-        textContent={langJson.CtaSection}
-        url={
-          'https://app.impact.com/campaign-mediapartner-signup/Internxt.brand?type=dm&io=e2AXxeEh7q3EO8TzTRQ1yfzRimhVUUQ4VIYp7wvigF46G5y9GkCkRC94J2GfuR%2Fa'
-        }
-      /> */}
+          <WhatWeDoSectionForSpecialOffer
+            textContent={langJson.WhatWeDoForOneplan}
+            handleOnButtonClick={handleOnButtonClick}
+            bgColor="bg-white"
+            bgColorCard="bg-gray-1"
+          />
+        </>
+      ) : undefined}
+      <CtaSection textContent={langJson.CtaSection[cardsType]} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>

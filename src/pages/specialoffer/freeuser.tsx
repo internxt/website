@@ -13,6 +13,10 @@ import { CouponType } from '@/lib/types';
 const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
 
+  const handleOnButtonClick = () => {
+    window.location.hash = '#priceTable';
+  };
+
   return (
     <Layout title={metatags.title} description={metatags.description} segmentName={'Free User'}>
       <Navbar textContent={navbarLang} cta={['default']} lang={lang} fixed isLinksHidden />
@@ -35,7 +39,10 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
 
       <CtaSection textContent={textContent.CtaSection} url={'/specialoffer/freeuser#priceTable'} target="_self" />
 
-      <WhatWeDoSectionForSpecialOffer textContent={textContent.WhatWeDoSection} />
+      <WhatWeDoSectionForSpecialOffer
+        textContent={textContent.WhatWeDoSection}
+        handleOnButtonClick={handleOnButtonClick}
+      />
 
       <FAQSection textContent={textContent.FaqSection} />
 
