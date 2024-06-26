@@ -13,7 +13,12 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 
-const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
+const EXCLUDE_INTERCOM_PATHS = [
+  '/temporary-email',
+  '/virus-scanner',
+  '/pccomponentes-products',
+  '/lifetime/celebration/[filename]',
+];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
