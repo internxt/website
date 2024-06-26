@@ -7,6 +7,7 @@ import { DevicesSection } from '@/components/affiliates/affiliates-partners-temp
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
+import { CouponType } from '@/lib/types';
 
 export type CardsType = 'all' | 'one';
 
@@ -50,7 +51,12 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <MinimalNavbar lang={lang} />
 
-      <HeroSectionForPartner textContent={langJson.HeroSection} cardsType={'all'} pathname={'cloudwards'} />
+      <HeroSectionForPartner
+        textContent={langJson.HeroSection}
+        cardsType={'all'}
+        pathname={'cloudwards'}
+        coupon={CouponType.CloudwardsCoupon}
+      />
 
       <SecondFeaturesSection
         textContent={langJson.SecondFeaturesSection}

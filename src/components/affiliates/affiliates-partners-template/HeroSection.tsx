@@ -11,11 +11,13 @@ import { getImage } from '@/lib/getImage';
 import { CardsType } from '@/pages/affiliates/[filename]';
 import { PriceCardsForAffiliatesPartners } from './PriceCardsForAffiliatesParnters';
 import CardSkeleton from '@/components/components/CardSkeleton';
+import { CouponType } from '@/lib/types';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
   cardsType: CardsType | undefined;
   pathname: string;
+  coupon: CouponType;
 }
 
 interface ActivePlan {
@@ -25,12 +27,14 @@ interface ActivePlan {
   storage: string;
 }
 
-export const HeroSectionForPartner = ({ textContent, cardsType, pathname }: HeroSectionForPartnerProps) => {
+export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon }: HeroSectionForPartnerProps) => {
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<string>('5TB');
   const [activeProduct, setActiveProduct] = useState<ActivePlan>();
   const isOnlyOnePlan = cardsType === 'one';
 
-  const { products, loadingCards, currency, currencyValue } = usePricing();
+  const { products, loadingCards, currency, currencyValue } = usePricing({
+    couponCode: coupon,
+  });
 
   const lifetimePlans = products?.individuals?.[Interval.Lifetime];
 
@@ -143,7 +147,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname }: Hero
           )}
           {activeProduct ? (
             <PriceCardsForAffiliatesPartners
-              coupon=""
+              coupon={coupon}
               currency={currency}
               currencyValue={currencyValue}
               planId={activeProduct?.priceId}

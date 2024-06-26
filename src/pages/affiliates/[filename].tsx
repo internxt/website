@@ -9,6 +9,7 @@ import { DevicesSection } from '@/components/affiliates/affiliates-partners-temp
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
+import { CouponType } from '@/lib/types';
 
 export type CardsType = 'all' | 'one';
 
@@ -43,6 +44,11 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   const { push } = useRouter();
 
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${pathname}`);
+
+  const couponCode = {
+    pcmag: CouponType.PcmagCoupon,
+    oneplan: CouponType.OnePlanCoupon,
+  };
 
   useEffect(() => {
     if (!selectedPathName) {
@@ -89,7 +95,12 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <MinimalNavbar lang={lang} />
 
-      <HeroSectionForPartner textContent={langJson.HeroSection} cardsType={cardsType} pathname={pathname} />
+      <HeroSectionForPartner
+        textContent={langJson.HeroSection}
+        cardsType={cardsType}
+        pathname={pathname}
+        coupon={couponCode[pathname]}
+      />
 
       <SecondFeaturesSection
         textContent={langJson.SecondFeaturesSection}
