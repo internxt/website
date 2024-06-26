@@ -101,8 +101,15 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
-        <BeforeCloseTabBanner />
+        <div className="flex justify-center">
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <BeforeCloseTabBanner />
+            </>
+          ) : undefined}
+        </div>
+
         <FreeCardPromoBanner />
         {/* Show snackbar in all pages */}
         <ShowSnackbar />

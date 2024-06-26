@@ -29,8 +29,8 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/dealmirror',
   '/specialoffer/freeuser',
   '/affiliates/pcmag',
-  '/cloudwards',
   '/affiliates/oneplan',
+  '/cloudwards',
 ];
 
 export const SNIGEL_BANNERS = {
