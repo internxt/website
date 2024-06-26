@@ -1,6 +1,6 @@
 import { ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
 import RevealY from '@/components/components/RevealY';
+import { CompanyLogosRecognitions } from '../shared/CompanyLogosRecognitions';
 
 const WhatWeDoSection = ({ textContent }) => {
   const cards = [
@@ -50,56 +50,7 @@ const WhatWeDoSection = ({ textContent }) => {
         </RevealY>
         {/* Recognized */}
         <p className="text-center text-4xl font-semibold text-gray-100">{textContent.recognized}</p>
-        <div className="flex flex-col space-y-10 lg:flex-row lg:space-x-20 lg:space-y-0">
-          <div className="flex flex-shrink-0 items-center justify-center pb-12 sm:p-0">
-            <div className="flex flex-shrink-0 flex-col items-center">
-              <Image
-                src="/images/about/logos/forbes.webp"
-                width={125}
-                height={32}
-                loading={'lazy'}
-                alt="Forbes Logo"
-                draggable={false}
-              />
-            </div>
-          </div>
-          <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
-            <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-              <Image
-                src="/images/about/logos/southsummit.webp"
-                width={70}
-                height={32}
-                loading={'lazy'}
-                alt="South Summit Logo"
-                draggable={false}
-              />
-            </div>
-          </div>
-          <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
-            <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-              <Image
-                src="/images/about/logos/tnw.webp"
-                alt="TNW Logo"
-                draggable={false}
-                width={112}
-                height={32}
-                loading={'lazy'}
-              />
-            </div>
-          </div>
-          <div className="flex flex-auto flex-shrink-0 flex-col pb-12 sm:p-0 sm:px-12">
-            <div className="flex flex-shrink-0 flex-col items-center space-y-3">
-              <Image
-                src="/images/about/logos/startupvalencia.webp"
-                alt="Startup Valencia Logo"
-                width={90}
-                height={32}
-                loading={'lazy'}
-                draggable={false}
-              />
-            </div>
-          </div>
-        </div>
+        <CompanyLogosRecognitions />
       </div>
     </section>
   );

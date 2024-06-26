@@ -1,4 +1,6 @@
+import { getImage } from '@/lib/getImage';
 import { Check, X } from '@phosphor-icons/react';
+import Image from 'next/image';
 
 const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
   return (
@@ -16,7 +18,7 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
             {/* Table 1 */}
             <div className="flex h-full max-w-[387px] flex-1 flex-col">
               <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
-                <img src={'/images/open-source/open-source.svg'} className="h-8 w-8" alt="Open Source" />
+                <Image src={getImage('/images/open-source/open-source.svg')} width={32} height={32} alt="Open Source" />
                 <p className="text-lg font-semibold text-gray-100">{textContent.table.OpenSource.title}</p>
               </div>
               <div className="flex h-full flex-col">
@@ -39,7 +41,12 @@ const DifferencesBetweenOpenAndCloseSS = ({ textContent }) => {
             {/* Table 2 */}
             <div className="flex h-full w-full max-w-[387px] flex-col">
               <div className="flex w-full items-center space-x-4 rounded-l-lg bg-primary bg-opacity-3 py-4 pl-6">
-                <img src={'/images/open-source/close-source.svg'} className="h-8 w-8" alt="Closed Source" />
+                <Image
+                  src={getImage('/images/open-source/close-source.svg')}
+                  width={32}
+                  height={32}
+                  alt="Closed Source"
+                />
                 <p className="text-lg font-semibold text-gray-100">{textContent.table.CloseSource.title}</p>
               </div>
               <div className="flex h-full flex-col">

@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import RevealX from '@/components/components/RevealX';
+import { getImage } from '@/lib/getImage';
 
 const WhatWeDoSection = ({ textContent }) => {
   return (
@@ -10,7 +11,7 @@ const WhatWeDoSection = ({ textContent }) => {
         <div className="flex flex-col-reverse items-center justify-center lg:flex-row lg:space-x-20">
           <RevealX direction="right" className="flex pt-7 lg:pt-0">
             <Image
-              src="/images/about/photos/Fran-Villalba-Segarra.png"
+              src={getImage('/images/about/photos/Fran-Villalba-Segarra.png')}
               width={496}
               height={520}
               alt="Fran Villalba Segarra"
@@ -45,7 +46,7 @@ const WhatWeDoSection = ({ textContent }) => {
           </div>
           <RevealX direction="left" className="flex pt-7 lg:pt-0">
             <Image
-              src="/images/about/photos/work-at-Internxt.png"
+              src={getImage('/images/about/photos/work-at-Internxt.png')}
               loading="eager"
               width={496}
               height={520}

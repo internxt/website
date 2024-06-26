@@ -1,48 +1,68 @@
-import dynamic from 'next/dynamic';
-
 import cookies from '@/lib/cookies';
 
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/Navbar';
 import HeroSection from '@/components/home/HeroSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
+import Footer from '@/components/layout/Footer';
+import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import FAQSection from '@/components/shared/FaqSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
-
-const FileParallaxSection = dynamic(() => import('@/components/home/FileParallaxSection'));
-const SecondFeaturesSection = dynamic(() => import('@/components/home/SecondFeaturesSection'));
-const FirstWhatWeDoSection = dynamic(() => import('@/components/home/FirstWhatWeDoSection'));
-const SecondWhatWeDoSection = dynamic(() => import('@/components/home/SecondWhatWeDoSection'));
-const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'));
-const ThirdFeaturesSection = dynamic(() => import('@/components/home/ThirdFeaturesSection'));
-const SocialProofSection = dynamic(() => import('@/components/home/SocialProofSection'));
-const Footer = dynamic(() => import('@/components/layout/Footer'));
+import { CouponType } from '@/lib/types';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
+import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import { useRouter } from 'next/router';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const router = useRouter();
+
+  const navbarCta = 'default';
+
+  const marqueeBgColor = 'bg-gray-1';
+
+  const onChooseStorageButtonClicked = () => {
+    window.location.hash = '#priceTable';
+  };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
-
-      {/* <InfoSection textContent={langJson.InfoSection} lang={lang} /> */}
-
-      <PriceTable setSegmentPageName={() => {}} lang={lang} textContent={langJson.tableSection} isTableInHomePage />
-
-      <FileParallaxSection />
-
-      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} />
-
-      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} />
-
-      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
+      <ChooseStorageSizeSection
+        textContent={langJson.ChooseStorageSizeSection}
+        onButtonClicked={onChooseStorageButtonClicked}
+      />
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-      <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
+      <div className={`${marqueeBgColor} py-10`}>
+        <MarqueeComponent bgColor={marqueeBgColor} />
+      </div>
+
+      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
+
+      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
+
+      <PriceTable
+        setSegmentPageName={() => {}}
+        lang={lang}
+        textContent={langJson.tableSection}
+        isTableInHomePage
+        couponCode={CouponType.euro2024Sub}
+      />
+
+      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
+
+      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
+
+      <FAQSection textContent={langJson.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
 
       <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
 

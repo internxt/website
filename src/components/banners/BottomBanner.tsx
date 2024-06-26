@@ -3,6 +3,7 @@ import { X } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { getImage } from '@/lib/getImage';
 
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
@@ -77,7 +78,7 @@ const BottomBanner = () => {
         shouldShowBanner ? 'flex' : 'hidden'
       } overflow-hidden rounded-lg px-5 lg:px-0`}
       style={{
-        backgroundImage: "url('/images/campaigns/euro/grass.webp')",
+        backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
         // filter: 'blur(24px)'
       }}
     >
@@ -90,7 +91,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row ">
           <div className="flex flex-col">
             <Image
-              src="/images/campaigns/euro/banner.webp"
+              src={getImage('/images/campaigns/euro/banner.webp')}
               width={178}
               height={70}
               className="flex w-full object-fill"

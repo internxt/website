@@ -6,6 +6,7 @@ import { Parallax } from 'react-parallax';
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import * as anim from '../../../public/js/anim';
 import RevealX from '@/components/components/RevealX';
+import { getImage } from '@/lib/getImage';
 
 const FeaturesSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">
@@ -49,7 +50,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         >
           <Image
             className="w-full"
-            src="/images/drive/secure_file_storage.webp"
+            src={getImage('/images/drive/secure_file_storage.webp')}
             width={713}
             height={894}
             quality={100}
@@ -60,7 +61,12 @@ const FeaturesSection = ({ textContent, lang, download }) => (
         </RevealX>
 
         <div className="flex w-full flex-col items-center justify-center lg:-top-4 lg:items-start lg:pl-10">
-          <img src={'/images/drive/cloud-storage-app.webp'} alt="Cloud storage app" width={250} height={505} />
+          <img
+            src={getImage('/images/drive/cloud-storage-app.webp')}
+            alt="Cloud storage app"
+            width={250}
+            height={505}
+          />
 
           <div className="mt-10 flex flex-col px-10 lg:px-0">
             <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
@@ -107,19 +113,19 @@ const FeaturesSection = ({ textContent, lang, download }) => (
             </div>
 
             <div className="relative order-first lg:order-last" style={{}}>
-              <img src={'/images/drive/Internxt-drive.webp'} width={250} height={505} alt="Internxt Drive" />
+              <img src={getImage('/images/drive/Internxt-drive.webp')} width={250} height={505} alt="Internxt Drive" />
             </div>
           </div>
         </div>
 
-        <div className="4xl:absolute 4xl:right-0 relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex">
+        <div className="relative hidden w-full max-w-[750px] flex-col items-start object-right pt-10 lg:flex 4xl:absolute 4xl:right-0">
           <RevealX
             className="right-0 hidden -translate-x-1/2 flex-col rounded-xl shadow-subtle-hard lg:flex"
             direction="left"
           >
             <Image
               className="h-full w-full bg-no-repeat "
-              src="/images/drive/document-folders.webp"
+              src={getImage('/images/drive/document-folders.webp')}
               width={750}
               height={900}
               quality={100}
@@ -139,7 +145,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           <RevealX className="hidden flex-col shadow-subtle-hard lg:flex" direction="right">
             <Image
               className="h-full w-full bg-no-repeat "
-              src="/images/drive/file_sharing.webp"
+              src={getImage('/images/drive/file_sharing.webp')}
               width={650}
               height={545}
               quality={100}
@@ -154,7 +160,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
 
         <div className="flex w-full flex-col items-center lg:w-auto lg:items-start lg:pl-10">
           <div className="relative flex rounded-4xl bg-cover bg-left-top bg-no-repeat px-5 shadow-subtle lg:hidden">
-            <img src={'/images/drive/file_sharing.webp'} alt="Work list" />
+            <img src={getImage('/images/drive/file_sharing.webp')} alt="Work list" />
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">

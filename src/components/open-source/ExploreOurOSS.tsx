@@ -1,4 +1,5 @@
 import DownloadComponent from '@/components/shared/DownloadComponent';
+import { getImage } from '@/lib/getImage';
 
 const ExploreOurOSS = ({ textContent, download }) => {
   const description = textContent.description.split('GitHub');
@@ -24,15 +25,12 @@ const ExploreOurOSS = ({ textContent, download }) => {
           </div>
         </div>
         <div className="flex w-full flex-col items-center justify-center pt-6">
-          <picture>
-            <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-            <img
-              src="/images/home/internxt_secure_cloud_storage.webp"
-              alt="Internxt secure cloud storage"
-              width={757}
-              draggable={false}
-            />
-          </picture>
+          <img
+            src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+            alt="Internxt secure cloud storage"
+            width={757}
+            draggable={false}
+          />
         </div>
         <DownloadComponent textContent={textContent.DownloadLinks} lang={'en'} download={download} />
       </div>

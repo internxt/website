@@ -3,6 +3,7 @@ import Countdown from '../components/Countdown';
 import Image from 'next/image';
 import Header from '../shared/Header';
 import Animation from '../home/components/Animation';
+import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: any;
@@ -18,12 +19,12 @@ const HeroSection = ({
   hideTimer,
   isCelebrationPage,
   previewImg,
-  bgImage = '/images/lifetime/celebration/normal-bg.png',
+  bgImage = getImage('/images/lifetime/celebration/normal-bg.png'),
   dt,
 }: HeroSectionProps) => {
   const imageMobile = isCelebrationPage
-    ? '/images/lifetime/celebration/image_mobile.webp'
-    : '/images/lifetime/image_mobile.webp';
+    ? getImage('/images/lifetime/celebration/image_mobile.webp')
+    : getImage('/images/lifetime/image_mobile.webp');
 
   return (
     <section
@@ -70,7 +71,12 @@ const HeroSection = ({
             </div>
             {isCelebrationPage ? (
               <div className="absolute -top-36 right-0 hidden h-screen lg:flex">
-                <Image src={'/images/lifetime/celebration/confetti.svg'} alt="Confetti" width={464} height={603} />
+                <Image
+                  src={getImage('/images/lifetime/celebration/confetti.svg')}
+                  alt="Confetti"
+                  width={464}
+                  height={603}
+                />
               </div>
             ) : null}
             <div className="hidden h-[580px] lg:flex">

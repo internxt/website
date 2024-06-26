@@ -37,8 +37,7 @@
         "openSource": "Open Source",
         "legal": "Legale",
         "whyInternxt": "Perché Internxt?",
-        "mediaArea": "Area Media",
-        "useCases": "Casi d'uso"
+        "mediaArea": "Area Media"
       },
       "join": {
         "title": "Join Us",
@@ -63,13 +62,11 @@
         "blog": "Blog",
         "directoryOfPrivacyOrganizations": "Elenco delle organizzazioni per la privacy",
         "pCloudAlternative": "Alternativa a pCloud",
-        "library": "Library",
         "writeForUs": "Scrivi per noi",
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Consapevolezza informatica",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "Confronto tra i servizi cloud",
-        "inxtLibrary": "Biblioteca"
+        "comparison": "Confronto tra i servizi cloud"
       },
       "tools": {
         "title": "Strumenti gratuiti",

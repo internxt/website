@@ -1,4 +1,4 @@
-import React from 'react';
+import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent }) => {
   return (
@@ -10,14 +10,11 @@ const HeroSection = ({ textContent }) => {
         </div>
 
         <div className="flex h-full w-full flex-col pt-6">
-          <picture>
-            <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-            <img
-              src="/images/home/internxt_secure_cloud_storage.webp"
-              alt="Internxt secure cloud storage"
-              draggable={false}
-            />
-          </picture>
+          <img
+            src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+            alt="Internxt secure cloud storage"
+            draggable={false}
+          />
         </div>
       </div>
     </section>

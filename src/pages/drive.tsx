@@ -1,5 +1,4 @@
 import Script from 'next/script';
-import React from 'react';
 
 import HeroSection from '@/components/drive/HeroSection';
 import FeaturesSection from '@/components/drive/FeaturesSection';

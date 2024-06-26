@@ -37,8 +37,7 @@
         "security": "Seguridad",
         "legal": "Legal",
         "whyInternxt": "¿Por qué Internxt?",
-        "mediaArea": "Área de Recursos",
-        "useCases": "Casos de Uso"
+        "mediaArea": "Área de Recursos"
       },
       "join": {
         "title": "Únete",
@@ -64,12 +63,10 @@
         "comparison": "Comparación de Servicios en la Nube",
         "directoryOfPrivacyOrganizations": "Directorio de Organizaciones de Privacidad",
         "pCloudAlternative": "Alternativa a pCloud",
-        "library": "Biblioteca",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de Ciberseguridad",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "Que sabe Google de ti",
-        "inxtLibrary": "Biblioteca"
+        "whatGoogleKnowsAboutMe": "Que sabe Google de ti"
       },
       "tools": {
         "title": "Herramientas gratuitas",

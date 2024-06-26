@@ -8,6 +8,13 @@
     "actionCta": "Obtener un nuevo email",
     "cancelCta": "Cancelar"
   },
+  "FreeCardPromoBanner": {
+    "title": "Obtén un 75% de descuento en todos nuestros planes",
+    "subtitle": { "blue": "Oferta especial:", "normal": " almacena archivos de manera privada por menos" },
+    "getDealCta": "Obtener oferta",
+    "freePlanCta": "Continuar con el plan gratuito",
+    "guarantee": "Garantía de devolución de dinero de 30 días"
+  },
   "featuresBanner": {
     "label": "Ahorra hasta un 75%",
     "title": "Asegura tu identidad en línea de por vida.",
@@ -90,5 +97,15 @@
     "title": "Obtén acceso de por vida a tu almacenamiento en la nube en Internxt",
     "cta": "Elige tu plan",
     "guarantee": "Garantía de devolución de 30 días"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "!Oferta especial del",
+      "blue": "75% DE DESCUENTO ",
+      "normal2": "en todos los planes!"
+    },
+    "subtitle": "Hay una oferta exclusiva esperándote.",
+    "cta": "75% DE DESCUENTO en todos los planes",
+    "guarantee": "Garantía de devolución de dinero de 30 días"
   }
 }

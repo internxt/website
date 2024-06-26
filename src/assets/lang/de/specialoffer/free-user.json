@@ -1,0 +1,134 @@
+{
+  "HeroSection": {
+    "title": {
+      "blue": "Sparen Sie 75% ",
+      "normal": "bei allen sicheren Cloud-Speicherplänen"
+    },
+    "description": "Aktualisieren Sie Ihr kostenloses Konto, um 75% Rabatt auf jeden Plan zu erhalten. Mit unserem verschlüsselten, Open-Source-Cloud-Speicher können Sie Ihre Dateien mit vollständiger Privatsphäre speichern und teilen.",
+    "cta": "Plan aktualisieren",
+    "recommendedBy": "Empfohlen von:"
+  },
+  "tableSection": {
+    "features": {
+      "endToEnd": "End-to-End verschlüsselt",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung"
+    }
+  },
+  "FeatureSection": {
+    "title": "Verabschieden Sie sich von Speicherbeschränkungen!",
+    "description": [
+      "Mit unseren kostenpflichtigen Plänen können Sie Ihre Dateien lokal speichern und darauf zugreifen, ohne den physischen Speicherplatz Ihres Geräts zu verbrauchen.",
+      "Genießen Sie die Gewissheit, dass Ihre Erinnerungen und wichtigen Dokumente sicher in der Cloud gesichert sind, die von jedem Gerät aus zugänglich ist."
+    ],
+    "cta": "Erhalten Sie 75% RABATT"
+  },
+  "InxtFeaturesSection": {
+    "title": "Internxt bietet sicheren Cloud-Speicher, der Ihre Privatsphäre schützt",
+    "description": "Unübertroffene Sicherheitsfunktionen machen Internxt zur besten Speicheroption für Ihre Dateien.",
+    "cards": [
+      {
+        "title": "End-to-End Verschlüsselung",
+        "description": "Ihre Dateien werden automatisch verschlüsselt, bevor sie Ihr Gerät verlassen."
+      },
+      {
+        "title": "Datenschutz",
+        "description": "Internxt schützt Ihre Daten, im Gegensatz zu großen Technologieunternehmen, die davon profitieren."
+      },
+      {
+        "title": "Zero-Knowledge-Richtlinien",
+        "description": "Ihre Dateien bleiben vollständig vertraulich, sogar für uns."
+      },
+      {
+        "title": "Open Source",
+        "description": "Unser Code ist für alle zugänglich, um vollständige Transparenz zu gewährleisten."
+      },
+      {
+        "title": "DSGVO-konform",
+        "description": "Wir folgen strengen europäischen Gesetzen, die zum Schutz Ihrer Daten erstellt wurden."
+      },
+      {
+        "title": "Unabhängig geprüft",
+        "description": "Unsere Apps wurden rigoros getestet und als sicher zertifiziert."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Brauchen Sie mehr Speicherplatz?",
+    "description": "Erhalten Sie 75% Rabatt auf jeden Plan.",
+    "cta": "Plan aktualisieren"
+  },
+  "WhatWeDoSection": {
+    "title": "Internxt stellt sicher, dass Ihre Privatsphäre geschützt ist",
+    "description": "Wir implementieren die beste Sicherheit, um Ihre Dateien und Dokumente zu schützen: ",
+    "card": {
+      "features": [
+        "End-to-End Verschlüsselung",
+        "Verschlüsselte Daten",
+        "Anonyme Kontoerstellung",
+        "2FA-Authentifizierung",
+        "Backups auf mehreren Servern"
+      ],
+      "cta": "Erhalten Sie 75% RABATT"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist Internxt Drive?",
+        "answer": [
+          "Internxt Drive ist ein Zero-Knowledge-Dateispeicherdienst, der für absolute Privatsphäre und strenge Sicherheit entwickelt wurde. Unser Dienst greift nicht auf Ihre persönlichen Daten oder Dateien zu. Stattdessen ist er so konzipiert, dass Sie die Kontrolle über Ihre Dateien zurückerhalten und vor Datensammlern geschützt sind."
+        ]
+      },
+      {
+        "question": "Wie kann ich meinen kostenlosen Plan aktualisieren?",
+        "answer": [
+          "Ihr 75%-Rabatt wird automatisch an der Kasse angewendet. Um Ihren Rabatt zu erhalten, wählen Sie Ihren monatlichen, jährlichen oder lebenslangen Plan und fahren Sie mit der Checkout-Seite fort."
+        ]
+      },
+      {
+        "question": "Was ist die Rückerstattungsrichtlinie von Internxt?",
+        "answer": [
+          "Internxt bietet eine Standard-30-Tage-Geld-zurück-Garantie für alle seine kostenpflichtigen Abonnements, die sofort nach der Anmeldung beginnt.",
+          "Wenn Sie mit unserem Service jemals unzufrieden sind, wenden Sie sich an [hello@internxt.com](mailto:hello@internxt.com) und beantragen Sie eine Rückerstattung. Wir werden Ihre Anfrage ohne Fragen akzeptieren!"
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch per PayPal, iDEAL, Sofort und Bancontact bezahlen.",
+          "Wir akzeptieren auch Kryptowährung und SEPA-Lastschrift auf Anfrage. Wenn Sie Zweifel an den Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Wie kann ich mein Abonnement kündigen?",
+        "answer": [
+          "Das Kündigen Ihres Abonnements ist einfach. Öffnen Sie die Internxt-App, navigieren Sie zu den Einstellungen und wählen Sie 'Abonnement kündigen'. Diese Aktion beendet Ihr Abonnement sofort und Ihr Konto wird auf einen kostenlosen Plan zurückgesetzt.",
+          "Bitte beachten Sie, dass die verbleibende Zeit Ihres aktuellen kostenpflichtigen Abonnements nicht erstattet oder übertragen wird. Wenn Sie beispielsweise einen Jahresplan mit vier verbleibenden Monaten kündigen, verlieren Sie den Zugriff auf diese verbleibenden vier Monate.",
+          "Sie können auch einen kostenpflichtigen Plan und Ihr Internxt-Konto über die Einstellungen kündigen, wodurch Ihr Abonnement, Konto und alle Ihre Dateien gelöscht werden."
+        ]
+      },
+      {
+        "question": "Kann ich meinem lebenslangen Plan mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, Sie können so viel Speicherplatz hinzufügen, wie Sie möchten, zu Ihrer Internxt-Lebensmitgliedschaft. Internxt-Lebenspläne sind stapelbar. Kaufen Sie sie einfach mit derselben E-Mail-Adresse und kontaktieren Sie uns unter [hello@internxt.com](mailto:hello@internxt.com), damit wir sie für Sie auf demselben Konto stapeln können."
+        ]
+      },
+      {
+        "question": "Speichert Internxt mein Passwort?",
+        "answer": [
+          "Nein. Daher kann Internxt Ihr Passwort nicht speichern.",
+          "Ihr Internxt-Passwort ist einzigartig für Sie und wird verwendet, um Ihre Internxt-Daten zu verschlüsseln und zu entschlüsseln. Sie können Ihr Passwort jedoch in unserer App ändern."
+        ]
+      },
+      {
+        "question": "Kann ich die Zwei-Faktor-Authentifizierung (2FA) aktivieren?",
+        "answer": [
+          "Ja. Sie können die Zwei-Faktor-Authentifizierung für Ihr Konto über die Internxt-Webanwendung konfigurieren.",
+          "Sie können auch Authy oder andere 2FA-Tools verwenden, um einen persönlichen 2FA-Code mit Internxt zu generieren."
+        ]
+      }
+    ]
+  }
+}

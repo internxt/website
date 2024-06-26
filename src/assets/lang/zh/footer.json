@@ -37,8 +37,7 @@
         "security": "安全",
         "legal": "法律",
         "whyInternxt": "为什么选择 Internxt？",
-        "mediaArea": "媒体区",
-        "useCases": "使用案例"
+        "mediaArea": "媒体区"
       },
       "join": {
         "title": "加入我们",
@@ -62,14 +61,12 @@
         "title": "资源",
         "blog": "博客(英文)",
         "directoryOfPrivacyOrganizations": "隐私组织目录(英文)",
-        "library": "图书馆",
         "writeForUs": "为我们写信",
         "cyberSecurityGlossary": "网络安全词汇表",
         "pCloudAlternative": "pCloud 替代方案",
         "cyberAwareness": "网络意识",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "比较",
-        "inxtLibrary": "图书馆"
+        "comparison": "比较"
       },
       "tools": {
         "title": "免费的工具",

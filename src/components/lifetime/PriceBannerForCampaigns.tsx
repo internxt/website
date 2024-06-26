@@ -1,4 +1,5 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,13 +10,18 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
 
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
-      <div className="flex w-full  flex-col justify-between rounded-[32px] bg-white bg-[url('/images/campaigns/euro/grass.webp')] lg:flex-row">
-        <div className="flex w-full flex-col items-center gap-6 p-10 text-center lg:items-start lg:py-16 lg:text-left xl:w-full">
+      <div
+        className={`flex flex-col  justify-between rounded-[32px] bg-white lg:w-full lg:flex-row`}
+        style={{
+          backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
+        }}
+      >
+        <div className="flex w-full flex-col items-center gap-6 px-3 py-10 text-center lg:items-start lg:p-10 lg:py-16 lg:text-left">
           <div className="flex w-max rounded-2xl bg-gray-100 py-2 px-4 ring-4 ring-primary">
-            <p className="text-5xl font-bold text-white">{textContent.label}</p>
+            <p className="text-3xl font-bold text-white md:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex flex-col">
-            <p className="text-4xl font-bold text-white">{textContent.subtitle}</p>
+            <p className="text-3xl font-bold text-white md:text-4xl">{textContent.subtitle}</p>
           </div>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <Link
@@ -33,7 +39,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         </div>
         <div className="hidden w-full max-w-xl flex-row justify-end  lg:flex">
           <img
-            src="/images/campaigns/euro/pricing.webp"
+            src={getImage('/images/campaigns/euro/pricing.webp')}
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
             className="h-full w-full rounded-r-[32px] object-cover"
@@ -41,7 +47,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         </div>
         <div className="flex h-full w-full flex-col object-cover lg:hidden">
           <Image
-            src="/images/campaigns/euro/mobile.webp"
+            src={getImage('/images/campaigns/euro/mobile.webp')}
             width={377}
             height={190}
             alt="Euro 2024 image"

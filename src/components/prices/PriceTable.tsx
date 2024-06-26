@@ -17,7 +17,10 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
+  couponCode: CouponType;
   isTableInHomePage?: boolean;
+  useSameCouponForAllPlans?: boolean;
+  hideFreeCard?: boolean;
   discount?: number;
 }
 
@@ -42,13 +45,16 @@ export default function PriceTable({
   textContent,
   discount,
   isTableInHomePage,
+  useSameCouponForAllPlans,
+  hideFreeCard,
+  couponCode,
 }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
-    couponCode: CouponType.euro2024Sub,
+    couponCode: couponCode,
   });
 
   const [lifetimeCoupons, setLifetimeCoupons] = useState();
@@ -95,11 +101,10 @@ export default function PriceTable({
 
   return (
     <section className="overflow-hidden bg-white">
-      <div className="flex flex-col items-center space-y-10 py-20">
+      <div className="flex flex-col items-center space-y-10 py-24 px-5">
+        {!isTableInHomePage && <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />}
         <div className="flex flex-col items-center space-y-10">
-          {!isTableInHomePage && <PriceBannerForCampaigns textContent={CampaignContent.tableSection.ctaBanner} />}
-
-          <div id="priceTable" className="flex flex-col items-center px-5 text-center">
+          <div id="priceTable" className="flex flex-col items-center text-center">
             <Header maxWidth="max-w-4xl">{title()}</Header>
             <p className="mt-4 w-full max-w-3xl text-center text-xl text-gray-80">
               {!isIndividual && lang === 'en' ? `${contentText.businessDescription}` : `${contentText.planDescription}`}
@@ -239,9 +244,12 @@ export default function PriceTable({
                 />
               ))}
           </div>
-          <div id="freeAccountCard" className="content flex w-full p-4 px-5 pb-10 md:pb-0">
-            <FreePlanCard textContent={contentText.freePlanCard} />
-          </div>
+
+          {!hideFreeCard ? (
+            <div id="freeAccountCard" className="content flex w-full p-4 pb-10 md:pb-0">
+              <FreePlanCard textContent={contentText.freePlanCard} />
+            </div>
+          ) : undefined}
         </Transition>
 
         {/* Lifetime cards */}
@@ -259,7 +267,11 @@ export default function PriceTable({
                     planType="individual"
                     key={product.storage}
                     storage={product.storage}
-                    price={LIFETIME_PRICES[currencyValue][product.storage]}
+                    price={
+                      useSameCouponForAllPlans
+                        ? (Number(product.price * 0.25).toFixed(0) as unknown as number)
+                        : LIFETIME_PRICES[currencyValue][product.storage]
+                    }
                     priceBefore={product.price.split('.')[0]}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
@@ -267,7 +279,7 @@ export default function PriceTable({
                     lang={lang}
                     currency={currency}
                     currencyValue={currencyValue}
-                    coupon={lifetimeCoupons?.[product.storage] ?? undefined}
+                    coupon={useSameCouponForAllPlans ? coupon : lifetimeCoupons?.[product.storage] ?? undefined}
                   />
                 );
               })}
@@ -286,17 +298,14 @@ export default function PriceTable({
           </div>
         </Transition>
 
-        <div
-          id="freeAccountCard"
-          className={`content ${!isSubscription ? 'flex' : 'hidden'} w-full p-4 px-5 pb-10 md:pb-0`}
-        >
+        <div id="freeAccountCard" className={`content ${!isSubscription ? 'flex' : 'hidden'} w-full p-4 pb-10 md:pb-0`}>
           <FreePlanCard textContent={contentText.freePlanCard} />
         </div>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32 md:pt-20">
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary" />
+              <feature.icon size={40} className="text-primary md:pb-0" />
               <p className="text-xl font-medium text-gray-80">{feature.text}</p>
             </div>
           ))}

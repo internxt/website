@@ -28,7 +28,10 @@ export enum GlobalDialog {
   TempMailAction = 'TempMailAction',
   MobileBannerForHome = 'MobileBannerForHome',
   PriceBannerForCampaigns = 'PriceBannerForCampaigns',
+  TopBanner = 'TopBanner',
   BottomBanner = 'BottomBanner',
+  FreeSpaceCardBanner = 'FreeSpaceCardBanner',
+  BeforeYouGoBanner = 'BeforeYouGoBanner',
 }
 export const GlobalUIManager: React.FC<
   React.PropsWithChildren<{ initialDialogs: GlobalUIManagerContextShape['dialogs'] }>

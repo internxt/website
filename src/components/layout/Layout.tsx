@@ -15,6 +15,7 @@ import {
   PATHS_WITH_CUSTOM_SNIGEL_BANNERS,
   EXCLUDED_PATHS_FOR_BANNER,
 } from '@/constants';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 const GET_IP_INFO_API = process.env.NEXT_PUBLIC_IP_INFO as string;
@@ -54,9 +55,10 @@ export default function Layout({
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
+  const { dialogIsOpen } = useGlobalDialog();
   const pathname = router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
 
   const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
     ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
@@ -189,6 +191,12 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
+          }}
+        />
+        <script src="https://app.varify.io/varify.js"></script>
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{

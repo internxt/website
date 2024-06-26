@@ -8,6 +8,13 @@
     "actionCta": "獲取新電子郵件",
     "cancelCta": "取消"
   },
+  "FreeCardPromoBanner": {
+    "title": "所有高級計劃享受75%折扣",
+    "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
+    "getDealCta": "獲取優惠",
+    "freePlanCta": "繼續使用免費計劃",
+    "guarantee": "30天退款保證"
+  },
   "LoginBanner": {
     "head": "購買前先試用。",
     "title": "免費獲取 Internxt！",
@@ -138,5 +145,15 @@
     "title": "使用 Internxt 獲取終身訪問安全、私密的雲存儲！",
     "cta": "選擇計劃",
     "guarantee": "30 天退款保證"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "等等！特別優惠 ",
+      "blue": "75% 折扣 ",
+      "normal2": "!"
+    },
+    "subtitle": "有一個獨家優惠在等著你。",
+    "cta": "所有計劃75% 折扣",
+    "guarantee": "30天退款保證"
   }
 }

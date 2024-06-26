@@ -32,19 +32,10 @@ let nameFiles = [
   'temporary-email',
   'virus-scanner',
   'what-does-google-know-about-me',
-  'use-cases',
-  'internxt-for-digital-nomads',
-  'internxt-for-photographers',
-  'internxt-for-students',
-  'internxt-for-tech-companies',
-  'internxt-for-lawyers',
-  'internxt-for-journalists',
-  'internxt-library',
-  'online-privacy-ebook',
-  'child-safety-ebook',
   'locker',
   'startpage',
   'file-converter',
+  'specialoffer/freeuser',
 ];
 
 const langs = {

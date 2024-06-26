@@ -110,6 +110,7 @@ export enum CouponType {
   euro2024twoTB = 'EURO_2024_2TB_COUPON',
   euro2024fiveTB = 'EURO_2024_5TB_COUPON',
   euro2024TenTB = 'EURO_2024_10TB_COUPON',
+  freeUserCoupon = 'FREE_PROMO_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';
