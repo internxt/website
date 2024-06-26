@@ -49,14 +49,14 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
 
   return (
     <section
-      className="overflow-hidden bg-cover bg-no-repeat pt-12 lg:pb-10"
+      className="overflow-hidden bg-cover bg-no-repeat pt-12 lg:h-screen lg:max-h-[900px] lg:pb-10"
       style={{
         backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
       }}
     >
       <div className="w-full px-4 lg:px-10 xl:px-32">
-        <div className="mx-auto flex w-full max-w-screen-xl flex-col space-y-10 px-5 py-20 lg:flex-row lg:justify-between lg:space-y-0 lg:px-0">
-          <div className="flex max-w-[545px] flex-col gap-12 text-white">
+        <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 px-5 py-20 lg:flex-row lg:items-start lg:justify-between lg:space-y-0 lg:px-0">
+          <div className="flex max-w-[545px] flex-col items-center justify-center gap-12 text-white lg:items-start lg:justify-start">
             {cardsType === 'all' ? (
               <div className="flex flex-row items-center gap-6">
                 <Image src={getImage(`/images/affiliates/logos/${pathname}.svg`)} alt="PCMag" width={74} height={89} />
@@ -67,10 +67,10 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               <Alarm size={32} className=" text-white" />
               <Countdown textColor={'white'} />
             </div>
-            <div className="flex flex-col gap-6 text-center lg:text-left">
+            <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
               <Header>{textContent[cardsType!].title}</Header>
               {textContent[cardsType!].description.map((text, index) => (
-                <p key={index} className="hidden font-semibold text-white lg:flex lg:text-2xl">
+                <p key={index} className="hidden text-2xl font-semibold text-white md:flex">
                   {text}
                 </p>
               ))}
