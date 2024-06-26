@@ -28,8 +28,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
-  '/affiliates/pcmag',
-  '/affiliates/oneplan',
+  '/affiliates/[filename]',
   '/cloudwards',
 ];
 
