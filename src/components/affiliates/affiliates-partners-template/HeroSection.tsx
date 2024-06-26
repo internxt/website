@@ -17,7 +17,7 @@ interface HeroSectionForPartnerProps {
   textContent: any;
   cardsType: CardsType | undefined;
   pathname: string;
-  coupon: CouponType;
+  couponName: CouponType;
 }
 
 interface ActivePlan {
@@ -27,19 +27,18 @@ interface ActivePlan {
   storage: string;
 }
 
-export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon }: HeroSectionForPartnerProps) => {
+export const HeroSectionForPartner = ({ textContent, cardsType, pathname, couponName }: HeroSectionForPartnerProps) => {
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<string>('5TB');
   const [activeProduct, setActiveProduct] = useState<ActivePlan>();
   const isOnlyOnePlan = cardsType === 'one';
 
-  const { products, loadingCards, currency, currencyValue } = usePricing({
-    couponCode: coupon,
+  const { products, coupon, loadingCards, currency, currencyValue } = usePricing({
+    couponCode: couponName,
   });
 
   const lifetimePlans = products?.individuals?.[Interval.Lifetime];
 
   useEffect(() => {
-    console.log(products?.individuals);
     if (!loadingCards && lifetimePlans && lifetimePlans.length > 0) {
       const initialProduct = lifetimePlans.find((plan: ActivePlan) => plan.storage === '5TB');
       if (initialProduct) {
@@ -104,7 +103,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
           )}
           {activeProduct ? (
             <PriceCardsForAffiliatesPartners
-              coupon=""
+              coupon={coupon}
               currency={currency}
               currencyValue={currencyValue}
               planId={activeProduct?.priceId}

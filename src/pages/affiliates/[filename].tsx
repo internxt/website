@@ -110,7 +110,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
         textContent={langJson.HeroSection}
         cardsType={cardsType}
         pathname={pathname}
-        coupon={couponCode[pathname]}
+        couponName={couponCode[pathname]}
       />
 
       {cardsType === 'all' ? (

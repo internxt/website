@@ -1,4 +1,5 @@
 import { checkout } from '@/lib/auth';
+import { CouponType } from '@/lib/types';
 import { Fire } from '@phosphor-icons/react';
 
 interface PriceCardsForAffiliatesPartnersProps {
@@ -9,7 +10,7 @@ interface PriceCardsForAffiliatesPartnersProps {
   price: number;
   planId: string;
   currencyValue: string;
-  coupon: string;
+  coupon: CouponType | undefined;
 }
 
 export const PriceCardsForAffiliatesPartners = ({
