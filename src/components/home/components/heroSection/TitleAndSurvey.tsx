@@ -39,8 +39,8 @@ export const TitleAndSurvey = ({ textContent }) => {
           {/* // TODO: Manage the buttons logic */}
           <div className="flex flex-wrap gap-4 lg:flex-row">
             {textContent.buttonLabel.map((label) => (
-              <div className="flex w-max">
-                <Button text={label} onClick={handleOnPlanButtonClicked} />
+              <div className="flex w-full lg:w-max">
+                <Button className="!w-full lg:w-max" text={label} onClick={handleOnPlanButtonClicked} />
               </div>
             ))}
           </div>
