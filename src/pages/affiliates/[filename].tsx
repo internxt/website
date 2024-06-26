@@ -155,7 +155,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
+  const lang = 'en';
   const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
