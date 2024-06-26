@@ -16,7 +16,7 @@ import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner'
 
 const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/pcmag', '/affiliates/oneplan', '/cloudwards'];
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
