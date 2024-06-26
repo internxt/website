@@ -146,6 +146,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
           />
         </>
       ) : undefined}
+
       <CtaSection textContent={langJson.CtaSection[cardsType]} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />

@@ -69,26 +69,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
 
       <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
-      <CtaSection textContent={langJson.CtaSection} />
-
-      {/* <FeatureSection textContent={langJson.FeatureSection} />
-
-      <WhatIsInternxtSection textContent={langJson.WhatIsInternxtSection} />
-
-      <WhyJoinSection textContent={langJson.WhyJoinSection} />
-
-      <FileParallaxSection />
-
-      <WhatWeDoSection textContent={langJson.WhatWeDoSection} />
-
-      <FaqSection textContent={langJson.FaqSection} />
-
-      <CtaSection
-        textContent={langJson.CtaSection}
-        url={
-          'https://app.impact.com/campaign-mediapartner-signup/Internxt.brand?type=dm&io=e2AXxeEh7q3EO8TzTRQ1yfzRimhVUUQ4VIYp7wvigF46G5y9GkCkRC94J2GfuR%2Fa'
-        }
-      /> */}
+      <CtaSection textContent={langJson.CtaSection['all']} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>
