@@ -49,7 +49,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
 
   return (
     <section
-      className="overflow-hidden bg-cover bg-no-repeat pt-12 lg:h-screen lg:max-h-[900px] lg:pb-10"
+      className="overflow-hidden bg-cover bg-no-repeat pt-12 lg:pb-10"
       style={{
         backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
       }}
@@ -76,7 +76,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               ))}
             </div>
           </div>
-          <div className="hidden flex-col gap-3 lg:flex">
+          <div className="hidden h-full flex-col gap-3 lg:flex lg:min-h-[650px]">
             {isOnlyOnePlan || (!lifetimePlans && loadingCards) ? undefined : (
               <div className="flex w-full flex-col gap-7">
                 <div className="flex w-full items-center justify-center text-2xl font-medium text-white">
@@ -101,20 +101,22 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                 </div>
               </div>
             )}
-            {activeProduct ? (
-              <PriceCardsForAffiliatesPartners
-                coupon={coupon}
-                currency={currency}
-                currencyValue={currencyValue}
-                planId={activeProduct?.priceId}
-                popular={activeProduct?.storage === '5TB'}
-                price={Number(activeProduct?.price) * 0.2}
-                priceBefore={activeProduct?.price.split('.')[0]}
-                storage={activeProduct.storage}
-              />
-            ) : (
-              <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" />
-            )}
+            <div className="flex flex-col">
+              {activeProduct ? (
+                <PriceCardsForAffiliatesPartners
+                  coupon={coupon}
+                  currency={currency}
+                  currencyValue={currencyValue}
+                  planId={activeProduct?.priceId}
+                  popular={activeProduct?.storage === '5TB'}
+                  price={Number(activeProduct?.price) * 0.2}
+                  priceBefore={activeProduct?.price.split('.')[0]}
+                  storage={activeProduct.storage}
+                />
+              ) : (
+                <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" />
+              )}
+            </div>
           </div>
         </div>
       </div>
