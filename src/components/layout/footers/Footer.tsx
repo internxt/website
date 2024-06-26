@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Transition, Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import setUTM from '@/lib/conversions';
-import LanguageMobileBox from './components/LanguageMobileBox';
+import LanguageMobileBox from '../components/LanguageMobileBox';
 import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';

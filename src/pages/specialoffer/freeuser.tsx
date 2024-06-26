@@ -1,6 +1,6 @@
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
-import Navbar from '@/components/layout/Navbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import Navbar from '@/components/layout/navbars/Navbar';
 import PriceTable from '@/components/prices/PriceTable';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/FaqSection';

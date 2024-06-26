@@ -5,8 +5,8 @@ import { TablesSection } from '@/components/comparison/pCloud-alternative/Tables
 import { CouponSection } from '@/components/comparison/pCloud-alternative/CouponSection';
 import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
-import Navbar from '@/components/layout/Navbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import cookies from '@/lib/cookies';

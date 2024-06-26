@@ -4,8 +4,8 @@ import TableSection from '@/components/comparison/TableSection';
 import FeatureSection from '@/components/comparison/FeatureSection';
 import InfoSection from '@/components/home/InfoSection';
 import FAQSection from '@/components/shared/FaqSection';
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/footers/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 

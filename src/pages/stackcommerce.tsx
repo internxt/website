@@ -6,13 +6,13 @@ import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import moment from 'moment';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');

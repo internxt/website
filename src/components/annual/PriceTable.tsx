@@ -1,5 +1,4 @@
 /* eslint-disable max-len */
-import React from 'react';
 import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -22,6 +21,7 @@ export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
@@ -34,7 +34,7 @@ export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
             {products?.individuals?.['year'] &&
-              Object.values(products.individuals['year']).map((product: any) => {
+              products.individuals['year'].map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"

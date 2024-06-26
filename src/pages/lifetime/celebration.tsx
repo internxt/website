@@ -4,12 +4,12 @@ import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import { CouponType } from '@/lib/types';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import moment from 'moment';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const LifetimeCelebration = ({ lang, metatagsDescriptions, testimonialsJson, langJson, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');

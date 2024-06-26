@@ -222,7 +222,7 @@ export default function PriceTable({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
             {products?.individuals?.[billingFrequency] &&
-              Object.values(products.individuals[billingFrequency]).map((product: any) => (
+              products.individuals[billingFrequency].map((product: any) => (
                 <PriceCard
                   planType="individual"
                   key={product.storage}
@@ -261,7 +261,7 @@ export default function PriceTable({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
             {products?.individuals?.[Interval.Lifetime] &&
-              Object.values(products.individuals[Interval.Lifetime]).map((product: any) => {
+              products.individuals[Interval.Lifetime].map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"

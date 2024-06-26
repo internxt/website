@@ -1,4 +1,6 @@
+import { IMPACT_LOGIN_USER } from '@/constants';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
 
 export const HeroSection = ({ textContent }) => (
   <section className="overflow-hidden lg:pt-12">
@@ -29,14 +31,14 @@ export const HeroSection = ({ textContent }) => (
               >
                 <p className="text-lg font-medium text-white">{textContent.signUp}</p>
               </button>
-              <button
-                onClick={() => {
-                  window.open('https://app.impact.com/login.user', '_blank', 'noopener noreferrer nofollow');
-                }}
+              <Link
+                href={IMPACT_LOGIN_USER}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
                 className="flex cursor-pointer rounded-lg border border-primary bg-transparent px-5 py-3 hover:bg-blue-10"
               >
                 <p className="text-lg font-medium text-primary">{textContent.logIn}</p>
-              </button>
+              </Link>
             </div>
           </div>
         </div>

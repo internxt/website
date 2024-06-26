@@ -1,11 +1,11 @@
 import Script from 'next/script';
 
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/privacy-directory/HeroSection';
 import WikiSection from '@/components/privacy-directory/WikiSection';
 import SupportNGOsSection from '@/components/privacy-directory/SupportNGOsSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import FAQSection from '@/components/shared/FaqSection';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
