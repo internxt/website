@@ -7,9 +7,16 @@
     "cta2": "Voir les offres à vie",
     "guarantee": "Garantie de remboursement de 30 jours",
     "celebration": {
-      "title": "Dites ciao à votre offre à vie d'Internxt",
-      "description": "Sécurisez vos fichiers pour toujours avec votre réduction pour la fête de l'indépendance de l'Italie.",
-      "cta1": "Obtenez 80% DE RÉDUCTION"
+      "france": {
+        "title": "Célébrez aujourd'hui pour une vie privée à vie",
+        "description": "Sécurisez vos fichiers pour toujours avec votre remise du jour de la Fête Nationale Française",
+        "cta1": "80% de réduction"
+      },
+      "belgium": {
+        "title": "Célébrez aujourd'hui pour une vie privée à vie",
+        "description": "Sécurisez vos fichiers pour toujours avec votre remise du jour de la Fête Nationale Belge",
+        "cta1": "80% de réduction"
+      }
     }
   },
   "PaymentSection": {

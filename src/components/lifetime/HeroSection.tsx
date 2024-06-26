@@ -52,8 +52,8 @@ const HeroSection = ({
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
+              <div className="flex max-w-[650px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
+                <Header maxWidth="">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button

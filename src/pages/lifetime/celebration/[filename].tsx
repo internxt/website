@@ -71,7 +71,7 @@ const LifetimeCelebrationTemplate = ({
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
       <HeroSection
-        textContent={langJson.HeroSection.celebration}
+        textContent={langJson.HeroSection.celebration[filename]}
         isCelebrationPage
         previewImg={getImage(IMAGES_PER_PATH[filename].previewImage)}
         imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
@@ -101,8 +101,12 @@ const LifetimeCelebrationTemplate = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = 'en';
+  let lang = 'en';
   const pathname = ctx.params.filename;
+
+  if (['france', 'belgium'].includes(pathname)) {
+    lang = 'fr';
+  }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
