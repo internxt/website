@@ -1,19 +1,54 @@
-import Layout from '@/components/layout/Layout';
-import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { ClockCounterClockwise, Eye, Key, MonitorArrowUp, NumberCircleZero, ShieldCheck } from '@phosphor-icons/react';
+import dynamic from 'next/dynamic';
+
+import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
-import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
-import { ClockCounterClockwise, Eye, Key, MonitorArrowUp, NumberCircleZero, ShieldCheck } from '@phosphor-icons/react';
-import { DevicesSection } from '@/components/affiliates/affiliates-partners-template/DevicesSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
 import { CouponType } from '@/lib/types';
-import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
-import { FeaturesSectionForOnePlan } from '@/components/affiliates/oneplan/FeaturesSectionForOneplan';
-import { WhyChooseInternxtForOneplan } from '@/components/affiliates/oneplan/WhyChooseInternxtForOneplan';
-import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
+
+const SecondFeaturesSection = dynamic(
+  () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
+  { ssr: false },
+);
+const DevicesSection = dynamic(
+  () => import('@/components/affiliates/affiliates-partners-template/DevicesSection').then((mod) => mod.DevicesSection),
+  { ssr: false },
+);
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection').then((mod) => mod.default), {
+  ssr: false,
+});
+const MinimalFooter = dynamic(
+  () => import('@/components/layout/footers/MinimalFooter').then((mod) => mod.MinimalFooter),
+  {
+    ssr: false,
+  },
+);
+const CtaSection = dynamic(
+  () => import('@/components/affiliates/affiliates-partners-template/CtaSection').then((mod) => mod.CtaSection),
+  { ssr: false },
+);
+const MarqueeComponent = dynamic(
+  () => import('@/components/specialoffer/MarqueeComponent').then((mod) => mod.MarqueeComponent),
+  { ssr: false },
+);
+const FeaturesSectionForOnePlan = dynamic(
+  () =>
+    import('@/components/affiliates/oneplan/FeaturesSectionForOneplan').then((mod) => mod.FeaturesSectionForOnePlan),
+  { ssr: false },
+);
+const WhyChooseInternxtForOneplan = dynamic(
+  () =>
+    import('@/components/affiliates/oneplan/WhyChooseInternxtForOneplan').then(
+      (mod) => mod.WhyChooseInternxtForOneplan,
+    ),
+  { ssr: false },
+);
+const WhatWeDoSectionForSpecialOffer = dynamic(
+  () => import('@/components/specialoffer/WhatWeDoSection').then((mod) => mod.WhatWeDoSectionForSpecialOffer),
+  { ssr: false },
+);
 
 export type CardsType = 'all' | 'one';
 
