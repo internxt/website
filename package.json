@@ -7,7 +7,6 @@
     "preinstall": "node ./scripts/use-yarn.js",
     "find:unused": "next-unused",
     "prebuild": "node ./scripts/check-envs.js",
-    "postinstall": "husky",
     "dev": "yarn && next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build",
@@ -15,7 +14,11 @@
     "prod": "next export",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "lint": "eslint './**/*.{js,ts,tsx}'"
+    "lint": "eslint './**/*.{js,ts,tsx}'",
+    "postinstall": "husky",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable",
+    "prepare": "husky"
   },
   "dependencies": {
     "@coderosh/images-to-pdf": "^2.1.0",
