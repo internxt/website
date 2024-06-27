@@ -23,7 +23,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/oystervpn',
   '/lifetime_special',
   '/pccomponentes-products',
-  '/lifetime/celebration',
+  '/lifetime/celebration/[filename]',
   '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
