@@ -22,9 +22,9 @@ const IMAGES_PER_PATH = {
     mobileImage: '/images/lifetime/celebration/canada/canada-image-mobile.webp',
   },
   usa: {
-    backgroundImage: '/images/lifetime/celebration/usa/us-bg.webp',
-    previewImage: '/images/lifetime/celebration/usa/us-file-item.webp',
-    mobileImage: '/images/lifetime/celebration/usa/us-image-mobile.webp',
+    backgroundImage: '/images/lifetime/celebration/usa/usa-bg.webp',
+    previewImage: '/images/lifetime/celebration/usa/usa-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/usa/usa-image-mobile.webp',
   },
   france: {
     backgroundImage: '/images/lifetime/celebration/france/france-bg.webp',
