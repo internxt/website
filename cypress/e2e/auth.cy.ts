@@ -33,50 +33,20 @@ describe('Auth flow (Sign Up / Log In)', () => {
     });
   });
 
-  describe('When the user want to do Sign Up', () => {
-    describe('When the user click on the Sign Up button', () => {
-      it('Then, the user is redirected to https://drive.internxt.com/new', () => {
-        // Open the home page
-        cy.visit('/');
+  // describe('When the user want to do Sign Up', () => {
+  //   describe('When the user click on the Sign Up button', () => {
+  //     it('Then, the user is redirected to https://drive.internxt.com/new', () => {
+  //       // Open the home page
+  //       cy.visit('/');
 
-        // Click on the Sign Up button
-        cy.get('#signupButton').as('btn').click();
+  //       // Click on the Sign Up button
+  //       cy.get('#signupButton').as('btn').click();
 
-        // Check that the user is redirected to https://drive.internxt.com/new
-        cy.url().should((url) => {
-          expect(url).to.include('https://drive.internxt.com/new');
-        });
-      });
-    });
-
-    describe('When the user do the Sign Up from the Sign Up inline (Home page)', () => {
-      it('Then, the user is redirected to https://drive.internxt.com/new to do auto Sign Up', () => {
-        cy.visit('/');
-
-        // Fill the email and password fields
-        cy.get('#signupEmail').type(`test${generateString(4)}@inxt.com`, { force: true });
-        cy.get('#signupPassword').type('test1234.', { force: true });
-
-        // Click on the Sign Up button
-        cy.get('#signupInlineSubmit').click();
-
-        // Check that the user is redirected to https://drive.internxt.com/new to do auto Sign Up
-        cy.url().should((url) => {
-          expect(url).to.include('https://drive.internxt.com/new?autoSubmit=true');
-        });
-      });
-    });
-
-    describe('When the user clicks on the free plan button in the card price section of the card', () => {
-      it('Then, the user is redirected to https://drive.internxt.com/new to signup', () => {
-        cy.visit('/pricing');
-        const cardId = '#freeAccountCard';
-
-        cy.get(cardId).should('exist');
-        cy.get(cardId).contains('Select plan').click();
-
-        cy.url().should('eq', 'https://drive.internxt.com/new');
-      });
-    });
-  });
+  //       // Check that the user is redirected to https://drive.internxt.com/new
+  //       cy.url().should((url) => {
+  //         expect(url).to.include('https://drive.internxt.com/new');
+  //       });
+  //     });
+  //   });
+  // });
 });

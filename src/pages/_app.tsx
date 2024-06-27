@@ -14,7 +14,12 @@ import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
 
-const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
+const EXCLUDE_INTERCOM_PATHS = [
+  '/temporary-email',
+  '/virus-scanner',
+  '/pccomponentes-products',
+  '/lifetime/celebration/[filename]',
+];
 
 const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
 
