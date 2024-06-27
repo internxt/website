@@ -2,9 +2,9 @@ import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSec
 import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import HeroSection from '@/components/home/HeroSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';

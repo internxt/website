@@ -1,0 +1,122 @@
+{
+  "recommendedBy": "Recommended by:",
+  "HeroSection": {
+    "exclusiveLabel": {
+      "pcmag": "Exclusive offer for PCMag readers",
+      "cloudwards": "Exclusive offer for Cloudwards readers"
+    },
+    "all": {
+      "title": "80% off all lifetime plans",
+      "description": [
+        "Internxt offers secure cloud storage guaranteed to protect your data and right to privacy.",
+        "Get lifetime storage with a single payment."
+      ],
+      "choosePlanLabel": "Choose your plan: "
+    },
+    "one": {
+      "title": "Save 80% on 5TB lifetime cloud storage",
+      "description": [
+        "Increase your cloud storage by 5TB.",
+        "Store and share your files in complete privacy forever without using your hard disk space."
+      ]
+    }
+  },
+  "FeaturesSectionForOnePlan": {
+    "title": "Say goodbye to storage constraints!",
+    "description": [
+      "With a 5TB lifetime plan, you can store and access your files locally without consuming your device’s physical drive space.",
+      " Enjoy peace of mind knowing your memories and important documents are safely backed up in the cloud, accessible on any device."
+    ],
+    "cta": "Get 80% OFF"
+  },
+  "WhyChooseInternxtForOneplan": {
+    "title": "Why choose Internxt?",
+    "description": "Privacy made for everyone and simple-to-use online security that you don’t have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
+    "cards": [
+      {
+        "title": "End-to-end encryption",
+        "description": "Your files are automatically secured before leaving your device."
+      },
+      {
+        "title": "Data protection",
+        "description": "Internxt protects your data, unlike Big Tech companies who profit from it."
+      },
+      {
+        "title": "Zero-knowledge policies",
+        "description": "Your files remain completely confidential — even from us"
+      },
+      {
+        "title": "Open source",
+        "description": "Our code is available to everyone for complete transparency."
+      },
+      {
+        "title": "GDPR compliant",
+        "description": "We follow strict European laws created to protect your data."
+      },
+      {
+        "title": "Independently audited",
+        "description": "Our apps have undergone rigorous testing and are certified as secure."
+      }
+    ]
+  },
+  "WhatWeDoForOneplan": {
+    "title": "Internxt ensures your privacy is protected",
+    "description": "We implement the best security to secure your files and documents:",
+    "card": {
+      "features": [
+        "Zero-knowledge encryption",
+        "Data secured at rest and in transit",
+        "Anonymous account creation",
+        "Two-Factor Authentication",
+        "Backups across multiple servers"
+      ],
+      "cta": "Upgrade plan"
+    }
+  },
+  "SecondFeaturesSection": {
+    "title": "Protect your files for a lifetime with unparalleled security built-in",
+    "description": "We provide the best security to protect your files at all costs.",
+    "info": [
+      {
+        "title": "Security",
+        "description": "Internxt utilizes the industry-standard AES-256 encryption for maximum security, both while your data is transferred and stored. We are also a zero-knowledge company, so you only have the key to decrypt your files. No third parties, not even Internxt, can access your files."
+      },
+      {
+        "title": "Secure file-sharing",
+        "description": "Share files securely using encrypted links or email invites. Your files stay safe on your device, ensuring maximum security when sharing online. For extra protection, you can password-protect shared documents and manage access permissions anytime."
+      },
+      {
+        "title": "Access your files from anywhere",
+        "description": "Use our desktop apps for Windows, Mac, and Linux, or manage your cloud from our mobile apps for iOS and Android. WebDav support lets you integrate Internxt with your favorite file management applications."
+      },
+      {
+        "title": "Open-source and audited",
+        "description": "We're committed to open-source development, making our code publicly available. Our commitment to transparency lets you see exactly how Internxt builds a secure platform that keeps your data private."
+      },
+      {
+        "title": "Secure backups built-in",
+        "description": "Your data is encrypted and split into fragments, and multiple copies are stored across geographically distributed data centers throughout Europe. This redundancy ensures your files are always secure, no matter what happens."
+      },
+      {
+        "title": "Zero data collection",
+        "description": "Unlike big tech companies that profit from your data, Internxt prioritizes your privacy. We never track, analyze, or sell your information to third parties. Your data belongs to you, and we guarantee to protect it."
+      }
+    ]
+  },
+  "DevicesSection": {
+    "title": "Claim your exclusive offer!",
+    "cta": "Get 80% OFF"
+  },
+  "CtaSection": {
+    "all": {
+      "title": "Claim your exclusive offer!",
+      "description": "80% off lifetime plans.",
+      "cta": "Buy now"
+    },
+    "one": {
+      "title": "Running out of storage?",
+      "description": "Get 80% off an extra 5TB!",
+      "cta": "Upgrade plan"
+    }
+  }
+}

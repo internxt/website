@@ -1,8 +1,6 @@
-import React from 'react';
-
 import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/black-friday/HeroSection';
 
 import SuiteSection from '@/components/black-friday/SuiteSection';

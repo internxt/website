@@ -1,6 +1,6 @@
 import Layout from '@/components/layout/Layout';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
-import Navbar from '@/components/layout/Navbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import Navbar from '@/components/layout/navbars/Navbar';
 import PriceTable from '@/components/prices/PriceTable';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/FaqSection';
@@ -12,6 +12,10 @@ import { CouponType } from '@/lib/types';
 
 const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
+
+  const handleOnButtonClick = () => {
+    window.location.hash = '#priceTable';
+  };
 
   return (
     <Layout title={metatags.title} description={metatags.description} segmentName={'Free User'}>
@@ -35,7 +39,10 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
 
       <CtaSection textContent={textContent.CtaSection} url={'/specialoffer/freeuser#priceTable'} target="_self" />
 
-      <WhatWeDoSectionForSpecialOffer textContent={textContent.WhatWeDoSection} />
+      <WhatWeDoSectionForSpecialOffer
+        textContent={textContent.WhatWeDoSection}
+        handleOnButtonClick={handleOnButtonClick}
+      />
 
       <FAQSection textContent={textContent.FaqSection} />
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Interval } from '@/components/services/stripe.service';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -38,7 +37,7 @@ const PaymentSection = ({ textContent }) => {
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6">
             {!loadingCards &&
-              Object.values(products?.individuals?.[Interval.Year]).map((product: any) => (
+              products?.individuals?.[Interval.Year].map((product: any) => (
                 <PriceCard
                   planType="individual"
                   key={product.storage}

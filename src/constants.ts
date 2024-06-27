@@ -9,6 +9,7 @@ export const VPN_CHROME_WEB_STORE =
 
 export const INTERNXT_URL = 'https://internxt.com';
 export const COOKIE_DOMAIN = 'internxt.com';
+export const IMPACT_LOGIN_USER = 'https://app.impact.com/login.user';
 
 export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime',
@@ -27,6 +28,8 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
+  '/affiliates/[filename]',
+  '/cloudwards',
 ];
 
 export const SNIGEL_BANNERS = {
