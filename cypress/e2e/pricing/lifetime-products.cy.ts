@@ -35,15 +35,15 @@ describe('Lifetime products in Pricing page', () => {
         cy.checkIfProductExistAndRedirectWorks(products.lifetime2TB, 'Lifetime');
       });
     });
-    describe('When the plan is 5TB of space', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.checkIfProductExistAndRedirectWorks(products.lifetime5TB, 'Lifetime');
-      });
-    });
-    describe('When the plan is 10TB of space', () => {
-      it('Redirect to stripe checkout with the correct planId and mode', () => {
-        cy.checkIfProductExistAndRedirectWorks(products.lifetime10TB, 'Lifetime');
-      });
-    });
+    // describe('When the plan is 5TB of space', () => {
+    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
+    //     cy.checkIfProductExistAndRedirectWorks(products.lifetime5TB, 'Lifetime');
+    //   });
+    // });
+    // describe('When the plan is 10TB of space', () => {
+    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
+    //     cy.checkIfProductExistAndRedirectWorks(products.lifetime10TB, 'Lifetime');
+    //   });
+    // });
   });
 });

@@ -10,6 +10,7 @@
 .nyc_output
 /cypress/videos
 /cypress/screenshots
+/cypress/downloads
 
 # next.js
 /.next/

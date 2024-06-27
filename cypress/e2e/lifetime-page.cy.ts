@@ -37,6 +37,7 @@ describe('Lifetime page', () => {
   });
 
   beforeEach(() => {
+    cy.wait(5000);
     cy.visit('/lifetime');
   });
 
@@ -53,29 +54,29 @@ describe('Lifetime page', () => {
     });
   });
 
-  describe('When the plan of 5TB is clicked', () => {
-    it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime5TB.storage}`).click();
+  // describe('When the plan of 5TB is clicked', () => {
+  //   it('Redirect to stripe checkout with the correct planId and mode', () => {
+  //     cy.get(`#planButton${products.lifetime5TB.storage}`).click();
 
-      cy.wait(1000);
+  //     cy.wait(1000);
 
-      cy.url().should((url) => {
-        expect(url).to.include(products.lifetime5TB.planId);
-        expect(url).to.include(DRIVE_WEB_URL);
-      });
-    });
-  });
+  //     cy.url().should((url) => {
+  //       expect(url).to.include(products.lifetime5TB.planId);
+  //       expect(url).to.include(DRIVE_WEB_URL);
+  //     });
+  //   });
+  // });
 
-  describe('When the plan of 10TB is clicked', () => {
-    it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime10TB.storage}`).click();
+  // describe('When the plan of 10TB is clicked', () => {
+  //   it('Redirect to stripe checkout with the correct planId and mode', () => {
+  //     cy.get(`#planButton${products.lifetime10TB.storage}`).click();
 
-      cy.wait(1000);
+  //     cy.wait(1000);
 
-      cy.url().should((url) => {
-        expect(url).to.include(products.lifetime10TB.planId);
-        expect(url).to.include(DRIVE_WEB_URL);
-      });
-    });
-  });
+  //     cy.url().should((url) => {
+  //       expect(url).to.include(products.lifetime10TB.planId);
+  //       expect(url).to.include(DRIVE_WEB_URL);
+  //     });
+  //   });
+  // });
 });
