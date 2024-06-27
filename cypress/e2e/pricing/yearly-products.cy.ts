@@ -31,26 +31,28 @@ describe('Yearly products in Pricing page', () => {
   describe('When the payment plan is annually', () => {
     beforeEach(() => {
       cy.visit('/pricing');
+      cy.wait(3000);
     });
+
     describe('When the plan is 200GB of space', () => {
       it('Redirect to stripe checkout with the correct planId and mode', () => {
         cy.checkIfProductExistAndRedirectWorks(products.year200GB);
       });
     });
-    // describe('When the plan is 2TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.year2TB);
-    //   });
-    // });
-    // describe('When the plan is 5TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.year5TB);
-    //   });
-    // });
-    // describe('When the plan is 10TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.year10TB);
-    //   });
-    // });
+    describe('When the plan is 2TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.year2TB);
+      });
+    });
+    describe('When the plan is 5TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.year5TB);
+      });
+    });
+    describe('When the plan is 10TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.year10TB);
+      });
+    });
   });
 });

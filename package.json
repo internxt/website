@@ -7,7 +7,7 @@
     "preinstall": "node ./scripts/use-yarn.js",
     "find:unused": "next-unused",
     "prebuild": "node ./scripts/check-envs.js",
-    "dev": "yarn && next dev -p 3001",
+    "dev": "yarn && next dev",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
@@ -61,7 +61,7 @@
     "zxcvbn": "^4.4.2"
   },
   "devDependencies": {
-    "@cypress/code-coverage": "^3.12.20",
+    "@cypress/code-coverage": "^3.12.39",
     "@svgr/webpack": "^6.5.1",
     "@tailwindcss/line-clamp": "0.4.0",
     "@types/jest": "^29.4.0",
@@ -71,7 +71,7 @@
     "@typescript-eslint/parser": "^4.22.0",
     "babel-eslint": "^10.1.0",
     "babel-plugin-istanbul": "^6.1.1",
-    "cypress": "^13.11.0",
+    "cypress": "^13.12.0",
     "eslint": "^7.32.0",
     "next-unused": "^0.0.6",
     "postcss": "8.4.31",

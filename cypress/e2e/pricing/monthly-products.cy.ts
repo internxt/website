@@ -29,6 +29,7 @@ describe('Monthly products in Pricing page', () => {
   describe('When the payment plan is monthly', () => {
     beforeEach(() => {
       cy.visit('/pricing');
+      cy.wait(3000);
     });
 
     describe('When the plan is 200GB of space', () => {
@@ -37,22 +38,22 @@ describe('Monthly products in Pricing page', () => {
       });
     });
 
-    // describe('When the plan is 2TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.month2TB, 'Individual', true);
-    //   });
-    // });
+    describe('When the plan is 2TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.month2TB, 'Individual', true);
+      });
+    });
 
-    // describe('When the plan is 5TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.month5TB, 'Individual', true);
-    //   });
-    // });
+    describe('When the plan is 5TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.month5TB, 'Individual', true);
+      });
+    });
 
-    // describe('When the plan is 10TB of space', () => {
-    //   it('Redirect to stripe checkout with the correct planId and mode', () => {
-    //     cy.checkIfProductExistAndRedirectWorks(products.month10TB, 'Individual', true);
-    //   });
-    // });
+    describe('When the plan is 10TB of space', () => {
+      it('Redirect to stripe checkout with the correct planId and mode', () => {
+        cy.checkIfProductExistAndRedirectWorks(products.month10TB, 'Individual', true);
+      });
+    });
   });
 });
