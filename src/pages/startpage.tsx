@@ -1,8 +1,8 @@
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 
 import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';

@@ -1,4 +1,3 @@
-import React from 'react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from './PriceCard';
 import usePricing from '@/hooks/usePricing';
@@ -23,7 +22,7 @@ const PaymentsSection = ({ textContent }) => {
           ) : (
             <>
               {products?.individuals?.['year'] &&
-                Object.values(products.individuals['year']).map((product: any) => {
+                products.individuals['year'].map((product: any) => {
                   return (
                     <PriceCard
                       key={product.storage}

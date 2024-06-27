@@ -1,3 +1,4 @@
+import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
 const CtaSection = ({
@@ -14,7 +15,7 @@ const CtaSection = ({
   return (
     <section
       style={{
-        backgroundImage: 'url(/images/cyber-awareness/Background.svg)',
+        backgroundImage: `url(${getImage('/images/cyber-awareness/Background.svg')})`,
       }}
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >

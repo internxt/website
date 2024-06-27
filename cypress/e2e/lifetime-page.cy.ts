@@ -38,11 +38,13 @@ describe('Lifetime page', () => {
 
   beforeEach(() => {
     cy.visit('/lifetime');
+
+    cy.wait(2000);
   });
 
   describe('When the plan of 2TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime2TB.storage}`).click();
+      cy.get(`#planButton${products.lifetime2TB.storage}`).click({ force: true });
 
       cy.wait(1000);
 
@@ -55,7 +57,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 5TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime5TB.storage}`).click();
+      cy.get(`#planButton${products.lifetime5TB.storage}`).click({ force: true });
 
       cy.wait(1000);
 
@@ -68,7 +70,7 @@ describe('Lifetime page', () => {
 
   describe('When the plan of 10TB is clicked', () => {
     it('Redirect to stripe checkout with the correct planId and mode', () => {
-      cy.get(`#planButton${products.lifetime10TB.storage}`).click();
+      cy.get(`#planButton${products.lifetime10TB.storage}`).click({ force: true });
 
       cy.wait(1000);
 

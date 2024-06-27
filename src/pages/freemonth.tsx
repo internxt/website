@@ -1,8 +1,7 @@
-import React from 'react';
 import HeroSection from '@/components/partnerships/freemonth/HeroSection';
 import FeatureSection from '@/components/partnerships/freemonth/FeatureSection';
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/footers/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 

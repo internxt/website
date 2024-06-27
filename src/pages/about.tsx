@@ -3,9 +3,9 @@ import Script from 'next/script';
 import HeroSection from '@/components/about/HeroSection';
 import WhatWeDoSection from '@/components/about/WhatWeDoSection';
 import FeatureSection from '@/components/about/FeatureSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
 
 import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';

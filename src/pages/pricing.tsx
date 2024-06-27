@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import Script from 'next/script';
 
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/footers/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
 import PriceTable from '@/components/prices/PriceTable';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';

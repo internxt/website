@@ -78,7 +78,6 @@ export enum CouponType {
   TwoTBCoupon75 = 'COUPON_SUBSCRIPTION_75_OFF',
   LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
   LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
-  CloudwardsCoupon = 'COUPON_CLOUDWARDS',
   Special15Coupon = 'COUPON_SPECIAL15',
   AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
   BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
@@ -111,6 +110,9 @@ export enum CouponType {
   euro2024fiveTB = 'EURO_2024_5TB_COUPON',
   euro2024TenTB = 'EURO_2024_10TB_COUPON',
   freeUserCoupon = 'FREE_PROMO_COUPON',
+  PcmagCoupon = 'PCMAG_COUPON',
+  CloudwardsCoupon = 'CLOUDWARDS_COUPON',
+  OnePlanCoupon = 'ONEPLAN_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

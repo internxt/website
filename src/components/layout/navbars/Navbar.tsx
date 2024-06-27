@@ -4,11 +4,11 @@ import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
 
 import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
-import LanguageBox from './components/LanguageBox';
+import LanguageBox from '../components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { ItemsNavigation } from './components/navbar/ItemsNavigation';
+import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 
 export interface NavbarProps {

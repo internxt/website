@@ -1,5 +1,5 @@
 import { MutableRefObject, useEffect, useRef, useState } from 'react';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import CheckQuestions from './CheckQuestions';
 import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';

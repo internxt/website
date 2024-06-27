@@ -1,14 +1,14 @@
 import Script from 'next/script';
 
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/converter-tool/HeroSection';
 import ExplanationSection from '@/components/converter-tool/ExplanationSection';
 import CtaSection from '@/components/converter-tool/CtaSection';
 import InfoSection from '@/components/converter-tool/InfoSection';
 import ConversionTableSection from '@/components/converter-tool/ConversionTableSection';
 import FaqSection from '@/components/shared/FaqSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';

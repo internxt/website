@@ -4,11 +4,11 @@ import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import moment from 'moment';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const LifetimeSpecial = ({
   lang,

@@ -1,36 +1,77 @@
-import React from 'react';
-import HeroSection from '@/components/partnerships/cloudwards/HeroSection';
-import AdvantagesSection from '@/components/partnerships/cloudwards/AdvantagesSection';
-import BestStorageSection from '@/components/partnerships/cloudwards/BestStorageSection';
-import FeaturesSection from '@/components/partnerships/cloudwards/FeaturesSection';
-import DealSection from '@/components/partnerships/cloudwards/DealSection';
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
 import Layout from '@/components/layout/Layout';
+import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
+import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
+import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
+import { ClockCounterClockwise, Eye, Key, MonitorArrowUp, NumberCircleZero, ShieldCheck } from '@phosphor-icons/react';
+import { DevicesSection } from '@/components/affiliates/affiliates-partners-template/DevicesSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
+import { CouponType } from '@/lib/types';
 
-const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloudwards');
+export type CardsType = 'all' | 'one';
+
+const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang }) => {
+  const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
+
+  const cardInfo = [
+    {
+      icon: ShieldCheck,
+      title: langJson.SecondFeaturesSection.info[0].title,
+      description: langJson.SecondFeaturesSection.info[0].description,
+    },
+    {
+      icon: MonitorArrowUp,
+      title: langJson.SecondFeaturesSection.info[1].title,
+      description: langJson.SecondFeaturesSection.info[1].description,
+    },
+    {
+      icon: Key,
+      title: langJson.SecondFeaturesSection.info[2].title,
+      description: langJson.SecondFeaturesSection.info[2].description,
+    },
+    {
+      icon: Eye,
+      title: langJson.SecondFeaturesSection.info[3].title,
+      description: langJson.SecondFeaturesSection.info[3].description,
+    },
+    {
+      icon: ClockCounterClockwise,
+      title: langJson.SecondFeaturesSection.info[4].title,
+      description: langJson.SecondFeaturesSection.info[4].description,
+    },
+    {
+      icon: NumberCircleZero,
+      title: langJson.SecondFeaturesSection.info[5].title,
+      description: langJson.SecondFeaturesSection.info[5].description,
+    },
+  ];
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="StartPage Partnership"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
+      <MinimalNavbar lang={lang} />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+      <HeroSectionForPartner
+        textContent={langJson.HeroSection}
+        cardsType={'all'}
+        pathname={'cloudwards'}
+        couponName={CouponType.CloudwardsCoupon}
+      />
 
-      <AdvantagesSection textContent={langJson.AdvantagesSection} />
+      <SecondFeaturesSection
+        textContent={langJson.SecondFeaturesSection}
+        lang={lang}
+        cards={cardInfo}
+        bgColor="bg-white"
+      />
 
-      <BestStorageSection textContent={langJson.BestStorageSection} />
+      <DevicesSection textContent={langJson.DevicesSection} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} />
+      <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
-      <DealSection textContent={langJson.DealSection} />
+      <CtaSection textContent={langJson.CtaSection['all']} />
 
-      <Footer textContent={footerLang} lang={lang} darkMode={false} />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>
   );
 };
@@ -38,18 +79,9 @@ const Cloudwards = ({ metatagsDescriptions, langJson, navbarLang, footerLang, la
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  if (lang !== 'en') {
-    return {
-      redirect: {
-        destination: '/cloudwards',
-        permanent: false,
-      },
-    };
-  }
-
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/cloudwards.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const langJson = require(`@/assets/lang/en/affiliates-partners-template.json`);
+  const homeJson = require(`@/assets/lang/en/home.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
@@ -57,7 +89,7 @@ export async function getServerSideProps(ctx) {
       lang,
       metatagsDescriptions,
       langJson,
-      navbarLang,
+      homeJson,
       footerLang,
     },
   };

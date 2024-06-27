@@ -1,7 +1,7 @@
 import { HeroSection } from '@/components/vpn-extension/HeroSection';
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
+import Footer from '@/components/layout/footers/Footer';
 import { EncryptedVPNSection } from '@/components/vpn-extension/EncryptedVPNSection';
 import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
 import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection';

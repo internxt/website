@@ -22,80 +22,66 @@ export enum Products {
 }
 
 async function getPrices(isEur?: boolean) {
-  let currency;
-
-  if (isEur) {
-    currency = 'eur';
-  } else {
-    try {
-      const currencyResponse = await currencyService.filterCurrencyByCountry();
-      currency = currencyResponse.currencyValue ?? 'eur';
-    } catch (error) {
-      console.error('Error getting currency:', error);
-      currency = 'eur'; // Default to EUR in case of error
-    }
-  }
-
-  const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
-  const { data } = res;
-
+  const currency = await getCurrency(isEur);
+  const data = await fetchProductData(currency);
   if (data) {
-    const transformedData = {
-      individuals: {},
-    };
-
-    Object.values(data).forEach((productValue: any) => {
-      const storage = bytes(productValue.bytes);
-
-      if (productValue.interval === Interval.Month) {
-        transformedData.individuals[Interval.Month] = {
-          ...transformedData.individuals[Interval.Month],
-          [storage]: {
-            priceId: productValue.id,
-            storage: storage,
-            price: Math.abs(productValue.amount / 100).toFixed(2),
-            currency: productValue.currency,
-          },
-        };
-      } else if (productValue.interval === Interval.Year) {
-        transformedData.individuals[Interval.Year] = {
-          ...transformedData.individuals[Interval.Year],
-          [storage]: {
-            priceId: productValue.id,
-            storage: storage,
-            price: Math.abs(productValue.amount / 100).toFixed(2),
-            currency: productValue.currency,
-          },
-        };
-      } else if (productValue.interval === Interval.Lifetime) {
-        transformedData.individuals[Interval.Lifetime] = {
-          ...transformedData.individuals[Interval.Lifetime],
-          [storage]: {
-            priceId: productValue.id,
-            storage: storage,
-            price: Math.abs(productValue.amount / 100).toFixed(2),
-            currency: productValue.currency,
-          },
-        };
-      }
-    });
-
-    // Sort products by price descending order for each interval (month, year, lifetime)
-    Object.keys(transformedData.individuals).forEach((interval) => {
-      transformedData.individuals[interval] = Object.values(transformedData.individuals[interval])
-        .sort((a: any, b: any) => {
-          return a.price - b.price;
-        })
-        .reduce((acc: any, curr: any) => {
-          return {
-            ...acc,
-            [curr.storage]: curr,
-          };
-        }, {});
-    });
-
+    const transformedData = transformProductData(data);
     return transformedData;
   }
+}
+
+async function getCurrency(isEur?: boolean): Promise<string> {
+  if (isEur) {
+    return 'eur';
+  }
+  try {
+    const currencyResponse = await currencyService.filterCurrencyByCountry();
+    return currencyResponse.currencyValue ?? 'eur';
+  } catch (error) {
+    console.error('Error getting currency:', error);
+    return 'eur'; // Default to EUR in case of error
+  }
+}
+
+async function fetchProductData(currency: string) {
+  try {
+    const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
+    return res.data;
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+    return null;
+  }
+}
+
+function transformProductData(data: any) {
+  const transformedData = {
+    individuals: {
+      [Interval.Month]: [] as Array<any>,
+      [Interval.Year]: [] as Array<any>,
+      [Interval.Lifetime]: [] as Array<any>,
+    },
+  };
+
+  data.forEach((productValue: any) => {
+    const storage = bytes(productValue.bytes);
+    const interval = productValue.interval;
+
+    if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
+      transformedData.individuals[interval].push({
+        priceId: productValue.id,
+        storage: storage,
+        price: Math.abs(productValue.amount / 100).toFixed(2),
+        currency: productValue.currency,
+      });
+    }
+  });
+
+  // Sort products by price ascending order for each interval (month, year, lifetime)
+  Object.keys(transformedData.individuals).forEach((interval) => {
+    transformedData.individuals[interval].sort((a, b) => a.price - b.price);
+  });
+
+  return transformedData;
 }
 
 async function getSelectedPrice(interval: string, plan: string) {

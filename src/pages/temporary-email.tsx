@@ -1,13 +1,13 @@
 import Script from 'next/script';
 
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/temp-email/HeroSection';
 import { SignupSection } from '@/components/temp-email/SignupSection';
 import { InfoSection } from '@/components/temp-email/InfoSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import QASection from '@/components/shared/FaqSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ActionBanner } from '@/components/temp-email/components/ActionBanner';

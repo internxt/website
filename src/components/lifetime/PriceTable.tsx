@@ -42,7 +42,7 @@ const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lif
     });
   }, []);
 
-  const productsArray = products?.individuals?.['lifetime'] && Object.values(products?.individuals?.['lifetime']);
+  const productsArray = products?.individuals?.['lifetime'];
 
   const updatedProductsArray = productsArray
     ? productsArray.map((product: any, index: number) => {

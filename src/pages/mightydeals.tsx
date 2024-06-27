@@ -6,7 +6,7 @@ import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';

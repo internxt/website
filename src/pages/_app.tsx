@@ -14,7 +14,14 @@ import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
 
-const EXCLUDE_INTERCOM_PATHS = ['/temporary-email', '/virus-scanner', '/pccomponentes-products'];
+const EXCLUDE_INTERCOM_PATHS = [
+  '/temporary-email',
+  '/virus-scanner',
+  '/pccomponentes-products',
+  '/lifetime/celebration/[filename]',
+];
+
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -22,6 +29,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
+
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
 
   useEffect(() => {
@@ -101,8 +110,11 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
-        <div className="flex justify-center">{shouldShowBanner ? <BottomBanner /> : undefined}</div>
-        <BeforeCloseTabBanner />
+        <div className="flex justify-center">
+          {shouldShowBanner ? <BottomBanner /> : undefined}
+          {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
+        </div>
+
         <FreeCardPromoBanner />
         {/* Show snackbar in all pages */}
         <ShowSnackbar />

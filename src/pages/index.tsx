@@ -1,10 +1,10 @@
 import cookies from '@/lib/cookies';
 
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/home/HeroSection';
 import SocialProofSection from '@/components/home/SocialProofSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';

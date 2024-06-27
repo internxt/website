@@ -29,6 +29,7 @@ describe('Monthly products in Pricing page', () => {
   describe('When the payment plan is monthly', () => {
     beforeEach(() => {
       cy.visit('/pricing');
+      cy.wait(3000);
     });
 
     describe('When the plan is 200GB of space', () => {

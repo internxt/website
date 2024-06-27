@@ -97,7 +97,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
             {products?.individuals?.[billingFrequency] &&
-              Object.values(products.individuals[billingFrequency]).map((product: any) => {
+              products.individuals[billingFrequency].map((product: any) => {
                 return (
                   <PriceCard
                     planType="individual"

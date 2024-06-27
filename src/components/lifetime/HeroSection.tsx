@@ -12,6 +12,7 @@ interface HeroSectionProps {
   isCelebrationPage?: boolean;
   previewImg?: string;
   bgImage?: string;
+  imageMobile?: string;
 }
 
 const HeroSection = ({
@@ -21,11 +22,8 @@ const HeroSection = ({
   previewImg,
   bgImage = getImage('/images/lifetime/celebration/normal-bg.png'),
   dt,
+  imageMobile,
 }: HeroSectionProps) => {
-  const imageMobile = isCelebrationPage
-    ? getImage('/images/lifetime/celebration/image_mobile.webp')
-    : getImage('/images/lifetime/image_mobile.webp');
-
   return (
     <section
       className={`overflow-hidden bg-cover bg-no-repeat py-20`}
@@ -46,7 +44,7 @@ const HeroSection = ({
               <div className="flex px-5 lg:hidden">
                 <Image
                   loading="eager"
-                  src={imageMobile}
+                  src={imageMobile ?? getImage('/images/lifetime/image_mobile.webp')}
                   draggable="false"
                   quality={100}
                   width={600}
@@ -54,8 +52,8 @@ const HeroSection = ({
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
+              <div className="flex max-w-[650px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
+                <Header maxWidth="">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button

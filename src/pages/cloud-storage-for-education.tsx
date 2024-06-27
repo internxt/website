@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
-import Footer from '@/components/layout/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
+import Footer from '@/components/layout/footers/Footer';
 import FAQSection from '@/components/shared/FaqSection';
 import CtaSection from '@/components/cloud-storage-for-education/CtaSection';
 import HeroSection from '@/components/cloud-storage-for-education/HeroSection';

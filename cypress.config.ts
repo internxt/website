@@ -16,13 +16,13 @@ export default defineConfig({
     fileServerFolder: '.',
     specPattern: ['**/*.spec.ts', '**/*.cy.ts'],
     baseUrl: 'http://localhost:3000',
-    viewportWidth: 1500,
-    viewportHeight: 860,
+    viewportWidth: 1800,
+    viewportHeight: 970,
     scrollBehavior: 'center',
     chromeWebSecurity: false,
     env: {
       codeCoverage: {
-        url: 'http://localhost:3000',
+        url: 'http://localhost:3000/coverage',
       },
     },
   },

@@ -1,9 +1,9 @@
 import cookies from '../lib/cookies';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/password-generator/HeroSection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import InfoSection from '@/components/password-generator/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';

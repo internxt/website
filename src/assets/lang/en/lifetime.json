@@ -6,9 +6,16 @@
     "cta1": "Get 70% off",
     "cta2": "Browse lifetime deals",
     "celebration": {
-      "title": "Say ciao to your lifetime Internxt offer",
-      "description": "Secure your files forever with your Italy Independence day discount.",
-      "cta1": "Get 80% OFF"
+      "canada": {
+        "title": "Celebrate today for a lifetime of privacy ",
+        "description": "Secure your files forever with your Dominion Day discount ",
+        "cta1": "Get 80% OFF"
+      },
+      "usa": {
+        "title": "Celebrate today for a lifetime of privacy",
+        "description": "Secure your files forever with your 4th of July discount",
+        "cta1": "Get 80% OFF"
+      }
     }
   },
   "PaymentSection": {

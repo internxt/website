@@ -1,11 +1,11 @@
 import Layout from '@/components/layout/Layout';
-import Navbar from '@/components/layout/Navbar';
+import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/webdav/HeroSection';
 import { WebDAVSupportSection } from '@/components/webdav/WebDAVSupportSection';
 import { DownloadCLISection } from '@/components/webdav/DownloadCLISection';
 import CtaSection from '@/components/shared/CtaSection';
 import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/layout/footers/Footer';
 import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/FaqSection';
 

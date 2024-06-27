@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
-import Footer from '@/components/layout/Footer';
-import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/footers/Footer';
+import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/virus-scanner/HeroSection';
 import FeaturesSection from '@/components/virus-scanner/FeaturesSection';
