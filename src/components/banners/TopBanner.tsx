@@ -41,7 +41,7 @@ const TopBanner = ({ isBannerFixed }) => {
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
           <Link className="flex flex-col items-center justify-center" href={'/pricing'} target="_blank">
             <p className="font-normal">
-              {textContent.title.normalText}
+              ⚽️ {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
             </p>
           </Link>
