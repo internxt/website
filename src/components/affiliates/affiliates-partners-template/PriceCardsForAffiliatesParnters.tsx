@@ -71,7 +71,7 @@ export const PriceCardsForAffiliatesPartners = ({
               } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50`}
             >
               <span className={`text-sm`}>{currency}</span>
-              <span className="price text-4xl font-bold">{priceBefore}</span>
+              <span className="price text-4xl font-bold line-through">{priceBefore}</span>
             </p>
           </div>
 
