@@ -35,7 +35,6 @@
         "privacy": "Privacy",
         "openSource": "Open Source",
         "mediaArea": "Media Area",
-        "useCases": "Use Cases",
         "security": "Security",
         "legal": "Legal",
         "whyInternxt": "Why Internxt?"
@@ -64,10 +63,8 @@
         "comparison": "Cloud Storage Comparison",
         "pCloudAlternative": "pCloud Alternative",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
-        "library": "Library",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "What Google Knows",
-        "inxtLibrary": "Library"
+        "whatGoogleKnowsAboutMe": "What Google Knows"
       },
       "tools": {
         "title": "Free Tools",

@@ -2,28 +2,26 @@
 import RevealY from '@/components/components/RevealY';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import Link from 'next/link';
 
 const FirstFeaturesSection = ({ textContent, lang }) => {
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-white py-20">
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
-        <div className="flex flex-col items-center py-16">
-          <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-black">
-            <h2 className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">
-              {textContent.title.line1}
-              <br className="hidden sm:flex" /> {textContent.title.line2}
-            </h2>
-            <h3 className="mb-6 w-full max-w-3xl text-xl font-normal">{textContent.subtitle}</h3>
+        <div className="flex flex-col items-center gap-8">
+          <div className="flex w-full max-w-3xl flex-col items-center gap-6 px-6 text-center font-semibold text-black">
+            <h2 className="text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
+            <h3 className="max-w-3xl text-xl font-semibold text-gray-100">{textContent.subtitle}</h3>
+            <p className="text-xl font-normal text-gray-80">{textContent.description}</p>
           </div>
 
-          <button
+          <Link
+            href={'/pricing'}
+            rel="noopener noreferrer"
             className="flex rounded-lg bg-primary px-5 py-3 text-white hover:bg-primary-dark"
-            onClick={() => {
-              window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
-            }}
           >
             {textContent.cta}
-          </button>
+          </Link>
 
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
             <Image

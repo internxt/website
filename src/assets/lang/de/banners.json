@@ -113,5 +113,15 @@
     "title": "Erhalte lebenslangen Zugang bei Internxt",
     "cta": "Wählen Sie Ihren Plan",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
+  },
+  "BeforeCloseBanner": {
+    "title": {
+      "normal1": "Warten Sie! Sonderangebot ",
+      "blue": "75% RABATT ",
+      "normal2": "!"
+    },
+    "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
+    "cta": "75% RABATT auf alle Pläne",
+    "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }

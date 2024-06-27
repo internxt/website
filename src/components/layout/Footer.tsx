@@ -234,14 +234,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.company.mediaArea}
                     </Link>
-                    <Link
-                      href="/use-cases"
-                      locale={lang}
-                      passHref
-                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.company.useCases}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -357,14 +349,6 @@ export default function Footer({
                       className="flex items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                    </Link>
-                    <Link
-                      href="/internxt-library"
-                      locale={lang}
-                      passHref
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.inxtLibrary}
                     </Link>
                   </div>
                 </div>
@@ -626,14 +610,6 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.company.mediaArea}
                       </Link>
-                      <Link
-                        href="/use-cases"
-                        locale={lang}
-                        passHref
-                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.company.useCases}
-                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -747,14 +723,6 @@ export default function Footer({
                         className="flex items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
-                      </Link>
-                      <Link
-                        href="/internxt-library"
-                        locale={lang}
-                        passHref
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.inxtLibrary}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

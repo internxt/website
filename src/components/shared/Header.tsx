@@ -9,11 +9,9 @@ const Header = ({
   className?: string;
   isToolsPage?: boolean;
 }) => {
-  const isToolsPageStyle = isToolsPage ? 'sm:text-5xl' : 'sm:text-6xl';
-
   return (
     <h1
-      className={`${maxWidth} ${className} whitespace-normal text-4xl font-semibold leading-tight sm:leading-tight ${isToolsPageStyle}`}
+      className={`${maxWidth} ${className} whitespace-normal text-4xl font-semibold leading-tight sm:text-5xl sm:leading-tight`}
     >
       {children}
     </h1>

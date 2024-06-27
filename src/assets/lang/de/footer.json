@@ -38,8 +38,7 @@
         "legal": "Legal",
         "whyInternxt": "Warum Internxt?",
         "comparison": "Vergleich",
-        "mediaArea": "Medienbereich",
-        "useCases": "Anwendungsfälle"
+        "mediaArea": "Medienbereich"
       },
       "join": {
         "title": "Mach mit",
@@ -62,13 +61,11 @@
         "title": "Ressourcen",
         "blog": "Blog",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
-        "library": "Library",
         "writeForUs": "Schreibe für uns",
         "pCloudAlternative": "pCloud-Alternative",
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "Was Google weiß",
-        "inxtLibrary": "Bibliothek"
+        "whatGoogleKnowsAboutMe": "Was Google weiß"
       },
       "tools": {
         "title": "Kostenlose Tools",

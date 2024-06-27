@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { ItemsNavigation } from './components/navbar/ItemsNavigation';
+import { getImage } from '@/lib/getImage';
 
 export interface NavbarProps {
   textContent: any;
@@ -85,24 +86,36 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
-          {shouldHideRibbon && (
-            <ItemsNavigation
-              darkMode={props.darkMode}
-              getTitles={getTitles}
-              isQuizSection={props.isQuizSection}
-              shouldHideItems={props.isLinksHidden}
-              lang={lang}
-              menuState={menuState}
-              router={router}
-              textContent={props.textContent}
-            />
-          )}
-
-          <div
-            className={`${shouldHideRibbon ? 'hidden' : 'flex'} ${
-              shouldModifyRibbonStyle ? 'space-x-1' : 'space-x-10'
-            } flex flex-row`}
-          >
+          <div className="flex flex-row gap-12">
+            <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
+              {/* Logo */}
+              <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={getImage(
+                    `/logos/internxt/${
+                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
+                    }.svg`,
+                  )}
+                  alt="Internxt logo"
+                  width="96"
+                  height="10"
+                />
+              </Link>
+              <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
+                <img
+                  loading="lazy"
+                  className="select-none"
+                  src={getImage(
+                    `/logos/internxt/${
+                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
+                    }.svg`,
+                  )}
+                  alt="Internxt logo"
+                />
+              </Link>
+            </div>
             <ItemsNavigation
               darkMode={props.darkMode}
               getTitles={getTitles}
@@ -144,8 +157,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 className={`hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode || (props.isQuizSection && !menuState)
                     ? 'bg-white text-gray-80 focus:opacity-80'
-                    : 'border-primary text-primary hover:bg-primary hover:bg-opacity-10 active:border-primary-dark active:text-primary-dark'
-                } text-sm font-medium`}
+                    : 'border-gray-10 text-gray-80 hover:bg-gray-1 active:border-primary-dark active:text-primary-dark'
+                } text-sm font-medium shadow-sm`}
               >
                 {props.textContent.links.login}
               </button>
@@ -162,6 +175,17 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             ) : (
               ''
             )}
+            {props.cta[0] === 'chooseStorage' ? (
+              <button
+                onClick={() => router.push('/pricing')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+              >
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+              </button>
+            ) : undefined}
+
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"

@@ -1,29 +1,30 @@
-import React, { Fragment } from 'react';
-import RevealY from '@/components/components/RevealY';
-import RevealX from '@/components/components/RevealX';
-import { CloudCheck, Gauge, Image, SketchLogo } from '@phosphor-icons/react';
+import React, { Fragment, useState } from 'react';
+import { CaretRight, ClockCounterClockwise, ListChecks, MagicWand, ShieldStar } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { Transition } from '@headlessui/react';
 
-const SecondFeaturesSection = ({ textContent }) => {
+const SecondFeaturesSection = ({ textContent, lang }) => {
   const [cardIndex, setCardIndex] = React.useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const cardInfo = [
     {
-      icon: Gauge,
+      icon: ListChecks,
       title: textContent.info[0].title,
       description: textContent.info[0].description,
     },
     {
-      icon: SketchLogo,
+      icon: MagicWand,
       title: textContent.info[1].title,
       description: textContent.info[1].description,
     },
     {
-      icon: CloudCheck,
+      icon: ClockCounterClockwise,
       title: textContent.info[2].title,
       description: textContent.info[2].description,
     },
     {
-      icon: Image,
+      icon: ShieldStar,
       title: textContent.info[3].title,
       description: textContent.info[3].description,
     },
@@ -31,19 +32,41 @@ const SecondFeaturesSection = ({ textContent }) => {
 
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
+  const handleButtonClick = (index) => {
+    if (cardIndex !== index) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCardIndex(index);
+        setIsTransitioning(false);
+      }, 200);
+    }
+  };
+
   return (
-    <section className="overflow-hidden bg-gray-1 py-24">
-      <RevealY className="hidden flex-row items-start justify-center lg:flex">
-        <RevealX direction="right" className="flex max-w-[250px] flex-col">
+    <section className="flex flex-col items-center justify-center gap-20 overflow-hidden bg-gray-1 py-24 px-5">
+      <div className="flex w-full max-w-[840px] flex-col items-center justify-center gap-6">
+        <div className="flex flex-col gap-4 text-center">
+          <h2 className="text-4xl font-semibold leading-tight text-gray-100 lg:text-6xl">{textContent.title}</h2>
+          <p className="text-xl text-gray-80">{textContent.description}</p>
+        </div>
+        <div className="flex flex-row items-center gap-1">
+          <Link href={'/privacy'} hrefLang={lang} className="text-lg font-semibold text-primary hover:underline">
+            {textContent.cta}
+          </Link>
+          <CaretRight className="text-primary" size={20} />
+        </div>
+      </div>
+      <div className="hidden flex-row justify-center gap-20 lg:flex">
+        <div className="flex w-full max-w-[288px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <button
                 key={info.title}
                 className={`flex ${
-                  cardIndex === index ? 'border-gray-80' : 'border-gray-10'
-                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
+                  cardIndex === index ? 'border-primary' : 'border-gray-10'
+                } cursor-pointer flex-row border-r-4 p-2 pr-8 text-start`}
                 onClick={() => {
-                  setCardIndex(index);
+                  handleButtonClick(index);
                 }}
               >
                 <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
@@ -51,19 +74,23 @@ const SecondFeaturesSection = ({ textContent }) => {
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
           ))}
-        </RevealX>
-        <div className="flex flex-col justify-start">
-          <div className="flex w-auto justify-center px-6">
-            <div className="flex flex-col rounded-3xl pl-6">
-              <div className="flex  w-full max-w-[384px] flex-col space-y-6">
-                <DescriptionIcon className="text-primary" size={64} />
-                <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <p className="text-xl font-normal text-gray-80">{cardInfo[cardIndex].description}</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </RevealY>
+        <Transition
+          appear={true}
+          show={!isTransitioning}
+          enter="transition-opacity duration-200"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition-opacity duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+          className="flex w-full max-w-[384px] flex-col justify-center space-y-6"
+        >
+          <DescriptionIcon className="text-primary" size={64} />
+          <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
+          <p className="text-xl font-normal text-gray-80">{cardInfo[cardIndex].description}</p>
+        </Transition>
+      </div>
       {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 lg:hidden">
         {cardInfo.map((info) => (

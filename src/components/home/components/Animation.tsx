@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/legacy/image';
+import { getImage } from '@/lib/getImage';
 
 interface AnimationProps {
   browserImg?: string;
@@ -12,13 +13,13 @@ interface AnimationProps {
 }
 
 const Animation = ({
-  browserImg = '/images/home/header/browser.webp',
-  folderImg = '/images/home/header/folder.svg',
-  zipImg = '/images/home/header/zip.svg',
-  powerpointImg = '/images/home/header/powerpoint.svg',
-  csvImg = '/images/home/header/csv.svg',
-  previewImg = '/images/home/header/preview.webp',
-  taskloggerImg = '/images/home/header/tasklogger.webp',
+  browserImg = getImage('/images/home/header/browser.webp'),
+  folderImg = getImage('/images/home/header/folder.svg'),
+  zipImg = getImage('/images/home/header/zip.svg'),
+  powerpointImg = getImage('/images/home/header/powerpoint.svg'),
+  csvImg = getImage('/images/home/header/csv.svg'),
+  previewImg = getImage('/images/home/header/file_item.webp'),
+  taskloggerImg = getImage('/images/home/header/tasklogger.webp'),
 }: AnimationProps) => {
   // Header animation
   const [headerAnimation1, setHeaderAnimation1] = useState<boolean>(false);

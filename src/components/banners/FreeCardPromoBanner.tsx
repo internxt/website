@@ -6,6 +6,7 @@ import Button from '../shared/Button';
 import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { event } from '@/lib/gtag';
 
 export const FreeCardPromoBanner = () => {
   const router = useRouter();
@@ -26,11 +27,25 @@ export const FreeCardPromoBanner = () => {
   };
 
   const onGetTheDealButtonClicked = () => {
+    event({
+      action: 'redirect_button',
+      category: 'Free card promo',
+      label: 'User accepts the promo',
+      value: '',
+    });
     router.push('/specialoffer/freeuser?utm_source=homepage&utm_medium=banner&utm_campaign=freeuser');
     onCloseBanner();
   };
 
-  const onContinueWithFreePlanButtonClicked = () => goToSignUpURL();
+  const onContinueWithFreePlanButtonClicked = () => {
+    event({
+      action: 'redirect_button',
+      category: 'Free card promo',
+      label: 'User decline the promo',
+      value: '',
+    });
+    goToSignUpURL();
+  };
 
   return (
     <div
