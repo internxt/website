@@ -12,7 +12,7 @@ import { CouponType } from '@/lib/types';
 export type CardsType = 'all' | 'one';
 
 const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang }) => {
-  const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
+  const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
 
   const cardInfo = [
     {
