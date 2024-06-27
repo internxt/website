@@ -4,14 +4,14 @@ import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import Navbar from '@/components/layout/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import { CouponType } from '@/lib/types';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import { MinimalFooter } from '@/components/layout/MinimalFooter';
 import { getImage } from '@/lib/getImage';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import Navbar from '@/components/layout/navbars/Navbar';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium'];
 
