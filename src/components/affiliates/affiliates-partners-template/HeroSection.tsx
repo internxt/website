@@ -76,7 +76,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               ))}
             </div>
           </div>
-          <div className="hidden h-full flex-col gap-3 lg:flex lg:min-h-[650px]">
+          <div className={`hidden h-full flex-col gap-3 lg:flex ${cardsType === 'all' && 'lg:min-h-[650px]'}`}>
             {isOnlyOnePlan || (!lifetimePlans && loadingCards) ? undefined : (
               <div className="flex w-full flex-col gap-7">
                 <div className="flex w-full items-center justify-center text-2xl font-medium text-white">
