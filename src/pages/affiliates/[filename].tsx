@@ -43,11 +43,11 @@ const getTypeFromPathname = (pathname: string): CardsType | undefined => {
 };
 
 const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang, pathname }) => {
-  const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
+  const metatags = metatagsDescriptions.filter((item) => item.id === pathname);
   const [cardsType, setCardsType] = useState<CardsType>('all');
   const { push } = useRouter();
 
-  const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${pathname}`);
+  const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === pathname);
 
   const couponCode = {
     pcmag: CouponType.PcmagCoupon,

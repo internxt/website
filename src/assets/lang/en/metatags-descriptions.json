@@ -80,6 +80,16 @@
     "description": "Join Internxt’s affiliate marketing program! How to get started plus program details, benefits, and perks."
   },
   {
+    "id": "pcmag",
+    "title": "Internxt Lifetime Special Offer for PCMag Users",
+    "description": "Internxt is offering 80% off all lifetime cloud storage plans to PCMag customers. Secure your files for a lifetime with a single payment."
+  },
+  {
+    "id": "oneplan",
+    "title": "Internxt — 5TB  Lifetime Cloud Storage Plan",
+    "description": "Get an Internxt 5TB Lifetime Plan to keep your files private and never worry about running out of space again."
+  },
+  {
     "id": "techradar-discount",
     "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
     "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."
@@ -101,8 +111,8 @@
   },
   {
     "id": "cloudwards",
-    "title": "Internxt – CloudWards Partnership",
-    "description": "Grab the best deals for the most secure cloud storage thanks to Cloudwards. Cheaper, more secure alternative to pCloud, IceDrive, AppSumo Encrypted Cloud storage."
+    "title": "Internxt Lifetime Special Offer for Cloudwards Users",
+    "description": "Internxt is offering 80% off all lifetime cloud storage plans to Cloudwards customers. Secure your files for a lifetime with a single payment."
   },
   {
     "id": "guru99",
