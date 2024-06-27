@@ -33,20 +33,22 @@ describe('Auth flow (Sign Up / Log In)', () => {
     });
   });
 
-  // describe('When the user want to do Sign Up', () => {
-  //   describe('When the user click on the Sign Up button', () => {
-  //     it('Then, the user is redirected to https://drive.internxt.com/new', () => {
-  //       // Open the home page
-  //       cy.visit('/');
+  describe('When the user want to do Sign Up', () => {
+    describe('When the user click on the Sign Up button', () => {
+      it('Then, the user is redirected to https://drive.internxt.com/new', () => {
+        // Open the home page
+        cy.visit('/');
 
-  //       // Click on the Sign Up button
-  //       cy.get('#signupButton').as('btn').click();
+        cy.wait(2000);
 
-  //       // Check that the user is redirected to https://drive.internxt.com/new
-  //       cy.url().should((url) => {
-  //         expect(url).to.include('https://drive.internxt.com/new');
-  //       });
-  //     });
-  //   });
-  // });
+        // Click on the Sign Up button
+        cy.get('#signupButton').click({ force: true });
+
+        // Check that the user is redirected to https://drive.internxt.com/new
+        cy.url().should((url) => {
+          expect(url).to.include('https://drive.internxt.com/new');
+        });
+      });
+    });
+  });
 });
