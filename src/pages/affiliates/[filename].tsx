@@ -154,6 +154,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
             textContent={langJson.SecondFeaturesSection}
             lang={lang}
             cards={cardInfo}
+            mobileBg="bg-gray-1"
             bgColor="bg-white"
           />
 

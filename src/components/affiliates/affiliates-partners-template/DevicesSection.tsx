@@ -17,7 +17,7 @@ export const DevicesSection = ({ textContent }) => {
       }}
     >
       <div className="flex flex-col items-center justify-center gap-12">
-        <div className="flex max-w-[840px] flex-col items-center gap-8">
+        <div className="flex max-w-[840px] flex-col items-center gap-8 text-center">
           <h2 className="text-5xl font-semibold text-white">{textContent.title}</h2>
           <button className="flex rounded-lg bg-white px-5 py-3 text-gray-100" onClick={handleOnButtonClick}>
             <p className="text-xl font-medium">{textContent.cta}</p>
