@@ -46,7 +46,7 @@ export default function PriceCard({
   isLifetimePage,
   lifetimeMode,
   onButtonClicked,
-}: Readonly<PriceCardProps>): JSX.Element {
+}: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -113,7 +113,7 @@ export default function PriceCard({
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
       } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
-      <div className={'info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6'}>
+      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
           {popular ? (
             <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
@@ -133,7 +133,7 @@ export default function PriceCard({
               items-end space-x-px text-neutral-700
             `}
           >
-            <p className={' flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100'}>
+            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
                 {isFreePlan ? `${contentText.freePlan}` : formattedPrice}
@@ -148,7 +148,7 @@ export default function PriceCard({
               priceBefore ? 'flex' : 'hidden'
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
-            <span className={'text-sm'}>{currency}</span>
+            <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">{priceBefore}</span>
           </p>
 
@@ -171,7 +171,7 @@ export default function PriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
           <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
-            <p className={'} font-bold text-yellow'}>{contentText.productFeatures.starWarsFeatures.title}</p>
+            <p className={`} font-bold text-yellow`}>{contentText.productFeatures.starWarsFeatures.title}</p>
             {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
               <div
                 className={`${

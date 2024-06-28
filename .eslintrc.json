@@ -1,15 +1,10 @@
-// TODO: Add next core-web-vitals. E.g. "extends": ["next/core-web-vitals"]
-
 {
   "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
   "rules": {
-    "quotes": ["warn", "single"],
+    "quotes": ["error", "single"],
     "semi": ["error", "always"],
     "linebreak-style": ["error", "unix"],
     "no-console": "off",
-    "max-len": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-empty-function": "off",
-    "no-async-promise-executor": "warn"
+    "max-len": "off"
   }
 }

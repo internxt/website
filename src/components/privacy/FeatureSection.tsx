@@ -1,11 +1,7 @@
 import { Eye, Fingerprint, Globe, LockKey, ShieldCheck, UserCircle } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
 
-interface FeatureSectionProps {
-  textContent: Record<string, any>;
-}
-
-const FeatureSection = ({ textContent }: FeatureSectionProps): JSX.Element => {
+const FeatureSection = ({ textContent }) => {
   const cards = [
     {
       icon: Eye,
@@ -50,7 +46,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps): JSX.Element => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className={'flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]'}
+              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[408px] flex-col">

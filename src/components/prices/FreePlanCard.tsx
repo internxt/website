@@ -1,10 +1,6 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
-interface FreePlanCardProps {
-  textContent: Record<string, any>;
-}
-
-const FreePlanCard = ({ textContent }: FreePlanCardProps): JSX.Element => {
+const FreePlanCard = ({ textContent }) => {
   const { openDialog } = useGlobalDialog();
   return (
     <div className="flex w-full flex-col items-center justify-center gap-5 rounded-2xl border border-gray-10 px-5 py-9 md:flex-row md:justify-between">

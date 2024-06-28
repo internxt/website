@@ -28,6 +28,7 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
     const minute = second * 60;
     const hour = minute * 60;
     const day = hour * 24;
+    let timer: NodeJS.Timeout;
 
     const showRemaining = () => {
       const now = new Date();
@@ -47,7 +48,7 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
       setSeconds(seconds);
     };
 
-    const timer = setInterval(showRemaining, 1000);
+    timer = setInterval(showRemaining, 1000);
     return () => clearInterval(timer);
   };
 
@@ -80,19 +81,19 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
   return (
     <div className={`flex text-${textColor}`}>
       <div className="flex flex-row items-end space-x-2 text-4xl lg:text-2xl">
-        <div className={'days delay-350 font-semibold transition-colors duration-150'}>
+        <div className={`days delay-350 font-semibold transition-colors duration-150`}>
           {days < 10 ? `0${days}` : days}
         </div>
-        <p className={'font-semibold'}> : </p>
-        <div className={'hours delay-350 font-semibold transition-colors duration-150'}>
+        <p className={`font-semibold`}> : </p>
+        <div className={`hours delay-350 font-semibold transition-colors duration-150`}>
           {hours < 10 ? `0${hours}` : hours}
         </div>
-        <p className={'font-semibold'}>:</p>
-        <div className={'minutes delay-350 font-semibold transition-colors duration-150'}>
+        <p className={`font-semibold`}>:</p>
+        <div className={`minutes delay-350 font-semibold transition-colors duration-150`}>
           {minutes < 10 ? `0${minutes}` : minutes}
         </div>
-        <p className={'font-semibold'}>:</p>
-        <div className={'seconds delay-350 font-semibold transition-colors duration-150'}>
+        <p className={`font-semibold`}>:</p>
+        <div className={`seconds delay-350 font-semibold transition-colors duration-150`}>
           {seconds < 10 ? `0${seconds}` : seconds}
         </div>
       </div>

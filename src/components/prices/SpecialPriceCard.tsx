@@ -14,7 +14,7 @@ export default function SpecialPriceCard({
   popular,
   lang,
   currency,
-}: PriceCardProps): JSX.Element {
+}: PriceCardProps) {
   const [coupon, setCoupon] = React.useState<string>();
   const isPopularYearly = popular && billingFrequency === Interval.Year;
   const billingFrequencyList = {
@@ -88,7 +88,7 @@ export default function SpecialPriceCard({
           className={`planPrice flex flex-col items-center justify-center space-y-2
             py-8`}
         >
-          <p className={' flex flex-row items-start space-x-0.5 font-bold text-white'}>
+          <p className={` flex flex-row items-start space-x-0.5 font-bold text-white`}>
             <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
             <span className="price text-4xl font-semibold">
               {
@@ -104,7 +104,7 @@ export default function SpecialPriceCard({
               planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
             }`}
           >
-            <p className={' flex flex-row items-start space-x-0.5 font-medium '}>
+            <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-2xl font-semibold line-through">
                 {price <= 0 ? `${contentText.freePlan}` : price}
@@ -151,7 +151,7 @@ export default function SpecialPriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2 text-sm">
           {billingFrequency === 'lifetime' && (
-            <div className={'flex flex-row items-start space-x-2 font-semibold'}>
+            <div className={`flex flex-row items-start space-x-2 font-semibold`}>
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"

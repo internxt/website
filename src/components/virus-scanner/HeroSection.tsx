@@ -41,7 +41,7 @@ const HeroSection = ({ textContent }) => {
       body: formdata,
     };
 
-    fetch('https://clamav.internxt.com/filescan', requestOptions)
+    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
@@ -212,7 +212,7 @@ const HeroSection = ({ textContent }) => {
                             ) : (
                               <div className="flex flex-row gap-2">
                                 <CheckCircle weight="fill" size={24} className="text-green" />
-                                <span className={'text-lg font-semibold text-green-dark'}>
+                                <span className={`text-lg font-semibold text-green-dark`}>
                                   {textContent.table.noVirusDetected}
                                 </span>
                               </div>
@@ -414,7 +414,7 @@ const HeroSection = ({ textContent }) => {
                   <>
                     {/* Default state */}
                     <div className=" flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
-                      <div className={'flex flex-row items-center lg:space-x-0 xl:space-x-20'}>
+                      <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">
                           <Image
                             src="/images/virus-scanner/upload_file.webp"

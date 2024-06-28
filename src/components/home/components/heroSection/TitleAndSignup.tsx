@@ -2,11 +2,7 @@ import SignUpInline from '@/components/auth/SignUpInline';
 import Header from '@/components/shared/Header';
 import { goToSignUpURL } from '@/lib/auth';
 
-interface TitleAndSignupProps {
-  textContent: Record<string, any>;
-}
-
-export const TitleAndSignup = ({ textContent }: TitleAndSignupProps): JSX.Element => {
+export const TitleAndSignup = ({ textContent }) => {
   return (
     <div className="z-10 flex flex-col md:max-w-lg">
       <Header maxWidth="max-w-[485px]" className="text-gray-100">

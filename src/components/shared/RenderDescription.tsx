@@ -1,12 +1,7 @@
 import { useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
 
-interface RenderDescriptionProps {
-  description: string[];
-  fontSize?: string;
-}
-
-const RenderDescription = ({ description, fontSize }: RenderDescriptionProps): JSX.Element => {
+const RenderDescription = ({ description, fontSize }: { description: string[]; fontSize?: string }) => {
   useEffect(() => {
     const renderDescriptionComponent = document.querySelector('#render-description-section');
     const links = document.querySelectorAll('a');

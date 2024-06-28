@@ -9,7 +9,7 @@ export enum Interval {
 }
 
 export interface ProductsProps {
-  individuals: Record<string, any> | undefined;
+  individuals: {} | undefined;
 }
 
 export enum Products {

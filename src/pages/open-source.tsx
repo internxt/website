@@ -10,9 +10,8 @@ import WhatAreTheBenefits from '@/components/open-source/WhatAreTheBenefits';
 import WhatIsOSS from '@/components/open-source/WhatIsOSS';
 import CtaSection from '@/components/shared/CtaSection';
 import { downloadDriveLinks } from '@/lib/get-download-url';
-import { GetServerSidePropsContext } from 'next';
 
-const CTA_SIGNUP_URL = 'https://drive.internxt.com/new';
+const CTA_SIGNUP_URL = `https://drive.internxt.com/new`;
 
 const GITHUB_URL = 'https://github.com/internxt';
 
@@ -47,7 +46,7 @@ const OpenSource = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const download = await downloadDriveLinks();
 

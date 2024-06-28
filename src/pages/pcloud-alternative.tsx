@@ -10,7 +10,6 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import cookies from '@/lib/cookies';
-import { GetServerSidePropsContext } from 'next';
 
 const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
@@ -38,7 +37,7 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

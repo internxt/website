@@ -1,3 +1,4 @@
+import React from 'react';
 import PriceCard from './PriceCard';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 
@@ -88,6 +89,7 @@ const PriceTable = ({ lang, country, textContent }) => {
           planType="individual"
           storage={prices.TB2.storage}
           price={billingPrice(prices.TB2.price)}
+          cta={['checkout', 'lifetime2TB']}
           popular={prices.TB2.popular}
           country={country}
         />
@@ -95,6 +97,7 @@ const PriceTable = ({ lang, country, textContent }) => {
           planType="individual"
           storage={prices.TB5.storage}
           price={billingPrice(prices.TB5.price)}
+          cta={['checkout', 'lifetime5TB']}
           popular={prices.TB5.popular}
           country={country}
         />
@@ -102,6 +105,7 @@ const PriceTable = ({ lang, country, textContent }) => {
           planType="individual"
           storage={prices.TB10.storage}
           price={billingPrice(prices.TB10.price)}
+          cta={['checkout', 'lifetime10TB']}
           popular={prices.TB10.popular}
           country={country}
         />

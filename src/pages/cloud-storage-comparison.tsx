@@ -15,7 +15,6 @@ import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
-import { GetServerSidePropsContext } from 'next';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -24,11 +23,11 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
   return (
     <>
-      <Script id="schema-drive" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
       </Script>
 
-      <Script id="breadcrumb-drive" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Cloud Storage Comparison', 'comparison')}
       </Script>
 
@@ -62,7 +61,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -1,10 +1,7 @@
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
+import React from 'react';
 
-interface BestStorageSectionProps {
-  textContent: Record<string, any>;
-}
-
-const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Element => {
+const BestStorageSection = ({ textContent }) => {
   const features = [
     {
       icon: Database,

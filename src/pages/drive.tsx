@@ -16,18 +16,17 @@ import { downloadDriveLinks } from '@/lib/get-download-url';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { CliCard } from '@/components/drive/CliCard';
-import { GetServerSidePropsContext } from 'next';
 
 const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   return (
     <>
-      <Script id="schema-drive" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
       </Script>
 
-      <Script id="breadcrumb-drive" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Drive', 'drive')}
       </Script>
 
@@ -60,7 +59,7 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const download = await downloadDriveLinks();
   const lang = ctx.locale;
 

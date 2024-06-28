@@ -1,5 +1,6 @@
+import React from 'react';
 import { CaretRight } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
+import Image from "next/legacy/image";
 
 const SupportNGOsSection = ({ textContent }) => (
   <section className="relative flex flex-col items-center bg-white px-6">

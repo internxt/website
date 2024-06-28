@@ -8,7 +8,6 @@ import { FeaturesSection } from '@/components/file-converter/main-state/Features
 import CtaSection from '@/components/shared/CtaSection';
 import QASection from '@/components/shared/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
-import { GetServerSidePropsContext } from 'next';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -46,7 +45,7 @@ const FileConverter = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
 

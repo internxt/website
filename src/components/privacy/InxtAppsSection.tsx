@@ -1,11 +1,6 @@
 import ProductCard from '@/components/shared/ProductCard';
 
-interface InxtAppsSectionProps {
-  textContent: Record<string, any>;
-  lang: string;
-}
-
-const InxtAppsSection = ({ textContent, lang }: InxtAppsSectionProps): JSX.Element => {
+const InxtAppsSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 pt-20 text-gray-100 ">

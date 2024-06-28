@@ -43,6 +43,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router.events]);
 
+  // eslint-disable-next-line react/jsx-props-no-spreading
   return (
     <LiveChatLoaderProvider provider="intercom" providerKey="ta2ffq6n">
       <GlobalUIManager
@@ -91,7 +92,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
               />
               <Script
-                id="gtag-manager"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `

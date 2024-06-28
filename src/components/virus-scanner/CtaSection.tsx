@@ -1,10 +1,7 @@
+import React from 'react';
 import styles from '../../components/techradar-discount/Background.module.scss';
 
-interface CtaSectionProps {
-  textContent: Record<string, any>;
-}
-
-const CtaSection = ({ textContent }: CtaSectionProps): JSX.Element => {
+const CtaSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden py-12">
       <div className="flex flex-col items-center justify-center pt-12 lg:px-20">

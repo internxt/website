@@ -39,7 +39,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
               </div>
               <button
                 onClick={() => {
-                  window.location.href = '#payment';
+                  window.location.href = `#payment`;
                 }}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >

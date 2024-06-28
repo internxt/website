@@ -18,7 +18,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
@@ -31,12 +31,12 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
   );
 };
 
-export async function getServerSideProps() {
-  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
-  const langJson = require('@/assets/lang/en/partner-discount.json');
-  const infoSectionLang = require('@/assets/lang/en/home.json');
-  const navbarLang = require('@/assets/lang/en/navbar.json');
-  const footerLang = require('@/assets/lang/en/footer.json');
+export async function getServerSideProps(ctx) {
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/partner-discount.json`);
+  const infoSectionLang = require(`@/assets/lang/en/home.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

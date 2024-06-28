@@ -12,7 +12,6 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import HeroSection2 from '@/components/privacy-directory/HeroSection2';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
-import { GetServerSidePropsContext } from 'next';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -27,11 +26,11 @@ const PrivacyDirectory = ({
 
   return (
     <>
-      <Script id="schema-privacy" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
 
-      <Script id="breadcrumb-privacy" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Privacy Directory', 'privacy-directory')}
       </Script>
 
@@ -79,7 +78,7 @@ const PrivacyDirectory = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);

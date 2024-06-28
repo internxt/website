@@ -2,12 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { FiveStars } from '../shared/StarsRate';
 
-interface TestimonialsSectionProps {
-  textContent: Record<string, any>;
-  bgColor?: string;
-}
-
-const AvatarAndText = ({ testimonial }): JSX.Element => (
+const AvatarAndText = ({ testimonial }) => (
   <div className="flex flex-row items-center gap-3">
     <div className="flex h-10 w-10 rounded-full">
       <Image src={testimonial.testimonialImage} width={40} height={40} alt="FixThePhoto Avatar" />
@@ -19,7 +14,7 @@ const AvatarAndText = ({ testimonial }): JSX.Element => (
   </div>
 );
 
-const TestimonialsSection = ({ textContent, bgColor }: TestimonialsSectionProps): JSX.Element => {
+const TestimonialsSection = ({ textContent, bgColor }: { textContent: any; bgColor?: string }) => {
   const testimonials = [
     {
       review: textContent.cards[0].review,

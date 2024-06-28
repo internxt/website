@@ -1,5 +1,4 @@
 import { FunctionComponent, SVGProps } from 'react';
-import fileExtensionGroups from '../types/types';
 
 import LightFolder from '../public/icons/file-types/folder.svg';
 import DefaultFile from '../public/icons/file-types/default.svg';
@@ -15,6 +14,7 @@ import WordFile from '../public/icons/file-types/word.svg';
 import XlsFile from '../public/icons/file-types/excel.svg';
 import CsvFile from '../public/icons/file-types/csv.svg';
 import ZipFile from '../public/icons/file-types/zip.svg';
+import fileExtensionGroups from '../types/types';
 
 export enum FileExtensionGroup {
   Audio,

@@ -23,7 +23,7 @@ export const Inbox = ({
   messages,
   onMessageSelected,
   selectedMessage,
-}: InboxProps): JSX.Element => {
+}: InboxProps) => {
   return (
     <div className="relative px-52">
       <div className="hidden w-full justify-center md:flex">

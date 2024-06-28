@@ -6,13 +6,15 @@ import RenderDescription from '@/components/shared/RenderDescription';
 
 const allowedLangForImage = ['en', 'es', 'ru'];
 
-interface InfoSectionProps {
+const InfoSection = ({
+  textContent,
+  bannerText,
+  hideLast2Sections,
+}: {
   textContent: any;
   bannerText: any;
   hideLast2Sections?: boolean;
-}
-
-const InfoSection = ({ textContent, bannerText, hideLast2Sections }: InfoSectionProps): JSX.Element => {
+}): JSX.Element => {
   const router = useRouter();
   const lang = router.locale;
 

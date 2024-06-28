@@ -17,18 +17,17 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import FeatureSection from '@/components/cyber-awareness/FeatureSection';
 import QuizSection from '@/components/cyber-awareness/QuizSection';
-import { GetServerSidePropsContext } from 'next';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
 
   return (
     <>
-      <Script id="schema-cyber-awareness" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.FaqSection.faq)}
       </Script>
 
-      <Script id="breadcrumb-cyber-awareness" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Cyber Awareness', 'cyber-awareness')}
       </Script>
 
@@ -81,7 +80,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

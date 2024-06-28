@@ -10,7 +10,6 @@ import SocialProofSection from '@/components/home/SocialProofSection';
 import ThirdFeaturesSection from '@/components/media-area/FeatureSection';
 import InternxtInTheNews from '@/components/media-area/InternxtInTheNews';
 import AnalysisSection from '@/components/media-area/AnalysisSection';
-import { GetServerSidePropsContext } from 'next';
 
 const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'media-area');
@@ -44,13 +43,13 @@ const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLan
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
-  const langJson = require('@/assets/lang/en/media-area.json');
-  const navbarLang = require('@/assets/lang/en/navbar.json');
-  const footerLang = require('@/assets/lang/en/footer.json');
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/media-area.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

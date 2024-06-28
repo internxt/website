@@ -17,7 +17,7 @@ const StartPageLabel = () => {
       <Image
         loading="lazy"
         className="select-none"
-        src={'../../logos/internxt/cool-gray-90.svg'}
+        src={`../../logos/internxt/cool-gray-90.svg`}
         alt="Internxt logo"
         width={130}
         height={16}
@@ -29,7 +29,7 @@ const StartPageLabel = () => {
 const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
   function redirectToPricingTable() {
     window.scrollTo({
-      top: document?.getElementById('payment')!.offsetTop + 500,
+      top: document?.getElementById('payment')?.offsetTop! + 500,
       behavior: 'smooth',
     });
   }

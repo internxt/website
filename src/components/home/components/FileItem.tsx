@@ -1,19 +1,23 @@
 import { DotsThree } from '@phosphor-icons/react';
 import moment from 'moment';
+import React from 'react';
 
-interface FileItemProps {
+const FileItem = ({
+  encrypted,
+  className,
+  title,
+  ItemImg,
+}: {
   title: string;
   className: string;
   ItemImg: any;
   encrypted?: boolean;
-}
-
-const FileItem = ({ encrypted, className, title, ItemImg }: FileItemProps): JSX.Element => {
+}) => {
   const fileYear = moment().year();
 
   return (
     <div className={`${className} flex w-[375px] flex-row bg-white px-4 py-3`}>
-      <div className={'flex w-full flex-row items-center justify-between space-x-2'}>
+      <div className={`flex w-full flex-row items-center justify-between space-x-2`}>
         <div className="flex flex-row space-x-2">
           <ItemImg className={`h-10 w-10 ${encrypted && 'opacity-40'}`} />
           <div className="flex flex-col">

@@ -11,36 +11,17 @@ import { ToolsSection } from '@/components/shared/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import { GetServerSidePropsContext } from 'next';
 
-interface VirusScannerProps {
-  langJson: Record<string, any>;
-  toolsContent: Record<string, any>;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
-  footerLang: Record<string, any>;
-  bannerLang: Record<string, any>;
-  lang: string;
-}
-
-const Scan = ({
-  metatagsDescriptions,
-  langJson,
-  toolsContent,
-  navbarLang,
-  footerLang,
-  lang,
-  bannerLang,
-}: VirusScannerProps): JSX.Element => {
+const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footerLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (
     <>
-      <Script id="schema-virus-scanner" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.FaqSection.faq)}
       </Script>
 
-      <Script id="breadcrumb-virus-scanner" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
       </Script>
 
@@ -72,7 +53,7 @@ const Scan = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

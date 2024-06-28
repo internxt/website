@@ -1,12 +1,11 @@
-interface PriceCardProps {
-  planType: string;
-  storage: string;
-  price: number;
-  country: string;
-  popular: boolean;
-}
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable prefer-destructuring */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable no-nested-ternary */
+import React from 'react';
 
-const PriceCard = ({ planType, storage, price, country, popular }: PriceCardProps): JSX.Element => {
+const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   const currency = () => {
     switch (country) {
       case 'US':
@@ -18,7 +17,7 @@ const PriceCard = ({ planType, storage, price, country, popular }: PriceCardProp
     }
   };
 
-  const contentText = require('../../assets/lang/en/priceCard.json');
+  const contentText = require(`../../assets/lang/en/priceCard.json`);
 
   return (
     <div
@@ -34,7 +33,7 @@ const PriceCard = ({ planType, storage, price, country, popular }: PriceCardProp
         {contentText.mostPopularPlan}
       </div>
 
-      <div className={'info flex flex-col items-center justify-center bg-white p-6 '}>
+      <div className={`info flex flex-col items-center justify-center bg-white p-6 `}>
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
             popular ? 'text-primary' : 'text-gray-50'
@@ -43,12 +42,12 @@ const PriceCard = ({ planType, storage, price, country, popular }: PriceCardProp
           <p>{storage}</p>
         </div>
 
-        <div className={'planPrice flex flex-col items-center justify-center p-5'}>
+        <div className={`planPrice flex flex-col items-center justify-center p-5`}>
           <div
             className={`priceBreakdown flex flex-col items-center
             `}
           >
-            <p className={'flex flex-row items-start space-x-0.5 font-semibold text-black'}>
+            <p className={`flex flex-row items-start space-x-0.5 font-semibold text-black`}>
               <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency()}</span>
               <span className="price text-4xl font-semibold">{price}</span>
             </p>

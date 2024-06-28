@@ -2,12 +2,7 @@ import { ListMagnifyingGlass, MagicWand, SketchLogo } from '@phosphor-icons/reac
 import RenderDescription from '@/components/shared/RenderDescription';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 
-interface WhatWeDoProps {
-  textContent: Record<string, any>;
-  bannerLang: string;
-}
-
-const WhatWeDo = ({ textContent, bannerLang }: WhatWeDoProps): JSX.Element => {
+const WhatWeDo = ({ textContent, bannerLang }) => {
   return (
     <section id={'whatWeDo'} className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center space-y-16 py-20 px-5">

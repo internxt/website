@@ -2,14 +2,8 @@ import Image from 'next/legacy/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
 
-interface InfoSectionProps {
-  textContent: Record<string, any>;
-  bannerText: Record<string, any>;
-  lang: string;
-}
-
-export const InfoSection = ({ textContent, bannerText, lang }: InfoSectionProps): JSX.Element => {
-  const infoCards = () => {
+export const InfoSection = ({ textContent, bannerText, lang }) => {
+  const infoCards = (lang) => {
     return [
       {
         icon: Bug,
@@ -78,7 +72,7 @@ export const InfoSection = ({ textContent, bannerText, lang }: InfoSectionProps)
             </div>
             <div className="flex flex-col space-y-8">
               <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
-                {infoCards().map((card) => (
+                {infoCards(lang).map((card) => (
                   <div
                     key={card.title}
                     className="flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]"

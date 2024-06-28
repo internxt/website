@@ -12,7 +12,6 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
-import { GetServerSidePropsContext } from 'next';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -27,11 +26,11 @@ const PasswordChecker = ({
 
   return (
     <>
-      <Script id="schema-pass-checker" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.SchemaMarkupQuestions.faq)}
       </Script>
 
-      <Script id="breadcrumb-pass-checker" type="application/ld+json" strategy="beforeInteractive">
+      <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Password Checker', 'password-checker')}
       </Script>
 
@@ -62,7 +61,11 @@ const PasswordChecker = ({
 
         <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
 
-        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} />
+        <FeaturesSection
+          textContent={langJson.FeaturesSection}
+          bannerText={bannerLang.SignUpPwdCheckerBanner}
+          lang={lang}
+        />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
@@ -76,7 +79,7 @@ const PasswordChecker = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

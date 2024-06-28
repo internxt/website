@@ -8,7 +8,6 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
 import { CouponType } from '@/lib/types';
-import { GetServerSidePropsContext } from 'next';
 
 export type CardsType = 'all' | 'one';
 
@@ -77,13 +76,13 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
-  const langJson = require('@/assets/lang/en/affiliates-partners-template.json');
-  const homeJson = require('@/assets/lang/en/home.json');
-  const footerLang = require('@/assets/lang/en/footer.json');
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/affiliates-partners-template.json`);
+  const homeJson = require(`@/assets/lang/en/home.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

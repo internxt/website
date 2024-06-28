@@ -3,17 +3,11 @@ import { Fragment } from 'react';
 import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react';
 
-interface SelectSectionProps {
-  textContent: Record<string, any>;
-  itemSelected?: string;
-  setItemSelected: (itemSelected: string) => void;
-}
-
-const SelectSection = ({ textContent, itemSelected, setItemSelected }: SelectSectionProps): JSX.Element => {
+const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
   function linkTitles() {
-    const titles: string[] = [];
-    for (const key in textContent) {
-      if (key.startsWith('title')) {
+    let titles: string[] = [];
+    for (let key in textContent) {
+      if (textContent.hasOwnProperty(key) && key.startsWith('title')) {
         titles.push(textContent[key]);
       }
     }

@@ -4,6 +4,8 @@ const crypto = require('crypto');
 const PREFIX_LENGTH = 5;
 const API_URL = 'https://api.pwnedpasswords.com/range/';
 const API_TIMEOUT = 5000;
+const HTTP_STATUS_OK = 200;
+const HTTP_STATUS_NOT_FOUND = 404;
 
 function hash(password) {
   const shasum = crypto.createHash('sha1');
@@ -12,10 +14,15 @@ function hash(password) {
 }
 
 function get(hashedPasswordPrefix) {
-  return fetch(API_URL + hashedPasswordPrefix).then((res) => res.text());
+  const opts = {
+    timeout: API_TIMEOUT,
+  };
+
+  return fetch(API_URL + hashedPasswordPrefix, opts)
+    .then((res) => res.text());
 }
 
-export default function pwnedpasswords(password, cb?) {
+export default function pwnedpasswords(password, cb) {
   const hasCallback = typeof cb === 'function';
 
   if (typeof password !== 'string') {
@@ -29,13 +36,12 @@ export default function pwnedpasswords(password, cb?) {
 
   return get(hashedPasswordPrefix)
     .then((res) => {
-      const found =
-        res
-          .split('\n')
-          .map((line) => line.split(':'))
-          .filter((filtered) => filtered[0].toLowerCase() === hashedPasswordSuffix)
-          .map((mapped) => Number(mapped[1]))
-          .shift() || 0;
+      const found = res
+        .split('\n')
+        .map((line) => line.split(':'))
+        .filter((filtered) => filtered[0].toLowerCase() === hashedPasswordSuffix)
+        .map((mapped) => Number(mapped[1]))
+        .shift() || 0;
 
       return hasCallback ? cb(null, found) : found;
     })

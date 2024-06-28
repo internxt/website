@@ -1,22 +1,14 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import Link from 'next/link';
 
-interface ProductsNavigationProps {
-  textContent: Record<string, any>;
-  selectedItem: string;
-  lang: string;
-}
-
-const ProductsNavigation = ({ textContent, selectedItem, lang }: ProductsNavigationProps): JSX.Element => {
+const ProductsNavigation = ({ textContent, selectedItem, lang }) => {
   const { dialogIsOpen } = useGlobalDialog();
   const isTopBannerDialogOpen = dialogIsOpen(GlobalDialog.TopBanner);
 
   const paddingTop = isTopBannerDialogOpen ? 'lg:top-[120px]' : 'lg:top-[64px]';
 
   return (
-    <div
-      className={`absolute z-10 hidden h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center ${paddingTop} lg:flex`}
-    >
+    <div className="absolute z-10 hidden h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center lg:top-[120px] lg:flex">
       <div className="mx-auto space-x-8 sm:space-x-6">
         <Link
           href="/drive"

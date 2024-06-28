@@ -32,7 +32,7 @@ export const HowToUseCLISection = ({ textContent }) => {
         </div>
         <div className="flex w-full flex-row flex-wrap justify-center gap-8">
           {cards.map((card) => (
-            <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 p-10" key={card.title}>
+            <div className="flex w-full max-w-[350px] flex-col rounded-2xl bg-gray-1 p-10">
               <div className="flex flex-col  gap-6">
                 <p className="text-2xl font-medium text-gray-100">{card.title}</p>
                 <p className="text-lg text-gray-80">{card.description}</p>

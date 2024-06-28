@@ -11,23 +11,8 @@ import { checkout } from '@/lib/auth';
 
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { GetServerSidePropsContext } from 'next';
 
-interface StartpageProps {
-  textContent: Record<string, any>;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
-  footerLang: Record<string, any>;
-  lang: string;
-}
-
-export default function Startpage({
-  metatagsDescriptions,
-  navbarLang,
-  footerLang,
-  lang,
-  textContent,
-}: StartpageProps): JSX.Element {
+export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({});
   const offerDiscount = 25;
@@ -76,12 +61,12 @@ export default function Startpage({
   );
 }
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
-  const textContent = require('@/assets/lang/en/startpage.json');
-  const footerLang = require('@/assets/lang/en/footer.json');
-  const navbarLang = require('@/assets/lang/en/navbar.json');
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/en/startpage.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
 
   return {
     props: {

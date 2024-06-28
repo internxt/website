@@ -37,7 +37,7 @@ export const SecureVPNSection = ({ textContent }) => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className={'flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]'}
+              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">

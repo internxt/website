@@ -11,25 +11,7 @@ import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
 
-interface VPNProps {
-  langJson: Record<string, any>;
-  toolsContent: Record<string, any>;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
-  footerLang: Record<string, any>;
-  bannerJson: Record<string, any>;
-  lang: string;
-}
-
-const VPN = ({
-  metatagsDescriptions,
-  langJson,
-  toolsContent,
-  bannerJson,
-  lang,
-  navbarLang,
-  footerLang,
-}: VPNProps): JSX.Element => {
+const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
@@ -59,7 +41,7 @@ const VPN = ({
   );
 };
 
-export async function getServerSideProps() {
+export async function getServerSideProps(ctx) {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

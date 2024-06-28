@@ -12,7 +12,6 @@ import FaqSection from '@/components/black-friday/FAQSection';
 import BestStorageSection from '@/components/black-friday/BestStorageSection';
 import LoginBFBanner from '@/components/banners/LoginBFBanner';
 import FooterSection from '@/components/black-friday/FooterSection';
-import { GetServerSidePropsContext } from 'next';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
@@ -54,8 +53,8 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang }) => {
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const language = ctx.locale as string;
+export async function getServerSideProps(ctx) {
+  const language = ctx.locale;
 
   const allowedLanguages = ['en', 'fr'];
 

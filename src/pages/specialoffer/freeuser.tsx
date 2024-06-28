@@ -9,7 +9,6 @@ import { HeroSectionForSpecialOffer } from '@/components/specialoffer/HeroSectio
 import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSection';
 import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
 import { CouponType } from '@/lib/types';
-import { GetServerSidePropsContext } from 'next';
 
 const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
@@ -52,7 +51,7 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/specialoffer/free-user.json`);

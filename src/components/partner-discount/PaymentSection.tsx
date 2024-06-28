@@ -1,11 +1,8 @@
+import React from 'react';
 import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import PriceTable from './PriceTable';
 
-interface PaymentSectionProps {
-  textContent: Record<string, any>;
-}
-
-const PaymentSection = ({ textContent }: PaymentSectionProps): JSX.Element => {
+const PaymentSection = ({ lang, textContent }) => {
   return (
     <section id="payment" className="overflow-hidden bg-gray-1 py-20">
       <div className="flex flex-col space-y-8 lg:pt-0">

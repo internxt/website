@@ -1,8 +1,10 @@
+import _ from 'lodash';
+
 export function getCheckoutSessionData(session) {
   const conversionData = {
     coupon: {},
     properties: {},
-    traits: {},
+    traits: {}
   };
   const amount = session.amount_total * 0.01;
   const { discounts } = session.total_details.breakdown;
@@ -12,7 +14,7 @@ export function getCheckoutSessionData(session) {
     conversionData.coupon = {
       discount_id: discount.id,
       coupon_id: discount.coupon.id,
-      coupon_name: discount.coupon.name.toLowerCase(),
+      coupon_name: discount.coupon.name.toLowerCase()
     };
   }
 
@@ -29,7 +31,7 @@ export function getCheckoutSessionData(session) {
     plan_name: session.metadata.name,
     impact_value: amount === 0 ? 5 : amount,
     subscription_id: session.subscription,
-    payment_intent: session.payment_intent,
+    payment_intent: session.payment_intent
   };
 
   conversionData.traits = {
@@ -39,12 +41,13 @@ export function getCheckoutSessionData(session) {
     storage_limit: session.metadata.maxSpaceBytes,
     plan_name: session.metadata.name,
     subscription_id: session.subscription,
-    payment_intent: session.payment_intent,
+    payment_intent: session.payment_intent
   };
 
   return conversionData;
 }
 
+// eslint-disable-next-line import/prefer-default-export
 export async function trackPayment({ session, user }) {
   /*  if (user.registerCompleted && session.payment_status === 'paid') {
      const conversionData = getCheckoutSessionData(session);

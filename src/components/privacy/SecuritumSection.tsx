@@ -1,10 +1,6 @@
 import { CaretRight } from '@phosphor-icons/react';
 
-interface SecuritumSectionProps {
-  textContent: Record<string, any>;
-}
-
-const SecuritumSection = ({ textContent }: SecuritumSectionProps): JSX.Element => {
+const SecuritumSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
       <div className="bg- flex flex-col bg-gray-1 py-20">

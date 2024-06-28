@@ -4,11 +4,7 @@ import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import { RedirectButton } from '../shared/RedirectButton';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
 
-interface HeroSectionProps {
-  textContent: Record<string, any>;
-}
-
-export const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
+export const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden pt-8">
       <HeroSectionSafeArea>
@@ -46,7 +42,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
               <Image
                 src={'/images/vpn-extension/vpn-hero.svg'}
                 alt="VPN Hero"
-                className={'top-10 left-0 -translate-x-72 rounded-lg lg:absolute'}
+                className={`top-10 left-0 -translate-x-72 rounded-lg lg:absolute`}
                 width={328}
                 height={385}
                 draggable={false}

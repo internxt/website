@@ -1,14 +1,9 @@
+import React from 'react';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import RenderDescription from '@/components/shared/RenderDescription';
-import { getImage } from '@/lib/getImage';
 
-interface FeaturesSectionProps {
-  textContent: Record<string, any>;
-  lang?: string;
-}
-
-const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Element => {
+const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -79,7 +74,7 @@ const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Eleme
             <div className="flex cursor-pointer">
               {lang === 'es' ? (
                 <Image
-                  src={getImage('/images/password-checker/virus-scanner-es.webp')}
+                  src="/images/password-checker/virus-scanner-es.webp"
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -89,7 +84,7 @@ const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Eleme
                 />
               ) : (
                 <Image
-                  src={getImage('/images/password-checker/virus-scanner.webp')}
+                  src="/images/password-checker/virus-scanner.webp"
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -120,7 +115,7 @@ const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Eleme
           <div className="flex cursor-pointer">
             {lang === 'es' ? (
               <Image
-                src={getImage('/images/password-checker/byte-converter-es.webp')}
+                src="/images/password-checker/byte-converter-es.webp"
                 width={897}
                 height={350}
                 layout="intrinsic"
@@ -130,7 +125,7 @@ const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Eleme
               />
             ) : (
               <Image
-                src={getImage('/images/password-checker/byte-converter.webp')}
+                src="/images/password-checker/byte-converter.webp"
                 width={897}
                 height={350}
                 layout="intrinsic"

@@ -32,7 +32,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
               <div className="flex">
                 <Image
-                  src={'/images/virus-scanner/virus_scanner.webp'}
+                  src={`/images/virus-scanner/virus_scanner.webp`}
                   width={573}
                   height={390}
                   alt="Viruses Hate Privacy"
@@ -44,7 +44,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col-reverse items-center md:flex-row md:space-x-16">
               <div className="flex">
                 <Image
-                  src={'/images/virus-scanner/malware.webp'}
+                  src={`/images/virus-scanner/malware.webp`}
                   width={573}
                   height={390}
                   alt="Stop malware image"
@@ -82,7 +82,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
               <div className="flex">
                 <Image
-                  src={'/images/virus-scanner/phishing.webp'}
+                  src={`/images/virus-scanner/phishing.webp`}
                   width={573}
                   height={390}
                   alt="Scan files image"

@@ -9,7 +9,6 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
-import { GetServerSidePropsContext } from 'next';
 
 const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'affiliates');
@@ -44,13 +43,13 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
-  const langJson = require('@/assets/lang/en/affiliates.json');
-  const navbarLang = require('@/assets/lang/en/navbar.json');
-  const footerLang = require('@/assets/lang/en/footer.json');
+  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/en/affiliates.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
+  const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {
     props: {

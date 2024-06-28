@@ -19,7 +19,7 @@ export const WebDAVSupportSection = ({ textContent }) => {
             </p>
             <div className="flex flex-col gap-3">
               {textContent.howToInstall.steps.map((steps) => (
-                <div className="flex flex-row items-start gap-3 md:items-center" key={steps.step}>
+                <div className="flex flex-row items-start gap-3 md:items-center">
                   <div className="flex whitespace-nowrap rounded-lg bg-gray-5 px-4 py-2">
                     <p className="text-lg font-semibold text-gray-80">{steps.step}</p>
                   </div>

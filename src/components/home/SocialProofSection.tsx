@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 

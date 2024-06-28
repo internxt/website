@@ -6,7 +6,7 @@ interface FAQSectionProps {
   cardColor?: string;
 }
 
-const FAQSection = ({ textContent, bgColor, cardColor }: FAQSectionProps): JSX.Element => {
+const FAQSection = ({ textContent, bgColor, cardColor }: FAQSectionProps) => {
   return (
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'}`}>
       <div className="flex flex-col items-center justify-center space-y-10 px-10 pb-16 pt-10 lg:py-20">

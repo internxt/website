@@ -6,12 +6,8 @@ import MainSection from './MainSection';
 import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
 
-interface TermsAndConditionsOverviewProps {
-  textContent: Record<string, any>;
-}
-
-const TermsAndConditionsOverview = ({ textContent }: TermsAndConditionsOverviewProps): JSX.Element => {
-  const [itemSelected, setItemSelected] = useState<string>();
+const TermsAndConditionsOverview = ({ textContent }) => {
+  const [itemSelected, setItemSelected] = useState();
 
   // Set the scroll at center of the screen with anchor tag
   useEffect(() => {
@@ -48,6 +44,9 @@ const TermsAndConditionsOverview = ({ textContent }: TermsAndConditionsOverviewP
 
       {/* Mobile view */}
       <div className="flex flex-col overflow-hidden pt-16 lg:hidden">
+        {/* <div className="flex flex-col items-center justify-center bg-gradient-to-b from-primary to-primary-dark py-20 text-center">
+          <h1 className="mb-8 select-none text-6xl font-semibold text-white">{textContent.HeroSection.title}</h1>
+        </div> */}
         <div className="flex flex-col space-y-8 py-10 px-5">
           <div className="flex flex-row items-center space-x-2 text-base text-gray-80">
             <CalendarBlank size={17} />

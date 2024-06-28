@@ -1,11 +1,7 @@
 import Image from 'next/legacy/image';
 import Header from '@/components/shared/Header';
 
-interface HeroSectionProps {
-  textContent: Record<string, any>;
-}
-
-const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden pt-14">
       <div className="w-full lg:mx-4">

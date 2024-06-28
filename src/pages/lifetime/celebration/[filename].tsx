@@ -12,7 +12,6 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { GetServerSidePropsContext } from 'next';
 
 const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium'];
 
@@ -67,7 +66,7 @@ const LifetimeCelebrationTemplate = ({
       description={metatags[0].description}
       segmentName="Lifetime"
       lang={lang}
-      specialOffer={'https://internxt.com/images/previewLink/LifetimePreviewLink.png'}
+      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
@@ -101,9 +100,9 @@ const LifetimeCelebrationTemplate = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   let lang = 'en';
-  const pathname = ctx.params?.filename as string;
+  const pathname = ctx.params.filename;
 
   if (['france', 'belgium'].includes(pathname)) {
     lang = 'fr';

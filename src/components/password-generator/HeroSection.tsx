@@ -5,12 +5,7 @@ import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import Header from '@/components/shared/Header';
 
-interface CheckboxButtonProps {
-  checked: boolean;
-  id: string;
-}
-
-const CheckboxButton = ({ checked, id }: CheckboxButtonProps): JSX.Element => (
+const CheckboxButton = ({ checked, id }) => (
   <>
     <div
       className={`relative flex h-5 w-5 cursor-pointer flex-col items-center justify-center rounded-full
@@ -94,7 +89,7 @@ const HeroSection = ({ textContent }) => {
                     notificationService.openSuccessToast('Password copied to clipboard');
                   }}
                 >
-                  <Copy className={'hidden h-5 w-5 text-center text-white md:flex'} />
+                  <Copy className={`hidden h-5 w-5 text-center text-white md:flex`} />
                   <p className="font-medium text-white">{textContent.copy}</p>
                 </button>
                 <button
@@ -103,7 +98,7 @@ const HeroSection = ({ textContent }) => {
                     setRegenerate(!regenerate);
                   }}
                 >
-                  <ArrowsClockwise className={'hidden h-5 w-5 text-center md:flex'} />
+                  <ArrowsClockwise className={`hidden h-5 w-5 text-center md:flex`} />
                   <p className="font-medium">{textContent.generate}</p>
                 </button>
               </div>

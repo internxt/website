@@ -7,7 +7,6 @@ import { ToolsSection } from '@/components/shared/ToolsSection';
 import { ConverterSection } from '@/components/file-converter/ConverterSection';
 import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
-import { GetServerSidePropsContext } from 'next';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -44,10 +43,10 @@ const FileConverter = ({
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
   const textLang = lang === 'es' ? lang : 'en';
-  const pathname = ctx.params?.filename;
+  const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);

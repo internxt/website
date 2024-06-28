@@ -26,7 +26,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <section
-      className={'overflow-hidden bg-cover bg-no-repeat py-20'}
+      className={`overflow-hidden bg-cover bg-no-repeat py-20`}
       style={{
         backgroundImage: `url('${bgImage}')`,
       }}
@@ -58,7 +58,7 @@ const HeroSection = ({
               </div>
               <button
                 onClick={() => {
-                  window.location.href = '#payment';
+                  window.location.href = `#payment`;
                 }}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
