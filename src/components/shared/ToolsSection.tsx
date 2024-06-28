@@ -11,7 +11,12 @@ import {
 } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
-export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+interface ToolsSectionProps {
+  textContent: any;
+  lang: string;
+}
+
+export const ToolsSection = ({ textContent, lang }: ToolsSectionProps): JSX.Element => {
   const router = useRouter();
   const pathname = router.pathname;
 

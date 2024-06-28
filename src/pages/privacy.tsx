@@ -16,6 +16,7 @@ import BetterTomorrowSection from '@/components/privacy/BetterTomorrowSection';
 import FeatureSection from '@/components/privacy/FeatureSection';
 import HeroSection2 from '@/components/privacy/HeroSection2';
 import ManifestoSection2 from '@/components/privacy/ManifestoSection2';
+import { GetServerSidePropsContext } from 'next';
 
 const newDesignLang = ['en', 'es', 'zh-tw'];
 
@@ -28,21 +29,21 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
     <>
       {newDesignLang.includes(lang) ? (
         <>
-          <Script type="application/ld+json" strategy="beforeInteractive">
+          <Script id="schema-privacy" type="application/ld+json" strategy="beforeInteractive">
             {sm_faq(langJson.FaqSection.faq)}
           </Script>
 
-          <Script type="application/ld+json" strategy="beforeInteractive">
+          <Script id="breadcrumb-privacy" type="application/ld+json" strategy="beforeInteractive">
             {sm_breadcrumb('Privacy', 'privacy')}
           </Script>
         </>
       ) : (
         <>
-          <Script type="application/ld+json" strategy="beforeInteractive">
+          <Script id="schema-privacy" type="application/ld+json" strategy="beforeInteractive">
             {sm_faq(langJson.ManifestoSection.FaqSection.faq)}
           </Script>
 
-          <Script type="application/ld+json" strategy="beforeInteractive">
+          <Script id="breadcrumb-privacy" type="application/ld+json" strategy="beforeInteractive">
             {sm_breadcrumb('Privacy', 'privacy')}
           </Script>
         </>
@@ -83,7 +84,7 @@ const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang 
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

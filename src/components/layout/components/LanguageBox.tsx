@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import cookies from '@/lib/cookies';
 
+interface LanguageBoxProps {
+  darkMode?: boolean;
+  isBlackFriday?: boolean;
+}
+
 const currentLang = {
   es: 'Español (ES)',
   fr: 'Français (FR)',
@@ -26,7 +31,7 @@ const selectedLang = {
   'zh-tw': 'TW',
 };
 
-export default function LanguageBox({ darkMode, isBlackFriday }) {
+export default function LanguageBox({ darkMode, isBlackFriday }: LanguageBoxProps): JSX.Element {
   const router = useRouter();
 
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
@@ -38,7 +43,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
 
   return (
     <div
-      className={`group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out`}
+      className={
+        'group relative flex cursor-default space-x-1 rounded-lg py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out'
+      }
     >
       <Globe size={24} className={darkMode ? 'text-white' : 'text-gray-60'} />
       <p className={darkMode ? 'text-white' : 'text-gray-60'}>{currentLangText}</p>
@@ -57,7 +64,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="en"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('en')}
               >
                 {currentLang.en}
@@ -65,7 +74,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="fr"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('fr')}
               >
                 {currentLang.fr}
@@ -76,7 +87,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="en"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('en')}
               >
                 {currentLang.en}
@@ -85,7 +98,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="es"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('es')}
               >
                 {currentLang.es}
@@ -94,7 +109,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="fr"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('fr')}
               >
                 {currentLang.fr}
@@ -102,7 +119,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="de"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1'
+                }
                 onClick={() => changeLang('de')}
               >
                 {currentLang.de}
@@ -110,7 +129,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="it"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 `}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 '
+                }
                 onClick={() => changeLang('it')}
               >
                 {currentLang.it}
@@ -118,7 +139,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="zh"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 `}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 '
+                }
                 onClick={() => changeLang('zh')}
               >
                 {currentLang.zh}
@@ -126,7 +149,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="ru"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 `}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 '
+                }
                 onClick={() => changeLang('ru')}
               >
                 {currentLang.ru}
@@ -134,7 +159,9 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               <Link
                 href={router.pathname}
                 locale="zh-tw"
-                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 `}
+                className={
+                  'flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1 '
+                }
                 onClick={() => changeLang('zh-tw')}
               >
                 {currentLang['zh-tw']}

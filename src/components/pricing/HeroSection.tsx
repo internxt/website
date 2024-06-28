@@ -2,7 +2,11 @@ import Image from 'next/legacy/image';
 import { Alarm, Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
 
-const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const feeds = [
     {
       icon: Coin,

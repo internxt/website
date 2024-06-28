@@ -1,6 +1,7 @@
 import { CaretRight } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import Header from '@/components/shared/Header';
+import Link from 'next/link';
 
 const HeroSection2 = ({ textContent, lang, bannerText }) => {
   return (
@@ -14,14 +15,14 @@ const HeroSection2 = ({ textContent, lang, bannerText }) => {
             <p className=" text-2xl font-medium">{textContent.title}</p>
             <p className="text-xl font-normal">{textContent.description}</p>
           </div>
-          <a
+          <Link
             href="/privacy"
             target={'_blank'}
             className="flex cursor-pointer flex-row items-center justify-center space-x-1"
           >
             <p className="text-lg font-semibold text-primary">{textContent.cta}</p>
             <CaretRight size={14} weight="bold" className="text-primary" />
-          </a>
+          </Link>
         </div>
         <SignUpBanner textContent={bannerText} lang={lang} />
       </div>

@@ -24,33 +24,16 @@ export interface NavbarProps {
   mode?: 'subscription' | 'payment';
 }
 
-const EXCLUDED_PATHS_FOR_RIBBON = [
-  '/pricing',
-  '/lifetime',
-  '/partner-discount',
-  '/techradar-discount',
-  '/stackcommerce',
-  '/dealfuel',
-  '/mightydeals',
-  '/temporary-email',
-  '/locker',
-  '/startpage',
-  '/oystervpn',
-  '/pccomponentes-products',
-  '/lifetime_special',
-  '/lifetime/celebration',
-];
-
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
-export default function Navbar(props: Readonly<NavbarProps>) {
+export default function Navbar(props: Readonly<NavbarProps>): JSX.Element {
   const [menuState, setMenuState] = useState(false);
   const [scrolled, setScrolled] = useState(true);
   const [isRibbonHidden, setIsRibbonHidden] = useState<boolean>();
 
   const router = useRouter();
   const lang = router.locale;
-  const getTitles = require(`@/assets/lang/en/navbar.json`);
+  const getTitles = require('@/assets/lang/en/navbar.json');
 
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
@@ -116,16 +99,15 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 />
               </Link>
             </div>
-            <ItemsNavigation
-              darkMode={props.darkMode}
-              getTitles={getTitles}
-              isQuizSection={props.isQuizSection}
-              shouldHideItems={props.isLinksHidden}
-              lang={lang}
-              menuState={menuState}
-              router={router}
-              textContent={props.textContent}
-            />
+            {props.isLinksHidden ? undefined : (
+              <ItemsNavigation
+                darkMode={props.darkMode}
+                getTitles={getTitles}
+                isQuizSection={props.isQuizSection}
+                lang={lang}
+                textContent={props.textContent}
+              />
+            )}
           </div>
 
           {/* Left side of navbar: Logo / Hamburguer menu */}

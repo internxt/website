@@ -11,7 +11,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
       <div
-        className={`flex flex-col  justify-between rounded-[32px] bg-white lg:w-full lg:flex-row`}
+        className={'flex flex-col  justify-between rounded-[32px] bg-white lg:w-full lg:flex-row'}
         style={{
           backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
         }}

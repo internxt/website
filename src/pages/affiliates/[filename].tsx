@@ -7,6 +7,7 @@ import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { CouponType } from '@/lib/types';
+import { GetServerSidePropsContext } from 'next';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -190,14 +191,14 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = 'en';
-  const pathname = ctx.params.filename;
+  const pathname = ctx.params?.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/affiliates-partners-template.json`);
-  const homeJson = require(`@/assets/lang/en/home.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
+  const langJson = require('@/assets/lang/en/affiliates-partners-template.json');
+  const homeJson = require('@/assets/lang/en/home.json');
+  const footerLang = require('@/assets/lang/en/footer.json');
 
   return {
     props: {

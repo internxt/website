@@ -3,6 +3,7 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import QuizSection from '@/components/CybersecurityQuiz/QuizSection';
 import { CyberSecurityQuizViews } from '@/lib/types';
+import { GetServerSidePropsContext } from 'next';
 
 const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-security-quiz');
@@ -36,12 +37,12 @@ const CyberSecurityQuiz = ({ metatagsDescriptions, navbarLang, textContent, lang
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const textContent = require(`@/assets/lang/en/cyber-security-quiz.json`);
+  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
+  const navbarLang = require('@/assets/lang/en/navbar.json');
+  const textContent = require('@/assets/lang/en/cyber-security-quiz.json');
 
   return {
     props: {

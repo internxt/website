@@ -9,7 +9,7 @@ interface MarqueeComponentProps {
 
 export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeComponentProps) => {
   return (
-    <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
+    <div className={'relative left-1/2 z-10 w-screen -translate-x-1/2'}>
       <div className={'flex xl:hidden'}>
         <Marquee gradientColor={[255, 255, 255]} className={bgColor} gradientWidth="32px" speed={30}>
           <div className="featured flex w-full flex-row space-x-10 p-6">

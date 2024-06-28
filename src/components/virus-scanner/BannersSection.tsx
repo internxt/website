@@ -1,8 +1,13 @@
-import React from 'react';
 import Image from 'next/legacy/image';
 import { CaretRight } from '@phosphor-icons/react';
+import { getImage } from '@/lib/getImage';
 
-const BannersSection = ({ textContent, lang }) => {
+interface BannersSectionProps {
+  textContent: Record<string, any>;
+  lang: string;
+}
+
+const BannersSection = ({ textContent, lang }: BannersSectionProps): JSX.Element => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
@@ -33,7 +38,7 @@ const BannersSection = ({ textContent, lang }) => {
           </div>
           <div className="flex w-screen max-w-xs flex-col items-center justify-center space-y-6 rounded-2xl bg-gray-1 p-10 text-center">
             <Image
-              src="/images/temp-email/byte-converter.svg"
+              src={getImage('/images/temp-email/byte-converter.svg')}
               quality={100}
               width={95}
               height={70}

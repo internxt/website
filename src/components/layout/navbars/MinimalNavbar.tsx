@@ -24,7 +24,7 @@ export const MinimalNavbar = ({ lang }) => {
           <img
             loading="lazy"
             className="select-none"
-            src={getImage(`/logos/internxt/cool-gray-90.svg`)}
+            src={getImage('/logos/internxt/cool-gray-90.svg')}
             alt="Internxt logo"
           />
         </Link>

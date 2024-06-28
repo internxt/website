@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { UilPlayCircle } from '@iconscout/react-unicons';
 import YoutubeEmbed from '@/components/utils/youtube';
 import styles from './HeroSection.module.scss';
 import Header from '@/components/shared/Header';
 
-const HeroSection2 = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection2 = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

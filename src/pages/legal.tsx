@@ -3,6 +3,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import TermsAndConditionsOverview from '@/components/legal/TermsAndConditionsOverview';
+import { GetServerSidePropsContext } from 'next';
 
 const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'legal');
@@ -18,7 +19,7 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

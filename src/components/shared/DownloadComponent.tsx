@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
 import { ArrowCircleDown, CaretRight } from '@phosphor-icons/react';
@@ -161,7 +161,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
         )}
 
         {/* Download for mobile */}
-        <div className={`flex flex-1 flex-grow flex-row justify-center text-lg lg:justify-start`}>
+        <div className={'flex flex-1 flex-grow flex-row justify-center text-lg lg:justify-start'}>
           {isMobile && (
             <a
               className="flex w-full flex-col"

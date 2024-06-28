@@ -29,7 +29,7 @@ export const sm_faq = (faq) => {
       }}`;
     if (i + 1 < arr.length) data += ',';
   });
-  data += `]}`;
+  data += ']}';
   return data;
 };
 

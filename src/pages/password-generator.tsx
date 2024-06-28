@@ -10,6 +10,7 @@ import { ToolsSection } from '@/components/shared/ToolsSection';
 import FAQSection from '@/components/shared/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import { GetServerSidePropsContext } from 'next';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -26,11 +27,11 @@ const PasswordGenerator = ({
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="schema-pass-generator" type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.SchemaMarkupQuestions.faq)}
       </Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="breadcrumb-pass-generator" type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Password Generator', 'password-generator')}
       </Script>
 
@@ -60,7 +61,7 @@ const PasswordGenerator = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const downloadURL = await downloadDriveLinks();
 
   const lang = ctx.locale;

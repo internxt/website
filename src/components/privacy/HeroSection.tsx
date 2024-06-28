@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import YoutubeEmbed from '@/components/utils/youtube';
 import { CaretRight } from '@phosphor-icons/react';
 import Header from '@/components/shared/Header';
 
-const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

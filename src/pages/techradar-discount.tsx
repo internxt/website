@@ -5,8 +5,25 @@ import HeroSection from '@/components/techradar-discount/HeroSection';
 import PaymentsSection from '@/components/techradar-discount/PaymentsSection';
 import InfoSection from '@/components/techradar-discount/InfoSection';
 import Footer from '@/components/layout/footers/Footer';
+import { GetServerSidePropsContext } from 'next';
 
-const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
+interface PartnerDiscountProps {
+  langJson: Record<string, any>;
+  toolsContent: Record<string, any>;
+  metatagsDescriptions: Record<string, any>;
+  navbarLang: Record<string, any>;
+  footerLang: Record<string, any>;
+  bannerLang: Record<string, any>;
+  lang: string;
+}
+
+const PartnerDiscount = ({
+  lang,
+  metatagsDescriptions,
+  navbarLang,
+  langJson,
+  footerLang,
+}: PartnerDiscountProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
 
   return (
@@ -24,13 +41,13 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/techradar-discount.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
+  const langJson = require('@/assets/lang/en/techradar-discount.json');
+  const navbarLang = require('@/assets/lang/en/navbar.json');
+  const footerLang = require('@/assets/lang/en/footer.json');
 
   cookies.setReferralCookie(ctx);
 

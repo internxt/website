@@ -1,7 +1,10 @@
 import { ShieldCheck, LockKey, Scales, Fingerprint } from '@phosphor-icons/react';
-import React from 'react';
 
-const InfoSection = ({ textContent }) => {
+interface InfoSectionProps {
+  textContent: Record<string, any>;
+}
+
+const InfoSection = ({ textContent }: InfoSectionProps): JSX.Element => {
   const cards = [
     {
       id: 1,
@@ -40,7 +43,10 @@ const InfoSection = ({ textContent }) => {
           <div className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
             {cards.map((card) => {
               return (
-                <div className="flex flex-col items-start justify-start space-y-6 rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]">
+                <div
+                  className="flex flex-col items-start justify-start space-y-6 rounded-2xl bg-cool-gray-5 p-8 sm:p-10 md:max-w-[488px]"
+                  key={card.title}
+                >
                   <card.icon className="text-4xl text-primary" />
                   <h4 className="text-2xl font-medium">{card.title}</h4>
                   <h5 className="text-lg text-cool-gray-80 sm:text-base">{card.description}</h5>

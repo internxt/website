@@ -48,7 +48,7 @@ export default function PriceTable({
   useSameCouponForAllPlans,
   hideFreeCard,
   couponCode,
-}: Readonly<PriceTableProps>) {
+}: Readonly<PriceTableProps>): JSX.Element {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
   const banner = require('@/assets/lang/en/banners.json');
@@ -113,7 +113,7 @@ export default function PriceTable({
         </div>
 
         <div className="flex flex-col items-center space-y-9">
-          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
             <button
               type="button"
@@ -133,7 +133,7 @@ export default function PriceTable({
               onClick={() => {
                 setActiveSwitchPlan('Lifetime');
                 setBillingFrequency(Interval.Lifetime);
-                setSegmentPageName(`Pricing Individuals Lifetime`);
+                setSegmentPageName('Pricing Individuals Lifetime');
               }}
               className={`rounded-lg py-0.5 px-6 font-semibold ${
                 activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
@@ -145,7 +145,7 @@ export default function PriceTable({
               type="button"
               onClick={() => {
                 setActiveSwitchPlan('Business');
-                setSegmentPageName(`Pricing Business`);
+                setSegmentPageName('Pricing Business');
               }}
               className={`rounded-lg py-0.5 px-6 font-semibold ${
                 activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'

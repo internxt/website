@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
@@ -33,7 +33,6 @@ interface LayoutProps {
   readonly segmentName?: string | null;
   readonly disableMailerlite?: boolean;
   readonly disableDrift?: boolean;
-  readonly isProduction?: boolean;
   readonly specialOffer?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
@@ -50,7 +49,6 @@ export default function Layout({
   specialOffer,
   disableDrift = true,
   isBannerFixed,
-  isProduction = process.env.NODE_ENV === 'production',
 }: // lang
 LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
@@ -179,7 +177,7 @@ LayoutProps) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" content={description} />
         <meta name="thumbnail" content={`${INTERNXT_URL}/images/previewLink/LifetimeGoogleSearch.png`} />
-        <meta name="apple-itunes-app" content={`app-id=1465869889`} />
+        <meta name="apple-itunes-app" content={'app-id=1465869889'} />
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="white" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="black" />
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
@@ -193,7 +191,7 @@ LayoutProps) {
         <script src="/js/cookiebanner.script.js"></script>
         <script
           dangerouslySetInnerHTML={{
-            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
+            __html: 'window.varify = window.varify || {}; window.varify.iid = 2329;',
           }}
         />
         <script src="https://app.varify.io/varify.js"></script>
@@ -255,7 +253,7 @@ LayoutProps) {
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="schema" type="application/ld+json" strategy="beforeInteractive">
         {`{
           "@context": "https://schema.org",
           "@type": "Organization",

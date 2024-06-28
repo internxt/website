@@ -25,12 +25,12 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
   }, [passwordProperties, regenerate]);
 
   const generateRandomPassword = () => {
-    const length: number = Number(passwordProperties.length);
-    let characters: string = '';
-    let uppercase: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let lowercase: string = 'abcdefghijklmnopqrstuvwxyz';
-    let numbers: string = '0123456789';
-    let symbols: string = '!@#$%^&*()<>,.?/[]{}-=_+|/';
+    const length = Number(passwordProperties.length);
+    let characters = '';
+    const uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowercase = 'abcdefghijklmnopqrstuvwxyz';
+    const numbers = '0123456789';
+    const symbols = '!@#$%^&*()<>,.?/[]{}-=_+|/';
 
     if (passwordProperties.uppercase) {
       characters += uppercase;

@@ -13,6 +13,7 @@ import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import Link from 'next/link';
 import moment from 'moment';
+import { GetServerSidePropsContext } from 'next';
 
 const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const [openDialog, setOpenDialog] = useState(false);
@@ -30,15 +31,15 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
       description={metatags[0].description}
       segmentName="MightyDeals"
       lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      specialOffer={'https://internxt.com/images/previewLink/LifetimePreviewLink.png'}
     >
       {openDialog ? (
-        <div className={`fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
+        <div className={'fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0'}>
           <div
             className={`absolute top-1/2 left-1/2
         z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
+            <X className={'absolute top-5 right-5 cursor-pointer'} size={24} onClick={() => setOpenDialog(false)} />
             <SignUp textContent={langJson.Auth} provider="MIGHTYDEALS" />
           </div>
         </div>
@@ -63,9 +64,9 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
 
       <div className="flex w-full flex-row items-center justify-center space-x-4 py-16">
         <Link href="/" locale={lang} className="flex flex-shrink-0">
-          <img loading="lazy" src={`../../logos/internxt/cool-gray-90.svg`} alt="Internxt logo" />
+          <img loading="lazy" src={'../../logos/internxt/cool-gray-90.svg'} alt="Internxt logo" />
         </Link>
-        <p className={`text-xs text-cool-gray-60`}>
+        <p className={'text-xs text-cool-gray-60'}>
           {footerLang.FooterSection.copyright.line1 + year + footerLang.FooterSection.copyright.line2}
         </p>
       </div>
@@ -73,14 +74,14 @@ const MightyDeals = ({ lang, metatagsDescriptions, langJson, footerLang, deviceL
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/techcult.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
+  const langJson = require('@/assets/lang/en/techcult.json');
+  const navbarLang = require('@/assets/lang/en/navbar.json');
+  const footerLang = require('@/assets/lang/en/footer.json');
 
   cookies.setReferralCookie(ctx);
 

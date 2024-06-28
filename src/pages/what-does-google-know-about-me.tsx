@@ -6,8 +6,19 @@ import HeroSection from '@/components/what-does-google-know-about-me/HeroSection
 import ManageGoogleDataSection from '@/components/what-does-google-know-about-me/ManageGoogleDataSection';
 import { ToolsSection } from '@/components/shared/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
+import { GetServerSidePropsContext } from 'next';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
+
+interface WhatDoesGoogleKnowAboutMeProps {
+  langJson: Record<string, any>;
+  toolsContent: Record<string, any>;
+  metatagsDescriptions: Record<string, any>;
+  navbarLang: Record<string, any>;
+  footerLang: Record<string, any>;
+  bannerLang: Record<string, any>;
+  lang: string;
+}
 
 const WhatDoesGoogleKnowAboutMe = ({
   lang,
@@ -17,7 +28,7 @@ const WhatDoesGoogleKnowAboutMe = ({
   navbarLang,
   footerLang,
   bannerLang,
-}) => {
+}: WhatDoesGoogleKnowAboutMeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
   return (
@@ -47,7 +58,7 @@ const WhatDoesGoogleKnowAboutMe = ({
   );
 };
 
-export async function getServerSideProps(ctx: any) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

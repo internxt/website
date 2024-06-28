@@ -25,7 +25,7 @@ const KitSection = ({ textContent }) => {
         </div>
         <div className="flex flex-row flex-wrap items-stretch gap-10">
           <KitCard
-            downloadImagesLink={`https://internxt.com/media-area/internxt-logo-set.zip`}
+            downloadImagesLink={'https://internxt.com/media-area/internxt-logo-set.zip'}
             image={getImage('/images/media-area/inxt-logo-set.svg')}
             textContent={textContent.firstSection}
           />

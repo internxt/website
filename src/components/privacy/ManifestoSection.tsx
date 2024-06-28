@@ -1,7 +1,10 @@
-/* eslint-disable max-len */
-import React from 'react';
+import { getImage } from '@/lib/getImage';
 
-const ManifestoSection = ({ textContent }) => (
+interface ManifestoSectionProps {
+  textContent: Record<string, any>;
+}
+
+const ManifestoSection = ({ textContent }: ManifestoSectionProps): JSX.Element => (
   <section className="relative flex w-full flex-col bg-gray-1">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
@@ -19,7 +22,7 @@ const ManifestoSection = ({ textContent }) => (
           <img
             loading="lazy"
             className="w-24 select-none"
-            src="/images/privacy/signature.webp"
+            src={getImage('/images/privacy/signature.webp')}
             draggable="false"
             alt="Fran's signature"
           />

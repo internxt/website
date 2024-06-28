@@ -1,18 +1,14 @@
 import { Check } from '@phosphor-icons/react';
 
-const CheckboxSettings = ({
-  id,
-  checked,
-  onClick,
-  required,
-  className,
-}: {
+interface CheckboxSettingsProps {
   id: string;
   checked: boolean;
   onClick?: React.DOMAttributes<HTMLLabelElement>['onClick'];
   required?: boolean;
   className?: string;
-}) => {
+}
+
+const CheckboxSettings = ({ id, checked, onClick, required, className }: CheckboxSettingsProps): JSX.Element => {
   return (
     <label className={`relative h-5 w-5 rounded focus-within:outline-primary ${className}`} onClick={onClick}>
       <div

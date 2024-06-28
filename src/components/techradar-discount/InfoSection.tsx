@@ -1,7 +1,10 @@
 import { ShieldCheck, LockKey, Scales, Fingerprint } from '@phosphor-icons/react';
-import React from 'react';
 
-const InfoSection = ({ textContent }) => {
+interface InfoSectionProps {
+  textContent: Record<string, any>;
+}
+
+const InfoSection = ({ textContent }: InfoSectionProps): JSX.Element => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col py-20">

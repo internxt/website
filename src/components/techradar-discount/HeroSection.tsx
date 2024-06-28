@@ -1,9 +1,13 @@
 import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from '@phosphor-icons/react';
-import React from 'react';
 import styles from './Background.module.scss';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
 
-const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const open = () => toast.success('Copied to clipboard!');
 
   const subtitleTechradar = textContent.subtitle1.split('TECHRADAR')[0];
@@ -63,11 +67,9 @@ const HeroSection = ({ textContent }) => {
               }
             </p>
             <div className="flex rounded-lg bg-white px-9 py-4">
-              <a href="#pricing">
-                <button className="text-lg font-normal text-primary" onClick={() => {}}>
-                  {textContent.cta}
-                </button>
-              </a>
+              <Link href="#pricing" className="cursor-pointer">
+                <p className="text-lg font-normal text-primary">{textContent.cta}</p>
+              </Link>
             </div>
           </div>
           <div className="relative px-10 pt-20 lg:px-0 lg:pt-10">

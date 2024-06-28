@@ -9,6 +9,7 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { GetServerSidePropsContext } from 'next';
 
 const LifetimeSpecial = ({
   lang,
@@ -28,7 +29,7 @@ const LifetimeSpecial = ({
       description={metatags[0].description}
       segmentName="Lifetime"
       lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      specialOffer={'https://internxt.com/images/previewLink/LifetimePreviewLink.png'}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
@@ -54,7 +55,7 @@ const LifetimeSpecial = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 

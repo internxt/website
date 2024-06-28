@@ -1,8 +1,12 @@
-import React from 'react';
 import Image from 'next/legacy/image';
 import { notificationService } from '@/components/Snackbar';
+import { getImage } from '@/lib/getImage';
 
-const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const description = {
     part1: textContent.description.split('SPECIAL15')[0],
     special15: textContent.description.substring(
@@ -58,7 +62,7 @@ const HeroSection = ({ textContent }) => {
           <div className="hidden flex-col rounded-3xl lg:flex">
             <Image
               alt="Woman with laptop"
-              src="/images/partners-discount/Internxt_partners_discount.webp"
+              src={getImage('/images/partners-discount/Internxt_partners_discount.webp')}
               className=" rounded-3xl"
               width={588}
               height={560}
@@ -70,7 +74,7 @@ const HeroSection = ({ textContent }) => {
           <div className="flex flex-col rounded-3xl shadow-2xl lg:hidden">
             <Image
               alt="Woman with laptop"
-              src="/images/partners-discount/Internxt_partners_discount_mobile.webp"
+              src={getImage('/images/partners-discount/Internxt_partners_discount_mobile.webp')}
               className=" rounded-3xl"
               width={588}
               height={660}

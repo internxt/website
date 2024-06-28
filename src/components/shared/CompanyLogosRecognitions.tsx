@@ -7,7 +7,7 @@ export const CompanyLogosRecognitions = () => (
     <div className="flex flex-auto flex-shrink-0 pb-12 sm:p-0 sm:px-12">
       <div className="flex flex-shrink-0 flex-col items-center space-y-3">
         <Image
-          src={getImage(`/images/about/logos/forbes.webp`)}
+          src={getImage('/images/about/logos/forbes.webp')}
           width={125}
           height={32}
           loading={'lazy'}

@@ -15,7 +15,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { setup } from '@/lib/csrf';
 import { useRouter } from 'next/router';
 
-const TempEmail = () => {
+const TempEmail = (): JSX.Element => {
   const dialogAction = useGlobalDialog();
   const { locale: lang } = useRouter() as { locale: string };
 
@@ -30,11 +30,11 @@ const TempEmail = () => {
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="schema-temp-mail" type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
       </Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="breadcrumb-temp-mail" type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
@@ -61,7 +61,7 @@ const TempEmail = () => {
   );
 };
 
-export const getServerSideProps = setup(async (req, res) => {
+export const getServerSideProps = setup(async () => {
   return { props: {} };
 });
 

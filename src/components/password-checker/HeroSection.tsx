@@ -1,12 +1,14 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
 import Header from '@/components/shared/Header';
 
-const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
@@ -133,7 +135,7 @@ const HeroSection = ({ textContent }) => {
       <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-5">
         <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
           <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
-          <span className={`text-2xl font-semibold text-gray-80`}>{crackFeedback}</span>
+          <span className={'text-2xl font-semibold text-gray-80'}>{crackFeedback}</span>
         </div>
 
         <div className="relative flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
@@ -156,7 +158,7 @@ const HeroSection = ({ textContent }) => {
         <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
           <div className="flex h-full flex-col space-y-1">
             <span className="text-sm text-gray-50">{textContent.result.crack.title}</span>
-            <span className={`text-2xl font-semibold text-gray-80`}>{crackTime}</span>
+            <span className={'text-2xl font-semibold text-gray-80'}>{crackTime}</span>
           </div>
 
           <span className="text-sm text-gray-50">{textContent.result.crack.subtitle}</span>

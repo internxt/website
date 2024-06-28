@@ -8,7 +8,7 @@ const CtaSection = ({ textContent }) => {
         </div>
         <button
           onClick={() => {
-            window.location.href = `#payment`;
+            window.location.href = '#payment';
           }}
           className="flex max-w-[260px] cursor-pointer flex-col items-center rounded-lg bg-white text-center hover:bg-blue-10"
         >

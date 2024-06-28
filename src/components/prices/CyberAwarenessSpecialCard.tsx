@@ -14,7 +14,7 @@ export default function SpecialPriceCard({
   popular,
   lang,
   currency,
-}: PriceCardProps) {
+}: PriceCardProps): JSX.Element {
   const [coupon, setCoupon] = React.useState<string>();
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -67,7 +67,7 @@ export default function SpecialPriceCard({
         {contentText.cta.discount}
       </div>
 
-      <div className={`info flex flex-col items-center justify-center  bg-white p-4 pt-6`}>
+      <div className={'info flex flex-col items-center justify-center  bg-white p-4 pt-6'}>
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
             popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
@@ -88,8 +88,8 @@ export default function SpecialPriceCard({
         >
           {price <= 0 ? (
             <>
-              <p className={` flex flex-row items-start space-x-0.5 font-bold text-black`}>
-                <p className={` flex flex-row items-start space-x-0.5 font-medium`}>
+              <p className={' flex flex-row items-start space-x-0.5 font-bold text-black'}>
+                <p className={' flex flex-row items-start space-x-0.5 font-medium'}>
                   <span className="price text-4xl font-semibold">
                     {price <= 0 ? `${contentText.freePlan}` : price.toFixed(2)}
                   </span>
@@ -100,13 +100,13 @@ export default function SpecialPriceCard({
                   planType.toLowerCase() === 'individual' ? 'flex-row space-x-px' : 'flex-col items-center'
                 }`}
               >
-                <span className={`currency`}>{currency}</span>
+                <span className={'currency'}>{currency}</span>
                 <span className="price text-2xl font-semibold">{Math.abs((price * 20) / 100).toFixed(2)[0]}</span>
               </div>
             </>
           ) : (
             <>
-              <p className={` flex flex-row items-start space-x-0.5 font-bold text-black`}>
+              <p className={' flex flex-row items-start space-x-0.5 font-bold text-black'}>
                 <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
                 <span className="price text-4xl font-semibold">{Math.abs((price * 20) / 100).toFixed(2)}</span>
               </p>
@@ -115,7 +115,7 @@ export default function SpecialPriceCard({
                   planType.toLowerCase() === 'individual' ? 'flex-row items-end space-x-px' : 'flex-col items-center'
                 }`}
               >
-                <p className={` flex flex-row items-start space-x-0.5 font-medium `}>
+                <p className={' flex flex-row items-start space-x-0.5 font-medium '}>
                   <span className={`currency ${price <= 0 ? 'hidden' : ''}`}>{currency}</span>
                   <span className="price text-2xl font-semibold line-through">
                     {price <= 0 ? `${contentText.freePlan}` : price.toFixed(2)}
@@ -165,7 +165,7 @@ export default function SpecialPriceCard({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">
         <div className="flex flex-col space-y-2 text-sm">
           {billingFrequency === 'lifetime' && (
-            <div className={`flex flex-row items-start space-x-2 font-semibold`}>
+            <div className={'flex flex-row items-start space-x-2 font-semibold'}>
               <img
                 loading="lazy"
                 className="mt-0.5 translate-y-px select-none"

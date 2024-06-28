@@ -1,7 +1,11 @@
-import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
 
-const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
+interface CtaSectionProps {
+  textContent: any;
+  freePlan?: boolean;
+}
+
+const CtaSection = ({ textContent, freePlan }: CtaSectionProps): JSX.Element => {
   return (
     <section className="overflow-hidden bg-primary py-14">
       <div className="flex flex-col items-center justify-center space-y-8 px-5 text-center">

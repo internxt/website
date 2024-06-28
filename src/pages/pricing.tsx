@@ -15,6 +15,7 @@ import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/home/InfoSection';
 import { CouponType } from '@/lib/types';
+import { GetServerSidePropsContext } from 'next';
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -22,11 +23,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="schema-pricing" type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(textContent.SchemaMarkupQuestions.faq)}
       </Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="breadcrumb-pricing" type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Pricing', 'pricing')}
       </Script>
 
@@ -66,7 +67,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);

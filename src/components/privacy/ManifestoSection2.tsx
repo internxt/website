@@ -1,9 +1,14 @@
-import React from 'react';
 import FAQSection from '@/components/shared/FaqSection';
 import { ArrowUpRight } from '@phosphor-icons/react';
 import ProductCard from '@/components/shared/ProductCard';
+import { getImage } from '@/lib/getImage';
 
-const ManifestoSection2 = ({ textContent, lang }) => (
+interface ManifestoSectionProps {
+  textContent: Record<string, any>;
+  lang: string;
+}
+
+const ManifestoSection2 = ({ textContent, lang }: ManifestoSectionProps): JSX.Element => (
   <section className="relative flex w-full flex-col">
     {/* Why privacy is so important */}
     <div className="z-10 flex flex-col items-center py-20 ">
@@ -24,7 +29,7 @@ const ManifestoSection2 = ({ textContent, lang }) => (
           <img
             loading="lazy"
             className="w-24 select-none"
-            src="/images/privacy/signature.webp"
+            src={getImage('/images/privacy/signature.webp')}
             draggable="false"
             alt="Fran's signature"
           />

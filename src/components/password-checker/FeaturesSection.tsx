@@ -1,9 +1,14 @@
-import React from 'react';
 import { Ruler, TextT, TextAa, NumberCircleThree, Hash, CirclesThree } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import RenderDescription from '@/components/shared/RenderDescription';
+import { getImage } from '@/lib/getImage';
 
-const FeaturesSection = ({ textContent, bannerText, lang }) => {
+interface FeaturesSectionProps {
+  textContent: Record<string, any>;
+  lang?: string;
+}
+
+const FeaturesSection = ({ textContent, lang }: FeaturesSectionProps): JSX.Element => {
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -74,7 +79,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex cursor-pointer">
               {lang === 'es' ? (
                 <Image
-                  src="/images/password-checker/virus-scanner-es.webp"
+                  src={getImage('/images/password-checker/virus-scanner-es.webp')}
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -84,7 +89,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 />
               ) : (
                 <Image
-                  src="/images/password-checker/virus-scanner.webp"
+                  src={getImage('/images/password-checker/virus-scanner.webp')}
                   width={897}
                   height={350}
                   layout="intrinsic"
@@ -115,7 +120,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
           <div className="flex cursor-pointer">
             {lang === 'es' ? (
               <Image
-                src="/images/password-checker/byte-converter-es.webp"
+                src={getImage('/images/password-checker/byte-converter-es.webp')}
                 width={897}
                 height={350}
                 layout="intrinsic"
@@ -125,7 +130,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
               />
             ) : (
               <Image
-                src="/images/password-checker/byte-converter.webp"
+                src={getImage('/images/password-checker/byte-converter.webp')}
                 width={897}
                 height={350}
                 layout="intrinsic"

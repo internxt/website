@@ -27,7 +27,11 @@ import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 import useWindowFocus from '@/hooks/useWindowFocus';
 
-export const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: Record<string, any>;
+}
+
+export const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const isFocused = useWindowFocus();
 
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =

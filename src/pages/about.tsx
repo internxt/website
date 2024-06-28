@@ -12,6 +12,7 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import CtaSection from '@/components/shared/CtaSection';
 import CompanySection from '@/components/about/CompanySection';
 import HeroSection2 from '@/components/about/HeroSection2';
+import { GetServerSidePropsContext } from 'next';
 
 const CTA_URL = 'https://internxt.com/pricing';
 
@@ -22,7 +23,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="breadcumb-about" type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('About', 'about')}
       </Script>
 
@@ -52,7 +53,7 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);

@@ -40,7 +40,7 @@ const DropArea = ({
 
   return (
     <div
-      className={`flex h-full w-full items-center justify-center`}
+      className={'flex h-full w-full items-center justify-center'}
       onDragEnter={handleDragEnter}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}

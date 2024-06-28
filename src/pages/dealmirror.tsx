@@ -13,6 +13,7 @@ import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { GetServerSidePropsContext } from 'next';
 
 const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -37,15 +38,15 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
       description={metatags[0].description}
       segmentName="DealMirror"
       lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      specialOffer={'https://internxt.com/images/previewLink/LifetimePreviewLink.png'}
     >
       {openDialog ? (
-        <div className={`fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
+        <div className={'fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0'}>
           <div
             className={`absolute top-1/2 left-1/2
         z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
+            <X className={'absolute top-5 right-5 cursor-pointer'} size={24} onClick={() => setOpenDialog(false)} />
             <SignUp textContent={langJson.Auth} provider="DEALMIRROR" />
           </div>
         </div>
@@ -68,14 +69,14 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const deviceLang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/techcult.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require('@/assets/lang/en/metatags-descriptions.json');
+  const langJson = require('@/assets/lang/en/techcult.json');
+  const navbarLang = require('@/assets/lang/en/navbar.json');
+  const footerLang = require('@/assets/lang/en/footer.json');
 
   cookies.setReferralCookie(ctx);
 

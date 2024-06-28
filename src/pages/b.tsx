@@ -9,6 +9,7 @@ import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import cookies from '@/lib/cookies';
+import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 
 const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
@@ -51,7 +52,7 @@ const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLa
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -8,8 +8,9 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { GetServerSidePropsContext } from 'next';
 
-const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, deviceLang, navbarLang }) => {
+const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const discount = 0.25;
 
@@ -19,7 +20,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
       description={metatags[0].description}
       segmentName="Lifetime"
       lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      specialOffer={'https://internxt.com/images/previewLink/LifetimePreviewLink.png'}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
@@ -51,9 +52,8 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
@@ -66,7 +66,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       testimonialsJson,

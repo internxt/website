@@ -11,6 +11,7 @@ import BenefitsOfInternxtSection from '@/components/cloud-storage-for-education/
 import WhyChooseInternxtSection from '@/components/cloud-storage-for-education/WhyChooseInternxtSection';
 import ClaimYourDiscountSection from '@/components/cloud-storage-for-education/ClaimYourDiscountSection';
 import IntercomTicketCreatedBanner from '@/components/banners/IntercomTicketCreatedBanner';
+import { GetServerSidePropsContext } from 'next';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');
@@ -53,7 +54,7 @@ const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textCont
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale || ctx.defaultLocale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

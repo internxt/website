@@ -8,18 +8,16 @@ import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
+import { GetServerSidePropsContext } from 'next';
 
-export default function Footer({
-  textContent,
-  lang,
-  hideNewsletter,
-  darkMode,
-}: Readonly<{
+interface FooterProps {
   textContent: any;
   lang: string;
   hideNewsletter?: boolean;
   darkMode?: boolean;
-}>) {
+}
+
+export default function Footer({ textContent, lang, hideNewsletter, darkMode }: Readonly<FooterProps>): JSX.Element {
   const [platforms, setPlatforms] = useState<any>();
   const year = moment().format('YYYY');
 
@@ -276,7 +274,7 @@ export default function Footer({
                     </a>
 
                     <a
-                      href={`/whitepaper/internxt-white-paper.pdf`}
+                      href={'/whitepaper/internxt-white-paper.pdf'}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
@@ -425,7 +423,7 @@ export default function Footer({
                   <img
                     loading="lazy"
                     className="h-3.5"
-                    src={`/icons/social/X_logo.svg`}
+                    src={'/icons/social/X_logo.svg'}
                     draggable="false"
                     alt="twitter icon"
                   />
@@ -634,23 +632,23 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a href="/newsletter-subscribe" target="_top" className="hover:text-primary">
+                      <Link href="/newsletter-subscribe" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.newsletter}
-                      </a>
-                      <a href="https://drive.internxt.com/new" target="_blank">
+                      </Link>
+                      <Link href="https://drive.internxt.com/new" target="_blank">
                         {textContent.FooterSection.sections.join.signup}
-                      </a>
+                      </Link>
 
-                      <a href="https://drive.internxt.com/login" target="_blank">
+                      <Link href="https://drive.internxt.com/login" target="_blank">
                         {textContent.FooterSection.sections.join.login}
-                      </a>
+                      </Link>
 
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
+                      <Link href="https://github.com/internxt" target="_blank" rel="noreferrer">
                         {textContent.FooterSection.sections.join.github}
-                      </a>
-                      <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
+                      </Link>
+                      <Link href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
                         {textContent.FooterSection.sections.join.whitePaper}
-                      </a>
+                      </Link>
                       <Link href="/affiliates" target="_blank" legacyBehavior>
                         {textContent.FooterSection.sections.join.affiliates}
                       </Link>
@@ -678,14 +676,14 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a
+                      <Link
                         href={`https://blog.internxt.com/${lang === 'es' ? 'es/' : ''}`}
                         target="_blank"
                         rel="noreferrer"
                         className="hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.blog}
-                      </a>
+                      </Link>
                       <Link
                         href="/cloud-storage-comparison"
                         locale={lang}
@@ -789,7 +787,7 @@ export default function Footer({
                   <img
                     loading="lazy"
                     className="h-4"
-                    src={`/icons/social/X_logo.svg`}
+                    src={'/icons/social/X_logo.svg'}
                     draggable="false"
                     alt="twitter icon"
                   />
@@ -866,7 +864,7 @@ export default function Footer({
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   return {

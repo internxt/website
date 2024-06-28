@@ -2,7 +2,12 @@ import Image from 'next/legacy/image';
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
 
-const BetterTomorrowSection = ({ textContent, lang }) => {
+interface BetterTomorrowSectionProps {
+  textContent: Record<string, any>;
+  lang?: string;
+}
+
+const BetterTomorrowSection = ({ textContent, lang }: BetterTomorrowSectionProps): JSX.Element => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">

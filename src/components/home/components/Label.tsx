@@ -1,7 +1,12 @@
 import { CaretRight } from '@phosphor-icons/react';
 import { useRouter } from 'next/navigation';
 
-export const Label = ({ label, path }) => {
+interface LabelProps {
+  label: string;
+  path: string;
+}
+
+export const Label = ({ label, path }: LabelProps): JSX.Element => {
   const router = useRouter();
 
   return (

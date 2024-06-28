@@ -2,10 +2,12 @@ const PRICE_TABLE_ID = 'pricing-table';
 
 const CtaSection = ({ textContent }: { textContent: any }) => {
   function redirectToPricingTable() {
-    window.scrollTo({
-      top: document?.getElementById(PRICE_TABLE_ID)?.offsetTop! + 500,
-      behavior: 'smooth',
-    });
+    if (document.getElementById(PRICE_TABLE_ID)) {
+      window.scrollTo({
+        top: document.getElementById(PRICE_TABLE_ID)!.offsetTop + 500,
+        behavior: 'smooth',
+      });
+    }
   }
 
   return (
@@ -16,7 +18,7 @@ const CtaSection = ({ textContent }: { textContent: any }) => {
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className={`flex flex-col items-center space-y-4 text-center text-white`}>
+        <div className={'flex flex-col items-center space-y-4 text-center text-white'}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="w-full max-w-[573px] text-xl font-normal">{textContent.description}</p>
         </div>

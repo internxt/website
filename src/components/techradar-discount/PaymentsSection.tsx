@@ -2,7 +2,11 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from './PriceCard';
 import usePricing from '@/hooks/usePricing';
 
-const PaymentsSection = ({ textContent }) => {
+interface PaymentSectionProps {
+  textContent: Record<string, any>;
+}
+
+const PaymentsSection = ({ textContent }: PaymentSectionProps): JSX.Element => {
   const { products, currency, loadingCards } = usePricing();
 
   return (

@@ -3,7 +3,11 @@ import Header from '@/components/shared/Header';
 import { FiveStars } from '@/components/shared/StarsRate';
 import { useRouter } from 'next/router';
 
-export const TitleAndSurvey = ({ textContent }) => {
+interface TitleAndSurveyProps {
+  textContent: Record<string, any>;
+}
+
+export const TitleAndSurvey = ({ textContent }: TitleAndSurveyProps): JSX.Element => {
   const router = useRouter();
 
   const handleOnPlanButtonClicked = () => {
@@ -39,7 +43,7 @@ export const TitleAndSurvey = ({ textContent }) => {
           {/* // TODO: Manage the buttons logic */}
           <div className="flex flex-wrap gap-4 lg:flex-row">
             {textContent.buttonLabel.map((label) => (
-              <div className="flex w-full lg:w-max">
+              <div className="flex w-full lg:w-max" key={label}>
                 <Button className="!w-full lg:w-max" text={label} onClick={handleOnPlanButtonClicked} />
               </div>
             ))}

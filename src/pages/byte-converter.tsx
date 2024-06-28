@@ -13,6 +13,7 @@ import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/ToolsSection';
+import { GetServerSidePropsContext } from 'next';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -21,11 +22,11 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
 
   return (
     <>
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="schema-byte-converter" type="application/ld+json" strategy="beforeInteractive">
         {sm_faq(langJson.SchemaMarkupQuestions.faq)}
       </Script>
 
-      <Script type="application/ld+json" strategy="beforeInteractive">
+      <Script id="breadcrumb-byte-converter" type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Byte Converter', 'byte-converter')}
       </Script>
 
@@ -65,7 +66,7 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

@@ -1,6 +1,6 @@
 import zxcvbn from 'zxcvbn';
 
-export const getRandomInteger = (min, max) => {
+export const getRandomInteger = (min: number, max: number) => {
   const randomWords = new Uint32Array(1);
   window.crypto.getRandomValues(randomWords);
   min = Math.ceil(min);

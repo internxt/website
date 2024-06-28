@@ -16,6 +16,7 @@ import { CouponType } from '@/lib/types';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
 import { useRouter } from 'next/router';
+import { GetServerSidePropsContext } from 'next';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -71,7 +72,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

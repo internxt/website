@@ -6,6 +6,7 @@ import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/pricing/CtaSection';
+import { GetServerSidePropsContext } from 'next';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -31,7 +32,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
