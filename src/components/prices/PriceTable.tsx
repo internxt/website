@@ -238,7 +238,9 @@ export default function PriceTable({
                   priceBefore={
                     billingFrequency === Interval.Year && !coupon
                       ? products.individuals?.[Interval.Month][index].price * 12
-                      : product.price
+                      : coupon
+                      ? product.price
+                      : undefined
                   }
                   lang={lang}
                   currency={currency}
