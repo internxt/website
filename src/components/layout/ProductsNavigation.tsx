@@ -8,7 +8,9 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => {
   const paddingTop = isTopBannerDialogOpen ? 'lg:top-[120px]' : 'lg:top-[64px]';
 
   return (
-    <div className="absolute z-10 hidden h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center lg:top-[120px] lg:flex">
+    <div
+      className={`absolute z-10 hidden h-14 w-full flex-row items-center justify-start overflow-x-auto bg-cool-gray-5 px-6 sm:justify-center ${paddingTop} lg:flex`}
+    >
       <div className="mx-auto space-x-8 sm:space-x-6">
         <Link
           href="/drive"
@@ -31,6 +33,17 @@ const ProductsNavigation = ({ textContent, selectedItem, lang }) => {
         >
           {textContent.products.send}
         </a>
+
+        <Link
+          href="/vpn"
+          locale={lang}
+          passHref
+          className={`relative whitespace-nowrap py-1.5 px-4 font-semibold transition duration-150 ease-in-out ${
+            selectedItem === 'vpn' ? 'text-primary' : 'text-gray-60 hover:text-primary-dark'
+          } text-base`}
+        >
+          {textContent.products.vpn}
+        </Link>
       </div>
     </div>
   );
