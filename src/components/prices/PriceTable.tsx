@@ -17,7 +17,7 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
-  couponCode: CouponType;
+  couponCode?: CouponType;
   isTableInHomePage?: boolean;
   useSameCouponForAllPlans?: boolean;
   hideFreeCard?: boolean;
@@ -222,20 +222,19 @@ export default function PriceTable({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
             {products?.individuals?.[billingFrequency] &&
-              products.individuals[billingFrequency].map((product: any) => (
+              products.individuals[billingFrequency].map((product: any, index) => (
                 <PriceCard
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={Number(product.price * 0.25).toFixed(2) as unknown as number}
+                  price={product.price}
                   billingFrequency={billingFrequency}
                   popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
-                    // billingFrequency === Interval.Year
-                    //   ? products.individuals?.[Interval.Month][product.storage].price * 12
-                    //   : undefined
-                    product.price
+                    billingFrequency === Interval.Year
+                      ? products.individuals?.[Interval.Month][index].price * 12
+                      : undefined
                   }
                   lang={lang}
                   currency={currency}

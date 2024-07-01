@@ -14,9 +14,24 @@ import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/home/InfoSection';
-import { CouponType } from '@/lib/types';
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent, homeComponentsLang }) => {
+interface PricingProps {
+  metatagsDescriptions: Record<string, any>[];
+  navbarLang: Record<string, any>;
+  footerLang: Record<string, any>;
+  lang: string;
+  textContent: Record<string, any>;
+  homeComponentsLang: Record<string, any>;
+}
+
+const Pricing = ({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  lang,
+  textContent,
+  homeComponentsLang,
+}: PricingProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
 
@@ -35,12 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable
-          setSegmentPageName={setPageName}
-          lang={lang}
-          textContent={textContent.tableSection}
-          couponCode={CouponType.euro2024Sub}
-        />
+        <PriceTable setSegmentPageName={setPageName} lang={lang} textContent={textContent.tableSection} />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 

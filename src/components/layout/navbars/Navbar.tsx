@@ -38,7 +38,8 @@ const EXCLUDED_PATHS_FOR_RIBBON = [
   '/oystervpn',
   '/pccomponentes-products',
   '/lifetime_special',
-  '/lifetime/celebration',
+  '/lifetime/celebration/[filename]',
+  '/affiliates/[filename]',
 ];
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
@@ -53,7 +54,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
   const shouldModifyRibbonStyle = isRibbonHidden;
-  const shouldHideRibbon = true;
+  const shouldHideRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
 
   // SCROLL EFFECTS
   const handleScroll = () => setScrolled(window.pageYOffset > 0);
