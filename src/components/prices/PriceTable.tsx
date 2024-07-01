@@ -17,7 +17,7 @@ interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
   lang: string;
   textContent: any;
-  couponCode: CouponType;
+  couponCode?: CouponType;
   isTableInHomePage?: boolean;
   useSameCouponForAllPlans?: boolean;
   hideFreeCard?: boolean;
@@ -222,20 +222,23 @@ export default function PriceTable({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
             {products?.individuals?.[billingFrequency] &&
-              products.individuals[billingFrequency].map((product: any) => (
+              products.individuals[billingFrequency].map((product: any, index) => (
                 <PriceCard
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={Number(product.price * 0.25).toFixed(2) as unknown as number}
+                  price={
+                    discount && coupon
+                      ? (Number(product.price * discount).toFixed(2) as unknown as number)
+                      : product.price
+                  }
                   billingFrequency={billingFrequency}
                   popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
-                    // billingFrequency === Interval.Year
-                    //   ? products.individuals?.[Interval.Month][product.storage].price * 12
-                    //   : undefined
-                    product.price
+                    billingFrequency === Interval.Year && !coupon
+                      ? products.individuals?.[Interval.Month][index].price * 12
+                      : product.price
                   }
                   lang={lang}
                   currency={currency}
@@ -268,11 +271,11 @@ export default function PriceTable({
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      useSameCouponForAllPlans
+                      useSameCouponForAllPlans || coupon
                         ? (Number(product.price * 0.25).toFixed(0) as unknown as number)
-                        : LIFETIME_PRICES[currencyValue][product.storage]
+                        : product.price.split('.')[0]
                     }
-                    priceBefore={product.price.split('.')[0]}
+                    priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
