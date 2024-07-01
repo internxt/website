@@ -50,7 +50,12 @@ const Pricing = ({
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable setSegmentPageName={setPageName} lang={lang} textContent={textContent.tableSection} />
+        <PriceTable
+          setSegmentPageName={setPageName}
+          lang={lang}
+          textContent={textContent.tableSection}
+          switchDiscount={23}
+        />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 

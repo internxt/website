@@ -22,6 +22,7 @@ interface PriceTableProps {
   useSameCouponForAllPlans?: boolean;
   hideFreeCard?: boolean;
   discount?: number;
+  switchDiscount?: number;
 }
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
@@ -48,6 +49,7 @@ export default function PriceTable({
   useSameCouponForAllPlans,
   hideFreeCard,
   couponCode,
+  switchDiscount,
 }: Readonly<PriceTableProps>) {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const CampaignContent = require(`@/assets/lang/${lang}/pricing.json`);
@@ -189,9 +191,9 @@ export default function PriceTable({
               >
                 {contentText.billingFrequency.annually}
               </p>
-              {discount ? (
+              {switchDiscount ? (
                 <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
-                  {contentText.save} {discount}%
+                  {contentText.save} {switchDiscount}%
                 </p>
               ) : null}
             </div>
