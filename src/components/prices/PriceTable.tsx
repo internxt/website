@@ -227,14 +227,18 @@ export default function PriceTable({
                   planType="individual"
                   key={product.storage}
                   storage={product.storage}
-                  price={product.price}
+                  price={
+                    discount && coupon
+                      ? (Number(product.price * discount).toFixed(2) as unknown as number)
+                      : product.price
+                  }
                   billingFrequency={billingFrequency}
                   popular={product.storage === '10TB'}
                   cta={['checkout', product.priceId]}
                   priceBefore={
-                    billingFrequency === Interval.Year
+                    billingFrequency === Interval.Year && !coupon
                       ? products.individuals?.[Interval.Month][index].price * 12
-                      : undefined
+                      : product.price
                   }
                   lang={lang}
                   currency={currency}
@@ -267,11 +271,11 @@ export default function PriceTable({
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      useSameCouponForAllPlans
+                      useSameCouponForAllPlans || coupon
                         ? (Number(product.price * 0.25).toFixed(0) as unknown as number)
-                        : LIFETIME_PRICES[currencyValue][product.storage]
+                        : product.price.split('.')[0]
                     }
-                    priceBefore={product.price.split('.')[0]}
+                    priceBefore={coupon ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}

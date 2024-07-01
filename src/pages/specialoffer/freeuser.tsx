@@ -30,6 +30,7 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
         textContent={textContent.tableSection}
         couponCode={CouponType.freeUserCoupon}
         useSameCouponForAllPlans={true}
+        discount={0.25}
         hideFreeCard
       />
 
