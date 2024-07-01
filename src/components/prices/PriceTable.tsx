@@ -191,7 +191,7 @@ export default function PriceTable({
               >
                 {contentText.billingFrequency.annually}
               </p>
-              {switchDiscount ? (
+              {switchDiscount && !coupon ? (
                 <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
                   {contentText.save} {switchDiscount}%
                 </p>
