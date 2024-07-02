@@ -38,6 +38,8 @@ const IMAGES_PER_PATH = {
   },
 };
 
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa'];
+
 const LifetimeCelebrationTemplate = ({
   lang,
   pathname,
@@ -51,6 +53,8 @@ const LifetimeCelebrationTemplate = ({
   const router = useRouter();
   const filename = pathname.split('/').pop();
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${filename}`);
+
+  const currencySpecified = PATHS_WITH_CURRENCY_SPECIFIED.includes(filename) ? 'US' : undefined;
 
   useEffect(() => {
     if (!selectedPathName) {
@@ -83,6 +87,7 @@ const LifetimeCelebrationTemplate = ({
         discount={discount}
         lang={lang}
         percent={'80%'}
+        currencySpecified={currencySpecified}
         couponCode={CouponType.IndependenceDayItaly}
         lifetimeMode="celebration"
       />

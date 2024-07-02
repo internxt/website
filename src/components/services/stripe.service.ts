@@ -21,8 +21,8 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-async function getPrices(isEur?: boolean) {
-  const currency = await getCurrency(isEur);
+async function getPrices(currencySpecified?: string) {
+  const currency = await getCurrency(currencySpecified);
   const data = await fetchProductData(currency);
   if (data) {
     const transformedData = transformProductData(data);
@@ -30,9 +30,9 @@ async function getPrices(isEur?: boolean) {
   }
 }
 
-async function getCurrency(isEur?: boolean): Promise<string> {
-  if (isEur) {
-    return 'eur';
+async function getCurrency(currencySpecified?: string): Promise<string> {
+  if (currencySpecified) {
+    return currencySpecified;
   }
   try {
     const currencyResponse = await currencyService.filterCurrencyByCountry();

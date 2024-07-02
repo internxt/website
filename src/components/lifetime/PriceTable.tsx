@@ -12,6 +12,7 @@ interface PriceTableProps {
   discount?: number;
   couponCode?: CouponType;
   lifetimeMode?: LifetimeMode;
+  currencySpecified?: string;
   onButtonClicked?: () => void;
 }
 
@@ -28,10 +29,18 @@ const DISC_LIFETIME_PRICES = {
   },
 };
 
-const PriceTable: React.FC<PriceTableProps> = ({ lang, couponCode, discount, lifetimeMode, onButtonClicked }) => {
+const PriceTable: React.FC<PriceTableProps> = ({
+  lang,
+  couponCode,
+  discount,
+  lifetimeMode,
+  currencySpecified,
+  onButtonClicked,
+}) => {
   const [specialCoupons, setSpecialCoupons] = useState();
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
     couponCode: couponCode,
+    currencySpecified: currencySpecified,
   });
 
   useEffect(() => {
