@@ -6,6 +6,7 @@ import { CouponType } from '@/lib/types';
 
 type UsePricingOptions = {
   couponCode?: CouponType;
+  currencySpecified?: string;
 };
 
 interface UseStripeProductsAndCurrencyResponse {
@@ -41,7 +42,7 @@ const reducer = (state: any, action: ActionType) => {
 };
 
 function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurrencyResponse {
-  const { couponCode } = options;
+  const { couponCode, currencySpecified } = options;
   const initialState = {
     products: undefined,
     loadingCards: true,
@@ -54,24 +55,21 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
 
   const fetchData = async () => {
     try {
-      const prices = await stripeService.getPrices();
+      const res = await currencyService.filterCurrencyByCountry(currencySpecified);
+      const prices = await stripeService.getPrices(res.currencyValue);
+
       dispatch({ type: 'SET_PRODUCTS', payload: prices });
       dispatch({ type: 'SET_LOADING_CARDS', payload: false });
-    } catch (err) {
-      try {
-        const res = await stripeService.getPrices(true);
-        dispatch({ type: 'SET_PRODUCTS', payload: res });
-        dispatch({ type: 'SET_LOADING_CARDS', payload: false });
-      } catch (error) {
-        console.error('Error al obtener precios:', error);
-      }
-    }
-
-    try {
-      const res = await currencyService.filterCurrencyByCountry();
       dispatch({ type: 'SET_CURRENCY', payload: res.currency });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
+      try {
+        const res = await stripeService.getPrices('eur');
+        dispatch({ type: 'SET_PRODUCTS', payload: res });
+        dispatch({ type: 'SET_LOADING_CARDS', payload: false });
+      } catch (error) {
+        console.error('Error getting prices:', error);
+      }
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: 'eur' });
     }

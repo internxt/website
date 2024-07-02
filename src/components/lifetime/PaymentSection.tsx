@@ -14,6 +14,7 @@ interface PaymentSectionProps {
   couponCode?: CouponType;
   percent?: string;
   lifetimeMode?: LifetimeMode;
+  currencySpecified?: string;
   onButtonClicked?: () => void;
 }
 
@@ -24,6 +25,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
   discount,
   percent,
   lifetimeMode,
+  currencySpecified,
   onButtonClicked,
 }) => {
   const features = [
@@ -75,6 +77,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
           discount={discount}
           couponCode={couponCode}
           lifetimeMode={lifetimeMode}
+          currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}
         />
       </div>
