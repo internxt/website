@@ -11,8 +11,8 @@ export const priceValue = {
 };
 
 const getCountry = async () => {
-  const countryCode = await axios.get(`${window.origin}/api/get-country`);
-  return countryCode;
+  const { data } = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
+  return data;
 };
 
 const filterCurrencyByCountry = async (currencySpecified?: string) => {

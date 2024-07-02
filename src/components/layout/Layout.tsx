@@ -81,7 +81,7 @@ LayoutProps) {
   useEffect(() => {
     let ip;
     axios
-      .get(`${window.origin}/api/get-country`)
+      .get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`)
       .then((res) => {
         ip = res.data.ip;
       })
