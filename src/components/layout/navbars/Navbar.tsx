@@ -19,6 +19,7 @@ export interface NavbarProps {
   fixed?: boolean;
   hide?: boolean;
   isLinksHidden?: boolean;
+  hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
   mode?: 'subscription' | 'payment';
@@ -207,7 +208,9 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-              <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
+              {!props.hideNavbar ? (
+                <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
+              ) : undefined}
             </div>
             {!props.isLinksHidden && (
               <div className="lg:hidden">

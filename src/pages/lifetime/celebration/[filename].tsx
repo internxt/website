@@ -72,7 +72,7 @@ const LifetimeCelebrationTemplate = ({
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
+      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
 
       <HeroSection
         textContent={langJson.HeroSection.celebration[filename]}
