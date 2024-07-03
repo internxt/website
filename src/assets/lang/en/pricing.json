@@ -12,6 +12,16 @@
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
+  "HeroSectionAlternative": {
+    "title": "How much online storage do you need?",
+    "description": "Select amount to see plans that suit your needs.",
+    "features": [
+      "Most secure cloud storage",
+      "Anonymous account creation",
+      "Military-grade encryption",
+      "You data is not being sold"
+    ]
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Save 75%",

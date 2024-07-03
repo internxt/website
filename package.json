@@ -18,8 +18,11 @@
   },
   "dependencies": {
     "@coderosh/images-to-pdf": "^2.1.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
+    "@mui/material": "^5.15.21",
     "@phosphor-icons/react": "^2.1.5",
     "@sendgrid/mail": "^8.1.0",
     "@types/offscreencanvas": "^2019.7.3",
@@ -55,7 +58,7 @@
     "react-parallax": "^3.3.0",
     "react-select": "^5.7.0",
     "react-toastify": "^9.1.1",
-    "react-tooltip": "^5.26.3",
+    "react-tooltip": "^5.27.0",
     "tesseract.js": "^5.0.5",
     "useragent": "^2.3.0",
     "zxcvbn": "^4.4.2"
