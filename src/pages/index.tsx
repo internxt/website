@@ -12,7 +12,6 @@ import FAQSection from '@/components/shared/FaqSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
-import { CouponType } from '@/lib/types';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
 import { useRouter } from 'next/router';
@@ -50,13 +49,7 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
 
-      <PriceTable
-        setSegmentPageName={() => {}}
-        lang={lang}
-        textContent={langJson.tableSection}
-        isTableInHomePage
-        couponCode={CouponType.euro2024Sub}
-      />
+      <PriceTable setSegmentPageName={() => {}} lang={lang} textContent={langJson.tableSection} isTableInHomePage />
 
       <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
 
