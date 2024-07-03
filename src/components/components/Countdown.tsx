@@ -16,8 +16,8 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
   const countdowns = [
     {
       id: 'mcReset',
-      timestamp: new Date('Oct 11, 2019 20:00:00').getTime(),
-      interval: 2 * DAYS,
+      timestamp: new Date('Oct 11, 2019 00:00:00').getTime(),
+      interval: DAYS,
     },
   ];
 

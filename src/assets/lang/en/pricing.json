@@ -22,6 +22,10 @@
       "You data is not being sold"
     ]
   },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Get 2TB Secure Cloud Storage at ", "blue": "75% OFF" },
+    "offerEnds": "Offer ends in:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Save 75%",
