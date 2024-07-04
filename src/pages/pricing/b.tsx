@@ -120,10 +120,8 @@ const PricingAlternative = ({
       if (buttonRef.current) {
         const rect = buttonRef.current.getBoundingClientRect();
         if (rect.bottom <= window.innerHeight - 96) {
-          console.log('SI');
           setIsButtonFixed(true);
         } else if (rect.top >= window.innerHeight - 96) {
-          console.log('SI');
           setIsButtonFixed(false);
         }
       }
