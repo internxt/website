@@ -1,7 +1,8 @@
+import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
+
 import RevealY from '@/components/components/RevealY';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
-import { HTMLAttributeAnchorTarget } from 'react';
 
 const InfoSection = ({
   textContent,
@@ -11,6 +12,8 @@ const InfoSection = ({
   redirect = '/about',
   cards,
   target,
+  hideCtaArrow,
+  buttonComponent,
 }: {
   textContent: any;
   lang: string;
@@ -19,9 +22,11 @@ const InfoSection = ({
   backgroundColor?: string;
   redirect?: string;
   target?: HTMLAttributeAnchorTarget;
+  hideCtaArrow?: boolean;
+  buttonComponent?: ReactNode;
 }) => {
   return (
-    <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
+    <section className={`overflow-hidden ${backgroundColor ?? ''} `}>
       <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
         <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
@@ -30,15 +35,18 @@ const InfoSection = ({
             <Link
               href={redirect}
               target={target}
-              className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
+              className={
+                'flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline'
+              }
               hrefLang={lang}
             >
               <p>{textContent.cta}</p>
-              <CaretRight size={16} weight="bold" />
+              {!hideCtaArrow ? <CaretRight size={16} weight="bold" /> : undefined}
             </Link>
           )}
+          {buttonComponent}
         </div>
-        <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
+        <RevealY id="info-section" className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {cards.map((card) => (
             <div
               key={card.title}

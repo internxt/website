@@ -1,6 +1,4 @@
-import usePricing from '@/hooks/usePricing';
 import PriceCard from '../PriceCard';
-import { useEffect, useState } from 'react';
 import Countdown from '@/components/components/Countdown';
 import { formatText } from '@/components/utils/format-text';
 
@@ -8,6 +6,9 @@ interface PriceTableForAlternativePricingProps {
   textContent: Record<string, any>;
   selectedPlanStorage: string;
   lang: string;
+  filteredProducts: any;
+  currency: string;
+  currencyValue: string;
 }
 
 const CARD_LABEL = {
@@ -20,21 +21,10 @@ export const PriceTableForAlternativePricing = ({
   textContent,
   selectedPlanStorage,
   lang,
+  filteredProducts,
+  currency,
+  currencyValue,
 }: PriceTableForAlternativePricingProps) => {
-  const [filteredProducts, setFilteredProducts] = useState<any[]>();
-
-  const { products, currency, currencyValue } = usePricing();
-
-  const joinProducts = products?.individuals && Object.values(products?.individuals).flat();
-
-  useEffect(() => {
-    const productsFilteredByStorage =
-      joinProducts &&
-      joinProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
-
-    setFilteredProducts(productsFilteredByStorage);
-  }, [selectedPlanStorage, products]);
-
   return (
     <section className="overflow-hidden bg-gray-1 py-20 px-5">
       <div id={'priceTable'} className="flex flex-col items-center gap-10">

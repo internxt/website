@@ -1,5 +1,7 @@
 import { Fragment } from 'react';
 import { UilCheck, UilMinus } from '@iconscout/react-unicons';
+import Link from 'next/link';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 const TableSection = ({ textContent }) => {
   const competitors = [
@@ -582,15 +584,15 @@ const TableSection = ({ textContent }) => {
                 <tr className="h-0">
                   <td className="p-0" />
                   <td className="relative p-0">
-                    <button
-                      onClick={() => {
-                        window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
-                      }}
+                    <Link
+                      href={SIGNUP_DRIVE_WEB}
+                      target="_blanck"
+                      rel="noopener noreferrer"
                       id="get-started-link"
                       className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
-                    </button>
+                    </Link>
                   </td>
                 </tr>
               </tbody>

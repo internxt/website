@@ -8,9 +8,11 @@ import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { IconsSection } from '@/components/shared/sections/IconsSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import usePricing from '@/hooks/usePricing';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
 interface PricingAlternativeProps {
   metaDescriptions: Record<string, any>;
@@ -20,7 +22,7 @@ interface PricingAlternativeProps {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const planRange = {
+const PLAN_RANGE: { [key: string]: string | string[] } = {
   '200GB': ['50GB', '100GB', '200GB'],
   '2TB': ['500GB', '1TB', '2TB'],
   '5TB': '4TB',
@@ -28,46 +30,16 @@ const planRange = {
 };
 
 const getPlan = (valueLabel: string): string => {
-  if (planRange['200GB'].includes(valueLabel)) {
-    return '200GB';
-  } else if (planRange['2TB'].includes(valueLabel)) {
-    return '2TB';
-  } else if (valueLabel === planRange['5TB']) {
-    return '5TB';
-  } else if (planRange['10TB'].includes(valueLabel)) {
-    return '10TB';
-  } else {
-    return 'Unknown plan';
-  }
+  const entry = Object.entries(PLAN_RANGE).find(([key, value]) => {
+    if (Array.isArray(value)) {
+      return value.includes(valueLabel);
+    }
+    return value === valueLabel;
+  });
+  return entry ? entry[0] : 'Unknown plan';
 };
 
-const PricingAlternative = ({
-  metaDescriptions,
-  navbarContent,
-  textContent,
-  footerContent,
-  lang,
-}: PricingAlternativeProps) => {
-  const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>();
-
-  const shouldShowAllComponents = !!selectedPlanStorage;
-
-  const metatagsDescriptions = metaDescriptions.filter((meta) => meta.id === 'pricing')[0];
-  const locale = lang as string;
-
-  useEffect(() => {
-    if (selectedPlanStorage) {
-      const interval = setTimeout(() => (window.location.href = '#priceTable'), 500);
-
-      return () => clearInterval(interval);
-    }
-  }, [selectedPlanStorage]);
-
-  const handleCalculateStorageButtonClick = (value: string) => {
-    const plan = getPlan(value);
-    setSelectedPlanStorage(plan);
-  };
-
+const getCardsContent = (textContent) => {
   const cardsData = [
     {
       icon: ShieldCheck,
@@ -114,6 +86,76 @@ const PricingAlternative = ({
     },
   ];
 
+  return {
+    cardsData,
+    iconsSectionData,
+  };
+};
+
+const PricingAlternative = ({
+  metaDescriptions,
+  navbarContent,
+  textContent,
+  footerContent,
+  lang,
+}: PricingAlternativeProps) => {
+  const { products, currency, currencyValue } = usePricing();
+
+  const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>();
+  const [filteredProducts, setFilteredProducts] = useState<any[]>();
+  const [isButtonFixed, setIsButtonFixed] = useState(false);
+
+  const buttonRef = useRef<HTMLDivElement>(null);
+  const metatagsDescriptions = metaDescriptions.filter((meta) => meta.id === 'pricing')[0];
+
+  const shouldShowAllComponents = !!selectedPlanStorage;
+  const locale = lang as string;
+
+  const { cardsData, iconsSectionData } = getCardsContent(textContent);
+
+  const joinProducts = products?.individuals && Object.values(products?.individuals).flat();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (buttonRef.current) {
+        const rect = buttonRef.current.getBoundingClientRect();
+        if (rect.bottom <= window.innerHeight - 96) {
+          console.log('SI');
+          setIsButtonFixed(true);
+        } else if (rect.top >= window.innerHeight - 96) {
+          console.log('SI');
+          setIsButtonFixed(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (selectedPlanStorage) {
+      const interval = setTimeout(() => (window.location.href = '#priceTable'), 200);
+
+      return () => clearInterval(interval);
+    }
+  }, [selectedPlanStorage]);
+
+  useEffect(() => {
+    const productsFilteredByStorage =
+      joinProducts &&
+      joinProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
+
+    setFilteredProducts(productsFilteredByStorage);
+  }, [selectedPlanStorage, products]);
+
+  const handleCalculateStorageButtonClick = (value: string) => {
+    const plan = getPlan(value);
+    setSelectedPlanStorage(plan);
+  };
+
   return (
     <Layout title={metatagsDescriptions.title} description={metatagsDescriptions.description}>
       <Navbar lang={locale} textContent={navbarContent} fixed cta={['default']} />
@@ -129,9 +171,38 @@ const PricingAlternative = ({
             textContent={textContent.PriceTableForAlternativePricing}
             selectedPlanStorage={selectedPlanStorage}
             lang={locale}
+            currency={currency}
+            currencyValue={currencyValue}
+            filteredProducts={filteredProducts}
           />
 
-          <InfoSection textContent={textContent.InfoSection} lang={locale} cards={cardsData} redirect="#priceTable" />
+          <InfoSection
+            textContent={textContent.InfoSection}
+            lang={locale}
+            cards={cardsData}
+            withoutCta
+            hideCtaArrow
+            redirect="#priceTable"
+            buttonComponent={
+              <>
+                <div ref={buttonRef} className=""></div>
+                <div
+                  className={`${
+                    isButtonFixed ? 'fixed bottom-0 z-50 w-full bg-white bg-opacity-90 py-5' : 'relative'
+                  } flex justify-center`}
+                >
+                  <div className="flex">
+                    <Link
+                      href={'#priceTable'}
+                      className="flex w-max justify-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+                    >
+                      {textContent.InfoSection.cta}
+                    </Link>
+                  </div>
+                </div>
+              </>
+            }
+          />
 
           <IconsSection iconsAndTitlesData={iconsSectionData} />
 
