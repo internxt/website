@@ -4,11 +4,13 @@ import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { PriceTableForAlternativePricing } from '@/components/prices/alternative/PriceTableForAlternativePricing';
 import { RangeSliderHeroSection } from '@/components/prices/alternative/RangeSliderHeroSection';
+import { stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { IconsSection } from '@/components/shared/sections/IconsSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
+import { CouponType } from '@/lib/types';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
@@ -99,7 +101,10 @@ const PricingAlternative = ({
   footerContent,
   lang,
 }: PricingAlternativeProps) => {
-  const { products, currency, currencyValue } = usePricing();
+  const [allCoupons, setAllCoupons] = useState<any>();
+  const { products, coupon, currency, currencyValue } = usePricing({
+    couponCode: CouponType.euro2024Sub,
+  });
 
   const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>();
   const [filteredProducts, setFilteredProducts] = useState<any[]>();
@@ -142,6 +147,13 @@ const PricingAlternative = ({
   }, [selectedPlanStorage]);
 
   useEffect(() => {
+    stripeService.getLifetimeCoupons().then((coupons) => {
+      setAllCoupons({
+        lifetime: coupons,
+        subscription: coupon,
+      });
+    });
+
     const productsFilteredByStorage =
       joinProducts &&
       joinProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
@@ -168,7 +180,9 @@ const PricingAlternative = ({
           <PriceTableForAlternativePricing
             textContent={textContent.PriceTableForAlternativePricing}
             selectedPlanStorage={selectedPlanStorage}
+            coupons={allCoupons}
             lang={locale}
+            discount={0.25}
             currency={currency}
             currencyValue={currencyValue}
             filteredProducts={filteredProducts}
