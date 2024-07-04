@@ -109,6 +109,29 @@
       }
     ]
   },
+  "InfoSection": {
+    "title": "Sicherer Cloud-Speicher mit unübertroffener Privatsphäre",
+    "description": "Was macht Internxt so besonders? Wir sind ein engagiertes Team von Fachleuten, das sich vollständig dem Schutz deiner Online-Privatsphäre verschrieben hat. Alles, was wir tun und jede Entscheidung, die wir treffen, zielt darauf ab, deine Daten vor Missbrauch zu schützen.",
+    "cta": "Das Internxt-Team kennenlernen",
+    "cards": [
+      {
+        "title": "Privatsphäre durch Design",
+        "description": "Wir speichern keine Passwörter oder Benutzerdaten und alle deine Daten werden während der Übertragung verschlüsselt. Internxt gibt dir die volle Kontrolle über deine Dateien. Deine Daten sind deine Angelegenheit. Den Schutz übernehmen wir."
+      },
+      {
+        "title": "Kompromisslose Sicherheit",
+        "description": "Deine Dateien werden fragmentiert und vor Verlassen deines Geräts end-to-end verschlüsselt. Dank der Zero-Knowledge AES-256-Verschlüsselung hast nur du Zugriff auf deine Daten."
+      },
+      {
+        "title": "Open Source und transparent",
+        "description": "Wir sind stolz auf das, was wir tun, daher ist unser Code auf GitHub öffentlich einsehbar und kann von jedem persönlich überprüft, geprüft und verifiziert werden. Wir haben nichts zu verbergen außer deinen Daten."
+      },
+      {
+        "title": "Unabhängig verifiziert",
+        "description": "Wir sind vollständig DSGVO-konform und zu 100% sicher, aber verlasse dich nicht nur auf unser Wort. Internxt wurde unabhängig geprüft und verifiziert von Securitum, dem führenden Unternehmen für Penetrationstests in Europa."
+      }
+    ]
+  },
   "FirstWhatWeDoSection": {
     "card1": {
       "title": "Privatsphäre im Kern",

@@ -140,6 +140,29 @@
       "cta": "Crear cuenta gratuita"
     }
   },
+  "InfoSection": {
+    "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
+    "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo de profesionales completamente dedicados a protegerte. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos para que no sean explotados.",
+    "cta": "Presentación del equipo de Internxt",
+    "cards": [
+      {
+        "title": "Privado por diseño",
+        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt te da el control total de tus archivos. Tú gestionas tus datos y nosotros los protegemos."
+      },
+      {
+        "title": "Seguridad sin compromisos",
+        "description": "Tus archivos se cifran de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Cumplimos totalmente con GDPR y somos 100% seguros, pero no te fíes de nuestra palabra. Internxt ha sido auditada y verificada de forma independiente por la empresa líder en Europa en pruebas de penetración, Securitum."
+      }
+    ]
+  },
   "BestStorageSection": {
     "title": "Construido para el futuro",
     "description": "Queremos construir una World Wide Web mejor, que sea justa, segura y equitativa para todos. La batalla por el futuro de la privacidad en Internet es dura, y nosotros estamos en primera línea",

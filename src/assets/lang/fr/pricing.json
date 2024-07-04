@@ -135,6 +135,29 @@
       "cta": "Créer un compte gratuit"
     }
   },
+  "InfoSection": {
+    "title": "Stockage en nuage sécurisé avec une confidentialité incomparable",
+    "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiés à la protection de vos données en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données contre l'exploitation.",
+    "cta": "Présentation de l'équipe d'Internxt",
+    "cards": [
+      {
+        "title": "Privé par conception",
+        "description": "Nous ne stockons pas les mots de passe ou les données des utilisateurs et toutes vos données sont cryptées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vous gérez vos données et nous les protégeons."
+      },
+      {
+        "title": "Sécurité sans compromis",
+        "description": "Vos fichiers sont fragmentés et chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance nulle, vous êtes le seul à avoir accès à vos données."
+      },
+      {
+        "title": "Open source et transparent",
+        "description": "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien d'autre à cacher que vos données."
+      },
+      {
+        "title": "Vérifié de manière indépendante",
+        "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+      }
+    ]
+  },
   "BestStorageSection": {
     "title": "Construit pour l'avenir",
     "description": "Nous voulons construire un meilleur World Wide Web, qui soit juste, sûr et équitable pour tous. La bataille fait rage pour l'avenir de la protection de la vie privée sur l'internet, et nous sommes en première ligne",
