@@ -13,6 +13,20 @@
       "description": "Angebot gültig für ein Jahr. Der Plan verlängert sich zum nicht reduzierten Preis für das folgende Jahr."
     }
   },
+  "HeroSectionAlternative": {
+    "title": "Wie viel Online-Speicherplatz benötigen Sie?",
+    "description": "Wählen Sie die Menge aus, um die Pläne zu sehen, die Ihren Bedürfnissen entsprechen.",
+    "features": [
+      "Der sicherste Cloud-Speicher",
+      "Anonyme Kontoerstellung",
+      "Verschlüsselung auf Militärniveau",
+      "Ihre Daten werden nicht verkauft"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Erhalten Sie ${{storage}} sicheren Cloud-Speicher mit ", "blue": "75% Rabatt" },
+    "offerEnds": "Das Angebot endet in:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Spare 75%",

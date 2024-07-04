@@ -12,6 +12,20 @@
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
+  "HeroSectionAlternative": {
+    "title": "De combien de stockage en ligne avez-vous besoin ?",
+    "description": "Sélectionnez la quantité pour voir les plans qui répondent à vos besoins.",
+    "features": [
+      "Le stockage cloud le plus sécurisé",
+      "Création de compte anonyme",
+      "Chiffrement de grade militaire",
+      "Vos données ne sont pas vendues"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Obtenez ${{storage}} Go de stockage cloud sécurisé avec ", "blue": "75% de réduction" },
+    "offerEnds": "L'offre se termine dans:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Économisez 75%",

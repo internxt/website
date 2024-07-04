@@ -2,6 +2,7 @@ import usePricing from '@/hooks/usePricing';
 import PriceCard from '../PriceCard';
 import { useEffect, useState } from 'react';
 import Countdown from '@/components/components/Countdown';
+import { formatText } from '@/components/utils/format-text';
 
 interface PriceTableForAlternativePricingProps {
   textContent: Record<string, any>;
@@ -37,8 +38,11 @@ export const PriceTableForAlternativePricing = ({
   return (
     <section className="overflow-hidden bg-gray-1 py-20 px-5">
       <div id={'priceTable'} className="flex flex-col items-center gap-10">
-        <p className="max-w-[820px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
-          {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
+        <p className="max-w-[850px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
+          {formatText(textContent.title.normal, {
+            storage: selectedPlanStorage,
+          })}{' '}
+          <span className="text-primary">{textContent.title.blue}</span>
         </p>
 
         <div className="flex flex-row items-center gap-2.5 rounded-full bg-primary/7 px-3 py-1.5">

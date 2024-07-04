@@ -12,6 +12,20 @@
       "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
     }
   },
+  "HeroSectionAlternative": {
+    "title": "Quanta memoria online ti serve?",
+    "description": "Seleziona la quantità per vedere i piani che si adattano alle tue esigenze.",
+    "features": [
+      "Il cloud storage più sicuro",
+      "Creazione di account anonimo",
+      "Crittografia di livello militare",
+      "I tuoi dati non vengono venduti"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Ottieni ${{storage}} di cloud storage sicuro con ", "blue": "75% di sconto" },
+    "offerEnds": "L'offerta termina in:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Risparmia 75%",

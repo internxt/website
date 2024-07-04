@@ -23,7 +23,7 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Get 2TB Secure Cloud Storage at ", "blue": "75% OFF" },
+    "title": { "normal": "Get ${{storage}} Secure Cloud Storage at ", "blue": "75% OFF" },
     "offerEnds": "Offer ends in:"
   },
   "tableSection": {
@@ -156,7 +156,7 @@
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Introducing the Internxt Team",
+    "cta": "Select plan",
     "cards": [
       {
         "title": "Private by design",

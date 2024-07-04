@@ -1,13 +1,16 @@
 import RevealY from '@/components/components/RevealY';
 import { CaretRight } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { HTMLAttributeAnchorTarget } from 'react';
 
 const InfoSection = ({
   textContent,
   lang,
   withoutCta,
   backgroundColor,
-  redirect,
+  redirect = '/about',
   cards,
+  target,
 }: {
   textContent: any;
   lang: string;
@@ -15,6 +18,7 @@ const InfoSection = ({
   withoutCta?: boolean;
   backgroundColor?: string;
   redirect?: string;
+  target?: HTMLAttributeAnchorTarget;
 }) => {
   return (
     <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
@@ -23,18 +27,15 @@ const InfoSection = ({
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           {!withoutCta && (
-            <button
+            <Link
+              href={redirect}
+              target={target}
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
-              onClick={() => {
-                window.open(
-                  `${window.location.origin}${lang === 'en' ? '' : `/${lang}`}/${redirect ? redirect : 'about'}`,
-                  '_blank',
-                );
-              }}
+              hrefLang={lang}
             >
               <p>{textContent.cta}</p>
               <CaretRight size={16} weight="bold" />
-            </button>
+            </Link>
           )}
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">

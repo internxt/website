@@ -12,6 +12,21 @@
       "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
+
+  "HeroSectionAlternative": {
+    "title": "¿Cuánto almacenamiento en línea necesitas?",
+    "description": "Selecciona la cantidad para ver los planes que se adaptan a tus necesidades.",
+    "features": [
+      "El almacenamiento en la nube más seguro",
+      "Creación de cuenta anónima",
+      "Cifrado de grado militar",
+      "Tus datos no se venden"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Obtén ${{storage}} de almacenamiento seguro con un ", "blue": "75% de descuento" },
+    "offerEnds": "La oferta termina en:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Ahorra 75%",

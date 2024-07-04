@@ -10,7 +10,7 @@ import { IconsSection } from '@/components/shared/sections/IconsSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PricingAlternativeProps {
   metaDescriptions: Record<string, any>;
@@ -54,6 +54,14 @@ const PricingAlternative = ({
 
   const metatagsDescriptions = metaDescriptions.filter((meta) => meta.id === 'pricing')[0];
   const locale = lang as string;
+
+  useEffect(() => {
+    if (selectedPlanStorage) {
+      const interval = setTimeout(() => (window.location.href = '#priceTable'), 500);
+
+      return () => clearInterval(interval);
+    }
+  }, [selectedPlanStorage]);
 
   const handleCalculateStorageButtonClick = (value: string) => {
     const plan = getPlan(value);
@@ -123,7 +131,7 @@ const PricingAlternative = ({
             lang={locale}
           />
 
-          <InfoSection textContent={textContent.InfoSection} lang={locale} cards={cardsData} />
+          <InfoSection textContent={textContent.InfoSection} lang={locale} cards={cardsData} redirect="#priceTable" />
 
           <IconsSection iconsAndTitlesData={iconsSectionData} />
 

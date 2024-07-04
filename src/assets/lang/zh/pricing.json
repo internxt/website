@@ -13,6 +13,15 @@
       "description": "优惠有效期为一年。 计划将在下一年以非折扣价续订。"
     }
   },
+  "HeroSectionAlternative": {
+    "title": "您需要多少在线存储空间？",
+    "description": "选择数量以查看适合您需求的计划。",
+    "features": ["最安全的云存储", "匿名账户创建", "军用级加密", "您的数据不会被出售"]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "获取 ${{storage}} 安全云存储，享受 ", "blue": "75% 折扣" },
+    "offerEnds": "优惠结束于:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "节省75%",
