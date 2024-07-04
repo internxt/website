@@ -4,9 +4,9 @@ import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/annual/HeroSection';
 import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
-import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/pricing/CtaSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');

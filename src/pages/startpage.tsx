@@ -1,17 +1,18 @@
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 
-import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');

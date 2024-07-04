@@ -2,7 +2,6 @@ import Script from 'next/script';
 
 import TableSection from '@/components/comparison/TableSection';
 import FeatureSection from '@/components/comparison/FeatureSection';
-import InfoSection from '@/components/home/InfoSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -16,6 +15,7 @@ import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
