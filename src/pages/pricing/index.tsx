@@ -32,23 +32,23 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const cardsData = [
     {
       icon: ShieldCheck,
-      title: textContent.cards[0].title,
-      description: textContent.cards[0].description,
+      title: textContent.InfoSection.cards[0].title,
+      description: textContent.InfoSection.cards[0].description,
     },
     {
       icon: LockKey,
-      title: textContent.cards[1].title,
-      description: textContent.cards[1].description,
+      title: textContent.InfoSection.cards[1].title,
+      description: textContent.InfoSection.cards[1].description,
     },
     {
       icon: Eye,
-      title: textContent.cards[2].title,
-      description: textContent.cards[2].description,
+      title: textContent.InfoSection.cards[2].title,
+      description: textContent.InfoSection.cards[2].description,
     },
     {
       icon: Fingerprint,
-      title: textContent.cards[3].title,
-      description: textContent.cards[3].description,
+      title: textContent.InfoSection.cards[3].title,
+      description: textContent.InfoSection.cards[3].description,
     },
   ];
 
