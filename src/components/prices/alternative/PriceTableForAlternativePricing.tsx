@@ -26,8 +26,8 @@ export const PriceTableForAlternativePricing = ({
   currencyValue,
 }: PriceTableForAlternativePricingProps) => {
   return (
-    <section className="overflow-hidden bg-gray-1 py-20 px-5">
-      <div id={'priceTable'} className="flex flex-col items-center gap-10">
+    <section id={'priceTable'} className="overflow-hidden bg-gray-1 py-20 px-5">
+      <div className="flex flex-col items-center gap-10">
         <p className="max-w-[850px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
           {formatText(textContent.title.normal, {
             storage: selectedPlanStorage,
@@ -46,7 +46,7 @@ export const PriceTableForAlternativePricing = ({
               planType="individual"
               key={product.interval}
               storage={product.storage}
-              price={product.price}
+              price={product.price.replace(/\.00$/, '')}
               label={CARD_LABEL[product.interval]}
               billingFrequency={product.interval}
               popular={product.interval === 'lifetime'}
