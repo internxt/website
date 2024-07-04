@@ -5,7 +5,10 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { PriceTableForAlternativePricing } from '@/components/prices/alternative/PriceTableForAlternativePricing';
 import { RangeSliderHeroSection } from '@/components/prices/alternative/RangeSliderHeroSection';
 import CtaSection from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import { IconsSection } from '@/components/shared/sections/IconsSection';
+import InfoSection from '@/components/shared/sections/InfoSection';
+import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import { useState } from 'react';
 
@@ -54,9 +57,54 @@ const PricingAlternative = ({
 
   const handleCalculateStorageButtonClick = (value: string) => {
     const plan = getPlan(value);
-    console.log(`Selected plan: ${plan}`);
     setSelectedPlanStorage(plan);
   };
+
+  const cardsData = [
+    {
+      icon: ShieldCheck,
+      title: textContent.InfoSection.cards[0].title,
+      description: textContent.InfoSection.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: textContent.InfoSection.cards[1].title,
+      description: textContent.InfoSection.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: textContent.InfoSection.cards[2].title,
+      description: textContent.InfoSection.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: textContent.InfoSection.cards[3].title,
+      description: textContent.InfoSection.cards[3].description,
+    },
+  ];
+
+  const iconsSectionData = [
+    {
+      icon: Database,
+      title: textContent.BestStorageSection.card1.title,
+    },
+    {
+      icon: Key,
+      title: textContent.BestStorageSection.card2.title,
+    },
+    {
+      icon: Recycle,
+      title: textContent.BestStorageSection.card3.title,
+    },
+    {
+      icon: Eye,
+      title: textContent.BestStorageSection.card4.title,
+    },
+    {
+      icon: CircleWavyCheck,
+      title: textContent.BestStorageSection.card5.title,
+    },
+  ];
 
   return (
     <Layout title={metatagsDescriptions.title} description={metatagsDescriptions.description}>
@@ -74,6 +122,10 @@ const PricingAlternative = ({
             selectedPlanStorage={selectedPlanStorage}
             lang={locale}
           />
+
+          <InfoSection textContent={textContent.InfoSection} lang={locale} cards={cardsData} />
+
+          <IconsSection iconsAndTitlesData={iconsSectionData} />
 
           <FileParallaxSection />
 

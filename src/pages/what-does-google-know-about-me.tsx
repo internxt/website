@@ -4,7 +4,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import HeroSection from '@/components/what-does-google-know-about-me/HeroSection';
 import ManageGoogleDataSection from '@/components/what-does-google-know-about-me/ManageGoogleDataSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';

@@ -3,7 +3,7 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { ConverterSection } from '@/components/file-converter/ConverterSection';
 import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';

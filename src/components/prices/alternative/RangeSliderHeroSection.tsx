@@ -9,6 +9,8 @@ interface RangeSliderHeroSectionProps {
   onButtonClick: (valueLabel: string) => void;
 }
 
+const PRICING_RANGE_SLIDER_VALUES = ['50B', '1TB', '10TB'];
+
 const STORAGE_RANGE = ['50GB', '100GB', '200GB', '500GB', '1TB', '2TB', '4TB', '8TB', '10TB'];
 
 export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSliderHeroSectionProps) => {
@@ -41,7 +43,7 @@ export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSlid
               <RangeSlider
                 max={STORAGE_RANGE.length - 1}
                 valueLabelFormat={valueLabelFormat}
-                rangeItems={['50B', '1TB', '10TB']}
+                rangeItems={PRICING_RANGE_SLIDER_VALUES}
               />
             </div>
             <div className="flex flex-col items-center">

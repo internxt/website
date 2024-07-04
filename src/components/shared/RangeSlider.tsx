@@ -12,7 +12,9 @@ export const RangeSlider = ({ max, rangeItems, valueLabelFormat }: PricingRangeS
     <div className="flex w-full max-w-[840px] flex-col">
       <div className="inset-0 flex w-full items-center justify-between">
         {rangeItems.map((item) => (
-          <span className="font-medium text-gray-100">{item}</span>
+          <span key={item} className="font-medium text-gray-100">
+            {item}
+          </span>
         ))}
       </div>
       <Slider

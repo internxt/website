@@ -1,5 +1,4 @@
-import React from 'react';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { ArrowUpRight } from '@phosphor-icons/react';
 import ProductCard from '@/components/shared/ProductCard';
 

@@ -8,7 +8,7 @@ import Footer from '@/components/layout/footers/Footer';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';

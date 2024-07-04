@@ -5,11 +5,11 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/password-checker/HeroSection';
 import FeaturesSection from '@/components/password-checker/FeaturesSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
 

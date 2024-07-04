@@ -6,8 +6,8 @@ import HeroSection from '@/components/password-generator/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import InfoSection from '@/components/password-generator/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
-import FAQSection from '@/components/shared/FaqSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
 

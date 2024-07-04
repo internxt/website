@@ -5,8 +5,8 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/temp-email/HeroSection';
 import { SignupSection } from '@/components/temp-email/SignupSection';
 import { InfoSection } from '@/components/temp-email/InfoSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
-import QASection from '@/components/shared/FaqSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';

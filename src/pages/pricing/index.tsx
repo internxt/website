@@ -6,14 +6,15 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import PriceTable from '@/components/prices/PriceTable';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import CtaSection from '@/components/pricing/CtaSection';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import InfoSection from '@/components/home/InfoSection';
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -24,16 +25,32 @@ interface PricingProps {
   homeComponentsLang: Record<string, any>;
 }
 
-const Pricing = ({
-  metatagsDescriptions,
-  navbarLang,
-  footerLang,
-  lang,
-  textContent,
-  homeComponentsLang,
-}: PricingProps) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
+
+  const cardsData = [
+    {
+      icon: ShieldCheck,
+      title: textContent.cards[0].title,
+      description: textContent.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: textContent.cards[1].title,
+      description: textContent.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: textContent.cards[2].title,
+      description: textContent.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: textContent.cards[3].title,
+      description: textContent.cards[3].description,
+    },
+  ];
 
   return (
     <>
@@ -59,7 +76,7 @@ const Pricing = ({
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
 
-        <InfoSection textContent={homeComponentsLang.InfoSection} lang={lang} />
+        <InfoSection textContent={textContent.InfoSection} lang={lang} cards={cardsData} />
 
         <FirstWhatWeDoSection
           textContent={textContent.FirstWhatWeDoSection}
@@ -87,7 +104,6 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const homeComponentsLang = require(`@/assets/lang/${lang}/home.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -98,7 +114,6 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       lang,
       textContent,
-      homeComponentsLang,
     },
   };
 }
