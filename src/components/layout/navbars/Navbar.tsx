@@ -55,7 +55,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
   const shouldModifyRibbonStyle = isRibbonHidden;
-  const shouldHideRibbon = EXCLUDED_PATHS_FOR_RIBBON.includes(router.pathname);
+  const shouldHideRibbon = true;
 
   // SCROLL EFFECTS
   const handleScroll = () => setScrolled(window.pageYOffset > 0);

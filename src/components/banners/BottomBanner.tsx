@@ -32,11 +32,11 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
+        return { title1: '75% OFF', title2: 'Kick off your privacy journey!' };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: '¡Marca con seguridad y protege tus datos!' };
+        return { title1: 'Ahorra un 75%', title2: '¡Comienza tu viaje hacia la privacidad!' };
       case 'ru':
-        return { title1: 'Сэкономьте 75%', title2: 'Начните свой путь к приватности!' };
+        return { title1: 'До -75% на все планы.', title2: 'Начните путь к безопасности!' };
       case 'fr':
         return { title1: 'Économisez 75%', title2: 'Commencez votre voyage vers la confidentialité!' };
       case 'it':
@@ -48,7 +48,7 @@ const BottomBanner = () => {
       case 'de':
         return { title1: 'Spare 75%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
       default:
-        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
+        return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
     }
   };
 
@@ -76,11 +76,7 @@ const BottomBanner = () => {
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
         shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg px-5 lg:px-0`}
-      style={{
-        backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
-        // filter: 'blur(24px)'
-      }}
+      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
@@ -88,10 +84,10 @@ const BottomBanner = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row ">
+        <div className="z-40 flex flex-row gap-10">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/campaigns/euro/banner.webp')}
+              src={getImage('/images/banners/internxt_summer_discount.webp')}
               width={178}
               height={70}
               className="flex w-full object-fill"
@@ -103,7 +99,7 @@ const BottomBanner = () => {
             <p className="text-6xl font-bold text-white">{title().title1}</p>
             <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
                 handleClose();
