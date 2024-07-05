@@ -43,56 +43,56 @@ const BottomBanner = () => {
         return {
           title1: 'Ahorra un 80%',
           title2: {
-            line1: 'El sol brilla, ',
-            line2: '¡la venta está en marcha!',
+            line1: 'Este verano, ',
+            line2: '¡no te quedes sin tu oferta!',
           },
         };
       case 'ru':
         return {
           title1: 'Сэкономьте 80%',
           title2: {
-            line1: 'Солнце светит, ',
-            line2: 'продажа началась!',
+            line1: 'Этим летом, ',
+            line2: 'не упустите свою скидку!',
           },
         };
       case 'fr':
         return {
           title1: 'Économisez 80%',
           title2: {
-            line1: 'Le soleil brille, ',
-            line2: 'les soldes sont en cours!',
+            line1: 'Cet été, ',
+            line2: 'ne manquez pas votre offre!',
           },
         };
       case 'it':
         return {
           title1: 'Risparmia 80%',
           title2: {
-            line1: 'Il sole splende, ',
-            line2: 'le offerte sono attive!',
+            line1: "Quest'estate, ",
+            line2: "non perderti l'offerta!",
           },
         };
       case 'zh':
         return {
           title1: '节省80%',
           title2: {
-            line1: '阳光明媚，',
-            line2: '特卖开始了！',
+            line1: '这个夏天，',
+            line2: '不要错过你的优惠！',
           },
         };
       case 'zh-tw':
         return {
           title1: '節省80%',
           title2: {
-            line1: '陽光明媚，',
-            line2: '特賣開始了！',
+            line1: '這個夏天，',
+            line2: '不要錯過你的優惠！',
           },
         };
       case 'de':
         return {
           title1: 'Spare 80%',
           title2: {
-            line1: 'Die Sonne scheint, ',
-            line2: 'der Verkauf läuft!',
+            line1: 'Diesen Sommer, ',
+            line2: 'verpassen Sie nicht Ihr Angebot!',
           },
         };
       default:
@@ -138,7 +138,7 @@ const BottomBanner = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row gap-32">
+        <div className="z-40 flex flex-row gap-24">
           <div className="flex flex-col">
             <Image
               src={getImage('/images/banners/internxt_summer_discount.webp')}
@@ -149,7 +149,7 @@ const BottomBanner = () => {
               alt={"Internxt's summer discount"}
             />
           </div>
-          <div className="flex flex-row items-center justify-center space-x-10">
+          <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row gap-5">
               <p className="text-6xl font-bold text-white">{title().title1}</p>
               <p className="max-w-[300px] text-2xl font-semibold text-white">
