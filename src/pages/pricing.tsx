@@ -14,6 +14,7 @@ import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/home/InfoSection';
+import { CouponType } from '@/lib/types';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -54,7 +55,9 @@ const Pricing = ({
           setSegmentPageName={setPageName}
           lang={lang}
           textContent={textContent.tableSection}
-          switchDiscount={23}
+          discount={0.2}
+          couponCode={CouponType.AllPlansCoupon}
+          useSameCouponForAllPlans
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />

@@ -9,7 +9,7 @@
     "cancelCta": "Annulla"
   },
   "FreeCardPromoBanner": {
-    "title": "Ottieni il 75% di sconto su tutti i nostri piani Premium",
+    "title": "Ottieni il 80% di sconto su tutti i nostri piani Premium",
     "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
@@ -109,9 +109,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Assicura i tuoi obiettivi, sul campo e nel cloud. ",
-      "normalText": "Sconto del 75%.",
-      "cta": "Scegli il tuo piano"
+      "boldText": "Risparmia fino al 80% su tutti i piani.",
+      "normalText": "Approfitta dei risparmi estivi! ",
+      "cta": "Scegli un piano"
     }
   },
   "lifetimeBanner": {
@@ -123,11 +123,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Aspetta! Offerta speciale ",
-      "blue": "75% DI SCONTO ",
+      "blue": "80% DI SCONTO ",
       "normal2": "!"
     },
     "subtitle": "C'è un'offerta esclusiva che ti aspetta.",
-    "cta": "75% DI SCONTO su tutti i piani",
+    "cta": "80% DI SCONTO",
     "guarantee": "Garanzia di rimborso di 30 giorni"
   }
 }

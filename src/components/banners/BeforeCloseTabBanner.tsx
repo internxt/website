@@ -1,10 +1,11 @@
+import { useEffect } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
 import { CheckCircle, X } from '@phosphor-icons/react';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const CLOSE_TAB_BANNER_NAME = 'close_tab_banner_date';
 const ONE_MONTH_IN_MS = 30 * 24 * 60 * 60 * 1000;

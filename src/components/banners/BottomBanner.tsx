@@ -32,23 +32,77 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
+        return {
+          title1: 'Save 80%',
+          title2: {
+            line1: "Sun's out, ",
+            line2: "sale's on!",
+          },
+        };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: '¡Marca con seguridad y protege tus datos!' };
+        return {
+          title1: 'Ahorra un 80%',
+          title2: {
+            line1: 'Este verano, ',
+            line2: '¡no te quedes sin tu oferta!',
+          },
+        };
       case 'ru':
-        return { title1: 'Сэкономьте 75%', title2: 'Начните свой путь к приватности!' };
+        return {
+          title1: 'Сэкономьте 80%',
+          title2: {
+            line1: 'Этим летом, ',
+            line2: 'не упустите свою скидку!',
+          },
+        };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Commencez votre voyage vers la confidentialité!' };
+        return {
+          title1: 'Économisez 80%',
+          title2: {
+            line1: 'Cet été, ',
+            line2: 'ne manquez pas votre offre!',
+          },
+        };
       case 'it':
-        return { title1: 'Risparmia 75%', title2: 'Inizia il tuo viaggio verso la privacy!' };
+        return {
+          title1: 'Risparmia 80%',
+          title2: {
+            line1: "Quest'estate, ",
+            line2: "non perderti l'offerta!",
+          },
+        };
       case 'zh':
-        return { title1: '节省75%', title2: '开始您的隐私之旅！' };
+        return {
+          title1: '节省80%',
+          title2: {
+            line1: '这个夏天，',
+            line2: '不要错过你的优惠！',
+          },
+        };
       case 'zh-tw':
-        return { title1: '節省75%', title2: '開始您的隱私之旅！' };
+        return {
+          title1: '節省80%',
+          title2: {
+            line1: '這個夏天，',
+            line2: '不要錯過你的優惠！',
+          },
+        };
       case 'de':
-        return { title1: 'Spare 75%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
+        return {
+          title1: 'Spare 80%',
+          title2: {
+            line1: 'Diesen Sommer, ',
+            line2: 'verpassen Sie nicht Ihr Angebot!',
+          },
+        };
       default:
-        return { title1: 'Save 75%', title2: 'Spring savings have arrived!' };
+        return {
+          title1: 'Save 80%',
+          title2: {
+            line1: "Sun's out, ",
+            line2: "sale's on!",
+          },
+        };
     }
   };
 
@@ -57,7 +111,7 @@ const BottomBanner = () => {
       case 'en':
         return 'Choose plan';
       case 'es':
-        return 'Elige un plan';
+        return 'Elige tu plan';
       case 'ru':
         return 'Выбрать план';
       case 'fr':
@@ -76,11 +130,7 @@ const BottomBanner = () => {
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
         shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg px-5 lg:px-0`}
-      style={{
-        backgroundImage: `url(${getImage('/images/campaigns/euro/grass.webp')})`,
-        // filter: 'blur(24px)'
-      }}
+      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
@@ -88,22 +138,26 @@ const BottomBanner = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row ">
+        <div className="z-40 flex flex-row gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/campaigns/euro/banner.webp')}
+              src={getImage('/images/banners/internxt_summer_discount.webp')}
               width={178}
               height={70}
               className="flex w-full object-fill"
               draggable={false}
-              alt={"Internxt's spring sale"}
+              alt={"Internxt's summer discount"}
             />
           </div>
-          <div className="flex flex-row items-center justify-center space-x-5">
-            <p className="text-6xl font-bold text-white">{title().title1}</p>
-            <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
+          <div className="flex flex-row items-center justify-center gap-14">
+            <div className="flex flex-row gap-5">
+              <p className="text-6xl font-bold text-white">{title().title1}</p>
+              <p className="max-w-[300px] text-2xl font-semibold text-white">
+                {title().title2.line1} <br /> {title().title2.line2}
+              </p>
+            </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-primary py-2.5 px-5 text-lg font-medium text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
                 handleClose();
