@@ -32,23 +32,77 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: 'Save 80%', title2: 'Kick off your privacy journey!' };
+        return {
+          title1: 'Save 80%',
+          title2: {
+            line1: "Sun's out, ",
+            line2: "sale's on!",
+          },
+        };
       case 'es':
-        return { title1: 'Ahorra un 80%', title2: '¡Marca con seguridad y protege tus datos!' };
+        return {
+          title1: 'Ahorra un 80%',
+          title2: {
+            line1: 'El sol brilla, ',
+            line2: '¡la venta está en marcha!',
+          },
+        };
       case 'ru':
-        return { title1: 'Сэкономьте 80%', title2: 'Начните свой путь к приватности!' };
+        return {
+          title1: 'Сэкономьте 80%',
+          title2: {
+            line1: 'Солнце светит, ',
+            line2: 'продажа началась!',
+          },
+        };
       case 'fr':
-        return { title1: 'Économisez 80%', title2: 'Commencez votre voyage vers la confidentialité!' };
+        return {
+          title1: 'Économisez 80%',
+          title2: {
+            line1: 'Le soleil brille, ',
+            line2: 'les soldes sont en cours!',
+          },
+        };
       case 'it':
-        return { title1: 'Risparmia 80%', title2: 'Inizia il tuo viaggio verso la privacy!' };
+        return {
+          title1: 'Risparmia 80%',
+          title2: {
+            line1: 'Il sole splende, ',
+            line2: 'le offerte sono attive!',
+          },
+        };
       case 'zh':
-        return { title1: '节省80%', title2: '开始您的隐私之旅！' };
+        return {
+          title1: '节省80%',
+          title2: {
+            line1: '阳光明媚，',
+            line2: '特卖开始了！',
+          },
+        };
       case 'zh-tw':
-        return { title1: '節省80%', title2: '開始您的隱私之旅！' };
+        return {
+          title1: '節省80%',
+          title2: {
+            line1: '陽光明媚，',
+            line2: '特賣開始了！',
+          },
+        };
       case 'de':
-        return { title1: 'Spare 80%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
+        return {
+          title1: 'Spare 80%',
+          title2: {
+            line1: 'Die Sonne scheint, ',
+            line2: 'der Verkauf läuft!',
+          },
+        };
       default:
-        return { title1: 'Save 80%', title2: 'Spring savings have arrived!' };
+        return {
+          title1: 'Save 80%',
+          title2: {
+            line1: "Sun's out, ",
+            line2: "sale's on!",
+          },
+        };
     }
   };
 
@@ -95,9 +149,13 @@ const BottomBanner = () => {
               alt={"Internxt's summer discount"}
             />
           </div>
-          <div className="flex flex-row items-center justify-center space-x-5">
-            <p className="text-6xl font-bold text-white">{title().title1}</p>
-            <p className="max-w-[300px] text-2xl font-semibold text-white">{title().title2}</p>
+          <div className="flex flex-row items-center justify-center space-x-10">
+            <div className="flex flex-row gap-5">
+              <p className="text-6xl font-bold text-white">{title().title1}</p>
+              <p className="max-w-[300px] text-2xl font-semibold text-white">
+                {title().title2.line1} <br /> {title().title2.line2}
+              </p>
+            </div>
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {

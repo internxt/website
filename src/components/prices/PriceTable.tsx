@@ -275,8 +275,8 @@ export default function PriceTable({
                     key={product.storage}
                     storage={product.storage}
                     price={
-                      (useSameCouponForAllPlans || coupon) && discount
-                        ? (Number(product.price * discount).toFixed(0) as unknown as number)
+                      useSameCouponForAllPlans && discount
+                        ? (Number(product.price * discount).toFixed(2) as unknown as number)
                         : LIFETIME_PRICES[currencyValue][product.storage]
                     }
                     priceBefore={lifetimeCoupons ? product.price.split('.')[0] : undefined}
