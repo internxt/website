@@ -3,11 +3,16 @@ import Header from '@/components/shared/Header';
 import { FiveStars } from '@/components/shared/StarsRate';
 import { useRouter } from 'next/router';
 
-export const TitleAndSurvey = ({ textContent }) => {
+interface TitleAndSurveyProps {
+  textContent: Record<string, any>;
+  redirectUrl: string;
+}
+
+export const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
   const router = useRouter();
 
   const handleOnPlanButtonClicked = () => {
-    router.push('/specialoffer/freeuser');
+    router.push(redirectUrl);
   };
 
   return (
