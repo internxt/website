@@ -586,7 +586,7 @@ const TableSection = ({ textContent }) => {
                   <td className="relative p-0">
                     <Link
                       href={SIGNUP_DRIVE_WEB}
-                      target="_blanck"
+                      target="_blank"
                       rel="noopener noreferrer"
                       id="get-started-link"
                       className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
