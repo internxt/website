@@ -277,7 +277,7 @@ export default function PriceTable({
                     price={
                       useSameCouponForAllPlans && discount
                         ? (Number(product.price * discount).toFixed(0) as unknown as number)
-                        : LIFETIME_PRICES[currencyValue][product.storage]
+                        : product.price.split('.')[0]
                     }
                     priceBefore={lifetimeCoupons ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
