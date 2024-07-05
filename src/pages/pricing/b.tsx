@@ -103,7 +103,7 @@ const PricingAlternative = ({
 }: PricingAlternativeProps) => {
   const [allCoupons, setAllCoupons] = useState<any>();
   const { products, coupon, currency, currencyValue } = usePricing({
-    couponCode: CouponType.euro2024Sub,
+    couponCode: CouponType.AllPlansCoupon,
   });
 
   const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>();
@@ -182,7 +182,7 @@ const PricingAlternative = ({
             selectedPlanStorage={selectedPlanStorage}
             coupons={allCoupons}
             lang={locale}
-            discount={0.25}
+            discount={0.2}
             currency={currency}
             currencyValue={currencyValue}
             filteredProducts={filteredProducts}

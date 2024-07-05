@@ -46,7 +46,6 @@ export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSlid
             </div>
             <div className="flex flex-col items-center">
               <Button text={textContent.cta} onClick={handleOnButtonClick} />
-              ing
             </div>
           </div>
         </div>

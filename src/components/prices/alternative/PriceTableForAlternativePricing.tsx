@@ -76,7 +76,7 @@ export const PriceTableForAlternativePricing = ({
             priceBefore={product.price}
             lang={lang}
             currency={currency}
-            coupon={product.interval === 'lifetime' ? coupons.lifetime[product.storage] : coupons.subscription}
+            coupon={coupons.subscription}
             currencyValue={currencyValue}
           />
         ))}
