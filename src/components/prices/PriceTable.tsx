@@ -277,9 +277,9 @@ export default function PriceTable({
                     price={
                       useSameCouponForAllPlans || coupon
                         ? (Number(product.price * 0.25).toFixed(0) as unknown as number)
-                        : product.price.split('.')[0]
+                        : LIFETIME_PRICES[currencyValue][product.storage]
                     }
-                    priceBefore={coupon ? product.price.split('.')[0] : undefined}
+                    priceBefore={lifetimeCoupons ? product.price.split('.')[0] : undefined}
                     billingFrequency={Interval.Lifetime}
                     popular={product.storage === '5TB'}
                     cta={['checkout', product.priceId]}
