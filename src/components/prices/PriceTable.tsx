@@ -231,7 +231,7 @@ export default function PriceTable({
                   storage={product.storage}
                   price={
                     discount && coupon
-                      ? (Number(product.price * discount).toFixed(0) as unknown as number)
+                      ? (Number(product.price * discount).toFixed(2) as unknown as number)
                       : product.price
                   }
                   billingFrequency={billingFrequency}
@@ -276,7 +276,7 @@ export default function PriceTable({
                     storage={product.storage}
                     price={
                       useSameCouponForAllPlans && discount
-                        ? (Number(product.price * discount).toFixed(2) as unknown as number)
+                        ? (Number(product.price * discount).toFixed(0) as unknown as number)
                         : LIFETIME_PRICES[currencyValue][product.storage]
                     }
                     priceBefore={lifetimeCoupons ? product.price.split('.')[0] : undefined}

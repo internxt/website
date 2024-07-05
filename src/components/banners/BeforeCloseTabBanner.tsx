@@ -4,7 +4,6 @@ import { event } from '@/lib/gtag';
 import { CheckCircle, X } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 const CLOSE_TAB_BANNER_NAME = 'close_tab_banner_date';
 const ONE_MONTH_IN_MS = 30 * 24 * 60 * 60 * 1000;
@@ -19,31 +18,31 @@ export const BeforeCloseTabBanner = () => {
 
   const textContent = require(`../../assets/lang/${lang}/banners.json`);
 
-  useEffect(() => {
-    const handleMouseLeave = (event) => {
-      const closeTabBannerInLocalStorage = localStorage.getItem(CLOSE_TAB_BANNER_NAME);
-      const todayDate = new Date().getTime();
+  // useEffect(() => {
+  //   const handleMouseLeave = (event) => {
+  //     const closeTabBannerInLocalStorage = localStorage.getItem(CLOSE_TAB_BANNER_NAME);
+  //     const todayDate = new Date().getTime();
 
-      if (closeTabBannerInLocalStorage) {
-        const lastCloseDate = new Date(closeTabBannerInLocalStorage).getTime();
+  //     if (closeTabBannerInLocalStorage) {
+  //       const lastCloseDate = new Date(closeTabBannerInLocalStorage).getTime();
 
-        if (todayDate - lastCloseDate > ONE_MONTH_IN_MS) {
-          localStorage.removeItem(CLOSE_TAB_BANNER_NAME);
-          openDialog(GlobalDialog.BeforeYouGoBanner);
-        } else {
-          closeDialog(GlobalDialog.BeforeYouGoBanner);
-        }
-      } else if (event.clientY <= 0) {
-        openDialog(GlobalDialog.BeforeYouGoBanner);
-      }
-    };
+  //       if (todayDate - lastCloseDate > ONE_MONTH_IN_MS) {
+  //         localStorage.removeItem(CLOSE_TAB_BANNER_NAME);
+  //         openDialog(GlobalDialog.BeforeYouGoBanner);
+  //       } else {
+  //         closeDialog(GlobalDialog.BeforeYouGoBanner);
+  //       }
+  //     } else if (event.clientY <= 0) {
+  //       openDialog(GlobalDialog.BeforeYouGoBanner);
+  //     }
+  //   };
 
-    document.addEventListener('mouseleave', handleMouseLeave);
+  //   document.addEventListener('mouseleave', handleMouseLeave);
 
-    return () => {
-      document.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener('mouseleave', handleMouseLeave);
+  //   };
+  // }, []);
 
   const handleCloseBanner = () => {
     event({
