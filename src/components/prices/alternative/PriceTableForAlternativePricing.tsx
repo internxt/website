@@ -51,7 +51,7 @@ export const PriceTableForAlternativePricing = ({
         <span className="text-primary">{textContent.title.blue}</span>
       </p>
 
-      <div className="flex w-max flex-col items-center justify-center gap-2 rounded-lg bg-primary/7 px-7 py-1.5 md:px-10 lg:flex-row lg:gap-4 lg:rounded-full">
+      <div className="flex w-full max-w-[270px] flex-col items-center justify-center gap-2 rounded-lg bg-primary/7 px-7 py-1.5 md:px-10 lg:max-w-[400px] lg:flex-row lg:gap-4 lg:rounded-full">
         <p className="whitespace-nowrap font-medium text-gray-100 lg:text-xl">{textContent.offerEnds}</p>
         <div className="flex w-full max-w-[180px]">
           <Countdown />
