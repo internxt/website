@@ -55,9 +55,9 @@ const Pricing = ({
           setSegmentPageName={setPageName}
           lang={lang}
           textContent={textContent.tableSection}
-          switchDiscount={23}
-          discount={0.25}
-          couponCode={CouponType.euro2024Sub}
+          discount={0.2}
+          couponCode={CouponType.AllPlansCoupon}
+          useSameCouponForAllPlans
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />

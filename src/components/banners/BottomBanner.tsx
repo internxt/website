@@ -32,23 +32,23 @@ const BottomBanner = () => {
   const title = () => {
     switch (lang) {
       case 'en':
-        return { title1: '75% OFF', title2: 'Kick off your privacy journey!' };
+        return { title1: 'Save 80%', title2: 'Kick off your privacy journey!' };
       case 'es':
-        return { title1: 'Ahorra un 75%', title2: '¡Comienza tu viaje hacia la privacidad!' };
+        return { title1: 'Ahorra un 80%', title2: '¡Marca con seguridad y protege tus datos!' };
       case 'ru':
-        return { title1: 'До -75% на все планы.', title2: 'Начните путь к безопасности!' };
+        return { title1: 'Сэкономьте 80%', title2: 'Начните свой путь к приватности!' };
       case 'fr':
-        return { title1: 'Économisez 75%', title2: 'Commencez votre voyage vers la confidentialité!' };
+        return { title1: 'Économisez 80%', title2: 'Commencez votre voyage vers la confidentialité!' };
       case 'it':
-        return { title1: 'Risparmia 75%', title2: 'Inizia il tuo viaggio verso la privacy!' };
+        return { title1: 'Risparmia 80%', title2: 'Inizia il tuo viaggio verso la privacy!' };
       case 'zh':
-        return { title1: '节省75%', title2: '开始您的隐私之旅！' };
+        return { title1: '节省80%', title2: '开始您的隐私之旅！' };
       case 'zh-tw':
-        return { title1: '節省75%', title2: '開始您的隱私之旅！' };
+        return { title1: '節省80%', title2: '開始您的隱私之旅！' };
       case 'de':
-        return { title1: 'Spare 75%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
+        return { title1: 'Spare 80%', title2: 'Beginnen Sie Ihre Reise zur Privatsphäre!' };
       default:
-        return { title1: 'Save 75%', title2: 'Kick off your privacy journey!' };
+        return { title1: 'Save 80%', title2: 'Spring savings have arrived!' };
     }
   };
 

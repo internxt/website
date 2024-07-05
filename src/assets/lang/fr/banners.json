@@ -9,7 +9,7 @@
     "cancelCta": "Annuler"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtenez 75% de réduction sur tous nos plans Premium",
+    "title": "Obtenez 80% de réduction sur tous nos plans Premium",
     "subtitle": {
       "blue": "Offre spéciale :",
       "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
@@ -19,13 +19,13 @@
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "featuresBanner": {
-    "label": "Économisez jusqu'à 75%",
+    "label": "Économisez jusqu'à 80%",
     "title": "Sécurisez votre identité en ligne pour la vie.",
     "cta": "Choisissez un plan",
     "guarantee": "Garantie de remboursement de 30 jours",
     "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients",
     "features": [
-      "Jusqu'à 75% de réduction sur tous les plans à vie",
+      "Jusqu'à 80% de réduction sur tous les plans à vie",
       "Stockage cloud sûr et sécurisé",
       "Open source et transparent",
       "Transferts chiffrés de bout en bout",
@@ -81,7 +81,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Économisez jusqu'à 75% sur tous les plans.",
+      "boldText": "Économisez jusqu'à 80% sur tous les plans.",
       "normalText": "Offres chaudes d'été! ",
       "cta": "Choisissez un plan"
     }
@@ -95,11 +95,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Attendez! Offre spéciale ",
-      "blue": "75% DE RÉDUCTION ",
+      "blue": "80% DE RÉDUCTION ",
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "75% DE RÉDUCTION sur tous les plans",
+    "cta": "80% DE RÉDUCTION sur tous les plans",
     "guarantee": "Garantie de remboursement de 30 jours"
   }
 }

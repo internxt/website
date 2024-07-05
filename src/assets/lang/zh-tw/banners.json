@@ -9,7 +9,7 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "所有高級計劃享受75%折扣",
+    "title": "所有高級計劃享受80%折扣",
     "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
     "getDealCta": "獲取優惠",
     "freePlanCta": "繼續使用免費計劃",
@@ -135,7 +135,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "所有計劃最高可享75%優惠。",
+      "boldText": "所有計劃最高可享80%優惠。",
       "normalText": "夏日熱賣優惠！ ",
       "cta": "選擇計劃"
     }
@@ -149,11 +149,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "等等！特別優惠 ",
-      "blue": "75% 折扣 ",
+      "blue": "80% 折扣 ",
       "normal2": "!"
     },
     "subtitle": "有一個獨家優惠在等著你。",
-    "cta": "所有計劃75% 折扣",
+    "cta": "所有計劃80% 折扣",
     "guarantee": "30天退款保證"
   }
 }

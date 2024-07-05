@@ -22,7 +22,7 @@
     }
   },
   "FreeCardPromoBanner": {
-    "title": "Get 75% OFF all our Premium Plans",
+    "title": "Get 80% OFF all our Premium Plans",
     "subtitle": { "blue": "Special offer:", "normal": " store files in privacy for less" },
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
@@ -45,13 +45,13 @@
     }
   },
   "featuresBanner": {
-    "label": "Save up to 75%",
+    "label": "Save up to 80%",
     "title": "Secure your online ID for life",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
     "lastCta": "*Offer is for free accounts or new customers",
     "features": [
-      "Up to 75% OFF all lifetime plans",
+      "80% OFF all plans",
       "Safe and secure cloud storage",
       "Open source and transparent",
       "End-to-end encrypted transfers",
@@ -134,8 +134,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Up to 75% OFF all plans.",
-      "normalText": "Secure hot summer savings! ",
+      "boldText": "80% OFF all plans!",
+      "normalText": "Score big savings on private cloud storage! ",
       "cta": "Choose plan"
     }
   },
@@ -148,11 +148,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Hold on! Special ",
-      "blue": "75% OFF ",
+      "blue": "80% OFF ",
       "normal2": "deal!"
     },
     "subtitle": "There's an exclusive offer waiting for you.",
-    "cta": "75% OFF all plans",
+    "cta": "80% OFF all plans",
     "guarantee": "30-day money-back guarantee"
   }
 }
