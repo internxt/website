@@ -51,9 +51,11 @@ export const PriceTableForAlternativePricing = ({
         <span className="text-primary">{textContent.title.blue}</span>
       </p>
 
-      <div className="flex w-max flex-row items-center gap-2.5 rounded-full bg-primary/7 px-3 py-1.5">
-        <p className="font-medium text-gray-100 lg:text-xl">{textContent.offerEnds}</p>
-        <Countdown />
+      <div className="flex w-max flex-col items-center justify-center gap-2 rounded-lg bg-primary/7 px-7 py-1.5 md:px-10 lg:flex-row lg:gap-4 lg:rounded-full">
+        <p className="whitespace-nowrap font-medium text-gray-100 lg:text-xl">{textContent.offerEnds}</p>
+        <div className="flex w-full max-w-[180px]">
+          <Countdown />
+        </div>
       </div>
 
       <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
@@ -71,7 +73,7 @@ export const PriceTableForAlternativePricing = ({
             billingFrequency={product.interval}
             popular={product.interval === 'lifetime'}
             cta={['checkout', product.priceId]}
-            priceBefore={product.price.replace(/\.00$/, '')}
+            priceBefore={product.price}
             lang={lang}
             currency={currency}
             coupon={product.interval === 'lifetime' ? coupons.lifetime[product.storage] : coupons.subscription}

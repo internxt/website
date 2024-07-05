@@ -24,7 +24,7 @@
   },
   "PriceTableForAlternativePricing": {
     "title": { "normal": "Ottieni ${{storage}} di cloud storage sicuro con ", "blue": "75% di sconto" },
-    "offerEnds": "L'offerta termina in:"
+    "offerEnds": "Termina tra:"
   },
   "tableSection": {
     "ctaBanner": {
