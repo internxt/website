@@ -32,8 +32,8 @@ export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSlid
           <Header>{textContent.title}</Header>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex w-full flex-col items-center gap-4 rounded-2xl border-4 border-primary/7 bg-primary/2 p-10 lg:w-max">
-          <div className="flex w-full max-w-[700px] flex-col gap-2 lg:w-screen">
+        <div className="flex w-full flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-10 pt-10 pb-7 lg:w-max">
+          <div className="flex w-full max-w-[700px] flex-col gap-5 lg:w-screen">
             <div className="flex w-full flex-col items-end gap-10 lg:flex-row">
               <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 bg-white py-2.5 lg:w-screen lg:max-w-[85px]">
                 <p className="font-medium text-gray-100">{valueLabel}</p>
@@ -45,7 +45,8 @@ export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSlid
               />
             </div>
             <div className="flex flex-col items-center">
-              <Button text={'Calculate storage'} onClick={handleOnButtonClick} />
+              <Button text={textContent.cta} onClick={handleOnButtonClick} />
+              ing
             </div>
           </div>
         </div>
