@@ -92,7 +92,7 @@ const BottomBanner = () => {
               height={70}
               className="flex w-full object-fill"
               draggable={false}
-              alt={"Internxt's spring sale"}
+              alt={"Internxt's summer discount"}
             />
           </div>
           <div className="flex flex-row items-center justify-center space-x-5">
