@@ -111,7 +111,7 @@ const BottomBanner = () => {
       case 'en':
         return 'Choose plan';
       case 'es':
-        return 'Elige un plan';
+        return 'Elige tu plan';
       case 'ru':
         return 'Выбрать план';
       case 'fr':
