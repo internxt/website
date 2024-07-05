@@ -138,7 +138,7 @@ const BottomBanner = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row gap-10">
+        <div className="z-40 flex flex-row gap-32">
           <div className="flex flex-col">
             <Image
               src={getImage('/images/banners/internxt_summer_discount.webp')}
