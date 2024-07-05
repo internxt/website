@@ -9,20 +9,20 @@
     "cancelCta": "Cancelar"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtén un 75% de descuento en todos nuestros planes",
+    "title": "Obtén un 80% de descuento en todos nuestros planes",
     "subtitle": { "blue": "Oferta especial:", "normal": " almacena archivos de manera privada por menos" },
     "getDealCta": "Obtener oferta",
     "freePlanCta": "Continuar con el plan gratuito",
     "guarantee": "Garantía de devolución de dinero de 30 días"
   },
   "featuresBanner": {
-    "label": "Ahorra hasta un 75%",
+    "label": "Ahorra hasta un 80%",
     "title": "Asegura tu identidad en línea de por vida.",
     "cta": "Consíguela",
     "guarantee": "Garantía de devolución de 30 días",
     "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
     "features": [
-      "Hasta el 75% en planes lifetime",
+      "Hasta el 80% en planes lifetime",
       "Almacenamiento seguro en la nube",
       "Código abierto y auditado",
       "Transferencias cifradas de extremo a extremo",
@@ -87,8 +87,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Asegura tus goles, en el campo y en la nube. ",
-      "normalText": "75% de descuento.",
+      "boldText": "Hasta 80% en todos los planes.",
+      "normalText": "¡Ahorra este verano! ",
       "cta": "Elige tu plan"
     }
   },
@@ -100,12 +100,12 @@
   },
   "BeforeCloseBanner": {
     "title": {
-      "normal1": "!Oferta especial del",
-      "blue": "75% DE DESCUENTO ",
+      "normal1": "¡Oferta especial del",
+      "blue": "80% DE DESCUENTO ",
       "normal2": "en todos los planes!"
     },
     "subtitle": "Hay una oferta exclusiva esperándote.",
-    "cta": "75% DE DESCUENTO en todos los planes",
+    "cta": "80% DE DESCUENTO",
     "guarantee": "Garantía de devolución de dinero de 30 días"
   }
 }

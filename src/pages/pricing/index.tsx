@@ -15,6 +15,7 @@ import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { CouponType } from '@/lib/types';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -71,7 +72,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           setSegmentPageName={setPageName}
           lang={lang}
           textContent={textContent.tableSection}
-          switchDiscount={23}
+          discount={0.2}
+          couponCode={CouponType.AllPlansCoupon}
+          useSameCouponForAllPlans
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />

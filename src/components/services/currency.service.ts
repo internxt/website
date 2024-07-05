@@ -20,7 +20,7 @@ const filterCurrencyByCountry = async (currencySpecified?: string) => {
   if (currencySpecified) {
     country = currencySpecified;
   } else {
-    const { data } = await getCountry();
+    const data = await getCountry();
     country = data.country;
   }
 
@@ -28,6 +28,7 @@ const filterCurrencyByCountry = async (currencySpecified?: string) => {
     currency: currency[country] || '€',
     currencyValue: priceValue[country] || 'eur',
   };
+
   return currencyIcon;
 };
 

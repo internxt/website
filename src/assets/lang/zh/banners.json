@@ -9,7 +9,7 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "所有高级计划享受75%折扣",
+    "title": "所有高级计划享受80%折扣",
     "subtitle": { "blue": "特别优惠：", "normal": "更便宜地私人存储文件" },
     "getDealCta": "获取优惠",
     "freePlanCta": "继续使用免费计划",
@@ -103,9 +103,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "在球场和云端保护你的目标。",
-      "normalText": "75% 折扣。",
-      "cta": "选择你的计划"
+      "boldText": "所有计划最高可享80%优惠。",
+      "normalText": "抢购夏日特惠！",
+      "cta": "选择计划"
     }
   },
   "lifetimeBanner": {
@@ -117,11 +117,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "等等！特别优惠 ",
-      "blue": "75% 折扣 ",
+      "blue": "80% 折扣 ",
       "normal2": "!"
     },
     "subtitle": "有一个独家优惠在等着你。",
-    "cta": "所有计划75% 折扣",
+    "cta": "所有计划80% 折扣",
     "guarantee": "30天退款保证"
   }
 }

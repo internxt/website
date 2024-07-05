@@ -9,7 +9,7 @@
     "cancelCta": "Abbrechen"
   },
   "FreeCardPromoBanner": {
-    "title": "Erhalten Sie 75% Rabatt auf alle unsere Premium-Pläne",
+    "title": "Erhalten Sie 80% Rabatt auf alle unsere Premium-Pläne",
     "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
@@ -42,13 +42,13 @@
     }
   },
   "featuresBanner": {
-    "label": "Bis zu 75% sparen",
+    "label": "Bis zu 80% sparen",
     "title": "Sichern Sie Ihre Online-Identität fürs Leben.",
     "cta": "Wähle einen Plan",
     "guarantee": "30 Tage Geld-zurück-Garantie",
     "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
     "features": [
-      "Bis zu 75% Rabatt auf alle lebenslangen Pläne",
+      "Bis zu 80% Rabatt auf alle lebenslangen Pläne",
       "Sicherer Cloud-Speicher",
       "Backup privater Dateien und Fotos",
       "End-to-end verschlüsselte Übertragungen",
@@ -103,9 +103,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Sichern Sie Ihre Ziele, auf dem Feld und in der Cloud.",
-      "normalText": "75% Rabatt.",
-      "cta": "Wählen Sie Ihren Plan"
+      "boldText": "Spare bis zu 80% bei allen Plänen.",
+      "normalText": "Sichern Sie sich heiße Sommerangebote! ",
+      "cta": "Wählen Sie einen Plan"
     }
   },
   "lifetimeBanner": {
@@ -117,11 +117,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Warten Sie! Sonderangebot ",
-      "blue": "75% RABATT ",
+      "blue": "80% RABATT ",
       "normal2": "!"
     },
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
-    "cta": "75% RABATT auf alle Pläne",
+    "cta": "80% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }

@@ -44,7 +44,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <HomePageBannerForMobile />
 
             {isHomePageV2 ? (
-              <TitleAndSurvey textContent={textContent.TitleAndSurvey} />
+              <TitleAndSurvey textContent={textContent.TitleAndSurvey} redirectUrl="/pricing" />
             ) : (
               <TitleAndSignup textContent={textContent} />
             )}

@@ -12,14 +12,12 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
-import { CouponType } from '@/lib/types';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
-import { useRouter } from 'next/router';
+import { CouponType } from '@/lib/types';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const router = useRouter();
 
   const navbarCta = 'default';
 
@@ -55,7 +53,9 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         lang={lang}
         textContent={langJson.tableSection}
         isTableInHomePage
-        couponCode={CouponType.euro2024Sub}
+        discount={0.2}
+        couponCode={CouponType.AllPlansCoupon}
+        useSameCouponForAllPlans
       />
 
       <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
