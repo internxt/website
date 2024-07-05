@@ -100,8 +100,8 @@
   },
   "BeforeCloseBanner": {
     "title": {
-      "normal1": "!Oferta especial del",
-      "blue": "80% DE DESCUENTO ",
+      "normal1": "¡Oferta especial del",
+      "blue": "75% DE DESCUENTO ",
       "normal2": "en todos los planes!"
     },
     "subtitle": "Hay una oferta exclusiva esperándote.",
