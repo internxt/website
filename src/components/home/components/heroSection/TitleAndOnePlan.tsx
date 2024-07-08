@@ -48,9 +48,9 @@ export const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Elem
 
       <div className="flex flex-row justify-center lg:justify-start">
         <p className="flex flex-row items-end text-gray-100">
-          {textContent.startFrom.normal1}
+          {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
-            <abbr className="mt-1 text-xs">{currency}</abbr>
+            <abbr className="mt-0.5 text-base">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
           {textContent.startFrom.normal2}
