@@ -7,8 +7,8 @@ import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
 import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection';
 import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
 import CtaSection from '@/components/shared/CtaSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
-import FAQSection from '@/components/shared/FaqSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
 
 const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {

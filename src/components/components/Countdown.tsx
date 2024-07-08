@@ -16,8 +16,8 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
   const countdowns = [
     {
       id: 'mcReset',
-      timestamp: new Date('Oct 11, 2019 20:00:00').getTime(),
-      interval: 2 * DAYS,
+      timestamp: new Date('Oct 11, 2019 00:00:00').getTime(),
+      interval: DAYS,
     },
   ];
 
@@ -80,7 +80,7 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
 
   return (
     <div className={`flex text-${textColor}`}>
-      <div className="flex flex-row items-end space-x-2 text-4xl lg:text-2xl">
+      <div className="flex flex-row items-end space-x-2 text-2xl">
         <div className={`days delay-350 font-semibold transition-colors duration-150`}>
           {days < 10 ? `0${days}` : days}
         </div>

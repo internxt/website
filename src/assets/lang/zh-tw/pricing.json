@@ -12,6 +12,16 @@
       "description": "優惠有效期為一年。計劃將在次年以非折扣價格自動續訂。"
     }
   },
+  "HeroSectionAlternative": {
+    "title": "您需要多少線上存儲空間？",
+    "description": "選擇數量以查看適合您需求的計劃。",
+    "cta": "找到您的理想計劃",
+    "features": ["最安全的雲存儲", "匿名帳戶創建", "軍用級加密", "您的數據不會被出售"]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "獲取 ${{storage}} 安全雲存儲，享受 ", "blue": "80% 折扣" },
+    "offerEnds": "優惠結束於:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "節省75%",
@@ -120,6 +130,29 @@
     "title": "試用 Internxt，無風險",
     "description": "注册并免费获得 Internxt 提供的 1 GB 端到端加密云存储空间。",
     "cta": "創建免費帳戶"
+  },
+  "InfoSection": {
+    "title": "無與倫比的隱私安全的雲存儲",
+    "description": "Internxt 有何特色？我們是一支緊密團結的專業團隊，致力於全面保護您的在線安全。我們所做的一切和每一個決定都圍繞著保護您的數據不受利用。",
+    "cta": "介紹 Internxt 團隊",
+    "cards": [
+      {
+        "title": "設計上獨具私密性",
+        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據是您的業務。保護它就是我們的業務。"
+      },
+      {
+        "title": "毫不妥協的安全性",
+        "description": "您的文件在離開您的設備之前就已進行端到端加密。多虧了零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們對自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們除了您的數據之外，一無所隱藏。"
+      },
+      {
+        "title": "經獨立驗證",
+        "description": "我們完全符合 GDPR，並且百分之百安全，但不要聽我們的。Internxt 已經由歐洲領先的滲透測試公司 Securitum 進行了獨立審核和驗證。"
+      }
+    ]
   },
   "FirstWhatWeDoSection": {
     "card1": {

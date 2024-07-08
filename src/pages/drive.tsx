@@ -3,7 +3,7 @@ import Script from 'next/script';
 import HeroSection from '@/components/drive/HeroSection';
 import FeaturesSection from '@/components/drive/FeaturesSection';
 import FeatureSection from '@/components/drive/FeatureSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import ProductsNavigation from '@/components/layout/ProductsNavigation';

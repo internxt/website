@@ -1,4 +1,4 @@
-import FaqSection from '@/components/shared/FaqSection';
+import FaqSection from '@/components/shared/sections/FaqSection';
 import FeatureSection from '@/components/affiliates/FeatureSection';
 import { HeroSection } from '@/components/affiliates/HeroSection';
 import WhatIsInternxtSection from '@/components/affiliates/WhatIsInternxtSection';

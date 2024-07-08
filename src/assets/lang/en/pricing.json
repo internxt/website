@@ -12,6 +12,21 @@
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
+  "HeroSectionAlternative": {
+    "title": "How much online storage do you need?",
+    "description": "Select amount to see plans that suit your needs.",
+    "cta": "Find your ideal plan",
+    "features": [
+      "Most secure cloud storage",
+      "Anonymous account creation",
+      "Military-grade encryption",
+      "You data is not being sold"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": { "normal": "Get ${{storage}} of The Most Secure Cloud Storage at ", "blue": "80% OFF" },
+    "offerEnds": "Offer ends in:"
+  },
   "tableSection": {
     "ctaBanner": {
       "label": "Save 75%",
@@ -139,11 +154,34 @@
       "cta": "Create free account"
     }
   },
+  "InfoSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cta": "Select plan",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
+  },
   "BestStorageSection": {
     "title": "Built for the future",
     "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
     "card1": {
-      "title": "Distributed work"
+      "title": "Distributed network"
     },
     "card2": {
       "title": "AES-256 encryption"

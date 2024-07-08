@@ -72,7 +72,9 @@ const PriceTable: React.FC<PriceTableProps> = ({
       case 'normal':
         return price.split('.')[0];
       case 'celebration':
-        return Number(price * discount).toFixed(2);
+        return Number(price * discount)
+          .toFixed(2)
+          .replace(/\.00$/, '');
 
       case 'custom-disc':
         return DISC_LIFETIME_PRICES[currencyValue][storage];

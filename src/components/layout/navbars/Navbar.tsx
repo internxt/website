@@ -27,6 +27,7 @@ export interface NavbarProps {
 
 const EXCLUDED_PATHS_FOR_RIBBON = [
   '/pricing',
+  '/pricing/b',
   '/lifetime',
   '/partner-discount',
   '/techradar-discount',
