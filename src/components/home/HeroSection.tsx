@@ -50,7 +50,9 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
           </div>
 
           {/* Desktop animation/image */}
-          <Animation />
+          <div className="mt-10 flex max-h-[650px] w-full justify-center">
+            <Animation />
+          </div>
         </div>
         {/* {isHomePageV2 ? (
           <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
