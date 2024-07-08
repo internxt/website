@@ -91,6 +91,7 @@ function transformProductData(data: ProductValue[]): ProductsDataProps {
         storage: storage,
         price: Math.abs(productValue.amount / 100).toFixed(2),
         currency: productValue.currency,
+        interval: interval,
       });
     }
   });

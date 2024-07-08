@@ -113,6 +113,7 @@ export enum CouponType {
   PcmagCoupon = 'PCMAG_COUPON',
   CloudwardsCoupon = 'CLOUDWARDS_COUPON',
   OnePlanCoupon = 'ONEPLAN_COUPON',
+  AllPlansCoupon = 'ALL_PLANS_80',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

@@ -7,7 +7,7 @@ import HeroSection from '@/components/cyber-awareness/HeroSection';
 import InfoSection from '@/components/cyber-awareness/InfoSection';
 import CtaSection from '@/components/cyber-awareness/CtaSection';
 import CtaSection2 from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import SuiteSection from '@/components/cyber-awareness/SuiteSection';
 import SuiteSection2 from '@/components/cyber-awareness/SuiteSection2';
 import VideoSection from '@/components/cyber-awareness/VideoSection';

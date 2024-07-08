@@ -8,12 +8,13 @@ import Footer from '@/components/layout/footers/Footer';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import PriceTable from '@/components/prices/PriceTable';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import { CouponType } from '@/lib/types';
 
 const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
@@ -47,7 +48,15 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
 
       <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
 
-      <PriceTable setSegmentPageName={() => {}} lang={lang} textContent={langJson.tableSection} isTableInHomePage />
+      <PriceTable
+        setSegmentPageName={() => {}}
+        lang={lang}
+        textContent={langJson.tableSection}
+        isTableInHomePage
+        discount={0.2}
+        couponCode={CouponType.AllPlansCoupon}
+        useSameCouponForAllPlans
+      />
 
       <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
 

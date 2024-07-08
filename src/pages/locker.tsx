@@ -4,12 +4,13 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 
-import InfoSection from '@/components/home/InfoSection';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -24,6 +25,29 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
       couponCode: coupon ?? undefined,
     });
   }
+
+  const cardsData = [
+    {
+      icon: ShieldCheck,
+      title: textContent.SecureCloudSection.cards[0].title,
+      description: textContent.SecureCloudSection.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: textContent.SecureCloudSection.cards[1].title,
+      description: textContent.SecureCloudSection.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: textContent.SecureCloudSection.cards[2].title,
+      description: textContent.SecureCloudSection.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: textContent.SecureCloudSection.cards[3].title,
+      description: textContent.SecureCloudSection.cards[3].description,
+    },
+  ];
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
@@ -40,7 +64,13 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <InfoSection textContent={textContent.SecureCloudSection} lang="en" withoutCta backgroundColor="bg-gray-1" />
+      <InfoSection
+        textContent={textContent.SecureCloudSection}
+        lang="en"
+        withoutCta
+        backgroundColor="bg-gray-1"
+        cards={cardsData}
+      />
 
       <CtaSection textContent={textContent.CtaSection} />
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />

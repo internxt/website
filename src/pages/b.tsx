@@ -6,7 +6,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import cookies from '@/lib/cookies';
 import { useRouter } from 'next/router';

@@ -3,7 +3,7 @@ import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import PriceTable from '@/components/prices/PriceTable';
 import CtaSection from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { FeatureSectionForSpecialOffer } from '@/components/specialoffer/FeatureSection';
 import { HeroSectionForSpecialOffer } from '@/components/specialoffer/HeroSection';
 import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSection';

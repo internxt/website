@@ -21,6 +21,7 @@ export interface PriceCardProps {
   isLifetimePage?: boolean;
   lifetimeMode?: LifetimeMode;
   onButtonClicked?: () => void;
+  label?: string;
 }
 
 const STORAGE_LEVELS = {
@@ -45,6 +46,7 @@ export default function PriceCard({
   isOffer,
   isLifetimePage,
   lifetimeMode,
+  label,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
   const billingFrequencyList = {
@@ -122,7 +124,7 @@ export default function PriceCard({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{getPlanStorage(storage)}</p>
+            <p className="text-lg font-medium text-primary">{label ?? getPlanStorage(storage)}</p>
           </div>
         </div>
         <div
