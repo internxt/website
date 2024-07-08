@@ -4,8 +4,7 @@ import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
-import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
-import { ArrowCircleDown } from '@phosphor-icons/react';
+import { TitleAndOnePlan } from './components/heroSection/TitleAndOnePlan';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -44,7 +43,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <HomePageBannerForMobile />
 
             {isHomePageV2 ? (
-              <TitleAndSurvey textContent={textContent.TitleAndSurvey} redirectUrl="/pricing" />
+              <TitleAndOnePlan textContent={textContent.TitleAndOnePlan} />
             ) : (
               <TitleAndSignup textContent={textContent} />
             )}
@@ -53,12 +52,12 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
           {/* Desktop animation/image */}
           <Animation />
         </div>
-        {isHomePageV2 ? (
+        {/* {isHomePageV2 ? (
           <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
             <ArrowCircleDown size={32} className="animate-bounce text-primary" />
             <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
           </div>
-        ) : undefined}
+        ) : undefined} */}
       </div>
     </section>
   );

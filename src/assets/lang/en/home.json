@@ -56,6 +56,25 @@
       "upTo": "Up to: ",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "Secure cloud storage.",
+        "blueText": "Guaranteed."
+      },
+      "description": {
+        "normal1": "Up to ",
+        "blue": "75% OFF ",
+        "normal2": "all Internxt Premium Plans."
+      },
+      "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open-source and audited"],
+      "startFrom": {
+        "normal1": "Start from ",
+        "price": " 0.95",
+        "normal2": " /month"
+      },
+      "claimDeal": "Claim deal",
+      "guarantee": "30-day money-back guarantee"
+    },
     "youKnow": "Did you know?"
   },
   "FeatureSectionV2": {
