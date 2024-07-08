@@ -87,14 +87,22 @@ const Countdown: React.FC<CountdownProps> = ({
 
   return (
     <div className={`flex text-${textColor}`}>
-      <div className={`flex flex-row items-end space-x-2 ${textHeight} ${textFont}`}>
-        <div className="min-w-[1.5ch] text-center">{days < 10 ? `0${days}` : days}</div>
-        <p className="font-semibold">:</p>
-        <div className="min-w-[1.5ch] text-center">{hours < 10 ? `0${hours}` : hours}</div>
+      <div className={`flex flex-row items-end gap-1 ${textHeight} ${textFont}`}>
+        <div className="text-center">
+          <p className="w-6">{days < 10 ? `0${days}` : days}</p>
+        </div>
         <p>:</p>
-        <div className="min-w-[1.5ch] text-center">{minutes < 10 ? `0${minutes}` : minutes}</div>
+        <div className="text-center">
+          <p className="w-6">{hours < 10 ? `0${hours}` : hours}</p>
+        </div>
         <p>:</p>
-        <div className="min-w-[1.5ch] text-center">{seconds < 10 ? `0${seconds}` : seconds}</div>
+        <div className="text-center">
+          <p className="w-6">{minutes < 10 ? `0${minutes}` : minutes}</p>
+        </div>
+        <p>:</p>
+        <div className="text-center">
+          <p className="w-6">{seconds < 10 ? `0${seconds}` : seconds}</p>
+        </div>
       </div>
     </div>
   );
