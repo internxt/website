@@ -156,6 +156,7 @@ export default function PriceTable({
               {contentText.billingFrequency.business}
             </button>
           </div>
+
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
           <div className={`flex-row items-start gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
             <p
@@ -239,7 +240,7 @@ export default function PriceTable({
                   cta={['checkout', product.priceId]}
                   priceBefore={
                     billingFrequency === Interval.Year && !coupon
-                      ? products.individuals?.[Interval.Month][index].price * 12
+                      ? products.individuals[Interval.Month][index].price * 12
                       : coupon
                       ? product.price
                       : undefined

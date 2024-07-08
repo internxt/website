@@ -1,5 +1,5 @@
 import { currencyService } from '@/components/services/currency.service';
-import { ProductsProps, stripeService } from '@/components/services/stripe.service';
+import { ProductsDataProps, stripeService } from '@/components/services/stripe.service';
 import { useEffect, useReducer } from 'react';
 import { notificationService } from '@/components/Snackbar';
 import { CouponType } from '@/lib/types';
@@ -14,11 +14,11 @@ interface UseStripeProductsAndCurrencyResponse {
   currency: string;
   currencyValue: string;
   coupon?: CouponType;
-  products?: ProductsProps;
+  products?: ProductsDataProps;
 }
 
 type ActionType =
-  | { type: 'SET_PRODUCTS'; payload: ProductsProps | undefined }
+  | { type: 'SET_PRODUCTS'; payload: ProductsDataProps | undefined }
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
   | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_CURRENCY_VALUE'; payload: string }

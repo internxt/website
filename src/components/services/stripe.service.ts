@@ -8,10 +8,6 @@ export enum Interval {
   Lifetime = 'lifetime',
 }
 
-export interface ProductsProps {
-  individuals: {} | undefined;
-}
-
 export enum Products {
   'free' = 'free',
   '20GB' = '20GB',
@@ -19,6 +15,29 @@ export enum Products {
   '2TB' = '2TB',
   '5TB' = '5TB',
   '10TB' = '10TB',
+}
+
+interface ProductValue {
+  id: string;
+  bytes: number;
+  amount: number;
+  currency: string;
+  interval: Interval;
+}
+
+interface TransformedProduct {
+  priceId: string;
+  storage: string;
+  price: number;
+  currency: string;
+}
+
+export interface ProductsDataProps {
+  individuals: {
+    [Interval.Month]: TransformedProduct[];
+    [Interval.Year]: TransformedProduct[];
+    [Interval.Lifetime]: TransformedProduct[];
+  };
 }
 
 async function getPrices(currencySpecified?: string) {
@@ -53,7 +72,7 @@ async function fetchProductData(currency: string) {
   }
 }
 
-function transformProductData(data: any) {
+function transformProductData(data: ProductValue[]): ProductsDataProps {
   const transformedData = {
     individuals: {
       [Interval.Month]: [] as Array<any>,
