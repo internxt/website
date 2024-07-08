@@ -19,19 +19,6 @@ const CARD_LABEL = {
   month: 'Monthly',
 };
 
-const DISC_LIFETIME_PRICES = {
-  eur: {
-    '2TB': '249.00',
-    '5TB': '449.00',
-    '10TB': '749.00',
-  },
-  usd: {
-    '2TB': '299.00',
-    '5TB': '499.00',
-    '10TB': '799.00',
-  },
-};
-
 export const PriceTableForAlternativePricing = ({
   textContent,
   selectedPlanStorage,
@@ -64,11 +51,7 @@ export const PriceTableForAlternativePricing = ({
             planType="individual"
             key={product.interval}
             storage={product.storage}
-            price={
-              product.interval === 'lifetime'
-                ? DISC_LIFETIME_PRICES[currencyValue][product.storage]
-                : ((product.price * discount).toFixed(2) as unknown as number)
-            }
+            price={(product.price * discount).toFixed(2) as unknown as number}
             label={CARD_LABEL[product.interval]}
             billingFrequency={product.interval}
             popular={product.interval === 'lifetime'}
