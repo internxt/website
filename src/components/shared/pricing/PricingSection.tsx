@@ -61,7 +61,7 @@ export const PricingSection = ({
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
           <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual && lang === 'en' ? `${textContent.businessDescription}` : `${textContent.planDescription}`}
+            {!isIndividual ? `${textContent.businessDescription}` : `${textContent.planDescription}`}
           </p>
         </div>
         <div className="flex flex-col items-center space-y-9">
@@ -103,9 +103,10 @@ export const PricingSection = ({
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
+          className="flex w-max flex-col gap-4"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
-            {products?.individuals?.[billingFrequency] &&
+          <div className="borders flex flex-row flex-wrap items-end justify-center justify-items-center">
+            {products?.individuals &&
               products.individuals[billingFrequency].map((product) => (
                 <PriceCard
                   product={product}
@@ -120,7 +121,7 @@ export const PricingSection = ({
           </div>
 
           {!hideFreeCard ? (
-            <div id="freeAccountCard" className="content co-coupons.subscription flex w-full pb-10 md:pb-0">
+            <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">
               <FreePlanCard textContent={textContent.freePlanCard} />
             </div>
           ) : undefined}

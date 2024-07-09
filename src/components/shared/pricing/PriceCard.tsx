@@ -96,10 +96,7 @@ export const PriceCard = ({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[storage].map((feature) => (
-            <div
-              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
-              key={feature}
-            >
+            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
               <img
                 loading="lazy"
                 className="translate-y-px select-none"
