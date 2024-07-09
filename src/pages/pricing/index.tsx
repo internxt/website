@@ -30,7 +30,7 @@ interface PricingProps {
   homeComponentsLang: Record<string, any>;
 }
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const { products, loadingCards, currencyValue, coupon } = usePricing({

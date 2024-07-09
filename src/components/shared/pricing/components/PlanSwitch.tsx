@@ -7,7 +7,7 @@ interface PlanSwitchProps {
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
-export const PlanSelector = ({ textContent, activeSwitchPlan, onPlanTypeChange }: PlanSwitchProps) => (
+export const PlanSelector = ({ textContent, activeSwitchPlan, onPlanTypeChange }: PlanSwitchProps): JSX.Element => (
   <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
     <button
       type="button"

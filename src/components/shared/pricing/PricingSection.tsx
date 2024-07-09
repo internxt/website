@@ -8,6 +8,8 @@ import FreePlanCard from '@/components/prices/FreePlanCard';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PriceCard } from './PriceCard';
 import { SwitchButtonOptions } from '@/components/prices/PriceTable';
+import { Detective, FolderLock } from '@phosphor-icons/react';
+import OpenSource from '/public/icons/open-source.svg';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -54,6 +56,21 @@ export const PricingSection = ({
       return businessTitle;
     }
   };
+
+  const features = [
+    {
+      icon: FolderLock,
+      text: textContent.features.endToEnd,
+    },
+    {
+      icon: OpenSource,
+      text: textContent.features.openSource,
+    },
+    {
+      icon: Detective,
+      text: textContent.features.anonymousAccount,
+    },
+  ];
 
   return (
     <section className={`overflow-hidden py-20 px-5 ${backgroundColorComponent}`}>
@@ -138,6 +155,14 @@ export const PricingSection = ({
             <BusinessBanner textContent={banner.BusinessBanner} />
           </div>
         </Transition>
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary md:pb-0" />
+              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
