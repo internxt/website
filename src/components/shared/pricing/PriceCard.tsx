@@ -9,8 +9,8 @@ export interface PriceCardProps {
   lang: string;
   label: string;
   decimalDiscountValue?: number;
-  lifetimeMode?: LifetimeMode;
-  onCheckoutButtonClicked: () => void;
+  redeemCodeCta?: LifetimeMode;
+  onCheckoutButtonClicked: (planId: string) => void;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -24,18 +24,18 @@ export const PriceCard = ({
   decimalDiscountValue,
   popular,
   lang,
-  lifetimeMode,
+  redeemCodeCta,
   label,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
-  const { currency, interval, price, storage } = product;
+  const { currency, interval, price, storage, priceId } = product;
 
   const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2) : price;
   const priceBefore = decimalDiscountValue ? price : undefined;
 
-  const ctaText = lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
+  const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
 
   return (
     <div
@@ -83,7 +83,7 @@ export const PriceCard = ({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={onCheckoutButtonClicked}
+          onClick={() => onCheckoutButtonClicked(priceId)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'

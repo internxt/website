@@ -1,6 +1,6 @@
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
 import Header from '../Header';
-import { PlanSwitch } from './components/PlanSwitch';
+import { PlanSelector } from './components/PlanSwitch';
 import { SwitchComponent } from './components/Switch';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -20,31 +20,9 @@ interface PriceTableProps {
   decimalDiscountForPrice?: number;
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
+  onIndividualSwitchToggled: (interval: Interval) => void;
+  onCheckoutButtonClicked: (planId: string) => void;
 }
-
-// function onCheckoutButtonClicked() {
-//   if (lifetimeMode === 'redeem') return onButtonClicked?.();
-
-//   if (cta[1] === 'Free plan') {
-//     goToSignUpURL();
-//   } else {
-//     if (isIframe) {
-//       checkoutForPcComponentes({
-//         planId: cta[1],
-//         mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-//         currency: currencyValue ?? 'eur',
-//         couponCode: coupon ?? undefined,
-//       });
-//     } else {
-//       checkout({
-//         planId: cta[1],
-//         mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
-//         currency: currencyValue ?? 'eur',
-//         couponCode: coupon ?? undefined,
-//       });
-//     }
-//   }
-// }
 
 export const PricingSection = ({
   textContent,
@@ -57,6 +35,8 @@ export const PricingSection = ({
   lang,
   backgroundColorComponent = 'bg-white',
   onPlanTypeChange,
+  onIndividualSwitchToggled,
+  onCheckoutButtonClicked,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -65,6 +45,7 @@ export const PricingSection = ({
   const businessTitle = textContent.planTitles.business;
 
   const isIndividual = activeSwitchPlan !== 'Business';
+  const showSwitchComponent = activeSwitchPlan === 'Individuals';
 
   const title = () => {
     if (isIndividual) {
@@ -85,23 +66,21 @@ export const PricingSection = ({
         </div>
         <div className="flex flex-col items-center space-y-9">
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          <PlanSwitch
+          <PlanSelector
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
             onPlanTypeChange={onPlanTypeChange}
           />
 
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          {activeSwitchPlan === 'Individuals' ? (
-            <SwitchComponent
-              textContent={textContent}
-              billedFrequency={Interval.Year}
-              handleOnSwitchIsEnabled={() => {}}
-              isIndividualSwitchEnabled
-              labelDiscount=""
-              showLabelDiscount={false}
-            />
-          ) : undefined}
+          <SwitchComponent
+            textContent={textContent}
+            show={showSwitchComponent}
+            billedFrequency={billingFrequency}
+            handleOnSwitchIsToggled={onIndividualSwitchToggled}
+            labelDiscount=""
+            showLabelDiscount={false}
+          />
         </div>
 
         <Transition
@@ -120,7 +99,7 @@ export const PricingSection = ({
         </Transition>
 
         <Transition
-          show={!loadingCards}
+          show={isIndividual && !loadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -130,7 +109,7 @@ export const PricingSection = ({
               products.individuals[billingFrequency].map((product) => (
                 <PriceCard
                   product={product}
-                  onCheckoutButtonClicked={() => {}}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
                   key={product.storage}
                   popular={product.storage === '10TB'}
@@ -146,35 +125,6 @@ export const PricingSection = ({
             </div>
           ) : undefined}
         </Transition>
-
-        {/* Lifetime cards
-        <Transition
-          show={isLifetime && !loadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.individuals?.[Interval.Lifetime] &&
-              products.individuals[Interval.Lifetime].map((product) => {
-                return (
-                  <PriceCard
-                    planType="individual"
-                    key={product.storage}
-                    storage={product.storage}
-                    cta={['default', product.priceId]}
-                    price={product.price}
-                    priceBefore={discountForPrice ? Number((product.price * discountForPrice).toFixed(2)) : undefined}
-                    billingFrequency={Interval.Lifetime}
-                    popular={product.storage === '5TB'}
-                    lang={lang}
-                    currencyValue={currencyValue}
-                    coupon={coupons.lifetime[product.storage]}
-                  />
-                );
-              })}
-          </div>
-        </Transition> */}
 
         {/* Business banner */}
         <Transition

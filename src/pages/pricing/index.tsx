@@ -18,6 +18,8 @@ import { PricingSection } from '@/components/shared/pricing/PricingSection';
 import { Interval } from '@/components/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
 import { SwitchButtonOptions } from '@/components/prices/PriceTable';
+import { checkout } from '@/lib/auth';
+import { CouponType } from '@/lib/types';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -31,7 +33,9 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const { products, loadingCards, currency, currencyValue, coupon } = usePricing();
+  const { products, loadingCards, currencyValue, coupon } = usePricing({
+    couponCode: CouponType.AllPlansCoupon,
+  });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
@@ -44,6 +48,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       setBillingFrequency(interval);
       setPageName(`Pricing Individuals ${interval}`);
     }
+  };
+
+  const onIndividualSwitchToggled = (interval: Interval) => {
+    setBillingFrequency(interval);
+  };
+
+  const onCheckoutButtonClicked = (planId: string) => {
+    checkout({
+      planId: planId,
+      couponCode: coupon,
+      currency: currencyValue ?? 'eur',
+      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
+    });
   };
 
   const cardsData = [
@@ -93,7 +110,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           products={products}
           loadingCards={loadingCards}
           activeSwitchPlan={activeSwitchPlan}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
           onPlanTypeChange={onPlanTypeChange}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
