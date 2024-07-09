@@ -64,12 +64,12 @@
       "description": {
         "normal1": "",
         "blue": "80% 折扣 ",
-        "normal2": "所有 Internxt 高級計劃。"
+        "normal2": "所有高級計劃。"
       },
       "features": ["最高 10TB 存儲", "零知識加密", "開源和審計"],
       "startFrom": {
         "normal1": "起價 ",
-        "price": " 1",
+        "price": " 0.95",
         "normal2": " /月"
       },
       "claimDeal": "獲取優惠",

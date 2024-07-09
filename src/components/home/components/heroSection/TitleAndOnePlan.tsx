@@ -71,7 +71,7 @@ export const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Elem
 
       <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
         <ShieldCheck size={24} weight="fill" className="text-primary" />
-        <p className="whitespace-nowrap font-medium lg:text-lg">{textContent.guarantee}</p>
+        <p className="whitespace-nowrap lg:text-lg">{textContent.guarantee}</p>
       </div>
     </div>
   );

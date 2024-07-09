@@ -64,12 +64,12 @@
       "description": {
         "normal1": "",
         "blue": "80% DE RÉDUCTION ",
-        "normal2": "sur tous les plans premium Internxt."
+        "normal2": "sur tous les plans premium."
       },
       "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open-source et audité"],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 1",
+        "price": " 0.95",
         "normal2": " /mois"
       },
       "claimDeal": "Obtenir l'offre",
