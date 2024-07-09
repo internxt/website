@@ -2,6 +2,11 @@ import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
 
+const CURRENCY_MAP = {
+  eur: '€',
+  usd: '$',
+};
+
 export enum Interval {
   Month = 'month',
   Year = 'year',
@@ -25,11 +30,13 @@ interface ProductValue {
   interval: Interval;
 }
 
-interface TransformedProduct {
+export interface TransformedProduct {
   priceId: string;
   storage: string;
   price: number;
   currency: string;
+  currencyValue: string;
+  interval: string;
 }
 
 export interface ProductsDataProps {
@@ -90,7 +97,8 @@ function transformProductData(data: ProductValue[]): ProductsDataProps {
         priceId: productValue.id,
         storage: storage,
         price: Math.abs(productValue.amount / 100).toFixed(2),
-        currency: productValue.currency,
+        currency: CURRENCY_MAP[productValue.currency],
+        currencyValue: productValue.currency,
         interval: interval,
       });
     }

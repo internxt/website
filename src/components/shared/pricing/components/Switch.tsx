@@ -18,7 +18,7 @@ export const SwitchComponent = ({
   isIndividualSwitchEnabled,
   handleOnSwitchIsEnabled,
 }: SwitchComponentProps): JSX.Element => (
-  <div className={`flex-row items-start gap-5 lg:items-center`}>
+  <div className={`flex flex-row items-start gap-5 lg:items-center`}>
     <p className={`text-base font-semibold ${billedFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'}`}>
       {textContent.billingFrequency.monthly}
     </p>

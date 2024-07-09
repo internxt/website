@@ -3,7 +3,6 @@ import Script from 'next/script';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
-import PriceTable from '@/components/prices/PriceTable';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -15,7 +14,10 @@ import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
-import { CouponType } from '@/lib/types';
+import { PricingSection } from '@/components/shared/pricing/PricingSection';
+import { Interval } from '@/components/services/stripe.service';
+import usePricing from '@/hooks/usePricing';
+import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -28,7 +30,21 @@ interface PricingProps {
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+
+  const { products, loadingCards, currency, currencyValue, coupon } = usePricing();
+
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+
+  const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
+    setActiveSwitchPlan(activeSwitchPlan);
+
+    if (interval) {
+      setBillingFrequency(interval);
+      setPageName(`Pricing Individuals ${interval}`);
+    }
+  };
 
   const cardsData = [
     {
@@ -68,13 +84,16 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable
-          setSegmentPageName={setPageName}
-          lang={lang}
+        <PricingSection
           textContent={textContent.tableSection}
-          discount={0.2}
-          couponCode={CouponType.AllPlansCoupon}
-          useSameCouponForAllPlans
+          lang={lang}
+          billingFrequency={billingFrequency}
+          hideFreeCard={false}
+          decimalDiscountForPrice={0.2}
+          products={products}
+          loadingCards={loadingCards}
+          activeSwitchPlan={activeSwitchPlan}
+          onPlanTypeChange={onPlanTypeChange}
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
