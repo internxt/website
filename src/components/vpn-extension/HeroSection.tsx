@@ -18,7 +18,7 @@ export const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
               <div className="flex w-max rounded-lg bg-gray-5 py-2 px-4">
                 <p className="text-xl font-medium text-gray-80">{textContent.label}</p>
               </div>
-              <Header textHeightForDesk="sm:text-6xl">
+              <Header>
                 {textContent.title.line1}
                 <span> {textContent.title.line2}</span>
               </Header>
