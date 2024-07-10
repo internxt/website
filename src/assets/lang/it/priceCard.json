@@ -88,41 +88,69 @@
       "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
       "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
     },
-    "200GB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "2TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "5TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "10TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ]
+    "individuals": {
+      "200GB": [
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "2TB": [
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "5TB": [
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "10TB": [
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB di archiviazione/utente",
+        "5 team",
+        "Caricare file fino a 5GB",
+        "Condivisione di file e cartelle crittografate",
+        "Creare e gestire utenti e team",
+        "Gestire la fatturazione e i pagamenti dell'account",
+        "Cronologia delle versioni",
+        "Registri di accesso dettagliati",
+        "Accordo sul livello di servizio (SLA) 99.99%",
+        "Assistenza clienti premium"
+      ],
+      "2TB": [
+        "2TB di archiviazione/utente",
+        "25 team",
+        "Caricare file fino a 20GB",
+        "Condivisione di file e cartelle crittografate",
+        "Creare e gestire utenti e team",
+        "Gestire la fatturazione e i pagamenti dell'account",
+        "Cronologia delle versioni",
+        "Registri di accesso dettagliati",
+        "Accordo sul livello di servizio (SLA) 99.99%",
+        "Assistenza clienti premium"
+      ]
+    }
   }
 }

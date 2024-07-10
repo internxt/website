@@ -87,41 +87,69 @@
       "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
       "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
     },
-    "200GB": [
-      "Partage chiffré de fichiers et de dossiers",
-      "Partage de fichiers protégé par mot de passe",
-      "Accédez à vos fichiers depuis n'importe quel appareil",
-      "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs (2FA)",
-      "Support client premium",
-      "Garantie de remboursement de 30 jours"
-    ],
-    "2TB": [
-      "Partage chiffré de fichiers et de dossiers",
-      "Partage de fichiers protégé par mot de passe",
-      "Accédez à vos fichiers depuis n'importe quel appareil",
-      "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs (2FA)",
-      "Support client premium",
-      "Garantie de remboursement de 30 jours"
-    ],
-    "5TB": [
-      "Partage chiffré de fichiers et de dossiers",
-      "Partage de fichiers protégé par mot de passe",
-      "Accédez à vos fichiers depuis n'importe quel appareil",
-      "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs (2FA)",
-      "Support client premium",
-      "Garantie de remboursement de 30 jours"
-    ],
-    "10TB": [
-      "Partage chiffré de fichiers et de dossiers",
-      "Partage de fichiers protégé par mot de passe",
-      "Accédez à vos fichiers depuis n'importe quel appareil",
-      "Téléchargez des fichiers jusqu'à 20 Go",
-      "Authentification à deux facteurs (2FA)",
-      "Support client premium",
-      "Garantie de remboursement de 30 jours"
-    ]
+    "individuals": {
+      "200GB": [
+        "Partage chiffré de fichiers et de dossiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Accédez à vos fichiers depuis n'importe quel appareil",
+        "Téléchargez des fichiers jusqu'à 20 Go",
+        "Authentification à deux facteurs (2FA)",
+        "Support client premium",
+        "Garantie de remboursement de 30 jours"
+      ],
+      "2TB": [
+        "Partage chiffré de fichiers et de dossiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Accédez à vos fichiers depuis n'importe quel appareil",
+        "Téléchargez des fichiers jusqu'à 20 Go",
+        "Authentification à deux facteurs (2FA)",
+        "Support client premium",
+        "Garantie de remboursement de 30 jours"
+      ],
+      "5TB": [
+        "Partage chiffré de fichiers et de dossiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Accédez à vos fichiers depuis n'importe quel appareil",
+        "Téléchargez des fichiers jusqu'à 20 Go",
+        "Authentification à deux facteurs (2FA)",
+        "Support client premium",
+        "Garantie de remboursement de 30 jours"
+      ],
+      "10TB": [
+        "Partage chiffré de fichiers et de dossiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Accédez à vos fichiers depuis n'importe quel appareil",
+        "Téléchargez des fichiers jusqu'à 20 Go",
+        "Authentification à deux facteurs (2FA)",
+        "Support client premium",
+        "Garantie de remboursement de 30 jours"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB de stockage/utilisateur",
+        "5 équipes",
+        "Télécharger des fichiers jusqu'à 5GB",
+        "Partage de fichiers et dossiers chiffrés",
+        "Créer et gérer des utilisateurs et des équipes",
+        "Gérer la facturation et les paiements du compte",
+        "Historique des versions",
+        "Journaux d'accès détaillés",
+        "Accord de Niveau de Service (SLA) 99.99%",
+        "Support client premium"
+      ],
+      "2TB": [
+        "2TB de stockage/utilisateur",
+        "25 équipes",
+        "Télécharger des fichiers jusqu'à 20GB",
+        "Partage de fichiers et dossiers chiffrés",
+        "Créer et gérer des utilisateurs et des équipes",
+        "Gérer la facturation et les paiements du compte",
+        "Historique des versions",
+        "Journaux d'accès détaillés",
+        "Accord de Niveau de Service (SLA) 99.99%",
+        "Support client premium"
+      ]
+    }
   }
 }

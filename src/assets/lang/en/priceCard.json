@@ -17,7 +17,7 @@
   },
   "lifetimeDescription": "Buy once and get privacy and security forever.",
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
-  "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+  "businessDescription": "Ensure business data security with Internxt's encrypted cloud storage plans.",
   "billingFrequency": {
     "monthly": "Monthly",
     "annually": "Annually",
@@ -86,41 +86,69 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
-    "200GB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "2TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "5TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "10TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ]
+    "individuals": {
+      "200GB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "2TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "5TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "10TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB storage/user",
+        "5 Teams",
+        "Upload files up to 5GB",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Manage account billing & payments",
+        "Version history",
+        "Detailed access logs",
+        "Service-Level Agreement (SLA) 99.99%",
+        "Premium customer support"
+      ],
+      "2TB": [
+        "2TB storage/user",
+        "25 Teams",
+        "Upload files up to 20GB",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Manage account billing & payments",
+        "Version history",
+        "Detailed access logs",
+        "Service-Level Agreement (SLA) 99.99%",
+        "Premium customer support"
+      ]
+    }
   }
 }

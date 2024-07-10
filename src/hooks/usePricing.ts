@@ -64,9 +64,10 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
       try {
-        const res = await stripeService.getPrices('eur');
-        dispatch({ type: 'SET_PRODUCTS', payload: res });
+        const prices = await stripeService.getPrices('eur');
+        dispatch({ type: 'SET_PRODUCTS', payload: prices });
         dispatch({ type: 'SET_LOADING_CARDS', payload: false });
+        console.log('[PRICES]:', prices);
       } catch (error) {
         console.error('Error getting prices:', error);
       }

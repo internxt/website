@@ -45,13 +45,17 @@ export interface ProductsDataProps {
     [Interval.Year]: TransformedProduct[];
     [Interval.Lifetime]: TransformedProduct[];
   };
+  business: {
+    [Interval.Month]: TransformedProduct[];
+    [Interval.Year]: TransformedProduct[];
+  };
 }
 
 async function getPrices(currencySpecified?: string) {
   const currency = await getCurrency(currencySpecified);
   const data = await fetchProductData(currency);
   if (data) {
-    const transformedData = transformProductData(data);
+    const transformedData = transformProductData(data.individuals, data.business);
     return transformedData;
   }
 }
@@ -79,35 +83,44 @@ async function fetchProductData(currency: string) {
   }
 }
 
-function transformProductData(data: ProductValue[]): ProductsDataProps {
+function transformProductData(individualsData: ProductValue[], businessData: ProductValue[]): ProductsDataProps {
   const transformedData = {
     individuals: {
       [Interval.Month]: [] as Array<any>,
       [Interval.Year]: [] as Array<any>,
       [Interval.Lifetime]: [] as Array<any>,
     },
+    business: {
+      [Interval.Month]: [] as Array<any>,
+      [Interval.Year]: [] as Array<any>,
+    },
   };
 
-  data.forEach((productValue: any) => {
-    const storage = bytes(productValue.bytes);
-    const interval = productValue.interval;
+  const transform = (data: ProductValue[], type: 'individuals' | 'business') => {
+    data.forEach((productValue: any) => {
+      const storage = bytes(productValue.bytes);
+      const interval = productValue.interval;
 
-    if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
-      transformedData.individuals[interval].push({
-        priceId: productValue.id,
-        storage: storage,
-        price: Math.abs(productValue.amount / 100).toFixed(2),
-        currency: CURRENCY_MAP[productValue.currency],
-        currencyValue: productValue.currency,
-        interval: interval,
-      });
-    }
-  });
+      if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
+        transformedData[type][interval].push({
+          priceId: productValue.id,
+          storage: storage,
+          price: Math.abs(productValue.amount / 100).toFixed(2),
+          currency: CURRENCY_MAP[productValue.currency],
+          currencyValue: productValue.currency,
+          interval: interval,
+        });
+      }
+    });
 
-  // Sort products by price ascending order for each interval (month, year, lifetime)
-  Object.keys(transformedData.individuals).forEach((interval) => {
-    transformedData.individuals[interval].sort((a, b) => a.price - b.price);
-  });
+    // Sort products by price ascending order for each interval (month, year, lifetime)
+    Object.keys(transformedData[type]).forEach((interval) => {
+      transformedData[type][interval].sort((a, b) => a.price - b.price);
+    });
+  };
+
+  transform(individualsData, 'individuals');
+  transform(businessData, 'business');
 
   return transformedData;
 }

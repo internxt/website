@@ -87,41 +87,69 @@
       "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
       "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
     },
-    "200GB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "2TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "5TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "10TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ]
+    "individuals": {
+      "200GB": [
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "2TB": [
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "5TB": [
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "10TB": [
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB de almacenamiento/usuario",
+        "5 equipos",
+        "Subir archivos de hasta 5GB",
+        "Compartir archivos y carpetas cifrados",
+        "Crear y gestionar usuarios y equipos",
+        "Gestionar la facturación y los pagos de la cuenta",
+        "Historial de versiones",
+        "Registros de acceso detallados",
+        "Acuerdo de Nivel de Servicio (SLA) 99.99%",
+        "Soporte al cliente premium"
+      ],
+      "2TB": [
+        "2TB de almacenamiento/usuario",
+        "25 equipos",
+        "Subir archivos de hasta 20GB",
+        "Compartir archivos y carpetas cifrados",
+        "Crear y gestionar usuarios y equipos",
+        "Gestionar la facturación y los pagos de la cuenta",
+        "Historial de versiones",
+        "Registros de acceso detallados",
+        "Acuerdo de Nivel de Servicio (SLA) 99.99%",
+        "Soporte al cliente premium"
+      ]
+    }
   }
 }

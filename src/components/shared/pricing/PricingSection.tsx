@@ -5,7 +5,6 @@ import { SwitchComponent } from './components/Switch';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
-import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
@@ -19,7 +18,8 @@ interface PriceTableProps {
   lang: string;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  decimalDiscountForPrice?: number;
+  decimalDiscountForIndividualPlans?: number;
+  decimalDiscountForBusinessPlans?: number;
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
@@ -32,7 +32,8 @@ export const PricingSection = ({
   loadingCards,
   activeSwitchPlan,
   billingFrequency,
-  decimalDiscountForPrice,
+  decimalDiscountForIndividualPlans,
+  decimalDiscountForBusinessPlans,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
   lang,
@@ -41,15 +42,14 @@ export const PricingSection = ({
   onIndividualSwitchToggled,
   onCheckoutButtonClicked,
 }: PriceTableProps): JSX.Element => {
-  const banner = require('@/assets/lang/en/banners.json');
-
   const individualPlansTitle =
     textContent.planTitles.homePage ??
     (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
   const businessTitle = textContent.planTitles.business;
 
-  const isIndividual = activeSwitchPlan !== 'Business';
-  const showSwitchComponent = activeSwitchPlan === 'Individuals';
+  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const isBusiness = activeSwitchPlan === 'Business';
+  const showSwitchComponent = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Business';
 
   const title = () => {
     if (isIndividual) {
@@ -124,7 +124,7 @@ export const PricingSection = ({
           enterTo="scale-100 translate-y-0 opacity-100"
           className="flex w-max flex-col gap-4"
         >
-          <div className="borders flex flex-row flex-wrap items-end justify-center justify-items-center">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
             {products?.individuals &&
               products.individuals[billingFrequency].map((product) => (
                 <PriceCard
@@ -133,28 +133,40 @@ export const PricingSection = ({
                   label={product.storage}
                   key={product.storage}
                   popular={product.storage === '10TB'}
-                  decimalDiscountValue={decimalDiscountForPrice}
+                  decimalDiscountValue={decimalDiscountForIndividualPlans}
                   lang={lang}
                 />
               ))}
           </div>
 
           {!hideFreeCard ? (
-            <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">
+            <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
               <FreePlanCard textContent={textContent.freePlanCard} />
             </div>
           ) : undefined}
         </Transition>
 
-        {/* Business banner */}
+        {/* Business plans */}
         <Transition
-          show={!isIndividual}
+          show={isBusiness}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-            <BusinessBanner textContent={banner.BusinessBanner} />
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+            {products?.business &&
+              products.business[Interval.Year].map((product) => (
+                <PriceCard
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  productCardPlan="business"
+                  label={product.storage}
+                  key={product.storage}
+                  popular={product.storage === '10TB'}
+                  decimalDiscountValue={decimalDiscountForBusinessPlans}
+                  lang={lang}
+                />
+              ))}
           </div>
         </Transition>
         <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
