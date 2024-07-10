@@ -24,7 +24,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Получите ${{storage}} безопасного облачного хранилища с ", "blue": "скидкой 80%" },
+    "title": {
+      "normal1": "Получите",
+      "blue1": " ${{storage}} ",
+      "normal2": "безопасного облачного хранилища с ",
+      "blue2": "скидкой 80%"
+    },
     "offerEnds": "Заканчивается через:"
   },
   "tableSection": {

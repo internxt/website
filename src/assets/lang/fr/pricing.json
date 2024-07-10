@@ -24,7 +24,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Obtenez ${{storage}} Go de stockage cloud sécurisé avec ", "blue": "80% de réduction" },
+    "title": {
+      "normal1": "Obtenez",
+      "blue1": " ${{storage}} ",
+      "normal2": "Go de stockage cloud sécurisé avec ",
+      "blue2": "80% de réduction"
+    },
     "offerEnds": "Termine dans :"
   },
   "tableSection": {

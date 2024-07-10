@@ -19,7 +19,7 @@
     "features": ["最安全的雲存儲", "匿名帳戶創建", "軍用級加密", "您的數據不會被出售"]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "獲取 ${{storage}} 安全雲存儲，享受 ", "blue": "80% 折扣" },
+    "title": { "normal1": "獲取", "blue1": " ${{storage}} ", "normal2": "安全雲存儲，享受 ", "blue2": "80% 折扣" },
     "offerEnds": "優惠結束於:"
   },
   "tableSection": {
