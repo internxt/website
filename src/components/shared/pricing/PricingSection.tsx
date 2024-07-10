@@ -19,6 +19,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   hideFreeCard: boolean;
   lang: string;
+  hidePlanSelectorAndSwitch?: boolean;
   decimalDiscountForPrice?: number;
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
@@ -34,6 +35,7 @@ export const PricingSection = ({
   billingFrequency,
   decimalDiscountForPrice,
   hideFreeCard,
+  hidePlanSelectorAndSwitch,
   lang,
   backgroundColorComponent = 'bg-white',
   onPlanTypeChange,
@@ -81,7 +83,7 @@ export const PricingSection = ({
             {!isIndividual ? `${textContent.businessDescription}` : `${textContent.planDescription}`}
           </p>
         </div>
-        <div className="flex flex-col items-center space-y-9">
+        <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <PlanSelector
             textContent={textContent}
