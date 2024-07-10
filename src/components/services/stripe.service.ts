@@ -2,14 +2,15 @@ import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
 
+const CURRENCY_MAP = {
+  eur: '€',
+  usd: '$',
+};
+
 export enum Interval {
   Month = 'month',
   Year = 'year',
   Lifetime = 'lifetime',
-}
-
-export interface ProductsProps {
-  individuals: {} | undefined;
 }
 
 export enum Products {
@@ -19,6 +20,31 @@ export enum Products {
   '2TB' = '2TB',
   '5TB' = '5TB',
   '10TB' = '10TB',
+}
+
+interface ProductValue {
+  id: string;
+  bytes: number;
+  amount: number;
+  currency: string;
+  interval: Interval;
+}
+
+export interface TransformedProduct {
+  priceId: string;
+  storage: string;
+  price: number;
+  currency: string;
+  currencyValue: string;
+  interval: string;
+}
+
+export interface ProductsDataProps {
+  individuals: {
+    [Interval.Month]: TransformedProduct[];
+    [Interval.Year]: TransformedProduct[];
+    [Interval.Lifetime]: TransformedProduct[];
+  };
 }
 
 async function getPrices(currencySpecified?: string) {
@@ -53,7 +79,7 @@ async function fetchProductData(currency: string) {
   }
 }
 
-function transformProductData(data: any) {
+function transformProductData(data: ProductValue[]): ProductsDataProps {
   const transformedData = {
     individuals: {
       [Interval.Month]: [] as Array<any>,
@@ -71,7 +97,8 @@ function transformProductData(data: any) {
         priceId: productValue.id,
         storage: storage,
         price: Math.abs(productValue.amount / 100).toFixed(2),
-        currency: productValue.currency,
+        currency: CURRENCY_MAP[productValue.currency],
+        currencyValue: productValue.currency,
         interval: interval,
       });
     }

@@ -9,6 +9,33 @@
     "recommendedBy": "Recommended by:"
   },
   "tableSection": {
+    "planTitles": {
+      "individuals": "Individual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Get started with our free plan",
+      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
+      "upTo": "1GB",
+      "freeForever": "Free forever",
+      "cta": "Select plan"
+    },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",

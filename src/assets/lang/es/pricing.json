@@ -38,6 +38,32 @@
       "guarantee": "Garantía de devolución de dinero de 30 días",
       "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
     },
+    "planTitles": {
+      "individuals": "Planes individuales",
+      "lifetime": "Planes de por vida",
+      "business": "Planes para empresas",
+      "lifetimeCampaign": {
+        "blueText": "50% de descuento",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      }
+    },
+    "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
+    "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
+    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su negocio, proteger a sus empleados y asegurar su rentabilidad.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "lifetime": "Lifetime",
+      "individual": "Individual",
+      "business": "Empresa"
+    },
+    "freePlanCard": {
+      "getStarted": "Empieza con nuestro plan gratuito",
+      "enjoy10gb": "Disfruta de 1 GB y accede a todos nuestros servicios",
+      "upTo": "1GB",
+      "freeForever": "Gratis para siempre",
+      "cta": "Seleccionar plan"
+    },
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",
       "openSource": "Código abierto y auditado",

@@ -3,7 +3,6 @@ import Script from 'next/script';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
-import PriceTable from '@/components/prices/PriceTable';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -15,7 +14,12 @@ import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { PricingSection } from '@/components/shared/pricing/PricingSection';
+import { Interval } from '@/components/services/stripe.service';
+import usePricing from '@/hooks/usePricing';
+import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -26,9 +30,38 @@ interface PricingProps {
   homeComponentsLang: Record<string, any>;
 }
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps) => {
+const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+
+  const { products, loadingCards, currencyValue, coupon } = usePricing({
+    couponCode: CouponType.AllPlansCoupon,
+  });
+
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
+  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+
+  const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
+    setActiveSwitchPlan(activeSwitchPlan);
+
+    if (interval) {
+      setBillingFrequency(interval);
+      setPageName(`Pricing Individuals ${interval}`);
+    }
+  };
+
+  const onIndividualSwitchToggled = (interval: Interval) => {
+    setBillingFrequency(interval);
+  };
+
+  const onCheckoutButtonClicked = (planId: string) => {
+    checkout({
+      planId: planId,
+      couponCode: coupon,
+      currency: currencyValue ?? 'eur',
+      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
+    });
+  };
 
   const cardsData = [
     {
@@ -68,13 +101,17 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
-        <PriceTable
-          setSegmentPageName={setPageName}
-          lang={lang}
+        <PricingSection
           textContent={textContent.tableSection}
-          discount={0.2}
-          couponCode={CouponType.AllPlansCoupon}
-          useSameCouponForAllPlans
+          lang={lang}
+          billingFrequency={billingFrequency}
+          decimalDiscountForPrice={0.2}
+          products={products}
+          loadingCards={loadingCards}
+          activeSwitchPlan={activeSwitchPlan}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          onPlanTypeChange={onPlanTypeChange}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />
