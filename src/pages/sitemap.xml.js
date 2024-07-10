@@ -13,7 +13,6 @@ export const getServerSideProps = ({ res }) => {
     index: '1.0',
     pricing: '1.0',
     drive: '1.0',
-    lifetime: '0.8',
     'temporary-email': '0.8',
     'file-converter': '0.8',
     about: '0.6',
