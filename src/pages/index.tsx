@@ -15,13 +15,21 @@ import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
 import { PricingSection } from '@/components/shared/pricing/PricingSection';
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { Interval } from '@/components/services/stripe.service';
 import { checkout } from '@/lib/auth';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
 
-const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+interface HomeProps {
+  lang: string;
+  metatagsDescriptions: Record<string, any>;
+  navbarLang: Record<string, any>;
+  textContent: Record<string, any>;
+  footerLang: Record<string, any>;
+}
+
+const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const navbarCta = 'default';
@@ -63,28 +71,27 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
       <ChooseStorageSizeSection
-        textContent={langJson.ChooseStorageSizeSection}
+        textContent={textContent.ChooseStorageSizeSection}
         onButtonClicked={onChooseStorageButtonClicked}
       />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+      <TestimonialsSection textContent={textContent.TestimonialsSection} />
 
       <div className={`${marqueeBgColor} py-10`}>
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <FirstFeaturesSection textContent={langJson.FirstFeaturesSection} lang={lang} />
+      <FirstFeaturesSection textContent={textContent.FirstFeaturesSection} lang={lang} />
 
-      <SecondFeaturesSection textContent={langJson.SecondFeaturesSection} lang={lang} />
+      <SecondFeaturesSection textContent={textContent.SecondFeaturesSection} lang={lang} />
 
       <PricingSection
-        textContent={langJson.tableSection}
+        textContent={textContent.tableSection}
         lang={lang}
         billingFrequency={billingFrequency}
-        hideFreeCard={false}
         decimalDiscountForPrice={0.2}
         products={products}
         loadingCards={loadingCards}
@@ -94,13 +101,13 @@ const Home = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) 
         onIndividualSwitchToggled={onIndividualSwitchToggled}
       />
 
-      <FirstWhatWeDoSection textContent={langJson.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
+      <FirstWhatWeDoSection textContent={textContent.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
 
-      <SecondWhatWeDoSection textContent={langJson.SecondWhatWeDoSection} lang={lang} />
+      <SecondWhatWeDoSection textContent={textContent.SecondWhatWeDoSection} lang={lang} />
 
-      <FAQSection textContent={langJson.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
+      <FAQSection textContent={textContent.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
+      <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -111,7 +118,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/home.json`);
+  const textContent = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -121,7 +128,7 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       metatagsDescriptions,
-      langJson,
+      textContent,
       navbarLang,
       footerLang,
     },

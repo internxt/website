@@ -17,9 +17,9 @@ import InfoSection from '@/components/shared/sections/InfoSection';
 import { PricingSection } from '@/components/shared/pricing/PricingSection';
 import { Interval } from '@/components/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -105,7 +105,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           lang={lang}
           billingFrequency={billingFrequency}
-          hideFreeCard={false}
           decimalDiscountForPrice={0.2}
           products={products}
           loadingCards={loadingCards}

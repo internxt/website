@@ -1,13 +1,12 @@
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
 import Header from '../Header';
-import { PlanSelector } from './components/PlanSwitch';
+import { PlanSelector, SwitchButtonOptions } from './components/PlanSwitch';
 import { SwitchComponent } from './components/Switch';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PriceCard } from './PriceCard';
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
 
@@ -17,8 +16,8 @@ interface PriceTableProps {
   loadingCards: boolean;
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
-  hideFreeCard: boolean;
   lang: string;
+  hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   decimalDiscountForPrice?: number;
   backgroundColorComponent?: string;
@@ -45,7 +44,8 @@ export const PricingSection = ({
   const banner = require('@/assets/lang/en/banners.json');
 
   const individualPlansTitle =
-    billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
+    textContent.planTitles.homePage ??
+    (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
   const businessTitle = textContent.planTitles.business;
 
   const isIndividual = activeSwitchPlan !== 'Business';

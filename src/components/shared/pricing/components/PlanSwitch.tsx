@@ -1,5 +1,6 @@
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { Interval } from '@/components/services/stripe.service';
+
+export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 interface PlanSwitchProps {
   textContent: Record<string, any>;

@@ -12,6 +12,7 @@ import OpenSource from '../../../public/icons/open-source.svg';
 import FreePlanCard from './FreePlanCard';
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 import { CouponType } from '@/lib/types';
+import { SwitchButtonOptions } from '../shared/pricing/components/PlanSwitch';
 
 interface PriceTableProps {
   setSegmentPageName: (pageName: string) => void;
@@ -24,8 +25,6 @@ interface PriceTableProps {
   discount?: number;
   switchDiscount?: number;
 }
-
-export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
 const LIFETIME_PRICES = {
   usd: {
