@@ -76,7 +76,7 @@ const FreeUserPage = ({
         lang={lang}
         billingFrequency={billingFrequency}
         hideFreeCard
-        decimalDiscountForPrice={0.25}
+        decimalDiscountForIndividualPlans={0.25}
         products={products}
         loadingCards={loadingCards}
         activeSwitchPlan={activeSwitchPlan}
