@@ -11,7 +11,7 @@ export interface PriceCardProps {
   productCardPlan?: 'individuals' | 'business';
   decimalDiscountValue?: number;
   redeemCodeCta?: LifetimeMode;
-  onCheckoutButtonClicked: (planId: string) => void;
+  onCheckoutButtonClicked: (planId: string, planType: 'individuals' | 'business') => void;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -85,7 +85,7 @@ export const PriceCard = ({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => onCheckoutButtonClicked(priceId)}
+          onClick={() => onCheckoutButtonClicked(priceId, productCardPlan)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'

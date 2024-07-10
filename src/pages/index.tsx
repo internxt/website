@@ -41,6 +41,7 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
 
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
 
   const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(activeSwitchPlan);
@@ -54,12 +55,18 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
     setBillingFrequency(interval);
   };
 
-  const onCheckoutButtonClicked = (planId: string) => {
+  const onBusinessSwitchToggled = (interval: Interval) => {
+    setBusinessBillingFrequency(interval);
+  };
+
+  const onCheckoutButtonClicked = (planId: string, planType: 'individuals' | 'business') => {
+    const billingFrequencyForBilling = planType === 'individuals' ? billingFrequency : businessBillingFrequency;
+
     checkout({
       planId: planId,
       couponCode: coupon,
       currency: currencyValue ?? 'eur',
-      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
+      mode: billingFrequencyForBilling === Interval.Lifetime ? 'payment' : 'subscription',
     });
   };
 
@@ -92,6 +99,7 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
         textContent={textContent.tableSection}
         lang={lang}
         billingFrequency={billingFrequency}
+        businessBillingFrequency={businessBillingFrequency}
         decimalDiscountForIndividualPlans={0.2}
         products={products}
         loadingCards={loadingCards}
@@ -99,6 +107,7 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         onPlanTypeChange={onPlanTypeChange}
         onIndividualSwitchToggled={onIndividualSwitchToggled}
+        onBusinessSwitchToggled={onBusinessSwitchToggled}
       />
 
       <FirstWhatWeDoSection textContent={textContent.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />

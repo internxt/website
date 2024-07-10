@@ -16,6 +16,7 @@ interface PriceTableProps {
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
+  businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   decimalDiscountForIndividualPlans?: number;
@@ -23,7 +24,8 @@ interface PriceTableProps {
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
-  onCheckoutButtonClicked: (planId: string) => void;
+  onBusinessSwitchToggled?: (interval: Interval) => void;
+  onCheckoutButtonClicked: (planId: string, planType: 'individuals' | 'business') => void;
 }
 
 export const PricingSection = ({
@@ -32,6 +34,7 @@ export const PricingSection = ({
   loadingCards,
   activeSwitchPlan,
   billingFrequency,
+  businessBillingFrequency,
   decimalDiscountForIndividualPlans,
   decimalDiscountForBusinessPlans,
   hideFreeCard,
@@ -40,6 +43,7 @@ export const PricingSection = ({
   backgroundColorComponent = 'bg-white',
   onPlanTypeChange,
   onIndividualSwitchToggled,
+  onBusinessSwitchToggled,
   onCheckoutButtonClicked,
 }: PriceTableProps): JSX.Element => {
   const individualPlansTitle =
@@ -50,6 +54,8 @@ export const PricingSection = ({
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
   const showSwitchComponent = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Business';
+
+  const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
   const title = () => {
     if (isIndividual) {
@@ -74,6 +80,14 @@ export const PricingSection = ({
     },
   ];
 
+  const switchHandler = (interval: Interval) => {
+    if (isIndividual) {
+      onIndividualSwitchToggled(interval);
+    } else {
+      onBusinessSwitchToggled?.(interval);
+    }
+  };
+
   return (
     <section className={`overflow-hidden py-20 px-5 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
@@ -95,8 +109,8 @@ export const PricingSection = ({
           <SwitchComponent
             textContent={textContent}
             show={showSwitchComponent}
-            billedFrequency={billingFrequency}
-            handleOnSwitchIsToggled={onIndividualSwitchToggled}
+            billedFrequency={billingFrequencyForSwitch}
+            handleOnSwitchIsToggled={switchHandler}
             labelDiscount=""
             showLabelDiscount={false}
           />
@@ -148,14 +162,15 @@ export const PricingSection = ({
 
         {/* Business plans */}
         <Transition
-          show={isBusiness}
+          show={isBusiness && !!businessBillingFrequency}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.business &&
-              products.business[Interval.Year].map((product) => (
+            {businessBillingFrequency &&
+              products?.business &&
+              products.business[businessBillingFrequency].map((product) => (
                 <PriceCard
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
