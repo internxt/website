@@ -40,6 +40,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
 
   const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(activeSwitchPlan);
@@ -54,12 +55,18 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     setBillingFrequency(interval);
   };
 
-  const onCheckoutButtonClicked = (planId: string) => {
+  const onBusinessSwitchToggled = (interval: Interval) => {
+    setBusinessBillingFrequency(interval);
+  };
+
+  const onCheckoutButtonClicked = (planId: string, planType: 'individuals' | 'business') => {
+    const billingFrequencyForBilling = planType === 'individuals' ? billingFrequency : businessBillingFrequency;
+
     checkout({
       planId: planId,
       couponCode: coupon,
       currency: currencyValue ?? 'eur',
-      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
+      mode: billingFrequencyForBilling === Interval.Lifetime ? 'payment' : 'subscription',
     });
   };
 
@@ -105,6 +112,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           lang={lang}
           billingFrequency={billingFrequency}
+          businessBillingFrequency={businessBillingFrequency}
           decimalDiscountForIndividualPlans={0.2}
           products={products}
           loadingCards={loadingCards}
@@ -112,6 +120,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           onPlanTypeChange={onPlanTypeChange}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
         />
 
         <CtaSection textContent={textContent.CtaSection} freePlan />

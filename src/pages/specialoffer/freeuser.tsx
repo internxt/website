@@ -39,6 +39,7 @@ const FreeUserPage = ({
 
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
+  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
 
   const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(activeSwitchPlan);
@@ -52,12 +53,18 @@ const FreeUserPage = ({
     setBillingFrequency(interval);
   };
 
-  const onCheckoutButtonClicked = (planId: string) => {
+  const onBusinessSwitchToggled = (interval: Interval) => {
+    setBusinessBillingFrequency(interval);
+  };
+
+  const onCheckoutButtonClicked = (planId: string, planType: 'individuals' | 'business') => {
+    const billingFrequencyForBilling = planType === 'individuals' ? billingFrequency : businessBillingFrequency;
+
     checkout({
       planId: planId,
       couponCode: coupon,
       currency: currencyValue ?? 'eur',
-      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
+      mode: billingFrequencyForBilling === Interval.Lifetime ? 'payment' : 'subscription',
     });
   };
 
@@ -75,6 +82,7 @@ const FreeUserPage = ({
         textContent={textContent.tableSection}
         lang={lang}
         billingFrequency={billingFrequency}
+        businessBillingFrequency={businessBillingFrequency}
         hideFreeCard
         decimalDiscountForIndividualPlans={0.25}
         products={products}
@@ -83,6 +91,7 @@ const FreeUserPage = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         onPlanTypeChange={onPlanTypeChange}
         onIndividualSwitchToggled={onIndividualSwitchToggled}
+        onBusinessSwitchToggled={onBusinessSwitchToggled}
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />

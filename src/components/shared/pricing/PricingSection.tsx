@@ -90,7 +90,7 @@ export const PricingSection = ({
 
   return (
     <section className={`overflow-hidden py-20 px-5 ${backgroundColorComponent}`}>
-      <div className="flex flex-col items-center gap-10">
+      <div className="flex w-full flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
           <p className="w-full max-w-3xl text-center text-xl text-gray-80">
@@ -136,7 +136,7 @@ export const PricingSection = ({
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
-          className="flex w-max flex-col gap-4"
+          className="flex flex-col gap-4"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
             {products?.individuals &&
@@ -166,8 +166,9 @@ export const PricingSection = ({
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
+          className="flex w-full flex-col gap-4"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+          <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
             {businessBillingFrequency &&
               products?.business &&
               products.business[businessBillingFrequency].map((product) => (
