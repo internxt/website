@@ -9,7 +9,6 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import CtaSection from '@/components/pricing/CtaSection';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
@@ -33,6 +32,29 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
+  const cardsData = [
+    {
+      icon: ShieldCheck,
+      title: textContent.InfoSection.cards[0].title,
+      description: textContent.InfoSection.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: textContent.InfoSection.cards[1].title,
+      description: textContent.InfoSection.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: textContent.InfoSection.cards[2].title,
+      description: textContent.InfoSection.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: textContent.InfoSection.cards[3].title,
+      description: textContent.InfoSection.cards[3].description,
+    },
+  ];
+
   const { products, loadingCards, currencyValue, coupon } = usePricing({
     couponCode: CouponType.AllPlansCoupon,
   });
@@ -41,6 +63,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
+
+  const isBusiness = activeSwitchPlan === 'Business';
+  const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
+  const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
 
   const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(activeSwitchPlan);
@@ -70,29 +96,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     });
   };
 
-  const cardsData = [
-    {
-      icon: ShieldCheck,
-      title: textContent.InfoSection.cards[0].title,
-      description: textContent.InfoSection.cards[0].description,
-    },
-    {
-      icon: LockKey,
-      title: textContent.InfoSection.cards[1].title,
-      description: textContent.InfoSection.cards[1].description,
-    },
-    {
-      icon: Eye,
-      title: textContent.InfoSection.cards[2].title,
-      description: textContent.InfoSection.cards[2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: textContent.InfoSection.cards[3].title,
-      description: textContent.InfoSection.cards[3].description,
-    },
-  ];
-
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -105,8 +108,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
-        {/* <HeroSection textContent={textContent.HeroSection} /> */}
 
         <PricingSection
           textContent={textContent.tableSection}
@@ -123,23 +124,17 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessSwitchToggled={onBusinessSwitchToggled}
         />
 
-        <CtaSection textContent={textContent.CtaSection} freePlan />
+        {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
 
-        <InfoSection textContent={textContent.InfoSection} lang={lang} cards={cardsData} />
+        <InfoSection textContent={infoText} withoutCta={isBusiness} lang={lang} cards={cardsData} />
 
-        <FirstWhatWeDoSection
-          textContent={textContent.FirstWhatWeDoSection}
-          lang={lang}
-          backgroundColor={'bg-gray-1'}
-        />
-
-        <BestStorageSection textContent={textContent.BestStorageSection} />
+        <BestStorageSection hideTitleAndDescription textContent={textContent.BestStorageSection} />
 
         <FileParallaxSection />
 
-        <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={faqSection} />
 
-        <CtaSection textContent={textContent.lastCtaSection} />
+        {!isBusiness ? <CtaSection textContent={textContent.lastCtaSection} /> : undefined}
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>
