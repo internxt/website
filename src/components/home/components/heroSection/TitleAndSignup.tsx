@@ -2,7 +2,7 @@ import SignUpInline from '@/components/auth/SignUpInline';
 import Header from '@/components/shared/Header';
 import { goToSignUpURL } from '@/lib/auth';
 
-export const TitleAndSignup = ({ textContent }) => {
+const TitleAndSignup = ({ textContent }) => {
   return (
     <div className="z-10 flex flex-col md:max-w-lg">
       <Header maxWidth="max-w-[485px]" className="text-gray-100">
@@ -28,3 +28,5 @@ export const TitleAndSignup = ({ textContent }) => {
     </div>
   );
 };
+
+export default TitleAndSignup;

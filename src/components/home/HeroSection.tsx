@@ -3,8 +3,13 @@ import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
-import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
+const TitleAndSurvey = dynamic(() => import('./components/heroSection/TitleAndSurvey'), {
+  ssr: false,
+});
+const TitleAndSignup = dynamic(() => import('./components/heroSection/TitleAndSignup'), {
+  ssr: false,
+});
+
 import { ArrowCircleDown } from '@phosphor-icons/react';
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -16,7 +21,6 @@ interface HeroSectionForHomeProps {
 
 export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
   const mobileImage = getImage('/images/home/image_mobile.webp');
-
   const blurBgImage = getImage('/images/home/header/bg.svg');
 
   return (

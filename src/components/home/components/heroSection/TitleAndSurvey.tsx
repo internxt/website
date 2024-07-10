@@ -1,5 +1,4 @@
 import Button from '@/components/shared/Button';
-import Header from '@/components/shared/Header';
 import { FiveStars } from '@/components/shared/StarsRate';
 import { useRouter } from 'next/router';
 
@@ -8,7 +7,7 @@ interface TitleAndSurveyProps {
   redirectUrl: string;
 }
 
-export const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
+const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.Element => {
   const router = useRouter();
 
   const handleOnPlanButtonClicked = () => {
@@ -19,9 +18,9 @@ export const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps
     <div className="z-10 flex flex-col gap-16">
       <div className="flex max-w-[544px] flex-col gap-6">
         <div className="flex flex-col gap-5">
-          <Header className="text-gray-100">
+          <p className="text-gray-100">
             {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-          </Header>
+          </p>
 
           <div className="flex flex-col items-center gap-3 lg:flex-row">
             <FiveStars totalStars={5} />
@@ -54,3 +53,5 @@ export const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps
     </div>
   );
 };
+
+export default TitleAndSurvey;
