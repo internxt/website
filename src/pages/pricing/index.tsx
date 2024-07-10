@@ -11,7 +11,16 @@ import CtaSection from '@/components/pricing/CtaSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import {
+  ClockCounterClockwise,
+  Eye,
+  Fingerprint,
+  FolderSimpleLock,
+  LockKey,
+  ShieldCheck,
+  Sliders,
+  UsersThree,
+} from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { PricingSection } from '@/components/shared/pricing/PricingSection';
 import { Interval } from '@/components/services/stripe.service';
@@ -32,7 +41,7 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const cardsData = [
+  const individualCardsData = [
     {
       icon: ShieldCheck,
       title: textContent.InfoSection.cards[0].title,
@@ -55,6 +64,29 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     },
   ];
 
+  const businessCardsData = [
+    {
+      icon: Sliders,
+      title: textContent.InfoSection.cards[0].title,
+      description: textContent.InfoSection.cards[0].description,
+    },
+    {
+      icon: FolderSimpleLock,
+      title: textContent.InfoSection.cards[1].title,
+      description: textContent.InfoSection.cards[1].description,
+    },
+    {
+      icon: ClockCounterClockwise,
+      title: textContent.InfoSection.cards[2].title,
+      description: textContent.InfoSection.cards[2].description,
+    },
+    {
+      icon: UsersThree,
+      title: textContent.InfoSection.cards[3].title,
+      description: textContent.InfoSection.cards[3].description,
+    },
+  ];
+
   const { products, loadingCards, currencyValue, coupon } = usePricing({
     couponCode: CouponType.AllPlansCoupon,
   });
@@ -67,6 +99,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const isBusiness = activeSwitchPlan === 'Business';
   const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
+
+  const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
   const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(activeSwitchPlan);
@@ -126,7 +160,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
 
-        <InfoSection textContent={infoText} withoutCta={isBusiness} lang={lang} cards={cardsData} />
+        <InfoSection textContent={infoText} withoutCta={isBusiness} lang={lang} cards={infoCards} />
 
         <BestStorageSection hideTitleAndDescription textContent={textContent.BestStorageSection} />
 

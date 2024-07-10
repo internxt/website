@@ -140,6 +140,43 @@
       }
     ]
   },
+  "FaqSectionForBusiness": {
+    "title": "Questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'Internxt pour les entreprises ?",
+        "answer": [
+          "Notre stockage cloud pour les entreprises fournit aux entreprises de toutes tailles une solution de stockage cloud sécurisée qui protège les fichiers contre les violations de données. Les plans d'entreprise incluent l'accès à Internxt Drive, VPN et Send, ainsi qu'à nos nouveaux produits à venir, Internxt Mail et Meet."
+        ]
+      },
+      {
+        "question": "Internxt est-il le bon stockage cloud pour mon entreprise ?",
+        "answer": [
+          "Internxt est conçu pour tout le monde, y compris les entreprises de toutes tailles à la recherche d'une solution de stockage cloud sécurisée qui garde les informations personnelles et confidentielles privées.",
+          "Notre suite de produits chiffrés inclut les normes de sécurité les plus élevées de l'industrie pour les entreprises qui doivent partager des fichiers ou des dossiers sans se soucier des fuites de données."
+        ]
+      },
+      {
+        "question": "Internxt est-il plus sécurisé que les autres services de stockage cloud ?",
+        "answer": [
+          "Contrairement aux grandes entreprises technologiques, Internxt est reconnu pour fournir un stockage de fichiers sécurisé pour les entreprises car vos données sont chiffrées sur votre appareil pour une sécurité maximale.",
+          "Pour prévenir la menace des violations de données, Internxt fournit des mesures de sécurité supplémentaires, y compris le partage de fichiers chiffrés, l'authentification à deux facteurs, le générateur de mots de passe, et plus encore."
+        ]
+      },
+      {
+        "question": "Que se passe-t-il si j'atteins la limite de stockage de mon plan ?",
+        "answer": [
+          "Nos plans sont entièrement flexibles pour répondre aux besoins de votre entreprise. Vous pouvez facilement ajouter plus d'utilisateurs ou augmenter votre capacité de stockage selon vos besoins, assurant ainsi l'évolutivité et l'efficacité des coûts."
+        ]
+      },
+      {
+        "question": "Quel niveau de support technique fournissez-vous ?",
+        "answer": [
+          "Nous avons une équipe de support client dédiée qui peut répondre à toutes vos questions ou préoccupations ou fournir des informations supplémentaires en fonction de vos besoins. Vous pouvez visiter notre centre d'aide ou nous contacter à [hello@internxt.com](mailto:hello@internxt.com), et notre équipe se fera un plaisir de vous aider."
+        ]
+      }
+    ]
+  },
   "SchemaMarkupQuestions": {
     "faq": [
       {
@@ -196,6 +233,29 @@
       {
         "title": "Vérifié de manière indépendante",
         "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+      }
+    ]
+  },
+  "InfoSectionForBusiness": {
+    "title": "Que pouvez-vous faire avec Internxt ?",
+    "description": "Optimisez la gestion des fichiers, la sécurité et la confidentialité de votre organisation avec notre stockage cloud sécurisé pour les entreprises.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Gérez votre organisation",
+        "description": "Internxt permet aux entreprises de gérer facilement les utilisateurs et les équipes, de répartir le stockage de manière flexible et de personnaliser les espaces de travail. Passez facilement des tâches professionnelles aux tâches personnelles pour optimiser la productivité et l'organisation."
+      },
+      {
+        "title": "Envoyez des fichiers confidentiels en toute sécurité",
+        "description": "Le stockage cloud sécurisé inclut des fonctionnalités de partage de fichiers sécurisées pour collaborer en toute sécurité au sein des équipes. Protégez par mot de passe et restreignez l'accès aux fichiers pour envoyer des fichiers confidentiels à des partenaires, en veillant à garder le contrôle sur leur sécurité."
+      },
+      {
+        "title": "Sauvegardez ce qui est important",
+        "description": "Sauvegardez vos fichiers pour éviter la perte de données. De plus, Internxt stocke et sauvegarde la même copie de vos fichiers sur différents serveurs de l'UE pour plus de sécurité, ce qui en fait la sauvegarde cloud la plus sécurisée pour votre entreprise."
+      },
+      {
+        "title": "Travaillez avec votre équipe de n'importe où",
+        "description": "Disponible pour Windows, Mac, Linux, iOS, Android et Web. Accédez à vos fichiers sur n'importe quel appareil, à tout moment, en vous assurant que vous et votre équipe puissiez travailler en toute sécurité où que vous soyez."
       }
     ]
   },

@@ -130,6 +130,43 @@
       }
     ]
   },
+  "FaqSectionForBusiness": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Cos'è Internxt per le aziende?",
+        "answer": [
+          "Il nostro storage cloud per le aziende fornisce alle aziende di tutte le dimensioni una soluzione di archiviazione cloud sicura che protegge i file aziendali dalle violazioni dei dati. I piani aziendali includono l'accesso a Internxt Drive, VPN e Send, nonché ai nostri nuovi prodotti in arrivo, Internxt Mail e Meet."
+        ]
+      },
+      {
+        "question": "Internxt è il giusto storage cloud per la mia azienda?",
+        "answer": [
+          "Internxt è progettato per tutti, comprese le aziende di qualsiasi dimensione che cercano una soluzione di storage cloud sicura che mantenga private le informazioni personali e riservate.",
+          "La nostra suite di prodotti crittografati include i più alti standard di sicurezza del settore per le aziende che necessitano di condividere file o cartelle senza preoccuparsi delle perdite di dati."
+        ]
+      },
+      {
+        "question": "Internxt è più sicuro di altri servizi di storage cloud?",
+        "answer": [
+          "A differenza delle grandi aziende tecnologiche, Internxt è riconosciuta per fornire un'archiviazione sicura dei file aziendali perché i tuoi dati aziendali vengono crittografati sul tuo dispositivo per la massima sicurezza.",
+          "Per prevenire la minaccia di violazioni dei dati, Internxt fornisce ulteriori misure di sicurezza, inclusi la condivisione di file crittografati, l'autenticazione a due fattori, il generatore di password e altro ancora."
+        ]
+      },
+      {
+        "question": "Cosa succede se raggiungo il limite di archiviazione del mio piano?",
+        "answer": [
+          "I nostri piani sono completamente flessibili per soddisfare le esigenze della tua azienda. Puoi aggiungere facilmente più utenti o aggiornare la tua capacità di archiviazione secondo necessità, garantendo scalabilità ed efficienza dei costi."
+        ]
+      },
+      {
+        "question": "Che livello di supporto tecnico fornite?",
+        "answer": [
+          "Abbiamo un team di supporto clienti dedicato che può rispondere a qualsiasi domanda o preoccupazione o fornire ulteriori informazioni in base alle tue esigenze. Puoi visitare il nostro centro assistenza o contattarci a [hello@internxt.com](mailto:hello@internxt.com), e il nostro team sarà felice di aiutarti."
+        ]
+      }
+    ]
+  },
   "SchemaMarkupQuestions": {
     "faq": [
       {
@@ -188,6 +225,29 @@
       {
         "title": "Verificato in modo indipendente",
         "description": "Siamo totalmente conformi al GDPR e sicuri al 100%, ma non devi crederci sulla parola. Internxt è stato verificato e certificato in modo indipendente da Securitum, la società di penetration testing leader in Europa."
+      }
+    ]
+  },
+  "InfoSectionForBusiness": {
+    "title": "Cosa puoi fare con Internxt?",
+    "description": "Ottimizza la gestione dei file, la sicurezza e la privacy della tua organizzazione con il nostro storage cloud sicuro per le aziende.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Gestisci la tua organizzazione",
+        "description": "Internxt consente alle aziende di gestire facilmente utenti e team, allocare lo spazio di archiviazione in modo flessibile e personalizzare gli spazi di lavoro. Passa facilmente dalle attività aziendali a quelle personali per ottimizzare la produttività e l'organizzazione."
+      },
+      {
+        "title": "Invia file riservati in modo sicuro",
+        "description": "Lo storage cloud sicuro include funzionalità di condivisione file sicura per collaborare in sicurezza nei team. Proteggi con password e limita l'accesso ai file per inviare file riservati ai partner, garantendo di mantenere il controllo sulla loro sicurezza."
+      },
+      {
+        "title": "Esegui il backup di ciò che è importante",
+        "description": "Esegui il backup dei tuoi file per prevenire la perdita di dati. Inoltre, Internxt memorizza e salva la stessa copia dei tuoi file su diversi server UE per una maggiore sicurezza, rendendolo il backup cloud più sicuro per la tua azienda."
+      },
+      {
+        "title": "Lavora con il tuo team da qualsiasi luogo",
+        "description": "Disponibile per Windows, Mac, Linux, iOS, Android e Web. Accedi ai tuoi file su qualsiasi dispositivo, in qualsiasi momento, garantendo che tu e il tuo team possiate lavorare in sicurezza ovunque vi troviate."
       }
     ]
   },
