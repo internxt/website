@@ -1,7 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /es/child-safety-ebook
-Disallow: /es/internxt-library
-Disallow: /es/use-cases
-Disallow: /es/online-privacy-ebook
 Sitemap: https://internxt.com/sitemap.xml
