@@ -1,6 +1,6 @@
 import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { TransformedProduct } from '@/components/services/stripe.service';
+import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 
 export interface PriceCardProps {
@@ -9,6 +9,7 @@ export interface PriceCardProps {
   lang: string;
   label: string;
   isCheckoutForLifetime: boolean;
+  monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   decimalDiscountValue?: number;
   redeemCodeCta?: LifetimeMode;
@@ -26,6 +27,7 @@ export const PriceCard = ({
   decimalDiscountValue,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
+  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -37,10 +39,16 @@ export const PriceCard = ({
   const { currency, interval, price, storage, priceId } = product;
 
   const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2) : price;
-  const priceBefore = decimalDiscountValue ? price : undefined;
+  const priceBefore = decimalDiscountValue
+    ? price
+    : interval === Interval.Year
+    ? (monthlyProductPrice * 12).toFixed(2)
+    : undefined;
 
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
+
+  const cardLabel = productCardPlan === 'business' ? `${contentText.businessLabels[storage]} ${label}` : `${label}`;
 
   return (
     <div
@@ -57,7 +65,7 @@ export const PriceCard = ({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{label}</p>
+            <p className="text-lg font-medium text-primary">{cardLabel}</p>
           </div>
         </div>
         <div
@@ -83,6 +91,7 @@ export const PriceCard = ({
           </p>
 
           <p className={`flex text-sm text-gray-50`}>
+            {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
             {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
           </p>
         </div>
@@ -101,7 +110,12 @@ export const PriceCard = ({
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
+            <div
+              className={`flex flex-row items-start space-x-2 px-6 ${
+                productCardPlan === 'business' ? '' : 'last:font-semibold'
+              }`}
+              key={feature}
+            >
               <img
                 loading="lazy"
                 className="translate-y-px select-none"

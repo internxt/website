@@ -8,6 +8,7 @@ import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
+import { useEffect } from 'react';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -17,6 +18,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   hideBusinessSelector?: boolean;
+  businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
@@ -25,8 +27,9 @@ interface PriceTableProps {
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
-  onBusinessSwitchToggled?: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onBusinessSwitchToggled?: (interval: Interval) => void;
+  onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
 
 export const PricingSection = ({
@@ -47,6 +50,7 @@ export const PricingSection = ({
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
+  onBusinessPlansSelected,
 }: PriceTableProps): JSX.Element => {
   const individualPlansTitle =
     textContent.planTitles.homePage ??
@@ -56,6 +60,14 @@ export const PricingSection = ({
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
   const showSwitchComponent = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Business';
+
+  useEffect(() => {
+    if (isBusiness) {
+      onBusinessPlansSelected?.(true);
+    } else {
+      onBusinessPlansSelected?.(false);
+    }
+  }, [activeSwitchPlan]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
@@ -112,10 +124,11 @@ export const PricingSection = ({
           <SwitchComponent
             textContent={textContent}
             show={showSwitchComponent}
+            lang={lang}
             billedFrequency={billingFrequencyForSwitch}
             handleOnSwitchIsToggled={switchHandler}
-            labelDiscount=""
-            showLabelDiscount={false}
+            labelDiscount={'10'}
+            showLabelDiscount={activeSwitchPlan === 'Business'}
           />
         </div>
 
@@ -149,6 +162,11 @@ export const PricingSection = ({
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
+                  monthlyProductPrice={
+                    products.individuals[Interval.Month].filter(
+                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                    )[0].price
+                  }
                   key={product.storage}
                   popular={product.storage === '10TB'}
                   decimalDiscountValue={decimalDiscountForIndividualPlans}
@@ -182,6 +200,11 @@ export const PricingSection = ({
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   productCardPlan="business"
                   label={product.storage}
+                  monthlyProductPrice={
+                    products.business[Interval.Month].filter(
+                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                    )[0].price
+                  }
                   key={product.storage}
                   popular={product.storage === '10TB'}
                   decimalDiscountValue={decimalDiscountForBusinessPlans}

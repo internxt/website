@@ -23,9 +23,9 @@ import {
 } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
-import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/components/services/stripe.service';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -39,7 +39,7 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const { products, loadingCards, currencyValue, coupon } = usePricing({
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
     couponCode: CouponType.AllPlansCoupon,
   });
 
@@ -92,7 +92,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     },
   ];
 
-  const onBusinessSwitchToggled = (isBusiness: boolean) => {
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
     setIsBusiness(isBusiness);
   };
 
@@ -101,12 +101,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    checkout({
-      planId: planId,
-      couponCode: coupon,
-      currency: currencyValue ?? 'eur',
-      mode: isCheckoutForLifetime ? 'payment' : 'subscription',
-    });
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   return (
@@ -131,6 +127,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           products={products}
           loadingCards={loadingCards}
           handlePageNameUpdate={setPageName}
+          onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
         />
 

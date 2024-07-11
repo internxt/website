@@ -16,6 +16,7 @@ interface PricingSectionWrapperProps {
   };
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
+  onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
 
 export const PricingSectionWrapper = ({
@@ -29,6 +30,7 @@ export const PricingSectionWrapper = ({
   decimalDiscount,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
+  onBusinessPlansSelected,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -57,6 +59,7 @@ export const PricingSectionWrapper = ({
       onPlanTypeChange={onPlanTypeChange}
       onIndividualSwitchToggled={onIndividualSwitchToggled}
       onBusinessSwitchToggled={onBusinessSwitchToggled}
+      onBusinessPlansSelected={onBusinessPlansSelected}
     />
   );
 };

@@ -27,6 +27,10 @@
     "individual": "Individuale",
     "business": "Business"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
+  },
   "billingFrequencyLabel": {
     "lifetime": "Pagamento unico",
     "monthly": "Fatturato mensilmente",

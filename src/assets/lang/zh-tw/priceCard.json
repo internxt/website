@@ -25,6 +25,10 @@
     "lifetime": "終身",
     "business": "商業"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
+  },
   "billingFrequencyLabel": {
     "lifetime": "終身訪問",
     "monthly": "按月計費",

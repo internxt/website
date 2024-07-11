@@ -5,14 +5,27 @@ interface SwitchComponentProps {
   textContent: Record<string, any>;
   show: boolean;
   billedFrequency: any;
+  lang: string;
   labelDiscount?: string;
   showLabelDiscount: boolean;
   handleOnSwitchIsToggled: (interval: Interval) => void;
 }
 
+const SAVE_LABEL = {
+  en: 'Save up to',
+  fr: "Économisez jusqu'à",
+  de: 'Spare bis zu ',
+  es: 'Ahorra hasta un',
+  it: 'Risparmia fino a',
+  ru: 'Экономьте до',
+  zh: '省高达',
+  'zh-tw': '節省高達 ',
+};
+
 export const SwitchComponent = ({
   textContent,
   show,
+  lang,
   billedFrequency,
   showLabelDiscount,
   labelDiscount,
@@ -49,7 +62,7 @@ export const SwitchComponent = ({
         </p>
         {showLabelDiscount ? (
           <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
-            {textContent.save} {labelDiscount}%
+            {SAVE_LABEL[lang]} {labelDiscount}%
           </p>
         ) : null}
       </div>

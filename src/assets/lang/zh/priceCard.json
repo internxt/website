@@ -28,6 +28,10 @@
     "individual": "个人",
     "business": "商业"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
+  },
   "billingFrequencyLabel": {
     "lifetime": "一次性付款",
     "monthly": "按月结算",

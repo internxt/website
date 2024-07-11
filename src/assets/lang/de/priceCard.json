@@ -27,6 +27,10 @@
     "lifetime": "Lebenslang",
     "business": "Geschäftlich"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
+  },
   "billingFrequencyLabel": {
     "lifetime": "Einmalzahlung",
     "monthly": "Monatliche Abrechnung",

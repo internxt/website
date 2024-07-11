@@ -3,18 +3,16 @@ import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
-import { PricingSection } from '@/components/shared/pricing/PricingSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { FeatureSectionForSpecialOffer } from '@/components/specialoffer/FeatureSection';
 import { HeroSectionForSpecialOffer } from '@/components/specialoffer/HeroSection';
 import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSection';
 import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
 import usePricing from '@/hooks/usePricing';
-import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 
 interface FreeUserPageProps {
   lang: string;
@@ -31,41 +29,21 @@ const FreeUserPage = ({
   lang,
   textContent,
 }: FreeUserPageProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
 
-  const { products, loadingCards, currencyValue, coupon } = usePricing({
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
     couponCode: CouponType.freeUserCoupon,
   });
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
+  const [isBusiness, setIsBusiness] = useState<boolean>();
 
-  const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
-    setActiveSwitchPlan(activeSwitchPlan);
-
-    if (interval) {
-      setBillingFrequency(interval);
-    }
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
   };
 
-  const onIndividualSwitchToggled = (interval: Interval) => {
-    setBillingFrequency(interval);
-  };
-
-  const onBusinessSwitchToggled = (interval: Interval) => {
-    setBusinessBillingFrequency(interval);
-  };
-
-  const onCheckoutButtonClicked = (planId: string, planType: 'individuals' | 'business') => {
-    const billingFrequencyForBilling = planType === 'individuals' ? billingFrequency : businessBillingFrequency;
-
-    checkout({
-      planId: planId,
-      couponCode: coupon,
-      currency: currencyValue ?? 'eur',
-      mode: billingFrequencyForBilling === Interval.Lifetime ? 'payment' : 'subscription',
-    });
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   const handleOnButtonClick = () => {
@@ -78,20 +56,16 @@ const FreeUserPage = ({
 
       <HeroSectionForSpecialOffer textContent={textContent.HeroSection} />
 
-      <PricingSection
+      <PricingSectionWrapper
         textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: 0.25,
+        }}
         lang={lang}
-        billingFrequency={billingFrequency}
-        businessBillingFrequency={businessBillingFrequency}
-        hideFreeCard
-        decimalDiscountForIndividualPlans={0.25}
         products={products}
         loadingCards={loadingCards}
-        activeSwitchPlan={activeSwitchPlan}
+        onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        onPlanTypeChange={onPlanTypeChange}
-        onIndividualSwitchToggled={onIndividualSwitchToggled}
-        onBusinessSwitchToggled={onBusinessSwitchToggled}
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />

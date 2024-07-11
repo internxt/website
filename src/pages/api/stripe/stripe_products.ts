@@ -15,22 +15,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method === 'GET') {
     const { currency } = req.query;
 
-    const individualsProductsRequest = axios.get(`${PRODUCTS_URL}?currency=${currency}`);
-    const businessProductsRequest = axios.get(`${PRODUCTS_URL}?subscriptionType=business&currency=${currency}`);
+    try {
+      const individualsProductsRequest = axios.get(`${PRODUCTS_URL}?currency=${currency}`);
+      const businessProductsRequest = axios.get(`${PRODUCTS_URL}?subscriptionType=business&currency=${currency}`);
 
-    const promises = await Promise.all([individualsProductsRequest, businessProductsRequest]);
+      const promises = await Promise.all([individualsProductsRequest, businessProductsRequest]);
 
-    const [individualsProductsResponse, businessProductsResponse] = promises;
+      const [individualsProductsResponse, businessProductsResponse] = promises;
 
-    const businessProductsData = businessProductsResponse.data;
-    const individualsProductsData: Product[] = individualsProductsResponse.data;
+      const businessProductsData = businessProductsResponse.data;
+      const individualsProductsData: Product[] = individualsProductsResponse.data;
 
-    const productsData = {
-      individuals: individualsProductsData,
-      business: businessProductsData,
-    };
+      const productsData = {
+        individuals: individualsProductsData,
+        business: businessProductsData,
+      };
 
-    return res.status(200).json(productsData);
+      return res.status(200).json(productsData);
+    } catch (err) {
+      const error = err as Error;
+      return res.status(500).send({
+        message: error.message,
+      });
+    }
   } else {
     return res.status(405).end(); // Method Not Allowed
   }

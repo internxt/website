@@ -1,6 +1,8 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
+import { checkout } from '@/lib/auth';
+import { CouponType } from '@/lib/types';
 
 const CURRENCY_MAP = {
   eur: '€',
@@ -160,9 +162,24 @@ async function getLifetimeCoupons() {
   }
 }
 
+const onCheckoutButtonClicked = (
+  planId: string,
+  currencyValue: string,
+  isCheckoutForLifetime: boolean,
+  coupon?: CouponType,
+) => {
+  checkout({
+    planId: planId,
+    couponCode: coupon,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
 export const stripeService = {
   getPrices,
   getSelectedPrice,
   getCoupon,
   getLifetimeCoupons,
+  onCheckoutButtonClicked,
 };
