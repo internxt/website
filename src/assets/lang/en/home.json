@@ -5,7 +5,7 @@
       "line1": "Secure cloud storage.",
       "blueText": "Guaranteed."
     },
-    "subtitle": "Internxt is the best open-source cloud storage for securely storing, sharing, and accessing data across all devices.",
+    "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
       "title": "Get 1GB",
       "subtitle": "For free!"
@@ -143,7 +143,7 @@
   "FirstFeaturesSection": {
     "title": "Why choose Internxt?",
     "subtitle": "Internxt puts you back in control of your data with zero-knowledge, military-grade encryption. ",
-    "description": "We use open-source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
+    "description": "We use open source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
     "cta": "Choose storage"
   },
   "InfoSection": {

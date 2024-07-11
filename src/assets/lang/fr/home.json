@@ -5,7 +5,7 @@
       "line1": "Stockage cloud sécurisé.",
       "blueText": "Garanti."
     },
-    "subtitle": "Protégez votre vie privée avec notre suite de services cloud sécurisés, open-source et chiffrés. Internxt Drive, Send, et plus encore.",
+    "subtitle": "Protégez votre vie privée avec notre suite de services cloud sécurisés, open source et chiffrés. Internxt Drive, Send, et plus encore.",
     "cta": {
       "title": "Obtenez 1 Go",
       "subtitle": "Gratuitement !"
@@ -143,7 +143,7 @@
   "FirstFeaturesSection": {
     "title": "Pourquoi choisir Internxt ?",
     "subtitle": "Internxt vous redonne le contrôle de vos données avec un chiffrement de niveau militaire et sans connaissance.",
-    "description": "Nous utilisons du code open-source, ce qui permet une vérification indépendante de nos pratiques de sécurité. Internxt vous permet de posséder vos données, offrant une confidentialité et une tranquillité d'esprit inégalées.",
+    "description": "Nous utilisons du code open source, ce qui permet une vérification indépendante de nos pratiques de sécurité. Internxt vous permet de posséder vos données, offrant une confidentialité et une tranquillité d'esprit inégalées.",
     "cta": "Choisir le stockage"
   },
   "InfoSection": {
