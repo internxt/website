@@ -27,7 +27,7 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
     <div className="flex max-w-[544px] flex-col gap-6">
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
-          <Header className="text-gray-100">
+          <Header maxWidth="max-w-[500px]" className="text-gray-100">
             {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
           </Header>
           <p className="text-xl font-bold text-gray-100">
