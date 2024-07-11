@@ -56,6 +56,25 @@
       "upTo": "最多：",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "安全的云存储。",
+        "blueText": "有保障。"
+      },
+      "description": {
+        "normal1": "",
+        "blue": "80% 折扣 ",
+        "normal2": "所有高级计划。"
+      },
+      "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
+      "startFrom": {
+        "normal1": "起价 ",
+        "price": " 0.95",
+        "normal2": " /月"
+      },
+      "claimDeal": "获取优惠",
+      "guarantee": "30天退款保证"
+    },
     "youKnow": "你知道吗？"
   },
   "FeatureSectionV2": {

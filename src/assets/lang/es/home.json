@@ -56,6 +56,25 @@
       "upTo": "Hasta: ",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "Almacenamiento seguro en la nube.",
+        "blueText": "Garantizado."
+      },
+      "description": {
+        "normal1": "",
+        "blue": "80% DE DESCUENTO ",
+        "normal2": "en todos los planes."
+      },
+      "features": ["Hasta 10TB de almacenamiento", "Cifrado de conocimiento cero", "Código abierto y auditado"],
+      "startFrom": {
+        "normal1": "Desde ",
+        "price": " 0.95",
+        "normal2": " /mes"
+      },
+      "claimDeal": "Obtener oferta",
+      "guarantee": "Garantía de devolución de 30 días"
+    },
     "youKnow": "¿Sabías que?"
   },
   "FeatureSectionV2": {
