@@ -9,7 +9,7 @@ interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
 }
 
-export const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');
 
   useEffect(() => {
@@ -76,3 +76,5 @@ export const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Elem
     </div>
   );
 };
+
+export default TitleAndOnePlan;

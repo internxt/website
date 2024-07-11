@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-const TitleAndSurvey = dynamic(() => import('./components/heroSection/TitleAndSurvey'), {
+const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
 const TitleAndSignup = dynamic(() => import('./components/heroSection/TitleAndSignup'), {
