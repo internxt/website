@@ -3,8 +3,13 @@ import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
-import { TitleAndOnePlan } from './components/heroSection/TitleAndOnePlan';
+const TitleAndSurvey = dynamic(() => import('./components/heroSection/TitleAndSurvey'), {
+  ssr: false,
+});
+const TitleAndSignup = dynamic(() => import('./components/heroSection/TitleAndSignup'), {
+  ssr: false,
+});
+
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -15,7 +20,6 @@ interface HeroSectionForHomeProps {
 
 export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const mobileImage = getImage('/images/home/image_mobile.webp');
-
   const blurBgImage = getImage('/images/home/header/bg.svg');
 
   return (

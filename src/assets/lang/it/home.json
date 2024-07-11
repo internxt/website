@@ -101,6 +101,33 @@
     ]
   },
   "tableSection": {
+    "planTitles": {
+      "individuals": "Piani individuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani aziendali",
+      "lifetimeCampaign": {
+        "blueText": "Sconto del 50%",
+        "normalText": "su tutti i nostri piani esclusivi a vita"
+      }
+    },
+    "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
+    "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annualmente",
+      "lifetime": "Vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Inizia con il nostro piano gratuito",
+      "enjoy10gb": "Goditi 1 GB per sempre e accedi a tutti i nostri servizi",
+      "upTo": "1 GB",
+      "freeForever": "Gratuito per sempre",
+      "cta": "Seleziona piano"
+    },
     "features": {
       "endToEnd": "Crittografia end-to-end",
       "openSource": "Open source e verificato",

@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 
 import Layout from '@/components/layout/Layout';
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');

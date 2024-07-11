@@ -24,7 +24,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Obtenez ${{storage}} Go de stockage cloud sécurisé avec ", "blue": "80% de réduction" },
+    "title": {
+      "normal1": "Obtenez",
+      "blue1": " ${{storage}} ",
+      "normal2": "Go de stockage cloud sécurisé avec ",
+      "blue2": "80% de réduction"
+    },
     "offerEnds": "Termine dans :"
   },
   "tableSection": {
@@ -36,6 +41,32 @@
       "cta2": "Économisez 75%",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients"
+    },
+    "planTitles": {
+      "individuals": "Plans individuels",
+      "lifetime": "Planes à vie",
+      "business": "Plans d'entreprise",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "tous nos plans exclusifs à vie"
+      }
+    },
+    "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
+    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "Lifetime",
+      "individual": "Individuel",
+      "business": "Entreprise"
+    },
+    "freePlanCard": {
+      "getStarted": "Commencez avec notre plan gratuit",
+      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
+      "upTo": "Jusqu'à 10 Go",
+      "freeForever": "Gratuit pour toujours",
+      "cta": "Sélectionner un plan"
     },
     "features": {
       "endToEnd": "Chiffré de bout en bout",

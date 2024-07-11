@@ -9,7 +9,7 @@ interface RangeSliderHeroSectionProps {
   onButtonClick: (valueLabel: string) => void;
 }
 
-const PRICING_RANGE_SLIDER_VALUES = ['50B', '1TB', '10TB'];
+const PRICING_RANGE_SLIDER_VALUES = ['50GB', '1TB', '10TB'];
 
 const STORAGE_RANGE = ['50GB', '100GB', '200GB', '500GB', '1TB', '2TB', '4TB', '8TB', '10TB'];
 

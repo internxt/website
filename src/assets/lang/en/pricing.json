@@ -24,7 +24,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Get ${{storage}} of The Most Secure Cloud Storage at ", "blue": "80% OFF" },
+    "title": {
+      "normal1": "Get ",
+      "blue1": " ${{storage}} ",
+      "normal2": "of The Most Secure Cloud Storage at ",
+      "blue2": "80% OFF"
+    },
     "offerEnds": "Offer ends in:"
   },
   "tableSection": {
@@ -36,6 +41,32 @@
       "cta2": "Score 75% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers"
+    },
+    "planTitles": {
+      "individuals": "Individual Plans",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Get started with our free plan",
+      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
+      "upTo": "1GB",
+      "freeForever": "Free forever",
+      "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",

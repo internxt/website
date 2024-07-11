@@ -19,7 +19,7 @@
     "features": ["最安全的雲存儲", "匿名帳戶創建", "軍用級加密", "您的數據不會被出售"]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "獲取 ${{storage}} 安全雲存儲，享受 ", "blue": "80% 折扣" },
+    "title": { "normal1": "獲取", "blue1": " ${{storage}} ", "normal2": "安全雲存儲，享受 ", "blue2": "80% 折扣" },
     "offerEnds": "優惠結束於:"
   },
   "tableSection": {
@@ -31,6 +31,32 @@
       "cta2": "節省75%",
       "guarantee": "30天退款保證",
       "lastCta": "*優惠適用於免費帳戶或新客戶"
+    },
+    "planTitles": {
+      "individuals": "個人計劃",
+      "lifetime": "終身計劃",
+      "business": "商業計劃",
+      "lifetimeCampaign": {
+        "blueText": "獲得 50% 折扣",
+        "normalText": "所有我們的獨家終身計劃"
+      }
+    },
+    "lifetimeDescription": "一次購買，永久享受隱私和安全。",
+    "planDescription": "所有 Internxt 計劃都具有完整的功能，完全訪問我們的所有隱私服務。適用於各種規模的安全保障。",
+    "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "individual": "個人",
+      "lifetime": "終身",
+      "business": "商業"
+    },
+    "freePlanCard": {
+      "getStarted": "從我們的免費計劃開始使用",
+      "enjoy10gb": "享受 1 GB 的存储空间，并可永久使用我们的所有服务。",
+      "upTo": "1GB",
+      "freeForever": "永遠免費",
+      "cta": "選擇計劃"
     },
     "features": {
       "endToEnd": "端到端加密",
