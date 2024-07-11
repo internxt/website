@@ -22,12 +22,10 @@ import {
   UsersThree,
 } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
-import { PricingSection } from '@/components/shared/pricing/PricingSection';
-import { Interval } from '@/components/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
 import { checkout } from '@/lib/auth';
 import { CouponType } from '@/lib/types';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 
 interface PricingProps {
   metatagsDescriptions: Record<string, any>[];
@@ -40,6 +38,13 @@ interface PricingProps {
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+
+  const { products, loadingCards, currencyValue, coupon } = usePricing({
+    couponCode: CouponType.AllPlansCoupon,
+  });
+
+  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [isBusiness, setIsBusiness] = useState<boolean>();
 
   const individualCardsData = [
     {
@@ -67,66 +72,40 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const businessCardsData = [
     {
       icon: Sliders,
-      title: textContent.InfoSection.cards[0].title,
-      description: textContent.InfoSection.cards[0].description,
+      title: textContent.InfoSectionForBusiness.cards[0].title,
+      description: textContent.InfoSectionForBusiness.cards[0].description,
     },
     {
       icon: FolderSimpleLock,
-      title: textContent.InfoSection.cards[1].title,
-      description: textContent.InfoSection.cards[1].description,
+      title: textContent.InfoSectionForBusiness.cards[1].title,
+      description: textContent.InfoSectionForBusiness.cards[1].description,
     },
     {
       icon: ClockCounterClockwise,
-      title: textContent.InfoSection.cards[2].title,
-      description: textContent.InfoSection.cards[2].description,
+      title: textContent.InfoSectionForBusiness.cards[2].title,
+      description: textContent.InfoSectionForBusiness.cards[2].description,
     },
     {
       icon: UsersThree,
-      title: textContent.InfoSection.cards[3].title,
-      description: textContent.InfoSection.cards[3].description,
+      title: textContent.InfoSectionForBusiness.cards[3].title,
+      description: textContent.InfoSectionForBusiness.cards[3].description,
     },
   ];
 
-  const { products, loadingCards, currencyValue, coupon } = usePricing({
-    couponCode: CouponType.AllPlansCoupon,
-  });
+  const onBusinessSwitchToggled = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
 
-  const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(Interval.Year);
-
-  const isBusiness = activeSwitchPlan === 'Business';
   const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
-
   const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
-  const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
-    setActiveSwitchPlan(activeSwitchPlan);
-
-    if (interval) {
-      setBillingFrequency(interval);
-      setPageName(`Pricing Individuals ${interval}`);
-    }
-  };
-
-  const onIndividualSwitchToggled = (interval: Interval) => {
-    setBillingFrequency(interval);
-  };
-
-  const onBusinessSwitchToggled = (interval: Interval) => {
-    setBusinessBillingFrequency(interval);
-  };
-
-  const onCheckoutButtonClicked = (planId: string, planType: 'individuals' | 'business') => {
-    const billingFrequencyForBilling = planType === 'individuals' ? billingFrequency : businessBillingFrequency;
-
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     checkout({
       planId: planId,
       couponCode: coupon,
       currency: currencyValue ?? 'eur',
-      mode: billingFrequencyForBilling === Interval.Lifetime ? 'payment' : 'subscription',
+      mode: isCheckoutForLifetime ? 'payment' : 'subscription',
     });
   };
 
@@ -143,19 +122,16 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <PricingSection
+        <PricingSectionWrapper
           textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: 0.2,
+          }}
           lang={lang}
-          billingFrequency={billingFrequency}
-          businessBillingFrequency={businessBillingFrequency}
-          decimalDiscountForIndividualPlans={0.2}
           products={products}
           loadingCards={loadingCards}
-          activeSwitchPlan={activeSwitchPlan}
+          handlePageNameUpdate={setPageName}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          onPlanTypeChange={onPlanTypeChange}
-          onIndividualSwitchToggled={onIndividualSwitchToggled}
-          onBusinessSwitchToggled={onBusinessSwitchToggled}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

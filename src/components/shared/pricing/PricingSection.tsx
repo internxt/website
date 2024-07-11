@@ -16,6 +16,7 @@ interface PriceTableProps {
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
+  hideBusinessSelector?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
@@ -25,7 +26,7 @@ interface PriceTableProps {
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
-  onCheckoutButtonClicked: (planId: string, planType: 'individuals' | 'business') => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
 }
 
 export const PricingSection = ({
@@ -39,6 +40,7 @@ export const PricingSection = ({
   decimalDiscountForBusinessPlans,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
+  hideBusinessSelector,
   lang,
   backgroundColorComponent = 'bg-white',
   onPlanTypeChange,
@@ -102,6 +104,7 @@ export const PricingSection = ({
           <PlanSelector
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
+            hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
           />
 
@@ -142,6 +145,7 @@ export const PricingSection = ({
             {products?.individuals &&
               products.individuals[billingFrequency].map((product) => (
                 <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
@@ -173,6 +177,7 @@ export const PricingSection = ({
               products?.business &&
               products.business[businessBillingFrequency].map((product) => (
                 <PriceCard
+                  isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   productCardPlan="business"

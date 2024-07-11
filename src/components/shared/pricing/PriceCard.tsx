@@ -8,10 +8,11 @@ export interface PriceCardProps {
   popular: boolean;
   lang: string;
   label: string;
+  isCheckoutForLifetime: boolean;
   productCardPlan?: 'individuals' | 'business';
   decimalDiscountValue?: number;
   redeemCodeCta?: LifetimeMode;
-  onCheckoutButtonClicked: (planId: string, planType: 'individuals' | 'business') => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -23,6 +24,7 @@ const BILLING_FREQUENCY_LIST = {
 export const PriceCard = ({
   product,
   decimalDiscountValue,
+  isCheckoutForLifetime,
   productCardPlan = 'individuals',
   popular,
   lang,
@@ -86,7 +88,7 @@ export const PriceCard = ({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => onCheckoutButtonClicked(priceId, productCardPlan)}
+          onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
