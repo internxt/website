@@ -63,6 +63,7 @@ const FreeUserPage = ({
         }}
         lang={lang}
         products={products}
+        hideBusinessCards={true}
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}

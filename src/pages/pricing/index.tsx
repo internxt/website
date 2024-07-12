@@ -124,6 +124,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
             individuals: 0.2,
           }}
           lang={lang}
+          hideBusinessCards={true}
           products={products}
           loadingCards={loadingCards}
           handlePageNameUpdate={setPageName}

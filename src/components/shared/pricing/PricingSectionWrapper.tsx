@@ -9,6 +9,7 @@ interface PricingSectionWrapperProps {
   loadingCards: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   hideBusinessSelector?: boolean;
+  hideBusinessCards?: boolean;
   hideFreeCard?: boolean;
   decimalDiscount?: {
     individuals?: number;
@@ -26,6 +27,7 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   hideBusinessSelector,
+  hideBusinessCards,
   hideFreeCard,
   decimalDiscount,
   onCheckoutButtonClicked,
@@ -52,6 +54,7 @@ export const PricingSectionWrapper = ({
       products={products}
       hideFreeCard={hideFreeCard}
       hideBusinessSelector={hideBusinessSelector}
+      hideBusinessCards={hideBusinessCards}
       hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
       loadingCards={loadingCards}
       activeSwitchPlan={activeSwitchPlan}

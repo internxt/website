@@ -9,6 +9,7 @@ import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
 import { useEffect } from 'react';
+import BusinessBanner from '@/components/banners/BusinessBanner';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -18,6 +19,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   hideBusinessSelector?: boolean;
+  hideBusinessCards?: boolean;
   businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
@@ -43,6 +45,7 @@ export const PricingSection = ({
   decimalDiscountForBusinessPlans,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
+  hideBusinessCards,
   hideBusinessSelector,
   lang,
   backgroundColorComponent = 'bg-white',
@@ -52,6 +55,8 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
 }: PriceTableProps): JSX.Element => {
+  const banner = require('@/assets/lang/en/banners.json');
+
   const individualPlansTitle =
     textContent.planTitles.homePage ??
     (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
@@ -59,7 +64,8 @@ export const PricingSection = ({
 
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
-  const showSwitchComponent = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Business';
+  const showSwitchComponent =
+    (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
 
   useEffect(() => {
     if (isBusiness) {
@@ -108,7 +114,9 @@ export const PricingSection = ({
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
           <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual ? `${textContent.businessDescription}` : `${textContent.planDescription}`}
+            {!isIndividual
+              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
+              : `${textContent.planDescription}`}
           </p>
         </div>
         <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
@@ -191,26 +199,32 @@ export const PricingSection = ({
           className="flex w-full flex-col gap-4"
         >
           <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
-            {businessBillingFrequency &&
-              products?.business &&
-              products.business[businessBillingFrequency].map((product) => (
-                <PriceCard
-                  isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                  product={product}
-                  onCheckoutButtonClicked={onCheckoutButtonClicked}
-                  productCardPlan="business"
-                  label={product.storage}
-                  monthlyProductPrice={
-                    products.business[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
-                  key={product.storage}
-                  popular={product.storage === '10TB'}
-                  decimalDiscountValue={decimalDiscountForBusinessPlans}
-                  lang={lang}
-                />
-              ))}
+            {hideBusinessCards ? (
+              <BusinessBanner textContent={banner.BusinessBanner} />
+            ) : (
+              <>
+                {businessBillingFrequency &&
+                  products?.business &&
+                  products.business[businessBillingFrequency].map((product) => (
+                    <PriceCard
+                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
+                      product={product}
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
+                      monthlyProductPrice={
+                        products.business[Interval.Month].filter(
+                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                        )[0].price
+                      }
+                      key={product.storage}
+                      popular={product.storage === '10TB'}
+                      decimalDiscountValue={decimalDiscountForBusinessPlans}
+                      lang={lang}
+                    />
+                  ))}
+              </>
+            )}
           </div>
         </Transition>
         <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
