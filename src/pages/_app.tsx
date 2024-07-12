@@ -22,7 +22,15 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/lifetime/celebration/[filename]',
 ];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
+  '/affiliates/pcmag',
+  '/affiliates/oneplan',
+  '/cloudwards',
+  '/lifetime/celebration/france',
+  '/lifetime/celebration/belgium',
+  '/lifetime/celebration/usa',
+  '/lifetime/celebration/canada',
+];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
