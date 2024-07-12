@@ -150,9 +150,9 @@ const BottomBanner = () => {
             />
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
-            <div className="flex flex-row gap-5">
+            <div className="flex flex-row items-center gap-5">
               <p className="text-6xl font-bold text-white">{title().title1}</p>
-              <p className="max-w-[300px] text-2xl font-semibold text-white">
+              <p className="max-w-[370px] text-2xl font-semibold text-white">
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>

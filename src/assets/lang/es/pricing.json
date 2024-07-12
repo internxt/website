@@ -25,7 +25,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Obtén ${{storage}} de almacenamiento seguro con un ", "blue": "75% de descuento" },
+    "title": {
+      "normal1": "Obtén ",
+      "blue1": " ${{storage}} ",
+      "normal2": "de almacenamiento seguro con un ",
+      "blue2": "75% de descuento"
+    },
     "offerEnds": "Termina en:"
   },
   "tableSection": {

@@ -56,6 +56,25 @@
       "upTo": "最多：",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "安全的雲存儲。",
+        "blueText": "有保障。"
+      },
+      "description": {
+        "normal1": "",
+        "blue": "80% 折扣 ",
+        "normal2": "所有高級計劃。"
+      },
+      "features": ["最高 10TB 存儲", "零知識加密", "開源和審計"],
+      "startFrom": {
+        "normal1": "起價 ",
+        "price": " 0.95",
+        "normal2": " /月"
+      },
+      "claimDeal": "獲取優惠",
+      "guarantee": "30天退款保證"
+    },
     "youKnow": "你知道嗎？"
   },
   "FeatureSectionV2": {

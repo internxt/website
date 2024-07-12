@@ -5,7 +5,7 @@
       "line1": "Archiviazione cloud sicura.",
       "blueText": "Garantita."
     },
-    "subtitle": "Proteggi la tua privacy con la nostra suite open-source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
+    "subtitle": "Proteggi la tua privacy con la nostra suite open source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
     "cta": {
       "title": "Ottieni",
       "subtitle": "1GB gratis"
@@ -55,6 +55,25 @@
       "howMuchYouNeed": "Di quanto spazio di archiviazione online hai bisogno?",
       "upTo": "Fino a:",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "Archiviazione cloud sicura.",
+        "blueText": "Garantito."
+      },
+      "description": {
+        "normal1": "",
+        "blue": "80% DI SCONTO ",
+        "normal2": "su tutti i piani premium."
+      },
+      "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source e auditato"],
+      "startFrom": {
+        "normal1": "A partire da ",
+        "price": " 0.95",
+        "normal2": " /mese"
+      },
+      "claimDeal": "Ottieni l'offerta",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "youKnow": "Lo sapevi?"
   },
@@ -125,7 +144,7 @@
   "FirstFeaturesSection": {
     "title": "Perché scegliere Internxt?",
     "subtitle": "Internxt ti restituisce il controllo dei tuoi dati con crittografia di livello militare e conoscenza zero.",
-    "description": "Utilizziamo codice open-source, che consente la verifica indipendente delle nostre pratiche di sicurezza. Internxt ti permette di possedere i tuoi dati, offrendo privacy e tranquillità ineguagliabili.",
+    "description": "Utilizziamo codice open source, che consente la verifica indipendente delle nostre pratiche di sicurezza. Internxt ti permette di possedere i tuoi dati, offrendo privacy e tranquillità ineguagliabili.",
     "cta": "Scegli lo storage"
   },
   "InfoSection": {

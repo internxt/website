@@ -13,6 +13,7 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -21,7 +22,11 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/lifetime/celebration/[filename]',
 ];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
+  '/affiliates/[filename]',
+  '/cloudwards',
+  '/lifetime/celebration/[filename]',
+];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -29,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
+  const shouldShowFeaturesBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && lang === 'fr';
   const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
@@ -114,7 +120,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? <BottomBanner /> : undefined}
           {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
         </div>
-
+        {shouldShowFeaturesBanner ? <FeaturesBanner /> : undefined}
         <FreeCardPromoBanner />
         {/* Show snackbar in all pages */}
         <ShowSnackbar />

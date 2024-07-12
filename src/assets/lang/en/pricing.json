@@ -24,7 +24,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Get ${{storage}} of The Most Secure Cloud Storage at ", "blue": "80% OFF" },
+    "title": {
+      "normal1": "Get ",
+      "blue1": " ${{storage}} ",
+      "normal2": "of The Most Secure Cloud Storage at ",
+      "blue2": "80% OFF"
+    },
     "offerEnds": "Offer ends in:"
   },
   "tableSection": {

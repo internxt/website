@@ -3,11 +3,18 @@ import React, { useEffect, useState } from 'react';
 interface CountdownProps {
   textColor?: string;
   dt?: string;
+  textFont?: string;
+  textHeight?: string;
 }
 
 const DAYS = 24 * 3600 * 1000;
 
-const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
+const Countdown: React.FC<CountdownProps> = ({
+  textColor,
+  dt,
+  textFont = 'font-semibold',
+  textHeight = 'text-2xl',
+}) => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
   const [minutes, setMinutes] = useState<number>(0);
@@ -59,7 +66,7 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
       const interval = setInterval(() => {
         const now = new Date().getTime();
         countdowns.forEach((c) => {
-          while (c.timestamp < now) c.timestamp += c.interval; // set target to future date
+          while (c.timestamp < now) c.timestamp += c.interval;
           const tSecs = Math.floor((c.timestamp - now) / 1000);
           const secs = tSecs % 60;
           const tMins = (tSecs - secs) / 60;
@@ -80,21 +87,21 @@ const Countdown: React.FC<CountdownProps> = ({ textColor, dt }) => {
 
   return (
     <div className={`flex text-${textColor}`}>
-      <div className="flex flex-row items-end space-x-2 text-2xl">
-        <div className={`days delay-350 font-semibold transition-colors duration-150`}>
-          {days < 10 ? `0${days}` : days}
+      <div className={`flex flex-row items-end gap-1 ${textHeight} ${textFont}`}>
+        <div className="text-center">
+          <p className="w-8">{days < 10 ? `0${days}` : days}</p>
         </div>
-        <p className={`font-semibold`}> : </p>
-        <div className={`hours delay-350 font-semibold transition-colors duration-150`}>
-          {hours < 10 ? `0${hours}` : hours}
+        <p>:</p>
+        <div className="text-center">
+          <p className="w-8">{hours < 10 ? `0${hours}` : hours}</p>
         </div>
-        <p className={`font-semibold`}>:</p>
-        <div className={`minutes delay-350 font-semibold transition-colors duration-150`}>
-          {minutes < 10 ? `0${minutes}` : minutes}
+        <p>:</p>
+        <div className="text-center">
+          <p className="w-8">{minutes < 10 ? `0${minutes}` : minutes}</p>
         </div>
-        <p className={`font-semibold`}>:</p>
-        <div className={`seconds delay-350 font-semibold transition-colors duration-150`}>
-          {seconds < 10 ? `0${seconds}` : seconds}
+        <p>:</p>
+        <div className="text-center">
+          <p className="w-8">{seconds < 10 ? `0${seconds}` : seconds}</p>
         </div>
       </div>
     </div>

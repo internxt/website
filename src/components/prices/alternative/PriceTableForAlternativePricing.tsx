@@ -1,6 +1,6 @@
+import { formatText } from '@/components/utils/format-text';
 import PriceCard from '../PriceCard';
 import Countdown from '@/components/components/Countdown';
-import { formatText } from '@/components/utils/format-text';
 
 interface PriceTableForAlternativePricingProps {
   textContent: Record<string, any>;
@@ -28,14 +28,18 @@ export const PriceTableForAlternativePricing = ({
   currency,
   coupons,
   currencyValue,
-}: PriceTableForAlternativePricingProps) => (
+}: PriceTableForAlternativePricingProps): JSX.Element => (
   <section id={'priceTable'} className="overflow-hidden bg-gray-1 py-20 px-5">
     <div className="flex flex-col items-center gap-10">
       <p className="max-w-[850px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
-        {formatText(textContent.title.normal, {
-          storage: selectedPlanStorage,
-        })}{' '}
-        <span className="text-primary">{textContent.title.blue}</span>
+        {textContent.title.normal1}{' '}
+        <span className="text-primary">
+          {formatText(textContent.title.blue1, {
+            storage: selectedPlanStorage,
+          })}
+        </span>
+        {textContent.title.normal2}
+        <span className="text-primary">{textContent.title.blue2}</span>
       </p>
 
       <div className="flex w-full max-w-[270px] flex-col items-center justify-center gap-2 rounded-lg bg-primary/7 px-7 py-1.5 md:px-10 lg:max-w-[400px] lg:flex-row lg:gap-4 lg:rounded-full">

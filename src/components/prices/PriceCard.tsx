@@ -48,7 +48,7 @@ export default function PriceCard({
   lifetimeMode,
   label,
   onButtonClicked,
-}: Readonly<PriceCardProps>) {
+}: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -189,10 +189,7 @@ export default function PriceCard({
         ) : null}
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[storage].map((feature) => (
-            <div
-              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
-              key={feature}
-            >
+            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
               <img
                 loading="lazy"
                 className="translate-y-px select-none"
