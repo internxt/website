@@ -23,13 +23,9 @@ const EXCLUDE_INTERCOM_PATHS = [
 ];
 
 const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
-  '/affiliates/pcmag',
-  '/affiliates/oneplan',
+  '/affiliates/[filename]',
   '/cloudwards',
-  '/lifetime/celebration/france',
-  '/lifetime/celebration/belgium',
-  '/lifetime/celebration/usa',
-  '/lifetime/celebration/canada',
+  '/lifetime/celebration/[filename]',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
