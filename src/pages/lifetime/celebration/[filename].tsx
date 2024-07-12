@@ -72,8 +72,8 @@ const LifetimeCelebrationTemplate = ({
   const couponCode = {
     canada: CouponType.IndependenceDayItaly,
     usa: CouponType.IndependenceDayItaly,
-    france: CouponType.IndependenceDayItaly,
-    belgium: CouponType.IndependenceDayItaly,
+    france: CouponType.Lifetime83DiscountCoupon,
+    belgium: CouponType.Lifetime83DiscountCoupon,
   };
 
   const percent = {
