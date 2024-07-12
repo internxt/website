@@ -9,7 +9,12 @@ const KeyHoleIcon = () => (
   </svg>
 );
 
+const HIDE_BANNER_DATE = new Date('2024-07-15');
+const TODAY_DATE = new Date();
+
 const FeaturesBanner = () => {
+  const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
+
   const [showBanner, setShowBanner] = useState(false);
   const router = useRouter();
   const textContent = require(`@/assets/lang/fr/banners.json`);
@@ -20,6 +25,11 @@ const FeaturesBanner = () => {
   };
 
   useEffect(() => {
+    if (shouldHideBannerAutomatically) {
+      setShowBanner(false);
+      return;
+    }
+
     const getSquareBannerSS = sessionStorage.getItem('hideBanner');
     if (getSquareBannerSS) setShowBanner(false);
     else {
