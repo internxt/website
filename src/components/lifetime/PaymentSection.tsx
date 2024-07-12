@@ -1,4 +1,3 @@
-import React from 'react';
 import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
@@ -18,7 +17,7 @@ interface PaymentSectionProps {
   onButtonClicked?: () => void;
 }
 
-const PaymentSection: React.FC<PaymentSectionProps> = ({
+const PaymentSection = ({
   lang,
   textContent,
   couponCode,
@@ -27,7 +26,7 @@ const PaymentSection: React.FC<PaymentSectionProps> = ({
   lifetimeMode,
   currencySpecified,
   onButtonClicked,
-}) => {
+}: PaymentSectionProps): JSX.Element => {
   const features = [
     {
       icon: FolderLock,

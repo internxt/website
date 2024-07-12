@@ -62,7 +62,26 @@ const LifetimeCelebrationTemplate = ({
     }
   }, [selectedPathName, router]);
 
-  const discount = 0.2;
+  const discount = {
+    canada: 0.2,
+    usa: 0.2,
+    france: 0.17,
+    belgium: 0.17,
+  };
+
+  const couponCode = {
+    canada: CouponType.IndependenceDayItaly,
+    usa: CouponType.IndependenceDayItaly,
+    france: CouponType.Lifetime83DiscountCoupon,
+    belgium: CouponType.Lifetime83DiscountCoupon,
+  };
+
+  const percent = {
+    canada: '80%',
+    usa: '80%',
+    france: '83%',
+    belgium: '83%',
+  };
 
   return (
     <Layout
@@ -84,11 +103,11 @@ const LifetimeCelebrationTemplate = ({
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        discount={discount}
+        discount={discount[pathname]}
         lang={lang}
-        percent={'80%'}
+        percent={percent[pathname]}
         currencySpecified={currencySpecified}
-        couponCode={CouponType.IndependenceDayItaly}
+        couponCode={couponCode[pathname]}
         lifetimeMode="celebration"
       />
 

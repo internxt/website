@@ -25,7 +25,12 @@
     ]
   },
   "PriceTableForAlternativePricing": {
-    "title": { "normal": "Erhalten Sie ${{storage}} sicheren Cloud-Speicher mit ", "blue": "80% Rabatt" },
+    "title": {
+      "normal1": "Erhalten Sie ",
+      "blue1": " ${{storage}} ",
+      "normal2": "sicheren Cloud-Speicher mit ",
+      "blue2": "80% Rabatt"
+    },
     "offerEnds": "Endet in:"
   },
   "tableSection": {

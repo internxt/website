@@ -48,7 +48,7 @@ export default function PriceCard({
   lifetimeMode,
   label,
   onButtonClicked,
-}: Readonly<PriceCardProps>) {
+}: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',

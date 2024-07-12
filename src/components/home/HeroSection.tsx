@@ -3,14 +3,13 @@ import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-const TitleAndSurvey = dynamic(() => import('./components/heroSection/TitleAndSurvey'), {
+const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
 const TitleAndSignup = dynamic(() => import('./components/heroSection/TitleAndSignup'), {
   ssr: false,
 });
 
-import { ArrowCircleDown } from '@phosphor-icons/react';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -19,9 +18,11 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
+export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const mobileImage = getImage('/images/home/image_mobile.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
+
+  const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
   return (
     <section className="overflow-hidden">
@@ -33,7 +34,9 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch lg:py-10">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div className="flex w-screen flex-shrink-0 flex-col items-center gap-5 px-5 pt-5 text-center sm:w-auto  sm:px-0 md:ml-2 lg:my-28 lg:ml-0 lg:items-start lg:text-left">
+          <div
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+          >
             <div className="flex lg:hidden">
               <Image
                 loading="eager"
@@ -48,21 +51,23 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <HomePageBannerForMobile />
 
             {isHomePageV2 ? (
-              <TitleAndSurvey textContent={textContent.TitleAndSurvey} redirectUrl="/pricing" />
+              <TitleAndOnePlan textContent={textContent.TitleAndOnePlan} />
             ) : (
               <TitleAndSignup textContent={textContent} />
             )}
           </div>
 
           {/* Desktop animation/image */}
-          <Animation />
+          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <Animation />
+          </div>
         </div>
-        {isHomePageV2 ? (
+        {/* {isHomePageV2 ? (
           <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
             <ArrowCircleDown size={32} className="animate-bounce text-primary" />
             <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
           </div>
-        ) : undefined}
+        ) : undefined} */}
       </div>
     </section>
   );
