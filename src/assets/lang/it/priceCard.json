@@ -43,7 +43,7 @@
     "semiannually": "/semestrale",
     "annually": "/annuale"
   },
-  "perUserSlash": "/user",
+  "perUserSlash": "Per utente/",
   "perUser": "Per utente",
   "users": "utenti",
   "freePlan": "Free",
@@ -135,7 +135,8 @@
         "1TB di archiviazione/utente",
         "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
-        "Creare fino a 5 team",
+        "A partire da 3 utenti e fino a 10",
+        "Conforme al GDPR",
         "Caricare file fino a 5GB",
         "Gestire la fatturazione e i pagamenti dell'account",
         "Assistenza clienti premium"
@@ -144,7 +145,8 @@
         "2TB di archiviazione/utente",
         "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
-        "Creare fino a 25 team",
+        "A partire da 3 utenti e fino a 100",
+        "Conforme al GDPR",
         "Caricare file fino a 20GB",
         "Gestire la fatturazione e i pagamenti dell'account",
         "Assistenza clienti premium"
