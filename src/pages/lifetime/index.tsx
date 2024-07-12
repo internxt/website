@@ -9,7 +9,7 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, deviceLang, navbarLang }) => {
+const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const discount = 0.25;
 
