@@ -129,26 +129,20 @@
     "business": {
       "1TB": [
         "1TB Speicher/Benutzer",
-        "5 Teams",
-        "Dateien bis zu 5GB hochladen",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
+        "Bis zu 5 Teams erstellen",
+        "Dateien bis zu 5GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
-        "Versionsverlauf",
-        "Detaillierte Zugriffprotokolle",
-        "Service-Level-Agreement (SLA) 99.99%",
         "Premium-Kundensupport"
       ],
       "2TB": [
         "2TB Speicher/Benutzer",
-        "25 Teams",
-        "Dateien bis zu 20GB hochladen",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
+        "Bis zu 25 Teams erstellen",
+        "Dateien bis zu 20GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
-        "Versionsverlauf",
-        "Detaillierte Zugriffprotokolle",
-        "Service-Level-Agreement (SLA) 99.99%",
         "Premium-Kundensupport"
       ]
     }

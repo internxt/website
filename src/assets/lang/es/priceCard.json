@@ -132,26 +132,20 @@
     "business": {
       "1TB": [
         "1TB de almacenamiento/usuario",
-        "5 equipos",
-        "Subir archivos de hasta 5GB",
-        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos y carpetas cifradas",
         "Crear y gestionar usuarios y equipos",
+        "Crear hasta 5 equipos",
+        "Subir archivos de hasta 5GB",
         "Gestionar la facturación y los pagos de la cuenta",
-        "Historial de versiones",
-        "Registros de acceso detallados",
-        "Acuerdo de Nivel de Servicio (SLA) 99.99%",
         "Soporte al cliente premium"
       ],
       "2TB": [
         "2TB de almacenamiento/usuario",
-        "25 equipos",
-        "Subir archivos de hasta 20GB",
         "Compartir archivos y carpetas cifrados",
         "Crear y gestionar usuarios y equipos",
+        "Crear hasta 25 equipos",
+        "Subir archivos de hasta 20GB",
         "Gestionar la facturación y los pagos de la cuenta",
-        "Historial de versiones",
-        "Registros de acceso detallados",
-        "Acuerdo de Nivel de Servicio (SLA) 99.99%",
         "Soporte al cliente premium"
       ]
     }

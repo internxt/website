@@ -133,26 +133,20 @@
     "business": {
       "1TB": [
         "1TB di archiviazione/utente",
-        "5 team",
-        "Caricare file fino a 5GB",
-        "Condivisione di file e cartelle crittografate",
+        "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
+        "Creare fino a 5 team",
+        "Caricare file fino a 5GB",
         "Gestire la fatturazione e i pagamenti dell'account",
-        "Cronologia delle versioni",
-        "Registri di accesso dettagliati",
-        "Accordo sul livello di servizio (SLA) 99.99%",
         "Assistenza clienti premium"
       ],
       "2TB": [
         "2TB di archiviazione/utente",
-        "25 team",
-        "Caricare file fino a 20GB",
-        "Condivisione di file e cartelle crittografate",
+        "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
+        "Creare fino a 25 team",
+        "Caricare file fino a 20GB",
         "Gestire la fatturazione e i pagamenti dell'account",
-        "Cronologia delle versioni",
-        "Registri di accesso dettagliati",
-        "Accordo sul livello di servizio (SLA) 99.99%",
         "Assistenza clienti premium"
       ]
     }

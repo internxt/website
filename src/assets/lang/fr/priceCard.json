@@ -132,26 +132,20 @@
     "business": {
       "1TB": [
         "1TB de stockage/utilisateur",
-        "5 équipes",
-        "Télécharger des fichiers jusqu'à 5GB",
         "Partage de fichiers et dossiers chiffrés",
         "Créer et gérer des utilisateurs et des équipes",
+        "Créer jusqu'à 5 équipes",
+        "Télécharger des fichiers jusqu'à 5GB",
         "Gérer la facturation et les paiements du compte",
-        "Historique des versions",
-        "Journaux d'accès détaillés",
-        "Accord de Niveau de Service (SLA) 99.99%",
         "Support client premium"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
-        "25 équipes",
-        "Télécharger des fichiers jusqu'à 20GB",
         "Partage de fichiers et dossiers chiffrés",
         "Créer et gérer des utilisateurs et des équipes",
+        "Créer jusqu'à 25 équipes",
+        "Télécharger des fichiers jusqu'à 20GB",
         "Gérer la facturation et les paiements du compte",
-        "Historique des versions",
-        "Journaux d'accès détaillés",
-        "Accord de Niveau de Service (SLA) 99.99%",
         "Support client premium"
       ]
     }

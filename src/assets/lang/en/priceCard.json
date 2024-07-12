@@ -130,26 +130,20 @@
     "business": {
       "1TB": [
         "1TB storage/user",
-        "5 Teams",
-        "Upload files up to 5GB",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
+        "Create up to 5 teams",
+        "Upload files of up to 5GB",
         "Manage account billing & payments",
-        "Version history",
-        "Detailed access logs",
-        "Service-Level Agreement (SLA) 99.99%",
         "Premium customer support"
       ],
       "2TB": [
         "2TB storage/user",
-        "25 Teams",
-        "Upload files up to 20GB",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
+        "Create up to 25 teams",
+        "Upload files of up to 20GB",
         "Manage account billing & payments",
-        "Version history",
-        "Detailed access logs",
-        "Service-Level Agreement (SLA) 99.99%",
         "Premium customer support"
       ]
     }
