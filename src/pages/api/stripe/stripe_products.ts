@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       const individualsProductsRequest = axios.get(`${PRODUCTS_URL}?currency=${currency}`);
-      const businessProductsRequest = axios.get(`${PRODUCTS_URL}?subscriptionType=business&currency=${currency}`);
+      const businessProductsRequest = axios.get(`${PRODUCTS_URL}?userType=business&currency=${currency}`);
 
       const promises = await Promise.all([individualsProductsRequest, businessProductsRequest]);
 
