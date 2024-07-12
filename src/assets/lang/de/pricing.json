@@ -55,6 +55,7 @@
     "lifetimeDescription": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",
     "planDescription": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten vollständigen Zugriff auf alle unsere Datenschutzdienste. Sicherheit für alle Formen und Größen.",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die ausschließlich darauf ausgelegt sind, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Stellen Sie die Sicherheit von Unternehmensdaten mit den verschlüsselten Cloud-Speicherplänen von Internxt sicher.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
@@ -155,6 +156,43 @@
       }
     ]
   },
+  "FaqSectionForBusiness": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist Internxt für Unternehmen?",
+        "answer": [
+          "Unser Cloud-Speicher für Unternehmen bietet Unternehmen jeder Größe eine sichere Cloud-Speicherlösung, die Geschäftsdaten vor Datenverletzungen schützt. Unternehmenspläne umfassen den Zugriff auf Internxt Drive, VPN und Send sowie auf unsere neuen Produkte Internxt Mail und Meet."
+        ]
+      },
+      {
+        "question": "Ist Internxt der richtige Cloud-Speicher für mein Unternehmen?",
+        "answer": [
+          "Internxt ist für alle gedacht, einschließlich Unternehmen jeder Größe, die nach einer sicheren Cloud-Speicherlösung suchen, die persönliche und vertrauliche Informationen privat hält.",
+          "Unsere verschlüsselte Produktsuite umfasst die höchsten Sicherheitsstandards der Branche für Unternehmen, die Dateien oder Ordner freigeben müssen, ohne sich um Datenlecks sorgen zu müssen."
+        ]
+      },
+      {
+        "question": "Ist Internxt sicherer als andere Cloud-Speicherdienste?",
+        "answer": [
+          "Im Gegensatz zu großen Technologiekonzernen bietet Internxt ein sicheres Speichern von Dateien für Unternehmen, da Ihre Geschäftsdaten auf Ihrem Gerät verschlüsselt werden, um maximale Sicherheit zu gewährleisten.",
+          "Um die Bedrohung durch Datenverletzungen zu verhindern, bietet Internxt zusätzliche Sicherheitsmaßnahmen, darunter verschlüsselte Dateifreigabe, Zwei-Faktor-Authentifizierung, Passwort-Generator und mehr."
+        ]
+      },
+      {
+        "question": "Was passiert, wenn ich das Speichervolumen meines Plans erreiche?",
+        "answer": [
+          "Unsere Pläne sind vollständig flexibel, um die Anforderungen Ihres Unternehmens zu erfüllen. Sie können problemlos weitere Benutzer hinzufügen oder Ihre Speicherkapazität nach Bedarf erweitern, um Skalierbarkeit und Kosteneffizienz zu gewährleisten."
+        ]
+      },
+      {
+        "question": "Welchen technischen Support bieten Sie an?",
+        "answer": [
+          "Wir haben ein engagiertes Kundensupport-Team, das alle Fragen oder Bedenken beantworten oder zusätzliche Informationen basierend auf Ihren Bedürfnissen bereitstellen kann. Sie können unser Help Center besuchen oder uns unter [hello@internxt.com](mailto:hello@internxt.com) kontaktieren, und unser Team hilft Ihnen gerne weiter."
+        ]
+      }
+    ]
+  },
   "InfoSection": {
     "title": "Sicherer Cloud-Speicher mit unübertroffener Privatsphäre",
     "description": "Was macht Internxt so besonders? Wir sind ein engagiertes Team von Fachleuten, das sich vollständig dem Schutz deiner Online-Privatsphäre verschrieben hat. Alles, was wir tun und jede Entscheidung, die wir treffen, zielt darauf ab, deine Daten vor Missbrauch zu schützen.",
@@ -175,6 +213,29 @@
       {
         "title": "Unabhängig verifiziert",
         "description": "Wir sind vollständig DSGVO-konform und zu 100% sicher, aber verlasse dich nicht nur auf unser Wort. Internxt wurde unabhängig geprüft und verifiziert von Securitum, dem führenden Unternehmen für Penetrationstests in Europa."
+      }
+    ]
+  },
+  "InfoSectionForBusiness": {
+    "title": "Was können Sie mit Internxt tun?",
+    "description": "Optimieren Sie die Dateiverwaltung, Sicherheit und Privatsphäre Ihrer Organisation mit unserem sicheren Cloud-Speicher für Unternehmen.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Verwalten Sie Ihre Organisation",
+        "description": "Internxt ermöglicht es Unternehmen, Benutzer und Teams einfach zu verwalten, den Speicher flexibel zuzuweisen und Arbeitsbereiche anzupassen. Wechseln Sie problemlos zwischen geschäftlichen und persönlichen Aufgaben, um Produktivität und Organisation zu optimieren."
+      },
+      {
+        "title": "Senden Sie vertrauliche Dateien sicher",
+        "description": "Der sichere Cloud-Speicher enthält sichere Dateifreigabefunktionen für die sichere Zusammenarbeit in Teams. Schützen Sie Dateien mit einem Passwort und beschränken Sie den Zugriff auf Dateien, um vertrauliche Dateien an Partner zu senden und sicherzustellen, dass Sie die Kontrolle über deren Sicherheit behalten."
+      },
+      {
+        "title": "Sichern Sie, was wichtig ist",
+        "description": "Sichern Sie Ihre Dateien, um Datenverlust zu vermeiden. Darüber hinaus speichert und sichert Internxt dieselbe Kopie Ihrer Dateien auf verschiedenen EU-Servern für zusätzliche Sicherheit und macht es so zum sichersten Cloud-Backup für Ihr Unternehmen."
+      },
+      {
+        "title": "Arbeiten Sie mit Ihrem Team von überall aus",
+        "description": "Verfügbar für Windows, Mac, Linux, iOS, Android und Web. Greifen Sie jederzeit und überall auf Ihre Dateien zu, damit Sie und Ihr Team sicher arbeiten können, egal wo Sie sich befinden."
       }
     ]
   },

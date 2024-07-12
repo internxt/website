@@ -1,6 +1,6 @@
 import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { TransformedProduct } from '@/components/services/stripe.service';
+import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 
 export interface PriceCardProps {
@@ -8,9 +8,12 @@ export interface PriceCardProps {
   popular: boolean;
   lang: string;
   label: string;
+  isCheckoutForLifetime: boolean;
+  monthlyProductPrice: number;
+  productCardPlan?: 'individuals' | 'business';
   decimalDiscountValue?: number;
   redeemCodeCta?: LifetimeMode;
-  onCheckoutButtonClicked: (planId: string) => void;
+  onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -22,6 +25,9 @@ const BILLING_FREQUENCY_LIST = {
 export const PriceCard = ({
   product,
   decimalDiscountValue,
+  isCheckoutForLifetime,
+  productCardPlan = 'individuals',
+  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -33,15 +39,22 @@ export const PriceCard = ({
   const { currency, interval, price, storage, priceId } = product;
 
   const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2) : price;
-  const priceBefore = decimalDiscountValue ? price : undefined;
+  const priceBefore = decimalDiscountValue
+    ? price
+    : interval === Interval.Year
+    ? (monthlyProductPrice * 12).toFixed(2)
+    : undefined;
 
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
+  const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
+
+  const cardLabel = productCardPlan === 'business' ? `${contentText.businessLabels[storage]} ${label}` : `${label}`;
 
   return (
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } m-2 flex ${cardMaxWidth} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
@@ -52,7 +65,7 @@ export const PriceCard = ({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{label}</p>
+            <p className="text-lg font-medium text-primary">{cardLabel}</p>
           </div>
         </div>
         <div
@@ -78,12 +91,13 @@ export const PriceCard = ({
           </p>
 
           <p className={`flex text-sm text-gray-50`}>
+            {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
             {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
           </p>
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={() => onCheckoutButtonClicked(priceId)}
+          onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
@@ -95,8 +109,13 @@ export const PriceCard = ({
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
+          {contentText.productFeatures[productCardPlan][storage].map((feature) => (
+            <div
+              className={`flex flex-row items-start space-x-2 px-6 ${
+                productCardPlan === 'business' ? '' : 'last:font-semibold'
+              }`}
+              key={feature}
+            >
               <img
                 loading="lazy"
                 className="translate-y-px select-none"

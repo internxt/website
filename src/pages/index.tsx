@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -14,12 +12,11 @@ import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
 import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
-import { PricingSection } from '@/components/shared/pricing/PricingSection';
 import { CouponType } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
-import { Interval } from '@/components/services/stripe.service';
-import { checkout } from '@/lib/auth';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/components/services/stripe.service';
+import { useState } from 'react';
 
 interface HomeProps {
   lang: string;
@@ -35,32 +32,18 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
   const navbarCta = 'default';
   const marqueeBgColor = 'bg-gray-1';
 
-  const { products, loadingCards, currencyValue, coupon } = usePricing({
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
     couponCode: CouponType.AllPlansCoupon,
   });
+  const [isBusiness, setIsBusiness] = useState<boolean>();
 
-  const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-
-  const onPlanTypeChange = (activeSwitchPlan: SwitchButtonOptions, interval?: Interval) => {
-    setActiveSwitchPlan(activeSwitchPlan);
-
-    if (interval) {
-      setBillingFrequency(interval);
-    }
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  const onIndividualSwitchToggled = (interval: Interval) => {
-    setBillingFrequency(interval);
-  };
-
-  const onCheckoutButtonClicked = (planId: string) => {
-    checkout({
-      planId: planId,
-      couponCode: coupon,
-      currency: currencyValue ?? 'eur',
-      mode: billingFrequency === Interval.Lifetime ? 'payment' : 'subscription',
-    });
+  const onBusinessPlansTabSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
   };
 
   const onChooseStorageButtonClicked = () => {
@@ -88,17 +71,17 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
 
       <SecondFeaturesSection textContent={textContent.SecondFeaturesSection} lang={lang} />
 
-      <PricingSection
+      <PricingSectionWrapper
         textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: 0.2,
+        }}
         lang={lang}
-        billingFrequency={billingFrequency}
-        decimalDiscountForPrice={0.2}
+        hideBusinessCards={true}
         products={products}
         loadingCards={loadingCards}
-        activeSwitchPlan={activeSwitchPlan}
+        onBusinessPlansSelected={onBusinessPlansTabSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        onPlanTypeChange={onPlanTypeChange}
-        onIndividualSwitchToggled={onIndividualSwitchToggled}
       />
 
       <FirstWhatWeDoSection textContent={textContent.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />

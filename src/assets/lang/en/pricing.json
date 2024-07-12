@@ -54,6 +54,7 @@
     "lifetimeDescription": "Buy once and get privacy and security forever.",
     "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annually",
@@ -110,27 +111,27 @@
         "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
           "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal,  iDEAL, Sofort and Bancontact.",
-          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at hello@internxt.com."
+          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
         "question": "What is Internxt’s refund policy?",
         "answer": [
           "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at hello@internxt.com and request a refund. We will honor your request, no questions asked!"
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
         ]
       },
       {
         "question": "How can I cancel my subscription?",
         "answer": [
           "Canceling your subscription is very straightforward and can be done easily through the Internxt app, by going into settings and deleting your account. This will terminate your subscription and your account.",
-          "If you would like to cancel a paid plan and remain with our free service, you can email us at hello@internxt.com and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
+          "If you would like to cancel a paid plan and remain with our free service, you can email us at [hello@internxt.com](mailto:hello@internxt.com) and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
         ]
       },
       {
         "question": "How do I contact support?",
         "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
@@ -142,7 +143,44 @@
       {
         "question": "Can I add more storage to my lifetime plan?",
         "answer": [
-          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so that we can stack them together for you on the same account."
+          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at [hello@internxt.com](mailto:hello@internxt.com) so that we can stack them together for you on the same account."
+        ]
+      }
+    ]
+  },
+  "FaqSectionForBusiness": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Internxt for business?",
+        "answer": [
+          "Our cloud storage for businesses provides companies of all sizes with a secure cloud storage solution that protects business files against data breaches. Business plans include access to Internxt Drive, VPN, and Send, as well as our upcoming new products, Internxt Mail and Meet."
+        ]
+      },
+      {
+        "question": "Is Internxt the right cloud storage for my business?",
+        "answer": [
+          "Internxt is built for everyone, including businesses of any size looking for a secure cloud storage solution that keeps personal and confidential information private.",
+          "Our encrypted suite of products includes the highest industry security standards for companies who need to share files or folders without worrying about data leaks."
+        ]
+      },
+      {
+        "question": "Is Internxt more secure than other cloud storage services?",
+        "answer": [
+          "Unlike Big Tech companies, Internxt is trusted to provide secure file storage for business because your business data is encrypted on your device for maximum security.",
+          "To prevent the threat of data breaches, Internxt provides additional security measures, including encrypted file sharing, Two-Factor authentication, Password Generator, and more."
+        ]
+      },
+      {
+        "question": "What if I reach my plan’s storage limit?",
+        "answer": [
+          "Our plans are fully flexible to meet your business needs. You can easily add more users or upgrade your storage capacity as required, ensuring scalability and cost-efficiency."
+        ]
+      },
+      {
+        "question": "What level of technical support do you provide?",
+        "answer": [
+          "We have a dedicated customer support team that can answer any questions or concerns or provide additional information based on your needs. You can visit our help center or contact us at [hello@internxt.com](mailto:hello@internxt.com), and our team will be happy to assist you."
         ]
       }
     ]
@@ -158,7 +196,7 @@
       {
         "question": "Can I add more storage to my lifetime plan?",
         "answer": [
-          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so that we can stack them together for you on the same account."
+          "Yes, you can add up as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at [hello@internxt.com](mailto:hello@internxt.com) so that we can stack them together for you on the same account."
         ]
       }
     ]
@@ -184,6 +222,29 @@
       "description": "Get 1GB free and see if privacy suits you before going all in!",
       "cta": "Create free account"
     }
+  },
+  "InfoSectionForBusiness": {
+    "title": "What can you do with Internxt?",
+    "description": "Optimize your organization's file management, security, and privacy with our secure cloud storage for business.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Manage your organization",
+        "description": "Internxt empowers businesses with streamlined user and team management, flexible storage allocation, and customizable workspaces. Easily switch between business and personal tasks to optimize productivity and organization."
+      },
+      {
+        "title": "Securely send confidential files",
+        "description": "Secure cloud storage includes secure file-sharing features to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security."
+      },
+      {
+        "title": "Backup what's important",
+        "description": "Back up your files to prevent data loss. Plus, Internxt stores and backs up the same copy of your files across different EU servers for additional security, making it the most secure cloud backup for your business. "
+      },
+      {
+        "title": "Work with your team from anywhere",
+        "description": "Available for Windows, Mac, Linux, iOS, Android, and Web. Access your files on any device, anytime, ensuring you and your team can work securely wherever you are."
+      }
+    ]
   },
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",

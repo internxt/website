@@ -1,7 +1,11 @@
 import { CircleWavyCheck, Database, Eye, Key, Recycle } from '@phosphor-icons/react';
-import React from 'react';
 
-const BestStorageSection = ({ textContent }) => {
+interface BestStorageSectionProps {
+  textContent: Record<string, any>;
+  hideTitleAndDescription?: boolean;
+}
+
+const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorageSectionProps): JSX.Element => {
   const features = [
     {
       icon: Database,
@@ -27,11 +31,13 @@ const BestStorageSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-4 py-20 px-5">
-        <div className="flex w-full max-w-3xl flex-col space-y-4 text-center">
-          <p className="text-5xl font-semibold">{textContent.title}</p>
-          <p className="text-xl">{textContent.description}</p>
-        </div>
+      <div className="flex flex-col items-center justify-center space-y-4 px-5 pb-20">
+        {!hideTitleAndDescription ? (
+          <div className="flex w-full max-w-3xl flex-col space-y-4 text-center">
+            <p className="text-5xl font-semibold">{textContent.title}</p>
+            <p className="text-xl">{textContent.description}</p>
+          </div>
+        ) : undefined}
         <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 lg:space-x-32">
           {features.map((feature, index) => (
             <div className="flex w-full max-w-[120px] flex-col items-center space-y-3 pt-16 text-center" key={index}>

@@ -1,7 +1,6 @@
 {
   "mostPopular": "Most popular",
   "mostPopularPlan": "Most Popular Plan",
-  "save": "Save up to",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
@@ -17,13 +16,17 @@
   },
   "lifetimeDescription": "Buy once and get privacy and security forever.",
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
-  "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+  "businessDescription": "Ensure business data security with Internxt's encrypted cloud storage plans.",
   "billingFrequency": {
     "monthly": "Monthly",
     "annually": "Annually",
     "individual": "Individual",
     "lifetime": "Lifetime",
     "business": "Business"
+  },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
@@ -37,7 +40,7 @@
     "semiannually": "/semiannually",
     "annually": "/annually"
   },
-  "perUserSlash": "/user",
+  "perUserSlash": "User/",
   "perUser": "Per user",
   "users": "users",
   "freePlan": "Free",
@@ -86,41 +89,63 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
-    "200GB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "2TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "5TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "10TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ]
+    "individuals": {
+      "200GB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "2TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "5TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "10TB": [
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Upload files up to 20GB",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB storage/user",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Create up to 5 teams",
+        "Upload files of up to 5GB",
+        "Manage account billing & payments",
+        "Premium customer support"
+      ],
+      "2TB": [
+        "2TB storage/user",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Create up to 25 teams",
+        "Upload files of up to 20GB",
+        "Manage account billing & payments",
+        "Premium customer support"
+      ]
+    }
   }
 }

@@ -27,6 +27,10 @@
     "lifetime": "Lebenslang",
     "business": "Geschäftlich"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro"
+  },
   "billingFrequencyLabel": {
     "lifetime": "Einmalzahlung",
     "monthly": "Monatliche Abrechnung",
@@ -88,37 +92,59 @@
       "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
     },
-    "200GB": [
-      "Verschlüsselte Datei- und Ordnerfreigabe",
-      "Passwortgeschützte Dateifreigabe",
-      "Zugriff auf Ihre Dateien von jedem Gerät aus",
-      "Dateien bis zu 20 GB hochladen",
-      "Zwei-Faktor-Authentifizierung (2FA)",
-      "Premium-Kundensupport"
-    ],
-    "2TB": [
-      "Verschlüsselte Datei- und Ordnerfreigabe",
-      "Passwortgeschützte Dateifreigabe",
-      "Zugriff auf Ihre Dateien von jedem Gerät aus",
-      "Dateien bis zu 20 GB hochladen",
-      "Zwei-Faktor-Authentifizierung (2FA)",
-      "Premium-Kundensupport"
-    ],
-    "5TB": [
-      "Verschlüsselte Datei- und Ordnerfreigabe",
-      "Passwortgeschützte Dateifreigabe",
-      "Zugriff auf Ihre Dateien von jedem Gerät aus",
-      "Dateien bis zu 20 GB hochladen",
-      "Zwei-Faktor-Authentifizierung (2FA)",
-      "Premium-Kundensupport"
-    ],
-    "10TB": [
-      "Verschlüsselte Datei- und Ordnerfreigabe",
-      "Passwortgeschützte Dateifreigabe",
-      "Zugriff auf Ihre Dateien von jedem Gerät aus",
-      "Dateien bis zu 20 GB hochladen",
-      "Zwei-Faktor-Authentifizierung (2FA)",
-      "Premium-Kundensupport"
-    ]
+    "individuals": {
+      "200GB": [
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Passwortgeschützte Dateifreigabe",
+        "Zugriff auf Ihre Dateien von jedem Gerät aus",
+        "Dateien bis zu 20 GB hochladen",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Premium-Kundensupport"
+      ],
+      "2TB": [
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Passwortgeschützte Dateifreigabe",
+        "Zugriff auf Ihre Dateien von jedem Gerät aus",
+        "Dateien bis zu 20 GB hochladen",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Premium-Kundensupport"
+      ],
+      "5TB": [
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Passwortgeschützte Dateifreigabe",
+        "Zugriff auf Ihre Dateien von jedem Gerät aus",
+        "Dateien bis zu 20 GB hochladen",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Premium-Kundensupport"
+      ],
+      "10TB": [
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Passwortgeschützte Dateifreigabe",
+        "Zugriff auf Ihre Dateien von jedem Gerät aus",
+        "Dateien bis zu 20 GB hochladen",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Premium-Kundensupport"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB Speicher/Benutzer",
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Benutzer und Teams erstellen und verwalten",
+        "Bis zu 5 Teams erstellen",
+        "Dateien bis zu 5GB hochladen",
+        "Kontenabrechnung und Zahlungen verwalten",
+        "Premium-Kundensupport"
+      ],
+      "2TB": [
+        "2TB Speicher/Benutzer",
+        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Benutzer und Teams erstellen und verwalten",
+        "Bis zu 25 Teams erstellen",
+        "Dateien bis zu 20GB hochladen",
+        "Kontenabrechnung und Zahlungen verwalten",
+        "Premium-Kundensupport"
+      ]
+    }
   }
 }

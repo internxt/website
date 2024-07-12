@@ -6,6 +6,7 @@ import { CouponType } from '@/lib/types';
 
 type UsePricingOptions = {
   couponCode?: CouponType;
+  couponCodeForBusiness?: CouponType;
   currencySpecified?: string;
 };
 
@@ -14,6 +15,7 @@ interface UseStripeProductsAndCurrencyResponse {
   currency: string;
   currencyValue: string;
   coupon?: CouponType;
+  businessCoupon?: CouponType;
   products?: ProductsDataProps;
 }
 
@@ -22,7 +24,8 @@ type ActionType =
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
   | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_CURRENCY_VALUE'; payload: string }
-  | { type: 'SET_COUPON'; payload: CouponType | undefined };
+  | { type: 'SET_COUPON'; payload: CouponType | undefined }
+  | { type: 'SET_BUSINESS_COUPON'; payload: CouponType | undefined };
 
 const reducer = (state: any, action: ActionType) => {
   switch (action.type) {
@@ -36,18 +39,21 @@ const reducer = (state: any, action: ActionType) => {
       return { ...state, currencyValue: action.payload };
     case 'SET_COUPON':
       return { ...state, coupon: action.payload };
+    case 'SET_BUSINESS_COUPON':
+      return { ...state, coupon: action.payload };
     default:
       return state;
   }
 };
 
 function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurrencyResponse {
-  const { couponCode, currencySpecified } = options;
+  const { couponCode, couponCodeForBusiness, currencySpecified } = options;
   const initialState = {
     products: undefined,
     loadingCards: true,
     currency: '€',
     coupon: undefined,
+    businessCoupon: undefined,
     currencyValue: 'eur',
   };
 
@@ -64,12 +70,13 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
       try {
-        const res = await stripeService.getPrices('eur');
-        dispatch({ type: 'SET_PRODUCTS', payload: res });
+        const prices = await stripeService.getPrices('eur');
+        dispatch({ type: 'SET_PRODUCTS', payload: prices });
         dispatch({ type: 'SET_LOADING_CARDS', payload: false });
       } catch (error) {
         console.error('Error getting prices:', error);
       }
+
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: 'eur' });
     }
@@ -77,6 +84,13 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     if (couponCode) {
       try {
         const coupon = await stripeService.getCoupon(couponCode);
+        dispatch({ type: 'SET_COUPON', payload: coupon });
+      } catch (err) {
+        notificationService.openErrorToast('Error fetching coupon');
+      }
+    } else if (couponCodeForBusiness) {
+      try {
+        const coupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
         notificationService.openErrorToast('Error fetching coupon');
@@ -94,6 +108,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     currency: state.currency,
     currencyValue: state.currencyValue,
     coupon: state.coupon,
+    businessCoupon: state.businessCoupon,
   };
 }
 

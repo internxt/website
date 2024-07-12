@@ -55,6 +55,7 @@
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
     "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su negocio, proteger a sus empleados y asegurar su rentabilidad.",
+    "businessDescription2": "Garantiza la seguridad de los datos de la empresa con los planes de almacenamiento en la nube cifrados de Internxt.",
     "billingFrequency": {
       "monthly": "Mensual",
       "annually": "Anual",
@@ -149,6 +150,43 @@
       }
     ]
   },
+  "FaqSectionForBusiness": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es Internxt para negocios?",
+        "answer": [
+          "Nuestro almacenamiento en la nube para negocios proporciona a las empresas de todos los tamaños una solución de almacenamiento en la nube segura que protege los archivos empresariales contra violaciones de datos. Los planes empresariales incluyen acceso a Internxt Drive, VPN y Send, así como a nuestros nuevos productos próximos, Internxt Mail y Meet."
+        ]
+      },
+      {
+        "question": "¿Es Internxt el almacenamiento en la nube adecuado para mi negocio?",
+        "answer": [
+          "Internxt está diseñado para todos, incluidas las empresas de cualquier tamaño que buscan una solución de almacenamiento en la nube segura que mantenga la información personal y confidencial privada.",
+          "Nuestra suite de productos cifrados incluye los más altos estándares de seguridad de la industria para las empresas que necesitan compartir archivos o carpetas sin preocuparse por filtraciones de datos."
+        ]
+      },
+      {
+        "question": "¿Es Internxt más seguro que otros servicios de almacenamiento en la nube?",
+        "answer": [
+          "A diferencia de las grandes empresas tecnológicas, en Internxt se confía para proporcionar un almacenamiento de archivos seguro para empresas porque los datos de tu empresa se cifran en tu dispositivo para una máxima seguridad.",
+          "Para prevenir la amenaza de violaciones de datos, Internxt ofrece medidas de seguridad adicionales, incluidas la compartición de archivos cifrados, la autenticación de dos factores, el generador de contraseñas y más."
+        ]
+      },
+      {
+        "question": "¿Qué pasa si alcanzo el límite de almacenamiento de mi plan?",
+        "answer": [
+          "Nuestros planes son totalmente flexibles para satisfacer las necesidades de tu empresa. Puedes agregar fácilmente más usuarios o ampliar tu capacidad de almacenamiento según sea necesario, asegurando la escalabilidad y la rentabilidad."
+        ]
+      },
+      {
+        "question": "¿Qué nivel de soporte técnico proporcionan?",
+        "answer": [
+          "Contamos con un equipo de soporte al cliente dedicado que puede responder cualquier pregunta o inquietud o proporcionar información adicional según tus necesidades. Puedes visitar nuestro centro de ayuda o contactarnos en [hello@internxt.com](mailto:hello@internxt.com), y nuestro equipo estará encantado de asistirte."
+        ]
+      }
+    ]
+  },
   "SchemaMarkupQuestions": {
     "faq": [
       {
@@ -186,6 +224,29 @@
       "description": "¡Consigue 1 GB gratis y comprueba si la privacidad te conviene antes de lanzarte a por todas!",
       "cta": "Crear cuenta gratuita"
     }
+  },
+  "InfoSectionForBusiness": {
+    "title": "¿Qué puedes hacer con Internxt?",
+    "description": "Optimiza la gestión de archivos, la seguridad y la privacidad de tu organización con nuestro almacenamiento en la nube seguro para negocios.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Gestiona tu organización",
+        "description": "Internxt empodera a las empresas con la gestión de usuarios y equipos simplificada, la asignación flexible de almacenamiento y espacios de trabajo personalizables. Cambia fácilmente entre tareas empresariales y personales para optimizar la productividad y la organización."
+      },
+      {
+        "title": "Envía archivos confidenciales de manera segura",
+        "description": "El almacenamiento en la nube seguro incluye características de compartición de archivos seguras para colaborar en equipos de forma segura. Protege con contraseña y restringe el acceso a archivos para enviar archivos confidenciales a socios, asegurando que mantengas el control sobre su seguridad."
+      },
+      {
+        "title": "Haz copias de seguridad de lo importante",
+        "description": "Haz copias de seguridad de tus archivos para prevenir la pérdida de datos. Además, Internxt almacena y respalda la misma copia de tus archivos en diferentes servidores de la UE para mayor seguridad, convirtiéndolo en la copia de seguridad en la nube más segura para tu negocio."
+      },
+      {
+        "title": "Trabaja con tu equipo desde cualquier lugar",
+        "description": "Disponible para Windows, Mac, Linux, iOS, Android y Web. Accede a tus archivos en cualquier dispositivo, en cualquier momento, asegurando que tú y tu equipo puedan trabajar de manera segura donde sea que estén."
+      }
+    ]
   },
   "InfoSection": {
     "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
