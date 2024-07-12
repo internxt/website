@@ -24,7 +24,7 @@ describe('Lifetime page', () => {
   const products: Products = {};
   before(() => {
     cy.request('get', `${window.origin}/api/stripe/stripe_products`).then((response) => {
-      response.body.map((product) => {
+      response.body.individuals.map((product) => {
         const id = product.interval + bytes(product.bytes);
 
         products[id] = {
