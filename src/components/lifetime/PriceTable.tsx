@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
@@ -29,14 +29,14 @@ const DISC_LIFETIME_PRICES = {
   },
 };
 
-const PriceTable: React.FC<PriceTableProps> = ({
+const PriceTable = ({
   lang,
   couponCode,
   discount,
   lifetimeMode,
   currencySpecified,
   onButtonClicked,
-}) => {
+}: PriceTableProps): JSX.Element => {
   const [specialCoupons, setSpecialCoupons] = useState();
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
     couponCode: couponCode,
