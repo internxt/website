@@ -53,6 +53,7 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
         textContent={langJson.PaymentSection}
         lang={lang}
         lifetimeMode="redeem"
+        percent="80"
         showPriceBefore
         onButtonClicked={onCardButtonClicked}
         discount={0.2}
