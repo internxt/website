@@ -3,6 +3,7 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { CouponType } from '@/lib/types';
 import { formatText } from '../utils/format-text';
+import { useRouter } from 'next/router';
 
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
@@ -29,6 +30,7 @@ const PaymentSection = ({
   currencySpecified,
   onButtonClicked,
 }: PaymentSectionProps): JSX.Element => {
+  const router = useRouter();
   const features = [
     {
       icon: FolderLock,
@@ -43,6 +45,12 @@ const PaymentSection = ({
       text: textContent.features.anonymousAccount,
     },
   ];
+
+  console.log(router.pathname);
+
+  const title =
+    router.pathname === '/dealmirror' || router.pathname === '/dealfuel' ? textContent.title2 : textContent.title;
+
   return (
     <section id="payment" className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 py-10 text-center md:flex-row md:space-x-32 md:space-y-0">
@@ -57,17 +65,17 @@ const PaymentSection = ({
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
-              {lifetimeMode !== 'normal' && lifetimeMode !== 'redeem' ? (
+              {lifetimeMode !== 'normal' && (router.pathname === '/dealmirror' || router.pathname === '/dealfuel') ? (
                 <>
                   <span className="text-primary">
-                    {formatText(textContent.title.blueText, {
+                    {formatText(title.blueText, {
                       percent: percent ?? '70',
                     })}
                   </span>{' '}
                   <br />
                 </>
               ) : undefined}
-              <span>{textContent.title.normalText}</span>
+              <span>{title.normalText}</span>
             </p>
             <p className="pt-4 text-xl font-normal">{textContent.description}</p>
           </div>

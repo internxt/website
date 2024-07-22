@@ -49,6 +49,7 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
       <PaymentSection
         textContent={langJson.PaymentSection}
         lang={'en'}
+        percent="80"
         lifetimeMode="redeem"
         showPriceBefore
         discount={0.2}
