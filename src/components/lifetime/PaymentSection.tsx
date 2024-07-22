@@ -67,7 +67,7 @@ const PaymentSection = ({
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p className="w-full text-5xl font-semibold leading-tight">
-              {lifetimeMode !== 'normal' && (router.pathname === '/dealmirror' || router.pathname === '/dealfuel') ? (
+              {lifetimeMode !== 'normal' || router.pathname === '/dealmirror' || router.pathname === '/dealfuel' ? (
                 <>
                   <span className="text-primary">
                     {formatText(title.blueText, {
