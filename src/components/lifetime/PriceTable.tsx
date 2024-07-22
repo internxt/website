@@ -12,6 +12,7 @@ interface PriceTableProps {
   discount?: number;
   couponCode?: CouponType;
   lifetimeMode?: LifetimeMode;
+  showPriceBefore?: boolean;
   currencySpecified?: string;
   onButtonClicked?: () => void;
 }
@@ -33,6 +34,7 @@ const PriceTable = ({
   lang,
   couponCode,
   discount,
+  showPriceBefore,
   lifetimeMode,
   currencySpecified,
   onButtonClicked,
@@ -78,6 +80,12 @@ const PriceTable = ({
 
       case 'custom-disc':
         return DISC_LIFETIME_PRICES[currencyValue][storage];
+      case 'redeem':
+        return discount
+          ? Number(price * discount)
+              .toFixed(2)
+              .replace(/\.00$/, '')
+          : price.split('.')[0];
       default:
         return price.split('.')[0];
     }
@@ -138,9 +146,7 @@ const PriceTable = ({
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
                       popular={lifetimeMode === 'normal' ? product.storage === '10TB' : product.storage === '5TB'}
-                      priceBefore={
-                        lifetimeMode !== 'normal' && lifetimeMode !== 'redeem' ? product.price.split('.')[0] : undefined
-                      }
+                      priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
                       coupon={couponCodeFiltered(product.storage)}

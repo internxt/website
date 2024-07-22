@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
@@ -19,19 +19,6 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
   const year = moment().format('YYYY');
 
   const [openDialog, setOpenDialog] = useState(false);
-
-  useEffect(() => {
-    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('planButton2TB');
-    const TB5Button = document.getElementById('planButton5TB');
-    const TB10Button = document.getElementById('planButton10TB');
-    [TB2Button, TB5Button, TB10Button].forEach((button) =>
-      button?.addEventListener('click', () => {
-        console.log('CLICKED');
-        setOpenDialog(true);
-      }),
-    );
-  }, []);
 
   const onButtonClicked = () => {
     setOpenDialog(true);

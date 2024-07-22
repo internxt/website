@@ -10,13 +10,11 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import moment from 'moment';
 import HeroSection from '@/components/lifetime/HeroSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const year = moment().format('YYYY');
 
   const [openDialog, setOpenDialog] = useState(false);
 
@@ -52,6 +50,8 @@ const Techcult = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang
         textContent={langJson.PaymentSection}
         lang={'en'}
         lifetimeMode="redeem"
+        showPriceBefore
+        discount={0.2}
         onButtonClicked={onButtonClicked}
       />
 

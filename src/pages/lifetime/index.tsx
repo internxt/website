@@ -34,6 +34,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
         discount={discount}
         lang={lang}
         percent={'70%'}
+        showPriceBefore
         lifetimeMode="custom-disc"
       />
 
