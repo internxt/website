@@ -48,6 +48,10 @@ const PaymentSection = ({
 
   const title =
     router.pathname === '/dealmirror' || router.pathname === '/dealfuel' ? textContent.title2 : textContent.title;
+  const description =
+    router.pathname === '/dealmirror' || router.pathname === '/dealfuel'
+      ? textContent.description2
+      : textContent.description;
 
   return (
     <section id="payment" className="overflow-hidden">
@@ -75,7 +79,7 @@ const PaymentSection = ({
               ) : undefined}
               <span>{title.normalText}</span>
             </p>
-            <p className="pt-4 text-xl font-normal">{textContent.description}</p>
+            <p className="pt-4 text-xl font-normal">{description}</p>
           </div>
         </div>
 
