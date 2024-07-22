@@ -8,6 +8,7 @@ import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
+import { FooterText } from '@/assets/types/layout/types';
 
 export default function Footer({
   textContent,
@@ -15,7 +16,7 @@ export default function Footer({
   hideNewsletter,
   darkMode,
 }: Readonly<{
-  textContent: any;
+  textContent: FooterText;
   lang: string;
   hideNewsletter?: boolean;
   darkMode?: boolean;

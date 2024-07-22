@@ -10,9 +10,10 @@ import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/
 import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
+import { NavigationBarText } from '@/assets/types/layout/types';
 
 export interface NavbarProps {
-  textContent: any;
+  textContent: NavigationBarText;
   lang: string;
   cta: string[];
   darkMode?: boolean;

@@ -41,6 +41,7 @@ const PaymentSection = ({
       text: textContent.features.anonymousAccount,
     },
   ];
+
   return (
     <section id="payment" className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 py-10 text-center md:flex-row md:space-x-32 md:space-y-0">

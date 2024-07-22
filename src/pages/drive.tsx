@@ -16,14 +16,41 @@ import { downloadDriveLinks } from '@/lib/get-download-url';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { CliCard } from '@/components/drive/CliCard';
+import { DriveText } from '@/assets/types/drive';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
-const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLang, lang }) => {
+interface DriveProps {
+  textContent: DriveText;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
+  lang: string;
+  download: {
+    Android: string;
+    iPad: string;
+    iPhone: string;
+    Windows: any;
+    MacOS: any;
+    UNIX: any;
+    Linux: any;
+    all: string;
+  };
+}
+
+const Drive = ({
+  metatagsDescriptions,
+  download,
+  textContent,
+  navbarLang,
+  footerLang,
+  lang,
+}: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_faq(langJson.FaqSection.faq)}
+        {sm_faq(textContent.FaqSection.faq)}
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -35,23 +62,23 @@ const Drive = ({ metatagsDescriptions, download, langJson, navbarLang, footerLan
 
         <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="drive" />
 
-        <HeroSection textContent={langJson.HeroSection} lang={lang} download={download} />
+        <HeroSection textContent={textContent.HeroSection} lang={lang} download={download} />
 
         <div className="flex items-center justify-center px-2 pb-20">
-          <CliCard textContent={langJson.CliCard} />
+          <CliCard textContent={textContent.CliCard} />
         </div>
 
-        <FeaturesSection textContent={langJson.FeaturesSection} lang={lang} download={download} />
+        <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} download={download} />
 
         <FileParallaxSection />
 
-        <WhatWeDoSection textContent={langJson.FeaturesSection} lang={lang} />
+        <WhatWeDoSection textContent={textContent.FeaturesSection} lang={lang} />
 
-        <FeatureSection textContent={langJson.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-        <FAQSection textContent={langJson.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection textContent={textContent.CtaSection} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
@@ -64,7 +91,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/drive.json`);
+  const textContent = require(`@/assets/lang/${lang}/drive.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -75,7 +102,7 @@ export async function getServerSideProps(ctx) {
       lang,
       download,
       metatagsDescriptions,
-      langJson,
+      textContent,
       navbarLang,
       footerLang,
     },
