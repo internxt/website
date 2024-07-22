@@ -11,6 +11,7 @@ interface PaymentSectionProps {
   textContent: any;
   discount?: number;
   couponCode?: CouponType;
+  showPriceBefore?: boolean;
   percent?: string;
   lifetimeMode?: LifetimeMode;
   currencySpecified?: string;
@@ -23,6 +24,7 @@ const PaymentSection = ({
   couponCode,
   discount,
   percent,
+  showPriceBefore,
   lifetimeMode,
   currencySpecified,
   onButtonClicked,
@@ -75,6 +77,7 @@ const PaymentSection = ({
           lang={lang}
           discount={discount}
           couponCode={couponCode}
+          showPriceBefore={showPriceBefore}
           lifetimeMode={lifetimeMode}
           currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}

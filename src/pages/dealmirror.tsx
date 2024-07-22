@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
@@ -11,25 +11,19 @@ import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const year = moment().format('YYYY');
   const [openDialog, setOpenDialog] = useState(false);
 
-  useEffect(() => {
-    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('planButton2TB');
-    const TB5Button = document.getElementById('planButton5TB');
-    const TB10Button = document.getElementById('planButton10TB');
-    [TB2Button, TB5Button, TB10Button].forEach((button) =>
-      button?.addEventListener('click', () => {
-        setOpenDialog(true);
-      }),
-    );
-  }, []);
+  const onCardButtonClicked = () => {
+    setOpenDialog(true);
+  };
+
+  const onCloseSignUpBanner = () => {
+    setOpenDialog(false);
+  };
 
   return (
     <Layout
@@ -45,7 +39,7 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
             className={`absolute top-1/2 left-1/2
         z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
+            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={onCloseSignUpBanner} />
             <SignUp textContent={langJson.Auth} provider="DEALMIRROR" />
           </div>
         </div>
@@ -55,7 +49,14 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
 
       <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="redeem" />
+      <PaymentSection
+        textContent={langJson.PaymentSection}
+        lang={lang}
+        lifetimeMode="redeem"
+        showPriceBefore
+        onButtonClicked={onCardButtonClicked}
+        discount={0.2}
+      />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
