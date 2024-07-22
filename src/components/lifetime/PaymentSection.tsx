@@ -46,8 +46,6 @@ const PaymentSection = ({
     },
   ];
 
-  console.log(router.pathname);
-
   const title =
     router.pathname === '/dealmirror' || router.pathname === '/dealfuel' ? textContent.title2 : textContent.title;
 
