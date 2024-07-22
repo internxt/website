@@ -182,6 +182,11 @@ export default function Footer({
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
+                    {lang === 'en' ? (
+                      <Link href="/business" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.business}
+                      </Link>
+                    ) : undefined}
                   </div>
                 </div>
               </div>
@@ -775,6 +780,11 @@ export default function Footer({
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>
+                      {lang === 'en' ? (
+                        <Link href="/business" locale={lang} passHref className="hover:text-primary">
+                          {textContent.FooterSection.sections.products.business}
+                        </Link>
+                      ) : undefined}
                     </Disclosure.Panel>
                   </Transition>
                 </>
