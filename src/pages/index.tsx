@@ -77,7 +77,6 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
           individuals: 0.2,
         }}
         lang={lang}
-        hideBusinessCards={true}
         products={products}
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansTabSelected}
