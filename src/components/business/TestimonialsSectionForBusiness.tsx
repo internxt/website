@@ -83,7 +83,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
           {textContent.testimonials.map((testimonial) => (
             <div className="mx-auto flex w-full shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8">
-              <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
+              <div className="flex h-full max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
                 <div className="flex flex-col gap-3">
                   <FiveStars totalStars={5} />
                   <p className="text-xl text-gray-80">{testimonial.review}</p>

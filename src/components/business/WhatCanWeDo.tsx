@@ -11,33 +11,6 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const features = [
-    {
-      id: textContent.cards[0].imagePathname,
-      image: getImage(`/images/business/features/${textContent.cards[0].imagePathname}.webp`),
-      selectorTab: textContent.cards[0].tab,
-      description: textContent.cards[0].description,
-    },
-    {
-      id: textContent.cards[1].imagePathname,
-      image: getImage(`/images/business/features/${textContent.cards[1].imagePathname}.webp`),
-      selectorTab: textContent.cards[1].tab,
-      description: textContent.cards[1].description,
-    },
-    {
-      id: textContent.cards[2].imagePathname,
-      image: getImage(`/images/business/features/${textContent.cards[2].imagePathname}.webp`),
-      selectorTab: textContent.cards[2].tab,
-      description: textContent.cards[2].description,
-    },
-    {
-      id: textContent.cards[3].imagePathname,
-      image: getImage(`/images/business/features/${textContent.cards[3].imagePathname}.webp`),
-      selectorTab: textContent.cards[3].tab,
-      description: textContent.cards[3].description,
-    },
-  ];
-
   const onTabSelectorButtonClicked = (tabId: number) => {
     if (selectedTab !== tabId) {
       setIsTransitioning(true);
@@ -55,18 +28,18 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
       }}
     >
-      <div className="flex flex-col items-center justify-center gap-20">
+      <div className="flex flex-col items-center justify-center gap-10 xl:gap-20">
         <div className="flex max-w-[774px] flex-col gap-4 text-center text-white">
           <h2 className="text-5xl font-semibold">{textContent.title}</h2>
           <h3 className="text-xl">{textContent.description}</h3>
         </div>
 
-        <div className="flex h-max flex-row gap-4 border-b-4 border-b-white">
-          {features.map((feat, index) => (
+        <div className="hidden h-max flex-row gap-4 border-b-4 border-b-white xl:flex">
+          {textContent.cards.map((feat, index) => (
             <button
               className={`flex ${
                 selectedTab === index ? 'border-b-4 border-primary' : undefined
-              } w-full max-w-[300px] translate-y-1 flex-col items-center justify-center p-5 text-center`}
+              } h-full max-h-32 w-full max-w-[300px] translate-y-1 flex-col items-center justify-center p-5 text-center`}
               onClick={() => {
                 onTabSelectorButtonClicked(index);
               }}
@@ -84,22 +57,49 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           leave="transition-opacity duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="flex flex-col gap-20"
+          className="hidden flex-col gap-20 xl:flex"
         >
           <div className="flex w-full max-w-[890px] flex-col">
-            <p className="text-center text-xl text-white">{features[selectedTab].description}</p>
+            <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
           </div>
 
           <div className="flex flex-col">
             <Image
-              src={features[selectedTab].image}
-              alt={features[selectedTab].id}
+              src={getImage(`/images/business/features/${textContent.cards[selectedTab].imagePathname}.webp`)}
+              alt={textContent.cards[selectedTab].imagePathname}
               width={896}
               height={850}
               draggable={false}
             />
           </div>
         </Transition>
+
+        {/*Mobile/Tablet View*/}
+        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
+          {textContent.cards.map((testimonial) => (
+            <div className="mx-auto flex w-full shrink-0 snap-center flex-col justify-start rounded-3xl p-8">
+              <div
+                className="flex h-full max-w-[375px] flex-col items-center justify-between gap-5"
+                key={testimonial.review}
+              >
+                <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
+                <div className="flex w-full max-w-[890px] flex-col">
+                  <p className="text-center text-xl text-white">{testimonial.description}</p>
+                </div>
+
+                <div className="flex flex-col">
+                  <Image
+                    src={getImage(`/images/business/features/${testimonial.imagePathname}.webp`)}
+                    alt={testimonial.imagePathname}
+                    width={896}
+                    height={850}
+                    draggable={false}
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

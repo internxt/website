@@ -34,22 +34,22 @@
     "cards": [
       {
         "imagePathname": "internxt_b2b_feature_1",
-        "tab": "Manage your organization",
+        "selectorTab": "Manage your organization",
         "description": "Internxt empowers businesses with features to manage members of your organization, customize workspaces, and manage your account billing and payments.  Easily switch between your Internxt business and personal accounts to optimize productivity and file organization."
       },
       {
         "imagePathname": "internxt_b2b_feature_2",
-        "tab": "Secure file sharing between departments",
+        "selectorTab": "Secure file sharing between departments",
         "description": "Secure cloud storage includes secure file-sharing features within different departments to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security."
       },
       {
         "imagePathname": "internxt_b2b_feature_3",
-        "tab": "Session management",
+        "selectorTab": "Session management",
         "description": "Internxt cloud storage offers advanced session management, providing real-time login notifications and detailed remote session monitoring (client, OS, IP, location, last active time). This high-level security allows the account manager to detect unauthorized access, manage sessions efficiently, and protect sensitive data."
       },
       {
         "imagePathname": "internxt_b2b_feature_4",
-        "tab": "Flexible storage allocation",
+        "selectorTab": "Flexible storage allocation",
         "description": "Internxt gives your team full flexible storage allocation to upgrade your storage based on your needs. With our plans, you can add users, allocate storage based on needs, and increase capacity as necessary, ensuring cost efficiency, scalability, and optimal resource utilization."
       }
     ]
