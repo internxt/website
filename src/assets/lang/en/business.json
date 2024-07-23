@@ -9,16 +9,20 @@
   },
   "SecureYourCompany": {
     "title": "Secure your company’s future with Internxt encrypted cloud storage",
-    "desription": "Data breaches can devastate businesses, causing severe financial losses, operational disruptions, and damage your business's reputation.",
+    "description": "Data breaches can devastate businesses, causing severe financial losses, operational disruptions, and damage your business's reputation.",
     "cards": [
-      "Average cost of a data breach",
-      "AT&T customer records leaked in 2024",
-      "Average time to identify a data breach",
-      "Of ransomware attacks target businesses"
-    ]
+      {
+        "title": "$4.45 m",
+        "description": "Average cost of a data breach"
+      },
+      { "title": "73 m", "description": "AT&T customer records leaked in 2024" },
+      { "title": "318 days", "description": "Average time to identify a data breach" },
+      { "title": "24%", "description": "Of ransomware attacks target businesses" }
+    ],
+    "footerText": "*Data collected from IBM Security Cost of a Data Breach Report 2023."
   },
   "InternxtProtectsYourBusiness": {
-    "title": "",
+    "title": "Internxt protects your business from data breaches",
     "description": [
       "Other providers hold the decryption keys to your data and can theoretically view your files, exposing your business to data breaches, hacks, or leaks.",
       "We offer true data privacy  — we don't have access to your business information, your data is fully encrypted and accessible only to you."
@@ -47,8 +51,10 @@
     ]
   },
   "PriceTable": {
-    "title": "Business plans",
-    "businessDescription": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "planTitles": {
+      "business": "Business plans"
+    },
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annually",

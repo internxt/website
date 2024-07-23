@@ -1,6 +1,11 @@
 import { BusinessHeroSection } from '@/components/business/HeroSection';
+import { InternxtProtectsYourBusiness } from '@/components/business/InternxtProtectsYourBusiness';
+import { SecureYourCompany } from '@/components/business/SecureYourCompany';
+import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
 
 interface BusinessProps {
@@ -19,6 +24,7 @@ export const BusinessPage = ({
   lang,
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
+  const { products, loadingCards } = usePricing();
 
   const locale = lang as string;
 
@@ -27,6 +33,23 @@ export const BusinessPage = ({
       <Navbar cta={['default']} lang={locale} textContent={navbarText} />
 
       <BusinessHeroSection textContent={textContent.HeroSection} />
+
+      <SecureYourCompany textContent={textContent.SecureYourCompany} />
+
+      <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
+
+      <PricingSectionWrapper
+        loadingCards={loadingCards}
+        lang={locale}
+        products={products}
+        hideFreeCard
+        startFromPlan="Business"
+        hidePlanSelectorComponent={true}
+        textContent={textContent.PriceTable}
+        onCheckoutButtonClicked={() => {}}
+      />
+
+      <Footer textContent={footerText} lang={locale} />
     </Layout>
   );
 };

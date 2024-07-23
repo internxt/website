@@ -1,6 +1,6 @@
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
 import Header from '../Header';
-import { PlanSelector, SwitchButtonOptions } from './components/PlanSwitch';
+import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -19,6 +19,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   hideBusinessSelector?: boolean;
+  hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
   businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
@@ -46,6 +47,7 @@ export const PricingSection = ({
   hideFreeCard,
   hidePlanSelectorAndSwitch,
   hideBusinessCards,
+  hidePlanSelectorComponent,
   hideBusinessSelector,
   lang,
   backgroundColorComponent = 'bg-white',
@@ -125,6 +127,7 @@ export const PricingSection = ({
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
+            hidePlanSelectorComponent={hidePlanSelectorComponent}
             onPlanTypeChange={onPlanTypeChange}
           />
 

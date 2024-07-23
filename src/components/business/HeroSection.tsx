@@ -11,13 +11,13 @@ interface BusinessHeroSectionProps {
 export const BusinessHeroSection = ({ textContent }: BusinessHeroSectionProps): JSX.Element => {
   return (
     <section
-      className="overflow-hidden px-5 pt-20 pb-10"
+      className="h-full overflow-hidden px-5 pt-20 pb-10"
       style={{
         background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
       }}
     >
       <HeroSectionSafeArea>
-        <div className="flex max-w-[535px] flex-col gap-8 text-white">
+        <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
           <Header>{textContent.title}</Header>
           <div className="flex flex-col gap-4">
             <p className="text-xl">{textContent.description[0]}</p>
@@ -25,7 +25,9 @@ export const BusinessHeroSection = ({ textContent }: BusinessHeroSectionProps): 
           </div>
           <Button text={textContent.cta} onClick={() => {}} />
         </div>
-        <div className="flex">
+
+        {/* !TODO: Adjust the images height  */}
+        <div className="flex w-full justify-end">
           <Image
             draggable={false}
             src={getImage('/images/business/Internxt_b2b_business_solution.webp')}
