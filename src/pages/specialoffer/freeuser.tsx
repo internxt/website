@@ -61,6 +61,7 @@ const FreeUserPage = ({
         decimalDiscount={{
           individuals: 0.25,
         }}
+        hideBusinessCards={true}
         lang={lang}
         products={products}
         loadingCards={loadingCards}
