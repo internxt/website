@@ -4,6 +4,7 @@ import { SecureYourCompany } from '@/components/business/SecureYourCompany';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { stripeService } from '@/components/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
@@ -24,9 +25,13 @@ export const BusinessPage = ({
   lang,
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
-  const { products, loadingCards } = usePricing();
+  const { products, loadingCards, currencyValue } = usePricing();
 
   const locale = lang as string;
+
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime);
+  };
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -46,7 +51,7 @@ export const BusinessPage = ({
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
-        onCheckoutButtonClicked={() => {}}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
       />
 
       <Footer textContent={footerText} lang={locale} />

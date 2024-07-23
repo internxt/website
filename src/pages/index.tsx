@@ -39,7 +39,7 @@ const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang 
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   const onBusinessPlansTabSelected = (isBusiness: boolean) => {
