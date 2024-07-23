@@ -123,13 +123,14 @@ export const PricingSection = ({
         </div>
         <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          <PlanSelector
-            textContent={textContent}
-            activeSwitchPlan={activeSwitchPlan}
-            hideBusinessSelector={hideBusinessSelector}
-            hidePlanSelectorComponent={hidePlanSelectorComponent}
-            onPlanTypeChange={onPlanTypeChange}
-          />
+          {hidePlanSelectorComponent ? undefined : (
+            <PlanSelector
+              textContent={textContent}
+              activeSwitchPlan={activeSwitchPlan}
+              hideBusinessSelector={hideBusinessSelector}
+              onPlanTypeChange={onPlanTypeChange}
+            />
+          )}
 
           {/* Switch buttons for Individual plans (Monthly | Annually) */}
           <SwitchComponent

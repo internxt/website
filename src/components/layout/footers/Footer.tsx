@@ -179,14 +179,17 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
+                    {lang === 'en' ? (
+                      <Link href="/business" locale={lang} passHref className="flex items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.business}
+                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
+                      </Link>
+                    ) : undefined}
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
-                    {lang === 'en' ? (
-                      <Link href="/business" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.business}
-                      </Link>
-                    ) : undefined}
                   </div>
                 </div>
               </div>
@@ -777,14 +780,14 @@ export default function Footer({
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}
                       </Link>
-                      <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.pricing}
-                      </Link>
                       {lang === 'en' ? (
                         <Link href="/business" locale={lang} passHref className="hover:text-primary">
                           {textContent.FooterSection.sections.products.business}
                         </Link>
                       ) : undefined}
+                      <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.pricing}
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>

@@ -33,18 +33,22 @@
     "description": "Optimize your organization's file management, security, and privacy with our secure cloud storage for business.",
     "cards": [
       {
+        "imagePathname": "internxt_b2b_feature_1",
         "tab": "Manage your organization",
         "description": "Internxt empowers businesses with features to manage members of your organization, customize workspaces, and manage your account billing and payments.  Easily switch between your Internxt business and personal accounts to optimize productivity and file organization."
       },
       {
+        "imagePathname": "internxt_b2b_feature_2",
         "tab": "Secure file sharing between departments",
         "description": "Secure cloud storage includes secure file-sharing features within different departments to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security."
       },
       {
+        "imagePathname": "internxt_b2b_feature_3",
         "tab": "Session management",
         "description": "Internxt cloud storage offers advanced session management, providing real-time login notifications and detailed remote session monitoring (client, OS, IP, location, last active time). This high-level security allows the account manager to detect unauthorized access, manage sessions efficiently, and protect sensitive data."
       },
       {
+        "imagePathname": "internxt_b2b_feature_4",
         "tab": "Flexible storage allocation",
         "description": "Internxt gives your team full flexible storage allocation to upgrade your storage based on your needs. With our plans, you can add users, allocate storage based on needs, and increase capacity as necessary, ensuring cost efficiency, scalability, and optimal resource utilization."
       }
@@ -103,26 +107,32 @@
     "title": "What experts are saying about us",
     "testimonials": [
       {
+        "imageBrandName": "techradar",
         "brand": "Techradar",
         "review": "Internxt is an excellent cloud storage service due to its affordable plans and intuitive interface. It excels in security measures and commitment to privacy, making it a top choice for business users prioritizing security."
       },
       {
+        "imageBrandName": "PCWorld",
         "brand": "PCWorld",
         "review": "Internxt’s intuitively blended web access, file sync, and true backup services are impressive. This online storage and backup service is easy, covers all bases, and the lifetime plans are a steal."
       },
       {
+        "imageBrandName": "cloudwards",
         "brand": "Cloudwards",
         "review": "Internxt is known as a secure cloud storage solution that prioritizes user privacy. If privacy and security are your highest concerns with cloud storage, it’s definitely worth considering Internxt."
       },
       {
+        "imageBrandName": "bitcatcha",
         "brand": "Bitcatcha",
         "review": "Internxt goes above and beyond in protecting you and gives you ownership of your data, so they’re excellent for businesses. Recommended for anyone who values privacy."
       },
       {
+        "imageBrandName": "ffstoppers",
         "brand": "Fstoppers",
         "review": "Why choose Internxt? I would say the streamlined and simple nature of how it works. It's simply just a no-nonsense 256-bit encrypted cloud storage option that anyone can use."
       },
       {
+        "imageBrandName": "guru99",
         "brand": "Guru99",
         "review": "Internxt Drive is the best secure cloud storage service for privacy and encryption. It enables you and your team to store different types of files with total security."
       }

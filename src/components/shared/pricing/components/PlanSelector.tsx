@@ -14,13 +14,9 @@ export const PlanSelector = ({
   textContent,
   activeSwitchPlan,
   hideBusinessSelector,
-  hidePlanSelectorComponent,
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => (
-  <div
-    id="billingButtons"
-    className={`${hidePlanSelectorComponent ? 'hidden' : 'flex'} flex-row rounded-lg bg-cool-gray-10 p-0.5`}
-  >
+  <div id="billingButtons" className={`flex flex-row rounded-lg bg-cool-gray-10 p-0.5`}>
     <button
       type="button"
       onClick={() => {

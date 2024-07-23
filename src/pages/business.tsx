@@ -1,11 +1,16 @@
+import { EncryptedCloudSolution } from '@/components/business/EncryptedCloudSolution';
 import { BusinessHeroSection } from '@/components/business/HeroSection';
 import { InternxtProtectsYourBusiness } from '@/components/business/InternxtProtectsYourBusiness';
 import { SecureYourCompany } from '@/components/business/SecureYourCompany';
+import { TestimonialsSectionForBusiness } from '@/components/business/TestimonialsSectionForBusiness';
+import { WhatCanWeDo } from '@/components/business/WhatCanWeDo';
+import { WhyChooseInternxtForBusiness } from '@/components/business/WhyChooseInternxt';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/components/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
 
@@ -43,6 +48,8 @@ export const BusinessPage = ({
 
       <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
 
+      <WhatCanWeDo textContent={textContent.WhatCanWeDo} />
+
       <PricingSectionWrapper
         loadingCards={loadingCards}
         lang={locale}
@@ -53,6 +60,14 @@ export const BusinessPage = ({
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
       />
+
+      <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+
+      <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
+
+      <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
+
+      <FAQSection textContent={textContent.FaqSection} />
 
       <Footer textContent={footerText} lang={locale} />
     </Layout>

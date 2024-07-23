@@ -19,7 +19,7 @@ export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.
         ))}
       </div>
 
-      <p className="text-gray-60">{textContent.footerText}</p>
+      <p className="text-center text-gray-60">{textContent.footerText}</p>
     </div>
   </section>
 );
