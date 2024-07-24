@@ -21,7 +21,8 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
   const [openDialog, setOpenDialog] = useState(false);
 
   const onButtonClicked = () => {
-    setOpenDialog(true);
+    // setOpenDialog(true);
+    // NO OP
   };
 
   return (
