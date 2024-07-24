@@ -9,6 +9,10 @@ interface BusinessHeroSectionProps {
 }
 
 export const BusinessHeroSection = ({ textContent }: BusinessHeroSectionProps): JSX.Element => {
+  const onButtonClick = () => {
+    window.location.href = '#priceTable';
+  };
+
   return (
     <section
       className="h-full overflow-hidden px-5 pt-20 pb-10"
@@ -23,7 +27,7 @@ export const BusinessHeroSection = ({ textContent }: BusinessHeroSectionProps): 
             <p className="text-xl">{textContent.description[0]}</p>
             <p className="text-xl font-semibold">{textContent.description[1]}</p>
           </div>
-          <Button text={textContent.cta} onClick={() => {}} />
+          <Button text={textContent.cta} onClick={onButtonClick} />
         </div>
 
         {/* !TODO: Adjust the images height  */}
