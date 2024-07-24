@@ -115,6 +115,7 @@ export enum CouponType {
   OnePlanCoupon = 'ONEPLAN_COUPON',
   AllPlansCoupon = 'ALL_PLANS_80',
   Lifetime83DiscountCoupon = 'LIFETIME_83_DISCOUNT_COUPON',
+  Protect82Coupon = 'PROTECT82_COUPON',
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';
