@@ -77,11 +77,8 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         {/*Mobile/Tablet View*/}
         <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
           {textContent.cards.map((testimonial) => (
-            <div className="mx-auto flex w-full shrink-0 snap-center flex-col justify-start rounded-3xl p-8">
-              <div
-                className="flex h-full max-w-[375px] flex-col items-center justify-between gap-5"
-                key={testimonial.review}
-              >
+            <div className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl p-8">
+              <div className="flex h-full flex-col items-center justify-between gap-5" key={testimonial.review}>
                 <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
                 <div className="flex w-full max-w-[890px] flex-col">
                   <p className="text-center text-xl text-white">{testimonial.description}</p>
