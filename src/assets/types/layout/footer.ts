@@ -69,6 +69,7 @@ export interface Products {
   webDAV: string;
   vpn: string;
   token: string;
+  business: string;
   pricing: string;
 }
 

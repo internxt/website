@@ -1,3 +1,5 @@
+import { BusinessText } from '@/assets/types/business';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { EncryptedCloudSolution } from '@/components/business/EncryptedCloudSolution';
 import { BusinessHeroSection } from '@/components/business/HeroSection';
 import { InternxtProtectsYourBusiness } from '@/components/business/InternxtProtectsYourBusiness';
@@ -15,10 +17,10 @@ import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
 
 interface BusinessProps {
-  metatagsDescriptions: Record<string, string>[];
-  navbarText: Record<string, any>;
-  textContent: Record<string, any>;
-  footerText: Record<string, any>;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarText: NavigationBarText;
+  textContent: BusinessText;
+  footerText: FooterText;
   lang: GetServerSidePropsContext['locale'];
 }
 

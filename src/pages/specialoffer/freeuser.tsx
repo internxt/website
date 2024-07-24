@@ -13,13 +13,15 @@ import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWe
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { GetServerSidePropsContext } from 'next';
 
 interface FreeUserPageProps {
-  lang: string;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
   textContent: Record<string, any>;
-  footerLang: Record<string, any>;
+  footerLang: FooterText;
 }
 
 const FreeUserPage = ({
@@ -30,6 +32,8 @@ const FreeUserPage = ({
   textContent,
 }: FreeUserPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
+
+  const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
     couponCode: CouponType.freeUserCoupon,
@@ -52,7 +56,7 @@ const FreeUserPage = ({
 
   return (
     <Layout title={metatags.title} description={metatags.description} segmentName={'Free User'}>
-      <Navbar textContent={navbarLang} cta={['default']} lang={lang} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} cta={['default']} lang={locale} fixed isLinksHidden />
 
       <HeroSectionForSpecialOffer textContent={textContent.HeroSection} />
 
@@ -62,7 +66,7 @@ const FreeUserPage = ({
           individuals: 0.25,
         }}
         hideBusinessCards={true}
-        lang={lang}
+        lang={locale}
         products={products}
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
@@ -82,7 +86,7 @@ const FreeUserPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
+      <MinimalFooter lang={locale} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
     </Layout>
   );
 };
