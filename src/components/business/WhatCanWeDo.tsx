@@ -34,12 +34,12 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           <h3 className="text-xl">{textContent.description}</h3>
         </div>
 
-        <div className="hidden h-max flex-row gap-4 border-b-4 border-b-white xl:flex">
+        <div className="hidden h-full max-h-32 flex-row gap-4 border-b-4 border-b-white xl:flex">
           {textContent.cards.map((feat, index) => (
             <button
               className={`flex ${
-                selectedTab === index ? 'border-b-4 border-primary' : undefined
-              } h-full max-h-32 w-full max-w-[300px] translate-y-1 flex-col items-center justify-center p-5 text-center`}
+                selectedTab === index ? 'border-primary' : 'border-transparent'
+              } w-full max-w-[300px] translate-y-1 flex-col items-center justify-center border-b-4 p-5 text-center`}
               onClick={() => {
                 onTabSelectorButtonClicked(index);
               }}
@@ -85,16 +85,6 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                 <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
                 <div className="flex w-full max-w-[890px] flex-col">
                   <p className="text-center text-xl text-white">{testimonial.description}</p>
-                </div>
-
-                <div className="flex flex-col">
-                  <Image
-                    src={getImage(`/images/business/features/${testimonial.imagePathname}.webp`)}
-                    alt={testimonial.imagePathname}
-                    width={896}
-                    height={850}
-                    draggable={false}
-                  />
                 </div>
               </div>
             </div>
