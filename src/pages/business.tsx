@@ -40,7 +40,7 @@ export const BusinessPage = ({
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
-      <Navbar cta={['default']} lang={locale} textContent={navbarText} />
+      <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
 
       <BusinessHeroSection textContent={textContent.HeroSection} />
 
