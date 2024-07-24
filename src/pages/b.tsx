@@ -1,3 +1,5 @@
+import { HomeText } from '@/assets/types/home';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import HeroSection from '@/components/home/HeroSection';
@@ -11,7 +13,15 @@ import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import cookies from '@/lib/cookies';
 import { useRouter } from 'next/router';
 
-const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+interface HomePageV2 {
+  lang: string;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: HomeText;
+  footerLang: FooterText;
+}
+
+const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomePageV2): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
 
@@ -27,24 +37,24 @@ const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLa
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={true} />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} isHomePageV2={true} />
 
       <ChooseStorageSizeSection
-        textContent={langJson.ChooseStorageSizeSection}
+        textContent={textContent.ChooseStorageSizeSection}
         onButtonClicked={onChooseStorageButtonClicked}
       />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+      <TestimonialsSection textContent={textContent.TestimonialsSection} />
 
       <div className={`${marqueeBgColor} py-10`}>
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
+      <FeatureSectionV2 textContent={textContent.FeatureSectionV2} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+      <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -55,7 +65,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/home.json`);
+  const textContent = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -65,7 +75,7 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       metatagsDescriptions,
-      langJson,
+      textContent,
       navbarLang,
       footerLang,
     },

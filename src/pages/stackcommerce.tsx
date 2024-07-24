@@ -11,12 +11,10 @@ import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const year = moment().format('YYYY');
 
   const [openDialog, setOpenDialog] = useState(false);
 

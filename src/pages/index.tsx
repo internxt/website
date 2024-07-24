@@ -17,16 +17,18 @@ import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/components/services/stripe.service';
 import { useState } from 'react';
+import { HomeText } from '@/assets/types/home';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
-interface HomeProps {
+interface HomePageProps {
   lang: string;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
-  textContent: Record<string, any>;
-  footerLang: Record<string, any>;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: HomeText;
+  footerLang: FooterText;
 }
 
-const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomePageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
 
   const navbarCta = 'default';
@@ -118,4 +120,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Home;
+export default HomePage;

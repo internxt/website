@@ -10,31 +10,53 @@ import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { VPNText } from '@/assets/types/vpn';
+import { ToolsSectionText } from '@/assets/types/components/toolsSection';
+import { BannersText } from '@/assets/types/components/banners';
 
-const VPN = ({ metatagsDescriptions, langJson, toolsContent, bannerJson, lang, navbarLang, footerLang }) => {
+interface VPNProps {
+  metatagsDescriptions: MetatagsDescription[];
+  textContent: VPNText;
+  toolsContent: ToolsSectionText;
+  bannerJson: BannersText;
+  lang: string;
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
+}
+
+const VPN = ({
+  metatagsDescriptions,
+  textContent,
+  toolsContent,
+  bannerJson,
+  lang,
+  navbarLang,
+  footerLang,
+}: VPNProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <EncryptedVPNSection textContent={langJson.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} />
+      <EncryptedVPNSection textContent={textContent.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} />
 
-      <SecureVPNSection textContent={langJson.SecureVPNSection} />
+      <SecureVPNSection textContent={textContent.SecureVPNSection} />
 
-      <HowItWorksSection textContent={langJson.HowItWorksSection} />
+      <HowItWorksSection textContent={textContent.HowItWorksSection} />
 
-      <WhenUseVPNSection textContent={langJson.WhenUseVPNSection} />
+      <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} />
 
       <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection textContent={langJson.CtaSection2} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -45,7 +67,7 @@ export async function getServerSideProps(ctx) {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/vpn.json`);
+  const textContent = require(`@/assets/lang/${lang}/vpn.json`);
   const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
@@ -55,7 +77,7 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       metatagsDescriptions,
-      langJson,
+      textContent,
       toolsContent,
       bannerJson,
       navbarLang,
