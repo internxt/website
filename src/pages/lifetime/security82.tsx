@@ -20,7 +20,7 @@ interface Protect82Props {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const Protect82 = ({
+const Security82 = ({
   lang,
   metatagsDescriptions,
   textContent,
@@ -36,7 +36,7 @@ const Protect82 = ({
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Protect82"
+      segmentName="Security82"
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
@@ -97,4 +97,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Protect82;
+export default Security82;
