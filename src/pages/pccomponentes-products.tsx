@@ -7,7 +7,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');

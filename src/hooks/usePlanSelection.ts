@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Interval } from '@/components/services/stripe.service';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSwitch';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
 export const usePlanSelection = (
   initialPlan: SwitchButtonOptions,
