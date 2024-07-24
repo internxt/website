@@ -44,6 +44,7 @@ const Protect82 = ({
 
       <HeroSection
         textContent={textContent.HeroSection}
+        percent="82"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />

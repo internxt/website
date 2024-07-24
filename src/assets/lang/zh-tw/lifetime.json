@@ -3,7 +3,7 @@
     "title": "獲取Internxt終身方案！",
     "description": "通過獨特的一次性付款，永久安全地存儲和分享您的回憶。",
     "maintenance": "",
-    "cta1": "75%折扣",
+    "cta1": "${{percent}}%折扣",
     "cta2": "瀏覽終身方案"
   },
   "PaymentSection": {
@@ -60,4 +60,3 @@
     "cta": "立即選擇方案"
   }
 }
-

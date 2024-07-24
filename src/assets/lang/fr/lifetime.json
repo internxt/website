@@ -3,7 +3,7 @@
     "title": "Obtenir un plan à vie d'Internxt",
     "description": "Sécurisez tous vos fichiers et souvenirs pour toujours avec un seul paiement unique.",
     "maintenance": "Frais d'entretien supplémentaires après 9 ans d'utilisation",
-    "cta1": "70% de réduction!",
+    "cta1": "${{percent}}% de réduction!",
     "cta2": "Voir les offres à vie",
     "guarantee": "Garantie de remboursement de 30 jours",
     "celebration": {
