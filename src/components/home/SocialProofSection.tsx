@@ -71,7 +71,7 @@ const SocialProofSection = ({ textContent, lang }) => (
               width={143}
               height={28}
               loading="lazy"
-              src={getImage('/logos/investors/startpage-logo.svg')}
+              src={getImage('/logos/investors/startpage.svg')}
               draggable="false"
               alt="angels capital logo"
             />
