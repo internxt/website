@@ -3,7 +3,7 @@
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
     "maintenance": "",
-    "cta1": "Get 70% off",
+    "cta1": "Get ${{percent}}% off",
     "cta2": "Browse lifetime deals",
     "celebration": {
       "canada": {

@@ -4,12 +4,14 @@ import Image from 'next/image';
 import Header from '../shared/Header';
 import Animation from '../home/components/Animation';
 import { getImage } from '@/lib/getImage';
+import { formatText } from '../utils/format-text';
 
 interface HeroSectionProps {
   textContent: any;
   hideTimer?: boolean;
   dt?: string;
   isCelebrationPage?: boolean;
+  percent?: string;
   previewImg?: string;
   bgImage?: string;
   imageMobile?: string;
@@ -21,9 +23,10 @@ const HeroSection = ({
   isCelebrationPage,
   previewImg,
   bgImage = getImage('/images/lifetime/celebration/normal-bg.png'),
+  percent,
   dt,
   imageMobile,
-}: HeroSectionProps) => {
+}: HeroSectionProps): JSX.Element => {
   return (
     <section
       className={`overflow-hidden bg-cover bg-no-repeat py-20`}
@@ -63,7 +66,11 @@ const HeroSection = ({
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
                 <p className="px-9 py-3 text-lg font-medium text-white">
-                  {hideTimer ? textContent.cta2 : textContent.cta1}
+                  {hideTimer
+                    ? textContent.cta2
+                    : formatText(textContent.cta1, {
+                        percent: percent ?? '70',
+                      })}
                 </p>
               </button>
             </div>
