@@ -1,5 +1,5 @@
 import { CouponType } from '@/lib/types';
-import { Fire, Star } from '@phosphor-icons/react';
+import { Coins, Fire } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
@@ -54,6 +54,8 @@ export default function PriceCard({
     month: 'monthly',
     year: 'annually',
   };
+
+  console.log(coupon);
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
@@ -169,12 +171,27 @@ export default function PriceCard({
         >
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
+        {isOffer ? (
+          <div className="flex flex-row gap-2">
+            <Coins size={24} />
+            <p className="font-bold text-green">
+              {contentText.save} {priceBefore && Number(priceBefore - price).toFixed(2)} €
+            </p>
+          </div>
+        ) : undefined}
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
-          <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
-            <p className={`} font-bold text-yellow`}>{contentText.productFeatures.starWarsFeatures.title}</p>
-            {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
+          <>
+            <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
+              <p className={`text-center text-white`}>
+                {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].normal}{' '}
+                <span className="font-bold">
+                  {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].bold}
+                </span>
+                {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].normal2}
+              </p>
+              {/* {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
               <div
                 className={`${
                   popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''
@@ -184,8 +201,9 @@ export default function PriceCard({
                 <Star size={16} weight="fill" className="text-yellow" />
                 <span className="text-white">{feature}</span>
               </div>
-            ))}
-          </div>
+            ))} */}
+            </div>
+          </>
         ) : null}
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature) => (

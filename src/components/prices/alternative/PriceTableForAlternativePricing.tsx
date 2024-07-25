@@ -1,6 +1,7 @@
-import { formatText } from '@/components/utils/format-text';
+import { ClockCounterClockwise, HandCoins, ShieldCheck } from '@phosphor-icons/react';
 import PriceCard from '../PriceCard';
-import Countdown from '@/components/components/Countdown';
+import CardSkeleton from '@/components/components/CardSkeleton';
+import { TransformedProduct } from '@/components/services/stripe.service';
 
 interface PriceTableForAlternativePricingProps {
   textContent: Record<string, any>;
@@ -11,6 +12,8 @@ interface PriceTableForAlternativePricingProps {
   currency: string;
   coupons: Record<string, any>;
   currencyValue: string;
+  handleOnPlanButtonClicked: (plan: string) => void;
+  availableStorage?: TransformedProduct[];
 }
 
 const CARD_LABEL = {
@@ -25,49 +28,91 @@ export const PriceTableForAlternativePricing = ({
   lang,
   discount,
   filteredProducts,
+  availableStorage,
   currency,
   coupons,
   currencyValue,
-}: PriceTableForAlternativePricingProps): JSX.Element => (
-  <section id={'priceTable'} className="overflow-hidden bg-gray-1 py-20 px-5">
-    <div className="flex flex-col items-center gap-10">
-      <p className="max-w-[850px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
-        {textContent.title.normal1}{' '}
-        <span className="text-primary">
-          {formatText(textContent.title.blue1, {
-            storage: selectedPlanStorage,
-          })}
-        </span>
-        {textContent.title.normal2}
-        <span className="text-primary">{textContent.title.blue2}</span>
-      </p>
+  handleOnPlanButtonClicked,
+}: PriceTableForAlternativePricingProps): JSX.Element => {
+  const iconsFeatures = [ShieldCheck, HandCoins, ClockCounterClockwise];
 
-      <div className="flex w-full max-w-[270px] flex-col items-center justify-center gap-2 rounded-lg bg-primary/7 px-7 py-1.5 md:px-10 lg:max-w-[400px] lg:flex-row lg:gap-4 lg:rounded-full">
-        <p className="whitespace-nowrap font-medium text-gray-100 lg:text-xl">{textContent.offerEnds}</p>
-        <div className="flex w-full max-w-[180px]">
-          <Countdown />
+  return (
+    <section id={'priceTable'} className="overflow-hidden py-20 px-5">
+      <div className="flex flex-col items-center gap-10">
+        <div className="flex flex-col items-center justify-center gap-10 pb-6">
+          <div className="flex flex-col items-center gap-4 text-center">
+            <p className="max-w-[900px] text-center text-4xl font-semibold text-gray-100 lg:text-6xl">
+              {textContent.title.normal1} <span className="text-primary">{textContent.title.blue2}</span>
+              {textContent.title.normal2}
+            </p>
+            <p className="max-w-[550px] text-xl text-gray-80">{textContent.description}</p>
+          </div>
+          <div className="flex flex-row flex-wrap items-center justify-center gap-32">
+            {iconsFeatures.map((Icon, index) => (
+              <div className="flex flex-row items-center gap-6">
+                <Icon size={40} className="text-primary" />
+                <p className="text-xl font-medium text-gray-100">{textContent.features[index]}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex w-screen border border-gray-10" />
+
+        <div className="flex flex-col items-center gap-4 pt-10">
+          <p className="text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
+          <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 p-0.5">
+            {/* <button
+              type="button"
+              onClick={() => {}}
+              className={`rounded-lg py-0.5 px-6 font-semibold ${
+                activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+              }`}
+            >
+              {textContent.billingFrequency.individual}
+            </button> */}
+            {availableStorage?.map((plan) => (
+              <button
+                type="button"
+                onClick={() => {
+                  handleOnPlanButtonClicked(plan.storage);
+                }}
+                className={`rounded-lg py-0.5 px-6 font-semibold ${
+                  plan.storage === selectedPlanStorage ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                }`}
+              >
+                {plan.storage}
+              </button>
+            ))}
+          </div>
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+            {filteredProducts
+              ? filteredProducts?.map((product: TransformedProduct) => (
+                  <PriceCard
+                    planType="individual"
+                    key={product.interval}
+                    storage={product.storage}
+                    price={(product.price * discount).toFixed(2) as unknown as number}
+                    label={CARD_LABEL[product.interval]}
+                    billingFrequency={product.interval}
+                    popular={
+                      product.storage !== '200GB' ? product.interval === 'lifetime' : product.interval === 'year'
+                    }
+                    cta={['checkout', product.priceId]}
+                    priceBefore={product.price}
+                    lang={lang}
+                    currency={currency}
+                    isOffer
+                    coupon={coupons.subscription}
+                    currencyValue={currencyValue}
+                  />
+                ))
+              : Array(3)
+                  .fill(0)
+                  .map(() => <CardSkeleton />)}
+          </div>
         </div>
       </div>
-
-      <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
-        {filteredProducts?.map((product: any) => (
-          <PriceCard
-            planType="individual"
-            key={product.interval}
-            storage={product.storage}
-            price={(product.price * discount).toFixed(2) as unknown as number}
-            label={CARD_LABEL[product.interval]}
-            billingFrequency={product.interval}
-            popular={product.interval === 'lifetime'}
-            cta={['checkout', product.priceId]}
-            priceBefore={product.price}
-            lang={lang}
-            currency={currency}
-            coupon={coupons.subscription}
-            currencyValue={currencyValue}
-          />
-        ))}
-      </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};

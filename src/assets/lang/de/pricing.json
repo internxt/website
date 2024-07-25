@@ -27,10 +27,12 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Erhalten Sie ",
-      "blue1": " ${{storage}} ",
-      "normal2": "sicheren Cloud-Speicher mit ",
-      "blue2": "80% Rabatt"
+      "blue2": "80% RABATT ",
+      "normal2": "auf den sichersten Cloud-Speicher"
     },
+    "howMuchStorage": "Wie viel Online-Speicherplatz benötigen Sie?",
+    "description": "Schützen Sie Ihre Arbeits- und persönlichen Dateien mit einem erschwinglichen, militärisch verschlüsselten Cloud-Speicher.",
+    "features": ["Der sicherste Cloud-Speicher", "Günstiger als Alternativen", "30-Tage Geld-zurück-Garantie"],
     "offerEnds": "Endet in:"
   },
   "tableSection": {

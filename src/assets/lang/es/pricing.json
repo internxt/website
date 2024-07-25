@@ -26,11 +26,17 @@
   },
   "PriceTableForAlternativePricing": {
     "title": {
-      "normal1": "Obtén ",
-      "blue1": " ${{storage}} ",
-      "normal2": "de almacenamiento seguro con un ",
-      "blue2": "75% de descuento"
+      "normal1": "Obtén un ",
+      "blue2": "80% de descuento",
+      "normal2": "de almacenamiento seguro"
     },
+    "description": "Protege tus archivos de trabajo y personales con almacenamiento en la nube cifrado de grado militar a un precio accesible.",
+    "features": [
+      "El almacenamiento en la nube más seguro",
+      "Más barato que las alternativas",
+      "Garantía de devolución de dinero de 30 días"
+    ],
+    "howMuchStorage": "¿Cuánto almacenamiento en línea necesitas?",
     "offerEnds": "Termina en:"
   },
   "tableSection": {

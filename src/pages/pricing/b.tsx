@@ -1,45 +1,29 @@
 import FileParallaxSection from '@/components/home/FileParallaxSection';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import Layout from '@/components/layout/Layout';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { PriceTableForAlternativePricing } from '@/components/prices/alternative/PriceTableForAlternativePricing';
-import { RangeSliderHeroSection } from '@/components/prices/alternative/RangeSliderHeroSection';
-import { stripeService } from '@/components/services/stripe.service';
+import BestStorageSection from '@/components/pricing/BestStorageSection';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { IconsSection } from '@/components/shared/sections/IconsSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
-import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 interface PricingAlternativeProps {
   metaDescriptions: Record<string, any>;
   navbarContent: Record<string, any>;
   textContent: Record<string, any>;
+  homeTextContent: Record<string, any>;
   footerContent: Record<string, any>;
   lang: GetServerSidePropsContext['locale'];
 }
-
-const PLAN_RANGE: { [key: string]: string | string[] } = {
-  '200GB': ['50GB', '100GB', '200GB'],
-  '2TB': ['500GB', '1TB', '2TB'],
-  '5TB': '4TB',
-  '10TB': ['8TB', '10TB'],
-};
-
-const getPlan = (valueLabel: string): string => {
-  const entry = Object.entries(PLAN_RANGE).find(([key, value]) => {
-    if (Array.isArray(value)) {
-      return value.includes(valueLabel);
-    }
-    return value === valueLabel;
-  });
-  return entry ? entry[0] : 'Unknown plan';
-};
 
 const getCardsContent = (textContent) => {
   const cardsData = [
@@ -98,6 +82,7 @@ const PricingAlternative = ({
   metaDescriptions,
   navbarContent,
   textContent,
+  homeTextContent,
   footerContent,
   lang,
 }: PricingAlternativeProps) => {
@@ -106,9 +91,8 @@ const PricingAlternative = ({
     couponCode: CouponType.AllPlansCoupon,
   });
 
-  const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>();
+  const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>('2TB');
   const [filteredProducts, setFilteredProducts] = useState<any[]>();
-  const [isButtonFixed, setIsButtonFixed] = useState(false);
 
   const buttonRef = useRef<HTMLDivElement>(null);
   const metatagsDescriptions = metaDescriptions.filter((meta) => meta.id === 'pricing')[0];
@@ -116,35 +100,27 @@ const PricingAlternative = ({
   const shouldShowAllComponents = !!selectedPlanStorage;
   const locale = lang as string;
 
-  const { cardsData, iconsSectionData } = getCardsContent(textContent);
+  const { cardsData } = getCardsContent(textContent);
 
-  const joinProducts = products?.individuals && Object.values(products?.individuals).flat();
+  const concatenatedProducts = products?.individuals && Object.values(products?.individuals).flat();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (buttonRef.current) {
-        const rect = buttonRef.current.getBoundingClientRect();
-        if (rect.bottom <= window.innerHeight - 96) {
-          setIsButtonFixed(true);
-        } else if (rect.top >= window.innerHeight - 96) {
-          setIsButtonFixed(false);
-        }
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (buttonRef.current) {
+  //       const rect = buttonRef.current.getBoundingClientRect();
+  //       if (rect.bottom <= window.innerHeight - 96) {
+  //         setIsButtonFixed(true);
+  //       } else if (rect.top >= window.innerHeight - 96) {
+  //         setIsButtonFixed(false);
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    if (selectedPlanStorage) {
-      const interval = setTimeout(() => (window.location.href = '#priceTable'), 200);
-
-      return () => clearInterval(interval);
-    }
-  }, [selectedPlanStorage]);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   useEffect(() => {
     stripeService.getLifetimeCoupons().then((coupons) => {
@@ -155,76 +131,84 @@ const PricingAlternative = ({
     });
 
     const productsFilteredByStorage =
-      joinProducts &&
-      joinProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
+      concatenatedProducts &&
+      concatenatedProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
 
     setFilteredProducts(productsFilteredByStorage);
   }, [selectedPlanStorage, products]);
 
-  const handleCalculateStorageButtonClick = (value: string) => {
-    const plan = getPlan(value);
-    setSelectedPlanStorage(plan);
+  const handleOnPlanButtonClicked = (value: string) => {
+    setSelectedPlanStorage(value);
   };
+
+  const availableStorage = products?.individuals[Interval.Month].filter((plan) => plan.storage);
 
   return (
     <Layout title={metatagsDescriptions.title} description={metatagsDescriptions.description}>
       <Navbar lang={locale} textContent={navbarContent} fixed cta={['default']} />
 
-      <RangeSliderHeroSection
-        textContent={textContent.HeroSectionAlternative}
-        onButtonClick={handleCalculateStorageButtonClick}
+      <div className="pt-10">
+        <PriceTableForAlternativePricing
+          textContent={textContent.PriceTableForAlternativePricing}
+          selectedPlanStorage={selectedPlanStorage}
+          coupons={{
+            subscription: coupon,
+          }}
+          lang={locale}
+          availableStorage={availableStorage}
+          handleOnPlanButtonClicked={handleOnPlanButtonClicked}
+          discount={0.2}
+          currency={currency}
+          currencyValue={currencyValue}
+          filteredProducts={filteredProducts}
+        />
+      </div>
+
+      <CtaSection textContent={textContent.CtaSection} url={SIGNUP_DRIVE_WEB} />
+
+      <InfoSection
+        textContent={textContent.InfoSection}
+        lang={locale}
+        cards={cardsData}
+        redirect="#priceTable"
+        // buttonComponent={
+        //   <>
+        //     <div ref={buttonRef} className=""></div>
+        //     <div
+        //       className={`${
+        //         isButtonFixed ? 'fixed bottom-0 z-50 w-full bg-white bg-opacity-90 py-5' : 'relative'
+        //       } flex justify-center`}
+        //     >
+        //       <div className="flex">
+        //         <Link
+        //           href={'#priceTable'}
+        //           className="flex w-max justify-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+        //         >
+        //           {textContent.InfoSection.cta}
+        //         </Link>
+        //       </div>
+        //     </div>
+        //   </>
+        // }
       />
 
-      {shouldShowAllComponents ? (
-        <>
-          <PriceTableForAlternativePricing
-            textContent={textContent.PriceTableForAlternativePricing}
-            selectedPlanStorage={selectedPlanStorage}
-            coupons={allCoupons}
-            lang={locale}
-            discount={0.2}
-            currency={currency}
-            currencyValue={currencyValue}
-            filteredProducts={filteredProducts}
-          />
+      {/* <IconsSection iconsAndTitlesData={iconsSectionData} /> */}
 
-          <InfoSection
-            textContent={textContent.InfoSection}
-            lang={locale}
-            cards={cardsData}
-            withoutCta
-            hideCtaArrow
-            redirect="#priceTable"
-            buttonComponent={
-              <>
-                <div ref={buttonRef} className=""></div>
-                <div
-                  className={`${
-                    isButtonFixed ? 'fixed bottom-0 z-50 w-full bg-white bg-opacity-90 py-5' : 'relative'
-                  } flex justify-center`}
-                >
-                  <div className="flex">
-                    <Link
-                      href={'#priceTable'}
-                      className="flex w-max justify-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
-                    >
-                      {textContent.InfoSection.cta}
-                    </Link>
-                  </div>
-                </div>
-              </>
-            }
-          />
+      <FirstWhatWeDoSection
+        textContent={homeTextContent.FirstWhatWeDoSection}
+        lang={lang as string}
+        backgroundColor="bg-gray-1"
+      />
 
-          <IconsSection iconsAndTitlesData={iconsSectionData} />
+      <div className="flex justify-center pt-20">
+        <BestStorageSection textContent={textContent.BestStorageSection} />
+      </div>
 
-          <FileParallaxSection />
+      <FileParallaxSection />
 
-          <FAQSection textContent={textContent.FaqSection} />
+      <FAQSection textContent={textContent.FaqSection} />
 
-          <CtaSection textContent={textContent.lastCtaSection} url="#priceTable" />
-        </>
-      ) : undefined}
+      <CtaSection textContent={textContent.lastCtaSection} url="#priceTable" />
 
       <Footer textContent={footerContent} lang={locale} />
     </Layout>
@@ -237,12 +221,14 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   const metaDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarContent = require(`@/assets/lang/${lang}/navbar.json`);
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);
+  const homeTextContent = require(`@/assets/lang/${lang}/home.json`);
   const footerContent = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {
       metaDescriptions,
       navbarContent,
+      homeTextContent,
       textContent,
       footerContent,
       lang,
