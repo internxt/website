@@ -30,7 +30,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/specialoffer/freeuser',
   '/affiliates/[filename]',
   '/cloudwards',
-  '/lifetime/protect82',
+  '/lifetime/security82',
 ];
 
 export const SNIGEL_BANNERS = {
