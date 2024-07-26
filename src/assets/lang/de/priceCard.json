@@ -43,7 +43,7 @@
     "semiannually": "/Halbmonatlich",
     "annually": "/Jährlich"
   },
-  "perUserSlash": "/Nutzer",
+  "perUserSlash": "Pro Benutzer/",
   "perUser": "Pro Nutzer",
   "users": "Nutzer",
   "freePlan": "Kostenlos",
@@ -148,7 +148,8 @@
         "1TB Speicher/Benutzer",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
-        "Bis zu 5 Teams erstellen",
+        "Ab 3 Benutzern und bis zu 10",
+        "DSGVO-konform",
         "Dateien bis zu 5GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
         "Premium-Kundensupport"
@@ -157,7 +158,8 @@
         "2TB Speicher/Benutzer",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
-        "Bis zu 25 Teams erstellen",
+        "Ab 3 Benutzern und bis zu 100",
+        "DSGVO-konform",
         "Dateien bis zu 20GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
         "Premium-Kundensupport"

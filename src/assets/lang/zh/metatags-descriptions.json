@@ -10,6 +10,11 @@
     "description": "使用 Internxt Drive 将您的文件和照片存储、共享和备份到云端。 开源和端到端的加密文件存储和在线备份。"
   },
   {
+    "id": "business",
+    "title": "Internxt — 私密加密的企业云存储",
+    "description": "使用 Internxt 的加密企业云存储防止数据丢失—注册以受益于行业领先的云数据保护。"
+  },
+  {
     "id": "what-google-knows",
     "title": "What Does Google Know About Me | Internxt",
     "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."

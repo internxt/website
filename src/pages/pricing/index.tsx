@@ -26,14 +26,15 @@ import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/components/services/stripe.service';
+import { PricingText } from '@/assets/types/pricing';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
 interface PricingProps {
-  metatagsDescriptions: Record<string, any>[];
-  navbarLang: Record<string, any>;
-  footerLang: Record<string, any>;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
   lang: string;
-  textContent: Record<string, any>;
-  homeComponentsLang: Record<string, any>;
+  textContent: PricingText;
 }
 
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
@@ -49,46 +50,46 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const individualCardsData = [
     {
       icon: ShieldCheck,
-      title: textContent.InfoSection.cards[0].title,
-      description: textContent.InfoSection.cards[0].description,
+      title: textContent.InfoSection.cards?.[0].title,
+      description: textContent.InfoSection.cards?.[0].description,
     },
     {
       icon: LockKey,
-      title: textContent.InfoSection.cards[1].title,
-      description: textContent.InfoSection.cards[1].description,
+      title: textContent.InfoSection.cards?.[1].title,
+      description: textContent.InfoSection.cards?.[1].description,
     },
     {
       icon: Eye,
-      title: textContent.InfoSection.cards[2].title,
-      description: textContent.InfoSection.cards[2].description,
+      title: textContent.InfoSection.cards?.[2].title,
+      description: textContent.InfoSection.cards?.[2].description,
     },
     {
       icon: Fingerprint,
-      title: textContent.InfoSection.cards[3].title,
-      description: textContent.InfoSection.cards[3].description,
+      title: textContent.InfoSection.cards?.[3].title,
+      description: textContent.InfoSection.cards?.[3].description,
     },
   ];
 
   const businessCardsData = [
     {
       icon: Sliders,
-      title: textContent.InfoSectionForBusiness.cards[0].title,
-      description: textContent.InfoSectionForBusiness.cards[0].description,
+      title: textContent.InfoSectionForBusiness.cards?.[0].title,
+      description: textContent.InfoSectionForBusiness.cards?.[0].description,
     },
     {
       icon: FolderSimpleLock,
-      title: textContent.InfoSectionForBusiness.cards[1].title,
-      description: textContent.InfoSectionForBusiness.cards[1].description,
+      title: textContent.InfoSectionForBusiness.cards?.[1].title,
+      description: textContent.InfoSectionForBusiness.cards?.[1].description,
     },
     {
       icon: ClockCounterClockwise,
-      title: textContent.InfoSectionForBusiness.cards[2].title,
-      description: textContent.InfoSectionForBusiness.cards[2].description,
+      title: textContent.InfoSectionForBusiness.cards?.[2].title,
+      description: textContent.InfoSectionForBusiness.cards?.[2].description,
     },
     {
       icon: UsersThree,
-      title: textContent.InfoSectionForBusiness.cards[3].title,
-      description: textContent.InfoSectionForBusiness.cards[3].description,
+      title: textContent.InfoSectionForBusiness.cards?.[3].title,
+      description: textContent.InfoSectionForBusiness.cards?.[3].description,
     },
   ];
 
@@ -102,7 +103,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   return (
@@ -124,7 +125,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
             individuals: 0.2,
           }}
           lang={lang}
-          hideBusinessCards={true}
           products={products}
           loadingCards={loadingCards}
           handlePageNameUpdate={setPageName}

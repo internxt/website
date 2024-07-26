@@ -5,6 +5,7 @@ export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 interface PlanSwitchProps {
   textContent: Record<string, any>;
   activeSwitchPlan: SwitchButtonOptions;
+  hidePlanSelectorComponent?: boolean;
   hideBusinessSelector?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
@@ -15,7 +16,7 @@ export const PlanSelector = ({
   hideBusinessSelector,
   onPlanTypeChange,
 }: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
+  <div id="billingButtons" className={`flex flex-row rounded-lg bg-cool-gray-10 p-0.5`}>
     <button
       type="button"
       onClick={() => {

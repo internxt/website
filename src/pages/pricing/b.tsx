@@ -1,3 +1,5 @@
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { PricingText } from '@/assets/types/pricing';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
 import Layout from '@/components/layout/Layout';
@@ -17,11 +19,11 @@ import { GetServerSidePropsContext } from 'next';
 import { useEffect, useState } from 'react';
 
 interface PricingAlternativeProps {
-  metaDescriptions: Record<string, any>;
-  navbarContent: Record<string, any>;
-  textContent: Record<string, any>;
+  metaDescriptions: MetatagsDescription[];
+  navbarContent: NavigationBarText;
+  textContent: PricingText;
   homeTextContent: Record<string, any>;
-  footerContent: Record<string, any>;
+  footerContent: FooterText;
   lang: GetServerSidePropsContext['locale'];
 }
 

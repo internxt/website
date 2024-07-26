@@ -1,3 +1,5 @@
+import { HomeText } from '@/assets/types/home';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import HeroSection from '@/components/home/HeroSection';
@@ -9,19 +11,22 @@ import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import cookies from '@/lib/cookies';
+import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
 
 interface HomeProps {
-  lang: string;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
-  textContent: Record<string, any>;
-  footerLang: Record<string, any>;
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: HomeText;
+  footerLang: FooterText;
 }
 
 const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
+
+  const locale = lang as string;
 
   const navbarCta = 'chooseStorage';
 
@@ -33,9 +38,9 @@ const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, foote
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={lang} isHomePageV2={true} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale} isHomePageV2={true} />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}
@@ -54,7 +59,7 @@ const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, foote
 
       <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

@@ -41,7 +41,7 @@
     "semiannually": "/semiannually",
     "annually": "/annually"
   },
-  "perUserSlash": "User/",
+  "perUserSlash": "Per user/",
   "perUser": "Per user",
   "users": "users",
   "freePlan": "Free",
@@ -150,7 +150,8 @@
         "1TB storage/user",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
-        "Create up to 5 teams",
+        "Starting at 3 users and up to 10",
+        "GDPR compliant",
         "Upload files of up to 5GB",
         "Manage account billing & payments",
         "Premium customer support"
@@ -159,7 +160,8 @@
         "2TB storage/user",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
-        "Create up to 25 teams",
+        "Starting at 3 users and up to 100",
+        "GDPR compliant",
         "Upload files of up to 20GB",
         "Manage account billing & payments",
         "Premium customer support"

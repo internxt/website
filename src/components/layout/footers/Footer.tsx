@@ -9,6 +9,7 @@ import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
 import { notificationService } from '@/components/Snackbar';
+import { FooterText } from '@/assets/types/layout/types';
 
 export default function Footer({
   textContent,
@@ -16,7 +17,7 @@ export default function Footer({
   hideNewsletter,
   darkMode,
 }: Readonly<{
-  textContent: any;
+  textContent: FooterText;
   lang: string;
   hideNewsletter?: boolean;
   darkMode?: boolean;
@@ -199,6 +200,14 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
+                    {lang === 'en' ? (
+                      <Link href="/business" locale={lang} passHref className="flex items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.business}
+                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                          {textContent.FooterSection.new}
+                        </div>
+                      </Link>
+                    ) : undefined}
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -792,6 +801,11 @@ export default function Footer({
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}
                       </Link>
+                      {lang === 'en' ? (
+                        <Link href="/business" locale={lang} passHref className="hover:text-primary">
+                          {textContent.FooterSection.sections.products.business}
+                        </Link>
+                      ) : undefined}
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>

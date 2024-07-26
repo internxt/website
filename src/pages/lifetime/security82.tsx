@@ -10,13 +10,14 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
 import { CouponType } from '@/lib/types';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
 interface Protect82Props {
-  metatagsDescriptions: Record<string, any>[];
-  navbarLang: Record<string, any>;
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
   textContent: Record<string, any>;
   testimonialsJson: Record<string, any>;
-  footerLang: Record<string, any>;
+  footerLang: FooterText;
   lang: GetServerSidePropsContext['locale'];
 }
 

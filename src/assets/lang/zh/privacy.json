@@ -1,111 +1,115 @@
 {
   "HeroSection": {
-    "title": "隐私",
-    "subtitle": {
-      "line1": "隐私是一项基本人权。 不必多说。在Internxt，我们相信，人类能够实现的目标是不寻常的",
-      "line2": " 所取得的成就是不平凡的，而我们的产品应该使社会实现卓越。我们的云服务 ",
-      "line3": "不仅要赋予人们权力，还必须尊重基本的个人权利。我们正在努力建立一个更好、更安全的互联网，其核心是尊重用户。",
-      "line4": "设计安全, 默认隐私。",
-      "line5": "今天就开始使用Internxt Drive，这是一个安全的、私有的、分布式的、开源的、加密的、免费的云存储服务。"
+    "title": {
+      "normalText": "隐私是 ",
+      "blueText": "基本人权"
     },
+    "description": " 在 Internxt，我们相信人类可以取得非凡的成就，我们的产品应该让社会能够实现卓越。我们的云服务不仅应该赋予人们权力，还必须尊重基本的人权。我们致力于建立一个更好、更安全的互联网，以对用户的尊重为核心。",
     "cta": "观看视频"
   },
   "ManifestoSection": {
     "section1": {
       "title": {
-        "line1": "为什么隐私是",
-        "line2": "重要？"
+        "line1": "为什么隐私很重要？"
       },
       "subtitle": {
-        "line1": "Today the Internet is controlled by technology giants that offer services and products that",
-        "line2": "are a means to an end. Services that have become essential in our lives and are used to collect",
-        "line3": "data from users to better profile them, as they live off advertising. Privacy should not have",
-        "line4": "such a high cost. We believe in a more ethical internet, where user privacy is at its core."
+        "line1": "\"今天，互联网被提供服务和产品的科技巨头控制，这些服务和产品不过是手段而已。已经成为我们生活中不可或缺的服务现在被用来收集大量数据，以此来分析用户、监控习惯和进行广告投放。便利和进步不应该有这么高的代价。我们相信一个更公平、更道德、更平等的互联网，用户隐私优先。\""
       },
-      "signature": "Fran Villalba Segarra, Internxt创始人兼CEO"
-    },
-    "securitum": {
-      "title": "Internxt 已成功通过独立安全审计",
-      "subtitle": "阅读完整的安全审计报告：",
-      "links": {
-        "desk": "Internxt桌面端安全审计",
-        "web": "Internxt 网页端安全审计",
-        "mobile": "Internxt移动端安全审计"
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "我们如何确保",
-        "line2": "用户隐私。"
-      },
-      "subtitle": {
-        "line1": "我们非常重视隐私和安全，这就是为什么我们已经实施了一系列的技术",
-        "line2": "和协议，以确保您的数据始终是安全和保密的。"
-      },
-      "square1": {
-        "title": "军用级加密",
-        "description": "我们非常重视你的隐私，这就是为什么你的文件是加密的，只有你能访问你的文件。"
-      },
-      "square2": {
-        "title": "零知识技术",
-        "description": "在任何时候，文件、照片、密码或任何种类的未加密原始数据都不会被未经授权的用户或服务器看到。你总是完全控制着谁可以访问。"
-      },
-      "square3": {
-        "title": "符合 GDPR 的同步",
-        "description": "我们现在遵守 GDPR 的所有条款，例如隐私权、信息权和被遗忘权等，并承诺满足所有未来条款。"
-      },
-      "square4": {
-        "title": "端到端加密",
-        "description": "您使用 Internxt 存储的所有数据均经过 AES-256 端到端加密。 这意味着即使是一个小文件，世界上最强大的处理器也需要宇宙年龄的两倍才能解密。"
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "旨在保护您的信息的应用程序",
-        "line2": ""
-      },
-      "subtitle": {
-        "line1": "来自大型科技公司的免费产品并非真正免费，您需要支付个人数据费用。",
-        "line2": "我们的产品绝不会翻动您的信息或出售您的数据。 当我们说免费时，我们是认真的。"
-      },
-      "square1": {
-        "title": "云盘让您选择要存储和共享的内容",
-        "description": "照片 不会访问您的个人数据或文件，而是从头开始设计，让您重新控制您的文件并保护您免受数据收集者和广告公司的侵害。 保护您的存储。",
-        "cta": "收回对文件的控制权"
-      },
-      "square2": {
-        "title": "使用照片，隐私始终是焦点",
-        "description": "照片 旨在帮助您保持最完美时刻的同步图库，而不必担心您的隐私和数据突然丢失。 回忆备份，安然无恙。",
-        "cta": "同步你的照片和纪念物"
-      },
-      "square3": {
-        "title": "绝对确定地发送。",
-        "description": "Send 允许您快速加密和共享大型文件，而无需担心文档、图像或视频的安全性。 完全保密地转移给任何人。",
-        "cta": "发送一些敏感的东西"
-      }
-    },
-    "FaqSection": {
-      "title": "问题？ 我们有答案",
-      "faq": [
-        {
-          "question": "Internxt的云存储安全吗？",
-          "answer": [
-            "Internxt Drive 是一种零知识文件存储服务，专为绝对隐私和严格安全而构建。 我们的服务不会出于广告目的访问您的个人数据或文件，而是旨在让您重新控制您的文件并保护您免受数据收集和广告公司的侵害。"
-          ]
-        },
-        {
-          "question": "什么是最私密的云存储？",
-          "answer": [
-            "许多云提供商表示他们的服务是私有的，但 Internxt 更进一步。 Internxt 是一种零知识文件存储服务，专为绝对隐私和严格安全而构建。 Internxt 无法访问您存储在云存储中的数据。"
-          ]
-        },
-        {
-          "question": "Internxt 是私有的吗？",
-          "answer": [
-            "与我们的一些竞争对手不同，我们的运营不基于广告或数据收集。 您的数据完全属于您。 我们优先考虑您的安全、隐私以及您的文件和照片的安全。 使用 Internxt，您可以确保自己是安全的。"
-          ]
-        }
-      ]
+      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Internxt创始人兼首席执行官" }
     }
+  },
+  "FeatureSection": {
+    "title": "Internxt 保护用户隐私",
+    "description": "我们非常重视隐私和安全，因此我们实施了一系列技术和协议，以始终确保您的数据安全和私密。",
+    "cards": {
+      "openSource": {
+        "title": "开源代码",
+        "description": "我们的每一行代码都是开源的，并发布在GitHub上。我们的所有系统都是公开的，可以独立验证。自己检查一下吧。"
+      },
+      "endToEnd": {
+        "title": "端到端加密",
+        "description": "您使用 Internxt 存储的所有数据都是 AES-256 端到端加密的。这意味着世界上最强大的处理器需要两倍于宇宙年龄的时间才能解密一个小文件。"
+      },
+      "zeroKnowledge": {
+        "title": "零知识技术",
+        "description": "任何时候文件、照片、密码或任何未加密的原始数据都不会对未经授权的用户或服务器可见。您始终完全控制谁可以访问。"
+      },
+      "gdpr": {
+        "title": "符合GDPR的同步",
+        "description": "我们现在符合所有GDPR规定，例如隐私权、知情权和被遗忘权等，并承诺遵守所有未来的规定。"
+      },
+      "noUnwantedAccess": {
+        "title": "没有未经授权的数据访问",
+        "description": "您存储或共享的所有内容在离开设备之前都会被加密，因此没有权限就不可能解密。我们甚至无法访问您的文件、照片或密码。"
+      },
+      "freeTools": {
+        "title": "免费在线隐私工具",
+        "description": "我们希望所有人在网上更加安全，无论您是否订阅我们的服务，这就是为什么我们创建了几个免费在线工具，任何人都可以在浏览网页时使用这些工具来保护自己。"
+      }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "旨在保护",
+      "line2": "您信息的应用"
+    },
+    "subtitle": "来自大型科技公司的免费产品并不是真正的免费，您支付的是个人数据。我们的产品绝不会出售您的信息或数据。当我们说免费时，我们是认真的。",
+    "square1": {
+      "title": "Drive 让您选择存储和共享内容",
+      "description": "Drive 不会访问您的个人数据或文件，相反，它从一开始就被设计为让您重新控制您的文件，并保护您免受数据收集者和广告公司的侵害。保护您的存储。",
+      "cta": "重新控制您的文件"
+    },
+    "square2": {
+      "title": "使用 Photos 时隐私始终是焦点",
+      "description": "Photos 的开发是为了帮助您保持同步的图库，不用担心隐私和突然的数据丢失。记忆已备份，安全无虞。",
+      "cta": "同步您的照片和纪念品"
+    },
+    "square3": {
+      "title": "绝对确定地发送",
+      "description": "Send 允许您加密和共享大文件，而无需担心您的文档、图像或视频的安全性。以完全保密的方式传输给任何人。",
+      "cta": "发送加密文件"
+    }
+  },
+  "FaqSection": {
+    "title": "有问题吗？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 的云存储安全吗？",
+        "answer": [
+          "Internxt Drive 是一种零知识文件存储服务，专为绝对隐私和严格安全而设计。我们的服务不会为了广告目的访问您的个人数据或文件，而是旨在让您重新控制您的文件并保护您免受数据收集和广告公司的侵害。"
+        ]
+      },
+      {
+        "question": "最私密的云存储是什么？",
+        "answer": [
+          "许多云服务提供商说他们的服务是私密的，但 Internxt 更胜一筹。Internxt 是一种零知识文件存储服务，专为绝对隐私和严格安全而设计。Internxt 无法访问存储在云中的数据。"
+        ]
+      },
+      {
+        "question": "Internxt 是私密的吗？",
+        "answer": [
+          "与我们的一些竞争对手不同，我们不基于广告或数据收集运营。您的数据仅属于您。我们优先考虑您的安全、隐私以及文件和照片的安全。使用 Internxt，您可以确保自己是安全的。"
+        ]
+      }
+    ]
+  },
+  "SecuritumSection": {
+    "title": "Internxt 成功通过独立安全审计",
+    "subtitle": "阅读完整的安全审计报告：",
+    "links": {
+      "desk": "Internxt 桌面应用安全审计",
+      "web": "Internxt Web 应用安全审计",
+      "mobile": "Internxt 移动应用安全审计"
+    }
+  },
+  "BetterTomorrowSection": {
+    "title": "倡导更美好的明天",
+    "description": "是时候掌控自己的隐私了。我们鼓励每个人积极保护自己。了解更多关于隐私权的信息。参与我们的精选声誉良好的数字权利组织目录。",
+    "cta": "数字权利组织目录"
+  },
+  "CtaSection": {
+    "title": "无风险试用 Internxt",
+    "description": "使用 Internxt 安全、私密和加密的云存储来保护真正重要的东西。",
+    "cta": "立即选择一个计划"
   }
 }

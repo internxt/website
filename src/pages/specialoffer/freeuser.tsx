@@ -13,13 +13,15 @@ import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWe
 import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { GetServerSidePropsContext } from 'next';
 
 interface FreeUserPageProps {
-  lang: string;
-  metatagsDescriptions: Record<string, any>;
-  navbarLang: Record<string, any>;
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
   textContent: Record<string, any>;
-  footerLang: Record<string, any>;
+  footerLang: FooterText;
 }
 
 const FreeUserPage = ({
@@ -30,6 +32,8 @@ const FreeUserPage = ({
   textContent,
 }: FreeUserPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
+
+  const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
     couponCode: CouponType.freeUserCoupon,
@@ -43,7 +47,7 @@ const FreeUserPage = ({
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   const handleOnButtonClick = () => {
@@ -52,7 +56,7 @@ const FreeUserPage = ({
 
   return (
     <Layout title={metatags.title} description={metatags.description} segmentName={'Free User'}>
-      <Navbar textContent={navbarLang} cta={['default']} lang={lang} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} cta={['default']} lang={locale} fixed isLinksHidden />
 
       <HeroSectionForSpecialOffer textContent={textContent.HeroSection} />
 
@@ -61,9 +65,8 @@ const FreeUserPage = ({
         decimalDiscount={{
           individuals: 0.25,
         }}
-        lang={lang}
+        lang={locale}
         products={products}
-        hideBusinessCards={true}
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
@@ -82,13 +85,14 @@ const FreeUserPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
+      <MinimalFooter lang={locale} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
     </Layout>
   );
 };
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/specialoffer/free-user.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);

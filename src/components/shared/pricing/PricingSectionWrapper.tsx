@@ -1,6 +1,7 @@
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
+import { SwitchButtonOptions } from './components/PlanSelector';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -10,7 +11,10 @@ interface PricingSectionWrapperProps {
   hidePlanSelectorAndSwitch?: boolean;
   hideBusinessSelector?: boolean;
   hideBusinessCards?: boolean;
+  hidePlanSelectorComponent?: boolean;
   hideFreeCard?: boolean;
+  startFromInterval?: Interval;
+  startFromPlan?: SwitchButtonOptions;
   decimalDiscount?: {
     individuals?: number;
     business?: number;
@@ -26,8 +30,11 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
+  startFromInterval = Interval.Year,
+  startFromPlan = 'Individuals',
   hideBusinessSelector,
   hideBusinessCards,
+  hidePlanSelectorComponent,
   hideFreeCard,
   decimalDiscount,
   onCheckoutButtonClicked,
@@ -41,7 +48,7 @@ export const PricingSectionWrapper = ({
     onPlanTypeChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
-  } = usePlanSelection('Individuals', Interval.Year, handlePageNameUpdate);
+  } = usePlanSelection(startFromPlan, startFromInterval, handlePageNameUpdate);
 
   return (
     <PricingSection
@@ -54,6 +61,7 @@ export const PricingSectionWrapper = ({
       products={products}
       hideFreeCard={hideFreeCard}
       hideBusinessSelector={hideBusinessSelector}
+      hidePlanSelectorComponent={hidePlanSelectorComponent}
       hideBusinessCards={hideBusinessCards}
       hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
       loadingCards={loadingCards}

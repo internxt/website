@@ -43,7 +43,7 @@
     "semiannually": "/6 meses",
     "annually": "/año"
   },
-  "perUserSlash": "/usuario",
+  "perUserSlash": "Por usuario/",
   "perUser": "Por usuario",
   "users": "usuarios",
   "freePlan": "Gratis",
@@ -151,7 +151,8 @@
         "1TB de almacenamiento/usuario",
         "Compartir archivos y carpetas cifradas",
         "Crear y gestionar usuarios y equipos",
-        "Crear hasta 5 equipos",
+        "A partir de 3 usuarios y hasta 10",
+        "Cumple con el RGPD",
         "Subir archivos de hasta 5GB",
         "Gestionar la facturación y los pagos de la cuenta",
         "Soporte al cliente premium"
@@ -160,7 +161,8 @@
         "2TB de almacenamiento/usuario",
         "Compartir archivos y carpetas cifrados",
         "Crear y gestionar usuarios y equipos",
-        "Crear hasta 25 equipos",
+        "A partir de 3 usuarios y hasta 100",
+        "Cumple con el RGPD",
         "Subir archivos de hasta 20GB",
         "Gestionar la facturación y los pagos de la cuenta",
         "Soporte al cliente premium"
