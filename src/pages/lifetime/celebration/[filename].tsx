@@ -95,6 +95,8 @@ const LifetimeCelebrationTemplate = ({
     usa: '80%',
     france: '83%',
     belgium: '83%',
+    switzerland: '83%',
+    singapore: '83%',
   };
 
   return (
