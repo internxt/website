@@ -96,6 +96,8 @@ export default function PriceCard({
     return priceString;
   };
 
+  console.log(price);
+
   const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
 
   const getPlanStorage = (storage) => {

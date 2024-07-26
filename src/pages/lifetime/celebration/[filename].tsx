@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium'];
+const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium', 'switzerland', 'singapore'];
 
 const IMAGES_PER_PATH = {
   canada: {
@@ -35,6 +35,16 @@ const IMAGES_PER_PATH = {
     backgroundImage: '/images/lifetime/celebration/belgium/belgium-bg.webp',
     previewImage: '/images/lifetime/celebration/belgium/belgium-file-item.webp',
     mobileImage: '/images/lifetime/celebration/belgium/belgium-image-mobile.webp',
+  },
+  switzerland: {
+    backgroundImage: '/images/lifetime/celebration/switzerland/swiss-bg.webp',
+    previewImage: '/images/lifetime/celebration/switzerland/swiss-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/switzerland/swiss-image-mobile.webp',
+  },
+  singapore: {
+    backgroundImage: '/images/lifetime/celebration/singapore/singapore-bg.webp',
+    previewImage: '/images/lifetime/celebration/singapore/singapore-file-item.webp',
+    mobileImage: '/images/lifetime/celebration/singapore/singapore-image-mobile.webp',
   },
 };
 
@@ -67,6 +77,8 @@ const LifetimeCelebrationTemplate = ({
     usa: 0.2,
     france: 0.17,
     belgium: 0.17,
+    switzerland: 0.17,
+    singapore: 0.17,
   };
 
   const couponCode = {
@@ -74,6 +86,8 @@ const LifetimeCelebrationTemplate = ({
     usa: CouponType.IndependenceDayItaly,
     france: CouponType.Lifetime83DiscountCoupon,
     belgium: CouponType.Lifetime83DiscountCoupon,
+    switzerland: CouponType.Lifetime83DiscountCoupon,
+    singapore: CouponType.Lifetime83DiscountCoupon,
   };
 
   const percent = {
@@ -104,6 +118,7 @@ const LifetimeCelebrationTemplate = ({
       <PaymentSection
         textContent={langJson.PaymentSection}
         discount={discount[pathname]}
+        showPriceBefore
         lang={lang}
         percent={percent[pathname]}
         currencySpecified={currencySpecified}
@@ -130,6 +145,10 @@ export async function getServerSideProps(ctx) {
 
   if (['france', 'belgium'].includes(pathname)) {
     lang = 'fr';
+  }
+
+  if (['switzerland'].includes(pathname)) {
+    lang = 'de';
   }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

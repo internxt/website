@@ -74,6 +74,7 @@ const PriceTable = ({
       case 'normal':
         return price.split('.')[0];
       case 'celebration':
+        console.log('PRICE WITH DISCOUNT', price * 0.2);
         return Number(price * discount)
           .toFixed(2)
           .replace(/\.00$/, '');
