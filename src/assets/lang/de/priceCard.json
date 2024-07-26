@@ -1,7 +1,7 @@
 {
   "mostPopular": "Am beliebtesten",
   "mostPopularPlan": "Beliebtester Plan",
-  "save": "Spare bis zu",
+  "save": "Sparen Sie",
   "valentines": "Spezielles Valentinstag-Angebot!",
   "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
   "planTitles": {
@@ -43,7 +43,7 @@
     "semiannually": "/Halbmonatlich",
     "annually": "/Jährlich"
   },
-  "perUserSlash": "/Nutzer",
+  "perUserSlash": "Pro Benutzer/",
   "perUser": "Pro Nutzer",
   "users": "Nutzer",
   "freePlan": "Kostenlos",
@@ -92,6 +92,23 @@
       "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Bis zu ",
+        "bold": "4-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      },
+      "year": {
+        "normal": "Bis zu ",
+        "bold": "3-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      },
+      "month": {
+        "normal": "Bis zu ",
+        "bold": "2-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      }
+    },
     "individuals": {
       "200GB": [
         "Verschlüsselte Datei- und Ordnerfreigabe",
@@ -131,7 +148,8 @@
         "1TB Speicher/Benutzer",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
-        "Bis zu 5 Teams erstellen",
+        "Ab 3 Benutzern und bis zu 10",
+        "DSGVO-konform",
         "Dateien bis zu 5GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
         "Premium-Kundensupport"
@@ -140,7 +158,8 @@
         "2TB Speicher/Benutzer",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Benutzer und Teams erstellen und verwalten",
-        "Bis zu 25 Teams erstellen",
+        "Ab 3 Benutzern und bis zu 100",
+        "DSGVO-konform",
         "Dateien bis zu 20GB hochladen",
         "Kontenabrechnung und Zahlungen verwalten",
         "Premium-Kundensupport"

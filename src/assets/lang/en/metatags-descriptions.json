@@ -5,6 +5,11 @@
     "description": "Stand for privacy, switch to Internxt. Internxt's open-source cloud storage services protect your right to privacy. Internxt Drive, Photos, Send, and more."
   },
   {
+    "id": "business",
+    "title": "Internxt — Private, Encrypted Cloud Storage for Business",
+    "description": "Prevent data loss with Internxt’s encrypted cloud storage for business—sign up to benefit from industry-leading cloud data protection."
+  },
+  {
     "id": "drive",
     "title": "Internxt Drive – Private & Secure Cloud Storage",
     "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."

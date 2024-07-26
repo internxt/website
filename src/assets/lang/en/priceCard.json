@@ -4,6 +4,7 @@
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
+  "save": "Save ",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -40,7 +41,7 @@
     "semiannually": "/semiannually",
     "annually": "/annually"
   },
-  "perUserSlash": "User/",
+  "perUserSlash": "Per user/",
   "perUser": "Per user",
   "users": "users",
   "freePlan": "Free",
@@ -89,6 +90,23 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Up to ",
+        "bold": "4x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "year": {
+        "normal": "Up to ",
+        "bold": "3x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "month": {
+        "normal": "Up to ",
+        "bold": "2x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      }
+    },
     "individuals": {
       "200GB": [
         "Encrypted file and folder sharing",
@@ -132,7 +150,8 @@
         "1TB storage/user",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
-        "Create up to 5 teams",
+        "Starting at 3 users and up to 10",
+        "GDPR compliant",
         "Upload files of up to 5GB",
         "Manage account billing & payments",
         "Premium customer support"
@@ -141,7 +160,8 @@
         "2TB storage/user",
         "Encrypted file and folder sharing",
         "Create and manage users & teams",
-        "Create up to 25 teams",
+        "Starting at 3 users and up to 100",
+        "GDPR compliant",
         "Upload files of up to 20GB",
         "Manage account billing & payments",
         "Premium customer support"

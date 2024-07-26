@@ -1,7 +1,7 @@
 {
   "mostPopular": "Più popolari",
   "mostPopularPlan": "Piano più popolare",
-  "save": "Risparmia fino a",
+  "save": "Risparmia ",
   "valentines": "Offerta speciale di San Valentino!",
   "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
   "planTitles": {
@@ -43,7 +43,7 @@
     "semiannually": "/semestrale",
     "annually": "/annuale"
   },
-  "perUserSlash": "/user",
+  "perUserSlash": "Per utente/",
   "perUser": "Per utente",
   "users": "utenti",
   "freePlan": "Free",
@@ -92,6 +92,23 @@
       "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
       "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Fino a ",
+        "bold": "4 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "year": {
+        "normal": "Fino a ",
+        "bold": "3 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "month": {
+        "normal": "Fino a ",
+        "bold": "2 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      }
+    },
     "individuals": {
       "200GB": [
         "Condivisione crittografata di file e cartelle",
@@ -135,7 +152,8 @@
         "1TB di archiviazione/utente",
         "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
-        "Creare fino a 5 team",
+        "A partire da 3 utenti e fino a 10",
+        "Conforme al GDPR",
         "Caricare file fino a 5GB",
         "Gestire la fatturazione e i pagamenti dell'account",
         "Assistenza clienti premium"
@@ -144,7 +162,8 @@
         "2TB di archiviazione/utente",
         "Condivisione di file e cartelle crittografati",
         "Creare e gestire utenti e team",
-        "Creare fino a 25 team",
+        "A partire da 3 utenti e fino a 100",
+        "Conforme al GDPR",
         "Caricare file fino a 20GB",
         "Gestire la fatturazione e i pagamenti dell'account",
         "Assistenza clienti premium"

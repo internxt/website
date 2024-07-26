@@ -1,111 +1,115 @@
 {
   "HeroSection": {
-    "title": "Privatsphäre",
-    "subtitle": {
-      "line1": "Privatsphäre ist ein grundlegendes Menschenrecht. Hier bei Internxt glauben wir, dass was die Menschheit alles erreichen kann",
-      "line2": "außergewöhnlich ist und dass Produkte es der Gesellschaft ermöglichen sollten, Spitzenleistungen zu erbringen. Diese Produkte",
-      "line3": "sollten nicht nur Menschen stärken, sondern auch respektvoll sein. Sag Hallo zu Internxt.",
-      "line4": "Standardmäßig privat, durch Design sicher und frei wie in Freiheit.",
-      "line5": "Beginne noch heute mit der Nutzung von Internxt Drive, einem sicheren, privaten, verteilten, quelloffenen, verschlüsselten Cloud-Speicherdienst."
+    "title": {
+      "normalText": "Datenschutz ist ein ",
+      "blueText": "fundamentales Menschenrecht"
     },
-    "cta": "Schau dir das Video an"
+    "description": " Hier bei Internxt glauben wir, dass das, was die Menschheit erreichen kann, außergewöhnlich ist und dass unsere Produkte der Gesellschaft ermöglichen sollten, Exzellenz zu erreichen. Unsere Cloud-Dienste sollten nicht nur Menschen befähigen, sondern müssen auch grundlegende individuelle Menschenrechte respektieren. Wir arbeiten daran, ein besseres, sichereres Internet zu schaffen, das den Respekt für Sie, den Nutzer, im Mittelpunkt hat.",
+    "cta": "Schau das Video"
   },
   "ManifestoSection": {
     "section1": {
       "title": {
-        "line1": "Warum Privatsphäre",
-        "line2": "so wichtig ist."
+        "line1": "Warum ist Datenschutz wichtig?"
       },
       "subtitle": {
-        "line1": "Heutzutage wird das Internet von Technologiegiganten kontrolliert, die Dienstleistungen und Produkte anbieten",
-        "line2": "und sind Mittel zum Zweck. Dienstleistungen, die in unserem Leben unverzichtbar geworden sind, werden genutzt, um Daten",
-        "line3": "von Benutzern zu sammeln, um sie besser zu profilieren, da sie von Werbung leben. Privatsphäre sollte nicht",
-        "line4": "so teuer sein. Wir glauben an ein ethischeres Internet, in dem die Privatsphäre der Benutzer im Mittelpunkt steht."
+        "line1": "\"Heute wird das Internet von Technologieriesen kontrolliert, die Dienstleistungen und Produkte anbieten, die nichts weiter als ein Mittel zum Zweck sind. Dienstleistungen, die in unserem Leben unverzichtbar geworden sind, werden jetzt genutzt, um enorme Mengen an Daten zu sammeln, die eingesetzt werden, um Benutzerprofile zu erstellen, Gewohnheiten zu überwachen und gezielte Werbung zu schalten. Bequemlichkeit und Fortschritt sollten nicht so hohe Kosten haben. Wir glauben an ein gerechteres, ethischeres und faireres Internet, bei dem der Datenschutz der Nutzer an erster Stelle steht.\""
       },
-      "signature": "Fran Villalba, Internxt CEO"
-    },
-    "securitum": {
-      "title": "Internxt besteht unabhängiges Sicherheitsaudit erfolgreich",
-      "subtitle": "Lies die vollständigen Sicherheitsauditberichte:",
-      "links": {
-        "desk": "Internxt Desktop Sicherheitsaudit",
-        "web": "Internxt Web Sicherheitsaudit",
-        "mobile": "Internxt Mobile Sicherheitsaudit"
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "So sichern wir die",
-        "line2": "Privatsphäre der Benutzer."
-      },
-      "subtitle": {
-        "line1": "Wir nehmen Datenschutz und Sicherheit sehr ernst, deshalb verfügen wir über eine Reihe von Technologien",
-        "line2": "und Protokolle, um stets sicherzustellen, dass deine Daten sicher und privat bleiben."
-      },
-      "square1": {
-        "title": "Verschlüsselung auf Militärniveau.",
-        "description": "Alle Daten, die du in deinem Internxt-Konto speichern, werden mit AES-256 verschlüsselt. Das bedeutet, dass der leistungsstärkste Prozessor der Welt das doppelte Alter des Universums benötigen würde, um eine kleine Datei zu entschlüsseln."
-      },
-      "square2": {
-        "title": "Zero-Knowledge Technologie.",
-        "description": "Wir stellen sicher, dass Dateien, Fotos, Passwörter oder andere unverschlüsselte Daten zu keinem Zeitpunkt für nicht autorisierte Benutzer oder Server sichtbar sind."
-      },
-      "square3": {
-        "title": "DSGVO-konforme Synchronisierung.",
-        "description": "Unser Ziel ist es, alle DSGVO-Bestimmungen einzuhalten, wie z. B. „Datenschutz durch Design“, „Recht auf Information“ und „Recht auf Vergessenwerden“ sowie viele andere und künftige Bestimmungen einzuhalten."
-      },
-      "square4": {
-        "title": "End-to-end Verschlüsselung.",
-        "description": "Alles, was du speicherst oder überträgst, wird verschlüsselt, bevor du dein Gerät verlässt, sodass eine Entschlüsselung ohne die Erlaubnis des Benutzers nicht möglich ist, selbst wenn wir keinen Zugriff auf deine Dateien, Fotos oder Passwörter haben."
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "Apps, die darauf ausgelegt sind,",
-        "line2": "deine Privatsphäre zu schützen."
-      },
-      "subtitle": {
-        "line1": "Wenn du kostenlose Produkte großer Technologieunternehmen nutzt, sind deine Daten der Preis.",
-        "line2": "Unsere Produkte werden deine Daten niemals verkaufen, auch nicht bei kostenlosen Tarifen."
-      },
-      "square1": {
-        "title": "Mit Drive kannst du auswählen, was gespeichert und geteilt werden soll.",
-        "description": "Drive greift nicht zu Werbezwecken auf deine persönlichen Daten oder Dateien zu, sondern soll dir vielmehr die Kontrolle über deine Dateien zurückgeben und dich vor Datenerfassung und Werbefirmen schützen.",
-        "cta": "Kontrolle über meine Dateien"
-      },
-      "square2": {
-        "title": "Bei Photos steht die Privatsphäre immer im Mittelpunkt.",
-        "description": "Photos wurde so konzipiert und entwickelt, dass du eine synchronisierte Galerie deiner schönsten Momente führst und die Kontrolle darüber hast, mit wem du sie teilen möchtest.",
-        "cta": "Beginne mit der Synchronisierung meiner Fotos"
-      },
-      "square3": {
-        "title": "Sende mit absoluter Sicherheit.",
-        "description": "Mit Send kannst du große Dateien schnell verschlüsseln und teilen, ohne dir Gedanken über die Sicherheit deiner Dokumente, Bilder oder Videos machen zu müssen. Weitergabe an Dritte unter absoluter Vertraulichkeit.",
-        "cta": "Sende etwas Sensibles"
-      }
-    },
-    "FaqSection": {
-      "title": "Fragen? Wir haben Antworten",
-      "faq": [
-        {
-          "question": "Ist der Cloud-Speicher von Internxt sicher?",
-          "answer": [
-            "Internxt Drive ist ein Zero-Knowledge Dateispeicherdienst, der auf absolute Privatsphäre und strenge Sicherheit ausgelegt ist. Unser Service greift nicht zu Werbezwecken auf deine persönlichen Daten oder Dateien zu, sondern soll dir vielmehr die Kontrolle über deine Dateien zurückgeben und dich vor Datenerfassung und Werbefirmen schützen."
-          ]
-        },
-        {
-          "question": "Was ist der privateste Cloud-Speicher?",
-          "answer": [
-            "Viele Cloud-Anbieter behaupten, ihr Dienst sei privat, aber Internxt geht noch einen Schritt weiter. Internxt ist ein Zero-Knowledge Dateispeicherdienst, der auf absolute Privatsphäre und strenge Sicherheit ausgelegt ist. Internxt hat keinen Zugriff auf deine im Cloud-Speicher gespeicherten Daten."
-          ]
-        },
-        {
-          "question": "Ist Internxt privat?",
-          "answer": [
-            "Im Gegensatz zu einigen unserer Mitbewerber operieren wir nicht auf der Grundlage von Werbung oder Datenerfassung. Deine Daten gehören ausschließlich dir. Wir legen Wert auf deine Sicherheit, Privatsphäre und die Sicherheit deiner Dateien und Fotos. Mit Internxt kannst du sicher sein, dass du sicher bist."
-          ]
-        }
-      ]
+      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Gründer und CEO von Internxt" }
     }
+  },
+  "FeatureSection": {
+    "title": "Internxt schützt die Privatsphäre der Nutzer",
+    "description": "Wir nehmen Datenschutz und Sicherheit äußerst ernst, deshalb haben wir eine Reihe von Technologien und Protokollen implementiert, um stets sicherzustellen, dass Ihre Daten sicher und privat bleiben.",
+    "cards": {
+      "openSource": {
+        "title": "Open-Source-Code",
+        "description": "Jeder Teil unseres Codes ist Open-Source und auf GitHub veröffentlicht. Alle unsere Systeme sind öffentlich zugänglich und können unabhängig authentifiziert werden. Überzeugen Sie sich selbst."
+      },
+      "endToEnd": {
+        "title": "Ende-zu-Ende-Verschlüsselung",
+        "description": "Alle Daten, die Sie mit Internxt speichern, sind Ende-zu-Ende mit AES-256 verschlüsselt. Das bedeutet, dass der leistungsstärkste Prozessor der Welt doppelt so alt wie das Universum sein müsste, um auch nur eine kleine Datei zu entschlüsseln."
+      },
+      "zeroKnowledge": {
+        "title": "Zero-Knowledge-Technologie",
+        "description": "Zu keinem Zeitpunkt sind Dateien, Fotos, Passwörter oder andere unverschlüsselte Rohdaten für unbefugte Benutzer oder Server sichtbar. Sie haben immer die vollständige Kontrolle darüber, wer Zugriff erhält."
+      },
+      "gdpr": {
+        "title": "DSGVO-konforme Synchronisierung",
+        "description": "Wir entsprechen nun allen DSGVO-Bestimmungen, wie dem Recht auf Privatsphäre, dem Recht auf Information und dem Recht auf Vergessenwerden, unter vielen anderen, und verpflichten uns, alle zukünftigen Bestimmungen einzuhalten."
+      },
+      "noUnwantedAccess": {
+        "title": "Kein unerwünschter Zugriff auf Daten",
+        "description": "Alles, was Sie speichern oder teilen, wird verschlüsselt, bevor es Ihr Gerät verlässt, sodass es ohne Erlaubnis nicht entschlüsselt werden kann. Wir können nicht einmal auf Ihre Dateien, Fotos oder Passwörter zugreifen."
+      },
+      "freeTools": {
+        "title": "Kostenlose Online-Datenschutz-Tools",
+        "description": "Wir möchten, dass alle online sicherer sind, egal ob Sie unsere Dienste abonnieren oder nicht. Deshalb haben wir mehrere kostenlose Online-Tools erstellt, die jeder nutzen kann, um sich beim Surfen im Internet zu schützen."
+      }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "Apps, die entwickelt wurden, um",
+      "line2": "Ihre Informationen zu schützen"
+    },
+    "subtitle": "Kostenlose Produkte von großen Technologieunternehmen sind nicht wirklich kostenlos, Sie zahlen mit persönlichen Daten. Unsere Produkte werden Ihre Informationen niemals verkaufen oder Ihre Daten verkaufen. Wenn wir kostenlos sagen, meinen wir es auch.",
+    "square1": {
+      "title": "Drive ermöglicht Ihnen die Wahl, was Sie speichern und teilen möchten",
+      "description": "Drive greift nicht auf Ihre persönlichen Daten oder Dateien zu, sondern wurde von Grund auf entwickelt, um Ihnen die Kontrolle über Ihre Dateien zurückzugeben und Sie vor Datensammlern und Werbeunternehmen zu schützen. Schützen Sie Ihren Speicher.",
+      "cta": "Übernehmen Sie die Kontrolle über Ihre Dateien"
+    },
+    "square2": {
+      "title": "Mit Photos steht der Datenschutz immer im Fokus",
+      "description": "Photos wurde entwickelt, um Ihnen zu helfen, eine synchronisierte Galerie Ihrer perfekten Momente zu bewahren, ohne sich um Ihre Privatsphäre zu sorgen und ohne sich über plötzlichen Datenverlust zu ärgern. Erinnerungen gesichert, sicher und geschützt.",
+      "cta": "Synchronisieren Sie Ihre Fotos und Erinnerungsstücke"
+    },
+    "square3": {
+      "title": "Senden Sie mit absoluter Sicherheit",
+      "description": "Send ermöglicht Ihnen, große Dateien zu verschlüsseln und zu teilen, ohne sich um die Sicherheit Ihrer Dokumente, Bilder oder Videos zu sorgen. Übertragen Sie an jeden in völliger Vertraulichkeit.",
+      "cta": "Senden Sie eine verschlüsselte Datei"
+    }
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist der Cloud-Speicher von Internxt sicher?",
+        "answer": [
+          "Internxt Drive ist ein Zero-Knowledge-Dateispeicherdienst, der für absolute Privatsphäre und strenge Sicherheit entwickelt wurde. Unser Dienst greift nicht auf Ihre persönlichen Daten oder Dateien zu Werbezwecken zu, sondern ist darauf ausgelegt, Ihnen die Kontrolle über Ihre Dateien zurückzugeben und Sie vor Datensammlern und Werbeunternehmen zu schützen."
+        ]
+      },
+      {
+        "question": "Was ist der privateste Cloud-Speicher?",
+        "answer": [
+          "Viele Cloud-Anbieter behaupten, dass ihr Dienst privat ist, aber Internxt geht noch einen Schritt weiter. Internxt ist ein Zero-Knowledge-Dateispeicherdienst, der für absolute Privatsphäre und strenge Sicherheit entwickelt wurde. Internxt kann nicht auf Ihre Daten zugreifen, die im Cloud-Speicher gespeichert sind."
+        ]
+      },
+      {
+        "question": "Ist Internxt privat?",
+        "answer": [
+          "Im Gegensatz zu einigen unserer Konkurrenten arbeiten wir nicht auf der Basis von Werbung oder Datenerhebung. Ihre Daten gehören ausschließlich Ihnen. Wir legen höchsten Wert auf Ihre Sicherheit, Ihre Privatsphäre und die Sicherheit Ihrer Dateien und Fotos. Mit Internxt können Sie sicher sein, dass Sie sicher sind."
+        ]
+      }
+    ]
+  },
+  "SecuritumSection": {
+    "title": "Internxt besteht erfolgreich unabhängigen Sicherheitsaudit",
+    "subtitle": "Lesen Sie die vollständigen Sicherheitsaudit-Berichte:",
+    "links": {
+      "desk": "Internxt Desktop-Sicherheitsaudit",
+      "web": "Internxt Web-Sicherheitsaudit",
+      "mobile": "Internxt Mobile-Sicherheitsaudit"
+    }
+  },
+  "BetterTomorrowSection": {
+    "title": "Setzen Sie sich für eine bessere Zukunft ein",
+    "description": "Es ist an der Zeit, Ihre Privatsphäre selbst in die Hand zu nehmen. Wir ermutigen jeden, proaktiv für seinen eigenen Schutz zu werden. Erfahren Sie mehr über das Recht auf Privatsphäre. Beteiligen Sie sich an unserer kuratierten Liste von renommierten Organisationen, die sich für digitale Rechte einsetzen.",
+    "cta": "Verzeichnis der digitalen Rechteorganisationen"
+  },
+  "CtaSection": {
+    "title": "Probieren Sie Internxt risikofrei aus",
+    "description": "Schützen Sie die wirklich wichtigen Dinge mit dem sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Wählen Sie jetzt einen Plan"
   }
 }

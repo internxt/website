@@ -1,111 +1,115 @@
 {
   "HeroSection": {
-    "title": "Confidentialité",
-    "subtitle": {
-      "line1": "La vie privée est un droit humain fondamental. Chez Internxt, nous pensons que ce que l'humanité peut réaliser",
-      "line2": "est extraordinaire et que les produits doivent permettre à la société d'atteindre l'excellence.",
-      "line3": " Ces produits doivent non seulement donner du pouvoir aux gens mais aussi être respectueux.",
-      "line4": "Privé par défaut et sécurisé par conception.",
-      "line5": "Commencez à utiliser Internxt Drive aujourd'hui, un service de stockage en nuage sécurisé, privé, décentralisé, open-source, crypté et gratuit."
+    "title": {
+      "normalText": "La confidentialité est un ",
+      "blueText": "droit humain fondamental"
     },
-    "cta": "Regardez la vidéo"
+    "description": " Ici, chez Internxt, nous croyons que ce que l'humanité peut accomplir est extraordinaire et que nos produits devraient permettre à la société d'atteindre l'excellence. Nos services cloud ne devraient pas seulement donner du pouvoir aux gens, mais doivent également respecter les droits humains individuels fondamentaux. Nous travaillons à construire un Internet meilleur et plus sûr avec le respect de vous, l'utilisateur, au cœur de notre mission.",
+    "cta": "Regarder la vidéo"
   },
   "ManifestoSection": {
     "section1": {
       "title": {
-        "line1": "Pourquoi la vie privée",
-        "line2": "est si importante."
+        "line1": "Pourquoi la confidentialité est-elle importante ?"
       },
       "subtitle": {
-        "line1": "Aujourd'hui, l'Internet est contrôlé par des géants de la technologie qui offrent des services et des produits qui",
-        "line2": "sont un moyen de parvenir à une fin. La vie privée ne devrait",
-        "line3": "pas avoir un coût aussi élevé.Nous croyons en un internet plus éthique,",
-        "line4": "où la vie privée des utilisateurs est au cœur des préoccupations."
+        "line1": "\"Aujourd'hui, Internet est contrôlé par des géants de la technologie offrant des services et des produits qui ne sont rien d'autre qu'un moyen pour parvenir à une fin. Les services devenus essentiels dans nos vies sont maintenant utilisés pour collecter d'énormes quantités de données, armées pour profiler les utilisateurs, surveiller les habitudes et cibler les publicités. La commodité et le progrès ne devraient pas avoir un coût aussi élevé. Nous croyons en un Internet plus juste, éthique et équitable, où la confidentialité de l'utilisateur est primordiale.\""
       },
-      "signature": "Fran Villalba, PDG d'Internxt"
-    },
-    "securitum": {
-      "title": "Internxt passe avec succès un audit de sécurité indépendant",
-      "subtitle": "Lisez les rapports complets d'audit de sécurité:",
-      "links": {
-        "desk": "Audit de sécurité du bureau d'Internxt",
-        "web": "Audit de sécurité web Internxt",
-        "mobile": "Audit de sécurité mobile Internxt"
-      }
-    },
-    "section2": {
-      "title": {
-        "line1": "Comment nous assurons la vie",
-        "line2": "privée des utilisateurs."
-      },
-      "subtitle": {
-        "line1": "Nous prenons la confidentialité et la sécurité très au sérieux, c'est pour cela que nous disposons d'un ensemble de technologies",
-        "line2": "et de protocoles pour garantir la sécurité et la confidentialité de vos données."
-      },
-      "square1": {
-        "title": "Cryptage de qualité militaire.",
-        "description": "Toutes les données que vous stockez dans votre compte Internxt sont cryptées avec AES-256. Cela signifie qu'il faudrait deux fois l'âge de l'univers pour décrypter un petit fichier."
-      },
-      "square2": {
-        "title": "Technologie connaissance zéro.",
-        "description": "Nous nous assurons qu'à aucun moment les fichiers, photos, mots de passe ou tout type de données non cryptées ne sont visibles par des utilisateurs ou des serveurs non autorisés."
-      },
-      "square3": {
-        "title": "Conformité au RGPD.",
-        "description": "Notre engagement est de nous conformer à toutes les dispositions du GDPR, telles que la protection de la vie privée dès la conception, le droit à l'information et le droit à l'oubli."
-      },
-      "square4": {
-        "title": "Cryptage de bout en bout.",
-        "description": "Tout ce que vous stockez ou transférez est crypté avant de quitter votre appareil, ce qui rend impossible le décryptage sans l'autorisation de l'utilisateur, même nous ne pouvons pas accéder à vos fichiers."
-      }
-    },
-    "section3": {
-      "title": {
-        "line1": "Des applications conçues pour",
-        "line2": "protéger votre vie privée."
-      },
-      "subtitle": {
-        "line1": "Lorsque vous utilisez des produits gratuits de grandes entreprises technologiques, le prix à payer est celui de vos données.",
-        "line2": "Nos produits ne vendront jamais vos données, même nos plans gratuits sont à notre charge."
-      },
-      "square1": {
-        "title": "Drive vous laisse choisir ce que vous voulez stocker et partager.",
-        "description": "Drive n'accède pas à vos données personnelles ou à vos fichiers à des fins publicitaires, mais est conçu pour vous redonner le contrôle de vos fichiers et vous protéger des sociétés de collecte de données et de publicité.",
-        "cta": "Reprendre le contrôle de mes fichiers"
-      },
-      "square2": {
-        "title": "Avec Photos, la confidentialité est toujours au premier plan.",
-        "description": "Photos a été conçu et développé pour vous aider à conserver une galerie synchronisée de vos meilleurs moments et vous permettre de choisir avec qui vous souhaitez les partager.",
-        "cta": "Commencer à synchroniser mes photos"
-      },
-      "square3": {
-        "title": "Envoyez en toute sécurité.",
-        "description": "Send vous permet de chiffrer et de partager rapidement des fichiers de grande taille sans avoir à vous soucier de la sécurité de vos documents, images ou vidéos. Envoyez des fichiers à n'importe qui en toute confidentialité.",
-        "cta": "Envoyer un fichier chiffré"
-      }
-    },
-    "FaqSection": {
-      "title": "Questions ? Nous avons les réponses",
-      "faq": [
-        {
-          "question": "Le stockage sur le cloud d'Internxt est-il sécurisé ?",
-          "answer": [
-            "Internxt Drive est un service de stockage de fichiers à connaissance nulle, conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données personnelles ou à vos fichiers à des fins publicitaires, mais il est conçu pour vous redonner le contrôle de vos fichiers et vous protéger des sociétés de collecte de données et de publicité."
-          ]
-        },
-        {
-          "question": "Quel est le stockage en nuage le plus privé?",
-          "answer": [
-            "De nombreux de services en ligne affirment que leur service est privé, mais Internxt va encore plus loin. Internxt est un service de stockage de fichiers à connaissance nulle, conçu pour une confidentialité absolue et une sécurité renforcée. Internxt ne peut pas accéder à vos données stockées dans le nuage."
-          ]
-        },
-        {
-          "question": "Internxt est-il privé ?",
-          "answer": [
-            "Contrairement à certains de nos concurrents, nous ne fonctionnons pas sur la base de la publicité ou de la collecte de données. Vos données vous appartiennent exclusivement. Nous donnons la priorité à votre vie privée et à la sécurité de vos fichiers et de vos photos. En utilisant Internxt, vous pouvez être sûr que vous êtes en sécurité."
-          ]
-        }
-      ]
+      "signature": { "line1": "Fran Villalba Segarra,", "line2": "Fondateur et PDG d'Internxt" }
     }
+  },
+  "FeatureSection": {
+    "title": "Internxt protège la confidentialité des utilisateurs",
+    "description": "Nous prenons la confidentialité et la sécurité extrêmement au sérieux, c'est pourquoi nous avons mis en place une pile de technologies et de protocoles pour toujours garantir que vos données restent sûres et privées.",
+    "cards": {
+      "openSource": {
+        "title": "Code open-source",
+        "description": "Chaque bit de notre code est open-source et publié sur GitHub. Tous nos systèmes sont rendus publics et peuvent être authentifiés de manière indépendante. Vérifiez par vous-même."
+      },
+      "endToEnd": {
+        "title": "Chiffrement de bout en bout",
+        "description": "Toutes les données que vous stockez avec Internxt sont chiffrées de bout en bout avec AES-256. Cela signifie que le processeur le plus puissant au monde aurait besoin de deux fois l'âge de l'univers pour déchiffrer même un petit fichier."
+      },
+      "zeroKnowledge": {
+        "title": "Technologie sans connaissance",
+        "description": "À aucun moment les fichiers, photos, mots de passe ou toute autre donnée brute non chiffrée ne sont visibles par des utilisateurs ou serveurs non autorisés. Vous avez toujours le contrôle total de qui obtient l'accès."
+      },
+      "gdpr": {
+        "title": "Synchronisation conforme au RGPD",
+        "description": "Nous nous conformons désormais à toutes les dispositions du RGPD, telles que le droit à la confidentialité, le droit à l'information et le droit à l'oubli, parmi tant d'autres, et nous nous engageons à respecter toutes les dispositions futures."
+      },
+      "noUnwantedAccess": {
+        "title": "Aucun accès non désiré aux données",
+        "description": "Tout ce que vous stockez ou partagez est chiffré avant de quitter votre appareil, ce qui rend impossible le déchiffrement sans permission. Nous ne pouvons même pas accéder à vos fichiers, photos ou mots de passe."
+      },
+      "freeTools": {
+        "title": "Outils gratuits pour la confidentialité en ligne",
+        "description": "Nous voulons que tout le monde soit plus en sécurité en ligne, que vous vous abonniez à nos services ou non, et c'est pourquoi nous avons créé plusieurs outils en ligne gratuits que chacun peut utiliser pour se protéger lors de la navigation sur le web."
+      }
+    }
+  },
+  "InxtAppsSection": {
+    "title": {
+      "line1": "Applications conçues pour protéger",
+      "line2": "vos informations"
+    },
+    "subtitle": "Les produits gratuits des grandes entreprises technologiques ne sont pas vraiment gratuits, vous payez avec vos données personnelles. Nos produits ne monnayeront jamais vos informations ni ne vendront vos données. Quand nous disons gratuit, nous le pensons vraiment.",
+    "square1": {
+      "title": "Drive vous permet de choisir ce que vous souhaitez stocker et partager",
+      "description": "Drive n'accède pas à vos données personnelles ou fichiers, il a été conçu dès le départ pour vous redonner le contrôle de vos fichiers et vous protéger contre les collecteurs de données et les entreprises de publicité. Protégez votre stockage.",
+      "cta": "Reprenez le contrôle de vos fichiers"
+    },
+    "square2": {
+      "title": "Avec Photos, la confidentialité est toujours au centre",
+      "description": "Photos a été développé pour vous aider à garder une galerie synchronisée de vos moments les plus parfaits sans craindre pour votre confidentialité et sans vous inquiéter de la perte soudaine de données. Souvenirs sauvegardés, en toute sécurité.",
+      "cta": "Synchronisez vos photos et souvenirs"
+    },
+    "square3": {
+      "title": "Envoyez en toute certitude",
+      "description": "Send vous permet de chiffrer et de partager de gros fichiers sans vous soucier de la sécurité de vos documents, images ou vidéos. Transférez en toute confidentialité.",
+      "cta": "Envoyer un fichier chiffré"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Le stockage cloud d'Internxt est-il sécurisé ?",
+        "answer": [
+          "Internxt Drive est un service de stockage de fichiers sans connaissance conçu pour une confidentialité absolue et une sécurité stricte. Notre service n'accède pas à vos données personnelles ou fichiers à des fins publicitaires, il est conçu pour vous redonner le contrôle de vos fichiers et vous protéger contre les entreprises de collecte de données et de publicité."
+        ]
+      },
+      {
+        "question": "Quel est le stockage cloud le plus privé ?",
+        "answer": [
+          "De nombreux fournisseurs cloud affirment que leur service est privé, mais Internxt va encore plus loin. Internxt est un service de stockage de fichiers sans connaissance conçu pour une confidentialité absolue et une sécurité stricte. Internxt ne peut pas accéder à vos données stockées dans le cloud."
+        ]
+      },
+      {
+        "question": "Internxt est-il privé ?",
+        "answer": [
+          "Contrairement à certains de nos concurrents, nous ne fonctionnons pas sur la base de la publicité ou de la collecte de données. Vos données vous appartiennent exclusivement. Nous donnons la priorité à votre sécurité, à votre confidentialité et à la sécurité de vos fichiers et photos. Avec Internxt, vous pouvez être sûr d'être en sécurité."
+        ]
+      }
+    ]
+  },
+  "SecuritumSection": {
+    "title": "Internxt réussit avec succès l'audit de sécurité indépendant",
+    "subtitle": "Lisez les rapports complets des audits de sécurité :",
+    "links": {
+      "desk": "Audit de sécurité de l'application de bureau Internxt",
+      "web": "Audit de sécurité de l'application Web Internxt",
+      "mobile": "Audit de sécurité de l'application mobile Internxt"
+    }
+  },
+  "BetterTomorrowSection": {
+    "title": "Militez pour un avenir meilleur",
+    "description": "Il est temps de prendre votre confidentialité en main. Nous encourageons tout le monde à devenir proactif dans sa propre protection. En savoir plus sur le droit à la vie privée. Impliquez-vous avec notre liste de répertoires d'organisations réputées défendant les droits numériques.",
+    "cta": "Annuaire des organisations de droits numériques"
+  },
+  "CtaSection": {
+    "title": "Essayez Internxt sans risque",
+    "description": "Protégez ce qui est vraiment important avec le stockage cloud sécurisé, privé et chiffré d'Internxt.",
+    "cta": "Sélectionnez un plan maintenant"
   }
 }

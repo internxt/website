@@ -1,7 +1,7 @@
 {
   "mostPopular": "Le plus populaire",
   "mostPopularPlan": "Le plus populaire",
-  "save": "Économisez jusqu'à",
+  "save": "Économisez ",
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "planTitles": {
@@ -43,7 +43,7 @@
     "semiannually": "/semiannually",
     "annually": "/an"
   },
-  "perUserSlash": "/utilisateur",
+  "perUserSlash": "Par utilisateur/",
   "perUser": "Par utilisateur",
   "users": "utilisateurs",
   "freePlan": "Gratuit",
@@ -91,6 +91,23 @@
       "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
       "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Jusqu'à ",
+        "bold": "4 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      },
+      "year": {
+        "normal": "Jusqu'à ",
+        "bold": "3 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      },
+      "month": {
+        "normal": "Jusqu'à ",
+        "bold": "2 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      }
+    },
     "individuals": {
       "200GB": [
         "Partage chiffré de fichiers et de dossiers",
@@ -134,7 +151,8 @@
         "1TB de stockage/utilisateur",
         "Partage de fichiers et dossiers chiffrés",
         "Créer et gérer des utilisateurs et des équipes",
-        "Créer jusqu'à 5 équipes",
+        "À partir de 3 utilisateurs et jusqu'à 10",
+        "Conforme au RGPD",
         "Télécharger des fichiers jusqu'à 5GB",
         "Gérer la facturation et les paiements du compte",
         "Support client premium"
@@ -143,7 +161,8 @@
         "2TB de stockage/utilisateur",
         "Partage de fichiers et dossiers chiffrés",
         "Créer et gérer des utilisateurs et des équipes",
-        "Créer jusqu'à 25 équipes",
+        "À partir de 3 utilisateurs et jusqu'à 100",
+        "Conforme au RGPD",
         "Télécharger des fichiers jusqu'à 20GB",
         "Gérer la facturation et les paiements du compte",
         "Support client premium"

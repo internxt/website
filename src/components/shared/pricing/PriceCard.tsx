@@ -48,7 +48,7 @@ export const PriceCard = ({
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
 
-  const cardLabel = productCardPlan === 'business' ? `${contentText.businessLabels[storage]} ${label}` : `${label}`;
+  const cardLabel = productCardPlan === 'business' ? `${contentText.businessLabels[storage]}` : `${label}`;
 
   return (
     <div

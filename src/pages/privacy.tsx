@@ -14,68 +14,49 @@ import InxtAppsSection from '@/components/privacy/InxtAppsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import BetterTomorrowSection from '@/components/privacy/BetterTomorrowSection';
 import FeatureSection from '@/components/privacy/FeatureSection';
-import HeroSection2 from '@/components/privacy/HeroSection2';
-import ManifestoSection2 from '@/components/privacy/ManifestoSection2';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { PrivacyText } from '@/assets/types/privacy';
 
-const newDesignLang = ['en', 'es', 'zh-tw'];
+interface PrivacyProps {
+  metatagsDescriptions: MetatagsDescription[];
+  textContent: PrivacyText;
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
+  lang: string;
+}
 
-const Privacy = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
+const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, lang }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy');
   const langForLink = lang === 'en' ? '' : lang;
   const CTA_URL = `https://internxt.com/${langForLink}/pricing`;
 
   return (
     <>
-      {newDesignLang.includes(lang) ? (
-        <>
-          <Script type="application/ld+json" strategy="beforeInteractive">
-            {sm_faq(langJson.FaqSection.faq)}
-          </Script>
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_faq(textContent.FaqSection.faq)}
+      </Script>
 
-          <Script type="application/ld+json" strategy="beforeInteractive">
-            {sm_breadcrumb('Privacy', 'privacy')}
-          </Script>
-        </>
-      ) : (
-        <>
-          <Script type="application/ld+json" strategy="beforeInteractive">
-            {sm_faq(langJson.ManifestoSection.FaqSection.faq)}
-          </Script>
-
-          <Script type="application/ld+json" strategy="beforeInteractive">
-            {sm_breadcrumb('Privacy', 'privacy')}
-          </Script>
-        </>
-      )}
+      <Script type="application/ld+json" strategy="beforeInteractive">
+        {sm_breadcrumb('Privacy', 'privacy')}
+      </Script>
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
-        {newDesignLang.includes(lang) ? (
-          <>
-            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-            <HeroSection textContent={langJson.HeroSection} />
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-            <FileParallaxSection />
+        <FileParallaxSection />
 
-            <ManifestoSection textContent={langJson.ManifestoSection} />
+        <ManifestoSection textContent={textContent.ManifestoSection} />
 
-            <FeatureSection textContent={langJson.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-            <InxtAppsSection textContent={langJson.InxtAppsSection} lang={lang} />
+        <InxtAppsSection textContent={textContent.InxtAppsSection} lang={lang} />
 
-            <SecuritumSection textContent={langJson.SecuritumSection} />
+        <SecuritumSection textContent={textContent.SecuritumSection} />
 
-            <BetterTomorrowSection textContent={langJson.BetterTomorrowSection} lang={lang} />
+        <BetterTomorrowSection textContent={textContent.BetterTomorrowSection} lang={lang} />
 
-            <CtaSection textContent={langJson.CtaSection} url={CTA_URL} />
-          </>
-        ) : (
-          <div className="overflow-hidden">
-            <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed={false} darkMode />
-            <HeroSection2 textContent={langJson.HeroSection} />
-
-            <ManifestoSection2 textContent={langJson.ManifestoSection} lang={lang} />
-          </div>
-        )}
+        <CtaSection textContent={textContent.CtaSection} url={CTA_URL} />
 
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
@@ -87,7 +68,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/privacy.json`);
+  const textContent = require(`@/assets/lang/${lang}/privacy.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -97,7 +78,7 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       metatagsDescriptions,
-      langJson,
+      textContent,
       navbarLang,
       footerLang,
     },

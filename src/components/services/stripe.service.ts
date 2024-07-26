@@ -38,7 +38,7 @@ export interface TransformedProduct {
   price: number;
   currency: string;
   currencyValue: string;
-  interval: string;
+  interval: Interval;
 }
 
 export interface ProductsDataProps {
@@ -162,7 +162,7 @@ async function getLifetimeCoupons() {
   }
 }
 
-const onCheckoutButtonClicked = (
+const redirectToCheckout = (
   planId: string,
   currencyValue: string,
   isCheckoutForLifetime: boolean,
@@ -181,5 +181,5 @@ export const stripeService = {
   getSelectedPrice,
   getCoupon,
   getLifetimeCoupons,
-  onCheckoutButtonClicked,
+  redirectToCheckout,
 };
