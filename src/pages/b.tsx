@@ -1,50 +1,96 @@
-import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
-import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
-import HeroSection from '@/components/home/HeroSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import Footer from '@/components/layout/footers/Footer';
+import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/sections/FaqSection';
+import HeroSection from '@/components/home/HeroSection';
+import SocialProofSection from '@/components/home/SocialProofSection';
+import Footer from '@/components/layout/footers/Footer';
+import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
-import cookies from '@/lib/cookies';
-import { useRouter } from 'next/router';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
+import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
+import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
+import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
+import { CouponType } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/components/services/stripe.service';
+import { useState } from 'react';
 
-const HomePageV2 = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+interface HomeProps {
+  lang: string;
+  metatagsDescriptions: Record<string, any>;
+  navbarLang: Record<string, any>;
+  textContent: Record<string, any>;
+  footerLang: Record<string, any>;
+}
+
+const Home = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const router = useRouter();
 
-  const navbarCta = 'chooseStorage';
+  const navbarCta = 'default';
+  const marqueeBgColor = 'bg-gray-1';
 
-  const marqueeBgColor = 'bg-white';
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
+    couponCode: CouponType.AllPlansCoupon,
+  });
+  const [isBusiness, setIsBusiness] = useState<boolean>();
+
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    stripeService.onCheckoutButtonClicked(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+  };
+
+  const onBusinessPlansTabSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
 
   const onChooseStorageButtonClicked = () => {
-    router.push('/pricing');
+    window.location.hash = '#priceTable';
   };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} isHomePageV2={true} />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
       <ChooseStorageSizeSection
-        textContent={langJson.ChooseStorageSizeSection}
+        textContent={textContent.ChooseStorageSizeSection}
         onButtonClicked={onChooseStorageButtonClicked}
       />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+      <TestimonialsSection textContent={textContent.TestimonialsSection} />
 
       <div className={`${marqueeBgColor} py-10`}>
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
+      <FirstFeaturesSection textContent={textContent.FirstFeaturesSection} lang={lang} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+      <SecondFeaturesSection textContent={textContent.SecondFeaturesSection} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+      <PricingSectionWrapper
+        textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: 0.2,
+        }}
+        lang={lang}
+        hideBusinessCards={true}
+        products={products}
+        loadingCards={loadingCards}
+        onBusinessPlansSelected={onBusinessPlansTabSelected}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+      />
+
+      <FirstWhatWeDoSection textContent={textContent.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
+
+      <SecondWhatWeDoSection textContent={textContent.SecondWhatWeDoSection} lang={lang} />
+
+      <FAQSection textContent={textContent.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
+
+      <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -55,7 +101,7 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/home.json`);
+  const textContent = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -65,11 +111,11 @@ export async function getServerSideProps(ctx) {
     props: {
       lang,
       metatagsDescriptions,
-      langJson,
+      textContent,
       navbarLang,
       footerLang,
     },
   };
 }
 
-export default HomePageV2;
+export default Home;
