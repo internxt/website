@@ -4,6 +4,7 @@
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
+  "save": "Save ",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -88,6 +89,23 @@
       "2TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Up to ",
+        "bold": "4x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "year": {
+        "normal": "Up to ",
+        "bold": "3x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "month": {
+        "normal": "Up to ",
+        "bold": "2x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      }
     },
     "individuals": {
       "200GB": [

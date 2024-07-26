@@ -32,7 +32,7 @@ export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14 pb-20">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 py-14 pb-20">
             {products?.individuals?.['year'] &&
               products.individuals['year'].map((product: any) => {
                 return (

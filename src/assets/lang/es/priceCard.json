@@ -91,6 +91,23 @@
       "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
       "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Hasta ",
+        "bold": "4 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      },
+      "year": {
+        "normal": "Hasta ",
+        "bold": "3 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      },
+      "month": {
+        "normal": "Hasta ",
+        "bold": "2 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      }
+    },
     "individuals": {
       "200GB": [
         "Compartir archivos y carpetas cifrados",
