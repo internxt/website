@@ -81,22 +81,16 @@ export default function PriceCard({
     }
   }
 
-  const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product * 0.25).toFixed(2));
-    const priceString = priceWithDiscount.toString();
-
-    if (!priceString.includes('.')) {
-      return priceString + '.00';
+  const priceForSubscriptions = (price: string) => {
+    if (price.split('.')[1].includes('00')) {
+      return price.split('.')[0];
     }
 
-    if (priceString.split('.')[1].length === 1) {
-      return priceString + '0';
-    }
-
-    return priceString;
+    return price;
   };
 
-  const formattedPrice = price;
+  const formattedPrice = isOffer ? priceForSubscriptions(price.toString()) : price;
+  const formattedPriceBefore = isOffer && priceBefore ? priceForSubscriptions(priceBefore.toString()) : price;
 
   const getPlanStorage = (storage) => {
     if (isLifetimePage) {
@@ -151,7 +145,7 @@ export default function PriceCard({
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">{priceBefore}</span>
+            <span className="price text-2xl font-medium">{formattedPriceBefore}</span>
           </p>
 
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
