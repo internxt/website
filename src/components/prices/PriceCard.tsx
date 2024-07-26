@@ -167,7 +167,7 @@ export default function PriceCard({
           <div className="flex flex-row gap-2 text-green">
             <Coins size={24} />
             <p className="font-bold">
-              {contentText.save} {priceBefore && Number(priceBefore - price).toFixed(2)} €
+              {contentText.save + ' '} {priceBefore && priceForSubscriptions(Number(priceBefore - price).toFixed(2))} €
             </p>
           </div>
         ) : undefined}
