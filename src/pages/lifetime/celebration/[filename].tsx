@@ -48,7 +48,7 @@ const IMAGES_PER_PATH = {
   },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
