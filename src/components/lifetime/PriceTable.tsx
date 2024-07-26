@@ -133,7 +133,7 @@ const PriceTable = ({
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-16">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-16">
             {lifetimeProducts
               ? lifetimeProducts.map((product: any) => {
                   return (

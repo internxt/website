@@ -26,11 +26,13 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Get ",
-      "blue1": " ${{storage}} ",
-      "normal2": "of The Most Secure Cloud Storage at ",
-      "blue2": "80% OFF"
+      "blue2": "80% OFF ",
+      "normal2": "of the most secure cloud storage"
     },
-    "offerEnds": "Offer ends in:"
+    "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
+    "features": ["The most secure cloud storage", "Cheaper than alternatives", "30-day money-back guarantee"],
+    "offerEnds": "Offer ends in:",
+    "howMuchStorage": "How much online storage do you need?"
   },
   "tableSection": {
     "ctaBanner": {
@@ -249,7 +251,7 @@
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Select plan",
+    "cta": "Introducing the Internxt Team",
     "cards": [
       {
         "title": "Private by design",

@@ -3,7 +3,7 @@
     "title": "Ottieni un piano Internxt a vita!",
     "description": "Metti al sicuro tutti i tuoi file e i tuoi ricordi per sempre con un unico pagamento",
     "maintenance": "Tariffa di manutenzione aggiuntiva dopo 9 anni di utilizzo",
-    "cta1": "Ottieni il 70% di sconto",
+    "cta1": "Ottieni il ${{percent}}% di sconto",
     "cta2": "Vedi le offerte a vita",
     "guarantee": "Garanzia di rimborso di 30 giorni",
     "celebration": {

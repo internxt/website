@@ -38,7 +38,7 @@ export interface TransformedProduct {
   price: number;
   currency: string;
   currencyValue: string;
-  interval: string;
+  interval: Interval;
 }
 
 export interface ProductsDataProps {

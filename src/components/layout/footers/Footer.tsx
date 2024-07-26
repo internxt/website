@@ -8,6 +8,7 @@ import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import moment from 'moment';
+import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 
 export default function Footer({
@@ -21,7 +22,9 @@ export default function Footer({
   hideNewsletter?: boolean;
   darkMode?: boolean;
 }>) {
+  const [email, setEmail] = useState('');
   const [platforms, setPlatforms] = useState<any>();
+
   const year = moment().format('YYYY');
 
   useEffect(() => {
@@ -31,6 +34,22 @@ export default function Footer({
       setPlatforms(res.data.platforms);
     });
   }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    await axios
+      .post(`api/subscribe`, {
+        email,
+        groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
+      })
+      .then(() => {
+        notificationService.openSuccessToast('Successfully submitted');
+      })
+      .catch((err) => {
+        notificationService.openErrorToast('Something went wrong!');
+      });
+  };
 
   return (
     <section
@@ -93,17 +112,18 @@ export default function Footer({
             </div>
 
             <form
-              data-code="r3s4c1"
+              data-code="Frjj25"
               method="post"
               target="_blank"
               rel="noopener"
-              action="https://app.mailerlite.com/webforms/submit/r3s4c1"
+              onSubmit={handleSubmit}
               className="flex w-full flex-col items-center justify-center md:flex-row"
             >
               <input type="hidden" name="ml-submit" value="1" />
               <input
                 name="fields[email]"
                 type="email"
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder={`${textContent.NewsletterSection.input}`}
                 className={`flex h-auto w-full flex-row rounded-lg px-4 py-3 text-lg outline-none sm:py-2 sm:text-base md:w-64 ${
                   darkMode

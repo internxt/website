@@ -1,22 +1,15 @@
-import cookies from '@/lib/cookies';
+import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
+import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
+import HeroSection from '@/components/home/HeroSection';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
+import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import HeroSection from '@/components/home/HeroSection';
-import SocialProofSection from '@/components/home/SocialProofSection';
-import Footer from '@/components/layout/footers/Footer';
-import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
-import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import FirstFeaturesSection from '@/components/home/FirstFeaturesSection';
-import SecondFeaturesSection from '@/components/home/SecondFeaturesSection';
-import FirstWhatWeDoSection from '@/components/home/FirstWhatWeDoSection';
-import SecondWhatWeDoSection from '@/components/home/SecondWhatWeDoSection';
-import { CouponType } from '@/lib/types';
-import usePricing from '@/hooks/usePricing';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/components/services/stripe.service';
-import { useState } from 'react';
+import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import cookies from '@/lib/cookies';
+import { useRouter } from 'next/router';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
@@ -29,7 +22,11 @@ interface HomePageProps {
 }
 
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomePageProps): JSX.Element => {
+const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const router = useRouter();
+
+  const navbarCta = 'chooseStorage';
 
   const navbarCta = 'default';
   const marqueeBgColor = 'bg-gray-1';
@@ -44,19 +41,17 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  const onBusinessPlansTabSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
+  const marqueeBgColor = 'bg-white';
 
   const onChooseStorageButtonClicked = () => {
-    window.location.hash = '#priceTable';
+    router.push('/pricing');
   };
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={lang} />
+      <HeroSection textContent={textContent.HeroSection} lang={lang} isHomePageV2={true} />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}
@@ -69,30 +64,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <FirstFeaturesSection textContent={textContent.FirstFeaturesSection} lang={lang} />
+      <FeatureSectionV2 textContent={textContent.FeatureSectionV2} />
 
-      <SecondFeaturesSection textContent={textContent.SecondFeaturesSection} lang={lang} />
+      <FAQSection textContent={textContent.FaqSection} />
 
-      <PricingSectionWrapper
-        textContent={textContent.tableSection}
-        decimalDiscount={{
-          individuals: 0.2,
-        }}
-        lang={lang}
-        hideBusinessCards={true}
-        products={products}
-        loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansTabSelected}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-      />
-
-      <FirstWhatWeDoSection textContent={textContent.FirstWhatWeDoSection} lang={lang} backgroundColor="bg-gray-1" />
-
-      <SecondWhatWeDoSection textContent={textContent.SecondWhatWeDoSection} lang={lang} />
-
-      <FAQSection textContent={textContent.FaqSection} bgColor="bg-gray-1" cardColor="bg-white" />
-
-      <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
+      <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
@@ -120,4 +96,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default HomePage;
+export default HomePageV2;

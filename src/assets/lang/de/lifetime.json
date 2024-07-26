@@ -3,7 +3,7 @@
     "title": "Hole dir einen lebenslangen Internxt-Plan!",
     "description": "Sichere alle deine Dateien und Erinnerungen für immer mit einer einmaligen Zahlung.",
     "maintenance": "Zuzüglich Wartungsgebühr nach 9 Jahren Nutzung",
-    "cta1": "Jetzt 70% Rabatt",
+    "cta1": "Jetzt ${{percent}}% Rabatt",
     "cta2": "Angebote für lebenslange Pläne durchsuchen",
     "celebration": {
       "title": "Sagen Sie ciao zu Ihrem lebenslangen Internxt-Angebot",

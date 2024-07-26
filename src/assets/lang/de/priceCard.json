@@ -1,7 +1,7 @@
 {
   "mostPopular": "Am beliebtesten",
   "mostPopularPlan": "Beliebtester Plan",
-  "save": "Spare bis zu",
+  "save": "Sparen Sie",
   "valentines": "Spezielles Valentinstag-Angebot!",
   "onlyForNewClients": "Nur für neue Abonnenten oder Benutzer des kostenlosen Tarifs",
   "planTitles": {
@@ -91,6 +91,23 @@
       "2TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Bis zu ",
+        "bold": "4-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      },
+      "year": {
+        "normal": "Bis zu ",
+        "bold": "3-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      },
+      "month": {
+        "normal": "Bis zu ",
+        "bold": "2-mal günstiger ",
+        "normal2": "als andere sichere Cloud-Speicher-Alternativen"
+      }
     },
     "individuals": {
       "200GB": [
