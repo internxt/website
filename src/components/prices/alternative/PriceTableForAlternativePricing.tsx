@@ -47,11 +47,11 @@ export const PriceTableForAlternativePricing = ({
             </p>
             <p className="max-w-[550px] text-xl text-gray-80">{textContent.description}</p>
           </div>
-          <div className="flex flex-row flex-wrap items-center justify-center gap-32">
+          <div className="flex flex-row flex-wrap items-center gap-10 sm:justify-center md:gap-20 lg:gap-32">
             {iconsFeatures.map((Icon, index) => (
-              <div className="flex flex-row items-center gap-6">
+              <div key={textContent.features[index]} className="flex flex-row gap-6 md:items-center">
                 <Icon size={40} className="text-primary" />
-                <p className="text-xl font-medium text-gray-100">{textContent.features[index]}</p>
+                <p className="pt-1 text-xl font-medium text-gray-100 md:pt-0">{textContent.features[index]}</p>
               </div>
             ))}
           </div>
@@ -60,19 +60,11 @@ export const PriceTableForAlternativePricing = ({
         <div className="flex w-screen border border-gray-10" />
 
         <div className="flex flex-col items-center gap-4 pt-10">
-          <p className="text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
+          <p className="text-center text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
           <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 p-0.5">
-            {/* <button
-              type="button"
-              onClick={() => {}}
-              className={`rounded-lg py-0.5 px-6 font-semibold ${
-                activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-              }`}
-            >
-              {textContent.billingFrequency.individual}
-            </button> */}
             {availableStorage?.map((plan) => (
               <button
+                key={plan.priceId}
                 type="button"
                 onClick={() => {
                   handleOnPlanButtonClicked(plan.storage);

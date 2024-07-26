@@ -55,8 +55,6 @@ export default function PriceCard({
     year: 'annually',
   };
 
-  console.log(coupon);
-
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
 
   function onCheckoutButtonClicked() {
@@ -98,7 +96,7 @@ export default function PriceCard({
     return priceString;
   };
 
-  const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
+  const formattedPrice = price;
 
   const getPlanStorage = (storage) => {
     if (isLifetimePage) {
@@ -172,9 +170,9 @@ export default function PriceCard({
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
         {isOffer ? (
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 text-green">
             <Coins size={24} />
-            <p className="font-bold text-green">
+            <p className="font-bold">
               {contentText.save} {priceBefore && Number(priceBefore - price).toFixed(2)} €
             </p>
           </div>
@@ -185,11 +183,11 @@ export default function PriceCard({
           <>
             <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
               <p className={`text-center text-white`}>
-                {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].normal}{' '}
+                {contentText.productFeatures.cheaperThan[billingFrequency as string].normal}{' '}
                 <span className="font-bold">
-                  {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].bold}
+                  {contentText.productFeatures.cheaperThan[billingFrequency as string].bold}
                 </span>
-                {contentText.productFeatures.individuals.cheaperThan[billingFrequency as string].normal2}
+                {contentText.productFeatures.cheaperThan[billingFrequency as string].normal2}
               </p>
               {/* {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
               <div

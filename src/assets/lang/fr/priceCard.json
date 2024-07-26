@@ -91,6 +91,23 @@
       "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
       "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Jusqu'à ",
+        "bold": "4 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      },
+      "year": {
+        "normal": "Jusqu'à ",
+        "bold": "3 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      },
+      "month": {
+        "normal": "Jusqu'à ",
+        "bold": "2 fois moins cher ",
+        "normal2": "que les autres alternatives de stockage cloud sécurisé"
+      }
+    },
     "individuals": {
       "200GB": [
         "Partage chiffré de fichiers et de dossiers",

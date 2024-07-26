@@ -5,7 +5,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { PriceTableForAlternativePricing } from '@/components/prices/alternative/PriceTableForAlternativePricing';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
@@ -14,7 +14,7 @@ import usePricing from '@/hooks/usePricing';
 import { CouponType } from '@/lib/types';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PricingAlternativeProps {
   metaDescriptions: Record<string, any>;
@@ -86,7 +86,6 @@ const PricingAlternative = ({
   footerContent,
   lang,
 }: PricingAlternativeProps) => {
-  const [allCoupons, setAllCoupons] = useState<any>();
   const { products, coupon, currency, currencyValue } = usePricing({
     couponCode: CouponType.AllPlansCoupon,
   });
@@ -94,10 +93,8 @@ const PricingAlternative = ({
   const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>('2TB');
   const [filteredProducts, setFilteredProducts] = useState<any[]>();
 
-  const buttonRef = useRef<HTMLDivElement>(null);
   const metatagsDescriptions = metaDescriptions.filter((meta) => meta.id === 'pricing')[0];
 
-  const shouldShowAllComponents = !!selectedPlanStorage;
   const locale = lang as string;
 
   const { cardsData } = getCardsContent(textContent);
@@ -123,13 +120,6 @@ const PricingAlternative = ({
   // }, []);
 
   useEffect(() => {
-    stripeService.getLifetimeCoupons().then((coupons) => {
-      setAllCoupons({
-        lifetime: coupons,
-        subscription: coupon,
-      });
-    });
-
     const productsFilteredByStorage =
       concatenatedProducts &&
       concatenatedProducts.filter((product: { storage: string }) => product.storage === selectedPlanStorage)?.reverse();
@@ -170,7 +160,6 @@ const PricingAlternative = ({
         textContent={textContent.InfoSection}
         lang={locale}
         cards={cardsData}
-        redirect="#priceTable"
         // buttonComponent={
         //   <>
         //     <div ref={buttonRef} className=""></div>

@@ -90,24 +90,24 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
-    "individuals": {
-      "cheaperThan": {
-        "lifetime": {
-          "normal": "Up to ",
-          "bold": "4x cheaper ",
-          "normal2": "than other secure cloud storage alternatives"
-        },
-        "year": {
-          "normal": "Up to ",
-          "bold": "3x cheaper ",
-          "normal2": "than other secure cloud storage alternatives"
-        },
-        "month": {
-          "normal": "Up to ",
-          "bold": "2x cheaper ",
-          "normal2": "than other secure cloud storage alternatives"
-        }
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Up to ",
+        "bold": "4x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
       },
+      "year": {
+        "normal": "Up to ",
+        "bold": "3x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "month": {
+        "normal": "Up to ",
+        "bold": "2x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      }
+    },
+    "individuals": {
       "200GB": [
         "Encrypted file and folder sharing",
         "Password-protected file sharing",

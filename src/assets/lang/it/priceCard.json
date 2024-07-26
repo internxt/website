@@ -92,6 +92,23 @@
       "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
       "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
     },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Fino a ",
+        "bold": "4 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "year": {
+        "normal": "Fino a ",
+        "bold": "3 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "month": {
+        "normal": "Fino a ",
+        "bold": "2 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      }
+    },
     "individuals": {
       "200GB": [
         "Condivisione crittografata di file e cartelle",
