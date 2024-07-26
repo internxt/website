@@ -59,23 +59,25 @@ export const PriceTableForAlternativePricing = ({
 
         <div className="flex w-screen border border-gray-10" />
 
-        <div className="flex flex-col items-center gap-4 pt-10">
-          <p className="text-center text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
-          <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 p-0.5">
-            {availableStorage?.map((plan) => (
-              <button
-                key={plan.priceId}
-                type="button"
-                onClick={() => {
-                  handleOnPlanButtonClicked(plan.storage);
-                }}
-                className={`rounded-lg py-0.5 px-6 font-semibold ${
-                  plan.storage === selectedPlanStorage ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
-                }`}
-              >
-                {plan.storage}
-              </button>
-            ))}
+        <div className="flex flex-col items-center gap-12 pt-10">
+          <div className="flex flex-col items-center gap-6">
+            <p className="text-center text-4xl font-semibold text-gray-100">{textContent.howMuchStorage}</p>
+            <div id="billingButtons" className="flex w-max flex-row rounded-lg bg-cool-gray-10 p-0.5">
+              {availableStorage?.map((plan) => (
+                <button
+                  key={plan.priceId}
+                  type="button"
+                  onClick={() => {
+                    handleOnPlanButtonClicked(plan.storage);
+                  }}
+                  className={`rounded-lg py-0.5 px-6 font-semibold ${
+                    plan.storage === selectedPlanStorage ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+                  }`}
+                >
+                  {plan.storage}
+                </button>
+              ))}
+            </div>
           </div>
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
             {filteredProducts
