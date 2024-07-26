@@ -2,6 +2,7 @@ import { ClockCounterClockwise, HandCoins, ShieldCheck } from '@phosphor-icons/r
 import PriceCard from '../PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { TransformedProduct } from '@/components/services/stripe.service';
+import FreePlanCard from '../FreePlanCard';
 
 interface PriceTableForAlternativePricingProps {
   textContent: Record<string, any>;
@@ -13,6 +14,7 @@ interface PriceTableForAlternativePricingProps {
   coupons: Record<string, any>;
   currencyValue: string;
   handleOnPlanButtonClicked: (plan: string) => void;
+  showFreeCard?: boolean;
   availableStorage?: TransformedProduct[];
 }
 
@@ -31,10 +33,12 @@ export const PriceTableForAlternativePricing = ({
   availableStorage,
   currency,
   coupons,
+  showFreeCard,
   currencyValue,
   handleOnPlanButtonClicked,
 }: PriceTableForAlternativePricingProps): JSX.Element => {
   const iconsFeatures = [ShieldCheck, HandCoins, ClockCounterClockwise];
+  const priceText = require(`@/assets/lang/${lang}/pricing.json`);
 
   return (
     <section id={'priceTable'} className="overflow-hidden py-20 px-5">
@@ -79,31 +83,38 @@ export const PriceTableForAlternativePricing = ({
               ))}
             </div>
           </div>
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
-            {filteredProducts
-              ? filteredProducts?.map((product: TransformedProduct) => (
-                  <PriceCard
-                    planType="individual"
-                    key={product.interval}
-                    storage={product.storage}
-                    price={(product.price * discount).toFixed(2) as unknown as number}
-                    label={CARD_LABEL[product.interval]}
-                    billingFrequency={product.interval}
-                    popular={
-                      product.storage !== '200GB' ? product.interval === 'lifetime' : product.interval === 'year'
-                    }
-                    cta={['checkout', product.priceId]}
-                    priceBefore={product.price}
-                    lang={lang}
-                    currency={currency}
-                    isOffer
-                    coupon={coupons.subscription}
-                    currencyValue={currencyValue}
-                  />
-                ))
-              : Array(3)
-                  .fill(0)
-                  .map(() => <CardSkeleton />)}
+          <div className="flex w-full flex-col gap-5">
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+              {filteredProducts
+                ? filteredProducts?.map((product: TransformedProduct) => (
+                    <PriceCard
+                      planType="individual"
+                      key={product.interval}
+                      storage={product.storage}
+                      price={(product.price * discount).toFixed(2) as unknown as number}
+                      label={CARD_LABEL[product.interval]}
+                      billingFrequency={product.interval}
+                      popular={
+                        product.storage !== '200GB' ? product.interval === 'lifetime' : product.interval === 'year'
+                      }
+                      cta={['checkout', product.priceId]}
+                      priceBefore={product.price}
+                      lang={lang}
+                      currency={currency}
+                      isOffer
+                      coupon={coupons.subscription}
+                      currencyValue={currencyValue}
+                    />
+                  ))
+                : Array(3)
+                    .fill(0)
+                    .map(() => <CardSkeleton />)}
+            </div>
+            {showFreeCard ? (
+              <div id="freeAccountCard" className="flex w-full pb-10 md:pb-0">
+                <FreePlanCard textContent={priceText.tableSection.freePlanCard} />
+              </div>
+            ) : undefined}
           </div>
         </div>
       </div>

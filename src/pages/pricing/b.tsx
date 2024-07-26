@@ -151,6 +151,7 @@ const PricingAlternative = ({
           currency={currency}
           currencyValue={currencyValue}
           filteredProducts={filteredProducts}
+          showFreeCard
         />
       </div>
 
