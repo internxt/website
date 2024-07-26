@@ -108,14 +108,14 @@ export const PriceTableForAlternativePricing = ({
               </div>
             ) : undefined}
           </div>
-          <div className="flex flex-row flex-wrap items-center gap-10 sm:justify-center md:gap-20 lg:gap-32">
-            {iconsFeatures.map((Icon, index) => (
-              <div key={textContent.features[index]} className="flex flex-row gap-6 md:items-center">
-                <Icon size={40} className="text-primary" />
-                <p className="pt-1 text-xl font-medium text-gray-100 md:pt-0">{textContent.features[index]}</p>
-              </div>
-            ))}
-          </div>
+        </div>
+        <div className="flex flex-row flex-wrap items-center gap-10 sm:justify-center md:gap-20 lg:gap-32">
+          {iconsFeatures.map((Icon, index) => (
+            <div key={textContent.features[index]} className="flex flex-row gap-6 md:items-center">
+              <Icon size={40} className="text-primary" />
+              <p className="pt-1 text-xl font-medium text-gray-100 md:pt-0">{textContent.features[index]}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
