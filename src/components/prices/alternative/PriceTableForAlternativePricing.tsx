@@ -84,7 +84,7 @@ export const PriceTableForAlternativePricing = ({
             </div>
           </div>
           <div className="flex w-full flex-col gap-5">
-            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5">
               {filteredProducts
                 ? filteredProducts?.map((product: TransformedProduct) => (
                     <PriceCard

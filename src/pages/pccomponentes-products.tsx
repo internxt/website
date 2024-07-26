@@ -132,7 +132,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-4">
             {products?.individuals?.[billingFrequency] &&
               products.individuals[billingFrequency].map((product: any) => (
                 <PriceCard
@@ -161,7 +161,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-4">
             {products?.individuals?.[Interval.Lifetime] &&
               products.individuals[Interval.Lifetime].map((product: any) => {
                 return (
