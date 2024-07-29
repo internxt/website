@@ -5,7 +5,7 @@ import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import PaymentSection from '@/components/lifetime/PaymentSection';
 import CtaSection from '@/components/lifetime/CtaSection';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { getImage } from '@/lib/getImage';
 import { useRouter } from 'next/router';
@@ -82,12 +82,12 @@ const LifetimeCelebrationTemplate = ({
   };
 
   const couponCode = {
-    canada: CouponType.IndependenceDayItaly,
-    usa: CouponType.IndependenceDayItaly,
-    france: CouponType.Lifetime83DiscountCoupon,
-    belgium: CouponType.Lifetime83DiscountCoupon,
-    switzerland: CouponType.Lifetime83DiscountCoupon,
-    singapore: CouponType.Lifetime83DiscountCoupon,
+    canada: PromoCodeName.IndependenceDayItaly,
+    usa: PromoCodeName.IndependenceDayItaly,
+    france: PromoCodeName.Lifetime83DiscountCoupon,
+    belgium: PromoCodeName.Lifetime83DiscountCoupon,
+    switzerland: PromoCodeName.Lifetime83DiscountCoupon,
+    singapore: PromoCodeName.Lifetime83DiscountCoupon,
   };
 
   const percent = {

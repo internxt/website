@@ -3,7 +3,7 @@ import { checkout } from '@/lib/auth';
 import { analyticsService } from '@/components/services/analytics.service';
 import { stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 export default function SpecialPriceCard({
   planType,
@@ -24,7 +24,7 @@ export default function SpecialPriceCard({
 
   useEffect(() => {
     stripeService
-      .getCoupon(CouponType.AnnualDiscount)
+      .getCoupon(PromoCodeName.AnnualDiscount)
       .then((coupon) => {
         setCoupon(coupon);
       })

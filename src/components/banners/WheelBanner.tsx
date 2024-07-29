@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import WheelComponent from '@/components/banners/components/WheelComponent';
 import { Info, X } from '@phosphor-icons/react';
 import TextInput from '@/components/components/TextInput';
 import { notificationService } from '@/components/Snackbar';
 import { stripeService } from '@/components/services/stripe.service';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 const SHOW_WHEEL_BANNER = 'showWheelBanner';
 
@@ -37,7 +37,7 @@ const WheelBanner = () => {
   useEffect(() => {
     if (result) {
       stripeService
-        .getCoupon(CouponType[COUPON_CODES[result]])
+        .getCoupon(PromoCodeName[COUPON_CODES[result]])
         .then((res) => {
           setCoupon(res);
         })

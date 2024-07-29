@@ -1,7 +1,7 @@
 import PriceTable from './PriceTable';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
 
@@ -11,7 +11,7 @@ interface PaymentSectionProps {
   lang: string;
   textContent: any;
   discount?: number;
-  couponCode?: CouponType;
+  couponCode?: PromoCodeName;
   showPriceBefore?: boolean;
   percent?: string;
   lifetimeMode?: LifetimeMode;

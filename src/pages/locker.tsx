@@ -7,7 +7,7 @@ import Footer from '@/components/layout/footers/Footer';
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
@@ -57,7 +57,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={CouponType.LockerCoupon}
+        couponType={PromoCodeName.LockerCoupon}
         discount={offerDiscount}
         billingFrequency="year"
       />

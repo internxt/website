@@ -3,14 +3,14 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '@/components/prices/PriceCard';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '../services/stripe.service';
 import { LifetimeMode } from './PaymentSection';
 
 interface PriceTableProps {
   lang: string;
   discount?: number;
-  couponCode?: CouponType;
+  couponCode?: PromoCodeName;
   lifetimeMode?: LifetimeMode;
   showPriceBefore?: boolean;
   currencySpecified?: string;

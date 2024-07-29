@@ -8,13 +8,13 @@ import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
 import { useEffect, useState } from 'react';
 import { stripeService } from '@/components/services/stripe.service';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 interface PriceTableProps {
   textContent: any;
   handlePriceCardButton: (planId: string, coupon: string) => void;
   billingFrequency: string;
-  couponType?: CouponType;
+  couponType?: PromoCodeName;
   discount?: number;
   isStartPage?: boolean;
   titleFontSize?: string;

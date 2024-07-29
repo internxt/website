@@ -1,4 +1,4 @@
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { Coins, Fire } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
@@ -13,7 +13,7 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  coupon?: CouponType;
+  coupon?: PromoCodeName;
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;

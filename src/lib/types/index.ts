@@ -73,7 +73,7 @@ export interface CheckIfUserHasSubscriptionResponse {
   hasSubscriptions: boolean;
 }
 
-export enum CouponType {
+export enum PromoCodeName {
   TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
   TwoTBCoupon75 = 'COUPON_SUBSCRIPTION_75_OFF',
   LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
@@ -113,9 +113,16 @@ export enum CouponType {
   PcmagCoupon = 'PCMAG_COUPON',
   CloudwardsCoupon = 'CLOUDWARDS_COUPON',
   OnePlanCoupon = 'ONEPLAN_COUPON',
-  AllPlansCoupon = 'ALL_PLANS_80',
+  AllPlansCoupon = 'PROMOCODE75',
   Lifetime83DiscountCoupon = 'LIFETIME_83_DISCOUNT_COUPON',
   Protect82Coupon = 'PROTECT82_COUPON',
+}
+
+export interface PromoCodeProps {
+  name: PromoCodeName;
+  codeId: string;
+  amountOff?: number;
+  percentOff?: number;
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

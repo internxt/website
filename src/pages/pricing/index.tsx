@@ -23,7 +23,7 @@ import {
 } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
@@ -41,7 +41,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: CouponType.AllPlansCoupon,
+    couponCode: PromoCodeName.AllPlansCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -103,7 +103,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout?.codeId);
   };
 
   return (
