@@ -24,7 +24,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planId: planId,
       mode: 'payment',
       currency: currencyValue,
-      couponCode: coupon ?? undefined,
+      promoCodeId: coupon ?? undefined,
     });
   }
 

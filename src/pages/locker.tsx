@@ -11,18 +11,22 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const { currencyValue } = usePricing({});
-  const offerDiscount = 25;
+  const offerDiscount = 0.25;
+  const { products, loadingCards, currencyValue, coupon } = usePricing({
+    couponCode: PromoCodeName.LockerCoupon,
+  });
 
   function handlePriceCardButton(planId: string, coupon: string) {
     checkout({
       planId: planId,
       mode: 'subscription',
       currency: currencyValue,
-      couponCode: coupon ?? undefined,
+      promoCodeId: coupon ?? undefined,
     });
   }
 
@@ -49,10 +53,28 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
     },
   ];
 
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, coupon?.codeId);
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
       <HeroSection textContent={textContent.HeroSection} />
+
+      <PricingSectionWrapper
+        textContent={textContent.PriceTable}
+        decimalDiscount={{
+          individuals: offerDiscount,
+        }}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        startFromInterval={Interval.Year}
+        hideFreeCard
+        hidePlanSelectorAndSwitch
+      />
 
       <PriceTable
         textContent={textContent.PriceTable}

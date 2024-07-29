@@ -47,7 +47,7 @@ const FreeUserPage = ({
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout?.codeId);
   };
 
   const handleOnButtonClick = () => {

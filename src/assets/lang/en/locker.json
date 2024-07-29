@@ -6,8 +6,15 @@
     "cta": "Choose your plan"
   },
   "PriceTable": {
-    "title": "Annual plans",
-    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
+    "planTitles": { "homePage": "Annual plans" },
+    "planDescription": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with year-long security",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
     "priceCard": {
       "mostPopular": "Most popular",
       "billedAnnually": "Billed annually",
