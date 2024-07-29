@@ -8,7 +8,7 @@ interface PromotionCode {
   percentOff: string;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<PromotionCode> {
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<PromotionCode | void> {
   if (req.method === 'OPTIONS') {
     res.status(200).json({});
   }
