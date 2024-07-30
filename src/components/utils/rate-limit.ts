@@ -1,36 +1,41 @@
-import LRUCache from 'lru-cache';
-import type { NextApiResponse } from 'next';
+const MAX_REQUESTS = 20;
+const WINDOW_MS = 60 * 60 * 1000;
 
-type Options = {
-  uniqueTokenPerInterval?: number;
-  interval?: number;
+interface RateLimitData {
+  count: number;
+  startTime: number;
+}
+
+const getRateLimitData = (path: string): RateLimitData => {
+  const data = localStorage.getItem(path);
+  return data ? JSON.parse(data) : { count: 0, startTime: Date.now() };
 };
 
-export default function rateLimit(options?: Options) {
-  const tokenCache = new LRUCache({
-    max: options?.uniqueTokenPerInterval ?? 500,
-    ttl: options?.interval ?? 60000,
-  });
+const setRateLimitData = (path: string, data: RateLimitData) => {
+  localStorage.setItem(path, JSON.stringify(data));
+};
 
-  return {
-    check: (res: NextApiResponse, limit: number, token: string) =>
-      new Promise<void>((resolve, reject) => {
-        const tokenCount = (tokenCache.get(token) as number[]) || [0];
-        if (tokenCount[0] === 0) {
-          tokenCache.set(token, tokenCount);
-        }
-        tokenCount[0] += 1;
+const rateLimitClientMiddleware = async (
+  path: string,
+  requestFunction: () => Promise<any>,
+  maxRequests = MAX_REQUESTS,
+  windowMs = WINDOW_MS,
+) => {
+  const rateLimitData = getRateLimitData(path);
 
-        const currentUsage = tokenCount[0];
-        const isRateLimited = currentUsage >= limit;
+  if (Date.now() - rateLimitData.startTime > windowMs) {
+    rateLimitData.count = 0;
+    rateLimitData.startTime = Date.now();
+  }
 
-        //Get information about the rate limit and check if it is working
-        console.log({ currentUsage, limit, isRateLimited });
+  if (rateLimitData.count >= maxRequests) {
+    throw new Error('Too Many Requests');
+  }
 
-        res.setHeader('X-RateLimit-Limit', limit);
-        res.setHeader('X-RateLimit-Remaining', isRateLimited ? 0 : limit - currentUsage);
+  rateLimitData.count += 1;
+  setRateLimitData(path, rateLimitData);
 
-        return isRateLimited ? reject(new Error('Too many requests')) : resolve();
-      }),
-  };
-}
+  return requestFunction();
+};
+
+export default rateLimitClientMiddleware;

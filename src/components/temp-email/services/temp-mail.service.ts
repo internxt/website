@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { MessageObjProps, UserProps } from '../types/types';
+import rateLimitClientMiddleware from '@/components/utils/rate-limit';
 
 export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -10,28 +11,45 @@ export const SELECTED_MESSAGE = 'selectedMessage';
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
+// const CONVERTER_URL = process.env.NEXT_PUBLIC_FILE_CONVERTER_API;
+const CONVERTER_URL =
+  process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
+
 const fetchNewEmail = async (): Promise<UserProps> => {
-  const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
+  return rateLimitClientMiddleware(
+    'create-email-limiter',
+    async () => {
+      const email = await axios.get(`${CONVERTER_URL}/api/temp-mail/address`);
 
-  const { data: userInfo } = email;
+      const { data: userInfo } = email;
 
-  return userInfo;
+      return userInfo;
+    },
+    4,
+  );
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}&token=${token}`);
+  return rateLimitClientMiddleware('fetch-inbox-limiter', async () => {
+    const inbox = await axios.get(`${CONVERTER_URL}/api/temp-mail/messages/${email}/${token}`);
 
-  const { data } = inbox;
+    const { data } = inbox;
 
-  return data;
+    const userMails = data.mails;
+
+    return userMails;
+  });
 };
 
 const getMessageData = async (email: string, token: string, messageId: string): Promise<MessageObjProps> => {
-  const messageData = await axios.get(
-    `${window.origin}/api/temp-mail/get-message?email=${email}&token=${token}&messageId=${messageId}`,
-  );
+  return rateLimitClientMiddleware('get-message-limiter', async () => {
+    const inbox = await axios.get(
+      `${CONVERTER_URL}/api/temp-mail/messages/selectedMessage/${email}/${token}/${messageId}`,
+    );
+    const { data } = inbox;
 
-  return messageData.data;
+    return data.messageObj;
+  });
 };
 
 const fetchAndFormatInbox = async (email: string, userToken: string): Promise<MessageObjProps[] | undefined> => {
