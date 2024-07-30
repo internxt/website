@@ -1,16 +1,40 @@
 import { PromoCodeName } from '@/lib/types';
+import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
+
+const getCoupon = async (promoCodeName: string) => {
+  const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-by-name`, {
+    params: {
+      promotionCode: promoCodeName,
+    },
+  });
+
+  return promoCodeData;
+};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {
-    const coupons = {
-      '2TB': process.env[PromoCodeName.euro2024twoTB],
-      '5TB': process.env[PromoCodeName.euro2024fiveTB],
-      '10TB': process.env[PromoCodeName.euro2024TenTB],
-    };
+    const twoTBCoupon = getCoupon(PromoCodeName.euro2024twoTB);
+    const fiveTBCoupon = getCoupon(PromoCodeName.euro2024fiveTB);
+    const tenTBCoupon = getCoupon(PromoCodeName.euro2024TenTB);
 
-    //Return the correct coupon
-    res.status(200).send(coupons);
+    try {
+      const coupons = await Promise.all([twoTBCoupon, fiveTBCoupon, tenTBCoupon]);
+
+      const [twoTB, fiveTB, tenTB] = coupons;
+
+      const couponCodes = {
+        '2TB': twoTB,
+        '5TB': fiveTB,
+        '10TB': tenTB,
+      };
+
+      res.status(200).send(couponCodes);
+    } catch (err) {
+      res.status(500).send({
+        message: 'Internal Server Error',
+      });
+    }
   } else {
     res.status(405).end(); // Method Not Allowed
   }
