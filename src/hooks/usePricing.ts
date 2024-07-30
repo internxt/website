@@ -1,7 +1,6 @@
 import { currencyService } from '@/components/services/currency.service';
 import { ProductsDataProps, stripeService } from '@/components/services/stripe.service';
 import { useEffect, useReducer } from 'react';
-import { notificationService } from '@/components/Snackbar';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 type UsePricingOptions = {
@@ -87,14 +86,14 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
 
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        notificationService.openErrorToast('Error fetching coupon');
+        // NO OP
       }
     } else if (couponCodeForBusiness) {
       try {
         const coupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        notificationService.openErrorToast('Error fetching coupon');
+        // NO OP
       }
     }
   };
