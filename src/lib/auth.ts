@@ -245,7 +245,7 @@ export function checkoutForPcComponentes({ planId, promoCodeId, mode, currency }
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
-    promoCodeId && params.set('promoCodeId', promoCodeId);
+    promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
     params.set('mode', mode ? mode : 'subscription');
 
