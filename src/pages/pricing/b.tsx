@@ -13,7 +13,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { CircleWavyCheck, Database, Eye, Fingerprint, Key, LockKey, Recycle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import { useEffect, useState } from 'react';
@@ -89,7 +89,7 @@ const PricingAlternative = ({
   lang,
 }: PricingAlternativeProps) => {
   const { products, coupon, currency, currencyValue } = usePricing({
-    couponCode: CouponType.AllPlansCoupon,
+    couponCode: PromoCodeName.AllPlansCoupon,
   });
 
   const [selectedPlanStorage, setSelectedPlanStorage] = useState<string>('2TB');

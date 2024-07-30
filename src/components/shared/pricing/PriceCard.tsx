@@ -38,7 +38,7 @@ export const PriceCard = ({
 
   const { currency, interval, price, storage, priceId } = product;
 
-  const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2) : price;
+  const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2).replace('.00', '') : price;
   const priceBefore = decimalDiscountValue
     ? price
     : interval === Interval.Year

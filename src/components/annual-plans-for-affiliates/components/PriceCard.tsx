@@ -1,4 +1,4 @@
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { Fire } from '@phosphor-icons/react';
 
 export interface PriceCardProps {
@@ -13,7 +13,7 @@ export interface PriceCardProps {
   billingFrequency?: string;
   popular?: boolean;
   priceId?: string;
-  coupon?: CouponType;
+  coupon?: PromoCodeName;
 }
 
 const currencyValue = {

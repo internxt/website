@@ -9,7 +9,7 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
 interface Protect82Props {
@@ -54,7 +54,7 @@ const Security82 = ({
         textContent={textContent.PaymentSection}
         discount={discount}
         lang={locale}
-        couponCode={CouponType.Protect82Coupon}
+        couponCode={PromoCodeName.Protect82Coupon}
         percent={'82%'}
         showPriceBefore
         lifetimeMode="celebration"

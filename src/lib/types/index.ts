@@ -73,49 +73,38 @@ export interface CheckIfUserHasSubscriptionResponse {
   hasSubscriptions: boolean;
 }
 
-export enum CouponType {
-  TwoTBCoupon = 'COUPON_SUBSCRIPTION_90_OFF',
-  TwoTBCoupon75 = 'COUPON_SUBSCRIPTION_75_OFF',
-  LifetimeGeneral = 'COUPON_LIFETIME_GENERAL',
-  LifetimeSpecial = 'COUPON_LIFETIME_SPECIAL',
-  Special15Coupon = 'COUPON_SPECIAL15',
-  AnnualDiscount = 'ANNUAL_PLAN_80_DISCOUNT',
-  BlackFridayCoupon = 'COUPON_BLACK_FRIDAY_2023',
-  ChristmasCoupon = 'COUPON_CHRISTMAS',
-  LifetimeFiftyPercent = 'COUPON_LIFETIME_FIFTY',
-  SoftSale = 'COUPON_SOFTSALE50',
-  DataPrivacy = 'COUPON_DATA_PRIVACY',
-  ValentinesCoupon = 'COUPON_VALENTINE_DAY',
-  Wheel10 = 'WHEEL10_COUPON',
-  Wheel15 = 'WHEEL15_COUPON',
-  Wheel25 = 'WHEEL25_COUPON',
-  Wheel30 = 'WHEEL30_COUPON',
-  Wheel45 = 'WHEEL45_COUPON',
-  Wheel50 = 'WHEEL50_COUPON',
+export enum PromoCodeName {
+  TwoTBCoupon75 = '2TBPLAN75',
+  LifetimeGeneral = 'LIFETIME25',
+  LifetimeSpecial = 'LIFETIME50',
+  Special15Coupon = 'SPECIAL15',
+  AnnualDiscount = '80ANNUAL',
+  SpringCoupon = 'Spring',
+  PcComponentesCoupon = 'PCCOMPONENTES',
+  Lifetime2TBDiscount = '2TB70OFF',
+  Lifetime5TBDiscount = '5TB70OFF',
+  Lifetime10TBDiscount = '10TB70OFF',
+  lifetime70OFF = 'LIFETIME_70OFF',
+  IndependenceDayItaly = 'HAPPY80',
+  euro2024twoTB = '2TB75OFF',
+  euro2024fiveTB = '75OFF5TB',
+  euro2024TenTB = '75OFF10TB',
+  freeUserCoupon = 'SPECIAL75',
+  PcmagCoupon = 'PCmag80',
+  CloudwardsCoupon = 'Cloudwards80',
+  OnePlanCoupon = '5TBplan',
+  AllPlansCoupon = 'SUMMER80',
+  Lifetime83DiscountCoupon = 'NATIONAL83',
+  Protect82Coupon = 'PROTECT82',
   LockerCoupon = 'LOCKER_COUPON_CODE',
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
-  SpringCoupon = 'SPRING_COUPON_CODE',
-  PcComponentesCoupon = 'PC_COMPONENTES_COUPON',
-  Lifetime2TBDiscount = 'LIFETIME_2TB_70',
-  Lifetime5TBDiscount = 'LIFETIME_5TB_70',
-  Lifetime10TBDiscount = 'LIFETIME_10TB_70',
-  lifetime70OFF = 'LIFETIME_70OFF',
-  starWarsSubscription = 'STAR_WARS_SUBSCRIPTION',
-  starWars2TBLifetime = 'STAR_WARS_2TB_LIFETIME',
-  starWars5TBLifetime = 'STAR_WARS_5TB_LIFETIME',
-  starWars10TBLifetime = 'STAR_WARS_10TB_LIFETIME',
-  IndependenceDayItaly = 'INDEPENDENCE_DAY_ITALY_COUPON',
-  euro2024Sub = 'EURO_2024_SUB_COUPON',
-  euro2024twoTB = 'EURO_2024_2TB_COUPON',
-  euro2024fiveTB = 'EURO_2024_5TB_COUPON',
-  euro2024TenTB = 'EURO_2024_10TB_COUPON',
-  freeUserCoupon = 'FREE_PROMO_COUPON',
-  PcmagCoupon = 'PCMAG_COUPON',
-  CloudwardsCoupon = 'CLOUDWARDS_COUPON',
-  OnePlanCoupon = 'ONEPLAN_COUPON',
-  AllPlansCoupon = 'ALL_PLANS_80',
-  Lifetime83DiscountCoupon = 'LIFETIME_83_DISCOUNT_COUPON',
-  Protect82Coupon = 'PROTECT82_COUPON',
+}
+
+export interface PromoCodeProps {
+  name: PromoCodeName;
+  codeId: string;
+  amountOff?: number;
+  percentOff?: number;
 }
 
 export type CyberSecurityQuizViews = 'initialState' | 'questions' | 'quizCompleted' | 'results';

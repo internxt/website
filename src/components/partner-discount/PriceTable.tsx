@@ -2,13 +2,13 @@
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import PriceCard from '../prices/PriceCard';
 import { Interval } from '../services/stripe.service';
 
 export default function PriceTable({ lang }: { lang: string }) {
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.Special15Coupon,
+    couponCode: PromoCodeName.Special15Coupon,
   });
 
   const priceForSubscriptions = (product) => {

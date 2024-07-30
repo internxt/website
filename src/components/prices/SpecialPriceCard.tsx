@@ -3,7 +3,7 @@ import { checkout } from '@/lib/auth';
 import { analyticsService } from '@/components/services/analytics.service';
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PriceCardProps } from './PriceCard';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 export default function SpecialPriceCard({
   planType,
@@ -25,7 +25,7 @@ export default function SpecialPriceCard({
 
   useEffect(() => {
     stripeService
-      .getCoupon(CouponType.TwoTBCoupon75)
+      .getCoupon(PromoCodeName.TwoTBCoupon75)
       .then((coupon) => {
         setCoupon(coupon);
       })
@@ -43,7 +43,7 @@ export default function SpecialPriceCard({
     });
     checkout({
       planId: cta[1],
-      couponCode: coupon,
+      promoCodeId: coupon,
       mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };

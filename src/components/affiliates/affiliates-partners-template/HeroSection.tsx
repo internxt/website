@@ -10,13 +10,13 @@ import { getImage } from '@/lib/getImage';
 import { CardsType } from '@/pages/affiliates/[filename]';
 import { PriceCardsForAffiliatesPartners } from './PriceCardsForAffiliatesParnters';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
   cardsType: CardsType | undefined;
   pathname: string;
-  couponName: CouponType;
+  couponName: PromoCodeName;
 }
 
 export const HeroSectionForPartner = ({ textContent, cardsType, pathname, couponName }: HeroSectionForPartnerProps) => {

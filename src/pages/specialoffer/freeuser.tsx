@@ -11,7 +11,7 @@ import { HeroSectionForSpecialOffer } from '@/components/specialoffer/HeroSectio
 import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSection';
 import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
@@ -36,7 +36,7 @@ const FreeUserPage = ({
   const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: CouponType.freeUserCoupon,
+    couponCode: PromoCodeName.freeUserCoupon,
   });
 
   const [isBusiness, setIsBusiness] = useState<boolean>();
@@ -47,7 +47,7 @@ const FreeUserPage = ({
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout?.codeId);
   };
 
   const handleOnButtonClick = () => {

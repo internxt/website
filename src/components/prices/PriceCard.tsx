@@ -1,4 +1,4 @@
-import { CouponType } from '@/lib/types';
+import { PromoCodeProps } from '@/lib/types';
 import { Coins, Fire } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
@@ -13,7 +13,7 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  coupon?: CouponType;
+  coupon?: PromoCodeProps;
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;
@@ -68,14 +68,14 @@ export default function PriceCard({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           currency: currencyValue ?? 'eur',
-          couponCode: coupon ?? undefined,
+          promoCodeId: coupon?.codeId ?? undefined,
         });
       } else {
         checkout({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           currency: currencyValue ?? 'eur',
-          couponCode: coupon ?? undefined,
+          promoCodeId: coupon?.codeId ?? undefined,
         });
       }
     }

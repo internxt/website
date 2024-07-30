@@ -2,7 +2,7 @@ import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 const CURRENCY_MAP = {
   eur: '€',
@@ -127,22 +127,23 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   return transformedData;
 }
 
-async function getSelectedPrice(interval: string, plan: string) {
+async function getSelectedPrice(interval: string, plan: string, planType: 'individuals' | 'business' = 'individuals') {
   //Filter prices by plan
   const prices = await getPrices();
-  const selectedPrice = prices?.individuals[interval][plan];
+  const selectedPrice = prices?.[planType][interval][plan];
   return selectedPrice;
 }
 
-async function getCoupon(coupon: string) {
+async function getCoupon(couponName: PromoCodeName) {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {
-        coupon,
+        couponName,
       },
     });
-    const { data } = res;
-    return data;
+    const { data: CouponData } = res;
+
+    return CouponData;
   } catch (err) {
     const error = err as Error;
 
@@ -166,11 +167,11 @@ const redirectToCheckout = (
   planId: string,
   currencyValue: string,
   isCheckoutForLifetime: boolean,
-  coupon?: CouponType,
+  promoCodeId?: PromoCodeProps['codeId'],
 ) => {
   checkout({
-    planId: planId,
-    couponCode: coupon,
+    planId,
+    promoCodeId,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
   });

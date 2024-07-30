@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -85,8 +85,8 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === pathname);
 
   const couponCode = {
-    pcmag: CouponType.PcmagCoupon,
-    oneplan: CouponType.OnePlanCoupon,
+    pcmag: PromoCodeName.PcmagCoupon,
+    oneplan: PromoCodeName.OnePlanCoupon,
   };
 
   useEffect(() => {

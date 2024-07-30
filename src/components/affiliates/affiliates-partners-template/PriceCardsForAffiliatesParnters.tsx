@@ -1,5 +1,5 @@
 import { checkout } from '@/lib/auth';
-import { CouponType } from '@/lib/types';
+import { PromoCodeProps } from '@/lib/types';
 import { Fire } from '@phosphor-icons/react';
 
 interface PriceCardsForAffiliatesPartnersProps {
@@ -10,7 +10,7 @@ interface PriceCardsForAffiliatesPartnersProps {
   price: number;
   planId: string;
   currencyValue: string;
-  coupon: CouponType | undefined;
+  coupon: PromoCodeProps | undefined;
 }
 
 export const PriceCardsForAffiliatesPartners = ({
@@ -30,7 +30,7 @@ export const PriceCardsForAffiliatesPartners = ({
       planId: planId,
       mode: 'payment',
       currency: currencyValue ?? 'eur',
-      couponCode: coupon ?? undefined,
+      promoCodeId: coupon?.codeId ?? undefined,
     });
   }
 

@@ -10,7 +10,7 @@ import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
 
@@ -24,7 +24,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planId: planId,
       mode: 'payment',
       currency: currencyValue,
-      couponCode: coupon ?? undefined,
+      promoCodeId: coupon ?? undefined,
     });
   }
 
@@ -70,7 +70,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={CouponType.SpringCoupon}
+        couponType={PromoCodeName.SpringCoupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

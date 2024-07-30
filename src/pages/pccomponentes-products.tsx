@@ -6,7 +6,7 @@ import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
@@ -15,7 +15,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.PcComponentesCoupon,
+    couponCode: PromoCodeName.PcComponentesCoupon,
   });
 
   const contentText = textContent;

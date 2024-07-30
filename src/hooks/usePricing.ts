@@ -1,12 +1,11 @@
 import { currencyService } from '@/components/services/currency.service';
 import { ProductsDataProps, stripeService } from '@/components/services/stripe.service';
 import { useEffect, useReducer } from 'react';
-import { notificationService } from '@/components/Snackbar';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 type UsePricingOptions = {
-  couponCode?: CouponType;
-  couponCodeForBusiness?: CouponType;
+  couponCode?: PromoCodeName;
+  couponCodeForBusiness?: PromoCodeName;
   currencySpecified?: string;
 };
 
@@ -14,8 +13,8 @@ interface UseStripeProductsAndCurrencyResponse {
   loadingCards: boolean;
   currency: string;
   currencyValue: string;
-  coupon?: CouponType;
-  businessCoupon?: CouponType;
+  coupon?: PromoCodeProps;
+  businessCoupon?: PromoCodeProps;
   products?: ProductsDataProps;
 }
 
@@ -24,8 +23,8 @@ type ActionType =
   | { type: 'SET_LOADING_CARDS'; payload: boolean }
   | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_CURRENCY_VALUE'; payload: string }
-  | { type: 'SET_COUPON'; payload: CouponType | undefined }
-  | { type: 'SET_BUSINESS_COUPON'; payload: CouponType | undefined };
+  | { type: 'SET_COUPON'; payload: PromoCodeProps | undefined }
+  | { type: 'SET_BUSINESS_COUPON'; payload: PromoCodeProps | undefined };
 
 const reducer = (state: any, action: ActionType) => {
   switch (action.type) {
@@ -84,16 +83,17 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     if (couponCode) {
       try {
         const coupon = await stripeService.getCoupon(couponCode);
+
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        notificationService.openErrorToast('Error fetching coupon');
+        // NO OP
       }
     } else if (couponCodeForBusiness) {
       try {
         const coupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        notificationService.openErrorToast('Error fetching coupon');
+        // NO OP
       }
     }
   };

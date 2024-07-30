@@ -1,3 +1,5 @@
+import { PromoCodeProps } from './types';
+
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
@@ -212,16 +214,16 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
 
 type PaymentCheckoutConfig = {
   planId: string;
-  couponCode?: string;
+  promoCodeId?: PromoCodeProps['codeId'];
   mode?: 'subscription' | 'payment';
   currency?: string;
 };
-export function checkout({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
-    couponCode && params.set('couponCode', couponCode);
+    promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
     params.set('mode', mode ? mode : 'subscription');
 
@@ -238,12 +240,12 @@ export function checkout({ planId, couponCode, mode, currency }: PaymentCheckout
   }
 }
 
-export function checkoutForPcComponentes({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+export function checkoutForPcComponentes({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
-    couponCode && params.set('couponCode', couponCode);
+    promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
     params.set('mode', mode ? mode : 'subscription');
 

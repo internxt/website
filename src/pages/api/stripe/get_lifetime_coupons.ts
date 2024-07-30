@@ -1,12 +1,12 @@
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {
     const coupons = {
-      '2TB': process.env[CouponType.euro2024twoTB],
-      '5TB': process.env[CouponType.euro2024fiveTB],
-      '10TB': process.env[CouponType.euro2024TenTB],
+      '2TB': process.env[PromoCodeName.euro2024twoTB],
+      '5TB': process.env[PromoCodeName.euro2024fiveTB],
+      '10TB': process.env[PromoCodeName.euro2024TenTB],
     };
 
     //Return the correct coupon
