@@ -23,11 +23,11 @@ import {
 } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
-import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { PromoCodeName } from '@/lib/types';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -41,7 +41,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.AllPlansCoupon,
+    couponCode: 'FIRSTTIME75' as PromoCodeName,
+    // PromoCodeName.AllPlansCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
