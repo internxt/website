@@ -223,7 +223,7 @@ export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckou
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
-    promoCodeId && params.set('promoCodeId', promoCodeId);
+    promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
     params.set('mode', mode ? mode : 'subscription');
 

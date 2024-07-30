@@ -43,7 +43,7 @@ export default function SpecialPriceCard({
     });
     checkout({
       planId: cta[1],
-      couponCode: coupon,
+      promoCodeId: coupon,
       mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
     });
   };
