@@ -2,7 +2,7 @@ import { PromoCodeProps } from './types';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'http://localhost:3000';
+const AUTH_FLOW_URL = 'https://drive.internxt.com';
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
@@ -146,7 +146,7 @@ const prepareAuthFlow = (credentials: {
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain=localhost; Path=/`;
+  ).toUTCString()};domain=internxt.com; Path=/`;
 
   document.cookie = cookie;
 };

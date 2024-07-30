@@ -41,8 +41,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: 'FIRSTTIME75' as PromoCodeName,
-    // PromoCodeName.AllPlansCoupon,
+    couponCode: PromoCodeName.AllPlansCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
