@@ -27,9 +27,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
 
   return (
     <div className="flex max-w-[544px] flex-col gap-6">
-      {header ? (
-        header
-      ) : (
+      {header ?? (
         <>
           <div className="flex flex-col gap-9">
             <div className="flex flex-col gap-4">
@@ -77,9 +75,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         </div>
       </div>
 
-      {footer ? (
-        footer
-      ) : (
+      {footer ?? (
         <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-primary" />
           <p className="whitespace-nowrap lg:text-lg">{textContent.guarantee}</p>
