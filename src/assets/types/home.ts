@@ -67,6 +67,7 @@ export interface HeroSection {
   SignUp: SignUp;
   TitleAndSurvey: TitleAndSurvey;
   TitleAndOnePlan: TitleAndOnePlan;
+  TitleAndOnePlanV2: TitleAndOnePlan;
   youKnow: string;
 }
 
@@ -139,6 +140,10 @@ export interface StartFrom {
 export interface TitleAndOnePlanTitle {
   line1: string;
   blueText: string;
+  normal1?: string;
+  normal2?: string;
+  blue1?: string;
+  blue2?: string;
 }
 
 export interface TitleAndSurvey {

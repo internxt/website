@@ -22,7 +22,7 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePageV2 = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
 
@@ -40,7 +40,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale} isHomePageV2={true} />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}
@@ -65,7 +65,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
+  const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/home.json`);
@@ -85,4 +85,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default HomePage;
+export default HomePageV2;

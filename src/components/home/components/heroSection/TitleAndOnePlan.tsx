@@ -7,9 +7,11 @@ import { useEffect, useState } from 'react';
 
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
+  header?: JSX.Element;
+  footer?: JSX.Element;
 }
 
-const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');
 
   useEffect(() => {
@@ -25,37 +27,43 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
 
   return (
     <div className="flex max-w-[544px] flex-col gap-6">
-      <div className="flex flex-col gap-9">
-        <div className="flex flex-col gap-4">
-          <Header maxWidth="max-w-[500px]" className="text-gray-100">
-            {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-          </Header>
-          <p className="text-xl font-bold text-gray-100">
-            {textContent.description.normal1}
-            <span className="text-primary">{textContent.description.blue}</span>
-            {textContent.description.normal2}
-          </p>
-        </div>
-        <div className="mx-auto flex flex-col gap-2 lg:mx-0">
-          {textContent.features.map((feat) => (
-            <div className="flex flex-row gap-2">
-              <Check className="text-green" weight="bold" size={24} />
-              <p className="text-lg font-semibold text-gray-100">{feat}</p>
+      {header ? (
+        header
+      ) : (
+        <>
+          <div className="flex flex-col gap-9">
+            <div className="flex flex-col gap-4">
+              <Header maxWidth="max-w-[500px]" className="text-gray-100">
+                {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
+              </Header>
+              <p className="text-xl font-bold text-gray-100">
+                {textContent.description.normal1}
+                <span className="text-primary">{textContent.description.blue}</span>
+                {textContent.description.normal2}
+              </p>
             </div>
-          ))}
-        </div>
-      </div>
+            <div className="mx-auto flex flex-col gap-2 lg:mx-0">
+              {textContent.features.map((feat) => (
+                <div className="flex flex-row gap-2">
+                  <Check className="text-green" weight="bold" size={24} />
+                  <p className="text-lg font-semibold text-gray-100">{feat}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-      <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100">
-          {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
-            <abbr className="mt-0.5 text-base">{currency}</abbr>
-            {textContent.startFrom.price}
-          </span>
-          {textContent.startFrom.normal2}
-        </p>
-      </div>
+          <div className="flex flex-row justify-center lg:justify-start">
+            <p className="flex flex-row items-end text-gray-100">
+              {textContent.startFrom.normal1}{' '}
+              <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
+                <abbr className="mt-0.5 text-base">{currency}</abbr>
+                {textContent.startFrom.price}
+              </span>
+              {textContent.startFrom.normal2}
+            </p>
+          </div>
+        </>
+      )}
 
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
@@ -69,10 +77,14 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
         </div>
       </div>
 
-      <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
-        <ShieldCheck size={24} weight="fill" className="text-primary" />
-        <p className="whitespace-nowrap lg:text-lg">{textContent.guarantee}</p>
-      </div>
+      {footer ? (
+        footer
+      ) : (
+        <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
+          <ShieldCheck size={24} weight="fill" className="text-primary" />
+          <p className="whitespace-nowrap lg:text-lg">{textContent.guarantee}</p>
+        </div>
+      )}
     </div>
   );
 };
