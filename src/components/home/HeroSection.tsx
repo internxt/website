@@ -67,7 +67,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
                     </div>
                     <div className="mx-auto flex flex-col gap-2 lg:mx-0">
                       {titleAndOnePlanText.features.map((feat) => (
-                        <div className="flex flex-row gap-2">
+                        <div className="flex flex-row gap-2" key={feat}>
                           <Check className="text-green" weight="bold" size={24} />
                           <p className="text-lg font-semibold text-gray-100">{feat}</p>
                         </div>
@@ -100,12 +100,6 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <Animation />
           </div>
         </div>
-        {/* {isHomePageV2 ? (
-          <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
-            <ArrowCircleDown size={32} className="animate-bounce text-primary" />
-            <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
-          </div>
-        ) : undefined} */}
       </div>
     </section>
   );
