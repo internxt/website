@@ -55,7 +55,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                <>
+                isHomePageV2 ? (
                   <div className="flex flex-col gap-9">
                     <div className="flex flex-col gap-4">
                       <Header maxWidth="max-w-[500px]" className="text-gray-100">
@@ -74,21 +74,23 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
                       ))}
                     </div>
                   </div>
-                </>
+                ) : undefined
               }
               footer={
-                <div className="flex flex-row items-center justify-center gap-2 pt-2 text-gray-100 lg:justify-start">
-                  <Star size={24} weight="fill" className="text-[#E40784]" />
-                  <div className="flex flex-row items-center gap-1">
-                    <p className="whitespace-nowrap font-semibold text-gray-70">{titleAndOnePlanText.guarantee}</p>
-                    <Image
-                      src={getImage('/logos/featured/techradar-pink.svg')}
-                      width={98}
-                      height={16}
-                      alt="Techradar logo"
-                    />
+                isHomePageV2 ? (
+                  <div className="flex flex-row items-center justify-center gap-2 pt-2 text-gray-100 lg:justify-start">
+                    <Star size={24} weight="fill" className="text-[#E40784]" />
+                    <div className="flex flex-row items-center gap-1">
+                      <p className="whitespace-nowrap font-semibold text-gray-70">{titleAndOnePlanText.guarantee}</p>
+                      <Image
+                        src={getImage('/logos/featured/techradar-pink.svg')}
+                        width={98}
+                        height={16}
+                        alt="Techradar logo"
+                      />
+                    </div>
                   </div>
-                </div>
+                ) : undefined
               }
             />
           </div>
