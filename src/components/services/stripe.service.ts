@@ -141,9 +141,12 @@ async function getCoupon(couponName: PromoCodeName) {
         couponName,
       },
     });
-    const { data: CouponData } = res;
+    const { data: couponData } = res;
 
-    return CouponData;
+    return {
+      name: couponName,
+      ...couponData,
+    };
   } catch (err) {
     const error = err as Error;
 

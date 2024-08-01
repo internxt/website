@@ -228,7 +228,7 @@ export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckou
     params.set('mode', mode ? mode : 'subscription');
 
     const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
+      redirectURL: AUTH_FLOW_URL + `/checkout?${params.toString()}`,
       enableAutoSubmit: false,
       skipSignupIfLoggedIn: true,
     });
@@ -250,7 +250,7 @@ export function checkoutForPcComponentes({ planId, promoCodeId, mode, currency }
     params.set('mode', mode ? mode : 'subscription');
 
     const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
+      redirectURL: AUTH_FLOW_URL + `/checkout?${params.toString()}`,
       enableAutoSubmit: false,
       skipSignupIfLoggedIn: true,
     });
