@@ -3,17 +3,17 @@ import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { HomeText } from '@/assets/types/home';
+import Header from '../shared/Header';
+import { Check, Star } from '@phosphor-icons/react';
 const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
-  ssr: false,
-});
-const TitleAndSignup = dynamic(() => import('./components/heroSection/TitleAndSignup'), {
   ssr: false,
 });
 
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
-  textContent: any;
+  textContent: HomeText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
@@ -23,6 +23,8 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
   const blurBgImage = getImage('/images/home/header/bg.svg');
 
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
+
+  const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
 
   return (
     <section className="overflow-hidden">
@@ -50,11 +52,47 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             </div>
             <HomePageBannerForMobile />
 
-            {isHomePageV2 ? (
-              <TitleAndOnePlan textContent={textContent.TitleAndOnePlan} />
-            ) : (
-              <TitleAndSignup textContent={textContent} />
-            )}
+            <TitleAndOnePlan
+              textContent={titleAndOnePlanText}
+              header={
+                isHomePageV2 ? (
+                  <div className="flex flex-col gap-9">
+                    <div className="flex flex-col gap-4">
+                      <Header maxWidth="max-w-[500px]" className="text-gray-100">
+                        {titleAndOnePlanText.title.normal1}{' '}
+                        <span className="text-primary">{titleAndOnePlanText.title.blue1}</span>
+                        {titleAndOnePlanText.title.normal2}{' '}
+                        <span className="text-primary">{titleAndOnePlanText.title.blue2}</span>
+                      </Header>
+                    </div>
+                    <div className="mx-auto flex flex-col gap-2 lg:mx-0">
+                      {titleAndOnePlanText.features.map((feat) => (
+                        <div className="flex flex-row gap-2" key={feat}>
+                          <Check className="text-green" weight="bold" size={24} />
+                          <p className="text-lg font-semibold text-gray-100">{feat}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ) : undefined
+              }
+              footer={
+                isHomePageV2 ? (
+                  <div className="flex flex-row items-center justify-center gap-2 pt-2 text-gray-100 lg:justify-start">
+                    <Star size={24} weight="fill" className="text-[#E40784]" />
+                    <div className="flex flex-row items-center gap-1">
+                      <p className="whitespace-nowrap font-semibold text-gray-70">{titleAndOnePlanText.guarantee}</p>
+                      <Image
+                        src={getImage('/logos/featured/techradar-pink.svg')}
+                        width={98}
+                        height={16}
+                        alt="Techradar logo"
+                      />
+                    </div>
+                  </div>
+                ) : undefined
+              }
+            />
           </div>
 
           {/* Desktop animation/image */}
@@ -62,12 +100,6 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <Animation />
           </div>
         </div>
-        {/* {isHomePageV2 ? (
-          <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
-            <ArrowCircleDown size={32} className="animate-bounce text-primary" />
-            <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
-          </div>
-        ) : undefined} */}
       </div>
     </section>
   );

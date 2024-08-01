@@ -40,7 +40,7 @@ export const PriceCard = ({
 
   const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2).replace('.00', '') : price;
   const priceBefore = decimalDiscountValue
-    ? price
+    ? Number(price).toFixed(2).replace('.00', '')
     : interval === Interval.Year
     ? (monthlyProductPrice * 12).toFixed(2)
     : undefined;
