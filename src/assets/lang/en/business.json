@@ -12,12 +12,12 @@
     "description": "Data breaches can devastate businesses, causing severe financial losses, operational disruptions, and damage your business's reputation.",
     "cards": [
       {
-        "title": "$4.45 m",
+        "title": "$4.88 m",
         "description": "Average cost of a data breach"
       },
       { "title": "73 m", "description": "AT&T customer records leaked in 2024" },
-      { "title": "318 days", "description": "Average time to identify a data breach" },
-      { "title": "24%", "description": "Of ransomware attacks target businesses" }
+      { "title": "258 days", "description": "Average time to identify a data breach" },
+      { "title": "46%", "description": "Of breaches involve personal data" }
     ],
     "footerText": "*Data collected from IBM Security Cost of a Data Breach Report 2023."
   },
