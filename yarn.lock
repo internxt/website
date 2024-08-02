@@ -1316,6 +1316,13 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
+"@cemalgnlts/mailjs@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@cemalgnlts/mailjs/-/mailjs-3.0.1.tgz#0113e03973a847eca3d4064dc87baf033e5dab85"
+  integrity sha512-JnX2kS/ZVfbjy8CM5oIw5wlKPEO0eW5/cXF9yidvZOZ+LCiAfosAWnubbakOvLgBrE9ewQaFjh0g/usK2Kiicw==
+  dependencies:
+    eventsource "^2.0.2"
+
 "@coderosh/image-size@^2.0.0":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@coderosh/image-size/-/image-size-2.0.1.tgz#85ee62994ea1f5135a54d75029f00a106710ed10"
@@ -4268,6 +4275,11 @@ eventemitter2@6.4.7:
   version "6.4.7"
   resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-6.4.7.tgz#a7f6c4d7abf28a14c1ef3442f21cb306a054271d"
   integrity sha512-tYUSVOGeQPKt/eC1ABfhHy5Xd96N3oIijJvN3O9+TsC28T5V9yX9oEfEK5faP0EFSNVOG97qtAS68GBrQB2hDg==
+
+eventsource@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-2.0.2.tgz#76dfcc02930fb2ff339520b6d290da573a9e8508"
+  integrity sha512-IzUmBGPR3+oUG9dUeXynyNmf91/3zUSJg1lCktzKw47OXuhco54U3r9B7O4XX+Rb1Itm9OZ2b0RkTs10bICOxA==
 
 execa@4.1.0:
   version "4.1.0"
