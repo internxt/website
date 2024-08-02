@@ -10,6 +10,11 @@
     "description": "Prevent data loss with Internxt’s encrypted cloud storage for business—sign up to benefit from industry-leading cloud data protection."
   },
   {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Object Storage",
+    "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
+  },
+  {
     "id": "drive",
     "title": "Internxt Drive – Private & Secure Cloud Storage",
     "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
