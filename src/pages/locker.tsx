@@ -5,8 +5,6 @@ import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 
 import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
-import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
-import { checkout } from '@/lib/auth';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
@@ -20,15 +18,6 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   const { products, loadingCards, currencyValue, coupon } = usePricing({
     couponCode: PromoCodeName.LockerCoupon,
   });
-
-  function handlePriceCardButton(planId: string, coupon: string) {
-    checkout({
-      planId: planId,
-      mode: 'subscription',
-      currency: currencyValue,
-      promoCodeId: coupon ?? undefined,
-    });
-  }
 
   const cardsData = [
     {
@@ -54,7 +43,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   ];
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, coupon?.codeId);
+    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.codeId);
   };
 
   return (
@@ -74,14 +63,6 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         startFromInterval={Interval.Year}
         hideFreeCard
         hidePlanSelectorAndSwitch
-      />
-
-      <PriceTable
-        textContent={textContent.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.LockerCoupon}
-        discount={offerDiscount}
-        billingFrequency="year"
       />
 
       <FeatureSection textContent={textContent.FeatureSection} />
