@@ -67,6 +67,7 @@ export default function PriceCard({
         checkoutForPcComponentes({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          planType: 'individual',
           currency: currencyValue ?? 'eur',
           promoCodeId: coupon?.codeId ?? undefined,
         });
@@ -74,6 +75,7 @@ export default function PriceCard({
         checkout({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          planType: 'individual',
           currency: currencyValue ?? 'eur',
           promoCodeId: coupon?.codeId ?? undefined,
         });
