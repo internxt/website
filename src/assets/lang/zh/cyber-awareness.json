@@ -1,122 +1,122 @@
 {
   "HeroSection": {
-    "title": "Cyber Awareness",
+    "title": "网络安全意识",
     "paragraph1": {
-      "title": "What is Cyber Awareness?",
-      "body": "Cyber or Cybersecurity Awareness is the continuous process of teaching and training yourself, friends, coworkers, or employees about cyberspace and how to prevent threats and security incidents better.",
-      "body2": "Cyber Awareness aims to give a sense of proactive responsibility for the safety and security of personal or business online information. It's all about being aware of current security risks, cybersecurity best practices, the dangers of clicking on malicious links or downloading an infected attachment, engaging online, giving personal information, and so forth."
+      "title": "什么是网络安全意识？",
+      "body": "网络或网络安全意识是一个持续的教育和培训自己、朋友、同事或员工了解网络空间以及如何更好地预防威胁和安全事件的过程。",
+      "body2": "网络意识旨在让人们对个人或企业在线信息的安全和安保有一种主动的责任感。它涉及到对当前安全风险、网络安全最佳做法、点击恶意链接或下载受感染附件的危险、在线参与、提供个人信息等的认识。"
     },
     "paragraph2": {
-      "title": "What is Cybersecurity Awareness Month?",
-      "body": "October is Cybersecurity Awareness Month, reminding us of the importance of cybersecurity and online security. Many companies and organizations will initiate a cyber awareness challenge encouraging coworkers to improve their cybersecurity skills.",
-      "body2": "Cybersecurity Awareness Month has steadily grown in reach and involvement over the last few years. It has the participation of many tech industry partners who engage and educate customers, employees, and the general public, as well as universities, organizations, and other groups, to raise awareness of the value of robust cybersecurity."
+      "title": "什么是网络安全宣传月？",
+      "body": "十月是网络安全宣传月，提醒我们网络安全和在线安全的重要性。许多公司和组织会发起网络安全挑战，鼓励同事提高网络安全技能。",
+      "body2": "过去几年，网络安全宣传月的覆盖面和参与度稳步增长。许多科技行业合作伙伴都参与其中，他们与客户、员工和公众以及大学、组织和其他团体进行交流和教育，以提高人们对强大网络安全价值的认识。"
     },
     "paragraph3": {
-      "title": "Why is Cyber Awareness important?",
-      "body": "Cyber threats are rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with a bit of Cyber Awareness."
+      "title": "网络安全意识为何如此重要？",
+      "body": "网络威胁不断增加，因此网络安全意识对于确保员工和组织的网络安全至关重要。人为错误是大多数数据泄露的主要原因。80% 的数据泄露都是人为错误造成的，这意味着 80% 的数据泄露都可以通过提高网络安全意识来避免。"
     }
   },
   "QuizSection": {
-    "title": "It's easy to stay safe online!",
+    "title": "保持网络安全很容易！",
     "description": [
-      "The amount of information about you that can be gathered by monitoring your online activity and raiding your accounts is enormous. Knowing how to protect yourself can save you from identity theft, phishing scams, and data breaches down the road.",
-      "Once you are familiar with the cybersecurity basics, it's time to test their effectiveness with a Cyber Security Quiz."
+      "通过监控您的在线活动和窃取您的账户，可以收集大量有关您的信息。了解如何保护自己可以防止身份盗窃、网络钓鱼诈骗和数据泄露。",
+      "一旦您熟悉了网络安全基础知识，就可以使用网络安全测验来测试其有效性了。"
     ],
     "mobileBanner": {
-      "title": "Try our Cybersecurity quiz!",
-      "description": "Find out if you're genuinely safe online!",
-      "cta": "Start the quiz now"
+      "title": "尝试一下我们的网络安全测验！",
+      "description": "了解您在网上是否真正安全！",
+      "cta": "立即开始测验"
     }
   },
   "CtaSection": {
-    "title": "Safely back up your data where no one will ever see it",
+    "title": "安全地备份您的数据，让任何人都无法看到",
     "description": "",
-    "cta": "Choose an Internxt plan"
+    "cta": "选择 Internxt 计划"
   },
   "InfoSection": {
-    "title": "Cyber Awareness information",
+    "title": "网络安全意识信息",
     "cards": {
-      "card-1": "What is phishing?",
+      "card-1": "什么是网络钓鱼？",
       "link-1": "https://blog.internxt.com/phising-attacks/",
 
-      "card-2": "What is a VPN?",
+      "card-2": "什么是 VPN?",
       "link-2": "https://blog.internxt.com/best-vpn-services/",
-      "card-3": "Stay safe while working remotely",
+      "card-3": "远程工作时注意安全",
       "link-3": "https://blog.internxt.com/remote-work-information-security/",
-      "card-4": "Improve your email security",
+      "card-4": "提高电子邮件安全性",
       "link-4": "https://blog.internxt.com/email-security-tips/",
-      "card-5": "What is cloud security?",
+      "card-5": "什么是云安全？",
       "link-5": "https://blog.internxt.com/cloud-security-questions/",
-      "card-6": "Common cyber threats?",
+      "card-6": "常见的网络威胁有哪些？",
       "link-6": "https://blog.internxt.com/common-cybersecurity-mistakes/",
-      "card-7": "Cybersecurity basics",
+      "card-7": "网络安全基础知识",
       "link-7": "https://blog.internxt.com/is-cybersecurity-hard/",
-      "card-8": "Create a Strong Password",
+      "card-8": "创建强密码",
       "link-8": "https://internxt.com/password-generator"
     },
     "footer": {
-      "title": "It's easy stay safe online!",
+      "title": "保持网络安全很容易！",
       "body": {
-        "part1": "Your data may not seem like much, but it's valuable. The amount of information about you that can be gathered by monitoring your online activity and raiding your accounts is enormous. Knowing how to protect yourself can save you from identify theft, phishing scams, and data breaches down the road.",
-        "part2": "Employees, too, must understand their role in enhancing a company's cybersecurity. Training and educating personnel is the best defense. Cyber Awareness teaches your staff about the methods employed by cybercriminals, how they might be targeted, how to identify possible dangers, and what they can do to avoid becoming a victim of these threats.",
-        "part3": "Once everyone knows the cybersecurity basics, it's time to test their effectiveness with a Cyber Awareness challenge. Involving employees and staff with a cyber security challenge is a great way to boost Cybersecurity Awareness, competence, and confidence.",
-        "part4": "How else to stay safe? Find the right educational resources, security services, and privacy tools."
+        "part1": "您的数据可能看起来不多，但很有价值。通过监控您的在线活动和窃取您的帐户，可以收集大量有关您的信息。知道如何保护自己可以防止身份盗窃、网络钓鱼诈骗和数据泄露。",
+        "part2": "员工也必须了解他们在增强公司网络安全方面的作用。培训和教育员工是最好的防御手段。网络意识可以教会您的员工网络犯罪分子使用的方法、他们可能成为攻击目标的方式、如何识别可能的危险以及他们可以采取哪些措施来避免成为这些威胁的受害者。",
+        "part3": "一旦每个人都了解了网络安全基础知识，就该通过网络意识挑战来测试他们的有效性了。让员工和工作人员参与网络安全挑战是提高网络安全意识、能力和信心的好方法。",
+        "part4": "还有什么方法可以保证安全？找到合适的教育资源、安全服务和隐私工具。"
       }
     }
   },
   "SuiteSection": {
-    "title": "Internxt's privacy services and free online tools",
+    "title": "Internxt 的隐私服务和免费在线工具",
     "cards": {
       "title-1": "Internxt Drive",
-      "body-1": "Store and backup all your files, in any format, in complete and total privacy. Drive is a zero-knowledge file storage service that protects you right to privacy with uncompromising security.",
-      "textUrl-1": "Save with Drive",
+      "body-1": "以完全私密的方式存储和备份您的所有文件（任何格式）。Drive 是一种零知识文件存储服务，以绝对的安全性保护您的隐私权。",
+      "textUrl-1": "使用 Drive 保存",
       "title-2": "Internxt Photos",
       "body-2": "Save and view your favorite images anytime, anywhere. Always have your photos in hand, save space on your devices, and keep all of your cherished memories in one place with Photos.",
       "textUrl-2": "Sync with Photos",
       "title-3": "Internxt Send",
-      "body-3": "End-to-end encrypt and transfer files to anyone via link or email. Stop trusting your email provider with your sensitive and confidential files. Share in safety and secrecy thanks to Send.",
-      "textUrl-3": "Share with Send",
-      "title-4": "Free online security tools",
-      "body-4": "Protect your privacy with our free tools designed to help you fight back against data theft: Password Checker, Virus Scanner, Temporary Mail, Byte Converter and our Privacy Organization Directory.",
-      "textUrl-4": "Learn more"
+      "body-3": "通过链接或电子邮件对文件进行端到端加密并传输给任何人。不要再将敏感和机密文件托付给您的电子邮件提供商。借助 Send，您可以安全、保密地共享。",
+      "textUrl-3": "使用 Send 共享",
+      "title-4": "免费在线安全工具",
+      "body-4": "使用我们旨在帮助您抵御数据盗窃的免费工具来保护您的隐私：密码检查器、病毒扫描程序、临时邮件、字节转换器和我们的隐私组织目录。",
+      "textUrl-4": "了解更多"
     }
   },
   "FeatureSection": {
-    "label": "Free download!",
-    "title": "Stay protected",
-    "description": "Are you taking every precaution to protect your privacy or security? Download our free Cyber Awareness Checklist.",
-    "cta": "Download now"
+    "label": "免费下载！",
+    "title": "保持受保护状态",
+    "description": "您是否采取了一切预防措施来保护您的隐私或安全？下载我们的免费网络意识检查表。",
+    "cta": "立即下载"
   },
   "VideoSection": {
-    "title": "Want to know more? Here are some informative Cyber Awareness videos"
+    "title": "想要了解更多？以下是一些信息丰富的网络安全视频"
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "有问题？我们有答案",
     "faq": [
       {
-        "question": "What is Cyber Awareness?",
+        "question": "什么是网络安全意识？",
         "answer": [
-          "Cybersecurity Awareness is the continuous process of teaching and training about cyberspace and how to better prevent threats and security incidents. Cyber Awareness aims to give a sense of proactive responsibility for the safety and security of personal or business online information."
+          "网络安全意识是持续教授和培训有关网络空间以及如何更好地预防威胁和安全事件的过程。网络意识旨在让人们对个人或企业在线信息的安全产生主动的责任感。"
         ]
       },
       {
-        "question": "Why is Cyber Awareness important?",
+        "question": "网络安全意识为何如此重要？",
         "answer": [
-          "Cyber threats are ever-rising, so Cyber Awareness is critical for keeping your employees and organization secure online. Human mistakes are the primary cause of most data breaches. 80% of all data breaches are caused by human error, meaning 80% of breaches can be avoided with Cyber Awareness."
+          "网络威胁不断增加，因此网络安全意识对于确保员工和组织在线安全至关重要。人为错误是大多数数据泄露的主要原因。80% 的数据泄露都是由人为错误引起的，这意味着 80% 的泄露可以通过网络安全意识避免。"
         ]
       },
       {
-        "question": "How can cyber awareness help against online scams?",
+        "question": "网络安全意识如何帮助抵御网络诈骗？",
         "answer": [
-          "Cyber awareness educates about common warning signs, such as unsolicited requests for personal information or offers that seem too good to be true. By understanding social engineering techniques and practicing caution with clicking links or downloading files, individuals can protect themselves from falling victim to scams.",
-          "Additionally, cyber awareness emphasizes the importance of verifying website authenticity and keeping software and security tools updated. Overall, it empowers individuals to make informed decisions, identify potential risks, and stay vigilant in their online activities."
+          "网络安全意识教育让人们了解一些常见的警示信号，如主动索要个人信息或看似好得不真实的报价。通过了解社交工程技术并在点击链接或下载文件时保持谨慎，个人可以保护自己不成为骗局的受害者。",
+          "此外，网络安全意识还强调了验证网站真实性以及不断更新软件和安全工具的重要性。总之，网络安全意识增强了个人在网上活动中做出明智决定、识别潜在风险和保持警惕的能力。"
         ]
       }
     ]
   },
   "CtaSection2": {
-    "title": "Safety is only a click away",
-    "description": "Protect your personal data with INternxt's privacy suite",
-    "cta": "Create account"
+    "title": "只需点击一下即可确保安全",
+    "description": "使用 Internxt 的隐私套件保护您的个人数据",
+    "cta": "创建账号"
   }
 }
