@@ -1,28 +1,28 @@
 {
   "HeroSection": {
-    "header": "Internxt Yearly Plans",
+    "header": "Internxt 年度计划",
     "title": {
-      "normalText": "The most secure cloud ",
-      "blueText": "for all your photos and files"
+      "normalText": "最安全的云 ",
+      "blueText": "保存您的所有照片和文件的"
     },
-    "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
-    "cta": "Choose your plan"
+    "description": "注册 Internxt 年度计划，享受 365 天的完全隐私。",
+    "cta": "选择您的计划"
   },
   "PaymentSection": {
-    "title": "Annual plans",
-    "description": "All Internxt plans are fully featured with complete access to all of our privacy services. Year-long security for all shapes and sizes.",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "title": "年度计划",
+    "description": "所有 Internxt 计划均功能齐全，可完全访问我们所有的隐私服务。为各种规模的企业提供全年安全保障。",
+    "firstFeed": "30天退款保证",
+    "secondFeed": "100％安全支付",
+    "thirdFeed": "匿名账户创建"
   },
   "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "title": "重新掌控您的隐私",
+    "description": "Internxt 创建私有且安全的云服务，旨在让您（用户）重新掌控您的数据。为了保护您的文件和您的基本隐私权，所有 Internxt 服务都是从头构建的，具有无与伦比的安全性和保障性。",
+    "cta": "获取一年计划"
   },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Find your plan"
+    "title": "全球最私密的云存储",
+    "description": "使用 Internxt 的安全、私密和加密的云存储保护真正重要的东西。",
+    "cta": "查找您的计划"
   }
 }
