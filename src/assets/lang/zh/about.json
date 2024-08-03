@@ -13,12 +13,12 @@
     },
     "figures": {
       "activeUsers": {
-        "figure": "1M",
-        "caption": "Users trust Internxt"
+        "figure": "1百万",
+        "caption": "位用户信任 Internxt"
       },
       "awards": {
         "figure": "30",
-        "caption": "Awards and Mentions"
+        "caption": "奖项和提名"
       }
     },
     "description": {
@@ -29,16 +29,16 @@
       "title": "因出色的工作而自豪地获得认可",
       "brands": {
         "forbes": {
-          "caption1": "Next 1000"
+          "caption1": "下一个 1000"
         },
         "southsummit": {
-          "caption1": "Best Startup"
+          "caption1": "最佳创业公司"
         },
         "tnw": {
           "caption1": "T500"
         },
         "startupvalencia": {
-          "caption1": "Best Startup"
+          "caption1": "最佳创业公司"
         }
       }
     }
