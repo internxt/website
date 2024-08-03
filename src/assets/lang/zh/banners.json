@@ -16,32 +16,32 @@
     "guarantee": "30天退款保证"
   },
   "LoginBanner": {
-    "head": "Try before you buy.",
-    "title": "Get Internxt for free!",
-    "buttonText": "Sign up now",
+    "head": "先试后买。",
+    "title": "免费获取 Internxt！",
+    "buttonText": "立即注册",
     "card": {
-      "title1": "Get 1GB free",
-      "title2": "Safe and secure cloud storage",
-      "title3": "Private file and photo backup",
-      "title4": "End-to-end encrypted transfers",
-      "title5": "No unauthorized access",
-      "title6": "Available on all devices"
+      "title1": "免费获得 1GB",
+      "title2": "安全可靠的云存储",
+      "title3": "私人文件和照片备份",
+      "title4": "端到端加密传输",
+      "title5": "防止未经授权的访问",
+      "title6": "可用于所有设备"
     }
   },
   "AndroidSmartBanner": {
-    "title": "Download Internxt Drive for Android"
+    "title": "下载 Android 版 Internxt Drive"
   },
   "BFBanner": {
-    "head": "Save big on privacy.",
-    "title": "Internxt’s Black Friday Deal",
-    "buttonText": "Get the deal",
+    "head": "大大地减少隐私泄漏。",
+    "title": "Internxt 的黑色星期五优惠",
+    "buttonText": "获得优惠",
     "card": {
-      "title1": "Get 60% off our 2TB plan",
-      "title2": "Safe and secure cloud storage",
-      "title3": "Private file and photo backup",
-      "title4": "End-to-end encrypted transfers",
-      "title5": "No unauthorized access",
-      "title6": "Available until Dec 5th"
+      "title1": "2TB 计划立减 60%",
+      "title2": "安全可靠的云存储",
+      "title3": "私人文件和照片备份",
+      "title4": "端到端加密传输",
+      "title5": "防止未经授权的访问",
+      "title6": "有效期至 12 月 5 日"
     }
   },
   "featuresBanner": {
@@ -60,33 +60,33 @@
     ]
   },
   "tryOutInternxtGeneralBanner": {
-    "title": "Try Internxt",
-    "description": "Secure cloud storage based on total privacy and encryption.",
-    "cta": "Sign up for free"
+    "title": "尝试 Internxt",
+    "description": "基于完全隐私和加密的安全云存储。",
+    "cta": "免费注册"
   },
   "tryOutInternxtPasswordCheckerBanner": {
-    "title": "Try Internxt",
-    "description": "Secure file storage with password-protected technology for your files.",
-    "cta": "Sign up for free"
+    "title": "尝试 Internxt",
+    "description": "使用密码保护技术来保护您的文件的安全存储。",
+    "cta": "免费注册"
   },
   "SignUpPwdCheckerBanner": {
-    "line1": "Put that strong password to use with a",
-    "blueText": "free Internxt account"
+    "line1": "设置强密码",
+    "blueText": "使用免费的 Internxt 账户"
   },
-  "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
-  "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
-  "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
+  "SignUpVirusScannerBanner": { "line1": "确保这些现在干净的文件安全，", "blueText": "免费加入 Internxt" },
+  "SignUpByteConverterBanner": { "line1": "获取大量安全云存储", "blueText": "使用 Internxt" },
+  "SignUpTempMailBanner": { "line1": "保持电子邮件清洁并保证文件安全", "blueText": "使用 Internxt" },
   "SignUpCyberAwareness": {
-    "line1": "Now that you’re aware, protect yourself with",
-    "blueText": "Internxt secure cloud storage"
+    "line1": "现在你已经知道了，",
+    "blueText": "使用 Internxt 安全云存储保护自己"
   },
   "SignUpPasswordGenerator": {
-    "line1": "Shield your accounts with unique passwords,",
-    "blueText": "join Internxt for free"
+    "line1": "使用独特的密码保护您的账户，",
+    "blueText": "免费加入 Internxt"
   },
   "privacyDirectoryBanner": {
-    "line1": "Join the fight for privacy and build a better internet",
-    "blueText": "with Internxt"
+    "line1": "加入隐私斗争，建设更好的互联网",
+    "blueText": "和 Internxt"
   },
   "GeneralBanner": {
     "title": "Before you bounce...",
