@@ -1,6 +1,9 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 /*eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
+import { FieldError, UseFormRegister } from 'react-hook-form';
+import { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
+
 export interface TextInputProps {
   className?: string;
   type?: 'text' | 'email' | 'number' | 'password';
@@ -13,6 +16,10 @@ export interface TextInputProps {
   max?: string | number;
   disabled?: boolean;
   readonly?: boolean;
+  register?: UseFormRegister<IFormValues>;
+  minLength?: { value: number; message: string };
+  maxLength?: number;
+  error?: FieldError;
   autoComplete?:
     | 'false'
     | 'off'

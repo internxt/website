@@ -29,6 +29,8 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/lifetime/security82',
 ];
 
+const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
+
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
@@ -91,6 +93,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
+          <Script strategy="beforeInteractive" src={`https://www.google.com/recaptcha/api.js?render=${CAPTCHA}`} />
           <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>

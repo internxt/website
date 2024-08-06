@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { PromoCodeProps } from './types';
 
 export const IFRAME_AUTH_ENABLED = false;
@@ -18,6 +19,29 @@ export function checkSession(): void {
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'check_session' }, window.location.origin);
   }
+}
+
+export async function getCaptchaToken(): Promise<string> {
+  const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string, {
+    action: 'SendItems',
+  });
+
+  return token;
+}
+
+export async function objectStoragePreSignUp(email: string, password: string, captchaToken: string) {
+  axios.post(
+    '/users/activation',
+    {
+      email,
+      password,
+    },
+    {
+      headers: {
+        recaptcha: captchaToken,
+      },
+    },
+  );
 }
 
 /**
