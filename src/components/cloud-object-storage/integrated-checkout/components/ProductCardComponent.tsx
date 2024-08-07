@@ -33,7 +33,7 @@ export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductF
           />
         </div>
       </div>
-      <div className="bg-surface flex w-full rounded-2xl border border-gray-10 p-5">
+      <div className="flex w-full rounded-2xl border border-gray-10 bg-white p-5">
         <div className="flex w-full flex-col space-y-5">
           <p>{textContent.selectedPlan}</p>
           <p className="text-2xl font-bold text-gray-100">{textContent.billed.lifetime}</p>

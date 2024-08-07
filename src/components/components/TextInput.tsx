@@ -17,6 +17,7 @@ export interface TextInputProps {
   disabled?: boolean;
   readonly?: boolean;
   register?: UseFormRegister<IFormValues>;
+  label?: 'email' | 'password';
   minLength?: { value: number; message: string };
   maxLength?: number;
   error?: FieldError;
@@ -65,7 +66,33 @@ export interface TextInputProps {
   disabledText?: string;
 }
 
+const validatePassword = (password) => {
+  const minLength = /.{6,}/;
+  const hasDigit = /\d/;
+  const hasUpperCase = /[A-Z]/;
+  const hasLowerCase = /[a-z]/;
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+  if (!minLength.test(password)) {
+    return 'Password must be 6 characters or more.';
+  }
+  if (!hasDigit.test(password)) {
+    return 'Password must contain at least one digit.';
+  }
+  if (!hasUpperCase.test(password)) {
+    return 'Password must contain at least one uppercase letter.';
+  }
+  if (!hasLowerCase.test(password)) {
+    return 'Password must contain at least one lowercase letter.';
+  }
+  if (!hasSpecialChar.test(password)) {
+    return 'Password must contain at least one special character.';
+  }
+  return true;
+};
+
 const TextInput = (props: TextInputProps) => {
+  const { register } = props;
   return (
     <input
       type={props.type ?? 'text'}
@@ -73,10 +100,18 @@ const TextInput = (props: TextInputProps) => {
       value={props.value}
       required={props.required}
       id={props.id}
-      name={props.name}
-      min={props.min}
       max={props.max}
-      pattern={props.pattern}
+      {...(register && props.min && props.label
+        ? register(props.label, {
+            required: 'Password is required',
+            minLength: {
+              value: Number(props.min),
+              message: `Password must be at least ${props.min} characters`,
+            },
+            validate: validatePassword,
+            min: props.min,
+          })
+        : {})}
       title={props.patternHint}
       disabled={props.disabled}
       readOnly={props.readonly || props.autoCompleteOnFocus}

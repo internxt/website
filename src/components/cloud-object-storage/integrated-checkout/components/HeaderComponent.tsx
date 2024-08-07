@@ -15,7 +15,7 @@ export const HeaderComponent = ({ textContent, lang }: HeaderComponentProps): JS
 
   return (
     <div className="flex w-full flex-row justify-between">
-      <div className="flex flex-row space-x-2">
+      <div className="flex flex-row items-center justify-center space-x-2">
         <Link href="/" hrefLang={lang}>
           <Image src={getImage(`/logos/internxt/cool-gray-90.svg`)} alt="Internxt logo" width={96} height={10} />
         </Link>

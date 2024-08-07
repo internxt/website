@@ -13,6 +13,7 @@ import { INTERNXT_URL } from '@/constants';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
+import Script from 'next/script';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -48,6 +49,8 @@ export const THEME_STYLES = {
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 const RETURN_URL_DOMAIN = IS_PRODUCTION ? INTERNXT_URL : 'http://localhost:3001';
+
+const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
 const stripePromise = (async () => {
   const stripeKey = IS_PRODUCTION
@@ -189,20 +192,23 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   };
 
   return (
-    <Layout title="Integrated Checkout" description="Integrated checkout description">
-      {plan && stripe ? (
-        <Elements stripe={stripe} options={stripeElementsOptions}>
-          <IntegratedCheckoutView
-            textContent={textContent}
-            objStoragePlan={plan}
-            isPaying={isUserPaying}
-            onCheckoutButtonClicked={onCheckoutButtonClicked}
-          />
-        </Elements>
-      ) : (
-        <LoadingPulse />
-      )}
-    </Layout>
+    <>
+      <Script strategy="beforeInteractive" src={`https://www.google.com/recaptcha/api.js?render=${CAPTCHA}`} />
+      <Layout title="Integrated Checkout" description="Integrated checkout description">
+        {plan && stripe ? (
+          <Elements stripe={stripe} options={stripeElementsOptions}>
+            <IntegratedCheckoutView
+              textContent={textContent}
+              objStoragePlan={plan}
+              isPaying={isUserPaying}
+              onCheckoutButtonClicked={onCheckoutButtonClicked}
+            />
+          </Elements>
+        ) : (
+          <LoadingPulse />
+        )}
+      </Layout>
+    </>
   );
 };
 

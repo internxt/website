@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/HeaderComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { ProductFeaturesComponent } from './components/ProductCardComponent';
 import { PlanData } from '@/pages/cloud-object-storage/integrated-checkout';
+import { UserAuthComponent } from './components/UserAuthComponent';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
@@ -58,14 +59,13 @@ export const IntegratedCheckoutView = ({
     register,
     formState: { errors, isValid },
     handleSubmit,
-    reset,
   } = useForm<IFormValues>({
     mode: 'onChange',
   });
 
   return (
     <form
-      className="flex h-full overflow-y-scroll bg-gray-1 lg:w-screen xl:px-16"
+      className="flex bg-gray-1 lg:w-screen xl:px-16"
       onSubmit={handleSubmit((formData, event) => onCheckoutButtonClicked(event, stripeSDK, elements, formData))}
     >
       <div className="mx-auto flex w-full max-w-screen-xl px-5 py-10">
@@ -74,12 +74,12 @@ export const IntegratedCheckoutView = ({
           <p className="text-xl font-bold text-gray-100 md:text-center lg:text-left lg:text-3xl">{textContent.title}</p>
           <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:justify-between">
             <div className="flex w-full max-w-xl flex-col space-y-14">
-              {/* <UserAuthComponent
+              <UserAuthComponent
                 textContent={textContent.authComponent}
                 errors={errors}
                 authError={error?.auth as string}
                 register={register}
-              /> */}
+              />
               <div className="flex flex-col space-y-8 pb-20">
                 <p className="text-2xl font-semibold text-gray-100">2. {textContent.paymentTitle}</p>
                 <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
@@ -97,12 +97,12 @@ export const IntegratedCheckoutView = ({
                 </div>
                 <PaymentElement options={PAYMENT_ELEMENT_OPTIONS} />
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
-                <Button className="!w-full" type="submit" text="Pay" disabled={isPaying} />
+                <Button id="submit" className="!w-full" type="submit" text="Pay" disabled={isPaying} />
               </div>
             </div>
-            <div className="top-5 flex w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
+            <div className="top-5 w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
               <ProductFeaturesComponent textContent={textContent.productCard} selectedPlan={objStoragePlan} />
-              <Button type="submit" className="flex lg:hidden" text="Pay" disabled={isPaying} />
+              <Button id="submit" type="submit" className="flex lg:hidden" text="Pay" disabled={isPaying} />
             </div>
           </div>
         </div>

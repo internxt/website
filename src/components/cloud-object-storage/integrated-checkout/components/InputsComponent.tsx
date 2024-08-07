@@ -1,8 +1,8 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
 import PasswordInput from '@/components/components/PasswordInput';
-import TextInput from '@/components/components/TextInput';
 import { IFormValues } from '../IntegratedCheckoutView';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
+import TextInput from '@/components/shared/TextInput';
 
 export const MAX_PASSWORD_LENGTH = 50;
 
@@ -20,6 +20,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
         <p className="text-sm text-gray-80">{textContent.signup.emailAddress}</p>
         <TextInput
           placeholder={'Email'}
+          label="email"
           type="email"
           register={register}
           required={true}
@@ -33,6 +34,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
         <label className="space-y-0.5">
           <PasswordInput
             placeholder={'Password'}
+            label="password"
             maxLength={MAX_PASSWORD_LENGTH}
             register={register}
             required={true}
