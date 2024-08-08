@@ -1,19 +1,20 @@
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
+import { GetServerSidePropsContext } from 'next';
+import Script from 'next/script';
+
 import {
   IFormValues,
   IntegratedCheckoutView,
 } from '@/components/cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
 import Layout from '@/components/layout/Layout';
-import { GetServerSidePropsContext } from 'next';
 import { IntegratedCheckoutText } from '../../assets/types/integrated-checkout';
 import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
-import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { INTERNXT_URL } from '@/constants';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
-import Script from 'next/script';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -53,9 +54,7 @@ const RETURN_URL_DOMAIN = IS_PRODUCTION ? INTERNXT_URL : 'http://localhost:3001'
 const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
 const stripePromise = (async () => {
-  const stripeKey = IS_PRODUCTION
-    ? process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-    : process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+  const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
   return await loadStripe(stripeKey as string);
 })();
 
