@@ -141,9 +141,12 @@ async function getCoupon(couponName: PromoCodeName) {
         couponName,
       },
     });
-    const { data: CouponData } = res;
+    const { data: couponData } = res;
 
-    return CouponData;
+    return {
+      name: couponName,
+      ...couponData,
+    };
   } catch (err) {
     const error = err as Error;
 
@@ -166,12 +169,14 @@ async function getLifetimeCoupons() {
 const redirectToCheckout = (
   planId: string,
   currencyValue: string,
+  planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
   promoCodeId?: PromoCodeProps['codeId'],
 ) => {
   checkout({
     planId,
     promoCodeId,
+    planType,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
   });

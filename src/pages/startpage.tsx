@@ -22,6 +22,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
   function handlePriceCardButton(planId, coupon) {
     checkout({
       planId: planId,
+      planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
       promoCodeId: coupon ?? undefined,

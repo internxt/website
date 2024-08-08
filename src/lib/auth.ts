@@ -215,17 +215,25 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
 type PaymentCheckoutConfig = {
   planId: string;
   promoCodeId?: PromoCodeProps['codeId'];
+  planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
   currency?: string;
 };
-export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
+
+    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    mode && params.set('mode', mode ? mode : 'subscription');
+
+    if (planType === 'individual') {
+      window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
+      return;
+    }
 
     const checkoutUrl = getAuthFlowCreateUserURL({
       redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
@@ -240,17 +248,25 @@ export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckou
   }
 }
 
-export function checkoutForPcComponentes({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
+export function checkoutForPcComponentes({
+  planId,
+  promoCodeId,
+  planType,
+  mode,
+  currency,
+}: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
     currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    mode && params.set('mode', mode ? mode : 'subscription');
+
+    const pathname = planType === 'individual' ? '/checkout-plan' : '/checkout-plan';
 
     const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
+      redirectURL: AUTH_FLOW_URL + `${pathname}?${params.toString()}`,
       enableAutoSubmit: false,
       skipSignupIfLoggedIn: true,
     });

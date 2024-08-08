@@ -37,7 +37,7 @@ export const BusinessPage = ({
   const locale = lang as string;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime);
+    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime);
   };
 
   return (

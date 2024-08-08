@@ -29,6 +29,7 @@ export const PriceCardsForAffiliatesPartners = ({
     checkout({
       planId: planId,
       mode: 'payment',
+      planType: 'individual',
       currency: currencyValue ?? 'eur',
       promoCodeId: coupon?.codeId ?? undefined,
     });

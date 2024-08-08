@@ -196,6 +196,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 onClick={() => {
                   checkout({
                     planId: '',
+                    planType: 'individual',
                   });
                 }}
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
