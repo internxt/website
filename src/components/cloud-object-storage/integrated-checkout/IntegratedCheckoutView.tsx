@@ -85,7 +85,7 @@ export const IntegratedCheckoutView = ({
                 <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
                   <AddressElement
                     onChange={(e) => {
-                      onUserNameFromAddressElementChange?.(e.value.name as string);
+                      onUserNameFromAddressElementChange?.(e.value.name);
                     }}
                     options={{
                       mode: 'billing',

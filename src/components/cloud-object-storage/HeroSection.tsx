@@ -9,7 +9,7 @@ interface HeroSectionProps {
 
 export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps): JSX.Element => (
   <section
-    className="overflow-hidden py-20 px-5"
+    className="overflow-hidden px-5 py-20"
     style={{
       background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
     }}
@@ -22,7 +22,7 @@ export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps)
         </Header>
         <p className="text-xl">{textContent.description}</p>
         <Button
-          className="!w-full lg:!w-max"
+          className="lg:!w-max !w-full"
           text={textContent.cta}
           onClick={() => (window.location.hash = '#storageSection')}
         />

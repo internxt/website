@@ -11,7 +11,6 @@ import { IntegratedCheckoutText } from '../../assets/types/integrated-checkout';
 import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
-import { INTERNXT_URL } from '@/constants';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
@@ -49,7 +48,7 @@ export const THEME_STYLES = {
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
-const RETURN_URL_DOMAIN = IS_PRODUCTION ? INTERNXT_URL : 'http://localhost:3001';
+const RETURN_URL_DOMAIN = IS_PRODUCTION ? 'https://console.internxt.com' : 'http://localhost:3001';
 
 const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
@@ -59,7 +58,6 @@ const stripePromise = (async () => {
 })();
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
-  const lang = locale as string;
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
@@ -151,17 +149,22 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
     const { email, password } = formData;
 
-    const captchaToken = await getCaptchaToken();
-
-    objectStoragePreSignUp(email, password, captchaToken);
+    console.log({
+      email,
+      password,
+    });
 
     try {
+      const captchaToken = await getCaptchaToken();
+
+      await objectStoragePreSignUp(email, password, captchaToken);
+
       if (!stripeSDK || !elements) {
         console.error('Stripe.js has not loaded yet. Please try again later.');
         return;
       }
 
-      const { customerId, token } = await paymentService.getCustomerId('My Internxt', 'testObjStorage@inxt.com');
+      const { customerId, token } = await paymentService.getCustomerId('My Internxt Object Storage', email);
 
       await elements.submit();
 

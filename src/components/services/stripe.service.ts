@@ -135,32 +135,21 @@ async function getSelectedPrice(interval: string, plan: string, planType: 'indiv
 }
 
 async function getCoupon(couponName: PromoCodeName) {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
-      params: {
-        couponName,
-      },
-    });
-    const { data: CouponData } = res;
+  const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
+    params: {
+      couponName,
+    },
+  });
+  const { data: CouponData } = res;
 
-    return CouponData;
-  } catch (err) {
-    const error = err as Error;
-
-    throw new Error(error.message);
-  }
+  return CouponData;
 }
 
 async function getLifetimeCoupons() {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
-    const { data } = res;
+  const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
+  const { data } = res;
 
-    return data;
-  } catch (err) {
-    const error = err as Error;
-    throw new Error(error.message);
-  }
+  return data;
 }
 
 const redirectToCheckout = (

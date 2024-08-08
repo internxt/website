@@ -1,8 +1,8 @@
 import { FieldErrors, UseFormRegister } from 'react-hook-form';
-import PasswordInput from '@/components/components/PasswordInput';
 import { IFormValues } from '../IntegratedCheckoutView';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import TextInput from '@/components/shared/TextInput';
+import PasswordInput from '@/components/shared/PasswordInput';
 
 export const MAX_PASSWORD_LENGTH = 50;
 
@@ -12,6 +12,8 @@ interface InputsComponentProps {
   authError?: string;
   register: UseFormRegister<IFormValues>;
 }
+
+const PASSWORD_REGEX = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$'
 
 export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps) => {
   return (
@@ -25,7 +27,7 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
           register={register}
           required={true}
           minLength={{ value: 1, message: textContent.emailMustNotBeEmpty }}
-          error={errors.password}
+          error={errors.email}
         />
       </div>
 
@@ -39,7 +41,12 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
             register={register}
             required={true}
             error={errors.password}
+            pattern={{
+              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?.&-])[A-Za-z\d@$!%*?.&-]{6,}$/,
+              message: 'Password must contain 6 letters or more, at least one digit, mix between uppercase and lowercase letters, one special character.'
+            }}
           />
+
         </label>
       </div>
       {authError && <div className="text-red-dark">{authError}</div>}

@@ -120,7 +120,7 @@ const TextInput = (props: TextInputProps) => {
         props.isPasswordInput ? 'pr-12' : ''
       } text-lg text-gray-100 shadow-sm transition duration-100 focus:outline-none ${
         props.passwordError ? 'border-2 focus:border-red' : 'border focus:border-primary'
-      } focus:shadow-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 ${
+      } focus:ring-primary/10 focus:shadow-none focus:ring disabled:cursor-not-allowed disabled:border-gray-10 ${
         props.disabledText ?? 'disabled:text-gray-30'
       } md:text-base ${props.className ?? ''}`}
       onChange={props.onChange}
