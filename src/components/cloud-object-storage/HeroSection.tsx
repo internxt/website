@@ -2,6 +2,8 @@ import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Header from '../shared/Header';
 import Button from '../shared/Button';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: CloudObjectStorageText['HeroSection'];
@@ -9,7 +11,7 @@ interface HeroSectionProps {
 
 export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps): JSX.Element => (
   <section
-    className="overflow-hidden py-20 px-5"
+    className="-mb-28 -mt-10 overflow-hidden px-5 py-20"
     style={{
       background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
     }}
@@ -22,12 +24,21 @@ export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps)
         </Header>
         <p className="text-xl">{textContent.description}</p>
         <Button
-          className="!w-full lg:!w-max"
+          className="lg:!w-max !w-full"
           text={textContent.cta}
           onClick={() => (window.location.hash = '#storageSection')}
         />
       </div>
-      <div></div>
+      <div className="flex">
+        <Image
+          src={getImage('/images/cloud-object-storage/s3_internxt.webp')}
+          alt="cloud object storage"
+          quality={100}
+          width={631}
+          height={745}
+          draggable={false}
+        />
+      </div>
     </HeroSectionSafeArea>
   </section>
 );
