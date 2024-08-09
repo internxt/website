@@ -49,7 +49,7 @@ export const THEME_STYLES = {
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
-const RETURN_URL_DOMAIN = IS_PRODUCTION ? 'https://console.internxt.com' : 'http://localhost:3001';
+const RETURN_URL_DOMAIN = IS_PRODUCTION ? 'https://console.internxt.com' : 'http://localhost:3001/cloud-object-storage';
 
 const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
@@ -186,7 +186,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         elements,
         clientSecret,
         confirmParams: {
-          return_url: `${RETURN_URL_DOMAIN}/cloud-object-storage/integrated-checkout`,
+          return_url: `${RETURN_URL_DOMAIN}`,
         },
       });
 
