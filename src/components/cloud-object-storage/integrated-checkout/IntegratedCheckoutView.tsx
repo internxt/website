@@ -54,7 +54,6 @@ export const IntegratedCheckoutView = ({
 }: IntegratedCheckoutViewProps): JSX.Element => {
   const stripeSDK = useStripe();
   const elements = useElements();
-
   const {
     register,
     formState: { errors, isValid },
@@ -62,6 +61,8 @@ export const IntegratedCheckoutView = ({
   } = useForm<IFormValues>({
     mode: 'onChange',
   });
+
+  const disabledButton = isPaying && isValid;
 
   return (
     <form
@@ -97,12 +98,24 @@ export const IntegratedCheckoutView = ({
                 </div>
                 <PaymentElement options={PAYMENT_ELEMENT_OPTIONS} />
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
-                <Button id="submit" className="!w-full" type="submit" text="Pay" disabled={isPaying} />
+                <Button
+                  id="submit"
+                  className="hidden !w-full lg:flex"
+                  type="submit"
+                  text={disabledButton ? textContent.paying : textContent.pay}
+                  disabled={disabledButton}
+                />
               </div>
             </div>
-            <div className="top-5 w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
+            <div className="top-5 flex w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
               <ProductFeaturesComponent textContent={textContent.productCard} selectedPlan={objStoragePlan} />
-              <Button id="submit" type="submit" className="flex lg:hidden" text="Pay" disabled={isPaying} />
+              <Button
+                id="submit"
+                type="submit"
+                className="flex !w-full pt-5 lg:hidden"
+                text={disabledButton ? textContent.paying : textContent.pay}
+                disabled={disabledButton}
+              />
             </div>
           </div>
         </div>

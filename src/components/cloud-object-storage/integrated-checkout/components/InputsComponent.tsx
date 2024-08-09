@@ -49,7 +49,11 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
           />
         </label>
       </div>
-      {authError && <div className="text-red-dark">{authError}</div>}
+      {errors && (
+        <div className="text-red-dark">
+          <p>{errors.email?.message ?? errors.password?.message}</p>
+        </div>
+      )}
       <p className="text-sm font-medium text-gray-50">{textContent.privacyGuarantee}</p>
     </>
   );

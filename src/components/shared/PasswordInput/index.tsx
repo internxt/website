@@ -46,7 +46,7 @@ const PasswordInput = ({
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className={`relative flex-1 ${className}`}>
+    <div className={`relative z-20 flex-1 ${className}`}>
       <input
         type={showPassword ? 'text' : 'password'}
         disabled={disabled}

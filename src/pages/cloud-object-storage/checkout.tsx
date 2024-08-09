@@ -13,7 +13,8 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
-import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
+import { useRouter } from 'next/navigation';
+import { notificationService } from '@/components/Snackbar';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -57,7 +58,11 @@ const stripePromise = (async () => {
   return await loadStripe(stripeKey as string);
 })();
 
+const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
+
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
+  const router = useRouter();
+
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
@@ -65,11 +70,15 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const { backgroundColor, borderColor, borderInputColor, textColor } = THEME_STYLES['light'];
 
   useEffect(() => {
-    paymentService.fetchPlanById('price_1PkQxvFAOdcgaBMQWKHwFYda', 'eur').then((plan) => {
-      console.log(plan);
-      setPlan(plan);
-      loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, plan);
-    });
+    paymentService
+      .fetchPlanById(PRICE_ID, 'eur')
+      .then((plan) => {
+        setPlan(plan);
+        loadStripeElements(textColor, backgroundColor, borderColor, borderInputColor, plan);
+      })
+      .catch(() => {
+        router.push('/cloud-object-storage');
+      });
   }, []);
 
   const loadStripeElements = async (
@@ -149,15 +158,12 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
     const { email, password } = formData;
 
-    console.log({
-      email,
-      password,
-    });
-
     try {
-      const captchaToken = await getCaptchaToken();
+      // const captchaToken = await getCaptchaToken();
 
-      await objectStoragePreSignUp(email, password, captchaToken);
+      // await objectStoragePreSignUp(email, password, captchaToken);
+
+      if (!plan) return;
 
       if (!stripeSDK || !elements) {
         console.error('Stripe.js has not loaded yet. Please try again later.');
@@ -166,9 +172,11 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       const { customerId, token } = await paymentService.getCustomerId('My Internxt Object Storage', email);
 
-      await elements.submit();
+      const { error: elementsError } = await elements.submit();
 
-      if (!plan) return;
+      if (elementsError) {
+        throw new Error(elementsError.message);
+      }
 
       const { clientSecret } = await paymentService.getPaymentIntent(customerId, plan, token);
 
@@ -182,12 +190,12 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         },
       });
 
-      // if (error) {
-      //   setError('stripe', error.message as string);
-      // }
+      if (error) {
+        throw new Error(error.message);
+      }
     } catch (err) {
       const error = err as Error;
-      // errorService.reportError(error);
+      notificationService.openErrorToast(error.message);
     } finally {
       setIsUserPaying(false);
     }
