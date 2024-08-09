@@ -28,7 +28,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pt-24 pb-12 lg:mx-10 lg:pt-12 xl:mx-32">
+      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
           style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
@@ -55,26 +55,22 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                isHomePageV2 ? (
-                  <div className="flex flex-col gap-9">
-                    <div className="flex flex-col gap-4">
-                      <Header maxWidth="max-w-[500px]" className="text-gray-100">
-                        {titleAndOnePlanText.title.normal1}{' '}
-                        <span className="text-primary">{titleAndOnePlanText.title.blue1}</span>
-                        {titleAndOnePlanText.title.normal2}{' '}
-                        <span className="text-primary">{titleAndOnePlanText.title.blue2}</span>
-                      </Header>
-                    </div>
-                    <div className="mx-auto flex flex-col gap-2 lg:mx-0">
-                      {titleAndOnePlanText.features.map((feat) => (
-                        <div className="flex flex-row gap-2" key={feat}>
-                          <Check className="text-green" weight="bold" size={24} />
-                          <p className="text-lg font-semibold text-gray-100">{feat}</p>
-                        </div>
-                      ))}
-                    </div>
+                <div className="flex flex-col gap-9">
+                  <div className="flex flex-col gap-4">
+                    <Header maxWidth="max-w-[500px]" className="text-gray-100">
+                      {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
+                      {textContent.title.line2}{' '}
+                    </Header>
                   </div>
-                ) : undefined
+                  <div className="mx-auto flex flex-col gap-2 lg:mx-0">
+                    {titleAndOnePlanText.features.map((feat) => (
+                      <div className="flex flex-row gap-2" key={feat}>
+                        <Check className="text-green" weight="bold" size={24} />
+                        <p className="text-lg font-semibold text-gray-100">{feat}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               }
               footer={
                 isHomePageV2 ? (

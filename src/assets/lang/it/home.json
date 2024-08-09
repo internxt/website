@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Risparmia il 75%",
     "title": {
-      "line1": "Archiviazione cloud sicura.",
-      "blueText": "Garantita."
+      "line1": "Ottieni il ",
+      "blueText": "più sicuro",
+      "line2": " archivio cloud"
     },
     "subtitle": "Proteggi la tua privacy con la nostra suite open source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
     "cta": {

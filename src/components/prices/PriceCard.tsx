@@ -69,7 +69,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
-          promoCodeId: coupon?.codeId ?? undefined,
+          promoCodeId: coupon?.name ?? undefined,
         });
       } else {
         checkout({
@@ -77,7 +77,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
-          promoCodeId: coupon?.codeId ?? undefined,
+          promoCodeId: coupon?.name ?? undefined,
         });
       }
     }

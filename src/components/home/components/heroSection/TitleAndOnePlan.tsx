@@ -62,8 +62,8 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       </div>
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
-          href={'/pricing'}
-          className={`z-10 flex w-max justify-center rounded-lg bg-primary py-3 px-10 text-xl font-medium text-white hover:bg-primary-dark`}
+          href={'#priceTable'}
+          className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}
         </Link>

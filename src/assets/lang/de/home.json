@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Spare 75%",
     "title": {
-      "line1": "Sicherer Cloud-Speicher.",
-      "blueText": "Garantiert."
+      "line1": "Erhalten Sie den ",
+      "blueText": "sichersten",
+      "line2": " Cloud-Speicher"
     },
     "subtitle": "Schütze deine Privatsphäre mit unseren sicheren Cloud-Services, die verschlüsselt und quelloffen sind. Internxt Drive, Send, und vieles mehr.",
     "cta": {
