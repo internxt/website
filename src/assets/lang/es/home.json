@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Ahorra un 75%",
     "title": {
-      "line1": "Almacenamiento seguro en la nube.",
-      "blueText": "Garantizado."
+      "line1": "Obtén el almacenamiento ",
+      "blueText": "más seguro",
+      "line2": " en la nube"
     },
     "subtitle": "Protege tu privacidad con nuestros servicios seguros y cifrados en la nube: Internxt Drive, Send y más.",
     "cta": {

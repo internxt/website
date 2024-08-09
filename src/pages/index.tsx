@@ -7,12 +7,17 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
+import { stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
+import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
+import { PromoCodeName } from '@/lib/types';
 import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -25,6 +30,10 @@ interface HomeProps {
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
+    couponCode: PromoCodeName.AllPlansCoupon,
+  });
+  const [isBusiness, setIsBusiness] = useState<boolean>();
 
   const locale = lang as string;
 
@@ -34,6 +43,23 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
+  };
+
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
+
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    const planType = isBusiness ? 'business' : 'individual';
+
+    stripeService.redirectToCheckout(
+      planId,
+      currencyValue,
+      planType,
+      isCheckoutForLifetime,
+      couponCodeForCheckout?.name,
+    );
   };
 
   return (
@@ -48,6 +74,18 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       />
 
       <TestimonialsSection textContent={textContent.TestimonialsSection} />
+
+      <PricingSectionWrapper
+        textContent={textContent.tableSection}
+        decimalDiscount={{
+          individuals: 0.2,
+        }}
+        lang={locale}
+        products={products}
+        loadingCards={loadingCards}
+        onBusinessPlansSelected={onBusinessPlansSelected}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+      />
 
       <div className={`${marqueeBgColor} py-10`}>
         <MarqueeComponent bgColor={marqueeBgColor} />

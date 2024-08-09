@@ -1,4 +1,3 @@
-import React from 'react';
 import { Check } from '@phosphor-icons/react';
 import { checkout } from '@/lib/auth';
 
@@ -82,7 +81,7 @@ const PriceCard = ({
       <button
         type="button"
         onClick={() => {
-          checkout({ planId: cta[1], currency: currencyValue[currency] });
+          checkout({ planId: cta[1], planType: 'individual', currency: currencyValue[currency] });
         }}
         className="button-primary"
       >

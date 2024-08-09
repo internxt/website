@@ -34,6 +34,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
   useEffect(() => {
     stripeService.getLifetimeCoupons().then((coupon) => {
       setCoupon(coupon);
+      console.log(coupon);
     });
   }, []);
 
@@ -118,7 +119,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
           </div>
         </Transition>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-y-0 md:space-x-32">
+        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
