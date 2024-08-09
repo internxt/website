@@ -22,7 +22,7 @@ const FeaturesBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const [showBanner, setShowBanner] = useState(isWeekend());
+  const [showBanner, setShowBanner] = useState<boolean>();
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
 
   const handleClose = () => {
