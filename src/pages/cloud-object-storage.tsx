@@ -1,7 +1,6 @@
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { CloudObjectStorageHeroSection } from '@/components/cloud-object-storage/HeroSection';
-import { HowMuchYouNeedSection } from '@/components/cloud-object-storage/HowMuchYouNeedSection';
 import { PredictablePricingSection } from '@/components/cloud-object-storage/PredictablePricingSection';
 import { CloudObjectStoragePriceCardSection } from '@/components/cloud-object-storage/PriceCardSection';
 import { CloudObjectStorageWhyChooseInternxtSection } from '@/components/cloud-object-storage/WhyChooseInternxtSection';
@@ -40,7 +39,7 @@ const CloudObjectStorage = ({
 
       <CloudObjectStoragePriceCardSection textContent={textContent.PriceCardSection} />
 
-      <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} />
+      {/* <HowMuchYouNeedSection textContent={textContent.HowMuchYouNeedSection} /> */}
 
       <CloudObjectStorageWhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
