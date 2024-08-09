@@ -24,7 +24,7 @@ describe('Auth flow (Sign Up / Log In)', () => {
       cy.visit('/');
 
       // Click on the Log In button
-      cy.get('#loginButton').click();
+      cy.get('#loginButton').click({ force: true });
 
       // Check that the user is redirected to https://drive.internxt.com/login
       cy.url().should((url) => {
