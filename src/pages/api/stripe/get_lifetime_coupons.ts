@@ -3,7 +3,7 @@ import axios from 'axios';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const getCoupon = async (promoCodeName: string) => {
-  const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-by-name`, {
+  const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-info`, {
     params: {
       promotionCode: promoCodeName,
     },

@@ -45,7 +45,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [isBusiness, setIsBusiness] = useState<boolean>();
+  const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
   const individualCardsData = [
     {
@@ -103,7 +103,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
-    stripeService.redirectToCheckout(planId, currencyValue, isCheckoutForLifetime, couponCodeForCheckout?.codeId);
+    const planType = isBusiness ? 'business' : 'individual';
+
+    stripeService.redirectToCheckout(
+      planId,
+      currencyValue,
+      planType,
+      isCheckoutForLifetime,
+      couponCodeForCheckout?.name,
+    );
   };
 
   return (

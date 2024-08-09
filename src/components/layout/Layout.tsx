@@ -190,12 +190,6 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="/js/cookiebanner.script.js"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.varify = window.varify || {}; window.varify.iid = 2329;`,
-          }}
-        />
-        <script src="https://app.varify.io/varify.js"></script>
 
         {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
@@ -266,7 +260,7 @@ LayoutProps) {
       {shouldShowBanner ? (
         <>
           <TopBanner isBannerFixed={isBannerFixed} />
-          <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
+          <div className="md:pt-[54px] flex flex-col overflow-hidden pt-[64px]">{children}</div>
         </>
       ) : (
         children

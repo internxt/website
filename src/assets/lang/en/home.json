@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Save 75%",
     "title": {
-      "line1": "Secure cloud storage.",
-      "blueText": "Guaranteed."
+      "line1": "Get the ",
+      "blueText": "most secure",
+      "line2": " cloud storage"
     },
     "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
@@ -163,7 +164,7 @@
   },
   "ChooseStorageSizeSection": {
     "title": "Data leaks can lead to job loss, legal troubles, and blackmailing",
-    "description": "Our cloud storage keeps your files safe, even if your device gets stolen OR hacked.",
+    "description": "Our cloud storage keeps your files safe, even if your device gets stolen or hacked.",
     "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
     "cta": "Choose storage size"
   },
