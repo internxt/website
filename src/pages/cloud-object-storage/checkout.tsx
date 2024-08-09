@@ -49,7 +49,9 @@ export const THEME_STYLES = {
 
 const IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
-const RETURN_URL_DOMAIN = IS_PRODUCTION ? 'https://console.internxt.com' : 'http://localhost:3001/cloud-object-storage';
+const RETURN_URL_DOMAIN = IS_PRODUCTION
+  ? (process.env.NEXT_PUBLIC_RETURN_URL_OBJECT_STORAGE_CHECKOUT as string)
+  : 'http://localhost:3001/cloud-object-storage';
 
 const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
