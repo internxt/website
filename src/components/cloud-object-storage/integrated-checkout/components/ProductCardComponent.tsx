@@ -1,4 +1,4 @@
-import { PlanData } from '@/pages/cloud-object-storage/integrated-checkout';
+import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Check } from '@phosphor-icons/react';
 import bytes from 'bytes';
 import { currency } from '@/components/services/currency.service';

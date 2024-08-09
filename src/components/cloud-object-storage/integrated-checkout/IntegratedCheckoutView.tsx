@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import { HeaderComponent } from './components/HeaderComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { ProductFeaturesComponent } from './components/ProductCardComponent';
-import { PlanData } from '@/pages/cloud-object-storage/integrated-checkout';
+import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { UserAuthComponent } from './components/UserAuthComponent';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
