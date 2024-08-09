@@ -138,7 +138,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         },
       },
       mode: plan?.interval === 'lifetime' ? 'payment' : 'subscription',
-      amount: plan?.amount,
+      amount: plan?.amount ?? 0,
       currency: plan?.currency,
       payment_method_types: ['card'],
     };
@@ -178,9 +178,9 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.getPaymentIntent(customerId, plan, token);
+      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token);
 
-      const confirmIntent = stripeSDK.confirmPayment;
+      const confirmIntent = stripeSDK.confirmSetup;
 
       const { error } = await confirmIntent({
         elements,
@@ -195,7 +195,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       }
     } catch (err) {
       const error = err as Error;
-      notificationService.openErrorToast(error.message);
+      notificationService.openErrorToast('Something went wrong');
     } finally {
       setIsUserPaying(false);
     }

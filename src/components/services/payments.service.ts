@@ -29,6 +29,7 @@ const getCustomerId = async (name: string, email: string) => {
 
   return res.data;
 };
+
 const getPaymentIntent = async (customerId: string, plan: PlanData, token: string) => {
   const { id: priceId, amount, currency } = plan;
 
@@ -49,8 +50,26 @@ const getPaymentIntent = async (customerId: string, plan: PlanData, token: strin
   };
 };
 
+const createSubscription = async (customerId: string, plan: PlanData, token: string) => {
+  const { id: priceId, currency } = plan;
+
+  const response = await axios.post(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/create-subscription-for-object-storage`, {
+    customerId,
+    priceId,
+    token,
+    currency,
+  });
+
+  const res = response.data;
+
+  return {
+    clientSecret: res.clientSecret,
+  };
+};
+
 export const paymentService = {
   fetchPlanById,
   getCustomerId,
   getPaymentIntent,
+  createSubscription,
 };
