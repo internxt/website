@@ -24,7 +24,7 @@ export function checkSession(): void {
 
 export async function getCaptchaToken(): Promise<string> {
   const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string, {
-    action: 'SendItems',
+    action: 'ActivationRequest',
   });
 
   return token;
@@ -249,6 +249,7 @@ export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckou
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
+
     currency && params.set('currency', currency);
     params.set('mode', mode ? mode : 'subscription');
 

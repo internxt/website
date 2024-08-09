@@ -13,9 +13,9 @@ interface InputsComponentProps {
   register: UseFormRegister<IFormValues>;
 }
 
-const PASSWORD_REGEX = '^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$'
+const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
-export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps) => {
+export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps): JSX.Element => {
   return (
     <>
       <div className="flex w-full flex-col gap-1">
@@ -42,11 +42,11 @@ export const InputsComponent = ({ register, textContent, errors, authError }: In
             required={true}
             error={errors.password}
             pattern={{
-              value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?.&-])[A-Za-z\d@$!%*?.&-]{6,}$/,
-              message: 'Password must contain 6 letters or more, at least one digit, mix between uppercase and lowercase letters, one special character.'
+              value: PASSWORD_REGEX,
+              message:
+                'Password must contain 6 letters or more, at least one digit, mix between uppercase and lowercase letters, one special character.',
             }}
           />
-
         </label>
       </div>
       {authError && <div className="text-red-dark">{authError}</div>}
