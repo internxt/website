@@ -1,0 +1,168 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Internxt S3 ",
+      "line2": "compatible object storage"
+    },
+    "description": "An efficient, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
+    "cta": "Get started"
+  },
+  "PredictablePricingSection": {
+    "title": "Simple, predictable pricing with zero fees and no API charges",
+    "description": "Avoid the hassle of unpredictable storage bills. Internxt offers a straightforward rate for storage capacity with no hidden fees.",
+    "info": [
+      {
+        "title": "100% Hot",
+        "description": "Ultra fast and instantly accessible"
+      },
+      {
+        "title": "Up to 80%",
+        "description": "More affordable than AWS"
+      },
+      {
+        "title": "Zero fees",
+        "description": "Free data transfer"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "Internxt object cloud storage combines security and efficiency",
+    "description": "Internxt object storage is an affordable, high-performance solution revolutionizing online data storage, perfect for individuals or organizations needing reliable and secure infrastructure at a minimal cost.",
+    "cardText": {
+      "label": "Internxt S3",
+      "perTB": "Per TB/Billed monthly",
+      "price": "6.99",
+      "cta": "Select plan",
+      "whatsIncluded": {
+        "title": "What's included:",
+        "features": [
+          "Billed monthly",
+          "Server-side encryption",
+          "AWS S3 and IAM API compatible",
+          "Increased speed",
+          "Flexible storage",
+          "Open source",
+          "GDPR compliant",
+          "Premium customer support"
+        ]
+      }
+    }
+  },
+  "HowMuchYouNeedSection": {
+    "title": "How much storage do you need?",
+    "description": "Find out how much you can save with Internxt object storage. Use our cost calculator to see how we compare to hyperscalers.",
+    "pay-as-you-go": "Pay-as-you-go pricing",
+    "perMonth": "/per month",
+    "perYear": "/per year",
+    "storageAmount": "Storage amount",
+    "percentDownloadPerMonth": "Percent download per month",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Why choose Internxt object storage?",
+    "description": "The benefits of object cloud storage with Internxt emphasize effective data management and security.",
+    "cards": [
+      {
+        "title": "Zero ingress and egress fees",
+        "description": "Zero ingress and egress fees eliminate costs for transferring data into or out of storage, allowing for predictable budgeting and cost savings. This benefit is crucial for businesses with frequent data movement or large-scale data operations."
+      },
+      {
+        "title": "Cost per GB",
+        "description": "With our pay-as-you-go model, you only pay for the storage you actually use. Object storage is designed to handle large volumes of unstructured data, which is typically less expensive per GB compared to structured data, which requires more complex management."
+      },
+      {
+        "title": "Durability & Availability",
+        "description": "We enable redundant data storage that replicates and distributes data across multiple European servers. Data is protected from loss or corruption with technology that guarantees 99.999999999% (11 9s) of data durability for each object."
+      },
+      {
+        "title": "Security",
+        "description": "With our object cloud storage, we use multiple security measures to protect your data. Data stored in isolated buckets is accessible only by you or those with permission and is end-to-end encrypted."
+      },
+      {
+        "title": "Simple storage service",
+        "description": "Internxt provides object storage using the S3 protocol to simplify and manage data workflows, ensuring high availability and durability of data with the added security focus that Internxt prioritizes."
+      },
+      {
+        "title": "Speed",
+        "description": "Object storage offers superior speed by allowing multiple read and write operations simultaneously and utilizing rich metadata for faster data retrieval. This allows for quicker access times and efficient handling of large volumes of data."
+      }
+    ],
+    "bannerText": {
+      "title": "Internxt object cloud storage",
+      "description": "Experience superior data management, speed, and efficiency",
+      "cta": "Get started"
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is object storage?",
+        "answer": [
+          "Object storage stores large amounts of data, like photos, videos, and emails, as individual “objects” with unique identifiers.",
+          "Unlike traditional file storage, which organizes data in a hierarchical file system, object storage stores data as objects in a flat address space, typically in a distributed storage infrastructure.",
+          "As a result, cloud object storage allows for easier scaling, faster access to individual items, and potentially lower costs depending on your storage needs."
+        ]
+      },
+      {
+        "question": "What is a S3 protocol?",
+        "answer": [
+          "The S3 protocol, or Simple Storage Service protocol, is a set of rules and standards that define how data is accessed, stored, and managed within Amazon S3, a popular cloud storage service provided by Amazon Web Services (AWS)."
+        ]
+      },
+      {
+        "question": "How much object storage do I get?",
+        "answer": [
+          "With Internxt cloud object storage, you can scale your storage to meet your needs. Our plans charge you monthly for each gigabyte-per-day-used you want to use. You can add or delete storage based on your needs."
+        ]
+      },
+      {
+        "question": "Can I integrate Internxt object storage with existing applications and services?",
+        "answer": [
+          "Yes, Internxt object storage is compatible with AWS S3 APIs, allowing seamless integration with a wide range of applications, tools, and services that support the S3 protocol.",
+          "S3 object storage allows users to upload, retrieve, and manage objects (files and data) using a simple web interface and APIs. The protocol ensures data integrity, security through access controls, and scalability to accommodate varying storage needs seamlessly across distributed servers."
+        ]
+      },
+      {
+        "question": "Does Internxt have a minimum monthly storage policy?",
+        "answer": [
+          "Internxt’s minimum monthly policy for object storage plans is 1TB. If stored objects are deleted before they have been stored with Internxt for 90 days, a time-deleted storage charge will be applied that is equal to the remaining days left on the monthly subscription.",
+          "This policy is the same as the minimum storage duration policy that AWS and other hyperscaler storage services charge."
+        ]
+      },
+      {
+        "question": "Does Internxt have a monthly storage charge?",
+        "answer": [
+          "Internxt has a monthly minimum charge associated with a 1TB monthly paid account. If you store less than 1TB, for example, the 4KB minimum, you will be charged for 1TB of storage."
+        ]
+      },
+      {
+        "question": "What if I want to store small files? (Less than 4 KB)",
+        "answer": [
+          "There is a minimum file size charge of 4KB. Storing a 4KB file will incur charges equivalent to a 1TB file. This policy resembles the minimum capacity charge per object policies found in some AWS storage."
+        ]
+      },
+      {
+        "question": "What’s the cost of overwriting a file repeatedly without versioning?",
+        "answer": [
+          "For example, if you upload a file named 'file.pdf' and overwrite it with a new version without changing the file name or using versioning the next day, the original file will transition from active storage to deleted storage.",
+          "This incurs charges for one day of active storage and 29 or 89 days of deleted storage, depending on your account's minimum storage retention policy. Additionally, charges will apply for storing the new version of 'file.pdf.'"
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any questions, concerns, or feedback, you can contact our Customer Support Team via live chat or by emailing [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "What if I want to cancel my plan?",
+        "answer": [
+          "If you delete objects from Internxt object storage before they have been stored for 90 days, you will still be charged as if those objects had been stored for the full 90 days.",
+          "This policy ensures a minimum charge period for stored data, regardless of how long the objects were actually stored before deletion.",
+          "If you want to cancel your object storage plan, email us at hello@internxt.com, and we’ll process the subscription cancellation."
+        ]
+      }
+    ]
+  }
+}
