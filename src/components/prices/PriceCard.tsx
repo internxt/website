@@ -60,6 +60,8 @@ export default function PriceCard({
   function onCheckoutButtonClicked() {
     if (lifetimeMode === 'redeem') return onButtonClicked?.();
 
+    console.log(coupon);
+
     if (cta[1] === 'Free plan') {
       goToSignUpURL();
     } else {
@@ -69,7 +71,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
-          promoCodeId: coupon?.codeId ?? undefined,
+          promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       } else {
         checkout({
@@ -77,7 +79,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
-          promoCodeId: coupon?.codeId ?? undefined,
+          promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       }
     }
