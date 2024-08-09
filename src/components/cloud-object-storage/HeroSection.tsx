@@ -21,10 +21,10 @@ export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps)
       }}
     >
       <HeroSectionSafeArea>
-        <div className="flex max-w-[533px] flex-col items-center gap-8 text-center text-white lg:items-start lg:text-left">
+        <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 text-center text-white lg:items-start lg:text-left">
           <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
             {textContent.title.line1}
-            <span className="text-5xl font-bold">{textContent.title.line2}</span>
+            <span className="font-bold lg:text-5xl">{textContent.title.line2}</span>
           </Header>
           <p className="text-xl">{textContent.description}</p>
           <Button
