@@ -62,6 +62,11 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
                       {textContent.title.line2}{' '}
                     </Header>
                   </div>
+                  <p className="text-xl font-bold text-gray-100">
+                    {textContent.TitleAndOnePlan.description.normal1}
+                    <span className="text-primary">{textContent.TitleAndOnePlan.description.blue}</span>
+                    {textContent.TitleAndOnePlan.description.normal2}
+                  </p>
                   <div className="mx-auto flex flex-col gap-2 lg:mx-0">
                     {titleAndOnePlanText.features.map((feat) => (
                       <div className="flex flex-row gap-2" key={feat}>

@@ -31,7 +31,7 @@ export const PriceCardsForAffiliatesPartners = ({
       mode: 'payment',
       planType: 'individual',
       currency: currencyValue ?? 'eur',
-      promoCodeId: coupon?.codeId ?? undefined,
+      promoCodeId: coupon?.name ?? undefined,
     });
   }
 
