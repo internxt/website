@@ -3,6 +3,8 @@ import axios from 'axios';
 export const currency = {
   US: '$',
   CA: '$',
+  usd: '$',
+  eur: '€',
 };
 
 export const priceValue = {

@@ -1,6 +1,9 @@
 /*eslint-disable @typescript-eslint/no-explicit-any */
 /*eslint-disable @typescript-eslint/explicit-module-boundary-types */
 
+import { FieldError, UseFormRegister } from 'react-hook-form';
+import { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
+
 export interface TextInputProps {
   className?: string;
   type?: 'text' | 'email' | 'number' | 'password';
@@ -13,6 +16,11 @@ export interface TextInputProps {
   max?: string | number;
   disabled?: boolean;
   readonly?: boolean;
+  register?: UseFormRegister<IFormValues>;
+  label?: 'email' | 'password';
+  minLength?: { value: number; message: string };
+  maxLength?: number;
+  error?: FieldError;
   autoComplete?:
     | 'false'
     | 'off'
@@ -58,7 +66,33 @@ export interface TextInputProps {
   disabledText?: string;
 }
 
+const validatePassword = (password) => {
+  const minLength = /.{6,}/;
+  const hasDigit = /\d/;
+  const hasUpperCase = /[A-Z]/;
+  const hasLowerCase = /[a-z]/;
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/;
+
+  if (!minLength.test(password)) {
+    return 'Password must be 6 characters or more.';
+  }
+  if (!hasDigit.test(password)) {
+    return 'Password must contain at least one digit.';
+  }
+  if (!hasUpperCase.test(password)) {
+    return 'Password must contain at least one uppercase letter.';
+  }
+  if (!hasLowerCase.test(password)) {
+    return 'Password must contain at least one lowercase letter.';
+  }
+  if (!hasSpecialChar.test(password)) {
+    return 'Password must contain at least one special character.';
+  }
+  return true;
+};
+
 const TextInput = (props: TextInputProps) => {
+  const { register } = props;
   return (
     <input
       type={props.type ?? 'text'}
@@ -66,10 +100,18 @@ const TextInput = (props: TextInputProps) => {
       value={props.value}
       required={props.required}
       id={props.id}
-      name={props.name}
-      min={props.min}
       max={props.max}
-      pattern={props.pattern}
+      {...(register && props.min && props.label
+        ? register(props.label, {
+            required: 'Password is required',
+            minLength: {
+              value: Number(props.min),
+              message: `Password must be at least ${props.min} characters`,
+            },
+            validate: validatePassword,
+            min: props.min,
+          })
+        : {})}
       title={props.patternHint}
       disabled={props.disabled}
       readOnly={props.readonly || props.autoCompleteOnFocus}
