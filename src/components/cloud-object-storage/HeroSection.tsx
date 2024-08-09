@@ -2,6 +2,8 @@ import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Header from '../shared/Header';
 import Button from '../shared/Button';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: CloudObjectStorageText['HeroSection'];
@@ -22,12 +24,21 @@ export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps)
         </Header>
         <p className="text-xl">{textContent.description}</p>
         <Button
-          className="lg:!w-max !w-full"
+          className="!w-full lg:!w-max"
           text={textContent.cta}
           onClick={() => (window.location.hash = '#storageSection')}
         />
       </div>
-      <div></div>
+      <div className="flex">
+        <Image
+          src={getImage('/images/cloud-object-storage/s3_internxt.webp')}
+          alt="cloud object storage"
+          quality={100}
+          width={631}
+          height={745}
+          draggable={false}
+        />
+      </div>
     </HeroSectionSafeArea>
   </section>
 );
