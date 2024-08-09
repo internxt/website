@@ -227,6 +227,7 @@ export function checkout({ planId, promoCodeId, planType, mode, currency }: Paym
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
 
@@ -258,12 +259,13 @@ export function checkoutForPcComponentes({
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
+    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
+
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
-
-    const pathname = planType === 'individual' ? '/checkout-plan' : '/checkout-plan';
 
     const checkoutUrl = getAuthFlowCreateUserURL({
       redirectURL: AUTH_FLOW_URL + `${pathname}?${params.toString()}`,

@@ -45,7 +45,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
-  const [isBusiness, setIsBusiness] = useState<boolean>();
+  const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
   const individualCardsData = [
     {
