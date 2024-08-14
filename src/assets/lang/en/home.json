@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% OFF ",
-        "normal2": "all Premium Plans."
+        "blue": "80% off ",
+        "normal2": "all premium plans"
       },
       "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
       "startFrom": {
@@ -374,6 +374,6 @@
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."
     },
-    "cta1": "Get started"
+    "cta1": "Get Internxt"
   }
 }
