@@ -85,6 +85,7 @@ export enum PromoCodeName {
   Lifetime5TBDiscount = '5TB70OFF',
   Lifetime10TBDiscount = '10TB70OFF',
   lifetime70OFF = 'LIFETIME_70OFF',
+  Subscriptions75OFF = '75OFFSUBS',
   IndependenceDayItaly = 'HAPPY80',
   euro2024twoTB = '2TB75OFF',
   euro2024fiveTB = '75OFF5TB',

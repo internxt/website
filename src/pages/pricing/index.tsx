@@ -24,7 +24,7 @@ import {
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -40,8 +40,16 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.AllPlansCoupon,
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    businessCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    fetchLifetimeCoupons: true,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -101,17 +109,18 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
   const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        : individualCoupon?.name;
+
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
     const planType = isBusiness ? 'business' : 'individual';
 
-    stripeService.redirectToCheckout(
-      planId,
-      currencyValue,
-      planType,
-      isCheckoutForLifetime,
-      couponCodeForCheckout?.name,
-    );
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   return (
