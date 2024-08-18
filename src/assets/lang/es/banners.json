@@ -88,9 +88,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Hasta 80% en todos los planes.",
-      "normalText": "¡Ahorra este verano! ",
-      "cta": "Elige tu plan"
+      "boldText": "¡Hasta un 75% de descuento en todos los planes!",
+      "normalText": "Obtén privacidad completa por menos: ",
+      "cta": "Elegir plan"
     }
   },
   "lifetimeBanner": {

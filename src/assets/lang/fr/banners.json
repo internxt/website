@@ -82,9 +82,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Économisez jusqu'à 80% sur tous les plans.",
-      "normalText": "Profitez des économies estivales! ",
-      "cta": "Choisissez un plan"
+      "boldText": "Jusqu'à 75% de réduction sur tous les plans !",
+      "normalText": "Obtenez une confidentialité complète pour moins : ",
+      "cta": "Choisir un plan"
     }
   },
   "lifetimeBanner": {
