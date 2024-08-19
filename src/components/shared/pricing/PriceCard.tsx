@@ -12,6 +12,7 @@ export interface PriceCardProps {
   monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
+  labelBackground?: string;
   checkIconName?: string;
   decimalDiscountValue?: number;
   fixedDiscount?: number;
@@ -32,6 +33,7 @@ export const PriceCard = ({
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
   colorCard = 'primary',
+  labelBackground = 'bg-primary/10',
   checkIconName = 'checkPrimary',
   monthlyProductPrice,
   popular,
@@ -75,7 +77,7 @@ export const PriceCard = ({
               <p className="font-semibold text-white">{contentText.mostPopular}</p>
             </div>
           ) : null}
-          <div className={`bg-${colorCard}/10 flex rounded-full px-3 py-0.5`}>
+          <div className={`${labelBackground} flex rounded-full px-3 py-0.5`}>
             <p className={`text-${colorCard} text-lg font-medium`}>{cardLabel}</p>
           </div>
         </div>

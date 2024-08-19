@@ -57,6 +57,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
                     productCardPlan="business"
                     colorCard="orange"
                     label={product.storage}
+                    labelBackground={'bg-orange/10'}
                     monthlyProductPrice={
                       products.business[Interval.Month].filter(
                         (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
