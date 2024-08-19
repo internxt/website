@@ -101,13 +101,13 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     },
   ];
 
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
-
   const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
   const infoCards = isBusiness ? businessCardsData : individualCardsData;
+
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);

@@ -81,6 +81,7 @@ export enum PromoCodeName {
   AnnualDiscount = '80ANNUAL',
   SpringCoupon = 'Spring',
   PcComponentesCoupon = 'PCCOMPONENTES',
+  PcComponentesCouponForB2B = 'PCCOMPB2B',
   Lifetime2TBDiscount = '2TB70OFF',
   Lifetime5TBDiscount = '5TB70OFF',
   Lifetime10TBDiscount = '10TB70OFF',
