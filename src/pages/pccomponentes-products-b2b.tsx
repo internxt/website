@@ -7,9 +7,8 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { PriceCard } from '@/components/shared/pricing/PriceCard';
-import { GetServerSidePropsContext } from 'next';
 
-const PCComponentesProductsB2B = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
+const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { products, currencyValue, loadingCards, coupon } = usePricing({
     couponCode: PromoCodeName.PcComponentesCouponForB2B,
@@ -56,6 +55,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, textContent, lang }): 
                     product={product}
                     onCheckoutButtonClicked={onCheckoutButtonClicked}
                     productCardPlan="business"
+                    colorCard="orange"
                     label={product.storage}
                     monthlyProductPrice={
                       products.business[Interval.Month].filter(
@@ -76,16 +76,14 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, textContent, lang }): 
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+export async function getServerSideProps() {
   const lang = 'es';
   const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/priceCard.json`);
 
   return {
     props: {
       metatagsDescriptions,
       lang,
-      textContent,
     },
   };
 }

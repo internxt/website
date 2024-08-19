@@ -11,6 +11,7 @@ export interface PriceCardProps {
   isCheckoutForLifetime: boolean;
   monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
+  colorCard?: string;
   decimalDiscountValue?: number;
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
@@ -29,6 +30,7 @@ export const PriceCard = ({
   fixedDiscount,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
+  colorCard = 'primary',
   monthlyProductPrice,
   popular,
   lang,
@@ -58,19 +60,21 @@ export const PriceCard = ({
   return (
     <div
       className={`${
-        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
+        popular ? `border-${colorCard}/50 ring-[3px]` : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
           {popular ? (
-            <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
+            <div
+              className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-${colorCard} px-3 py-1`}
+            >
               <Fire size={28} className="text-white" />
               <p className="font-semibold text-white">{contentText.mostPopular}</p>
             </div>
           ) : null}
-          <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{cardLabel}</p>
+          <div className={`bg-${colorCard}/10 flex rounded-full px-3 py-0.5`}>
+            <p className={`text-${colorCard} text-lg font-medium`}>{cardLabel}</p>
           </div>
         </div>
         <div
@@ -105,8 +109,8 @@ export const PriceCard = ({
           onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
-              ? 'border-primary bg-primary text-white hover:bg-primary-dark'
-              : 'border-primary text-primary hover:bg-gray-1 active:bg-gray-5'
+              ? `border-${colorCard} bg-${colorCard} text-white hover:bg-${colorCard}-dark`
+              : `border-${colorCard} text-${colorCard} hover:bg-gray-1 active:bg-gray-5`
           } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p>{ctaText}</p>
