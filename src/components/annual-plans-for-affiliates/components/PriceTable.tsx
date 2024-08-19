@@ -32,10 +32,14 @@ const PriceTable: React.FC<PriceTableProps> = ({
   const { products, currency, currencyValue, loadingCards } = usePricing({});
 
   useEffect(() => {
-    stripeService.getLifetimeCoupons().then((coupon) => {
-      setCoupon(coupon);
-      console.log(coupon);
-    });
+    stripeService
+      .getLifetimeCoupons()
+      .then((coupon) => {
+        setCoupon(coupon);
+      })
+      .catch(() => {
+        // NO OP
+      });
   }, []);
 
   const lifetimePrices = {

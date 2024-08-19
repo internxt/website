@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import Script from 'next/script';
+import {
+  ClockCounterClockwise,
+  Eye,
+  Fingerprint,
+  FolderSimpleLock,
+  LockKey,
+  ShieldCheck,
+  Sliders,
+  UsersThree,
+} from '@phosphor-icons/react';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -11,20 +21,10 @@ import CtaSection from '@/components/pricing/CtaSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import {
-  ClockCounterClockwise,
-  Eye,
-  Fingerprint,
-  FolderSimpleLock,
-  LockKey,
-  ShieldCheck,
-  Sliders,
-  UsersThree,
-} from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -40,8 +40,16 @@ interface PricingProps {
 const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.AllPlansCoupon,
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    businessCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    fetchLifetimeCoupons: true,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -101,17 +109,18 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
   const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        : individualCoupon?.name;
+
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
     const planType = isBusiness ? 'business' : 'individual';
 
-    stripeService.redirectToCheckout(
-      planId,
-      currencyValue,
-      planType,
-      isCheckoutForLifetime,
-      couponCodeForCheckout?.name,
-    );
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   return (
@@ -129,8 +138,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
+          lifetimeCoupons={lifetimeCoupons}
           decimalDiscount={{
-            individuals: 0.2,
+            individuals: 100 - individualCoupon?.percentOff!,
           }}
           lang={lang}
           products={products}

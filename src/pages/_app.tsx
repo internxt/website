@@ -78,7 +78,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -123,6 +123,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
         {shouldShowFeaturesBanner ? <FeaturesBanner /> : undefined}
         <FreeCardPromoBanner />
+
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

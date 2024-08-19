@@ -12,6 +12,7 @@ export interface PriceCardProps {
   monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   decimalDiscountValue?: number;
+  fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
 }
@@ -25,6 +26,7 @@ const BILLING_FREQUENCY_LIST = {
 export const PriceCard = ({
   product,
   decimalDiscountValue,
+  fixedDiscount,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
   monthlyProductPrice,
@@ -38,7 +40,10 @@ export const PriceCard = ({
 
   const { currency, interval, price, storage, priceId } = product;
 
-  const priceNow = decimalDiscountValue ? (price * decimalDiscountValue).toFixed(2).replace('.00', '') : price;
+  const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
+
+  const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
+  const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
   const priceBefore = decimalDiscountValue
     ? Number(price).toFixed(2).replace('.00', '')
     : interval === Interval.Year
@@ -78,7 +83,7 @@ export const PriceCard = ({
           >
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency`}>{currency}</span>
-              <span className="price text-4xl font-bold">{priceNow}</span>
+              <span className="price text-4xl font-bold">{fixedDiscountPriceNow ?? priceNow}</span>
             </p>
           </div>
           <p
