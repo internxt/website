@@ -1,14 +1,15 @@
+import { useEffect } from 'react';
+import { Transition } from '@headlessui/react';
+
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
 import Header from '../Header';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
-import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
-import { useEffect } from 'react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 
 interface PriceTableProps {
