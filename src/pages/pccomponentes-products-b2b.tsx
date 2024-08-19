@@ -62,6 +62,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
                         (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
                       )[0].price
                     }
+                    checkIconName="checkOrange"
                     key={product.storage}
                     popular={product.storage === '10TB'}
                     decimalDiscountValue={100 - coupon?.percentOff!}

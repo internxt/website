@@ -12,6 +12,7 @@ export interface PriceCardProps {
   monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
+  checkIconName?: string;
   decimalDiscountValue?: number;
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
@@ -31,6 +32,7 @@ export const PriceCard = ({
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
   colorCard = 'primary',
+  checkIconName = 'checkPrimary',
   monthlyProductPrice,
   popular,
   lang,
@@ -128,7 +130,7 @@ export const PriceCard = ({
               <img
                 loading="lazy"
                 className="translate-y-px select-none"
-                src={getImage('/icons/checkPrimary.svg')}
+                src={getImage(`/icons/${checkIconName}.svg`)}
                 draggable="false"
                 alt="check icon"
               />
