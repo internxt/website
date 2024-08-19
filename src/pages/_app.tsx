@@ -27,6 +27,8 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/cloudwards',
   '/lifetime/celebration/[filename]',
   '/lifetime/security82',
+  '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
