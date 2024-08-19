@@ -15,6 +15,7 @@ import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { useRouter } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
+import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -161,9 +162,9 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
     const { email, password } = formData;
 
     try {
-      // const captchaToken = await getCaptchaToken();
+      const captchaToken = await getCaptchaToken();
 
-      // await objectStoragePreSignUp(email, password, captchaToken);
+      await objectStoragePreSignUp(email, password, captchaToken);
 
       if (!plan) return;
 

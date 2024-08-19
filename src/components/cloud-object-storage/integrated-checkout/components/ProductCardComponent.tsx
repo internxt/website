@@ -36,7 +36,7 @@ export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductF
       <div className="flex w-full rounded-2xl border border-gray-10 bg-white p-5">
         <div className="flex w-full flex-col space-y-5">
           <p>{textContent.selectedPlan}</p>
-          <p className="text-2xl font-bold text-gray-100">{textContent.billed.lifetime}</p>
+          <p className="text-2xl font-bold text-gray-100">Object storage - {textContent.billed.month}</p>
           {/* <div className="flex flex-row items-center justify-between text-gray-100">
               <p className="font-medium">{textContent.}</p>
               <p className="font-semibold">
