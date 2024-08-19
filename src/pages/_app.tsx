@@ -19,6 +19,7 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
   '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
 ];
 
