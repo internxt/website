@@ -20,7 +20,13 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
     const couponCodeForCheckout = coupon?.codeId;
     const planType = 'business';
 
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckoutForPcComponentes(
+      priceId,
+      currencyValue,
+      planType,
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
   };
 
   return (
