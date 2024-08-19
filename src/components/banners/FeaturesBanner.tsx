@@ -1,8 +1,8 @@
-import { CheckCircle, TreePalm, X } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { CheckCircle, LockKey, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('2024-08-19');
+const HIDE_BANNER_DATE = new Date('2024-09-19');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
@@ -16,7 +16,7 @@ const FeaturesBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const [showBanner, setShowBanner] = useState<boolean>();
+  const [showBanner, setShowBanner] = useState<boolean>(isWeekend());
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
 
   const handleClose = () => {
@@ -60,10 +60,12 @@ const FeaturesBanner = () => {
             <div className="flex rounded-lg border-4 border-primary/7 px-3 py-1.5">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[400px] text-5xl font-bold leading-tight ">{textContent.featuresBanner.title}</p>
-            <p className="w-full max-w-[328px] text-2xl font-bold leading-tight ">
-              {textContent.featuresBanner.subtitle}
+            <p className="w-full max-w-[400px] text-5xl font-bold leading-tight text-gray-80 ">
+              {textContent.featuresBanner.title}
             </p>
+            {/* <p className="w-full max-w-[328px] text-2xl font-bold leading-tight ">
+              {textContent.featuresBanner.subtitle}
+            </p> */}
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button
                 onClick={handleOnClick}
@@ -83,7 +85,7 @@ const FeaturesBanner = () => {
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card) => (
                   <div className="flex flex-row space-x-4" key={card}>
-                    <TreePalm size={32} className="text-primary" weight="fill" />
+                    <LockKey size={32} className="text-primary" weight="fill" />
                     <p className="text-lg font-semibold ">{card}</p>
                   </div>
                 ))}

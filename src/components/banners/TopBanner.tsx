@@ -28,7 +28,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
           <Link
-            href={'/pricing'}
+            href={'/pricing?utm_source=homepage&utm_medium=hellobanner&utm_campaign=softsale_aug'}
             target="_blank"
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
@@ -43,7 +43,11 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center py-2 px-2 text-center">
-          <Link className="flex flex-col items-center justify-center" href={'/pricing'} target="_blank">
+          <Link
+            className="flex flex-col items-center justify-center"
+            href={'/pricing?utm_source=homepage&utm_medium=hellobanner&utm_campaign=softsale_aug'}
+            target="_blank"
+          >
             <p className="font-normal">
               🔒 {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>

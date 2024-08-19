@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import Script from 'next/script';
+import {
+  ClockCounterClockwise,
+  Eye,
+  Fingerprint,
+  FolderSimpleLock,
+  LockKey,
+  ShieldCheck,
+  Sliders,
+  UsersThree,
+} from '@phosphor-icons/react';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -11,16 +21,6 @@ import CtaSection from '@/components/pricing/CtaSection';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import BestStorageSection from '@/components/pricing/BestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import {
-  ClockCounterClockwise,
-  Eye,
-  Fingerprint,
-  FolderSimpleLock,
-  LockKey,
-  ShieldCheck,
-  Sliders,
-  UsersThree,
-} from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
@@ -138,8 +138,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
+          lifetimeCoupons={lifetimeCoupons}
           decimalDiscount={{
-            individuals: 0.2,
+            individuals: 100 - individualCoupon?.percentOff!,
           }}
           lang={lang}
           products={products}
