@@ -1,5 +1,8 @@
+import Spinner from './Spinner';
+
 interface ButtonProps {
   text: string;
+  showSpinner?: boolean;
   className?: string;
   type?: 'button' | 'submit';
   disabled?: boolean;
@@ -7,7 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({ text, className, type, id, disabled, onClick }: ButtonProps): JSX.Element => {
+const Button = ({ text, className, type, showSpinner, id, disabled, onClick }: ButtonProps): JSX.Element => {
   return (
     <button
       onClick={onClick}
@@ -16,7 +19,7 @@ const Button = ({ text, className, type, id, disabled, onClick }: ButtonProps): 
       type={type}
       className={`flex ${className} w-max justify-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark`}
     >
-      <p>{text}</p>
+      {showSpinner ? <Spinner size={20} /> : <p>{text}</p>}
     </button>
   );
 };

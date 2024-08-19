@@ -30,7 +30,7 @@ export async function getCaptchaToken(): Promise<string> {
   return token;
 }
 
-export async function objectStoragePreSignUp(email: string, password: string, captchaToken?: string) {
+export async function objectStorageActivationAccount(email: string, password: string, captchaToken?: string) {
   axios.post(
     `${OBJECT_STORAGE_USER_ACTIVATION_URL}/users/activation`,
     {

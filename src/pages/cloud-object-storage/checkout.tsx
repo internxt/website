@@ -14,8 +14,8 @@ import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { useRouter } from 'next/navigation';
+import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { notificationService } from '@/components/Snackbar';
-import { getCaptchaToken, objectStoragePreSignUp } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -158,24 +158,25 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
     formData: IFormValues,
   ) => {
     event?.preventDefault();
+    setIsUserPaying(true);
+
+    if (!plan) return;
 
     const { email, password } = formData;
 
     try {
-      const captchaToken = await getCaptchaToken();
-
-      await objectStoragePreSignUp(email, password, captchaToken);
-
-      if (!plan) return;
-
       if (!stripeSDK || !elements) {
         console.error('Stripe.js has not loaded yet. Please try again later.');
         return;
       }
 
-      const { customerId, token } = await paymentService.getCustomerId('My Internxt Object Storage', email);
-
       const { error: elementsError } = await elements.submit();
+
+      const captchaToken = await getCaptchaToken();
+
+      await objectStorageActivationAccount(email, password, captchaToken);
+
+      const { customerId, token } = await paymentService.getCustomerId('My Internxt Object Storage', email);
 
       if (elementsError) {
         throw new Error(elementsError.message);

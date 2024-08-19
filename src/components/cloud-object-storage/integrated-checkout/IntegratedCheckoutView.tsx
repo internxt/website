@@ -100,8 +100,9 @@ export const IntegratedCheckoutView = ({
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
                 <Button
                   id="submit"
-                  className="hidden !w-full lg:flex"
+                  className={`${disabledButton && '!bg-gray-40'} hidden !w-full lg:flex`}
                   type="submit"
+                  showSpinner={disabledButton}
                   text={disabledButton ? textContent.paying : textContent.pay}
                   disabled={disabledButton}
                 />
@@ -112,8 +113,9 @@ export const IntegratedCheckoutView = ({
               <Button
                 id="submit"
                 type="submit"
-                className="flex !w-full pt-5 lg:hidden"
+                className={`flex !w-full pt-5 lg:hidden ${disabledButton ? 'bg-gray-10' : 'bg-primary'}`}
                 text={disabledButton ? textContent.paying : textContent.pay}
+                showSpinner={disabledButton}
                 disabled={disabledButton}
               />
             </div>
