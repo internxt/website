@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
-import { checkout } from '@/lib/auth';
+import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 const CURRENCY_MAP = {
@@ -182,10 +182,27 @@ const redirectToCheckout = (
   });
 };
 
+const redirectToCheckoutForPcComponentes = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['codeId'],
+) => {
+  checkoutForPcComponentes({
+    planId,
+    promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
 export const stripeService = {
   getPrices,
   getSelectedPrice,
   getCoupon,
   getLifetimeCoupons,
   redirectToCheckout,
+  redirectToCheckoutForPcComponentes,
 };

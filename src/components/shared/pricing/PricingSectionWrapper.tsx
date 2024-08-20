@@ -2,6 +2,7 @@ import { Interval, ProductsDataProps } from '@/components/services/stripe.servic
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
+import { PromoCodeProps } from '@/lib/types';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -15,6 +16,7 @@ interface PricingSectionWrapperProps {
   hideFreeCard?: boolean;
   startFromInterval?: Interval;
   startFromPlan?: SwitchButtonOptions;
+  lifetimeCoupons?: Record<string, PromoCodeProps>;
   decimalDiscount?: {
     individuals?: number;
     business?: number;
@@ -35,6 +37,7 @@ export const PricingSectionWrapper = ({
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
+  lifetimeCoupons,
   hideFreeCard,
   decimalDiscount,
   onCheckoutButtonClicked,
@@ -56,7 +59,10 @@ export const PricingSectionWrapper = ({
       lang={lang}
       billingFrequency={billingFrequency}
       businessBillingFrequency={businessBillingFrequency}
-      decimalDiscountForIndividualPlans={decimalDiscount?.individuals}
+      lifetimeCoupons={lifetimeCoupons}
+      decimalDiscountForIndividualPlans={{
+        subscriptions: decimalDiscount?.individuals,
+      }}
       decimalDiscountForBusinessPlans={decimalDiscount?.business}
       products={products}
       hideFreeCard={hideFreeCard}

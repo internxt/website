@@ -45,8 +45,8 @@
     }
   },
   "featuresBanner": {
-    "label": "80% OFF all plans",
-    "title": "Last chance to save!",
+    "label": "Up to 75% OFF",
+    "title": "Time to switch to privacy!",
     "subtitle": "Win our premium backpack with our lifetime plans.",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
@@ -54,10 +54,10 @@
     "features": [
       "Save on all Internxt plans",
       "Safe and secure cloud storage",
+      "Zero-knowledge technology",
       "Open source and transparent",
       "End-to-end encrypted transfers",
-      "No unauthorized access",
-      "Offer ends August 19th"
+      "No unauthorized access"
     ]
   },
   "tryOutInternxtGeneralBanner": {
@@ -135,8 +135,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% OFF all plans!",
-      "normalText": "Secure hot summer savings! ",
+      "boldText": "Up to 75% OFF all storage plans!",
+      "normalText": "Get complete privacy for less: ",
       "cta": "Choose plan"
     }
   },

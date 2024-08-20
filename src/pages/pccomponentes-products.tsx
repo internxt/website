@@ -109,7 +109,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
             </div>
           </div>
         </div>
-
         {/* Skeleton cards while fetching products data */}
         <Transition
           show={isIndividual && loadingCards}
@@ -124,7 +123,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
             <CardSkeleton />
           </div>
         </Transition>
-
         {/* Subscriptions cards */}
         <Transition
           show={isSubscription && !loadingCards}
@@ -153,7 +151,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
               ))}
           </div>
         </Transition>
-
         {/* Lifetime cards */}
         <Transition
           show={isLifetime && !loadingCards}

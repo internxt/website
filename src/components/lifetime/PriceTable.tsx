@@ -19,9 +19,9 @@ interface PriceTableProps {
 
 const DISC_LIFETIME_PRICES = {
   eur: {
-    '2TB': 299,
-    '5TB': 549,
-    '10TB': 849,
+    '2TB': 249,
+    '5TB': 449,
+    '10TB': 749,
   },
   usd: {
     '2TB': 349,
@@ -48,9 +48,14 @@ const PriceTable = ({
   useEffect(() => {
     if (lifetimeMode === 'normal' || lifetimeMode === 'celebration') return;
 
-    stripeService.getLifetimeCoupons().then((coupon) => {
-      setSpecialCoupons(coupon);
-    });
+    stripeService
+      .getLifetimeCoupons()
+      .then((coupon) => {
+        setSpecialCoupons(coupon);
+      })
+      .catch(() => {
+        // NO OP
+      });
   }, []);
 
   const productsArray = products?.individuals?.['lifetime'];

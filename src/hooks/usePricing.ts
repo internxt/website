@@ -7,6 +7,7 @@ type UsePricingOptions = {
   couponCode?: PromoCodeName;
   couponCodeForBusiness?: PromoCodeName;
   currencySpecified?: string;
+  fetchLifetimeCoupons?: boolean;
 };
 
 interface UseStripeProductsAndCurrencyResponse {
@@ -15,6 +16,7 @@ interface UseStripeProductsAndCurrencyResponse {
   currencyValue: string;
   coupon?: PromoCodeProps;
   businessCoupon?: PromoCodeProps;
+  lifetimeCoupons?: any;
   products?: ProductsDataProps;
 }
 
@@ -24,7 +26,8 @@ type ActionType =
   | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_CURRENCY_VALUE'; payload: string }
   | { type: 'SET_COUPON'; payload: PromoCodeProps | undefined }
-  | { type: 'SET_BUSINESS_COUPON'; payload: PromoCodeProps | undefined };
+  | { type: 'SET_BUSINESS_COUPON'; payload: PromoCodeProps | undefined }
+  | { type: 'SET_LIFETIME_COUPONS'; payload: any | undefined };
 
 const reducer = (state: any, action: ActionType) => {
   switch (action.type) {
@@ -39,20 +42,23 @@ const reducer = (state: any, action: ActionType) => {
     case 'SET_COUPON':
       return { ...state, coupon: action.payload };
     case 'SET_BUSINESS_COUPON':
-      return { ...state, coupon: action.payload };
+      return { ...state, businessCoupon: action.payload };
+    case 'SET_LIFETIME_COUPONS':
+      return { ...state, lifetimeCoupons: action.payload };
     default:
       return state;
   }
 };
 
 function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurrencyResponse {
-  const { couponCode, couponCodeForBusiness, currencySpecified } = options;
+  const { couponCode, couponCodeForBusiness, currencySpecified, fetchLifetimeCoupons } = options;
   const initialState = {
     products: undefined,
     loadingCards: true,
     currency: '€',
     coupon: undefined,
     businessCoupon: undefined,
+    lifetimeCoupons: undefined,
     currencyValue: 'eur',
   };
 
@@ -64,20 +70,28 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       const prices = await stripeService.getPrices(res.currencyValue);
 
       dispatch({ type: 'SET_PRODUCTS', payload: prices });
-      dispatch({ type: 'SET_LOADING_CARDS', payload: false });
       dispatch({ type: 'SET_CURRENCY', payload: res.currency });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
       try {
         const prices = await stripeService.getPrices('eur');
         dispatch({ type: 'SET_PRODUCTS', payload: prices });
-        dispatch({ type: 'SET_LOADING_CARDS', payload: false });
       } catch (error) {
         console.error('Error getting prices:', error);
       }
 
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: 'eur' });
+    }
+
+    if (fetchLifetimeCoupons) {
+      try {
+        const lifetimeCoupons = await stripeService.getLifetimeCoupons();
+
+        dispatch({ type: 'SET_LIFETIME_COUPONS', payload: lifetimeCoupons });
+      } catch (error) {
+        //NO OP
+      }
     }
 
     if (couponCode) {
@@ -90,8 +104,8 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       }
     } else if (couponCodeForBusiness) {
       try {
-        const coupon = await stripeService.getCoupon(couponCodeForBusiness);
-        dispatch({ type: 'SET_COUPON', payload: coupon });
+        const businessCoupon = await stripeService.getCoupon(couponCodeForBusiness);
+        dispatch({ type: 'SET_BUSINESS_COUPON', payload: businessCoupon });
       } catch (err) {
         // NO OP
       }
@@ -99,7 +113,9 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
   };
 
   useEffect(() => {
-    fetchData();
+    fetchData().then(() => {
+      dispatch({ type: 'SET_LOADING_CARDS', payload: false });
+    });
   }, []);
 
   return {
@@ -109,6 +125,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     currencyValue: state.currencyValue,
     coupon: state.coupon,
     businessCoupon: state.businessCoupon,
+    lifetimeCoupons: state.lifetimeCoupons,
   };
 }
 
