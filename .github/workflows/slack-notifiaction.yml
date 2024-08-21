@@ -20,7 +20,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: 'https://npm.pkg.github.com'
       - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
-      - run: echo '${{ secrets.ENV_LOCAL }}' > ./.env.local
+      - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
 
       - name: Cypress run
         uses: cypress-io/github-action@v6
