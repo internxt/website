@@ -23,12 +23,6 @@ jobs:
       - name: Create .env.local
         run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
 
-      - name: Verify .env.local (for debugging)
-        run: cat .env.local
-
-      - name: Load environment variables
-        run: source .env.local
-
       - name: Install dependencies
         run: yarn install
       - name: Build project
