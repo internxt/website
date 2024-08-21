@@ -58,6 +58,10 @@ module.exports = {
         '/giveawayoftheday',
         '/cloud-object-storage',
         '/cloud-object-storage/checkout',
+        '/child-safety-book',
+        '/use-cases',
+        '/internxt-library',
+        '/online-privacy-ebook',
       ].map((src) => ({
         source: src,
         destination: '/',
@@ -75,6 +79,10 @@ module.exports = {
         '/giveawayoftheday',
         '/cloud-object-storage',
         '/cloud-object-storage/checkout',
+        '/child-safety-book',
+        '/use-cases',
+        '/internxt-library',
+        '/online-privacy-ebook',
       ].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang',
