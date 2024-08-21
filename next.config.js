@@ -47,21 +47,39 @@ module.exports = {
   async redirects() {
     return [
       // REDIRECTS TO HOME
-      ...['/cloud', '/roadmap', '/home', '/core', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
-        (src) => ({
-          source: src,
-          destination: '/',
-          permanent: false,
-        }),
-      ),
+      ...[
+        '/cloud',
+        '/roadmap',
+        '/home',
+        '/core',
+        '/default.html',
+        '/default.htm',
+        '/merch',
+        '/giveawayoftheday',
+        '/cloud-object-storage',
+        '/cloud-object-storage/checkout',
+      ].map((src) => ({
+        source: src,
+        destination: '/',
+        permanent: false,
+      })),
       // REDIRECTS TO HOME (WITH LANG)
-      ...['/cloud', '/roadmap', '/home', '/core', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
-        (src) => ({
-          source: `/:lang${src}`,
-          destination: '/:lang',
-          permanent: false,
-        }),
-      ),
+      ...[
+        '/cloud',
+        '/roadmap',
+        '/home',
+        '/core',
+        '/default.html',
+        '/default.htm',
+        '/merch',
+        '/giveawayoftheday',
+        '/cloud-object-storage',
+        '/cloud-object-storage/checkout',
+      ].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang',
+        permanent: false,
+      })),
       // =======================================================
       // REDIRECTS TO PRICING
       ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
