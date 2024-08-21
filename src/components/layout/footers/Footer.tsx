@@ -177,12 +177,7 @@ export default function Footer({
                       rel="noreferrer"
                       className="flex flex-row items-center hover:text-primary"
                     >
-                      <div className="flex flex-row">
-                        {textContent.FooterSection.sections.products.webDAV}
-                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
-                      </div>
+                      <div className="flex flex-row">{textContent.FooterSection.sections.products.webDAV}</div>
                     </Link>
 
                     <a
@@ -196,18 +191,18 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
+                    </Link>
+                    <Link
+                      href="/business"
+                      locale={'en'}
+                      passHref
+                      className="flex max-w-[250px] items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.products.business}
                       <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
-                    {lang === 'en' ? (
-                      <Link href="/business" locale={lang} passHref className="flex items-center hover:text-primary">
-                        {textContent.FooterSection.sections.products.business}
-                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
-                      </Link>
-                    ) : undefined}
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -570,9 +565,6 @@ export default function Footer({
 
                       <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
-                        <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
-                          {textContent.FooterSection.new}
-                        </div>
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
@@ -801,11 +793,9 @@ export default function Footer({
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}
                       </Link>
-                      {lang === 'en' ? (
-                        <Link href="/business" locale={lang} passHref className="hover:text-primary">
-                          {textContent.FooterSection.sections.products.business}
-                        </Link>
-                      ) : undefined}
+                      <Link href="/business" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.business}
+                      </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
                       </Link>

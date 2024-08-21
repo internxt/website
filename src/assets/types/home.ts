@@ -139,6 +139,7 @@ export interface StartFrom {
 
 export interface TitleAndOnePlanTitle {
   line1: string;
+  line2?: string;
   blueText: string;
   normal1?: string;
   normal2?: string;

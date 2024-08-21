@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
-import { checkout } from '@/lib/auth';
+import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 const CURRENCY_MAP = {
@@ -135,14 +135,23 @@ async function getSelectedPrice(interval: string, plan: string, planType: 'indiv
 }
 
 async function getCoupon(couponName: PromoCodeName) {
-  const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
-    params: {
-      couponName,
-    },
-  });
-  const { data: CouponData } = res;
+  try {
+    const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
+      params: {
+        couponName,
+      },
+    });
+    const { data: couponData } = res;
 
-  return CouponData;
+    return {
+      name: couponName,
+      ...couponData,
+    };
+  } catch (err) {
+    const error = err as Error;
+
+    throw new Error(error.message);
+  }
 }
 
 async function getLifetimeCoupons() {
@@ -155,12 +164,30 @@ async function getLifetimeCoupons() {
 const redirectToCheckout = (
   planId: string,
   currencyValue: string,
+  planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
   promoCodeId?: PromoCodeProps['codeId'],
 ) => {
   checkout({
     planId,
     promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
+const redirectToCheckoutForPcComponentes = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['codeId'],
+) => {
+  checkoutForPcComponentes({
+    planId,
+    promoCodeId,
+    planType,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
   });
@@ -172,4 +199,5 @@ export const stripeService = {
   getCoupon,
   getLifetimeCoupons,
   redirectToCheckout,
+  redirectToCheckoutForPcComponentes,
 };

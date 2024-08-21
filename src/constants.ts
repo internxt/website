@@ -24,6 +24,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/oystervpn',
   '/lifetime_special',
   '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
   '/pcloud-alternative',
   '/dealmirror',

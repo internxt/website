@@ -19,18 +19,19 @@
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "featuresBanner": {
-    "label": "83% de réduction",
-    "title": "Fête nationale française du 14 jullet!",
-    "cta": "Choisissez plan",
+    "label": "Jusqu'à 75% de réduction",
+    "title": "Il est temps de passer à la confidentialité !",
+    "subtitle": "Gagnez notre sac à dos premium avec nos plans à vie.",
+    "cta": "Choisir un plan",
     "guarantee": "Garantie de remboursement de 30 jours",
-    "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients",
+    "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
     "features": [
-      "83% de réduction sur tous les plans à vie",
+      "Économisez sur tous les plans Internxt",
       "Stockage cloud sûr et sécurisé",
+      "Technologie sans connaissance",
       "Open source et transparent",
-      "Transferts chiffrés de bout en bout",
-      "Aucun accès non autorisé",
-      "Dépêchez-vous! Votre offre se termine bientôt!"
+      "Transferts cryptés de bout en bout",
+      "Aucun accès non autorisé"
     ]
   },
   "tryOutInternxtGeneralBanner": {
@@ -81,9 +82,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Économisez jusqu'à 80% sur tous les plans.",
-      "normalText": "Profitez des économies estivales! ",
-      "cta": "Choisissez un plan"
+      "boldText": "Jusqu'à 75% de réduction sur tous les plans !",
+      "normalText": "Obtenez une confidentialité complète pour moins : ",
+      "cta": "Choisir un plan"
     }
   },
   "lifetimeBanner": {

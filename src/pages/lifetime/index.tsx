@@ -25,6 +25,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
+        percent="75"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />
@@ -33,7 +34,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
         textContent={langJson.PaymentSection}
         discount={discount}
         lang={lang}
-        percent={'70%'}
+        percent={'75%'}
         showPriceBefore
         lifetimeMode="custom-disc"
       />
