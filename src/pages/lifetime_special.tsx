@@ -3,38 +3,16 @@ import FeatureSection from '@/components/lifetime/FeatureSection';
 import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PaymentSection, { LifetimeMode } from '@/components/lifetime/PaymentSection';
+import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { PromoCodeName } from '@/lib/types';
-import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const { locale } = useRouter();
-
-  const [couponCodeName, setCouponCodeName] = useState<PromoCodeName>();
-  const [lifetimeMode, setLifetimeMode] = useState<LifetimeMode>();
-
-  useEffect(() => {
-    switch (locale) {
-      case 'en':
-        setLifetimeMode('celebration');
-        setCouponCodeName(PromoCodeName.Lifetime82);
-        break;
-      case 'es':
-        setLifetimeMode('celebration');
-        setCouponCodeName(PromoCodeName.TierraDeHackers);
-        break;
-
-      default:
-        setLifetimeMode('normal');
-        break;
-    }
-  }, [lang]);
 
   return (
     <Layout
@@ -52,16 +30,7 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJso
         hideTimer
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />
-      {lifetimeMode && (
-        <PaymentSection
-          textContent={langJson.PaymentSection}
-          lang={lang}
-          lifetimeMode={lifetimeMode}
-          couponCode={couponCodeName}
-          discount={0.18}
-          showPriceBefore={locale === 'en' || locale === 'es'}
-        />
-      )}
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
