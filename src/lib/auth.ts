@@ -1,8 +1,10 @@
+import axios from 'axios';
 import { PromoCodeProps } from './types';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
+const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
@@ -18,6 +20,29 @@ export function checkSession(): void {
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'check_session' }, window.location.origin);
   }
+}
+
+export async function getCaptchaToken(): Promise<string> {
+  const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string, {
+    action: 'ActivationRequest',
+  });
+
+  return token;
+}
+
+export async function objectStorageActivationAccount(email: string, password: string, captchaToken?: string) {
+  axios.post(
+    `${OBJECT_STORAGE_USER_ACTIVATION_URL}/users/activation`,
+    {
+      email,
+      password,
+    },
+    {
+      headers: {
+        recaptcha: captchaToken,
+      },
+    },
+  );
 }
 
 /**
@@ -215,17 +240,26 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
 type PaymentCheckoutConfig = {
   planId: string;
   promoCodeId?: PromoCodeProps['codeId'];
+  planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
   currency?: string;
 };
-export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
+    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
+
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
     currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    mode && params.set('mode', mode ? mode : 'subscription');
+
+    if (planType === 'individual') {
+      window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
+      return;
+    }
 
     const checkoutUrl = getAuthFlowCreateUserURL({
       redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
@@ -240,17 +274,26 @@ export function checkout({ planId, promoCodeId, mode, currency }: PaymentCheckou
   }
 }
 
-export function checkoutForPcComponentes({ planId, promoCodeId, mode, currency }: PaymentCheckoutConfig): void {
+export function checkoutForPcComponentes({
+  planId,
+  promoCodeId,
+  planType,
+  mode,
+  currency,
+}: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
+    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
+
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
     currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    mode && params.set('mode', mode ? mode : 'subscription');
 
     const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
+      redirectURL: AUTH_FLOW_URL + `${pathname}?${params.toString()}`,
       enableAutoSubmit: false,
       skipSignupIfLoggedIn: true,
     });

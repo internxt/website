@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Économisez 75%",
     "title": {
-      "line1": "Stockage cloud sécurisé.",
-      "blueText": "Garanti."
+      "line1": "Obtenez le ",
+      "blueText": "plus sécurisé",
+      "line2": " stockage cloud"
     },
     "subtitle": "Protégez votre vie privée avec notre suite de services cloud sécurisés, open source et chiffrés. Internxt Drive, Send, et plus encore.",
     "cta": {

@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "省75%",
     "title": {
-      "line1": "安全的云存储。",
-      "blueText": "有保障。"
+      "line1": "获取最",
+      "blueText": "安全的",
+      "line2": " 云存储"
     },
     "subtitle": "用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Send, 和更多。",
     "cta": {

@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "優惠 75%",
     "title": {
-      "line1": "安全的雲存儲。",
-      "blueText": "有保障。"
+      "line1": "獲取最",
+      "blueText": "安全的",
+      "line2": " 雲端儲存"
     },
     "subtitle": "使用我們的開源和加密套件，保護您的隱私。Internxt Drive、Send 等等。",
     "cta": {

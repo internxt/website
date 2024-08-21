@@ -1,0 +1,58 @@
+{
+  "title": "You're almost there! Checkout securely:",
+  "pay": "Pay",
+  "paying": "Paying...",
+  "checkout": "Checkout",
+  "authComponent": {
+    "signup": {
+      "emailAddress": "Your email address",
+      "password": "Create password"
+    },
+    "login": {
+      "emailAddress": "Your email address",
+      "password": "Your password"
+    },
+    "title": {
+      "signUp": "Create an account"
+    },
+    "emailMustNotBeEmpty": "Email must not be empty",
+    "privacyGuarantee": "Privacy guarantee: We do not share your information and will contact you only as needed to provide our service."
+  },
+  "paymentTitle": "Select a payment method",
+  "productCard": {
+    "title": "Order summary",
+    "selectedPlan": "Selected plan",
+    "plan": {
+      "month": "{{spaceToUpgrade}} - 1 {{interval}} plan",
+      "year": "{{spaceToUpgrade}} - 1 {{interval}} plan",
+      "lifetime": "{{spaceToUpgrade}} - {{interval}} plan"
+    },
+    "billed": {
+      "month": "Billed monthly",
+      "year": "Billed annually",
+      "lifetime": "One-time payment"
+    },
+    "saving": "You're saving {{percent}}%",
+    "planDetails": {
+      "title": "Plan details:",
+      "features": [
+        "Billed monthly",
+        "Server-side encryption",
+        "AWS S3 and IAM API compatible",
+        "Increased speed",
+        "Flexible storage",
+        "Open source",
+        "GDPR compliant",
+        "Premium customer support"
+      ]
+    },
+    "total": "Total: ",
+    "addCoupon": {
+      "buttonTitle": "Add coupon",
+      "inputText": "Coupon code",
+      "applyCodeButtonTitle": "Apply"
+    },
+    "amountSaved": "Save ",
+    "withAnnualBilling": "with annual billing"
+  }
+}

@@ -19,6 +19,7 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
   '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
 ];
 
@@ -27,6 +28,8 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/cloudwards',
   '/lifetime/celebration/[filename]',
   '/lifetime/security82',
+  '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -35,7 +38,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const shouldShowFeaturesBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && lang === 'fr';
+  const shouldShowFeaturesBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
@@ -78,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -123,6 +126,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </div>
         {shouldShowFeaturesBanner ? <FeaturesBanner /> : undefined}
         <FreeCardPromoBanner />
+
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

@@ -85,7 +85,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                             setActiveSwitchPlan(product.storage);
                             setActiveProduct(product);
                           }}
-                          className={`w-full rounded-lg py-0.5 px-6 font-semibold ${
+                          className={`w-full rounded-lg px-6 py-0.5 font-semibold ${
                             activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
                           }`}
                         >
@@ -133,7 +133,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                           setActiveSwitchPlan(product.storage);
                           setActiveProduct(product);
                         }}
-                        className={`w-full rounded-lg py-0.5 px-6 font-semibold ${
+                        className={`w-full rounded-lg px-6 py-0.5 font-semibold ${
                           activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
                         }`}
                       >

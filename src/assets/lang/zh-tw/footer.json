@@ -26,7 +26,8 @@
         "send": "Internxt Send",
         "webDAV": "WebDAV",
         "token": "Token",
-        "pricing": "價格"
+        "pricing": "價格",
+        "business": "Internxt 企業版"
       },
       "company": {
         "title": "公司",

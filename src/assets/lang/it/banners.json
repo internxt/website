@@ -42,18 +42,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia l'80%",
-    "title": "Offerta per la Giornata dell'Indipendenza italiana!",
-    "cta": "Scegli un piano",
-    "guarantee": "Garanzia di rimborso entro 30 giorni",
-    "lastCta": "*L'offerta è valida solo per account gratuiti o nuovi clienti",
+    "label": "Fino al 75% di sconto",
+    "title": "È ora di passare alla privacy!",
+    "subtitle": "Vinci il nostro zaino premium con i nostri piani a vita.",
+    "cta": "Scegli piano",
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "lastCta": "*L'offerta è valida per conti gratuiti o nuovi clienti",
     "features": [
-      "Fino al 80% di sconto su tutti i piani a vita",
+      "Risparmia su tutti i piani Internxt",
       "Archiviazione cloud sicura e protetta",
+      "Tecnologia zero-knowledge",
       "Open source e trasparente",
-      "Trasferimenti crittografati end-to-end",
-      "Nessun accesso non autorizzato",
-      "Affrettatevi! L'offerta termina presto!"
+      "Trasferimenti cifrati end-to-end",
+      "Nessun accesso non autorizzato"
     ]
   },
   "tryOutInternxtGeneralBanner": {
@@ -109,9 +110,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Risparmia fino al 80% su tutti i piani.",
-      "normalText": "Approfitta dei risparmi estivi! ",
-      "cta": "Scegli un piano"
+      "boldText": "Fino al 75% di sconto su tutti i piani!",
+      "normalText": "Ottieni completa privacy a meno: ",
+      "cta": "Scegli piano"
     }
   },
   "lifetimeBanner": {

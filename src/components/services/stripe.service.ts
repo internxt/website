@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
-import { checkout } from '@/lib/auth';
+import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 const CURRENCY_MAP = {
@@ -127,10 +127,14 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   return transformedData;
 }
 
-async function getSelectedPrice(interval: string, plan: string, planType: 'individuals' | 'business' = 'individuals') {
+async function getSelectedPrice(
+  interval: string,
+  storage: string,
+  planType: 'individuals' | 'business' = 'individuals',
+) {
   //Filter prices by plan
   const prices = await getPrices();
-  const selectedPrice = prices?.[planType][interval][plan];
+  const selectedPrice = prices?.[planType][interval][storage];
   return selectedPrice;
 }
 
@@ -141,9 +145,12 @@ async function getCoupon(couponName: PromoCodeName) {
         couponName,
       },
     });
-    const { data: CouponData } = res;
+    const { data: couponData } = res;
 
-    return CouponData;
+    return {
+      name: couponName,
+      ...couponData,
+    };
   } catch (err) {
     const error = err as Error;
 
@@ -152,26 +159,39 @@ async function getCoupon(couponName: PromoCodeName) {
 }
 
 async function getLifetimeCoupons() {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
-    const { data } = res;
+  const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
+  const { data } = res;
 
-    return data;
-  } catch (err) {
-    const error = err as Error;
-    throw new Error(error.message);
-  }
+  return data;
 }
 
 const redirectToCheckout = (
   planId: string,
   currencyValue: string,
+  planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
   promoCodeId?: PromoCodeProps['codeId'],
 ) => {
   checkout({
     planId,
     promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
+const redirectToCheckoutForPcComponentes = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['codeId'],
+) => {
+  checkoutForPcComponentes({
+    planId,
+    promoCodeId,
+    planType,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
   });
@@ -183,4 +203,5 @@ export const stripeService = {
   getCoupon,
   getLifetimeCoupons,
   redirectToCheckout,
+  redirectToCheckoutForPcComponentes,
 };
