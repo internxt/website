@@ -2,8 +2,9 @@
   "HeroSection": {
     "label": "Save 75%",
     "title": {
-      "line1": "Secure cloud storage.",
-      "blueText": "Guaranteed."
+      "line1": "Get the ",
+      "blueText": "most secure",
+      "line2": " cloud storage"
     },
     "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
@@ -63,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% OFF ",
-        "normal2": "all Premium Plans."
+        "blue": "80% off ",
+        "normal2": "all premium plans"
       },
       "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
       "startFrom": {
@@ -163,7 +164,7 @@
   },
   "ChooseStorageSizeSection": {
     "title": "Data leaks can lead to job loss, legal troubles, and blackmailing",
-    "description": "Our cloud storage keeps your files safe, even if your device gets stolen OR hacked.",
+    "description": "Our cloud storage keeps your files safe, even if your device gets stolen or hacked.",
     "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
     "cta": "Choose storage size"
   },
@@ -297,8 +298,7 @@
       {
         "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Bancontact.",
-          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
         ]
       },
       {
@@ -373,6 +373,6 @@
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."
     },
-    "cta1": "Get started"
+    "cta1": "Get Internxt"
   }
 }

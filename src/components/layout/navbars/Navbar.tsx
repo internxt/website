@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
 
-import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
+import { checkout, goToLoginURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from '../components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
@@ -169,12 +169,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => goToSignUpURL({ lang: lang })}
-                id="signupButton"
+                onClick={() => router.push('/pricing')}
+                id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
-                <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
               </button>
             ) : (
               ''
@@ -196,6 +196,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 onClick={() => {
                   checkout({
                     planId: '',
+                    planType: 'individual',
                   });
                 }}
                 className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${

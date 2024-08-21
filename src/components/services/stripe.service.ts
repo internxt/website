@@ -1,7 +1,7 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
-import { checkout } from '@/lib/auth';
+import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 const CURRENCY_MAP = {
@@ -141,9 +141,12 @@ async function getCoupon(couponName: PromoCodeName) {
         couponName,
       },
     });
-    const { data: CouponData } = res;
+    const { data: couponData } = res;
 
-    return CouponData;
+    return {
+      name: couponName,
+      ...couponData,
+    };
   } catch (err) {
     const error = err as Error;
 
@@ -166,12 +169,30 @@ async function getLifetimeCoupons() {
 const redirectToCheckout = (
   planId: string,
   currencyValue: string,
+  planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
   promoCodeId?: PromoCodeProps['codeId'],
 ) => {
   checkout({
     planId,
     promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
+const redirectToCheckoutForPcComponentes = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['codeId'],
+) => {
+  checkoutForPcComponentes({
+    planId,
+    promoCodeId,
+    planType,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
   });
@@ -183,4 +204,5 @@ export const stripeService = {
   getCoupon,
   getLifetimeCoupons,
   redirectToCheckout,
+  redirectToCheckoutForPcComponentes,
 };

@@ -15,9 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === 'GET') {
     const couponName = req.query.couponName;
-    if (!couponName) return res.status(404).end(); //Something went wrong while fetching the products/Coupon not found
+    if (!couponName) return res.status(404).end();
 
-    const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-by-name`, {
+    const { data: promoCodeData } = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/promo-code-info`, {
       params: {
         promotionCode: couponName,
       },

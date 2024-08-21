@@ -27,7 +27,8 @@
         "webDAV": "WebDAV",
         "vpn": "VPN-Erweiterung",
         "token": "Token",
-        "pricing": "Preise"
+        "pricing": "Preise",
+        "business": "Internxt für Unternehmen"
       },
       "company": {
         "title": "Firma",
