@@ -2,14 +2,16 @@ import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Button from '../shared/Button';
+import { useRouter } from 'next/navigation';
 
 interface PriceCardSectionProps {
   textContent: CloudObjectStorageText['PriceCardSection'];
 }
 
 export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSectionProps): JSX.Element => {
+  const router = useRouter();
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden py-20 px-5" id="storageSection">
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
@@ -40,7 +42,7 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               <Button
                 className="!w-full"
                 text={textContent.cardText.cta}
-                onClick={() => (window.location.hash = '#storageSection')}
+                onClick={() => router.push('/cloud-object-storage/checkout')}
               />
             </div>
 

@@ -46,13 +46,13 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
   ];
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden bg-gray-1 py-20 px-5">
       <div className="flex flex-col items-center justify-center gap-20">
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="max-w-[831px] text-5xl font-semibold text-gray-100">{textContent.title}</h2>
           <p className="max-w-[774px] text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <CardGroup cards={cards} />
+        <CardGroup cards={cards} backgroundColorCard="bg-white" />
 
         {/* !TODO: Extract banner to shared component */}
         {/* Banner */}
