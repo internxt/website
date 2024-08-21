@@ -127,10 +127,14 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   return transformedData;
 }
 
-async function getSelectedPrice(interval: string, plan: string, planType: 'individuals' | 'business' = 'individuals') {
+async function getSelectedPrice(
+  interval: string,
+  storage: string,
+  planType: 'individuals' | 'business' = 'individuals',
+) {
   //Filter prices by plan
   const prices = await getPrices();
-  const selectedPrice = prices?.[planType][interval][plan];
+  const selectedPrice = prices?.[planType][interval][storage];
   return selectedPrice;
 }
 
@@ -155,15 +159,10 @@ async function getCoupon(couponName: PromoCodeName) {
 }
 
 async function getLifetimeCoupons() {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
-    const { data } = res;
+  const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
+  const { data } = res;
 
-    return data;
-  } catch (err) {
-    const error = err as Error;
-    throw new Error(error.message);
-  }
+  return data;
 }
 
 const redirectToCheckout = (
