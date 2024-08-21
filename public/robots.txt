@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+Disallow: /cloud-object-storage/checkout
 Sitemap: https://internxt.com/sitemap.xml

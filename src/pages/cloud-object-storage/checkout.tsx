@@ -208,7 +208,10 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   return (
     <>
       <Script strategy="beforeInteractive" src={`https://www.google.com/recaptcha/api.js?render=${CAPTCHA}`} />
-      <Layout title="Integrated Checkout" description="Integrated checkout description">
+      <Layout
+        title="Internxt - S3 Checkout"
+        description="Checkout to buy the S3 plan. This plan is a pay as you go purchase."
+      >
         {plan && stripe ? (
           <Elements stripe={stripe} options={stripeElementsOptions}>
             <IntegratedCheckoutView
