@@ -127,10 +127,14 @@ function transformProductData(individualsData: ProductValue[], businessData: Pro
   return transformedData;
 }
 
-async function getSelectedPrice(interval: string, plan: string, planType: 'individuals' | 'business' = 'individuals') {
+async function getSelectedPrice(
+  interval: string,
+  storage: string,
+  planType: 'individuals' | 'business' = 'individuals',
+) {
   //Filter prices by plan
   const prices = await getPrices();
-  const selectedPrice = prices?.[planType][interval][plan];
+  const selectedPrice = prices?.[planType][interval][storage];
   return selectedPrice;
 }
 
