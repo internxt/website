@@ -26,6 +26,9 @@ jobs:
       - name: Verify .env.local (for debugging)
         run: cat .env.local
 
+      - name: Load environment variables
+        run: source .env.local
+
       - name: Install dependencies
         run: yarn install
       - name: Build project
