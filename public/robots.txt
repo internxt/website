@@ -1,5 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /cloud-object-storage/checkout
-Disallow: /aeebcee77ac34a3d81bd10133fd53cc7869978f3
 Sitemap: https://internxt.com/sitemap.xml
