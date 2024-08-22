@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "80% más barato"
+        "blueText": "75% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% DE DESCUENTO ",
+        "blue": "75% DE DESCUENTO ",
         "normal2": "en todos los planes"
       },
       "features": ["Hasta 10TB de almacenamiento", "Cifrado de conocimiento cero", "Código abierto y auditado"],

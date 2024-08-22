@@ -140,7 +140,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           lifetimeCoupons={lifetimeCoupons}
           decimalDiscount={{
-            individuals: 100 - individualCoupon?.percentOff!,
+            individuals: 25,
           }}
           lang={lang}
           products={products}

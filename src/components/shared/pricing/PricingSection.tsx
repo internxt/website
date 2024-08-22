@@ -11,6 +11,7 @@ import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
 import BusinessBanner from '@/components/banners/BusinessBanner';
+import { PromoCodeProps } from '@/lib/types';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -26,11 +27,11 @@ interface PriceTableProps {
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  lifetimeCoupons?: any;
-  decimalDiscountForIndividualPlans?: {
+  lifetimeCoupons?: Record<string, PromoCodeProps>;
+  decimalDiscount?: {
     subscriptions?: number;
+    business?: number;
   };
-  decimalDiscountForBusinessPlans?: number;
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
@@ -46,8 +47,7 @@ export const PricingSection = ({
   activeSwitchPlan,
   billingFrequency,
   businessBillingFrequency,
-  decimalDiscountForIndividualPlans,
-  decimalDiscountForBusinessPlans,
+  decimalDiscount,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
   hideBusinessCards,
@@ -70,9 +70,12 @@ export const PricingSection = ({
   const businessTitle = textContent.planTitles.business;
 
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const isLifetime = activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
+
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
+  const shouldShowFreeCard = !hideFreeCard || !isBusiness;
 
   useEffect(() => {
     if (isBusiness) {
@@ -186,16 +189,17 @@ export const PricingSection = ({
                     }
                     key={product.storage}
                     popular={product.storage === '10TB'}
-                    decimalDiscountValue={decimalDiscountForIndividualPlans?.subscriptions}
+                    decimalDiscountValue={
+                      product.interval !== Interval.Lifetime ? decimalDiscount?.subscriptions : undefined
+                    }
                     fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons?.[product.storage].amountOff
+                      product.interval === Interval.Lifetime ? lifetimeCoupons?.[product.storage].amountOff : undefined
                     }
                     lang={lang}
                   />
                 ))
               : undefined}
           </div>
-
           {!hideFreeCard ? (
             <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
               <FreePlanCard textContent={textContent.freePlanCard} />
@@ -231,7 +235,7 @@ export const PricingSection = ({
                         }
                         key={product.storage}
                         popular={product.storage === '10TB'}
-                        decimalDiscountValue={decimalDiscountForBusinessPlans}
+                        decimalDiscountValue={decimalDiscount?.business}
                         lang={lang}
                       />
                     ))
