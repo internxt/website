@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Archivia i tuoi file in modo sicuro, ora ",
-        "blueText": "80% più economico"
+        "blueText": "75% più economico"
       },
       "trustedBy": "Affidato da oltre 330.000 persone",
       "description": {
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% DI SCONTO ",
+        "blue": "75% DI SCONTO ",
         "normal2": "su tutti i piani premium."
       },
       "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source e auditato"],
