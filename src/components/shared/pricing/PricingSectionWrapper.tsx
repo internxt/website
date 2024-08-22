@@ -60,10 +60,10 @@ export const PricingSectionWrapper = ({
       billingFrequency={billingFrequency}
       businessBillingFrequency={businessBillingFrequency}
       lifetimeCoupons={lifetimeCoupons}
-      decimalDiscountForIndividualPlans={{
+      decimalDiscount={{
         subscriptions: decimalDiscount?.individuals,
+        business: decimalDiscount?.business,
       }}
-      decimalDiscountForBusinessPlans={decimalDiscount?.business}
       products={products}
       hideFreeCard={hideFreeCard}
       hideBusinessSelector={hideBusinessSelector}
