@@ -107,6 +107,7 @@ export const IntegratedCheckoutView = ({
                 <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white p-5">
                   <Menu>
                     <Menu.Button
+                      onKeyDown={(e) => e.preventDefault()}
                       className={
                         'flex h-full w-full flex-row items-center justify-between rounded-lg text-base transition-all duration-75 ease-in-out hover:underline'
                       }
@@ -140,7 +141,6 @@ export const IntegratedCheckoutView = ({
                             type="text"
                             register={register}
                             required={true}
-                            error={errors.companyName}
                           />
                         </div>
                         <div className="flex w-full flex-col gap-1">
@@ -152,7 +152,6 @@ export const IntegratedCheckoutView = ({
                             type="text"
                             register={register}
                             required={true}
-                            error={errors.vatId}
                           />
                         </div>
                       </Menu.Items>
