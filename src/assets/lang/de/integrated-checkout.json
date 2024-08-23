@@ -20,6 +20,12 @@
     "emailMustNotBeEmpty": "Die E-Mail darf nicht leer sein",
     "privacyGuarantee": "Datenschutzgarantie: Wir teilen Ihre Informationen nicht und werden Sie nur kontaktieren, wenn es notwendig ist, um unseren Service zu bieten."
   },
+  "addressBillingTitle": "Rechnungsadresse",
+  "addressBilling": {
+    "optionalData": "Optional",
+    "companyName": "Firmenname",
+    "companyVatId": "USt-ID"
+  },
   "paymentTitle": "Wählen Sie eine Zahlungsmethode",
   "productCard": {
     "title": "Bestellübersicht",

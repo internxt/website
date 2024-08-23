@@ -4,8 +4,16 @@ export interface IntegratedCheckoutText {
   paying: string;
   checkout: string;
   authComponent: AuthComponent;
+  addressBillingTitle: string;
+  addressBilling: AddressBilling;
   paymentTitle: string;
   productCard: ProductCard;
+}
+
+export interface AddressBilling {
+  optionalData: string;
+  companyName: string;
+  companyVatId: string;
 }
 
 export interface AuthComponent {
@@ -23,8 +31,6 @@ export interface Login {
 
 export interface Title {
   signUp: string;
-  signIn: string;
-  userIsSignedIn: string;
 }
 
 export interface ProductCard {

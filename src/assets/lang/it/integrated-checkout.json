@@ -20,6 +20,12 @@
     "emailMustNotBeEmpty": "L'email non deve essere vuota",
     "privacyGuarantee": "Garanzia di privacy: Non condividiamo le tue informazioni e ti contatteremo solo se necessario per fornire il nostro servizio."
   },
+  "addressBillingTitle": "Indirizzo di Fatturazione",
+  "addressBilling": {
+    "optionalData": "Opzionale",
+    "companyName": "Nome dell'Azienda",
+    "companyVatId": "Partita IVA"
+  },
   "paymentTitle": "Seleziona un metodo di pagamento",
   "productCard": {
     "title": "Riepilogo dell'ordine",

@@ -162,7 +162,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
     if (!plan) return;
 
-    const { email, password } = formData;
+    const { email, password, companyName, vatId } = formData;
 
     try {
       if (!stripeSDK || !elements) {
@@ -182,7 +182,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token);
+      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token, companyName, vatId);
 
       const confirmIntent = stripeSDK.confirmSetup;
 
