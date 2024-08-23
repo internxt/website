@@ -75,7 +75,6 @@ export const PricingSection = ({
 
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
-  const shouldShowFreeCard = !hideFreeCard || !isBusiness;
 
   useEffect(() => {
     if (isBusiness) {
@@ -190,10 +189,16 @@ export const PricingSection = ({
                     key={product.storage}
                     popular={product.storage === '10TB'}
                     decimalDiscountValue={
-                      product.interval !== Interval.Lifetime ? decimalDiscount?.subscriptions : undefined
+                      product.interval !== Interval.Lifetime
+                        ? decimalDiscount?.subscriptions
+                        : lifetimeCoupons
+                        ? undefined
+                        : decimalDiscount?.subscriptions
                     }
                     fixedDiscount={
-                      product.interval === Interval.Lifetime ? lifetimeCoupons?.[product.storage].amountOff : undefined
+                      product.interval === Interval.Lifetime && lifetimeCoupons
+                        ? lifetimeCoupons?.[product.storage].amountOff
+                        : undefined
                     }
                     lang={lang}
                   />

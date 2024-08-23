@@ -58,7 +58,7 @@ export const BeforeCloseTabBanner = () => {
   };
 
   const handleOnClick = () => {
-    router.push('/pricing');
+    router.push('/specialoffer/freeuser');
     handleCloseBanner();
   };
 
