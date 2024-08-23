@@ -22,7 +22,7 @@
     }
   },
   "FreeCardPromoBanner": {
-    "title": "Get 80% OFF all our Premium Plans",
+    "title": "Get 75% OFF all our Premium Plans",
     "subtitle": "Win our premium backpack with our lifetime plans.",
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
@@ -149,11 +149,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Hold on! Special ",
-      "blue": "80% OFF ",
+      "blue": "75% OFF ",
       "normal2": "deal!"
     },
     "subtitle": "There's an exclusive offer waiting for you.",
-    "cta": "80% OFF all plans",
+    "cta": "75% OFF all plans",
     "guarantee": "30-day money-back guarantee"
   }
 }

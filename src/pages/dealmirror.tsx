@@ -39,7 +39,9 @@ const DealMirror = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLa
             className={`absolute top-1/2 left-1/2
         z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={onCloseSignUpBanner} />
+            <button className={`absolute top-5 right-5 flex cursor-pointer`} onClick={onCloseSignUpBanner}>
+              <X size={24} className="flex" />
+            </button>
             <SignUp textContent={langJson.Auth} provider="DEALMIRROR" />
           </div>
         </div>

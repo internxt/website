@@ -9,7 +9,7 @@
     "cancelCta": "Annuler"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtenez 80% de réduction sur tous nos plans Premium",
+    "title": "Obtenez 75% de réduction sur tous nos plans Premium",
     "subtitle": {
       "blue": "Offre spéciale :",
       "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
@@ -66,7 +66,7 @@
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
-    "description": "Bénéficiez de 80% de réduction sur notre plan 2 To pendant un an.",
+    "description": "Bénéficiez de 75% de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
   },
@@ -96,11 +96,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Attendez! Offre spéciale ",
-      "blue": "80% DE RÉDUCTION ",
+      "blue": "75% DE RÉDUCTION ",
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "80% DE RÉDUCTION",
+    "cta": "75% DE RÉDUCTION",
     "guarantee": "Garantie de remboursement de 30 jours"
   }
 }

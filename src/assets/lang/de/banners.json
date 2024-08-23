@@ -9,7 +9,7 @@
     "cancelCta": "Abbrechen"
   },
   "FreeCardPromoBanner": {
-    "title": "Erhalten Sie 80% Rabatt auf alle unsere Premium-Pläne",
+    "title": "Erhalten Sie 75% Rabatt auf alle unsere Premium-Pläne",
     "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
@@ -118,11 +118,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Warten Sie! Sonderangebot ",
-      "blue": "80% RABATT ",
+      "blue": "75% RABATT ",
       "normal2": "!"
     },
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
-    "cta": "80% RABATT",
+    "cta": "75% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }
