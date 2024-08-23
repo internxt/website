@@ -20,6 +20,12 @@
     "emailMustNotBeEmpty": "电子邮件不能为空",
     "privacyGuarantee": "隐私保证：我们不会分享您的信息，并且只会在提供服务时与您联系。"
   },
+  "addressBillingTitle": "账单地址",
+  "addressBilling": {
+    "optionalData": "可选",
+    "companyName": "公司名称",
+    "companyVatId": "增值税号"
+  },
   "paymentTitle": "选择支付方式",
   "productCard": {
     "title": "订单摘要",

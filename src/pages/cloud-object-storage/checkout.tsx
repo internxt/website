@@ -14,8 +14,8 @@ import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { useRouter } from 'next/navigation';
-import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { notificationService } from '@/components/Snackbar';
+import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -56,12 +56,12 @@ const RETURN_URL_DOMAIN = IS_PRODUCTION
 
 const CAPTCHA = process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string;
 
+const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
+
 const stripePromise = (async () => {
   const stripeKey = process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY;
   return await loadStripe(stripeKey as string);
 })();
-
-const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
   const router = useRouter();
@@ -162,7 +162,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
     if (!plan) return;
 
-    const { email, password } = formData;
+    const { email, password, companyName, vatId } = formData;
 
     try {
       if (!stripeSDK || !elements) {
@@ -182,7 +182,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token);
+      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token, companyName, vatId);
 
       const confirmIntent = stripeSDK.confirmSetup;
 
@@ -198,7 +198,6 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(error.message);
       }
     } catch (err) {
-      const error = err as Error;
       notificationService.openErrorToast('Something went wrong');
     } finally {
       setIsUserPaying(false);

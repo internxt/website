@@ -20,7 +20,13 @@
     "emailMustNotBeEmpty": "El correo electrónico no debe estar vacío",
     "privacyGuarantee": "Garantía de privacidad: No compartimos su información y solo contactaremos contigo cuando sea necesario para brindar nuestro servicio."
   },
-  "paymentTitle": "Seleccione un método de pago",
+  "addressBillingTitle": "Facturación de Dirección",
+  "addressBilling": {
+    "optionalData": "Opcional",
+    "companyName": "Nombre de la Empresa",
+    "companyVatId": "ID de IVA"
+  },
+  "paymentTitle": "Selecciona un método de pago",
   "productCard": {
     "title": "Resumen del pedido",
     "selectedPlan": "Plan seleccionado",
