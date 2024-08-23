@@ -74,11 +74,11 @@ export const IntegratedCheckoutView = ({
 
   return (
     <form
-      className="flex bg-gray-1 lg:w-screen xl:px-16"
+      className="flex h-full bg-gray-1 lg:w-screen xl:px-16"
       onSubmit={handleSubmit((formData, event) => onCheckoutButtonClicked(event, stripeSDK, elements, formData))}
     >
-      <div className="mx-auto flex w-full max-w-screen-xl px-5 py-10">
-        <div className="flex w-full flex-col space-y-8 lg:space-y-16">
+      <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
+        <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
           <HeaderComponent textContent={textContent} lang="en" />
           <p className="text-xl font-bold text-gray-100 md:text-center lg:text-left lg:text-3xl">{textContent.title}</p>
           <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:justify-between">
@@ -131,8 +131,8 @@ export const IntegratedCheckoutView = ({
                       leaveFrom="scale-98 opacity-100"
                       leaveTo="scale-100 opacity-0"
                     >
-                      <Menu.Items className="flex w-full flex-col gap-5">
-                        <div className="flex w-full flex-col gap-1">
+                      <Menu.Items onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-5">
+                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
                           <p className="text-sm text-gray-80">{textContent.addressBilling.companyName}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyName}
@@ -143,7 +143,7 @@ export const IntegratedCheckoutView = ({
                             required={true}
                           />
                         </div>
-                        <div className="flex w-full flex-col gap-1">
+                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
                           <p className="text-sm text-gray-80">{textContent.addressBilling.companyVatId}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyVatId}
