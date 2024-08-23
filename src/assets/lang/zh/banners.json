@@ -9,7 +9,7 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "所有高级计划享受80%折扣",
+    "title": "所有高级计划享受75%折扣",
     "subtitle": { "blue": "特别优惠：", "normal": "更便宜地私人存储文件" },
     "getDealCta": "获取优惠",
     "freePlanCta": "继续使用免费计划",
@@ -91,7 +91,7 @@
   },
   "GeneralBanner": {
     "title": "Before you bounce...",
-    "description": "Get 80% off our 2TB plan for the first year.",
+    "description": "Get 75% off our 2TB plan for the first year.",
     "cta": "Sure, I'll try it out",
     "ctaCancel": "No, thanks"
   },
@@ -118,11 +118,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "等等！特别优惠 ",
-      "blue": "80% 折扣 ",
+      "blue": "75% 折扣 ",
       "normal2": "!"
     },
     "subtitle": "有一个独家优惠在等着你。",
-    "cta": "所有计划80% 折扣",
+    "cta": "所有计划75% 折扣",
     "guarantee": "30天退款保证"
   }
 }
