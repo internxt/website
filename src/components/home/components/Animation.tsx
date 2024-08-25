@@ -33,25 +33,25 @@ const Animation = ({
   useEffect(() => {
     setTimeout(() => {
       setHeaderAnimation1(true);
-    }, 500);
+    }, 400);
     setTimeout(() => {
       setHeaderAnimation2(true);
-    }, 900);
+    }, 800);
     setTimeout(() => {
       setHeaderAnimation3(true);
-    }, 1200);
+    }, 1100);
     setTimeout(() => {
       setHeaderAnimation4(true);
-    }, 1500);
+    }, 1400);
     setTimeout(() => {
       setHeaderAnimation5(true);
-    }, 1650);
+    }, 1550);
     setTimeout(() => {
       setHeaderAnimation6(true);
-    }, 1800);
+    }, 1700);
     setTimeout(() => {
       setHeaderAnimation7(true);
-    }, 2000);
+    }, 1900);
   }, []);
 
   return (
@@ -71,9 +71,10 @@ const Animation = ({
             loading="eager"
             src={browserImg}
             draggable="false"
-            layout="fill"
+            width={800}
+            height={520}
             className="rounded-2xl"
-            alt="desktop, laptop and phone with Internxt app"
+            alt="drive web app"
           />
         </div>
       </div>
@@ -91,7 +92,7 @@ const Animation = ({
         className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '56px', height: '56px' }}
       >
-        <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />
       </div>
 
       {/* Icon / Powerpoint */}
@@ -99,15 +100,15 @@ const Animation = ({
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '52px', height: '52px' }}
       >
-        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
       </div>
 
       {/* Icon / Csv */}
       <div
-        className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute left-14 bottom-20`}
+        className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
       >
-        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
       </div>
 
       {/* File preview */}
@@ -126,7 +127,7 @@ const Animation = ({
 
       {/* Tasklogger */}
       <div
-        className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-[416px] bottom-0`}
+        className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute bottom-0 left-[416px]`}
         style={{
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
           width: '211px',
@@ -138,7 +139,8 @@ const Animation = ({
           loading="eager"
           src={taskloggerImg}
           draggable="false"
-          layout="fill"
+          width={211}
+          height={190}
           alt="file logger with items downloading"
         />
       </div>
