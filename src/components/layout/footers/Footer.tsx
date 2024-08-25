@@ -271,37 +271,23 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/newsletter-subscribe" className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.newsletter}
-                    </Link>
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
-
-                    <button
-                      onClick={() => {
-                        window.open('https://help.internxt.com', '_blank', 'noopener noreferrer');
-                      }}
-                      className="cursor-pointer hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.join.support}
-                    </button>
-
                     <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
                     </a>
-
-                    <a
-                      href="https://github.com/internxt"
+                    <Link
+                      href={'https://help.internxt.com'}
                       target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-primary"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer hover:text-primary"
                     >
-                      {textContent.FooterSection.sections.join.github}
-                    </a>
+                      {textContent.FooterSection.sections.join.support}
+                    </Link>
 
                     <a
-                      href={`/whitepaper/internxt-white-paper.pdf`}
+                      href={`/whitepaper/internxt-white-paper-1.pdf`}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
@@ -310,9 +296,22 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.whitePaper}
                     </a>
 
-                    <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
+                    <Link href="/newsletter-subscribe" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.newsletter}
+                    </Link>
+
+                    <Link
+                      href="https://github.com/internxt"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.join.github}
+                    </Link>
+
+                    <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
-                    </a>
+                    </Link>
 
                     <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
                       {textContent.FooterSection.sections.join.storageForEducation}
@@ -656,25 +655,50 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a href="/newsletter-subscribe" target="_top" className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.newsletter}
-                      </a>
-                      <a href="https://drive.internxt.com/new" target="_blank">
+                      <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
-
-                      <a href="https://drive.internxt.com/login" target="_blank">
+                      <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.login}
                       </a>
+                      <Link
+                        href={'https://help.internxt.com'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.join.support}
+                      </Link>
 
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.join.github}
-                      </a>
-                      <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
+                      <a
+                        href={getImage(`/whitepaper/internxt-white-paper-1.pdf`)}
+                        target="_blank"
+                        rel="noreferrer"
+                        download={true}
+                        className="hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.join.whitePaper}
                       </a>
-                      <Link href="/affiliates" target="_blank" legacyBehavior>
+
+                      <Link href="/newsletter-subscribe" className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.newsletter}
+                      </Link>
+
+                      <Link
+                        href="https://github.com/internxt"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.join.github}
+                      </Link>
+
+                      <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
+                      </Link>
+
+                      <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.storageForEducation}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
