@@ -434,9 +434,11 @@ export default function Footer({
             <div className="flex w-full max-w-[900px] flex-row justify-between">
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
-                  <img
+                  <Image
+                    width={110}
+                    height={12}
                     loading="lazy"
-                    src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                    src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                   />
                 </Link>
@@ -444,67 +446,61 @@ export default function Footer({
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
-              <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-4 py-[7px] pr-2" rel="noreferrer">
-                  <img
+              <div className="flex flex-row items-center gap-2">
+                <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={15}
+                    height={14}
                     loading="lazy"
-                    className="h-3.5"
-                    src={`/icons/social/X_logo.svg`}
+                    src={getImage(`/icons/social/X_logo.svg`)}
                     draggable="false"
                     alt="twitter icon"
                   />
-                </a>
-                <a
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
                     draggable="false"
                     alt="facebook icon"
                   />
-                </a>
-                <a
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
                   target="_blank"
-                  className="h-6 py-1.5 pr-2"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
                   />
-                </a>
-                <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                  <img
+                </Link>
+                <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
+                  <Image
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             {/* <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p> */}

@@ -41,6 +41,7 @@ export const SwitchComponent = ({
 
       <Switch
         id="interval-switch"
+        aria-label="switch"
         checked={isSwitchEnabled}
         onChange={() => {
           handleOnSwitchIsToggled(isSwitchEnabled ? Interval.Month : Interval.Year);
