@@ -13,7 +13,7 @@ import { useEffect } from 'react';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium', 'switzerland', 'singapore'];
+const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium', 'switzerland', 'singapore', 'brazil', 'mexico'];
 
 const IMAGES_PER_PATH = {
   canada: {
@@ -46,9 +46,19 @@ const IMAGES_PER_PATH = {
     previewImage: '/images/lifetime/celebration/singapore/singapore-file-item.webp',
     mobileImage: '/images/lifetime/celebration/singapore/singapore-image-mobile.webp',
   },
+  brazil: {
+    backgroundImage: '/images/lifetime/celebration/brazil/bg.webp',
+    previewImage: '/images/lifetime/celebration/brazil/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/brazil/image-mobile.webp',
+  },
+  mexico: {
+    backgroundImage: '/images/lifetime/celebration/mexico/bg.webp',
+    previewImage: '/images/lifetime/celebration/mexico/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/mexico/image-mobile.webp',
+  },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
@@ -67,6 +77,7 @@ const LifetimeCelebrationTemplate = ({
   const currencySpecified = PATHS_WITH_CURRENCY_SPECIFIED.includes(filename) ? 'US' : undefined;
 
   useEffect(() => {
+    console.log('FILENAME: ', filename);
     if (!selectedPathName) {
       router.push('/lifetime');
     }
@@ -75,6 +86,8 @@ const LifetimeCelebrationTemplate = ({
   const discount = {
     canada: 0.2,
     usa: 0.2,
+    brazil: 0.2,
+    mexico: 0.2,
     france: 0.17,
     belgium: 0.17,
     switzerland: 0.17,
@@ -84,6 +97,8 @@ const LifetimeCelebrationTemplate = ({
   const couponCode = {
     canada: PromoCodeName.IndependenceDayItaly,
     usa: PromoCodeName.IndependenceDayItaly,
+    brazil: PromoCodeName.IndependenceDayItaly,
+    mexico: PromoCodeName.IndependenceDayItaly,
     france: PromoCodeName.Lifetime83DiscountCoupon,
     belgium: PromoCodeName.Lifetime83DiscountCoupon,
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
@@ -93,6 +108,8 @@ const LifetimeCelebrationTemplate = ({
   const percent = {
     canada: '80%',
     usa: '80%',
+    brazil: '80%',
+    mexico: '80%',
     france: '83%',
     belgium: '83%',
     switzerland: '83%',
@@ -147,6 +164,10 @@ export async function getServerSideProps(ctx) {
 
   if (['france', 'belgium'].includes(pathname)) {
     lang = 'fr';
+  }
+
+  if (['mexico'].includes(pathname)) {
+    lang = 'es';
   }
 
   if (['switzerland'].includes(pathname)) {

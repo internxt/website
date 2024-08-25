@@ -7,9 +7,11 @@
     "cta2": "Explora las ofertas de por vida",
     "guarantee": "Garantía de devolución de 30 días",
     "celebration": {
-      "title": "Di ciao a tu oferta de por vida de Internxt",
-      "description": "Asegura tus archivos para siempre con tu descuento por el día de la independencia de Italia.",
-      "cta1": "Obtén un 80% DE DESCUENTO"
+      "mexico": {
+        "title": "Celebra hoy por una privacidad de por vida",
+        "description": "Asegura tus archivos para siempre con tu descuento del Día Nacional de México.",
+        "cta1": "Obtén un 80% de descuento"
+      }
     }
   },
   "PaymentSection": {
