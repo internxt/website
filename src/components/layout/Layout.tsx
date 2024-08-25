@@ -230,15 +230,12 @@ LayoutProps) {
             }}
           />
         )}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/cookiebanner.script.js"></script>
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
 
-      <Script
-        strategy="beforeInteractive"
-        src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      ></Script>
-      <Script strategy="beforeInteractive" src="/js/cookiebanner.script.js"></Script>
       <Script type="application/ld+json" strategy="beforeInteractive">
         {`{
           "@context": "https://schema.org",
@@ -263,7 +260,7 @@ LayoutProps) {
       {shouldShowBanner ? (
         <>
           <TopBanner isBannerFixed={isBannerFixed} />
-          <div className="md:pt-[54px] flex flex-col overflow-hidden pt-[64px]">{children}</div>
+          <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
         children
