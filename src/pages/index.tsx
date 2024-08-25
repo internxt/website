@@ -112,7 +112,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

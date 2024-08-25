@@ -94,7 +94,9 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
               {/* Logo */}
               <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
-                <img
+                <Image
+                  width={96}
+                  height={10.5}
                   loading="lazy"
                   className="select-none"
                   src={getImage(
@@ -103,12 +105,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     }.svg`,
                   )}
                   alt="Internxt logo"
-                  width="96"
-                  height="10"
                 />
               </Link>
               <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
-                <img
+                <Image
+                  width={110}
+                  height={12}
                   loading="lazy"
                   className="select-none"
                   src={getImage(
@@ -158,7 +160,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 id="loginButton"
                 onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
-                className={`hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode || (props.isQuizSection && !menuState)
                     ? 'bg-white text-gray-80 focus:opacity-80'
                     : 'border-gray-10 text-gray-80 hover:bg-gray-1 active:border-primary-dark active:text-primary-dark'
@@ -171,7 +173,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 onClick={() => router.push('/pricing')}
                 id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
@@ -183,7 +185,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 onClick={() => router.push('/pricing')}
                 id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
@@ -199,7 +201,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     planType: 'individual',
                   });
                 }}
-                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
+                className={`flex justify-center rounded-lg border border-transparent px-4 py-1.5 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
