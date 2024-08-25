@@ -892,8 +892,8 @@ export default function Footer({
 
               <Link href="/" locale={lang} className="flex flex-shrink-0">
                 <Image
-                  width={110}
-                  height={12}
+                  width={96}
+                  height={10.5}
                   loading="lazy"
                   src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
