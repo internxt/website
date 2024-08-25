@@ -809,8 +809,8 @@ export default function Footer({
             <LanguageMobileBox darkMode={darkMode} />
 
             <div className="flex flex-col items-center space-y-4 py-10">
-              <div className="flex flex-row space-x-1">
-                <Link href="https://twitter.com/Internxt" target="_blank" className="h-8 py-2 pr-6" rel="noreferrer">
+              <div className="flex flex-row gap-2">
+                <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={15}
                     height={14}
@@ -820,12 +820,7 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </Link>
-                <Link
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
+                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
@@ -835,12 +830,7 @@ export default function Footer({
                     alt="facebook icon"
                   />
                 </Link>
-                <Link
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
+                <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
@@ -853,7 +843,6 @@ export default function Footer({
                 <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
                   target="_blank"
-                  className="h-8 py-1.5 pr-6"
                   rel="noreferrer"
                 >
                   <Image
@@ -865,12 +854,7 @@ export default function Footer({
                     alt="youtube icon"
                   />
                 </Link>
-                <Link
-                  href="https://instagram.com/internxt/"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
+                <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
                   <Image
                     loading="lazy"
                     width={16}

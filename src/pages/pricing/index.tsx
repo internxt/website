@@ -114,7 +114,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
     const couponCodeForB2CPlans =
       lifetimeSpacePlan && lifetimeCoupons
-        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage]).promoCodeName
         : individualCoupon?.name;
 
     const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;

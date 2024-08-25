@@ -70,7 +70,6 @@ export const PricingSection = ({
   const businessTitle = textContent.planTitles.business;
 
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const isLifetime = activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
 
   const showSwitchComponent =
@@ -118,7 +117,7 @@ export const PricingSection = ({
   };
 
   return (
-    <section className={`overflow-hidden py-20 px-5 ${backgroundColorComponent}`}>
+    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex w-full flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
@@ -249,7 +248,7 @@ export const PricingSection = ({
             )}
           </div>
         </Transition>
-        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary md:pb-0" />
