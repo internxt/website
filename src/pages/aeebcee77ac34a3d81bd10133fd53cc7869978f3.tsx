@@ -14,8 +14,8 @@ import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { useRouter } from 'next/navigation';
-import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { notificationService } from '@/components/Snackbar';
+import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -69,6 +69,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
+  const [country, setCountry] = useState<string>();
 
   const { backgroundColor, borderColor, borderInputColor, textColor } = THEME_STYLES['light'];
 
@@ -176,7 +177,12 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       await objectStorageActivationAccount(email, password, captchaToken);
 
-      const { customerId, token } = await paymentService.getCustomerId('My Internxt Object Storage', email);
+      const { customerId, token } = await paymentService.getCustomerId(
+        companyName ?? 'My Internxt Object Storage',
+        email,
+        country,
+        vatId,
+      );
 
       if (elementsError) {
         throw new Error(elementsError.message);
@@ -198,7 +204,6 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(error.message);
       }
     } catch (err) {
-      const error = err as Error;
       notificationService.openErrorToast('Something went wrong');
     } finally {
       setIsUserPaying(false);
@@ -219,6 +224,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               objStoragePlan={plan}
               isPaying={isUserPaying}
               onCheckoutButtonClicked={onCheckoutButtonClicked}
+              onCountryAddressChange={setCountry}
             />
           </Elements>
         ) : (
