@@ -52,7 +52,12 @@ const FeaturesBanner = () => {
       } fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div className="fixed left-1/2 top-1/2 flex h-auto -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white bg-cover px-10">
-        <button className="absolute right-0 m-7 flex rounded-md  hover:bg-gray-1/10" onClick={handleClose}>
+        <button
+          id="close-banner"
+          aria-label="close-banner"
+          className="absolute right-0 m-7 flex rounded-md  hover:bg-gray-1/10"
+          onClick={handleClose}
+        >
           <X size={32} />
         </button>
         <div className="flex w-max max-w-[900px] flex-col space-x-10 py-14 lg:flex-row">

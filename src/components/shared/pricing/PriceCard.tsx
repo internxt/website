@@ -2,6 +2,7 @@ import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
+import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -130,7 +131,9 @@ export const PriceCard = ({
               }`}
               key={feature}
             >
-              <img
+              <Image
+                width={16}
+                height={17}
                 loading="lazy"
                 className="translate-y-px select-none"
                 src={getImage(`/icons/${checkIconName}.svg`)}
