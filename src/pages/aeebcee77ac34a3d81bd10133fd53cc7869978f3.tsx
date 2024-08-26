@@ -61,7 +61,7 @@ const stripePromise = (async () => {
   return await loadStripe(stripeKey as string);
 })();
 
-const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string;
+const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
   const router = useRouter();
