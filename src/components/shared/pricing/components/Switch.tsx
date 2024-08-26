@@ -40,6 +40,8 @@ export const SwitchComponent = ({
       </p>
 
       <Switch
+        id="interval-switch"
+        aria-label="switch"
         checked={isSwitchEnabled}
         onChange={() => {
           handleOnSwitchIsToggled(isSwitchEnabled ? Interval.Month : Interval.Year);
@@ -61,7 +63,7 @@ export const SwitchComponent = ({
           {textContent.billingFrequency.annually}
         </p>
         {showLabelDiscount ? (
-          <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:top-0 lg:left-full lg:pl-1.5">
+          <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:left-full lg:top-0 lg:pl-1.5">
             {SAVE_LABEL[lang]} {labelDiscount}%
           </p>
         ) : null}
