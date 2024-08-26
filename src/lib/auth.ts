@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { PromoCodeProps } from './types';
+import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
@@ -31,6 +32,9 @@ export async function getCaptchaToken(): Promise<string> {
 }
 
 export async function objectStorageActivationAccount(email: string, password: string, captchaToken?: string) {
+  const isValidPassword = PASSWORD_REGEX.test(password);
+
+  if (!isValidPassword) throw new Error('Invalid password');
   axios.post(
     `${OBJECT_STORAGE_USER_ACTIVATION_URL}/users/activation`,
     {
