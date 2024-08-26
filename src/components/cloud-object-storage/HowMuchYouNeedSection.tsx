@@ -7,11 +7,6 @@ interface HowMuchYouNeedSectionProps {
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
 }
 
-const INXT_PRICE_PER_TB = 6.99;
-const MICROSOFT_PRICE_PER_TB = 23;
-const AMAZON_PRICE_PER_TB = 21;
-const GOOGLE_PRICE_PER_TB = 23;
-
 const GraphComponent = ({
   price,
   priceLabel,
@@ -26,8 +21,12 @@ const GraphComponent = ({
   maxPrice: number;
 }): JSX.Element => {
   return (
-    <div className={`flex h-full w-20 flex-col items-center justify-end overflow-y-hidden rounded-lg ${background}`}>
-      <p>{priceLabel.toFixed(2)}$/per year</p>
+    <div
+      className={`relative flex h-full w-20 flex-col items-center justify-end gap-5 overflow-y-hidden rounded-lg ${background}`}
+    >
+      <div className="z-40 flex items-center justify-center rounded-full bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-10 shadow-md">
+        <p>{(priceLabel * 12).toFixed(2)}$/yr</p>
+      </div>
       <div
         className={`flex w-full rounded-lg ${activeBackground}`}
         style={{
@@ -38,43 +37,62 @@ const GraphComponent = ({
   );
 };
 
-type PricesProps = 'internxt' | 'microsoft' | 'amazon' | 'google';
-
 export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProps): JSX.Element => {
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
-  const [internxtGraphValue, setInternxtGraphValue] = useState<number>(0);
-  const [microsoftGraphValue, setMicrosoftGraphValue] = useState<number>(0);
-  const [amazonGraphValue, setAmazonGraphValue] = useState<number>(0);
-  const [googleGraphValue, setGoogleGraphValue] = useState<number>(0);
-  const [prices, setPrices] = useState<Record<PricesProps, number>>({
-    internxt: 0,
-    amazon: 0,
-    google: 0,
-    microsoft: 0,
-  });
 
   const debouncedStorageAmountValue = useDebounce(storageAmountValue, 500);
   const debouncedPercentDownloadValue = useDebounce(percentDownloadValue, 500);
+  const [costs, setCosts] = useState<Record<string, any>>({
+    internxt: 0,
+    azure: {
+      cost: 0,
+      difference: 0,
+    },
+    aws: {
+      cost: 0,
+      difference: 0,
+    },
+    google: {
+      cost: 0,
+      difference: 0,
+    },
+  });
+
+  const calculateCosts = () => {
+    const tbDownloaded = debouncedStorageAmountValue * (debouncedPercentDownloadValue / 100);
+
+    const wasabiCost = 7 * debouncedStorageAmountValue;
+    const azureCost = 18.4 * debouncedStorageAmountValue + 0.0875 * 12 * tbDownloaded;
+    const awsCost = 23 * debouncedStorageAmountValue + 0.09 * 1024 * tbDownloaded;
+    const googleCost = 23 * debouncedStorageAmountValue + 0.12 * 1024 * tbDownloaded;
+
+    const calculateDifference = (providerCost) => ((providerCost - wasabiCost) / wasabiCost) * 100;
+
+    setCosts({
+      internxt: {
+        cost: wasabiCost,
+      },
+      azure: {
+        cost: azureCost,
+        difference: calculateDifference(azureCost),
+      },
+      aws: {
+        cost: awsCost,
+        difference: calculateDifference(awsCost),
+      },
+      google: {
+        cost: googleCost,
+        difference: calculateDifference(googleCost),
+      },
+    });
+  };
 
   useEffect(() => {
-    const updatedInternxtPrice = debouncedStorageAmountValue * INXT_PRICE_PER_TB * 12;
-    setPrices({
-      internxt: updatedInternxtPrice,
-      microsoft: debouncedStorageAmountValue * MICROSOFT_PRICE_PER_TB * 12,
-      amazon: debouncedStorageAmountValue * AMAZON_PRICE_PER_TB * 12,
-      google: debouncedStorageAmountValue * GOOGLE_PRICE_PER_TB * 12,
-    });
-
-    if (debouncedStorageAmountValue < 1500) return;
-
-    setInternxtGraphValue(updatedInternxtPrice);
-    setMicrosoftGraphValue(updatedInternxtPrice * 2);
-    setAmazonGraphValue(updatedInternxtPrice * 4);
-    setGoogleGraphValue(updatedInternxtPrice * 4);
+    calculateCosts();
   }, [debouncedStorageAmountValue, debouncedPercentDownloadValue]);
 
-  const maxPrice = 2000000;
+  const maxPrice = Math.max(costs.internxt.cost, costs.azure.cost, costs.aws.cost, costs.google.cost);
 
   function storageAmountValueLabelFormat(itemValue: number) {
     setStorageAmountValue(itemValue);
@@ -102,12 +120,12 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">${(internxtGraphValue / 12).toFixed(0)}</p>
+                <p className="text-5xl font-semibold text-primary">${((costs?.internxt.cost * 12) / 12).toFixed(0)}</p>
                 <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
               </div>
               {/* Yearly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">${internxtGraphValue.toFixed(0)}</p>
+                <p className="text-5xl font-semibold text-primary">${(costs?.internxt.cost * 12).toFixed(0)}</p>
                 <p className="text-3xl text-gray-50">{textContent.perYear}</p>
               </div>
             </div>
@@ -124,7 +142,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               </div>
               {/* Percent download slider */}
               <div className="flex flex-row items-end gap-4">
-                <RangeSlider max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
+                <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
                   <p className="font-medium text-gray-100">{percentDownloadValue}%</p>
                 </div>
@@ -132,32 +150,44 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
             </div>
           </div>
           {/* Graphs (Comparison) */}
-          <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
-            <div className="flex h-full flex-row gap-12">
+          <div className="relative flex w-full flex-col rounded-2xl bg-white px-9 py-10">
+            <div className="relative flex h-full flex-row gap-12">
               <GraphComponent
-                priceLabel={prices?.internxt}
-                price={internxtGraphValue}
+                priceLabel={costs?.internxt.cost}
+                price={costs?.internxt.cost}
                 activeBackground="bg-primary"
                 background="bg-primary/7"
-                maxPrice={maxPrice}
+                maxPrice={
+                  debouncedPercentDownloadValue > 50
+                    ? maxPrice / 5
+                    : debouncedPercentDownloadValue > 10
+                    ? maxPrice / 2
+                    : maxPrice
+                }
               />
               <GraphComponent
-                priceLabel={prices?.microsoft}
-                price={microsoftGraphValue}
+                priceLabel={costs?.azure.cost}
+                price={(costs?.internxt.cost * costs?.azure.difference) / 100}
                 activeBackground="bg-yellow"
                 background="bg-yellow/6"
-                maxPrice={maxPrice}
+                maxPrice={
+                  debouncedPercentDownloadValue > 50
+                    ? maxPrice / 5
+                    : debouncedPercentDownloadValue > 10
+                    ? maxPrice / 2
+                    : maxPrice
+                }
               />
               <GraphComponent
-                priceLabel={prices?.amazon}
-                price={amazonGraphValue}
+                priceLabel={costs?.aws.cost}
+                price={(costs?.internxt.cost * costs?.aws.difference) / 100}
                 activeBackground="bg-orange"
                 background="bg-orange/6"
                 maxPrice={maxPrice}
               />
               <GraphComponent
-                priceLabel={prices?.google}
-                price={googleGraphValue}
+                priceLabel={costs?.google.cost}
+                price={(costs?.internxt.cost * costs?.google.difference) / 100}
                 activeBackground="bg-red-dark"
                 background="bg-red/6"
                 maxPrice={maxPrice}
