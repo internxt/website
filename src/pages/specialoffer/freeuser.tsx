@@ -54,7 +54,7 @@ const FreeUserPage = ({
       currencyValue,
       planType,
       isCheckoutForLifetime,
-      couponCodeForCheckout?.codeId,
+      couponCodeForCheckout?.name,
     );
   };
 
@@ -71,7 +71,7 @@ const FreeUserPage = ({
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: 0.25,
+          individuals: 25,
         }}
         lang={locale}
         products={products}

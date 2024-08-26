@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "現在安全存儲您的文件，",
-        "blueText": "便宜80%"
+        "blueText": "便宜75%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% 折扣 ",
+        "blue": "75% 折扣 ",
         "normal2": "所有高級計劃。"
       },
       "features": ["最高 10TB 存儲", "零知識加密", "開源和審計"],

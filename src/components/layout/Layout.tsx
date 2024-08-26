@@ -184,12 +184,10 @@ LayoutProps) {
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link rel="stylesheet" href="/cookiebanner.style.css" />
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
-        <script src="/js/cookiebanner.script.js"></script>
 
         {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
@@ -232,6 +230,8 @@ LayoutProps) {
             }}
           />
         )}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/cookiebanner.script.js"></script>
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
@@ -260,7 +260,7 @@ LayoutProps) {
       {shouldShowBanner ? (
         <>
           <TopBanner isBannerFixed={isBannerFixed} />
-          <div className="md:pt-[54px] flex flex-col overflow-hidden pt-[64px]">{children}</div>
+          <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">{children}</div>
         </>
       ) : (
         children

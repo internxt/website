@@ -112,6 +112,7 @@ const TextInput = (props: TextInputProps) => {
             min: props.min,
           })
         : {})}
+      name={props.name}
       title={props.patternHint}
       disabled={props.disabled}
       readOnly={props.readonly || props.autoCompleteOnFocus}

@@ -10,6 +10,7 @@ import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/
 import moment from 'moment';
 import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
+import { getImage } from '@/lib/getImage';
 
 export default function Footer({
   textContent,
@@ -59,7 +60,7 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-16 sm:p-20 sm:py-12">
-        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-y-0 lg:space-x-32 lg:text-left">
+        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
 
           <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
@@ -70,10 +71,10 @@ export default function Footer({
               </p>
             </div>
             {/* Images */}
-            <div className="flex flex-col space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
+            <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
               <div className="flex">
                 <Image
-                  src="/images/footer/app-store.svg"
+                  src={getImage('/images/footer/app-store.svg')}
                   width={148}
                   height={44}
                   quality={100}
@@ -86,7 +87,7 @@ export default function Footer({
               </div>
               <div className="flex">
                 <Image
-                  src="/images/footer/store-for-android.svg"
+                  src={getImage('/images/footer/store-for-android.svg')}
                   onClick={() => {
                     platforms && window.open(platforms.Android, '_blank');
                   }}
@@ -199,7 +200,7 @@ export default function Footer({
                       className="flex max-w-[250px] items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.business}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 py-1 px-2 text-xs font-medium uppercase text-primary">
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
@@ -270,37 +271,23 @@ export default function Footer({
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
                     }`}
                   >
-                    <Link href="/newsletter-subscribe" className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.newsletter}
-                    </Link>
                     <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.signup}
                     </a>
-
-                    <button
-                      onClick={() => {
-                        window.open('https://help.internxt.com', '_blank', 'noopener noreferrer');
-                      }}
-                      className="cursor-pointer hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.join.support}
-                    </button>
-
                     <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.login}
                     </a>
-
-                    <a
-                      href="https://github.com/internxt"
+                    <Link
+                      href={'https://help.internxt.com'}
                       target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-primary"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer hover:text-primary"
                     >
-                      {textContent.FooterSection.sections.join.github}
-                    </a>
+                      {textContent.FooterSection.sections.join.support}
+                    </Link>
 
                     <a
-                      href={`/whitepaper/internxt-white-paper.pdf`}
+                      href={`/whitepaper/internxt-white-paper-1.pdf`}
                       target="_blank"
                       rel="noreferrer"
                       download={true}
@@ -309,9 +296,22 @@ export default function Footer({
                       {textContent.FooterSection.sections.join.whitePaper}
                     </a>
 
-                    <a href="https://internxt.com/affiliates" target="_blank" className="hover:text-primary">
+                    <Link href="/newsletter-subscribe" className="hover:text-primary">
+                      {textContent.FooterSection.sections.join.newsletter}
+                    </Link>
+
+                    <Link
+                      href="https://github.com/internxt"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.join.github}
+                    </Link>
+
+                    <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
-                    </a>
+                    </Link>
 
                     <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
                       {textContent.FooterSection.sections.join.storageForEducation}
@@ -434,9 +434,11 @@ export default function Footer({
             <div className="flex w-full max-w-[900px] flex-row justify-between">
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
-                  <img
+                  <Image
+                    width={110}
+                    height={12}
                     loading="lazy"
-                    src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                    src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                     alt="Internxt logo"
                   />
                 </Link>
@@ -444,67 +446,61 @@ export default function Footer({
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
-              <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-4 py-[7px] pr-2" rel="noreferrer">
-                  <img
+              <div className="flex flex-row items-center gap-2">
+                <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={15}
+                    height={14}
                     loading="lazy"
-                    className="h-3.5"
-                    src={`/icons/social/X_logo.svg`}
+                    src={getImage(`/icons/social/X_logo.svg`)}
                     draggable="false"
                     alt="twitter icon"
                   />
-                </a>
-                <a
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
                     draggable="false"
                     alt="facebook icon"
                   />
-                </a>
-                <a
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-6 py-1.5 pr-2"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
                   target="_blank"
-                  className="h-6 py-1.5 pr-2"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
                   />
-                </a>
-                <a href="https://instagram.com/internxt/" target="_blank" className="h-6 py-1.5 pr-2" rel="noreferrer">
-                  <img
+                </Link>
+                <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
+                  <Image
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
                   />
-                </a>
+                </Link>
               </div>
             </div>
             {/* <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p> */}
@@ -655,25 +651,50 @@ export default function Footer({
                         darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
-                      <a href="/newsletter-subscribe" target="_top" className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.newsletter}
-                      </a>
-                      <a href="https://drive.internxt.com/new" target="_blank">
+                      <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.signup}
                       </a>
-
-                      <a href="https://drive.internxt.com/login" target="_blank">
+                      <a href="https://drive.internxt.com/login" target="_top" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.login}
                       </a>
+                      <Link
+                        href={'https://help.internxt.com'}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.join.support}
+                      </Link>
 
-                      <a href="https://github.com/internxt" target="_blank" rel="noreferrer">
-                        {textContent.FooterSection.sections.join.github}
-                      </a>
-                      <a href="/whitepaper/internxt-white-paper.pdf" download={true} className="hover:text-primary">
+                      <a
+                        href={getImage(`/whitepaper/internxt-white-paper-1.pdf`)}
+                        target="_blank"
+                        rel="noreferrer"
+                        download={true}
+                        className="hover:text-primary"
+                      >
                         {textContent.FooterSection.sections.join.whitePaper}
                       </a>
-                      <Link href="/affiliates" target="_blank" legacyBehavior>
+
+                      <Link href="/newsletter-subscribe" className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.newsletter}
+                      </Link>
+
+                      <Link
+                        href="https://github.com/internxt"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.join.github}
+                      </Link>
+
+                      <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
+                      </Link>
+
+                      <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
+                        {textContent.FooterSection.sections.join.storageForEducation}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
@@ -808,67 +829,61 @@ export default function Footer({
             <LanguageMobileBox darkMode={darkMode} />
 
             <div className="flex flex-col items-center space-y-4 py-10">
-              <div className="flex flex-row space-x-1">
-                <a href="https://twitter.com/Internxt" target="_blank" className="h-8 py-2 pr-6" rel="noreferrer">
-                  <img
+              <div className="flex flex-row gap-2">
+                <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={15}
+                    height={14}
                     loading="lazy"
-                    className="h-4"
-                    src={`/icons/social/X_logo.svg`}
+                    src={getImage(`/icons/social/X_logo.svg`)}
                     draggable="false"
                     alt="twitter icon"
                   />
-                </a>
-                <a
-                  href="https://www.facebook.com/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
                     draggable="false"
                     alt="facebook icon"
                   />
-                </a>
-                <a
-                  href="https://linkedin.com/company/internxt"
-                  target="_blank"
-                  className="h-8 py-1.5 pr-6"
-                  rel="noreferrer"
-                >
-                  <img
+                </Link>
+                <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
+                  <Image
+                    width={16}
+                    height={16}
                     loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/linkedin.svg`)}
                     draggable="false"
                     alt="linkedin icon"
                   />
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://www.youtube.com/channel/UCW2SxWdVEAEACYuejCgpGwg/featured"
                   target="_blank"
-                  className="h-8 py-1.5 pr-6"
                   rel="noreferrer"
                 >
-                  <img
+                  <Image
                     loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/youtube.svg`)}
                     draggable="false"
                     alt="youtube icon"
                   />
-                </a>
-                <a href="https://instagram.com/internxt/" target="_blank" className="h-8 py-1.5 pr-6" rel="noreferrer">
-                  <img
+                </Link>
+                <Link href="https://instagram.com/internxt/" target="_blank" rel="noreferrer">
+                  <Image
                     loading="lazy"
-                    className="h-5"
-                    src={`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`}
+                    width={16}
+                    height={16}
+                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/instagram.svg`)}
                     draggable="false"
                     alt="instagram icon"
                   />
-                </a>
+                </Link>
               </div>
 
               <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
@@ -876,9 +891,11 @@ export default function Footer({
               </p>
 
               <Link href="/" locale={lang} className="flex flex-shrink-0">
-                <img
+                <Image
+                  width={96}
+                  height={10.5}
                   loading="lazy"
-                  src={`../../logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`}
+                  src={getImage(`/logos/internxt/${darkMode ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               </Link>

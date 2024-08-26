@@ -11,6 +11,7 @@ import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
 import OpenSource from '/public/icons/open-source.svg';
 import BusinessBanner from '@/components/banners/BusinessBanner';
+import { PromoCodeProps } from '@/lib/types';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -26,11 +27,11 @@ interface PriceTableProps {
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  lifetimeCoupons?: any;
-  decimalDiscountForIndividualPlans?: {
+  lifetimeCoupons?: Record<string, PromoCodeProps>;
+  decimalDiscount?: {
     subscriptions?: number;
+    business?: number;
   };
-  decimalDiscountForBusinessPlans?: number;
   backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
@@ -46,8 +47,7 @@ export const PricingSection = ({
   activeSwitchPlan,
   billingFrequency,
   businessBillingFrequency,
-  decimalDiscountForIndividualPlans,
-  decimalDiscountForBusinessPlans,
+  decimalDiscount,
   hideFreeCard,
   hidePlanSelectorAndSwitch,
   hideBusinessCards,
@@ -71,6 +71,7 @@ export const PricingSection = ({
 
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
+
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
 
@@ -116,7 +117,7 @@ export const PricingSection = ({
   };
 
   return (
-    <section className={`overflow-hidden py-20 px-5 ${backgroundColorComponent}`}>
+    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex w-full flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
@@ -186,16 +187,23 @@ export const PricingSection = ({
                     }
                     key={product.storage}
                     popular={product.storage === '10TB'}
-                    decimalDiscountValue={decimalDiscountForIndividualPlans?.subscriptions}
+                    decimalDiscountValue={
+                      product.interval !== Interval.Lifetime
+                        ? decimalDiscount?.subscriptions
+                        : lifetimeCoupons
+                        ? undefined
+                        : decimalDiscount?.subscriptions
+                    }
                     fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons?.[product.storage].amountOff
+                      product.interval === Interval.Lifetime && lifetimeCoupons
+                        ? lifetimeCoupons?.[product.storage].amountOff
+                        : undefined
                     }
                     lang={lang}
                   />
                 ))
               : undefined}
           </div>
-
           {!hideFreeCard ? (
             <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
               <FreePlanCard textContent={textContent.freePlanCard} />
@@ -231,7 +239,7 @@ export const PricingSection = ({
                         }
                         key={product.storage}
                         popular={product.storage === '10TB'}
-                        decimalDiscountValue={decimalDiscountForBusinessPlans}
+                        decimalDiscountValue={decimalDiscount?.business}
                         lang={lang}
                       />
                     ))
@@ -240,7 +248,7 @@ export const PricingSection = ({
             )}
           </div>
         </Transition>
-        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-y-0 md:space-x-32 md:pt-10">
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary md:pb-0" />

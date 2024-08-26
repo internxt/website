@@ -60,8 +60,6 @@ export default function PriceCard({
   function onCheckoutButtonClicked() {
     if (lifetimeMode === 'redeem') return onButtonClicked?.();
 
-    console.log(coupon);
-
     if (cta[1] === 'Free plan') {
       goToSignUpURL();
     } else {

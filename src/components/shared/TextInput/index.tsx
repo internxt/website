@@ -47,7 +47,6 @@ export default function TextInput({
         placeholder={placeholder}
         autoComplete={autoComplete}
         id={label}
-        min={0}
         required={true}
         autoFocus={autoFocus}
         data-cy={inputDataCy}

@@ -7,7 +7,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -30,8 +30,16 @@ interface HomeProps {
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
-  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.AllPlansCoupon,
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    businessCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    fetchLifetimeCoupons: true,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
 
@@ -49,17 +57,18 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     setIsBusiness(isBusiness);
   };
 
-  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        : individualCoupon?.name;
+
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
     const planType = isBusiness ? 'business' : 'individual';
 
-    stripeService.redirectToCheckout(
-      planId,
-      currencyValue,
-      planType,
-      isCheckoutForLifetime,
-      couponCodeForCheckout?.name,
-    );
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   return (
@@ -77,8 +86,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
+        lifetimeCoupons={lifetimeCoupons}
         decimalDiscount={{
-          individuals: 0.2,
+          individuals: 25,
         }}
         lang={locale}
         products={products}
@@ -102,7 +112,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

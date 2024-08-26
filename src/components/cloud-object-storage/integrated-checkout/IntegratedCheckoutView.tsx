@@ -1,13 +1,18 @@
 import Button from '@/components/shared/Button';
 import { AddressElement, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { Stripe, StripeElements, StripePaymentElementOptions } from '@stripe/stripe-js';
-import { BaseSyntheticEvent } from 'react';
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { HeaderComponent } from './components/HeaderComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { ProductFeaturesComponent } from './components/ProductCardComponent';
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { UserAuthComponent } from './components/UserAuthComponent';
+import TextInput from '@/components/shared/TextInput';
+import { Menu, Transition } from '@headlessui/react';
+import { CaretDown } from '@phosphor-icons/react/dist/ssr';
+import { CaretUp } from '@phosphor-icons/react';
+import { PASSWORD_REGEX } from './components/InputsComponent';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
@@ -25,6 +30,8 @@ export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
 export interface IFormValues {
   email: string;
   password: string;
+  vatId: string;
+  companyName: string;
 }
 
 interface IntegratedCheckoutViewProps {
@@ -41,7 +48,7 @@ interface IntegratedCheckoutViewProps {
     elements: StripeElements | null,
     formData?: IFormValues,
   ) => Promise<void>;
-  onUserNameFromAddressElementChange?: (name: string) => void;
+  onCountryAddressChange: (name: string) => void;
 }
 
 export const IntegratedCheckoutView = ({
@@ -50,7 +57,7 @@ export const IntegratedCheckoutView = ({
   isPaying,
   error,
   onCheckoutButtonClicked,
-  onUserNameFromAddressElementChange,
+  onCountryAddressChange,
 }: IntegratedCheckoutViewProps): JSX.Element => {
   const stripeSDK = useStripe();
   const elements = useElements();
@@ -58,19 +65,29 @@ export const IntegratedCheckoutView = ({
     register,
     formState: { errors, isValid },
     handleSubmit,
+    getValues,
   } = useForm<IFormValues>({
     mode: 'onChange',
   });
+  const [optionalAddressBillingDetailsDialogClicked, setOptionalAddressBillingDetailsDialogClicked] =
+    useState<boolean>(false);
+  const [isValidPassword, setIsValidPassword] = useState<boolean>();
+
+  useEffect(() => {
+    const password = getValues('password');
+    const isPasswordValid = PASSWORD_REGEX.test(password);
+    setIsValidPassword(isPasswordValid);
+  }, [getValues('password')]);
 
   const disabledButton = isPaying && isValid;
 
   return (
     <form
-      className="flex bg-gray-1 lg:w-screen xl:px-16"
+      className="flex h-full bg-gray-1 lg:w-screen xl:px-16"
       onSubmit={handleSubmit((formData, event) => onCheckoutButtonClicked(event, stripeSDK, elements, formData))}
     >
-      <div className="mx-auto flex w-full max-w-screen-xl px-5 py-10">
-        <div className="flex w-full flex-col space-y-8 lg:space-y-16">
+      <div className="mx-auto flex h-full w-full max-w-screen-xl px-5 py-10">
+        <div className="flex h-full w-full flex-col space-y-8 lg:space-y-16">
           <HeaderComponent textContent={textContent} lang="en" />
           <p className="text-xl font-bold text-gray-100 md:text-center lg:text-left lg:text-3xl">{textContent.title}</p>
           <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:justify-between">
@@ -82,11 +99,11 @@ export const IntegratedCheckoutView = ({
                 register={register}
               />
               <div className="flex flex-col space-y-8 pb-20">
-                <p className="text-2xl font-semibold text-gray-100">2. {textContent.paymentTitle}</p>
+                <p className="text-2xl font-semibold text-gray-100">2. {textContent.addressBillingTitle}</p>
                 <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
                   <AddressElement
                     onChange={(e) => {
-                      onUserNameFromAddressElementChange?.(e.value.name);
+                      onCountryAddressChange(e.value.address.country);
                     }}
                     options={{
                       mode: 'billing',
@@ -96,15 +113,71 @@ export const IntegratedCheckoutView = ({
                     }}
                   />
                 </div>
+                <div className="flex w-full flex-col items-start gap-3 rounded-2xl border border-gray-10 bg-white p-5">
+                  <Menu>
+                    <Menu.Button
+                      onKeyDown={(e) => e.preventDefault()}
+                      className={
+                        'flex h-full w-full flex-row items-center justify-between rounded-lg text-base transition-all duration-75 ease-in-out hover:underline'
+                      }
+                      onClick={() =>
+                        setOptionalAddressBillingDetailsDialogClicked(!optionalAddressBillingDetailsDialogClicked)
+                      }
+                    >
+                      {textContent.addressBilling.optionalData}
+                      {optionalAddressBillingDetailsDialogClicked ? (
+                        <CaretUp size={24} className="text-gray-60" />
+                      ) : (
+                        <CaretDown size={24} className="text-gray-60" />
+                      )}
+                    </Menu.Button>
+                    <Transition
+                      className={'left-0 w-full'}
+                      enter="transition duration-50 ease-out"
+                      enterFrom="scale-98 opacity-0"
+                      enterTo="scale-100 opacity-100"
+                      leave="transition duration-50 ease-out"
+                      leaveFrom="scale-98 opacity-100"
+                      leaveTo="scale-100 opacity-0"
+                    >
+                      <Menu.Items onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-5">
+                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
+                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyName}</p>
+                          <TextInput
+                            placeholder={textContent.addressBilling.companyName}
+                            label="companyName"
+                            className="!w-full"
+                            type="text"
+                            register={register}
+                            required={true}
+                          />
+                        </div>
+                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
+                          <p className="text-sm text-gray-80">{textContent.addressBilling.companyVatId}</p>
+                          <TextInput
+                            placeholder={textContent.addressBilling.companyVatId}
+                            label="vatId"
+                            className="!w-full"
+                            type="text"
+                            register={register}
+                            required={true}
+                          />
+                        </div>
+                      </Menu.Items>
+                    </Transition>
+                  </Menu>
+                </div>
+
+                <p className="text-2xl font-semibold text-gray-100">3. {textContent.paymentTitle}</p>
                 <PaymentElement options={PAYMENT_ELEMENT_OPTIONS} />
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
                 <Button
                   id="submit"
-                  className={`${disabledButton && '!bg-gray-40'} hidden !w-full lg:flex`}
+                  className={`${!isValidPassword || disabledButton ? '!bg-gray-40' : undefined} hidden !w-full lg:flex`}
                   type="submit"
                   showSpinner={disabledButton}
                   text={disabledButton ? textContent.paying : textContent.pay}
-                  disabled={disabledButton}
+                  disabled={!isValidPassword || disabledButton}
                 />
               </div>
             </div>
@@ -113,10 +186,10 @@ export const IntegratedCheckoutView = ({
               <Button
                 id="submit"
                 type="submit"
-                className={`flex !w-full pt-5 lg:hidden ${disabledButton ? 'bg-gray-10' : 'bg-primary'}`}
+                className={`${!isValidPassword || disabledButton ? '!bg-gray-40' : undefined} flex !w-full lg:hidden`}
                 text={disabledButton ? textContent.paying : textContent.pay}
                 showSpinner={disabledButton}
-                disabled={disabledButton}
+                disabled={!isValidPassword || disabledButton}
               />
             </div>
           </div>

@@ -2,6 +2,7 @@ import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
+import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -50,11 +51,12 @@ export const PriceCard = ({
 
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
   const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
-  const priceBefore = decimalDiscountValue
-    ? Number(price).toFixed(2).replace('.00', '')
-    : interval === Interval.Year
-    ? (monthlyProductPrice * 12).toFixed(2)
-    : undefined;
+  const priceBefore =
+    decimalDiscountValue || fixedDiscount
+      ? Number(price).toFixed(2).replace('.00', '')
+      : interval === Interval.Year
+      ? (monthlyProductPrice * 12).toFixed(2)
+      : undefined;
 
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -129,7 +131,9 @@ export const PriceCard = ({
               }`}
               key={feature}
             >
-              <img
+              <Image
+                width={16}
+                height={17}
                 loading="lazy"
                 className="translate-y-px select-none"
                 src={getImage(`/icons/${checkIconName}.svg`)}
