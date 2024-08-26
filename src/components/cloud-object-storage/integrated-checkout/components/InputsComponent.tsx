@@ -13,7 +13,7 @@ interface InputsComponentProps {
   register: UseFormRegister<IFormValues>;
 }
 
-const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
+export const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,}$/;
 
 export const InputsComponent = ({ register, textContent, errors, authError }: InputsComponentProps): JSX.Element => {
   return (

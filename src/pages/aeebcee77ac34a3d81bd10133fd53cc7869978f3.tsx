@@ -14,8 +14,8 @@ import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
 import { useRouter } from 'next/navigation';
-import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
+import { notificationService } from '@/components/Snackbar';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -61,7 +61,7 @@ const stripePromise = (async () => {
   return await loadStripe(stripeKey as string);
 })();
 
-const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
+const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string;
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
   const router = useRouter();

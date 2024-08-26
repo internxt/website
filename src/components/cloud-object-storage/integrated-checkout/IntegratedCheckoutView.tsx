@@ -1,7 +1,7 @@
 import Button from '@/components/shared/Button';
 import { AddressElement, PaymentElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import { Stripe, StripeElements, StripePaymentElementOptions } from '@stripe/stripe-js';
-import { BaseSyntheticEvent, useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { HeaderComponent } from './components/HeaderComponent';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
@@ -12,6 +12,7 @@ import TextInput from '@/components/shared/TextInput';
 import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from '@phosphor-icons/react/dist/ssr';
 import { CaretUp } from '@phosphor-icons/react';
+import { PASSWORD_REGEX } from './components/InputsComponent';
 
 export const PAYMENT_ELEMENT_OPTIONS: StripePaymentElementOptions = {
   wallets: {
@@ -64,11 +65,19 @@ export const IntegratedCheckoutView = ({
     register,
     formState: { errors, isValid },
     handleSubmit,
+    getValues,
   } = useForm<IFormValues>({
     mode: 'onChange',
   });
   const [optionalAddressBillingDetailsDialogClicked, setOptionalAddressBillingDetailsDialogClicked] =
     useState<boolean>(false);
+  const [isValidPassword, setIsValidPassword] = useState<boolean>();
+
+  useEffect(() => {
+    const password = getValues('password');
+    const isPasswordValid = PASSWORD_REGEX.test(password);
+    setIsValidPassword(isPasswordValid);
+  }, [getValues('password')]);
 
   const disabledButton = isPaying && isValid;
 
@@ -164,11 +173,11 @@ export const IntegratedCheckoutView = ({
                 {error?.stripe && <div className="text-red-dark">{error.stripe}</div>}
                 <Button
                   id="submit"
-                  className={`${disabledButton && '!bg-gray-40'} hidden !w-full lg:flex`}
+                  className={`${!isValidPassword || disabledButton ? '!bg-gray-40' : undefined} hidden !w-full lg:flex`}
                   type="submit"
                   showSpinner={disabledButton}
                   text={disabledButton ? textContent.paying : textContent.pay}
-                  disabled={disabledButton}
+                  disabled={!isValidPassword || disabledButton}
                 />
               </div>
             </div>
@@ -177,10 +186,10 @@ export const IntegratedCheckoutView = ({
               <Button
                 id="submit"
                 type="submit"
-                className={`flex !w-full pt-5 lg:hidden ${disabledButton ? 'bg-gray-10' : 'bg-primary'}`}
+                className={`${!isValidPassword || disabledButton ? '!bg-gray-40' : undefined} flex !w-full lg:hidden`}
                 text={disabledButton ? textContent.paying : textContent.pay}
                 showSpinner={disabledButton}
-                disabled={disabledButton}
+                disabled={!isValidPassword || disabledButton}
               />
             </div>
           </div>
