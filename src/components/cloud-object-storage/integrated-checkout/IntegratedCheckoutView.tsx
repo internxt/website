@@ -47,7 +47,7 @@ interface IntegratedCheckoutViewProps {
     elements: StripeElements | null,
     formData?: IFormValues,
   ) => Promise<void>;
-  onUserNameFromAddressElementChange?: (name: string) => void;
+  onCountryAddressChange: (name: string) => void;
 }
 
 export const IntegratedCheckoutView = ({
@@ -56,7 +56,7 @@ export const IntegratedCheckoutView = ({
   isPaying,
   error,
   onCheckoutButtonClicked,
-  onUserNameFromAddressElementChange,
+  onCountryAddressChange,
 }: IntegratedCheckoutViewProps): JSX.Element => {
   const stripeSDK = useStripe();
   const elements = useElements();
@@ -94,7 +94,7 @@ export const IntegratedCheckoutView = ({
                 <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
                   <AddressElement
                     onChange={(e) => {
-                      onUserNameFromAddressElementChange?.(e.value.name);
+                      onCountryAddressChange(e.value.address.country);
                     }}
                     options={{
                       mode: 'billing',
