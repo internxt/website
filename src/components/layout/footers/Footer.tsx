@@ -188,6 +188,9 @@ export default function Footer({
                       className="flex flex-row items-center hover:text-primary"
                     >
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
                     </Link>
 
                     <a
