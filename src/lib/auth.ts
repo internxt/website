@@ -35,7 +35,8 @@ export async function objectStorageActivationAccount(email: string, password: st
   const isValidPassword = PASSWORD_REGEX.test(password);
 
   if (!isValidPassword) throw new Error('Invalid password');
-  axios.post(
+
+  return axios.post(
     `${OBJECT_STORAGE_USER_ACTIVATION_URL}/users/activation`,
     {
       email,
