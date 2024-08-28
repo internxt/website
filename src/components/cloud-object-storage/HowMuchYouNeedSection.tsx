@@ -37,7 +37,7 @@ const GraphComponent = ({
           isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
         } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
-        <p>{Math.round(Number(priceLabel) * 12).toLocaleString('es')}$/yr</p>
+        <p>{Math.round(Number(priceLabel) * 12).toLocaleString('en')}$/yr</p>
       </div>
       <div
         className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
@@ -134,12 +134,16 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">${((costs?.internxt.cost * 12) / 12).toFixed(0)}</p>
+                <p className="text-5xl font-semibold text-primary">
+                  ${Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
+                </p>
                 <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
               </div>
               {/* Yearly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">${(costs?.internxt.cost * 12).toFixed(0)}</p>
+                <p className="text-5xl font-semibold text-primary">
+                  ${Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
+                </p>
                 <p className="text-3xl text-gray-50">{textContent.perYear}</p>
               </div>
             </div>
