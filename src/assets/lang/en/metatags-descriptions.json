@@ -10,6 +10,11 @@
     "description": "Prevent data loss with Internxt’s encrypted cloud storage for business—sign up to benefit from industry-leading cloud data protection."
   },
   {
+    "id": "family",
+    "title": "Internxt for Family Plan — The Most Secure Family Cloud Storage",
+    "description": "Manage your family's online privacy with our Internxt cloud storage for family plans. Securely store, organize, and share your family’s private documents in one place."
+  },
+  {
     "id": "cloud-object-storage",
     "title": "Internxt — Object Storage",
     "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
