@@ -37,7 +37,7 @@ const GraphComponent = ({
           isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
         } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
-        <p className="lg:whitespace-nowrap">{Math.round(Number(priceLabel) * 12).toLocaleString('en')}$/yr</p>
+        <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
       </div>
       <div
         className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
@@ -76,10 +76,10 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   const calculateCosts = () => {
     const tbDownloaded = debouncedStorageAmountValue * (debouncedPercentDownloadValue / 100);
 
-    const wasabiCost = 7 * debouncedStorageAmountValue;
-    const azureCost = 18.4 * debouncedStorageAmountValue + 0.0875 * 12 * tbDownloaded;
-    const awsCost = 23 * debouncedStorageAmountValue + 0.09 * 1024 * tbDownloaded;
-    const googleCost = 23 * debouncedStorageAmountValue + 0.12 * 1024 * tbDownloaded;
+    const wasabiCost = 6.99 * debouncedStorageAmountValue;
+    const azureCost = 19.25 * debouncedStorageAmountValue + 0.082 * 1024 * tbDownloaded;
+    const awsCost = 23.55 * debouncedStorageAmountValue + 0.09 * 1024 * tbDownloaded;
+    const googleCost = 23.55 * debouncedStorageAmountValue + 0.12 * 1024 * tbDownloaded;
 
     const calculateDifference = (providerCost) => ((providerCost - wasabiCost) / wasabiCost) * 100;
 
@@ -135,14 +135,14 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
                 <p className="text-5xl font-semibold text-primary">
-                  {Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}$
+                  €{Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
               </div>
               {/* Yearly price */}
               <div className="flex flex-row items-end gap-2">
                 <p className="text-5xl font-semibold text-primary">
-                  {Math.round(costs?.internxt.cost * 12).toLocaleString('en')}$
+                  €{Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perYear}</p>
               </div>
@@ -195,13 +195,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   price={(costs?.internxt.cost * costs?.azure.difference) / 100}
                   activeBackground="bg-yellow"
                   background="bg-yellow/6"
-                  maxPrice={
-                    debouncedPercentDownloadValue > 50
-                      ? maxPrice / 4
-                      : debouncedPercentDownloadValue > 10
-                      ? maxPrice / 2
-                      : maxPrice
-                  }
+                  maxPrice={maxPrice}
                 />
                 <p className="text-lg font-medium">{textContent.companies[1]}</p>
               </div>

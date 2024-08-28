@@ -20,7 +20,7 @@ export const ItemsNavigation = ({
             <Link
               href="/pricing"
               locale={lang}
-              className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+              className={`whitespace-nowrap px-4 py-1.5 transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
                   ? `text-white hover:text-cool-gray-20 ${
                       router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() && 'text-primary'
@@ -34,7 +34,7 @@ export const ItemsNavigation = ({
             </Link>
 
             <div
-              className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
+              className={`group relative flex space-x-1 px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
                   ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
                   : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
@@ -47,25 +47,35 @@ export const ItemsNavigation = ({
               />
 
               {/* Menu items */}
-              <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+              <div className="pointer-events-none absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
                 <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
                 <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
                   <Link
                     href="/drive"
                     locale={lang}
-                    className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                    className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
                       darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.drive}
                   </Link>
 
+                  <Link
+                    href="/cloud-object-storage"
+                    locale={lang}
+                    className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
+                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                    }`}
+                  >
+                    {textContent.products.s3}
+                  </Link>
+
                   <a
                     href="https://send.internxt.com"
                     target="_blank"
                     rel="noreferrer"
-                    className={`flex flex-row items-center justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                    className={`flex flex-row items-center justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
                       darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
@@ -75,7 +85,7 @@ export const ItemsNavigation = ({
                   <Link
                     href="/vpn"
                     locale={lang}
-                    className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                    className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
                       darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
@@ -86,7 +96,7 @@ export const ItemsNavigation = ({
             </div>
 
             <div
-              className={`group relative flex space-x-1 py-1.5 px-4 pr-2 font-medium transition duration-150 ease-in-out ${
+              className={`group relative flex space-x-1 px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
                   ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-gray-20'
                   : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
@@ -99,14 +109,14 @@ export const ItemsNavigation = ({
               />
 
               {/* Menu items */}
-              <div className="pointer-events-none absolute top-full left-1/2 z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
+              <div className="pointer-events-none absolute left-1/2 top-full z-50 w-52 -translate-x-1/2 translate-y-0 rounded-xl border border-black border-opacity-5 bg-white p-1.5 opacity-0 shadow-subtle transition duration-150 ease-in-out group-hover:pointer-events-auto group-hover:translate-y-1 group-hover:opacity-100">
                 <div className="absolute -top-4 left-1/2 h-4 w-4/5 -translate-x-1/2" />
 
                 <div className="relative grid gap-0 lg:grid-cols-1">
                   <Link
                     href="/privacy"
                     locale={lang}
-                    className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                    className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
                       darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
@@ -116,7 +126,7 @@ export const ItemsNavigation = ({
                   <Link
                     href="/open-source"
                     locale={lang}
-                    className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80 ${
+                    className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
                       darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
@@ -129,7 +139,7 @@ export const ItemsNavigation = ({
             <Link
               href="/about"
               locale={lang}
-              className={`whitespace-nowrap py-1.5 px-4 transition duration-150 ease-in-out ${
+              className={`whitespace-nowrap px-4 py-1.5 transition duration-150 ease-in-out ${
                 darkMode || isQuizSection
                   ? `text-white hover:text-gray-20 ${
                       router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
