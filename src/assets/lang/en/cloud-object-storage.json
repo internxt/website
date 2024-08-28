@@ -131,7 +131,7 @@
       {
         "question": "Does Internxt have a minimum monthly storage policy?",
         "answer": [
-          "Internxt’s minimum monthly policy for object storage plans is 1TB. If stored objects are deleted before they have been stored with Internxt for 90 days, a time-deleted storage charge will be applied that is equal to the remaining days left on the monthly subscription.",
+          "Internxt’s minimum monthly policy for object storage plans is 1TB. If stored objects are deleted before they have been stored with Internxt for 30 days, a time-deleted storage charge will be applied that is equal to the remaining days left on the monthly subscription.",
           "This policy is the same as the minimum storage duration policy that AWS and other hyperscaler storage services charge."
         ]
       },
@@ -163,7 +163,7 @@
       {
         "question": "What if I want to cancel my plan?",
         "answer": [
-          "If you delete objects from Internxt object storage before they have been stored for 90 days, you will still be charged as if those objects had been stored for the full 90 days.",
+          "If you delete objects from Internxt object storage before they have been stored for 30 days, you will still be charged as if those objects had been stored for the full 30 days.",
           "This policy ensures a minimum charge period for stored data, regardless of how long the objects were actually stored before deletion.",
           "If you want to cancel your object storage plan, email us at hello@internxt.com, and we’ll process the subscription cancellation."
         ]
