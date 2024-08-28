@@ -135,14 +135,14 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
                 <p className="text-5xl font-semibold text-primary">
-                  ${Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
+                  {Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}$
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
               </div>
               {/* Yearly price */}
               <div className="flex flex-row items-end gap-2">
                 <p className="text-5xl font-semibold text-primary">
-                  ${Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
+                  {Math.round(costs?.internxt.cost * 12).toLocaleString('en')}$
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perYear}</p>
               </div>
