@@ -7,7 +7,12 @@
   {
     "id": "drive",
     "title": "Internxt Drive – Almacenamiento privado y seguro en la nube",
-    "description": "Internxt Drive – Almacenamiento privado y seguro"
+    "description": "Almacena, comparte y haz copias de seguridad de tus archivos y fotos en la nube con Internxt Drive. Almacenamiento de archivos cifrado de extremo a extremo y copia de seguridad en línea de código abierto."
+  },
+  {
+    "id": "family",
+    "title": "Internxt para el Plan Familiar: el almacenamiento en la nube familiar más seguro",
+    "description": "Gestiona la privacidad online de tu familia con nuestro almacenamiento en la nube Internxt para planes familiares."
   },
   {
     "id": "business",

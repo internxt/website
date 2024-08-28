@@ -1,0 +1,155 @@
+{
+  "HeroSection": {
+    "title": "為您的家庭提供全面的安全與隱私保護",
+    "subtitle": "使用Internxt家庭計畫保護您家庭的線上隱私。",
+    "description": "為每位家庭成員提供高達2TB的加密雲端儲存，確保每個人的數據都得到保護並且容易訪問。",
+    "cta": "獲取Internxt家庭版"
+  },
+  "ProtectYourFamilySection": {
+    "title": "使用Internxt雲端儲存保護您家庭的線上隱私",
+    "description": "Internxt為整個家庭提供加密的雲端儲存服務，用於儲存和分享文件、照片和視頻——所有這些都通過一個安全的平台管理。"
+  },
+  "PriceTable": {
+    "planTitles": {
+      "business": "家庭計畫"
+    },
+    "businessDescription2": "使用我們安全的加密雲端儲存管理、分享並保護您的家庭文件和文件。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "individual": "個人",
+      "lifetime": "終身",
+      "business": "商業"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過審核",
+      "anonymousAccount": "匿名帳戶創建"
+    }
+  },
+  "WhatMakesInternxtPerfectSection": {
+    "title": "什麼讓Internxt成為家庭的完美選擇？",
+    "description": "Internxt的家庭雲端儲存計畫提供一個安全空間，具有零訪問和端到端加密功能，以防止未授權訪問並確保您家庭的隱私。",
+    "features": [
+      {
+        "title": "家庭管理",
+        "description": "Internxt允許帳戶管理員添加成員、自訂儲存並處理帳單，幫助家庭保持組織化。成員獲得自己的空間，並可以輕鬆切換他們的家庭雲帳戶和個人帳戶。"
+      },
+      {
+        "title": "安全分享家庭文件",
+        "description": "Internxt允許家庭成員輕鬆合作，同時保護您自己的敏感信息安全。通過密碼保護和訪問限制功能，您可以確保重要的家庭數據安全且只對您信任的人開放。"
+      },
+      {
+        "title": "監控會話",
+        "description": "獲取會話的詳細概覽，並查看實時登錄通知和家庭成員的詳細遠程會話監控（操作系統、IP、位置和最後活躍時間）。這種高級別的安全性能檢測未授權訪問並保護您家庭的敏感數據。"
+      },
+      {
+        "title": "靈活的儲存分配",
+        "description": "通過家庭雲端儲存計畫，您可以輕鬆添加用戶並根據需要擴展儲存，確保成本效益、可擴展性和最佳資源利用。每位家庭成員都獲得他們需要的空間，您的家庭數據保持有序且易於訪問。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "加入最安全的家庭雲計劃",
+    "description": "用Internxt保護和確保最重要的東西",
+    "cta": "選擇計劃"
+  },
+  "WhyChooseInternxt": {
+    "title": "為什麼選擇Internxt？",
+    "description": "Internxt的家庭雲儲存提供一個簡單的解決方案，任何人都可以使用，無論技術專長如何。借助功能強大但簡單的加密儲存，您的家庭可以安全地管理和訪問重要文件。",
+    "cards": [
+      {
+        "title": "獨立驗證",
+        "description": "Internxt已由歐洲領先的滲透測試公司Securitum獨立審核和驗證，以確保您家庭的文件免受黑客攻擊。作為一個符合GDPR的公司，我們還遵循嚴格的法律以保護您家庭的數據私密性。"
+      },
+      {
+        "title": "零訪問，最大加密",
+        "description": "端到端加密通過在您的設備上加密一切來保護您的文件。沒有人，甚至Internxt，都不能查看您的文件。在數據洩露的不太可能的情況下，黑客無法解密並竊取您家庭的任何數據。"
+      },
+      {
+        "title": "您控制您的數據",
+        "description": "與Google Drive、Dropbox和OneDrive不同，Internxt沒有跟踪器，也從不與第三方分享數據。您的業務數據保持私密，並採取最大的安全措施保護。"
+      },
+      {
+        "title": "100%透明和安全",
+        "description": "我們的所有產品都使用開源構建。我們用來保護數據的代碼可供所有人檢查。我們除了您的數據外，沒有什麼可隱藏的。"
+      }
+    ]
+  },
+  "MaximumSecuritySection": {
+    "title": "最大的安全性和加密來保護您的家庭",
+    "description": "Internxt在共享和儲存期間保護您家庭的文件，確保敏感文件和家庭回憶保持安全和私密。",
+    "cta": "獲取Internxt家庭版"
+  },
+  "TestimonialsSection": {
+    "title": "專家們對我們的評價",
+    "testimonials": [
+      {
+        "imageBrandName": "techradar",
+        "brand": "Techradar",
+        "review": "Internxt是一個出色的雲端儲存服務，因其實惠的計劃和直觀的界面而聞名。它在安全措施和對隱私的承諾方面表現卓越，是優先考慮安全的商務用戶的首選。"
+      },
+      {
+        "imageBrandName": "PCWorld",
+        "brand": "PCWorld",
+        "review": "Internxt的直觀網絡訪問、文件同步和真實備份服務令人印象深刻。這個在線儲存和備份服務簡單易用，涵蓋所有基礎，終身計劃非常划算。"
+      },
+      {
+        "imageBrandName": "cloudwards",
+        "brand": "Cloudwards",
+        "review": "Internxt被認為是一個重視用戶隱私的安全雲端儲存解決方案。如果隱私和安全是您對雲端儲存最關注的問題，那麼Internxt絕對值得考慮。"
+      },
+      {
+        "imageBrandName": "bitcatcha",
+        "brand": "Bitcatcha",
+        "review": "Internxt在保護您方面做得很出色，並且賦予您數據所有權，因此非常適合企業使用。推薦給任何重視隱私的人。"
+      },
+      {
+        "imageBrandName": "ffstoppers",
+        "brand": "Fstoppers",
+        "review": "為什麼選擇Internxt？我會說是它的簡潔和簡單性。它只是一個沒有任何廢話的256位加密雲端儲存選項，任何人都可以使用。"
+      },
+      {
+        "imageBrandName": "guru99",
+        "brand": "Guru99",
+        "review": "Internxt Drive是隱私和加密的最佳安全雲端儲存服務。它使您和您的團隊能夠以完全的安全性儲存不同類型的文件。"
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "什么是Internxt的家庭版？",
+        "answer": [
+          "家庭云存储计划为多个家庭成员提供共享存储解决方案。它允许您在设备上安全地存储、管理和共享文件，最多可支持100个用户。"
+        ]
+      },
+      {
+        "question": "Internxt是否适合我的家庭云存储？",
+        "answer": [
+          "Internxt是寻找安全云存储解决方案的家庭的完美选择，该解决方案保持个人和机密信息的私密性。",
+          "我们的加密产品套件包括行业最高的安全标准，使家庭能够共享文件或文件夹，而无需担心数据泄露。"
+        ]
+      },
+      {
+        "question": "存储空间是如何工作的？",
+        "answer": [
+          "根据您选择的计划，您添加到家庭计划中的每个成员将获得1TB或2TB。当您的家庭成员接受邀请时，他们将被添加到您的家庭云存储账户，并分配他们的个人云存储。"
+        ]
+      },
+      {
+        "question": "我的Internxt家庭计划的其他成员能看到我的信息吗？",
+        "answer": [
+          "您的Internxt家庭计划中的每个成员都有一个单独的账户，拥有2TB的存储空间。他们的所有文件都使用私钥加密。除非他们与您共享访问权限，否则您无法查看其他家庭成员的文件。"
+        ]
+      },
+      {
+        "question": "您提供什么级别的技术支持？",
+        "answer": [
+          "我们有一个专门的客户支持团队，可以回答任何问题或疑虑，或根据您的需求提供额外信息。您可以访问我们的帮助中心或通过[hello@internxt.com](mailto:hello@internxt.com)与我们联系，我们的团队将很高兴为您提供帮助。"
+        ]
+      }
+    ]
+  }
+}

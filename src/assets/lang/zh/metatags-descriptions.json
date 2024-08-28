@@ -15,6 +15,11 @@
     "description": "使用 Internxt 的加密企业云存储防止数据丢失—注册以受益于行业领先的云数据保护。"
   },
   {
+    "id": "family",
+    "title": "Internxt家庭计划 — 最安全的家庭云存储",
+    "description": "使用我们的Internxt家庭计划云存储管理您家庭的在线隐私。安全地存储、组织和共享您家庭的私人文件。"
+  },
+  {
     "id": "what-google-knows",
     "title": "What Does Google Know About Me | Internxt",
     "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
