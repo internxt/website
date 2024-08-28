@@ -104,6 +104,7 @@ export interface OurValues {
 
 export interface Products {
   drive: string;
+  s3: string;
   webDAV: string;
   vpn: string;
   send: string;
