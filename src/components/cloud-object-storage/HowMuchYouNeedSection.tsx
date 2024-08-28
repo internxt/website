@@ -27,7 +27,9 @@ const GraphComponent = ({
   altImg?: string;
 }): JSX.Element => {
   return (
-    <div className={`relative flex h-full w-20 flex-col items-center justify-end gap-5 rounded-lg ${background}`}>
+    <div
+      className={`relative flex h-64 w-20 flex-col items-center justify-end gap-5 rounded-lg lg:h-full ${background}`}
+    >
       <div className="z-40 flex items-center justify-center rounded-full bg-gray-5 px-3 py-1 text-sm font-semibold text-gray-100">
         <p>{(priceLabel * 12).toFixed(0)}$/yr</p>
       </div>
@@ -119,7 +121,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
         </div>
 
         {/* Cards */}
-        <div className="flex h-full w-full max-w-[1115px] flex-row items-stretch gap-16">
+        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 md:flex-row">
           <div className="flex w-full flex-col gap-2">
             {/* Pricing */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
@@ -156,8 +158,8 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
             </div>
           </div>
           {/* Graphs (Comparison) */}
-          <div className="relative flex w-full flex-col rounded-2xl bg-white px-9 py-10">
-            <div className="relative flex h-full flex-row gap-12">
+          <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
+            <div className="flex h-full flex-row flex-wrap justify-center gap-12">
               <div className="flex flex-col items-center gap-2">
                 <GraphComponent
                   priceLabel={costs?.internxt.cost}
