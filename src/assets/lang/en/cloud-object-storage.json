@@ -28,16 +28,20 @@
   "PriceCardSection": {
     "title": "Internxt object cloud storage combines security and efficiency",
     "description": "Internxt object storage is an affordable, high-performance solution revolutionizing online data storage, perfect for individuals or organizations needing reliable and secure infrastructure at a minimal cost.",
+    "payAsYouGoCard": {
+      "title": "Pay as you go!",
+      "description": "Pay only for the storage you use."
+    },
     "cardText": {
       "label": "Internxt S3",
       "perTB": "Per TB/Billed monthly",
-      "price": "6.99",
+      "price": "7",
       "cta": "Select plan",
       "whatsIncluded": {
         "title": "What's included:",
         "features": [
-          "Billed monthly",
-          "Server-side encryption",
+          "Minimum monthly charge of €7",
+          "Minimum storage of 1TB",
           "AWS S3 and IAM API compatible",
           "Increased speed",
           "Flexible storage",
@@ -46,7 +50,8 @@
           "Premium customer support"
         ]
       }
-    }
+    },
+    "oneTimePayment": "*A €1 one-time fee is required for account verification"
   },
   "HowMuchYouNeedSection": {
     "title": "How much storage do you need?",

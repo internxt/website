@@ -42,8 +42,8 @@
     "planDetails": {
       "title": "Plan details:",
       "features": [
-        "Billed monthly",
-        "Server-side encryption",
+        "Minimum monthly charge of €7",
+        "Minimum storage of 1TB",
         "AWS S3 and IAM API compatible",
         "Increased speed",
         "Flexible storage",
@@ -60,5 +60,6 @@
     },
     "amountSaved": "Save ",
     "withAnnualBilling": "with annual billing"
-  }
+  },
+  "oneTimePayment": "*A €1 one-time fee is required for account verification"
 }

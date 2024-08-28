@@ -49,15 +49,14 @@
     "planDetails": {
       "title": "Plandetails:",
       "features": [
-        "{{spaceToUpgrade}} verschlüsselter Speicher",
-        "Verschlüsseltes Teilen von Dateien und Ordnern",
-        "Passwortgeschütztes Teilen von Dateien",
-        "Zugriff auf Ihre Dateien von jedem Gerät",
-        "Zugang zu allen unseren Diensten",
-        "Hochladen von Dateien bis zu 20GB",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "Premium-Kundensupport",
-        "30-Tage-Geld-zurück-Garantie"
+        "Charge mensuelle minimale de 7€",
+        "Stockage minimum de 1TB",
+        "Compatible avec AWS S3 et IAM API",
+        "Vitesse accrue",
+        "Stockage flexible",
+        "Open source",
+        "Conforme au GDPR",
+        "Support client premium"
       ]
     },
     "total": "Gesamt: ",
@@ -68,5 +67,6 @@
     },
     "amountSaved": "Sparen ",
     "withAnnualBilling": "mit jährlicher Abrechnung"
-  }
+  },
+  "oneTimePayment": "*Es wird eine einmalige Gebühr von 1€ für die Kontoverifizierung benötigt"
 }
