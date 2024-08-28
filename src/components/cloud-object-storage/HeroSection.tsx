@@ -11,13 +11,13 @@ interface HeroSectionProps {
 
 export const CloudObjectStorageHeroSection = ({ textContent }: HeroSectionProps): JSX.Element => (
   <section
-    className="-mb-28 -mt-10 overflow-hidden px-5 py-20"
+    className="overflow-hidden px-5 py-20"
     style={{
       background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
     }}
   >
     <HeroSectionSafeArea>
-      <div className="flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-between">
+      <div className="-mb-20 -mt-8 flex w-full flex-col items-center gap-10 lg:flex-row lg:justify-between">
         <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 text-center text-white lg:items-start lg:text-left">
           <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
             {textContent.title.line1}
