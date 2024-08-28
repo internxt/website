@@ -81,7 +81,7 @@
       },
       {
         "title": "Security",
-        "description": "Our enhanced security posture includes SSE-C encryption that’s automatically applied on top of the original ingest object state. Our storage regions are deployed in top tier data centers that are SOC 2 compliant and certified for ISO 27001 and PCI-DSS. "
+        "description": "With our object cloud storage, we use multiple security measures to protect your data. Your data is encrypted in transit and at rest. We support the HTTPS protocol and server-side encryption with customer-provided encryption keys (SSE-C)."
       },
       {
         "title": "Simple storage service",
