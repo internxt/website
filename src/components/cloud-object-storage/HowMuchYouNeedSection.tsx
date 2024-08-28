@@ -15,6 +15,7 @@ const GraphComponent = ({
   background,
   activeBackground,
   maxPrice,
+  isBlueLabel,
   srcImg,
   altImg,
 }: {
@@ -23,6 +24,7 @@ const GraphComponent = ({
   background: string;
   activeBackground: string;
   maxPrice: number;
+  isBlueLabel?: boolean;
   srcImg?: string;
   altImg?: string;
 }): JSX.Element => {
@@ -30,7 +32,11 @@ const GraphComponent = ({
     <div
       className={`relative flex h-64 w-20 flex-col items-center justify-end gap-5 rounded-lg lg:h-full ${background}`}
     >
-      <div className="z-40 flex items-center justify-center rounded-full bg-gray-5 px-3 py-1 text-sm font-semibold text-gray-100">
+      <div
+        className={`${
+          isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
+        } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
+      >
         <p>{(priceLabel * 12).toFixed(0)}$/yr</p>
       </div>
       <div
@@ -166,6 +172,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   price={costs?.internxt.cost}
                   activeBackground="bg-primary"
                   background="bg-primary/7"
+                  isBlueLabel
                   maxPrice={
                     debouncedPercentDownloadValue > 50
                       ? maxPrice / 5
