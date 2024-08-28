@@ -26,6 +26,7 @@ interface PriceTableProps {
   businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
   hideFreeCard?: boolean;
+  isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   decimalDiscount?: {
@@ -56,6 +57,7 @@ export const PricingSection = ({
   lang,
   backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
+  isFamilyPage,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -240,6 +242,7 @@ export const PricingSection = ({
                         key={product.storage}
                         popular={product.storage === '10TB'}
                         decimalDiscountValue={decimalDiscount?.business}
+                        isFamilyPage={isFamilyPage}
                         lang={lang}
                       />
                     ))
