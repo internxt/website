@@ -81,7 +81,7 @@
       },
       {
         "title": "Security",
-        "description": "With our object cloud storage, we use multiple security measures to protect your data. Data stored in isolated buckets is accessible only by you or those with permission and is end-to-end encrypted."
+        "description": "With our object cloud storage, we use multiple security measures to protect your data. Your data is encrypted in transit and at rest. We support the HTTPS protocol and server-side encryption with customer-provided encryption keys (SSE-C)."
       },
       {
         "title": "Simple storage service",
