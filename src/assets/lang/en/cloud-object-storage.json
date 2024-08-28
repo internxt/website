@@ -81,7 +81,7 @@
       },
       {
         "title": "Security",
-        "description": "With our object cloud storage, we use multiple security measures to protect your data. Data stored in isolated buckets is accessible only by you or those with permission and is end-to-end encrypted."
+        "description": "Our enhanced security posture includes SSE-C encryption that’s automatically applied on top of the original ingest object state. Our storage regions are deployed in top tier data centers that are SOC 2 compliant and certified for ISO 27001 and PCI-DSS. "
       },
       {
         "title": "Simple storage service",
