@@ -2,9 +2,9 @@
   "HeroSection": {
     "title": {
       "line1": "Internxt S3 ",
-      "line2": "compatible object storage"
+      "line2": "compatible cloud object storage"
     },
-    "description": "An efficient, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
+    "description": "An efficient, secure, affordable, and scalable cloud storage solution for storing, accessing, and managing large-scale data.",
     "cta": "Get started"
   },
   "PredictablePricingSection": {
