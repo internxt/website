@@ -181,6 +181,15 @@ export default function Footer({
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.webDAV}</div>
                     </Link>
 
+                    <Link
+                      href="/cloud-object-storage"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
+                    </Link>
+
                     <a
                       href="https://send.internxt.com"
                       target="_blank"
@@ -545,6 +554,15 @@ export default function Footer({
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.products.webDAV}
+                      </Link>
+
+                      <Link
+                        href="/cloud-object-storage"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.products.objStorage}
                       </Link>
 
                       <a
