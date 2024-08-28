@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
 import { useDebounce } from '@/hooks/useDebounce';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 interface HowMuchYouNeedSectionProps {
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
@@ -13,24 +15,30 @@ const GraphComponent = ({
   background,
   activeBackground,
   maxPrice,
+  srcImg,
+  altImg,
 }: {
   price: number;
   priceLabel: number;
   background: string;
   activeBackground: string;
   maxPrice: number;
+  srcImg?: string;
+  altImg?: string;
 }): JSX.Element => {
   return (
     <div className={`relative flex h-full w-20 flex-col items-center justify-end gap-5 rounded-lg ${background}`}>
-      <div className="z-40 flex items-center justify-center rounded-full bg-gray-5 px-3 py-1 text-sm font-semibold text-gray-100 shadow-md">
-        <p>{(priceLabel * 12).toFixed(2)}$/yr</p>
+      <div className="z-40 flex items-center justify-center rounded-full bg-gray-5 px-3 py-1 text-sm font-semibold text-gray-100">
+        <p>{(priceLabel * 12).toFixed(0)}$/yr</p>
       </div>
       <div
-        className={`flex w-full rounded-lg ${activeBackground}`}
+        className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
         style={{
           height: `${(price / maxPrice) * 100}%`,
         }}
-      />
+      >
+        {srcImg && altImg ? <Image src={srcImg} alt={altImg} width={40} height={40} draggable={false} /> : undefined}
+      </div>
     </div>
   );
 };
@@ -150,46 +158,60 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
           {/* Graphs (Comparison) */}
           <div className="relative flex w-full flex-col rounded-2xl bg-white px-9 py-10">
             <div className="relative flex h-full flex-row gap-12">
-              <GraphComponent
-                priceLabel={costs?.internxt.cost}
-                price={costs?.internxt.cost}
-                activeBackground="bg-primary"
-                background="bg-primary/7"
-                maxPrice={
-                  debouncedPercentDownloadValue > 50
-                    ? maxPrice / 5
-                    : debouncedPercentDownloadValue > 10
-                    ? maxPrice / 2
-                    : maxPrice
-                }
-              />
-              <GraphComponent
-                priceLabel={costs?.azure.cost}
-                price={(costs?.internxt.cost * costs?.azure.difference) / 100}
-                activeBackground="bg-yellow"
-                background="bg-yellow/6"
-                maxPrice={
-                  debouncedPercentDownloadValue > 50
-                    ? maxPrice / 5
-                    : debouncedPercentDownloadValue > 10
-                    ? maxPrice / 2
-                    : maxPrice
-                }
-              />
-              <GraphComponent
-                priceLabel={costs?.aws.cost}
-                price={(costs?.internxt.cost * costs?.aws.difference) / 100}
-                activeBackground="bg-orange"
-                background="bg-orange/6"
-                maxPrice={maxPrice}
-              />
-              <GraphComponent
-                priceLabel={costs?.google.cost}
-                price={(costs?.internxt.cost * costs?.google.difference) / 100}
-                activeBackground="bg-red-dark"
-                background="bg-red/6"
-                maxPrice={maxPrice}
-              />
+              <div className="flex flex-col items-center gap-2">
+                <GraphComponent
+                  priceLabel={costs?.internxt.cost}
+                  price={costs?.internxt.cost}
+                  activeBackground="bg-primary"
+                  background="bg-primary/7"
+                  maxPrice={
+                    debouncedPercentDownloadValue > 50
+                      ? maxPrice / 5
+                      : debouncedPercentDownloadValue > 10
+                      ? maxPrice / 2
+                      : maxPrice
+                  }
+                  srcImg={getImage('/images/cloud-object-storage/inxt-logo.svg')}
+                  altImg="Internxt Logo"
+                />
+                <p className="text-lg font-bold">{textContent.companies[0]}</p>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <GraphComponent
+                  priceLabel={costs?.azure.cost}
+                  price={(costs?.internxt.cost * costs?.azure.difference) / 100}
+                  activeBackground="bg-yellow"
+                  background="bg-yellow/6"
+                  maxPrice={
+                    debouncedPercentDownloadValue > 50
+                      ? maxPrice / 5
+                      : debouncedPercentDownloadValue > 10
+                      ? maxPrice / 2
+                      : maxPrice
+                  }
+                />
+                <p className="text-lg font-medium">{textContent.companies[1]}</p>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <GraphComponent
+                  priceLabel={costs?.aws.cost}
+                  price={(costs?.internxt.cost * costs?.aws.difference) / 100}
+                  activeBackground="bg-orange"
+                  background="bg-orange/6"
+                  maxPrice={maxPrice}
+                />
+                <p className="text-lg font-medium">{textContent.companies[2]}</p>
+              </div>
+              <div className="flex flex-col items-center gap-2">
+                <GraphComponent
+                  priceLabel={costs?.google.cost}
+                  price={(costs?.internxt.cost * costs?.google.difference) / 100}
+                  activeBackground="bg-red-dark"
+                  background="bg-red/6"
+                  maxPrice={maxPrice}
+                />
+                <p className="text-lg font-medium">{textContent.companies[3]}</p>
+              </div>
             </div>
           </div>
         </div>
