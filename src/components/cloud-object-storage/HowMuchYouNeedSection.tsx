@@ -21,10 +21,8 @@ const GraphComponent = ({
   maxPrice: number;
 }): JSX.Element => {
   return (
-    <div
-      className={`relative flex h-full w-20 flex-col items-center justify-end gap-5 overflow-y-hidden rounded-lg ${background}`}
-    >
-      <div className="z-40 flex items-center justify-center rounded-full bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-10 shadow-md">
+    <div className={`relative flex h-full w-20 flex-col items-center justify-end gap-5 rounded-lg ${background}`}>
+      <div className="z-40 flex items-center justify-center rounded-full bg-gray-5 px-3 py-1 text-sm font-semibold text-gray-100 shadow-md">
         <p>{(priceLabel * 12).toFixed(2)}$/yr</p>
       </div>
       <div
