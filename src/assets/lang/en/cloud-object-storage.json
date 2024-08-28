@@ -34,7 +34,7 @@
     },
     "cardText": {
       "label": "Internxt S3",
-      "perTB": "Per TB/Billed monthly*",
+      "perTB": "Per TB/Billed monthly",
       "price": "7",
       "cta": "Select plan",
       "whatsIncluded": {
