@@ -32,6 +32,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/affiliates/[filename]',
   '/cloudwards',
   '/lifetime/security82',
+  '/cloud-object-storage',
   '/cloud-object-storage/checkout',
   '/aeebcee77ac34a3d81bd10133fd53cc7869978f3',
 ];
