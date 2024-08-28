@@ -51,7 +51,14 @@ export interface Info {
 export interface PriceCardSection {
   title: string;
   description: string;
+  payAsYouGoCard: PayAsYouGoCardText;
   cardText: CardText;
+  oneTimePayment: string;
+}
+
+export interface PayAsYouGoCardText {
+  title: string;
+  description: string;
 }
 
 export interface CardText {

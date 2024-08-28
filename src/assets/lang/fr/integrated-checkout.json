@@ -49,15 +49,14 @@
     "planDetails": {
       "title": "Détails du plan :",
       "features": [
-        "{{spaceToUpgrade}} de stockage chiffré",
-        "Partage de fichiers et dossiers chiffrés",
-        "Partage de fichiers protégé par mot de passe",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Accédez à tous nos services",
-        "Téléchargez des fichiers jusqu'à 20 Go",
-        "Authentification à deux facteurs (2FA)",
-        "Support client premium",
-        "Garantie de remboursement de 30 jours"
+        "Charge mensuelle minimale de 7€",
+        "Stockage minimum de 1TB",
+        "Compatible avec AWS S3 et IAM API",
+        "Vitesse accrue",
+        "Stockage flexible",
+        "Open source",
+        "Conforme au GDPR",
+        "Support client premium"
       ]
     },
     "total": "Total : ",
@@ -68,5 +67,6 @@
     },
     "amountSaved": "Économisez ",
     "withAnnualBilling": "avec facturation annuelle"
-  }
+  },
+  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte"
 }

@@ -237,7 +237,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 };
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const locale = ctx.locale;
+  const locale = 'en';
 
   const textContent = require(`@/assets/lang/${locale}/integrated-checkout.json`);
 
