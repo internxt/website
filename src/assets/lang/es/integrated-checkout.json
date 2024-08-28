@@ -49,15 +49,14 @@
     "planDetails": {
       "title": "Detalles del plan:",
       "features": [
-        "{{spaceToUpgrade}} de almacenamiento encriptado",
-        "Compartir archivos y carpetas encriptados",
-        "Compartir archivos con protección por contraseña",
-        "Acceda a sus archivos desde cualquier dispositivo",
-        "Acceso a todos nuestros servicios",
-        "Cargar archivos de hasta 20GB",
-        "Autenticación de dos factores (2FA)",
-        "Soporte al cliente premium",
-        "Garantía de devolución de dinero de 30 días"
+        "Cargo mínimo mensual de 7€",
+        "Almacenamiento mínimo de 1TB",
+        "Compatible con AWS S3 e IAM API",
+        "Velocidad aumentada",
+        "Almacenamiento flexible",
+        "Código abierto",
+        "Cumple con el GDPR",
+        "Soporte al cliente premium"
       ]
     },
     "total": "Total: ",
@@ -68,5 +67,6 @@
     },
     "amountSaved": "Ahorre ",
     "withAnnualBilling": "con facturación anual"
-  }
+  },
+  "oneTimePayment": "*Se requiere una tarifa única de 1€ para la verificación de la cuenta"
 }

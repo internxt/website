@@ -8,6 +8,7 @@ export interface IntegratedCheckoutText {
   addressBilling: AddressBilling;
   paymentTitle: string;
   productCard: ProductCard;
+  oneTimePayment: string;
 }
 
 export interface AddressBilling {
