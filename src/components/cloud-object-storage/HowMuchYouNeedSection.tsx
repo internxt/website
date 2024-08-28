@@ -175,7 +175,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   isBlueLabel
                   maxPrice={
                     debouncedPercentDownloadValue > 50
-                      ? maxPrice / 5
+                      ? maxPrice / 4
                       : debouncedPercentDownloadValue > 10
                       ? maxPrice / 2
                       : maxPrice
@@ -193,7 +193,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   background="bg-yellow/6"
                   maxPrice={
                     debouncedPercentDownloadValue > 50
-                      ? maxPrice / 5
+                      ? maxPrice / 4
                       : debouncedPercentDownloadValue > 10
                       ? maxPrice / 2
                       : maxPrice
