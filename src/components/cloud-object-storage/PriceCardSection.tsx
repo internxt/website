@@ -17,7 +17,6 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
           <h3 className="text-xl text-gray-80">{textContent.description}</h3>
         </div>
-
         <div className="flex flex-col-reverse gap-16 md:flex-row">
           {/* Pay-as-you go Card */}
           <div className="flex w-full max-w-[400px] flex-col justify-between rounded-2xl bg-primary md:w-screen">
@@ -74,10 +73,9 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               </div>
             </div>
           </div>
-
-          {/* One time payment */}
         </div>
-        <p className="text-gray-50">{textContent.oneTimePayment}</p>
+        {/* One time payment
+        <p className="text-gray-50">{textContent.oneTimePayment}</p> */}
       </div>
     </section>
   );
