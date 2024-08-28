@@ -47,7 +47,7 @@ export default function Footer({
       .then(() => {
         notificationService.openSuccessToast('Successfully submitted');
       })
-      .catch((err) => {
+      .catch(() => {
         notificationService.openErrorToast('Something went wrong!');
       });
   };

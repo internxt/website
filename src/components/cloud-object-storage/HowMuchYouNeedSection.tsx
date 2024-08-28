@@ -37,7 +37,7 @@ const GraphComponent = ({
           isBlueLabel ? 'bg-primary text-white' : 'bg-gray-5 text-gray-100'
         } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
       >
-        <p>{(priceLabel * 12).toFixed(0)}$/yr</p>
+        <p>{(Number(priceLabel.toFixed(0)) * 12).toLocaleString('es')}$/yr</p>
       </div>
       <div
         className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
