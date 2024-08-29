@@ -73,7 +73,12 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
               <h3 className="text-xl font-bold text-gray-80">{heroSectionText.subtitle}</h3>
               <p className="text-xl text-gray-80">{heroSectionText.description}</p>
             </div>
-            <Button text={heroSectionText.cta} onClick={() => {}} />
+            <Button
+              text={heroSectionText.cta}
+              onClick={() => {
+                window.location.href = '#priceTable';
+              }}
+            />
           </div>
         }
         imageProperties={{
@@ -114,7 +119,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 
       <SelectFeatureInfoSection textContent={textContent.WhatMakesInternxtPerfectSection} cards={cards} lang="en" />
 
-      <CtaSection textContent={textContent.CtaSection} url={''} maxWidth="max-w-[500px]" />
+      <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
 
       <WhyChooseInternxtForBusiness withoutBanner textContent={textContent.WhyChooseInternxt} />
 

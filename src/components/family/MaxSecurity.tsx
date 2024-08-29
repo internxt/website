@@ -16,7 +16,7 @@ export const MaxSecurity = ({ textContent }: MaxSecurityProps): JSX.Element => {
             <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
             <h3 className="text-xl text-gray-80">{textContent.description}</h3>
           </div>
-          <Button text={textContent.cta} onClick={() => {}} />
+          <Button text={textContent.cta} onClick={() => (window.location.href = '#priceTable')} />
         </div>
         <Image
           src={getImage('/images/family/Internxt_family_plans.webp')}
