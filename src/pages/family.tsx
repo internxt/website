@@ -99,7 +99,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
 
       <HeroSection
         TextComponent={
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col items-center gap-8 text-center lg:items-start lg:text-start">
             <Header>{heroSectionText.title}</Header>
             <div className="flex flex-col gap-4">
               <h3 className="text-xl font-bold text-gray-80">{heroSectionText.subtitle}</h3>
