@@ -1,108 +1,108 @@
 {
   "HeroSection": {
-    "title": "Data Privacy Directory",
-    "subtitle": "List of organizations that help in privacy",
+    "title": "数据隐私保护目录",
+    "subtitle": "帮助保护隐私的组织列表",
     "brief": {
-      "intro": "Internxt believes that humanity can achieve great things, that’s why our products are built to not only empower people but also to promote fairness and ethical practices online.",
+      "intro": "Internxt 相信人类可以成就伟大的事情，因此我们打造的产品不仅是为了赋予人们力量，也是为了促进网络上的公平和道德实践。",
       "body": {
         "card": {
-          "title": "Internxt fights for individuals’ right to digital privacy",
+          "title": "Internxt 为个人的数字隐私权而战",
           "cta": {
-            "line1": "Learn more"
+            "line1": "了解更多"
           }
         },
-        "paragraph1": "Since 2020, we’ve been working hard to create an alternative cloud storage solution to provide a safer and more private online experience, without sacrificing convenience and respect for the user.",
-        "paragraph2": "We steadfastly believe that a rising tide lifts all boats, and only together can we create an online space that respects everyone.",
-        "paragraph3": "Here, we have compiled an ongoing list of privacy and digital rights organizations. Each one of the organizations listed in our directory is invested in creating a free and equitable internet.",
-        "paragraph4": "We’re proud to be counted among the institutions listed below and look forward to a long future working alongside the many organizations that advance, support, and defend privacy for all."
+        "paragraph1": "自 2020 年以来，我们一直在努力创建一种替代的云存储解决方案，以提供更安全、更私密的在线体验，同时又不牺牲用户的便利性和尊重。",
+        "paragraph2": "我们坚信水涨船高，只有共同努力，我们才能创建一个尊重每个人的网络空间。",
+        "paragraph3": "我们在此编制了一份持续更新的隐私和数字权利组织名单。我们名录中列出的每个组织都致力于创建自由、公平的互联网。",
+        "paragraph4": "我们很荣幸能跻身下列机构之列，并期待未来能与众多致力于促进、支持和捍卫所有人隐私的组织长期合作。"
       }
     }
   },
   "WikiSection": {
     "title": {
-      "line1": "Privacy and digital",
-      "line2": "rights organizations"
+      "line1": "隐私和数字",
+      "line2": "人权组织"
     },
     "ngos": [
       {
         "id": "european-digital-rights",
-        "name": "European Digital Rights",
+        "name": "欧洲数字版权",
         "short": "EDRi",
-        "description": "European Digital Rights Initiative is a coalition of groups working to defend civil rights in the information society, specifically regarding the internet, copyright, and privacy in the European Union.",
+        "description": "欧洲数字权利倡议是一个致力于捍卫信息社会公民权利的团体联盟，特别是欧盟境内的互联网、版权和隐私权利。",
         "url": "https://edri.org/"
       },
       {
         "id": "the-electronic-frontier-foundation",
-        "name": "The Electronic Frontier Foundation",
+        "name": "电子前哨基金会",
         "short": "EEF",
-        "description": "EFF is a leading international digital-rights non-profit group working to protect our fundamental rights with regard to technology. Their mission is to educate the press, policymakers, and general public on digital civil liberties issues and to act as a defender of those liberties.",
+        "description": "EFF 是一家领先的国际数字权利非营利组织，致力于保护我们在技术方面的基本权利。他们的使命是教育媒体、政策制定者和公众了解数字公民自由问题，并充当这些自由的捍卫者。",
         "url": "https://www.eff.org/"
       },
       {
         "id": "foundation-for-technology-and-privacy-outreach",
-        "name": "Foundation for Technology and Privacy Outreach",
-        "description": "Engages in educational initiatives aimed at increasing the public’s awareness of advances in technology, online privacy, and identity issues to foster innovation and promote consumer privacy.",
+        "name": "技术与隐私推广基金会",
+        "description": "参与旨在提高公众对技术进步、网络隐私和身份问题的认识的教育活动，以促进创新和促进消费者隐私。",
         "url": "https://www.onlineprivacymatters.org/"
       },
       {
         "id": "electronic-privacy-information-center",
-        "name": "Electronic Privacy Information Center",
+        "name": "电子隐私信息中心",
         "short": "EPIC",
-        "description": "A nonprofit research and advocacy center that produces policy research, conduct public education campaigns and engages in legislative advocacy. EPIC’s mission is to focus public attention on emerging privacy and civil liberties issues and to protect privacy, freedom of expression, and democratic values in the information age.",
+        "description": "一个非营利性研究和宣传中心，负责制定政策研究、开展公共教育活动和参与立法倡导。EPIC 的使命是让公众关注新出现的隐私和公民自由问题，并保护信息时代的隐私、言论自由和民主价值观。",
         "url": "https://epic.org/"
       },
       {
         "id": "center-for-democracy-and-technology",
-        "name": "Center for Democracy and Technology",
+        "name": "民主与科技中心",
         "short": "CDT",
-        "description": "CDT works to promote democratic values by shaping technology policy and architecture, with a focus on the rights of the individual providing leadership and advocacy to help shape public policy and industry best practices while providing a forum for stakeholder dialogue.",
+        "description": "CDT 致力于通过制定技术政策和架构来促进民主价值观，重点关注个人权利，提供领导和倡导，帮助制定公共政策和行业最佳实践，同时为利益相关者对话提供论坛。",
         "url": "https://cdt.org/"
       },
       {
         "id": "privacy-international",
-        "name": "Privacy International",
+        "name": "隐私国际",
         "short": "PI",
-        "description": "A registered charity committed to fighting to protect democracy, defend people's dignity, and demand accountability from institutions who breach the public trust. PI investigates and challenges government surveillance, exposes companies that enable it, and advocates for strong laws that protect privacy.",
+        "description": "一家注册慈善机构，致力于保护民主、捍卫人民尊严并要求那些违背公众信任的机构承担责任。PI 调查并挑战政府监控，揭露实施监控的公司，并提倡制定强有力的法律来保护隐私。",
         "url": "https://www.privacyinternational.org/"
       },
       {
         "id": "the-international-association-of-privacy-professionals",
-        "name": "The International Association of Privacy Professionals",
+        "name": "国际隐私专业人员协会",
         "short": "IAPP",
-        "description": "Policy neutral and the world’s largest and most comprehensive global information privacy community, the IAPP is a resource for professionals helping their organizations successfully manage privacy risks and data security.",
+        "description": "IAPP 是政策中立且是世界上最大、最全面的全球信息隐私社区，它为专业人士提供了资源，帮助他们的组织成功管理隐私风险和数据安全。",
         "url": "https://iapp.org/"
       },
       {
         "id": "fight-for-the-future",
-        "name": "Fight for the Future",
-        "description": "Fight for the Future is a nonprofit organization that creates high-profile, web-based campaigns to ensure that the web continues to hold freedom of expression and creativity at its core—free of interference or censorship and with full privacy.",
+        "name": "为未来而战",
+        "description": "“为未来而战”是一个非营利组织，它发起高调的网络活动，以确保网络继续以言论和创造自由为核心——不受干涉或审查，并享有完全的隐私。",
         "url": "https://www.fightforthefuture.org/"
       },
       {
         "id": "privacy-rights-clearinghouse",
-        "name": "Privacy Rights Clearinghouse",
-        "description": "A nonprofit organization focused exclusively on consumer privacy rights and empowering individuals, the Privacy Rights Clearinghouse provides clarity on complex privacy topics by publishing extensive educational materials and consumer guides while also offering various online services, including a Complaint Center where consumers can report privacy violations and poor privacy practices.",
+        "name": "隐私权信息中心",
+        "description": "隐私权信息中心是一个专注于消费者隐私权和增强个人权能的非营利组织，它通过发布大量教育材料和消费者指南来澄清复杂的隐私主题，同时还提供各种在线服务，包括消费者可以举报隐私侵犯和不良隐私做法的投诉中心。",
         "url": "https://privacyrights.org/"
       },
       {
         "id": "internet-free-expression-alliance",
-        "name": "Internet Free Expression Alliance",
+        "name": "互联网自由表达联盟",
         "short": "IFEA",
-        "description": "The IFEA is a 30-member group composed of online publishers, journalistic organizations, academic groups, and other privacy-centric institutions that oppose the adoption of techniques and standards that limit the internet as anything other than an open, diverse, and democratic communication platform.",
+        "description": "IFEA 是一个由 30 名成员组成的组织，成员包括在线出版商、新闻组织、学术团体和其他以隐私为中心的机构，他们反对采用限制互联网成为开放、多元和民主的交流平台以外的任何其他平台的技术和标准。",
         "url": "http://ifea.net/"
       },
       {
         "id": "future-of-privacy-forum",
-        "name": "Future of Privacy Forum",
+        "name": "隐私论坛的未来",
         "short": "FPF",
-        "description": "A collective forum for supporting privacy leadership and scholarship that advances principled data practices in support of emerging technologies. The FPF brings together industry, academics, consumer advocates, and other thought leaders to explore the challenges posed by technological innovation and develop privacy protections, ethical norms, and workable business practices.",
+        "description": "一个支持隐私领导力和学术研究的集体论坛，旨在推动原则性数据实践以支持新兴技术。FPF 汇集了行业、学术界、消费者权益倡导者和其他思想领袖，探讨技术创新带来的挑战，并制定隐私保护、道德规范和可行的商业实践。",
         "url": "https://fpf.org/"
       },
       {
         "id": "triangle-privacy-research-hub",
-        "name": "Triangle Privacy Research Hub",
+        "name": "三角隐私研究中心",
         "short": "TPRH",
-        "description": "TPRH is a nonprofit organization committed to advancing the innovative and ethical use of data by creating connections between academics, students, industry leaders, and policy advocates. Work done by TPRH explores policy approaches to allow for use of data, while protecting individual privacy, to improve issues such as access to information, education, gender and sexual violence, healthcare, and national security/law enforcement.",
+        "description": "TPRH 是一家非营利组织，致力于通过在学者、学生、行业领袖和政策倡导者之间建立联系来推动数据的创新和道德使用。TPRH 所做的工作探索了允许使用数据同时保护个人隐私的政策方法，以改善信息获取、教育、性别和性暴力、医疗保健以及国家安全/执法等问题。",
         "url": "https://www.triangleprivacyhub.org/"
       },
       {
