@@ -1,8 +1,15 @@
+import {
+  ChartLineUp,
+  Database,
+  Eye,
+  Fingerprint,
+  NumberCircleZero,
+  ShareNetwork,
+  UserGear,
+} from '@phosphor-icons/react';
 import { FamilyText } from '@/assets/types/family';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { TestimonialsSectionForBusiness } from '@/components/business/TestimonialsSectionForBusiness';
-import { WhyChooseInternxtForBusiness } from '@/components/business/WhyChooseInternxt';
-import { MaxSecurity } from '@/components/family/MaxSecurity';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -17,7 +24,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { getImage } from '@/lib/getImage';
 import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatureInfoSection';
-import { ChartLineUp, Database, ShareNetwork, UserGear } from '@phosphor-icons/react';
+import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 
 interface FamilyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -32,28 +39,53 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
   const metatag = metatagsDescriptions.filter((metatag) => metatag.id === 'family')[0];
   const heroSectionText = textContent.HeroSection;
   const featureSection = textContent.ProtectYourFamilySection;
-  const cardText = textContent.WhatMakesInternxtPerfectSection.features;
+  const maxSecuritySection = textContent.MaximumSecuritySection;
+  const selectInfoCard = textContent.WhatMakesInternxtPerfectSection.features;
+  const cardsForGroupCardText = textContent.WhyChooseInternxt;
 
-  const cards = [
+  const selectInfoCards = [
     {
       icon: UserGear,
-      title: cardText[0].title,
-      description: cardText[0].description,
+      title: selectInfoCard[0].title,
+      description: selectInfoCard[0].description,
     },
     {
       icon: ShareNetwork,
-      title: cardText[1].title,
-      description: cardText[1].description,
+      title: selectInfoCard[1].title,
+      description: selectInfoCard[1].description,
     },
     {
       icon: ChartLineUp,
-      title: cardText[2].title,
-      description: cardText[2].description,
+      title: selectInfoCard[2].title,
+      description: selectInfoCard[2].description,
     },
     {
       icon: Database,
-      title: cardText[3].title,
-      description: cardText[3].description,
+      title: selectInfoCard[3].title,
+      description: selectInfoCard[3].description,
+    },
+  ];
+
+  const cardsForGroupCards = [
+    {
+      icon: Fingerprint,
+      title: cardsForGroupCardText.cards[0].title,
+      description: cardsForGroupCardText.cards[0].description,
+    },
+    {
+      icon: NumberCircleZero,
+      title: cardsForGroupCardText.cards[1].title,
+      description: cardsForGroupCardText.cards[1].description,
+    },
+    {
+      icon: UserGear,
+      title: cardsForGroupCardText.cards[2].title,
+      description: cardsForGroupCardText.cards[2].description,
+    },
+    {
+      icon: Eye,
+      title: cardsForGroupCardText.cards[3].title,
+      description: cardsForGroupCardText.cards[3].description,
     },
   ];
 
@@ -117,13 +149,43 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
         onCheckoutButtonClicked={onCheckoutButtonClicked}
       />
 
-      <SelectFeatureInfoSection textContent={textContent.WhatMakesInternxtPerfectSection} cards={cards} lang="en" />
+      <SelectFeatureInfoSection
+        textContent={textContent.WhatMakesInternxtPerfectSection}
+        cards={selectInfoCards}
+        lang="en"
+      />
 
       <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
 
-      <WhyChooseInternxtForBusiness withoutBanner textContent={textContent.WhyChooseInternxt} />
+      <TextAndCardsGroupColumnSection
+        TextComponent={
+          <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
+            <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
+            <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
+          </div>
+        }
+        cards={cardsForGroupCards}
+        background="bg-gray-1"
+        backgroundColorForCard="bg-white"
+      />
 
-      <MaxSecurity textContent={textContent.MaximumSecuritySection} />
+      <TextAndImageColumnSection
+        TextComponent={
+          <div className="flex max-w-[772px] flex-col items-center gap-8 text-center">
+            <div className="flex flex-col gap-6">
+              <h2 className="text-5xl font-semibold text-gray-100">{maxSecuritySection.title}</h2>
+              <h3 className="text-xl text-gray-80">{maxSecuritySection.description}</h3>
+            </div>
+            <Button text={maxSecuritySection.cta} onClick={() => (window.location.href = '#priceTable')} />
+          </div>
+        }
+        imageProperties={{
+          src: getImage('/images/family/Internxt_family_plans.webp'),
+          alt: 'Internxt Family Plans',
+          width: 925,
+          height: 41,
+        }}
+      />
 
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
