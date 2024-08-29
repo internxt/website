@@ -12,8 +12,10 @@
   },
   "products": {
     "drive": "Internxt Drive",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
+    "vpn": "Internxt VPN",
     "comingSoon": "即將推出",
     "new": "新"
   },
