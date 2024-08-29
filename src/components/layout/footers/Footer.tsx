@@ -216,6 +216,19 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
+
+                    <Link
+                      href="/family"
+                      locale={'en'}
+                      passHref
+                      className="flex max-w-[250px] items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.products.family}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
+
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -837,6 +850,9 @@ export default function Footer({
                       </Link>
                       <Link href="/business" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.business}
+                      </Link>
+                      <Link href="/family" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.family}
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}

@@ -72,6 +72,7 @@ export interface Products {
   token: string;
   business: string;
   pricing: string;
+  family: string;
 }
 
 export interface Resources {

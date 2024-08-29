@@ -29,7 +29,8 @@
         "vpn": "Internxt VPN",
         "token": "Token",
         "pricing": "Tarifs",
-        "business": "Internxt pour les Entreprises"
+        "business": "Internxt pour les Entreprises",
+        "family": "Internxt pour les Familles"
       },
       "company": {
         "title": "Enterprise",
