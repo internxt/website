@@ -19,6 +19,7 @@ export interface PriceCardProps {
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  isFamilyPage?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -41,14 +42,13 @@ export const PriceCard = ({
   lang,
   redeemCodeCta,
   label,
+  isFamilyPage,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-
   const { currency, interval, price, storage, priceId } = product;
 
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
-
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
   const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
   const priceBefore =
@@ -57,11 +57,10 @@ export const PriceCard = ({
       : interval === Interval.Year
       ? (monthlyProductPrice * 12).toFixed(2)
       : undefined;
-
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
-
-  const cardLabel = productCardPlan === 'business' ? `${contentText.businessLabels[storage]}` : `${label}`;
+  const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
+  const cardLabel = productCardPlan === 'business' ? businessLabel : label;
 
   return (
     <div

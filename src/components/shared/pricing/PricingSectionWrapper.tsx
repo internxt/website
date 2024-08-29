@@ -17,6 +17,7 @@ interface PricingSectionWrapperProps {
   startFromInterval?: Interval;
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  isFamilyPage?: boolean;
   decimalDiscount?: {
     individuals?: number;
     business?: number;
@@ -40,6 +41,7 @@ export const PricingSectionWrapper = ({
   lifetimeCoupons,
   hideFreeCard,
   decimalDiscount,
+  isFamilyPage,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
@@ -60,6 +62,7 @@ export const PricingSectionWrapper = ({
       billingFrequency={billingFrequency}
       businessBillingFrequency={businessBillingFrequency}
       lifetimeCoupons={lifetimeCoupons}
+      isFamilyPage={isFamilyPage}
       decimalDiscount={{
         subscriptions: decimalDiscount?.individuals,
         business: decimalDiscount?.business,

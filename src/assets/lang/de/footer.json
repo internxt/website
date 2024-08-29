@@ -29,7 +29,8 @@
         "vpn": "VPN-Erweiterung",
         "token": "Token",
         "pricing": "Preise",
-        "business": "Internxt für Unternehmen"
+        "business": "Internxt für Unternehmen",
+        "family": "Internxt für Familien"
       },
       "company": {
         "title": "Firma",

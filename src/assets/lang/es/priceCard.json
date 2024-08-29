@@ -29,7 +29,11 @@
   },
   "businessLabels": {
     "1TB": "Standard",
-    "2TB": "Pro"
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
