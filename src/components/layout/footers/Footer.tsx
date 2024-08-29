@@ -47,7 +47,7 @@ export default function Footer({
       .then(() => {
         notificationService.openSuccessToast('Successfully submitted');
       })
-      .catch((err) => {
+      .catch(() => {
         notificationService.openErrorToast('Something went wrong!');
       });
   };
@@ -179,6 +179,18 @@ export default function Footer({
                       className="flex flex-row items-center hover:text-primary"
                     >
                       <div className="flex flex-row">{textContent.FooterSection.sections.products.webDAV}</div>
+                    </Link>
+
+                    <Link
+                      href="/cloud-object-storage"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex flex-row items-center hover:text-primary"
+                    >
+                      <div className="flex flex-row">{textContent.FooterSection.sections.products.objStorage}</div>
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
                     </Link>
 
                     <a
@@ -545,6 +557,15 @@ export default function Footer({
                         className="flex flex-row items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.products.webDAV}
+                      </Link>
+
+                      <Link
+                        href="/cloud-object-storage"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex flex-row items-center hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.products.objStorage}
                       </Link>
 
                       <a
