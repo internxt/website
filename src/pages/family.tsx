@@ -133,6 +133,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
           alt: 'Internxt Family Storage Plans',
           width: 896,
           height: 778,
+          className: 'shadow-lg rounded-xl',
         }}
         background="bg-gray-1"
       />
