@@ -8,10 +8,11 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { PromoCodeName } from '@/lib/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.25;
+  const discount = 0.22;
 
   return (
     <Layout
@@ -32,11 +33,12 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
+        couponCode={PromoCodeName.Lifetime78OFF}
         discount={discount}
         lang={lang}
-        percent={'75%'}
+        percent={'78%'}
         showPriceBefore
-        lifetimeMode="custom-disc"
+        lifetimeMode="celebration"
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
