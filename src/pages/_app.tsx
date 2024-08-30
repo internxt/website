@@ -13,7 +13,6 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
-import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -83,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -126,7 +125,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? <BottomBanner /> : undefined}
           {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
         </div>
-        {shouldShowFeaturesBanner ? <FeaturesBanner /> : undefined}
         <FreeCardPromoBanner />
 
         {/* Show snackbar in all pages */}
