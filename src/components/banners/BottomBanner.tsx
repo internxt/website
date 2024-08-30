@@ -43,8 +43,8 @@ const BottomBanner = () => {
         return {
           title1: 'Ahorra 78%',
           title2: {
-            line1: 'Trabaja de manera inteligente, ',
-            line2: '¡no duro!',
+            line1: 'en tus planes lifetime',
+            line2: '',
           },
         };
       case 'ru':

@@ -61,7 +61,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                <div className="flex flex-col gap-9">
+                <div className="flex w-max flex-col gap-9">
                   <div className="flex flex-col gap-4">
                     <Header maxWidth="max-w-[500px]" className="text-gray-100">
                       {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
@@ -104,7 +104,11 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
           {/* Desktop animation/image */}
           {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex"><Animation /></div> */}
-          <Link href={'/lifetime'} hrefLang={lang} className="hidden translate-x-5 lg:flex">
+          <Link
+            href={'/lifetime'}
+            hrefLang={lang}
+            className="hidden h-full max-h-[530px] w-full max-w-[600px] translate-x-5 items-center justify-end pt-10 lg:flex"
+          >
             <Image
               src={getImage('/images/home/back-to-work/header-home.webp')}
               alt="Back To Work Header"
