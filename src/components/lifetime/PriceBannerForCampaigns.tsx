@@ -11,10 +11,10 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
       <div
-        className={`flex w-full max-w-screen-xl flex-col justify-between rounded-[32px] bg-primary xl:w-full xl:flex-row`}
+        className={`flex max-h-96 w-full max-w-screen-xl flex-col justify-between rounded-[32px] bg-primary xl:w-full xl:flex-row`}
       >
-        <div className="flex w-full max-w-[500px] flex-col items-center gap-6 px-3 py-10 text-center xl:items-start xl:p-10 xl:py-16 xl:text-left">
-          <div className="flex w-max rounded-2xl bg-white px-4 py-2 ring-4 ring-primary">
+        <div className="flex w-full max-w-[500px] flex-col items-center gap-4 px-3 py-10 text-center xl:items-start xl:pl-10 xl:text-left">
+          <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white px-4 py-2">
             <p className="text-2xl font-bold text-primary md:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col">
@@ -37,8 +37,8 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         <div className="hidden w-full max-w-[800px] flex-row justify-end xl:flex">
           <Image
             src={getImage('/images/home/back-to-work/pricing-banner.webp')}
-            width={800}
-            height={200}
+            width={600}
+            height={100}
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
             className="rounded-r-[32px]"

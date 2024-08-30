@@ -7,6 +7,7 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import Link from 'next/link';
 const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
@@ -19,7 +20,7 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/home/image_mobile.webp');
@@ -103,7 +104,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
 
           {/* Desktop animation/image */}
           {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex"><Animation /></div> */}
-          <div className="hidden translate-x-5 lg:flex">
+          <Link href={'/lifetime'} hrefLang={lang} className="hidden translate-x-5 lg:flex">
             <Image
               src={getImage('/images/home/back-to-work/header-home.webp')}
               alt="Back To Work Header"
@@ -111,7 +112,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
               width={600}
               height={529}
             />
-          </div>
+          </Link>
         </div>
       </div>
     </section>
