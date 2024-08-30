@@ -6,6 +6,7 @@ import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
@@ -19,6 +20,8 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const { dialogIsOpen } = useGlobalDialog();
+  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/home/image_mobile.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
 
@@ -39,17 +42,19 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="flex lg:hidden">
-              <Image
-                loading="eager"
-                src={mobileImage}
-                draggable="false"
-                quality={100}
-                width={600}
-                height={450}
-                alt="Laptop and phone with Internxt app"
-              />
-            </div>
+            {!shouldShowMobileBanner ? (
+              <div className="flex lg:hidden">
+                <Image
+                  loading="eager"
+                  src={mobileImage}
+                  draggable="false"
+                  quality={100}
+                  width={600}
+                  height={450}
+                  alt="Laptop and phone with Internxt app"
+                />
+              </div>
+            ) : undefined}
             <HomePageBannerForMobile />
 
             <TitleAndOnePlan
