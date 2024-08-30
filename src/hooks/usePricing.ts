@@ -5,6 +5,7 @@ import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 type UsePricingOptions = {
   couponCode?: PromoCodeName;
+  couponCodeForLifetime?: PromoCodeName;
   couponCodeForBusiness?: PromoCodeName;
   currencySpecified?: string;
   fetchLifetimeCoupons?: boolean;
@@ -15,6 +16,7 @@ interface UseStripeProductsAndCurrencyResponse {
   currency: string;
   currencyValue: string;
   coupon?: PromoCodeProps;
+  lifetimeCoupon?: PromoCodeProps;
   businessCoupon?: PromoCodeProps;
   lifetimeCoupons?: any;
   products?: ProductsDataProps;
@@ -26,6 +28,7 @@ type ActionType =
   | { type: 'SET_CURRENCY'; payload: string }
   | { type: 'SET_CURRENCY_VALUE'; payload: string }
   | { type: 'SET_COUPON'; payload: PromoCodeProps | undefined }
+  | { type: 'SET_COUPON_LIFETIME'; payload: PromoCodeProps | undefined }
   | { type: 'SET_BUSINESS_COUPON'; payload: PromoCodeProps | undefined }
   | { type: 'SET_LIFETIME_COUPONS'; payload: any | undefined };
 
@@ -41,6 +44,8 @@ const reducer = (state: any, action: ActionType) => {
       return { ...state, currencyValue: action.payload };
     case 'SET_COUPON':
       return { ...state, coupon: action.payload };
+    case 'SET_COUPON_LIFETIME':
+      return { ...state, lifetimeCoupon: action.payload };
     case 'SET_BUSINESS_COUPON':
       return { ...state, businessCoupon: action.payload };
     case 'SET_LIFETIME_COUPONS':
@@ -51,12 +56,13 @@ const reducer = (state: any, action: ActionType) => {
 };
 
 function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurrencyResponse {
-  const { couponCode, couponCodeForBusiness, currencySpecified, fetchLifetimeCoupons } = options;
+  const { couponCode, couponCodeForLifetime, couponCodeForBusiness, currencySpecified, fetchLifetimeCoupons } = options;
   const initialState = {
     products: undefined,
     loadingCards: true,
     currency: '€',
     coupon: undefined,
+    lifetimeCoupon: undefined,
     businessCoupon: undefined,
     lifetimeCoupons: undefined,
     currencyValue: 'eur',
@@ -102,7 +108,15 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       } catch (err) {
         // NO OP
       }
-    } else if (couponCodeForBusiness) {
+    }
+
+    if (couponCodeForLifetime) {
+      const lifetimeCoupon = await stripeService.getCoupon(couponCodeForLifetime);
+
+      dispatch({ type: 'SET_COUPON_LIFETIME', payload: lifetimeCoupon });
+    }
+
+    if (couponCodeForBusiness) {
       try {
         const businessCoupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_BUSINESS_COUPON', payload: businessCoupon });
@@ -125,6 +139,7 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     currencyValue: state.currencyValue,
     coupon: state.coupon,
     businessCoupon: state.businessCoupon,
+    lifetimeCoupon: state.lifetimeCoupon,
     lifetimeCoupons: state.lifetimeCoupons,
   };
 }

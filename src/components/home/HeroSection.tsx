@@ -103,7 +103,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
 
           {/* Desktop animation/image */}
           {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex"><Animation /></div> */}
-          <div className="hidden lg:flex">
+          <div className="hidden translate-x-5 lg:flex">
             <Image
               src={getImage('/images/home/back-to-work/header-home.webp')}
               alt="Back To Work Header"

@@ -47,8 +47,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     currencyValue,
     coupon: individualCoupon,
     businessCoupon,
+    lifetimeCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Lifetime78OFF,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.Lifetime78OFF,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -109,7 +111,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const b2cCoupon = isCheckoutForLifetime ? individualCoupon?.name : undefined;
+    const b2cCoupon = isCheckoutForLifetime ? lifetimeCoupon?.name : individualCoupon?.name;
     const couponCodeForCheckout = isBusiness ? businessCoupon?.name : b2cCoupon;
     const planType = isBusiness ? 'business' : 'individual';
 
@@ -135,10 +137,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
-          lang={lang}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff,
           }}
+          lang={lang}
           products={products}
           loadingCards={loadingCards}
           handlePageNameUpdate={setPageName}

@@ -56,7 +56,6 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
@@ -69,7 +68,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       testimonialsJson,

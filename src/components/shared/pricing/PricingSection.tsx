@@ -31,6 +31,7 @@ interface PriceTableProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   decimalDiscount?: {
     subscriptions?: number;
+    lifetime?: number;
     business?: number;
   };
   backgroundColorComponent?: string;
@@ -190,7 +191,9 @@ export const PricingSection = ({
                     key={product.storage}
                     popular={product.storage === '10TB'}
                     decimalDiscountValue={
-                      product.interval === Interval.Lifetime ? decimalDiscount?.subscriptions : undefined
+                      product.interval === Interval.Lifetime
+                        ? decimalDiscount?.lifetime
+                        : decimalDiscount?.subscriptions
                     }
                     lang={lang}
                   />

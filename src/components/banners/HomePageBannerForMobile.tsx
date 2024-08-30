@@ -15,7 +15,7 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full max-w-md flex-col overflow-hidden rounded-[32px] bg-primary pt-10 md:hidden`}
+      } w-full max-w-md flex-col overflow-hidden rounded-[32px] bg-primary pt-10 lg:hidden`}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 pb-5 text-center text-white">
         <div className="flex items-center gap-1.5 rounded-xl border-4 border-primary/7 bg-white px-5 py-2">
