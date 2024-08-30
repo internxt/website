@@ -14,7 +14,7 @@
   },
   "FooterSection": {
     "description": "Internxt 的使命是帮助塑造一个尊重人类隐私权的世界。 为此，我们发布了一系列服务，所有这些服务的共同目标都是帮助人类保护这项基本权利。",
-    "copyright": { "line1": "Copyright © ", "line2": ", Internxt Universal Technologies SL" },
+    "copyright": { "line1": "版权所有 © ", "line2": ", Internxt Universal Technologies SL" },
     "independentPromotion": "此促销由Internxt独立提供，与华特迪士尼公司没有直接合作关系",
     "comingSoon": "即将推出",
     "new": "新的",
@@ -25,12 +25,12 @@
         "photos": "Internxt Photos",
         "send": "Internxt Send",
         "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "对象存储",
         "vpn": "Internxt VPN",
         "token": "Token",
         "pricing": "价格",
         "business": "Internxt 企业版",
-        "family": "Internxt 为家庭"
+        "family": "Internxt 家庭版"
       },
       "company": {
         "title": "公司",
@@ -44,7 +44,7 @@
       },
       "join": {
         "title": "加入我们",
-        "newsletter": "Newsletter",
+        "newsletter": "通讯",
         "affiliates": "关联公司",
         "storageForEducation": "Internxt教育版",
         "signup": "创建账户",
@@ -52,7 +52,7 @@
         "login": "登录",
         "community": "社区",
         "github": "GitHub",
-        "whitePaper": "White Paper",
+        "whitePaper": "白皮书",
         "twitter": "推特",
         "facebook": "脸书",
         "linkedin": "领英",
@@ -68,7 +68,7 @@
         "cyberSecurityGlossary": "网络安全词汇表",
         "pCloudAlternative": "pCloud 替代方案",
         "cyberAwareness": "网络意识",
-        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "whatGoogleKnowsAboutMe": "谷歌知道些什么？",
         "comparison": "比较"
       },
       "tools": {
