@@ -37,8 +37,8 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         <div className="hidden w-full max-w-[800px] flex-row justify-end xl:flex">
           <Image
             src={getImage('/images/home/back-to-work/pricing-banner.webp')}
-            width={700}
-            height={100}
+            width={800}
+            height={200}
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
             className="rounded-r-[32px]"
