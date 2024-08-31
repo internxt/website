@@ -1,4 +1,4 @@
-import { EyeSlash, Fingerprint, HardDrive, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { EyeSlash, Fingerprint, HardDrives, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 export const WhyChooseInxtSection = ({ textContent }) => {
@@ -29,14 +29,14 @@ export const WhyChooseInxtSection = ({ textContent }) => {
       subtitle: textContent.cards[4].description,
     },
     {
-      icon: HardDrive,
+      icon: HardDrives,
       title: textContent.cards[5].title,
       subtitle: textContent.cards[5].description,
     },
   ];
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex flex-col items-center justify-center gap-16">
           <div className="flex flex-col items-center gap-6 text-center">

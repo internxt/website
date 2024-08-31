@@ -35,7 +35,7 @@
         "dataTrackers": "No",
         "privacyLaws": "GDPR, Spanish Data Protection Laws"
       },
-      "pCloudFeatures": {
+      "features": {
         "codeTransparency": "Closed-Source",
         "encryption": "Paid extra (pCloud Crypto)",
         "pricing": "Affordable, but extra for encryption",
