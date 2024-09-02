@@ -221,6 +221,7 @@ LayoutProps) {
         ) : null}
         {lang === 'es' && (
           <script
+            defer
             dangerouslySetInnerHTML={{
               __html: `
           $(document).ready(function() {
@@ -230,8 +231,7 @@ LayoutProps) {
             }}
           />
         )}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="/js/cookiebanner.script.js"></script>
+        <script defer={true} src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
