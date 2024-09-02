@@ -204,6 +204,14 @@ module.exports = {
   },
   images: {
     domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: process.env.CLOUDFLARE_STATIC_ASSETS_HOST,
+        port: '',
+        pathname: '/website/**',
+      },
+    ],
   },
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,

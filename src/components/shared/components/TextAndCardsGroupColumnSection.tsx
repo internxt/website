@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { CardGroup } from '../CardGroup';
 
-interface TextAndImageColumnSectionProps {
+interface TextAndCardGroupColumnSectionProps {
   TextComponent: ReactNode;
   cards: any[];
   backgroundColorForCard?: string;
@@ -13,7 +13,7 @@ export const TextAndCardsGroupColumnSection = ({
   cards,
   backgroundColorForCard,
   background,
-}: TextAndImageColumnSectionProps) => {
+}: TextAndCardGroupColumnSectionProps) => {
   return (
     <section className={`overflow-hidden ${background} px-5 py-20`}>
       <div className="flex flex-col items-center gap-16">

@@ -1,12 +1,23 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { ClockCounterClockwise, Eye, Key, MonitorArrowUp, NumberCircleZero, ShieldCheck } from '@phosphor-icons/react';
+import {
+  ClockCounterClockwise,
+  Eye,
+  Key,
+  ListChecks,
+  LockSimple,
+  MonitorArrowUp,
+  NumberCircleZero,
+  Scales,
+  ShieldCheck,
+} from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
 
 import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
+import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -36,13 +47,6 @@ const MarqueeComponent = dynamic(
 const FeaturesSectionForOnePlan = dynamic(
   () =>
     import('@/components/affiliates/oneplan/FeaturesSectionForOneplan').then((mod) => mod.FeaturesSectionForOnePlan),
-  { ssr: false },
-);
-const WhyChooseInternxtForOneplan = dynamic(
-  () =>
-    import('@/components/affiliates/oneplan/WhyChooseInternxtForOneplan').then(
-      (mod) => mod.WhyChooseInternxtForOneplan,
-    ),
   { ssr: false },
 );
 const WhatWeDoSectionForSpecialOffer = dynamic(
@@ -130,6 +134,39 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
     },
   ];
 
+  const cards = [
+    {
+      icon: LockSimple,
+      title: langJson.WhyChooseInternxtForOneplan.cards[0].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[0].description,
+    },
+    {
+      icon: ShieldCheck,
+      title: langJson.WhyChooseInternxtForOneplan.cards[1].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[1].description,
+    },
+    {
+      icon: NumberCircleZero,
+      title: langJson.WhyChooseInternxtForOneplan.cards[2].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[2].description,
+    },
+    {
+      icon: Eye,
+      title: langJson.WhyChooseInternxtForOneplan.cards[3].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[3].description,
+    },
+    {
+      icon: Scales,
+      title: langJson.WhyChooseInternxtForOneplan.cards[4].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[4].description,
+    },
+    {
+      icon: ListChecks,
+      title: langJson.WhyChooseInternxtForOneplan.cards[5].title,
+      description: langJson.WhyChooseInternxtForOneplan.cards[5].description,
+    },
+  ];
+
   const handleOnButtonClick = () => {
     window.scrollTo({
       top: 0,
@@ -172,7 +209,17 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
           <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
 
-          <WhyChooseInternxtForOneplan textContent={langJson.WhyChooseInternxtForOneplan} />
+          <TextAndCardsGroupColumnSection
+            background="bg-gray-1"
+            backgroundColorForCard="bg-white"
+            TextComponent={
+              <div className="flex max-w-[775px] flex-col gap-6 text-center">
+                <h2 className="text-5xl font-semibold text-gray-100">{langJson.WhyChooseInternxtForOneplan.title}</h2>
+                <p className="text-xl text-gray-80">{langJson.WhyChooseInternxtForOneplan.description}</p>
+              </div>
+            }
+            cards={cards}
+          />
 
           <WhatWeDoSectionForSpecialOffer
             textContent={langJson.WhatWeDoForOneplan}

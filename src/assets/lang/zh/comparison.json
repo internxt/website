@@ -1,9 +1,6 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "云存储",
-      "line2": "安全比较"
-    },
+    "title": "云存储安全比较",
     "description": "比较所有安全选项，选择合适的云存储解决方案。",
     "cta": "免费获得10GB",
     "table": {

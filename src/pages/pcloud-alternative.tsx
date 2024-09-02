@@ -18,7 +18,11 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
+      <ComparisonHeader
+        maxWithForTitle={'max-w-[600px]'}
+        textContent={langJson.HeaderSection}
+        redirectUrl={'/pricing'}
+      />
 
       <HeroSection textContent={langJson.HeroSection} />
 

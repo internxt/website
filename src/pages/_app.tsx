@@ -95,14 +95,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
-          <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
+          <Script defer strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>
               <Script
+                defer
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
               />
               <Script
+                defer
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `
