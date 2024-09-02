@@ -43,10 +43,15 @@ const DropboxComparison = ({
   navbarLang,
   footerLang,
 }: DropboxComparisonProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Dropbox Comparison"
+      lang={lang}
+    >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
