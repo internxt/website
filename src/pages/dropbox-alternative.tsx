@@ -12,6 +12,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
+import ReactMarkdown from 'react-markdown';
 
 interface DropboxComparisonProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -30,7 +31,7 @@ const IsDropboxSafe = ({ textContent }: { textContent: DropboxAlternativeText['I
     {textContent.breaches.map((breach) => (
       <div key={breach.title} className="flex max-w-[800px] flex-col gap-3">
         <p className="text-3xl font-semibold text-gray-100">{breach.title}</p>
-        <p className="text-xl text-gray-80">{breach.description}</p>
+        <ReactMarkdown className="markdown text-xl text-gray-80">{breach.description}</ReactMarkdown>
       </div>
     ))}
   </div>
@@ -73,7 +74,7 @@ const DropboxComparison = ({
               <p className="text-center text-3xl font-semibold text-gray-100">{table.title}</p>
               <div className=" flex h-full flex-col gap-10 md:flex-row">
                 <InxtTable textContent={table.inxtTable} />
-                <CompetitorTable textContent={table.table} />
+                <CompetitorTable textContent={table.table} logo={getImage('/icons/dropbox-icon.svg')} />
               </div>
             </div>
           ))}

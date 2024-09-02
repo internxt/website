@@ -1,9 +1,6 @@
 {
   "HeaderSection": {
-    "title": {
-      "line1": "Internxt: a more secure",
-      "line2": "pCloud alternative"
-    },
+    "title": "Internxt: a more secure pCloud alternative",
     "description": "Worried about pCloud’s hidden source code and extra cost for encryption? Are you certain pCloud doesn’t store your password or access your files? Internxt offers free, built-in encryption and open-source transparency.",
     "useCode": {
       "line1": "Use code ",

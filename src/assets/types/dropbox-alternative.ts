@@ -15,7 +15,7 @@ export interface CtaSection {
 }
 
 export interface HeaderSection {
-  title: Title;
+  title: string;
   description: string;
   useCode: UseCode;
   cta: string;

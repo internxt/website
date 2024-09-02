@@ -1,6 +1,6 @@
 {
   "HeaderSection": {
-    "title": { "line1": "Internxt: A Secure, Private Dropbox", "line2": "Alternative for Your Cloud Storage" },
+    "title": "Internxt: A Secure, Private Dropbox Alternative for Your Cloud Storage",
     "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you?",
     "useCode": {
       "line1": "Use code ",
@@ -60,7 +60,7 @@
       },
       {
         "title": "2018: Data shared without consent",
-        "description": "In 2018, a Harvard study* used anonymized data from Dropbox without users' consent to collaborate with research teams. Although the data was anonymized, sharing user data with third parties without permission is a huge breach of trust, transparency, and your online privacy. Link to study"
+        "description": "In 2018, a Harvard study* used anonymized data from Dropbox without users' consent to collaborate with research teams. Although the data was anonymized, sharing user data with third parties without permission is a huge breach of trust, transparency, and your online privacy. [Link to study](https://hbr.org/2018/07/a-study-of-thousands-of-dropbox-projects-reveals-how-successful-teams-collaborate)"
       },
       {
         "title": "2022: Phishing attack",
