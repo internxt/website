@@ -31,6 +31,7 @@ interface PriceTableProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   decimalDiscount?: {
     subscriptions?: number;
+    lifetime?: number;
     business?: number;
   };
   backgroundColorComponent?: string;
@@ -147,8 +148,8 @@ export const PricingSection = ({
             lang={lang}
             billedFrequency={billingFrequencyForSwitch}
             handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={'10'}
-            showLabelDiscount={activeSwitchPlan === 'Business'}
+            labelDiscount={isBusiness ? '10' : '23'}
+            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
           />
         </div>
 
@@ -190,16 +191,9 @@ export const PricingSection = ({
                     key={product.storage}
                     popular={product.storage === '10TB'}
                     decimalDiscountValue={
-                      product.interval !== Interval.Lifetime
-                        ? decimalDiscount?.subscriptions
-                        : lifetimeCoupons
-                        ? undefined
+                      product.interval === Interval.Lifetime
+                        ? decimalDiscount?.lifetime
                         : decimalDiscount?.subscriptions
-                    }
-                    fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons
-                        ? lifetimeCoupons?.[product.storage].amountOff
-                        : undefined
                     }
                     lang={lang}
                   />

@@ -24,10 +24,11 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
+import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -46,10 +47,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     currencyValue,
     coupon: individualCoupon,
     businessCoupon,
-    lifetimeCoupons,
+    lifetimeCoupon,
   } = usePricing({
     couponCode: PromoCodeName.Subscriptions75OFF,
-    fetchLifetimeCoupons: true,
+    couponCodeForLifetime: PromoCodeName.Lifetime78OFF,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -110,14 +111,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
-
-    const couponCodeForB2CPlans =
-      lifetimeSpacePlan && lifetimeCoupons
-        ? lifetimeCoupons?.[lifetimeSpacePlan.storage].promoCodeName
-        : individualCoupon?.name;
-
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
+    const b2cCoupon = isCheckoutForLifetime ? lifetimeCoupon?.name : individualCoupon?.name;
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : b2cCoupon;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
@@ -136,11 +131,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
+        <div className="flex justify-center pt-24">
+          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
+        </div>
+
         <PricingSectionWrapper
           textContent={textContent.tableSection}
-          lifetimeCoupons={lifetimeCoupons}
           decimalDiscount={{
-            individuals: 25,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff,
           }}
           lang={lang}
           products={products}

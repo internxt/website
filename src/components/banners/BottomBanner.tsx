@@ -33,74 +33,74 @@ const BottomBanner = () => {
     switch (lang) {
       case 'en':
         return {
-          title1: 'Save 80%',
+          title1: 'Save 78%',
           title2: {
-            line1: "Sun's out, ",
-            line2: "sale's on!",
+            line1: 'Work smart, ',
+            line2: 'not hard!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra un 80%',
+          title1: 'Ahorra 78%',
           title2: {
-            line1: 'Este verano, ',
-            line2: '¡no te quedes sin tu oferta!',
+            line1: 'en tus planes lifetime',
+            line2: '',
           },
         };
       case 'ru':
         return {
-          title1: 'Сэкономьте 80%',
+          title1: 'Сэкономьте 78%',
           title2: {
-            line1: 'Этим летом, ',
-            line2: 'не упустите свою скидку!',
+            line1: 'Работай умно, ',
+            line2: 'не усердно!',
           },
         };
       case 'fr':
         return {
-          title1: 'Économisez 80%',
+          title1: 'Économisez 78 %',
           title2: {
-            line1: 'Cet été, ',
-            line2: 'ne manquez pas votre offre!',
+            line1: 'Travaillez intelligemment, ',
+            line2: 'pas dur !',
           },
         };
       case 'it':
         return {
-          title1: 'Risparmia 80%',
+          title1: 'Risparmia il 78%',
           title2: {
-            line1: "Quest'estate, ",
-            line2: "non perderti l'offerta!",
+            line1: 'Lavora intelligente, ',
+            line2: 'non duro!',
           },
         };
       case 'zh':
         return {
-          title1: '节省80%',
+          title1: '节省 78%',
           title2: {
-            line1: '这个夏天，',
-            line2: '不要错过你的优惠！',
+            line1: '聪明工作，',
+            line2: '不是辛苦工作！',
           },
         };
       case 'zh-tw':
         return {
-          title1: '節省80%',
+          title1: '節省 78%',
           title2: {
-            line1: '這個夏天，',
-            line2: '不要錯過你的優惠！',
+            line1: '聰明工作，',
+            line2: '不是辛苦工作！',
           },
         };
       case 'de':
         return {
-          title1: 'Spare 80%',
+          title1: 'Spare 78%',
           title2: {
-            line1: 'Diesen Sommer, ',
-            line2: 'verpassen Sie nicht Ihr Angebot!',
+            line1: 'Arbeite klug, ',
+            line2: 'nicht hart!',
           },
         };
       default:
         return {
-          title1: 'Save 80%',
+          title1: 'Save 78%',
           title2: {
-            line1: "Sun's out, ",
-            line2: "sale's on!",
+            line1: 'Work smart, ',
+            line2: 'not hard!',
           },
         };
     }
@@ -134,16 +134,16 @@ const BottomBanner = () => {
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
-          <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2 text-white">
+          <button onClick={handleClose} className="absolute right-3 top-3 z-50 flex h-auto pb-2 text-white">
             <X size={24} />
           </button>
         </div>
         <div className="z-40 flex flex-row gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/banners/internxt_summer_discount.webp')}
-              width={178}
-              height={70}
+              src={getImage('/images/home/back-to-work/bottom-banner.webp')}
+              width={180}
+              height={100}
               className="flex w-full object-fill"
               draggable={false}
               alt={"Internxt's summer discount"}
@@ -157,9 +157,9 @@ const BottomBanner = () => {
               </p>
             </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
-                router.push('/pricing');
+                router.push('/lifetime');
                 handleClose();
               }}
             >

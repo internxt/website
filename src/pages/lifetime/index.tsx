@@ -8,10 +8,11 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { PromoCodeName } from '@/lib/types';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.25;
+  const discount = 0.22;
 
   return (
     <Layout
@@ -25,18 +26,19 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="75"
+        percent="78"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />
 
       <PaymentSection
         textContent={langJson.PaymentSection}
+        couponCode={PromoCodeName.Lifetime78OFF}
         discount={discount}
         lang={lang}
-        percent={'75%'}
+        percent={'78%'}
         showPriceBefore
-        lifetimeMode="custom-disc"
+        lifetimeMode="celebration"
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
@@ -54,7 +56,6 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
@@ -67,7 +68,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       testimonialsJson,
