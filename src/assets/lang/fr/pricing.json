@@ -41,13 +41,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 75%",
-      "title": "Profitez de grandes économies pour votre confidentialité",
-      "subtitle": "L'objectif en or de la confidentialité",
+      "label": "Économisez 78%",
+      "title": "Offres de retour au travail d'Internxt !",
+      "subtitle": "Obtenez un stockage à vie pour moins cher !",
       "cta": "Choisir un plan",
-      "cta2": "Économisez 75%",
+      "cta2": "Profitez de 78% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients"
     },
     "planTitles": {
       "individuals": "Plans individuels",

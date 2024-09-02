@@ -20,6 +20,7 @@ interface PricingSectionWrapperProps {
   isFamilyPage?: boolean;
   decimalDiscount?: {
     individuals?: number;
+    lifetime?: number;
     business?: number;
   };
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -65,6 +66,7 @@ export const PricingSectionWrapper = ({
       isFamilyPage={isFamilyPage}
       decimalDiscount={{
         subscriptions: decimalDiscount?.individuals,
+        lifetime: decimalDiscount?.lifetime,
         business: decimalDiscount?.business,
       }}
       products={products}
