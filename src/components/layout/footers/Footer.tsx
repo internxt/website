@@ -471,7 +471,7 @@ export default function Footer({
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
-              <div className="flex flex-row items-center gap-2">
+              <div className="flex flex-row items-center gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={15}
@@ -866,7 +866,7 @@ export default function Footer({
             <LanguageMobileBox darkMode={darkMode} />
 
             <div className="flex flex-col items-center space-y-4 py-10">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={15}
