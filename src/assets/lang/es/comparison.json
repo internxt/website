@@ -1,9 +1,6 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "Comparación de seguridad",
-      "line2": "de almacenamiento cloud"
-    },
+    "title": "Comparación de seguridad de almacenamiento cloud",
     "description": "Compara todas las opciones para elegir la solución de almacenamiento cloud más segura.",
     "cta": "Consigue 1GB gratis",
     "noCredirCardNeeded": "No requiere tarjeta de crédito",
