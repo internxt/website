@@ -112,6 +112,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <Image
               src={getImage('/images/home/back-to-work/header-home.webp')}
               alt="Back To Work Header"
+              priority
               draggable={false}
               width={600}
               height={529}
