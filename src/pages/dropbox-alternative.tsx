@@ -28,7 +28,7 @@ const IsDropboxSafe = ({ textContent }: { textContent: DropboxAlternativeText['I
       <h3 className="text-xl text-gray-80">{textContent.description}</h3>
     </div>
     {textContent.breaches.map((breach) => (
-      <div className="flex max-w-[800px] flex-col gap-3">
+      <div key={breach.title} className="flex max-w-[800px] flex-col gap-3">
         <p className="text-3xl font-semibold text-gray-100">{breach.title}</p>
         <p className="text-xl text-gray-80">{breach.description}</p>
       </div>
@@ -64,7 +64,7 @@ const DropboxComparison = ({
         </div>
         <div className="flex flex-col gap-16">
           {langJson.TablesSection.tables.map((table) => (
-            <div className="flex flex-col items-center gap-10 lg:gap-16">
+            <div key={table.title} className="flex flex-col items-center gap-10 lg:gap-16">
               <p className="text-center text-3xl font-semibold text-gray-100">{table.title}</p>
               <div className=" flex h-full flex-col gap-10 md:flex-row">
                 <InxtTable textContent={table.inxtTable} />

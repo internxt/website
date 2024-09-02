@@ -28,7 +28,7 @@ export const HeroSection = ({
         <div className={`flex w-full flex-col items-center ${background} gap-10 lg:flex-row lg:justify-between`}>
           <div className="flex max-w-[550px] flex-col">{TextComponent}</div>
           <div className="flex flex-col items-center">
-            {ImageComponent && ImageComponent}
+            {ImageComponent}
             {imageProperties && (
               <Image
                 src={imageProperties.src}
