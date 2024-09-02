@@ -188,6 +188,7 @@ LayoutProps) {
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 
         {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
@@ -221,7 +222,6 @@ LayoutProps) {
         ) : null}
         {lang === 'es' && (
           <script
-            defer
             dangerouslySetInnerHTML={{
               __html: `
           $(document).ready(function() {
@@ -231,7 +231,7 @@ LayoutProps) {
             }}
           />
         )}
-        <script defer={true} src="/js/cookiebanner.script.js" />
+        <script src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>

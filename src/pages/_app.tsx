@@ -96,11 +96,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <>
           <Script defer strategy="beforeInteractive" src="/js/rudderlib.js" />
-          <Script
-            strategy="beforeInteractive"
-            defer
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-          />
           {lang !== 'es' && (
             <>
               <Script
