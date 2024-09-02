@@ -134,7 +134,12 @@ const BottomBanner = () => {
     >
       <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
-          <button onClick={handleClose} className="absolute right-3 top-3 z-50 flex h-auto pb-2 text-white">
+          <button
+            id="close-bottom-banner"
+            aria-label="close-bottom-banner"
+            onClick={handleClose}
+            className="absolute right-3 top-3 z-50 flex h-auto pb-2 text-white"
+          >
             <X size={24} />
           </button>
         </div>
