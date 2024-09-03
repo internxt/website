@@ -4,7 +4,14 @@
     "description": "通過獨特的一次性付款，永久安全地存儲和分享您的回憶。",
     "maintenance": "",
     "cta1": "${{percent}}%折扣",
-    "cta2": "瀏覽終身方案"
+    "cta2": "瀏覽終身方案",
+    "celebration": {
+      "taiwan": {
+        "title": "今天慶祝終身隱私",
+        "description": "借國慶折扣永久保護您的文件。",
+        "cta1": "享受 83% 的折扣"
+      }
+    }
   },
   "PaymentSection": {
     "limitedOffer": "限時優惠！",
