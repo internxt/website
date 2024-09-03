@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Calendar, ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
+import { CalendarBlank, ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
 
 import FaqSection from '@/components/shared/sections/FaqSection';
 import FeatureSection from '@/components/affiliates/FeatureSection';
@@ -96,7 +96,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
   const commissionStructureIcons = [
     {
-      icon: Calendar,
+      icon: CalendarBlank,
     },
     {
       icon: InfinityIcon,
