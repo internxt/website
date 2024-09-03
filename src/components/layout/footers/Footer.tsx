@@ -456,7 +456,8 @@ export default function Footer({
             />
 
             {/* Logos */}
-            <div className="flex w-full max-w-[900px] flex-row justify-between">
+            <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
+              <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
                   <Image
@@ -467,7 +468,7 @@ export default function Footer({
                     alt="Internxt logo"
                   />
                 </Link>
-                <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
@@ -482,14 +483,14 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
                     loading="lazy"
-                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
+                    src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
-                    alt="facebook icon"
+                    alt="Reddit icon"
                   />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
@@ -877,14 +878,14 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
                     loading="lazy"
-                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
+                    src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
-                    alt="facebook icon"
+                    alt="Reddit icon"
                   />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">

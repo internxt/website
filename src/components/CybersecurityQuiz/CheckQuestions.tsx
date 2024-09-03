@@ -1,3 +1,4 @@
+import { getImage } from '@/lib/getImage';
 import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
 
@@ -58,7 +59,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
                 <img
                   loading="eager"
                   className="h-4.5"
-                  src={`/icons/social/cool-gray-60/twitter.svg`}
+                  src={getImage(`/icons/social/cool-gray-60/twitter.svg`)}
                   draggable="false"
                   alt="twitter icon"
                 />
@@ -67,7 +68,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
                 <img
                   loading="eager"
                   className="h-4.5"
-                  src={`/icons/social/cool-gray-60/facebook.svg`}
+                  src={getImage(`/icons/social/cool-gray-60/facebook.svg`)}
                   draggable="false"
                   alt="facebook icon"
                 />
@@ -76,7 +77,7 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
                 <img
                   loading="eager"
                   className="h-4.5"
-                  src={`/icons/social/cool-gray-60/linkedin.svg`}
+                  src={getImage(`/icons/social/cool-gray-60/linkedin.svg`)}
                   draggable="false"
                   alt="linkedin icon"
                 />

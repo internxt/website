@@ -1,4 +1,4 @@
-import { Cookie, HandCoins, SketchLogo, UsersThree } from '@phosphor-icons/react';
+import { Cookie, Crosshair, HandCoins, SketchLogo, TrendUp, UsersThree } from '@phosphor-icons/react';
 import RevealY from '@/components/components/RevealY';
 
 function PaintedText({ text }): JSX.Element {
@@ -37,6 +37,14 @@ const WhyJoinSection = ({ textContent }) => {
       icon: SketchLogo,
       title: textContent.cards[3].title,
     },
+    {
+      icon: Crosshair,
+      title: textContent.cards[4].title,
+    },
+    {
+      icon: TrendUp,
+      title: textContent.cards[5].title,
+    },
   ];
 
   return (
@@ -44,7 +52,7 @@ const WhyJoinSection = ({ textContent }) => {
       <div className="flex flex-col items-center justify-center space-y-20 px-5">
         <p className="text-center text-5xl font-semibold">{textContent.title}</p>
         <div className="flex flex-col items-center justify-center space-y-9">
-          <RevealY className="flex h-full w-full flex-row flex-wrap items-center justify-center gap-8">
+          <RevealY className="flex h-full w-full max-w-[850px] flex-row flex-wrap items-center justify-center gap-8">
             {cards.map((item) => (
               <div
                 key={item.title}

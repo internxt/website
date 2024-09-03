@@ -1,10 +1,16 @@
+import { getImage } from '@/lib/getImage';
 import { Check } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 export const InxtTable = ({ textContent }) => (
   <div className="flex h-full w-screen max-w-[400px] flex-1 flex-col px-5 md:px-0">
     <div className="flex w-full items-center space-x-4 bg-primary/5 py-4 pl-6">
-      <Image width={32} height={32} src={'/images/comparison/competitors/internxt.webp'} alt="Internxt icon" />
+      <Image
+        width={32}
+        height={32}
+        src={getImage('/images/comparison/competitors/internxt.webp')}
+        alt="Internxt icon"
+      />
       <p className="text-lg font-semibold text-gray-100">{textContent.title}</p>
     </div>
     <div className="flex h-full flex-col">
