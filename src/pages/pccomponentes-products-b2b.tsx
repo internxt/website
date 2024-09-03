@@ -72,7 +72,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
                     checkIconName="checkOrange"
                     key={product.storage}
                     popular={product.storage === '10TB'}
-                    decimalDiscountValue={100 - coupon?.percentOff!}
+                    decimalDiscountValue={100 - coupon!.percentOff!}
                     lang={lang}
                   />
                 ))

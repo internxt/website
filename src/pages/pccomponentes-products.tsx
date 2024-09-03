@@ -42,7 +42,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <div className="flex flex-col space-y-10">
         <div className="flex flex-col items-center space-y-9">
-          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
             <button
               type="button"
@@ -51,7 +51,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                 setBillingFrequency(Interval.Year);
                 setPageName(`Pricing Individuals ${billingFrequency}`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-semibold ${
+              className={`rounded-lg px-6 py-0.5 font-semibold ${
                 activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -64,7 +64,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                 setBillingFrequency(Interval.Lifetime);
                 setPageName(`Pricing Individuals Lifetime`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-semibold ${
+              className={`rounded-lg px-6 py-0.5 font-semibold ${
                 activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >

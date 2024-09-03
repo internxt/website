@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 const { defaultTheme } = require('react-select');
 
 module.exports = {
