@@ -1,7 +1,7 @@
 import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from '@phosphor-icons/react';
-import React from 'react';
 import styles from './Background.module.scss';
 import { toast } from 'react-toastify';
+import Link from 'next/link';
 
 const HeroSection = ({ textContent }) => {
   const open = () => toast.success('Copied to clipboard!');
@@ -46,7 +46,7 @@ const HeroSection = ({ textContent }) => {
   return (
     <>
       <section className="overflow-hidden pt-16">
-        <div className="mt-[77px] mb-20 flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
+        <div className="mb-20 mt-[77px] flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
           <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:mr-52 lg:max-w-[456px]  lg:items-start lg:text-start">
             <div>
               <h1 className=" text-6xl font-semibold">{textContent.title1.line1}</h1>
@@ -63,11 +63,9 @@ const HeroSection = ({ textContent }) => {
               }
             </p>
             <div className="flex rounded-lg bg-white px-9 py-4">
-              <a href="#pricing">
-                <button className="text-lg font-normal text-primary" onClick={() => {}}>
-                  {textContent.cta}
-                </button>
-              </a>
+              <Link href="#pricing" className="text-lg font-normal text-primary">
+                {textContent.cta}
+              </Link>
             </div>
           </div>
           <div className="relative px-10 pt-20 lg:px-0 lg:pt-10">
@@ -87,10 +85,10 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         <div
-          className={`absolute top-16 left-0 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
+          className={`absolute left-0 top-16 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
         />
       </section>
-      <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 py-14">
+      <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-x-20 gap-y-10 py-14">
         {FeatureSection.map((item, index) => (
           <div key={index} className="flex max-w-[185px] flex-col items-center justify-center space-y-8 text-center">
             <item.icon size={40} className="text-primary" />

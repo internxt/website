@@ -18,8 +18,7 @@ function get(hashedPasswordPrefix) {
     timeout: API_TIMEOUT,
   };
 
-  return fetch(API_URL + hashedPasswordPrefix, opts)
-    .then((res) => res.text());
+  return fetch(API_URL + hashedPasswordPrefix, opts).then((res) => res.text());
 }
 
 export default function pwnedpasswords(password, cb) {
@@ -36,12 +35,13 @@ export default function pwnedpasswords(password, cb) {
 
   return get(hashedPasswordPrefix)
     .then((res) => {
-      const found = res
-        .split('\n')
-        .map((line) => line.split(':'))
-        .filter((filtered) => filtered[0].toLowerCase() === hashedPasswordSuffix)
-        .map((mapped) => Number(mapped[1]))
-        .shift() || 0;
+      const found =
+        res
+          .split('\n')
+          .map((line) => line.split(':'))
+          .filter((filtered) => filtered[0].toLowerCase() === hashedPasswordSuffix)
+          .map((mapped) => Number(mapped[1]))
+          .shift() || 0;
 
       return hasCallback ? cb(null, found) : found;
     })

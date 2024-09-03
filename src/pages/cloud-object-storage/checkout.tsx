@@ -154,7 +154,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   };
 
   const onCheckoutButtonClicked = async (
-    event: BaseSyntheticEvent<object, any, any> | undefined,
+    event: BaseSyntheticEvent<Record<string, unknown>, any, any> | undefined,
     stripeSDK: Stripe | null,
     elements: StripeElements | null,
     formData: IFormValues,

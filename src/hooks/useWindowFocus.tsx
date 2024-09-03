@@ -20,7 +20,9 @@ const useWindowFocus = () => {
     });
 
     return () => {
-      window.document.removeEventListener('visibilitychange', () => {});
+      window.document.removeEventListener('visibilitychange', () => {
+        //
+      });
     };
   }, []);
 

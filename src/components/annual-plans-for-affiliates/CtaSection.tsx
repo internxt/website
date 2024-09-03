@@ -3,7 +3,7 @@ const PRICE_TABLE_ID = 'pricing-table';
 const CtaSection = ({ textContent }: { textContent: any }) => {
   function redirectToPricingTable() {
     window.scrollTo({
-      top: document?.getElementById(PRICE_TABLE_ID)?.offsetTop! + 500,
+      top: document!.getElementById(PRICE_TABLE_ID)!.offsetTop! + 500,
       behavior: 'smooth',
     });
   }
