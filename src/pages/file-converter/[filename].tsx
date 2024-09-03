@@ -20,9 +20,16 @@ const FileConverter = ({
   pathname,
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === pathname);
+  const pathnameForSEO = `/file-converter/${pathname}`;
 
   return (
-    <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+    <Layout
+      segmentName="File Converter"
+      title={metatags[0].title}
+      description={metatags[0].description}
+      lang={lang}
+      pathnameForSEO={pathnameForSEO}
+    >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <ConverterSection
