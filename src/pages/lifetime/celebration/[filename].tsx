@@ -13,7 +13,20 @@ import { useEffect } from 'react';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const ALLOWED_PATHS = ['canada', 'usa', 'france', 'belgium', 'switzerland', 'singapore', 'brazil', 'mexico'];
+const ALLOWED_PATHS = [
+  'canada',
+  'usa',
+  'france',
+  'belgium',
+  'switzerland',
+  'singapore',
+  'brazil',
+  'mexico',
+  'china',
+  'taiwan',
+  'germany',
+  'spain',
+];
 
 const IMAGES_PER_PATH = {
   canada: {
@@ -56,6 +69,26 @@ const IMAGES_PER_PATH = {
     previewImage: '/images/lifetime/celebration/mexico/file-item.webp',
     mobileImage: '/images/lifetime/celebration/mexico/image-mobile.webp',
   },
+  spain: {
+    backgroundImage: '/images/lifetime/celebration/spain/bg.webp',
+    previewImage: '/images/lifetime/celebration/spain/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/spain/image-mobile.webp',
+  },
+  china: {
+    backgroundImage: '/images/lifetime/celebration/china/bg.webp',
+    previewImage: '/images/lifetime/celebration/china/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/china/image-mobile.webp',
+  },
+  taiwan: {
+    backgroundImage: '/images/lifetime/celebration/taiwan/bg.webp',
+    previewImage: '/images/lifetime/celebration/taiwan/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/taiwan/image-mobile.webp',
+  },
+  germany: {
+    backgroundImage: '/images/lifetime/celebration/germany/bg.webp',
+    previewImage: '/images/lifetime/celebration/germany/file-item.webp',
+    mobileImage: '/images/lifetime/celebration/germany/image-mobile.webp',
+  },
 };
 
 const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico'];
@@ -88,6 +121,10 @@ const LifetimeCelebrationTemplate = ({
     usa: 0.2,
     brazil: 0.2,
     mexico: 0.2,
+    spain: 0.17,
+    germany: 0.17,
+    china: 0.17,
+    taiwan: 0.17,
     france: 0.17,
     belgium: 0.17,
     switzerland: 0.17,
@@ -99,6 +136,10 @@ const LifetimeCelebrationTemplate = ({
     usa: PromoCodeName.IndependenceDayItaly,
     brazil: PromoCodeName.IndependenceDayItaly,
     mexico: PromoCodeName.IndependenceDayItaly,
+    spain: PromoCodeName.Lifetime83DiscountCoupon,
+    china: PromoCodeName.Lifetime83DiscountCoupon,
+    taiwan: PromoCodeName.Lifetime83DiscountCoupon,
+    germany: PromoCodeName.Lifetime83DiscountCoupon,
     france: PromoCodeName.Lifetime83DiscountCoupon,
     belgium: PromoCodeName.Lifetime83DiscountCoupon,
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
@@ -110,6 +151,10 @@ const LifetimeCelebrationTemplate = ({
     usa: '80%',
     brazil: '80%',
     mexico: '80%',
+    spain: '83%',
+    taiwan: '83%',
+    china: '83%',
+    germany: '83%',
     france: '83%',
     belgium: '83%',
     switzerland: '83%',
@@ -166,12 +211,20 @@ export async function getServerSideProps(ctx) {
     lang = 'fr';
   }
 
-  if (['mexico'].includes(pathname)) {
+  if (['mexico', 'spain'].includes(pathname)) {
     lang = 'es';
   }
 
-  if (['switzerland'].includes(pathname)) {
+  if (['switzerland', 'germany'].includes(pathname)) {
     lang = 'de';
+  }
+
+  if (['china'].includes(pathname)) {
+    lang = 'zh';
+  }
+
+  if (['taiwan'].includes(pathname)) {
+    lang = 'zh-tw';
   }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
