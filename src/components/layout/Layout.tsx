@@ -36,6 +36,7 @@ interface LayoutProps {
   readonly specialOffer?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
+  readonly pathnameForSEO?: string;
 }
 
 const imageLang = ['ES', 'FR', 'EN'];
@@ -47,6 +48,7 @@ export default function Layout({
   segmentName = null,
   disableMailerlite = false,
   specialOffer,
+  pathnameForSEO,
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
@@ -55,7 +57,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
-  const pathname = router.pathname === '/' ? '' : router.pathname;
+  const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
 

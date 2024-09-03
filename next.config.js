@@ -60,6 +60,7 @@ module.exports = {
         '/use-cases',
         '/internxt-library',
         '/online-privacy-ebook',
+        '/token',
       ].map((src) => ({
         source: src,
         destination: '/',
@@ -79,6 +80,7 @@ module.exports = {
         '/use-cases',
         '/internxt-library',
         '/online-privacy-ebook',
+        '/token',
       ].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang',
