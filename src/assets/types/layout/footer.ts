@@ -80,6 +80,7 @@ export interface Resources {
   blog: string;
   comparison: string;
   pCloudAlternative: string;
+  dropboxAlternative: string;
   directoryOfPrivacyOrganizations: string;
   cyberAwareness: string;
   whatGoogleKnowsAboutMe: string;
