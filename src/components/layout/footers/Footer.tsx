@@ -380,6 +380,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/dropbox-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.dropboxAlternative}
+                    </Link>
+
+                    <Link
                       href="/privacy-directory"
                       locale={lang}
                       passHref
@@ -779,6 +788,15 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.pCloudAlternative}
+                      </Link>
+
+                      <Link
+                        href="/dropbox-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.dropboxAlternative}
                       </Link>
 
                       <Link
