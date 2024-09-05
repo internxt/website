@@ -227,6 +227,10 @@ export async function getServerSideProps(ctx) {
     lang = 'zh-tw';
   }
 
+  if (['brazil'].includes(pathname)) {
+    lang = 'pt-br';
+  }
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);

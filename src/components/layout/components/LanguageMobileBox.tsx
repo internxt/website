@@ -11,6 +11,7 @@ const languages = [
   { zh: '中国人 (ZH)' },
   { ru: 'Русский (RU)' },
   { de: 'Deutsch (DE)' },
+  { pt: 'Portuguese (PT)' },
 ];
 
 export default function LanguageMobileBox({ darkMode }) {
@@ -50,7 +51,7 @@ export default function LanguageMobileBox({ darkMode }) {
                       router.push(router.pathname, router.pathname, { locale: lang }).catch((err) => console.log(err));
                     }}
                   >
-                    {person.en || person.es || person.fr || person.it || person.zh || person.ru}
+                    {person.en || person.es || person.fr || person.it || person.zh || person.ru || person.de}
                   </div>
                 ))}
               </Disclosure.Panel>
