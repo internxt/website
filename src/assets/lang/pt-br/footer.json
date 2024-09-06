@@ -1,10 +1,10 @@
 {
   "DownloadApp": {
     "title": "Baixe o Internxt",
-    "description": "Gerenciamento de arquivos contínuo e armazenamento seguro na nuvem em qualquer lugar com o aplicativo móvel Internxt para iOS ou Android."
+    "description": "Gerenciamento de arquivos contínuo e armazenamento seguro na nuvem em qualquer lugar com o aplicativo mobile Internxt para iOS ou Android."
   },
   "NewsletterSection": {
-    "title": "Boletim Informativo",
+    "title": "Boletim",
     "description": "Quer receber notícias nossas quando lançarmos novos produtos ou atualizações? Digite seu endereço de e-mail e nós cuidaremos do resto!",
     "input": "Seu endereço de email",
     "info": "Você pode se desinscrever a qualquer momento",
@@ -47,7 +47,7 @@
       },
       "join": {
         "title": "Junte-se a Nós",
-        "newsletter": "Boletim Informativo",
+        "newsletter": "Boletim",
         "affiliates": "Afiliados",
         "storageForEducation": "Internxt para Educação",
         "signup": "Criar Conta",
@@ -55,11 +55,11 @@
         "login": "Entrar",
         "community": "Comunidade",
         "github": "GitHub",
-        "whitePaper": "Papel Branco",
+        "whitePaper": "Whitepaper",
         "twitter": "Twitter",
         "facebook": "Facebook",
         "linkedin": "LinkedIn",
-        "youtube": "Youtube",
+        "youtube": "YouTube",
         "instagram": "Instagram",
         "mastodon": "Mastodon"
       },
@@ -71,7 +71,7 @@
         "dropboxAlternative": "Alternativa ao Dropbox",
         "directoryOfPrivacyOrganizations": "Diretório de Organizações de Privacidade",
         "cyberAwareness": "Conscientização Cibernética",
-        "whatGoogleKnowsAboutMe": "O Que o Google Sabe Sobre Mim"
+        "whatGoogleKnowsAboutMe": "O que a Google Sabe Sobre Mim?"
       },
       "tools": {
         "title": "Ferramentas Gratuitas",
@@ -85,7 +85,7 @@
     }
   },
   "Cookies": {
-    "title": "Internxt usa cookies para facilitar o uso deste site",
+    "title": "A Internxt usa cookies para facilitar o uso deste site",
     "link": "Saiba mais sobre cookies",
     "close": "Ok, fechar"
   }
