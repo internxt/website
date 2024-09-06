@@ -14,8 +14,8 @@
     "featuredIn": "Destaque em",
     "SignUp": {
       "cta": {
-        "title": "Comece com a Internxt",
-        "subtitle": "Crie uma conta agora e obtenha 1GB GRATUITO"
+        "title": "Comece com o Internxt",
+        "subtitle": "Crie uma conta agora e obtenha 1GB DE GRAÇA"
       },
       "disclaimer": {
         "text": "Ao criar uma conta você aceita os",
@@ -47,7 +47,7 @@
         "line1": "Armazene seus arquivos com segurança, agora ",
         "blueText": "75% mais barato"
       },
-      "trustedBy": "Confiável por mais de 330.000 pessoas",
+      "trustedBy": "Confiado por mais de 330.000 pessoas",
       "description": {
         "normal1": "Proteja seus arquivos de trabalho e pessoais com ",
         "bold": "armazenamento na nuvem criptografado de nível militar acessível",
@@ -74,7 +74,7 @@
         "normal2": " /mês"
       },
       "claimDeal": "Reivindicar oferta",
-      "guarantee": "Garantia de devolução do dinheiro em 30 dias"
+      "guarantee": "Garantia de devolução do dinheiro em até 30 dias"
     },
     "TitleAndOnePlanV2": {
       "title": {
@@ -90,7 +90,7 @@
       "features": [
         "Criptografia de conhecimento zero de nível militar",
         "Privacidade máxima: somente você pode acessar seus arquivos",
-        "Suporte ao cliente premium para transição sem problemas"
+        "Suporte ao cliente em inglês para transição sem problemas"
       ],
       "startFrom": {
         "normal1": "A partir de ",
@@ -98,7 +98,7 @@
         "normal2": " /mês"
       },
       "claimDeal": "Revelar oferta por tempo limitado",
-      "guarantee": "Nº 1 em Nuvem em 2024 por"
+      "guarantee": "Nº1 em Nuvem em 2024 por"
     },
     "youKnow": "Você sabia?"
   },
@@ -109,7 +109,7 @@
     "cards": [
       {
         "title": "Dados inacessíveis e à prova de vazamentos",
-        "description": "Não armazenamos senhas ou dados do usuário e todos os seus dados são criptografados em trânsito e em repouso. A Internxt coloca você em total controle de seus arquivos. Seus dados são seu negócio. Protegê-los é o nosso."
+        "description": "Não armazenamos senhas ou dados do usuário e todos os seus dados são criptografados em trânsito e em armazenamento. O Internxt coloca você em total controle de seus arquivos. Seus dados são seu negócio. Protegê-los é o nosso."
       },
       {
         "title": "Segurança intransigente",
@@ -121,7 +121,7 @@
       },
       {
         "title": "Verificação independente",
-        "description": "Somos totalmente compatíveis com o GDPR e 100% seguros, mas não precisa acreditar apenas na nossa palavra. A Internxt foi auditada e verificada de forma independente pela principal empresa de testes de penetração da Europa, a Securitum."
+        "description": "Somos totalmente compatíveis com a LGPD e 100% seguros, mas não precisa acreditar apenas na nossa palavra. O Internxt foi auditado e verificado de forma independente pela principal empresa de testes de penetração da Europa, a Securitum."
       }
     ]
   },
@@ -137,9 +137,9 @@
       }
     },
     "lifetimeDescription": "Compre uma vez e obtenha privacidade e segurança para sempre.",
-    "planDescription": "Todos os planos da Internxt são totalmente completos com acesso completo a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
-    "businessDescription": "Atualmente estamos trabalhando em novos planos da Internxt projetados exclusivamente para defender seu negócio, proteger seus funcionários e garantir seu resultado final.",
-    "businessDescription2": "Garanta a segurança dos dados do negócio com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "planDescription": "Todos os planos do Internxt são totalmente completos com acesso completo a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
+    "businessDescription": "Atualmente estamos trabalhando em novos planos do Internxt projetados exclusivamente para defender seu negócio, proteger seus funcionários e garantir seu resultado final.",
+    "businessDescription2": "Garanta a segurança dos dados do negócio com os planos de armazenamento na nuvem criptografado doInternxt.",
     "billingFrequency": {
       "monthly": "Mensal",
       "annually": "Anual",
@@ -163,23 +163,23 @@
   "ChooseStorageSizeSection": {
     "title": "Vazamentos de dados podem levar a perda de emprego, problemas legais e chantagem",
     "description": "Nosso armazenamento na nuvem mantém seus arquivos seguros, mesmo se seu dispositivo for roubado ou hackeado.",
-    "peaceOfMind": "Tranquilidade garantida com a Internxt.",
+    "peaceOfMind": "Tranquilidade garantida com o Internxt.",
     "cta": "Escolha o tamanho do armazenamento"
   },
   "FirstFeaturesSection": {
-    "title": "Por que escolher a Internxt?",
-    "subtitle": "A Internxt coloca você de volta no controle de seus dados com criptografia de grau militar de conhecimento zero.",
-    "description": "Usamos código aberto, permitindo a verificação independente de nossas práticas de segurança. A Internxt capacita você a possuir seus dados, oferecendo privacidade e tranquilidade inigualáveis.",
+    "title": "Por que escolher o Internxt?",
+    "subtitle": "O Internxt coloca você de volta no controle de seus dados com criptografia de nível militar de conhecimento zero.",
+    "description": "Somos totalmente código aberto, permitindo a verificação independente de nossas práticas de segurança. o Internxt capacita você a possuir seus dados, oferecendo privacidade e tranquilidade inigualáveis.",
     "cta": "Escolha o armazenamento"
   },
   "InfoSection": {
     "title": "Armazenamento na nuvem seguro com privacidade inigualável",
-    "description": "O que torna a Internxt tão especial? Somos uma equipe unida de profissionais completamente dedicada a proteger você online. Tudo que fazemos e cada decisão que tomamos é centrada em proteger seus dados de serem explorados.",
+    "description": "O que torna o Internxt tão especial? Somos uma equipe unida de profissionais completamente dedicada a proteger você online. Tudo que fazemos e cada decisão que tomamos é centrada em proteger seus dados de serem explorados.",
     "cta": "Apresentando a equipe Internxt",
     "cards": [
       {
-        "title": "Privado por design",
-        "description": "Não armazenamos senhas ou dados do usuário e todos os seus dados são criptografados em trânsito e em repouso. A Internxt coloca você em total controle de seus arquivos. Seus dados são seu negócio. Protegê-los é o nosso."
+        "title": "Privacidade do zero",
+        "description": "Não armazenamos senhas ou dados do usuário e todos os seus dados são criptografados em trânsito e em armazenamento. O Internxt coloca você em total controle de seus arquivos. Seus dados são seu negócio. Protegê-los é o nosso."
       },
       {
         "title": "Segurança intransigente",
@@ -191,13 +191,13 @@
       },
       {
         "title": "Verificação independente",
-        "description": "Somos totalmente compatíveis com o GDPR e 100% seguros, mas não precisa acreditar apenas na nossa palavra. A Internxt foi auditada e verificada de forma independente pela principal empresa de testes de penetração da Europa, a Securitum."
+        "description": "Somos totalmente compatíveis com o LGPD e 100% seguros, mas não precisa acreditar apenas na nossa palavra. O Internxt foi auditado e verificado de forma independente pela principal empresa de testes de penetração da Europa, a Securitum."
       }
     ]
   },
   "SecondFeaturesSection": {
     "title": "Armazenamento na nuvem seguro com privacidade inigualável",
-    "description": "O que torna a Internxt tão especial? Valorizamos sua privacidade e queremos protegê-lo contra as ameaças emergentes de violações de dados. Ao contrário de grandes empresas de tecnologia como o Google Drive, nunca monitoramos, coletamos ou lucramos com seus dados.",
+    "description": "O que torna o Internxt tão especial? Valorizamos sua privacidade e queremos protegê-lo contra as ameaças emergentes de violações de dados. Ao contrário de grandes empresas de tecnologia como a Google, nunca monitoramos, coletamos ou lucramos com seus dados.",
     "cta": "Nossos valores de privacidade",
     "info": [
       {
@@ -206,15 +206,15 @@
       },
       {
         "title": "Colaboração sem esforços",
-        "description": "A Internxt oferece maior controle sobre como você gerencia sua privacidade e quem pode acessar seus arquivos. Compartilhe, edite e acesse arquivos com segurança com permissões de gerenciamento e proteção por senha."
+        "description": "O Internxt oferece maior controle sobre como você gerencia sua privacidade e quem pode acessar seus arquivos. Compartilhe, edite e acesse arquivos com segurança com permissões de gerenciamento e proteção por senha."
       },
       {
         "title": "Armazenamento de backup sob demanda",
-        "description": "Salve seus dados de desastres com redundância embutida. Faça backup de seu trabalho essencial e projetos em vários servidores rápidos em toda a UE e acesse-os de todos os seus dispositivos."
+        "description": "Salve seus dados de desastres com redundância embutida. Faça backup de seu trabalho essencial e projetos em vários servidores rápidos em toda a Europa e acesse-os de todos os seus dispositivos."
       },
       {
         "title": "Seguro e acessível",
-        "description": "A Internxt protege seus dados com criptografia de ponta, para que você possa trabalhar e acessar seus arquivos de qualquer lugar com total tranquilidade."
+        "description": "O Internxt protege seus dados com criptografia de ponta, para que você possa trabalhar e acessar seus arquivos de qualquer lugar com total tranquilidade."
       }
     ]
   },
@@ -226,39 +226,39 @@
   "FirstWhatWeDoSection": {
     "card1": {
       "title": "Construído para o futuro",
-      "description": "Queremos construir uma World Wide Web melhor, justa, segura e equitativa para todos. A batalha pelo futuro da privacidade na internet está acontecendo, e estamos na linha de frente.",
+      "description": "Queremos construir uma Internet melhor, justa, segura e equitativa para todos. A batalha pelo futuro da privacidade na internet está acontecendo, e estamos na linha de frente.",
       "cta": "A luta pela privacidade"
     },
     "card2": {
       "title": "Todos os seus dispositivos, uma experiência integrada",
-      "description": "A Internxt está disponível em todas as plataformas, até mesmo no Linux! Sincronize seus arquivos e fotos com nossos aplicativos móveis, web e desktop, cada um projetado para potencializar seu armazenamento criptografado em movimento.",
+      "description": "O Internxt está disponível em todas as plataformas, até mesmo no Linux! Sincronize seus arquivos e fotos com nossos aplicativos móveis, web e desktop, cada um projetado para potencializar seu armazenamento criptografado em movimento.",
       "cta": "Baixe os aplicativos"
     },
     "card3": {
-      "title": "Experimente a Internxt gratuitamente",
+      "title": "Experimente o Internxt gratuitamente",
       "description": "Obtenha 1GB grátis e veja se a privacidade combina com você antes de mergulhar de cabeça!",
       "cta": "Crie uma conta gratuita"
     }
   },
   "SecondWhatWeDoSection": {
     "title": "Você não é o produto",
-    "description": "A Internxt oferece uma família crescente de produtos como Drive, Send e VPN, todos construídos com foco na privacidade do usuário. Confiada por marcas líderes mundialmente, a Internxt capacita indivíduos como você a assumir o controle de seus dados e privacidade.",
+    "description": "O Internxt oferece uma família crescente de produtos como Drive, Send e VPN, todos construídos com foco na privacidade do usuário. Confiada por marcas líderes mundialmente, o Internxt capacita indivíduos como você a assumir o controle de seus dados e privacidade.",
     "square1": {
       "title": "Internxt Drive",
       "subtitle": "O armazenamento na nuvem mais seguro para todos os seus arquivos, fotos e muito mais",
       "description": "Retome o controle de seus arquivos e dados com o Internxt Drive. Armazenar e fazer backup de seus arquivos com privacidade total nunca foi tão fácil. Armazenamento na nuvem moderno encontra criptografia de nível militar.",
-      "cta": "Proteja com o Drive"
+      "cta": "Proteja-se com o Drive"
     },
     "square2": {
       "title": "Internxt Send",
       "subtitle": "Criptografe, compartilhe e envie arquivos grandes com total certeza",
-      "description": "Send permite que você criptografe e compartilhe arquivos grandes rapidamente sem se preocupar com a segurança de seus documentos, imagens ou vídeos. Transfira para qualquer pessoa com total confidencialidade.",
+      "description": "Send permite que você criptografe e compartilhe arquivos grandes rapidamente sem se preocupar com a segurança de seus documentos, imagens ou vídeos. Transfira para qualquer pessoa com total segurança.",
       "cta": "Compartilhe com o Send"
     },
     "square3": {
       "title": "Internxt VPN",
       "subtitle": "Armazenamento seguro online de fotos para todos os seus momentos perfeitos",
-      "description": "O VPN da Internxt criptografa e protege sua conexão à internet, protegendo você de vazamentos de dados, hackers e ataques de rede. Mantenha seus dados privados e protegidos de olhares indiscretos.",
+      "description": "O VPN do Internxt criptografa e protege sua conexão à internet, protegendo você de vazamentos de dados, hackers e ataques de rede. Mantenha seus dados privados e protegidos de olhares indiscretos.",
       "cta": "Navegue com o VPN"
     }
   },
@@ -266,81 +266,81 @@
     "title": "Perguntas? Temos respostas",
     "faq": [
       {
-        "question": "A Internxt pode acessar meus arquivos?",
+        "question": "O Internxt pode acessar meus arquivos?",
         "answer": [
-          "Não. A Internxt, juntamente com qualquer outra terceira parte, não pode acessar seus arquivos, fotos ou dados.",
-          "Os serviços da Internxt apresentam criptografia de conhecimento zero, o que significa que apenas você pode acessar verdadeiramente seus dados privados. Além disso, a arquitetura da Internxt fragmenta seus arquivos antes de criptografá-los, então um servidor nunca possui um arquivo inteiro, apenas um fragmento criptografado dele, que apenas você pode descriptografar."
+          "Não. O Internxt, juntamente com qualquer outra terceira parte, não pode acessar seus arquivos, fotos ou dados.",
+          "Os serviços do Internxt apresentam criptografia de conhecimento zero, o que significa que apenas você pode acessar seus dados privados. Além disso, a arquitetura do Internxt fragmenta seus arquivos antes de criptografá-los, então um servidor nunca possui um arquivo inteiro, apenas um fragmento criptografado dele, que apenas você pode descriptografar."
         ]
       },
       {
-        "question": "A Internxt armazena minha senha?",
+        "question": "O Internxt armazena minha senha?",
         "answer": [
-          "Não. Como tal, a Internxt não (e não pode) armazenar sua senha.",
-          "Sua senha da Internxt é única para você e usada para criptografar e descriptografar seus dados da Internxt. Mas se você quiser alterar sua senha, pode fazê-lo a partir de nosso aplicativo."
+          "Não. Como tal, o Internxt não (e não pode) armazenar sua senha.",
+          "Sua senha do Internxt é única para você e usada para criptografar e descriptografar seus dados do Internxt. Mas se você quiser alterar sua senha, pode fazê-lo a partir de nosso aplicativo."
         ]
       },
       {
         "question": "Posso habilitar 2FA?",
         "answer": [
-          "Sim. Você pode configurar a Autenticação de Dois Fatores para sua conta através do aplicativo web da Internxt.",
-          "Você também pode usar Authy ou qualquer outra ferramenta de 2FA para gerar um código 2FA pessoal com a Internxt."
+          "Sim. Você pode configurar a Autenticação de Dois Fatores para sua conta através do aplicativo web do Internxt.",
+          "Você também pode usar Authy ou qualquer outra ferramenta de 2FA para gerar um código 2FA pessoal com o Internxt."
         ]
       },
       {
-        "question": "Como crio uma conta na Internxt?",
+        "question": "Como crio uma conta no Internxt?",
         "answer": [
-          "Para criar uma conta gratuita na Internxt, basta clicar no melhor plano acima e seguir as instruções.",
-          "Ou vá para nossa página inicial e clique em “Começar”. Você receberá instantaneamente 1GB de armazenamento gratuito para a vida com uma associação gratuita à Internxt. Você pode usar sua associação gratuita para acessar todos os nossos serviços. Para se inscrever, basta inserir seu nome e endereço de e-mail. Não é necessário verificar identidade ou e-mail para começar a usar os serviços da Internxt."
+          "Para criar uma conta gratuita no Internxt, basta clicar no melhor plano acima e seguir as instruções.",
+          "Ou vá para nossa página inicial e clique em “Começar”. Você receberá instantaneamente 1GB de armazenamento gratuito para a vida com uma conta gratuita do Internxt. Você pode usar sua conta gratuita para acessar todos os nossos serviços. Para se inscrever, basta inserir seu nome e endereço de e-mail. Não é necessário verificar identidade ou e-mail para começar a usar os serviços do Internxt."
         ]
       },
       {
         "question": "Posso pagar com cartão de crédito, PayPal ou criptomoeda?",
         "answer": [
-          "Atualmente, a Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express, etc). Você também pode pagar via PayPal, iDEAL, Sofort e Criptomoeda."
+          "Atualmente, o Internxt aceita cartões de débito e crédito (Mastercard, VISA, American Express, etc). Você também pode pagar via PayPal, iDEAL, Sofort e Criptomoeda."
         ]
       },
       {
-        "question": "Qual é a política de reembolso da Internxt?",
+        "question": "Qual é a política de reembolso do Internxt?",
         "answer": [
-          "A Internxt oferece uma garantia padrão de devolução do dinheiro de 30 dias em todas as suas assinaturas pagas, que começa a contar assim que você se inscreve.",
-          "E se você não estiver satisfeito com nosso serviço, entre em contato conosco pelo [hello@internxt.com](mailto:hello@internxt.com) e solicite um reembolso. Honraremos seu pedido, sem perguntas!"
+          "O Internxt oferece uma garantia padrão de devolução do dinheiro de 30 dias em todas as suas assinaturas pagas, que começa a contar assim que você se inscreve.",
+          "E se você não estiver satisfeito com nosso serviço, entre em contato conosco (em inglês) por [hello@internxt.com](mailto:hello@internxt.com) e solicite um reembolso. Honraremos seu pedido, sem perguntas!"
         ]
       },
       {
         "question": "Como posso cancelar minha assinatura?",
         "answer": [
-          "Cancelar sua assinatura é simples. Abra o aplicativo da Internxt, navegue até configurações e selecione 'Cancelar Assinatura'. Essa ação encerrará sua assinatura imediatamente, e sua conta reverterá para um plano gratuito.",
+          "Cancelar sua assinatura é simples. Abra o aplicativo do Internxt, navegue até configurações e selecione 'Cancelar Assinatura'. Essa ação encerrará sua assinatura imediatamente, e sua conta reverterá para um plano gratuito.",
           "Observe que qualquer tempo restante em sua assinatura paga atual não será reembolsado ou transferido. Por exemplo, se você cancelar um plano anual com quatro meses restantes, perderá o acesso a esses quatro meses restantes.",
-          "Você também pode cancelar um plano pago e sua conta da Internxt através das configurações, o que excluirá sua assinatura, conta e todos os seus arquivos."
+          "Você também pode cancelar um plano pago e sua conta do Internxt através das configurações, o que excluirá sua assinatura, conta e todos os seus arquivos."
         ]
       },
       {
         "question": "Como entro em contato com o suporte?",
         "answer": [
-          "Não encontrou o que procurava? Você pode entrar em contato com nossa equipe de Sucesso do Cliente via chat ao vivo ou enviando um e-mail para [hello@internxt.com](mailto:hello@internxt.com)."
+          "Não encontrou o que procurava? Você pode entrar em contato com nossa equipe de Suporte via chat ao vivo ou enviando um e-mail para [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "A Internxt tem planos vitalícios?",
+        "question": "O Internxt tem planos vitalícios?",
         "answer": [
-          "Oferecemos planos vitalícios que você pode comprar em nosso site. Estes concedem acesso vitalício aos nossos planos, com até 10TB de armazenamento por um pagamento único e único."
+          "Oferecemos planos vitalícios que você pode comprar em nosso site. Estes concedem acesso vitalício aos nossos planos, com até 10TB de armazenamento por um pagamento único."
         ]
       },
       {
         "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
         "answer": [
-          "Sim, você pode adicionar tanto armazenamento quanto desejar à sua associação vitalícia à Internxt. Os planos vitalícios da Internxt são empilháveis. Basta comprá-los com o mesmo endereço de e-mail e entrar em contato conosco pelo hello@internxt.com para que possamos empilhá-los juntos para você na mesma conta."
+          "Sim, você pode adicionar tanto armazenamento quanto desejar à sua assinatura vitalícia ao Internxt. Os planos vitalícios do Internxt são empilháveis. Basta comprá-los com o mesmo endereço de e-mail e entrar em contato conosco por hello@internxt.com para que possamos empilhá-los juntos para você na mesma conta."
         ]
       }
     ]
   },
   "InvestorsSection": {
-    "title": "Marcas que confiam em nós"
+    "title": "Empresas que confiam em nós"
   },
   "TestimonialsSection": {
     "title": {
       "normal": "Centenas de milhares estão abandonando o iCloud, Google Drive e Dropbox pelo ",
-      "blue": "armazenamento na nuvem mais seguro - Internxt Drive"
+      "blue": "armazenamento na nuvem mais seguro - o Internxt Drive"
     },
     "cards": [
       {
@@ -351,18 +351,18 @@
       {
         "name": "Cristian M.",
         "enterprise": "Avaliação do GetApp",
-        "review": "A melhor alternativa criptografada ao Dropbox. Em geral: precisávamos de uma alternativa que nos permitisse armazenar arquivos de clientes e trabalho (arquivos de mídia social) e como a Internxt é amigável ao GDPR se encaixou perfeitamente para nós!"
+        "review": "A melhor alternativa criptografada ao Dropbox. Em geral: precisávamos de uma alternativa que nos permitisse armazenar arquivos de clientes e trabalho (arquivos de rede social) e como o Internxt é amigável á LGPD, se encaixou perfeitamente para nós!"
       },
       {
         "name": "Josep Carrizo",
         "enterprise": "Avaliação do Trustpilot",
-        "review": "Eu estava usando o Google Drive por vários anos, mas precisava de uma alternativa que me garantisse a privacidade dos meus dados. Algo que o Google ou outras plataformas conhecidas não podem fazer. É por isso que migrei para a Internxt."
+        "review": "Eu estava usando o Google Drive por vários anos, mas precisava de uma alternativa que me garantisse a privacidade dos meus dados. Algo que a Google ou outras plataformas conhecidas não conseguem fazer. É por isso que migrei para o Internxt."
       }
     ]
   },
   "CtaSection": {
     "title": "O armazenamento na nuvem mais privado do mundo",
-    "description": "Proteja as coisas realmente importantes com o armazenamento na nuvem seguro, privado e criptografado da Internxt.",
+    "description": "Proteja as coisas realmente importantes com o armazenamento na nuvem seguro, privado e criptografado do Internxt.",
     "cta": "Escolha seu plano"
   },
   "GetStartedSection": {
@@ -371,6 +371,6 @@
       "line1": "Nossos clientes estão muito felizes com o Internxt Drive, mas",
       "line2": "eles estão mais felizes sabendo que estão em total privacidade."
     },
-    "cta1": "Obtenha a Internxt"
+    "cta1": "Obtenha o Internxt"
   }
 }
