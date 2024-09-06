@@ -10,14 +10,14 @@
   },
   "LoginBanner": {
     "head": "Experimente antes de comprar.",
-    "title": "Obtenha a Internxt gratuitamente!",
+    "title": "Obtenha o Internxt gratuitamente!",
     "buttonText": "Inscreva-se agora",
     "card": {
-      "title1": "Obtenha 1GB grátis",
+      "title1": "Obtenha 1GB totalmente grátis",
       "title2": "Armazenamento na nuvem seguro e protegido",
       "title3": "Backup privado de arquivos e fotos",
       "title4": "Transferências criptografadas de ponta a ponta",
-      "title5": "Sem acesso não autorizado",
+      "title5": "Criptografia de conhecimento zero",
       "title6": "Disponível em todos os dispositivos"
     }
   },
@@ -36,14 +36,14 @@
   },
   "BFBanner": {
     "head": "Economize grande em privacidade.",
-    "title": "Oferta de Black Friday da Internxt",
+    "title": "Oferta de Black Friday do Internxt",
     "buttonText": "Obter a oferta",
     "card": {
       "title1": "Obtenha 60% de desconto no nosso plano de 2TB",
       "title2": "Armazenamento na nuvem seguro e protegido",
       "title3": "Backup privado de arquivos e fotos",
       "title4": "Transferências criptografadas de ponta a ponta",
-      "title5": "Sem acesso não autorizado",
+      "title5": "Criptografia de conhecimento zero",
       "title6": "Disponível até 5 de dezembro"
     }
   },
@@ -55,64 +55,64 @@
     "guarantee": "Garantia de devolução do dinheiro em 30 dias",
     "lastCta": "*Oferta é para contas gratuitas ou novos clientes",
     "features": [
-      "Economize em todos os planos da Internxt",
+      "Economize em todos os planos do Internxt",
       "Armazenamento na nuvem seguro e protegido",
-      "Tecnologia de conhecimento zero",
+      "Criptografia de conhecimento zero",
       "Código aberto e transparente",
       "Transferências criptografadas de ponta a ponta",
-      "Sem acesso não autorizado"
+      ""
     ]
   },
   "tryOutInternxtGeneralBanner": {
-    "title": "Experimente a Internxt",
+    "title": "Experimente o Internxt",
     "description": "Armazenamento na nuvem seguro baseado em total privacidade e criptografia.",
     "cta": "Inscreva-se gratuitamente"
   },
   "tryOutInternxtPasswordCheckerBanner": {
-    "title": "Experimente a Internxt",
-    "description": "Armazenamento de arquivos seguro com tecnologia protegida por senha para seus arquivos.",
+    "title": "Experimente o Internxt",
+    "description": "Armazenamento de arquivos seguro com tecnologia protegida por criptografia para seus arquivos.",
     "cta": "Inscreva-se gratuitamente"
   },
   "SignUpPCloudAlternativeBanner": {
     "line1": "Obtenha armazenamento na nuvem criptografado de ponta a ponta sem custo extra.",
-    "blueText": " Junte-se à Internxt gratuitamente"
+    "blueText": " Junte-se ao Internxt gratuitamente"
   },
   "SignUpPCloudAlternativeBanner2": {
     "line1": "para uma solução de armazenamento na nuvem mais segura, aberta e econômica.",
-    "blueText": "Mude para a Internxt "
+    "blueText": "Mude para o Internxt "
   },
   "SignUpPwdCheckerBanner": {
     "line1": "Use essa senha forte com uma",
-    "blueText": "conta gratuita da Internxt"
+    "blueText": "conta gratuita do Internxt"
   },
   "SignUpFileConverterBanner": {
     "line1": "Converta, armazene e proteja.",
-    "blueText": "Conversão de arquivos sem esforço com a Internxt"
+    "blueText": "Conversão de arquivos sem esforço com o Internxt"
   },
   "SignUpWebDAVBanner": {
-    "line1": "Use o CLI da Internxt para",
-    "blueText": "gerenciamento avançado de arquivos com a Internxt"
+    "line1": "Use o CLI do Internxt para",
+    "blueText": "gerenciamento avançado de arquivos com o Internxt"
   },
   "SignUpVPNBanner": {
     "line1": "Seguro enquanto você navega.",
-    "blueText": "Desfrute de uma experiência online mais privada com a Internxt"
+    "blueText": "Desfrute de uma experiência online mais privada com o Internxt"
   },
   "SignUpVirusScannerBanner": {
-    "line1": "Mantenha esses arquivos agora limpos seguros,",
-    "blueText": "junte-se à Internxt gratuitamente"
+    "line1": "Mantenha esses arquivos seguros,",
+    "blueText": "junte-se à Internxt de graça"
   },
   "SignUpByteConverterBanner": {
     "line1": "Obtenha bytes e bytes de armazenamento na nuvem seguro",
-    "blueText": "com a Internxt"
+    "blueText": "com o Internxt"
   },
-  "SignUpTempMailBanner": { "line1": "Mantenha seu email limpo e seus arquivos seguros", "blueText": "com a Internxt" },
+  "SignUpTempMailBanner": { "line1": "Mantenha seu email limpo e seus arquivos seguros", "blueText": "com o Internxt" },
   "SignUpSuccessStoriesBanner": {
     "line1": "Junte-se à luta pela privacidade e construa uma internet melhor",
-    "blueText": "com a Internxt"
+    "blueText": "com o Internxt"
   },
   "SignUpCyberAwareness": {
     "line1": "Agora que você está ciente, proteja-se com",
-    "blueText": "armazenamento na nuvem seguro da Internxt"
+    "blueText": "armazenamento na nuvem seguro do Internxt"
   },
   "SignUpPasswordGenerator": {
     "line1": "Proteja suas contas com senhas únicas,",
@@ -120,7 +120,7 @@
   },
   "privacyDirectoryBanner": {
     "line1": "Junte-se à luta pela privacidade e construa uma internet melhor",
-    "blueText": "com a Internxt"
+    "blueText": "com o Internxt"
   },
   "GeneralBanner": {
     "title": "Antes de ir embora...",
@@ -129,8 +129,8 @@
     "ctaCancel": "Não, obrigado"
   },
   "GoogleLPBanner": {
-    "line1": "Não deixe o Google lucrar com seus dados,",
-    "blueText": "mantenha seus arquivos privados com a Internxt"
+    "line1": "Não deixe a Google lucrar com seus dados,",
+    "blueText": "mantenha seus arquivos privados com o Internxt"
   },
   "BusinessBanner": {
     "line1": "Está interessado em armazenamento na nuvem privado",
@@ -140,7 +140,7 @@
     "cta": "Inscrever-se"
   },
   "GoogleKnows": {
-    "title": "Maximize suas configurações de privacidade do Google com nossa página O que o Google Sabe"
+    "title": "Maximize suas configurações de privacidade da Google com nossa página O que a Google Sabe"
   },
   "TopBarBanner": {
     "title": {
@@ -151,7 +151,7 @@
   },
   "lifetimeBanner": {
     "label": "Proteja seus arquivos para sempre",
-    "title": "Obtenha acesso vitalício ao armazenamento na nuvem seguro e privado com a Internxt!",
+    "title": "Obtenha acesso vitalício ao armazenamento na nuvem seguro e privado com o Internxt!",
     "cta": "Escolher plano",
     "guarantee": "Garantia de devolução do dinheiro em 30 dias"
   },
