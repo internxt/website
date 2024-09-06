@@ -7,7 +7,6 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-import Link from 'next/link';
 const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
@@ -103,21 +102,9 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           {/* Desktop animation/image */}
-          {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex"><Animation /></div> */}
-          <Link
-            href={'/lifetime'}
-            hrefLang={lang}
-            className="hidden h-full max-h-[530px] w-full max-w-[600px] translate-x-5 items-center justify-end pt-10 lg:flex"
-          >
-            <Image
-              src={getImage('/images/home/back-to-work/header-home.webp')}
-              alt="Back To Work Header"
-              priority
-              draggable={false}
-              width={600}
-              height={529}
-            />
-          </Link>
+          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <Animation />
+          </div>
         </div>
       </div>
     </section>

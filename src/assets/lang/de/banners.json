@@ -57,6 +57,13 @@
       "Kein unbefugter Zugang"
     ]
   },
+  "s3StorageBanner": {
+    "label": "Jetzt verfügbar!",
+    "title": "S3-kompatibler Objektspeicher",
+    "feat": ["Bis zu 80% günstiger als AWS", "Sicher, skalierbar, S3-kompatibel", "Native Rclone-Unterstützung"],
+    "cta": "Holen Sie sich 1TB kostenlos",
+    "offerEnds": "*Angebot nur für den ersten Monat"
+  },
   "tryOutInternxtGeneralBanner": {
     "title": "Versuche Internxt",
     "description": "Sicherer Cloud-Speicher basierend auf absoluter Privatsphäre und Verschlüsselung.",
@@ -104,8 +111,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "78% RABATT auf alle Lebenszeitpläne!",
-      "normalText": "Zurück zur Arbeit, zurück zur Privatsphäre! ",
+      "boldText": "Bis zu 75% Rabatt auf alle Speicherpläne!",
+      "normalText": "Erhalten Sie vollständige Privatsphäre für weniger: ",
       "cta": "Plan wählen"
     }
   },

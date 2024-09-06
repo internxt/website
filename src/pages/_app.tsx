@@ -13,6 +13,7 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
+import S3Banner from '@/components/banners/S3Banner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -39,7 +40,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const shouldShowFeaturesBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
@@ -70,11 +70,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.TopBanner,
@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -91,6 +91,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           {
             key: GlobalDialog.BeforeYouGoBanner,
             isOpen: false,
+          },
+          {
+            key: GlobalDialog.S3Banner,
+            isOpen: true,
           },
         ]}
       >
@@ -124,7 +128,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
-          {shouldShowBanner ? <BottomBanner /> : undefined}
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <S3Banner />
+            </>
+          ) : undefined}
           {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
         </div>
         <FreeCardPromoBanner />
