@@ -16,8 +16,8 @@
     }
   },
   "lifetimeDescription": "Compre uma vez e obtenha privacidade e segurança para sempre.",
-  "planDescription": "Todos os planos da Internxt são completamente equipados com acesso total a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
-  "businessDescription": "Garanta a segurança dos dados empresariais com os planos de armazenamento na nuvem criptografados da Internxt.",
+  "planDescription": "Todos os planos do Internxt são completamente equipados com acesso total a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
+  "businessDescription": "Garanta a segurança dos dados empresariais com os planos de armazenamento na nuvem criptografados do Internxt.",
   "billingFrequency": {
     "monthly": "Mensal",
     "annually": "Anual",
@@ -155,7 +155,7 @@
         "Compartilhamento de arquivos e pastas criptografados",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 10",
-        "Conformidade com o GDPR",
+        "Conformidade com o LGPD",
         "Envie arquivos de até 5GB",
         "Gerencie a faturamento e pagamentos da conta",
         "Suporte ao cliente premium"
@@ -165,7 +165,7 @@
         "Compartilhamento de arquivos e pastas criptografados",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 100",
-        "Conformidade com o GDPR",
+        "Conformidade com o LGPD",
         "Envie arquivos de até 20GB",
         "Gerencie a faturamento e pagamentos da conta",
         "Suporte ao cliente premium"
