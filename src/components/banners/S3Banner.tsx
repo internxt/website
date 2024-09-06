@@ -42,7 +42,7 @@ const S3Banner = () => {
   }, []);
 
   const handleOnClick = () => {
-    router.push('/pricing');
+    router.push('/cloud-object-storage');
     handleClose();
   };
 
