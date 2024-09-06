@@ -37,7 +37,7 @@ const S3Banner = () => {
     } else if (shouldShowBanner) {
       setTimeout(() => {
         setShowBanner(true);
-      }, 1000);
+      }, 10000);
     }
   }, []);
 
