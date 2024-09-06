@@ -2,22 +2,22 @@
   {
     "id": "home",
     "title": "Internxt – Armazenamento na Nuvem Privado e Seguro",
-    "description": "Defenda a privacidade, mude para a Internxt. Os serviços de armazenamento na nuvem de código aberto da Internxt protegem seu direito à privacidade. Internxt Drive, Photos, Send e mais."
+    "description": "Defenda a privacidade, mude para o Internxt. Os serviços de armazenamento na nuvem de código aberto do Internxt protegem seu direito à privacidade. Internxt Drive, Photos, Send e mais."
   },
   {
     "id": "business",
     "title": "Internxt — Armazenamento na Nuvem Privado e Criptografado para Empresas",
-    "description": "Previna perda de dados com o armazenamento na nuvem criptografado da Internxt para empresas — inscreva-se para se beneficiar da proteção de dados na nuvem líder do setor."
+    "description": "Previna perda de dados com o armazenamento na nuvem criptografado do Internxt para empresas — inscreva-se para se beneficiar da proteção de dados na nuvem líder do setor."
   },
   {
     "id": "family",
-    "title": "Internxt para Plano Familiar — O Armazenamento na Nuvem para Famílias Mais Seguro",
-    "description": "Gerencie a privacidade online da sua família com nosso armazenamento na nuvem da Internxt para planos familiares. Armazene, organize e compartilhe de forma segura os documentos privados da sua família em um só lugar."
+    "title": "Internxt para Famílias — O Armazenamento na Nuvem para Famílias Mais Seguro",
+    "description": "Gerencie a privacidade online da sua família com nosso armazenamento na nuvem do Internxt para planos familiares. Armazene, organize e compartilhe de forma segura os documentos privados da sua família em um só lugar."
   },
   {
     "id": "cloud-object-storage",
     "title": "Internxt — Armazenamento de Objetos",
-    "description": "A Internxt fornece armazenamento de objetos privado e acessível para armazenar dados de forma segura usando o protocolo S3 para gerenciar suas necessidades de armazenamento efetivamente."
+    "description": "O Internxt fornece armazenamento de objetos privado e acessível para armazenar dados de forma segura usando o protocolo S3 para gerenciar suas necessidades de armazenamento efetivamente."
   },
   {
     "id": "drive",
@@ -32,7 +32,7 @@
   {
     "id": "media-area",
     "title": "Área de Mídia | Internxt",
-    "description": "Área de Mídia da Internxt - Saiba mais sobre os produtos e a missão da Internxt e baixe nosso kit de mídia de capturas de tela e mockups para a mídia e jornalistas."
+    "description": "Área de Mídia do Internxt - Saiba mais sobre os produtos e a missão do Internxt e baixe nosso kit de mídia de capturas de tela e mockups para a mídia e jornalistas."
   },
   {
     "id": "photos",
@@ -41,28 +41,28 @@
   },
   {
     "id": "pricing",
-    "title": "Preços da Internxt – Obtenha 1GB Grátis!",
-    "description": "Inscreva-se para uma assinatura de armazenamento na nuvem seguro da Internxt e obtenha acesso ao nosso boletim informativo mensal repleto das últimas notícias e atualizações tecnológicas."
+    "title": "Preços do Internxt – Obtenha 1GB Grátis!",
+    "description": "Inscreva-se para uma assinatura de armazenamento na nuvem seguro do Internxt e obtenha acesso ao nosso boletim mensal repleto das últimas notícias e atualizações tecnológicas."
   },
   {
     "id": "about",
     "title": "Internxt – Sobre nós",
-    "description": "Conheça a equipe da Internxt. Fran Villalba Segarra, Fundador e CEO da Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+    "description": "Conheça a equipe do Internxt. Fran Villalba Segarra, Fundador e CEO do Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
   },
   {
     "id": "legal",
     "title": "Internxt – Termos e Condições Legais de Uso",
-    "description": "Termos e condições legais de uso da Internxt. Leia todos os termos e condições onde explicamos como processamos seus dados."
+    "description": "Termos e condições legais de uso do Internxt. Leia todos os termos e condições onde explicamos como processamos seus dados."
   },
   {
     "id": "privacy",
-    "title": "Privacidade na Internxt – Ferramentas e Recursos Gratuitos de Privacidade",
-    "description": "Ferramentas gratuitas para proteger sua privacidade: Verificador de Senhas, Scanner de Vírus, Diretório de Organizações de Privacidade e mais. A Internxt defende seu direito à privacidade."
+    "title": "Privacidade no Internxt – Ferramentas e Recursos Gratuitos de Privacidade",
+    "description": "Ferramentas gratuitas para proteger sua privacidade: Verificador de Senhas, Scanner de Vírus, Diretório de Organizações de Privacidade e mais. O Internxt defende seu direito à privacidade."
   },
   {
     "id": "open-source",
     "title": "Internxt – Armazenamento na Nuvem Seguro e de Código Aberto",
-    "description": "Conheça os benefícios do software de código aberto (OSS) e por que a Internxt o utiliza para fornecer armazenamento na nuvem que protege e garante seus dados."
+    "description": "Conheça os benefícios do software de código aberto (OSS) e por que o Internxt o utiliza para fornecer armazenamento na nuvem que protege e garante seus dados."
   },
   {
     "id": "virus-scanner",
@@ -72,67 +72,67 @@
   {
     "id": "temporary-email",
     "title": "Temp Mail - Email Temporário Gratuito",
-    "description": "Mantenha sua conta de e-mail livre de e-mails indesejados com o Email Temporário Gratuito da Internxt. O Temp Mail fornece um endereço de e-mail temporário, seguro, anônimo e gratuito."
+    "description": "Mantenha sua conta de e-mail livre de e-mails indesejados com o Email Temporário Gratuito do Internxt. O Temp Mail fornece um endereço de e-mail temporário, seguro, anônimo e gratuito."
   },
   {
     "id": "converter-tool",
     "title": "Conversor de Bytes: GB para TB | Internxt",
-    "description": "Conversor de Bytes gratuito da Internxt: Descubra quanto espaço de armazenamento você tem, quantos gigabytes estão em um terabyte e converta de/para B, KB, MB, GB e TB."
+    "description": "Conversor de Bytes gratuito do Internxt: Descubra quanto espaço de armazenamento você tem, quantos gigabytes estão em um terabyte e converta de/para B, KB, MB, GB e TB."
   },
   {
     "id": "lifetime",
-    "title": "Planos Vitalícios da Internxt – Armazenamento na Nuvem Seguro para a Vida!",
-    "description": "Oferta Vitalícia da Internxt: Pague uma vez e obtenha 2TB, 5TB ou 10TB de armazenamento na nuvem seguro para sempre. Inscreva-se ou atualize para um plano vitalício da Internxt para privacidade vitalícia! Apenas por tempo limitado."
+    "title": "Planos Vitalícios do Internxt – Armazenamento na Nuvem Seguro para a Vida!",
+    "description": "Oferta Vitalícia do Internxt: Pague uma vez e obtenha 2TB, 5TB ou 10TB de armazenamento na nuvem seguro para sempre. Inscreva-se ou migre para um plano vitalício do Internxt para privacidade vitalícia! Apenas por tempo limitado."
   },
   {
     "id": "partner-discount",
-    "title": "Ofertas de Parceiros - Economize muito no armazenamento na nuvem da Internxt!",
-    "description": "Resgate seu código de cupom exclusivo fornecido por um parceiro certificado da Internxt. Obtenha um desconto especial no armazenamento na nuvem seguro da Internxt."
+    "title": "Ofertas de Parceiros - Economize muito no armazenamento na nuvem do Internxt!",
+    "description": "Resgate seu código de cupom exclusivo fornecido por um parceiro certificado do Internxt. Obtenha um desconto especial no armazenamento na nuvem seguro do Internxt."
   },
   {
     "id": "affiliates",
     "title": "Programa de Afiliados | Internxt",
-    "description": "Junte-se ao programa de marketing de afiliados da Internxt! Como começar mais detalhes do programa, benefícios e vantagens."
+    "description": "Junte-se ao programa de marketing de afiliados do Internxt! Como começar mais detalhes do programa, benefícios e vantagens."
   },
   {
     "id": "pcmag",
-    "title": "Oferta Especial Vitalícia da Internxt para Usuários da PCMag",
-    "description": "A Internxt está oferecendo 80% de desconto em todos os planos de armazenamento na nuvem vitalícios para clientes da PCMag. Proteja seus arquivos para a vida toda com um único pagamento."
+    "title": "Oferta Especial Vitalícia do Internxt para Usuários da PCMag",
+    "description": "O Internxt está oferecendo 80% de desconto em todos os planos de armazenamento na nuvem vitalícios para clientes da PCMag. Proteja seus arquivos para a vida toda com um único pagamento."
   },
   {
     "id": "oneplan",
     "title": "Internxt — Plano de Armazenamento na Nuvem Vitalício de 5TB",
-    "description": "Obtenha um Plano Vitalício de 5TB da Internxt para manter seus arquivos privados e nunca mais se preocupar com espaço novamente."
+    "description": "Obtenha um Plano Vitalício de 5TB do Internxt para manter seus arquivos privados e nunca mais se preocupar com espaço novamente."
   },
   {
     "id": "techradar-discount",
-    "title": "Ofertas de Parceiros da TechRadar - Economize muito no armazenamento na nuvem da Internxt!",
-    "description": "Resgate seu código de cupom exclusivo fornecido pelo nosso parceiro TechRadar. Obtenha um desconto especial no armazenamento na nuvem seguro da Internxt."
+    "title": "Ofertas de Parceiros da TechRadar - Economize muito no armazenamento na nuvem do Internxt!",
+    "description": "Resgate seu código de cupom exclusivo fornecido pelo nosso parceiro TechRadar. Obtenha um desconto especial no armazenamento na nuvem seguro do Internxt."
   },
   {
     "id": "comparison",
     "title": "Internxt – Comparação de Armazenamento na Nuvem",
-    "description": "Compare a Internxt com todos os outros serviços. A Internxt é a alternativa mais privada e segura ao Google Drive, Dropbox e outros serviços."
+    "description": "Compare o Internxt com todos os outros serviços. O Internxt é a alternativa mais privada e segura ao Google Drive, Dropbox e outros serviços."
   },
   {
     "id": "dropbox-alternative",
     "title": "Internxt — Uma Alternativa Segura, Criptografada e de Código Aberto ao Dropbox",
-    "description": "O armazenamento na nuvem da Internxt é uma alternativa segura ao Dropbox. Protegemos seus arquivos com criptografia de ponta a ponta, software de código aberto e recursos focados em privacidade."
+    "description": "O armazenamento na nuvem do Internxt é uma alternativa segura ao Dropbox. Protegemos seus arquivos com criptografia de ponta a ponta, software de código aberto e recursos focados em privacidade."
   },
   {
     "id": "pcloud-alternative",
     "title": "Internxt - Uma Alternativa Segura, Criptografada, de Código Aberto ao pCloud",
-    "description": "O armazenamento na nuvem da Internxt é uma alternativa segura ao pCloud. Protegemos seus arquivos com criptografia de ponta a ponta, software de código aberto e recursos focados em privacidade."
+    "description": "O armazenamento na nuvem do Internxt é uma alternativa segura ao pCloud. Protegemos seus arquivos com criptografia de ponta a ponta, software de código aberto e recursos focados em privacidade."
   },
   {
     "id": "black-friday",
-    "title": "Oferta de Black Friday da Internxt – Promoção de Armazenamento na Nuvem!",
-    "description": "Oferta de Black Friday da Internxt 2023: Aproveite um desconto de 91% em todos os nossos planos anuais. Economize muito no armazenamento na nuvem da Internxt hoje!"
+    "title": "Oferta de Black Friday do Internxt – Promoção de Armazenamento na Nuvem!",
+    "description": "Oferta de Black Friday do Internxt 2023: Aproveite um desconto de 91% em todos os nossos planos anuais. Economize muito no armazenamento na nuvem do Internxt hoje!"
   },
   {
     "id": "cloudwards",
-    "title": "Oferta Especial Vitalícia da Internxt para Usuários da Cloudwards",
-    "description": "A Internxt está oferecendo 80% de desconto em todos os planos de armazenamento na nuvem vitalícios para clientes da Cloudwards. Proteja seus arquivos para a vida toda com um único pagamento."
+    "title": "Oferta Especial Vitalícia do Internxt para Usuários da Cloudwards",
+    "description": "O Internxt está oferecendo 80% de desconto em todos os planos de armazenamento na nuvem vitalícios para clientes da Cloudwards. Proteja seus arquivos para a vida toda com um único pagamento."
   },
   {
     "id": "guru99",
@@ -147,17 +147,17 @@
   {
     "id": "landing",
     "title": "Internxt – O Armazenamento na Nuvem Mais Seguro",
-    "description": "A Internxt fornece serviços seguros, privados e criptografados de nuvem como o Internxt Drive e o Internxt Photos."
+    "description": "O Internxt fornece serviços seguros, privados e criptografados de nuvem como o Internxt Drive e o Internxt Photos."
   },
   {
     "id": "privacy-directory",
     "title": "Internxt – Diretório de Organizações, Instituições e ONGs de Privacidade",
-    "description": "Diretório de organizações de direitos digitais, instituições e ONGs que trabalham junto com a Internxt para avançar, apoiar e defender a privacidade para todos."
+    "description": "Diretório de organizações de direitos digitais, instituições e ONGs que trabalham junto com o Internxt para avançar, apoiar e defender a privacidade para todos."
   },
   {
     "id": "password-checker",
     "title": "Internxt – Verificador de Senhas Seguro e Gratuito",
-    "description": "Verificador gratuito de segurança de senhas. Verifique a força das suas senhas com a ferramenta online segura da Internxt."
+    "description": "Verificador gratuito de segurança de senhas. Verifique a força das suas senhas com a ferramenta online segura do Internxt."
   },
   {
     "id": "password-generator",
@@ -177,32 +177,32 @@
   {
     "id": "use-cases",
     "title": "Casos de Uso | Internxt",
-    "description": "Descubra como o armazenamento na nuvem da Internxt ofereceu a indivíduos e empresas soluções eficazes para melhorar a segurança e privacidade online nestes exemplos de estudos de caso bem-sucedidos."
+    "description": "Descubra como o armazenamento na nuvem do Internxt ofereceu a indivíduos e empresas soluções eficazes para melhorar a segurança e privacidade online nestes exemplos de estudos de caso bem-sucedidos."
   },
   {
     "id": "internxt-for-journalists",
     "title": "Internxt para jornalistas | Internxt",
-    "description": "Com estes exemplos detalhados de estudo de caso, aprenda como o armazenamento na nuvem privado da Internxt beneficia jornalistas e escritores, ajudando-os a armazenar informações de forma segura."
+    "description": "Com estes exemplos detalhados de estudo de caso, aprenda como o armazenamento na nuvem privado do Internxt beneficia jornalistas e escritores, ajudando-os a armazenar informações de forma segura."
   },
   {
     "id": "internxt-for-digital-nomads",
     "title": "Internxt para nômades digitais | Internxt",
-    "description": "Descubra por que a Internxt é a escolha ideal em ajudar nômades digitais a proteger seus arquivos e proteger sua privacidade online enquanto trabalham em trânsito."
+    "description": "Descubra por que o Internxt é a escolha ideal em ajudar nômades digitais a proteger seus arquivos e proteger sua privacidade online enquanto trabalham em trânsito."
   },
   {
     "id": "internxt-for-students",
     "title": "Internxt para estudantes | Internxt",
-    "description": "Use estes estudos de caso para aprender como os estudantes estão utilizando a Internxt para organizar, colaborar e proteger seus projetos com um serviço seguro de nuvem."
+    "description": "Use estes estudos de caso para aprender como os estudantes estão utilizando o Internxt para organizar, colaborar e proteger seus projetos com um serviço seguro de nuvem."
   },
   {
     "id": "internxt-for-photographers",
     "title": "Internxt para fotógrafos | Internxt",
-    "description": "Procurando uma solução de nuvem para armazenar imagens e fotos de forma segura? Confira estes casos de uso sobre como a Internxt pode ser útil para fotógrafos."
+    "description": "Procurando uma solução de nuvem para armazenar imagens e fotos de forma segura? Confira estes casos de uso sobre como o Internxt pode ser útil para fotógrafos."
   },
   {
     "id": "internxt-for-tech-companies",
     "title": "Internxt para empresas de tecnologia | Internxt",
-    "description": "Descubra como a Internxt ajudou eficazmente empresas de tecnologia a proteger informações sensíveis para atender às suas necessidades de armazenamento de dados."
+    "description": "Descubra como o Internxt ajudou eficazmente empresas de tecnologia a proteger informações sensíveis para atender às suas necessidades de armazenamento de dados."
   },
   {
     "id": "internxt-for-lawyers",
@@ -211,28 +211,28 @@
   },
   {
     "id": "internxt-library",
-    "title": "Biblioteca Internxt: eBooks Gratuitos sobre Privacidade Online | Internxt",
-    "description": "Aprenda os fundamentos da privacidade online para indivíduos e pais com a biblioteca de eBooks gratuitos da Internxt para garantir uma experiência na internet mais segura e protegida."
+    "title": "Biblioteco Internxt: eBooks Gratuitos sobre Privacidade Online | Internxt",
+    "description": "Aprenda os fundamentos da privacidade online para indivíduos e pais com a biblioteca de eBooks gratuitos do Internxt para garantir uma experiência na internet mais segura e protegida."
   },
   {
     "id": "online-privacy-ebook",
     "title": "eBook Gratuito sobre Privacidade Online para Indivíduos | Internxt",
-    "description": "O eBook gratuito sobre privacidade online da Internxt é projetado para ajudar os indivíduos a se protegerem contra ameaças cibernéticas e proteger seus dados online. Baixe-o aqui."
+    "description": "O eBook gratuito sobre privacidade online do Internxt é projetado para ajudar os indivíduos a se protegerem contra ameaças cibernéticas e proteger seus dados online. Baixe-o aqui."
   },
   {
     "id": "child-safety-ebook",
     "title": "eBook Gratuito sobre Segurança Infantil para Pais | Internxt",
-    "description": "O eBook gratuito sobre segurança infantil da Internxt oferece dicas para pais para proteger a privacidade online de seus filhos e protegê-los de ameaças na internet. Baixe-o aqui."
+    "description": "O eBook gratuito sobre segurança infantil do Internxt oferece dicas para pais para proteger a privacidade online de seus filhos e protegê-los de ameaças na internet. Baixe-o aqui."
   },
   {
     "id": "cloud-storage-for-education",
     "title": "Desconto em Armazenamento na Nuvem para Educação | Internxt",
-    "description": "Desconto em armazenamento na nuvem da Internxt para educação, escolas e universidades. 50% de desconto em qualquer plano de assinatura de armazenamento na nuvem. Mantenha seus arquivos seguros com a Internxt!"
+    "description": "Desconto em armazenamento na nuvem do Internxt para educação, escolas e universidades. 50% de desconto em qualquer plano de assinatura de armazenamento na nuvem. Mantenha seus arquivos seguros com o Internxt!"
   },
   {
     "id": "newsletter-subscribe",
-    "title": "Boletim Informativo sobre Privacidade Online | Internxt",
-    "description": "Assine o boletim informativo sobre privacidade online da Internxt para receber as últimas atualizações, dicas e recursos para ajudá-lo a proteger seus dados e segurança online."
+    "title": "Boletim sobre Privacidade Online | Internxt",
+    "description": "Assine o boletim informativo sobre privacidade online do Internxt para receber as últimas atualizações, dicas e recursos para ajudá-lo a proteger seus dados e segurança online."
   },
   {
     "id": "webDAV",
@@ -246,102 +246,102 @@
   },
   {
     "id": "vpn-extension",
-    "title": "VPN Gratuita e Segura da Internxt | Internxt",
-    "description": "Extensão de VPN gratuita da Internxt para Chrome: navegação segura, Wi-Fi criptografado e proteção de privacidade. Baixe nossa VPN segura para proteger seus dados online."
+    "title": "VPN Gratuito e Segura do Internxt | Internxt",
+    "description": "Extensão de VPN gratuita do Internxt para Chrome: navegação segura, Wi-Fi criptografado e proteção de privacidade. Baixe nossa VPN segura para proteger seus dados online."
   },
   {
     "id": "file-converter",
     "title": "Conversor de Arquivos Online | Internxt",
-    "description": "Conversor de arquivos online gratuito da Internxt. Converta seus arquivos para diferentes formatos e tamanhos. Converta PDF, Word, Excel e mais."
+    "description": "Conversor de arquivos online gratuito do Internxt. Converta seus arquivos para diferentes formatos e tamanhos. Converta PDF, Word, Excel e mais."
   },
   {
     "id": "word-to-pdf",
     "title": "Converta Arquivos PDF para Word Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PDF para Word gratuitamente. Nosso conversor de PDF para Word é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PDF para Word gratuitamente. Nosso conversor de PDF para Word é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "png-to-pdf",
     "title": "Converta Arquivos PNG para PDF Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PNG para PDF gratuitamente. Nosso conversor de PNG para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PNG para PDF gratuitamente. Nosso conversor de PNG para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "html-to-pdf",
     "title": "Converta Arquivos HTML para PDF Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos HTML para PDF gratuitamente. Nosso conversor de HTML para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos HTML para PDF gratuitamente. Nosso conversor de HTML para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "excel-to-pdf",
     "title": "Converta Arquivos EXCEL para PDF Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos EXCEL para PDF gratuitamente. Nosso conversor de EXCEL para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos EXCEL para PDF gratuitamente. Nosso conversor de EXCEL para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "pdf-to-html",
     "title": "Converta Arquivos PDF para HTML Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PDF para HTML gratuitamente. Nosso conversor de PDF para HTML é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PDF para HTML gratuitamente. Nosso conversor de PDF para HTML é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "word-to-html",
     "title": "Converta Arquivos DOCX para HTML Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos DOCX para HTML gratuitamente. Nosso conversor de DOCX para HTML é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos DOCX para HTML gratuitamente. Nosso conversor de DOCX para HTML é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "pptx-to-pdf",
     "title": "Converta Arquivos PPTX para PDF Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PPTX para PDF gratuitamente. Nosso conversor de PPTX para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PPTX para PDF gratuitamente. Nosso conversor de PPTX para PDF é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "jpg-to-png",
     "title": "Converta Arquivos JPG para PNG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos JPG para PNG gratuitamente. Nosso conversor de JPG para PNG é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos JPG para PNG gratuitamente. Nosso conversor de JPG para PNG é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "jpg-to-heic",
     "title": "Converta Imagens JPG para HEIC Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte suas imagens JPG para HEIC gratuitamente. Nosso conversor de JPG para HEIC é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte suas imagens JPG para HEIC gratuitamente. Nosso conversor de JPG para HEIC é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "jpg-to-webp",
     "title": "Converter Arquivos JPG para WEBP Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos JPG para WEBP gratuitamente. Nosso conversor de JPG para WEBP é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos JPG para WEBP gratuitamente. Nosso conversor de JPG para WEBP é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "png-to-webp",
     "title": "Converter Arquivos PNG para WEBP Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PNG para WEBP gratuitamente. Nosso conversor de PNG para WEBP é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PNG para WEBP gratuitamente. Nosso conversor de PNG para WEBP é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "png-to-jpg",
     "title": "Converter Arquivos PNG para JPG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos PNG para JPG gratuitamente. Nosso conversor de PNG para JPG é uma maneira fácil, rápida e segura de converter seus arquivos."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos PNG para JPG gratuitamente. Nosso conversor de PNG para JPG é uma maneira fácil, rápida e segura de converter seus arquivos."
   },
   {
     "id": "png-to-heic",
     "title": "Converter Imagens PNG para HEIC Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte suas imagens PNG para HEIC gratuitamente. Nosso conversor de PNG para HEIC é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte suas imagens PNG para HEIC gratuitamente. Nosso conversor de PNG para HEIC é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "webp-to-png",
     "title": "Converter Arquivos WEBP para PNG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos WEBP para PNG gratuitamente. Nosso conversor de WEBP para PNG é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos WEBP para PNG gratuitamente. Nosso conversor de WEBP para PNG é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "webp-to-jpg",
     "title": "Converter Arquivos WEBP para JPG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte arquivos WEBP para JPG gratuitamente. Nosso conversor de WEBP para JPG é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte arquivos WEBP para JPG gratuitamente. Nosso conversor de WEBP para JPG é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "heic-to-jpg",
     "title": "Converter Imagens HEIC para JPG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte suas imagens HEIC para JPG gratuitamente. Nosso conversor de HEIC para JPG é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte suas imagens HEIC para JPG gratuitamente. Nosso conversor de HEIC para JPG é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "heic-to-png",
     "title": "Converter Imagens HEIC para PNG Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte suas imagens HEIC para PNG gratuitamente. Nosso conversor de HEIC para PNG é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte suas imagens HEIC para PNG gratuitamente. Nosso conversor de HEIC para PNG é rápido e seguro, mantendo seus arquivos 100% privados."
   },
   {
     "id": "image-to-text",
     "title": "Converter Imagens para Arquivos de Texto Online Gratuitamente | Internxt",
-    "description": "O Conversor de Arquivos da Internxt converte suas imagens para arquivos de texto gratuitamente. Nosso conversor de imagem para texto é rápido e seguro, mantendo seus arquivos 100% privados."
+    "description": "O Conversor de Arquivos do Internxt converte suas imagens para arquivos de texto gratuitamente. Nosso conversor de imagem para texto é rápido e seguro, mantendo seus arquivos 100% privados."
   }
 ]
