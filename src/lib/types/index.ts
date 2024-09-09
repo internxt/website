@@ -103,7 +103,6 @@ export enum PromoCodeName {
   LockerCoupon = 'LOCKER_COUPON_CODE',
   StartPageCoupon = 'STARTPAGE_COUPON_CODE',
   Lifetime78OFF = 'BACK2WORK',
-  CyberAwarenessPromoCode = 'CYBER80',
 }
 
 export interface PromoCodeProps {

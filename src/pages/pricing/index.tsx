@@ -47,8 +47,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     currencyValue,
     coupon: individualCoupon,
     businessCoupon,
+    lifetimeCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.CyberAwarenessPromoCode,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.Lifetime78OFF,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -109,7 +111,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : individualCoupon?.name;
+    const b2cCoupon = isCheckoutForLifetime ? lifetimeCoupon?.name : individualCoupon?.name;
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : b2cCoupon;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
@@ -136,7 +139,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-            lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff,
           }}
           lang={lang}
           products={products}

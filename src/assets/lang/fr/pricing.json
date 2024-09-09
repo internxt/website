@@ -41,13 +41,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80%",
-      "title": "Mois de la sensibilisation à la cybersécurité",
-      "subtitle": "Plans mensuels, annuels et à vie",
+      "label": "Économisez 78%",
+      "title": "Offres de retour au travail d'Internxt !",
+      "subtitle": "Obtenez un stockage à vie pour moins cher !",
       "cta": "Choisir un plan",
-      "cta2": "Obtenez 78% de réduction",
+      "cta2": "Profitez de 78% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients"
     },
     "planTitles": {
       "individuals": "Plans individuels",

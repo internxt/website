@@ -11,9 +11,9 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden px-5`}>
       <div
-        className={`flex w-full max-w-screen-xl flex-col justify-between rounded-[32px] bg-primary lg:w-full lg:flex-row`}
+        className={`flex w-full max-w-screen-xl flex-col justify-between rounded-[32px] bg-primary lg:max-h-96 lg:w-full lg:flex-row`}
       >
-        <div className="flex max-w-[620px] flex-col items-center gap-4 px-3 py-10 text-center lg:items-start lg:pl-10 lg:text-left">
+        <div className="flex w-max max-w-[500px] flex-col items-center gap-4 px-3 py-10 text-center lg:items-start lg:pl-10 lg:text-left">
           <div className="flex w-max rounded-2xl border-4 border-primary/7 bg-white px-4 py-2">
             <p className="text-2xl font-bold text-primary md:text-5xl">{textContent.label}</p>
           </div>
@@ -34,11 +34,11 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
           </div>
           <p className="text-sm font-medium text-white">{textContent.lastCta}</p>
         </div>
-        <div className="hidden flex-row justify-end lg:flex">
+        <div className="hidden w-screen max-w-[600px] flex-row justify-end lg:flex">
           <Image
-            src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_pricing.webp')}
-            width={511}
-            height={384}
+            src={getImage('/images/home/back-to-work/pricing-banner.webp')}
+            width={600}
+            height={100}
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
             className="rounded-r-[32px]"
@@ -46,7 +46,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
         </div>
         <div className="flex h-full w-full flex-col object-cover lg:hidden">
           <Image
-            src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_mobile.webp')}
+            src={getImage('/images/home/back-to-work/mobile-header.webp')}
             width={377}
             height={190}
             alt="Euro 2024 image"
