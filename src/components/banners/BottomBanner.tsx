@@ -73,10 +73,10 @@ const BottomBanner = () => {
         };
       case 'zh':
         return {
-          title1: '节省 78%',
+          title1: '节省80%',
           title2: {
-            line1: '聪明工作，',
-            line2: '不是辛苦工作！',
+            line1: '保护你的',
+            line2: '世界！',
           },
         };
       case 'zh-tw':
