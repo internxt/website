@@ -80,7 +80,7 @@ const PartnerDiscount = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex flex-col space-y-10">
+          <div className="flex flex-col gap-10">
             <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
@@ -103,9 +103,7 @@ const PartnerDiscount = ({
               <Button
                 className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
                 text={langJson.HeroSection.cta}
-                onClick={() => {
-                  window.scrollTo({ top: document.getElementById('priceTable')?.offsetTop, behavior: 'smooth' });
-                }}
+                onClick={() => (window.location.hash = '#priceTable')}
               />
             </div>
           </div>
@@ -118,20 +116,22 @@ const PartnerDiscount = ({
         }}
       />
 
-      <PricingSectionWrapper
-        textContent={langJson.PaymentSection}
-        decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-        }}
-        lang={lang}
-        products={products}
-        popularPlanBySize={'5TB'}
-        loadingCards={loadingCards}
-        startFromInterval={Interval.Year}
-        hidePlanSelectorAndSwitch
-        hideFreeCard
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-      />
+      <div className="-mt-20">
+        <PricingSectionWrapper
+          textContent={langJson.PaymentSection}
+          decimalDiscount={{
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          }}
+          lang={lang}
+          products={products}
+          popularPlanBySize={'5TB'}
+          loadingCards={loadingCards}
+          startFromInterval={Interval.Year}
+          hidePlanSelectorAndSwitch
+          hideFreeCard
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+        />
+      </div>
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
 
