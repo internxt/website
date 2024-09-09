@@ -30,7 +30,7 @@ const PartnerDiscount = ({
   navbarLang,
   footerLang,
 }: PartnerDiscountProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'partner-discount');
   const lang = 'en';
   const {
     products,
