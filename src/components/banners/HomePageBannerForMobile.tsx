@@ -29,7 +29,7 @@ export const HomePageBannerForMobile = () => {
             onClick={() => {
               router.push('/pricing');
             }}
-            className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-primary hover:bg-gray-5"
+            className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-gray-100 hover:bg-gray-5"
           >
             {textContent.tableSection.ctaBanner.cta}
           </button>
@@ -42,11 +42,11 @@ export const HomePageBannerForMobile = () => {
       <div className="flex h-full w-full flex-col">
         <div className="flex h-full w-full flex-col">
           <Image
-            src={getImage('/images/home/back-to-work/mobile-header.webp')}
-            width={377}
-            height={190}
-            alt="Euro 2024 image"
-            className="flex h-full object-cover"
+            src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_mobile.webp')}
+            width={300}
+            height={200}
+            alt="Cyber Awareness 2024"
+            className="flex h-full"
           />
         </div>
       </div>

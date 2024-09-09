@@ -31,13 +31,13 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "節省 78%",
-      "title": "Internxt 回歸工作優惠！",
-      "subtitle": "以更低的價格獲得終身存儲空間！",
+      "label": "節省80%",
+      "title": "網絡安全意識月",
+      "subtitle": "月度、年度和終身計劃",
       "cta": "選擇計劃",
-      "cta2": "享受 78% 的折扣",
+      "cta2": "享受78%的折扣",
       "guarantee": "30天退款保證",
-      "lastCta": "*優惠僅適用於免費帳戶或新客戶"
+      "lastCta": "*優惠僅適用於免費賬戶或新客戶"
     },
     "save": "節省高達",
     "planTitles": {

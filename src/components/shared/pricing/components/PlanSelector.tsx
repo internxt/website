@@ -23,11 +23,12 @@ export const PlanSelector = ({
       onClick={() => {
         onPlanTypeChange('Individuals', Interval.Year);
       }}
-      className={`rounded-lg px-6 py-0.5 font-semibold ${
+      className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
         activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
       {textContent.billingFrequency.individual}
+      <SealPercent size={24} className="text-green" weight="fill" />
     </button>
     <button
       type="button"

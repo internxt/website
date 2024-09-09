@@ -23,11 +23,11 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              💼 {textContent.title.normalText} <span className="font-bold">{textContent.title.boldText}</span>
+              🌐 {textContent.title.normalText} <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
           <Link
-            href={'/lifetime'}
+            href={'/pricing'}
             target="_blank"
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
@@ -42,9 +42,9 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white md:hidden`}
       >
         <div className="flex flex-col items-center justify-center px-2 py-2 text-center">
-          <Link className="flex flex-col items-center justify-center" href={'/lifetime'} target="_blank">
+          <Link className="flex flex-col items-center justify-center" href={'/pricing'} target="_blank">
             <p className="font-normal">
-              🔒 {textContent.title.normalText}
+              🌐 {textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
             </p>
           </Link>
