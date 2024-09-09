@@ -15,6 +15,7 @@ interface PricingSectionWrapperProps {
   hidePlanSelectorComponent?: boolean;
   hideFreeCard?: boolean;
   startFromInterval?: Interval;
+  popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isFamilyPage?: boolean;
@@ -41,6 +42,7 @@ export const PricingSectionWrapper = ({
   hidePlanSelectorComponent,
   lifetimeCoupons,
   hideFreeCard,
+  popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
   onCheckoutButtonClicked,
@@ -70,6 +72,7 @@ export const PricingSectionWrapper = ({
         business: decimalDiscount?.business,
       }}
       products={products}
+      popularPlanBySize={popularPlanBySize}
       hideFreeCard={hideFreeCard}
       hideBusinessSelector={hideBusinessSelector}
       hidePlanSelectorComponent={hidePlanSelectorComponent}

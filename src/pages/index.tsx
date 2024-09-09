@@ -1,21 +1,27 @@
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import RevealY from '@/components/components/RevealY';
 import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
-import { FeatureSectionV2 } from '@/components/home/FeatureSectionV2';
 import HeroSection from '@/components/home/HeroSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/components/services/stripe.service';
+import Button from '@/components/shared/Button';
+import { CardGroup } from '@/components/shared/CardGroup';
+import { ComponentsInARowSection } from '@/components/shared/components/ComoponentsInARowSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
+import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 
@@ -45,6 +51,28 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
   const marqueeBgColor = 'bg-white';
+  const cardsForFeatureSection = [
+    {
+      icon: ShieldCheck,
+      title: textContent.FeatureSectionV2.cards![0].title,
+      description: textContent.FeatureSectionV2.cards![0].description,
+    },
+    {
+      icon: LockKey,
+      title: textContent.FeatureSectionV2.cards![1].title,
+      description: textContent.FeatureSectionV2.cards![1].description,
+    },
+    {
+      icon: Eye,
+      title: textContent.FeatureSectionV2.cards![2].title,
+      description: textContent.FeatureSectionV2.cards![2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: textContent.FeatureSectionV2.cards![3].title,
+      description: textContent.FeatureSectionV2.cards![3].description,
+    },
+  ];
 
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
@@ -92,7 +120,40 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <FeatureSectionV2 textContent={textContent.FeatureSectionV2} />
+      <ComponentsInARowSection
+        FirstComponent={
+          <div className="flex w-full flex-col items-center gap-9">
+            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+              <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
+              <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
+            </div>
+            <div className="flex flex-col items-center gap-12">
+              <Button
+                text={textContent.FeatureSectionV2.cta}
+                onClick={() => {
+                  router.push('/pricing');
+                }}
+              />
+              <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+                <Image
+                  src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+                  alt="Internxt secure cloud storage"
+                  draggable={false}
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
+              </RevealY>
+            </div>
+          </div>
+        }
+        SecondComponent={
+          <div className="flex flex-col items-center">
+            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
+          </div>
+        }
+        backgroundColor="bg-gray-1"
+      />
 
       <FAQSection textContent={textContent.FaqSection} />
 
