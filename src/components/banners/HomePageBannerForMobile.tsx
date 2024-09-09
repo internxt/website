@@ -40,15 +40,13 @@ export const HomePageBannerForMobile = () => {
         </div>
       </div>
       <div className="flex h-full w-full flex-col">
-        <div className="flex h-full w-full flex-col">
-          <Image
-            src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_mobile.webp')}
-            width={300}
-            height={200}
-            alt="Cyber Awareness 2024"
-            className="flex h-full"
-          />
-        </div>
+        <Image
+          src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_mobile.webp')}
+          width={323}
+          height={180}
+          alt="Cyber Awareness 2024"
+          className="flex h-full"
+        />
       </div>
     </div>
   );
