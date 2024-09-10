@@ -1,3 +1,4 @@
+import { GetServerSidePropsContext } from 'next';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -10,40 +11,57 @@ import SocialProofSection from '@/components/home/SocialProofSection';
 import ThirdFeaturesSection from '@/components/media-area/FeatureSection';
 import InternxtInTheNews from '@/components/media-area/InternxtInTheNews';
 import AnalysisSection from '@/components/media-area/AnalysisSection';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { MediaAreaText } from '@/assets/types/media-area';
 
-const MediaArea = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang, downloadURL }) => {
+interface MediaAreaProps {
+  metatagsDescriptions: MetatagsDescription[];
+  navbarText: NavigationBarText;
+  textContent: MediaAreaText;
+  footerText: FooterText;
+  lang: GetServerSidePropsContext['locale'];
+}
+
+const MediaArea = ({
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarText,
+  footerText,
+}: MediaAreaProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'media-area');
+  const locale = lang as string;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Media Area" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarText} lang={locale} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection textContent={textContent.HeroSection} />
 
-      <StandForPrivacySection textContent={langJson.StandForPrivacySection} />
+      <StandForPrivacySection textContent={textContent.StandForPrivacySection} />
 
-      <KitSection textContent={langJson.KitSection} />
+      <KitSection textContent={textContent.KitSection} />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      <CtaSection textContent={textContent.CtaSection} />
 
-      <ProductsSection textContent={langJson.ProductsSection} lang={lang} />
+      <ProductsSection textContent={textContent.ProductsSection} lang={lang} />
 
-      <SocialProofSection textContent={langJson.InvestorsSection} lang={lang} />
+      <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
 
-      <ThirdFeaturesSection textContent={langJson.FeatureSection} />
+      <ThirdFeaturesSection textContent={textContent.FeatureSection} />
 
-      <InternxtInTheNews textContent={langJson.InternxtInTheNewsSection} />
+      <InternxtInTheNews textContent={textContent.InternxtInTheNewsSection} />
 
-      <AnalysisSection textContent={langJson.AnalysisSection} />
+      <AnalysisSection textContent={textContent.AnalysisSection} />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      <CtaSection textContent={textContent.CtaSection} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerText} lang={locale} />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
