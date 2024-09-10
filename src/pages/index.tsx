@@ -10,7 +10,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
-import { ComponentsInARowSection } from '@/components/shared/components/ComoponentsInARowSection';
+import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInARowSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';

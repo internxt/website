@@ -10,7 +10,7 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { ComponentsInARowSection } from '@/components/shared/components/ComoponentsInARowSection';
+import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInARowSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PartnerDiscountText } from '@/assets/types/partner-discount';
