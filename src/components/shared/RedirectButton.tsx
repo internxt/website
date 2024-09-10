@@ -8,7 +8,13 @@ interface RedirectButtonProps {
   rel?: string;
 }
 
-export const RedirectButton = ({ url, className, target = '_blank', rel, children }: RedirectButtonProps) => (
+export const RedirectButton = ({
+  url,
+  className,
+  target = '_blank',
+  rel,
+  children,
+}: RedirectButtonProps): JSX.Element => (
   <Link id={`redirect-button-id`} href={url} target={target} rel={rel} className={className}>
     {children}
   </Link>

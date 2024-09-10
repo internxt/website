@@ -4,8 +4,6 @@ const crypto = require('crypto');
 const PREFIX_LENGTH = 5;
 const API_URL = 'https://api.pwnedpasswords.com/range/';
 const API_TIMEOUT = 5000;
-const HTTP_STATUS_OK = 200;
-const HTTP_STATUS_NOT_FOUND = 404;
 
 function hash(password) {
   const shasum = crypto.createHash('sha1');

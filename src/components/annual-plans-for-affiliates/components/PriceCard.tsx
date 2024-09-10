@@ -16,11 +16,6 @@ export interface PriceCardProps {
   coupon?: PromoCodeName;
 }
 
-const currencyValue = {
-  '€': 'eur',
-  $: 'usd',
-};
-
 export default function PriceCard({
   planType,
   storage,

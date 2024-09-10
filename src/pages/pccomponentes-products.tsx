@@ -9,7 +9,7 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
-const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
+const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
@@ -186,7 +186,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   const lang = 'es';
   const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/es/priceCard.json`);
