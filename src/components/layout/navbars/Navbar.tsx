@@ -128,7 +128,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               isQuizSection={props.isQuizSection}
               shouldHideItems={props.isLinksHidden}
               lang={lang}
-              menuState={menuState}
               router={router}
               textContent={props.textContent}
             />
