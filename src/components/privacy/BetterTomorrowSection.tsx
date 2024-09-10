@@ -1,11 +1,12 @@
 import Image from 'next/legacy/image';
 import { CaretRight, ShieldStar } from '@phosphor-icons/react';
 import RevealX from '@/components/components/RevealX';
+import Link from 'next/link';
 
 const BetterTomorrowSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div className="flex flex-col-reverse items-center justify-center px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
+      <div className="flex flex-col-reverse items-center justify-center px-5 pb-20 pt-16 text-center md:flex-row md:space-x-24 md:space-y-0 md:text-start">
         <div className="flex flex-col rounded-3xl pt-10 md:pt-0">
           <Image
             src="/images/privacy/encrypted-file-storage.webp"
@@ -26,15 +27,14 @@ const BetterTomorrowSection = ({ textContent, lang }) => {
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl">{textContent.description}</p>
 
-          <div
+          <Link
+            href={'/'}
+            hrefLang={lang}
             className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-primary hover:text-primary-dark hover:underline"
-            onClick={() => {
-              window.open(`https://internxt.com/${lang}`, '_blank');
-            }}
           >
             <p className="text-lg font-semibold">{textContent.cta}</p>
             <CaretRight size={14} weight="bold" />
-          </div>
+          </Link>
         </RevealX>
       </div>
     </section>
