@@ -82,7 +82,10 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         {/*Mobile/Tablet View*/}
         <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
           {textContent.testimonials.map((testimonial) => (
-            <div className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8">
+            <div
+              className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8"
+              key={testimonial.review}
+            >
               <div className="flex h-full flex-col justify-between gap-3" key={testimonial.review}>
                 <div className="flex flex-col gap-3">
                   <FiveStars totalStars={5} />

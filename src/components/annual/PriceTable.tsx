@@ -33,22 +33,23 @@ export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 py-14 pb-20">
-            {products?.individuals?.['year'] &&
-              products.individuals['year'].map((product: TransformedProduct) => {
-                return (
-                  <PriceCard
-                    planType="individual"
-                    key={product.storage}
-                    storage={product.storage}
-                    price={product.price}
-                    billingFrequency={Interval.Year}
-                    popular={product.storage === '5TB'}
-                    cta={['checkout', product.priceId]}
-                    lang={lang}
-                    currency={currency}
-                  />
-                );
-              })}
+            {products?.individuals?.['year']
+              ? products.individuals['year'].map((product: TransformedProduct) => {
+                  return (
+                    <PriceCard
+                      planType="individual"
+                      key={product.storage}
+                      storage={product.storage}
+                      price={product.price}
+                      billingFrequency={Interval.Year}
+                      popular={product.storage === '5TB'}
+                      cta={['checkout', product.priceId]}
+                      lang={lang}
+                      currency={currency}
+                    />
+                  );
+                })
+              : undefined}
           </div>
         </Transition>
       </div>
