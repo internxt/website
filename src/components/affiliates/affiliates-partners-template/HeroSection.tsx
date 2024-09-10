@@ -60,14 +60,16 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               <Alarm size={32} className=" text-white" />
               <Countdown textColor={'white'} />
             </div>
-            <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-              <Header>{textContent[cardsType!].title}</Header>
-              {textContent[cardsType!].description.map((text, index) => (
-                <p key={index} className="hidden text-2xl font-semibold text-white md:flex">
-                  {text}
-                </p>
-              ))}
-            </div>
+            {cardsType && (
+              <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+                <Header>{textContent[cardsType].title}</Header>
+                {textContent[cardsType].description.map((text, index) => (
+                  <p key={index} className="hidden text-2xl font-semibold text-white md:flex">
+                    {text}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
           <div className={`hidden h-full flex-col gap-3 lg:flex ${cardsType === 'all' && 'lg:min-h-[650px]'}`}>
             {isOnlyOnePlan || (!lifetimePlans && loadingCards) ? undefined : (

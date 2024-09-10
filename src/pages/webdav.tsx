@@ -9,7 +9,7 @@ import Footer from '@/components/layout/footers/Footer';
 import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/sections/FaqSection';
 
-const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
+const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
 
   return (
@@ -35,7 +35,7 @@ const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }) => {
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

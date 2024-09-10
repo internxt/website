@@ -19,7 +19,7 @@ const SelectFeatureInfoSection = ({
   showCta,
   bgColor = 'bg-gray-1',
   mobileBg = 'bg-white',
-}: SelectFeatureInfoSectionProps) => {
+}: SelectFeatureInfoSectionProps): JSX.Element => {
   const [cardIndex, setCardIndex] = React.useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 

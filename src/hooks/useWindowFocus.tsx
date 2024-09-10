@@ -11,7 +11,7 @@ const useWindowFocus = () => {
     const onFocus = () => setFocused(true);
     const onBlur = () => setFocused(false);
 
-    window.document.addEventListener('visibilitychange', function (event) {
+    window.document.addEventListener('visibilitychange', function () {
       if (document.hidden) {
         onBlur();
       } else {

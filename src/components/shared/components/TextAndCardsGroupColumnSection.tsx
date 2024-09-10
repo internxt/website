@@ -1,9 +1,10 @@
 import { ReactNode } from 'react';
 import { CardGroup } from '../CardGroup';
+import { Icon } from '@phosphor-icons/react';
 
 interface TextAndCardGroupColumnSectionProps {
   TextComponent: ReactNode;
-  cards: any[];
+  cards: { icon: Icon; title: string; description: string }[];
   backgroundColorForCard?: string;
   background?: string;
 }
