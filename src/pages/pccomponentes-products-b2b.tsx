@@ -17,7 +17,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
   const pageName = 'Pricing Business Annually';
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = businessCoupon?.name;
+    const couponCodeForCheckout = businessCoupon?.codeId;
     const planType = 'business';
 
     stripeService.redirectToCheckoutForPcComponentes(
