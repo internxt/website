@@ -38,7 +38,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCode: PromoCodeName.PartnerDiscount75OFF,
   });
 
   const cardsData = [
