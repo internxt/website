@@ -10,7 +10,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
-import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInColumnSection';
+import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -120,7 +120,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">

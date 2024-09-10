@@ -1,16 +1,16 @@
 import { ReactNode } from 'react';
 
-interface ComponentsInARowSectionProps {
+interface ComponentsInColumnSectionSectionProps {
   backgroundColor?: string;
   FirstComponent?: ReactNode;
   SecondComponent?: ReactNode;
 }
 
-export const ComponentsInARowSection = ({
+export const ComponentsInColumnSection = ({
   backgroundColor,
   FirstComponent,
   SecondComponent,
-}: ComponentsInARowSectionProps): JSX.Element => {
+}: ComponentsInColumnSectionSectionProps): JSX.Element => {
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColor}`}>
       <div className="flex flex-col items-center gap-16">

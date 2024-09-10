@@ -15,7 +15,7 @@ import { AffiliatesText } from '@/assets/types/affiliates';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { IMPACT_LOGIN_USER, SIGNUP_DRIVE_WEB } from '@/constants';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInColumnSection';
+import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import RenderDescription from '@/components/shared/RenderDescription';
@@ -212,7 +212,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
         cards={groupCards}
       />
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         backgroundColor="bg-gray-1"
         FirstComponent={
           <p className="text-center text-5xl font-semibold text-gray-100">
@@ -248,7 +248,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
         }
       />
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         FirstComponent={
           <>
             <ImageAndTextRow
