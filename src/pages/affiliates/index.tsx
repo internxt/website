@@ -36,9 +36,9 @@ const InfinityIcon = () => (
       d="M106.63,152.13l-8.69,9.81a48,48,0,1,1,0-67.88l60.12,67.88a48,48,0,1,0,0-67.88l-8.69,9.81"
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="16"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
     />
   </svg>
 );
@@ -226,7 +226,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
               return (
                 <div
-                  key={index}
+                  key={card.plans}
                   className="flex w-full max-w-[488px] flex-col items-center gap-9 rounded-2xl bg-black p-10 text-center text-white"
                 >
                   <div className="flex flex-col gap-4">

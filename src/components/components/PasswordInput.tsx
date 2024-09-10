@@ -16,7 +16,10 @@ export default function PasswordInput(props: Readonly<TextInputProps>) {
           props.disabled ? 'text-gray-30' : 'text-gray-100'
         } cursor-pointer`}
       >
-        <div onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}>
+        <div
+          tabIndex={0}
+          onKeyDown={(e) => (e['code'] === 'Space' || e['code'] === 'Enter') && setShowPassword(!showPassword)}
+        >
           {showPassword ? <Eye className="h-6 w-6" /> : <EyeSlash className="h-6 w-6" />}
         </div>
       </button>
