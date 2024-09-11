@@ -112,38 +112,38 @@
       }
     },
     "individuals": {
-      "200GB": [
+      "Basic": [
+        "200GB encrypted storage capacity",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
-        "Upload files up to 40GB",
         "Two-factor authentication (2FA)",
         "Premium customer support",
         "30-day money-back guarantee"
       ],
-      "2TB": [
+      "Lite": [
+        "2TB encrypted storage capacity",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
-        "Upload files up to 40GB",
         "Two-factor authentication (2FA)",
         "Premium customer support",
         "30-day money-back guarantee"
       ],
-      "5TB": [
+      "Pro": [
+        "5TB encrypted storage capacity",    
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
-        "Upload files up to 40GB",
         "Two-factor authentication (2FA)",
         "Premium customer support",
         "30-day money-back guarantee"
       ],
-      "10TB": [
+      "Ultra": [
+        "10TB encrypted storage capacity",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
-        "Upload files up to 40GB",
         "Two-factor authentication (2FA)",
         "Premium customer support",
         "30-day money-back guarantee"
