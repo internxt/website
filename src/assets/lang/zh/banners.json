@@ -60,6 +60,13 @@
       "无未经授权的访问"
     ]
   },
+  "s3StorageBanner": {
+    "label": "现已上线！",
+    "title": "兼容S3的对象存储",
+    "feat": ["比AWS便宜多达80%", "安全、可扩展、兼容S3", "原生Rclone支持"],
+    "cta": "免费获取1TB",
+    "offerEnds": "*仅限首月优惠"
+  },
   "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
     "description": "Secure cloud storage based on total privacy and encryption.",
@@ -104,8 +111,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "终身计划全场 78% 折扣！",
-      "normalText": "回归工作，回归隐私！ ",
+      "boldText": "所有存储计划高达75%的折扣！",
+      "normalText": "以更低的价格获得完全隐私：",
       "cta": "选择计划"
     }
   },

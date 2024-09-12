@@ -63,6 +63,13 @@
       "No unauthorized access"
     ]
   },
+  "s3StorageBanner": {
+    "label": "Available now!",
+    "title": "S3 compatible object storage",
+    "feat": ["Up to 80% cheaper than AWS", "Secure, scalable, S3-compatible", "Native Rclone support"],
+    "cta": "Get 1TB for free",
+    "offerEnds": "*Offer only for the first month"
+  },
   "tryOutInternxtGeneralBanner": {
     "title": "Try Internxt",
     "description": "Secure cloud storage based on total privacy and encryption.",
@@ -138,8 +145,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "78% OFF all lifetime plans!",
-      "normalText": "Back to work, back to privacy! ",
+      "boldText": "Up to 75% OFF all storage plans!",
+      "normalText": "Get complete privacy for less: ",
       "cta": "Choose plan"
     }
   },
