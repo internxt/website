@@ -16,7 +16,7 @@ import BetterTomorrowSection from '@/components/privacy/BetterTomorrowSection';
 import FeatureSection from '@/components/privacy/FeatureSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PrivacyText } from '@/assets/types/privacy';
-
+import { GetServerSidePropsContext } from 'next';
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
@@ -64,7 +64,7 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

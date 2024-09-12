@@ -1,6 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import QuestionsSection from './QuestionsSection';
 import ReactMarkdown from 'react-markdown';
+import Image from 'next/image';
 
 const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
   const isCorrectAnswer = correctAnswers.map((answer, index) => {
@@ -56,27 +57,27 @@ const CheckQuestions = ({ textContent, answers, correctAnswers }) => {
             <p className="text-xl font-bold text-gray-80">{textContent.shareYourResults}</p>
             <div className="flex flex-row space-x-4">
               <a href={twitterShareLink} target="_blank" rel="noopener noreferrer">
-                <img
-                  loading="eager"
-                  className="h-4.5"
+                <Image
+                  width={18}
+                  height={18}
                   src={getImage(`/icons/social/cool-gray-60/twitter.svg`)}
                   draggable="false"
                   alt="twitter icon"
                 />
               </a>
               <a href={facebookShareLink} target="_blank" rel="noopener noreferrer">
-                <img
-                  loading="eager"
-                  className="h-4.5"
+                <Image
+                  width={18}
+                  height={18}
                   src={getImage(`/icons/social/cool-gray-60/facebook.svg`)}
                   draggable="false"
                   alt="facebook icon"
                 />
               </a>
               <a href={linkedInShareLink} target="_blank" rel="noopener noreferrer">
-                <img
-                  loading="eager"
-                  className="h-4.5"
+                <Image
+                  width={18}
+                  height={18}
                   src={getImage(`/icons/social/cool-gray-60/linkedin.svg`)}
                   draggable="false"
                   alt="linkedin icon"

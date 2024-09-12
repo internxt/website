@@ -6,7 +6,7 @@ import FeatureSection from '@/components/drive/FeatureSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
-import ProductsNavigation from '@/components/layout/ProductsNavigation';
+
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import CtaSection from '@/components/drive/CtaSection';
 import Layout from '@/components/layout/Layout';
@@ -20,6 +20,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { CaretRight, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
+import ProductsNavigation from '@/components/shared/components/ProductsNavigation';
 
 interface DriveProps {
   textContent: DriveText;

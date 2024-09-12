@@ -12,7 +12,15 @@ import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 
-const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footerLang, lang, bannerLang }) => {
+const Scan = ({
+  metatagsDescriptions,
+  langJson,
+  toolsContent,
+  navbarLang,
+  footerLang,
+  lang,
+  bannerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (

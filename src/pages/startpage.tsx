@@ -6,15 +6,16 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 
-import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import { checkout } from '@/lib/auth';
 
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { GetServerSidePropsContext } from 'next';
+import CtaSection from '@/components/shared/CtaSection';
 
-export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
+export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({});
   const offerDiscount = 25;
@@ -87,13 +88,13 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
         cards={cardsData}
       />
 
-      <CtaSection textContent={textContent.CtaSection} />
+      <CtaSection textContent={textContent.CtaSection} url="#payment" />
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/en/startpage.json`);

@@ -20,6 +20,7 @@ interface PriceTableProps {
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
+  popularPlanBySize?: string;
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
@@ -57,6 +58,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   lang,
   backgroundColorComponent = 'bg-white',
+  popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
   onPlanTypeChange,
@@ -189,7 +191,7 @@ export const PricingSection = ({
                       )[0].price
                     }
                     key={product.storage}
-                    popular={product.storage === '10TB'}
+                    popular={product.storage === popularPlanBySize}
                     decimalDiscountValue={
                       product.interval !== Interval.Lifetime
                         ? decimalDiscount?.subscriptions

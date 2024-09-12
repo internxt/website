@@ -92,7 +92,7 @@ export default function PriceCard({
   };
 
   const formattedPrice = isOffer ? priceForSubscriptions(price.toString()) : price;
-  const formattedPriceBefore = priceBefore && priceBefore;
+  const formattedPriceBefore = priceBefore;
 
   const getPlanStorage = (storage) => {
     if (isLifetimePage) {

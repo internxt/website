@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Script from 'next/script';
+import { GetServerSidePropsContext } from 'next';
 import {
   ClockCounterClockwise,
   Eye,
@@ -173,7 +174,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);

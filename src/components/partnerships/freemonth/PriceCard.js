@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { checkout } from '../../../lib/auth';
+import { useEffect, useState } from 'react';
 
 const PriceCard = ({
   planType,
@@ -49,7 +48,7 @@ const PriceCard = ({
 
       <div className={`info flex flex-col items-center justify-center bg-white p-6 ${popular ? 'rounded-t-2xl' : ''}`}>
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
+          className={`storage flex max-w-min flex-row whitespace-nowrap px-4 py-1 pb-0.5 ${
             popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
           } rounded-full font-medium`}
         >
@@ -159,7 +158,7 @@ const PriceCard = ({
 
             <label
               htmlFor={`users_${storage}`}
-              className="absolute top-0 left-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
+              className="absolute left-0 top-0 flex h-full w-full cursor-text flex-row items-center justify-center text-xl font-medium sm:text-base"
             >
               <div className="relative flex h-full flex-row items-center">
                 <span
@@ -200,7 +199,7 @@ const PriceCard = ({
 
             <div className="flex flex-row items-end">
               <div className="flex flex-row items-start">
-                <span className="mt-0.5 mr-0.5 text-xs">€</span>
+                <span className="mr-0.5 mt-0.5 text-xs">€</span>
 
                 <span>{teamsBilled}</span>
               </div>
@@ -212,18 +211,7 @@ const PriceCard = ({
           </div>
         </div>
 
-        <div
-          tabIndex={0}
-          // eslint-disable-next-line no-unused-expressions
-          // onClick={() => {
-          //   cta[0] === 'checkout'
-          //     ? checkout({
-          //         priceId: cta[1],
-          //       })
-          //     : (location.href = cta[1]);
-          // }}
-          className="flex w-full flex-col items-center text-center"
-        >
+        <div className="flex w-full flex-col items-center text-center">
           <div className="subscribePlan flex w-full origin-center cursor-pointer select-none items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-2 text-lg  font-medium text-white transition-all duration-75 focus:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-blue-20 focus:ring-offset-2 active:translate-y-0.5 active:bg-primary-dark sm:text-base">
             <p className={`${price <= 0 ? 'hidden' : ''} ${planType.toLowerCase() === 'individual' ? '' : 'hidden'}`}>
               {contentText.cta.freemonth}

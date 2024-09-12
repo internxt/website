@@ -1,16 +1,7 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 
-export const ItemsNavigation = ({
-  lang,
-  menuState,
-  darkMode,
-  isQuizSection,
-  shouldHideItems,
-  getTitles,
-  textContent,
-  router,
-}) => {
+export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems, getTitles, textContent, router }) => {
   return (
     <>
       {/* Desktop links */}
