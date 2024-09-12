@@ -193,9 +193,16 @@ export const PricingSection = ({
                     key={product.storage}
                     popular={product.storage === popularPlanBySize}
                     decimalDiscountValue={
-                      product.interval === Interval.Lifetime
-                        ? decimalDiscount?.lifetime
+                      product.interval !== Interval.Lifetime
+                        ? decimalDiscount?.subscriptions
+                        : lifetimeCoupons
+                        ? undefined
                         : decimalDiscount?.subscriptions
+                    }
+                    fixedDiscount={
+                      product.interval === Interval.Lifetime && lifetimeCoupons
+                        ? lifetimeCoupons?.[product.storage].amountOff
+                        : undefined
                     }
                     lang={lang}
                   />
