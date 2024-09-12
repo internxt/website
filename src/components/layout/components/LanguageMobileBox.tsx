@@ -1,23 +1,22 @@
-import { useState } from 'react';
 import { Disclosure, Transition } from '@headlessui/react';
 import { CaretDown, CaretUp, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
 const languages = [
-  { en: 'English (EN)' },
-  { es: 'Español (ES)' },
-  { fr: 'Français (FR)' },
-  { it: 'Italiano (IT)' },
-  { zh: '中国人 (ZH)' },
-  { ru: 'Русский (RU)' },
-  { de: 'Deutsch (DE)' },
-  { pt: 'Portuguese (PT)' },
+  { text: 'English (EN)', lang: 'en' },
+  { text: 'Español (ES)', lang: 'es' },
+  { text: 'Français (FR)', lang: 'fr' },
+  { text: 'Italiano (IT)', lang: 'it' },
+  { text: 'Русский (RU)', lang: 'ru' },
+  { text: 'Deutsch (DE)', lang: 'de' },
+  { text: '中国人 (ZH)', lang: 'zh' },
+  { text: '中国人 (TW)', lang: 'zh-tw' },
 ];
 
 export default function LanguageMobileBox({ darkMode }) {
   const router = useRouter();
   const lang = router.locale?.toLowerCase().split('-')[0] as string;
-  const [selected, setSelected] = useState(languages.filter((person) => person[lang])[0][lang]);
+  const langSelected = languages.map((language) => language.text.includes(lang));
 
   return (
     <div className="flex w-screen">
@@ -27,7 +26,7 @@ export default function LanguageMobileBox({ darkMode }) {
             <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
               <div className="flex flex-row items-center space-x-2">
                 <Globe className={darkMode ? 'text-white' : 'text-gray-60'} size={20} weight="regular" />
-                <span className="flex flex-row">{selected}</span>
+                <span className="flex flex-row">{langSelected}</span>
               </div>
               <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
               <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -43,15 +42,14 @@ export default function LanguageMobileBox({ darkMode }) {
                   darkMode ? 'text-gray-30' : 'text-gray-60'
                 } space-y-8 p-4`}
               >
-                {languages.map((person, personIdx) => (
+                {languages.map((language) => (
                   <button
-                    key={personIdx}
+                    key={language.text}
                     onClick={() => {
-                      const lang = Object.keys(person)[0];
-                      router.push(router.pathname, router.pathname, { locale: lang }).catch((err) => console.log(err));
+                      router.push(router.pathname, router.pathname, { locale: language.lang });
                     }}
                   >
-                    {person.en || person.es || person.fr || person.it || person.zh || person.ru || person.de}
+                    {language.text}
                   </button>
                 ))}
               </Disclosure.Panel>
