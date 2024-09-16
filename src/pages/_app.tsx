@@ -94,7 +94,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.S3Banner,
-            isOpen: true,
+            isOpen: false,
           },
         ]}
       >
