@@ -1,5 +1,5 @@
-// /// <reference types="cypress" />
-// export {};
+/// <reference types="cypress" />
+export {};
 // import bytes from 'bytes';
 
 // const DRIVE_WEB_URL = Cypress.env('DRIVE_WEB_URL');
