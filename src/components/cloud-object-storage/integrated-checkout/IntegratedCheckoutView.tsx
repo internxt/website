@@ -193,7 +193,6 @@ export const IntegratedCheckoutView = ({
             </div>
             <div className="top-5 flex w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
               <ProductFeaturesComponent textContent={textContent.productCard} selectedPlan={objStoragePlan} />
-              <p className="text-gray-50">{textContent.oneTimePayment}</p>
               <Button
                 id="submit"
                 type="submit"
