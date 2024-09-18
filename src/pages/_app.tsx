@@ -32,7 +32,7 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/pccomponentes-products-b2b',
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
-  '/home',
+  '/',
   '/pricing',
   '/family',
   '/business',
