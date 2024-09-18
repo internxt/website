@@ -163,7 +163,7 @@ const BottomBanner = () => {
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
-                router.push('/lifetime');
+                router.push('/pricing');
                 handleClose();
               }}
             >

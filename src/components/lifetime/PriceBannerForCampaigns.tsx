@@ -32,7 +32,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
           </div>
           <p className="text-sm font-medium text-white">{textContent.lastCta}</p>
         </div>
-        <div className="hidden w-full lg:flex">
+        <div className="hidden w-full justify-end lg:flex">
           <Image
             src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_pricing.webp')}
             width={511}
