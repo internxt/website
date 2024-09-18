@@ -47,11 +47,12 @@ export const PlanSelector = ({
       onClick={() => {
         onPlanTypeChange('Business');
       }}
-      className={`rounded-lg py-0.5 ${hideBusinessSelector ? 'hidden' : 'flex'} px-6 font-semibold ${
+      className={`rounded-lg py-0.5 ${hideBusinessSelector ? 'hidden' : 'flex'} flex-row gap-3 px-6 font-semibold ${
         activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
       {textContent.billingFrequency.business}
+      <SealPercent size={24} className="text-green" weight="fill" />
     </button>
   </div>
 );

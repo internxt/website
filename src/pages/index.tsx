@@ -44,6 +44,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
   } = usePricing({
     couponCode: PromoCodeName.CyberAwarenessPromoCode,
+    couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -104,6 +105,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.tableSection}
         decimalDiscount={{
           individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
           lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lang={locale}
