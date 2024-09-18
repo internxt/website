@@ -31,7 +31,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-12 xl:mx-32">
+      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
           style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
@@ -60,7 +60,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                <div className="flex w-max flex-col gap-9">
+                <div className="flex flex-col gap-9">
                   <div className="flex flex-col gap-4">
                     <Header maxWidth="max-w-[500px]" className="text-gray-100">
                       {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
@@ -102,8 +102,18 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           {/* Desktop animation/image */}
-          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+          {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
             <Animation />
+          </div> */}
+          <div className="hidden lg:flex">
+            <Image
+              src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_secure_cloud_storage.webp')}
+              alt="Internxt Secure Cloud Storage"
+              draggable={false}
+              quality={100}
+              width={562}
+              height={529}
+            />
           </div>
         </div>
       </div>

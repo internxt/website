@@ -29,7 +29,7 @@ export const HomePageBannerForMobile = () => {
             onClick={() => {
               router.push('/pricing');
             }}
-            className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-primary hover:bg-gray-5"
+            className="flex w-max items-center rounded-lg bg-white px-3.5 py-1.5 text-lg font-medium text-gray-100 hover:bg-gray-5"
           >
             {textContent.tableSection.ctaBanner.cta}
           </button>

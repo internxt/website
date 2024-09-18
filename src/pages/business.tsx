@@ -18,6 +18,7 @@ import { GetServerSidePropsContext } from 'next';
 import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
+import { PromoCodeName } from '@/lib/types';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -35,12 +36,14 @@ export const BusinessPage = ({
   lang,
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
-  const { products, loadingCards, currencyValue } = usePricing();
+  const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
+    couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
+  });
 
   const locale = lang as string;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime);
+    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
 
@@ -80,6 +83,9 @@ export const BusinessPage = ({
         loadingCards={loadingCards}
         lang={locale}
         products={products}
+        decimalDiscount={{
+          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+        }}
         hideFreeCard
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
