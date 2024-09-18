@@ -60,6 +60,13 @@
       "無未經授權的訪問"
     ]
   },
+  "s3StorageBanner": {
+    "label": "現已上線！",
+    "title": "兼容S3的對象存儲",
+    "feat": ["比AWS便宜多達80%", "安全、可擴展、兼容S3", "原生Rclone支持"],
+    "cta": "免費獲取1TB",
+    "offerEnds": "*僅限首月優惠"
+  },
   "tryOutInternxtGeneralBanner": {
     "title": "試用 Internxt",
     "description": "基於完全隱私和加密的安全雲存儲。",
@@ -136,9 +143,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "所有計劃立減80%！",
-      "normalText": "網絡安全意識月優惠！ ",
-      "cta": "領取優惠"
+      "boldText": "所有儲存計劃高達75%的折扣！",
+      "normalText": "以更低的價格獲得完全隱私：",
+      "cta": "選擇計劃"
     }
   },
   "lifetimeBanner": {

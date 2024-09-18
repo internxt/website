@@ -11,7 +11,7 @@ interface ProductCard {
   imageUrl: string;
 }
 
-const ProductCard = ({ animationDirection, redirect, textContent, lang, imageUrl }: ProductCard) => {
+const ProductCard = ({ animationDirection, redirect, textContent, lang, imageUrl }: ProductCard): JSX.Element => {
   return (
     <RevealX
       direction={animationDirection}

@@ -111,7 +111,7 @@ const VPN = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

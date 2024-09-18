@@ -10,8 +10,8 @@ import { PriceCard } from '@/components/shared/pricing/PriceCard';
 
 const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const { products, currencyValue, loadingCards, coupon } = usePricing({
-    couponCode: PromoCodeName.PcComponentesCouponForB2B,
+  const { products, currencyValue, loadingCards, businessCoupon } = usePricing({
+    couponCodeForBusiness: PromoCodeName.PcComponentesCouponForB2B,
   });
 
   const pageName = 'Pricing Business Annually';
@@ -72,7 +72,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang }): JSX.Element =
                     checkIconName="checkOrange"
                     key={product.storage}
                     popular={product.storage === '10TB'}
-                    decimalDiscountValue={100 - coupon!.percentOff!}
+                    decimalDiscountValue={businessCoupon && 100 - businessCoupon.percentOff!}
                     lang={lang}
                   />
                 ))

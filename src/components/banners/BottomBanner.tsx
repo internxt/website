@@ -33,42 +33,42 @@ const BottomBanner = () => {
     switch (lang) {
       case 'en':
         return {
-          title1: 'Save 80%',
+          title1: 'Save 78%',
           title2: {
-            line1: 'Secure your ',
-            line2: 'world!',
+            line1: 'Work smart, ',
+            line2: 'not hard!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra un 80%',
+          title1: 'Ahorra 78%',
           title2: {
-            line1: '¡Protege tu ',
-            line2: 'mundo!',
+            line1: 'en tus planes lifetime',
+            line2: '',
           },
         };
       case 'ru':
         return {
-          title1: 'Экономьте 80%',
+          title1: 'Сэкономьте 78%',
           title2: {
-            line1: 'Защитите свой ',
-            line2: 'мир!',
+            line1: 'Работай умно, ',
+            line2: 'не усердно!',
           },
         };
       case 'fr':
         return {
-          title1: 'Économisez 80%',
+          title1: 'Économisez 78 %',
           title2: {
-            line1: 'Sécurisez votre ',
-            line2: 'monde!',
+            line1: 'Travaillez intelligemment, ',
+            line2: 'pas dur !',
           },
         };
       case 'it':
         return {
-          title1: "Risparmia l'80%",
+          title1: 'Risparmia il 78%',
           title2: {
-            line1: 'Proteggi il tuo ',
-            line2: 'mondo!',
+            line1: 'Lavora intelligente, ',
+            line2: 'non duro!',
           },
         };
       case 'zh':
@@ -81,26 +81,26 @@ const BottomBanner = () => {
         };
       case 'zh-tw':
         return {
-          title1: '节省80%',
+          title1: '節省 78%',
           title2: {
-            line1: '保护你的',
-            line2: '世界！',
+            line1: '聰明工作，',
+            line2: '不是辛苦工作！',
           },
         };
       case 'de':
         return {
-          title1: 'Sparen Sie 80%',
+          title1: 'Spare 78%',
           title2: {
-            line1: 'Sichern Sie Ihre ',
-            line2: 'Welt!',
+            line1: 'Arbeite klug, ',
+            line2: 'nicht hart!',
           },
         };
       default:
         return {
-          title1: 'Save 80%',
+          title1: 'Save 78%',
           title2: {
-            line1: 'Secure your ',
-            line2: 'world!',
+            line1: 'Work smart, ',
+            line2: 'not hard!',
           },
         };
     }
@@ -132,7 +132,7 @@ const BottomBanner = () => {
         shouldShowBanner ? 'flex' : 'hidden'
       } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
-      <div className="flex flex-col justify-center">
+      <div className="flex flex-col justify-center pr-20">
         <div className="flex items-end justify-end">
           <button
             id="close-bottom-banner"
@@ -143,10 +143,10 @@ const BottomBanner = () => {
             <X size={24} />
           </button>
         </div>
-        <div className="just z-40 flex flex-row gap-16">
+        <div className="z-40 flex flex-row gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_left.webp')}
+              src={getImage('/images/home/back-to-work/bottom-banner.webp')}
               width={180}
               height={100}
               className="flex w-full object-fill"
@@ -164,22 +164,12 @@ const BottomBanner = () => {
             <button
               className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
-                router.push('/pricing');
+                router.push('/lifetime');
                 handleClose();
               }}
             >
               {ctaText()}
             </button>
-          </div>
-          <div className="flex flex-col">
-            <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_right.webp')}
-              width={180}
-              height={100}
-              className="flex w-full object-fill"
-              draggable={false}
-              alt={"Internxt's summer discount"}
-            />
           </div>
         </div>
       </div>

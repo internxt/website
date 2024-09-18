@@ -34,6 +34,13 @@
       "Aucun accès non autorisé"
     ]
   },
+  "s3StorageBanner": {
+    "label": "Disponible maintenant !",
+    "title": "Stockage d'objets compatible S3",
+    "feat": ["Jusqu'à 80% moins cher que AWS", "Sécurisé, évolutif, compatible S3", "Support natif de Rclone"],
+    "cta": "Obtenez 1TB gratuitement",
+    "offerEnds": "*Offre valable uniquement pour le premier mois"
+  },
   "tryOutInternxtGeneralBanner": {
     "title": "Internxt",
     "description": "Stockage en nuage basé sur la confidentialité.",
@@ -82,9 +89,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de réduction sur tous les plans!",
-      "normalText": "Économies pour le mois de sensibilisation à la cybersécurité! ",
-      "cta": "Profiter de l'offre"
+      "boldText": "Jusqu'à 75% de réduction sur tous les plans de stockage!",
+      "normalText": "Obtenez une confidentialité complète pour moins : ",
+      "cta": "Choisir un plan"
     }
   },
   "lifetimeBanner": {

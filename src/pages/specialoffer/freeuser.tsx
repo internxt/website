@@ -15,12 +15,13 @@ import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
+import { FreeUserText } from '@/assets/types/freeuser';
 
 interface FreeUserPageProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
-  textContent: Record<string, any>;
+  textContent: FreeUserText;
   footerLang: FooterText;
 }
 
@@ -98,7 +99,7 @@ const FreeUserPage = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

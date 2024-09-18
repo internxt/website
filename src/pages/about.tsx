@@ -17,7 +17,7 @@ const CTA_URL = 'https://internxt.com/pricing';
 
 const ACCEPTED_LANGUAGES_FOR_NEW_VERSION = ['en', 'zh-tw'];
 
-const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }) => {
+const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
 
   return (

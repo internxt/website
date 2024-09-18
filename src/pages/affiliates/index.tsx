@@ -1,10 +1,10 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { CalendarBlank, ClockCountdown, Devices, FolderLock, ShareNetwork } from '@phosphor-icons/react';
 
 import FaqSection from '@/components/shared/sections/FaqSection';
 import FeatureSection from '@/components/affiliates/FeatureSection';
 import { HeroSection } from '@/components/shared/components/HeroSection';
-import WhatIsInternxtSection from '@/components/affiliates/WhatIsInternxtSection';
 import WhyJoinSection from '@/components/affiliates/WhyJoinSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import Footer from '@/components/layout/footers/Footer';
@@ -15,11 +15,11 @@ import { AffiliatesText } from '@/assets/types/affiliates';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { IMPACT_LOGIN_USER, SIGNUP_DRIVE_WEB } from '@/constants';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInARowSection';
+import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 import RenderDescription from '@/components/shared/RenderDescription';
+import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
 
 interface AffiliatesProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -36,9 +36,9 @@ const InfinityIcon = () => (
       d="M106.63,152.13l-8.69,9.81a48,48,0,1,1,0-67.88l60.12,67.88a48,48,0,1,0,0-67.88l-8.69,9.81"
       fill="none"
       stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="16"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="16"
     />
   </svg>
 );
@@ -184,7 +184,21 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
-      <WhatIsInternxtSection textContent={langJson.WhatIsInternxtSection} />
+      <TextAndImageColumnSection
+        TextComponent={
+          <div className="flex max-w-[750px] flex-col space-y-6 text-center">
+            <p className="text-5xl font-semibold text-gray-100">{langJson.WhatIsInternxtSection.title}</p>
+            <p className="text-2xl font-medium text-gray-100">{langJson.WhatIsInternxtSection.subtitle}</p>
+            <p className="text-xl text-gray-80">{langJson.WhatIsInternxtSection.description}</p>
+          </div>
+        }
+        imageProperties={{
+          src: getImage('/images/home/internxt_secure_cloud_storage.webp'),
+          alt: 'Internxt Secure Cloud Storage',
+          width: 1240,
+          height: 687,
+        }}
+      />
 
       <WhyJoinSection textContent={langJson.WhyJoinSection} />
 
@@ -198,7 +212,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
         cards={groupCards}
       />
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         backgroundColor="bg-gray-1"
         FirstComponent={
           <p className="text-center text-5xl font-semibold text-gray-100">
@@ -212,7 +226,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
               return (
                 <div
-                  key={index}
+                  key={card.plans}
                   className="flex w-full max-w-[488px] flex-col items-center gap-9 rounded-2xl bg-black p-10 text-center text-white"
                 >
                   <div className="flex flex-col gap-4">
@@ -234,7 +248,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
         }
       />
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         FirstComponent={
           <>
             <ImageAndTextRow

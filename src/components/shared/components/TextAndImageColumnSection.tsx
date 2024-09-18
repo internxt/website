@@ -17,7 +17,7 @@ export const TextAndImageColumnSection = ({
   TextComponent,
   imageProperties,
   background,
-}: TextAndImageColumnSectionProps) => {
+}: TextAndImageColumnSectionProps): JSX.Element => {
   const { src, alt, width, height, className } = imageProperties;
 
   return (

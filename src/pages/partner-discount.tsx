@@ -10,7 +10,7 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInARowSection';
+import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PartnerDiscountText } from '@/assets/types/partner-discount';
@@ -38,7 +38,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCode: PromoCodeName.PartnerDiscount75OFF,
   });
 
   const cardsData = [
@@ -135,7 +135,7 @@ const PartnerDiscount = ({
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         FirstComponent={
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-4 text-center">

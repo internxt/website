@@ -70,7 +70,7 @@ export default function SpecialPriceCard({
 
       <div className={`info flex flex-col items-center justify-center  bg-white p-4 pt-6`}>
         <div
-          className={`storage flex max-w-min flex-row whitespace-nowrap py-1 px-4 pb-0.5 ${
+          className={`storage flex max-w-min flex-row whitespace-nowrap px-4 py-1 pb-0.5 ${
             popular ? 'bg-blue-10 text-primary' : 'bg-neutral-20 text-neutral-80'
           } rounded-full font-medium`}
         >
@@ -141,8 +141,7 @@ export default function SpecialPriceCard({
           </div>
         </div>
 
-        <div
-          tabIndex={0}
+        <button
           id={`planButton${storage}`}
           onClick={() => {
             onOfferClick();
@@ -160,7 +159,7 @@ export default function SpecialPriceCard({
 
             <p className={`${planType.toLowerCase() === 'individual' ? 'hidden' : ''}`}>{contentText.cta.getStarted}</p>
           </div>
-        </div>
+        </button>
       </div>
 
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-neutral-500">

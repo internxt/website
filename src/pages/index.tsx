@@ -1,3 +1,8 @@
+import { useState } from 'react';
+import { GetServerSidePropsContext } from 'next';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import RevealY from '@/components/components/RevealY';
@@ -7,10 +12,10 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
-import { ComponentsInARowSection } from '@/components/shared/components/ComponentsInARowSection';
+import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -20,10 +25,6 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import { GetServerSidePropsContext } from 'next';
-import Image from 'next/image';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -42,6 +43,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     currencyValue,
     coupon: individualCoupon,
     businessCoupon,
+    lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.CyberAwarenessPromoCode,
     couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
@@ -82,7 +84,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : individualCoupon?.name;
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        : individualCoupon?.name;
+
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
@@ -108,6 +117,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
           business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
           lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
+        lifetimeCoupons={lifetimeCoupons}
         lang={locale}
         products={products}
         loadingCards={loadingCards}
@@ -119,7 +129,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         <MarqueeComponent bgColor={marqueeBgColor} />
       </div>
 
-      <ComponentsInARowSection
+      <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">

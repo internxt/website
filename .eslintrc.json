@@ -16,6 +16,8 @@
     "@typescript-eslint/no-inferrable-types": "off",
     "no-prototype-builtins": "warn",
     "@typescript-eslint/ban-types": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@next/next/no-before-interactive-script-outside-document": "off",
     "prefer-const": "warn"
   }
 }

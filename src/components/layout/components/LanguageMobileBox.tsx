@@ -44,7 +44,7 @@ export default function LanguageMobileBox({ darkMode }) {
                 } space-y-8 p-4`}
               >
                 {languages.map((person, personIdx) => (
-                  <div
+                  <button
                     key={personIdx}
                     onClick={() => {
                       const lang = Object.keys(person)[0];
@@ -52,7 +52,7 @@ export default function LanguageMobileBox({ darkMode }) {
                     }}
                   >
                     {person.en || person.es || person.fr || person.it || person.zh || person.ru || person.de}
-                  </div>
+                  </button>
                 ))}
               </Disclosure.Panel>
             </Transition>

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Script from 'next/script';
+import { GetServerSidePropsContext } from 'next';
 import {
   ClockCounterClockwise,
   Eye,
@@ -24,7 +25,7 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -47,6 +48,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     currencyValue,
     coupon: individualCoupon,
     businessCoupon,
+    lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.CyberAwarenessPromoCode,
     couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
@@ -110,7 +112,14 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : individualCoupon?.name;
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        : individualCoupon?.name;
+
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
@@ -146,6 +155,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           handlePageNameUpdate={setPageName}
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
+          lifetimeCoupons={lifetimeCoupons}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
@@ -166,7 +176,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/pricing.json`);

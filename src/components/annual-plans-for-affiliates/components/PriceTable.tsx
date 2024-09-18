@@ -101,25 +101,26 @@ const PriceTable: React.FC<PriceTableProps> = ({
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4 py-14">
-            {products?.individuals?.[billingFrequency] &&
-              products.individuals[billingFrequency].map((product: any) => {
-                return (
-                  <PriceCard
-                    planType="individual"
-                    key={product.storage}
-                    storage={product.storage}
-                    price={discount ? lifetimePrices[currencyValue][product.storage] : product.price}
-                    billingFrequency={billingFrequency}
-                    popular={product.storage === '5TB'}
-                    cta={['checkout', product.priceId]}
-                    currency={currency}
-                    contentText={textContent.priceCard}
-                    onButtonClicked={handlePriceCardButton}
-                    coupon={coupon?.[product.storage] ?? undefined}
-                    priceBefore={discount ? product.price : undefined}
-                  />
-                );
-              })}
+            {products?.individuals?.[billingFrequency]
+              ? products.individuals[billingFrequency].map((product: any) => {
+                  return (
+                    <PriceCard
+                      planType="individual"
+                      key={product.storage}
+                      storage={product.storage}
+                      price={discount ? lifetimePrices[currencyValue][product.storage] : product.price}
+                      billingFrequency={billingFrequency}
+                      popular={product.storage === '5TB'}
+                      cta={['checkout', product.priceId]}
+                      currency={currency}
+                      contentText={textContent.priceCard}
+                      onButtonClicked={handlePriceCardButton}
+                      coupon={coupon?.[product.storage] ?? undefined}
+                      priceBefore={discount ? product.price : undefined}
+                    />
+                  );
+                })
+              : undefined}
           </div>
         </Transition>
 

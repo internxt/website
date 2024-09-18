@@ -21,7 +21,7 @@ export const HeroSection = ({
   ImageComponent,
   imageProperties,
   background,
-}: HeroSectionProps) => {
+}: HeroSectionProps): JSX.Element => {
   return (
     <section className="overflow-hidden px-5 py-20" style={style}>
       <HeroSectionSafeArea>

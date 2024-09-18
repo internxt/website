@@ -254,7 +254,7 @@ export function checkout({ planId, promoCodeId, planType, mode, currency }: Paym
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
-    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
+    const pathname = '/checkout';
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);
@@ -262,18 +262,7 @@ export function checkout({ planId, promoCodeId, planType, mode, currency }: Paym
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
 
-    if (planType === 'individual') {
-      window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
-      return;
-    }
-
-    const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
-      enableAutoSubmit: false,
-      skipSignupIfLoggedIn: true,
-    });
-
-    window.location.href = checkoutUrl;
+    window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
@@ -290,7 +279,7 @@ export function checkoutForPcComponentes({
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
-    const pathname = planType === 'individual' ? '/checkout' : '/checkout-plan';
+    const pathname = '/checkout';
 
     planId && params.set('planId', planId);
     promoCodeId && params.set('couponCode', promoCodeId);

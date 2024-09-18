@@ -78,46 +78,41 @@ const handleImageToTextConverter = async (imageToConvert: File) => {
   const file = imageToConvert;
 
   if (!file) return;
+  try {
+    const pdfDoc = await PDFDocument.create();
+    const reader = new FileReader();
 
-  return new Promise(async (resolve, reject) => {
-    try {
-      const pdfDoc = await PDFDocument.create();
-      const reader = new FileReader();
+    reader.readAsDataURL(file);
 
-      reader.readAsDataURL(file);
+    reader.onload = async () => {
+      const {
+        data: { text },
+      } = await Tesseract.recognize(file, 'eng', {
+        logger: (m) => {
+          // you can add a console.log for debug purposes.
+        },
+      });
 
-      reader.onload = async () => {
-        const {
-          data: { text },
-        } = await Tesseract.recognize(file, 'eng', {
-          logger: (m) => {
-            // you can add a console.log for debug purposes.
-          },
-        });
+      const page = pdfDoc.addPage();
 
-        const page = pdfDoc.addPage();
+      const { height } = page.getSize();
 
-        const { height } = page.getSize();
+      page.drawText(text, {
+        x: 50,
+        y: height - 4 * fontSize,
+        size: fontSize,
+      });
 
-        page.drawText(text, {
-          x: 50,
-          y: height - 4 * fontSize,
-          size: fontSize,
-        });
+      const pdfBytes = await pdfDoc.save();
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const url = window.URL.createObjectURL(blob);
 
-        const pdfBytes = await pdfDoc.save();
-        const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-        const url = window.URL.createObjectURL(blob);
-
-        resolve('The image has been converted');
-
-        downloadBlob(url, filename);
-      };
-    } catch (err) {
-      const error = err as Error;
-      reject(new Error(error.message));
-    }
-  });
+      downloadBlob(url, filename);
+    };
+  } catch (err) {
+    const error = err as Error;
+    console.error(`ERROR WHILE EXTRACTING THE TEXT FROM AN IMAGE: ${error.stack ?? error.message}`);
+  }
 };
 
 const fileConverterService = {

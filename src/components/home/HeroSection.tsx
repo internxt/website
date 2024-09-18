@@ -55,19 +55,18 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : undefined}
-            <div className="flex w-full">
-              <HomePageBannerForMobile />
-            </div>
+            <HomePageBannerForMobile />
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                <div className="flex w-full flex-col gap-9">
-                  <Header className="text-gray-100" maxWidth="max-w-[500px]">
-                    {textContent.title.line1}
-                    <span className="text-primary">{textContent.title.blueText}</span>
-                    {textContent.title.line2}{' '}
-                  </Header>
+                <div className="flex w-max flex-col gap-9">
+                  <div className="flex flex-col gap-4">
+                    <Header maxWidth="max-w-[500px]" className="text-gray-100">
+                      {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
+                      {textContent.title.line2}{' '}
+                    </Header>
+                  </div>
                   <p className="text-xl font-bold text-gray-100">
                     {textContent.TitleAndOnePlan.description.normal1}
                     <span className="text-primary">{textContent.TitleAndOnePlan.description.blue}</span>
@@ -103,16 +102,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           {/* Desktop animation/image */}
-          {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex"><Animation /></div> */}
-          <div className="hidden h-full max-h-[530px] w-full max-w-[600px] translate-x-5 items-center justify-end pt-10 lg:flex">
-            <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_secure_cloud_storage.webp')}
-              alt="Internxt Secure Cloud Storage"
-              priority
-              draggable={false}
-              width={600}
-              height={529}
-            />
+          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <Animation />
           </div>
         </div>
       </div>
