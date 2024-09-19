@@ -115,16 +115,16 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               </Link>
             </div>
             <ItemsNavigation
-              darkMode={props.darkMode}
+              darkMode={props.darkMode ?? false}
               getTitles={getTitles}
-              shouldHideItems={props.isLinksHidden}
-              lang={lang}
+              shouldHideItems={props.isLinksHidden ?? false}
+              lang={lang as string}
               router={router}
               textContent={props.textContent}
             />
           </div>
 
-          {/* Left side of navbar: Logo / Hamburguer menu */}
+          {/* Left side of navbar: Logo / Hamburger menu */}
           {/* Login and CTA */}
           <div className="relative flex h-full w-max flex-row items-center justify-end space-x-2">
             <div
