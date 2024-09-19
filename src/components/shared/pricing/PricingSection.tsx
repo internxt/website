@@ -9,9 +9,9 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
 import { Detective, FolderLock } from '@phosphor-icons/react';
-import OpenSource from '/public/icons/open-source.svg';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
+import { OpenSource } from '../icons/OpenSource';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -76,6 +76,10 @@ export const PricingSection = ({
 
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
+  const labelDiscount = isBusiness ? '10' : '23';
+  const showLoadingCards = isIndividual && loadingCards;
+  const showIndividualCards = isIndividual && !loadingCards;
+  const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
 
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
@@ -134,7 +138,7 @@ export const PricingSection = ({
         </div>
         <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
           {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          {hidePlanSelectorComponent ? undefined : (
+          {!hidePlanSelectorComponent && (
             <PlanSelector
               textContent={textContent}
               activeSwitchPlan={activeSwitchPlan}
@@ -150,13 +154,13 @@ export const PricingSection = ({
             lang={lang}
             billedFrequency={billingFrequencyForSwitch}
             handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={isBusiness ? '10' : '23'}
+            labelDiscount={labelDiscount}
             showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
           />
         </div>
 
         <Transition
-          show={isIndividual && loadingCards}
+          show={showLoadingCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -171,54 +175,53 @@ export const PricingSection = ({
         </Transition>
 
         <Transition
-          show={isIndividual && !loadingCards}
+          show={showIndividualCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
           className="flex flex-col gap-4"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.individuals
-              ? products.individuals[billingFrequency].map((product) => (
-                  <PriceCard
-                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                    product={product}
-                    onCheckoutButtonClicked={onCheckoutButtonClicked}
-                    label={product.storage}
-                    monthlyProductPrice={
-                      products.individuals[Interval.Month].filter(
-                        (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                      )[0].price
-                    }
-                    key={product.storage}
-                    popular={product.storage === popularPlanBySize}
-                    decimalDiscountValue={
-                      product.interval !== Interval.Lifetime
-                        ? decimalDiscount?.subscriptions
-                        : lifetimeCoupons
-                        ? undefined
-                        : decimalDiscount?.subscriptions
-                    }
-                    fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons
-                        ? lifetimeCoupons?.[product.storage].amountOff
-                        : undefined
-                    }
-                    lang={lang}
-                  />
-                ))
-              : undefined}
+            {products?.individuals &&
+              products.individuals[billingFrequency].map((product) => (
+                <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  label={product.storage}
+                  monthlyProductPrice={
+                    products.individuals[Interval.Month].filter(
+                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                    )[0].price
+                  }
+                  key={product.storage}
+                  popular={product.storage === popularPlanBySize}
+                  decimalDiscountValue={
+                    product.interval !== Interval.Lifetime
+                      ? decimalDiscount?.subscriptions
+                      : lifetimeCoupons
+                      ? undefined
+                      : decimalDiscount?.subscriptions
+                  }
+                  fixedDiscount={
+                    product.interval === Interval.Lifetime && lifetimeCoupons
+                      ? lifetimeCoupons?.[product.storage].amountOff
+                      : undefined
+                  }
+                  lang={lang}
+                />
+              ))}
           </div>
-          {!hideFreeCard ? (
+          {!hideFreeCard && (
             <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
               <FreePlanCard textContent={textContent.freePlanCard} />
             </div>
-          ) : undefined}
+          )}
         </Transition>
 
         {/* Business plans */}
         <Transition
-          show={isBusiness && !!businessBillingFrequency}
+          show={showBusinessCards}
           enter="transition duration-500 ease-out"
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
@@ -229,27 +232,27 @@ export const PricingSection = ({
               <BusinessBanner textContent={banner.BusinessBanner} />
             ) : (
               <>
-                {businessBillingFrequency && products?.business
-                  ? products.business[businessBillingFrequency].map((product) => (
-                      <PriceCard
-                        isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                        product={product}
-                        onCheckoutButtonClicked={onCheckoutButtonClicked}
-                        productCardPlan="business"
-                        label={product.storage}
-                        monthlyProductPrice={
-                          products.business[Interval.Month].filter(
-                            (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                          )[0].price
-                        }
-                        key={product.storage}
-                        popular={product.storage === '10TB'}
-                        decimalDiscountValue={decimalDiscount?.business}
-                        isFamilyPage={isFamilyPage}
-                        lang={lang}
-                      />
-                    ))
-                  : undefined}
+                {businessBillingFrequency &&
+                  products?.business &&
+                  products.business[businessBillingFrequency].map((product) => (
+                    <PriceCard
+                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
+                      product={product}
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
+                      monthlyProductPrice={
+                        products.business[Interval.Month].filter(
+                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                        )[0].price
+                      }
+                      key={product.storage}
+                      popular={product.storage === '10TB'}
+                      decimalDiscountValue={decimalDiscount?.business}
+                      isFamilyPage={isFamilyPage}
+                      lang={lang}
+                    />
+                  ))}
               </>
             )}
           </div>
