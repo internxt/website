@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CaretDown } from '@phosphor-icons/react';
 
-export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems, getTitles, textContent, router }) => {
+export const ItemsNavigation = ({ lang, darkMode, shouldHideItems, getTitles, textContent, router }) => {
   return (
     <>
       {/* Desktop links */}
@@ -12,7 +12,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
               href="/pricing"
               locale={lang}
               className={`whitespace-nowrap px-4 py-1.5 transition duration-150 ease-in-out ${
-                darkMode || isQuizSection
+                darkMode
                   ? `text-white hover:text-cool-gray-20 ${
                       router.pathname.split('/')[1] === getTitles.links.pricing.trim().toLowerCase() && 'text-primary'
                     }`
@@ -26,7 +26,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
 
             <div
               className={`group relative flex space-x-1 px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${
-                darkMode || isQuizSection
+                darkMode
                   ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-cool-gray-20'
                   : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
               } cursor-default rounded-lg`}
@@ -46,7 +46,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     href="/drive"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.drive}
@@ -56,7 +56,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     href="/cloud-object-storage"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.s3}
@@ -67,7 +67,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     target="_blank"
                     rel="noreferrer"
                     className={`flex flex-row items-center justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     <span>{textContent.products.send}</span>
@@ -77,7 +77,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     href="/vpn"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.products.vpn}
@@ -88,7 +88,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
 
             <div
               className={`group relative flex space-x-1 px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${
-                darkMode || isQuizSection
+                darkMode
                   ? 'text-white hover:bg-white hover:bg-opacity-10 hover:text-gray-20'
                   : 'text-gray-60 hover:bg-gray-100 hover:bg-opacity-5 hover:text-primary'
               } cursor-default rounded-lg`}
@@ -108,7 +108,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     href="/privacy"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.ourValues.privacy}
@@ -118,7 +118,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
                     href="/open-source"
                     locale={lang}
                     className={`flex flex-row justify-start rounded-lg px-4 py-2 text-base font-medium text-cool-gray-80 ${
-                      darkMode || isQuizSection ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
+                      darkMode ? 'hover:bg-gray-10' : 'hover:bg-gray-5'
                     }`}
                   >
                     {textContent.ourValues.openSource}
@@ -131,7 +131,7 @@ export const ItemsNavigation = ({ lang, darkMode, isQuizSection, shouldHideItems
               href="/about"
               locale={lang}
               className={`whitespace-nowrap px-4 py-1.5 transition duration-150 ease-in-out ${
-                darkMode || isQuizSection
+                darkMode
                   ? `text-white hover:text-gray-20 ${
                       router.pathname.split('/')[1] === getTitles.links.about.split(' ')[0].toLowerCase() &&
                       'text-primary'
