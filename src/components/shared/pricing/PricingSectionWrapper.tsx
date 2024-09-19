@@ -3,6 +3,7 @@ import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
+import Header from '../Header';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -18,6 +19,7 @@ interface PricingSectionWrapperProps {
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  backgroundColorComponent?: string;
   isFamilyPage?: boolean;
   decimalDiscount?: {
     individuals?: number;
@@ -40,6 +42,7 @@ export const PricingSectionWrapper = ({
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
+  backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
   hideFreeCard,
   popularPlanBySize,
@@ -57,34 +60,61 @@ export const PricingSectionWrapper = ({
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
   } = usePlanSelection(startFromPlan, startFromInterval, handlePageNameUpdate);
+  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+
+  const individualPlansTitle =
+    textContent.planTitles.homePage ??
+    (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
+  const businessTitle = textContent.planTitles.business;
+
+  const title = () => {
+    if (isIndividual) {
+      return individualPlansTitle;
+    } else {
+      return businessTitle;
+    }
+  };
 
   return (
-    <PricingSection
-      textContent={textContent}
-      lang={lang}
-      billingFrequency={billingFrequency}
-      businessBillingFrequency={businessBillingFrequency}
-      lifetimeCoupons={lifetimeCoupons}
-      isFamilyPage={isFamilyPage}
-      decimalDiscount={{
-        subscriptions: decimalDiscount?.individuals,
-        lifetime: decimalDiscount?.lifetime,
-        business: decimalDiscount?.business,
-      }}
-      products={products}
-      popularPlanBySize={popularPlanBySize}
-      hideFreeCard={hideFreeCard}
-      hideBusinessSelector={hideBusinessSelector}
-      hidePlanSelectorComponent={hidePlanSelectorComponent}
-      hideBusinessCards={hideBusinessCards}
-      hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
-      loadingCards={loadingCards}
-      activeSwitchPlan={activeSwitchPlan}
-      onCheckoutButtonClicked={onCheckoutButtonClicked}
-      onPlanTypeChange={onPlanTypeChange}
-      onIndividualSwitchToggled={onIndividualSwitchToggled}
-      onBusinessSwitchToggled={onBusinessSwitchToggled}
-      onBusinessPlansSelected={onBusinessPlansSelected}
-    />
+    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
+      <div className="flex w-full flex-col items-center gap-10">
+        <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+          <Header maxWidth="max-w-4xl">{title()}</Header>
+          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
+            {!isIndividual
+              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
+              : `${textContent.planDescription}`}
+          </p>
+        </div>
+
+        <PricingSection
+          textContent={textContent}
+          lang={lang}
+          billingFrequency={billingFrequency}
+          businessBillingFrequency={businessBillingFrequency}
+          lifetimeCoupons={lifetimeCoupons}
+          isFamilyPage={isFamilyPage}
+          decimalDiscount={{
+            subscriptions: decimalDiscount?.individuals,
+            lifetime: decimalDiscount?.lifetime,
+            business: decimalDiscount?.business,
+          }}
+          products={products}
+          popularPlanBySize={popularPlanBySize}
+          hideFreeCard={hideFreeCard}
+          hideBusinessSelector={hideBusinessSelector}
+          hidePlanSelectorComponent={hidePlanSelectorComponent}
+          hideBusinessCards={hideBusinessCards}
+          hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
+          loadingCards={loadingCards}
+          activeSwitchPlan={activeSwitchPlan}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          onPlanTypeChange={onPlanTypeChange}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
+          onBusinessPlansSelected={onBusinessPlansSelected}
+        />
+      </div>
+    </section>
   );
 };
