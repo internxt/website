@@ -182,35 +182,36 @@ export const PricingSection = ({
           className="flex flex-col gap-4"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.individuals &&
-              products.individuals[billingFrequency].map((product) => (
-                <PriceCard
-                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                  product={product}
-                  onCheckoutButtonClicked={onCheckoutButtonClicked}
-                  label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
-                  key={product.storage}
-                  popular={product.storage === popularPlanBySize}
-                  decimalDiscountValue={
-                    product.interval !== Interval.Lifetime
-                      ? decimalDiscount?.subscriptions
-                      : lifetimeCoupons
-                      ? undefined
-                      : decimalDiscount?.subscriptions
-                  }
-                  fixedDiscount={
-                    product.interval === Interval.Lifetime && lifetimeCoupons
-                      ? lifetimeCoupons?.[product.storage].amountOff
-                      : undefined
-                  }
-                  lang={lang}
-                />
-              ))}
+            {products?.individuals
+              ? products.individuals[billingFrequency].map((product) => (
+                  <PriceCard
+                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                    product={product}
+                    onCheckoutButtonClicked={onCheckoutButtonClicked}
+                    label={product.storage}
+                    monthlyProductPrice={
+                      products.individuals[Interval.Month].filter(
+                        (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                      )[0].price
+                    }
+                    key={product.storage}
+                    popular={product.storage === popularPlanBySize}
+                    decimalDiscountValue={
+                      product.interval !== Interval.Lifetime
+                        ? decimalDiscount?.subscriptions
+                        : lifetimeCoupons
+                        ? undefined
+                        : decimalDiscount?.subscriptions
+                    }
+                    fixedDiscount={
+                      product.interval === Interval.Lifetime && lifetimeCoupons
+                        ? lifetimeCoupons?.[product.storage].amountOff
+                        : undefined
+                    }
+                    lang={lang}
+                  />
+                ))
+              : undefined}
           </div>
           {!hideFreeCard && (
             <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
@@ -232,27 +233,27 @@ export const PricingSection = ({
               <BusinessBanner textContent={banner.BusinessBanner} />
             ) : (
               <>
-                {businessBillingFrequency &&
-                  products?.business &&
-                  products.business[businessBillingFrequency].map((product) => (
-                    <PriceCard
-                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                      product={product}
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
-                      monthlyProductPrice={
-                        products.business[Interval.Month].filter(
-                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                        )[0].price
-                      }
-                      key={product.storage}
-                      popular={product.storage === '10TB'}
-                      decimalDiscountValue={decimalDiscount?.business}
-                      isFamilyPage={isFamilyPage}
-                      lang={lang}
-                    />
-                  ))}
+                {businessBillingFrequency && products?.business
+                  ? products.business[businessBillingFrequency].map((product) => (
+                      <PriceCard
+                        isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
+                        product={product}
+                        onCheckoutButtonClicked={onCheckoutButtonClicked}
+                        productCardPlan="business"
+                        label={product.storage}
+                        monthlyProductPrice={
+                          products.business[Interval.Month].filter(
+                            (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                          )[0].price
+                        }
+                        key={product.storage}
+                        popular={product.storage === '10TB'}
+                        decimalDiscountValue={decimalDiscount?.business}
+                        isFamilyPage={isFamilyPage}
+                        lang={lang}
+                      />
+                    ))
+                  : undefined}
               </>
             )}
           </div>
