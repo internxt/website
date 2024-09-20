@@ -93,7 +93,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
               {/* Logo */}
-              <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+              <Link href="/" locale={lang} className="flex flex-shrink-0 pl-4 lg:hidden">
                 <Image
                   width={96}
                   height={10.5}
@@ -103,7 +103,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                   alt="Internxt logo"
                 />
               </Link>
-              <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
+              <Link href={'/'} locale={lang} className="hidden flex-shrink-0 lg:flex">
                 <Image
                   width={110}
                   height={12}

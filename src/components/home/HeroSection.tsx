@@ -7,6 +7,7 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import { PricingText } from '@/assets/types/pricing';
 const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
   ssr: false,
 });
@@ -17,9 +18,15 @@ interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
+  pricingText: PricingText;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  textContent,
+  lang,
+  isHomePageV2,
+  pricingText,
+}: HeroSectionForHomeProps): JSX.Element {
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/home/image_mobile.webp');
@@ -55,7 +62,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : undefined}
-            <HomePageBannerForMobile />
+            <HomePageBannerForMobile pricingText={pricingText} />
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}

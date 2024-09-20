@@ -25,16 +25,25 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { PricingText } from '@/assets/types/pricing';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   textContent: HomeText;
+  pricingText: PricingText;
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({
+  metatagsDescriptions,
+  textContent,
+  pricingText,
+  lang,
+  navbarLang,
+  footerLang,
+}: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
   const {
@@ -101,7 +110,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale} pricingText={pricingText} />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}
@@ -176,6 +185,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/home.json`);
+  const pricingText = require(`@/assets/lang/${lang}/pricing.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -186,6 +196,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       lang,
       metatagsDescriptions,
       textContent,
+      pricingText,
       navbarLang,
       footerLang,
     },
