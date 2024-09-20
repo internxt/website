@@ -24,12 +24,6 @@ const Middleware = (req: NextRequest) => {
   const isExcludedPath = excludedPaths.findIndex((path) => req.nextUrl.pathname.includes(path)) !== -1;
   if (isExcludedPath) return NextResponse.next();
 
-  console.log('Si o que', req.nextUrl.locale, req.nextUrl.pathname);
-  if (req.nextUrl.locale === 'pt-br' && !allowedBrazilianPath.includes(req.nextUrl.pathname)) {
-    console.log('Si o que', req.nextUrl.pathname);
-    return NextResponse.redirect(`https://internxt.com${req.nextUrl.pathname}`);
-  }
-
   if (req.nextUrl.pathname !== req.nextUrl.pathname.toLowerCase() || req.nextUrl.pathname.includes('%20')) {
     const url = req.nextUrl.clone();
     if (url.pathname.includes('%20')) {
