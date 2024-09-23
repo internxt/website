@@ -13,6 +13,7 @@ import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
+import S3Banner from '@/components/banners/S3Banner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -127,7 +128,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
-          {shouldShowBanner ? <BottomBanner /> : undefined}
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <S3Banner />
+            </>
+          ) : undefined}
           {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
         </div>
         <FreeCardPromoBanner />
