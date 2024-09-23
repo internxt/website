@@ -44,7 +44,7 @@
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti"
     },
-    "save": "Risparmia fino a",
+    "save": "Risparmia fino al",
     "planTitles": {
       "individuals": "Piani individuali",
       "lifetime": "Piani a vita",
@@ -60,8 +60,8 @@
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
     "billingFrequency": {
       "monthly": "Mensile",
-      "annually": "Annualmente",
-      "lifetime": "Vita",
+      "annually": "Annuale",
+      "lifetime": "A vita",
       "individual": "Individuale",
       "business": "Business"
     },
