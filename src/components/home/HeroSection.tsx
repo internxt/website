@@ -7,9 +7,7 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
-  ssr: false,
-});
+import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -60,7 +58,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
-                <div className="flex w-max flex-col gap-9">
+                <div className="flex flex-col gap-9">
                   <div className="flex flex-col gap-4">
                     <Header maxWidth="max-w-[500px]" className="text-gray-100">
                       {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
