@@ -172,14 +172,6 @@ export default function Footer({
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
-                    <Link
-                      href="/webdav"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      <div className="flex flex-row">{textContent.FooterSection.sections.products.webDAV}</div>
-                    </Link>
 
                     <Link
                       href="/cloud-object-storage"
@@ -572,16 +564,6 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
-
-                      <Link
-                        href="/webdav"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.products.webDAV}
-                      </Link>
-
                       <Link
                         href="/cloud-object-storage"
                         target="_blank"
