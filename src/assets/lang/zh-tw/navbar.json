@@ -12,7 +12,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
-    "s3": "Internxt Object Storage",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "send": "Internxt Send",
     "vpn": "Internxt VPN",
