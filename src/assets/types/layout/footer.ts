@@ -66,7 +66,6 @@ export interface Products {
   drive: string;
   photos: string;
   send: string;
-  webDAV: string;
   objStorage: string;
   vpn: string;
   token: string;
