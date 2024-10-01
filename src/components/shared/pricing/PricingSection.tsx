@@ -76,7 +76,7 @@ export const PricingSection = ({
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = isBusiness ? '10' : '23';
-  const showLoadingCards = isIndividual && loadingCards;
+  const showLoadingCards = loadingCards;
   const showIndividualCards = isIndividual && !loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
 
@@ -117,145 +117,35 @@ export const PricingSection = ({
   };
 
   return (
-    <>
-      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-        {!hidePlanSelectorComponent && (
-          <PlanSelector
-            textContent={textContent}
-            activeSwitchPlan={activeSwitchPlan}
-            hideBusinessSelector={hideBusinessSelector}
-            onPlanTypeChange={onPlanTypeChange}
-          />
-        )}
-
-        {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        <SwitchComponent
+    <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
+      {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+      {!hidePlanSelectorComponent && (
+        <PlanSelector
           textContent={textContent}
-          show={showSwitchComponent}
-          lang={lang}
-          billedFrequency={billingFrequencyForSwitch}
-          handleOnSwitchIsToggled={switchHandler}
-          labelDiscount={labelDiscount}
-          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          activeSwitchPlan={activeSwitchPlan}
+          hideBusinessSelector={hideBusinessSelector}
+          onPlanTypeChange={onPlanTypeChange}
         />
-        <Transition
-          show={showLoadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-            {Array(4)
-              .fill(0)
-              .map((_, i) => (
-                <CardSkeleton key={i} />
-              ))}
-          </div>
-        </Transition>
+      )}
 
-        <Transition
-          show={showIndividualCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-          className="flex flex-col gap-4"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.individuals
-              ? products.individuals[billingFrequency].map((product) => (
-                  <PriceCard
-                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                    product={product}
-                    onCheckoutButtonClicked={onCheckoutButtonClicked}
-                    label={product.storage}
-                    monthlyProductPrice={
-                      products.individuals[Interval.Month].filter(
-                        (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                      )[0].price
-                    }
-                    key={product.storage}
-                    popular={product.storage === popularPlanBySize}
-                    decimalDiscountValue={
-                      product.interval !== Interval.Lifetime
-                        ? decimalDiscount?.subscriptions
-                        : lifetimeCoupons
-                        ? undefined
-                        : decimalDiscount?.subscriptions
-                    }
-                    fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons
-                        ? lifetimeCoupons?.[product.storage].amountOff
-                        : undefined
-                    }
-                    lang={lang}
-                  />
-                ))
-              : undefined}
-          </div>
-          {!hideFreeCard && (
-            <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
-              <FreePlanCard textContent={textContent.freePlanCard} />
-            </div>
-          )}
-        </Transition>
-
-        {/* Business plans */}
-        <Transition
-          show={showBusinessCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-          className="flex w-full flex-col gap-4"
-        >
-          <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
-            {hideBusinessCards ? (
-              <BusinessBanner textContent={banner.BusinessBanner} />
-            ) : (
-              <>
-                {businessBillingFrequency && products?.business
-                  ? products.business[businessBillingFrequency].map((product) => (
-                      <PriceCard
-                        isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                        product={product}
-                        onCheckoutButtonClicked={onCheckoutButtonClicked}
-                        productCardPlan="business"
-                        label={product.storage}
-                        monthlyProductPrice={
-                          products.business[Interval.Month].filter(
-                            (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                          )[0].price
-                        }
-                        key={product.storage}
-                        popular={product.storage === '10TB'}
-                        decimalDiscountValue={decimalDiscount?.business}
-                        isFamilyPage={isFamilyPage}
-                        lang={lang}
-                      />
-                    ))
-                  : undefined}
-              </>
-            )}
-          </div>
-        </Transition>
-        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
-          {features.map((feature) => (
-            <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary md:pb-0" />
-              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
+      {/* Switch buttons for Individual plans (Monthly | Annually) */}
+      <SwitchComponent
+        textContent={textContent}
+        show={showSwitchComponent}
+        lang={lang}
+        billedFrequency={billingFrequencyForSwitch}
+        handleOnSwitchIsToggled={switchHandler}
+        labelDiscount={labelDiscount}
+        showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+      />
       <Transition
-        show={loadingCards}
+        show={showLoadingCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(SKELETON_CARDS[activeSwitchPlan])
+          {Array(4)
             .fill(0)
             .map((_, i) => (
               <CardSkeleton key={i} />
@@ -264,7 +154,7 @@ export const PricingSection = ({
       </Transition>
 
       <Transition
-        show={isIndividual && !loadingCards}
+        show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
@@ -302,16 +192,16 @@ export const PricingSection = ({
               ))
             : undefined}
         </div>
-        {!hideFreeCard ? (
+        {!hideFreeCard && (
           <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
             <FreePlanCard textContent={textContent.freePlanCard} />
           </div>
-        ) : undefined}
+        )}
       </Transition>
 
       {/* Business plans */}
       <Transition
-        show={isBusiness && !!businessBillingFrequency}
+        show={showBusinessCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
@@ -355,6 +245,6 @@ export const PricingSection = ({
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 };
