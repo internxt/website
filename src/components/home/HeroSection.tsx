@@ -7,9 +7,7 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-const TitleAndOnePlan = dynamic(() => import('./components/heroSection/TitleAndOnePlan'), {
-  ssr: false,
-});
+import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 
 const Animation = dynamic(() => import('./components/Animation'));
 

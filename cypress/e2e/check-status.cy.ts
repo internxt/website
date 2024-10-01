@@ -14,7 +14,6 @@ const nameFiles = [
   'cyber-awareness',
   'dealfuel',
   'drive',
-  'freemonth',
   'legal',
   'lifetime_special',
   'lifetime',

@@ -82,11 +82,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
-      } h-20 w-full ${props.isQuizSection ? 'bg-black' : 'bg-white'} transition-all duration-100 lg:h-16 ${
-        props.darkMode && 'bg-opacity-0'
-      } ${props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'} ${
-        scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'
-      } ${menuState ? 'bg-opacity-100' : ''} z-50 border-b border-black`}
+      } h-20 w-full bg-white transition-all duration-100 lg:h-16 ${props.darkMode && 'bg-black bg-opacity-0'} ${
+        props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
+      } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'} ${
+        menuState ? 'bg-opacity-100' : ''
+      } z-50 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
@@ -99,11 +99,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                   height={10.5}
                   loading="lazy"
                   className="select-none"
-                  src={getImage(
-                    `/logos/internxt/${
-                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                    }.svg`,
-                  )}
+                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               </Link>
@@ -113,27 +109,22 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                   height={12}
                   loading="lazy"
                   className="select-none"
-                  src={getImage(
-                    `/logos/internxt/${
-                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                    }.svg`,
-                  )}
+                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               </Link>
             </div>
             <ItemsNavigation
-              darkMode={props.darkMode}
+              darkMode={props.darkMode ?? false}
               getTitles={getTitles}
-              isQuizSection={props.isQuizSection}
-              shouldHideItems={props.isLinksHidden}
-              lang={lang}
+              shouldHideItems={props.isLinksHidden ?? false}
+              lang={lang as string}
               router={router}
               textContent={props.textContent}
             />
           </div>
 
-          {/* Left side of navbar: Logo / Hamburguer menu */}
+          {/* Left side of navbar: Logo / Hamburger menu */}
           {/* Login and CTA */}
           <div className="relative flex h-full w-max flex-row items-center justify-end space-x-2">
             <div
@@ -160,7 +151,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 id="loginButton"
                 onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
                 className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
-                  props.darkMode || (props.isQuizSection && !menuState)
+                  props.darkMode && !menuState
                     ? 'bg-white text-gray-80 focus:opacity-80'
                     : 'border-gray-10 text-gray-80 hover:bg-gray-1 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium shadow-sm`}
@@ -213,7 +204,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               {!props.hideNavbar ? (
-                <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
+                <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode} />
               ) : undefined}
             </div>
             {!props.isLinksHidden && (
@@ -221,7 +212,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 <Hamburger
                   label="Show menu"
                   size={20}
-                  color={props.darkMode || (props.isQuizSection && !menuState) ? '#fff' : '#3A3A3B'}
+                  color={props.darkMode && !menuState ? '#fff' : '#3A3A3B'}
                   toggled={menuState}
                   toggle={setMenuState}
                 />
@@ -270,7 +261,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                             >
                               <Disclosure.Panel
                                 className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode || props.isQuizSection ? 'text-gray-30' : 'text-gray-60'
+                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
                                 <Link href="/drive" locale={props.lang} passHref legacyBehavior>
@@ -332,7 +323,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                             >
                               <Disclosure.Panel
                                 className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode || props.isQuizSection ? 'text-gray-30' : 'text-gray-60'
+                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
                                 <Link href="/privacy" locale={props.lang} passHref legacyBehavior>
