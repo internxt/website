@@ -12,7 +12,6 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
-import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
 import S3Banner from '@/components/banners/S3Banner';
 
 const EXCLUDE_INTERCOM_PATHS = [
@@ -32,6 +31,10 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/pccomponentes-products-b2b',
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
+  '/',
+  '/pricing',
+  '/family',
+  '/business',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -70,11 +73,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.TopBanner,
@@ -82,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -134,7 +137,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               <S3Banner />
             </>
           ) : undefined}
-          {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
+          {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
         <FreeCardPromoBanner />
 

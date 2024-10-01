@@ -44,7 +44,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   ];
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.codeId);
+    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.name);
   };
 
   return (

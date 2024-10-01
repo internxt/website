@@ -19,7 +19,7 @@
   },
   "PaymentSection": {
     "limitedOffer": "限时优惠！",
-    "title": { "blueText": "五折优惠", "normalText": "我们所有的独家终身计划" },
+    "title": { "blueText": "${{percent}}优惠", "normalText": "我们所有的独家终身计划" },
     "description": "一次购买，永久获得隐私和安全",
     "normalSection": {
       "title": "探索我们所有的终身独家计划",

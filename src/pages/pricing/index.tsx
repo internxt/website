@@ -50,8 +50,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Subscriptions75OFF,
-    fetchLifetimeCoupons: true,
+    couponCode: PromoCodeName.CyberAwarenessPromoCode,
+    couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -116,7 +116,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
     const couponCodeForB2CPlans =
       lifetimeSpacePlan && lifetimeCoupons
-        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage]).promoCodeName
         : individualCoupon?.name;
 
     const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
@@ -146,6 +146,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+            lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
           lang={lang}
           products={products}

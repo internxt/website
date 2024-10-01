@@ -287,11 +287,7 @@ export function checkoutForPcComponentes({
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
 
-    const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `${pathname}?${params.toString()}`,
-      enableAutoSubmit: false,
-      skipSignupIfLoggedIn: true,
-    });
+    const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
     window.open(checkoutUrl, '_parent', 'noopener noreferrer');
   }

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Economize 75%",
+    "label": "Economize 80%",
     "title": {
       "line1": "Obtenha o ",
       "blueText": "armazenamento na nuvem mais seguro",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Armazene seus arquivos com segurança, agora ",
-        "blueText": "75% mais barato"
+        "blueText": "80% mais barato"
       },
       "trustedBy": "Confiável por mais de 330.000 pessoas",
       "description": {
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "75% de desconto ",
+        "blue": "80% de desconto ",
         "normal2": "em todos os planos premium"
       },
       "features": ["Até 10TB de armazenamento", "Criptografia de conhecimento zero", "Código aberto e auditado"],
@@ -80,12 +80,12 @@
       "title": {
         "normal1": "Obtenha o ",
         "blue1": "armazenamento na nuvem mais seguro, agora com ",
-        "blue2": "75% de desconto"
+        "blue2": "80% de desconto"
       },
       "description": {
         "normal1": "Obtenha o ",
         "blue1": "armazenamento na nuvem mais seguro, agora com ",
-        "blue2": "75% de desconto"
+        "blue2": "80% de desconto"
       },
       "features": [
         "Criptografia de conhecimento zero de nível militar",
