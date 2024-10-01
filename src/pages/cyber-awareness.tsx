@@ -62,7 +62,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
           </>
         ) : (
           <>
-            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.tableSection.ctaBanner} />
 
             <InfoSection textContent={textContent.InfoSection} />
 
