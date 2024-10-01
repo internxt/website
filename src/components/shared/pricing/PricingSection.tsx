@@ -118,28 +118,27 @@ export const PricingSection = ({
 
   return (
     <>
-      <div className="flex w-full flex-col items-center gap-10">
-        <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          {!hidePlanSelectorComponent && (
-            <PlanSelector
-              textContent={textContent}
-              activeSwitchPlan={activeSwitchPlan}
-              hideBusinessSelector={hideBusinessSelector}
-              onPlanTypeChange={onPlanTypeChange}
-            />
-          )}
-
-          {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <SwitchComponent
+      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
+        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+        {!hidePlanSelectorComponent && (
+          <PlanSelector
             textContent={textContent}
-            show={showSwitchComponent}
-            lang={lang}
-            billedFrequency={billingFrequencyForSwitch}
-            handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={labelDiscount}
-            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+            activeSwitchPlan={activeSwitchPlan}
+            hideBusinessSelector={hideBusinessSelector}
+            onPlanTypeChange={onPlanTypeChange}
           />
+        )}
+
+        {/* Switch buttons for Individual plans (Monthly | Annually) */}
+        <SwitchComponent
+          textContent={textContent}
+          show={showSwitchComponent}
+          lang={lang}
+          billedFrequency={billingFrequencyForSwitch}
+          handleOnSwitchIsToggled={switchHandler}
+          labelDiscount={labelDiscount}
+          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+        />
         <Transition
           show={showLoadingCards}
           enter="transition duration-500 ease-out"
