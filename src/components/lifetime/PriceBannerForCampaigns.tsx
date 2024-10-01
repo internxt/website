@@ -1,10 +1,17 @@
+import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const PriceBannerForCampaigns = ({ textContent }) => {
+export const PriceBannerForCampaigns = ({
+  textContent,
+  redirectTo,
+}: {
+  textContent: PricingText['tableSection']['ctaBanner'];
+  redirectTo?: string;
+}) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
 
@@ -20,7 +27,7 @@ export const PriceBannerForCampaigns = ({ textContent }) => {
           </div>
           <div className="flex flex-col items-center gap-4 lg:flex-row">
             <Link
-              href={'#billingButtons'}
+              href={redirectTo ?? '#billingButtons'}
               className="flex w-max items-center rounded-lg bg-white px-5 py-3 text-lg font-medium text-gray-100 lg:hover:bg-gray-5"
             >
               {textContent.cta}

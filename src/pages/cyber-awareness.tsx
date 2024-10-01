@@ -40,7 +40,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
         {lang !== 'es' ? (
           <>
-            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.tableSection.ctaBanner} />
 
             <CtaSection textContent={textContent.CtaSection} />
 
@@ -87,7 +87,8 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`@/assets/lang/${lang}/cyber-awareness.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const bannerText = require(`@/assets/lang/${lang}/banners.json`);
+  // const bannerText = require(`@/assets/lang/${lang}/banners.json`);
+  const bannerText = require(`@/assets/lang/${lang}/pricing.json`);
 
   cookies.setReferralCookie(ctx);
 
