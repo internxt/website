@@ -1,16 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { CheckCircle, LockKey, X } from '@phosphor-icons/react';
+import { CheckCircle, ShieldCheck, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('2024-09-19');
+const HIDE_BANNER_DATE = new Date('2024-11-31');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
-
-const isWeekend = () => {
-  const today = new Date().getDay();
-  return today === 5 || today === 6 || today === 0;
-};
 
 const FeaturesBanner = () => {
   const router = useRouter();
@@ -35,7 +30,7 @@ const FeaturesBanner = () => {
       setShowBanner(false);
     } else {
       setTimeout(() => {
-        setShowBanner(isWeekend());
+        setShowBanner(true);
       }, 10000);
     }
   }, []);
@@ -90,7 +85,7 @@ const FeaturesBanner = () => {
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card) => (
                   <div className="flex flex-row space-x-4" key={card}>
-                    <LockKey size={32} className="text-primary" weight="fill" />
+                    <ShieldCheck size={32} className="text-primary" weight="fill" />
                     <p className="text-lg font-semibold ">{card}</p>
                   </div>
                 ))}

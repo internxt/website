@@ -48,19 +48,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Até 75% de desconto",
-    "title": "Hora de mudar para a privacidade!",
+    "label": "Economize 80%",
+    "title": "Proteja o seu mundo digital!",
     "subtitle": "Ganhe nossa mochila premium com nossos planos vitalícios.",
     "cta": "Escolher plano",
-    "guarantee": "Garantia de devolução do dinheiro em 30 dias",
-    "lastCta": "*Oferta é para contas gratuitas ou novos clientes",
+    "guarantee": "Garantia de reembolso de 30 dias",
+    "lastCta": "*Oferta válida para contas gratuitas ou novos clientes",
     "features": [
-      "Economize em todos os planos da Internxt",
-      "Armazenamento na nuvem seguro e protegido",
-      "Tecnologia de conhecimento zero",
+      "Economize muito em todos os planos Internxt",
+      "Armazenamento em nuvem seguro e protegido",
       "Código aberto e transparente",
       "Transferências criptografadas de ponta a ponta",
-      "Sem acesso não autorizado"
+      "Sem acesso não autorizado",
+      "Oferta válida até 31 de outubro"
     ]
   },
   "s3StorageBanner": {
