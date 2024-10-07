@@ -9,13 +9,13 @@
       "taiwan": {
         "title": "今天慶祝終身隱私",
         "description": "借國慶折扣永久保護您的文件。",
-        "cta1": "享受 83% 的折扣"
+        "cta1": "享受 ${{percent}}% 的折扣"
       }
     }
   },
   "PaymentSection": {
     "limitedOffer": "限時優惠！",
-    "title": { "blueText": "最高75%折扣", "normalText": " 在我們獨家的終身方案上" },
+    "title": { "blueText": "最高 ${{percent}}折扣", "normalText": " 在我們獨家的終身方案上" },
     "description": "通過獨特的一次性付款，為您的文件提供終身的隱私和安全。",
     "normalSection": {
       "title": "探索我們所有獨家的終身方案",

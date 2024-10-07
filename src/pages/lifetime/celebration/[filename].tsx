@@ -91,7 +91,7 @@ const IMAGES_PER_PATH = {
   },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico', 'taiwan'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
@@ -177,6 +177,7 @@ const LifetimeCelebrationTemplate = ({
         previewImg={getImage(IMAGES_PER_PATH[filename].previewImage)}
         imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
         bgImage={getImage(IMAGES_PER_PATH[filename].backgroundImage)}
+        percent={percent[pathname]}
       />
 
       <PaymentSection
