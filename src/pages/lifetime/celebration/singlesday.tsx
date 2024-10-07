@@ -8,20 +8,23 @@ import CtaSection from '@/components/shared/CtaSection';
 import PaymentSection from '@/components/lifetime/celebration/singles-day/PaymentSection';
 import FeatureSection from '@/components/lifetime/celebration/singles-day/FeatureSection';
 import HeroSection from '@/components/lifetime/celebration/singles-day/HeroSection';
+import { PromoCodeName } from '@/lib/types';
 
-const SinglesdayCelebrationTemplate = ({
+const SinglesdayCelebration = ({
   lang,
   langJson,
   navbarLang,
   footerLang,
   metatagsDescriptions,
   textContent
+  
 }) => {
 const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
 const discount=0.2;
 const percent='80%'
 const currencySpecified='US';
-//const couponCode=PromoCodeName.SinglesDay;
+const locale = lang as string;
+const couponCode=PromoCodeName.SinglesDay;
 
   return (
     <Layout
@@ -31,7 +34,7 @@ const currencySpecified='US';
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-    <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
+    <Navbar textContent={navbarLang} lang={locale}  cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
     <div className="mt-16">
       <HeroSection textContent={langJson.HeroSection} percent={percent}/>
       <PaymentSection
@@ -42,6 +45,7 @@ const currencySpecified='US';
         percent={percent}
         currencySpecified={currencySpecified}
         lifetimeMode="celebration"
+        couponCode={couponCode}
       />
       <FeatureSection textContent={langJson.FeatureSection} backgroundColor='bg-white' />
       <CtaSection textContent={textContent.CtaSection1} url={''}/>
@@ -79,4 +83,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default SinglesdayCelebrationTemplate;
+export default SinglesdayCelebration;
