@@ -12,7 +12,7 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
-import S3Banner from '@/components/banners/S3Banner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
@@ -134,7 +134,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           {shouldShowBanner ? (
             <>
               <BottomBanner />
-              <S3Banner />
+              <FeaturesBanner />
+              {/* <S3Banner /> */}
             </>
           ) : undefined}
           {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
