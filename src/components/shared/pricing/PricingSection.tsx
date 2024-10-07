@@ -39,7 +39,6 @@ interface PriceTableProps {
     lifetime?: number;
     business?: number;
   };
-  backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -61,7 +60,6 @@ export const PricingSection = ({
   hidePlanSelectorComponent,
   hideBusinessSelector,
   lang,
-  backgroundColorComponent = 'bg-white',
   popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
@@ -117,27 +115,29 @@ export const PricingSection = ({
   };
 
   return (
-    <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-      {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-      {!hidePlanSelectorComponent && (
-        <PlanSelector
-          textContent={textContent}
-          activeSwitchPlan={activeSwitchPlan}
-          hideBusinessSelector={hideBusinessSelector}
-          onPlanTypeChange={onPlanTypeChange}
-        />
-      )}
+    <>
+      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
+        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+        {!hidePlanSelectorComponent && (
+          <PlanSelector
+            textContent={textContent}
+            activeSwitchPlan={activeSwitchPlan}
+            hideBusinessSelector={hideBusinessSelector}
+            onPlanTypeChange={onPlanTypeChange}
+          />
+        )}
 
-      {/* Switch buttons for Individual plans (Monthly | Annually) */}
-      <SwitchComponent
-        textContent={textContent}
-        show={showSwitchComponent}
-        lang={lang}
-        billedFrequency={billingFrequencyForSwitch}
-        handleOnSwitchIsToggled={switchHandler}
-        labelDiscount={labelDiscount}
-        showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
-      />
+        {/* Switch buttons for Individual plans (Monthly | Annually) */}
+        <SwitchComponent
+          textContent={textContent}
+          show={showSwitchComponent}
+          lang={lang}
+          billedFrequency={billingFrequencyForSwitch}
+          handleOnSwitchIsToggled={switchHandler}
+          labelDiscount={labelDiscount}
+          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+        />
+      </div>
       <Transition
         show={showLoadingCards}
         enter="transition duration-500 ease-out"
@@ -245,6 +245,6 @@ export const PricingSection = ({
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 };
