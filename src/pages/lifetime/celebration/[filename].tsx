@@ -91,7 +91,7 @@ const IMAGES_PER_PATH = {
   },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico', 'taiwan'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico','taiwan'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
