@@ -24,7 +24,7 @@
       "title": "Explore todos os nossos planos vitalícios exclusivos",
       "description": "Uma vida de privacidade e segurança para seus arquivos por um pagamento único e exclusivo."
     },
-    "securePayment": "Pagamento 100% seguro, com tecnologia Stripe",
+    "securePayment": "Pagamento 100% seguro pelo Stripe",
     "features": {
       "endToEnd": "Criptografado de ponta a ponta",
       "openSource": "Código aberto e auditado",
@@ -37,12 +37,12 @@
   },
   "FeatureSection": {
     "title": "Por que escolher o Internxt para proteger seus arquivos?",
-    "description": "Internxt coloca você de volta no controle de sua privacidade. Ao contrário do armazenamento em nuvem tradicional, garantimos que apenas você tenha as chaves para seus dados criptografados. Tomamos todas as medidas para garantir que suas informações permaneçam seguras.",
+    "description": "O Internxt coloca você de volta no controle de sua privacidade. Ao contrário do armazenamento em nuvem tradicional, garantimos que apenas você tenha as chaves para seus dados criptografados. Tomamos todas as medidas para garantir que suas informações permaneçam seguras.",
     "cta": "",
     "cards": [
       {
         "title": "Privacidade Aprimorada",
-        "description": "Nossa poderosa criptografia protege seus dados contra acessos não autorizados. Nunca armazenamos senhas; todos os seus dados são criptografados em trânsito e em repouso."
+        "description": "Nossa poderosa criptografia protege seus dados contra acessos não autorizados. Nunca armazenamos senhas; todos os seus dados são criptografados em trânsito e em armazenamento."
       },
       {
         "title": "Controle do Usuário",
