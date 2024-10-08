@@ -1,7 +1,6 @@
 {
 "PaymentSection": {
     "title": { 
-        "previousBlueText": " ",
         "blueText": "${{percent}} OFF", 
         "postBlueText": " 的折扣！"} ,
     "description": "这个光棍节，不用再单身度过了。开启与在线隐私的安全交往。Internxt 的加密云致力于保护您的文件，并保护您的数据免受网络攻击和数据收集。 ",
