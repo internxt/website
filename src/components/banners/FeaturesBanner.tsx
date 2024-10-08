@@ -55,8 +55,8 @@ const FeaturesBanner = () => {
         >
           <X size={32} />
         </button>
-        <div className="flex max-w-[850px] flex-col space-x-10 py-14 lg:w-screen xl:flex-row">
-          <div className="flex w-full flex-col  items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
+        <div className="flex max-w-[800px] flex-col items-center justify-between py-14 md:flex-row lg:w-screen">
+          <div className="flex h-max w-full flex-col items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
             <div className="flex rounded-lg border-4 border-primary/7 px-3 py-1.5">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
