@@ -150,7 +150,7 @@ const PriceTable = ({
                       cta={['checkout', product.priceId]}
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
-                      popular={lifetimeMode === 'normal' ? product.storage === '10TB' : product.storage === '5TB'}
+                      popular={lifetimeMode === 'celebration' ? product.storage === '10TB' : product.storage === '5TB'}
                       priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
