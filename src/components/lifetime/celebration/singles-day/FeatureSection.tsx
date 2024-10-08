@@ -4,11 +4,7 @@ import { useRouter } from 'next/router';
 import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
-<<<<<<< Updated upstream
-import PlatformSection from './PlatformSection';
-=======
 import PlatformSection from '@/components/black-friday/PlatformSection';
->>>>>>> Stashed changes
 const InfinityIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={32} height={32} viewBox="0 0 256 256">
     <rect width="256" height="256" fill="none" />
@@ -93,11 +89,7 @@ const FeatureSection = ({
                 </RevealY>
             </div>
         </div>
-<<<<<<< Updated upstream
-      
-=======
 
->>>>>>> Stashed changes
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {Cards.map((card) => (
             <div
@@ -120,8 +112,4 @@ const FeatureSection = ({
   );
 };
 
-<<<<<<< Updated upstream
 export default FeatureSection;
-=======
-export default FeatureSection;
->>>>>>> Stashed changes
