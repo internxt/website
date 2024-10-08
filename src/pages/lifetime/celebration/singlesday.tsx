@@ -57,7 +57,16 @@ const couponCode=PromoCodeName.SinglesDay;
         background="bg-gray-1" 
       />
 
-     
+      <PaymentSection 
+       textContent={langJson.PaymentSection}
+        discount={discount}
+        showPriceBefore
+        lang={lang}
+        percent={percent}
+        currencySpecified={currencySpecified}
+         lifetimeMode="celebration"
+        couponCode={couponCode}
+        />
       <FeatureSection textContent={langJson.FeatureSection} backgroundColor='bg-white' />
       <CtaSection textContent={langJson.CtaSection1} url={'/pricing'}/>
       <TestimonialsSection textContent={langJson.TestimonialsSection}/>
