@@ -46,7 +46,7 @@ const FeaturesBanner = () => {
         showBanner ? 'flex' : 'hidden'
       } fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
-      <div className="fixed left-1/2 top-1/2 flex h-auto -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white bg-cover px-10">
+      <div className="fixed left-1/2 top-1/2 flex h-max -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl border-4 border-primary/7 bg-white bg-cover px-10">
         <button
           id="close-banner"
           aria-label="close-banner"
@@ -55,8 +55,8 @@ const FeaturesBanner = () => {
         >
           <X size={32} />
         </button>
-        <div className="flex max-w-[900px] flex-col space-x-10 py-14 lg:flex-row">
-          <div className="flex w-full flex-col  items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
+        <div className="flex max-w-[800px] flex-col items-center justify-between py-14 md:flex-row lg:w-screen">
+          <div className="flex h-max w-full flex-col items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
             <div className="flex rounded-lg border-4 border-primary/7 px-3 py-1.5">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
