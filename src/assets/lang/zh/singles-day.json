@@ -1,6 +1,7 @@
 {
 "PaymentSection": {
     "title": { 
+        "previousBlueText": "与 Internxt 一起庆祝光棍节：所有安全终身云存储计划均可享受 ",
         "blueText": "${{percent}} OFF", 
         "postBlueText": " 的折扣！"} ,
     "description": "这个光棍节，不用再单身度过了。开启与在线隐私的安全交往。Internxt 的加密云致力于保护您的文件，并保护您的数据免受网络攻击和数据收集。 ",
@@ -122,19 +123,8 @@
     ]
   },
   "HeroSection":{
-<<<<<<< Updated upstream
-    "offer":"Exclusive Offer!",
-    "title": { 
-        "previousBlueText": "2024 年光棍节特惠 "
-    },
-    "description":"享受终身安全加密云存储",
-    "cta":"购买"
-  }
-}
-=======
     "title": "2024 年光棍节特惠",
     "description": "享受终身安全加密云存储",
     "cta": "购买"
   }
 } 
->>>>>>> Stashed changes
