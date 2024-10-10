@@ -80,11 +80,26 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual
-              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
-              : `${textContent.planDescription}`}
-          </p>
+           <p className="w-full max-w-3xl text-center text-2xl text-regular">
+          {!isIndividual ? (
+            `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
+          ) : (
+            typeof textContent.planDescription === 'string' ? (
+              textContent.planDescription
+            ) : (
+              <>
+                <span className="text-xl text-regular">{textContent.planDescription.planDescription}</span>
+                <br />
+                <br />
+                {textContent.planDescription.previousBlueText}
+                {textContent.planDescription.blueText && (
+                  <span className="text-primary text-2xl text-Bold"> {textContent.planDescription.blueText} </span>
+                )}
+                {textContent.planDescription.postBlueText}
+              </>
+            )
+          )}
+        </p>
         </div>
 
         <PricingSection
