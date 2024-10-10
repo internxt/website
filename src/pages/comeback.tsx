@@ -90,8 +90,9 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         textContent={textContent.HeroSection}
         isCelebrationPage
         percent={percent}
+        isComeback
       />
-
+      
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
@@ -106,7 +107,7 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         hideBusinessSelector
         hideFreeCard
       />
-
+    
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
@@ -121,7 +122,11 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         backgroundColorForCard='bg-white'
       />
       <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor='bg-white' />
-      <CtaSection textContent={textContent.CtaSection} bgImage='/images/lifetime/celebration/normal-bg.png' url={''} />
+      <CtaSection
+        textContent={textContent.CtaSection}
+        bgImage='/images/lifetime/celebration/normal-bg.png'
+        url="#billingButtons"
+      />
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
