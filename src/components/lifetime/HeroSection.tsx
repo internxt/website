@@ -15,6 +15,7 @@ interface HeroSectionProps {
   previewImg?: string;
   bgImage?: string;
   imageMobile?: string;
+  isComeback?:boolean
 }
 
 const HeroSection = ({
@@ -26,6 +27,7 @@ const HeroSection = ({
   percent,
   dt,
   imageMobile,
+  isComeback
 }: HeroSectionProps): JSX.Element => {
   return (
     <section
@@ -61,7 +63,11 @@ const HeroSection = ({
               </div>
               <button
                 onClick={() => {
-                  window.location.href = `#payment`;
+                  if (isComeback) {
+                    window.location.href = '#billingButtons';
+                  } else {
+                    window.location.href = '#payment';
+                  }
                 }}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
