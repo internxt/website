@@ -54,8 +54,7 @@ const PaymentSection = ({
       : textContent.description;
 
   return (
-    <section id="payment" className="overflow-hidden">
-     
+    <section id="payment" className="overflow-hidden bg-white">
       <div className="flex flex-col space-y-8 pt-20">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
@@ -82,7 +81,7 @@ const PaymentSection = ({
                 ) : undefined}
               <span>{title.normalText}</span>
             </p>
-            <p className="pt-4 text-xl font-normal">{description}</p>
+            <p className="pt-4 text-xl font-normal max-w-[839px]">{description}</p>
           </div>
         </div>
         

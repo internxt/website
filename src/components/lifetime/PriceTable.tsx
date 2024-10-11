@@ -29,6 +29,7 @@ const DISC_LIFETIME_PRICES = {
     '10TB': 899,
   },
 };
+const LIFETIME_MODES_WITH_POPULAR_10TB = ['celebration', 'normal'];
 
 const PriceTable = ({
   lang,
@@ -39,6 +40,9 @@ const PriceTable = ({
   currencySpecified,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
+  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') 
+    ? '10TB' 
+    : '5TB';
   const [specialCoupons, setSpecialCoupons] = useState();
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
     couponCode: couponCode,
@@ -150,7 +154,7 @@ const PriceTable = ({
                       cta={['checkout', product.priceId]}
                       lang={lang}
                       billingFrequency={Interval.Lifetime}
-                      popular={lifetimeMode === 'celebration' ? product.storage === '10TB' : product.storage === '5TB'}
+                      popular={product.storage === popularStoragePlan}
                       priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
                       currency={currency}
                       currencyValue={currencyValue}
