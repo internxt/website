@@ -71,7 +71,7 @@ const Cards = [
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
     <Navbar textContent={navbarLang} lang={locale}  cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
-     <div className="mt-16 bg-gray-1">
+     <div className="bg-gray-1">
      
    <HeroSection 
         TextComponent={
