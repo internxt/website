@@ -79,7 +79,7 @@ const Cards = [
           <>
            
           </> 
-            <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 mb-10 p-2 rounded-md text-center w-[113px]'>{langJson.HeroSection.offer}</p>
+            <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 mb-8 p-2 rounded-md text-center w-[113px]'>{langJson.HeroSection.offer}</p>
             <div className='mb-8'>
               <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title}</p>
               <p className='text-6xl font-bold'>{langJson.HeroSection.subtitle}</p>
