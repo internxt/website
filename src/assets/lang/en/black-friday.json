@@ -134,9 +134,7 @@
     "pretitle": "The best Black Friday deals",
     "buttonText": "Claim deal",
     "moneyBack": "30-day money-back guarantee"
-  }
   },
-  
   "tableSection": {
     "planTitles": {
       "individuals": "Individual Plans",
@@ -172,4 +170,7 @@
       "anonymousAccount": "Anonymous account creation"
     }
   }
+  }
+  
+  
 }
