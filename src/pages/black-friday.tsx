@@ -60,12 +60,11 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         textContent={navbarLang}
         cta={['Hide Login']}
         isLinksHidden
-        
       />
       <HeroSection textContent={langJson.blackFriday} lang={lang} />
 
       <PricingSectionWrapper
-        textContent={langJson.tableSection}
+        textContent={langJson.blackFriday.tableSection}
         decimalDiscount={{
           individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
           business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
