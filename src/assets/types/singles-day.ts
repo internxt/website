@@ -1,3 +1,5 @@
+
+
 export interface SinglesDay {
     PaymentSection:      PaymentSection;
     FaqSection:          FAQSection;
@@ -49,10 +51,15 @@ export interface FeatureSectionCard {
 
 export interface HeroSection {
     offer:       string;
-    title:       string;
+    title:       HeroSectionTitle;
     subtitle:    string;
     description: string;
     cta:         string;
+}
+export interface HeroSectionTitle {
+    previousBlueText: string;
+    blueText:         string;
+    postBlueText:     string;
 }
 
 export interface PaymentSection {
