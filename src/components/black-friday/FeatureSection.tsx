@@ -1,38 +1,28 @@
-import { ArrowsClockwise, EyeSlash, Gauge, User, Monitor, LockSimple } from '@phosphor-icons/react';
+import { ArrowsClockwise, EyeSlash, Gauge, User, Monitor, LockSimple, ShieldCheck, LockKey, Eye, Fingerprint } from '@phosphor-icons/react';
 import React from 'react';
 
 const FeatureSection = ({ textContent }) => {
   const cards = [
     {
-      icon: EyeSlash,
+      icon: ShieldCheck,
       title: textContent.FeatureSection.feature1.title,
       subtitle: textContent.FeatureSection.feature1.subtitle1,
     },
     {
-      icon: Gauge,
+      icon: LockKey,
       title: textContent.FeatureSection.feature2.title,
       subtitle: textContent.FeatureSection.feature2.subtitle1,
     },
     {
-      icon: LockSimple,
+      icon: Eye,
       title: textContent.FeatureSection.feature3.title,
       subtitle: textContent.FeatureSection.feature3.subtitle1,
     },
     {
-      icon: ArrowsClockwise,
+      icon: Fingerprint,
       title: textContent.FeatureSection.feature4.title,
       subtitle: textContent.FeatureSection.feature4.subtitle1,
-    },
-    {
-      icon: Monitor,
-      title: textContent.FeatureSection.feature5.title,
-      subtitle: textContent.FeatureSection.feature5.subtitle1,
-    },
-    {
-      icon: User,
-      title: textContent.FeatureSection.feature6.title,
-      subtitle: textContent.FeatureSection.feature6.subtitle1,
-    },
+    }
   ];
 
   return (
