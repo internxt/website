@@ -132,6 +132,7 @@ module.exports = {
         800: 'rgb(23,43,77)',
         900: 'rgb(9,30,66)',
       },
+      highlight:'rgb(17,17,17,1)'
     },
     extend: {
       screens: {
