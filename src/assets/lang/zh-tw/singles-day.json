@@ -1,0 +1,134 @@
+{
+"PaymentSection": {
+    "title": { 
+        "previousBlueText": "安全終身雲端儲存計畫均可享",
+        "blueText": "${{percent}}", 
+        "postBlueText": " 的折扣！"} ,
+    "description": "與 Internxt 一起慶祝光棍節，不用再單身度過了。開啟與線上隱私的安全互動。 Internxt 的加密雲致力於保護您的文件，並保護您的資料免受網路攻擊和資料收集。",
+    "features": {
+        "endToEnd": "End-to-end encrypted",
+        "openSource": "Open-source and audited",
+        "anonymousAccount": "Anonymous account creation"
+      }
+    },
+    "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+        {
+            "question": "我如何獲得光棍節折扣？",
+            "answer": [
+            "T要申请光棍节折扣，请选择 2TB、5TB 或 10TB 计划并前往结帐页面。您的 80% 折扣将在结帐时自动应用"
+            ]
+        },
+        {
+            "question": "光棍節促銷活動何時結束？",
+            "answer": [
+            "光棍节优惠将于 2024 年 11 月 30 日结束。"
+            ]
+        },
+        {
+            "question": "誰有資格享受此折扣？",
+            "answer": [
+            "新用户或任何拥有付费 Internxt 帐户的人都可以享受我们的光棍节折扣。"
+            ]
+        },
+        {
+            "question": "Internxt 的退款政策是什麼？",
+            "answer": [
+            "Internxt 为所有付费订阅提供标准的 30 天退款保证，从您订阅后开始计算。如果您对我们的服务不满意，请通过 hello@internxt.com 与我们联系并申请退款。我们将尊重您的要求，不问任何问题！"
+            ]
+        },
+        {
+            "question": "我可以為我的終身計劃添加更多儲存空間嗎？",
+            "answer": [
+            "是的，您可以为 Internxt 终身会员资格添加任意数量的存储空间。Internxt 终身计划可叠加使用。只需使用相同的电子邮件地址购买它们并通过 hello@internxt.com 联系我们，我们便可以在同一个帐户中为您叠加它们。"
+            ]
+        },
+        {
+            "question": "您接受哪些付款方式？",
+            "answer": [
+            "目前，我们接受通过信用卡和借记卡（包括万事达卡、VISA、美国运通等）付款，我们还接受 Paypal、bankcontact、iDEAL 和 SOFORT。"
+            ]
+        },
+         {
+            "question": "還有其他問題嗎？",
+            "answer": [
+            "请随时通过 hello@internxt.com 联系我们或访问我们的帮助中心。"
+            ]
+        }
+    ]
+    },
+    "TestimonialsSection": {
+    "title": {
+      "normal": "評論"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journalist de FixThePhoto.com",
+        "review": "Internxt被宣傳為“世界上最私密的雲端儲存”，因為它提供零知識加密，這意味著只有我才能看到我的文件。即使是網站所有者和工作人員也無法存取我的資料 – 我喜歡這一點！"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review de GetApp",
+        "review": "Internxt免費零知識文件儲存服務，注重文件隱私，高級連結分享。"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Review de Trustpilot",
+        "review": "相較於某些知名雲端硬碟服務商，internxt不僅對平民使用者非常友好，最令我感到舒服的更是它後台介面邏輯，非常簡潔、直觀，一看就懂！"
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "光棍節期間，用愛保護您的資料！",
+    "description": "所有終身計劃均可享 80% 折扣",
+    "cta": "購買"
+  },
+  "CtaSection2": {
+    "title": "終身承諾保護隱私",
+    "description": "安全雲端儲存 80!% 折扣",
+    "cta": "購買"
+  },
+  "FeatureSection": {
+   "title": "把握您終身有效的光棍節優惠！",
+    "description": "我們在建立所有產品時都考慮到了隱私。我們不依靠數據或廣告來經營業務；我們建立在信任的基礎上。我們的加密技術保護您的文件並確保您保留基本的隱私權。",
+    "PlatformSection": {
+      "title": "世界上最隱密的雲端存儲",
+      "subtitle":"Internxt 適用於所有平台，隨時隨地可存取您的檔案",
+      "web":"web",
+      "linux": "Linux",
+      "windows": "Windows",
+      "mac": "MacOS",
+      "android": "Android",
+      "iOS": "iOS"
+    },
+    "cards": [
+      {
+        "title": "不可破解和不可洩露的數據",
+        "description": "我們不儲存密碼或用戶數據，您的所有數據在傳輸和靜止時都經過加密。 Internxt 讓您完全控制您的檔案。您的資料就是您的業務。保護它是我們的。"
+      },
+      {
+        "title": "毫不妥協的安全性",
+        "description": "您的檔案在離開您的裝置之前經過端對端加密。由於零知識 AES-256 加密，您絕對是唯一可以存取您的資料的人"
+      },
+      {
+        "title": "開源和透明",
+        "description": "我們為自己所做的事情感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、審核和驗證。我們沒有什麼好隱瞞的，除了您的數據。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合 GDPR 規定，而且 100% 安全，但不要輕信我們的話。 Internxt 已通過歐洲領先的滲透測試公司 Securitum 的獨立審計和驗證。"
+      }
+    ]
+  },
+  "HeroSection":{
+    "offer": "80%優惠",
+    "title": { 
+        "previousBlueText": "",
+        "blueText": "2024", 
+        "postBlueText": " 年光棍節特惠"} ,
+    "description": "享受终身安全加密云存储",
+    "cta": "購買"
+  }
+} 
