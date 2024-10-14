@@ -74,16 +74,16 @@ const Cards = [
      
    <HeroSection 
         TextComponent={
-          <div className="flex flex-col items-center justify-center text-center">
-            <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
-            <div className='mb-8'>
-              <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
-              <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
-              <p className='text-6xl font-bold'>{langJson.HeroSection.title.postBlueText}</p>
-            </div>
-            <p className='text-xl font-regular text-gray-100 mb-8'>{langJson.HeroSection.description}</p>
-            <Button text={langJson.HeroSection.cta} className='mb-8' onClick={() => window.location.href = '#payment'} />
+        <div className="flex flex-col items-center justify-center text-center md:text-left md:items-start md:justify-start">
+          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
+          <div className='mb-8'>
+            <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
+            <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
+            <p className='text-6xl font-bold'>{langJson.HeroSection.title.postBlueText}</p>
           </div>
+          <p className='text-xl font-regular text-gray-100 mb-8'>{langJson.HeroSection.description}</p>
+          <Button text={langJson.HeroSection.cta} className='mb-8' onClick={() => window.location.href = '#payment'} />
+        </div>
         }
         imageProperties={{
           src: getImage('/images/lifetime/internxt_singles_day_offer.webp'),
@@ -128,7 +128,7 @@ const Cards = [
      );
 };
 export async function getServerSideProps(ctx) {
-  let lang = 'zh-tw';
+  let lang = 'en';
   cookies.setReferralCookie(ctx);
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
