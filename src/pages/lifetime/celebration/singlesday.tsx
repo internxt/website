@@ -18,12 +18,11 @@ import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 
 interface SinglesDayCelebrationTemplateProps {
-lang: string;
-langJson: SinglesDay;
-navbarLang: NavigationBarText;
-footerLang: FooterText;
-metatagsDescriptions: MetatagsDescription[];
-textContent: SinglesDayCelebrationTemplateProps;
+  lang: string;
+  langJson: SinglesDay;
+  navbarLang: NavigationBarText;
+  footerLang: FooterText;
+  metatagsDescriptions: MetatagsDescription[];
 }
 
 const SinglesdayCelebrationTemplate = ({
@@ -32,7 +31,7 @@ const SinglesdayCelebrationTemplate = ({
   navbarLang,
   footerLang,
   metatagsDescriptions,
-  textContent
+ 
 }: SinglesDayCelebrationTemplateProps): JSX.Element => {
 const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
 const discount=0.2;
@@ -75,26 +74,24 @@ const Cards = [
      
    <HeroSection 
         TextComponent={
-          <>
-          <>
-           
-          </> 
-            <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[113px]'>{langJson.HeroSection.offer}</p>
+          <div className="flex flex-col items-center justify-center text-center">
+            <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
             <div className='mb-8'>
-              <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title}</p>
-              <p className='text-6xl font-bold'>{langJson.HeroSection.subtitle}</p>
+              <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
+              <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
+              <p className='text-6xl font-bold'>{langJson.HeroSection.title.postBlueText}</p>
             </div>
-            <p className='text-xl font-regular text-gay-100 mb-8'>{langJson.HeroSection.description}</p>
+            <p className='text-xl font-regular text-gray-100 mb-8'>{langJson.HeroSection.description}</p>
             <Button text={langJson.HeroSection.cta} className='mb-8' onClick={() => window.location.href = '#payment'} />
-          </>
+          </div>
         }
         imageProperties={{
-            src: getImage('/images/lifetime/internxt_singles_day_offer.webp'),
-            alt: 'Oferta especial Black Friday',
-            width: 562,
-            height: 529,
-          }}
-        background="bg-gray-1" 
+          src: getImage('/images/lifetime/internxt_singles_day_offer.webp'),
+          alt: 'Oferta especial Black Friday',
+          width: 562,
+          height: 529,
+        }}
+        background="bg-gray-1"
 
       />
       <PaymentSection 
@@ -131,7 +128,7 @@ const Cards = [
      );
 };
 export async function getServerSideProps(ctx) {
-  let lang = 'zh';
+  let lang = 'zh-tw';
   cookies.setReferralCookie(ctx);
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
