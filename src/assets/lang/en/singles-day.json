@@ -1,6 +1,5 @@
 {
 "PaymentSection": {
-    "limitedOffer": "Limited time offer!",
     "title": { 
         "previousBlueText": "Celebrate Singles Day with Internxt: ",
         "blueText": "${{percent}} OFF", 
@@ -127,11 +126,11 @@
     ]
   },
   "HeroSection":{
-    "offer":"Exclusive Offer!",
+    "offer":"80% discount",
     "title": { 
-        "previousBlueText": "Celebrate Singles Day with Internxt: ",
-        "blueText": "${{percent}}% Single's Day discount"
-    },
+        "previousBlueText": "Claim your ",
+        "blueText": "80% Single's Day discount", 
+        "postBlueText": ""} ,
     "description":"Treat yourself to a lifetime of secure, encrypted cloud storage, now at 80% OFF!",
     "cta":"Buy your plan"
   }
