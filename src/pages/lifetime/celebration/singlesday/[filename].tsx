@@ -16,6 +16,8 @@ import { TextAndCardsGroupColumnSection } from '@/components/shared/components/T
 import Image from 'next/image';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
 interface SinglesDayCelebrationTemplateProps {
   lang: string;
@@ -23,7 +25,13 @@ interface SinglesDayCelebrationTemplateProps {
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   metatagsDescriptions: MetatagsDescription[];
+  pathname:string
 }
+const ALLOWED_PATHS = [
+  'en',
+  'tw',
+  'ch',
+];
 
 const SinglesdayCelebrationTemplate = ({
   lang,
@@ -31,6 +39,7 @@ const SinglesdayCelebrationTemplate = ({
   navbarLang,
   footerLang,
   metatagsDescriptions,
+  pathname
  
 }: SinglesDayCelebrationTemplateProps): JSX.Element => {
 const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
@@ -39,6 +48,19 @@ const percent='80%'
 const currencySpecified='US';
 const locale = lang as string;
 const couponCode=PromoCodeName.SinglesDay;
+const router = useRouter();
+const filename = pathname.split('/').pop();
+console.log('SinglesDay Template - Filename:', pathname);
+const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${filename}`);
+
+useEffect(() => {
+  console.log('FILENAME: ', filename);
+  if (!selectedPathName) {
+    router.push('/lifetime');
+  }
+}, [selectedPathName, router]);
+
+
 const Cards = [
     {
       icon: ShieldCheck,
@@ -75,7 +97,7 @@ const Cards = [
    <HeroSection 
         TextComponent={
         <div className="flex flex-col items-center justify-center text-center md:text-left md:items-start md:justify-start">
-          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
+          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-3 mb-8 rounded-md text-center'>{langJson.HeroSection.offer}</p>
           <div className='mb-8'>
             <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
             <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
@@ -129,14 +151,21 @@ const Cards = [
 };
 export async function getServerSideProps(ctx) {
   let lang = 'en';
-  cookies.setReferralCookie(ctx);
+  const pathname = ctx.params.filename;
 
+ if (['ch'].includes(pathname)) {
+    lang = 'zh';
+  }
+
+  if (['tw'].includes(pathname)) {
+    lang = 'zh-tw';
+  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/singles-day.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  
+  cookies.setReferralCookie(ctx);
   return {
     props: {
       lang,
@@ -144,8 +173,9 @@ export async function getServerSideProps(ctx) {
       langJson,
       testimonialsJson,
       navbarLang,
-      footerLang
-       },
+      footerLang,
+      pathname
+    },
   };
 }
 
