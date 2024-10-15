@@ -48,14 +48,14 @@ const PlatformSection = ({ textContent }) => {
             {textContent.PlatformSection.title}
           </p>
         </div>
-        <div className="center flex items-center px-20 pb-16 text-center">
+        <div className="flex items-center px-20 pb-16 text-center">
           <p className="text-xl font-semibold text-gray-80">
             {textContent.PlatformSection.subtitle}
           </p>
         </div>
         <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-y-10 gap-x-20 lg:gap-x-40">
-          {platforms.map((platform, index) => (
-            <div key={index} className="flex flex-col items-center space-y-6">
+          {platforms.map((platform) => (
+            <div key={platform.alt} className="flex flex-col items-center space-y-6">
               <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-100">
                 <Image
                   src={platform.image}
