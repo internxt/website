@@ -4,6 +4,7 @@ import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
+import { ReactNode } from 'react';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -29,6 +30,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  CustomDescription?: ReactNode; // Nueva prop para la descripción personalizada
 }
 
 export const PricingSectionWrapper = ({
@@ -51,6 +53,7 @@ export const PricingSectionWrapper = ({
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
+  CustomDescription,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -80,26 +83,9 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
-           <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
-          {!isIndividual ? (
-            `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
-          ) : (
-            typeof textContent.planDescription === 'string' ? (
-              textContent.planDescription
-            ) : (
-              <>
-                <span className="text-xl text-regular ">{textContent.planDescription.planDescription}</span>
-                <br />
-                <br />
-                {textContent.planDescription.previousBlueText}
-                {textContent.planDescription.blueText && (
-                  <span className="font-bold !leading-tight text-primary sm:text-2xl"> {textContent.planDescription.blueText} </span>
-                )}
-                {textContent.planDescription.postBlueText}
-              </>
-            )
-          )}
-        </p>
+          <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
+            {CustomDescription}
+          </p>
         </div>
 
         <PricingSection

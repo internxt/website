@@ -7,7 +7,8 @@ const CtaSection = ({
   maxWidth,
   target,
   bgImage,
-  onClick
+  onClick,
+  customDescription
 }: {
   textContent: any;
   url: string;
@@ -15,6 +16,7 @@ const CtaSection = ({
   target?: string;
   bgImage?: string
   onClick?: ()=> void; 
+  customDescription?: React.ReactNode;
 }) => {
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg'); 
   return (
@@ -27,19 +29,8 @@ const CtaSection = ({
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
         <div className={`flex  ${maxWidth} flex-col items-center space-y-4 text-center text-white`}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
-          
-            { textContent.description2 ? (
-              <p className="w-full max-w-[308px] text-xl font-regular">
-                <span className="font-bold">{textContent.description}</span>
-                <br />
-                {textContent.description2}
-              </p>
-            ) : (
-              <p className="w-full max-w-[573px] text-xl font-normal">
-                {textContent.description}
-                <br />
-              </p>
-            )}
+          {customDescription}
+            
         </div>
         <Link
           href={url}

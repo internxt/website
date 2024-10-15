@@ -85,49 +85,69 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
       segmentName="Comeback"
       lang={lang}
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
-      <HeroSection
-        textContent={textContent.HeroSection}
-        isCelebrationPage
-        percent={percent}
-        isComeback
-      />
-      
-      <PricingSectionWrapper
-        textContent={textContent.tableSection}
-        decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-          lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessSelector
-        hideFreeCard
-      />
+    <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
+    <HeroSection
+      textContent={textContent.HeroSection}
+      isCelebrationPage
+      percent={percent}
+      onRedirectButtonClicked={() => router.push('#billingButtons')}
+    />
     
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title}</p>
-            <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title2}</p>
-            <p className="max-w-[796px] text-xl text-gray-80">{textContent.WhyComebackToInternxt.description}</p>
-            <Image src={getImage('/images/home/internxt_secure_cloud_storage.webp')} width={774} height={411} alt={'Cloud Storage'} />
-          </div>
-        }
-        cards={groupCards}
-        background='bg-gray-1'
-        backgroundColorForCard='bg-white'
-      />
-      <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor='bg-white' />
-      <CtaSection
-        textContent={textContent.CtaSection}
-        bgImage='/images/lifetime/celebration/normal-bg.png'
-        url="#billingButtons"
-      />
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+    <PricingSectionWrapper
+      textContent={textContent.tableSection}
+      decimalDiscount={{
+        individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+        lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+      }}
+      lifetimeCoupons={lifetimeCoupons}
+      lang={locale}
+      products={products}
+      loadingCards={loadingCards}
+      onCheckoutButtonClicked={onCheckoutButtonClicked}
+      hideBusinessSelector
+      hideFreeCard
+      CustomDescription={
+        <>
+          <span className="text-xl text-regular ">{textContent.tableSection.planDescription.planDescription}</span>
+          <br />
+          <br />
+          {textContent.tableSection.planDescription.previousBlueText}
+          {textContent.tableSection.planDescription.blueText && (
+            <span className="font-bold !leading-tight text-primary sm:text-2xl"> {textContent.tableSection.planDescription.blueText} </span>
+          )}
+          {textContent.tableSection.planDescription.postBlueText}
+        </>
+      }
+      
+    />
+  
+    <TextAndCardsGroupColumnSection
+      TextComponent={
+        <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+          <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title}</p>
+          <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title2}</p>
+          <p className="max-w-[796px] text-xl text-gray-80">{textContent.WhyComebackToInternxt.description}</p>
+          <Image src={getImage('/images/home/internxt_secure_cloud_storage.webp')} width={774} height={411} alt={'Cloud Storage'} />
+        </div>
+      }
+      cards={groupCards}
+      background='bg-gray-1'
+      backgroundColorForCard='bg-white'
+    />
+    <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor='bg-white' />
+    <CtaSection
+      textContent={textContent.CtaSection}
+      bgImage='/images/lifetime/celebration/normal-bg.png'
+      url="#billingButtons"
+      customDescription={
+        <p className="w-full max-w-[308px] text-xl font-regular">
+          <span className="font-bold">{textContent.CtaSection.description}</span>
+          <br />
+          {textContent.CtaSection.description2}
+        </p>
+      }
+    />
+    <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
 };

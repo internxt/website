@@ -65,12 +65,19 @@ export interface Feature {
 export interface TableSection {
     planTitles:           PlanTitles;
     lifetimeDescription:  string;
-    planDescription:      string;
+    planDescription:      PlanDescription;
     businessDescription:  string;
     businessDescription2: string;
     billingFrequency:     BillingFrequency;
     freePlanCard:         FreePlanCard;
     features:             Features;
+}
+
+export interface PlanDescription {
+    planDescription:  string;
+    previousBlueText: string;
+    blueText:         string;
+    postBlueText:     string;
 }
 
 export interface BillingFrequency {
