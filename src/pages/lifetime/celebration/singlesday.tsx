@@ -16,8 +16,6 @@ import { TextAndCardsGroupColumnSection } from '@/components/shared/components/T
 import Image from 'next/image';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
 
 interface SinglesDayCelebrationTemplateProps {
   lang: string;
@@ -25,13 +23,9 @@ interface SinglesDayCelebrationTemplateProps {
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   metatagsDescriptions: MetatagsDescription[];
-  pathname:string
 }
-const ALLOWED_PATHS = [
-  'en',
-  'tw',
-  'ch',
-];
+
+const ALLOWED_LANGUAGES = ['en', 'zh', 'zh-tw'];
 
 const SinglesdayCelebrationTemplate = ({
   lang,
@@ -39,65 +33,51 @@ const SinglesdayCelebrationTemplate = ({
   navbarLang,
   footerLang,
   metatagsDescriptions,
-  pathname
  
 }: SinglesDayCelebrationTemplateProps): JSX.Element => {
-const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
-const discount=0.2;
-const percent='80%'
-const currencySpecified='US';
-const locale = lang as string;
-const couponCode=PromoCodeName.SinglesDay;
-const router = useRouter();
-const filename = pathname.split('/').pop();
-console.log('SinglesDay Template - Filename:', pathname);
-const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === `${filename}`);
-
-useEffect(() => {
-  console.log('FILENAME: ', filename);
-  if (!selectedPathName) {
-    router.push('/lifetime');
-  }
-}, [selectedPathName, router]);
-
-
-const Cards = [
-    {
-      icon: ShieldCheck,
-      title: langJson.FeatureSection.cards[0].title,
-      description: langJson.FeatureSection.cards[0].description,
-    },
-    {
-      icon: LockKey,
-      title: langJson.FeatureSection.cards[1].title,
-      description: langJson.FeatureSection.cards[1].description,
-    },
-    {
-      icon: Eye,
-      title: langJson.FeatureSection.cards[2].title,
-      description: langJson.FeatureSection.cards[2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: langJson.FeatureSection.cards[3].title,
-      description: langJson.FeatureSection.cards[3].description,
-    },
-  ];
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
+  const discount=0.2;
+  const percent='80%'
+  const currencySpecified='US';
+  const locale = lang as string;
+  const couponCode=PromoCodeName.SinglesDay;
+  const Cards = [
+      {
+        icon: ShieldCheck,
+        title: langJson.FeatureSection.cards[0].title,
+        description: langJson.FeatureSection.cards[0].description,
+      },
+      {
+        icon: LockKey,
+        title: langJson.FeatureSection.cards[1].title,
+        description: langJson.FeatureSection.cards[1].description,
+      },
+      {
+        icon: Eye,
+        title: langJson.FeatureSection.cards[2].title,
+        description: langJson.FeatureSection.cards[2].description,
+      },
+      {
+        icon: Fingerprint,
+        title: langJson.FeatureSection.cards[3].title,
+        description: langJson.FeatureSection.cards[3].description,
+      },
+    ];
   return (
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
       segmentName="SinglesDay"
-      lang={lang}
+      lang={locale}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-    <Navbar textContent={navbarLang} lang={locale}  cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
+
      <div className="bg-gray-1">
-     
-   <HeroSection 
+      <HeroSection 
         TextComponent={
-        <div className="flex flex-col items-center justify-center text-center md:text-left md:items-start md:justify-start">
-          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-3 mb-8 rounded-md text-center'>{langJson.HeroSection.offer}</p>
+           <div className="flex flex-col items-center justify-center text-center md:text-left md:items-start md:justify-start">
+          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
           <div className='mb-8'>
             <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
             <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
@@ -114,7 +94,7 @@ const Cards = [
           height: 529,
         }}
         background="bg-gray-1"
-
+        lang={locale}
       />
       <PaymentSection 
         textContent={langJson.PaymentSection}
@@ -126,7 +106,6 @@ const Cards = [
         lifetimeMode="celebration"
         couponCode={couponCode}
       />
-
      <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
@@ -138,34 +117,32 @@ const Cards = [
         cards={Cards}
         background='bg-gray-1'
         backgroundColorForCard='bg-white'
+        
       />
-      <PlatformSection textContent={langJson.FeatureSection}></PlatformSection>
+      <PlatformSection textContent={langJson.FeatureSection}/>
       <CtaSection textContent={langJson.CtaSection1} url={'#payment'}/>
       <TestimonialsSection textContent={langJson.TestimonialsSection}/>
       <FAQSection textContent={langJson.FaqSection} bgColor='bg-gray-1'/>
       <CtaSection textContent={langJson.CtaSection2} url={'#payment'}/>
      </div>
-       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
      );
 };
 export async function getServerSideProps(ctx) {
-  let lang = 'en';
-  const pathname = ctx.params.filename;
+    let lang = ctx.locale;
 
- if (['ch'].includes(pathname)) {
-    lang = 'zh';
+  if (!ALLOWED_LANGUAGES.includes(lang)) {
+    lang = 'en';
   }
+  cookies.setReferralCookie(ctx);
 
-  if (['tw'].includes(pathname)) {
-    lang = 'zh-tw';
-  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/singles-day.json`);
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  cookies.setReferralCookie(ctx);
+  
   return {
     props: {
       lang,
@@ -173,10 +150,8 @@ export async function getServerSideProps(ctx) {
       langJson,
       testimonialsJson,
       navbarLang,
-      footerLang,
-      pathname
-    },
+      footerLang
+      },
   };
 }
-
 export default SinglesdayCelebrationTemplate;
