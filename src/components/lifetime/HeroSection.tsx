@@ -15,7 +15,7 @@ interface HeroSectionProps {
   previewImg?: string;
   bgImage?: string;
   imageMobile?: string;
-  onRedirectButtonClicked?: () => void; // Nueva prop para la función de redirección
+  onRedirectButtonClicked?: () => void;
 }
 
 const HeroSection = ({
