@@ -15,13 +15,13 @@ export const HomePageBannerForMobile = () => {
     <div
       className={`${
         shouldShowBanner ? 'flex' : 'hidden'
-      } w-full max-w-md flex-col overflow-hidden rounded-[32px] bg-primary pt-10 lg:hidden`}
+      } w-full max-w-[400px] flex-col overflow-hidden rounded-[32px] bg-primary pt-10 lg:hidden`}
     >
       <div className="flex w-full flex-col items-center justify-center space-y-6 pb-5 text-center text-white">
         <div className="flex items-center gap-1.5 rounded-xl border-4 border-primary/7 bg-white px-5 py-2">
           <p className="text-4xl font-bold text-primary">{textContent.tableSection.ctaBanner.label}</p>
         </div>
-        <div className="flex w-full max-w-[253px] flex-col space-y-4">
+        <div className="flex w-full flex-col space-y-4">
           <p className="text-4xl font-bold text-white">{textContent.tableSection.ctaBanner.title}</p>
         </div>
         <div className="flex flex-col items-center gap-4 lg:flex-row">
@@ -39,13 +39,12 @@ export const HomePageBannerForMobile = () => {
           </div>
         </div>
       </div>
-      <div className="flex h-full w-full flex-col">
+      <div className="flex flex-col">
         <Image
           src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_mobile.webp')}
           width={323}
           height={180}
           alt="Cyber Awareness 2024"
-          className="flex h-full"
         />
       </div>
     </div>
