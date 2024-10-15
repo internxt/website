@@ -13,7 +13,7 @@ interface HeroSectionProps {
   };
   style?: CSSProperties;
   background?: string;
-   className?: string;
+  className?: string;
 }
 
 export const HeroSection = ({

@@ -94,7 +94,7 @@ const SinglesdayCelebrationTemplate = ({
           height: 529,
         }}
         background="bg-gray-1"
-        lang={locale}
+
       />
       <PaymentSection 
         textContent={langJson.PaymentSection}
