@@ -111,7 +111,14 @@ const SinglesdayCelebrationTemplate = ({
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
             <p className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</p>
             <p className="max-w-[796px] text-xl text-gray-80">{langJson.FeatureSection.description}</p>
-            <Image src={getImage('/images/home/internxt_secure_cloud_storage.webp')} width={774} height={411} alt={'Cloud Storage'} />
+           <div className="flex justify-center">
+            <Image
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+              width={745}
+              height={411}
+              alt="Cloud Storage"
+            />
+          </div>
           </div>
         }
         cards={Cards}
