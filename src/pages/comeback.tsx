@@ -96,7 +96,8 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
     <PricingSectionWrapper
       textContent={textContent.tableSection}
       decimalDiscount={{
-        lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
       }}
       lifetimeCoupons={lifetimeCoupons}
       lang={locale}
