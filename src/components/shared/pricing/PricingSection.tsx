@@ -33,7 +33,9 @@ interface PriceTableProps {
   hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
+  hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  isMonthly?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -59,10 +61,12 @@ export const PricingSection = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   hideBusinessSelector,
+  hideSwitchSelector,
   lang,
   popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
+  isMonthly,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -124,19 +128,22 @@ export const PricingSection = ({
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
+            isMonthly
           />
         )}
 
         {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        <SwitchComponent
-          textContent={textContent}
-          show={showSwitchComponent}
-          lang={lang}
-          billedFrequency={billingFrequencyForSwitch}
-          handleOnSwitchIsToggled={switchHandler}
-          labelDiscount={labelDiscount}
-          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
-        />
+        {!hideSwitchSelector && (
+          <SwitchComponent
+            textContent={textContent}
+            show={showSwitchComponent}
+            lang={lang}
+            billedFrequency={billingFrequencyForSwitch}
+            handleOnSwitchIsToggled={switchHandler}
+            labelDiscount={labelDiscount}
+            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          />
+        )}
       </div>
       <Transition
         show={showLoadingCards}

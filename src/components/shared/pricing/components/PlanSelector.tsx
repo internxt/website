@@ -8,6 +8,7 @@ interface PlanSwitchProps {
   activeSwitchPlan: SwitchButtonOptions;
   hidePlanSelectorComponent?: boolean;
   hideBusinessSelector?: boolean;
+  isMonthly?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
@@ -16,6 +17,7 @@ export const PlanSelector = ({
   activeSwitchPlan,
   hideBusinessSelector,
   onPlanTypeChange,
+  isMonthly
 }: PlanSwitchProps): JSX.Element => (
   <div id="billingButtons" className={`flex flex-row rounded-lg bg-cool-gray-10 p-0.5`}>
     <button
@@ -27,7 +29,7 @@ export const PlanSelector = ({
         activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
-      {textContent.billingFrequency.individual}
+       {isMonthly ? textContent.billingFrequency.annually : textContent.billingFrequency.individual}
       <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
     </button>
     <button
@@ -39,7 +41,7 @@ export const PlanSelector = ({
         activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
-      {textContent.billingFrequency.lifetime}
+       {isMonthly ? textContent.billingFrequency.lifetime : textContent.billingFrequency.individual}
       <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
     </button>
     <button

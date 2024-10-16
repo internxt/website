@@ -4,6 +4,7 @@ import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
+import { ReactNode } from 'react';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -14,6 +15,7 @@ interface PricingSectionWrapperProps {
   hideBusinessSelector?: boolean;
   hideBusinessCards?: boolean;
   hidePlanSelectorComponent?: boolean;
+  hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
   startFromInterval?: Interval;
   popularPlanBySize?: string;
@@ -29,6 +31,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  CustomDescription?: ReactNode;
 }
 
 export const PricingSectionWrapper = ({
@@ -45,12 +48,14 @@ export const PricingSectionWrapper = ({
   backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
   hideFreeCard,
+  hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
+  CustomDescription,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -80,10 +85,8 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual
-              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
-              : `${textContent.planDescription}`}
+          <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
+            {CustomDescription}
           </p>
         </div>
 
@@ -113,6 +116,8 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           onBusinessPlansSelected={onBusinessPlansSelected}
+          hideSwitchSelector={hideSwitchSelector}
+          isMonthly
         />
       </div>
     </section>
