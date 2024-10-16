@@ -120,7 +120,7 @@
     } ,
     "billingFrequency": {
       "monthly": "Monthly",
-      "annually": "Annually",
+      "annually": "Annual",
       "individual": "Individual",
       "lifetime": "Lifetime",
       "business": "Business"

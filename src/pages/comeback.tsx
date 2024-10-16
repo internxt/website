@@ -96,7 +96,6 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
     <PricingSectionWrapper
       textContent={textContent.tableSection}
       decimalDiscount={{
-        individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
         lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
       }}
       lifetimeCoupons={lifetimeCoupons}
@@ -106,6 +105,7 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
       onCheckoutButtonClicked={onCheckoutButtonClicked}
       hideBusinessSelector
       hideFreeCard
+      hideSwitchSelector
       CustomDescription={
         <>
           <span className="text-xl text-regular ">{textContent.tableSection.planDescription.planDescription}</span>

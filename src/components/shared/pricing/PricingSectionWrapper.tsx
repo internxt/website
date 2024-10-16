@@ -15,6 +15,7 @@ interface PricingSectionWrapperProps {
   hideBusinessSelector?: boolean;
   hideBusinessCards?: boolean;
   hidePlanSelectorComponent?: boolean;
+  hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
   startFromInterval?: Interval;
   popularPlanBySize?: string;
@@ -30,7 +31,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
-  CustomDescription?: ReactNode; // Nueva prop para la descripción personalizada
+  CustomDescription?: ReactNode;
 }
 
 export const PricingSectionWrapper = ({
@@ -47,6 +48,7 @@ export const PricingSectionWrapper = ({
   backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
   hideFreeCard,
+  hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
@@ -114,6 +116,8 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           onBusinessPlansSelected={onBusinessPlansSelected}
+          hideSwitchSelector={hideSwitchSelector}
+          isMonthly
         />
       </div>
     </section>
