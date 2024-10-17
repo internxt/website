@@ -105,6 +105,7 @@ export const PricingSectionWrapper = ({
             {!isIndividual
               ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
               : `${textContent.planDescription}`}
+          </p>
           <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
             {CustomDescription}
           </p>
