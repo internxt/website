@@ -11,7 +11,7 @@ const FaqSection = ({ textContent }) => {
         <div className="flex w-full max-w-screen-sm flex-col space-y-2 pt-10">
           {textContent.faq.faq.map((item, index) => (
             <div className="rounded-lg border border-gray-90 px-5 text-gray-5" key={index}>
-              <FaqAccordion key={item.question} question={item.question} answer={item.answer} />
+              <FaqAccordion key={item.question} question={item.question} answer={item.answer} circleColor='text-primary'/>
             </div>
           ))}
         </div>

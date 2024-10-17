@@ -6,10 +6,12 @@ export default function FaqAccordion({
   question,
   answer,
   isQuestionBigger = false,
+  circleColor,
 }: {
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
+  circleColor?: string;
 }): JSX.Element {
   const [active, setActive] = useState(false);
 
@@ -38,7 +40,7 @@ export default function FaqAccordion({
         <span className={`w-full text-lg font-medium ${isQuestionBigger ? 'md:text-2xl' : 'md:text-xl'}`}>
           {question}
         </span>
-        <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out`} />
+        <PlusCircle size={32} className={`${active && 'rotate-45'} duration-250 transition-transform ease-in-out ${circleColor}`}  />
       </button>
 
       <span
