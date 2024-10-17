@@ -5,6 +5,8 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import FeatureSection from '@/components/black-friday/FeatureSection';
 import PlatformSection from '@/components/black-friday/PlatformSection';
 import TestimonialsSection from '@/components/black-friday/TestimonialsSection';
+import TestimonialSection from '@/components/home/TestimonialsSection';
+import CtaSection from '@/components/black-friday/CtaSection';
 import FaqSection from '@/components/black-friday/FAQSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
@@ -12,7 +14,7 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import HeroSection from '@/components/black-friday/HeroSection';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
@@ -53,6 +55,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday" >
+      
       <Navbar
         lang={lang}
         darkMode={true}
@@ -61,6 +64,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         cta={['Hide Login']}
         isLinksHidden
       />
+
       <HeroSection textContent={langJson.blackFriday} lang={lang} />
 
       <PricingSectionWrapper
@@ -77,16 +81,27 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideFreeCard
+        backgroundColorComponent='bg-highlight text-white'
+        descriptionColor='text-gray-5'
+        planSelectorBgActiveColor='bg-gray-100 text-white'
+        planSelectorBgColor='bg-gray-90'
+        colorLblEnabledSwitch='text-white'
+        colorSwitchNoEnabled='bg-gray-90'
+        colorUpCard={styles.linearGradient}
+        isBlackFriday
+        colorDownCard='bg-gray-100'
       />
 
       <FeatureSection textContent={langJson.blackFriday} />
 
       <PlatformSection textContent={langJson.blackFriday} />
 
-      <TestimonialsSection textContent={langJson.blackFriday} lang={lang} />
+      <TestimonialSection textContent={langJson.blackFriday.TestimonialSection} bgColor='bg-highlight' style='text-white'/>
+      <CtaSection textContent={langJson.blackFriday.CtaSection} />
+
       <FaqSection textContent={langJson.blackFriday} />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
+      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} bgColor='bg-highlight' />
     </Layout>
   );
 };
