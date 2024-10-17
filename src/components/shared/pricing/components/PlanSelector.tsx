@@ -8,6 +8,8 @@ interface PlanSwitchProps {
   activeSwitchPlan: SwitchButtonOptions;
   hidePlanSelectorComponent?: boolean;
   hideBusinessSelector?: boolean;
+  bgColor?: string;
+  bgActiveColor?: string;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
@@ -16,15 +18,17 @@ export const PlanSelector = ({
   activeSwitchPlan,
   hideBusinessSelector,
   onPlanTypeChange,
+  bgColor='bg-cool-gray-10',
+  bgActiveColor='bg-white text-cool-gray-80', 
 }: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex flex-row rounded-lg bg-cool-gray-10 p-0.5`}>
+  <div id="billingButtons" className={`flex flex-row rounded-lg ${bgColor} p-0.5`}>
     <button
       type="button"
       onClick={() => {
         onPlanTypeChange('Individuals', Interval.Year);
       }}
       className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-        activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+        activeSwitchPlan === 'Individuals' ? `${bgActiveColor} shadow-sm` : 'text-cool-gray-50'
       }`}
     >
       {textContent.billingFrequency.individual}
@@ -36,7 +40,7 @@ export const PlanSelector = ({
         onPlanTypeChange('Lifetime', Interval.Lifetime);
       }}
       className={`flex flex-row items-center gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-        activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+        activeSwitchPlan === 'Lifetime' ? `${bgActiveColor} shadow-sm` : 'text-cool-gray-50'
       }`}
     >
       {textContent.billingFrequency.lifetime}
@@ -48,7 +52,7 @@ export const PlanSelector = ({
         onPlanTypeChange('Business');
       }}
       className={`rounded-lg py-0.5 ${hideBusinessSelector ? 'hidden' : 'flex'} flex-row gap-3 px-6 font-semibold ${
-        activeSwitchPlan === 'Business' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+        activeSwitchPlan === 'Business' ? `${bgActiveColor} shadow-sm` : 'text-cool-gray-50'
       }`}
     >
       {textContent.billingFrequency.business}

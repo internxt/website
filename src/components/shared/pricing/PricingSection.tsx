@@ -11,6 +11,7 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
+import { colorToComponents } from 'pdf-lib';
 
 const SKELETON_CARDS = {
   Individuals: 4,
@@ -34,6 +35,13 @@ interface PriceTableProps {
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  planSelectorBgColor?: string;
+  planSelectorBgActiveColor?: string;
+  colorLblEnabledSwitch?: string;
+  colorSwitchNoEnabled?: string;
+  colorUpCard?: string;
+  isBlackFriday?: boolean;
+  colorDownCard?: string;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -63,6 +71,14 @@ export const PricingSection = ({
   popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
+  planSelectorBgColor,
+  planSelectorBgActiveColor,
+  colorLblEnabledSwitch,
+  colorSwitchNoEnabled,
+  colorUpCard,
+
+  isBlackFriday,
+  colorDownCard,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -124,6 +140,8 @@ export const PricingSection = ({
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
+            bgColor={planSelectorBgColor}
+            bgActiveColor={planSelectorBgActiveColor}
           />
         )}
 
@@ -136,6 +154,8 @@ export const PricingSection = ({
           handleOnSwitchIsToggled={switchHandler}
           labelDiscount={labelDiscount}
           showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          colorLblEnabled={colorLblEnabledSwitch}
+          colorSwitchNoEnabled={colorSwitchNoEnabled}
         />
       </div>
       <Transition
@@ -188,6 +208,10 @@ export const PricingSection = ({
                       : undefined
                   }
                   lang={lang}
+                  colorUpCard={colorUpCard}
+                  isBlackFriday={isBlackFriday}
+                  colorDownCard={colorDownCard}
+                  labelBackground='bg-primary'
                 />
               ))
             : undefined}
@@ -230,6 +254,10 @@ export const PricingSection = ({
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
+                      colorUpCard={colorUpCard}
+                      isBlackFriday={isBlackFriday}
+                      colorDownCard={colorDownCard}
+                      labelBackground='bg-primary'
                     />
                   ))
                 : undefined}
@@ -241,7 +269,9 @@ export const PricingSection = ({
         {features.map((feature) => (
           <div key={feature.text} className="flex flex-row items-center space-x-3">
             <feature.icon size={40} className="text-primary md:pb-0" />
-            <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            <p className={`text-xl font-medium ${isBlackFriday ? 'text-white' : 'text-gray-80'}`}>
+              {feature.text}
+            </p>
           </div>
         ))}
       </div>

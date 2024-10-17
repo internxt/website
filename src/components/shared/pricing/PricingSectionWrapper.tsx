@@ -20,7 +20,15 @@ interface PricingSectionWrapperProps {
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
+  descriptionColor?: string;
   isFamilyPage?: boolean;
+  planSelectorBgColor?: string;
+  planSelectorBgActiveColor?: string;
+  colorLblEnabledSwitch?: string;
+  colorSwitchNoEnabled?: string;
+  colorUpCard?: string;
+  isBlackFriday?: boolean;
+  colorDownCard?: string;
   decimalDiscount?: {
     individuals?: number;
     lifetime?: number;
@@ -29,6 +37,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+
 }
 
 export const PricingSectionWrapper = ({
@@ -43,14 +52,23 @@ export const PricingSectionWrapper = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   backgroundColorComponent = 'bg-white',
+  descriptionColor='text-gray-80',
   lifetimeCoupons,
   hideFreeCard,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
+  planSelectorBgActiveColor,
+  planSelectorBgColor,
+  colorLblEnabledSwitch,
+  colorSwitchNoEnabled,
+  colorUpCard,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
+  isBlackFriday,
+ 
+  colorDownCard,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -80,7 +98,7 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
+          <p className={`w-full max-w-3xl text-center ${descriptionColor} text-xl`}>
             {!isIndividual
               ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
               : `${textContent.planDescription}`}
@@ -113,6 +131,13 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           onBusinessPlansSelected={onBusinessPlansSelected}
+          planSelectorBgColor={planSelectorBgColor}
+          planSelectorBgActiveColor={planSelectorBgActiveColor}
+          colorLblEnabledSwitch={colorLblEnabledSwitch}
+          colorSwitchNoEnabled={colorSwitchNoEnabled}
+          colorUpCard={colorUpCard}
+          isBlackFriday={isBlackFriday}
+          colorDownCard={colorDownCard}
         />
       </div>
     </section>

@@ -8,6 +8,8 @@ interface SwitchComponentProps {
   lang: string;
   labelDiscount?: string;
   showLabelDiscount: boolean;
+  colorLblEnabled?: string;
+  colorSwitchNoEnabled?: string;
   handleOnSwitchIsToggled: (interval: Interval) => void;
 }
 
@@ -30,12 +32,14 @@ export const SwitchComponent = ({
   showLabelDiscount,
   labelDiscount,
   handleOnSwitchIsToggled,
+  colorLblEnabled='text-gray-100',
+  colorSwitchNoEnabled='bg-gray-10'
 }: SwitchComponentProps): JSX.Element => {
   const isSwitchEnabled = billedFrequency === Interval.Year;
 
   return (
     <div className={`${show ? 'flex' : 'hidden'} flex-row items-start gap-5 lg:items-center`}>
-      <p className={`text-base font-semibold ${!isSwitchEnabled ? 'text-gray-100' : 'text-gray-50'}`}>
+      <p className={`text-base font-semibold ${!isSwitchEnabled ? `${colorLblEnabled}` : 'text-gray-50'}`}>
         {textContent.billingFrequency.monthly}
       </p>
 
@@ -47,7 +51,7 @@ export const SwitchComponent = ({
           handleOnSwitchIsToggled(isSwitchEnabled ? Interval.Month : Interval.Year);
         }}
         className={`${
-          isSwitchEnabled ? 'bg-green' : 'bg-gray-10'
+          isSwitchEnabled ? 'bg-green' : `${colorSwitchNoEnabled}`
         } relative inline-flex h-6 w-11 items-center rounded-full`}
       >
         <span
@@ -59,7 +63,7 @@ export const SwitchComponent = ({
       </Switch>
 
       <div className="relative flex flex-col lg:flex-row lg:items-center">
-        <p className={`text-base font-semibold ${isSwitchEnabled ? 'text-gray-100' : 'text-gray-50'}`}>
+        <p className={`text-base font-semibold ${isSwitchEnabled ?  `${colorLblEnabled}` : 'text-gray-50'}`}>
           {textContent.billingFrequency.annually}
         </p>
         {showLabelDiscount ? (
