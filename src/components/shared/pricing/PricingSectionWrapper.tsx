@@ -4,6 +4,7 @@ import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
+import { ReactNode } from 'react';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -14,6 +15,7 @@ interface PricingSectionWrapperProps {
   hideBusinessSelector?: boolean;
   hideBusinessCards?: boolean;
   hidePlanSelectorComponent?: boolean;
+  hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
   startFromInterval?: Interval;
   popularPlanBySize?: string;
@@ -37,7 +39,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
-
+  CustomDescription?: ReactNode;
 }
 
 export const PricingSectionWrapper = ({
@@ -55,6 +57,7 @@ export const PricingSectionWrapper = ({
   descriptionColor='text-gray-80',
   lifetimeCoupons,
   hideFreeCard,
+  hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
@@ -67,8 +70,8 @@ export const PricingSectionWrapper = ({
   handlePageNameUpdate,
   onBusinessPlansSelected,
   isBlackFriday,
- 
   colorDownCard,
+  CustomDescription,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -102,6 +105,8 @@ export const PricingSectionWrapper = ({
             {!isIndividual
               ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
               : `${textContent.planDescription}`}
+          <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
+            {CustomDescription}
           </p>
         </div>
 
@@ -138,6 +143,8 @@ export const PricingSectionWrapper = ({
           colorUpCard={colorUpCard}
           isBlackFriday={isBlackFriday}
           colorDownCard={colorDownCard}
+          hideSwitchSelector={hideSwitchSelector}
+          isMonthly
         />
       </div>
     </section>

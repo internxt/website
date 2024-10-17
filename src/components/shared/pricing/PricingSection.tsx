@@ -34,6 +34,7 @@ interface PriceTableProps {
   hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
+  hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   planSelectorBgColor?: string;
   planSelectorBgActiveColor?: string;
@@ -42,6 +43,7 @@ interface PriceTableProps {
   colorUpCard?: string;
   isBlackFriday?: boolean;
   colorDownCard?: string;
+  isMonthly?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -67,6 +69,7 @@ export const PricingSection = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   hideBusinessSelector,
+  hideSwitchSelector,
   lang,
   popularPlanBySize = '10TB',
   lifetimeCoupons,
@@ -76,9 +79,9 @@ export const PricingSection = ({
   colorLblEnabledSwitch,
   colorSwitchNoEnabled,
   colorUpCard,
-
   isBlackFriday,
   colorDownCard,
+  isMonthly,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -142,6 +145,7 @@ export const PricingSection = ({
             onPlanTypeChange={onPlanTypeChange}
             bgColor={planSelectorBgColor}
             bgActiveColor={planSelectorBgActiveColor}
+            isMonthly
           />
         )}
 
@@ -157,6 +161,17 @@ export const PricingSection = ({
           colorLblEnabled={colorLblEnabledSwitch}
           colorSwitchNoEnabled={colorSwitchNoEnabled}
         />
+        {!hideSwitchSelector && (
+          <SwitchComponent
+            textContent={textContent}
+            show={showSwitchComponent}
+            lang={lang}
+            billedFrequency={billingFrequencyForSwitch}
+            handleOnSwitchIsToggled={switchHandler}
+            labelDiscount={labelDiscount}
+            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          />
+        )}
       </div>
       <Transition
         show={showLoadingCards}
