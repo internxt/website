@@ -8,27 +8,30 @@ interface TestimonialProps {
     testimonialName: string;
     company: string;
     testimonialImage: string;
+   
   };
+   style?:string;
 }
 
 interface TestimonialsSectionProps {
   textContent: any;
   bgColor?: string;
+  style?: string;
 }
 
-const AvatarAndText = ({ testimonial }: TestimonialProps): JSX.Element => (
+const AvatarAndText = ({ testimonial,style }: TestimonialProps): JSX.Element => (
   <div className="flex flex-row items-center gap-3">
     <div className="flex h-10 w-10 rounded-full">
       <Image src={testimonial.testimonialImage} width={40} height={40} alt="FixThePhoto Avatar" />
     </div>
     <div className="flex flex-col">
-      <p className="text-xl font-semibold text-gray-100">{testimonial.testimonialName}</p>
+      <p className={`text-xl font-semibold ${style}`}>{testimonial.testimonialName}</p>
       <p className="text-lg text-gray-60">{testimonial.company}</p>
     </div>
   </div>
 );
 
-const TestimonialsSection = ({ textContent, bgColor }: TestimonialsSectionProps): JSX.Element => {
+const TestimonialsSection = ({ textContent, bgColor,style}: TestimonialsSectionProps): JSX.Element => {
   const testimonials = [
     {
       review: textContent.cards[0].review,
@@ -54,7 +57,7 @@ const TestimonialsSection = ({ textContent, bgColor }: TestimonialsSectionProps)
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'} py-20 px-5 lg:px-16`}>
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
-          <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl">
+          <p className={`text-center ${style} text-4xl font-semibold !leading-tight sm:text-5xl`}>
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
@@ -63,9 +66,9 @@ const TestimonialsSection = ({ textContent, bgColor }: TestimonialsSectionProps)
             <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
               <div className="flex flex-col gap-3">
                 <FiveStars totalStars={5} />
-                <p className="text-xl text-gray-80">{testimonial.review}</p>
+                <p className={`text-xl text-gray-80 ${style}`}>{testimonial.review}</p>
               </div>
-              <AvatarAndText testimonial={testimonial} />
+              <AvatarAndText testimonial={testimonial} style='text-white'  />
             </div>
           ))}
         </div>
