@@ -97,8 +97,8 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
-      <div className="flex flex-col items-center gap-10">
+   <section className="overflow-hidden px-5 py-20">
+      <div className={`flex flex-col items-center gap-10 ${backgroundColorComponent}`}>
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
           <p className={`w-full max-w-3xl text-center ${descriptionColor} text-xl`}>
