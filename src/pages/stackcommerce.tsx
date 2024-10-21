@@ -13,6 +13,7 @@ import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
+import router from 'next/router';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
