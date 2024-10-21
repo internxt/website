@@ -45,7 +45,13 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
+      <HeroSection 
+        hideTimer={true} 
+        previewImg="/images/lifetime/file_item.webp" 
+        textContent={langJson.HeroSection} 
+        onRedirectButtonClicked={() => router.push('#payment')}
+      />
+      
 
       <PaymentSection
         textContent={langJson.PaymentSection}

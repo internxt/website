@@ -29,6 +29,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
         percent="78"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
+        onRedirectButtonClicked={() => router.push('#payment')}
       />
 
       <PaymentSection
