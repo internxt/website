@@ -95,6 +95,14 @@
       "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
       "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
     },
+     "halloweenFeatures":{
+      "title": "Internxt themed goodies:",
+      "200GB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "2TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "5TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "10TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"]
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",
