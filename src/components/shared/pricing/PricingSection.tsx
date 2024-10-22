@@ -129,6 +129,7 @@ export const PricingSection = ({
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
+            isHalloween
           />
         )}
 

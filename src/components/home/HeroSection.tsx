@@ -105,7 +105,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div> */}
           <div className="hidden h-max w-max lg:flex">
             <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/internxt_secure_cloud_storage.webp')}
+              src={getImage('/images/campaigns/halloween/internxt_halloween_1.webp')}
               alt="Internxt Secure Cloud Storage"
               draggable={false}
               quality={100}

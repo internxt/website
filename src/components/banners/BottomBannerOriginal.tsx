@@ -35,8 +35,8 @@ const BottomBanner = () => {
         return {
           title1: 'Save 80%',
           title2: {
-            line1: ' Killer Halloween',
-            line2: ' deals!',
+            line1: 'Secure your',
+            line2: 'world!',
           },
         };
       case 'es':
@@ -128,12 +128,9 @@ const BottomBanner = () => {
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 max-h-[100px] lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
-      style={{
-        backgroundImage: `url(${getImage('/images/campaigns/halloween/web.svg')})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'auto',
-      }}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] lg:${
+        shouldShowBanner ? 'flex' : 'hidden'
+      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">
@@ -149,7 +146,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/campaigns/halloween/internx_halloween_pricing.webp')}
+              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_left.webp')}
               width={160}
               height={100}
               draggable={false}
@@ -158,8 +155,8 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-gray-100">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-gray-100">
+              <p className="text-6xl font-bold text-white">{title().title1}</p>
+              <p className="max-w-[370px] text-2xl font-semibold text-white">
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
@@ -174,7 +171,13 @@ const BottomBanner = () => {
             </button>
           </div>
           <div className="flex flex-col justify-end object-contain">
-           
+            <Image
+              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_right.webp')}
+              width={160}
+              height={100}
+              draggable={false}
+              alt={'Surveillance right'}
+            />
           </div>
         </div>
       </div>

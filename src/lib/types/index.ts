@@ -106,7 +106,8 @@ export enum PromoCodeName {
   CyberAwarenessPromoCode = 'CYBER80',
   PartnerDiscount75OFF = 'partner75',
   SinglesDay='HAPPY80',
-  Resurrection='COMEBACK'
+  Resurrection='COMEBACK',
+  Halloween='HORROR80',
 }
 
 export interface PromoCodeProps {
