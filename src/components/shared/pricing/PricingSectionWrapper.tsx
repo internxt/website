@@ -67,10 +67,10 @@ export const PricingSectionWrapper = ({
   } = usePlanSelection(startFromPlan, startFromInterval, handlePageNameUpdate);
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
 
-  const individualPlansTitle =
-    textContent.planTitles.homePage ??
-    (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
-  const businessTitle = textContent.planTitles.business;
+  const individualPlansTitle = billingFrequency === Interval.Lifetime 
+  ? textContent.planTitles.lifetime 
+  : textContent.planTitles.individuals;
+const businessTitle = textContent.planTitles.business;
 
   const title = () => {
     if (isIndividual) {

@@ -64,6 +64,9 @@ const HalloweenCampaign = ({ metatagsDescriptions, lang, navbarLang, textContent
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideFreeCard
         hideSwitchSelector
+        CustomDescription={
+          <span className="text-gray-80 text-xl- text-regular">{textContent.tableSection.planDescription}</span>
+        }
         
       />
     </Layout>
