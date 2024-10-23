@@ -142,16 +142,14 @@ export const PriceCard = ({
               <Ghost className="text-white w-4 h-4" weight="fill" />
               <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
               {index === 0 && (
-                <div className="relative group">
                   <div className="relative">
                     <Info 
                       className="text-white w-4 h-4" 
                       data-tooltip-id="infoTooltip" 
                       data-tooltip-content="Buy any lifetime plan for a chance to win!" 
                     />
-                    <Tooltip id="infoTooltip" place="right" />
+                   
                   </div>
-                </div>
               )}
             </div>
             ))
@@ -166,6 +164,7 @@ export const PriceCard = ({
             ))
           )}
         </div>
+         <Tooltip id="infoTooltip" place="top" />
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
             <div
