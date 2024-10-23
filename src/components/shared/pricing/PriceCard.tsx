@@ -3,7 +3,7 @@ import { getImage } from '@/lib/getImage';
 import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
-import ReactTooltip from 'react-tooltip';
+import  { Tooltip } from 'react-tooltip';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -143,11 +143,13 @@ export const PriceCard = ({
               <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
               {index === 0 && (
                 <div className="relative group">
-                  <div className="relative overflow-visible">
-                    <Info className="text-white w-4 h-4" />
-                    <div className="absolute hidden group-hover:block bg-gray-90 text-white text-sm rounded-md p-2 -right-5 top-5 z-50 w-max">
-                      Buy any lifetime plan for a chance to win!
-                    </div>
+                  <div className="relative">
+                    <Info 
+                      className="text-white w-4 h-4" 
+                      data-tooltip-id="infoTooltip" 
+                      data-tooltip-content="Buy any lifetime plan for a chance to win!" 
+                    />
+                    <Tooltip id="infoTooltip" place="right" />
                   </div>
                 </div>
               )}

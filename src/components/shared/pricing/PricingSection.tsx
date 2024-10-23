@@ -96,8 +96,6 @@ export const PricingSection = ({
     }
   }, [activeSwitchPlan]);
 
-  
-
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
   const features = [
