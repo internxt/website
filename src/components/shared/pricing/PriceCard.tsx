@@ -20,6 +20,7 @@ export interface PriceCardProps {
   redeemCodeCta?: LifetimeMode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
+  isLifetime?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -44,6 +45,7 @@ export const PriceCard = ({
   label,
   isFamilyPage,
   onCheckoutButtonClicked,
+  isLifetime,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -68,7 +70,6 @@ export const PriceCard = ({
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
   const cardLabel = productCardPlan === 'business' ? businessLabel : label;
-  const halloweenFeatures = contentText.productFeatures.halloweenFeatures[storage];
   
   return (
     <div
@@ -135,13 +136,22 @@ export const PriceCard = ({
             {contentText.productFeatures.halloweenFeatures.title}
           </span>
          
-          {isCheckoutForLifetime ? (
+          {isLifetime ? (
             contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
               <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
-                <Ghost className="text-white w-4 h-4" weight="fill" />
-                <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
-                {index === 0 && <Info className="text-white w-5 h-5" />}
-              </div>
+              <Ghost className="text-white w-4 h-4" weight="fill" />
+              <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
+              {index === 0 && (
+                <div className="relative group">
+                  <div className="relative overflow-visible">
+                    <Info className="text-white w-4 h-4" />
+                    <div className="absolute hidden group-hover:block bg-gray-90 text-white text-sm rounded-md p-2 -right-5 top-5 z-50 w-max">
+                      Buy any lifetime plan for a chance to win!
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
             ))
           ) : (
             contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (

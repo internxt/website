@@ -76,7 +76,7 @@ const FeaturesBanner = () => {
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button
                 onClick={handleOnClick}
-                className="flex w-max items-center rounded-lg bg-white px-5 py-3 text-lg font-medium text-gray-80  hover:bg-primary-dark"
+                className="flex w-max items-center rounded-lg bg-white px-5 py-3 text-lg font-medium text-gray-80"
               >
                 {textContent.featuresBanner.cta}
               </button>

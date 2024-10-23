@@ -41,7 +41,7 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   startFromInterval = Interval.Year,
-  startFromPlan = 'Individuals',
+  startFromPlan = 'Lifetime',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -70,7 +70,7 @@ export const PricingSectionWrapper = ({
   const individualPlansTitle = billingFrequency === Interval.Lifetime 
   ? textContent.planTitles.lifetime 
   : textContent.planTitles.individuals;
-const businessTitle = textContent.planTitles.business;
+  const businessTitle = textContent.planTitles.business;
 
   const title = () => {
     if (isIndividual) {

@@ -75,12 +75,15 @@ export const PricingSection = ({
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = isBusiness ? '10' : '23';
   const showLoadingCards = loadingCards;
-  const showIndividualCards = isIndividual && !loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
+  const isIndividual = activeSwitchPlan === 'Individuals';
+  const isLifetime = activeSwitchPlan === 'Lifetime';
+  const showIndividualCards = isIndividual && !loadingCards;
+  const showLifetimeCards = isLifetime && !loadingCards;
 
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
@@ -92,6 +95,8 @@ export const PricingSection = ({
       onBusinessPlansSelected?.(false);
     }
   }, [activeSwitchPlan]);
+
+  
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
@@ -205,6 +210,47 @@ export const PricingSection = ({
             <FreePlanCard textContent={textContent.freePlanCard} />
           </div>
         )}
+      </Transition>
+
+      <Transition
+        show={showLifetimeCards}
+        enter="transition duration-500 ease-out"
+        enterFrom="scale-95 translate-y-20 opacity-0"
+        enterTo="scale-100 translate-y-0 opacity-100"
+        className="flex flex-col gap-4"
+      >
+        {/* Renderizado de tarjetas Lifetime */}
+        <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+          {products?.individuals[Interval.Lifetime].map((product) => (
+           <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  label={product.storage}
+                  monthlyProductPrice={
+                    products.individuals[Interval.Month].filter(
+                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                    )[0].price
+                  }
+                  key={product.storage}
+                  popular={product.storage === popularPlanBySize}
+                  decimalDiscountValue={
+                    product.interval !== Interval.Lifetime
+                      ? decimalDiscount?.subscriptions
+                      : lifetimeCoupons
+                      ? undefined
+                      : decimalDiscount?.subscriptions
+                  }
+                  fixedDiscount={
+                    product.interval === Interval.Lifetime && lifetimeCoupons
+                      ? lifetimeCoupons?.[product.storage].amountOff
+                      : undefined
+                  }
+                  lang={lang}
+                  isLifetime
+                />
+          ))}
+        </div>
       </Transition>
 
       {/* Business plans */}

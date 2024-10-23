@@ -1,6 +1,4 @@
-import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import HalloweenBanner from '@/components/banners/HalloweenBanner';
