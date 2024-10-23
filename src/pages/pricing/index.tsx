@@ -30,6 +30,7 @@ import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
+import HalloweenBanner from '@/components/banners/HalloweenBanner';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -139,7 +140,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <div className="flex justify-center pt-24">
-          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
+          <HalloweenBanner textContent={textContent.tableSection.ctaBanner} />
         </div>
 
         <PricingSectionWrapper
@@ -156,6 +157,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

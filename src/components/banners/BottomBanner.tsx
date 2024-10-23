@@ -128,7 +128,9 @@ const BottomBanner = () => {
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 max-h-[100px] lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] lg:${
+        shouldShowBanner ? 'flex' : 'hidden'
+      } overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
       style={{
         backgroundImage: `url(${getImage('/images/campaigns/halloween/web.svg')})`,
         backgroundPosition: 'center',

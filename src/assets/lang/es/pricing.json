@@ -47,7 +47,11 @@
       "cta": "Elige tu plan",
       "cta2": "Obtén un 78% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
+      "titleMbl1": "La oferta más letal...",
+      "titleMbl2": "Consíguela",
+      "titleMbl3": "",
+      "ctaMbl":    "Seleccionar plan"
     },
     "planTitles": {
       "individuals": "Planes individuales",

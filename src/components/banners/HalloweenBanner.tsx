@@ -1,4 +1,4 @@
-import { Halloween } from '@/assets/types/halloween';
+import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
@@ -9,7 +9,7 @@ export const PriceBannerForHalloween = ({
   textContent,
   redirectTo,
 }: {
-  textContent: Halloween['featuresBanner'];
+  textContent: PricingText['tableSection']['ctaBanner'];
   redirectTo?: string;
 }) => {
   const globalDialog = useGlobalDialog();

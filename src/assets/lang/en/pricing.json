@@ -42,7 +42,11 @@
       "cta": "Choose plan",
       "cta2": "Score 78% OFF",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers"
+      "lastCta": "*Offer is for free accounts or new customers",
+      "titleMbl1": "Chills, thrills,  ",
+      "titleMbl2": "and savings",
+      "titleMbl3": "on lifetimes!",
+      "ctaMbl":    "Buy plan"
     },
     "planTitles": {
       "individuals": "Individual Plans",
