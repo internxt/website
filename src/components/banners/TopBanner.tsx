@@ -18,7 +18,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-orange text-white lg:flex`}
+        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-orange text-balck lg:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
