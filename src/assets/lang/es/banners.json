@@ -95,9 +95,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "¡80% de descuento en todos los planes!",
-      "normalText": "¡Ahorros por el Mes de la Conciencia Cibernética!",
-      "cta": "Consigue la oferta"
+      "boldText": "80 % de descuento en tu próximo plan de por vida",
+      "normalText": "Hola, quiero jugar a un juego!",
+      "cta": "¿Te atreves?"
     }
   },
   "lifetimeBanner": {

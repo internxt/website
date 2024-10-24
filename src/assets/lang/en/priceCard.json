@@ -100,7 +100,8 @@
       "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
       "2TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
       "5TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "10TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"]
+      "10TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "tooltip":"Buy any lifetime plan for a chance to win!"
     },
     "cheaperThan": {
       "lifetime": {

@@ -35,64 +35,64 @@ const BottomBanner = () => {
         return {
           title1: 'Save 80%',
           title2: {
-            line1: ' Killer Halloween',
-            line2: ' deals!',
+            line1: 'Killer Halloween',
+            line2: 'deals!',
           },
         };
       case 'es':
         return {
           title1: 'Ahorra 80%',
           title2: {
-            line1: 'Asegura tu',
-            line2: 'mundo!',
+            line1: 'Descuentos mortales',
+            line2: 'de Halloween',
           },
         };
       case 'ru':
         return {
           title1: 'Сэкономьте 80%',
           title2: {
-            line1: 'Защитите свой',
-            line2: 'мир!',
+            line1: 'Смертельные скидки',
+            line2: 'на Хэллоуин!',
           },
         };
       case 'fr':
         return {
           title1: 'Économisez 80 %',
           title2: {
-            line1: 'Sécurise ton',
-            line2: 'monde!',
+            line1: 'Réductions mortelles',
+            line2: 'd’Halloween!',
           },
         };
       case 'it':
         return {
           title1: 'Risparmia il 80%',
           title2: {
-            line1: 'Proteggi il tuo',
-            line2: 'mondo!',
+            line1: 'Sconti mortali',
+            line2: 'di Halloween!',
           },
         };
       case 'zh':
         return {
           title1: '节省80%',
           title2: {
-            line1: '保护你的',
-            line2: '世界!',
+            line1: '致命的万圣节',
+            line2: '优惠!',
           },
         };
       case 'zh-tw':
         return {
           title1: '節省 80%',
           title2: {
-            line1: '保護你的',
-            line2: '世界!',
+            line1: '致命的萬聖節',
+            line2: '優惠!',
           },
         };
       case 'de':
         return {
           title1: 'Spare 80%',
           title2: {
-            line1: 'Sichere deine',
-            line2: 'Welt!',
+            line1: 'Tödliche Halloween',
+            line2: 'Angebote!',
           },
         };
       default:
@@ -103,27 +103,31 @@ const BottomBanner = () => {
             line2: 'not hard!',
           },
         };
+
     }
   };
 
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'Choose plan';
+        return 'Claim deal';
       case 'es':
-        return 'Elige tu plan';
+        return '¿Te atreves?';
       case 'ru':
-        return 'Выбрать план';
+        return 'Получить скидку';
       case 'fr':
-        return 'Choisissez plan';
+        return 'Obtenez une offre';
       case 'it':
-        return 'Scegli un piano';
+        return 'Ottieni offerta';
       case 'zh':
-        return '选择计划';
+        return '领取优惠';
+      case 'zh-tw':
+        return '領取優惠';
       case 'de':
-        return 'Wählen Sie einen Plan';
+        return 'Angebot sichern';
       default:
         return 'Choose plan';
+
     }
   };
   return (

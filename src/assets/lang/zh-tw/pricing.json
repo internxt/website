@@ -31,13 +31,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "節省80%",
-      "title": "網絡安全意識月",
-      "subtitle": "所有 Internxt 高級方案！",
-      "cta": "選擇計劃",
-      "cta2": "享受 78% 的折扣",
-      "guarantee": "30天退款保證",
-      "lastCta": "*優惠僅適用於免費帳戶或新客戶"
+      "label": "立省 80%",
+      "title": "致命的萬聖節折扣",
+      "subtitle": "僅限終身計劃",
+      "cta": "選擇您的計劃",
+      "cta2": "享受 80% 折扣",
+      "guarantee": "30 天退款保證",
+      "lastCta": "*優惠僅適用於免費帳戶或新客戶",
+      "titleMbl1": "致命",
+      "titleMbl2": "折扣",
+      "titleMbl3": "萬聖節",
+      "ctaMbl": "選擇計劃"
     },
     "save": "節省高達",
     "planTitles": {

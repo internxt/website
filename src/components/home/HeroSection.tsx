@@ -53,7 +53,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : undefined}
-            <HomePageBannerForMobile />
+            <HomePageBannerForMobile  />
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}

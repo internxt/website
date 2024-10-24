@@ -111,9 +111,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% Rabatt auf alle Pläne!",
-      "normalText": "Ersparnisse im Cyber-Sicherheitsbewusstseinsmonat!",
-      "cta": "Angebot einlösen"
+      "boldText": "80 % Rabatt auf deinen nächsten Lifetime-Plan",
+      "normalText": "Hallo, ich möchte ein Spiel spielen!",
+      "cta": "Traust du dich?"
     }
   },
   "lifetimeBanner": {

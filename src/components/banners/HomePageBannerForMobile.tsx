@@ -1,7 +1,8 @@
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-import { CheckCircle, Link } from '@phosphor-icons/react';
+import { CheckCircle} from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const HomePageBannerForMobile = (redirectTo) => {
@@ -10,7 +11,7 @@ export const HomePageBannerForMobile = (redirectTo) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
-const bgImage= getImage('/images/campaigns/halloween/web.svg');
+  const bgImage= getImage('/images/campaigns/halloween/web.svg');
   return (
     <div className="flex lg:hidden flex-col justify-between gap-10 rounded-[16px] bg-orange w-full relative z-10"
         style={{

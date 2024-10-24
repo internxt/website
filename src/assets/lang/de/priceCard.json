@@ -96,6 +96,15 @@
       "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
     },
+    "halloweenFeatures": {
+      "title": "Internxt-Themen-Goodies:",
+      "200GB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "1TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "2TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "5TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "10TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "tooltip": "Kaufen Sie einen Lifetime-Plan für die Chance zu gewinnen!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Bis zu ",

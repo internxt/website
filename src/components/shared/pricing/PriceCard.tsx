@@ -146,7 +146,7 @@ export const PriceCard = ({
                     <Info 
                       className="text-white w-4 h-4" 
                       data-tooltip-id="infoTooltip" 
-                      data-tooltip-content="Buy any lifetime plan for a chance to win!" 
+                      data-tooltip-content={contentText.productFeatures.halloweenFeatures.tooltip}
                     />
                    
                   </div>

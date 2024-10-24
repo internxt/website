@@ -140,7 +140,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <div className="flex justify-center pt-24">
-          <HalloweenBanner textContent={textContent.tableSection.ctaBanner} />
+          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner}  />
         </div>
 
         <PricingSectionWrapper
