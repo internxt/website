@@ -30,7 +30,7 @@ import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
-import HalloweenBanner from '@/components/banners/HalloweenBanner';
+
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
