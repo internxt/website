@@ -20,7 +20,7 @@ module.exports = {
       'primary-dark': 'rgb(0,88,219)',
       red: 'rgb(255,13,0)',
       'red-dark': 'rgb(230,11,0)',
-      orange: 'rgb(255,149,0)',
+      orange: 'rgb(255,149,0,1)',
       'orange-dark': 'rgb(230,134,0)',
       yellow: 'rgb(255,204,0)',
       'yellow-dark': 'rgb(230,184,0)',

@@ -9,6 +9,7 @@ interface PlanSwitchProps {
   hidePlanSelectorComponent?: boolean;
   hideBusinessSelector?: boolean;
   isMonthly?: boolean;
+  isHalloween?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
@@ -17,7 +18,8 @@ export const PlanSelector = ({
   activeSwitchPlan,
   hideBusinessSelector,
   onPlanTypeChange,
-  isMonthly
+  isMonthly,
+  isHalloween
 }: PlanSwitchProps): JSX.Element => (
   <div id="billingButtons" className={`flex flex-row rounded-lg bg-cool-gray-10 p-0.5`}>
     <button
@@ -29,8 +31,10 @@ export const PlanSelector = ({
         activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
-       {isMonthly ? textContent.billingFrequency.annually : textContent.billingFrequency.individual}
-      <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      {textContent.billingFrequency.individual}
+      {!isHalloween && (
+        <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      )}
     </button>
     <button
       type="button"
@@ -41,7 +45,7 @@ export const PlanSelector = ({
         activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
       }`}
     >
-       {isMonthly ? textContent.billingFrequency.lifetime : textContent.billingFrequency.individual}
+     {textContent.billingFrequency.lifetime}
       <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
     </button>
     <button
@@ -54,7 +58,9 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.business}
-      <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      {!isHalloween && (
+        <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      )}
     </button>
   </div>
 );

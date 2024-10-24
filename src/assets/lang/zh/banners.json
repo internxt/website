@@ -111,9 +111,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "所有计划享 80% 折扣!",
-      "normalText": "网络安全意识月优惠！",
-      "cta": "领取优惠"
+      "boldText": "终身计划立享 8 折优惠",
+      "normalText": "你好，我想玩个游戏！",
+      "cta": "你敢接受挑战吗？"
     }
   },
   "lifetimeBanner": {

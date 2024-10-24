@@ -41,13 +41,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80%",
-      "title": "Mois de la sensibilisation à la cybersécurité",
-      "subtitle": "Tous les plans premium d'Internxt!",
-      "cta": "Choisir un plan",
-      "cta2": "Profitez de 78% de réduction",
+      "label": "Économisez 80 %",
+      "title": "Réductions Mortelles d'Halloween",
+      "subtitle": "Uniquement sur les plans à vie",
+      "cta": "Choisissez votre plan",
+      "cta2": "Obtenez 80 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
+      "titleMbl1": "Réductions",
+      "titleMbl2": "mortelles",
+      "titleMbl3": "d'Halloween.",
+      "ctaMbl": "Sélectionner un plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",

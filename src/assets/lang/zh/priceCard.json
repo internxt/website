@@ -97,6 +97,15 @@
       "5TB": ["星球大战壁纸", "星球大战 Web 应用主题"],
       "10TB": ["星球大战壁纸", "星球大战 Web 应用主题", "星球大战贴纸"]
     },
+    "halloweenFeatures": {
+      "title": "Internxt 主题好礼：",
+      "200GB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "1TB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "2TB":  ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "5TB":  ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "10TB":  ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "tooltip": "购买任意终身套餐，赢取好礼机会！"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "最多 ",

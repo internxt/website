@@ -31,6 +31,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
+
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -139,7 +140,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <div className="flex justify-center pt-24">
-          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
+          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner}  />
         </div>
 
         <PricingSectionWrapper
@@ -156,6 +157,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

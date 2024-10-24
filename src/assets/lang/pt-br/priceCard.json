@@ -94,6 +94,16 @@
       "5TB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web"],
       "10TB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web", "Adesivos de Star Wars"]
     },
+    "halloweenFeatures": {
+      "title": "Brindes temáticos da Internxt:",
+      "200GB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "1TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "2TB":  ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "5TB":  ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "10TB":  ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "tooltip": "Compre qualquer plano vitalício para ter chance de ganhar!"
+    },
+
     "cheaperThan": {
       "lifetime": {
         "normal": "Até ",
