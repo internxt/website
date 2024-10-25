@@ -52,12 +52,7 @@ export const PriceCard = ({
 
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
-  const priceNow =
-    productCardPlan === 'business' || interval === Interval.Year
-      ? price 
-      : decimalDiscountValue
-      ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
-      : price;
+  const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
 
   const priceBefore =
     productCardPlan === 'business' || interval === Interval.Year
