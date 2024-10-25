@@ -100,7 +100,6 @@ export const PricingSectionWrapper = ({
           decimalDiscount={{
             subscriptions: decimalDiscount?.individuals,
             lifetime: decimalDiscount?.lifetime,
-            business: decimalDiscount?.business,
           }}
           products={products}
           popularPlanBySize={popularPlanBySize}
