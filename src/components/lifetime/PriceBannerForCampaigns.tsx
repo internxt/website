@@ -18,7 +18,7 @@ export const PriceBannerForCampaigns = ({
 
   return (
    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} flex-col overflow-hidden relative px-3 sm:px-5`}>
-     {/* Vista para escritorio */}
+     {/* Desktop View */}
       <div className="hidden lg:flex flex-col justify-between gap-20 sm:gap-40 rounded-[16px] sm:rounded-[32px] bg-orange w-full lg:flex-row relative z-10"
         style={{
           backgroundImage: `url(${bgImage})`,
@@ -58,7 +58,7 @@ export const PriceBannerForCampaigns = ({
         </div>
       </div>
 
-      {/* Vista para móviles */}
+      {/* Mobile View */}
       <div className="flex lg:hidden flex-col justify-between gap-10 rounded-[16px] bg-orange w-full relative z-10"
         style={{
           backgroundImage: `url(${bgImage})`,

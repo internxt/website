@@ -94,7 +94,7 @@ export const PricingSection = ({
     } else {
       onBusinessPlansSelected?.(false);
     }
-  }, [activeSwitchPlan]);
+  }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
@@ -217,7 +217,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        {/* Renderizado de tarjetas Lifetime */}
+        {/* Lifetime render cards */}
         <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
           {products?.individuals[Interval.Lifetime].map((product) => (
            <PriceCard
