@@ -8,6 +8,7 @@ import Header from '../shared/Header';
 import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
+import Link from 'next/link';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -53,7 +54,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : undefined}
-            <HomePageBannerForMobile  />
+            <HomePageBannerForMobile   />
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
@@ -104,15 +105,17 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <Animation />
           </div> */}
           <div className="hidden h-max w-max lg:flex">
-            <Image
-              src={getImage('/images/campaigns/halloween/internxt_halloween_1.webp')}
-              alt="Internxt Secure Cloud Storage"
-              draggable={false}
-              quality={100}
-              width={562}
-              height={529}
-            />
-          </div>
+      <Link href='/pricing'>
+        <Image
+          src={getImage('/images/campaigns/halloween/internxt_halloween_1.webp')}
+          alt="Internxt Secure Cloud Storage"
+          draggable={false}
+          quality={100}
+          width={562}
+          height={529}
+        />
+      </Link>
+    </div>
         </div>
       </div>
     </section>

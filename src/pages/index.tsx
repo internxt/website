@@ -100,7 +100,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale}  />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}

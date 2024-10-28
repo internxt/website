@@ -172,7 +172,7 @@ export const PricingSection = ({
           {products?.individuals
             ? products.individuals[billingFrequency].map((product) => (
                 <PriceCard
-                  isCheckoutForLifetime={billingFrequency !== Interval.Lifetime}
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}

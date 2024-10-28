@@ -20,7 +20,6 @@ export interface PriceCardProps {
   redeemCodeCta?: LifetimeMode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
-  isLifetime?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -45,7 +44,6 @@ export const PriceCard = ({
   label,
   isFamilyPage,
   onCheckoutButtonClicked,
-  isLifetime,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -131,7 +129,7 @@ export const PriceCard = ({
             {contentText.productFeatures.halloweenFeatures.title}
           </span>
          
-          {isLifetime ? (
+          {isCheckoutForLifetime ? (
             contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
               <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
               <Ghost className="text-white w-4 h-4" weight="fill" />
