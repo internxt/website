@@ -83,7 +83,7 @@ export const PricingSection = ({
   const showIndividualCards = isIndividual && !loadingCards;
 
   const showSwitchComponent =
-    (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
+    (activeSwitchPlan === 'Business' && !hideBusinessCards);
 
   useEffect(() => {
     if (isBusiness) {
@@ -196,6 +196,7 @@ export const PricingSection = ({
                       : undefined
                   }
                   lang={lang}
+                  
                 />
               ))
             : undefined}
