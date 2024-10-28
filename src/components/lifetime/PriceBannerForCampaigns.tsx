@@ -45,6 +45,8 @@ export const PriceBannerForCampaigns = ({
             <CheckCircle size={20} className="text-gray-100" />
             <p className="whitespace-nowrap font-medium text-base sm:text-lg">{textContent.guarantee}</p>
           </div>
+            <p className="whitespace-nowrap font-medium text-sm sm:text-sm">{textContent.lastCta}</p>
+         
         </div>
         <div className="hidden w-full justify-end lg:flex">
           <Image
