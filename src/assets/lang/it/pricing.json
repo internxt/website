@@ -37,12 +37,16 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Risparmia l'80%",
-      "title": "Mese della Consapevolezza sulla Sicurezza Informatica",
-      "subtitle": "Tutti i piani premium di Internxt!",
-      "cta": "Scegli il piano",
-      "cta2": "Ottieni il 78% di sconto",
+      "title": "Sconti Mortali di Halloween",
+      "subtitle": "Solo sui piani a vita",
+      "cta": "Scegli il tuo piano",
+      "cta2": "Ottieni l'80% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti"
+      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
+      "titleMbl1": "Sconti",
+      "titleMbl2": "mortali",
+      "titleMbl3": "di Halloween.",
+      "ctaMbl": "Seleziona piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {

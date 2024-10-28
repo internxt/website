@@ -75,15 +75,15 @@ export const PricingSection = ({
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = isBusiness ? '10' : '23';
   const showLoadingCards = loadingCards;
-  const showIndividualCards = isIndividual && !loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
+  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const showIndividualCards = isIndividual && !loadingCards;
 
   const showSwitchComponent =
-    (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
+    (activeSwitchPlan === 'Business' && !hideBusinessCards);
 
   useEffect(() => {
     if (isBusiness) {
@@ -91,7 +91,7 @@ export const PricingSection = ({
     } else {
       onBusinessPlansSelected?.(false);
     }
-  }, [activeSwitchPlan]);
+  }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
@@ -129,6 +129,7 @@ export const PricingSection = ({
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
+            isHalloween
           />
         )}
 
@@ -195,6 +196,7 @@ export const PricingSection = ({
                       : undefined
                   }
                   lang={lang}
+                  
                 />
               ))
             : undefined}

@@ -61,7 +61,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        startFromInterval={Interval.Year}
+        startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
         hidePlanSelectorAndSwitch
       />

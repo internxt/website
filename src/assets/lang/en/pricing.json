@@ -37,12 +37,16 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Save 80%",
-      "title": "Cybersecurity Awareness Month",
-      "subtitle": "All Internxt premium plans!",
+      "title": "Halloween sale",
+      "subtitle": "Only in lifetime plans!",
       "cta": "Choose plan",
-      "cta2": "Score 78% OFF",
+      "cta2": "Score 80% OFF",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers"
+      "lastCta": "*Offer is for free accounts or new customers",
+      "titleMbl1": "Chills, thrills,  ",
+      "titleMbl2": "and savings",
+      "titleMbl3": "on lifetimes!",
+      "ctaMbl":    "Buy plan"
     },
     "planTitles": {
       "individuals": "Individual Plans",

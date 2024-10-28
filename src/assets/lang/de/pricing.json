@@ -37,13 +37,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Sparen Sie 80%",
-      "title": "Monat der Cybersicherheit",
-      "subtitle": "Alle Internxt-Premium-Pläne!",
-      "cta": "Plan auswählen",
-      "cta2": "Sichern Sie sich 78% Rabatt",
-      "guarantee": "30-Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden"
+      "label": "Spare 80 %",
+      "title": "Tödliche Halloween-Rabatte",
+      "subtitle": "Nur auf Lifetime-Pläne",
+      "cta": "Wähle deinen Plan",
+      "cta2": "Erhalte 80 % Rabatt",
+      "guarantee": "30 Tage Geld-zurück-Garantie",
+      "lastCta": "*Das Angebot gilt nur für kostenlose Konten oder Neukunden",
+      "titleMbl1": "Tödliche",
+      "titleMbl2": "Rabatte",
+      "titleMbl3": "zu Halloween.",
+      "ctaMbl": "Plan auswählen"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",

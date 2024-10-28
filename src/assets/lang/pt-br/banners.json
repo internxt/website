@@ -60,7 +60,7 @@
       "Código aberto e transparente",
       "Transferências criptografadas de ponta a ponta",
       "Sem acesso não autorizado",
-      "Oferta válida até 31 de outubro"
+      "Oferta válida até 10 de novembro"
     ]
   },
   "s3StorageBanner": {
@@ -151,9 +151,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de desconto em todos os planos!",
-      "normalText": "Economize no Mês de Conscientização Cibernética!",
-      "cta": "Aproveite a oferta"
+      "boldText": "80% de desconto no seu próximo plano vitalício",
+      "normalText": "Olá, quero jogar um jogo!",
+      "cta": "Você se atreve?"
     }
   },
   "lifetimeBanner": {
