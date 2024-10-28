@@ -51,7 +51,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         cta={['Hide Login']}
         isLinksHidden
       />
-      <LoginBFBanner />
+
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} />
 

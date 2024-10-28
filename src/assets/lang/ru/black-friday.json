@@ -3,9 +3,9 @@
     "HeroSection": {
       "title": {
         "line1": "Black Friday",
-        "line2": "is over..."
+        "line2": "is coming soon!"
       },
-      "description": "Get 60% off our annual 2TB plan.",
+      "description": "Get privacy for a great price!",
 
       "pricingTable": {
         "only": "Only",
@@ -31,74 +31,76 @@
       "subtitle": "Internxt's discount on privacy and peace of mind will be back next year!"
     },
     "SuiteSection": {
-      "title": "What's included in Internxt's Black Friday deal",
-      "subtitle": "Internxt has a whole suite of private cloud services designed to help you and your family stay safe online.",
+      "title": "Get more for less: secure cloud storage plans at unbeatable prices!",
+      "subtitle": "Take back control of your data with Internxt, get total online privacy, and protect yourself, your business, or your family from cyberattacks and companies profiting from your data. ",
       "drive": {
         "title": "Internxt Drive",
-        "subtitle": "Back up your treasured family recipes with our safe and secure cloud storage service, Internxt Drive."
+        "subtitle": "Upload, store, and share your files in total privacy with our encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration.",
+        "cta": "Secure with Drive"
       },
       "photos": {
-        "title": "Internxt Photos",
-        "subtitle": "Save all of your family photos this holiday season with a cloud-based gallery, Internxt Photos."
+        "title": "Internxt for Business",
+        "subtitle": "Everything you need to manage your business securely. Secure file sharing, storage allocation, and session management features ensure that Internxt meets all your business needs.",
+        "cta": "Get Internxt for Business"
       },
       "send": {
-        "title": "Internxt Send",
-        "subtitle": "Share your travel itineraries and tickets with our encrypted file-transfer service, Internxt Send."
+        "title": "Internxt for Families",
+        "subtitle": "Complete peace of mind for your family. Securely store, share, and manage your best memories from one single, encrypted cloud platform. ",
+        "cta": "Get Internxt for Family"
       }
     },
     "FeatureSection": {
       "title": "Why choose Internxt?",
-      "subtitle": "Privacy made for everyone and simple-to-use online security that you don’t have to be  an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
+      "subtitle": "We build all our products with privacy in mind. We don’t run our business on data or advertising; we build it on trust. Our encrypted technology protects your files and ensures you keep your fundamental right to privacy. ",
       "feature1": {
-        "title": "Private by default",
-        "subtitle1": "No first or third-party access to your file ever! You have total control of your data."
+        "title": "Unhackable and unleakable data",
+        "subtitle1": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
       },
       "feature2": {
-        "title": "Fast sync",
-        "subtitle1": "Encrypt, scramble, fragment, distribute, and transfer, all in the blink of an eye."
+        "title": "Uncompromising security",
+        "subtitle1": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
       },
       "feature3": {
-        "title": "Secure from the core",
-        "subtitle1": "Built on blockchain, end-to-end encrypted, and decentralized across a vast peer-to-peer network."
+        "title": "Open source and transparent",
+        "subtitle1": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
       },
       "feature4": {
-        "title": "Safe sharing",
-        "subtitle1": "Send encrypted files and photos back and forth to your favorite people via link and email."
-      },
-      "feature5": {
-        "title": "Multiplatform",
-        "subtitle1": "Privacy for all devices, browsers, and operating systems! Linux, Windows, macOS, iOS, Android."
-      },
-      "feature6": {
-        "title": "Zero-knowledge",
-        "subtitle1": "You are the only one with access to your data. Not even internxt can view your files!"
+        "title": "Independently verified",
+        "subtitle1": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
     },
     "PlatformSection": {
-      "title": "Available on all platforms",
+      "title": "Access your files anywhere, anytime",
+      "subtitle": "Internxt is available on all platforms, meaning your files are just a click away!",
+      "web": "Web",
       "linux": "Linux",
       "windows": "Windows",
       "mac": "MacOS",
       "android": "Android",
       "iOS": "iOS"
     },
-    "TestimonialSection": {
-      "title": "What our users are saying about Internxt",
-      "cristian": {
-        "text": "\"We needed a Dropbox alternative that allowed us to store client files and work (social media files) and, as Internxt is GDPR friendly, fit perfectly for us!\"",
-        "footer": "Cristian"
+    "TestimonialsSection": {
+      "title": "What our users are saying about us",
+      "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
       },
-      "josep": {
-        "text": "\"I've been using Google Drive for several years, but I needed an alternative that granted me the privacy of my data. Something that Google or other well-known platforms can't do. That's why I moved to Internxt.\"",
-        "footer": "Josep"
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
       },
-      "eva": {
-        "text": "\"Internxt is a convenient cloud storage service for budget-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely.\"",
-        "footer": "Eva"
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
       }
+      ]
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Questions? We have answers",
       "faq": [
         {
           "question": "How can I get the Black Friday discount?",
@@ -154,17 +156,15 @@
     }
   },
   "cta": {
-    "title": "Black Friday is over...",
-    "subtitle": "Our sale has ended, but you can still get affordable privacy!",
-    "only": "Only",
-    "priceNow": "3.59",
-    "month": "/mo"
+    "title": "Black Friday is coming soon!",
+    "subtitle": "Get privacy for a great price!",
+    "cta": "Choose plan",
+    "guarantee": "30-day money-back guarantee"
   },
   "cta2": {
-    "title": "Black Friday is over...",
-    "subtitle": "Our sale is over, but you can still get affordable privacy!",
-    "only": "Only",
-    "priceNow": "3.59",
-    "month": "/mo"
+    "title": "Black Friday is coming soon!",
+    "subtitle": "Get affordable privacy!",
+    "cta": "Choose plan",
+    "guarantee": "30-day money-back guarantee"
   }
 }
