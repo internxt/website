@@ -17,7 +17,8 @@ interface PricingSectionWrapperProps {
   hidePlanSelectorComponent?: boolean;
   hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
-  startFromInterval?: Interval;
+  startIndividualPlansFromInterval?: Interval;
+  startBusinessPlansFromInterval?: Interval;
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
@@ -40,7 +41,8 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startFromInterval = Interval.Year,
+  startIndividualPlansFromInterval = Interval.Lifetime,
+  startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Lifetime',
   hideBusinessSelector,
   hideBusinessCards,
@@ -64,12 +66,16 @@ export const PricingSectionWrapper = ({
     onPlanTypeChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
-  } = usePlanSelection(startFromPlan, startFromInterval, handlePageNameUpdate);
+  } = usePlanSelection(
+    startFromPlan,
+    startIndividualPlansFromInterval,
+    startBusinessPlansFromInterval,
+    handlePageNameUpdate,
+  );
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
 
-  const individualPlansTitle = billingFrequency === Interval.Lifetime 
-  ? textContent.planTitles.lifetime 
-  : textContent.planTitles.individuals;
+  const individualPlansTitle =
+    billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
   const businessTitle = textContent.planTitles.business;
 
   const title = () => {
@@ -85,7 +91,7 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-2xl !leading-tight text-regular text-gray-100">
+          <p className="text-regular w-full max-w-3xl text-center text-2xl !leading-tight text-gray-100">
             {CustomDescription}
           </p>
         </div>
