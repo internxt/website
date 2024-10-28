@@ -157,6 +157,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           hideSwitchSelector
+          hideFreeCard
+          CustomDescription={<span className='text-xl text-regular text-gray-80'>
+            {textContent.tableSection.planDescription}
+          </span>}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
