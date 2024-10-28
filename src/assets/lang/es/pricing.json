@@ -43,7 +43,7 @@
     "ctaBanner": {
       "label": "Ahorra un 80%",
       "title": "Descuentos Mortales de Halloween",
-      "subtitle": "Solo en planes de por vida",
+      "subtitle": "¡Todos los planes de por vida!",
       "cta": "Elige tu plan",
       "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
@@ -51,7 +51,7 @@
       "titleMbl1": "Descuentos",
       "titleMbl2": "mortales",
       "titleMbl3": "de Halloween.",
-      "ctaMbl":    "Seleccionar plan"
+      "ctaMbl": "Seleccionar plan"
     },
     "planTitles": {
       "individuals": "Planes individuales",

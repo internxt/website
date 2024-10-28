@@ -3,7 +3,7 @@ import { getImage } from '@/lib/getImage';
 import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
-import  { Tooltip } from 'react-tooltip';
+import { Tooltip } from 'react-tooltip';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -54,7 +54,7 @@ export const PriceCard = ({
 
   const priceBefore =
     productCardPlan === 'business' || interval === Interval.Year
-      ? undefined 
+      ? undefined
       : decimalDiscountValue || fixedDiscount
       ? Number(price).toFixed(2).replace('.00', '')
       : (monthlyProductPrice * 12).toFixed(2);
@@ -63,7 +63,7 @@ export const PriceCard = ({
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
   const cardLabel = productCardPlan === 'business' ? businessLabel : label;
-  
+
   return (
     <div
       className={`${
@@ -124,40 +124,28 @@ export const PriceCard = ({
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
-        <div className="flex flex-col space-y-2 pt-6 pb-6 bg-gray-100">
-          <span className="text-orange font-bold px-5">
-            {contentText.productFeatures.halloweenFeatures.title}
-          </span>
-         
-          {isCheckoutForLifetime ? (
-            contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
+        {isCheckoutForLifetime && (
+          <div className="flex flex-col space-y-2 bg-gray-100 pb-6 pt-6">
+            <span className="px-5 font-bold text-orange">{contentText.productFeatures.halloweenFeatures.title}</span>
+
+            {contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
               <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
-              <Ghost className="text-white w-4 h-4" weight="fill" />
-              <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
-              {index === 0 && (
+                <Ghost className="h-4 w-4 text-white" weight="fill" />
+                <span className="flex-1 whitespace-nowrap text-white">{feature}</span>
+                {index === 0 && (
                   <div className="relative">
-                    <Info 
-                      className="text-white w-4 h-4" 
-                      data-tooltip-id="infoTooltip" 
+                    <Info
+                      className="h-4 w-4 text-white"
+                      data-tooltip-id="infoTooltip"
                       data-tooltip-content={contentText.productFeatures.halloweenFeatures.tooltip}
                     />
-                   
                   </div>
-              )}
-            </div>
-            ))
-          ) : (
-            contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
-              index === 1 && (
-                <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
-                  <Ghost className="text-white w-4 h-4" weight="fill" />
-                  <span className="text-white flex-1 whitespace-nowrap">{feature}</span>
-                </div>
-              )
-            ))
-          )}
-        </div>
-         <Tooltip id="infoTooltip" place="top" />
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        <Tooltip id="infoTooltip" place="top" />
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
             <div
