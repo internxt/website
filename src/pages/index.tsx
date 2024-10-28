@@ -45,8 +45,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CyberAwarenessPromoCode,
-    couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
+    couponCode: PromoCodeName.Halloween,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -101,7 +100,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection textContent={textContent.HeroSection} lang={locale}  />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}
@@ -123,6 +122,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideFreeCard
+        CustomDescription={<span className='text-xl text-regular text-gray-80'>
+          {textContent.tableSection.planDescription}
+        </span>}
       />
 
       <div className={`${marqueeBgColor} py-10`}>

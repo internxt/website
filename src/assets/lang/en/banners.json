@@ -60,7 +60,7 @@
       "Open source and transparent",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends October 31"
+      "Offer ends November 10"
     ]
   },
   "s3StorageBanner": {
@@ -145,9 +145,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% off all plans!",
-      "normalText": "Cyber Awareness Month savings! ",
-      "cta": "Claim deal"
+      "boldText": "80% off your next lifetime plan",
+      "normalText": "Hello, I want to play a game!",
+      "cta": "Make your choice"
     }
   },
   "lifetimeBanner": {
