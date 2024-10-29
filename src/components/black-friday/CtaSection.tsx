@@ -9,7 +9,7 @@ const CtaSection = ({ textContent, lang }) => {
   return (
         <section className="overflow-hidden p-5 sm:p-10 bg-highlight">
       <div className={`relative flex flex-col lg:flex-row items-center justify-center space-y-10 lg:space-y-0 lg:space-x-10 p-5 sm:p-10 rounded-2xl shadow-lg ${styles.radialGradient}`}>
-        <div className="flex justify-center lg:hidden">
+        <div className="flex justify-center lg:flex">
           <Image
             src={getImage('/images/black-friday/internxt_BF_1.webp')}
             height={219}
