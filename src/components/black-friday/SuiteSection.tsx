@@ -38,6 +38,7 @@ const SuiteSection = ({ textContent, lang }) => {
                     <Link
                       className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
                       href={index === 2 ? '/family' : '/pricing'}
+                       target="_blank"
                     >
                       {section.cta}
                     </Link>
