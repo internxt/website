@@ -29,14 +29,19 @@ const SuiteSection = ({ textContent, lang }) => {
               >
                 <div className="w-auto px-10 pt-10 lg:h-full lg:w-[480px] lg:p-20 flex flex-col justify-between">
                   <div className="flex flex-col space-y-4">
-                    <h4 className="text-4xl font-medium lg:text-4xl pb-4">{section.title}</h4>
-                    <h5 className="text-xl">{section.subtitle}</h5>
+                    <h4 className="text-3xl font-medium lg:text-4xl pb-4">{section.title}</h4>
+                    <div className="max-h-[144px]">
+                      <p className="text-1xl font-regular" >{section.subtitle}</p>
+                    </div>
                   </div>
-                  <Link
-                    className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
-                    href={'/pricing'}>
-                    {section.cta}
-                  </Link>
+                  <div className="mt-12">
+                    <Link
+                      className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
+                      href={index === 2 ? '/family' : '/pricing'}
+                    >
+                      {section.cta}
+                    </Link>
+                  </div>
                 </div>
 
                 <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
