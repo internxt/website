@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const ButtonDeal = ({ lang }) => {
@@ -13,17 +14,13 @@ const ButtonDeal = ({ lang }) => {
   };
   const selectedText = translations[lang] || translations.en;
   return (
-    <>
-      <button
-        className="relative flex flex-row items-center justify-center rounded-lg bg-primary py-3 px-6 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
-        onClick={() => {
-          window.location.href = '/pricing';
-        }}
+      <Link
+        href="/pricing"
+          className="relative flex flex-row items-center justify-center rounded-lg bg-primary py-3 px-6 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
       >
        {selectedText}
 
-      </button>
-    </>
+      </Link>
   );
 };
 

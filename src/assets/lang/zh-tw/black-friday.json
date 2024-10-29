@@ -23,7 +23,11 @@
         "hours": "小時",
         "minutes": "分鐘",
         "seconds": "秒"
-      }
+      },
+      "feature1": "加密文件儲存與分享",
+      "feature2": "隨時隨地訪問您的文件",
+      "feature3": "獲得所有服務的訪問權限",
+      "feature4": "無未經授權的數據訪問"
     },
     "BestStorage": {
       "title": "最佳雲端儲存黑色星期五優惠",

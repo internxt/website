@@ -13,7 +13,7 @@ const SuiteSection = ({ textContent, lang }) => {
       <div className="z-10 flex flex-col items-center py-16">
         <div className="px-6 text-left sm:text-center">
           <div className="flex flex-col items-center justify-center px-5 pb-16 text-center">
-            <h2 className="max-w-[756px] text-4xl font-semibold text-white md:text-5xl -mt-2"> {/* Ajustar el margen superior aquí */}
+            <h2 className="max-w-[756px] text-4xl font-semibold text-white md:text-5xl -mt-2">
               {textContent.SuiteSection.title}
             </h2>
             <p className="max-w-[756px] pt-5 text-xl text-white">
