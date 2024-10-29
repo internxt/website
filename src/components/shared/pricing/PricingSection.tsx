@@ -82,8 +82,7 @@ export const PricingSection = ({
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
 
-  const showSwitchComponent =
-    (activeSwitchPlan === 'Business' && !hideBusinessCards);
+  const showSwitchComponent = activeSwitchPlan === 'Business' && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -183,20 +182,8 @@ export const PricingSection = ({
                   }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
-                  decimalDiscountValue={
-                    product.interval !== Interval.Lifetime
-                      ? decimalDiscount?.subscriptions
-                      : lifetimeCoupons
-                      ? undefined
-                      : decimalDiscount?.subscriptions
-                  }
-                  fixedDiscount={
-                    product.interval === Interval.Lifetime && lifetimeCoupons
-                      ? lifetimeCoupons?.[product.storage].amountOff
-                      : undefined
-                  }
+                  decimalDiscountValue={product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : undefined}
                   lang={lang}
-                  
                 />
               ))
             : undefined}
