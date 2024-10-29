@@ -1,6 +1,17 @@
 import React from 'react';
 
 const ButtonDeal = ({ lang }) => {
+  const translations = {
+    en: "Choose a plan",
+    es: "Elige un plan",
+    ru: "Выбрать план",
+    fr: "Choisissez un plan",
+    de: "Wählen Sie einen Plan",
+    it: "Scegli un piano",
+    zh: "选择一个计划",
+    "zh-tw": "選擇一個計劃"
+  };
+  const selectedText = translations[lang] || translations.en;
   return (
     <>
       <button
@@ -9,7 +20,7 @@ const ButtonDeal = ({ lang }) => {
           window.location.href = '/pricing';
         }}
       >
-        {lang === 'es' ? "Elige un plan" : lang === 'ru' ? "Выбрать план" : 'Choose a plan'}
+       {selectedText}
 
       </button>
     </>

@@ -204,7 +204,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               {!props.hideNavbar ? (
-                <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode} />
+                <LanguageBox darkMode={props.darkMode} />
               ) : undefined}
             </div>
             {!props.isLinksHidden && (

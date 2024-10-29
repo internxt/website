@@ -7,35 +7,66 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent, lang }) => {
+  const langMapping = {
+    en: 'text',
+    es: 'spanishText',
+    ru: 'russianText',
+    it: 'italianText',
+    de: 'germanText',
+    fr: 'frenchText',
+    zh: 'zhText',
+    'zh-tw': 'zhTWText'
+  };
   const features = [
     {
-      "id": 0,
-      "text": "Encrypted file storage and sharing",
-      "spanishText": "Almacenamiento y compartición de archivos encriptados",
-      "russianText": "Зашифрованное хранилище и обмен файлами",
+        "id": 0,
+        "text": "Encrypted file storage and sharing",
+        "spanishText": "Almacenamiento y compartición de archivos encriptados",
+        "russianText": "Зашифрованное хранилище и обмен файлами",
+        "italianText": "Archiviazione e condivisione di file crittografati",
+        "germanText": "Verschlüsselte Dateispeicherung und -freigabe",
+        "frenchText": "Stockage et partage de fichiers cryptés",
+        "zhText": "加密文件存储和共享",
+        "zhTWText": "加密文件儲存與分享"
     },
     {
-      "id": 1,
-      "text": "Access your files from any device",
-      "spanishText": "Accede a tus archivos desde cualquier dispositivo",
-      "russianText": "Доступ к вашим файлам с любого устройства"
+        "id": 1,
+        "text": "Access your files from any device",
+        "spanishText": "Accede a tus archivos desde cualquier dispositivo",
+        "russianText": "Доступ к вашим файлам с любого устройства",
+        "italianText": "Accedi ai tuoi file da qualsiasi dispositivo",
+        "germanText": "Greifen Sie von jedem Gerät auf Ihre Dateien zu",
+        "frenchText": "Accédez à vos fichiers depuis n'importe quel appareil",
+        "zhText": "從任何設備訪問您的文件",
+        "zhTWText": "從任何設備訪問您的文件"
     },
     {
-      "id": 2,
-      "text": "Get access to all our services",
-      "spanishText": "Obten acceso a todos nuestros servicios",
-      "russianText": "Получите доступ ко всем нашим услугам"
+        "id": 2,
+        "text": "Get access to all our services",
+        "spanishText": "Obten acceso a todos nuestros servicios",
+        "russianText": "Получите доступ ко всем нашим услугам",
+        "italianText": "Accedi a tutti i nostri servizi",
+        "germanText": "Erhalten Sie Zugriff auf alle unsere Dienstleistungen",
+        "frenchText": "Accédez à tous nos services",
+        "zhText": "獲得我們所有服務的訪問權限",
+        "zhTWText": "獲得我們所有服務的訪問權限"
     },
     {
-      "id": 3,
-      "text": "No unauthorized data access",
-      "spanishText": "Sin acceso no autorizado a los datos",
-      "russianText": "Нет несанкционированного доступа к данным"
+        "id": 3,
+        "text": "No unauthorized data access",
+        "spanishText": "Sin acceso no autorizado a los datos",
+        "russianText": "Нет несанкционированного доступа к данным",
+        "italianText": "Nessun accesso non autorizzato ai dati",
+        "germanText": "Kein unbefugter Datenzugriff",
+        "frenchText": "Pas d'accès non autorisé aux données",
+        "zhText": "沒有未經授權的數據訪問",
+        "zhTWText": "沒有未經授權的數據訪問"
     }
-
-
   ];
-
+  const getTextByLanguage = (feature, lang) => {
+    const key = langMapping[lang] || 'text';
+    return feature[key];
+  };
   return (
     <section className="relative flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
@@ -71,7 +102,7 @@ const HeroSection = ({ textContent, lang }) => {
           <div key={index} className={`flex max-w-[230px] min-h-[150px] flex-col items-center  space-y-4 text-center text-white`}>
             <CircleWavyCheck size={40} weight="fill" className="text-primary" />
             <p className="text-xl font-semibold ">
-              {lang === 'es' ? feature.spanishText : lang === 'ru' ? feature.russianText : feature.text}
+             {getTextByLanguage(feature, lang)}
             </p>
 
           </div>
