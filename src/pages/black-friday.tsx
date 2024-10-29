@@ -5,15 +5,14 @@ import HeroSection from '@/components/black-friday/HeroSection';
 
 import SuiteSection from '@/components/black-friday/SuiteSection';
 import CtaSection from '@/components/black-friday/CtaSection';
-import FeatureSection from '@/components/black-friday/FeatureSection';
 import PlatformSection from '@/components/black-friday/PlatformSection';
 import TestimonialsSection from '@/components/black-friday/TestimonialsSection';
 import FaqSection from '@/components/black-friday/FAQSection';
 import BestStorageSection from '@/components/black-friday/BestStorageSection';
-import LoginBFBanner from '@/components/banners/LoginBFBanner';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { ClockClockwise, CloudCheck, Devices, Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import TopBanner from '@/components/banners/TopBanner';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
@@ -43,48 +42,53 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
   ];
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-      <Navbar
-        lang={lang}
-        darkMode={true}
-        isBlackfriday={true}
-        textContent={navbarLang}
-        cta={['Hide Login']}
-        isLinksHidden
-      />
+      <TopBanner />
+      <div className="flex flex-col overflow-hidden pt-[64px] md:pt-[54px]">
+        <Navbar
+                lang={lang}
+                darkMode={true}
+                isBlackfriday={true}
+                textContent={navbarLang}
+                cta={['Hide Login']}
+                isLinksHidden
+                
+              />
 
 
-      <HeroSection lang={lang} textContent={langJson.blackFriday} />
+              <HeroSection lang={lang} textContent={langJson.blackFriday} />
 
-      <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
+              <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
 
-      <SuiteSection lang={lang} textContent={langJson.blackFriday} />
+              <SuiteSection lang={lang} textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta} lang={lang} />
+              <CtaSection textContent={langJson.cta} lang={lang} />
 
 
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-white">{langJson.blackFriday.FeatureSection.title}</p>
-            <p className="text-xl font-regular text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
-          </div>
-        }
-        cards={groupCards}
-        background='bg-highlight'
-        backgroundColorForCard='bg-gray-100'
-        textCardColor='text-white'
-      />
+              <TextAndCardsGroupColumnSection
+                TextComponent={
+                  <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+                    <p className="text-5xl font-semibold text-white">{langJson.blackFriday.FeatureSection.title}</p>
+                    <p className="text-xl font-regular text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
+                  </div>
+                }
+                cards={groupCards}
+                background='bg-highlight'
+                backgroundColorForCard='bg-gray-100'
+                textCardColor='text-white'
+              />
 
-     
-      <PlatformSection textContent={langJson.blackFriday}  />
+            
+              <PlatformSection textContent={langJson.blackFriday}  />
 
-      <TestimonialsSection textContent={langJson.blackFriday.TestimonialsSection} bgColor='bg-highlight'  />
+              <TestimonialsSection textContent={langJson.blackFriday.TestimonialsSection} bgColor='bg-highlight'  />
+              
+              <CtaSection textContent={langJson.cta2} lang={lang} />
+
+              <FaqSection textContent={langJson.blackFriday}  />
+
+              <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor='bg-highlight' textColor='text-gray-50' logoColor='white' />
+      </div>
       
-      <CtaSection textContent={langJson.cta2} lang={lang} />
-
-      <FaqSection textContent={langJson.blackFriday}  />
-
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor='bg-highlight' textColor='text-gray-50' logoColor='white' />
     </Layout>
   );
 };
