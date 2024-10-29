@@ -92,7 +92,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
 export async function getServerSideProps(ctx) {
   const language = ctx.locale;
 
-  const allowedLanguages = ['en', 'fr'];
+  const allowedLanguages = ['en', 'es', 'ru'];
 
   const lang = allowedLanguages.includes(language) ? language : 'en';
 

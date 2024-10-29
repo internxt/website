@@ -2,77 +2,76 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Black Friday",
-        "line2": "is coming soon!"
+        "line1": "黑色星期五",
+        "line2": "即將來臨！"
       },
-      "description": "Get privacy for a great price!",
-
+      "description": "以超值價格獲得隱私！",
       "pricingTable": {
-        "only": "Only",
+        "only": "僅",
         "priceNow": "3.59",
-        "month": "/mo",
+        "month": "/月",
         "priceBefore": "8.99",
         "footer": {
-          "line1": "Encrypted file storage and sharing",
-          "line2": "Access your files from any device",
-          "line3": "Get access to all our services"
+          "line1": "加密文件儲存與分享",
+          "line2": "隨時隨地訪問您的文件",
+          "line3": "獲得所有服務的訪問權限"
         }
       },
       "timer": {
-        "timeTitle": "Black Friday deal will expire in:",
-        "days": "days",
-        "hours": "hours",
-        "minutes": "minutes",
-        "seconds": "seconds"
+        "timeTitle": "黑色星期五優惠將於以下時間到期：",
+        "days": "天",
+        "hours": "小時",
+        "minutes": "分鐘",
+        "seconds": "秒"
       }
     },
     "BestStorage": {
-      "title": "The best cloud storage Black Friday deal",
-      "subtitle": "Internxt's discount on privacy and peace of mind will be back next year!"
+      "title": "最佳雲端儲存黑色星期五優惠",
+      "subtitle": "Internxt 的隱私與安心折扣明年將會回歸！"
     },
     "SuiteSection": {
-      "title": "Get more for less: secure cloud storage plans at unbeatable prices!",
-      "subtitle": "Take back control of your data with Internxt, get total online privacy, and protect yourself, your business, or your family from cyberattacks and companies profiting from your data. ",
+      "title": "以更少的價格獲得更多：安全的雲端儲存計劃，價格無法比擬！",
+      "subtitle": "透過 Internxt 重新掌控您的數據，獲得全面的線上隱私，並保護自己、您的企業或您的家人免受網路攻擊和公司從您的數據中獲利。",
       "drive": {
-        "title": "Internxt Drive",
-        "subtitle": "Upload, store, and share your files in total privacy with our encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration.",
-        "cta": "Secure with Drive"
+        "title": "Internxt 驅動",
+        "subtitle": "使用我們的加密雲服務以完全隱私上傳、儲存和分享您的文件。備份和同步您的文件以防止數據丟失並確保順利合作。",
+        "cta": "使用驅動保護"
       },
       "photos": {
-        "title": "Internxt for Business",
-        "subtitle": "Everything you need to manage your business securely. Secure file sharing, storage allocation, and session management features ensure that Internxt meets all your business needs.",
-        "cta": "Get Internxt for Business"
+        "title": "Internxt 企業版",
+        "subtitle": "滿足您企業安全管理所需的一切。安全的文件分享、儲存分配和會話管理功能確保 Internxt 滿足您所有的商業需求。",
+        "cta": "獲得 Internxt 企業版"
       },
       "send": {
-        "title": "Internxt for Families",
-        "subtitle": "Complete peace of mind for your family. Securely store, share, and manage your best memories from one single, encrypted cloud platform. ",
-        "cta": "Get Internxt for Family"
+        "title": "Internxt 家庭版",
+        "subtitle": "為您的家人提供全面的安心。安全地儲存、分享和管理您最珍貴的回憶，從一個單一的加密雲平台中獲得。",
+        "cta": "獲得 Internxt 家庭版"
       }
     },
     "FeatureSection": {
-      "title": "Why choose Internxt?",
-      "subtitle": "We build all our products with privacy in mind. We don’t run our business on data or advertising; we build it on trust. Our encrypted technology protects your files and ensures you keep your fundamental right to privacy. ",
+      "title": "為什麼選擇 Internxt？",
+      "subtitle": "我們所有的產品都是以隱私為核心來構建的。我們不以數據或廣告為業務基礎，而是建立在信任之上。我們的加密技術保護您的文件，確保您保持基本的隱私權。",
       "feature1": {
-        "title": "Unhackable and unleakable data",
-        "subtitle1": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "無法駭入且不會洩露的數據",
+        "subtitle1": "我們不儲存密碼或用戶數據，您所有的數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據就是您的事業，保護它是我們的責任。"
       },
       "feature2": {
-        "title": "Uncompromising security",
-        "subtitle1": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "無妥協的安全性",
+        "subtitle1": "您的文件在離開設備之前就已進行端對端加密。憑藉零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
       },
       "feature3": {
-        "title": "Open source and transparent",
-        "subtitle1": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "開源和透明",
+        "subtitle1": "我們為自己所做的感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們沒有任何隱瞞，只有您的數據。"
       },
       "feature4": {
-        "title": "Independently verified",
-        "subtitle1": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "經獨立驗證",
+        "subtitle1": "我們完全符合 GDPR 規範且 100% 安全，但不要僅僅相信我們的話。Internxt 已經經過歐洲領先的滲透測試公司 Securitum 獨立審計和驗證。"
       }
     },
     "PlatformSection": {
-      "title": "Access your files anywhere, anytime",
-      "subtitle": "Internxt is available on all platforms, meaning your files are just a click away!",
-      "web": "Web",
+      "title": "隨時隨地訪問您的文件",
+      "subtitle": "Internxt 可在所有平台上使用，意味著您的文件隨時都在您指尖！",
+      "web": "網頁",
       "linux": "Linux",
       "windows": "Windows",
       "mac": "MacOS",
@@ -80,91 +79,91 @@
       "iOS": "iOS"
     },
     "TestimonialsSection": {
-      "title": "What our users are saying about us",
+      "title": "我們的用戶對我們的評價",
       "cards": [
-      {
-        "name": "Eva Williams",
-        "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
-      },
-      {
-        "name": "Cristian M.",
-        "enterprise": "Review from GetApp",
-        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
-      },
-      {
-        "name": "Josep Carrizo",
-        "enterprise": "Review from Trustpilot",
-        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
-      }
+        {
+          "name": "Eva Williams",
+          "enterprise": "FixThePhoto.com 的記者",
+          "review": "Internxt 是一個便捷的雲端儲存服務，適合重視隱私的客戶。它擁有流暢的介面和可靠的支持團隊，是需要安全儲存文件的絕佳選擇。"
+        },
+        {
+          "name": "Cristian M.",
+          "enterprise": "來自 GetApp 的評價",
+          "review": "最好的加密 Dropbox 替代品。總體而言：我們需要一個可以儲存客戶文件和工作的替代方案（社交媒體文件），而且因為 Internxt 符合 GDPR，因此完美適合我們！"
+        },
+        {
+          "name": "Josep Carrizo",
+          "enterprise": "來自 Trustpilot 的評價",
+          "review": "我使用 Google Drive 已經幾年了，但我需要一個可以保障我數據隱私的替代方案。這是 Google 或其他知名平台無法做到的。因此，我轉向了 Internxt。"
+        }
       ]
     },
     "faq": {
-      "title": "Questions? We have answers",
+      "title": "有問題嗎？我們有答案",
       "faq": [
         {
-          "question": "How can I get the Black Friday discount?",
+          "question": "我如何獲得黑色星期五折扣？",
           "answer": [
-            "To take advantage of our Black Friday discount, you must click one of the “Get the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan."
+            "要享受我們的黑色星期五折扣，您必須點擊本頁面上的「獲取優惠」按鈕之一，然後您將直接跳轉到結帳頁面，折扣已經應用於您的新 2TB Internxt 計劃。"
           ]
         },
         {
-          "question": "When does the promotion end?",
-          "answer": ["Our Black Friday Sale runs from November 21st until December 5th, 2022."]
+          "question": "促銷活動什麼時候結束？",
+          "answer": ["我們的黑色星期五促銷活動將從 11 月 21 日持續到 2022 年 12 月 5 日。"]
         },
         {
-          "question": "Who is eligible for this discount?",
+          "question": "誰有資格獲得這個折扣？",
           "answer": [
-            "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
+            "新用戶或任何擁有 Internxt 免費、20GB 或 200GB 訂閱計劃的人均可參加我們的黑色星期五促銷活動。"
           ]
         },
         {
-          "question": "Will I keep the discount when my plan ends?",
+          "question": "當我的計劃結束時，我會保留折扣嗎？",
           "answer": [
-            "The discount is applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year.",
-            "If you choose to continue your existing subscription using the deal, your account will be charged at the standard 2TB plan price for the following year."
+            "該折扣適用於第一個完整的服務年度。因此，您將以折扣價格獲得我們 2TB 訂閱計劃的服務，僅限一年。",
+            "如果您選擇在使用優惠後繼續現有訂閱，您的帳戶將在下一年按標準 2TB 計劃價格收費。"
           ]
         },
         {
-          "question": "What payment methods does Internxt accept?",
+          "question": "Internxt 接受哪些付款方式？",
           "answer": [
-            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
+            "我們目前接受信用卡和借記卡（Mastercard、VISA、美國運通等）付款。您還可以通過 Apple 和 Google Pay、Cartes Banaires、Alipay、Wechat Pay、Bancontact、EPS、GiroPay、iDEAL、Przelewy24、Sofort、Blik、Klarna、Afterpay、SEPA 直接借記付款。"
           ]
         },
         {
-          "question": "Do you offer any discounts for nonprofits or students?",
+          "question": "你們是否為非營利組織或學生提供折扣？",
           "answer": [
-            "Yes, you can get 50% off any Internxt subscription plan if you are a member of a nonprofit organization or NGO. Contact us at [hello@internxt.com](mailto:hello@internxt.com) with your organization's credentials so that we can verify your eligibility and apply for your discount.",
-            "You can also get a 50% discount if you are a student. Request the discount and verify your eligibility by emailing us at [hello@internxt.com](mailto:hello@internxt.com) from your university email address."
+            "是的，如果您是非營利組織或 NGO 的成員，您可以享受任何 Internxt 訂閱計劃 50% 的折扣。請通過 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們，提供您組織的憑證，以便我們能夠驗證您的資格並為您應用折扣。",
+            "如果您是學生，您也可以獲得 50% 的折扣。請通過您大學的電子郵件地址發送電子郵件至 [hello@internxt.com](mailto:hello@internxt.com) 以申請折扣並驗證您的資格。"
           ]
         },
         {
-          "question": "Have more questions?",
+          "question": "有更多問題嗎？",
           "answer": [
-            "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+            "如果您有更多問題，請隨時聯繫我們 [hello@internxt.com](mailto:hello@internxt.com) 或在社交媒體上與我們打招呼。我們隨時樂意聆聽您的聲音！"
           ]
         }
       ]
     },
     "FooterSection": {
-      "title": "Stand with privacy. Choose Internxt!",
-      "subtitle": "Get a discount on privacy and peace of mind.",
-      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
-      "only": "Only",
+      "title": "支持隐私。选择Internxt！",
+      "subtitle": "享受隐私与安心的折扣。",
+      "subtitle1": "享受我们2TB最大方案全年60%的折扣！",
+      "only": "仅",
       "priceNow": "3.59",
-      "month": "/mo"
+      "month": "/月"
+    },
+    "cta": {
+      "title": "黑色星期五即将到来！",
+      "subtitle": "以超值价格获得隐私保障！",
+      "cta": "选择方案",
+      "guarantee": "30天退款保证"
+    },
+    "cta2": {
+      "title": "黑色星期五即将到来！",
+      "subtitle": "以实惠的价格获得隐私保障！",
+      "cta": "选择方案",
+      "guarantee": "30天退款保证"
     }
-  },
-  "cta": {
-    "title": "Black Friday is coming soon!",
-    "subtitle": "Get privacy for a great price!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
-  },
-  "cta2": {
-    "title": "Black Friday is coming soon!",
-    "subtitle": "Get affordable privacy!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
   }
 }

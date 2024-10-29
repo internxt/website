@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
-
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 const BestStorageSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
@@ -15,18 +16,14 @@ const BestStorageSection = ({ textContent, lang }) => {
         <div className="py-9">
           <ButtonDeal lang={lang} />
         </div>
-        <img
-          className="hidden md:flex lg:max-w-3xl"
-          src="/images/home/internxt_secure_cloud_storage.webp"
+        <Image
+          src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
           alt="Internxt secure cloud storage"
           draggable="false"
+          height={500}
+          width={500}
         />
-        <img
-          className="flex md:hidden"
-          src="/images/home/devicesMobileView.webp"
-          draggable="false"
-          alt="Laptop and phone with Internxt app"
-        />
+       
       </div>
       <div
         className={`absolute top-0 left-0 -z-10 flex h-full w-screen ${styles.radialGradient} pointer-events-none origin-center`}

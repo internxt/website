@@ -3,75 +3,74 @@
     "HeroSection": {
       "title": {
         "line1": "Black Friday",
-        "line2": "is coming soon!"
+        "line2": "sta arrivando!"
       },
-      "description": "Get privacy for a great price!",
-
+      "description": "Ottieni privacy a un prezzo incredibile!",
       "pricingTable": {
-        "only": "Only",
+        "only": "Solo",
         "priceNow": "3.59",
-        "month": "/mo",
+        "month": "/mese",
         "priceBefore": "8.99",
         "footer": {
-          "line1": "Encrypted file storage and sharing",
-          "line2": "Access your files from any device",
-          "line3": "Get access to all our services"
+          "line1": "Archiviazione e condivisione di file crittografati",
+          "line2": "Accedi ai tuoi file da qualsiasi dispositivo",
+          "line3": "Ottieni accesso a tutti i nostri servizi"
         }
       },
       "timer": {
-        "timeTitle": "Black Friday deal will expire in:",
-        "days": "days",
-        "hours": "hours",
-        "minutes": "minutes",
-        "seconds": "seconds"
+        "timeTitle": "L'offerta Black Friday scadrà tra:",
+        "days": "giorni",
+        "hours": "ore",
+        "minutes": "minuti",
+        "seconds": "secondi"
       }
     },
     "BestStorage": {
-      "title": "The best cloud storage Black Friday deal",
-      "subtitle": "Internxt's discount on privacy and peace of mind will be back next year!"
+      "title": "La migliore offerta di cloud storage per il Black Friday",
+      "subtitle": "Lo sconto di Internxt sulla privacy e la tranquillità tornerà l'anno prossimo!"
     },
     "SuiteSection": {
-      "title": "Get more for less: secure cloud storage plans at unbeatable prices!",
-      "subtitle": "Take back control of your data with Internxt, get total online privacy, and protect yourself, your business, or your family from cyberattacks and companies profiting from your data. ",
+      "title": "Ottieni di più per meno: piani di cloud storage sicuri a prezzi imbattibili!",
+      "subtitle": "Riprendi il controllo dei tuoi dati con Internxt, ottieni una totale privacy online e proteggi te stesso, la tua azienda o la tua famiglia da attacchi informatici e dalle aziende che sfruttano i tuoi dati.",
       "drive": {
         "title": "Internxt Drive",
-        "subtitle": "Upload, store, and share your files in total privacy with our encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration.",
-        "cta": "Secure with Drive"
+        "subtitle": "Carica, archivia e condividi i tuoi file in totale privacy con il nostro servizio cloud crittografato. Effettua backup e sincronizza i tuoi file per evitare la perdita di dati e garantire una collaborazione senza problemi.",
+        "cta": "Proteggi con Drive"
       },
       "photos": {
-        "title": "Internxt for Business",
-        "subtitle": "Everything you need to manage your business securely. Secure file sharing, storage allocation, and session management features ensure that Internxt meets all your business needs.",
-        "cta": "Get Internxt for Business"
+        "title": "Internxt per le aziende",
+        "subtitle": "Tutto ciò di cui hai bisogno per gestire la tua attività in modo sicuro. Condivisione di file sicura, allocazione dello spazio di archiviazione e gestione delle sessioni assicurano che Internxt soddisfi tutte le tue esigenze aziendali.",
+        "cta": "Ottieni Internxt per aziende"
       },
       "send": {
-        "title": "Internxt for Families",
-        "subtitle": "Complete peace of mind for your family. Securely store, share, and manage your best memories from one single, encrypted cloud platform. ",
-        "cta": "Get Internxt for Family"
+        "title": "Internxt per famiglie",
+        "subtitle": "Pace totale per la tua famiglia. Archivia, condividi e gestisci i tuoi ricordi migliori in un'unica piattaforma cloud crittografata.",
+        "cta": "Ottieni Internxt per famiglia"
       }
     },
     "FeatureSection": {
-      "title": "Why choose Internxt?",
-      "subtitle": "We build all our products with privacy in mind. We don’t run our business on data or advertising; we build it on trust. Our encrypted technology protects your files and ensures you keep your fundamental right to privacy. ",
+      "title": "Perché scegliere Internxt?",
+      "subtitle": "Costruiamo tutti i nostri prodotti pensando alla privacy. Non basiamo la nostra attività su dati o pubblicità; la costruiamo sulla fiducia. La nostra tecnologia crittografata protegge i tuoi file e garantisce il tuo diritto fondamentale alla privacy.",
       "feature1": {
-        "title": "Unhackable and unleakable data",
-        "subtitle1": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "Dati inaccessibili e privati",
+        "subtitle1": "Non conserviamo password o dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti dà il pieno controllo dei tuoi file. I tuoi dati sono affare tuo. Proteggerli è il nostro."
       },
       "feature2": {
-        "title": "Uncompromising security",
-        "subtitle1": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "Sicurezza senza compromessi",
+        "subtitle1": "I tuoi file sono crittografati end-to-end prima di lasciare il tuo dispositivo. Grazie alla crittografia AES-256 a conoscenza zero, sei l'unico ad avere accesso ai tuoi dati."
       },
       "feature3": {
-        "title": "Open source and transparent",
-        "subtitle1": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Open source e trasparente",
+        "subtitle1": "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere esaminato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere se non i tuoi dati."
       },
       "feature4": {
-        "title": "Independently verified",
-        "subtitle1": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "Verificato indipendentemente",
+        "subtitle1": "Siamo completamente conformi al GDPR e al 100% sicuri, ma non credere solo alle nostre parole. Internxt è stata verificata e testata indipendentemente dalla principale società di penetration testing europea, Securitum."
       }
     },
     "PlatformSection": {
-      "title": "Access your files anywhere, anytime",
-      "subtitle": "Internxt is available on all platforms, meaning your files are just a click away!",
+      "title": "Accedi ai tuoi file ovunque, in qualsiasi momento",
+      "subtitle": "Internxt è disponibile su tutte le piattaforme, quindi i tuoi file sono a portata di clic!",
       "web": "Web",
       "linux": "Linux",
       "windows": "Windows",
@@ -80,91 +79,91 @@
       "iOS": "iOS"
     },
     "TestimonialsSection": {
-      "title": "What our users are saying about us",
+      "title": "Cosa dicono di noi i nostri utenti",
       "cards": [
-      {
-        "name": "Eva Williams",
-        "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
-      },
-      {
-        "name": "Cristian M.",
-        "enterprise": "Review from GetApp",
-        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
-      },
-      {
-        "name": "Josep Carrizo",
-        "enterprise": "Review from Trustpilot",
-        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
-      }
-      ]
-    },
-    "faq": {
-      "title": "Questions? We have answers",
-      "faq": [
         {
-          "question": "How can I get the Black Friday discount?",
-          "answer": [
-            "To take advantage of our Black Friday discount, you must click one of the “Get the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan."
-          ]
+          "name": "Eva Williams",
+          "enterprise": "Giornalista per FixThePhoto.com",
+          "review": "Internxt è un servizio di cloud storage conveniente per i clienti attenti alla privacy. Ha un'interfaccia semplificata e un team di supporto affidabile, che lo rendono una buona opzione per chi ha bisogno di archiviare i propri file in modo sicuro."
         },
         {
-          "question": "When does the promotion end?",
-          "answer": ["Our Black Friday Sale runs from November 21st until December 5th, 2022."]
+          "name": "Cristian M.",
+          "enterprise": "Recensione su GetApp",
+          "review": "La migliore alternativa crittografata a Dropbox. Complessivamente: Avevamo bisogno di un'alternativa che ci permettesse di archiviare i file dei clienti e il lavoro (file per i social media) e, poiché Internxt è conforme al GDPR, si è rivelata perfetta per noi!"
         },
         {
-          "question": "Who is eligible for this discount?",
-          "answer": [
-            "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
-          ]
-        },
-        {
-          "question": "Will I keep the discount when my plan ends?",
-          "answer": [
-            "The discount is applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year.",
-            "If you choose to continue your existing subscription using the deal, your account will be charged at the standard 2TB plan price for the following year."
-          ]
-        },
-        {
-          "question": "What payment methods does Internxt accept?",
-          "answer": [
-            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
-          ]
-        },
-        {
-          "question": "Do you offer any discounts for nonprofits or students?",
-          "answer": [
-            "Yes, you can get 50% off any Internxt subscription plan if you are a member of a nonprofit organization or NGO. Contact us at [hello@internxt.com](mailto:hello@internxt.com) with your organization's credentials so that we can verify your eligibility and apply for your discount.",
-            "You can also get a 50% discount if you are a student. Request the discount and verify your eligibility by emailing us at [hello@internxt.com](mailto:hello@internxt.com) from your university email address."
-          ]
-        },
-        {
-          "question": "Have more questions?",
-          "answer": [
-            "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
-          ]
+          "name": "Josep Carrizo",
+          "enterprise": "Recensione su Trustpilot",
+          "review": "Ho usato Google Drive per diversi anni, ma avevo bisogno di un'alternativa che garantisse la privacy dei miei dati. Qualcosa che Google o altre piattaforme ben note non possono fare. Ecco perché sono passato a Internxt."
         }
       ]
     },
-    "FooterSection": {
-      "title": "Stand with privacy. Choose Internxt!",
-      "subtitle": "Get a discount on privacy and peace of mind.",
-      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
-      "only": "Only",
-      "priceNow": "3.59",
-      "month": "/mo"
+    "faq": {
+      "title": "Domande? Abbiamo risposte",
+      "faq": [
+        {
+          "question": "Come posso ottenere lo sconto del Black Friday?",
+          "answer": [
+            "Per usufruire dello sconto Black Friday, devi cliccare su uno dei pulsanti “Ottieni l’offerta” presenti su questa pagina e verrai reindirizzato direttamente al checkout con lo sconto già applicato al tuo nuovo piano Internxt da 2TB."
+          ]
+        },
+        {
+          "question": "Quando termina la promozione?",
+          "answer": ["La nostra vendita di Black Friday va dal 21 novembre al 5 dicembre 2022."]
+        },
+        {
+          "question": "Chi è idoneo a questo sconto?",
+          "answer": [
+            "I nuovi utenti o chiunque abbia un piano di abbonamento Internxt gratuito, da 20GB o da 200GB può partecipare alla nostra vendita di Black Friday."
+          ]
+        },
+        {
+          "question": "Manterrò lo sconto alla fine del mio piano?",
+          "answer": [
+            "Lo sconto viene applicato per il primo anno di servizio completo. Pertanto, avrai accesso al nostro piano di abbonamento da 2TB a questo prezzo scontato solo per un anno.",
+            "Se scegli di continuare il tuo abbonamento utilizzando l'offerta, il tuo account verrà addebitato al prezzo standard del piano 2TB per l'anno successivo."
+          ]
+        },
+        {
+          "question": "Quali metodi di pagamento accetta Internxt?",
+          "answer": [
+            "Accettiamo attualmente pagamenti tramite carte di credito e debito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite Apple e Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
+          ]
+        },
+        {
+          "question": "Offrite sconti per le organizzazioni non profit o gli studenti?",
+          "answer": [
+            "Sì, puoi ottenere il 50% di sconto su qualsiasi piano di abbonamento Internxt se fai parte di un'organizzazione senza scopo di lucro o ONG. Contattaci all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) con le credenziali della tua organizzazione, così possiamo verificare la tua idoneità e applicare il tuo sconto.",
+            "Puoi anche ottenere uno sconto del 50% se sei uno studente. Richiedi lo sconto e verifica la tua idoneità inviandoci una email all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) dal tuo indirizzo email universitario."
+          ]
+        },
+        {
+          "question": "Hai altre domande?",
+          "answer": [
+            "Se hai altre domande, non esitare a contattarci all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) o salutaci sui social media. Siamo sempre lieti di sentirti!"
+          ]
+        }
+      ]
     }
   },
+  "FooterSection": {
+    "title": "Sostieni la privacy. Scegli Internxt!",
+    "subtitle": "Ottieni uno sconto su privacy e tranquillità.",
+    "subtitle1": "Ottieni il 60% di sconto per un anno intero sul nostro piano più grande da 2TB!",
+    "only": "Solo",
+    "priceNow": "3.59",
+    "month": "/mese"
+  },
   "cta": {
-    "title": "Black Friday is coming soon!",
-    "subtitle": "Get privacy for a great price!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
+    "title": "Il Black Friday sta arrivando!",
+    "subtitle": "Ottieni privacy a un prezzo incredibile!",
+    "cta": "Scegli il piano",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
   },
   "cta2": {
-    "title": "Black Friday is coming soon!",
-    "subtitle": "Get affordable privacy!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
+    "title": "Il Black Friday sta arrivando!",
+    "subtitle": "Ottieni privacy a un prezzo accessibile!",
+    "cta": "Scegli il piano",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
   }
 }

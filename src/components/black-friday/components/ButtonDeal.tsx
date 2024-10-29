@@ -9,7 +9,8 @@ const ButtonDeal = ({ lang }) => {
           window.location.href = '/pricing';
         }}
       >
-        {lang === 'fr' ? "Voir plans d'abonnement" : 'Choose a plan'}
+        {lang === 'es' ? "Elige un plan" : lang === 'ru' ? "Выбрать план" : 'Choose a plan'}
+
       </button>
     </>
   );

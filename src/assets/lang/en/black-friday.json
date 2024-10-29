@@ -36,17 +36,21 @@
       "drive": {
         "title": "Internxt Drive",
         "subtitle": "Upload, store, and share your files in total privacy with our encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration.",
-        "cta": "Secure with Drive"
+        "cta": "Secure with Drive",
+        "image": "drive"
+        
       },
       "photos": {
         "title": "Internxt for Business",
         "subtitle": "Everything you need to manage your business securely. Secure file sharing, storage allocation, and session management features ensure that Internxt meets all your business needs.",
-        "cta": "Get Internxt for Business"
+        "cta": "Get Internxt for Business",
+        "image": "business"
       },
       "send": {
         "title": "Internxt for Families",
         "subtitle": "Complete peace of mind for your family. Securely store, share, and manage your best memories from one single, encrypted cloud platform. ",
-        "cta": "Get Internxt for Family"
+        "cta": "Get Internxt for Family",
+        "image": "family"
       }
     },
     "FeatureSection": {

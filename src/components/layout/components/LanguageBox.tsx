@@ -64,11 +64,19 @@ export default function LanguageBox({ darkMode, isBlackFriday }) {
               </Link>
               <Link
                 href={router.pathname}
-                locale="fr"
+                locale="es"
                 className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
-                onClick={() => changeLang('fr')}
+                onClick={() => changeLang('es')}
               >
-                {currentLang.fr}
+                {currentLang.es}
+              </Link>
+              <Link
+                href={router.pathname}
+                locale="ru"
+                className={`flex flex-row justify-start rounded-lg py-2 px-4 text-base font-medium text-cool-gray-80  hover:bg-gray-1`}
+                onClick={() => changeLang('ru')}
+              >
+                {currentLang.ru}
               </Link>
             </>
           ) : (

@@ -9,25 +9,31 @@ import Image from 'next/image';
 const HeroSection = ({ textContent, lang }) => {
   const features = [
     {
-      id: 0,
-      text: 'Encrypted file storage and sharing',
-      frenchText: 'Stockage et partage de fichiers cryptés',
+      "id": 0,
+      "text": "Encrypted file storage and sharing",
+      "spanishText": "Almacenamiento y compartición de archivos encriptados",
+      "russianText": "Зашифрованное хранилище и обмен файлами",
     },
     {
-      id: 1,
-      text: 'Access your files from any device',
-      frenchText: 'Accédez à vos fichiers depuis tous vos appareils',
+      "id": 1,
+      "text": "Access your files from any device",
+      "spanishText": "Accede a tus archivos desde cualquier dispositivo",
+      "russianText": "Доступ к вашим файлам с любого устройства"
     },
     {
-      id: 2,
-      text: 'Get access to all our services',
-      frenchText: 'Accédez à tous nos services',
+      "id": 2,
+      "text": "Get access to all our services",
+      "spanishText": "Obten acceso a todos nuestros servicios",
+      "russianText": "Получите доступ ко всем нашим услугам"
     },
     {
-      id: 3,
-      text: 'No unauthorized data access',
-      frenchText: 'Aucun accès non autorisé aux données',
-    },
+      "id": 3,
+      "text": "No unauthorized data access",
+      "spanishText": "Sin acceso no autorizado a los datos",
+      "russianText": "Нет несанкционированного доступа к данным"
+    }
+
+
   ];
 
   return (
@@ -62,9 +68,12 @@ const HeroSection = ({ textContent, lang }) => {
 
       <div className="sm:gap-x-30 flex flex-row flex-wrap items-center bg-highlight justify-center gap-x-20 gap-y-10 py-14">
         {features.map((feature, index) => (
-          <div key={index} className={`flex max-w-[230px] flex-col items-center justify-center space-y-4 text-center text-white`}>
+          <div key={index} className={`flex max-w-[230px] min-h-[150px] flex-col items-center  space-y-4 text-center text-white`}>
             <CircleWavyCheck size={40} weight="fill" className="text-primary" />
-            <p className="text-xl font-semibold ">{lang === 'fr' ? feature.frenchText : feature.text}</p>
+            <p className="text-xl font-semibold ">
+              {lang === 'es' ? feature.spanishText : lang === 'ru' ? feature.russianText : feature.text}
+            </p>
+
           </div>
         ))}
       </div>
