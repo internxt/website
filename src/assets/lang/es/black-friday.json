@@ -37,19 +37,22 @@
             "title": "Internxt Drive",
             "subtitle": "Sube, almacena y comparte tus archivos en total privacidad con nuestro servicio de nube encriptada. Realiza copias de seguridad y sincroniza tus archivos para evitar la pérdida de datos y asegurar una colaboración fluida.",
             "cta": "Asegura con Drive",
-            "image": "drive"
+            "image": "drive",
+            "alt": "Internxt Drive"
         },
         "photos": {
             "title": "Internxt para Negocios",
             "subtitle": "Todo lo que necesitas para gestionar tu negocio de forma segura. Compartición de archivos segura, asignación de almacenamiento y características de gestión de sesiones aseguran que Internxt cubra todas tus necesidades empresariales.",
             "cta": "Obtén Internxt para Negocios",
-            "image": "business"
+            "image": "business",
+            "alt": "Internxt para Negocios"
         },
         "send": {
             "title": "Internxt para Familias",
             "subtitle": "Total tranquilidad para tu familia. Almacena, comparte y gestiona de forma segura tus mejores recuerdos desde una única plataforma de nube encriptada.",
             "cta": "Obtén Internxt para Familia",
-            "image": "family"
+            "image": "family",
+            "alt": "Internxt para Familias"
         }
     },
     "FeatureSection": {

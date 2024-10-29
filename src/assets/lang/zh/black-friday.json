@@ -35,17 +35,23 @@
       "drive": {
         "title": "Internxt 驅動",
         "subtitle": "使用我們的加密雲服務以完全隱私上傳、儲存和分享您的文件。備份和同步您的文件以防止數據丟失並確保順利合作。",
-        "cta": "使用驅動保護"
+        "cta": "使用驅動保護",
+        "image": "drive",
+        "alt": "Internxt 驅動"
       },
       "photos": {
         "title": "Internxt 企業版",
         "subtitle": "滿足您企業安全管理所需的一切。安全的文件分享、儲存分配和會話管理功能確保 Internxt 滿足您所有的商業需求。",
-        "cta": "獲得 Internxt 企業版"
+        "cta": "獲得 Internxt 企業版",
+        "image": "business",
+        "alt": "Internxt 企業版"
       },
       "send": {
         "title": "Internxt 家庭版",
         "subtitle": "為您的家人提供全面的安心。安全地儲存、分享和管理您最珍貴的回憶，從一個單一的加密雲平台中獲得。",
-        "cta": "獲得 Internxt 家庭版"
+        "cta": "獲得 Internxt 家庭版",
+        "image": "family",
+        "alt": "Internxt 家庭版"
       }
     },
     "FeatureSection": {
@@ -144,8 +150,9 @@
           ]
         }
       ]
-    },
-    "FooterSection": {
+    }
+  },
+  "FooterSection": {
       "title": "支持隐私。选择Internxt！",
       "subtitle": "享受隐私与安心的折扣。",
       "subtitle1": "享受我们2TB最大方案全年60%的折扣！",
@@ -165,5 +172,4 @@
       "cta": "选择方案",
       "guarantee": "30天退款保证"
     }
-  }
 }

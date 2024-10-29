@@ -35,17 +35,23 @@
       "drive": {
         "title": "Internxt Drive",
         "subtitle": "Téléchargez, stockez et partagez vos fichiers en toute confidentialité avec notre service de cloud chiffré. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et assurer une collaboration fluide.",
-        "cta": "Sécuriser avec Drive"
+        "cta": "Sécuriser avec Drive",
+        "image": "drive",
+        "alt": "Internxt Drive"
       },
       "photos": {
         "title": "Internxt pour Entreprises",
         "subtitle": "Tout ce dont vous avez besoin pour gérer votre entreprise en toute sécurité. Partage de fichiers sécurisé, allocation de stockage et gestion de sessions assurent qu'Internxt répond à tous vos besoins professionnels.",
-        "cta": "Obtenez Internxt pour Entreprises"
+        "cta": "Obtenez Internxt pour Entreprises",
+        "image": "business",
+        "alt": "Internxt pour Entreprises"
       },
       "send": {
         "title": "Internxt pour Familles",
         "subtitle": "Tranquillité d'esprit totale pour votre famille. Stockez, partagez et gérez vos souvenirs les plus précieux depuis une seule plateforme cloud chiffrée.",
-        "cta": "Obtenez Internxt pour Familles"
+        "cta": "Obtenez Internxt pour Familles",
+        "image": "family",
+        "alt": "Internxt pour Familles"
       }
     },
     "FeatureSection": {
@@ -144,8 +150,9 @@
           ]
         }
       ]
-    },
-    "FooterSection": {
+    }
+  },
+  "FooterSection": {
       "title": "Soutenez la confidentialité. Choisissez Internxt!",
       "subtitle": "Obtenez une remise sur la tranquillité d'esprit et la confidentialité.",
       "subtitle1": "Obtenez 60% de réduction sur un an entier de notre plus grand plan de 2TB!",
@@ -165,5 +172,4 @@
       "cta": "Choisir le plan",
       "guarantee": "Garantie de remboursement de 30 jours"
     }
-  }
 }

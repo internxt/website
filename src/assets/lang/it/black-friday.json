@@ -35,17 +35,23 @@
       "drive": {
         "title": "Internxt Drive",
         "subtitle": "Carica, archivia e condividi i tuoi file in totale privacy con il nostro servizio cloud crittografato. Effettua backup e sincronizza i tuoi file per evitare la perdita di dati e garantire una collaborazione senza problemi.",
-        "cta": "Proteggi con Drive"
+        "cta": "Proteggi con Drive",
+        "image": "drive",
+        "alt": "Internxt Drive"
       },
       "photos": {
         "title": "Internxt per le aziende",
         "subtitle": "Tutto ciò di cui hai bisogno per gestire la tua attività in modo sicuro. Condivisione di file sicura, allocazione dello spazio di archiviazione e gestione delle sessioni assicurano che Internxt soddisfi tutte le tue esigenze aziendali.",
-        "cta": "Ottieni Internxt per aziende"
+        "cta": "Ottieni Internxt per aziende",
+        "image": "business",
+        "alt": "Internxt per aziende"
       },
       "send": {
         "title": "Internxt per famiglie",
         "subtitle": "Pace totale per la tua famiglia. Archivia, condividi e gestisci i tuoi ricordi migliori in un'unica piattaforma cloud crittografata.",
-        "cta": "Ottieni Internxt per famiglia"
+        "cta": "Ottieni Internxt per famiglia",
+        "image": "family",
+        "alt": "Internxt per famiglie"
       }
     },
     "FeatureSection": {

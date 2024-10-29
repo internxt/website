@@ -35,17 +35,23 @@
       "drive": {
         "title": "Internxt Drive",
         "subtitle": "Laden Sie Ihre Dateien hoch, speichern und teilen Sie sie in absoluter Privatsphäre mit unserem verschlüsselten Cloud-Dienst. Sichern und synchronisieren Sie Ihre Dateien, um Datenverluste zu vermeiden und eine reibungslose Zusammenarbeit zu gewährleisten.",
-        "cta": "Sichern mit Drive"
+        "cta": "Sichern mit Drive",
+        "image": "drive",
+        "alt": "Internxt Drive"
       },
       "photos": {
         "title": "Internxt für Unternehmen",
         "subtitle": "Alles, was Sie brauchen, um Ihr Unternehmen sicher zu verwalten. Sichere Dateifreigabe, Speicherzuweisung und Sitzungsmanagement sorgen dafür, dass Internxt all Ihren geschäftlichen Anforderungen gerecht wird.",
-        "cta": "Internxt für Unternehmen erhalten"
+        "cta": "Internxt für Unternehmen erhalten",
+        "image": "business",
+        "alt": "Internxt für Unternehmen"
       },
       "send": {
         "title": "Internxt für Familien",
         "subtitle": "Komplette Seelenruhe für Ihre Familie. Speichern, teilen und verwalten Sie Ihre wertvollsten Erinnerungen auf einer einzigen, verschlüsselten Cloud-Plattform.",
-        "cta": "Internxt für Familien erhalten"
+        "cta": "Internxt für Familien erhalten",
+        "image": "family",
+        "alt": "Internxt für Familien"
       }
     },
     "FeatureSection": {
