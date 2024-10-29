@@ -84,7 +84,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
 
       <FaqSection textContent={langJson.blackFriday}  />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor='bg-highlight' />
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor='bg-highlight' textColor='text-gray-50' logoColor='white' />
     </Layout>
   );
 };
