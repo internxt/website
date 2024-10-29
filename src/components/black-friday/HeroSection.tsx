@@ -7,12 +7,12 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent, lang }) => {
-const features = [
-  textContent.HeroSection.feature1,
-  textContent.HeroSection.feature2,
-  textContent.HeroSection.feature3,
-  textContent.HeroSection.feature4,
-];
+  const features = [
+    textContent.HeroSection.feature1,
+    textContent.HeroSection.feature2,
+    textContent.HeroSection.feature3,
+    textContent.HeroSection.feature4,
+  ];
   return (
     <section className="relative flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">

@@ -53,7 +53,6 @@ export default function LanguageBox({ darkMode }) {
 
         <div className="relative grid gap-0 whitespace-nowrap lg:grid-cols-1">
          
-           <>
             <Link
               href={router.pathname}
               locale="en"
@@ -118,7 +117,6 @@ export default function LanguageBox({ darkMode }) {
             >
               {currentLang['zh-tw']}
             </Link>
-          </>
 
         </div>
       </div>

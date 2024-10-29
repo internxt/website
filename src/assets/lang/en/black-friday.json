@@ -25,10 +25,13 @@
         "minutes": "minutes",
         "seconds": "seconds"
       },
-      "feature1":"Encrypted file storage and sharing",
-      "feature2":"Access your files from any device",
-      "feature3":"Get access to all our services",
-      "feature4":"No unauthorized data access"
+      "features":{
+        "feature1":"Encrypted file storage and sharing",
+        "feature2":"Access your files from any device",
+        "feature3":"Get access to all our services",
+        "feature4":"No unauthorized data access"
+      }
+      
     },
     "BestStorage": {
       "title": "The best cloud storage Black Friday deal",

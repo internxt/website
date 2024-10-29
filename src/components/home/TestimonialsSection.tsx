@@ -26,10 +26,10 @@ const AvatarAndText = ({ testimonial,textColor }: TestimonialProps): JSX.Element
       <Image src={testimonial.testimonialImage} width={40} height={40} alt="FixThePhoto Avatar" />
     </div>
     <div className="flex flex-col">
-      <p className={`text-xl font-semibold ${textColor ? textColor : 'text-gray-100'}`}>
+      <p className={`text-xl font-semibold ${textColor}`}>
       {testimonial.testimonialName}
     </p>
-    <p className={`text-lg ${textColor ? textColor : 'text-gray-60'}`}>
+    <p className={`text-lg ${textColor}`}>
       {testimonial.company}
     </p>
     </div>
@@ -62,7 +62,7 @@ const TestimonialsSection = ({ textContent, bgColor,textComponent,textColor }: T
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'} py-20 px-5 lg:px-16`}>
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
-          { textComponent && textComponent }
+          { textComponent}
           <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl">
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
