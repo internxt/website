@@ -35,8 +35,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
   '/affiliates',
-  '/comeback',
-  '/black-friday',
+  '/comeback'
 ];
 
 export const SNIGEL_BANNERS = {
