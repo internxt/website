@@ -6,8 +6,8 @@ import Image from 'next/image';
 const SuiteSection = ({ textContent, lang }) => {
   const images = {
     drive: '/images/privacy/Internxt-Drive.webp',
-    business: '/images/black-friday/internxt_for_families.png',
-    family: '/images/black-friday/internxt_for_business.png',
+    business: '/images/black-friday/internxt_for_families.webp',
+    family: '/images/black-friday/internxt_for_business.webp',
   };
   return (
      <section className="relative flex w-full flex-col bg-highlight">
