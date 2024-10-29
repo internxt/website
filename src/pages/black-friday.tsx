@@ -98,7 +98,6 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
 };
 
 export async function getServerSideProps(ctx) {
-  const language = ctx.locale;
   const lang =ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

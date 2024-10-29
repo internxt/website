@@ -7,12 +7,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent, lang }) => {
-  const features = [
-    textContent.HeroSection.feature1,
-    textContent.HeroSection.feature2,
-    textContent.HeroSection.feature3,
-    textContent.HeroSection.feature4,
-  ];
+
   return (
     <section className="relative flex w-full flex-col overflow-hidden">
       <div className="relative flex items-center justify-center overflow-hidden">
@@ -44,7 +39,7 @@ const HeroSection = ({ textContent, lang }) => {
       </div>
 
        <div className="sm:gap-x-30 flex flex-row flex-wrap items-center bg-highlight justify-center gap-x-20 gap-y-10 py-14">
-        {features.map((feature, index) => (
+        {textContent.HeroSection.features.map((feature, index) => (
           <div key={index} className={`flex max-w-[230px] min-h-[150px] flex-col items-center space-y-4 text-center text-white`}>
             <CircleWavyCheck size={40} weight="fill" className="text-primary" />
             <p className="text-xl font-semibold">{feature}</p>

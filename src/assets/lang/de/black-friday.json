@@ -24,10 +24,12 @@
         "minutes": "Minuten",
         "seconds": "Sekunden"
       },
-      "feature1": "Verschlüsselter Dateispeicher und -freigabe",
-      "feature2": "Zugriff auf Ihre Dateien von jedem Gerät",
-      "feature3": "Zugang zu all unseren Dienstleistungen",
-      "feature4": "Kein unbefugter Datenzugriff"
+      "features":[
+        "Verschlüsselter Dateispeicher und -freigabe",
+        "Zugriff auf Ihre Dateien von jedem Gerät",
+        "Zugang zu all unseren Dienstleistungen",
+        "Kein unbefugter Datenzugriff"
+      ]
     },
     "BestStorage": {
       "title": "Das beste Black Friday Cloud-Speicherangebot",

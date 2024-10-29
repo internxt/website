@@ -25,10 +25,12 @@
             "minutes": "minutos",
             "seconds": "segundos"
         },
-        "feature1": "Almacenamiento y compartición de archivos encriptados",
-        "feature2": "Accede a tus archivos desde cualquier dispositivo",
-        "feature3": "Obtén acceso a todos nuestros servicios",
-        "feature4": "Sin acceso no autorizado a los datos"
+        "features":[
+            "Almacenamiento y compartición de archivos encriptados",
+            "Accede a tus archivos desde cualquier dispositivo",
+            "Obtén acceso a todos nuestros servicios",
+            "Sin acceso no autorizado a los datos"
+        ]
     },
     "BestStorage": {
         "title": "La mejor oferta de almacenamiento en la nube para Black Friday",

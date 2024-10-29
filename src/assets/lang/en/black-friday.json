@@ -25,12 +25,12 @@
         "minutes": "minutes",
         "seconds": "seconds"
       },
-      "features":{
-        "feature1":"Encrypted file storage and sharing",
-        "feature2":"Access your files from any device",
-        "feature3":"Get access to all our services",
-        "feature4":"No unauthorized data access"
-      }
+      "features":[
+       "Encrypted file storage and sharing",
+        "Access your files from any device",
+        "Get access to all our services",
+        "No unauthorized data access"
+      ]
       
     },
     "BestStorage": {

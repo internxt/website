@@ -24,10 +24,12 @@
         "minutes": "minutes",
         "seconds": "secondes"
       },
-      "feature1":"Stockage et partage de fichiers chiffrés",
-      "feature2":"Accédez à vos fichiers depuis n'importe quel appareil",
-      "feature3":"Accédez à tous nos services",
-      "feature4":"Aucun accès non autorisé aux données"
+     "features":[
+        "Stockage et partage de fichiers chiffrés",
+        "Accédez à vos fichiers depuis n'importe quel appareil",
+        "Accédez à tous nos services",
+        "Aucun accès non autorisé aux données"
+      ]
     },
     "BestStorage": {
       "title": "La meilleure offre de stockage cloud pour le Black Friday",

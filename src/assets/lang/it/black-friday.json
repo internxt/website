@@ -24,10 +24,12 @@
         "minutes": "minuti",
         "seconds": "secondi"
       },
-      "feature1": "Archiviazione e condivisione di file crittografati",
-      "feature2": "Accedi ai tuoi file da qualsiasi dispositivo",
-      "feature3": "Ottieni accesso a tutti i nostri servizi",
-      "feature4": "Nessun accesso non autorizzato ai dati"
+      "features":[
+        "Archiviazione e condivisione di file crittografati",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Ottieni accesso a tutti i nostri servizi",
+        "Nessun accesso non autorizzato ai dati"
+      ]
     },
     "BestStorage": {
       "title": "La migliore offerta di cloud storage per il Black Friday",
