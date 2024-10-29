@@ -31,7 +31,6 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
-
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -139,13 +138,12 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <div className="flex justify-center pt-24">
-          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner}  />
+          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
         </div>
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
             business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
             lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
@@ -157,9 +155,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           hideFreeCard
-          CustomDescription={<span className='text-xl text-regular text-gray-80'>
-            {textContent.tableSection.planDescription}
-          </span>}
+          CustomDescription={
+            <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+          }
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
