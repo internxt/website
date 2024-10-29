@@ -1,8 +1,7 @@
 import React from 'react';
-import { HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
-import Button from '../shared/Button';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import Link from 'next/link';
 const SuiteSection = ({ textContent, lang }) => {
   const images = {
     drive: '/images/privacy/Internxt-Drive.webp',
@@ -33,21 +32,18 @@ const SuiteSection = ({ textContent, lang }) => {
                     <h4 className="text-4xl font-medium lg:text-4xl pb-4">{section.title}</h4>
                     <h5 className="text-xl">{section.subtitle}</h5>
                   </div>
-                  <button
+                  <Link
                     className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
-                    onClick={() => {
-                      window.location.href = '/pricing';
-                    }}
-                  >
+                    href={'/pricing'}>
                     {section.cta}
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="lg:pl-15 relative mt-16 flex self-stretch lg:mt-0">
                   <div className="hidden lg:flex lg:max-w-[480px]">
                     <Image
                       src={getImage(images[section.image])}
-                      alt='Image'
+                      alt={section.alt}
                       width={480}
                       height={480}
                     />
