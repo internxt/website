@@ -16,7 +16,7 @@ const languages = [
 export default function LanguageMobileBox({ darkMode }) {
   const router = useRouter();
   const lang = router.locale?.toLowerCase().split('-')[0] as string;
-  const langSelected = languages.map((language) => language.text.includes(lang));
+  const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';
 
   return (
     <div className="flex w-screen">
@@ -25,11 +25,11 @@ export default function LanguageMobileBox({ darkMode }) {
           <>
             <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
               <div className="flex flex-row items-center space-x-2">
-                <Globe className={darkMode ? 'text-white' : 'text-gray-60'} size={20} weight="regular" />
-                <span className="flex flex-row">{langSelected}</span>
+                <Globe className={darkMode ? 'text-white' : 'text-black'} size={20} weight="regular" />
+                <span className="flex flex-row">{selectedLanguage}</span>
               </div>
-              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+              <CaretDown className={`${open ? 'hidden' : 'flex'} text-black`} weight="bold" />
+              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-black`} weight="bold" />
             </Disclosure.Button>
             <Transition
               enter="transition duration-200 ease-out"

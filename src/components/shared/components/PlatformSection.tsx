@@ -40,16 +40,15 @@ const PlatformSection = ({ textContent }) => {
 
 
   return (
-    <section className="overflow-hidden bg-black">
-      
+    <section className="overflow-hidden">
       <div className="flex flex-col items-center py-12">
         <div className="center flex items-center px-20 pb-16 text-center">
-          <p className="text-5xl font-semibold text-white">
+          <p className="text-5xl font-semibold text-gray-100">
             {textContent.PlatformSection.title}
           </p>
         </div>
         <div className="flex items-center px-20 pb-16 text-center">
-          <p className="text-xl font-semibold text-gray-5">
+          <p className="text-xl font-semibold text-gray-80">
             {textContent.PlatformSection.subtitle}
           </p>
         </div>
@@ -65,7 +64,7 @@ const PlatformSection = ({ textContent }) => {
                   className={platform.title === textContent.PlatformSection.web ? '' : 'filter invert'}
                 />
               </div>
-              <p className="text-gray-5">{platform.title}</p>
+              <p className="text-gray-80">{platform.title}</p>
             </div>
           ))}
         </div>
