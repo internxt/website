@@ -13,7 +13,7 @@ import router, { useRouter } from 'next/router';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.22;
+  const discount = 0.2;
 
   return (
     <Layout
@@ -27,7 +27,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="78"
+        percent="80"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
@@ -35,10 +35,10 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Lifetime78OFF}
+        couponCode={PromoCodeName.IndependenceDayItaly}
         discount={discount}
         lang={lang}
-        percent={'78%'}
+        percent={'80%'}
         showPriceBefore
         lifetimeMode="celebration"
       />
