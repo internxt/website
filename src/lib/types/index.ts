@@ -105,7 +105,7 @@ export enum PromoCodeName {
   Lifetime78OFF = 'BACK2WORK',
   CyberAwarenessPromoCode = 'CYBER80',
   PartnerDiscount75OFF = 'partner75',
-  SinglesDay='HAPPY80',
+  SinglesDay='SELFLOVE83',
   Resurrection='COMEBACK',
   Halloween='HORROR80',
 }
