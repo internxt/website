@@ -15,7 +15,7 @@ const languages = [
 
 export default function LanguageMobileBox({ darkMode }) {
   const router = useRouter();
-  const lang = router.locale?.toLowerCase().split('-')[0] as string;
+   const lang = router.locale || 'en';
   const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';
 
   return (
