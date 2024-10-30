@@ -19,17 +19,17 @@ export default function LanguageMobileBox({ darkMode }) {
   const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';
 
   return (
-    <div className="flex w-screen">
+      <div className="flex w-screen">
       <Disclosure as="div" className="w-screen">
         {({ open }) => (
           <>
             <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
-              <div className="flex flex-row items-center space-x-2 ">
+              <div className="flex flex-row items-center space-x-2">
                 <Globe className={darkMode ? 'text-white' : 'text-black'} size={20} weight="regular" />
                 <span className="flex flex-row">{selectedLanguage}</span>
               </div>
               <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
-                <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
             </Disclosure.Button>
 
             <Transition
@@ -41,7 +41,7 @@ export default function LanguageMobileBox({ darkMode }) {
               <Disclosure.Panel
                 className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                   darkMode ? 'text-gray-30' : 'text-gray-60'
-                } space-y-8 p-4`}
+                } space-y-2 max-h-48 overflow-y-auto p-4`}
               >
                 {languages.map((language) => (
                   <button
@@ -49,6 +49,7 @@ export default function LanguageMobileBox({ darkMode }) {
                     onClick={() => {
                       router.push(router.pathname, router.pathname, { locale: language.lang });
                     }}
+                    className="w-full text-center py-2" // Centra el texto y restaura el padding
                   >
                     {language.text}
                   </button>

@@ -4,6 +4,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 interface PlatformSectionProps {
+  textContent: Record<string, any>;
   bgColor?: string;
   textColor?: string;
   textDescriptionColor?: string;
@@ -14,7 +15,7 @@ const PlatformSection = ({
   textColor='text-white',
   textDescriptionColor='text-gray-5'
 
-}) => {
+}: PlatformSectionProps): JSX.Element => {
   const platforms = [
     {
     title: textContent.PlatformSection.web,
