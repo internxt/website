@@ -11,7 +11,7 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { SinglesDay } from '@/assets/types/singles-day';
 import { PromoCodeName } from '@/lib/types';
-import PlatformSection from '@/components/black-friday/PlatformSection';
+import PlatformSection from '@/components/shared/components/PlatformSection';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import Image from 'next/image';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
