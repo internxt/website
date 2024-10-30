@@ -225,7 +225,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       menuState ? 'h-screen w-screen pb-14' : 'h-0 '
                     }`}
                   >
-                    <div className="mt-4 flex flex-col text-gray-100">
+                    <div className="mt-4 flex flex-col text-gray-100 overflow-y-auto h-full">
                       <Link
                         href="/pricing"
                         locale={props.lang}
@@ -376,7 +376,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-
+                      <LanguageMobileBox darkMode={props.darkMode} />
                       <a
                         onClick={() => {
                           setMenuState(false);
@@ -390,7 +390,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         {props.textContent.links.login}
                       </a>
                      
-                      <LanguageMobileBox darkMode={props.darkMode} />
+                     
                       
                     </div>
                   </div>
