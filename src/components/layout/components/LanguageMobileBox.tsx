@@ -2,6 +2,11 @@ import { Disclosure, Transition } from '@headlessui/react';
 import { CaretDown, CaretUp, Globe } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
+interface LanguageMobileBoxProps {
+  singlesDay?: boolean;
+  darkMode?: boolean;
+}
+
 const languages = [
   { text: 'English (EN)', lang: 'en' },
   { text: 'Español (ES)', lang: 'es' },
@@ -13,7 +18,7 @@ const languages = [
   { text: '中国人 (TW)', lang: 'zh-tw' },
 ];
 
-export default function LanguageMobileBox({ darkMode,singlesDay }) {
+export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobileBoxProps) {
   const router = useRouter();
   const lang = router.locale || 'en';
   const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';

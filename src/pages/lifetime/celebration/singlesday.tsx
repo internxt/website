@@ -71,7 +71,7 @@ const SinglesdayCelebrationTemplate = ({
       lang={locale}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed singlesDay  />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed singlesDay />
 
      <div className="bg-gray-1">
       <HeroSection 

@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { useState } from 'react';
 import cookies from '@/lib/cookies';
 
+interface LanguageMobileProps {
+  singlesDay?: boolean;
+  darkMode?: boolean;
+}
 const currentLang = {
   es: 'Español (ES)',
   fr: 'Français (FR)',
@@ -26,7 +30,7 @@ const selectedLang = {
   'zh-tw': 'TW',
 };
 
-export default function LanguageBox({ darkMode, singlesDay }) {
+export default function LanguageBox({ darkMode, singlesDay }: LanguageMobileProps)  {
   const router = useRouter();
 
   const [currentLangText, setCurrentLangText] = useState<string>(selectedLang[router.locale as string]);
