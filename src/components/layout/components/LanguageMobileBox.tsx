@@ -23,14 +23,15 @@ export default function LanguageMobileBox({ darkMode }) {
       <Disclosure as="div" className="w-screen">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
-              <div className="flex flex-row items-center space-x-2">
+            <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
+              <div className="flex flex-row items-center space-x-2 ">
                 <Globe className={darkMode ? 'text-white' : 'text-black'} size={20} weight="regular" />
                 <span className="flex flex-row">{selectedLanguage}</span>
               </div>
-              <CaretDown className={`${open ? 'hidden' : 'flex'} text-black`} weight="bold" />
-              <CaretUp className={`${!open ? 'hidden' : 'flex'} text-black`} weight="bold" />
+              <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
             </Disclosure.Button>
+
             <Transition
               enter="transition duration-200 ease-out"
               enterFrom="-translate-y-10 opacity-0"

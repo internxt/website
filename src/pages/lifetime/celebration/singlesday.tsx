@@ -126,7 +126,11 @@ const SinglesdayCelebrationTemplate = ({
         backgroundColorForCard='bg-white'
         
       />
-      <PlatformSection textContent={langJson.FeatureSection}/>
+      <PlatformSection textContent={langJson.FeatureSection}
+       bgColor='bg-white' 
+       textColor='text-gray-100' 
+       textDescriptionColor='text-gray-80'
+       />
       <CtaSection textContent={langJson.CtaSection1} url={'#payment'}/>
       <TestimonialsSection textContent={langJson.TestimonialsSection}/>
       <FAQSection textContent={langJson.FaqSection} bgColor='bg-gray-1'/>

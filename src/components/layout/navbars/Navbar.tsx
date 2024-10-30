@@ -376,7 +376,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-                      <LanguageMobileBox darkMode={props.darkMode} />
+                      
                       <a
                         onClick={() => {
                           setMenuState(false);
@@ -389,7 +389,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       >
                         {props.textContent.links.login}
                       </a>
-                     
+                     <LanguageMobileBox darkMode={props.darkMode} />
                      
                       
                     </div>
