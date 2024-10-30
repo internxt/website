@@ -32,13 +32,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省80%",
-      "title": "网络安全意识月",
-      "subtitle": "所有 Internxt 高级计划！",
-      "cta": "选择计划",
-      "cta2": "享受 78% 的折扣",
-      "guarantee": "30天退款保证",
-      "lastCta": "*优惠仅适用于免费账户或新客户"
+      "label": "立省 80%",
+      "title": "致命的万圣节折扣",
+      "subtitle": "所有 Internxt 终身计划！",
+      "cta": "选择你的计划",
+      "cta2": "享受 80% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠仅适用于免费账户或新客户",
+      "titleMbl1": "致命",
+      "titleMbl2": "折扣",
+      "titleMbl3": "万圣节",
+      "ctaMbl": "选择计划"
     },
     "save": "省高达",
     "planTitles": {

@@ -1,9 +1,9 @@
-import { Fire } from '@phosphor-icons/react';
+import { Fire, Ghost, Info } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
-
+import { Tooltip } from 'react-tooltip';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -51,12 +51,14 @@ export const PriceCard = ({
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
   const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
+
   const priceBefore =
-    decimalDiscountValue || fixedDiscount
+    productCardPlan === 'business' || interval === Interval.Year
+      ? undefined
+      : decimalDiscountValue || fixedDiscount
       ? Number(price).toFixed(2).replace('.00', '')
-      : interval === Interval.Year
-      ? (monthlyProductPrice * 12).toFixed(2)
-      : undefined;
+      : (monthlyProductPrice * 12).toFixed(2);
+
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
@@ -122,6 +124,28 @@ export const PriceCard = ({
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
+        {isCheckoutForLifetime && (
+          <div className="flex flex-col space-y-2 bg-gray-100 pb-6 pt-6">
+            <span className="px-5 font-bold text-orange">{contentText.productFeatures.halloweenFeatures.title}</span>
+
+            {contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
+              <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
+                <Ghost className="h-4 w-4 text-white" weight="fill" />
+                <span className="flex-1 whitespace-nowrap text-white">{feature}</span>
+                {index === 0 && (
+                  <div className="relative">
+                    <Info
+                      className="h-4 w-4 text-white"
+                      data-tooltip-id="infoTooltip"
+                      data-tooltip-content={contentText.productFeatures.halloweenFeatures.tooltip}
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        )}
+        <Tooltip id="infoTooltip" place="top" />
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
             <div

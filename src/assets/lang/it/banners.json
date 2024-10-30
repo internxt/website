@@ -42,19 +42,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia l'80%",
-    "title": "Proteggi il tuo mondo digitale!",
+    "label": "Risparmia 80%",
+    "title": "Boo! Vieni a risparmiare con noi...",
     "subtitle": "Vinci il nostro zaino premium con i nostri piani a vita.",
-    "cta": "Scegli il piano",
+    "cta": "Scegli un piano",
     "guarantee": "Garanzia di rimborso di 30 giorni",
-    "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
+    "lastCta": "*Offerta valida per conti gratuiti o nuovi clienti",
     "features": [
-      "Risparmia tanto su tutti i piani Internxt",
-      "Archiviazione cloud sicura e protetta",
-      "Open source e trasparente",
-      "Trasferimenti criptati end-to-end",
+      "Risparmia su tutti i piani a vita",
+      "Archiviazione cloud privata e criptata",
+      "Codice open-source e verificato",
+      "Trasferimenti crittografati end-to-end",
       "Nessun accesso non autorizzato",
-      "Offerta valida fino al 31 ottobre"
+      "Offerta valida fino al 10 novembre"
     ]
   },
   "s3StorageBanner": {
@@ -117,9 +117,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% di sconto su tutti i piani!",
-      "normalText": "Risparmi per il Mese della Consapevolezza Cibernetica!",
-      "cta": "Richiedi l'offerta"
+      "boldText": "80% di sconto sul tuo prossimo piano a vita",
+      "normalText": "Ciao, voglio giocare a un gioco!",
+      "cta": "Hai il coraggio?"
     }
   },
   "lifetimeBanner": {

@@ -42,12 +42,16 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Ahorra un 80%",
-      "title": "Mes de la Concienciación sobre Ciberseguridad",
-      "subtitle": "¡Todos los planes premium de Internxt!",
+      "title": "Descuentos Mortales de Halloween",
+      "subtitle": "¡Todos los planes de por vida!",
       "cta": "Elige tu plan",
-      "cta2": "Obtén un 78% de descuento",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
+      "titleMbl1": "Descuentos",
+      "titleMbl2": "mortales",
+      "titleMbl3": "de Halloween.",
+      "ctaMbl": "Seleccionar plan"
     },
     "planTitles": {
       "individuals": "Planes individuales",

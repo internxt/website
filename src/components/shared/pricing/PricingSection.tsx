@@ -33,7 +33,9 @@ interface PriceTableProps {
   hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
+  hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  isMonthly?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -59,10 +61,12 @@ export const PricingSection = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   hideBusinessSelector,
+  hideSwitchSelector,
   lang,
   popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
+  isMonthly,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -71,15 +75,14 @@ export const PricingSection = ({
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = isBusiness ? '10' : '23';
   const showLoadingCards = loadingCards;
-  const showIndividualCards = isIndividual && !loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
+  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const showIndividualCards = isIndividual && !loadingCards;
 
-  const showSwitchComponent =
-    (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
+  const showSwitchComponent = activeSwitchPlan === 'Business' && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -87,7 +90,7 @@ export const PricingSection = ({
     } else {
       onBusinessPlansSelected?.(false);
     }
-  }, [activeSwitchPlan]);
+  }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
 
@@ -124,19 +127,23 @@ export const PricingSection = ({
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
+            isMonthly
+            isHalloween
           />
         )}
 
         {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        <SwitchComponent
-          textContent={textContent}
-          show={showSwitchComponent}
-          lang={lang}
-          billedFrequency={billingFrequencyForSwitch}
-          handleOnSwitchIsToggled={switchHandler}
-          labelDiscount={labelDiscount}
-          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
-        />
+        {!hideSwitchSelector && (
+          <SwitchComponent
+            textContent={textContent}
+            show={showSwitchComponent}
+            lang={lang}
+            billedFrequency={billingFrequencyForSwitch}
+            handleOnSwitchIsToggled={switchHandler}
+            labelDiscount={labelDiscount}
+            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          />
+        )}
       </div>
       <Transition
         show={showLoadingCards}
@@ -175,18 +182,7 @@ export const PricingSection = ({
                   }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
-                  decimalDiscountValue={
-                    product.interval !== Interval.Lifetime
-                      ? decimalDiscount?.subscriptions
-                      : lifetimeCoupons
-                      ? undefined
-                      : decimalDiscount?.subscriptions
-                  }
-                  fixedDiscount={
-                    product.interval === Interval.Lifetime && lifetimeCoupons
-                      ? lifetimeCoupons?.[product.storage].amountOff
-                      : undefined
-                  }
+                  decimalDiscountValue={product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : undefined}
                   lang={lang}
                 />
               ))

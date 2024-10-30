@@ -50,8 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CyberAwarenessPromoCode,
-    couponCodeForBusiness: PromoCodeName.CyberAwarenessPromoCode,
+    couponCode: PromoCodeName.Halloween,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -145,7 +144,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
             business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
             lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
@@ -156,6 +154,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
+          CustomDescription={
+            <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+          }
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
