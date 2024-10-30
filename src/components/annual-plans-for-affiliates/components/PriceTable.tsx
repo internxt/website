@@ -6,8 +6,6 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
-import { useEffect, useState } from 'react';
-import { stripeService } from '@/components/services/stripe.service';
 import { PromoCodeName } from '@/lib/types';
 
 interface PriceTableProps {
@@ -28,32 +26,9 @@ const PriceTable: React.FC<PriceTableProps> = ({
   isStartPage,
   titleFontSize,
 }) => {
-  const [coupon, setCoupon] = useState();
-  const { products, currency, currencyValue, loadingCards } = usePricing({});
-
-  useEffect(() => {
-    stripeService
-      .getLifetimeCoupons()
-      .then((coupon) => {
-        setCoupon(coupon);
-      })
-      .catch(() => {
-        // NO OP
-      });
-  }, []);
-
-  const lifetimePrices = {
-    eur: {
-      '2TB': 199,
-      '5TB': 299,
-      '10TB': 499,
-    },
-    usd: {
-      '2TB': 249,
-      '5TB': 349,
-      '10TB': 549,
-    },
-  };
+  const { products, currency, lifetimeCoupons, currencyValue, loadingCards } = usePricing({
+    fetchLifetimeCoupons: true,
+  });
 
   const features = [
     {
@@ -108,14 +83,18 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       planType="individual"
                       key={product.storage}
                       storage={product.storage}
-                      price={discount ? lifetimePrices[currencyValue][product.storage] : product.price}
+                      price={
+                        lifetimeCoupons && lifetimeCoupons[product.storage]
+                          ? product.price - lifetimeCoupons[product.storage].amountOff / 100
+                          : product.price
+                      }
                       billingFrequency={billingFrequency}
                       popular={product.storage === '5TB'}
                       cta={['checkout', product.priceId]}
                       currency={currency}
                       contentText={textContent.priceCard}
                       onButtonClicked={handlePriceCardButton}
-                      coupon={coupon?.[product.storage] ?? undefined}
+                      coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                       priceBefore={discount ? product.price : undefined}
                     />
                   );
