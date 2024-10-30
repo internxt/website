@@ -36,8 +36,8 @@ const SinglesdayCelebrationTemplate = ({
  
 }: SinglesDayCelebrationTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
-  const discount=0.2;
-  const percent='80%'
+  const discount=0.17;
+  const percent='83%'
   const currencySpecified='US';
   const locale = lang as string;
   const couponCode=PromoCodeName.SinglesDay;
@@ -71,7 +71,7 @@ const SinglesdayCelebrationTemplate = ({
       lang={locale}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed singlesDay  />
 
      <div className="bg-gray-1">
       <HeroSection 

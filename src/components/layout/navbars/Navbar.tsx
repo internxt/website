@@ -24,6 +24,7 @@ export interface NavbarProps {
   hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
+  singlesDay?: boolean;
   mode?: 'subscription' | 'payment';
 }
 
@@ -57,6 +58,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const lang = router.locale;
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
+  
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
@@ -205,7 +207,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               {!props.hideNavbar ? (
-                <LanguageBox darkMode={props.darkMode} />
+                <LanguageBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
               ) : undefined}
             </div>
             {!props.isLinksHidden && (
@@ -389,9 +391,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       >
                         {props.textContent.links.login}
                       </a>
-                     <LanguageMobileBox darkMode={props.darkMode} />
-                     
-                      
+                      <LanguageMobileBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
                     </div>
                   </div>
                 }

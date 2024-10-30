@@ -13,13 +13,18 @@ const languages = [
   { text: '中国人 (TW)', lang: 'zh-tw' },
 ];
 
-export default function LanguageMobileBox({ darkMode }) {
+export default function LanguageMobileBox({ darkMode,singlesDay }) {
   const router = useRouter();
-   const lang = router.locale || 'en';
+  const lang = router.locale || 'en';
   const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';
 
+  // Filtramos idiomas si estamos en singlesDay
+  const filteredLanguages = singlesDay
+    ? languages.filter(language => ['en', 'zh', 'zh-tw'].includes(language.lang))
+    : languages;
+
   return (
-      <div className="flex w-screen">
+    <div className="flex w-screen">
       <Disclosure as="div" className="w-screen">
         {({ open }) => (
           <>
@@ -43,13 +48,13 @@ export default function LanguageMobileBox({ darkMode }) {
                   darkMode ? 'text-gray-30' : 'text-gray-60'
                 } space-y-2 max-h-48 overflow-y-auto p-4`}
               >
-                {languages.map((language) => (
+                {filteredLanguages.map((language) => (
                   <button
                     key={language.text}
                     onClick={() => {
                       router.push(router.pathname, router.pathname, { locale: language.lang });
                     }}
-                    className="w-full text-center py-2" // Centra el texto y restaura el padding
+                    className="w-full text-center py-2"
                   >
                     {language.text}
                   </button>

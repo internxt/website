@@ -126,12 +126,12 @@
     ]
   },
   "HeroSection":{
-    "offer":"80% discount",
+    "offer":"83% discount",
     "title": { 
         "previousBlueText": "Claim your ",
-        "blueText": "80% Single's Day discount", 
+        "blueText": "83% Single's Day discount", 
         "postBlueText": ""} ,
-    "description":"Treat yourself to a lifetime of secure, encrypted cloud storage, now at 80% OFF!",
+    "description":"Treat yourself to a lifetime of secure, encrypted cloud storage, now at 83% OFF!",
     "cta":"Buy your plan"
   }
  
