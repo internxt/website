@@ -1,0 +1,85 @@
+{
+  "elections": {
+    "CtaSection": {
+      "title": "The world's most private cloud storage",
+      "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+      "cta": "Select plan"
+    },
+    "FeatureSection": {
+      "title": "Why choose Internxt to secure your files?",
+      "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data. We take every step to ensure your information remains secure.",
+      "cta": "",
+      "feature1": {
+        "title": "Zero-Knowledge Encryption",
+        "description": "Internxt uses zero-knowledge encryption to ensure that only you have access to your files. We never store your encryption keys, so only you can access your data."
+      },
+      "feature2": {
+        "title": "Enhanced Privacy",
+        "description": "Our powerful encryption protects your data from unauthorized access. We never store passwords; all your data is encrypted in transit and at rest."
+      },
+      "feature3": {
+        "title": "User Control",
+        "description": "To protect you from data breaches, Internxt protects your data by making it inaccessible to third parties, including Internxt."
+      },
+      "feature4": {
+        "title": "Cross-Platform Access",
+        "description": "Work freely and access all your files across various devices and operating systems."
+      }
+    },
+    "TestimonialsSection": {
+      "title": "What our users are saying about us",
+      "cards": [
+        {
+          "name": "Eva Williams",
+          "enterprise": "Journalist for FixThePhoto.com",
+          "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        },
+        {
+          "name": "Cristian M.",
+          "enterprise": "Review from GetApp",
+          "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+        },
+        {
+          "name": "Josep Carrizo",
+          "enterprise": "Review from Trustpilot",
+          "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+        }
+      ]
+    },
+    "GetLifetimeSection": {
+      "title": "Trump vs Kamala: 80% off deal",
+      "description": "Bet on the winning candidate for your chance to win double your lifetime storage!"
+    },
+    "HeroSection": {
+      "title": "Trump vs Kamala: 80% off deal",
+      "description": "Plus the chance to get double your storage at no extra cost.",
+      "maintenance": "",
+      "cta1": "Get ${{percent}}% off",
+      "cta2": "Browse lifetime deals"
+    },
+    "PaymentSection": {
+      "limitedOffer": "Limited time offer!",
+      "title": { "blueText": "80%  OFF any lifetime plan ", "normalText": " Bet on Trump or Kamala for " },
+      "description": {
+        "blueText": "win double the amount of storage! ",
+        "normalText": " Buy a plan before November 5th for your chance to ",
+        "normalText2": "If you bet on the wrong candidate, don’t worry -  we’ll offer you a 1TB consolation prize!"
+      },
+
+      "normalSection": {
+        "title": "Explore all of our exclusive lifetime plans",
+        "description": "A lifetime of privacy and security for your files for a unique, one-time payment."
+      },
+      "securePayment": "100% Secure payment, powered by Stripe",
+      "features": {
+        "endToEnd": "End-to-end encrypted",
+        "openSource": "Open-source and audited",
+        "anonymousAccount": "Anonymous account creation"
+      },
+      "PlanSelector": {
+        "Trump": "Trump",
+        "Kamala": "Kamala"
+      }
+    }
+  }
+}

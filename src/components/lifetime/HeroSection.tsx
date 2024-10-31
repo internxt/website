@@ -27,7 +27,7 @@ const HeroSection = ({
   percent,
   dt,
   imageMobile,
-  onRedirectButtonClicked, 
+  onRedirectButtonClicked,
 }: HeroSectionProps): JSX.Element => {
   return (
     <section
@@ -61,7 +61,7 @@ const HeroSection = ({
                 <Header maxWidth="">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
-              <button 
+              <button
                 onClick={onRedirectButtonClicked}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
