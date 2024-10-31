@@ -86,16 +86,7 @@ const HeroSection = ({
               </div>
             ) : null}
             <div className="hidden h-[580px] lg:flex">
-              {isCelebrationPage ? (
-                <Image
-                  src={getImage('/images/lifetime/celebration/usa/trump_kamal_internxt.webp')}
-                  width={660}
-                  height={657}
-                  alt={'Elections Imge'}
-                />
-              ) : (
                 <Animation previewImg={previewImg} />
-              )}
             </div>
           </div>
         </div>
