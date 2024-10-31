@@ -5,8 +5,6 @@ import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
 import { PlanSelector, SwitchButtonOptions } from '../elections/PlanSelector';
-import { Interval } from '../services/stripe.service';
-import { on } from 'events';
 
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
@@ -20,9 +18,9 @@ interface PaymentSectionProps {
   lifetimeMode?: LifetimeMode;
   currencySpecified?: string;
   isElectionsPage?: boolean;
-  activeSwitchPlan: SwitchButtonOptions;
+  activeSwitchPlan?: SwitchButtonOptions;
   onButtonClicked?: () => void;
-  onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions) => void;
+  onPlanTypeChange?: (activeSwitchPlan: SwitchButtonOptions) => void;
 }
 
 const PaymentSection = ({
