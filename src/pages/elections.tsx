@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import Layout from '@/components/layout/Layout';
-import React from 'react';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -39,20 +38,21 @@ const Elections = ({
   onPlanTypeChange,
 }: ElectionsProps): JSX.Element => {
   const [currentPlan, setCurrentPlan] = useState<SwitchButtonOptions>(activeSwitchPlan);
+  const [couponToUse, setCouponToUse] = useState();
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'elections-campaign');
   const locale = lang as string;
   const couponCode = {
     kamala: PromoCodeName.KamalaHarris,
     trump: PromoCodeName.DonaldTrump,
   };
-  const couponToUse = currentPlan === 'Kamala' ? couponCode.kamala : couponCode.trump;
 
   const handlePlanTypeChange = (activeSwitchPlan: SwitchButtonOptions): void => {
+    console.log('activeSwitchPlan', couponCode[activeSwitchPlan.toLocaleLowerCase()]);
+    setCouponToUse(couponCode[activeSwitchPlan.toLocaleLowerCase()]);
     setCurrentPlan(activeSwitchPlan);
     if (onPlanTypeChange) {
       onPlanTypeChange(activeSwitchPlan);
     }
-    console.log('activeSwitchPlan', activeSwitchPlan);
   };
 
   const percent = '80%';
