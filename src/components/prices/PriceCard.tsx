@@ -107,9 +107,7 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${'border-primary ring-[1px]'} flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">

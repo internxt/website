@@ -12,7 +12,7 @@ export const PlanSelector = ({ textContent, activeSwitchPlan, onPlanTypeChange }
       type="button"
       onClick={() => onPlanTypeChange?.('Kamala')}
       className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-        activeSwitchPlan === 'Kamala' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+        activeSwitchPlan === 'Kamala' ? 'bg-primary text-white shadow-sm' : 'text-cool-gray-50'
       }`}
     >
       {textContent.PlanSelector.Kamala}
@@ -21,7 +21,7 @@ export const PlanSelector = ({ textContent, activeSwitchPlan, onPlanTypeChange }
       type="button"
       onClick={() => onPlanTypeChange?.('Trump')}
       className={`flex flex-row items-center gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-        activeSwitchPlan === 'Trump' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
+        activeSwitchPlan === 'Trump' ? 'bg-red text-white shadow-sm' : 'text-cool-gray-50'
       }`}
     >
       {textContent.PlanSelector.Trump}
