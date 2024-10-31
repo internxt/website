@@ -51,10 +51,10 @@
       "description": "Bet on the winning candidate for your chance to win double your lifetime storage!"
     },
     "HeroSection": {
-      "title": "US Election 2024 - Choose your winner and get 80% off",
-      "description": "Plus the chance to get double your storage at no extra cost if your selected candidate wins the election.",
+      "title": "US Election 2024 Choose your Winner and Get 80% Off",
+      "description": "Plus the chance to get double your storage at no extra cost if your selected candidate wins",
       "maintenance": "",
-      "cta1": "Get 80% off",
+      "cta1": "Place my bet",
       "cta2": "Browse lifetime deals"
     },
     "PaymentSection": {
