@@ -59,9 +59,8 @@ LayoutProps) {
   const { dialogIsOpen } = useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
-  const shouldShowBanner = 
-    (pathname === '/lifetime' && dialogIsOpen(GlobalDialog.TopBanner)) || 
-    (pathname === '/black-friday' && dialogIsOpen(GlobalDialog.TopBanner));
+  const shouldShowBanner = dialogIsOpen(GlobalDialog.TopBanner);
+
 
   const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
     ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
