@@ -3,8 +3,19 @@ import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
+interface PlatformSectionProps {
+  textContent: Record<string, any>;
+  bgColor?: string;
+  textColor?: string;
+  textDescriptionColor?: string;
+} 
+const PlatformSection = ({ 
+  textContent,
+  bgColor='bg-black',
+  textColor='text-white',
+  textDescriptionColor='text-gray-5'
 
-const PlatformSection = ({ textContent }) => {
+}: PlatformSectionProps): JSX.Element => {
   const platforms = [
     {
     title: textContent.PlatformSection.web,
@@ -40,16 +51,15 @@ const PlatformSection = ({ textContent }) => {
 
 
   return (
-    <section className="overflow-hidden bg-black">
-      
-      <div className="flex flex-col items-center py-12">
+    <section className="overflow-hidden">
+      <div className={`flex flex-col ${bgColor} items-center py-12`}>
         <div className="center flex items-center px-20 pb-16 text-center">
-          <p className="text-5xl font-semibold text-white">
+          <p className={`text-5xl font-semibold ${textColor}`}>
             {textContent.PlatformSection.title}
           </p>
         </div>
         <div className="flex items-center px-20 pb-16 text-center">
-          <p className="text-xl font-semibold text-gray-5">
+          <p className={`text-xl font-regular ${textDescriptionColor}`}>
             {textContent.PlatformSection.subtitle}
           </p>
         </div>
@@ -65,7 +75,7 @@ const PlatformSection = ({ textContent }) => {
                   className={platform.title === textContent.PlatformSection.web ? '' : 'filter invert'}
                 />
               </div>
-              <p className="text-gray-5">{platform.title}</p>
+              <p className={`${textColor}`}>{platform.title}</p>
             </div>
           ))}
         </div>
