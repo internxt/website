@@ -15,6 +15,7 @@ interface HeroSectionProps {
   previewImg?: string;
   bgImage?: string;
   imageMobile?: string;
+  isElectionsPage?: boolean;
   onRedirectButtonClicked?: () => void;
 }
 
@@ -85,7 +86,16 @@ const HeroSection = ({
               </div>
             ) : null}
             <div className="hidden h-[580px] lg:flex">
-              <Animation previewImg={previewImg} />
+              {isCelebrationPage ? (
+                <Image
+                  src={getImage('/images/lifetime/celebration/usa/trump_kamal_internxt.webp')}
+                  width={660}
+                  height={657}
+                  alt={'Elections Imge'}
+                />
+              ) : (
+                <Animation previewImg={previewImg} />
+              )}
             </div>
           </div>
         </div>

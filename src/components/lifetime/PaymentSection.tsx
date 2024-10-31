@@ -88,14 +88,18 @@ const PaymentSection = ({
                 </>
               ) : (
                 <>
-                  {title.previousBlueText && <span>{title.previousBlueText}</span>}
-                  <span className="text-primary">
-                    {formatText(title.blueText, {
-                      percent: percent ?? '70',
-                    })}
-                  </span>
-                  {title.postBlueText && <span>{title.postBlueText}</span>}
-                  <br />
+                  <p className="w-full text-5xl font-semibold leading-tight">
+                    {title.previousBlueText && <span>{title.previousBlueText}</span>}
+                    <span className="text-primary">
+                      {formatText(title.blueText, {
+                        percent: percent ?? '70',
+                      })}
+                    </span>
+                    {title.postBlueText && <span>{title.postBlueText}</span>}
+                    <br />
+                    <span>{title.normalText}</span>
+                    <p className="max-w-[839px] pt-4 text-xl font-normal">{description}</p>
+                  </p>
                 </>
               )}
             </p>
