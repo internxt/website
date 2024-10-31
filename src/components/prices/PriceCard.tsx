@@ -1,8 +1,9 @@
 import { PromoCodeProps } from '@/lib/types';
-import { Coins, Fire } from '@phosphor-icons/react';
+import { Coins, Fire, Ghost, Info } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
+import { Tooltip } from 'react-tooltip';
 
 export interface PriceCardProps {
   planType: string;
@@ -175,6 +176,25 @@ export default function PriceCard({
         ) : undefined}
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
+        <div className="flex flex-col space-y-2 bg-gray-100 pb-6 pt-6">
+            <span className="px-5 font-bold text-orange">{contentText.productFeatures.halloweenFeatures.title}</span>
+            {contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
+              <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
+                <Ghost className="h-4 w-4 text-white" weight="fill" />
+                <span className="flex-1 whitespace-nowrap text-white">{feature}</span>
+                {index === 0 && (
+                  <div className="relative">
+                    <Info
+                      className="h-4 w-4 text-white"
+                      data-tooltip-id="infoTooltip"
+                      data-tooltip-content={contentText.productFeatures.halloweenFeatures.tooltip}
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <Tooltip id="infoTooltip" place="top" />
         {isOffer ? (
           <>
             <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
