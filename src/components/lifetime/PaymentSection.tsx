@@ -67,25 +67,22 @@ const PaymentSection = ({
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p>
               {isElectionsPage ? (
-                <>
-                  <span className="text-5xl font-bold text-gray-100">{title.normalText}</span>
-                  <br />
+                <div className="flex flex-col items-center gap-4">
+                  <p className="max-w-[700px] text-5xl font-bold leading-tight text-gray-100">
+                    {title.normalText}
 
-                  <span className="text-5xl font-bold text-primary">
-                    {formatText(title.blueText, {
-                      percent: percent ?? '70',
-                    })}
-                  </span>
-                  <br />
-                  <br />
-                  <span className="font-regular text-xl text-gray-100 ">
+                    <span className="text-5xl font-bold text-primary">
+                      {formatText(title.blueText, {
+                        percent: percent ?? '70',
+                      })}
+                    </span>
+                  </p>
+                  <p className="font-regular text-xl text-gray-100">
                     {description.normalText}
                     <span className="text-primary">{description.blueText}</span>
-                  </span>
-                  <br />
-                  <br />
-                  <span className="font-regular text-xl text-gray-100 ">{description.normalText}</span>
-                </>
+                  </p>
+                  <p className="font-regular text-xl text-gray-100 ">{description.normalText2}</p>
+                </div>
               ) : (
                 <>
                   <p className="w-full text-5xl font-semibold leading-tight">
