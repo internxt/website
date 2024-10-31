@@ -10,6 +10,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { PromoCodeName } from '@/lib/types';
 import router, { useRouter } from 'next/router';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -24,7 +25,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} mode="payment" isLinksHidden />
-
+      <FeaturesBanner />
       <HeroSection
         textContent={langJson.HeroSection}
         percent="80"

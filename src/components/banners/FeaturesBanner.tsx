@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { CheckCircle, Ghost, ShieldCheck, VectorThree, VectorTwo, X } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 
-const HIDE_BANNER_DATE = new Date('2024-10-31');
+const HIDE_BANNER_DATE = new Date('2024-11-01');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
