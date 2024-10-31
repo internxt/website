@@ -28,6 +28,11 @@ interface ElectionsProps {
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions) => void;
 }
 
+const COUPON_CODES = {
+  kamala: PromoCodeName.KamalaHarris,
+  trump: PromoCodeName.DonaldTrump,
+};
+
 const Elections = ({
   metatagsDescriptions,
   lang,
@@ -38,17 +43,12 @@ const Elections = ({
   onPlanTypeChange,
 }: ElectionsProps): JSX.Element => {
   const [currentPlan, setCurrentPlan] = useState<SwitchButtonOptions>(activeSwitchPlan);
-  const [couponToUse, setCouponToUse] = useState();
+  const [couponToUse, setCouponToUse] = useState(COUPON_CODES.kamala);
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'elections-campaign');
   const locale = lang as string;
-  const couponCode = {
-    kamala: PromoCodeName.KamalaHarris,
-    trump: PromoCodeName.DonaldTrump,
-  };
 
   const handlePlanTypeChange = (activeSwitchPlan: SwitchButtonOptions): void => {
-    console.log('activeSwitchPlan', couponCode[activeSwitchPlan.toLocaleLowerCase()]);
-    setCouponToUse(couponCode[activeSwitchPlan.toLocaleLowerCase()]);
+    setCouponToUse(COUPON_CODES[activeSwitchPlan.toLocaleLowerCase()]);
     setCurrentPlan(activeSwitchPlan);
     if (onPlanTypeChange) {
       onPlanTypeChange(activeSwitchPlan);
