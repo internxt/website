@@ -2,10 +2,10 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Black Friday",
-        "line2": "sta arrivando!"
+        "line1": "È finita",
+        "line2": "la Black Friday"
       },
-      "description": "Ottieni privacy a un prezzo incredibile!",
+      "description": "Ma puoi comunque ottenere privacy a un ottimo prezzo!",
       "pricingTable": {
         "only": "Solo",
         "priceNow": "3.59",
@@ -24,7 +24,7 @@
         "minutes": "minuti",
         "seconds": "secondi"
       },
-      "features":[
+      "features": [
         "Archiviazione e condivisione di file crittografati",
         "Accedi ai tuoi file da qualsiasi dispositivo",
         "Ottieni accesso a tutti i nostri servizi",
@@ -167,14 +167,14 @@
     "month": "/mese"
   },
   "cta": {
-    "title": "Il Black Friday sta arrivando!",
-    "subtitle": "Ottieni privacy a un prezzo incredibile!",
+    "title": "Il Black Friday è finito!",
+    "subtitle": "Ma puoi comunque ottenere privacy a un ottimo prezzo!",
     "cta": "Scegli il piano",
     "guarantee": "Garanzia di rimborso di 30 giorni"
   },
   "cta2": {
-    "title": "Il Black Friday sta arrivando!",
-    "subtitle": "Ottieni privacy a un prezzo accessibile!",
+    "title": "Il Black Friday è finito!",
+    "subtitle": "Puoi ancora ottenere privacy a un prezzo accessibile!",
     "cta": "Scegli il piano",
     "guarantee": "Garanzia di rimborso di 30 giorni"
   }

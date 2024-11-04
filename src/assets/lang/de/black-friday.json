@@ -2,10 +2,10 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Black Friday",
-        "line2": "kommt bald!"
+        "line1": "Der Black Friday",
+        "line2": "ist vorbei"
       },
-      "description": "Holen Sie sich Privatsphäre zu einem großartigen Preis!",
+      "description": "Aber Sie können trotzdem Privatsphäre zu einem großartigen Preis erhalten!",
       "pricingTable": {
         "only": "Nur",
         "priceNow": "3,59",
@@ -24,7 +24,7 @@
         "minutes": "Minuten",
         "seconds": "Sekunden"
       },
-      "features":[
+      "features": [
         "Verschlüsselter Dateispeicher und -freigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät",
         "Zugang zu all unseren Dienstleistungen",
@@ -167,14 +167,14 @@
     "month": "/Monat"
   },
   "cta": {
-    "title": "Black Friday kommt bald!",
-    "subtitle": "Sichern Sie sich Privatsphäre zu einem großartigen Preis!",
+    "title": "Der Black Friday ist vorbei!",
+    "subtitle": "Aber Sie können trotzdem Privatsphäre zu einem großartigen Preis erhalten!",
     "cta": "Plan wählen",
     "guarantee": "30 Tage Geld-zurück-Garantie"
   },
   "cta2": {
-    "title": "Black Friday kommt bald!",
-    "subtitle": "Erhalten Sie erschwingliche Privatsphäre!",
+    "title": "Der Black Friday ist vorbei!",
+    "subtitle": "Sie können sich immer noch eine erschwingliche Privatsphäre leisten!",
     "cta": "Plan wählen",
     "guarantee": "30 Tage Geld-zurück-Garantie"
   }

@@ -2,10 +2,10 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Black Friday",
-        "line2": "arrive bientôt!"
+        "line1": "C'est fini",
+        "line2": "le Black Friday"
       },
-      "description": "Obtenez la confidentialité à un prix incroyable!",
+      "description": "Mais vous pouvez toujours obtenir de la confidentialité à un excellent prix !",
       "pricingTable": {
         "only": "Seulement",
         "priceNow": "3.59",
@@ -24,7 +24,7 @@
         "minutes": "minutes",
         "seconds": "secondes"
       },
-     "features":[
+      "features": [
         "Stockage et partage de fichiers chiffrés",
         "Accédez à vos fichiers depuis n'importe quel appareil",
         "Accédez à tous nos services",
@@ -159,23 +159,23 @@
     }
   },
   "FooterSection": {
-      "title": "Soutenez la confidentialité. Choisissez Internxt!",
-      "subtitle": "Obtenez une remise sur la tranquillité d'esprit et la confidentialité.",
-      "subtitle1": "Obtenez 60% de réduction sur un an entier de notre plus grand plan de 2TB!",
-      "only": "Seulement",
-      "priceNow": "3.59",
-      "month": "/mois"
-    },
-    "cta": {
-      "title": "Le Black Friday arrive bientôt!",
-      "subtitle": "Obtenez la confidentialité à un prix incroyable!",
-      "cta": "Choisir le plan",
-      "guarantee": "Garantie de remboursement de 30 jours"
-    },
-    "cta2": {
-      "title": "Le Black Friday arrive bientôt!",
-      "subtitle": "Optez pour une confidentialité abordable!",
-      "cta": "Choisir le plan",
-      "guarantee": "Garantie de remboursement de 30 jours"
-    }
+    "title": "Soutenez la confidentialité. Choisissez Internxt!",
+    "subtitle": "Obtenez une remise sur la tranquillité d'esprit et la confidentialité.",
+    "subtitle1": "Obtenez 60% de réduction sur un an entier de notre plus grand plan de 2TB!",
+    "only": "Seulement",
+    "priceNow": "3.59",
+    "month": "/mois"
+  },
+  "cta": {
+    "title": "Le Black Friday est terminé !",
+    "subtitle": "Mais vous pouvez toujours obtenir de la confidentialité à un excellent prix !",
+    "cta": "Choisir le plan",
+    "guarantee": "Garantie de remboursement de 30 jours"
+  },
+  "cta2": {
+    "title": "Le Black Friday est terminé !",
+    "subtitle": "Vous pouvez toujours obtenir une confidentialité abordable !",
+    "cta": "Choisir le plan",
+    "guarantee": "Garantie de remboursement de 30 jours"
+  }
 }

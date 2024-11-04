@@ -2,10 +2,10 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "黑色星期五",
-        "line2": "即將來臨！"
+        "line1": "結束了",
+        "line2": "黑色星期五"
       },
-      "description": "以超值價格獲得隱私！",
+      "description": "但您仍然可以以優惠的價格獲得隱私保護！",
       "pricingTable": {
         "only": "僅",
         "priceNow": "3.59",
@@ -24,12 +24,7 @@
         "minutes": "分鐘",
         "seconds": "秒"
       },
-      "features":[
-        "加密文件儲存與分享",
-        "隨時隨地訪問您的文件",
-        "獲得所有服務的訪問權限",
-        "無未經授權的數據訪問"
-      ]
+      "features": ["加密文件儲存與分享", "隨時隨地訪問您的文件", "獲得所有服務的訪問權限", "無未經授權的數據訪問"]
     },
     "BestStorage": {
       "title": "最佳雲端儲存黑色星期五優惠",
@@ -125,9 +120,7 @@
         },
         {
           "question": "誰有資格獲得這個折扣？",
-          "answer": [
-            "新用戶或任何擁有 Internxt 免費、20GB 或 200GB 訂閱計劃的人均可參加我們的黑色星期五促銷活動。"
-          ]
+          "answer": ["新用戶或任何擁有 Internxt 免費、20GB 或 200GB 訂閱計劃的人均可參加我們的黑色星期五促銷活動。"]
         },
         {
           "question": "當我的計劃結束時，我會保留折扣嗎？",
@@ -158,26 +151,26 @@
       ]
     }
   },
-    "FooterSection": {
-      "title": "支持隱私。選擇 Internxt！",
-      "subtitle": "獲得隱私和安心的折扣。",
-      "subtitle1": "我們最大的 2TB 計劃可享 60% 折扣一整年！",
-      "only": "僅需",
-      "priceNow": "3.59",
-      "month": "/月"
-    },
-    "cta": {
-      "title": "黑色星期五結束了...",
-      "subtitle": "我們的促銷已結束，但您仍然可以獲得實惠的隱私保護！",
-      "only": "僅需",
-      "priceNow": "3.59",
-      "month": "/月"
-    },
-    "cta2": {
-      "title": "黑色星期五結束了...",
-      "subtitle": "我們的促銷已結束，但您仍然可以獲得實惠的隱私保護！",
-      "only": "僅需",
-      "priceNow": "3.59",
-      "month": "/月"
-    }
+  "FooterSection": {
+    "title": "支持隱私。選擇 Internxt！",
+    "subtitle": "獲得隱私和安心的折扣。",
+    "subtitle1": "我們最大的 2TB 計劃可享 60% 折扣一整年！",
+    "only": "僅需",
+    "priceNow": "3.59",
+    "month": "/月"
+  },
+  "cta": {
+    "title": "黑色星期五已經結束！",
+    "subtitle": "但您仍然可以以優惠的價格獲得隱私保護！",
+    "only": "僅需",
+    "priceNow": "3.59",
+    "month": "/月"
+  },
+  "cta2": {
+    "title": "黑色星期五已經結束！",
+    "subtitle": "您仍然可以獲得負擔得起的隱私保護！",
+    "only": "僅需",
+    "priceNow": "3.59",
+    "month": "/月"
+  }
 }
