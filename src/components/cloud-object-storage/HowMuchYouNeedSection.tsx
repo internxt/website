@@ -159,6 +159,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                 </div>
               </div>
               {/* Percent download slider */}
+              <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
