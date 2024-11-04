@@ -12,7 +12,6 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
-import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -25,7 +24,6 @@ export interface NavbarProps {
   hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
-  singlesDay?: boolean;
   mode?: 'subscription' | 'payment';
 }
 
@@ -59,7 +57,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const lang = router.locale;
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
-  
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
@@ -209,7 +206,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-
               {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
             </div>
 
@@ -223,9 +219,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                     text={'Get the deal!'}
                   />
                 </div>
-
-              {!props.hideNavbar ? (
-                <LanguageBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
               ) : undefined}
             </div>
 
@@ -246,7 +239,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       menuState ? 'h-screen w-screen pb-14' : 'h-0 '
                     }`}
                   >
-                    <div className="mt-4 flex flex-col text-gray-100 overflow-y-auto h-full">
+                    <div className="mt-4 flex flex-col text-gray-100">
                       <Link
                         href="/pricing"
                         locale={props.lang}
@@ -397,7 +390,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-                      
+
                       <a
                         onClick={() => {
                           setMenuState(false);
@@ -410,7 +403,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       >
                         {props.textContent.links.login}
                       </a>
-                      <LanguageMobileBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
                     </div>
                   </div>
                 }
