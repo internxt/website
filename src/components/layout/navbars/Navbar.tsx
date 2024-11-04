@@ -24,6 +24,7 @@ export interface NavbarProps {
   hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
+  singlesDay?: boolean;
   mode?: 'subscription' | 'payment';
 }
 
