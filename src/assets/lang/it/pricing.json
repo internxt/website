@@ -56,6 +56,10 @@
       "lifetimeCampaign": {
         "blueText": "Sconto del 50%",
         "normalText": "su tutti i nostri piani esclusivi a vita"
+      },
+      "blackFriday": {
+        "title": "Mega offerta Black Friday: ottieni l'85% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
+        "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },
     "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",

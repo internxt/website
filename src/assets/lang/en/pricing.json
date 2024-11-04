@@ -55,6 +55,10 @@
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
         "normalText": "all our exclusive lifetime plans"
+      },
+      "blackFriday": {
+        "title": "Black Friday mega sale: get 85% OFF all the most secure cloud storage plans",
+        "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
