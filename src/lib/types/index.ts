@@ -109,6 +109,12 @@ export enum PromoCodeName {
   Resurrection='COMEBACK',
   Halloween='HORROR80',
   BlackFriday='BLACKFRIDAY85',
+  SinglesDay = 'SELFLOVE83',
+  Resurrection = 'COMEBACK',
+  Halloween = 'HORROR80',
+  KamalaHarris = 'KAMALA',
+  DonaldTrump = 'TRUMP',
+
 }
 
 export interface PromoCodeProps {

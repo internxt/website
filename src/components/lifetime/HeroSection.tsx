@@ -15,6 +15,7 @@ interface HeroSectionProps {
   previewImg?: string;
   bgImage?: string;
   imageMobile?: string;
+  isElectionsPage?: boolean;
   onRedirectButtonClicked?: () => void;
 }
 
@@ -27,7 +28,7 @@ const HeroSection = ({
   percent,
   dt,
   imageMobile,
-  onRedirectButtonClicked, 
+  onRedirectButtonClicked,
 }: HeroSectionProps): JSX.Element => {
   return (
     <section
@@ -61,7 +62,7 @@ const HeroSection = ({
                 <Header maxWidth="">{textContent.title}</Header>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
-              <button 
+              <button
                 onClick={onRedirectButtonClicked}
                 className="flex  cursor-pointer flex-col items-center rounded-lg bg-primary text-center hover:bg-primary-dark"
               >
@@ -85,7 +86,7 @@ const HeroSection = ({
               </div>
             ) : null}
             <div className="hidden h-[580px] lg:flex">
-              <Animation previewImg={previewImg} />
+                <Animation previewImg={previewImg} />
             </div>
           </div>
         </div>

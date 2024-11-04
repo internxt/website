@@ -56,6 +56,7 @@ const FeatureSection = ({
         <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
+          
           {!withoutCta && (
             <Link
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
