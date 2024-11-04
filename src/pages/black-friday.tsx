@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Script from 'next/script';
 import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -9,13 +11,31 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import FaqSection from '@/components/black-friday/FAQSection';
 import BestStorageSection from '@/components/black-friday/BestStorageSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PromoCodeName } from '@/lib/types';
+import { Interval, stripeService } from '@/components/services/stripe.service';
+import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 
-const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang}) => {
+const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, pricingLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
+  const [isBusiness, setIsBusiness] = useState(false);
+
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    businessCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.BlackFriday,
+    couponCodeForBusiness: PromoCodeName.BlackFriday,
+  });
+
   const groupCards = [
     {
       icon: ShieldCheck,
@@ -38,72 +58,114 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
       description: langJson.blackFriday.FeatureSection.feature4.subtitle1,
     },
   ];
+
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
+
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
+
+    const couponCodeForB2CPlans =
+      lifetimeSpacePlan && lifetimeCoupons
+        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage]).promoCodeName
+        : individualCoupon?.name;
+
+    const planType = isBusiness ? 'business' : 'individual';
+    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
+
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-     
       <Navbar
         lang={lang}
         darkMode={true}
-        isBlackfriday={true}
         textContent={navbarLang}
         cta={['Hide Login']}
         isLinksHidden
-        
+        fixed
+        hideNavbar
+        isBlackfriday
       />
-
 
       <HeroSection lang={lang} textContent={langJson.blackFriday} />
 
-      <BestStorageSection textContent={langJson.blackFriday} lang={lang} />
-
-      <SuiteSection lang={lang} textContent={langJson.blackFriday} />
-
-      <CtaSection textContent={langJson.cta} lang={lang} />
-
+      <PricingSectionWrapper
+        textContent={pricingLang.tableSection}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onBusinessPlansSelected={onBusinessPlansSelected}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        lifetimeCoupons={lifetimeCoupons}
+        hideFreeCard
+        darkMode
+        backgroundColorComponent="bg-highlight"
+        hideTitle
+        decimalDiscount={{
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+          lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+        }}
+        CustomDescription={
+          <div className="w-full max-w-4xl">
+            <span className="text-5xl font-semibold text-white">
+              {pricingLang.tableSection.planTitles.blackFriday.title}
+            </span>
+            <br />
+            <br />
+            <span className="font-regular text-xl text-gray-5">
+              {pricingLang.tableSection.planTitles.blackFriday.description}
+            </span>
+          </div>
+        }
+      />
 
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
             <p className="text-5xl font-semibold text-white">{langJson.blackFriday.FeatureSection.title}</p>
-            <p className="text-xl font-regular text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
+            <p className="font-regular text-xl text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
           </div>
         }
         cards={groupCards}
-        background='bg-highlight'
-        backgroundColorForCard='bg-gray-100'
-        textCardColor='text-white'
+        background="bg-highlight"
+        backgroundColorForCard="bg-gray-100"
+        textCardColor="text-white"
+      />
+      <PlatformSection textContent={langJson.blackFriday} />
+
+      <TestimonialsSection
+        textContent={langJson.blackFriday.TestimonialsSection}
+        bgColor="bg-highlight"
+        textColor="text-white"
       />
 
-     
-      <PlatformSection textContent={langJson.blackFriday}  />
-
-      <TestimonialsSection textContent={langJson.blackFriday.TestimonialsSection} 
-        bgColor='bg-highlight'
-        textColor='text-white'
-        textComponent={
-           <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl text-white">
-            {langJson.blackFriday.TestimonialsSection.title}
-          </p>
-        }
-      
-      />
-      
       <CtaSection textContent={langJson.cta2} lang={lang} />
 
-      <FaqSection textContent={langJson.blackFriday}  />
+      <FaqSection textContent={langJson.blackFriday} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor='bg-highlight' textColor='text-gray-50' logoColor='white' />
+      <MinimalFooter
+        footerLang={footerLang.FooterSection}
+        lang={lang}
+        bgColor="bg-highlight"
+        textColor="text-gray-50"
+        logoColor="white"
+      />
     </Layout>
   );
 };
 
 export async function getServerSideProps(ctx) {
-  const lang =ctx.locale;
+  const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/black-friday.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const pricingLang = require(`@/assets/lang/${lang}/pricing.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -114,6 +176,7 @@ export async function getServerSideProps(ctx) {
       navbarLang,
       langJson,
       footerLang,
+      pricingLang,
     },
   };
 }
