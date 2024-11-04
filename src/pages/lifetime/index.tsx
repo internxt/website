@@ -15,6 +15,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
   const discount = 0.15;
 
+
   return (
     <Layout
       title={metatags[0].title}
@@ -35,6 +36,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
+
         couponCode={PromoCodeName.BlackFriday}
         discount={discount}
         lang={lang}
