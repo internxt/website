@@ -1,8 +1,7 @@
-import { Alarm, CheckCircle, CircleWavyCheck } from '@phosphor-icons/react';
+import { Alarm, CheckCircle } from '@phosphor-icons/react';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
 import Countdown from '@/components/components/Countdown';
-import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 

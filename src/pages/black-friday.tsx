@@ -1,15 +1,12 @@
 import { useState } from 'react';
-import Script from 'next/script';
 import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/black-friday/HeroSection';
-import SuiteSection from '@/components/black-friday/SuiteSection';
 import CtaSection from '@/components/black-friday/CtaSection';
 import PlatformSection from '@/components/shared/components/PlatformSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import FaqSection from '@/components/black-friday/FAQSection';
-import BestStorageSection from '@/components/black-friday/BestStorageSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
@@ -68,8 +65,8 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
 
     const couponCodeForB2CPlans =
       lifetimeSpacePlan && lifetimeCoupons
-        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage]).promoCodeName
-        : individualCoupon?.name;
+        ? lifetimeCoupons[lifetimeSpacePlan.storage]?.promoCodeName ?? ''
+        : individualCoupon?.name ?? '';
 
     const planType = isBusiness ? 'business' : 'individual';
     const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
