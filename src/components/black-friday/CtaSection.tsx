@@ -8,7 +8,7 @@ import Image from 'next/image';
 const CtaSection = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden bg-highlight p-5 sm:p-10">
-      {/* Versión Móvil */}
+      {/* Mobile Version */}
       <div
         className={`flex flex-col items-center justify-center space-y-5 lg:hidden ${styles.radialGradient} rounded-lg border-2 border-transparent p-5`}
       >
@@ -31,7 +31,7 @@ const CtaSection = ({ textContent, lang }) => {
         />
       </div>
 
-      {/* Versión de Escritorio */}
+      {/* Desktop Version */}
       <div
         className={`relative hidden flex-col items-center justify-center space-y-10 rounded-2xl p-5 shadow-lg sm:p-10 lg:flex lg:flex-row lg:space-x-10 lg:space-y-0 ${styles.radialGradient}`}
       >
