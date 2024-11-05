@@ -85,8 +85,8 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         textContent={navbarLang}
         cta={['Hide Login']}
         isLinksHidden
-        fixed
         hideNavbar
+        fixed
         isBlackfriday
       />
 
