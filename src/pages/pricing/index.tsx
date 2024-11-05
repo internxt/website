@@ -154,7 +154,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
-          hideFreeCard
           CustomDescription={
             <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
           }
