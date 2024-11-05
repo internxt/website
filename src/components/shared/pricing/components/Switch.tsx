@@ -33,8 +33,7 @@ export const SwitchComponent = ({
   darkMode,
   handleOnSwitchIsToggled,
 }: SwitchComponentProps): JSX.Element => {
-  const isSwitchEnabled = (billedFrequency: Interval): boolean =>
-    [Interval.Year, Interval.Lifetime].includes(billedFrequency);
+  const isSwitchEnabled = billedFrequency === Interval.Year || billedFrequency === Interval.Lifetime;
 
   return (
     <div className={`${show ? 'flex' : 'hidden'} flex-row items-start gap-5 lg:items-center`}>
