@@ -12,7 +12,7 @@ interface PlanSwitchProps {
   darkMode?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
-
+const getBackgroundColorClass = (darkMode: boolean) => (darkMode ? 'bg-gray-90' : 'bg-cool-gray-10');
 export const PlanSelector = ({
   textContent,
   activeSwitchPlan,
@@ -21,16 +21,16 @@ export const PlanSelector = ({
   darkMode,
   isMonthly,
 }: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex flex-row rounded-lg ${darkMode ? 'bg-gray-90' : 'bg-cool-gray-10'} p-0.5`}>
+  <div id="billingButtons" className={`flex flex-row rounded-lg ${getBackgroundColorClass(darkMode)} p-0.5`}>
     <button
       type="button"
       onClick={() => {
         onPlanTypeChange('Individuals', Interval.Year);
       }}
       className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-       activeSwitchPlan === 'Individuals'
-        ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-        : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
+        activeSwitchPlan === 'Individuals'
+          ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
+          : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
       }`}
     >
       {textContent.billingFrequency.individual}
@@ -43,11 +43,11 @@ export const PlanSelector = ({
       }}
       className={`flex flex-row items-center gap-3 rounded-lg px-6 py-0.5 font-semibold ${
         activeSwitchPlan === 'Lifetime'
-        ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-        : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
+          ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
+          : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
       }`}
     >
-     {textContent.billingFrequency.lifetime}
+      {textContent.billingFrequency.lifetime}
       <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
     </button>
     <button
@@ -57,8 +57,8 @@ export const PlanSelector = ({
       }}
       className={`rounded-lg py-0.5 ${hideBusinessSelector ? 'hidden' : 'flex'} flex-row gap-3 px-6 font-semibold ${
         activeSwitchPlan === 'Business'
-        ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-        : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
+          ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
+          : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
       }`}
     >
       {textContent.billingFrequency.business}

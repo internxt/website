@@ -1,9 +1,8 @@
-import { Fire, Ghost, Info } from '@phosphor-icons/react';
+import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { Interval, TransformedProduct } from '@/components/services/stripe.service';
+import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
-import { Tooltip } from 'react-tooltip';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -60,11 +59,12 @@ export const PriceCard = ({
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
   const cardLabel = productCardPlan === 'business' ? businessLabel : label;
-
+  const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
+  const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
   return (
     <div
       className={`${
-        !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-red-10 ring-1'
+        !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : !darkMode ? '' : 'ring-red-10 ring-1'
       } m-2 flex ${cardMaxWidth} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
@@ -81,8 +81,8 @@ export const PriceCard = ({
               <p className="font-semibold text-white">{contentText.mostPopular}</p>
             </div>
           ) : null}
-          <div className={`${darkMode ? 'bg-primary' : labelBackground} flex rounded-full px-3 py-0.5`}>
-            <p className={`${darkMode ? 'text-white' : `text-${colorCard}`} text-lg font-medium`}>{cardLabel}</p>
+          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
+            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
           </div>
         </div>
         <div
