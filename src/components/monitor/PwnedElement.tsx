@@ -4,7 +4,7 @@ export const PwnedElement = ({}) => {
   return (
     <div className=" flex max-w-[1019px] flex-row pb-5">
       <div className=" max-w-[1019px] space-y-5 bg-white px-10 pb-8 pt-8">
-        <p className="text-2xl font-bold text-gray-100">Canva</p>
+        <p className="text-2xl font-bold text-gray-100">"Canva"</p>
         <p className="font-regular text-lg text-gray-80">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas faucibus eget enim quis feugiat. Morbi
           condimentum luctus diam, sit amet tincidunt purus.
