@@ -83,7 +83,7 @@ export function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   const metatagsDescription = require(`@/assets/lang/en/metatags-descriptions.json`);
   const navbarText = require(`@/assets/lang/en/navbar.json`);
-  const textContent = require(`@/assets/lang/en/cloud-object-storage.json`);
+  const textContent = require(`@/assets/lang/${locale}/cloud-object-storage.json`);
   const footerText = require(`@/assets/lang/en/footer.json`);
 
   return {
