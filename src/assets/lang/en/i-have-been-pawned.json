@@ -1,4 +1,35 @@
 {
+  "HeroSection": {
+    "tagline": "Internxt Monitor",
+    "title": "Have I been Pwned?",
+    "subtitle": "Check if your email has been exposed in a data breach.",
+    "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
+    "placeHolder": "Your email address",
+    "toolTip": "We do not store or share your email address"
+  },
+  "InfoSection": {
+    "pwnedWebsites": "pwned websites",
+    "pwnedAccounts": "pwned accounts",
+    "pastes": "pastes"
+  },
+  "AllGoodSection": {
+    "title": "All good!",
+    "description": "No breached accounts or pastes.",
+    "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
+  },
+  "PwnedSection": {
+    "title": "Oh no!",
+    "description": "Your email was found in X data breaches and X pastes.",
+    "recomendation": "We recommend taking immediate action to secure your accounts.",
+    "breachesSection": {
+      "title": "Breaches where your email was found",
+      "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
+      "linkToPasswordGenerator": {
+        "linkText": "Internxt’s Password Generator",
+        "otherText": "creates unique, strong passwords to protect your accounts and data."
+      }
+    }
+  },
   "CtaSection": {
     "title": "Don’t become another statistic",
     "description": "Check your accounts with Internx Dark Web Monitor.",
@@ -61,9 +92,5 @@
         "description": "In January 2018, the Collection #1 data breach leaked 2.7 billion records, which were made available on the dark web and online forums. The data included over 77 million email addresses and more than 21 million passwords from multiple breaches. "
       }
     ]
-  },
-  "InfoSection": {
-    "title": "Internxt’s free temporary email",
-    "subtitle": "No more spam, ads, newsletters, promotions, hackers, scammers, and bots. Keep your real inbox clean, secure, and free of sketchy emails. Our disposable email account generator is Internxt's newest privacy tool built to provide free, anonymous, temporary, and random addresses without storing any of your personal data."
   }
 }

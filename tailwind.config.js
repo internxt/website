@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-keys */
+const { green } = require('@mui/material/colors');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
@@ -34,7 +35,9 @@ module.exports = {
       'teal-dark': 'rgb(45,164,185)',
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
-      highlight:'rgba(17, 17, 17, 1)',
+      highlight: 'rgba(17, 17, 17, 1)',
+      green8: 'rgb(50, 195, 86, 0.08)',
+      red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
         5: 'rgb(243,243,248)',

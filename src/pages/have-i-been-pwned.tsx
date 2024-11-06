@@ -2,15 +2,17 @@ import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
-import { InfoSection } from '@/components/temp-email/InfoSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
-import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import FeatureSection from '@/components/monitor/FeatureSection';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import { CardGroup } from '@/components/shared/CardGroup';
-import { CheckSquare, Detective, FacebookLogo, Globe } from '@phosphor-icons/react';
+import { CheckSquare, Detective, FacebookLogo, Globe, Info } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
+import { HeroSection } from '@/components/monitor/HeroSection';
+import { InfoSection } from '@/components/monitor/InfoSection';
+import { AllGoodSection } from '@/components/monitor/AllGoodSection';
+import { PwnedSection } from '@/components/monitor/PwnedSection';
 
 const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson, toolsContent, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'monitor');
@@ -46,6 +48,14 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
+      <HeroSection textContent={langJson.HeroSection} />
+
+      <AllGoodSection textContent={langJson.AllGoodSection} />
+
+      <PwnedSection textContent={langJson.PwnedSection} />
+
+      <InfoSection textContent={langJson.InfoSection} />
+
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
@@ -77,7 +87,9 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
         customDescription={<p className="font-regular text-xl">{langJson.CtaSection2.description}</p>}
         url={''}
       />
+
       <ToolsSection textContent={toolsContent} lang={lang} />
+
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
