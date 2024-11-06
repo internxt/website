@@ -24,6 +24,7 @@ interface PricingSectionWrapperProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
   isFamilyPage?: boolean;
+  hideHallooween?: boolean;
   decimalDiscount?: {
     individuals?: number;
     lifetime?: number;
@@ -54,6 +55,7 @@ export const PricingSectionWrapper = ({
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
+  hideHallooween,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
@@ -124,6 +126,7 @@ export const PricingSectionWrapper = ({
           onBusinessPlansSelected={onBusinessPlansSelected}
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
+          hideHallooween={hideHallooween}
         />
       </div>
     </section>

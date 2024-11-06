@@ -28,7 +28,13 @@ interface ResurrectionCampaignProps {
   footerLang: FooterText;
 }
 
-const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: ResurrectionCampaignProps): JSX.Element => {
+const ResurrectionCampaign = ({
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: ResurrectionCampaignProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'resurrection-campaign');
   const router = useRouter();
   const {
@@ -38,10 +44,10 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Resurrection,
+    couponCode: PromoCodeName.Halloween,
   });
   const locale = lang as string;
- 
+
   const percent = '90%';
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -52,7 +58,13 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
         : individualCoupon?.name;
 
-    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForB2CPlans);
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForB2CPlans,
+    );
   };
 
   const groupCards = [
@@ -87,13 +99,8 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
       isBannerFixed={false}
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
-      <HeroSection
-        textContent={textContent.HeroSection}
-        isCelebrationPage
-        percent={percent}
-        
-      />
-      
+      <HeroSection textContent={textContent.HeroSection} isCelebrationPage percent={percent} />
+
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
@@ -108,24 +115,29 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         hideBusinessSelector
         hideFreeCard
       />
-    
+
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
             <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title}</p>
             <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title2}</p>
             <p className="max-w-[796px] text-xl text-gray-80">{textContent.WhyComebackToInternxt.description}</p>
-            <Image src={getImage('/images/home/internxt_secure_cloud_storage.webp')} width={774} height={411} alt={'Cloud Storage'} />
+            <Image
+              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+              width={774}
+              height={411}
+              alt={'Cloud Storage'}
+            />
           </div>
         }
         cards={groupCards}
-        background='bg-gray-1'
-        backgroundColorForCard='bg-white'
+        background="bg-gray-1"
+        backgroundColorForCard="bg-white"
       />
-      <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor='bg-white' />
+      <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor="bg-white" />
       <CtaSection
         textContent={textContent.CtaSection}
-        bgImage='/images/lifetime/celebration/normal-bg.png'
+        bgImage="/images/lifetime/celebration/normal-bg.png"
         url="#billingButtons"
       />
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />

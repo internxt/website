@@ -79,6 +79,7 @@ const FreeUserPage = ({
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideHallooween
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />

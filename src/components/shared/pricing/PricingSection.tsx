@@ -36,6 +36,7 @@ interface PriceTableProps {
   hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
+  hideHallooween?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -67,6 +68,7 @@ export const PricingSection = ({
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,
+  hideHallooween,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
@@ -184,6 +186,7 @@ export const PricingSection = ({
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : undefined}
                   lang={lang}
+                  hideHalloweenFeatures={hideHallooween}
                 />
               ))
             : undefined}

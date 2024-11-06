@@ -20,6 +20,7 @@ export interface PriceCardProps {
   redeemCodeCta?: LifetimeMode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
+  hideHalloweenFeatures?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -43,6 +44,7 @@ export const PriceCard = ({
   redeemCodeCta,
   label,
   isFamilyPage,
+  hideHalloweenFeatures,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -50,14 +52,16 @@ export const PriceCard = ({
 
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
-  const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
+  const priceNow = decimalDiscountValue
+    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
+    : ((price * 25) / 100).toFixed(2).replace('.00', '');
 
   const priceBefore =
     productCardPlan === 'business' || interval === Interval.Year
       ? undefined
       : decimalDiscountValue || fixedDiscount
       ? Number(price).toFixed(2).replace('.00', '')
-      : (monthlyProductPrice * 12).toFixed(2);
+      : Number(price).toFixed(2).replace('.00', '');
 
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -124,10 +128,9 @@ export const PriceCard = ({
         </button>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
-        {isCheckoutForLifetime && (
+        {isCheckoutForLifetime && !hideHalloweenFeatures && (
           <div className="flex flex-col space-y-2 bg-gray-100 pb-6 pt-6">
             <span className="px-5 font-bold text-orange">{contentText.productFeatures.halloweenFeatures.title}</span>
-
             {contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
               <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
                 <Ghost className="h-4 w-4 text-white" weight="fill" />
