@@ -55,8 +55,8 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
 
-  const debouncedStorageAmountValue = useDebounce(storageAmountValue, 500);
-  const debouncedPercentDownloadValue = useDebounce(percentDownloadValue, 500);
+  const debouncedStorageAmountValue = useDebounce(storageAmountValue, 5);
+  const debouncedPercentDownloadValue = useDebounce(percentDownloadValue, 5);
   const [costs, setCosts] = useState<Record<string, any>>({
     internxt: 0,
     azure: {
