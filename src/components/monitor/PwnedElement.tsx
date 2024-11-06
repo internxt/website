@@ -1,6 +1,6 @@
 'use client';
 
-export const PwnedElement = ({}) => {
+export const PwnedElement = () => {
   return (
     <div className=" flex max-w-[1019px] flex-row pb-5">
       <div className=" max-w-[1019px] space-y-5 bg-white px-10 pb-8 pt-8">
