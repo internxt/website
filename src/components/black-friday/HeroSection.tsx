@@ -34,7 +34,7 @@ const HeroSection = ({ textContent, lang }) => {
             <div className="relative flex items-center justify-center md:h-[600px] lg:left-16 lg:mt-10">
               <Image
                 src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-                alt={'BFCampaign'}
+                alt={'Black Friday Discounts'}
                 width={520}
                 height={520}
               />

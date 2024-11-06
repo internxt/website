@@ -30,7 +30,6 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.BlackFriday,
-    couponCodeForBusiness: PromoCodeName.BlackFriday,
   });
 
   const groupCards = [
@@ -56,21 +55,16 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
     },
   ];
 
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
+  const onBusinessPlansSelected = (isBusiness) => {
     setIsBusiness(isBusiness);
   };
 
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+  const onCheckoutButtonClicked = (priceId, isCheckoutForLifetime) => {
     const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
 
-    const couponCodeForB2CPlans =
-      lifetimeSpacePlan && lifetimeCoupons
-        ? lifetimeCoupons[lifetimeSpacePlan.storage]?.promoCodeName ?? ''
-        : individualCoupon?.name ?? '';
+    const couponCodeForCheckout = individualCoupon?.name;
 
     const planType = isBusiness ? 'business' : 'individual';
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
-
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
@@ -103,7 +97,7 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         hideTitle
         decimalDiscount={{
           individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+          business: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
           lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
         }}
         CustomDescription={

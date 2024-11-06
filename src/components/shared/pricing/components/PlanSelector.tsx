@@ -12,7 +12,7 @@ interface PlanSwitchProps {
   darkMode?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
-const getBackgroundColorClass = (darkMode: boolean) => (darkMode ? 'bg-gray-90' : 'bg-cool-gray-10');
+
 export const PlanSelector = ({
   textContent,
   activeSwitchPlan,
