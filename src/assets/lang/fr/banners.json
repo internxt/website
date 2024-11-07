@@ -31,7 +31,7 @@
       "Code source ouvert et audité",
       "Transferts cryptés de bout en bout",
       "Aucun accès non autorisé",
-      "Offre valable jusqu’au 10 novembre"
+      "Offre valable jusqu’au 30 novembre"
     ]
   },
   "s3StorageBanner": {
@@ -89,9 +89,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80 % de réduction sur votre prochain forfait à vie",
-      "normalText": "Bonjour, je veux jouer à un jeu !",
-      "cta": "Oses-tu ?"
+      "boldText": "85 % de réduction sur TOUS les plans premium.",
+      "normalText": "Super offre de Black Friday!",
+      "cta": "Achetez votre plan"
     }
   },
   "lifetimeBanner": {

@@ -60,7 +60,7 @@
       "Open-source and audited",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends November 10"
+      "Offer ends November 30"
     ]
   },
   "s3StorageBanner": {
@@ -145,9 +145,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% off your next lifetime plan",
-      "normalText": "Hello, I want to play a game!",
-      "cta": "Make your choice"
+      "boldText": "85% off ALL premium plans for Black Friday!",
+      "normalText": "Black by popular demand!",
+      "cta": "Buy plam"
     }
   },
   "lifetimeBanner": {

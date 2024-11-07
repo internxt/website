@@ -28,7 +28,7 @@
       "Código abierto y transparente",
       "Transferencias encriptadas de extremo a extremo",
       "Sin acceso no autorizado",
-      "La oferta termina el 10 de noviembre"
+      "La oferta termina el 30 de noviembre"
     ]
   },
   "s3StorageBanner": {
@@ -95,9 +95,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80 % de descuento en tu próximo plan de por vida",
-      "normalText": "Hola, quiero jugar a un juego!",
-      "cta": "¿Te atreves?"
+      "boldText": "85% de descuento en TODOS los planes premium.",
+      "normalText": "¡Super Oferta de Black Friday!",
+      "cta": "Compra tu plan"
     }
   },
   "lifetimeBanner": {

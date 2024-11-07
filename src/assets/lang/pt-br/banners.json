@@ -60,7 +60,7 @@
       "Código aberto e transparente",
       "Transferências criptografadas de ponta a ponta",
       "Sem acesso não autorizado",
-      "Oferta válida até 10 de novembro"
+      "Oferta válida até 30 de novembro"
     ]
   },
   "s3StorageBanner": {
@@ -151,9 +151,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de desconto no seu próximo plano vitalício",
-      "normalText": "Olá, quero jogar um jogo!",
-      "cta": "Você se atreve?"
+      "boldText": "85% de desconto em TODOS os planos premium.",
+      "normalText": "Super oferta de Black Friday!",
+      "cta": "Compre seu plano"
     }
   },
   "lifetimeBanner": {
