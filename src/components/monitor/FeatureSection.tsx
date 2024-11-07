@@ -10,12 +10,12 @@ const CardText = ({ textContent }) => {
   const router = useRouter();
 
   return (
-    <div className="flex max-w-[388px] flex-col space-y-6">
-      <h3 className="text-5xl font-semibold leading-tight text-gray-100">{textContent.title}</h3>
-      <p className="text-xl text-gray-80">{textContent.description}</p>
+    <div className="flex max-w-full flex-col items-center space-y-6 px-10 text-center md:max-w-[388px] md:items-start md:text-left">
+      <h3 className="text-3xl font-semibold leading-tight text-gray-100 md:text-5xl">{textContent.title}</h3>
+      <p className="text-lg text-gray-80 md:text-xl">{textContent.description}</p>
       <Button
         text={textContent.cta}
-        className="bg-blue-500 w-full rounded-lg py-4 text-xl font-semibold text-gray-100"
+        className="bg-blue-500 w-full rounded-lg py-4 text-lg font-semibold text-gray-100 md:text-xl"
         onClick={() => router.push(textContent.redirect)}
       />
     </div>
@@ -52,15 +52,15 @@ const FeatureSection = ({ textContent }) => {
 
   return (
     <section>
-      <div className="my-10 mb-32 flex flex-col items-center space-y-12 md:my-20">
-        <div className="mx-auto max-w-[774px] text-center">
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-          <p className="mt-12 text-xl font-bold text-gray-100">{textContent.description}</p>
-          <p className="font-regular mt-12 text-xl text-gray-80">{textContent.description2}</p>
+      <div className="my-10 mb-20 flex flex-col items-center space-y-12 md:my-20 md:mb-32">
+        <div className="mx-auto max-w-full px-4 text-center md:max-w-[774px]">
+          <p className="text-3xl font-semibold text-gray-100 md:text-5xl">{textContent.title}</p>
+          <p className="mt-6 text-lg font-bold text-gray-100 md:mt-12 md:text-xl">{textContent.description}</p>
+          <p className="font-regular mt-6 text-lg text-gray-80 md:mt-12 md:text-xl">{textContent.description2}</p>
         </div>
         {/* Cards */}
-        {/* Create Stron Passwords */}
-        <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+        {/* Create Strong Passwords */}
+        <div className="flex flex-col-reverse items-center justify-center gap-6 lg:flex-row lg:gap-[88px]">
           <div className="flex flex-col">
             <Image
               src={getImage('/images/monitor/internxt_monitor_1.webp')}
@@ -73,7 +73,7 @@ const FeatureSection = ({ textContent }) => {
           <CardText textContent={cards.createPasswords} />
         </div>
         {/* Use a VPN */}
-        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+        <div className="flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-[88px]">
           <CardText textContent={cards.useVPN} />
           <div className="flex flex-col">
             <Image
@@ -86,7 +86,7 @@ const FeatureSection = ({ textContent }) => {
           </div>
         </div>
         {/* Check password strength */}
-        <div className="flex flex-col-reverse items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+        <div className="flex flex-col-reverse items-center justify-center gap-6 lg:flex-row lg:gap-[88px]">
           <div className="flex flex-col">
             <Image
               src={getImage('/images/monitor/internxt_monitor_3.webp')}
@@ -99,7 +99,7 @@ const FeatureSection = ({ textContent }) => {
           <CardText textContent={cards.checkPassword} />
         </div>
         {/* Store files privately */}
-        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:gap-[88px]">
+        <div className="flex flex-col items-center justify-center gap-6 lg:flex-row lg:gap-[88px]">
           <CardText textContent={cards.storeFiles} />
           <div className="flex flex-col">
             <Image
