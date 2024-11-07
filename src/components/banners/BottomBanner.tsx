@@ -148,8 +148,8 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/campaigns/halloween/internx_halloween_pricing.webp')}
-              width={160}
+              src={getImage('/images/black-friday/black_friday_horizontal_sale.png')}
+              width={243}
               height={100}
               draggable={false}
               alt={'Surveillance left'}
