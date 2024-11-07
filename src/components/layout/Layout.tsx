@@ -13,7 +13,6 @@ import {
   INCLUDED_PATHS_FOR_SNIGEL,
   INTERNXT_URL,
   PATHS_WITH_CUSTOM_SNIGEL_BANNERS,
-  EXCLUDED_PATHS_FOR_BANNER,
 } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 
@@ -59,7 +58,7 @@ LayoutProps) {
   const { dialogIsOpen } = useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
- const shouldShowBanner = pathname === '/black-friday' && dialogIsOpen(GlobalDialog.TopBanner);
+  const shouldShowBanner = pathname === '/black-friday' && dialogIsOpen(GlobalDialog.TopBanner);
 
   const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
     ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
@@ -130,7 +129,7 @@ LayoutProps) {
     axios
       .post(IMPACT_API, {
         anonymousId: randomUUID,
-        timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
+        timestamp: moment().utc().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
         request_ip: ip,
         context: {
           userAgent: navigator.userAgent,
