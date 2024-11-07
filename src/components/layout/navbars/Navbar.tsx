@@ -12,6 +12,7 @@ import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
+import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -390,7 +391,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-
+                      <LanguageMobileBox darkMode={props.darkMode} />
                       <a
                         onClick={() => {
                           setMenuState(false);

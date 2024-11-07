@@ -14,20 +14,38 @@ import { Interval, stripeService } from '@/components/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import { GetServerSidePropsContext } from 'next';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { BlackFridayText } from '@/assets/types/blackFriday';
+import { PricingText } from '@/assets/types/pricing';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
+interface BlackFridayProps {
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  langJson: BlackFridayText;
+  footerLang: FooterText;
+  pricingLang: PricingText;
+}
 
-const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerLang, pricingLang }) => {
+const BlackFriday = ({
+  lang,
+  metatagsDescriptions,
+  langJson,
+  navbarLang,
+  footerLang,
+  pricingLang,
+}: BlackFridayProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === BLACK_FRIDAY_METATAG_ID);
   const [isBusiness, setIsBusiness] = useState(false);
+  const locale = lang as string;
 
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
-    lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.BlackFriday,
   });
@@ -58,20 +76,19 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
   const onBusinessPlansSelected = (isBusiness) => {
     setIsBusiness(isBusiness);
   };
-
   const onCheckoutButtonClicked = (priceId, isCheckoutForLifetime) => {
-    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
-
     const couponCodeForCheckout = individualCoupon?.name;
 
     const planType = isBusiness ? 'business' : 'individual';
+
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon?.percentOff;
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
       <Navbar
-        lang={lang}
+        lang={locale}
         darkMode={true}
         textContent={navbarLang}
         cta={['Hide Login']}
@@ -81,24 +98,23 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         isBlackfriday
       />
 
-      <HeroSection lang={lang} textContent={langJson.blackFriday} />
+      <HeroSection lang={locale} textContent={langJson.blackFriday} />
 
       <PricingSectionWrapper
         textContent={pricingLang.tableSection}
-        lang={lang}
+        lang={locale}
         products={products}
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        lifetimeCoupons={lifetimeCoupons}
         hideFreeCard
         darkMode
         backgroundColorComponent="bg-highlight"
         hideTitle
         decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-          lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          individuals: decimalDiscount,
+          business: decimalDiscount,
+          lifetime: decimalDiscount,
         }}
         CustomDescription={
           <div className="w-full max-w-4xl">
@@ -134,13 +150,13 @@ const BlackFriday = ({ lang, metatagsDescriptions, langJson, navbarLang, footerL
         textColor="text-white"
       />
 
-      <CtaSection textContent={langJson.cta2} lang={lang} />
+      <CtaSection textContent={langJson.cta2} lang={locale} />
 
       <FaqSection textContent={langJson.blackFriday} />
 
       <MinimalFooter
         footerLang={footerLang.FooterSection}
-        lang={lang}
+        lang={locale}
         bgColor="bg-highlight"
         textColor="text-gray-50"
         logoColor="white"
