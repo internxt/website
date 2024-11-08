@@ -36,7 +36,7 @@ export const HomePageBannerForMobile = (redirectTo) => {
             <p className="whitespace-nowrap text-sm font-medium">{textContent.tableSection.ctaBanner.guarantee}</p>
           </div>
           <Link
-            href={redirectTo ?? '#billingButtons'}
+            href={'#priceTable'}
             className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
           >
             {textContent.tableSection.ctaBanner.cta}
