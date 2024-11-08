@@ -34,27 +34,16 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 ${styles.radialGradient} bg-cover bg-center bg-no-repeat md:flex`}
         />
+        {/* Mobile Version */}
+        <div className="lg:hidden">
+          <HomePageBannerForMobile />
+        </div>
 
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center lg:py-10">
-          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
+        {/* Desktop version */}
+        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center justify-between lg:flex lg:flex-row lg:items-center lg:py-10">
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            {!shouldShowMobileBanner ? (
-              <div className="flex lg:hidden">
-                <Image
-                  loading="eager"
-                  src={mobileImage}
-                  draggable="false"
-                  quality={100}
-                  width={600}
-                  height={450}
-                  alt="Laptop and phone with Internxt app"
-                />
-              </div>
-            ) : undefined}
-            <HomePageBannerForMobile />
-
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               header={
@@ -99,10 +88,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             />
           </div>
 
-          {/* Desktop animation/image */}
-          {/* <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
-            <Animation />
-          </div> */}
           <div className="hidden h-max w-max lg:flex">
             <Link href="/pricing">
               <Image

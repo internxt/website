@@ -99,7 +99,7 @@ export const PriceBannerForCampaigns = ({
             src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
             width={377}
             height={190}
-            alt="Halloween image"
+            alt="Black Friday image"
             className="w-full rounded-b-[16px] object-cover"
           />
         </div>
