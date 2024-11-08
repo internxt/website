@@ -27,12 +27,14 @@ export const PriceBannerForCampaigns = ({
           backgroundPosition: 'center, center',
         }}
       >
-        <div className="flex w-full max-w-[500px] flex-col items-center gap-2 px-2 py-6 text-center sm:max-w-[700px] sm:gap-4 sm:px-3 sm:py-10 lg:items-start lg:pl-10 lg:text-left">
+        <div className="flex w-full min-w-[800px] flex-col items-center gap-2 px-2 py-6 text-center sm:max-w-[900px] sm:gap-4 sm:px-3 sm:py-10 lg:items-start lg:pl-10 lg:text-left">
           <div className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
             <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
           </div>
-          <div className="flex w-full flex-col">
-            <p className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">{textContent.subtitle}</p>
+          <div className="flex w-full">
+            <p className="whitespace-nowrap text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
+              {textContent.subtitle}
+            </p>
           </div>
           <div className="flex flex-col items-center gap-2 sm:gap-4 lg:flex-row">
             <Link
@@ -48,7 +50,7 @@ export const PriceBannerForCampaigns = ({
           </div>
           <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
         </div>
-        <div className="hidden w-full justify-end lg:flex">
+        <div className="lg hidden w-full items-center justify-center lg:mr-20 lg:flex">
           <Image
             src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
             width={358}
