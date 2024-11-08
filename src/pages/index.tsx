@@ -98,7 +98,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed darkMode={true} />
 
       <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
