@@ -37,16 +37,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 80 %",
+      "label": "Spare 85%",
       "title": "Tödliche Halloween-Rabatte",
-      "subtitle": "Alle lebenslangen Internxt-Pläne!",
+      "subtitle": "Abonnements & Lifetime-Pläne, Geschäfts- und Familienpläne",
       "cta": "Wähle deinen Plan",
-      "cta2": "Erhalte 80 % Rabatt",
+      "cta2": "Erhalte 85% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
       "lastCta": "*Das Angebot gilt nur für kostenlose Konten oder Neukunden",
-      "titleMbl1": "Tödliche",
-      "titleMbl2": "Rabatte",
-      "titleMbl3": "zu Halloween.",
+      "titleMbl1": "Abonnements & Lifetime-Pläne",
+      "titleMbl2": "Geschäfts- und",
+      "titleMbl3": "Familienpläne",
       "ctaMbl": "Plan auswählen"
     },
     "planTitles": {

@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% DE RÉDUCTION ",
-        "normal2": "sur tous les plans à vie"
+        "blue": "85% DE RÉDUCTION ",
+        "normal2": "sur tous les plans"
       },
       "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
       "startFrom": {

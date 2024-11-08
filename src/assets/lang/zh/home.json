@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% 折扣 ",
-        "normal2": "所有终身计划"
+        "blue": "85% 折扣 ",
+        "normal2": "在所有计划中。"
       },
       "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
       "startFrom": {

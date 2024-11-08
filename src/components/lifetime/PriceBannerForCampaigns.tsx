@@ -4,7 +4,7 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+
 export const PriceBannerForCampaigns = ({
   textContent,
   redirectTo,
@@ -17,22 +17,22 @@ export const PriceBannerForCampaigns = ({
   const bgImage = getImage('/images/black-friday/clouds.webp');
 
   return (
-    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5 `}>
+    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
         className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
         style={{
-          backgroundImage: `linear-gradient(180deg, #0066ff 0%, #000000 100%), url(${bgImage})`,
+          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
           backgroundSize: 'cover, cover',
           backgroundPosition: 'center, center',
         }}
       >
         <div className="flex w-full max-w-[500px] flex-col items-center gap-2 px-2 py-6 text-center sm:max-w-[700px] sm:gap-4 sm:px-3 sm:py-10 lg:items-start lg:pl-10 lg:text-left">
-          <div className="border-blue flex w-max rounded-xl border-2 bg-gray-100 px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
+          <div className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
             <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col">
-            <p className="text-2xl font-bold text-gray-100 sm:text-3xl md:text-4xl">{textContent.subtitle}</p>
+            <p className="text-2xl font-bold text-white sm:text-3xl md:text-4xl">{textContent.subtitle}</p>
           </div>
           <div className="flex flex-col items-center gap-2 sm:gap-4 lg:flex-row">
             <Link
@@ -43,10 +43,10 @@ export const PriceBannerForCampaigns = ({
             </Link>
           </div>
           <div className="flex flex-row items-center space-x-1 text-gray-100 sm:space-x-2">
-            <CheckCircle size={20} className="text-gray-100" />
-            <p className="whitespace-nowrap text-base font-medium sm:text-lg">{textContent.guarantee}</p>
+            <CheckCircle size={20} className="text-primary" />
+            <p className="whitespace-nowrap text-base font-medium text-gray-30 sm:text-lg">{textContent.guarantee}</p>
           </div>
-          <p className="whitespace-nowrap text-sm font-medium sm:text-sm">{textContent.lastCta}</p>
+          <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
         </div>
         <div className="hidden w-full justify-end lg:flex">
           <Image
@@ -64,23 +64,23 @@ export const PriceBannerForCampaigns = ({
       <div
         className="relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] bg-orange lg:hidden"
         style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
+          backgroundSize: 'cover, cover',
+          backgroundPosition: 'center, center',
         }}
       >
         <div className="flex w-full flex-col items-center gap-4 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-4 border-yellow bg-gray-100 px-6 py-3">
+          <div className="flex w-max rounded-xl border-4 border-primary bg-gray-100 px-2 py-3">
             <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.label}</p>
           </div>
-          <div className="flex w-full flex-col">
-            <p className="text-4xl font-bold text-gray-100">{textContent.titleMbl1}</p>
-            <p className="text-4xl font-bold text-gray-100">{textContent.titleMbl2}</p>
-            <p className="text-4xl font-bold text-gray-100">{textContent.titleMbl3}</p>
+          <div className="flex w-full flex-col text-white">
+            <p className="text-4xl font-bold">{textContent.titleMbl1}</p>
+            <p className="text-4xl font-bold">{textContent.titleMbl2}</p>
+            <p className="text-4xl font-bold">{textContent.titleMbl3}</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="mb-2 flex flex-row items-center space-x-1 text-gray-100">
-              <CheckCircle size={20} className="text-gray-100" />
+            <div className="mb-2 flex flex-row items-center space-x-1 text-gray-30">
+              <CheckCircle size={20} className="text-primary" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
             <Link

@@ -31,16 +31,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "立省 80%",
+      "label": "立省 85%",
       "title": "致命的萬聖節折扣",
-      "subtitle": "所有 Internxt 終身計劃！",
+      "subtitle": "訂閱與終身計劃，商業與家庭計劃",
       "cta": "選擇您的計劃",
-      "cta2": "享受 80% 折扣",
+      "cta2": "享受 85% 折扣",
       "guarantee": "30 天退款保證",
       "lastCta": "*優惠僅適用於免費帳戶或新客戶",
-      "titleMbl1": "致命",
-      "titleMbl2": "折扣",
-      "titleMbl3": "萬聖節",
+      "titleMbl1": "訂閱與終身計劃，",
+      "titleMbl2": "商業與家庭計劃",
+      "titleMbl3": "",
       "ctaMbl": "選擇計劃"
     },
     "save": "節省高達",
