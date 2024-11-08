@@ -93,7 +93,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-      const checkIsMobile = () => setIsMobile(window.innerWidth < 768); // Ajusta el valor según el tamaño móvil
+      const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
 
       checkIsMobile();
       window.addEventListener('resize', checkIsMobile);
