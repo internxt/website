@@ -24,12 +24,20 @@ export const HomePageBannerForMobile = (redirectTo) => {
       >
         <div className="flex w-full flex-col items-center gap-4 px-2 py-6 text-center">
           <div className="flex w-max rounded-xl border-4 border-primary bg-gray-100 px-2 py-3">
-            <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.tableSection.ctaBanner.label}</p>
+            <p className="text-3xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
+              {textContent.tableSection.ctaBanner.label}
+            </p>
           </div>
           <div className="flex w-full flex-col text-white">
-            <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl1}</p>
-            <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl2}</p>
-            <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl3}</p>
+            <p className="text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+              {textContent.tableSection.ctaBanner.titleMbl1}
+            </p>
+            <p className="text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+              {textContent.tableSection.ctaBanner.titleMbl2}
+            </p>
+            <p className="text-3xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+              {textContent.tableSection.ctaBanner.titleMbl3}
+            </p>
           </div>
           <div className="flex flex-col items-center">
             <div className="mb-2 flex flex-row items-center space-x-1 text-gray-30">
