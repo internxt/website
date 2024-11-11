@@ -25,6 +25,7 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import useIsMobile from '@/hooks/useIsMobile';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -89,20 +90,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  function useIsMobile() {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-      const checkIsMobile = () => setIsMobile(window.innerWidth < 768);
-
-      checkIsMobile();
-      window.addEventListener('resize', checkIsMobile);
-      return () => window.removeEventListener('resize', checkIsMobile);
-    }, []);
-
-    return isMobile;
-  }
   const isMobile = useIsMobile();
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed darkMode={!isMobile} />
