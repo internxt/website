@@ -11,6 +11,7 @@ import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
+import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
@@ -24,7 +25,6 @@ export interface NavbarProps {
   hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
-  singlesDay?: boolean;
   mode?: 'subscription' | 'payment';
 }
 
@@ -58,7 +58,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   const lang = router.locale;
   const getTitles = require(`@/assets/lang/en/navbar.json`);
 
-  
   const shouldModifyRibbonStyle = isRibbonHidden;
   const shouldHideRibbon = true;
 
@@ -85,9 +84,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
-      } h-20 w-full bg-white transition-all duration-100 lg:h-16 ${props.darkMode && 'bg-black bg-opacity-0'} ${
-        props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'
-      } ${scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'} ${
+      } h-20 w-full ${
+        props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
+      } transition-all duration-100 lg:h-16 ${
+        props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
+      } ${scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
       } z-50 border-b border-black`}
     >
@@ -206,10 +207,22 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-              {!props.hideNavbar ? (
-                <LanguageBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
+              {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
+            </div>
+
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
+              {props.isBlackfriday && scrolled ? (
+                <div className="flex flex-row items-center space-x-2 px-4 py-2">
+                  <p className="text-4xl font-bold text-white">85% OFF</p>
+                  <Button
+                    onClick={() => router.push('#billingButtons')}
+                    className="rounded-lg bg-primary px-4 py-1 text-sm font-semibold text-white"
+                    text={'Get the deal!'}
+                  />
+                </div>
               ) : undefined}
             </div>
+
             {!props.isLinksHidden && (
               <div className="lg:hidden">
                 <Hamburger
@@ -227,7 +240,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       menuState ? 'h-screen w-screen pb-14' : 'h-0 '
                     }`}
                   >
-                    <div className="mt-4 flex flex-col text-gray-100 overflow-y-auto h-full">
+                    <div className="mt-4 flex flex-col text-gray-100">
                       <Link
                         href="/pricing"
                         locale={props.lang}
@@ -378,7 +391,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-                      
+                      <LanguageMobileBox darkMode={props.darkMode} />
                       <a
                         onClick={() => {
                           setMenuState(false);
@@ -391,7 +404,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                       >
                         {props.textContent.links.login}
                       </a>
-                      <LanguageMobileBox darkMode={props.darkMode} singlesDay={props.singlesDay} />
                     </div>
                   </div>
                 }

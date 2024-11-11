@@ -36,6 +36,7 @@ interface PriceTableProps {
   hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
+  darkMode?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -72,17 +73,18 @@ export const PricingSection = ({
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
+  darkMode,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
   const isBusiness = activeSwitchPlan === 'Business';
-  const labelDiscount = isBusiness ? '10' : '23';
+  const labelDiscount = '15';
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
-
-  const showSwitchComponent = activeSwitchPlan === 'Business' && !hideBusinessCards;
+  const showSwitchComponent =
+    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -128,12 +130,12 @@ export const PricingSection = ({
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
-            isHalloween
+            darkMode={darkMode}
           />
         )}
 
         {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        {!hideSwitchSelector && (
+        {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
           <SwitchComponent
             textContent={textContent}
             show={showSwitchComponent}
@@ -142,6 +144,7 @@ export const PricingSection = ({
             handleOnSwitchIsToggled={switchHandler}
             labelDiscount={labelDiscount}
             showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+            darkMode={darkMode}
           />
         )}
       </div>
@@ -182,8 +185,15 @@ export const PricingSection = ({
                   }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
-                  decimalDiscountValue={product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : undefined}
+                  decimalDiscountValue={
+                    product.interval === Interval.Lifetime ||
+                    product.interval === Interval.Year ||
+                    product.interval === Interval.Month
+                      ? decimalDiscount?.lifetime
+                      : undefined
+                  }
                   lang={lang}
+                  darkMode={darkMode}
                 />
               ))
             : undefined}
@@ -226,6 +236,7 @@ export const PricingSection = ({
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
+                      darkMode={darkMode}
                     />
                   ))
                 : undefined}
@@ -237,7 +248,7 @@ export const PricingSection = ({
         {features.map((feature) => (
           <div key={feature.text} className="flex flex-row items-center space-x-3">
             <feature.icon size={40} className="text-primary md:pb-0" />
-            <p className="text-xl font-medium text-gray-80">{feature.text}</p>
+            <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
           </div>
         ))}
       </div>

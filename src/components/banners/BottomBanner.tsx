@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
@@ -33,77 +33,76 @@ const BottomBanner = () => {
     switch (lang) {
       case 'en':
         return {
-          title1: 'Save 80%',
+          title1: 'Save 85%',
           title2: {
-            line1: 'Killer Halloween',
-            line2: 'deals!',
+            line1: 'Back to',
+            line2: 'Black Friday!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra 80%',
+          title1: 'Ahorra 85%',
           title2: {
-            line1: 'Descuentos mortales',
-            line2: 'de Halloween',
+            line1: 'De vuelta',
+            line2: 'al Black Friday!',
           },
         };
       case 'ru':
         return {
-          title1: 'Сэкономьте 80%',
+          title1: 'Сэкономьте 85%',
           title2: {
-            line1: 'Смертельные скидки',
-            line2: 'на Хэллоуин!',
+            line1: 'Назад к',
+            line2: 'Чёрной пятнице!',
           },
         };
       case 'fr':
         return {
-          title1: 'Économisez 80 %',
+          title1: 'Économisez 85 %',
           title2: {
-            line1: 'Réductions mortelles',
-            line2: 'd’Halloween!',
+            line1: 'Retour',
+            line2: 'au Black Friday!',
           },
         };
       case 'it':
         return {
-          title1: 'Risparmia il 80%',
+          title1: 'Risparmia il 85%',
           title2: {
-            line1: 'Sconti mortali',
-            line2: 'di Halloween!',
+            line1: 'Torna il',
+            line2: 'Black Friday!',
           },
         };
       case 'zh':
         return {
-          title1: '节省80%',
+          title1: '节省85%',
           title2: {
-            line1: '致命的万圣节',
-            line2: '优惠!',
+            line1: '',
+            line2: '回到黑色星期五！',
           },
         };
       case 'zh-tw':
         return {
-          title1: '節省 80%',
+          title1: '節省 85%',
           title2: {
-            line1: '致命的萬聖節',
-            line2: '優惠!',
+            line1: '',
+            line2: '回到黑色星期五！',
           },
         };
       case 'de':
         return {
-          title1: 'Spare 80%',
+          title1: 'Spare 85%',
           title2: {
-            line1: 'Tödliche Halloween',
-            line2: 'Angebote!',
+            line1: 'Zurück zum',
+            line2: 'Black Friday!',
           },
         };
       default:
         return {
-          title1: 'Save 80%',
+          title1: 'Save 85%',
           title2: {
-            line1: 'Work smart, ',
-            line2: 'not hard!',
+            line1: 'Back to',
+            line2: 'Black Friday!',
           },
         };
-
     }
   };
 
@@ -112,7 +111,7 @@ const BottomBanner = () => {
       case 'en':
         return 'Claim deal';
       case 'es':
-        return '¿Te atreves?';
+        return 'Reclamar oferta';
       case 'ru':
         return 'Получить скидку';
       case 'fr':
@@ -127,19 +126,13 @@ const BottomBanner = () => {
         return 'Angebot sichern';
       default:
         return 'Choose plan';
-
     }
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] lg:${
-        shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
-      style={{
-        backgroundImage: `url(${getImage('/images/campaigns/halloween/web.svg')})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'auto',
-      }}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
+        styles.radialGradient
+      } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">
@@ -155,8 +148,8 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/campaigns/halloween/internx_halloween_pricing.webp')}
-              width={160}
+              src={getImage('/images/black-friday/black_friday_horizontal_sale.png')}
+              width={243}
               height={100}
               draggable={false}
               alt={'Surveillance left'}
@@ -164,8 +157,8 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-gray-100">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-gray-100">
+              <p className="text-6xl font-bold text-white">{title().title1}</p>
+              <p className="max-w-[370px] text-2xl font-semibold text-white">
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
@@ -179,9 +172,7 @@ const BottomBanner = () => {
               {ctaText()}
             </button>
           </div>
-          <div className="flex flex-col justify-end object-contain">
-           
-          </div>
+          <div className="flex flex-col justify-end object-contain"></div>
         </div>
       </div>
     </section>

@@ -48,19 +48,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Economize 80%",
-    "title": "Proteja o seu mundo digital!",
+    "label": "Economize 85%!",
+    "title": "As melhores ofertas da Black Friday",
     "subtitle": "Ganhe nossa mochila premium com nossos planos vitalícios.",
-    "cta": "Escolher plano",
+    "cta": "Escolha seu plano",
     "guarantee": "Garantia de reembolso de 30 dias",
-    "lastCta": "*Oferta válida para contas gratuitas ou novos clientes",
+    "lastCta": "*A oferta é válida para contas gratuitas ou novos clientes",
     "features": [
-      "Economize muito em todos os planos Internxt",
-      "Armazenamento em nuvem seguro e protegido",
-      "Código aberto e transparente",
+      "Economize muito em todos os planos premium",
+      "Armazenamento em nuvem privado e criptografado",
+      "Código aberto e auditado",
       "Transferências criptografadas de ponta a ponta",
       "Sem acesso não autorizado",
-      "Oferta válida até 10 de novembro"
+      "A oferta termina em 3 de dezembro"
     ]
   },
   "s3StorageBanner": {
@@ -151,9 +151,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de desconto no seu próximo plano vitalício",
-      "normalText": "Olá, quero jogar um jogo!",
-      "cta": "Você se atreve?"
+      "boldText": "85% de desconto em TODOS os planos premium.",
+      "normalText": "Super oferta de Black Friday!",
+      "cta": "Compre seu plano"
     }
   },
   "lifetimeBanner": {

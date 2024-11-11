@@ -2,11 +2,11 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "Black Friday",
-        "line2": "is coming soon!"
+        "line1": "The ultimate Black Friday",
+        "line2": "Sale!"
       },
-      "description": "Get privacy for a great price!",
-
+      "description": "85% OFF all premium plans.",
+      "guarantee": "30-day money-back guarantee",
       "pricingTable": {
         "only": "Only",
         "priceNow": "3.59",
