@@ -78,7 +78,8 @@
         "passwordChecker": "Comprobador de Contraseñas",
         "byteConverter": "Convertidor de Unidades",
         "passwordGenerator": "Generador de Contraseñas",
-        "fileConverter": "Convertidor de archivos"
+        "fileConverter": "Convertidor de archivos",
+        "haveIBeenPwned": "¿He sido hackeado?"
       },
       "language": "Idioma"
     }

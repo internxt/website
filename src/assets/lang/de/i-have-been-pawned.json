@@ -1,0 +1,96 @@
+{
+  "HeroSection": {
+    "tagline": "Internxt Monitor",
+    "title": "Wurde ich gehackt?",
+    "subtitle": "Prüfen Sie, ob Ihre E-Mail bei einer Datenpanne offengelegt wurde.",
+    "description": "Internxt Monitor überprüft, ob Ihre E-Mail in einer Datenpanne kompromittiert wurde, anhand einer Datenbank kompromittierter Konten.",
+    "placeHolder": "Ihre E-Mail-Adresse",
+    "toolTip": "Wir speichern oder teilen Ihre E-Mail-Adresse nicht"
+  },
+  "InfoSection": {
+    "pwnedWebsites": "kompromittierte Websites",
+    "pwnedAccounts": "kompromittierte Konten",
+    "pastes": "Pastes"
+  },
+  "AllGoodSection": {
+    "title": "Alles in Ordnung!",
+    "description": "Keine kompromittierten Konten oder Pastes.",
+    "StaySecure": "Bleiben Sie online sicher mit starken Passwörtern und Multi-Faktor-Authentifizierung."
+  },
+  "PwnedSection": {
+    "title": "Oh nein!",
+    "description": "Ihre E-Mail wurde in X Datenpannen und X Pastes gefunden.",
+    "recomendation": "Wir empfehlen, sofort Maßnahmen zu ergreifen, um Ihre Konten zu sichern.",
+    "breachesSection": {
+      "title": "Datenpannen, bei denen Ihre E-Mail gefunden wurde",
+      "description": "Eine Datenpanne tritt auf, wenn Ihre E-Mail, Ihr Name, Ihre Adresse oder andere persönliche Informationen versehentlich online offengelegt werden.",
+      "linkToPasswordGenerator": {
+        "linkText": "Internxt Passwort-Generator",
+        "otherText": "erstellt einzigartige, starke Passwörter, um Ihre Konten und Daten zu schützen."
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "Werden Sie nicht zur Statistik",
+    "description": "Überprüfen Sie Ihre Konten mit Internxt Dark Web Monitor.",
+    "cta": "Jetzt überprüfen"
+  },
+  "CtaSection2": {
+    "title": "Warten Sie nicht, bis eine Datenpanne passiert",
+    "description": "Überprüfen und schützen Sie Ihre Informationen mit Internxt.",
+    "cta": "Jetzt überprüfen"
+  },
+  "FeatureSection": {
+    "title": "Was tun, wenn Ihre E-Mail im Dark Web durchgesickert ist",
+    "description": "Internxt Dark Web Monitor ist Teil unserer Mission, Sie vor Hackern zu schützen, die Ihre Daten im Dark Web leaken.",
+    "description2": "Internxt setzt sich dafür ein, Sie in der digitalen Welt sicher zu halten. Entdecken Sie effektive Strategien, um Ihre Konten zu sichern und Risiken zu mindern, falls Ihre E-Mail im Dark Web kompromittiert wurde.",
+    "cards": [
+      {
+        "title": "Starke Passwörter erstellen",
+        "description": "Wenn Ihre E-Mail im Dark Web durchgesickert ist, sollten Sie als Erstes Ihre Passwörter ändern. Internxt's Passwort-Generator erstellt starke Passwörter oder Passphrasen, um zu verhindern, dass Hacker auf Ihre Konten zugreifen.",
+        "cta": "Erstellen",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Verwenden Sie ein VPN",
+        "description": "Internxt VPN reduziert die Chancen von Datenpannen erheblich, indem es Ihre IP-Adresse verschlüsselt und verbirgt. Unser VPN stellt sicher, dass alle Daten, die beim Surfen im Internet übertragen werden, verschlüsselt und vor unbefugtem Zugriff geschützt sind.",
+        "cta": "Herunterladen",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Überprüfen Sie die Passwortstärke",
+        "description": "Überprüfen Sie, wie sicher Ihr Passwort ist, mit dem Internxt Passwort-Checker. Sehen Sie die Passwortstärke, die Anzahl der Funde in Leaks und die Zeit, die Hacker benötigen würden, um Ihr Passwort mit Brute-Force-Angriffen oder spezialisierter Software zu knacken.",
+        "cta": "Überprüfen",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Dateien privat speichern",
+        "description": "Internxt Drive verschlüsselte Cloud-Speicherung verwendet End-to-End-Verschlüsselung, um Ihre sensiblen Informationen zu schützen und Datenpannen sowie Hacker daran zu hindern, Ihre Informationen im Dark Web zu leaken.",
+        "cta": "Abonnieren",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Wurden Sie bei den größten Datenpannen der Welt kompromittiert?",
+    "description": "Überprüfen Sie Ihre E-Mail und ergreifen Sie Maßnahmen, um Ihre Konten mit Internxt Monitor zu sichern.",
+    "cards": [
+      {
+        "title": "Internet-Archiv",
+        "description": "Im September 2024 erlitt das Internet Archive's 'Wayback Machine' einen bedeutenden Datenverlust, als ein Bedrohungsakteur eine Benutzerauthentifizierungs-Datenbank mit 31 Millionen Datensätzen stahl. Zu den gestohlenen Daten gehörten E-Mail-Adressen, Benutzernamen und bcrypt-Passworthashes."
+      },
+      {
+        "title": "Facebook",
+        "description": "Im April 2021 wurden Daten von über 500 Millionen Facebook-Nutzern im Dark Web zum Download angeboten. Die gestohlenen Daten enthielten Telefonnummern, 2,5 Millionen E-Mail-Adressen und andere persönliche Informationen, die für Cyberangriffe wie Phishing verwendet werden können."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io erlitt einen Datenverlust, da Daten in einer öffentlich zugänglichen MongoDB-Instanz ohne Passwortschutz gespeichert wurden. Die gestohlenen Daten umfassten 763 Millionen eindeutige E-Mails, Namen, Telefonnummern, IP-Adressen, Geburtsdaten und Geschlechter."
+      },
+      {
+        "title": "Collection #1",
+        "description": "Im Januar 2018 wurde durch den Collection #1 Datenverlust eine Sammlung von 2,7 Milliarden Datensätzen im Dark Web und in Online-Foren veröffentlicht. Die Daten enthielten über 77 Millionen E-Mail-Adressen und mehr als 21 Millionen Passwörter aus mehreren Datenpannen."
+      }
+    ]
+  }
+}

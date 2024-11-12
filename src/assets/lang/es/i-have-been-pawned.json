@@ -1,0 +1,96 @@
+{
+  "HeroSection": {
+    "tagline": "Internxt Monitor",
+    "title": "¿He sido hackeado?",
+    "subtitle": "Comprueba si tu correo electrónico ha sido expuesto en una filtración de datos.",
+    "description": "Internxt Monitor verifica si tu correo electrónico ha estado involucrado en una filtración de datos usando una base de datos de cuentas comprometidas.",
+    "placeHolder": "Tu correo electrónico",
+    "toolTip": "No almacenamos ni compartimos tu correo electrónico"
+  },
+  "InfoSection": {
+    "pwnedWebsites": "sitios web comprometidos",
+    "pwnedAccounts": "cuentas comprometidas",
+    "pastes": "pastes"
+  },
+  "AllGoodSection": {
+    "title": "¡Todo bien!",
+    "description": "No se encontraron cuentas o pastes comprometidos.",
+    "StaySecure": "Mantente seguro en línea con contraseñas fuertes y autenticación de múltiples factores."
+  },
+  "PwnedSection": {
+    "title": "¡Oh no!",
+    "description": "Tu correo electrónico fue encontrado en X filtraciones de datos y X pastes.",
+    "recomendation": "Te recomendamos tomar medidas inmediatas para asegurar tus cuentas.",
+    "breachesSection": {
+      "title": "Filtraciones donde se encontró tu correo electrónico",
+      "description": "Una filtración de datos ocurre cuando tu correo electrónico, nombre, dirección u otra información personal se filtra accidentalmente al público en línea.",
+      "linkToPasswordGenerator": {
+        "linkText": "Generador de contraseñas de Internxt",
+        "otherText": "crea contraseñas únicas y seguras para proteger tus cuentas y datos."
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "No seas otra estadística",
+    "description": "Verifica tus cuentas con Internxt Dark Web Monitor.",
+    "cta": "Verificar ahora"
+  },
+  "CtaSection2": {
+    "title": "No esperes a que ocurra una filtración de datos",
+    "description": "Verifica y protege tu información con Internxt.",
+    "cta": "Verificar ahora"
+  },
+  "FeatureSection": {
+    "title": "Qué hacer si tu correo electrónico ha sido filtrado en la dark web",
+    "description": "Internxt Dark Web Monitor es parte de nuestra misión para protegerte de los hackers que filtran tus datos en la dark web.",
+    "description2": "Internxt está comprometido a mantenerte seguro en el mundo digital. Descubre estrategias efectivas para asegurar tus cuentas y reducir riesgos si tu correo electrónico ha sido comprometido en la dark web.",
+    "cards": [
+      {
+        "title": "Crear contraseñas seguras",
+        "description": "Si tu correo electrónico ha sido filtrado en la dark web, lo primero que debes hacer es cambiar tus contraseñas. El generador de contraseñas de Internxt crea contraseñas fuertes o frases de contraseña para evitar que los hackers accedan a tus cuentas.",
+        "cta": "Generar",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Usa una VPN",
+        "description": "La VPN de Internxt reduce en gran medida las posibilidades de filtraciones de datos al encriptar y ocultar tu dirección IP. Nuestra VPN asegura que todos los datos transmitidos mientras navegas estén encriptados y protegidos contra accesos no autorizados.",
+        "cta": "Descargar",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Revisa la seguridad de tu contraseña",
+        "description": "Revisa qué tan segura es tu contraseña con el verificador de contraseñas de Internxt. Verás la seguridad de la contraseña, cuántas veces ha sido filtrada y cuánto tiempo le tomaría a los hackers descifrarla con ataques de fuerza bruta o software especializado.",
+        "cta": "Revisar",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Almacena archivos de forma privada",
+        "description": "El almacenamiento en la nube encriptado de Internxt Drive utiliza encriptación de extremo a extremo para proteger tu información sensible y evitar filtraciones de datos y que hackers expongan tu información en la dark web.",
+        "cta": "Suscribirse",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "¿Has sido víctima de las mayores filtraciones de datos del mundo?",
+    "description": "Comprueba tu correo electrónico y toma medidas para proteger tus cuentas con Internxt Monitor.",
+    "cards": [
+      {
+        "title": "Archivo de Internet",
+        "description": "En septiembre de 2024, el 'Wayback Machine' del Archivo de Internet sufrió una gran filtración de datos cuando un actor de amenazas robó una base de datos de autenticación de usuarios con 31 millones de registros. Los datos incluían direcciones de correo electrónico, nombres de usuario y hashes de contraseñas bcrypt."
+      },
+      {
+        "title": "Facebook",
+        "description": "En abril de 2021, los datos de más de 500 millones de usuarios de Facebook se pusieron a disposición para su descarga en la dark web. Los datos incluían números de teléfono, 2,5 millones de direcciones de correo electrónico y otra información personal que puede utilizarse en ciberataques como el phishing."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io sufrió una filtración de datos debido a que los datos se almacenaban en una instancia de MongoDB expuesta públicamente sin protección de contraseña. La filtración expuso 763 millones de correos electrónicos únicos, nombres, números de teléfono, direcciones IP, fechas de nacimiento y géneros."
+      },
+      {
+        "title": "Collection #1",
+        "description": "En enero de 2018, la filtración de datos de Collection #1 expuso 2,7 mil millones de registros que se hicieron disponibles en la dark web y en foros en línea. Los datos incluían más de 77 millones de direcciones de correo electrónico y más de 21 millones de contraseñas de múltiples filtraciones."
+      }
+    ]
+  }
+}

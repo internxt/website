@@ -32,7 +32,7 @@
   },
   "CtaSection": {
     "title": "Don’t become another statistic",
-    "description": "Check your accounts with Internx Dark Web Monitor.",
+    "description": "Check your accounts with Internxt Dark Web Monitor.",
     "cta": "Check now"
   },
   "CtaSection2": {
@@ -66,7 +66,7 @@
       {
         "title": "Store files privately",
         "description": "Internxt Drive encrypted cloud storage uses end-to-end encryption to protect your sensitive information and prevent data breaches and hackers from leaking your information on the dark web. ",
-        "cta": "Suscribe",
+        "cta": "Susbcribe",
         "redirect": "/drive"
       }
     ]

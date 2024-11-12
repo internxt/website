@@ -1,0 +1,96 @@
+{
+  "HeroSection": {
+    "tagline": "Internxt Monitor",
+    "title": "Fui hackeado?",
+    "subtitle": "Verifique se seu e-mail foi exposto em uma violação de dados.",
+    "description": "O Internxt Monitor verifica se seu e-mail foi envolvido em uma violação de dados, consultando um banco de dados de contas comprometidas.",
+    "placeHolder": "Seu endereço de e-mail",
+    "toolTip": "Não armazenamos nem compartilhamos seu endereço de e-mail"
+  },
+  "InfoSection": {
+    "pwnedWebsites": "sites comprometidos",
+    "pwnedAccounts": "contas comprometidas",
+    "pastes": "pastes"
+  },
+  "AllGoodSection": {
+    "title": "Tudo certo!",
+    "description": "Nenhuma conta comprometida ou paste encontrado.",
+    "StaySecure": "Mantenha-se seguro online com senhas fortes e autenticação multifator."
+  },
+  "PwnedSection": {
+    "title": "Oh não!",
+    "description": "Seu e-mail foi encontrado em X violações de dados e X pastes.",
+    "recomendation": "Recomendamos tomar medidas imediatas para proteger suas contas.",
+    "breachesSection": {
+      "title": "Violações onde seu e-mail foi encontrado",
+      "description": "Uma violação de dados ocorre quando seu e-mail, nome, endereço ou outras informações pessoais são divulgadas publicamente na internet.",
+      "linkToPasswordGenerator": {
+        "linkText": "Gerador de Senhas Internxt",
+        "otherText": "cria senhas fortes e únicas para proteger suas contas e dados."
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "Não seja apenas mais uma estatística",
+    "description": "Verifique suas contas com o Internxt Dark Web Monitor.",
+    "cta": "Verificar agora"
+  },
+  "CtaSection2": {
+    "title": "Não espere até que ocorra uma violação de dados",
+    "description": "Verifique e proteja suas informações com o Internxt.",
+    "cta": "Verificar agora"
+  },
+  "FeatureSection": {
+    "title": "O que fazer se seu e-mail vazou na dark web",
+    "description": "O Internxt Dark Web Monitor faz parte da nossa missão de proteger você contra hackers que vazam seus dados na dark web.",
+    "description2": "O Internxt está comprometido em mantê-lo seguro no mundo digital. Descubra estratégias eficazes para proteger suas contas e reduzir os riscos se seu e-mail foi comprometido na dark web.",
+    "cards": [
+      {
+        "title": "Crie senhas fortes",
+        "description": "Se seu e-mail vazou na dark web, a primeira coisa que você deve fazer é mudar suas senhas. O Gerador de Senhas da Internxt cria senhas ou frases fortes para impedir que hackers acessem suas contas.",
+        "cta": "Gerar",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Use uma VPN",
+        "description": "A VPN da Internxt reduz significativamente as chances de violações de dados ao criptografar e ocultar seu endereço IP. Nossa VPN garante que todos os dados transmitidos enquanto você navega online sejam criptografados e protegidos contra acessos não autorizados.",
+        "cta": "Baixar",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Verifique a segurança da sua senha",
+        "description": "Verifique a segurança da sua senha com o Verificador de Senhas da Internxt. Veja a força da sua senha, o número de vezes que ela foi encontrada em vazamentos e o tempo que levaria para hackers quebrarem sua senha usando ataques de força bruta ou software especializado.",
+        "cta": "Verificar",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Armazene arquivos com privacidade",
+        "description": "O armazenamento em nuvem criptografado do Internxt Drive usa criptografia de ponta a ponta para proteger suas informações sensíveis e impedir que hackers vazem suas informações na dark web.",
+        "cta": "Assinar",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Você foi comprometido nas maiores violações de dados do mundo?",
+    "description": "Verifique seu e-mail e tome medidas para proteger suas contas com o Internxt Monitor.",
+    "cards": [
+      {
+        "title": "Internet Archive",
+        "description": "Em setembro de 2024, a 'Wayback Machine' do Internet Archive sofreu uma violação significativa de dados quando um invasor roubou um banco de dados de autenticação de usuários contendo 31 milhões de registros. Os dados da violação incluíam endereços de e-mail, nomes de usuário e hashes de senha bcrypt."
+      },
+      {
+        "title": "Facebook",
+        "description": "Em abril de 2021, dados de mais de 500 milhões de usuários do Facebook foram disponibilizados para download na dark web. Os dados da violação incluíam números de telefone, 2,5 milhões de endereços de e-mail e outras informações pessoais que podem ser usadas em ataques de phishing."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "A Verifications.io sofreu uma violação de dados devido a um banco de dados MongoDB exposto publicamente sem proteção por senha. A violação expôs 763 milhões de e-mails únicos, nomes, números de telefone, endereços IP, datas de nascimento e gêneros."
+      },
+      {
+        "title": "Collection #1",
+        "description": "Em janeiro de 2018, a violação de dados Collection #1 expôs 2,7 bilhões de registros, disponibilizados na dark web e em fóruns online. Os dados incluíam mais de 77 milhões de endereços de e-mail e mais de 21 milhões de senhas de várias violações."
+      }
+    ]
+  }
+}
