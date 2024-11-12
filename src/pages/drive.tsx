@@ -86,8 +86,6 @@ const Drive = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="drive" />
-
         <HeroSection textContent={textContent.HeroSection} lang={lang} download={download} />
 
         <div className="flex items-center justify-center px-2 pb-20">
