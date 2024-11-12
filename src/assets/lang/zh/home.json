@@ -126,8 +126,8 @@
     },
     "freePlanCard": {
       "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多10GB的容量，并获得所有我们的服务",
-      "upTo": "最高10GB",
+      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
+      "upTo": "最高1GB",
       "freeForever": "永久免费",
       "cta": "选择计划"
     },
