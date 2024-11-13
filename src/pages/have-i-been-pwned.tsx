@@ -13,7 +13,21 @@ import { HeroSection } from '@/components/monitor/HeroSection';
 import { InfoSection } from '@/components/monitor/InfoSection';
 import { AllGoodSection } from '@/components/monitor/AllGoodSection';
 import { PwnedSection } from '@/components/monitor/PwnedSection';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
+import { GetServerSidePropsContext } from 'next';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { ToolsSectionText } from '@/assets/types/components/toolsSection';
+import { BannersText } from '@/assets/types/components/banners';
 
+interface MonitorProps {
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  langJson: HaveIbeenPwnedText;
+  footerLang: FooterText;
+  toolsContent: ToolsSectionText;
+  bannerLang: BannersText;
+}
 const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson, toolsContent, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'monitor');
   const cardsForFeatureSection = [
@@ -39,13 +53,7 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
     },
   ];
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Monitor"
-      lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
