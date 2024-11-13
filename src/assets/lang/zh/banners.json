@@ -9,7 +9,7 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "所有高级计划享受75%折扣",
+    "title": "获取独家折扣！",
     "subtitle": { "blue": "特别优惠：", "normal": "更便宜地私人存储文件" },
     "getDealCta": "获取优惠",
     "freePlanCta": "继续使用免费计划",
@@ -45,8 +45,8 @@
     }
   },
   "featuresBanner": {
-    "label": "节省80%",
-    "title": "Boo！来和我们一起省钱...",
+    "label": "节省85%！",
+    "title": "最佳黑色星期五优惠",
     "subtitle": "赢取我们终身计划的高级背包。",
     "cta": "选择计划",
     "guarantee": "30天退款保证",

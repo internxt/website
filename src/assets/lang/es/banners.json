@@ -9,7 +9,7 @@
     "cancelCta": "Cancelar"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtén un 75% de descuento en todos nuestros planes",
+    "title": "Obtén un descuento exclusivo!",
     "subtitle": { "blue": "Oferta especial:", "normal": " almacena archivos de manera privada por menos" },
     "getDealCta": "Obtener oferta",
     "freePlanCta": "Continuar con el plan gratuito",
