@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% DE DESCUENTO ",
-        "normal2": "en los planes Lifetime"
+        "blue": "85% DE DESCUENTO ",
+        "normal2": "en todos los planes"
       },
       "features": ["Hasta 10TB de almacenamiento", "Cifrado de conocimiento cero", "Código abierto y auditado"],
       "startFrom": {

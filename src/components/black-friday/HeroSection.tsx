@@ -1,35 +1,43 @@
-import { Alarm, CircleWavyCheck } from '@phosphor-icons/react';
+import { Alarm, CheckCircle } from '@phosphor-icons/react';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
 import Countdown from '@/components/components/Countdown';
-import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent, lang }) => {
-
   return (
     <section className="relative flex w-full flex-col overflow-hidden">
-      <div className="relative flex items-center justify-center overflow-hidden">
+      {/* Desktop Version */}
+      <div className="hidden items-center justify-center overflow-hidden md:flex">
         <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-10 sm:mb-6 sm:pt-0 md:flex-row md:space-y-0 lg:mx-32 lg:justify-between lg:space-x-11">
           <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
             <div className="flex flex-row">
               <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown dt={'2024-11-29T00:00:00'} textColor={'white'} />
+              <Countdown dt={'2024-12-03T00:00:00'} textColor={'white'} />
             </div>
-            <p className="text-white text-6xl font-bold">
+            <p className="text-4xl font-bold text-white sm:text-6xl">
               {textContent.HeroSection.title.line1}
               <br />
               {textContent.HeroSection.title.line2}
             </p>
-            <p className='text-4xl text-white font-bold'>{textContent.HeroSection.description}</p>
-            <div className="">
+            <p className="text-2xl font-bold text-white sm:text-4xl">{textContent.HeroSection.description}</p>
+            <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
               <ButtonDeal lang={lang} />
+              <div className="flex items-center space-x-2">
+                <CheckCircle size={20} className="text-primary" />
+                <p className="text-sm font-medium text-gray-5">{textContent.HeroSection.guarantee}</p>
+              </div>
             </div>
           </div>
-          <div className="flex w-full  flex-col md:mt-0 md:max-w-none md:flex-row">
+          <div className="flex w-full flex-col md:mt-0 md:max-w-none md:flex-row">
             <div className="relative flex items-center justify-center md:h-[600px] lg:left-16 lg:mt-10">
-              <Image src={getImage('/images/black-friday/internxt_black_friday_2024.webp')} alt={'BFCampaign'} width={520} height={520} />
+              <Image
+                src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
+                alt={'Black Friday Discounts'}
+                width={520}
+                height={520}
+              />
             </div>
           </div>
         </div>
@@ -38,15 +46,33 @@ const HeroSection = ({ textContent, lang }) => {
         />
       </div>
 
-       <div className="sm:gap-x-30 flex flex-row flex-wrap items-center bg-highlight justify-center gap-x-20 gap-y-10 py-14">
-        {textContent.HeroSection.features.map((feature, index) => (
-          <div key={index} className={`flex max-w-[230px] min-h-[150px] flex-col items-center space-y-4 text-center text-white`}>
-            <CircleWavyCheck size={40} weight="fill" className="text-primary" />
-            <p className="text-xl font-semibold">{feature}</p>
+      {/* Mobile Version */}
+      <div className="flex items-center justify-center overflow-hidden md:hidden">
+        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-10 sm:mb-6 sm:pt-0 lg:mx-32 lg:justify-between lg:space-x-11">
+          <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-6 text-center sm:w-auto lg:max-w-lg">
+            <div className="flex flex-row items-center space-x-4">
+              <Alarm size={32} className="text-primary" />
+              <Countdown dt={'2024-12-03T00:00:00'} textColor={'white'} textHeight="text-3xl" />
+            </div>
+            <p className="text-5xl font-bold text-white">
+              {textContent.HeroSection.title.line1}
+              <br />
+              {textContent.HeroSection.title.line2}
+            </p>
+            <p className="max-w-xs text-4xl font-bold text-white sm:max-w-md">{textContent.HeroSection.description}</p>
+            <div className="flex flex-col items-center space-y-4">
+              <ButtonDeal lang={lang} />
+              <div className="flex items-center space-x-2">
+                <CheckCircle size={24} className="text-primary" />
+                <p className="text-lg font-medium text-gray-5">{textContent.HeroSection.guarantee}</p>
+              </div>
+            </div>
           </div>
-        ))}
+        </div>
+        <div
+          className={`absolute left-0 top-0 -z-10 flex h-full w-screen ${styles.radialGradient} pointer-events-none origin-center`}
+        />
       </div>
-      
     </section>
   );
 };

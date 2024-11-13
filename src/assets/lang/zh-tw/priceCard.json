@@ -1,3 +1,4 @@
+
 {
   "mostPopular": "最受歡迎",
   "mostPopularPlan": "最受歡迎的計劃",
@@ -93,6 +94,15 @@
       "2TB": ["星際大戰壁紙", "Web App 的星際大戰主題"],
       "5TB": ["星際大戰壁紙", "Web App 的星際大戰主題"],
       "10TB": ["星際大戰壁紙", "Web App 的星際大戰主題", "星際大戰貼紙"]
+    },
+    "halloweenFeatures": {
+      "title": "Internxt 主題好禮：",
+      "200GB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
+      "1TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
+      "2TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
+      "5TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
+      "10TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
+      "tooltip": "購買任何終身計劃即可有機會贏得獎品！"
     },
     "cheaperThan": {
       "lifetime": {

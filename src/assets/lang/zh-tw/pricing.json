@@ -31,16 +31,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "立省 80%",
+      "label": "立省 85%",
       "title": "致命的萬聖節折扣",
-      "subtitle": "所有 Internxt 終身計劃！",
+      "subtitle": " 黑色星期五來了！",
       "cta": "選擇您的計劃",
-      "cta2": "享受 80% 折扣",
+      "cta2": "享受 85% 折扣",
       "guarantee": "30 天退款保證",
       "lastCta": "*優惠僅適用於免費帳戶或新客戶",
-      "titleMbl1": "致命",
-      "titleMbl2": "折扣",
-      "titleMbl3": "萬聖節",
+      "titleMbl1": "黑色星期五來了！",
+      "titleMbl2": "",
+      "titleMbl3": "",
       "ctaMbl": "選擇計劃"
     },
     "save": "節省高達",
@@ -51,6 +51,10 @@
       "lifetimeCampaign": {
         "blueText": "獲得 50% 折扣",
         "normalText": "所有我們的獨家終身計劃"
+      },
+      "blackFriday": {
+        "title": "黑色星期五超級促銷：最安全的雲端儲存方案享85%折扣",
+        "description": "使用 Internxt 保護您的數據，避免數據洩露、財務損失和隱私風險。告別那些從您的個人信息中牟利的科技巨頭。"
       }
     },
     "lifetimeDescription": "一次購買，永久享受隱私和安全。",
