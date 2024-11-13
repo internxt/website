@@ -1,5 +1,4 @@
 /* eslint-disable no-dupe-keys */
-const { green } = require('@mui/material/colors');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
