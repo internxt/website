@@ -6,6 +6,7 @@ interface EmailToolBarProps {
   textContent: {
     placeHolder: string;
     toolTip: string;
+    toolTipEmergent: string;
   };
 }
 
@@ -22,9 +23,9 @@ function EmailToolbar({ textContent }: Readonly<EmailToolBarProps>) {
       </div>
       <div className="mt-5 flex flex-row items-center space-x-1 text-sm text-gray-50">
         <Info size={16} data-tooltip-id="email-tooltip" />
-        <span data-tooltip-id="email-tooltip">{textContent.toolTip}</span>
+        <span data-tooltip>{textContent.toolTip}</span>
         <Tooltip id="email-tooltip" place="top">
-          Your email is only checked against databases for breaches.
+          {textContent.toolTipEmergent}
         </Tooltip>
       </div>
     </div>

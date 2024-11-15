@@ -1,8 +1,7 @@
 'use client';
 
 import { ArrowCircleDown, SmileyMeh, WarningCircle } from '@phosphor-icons/react';
-import { CheckCircle, Smiley } from '@phosphor-icons/react/dist/ssr';
-import { PwnedElement } from './PwnedElement';
+import PwnedElementCard from './PwnedElement';
 
 export const PwnedSection = ({ textContent }) => {
   return (
@@ -11,7 +10,6 @@ export const PwnedSection = ({ textContent }) => {
       <p className="text-3xl font-semibold text-gray-100">{textContent.title}</p>
       <div className="my-4 flex items-center justify-center rounded-md bg-red8 px-10 py-2 text-center">
         <WarningCircle className="h-12 w-12 text-red md:h-6 md:w-6" weight="fill" />
-
         <p className="font-regular ml-2 text-base text-gray-100">{textContent.description}</p>
       </div>
       <p className="font-regular px-5 text-center text-base text-gray-100">{textContent.recomendation}</p>
@@ -28,8 +26,7 @@ export const PwnedSection = ({ textContent }) => {
           </a>
           <p className="ml-2">{textContent.breachesSection.linkToPasswordGenerator.otherText}</p>
         </div>
-        <PwnedElement />
-        <PwnedElement />
+        <PwnedElementCard textContent={textContent.pwnedElement} />
       </div>
     </div>
   );

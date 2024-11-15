@@ -28,8 +28,17 @@ interface MonitorProps {
   toolsContent: ToolsSectionText;
   bannerLang: BannersText;
 }
-const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson, toolsContent, bannerLang }) => {
+const Monitor = ({
+  lang,
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  langJson,
+  toolsContent,
+  bannerLang,
+}: MonitorProps) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'monitor');
+  const locale = lang as string;
   const cardsForFeatureSection = [
     {
       icon: Globe,
@@ -54,7 +63,7 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
   ];
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -76,7 +85,7 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
         SecondComponent={
           <div className="flex flex-col items-center space-y-12">
             <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
-            <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={lang} />
+            <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={locale} />
           </div>
         }
         backgroundColor="bg-gray-1"
@@ -96,9 +105,9 @@ const Monitor = ({ lang, metatagsDescriptions, navbarLang, footerLang, langJson,
         url={''}
       />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+      <ToolsSection textContent={toolsContent} lang={locale} />
 
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      <Footer textContent={footerLang} lang={locale} hideNewsletter={false} />
     </Layout>
   );
 };

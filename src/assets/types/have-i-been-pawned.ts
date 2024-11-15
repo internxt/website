@@ -47,6 +47,7 @@ export interface HeroSection {
   description: string;
   placeHolder: string;
   toolTip: string;
+  toolTipEmergent: string;
 }
 
 export interface InfoSection {
@@ -60,6 +61,7 @@ export interface PwnedSection {
   description: string;
   recomendation: string;
   breachesSection: BreachesSection;
+  pwnedElement: PwnedElement;
 }
 
 export interface BreachesSection {
@@ -71,4 +73,25 @@ export interface BreachesSection {
 export interface LinkToPasswordGenerator {
   linkText: string;
   otherText: string;
+}
+
+export interface PwnedElement {
+  compromisedData: string;
+  name: string;
+  title: string;
+  domain: string;
+  BreachDate: Date;
+  addedDate: Date;
+  modifiedDate: Date;
+  pwnCount: number;
+  description: string;
+  logoPath: string;
+  dataClasses: string[];
+  isVerified: boolean;
+  isFabricated: boolean;
+  isSensitive: boolean;
+  isRetired: boolean;
+  isSpamList: boolean;
+  isMalware: boolean;
+  isSubscriptionFree: boolean;
 }
