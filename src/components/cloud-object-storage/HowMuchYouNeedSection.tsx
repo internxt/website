@@ -177,8 +177,6 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   background="bg-primary/7"
                   isBlueLabel
                   maxPrice={maxPrice}
-                  srcImg={getImage('/images/cloud-object-storage/inxt-logo.svg')}
-                  altImg="Internxt Logo"
                 />
                 <p className="text-lg font-bold">{textContent.companies[0]}</p>
               </div>
