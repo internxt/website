@@ -52,8 +52,11 @@ export interface HeroSection {
 
 export interface InfoSection {
   pwnedWebsites: string;
+  pwnedWebsitesData: string;
   pwnedAccounts: string;
+  pwnedAccountsData: string;
   pastes: string;
+  pastesData: string;
 }
 
 export interface PwnedSection {

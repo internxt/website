@@ -10,8 +10,11 @@
   },
   "InfoSection": {
     "pwnedWebsites": "pwned websites",
+    "pwnedWebsitesData": "817",
     "pwnedAccounts": "pwned accounts",
-    "pastes": "pastes"
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "pastes",
+    "pastesData": "115,796"
   },
   "AllGoodSection": {
     "title": "All good!",
