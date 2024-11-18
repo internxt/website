@@ -90,10 +90,10 @@ const CloudObjectStorage = ({
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
 
-  const metatagsDescription = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const navbarText = require(`@/assets/lang/en/navbar.json`);
+  const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
+  const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
   const textContent = require(`@/assets/lang/${locale}/cloud-object-storage.json`);
-  const footerText = require(`@/assets/lang/en/footer.json`);
+  const footerText = require(`@/assets/lang/${locale}/footer.json`);
 
   return {
     props: {
