@@ -1,8 +1,12 @@
-'use client';
 import Header from '@/components/shared/Header';
 import EmailToolbar from './components/EmailToolBar';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 
-export const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: HaveIbeenPwnedText['HeroSection'];
+}
+
+export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   return (
     <section className="flex justify-center overflow-hidden pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center space-y-10 px-4 md:max-w-[1000px]">

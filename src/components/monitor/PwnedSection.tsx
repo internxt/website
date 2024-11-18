@@ -1,9 +1,11 @@
-'use client';
-
 import { ArrowCircleDown, SmileyMeh, WarningCircle } from '@phosphor-icons/react';
 import PwnedElementCard from './PwnedElement';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 
-export const PwnedSection = ({ textContent }) => {
+export interface PwnedSectionProps {
+  textContent: HaveIbeenPwnedText['PwnedSection'];
+}
+export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent }) => {
   return (
     <div className="flex flex-col items-center justify-center space-y-4 px-5 pt-10">
       <SmileyMeh className="text-red" height={64} width={64} />

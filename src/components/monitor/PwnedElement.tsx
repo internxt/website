@@ -1,8 +1,11 @@
-'use client';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 
-const PwnedElementCard = ({ textContent }) => {
+export interface PwnedElementCardProps {
+  textContent: HaveIbeenPwnedText['PwnedSection']['pwnedElement'];
+}
+const PwnedElementCard: React.FC<PwnedElementCardProps> = ({ textContent }) => {
   return (
     <div className="flex max-w-[1019px] flex-col pb-5 md:flex-row">
       <div className="order-1 mb-4 flex items-center justify-center bg-gray-5 p-4 md:order-2 md:mb-0">

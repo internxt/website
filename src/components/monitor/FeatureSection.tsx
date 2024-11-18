@@ -4,7 +4,11 @@ import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 
 import { useRouter } from 'next/router';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 
+export interface FeatureSectionProps {
+  textContent: HaveIbeenPwnedText['FeatureSection'];
+}
 const CardText = ({ textContent }) => {
   const router = useRouter();
 
@@ -21,7 +25,7 @@ const CardText = ({ textContent }) => {
   );
 };
 
-const FeatureSection = ({ textContent }) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent }) => {
   const cards = [
     {
       imageSrc: '/images/monitor/internxt_monitor_1.webp',
