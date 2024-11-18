@@ -7,7 +7,8 @@
     "login": "Войти",
     "getStarted": "Начать",
     "chooseStorage": "Выбрать хранилище",
-    "checkout": "Оформить заказ сейчас!"
+    "checkout": "Оформить заказ сейчас!",
+    "business": "Для бизнеса"
   },
   "ourValues": {
     "openSource": "открытого исходного кода",
