@@ -149,6 +149,10 @@
     "id": "halloween-campaign",
     "title": "Internxt – Private & Sichere Cloud-Speicherung",
     "description": "Internxt Halloween-Kampagne: 80 % Rabatt auf all unsere Jahrespläne. Sichern Sie Ihre Dateien ein Leben lang mit nur einer Zahlung."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Objektspeicherung",
+    "description": "Internxt bietet privaten und erschwinglichen Objektspeicher zum sicheren Speichern von Daten mit dem S3-Protokoll, um Ihre Speicheranforderungen effektiv zu verwalten."
   }
-
 ]

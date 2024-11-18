@@ -233,5 +233,10 @@
     "id": "halloween-campaign",
     "title": "Internxt – Almacenamiento en la nube seguro",
     "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt – Almacenamiento en la nube seguro",
+    "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
   }
 ]

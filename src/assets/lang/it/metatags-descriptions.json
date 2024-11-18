@@ -153,6 +153,10 @@
     "id": "halloween-campaign",
     "title": "Internxt – Archiviazione Cloud Privata e Sicura",
     "description": "Campagna di Halloween Internxt: Ottieni l'80% di sconto su tutti i nostri piani annuali. Proteggi i tuoi file a vita con un unico pagamento."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Archiviazione di Oggetti",
+    "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
   }
-
 ]
