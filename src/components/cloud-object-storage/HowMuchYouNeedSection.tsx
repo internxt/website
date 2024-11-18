@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
-import { useDebounce } from '@/hooks/useDebounce';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
 
 interface HowMuchYouNeedSectionProps {
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
