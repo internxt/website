@@ -100,9 +100,9 @@
       "title": "Gadget a tema Internxt:",
       "200GB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
       "1TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
-      "2TB":  ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
-      "5TB":  ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
-      "10TB":  ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "2TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "5TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "10TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
       "tooltip": "Acquista un piano a vita per avere la possibilità di vincere!"
     },
     "cheaperThan": {
@@ -124,6 +124,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -133,6 +134,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "2TB": [
+        "2TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -142,6 +144,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "5TB": [
+        "5TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -151,6 +154,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "10TB": [
+        "10TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",

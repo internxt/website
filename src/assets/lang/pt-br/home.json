@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% de desconto ",
-        "normal2": "em todos os planos vitalícios"
+        "blue": "85% de desconto ",
+        "normal2": "em todos os planos"
       },
       "features": ["Até 10TB de armazenamento", "Criptografia de conhecimento zero", "Código aberto e auditado"],
       "startFrom": {

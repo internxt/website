@@ -9,7 +9,7 @@
     "cancelCta": "Annulla"
   },
   "FreeCardPromoBanner": {
-    "title": "Ottieni il 75% di sconto su tutti i nostri piani Premium",
+    "title": "Ottieni uno sconto esclusivo!",
     "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
@@ -42,19 +42,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia 80%",
-    "title": "Boo! Vieni a risparmiare con noi...",
-    "subtitle": "Vinci il nostro zaino premium con i nostri piani a vita.",
-    "cta": "Scegli un piano",
+    "label": "Risparmia l'85%!",
+    "title": "Le migliori offerte del Black Friday",
+    "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
+    "cta": "Scegli il tuo piano",
     "guarantee": "Garanzia di rimborso di 30 giorni",
-    "lastCta": "*Offerta valida per conti gratuiti o nuovi clienti",
+    "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
     "features": [
-      "Risparmia su tutti i piani a vita",
-      "Archiviazione cloud privata e criptata",
-      "Codice open-source e verificato",
+      "Risparmia su tutti i piani premium",
+      "Archivio cloud privato e crittografato",
+      "Open source e verificato",
       "Trasferimenti crittografati end-to-end",
       "Nessun accesso non autorizzato",
-      "Offerta valida fino al 10 novembre"
+      "L'offerta termina il 3 dicembre"
     ]
   },
   "s3StorageBanner": {
@@ -117,9 +117,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% di sconto sul tuo prossimo piano a vita",
-      "normalText": "Ciao, voglio giocare a un gioco!",
-      "cta": "Hai il coraggio?"
+      "boldText": "85% di sconto su TUTTI i piani premium.",
+      "normalText": "Super offerta per il Black Friday!",
+      "cta": "Acquista il tuo piano"
     }
   },
   "lifetimeBanner": {

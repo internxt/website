@@ -36,16 +36,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia l'80%",
+      "label": "Risparmia l'85%",
       "title": "Sconti Mortali di Halloween",
-      "subtitle": "Tutti i piani a vita di Internxt!",
+      "subtitle": " È arrivato il Black Friday!",
       "cta": "Scegli il tuo piano",
-      "cta2": "Ottieni l'80% di sconto",
+      "cta2": "Ottieni l'85% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Sconti",
-      "titleMbl2": "mortali",
-      "titleMbl3": "di Halloween.",
+      "titleMbl1": "È arrivato il",
+      "titleMbl2": "Black Friday!",
+      "titleMbl3": "",
       "ctaMbl": "Seleziona piano"
     },
     "save": "Risparmia fino al",
@@ -56,6 +56,10 @@
       "lifetimeCampaign": {
         "blueText": "Sconto del 50%",
         "normalText": "su tutti i nostri piani esclusivi a vita"
+      },
+      "blackFriday": {
+        "title": "Mega offerta Black Friday: ottieni l'85% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
+        "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },
     "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",

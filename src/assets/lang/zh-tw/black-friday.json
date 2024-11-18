@@ -2,10 +2,11 @@
   "blackFriday": {
     "HeroSection": {
       "title": {
-        "line1": "黑色星期五",
-        "line2": "即將來臨！"
+          "line1": "超級優惠",
+          "line2": "黑色星期五!"
       },
-      "description": "以超值價格獲得隱私！",
+      "description": "所有高級方案85折優惠",
+      "guarantee": "30天退款保證",
       "pricingTable": {
         "only": "僅",
         "priceNow": "3.59",

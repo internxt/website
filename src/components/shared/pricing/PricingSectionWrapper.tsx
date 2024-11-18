@@ -24,6 +24,8 @@ interface PricingSectionWrapperProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
   isFamilyPage?: boolean;
+  darkMode?: boolean;
+  hideTitle?: boolean;
   decimalDiscount?: {
     individuals?: number;
     lifetime?: number;
@@ -41,9 +43,9 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Lifetime,
+  startIndividualPlansFromInterval = Interval.Year,
   startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Lifetime',
+  startFromPlan = 'Individuals',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -54,10 +56,12 @@ export const PricingSectionWrapper = ({
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
+  hideTitle,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
   CustomDescription,
+  darkMode,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -90,10 +94,8 @@ export const PricingSectionWrapper = ({
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="text-regular w-full max-w-3xl text-center text-2xl !leading-tight text-gray-100">
-            {CustomDescription}
-          </p>
+          {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
+          {CustomDescription}
         </div>
 
         <PricingSection
@@ -124,6 +126,7 @@ export const PricingSectionWrapper = ({
           onBusinessPlansSelected={onBusinessPlansSelected}
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
+          darkMode={darkMode}
         />
       </div>
     </section>
