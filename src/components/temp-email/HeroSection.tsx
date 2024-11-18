@@ -26,6 +26,7 @@ import { MessageObjProps, StateProps } from './types/types';
 import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 import useWindowFocus from '@/hooks/useWindowFocus';
+import DOMPurify from 'dompurify';
 
 export const HeroSection = ({ textContent }) => {
   const isFocused = useWindowFocus();
@@ -144,11 +145,17 @@ export const HeroSection = ({ textContent }) => {
     const messageInSessionStorage = infoOfMessagesInSessionStorage?.find((message) => message.id === item.id);
 
     if (messageInSessionStorage) {
-      setSelectedMessage(messageInSessionStorage);
+      setSelectedMessage({
+        ...messageInSessionStorage,
+        body: DOMPurify.sanitize(messageInSessionStorage.body),
+        html: DOMPurify.sanitize(messageInSessionStorage.html),
+      });
     } else {
       try {
         const messageInfo = await getMessageData(user.address, user.token, item.id);
 
+        messageInfo.body = DOMPurify.sanitize(messageInfo.body);
+        messageInfo.html = DOMPurify.sanitize(messageInfo.html);
         messageInfo.seen = true;
 
         saveInfoOfMessageSelectedInLocalStorage(infoOfMessagesInSessionStorage, messageInfo);
@@ -218,7 +225,7 @@ export const HeroSection = ({ textContent }) => {
   };
 
   return (
-    <section className="flex justify-center overflow-hidden pt-32 pb-20">
+    <section className="flex justify-center overflow-hidden pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center space-y-10 px-4 md:max-w-[1000px]">
         <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center">
           <Header isToolsPage>{textContent.title}</Header>
