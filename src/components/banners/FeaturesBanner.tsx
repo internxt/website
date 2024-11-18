@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { CheckCircle, Ghost, SealPercent, ShieldCheck, VectorThree, VectorTwo, X } from '@phosphor-icons/react';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
-const HIDE_BANNER_DATE = new Date('2024-12-04');
+const HIDE_BANNER_DATE = new Date('2024-11-04');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
