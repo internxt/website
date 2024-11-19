@@ -156,11 +156,6 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — Archiviazione di Oggetti",
-    "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
-  },
-  {
-    "id": "cloud-object-storage",
     "title": "Internxt — Объектное Хранилище",
     "description": "Internxt предоставляет частное и доступное объектное хранилище для безопасного хранения данных с использованием протокола S3 для эффективного управления вашими потребностями в хранении."
   }

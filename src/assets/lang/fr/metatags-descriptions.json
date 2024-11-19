@@ -136,11 +136,6 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — Object Storage",
-    "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
-  },
-  {
-    "id": "cloud-object-storage",
     "title": "Internxt — Stockage d'Objets",
     "description": "Internxt propose un stockage d'objets privé et abordable pour stocker des données en toute sécurité en utilisant le protocole S3 pour gérer efficacement vos besoins de stockage."
   }
