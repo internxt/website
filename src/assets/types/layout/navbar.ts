@@ -95,6 +95,7 @@ export interface Links {
   getStarted: string;
   chooseStorage: string;
   checkout: string;
+  business: string;
 }
 
 export interface OurValues {
