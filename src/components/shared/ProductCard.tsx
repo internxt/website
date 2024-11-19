@@ -22,13 +22,11 @@ const ProductCard = ({ animationDirection, redirect, textContent, lang, imageUrl
         <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.description}</h5>
         <div className="flex justify-start">
           <Link
+            className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
             href={redirect}
             target="_blank"
-            locale={lang}
-            className="flex flex-row items-center space-x-1 text-lg text-blue-50 hover:underline"
           >
-            <span>{textContent.cta}</span>
-            <CaretRight size={16} />
+            {textContent.cta}
           </Link>
         </div>
       </div>
