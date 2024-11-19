@@ -133,5 +133,10 @@
     "id": "halloween-campaign",
     "title": "Internxt – Stockage en nuage privé et sécurisé",
     "description": "Campagne d'Halloween d'Internxt : 80 % de réduction sur tous nos plans annuels. Protégez vos fichiers pour la vie avec un seul paiement."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Stockage d'Objets",
+    "description": "Internxt propose un stockage d'objets privé et abordable pour stocker des données en toute sécurité en utilisant le protocole S3 pour gérer efficacement vos besoins de stockage."
   }
 ]
