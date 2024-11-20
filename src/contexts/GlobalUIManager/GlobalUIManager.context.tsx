@@ -37,7 +37,9 @@ export enum GlobalDialog {
 export const GlobalUIManager: React.FC<
   React.PropsWithChildren<{ initialDialogs: GlobalUIManagerContextShape['dialogs'] }>
 > = (props) => {
-  const [dialogs, setDialogs] = useState<GlobalDialogState[]>(props.initialDialogs);
+  const [dialogs, setDialogs] = useState<GlobalDialogState[]>(
+    props.initialDialogs.filter((dialog) => dialog.key !== GlobalDialog.BottomBanner),
+  );
 
   const openDialog = (
     dialogKey: GlobalDialog,
