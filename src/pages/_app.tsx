@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
