@@ -350,8 +350,8 @@
     "description": "Campanha de Halloween da Internxt: 80% de desconto em todos os nossos planos anuais. Proteja seus arquivos por toda a vida com um único pagamento."
   },
   {
-    "id": "monitor",
-    "title": "Internxt Monitor: Fui Comprometido?",
-    "description": "O Internxt Dark Web Monitor é um serviço de verificação de 'fui comprometido' que verifica se o seu e-mail foi vazado em alguma violação de dados online."
+    "id": "cloud-object-storage",
+    "title": "Internxt — Armazenamento de Objetos",
+    "description": "O Internxt oferece armazenamento de objetos privado e acessível para armazenar dados com segurança, usando o protocolo S3 para gerenciar suas necessidades de armazenamento de forma eficaz."
   }
 ]
