@@ -6,7 +6,25 @@
     "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
     "placeHolder": "Your email address",
     "toolTip": "We do not store or share your email address",
-    "toolTipEmergent": "Your email is only checked against databases for breaches."
+    "toolTipEmergent": "Your email is only checked against databases for breaches.",
+    "AllGoodSection": {
+      "title": "All good!",
+      "description": "No breached accounts or pastes.",
+      "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
+    },
+    "PwnedSection": {
+      "title": "Oh no!",
+      "description": "Your email was found in X data breaches and X pastes.",
+      "recomendation": "We recommend taking immediate action to secure your accounts.",
+      "breachesSection": {
+        "title": "Breaches where your email was found",
+        "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
+        "linkToPasswordGenerator": {
+          "linkText": "Internxt’s Password Generator",
+          "otherText": "creates unique, strong passwords to protect your accounts and data."
+        }
+      }
+    }
   },
   "InfoSection": {
     "pwnedWebsites": "pwned websites",
@@ -15,44 +33,6 @@
     "pwnedAccountsData": "14,169,230,255",
     "pastes": "pastes",
     "pastesData": "115,796"
-  },
-  "AllGoodSection": {
-    "title": "All good!",
-    "description": "No breached accounts or pastes.",
-    "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
-  },
-  "PwnedSection": {
-    "title": "Oh no!",
-    "description": "Your email was found in X data breaches and X pastes.",
-    "recomendation": "We recommend taking immediate action to secure your accounts.",
-    "breachesSection": {
-      "title": "Breaches where your email was found",
-      "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
-      "linkToPasswordGenerator": {
-        "linkText": "Internxt’s Password Generator",
-        "otherText": "creates unique, strong passwords to protect your accounts and data."
-      }
-    },
-    "pwnedElement": {
-      "compromisedData": "Compromised data",
-      "name": "Adobe",
-      "title": "Adobe",
-      "domain": "adobe.com",
-      "BreachDate": "2013-10-04",
-      "addedDate": "2013-12-04T00:00:00Z",
-      "modifiedDate": "2022-05-15T23:52:49Z",
-      "pwnCount": 152445165,
-      "description": "In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, encrypted password and a password hint in plain text. The password cryptography was poorly done and many were quickly resolved back to plain text. The unencrypted hints also adding further to the risk that hundreds of millions of Adobe customers already faced.",
-      "logoPath": "https://logos.haveibeenpwned.com/Adobe.png",
-      "dataClasses": ["Email addresses", "Password hints", "Passwords", "Usernames"],
-      "isVerified": true,
-      "isFabricated": false,
-      "isSensitive": false,
-      "isRetired": false,
-      "isSpamList": false,
-      "isMalware": false,
-      "isSubscriptionFree": false
-    }
   },
   "CtaSection": {
     "title": "Don’t become another statistic",

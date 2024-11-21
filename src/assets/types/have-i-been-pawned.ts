@@ -1,18 +1,10 @@
 export interface HaveIbeenPwnedText {
   HeroSection: HeroSection;
-  InfoSection: InfoSection;
-  AllGoodSection: AllGoodSection;
-  PwnedSection: PwnedSection;
   CtaSection: CtaSection;
   CtaSection2: CtaSection;
   FeatureSection: FeatureSection;
   FeatureSectionV2: FeatureSectionV2;
-}
-
-export interface AllGoodSection {
-  title: string;
-  description: string;
-  StaySecure: string;
+  InfoSection: InfoSection;
 }
 
 export interface CtaSection {
@@ -48,6 +40,14 @@ export interface HeroSection {
   placeHolder: string;
   toolTip: string;
   toolTipEmergent: string;
+  AllGoodSection: AllGoodSection;
+  PwnedSection: PwnedSection;
+}
+
+export interface AllGoodSection {
+  title: string;
+  description: string;
+  StaySecure: string;
 }
 
 export interface InfoSection {
@@ -64,7 +64,6 @@ export interface PwnedSection {
   description: string;
   recomendation: string;
   breachesSection: BreachesSection;
-  pwnedElement: PwnedElement;
 }
 
 export interface BreachesSection {
@@ -76,25 +75,4 @@ export interface BreachesSection {
 export interface LinkToPasswordGenerator {
   linkText: string;
   otherText: string;
-}
-
-export interface PwnedElement {
-  compromisedData: string;
-  name: string;
-  title: string;
-  domain: string;
-  BreachDate: Date;
-  addedDate: Date;
-  modifiedDate: Date;
-  pwnCount: number;
-  description: string;
-  logoPath: string;
-  dataClasses: string[];
-  isVerified: boolean;
-  isFabricated: boolean;
-  isSensitive: boolean;
-  isRetired: boolean;
-  isSpamList: boolean;
-  isMalware: boolean;
-  isSubscriptionFree: boolean;
 }

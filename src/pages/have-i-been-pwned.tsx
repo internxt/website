@@ -10,14 +10,12 @@ import { CardGroup } from '@/components/shared/CardGroup';
 import { CheckSquare, Detective, FacebookLogo, Globe, Info } from '@phosphor-icons/react';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { HeroSection } from '@/components/monitor/HeroSection';
-import { InfoSection } from '@/components/monitor/InfoSection';
-import { AllGoodSection } from '@/components/monitor/AllGoodSection';
-import { PwnedSection } from '@/components/monitor/PwnedSection';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { ToolsSectionText } from '@/assets/types/components/toolsSection';
 import { BannersText } from '@/assets/types/components/banners';
+import { InfoSection } from '@/components/monitor/InfoSection';
 
 interface MonitorProps {
   lang: GetServerSidePropsContext['locale'];
@@ -66,10 +64,6 @@ const Monitor = ({
       <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
 
       <HeroSection textContent={langJson.HeroSection} />
-
-      <AllGoodSection textContent={langJson.AllGoodSection} />
-
-      <PwnedSection textContent={langJson.PwnedSection} />
 
       <InfoSection textContent={langJson.InfoSection} />
 
