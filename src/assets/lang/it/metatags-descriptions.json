@@ -158,5 +158,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Archiviazione di Oggetti",
     "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
+  },
+  {
+    "id": "monitor",
+    "title": "Internxt Monitor: Have I Been Pwned?",
+    "description": " Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]
