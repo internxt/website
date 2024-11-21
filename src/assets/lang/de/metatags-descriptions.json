@@ -154,5 +154,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Objektspeicherung",
     "description": "Internxt bietet privaten und erschwinglichen Objektspeicher zum sicheren Speichern von Daten mit dem S3-Protokoll, um Ihre Speicheranforderungen effektiv zu verwalten."
+  },
+  {
+    "id": "monitor",
+    "title": "Internxt Monitor: Have I Been Pwned?",
+    "description": " Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]

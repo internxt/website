@@ -238,5 +238,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt – Almacenamiento en la nube seguro",
     "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
+  },
+  {
+    "id": "monitor",
+    "title": "Internxt Monitor: Have I Been Pwned?",
+    "description": " Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]

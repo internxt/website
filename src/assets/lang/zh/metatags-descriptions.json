@@ -163,5 +163,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 对象存储",
     "description": "Internxt 提供私密且实惠的对象存储，使用 S3 协议安全地存储数据，有效地管理您的存储需求。"
+  },
+  {
+    "id": "monitor",
+    "title": "Internxt Monitor: Have I Been Pwned?",
+    "description": " Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]
