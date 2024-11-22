@@ -67,10 +67,6 @@ const Monitor = ({
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <AllGoodSection textContent={langJson.AllGoodSection} />
-
-      <PwnedSection textContent={langJson.PwnedSection} />
-
       <InfoSection textContent={langJson.InfoSection} />
 
       <ComponentsInColumnSection

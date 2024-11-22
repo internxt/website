@@ -1,5 +1,3 @@
-'use client';
-
 import { CheckCircle, Smiley } from '@phosphor-icons/react/dist/ssr';
 
 export const AllGoodSection = ({ textContent }) => {
