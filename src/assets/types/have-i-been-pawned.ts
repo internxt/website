@@ -1,18 +1,10 @@
 export interface HaveIbeenPwnedText {
   HeroSection: HeroSection;
   InfoSection: InfoSection;
-  AllGoodSection: AllGoodSection;
-  PwnedSection: PwnedSection;
   CtaSection: CtaSection;
   CtaSection2: CtaSection;
   FeatureSection: FeatureSection;
   FeatureSectionV2: FeatureSectionV2;
-}
-
-export interface AllGoodSection {
-  title: string;
-  description: string;
-  StaySecure: string;
 }
 
 export interface CtaSection {
@@ -48,15 +40,14 @@ export interface HeroSection {
   placeHolder: string;
   toolTip: string;
   toolTipEmergent: string;
+  AllGoodSection: AllGoodSection;
+  PwnedSection: PwnedSection;
 }
 
-export interface InfoSection {
-  pwnedWebsites: string;
-  pwnedWebsitesData: string;
-  pwnedAccounts: string;
-  pwnedAccountsData: string;
-  pastes: string;
-  pastesData: string;
+export interface AllGoodSection {
+  title: string;
+  description: string;
+  StaySecure: string;
 }
 
 export interface PwnedSection {
@@ -97,4 +88,13 @@ export interface PwnedElement {
   isSpamList: boolean;
   isMalware: boolean;
   isSubscriptionFree: boolean;
+}
+
+export interface InfoSection {
+  pwnedWebsites: string;
+  pwnedWebsitesData: string;
+  pwnedAccounts: string;
+  pwnedAccountsData: string;
+  pastes: string;
+  pastesData: string;
 }
