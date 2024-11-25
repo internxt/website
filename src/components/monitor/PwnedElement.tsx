@@ -17,7 +17,7 @@ const PwnedElementCard: React.FC<PwnedElementCardProps> = ({ textContent }) => {
       <div className="order-1 mb-4 flex items-center justify-center bg-gray-5 p-4 md:order-2 md:mb-0">
         <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-white">
           <Image
-            src={textContent.logoPath} // URL directa del logo
+            src={textContent.logoPath}
             alt={`${textContent.domain} logo`}
             width={127}
             height={127}

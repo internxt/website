@@ -3,13 +3,10 @@ import Button from '@/components/shared/Button';
 import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 import axios from 'axios';
+import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 
 interface EmailToolBarProps {
-  textContent: {
-    placeHolder: string;
-    toolTip: string;
-    toolTipEmergent: string;
-  };
+  textContent: HaveIbeenPwnedText['HeroSection']['EmailToolBar'];
   onResultChange: (result: any[]) => void;
   onErrorChange: (error: string | null) => void;
 }
@@ -20,7 +17,7 @@ function EmailToolbar({ textContent, onResultChange, onErrorChange }: Readonly<E
 
   const handleCheckEmail = async () => {
     if (!email.trim()) {
-      onErrorChange('Por favor, ingresa un email válido.');
+      onErrorChange(textContent.pleaseEnterEmail);
       onResultChange([]);
       return;
     }
@@ -36,11 +33,11 @@ function EmailToolbar({ textContent, onResultChange, onErrorChange }: Readonly<E
       if (response.data && response.data.length > 0) {
         onResultChange(response.data);
       } else {
-        onResultChange([]); // Sin brechas encontradas
-        onErrorChange('No se encontraron brechas para este email.');
+        onResultChange([]);
+        onErrorChange(textContent.noBreachesFound);
       }
     } catch (err: any) {
-      const errorMessage = err.response?.data?.error || 'Error al procesar la solicitud.';
+      const errorMessage = err.response?.data?.error || textContent.errorPwned;
       onErrorChange(errorMessage);
     } finally {
       setLoading(false);
@@ -57,7 +54,11 @@ function EmailToolbar({ textContent, onResultChange, onErrorChange }: Readonly<E
           placeholder={textContent.placeHolder}
           className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
         />
-        <Button text={loading ? 'Checking...' : 'Check'} onClick={handleCheckEmail} disabled={loading} />
+        <Button
+          text={loading ? textContent.checking : textContent.check}
+          onClick={handleCheckEmail}
+          disabled={loading}
+        />
       </div>
 
       <div className="mt-5 flex flex-row items-center space-x-1 text-sm text-gray-50">

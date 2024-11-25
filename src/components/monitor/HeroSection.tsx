@@ -50,7 +50,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
         </div>
         <div className="flex w-full flex-col items-center justify-center  pb-10">
           <EmailToolbar
-            textContent={textContent}
+            textContent={textContent.EmailToolBar}
             onResultChange={handleResultChange}
             onErrorChange={handleErrorChange}
           />
