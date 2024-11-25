@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Spare 80%",
+    "label": "Spare 70%",
     "title": {
       "line1": "Erhalten Sie den ",
       "blueText": "sichersten",
@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "80% günstiger"
+        "blueText": "70% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -62,9 +62,9 @@
         "blueText": "Garantiert."
       },
       "description": {
-        "normal1": "",
-        "blue": "80% RABATT ",
-        "normal2": "auf alle Lifetime-Pläne."
+        "normal1": "Erhalten Sie ",
+        "blue": "70% Rabatt ",
+        "normal2": "auf alle Premium-Pläne."
       },
       "features": ["Bis zu 10TB Speicher", "Zero-Knowledge-Verschlüsselung", "Open source und geprüft"],
       "startFrom": {
