@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.freeUserCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
