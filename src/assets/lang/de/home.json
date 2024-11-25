@@ -66,7 +66,7 @@
         "blue": "85% RABATT ",
         "normal2": "auf allen Plänen."
       },
-      "features": ["Bis zu 10TB Speicher", "Zero-Knowledge-Verschlüsselung", "Open source und geprüft"],
+      "features": ["Bis zu 10TB Speicher", "Post-quantum Verschlüsselung", "Open source und geprüft"],
       "startFrom": {
         "normal1": "Starten ab ",
         "price": " 0.95",
@@ -247,7 +247,7 @@
         "question": "Kann Internxt auf meine Dateien zugreifen?",
         "answer": [
           "Nein. Internxt, zusammen mit jeder anderen dritten Partei, kann nicht auf Ihre Dateien, Fotos oder Daten zugreifen.",
-          "Internxt-Dienste verfügen über null-Wissen-Verschlüsselung, was bedeutet, dass nur Sie wirklich auf Ihre privaten Daten zugreifen können. Darüber hinaus fragmentiert die Architektur von Internxt Ihre Dateien vor der Verschlüsselung, sodass ein Server niemals eine vollständige Datei enthält, sondern nur einen verschlüsselten Teil davon, den nur Sie entschlüsseln können."
+          "Die Dienste von Internxt bieten eine Verschlüsselung mit Zero-Knowledge, was bedeutet, dass nur Sie Zugriff auf Ihre privaten Daten haben und diese entschlüsseln können. Zusätzlich verwendet Internxt post-quantum Kryptographie, die fortschrittlichste verfügbare Technologie, um Ihre Dateien vor zukünftigen Bedrohungen zu schützen."
         ]
       },
       {

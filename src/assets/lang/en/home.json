@@ -67,7 +67,7 @@
         "blue": "85% off ",
         "normal2": "all premium plans"
       },
-      "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
+      "features": ["Up to 10TB storage", "Post-quantum encryption", "Open source and audited"],
       "startFrom": {
         "normal1": "Start from ",
         "price": " 0.95",
@@ -271,7 +271,7 @@
         "question": "Can Internxt access my files?",
         "answer": [
           "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
         ]
       },
       {

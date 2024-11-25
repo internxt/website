@@ -94,14 +94,14 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
-    "halloweenFeatures":{
+    "halloweenFeatures": {
       "title": "Internxt themed goodies:",
       "200GB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
       "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "2TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "5TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "10TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "tooltip":"Buy any lifetime plan for a chance to win!"
+      "2TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "5TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "10TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "tooltip": "Buy any lifetime plan for a chance to win!"
     },
     "cheaperThan": {
       "lifetime": {
@@ -125,6 +125,7 @@
         "200GB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -135,6 +136,7 @@
         "2TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -145,6 +147,7 @@
         "5TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -155,6 +158,7 @@
         "10TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
