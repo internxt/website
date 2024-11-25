@@ -37,16 +37,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 80 %",
+      "label": "Spare 85%",
       "title": "Tödliche Halloween-Rabatte",
-      "subtitle": "Alle lebenslangen Internxt-Pläne!",
+      "subtitle": "Der Black Friday ist da!",
       "cta": "Wähle deinen Plan",
-      "cta2": "Erhalte 80 % Rabatt",
+      "cta2": "Erhalte 85% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
       "lastCta": "*Das Angebot gilt nur für kostenlose Konten oder Neukunden",
-      "titleMbl1": "Tödliche",
-      "titleMbl2": "Rabatte",
-      "titleMbl3": "zu Halloween.",
+      "titleMbl1": " Der Black Friday",
+      "titleMbl2": "ist da!",
+      "titleMbl3": "",
       "ctaMbl": "Plan auswählen"
     },
     "planTitles": {
@@ -56,6 +56,10 @@
       "lifetimeCampaign": {
         "blueText": "Erhalte 50 % RABATT",
         "normalText": "Alle unsere exklusiven Lifetime-Pläne"
+      },
+      "blackFriday": {
+        "title": "Black Friday Mega-Rabatt: 85 % RABATT auf alle sichersten Cloud-Speicherpläne",
+        "description": "Schützen Sie Ihre Daten mit Internxt, um Datenschutzverletzungen, finanzielle Verluste und Privatsphäre-Risiken zu vermeiden. Verabschieden Sie sich von Tech-Giganten, die von Ihren persönlichen Informationen profitieren."
       }
     },
     "lifetimeDescription": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",

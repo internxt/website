@@ -1,9 +1,9 @@
-import { Fire, Ghost, Info } from '@phosphor-icons/react';
+import { Fire } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import { Interval, TransformedProduct } from '@/components/services/stripe.service';
+import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
-import { Tooltip } from 'react-tooltip';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -18,6 +18,7 @@ export interface PriceCardProps {
   decimalDiscountValue?: number;
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
+  darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
 }
@@ -43,6 +44,7 @@ export const PriceCard = ({
   redeemCodeCta,
   label,
   isFamilyPage,
+  darkMode,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -50,27 +52,28 @@ export const PriceCard = ({
 
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
-  const priceNow = decimalDiscountValue ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '') : price;
+  const priceNow = decimalDiscountValue
+    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
+    : Number(price).toFixed(2).replace('.00', '');
 
-  const priceBefore =
-    productCardPlan === 'business' || interval === Interval.Year
-      ? undefined
-      : decimalDiscountValue || fixedDiscount
-      ? Number(price).toFixed(2).replace('.00', '')
-      : (monthlyProductPrice * 12).toFixed(2);
-
+  const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
   const cardLabel = productCardPlan === 'business' ? businessLabel : label;
-
+  const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
+  const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
   return (
     <div
       className={`${
-        popular ? `border-${colorCard}/50 ring-[3px]` : 'ring-1 ring-gray-10'
+        !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
-      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+      <div
+        className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl ${
+          darkMode ? styles.linearGradient : 'bg-white'
+        } p-6 pt-6`}
+      >
         <div className="flex flex-col items-center justify-center space-y-4">
           {popular ? (
             <div
@@ -80,8 +83,8 @@ export const PriceCard = ({
               <p className="font-semibold text-white">{contentText.mostPopular}</p>
             </div>
           ) : null}
-          <div className={`${labelBackground} flex rounded-full px-3 py-0.5`}>
-            <p className={`text-${colorCard} text-lg font-medium`}>{cardLabel}</p>
+          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
+            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
           </div>
         </div>
         <div
@@ -92,7 +95,11 @@ export const PriceCard = ({
               items-end space-x-px text-neutral-700
             `}
           >
-            <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
+            <p
+              className={`${
+                darkMode ? 'text-white' : 'text-gray-100'
+              } flex flex-row items-start space-x-1 whitespace-nowrap font-medium`}
+            >
               <span className={`currency`}>{currency}</span>
               <span className="price text-4xl font-bold">{fixedDiscountPriceNow ?? priceNow}</span>
             </p>
@@ -100,7 +107,9 @@ export const PriceCard = ({
           <p
             className={`${
               priceBefore ? 'flex' : 'hidden'
-            } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
+            } flex-row items-start space-x-1 whitespace-nowrap font-semibold ${
+              darkMode ? 'text-white' : 'text-gray-50'
+            } line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">{priceBefore}</span>
@@ -114,46 +123,26 @@ export const PriceCard = ({
         <button
           id={`planButton${storage}`}
           onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
-          className={`flex w-full flex-col items-center rounded-lg border ${
-            popular
-              ? `border-${colorCard} bg-${colorCard} text-white hover:bg-${colorCard}-dark`
-              : `border-${colorCard} text-${colorCard} hover:bg-gray-1 active:bg-gray-5`
-          } whitespace-nowrap px-20 py-2.5 font-medium`}
+          className={`flex w-full flex-col items-center rounded-lg border 
+            ${
+              popular
+                ? `border-${colorCard} bg-${colorCard} text-white hover:bg-${colorCard}-dark`
+                : darkMode
+                ? `border-${colorCard} bg-primary text-white hover:bg-${colorCard}-dark active:bg-gray-5`
+                : `border-${colorCard} text-${colorCard} hover:bg-gray-1 active:bg-gray-5`
+            } whitespace-nowrap px-20 py-2.5 font-medium`}
         >
           <p>{ctaText}</p>
         </button>
       </div>
-      <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
-        {isCheckoutForLifetime && (
-          <div className="flex flex-col space-y-2 bg-gray-100 pb-6 pt-6">
-            <span className="px-5 font-bold text-orange">{contentText.productFeatures.halloweenFeatures.title}</span>
-
-            {contentText.productFeatures.halloweenFeatures[storage]?.map((feature, index) => (
-              <div className="flex flex-row items-center space-x-2 px-5" key={feature}>
-                <Ghost className="h-4 w-4 text-white" weight="fill" />
-                <span className="flex-1 whitespace-nowrap text-white">{feature}</span>
-                {index === 0 && (
-                  <div className="relative">
-                    <Info
-                      className="h-4 w-4 text-white"
-                      data-tooltip-id="infoTooltip"
-                      data-tooltip-content={contentText.productFeatures.halloweenFeatures.tooltip}
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        )}
-        <Tooltip id="infoTooltip" place="top" />
+      <div
+        className={`featureList flex flex-col  ${
+          darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
+        } pb-6 text-sm`}
+      >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
-            <div
-              className={`flex flex-row items-start space-x-2 px-6 ${
-                productCardPlan === 'business' ? '' : 'last:font-semibold'
-              }`}
-              key={feature}
-            >
+            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
               <Image
                 width={16}
                 height={17}
@@ -163,7 +152,7 @@ export const PriceCard = ({
                 draggable="false"
                 alt="check icon"
               />
-              <span className="text-gray-80">{feature}</span>
+              <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
             </div>
           ))}
         </div>

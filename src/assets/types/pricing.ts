@@ -83,14 +83,16 @@ export interface HeroSectionTitle {
 
 export interface PriceTableForAlternativePricing {
   title: PriceTableForAlternativePricingTitle;
+  description: string;
+  features: string[];
   offerEnds: string;
+  howMuchStorage: string;
 }
 
 export interface PriceTableForAlternativePricingTitle {
   normal1: string;
-  blue1: string;
-  normal2: string;
   blue2: string;
+  normal2: string;
 }
 
 export interface SchemaMarkupQuestions {
@@ -119,17 +121,17 @@ export interface BillingFrequency {
 
 export interface CtaBanner {
   label: string;
+
   title: string;
   subtitle: string;
   cta: string;
   cta2: string;
   guarantee: string;
   lastCta: string;
-  titleMbl:  string;
   titleMbl1: string;
   titleMbl2: string;
   titleMbl3: string;
-  ctaMbl:    string;
+  ctaMbl: string;
 }
 
 export interface Features {
@@ -151,6 +153,7 @@ export interface PlanTitles {
   lifetime: string;
   business: string;
   lifetimeCampaign: LifetimeCampaign;
+  blackFriday: Cta;
 }
 
 export interface LifetimeCampaign {

@@ -6,7 +6,7 @@ import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import CtaSection from '@/components/shared/CtaSection';
 import PaymentSection from '@/components/lifetime/PaymentSection';
-import {HeroSection} from '@/components/shared/components/HeroSection';
+import { HeroSection } from '@/components/shared/components/HeroSection';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { SinglesDay } from '@/assets/types/singles-day';
@@ -33,36 +33,35 @@ const SinglesdayCelebrationTemplate = ({
   navbarLang,
   footerLang,
   metatagsDescriptions,
- 
 }: SinglesDayCelebrationTemplateProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'singles-day');
-  const discount=0.17;
-  const percent='83%'
-  const currencySpecified='US';
+  const discount = 0.17;
+  const percent = '83%';
+  const currencySpecified = 'US';
   const locale = lang as string;
-  const couponCode=PromoCodeName.SinglesDay;
+  const couponCode = PromoCodeName.SinglesDay;
   const Cards = [
-      {
-        icon: ShieldCheck,
-        title: langJson.FeatureSection.cards[0].title,
-        description: langJson.FeatureSection.cards[0].description,
-      },
-      {
-        icon: LockKey,
-        title: langJson.FeatureSection.cards[1].title,
-        description: langJson.FeatureSection.cards[1].description,
-      },
-      {
-        icon: Eye,
-        title: langJson.FeatureSection.cards[2].title,
-        description: langJson.FeatureSection.cards[2].description,
-      },
-      {
-        icon: Fingerprint,
-        title: langJson.FeatureSection.cards[3].title,
-        description: langJson.FeatureSection.cards[3].description,
-      },
-    ];
+    {
+      icon: ShieldCheck,
+      title: langJson.FeatureSection.cards[0].title,
+      description: langJson.FeatureSection.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: langJson.FeatureSection.cards[1].title,
+      description: langJson.FeatureSection.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: langJson.FeatureSection.cards[2].title,
+      description: langJson.FeatureSection.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: langJson.FeatureSection.cards[3].title,
+      description: langJson.FeatureSection.cards[3].description,
+    },
+  ];
   return (
     <Layout
       title={metatags[0].title}
@@ -71,77 +70,82 @@ const SinglesdayCelebrationTemplate = ({
       lang={locale}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed singlesDay />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
 
-     <div className="bg-gray-1">
-      <HeroSection 
-        TextComponent={
-           <div className="flex flex-col items-center justify-center text-center md:text-left md:items-start md:justify-start">
-          <p className='inline-block text-xl font-medium text-gray-80 bg-gray-10 p-2 mb-8 rounded-md text-center w-[160px]'>{langJson.HeroSection.offer}</p>
-          <div className='mb-8'>
-            <p className='text-6xl font-bold'>{langJson.HeroSection.title.previousBlueText}</p>
-            <p className='text-6xl font-bold text-primary'>{langJson.HeroSection.title.blueText}</p>
-            <p className='text-6xl font-bold'>{langJson.HeroSection.title.postBlueText}</p>
-          </div>
-          <p className='text-xl font-regular text-gray-100 mb-8'>{langJson.HeroSection.description}</p>
-          <Button text={langJson.HeroSection.cta} className='mb-8' onClick={() => window.location.href = '#payment'} />
-        </div>
-        }
-        imageProperties={{
-          src: getImage('/images/lifetime/internxt_singles_day_offer.webp'),
-          alt: 'Oferta especial Black Friday',
-          width: 562,
-          height: 529,
-        }}
-        background="bg-gray-1"
-
-      />
-      <PaymentSection 
-        textContent={langJson.PaymentSection}
-        discount={discount}
-        showPriceBefore
-        lang={locale}
-        percent={percent}
-        currencySpecified={currencySpecified}
-        lifetimeMode="celebration"
-        couponCode={couponCode}
-      />
-     <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</p>
-            <p className="max-w-[796px] text-xl text-gray-80">{langJson.FeatureSection.description}</p>
-           <div className="flex justify-center">
-            <Image
-              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-              width={745}
-              height={411}
-              alt="Cloud Storage"
-            />
-          </div>
-          </div>
-        }
-        cards={Cards}
-        background='bg-gray-1'
-        backgroundColorForCard='bg-white'
-        
-      />
-      <PlatformSection textContent={langJson.FeatureSection}
-       bgColor='bg-white' 
-       textColor='text-gray-100' 
-       textDescriptionColor='text-gray-80'
-       />
-      <CtaSection textContent={langJson.CtaSection1} url={'#payment'}/>
-      <TestimonialsSection textContent={langJson.TestimonialsSection}/>
-      <FAQSection textContent={langJson.FaqSection} bgColor='bg-gray-1'/>
-      <CtaSection textContent={langJson.CtaSection2} url={'#payment'}/>
-     </div>
-       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      <div className="bg-gray-1">
+        <HeroSection
+          TextComponent={
+            <div className="flex flex-col items-center justify-center text-center md:items-start md:justify-start md:text-left">
+              <p className="mb-8 inline-block w-[160px] rounded-md bg-gray-10 p-2 text-center text-xl font-medium text-gray-80">
+                {langJson.HeroSection.offer}
+              </p>
+              <div className="mb-8">
+                <p className="text-6xl font-bold">{langJson.HeroSection.title.previousBlueText}</p>
+                <p className="text-6xl font-bold text-primary">{langJson.HeroSection.title.blueText}</p>
+                <p className="text-6xl font-bold">{langJson.HeroSection.title.postBlueText}</p>
+              </div>
+              <p className="font-regular mb-8 text-xl text-gray-100">{langJson.HeroSection.description}</p>
+              <Button
+                text={langJson.HeroSection.cta}
+                className="mb-8"
+                onClick={() => (window.location.href = '#payment')}
+              />
+            </div>
+          }
+          imageProperties={{
+            src: getImage('/images/lifetime/internxt_singles_day_offer.webp'),
+            alt: 'Oferta especial Black Friday',
+            width: 562,
+            height: 529,
+          }}
+          background="bg-gray-1"
+        />
+        <PaymentSection
+          textContent={langJson.PaymentSection}
+          discount={discount}
+          showPriceBefore
+          lang={locale}
+          percent={percent}
+          currencySpecified={currencySpecified}
+          lifetimeMode="celebration"
+          couponCode={couponCode}
+        />
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+              <p className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</p>
+              <p className="max-w-[796px] text-xl text-gray-80">{langJson.FeatureSection.description}</p>
+              <div className="flex justify-center">
+                <Image
+                  src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+                  width={745}
+                  height={411}
+                  alt="Cloud Storage"
+                />
+              </div>
+            </div>
+          }
+          cards={Cards}
+          background="bg-gray-1"
+          backgroundColorForCard="bg-white"
+        />
+        <PlatformSection
+          textContent={langJson.FeatureSection}
+          bgColor="bg-white"
+          textColor="text-gray-100"
+          textDescriptionColor="text-gray-80"
+        />
+        <CtaSection textContent={langJson.CtaSection1} url={'#payment'} />
+        <TestimonialsSection textContent={langJson.TestimonialsSection} />
+        <FAQSection textContent={langJson.FaqSection} bgColor="bg-gray-1" />
+        <CtaSection textContent={langJson.CtaSection2} url={'#payment'} />
+      </div>
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
-     );
+  );
 };
 export async function getServerSideProps(ctx) {
-    let lang = ctx.locale;
+  let lang = ctx.locale;
 
   if (!ALLOWED_LANGUAGES.includes(lang)) {
     lang = 'en';
@@ -153,7 +157,7 @@ export async function getServerSideProps(ctx) {
   const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
-  
+
   return {
     props: {
       lang,
@@ -161,8 +165,8 @@ export async function getServerSideProps(ctx) {
       langJson,
       testimonialsJson,
       navbarLang,
-      footerLang
-      },
+      footerLang,
+    },
   };
 }
 export default SinglesdayCelebrationTemplate;

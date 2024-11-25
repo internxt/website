@@ -100,9 +100,9 @@
       "title": "Internxt-Themen-Goodies:",
       "200GB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
       "1TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "2TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "5TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "10TB":  ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "2TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "5TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "10TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
       "tooltip": "Kaufen Sie einen Lifetime-Plan für die Chance zu gewinnen!"
     },
     "cheaperThan": {
@@ -124,6 +124,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -132,6 +133,7 @@
         "Premium-Kundensupport"
       ],
       "2TB": [
+        "2TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -140,6 +142,7 @@
         "Premium-Kundensupport"
       ],
       "5TB": [
+        "5TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -148,6 +151,7 @@
         "Premium-Kundensupport"
       ],
       "10TB": [
+        "10TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",

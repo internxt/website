@@ -30,6 +30,7 @@ interface ItemsNavigationProps {
     links: {
       pricing: string;
       about: string;
+      business: string;
     };
   };
   textContent: NavigationBarText;
@@ -117,6 +118,13 @@ export const ItemsNavigation = ({
             { href: '/vpn', text: textContent.products.vpn },
           ]}
           darkMode={darkMode}
+          lang={lang}
+        />
+        <NavigationLink
+          href="/business"
+          text={textContent.links.business}
+          isActive={currentPath === getTitles.links.business.trim().toLowerCase()}
+          isDarkMode={darkMode}
           lang={lang}
         />
         <DropdownMenu

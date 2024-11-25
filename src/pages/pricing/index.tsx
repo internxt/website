@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Halloween,
+    couponCode: PromoCodeName.BlackFriday,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -111,18 +111,12 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
-
-    const couponCodeForB2CPlans =
-      lifetimeSpacePlan && lifetimeCoupons
-        ? (lifetimeCoupons?.[lifetimeSpacePlan.storage]).promoCodeName
-        : individualCoupon?.name;
-
-    const couponCodeForCheckout = isBusiness ? businessCoupon?.name : couponCodeForB2CPlans;
+    const couponCodeForCheckout = individualCoupon?.name;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -144,8 +138,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-            lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            individuals: decimalDiscount,
+            business: decimalDiscount,
+            lifetime: decimalDiscount,
           }}
           lang={lang}
           products={products}
