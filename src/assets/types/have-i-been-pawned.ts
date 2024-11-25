@@ -37,10 +37,9 @@ export interface HeroSection {
   title: string;
   subtitle: string;
   description: string;
-  placeHolder: string;
-  toolTip: string;
-  toolTipEmergent: string;
   AllGoodSection: AllGoodSection;
+  EmailToolBar: EmailToolBar;
+  breaches: Breaches;
   PwnedSection: PwnedSection;
 }
 
@@ -48,6 +47,17 @@ export interface AllGoodSection {
   title: string;
   description: string;
   StaySecure: string;
+}
+
+export interface EmailToolBar {
+  placeHolder: string;
+  toolTip: string;
+  toolTipEmergent: string;
+  pleaseEnterEmail: string;
+  noBreachesFound: string;
+  errorPwned: string;
+  check: string;
+  checking: string;
 }
 
 export interface PwnedSection {
@@ -88,6 +98,12 @@ export interface PwnedElement {
   isSpamList: boolean;
   isMalware: boolean;
   isSubscriptionFree: boolean;
+}
+
+export interface Breaches {
+  error405: string;
+  error400: string;
+  error500: string;
 }
 
 export interface InfoSection {

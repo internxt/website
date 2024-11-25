@@ -4,13 +4,25 @@
     "title": "Have I been Pwned?",
     "subtitle": "Check if your email has been exposed in a data breach.",
     "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
-    "placeHolder": "Your email address",
-    "toolTip": "We do not store or share your email address",
-    "toolTipEmergent": "Your email is only checked against databases for breaches.",
     "AllGoodSection": {
       "title": "All good!",
       "description": "No breached accounts or pastes.",
       "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Your email address",
+      "toolTip": "We do not store or share your email address",
+      "toolTipEmergent": "Your email is only checked against databases for breaches.",
+      "pleaseEnterEmail": "Please enter a valid email address",
+      "noBreachesFound": "Email not found",
+      "errorPwned": "An error occurred while checking your email. Please try again later.",
+      "check": "Check",
+      "checking": "Checking..."
+    },
+    "breaches": {
+      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
+      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
+      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
     },
     "PwnedSection": {
       "title": "Oh no!",
