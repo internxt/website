@@ -11,8 +11,6 @@ import { CheckSquare, Detective, FacebookLogo, Globe, Info } from '@phosphor-ico
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { HeroSection } from '@/components/monitor/HeroSection';
 import { InfoSection } from '@/components/monitor/InfoSection';
-import { AllGoodSection } from '@/components/monitor/AllGoodSection';
-import { PwnedSection } from '@/components/monitor/PwnedSection';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
@@ -69,6 +67,14 @@ const Monitor = ({
 
       <InfoSection textContent={langJson.InfoSection} />
 
+      <FeatureSection textContent={langJson.FeatureSection} />
+
+      <CtaSection
+        textContent={langJson.CtaSection}
+        customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
+        url={''}
+      />
+
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
@@ -86,14 +92,6 @@ const Monitor = ({
         }
         backgroundColor="bg-gray-1"
       />
-
-      <CtaSection
-        textContent={langJson.CtaSection}
-        customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
-        url={''}
-      />
-
-      <FeatureSection textContent={langJson.FeatureSection} />
 
       <CtaSection
         textContent={langJson.CtaSection2}
