@@ -17,7 +17,7 @@ export interface PwnedSectionProps {
 
 export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements }) => {
   return (
-    <div className="flex w-screen flex-col items-center justify-center pt-10">
+    <div className="flex w-screen flex-col items-center justify-center">
       <SmileyMeh className="text-red" height={64} width={64} />
       <p className="text-3xl font-semibold text-gray-100">{textContent.title}</p>
       <div className="my-4 flex items-center justify-center rounded-md bg-red8 px-10 py-2 text-center">

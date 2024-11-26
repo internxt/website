@@ -6,7 +6,7 @@ export interface FeatureSectionProps {
 }
 export const AllGoodSection = ({ textContent }) => {
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 pb-10 pt-10">
+    <div className="flex flex-col items-center justify-center space-y-4 pb-10">
       <Smiley className="text-green" height={64} width={64} />
       <p className="text-3xl font-semibold text-gray-100">{textContent.title}</p>
       <div className="my-4 flex items-center justify-center rounded-md bg-green8 px-5 py-2">

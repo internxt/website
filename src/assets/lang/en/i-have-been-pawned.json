@@ -1,7 +1,6 @@
 {
   "HeroSection": {
-    "tagline": "Internxt Monitor",
-    "title": "Have I been Pwned?",
+    "title": "Internxt Dark Web Monitor",
     "subtitle": "Check if your email has been exposed in a data breach.",
     "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
     "AllGoodSection": {
