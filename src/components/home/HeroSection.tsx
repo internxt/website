@@ -24,7 +24,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-      <div className="relative flex h-full flex-col bg-white pt-32">
+      <div className="relative flex h-full flex-col bg-white pt-16">
         {/* Desktop version */}
         <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:py-10">
           <div
@@ -37,10 +37,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
         </div>
         {/* Mobile version */}
-        <div className="flex flex-col items-center px-5 py-5 lg:hidden">
-          <Header maxWidth="max-w-max" className="text-center text-gray-100">
+        <div className="flex flex-col items-center px-4 py-5 lg:hidden">
+          <Header maxWidth="max-w-max" className="pb-8 text-center text-gray-100">
             <span>{textContent.title.line1}</span>
+            <br />
             <span className="text-primary">{textContent.title.blueText}</span>
+            <br />
             <span>{textContent.title.line2}</span>
           </Header>
 
