@@ -16,6 +16,7 @@ export interface PwnedSectionProps {
 }
 
 export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements }) => {
+  const comprommissedData = textContent.compromisedData;
   return (
     <div className="flex w-screen flex-col items-center justify-center">
       <SmileyMeh className="text-red" height={64} width={64} />
@@ -32,6 +33,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
           {textContent.breachesSection.description}
         </p>
         <div className="font-regular flex w-full flex-wrap justify-center px-5 text-center text-xl text-gray-80">
+          <p className="ml-2 mr-2">{textContent.breachesSection.linkToPasswordGenerator.previousText}</p>
           <a href="/password-generator" target="_blank" className="underline hover:text-gray-100 hover:underline">
             {textContent.breachesSection.linkToPasswordGenerator.linkText}
           </a>
@@ -45,7 +47,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
                 logoPath: pwnedItem.logoPath,
                 title: pwnedItem.title,
                 description: pwnedItem.description,
-                compromisedData: `Compromised on ${pwnedItem.BreachDate}`,
+                compromisedData: comprommissedData,
                 dataClasses: pwnedItem.dataClasses,
                 domain: pwnedItem.title,
               }}

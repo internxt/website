@@ -33,7 +33,6 @@ export interface Card {
 }
 
 export interface HeroSection {
-  tagline: string;
   title: string;
   subtitle: string;
   description: string;
@@ -65,7 +64,7 @@ export interface PwnedSection {
   description: string;
   recomendation: string;
   breachesSection: BreachesSection;
-  pwnedElement: PwnedElement;
+  compromisedData: string;
 }
 
 export interface BreachesSection {
@@ -75,29 +74,9 @@ export interface BreachesSection {
 }
 
 export interface LinkToPasswordGenerator {
+  previousText: string;
   linkText: string;
   otherText: string;
-}
-
-export interface PwnedElement {
-  compromisedData: string;
-  name: string;
-  title: string;
-  domain: string;
-  BreachDate: Date;
-  addedDate: Date;
-  modifiedDate: Date;
-  pwnCount: number;
-  description: string;
-  logoPath: string;
-  dataClasses: string[];
-  isVerified: boolean;
-  isFabricated: boolean;
-  isSensitive: boolean;
-  isRetired: boolean;
-  isSpamList: boolean;
-  isMalware: boolean;
-  isSubscriptionFree: boolean;
 }
 
 export interface Breaches {

@@ -1,95 +1,112 @@
 {
   "HeroSection": {
-    "tagline": "Internxt Monitor",
-    "title": "¿He sido hackeado?",
-    "subtitle": "Comprueba si tu correo electrónico ha sido expuesto en una filtración de datos.",
-    "description": "Internxt Monitor verifica si tu correo electrónico ha estado involucrado en una filtración de datos usando una base de datos de cuentas comprometidas.",
-    "placeHolder": "Tu correo electrónico",
-    "toolTip": "No almacenamos ni compartimos tu correo electrónico"
-  },
-  "InfoSection": {
-    "pwnedWebsites": "sitios web comprometidos",
-    "pwnedAccounts": "cuentas comprometidas",
-    "pastes": "pastes"
-  },
-  "AllGoodSection": {
-    "title": "¡Todo bien!",
-    "description": "No se encontraron cuentas o pastes comprometidos.",
-    "StaySecure": "Mantente seguro en línea con contraseñas fuertes y autenticación de múltiples factores."
-  },
-  "PwnedSection": {
-    "title": "¡Oh no!",
-    "description": "Tu correo electrónico fue encontrado en X filtraciones de datos y X pastes.",
-    "recomendation": "Te recomendamos tomar medidas inmediatas para asegurar tus cuentas.",
-    "breachesSection": {
-      "title": "Filtraciones donde se encontró tu correo electrónico",
-      "description": "Una filtración de datos ocurre cuando tu correo electrónico, nombre, dirección u otra información personal se filtra accidentalmente al público en línea.",
-      "linkToPasswordGenerator": {
-        "linkText": "Generador de contraseñas de Internxt",
-        "otherText": "crea contraseñas únicas y seguras para proteger tus cuentas y datos."
-      }
+    "title": "Internxt Dark Web Monitor",
+    "subtitle": "Comprueba si tu correo electrónico ha sido expuesto a una violación de datos",
+    "description": "Tu correo solo se compara con las bases de datos para detectar infracciones.",
+    "AllGoodSection": {
+      "title": "¡Todo bien!",
+      "description": "No se ha encontrado ninguna cuenta filtrada o copiada en algún sitio web. ",
+      "StaySecure": "Mantente seguro con contraseñas robustas y autenticación multifactor."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Tu correo electrónico",
+      "toolTip": "No almacenamos ni compartimos tu dirección de correo electrónico.",
+      "toolTipEmergent": "Tu correo electrónico solo se verifica en bases de datos para detectar filtraciones.",
+      "pleaseEnterEmail": "Porfavor, introduce un mail válido",
+      "noBreachesFound": "Email no encontrado",
+      "errorPwned": "Error al comprobar el correo electrónico",
+      "check": "Compronar",
+      "checking": "Comprobando..."
+    },
+    "breaches": {
+      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
+      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
+      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
+    },
+    "PwnedSection": {
+      "title": "Oh no!",
+      "description": "Tu correo electrónico se encontró en X violaciones de datos y X pegados.",
+      "recomendation": "Recomendamos tomar medidas inmediatas para proteger tus cuentas.",
+      "breachesSection": {
+        "title": "Sitios donde tu correo y contraseña han sido filtrados",
+        "description": "Una violación de datos ocurre cuando tu correo electrónico, nombre, dirección u otra información personal se filtra involuntariamente y es expuesta en Internet.",
+        "linkToPasswordGenerator": {
+          "previousText": "El ",
+          "linkText": " generador de contraseñas",
+          "otherText": "de Internxt crea contraseñas únicas y seguras para proteger tus cuentas y datos."
+        }
+      },
+      "compromisedData": "Datos Comprometidos:"
     }
   },
+  "InfoSection": {
+    "pwnedWebsites": "Sitios web pirateados",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "Cuentas robadas",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "Copias",
+    "pastesData": "115,796"
+  },
   "CtaSection": {
-    "title": "No seas otra estadística",
-    "description": "Verifica tus cuentas con Internxt Dark Web Monitor.",
-    "cta": "Verificar ahora"
+    "title": "¿Se ha filtrado tu cuenta y contraseña?",
+    "description": "Descúbrelo con Dark Web Monitor de Internxt y toma medidas inmediatas para proteger tus cuentas",
+    "cta": "Registrate"
   },
   "CtaSection2": {
-    "title": "No esperes a que ocurra una filtración de datos",
-    "description": "Verifica y protege tu información con Internxt.",
-    "cta": "Verificar ahora"
+    "title": "No espere a que se filtren tus datos",
+    "description": "Protege tu información con Internxt",
+    "cta": "Comprobar ahora"
   },
   "FeatureSection": {
-    "title": "Qué hacer si tu correo electrónico ha sido filtrado en la dark web",
-    "description": "Internxt Dark Web Monitor es parte de nuestra misión para protegerte de los hackers que filtran tus datos en la dark web.",
-    "description2": "Internxt está comprometido a mantenerte seguro en el mundo digital. Descubre estrategias efectivas para asegurar tus cuentas y reducir riesgos si tu correo electrónico ha sido comprometido en la dark web.",
+    "title": "Qué hacer si tu correo electrónico se ha filtrado en la web oscura",
+    "description": "Internxt Dark Web Monitor forma parte de nuestra misión para protegerte de los hackers que filtran tus datos en la dark web",
+    "description2": "En Internxt nos comprometemos a mantenerte seguro en el mundo digital. Descubre las estrategias más efectivas para proteger tus cuentas y mitigar los riesgos si tu correo electrónico se ha visto comprometido en la web oscura.",
     "cards": [
       {
-        "title": "Crear contraseñas seguras",
-        "description": "Si tu correo electrónico ha sido filtrado en la dark web, lo primero que debes hacer es cambiar tus contraseñas. El generador de contraseñas de Internxt crea contraseñas fuertes o frases de contraseña para evitar que los hackers accedan a tus cuentas.",
-        "cta": "Generar",
+        "title": "Crea contraseñas seguras",
+        "description": "Si tu correo electrónico se ha filtrado en la dark web, lo primero que debes hacer es cambiar tus contraseñas.",
+        "cta": "Generar contraseña",
         "redirect": "/password-generator"
       },
       {
-        "title": "Usa una VPN",
-        "description": "La VPN de Internxt reduce en gran medida las posibilidades de filtraciones de datos al encriptar y ocultar tu dirección IP. Nuestra VPN asegura que todos los datos transmitidos mientras navegas estén encriptados y protegidos contra accesos no autorizados.",
-        "cta": "Descargar",
+        "title": "Utiliza VPN para navegar",
+        "description": "Internxt VPN reduce en gran medida las posibilidades de violaciones de datos al cifrar y ocultar tu dirección IP. Nuestra VPN garantiza que todos los datos transmitidos mientras navegas en línea estén cifrados y protegidos contra el acceso no autorizado.",
+        "cta": "Descargar VPN",
         "redirect": "/vpn"
       },
       {
-        "title": "Revisa la seguridad de tu contraseña",
-        "description": "Revisa qué tan segura es tu contraseña con el verificador de contraseñas de Internxt. Verás la seguridad de la contraseña, cuántas veces ha sido filtrada y cuánto tiempo le tomaría a los hackers descifrarla con ataques de fuerza bruta o software especializado.",
-        "cta": "Revisar",
+        "title": "Verifica la seguridad de tu contraseña",
+        "description": "Comprueba qué tan segura es tu contraseña con el Comprobador de contraseñas de Internxt. Revisa la seguridad de tu contraseña, los tiempos encontrados en las filtraciones y el tiempo que les tomaría a los piratas informáticos descifrar tu contraseña mediante un software especializado. ",
+        "cta": "Comprobar",
         "redirect": "/password-checker"
       },
       {
-        "title": "Almacena archivos de forma privada",
-        "description": "El almacenamiento en la nube encriptado de Internxt Drive utiliza encriptación de extremo a extremo para proteger tu información sensible y evitar filtraciones de datos y que hackers expongan tu información en la dark web.",
-        "cta": "Suscribirse",
+        "title": "Almacena tus archivos de forma privada",
+        "description": "El almacenamiento en la nube cifrado de Internxt Drive utiliza cifrado de extremo a extremo para proteger tu información confidencial y evitar filtraciones de datos y que los piratas informáticos filtren tu información en la web oscura. ",
+        "cta": "Prueba Internxt Drive",
         "redirect": "/drive"
       }
     ]
   },
   "FeatureSectionV2": {
-    "title": "¿Has sido víctima de las mayores filtraciones de datos del mundo?",
-    "description": "Comprueba tu correo electrónico y toma medidas para proteger tus cuentas con Internxt Monitor.",
+    "title": "¿Te has visto involucrado en las mayores violaciones de datos del mundo?",
+    "description": "Revisa tu correo electrónico y toma medidas para proteger tus cuentas con Internxt Monitor",
     "cards": [
       {
-        "title": "Archivo de Internet",
-        "description": "En septiembre de 2024, el 'Wayback Machine' del Archivo de Internet sufrió una gran filtración de datos cuando un actor de amenazas robó una base de datos de autenticación de usuarios con 31 millones de registros. Los datos incluían direcciones de correo electrónico, nombres de usuario y hashes de contraseñas bcrypt."
+        "title": "Internet archive",
+        "description": "En septiembre de 2024, la “Wayback Machine” de Internet Archive experimentó una importante filtración de datos cuando un actor de amenazas robó una base de datos de autenticación de usuarios que contenía 31 millones de registros. Los datos de la infracción incluían direcciones de correo electrónico, nombres de pantalla y hashes de contraseñas de bcrypt."
       },
       {
         "title": "Facebook",
-        "description": "En abril de 2021, los datos de más de 500 millones de usuarios de Facebook se pusieron a disposición para su descarga en la dark web. Los datos incluían números de teléfono, 2,5 millones de direcciones de correo electrónico y otra información personal que puede utilizarse en ciberataques como el phishing."
+        "description": "En abril de 2021, los datos de más de 500 millones de usuarios de Facebook estuvieron disponibles para descargar en la web oscura. Los datos de la violación contenían números de teléfono, 2,5 millones de direcciones de correo electrónico y otra información personal que puede utilizarse en ataques cibernéticos como el phishing."
       },
       {
         "title": "Verifications.io",
-        "description": "Verifications.io sufrió una filtración de datos debido a que los datos se almacenaban en una instancia de MongoDB expuesta públicamente sin protección de contraseña. La filtración expuso 763 millones de correos electrónicos únicos, nombres, números de teléfono, direcciones IP, fechas de nacimiento y géneros."
+        "description": "Verifications.io sufrió una violación de datos debido a que los datos se almacenaron en una instancia de MongoDB que se dejó a disposición del público sin protección con contraseña. La infracción expuso 763 millones de correos electrónicos, nombres, números de teléfono, direcciones IP, fechas de nacimiento y géneros. "
       },
       {
-        "title": "Collection #1",
-        "description": "En enero de 2018, la filtración de datos de Collection #1 expuso 2,7 mil millones de registros que se hicieron disponibles en la dark web y en foros en línea. Los datos incluían más de 77 millones de direcciones de correo electrónico y más de 21 millones de contraseñas de múltiples filtraciones."
+        "title": "Collection #1 ",
+        "description": "En enero de 2018, la filtración de datos de la Colección #1 filtró 2.700 millones de registros, que estuvieron disponibles en la web oscura y foros en línea. Los datos incluían más de 77 millones de direcciones de correo electrónico y más de 21 millones de contraseñas de múltiples infracciones."
       }
     ]
   }

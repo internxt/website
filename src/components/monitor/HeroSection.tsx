@@ -61,7 +61,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                   logoPath: pwnedItem.LogoPath,
                   title: pwnedItem.Title,
                   description: pwnedItem.Description,
-                  compromisedData: `Compromised on ${pwnedItem.BreachDate}:`,
+                  compromisedData: pwnedItem.compromisedData,
                   dataClasses: pwnedItem.DataClasses,
                   domain: pwnedItem.Domain,
                   BreachDate: pwnedItem.BreachDate,

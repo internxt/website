@@ -74,6 +74,14 @@
     "description": "Sichere Dateispeicherung mit passwortgeschützter Technologie für deine Dateien.",
     "cta": "Melde dich kostenlos an"
   },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Erhalte Ende-zu-Ende verschlüsselten Cloud-Speicher ohne zusätzliche Kosten.",
+    "blueText": " Melde dich kostenlos bei Internxt an"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "für eine sicherere, offene und kosteneffektive Cloud-Speicherlösung.",
+    "blueText": "Wechsle zu Internxt "
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Verwende dieses sichere Passwort mit einem",
     "blueText": "kostenlosen Internxt Konto"

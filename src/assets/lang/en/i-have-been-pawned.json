@@ -31,30 +31,12 @@
         "title": "Breaches where your email was found",
         "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
         "linkToPasswordGenerator": {
+          "previousText": "",
           "linkText": "Internxt’s Password Generator",
           "otherText": "creates unique, strong passwords to protect your accounts and data."
         }
       },
-      "pwnedElement": {
-        "compromisedData": "Compromised data",
-        "name": "Adobe",
-        "title": "Adobe",
-        "domain": "adobe.com",
-        "BreachDate": "2013-10-04",
-        "addedDate": "2013-12-04T00:00:00Z",
-        "modifiedDate": "2022-05-15T23:52:49Z",
-        "pwnCount": 152445165,
-        "description": "In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, encrypted password and a password hint in plain text. The password cryptography was poorly done and many were quickly resolved back to plain text. The unencrypted hints also adding further to the risk that hundreds of millions of Adobe customers already faced.",
-        "logoPath": "https://logos.haveibeenpwned.com/Adobe.png",
-        "dataClasses": ["Email addresses", "Password hints", "Passwords", "Usernames"],
-        "isVerified": true,
-        "isFabricated": false,
-        "isSensitive": false,
-        "isRetired": false,
-        "isSpamList": false,
-        "isMalware": false,
-        "isSubscriptionFree": false
-      }
+      "compromisedData": "Compromised data:"
     }
   },
   "InfoSection": {

@@ -1,95 +1,112 @@
 {
   "HeroSection": {
-    "tagline": "Internxt 监控",
-    "title": "我被黑客攻击了吗？",
-    "subtitle": "检查您的电子邮件是否在数据泄露中被暴露。",
-    "description": "Internxt 监控会检查您的电子邮件是否出现在被泄露的账户数据库中。",
-    "placeHolder": "您的电子邮件地址",
-    "toolTip": "我们不会存储或分享您的电子邮件地址"
-  },
-  "InfoSection": {
-    "pwnedWebsites": "被泄露的网站",
-    "pwnedAccounts": "被泄露的账户",
-    "pastes": "粘贴记录"
-  },
-  "AllGoodSection": {
-    "title": "一切正常！",
-    "description": "没有发现泄露的账户或粘贴记录。",
-    "StaySecure": "通过强密码和多因素认证来保持在线安全。"
-  },
-  "PwnedSection": {
-    "title": "哦，不！",
-    "description": "您的电子邮件出现在 X 次数据泄露和 X 个粘贴记录中。",
-    "recomendation": "我们建议立即采取措施以保护您的账户。",
-    "breachesSection": {
-      "title": "您的电子邮件出现在的泄露记录",
-      "description": "数据泄露是指您的电子邮件、姓名、地址或其他个人信息被意外公开在互联网上。",
-      "linkToPasswordGenerator": {
-        "linkText": "Internxt 密码生成器",
-        "otherText": "创建独特的强密码来保护您的账户和数据。"
-      }
+    "title": "Internxt 黑暗網路監控",
+    "subtitle": "檢查您的電子郵件是否在資料洩露中被曝光。",
+    "description": "Internxt 監控檢查您的電子郵件是否在已洩露帳戶的資料庫中。",
+    "AllGoodSection": {
+      "title": "一切正常！",
+      "description": "未發現被洩露的帳戶或資料。",
+      "StaySecure": "使用強密碼和多因素認證來保持在線安全。"
+    },
+    "EmailToolBar": {
+      "placeHolder": "您的電子郵件地址",
+      "toolTip": "我們不儲存或分享您的電子郵件地址",
+      "toolTipEmergent": "您的電子郵件只會針對洩露的資料庫進行檢查。",
+      "pleaseEnterEmail": "請輸入有效的電子郵件地址",
+      "noBreachesFound": "未找到電子郵件",
+      "errorPwned": "檢查您的電子郵件時發生錯誤，請稍後再試。",
+      "check": "檢查",
+      "checking": "正在檢查..."
+    },
+    "breaches": {
+      "error405": "不支持請求方法。請聯繫支持或嘗試刷新頁面。",
+      "error400": "請求無效。請確保您的電子郵件地址輸入正確，並重試。",
+      "error500": "服務器存在問題。請稍等片刻後再試一次。如果問題持續存在，請聯繫支持。"
+    },
+    "PwnedSection": {
+      "title": "哦，不！",
+      "description": "在 X 次數據洩露和 X 次複製中找到了您的電子郵件。",
+      "recomendation": "我們建議立即採取措施保護您的帳戶。",
+      "breachesSection": {
+        "title": "發現您電子郵件的洩露點",
+        "description": "數據洩露是指您的電子郵件、姓名、地址或其他個人信息無意中被公開在網上。",
+        "linkToPasswordGenerator": {
+          "previousText": "",
+          "linkText": "Internxt 密碼生成器",
+          "otherText": "創建獨一無二、強大的密碼來保護您的帳戶和數據。"
+        }
+      },
+      "compromisedData": "資料洩露"
     }
   },
+  "InfoSection": {
+    "pwnedWebsites": "已洩露網站",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "已洩露帳戶",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "複製數據",
+    "pastesData": "115,796"
+  },
   "CtaSection": {
-    "title": "不要成为另一个受害者",
-    "description": "使用 Internxt 暗网监控检查您的账户。",
-    "cta": "立即检查"
+    "title": "不要成為另一個統計數字",
+    "description": "使用 Internxt 黑暗網路監控檢查您的帳戶。",
+    "cta": "立即檢查"
   },
   "CtaSection2": {
-    "title": "不要等到数据泄露发生",
-    "description": "使用 Internxt 检查并保护您的信息。",
-    "cta": "立即检查"
+    "title": "不要等到數據洩露發生",
+    "description": "使用 Internxt 檢查並保護您的信息。",
+    "cta": "立即檢查"
   },
   "FeatureSection": {
-    "title": "如果您的电子邮件在暗网上泄露，该怎么办",
-    "description": "Internxt 暗网监控是我们保护您免受黑客在暗网上泄露数据的任务的一部分。",
-    "description2": "Internxt 致力于保护您的数字世界安全。了解有效的策略，以便在您的电子邮件在暗网上泄露时保护账户并降低风险。",
+    "title": "如果您的電子郵件在黑暗網路上洩露了應該怎麼辦",
+    "description": "Internxt 黑暗網路監控是我們保護您免受黑客洩露數據的使命的一部分。",
+    "description2": "Internxt 致力於在數位世界中保護您的安全。了解有效的策略，以保護您的帳戶並減輕電子郵件在黑暗網路上被洩露的風險。",
     "cards": [
       {
-        "title": "创建强密码",
-        "description": "如果您的电子邮件在暗网上泄露，您应该首先更改密码。Internxt 密码生成器创建强密码或短语，以防止黑客访问您的账户。",
+        "title": "創建強密碼",
+        "description": "如果您的電子郵件在黑暗網路上被洩露，您首先需要做的是更改您的密碼。Internxt 密碼生成器可以創建強大的密碼或密碼短語，以防止黑客訪問您的帳戶。",
         "cta": "生成",
         "redirect": "/password-generator"
       },
       {
         "title": "使用 VPN",
-        "description": "Internxt VPN 通过加密和隐藏您的 IP 地址，极大地减少了数据泄露的风险。我们的 VPN 确保您在线浏览时传输的所有数据都被加密并免于未经授权的访问。",
-        "cta": "下载",
+        "description": "Internxt VPN 大大降低了數據洩露的風險，通過加密和隱藏您的 IP 地址。我們的 VPN 確保您在線衝浪時傳輸的所有數據都被加密並免受未授權訪問。",
+        "cta": "下載",
         "redirect": "/vpn"
       },
       {
-        "title": "检查您的密码强度",
-        "description": "使用 Internxt 密码检查器查看您的密码安全性、在泄露记录中被找到的次数以及黑客使用暴力破解或专用软件破解密码所需的时间。",
-        "cta": "检查",
+        "title": "檢查您的密碼強度",
+        "description": "使用 Internxt 密碼檢查器檢查您的密碼安全性。查看您的密碼強度、在洩露中找到的次數以及黑客使用暴力破解或專用軟件破解您的密碼所需的時間。",
+        "cta": "檢查",
         "redirect": "/password-checker"
       },
       {
-        "title": "安全存储文件",
-        "description": "Internxt Drive 加密云存储使用端到端加密来保护您的敏感信息，防止数据泄露和黑客在暗网上泄露您的信息。",
-        "cta": "订阅",
+        "title": "私密存儲文件",
+        "description": "Internxt Drive 加密雲存儲使用端到端加密技術來保護您的敏感信息，並防止數據洩露和黑客在黑暗網路上洩露您的信息。",
+        "cta": "訂閱",
         "redirect": "/drive"
       }
     ]
   },
   "FeatureSectionV2": {
-    "title": "您是否在全球最大的泄露事件中被黑客攻击？",
-    "description": "检查您的电子邮件，并使用 Internxt 监控采取措施保护您的账户。",
+    "title": "您是否在全球最大的數據洩露中受到影響？",
+    "description": "使用 Internxt 監控檢查您的電子郵件並採取措施保護您的帳戶。",
     "cards": [
       {
-        "title": "互联网档案馆",
-        "description": "2024年9月，互联网档案馆的“时光机”发生重大数据泄露，黑客窃取了包含3100万条记录的用户认证数据库。泄露的数据包括电子邮件地址、用户名和 bcrypt 哈希密码。"
+        "title": "互聯網檔案館",
+        "description": "2024年9月，互聯網檔案館的「時光機」經歷了一次重大的數據洩露，一名威脅行為者竊取了包含3100萬記錄的用戶認證數據庫。洩露的數據包括電子郵件地址、屏幕名和 bcrypt 密碼哈希。"
       },
       {
         "title": "Facebook",
-        "description": "2021年4月，超过5亿 Facebook 用户的数据被发布在暗网上。泄露的数据包括电话号码、250万电子邮件地址和其他可用于网络钓鱼等网络攻击的个人信息。"
+        "description": "2021年4月，超過5億 Facebook 用戶的數據在黑暗網路上可供下載。洩露的數據包括電話號碼、250萬個電子郵件地址和其他可用於網絡釣魚等網絡攻擊的個人信息。"
       },
       {
         "title": "Verifications.io",
-        "description": "由于没有密码保护的 MongoDB 实例被公开访问，Verifications.io 遭遇数据泄露。这次泄露暴露了7.63亿独特的电子邮件、姓名、电话号码、IP 地址、出生日期和性别。"
+        "description": "Verifications.io 因為數據存儲在未設密碼保護的公開 MongoDB 實例中而發生數據洩露。洩露暴露了7.63億獨特的電子郵件、姓名、電話號碼、IP地址、出生日期和性別。"
       },
       {
-        "title": "Collection #1",
-        "description": "2018年1月，Collection #1 数据泄露包含27亿条记录，并在暗网和论坛上被发布。这些数据包括超过7700万个电子邮件地址和超过2100万个来自多个泄露事件的密码。"
+        "title": "集合#1",
+        "description": "在 2018 年 1 月，集合#1的數據洩露洩漏了 2.7 億條記錄，這些記錄在黑暗網路和在線論壇上可用。數據包括超過 7700 萬個電子郵件地址和超過 2100 萬個密碼，涵蓋了多次洩露。"
       }
     ]
   }

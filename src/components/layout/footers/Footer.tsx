@@ -445,7 +445,7 @@ export default function Footer({
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
                     <Link
-                      href="/have-i-been-pwned"
+                      href="/dark-web-monitor"
                       locale={lang}
                       passHref
                       className="flex items-center hover:text-primary"
@@ -863,7 +863,7 @@ export default function Footer({
                       <Link href="/file-converter" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.fileConverter}
                       </Link>
-                      <Link href="/have-i-been-pwned" locale={lang} passHref legacyBehavior>
+                      <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.haveIBeenPwned}
                       </Link>
                       <Link href="/vpn" locale={lang} passHref>
