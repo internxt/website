@@ -25,13 +25,12 @@
         "minutes": "minutes",
         "seconds": "seconds"
       },
-      "features":[
-       "Encrypted file storage and sharing",
+      "features": [
+        "Encrypted file storage and sharing",
         "Access your files from any device",
         "Get access to all our services",
         "No unauthorized data access"
       ]
-      
     },
     "BestStorage": {
       "title": "The best cloud storage Black Friday deal",
@@ -46,7 +45,6 @@
         "cta": "Secure with Drive",
         "image": "drive",
         "alt": "Internxt Drive"
-        
       },
       "photos": {
         "title": "Internxt for Business",
@@ -96,21 +94,21 @@
     "TestimonialsSection": {
       "title": "What our users are saying about us",
       "cards": [
-      {
-        "name": "Eva Williams",
-        "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
-      },
-      {
-        "name": "Cristian M.",
-        "enterprise": "Review from GetApp",
-        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
-      },
-      {
-        "name": "Josep Carrizo",
-        "enterprise": "Review from Trustpilot",
-        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
-      }
+        {
+          "name": "Eva Williams",
+          "enterprise": "Journalist for FixThePhoto.com",
+          "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        },
+        {
+          "name": "Cristian M.",
+          "enterprise": "Review from GetApp",
+          "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+        },
+        {
+          "name": "Josep Carrizo",
+          "enterprise": "Review from Trustpilot",
+          "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+        }
       ]
     },
     "faq": {
@@ -129,7 +127,7 @@
         {
           "question": "Who is eligible for this discount?",
           "answer": [
-            "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
+            "New users or anyone with a free Internxt account is eligible to take part in our Black Friday Sale."
           ]
         },
         {
