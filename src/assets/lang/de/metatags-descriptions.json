@@ -154,5 +154,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Objektspeicherung",
     "description": "Internxt bietet privaten und erschwinglichen Objektspeicher zum sicheren Speichern von Daten mit dem S3-Protokoll, um Ihre Speicheranforderungen effektiv zu verwalten."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Grünes und nachhaltiges Cloud-Speichern",
+    "description": "Die ökologischen Rechenzentren von Internxt fördern unser Engagement für Nachhaltigkeit und ökologische Cloud-Computing, um eine grünere und nachhaltigere Umgebung zu unterstützen."
   }
 ]
