@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " Verde e Sostenibile"
+    },
+    "description": "Internxt è impegnata nell'informatica in nuvola ecologica e offre soluzioni di archiviazione ecologiche per un futuro più pulito e sostenibile."
+  },
+  "CtaSection": {
+    "title": "Internxt: il futuro della privacy e della sostenibilità",
+    "cta": "Scegli un piano"
+  },
+  "CtaSection2": {
+    "title": "Impegnati per un futuro sostenibile con Internxt",
+    "cta": "Scegli un piano"
+  },
+  "CtaSection3": {
+    "title": "Archiviazione in nuvola rispettosa dell'ambiente e della privacy",
+    "cta": "Scegli un piano"
+  },
+  "FeatureSection": {
+    "title": "L'importanza dell'informatica in nuvola verde",
+    "description": "Internxt promuove l'innovazione supportando pratiche sostenibili nell'infrastruttura cloud, senza compromettere le prestazioni o l'affidabilità.",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "Impatto ambientale ridotto",
+        "description": "L'informatica in nuvola verde utilizza energia rinnovabile per ridurre le emissioni di carbonio, conservare energia e ridurre i rifiuti elettronici. Adottando questo approccio sostenibile, aiutiamo le aziende a ridurre il loro impatto ambientale e a preservare le risorse naturali del pianeta."
+      },
+      "increasedSavings": {
+        "title": "Maggiore risparmio",
+        "description": "Utilizziamo solo data center ad alta efficienza energetica che riducono il fabbisogno di hardware, riducono i costi operativi e aumentano i risparmi energetici, allineandoci con i nostri obiettivi di sviluppo verde e sostenibile."
+      },
+      "innovation": {
+        "title": "Innovazione",
+        "description": "L'informatica in nuvola verde utilizza le migliori tecnologie per fornire una soluzione ecologica per le infrastrutture cloud. I nostri data center utilizzano la tecnologia di raffreddamento ad acqua progettata per ottimizzare l'efficienza energetica e minimizzare il consumo per una soluzione di archiviazione in nuvola sostenibile."
+      },
+      "focusOnRenewableEnergy": {
+        "title": "Focalizzazione sulle energie rinnovabili",
+        "description": "L'energia rinnovabile alimenta l'informatica in nuvola verde, utilizzando risorse rinnovabili come energia solare, eolica e idroelettrica per ridurre l'inquinamento atmosferico e l'impatto ambientale, e per aiutare a promuovere un mondo costruito su soluzioni sostenibili di nuvola verde."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Come gestiamo il nostro impatto ambientale",
+    "description": "Internxt dà l'esempio lavorando per un futuro più sostenibile attraverso pratiche di efficienza energetica per ridurre il consumo di risorse e contribuire a un futuro più verde.",
+    "cards": {
+      "power": {
+        "title": "Potenza",
+        "description": "L'efficienza energetica (PUE) dei nostri data center viene misurata e auditata ogni 12 mesi. I valori più vicini a 1 indicano un consumo energetico più efficiente.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Acqua",
+        "description": "Questa metrica misura l'efficienza con cui viene utilizzata l'acqua; i valori più vicini a 0 indicano un rendimento ottimale.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbone",
+        "description": "Questo traccia le emissioni dirette e indirette dall'uso dell'elettricità, dove i valori più vicini a 0 indicano una migliore performance.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Rinnovabili",
+        "description": "Questo si riferisce alla percentuale di tariffe del Fattore di Energia Rinnovabile (REF) utilizzate nei nostri data center.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Un impegno per un futuro verde e sostenibile",
+    "description": "Promuovendo iniziative ecologiche, il nostro obiettivo è proteggere il pianeta e lottare per una soluzione di archiviazione in nuvola più pulita e ecologica.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Ridurre l'energia del carbonio",
+        "description": "Entro il 2025, i centri che utilizziamo limiteranno la loro dipendenza dall'energia a base di carbonio, passando a fonti di energia più rinnovabili e a basse emissioni di carbonio, come l'energia nucleare e idroelettrica."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Zero emissioni nette globali",
+        "description": "La nostra soluzione ecologica di informatica in nuvola si impegna a raggiungere zero emissioni nette per il Scope 1 (emissioni dirette dai combustibili) e il Scope 2 (emissioni indirette dall'elettricità). Il Scope 3, che copre tutte le altre emissioni indirette, sarà trattato nel 2023."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Rifiuti zero",
+        "description": "Per ridurre l'impatto ambientale delle discariche e promuovere iniziative ecologiche, ci impegniamo a non generare rifiuti in discarica entro il 2025 in tutte le nostre sedi di server."
+      }
+    }
+  }
+}

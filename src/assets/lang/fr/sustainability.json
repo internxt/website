@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " Vert et Durable"
+    },
+    "description": "Internxt s'engage dans l'informatique en nuage écologique et propose des solutions de stockage écologiques pour un avenir plus propre et durable."
+  },
+  "CtaSection": {
+    "title": "Internxt : l'avenir de la confidentialité et de la durabilité",
+    "cta": "Choisir un plan"
+  },
+  "CtaSection2": {
+    "title": "Engagez-vous pour un avenir durable avec Internxt",
+    "cta": "Choisir un plan"
+  },
+  "CtaSection3": {
+    "title": "Stockage en nuage respectueux de l'environnement et de la confidentialité",
+    "cta": "Choisir un plan"
+  },
+  "FeatureSection": {
+    "title": "L'importance de l'informatique en nuage verte",
+    "description": "Internxt favorise l'innovation en promouvant des pratiques durables dans l'infrastructure du nuage, sans compromettre les performances ou la fiabilité.",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "Impact environnemental réduit",
+        "description": "L'informatique en nuage verte utilise de l'énergie renouvelable pour réduire les émissions de carbone, économiser de l'énergie et minimiser les déchets électroniques. En adoptant cette approche durable, nous aidons les entreprises à réduire leur impact environnemental et à préserver les ressources naturelles de la planète."
+      },
+      "increasedSavings": {
+        "title": "Plus d'économies",
+        "description": "Nous n'utilisons que des centres de données écoénergétiques qui minimisent les besoins en matériel, réduisent les frais généraux et augmentent les économies d'énergie, ce qui s'aligne sur nos objectifs de développement durable et vert."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "L'informatique en nuage verte utilise les meilleures technologies pour fournir une solution écologique pour les infrastructures du nuage. Nos centres de données utilisent une technologie de refroidissement par eau conçue pour optimiser l'efficacité énergétique et minimiser la consommation pour une solution de stockage en nuage durable."
+      },
+      "focusOnRenewableEnergy": {
+        "title": "Concentration sur les énergies renouvelables",
+        "description": "L'énergie renouvelable alimente l'informatique en nuage verte, en utilisant des ressources renouvelables telles que l'énergie solaire, éolienne et hydroélectrique pour réduire la pollution de l'air et l'impact environnemental, et pour aider à promouvoir un monde construit sur des solutions durables de nuage vert."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Comment nous gérons notre impact environnemental",
+    "description": "Internxt montre l'exemple en travaillant pour un avenir plus durable grâce à des pratiques d'efficacité énergétique visant à minimiser la consommation de ressources et contribuer à un avenir plus vert.",
+    "cards": {
+      "power": {
+        "title": "Puissance",
+        "description": "L'efficacité de l'utilisation de l'énergie (PUE) de nos centres de données est mesurée et auditée tous les 12 mois. Les valeurs mesurées les plus proches de 1 indiquent une consommation d'énergie plus efficace.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Eau",
+        "description": "Cette métrique mesure l'efficacité avec laquelle l'eau est utilisée; des valeurs plus proches de 0 indiquent une performance optimale.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbone",
+        "description": "Cela suit les émissions directes et indirectes de l'utilisation de l'électricité, où les valeurs les plus proches de 0 représentent une meilleure performance.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renouvelables",
+        "description": "Cela fait référence au pourcentage des frais de Facteur d'Énergie Renouvelable (REF) utilisés dans nos centres de données.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Un engagement pour un avenir vert et durable",
+    "description": "En promouvant des initiatives écologiques, notre objectif est de protéger la planète et de lutter pour une solution de stockage en nuage plus propre et écologique.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Réduire l'énergie carbone",
+        "description": "D'ici 2025, les centres que nous utilisons limiteront leur dépendance à l'énergie à base de carbone, en passant à des sources d'énergie plus renouvelables et à faibles émissions de carbone, telles que l'énergie nucléaire et hydroélectrique."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Zéro émission nette mondiale",
+        "description": "Notre solution d'informatique en nuage écologique s'engage à atteindre des émissions nettes nulles pour le Scope 1 (émissions directes des combustibles) et le Scope 2 (émissions indirectes de l'électricité). Le Scope 3, qui couvre toutes les autres émissions indirectes, sera abordé en 2023."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Zéro déchet",
+        "description": "Pour réduire l'impact environnemental des décharges et promouvoir des initiatives écologiques, nous nous engageons à ne pas générer de déchets dans les décharges d'ici 2025 dans tous nos sites de serveurs."
+      }
+    }
+  }
+}

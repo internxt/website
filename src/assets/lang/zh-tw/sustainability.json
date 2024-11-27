@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " 綠色與可持續"
+    },
+    "description": "Internxt 致力於生態雲計算，並提供生態存儲解決方案，為更清潔、更可持續的未來作出貢獻。"
+  },
+  "CtaSection": {
+    "title": "Internxt：隱私與可持續性的未來",
+    "cta": "選擇一個計劃"
+  },
+  "CtaSection2": {
+    "title": "與 Internxt 一起為可持續的未來努力",
+    "cta": "選擇一個計劃"
+  },
+  "CtaSection3": {
+    "title": "環保且注重隱私的雲存儲",
+    "cta": "選擇一個計劃"
+  },
+  "FeatureSection": {
+    "title": "綠色雲計算的重要性",
+    "description": "Internxt 透過推動可持續實踐在雲基礎設施中促進創新，並不會犧牲性能或可靠性。",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "減少環境影響",
+        "description": "綠色雲計算利用可再生能源來減少碳排放、節省能源並減少電子廢物。通過採用這種可持續的做法，我們幫助企業減少其環境影響，並幫助保護地球的自然資源。"
+      },
+      "increasedSavings": {
+        "title": "更多節省",
+        "description": "我們只使用高效能的資料中心，減少硬體需求，降低運營成本，增加能源節省，符合我們的綠色與可持續發展目標。"
+      },
+      "innovation": {
+        "title": "創新",
+        "description": "綠色雲計算利用最先進的技術，為雲基礎設施提供環保解決方案。我們的資料中心使用水冷技術，旨在優化能效並最小化消耗，提供可持續的雲存儲解決方案。"
+      },
+      "focusOnRenewableEnergy": {
+        "title": "專注於可再生能源",
+        "description": "可再生能源驅動綠色雲計算，使用如太陽能、風能和水力發電等可再生資源來減少空氣污染和環境影響，並幫助推動一個建立在可持續綠色雲解決方案上的世界。"
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "我們如何管理我們的環境影響",
+    "description": "Internxt 以身作則，致力於透過能源效率實踐，減少資源消耗並為更綠色的未來作出貢獻。",
+    "cards": {
+      "power": {
+        "title": "能源",
+        "description": "我們的資料中心的能源使用效率（PUE）每 12 個月進行一次測量和審核。數值越接近 1，表示能效越高。",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "水",
+        "description": "此指標衡量水的使用效率；數值越接近 0，表示效率越高。",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "碳",
+        "description": "此指標跟蹤電力使用的直接和間接排放，數值越接近 0，表示性能越好。",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "可再生能源",
+        "description": "這指的是我們資料中心使用的可再生能源因子（REF）的比例。",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "對綠色和可持續未來的承諾",
+    "description": "通過推動生態項目，我們的目標是保護地球並爭取實現更清潔、更生態的雲存儲解決方案。",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "減少碳能源",
+        "description": "到 2025 年，我們使用的中心將減少對碳能源的依賴，轉向更多低碳排放的可再生能源，如核能和水力發電。"
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "全球淨零排放",
+        "description": "我們的綠色雲計算解決方案承諾實現範圍 1（直接排放來自燃料）和範圍 2（間接排放來自電力）淨零排放。到 2023 年，我們將解決範圍 3，涵蓋所有其他間接排放。"
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "零廢物",
+        "description": "為了減少垃圾填埋對環境的影響並推動生態項目，我們承諾在 2025 年之前，所有伺服器位置將不會產生垃圾填埋物。"
+      }
+    }
+  }
+}
