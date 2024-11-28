@@ -1,11 +1,11 @@
 import { SustainabilityText } from '@/assets/types/sustainabilty';
 import Header from '@/components/shared/Header';
 
-export interface HeroSection {
+export interface HeroSectionProps {
   textContent: SustainabilityText['HeroSection'];
 }
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ textContent }: HeroSectionProps) => {
   return (
     <>
       <section className="relative flex w-full flex-col overflow-hidden pt-14">

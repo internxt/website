@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { SustainabilityText } from '@/assets/types/sustainabilty';
 
-export interface FeatureSection {
+export interface FeatureSectionProps {
   textContent: SustainabilityText['FeatureSectionV2'];
 }
-const FeatureSection = ({ textContent }) => {
+const FeatureSection = ({ textContent }: FeatureSectionProps) => {
   const cards = [
     {
       icon: Lightning,
@@ -52,7 +52,6 @@ const FeatureSection = ({ textContent }) => {
         </div>
         <div>
           {cards.map((card, index) => {
-            const Icon = card.icon;
             const isEven = index % 2 === 0;
 
             return (
@@ -83,7 +82,7 @@ const FeatureSection = ({ textContent }) => {
                     isEven ? 'md:pl-10' : 'md:pr-10'
                   }`}
                 >
-                  <Icon size={48} className="text-primary md:size-[64px]" />
+                  <card.icon size={48} className="text-primary md:size-[64px]" />
                   <p className="text-3xl font-semibold sm:text-4xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <span className="flex items-start space-x-2 text-4xl font-semibold text-primary md:text-5xl">
                     <p>{card.value}</p>

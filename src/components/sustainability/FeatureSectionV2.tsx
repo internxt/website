@@ -1,10 +1,10 @@
 import { SustainabilityText } from '@/assets/types/sustainabilty';
 
-export interface FeatureSectionV2 {
+export interface FeatureSectionV2Props {
   textContent: SustainabilityText['FeatureSectionV3'];
 }
 
-const FeatureSectionV2 = ({ textContent }) => {
+const FeatureSectionV2 = ({ textContent }: FeatureSectionV2Props) => {
   const cards = [
     {
       number: textContent.cards.reduceCarbonEnergy.number,
