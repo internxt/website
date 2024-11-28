@@ -86,7 +86,7 @@ export const SwitchComponent = ({
         </p>
 
         {showLabelDiscount ? (
-          <p className="absolute left-1/2 top-full -translate-x-1/2 whitespace-nowrap font-semibold text-green-dark lg:left-full lg:top-0 lg:pl-1.5">
+          <p className="absolute left-1/2 top-full -translate-x-1/2 whitespace-nowrap font-semibold text-green-dark lg:left-full lg:top-0 lg:translate-x-0 lg:pl-1.5">
             {SAVE_LABEL[lang]} {labelDiscount}%
           </p>
         ) : null}
