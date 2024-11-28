@@ -23,7 +23,11 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
       <p className="text-3xl font-semibold text-gray-100">{textContent.title}</p>
       <div className="my-4 flex items-center justify-center rounded-md bg-red8 px-10 py-2 text-center">
         <WarningCircle className="h-12 w-12 text-red md:h-6 md:w-6" weight="fill" />
-        <p className="font-regular ml-2 text-base text-gray-100">{textContent.description}</p>
+        <p className="font-regular ml-2 text-base text-gray-100">
+          {textContent.description}
+          {pwnedElements.length}
+          {textContent.breaches}
+        </p>
       </div>
       <p className="font-regular px-5 text-center text-base text-gray-100">{textContent.recomendation}</p>
       <ArrowCircleDown className="mb-10 mt-10 h-10 w-10 animate-bounce text-primary md:h-8 md:w-8" />
