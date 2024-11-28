@@ -62,6 +62,7 @@ export interface EmailToolBar {
 export interface PwnedSection {
   title: string;
   description: string;
+  breaches: string;
   recomendation: string;
   breachesSection: BreachesSection;
   compromisedData: string;
