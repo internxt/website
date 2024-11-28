@@ -25,8 +25,9 @@
     },
     "PwnedSection": {
       "title": "Oh no!",
-      "description": "Your email was found in ",
-      "breaches": " data breaches",
+      "description": "Your email has been found in ",
+      "breaches": " data breaches and ",
+      "pastes ": " pastes.",
       "recomendation": "We recommend taking immediate action to secure your accounts.",
       "breachesSection": {
         "title": "Breaches where your email was found",

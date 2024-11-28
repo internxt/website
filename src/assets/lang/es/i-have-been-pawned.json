@@ -15,7 +15,7 @@
       "pleaseEnterEmail": "Por favor, introduce un mail válido",
       "noBreachesFound": "Email no encontrado",
       "errorPwned": "Error al comprobar el correo electrónico",
-      "check": "Compronar",
+      "check": "Comprobar",
       "checking": "Comprobando..."
     },
     "breaches": {
@@ -25,7 +25,9 @@
     },
     "PwnedSection": {
       "title": "Oh no!",
-      "description": "Tu correo electrónico se encontró en X violaciones de datos y X pegados.",
+      "description": "Tu email ha sido encontrado en ",
+      "breaches": " filtraciones de datos y en ",
+      "pastes": " publicaciones.",
       "recomendation": "Recomendamos tomar medidas inmediatas para proteger tus cuentas.",
       "breachesSection": {
         "title": "Sitios donde tu correo y contraseña han sido filtrados",
