@@ -5,6 +5,7 @@ import Button from '../shared/Button';
 
 import { useRouter } from 'next/router';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
+import Card from '../shared/Card';
 
 export interface FeatureSectionProps {
   textContent: HaveIbeenPwnedText['FeatureSection'];
@@ -13,7 +14,7 @@ const CardText = ({ textContent }) => {
   const router = useRouter();
 
   return (
-    <div className="flex max-w-full flex-col items-center space-y-6 px-10 text-center md:max-w-[388px] md:items-start md:text-left">
+    <Card className="flex max-w-full flex-col items-center space-y-6 px-10 text-center md:max-w-[388px] md:items-start md:text-left">
       <h3 className="text-3xl font-semibold leading-tight text-gray-100 md:text-5xl">{textContent.title}</h3>
       <p className="text-lg text-gray-80 md:text-xl">{textContent.description}</p>
       <Button
@@ -21,7 +22,7 @@ const CardText = ({ textContent }) => {
         className="bg-blue-500 w-full rounded-lg py-4 text-lg font-semibold text-gray-100 md:text-xl"
         onClick={() => router.push(textContent.redirect)}
       />
-    </div>
+    </Card>
   );
 };
 
