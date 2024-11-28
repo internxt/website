@@ -35,7 +35,7 @@ const Monitor = ({
   toolsContent,
   bannerLang,
 }: MonitorProps) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'monitor');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-monitor');
   const locale = lang as string;
   const cardsForFeatureSection = [
     {
