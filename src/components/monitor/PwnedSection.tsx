@@ -16,7 +16,6 @@ export interface PwnedSectionProps {
 }
 
 export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements }) => {
-  const comprommissedData = textContent.compromisedData;
   return (
     <div className="flex w-screen flex-col items-center justify-center">
       <SmileyMeh className="text-red" height={64} width={64} />
@@ -51,7 +50,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
                 logoPath: pwnedItem.logoPath,
                 title: pwnedItem.title,
                 description: pwnedItem.description,
-                compromisedData: comprommissedData,
+                compromisedData: textContent.compromisedData,
                 dataClasses: pwnedItem.dataClasses,
                 domain: pwnedItem.title,
               }}
