@@ -20,6 +20,10 @@ export default async function handler(
     res.status(405).json({ error: textContent.error405 });
     return;
   }
+  const CACHE_CLEAN_INTERVAL_MS = 2 * 60 * 60 * 1000;
+  setInterval(() => {
+    cache.clear();
+  }, CACHE_CLEAN_INTERVAL_MS);
 
   const { email } = req.query;
 
