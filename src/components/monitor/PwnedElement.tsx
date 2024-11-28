@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import DOMPurify from 'dompurify';
 
 export interface PwnedElementCardProps {
   textContent: {
@@ -12,6 +13,9 @@ export interface PwnedElementCardProps {
 }
 
 const PwnedElementCard: React.FC<PwnedElementCardProps> = ({ textContent }) => {
+  const sanitizedHTML = DOMPurify.sanitize(
+    textContent.description.replace(/<a /g, `<a class="underline text-blue-600 hover:text-blue-800 cursor-pointer"`),
+  );
   return (
     <div className="flex max-w-[1019px] flex-col pb-5 md:flex-row">
       <div className="order-1 mb-4 flex items-center justify-center bg-gray-5 p-4 md:order-2 md:mb-0">
@@ -23,13 +27,9 @@ const PwnedElementCard: React.FC<PwnedElementCardProps> = ({ textContent }) => {
         <p className="text-xl font-bold text-gray-100 md:text-2xl">{textContent.title}</p>
         <p
           className="text-regular text-base text-gray-80 md:text-lg"
-          dangerouslySetInnerHTML={{
-            __html: textContent.description.replace(
-              /<a /g,
-              `<a class="underline text-blue-600 hover:text-blue-800 cursor-pointer"`,
-            ),
-          }}
+          dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
         />
+        ;
         <div className="inline-flex flex-wrap items-center gap-x-1 text-base text-gray-80 md:text-lg">
           <span className="font-bold">{textContent.compromisedData}</span>
           {textContent.dataClasses.map((dataClass, index) => (
