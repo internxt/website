@@ -1,10 +1,10 @@
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import { CheckCircle, Smiley } from '@phosphor-icons/react/dist/ssr';
 
-export interface FeatureSectionProps {
+export interface AllGoodSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection']['AllGoodSection'];
 }
-export const AllGoodSection = ({ textContent }) => {
+export const AllGoodSection = ({ textContent }: AllGoodSectionProps) => {
   return (
     <div className="flex flex-col items-center justify-center space-y-4 pb-10">
       <Smiley className="text-green" height={64} width={64} />
