@@ -11,7 +11,7 @@ interface EmailToolBarProps {
   onErrorChange: (error: string | null) => void;
 }
 
-function EmailToolbar({ textContent, onResultChange, onErrorChange }: Readonly<EmailToolBarProps>) {
+export const EmailToolbar = ({ textContent, onResultChange, onErrorChange }: Readonly<EmailToolBarProps>) => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -70,6 +70,6 @@ function EmailToolbar({ textContent, onResultChange, onErrorChange }: Readonly<E
       </div>
     </div>
   );
-}
+};
 
 export default EmailToolbar;
