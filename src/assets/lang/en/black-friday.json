@@ -117,43 +117,35 @@
         {
           "question": "How can I get the Black Friday discount?",
           "answer": [
-            "To take advantage of our Black Friday discount, you must click one of the “Get the deal” buttons located on this page, and you will be redirected directly to checkout with the discount already applied to your new 2TB Internxt plan."
+            "To claim your Black Friday discount, choose your preferred individual, business, or family plan and head to the checkout page. Your 85% discount is automatically applied at the checkout. "
           ]
         },
         {
           "question": "When does the promotion end?",
-          "answer": ["Our Black Friday Sale runs from November 21st until December 5th, 2022."]
+          "answer": ["The Black Friday sale ends December 3rd, 2024."]
         },
         {
           "question": "Who is eligible for this discount?",
           "answer": [
-            "New users or anyone with an Internxt free, 20GB, or 200GB subscription plan is eligible to take part in our Black Friday Sale."
+            "New users or anyone with a free Internxt account is eligible to take part in our Black Friday Sale."
           ]
         },
         {
           "question": "Will I keep the discount when my plan ends?",
           "answer": [
-            "The discount is applied for the first full year of service. Therefore, you will have access to our 2TB subscription plan at this discounted price for only one year.",
-            "If you choose to continue your existing subscription using the deal, your account will be charged at the standard 2TB plan price for the following year."
+            "The Black Friday deal is until the end of the subscription period. Your subscription will renew at the regular price once this subscription period ends at the end of the month or year. As lifetime plans only require one payment, your discount will last forever. "
           ]
         },
         {
           "question": "What payment methods does Internxt accept?",
           "answer": [
-            "We currently accept payments via credit and debit cards (Mastercard, VISA, American Express, etc.). You may also pay via Apple and Google Pay, Cartes Banaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
-          ]
-        },
-        {
-          "question": "Do you offer any discounts for nonprofits or students?",
-          "answer": [
-            "Yes, you can get 50% off any Internxt subscription plan if you are a member of a nonprofit organization or NGO. Contact us at [hello@internxt.com](mailto:hello@internxt.com) with your organization's credentials so that we can verify your eligibility and apply for your discount.",
-            "You can also get a 50% discount if you are a student. Request the discount and verify your eligibility by emailing us at [hello@internxt.com](mailto:hello@internxt.com) from your university email address."
+            "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
           ]
         },
         {
           "question": "Have more questions?",
           "answer": [
-            "If you have more questions, feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+            "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
           ]
         }
       ]
