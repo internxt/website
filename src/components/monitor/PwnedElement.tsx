@@ -29,7 +29,7 @@ const PwnedElementCard: React.FC<PwnedElementCardProps> = ({ textContent }) => {
           className="text-regular text-base text-gray-80 md:text-lg"
           dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
         />
-        ;
+
         <div className="inline-flex flex-wrap items-center gap-x-1 text-base text-gray-80 md:text-lg">
           <span className="font-bold">{textContent.compromisedData}</span>
           {textContent.dataClasses.map((dataClass, index) => (

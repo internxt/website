@@ -10,7 +10,10 @@ import Card from '../shared/Card';
 export interface FeatureSectionProps {
   textContent: HaveIbeenPwnedText['FeatureSection'];
 }
-const CardText = ({ textContent }) => {
+export interface CardTextProps {
+  textContent: HaveIbeenPwnedText['FeatureSection']['cards'];
+}
+const CardText = ({ textContent }: CardTextProps) => {
   const router = useRouter();
 
   return (
