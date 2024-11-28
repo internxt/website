@@ -22,7 +22,8 @@
   },
   "ourValues": {
     "privacy": "隐私",
-    "openSource": "通过"
+    "openSource": "通过",
+    "sustainability": "可持续性"
   },
   "Auth": {
     "SignUp": {

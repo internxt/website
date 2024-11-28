@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " sustainability"
+    },
+    "description": "Internxt is committed to green cloud computing, providing eco-friendly storage solutions for a cleaner, sustainable future."
+  },
+  "CtaSection": {
+    "title": "Internxt: the future of privacy and sustainability",
+    "cta": "Select a plan"
+  },
+  "CtaSection2": {
+    "title": "Commit to a sustainable future with Internxt!",
+    "cta": "Select a plan"
+  },
+  "CtaSection3": {
+    "title": "Environmentally and privacy-friendly cloud storage.",
+    "cta": "Select a plan"
+  },
+  "FeatureSection": {
+    "title": "The importance of green cloud computing",
+    "description": "Internxt encourages innovation by promoting sustainable practices in cloud infrastructure without compromising performance or reliability.",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "Reduced environmental impact",
+        "description": "Green cloud computing uses renewable energy to reduce carbon emissions, conserve energy, and minimize e-waste. By adopting this sustainable approach, we help businesses lower their environmental impact and help preserve the world’s natural resources."
+      },
+      "increasedSavings": {
+        "title": "Increased savings",
+        "description": "We only use energy-efficient data centers that minimize hardware needs, lower operational expenses, and increase utility cost savings, which aligns with our eco-friendly goals."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Green cloud computing uses the best technologies to provide an eco-friendly solution for cloud infrastructures. Our data centers use water cooling technology designed to optimize energy efficiency and minimize consumption for a sustainable cloud storage solution."
+      },
+      "focusOnRenewableEnergy": {
+        "title": "Focus on renewable energy",
+        "description": "Renewable energy powers green cloud computing, using renewable resources like solar, wind, and hydropower to reduce air pollution and environmental impact and help foster a world built on sustainable green cloud solutions."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Managing our environmental impact",
+    "description": "Internxt leads by example in working for a more sustainable future through energy-efficient practices to minimize resource consumption and contribute to a greener future.",
+    "cards": {
+      "power": {
+        "title": "Power",
+        "description": "Our data centers' Power Usage Effectiveness (PUE) is measured and audited every 12 months. Values measured closer to 1 indicate more efficient energy consumption.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Water",
+        "description": "The metric measures how efficiently water is used; values closer to 0 indicate optimal performance.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbon",
+        "description": "This tracks direct emissions and indirect commissions from electricity use, with values closest to 0 representing better performance.",
+        "value": "0.16",
+        "unit": "Kg C02e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renewables",
+        "description": "This refers to the percentage of Renewable Energy Factor (REF) rates used in our data centers.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "A commitment to a sustainable future",
+    "description": "By advancing green initiatives, we aim to protect the planet and strive for a cleaner, more green cloud storage solution.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Reduce carbon energy",
+        "description": "By 2025, the centers we use will limit their reliance on carbon energy, switching to more renewable and lower-carbon energy sources, such as nuclear and hydroelectricity."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Global NetZero",
+        "description": "Our green cloud computing solution is committed to achieving zero net emissions for Scope 1 (direct emissions from fuel) and Scope 2 (indirect emissions from electricity). 2023 will address scope 3, covering all other indirect emissions."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Zero waste",
+        "description": "To reduce the environmental impact of landfill disposal and promote green initiatives, we are committed to zero waste to landfill by 2025 across all our server locations."
+      }
+    }
+  }
+}

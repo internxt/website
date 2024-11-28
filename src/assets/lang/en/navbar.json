@@ -22,7 +22,8 @@
   },
   "ourValues": {
     "privacy": "Privacy",
-    "openSource": "Open Source"
+    "openSource": "Open Source",
+    "sustainability": "Sustainability"
   },
   "Auth": {
     "SignUp": {

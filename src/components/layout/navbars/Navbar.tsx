@@ -353,6 +353,11 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                     <p>{props.textContent.ourValues.openSource}</p>
                                   </div>
                                 </Link>
+                                <Link href="/green-cloud-computing" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.ourValues.sustainability}</p>
+                                  </div>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>

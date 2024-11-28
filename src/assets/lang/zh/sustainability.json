@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " 绿色与可持续"
+    },
+    "description": "Internxt 致力于生态云计算，并提供生态存储解决方案，为更清洁、更可持续的未来做出贡献。"
+  },
+  "CtaSection": {
+    "title": "Internxt：隐私与可持续性的未来",
+    "cta": "选择一个计划"
+  },
+  "CtaSection2": {
+    "title": "与 Internxt 一起为可持续的未来努力",
+    "cta": "选择一个计划"
+  },
+  "CtaSection3": {
+    "title": "环保且注重隐私的云存储",
+    "cta": "选择一个计划"
+  },
+  "FeatureSection": {
+    "title": "绿色云计算的重要性",
+    "description": "Internxt 通过推动可持续实践在云基础设施中促进创新，而不牺牲性能或可靠性。",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "减少环境影响",
+        "description": "绿色云计算利用可再生能源来减少碳排放、节省能源并减少电子废物。通过采用这一可持续的做法，我们帮助企业减少环境影响，并帮助保护地球的自然资源。"
+      },
+      "increasedSavings": {
+        "title": "更多节省",
+        "description": "我们只使用能源高效的 数据中心，减少硬件需求，降低运营成本，增加能源节省，符合我们绿色和可持续发展的目标。"
+      },
+      "innovation": {
+        "title": "创新",
+        "description": "绿色云计算使用最先进的技术，为云基础设施提供环保解决方案。我们的数据中心采用水冷技术，旨在优化能源效率并最大限度地减少消耗，为可持续的云存储解决方案提供支持。"
+      },
+      "focusOnRenewableEnergy": {
+        "title": "专注于可再生能源",
+        "description": "可再生能源驱动绿色云计算，使用太阳能、风能和水力发电等可再生资源来减少空气污染和环境影响，推动一个建立在可持续绿色云解决方案上的世界。"
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "我们如何管理我们的环境影响",
+    "description": "Internxt 通过能源效率实践，致力于为更加可持续的未来做出贡献，减少资源消耗并推动更加绿色的未来。",
+    "cards": {
+      "power": {
+        "title": "能源",
+        "description": "我们的数据中心的能效（PUE）每 12 个月进行一次测量和审核。数值越接近 1，表明能效越高。",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "水",
+        "description": "该指标衡量水的使用效率；数值越接近 0，表明效率越高。",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "碳",
+        "description": "这跟踪电力使用的直接和间接排放，数值越接近 0，代表性能越好。",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "可再生能源",
+        "description": "这指的是我们数据中心使用的可再生能源因子（REF）的比例。",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "对绿色和可持续未来的承诺",
+    "description": "通过推动生态项目，我们的目标是保护地球并争取实现更清洁、更生态的云存储解决方案。",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "减少碳能源",
+        "description": "到 2025 年，我们使用的中心将减少对碳能源的依赖，转向更多低碳排放的可再生能源，如核能和水力发电。"
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "全球净零排放",
+        "description": "我们的绿色云计算解决方案承诺实现 Scope 1（燃料直接排放）和 Scope 2（电力间接排放）范围的净零排放。2023 年，我们将解决 Scope 3，涵盖所有其他间接排放。"
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "零废弃物",
+        "description": "为了减少垃圾填埋对环境的影响并推动生态项目，我们承诺到 2025 年，在我们所有的服务器位置不产生垃圾填埋物。"
+      }
+    }
+  }
+}

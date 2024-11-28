@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": "Verde e Sustentável"
+    },
+    "description": "A Internxt está comprometida com a computação em nuvem ecológica e oferece soluções de armazenamento ecológicas para um futuro mais limpo e sustentável."
+  },
+  "CtaSection": {
+    "title": "Internxt: o futuro da privacidade e da sustentabilidade",
+    "cta": "Escolha um plano"
+  },
+  "CtaSection2": {
+    "title": "Comprometa-se por um futuro sustentável com a Internxt",
+    "cta": "Escolha um plano"
+  },
+  "CtaSection3": {
+    "title": "Armazenamento em nuvem ecológico e respeitador da privacidade",
+    "cta": "Escolha um plano"
+  },
+  "FeatureSection": {
+    "title": "A importância da computação em nuvem verde",
+    "description": "A Internxt promove a inovação apoiando práticas sustentáveis na infraestrutura da nuvem, sem comprometer o desempenho ou a confiabilidade.",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "Impacto ambiental reduzido",
+        "description": "A computação em nuvem verde utiliza energia renovável para reduzir as emissões de carbono, economizar energia e minimizar o desperdício eletrônico. Ao adotar essa abordagem sustentável, ajudamos as empresas a reduzir seu impacto ambiental e a preservar os recursos naturais do planeta."
+      },
+      "increasedSavings": {
+        "title": "Maior economia",
+        "description": "Utilizamos apenas centros de dados energeticamente eficientes que minimizam as necessidades de hardware, reduzem os custos operacionais e aumentam a economia de energia, alinhando-se com nossos objetivos de desenvolvimento verde e sustentável."
+      },
+      "innovation": {
+        "title": "Inovação",
+        "description": "A computação em nuvem verde utiliza as melhores tecnologias para fornecer uma solução ecológica para as infraestruturas de nuvem. Nossos centros de dados utilizam tecnologia de resfriamento por água projetada para otimizar a eficiência energética e minimizar o consumo, oferecendo uma solução de armazenamento em nuvem sustentável."
+      },
+      "focusOnRenewableEnergy": {
+        "title": "Foco em energias renováveis",
+        "description": "A energia renovável alimenta a computação em nuvem verde, utilizando recursos renováveis como energia solar, eólica e hidrelétrica para reduzir a poluição do ar e o impacto ambiental, e ajudar a promover um mundo construído sobre soluções sustentáveis de nuvem verde."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Como gerenciamos nosso impacto ambiental",
+    "description": "A Internxt lidera pelo exemplo, trabalhando por um futuro mais sustentável por meio de práticas de eficiência energética para minimizar o consumo de recursos e contribuir para um futuro mais verde.",
+    "cards": {
+      "power": {
+        "title": "Potência",
+        "description": "A eficiência no uso de energia (PUE) de nossos centros de dados é medida e auditada a cada 12 meses. Os valores mais próximos de 1 indicam um consumo de energia mais eficiente.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Água",
+        "description": "Essa métrica mede a eficiência com a qual a água é utilizada; os valores mais próximos de 0 indicam um desempenho ideal.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbono",
+        "description": "Isso rastreia as emissões diretas e indiretas do uso de eletricidade, onde os valores mais próximos de 0 representam um melhor desempenho.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renováveis",
+        "description": "Isso se refere à porcentagem de tarifas do Fator de Energia Renovável (REF) utilizadas em nossos centros de dados.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Um compromisso com um futuro verde e sustentável",
+    "description": "Ao promover iniciativas ecológicas, nosso objetivo é proteger o planeta e lutar por uma solução de armazenamento em nuvem mais limpa e ecológica.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Reduzir a energia de carbono",
+        "description": "Até 2025, os centros que utilizamos limitarão sua dependência de energia baseada em carbono, mudando para fontes de energia mais renováveis e de baixas emissões de carbono, como a nuclear e a hidrelétrica."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Zero emissões líquidas globalmente",
+        "description": "Nossa solução ecológica de computação em nuvem se compromete a alcançar emissões líquidas zero para o Escopo 1 (emissões diretas de combustível) e o Escopo 2 (emissões indiretas de eletricidade). Em 2023, abordaremos o Escopo 3, que abrange todas as outras emissões indiretas."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Desperdício zero",
+        "description": "Para reduzir o impacto ambiental dos aterros sanitários e promover iniciativas ecológicas, nos comprometemos a não gerar resíduos em aterros até 2025 em todas as nossas localizações de servidores."
+      }
+    }
+  }
+}

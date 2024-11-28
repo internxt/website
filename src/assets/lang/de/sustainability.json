@@ -1,0 +1,94 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": "Internxt",
+      "blueText": " Nachhaltigkeit"
+    },
+    "description": "Internxt engagiert sich für umweltfreundliches Cloud-Computing und bietet nachhaltige Speicherlösungen für eine sauberere, nachhaltige Zukunft."
+  },
+  "CtaSection": {
+    "title": "Internxt: die Zukunft von Privatsphäre und Nachhaltigkeit",
+    "cta": "Wähle einen Plan"
+  },
+  "CtaSection2": {
+    "title": "Engagieren Sie sich für eine nachhaltige Zukunft mit Internxt!",
+    "cta": "Wähle einen Plan"
+  },
+  "CtaSection3": {
+    "title": "Umwelt- und datenschutzfreundlicher Cloud-Speicher.",
+    "cta": "Wähle einen Plan"
+  },
+  "FeatureSection": {
+    "title": "Die Bedeutung von grünem Cloud-Computing",
+    "description": "Internxt fördert Innovationen, indem nachhaltige Praktiken in der Cloud-Infrastruktur unterstützt werden, ohne Leistung oder Zuverlässigkeit zu beeinträchtigen.",
+    "cards": {
+      "reducedEnviromentalImpact": {
+        "title": "Verringerter Umwelteinfluss",
+        "description": "Grünes Cloud-Computing nutzt erneuerbare Energien, um CO2-Emissionen zu reduzieren, Energie zu sparen und Elektroschrott zu minimieren. Durch diesen nachhaltigen Ansatz helfen wir Unternehmen, ihren ökologischen Fußabdruck zu verringern und die natürlichen Ressourcen der Welt zu bewahren."
+      },
+      "increasedSavings": {
+        "title": "Erhöhte Einsparungen",
+        "description": "Wir nutzen ausschließlich energieeffiziente Rechenzentren, die den Hardwarebedarf minimieren, Betriebskosten senken und die Energiekosteneinsparungen erhöhen, was unseren umweltfreundlichen Zielen entspricht."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Grünes Cloud-Computing verwendet die besten Technologien, um eine umweltfreundliche Lösung für Cloud-Infrastrukturen bereitzustellen. Unsere Rechenzentren verwenden Wasserkühlungstechnologie, die entwickelt wurde, um die Energieeffizienz zu optimieren und den Verbrauch zu minimieren, und bieten damit eine nachhaltige Cloud-Speicherlösung."
+      },
+      "focusOnRenewableEnergy": {
+        "title": "Fokus auf erneuerbare Energien",
+        "description": "Erneuerbare Energien treiben grünes Cloud-Computing an, indem Ressourcen wie Solar-, Wind- und Wasserkraft genutzt werden, um Luftverschmutzung und Umweltauswirkungen zu reduzieren und eine Welt zu fördern, die auf nachhaltigen grünen Cloud-Lösungen basiert."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Unser Umweltengagement verwalten",
+    "description": "Internxt geht mit gutem Beispiel voran und arbeitet für eine nachhaltigere Zukunft durch energieeffiziente Praktiken, um den Ressourcenverbrauch zu minimieren und zu einer grüneren Zukunft beizutragen.",
+    "cards": {
+      "power": {
+        "title": "Energie",
+        "description": "Die Energieeffizienz (PUE) unserer Rechenzentren wird alle 12 Monate gemessen und überprüft. Werte, die näher bei 1 liegen, zeigen einen effizienteren Energieverbrauch an.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Wasser",
+        "description": "Diese Kennzahl misst die Effizienz der Wassernutzung; Werte näher bei 0 zeigen eine optimale Leistung an.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "CO2",
+        "description": "Dies verfolgt direkte Emissionen und indirekte Auswirkungen durch den Stromverbrauch, wobei Werte näher bei 0 eine bessere Leistung anzeigen.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Erneuerbare Energien",
+        "description": "Dies bezieht sich auf den Prozentsatz der in unseren Rechenzentren verwendeten Renewable Energy Factor (REF)-Tarife.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Ein Engagement für eine nachhaltige Zukunft",
+    "description": "Durch die Förderung grüner Initiativen wollen wir den Planeten schützen und eine sauberere, umweltfreundlichere Cloud-Speicherlösung schaffen.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "CO2-Energie reduzieren",
+        "description": "Bis 2025 werden die von uns genutzten Rechenzentren ihre Abhängigkeit von Kohlenstoffenergie begrenzen und auf mehr erneuerbare und kohlenstoffarme Energiequellen wie Kernenergie und Wasserkraft umstellen."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Globales Netto-Null-Ziel",
+        "description": "Unsere grüne Cloud-Computing-Lösung verpflichtet sich, netto null Emissionen für Scope 1 (direkte Emissionen durch Kraftstoffe) und Scope 2 (indirekte Emissionen durch Strom) zu erreichen. Im Jahr 2023 wird Scope 3 behandelt, das alle anderen indirekten Emissionen umfasst."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Null Abfall",
+        "description": "Um die Umweltauswirkungen von Deponien zu reduzieren und grüne Initiativen zu fördern, verpflichten wir uns, bis 2025 an allen Serverstandorten keinen Deponieabfall zu erzeugen."
+      }
+    }
+  }
+}
