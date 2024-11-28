@@ -235,7 +235,7 @@
     "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
   },
   {
-    "id": "monitor",
+    "id": "internxt-monitor",
     "title": "Internxt Monitor: ¿He sido comprometido?",
     "description": "Internxt Dark Web Monitor es un servicio de '¿he sido comprometido?' que verifica si tu correo electrónico ha sido filtrado en alguna violación de datos en línea."
   },
