@@ -1,18 +1,18 @@
 {
   "HeroSection": {
-    "title": "Internxt Dark Web Monitor",
+    "title": "Internxt Monitor de la web oscura",
     "subtitle": "Comprueba si tu correo electrónico ha sido expuesto a una violación de datos",
-    "description": "Tu correo solo se compara con las bases de datos para detectar infracciones.",
+    "description": "Tu correo se comparará con las bases de datos para detectar si hay alguna infracción.",
     "AllGoodSection": {
       "title": "¡Todo bien!",
       "description": "No se ha encontrado ninguna cuenta filtrada o copiada en algún sitio web. ",
-      "StaySecure": "Mantente seguro con contraseñas robustas y autenticación multifactor."
+      "StaySecure": "Mantente seguro con contraseñas seguras y autenticación multifactor."
     },
     "EmailToolBar": {
       "placeHolder": "Tu correo electrónico",
       "toolTip": "No almacenamos ni compartimos tu dirección de correo electrónico.",
-      "toolTipEmergent": "Tu correo electrónico solo se verifica en bases de datos para detectar filtraciones.",
-      "pleaseEnterEmail": "Porfavor, introduce un mail válido",
+      "toolTipEmergent": "Tu correo electrónico solo se verificará en bases de datos para detectar si existe alguna filtración.",
+      "pleaseEnterEmail": "Por favor, introduce un mail válido",
       "noBreachesFound": "Email no encontrado",
       "errorPwned": "Error al comprobar el correo electrónico",
       "check": "Compronar",
@@ -48,23 +48,23 @@
     "pastesData": "115,796"
   },
   "CtaSection": {
-    "title": "¿Se ha filtrado tu cuenta y contraseña?",
-    "description": "Descúbrelo con Dark Web Monitor de Internxt y toma medidas inmediatas para proteger tus cuentas",
-    "cta": "Registrate"
+    "title": "Have you been pwned español: ¿Se ha filtrado tu cuenta y contraseña?",
+    "description": "Descúbrelo con el Monitor de la web oscura de Internxt y toma medidas inmediatas para proteger tus cuentas",
+    "cta": "Regístrate"
   },
   "CtaSection2": {
-    "title": "No espere a que se filtren tus datos",
+    "title": "No esperes a que se filtren tus datos",
     "description": "Protege tu información con Internxt",
     "cta": "Comprobar ahora"
   },
   "FeatureSection": {
     "title": "Qué hacer si tu correo electrónico se ha filtrado en la web oscura",
-    "description": "Internxt Dark Web Monitor forma parte de nuestra misión para protegerte de los hackers que filtran tus datos en la dark web",
+    "description": "Internxt Dark Web Monitor forma parte de nuestra misión para protegerte de los hackers que filtran tus datos en la web oscura",
     "description2": "En Internxt nos comprometemos a mantenerte seguro en el mundo digital. Descubre las estrategias más efectivas para proteger tus cuentas y mitigar los riesgos si tu correo electrónico se ha visto comprometido en la web oscura.",
     "cards": [
       {
         "title": "Crea contraseñas seguras",
-        "description": "Si tu correo electrónico se ha filtrado en la dark web, lo primero que debes hacer es cambiar tus contraseñas.",
+        "description": "Si tu correo electrónico se ha filtrado en la web oscura, lo primero que debes hacer es cambiar tus contraseñas. El generador de contraseñas de Internxt crea contraseñas o frases de contraseñas seguras para evitar que los piratas informáticos accedan a tus cuentas.",
         "cta": "Generar contraseña",
         "redirect": "/password-generator"
       },
