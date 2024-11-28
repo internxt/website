@@ -38,7 +38,7 @@ export default async function handler(
       return;
     }
 
-    const url = `${API_URL}/${encodeURIComponent(email)}?truncateResponse=false`;
+    const url = `${API_URL}/breachedaccount/${encodeURIComponent(email)}?truncateResponse=false`;
     const headers = {
       'hibp-api-key': API_KEY,
     };
