@@ -6,8 +6,8 @@ interface BreachesProps {
   textContent: HaveIbeenPwnedText['HeroSection']['breaches'];
 }
 
-const API_URL = process.env.HIBP_API_URL;
-const API_KEY = process.env.HIBP_API_KEY;
+const API_URL = process.env.INXT_MONITOR_API_URL;
+const API_KEY = process.env.INXT_MONITOR_API_KEY;
 
 const cache: Map<string, any> = new Map();
 
