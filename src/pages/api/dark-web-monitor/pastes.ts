@@ -48,6 +48,10 @@ export default async function handler(
     console.log(response.data);
     res.status(200).json(response.data);
   } catch (err: any) {
+    if (err.response?.status === 404) {
+      res.status(200).json({ pastes: [] });
+      return;
+    }
     res.status(500).json({ error: err.response?.data, details: err.response?.data });
   }
 }
