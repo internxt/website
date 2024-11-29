@@ -37,7 +37,7 @@ export const EmailToolbar = ({
     onResultPastesChange([]);
 
     try {
-      const response = await axios.get(`/api/breaches?email=${encodeURIComponent(email)}`);
+      const response = await axios.get(`/api/dark-web-monitor/breaches?email=${encodeURIComponent(email)}`);
       if (response.data && response.data.length > 0) {
         onResultChange(response.data);
       } else {
@@ -51,7 +51,7 @@ export const EmailToolbar = ({
       setLoading(false);
     }
     try {
-      const responsePastes = await axios.get(`/api/pastes?email=${encodeURIComponent(email)}`);
+      const responsePastes = await axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
       if (responsePastes.data && responsePastes.data.length > 0) {
         onResultPastesChange(responsePastes.data);
       } else {

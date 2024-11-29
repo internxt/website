@@ -33,10 +33,10 @@ export default async function handler(
   }
 
   try {
-    if (cache.has(email)) {
-      res.status(200).json(cache.get(email));
-      return;
-    }
+    // if (cache.has(email)) {
+    //   res.status(200).json(cache.get(email));
+    //   return;
+    // }
 
     const url = `${API_URL}/pasteaccount/${email}`;
     const headers = {
@@ -45,6 +45,7 @@ export default async function handler(
 
     const response = await axios.get(url, { headers });
     cache.set(email, response.data);
+    console.log(response.data);
     res.status(200).json(response.data);
   } catch (err: any) {
     res.status(500).json({ error: err.response?.data, details: err.response?.data });

@@ -35,11 +35,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
 
   useEffect(() => {
     if (queryMade) {
-      const timer = setTimeout(() => {
-        setShowResult(true);
-      }, 2000);
-
-      return () => clearTimeout(timer);
+      setShowResult(true);
     }
   }, [queryMade]);
 
@@ -59,26 +55,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
             onErrorChange={handleErrorChange}
           />
         </div>
-        {showResult && (
-          <>
-            {result.length > 0 ? (
-              <PwnedSection
-                textContent={textContent.PwnedSection}
-                pwnedElements={result.map((pwnedItem) => ({
-                  logoPath: pwnedItem.LogoPath,
-                  title: pwnedItem.Title,
-                  description: pwnedItem.Description,
-                  compromisedData: pwnedItem.compromisedData,
-                  dataClasses: pwnedItem.DataClasses,
-                  domain: pwnedItem.Domain,
-                  BreachDate: pwnedItem.BreachDate,
-                }))}
-                pasteCount={resultPastes}
-              />
-            ) : (
-              <AllGoodSection textContent={textContent.AllGoodSection} />
-            )}
-          </>
+        {result.length > 0 ? (
+          <PwnedSection
+            textContent={textContent.PwnedSection}
+            pwnedElements={result.map((pwnedItem) => ({
+              logoPath: pwnedItem.LogoPath,
+              title: pwnedItem.Title,
+              description: pwnedItem.Description,
+              compromisedData: pwnedItem.compromisedData,
+              dataClasses: pwnedItem.DataClasses,
+              domain: pwnedItem.Domain,
+              BreachDate: pwnedItem.BreachDate,
+            }))}
+            pasteCount={resultPastes}
+          />
+        ) : (
+          <AllGoodSection textContent={textContent.AllGoodSection} />
         )}
       </div>
     </section>
