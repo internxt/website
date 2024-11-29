@@ -63,6 +63,8 @@ export interface PwnedSection {
   title: string;
   description: string;
   breaches: string;
+  breach: string;
+  paste: string;
   pastes: string;
   recomendation: string;
   breachesSection: BreachesSection;
