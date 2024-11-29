@@ -11,14 +11,14 @@ export interface CtaSection {
   title: string;
   description: string;
   cta: string;
-  redirect: string;
+  redirect?: string;
 }
 
 export interface FeatureSection {
   title: string;
   description: string;
   description2: string;
-  cards: CtaSection;
+  cards: CtaSection[];
 }
 
 export interface FeatureSectionV2 {
@@ -63,6 +63,8 @@ export interface PwnedSection {
   title: string;
   description: string;
   breaches: string;
+  breach: string;
+  paste: string;
   pastes: string;
   recomendation: string;
   breachesSection: BreachesSection;

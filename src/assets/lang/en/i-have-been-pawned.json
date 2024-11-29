@@ -27,7 +27,9 @@
       "title": "Oh no!",
       "description": "Your email has been found in ",
       "breaches": " data breaches and ",
-      "pastes ": " pastes.",
+      "breach": " data breach and ",
+      "pastes": " pastes.",
+      "paste": " paste.",
       "recomendation": "We recommend taking immediate action to secure your accounts.",
       "breachesSection": {
         "title": "Breaches where your email was found",

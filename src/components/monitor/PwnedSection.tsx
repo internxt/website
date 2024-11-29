@@ -13,9 +13,10 @@ export interface PwnedSectionProps {
     domain: string;
     BreachDate: string;
   }>;
+  pasteCount: any[];
 }
 
-export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements }) => {
+export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements, pasteCount }) => {
   return (
     <div className="flex w-screen flex-col items-center justify-center">
       <SmileyMeh className="text-red" height={64} width={64} />
@@ -24,8 +25,9 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
         <WarningCircle className="h-12 w-12 text-red md:h-6 md:w-6" weight="fill" />
         <p className="font-regular ml-2 text-base text-gray-100">
           {textContent.description}
-          {pwnedElements.length}
-          {textContent.breaches}
+          {pwnedElements.length} {pwnedElements.length === 1 ? textContent.breach : textContent.breaches}
+          {pasteCount.length || 0}
+          {pasteCount.length === 1 ? textContent.paste : textContent.pastes}
         </p>
       </div>
       <p className="font-regular px-5 text-center text-base text-gray-100">{textContent.recomendation}</p>
