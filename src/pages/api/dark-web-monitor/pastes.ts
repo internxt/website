@@ -45,7 +45,6 @@ export default async function handler(
 
     const response = await axios.get(url, { headers });
     cache.set(email, response.data);
-    console.log(response.data);
     res.status(200).json(response.data);
   } catch (err: any) {
     if (err.response?.status === 404) {
