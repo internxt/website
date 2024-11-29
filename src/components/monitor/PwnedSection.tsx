@@ -19,7 +19,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
           {textContent.description}
           {pwnedElements.length} {pwnedElements.length === 1 ? textContent.breach : textContent.breaches}
           {pasteCount.length || 0}
-          {pasteCount.length === 1 ? textContent.paste : textContent.pastes}
+          {textContent.paste}
         </p>
       </div>
       <p className="font-regular px-5 text-center text-base text-gray-100">{textContent.recomendation}</p>

@@ -28,8 +28,8 @@
       "description": "Your email has been found in ",
       "breaches": " data breaches and ",
       "breach": " data breach and ",
-      "pastes ": " pastes.",
-      "paste": " paste.",
+      "pastes ": "paste.",
+      "paste": " pastes.",
       "recomendation": "We recommend taking immediate action to secure your accounts.",
       "breachesSection": {
         "title": "Breaches where your email was found",
