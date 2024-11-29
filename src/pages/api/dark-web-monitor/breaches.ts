@@ -48,6 +48,10 @@ export default async function handler(
     cache.set(email, response.data);
     res.status(200).json(response.data);
   } catch (err: any) {
-    res.status(500).json({ error: textContent.error500, details: err.response?.data });
+    if (err.response?.status === 404) {
+      res.status(200).json({ breaches: [] });
+      return;
+    }
+    res.status(500).json({ error: err.response?.data, details: err.response?.data });
   }
 }

@@ -47,15 +47,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
 
     try {
       const breachesPromise = axios.get(`/api/dark-web-monitor/breaches?email=${encodeURIComponent(email)}`);
-      const pastesPromise = axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
+      //const pastesPromise = axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
+      const [breaches] = await Promise.all([breachesPromise]);
 
-      const promises = await Promise.all([breachesPromise, pastesPromise]);
-
-      const [breaches, pastes] = promises;
       onResultChange(breaches.data);
-      onResultPastesChange(pastes.data);
+      //onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
+      if (err.response?.status === 404) {
+        onResultChange([]);
+        onResultPastesChange([]);
+        setView('success');
+      }
       const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
       setView('default');
       onErrorChange(errorMessage);
