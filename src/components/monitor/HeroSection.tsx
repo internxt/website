@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '@/components/shared/Header';
 import EmailToolbar from './components/EmailToolBar';
-import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
+import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 import { PwnedSection } from './PwnedSection';
 import { AllGoodSection } from './AllGoodSection';
 import axios from 'axios';
@@ -14,15 +14,15 @@ interface HeroSectionProps {
 type ViewProps = 'default' | 'success' | 'loading' | 'error';
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
-  const [breaches, setBreaches] = useState<any[]>([]);
-  const [resultPastes, setResultPastes] = useState<any[]>([]);
+  const [breaches, setBreaches] = useState<Breach[]>([]);
+  const [resultPastes, setResultPastes] = useState<Paste[]>([]);
   const [view, setView] = useState<ViewProps>('default');
   const isFetchingData = view === 'loading';
 
-  const onResultChange = (data: any[]) => {
+  const onResultChange = (data: Breach[]) => {
     setBreaches(data);
   };
-  const onResultPastesChange = (data: any[]) => {
+  const onResultPastesChange = (data: Paste[]) => {
     setResultPastes(data);
   };
   const onErrorChange = (err: string | null) => {
@@ -90,15 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                 {!isFetchingData && breaches.length > 0 ? (
                   <PwnedSection
                     textContent={textContent.PwnedSection}
-                    pwnedElements={breaches.map((pwnedItem) => ({
-                      logoPath: pwnedItem.LogoPath,
-                      title: pwnedItem.Title,
-                      description: pwnedItem.Description,
-                      compromisedData: pwnedItem.compromisedData,
-                      dataClasses: pwnedItem.DataClasses,
-                      domain: pwnedItem.Domain,
-                      BreachDate: pwnedItem.BreachDate,
-                    }))}
+                    pwnedElements={breaches}
                     pasteCount={resultPastes}
                   />
                 ) : (
