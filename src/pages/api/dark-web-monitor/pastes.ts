@@ -51,6 +51,6 @@ export default async function handler(
       res.status(200).json({ pastes: [] });
       return;
     }
-    res.status(500).json({ error: err.response?.data, details: err.response?.data });
+    res.status(500).json({ error: err.response?.data });
   }
 }
