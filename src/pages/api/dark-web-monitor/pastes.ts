@@ -33,10 +33,10 @@ export default async function handler(
   }
 
   try {
-    // if (cache.has(email)) {
-    //   res.status(200).json(cache.get(email));
-    //   return;
-    // }
+    if (cache.has(email)) {
+      res.status(200).json(cache.get(email));
+      return;
+    }
 
     const url = `${API_URL}/pasteaccount/${email}`;
     const headers = {
