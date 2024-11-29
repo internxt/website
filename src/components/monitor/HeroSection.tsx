@@ -11,6 +11,7 @@ interface HeroSectionProps {
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [result, setResult] = useState<any[]>([]);
+  const [resultPastes, setResultPastes] = useState<any[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [queryMade, setQueryMade] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -20,10 +21,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
     setResult(data);
     setError(null);
   };
-
+  const handleResultPastesChange = (data: any[]) => {
+    setQueryMade(true);
+    setResultPastes(data);
+    setError(null);
+  };
   const handleErrorChange = (err: string | null) => {
     setQueryMade(true);
     setResult([]);
+    setResultPastes([]);
     setError(err);
   };
 
@@ -31,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
     if (queryMade) {
       const timer = setTimeout(() => {
         setShowResult(true);
-      }, 1000);
+      }, 2000);
 
       return () => clearTimeout(timer);
     }
@@ -49,6 +55,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           <EmailToolbar
             textContent={textContent.EmailToolBar}
             onResultChange={handleResultChange}
+            onResultPastesChange={handleResultPastesChange}
             onErrorChange={handleErrorChange}
           />
         </div>
@@ -66,6 +73,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
                   domain: pwnedItem.Domain,
                   BreachDate: pwnedItem.BreachDate,
                 }))}
+                pasteCount={resultPastes}
               />
             ) : (
               <AllGoodSection textContent={textContent.AllGoodSection} />

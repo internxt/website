@@ -8,10 +8,16 @@ import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 interface EmailToolBarProps {
   textContent: HaveIbeenPwnedText['HeroSection']['EmailToolBar'];
   onResultChange: (result: any[]) => void;
+  onResultPastesChange: (result: any[]) => void;
   onErrorChange: (error: string | null) => void;
 }
 
-export const EmailToolbar = ({ textContent, onResultChange, onErrorChange }: Readonly<EmailToolBarProps>) => {
+export const EmailToolbar = ({
+  textContent,
+  onResultChange,
+  onErrorChange,
+  onResultPastesChange,
+}: Readonly<EmailToolBarProps>) => {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -19,6 +25,7 @@ export const EmailToolbar = ({ textContent, onResultChange, onErrorChange }: Rea
     if (!email.trim()) {
       onErrorChange(textContent.pleaseEnterEmail);
       onResultChange([]);
+      onResultPastesChange([]);
       return;
     }
 
@@ -27,6 +34,7 @@ export const EmailToolbar = ({ textContent, onResultChange, onErrorChange }: Rea
     setLoading(true);
     onErrorChange(null);
     onResultChange([]);
+    onResultPastesChange([]);
 
     try {
       const response = await axios.get(`/api/breaches?email=${encodeURIComponent(email)}`);
@@ -39,6 +47,20 @@ export const EmailToolbar = ({ textContent, onResultChange, onErrorChange }: Rea
     } catch (err: any) {
       const errorMessage = err.response?.data?.error || textContent.errorPwned;
       onErrorChange(errorMessage);
+    } finally {
+      setLoading(false);
+    }
+    try {
+      const responsePastes = await axios.get(`/api/pastes?email=${encodeURIComponent(email)}`);
+      if (responsePastes.data && responsePastes.data.length > 0) {
+        onResultPastesChange(responsePastes.data);
+      } else {
+        onResultPastesChange([]);
+        onErrorChange(textContent.noBreachesFound);
+      }
+    } catch (err: any) {
+      const errorMessage = err.response?.data?.error || textContent.errorPwned;
+      onResultPastesChange(errorMessage);
     } finally {
       setLoading(false);
     }
