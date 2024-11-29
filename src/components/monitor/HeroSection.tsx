@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [resultPastes, setResultPastes] = useState<Paste[]>([]);
   const [view, setView] = useState<ViewProps>('default');
   const isFetchingData = view === 'loading';
-
+  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
   const onResultChange = (data: Breach[]) => {
     setBreaches(data);
   };
@@ -47,11 +47,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
 
     try {
       const breachesPromise = axios.get(`/api/dark-web-monitor/breaches?email=${encodeURIComponent(email)}`);
-      //const pastesPromise = axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
-      const [breaches] = await Promise.all([breachesPromise]);
+      await sleep(6000);
+      const pastesPromise = axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
 
+      const promises = await Promise.all([breachesPromise, pastesPromise]);
+
+      const [breaches, pastes] = promises;
       onResultChange(breaches.data);
-      //onResultPastesChange(pastes.data);
+      onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
       if (err.response?.status === 404) {
