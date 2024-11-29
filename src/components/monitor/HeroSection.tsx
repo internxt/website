@@ -1,43 +1,66 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from '@/components/shared/Header';
 import EmailToolbar from './components/EmailToolBar';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import { PwnedSection } from './PwnedSection';
 import { AllGoodSection } from './AllGoodSection';
+import axios from 'axios';
+import LoadingPulse from '../shared/loader/LoadingPulse';
 
 interface HeroSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection'];
 }
 
+type ViewProps = 'default' | 'success' | 'loading' | 'error';
+
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
-  const [result, setResult] = useState<any[]>([]);
+  const [breaches, setBreaches] = useState<any[]>([]);
   const [resultPastes, setResultPastes] = useState<any[]>([]);
-  const [error, setError] = useState<string | null>(null);
-  const [queryMade, setQueryMade] = useState(false);
-  const [showResult, setShowResult] = useState(false);
+  const [view, setView] = useState<ViewProps>('default');
+  const isFetchingData = view === 'loading';
 
-  const handleResultChange = (data: any[]) => {
-    setQueryMade(true);
-    setResult(data);
-    setError(null);
+  const onResultChange = (data: any[]) => {
+    setBreaches(data);
   };
-  const handleResultPastesChange = (data: any[]) => {
-    setQueryMade(true);
+  const onResultPastesChange = (data: any[]) => {
     setResultPastes(data);
-    setError(null);
   };
-  const handleErrorChange = (err: string | null) => {
-    setQueryMade(true);
-    setResult([]);
+  const onErrorChange = (err: string | null) => {
+    setBreaches([]);
     setResultPastes([]);
-    setError(err);
   };
 
-  useEffect(() => {
-    if (queryMade) {
-      setShowResult(true);
+  const handleCheckEmail = async (email: string) => {
+    if (!email.trim()) {
+      onErrorChange(textContent.EmailToolBar.pleaseEnterEmail);
+      onResultChange([]);
+      onResultPastesChange([]);
+      return;
     }
-  }, [queryMade]);
+
+    if (isFetchingData) return;
+
+    setView('loading');
+    onErrorChange(null);
+    onResultChange([]);
+    onResultPastesChange([]);
+
+    try {
+      const breachesPromise = axios.get(`/api/dark-web-monitor/breaches?email=${encodeURIComponent(email)}`);
+      const pastesPromise = axios.get(`/api/dark-web-monitor/pastes?email=${encodeURIComponent(email)}`);
+
+      const promises = await Promise.all([breachesPromise, pastesPromise]);
+
+      const [breaches, pastes] = promises;
+      onResultChange(breaches.data);
+      onResultPastesChange(pastes.data);
+      setView('success');
+    } catch (err: any) {
+      const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
+      setView('default');
+      onErrorChange(errorMessage);
+    }
+  };
 
   return (
     <section className="flex justify-center overflow-hidden pt-32">
@@ -50,27 +73,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
         <div className="flex w-full flex-col items-center justify-center  pb-10">
           <EmailToolbar
             textContent={textContent.EmailToolBar}
-            onResultChange={handleResultChange}
-            onResultPastesChange={handleResultPastesChange}
-            onErrorChange={handleErrorChange}
+            isFetchingData={isFetchingData}
+            handleCheckEmail={handleCheckEmail}
           />
         </div>
-        {result.length > 0 ? (
-          <PwnedSection
-            textContent={textContent.PwnedSection}
-            pwnedElements={result.map((pwnedItem) => ({
-              logoPath: pwnedItem.LogoPath,
-              title: pwnedItem.Title,
-              description: pwnedItem.Description,
-              compromisedData: pwnedItem.compromisedData,
-              dataClasses: pwnedItem.DataClasses,
-              domain: pwnedItem.Domain,
-              BreachDate: pwnedItem.BreachDate,
-            }))}
-            pasteCount={resultPastes}
-          />
-        ) : (
-          <AllGoodSection textContent={textContent.AllGoodSection} />
+        {view !== 'default' && (
+          <>
+            {isFetchingData && (
+              <div className="relative flex h-52 flex-col">
+                <LoadingPulse />
+              </div>
+            )}
+            {view === 'success' && (
+              <>
+                {/* !TODO: Extract this to a separated component and pass isFetchingData, breaches, etc through props. */}
+                {!isFetchingData && breaches.length > 0 ? (
+                  <PwnedSection
+                    textContent={textContent.PwnedSection}
+                    pwnedElements={breaches.map((pwnedItem) => ({
+                      logoPath: pwnedItem.LogoPath,
+                      title: pwnedItem.Title,
+                      description: pwnedItem.Description,
+                      compromisedData: pwnedItem.compromisedData,
+                      dataClasses: pwnedItem.DataClasses,
+                      domain: pwnedItem.Domain,
+                      BreachDate: pwnedItem.BreachDate,
+                    }))}
+                    pasteCount={resultPastes}
+                  />
+                ) : (
+                  <AllGoodSection textContent={textContent.AllGoodSection} />
+                )}
+              </>
+            )}
+          </>
         )}
       </div>
     </section>
