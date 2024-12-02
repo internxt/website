@@ -81,11 +81,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
