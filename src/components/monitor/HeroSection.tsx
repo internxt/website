@@ -54,11 +54,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
-      if (err.response?.status === 404) {
-        onResultBreachesChange([]);
-        onResultPastesChange([]);
-        setView('success');
-      }
       const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
       setView('default');
       onErrorChange(errorMessage);
