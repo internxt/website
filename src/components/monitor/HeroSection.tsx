@@ -10,19 +10,19 @@ interface HeroSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection'];
 }
 
-type ViewProps = 'default' | 'success' | 'loading' | 'error';
+type ViewProps = 'default' | 'success' | 'loading';
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [breaches, setBreaches] = useState<Breach[]>([]);
-  const [resultPastes, setResultPastes] = useState<Paste[]>([]);
+  const [pastes, setPastes] = useState<Paste[]>([]);
   const [view, setView] = useState<ViewProps>('default');
   const isFetchingData = view === 'loading';
 
-  const onResultChange = (data: Breach[]) => setBreaches(data);
-  const onResultPastesChange = (data: Paste[]) => setResultPastes(data);
+  const onResultBreachesChange = (data: Breach[]) => setBreaches(data);
+  const onResultPastesChange = (data: Paste[]) => setPastes(data);
   const onErrorChange = (err: string | null) => {
     setBreaches([]);
-    setResultPastes([]);
+    setPastes([]);
   };
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -30,7 +30,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const handleCheckEmail = async (email: string) => {
     if (!email.trim()) {
       onErrorChange(textContent.EmailToolBar.pleaseEnterEmail);
-      onResultChange([]);
+      onResultBreachesChange([]);
       onResultPastesChange([]);
       return;
     }
@@ -39,7 +39,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
 
     setView('loading');
     onErrorChange(null);
-    onResultChange([]);
+    onResultBreachesChange([]);
     onResultPastesChange([]);
 
     try {
@@ -50,12 +50,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       const promises = await Promise.all([breachesPromise, pastesPromise]);
 
       const [breaches, pastes] = promises;
-      onResultChange(breaches.data);
+      onResultBreachesChange(breaches.data);
       onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
       if (err.response?.status === 404) {
-        onResultChange([]);
+        onResultBreachesChange([]);
         onResultPastesChange([]);
         setView('success');
       }
@@ -88,7 +88,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           view !== 'default' && (
             <PwnedStatusSection
               breaches={breaches}
-              resultPastes={resultPastes}
+              resultPastes={pastes}
               textContent={{
                 PwnedSection: textContent.PwnedSection,
                 AllGoodSection: textContent.AllGoodSection,
