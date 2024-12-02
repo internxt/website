@@ -91,10 +91,6 @@ LayoutProps) {
         console.log(err);
       });
 
-    window.rudderanalytics.page(segmentName, {
-      brave: isBrave(),
-    });
-
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
 
