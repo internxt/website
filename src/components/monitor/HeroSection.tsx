@@ -81,7 +81,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           />
         </div>
         {isFetchingData ? (
-          <div className="relative flex h-52 flex-col">
+          <div className="relative flex h-52 w-full flex-col">
             <LoadingPulse />
           </div>
         ) : (
