@@ -21,7 +21,7 @@ export const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: 
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder={textContent.placeHolder}
-          className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out focus:border-primary focus:ring-opacity-10"
+          className="h-14 w-full appearance-none rounded-lg border-2 border-gray-10 bg-white pl-4 pr-14 text-2xl placeholder-gray-30 shadow-subtle outline-none ring-5 ring-primary ring-opacity-0 transition-all delay-150 duration-150 ease-out placeholder:text-lg focus:border-primary focus:ring-opacity-10 sm:placeholder:text-2xl"
         />
         <Button
           text={isFetchingData ? textContent.checking : textContent.check}
