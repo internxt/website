@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import Button from '../shared/Button';
 
 import { useRouter } from 'next/router';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
@@ -22,10 +21,11 @@ const CardText = ({ textContent }: CardTextProps) => {
       <h3 className="text-3xl font-semibold leading-tight text-gray-100 md:text-5xl">{textContent.title}</h3>
       <p className="text-lg text-gray-80 md:text-xl">{textContent.description}</p>
       <RedirectButton
-        children={<p className="text-lg font-medium text-primary md:text-xl">{textContent.cta}</p>}
         className="w-max-[130px] h-max-[48px] rounded-lg bg-primary px-3 py-3 text-xl font-medium text-white"
         url={textContent.redirect}
-      />
+      >
+        {textContent.cta}
+      </RedirectButton>
     </Card>
   );
 };
