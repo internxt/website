@@ -35,7 +35,7 @@
     a.parentNode.insertBefore(r, a);
   }),
     e.loadJS(),
-    e.load(k, 'https://cdp.internxt.com', {
+    e.load(k, '', {
       sessions: {
         autoTrack: true,
       },
