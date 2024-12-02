@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import axios from 'axios';
 import Header from '@/components/shared/Header';
 import EmailToolbar from './components/EmailToolBar';
 import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
-import { PwnedSection } from './PwnedSection';
-import { AllGoodSection } from './AllGoodSection';
-import axios from 'axios';
+import PwnedStatusSection from './PwnedStatusSection';
 import LoadingPulse from '../shared/loader/LoadingPulse';
 
 interface HeroSectionProps {
@@ -19,12 +18,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [view, setView] = useState<ViewProps>('default');
   const isFetchingData = view === 'loading';
 
-  const onResultChange = (data: Breach[]) => {
-    setBreaches(data);
-  };
-  const onResultPastesChange = (data: Paste[]) => {
-    setResultPastes(data);
-  };
+  const onResultChange = (data: Breach[]) => setBreaches(data);
+  const onResultPastesChange = (data: Paste[]) => setResultPastes(data);
   const onErrorChange = (err: string | null) => {
     setBreaches([]);
     setResultPastes([]);
@@ -78,35 +73,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           <p className="pt-5 text-xl font-bold text-gray-80">{textContent.subtitle}</p>
           <p className="font-regular pt-5 text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex w-full flex-col items-center justify-center  pb-10">
+        <div className="flex w-full flex-col items-center justify-center pb-10">
           <EmailToolbar
             textContent={textContent.EmailToolBar}
             isFetchingData={isFetchingData}
             handleCheckEmail={handleCheckEmail}
           />
         </div>
-        {view !== 'default' && (
-          <>
-            {isFetchingData && (
-              <div className="relative flex h-52 flex-col">
-                <LoadingPulse />
-              </div>
-            )}
-            {view === 'success' && (
-              <>
-                {/* !TODO: Extract this to a separated component and pass isFetchingData, breaches, etc through props. */}
-                {!isFetchingData && breaches.length > 0 ? (
-                  <PwnedSection
-                    textContent={textContent.PwnedSection}
-                    pwnedElements={breaches}
-                    pasteCount={resultPastes}
-                  />
-                ) : (
-                  <AllGoodSection textContent={textContent.AllGoodSection} />
-                )}
-              </>
-            )}
-          </>
+        {isFetchingData ? (
+          <div className="relative flex h-52 flex-col">
+            <LoadingPulse />
+          </div>
+        ) : (
+          view !== 'default' && (
+            <PwnedStatusSection
+              breaches={breaches}
+              resultPastes={resultPastes}
+              textContent={{
+                PwnedSection: textContent.PwnedSection,
+                AllGoodSection: textContent.AllGoodSection,
+              }}
+            />
+          )
         )}
       </div>
     </section>
