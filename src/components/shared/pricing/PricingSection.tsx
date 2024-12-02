@@ -7,7 +7,7 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { Detective, FolderLock, Gift, Info } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
@@ -194,6 +194,18 @@ export const PricingSection = ({
                   }
                   lang={lang}
                   darkMode={darkMode}
+                  giftCard={
+                    <div className="flex flex-row items-center bg-red-dark">
+                      <div className="space-y-2 px-4 py-5">
+                        <p className="text-base font-bold text-white">giftCard:</p>
+                        <div className="flex flex-row items-center text-white">
+                          <Gift size={15} />
+                          <p className="font-regular px-1 text-base">Enter our Secret Santa raffle  </p>
+                          <Info size={15} />
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               ))
             : undefined}

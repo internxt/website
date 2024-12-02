@@ -4,6 +4,7 @@ import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import { ReactNode } from 'react';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -19,6 +20,7 @@ export interface PriceCardProps {
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
   darkMode?: boolean;
+  giftCard?: ReactNode;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
 }
@@ -45,6 +47,7 @@ export const PriceCard = ({
   label,
   isFamilyPage,
   darkMode,
+  giftCard,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -140,6 +143,7 @@ export const PriceCard = ({
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
         } pb-6 text-sm`}
       >
+        {giftCard}
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
