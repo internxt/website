@@ -4,6 +4,7 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -20,15 +21,10 @@ export const PriceBannerForCampaigns = ({
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
-        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
-        style={{
-          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
-          backgroundSize: 'cover, cover',
-          backgroundPosition: 'center, center',
-        }}
+        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row ${styles.linearGradient}`}
       >
         <div className="flex w-full min-w-[800px] flex-col items-center gap-2 px-2 py-6 text-center sm:max-w-[900px] sm:gap-4 sm:px-3 sm:py-10 lg:items-start lg:pl-10 lg:text-left">
-          <div className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
+          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
             <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full">
@@ -50,14 +46,13 @@ export const PriceBannerForCampaigns = ({
           </div>
           <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
         </div>
-        <div className="lg hidden w-full items-center justify-center lg:mr-20 lg:flex">
+        <div className="lg hidden w-full items-center justify-center lg:flex">
           <Image
-            src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-            width={358}
-            height={382}
+            src={getImage('/images/christmas/internxt_christmas_pricing.webp')}
+            width={380}
+            height={380}
             draggable={false}
-            alt="Internxt Cloud Storage Pricing"
-            className="rounded-r-[32px]"
+            alt="Internxt Christmas Pricing"
           />
         </div>
       </div>
