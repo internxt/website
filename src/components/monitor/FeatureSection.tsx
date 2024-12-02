@@ -22,7 +22,7 @@ const CardText = ({ textContent }: CardTextProps) => {
       <p className="text-lg text-gray-80 md:text-xl">{textContent.description}</p>
       <Button
         text={textContent.cta}
-        className="bg-blue-500 w-full rounded-lg py-4 text-lg font-semibold text-gray-100 md:text-xl"
+        className="bg-blue-500 w-full rounded-lg py-4 text-lg font-semibold text-gray-100 md:text-2xl"
         onClick={() => window.open(textContent.redirect, '_blank', 'noopener,noreferrer')}
       />
     </Card>
