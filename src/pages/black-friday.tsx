@@ -97,7 +97,6 @@ const BlackFriday = ({
         isLinksHidden
         hideNavbar
         fixed
-        isBlackfriday
       />
 
       <HeroSection lang={locale} textContent={langJson.blackFriday} />
