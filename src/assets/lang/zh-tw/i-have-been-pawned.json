@@ -1,0 +1,113 @@
+{
+  "HeroSection": {
+    "title": "Internxt 黑暗網路監控",
+    "subtitle": "檢查您的電子郵件是否在資料洩露中被曝光。",
+    "description": "Internxt 監控檢查您的電子郵件是否在已洩露帳戶的資料庫中。",
+    "AllGoodSection": {
+      "title": "一切正常！",
+      "description": "未發現被洩露的帳戶或資料。",
+      "StaySecure": "使用強密碼和多因素認證來保持在線安全。"
+    },
+    "EmailToolBar": {
+      "placeHolder": "您的電子郵件地址",
+      "toolTip": "我們不儲存或分享您的電子郵件地址",
+      "toolTipEmergent": "您的電子郵件只會針對洩露的資料庫進行檢查。",
+      "pleaseEnterEmail": "請輸入有效的電子郵件地址",
+      "noBreachesFound": "未找到電子郵件",
+      "errorPwned": "檢查您的電子郵件時發生錯誤，請稍後再試。",
+      "check": "檢查",
+      "checking": "正在檢查..."
+    },
+    "breaches": {
+      "error405": "不支持請求方法。請聯繫支持或嘗試刷新頁面。",
+      "error400": "請求無效。請確保您的電子郵件地址輸入正確，並重試。",
+      "error500": "服務器存在問題。請稍等片刻後再試一次。如果問題持續存在，請聯繫支持。"
+    },
+    "PwnedSection": {
+      "title": "哦，不！",
+      "description": "在 X 次數據洩露和 X 次複製中找到了您的電子郵件。",
+      "recomendation": "我們建議立即採取措施保護您的帳戶。",
+      "breachesSection": {
+        "title": "發現您電子郵件的洩露點",
+        "description": "數據洩露是指您的電子郵件、姓名、地址或其他個人信息無意中被公開在網上。",
+        "linkToPasswordGenerator": {
+          "previousText": "",
+          "linkText": "Internxt 密碼生成器",
+          "otherText": "創建獨一無二、強大的密碼來保護您的帳戶和數據。"
+        }
+      },
+      "compromisedData": "資料洩露"
+    }
+  },
+  "InfoSection": {
+    "pwnedWebsites": "已洩露網站",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "已洩露帳戶",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "複製數據",
+    "pastesData": "115,796"
+  },
+  "CtaSection": {
+    "title": "不要成為另一個統計數字",
+    "description": "使用 Internxt 黑暗網路監控檢查您的帳戶。",
+    "cta": "立即檢查"
+  },
+  "CtaSection2": {
+    "title": "不要等到數據洩露發生",
+    "description": "使用 Internxt 檢查並保護您的信息。",
+    "cta": "立即檢查"
+  },
+  "FeatureSection": {
+    "title": "如果您的電子郵件在黑暗網路上洩露了應該怎麼辦",
+    "description": "Internxt 黑暗網路監控是我們保護您免受黑客洩露數據的使命的一部分。",
+    "description2": "Internxt 致力於在數位世界中保護您的安全。了解有效的策略，以保護您的帳戶並減輕電子郵件在黑暗網路上被洩露的風險。",
+    "cards": [
+      {
+        "title": "創建強密碼",
+        "description": "如果您的電子郵件在黑暗網路上被洩露，您首先需要做的是更改您的密碼。Internxt 密碼生成器可以創建強大的密碼或密碼短語，以防止黑客訪問您的帳戶。",
+        "cta": "生成",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "使用 VPN",
+        "description": "Internxt VPN 大大降低了數據洩露的風險，通過加密和隱藏您的 IP 地址。我們的 VPN 確保您在線衝浪時傳輸的所有數據都被加密並免受未授權訪問。",
+        "cta": "下載",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "檢查您的密碼強度",
+        "description": "使用 Internxt 密碼檢查器檢查您的密碼安全性。查看您的密碼強度、在洩露中找到的次數以及黑客使用暴力破解或專用軟件破解您的密碼所需的時間。",
+        "cta": "檢查",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "私密存儲文件",
+        "description": "Internxt Drive 加密雲存儲使用端到端加密技術來保護您的敏感信息，並防止數據洩露和黑客在黑暗網路上洩露您的信息。",
+        "cta": "訂閱",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "您是否在全球最大的數據洩露中受到影響？",
+    "description": "使用 Internxt 監控檢查您的電子郵件並採取措施保護您的帳戶。",
+    "cards": [
+      {
+        "title": "互聯網檔案館",
+        "description": "2024年9月，互聯網檔案館的「時光機」經歷了一次重大的數據洩露，一名威脅行為者竊取了包含3100萬記錄的用戶認證數據庫。洩露的數據包括電子郵件地址、屏幕名和 bcrypt 密碼哈希。"
+      },
+      {
+        "title": "Facebook",
+        "description": "2021年4月，超過5億 Facebook 用戶的數據在黑暗網路上可供下載。洩露的數據包括電話號碼、250萬個電子郵件地址和其他可用於網絡釣魚等網絡攻擊的個人信息。"
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io 因為數據存儲在未設密碼保護的公開 MongoDB 實例中而發生數據洩露。洩露暴露了7.63億獨特的電子郵件、姓名、電話號碼、IP地址、出生日期和性別。"
+      },
+      {
+        "title": "集合#1",
+        "description": "在 2018 年 1 月，集合#1的數據洩露洩漏了 2.7 億條記錄，這些記錄在黑暗網路和在線論壇上可用。數據包括超過 7700 萬個電子郵件地址和超過 2100 萬個密碼，涵蓋了多次洩露。"
+      }
+    ]
+  }
+}

@@ -77,7 +77,8 @@
         "passwordChecker": "Passwort Checker",
         "byteConverter": "Byte Konverter",
         "passwordGenerator": "Passwort Generator",
-        "fileConverter": "Dateikonverter"
+        "fileConverter": "Dateikonverter",
+        "haveIBeenPwned": "Wurde ich gehackt?"
       }
     }
   },

@@ -1,0 +1,117 @@
+{
+  "HeroSection": {
+    "title": "Internxt Monitor de la web oscura",
+    "subtitle": "Comprueba si tu correo electrónico ha sido expuesto a una violación de datos",
+    "description": "Tu correo se comparará con las bases de datos para detectar si hay alguna infracción.",
+    "AllGoodSection": {
+      "title": "¡Todo bien!",
+      "description": "No se ha encontrado ninguna cuenta filtrada o copiada en algún sitio web. ",
+      "StaySecure": "Mantente seguro con contraseñas seguras y autenticación multifactor."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Tu correo electrónico",
+      "toolTip": "No almacenamos ni compartimos tu dirección de correo electrónico.",
+      "toolTipEmergent": "Tu correo electrónico solo se verificará en bases de datos para detectar si existe alguna filtración.",
+      "pleaseEnterEmail": "Por favor, introduce un mail válido",
+      "noBreachesFound": "Email no encontrado",
+      "errorPwned": "Error al comprobar el correo electrónico",
+      "check": "Comprobar",
+      "checking": "Comprobando..."
+    },
+    "breaches": {
+      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
+      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
+      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
+    },
+    "PwnedSection": {
+      "title": "Oh no!",
+      "description": "Tu email ha sido encontrado en ",
+      "breaches": " filtraciones de datos y en ",
+      "breach": " filtración de datos y en ",
+      "pastes": " publicaciones.",
+      "paste": " publicación.",
+      "recomendation": "Recomendamos tomar medidas inmediatas para proteger tus cuentas.",
+      "breachesSection": {
+        "title": "Sitios donde tu correo y contraseña han sido filtrados",
+        "description": "Una violación de datos ocurre cuando tu correo electrónico, nombre, dirección u otra información personal se filtra involuntariamente y es expuesta en Internet.",
+        "linkToPasswordGenerator": {
+          "previousText": "El ",
+          "linkText": " generador de contraseñas",
+          "otherText": "de Internxt crea contraseñas únicas y seguras para proteger tus cuentas y datos."
+        }
+      },
+      "compromisedData": "Datos Comprometidos:"
+    }
+  },
+  "InfoSection": {
+    "pwnedWebsites": "Sitios web pirateados",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "Cuentas robadas",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "Copias",
+    "pastesData": "115,796"
+  },
+  "CtaSection": {
+    "title": "Have you been pwned español: ¿Se ha filtrado tu cuenta y contraseña?",
+    "description": "Descúbrelo con el Monitor de la web oscura de Internxt y toma medidas inmediatas para proteger tus cuentas",
+    "cta": "Regístrate"
+  },
+  "CtaSection2": {
+    "title": "No esperes a que se filtren tus datos",
+    "description": "Protege tu información con Internxt",
+    "cta": "Comprobar ahora"
+  },
+  "FeatureSection": {
+    "title": "Qué hacer si tu correo electrónico se ha filtrado en la web oscura",
+    "description": "Internxt Dark Web Monitor forma parte de nuestra misión para protegerte de los hackers que filtran tus datos en la web oscura",
+    "description2": "En Internxt nos comprometemos a mantenerte seguro en el mundo digital. Descubre las estrategias más efectivas para proteger tus cuentas y mitigar los riesgos si tu correo electrónico se ha visto comprometido en la web oscura.",
+    "cards": [
+      {
+        "title": "Crea contraseñas seguras",
+        "description": "Si tu correo electrónico se ha filtrado en la web oscura, lo primero que debes hacer es cambiar tus contraseñas. El generador de contraseñas de Internxt crea contraseñas o frases de contraseñas seguras para evitar que los piratas informáticos accedan a tus cuentas.",
+        "cta": "Generar contraseña",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Utiliza VPN para navegar",
+        "description": "Internxt VPN reduce en gran medida las posibilidades de violaciones de datos al cifrar y ocultar tu dirección IP. Nuestra VPN garantiza que todos los datos transmitidos mientras navegas en línea estén cifrados y protegidos contra el acceso no autorizado.",
+        "cta": "Descargar VPN",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Verifica la seguridad de tu contraseña",
+        "description": "Comprueba qué tan segura es tu contraseña con el Comprobador de contraseñas de Internxt. Revisa la seguridad de tu contraseña, los tiempos encontrados en las filtraciones y el tiempo que les tomaría a los piratas informáticos descifrar tu contraseña mediante un software especializado. ",
+        "cta": "Comprobar",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Almacena tus archivos de forma privada",
+        "description": "El almacenamiento en la nube cifrado de Internxt Drive utiliza cifrado de extremo a extremo para proteger tu información confidencial y evitar filtraciones de datos y que los piratas informáticos filtren tu información en la web oscura. ",
+        "cta": "Prueba Internxt Drive",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "¿Te has visto involucrado en las mayores violaciones de datos del mundo?",
+    "description": "Revisa tu correo electrónico y toma medidas para proteger tus cuentas con Internxt Monitor",
+    "cards": [
+      {
+        "title": "Internet archive",
+        "description": "En septiembre de 2024, la “Wayback Machine” de Internet Archive experimentó una importante filtración de datos cuando un actor de amenazas robó una base de datos de autenticación de usuarios que contenía 31 millones de registros. Los datos de la infracción incluían direcciones de correo electrónico, nombres de pantalla y hashes de contraseñas de bcrypt."
+      },
+      {
+        "title": "Facebook",
+        "description": "En abril de 2021, los datos de más de 500 millones de usuarios de Facebook estuvieron disponibles para descargar en la web oscura. Los datos de la violación contenían números de teléfono, 2,5 millones de direcciones de correo electrónico y otra información personal que puede utilizarse en ataques cibernéticos como el phishing."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io sufrió una violación de datos debido a que los datos se almacenaron en una instancia de MongoDB que se dejó a disposición del público sin protección con contraseña. La infracción expuso 763 millones de correos electrónicos, nombres, números de teléfono, direcciones IP, fechas de nacimiento y géneros. "
+      },
+      {
+        "title": "Collection #1 ",
+        "description": "En enero de 2018, la filtración de datos de la Colección #1 filtró 2.700 millones de registros, que estuvieron disponibles en la web oscura y foros en línea. Los datos incluían más de 77 millones de direcciones de correo electrónico y más de 21 millones de contraseñas de múltiples infracciones."
+      }
+    ]
+  }
+}

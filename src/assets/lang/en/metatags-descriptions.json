@@ -363,5 +363,10 @@
     "id": "elections-campaign",
     "title": "Make Internxt Great Again",
     "description": "Internxt's Elections Campaign 2024"
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Dark Web Monitor",
+    "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]

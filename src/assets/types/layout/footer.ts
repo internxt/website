@@ -94,6 +94,7 @@ export interface Tools {
   passwordGenerator: string;
   fileConverter: string;
   vpn: string;
+  haveIBeenPwned: string;
 }
 
 export interface NewsletterSection {
