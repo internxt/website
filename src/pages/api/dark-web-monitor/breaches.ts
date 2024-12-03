@@ -17,8 +17,7 @@ export default async function handler(
   textContent: BreachesProps['textContent'],
 ): Promise<void> {
   if (req.method !== 'GET') {
-    res.status(405).json({ error: textContent.error405 });
-    return;
+    return res.status(405).json({ error: textContent.error405 });
   }
 
   setInterval(() => {
@@ -28,14 +27,12 @@ export default async function handler(
   const { email } = req.query;
 
   if (!email || typeof email !== 'string') {
-    res.status(400).json({ error: textContent.error400 });
-    return;
+    return res.status(400).json({ error: textContent.error400 });
   }
 
   try {
     if (cache.has(email)) {
-      res.status(200).json(cache.get(email));
-      return;
+      return res.status(200).json(cache.get(email));
     }
 
     const url = `${API_URL}/breachedaccount/${encodeURIComponent(email)}?truncateResponse=false`;
@@ -46,12 +43,11 @@ export default async function handler(
     const response = await axios.get(url, { headers });
 
     cache.set(email, response.data);
-    res.status(200).json(response.data);
+    return res.status(200).json(response.data);
   } catch (err: any) {
     if (err.response?.status === 404) {
-      res.status(200).json({ breaches: [] });
-      return;
+      return res.status(200).json({ breaches: [] });
     }
-    res.status(500).json({ error: err.response?.data });
+    return res.status(500).json({ error: err.response?.data });
   }
 }
