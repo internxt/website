@@ -17,7 +17,9 @@ const Button = ({ text, className, type, showSpinner, id, disabled, onClick }: B
       disabled={disabled}
       id={id}
       type={type}
-      className={`flex ${className} w-max justify-center rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark`}
+      className={`flex ${className} ${
+        disabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
+      } w-max justify-center rounded-lg px-5 py-3 text-xl font-medium text-white `}
     >
       {showSpinner ? <Spinner size={20} /> : <p>{text}</p>}
     </button>

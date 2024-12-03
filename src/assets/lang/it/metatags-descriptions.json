@@ -155,6 +155,11 @@
     "description": "Campagna di Halloween Internxt: Ottieni l'80% di sconto su tutti i nostri piani annuali. Proteggi i tuoi file a vita con un unico pagamento."
   },
   {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: Sono Stato Compromesso?",
+    "description": "Internxt Dark Web Monitor è un servizio 'sono stato compromesso' che controlla se la tua email è stata compromessa in violazioni di dati online."
+  },
+  {
     "id": "cloud-object-storage",
     "title": "Internxt — Archiviazione di Oggetti",
     "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."

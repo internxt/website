@@ -43,10 +43,19 @@
     "description": "Almacenamiento seguro de archivos con antivirus integrado.",
     "cta": "Regístrate gratis"
   },
+
   "tryOutInternxtGeneralBanner": {
     "title": "Pásate a Internxt",
     "description": "Almacenamiento seguro en la nube basado en la privacidad.",
     "cta": "Pruébalo gratis"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Obtén almacenamiento en la nube cifrado de extremo a extremo sin costo adicional.",
+    "blueText": " Únete a Internxt gratis"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "para una solución de almacenamiento en la nube más segura, abierta y económica.",
+    "blueText": "Cámbiate a Internxt "
   },
   "SignUpFileConverterBanner": {
     "line1": "Convierte, almacena y asegura.",

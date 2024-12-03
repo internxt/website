@@ -79,7 +79,8 @@
         "byteConverter": "Byte Converter",
         "passwordGenerator": "Generatore di Password",
         "fileConverter": "Convertitore di file",
-        "vpn": "Extensione VPN"
+        "vpn": "Extensione VPN",
+        "haveIBeenPwned": "Sono stato hackerato?"
       }
     }
   },
