@@ -58,10 +58,6 @@ const HeroSection = ({ textContent, lang }) => {
             <p className="max-w-xs text-4xl font-bold text-white sm:max-w-md">{textContent.HeroSection.description}</p>
             <div className="flex flex-col items-center space-y-4">
               <ButtonDeal lang={lang} />
-              <div className="flex items-center space-x-2">
-                <CheckCircle size={24} className="text-primary" />
-                <p className="text-lg font-medium text-gray-5">{textContent.HeroSection.guarantee}</p>
-              </div>
             </div>
           </div>
         </div>
