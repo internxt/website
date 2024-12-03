@@ -1,6 +1,7 @@
 import { ArrowCircleDown, SmileyMeh, WarningCircle } from '@phosphor-icons/react';
 import PwnedElementCard from './PwnedElement';
-import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
+import { Breach, HaveIbeenPwnedText, Paste } from '@/assets/types/have-i-been-pawned';
+import Link from 'next/link';
 
 export interface PwnedSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection']['PwnedSection'];
@@ -31,9 +32,9 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
         </p>
         <div className="font-regular flex w-full flex-wrap justify-center px-5 text-center text-xl text-gray-80">
           <p className="ml-2 mr-2">{textContent.breachesSection.linkToPasswordGenerator.previousText}</p>
-          <a href="/password-generator" target="_blank" className="underline hover:text-gray-100 hover:underline">
+          <Link href="/password-generator" target="_blank" className="underline hover:text-gray-100 hover:underline">
             {textContent.breachesSection.linkToPasswordGenerator.linkText}
-          </a>
+          </Link>
           <p className="ml-2">{textContent.breachesSection.linkToPasswordGenerator.otherText}</p>
         </div>
         <div className="flex w-full flex-wrap justify-center gap-6 px-5">
