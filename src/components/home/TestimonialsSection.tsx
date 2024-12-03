@@ -61,10 +61,12 @@ const TestimonialsSection = ({
 
   return (
     <section className={`overflow-hidden ${bgColor ?? 'bg-white'} px-5 py-20 lg:px-16`}>
-      <div className="flex flex-col items-center gap-20 text-white">
+      <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
-          <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl">{textContent.title}</p>
+          <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl">
+            {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
+          </p>
         </div>
         <div className="flex w-full flex-row  flex-wrap justify-center gap-12">
           {testimonials.map((testimonial) => (

@@ -129,6 +129,11 @@ const BlackFriday = ({
         textContent={langJson.blackFriday.TestimonialsSection}
         bgColor="bg-highlight"
         textColor="text-white"
+        textComponent={
+          <p className="text-center text-4xl font-semibold !leading-tight text-white sm:text-5xl">
+            {langJson.blackFriday.TestimonialsSection.title}
+          </p>
+        }
       />
 
       <CtaSection textContent={langJson.cta2} lang={locale} />
