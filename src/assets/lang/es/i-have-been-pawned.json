@@ -27,7 +27,9 @@
       "title": "Oh no!",
       "description": "Tu email ha sido encontrado en ",
       "breaches": " filtraciones de datos y en ",
+      "breach": " filtración de datos y en ",
       "pastes": " publicaciones.",
+      "paste": " publicación.",
       "recomendation": "Recomendamos tomar medidas inmediatas para proteger tus cuentas.",
       "breachesSection": {
         "title": "Sitios donde tu correo y contraseña han sido filtrados",

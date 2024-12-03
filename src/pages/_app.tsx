@@ -102,7 +102,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
-          <Script defer strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>
               <Script
