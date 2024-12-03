@@ -5,6 +5,8 @@ export interface HaveIbeenPwnedText {
   CtaSection2: CtaSection;
   FeatureSection: FeatureSection;
   FeatureSectionV2: FeatureSectionV2;
+  Pastes: Paste;
+  Breaches: Breach;
 }
 
 export interface CtaSection {
@@ -96,4 +98,41 @@ export interface InfoSection {
   pwnedAccountsData: string;
   pastes: string;
   pastesData: string;
+}
+
+export interface Paste {
+  Source:
+    | 'Pastebin'
+    | 'Pastie'
+    | 'Slexy'
+    | 'Ghostbin'
+    | 'QuickLeak'
+    | 'JustPaste'
+    | 'AdHocUrl'
+    | 'PermanentOptOut'
+    | 'OptOut';
+  Id: string;
+  Title?: string | null;
+  Date?: string | null;
+  EmailCount: number;
+}
+
+export interface Breach {
+  Name: string;
+  Title: string;
+  Domain: string;
+  BreachDate: string;
+  AddedDate: string;
+  ModifiedDate: string;
+  PwnCount: number;
+  Description: string;
+  DataClasses: string[];
+  IsVerified: boolean;
+  IsFabricated: boolean;
+  IsSensitive: boolean;
+  IsRetired: boolean;
+  IsSpamList: boolean;
+  IsMalware: boolean;
+  IsSubscriptionFree: boolean;
+  LogoPath: string;
 }

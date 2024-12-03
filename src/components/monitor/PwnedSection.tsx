@@ -1,19 +1,11 @@
 import { ArrowCircleDown, SmileyMeh, WarningCircle } from '@phosphor-icons/react';
 import PwnedElementCard from './PwnedElement';
-import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
+import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 
 export interface PwnedSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection']['PwnedSection'];
-  pwnedElements: Array<{
-    logoPath: string;
-    title: string;
-    description: string;
-    compromisedData: string;
-    dataClasses: string[];
-    domain: string;
-    BreachDate: string;
-  }>;
-  pasteCount: any[];
+  pwnedElements: Breach[];
+  pasteCount: Paste[];
 }
 
 export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedElements, pasteCount }) => {
@@ -27,7 +19,7 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
           {textContent.description}
           {pwnedElements.length} {pwnedElements.length === 1 ? textContent.breach : textContent.breaches}
           {pasteCount.length || 0}
-          {pasteCount.length === 1 ? textContent.paste : textContent.pastes}
+          {textContent.pastes}
         </p>
       </div>
       <p className="font-regular px-5 text-center text-base text-gray-100">{textContent.recomendation}</p>
@@ -49,12 +41,12 @@ export const PwnedSection: React.FC<PwnedSectionProps> = ({ textContent, pwnedEl
             <PwnedElementCard
               key={index}
               textContent={{
-                logoPath: pwnedItem.logoPath,
-                title: pwnedItem.title,
-                description: pwnedItem.description,
+                logoPath: pwnedItem.LogoPath,
+                title: pwnedItem.Title,
+                description: pwnedItem.Description,
                 compromisedData: textContent.compromisedData,
-                dataClasses: pwnedItem.dataClasses,
-                domain: pwnedItem.title,
+                dataClasses: pwnedItem.DataClasses,
+                domain: pwnedItem.Title,
               }}
             />
           ))}

@@ -38,15 +38,20 @@ export default async function handler(
       return;
     }
 
-    const url = `${API_URL}/pasteaccount/${email}`;
+    const url = `${API_URL}/breachedaccount/${encodeURIComponent(email)}?truncateResponse=false`;
     const headers = {
       'hibp-api-key': API_KEY,
     };
 
     const response = await axios.get(url, { headers });
+
     cache.set(email, response.data);
     res.status(200).json(response.data);
   } catch (err: any) {
-    res.status(500).json({ error: err.response?.data, details: err.response?.data });
+    if (err.response?.status === 404) {
+      res.status(200).json({ breaches: [] });
+      return;
+    }
+    res.status(500).json({ error: err.response?.data });
   }
 }
