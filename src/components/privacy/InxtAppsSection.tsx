@@ -29,6 +29,15 @@ const InxtAppsSection = ({ textContent, lang }) => {
             animationDirection={'left'}
             redirect={'https://send.internxt.com'}
             lang={lang}
+            textContent={textContent.square2}
+          />
+
+          {/* Internxt VPN */}
+          <ProductCard
+            imageUrl={getImage('/images/privacy/Share-by-email.webp')}
+            animationDirection={'left'}
+            redirect={'/vpn'}
+            lang={lang}
             textContent={textContent.square3}
           />
         </div>

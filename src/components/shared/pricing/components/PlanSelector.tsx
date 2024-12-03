@@ -10,6 +10,9 @@ interface PlanSwitchProps {
   hideBusinessSelector?: boolean;
   isMonthly?: boolean;
   darkMode?: boolean;
+  isIndividualsOffer?: boolean;
+  isLifetimeOffer?: boolean;
+  isBusinessOffer?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
@@ -19,7 +22,9 @@ export const PlanSelector = ({
   hideBusinessSelector,
   onPlanTypeChange,
   darkMode,
-  isMonthly,
+  isIndividualsOffer,
+  isLifetimeOffer,
+  isBusinessOffer,
 }: PlanSwitchProps): JSX.Element => (
   <div id="billingButtons" className={`flex flex-row rounded-lg ${darkMode ? 'bg-gray-90' : 'bg-cool-gray-10'} p-0.5`}>
     <button
@@ -34,7 +39,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.individual}
-      <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      {isIndividualsOffer && <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -48,7 +53,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.lifetime}
-      <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      {isLifetimeOffer && <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -62,7 +67,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.business}
-      <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />
+      {isBusinessOffer && <SealPercent size={24} className="hidden text-green sm:flex" weight="fill" />}
     </button>
   </div>
 );

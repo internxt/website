@@ -26,9 +26,9 @@
         "title": "Open-source code",
         "description": "Every bit of our code is open-source and published on GitHub. All of our systems are made public knowledge and can be independently authenticated. Check it out for yourself."
       },
-      "endToEnd": {
-        "title": "End-to-end encryption",
-        "description": "All the data you store with Internxt is AES-256 end-to-end encrypted. That means that the most powerful processor in the world would need twice the age of the universe to decrypt even a small file."
+      "postQuantum": {
+        "title": "Post-quantum cryptography",
+        "description": "Internxt is one of the first privacy products to use post-quantum cryptography, offering the highest protection for your online privacy. Your files are protected today and will remain secure long into the future."
       },
       "zeroKnowledge": {
         "title": "Zero-knowledge technology",
@@ -50,24 +50,24 @@
   },
   "InxtAppsSection": {
     "title": {
-      "line1": "Apps designed to shield",
-      "line2": "your information"
+      "line1": "The most secure products to ",
+      "line2": "protect you online"
     },
     "subtitle": "Free products from Big Tech companies aren't really free, you pay in personal data. Our products will never flip your information or sell your data. When we say free, we mean it.",
     "square1": {
-      "title": "Drive lets you choose what to store and share",
-      "description": "Drive doesn’t access your personal data or files, instead it was designed from the ground up to give you back control over your files and protect you from data collectors and ad companies. Safeguard your storage.",
-      "cta": "Take back control over your files"
+      "title": "Internxt Drive",
+      "description": "Take back control of your files and data with Internxt Drive. Storing and backing up your files in complete privacy couldn’t be any easier. Modern cloud storage meets military-grade encryption.",
+      "cta": "Secure with Drive"
     },
     "square2": {
-      "title": "With Photos, privacy is always on focus",
-      "description": "Photos was developed to help you keep a synced gallery of your most perfect moments without fearing for your privacy and worrying about sudden data loss. Memories backed up, safe and sound.",
-      "cta": "Sync your photos and keepsakes"
+      "title": "Internxt Send",
+      "description": "Send allows you to end-to-end encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
+      "cta": "Share with Send"
     },
     "square3": {
-      "title": "Send with absolute certainty",
-      "description": "Send allows you to encrypt and share large files without worrying about the security of your documents, images or videos. Transfer to anyone in total confidentiality.",
-      "cta": "Send an encrypted file"
+      "title": "Internxt VPN",
+      "description": "Internxt VPN encrypts and secures your internet connection, protecting you from data leaks, hackers, and network attacks. Keep your data private and protected from prying eyes.",
+      "cta": "Browse with VPN"
     }
   },
   "FaqSection": {

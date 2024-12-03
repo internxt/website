@@ -38,16 +38,7 @@ interface HomeProps {
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    businessCoupon,
-    lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
-  });
+  const { products, loadingCards, currencyValue } = usePricing();
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -74,7 +65,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       description: textContent.FeatureSectionV2.cards![3].description,
     },
   ];
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
   };
@@ -84,17 +75,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
     const planType = isBusiness ? 'business' : 'individual';
 
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime);
   };
-
-  const isMobile = useIsMobile();
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed darkMode={!isMobile} />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
@@ -104,15 +92,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       />
 
       <TestimonialsSection textContent={textContent.TestimonialsSection} />
-
+      <div className={`${marqueeBgColor} py-10`}>
+        <MarqueeComponent bgColor={marqueeBgColor} />
+      </div>
       <PricingSectionWrapper
         textContent={textContent.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          business: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
         lang={locale}
         products={products}
         loadingCards={loadingCards}
@@ -121,18 +105,15 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         CustomDescription={
           <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
         }
+        backgroundColorComponent="bg-white"
       />
-
-      <div className={`${marqueeBgColor} py-10`}>
-        <MarqueeComponent bgColor={marqueeBgColor} />
-      </div>
 
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+            <div className="flex max-w-[1079px] flex-col items-center gap-6 text-center">
               <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
-              <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
+              <p className="max-w-[774px] text-xl  text-gray-80">{textContent.FeatureSectionV2.description}</p>
             </div>
             <div className="flex flex-col items-center gap-12">
               <Button
@@ -163,8 +144,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       />
 
       <FAQSection textContent={textContent.FaqSection} />
-
-      <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={locale} />
     </Layout>
