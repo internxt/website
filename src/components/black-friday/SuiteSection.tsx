@@ -9,11 +9,11 @@ const SuiteSection = ({ textContent, lang }) => {
     family: '/images/black-friday/internxt_for_business.webp',
   };
   const getHref = (index) => {
-    if (index === 1) {
+    if (index === 0) {
       return '/pricing';
-    } else if (index === 2) {
+    } else if (index === 1) {
       return '/business';
-    } else if (index === 3) {
+    } else {
       return '/family';
     }
   };
@@ -45,7 +45,7 @@ const SuiteSection = ({ textContent, lang }) => {
                     <div className="mt-12">
                       <Link
                         className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
-                        href={index === 0 ? '/pricing' : index === 1 ? '/business' : '/family'}
+                        href={getHref(index)}
                       >
                         {section.cta}
                       </Link>
