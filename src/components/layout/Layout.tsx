@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import axios from 'axios';
 import moment from 'moment';
-
-import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
 import {
   COOKIE_DOMAIN,
@@ -90,10 +88,6 @@ LayoutProps) {
       .catch((err) => {
         console.log(err);
       });
-
-    window.rudderanalytics.page(segmentName, {
-      brave: isBrave(),
-    });
 
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
