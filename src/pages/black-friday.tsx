@@ -102,7 +102,7 @@ const BlackFriday = ({
 
       <HeroSection lang={locale} textContent={langJson.blackFriday} />
 
-      <FeaturesSection textContent={langJson.blackFriday} lang={locale} />
+      <FeaturesSection textContent={langJson.blackFriday} />
 
       <BestStorageSection textContent={langJson.blackFriday} lang={locale} />
 
