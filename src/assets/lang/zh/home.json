@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "省75%",
+    "label": "省70%",
     "title": {
       "line1": "获取最",
       "blueText": "安全的",
@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% 折扣 ",
-        "normal2": "在所有计划中。"
+        "blue": "70% 折扣 ",
+        "normal2": "所有高级计划"
       },
       "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
       "startFrom": {
