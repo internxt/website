@@ -131,7 +131,7 @@ const BottomBanner = () => {
   return (
     <section
       className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
-        styles.radialGradient
+        styles.linearGradient
       } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
@@ -148,7 +148,7 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/black-friday/black_friday_horizontal_sale.png')}
+              src={getImage('/images/christmas/internxt_christmas_horizontal.webp')}
               width={243}
               height={100}
               draggable={false}
