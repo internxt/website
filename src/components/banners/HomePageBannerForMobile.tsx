@@ -4,6 +4,7 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const HomePageBannerForMobile = (redirectTo) => {
   const { dialogIsOpen } = useGlobalDialog();
@@ -11,19 +12,13 @@ export const HomePageBannerForMobile = (redirectTo) => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/pricing.json`);
-  const bgImage = getImage('/images/black-friday/clouds.webp');
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       <div
-        className="relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] bg-orange lg:hidden"
-        style={{
-          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
-          backgroundSize: 'cover, cover',
-          backgroundPosition: 'center, center',
-        }}
+        className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] lg:hidden ${styles.linearGradient}`}
       >
         <div className="flex w-full flex-col items-center gap-4 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-4 border-primary bg-gray-100 px-2 py-3">
+          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-3">
             <p className="text-3xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
               {textContent.tableSection.ctaBanner.label}
             </p>
@@ -53,12 +48,12 @@ export const HomePageBannerForMobile = (redirectTo) => {
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover">
+        <div className="flex h-full w-full flex-col object-cover py-4">
           <Image
-            src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-            width={377}
-            height={377}
-            alt="Black Friday image"
+            src={getImage('/images/christmas/christmas_mobile.webp')}
+            width={280}
+            height={160}
+            alt="Christmas Mobile image"
             className="w-full rounded-b-[16px] object-cover"
           />
         </div>

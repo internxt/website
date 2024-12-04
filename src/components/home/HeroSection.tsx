@@ -19,11 +19,6 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
-  const { dialogIsOpen } = useGlobalDialog();
-  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/home/image_mobile.webp');
-  const blurBgImage = getImage('/images/home/header/bg.svg');
-
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
@@ -69,34 +64,19 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   </div>
                 </div>
               }
-              footer={
-                isHomePageV2 ? (
-                  <div className="flex flex-row items-center justify-center gap-2 pt-2 text-white lg:justify-start">
-                    <Star size={24} weight="fill" className="text-[#E40784]" />
-                    <div className="flex flex-row items-center gap-1">
-                      <p className="whitespace-nowrap font-semibold text-white">{titleAndOnePlanText.guarantee}</p>
-                      <Image
-                        src={getImage('/logos/featured/techradar-pink.svg')}
-                        width={98}
-                        height={16}
-                        alt="Techradar logo"
-                      />
-                    </div>
-                  </div>
-                ) : undefined
-              }
             />
           </div>
 
-          <div className="hidden h-max w-max lg:flex">
+          <div className="hidden h-max w-max py-20 lg:flex">
             <Link href="/pricing">
               <Image
-                src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
+                src={getImage('/images/christmas/internxt_christmas_discount.webp')}
                 alt="Internxt Secure Cloud Storage"
                 draggable={false}
                 quality={100}
                 width={562}
-                height={529}
+                height={540}
+                className="object-cover"
               />
             </Link>
           </div>
