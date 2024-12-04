@@ -4,6 +4,7 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -20,15 +21,10 @@ export const PriceBannerForCampaigns = ({
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
-        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
-        style={{
-          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
-          backgroundSize: 'cover, cover',
-          backgroundPosition: 'center, center',
-        }}
+        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row ${styles.linearGradient}`}
       >
         <div className="flex w-full min-w-[800px] flex-col items-center gap-2 px-2 py-6 text-center sm:max-w-[900px] sm:gap-4 sm:px-3 sm:py-10 lg:items-start lg:pl-10 lg:text-left">
-          <div className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
+          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-1 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
             <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full">
@@ -50,29 +46,23 @@ export const PriceBannerForCampaigns = ({
           </div>
           <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
         </div>
-        <div className="lg hidden w-full items-center justify-center lg:mr-20 lg:flex">
+        <div className="lg animate-pingpong-v hidden w-full items-center justify-center lg:mr-20 lg:flex">
           <Image
-            src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-            width={358}
+            src={getImage('/images/christmas/internxt_christmas_pricing.webp')}
+            width={521}
             height={382}
             draggable={false}
             alt="Internxt Cloud Storage Pricing"
-            className="rounded-r-[32px]"
           />
         </div>
       </div>
 
       {/* Mobile View */}
       <div
-        className="relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] bg-orange lg:hidden"
-        style={{
-          backgroundImage: `url(${bgImage}), linear-gradient(180deg, #0066ff 0%, #000000 100%)`,
-          backgroundSize: 'cover, cover',
-          backgroundPosition: 'center, center',
-        }}
+        className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] lg:hidden ${styles.linearGradient}`}
       >
-        <div className="flex w-full flex-col items-center gap-4 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-4 border-primary bg-gray-100 px-2 py-3">
+        <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
+          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-3">
             <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col text-white">
@@ -94,12 +84,12 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover">
+        <div className="flex h-full w-full flex-col object-cover py-5">
           <Image
-            src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-            width={377}
-            height={190}
-            alt="Black Friday image"
+            src={getImage('/images/christmas/christmas_mobile.webp')}
+            width={280}
+            height={150}
+            alt="Christmas Mobile image"
             className="w-full rounded-b-[16px] object-cover"
           />
         </div>
