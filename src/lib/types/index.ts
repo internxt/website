@@ -111,6 +111,7 @@ export enum PromoCodeName {
   Halloween = 'HORROR80',
   KamalaHarris = 'KAMALA',
   DonaldTrump = 'TRUMP',
+  SoftSales = '70OFF4YOU',
 }
 
 export interface PromoCodeProps {
