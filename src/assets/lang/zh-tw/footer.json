@@ -77,7 +77,7 @@
         "passwordGenerator": "密碼生成器",
         "fileConverter": "文件轉換器",
         "vpn": "VPN 擴展",
-        "haveIBeenPwned": "我被駭客入侵了嗎？"
+        "haveIBeenPwned": "我被駭客入侵了嗎"
       }
     }
   },
