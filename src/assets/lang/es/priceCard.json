@@ -104,6 +104,15 @@
       "10TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
       "tooltip": "Comprando cualquier plan lifetime!"
     },
+    "christmasFeatures": {
+      "title": "Regalos de Santa: ",
+      "200GB": ["!Particpa en el sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "1TB": ["!Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "2TB": ["!Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "5TB": ["!Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "10TB": ["!Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "tooltip": "Consigue hasta 10TB de almacenamiento extra!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",

@@ -1,9 +1,10 @@
-import { Fire } from '@phosphor-icons/react';
+import { Fire, Gift, Info } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import { Tooltip } from 'react-tooltip';
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
@@ -135,6 +136,24 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
+      <div className="mx-auto w-fit space-y-2 bg-red px-4 py-3">
+        <p className="text-sm font-bold text-white">{contentText.productFeatures.christmasFeatures.title}</p>
+        {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
+          <div className="flex items-start space-x-2 text-left" key={feature}>
+            <Gift size={16} className="flex-shrink-0 text-white" />
+            <span className="text-sm leading-5 text-white">{feature}</span>
+            {index === 0 && (
+              <>
+                <Info size={16} className="flex-shrink-0 text-white" data-tooltip-id="email-tooltip" />
+                <Tooltip id="email-tooltip" place="top">
+                  {contentText.productFeatures.christmasFeatures.tooltip}
+                </Tooltip>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'

@@ -103,7 +103,15 @@
       "10TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
       "tooltip": "Compre qualquer plano vitalício para ter chance de ganhar!"
     },
-
+    "christmasFeatures": {
+      "title": "Presentes do Papai Noel: ",
+      "200GB": ["Participe do nosso sorteio Secret Santa", "Tema de Aplicativo Web de Natal"],
+      "1TB": ["Participe do nosso sorteio Secret Santa", "Tema de Aplicativo Web de Natal"],
+      "2TB": ["Participe do nosso sorteio Secret Santa", "Tema de Aplicativo Web de Natal"],
+      "5TB": ["Participe do nosso sorteio Secret Santa", "Tema de Aplicativo Web de Natal"],
+      "10TB": ["Participe do nosso sorteio Secret Santa", "Tema de Aplicativo Web de Natal"],
+      "tooltip": "Ganhe até 10TB de armazenamento gratuito!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Até ",
