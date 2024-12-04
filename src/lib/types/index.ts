@@ -112,6 +112,7 @@ export enum PromoCodeName {
   KamalaHarris = 'KAMALA',
   DonaldTrump = 'TRUMP',
   SoftSales = '70OFF4YOU',
+  Christmas = 'SECRETSANTA80',
 }
 
 export interface PromoCodeProps {
