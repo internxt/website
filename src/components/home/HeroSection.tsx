@@ -70,7 +70,15 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <div className="hidden h-max w-max py-20 lg:flex">
               <Link href="/pricing">
                 <div className="relative h-[400px] w-[600px] animate-sleigh-vertical">
-                  {/* Trineo */}
+                  <Image
+                    src={getImage('/images/christmas/snow.png')}
+                    alt="Snow Background"
+                    draggable={false}
+                    quality={100}
+                    height={506}
+                    width={542}
+                    className="absolute animate-sleigh-vertical-snow object-cover"
+                  />
                   <Image
                     src={getImage('/images/christmas/internxt_christmas_discount.webp')}
                     alt="Internxt Secure Cloud Storage"
@@ -80,8 +88,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                     height={540}
                     className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-sleigh transform object-cover"
                   />
-
-                  {/* Bastón de caramelo */}
                   <Image
                     src={getImage('/images/christmas/candy_stick.webp')}
                     alt="Candy Stick"
@@ -89,10 +95,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                     quality={100}
                     width={100}
                     height={119}
-                    className="absolute bottom-[0%] left-[50%] rotate-sleigh object-cover"
+                    className="absolute bottom-[0%] left-[50%] animate-[move-candy-stick_2s_ease-in-out_infinite] object-cover"
                   />
-
-                  {/* Árbol de Navidad */}
                   <Image
                     src={getImage('/images/christmas/christmas_tree.webp')}
                     alt="Christmas Tree"
@@ -100,10 +104,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                     quality={100}
                     width={100}
                     height={100}
-                    className="absolute left-[5%] top-[5%] rotate-sleigh object-cover"
+                    className="absolute left-[5%] top-[5%] animate-[rotate-tree_3s_linear_infinite] object-cover"
                   />
-
-                  {/* Calcetín */}
                   <Image
                     src={getImage('/images/christmas/sock.webp')}
                     alt="Sock"
@@ -111,7 +113,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                     quality={100}
                     width={86}
                     height={153}
-                    className="absolute right-[-10%] top-[25%] rotate-sleigh object-cover"
+                    className="absolute right-[-10%] top-[25%] animate-[float-sock_1.5s_ease-in-out_infinite] object-cover"
                   />
                 </div>
               </Link>

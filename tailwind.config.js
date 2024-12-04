@@ -212,16 +212,21 @@ module.exports = {
         'spin-refresh': 'spin 1s',
         'scroll-x': 'scroll-x 10s linear infinite',
         'sleigh-vertical': 'sleigh-vertical 3s ease-in-out infinite',
-        snowfall: 'snowfall 8s linear infinite',
+        'sleigh-vertical-snow': 'sleigh-vertical-snow 4s ease-in-out infinite',
+        'move-candy-stick': 'move-candy-stick 2s ease-in-out infinite',
+        'rotate-tree': 'rotate-tree 3s linear infinite',
+        'float-sock': 'float-sock 1.5s ease-in-out infinite',
+        'move-vertical': 'move-vertical 5s linear infinite',
       },
+
       keyframes: {
         'fade-r-large': {
           '0%': { transform: 'translateX(80px)', opacity: 0 },
-          '100%': { transform: 'translateX(0px)', opacity: 100 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         'fade-r': {
           '0%': { transform: 'translateX(24px)', opacity: 0 },
-          '100%': { transform: 'translateX(0px)', opacity: 100 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         'scroll-y': {
           '0%': { transform: 'translateY(0%)' },
@@ -232,11 +237,28 @@ module.exports = {
           '50%': { transform: 'translateY(-10px)' },
           '100%': { transform: 'translateY(0)' },
         },
-        snowfall: {
-          '0%': { transform: 'translateY(-10%)' },
-          '100%': { transform: 'translateY(110%)' },
+        'move-candy-stick': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'rotate-tree': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'float-sock': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'sleigh-vertical-snow': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-25px)' },
+          '100%': { transform: 'translateY(0)' },
         },
       },
+
       aspectRatio: {
         '1/1': '1 / 1',
         '4/3': '4 / 3',
