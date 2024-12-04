@@ -165,6 +165,10 @@ module.exports = {
           '0%, 100%': { top: '0%' },
           '50%': { top: '100%' },
         },
+        'scroll-x': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       transitionDelay: {
         250: '250ms',
@@ -189,6 +193,7 @@ module.exports = {
       },
       rotate: {
         10: '10deg',
+        sleigh: '-7deg',
       },
       scale: {
         98: '.98',
@@ -205,6 +210,9 @@ module.exports = {
         'scroll-y-reverse': '60s linear scroll-y reverse infinite',
         'spin-slow': 'spin 3s linear infinite',
         'spin-refresh': 'spin 1s',
+        'scroll-x': 'scroll-x 10s linear infinite',
+        'sleigh-vertical': 'sleigh-vertical 3s ease-in-out infinite',
+        snowfall: 'snowfall 8s linear infinite',
       },
       keyframes: {
         'fade-r-large': {
@@ -218,6 +226,15 @@ module.exports = {
         'scroll-y': {
           '0%': { transform: 'translateY(0%)' },
           '100%': { transform: 'translateY(25%)' },
+        },
+        'sleigh-vertical': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        snowfall: {
+          '0%': { transform: 'translateY(-10%)' },
+          '100%': { transform: 'translateY(110%)' },
         },
       },
       aspectRatio: {
