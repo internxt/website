@@ -1,16 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import {
-  CheckCircle,
-  Ghost,
-  SealPercent,
-  ShieldCheck,
-  Snowflake,
-  VectorThree,
-  VectorTwo,
-  X,
-} from '@phosphor-icons/react';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import { CheckCircle, Snowflake, X } from '@phosphor-icons/react';
 
 const HIDE_BANNER_DATE = new Date('2025-01-07');
 const TODAY_DATE = new Date();
