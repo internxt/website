@@ -15,7 +15,6 @@ export const PriceBannerForCampaigns = ({
 }) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
-  const bgImage = getImage('/images/black-friday/clouds.webp');
 
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
