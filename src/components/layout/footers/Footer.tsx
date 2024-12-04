@@ -451,6 +451,9 @@ export default function Footer({
                       className="flex items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
                     </Link>
                   </div>
                 </div>
