@@ -15,7 +15,7 @@ const ButtonDeal = ({ lang }) => {
   const selectedText = translations[lang] || translations.en;
   return (
     <Link
-      href="#billingButtons"
+      href="/pricing"
       className="relative flex flex-row items-center justify-center rounded-lg bg-primary px-6 py-3 text-base text-white transition duration-100 focus:outline-none focus-visible:bg-primary-dark active:bg-primary-dark sm:text-lg"
     >
       {selectedText}

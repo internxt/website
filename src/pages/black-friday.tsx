@@ -18,6 +18,9 @@ import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { BlackFridayText } from '@/assets/types/blackFriday';
 import { PricingText } from '@/assets/types/pricing';
+import SuiteSection from '@/components/black-friday/SuiteSection';
+import BestStorageSection from '@/components/black-friday/BestStorageSection';
+import FeaturesSection from '@/components/black-friday/FeaturesSection';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 interface BlackFridayProps {
@@ -94,40 +97,17 @@ const BlackFriday = ({
         isLinksHidden
         hideNavbar
         fixed
-        isBlackfriday
       />
 
       <HeroSection lang={locale} textContent={langJson.blackFriday} />
 
-      <PricingSectionWrapper
-        textContent={pricingLang.tableSection}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansSelected}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideFreeCard
-        darkMode
-        backgroundColorComponent="bg-highlight"
-        hideTitle
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          business: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        CustomDescription={
-          <div className="w-full max-w-4xl">
-            <span className="text-5xl font-semibold text-white">
-              {pricingLang.tableSection.planTitles.blackFriday.title}
-            </span>
-            <br />
-            <br />
-            <span className="font-regular text-xl text-gray-5">
-              {pricingLang.tableSection.planTitles.blackFriday.description}
-            </span>
-          </div>
-        }
-      />
+      <FeaturesSection textContent={langJson.blackFriday} />
+
+      <BestStorageSection textContent={langJson.blackFriday} lang={locale} />
+
+      <SuiteSection textContent={langJson.blackFriday} lang={locale} />
+
+      <CtaSection textContent={langJson.cta} lang={locale} />
 
       <TextAndCardsGroupColumnSection
         TextComponent={
@@ -141,12 +121,18 @@ const BlackFriday = ({
         backgroundColorForCard="bg-gray-100"
         textCardColor="text-white"
       />
+
       <PlatformSection textContent={langJson.blackFriday} />
 
       <TestimonialsSection
         textContent={langJson.blackFriday.TestimonialsSection}
         bgColor="bg-highlight"
         textColor="text-white"
+        textComponent={
+          <p className="text-center text-4xl font-semibold !leading-tight text-white sm:text-5xl">
+            {langJson.blackFriday.TestimonialsSection.title}
+          </p>
+        }
       />
 
       <CtaSection textContent={langJson.cta2} lang={locale} />
