@@ -46,7 +46,7 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="min-width-[521px], min-height-[320px] flex items-center justify-center">
+          <div className="min-width-[521px] min-height-[320px] flex items-center justify-center">
             <Image
               src={getImage('/images/christmas/internxt_christmas_pricing.webp')}
               width={521}
