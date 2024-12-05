@@ -68,7 +68,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
           <div className="relative pt-20">
             <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
-              {[...Array(120)].map((_, i) => (
+              {[...Array(150)].map((_, i) => (
                 <div
                   key={i}
                   className={`absolute animate-fall rounded-full bg-white opacity-75`}
@@ -78,7 +78,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                     width: `${Math.random() * 8 + 2}px`,
                     height: `${Math.random() * 8 + 2}px`,
                     animationDelay: `${Math.random() * 5}s`,
-                    animationDuration: `${Math.random() * 20 - 10}s`,
+                    animationDuration: `${Math.random() * 20 + 10}s`,
                   }}
                 ></div>
               ))}
