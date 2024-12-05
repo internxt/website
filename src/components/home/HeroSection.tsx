@@ -1,12 +1,10 @@
 import dynamic from 'next/dynamic';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
-import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
-const Animation = dynamic(() => import('./components/Animation'));
 import Image from 'next/image';
 import Header from '../shared/Header';
+const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
@@ -15,8 +13,6 @@ interface HeroSectionForHomeProps {
 }
 
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
-  const { dialogIsOpen } = useGlobalDialog();
-  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const previewImg = getImage('/images/lifetime/file_item.webp');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 

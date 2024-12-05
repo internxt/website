@@ -14,7 +14,8 @@
     "prod": "next export",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "lint": "eslint --quiet './**/*.{js,ts,tsx}'"
+    "lint": "eslint --quiet './**/*.{js,ts,tsx}'",
+    "postinstall": "husky"
   },
   "dependencies": {
     "@cemalgnlts/mailjs": "^3.0.1",
@@ -81,6 +82,8 @@
     "cypress": "^13.12.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
     "next-unused": "^0.0.6",
     "postcss": "8.4.31",
     "prettier": "2.7.1",
