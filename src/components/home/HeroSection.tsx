@@ -24,7 +24,8 @@ function getSecureRandom(min, max) {
     return randomValue * (max - min) + min;
   }
 
-  return Math.random() * (max - min) + min;
+  const randomValue = crypto.randomBytes(4).readUInt32BE(0) / (0xffffffff + 1);
+  return randomValue * (max - min) + min;
 }
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
@@ -33,7 +34,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-
       <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 ${styles.radialGradient} bg-cover bg-center bg-no-repeat md:flex`}
