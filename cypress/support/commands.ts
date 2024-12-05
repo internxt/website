@@ -49,6 +49,7 @@ Cypress.Commands.add('forceClick', { prevSubject: 'element' }, (subject, options
 });
 
 declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace Cypress {
     interface Chainable {
       getLatestReleaseInfo: typeof getLatestReleaseInfo;

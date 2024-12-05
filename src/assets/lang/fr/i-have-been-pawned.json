@@ -1,0 +1,113 @@
+{
+  "HeroSection": {
+    "title": "Internxt Dark Web Monitor",
+    "subtitle": "Vérifiez si votre e-mail a été exposé lors d'une violation de données.",
+    "description": "Internxt Monitor vérifie si votre e-mail a fait partie d'une violation de données contre une base de données de comptes compromis.",
+    "AllGoodSection": {
+      "title": "Tout va bien !",
+      "description": "Aucun compte violé ni aucune copie trouvée.",
+      "StaySecure": "Restez en sécurité en ligne avec des mots de passe forts et une authentification multi-facteurs."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Votre adresse e-mail",
+      "toolTip": "Nous ne stockons ni ne partageons votre adresse e-mail",
+      "toolTipEmergent": "Votre e-mail est seulement vérifié dans les bases de données pour les violations.",
+      "pleaseEnterEmail": "Veuillez entrer une adresse e-mail valide",
+      "noBreachesFound": "E-mail non trouvé",
+      "errorPwned": "Une erreur s'est produite lors de la vérification de votre e-mail. Veuillez réessayer plus tard.",
+      "check": "Vérifier",
+      "checking": "Vérification en cours..."
+    },
+    "breaches": {
+      "error405": "La méthode de requête n'est pas prise en charge. Veuillez contacter le support ou rafraîchir la page.",
+      "error400": "La requête était invalide. Veuillez vous assurer que votre adresse e-mail est correctement saisie et réessayez.",
+      "error500": "Il y a un problème sur le serveur. Veuillez patienter un moment et réessayer plus tard. Si le problème persiste, contactez le support."
+    },
+    "PwnedSection": {
+      "title": "Oh non !",
+      "description": "Votre e-mail a été trouvé dans X violations de données et X copies.",
+      "recomendation": "Nous recommandons de prendre des mesures immédiates pour sécuriser vos comptes.",
+      "breachesSection": {
+        "title": "Violations où votre e-mail a été trouvé",
+        "description": "Une violation de données se produit lorsque votre e-mail, nom, adresse ou autres informations personnelles sont divulguées involontairement en ligne.",
+        "linkToPasswordGenerator": {
+          "previousText": "",
+          "linkText": "Le générateur de mots de passe d'Internxt",
+          "otherText": "crée des mots de passe uniques et forts pour protéger vos comptes et vos données."
+        }
+      },
+      "compromisedData": "Données compromises"
+    }
+  },
+  "InfoSection": {
+    "pwnedWebsites": "sites web piratés",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "comptes piratés",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "copiés",
+    "pastesData": "115,796"
+  },
+  "CtaSection": {
+    "title": "Ne devenez pas une autre statistique",
+    "description": "Vérifiez vos comptes avec Internxt Dark Web Monitor.",
+    "cta": "Vérifiez maintenant"
+  },
+  "CtaSection2": {
+    "title": "N'attendez pas qu'une violation de données se produise",
+    "description": "Vérifiez et protégez vos informations avec Internxt.",
+    "cta": "Vérifiez maintenant"
+  },
+  "FeatureSection": {
+    "title": "Que faire si votre e-mail a fuité sur le web sombre",
+    "description": "Internxt Dark Web Monitor fait partie de notre mission pour vous protéger contre les pirates qui divulguent vos données sur le web sombre.",
+    "description2": "Internxt s'engage à vous garder en sécurité dans le monde numérique. Découvrez des stratégies efficaces pour sécuriser vos comptes et atténuer les risques si votre e-mail a été compromis sur le web sombre.",
+    "cards": [
+      {
+        "title": "Créez des mots de passe forts",
+        "description": "Si votre e-mail a fuité sur le web sombre, la première chose que vous devez faire est de changer vos mots de passe. Le générateur de mots de passe d'Internxt crée des mots de passe ou des phrases de passe forts pour empêcher les pirates d'accéder à vos comptes.",
+        "cta": "Générer",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Utilisez un VPN",
+        "description": "Le VPN d'Internxt réduit considérablement les chances de violations de données en cryptant et en masquant votre adresse IP. Notre VPN garantit que toutes les données transmises pendant que vous surfez en ligne sont cryptées et protégées contre l'accès non autorisé.",
+        "cta": "Téléchargez",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Vérifiez la force de votre mot de passe",
+        "description": "Vérifiez la sécurité de votre mot de passe avec le vérificateur de mots de passe d'Internxt. Visualisez la force de votre mot de passe, les fois où il a été trouvé dans des fuites, et le temps qu'il faudrait aux pirates pour craquer votre mot de passe en utilisant des attaques par force brute ou des logiciels spécialisés.",
+        "cta": "Vérifiez",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Stockez vos fichiers de manière privée",
+        "description": "Le stockage cloud crypté d'Internxt Drive utilise un cryptage de bout en bout pour protéger vos informations sensibles et prévenir les violations de données et les fuites de vos informations sur le web sombre.",
+        "cta": "Abonnez-vous",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Avez-vous été victime des plus grandes violations de données du monde ?",
+    "description": "Vérifiez votre e-mail et prenez des mesures pour sécuriser vos comptes avec Internxt Monitor.",
+    "cards": [
+      {
+        "title": "Archive Internet",
+        "description": "En septembre 2024, la 'Wayback Machine' de l'Internet Archive a subi une violation de données significative lorsqu'un acteur de la menace a volé une base de données d'authentification d'utilisateurs contenant 31 millions d'enregistrements. Les données de la violation comprenaient des adresses e-mail, des noms d'écran et des hachages de mots de passe bcrypt."
+      },
+      {
+        "title": "Facebook",
+        "description": "En avril 2021, les données de plus de 500 millions d'utilisateurs de Facebook étaient disponibles pour téléchargement sur le web sombre. Les données de la violation contenaient des numéros de téléphone, 2,5 millions d'adresses e-mail et d'autres informations personnelles qui peuvent être utilisées dans des cyberattaques comme le phishing."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io a subi une violation de données car les données étaient stockées dans une instance MongoDB laissée accessible publiquement sans protection par mot de passe. La violation a exposé 763 millions d'e-mails uniques, des noms, des numéros de téléphone, des adresses IP, des dates de naissance et des genres."
+      },
+      {
+        "title": "Collection #1",
+        "description": "En janvier 2018, la violation de données de la Collection #1 a divulgué 2,7 milliards d'enregistrements, qui étaient disponibles sur le web sombre et dans des forums en ligne. Les données comprenaient plus de 77 millions d'adresses e-mail et plus de 21 millions de mots de passe de plusieurs violations."
+      }
+    ]
+  }
+}

@@ -6,13 +6,21 @@ import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/virus-scanner/HeroSection';
 import FeaturesSection from '@/components/virus-scanner/FeaturesSection';
 import CtaSection from '@/components/virus-scanner/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 
-const Scan = ({ metatagsDescriptions, langJson, toolsContent, navbarLang, footerLang, lang, bannerLang }) => {
+const Scan = ({
+  metatagsDescriptions,
+  langJson,
+  toolsContent,
+  navbarLang,
+  footerLang,
+  lang,
+  bannerLang,
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
 
   return (

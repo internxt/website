@@ -7,7 +7,7 @@ import HeroSection from '@/components/cyber-awareness/HeroSection';
 import InfoSection from '@/components/cyber-awareness/InfoSection';
 import CtaSection from '@/components/cyber-awareness/CtaSection';
 import CtaSection2 from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import SuiteSection from '@/components/cyber-awareness/SuiteSection';
 import SuiteSection2 from '@/components/cyber-awareness/SuiteSection2';
 import VideoSection from '@/components/cyber-awareness/VideoSection';
@@ -40,7 +40,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         <Navbar textContent={navbarLang} cta={['default']} lang={lang} />
         {lang !== 'es' ? (
           <>
-            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.tableSection.ctaBanner} />
 
             <CtaSection textContent={textContent.CtaSection} />
 
@@ -62,7 +62,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
           </>
         ) : (
           <>
-            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.SignUpCyberAwareness} />
+            <HeroSection textContent={textContent.HeroSection} bannerText={bannerText.tableSection.ctaBanner} />
 
             <InfoSection textContent={textContent.InfoSection} />
 
@@ -87,7 +87,8 @@ export async function getServerSideProps(ctx) {
   const textContent = require(`@/assets/lang/${lang}/cyber-awareness.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const bannerText = require(`@/assets/lang/${lang}/banners.json`);
+  // const bannerText = require(`@/assets/lang/${lang}/banners.json`);
+  const bannerText = require(`@/assets/lang/${lang}/pricing.json`);
 
   cookies.setReferralCookie(ctx);
 

@@ -3,7 +3,7 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-nested-ternary */
-import React from 'react';
+import { getImage } from '@/lib/getImage';
 
 const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
   const currency = () => {
@@ -37,7 +37,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
         <div
           className={`storage flex max-w-min flex-row whitespace-nowrap rounded-full ${
             popular ? 'text-primary' : 'text-gray-50'
-          } bg-neutral-20 py-1 px-4 pb-0.5 font-semibold`}
+          } bg-neutral-20 px-4 py-1 pb-0.5 font-semibold`}
         >
           <p>{storage}</p>
         </div>
@@ -80,7 +80,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkPrimary.svg"
+              src={getImage('/icons/checkPrimary.svg')}
               draggable="false"
               alt="check icon"
             />
@@ -92,7 +92,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkPrimary.svg"
+              src={getImage('/icons/checkPrimary.svg')}
               draggable="false"
               alt="check icon"
             />
@@ -104,7 +104,7 @@ const PriceCard = ({ planType, storage, price, cta, country, popular }) => {
             <img
               loading="lazy"
               className="mt-0.5 translate-y-px transform select-none"
-              src="/icons/checkPrimary.svg"
+              src={getImage('/icons/checkPrimary.svg')}
               draggable="false"
               alt="check icon"
             />

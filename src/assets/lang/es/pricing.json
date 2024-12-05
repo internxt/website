@@ -12,15 +12,75 @@
       "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
+
+  "HeroSectionAlternative": {
+    "title": "¿Cuánto almacenamiento en línea necesitas?",
+    "description": "Selecciona la cantidad para ver los planes que se adaptan a tus necesidades.",
+    "cta": "Encuentra tu plan ideal",
+    "features": [
+      "El almacenamiento en la nube más seguro",
+      "Creación de cuenta anónima",
+      "Cifrado de grado militar",
+      "Tus datos no se venden"
+    ]
+  },
+  "PriceTableForAlternativePricing": {
+    "title": {
+      "normal1": "Obtén un ",
+      "blue2": "80% de descuento",
+      "normal2": "de almacenamiento seguro"
+    },
+    "description": "Protege tus archivos de trabajo y personales con almacenamiento en la nube cifrado de grado militar a un precio accesible.",
+    "features": [
+      "El almacenamiento en la nube más seguro",
+      "Más barato que las alternativas",
+      "Garantía de devolución de dinero de 30 días"
+    ],
+    "howMuchStorage": "¿Cuánto almacenamiento en línea necesitas?",
+    "offerEnds": "Termina en:"
+  },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra 75%",
-      "title": "Protege tu datos y tu privacidad",
-      "subtitle": "Defiende tu privacidad como un campeón",
-      "cta": "Elige un plan",
-      "cta2": "Obtén un 75% de descuento",
+      "label": "85% de descuento",
+      "title": "Descuentos Mortales de Halloween",
+      "subtitle": "¡Ya está aquí Black Friday!",
+      "cta": "Elige tu plan",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
+      "titleMbl1": "¡Ya está aquí Black Friday!",
+      "ctaMbl": "Seleccionar plan"
+    },
+    "planTitles": {
+      "individuals": "Planes individuales",
+      "lifetime": "Planes de por vida",
+      "business": "Planes para empresas",
+      "lifetimeCampaign": {
+        "blueText": "50% de descuento",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      },
+      "blackFriday": {
+        "title": "Mega oferta de Black Friday: consigue un 85 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
+        "description": "Protege tus datos con Internxt para evitar brechas de seguridad, pérdidas financieras y riesgos de privacidad. Di adiós a las grandes tecnológicas que se benefician de tu información personal."
+      }
+    },
+    "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
+    "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
+    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su negocio, proteger a sus empleados y asegurar su rentabilidad.",
+    "businessDescription2": "Garantiza la seguridad de los datos de la empresa con los planes de almacenamiento en la nube cifrados de Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "lifetime": "Lifetime",
+      "individual": "Individual",
+      "business": "Empresa"
+    },
+    "freePlanCard": {
+      "getStarted": "Empieza con nuestro plan gratuito",
+      "enjoy10gb": "Disfruta de 1 GB y accede a todos nuestros servicios",
+      "upTo": "1GB",
+      "freeForever": "Gratis para siempre",
+      "cta": "Seleccionar plan"
     },
     "features": {
       "endToEnd": "Encriptado de extremo a extremo",
@@ -102,6 +162,43 @@
       }
     ]
   },
+  "FaqSectionForBusiness": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es Internxt para negocios?",
+        "answer": [
+          "Nuestro almacenamiento en la nube para negocios proporciona a las empresas de todos los tamaños una solución de almacenamiento en la nube segura que protege los archivos empresariales contra violaciones de datos. Los planes empresariales incluyen acceso a Internxt Drive, VPN y Send, así como a nuestros nuevos productos próximos, Internxt Mail y Meet."
+        ]
+      },
+      {
+        "question": "¿Es Internxt el almacenamiento en la nube adecuado para mi negocio?",
+        "answer": [
+          "Internxt está diseñado para todos, incluidas las empresas de cualquier tamaño que buscan una solución de almacenamiento en la nube segura que mantenga la información personal y confidencial privada.",
+          "Nuestra suite de productos cifrados incluye los más altos estándares de seguridad de la industria para las empresas que necesitan compartir archivos o carpetas sin preocuparse por filtraciones de datos."
+        ]
+      },
+      {
+        "question": "¿Es Internxt más seguro que otros servicios de almacenamiento en la nube?",
+        "answer": [
+          "A diferencia de las grandes empresas tecnológicas, en Internxt se confía para proporcionar un almacenamiento de archivos seguro para empresas porque los datos de tu empresa se cifran en tu dispositivo para una máxima seguridad.",
+          "Para prevenir la amenaza de violaciones de datos, Internxt ofrece medidas de seguridad adicionales, incluidas la compartición de archivos cifrados, la autenticación de dos factores, el generador de contraseñas y más."
+        ]
+      },
+      {
+        "question": "¿Qué pasa si alcanzo el límite de almacenamiento de mi plan?",
+        "answer": [
+          "Nuestros planes son totalmente flexibles para satisfacer las necesidades de tu empresa. Puedes agregar fácilmente más usuarios o ampliar tu capacidad de almacenamiento según sea necesario, asegurando la escalabilidad y la rentabilidad."
+        ]
+      },
+      {
+        "question": "¿Qué nivel de soporte técnico proporcionan?",
+        "answer": [
+          "Contamos con un equipo de soporte al cliente dedicado que puede responder cualquier pregunta o inquietud o proporcionar información adicional según tus necesidades. Puedes visitar nuestro centro de ayuda o contactarnos en [hello@internxt.com](mailto:hello@internxt.com), y nuestro equipo estará encantado de asistirte."
+        ]
+      }
+    ]
+  },
   "SchemaMarkupQuestions": {
     "faq": [
       {
@@ -139,6 +236,52 @@
       "description": "¡Consigue 1 GB gratis y comprueba si la privacidad te conviene antes de lanzarte a por todas!",
       "cta": "Crear cuenta gratuita"
     }
+  },
+  "InfoSectionForBusiness": {
+    "title": "¿Qué puedes hacer con Internxt?",
+    "description": "Optimiza la gestión de archivos, la seguridad y la privacidad de tu organización con nuestro almacenamiento en la nube seguro para negocios.",
+    "cta": "",
+    "cards": [
+      {
+        "title": "Gestiona tu organización",
+        "description": "Internxt empodera a las empresas con la gestión de usuarios y equipos simplificada, la asignación flexible de almacenamiento y espacios de trabajo personalizables. Cambia fácilmente entre tareas empresariales y personales para optimizar la productividad y la organización."
+      },
+      {
+        "title": "Envía archivos confidenciales de manera segura",
+        "description": "El almacenamiento en la nube seguro incluye características de compartición de archivos seguras para colaborar en equipos de forma segura. Protege con contraseña y restringe el acceso a archivos para enviar archivos confidenciales a socios, asegurando que mantengas el control sobre su seguridad."
+      },
+      {
+        "title": "Haz copias de seguridad de lo importante",
+        "description": "Haz copias de seguridad de tus archivos para prevenir la pérdida de datos. Además, Internxt almacena y respalda la misma copia de tus archivos en diferentes servidores de la UE para mayor seguridad, convirtiéndolo en la copia de seguridad en la nube más segura para tu negocio."
+      },
+      {
+        "title": "Trabaja con tu equipo desde cualquier lugar",
+        "description": "Disponible para Windows, Mac, Linux, iOS, Android y Web. Accede a tus archivos en cualquier dispositivo, en cualquier momento, asegurando que tú y tu equipo puedan trabajar de manera segura donde sea que estén."
+      }
+    ]
+  },
+  "InfoSection": {
+    "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
+    "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo de profesionales completamente dedicados a protegerte. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos para que no sean explotados.",
+    "cta": "Presentación del equipo de Internxt",
+    "cards": [
+      {
+        "title": "Privado por diseño",
+        "description": "No almacenamos contraseñas ni datos de usuario y todos tus datos están encriptados en tránsito y en reposo. Internxt te da el control total de tus archivos. Tú gestionas tus datos y nosotros los protegemos."
+      },
+      {
+        "title": "Seguridad sin compromisos",
+        "description": "Tus archivos se cifran de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar, salvo tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Cumplimos totalmente con GDPR y somos 100% seguros, pero no te fíes de nuestra palabra. Internxt ha sido auditada y verificada de forma independiente por la empresa líder en Europa en pruebas de penetración, Securitum."
+      }
+    ]
   },
   "BestStorageSection": {
     "title": "Construido para el futuro",

@@ -1,0 +1,166 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Internxt S3 ",
+      "line2": "Almacenamiento de objetos compatible con"
+    },
+    "description": "Una solución de almacenamiento en la nube eficiente y escalable para almacenar, acceder y administrar datos a gran escala.",
+    "cta": "Empieza ya"
+  },
+  "PredictablePricingSection": {
+    "title": "Sin cargos ni tarifas adicionales de API",
+    "description": "Evita cargos adicionales por tu almacenamiento. Internxt ofrece una tarifa asequible por un almacenamiento privado y sin cargos ocultos.",
+    "info": [
+      {
+        "title": "100%",
+        "description": "Ultra rápido y accesible al instante"
+      },
+      {
+        "title": "Hasta 80%",
+        "description": "Más económico  que AWS"
+      },
+      {
+        "title": "Tarifas 0",
+        "description": "Transferencia de datos gratuita"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "El almacenamiento en la nube de objetos de Internxt combina seguridad y eficiencia",
+    "description": "El almacenamiento de objetos de Internxt es una solución asequible y de alto rendimiento que revoluciona el almacenamiento de datos en línea, perfecta para individuos y empresas que necesitan una infraestructura confiable y segura a un coste mínimo.",
+    "payAsYouGoCard": {
+      "title": "¡Paga por lo que usas!",
+      "description": "Paga solo por el almacenamiento que utilizas."
+    },
+    "cardText": {
+      "label": "Internxt S3",
+      "perTB": "Por TB/facturado mensualmente*",
+      "price": "7",
+      "cta": "Comprar plan ",
+      "whatsIncluded": {
+        "title": "Incluye:",
+        "features": [
+          "Facturado mensualmente",
+          "Servidor cifrado",
+          "Compatible con AWS S3 y API IAM",
+          "Mayor velocidad",
+          "Almacenamiento flexible",
+          "Código abierto",
+          "Cumplimiento con RGPD",
+          "Atención al cliente premium"
+        ]
+      }
+    },
+    "oneTimePayment": "*Más una tarifa única de 1 € por verificación de cuenta"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "¿Cuánto almacenamiento necesitas?",
+    "description": "Descubre cuánto puedes ahorrar con el almacenamiento de objetos de Internxt. Prueba nuestra calculadora de costes para ver cómo nos comparamos con los hiperescaladores.",
+    "pay-as-you-go": "Paga por lo que usas",
+    "perMonth": "/por mes",
+    "perYear": "/por año",
+    "storageAmount": "Cantidad de almacenamiento",
+    "percentDownloadPerMonth": "Porcentaje de descarga mensual",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "¿Por qué elegir el almacenamiento de objetos de Internxt?",
+    "description": "Los beneficios del almacenamiento en la nube de objetos con Internxt destacan la gestión y seguridad efectiva de los datos.",
+    "cards": [
+      {
+        "title": "Sin tarifas de entrada y salida",
+        "description": "El almacenamiento de objetos en la nube con Internxt, tus datos están 100% protegidos y seguros, y gestionados eficazmente en nuestro sistema. Cero tarifas de entrada y salida: Las tarifas de entrada y salida cero eliminan los costes de transferencia de datos hacia o desde el almacenamiento, lo que permite realizar presupuestos predecibles y ahorrar costes. Este beneficio es crucial para las empresas con movimientos frecuentes de datos u operaciones de datos a gran escala."
+      },
+      {
+        "title": "Costo por GB",
+        "description": "Con nuestro modelo de pago por uso, solo pagas por el almacenamiento que realmente utilizas. El almacenamiento de objetos está diseñado para manejar grandes volúmenes de datos no estructurados, lo cual generalmente es menos costoso por GB en comparación con datos estructurados, que requieren una gestión más compleja."
+      },
+      {
+        "title": "Durabilidad y disponibilidad",
+        "description": "Permitimos el almacenamiento de datos redundante que replica y distribuye datos en múltiples servidores europeos. Los datos están protegidos contra pérdida o corrupción con tecnología que garantiza el 99,999999999% (11 9s) de durabilidad de los datos para cada objeto."
+      },
+      {
+        "title": "Seguridad",
+        "description": "Con nuestro almacenamiento de objetos en la nube, utilizamos múltiples medidas de seguridad para proteger tus datos. Tus datos están cifrados en tránsito y en reposo. Admitimos el protocolo HTTPS y el cifrado del lado del servidor con claves de cifrado proporcionadas por el cliente (SSE-C)."
+      },
+      {
+        "title": "Servicio de almacenamiento simple",
+        "description": "Internxt proporciona almacenamiento de objetos utilizando el protocolo S3 para simplificar y gestionar los flujos de trabajo de datos, garantizando una alta disponibilidad y durabilidad de los datos con el enfoque de seguridad adicional que prioriza Internxt."
+      },
+      {
+        "title": "Velocidad",
+        "description": "El almacenamiento de objetos ofrece una velocidad superior al permitir múltiples operaciones de lectura y escritura simultáneamente y utilizar metadatos enriquecidos para una recuperación de datos más rápida. Esto permite tiempos de acceso más rápidos y un manejo eficiente de grandes volúmenes de datos."
+      }
+    ],
+    "bannerText": {
+      "title": "Almacenamiento en la nube de objetos de Internxt",
+      "description": "Experimente una gestión de datos, velocidad y eficiencia superiores",
+      "cta": "Empieza ya"
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es el almacenamiento de objetos?",
+        "answer": [
+          "El almacenamiento de objetos almacena grandes cantidades de datos, como fotografías, vídeos y correos electrónicos, como objetos individuales con identificadores únicos. ",
+          "A diferencia del almacenamiento de archivos tradicional, que organiza los datos en un sistema de archivos jerárquico, el almacenamiento de objetos almacena datos como objetos en un espacio de direcciones plano, normalmente en una infraestructura de almacenamiento distribuida. ",
+          "Como resultado, el almacenamiento de objetos en la nube permite un escalamiento más fácil, un acceso más rápido a elementos individuales y costos potencialmente más bajos según tus necesidades de almacenamiento."
+        ]
+      },
+      {
+        "question": "¿Qué es el protocolo S3?",
+        "answer": [
+          "El protocolo S3, o protocolo de Servicio de almacenamiento simple, es un conjunto de reglas y estándares que definen cómo se accede, almacena y administra los datos dentro de Amazon S3, un popular servicio de almacenamiento en la nube proporcionado por Amazon Web Services (AWS)."
+        ]
+      },
+      {
+        "question": "¿Cuánto almacenamiento de objetos obtengo?",
+        "answer": [
+          "Con el almacenamiento de objetos en la nube de Internxt, puede escalar tu almacenamiento para satisfacer tus necesidades. Nuestros planes te cobran mensualmente por cada gigabyte por día que quieras utilizar. Puedes agregar o eliminar almacenamiento según tus necesidades."
+        ]
+      },
+      {
+        "question": "¿Puedo integrar el almacenamiento de objetos de Internxt con aplicaciones y servicios existentes?",
+        "answer": [
+          "Sí, el almacenamiento de objetos de Internxt es compatible con las API de AWS S3, lo que permite una integración perfecta con una amplia gama de aplicaciones, herramientas y servicios que admiten el protocolo S3.",
+          "El almacenamiento de objetos S3 permite a los usuarios cargar, recuperar y administrar objetos (archivos y datos) mediante una interfaz web sencilla y API. El protocolo garantiza la integridad de los datos, la seguridad a través de controles de acceso y la escalabilidad para adaptarse sin problemas a las diferentes necesidades de almacenamiento en servidores distribuidos."
+        ]
+      },
+      {
+        "question": "¿Internxt tiene un cargo de almacenamiento mensual?",
+        "answer": [
+          "Internxt tiene un cargo mínimo mensual asociado con una cuenta de pago mensual de 1TB. Si almacenas menos de 1 TB, por ejemplo, el mínimo de 4 KB, se te cobrará 1 TB de almacenamiento."
+        ]
+      },
+      {
+        "question": "¿Qué pasa si quiero almacenar archivos pequeños? (Menos de 4 KB)",
+        "answer": [
+          "Hay un cargo por tamaño mínimo de archivo de 4 KB. El almacenamiento de un archivo de 4 KB generará cargos equivalentes a los de un archivo de 1 TB. Esta política se asemeja a las políticas de cargo por capacidad mínima por objeto que se encuentran en algunos almacenamientos de AWS."
+        ]
+      },
+      {
+        "question": "¿Cuál es el costo de sobrescribir un archivo repetidamente sin versionarlo?",
+        "answer": [
+          "Por ejemplo, si cargas un archivo llamado 'archivo.pdf' y lo sobrescribes con una nueva versión sin cambiar el nombre del archivo ni utilizar el control de versiones al día siguiente, el archivo original pasará del almacenamiento activo al almacenamiento eliminado. ",
+          "Esto genera cargos por un día de almacenamiento activo y 29 u 89 días de almacenamiento eliminado, según la política de retención de almacenamiento mínimo de tu cuenta. Además, se aplicarán cargos por almacenar la nueva versión de 'file.pdf'"
+        ]
+      },
+      {
+        "question": "¿Cómo me comunico con soporte?",
+        "answer": [
+          "Si tienes alguna pregunta, inquietud o comentario, puedes comunicarte con nuestro equipo de atención al cliente a través del chat en vivo o enviando un correo electrónico a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "¿Qué pasa si quiero cancelar mi plan?",
+        "answer": [
+          "Si eliminas objetos del almacenamiento de objetos de Internxt antes de que hayan sido almacenados durante 90 días, aún se te cobrará como si esos objetos hubieran estado almacenados durante los 90 días completos.",
+          "Esta política garantiza un período de cargo mínimo para los datos almacenados, independientemente de cuánto tiempo estuvieran realmente almacenados los objetos antes de su eliminación.",
+          "Si deseas cancelar tu plan de almacenamiento de objetos, envíanos un correo electrónico a hello@internxt.com y procesaremos la cancelación de la suscripción."
+        ]
+      }
+    ]
+  }
+}

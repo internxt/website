@@ -1,9 +1,10 @@
 {
   "HeroSection": {
-    "label": "省75%",
+    "label": "省70%",
     "title": {
-      "line1": "安全的云存储。",
-      "blueText": "有保障。"
+      "line1": "获取最",
+      "blueText": "安全的",
+      "line2": " 云存储"
     },
     "subtitle": "用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Send, 和更多。",
     "cta": {
@@ -56,6 +57,25 @@
       "upTo": "最多：",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "安全的云存储。",
+        "blueText": "有保障。"
+      },
+      "description": {
+        "normal1": "",
+        "blue": "70% 折扣 ",
+        "normal2": "所有高级计划"
+      },
+      "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
+      "startFrom": {
+        "normal1": "起价 ",
+        "price": " 0.95",
+        "normal2": " /月"
+      },
+      "claimDeal": "获取优惠",
+      "guarantee": "30天退款保证"
+    },
     "youKnow": "你知道吗？"
   },
   "FeatureSectionV2": {
@@ -82,6 +102,35 @@
     ]
   },
   "tableSection": {
+    "planTitles": {
+      "individuals": "个人计划",
+      "homePage": "选择适合您的计划",
+      "lifetime": "终身计划",
+      "business": "商业计划",
+      "lifetimeCampaign": {
+        "blueText": "五折优惠",
+        "normalText": "我们的所有独家终身计划"
+      }
+    },
+    "lifetimeDescription": "购买一次，永远获得隐私和安全。",
+    "planDescription": "所有Internxt计划都有完整的功能，可以完全访问我们所有的隐私服务。所有形状和大小的安全。",
+    "businessDescription": "我们目前正在开发新的 Internxt 计划，专为保护您的业务、保护您的员工和确保您的利润而设计。",
+    "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",
+    "billingFrequency": {
+      "monthly": "月度",
+      "semiannually": "Semiannually",
+      "annually": "每年一次",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "商业"
+    },
+    "freePlanCard": {
+      "getStarted": "开始使用我们的免费计划",
+      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
+      "upTo": "最高1GB",
+      "freeForever": "永久免费",
+      "cta": "选择计划"
+    },
     "features": {
       "endToEnd": "端到端加密",
       "openSource": "开源且经过审核",

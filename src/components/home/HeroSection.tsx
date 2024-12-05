@@ -1,64 +1,58 @@
 import dynamic from 'next/dynamic';
-
-import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
-import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { TitleAndSignup } from './components/heroSection/TitleAndSignup';
-import { TitleAndSurvey } from './components/heroSection/TitleAndSurvey';
-import { ArrowCircleDown } from '@phosphor-icons/react';
+import { HomeText } from '@/assets/types/home';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
+import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 const Animation = dynamic(() => import('./components/Animation'));
+import Image from 'next/image';
+import Header from '../shared/Header';
 
 interface HeroSectionForHomeProps {
-  textContent: any;
+  textContent: HomeText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
 
-export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps) {
-  const mobileImage = getImage('/images/home/image_mobile.webp');
+export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const { dialogIsOpen } = useGlobalDialog();
+  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
+  const previewImg = getImage('/images/lifetime/file_item.webp');
+  const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
-  const blurBgImage = getImage('/images/home/header/bg.svg');
+  const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pt-24 pb-12 lg:mx-10 lg:pt-12 xl:mx-32">
-        <div
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex"
-          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
-        />
-
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch lg:py-10">
-          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div className="flex w-screen flex-shrink-0 flex-col items-center gap-5 px-5 pt-5 text-center sm:w-auto  sm:px-0 md:ml-2 lg:my-28 lg:ml-0 lg:items-start lg:text-left">
-            <div className="flex lg:hidden">
-              <Image
-                loading="eager"
-                src={mobileImage}
-                draggable="false"
-                quality={100}
-                width={600}
-                height={450}
-                alt="Laptop and phone with Internxt app"
-              />
-            </div>
-            <HomePageBannerForMobile />
-
-            {isHomePageV2 ? (
-              <TitleAndSurvey textContent={textContent.TitleAndSurvey} />
-            ) : (
-              <TitleAndSignup textContent={textContent} />
-            )}
+      <div className="relative flex h-full flex-col bg-white pt-16 xl:mx-32">
+        {/* Desktop version */}
+        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:py-10 ">
+          <div
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+          >
+            <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-
-          {/* Desktop animation/image */}
-          <Animation />
+          <div className="hidden h-[580px] w-full lg:flex">
+            <Animation previewImg={previewImg} />
+          </div>
         </div>
-        {isHomePageV2 ? (
-          <div className="flex flex-row justify-center gap-2 pt-10 lg:pt-0">
-            <ArrowCircleDown size={32} className="animate-bounce text-primary" />
-            <p className="z-50 font-medium text-gray-80">{textContent.youKnow}</p>
-          </div>
-        ) : undefined}
+        {/* Mobile version */}
+        <div className="flex flex-col items-center px-4 py-5 lg:hidden">
+          <Header maxWidth="max-w-max" className="pb-8 text-center text-gray-100">
+            <span>{textContent.title.line1}</span>
+            <br />
+            <span className="text-primary">{textContent.title.blueText}</span>
+            <br />
+            <span>{textContent.title.line2}</span>
+          </Header>
+
+          <Image
+            src={getImage('/images/lifetime/image_mobile.webp')}
+            alt={'Internxt Header Image'}
+            width={641}
+            height={401}
+          />
+        </div>
       </div>
     </section>
   );

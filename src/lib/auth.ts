@@ -1,9 +1,15 @@
+import axios from 'axios';
+import { PromoCodeProps } from './types';
+import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-checkout/components/InputsComponent';
+
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
 const AUTH_FLOW_URL = 'https://drive.internxt.com';
+const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
   if (view === 'login') {
+    //
   } else if (view === 'signup') {
     window.top?.postMessage({ action: 'openDialogSignup' }, window.location.origin);
   }
@@ -16,6 +22,33 @@ export function checkSession(): void {
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'check_session' }, window.location.origin);
   }
+}
+
+export async function getCaptchaToken(): Promise<string> {
+  const token = await window.grecaptcha.execute(process.env.NEXT_PUBLIC_RECAPTCHA_V3 as string, {
+    action: 'ActivationRequest',
+  });
+
+  return token;
+}
+
+export async function objectStorageActivationAccount(email: string, password: string, captchaToken?: string) {
+  const isValidPassword = PASSWORD_REGEX.test(password);
+
+  if (!isValidPassword) throw new Error('Invalid password');
+
+  return axios.post(
+    `${OBJECT_STORAGE_USER_ACTIVATION_URL}/users/activation`,
+    {
+      email,
+      password,
+    },
+    {
+      headers: {
+        recaptcha: captchaToken,
+      },
+    },
+  );
 }
 
 /**
@@ -212,46 +245,49 @@ export function toggleAuthMethod(view: 'login' | 'signup' | 'recover'): void {
 
 type PaymentCheckoutConfig = {
   planId: string;
-  couponCode?: string;
+  promoCodeId?: PromoCodeProps['codeId'];
+  planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
   currency?: string;
 };
-export function checkout({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
+    const pathname = '/checkout';
+
     planId && params.set('planId', planId);
-    couponCode && params.set('couponCode', couponCode);
+    promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
     currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    mode && params.set('mode', mode ? mode : 'subscription');
 
-    const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
-      enableAutoSubmit: false,
-      skipSignupIfLoggedIn: true,
-    });
-
-    window.location.href = checkoutUrl;
+    window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
   }
 }
 
-export function checkoutForPcComponentes({ planId, couponCode, mode, currency }: PaymentCheckoutConfig): void {
+export function checkoutForPcComponentes({
+  planId,
+  promoCodeId,
+  planType,
+  mode,
+  currency,
+}: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
-    planId && params.set('planId', planId);
-    couponCode && params.set('couponCode', couponCode);
-    currency && params.set('currency', currency);
-    params.set('mode', mode ? mode : 'subscription');
+    const pathname = '/checkout';
 
-    const checkoutUrl = getAuthFlowCreateUserURL({
-      redirectURL: AUTH_FLOW_URL + `/checkout-plan?${params.toString()}`,
-      enableAutoSubmit: false,
-      skipSignupIfLoggedIn: true,
-    });
+    planId && params.set('planId', planId);
+    promoCodeId && params.set('couponCode', promoCodeId);
+    planType && params.set('planType', planType);
+    currency && params.set('currency', currency);
+    mode && params.set('mode', mode ? mode : 'subscription');
+
+    const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
     window.open(checkoutUrl, '_parent', 'noopener noreferrer');
   }

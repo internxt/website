@@ -1,4 +1,5 @@
 import ProductCard from '@/components/shared/ProductCard';
+import { getImage } from '@/lib/getImage';
 
 const InxtAppsSection = ({ textContent, lang }) => {
   return (
@@ -15,7 +16,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
         <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
           {/* Internxt Drive */}
           <ProductCard
-            imageUrl={'/images/privacy/Internxt-Drive.webp'}
+            imageUrl={getImage('/images/privacy/Internxt-Drive.webp')}
             animationDirection={'right'}
             redirect={'/drive'}
             lang={lang}
@@ -24,7 +25,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
 
           {/* Internxt Send */}
           <ProductCard
-            imageUrl={'/images/privacy/Share-by-email.webp'}
+            imageUrl={getImage('/images/privacy/Share-by-email.webp')}
             animationDirection={'left'}
             redirect={'https://send.internxt.com'}
             lang={lang}

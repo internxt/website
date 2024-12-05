@@ -1,4 +1,4 @@
-export const AppleLogo = ({ width, height }) => (
+export const AppleLogo = ({ width, height }): JSX.Element => (
   <div className="mb-0.5 flex">
     <svg width={width} height={height} viewBox="0 0 27 32" fill="black" xmlns="http://www.w3.org/2000/svg">
       <path

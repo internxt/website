@@ -1,9 +1,6 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "Comparaison de la sécurité",
-      "line2": "du stockage en nuage"
-    },
+    "title": "Comparaison de la sécurité du stockage en nuage",
     "description": "Comparez toutes les options pour choisir la solution de stockage en nuage la plus sûre.",
     "cta": "Obtenez 1GB gratuits",
     "noCredirCardNeeded": "Pas de carte de crédit requise",

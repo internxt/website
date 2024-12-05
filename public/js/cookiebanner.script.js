@@ -1,4 +1,4 @@
-'use strict;';
+'use strict';
 
 var headerScripts = [
   {
@@ -55,12 +55,14 @@ function _unsupportedIterableToArray(e, c) {
   if (e) {
     if ('string' == typeof e) return _arrayLikeToArray(e, c);
     var i = Object.prototype.toString.call(e).slice(8, -1);
-    return 'Object' === i && e.constructor && (i = e.constructor.name),
-    'Map' === i || 'Set' === i
-      ? Array.from(e)
-      : 'Arguments' === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
-      ? _arrayLikeToArray(e, c)
-      : void 0;
+    return (
+      'Object' === i && e.constructor && (i = e.constructor.name),
+      'Map' === i || 'Set' === i
+        ? Array.from(e)
+        : 'Arguments' === i || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(i)
+        ? _arrayLikeToArray(e, c)
+        : void 0
+    );
   }
 }
 function _arrayLikeToArray(e, c) {
@@ -225,15 +227,17 @@ var injectScripts = function () {
         .concat(c)
         .concat(
           Object.keys(i).reduce(function (e, c) {
-            return e +
-            ';'
-              .concat(
-                c.replace(/([A-Z])/g, function (e) {
-                  return '-' + e.toLowerCase();
-                }),
-                '=',
-              )
-              .concat(i[c]);
+            return (
+              e +
+              ';'
+                .concat(
+                  c.replace(/([A-Z])/g, function (e) {
+                    return '-' + e.toLowerCase();
+                  }),
+                  '=',
+                )
+                .concat(i[c])
+            );
           }, ''),
         );
     },

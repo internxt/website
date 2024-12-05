@@ -3,7 +3,7 @@
     "title": "Get a lifetime Internxt plan!",
     "description": "Secure all your files and memories forever with a single, one-time payment.",
     "maintenance": "",
-    "cta1": "Get 70% off",
+    "cta1": "Get ${{percent}}% off",
     "cta2": "Browse lifetime deals",
     "celebration": {
       "canada": {
@@ -14,6 +14,16 @@
       "usa": {
         "title": "Celebrate today for a lifetime of privacy",
         "description": "Secure your files forever with your 4th of July discount",
+        "cta1": "Get 80% OFF"
+      },
+      "singapore": {
+        "title": "Celebrate today for a lifetime of privacy",
+        "description": "Secure your files forever with your Singapore National Day discount.",
+        "cta1": "Get 83% OFF"
+      },
+      "brazil": {
+        "title": "Celebrate today for a lifetime of privacy",
+        "description": "Secure your files forever with your Brazil National Day discount.",
         "cta1": "Get 80% OFF"
       }
     }

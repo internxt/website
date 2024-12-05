@@ -32,6 +32,7 @@ export enum GlobalDialog {
   BottomBanner = 'BottomBanner',
   FreeSpaceCardBanner = 'FreeSpaceCardBanner',
   BeforeYouGoBanner = 'BeforeYouGoBanner',
+  S3Banner = 'S3Banner',
 }
 export const GlobalUIManager: React.FC<
   React.PropsWithChildren<{ initialDialogs: GlobalUIManagerContextShape['dialogs'] }>

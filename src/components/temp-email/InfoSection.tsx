@@ -1,6 +1,8 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Bug, Detective, EyeSlash, Gift, Tray, UserPlus } from '@phosphor-icons/react';
+import { getImage } from '@/lib/getImage';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 export const InfoSection = ({ textContent, bannerText, lang }) => {
   const infoCards = (lang) => {
@@ -91,7 +93,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
 
             <div className="flex">
               <Image
-                src="/images/temp-email/cta_general_10_storage_en.webp"
+                src={getImage('/images/temp-email/cta_general_10_storage_en.webp')}
                 alt="Switch to privacy"
                 width={895}
                 height={355}
@@ -99,7 +101,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
                 quality={100}
                 className="cursor-pointer"
                 onClick={() => {
-                  window.open('https://drive.internxt.com/new', '_blank', 'noopener noreferrer');
+                  window.open(SIGNUP_DRIVE_WEB, '_blank', 'noopener noreferrer');
                 }}
               />
             </div>

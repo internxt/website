@@ -1,0 +1,155 @@
+{
+  "HeroSection": {
+    "title": "Totale Sicherheit und Privatsphäre für Ihre Familie",
+    "subtitle": "Schützen Sie die Online-Privatsphäre Ihrer Familie mit den Internxt Familienplänen.",
+    "description": "Erhalten Sie bis zu 2TB verschlüsselten Cloud-Speicher für jedes Familienmitglied, um sicherzustellen, dass die Daten aller geschützt und leicht zugänglich sind.",
+    "cta": "Internxt für die Familie holen"
+  },
+  "ProtectYourFamilySection": {
+    "title": "Schützen Sie die Online-Privatsphäre Ihrer Familie mit Internxt Cloud-Speicher",
+    "description": "Internxt bietet verschlüsselten Cloud-Speicher für die ganze Familie zum Speichern und Teilen von Dateien, Fotos und Videos – alles verwaltet von einer sicheren Plattform."
+  },
+  "PriceTable": {
+    "planTitles": {
+      "business": "Familienpläne"
+    },
+    "businessDescription2": "Verwalten, teilen und schützen Sie Ihre Familienakten, Dokumente und mehr mit unserem sicheren, verschlüsselten Cloud-Speicher.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "individual": "Individuell",
+      "lifetime": "Lebenslang",
+      "business": "Geschäftlich"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende verschlüsselt",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung"
+    }
+  },
+  "WhatMakesInternxtPerfectSection": {
+    "title": "Was macht Internxt perfekt für Familien?",
+    "description": "Die Familien-Cloud-Speicherpläne von Internxt bieten einen sicheren Raum mit Zero-Access und Ende-zu-Ende-Verschlüsselung, um unbefugten Zugriff zu verhindern und die Privatsphäre Ihrer Familie zu garantieren.",
+    "features": [
+      {
+        "title": "Familienmanagement",
+        "description": "Internxt ermöglicht es dem Kontomanager, Mitglieder hinzuzufügen, Speicherplatz anzupassen und die Abrechnung zu verwalten, damit Familien organisiert bleiben. Mitglieder erhalten ihren eigenen Bereich und können leicht zwischen ihrem Familien-Cloud und persönlichen Konten wechseln."
+      },
+      {
+        "title": "Familiendateien sicher teilen",
+        "description": "Internxt ermöglicht es Familienmitgliedern, leicht zusammenzuarbeiten, während Ihre eigenen sensiblen Informationen sicher bleiben. Mit Funktionen zum Passwortschutz und Zugriffsbeschränkungen können Sie sicherstellen, dass wichtige Familiendaten sicher und nur für Vertrauenspersonen zugänglich sind."
+      },
+      {
+        "title": "Sitzungen überwachen",
+        "description": "Erhalten Sie einen detaillierten Überblick über die Sitzungen und sehen Sie Echtzeit-Anmeldungenachrichten und detaillierte Überwachungen von Remote-Sitzungen der Familienmitglieder, Betriebssysteme, IP, Standort und letzte aktive Zeit). Diese hohe Sicherheitsstufe erkennt unbefugten Zugriff und schützt die sensiblen Daten Ihrer Familie."
+      },
+      {
+        "title": "Flexible Speicherzuweisung",
+        "description": "Mit einem Familien-Cloud-Speicherplan können Sie Benutzer leicht hinzufügen und den Speicher bei Bedarf erweitern, wodurch Kosten effizient, skalierbar und optimale Ressourcennutzung sichergestellt werden. Jedes Familienmitglied erhält den benötigten Platz, und die Daten Ihrer Familie bleiben organisiert und leicht zugänglich."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Treten Sie dem sichersten Cloud-Plan für Ihre Familie bei",
+    "description": "Schützen und sichern Sie das, was am wichtigsten ist, mit Internxt",
+    "cta": "Plan wählen"
+  },
+  "WhyChooseInternxt": {
+    "title": "Warum Internxt wählen?",
+    "description": "Der Familien-Cloud-Speicher von Internxt bietet eine einfache Lösung, die jeder unabhängig von technischen Kenntnissen verwenden kann. Mit leistungsfähiger, aber einfacher verschlüsselter Speicherung kann Ihre Familie wichtige Dateien sicher verwalten und darauf zugreifen.",
+    "cards": [
+      {
+        "title": "Unabhängig verifiziert",
+        "description": "Internxt wurde unabhängig geprüft und von Securitum, Europas führendem Unternehmen für Penetrationstests, verifiziert, um sicherzustellen, dass Ihre Familiendateien vor Hackern geschützt sind. Als GDPR-konformes Unternehmen befolgen wir auch strenge Gesetze, um die Daten Ihrer Familie privat zu halten."
+      },
+      {
+        "title": "Kein Zugriff, maximale Verschlüsselung",
+        "description": "Die Ende-zu-Ende-Verschlüsselung sichert Ihre Dateien, indem alles auf Ihrem Gerät verschlüsselt wird. Niemand, nicht einmal Internxt, kann Ihre Dateien einsehen. Im unwahrscheinlichen Fall eines Datenverstoßes können Hacker keine Daten Ihrer Familie entschlüsseln und stehlen."
+      },
+      {
+        "title": "Sie kontrollieren Ihre Daten",
+        "description": "Im Gegensatz zu Google Drive, Dropbox und OneDrive hat Internxt keine Tracker und gibt niemals Daten an Dritte weiter. Ihre Familiendaten bleiben privat und geschützt mit den maximal verfügbaren Sicherheitsmaßnahmen."
+      },
+      {
+        "title": "100% transparent und sicher",
+        "description": "Alle unsere Produkte sind mit Open Source erstellt. Der Code, den wir zum Schutz von Daten verwenden, steht jedem zur Überprüfung zur Verfügung. Wir haben nichts zu verbergen außer Ihren Daten."
+      }
+    ]
+  },
+  "MaximumSecuritySection": {
+    "title": "Maximale Sicherheit und Verschlüsselung zum Schutz Ihrer Familie",
+    "description": "Internxt schützt die Dateien Ihrer Familie während der Freigabe und Speicherung und stellt sicher, dass sensible Dokumente und Familienerinnerungen sicher und privat bleiben.",
+    "cta": "Internxt für die Familie holen"
+  },
+  "TestimonialsSection": {
+    "title": "Was Experten über uns sagen",
+    "testimonials": [
+      {
+        "imageBrandName": "techradar",
+        "brand": "Techradar",
+        "review": "Internxt ist ein hervorragender Cloud-Speicherdienst aufgrund seiner erschwinglichen Pläne und intuitiven Schnittstelle. Es zeichnet sich durch Sicherheitsmaßnahmen und Engagement für Privatsphäre aus und ist daher eine Top-Wahl für Geschäftsanwender, die Sicherheit priorisieren."
+      },
+      {
+        "imageBrandName": "PCWorld",
+        "brand": "PCWorld",
+        "review": "Die intuitive Webzugriff, Dateisynchronisation und echten Backup-Dienste von Internxt sind beeindruckend. Dieser Online-Speicher- und Backup-Dienst ist einfach, deckt alle Basen ab, und die Lebenszeitpläne sind ein Schnäppchen."
+      },
+      {
+        "imageBrandName": "cloudwards",
+        "brand": "Cloudwards",
+        "review": "Internxt ist bekannt als eine sichere Cloud-Speicherlösung, die die Privatsphäre der Benutzer priorisiert. Wenn Privatsphäre und Sicherheit Ihre größten Anliegen bei Cloud-Speicher sind, ist Internxt definitiv eine Überlegung wert."
+      },
+      {
+        "imageBrandName": "bitcatcha",
+        "brand": "Bitcatcha",
+        "review": "Internxt geht weit darüber hinaus, um Sie zu schützen und gibt Ihnen die Kontrolle über Ihre Daten, daher ist es ausgezeichnet für Unternehmen. Empfohlen für jeden, der Privatsphäre schätzt."
+      },
+      {
+        "imageBrandName": "ffstoppers",
+        "brand": "Fstoppers",
+        "review": "Warum Internxt wählen? Ich würde sagen, es ist die schlanke und einfache Art, wie es funktioniert. Es ist einfach eine unkomplizierte 256-Bit verschlüsselte Cloud-Speicheroption, die jeder verwenden kann."
+      },
+      {
+        "imageBrandName": "guru99",
+        "brand": "Guru99",
+        "review": "Internxt Drive ist der beste sichere Cloud-Speicherdienst für Privatsphäre und Verschlüsselung. Es ermöglicht Ihnen und Ihrem Team, verschiedene Arten von Dateien mit vollständiger Sicherheit zu speichern."
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist Internxt für die Familie?",
+        "answer": [
+          "Ein Familien-Cloud-Speicherplan bietet eine gemeinsame Speicherlösung für mehrere Familienmitglieder. Es ermöglicht Ihnen, Dateien sicher über Geräte zu speichern, zu verwalten und zu teilen, mit bis zu 100 Benutzern."
+        ]
+      },
+      {
+        "question": "Ist Internxt der richtige Cloud-Speicher für meine Familie?",
+        "answer": [
+          "Internxt ist die perfekte Lösung für Familien, die eine sichere Cloud-Speicherlösung suchen, die persönliche und vertrauliche Informationen privat hält.",
+          "Unsere verschlüsselte Produktpalette beinhaltet die höchsten Sicherheitsstandards der Branche und ermöglicht es Familien, Dateien oder Ordner zu teilen, ohne sich um Datenlecks sorgen zu müssen."
+        ]
+      },
+      {
+        "question": "Wie funktioniert der Speicherplatz?",
+        "answer": [
+          "Je nachdem, welchen Plan Sie wählen, erhält jedes Mitglied, das Sie Ihrem Familienplan hinzufügen, entweder 1TB oder 2TB. Wenn Ihre Familienmitglieder die Einladung akzeptieren, werden sie Ihrem Familien-Cloud-Speicherkonto hinzugefügt und erhalten ihren persönlichen Cloud-Speicher zugeteilt."
+        ]
+      },
+      {
+        "question": "Können andere Mitglieder meines Internxt Familienplans meine Informationen sehen?",
+        "answer": [
+          "Jedes Mitglied Ihres Internxt Familienplans hat ein separates Konto mit 2TB Speicher. Alle ihre Dateien sind mit einem privaten Schlüssel verschlüsselt. Sie können die Dateien anderer Familienmitglieder nicht sehen, es sei denn, sie teilen den Zugang mit Ihnen."
+        ]
+      },
+      {
+        "question": "Welches Niveau an technischem Support bieten Sie an?",
+        "answer": [
+          "Wir haben ein engagiertes Kundensupport-Team, das alle Fragen oder Bedenken beantworten oder zusätzliche Informationen basierend auf Ihren Bedürfnissen bereitstellen kann. Sie können unser Hilfezentrum besuchen oder uns unter [hello@internxt.com](mailto:hello@internxt.com) kontaktieren, und unser Team wird Ihnen gerne weiterhelfen."
+        ]
+      }
+    ]
+  }
+}

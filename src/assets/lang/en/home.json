@@ -1,11 +1,12 @@
 {
   "HeroSection": {
-    "label": "Save 75%",
+    "label": "Save 70%",
     "title": {
-      "line1": "Secure cloud storage.",
-      "blueText": "Guaranteed."
+      "line1": "Get the ",
+      "blueText": "most secure",
+      "line2": " cloud storage"
     },
-    "subtitle": "Internxt is the best open-source cloud storage for securely storing, sharing, and accessing data across all devices.",
+    "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
       "title": "Get 1GB",
       "subtitle": "For free!"
@@ -44,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "75% cheaper"
+        "blueText": "70% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -55,6 +56,51 @@
       "howMuchYouNeed": "How much online storage do you need?",
       "upTo": "Up to: ",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "Secure cloud storage.",
+        "blueText": "Guaranteed."
+      },
+      "description": {
+        "normal1": "",
+        "blue": "Get 70% off ",
+        "normal2": "all premium plans"
+      },
+      "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
+      "startFrom": {
+        "normal1": "Start from ",
+        "price": " 0.95",
+        "normal2": " /month"
+      },
+      "claimDeal": "Claim deal",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "TitleAndOnePlanV2": {
+      "title": {
+        "normal1": "Get the ",
+        "blue1": "most secure ",
+        "normal2": "cloud storage, now with ",
+        "blue2": "85% OFF "
+      },
+      "description": {
+        "normal1": "Get the ",
+        "blue1": "most secure ",
+        "normal2": "cloud storage, now with ",
+        "blue2": "8% OFF "
+      },
+      "features": [
+        "Zero-knowledge military-grade encryption",
+        "Maximum privacy: only you can access your files",
+        "Premium customer support for seamless transition"
+      ],
+      "startFrom": {
+        "normal1": "Start from ",
+        "price": " 0.95",
+        "normal2": " /month"
+      },
+      "claimDeal": "Reveal limited-time offer",
+      "guarantee": "No. 1 Cloud in 2024 by "
     },
     "youKnow": "Did you know?"
   },
@@ -82,6 +128,34 @@
     ]
   },
   "tableSection": {
+    "planTitles": {
+      "individuals": "Individual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Get started with our free plan",
+      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
+      "upTo": "1GB",
+      "freeForever": "Free forever",
+      "cta": "Select plan"
+    },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
@@ -90,14 +164,14 @@
   },
   "ChooseStorageSizeSection": {
     "title": "Data leaks can lead to job loss, legal troubles, and blackmailing",
-    "description": "Our cloud storage keeps your files safe, even if your device gets stolen OR hacked.",
+    "description": "Our cloud storage keeps your files safe, even if your device gets stolen or hacked.",
     "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
     "cta": "Choose storage size"
   },
   "FirstFeaturesSection": {
     "title": "Why choose Internxt?",
     "subtitle": "Internxt puts you back in control of your data with zero-knowledge, military-grade encryption. ",
-    "description": "We use open-source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
+    "description": "We use open source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
     "cta": "Choose storage"
   },
   "InfoSection": {
@@ -224,8 +298,7 @@
       {
         "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Bancontact.",
-          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
         ]
       },
       {
@@ -300,6 +373,6 @@
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."
     },
-    "cta1": "Get started"
+    "cta1": "Get Internxt"
   }
 }

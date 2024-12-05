@@ -1,5 +1,7 @@
-import axios from 'axios';
+import Mailjs from '@cemalgnlts/mailjs';
+
 import { MessageObjProps, UserProps } from '../types/types';
+import rateLimitClientMiddleware from '@/components/utils/rate-limit';
 
 export const EMAIL_STORAGE_KEY = 'temp-mail-user-data';
 export const SETUP_TIME_STORAGE_KEY = 'setupTime';
@@ -10,28 +12,77 @@ export const SELECTED_MESSAGE = 'selectedMessage';
 export const TIME_NOW = new Date().getTime();
 export const MAX_HOURS_BEFORE_EXPIRE_EMAIL = 5 * 60 * 60 * 1000;
 
+const mailjs = new Mailjs();
+
+// const CONVERTER_URL = process.env.NEXT_PUBLIC_FILE_CONVERTER_API;
+const CONVERTER_URL =
+  process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_FILE_CONVERTER_API : 'http://localhost:3000';
+
 const fetchNewEmail = async (): Promise<UserProps> => {
-  const email = await axios.get(`${window.origin}/api/temp-mail/create-email`);
+  return rateLimitClientMiddleware(
+    'create-email-limiter',
+    async () => {
+      const account = await mailjs.createOneAccount();
 
-  const { data: userInfo } = email;
+      const address = account.data.username;
+      const password = account.data.password;
 
-  return userInfo;
+      const emailObj = {
+        address,
+        token: password,
+      };
+      return emailObj;
+    },
+    4,
+  );
 };
 
 const fetchInbox = async (email: string, token: string) => {
-  const inbox = await axios.get(`${window.origin}/api/temp-mail/get-inbox?email=${email}&token=${token}`);
+  return rateLimitClientMiddleware('fetch-inbox-limiter', async () => {
+    await mailjs.login(email, token);
 
-  const { data } = inbox;
+    const messages = await mailjs.getMessages();
 
-  return data;
+    const mails = messages.data
+      ? messages.data.map((mail) => {
+          return {
+            body: mail.intro,
+            date: mail.createdAt,
+            from: mail.from.address,
+            to: mail.to.address,
+            html: mail.intro,
+            subject: mail.subject,
+            id: mail.id,
+            seen: mail.seen,
+          };
+        })
+      : [];
+
+    return mails;
+  });
 };
 
 const getMessageData = async (email: string, token: string, messageId: string): Promise<MessageObjProps> => {
-  const messageData = await axios.get(
-    `${window.origin}/api/temp-mail/get-message?email=${email}&token=${token}&messageId=${messageId}`,
-  );
+  return rateLimitClientMiddleware('get-message-limiter', async () => {
+    await mailjs.login(email, token);
 
-  return messageData.data;
+    const messageData = await mailjs.getMessage(messageId);
+
+    const selectedMessage = messageData.data;
+
+    const messageObj = {
+      body: selectedMessage.intro,
+      date: selectedMessage.createdAt,
+      from: selectedMessage.from.address,
+      to: selectedMessage.to.address,
+      html: selectedMessage.html.join(''),
+      subject: selectedMessage.subject,
+      id: selectedMessage.id,
+      seen: selectedMessage.seen,
+    };
+
+    return messageObj;
+  });
 };
 
 const fetchAndFormatInbox = async (email: string, userToken: string): Promise<MessageObjProps[] | undefined> => {

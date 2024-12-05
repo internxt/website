@@ -12,16 +12,30 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
-import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
+import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
   '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
 ];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = ['/affiliates/[filename]', '/cloudwards'];
+const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
+  '/affiliates/[filename]',
+  '/cloudwards',
+  '/lifetime/celebration/[filename]',
+  '/lifetime/security82',
+  '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
+  '/cloud-object-storage',
+  '/cloud-object-storage/checkout',
+  '/',
+  '/pricing',
+  '/family',
+  '/business',
+];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -59,7 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
@@ -67,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
@@ -81,17 +95,22 @@ function MyApp({ Component, pageProps }: AppProps) {
             key: GlobalDialog.BeforeYouGoBanner,
             isOpen: false,
           },
+          {
+            key: GlobalDialog.S3Banner,
+            isOpen: false,
+          },
         ]}
       >
         <>
-          <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>
               <Script
+                defer
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
               />
               <Script
+                defer
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -111,11 +130,17 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
-          {shouldShowBanner ? <BottomBanner /> : undefined}
-          {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <FeaturesBanner />
+              {/* <S3Banner /> */}
+            </>
+          ) : undefined}
+          {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
-
         <FreeCardPromoBanner />
+
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

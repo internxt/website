@@ -2,8 +2,7 @@ import Script from 'next/script';
 
 import TableSection from '@/components/comparison/TableSection';
 import FeatureSection from '@/components/comparison/FeatureSection';
-import InfoSection from '@/components/home/InfoSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -15,11 +14,36 @@ import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
+import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import InfoSection from '@/components/shared/sections/InfoSection';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');
+
+  const cardsData = [
+    {
+      icon: ShieldCheck,
+      title: langJson.InfoSection.cards[0].title,
+      description: langJson.InfoSection.cards[0].description,
+    },
+    {
+      icon: LockKey,
+      title: langJson.InfoSection.cards[1].title,
+      description: langJson.InfoSection.cards[1].description,
+    },
+    {
+      icon: Eye,
+      title: langJson.InfoSection.cards[2].title,
+      description: langJson.InfoSection.cards[2].description,
+    },
+    {
+      icon: Fingerprint,
+      title: langJson.InfoSection.cards[3].title,
+      description: langJson.InfoSection.cards[3].description,
+    },
+  ];
 
   return (
     <>
@@ -45,7 +69,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
 
         <FeatureSection textContent={langJson.FeatureSection} />
 
-        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="privacy" />
+        <InfoSection textContent={langJson.InfoSection} lang={lang} redirect="/privacy" cards={cardsData} />
 
         <ThirdFeaturesSection textContent={langJson.ThirdFeaturesSection} />
 

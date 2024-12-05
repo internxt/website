@@ -3,43 +3,36 @@ import Image from 'next/image';
 import { Alarm } from '@phosphor-icons/react';
 
 import Countdown from '@/components/components/Countdown';
-import { Interval } from '@/components/services/stripe.service';
+import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import { getImage } from '@/lib/getImage';
 import { CardsType } from '@/pages/affiliates/[filename]';
 import { PriceCardsForAffiliatesPartners } from './PriceCardsForAffiliatesParnters';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
   cardsType: CardsType | undefined;
   pathname: string;
-  couponName: CouponType;
-}
-
-interface ActivePlan {
-  currency: string;
-  price: string;
-  priceId: string;
-  storage: string;
+  couponName: PromoCodeName;
 }
 
 export const HeroSectionForPartner = ({ textContent, cardsType, pathname, couponName }: HeroSectionForPartnerProps) => {
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<string>('5TB');
-  const [activeProduct, setActiveProduct] = useState<ActivePlan>();
+  const [activeProduct, setActiveProduct] = useState<TransformedProduct>();
   const isOnlyOnePlan = cardsType === 'one';
 
   const { products, coupon, loadingCards, currency, currencyValue } = usePricing({
     couponCode: couponName,
   });
 
-  const lifetimePlans = products?.individuals?.[Interval.Lifetime];
+  const lifetimePlans = products?.individuals[Interval.Lifetime];
 
   useEffect(() => {
     if (!loadingCards && lifetimePlans && lifetimePlans.length > 0) {
-      const initialProduct = lifetimePlans.find((plan: ActivePlan) => plan.storage === '5TB');
+      const initialProduct = lifetimePlans.find((plan) => plan.storage === '5TB');
       if (initialProduct) {
         setActiveProduct(initialProduct);
         setActiveSwitchPlan('5TB');
@@ -67,14 +60,16 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               <Alarm size={32} className=" text-white" />
               <Countdown textColor={'white'} />
             </div>
-            <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-              <Header>{textContent[cardsType!].title}</Header>
-              {textContent[cardsType!].description.map((text, index) => (
-                <p key={index} className="hidden text-2xl font-semibold text-white md:flex">
-                  {text}
-                </p>
-              ))}
-            </div>
+            {cardsType && (
+              <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
+                <Header>{textContent[cardsType].title}</Header>
+                {textContent[cardsType].description.map((text) => (
+                  <p key={text} className="hidden text-2xl font-semibold text-white md:flex">
+                    {text}
+                  </p>
+                ))}
+              </div>
+            )}
           </div>
           <div className={`hidden h-full flex-col gap-3 lg:flex ${cardsType === 'all' && 'lg:min-h-[650px]'}`}>
             {isOnlyOnePlan || (!lifetimePlans && loadingCards) ? undefined : (
@@ -83,21 +78,23 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                   <p>{textContent.all.choosePlanLabel}</p>
                 </div>
                 <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
-                  {lifetimePlans.map((product: ActivePlan) => (
-                    <button
-                      key={product.storage}
-                      type="button"
-                      onClick={() => {
-                        setActiveSwitchPlan(product.storage);
-                        setActiveProduct(product);
-                      }}
-                      className={`w-full rounded-lg py-0.5 px-6 font-semibold ${
-                        activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
-                      }`}
-                    >
-                      {product.storage}
-                    </button>
-                  ))}
+                  {lifetimePlans
+                    ? lifetimePlans.map((product) => (
+                        <button
+                          key={product.storage}
+                          type="button"
+                          onClick={() => {
+                            setActiveSwitchPlan(product.storage);
+                            setActiveProduct(product);
+                          }}
+                          className={`w-full rounded-lg px-6 py-0.5 font-semibold ${
+                            activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
+                          }`}
+                        >
+                          {product.storage}
+                        </button>
+                      ))
+                    : undefined}
                 </div>
               </div>
             )}
@@ -110,7 +107,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                   planId={activeProduct?.priceId}
                   popular={activeProduct?.storage === '5TB'}
                   price={Number(activeProduct?.price) * 0.2}
-                  priceBefore={activeProduct?.price.split('.')[0]}
+                  priceBefore={activeProduct?.price.toString().split('.')[0]}
                   storage={activeProduct.storage}
                 />
               ) : (
@@ -129,21 +126,23 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                 <p>{textContent.all.choosePlanLabel}</p>
               </div>
               <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
-                {lifetimePlans.map((product: ActivePlan) => (
-                  <button
-                    key={product.storage}
-                    type="button"
-                    onClick={() => {
-                      setActiveSwitchPlan(product.storage);
-                      setActiveProduct(product);
-                    }}
-                    className={`w-full rounded-lg py-0.5 px-6 font-semibold ${
-                      activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
-                    }`}
-                  >
-                    {product.storage}
-                  </button>
-                ))}
+                {lifetimePlans
+                  ? lifetimePlans.map((product) => (
+                      <button
+                        key={product.storage}
+                        type="button"
+                        onClick={() => {
+                          setActiveSwitchPlan(product.storage);
+                          setActiveProduct(product);
+                        }}
+                        className={`w-full rounded-lg px-6 py-0.5 font-semibold ${
+                          activeSwitchPlan === product.storage ? 'bg-green text-white shadow-sm' : 'text-gray-100'
+                        }`}
+                      >
+                        {product.storage}
+                      </button>
+                    ))
+                  : undefined}
               </div>
             </div>
           )}
@@ -155,7 +154,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
               planId={activeProduct?.priceId}
               popular={activeProduct?.storage === '5TB'}
               price={Number(activeProduct?.price) * 0.2}
-              priceBefore={activeProduct?.price.split('.')[0]}
+              priceBefore={activeProduct?.price.toString().split('.')[0]}
               storage={activeProduct.storage}
             />
           ) : (

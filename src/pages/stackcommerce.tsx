@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
@@ -11,27 +11,14 @@ import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { GetServerSidePropsContext } from 'next';
+import router from 'next/router';
 
-const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, deviceLang, navbarLang }) => {
+const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const year = moment().format('YYYY');
 
   const [openDialog, setOpenDialog] = useState(false);
-
-  useEffect(() => {
-    //Get the onclick event from the button and open the dialog. The button id is "redeemCode"
-    const TB2Button = document.getElementById('planButton2TB');
-    const TB5Button = document.getElementById('planButton5TB');
-    const TB10Button = document.getElementById('planButton10TB');
-    [TB2Button, TB5Button, TB10Button].forEach((button) =>
-      button?.addEventListener('click', () => {
-        console.log('CLICKED');
-        setOpenDialog(true);
-      }),
-    );
-  }, []);
 
   const onButtonClicked = () => {
     setOpenDialog(true);
@@ -46,12 +33,12 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
       {openDialog ? (
-        <div className={`fixed top-0 left-0 right-0 bottom-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
+        <div className={`fixed bottom-0 left-0 right-0 top-0 z-40 h-screen bg-black bg-opacity-50 px-5 lg:px-0`}>
           <div
-            className={`absolute top-1/2 left-1/2
-        z-20 flex w-max -translate-y-1/2 -translate-x-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
+            className={`absolute left-1/2 top-1/2
+        z-20 flex w-max -translate-x-1/2 -translate-y-1/2 transform flex-col rounded-2xl bg-white p-7 text-neutral-900`}
           >
-            <X className={`absolute top-5 right-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
+            <X className={`absolute right-5 top-5 cursor-pointer`} size={24} onClick={() => setOpenDialog(false)} />
             <SignUp textContent={langJson.Auth} provider="STACKCOMMERCE" />
           </div>
         </div>
@@ -59,7 +46,13 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection hideTimer={true} previewImg="/images/lifetime/file_item.webp" textContent={langJson.HeroSection} />
+      <HeroSection 
+        hideTimer={true} 
+        previewImg="/images/lifetime/file_item.webp" 
+        textContent={langJson.HeroSection} 
+        onRedirectButtonClicked={() => router.push('#payment')}
+      />
+      
 
       <PaymentSection
         textContent={langJson.PaymentSection}
@@ -79,9 +72,8 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, devic
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/en/techcult.json`);
@@ -93,7 +85,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       navbarLang,

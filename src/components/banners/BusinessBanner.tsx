@@ -21,6 +21,7 @@ const BusinessBanner = ({ textContent }) => {
         notificationService.openErrorToast('Something went wrong!');
       });
   };
+
   return (
     <section className="flex overflow-hidden bg-gradient-to-br from-blue-20 to-white">
       <div className="flex items-center justify-center lg:flex-row">

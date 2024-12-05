@@ -1,7 +1,7 @@
 {
   "mostPopular": "Più popolari",
   "mostPopularPlan": "Piano più popolare",
-  "save": "Risparmia fino a",
+  "save": "Risparmia ",
   "valentines": "Offerta speciale di San Valentino!",
   "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
   "planTitles": {
@@ -27,6 +27,14 @@
     "individual": "Individuale",
     "business": "Business"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
+  },
   "billingFrequencyLabel": {
     "lifetime": "Pagamento unico",
     "monthly": "Fatturato mensilmente",
@@ -39,7 +47,7 @@
     "semiannually": "/semestrale",
     "annually": "/annuale"
   },
-  "perUserSlash": "/user",
+  "perUserSlash": "Per utente/",
   "perUser": "Per utente",
   "users": "utenti",
   "freePlan": "Free",
@@ -88,41 +96,95 @@
       "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
       "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
     },
-    "200GB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "2TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "5TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ],
-    "10TB": [
-      "Condivisione crittografata di file e cartelle",
-      "Condivisione protetta da password",
-      "Accedi ai tuoi file da qualsiasi dispositivo",
-      "Carica file fino a 20 GB",
-      "Autenticazione a due fattori (2FA)",
-      "Supporto premium per i clienti",
-      "Garanzia di rimborso di 30 giorni"
-    ]
+    "halloweenFeatures": {
+      "title": "Gadget a tema Internxt:",
+      "200GB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "1TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "2TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "5TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "10TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "tooltip": "Acquista un piano a vita per avere la possibilità di vincere!"
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Fino a ",
+        "bold": "4 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "year": {
+        "normal": "Fino a ",
+        "bold": "3 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      },
+      "month": {
+        "normal": "Fino a ",
+        "bold": "2 volte più economico ",
+        "normal2": "rispetto ad altre alternative di cloud storage sicuro"
+      }
+    },
+    "individuals": {
+      "200GB": [
+        "200 GB di archiviazione crittografata",
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "2TB": [
+        "2TB di archiviazione crittografata",
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "5TB": [
+        "5TB di archiviazione crittografata",
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ],
+      "10TB": [
+        "10TB di archiviazione crittografata",
+        "Condivisione crittografata di file e cartelle",
+        "Condivisione protetta da password",
+        "Accedi ai tuoi file da qualsiasi dispositivo",
+        "Carica file fino a 20 GB",
+        "Autenticazione a due fattori (2FA)",
+        "Supporto premium per i clienti",
+        "Garanzia di rimborso di 30 giorni"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB di archiviazione/utente",
+        "Condivisione di file e cartelle crittografati",
+        "Creare e gestire utenti e team",
+        "A partire da 3 utenti e fino a 10",
+        "Conforme al GDPR",
+        "Caricare file fino a 5GB",
+        "Gestire la fatturazione e i pagamenti dell'account",
+        "Assistenza clienti premium"
+      ],
+      "2TB": [
+        "2TB di archiviazione/utente",
+        "Condivisione di file e cartelle crittografati",
+        "Creare e gestire utenti e team",
+        "A partire da 3 utenti e fino a 100",
+        "Conforme al GDPR",
+        "Caricare file fino a 20GB",
+        "Gestire la fatturazione e i pagamenti dell'account",
+        "Assistenza clienti premium"
+      ]
+    }
   }
 }

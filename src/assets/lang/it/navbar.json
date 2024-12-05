@@ -7,7 +7,8 @@
     "login": "Accedi",
     "getStarted": "Inizia",
     "chooseStorage": "Scegli lo storage",
-    "checkout": "Claim now!"
+    "checkout": "Claim now!",
+    "business": "Aziende"
   },
   "ourValues": {
     "privacy": "Privacy",
@@ -15,6 +16,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",

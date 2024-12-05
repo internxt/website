@@ -10,6 +10,11 @@
     "description": "Internxt Drive est une alternative privée et sécurisée à Google Drive, pCloud, Tresorit, ProtonDrive, Mega, IceDrive et MediaFire. Cryptage à connaissance zéro, distribué, stockage en nuage blockchain."
   },
   {
+    "id": "business",
+    "title": "Internxt — Stockage Cloud Privé et Crypté pour les Entreprises",
+    "description": "Prévenez la perte de données avec le stockage cloud crypté d'Internxt pour les entreprises—inscrivez-vous pour bénéficier de la protection des données cloud leader du secteur."
+  },
+  {
     "id": "free-user",
     "title": "Internxt — 75% de réduction sur tous les plans de stockage cloud sécurisé",
     "description": "Obtenez 75% de réduction sur n'importe quel plan Internxt pour garder vos fichiers privés et ne plus jamais vous soucier de manquer d'espace."
@@ -123,5 +128,20 @@
     "id": "cloud-storage-for-education",
     "title": "Cloud Storage Discount for Education | Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Stockage en nuage privé et sécurisé",
+    "description": "Campagne d'Halloween d'Internxt : 80 % de réduction sur tous nos plans annuels. Protégez vos fichiers pour la vie avec un seul paiement."
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: Ai-je été piraté ?",
+    "description": "Le Internxt Dark Web Monitor est un service 'ai-je été piraté' qui vérifie si votre email a été divulgué dans des violations de données en ligne."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Stockage d'Objets",
+    "description": "Internxt propose un stockage d'objets privé et abordable pour stocker des données en toute sécurité en utilisant le protocole S3 pour gérer efficacement vos besoins de stockage."
   }
 ]

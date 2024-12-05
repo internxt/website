@@ -5,8 +5,8 @@ import { CaretDown } from '@phosphor-icons/react';
 
 const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
   function linkTitles() {
-    let titles: string[] = [];
-    for (let key in textContent) {
+    const titles: string[] = [];
+    for (const key in textContent) {
       if (textContent.hasOwnProperty(key) && key.startsWith('title')) {
         titles.push(textContent[key]);
       }
@@ -37,7 +37,7 @@ const SelectSection = ({ textContent, itemSelected, setItemSelected }) => {
         <div className="flex flex-col">
           <Menu>
             <div className="mt-1 flex flex-col">
-              <Menu.Button className="focus-visible:border-indigo-500 focus-visible:ring-offset-orange-300 flex w-full cursor-default flex-row items-center justify-between rounded-lg py-2 px-5 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
+              <Menu.Button className="focus-visible:border-indigo-500 focus-visible:ring-offset-orange-300 flex w-full cursor-default flex-row items-center justify-between rounded-lg px-5 py-2 text-start focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 sm:text-sm">
                 <p>{itemSelected || linkTitles()[0]}</p>
                 <span>
                   <CaretDown size={24} className="pointer-events-none flex items-center" />

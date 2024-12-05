@@ -14,7 +14,7 @@ export const getServerSideProps = ({ res }) => {
     pricing: '1.0',
     drive: '1.0',
     'temporary-email': '0.8',
-    lifetime: '0.8',
+    'file-converter': '0.8',
     about: '0.6',
   };
 
@@ -30,46 +30,6 @@ export const getServerSideProps = ({ res }) => {
           (page) => `
             <url>
               <loc>${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}</loc>
-              <xhtml:link
-               rel="alternate"
-               hreflang="en"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-              <xhtml:link
-               rel="alternate"
-               hreflang="es"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-              <xhtml:link
-               rel="alternate"
-               hreflang="de"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-              <xhtml:link
-               rel="alternate"
-               hreflang="fr"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-              <xhtml:link
-               rel="alternate"
-               hreflang="it"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-               <xhtml:link
-               rel="alternate"
-               hreflang="ru"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-               <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
-              <xhtml:link
-               rel="alternate"
-               hreflang="zh-tw"
-               href=${page === 'index' ? `${baseUrl}/` : `${baseUrl}/${page}`}/>
-
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>${pages[page]}</priority>

@@ -7,12 +7,12 @@ import ExplanationSection from '@/components/converter-tool/ExplanationSection';
 import CtaSection from '@/components/converter-tool/CtaSection';
 import InfoSection from '@/components/converter-tool/InfoSection';
 import ConversionTableSection from '@/components/converter-tool/ConversionTableSection';
-import FaqSection from '@/components/shared/FaqSection';
+import FaqSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 

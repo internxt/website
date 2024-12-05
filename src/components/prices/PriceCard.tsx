@@ -1,5 +1,5 @@
-import { CouponType } from '@/lib/types';
-import { Fire, Star } from '@phosphor-icons/react';
+import { PromoCodeProps } from '@/lib/types';
+import { Coins, Fire } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
@@ -13,7 +13,7 @@ export interface PriceCardProps {
   cta: any[];
   popular?: boolean;
   lang: string;
-  coupon?: CouponType;
+  coupon?: PromoCodeProps;
   currency?: string;
   currencyValue?: string;
   isIframe?: boolean;
@@ -21,6 +21,7 @@ export interface PriceCardProps {
   isLifetimePage?: boolean;
   lifetimeMode?: LifetimeMode;
   onButtonClicked?: () => void;
+  label?: string;
 }
 
 const STORAGE_LEVELS = {
@@ -45,8 +46,9 @@ export default function PriceCard({
   isOffer,
   isLifetimePage,
   lifetimeMode,
+  label,
   onButtonClicked,
-}: Readonly<PriceCardProps>) {
+}: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
     month: 'monthly',
@@ -65,36 +67,32 @@ export default function PriceCard({
         checkoutForPcComponentes({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          planType: 'individual',
           currency: currencyValue ?? 'eur',
-          couponCode: coupon ?? undefined,
+          promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       } else {
         checkout({
           planId: cta[1],
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
+          planType: 'individual',
           currency: currencyValue ?? 'eur',
-          couponCode: coupon ?? undefined,
+          promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       }
     }
   }
 
-  const priceForSubscriptions = (product) => {
-    const priceWithDiscount = Number((product * 0.25).toFixed(2));
-    const priceString = priceWithDiscount.toString();
-
-    if (!priceString.includes('.')) {
-      return priceString + '.00';
+  const priceForSubscriptions = (price: string) => {
+    if (price.split('.')[1].includes('00')) {
+      return price.split('.')[0];
     }
 
-    if (priceString.split('.')[1].length === 1) {
-      return priceString + '0';
-    }
-
-    return priceString;
+    return price;
   };
 
-  const formattedPrice = isOffer && billingFrequency !== Interval.Lifetime ? priceForSubscriptions(price) : price;
+  const formattedPrice = isOffer ? priceForSubscriptions(price.toString()) : price;
+  const formattedPriceBefore = priceBefore;
 
   const getPlanStorage = (storage) => {
     if (isLifetimePage) {
@@ -109,9 +107,7 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${'border-primary ring-[1px]'} flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
@@ -122,7 +118,7 @@ export default function PriceCard({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{getPlanStorage(storage)}</p>
+            <p className="text-lg font-medium text-primary">{label ?? getPlanStorage(storage)}</p>
           </div>
         </div>
         <div
@@ -149,7 +145,7 @@ export default function PriceCard({
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">{priceBefore}</span>
+            <span className="price text-2xl font-medium">{formattedPriceBefore}</span>
           </p>
 
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
@@ -167,12 +163,27 @@ export default function PriceCard({
         >
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
+        {isOffer ? (
+          <div className="flex flex-row gap-2 text-green">
+            <Coins size={24} />
+            <p className="font-bold">
+              {contentText.save + ' '} {priceBefore && priceForSubscriptions(Number(priceBefore - price).toFixed(2))} €
+            </p>
+          </div>
+        ) : undefined}
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
-          <div className="flex w-full flex-col space-y-4 bg-gray-100 p-6">
-            <p className={`} font-bold text-yellow`}>{contentText.productFeatures.starWarsFeatures.title}</p>
-            {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
+          <>
+            <div className="flex w-full flex-col space-y-4 bg-green-dark p-6">
+              <p className={`text-center text-white`}>
+                {contentText.productFeatures.cheaperThan[billingFrequency as string].normal}{' '}
+                <span className="font-bold">
+                  {contentText.productFeatures.cheaperThan[billingFrequency as string].bold}
+                </span>
+                {contentText.productFeatures.cheaperThan[billingFrequency as string].normal2}
+              </p>
+              {/* {contentText.productFeatures.starWarsFeatures[storage].map((feature) => (
               <div
                 className={`${
                   popular && billingFrequency !== 'lifetime' ? 'last:hidden' : ''
@@ -182,15 +193,13 @@ export default function PriceCard({
                 <Star size={16} weight="fill" className="text-yellow" />
                 <span className="text-white">{feature}</span>
               </div>
-            ))}
-          </div>
+            ))} */}
+            </div>
+          </>
         ) : null}
         <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures[storage].map((feature) => (
-            <div
-              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
-              key={feature}
-            >
+          {contentText.productFeatures.individuals[storage].map((feature) => (
+            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
               <img
                 loading="lazy"
                 className="translate-y-px select-none"

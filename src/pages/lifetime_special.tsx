@@ -7,20 +7,10 @@ import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import moment from 'moment';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
-const LifetimeSpecial = ({
-  lang,
-  metatagsDescriptions,
-  langJson,
-  testimonialsJson,
-  footerLang,
-  deviceLang,
-  navbarLang,
-}) => {
+const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const year = moment().format('YYYY');
 
   return (
     <Layout
@@ -38,8 +28,7 @@ const LifetimeSpecial = ({
         hideTimer
         bgImage="/images/lifetime/celebration/normal-bg.png"
       />
-
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode="normal" />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
@@ -56,7 +45,6 @@ const LifetimeSpecial = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const deviceLang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/lifetime_special.json`);
@@ -69,7 +57,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      deviceLang,
       metatagsDescriptions,
       langJson,
       testimonialsJson,

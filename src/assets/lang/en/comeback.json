@@ -1,0 +1,176 @@
+{
+   "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+          "Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt does not (and cannot) store your password.",
+          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable 2FA?",
+        "answer": [
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "How do I create an Internxt account?",
+        "answer": [
+          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
+        ]
+      },
+      {
+        "question": "How can I cancel my subscription?",
+        "answer": [
+          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
+          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
+          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+        ]
+      }
+    ]
+  },
+  "FirstFeaturesSection": {
+    "title": "Why choose Internxt?",
+    "subtitle": "Internxt puts you back in control of your data with zero-knowledge, military-grade encryption. ",
+    "description": "We use open source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
+    "cta": "Choose storage"
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Hundreds of thousands are ditching iCloud, Google Drive, and Dropbox for ",
+      "blue": "the most secure cloud storage - Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      }
+    ]
+  },
+   "tableSection": {
+    "planTitles": {
+      "individuals": "Individual Plans",
+      "homePage": "Give Internxt another chance and see all the major improvements we’ve made",
+      "lifetime": "Lifetime Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription":
+    {
+      "planDescription":"We’ve worked nonstop to give you the Internxt you deserve since you left.",
+      "previousBlueText":"As a thanks for giving us another try, we’re giving you a",
+      "blueText":"special 90% comeback discount",
+      "postBlueText":"to give us another try."
+    } ,
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
+  },
+  "ChooseStorageSizeSection": {
+    "title": "Data leaks can lead to job loss, legal troubles, and blackmailing",
+    "description": "Our cloud storage keeps your files safe, even if your device gets stolen or hacked.",
+    "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
+    "cta": "Choose storage size"
+  },
+ 
+  "WhyComebackToInternxt": {
+    "title": "Why come back to Internxt?",
+    "title2":"New features, updates, and fixes",
+    "description": "Internxt Drive has had significant upgrades for all our Mac, Windows, and Linux apps. Now’s your perfect chance to try our new and improved product before your 90% discount expires. ",
+    "features": [
+      {
+        "title": "Updated, improved apps",
+        "description": "Windows, Mac, Linux, and Web updates have fixed several performance issues, providing you with the most stable, improved Internxt Drive to date. "
+      },
+      {
+        "title": "New features",
+        "description": "We have increased the upload limit to 40GB on the web app, and you can upload up to 3,000 files simultaneously for more efficient file management."
+      },
+      {
+        "title": "Advanced cloud tools",
+        "description": "WebDAV and Rclone support offers more ways to interact with your Internxt Drive account, offering you increased and maximum control of your cloud account."
+      },
+      {
+        "title": "A more private future",
+        "description": "As we continue to improve our product suite, now is also the perfect time to try our new services, such as Internxt VPN, family, business plans, or object storage plans."
+      }
+    ]
+  },
+  "HeroSection": {
+    "title": "Come back and see what’s new!",
+    "description": "Increased performance, same unmatched privacy",
+    "cta1": "Claim ${{percent}} OFF"
+    
+  },
+  "CtaSection":{
+    "title":"One more chance?",
+    "description":"Give us another try for 90% OFF!",
+    "description2":"All subscription and lifetime plans",
+    "cta":"Claim your deal"
+  }
+}

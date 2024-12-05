@@ -2,20 +2,20 @@ import { useState } from 'react';
 import { Switch, Transition } from '@headlessui/react';
 
 import Layout from '@/components/layout/Layout';
-import { SwitchButtonOptions } from '@/components/prices/PriceTable';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
-import { CouponType } from '@/lib/types';
+import { PromoCodeName } from '@/lib/types';
+import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 
-const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
+const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [activeSwitchPlan, setActiveSwitchPlan] = useState<SwitchButtonOptions>('Individuals');
   const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
   const { products, currency, currencyValue, loadingCards, coupon } = usePricing({
-    couponCode: CouponType.PcComponentesCoupon,
+    couponCode: PromoCodeName.PcComponentesCoupon,
   });
 
   const contentText = textContent;
@@ -42,7 +42,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <div className="flex flex-col space-y-10">
         <div className="flex flex-col items-center space-y-9">
-          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
           <div id="billingButtons" className="flex flex-row rounded-lg bg-cool-gray-10 p-0.5">
             <button
               type="button"
@@ -51,7 +51,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                 setBillingFrequency(Interval.Year);
                 setPageName(`Pricing Individuals ${billingFrequency}`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-semibold ${
+              className={`rounded-lg px-6 py-0.5 font-semibold ${
                 activeSwitchPlan === 'Individuals' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -64,7 +64,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
                 setBillingFrequency(Interval.Lifetime);
                 setPageName(`Pricing Individuals Lifetime`);
               }}
-              className={`rounded-lg py-0.5 px-6 font-semibold ${
+              className={`rounded-lg px-6 py-0.5 font-semibold ${
                 activeSwitchPlan === 'Lifetime' ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
               }`}
             >
@@ -109,7 +109,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
             </div>
           </div>
         </div>
-
         {/* Skeleton cards while fetching products data */}
         <Transition
           show={isIndividual && loadingCards}
@@ -124,7 +123,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
             <CardSkeleton />
           </div>
         </Transition>
-
         {/* Subscriptions cards */}
         <Transition
           show={isSubscription && !loadingCards}
@@ -132,7 +130,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center p-4">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-4">
             {products?.individuals?.[billingFrequency] &&
               products.individuals[billingFrequency].map((product: any) => (
                 <PriceCard
@@ -153,7 +151,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
               ))}
           </div>
         </Transition>
-
         {/* Lifetime cards */}
         <Transition
           show={isLifetime && !loadingCards}
@@ -161,7 +158,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-4">
             {products?.individuals?.[Interval.Lifetime] &&
               products.individuals[Interval.Lifetime].map((product: any) => {
                 return (
@@ -189,7 +186,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }) => {
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps() {
   const lang = 'es';
   const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/es/priceCard.json`);

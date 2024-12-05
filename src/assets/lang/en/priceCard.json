@@ -1,10 +1,10 @@
 {
   "mostPopular": "Most popular",
   "mostPopularPlan": "Most Popular Plan",
-  "save": "Save up to",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
+  "save": "Save ",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -17,13 +17,21 @@
   },
   "lifetimeDescription": "Buy once and get privacy and security forever.",
   "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
-  "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+  "businessDescription": "Ensure business data security with Internxt's encrypted cloud storage plans.",
   "billingFrequency": {
     "monthly": "Monthly",
     "annually": "Annually",
     "individual": "Individual",
     "lifetime": "Lifetime",
     "business": "Business"
+  },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
   },
   "billingFrequencyLabel": {
     "lifetime": "One-time payment",
@@ -37,7 +45,7 @@
     "semiannually": "/semiannually",
     "annually": "/annually"
   },
-  "perUserSlash": "/user",
+  "perUserSlash": "Per user/",
   "perUser": "Per user",
   "users": "users",
   "freePlan": "Free",
@@ -86,41 +94,95 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
-    "200GB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "2TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "5TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ],
-    "10TB": [
-      "Encrypted file and folder sharing",
-      "Password-protected file sharing",
-      "Access your files from any device",
-      "Upload files up to 20GB",
-      "Two-factor authentication (2FA)",
-      "Premium customer support",
-      "30-day money-back guarantee"
-    ]
+    "halloweenFeatures":{
+      "title": "Internxt themed goodies:",
+      "200GB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "2TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "5TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "10TB":  ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "tooltip":"Buy any lifetime plan for a chance to win!"
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Up to ",
+        "bold": "4x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "year": {
+        "normal": "Up to ",
+        "bold": "3x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "month": {
+        "normal": "Up to ",
+        "bold": "2x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      }
+    },
+    "individuals": {
+      "200GB": [
+        "200GB encrypted storage",
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "2TB": [
+        "2TB encrypted storage",
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "5TB": [
+        "5TB encrypted storage",
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ],
+      "10TB": [
+        "10TB encrypted storage",
+        "Encrypted file and folder sharing",
+        "Password-protected file sharing",
+        "Access your files from any device",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Premium customer support",
+        "30-day money-back guarantee"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB storage/user",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Starting at 3 users and up to 10",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Manage account billing & payments",
+        "Premium customer support"
+      ],
+      "2TB": [
+        "2TB storage/user",
+        "Encrypted file and folder sharing",
+        "Create and manage users & teams",
+        "Starting at 3 users and up to 100",
+        "Guaranteed GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "Manage account billing & payments",
+        "Premium customer support"
+      ]
+    }
   }
 }

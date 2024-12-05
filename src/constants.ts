@@ -24,12 +24,21 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/oystervpn',
   '/lifetime_special',
   '/pccomponentes-products',
+  '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
   '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
   '/affiliates/[filename]',
   '/cloudwards',
+  '/lifetime/security82',
+  '/cloud-object-storage',
+  '/cloud-object-storage/checkout',
+  '/affiliates',
+  '/comeback',
+  '/black-friday',
+  '/lifetime/celebration/singlesday',
+  '/elections',
 ];
 
 export const SNIGEL_BANNERS = {

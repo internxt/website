@@ -3,10 +3,10 @@
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/file-converter/main-state/HeroSection';
-import { ToolsSection } from '@/components/shared/ToolsSection';
+import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { FeaturesSection } from '@/components/file-converter/main-state/FeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
-import QASection from '@/components/shared/FaqSection';
+import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 
 const FileConverter = ({

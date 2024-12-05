@@ -45,9 +45,7 @@ const HeroSection = ({ textContent }) => {
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
-          window.rudderanalytics.track('File Scan Completed', {
-            infected: data.isInfected,
-          });
+
           setScanResult(data);
           setIsScanFinished(true);
         } else {
@@ -147,7 +145,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section
-      className="relative pt-32 pb-20"
+      className="relative pb-20 pt-32"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -245,7 +243,7 @@ const HeroSection = ({ textContent }) => {
                               {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
                             </div>
                           ) : (
-                            <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 py-5 px-5 text-center text-gray-80">
+                            <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80">
                               {/* CTA */}
                               <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20  bg-primary bg-opacity-6">
                                 <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">

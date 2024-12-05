@@ -27,10 +27,10 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
   const generateRandomPassword = () => {
     const length: number = Number(passwordProperties.length);
     let characters: string = '';
-    let uppercase: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let lowercase: string = 'abcdefghijklmnopqrstuvwxyz';
-    let numbers: string = '0123456789';
-    let symbols: string = '!@#$%^&*()<>,.?/[]{}-=_+|/';
+    const uppercase: string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowercase: string = 'abcdefghijklmnopqrstuvwxyz';
+    const numbers: string = '0123456789';
+    const symbols: string = '!@#$%^&*()<>,.?/[]{}-=_+|/';
 
     if (passwordProperties.uppercase) {
       characters += uppercase;
@@ -77,7 +77,7 @@ const PasswordSettings = ({ textContent, setPassword, setCrackScore, regenerate 
       <div className="flex flex-col items-center space-y-5 lg:flex-row lg:space-x-3 lg:space-y-0">
         <div className="flex flex-row items-center space-x-3">
           <p className="text-base font-medium text-gray-100">{textContent.length}</p>
-          <div className="flex  rounded-lg border border-gray-10 py-1 px-2">
+          <div className="flex  rounded-lg border border-gray-10 px-2 py-1">
             <p className="text-base font-medium text-gray-100">{passwordProperties.length}</p>
           </div>
         </div>

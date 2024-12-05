@@ -6,12 +6,14 @@
     "privacy": "Privacy",
     "pricing": "Pricing",
     "login": "Log in",
-    "getStarted": "Get started",
-    "chooseStorage": "Choose storage",
-    "checkout": "Claim now!"
+    "getStarted": "Get Internxt",
+    "chooseStorage": "Get Internxt",
+    "checkout": "Claim now!",
+    "business": "Business"
   },
   "products": {
     "drive": "Internxt Drive",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",

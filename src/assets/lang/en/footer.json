@@ -24,10 +24,12 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
+        "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
         "token": "Token",
-        "pricing": "Pricing"
+        "pricing": "Pricing",
+        "business": "Internxt for Business",
+        "family": "Internxt for Families"
       },
       "company": {
         "title": "Company",
@@ -62,6 +64,7 @@
         "blog": "Blog",
         "comparison": "Cloud Storage Comparison",
         "pCloudAlternative": "pCloud Alternative",
+        "dropboxAlternative": "Dropbox alternative",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows"
@@ -73,7 +76,8 @@
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
         "passwordGenerator": "Password Generator",
-        "fileConverter": "File Converter"
+        "fileConverter": "File Converter",
+        "haveIBeenPwned": "Internxt Monitor"
       }
     }
   },

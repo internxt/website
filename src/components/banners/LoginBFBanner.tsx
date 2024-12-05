@@ -60,7 +60,7 @@ const LoginBFBanner = () => {
     if (showBanner) {
       window.dispatchEvent(new Event('CloseSquare'));
     }
-    if (Boolean(hideBanner)) {
+    if (hideBanner) {
       setShowBanner(false);
     }
     window.addEventListener('unload', function (e) {
@@ -133,9 +133,9 @@ const LoginBFBanner = () => {
   };
 
   return showBanner ? (
-    <div className={`fixed top-0 left-0 right-0 bottom-0 z-50 flex bg-black bg-opacity-50 px-10`}>
+    <div className={`fixed bottom-0 left-0 right-0 top-0 z-50 flex bg-black bg-opacity-50 px-10`}>
       <div
-        className={`fixed top-1/2 left-1/2 flex h-auto -translate-y-[50%] -translate-x-[50%] flex-col overflow-hidden rounded-2xl bg-gradient-to-r from-black to-primary`}
+        className={`fixed left-1/2 top-1/2 flex h-auto -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl bg-gradient-to-r from-black to-primary`}
       >
         <button className="absolute right-0 m-7 flex text-white" onClick={handleClose}>
           <X size={32} />

@@ -1,0 +1,131 @@
+{
+  "HeroSection": {
+    "title": "Internxt Dark Web Monitor",
+    "subtitle": "Check if your email has been exposed in a data breach.",
+    "description": "Internxt Monitor checks if your email has been part of a data breach against a database of compromised accounts.",
+    "AllGoodSection": {
+      "title": "All good!",
+      "description": "No breached accounts or pastes.",
+      "StaySecure": "Stay secure online with strong passwords and Multi-Factor Authentication."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Your email address",
+      "toolTip": "We do not store or share your email address",
+      "toolTipEmergent": "Your email is only checked against databases for breaches.",
+      "pleaseEnterEmail": "Please enter a valid email address",
+      "noBreachesFound": "Email not found",
+      "errorPwned": "An error occurred while checking your email. Please try again later.",
+      "check": "Check",
+      "checking": "Checking..."
+    },
+    "breaches": {
+      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
+      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
+      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
+    },
+    "PwnedSection": {
+      "title": "Oh no!",
+      "description": "Your email was found in X data breaches and X pastes.",
+      "recomendation": "We recommend taking immediate action to secure your accounts.",
+      "breachesSection": {
+        "title": "Breaches where your email was found",
+        "description": "A data breach occurs when your email, name, address, or other personal information is unintentionally leaked to the public online.",
+        "linkToPasswordGenerator": {
+          "linkText": "Internxt’s Password Generator",
+          "otherText": "creates unique, strong passwords to protect your accounts and data."
+        }
+      },
+      "pwnedElement": {
+        "compromisedData": "Compromised data",
+        "name": "Adobe",
+        "title": "Adobe",
+        "domain": "adobe.com",
+        "BreachDate": "2013-10-04",
+        "addedDate": "2013-12-04T00:00:00Z",
+        "modifiedDate": "2022-05-15T23:52:49Z",
+        "pwnCount": 152445165,
+        "description": "In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, encrypted password and a password hint in plain text. The password cryptography was poorly done and many were quickly resolved back to plain text. The unencrypted hints also adding further to the risk that hundreds of millions of Adobe customers already faced.",
+        "logoPath": "https://logos.haveibeenpwned.com/Adobe.png",
+        "dataClasses": ["Email addresses", "Password hints", "Passwords", "Usernames"],
+        "isVerified": true,
+        "isFabricated": false,
+        "isSensitive": false,
+        "isRetired": false,
+        "isSpamList": false,
+        "isMalware": false,
+        "isSubscriptionFree": false
+      }
+    }
+  },
+  "InfoSection": {
+    "pwnedWebsites": "pwned websites",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "pwned accounts",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "pastes",
+    "pastesData": "115,796"
+  },
+  "CtaSection": {
+    "title": "Don’t become another statistic",
+    "description": "Check your accounts with Internxt Dark Web Monitor.",
+    "cta": "Check now"
+  },
+  "CtaSection2": {
+    "title": "Don’t wait for a data breach to happen",
+    "description": "Check and protect your information with Internxt.",
+    "cta": "Check now"
+  },
+  "FeatureSection": {
+    "title": "What to do if your email has leaked on the dark web",
+    "description": "Internxt Dark Web Monitor is part of our mission to protect you from hackers leaking your data on the dark web.",
+    "description2": "Internxt is committed to keeping you safe in the digital world. Discover effective strategies to secure your accounts and mitigate risks if your email has been compromised on the dark web.",
+    "cards": [
+      {
+        "title": "Create strong passwords",
+        "description": "If your email has been leaked on the dark web, the first thing you must do is change your passwords. Internxt’s Password Generator creates strong passwords or passphrases to prevent hackers from accessing your accounts.",
+        "cta": "Generate",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Use a VPN",
+        "description": "Internxt VPN greatly reduces the chances of data breaches by encrypting and hiding your IP address. Our VPN ensures that all data transmitted while you’re surfing online is encrypted and protected from unauthorized access.",
+        "cta": "Download",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Check your password strength",
+        "description": "Check how secure your password is with Internxt’s Password Checker. View your password strength, times found in leaks, and the time it would take for hackers to crack your password using brute-force attacks or specialized software. ",
+        "cta": "Check",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Store files privately",
+        "description": "Internxt Drive encrypted cloud storage uses end-to-end encryption to protect your sensitive information and prevent data breaches and hackers from leaking your information on the dark web. ",
+        "cta": "Susbcribe",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Have you been pwned in the world’s biggest data breaches?",
+    "description": "Check your email and take action to secure your accounts with Internxt Monitor.",
+    "cards": [
+      {
+        "title": "Internet archive",
+        "description": "In September 2024, the Internet Archive’s “Wayback Machine” experienced a significant data breach when a threat actor stole a user authentication database containing 31 million records. Data from the breach included email addresses, screen names, and bcrypt password hashes. "
+      },
+      {
+        "title": "Facebook",
+        "description": "In April 2021, data from over 500 million Facebook users was made available for download on the dark web. The breach data contained phone numbers, 2.5 million email addresses, and other personal information that can be used in cyberattacks such as phishing.  "
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io suffered a data breach due to data being stored in a MongoDB instance left publicly facing without password protection. The breach exposed 763 million unique emails, names, phone numbers, IP addresses, dates of birth, and genders. "
+      },
+      {
+        "title": "Collection #1 ",
+        "description": "In January 2018, the Collection #1 data breach leaked 2.7 billion records, which were made available on the dark web and online forums. The data included over 77 million email addresses and more than 21 million passwords from multiple breaches. "
+      }
+    ]
+  }
+}

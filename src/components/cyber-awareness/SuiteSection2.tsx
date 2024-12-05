@@ -1,5 +1,3 @@
-import React from 'react';
-
 const SuiteSection2 = ({ textContent }) => {
   const suiteCards = [
     {

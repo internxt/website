@@ -3,22 +3,26 @@ import Link from 'next/link';
 import { Transition, Disclosure } from '@headlessui/react';
 import Hamburger from 'hamburger-react';
 
-import { checkout, goToLoginURL, goToSignUpURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
+import { checkout, goToLoginURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from '../components/LanguageBox';
 import { useRouter } from 'next/router';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
+import { NavigationBarText } from '@/assets/types/layout/types';
+import Button from '@/components/shared/Button';
+import LanguageMobileBox from '../components/LanguageMobileBox';
 
 export interface NavbarProps {
-  textContent: any;
+  textContent: NavigationBarText;
   lang: string;
   cta: string[];
   darkMode?: boolean;
   fixed?: boolean;
   hide?: boolean;
   isLinksHidden?: boolean;
+  hideNavbar?: boolean;
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
   mode?: 'subscription' | 'payment';
@@ -26,6 +30,7 @@ export interface NavbarProps {
 
 const EXCLUDED_PATHS_FOR_RIBBON = [
   '/pricing',
+  '/pricing/b',
   '/lifetime',
   '/partner-discount',
   '/techradar-discount',
@@ -38,7 +43,8 @@ const EXCLUDED_PATHS_FOR_RIBBON = [
   '/oystervpn',
   '/pccomponentes-products',
   '/lifetime_special',
-  '/lifetime/celebration',
+  '/lifetime/celebration/[filename]',
+  '/affiliates/[filename]',
 ];
 
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
@@ -78,11 +84,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
       id="navbar"
       className={`${props.hide ? 'hidden' : ''} flex items-center ${
         !menuState && !props.fixed ? 'absolute' : 'fixed'
-      } h-20 w-full ${props.isQuizSection ? 'bg-black' : 'bg-white'} transition-all duration-100 lg:h-16 ${
-        props.darkMode && 'bg-opacity-0'
-      } ${props.fixed && 'backdrop-blur-lg backdrop-saturate-150 backdrop-filter'} ${
-        scrolled && props.fixed ? 'border-opacity-5 bg-opacity-90' : 'border-opacity-0'
-      } ${menuState ? 'bg-opacity-100' : ''} z-50 border-b border-black`}
+      } h-20 w-full ${
+        props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
+      } transition-all duration-100 lg:h-16 ${
+        props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
+      } ${scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'} ${
+        menuState ? 'bg-opacity-100' : ''
+      } z-50 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
@@ -90,45 +98,37 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
               {/* Logo */}
               <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
-                <img
+                <Image
+                  width={96}
+                  height={10.5}
                   loading="lazy"
                   className="select-none"
-                  src={getImage(
-                    `/logos/internxt/${
-                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                    }.svg`,
-                  )}
+                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
-                  width="96"
-                  height="10"
                 />
               </Link>
               <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
-                <img
+                <Image
+                  width={110}
+                  height={12}
                   loading="lazy"
                   className="select-none"
-                  src={getImage(
-                    `/logos/internxt/${
-                      (props.darkMode && !menuState) || (props.isQuizSection && !menuState) ? 'white' : 'cool-gray-90'
-                    }.svg`,
-                  )}
+                  src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
               </Link>
             </div>
             <ItemsNavigation
-              darkMode={props.darkMode}
+              darkMode={props.darkMode ?? false}
               getTitles={getTitles}
-              isQuizSection={props.isQuizSection}
-              shouldHideItems={props.isLinksHidden}
-              lang={lang}
-              menuState={menuState}
+              shouldHideItems={props.isLinksHidden ?? false}
+              lang={lang as string}
               router={router}
               textContent={props.textContent}
             />
           </div>
 
-          {/* Left side of navbar: Logo / Hamburguer menu */}
+          {/* Left side of navbar: Logo / Hamburger menu */}
           {/* Login and CTA */}
           <div className="relative flex h-full w-max flex-row items-center justify-end space-x-2">
             <div
@@ -154,8 +154,8 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 id="loginButton"
                 onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
-                className={`hidden whitespace-nowrap rounded-lg border py-1 px-3 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
-                  props.darkMode || (props.isQuizSection && !menuState)
+                className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
+                  props.darkMode && !menuState
                     ? 'bg-white text-gray-80 focus:opacity-80'
                     : 'border-gray-10 text-gray-80 hover:bg-gray-1 active:border-primary-dark active:text-primary-dark'
                 } text-sm font-medium shadow-sm`}
@@ -165,12 +165,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => goToSignUpURL({ lang: lang })}
-                id="signupButton"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                onClick={() => router.push('/pricing')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
-                <p className="whitespace-nowrap">{props.textContent.links.getStarted}</p>
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
               </button>
             ) : (
               ''
@@ -179,7 +179,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               <button
                 onClick={() => router.push('/pricing')}
                 id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary py-1 px-3 text-sm font-medium text-white  
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
               >
                 <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
@@ -192,9 +192,10 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 onClick={() => {
                   checkout({
                     planId: '',
+                    planType: 'individual',
                   });
                 }}
-                className={`flex justify-center rounded-lg border border-transparent py-1.5 px-4 text-sm font-medium focus:outline-none sm:inline-flex ${
+                className={`flex justify-center rounded-lg border border-transparent px-4 py-1.5 text-sm font-medium focus:outline-none sm:inline-flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
                     : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
@@ -206,14 +207,28 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               ''
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
-              <LanguageBox isBlackFriday={props.isBlackfriday} darkMode={props.darkMode || props.isQuizSection} />
+              {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
             </div>
+
+            <div className="hidden items-center justify-center bg-transparent lg:flex">
+              {props.isBlackfriday && scrolled ? (
+                <div className="flex flex-row items-center space-x-2 px-4 py-2">
+                  <p className="text-4xl font-bold text-white">85% OFF</p>
+                  <Button
+                    onClick={() => router.push('#billingButtons')}
+                    className="rounded-lg bg-primary px-4 py-1 text-sm font-semibold text-white"
+                    text={'Get the deal!'}
+                  />
+                </div>
+              ) : undefined}
+            </div>
+
             {!props.isLinksHidden && (
               <div className="lg:hidden">
                 <Hamburger
                   label="Show menu"
                   size={20}
-                  color={props.darkMode || (props.isQuizSection && !menuState) ? '#fff' : '#3A3A3B'}
+                  color={props.darkMode && !menuState ? '#fff' : '#3A3A3B'}
                   toggled={menuState}
                   toggle={setMenuState}
                 />
@@ -262,13 +277,20 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                             >
                               <Disclosure.Panel
                                 className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode || props.isQuizSection ? 'text-gray-30' : 'text-gray-60'
+                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
                                 <Link href="/drive" locale={props.lang} passHref legacyBehavior>
                                   <div className="flex flex-row space-x-2">
                                     <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.drive}</p>
+                                  </div>
+                                </Link>
+
+                                <Link href="/cloud-object-storage" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <HardDrives className="h-6 w-6 text-gray-80" />
+                                    <p>{props.textContent.products.s3}</p>
                                   </div>
                                 </Link>
 
@@ -317,7 +339,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                             >
                               <Disclosure.Panel
                                 className={`flex flex-col bg-gray-1 px-8 font-medium ${!open ? 'hidden' : 'flex'} ${
-                                  props.darkMode || props.isQuizSection ? 'text-gray-30' : 'text-gray-60'
+                                  props.darkMode ? 'text-gray-30' : 'text-gray-60'
                                 } space-y-8 p-4`}
                               >
                                 <Link href="/privacy" locale={props.lang} passHref legacyBehavior>
@@ -369,7 +391,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           Need a VPN?
                         </button>
                       ) : undefined}
-
+                      <LanguageMobileBox darkMode={props.darkMode} />
                       <a
                         onClick={() => {
                           setMenuState(false);

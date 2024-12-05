@@ -3,9 +3,10 @@ import React, { useEffect } from 'react';
 interface RevealProps {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 }
 
-const RevealY = ({ children, className }: RevealProps) => {
+const RevealY = ({ children, className, id }: RevealProps) => {
   useEffect(() => {
     function reveal() {
       const reveals = document.querySelectorAll('.revealY');
@@ -30,7 +31,11 @@ const RevealY = ({ children, className }: RevealProps) => {
       window.removeEventListener('scroll', reveal);
     };
   }, []);
-  return <div className={`revealY ${className}`}>{children}</div>;
+  return (
+    <div id={id} className={`revealY ${className}`}>
+      {children}
+    </div>
+  );
 };
 
 export default RevealY;

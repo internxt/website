@@ -1,4 +1,4 @@
-const EmptyFile = () => {
+const EmptyFile = (): JSX.Element => {
   return (
     <svg
       width="80"

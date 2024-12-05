@@ -28,10 +28,7 @@ const StartPageLabel = () => {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
   function redirectToPricingTable() {
-    window.scrollTo({
-      top: document?.getElementById('payment')?.offsetTop! + 500,
-      behavior: 'smooth',
-    });
+    window.location.href = '#payment';
   }
 
   return (

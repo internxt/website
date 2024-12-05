@@ -73,7 +73,9 @@
   "PaymentSection": {
     "limitedOffer": "Limited time offer!",
     "title": { "blueText": "", "normalText": "Explore all of our exclusive lifetime plans" },
+    "title2": { "blueText": "Get ${{percent}}% OFF", "normalText": " on our exclusive lifetime plans" },
     "description": "Buy once and get privacy and security forever.",
+    "description2": "A lifetime of privacy and security for your files for a unique, one-time payment.",
     "normalSection": {
       "title": "Explore all of our exclusive lifetime plans",
       "description": "This week only, buy once and get privacy and security forever."

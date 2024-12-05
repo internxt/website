@@ -1,15 +1,18 @@
 import axios from 'axios';
 import bytes from 'bytes';
 import { currencyService } from './currency.service';
+import { checkout, checkoutForPcComponentes } from '@/lib/auth';
+import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+
+const CURRENCY_MAP = {
+  eur: '€',
+  usd: '$',
+};
 
 export enum Interval {
   Month = 'month',
   Year = 'year',
   Lifetime = 'lifetime',
-}
-
-export interface ProductsProps {
-  individuals: {} | undefined;
 }
 
 export enum Products {
@@ -21,18 +24,47 @@ export enum Products {
   '10TB' = '10TB',
 }
 
-async function getPrices(isEur?: boolean) {
-  const currency = await getCurrency(isEur);
+interface ProductValue {
+  id: string;
+  bytes: number;
+  amount: number;
+  currency: string;
+  interval: Interval;
+}
+
+export interface TransformedProduct {
+  priceId: string;
+  storage: string;
+  price: number;
+  currency: string;
+  currencyValue: string;
+  interval: Interval;
+}
+
+export interface ProductsDataProps {
+  individuals: {
+    [Interval.Month]: TransformedProduct[];
+    [Interval.Year]: TransformedProduct[];
+    [Interval.Lifetime]: TransformedProduct[];
+  };
+  business: {
+    [Interval.Month]: TransformedProduct[];
+    [Interval.Year]: TransformedProduct[];
+  };
+}
+
+async function getPrices(currencySpecified?: string) {
+  const currency = await getCurrency(currencySpecified);
   const data = await fetchProductData(currency);
   if (data) {
-    const transformedData = transformProductData(data);
+    const transformedData = transformProductData(data.individuals, data.business);
     return transformedData;
   }
 }
 
-async function getCurrency(isEur?: boolean): Promise<string> {
-  if (isEur) {
-    return 'eur';
+async function getCurrency(currencySpecified?: string): Promise<string> {
+  if (currencySpecified) {
+    return currencySpecified;
   }
   try {
     const currencyResponse = await currencyService.filterCurrencyByCountry();
@@ -53,53 +85,72 @@ async function fetchProductData(currency: string) {
   }
 }
 
-function transformProductData(data: any) {
+function transformProductData(individualsData: ProductValue[], businessData: ProductValue[]): ProductsDataProps {
   const transformedData = {
     individuals: {
       [Interval.Month]: [] as Array<any>,
       [Interval.Year]: [] as Array<any>,
       [Interval.Lifetime]: [] as Array<any>,
     },
+    business: {
+      [Interval.Month]: [] as Array<any>,
+      [Interval.Year]: [] as Array<any>,
+    },
   };
 
-  data.forEach((productValue: any) => {
-    const storage = bytes(productValue.bytes);
-    const interval = productValue.interval;
+  const transform = (data: ProductValue[], type: 'individuals' | 'business') => {
+    data.forEach((productValue: any) => {
+      const storage = bytes(productValue.bytes);
+      const interval = productValue.interval;
 
-    if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
-      transformedData.individuals[interval].push({
-        priceId: productValue.id,
-        storage: storage,
-        price: Math.abs(productValue.amount / 100).toFixed(2),
-        currency: productValue.currency,
-      });
-    }
-  });
+      if ([Interval.Month, Interval.Year, Interval.Lifetime].includes(interval)) {
+        transformedData[type][interval].push({
+          priceId: productValue.id,
+          storage: storage,
+          price: Math.abs(productValue.amount / 100).toFixed(2),
+          currency: CURRENCY_MAP[productValue.currency],
+          currencyValue: productValue.currency,
+          interval: interval,
+        });
+      }
+    });
 
-  // Sort products by price ascending order for each interval (month, year, lifetime)
-  Object.keys(transformedData.individuals).forEach((interval) => {
-    transformedData.individuals[interval].sort((a, b) => a.price - b.price);
-  });
+    // Sort products by price ascending order for each interval (month, year, lifetime)
+    Object.keys(transformedData[type]).forEach((interval) => {
+      transformedData[type][interval].sort((a, b) => a.price - b.price);
+    });
+  };
+
+  transform(individualsData, 'individuals');
+  transform(businessData, 'business');
 
   return transformedData;
 }
 
-async function getSelectedPrice(interval: string, plan: string) {
+async function getSelectedPrice(
+  interval: string,
+  storage: string,
+  planType: 'individuals' | 'business' = 'individuals',
+) {
   //Filter prices by plan
   const prices = await getPrices();
-  const selectedPrice = prices?.individuals[interval][plan];
+  const selectedPrice = prices?.[planType][interval][storage];
   return selectedPrice;
 }
 
-async function getCoupon(coupon: string) {
+async function getCoupon(couponName: PromoCodeName) {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {
-        coupon,
+        couponName,
       },
     });
-    const { data } = res;
-    return data;
+    const { data: couponData } = res;
+
+    return {
+      name: couponName,
+      ...couponData,
+    };
   } catch (err) {
     const error = err as Error;
 
@@ -108,20 +159,49 @@ async function getCoupon(coupon: string) {
 }
 
 async function getLifetimeCoupons() {
-  try {
-    const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
-    const { data } = res;
+  const res = await axios.get(`${window.origin}/api/stripe/get_lifetime_coupons`);
+  const { data } = res;
 
-    return data;
-  } catch (err) {
-    const error = err as Error;
-    throw new Error(error.message);
-  }
+  return data;
 }
+
+const redirectToCheckout = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['name'],
+) => {
+  checkout({
+    planId,
+    promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
+
+const redirectToCheckoutForPcComponentes = (
+  planId: string,
+  currencyValue: string,
+  planType: 'individual' | 'business',
+  isCheckoutForLifetime: boolean,
+  promoCodeId?: PromoCodeProps['codeId'],
+) => {
+  checkoutForPcComponentes({
+    planId,
+    promoCodeId,
+    planType,
+    currency: currencyValue ?? 'eur',
+    mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+  });
+};
 
 export const stripeService = {
   getPrices,
   getSelectedPrice,
   getCoupon,
   getLifetimeCoupons,
+  redirectToCheckout,
+  redirectToCheckoutForPcComponentes,
 };

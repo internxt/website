@@ -2,7 +2,7 @@
 
 export {};
 // THe first item is empty because it is the home page
-let nameFiles = [
+const nameFiles = [
   '',
   'about',
   'affiliates',
@@ -14,7 +14,6 @@ let nameFiles = [
   'cyber-awareness',
   'dealfuel',
   'drive',
-  'freemonth',
   'legal',
   'lifetime_special',
   'lifetime',

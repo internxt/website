@@ -1,0 +1,92 @@
+{
+  "DownloadApp": {
+    "title": "Baixe o Internxt",
+    "description": "Gerenciamento de arquivos contínuo e armazenamento seguro na nuvem em qualquer lugar com o aplicativo móvel Internxt para iOS ou Android."
+  },
+  "NewsletterSection": {
+    "title": "Boletim Informativo",
+    "description": "Quer receber notícias nossas quando lançarmos novos produtos ou atualizações? Digite seu endereço de e-mail e nós cuidaremos do resto!",
+    "input": "Seu endereço de email",
+    "info": "Você pode se desinscrever a qualquer momento",
+    "cta": "Inscrever-se",
+    "privacy": "Ao inscrever-se, você concorda com nossa",
+    "privacyLink": "política de privacidade."
+  },
+  "FooterSection": {
+    "description": "A missão da Internxt é ajudar a moldar um mundo que respeita os direitos de privacidade da humanidade. Para isso, estamos lançando uma série de serviços, que têm como objetivo comum ajudar a humanidade a proteger esse direito fundamental.",
+    "copyright": {
+      "line1": "Direitos autorais © ",
+      "line2": ", Internxt Universal Technologies SL"
+    },
+    "independentPromotion": "Esta promoção é oferecida pela Internxt independentemente e não há parceria direta com a The Walt Disney Company",
+    "comingSoon": "Em breve",
+    "new": "Novo",
+    "sections": {
+      "products": {
+        "title": "Produtos",
+        "drive": "Internxt Drive",
+        "photos": "Internxt Photos",
+        "send": "Internxt Send",
+        "objStorage": "Internxt S3",
+        "vpn": "Internxt VPN",
+        "token": "Token",
+        "pricing": "Preços",
+        "business": "Internxt para Empresas",
+        "family": "Internxt para Famílias"
+      },
+      "company": {
+        "title": "Empresa",
+        "about": "Sobre Nós",
+        "privacy": "Privacidade",
+        "openSource": "Código Aberto",
+        "mediaArea": "Área de Mídia",
+        "security": "Segurança",
+        "legal": "Jurídico",
+        "whyInternxt": "Por que Internxt?"
+      },
+      "join": {
+        "title": "Junte-se a Nós",
+        "newsletter": "Boletim Informativo",
+        "affiliates": "Afiliados",
+        "storageForEducation": "Internxt para Educação",
+        "signup": "Criar Conta",
+        "support": "Suporte",
+        "login": "Entrar",
+        "community": "Comunidade",
+        "github": "GitHub",
+        "whitePaper": "Papel Branco",
+        "twitter": "Twitter",
+        "facebook": "Facebook",
+        "linkedin": "LinkedIn",
+        "youtube": "Youtube",
+        "instagram": "Instagram",
+        "mastodon": "Mastodon"
+      },
+      "resources": {
+        "title": "Recursos",
+        "blog": "Blog",
+        "comparison": "Comparação de Armazenamento na Nuvem",
+        "pCloudAlternative": "Alternativa ao pCloud",
+        "dropboxAlternative": "Alternativa ao Dropbox",
+        "directoryOfPrivacyOrganizations": "Diretório de Organizações de Privacidade",
+        "cyberAwareness": "Conscientização Cibernética",
+        "whatGoogleKnowsAboutMe": "O Que o Google Sabe Sobre Mim"
+      },
+      "tools": {
+        "title": "Ferramentas Gratuitas",
+        "temporaryEmail": "Email Temporário",
+        "fileVirusScan": "Scanner de Vírus de Arquivo",
+        "passwordChecker": "Verificador de Senhas",
+        "byteConverter": "Conversor de Bytes",
+        "passwordGenerator": "Gerador de Senhas",
+        "fileConverter": "Conversor de Arquivos",
+        "haveIBeenPwned": "Internxt Monitor"
+      }
+    }
+  },
+  "Cookies": {
+    "title": "Internxt usa cookies para facilitar o uso deste site",
+    "link": "Saiba mais sobre cookies",
+    "close": "Ok, fechar"
+  }
+}

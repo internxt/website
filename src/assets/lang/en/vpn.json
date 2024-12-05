@@ -2,10 +2,10 @@
   "HeroSection": {
     "label": "Free VPN",
     "title": {
-      "line1": "Internxt secure VPN protects",
-      "line2": "your online activity"
+      "line1": "Internxt's secure VPN",
+      "line2": "protects you online"
     },
-    "description": "Surf the web in complete freedom and privacy with Internxt's free VPN.",
+    "description": "Surf the web in complete freedom and privacy with Internxt's free, unlimited & encrypted VPN.",
     "cta": "Download VPN"
   },
   "EncryptedVPNSection": {

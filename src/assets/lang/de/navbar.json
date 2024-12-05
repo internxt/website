@@ -8,10 +8,12 @@
     "login": "Log-in",
     "getStarted": "Starte jetzt",
     "chooseStorage": "Speicher wählen",
-    "checkout": "Jetzt anfordern!"
+    "checkout": "Jetzt anfordern!",
+    "business": "Geschäftskunden"
   },
   "products": {
     "drive": "Internxt Drive",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",

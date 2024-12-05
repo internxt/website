@@ -5,8 +5,9 @@ import HeroSection from '@/components/techradar-discount/HeroSection';
 import PaymentsSection from '@/components/techradar-discount/PaymentsSection';
 import InfoSection from '@/components/techradar-discount/InfoSection';
 import Footer from '@/components/layout/footers/Footer';
+import { GetServerSidePropsContext } from 'next';
 
-const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }) => {
+const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
 
   return (
@@ -24,7 +25,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);

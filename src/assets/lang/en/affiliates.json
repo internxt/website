@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "label": "Internxt's Affiliate Program",
-    "title": { "normalText": "Make the internet more secure - ", "blueText": "and get paid doing it!" },
+    "title": { "normalText": " per sale", "blueText": "Earn up to $300" },
     "description": "Join Internxt’s world-class affiliate program and earn money promoting zero-knowledge cloud storage to your audience. Let’s build a safer, fairer, and better internet together.",
     "signUp": "Sign up now",
     "logIn": "Affiliate log in"
@@ -15,12 +15,12 @@
         "cta": "Sign up now"
       },
       {
-        "title": "Send subscribers to Internxt",
-        "description": "Promote Internxt to your audience. Every time someone clicks your personal link and makes a purchase, you earn a commission!"
+        "title": "Promote Internxt",
+        "description": "Create content about us using your unique tracking links. Every time someone clicks your tracking link and makes a purchase, you earn a commission!"
       },
       {
         "title": "Get paid for every purchase!",
-        "description": "Earn cash for every paid subscription made using your link. There is no limit to the number of payouts we issue at the end of each month."
+        "description": "Earn cash for every paid user. There are no limits to the number of payouts we issue at the end of each month."
       }
     ]
   },
@@ -33,7 +33,7 @@
     "title": "Why join Internxt’s Affiliate Program?",
     "cards": [
       {
-        "title": "Earn up to $299 per sale"
+        "title": "Earn up to $300 per sale"
       },
       {
         "title": "Dedicated account managers"
@@ -42,14 +42,20 @@
         "title": "30-days cookie duration period"
       },
       {
-        "title": "Exclusive sales, specials, and deals"
+        "title": "Exclusive sales, deals, and commissions"
+      },
+      {
+        "title": "Targeted landing pages"
+      },
+      {
+        "title": "Access to high-converting creatives"
       }
     ],
     "cta": "Sign up now"
   },
   "WhatWeDoSection": {
-    "title": "Privacy, security, and military-grade encryption for everyone",
-    "description": "Focusing on privacy, security, and the preservation of everyone’s digital rights, we want our partners to join us in promoting a safer and more ethical internet. Internxt is a tool and service built to provide the best and most secure cloud storage for everyone.",
+    "title": "Internxt guarantees privacy, security, and military-grade encryption for everyone",
+    "description": "Join Internxt in our dedication to promoting a secure and private experience for everyone. Internxt’s secure cloud storage is a tool and service built to provide everyone with privacy-focused cloud storage.",
     "cards": [
       {
         "title": "All your files on all your devices",
@@ -69,6 +75,57 @@
       }
     ],
     "recognized": "Proudly recognized for quality protection"
+  },
+  "CommissionStructureSection": {
+    "title": "Our commission structure",
+    "startEarning": "Start earning",
+    "cards": [
+      {
+        "OFF": "50%",
+        "plans": "on annual and monthly plans"
+      },
+      {
+        "OFF": "30%",
+        "plans": "on lifetime sales"
+      }
+    ],
+    "cta": "Sign up now"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "Earn big by promoting Internxt B2B and B2C plans",
+      "description": [
+        "Join Internxt in giving businesses and individuals a platform to secure and protect against data loss with ultra-powerful encryption. ",
+        "Our cloud storage for everyone offers advanced file management, security, privacy, and more, allowing industries, families, or individuals to enjoy the benefits of private cloud storage."
+      ]
+    },
+    "s3": {
+      "title": "Help companies manage large-scale data with Internxt object storage",
+      "description": [
+        "We also offer S3-compatible object storage, an affordable cloud storage solution to manage files within a high-performance, secure infrastructure."
+      ]
+    },
+    "feat": [
+      {
+        "title": "100% Hot",
+        "description": "Ultra fast and instantly accessible"
+      },
+      {
+        "title": "Up to 80%",
+        "description": "More affordable than AWS"
+      },
+      {
+        "title": "Zero fees",
+        "description": "Free data transfer"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "Recognized as the ",
+      "blue": "no. 1 ",
+      "line2": "cloud storage by"
+    }
   },
   "FaqSection": {
     "title": "Questions? We have answers",

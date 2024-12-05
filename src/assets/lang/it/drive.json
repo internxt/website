@@ -6,7 +6,7 @@
       "line2": "per tutti i tuoi file, le tue foto e altro."
     },
     "subtitle": {
-      "line1": "Archiviare, backuppare e condividere i tuoi file in totale privacy non potrebbe essere più semplice.",
+      "line1": "Archiviare, salvare e condividere i tuoi file in totale privacy non potrebbe essere più semplice.",
       "line2": "Con Internxt Drive ci focalizziamo su un'archiviazione facile da utilizzare ma con crittografia di livello militare",
       "line3": "e file sharding, per fare in modo che solo tu abbia il controllo sui tuoi file e sui tuoi dati."
     },
@@ -17,9 +17,9 @@
       "orDownloadFor": "O scarica per",
       "downloadOnThe": "Scaricare sul sito",
       "orDownloadOnThe": "O Scaricare sul sito",
-      "getOn": "Salire",
-      "orGetOn": "O salire",
-      "openDriveWeb": "Aprire Drive Web",
+      "getOn": "Scarica da",
+      "orGetOn": "O scarica da",
+      "openDriveWeb": "Apri Drive Web",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",
@@ -45,7 +45,7 @@
         "description": "Utilizza il tuo client WebDAV preferito con Internxt CLI."
       },
       {
-        "title": "Scriptabile",
+        "title": "Programmable tramite script",
         "description": "Esegui comandi di script dalla tua shell preferita su qualsiasi piattaforma."
       },
       {
@@ -165,9 +165,9 @@
       "orDownloadFor": "O scarica per",
       "downloadOnThe": "Scaricare sul sito",
       "orDownloadOnThe": "O Scaricare sul sito",
-      "getOn": "Salire",
-      "orGetOn": "O salire",
-      "openDriveWeb": "Aprire Drive Web",
+      "getOn": "Scarica da",
+      "orGetOn": "O scarica da",
+      "openDriveWeb": "Apri Drive Web",
       "iPhone": "App Store",
       "iPad": "App Store",
       "Android": "Play Store",

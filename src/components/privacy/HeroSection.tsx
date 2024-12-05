@@ -1,11 +1,6 @@
-import React, { useState } from 'react';
-import YoutubeEmbed from '@/components/utils/youtube';
-import { CaretRight } from '@phosphor-icons/react';
 import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <>
       <section className="relative flex w-full flex-col overflow-hidden pt-14">
@@ -20,18 +15,9 @@ const HeroSection = ({ textContent }) => {
             <h2 className="mb-8 w-full max-w-[850px] text-xl font-normal text-gray-80 sm:mb-10">
               {textContent.description}
             </h2>
-
-            <div
-              onClick={() => setIsOpen(true)}
-              className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-xl font-semibold text-blue-50 hover:underline sm:text-lg"
-            >
-              <p>{textContent.cta}</p>
-              <CaretRight size={12} weight="bold" />
-            </div>
           </div>
         </div>
       </section>
-      <YoutubeEmbed videoID="SlU5zQCM1Lk" show={isOpen} setShow={setIsOpen} autoplay loop hideinfo jsapi />
     </>
   );
 };

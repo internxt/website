@@ -1,17 +1,63 @@
+import { useState } from 'react';
+
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
-import PriceTable from '@/components/prices/PriceTable';
+import { stripeService } from '@/components/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
-import FAQSection from '@/components/shared/FaqSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
 import { FeatureSectionForSpecialOffer } from '@/components/specialoffer/FeatureSection';
 import { HeroSectionForSpecialOffer } from '@/components/specialoffer/HeroSection';
 import { InxtFeaturesSection } from '@/components/specialoffer/InxtFeaturesSection';
 import { WhatWeDoSectionForSpecialOffer } from '@/components/specialoffer/WhatWeDoSection';
-import { CouponType } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
+import { PromoCodeName } from '@/lib/types';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { GetServerSidePropsContext } from 'next';
+import { FreeUserText } from '@/assets/types/freeuser';
 
-const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, textContent }) => {
+interface FreeUserPageProps {
+  lang: GetServerSidePropsContext['locale'];
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: FreeUserText;
+  footerLang: FooterText;
+}
+
+const FreeUserPage = ({
+  metatagsDescriptions,
+  footerLang,
+  navbarLang,
+  lang,
+  textContent,
+}: FreeUserPageProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'free-user')[0];
+
+  const locale = lang as string;
+
+  const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
+    couponCode: PromoCodeName.freeUserCoupon,
+  });
+
+  const [isBusiness, setIsBusiness] = useState<boolean>();
+
+  const onBusinessPlansSelected = (isBusiness: boolean) => {
+    setIsBusiness(isBusiness);
+  };
+
+  const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    const planType = isBusiness ? 'business' : 'individual';
+
+    stripeService.redirectToCheckout(
+      planId,
+      currencyValue,
+      planType,
+      isCheckoutForLifetime,
+      couponCodeForCheckout?.name,
+    );
+  };
 
   const handleOnButtonClick = () => {
     window.location.hash = '#priceTable';
@@ -19,18 +65,20 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
 
   return (
     <Layout title={metatags.title} description={metatags.description} segmentName={'Free User'}>
-      <Navbar textContent={navbarLang} cta={['default']} lang={lang} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} cta={['default']} lang={locale} fixed isLinksHidden />
 
       <HeroSectionForSpecialOffer textContent={textContent.HeroSection} />
 
-      <PriceTable
-        lang={lang}
-        setSegmentPageName={() => {}}
-        isTableInHomePage
+      <PricingSectionWrapper
         textContent={textContent.tableSection}
-        couponCode={CouponType.freeUserCoupon}
-        useSameCouponForAllPlans={true}
-        hideFreeCard
+        decimalDiscount={{
+          individuals: 25,
+        }}
+        lang={locale}
+        products={products}
+        loadingCards={loadingCards}
+        onBusinessPlansSelected={onBusinessPlansSelected}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />
@@ -46,13 +94,14 @@ const FreeUserPage = ({ metatagsDescriptions, footerLang, navbarLang, lang, text
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
+      <MinimalFooter lang={locale} footerLang={footerLang.FooterSection} bgColor="bg-gray-1" />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/specialoffer/free-user.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);

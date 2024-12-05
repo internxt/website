@@ -19,7 +19,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+
+      - name: Create .env.local
+        run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
 
       - name: Install dependencies
         run: yarn install

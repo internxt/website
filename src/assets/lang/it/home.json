@@ -1,11 +1,12 @@
 {
   "HeroSection": {
-    "label": "Risparmia il 75%",
+    "label": "Risparmia il 70%",
     "title": {
-      "line1": "Archiviazione cloud sicura.",
-      "blueText": "Garantita."
+      "line1": "Ottieni il ",
+      "blueText": "più sicuro",
+      "line2": " archivio cloud"
     },
-    "subtitle": "Proteggi la tua privacy con la nostra suite open-source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
+    "subtitle": "Proteggi la tua privacy con la nostra suite open source di servizi cloud crittografati e sicuri. Internxt Drive, Send, e altro ancora.",
     "cta": {
       "title": "Ottieni",
       "subtitle": "1GB gratis"
@@ -44,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Archivia i tuoi file in modo sicuro, ora ",
-        "blueText": "75% più economico"
+        "blueText": "70% più economico"
       },
       "trustedBy": "Affidato da oltre 330.000 persone",
       "description": {
@@ -55,6 +56,25 @@
       "howMuchYouNeed": "Di quanto spazio di archiviazione online hai bisogno?",
       "upTo": "Fino a:",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    },
+    "TitleAndOnePlan": {
+      "title": {
+        "line1": "Archiviazione cloud sicura.",
+        "blueText": "Garantito."
+      },
+      "description": {
+        "normal1": "Ottieni il ",
+        "blue": "70% DI SCONTO ",
+        "normal2": "su tutti i piani premium"
+      },
+      "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source verificato"],
+      "startFrom": {
+        "normal1": "A partire da ",
+        "price": " 0.95",
+        "normal2": " /mese"
+      },
+      "claimDeal": "Ottieni l'offerta",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "youKnow": "Lo sapevi?"
   },
@@ -82,6 +102,34 @@
     ]
   },
   "tableSection": {
+    "planTitles": {
+      "individuals": "Piani individuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani aziendali",
+      "lifetimeCampaign": {
+        "blueText": "Sconto del 50%",
+        "normalText": "su tutti i nostri piani esclusivi a vita"
+      }
+    },
+    "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
+    "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annualmente",
+      "lifetime": "Vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Inizia con il nostro piano gratuito",
+      "enjoy10gb": "Goditi 1 GB per sempre e accedi a tutti i nostri servizi",
+      "upTo": "1 GB",
+      "freeForever": "Gratuito per sempre",
+      "cta": "Seleziona piano"
+    },
     "features": {
       "endToEnd": "Crittografia end-to-end",
       "openSource": "Open source e verificato",
@@ -97,7 +145,7 @@
   "FirstFeaturesSection": {
     "title": "Perché scegliere Internxt?",
     "subtitle": "Internxt ti restituisce il controllo dei tuoi dati con crittografia di livello militare e conoscenza zero.",
-    "description": "Utilizziamo codice open-source, che consente la verifica indipendente delle nostre pratiche di sicurezza. Internxt ti permette di possedere i tuoi dati, offrendo privacy e tranquillità ineguagliabili.",
+    "description": "Utilizziamo codice open source, che consente la verifica indipendente delle nostre pratiche di sicurezza. Internxt ti permette di possedere i tuoi dati, offrendo privacy e tranquillità ineguagliabili.",
     "cta": "Scegli lo storage"
   },
   "InfoSection": {

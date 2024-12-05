@@ -4,6 +4,7 @@ import CheckQuestions from './CheckQuestions';
 import { CyberSecurityQuizViews } from '@/lib/types';
 import Link from 'next/link';
 import Checkbox from '../components/Checkbox';
+import { getImage } from '@/lib/getImage';
 
 interface ViewProps {
   view: CyberSecurityQuizViews | undefined;
@@ -68,7 +69,7 @@ const View = (viewSelected: ViewProps | undefined) => {
             </div>
             <div className="flex flex-col">
               <img
-                src="/images/cyber-awareness/Frame.svg"
+                src={getImage('/images/cyber-awareness/Frame.svg')}
                 alt="quiz-laptop"
                 className="fixed right-0 top-0 hidden h-screen xl:flex 2xl:relative"
               />

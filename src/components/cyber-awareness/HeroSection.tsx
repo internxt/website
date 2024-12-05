@@ -1,7 +1,6 @@
-import React from 'react';
 import { useRouter } from 'next/router';
-import SignUpBanner from '@/components/banners/SignUpBanner';
 import Header from '@/components/shared/Header';
+import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 
 const HeroSection = ({ textContent, bannerText }) => {
   const router = useRouter();
@@ -18,8 +17,8 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="mt-5 text-lg font-normal">{textContent.paragraph1.body}</p>
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
-        <div className="mt-16 hidden w-full items-center justify-center lg:flex">
-          <SignUpBanner textContent={bannerText} lang={lang as string} />
+        <div className="flex justify-center pt-24">
+          <PriceBannerForCampaigns textContent={bannerText} redirectTo={'/pricing'} />
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 text-center md:p-20 md:pt-0 lg:text-left">

@@ -1,12 +1,12 @@
 import TextInput from '@/components/components/TextInput';
 import PasswordInput from '@/components/components/PasswordInput';
 import PrimaryButton from '@/components/components/PrimaryButton';
-import { signup } from '@/lib/auth';
 import { WarningCircle } from '@phosphor-icons/react';
 import { useEffect, useState } from 'react';
 import PasswordStrength from '@/components/components/PasswordStrength';
 import axios from 'axios';
 import testPasswordStrength from '@/components/auth/testPasswordStrength';
+import { signup } from '@/lib/auth';
 
 interface SignUpProps {
   textContent: any;
@@ -32,20 +32,26 @@ export default function SignUp(props: Readonly<SignUpProps>) {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    const form = event.target.elements;
+    const formData = new FormData(event.target);
+
+    const form = {
+      email: formData.get('email') as string,
+      password: formData.get('password') as string,
+      redeemCode: formData.get('redeemCode') as string,
+    };
 
     axios
       .get(`${window.origin}/api/check_code`, {
         params: {
-          code: form.redeemCode.value,
+          code: form.redeemCode,
           provider: props.provider,
         },
       })
-      .then((res) => {
+      .then(() => {
         signup({
-          email: form.email.value,
-          password: form.password.value,
-          redeemCode: form.redeemCode.value,
+          email: form.email,
+          password: form.password,
+          redeemCode: form.redeemCode,
           provider: props.provider,
         });
       })
@@ -90,6 +96,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           type="email"
           autoComplete="email"
           required
+          id="email"
           disabled={props.loading}
         />
 
@@ -98,6 +105,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
             name="password"
             placeholder={props.textContent.SignUp.fields.password.placeholder}
             autoComplete="password"
+            id="password"
             pattern={
               passwordState && (passwordState.tag === 'warning' || passwordState.tag === 'success')
                 ? '[\\s\\S]+'
@@ -115,6 +123,7 @@ export default function SignUp(props: Readonly<SignUpProps>) {
           placeholder={'Redeem Code'}
           type="text"
           autoComplete="email"
+          id="redeemCode"
           required
           disabled={props.loading}
         />

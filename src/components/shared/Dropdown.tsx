@@ -10,7 +10,7 @@ const Dropdown = ({
   buttonTitle: string;
   children: React.ReactNode;
   className: string;
-}) => {
+}): JSX.Element => {
   const [open, setOpen] = useState(false);
   return (
     <Menu>

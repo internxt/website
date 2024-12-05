@@ -5,6 +5,7 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=internxt_website&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=internxt_website)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=internxt_website&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=internxt_website)
 
+
 # Project Manteinance
 
 We aim to have:

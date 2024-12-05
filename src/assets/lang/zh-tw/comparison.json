@@ -1,9 +1,6 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "雲存儲",
-      "line2": "安全比較"
-    },
+    "title": "雲存儲安全比較",
     "description": "比較雲服務並選擇最適合您的安全雲存儲。",
     "cta": "免費切換到 Internxt",
 

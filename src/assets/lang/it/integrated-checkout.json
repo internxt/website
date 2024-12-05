@@ -1,0 +1,72 @@
+{
+  "title": "Ci sei quasi! Completa il pagamento in modo sicuro:",
+  "pay": "Paga",
+  "paying": "Pagando...",
+  "checkout": "Pagamento",
+  "authComponent": {
+    "signUp": {
+      "emailAddress": "Il tuo indirizzo email",
+      "password": "Crea una password"
+    },
+    "signIn": {
+      "emailAddress": "Il tuo indirizzo email",
+      "password": "La tua password"
+    },
+    "title": {
+      "signUp": "Crea un account",
+      "signIn": "Accedi",
+      "userIsSignedIn": "Utente connesso come"
+    },
+    "emailMustNotBeEmpty": "L'email non deve essere vuota",
+    "privacyGuarantee": "Garanzia di privacy: Non condividiamo le tue informazioni e ti contatteremo solo se necessario per fornire il nostro servizio."
+  },
+  "addressBillingTitle": "Indirizzo di Fatturazione",
+  "addressBilling": {
+    "optionalData": "Opzionale",
+    "companyName": "Nome dell'Azienda",
+    "companyVatId": "Partita IVA"
+  },
+  "paymentTitle": "Seleziona un metodo di pagamento",
+  "productCard": {
+    "title": "Riepilogo dell'ordine",
+    "selectedPlan": "Piano selezionato",
+    "renewalPeriod": {
+      "month": "mensile",
+      "year": "annuale",
+      "lifetime": "a vita"
+    },
+    "plan": {
+      "month": "{{spaceToUpgrade}} - 1 piano {{interval}}",
+      "year": "{{spaceToUpgrade}} - 1 piano {{interval}}",
+      "lifetime": "{{spaceToUpgrade}} - piano {{interval}}"
+    },
+    "billed": {
+      "month": "Fatturato mensilmente",
+      "year": "Fatturato annualmente",
+      "lifetime": "Pagamento unico"
+    },
+    "saving": "Stai risparmiando {{percent}}%",
+    "planDetails": {
+      "title": "Dettagli del piano:",
+      "features": [
+        "Tariffa minima mensile di 7€",
+        "Minimo di archiviazione di 1TB",
+        "Compatibile con AWS S3 e IAM API",
+        "Velocità aumentata",
+        "Archiviazione flessibile",
+        "Open source",
+        "Conforme al GDPR",
+        "Supporto clienti premium"
+      ]
+    },
+    "total": "Totale: ",
+    "addCoupon": {
+      "buttonTitle": "Aggiungi coupon",
+      "inputText": "Codice coupon",
+      "applyCodeButtonTitle": "Applica"
+    },
+    "amountSaved": "Risparmia ",
+    "withAnnualBilling": "con fatturazione annuale"
+  },
+  "oneTimePayment": "*È richiesta una tariffa una tantum di 1€ per la verifica dell'account"
+}

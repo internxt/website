@@ -9,7 +9,7 @@
     "cancelCta": "Annuler"
   },
   "FreeCardPromoBanner": {
-    "title": "Obtenez 75% de réduction sur tous nos plans Premium",
+    "title": "Obtenez une remise exclusive!",
     "subtitle": {
       "blue": "Offre spéciale :",
       "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
@@ -19,24 +19,40 @@
     "guarantee": "Garantie de remboursement de 30 jours"
   },
   "featuresBanner": {
-    "label": "Économisez jusqu'à 75%",
-    "title": "Sécurisez votre identité en ligne pour la vie.",
-    "cta": "Choisissez un plan",
+    "label": "Économisez 85% !",
+    "title": "Les meilleures offres du Black Friday",
+    "subtitle": "Recevez notre sac à dos premium avec nos plans à vie.",
+    "cta": "Choisissez votre plan",
     "guarantee": "Garantie de remboursement de 30 jours",
     "lastCta": "*L'offre est valable pour les comptes gratuits ou les nouveaux clients",
     "features": [
-      "Jusqu'à 75% de réduction sur tous les plans à vie",
-      "Stockage cloud sûr et sécurisé",
-      "Open source et transparent",
-      "Transferts chiffrés de bout en bout",
+      "Économisez gros sur tous les plans premium",
+      "Stockage cloud privé et crypté",
+      "Open source et audité",
+      "Transferts cryptés de bout en bout",
       "Aucun accès non autorisé",
-      "L'offre se termine le 18 avril"
+      "L'offre se termine le 3 décembre"
     ]
+  },
+  "s3StorageBanner": {
+    "label": "Disponible maintenant !",
+    "title": "Stockage d'objets compatible S3",
+    "feat": ["Jusqu'à 80% moins cher que AWS", "Sécurisé, évolutif, compatible S3", "Support natif de Rclone"],
+    "cta": "Obtenez 1TB gratuitement",
+    "offerEnds": "*Offre valable uniquement pour le premier mois"
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Internxt",
     "description": "Stockage en nuage basé sur la confidentialité.",
     "cta": "Essayez-le gratuitement"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Obtenez un stockage cloud chiffré de bout en bout sans coût supplémentaire.",
+    "blueText": " Rejoignez Internxt gratuitement"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "pour une solution de stockage cloud plus sécurisée, ouverte et économique.",
+    "blueText": "Passez à Internxt "
   },
   "SignUpPwdCheckerBanner": {
     "line1": "Saisissez votre mot de passe fort lors de la création",
@@ -65,7 +81,7 @@
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
-    "description": "Bénéficiez de 80% de réduction sur notre plan 2 To pendant un an.",
+    "description": "Bénéficiez de 75% de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
   },
@@ -81,9 +97,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Assurez vos buts, sur le terrain et dans le cloud.",
-      "normalText": "75% de réduction.",
-      "cta": "Choisissez votre plan"
+      "boldText": "85 % de réduction sur TOUS les plans premium.",
+      "normalText": "Super offre de Black Friday!",
+      "cta": "Achetez votre plan"
     }
   },
   "lifetimeBanner": {
@@ -99,7 +115,7 @@
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "75% DE RÉDUCTION sur tous les plans",
+    "cta": "75% DE RÉDUCTION",
     "guarantee": "Garantie de remboursement de 30 jours"
   }
 }

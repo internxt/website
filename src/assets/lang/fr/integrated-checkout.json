@@ -1,0 +1,72 @@
+{
+  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité :",
+  "pay": "Payer",
+  "paying": "Paiement en cours...",
+  "checkout": "Commander",
+  "authComponent": {
+    "signUp": {
+      "emailAddress": "Votre adresse email",
+      "password": "Créer un mot de passe"
+    },
+    "signIn": {
+      "emailAddress": "Votre adresse email",
+      "password": "Votre mot de passe"
+    },
+    "title": {
+      "signUp": "Créer un compte",
+      "signIn": "Se connecter",
+      "userIsSignedIn": "Utilisateur connecté en tant que"
+    },
+    "emailMustNotBeEmpty": "L'email ne doit pas être vide",
+    "privacyGuarantee": "Garantie de confidentialité : Nous ne partageons pas vos informations et ne vous contacterons que si nécessaire pour fournir notre service."
+  },
+  "addressBillingTitle": "Facturation d'Adresse",
+  "addressBilling": {
+    "optionalData": "Facultatif",
+    "companyName": "Nom de l'Entreprise",
+    "companyVatId": "Numéro de TVA"
+  },
+  "paymentTitle": "Sélectionnez un mode de paiement",
+  "productCard": {
+    "title": "Récapitulatif de la commande",
+    "selectedPlan": "Plan sélectionné",
+    "renewalPeriod": {
+      "month": "mensuel",
+      "year": "annuel",
+      "lifetime": "à vie"
+    },
+    "plan": {
+      "month": "{{spaceToUpgrade}} - 1 plan {{interval}}",
+      "year": "{{spaceToUpgrade}} - 1 plan {{interval}}",
+      "lifetime": "{{spaceToUpgrade}} - plan {{interval}}"
+    },
+    "billed": {
+      "month": "Facturé mensuellement",
+      "year": "Facturé annuellement",
+      "lifetime": "Paiement unique"
+    },
+    "saving": "Vous économisez {{percent}}%",
+    "planDetails": {
+      "title": "Détails du plan :",
+      "features": [
+        "Charge mensuelle minimale de 7€",
+        "Stockage minimum de 1TB",
+        "Compatible avec AWS S3 et IAM API",
+        "Vitesse accrue",
+        "Stockage flexible",
+        "Open source",
+        "Conforme au GDPR",
+        "Support client premium"
+      ]
+    },
+    "total": "Total : ",
+    "addCoupon": {
+      "buttonTitle": "Ajouter un coupon",
+      "inputText": "Code de coupon",
+      "applyCodeButtonTitle": "Appliquer"
+    },
+    "amountSaved": "Économisez ",
+    "withAnnualBilling": "avec facturation annuelle"
+  },
+  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte"
+}

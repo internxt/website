@@ -3,6 +3,8 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import navbarLang from '@/assets/lang/en/navbar.json';
 import footerLang from '@/assets/lang/en/footer.json';
 import { House, Lifebuoy, Question } from '@phosphor-icons/react';
+import { FooterText } from '@/assets/types/layout/types';
+
 export default function Custom404() {
   const cards = [
     {
@@ -41,6 +43,8 @@ export default function Custom404() {
             <div className="flex flex-row flex-wrap items-center justify-center gap-10">
               {cards.map((card, index) => (
                 <div
+                  tabIndex={0}
+                  onKeyDown={() => {}}
                   role="button"
                   className="flex h-full cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg bg-gray-1 px-4 py-8 text-center"
                   key={index}
@@ -57,7 +61,7 @@ export default function Custom404() {
           </div>
         </div>
       </section>
-      <Footer textContent={footerLang} lang={'en'} />
+      <Footer textContent={footerLang as FooterText} lang={'en'} />
     </>
   );
 }

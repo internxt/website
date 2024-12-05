@@ -27,6 +27,14 @@
     "individual": "Individual",
     "business": "Empresa"
   },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
+  },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
     "monthly": "Facturado mensualmente",
@@ -39,7 +47,7 @@
     "semiannually": "/6 meses",
     "annually": "/año"
   },
-  "perUserSlash": "/usuario",
+  "perUserSlash": "Por usuario/",
   "perUser": "Por usuario",
   "users": "usuarios",
   "freePlan": "Gratis",
@@ -87,41 +95,95 @@
       "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
       "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
     },
-    "200GB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "2TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "5TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ],
-    "10TB": [
-      "Compartir archivos y carpetas cifrados",
-      "Compartir archivos protegidos con contraseña",
-      "Accede a tus archivos desde cualquier dispositivo",
-      "Sube archivos de hasta 20 GB",
-      "Autenticación de dos factores (2FA)",
-      "Atención al cliente premium",
-      "Garantía de devolución de 30 días"
-    ]
+    "halloweenFeatures": {
+      "title": "Regalitos de Internxt",
+      "200GB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "1TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "2TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "5TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "10TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "tooltip": "Comprando cualquier plan lifetime!"
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Hasta ",
+        "bold": "4 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      },
+      "year": {
+        "normal": "Hasta ",
+        "bold": "3 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      },
+      "month": {
+        "normal": "Hasta ",
+        "bold": "2 veces más barato ",
+        "normal2": "que otras alternativas de almacenamiento en la nube seguro"
+      }
+    },
+    "individuals": {
+      "200GB": [
+        "200 GB de almacenamiento encriptado",
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "2TB": [
+        "2TB de almacenamiento encriptado",
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "5TB": [
+        "5TB de almacenamiento encriptado",
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ],
+      "10TB": [
+        "10TB de almacenamiento encriptado",
+        "Compartir archivos y carpetas cifrados",
+        "Compartir archivos protegidos con contraseña",
+        "Accede a tus archivos desde cualquier dispositivo",
+        "Sube archivos de hasta 20 GB",
+        "Autenticación de dos factores (2FA)",
+        "Atención al cliente premium",
+        "Garantía de devolución de 30 días"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB de almacenamiento/usuario",
+        "Compartir archivos y carpetas cifradas",
+        "Crear y gestionar usuarios y equipos",
+        "A partir de 3 usuarios y hasta 10",
+        "Cumple con el RGPD",
+        "Subir archivos de hasta 5GB",
+        "Gestionar la facturación y los pagos de la cuenta",
+        "Soporte al cliente premium"
+      ],
+      "2TB": [
+        "2TB de almacenamiento/usuario",
+        "Compartir archivos y carpetas cifrados",
+        "Crear y gestionar usuarios y equipos",
+        "A partir de 3 usuarios y hasta 100",
+        "Cumple con el RGPD",
+        "Subir archivos de hasta 20GB",
+        "Gestionar la facturación y los pagos de la cuenta",
+        "Soporte al cliente premium"
+      ]
+    }
   }
 }

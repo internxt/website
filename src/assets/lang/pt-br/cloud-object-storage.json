@@ -1,0 +1,177 @@
+{
+  "HeroSection": {
+    "title": {
+      "line1": "Internxt S3",
+      "line2": "Serviço de Armazenamento de Objetos na Nuvem"
+    },
+    "description": "Uma solução de armazenamento na nuvem segura, acessível e escalável para armazenar, acessar e gerenciar grandes volumes de dados.",
+    "cta": "Comece Agora"
+  },
+  "PredictablePricingSection": {
+    "title": "Preços Simples e Previsíveis, Sem Custos de API",
+    "description": "Esqueça tarifas imprevisíveis para armazenamento. A Internxt oferece tarifas simples baseadas no espaço de armazenamento com custos fixos mensais, sem custos ocultos.",
+    "info": [
+      {
+        "title": "100% Ativo",
+        "description": "Super rápido e sempre disponível"
+      },
+      {
+        "title": "Até 80% de Economia",
+        "description": "Mais barato que AWS"
+      },
+      {
+        "title": "Sem Custos",
+        "description": "Transferências de dados gratuitas"
+      }
+    ]
+  },
+  "PriceCardSection": {
+    "title": "O Armazenamento de Objetos da Internxt combina segurança e desempenho",
+    "description": "O armazenamento de objetos da Internxt é uma solução poderosa e acessível que está revolucionando a maneira de armazenar dados na nuvem, ideal para quem procura uma infraestrutura confiável, segura e de baixo custo.",
+    "payAsYouGoCard": {
+      "title": "Pague apenas pelo que usa!",
+      "description": "Pague apenas pelo espaço de armazenamento realmente utilizado."
+    },
+    "cardText": {
+      "label": "Internxt S3",
+      "perTB": "Custo por TB/mês",
+      "price": "7",
+      "cta": "Escolha o plano",
+      "whatsIncluded": {
+        "title": "Incluso:",
+        "features": [
+          "A partir de 7€/mês",
+          "Espaço mínimo de 1 TB",
+          "Compatível com AWS S3 e IAM",
+          "Velocidade aprimorada",
+          "Armazenamento flexível",
+          "Código aberto",
+          "Conformidade com GDPR",
+          "Suporte premium"
+        ]
+      }
+    },
+    "oneTimePayment": "*Pagamento único de 1€ para verificação de conta"
+  },
+  "HowMuchYouNeedSection": {
+    "title": "Quanto espaço de armazenamento você precisa?",
+    "description": "Use nossa calculadora de custos para descobrir quanto custaria armazenar seus objetos. Veja como nos comparamos com os líderes do mercado e como você pode economizar.",
+    "pay-as-you-go": "Pague pelo que usa",
+    "perMonth": "/mês",
+    "perYear": "/ano",
+    "storageAmount": "Quantidade de armazenamento",
+    "percentDownloadPerMonth": "Percentual de downloads mensais",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Por que escolher o armazenamento de objetos da Internxt?",
+    "description": "Os benefícios do armazenamento de objetos da Internxt estão em sua capacidade de gerenciar dados de maneira eficiente e segura.",
+    "cards": [
+      {
+        "title": "Sem custos de entrada ou saída",
+        "description": "Elimine custos imprevistos com a transferência de dados e mantenha seus custos previsíveis e acessíveis. Isso é especialmente útil para empresas que gerenciam grandes volumes de dados."
+      },
+      {
+        "title": "Cobrança por GB",
+        "description": "Com nossa estrutura de pagamento por uso, você paga apenas pelo espaço que realmente utiliza. O armazenamento de objetos é geralmente mais econômico do que o armazenamento de dados estruturados, que requer uma gestão mais complexa."
+      },
+      {
+        "title": "Durabilidade e disponibilidade",
+        "description": "Oferecemos um armazenamento de dados robusto com redundância em múltiplos servidores na Europa, protegendo seus arquivos contra perdas ou danos e garantindo uma durabilidade de 99,999999999% (11 noves)."
+      },
+      {
+        "title": "Segurança",
+        "description": "Nossas soluções de armazenamento em nuvem aplicam medidas de segurança em múltiplos níveis para proteger seus dados. Os dados são criptografados tanto durante a transferência quanto quando estão em repouso. Oferecemos suporte para o protocolo HTTPS e criptografia no lado do servidor (SSE-C) com chaves fornecidas pelo usuário."
+      },
+      {
+        "title": "Armazenamento simplificado",
+        "description": "O armazenamento de objetos da Internxt é fornecido por meio do protocolo S3, que permite um gerenciamento simples dos fluxos de dados e garante alta performance, alta durabilidade e segurança."
+      },
+      {
+        "title": "Velocidade",
+        "description": "O armazenamento de objetos permite operações simultâneas de leitura e escrita, aproveitando metadados ricos para um acesso mais rápido aos dados. Isso reduz o tempo de acesso e melhora a eficiência no gerenciamento de grandes volumes de dados."
+      }
+    ],
+    "bannerText": {
+      "title": "Armazenamento de Objetos da Internxt",
+      "description": "Aproveite um gerenciamento de dados incomparável, alta velocidade e desempenho superior",
+      "cta": "Comece Agora"
+    }
+  },
+  "FaqSection": {
+    "title": "Tem perguntas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O que é o armazenamento de objetos?",
+        "answer": [
+          "O armazenamento de objetos é um tipo de armazenamento que armazena grandes volumes de dados (como fotos, vídeos e e-mails) como objetos individuais, cada um com um identificador único.",
+          "Ao contrário do armazenamento de arquivos tradicional, o armazenamento de objetos mantém os dados em um espaço de endereços plano, geralmente em infraestrutura de armazenamento distribuído.",
+          "O armazenamento de objetos na nuvem é mais escalável, permite acesso rápido a objetos individuais e oferece custos mais baixos em comparação com o armazenamento tradicional."
+        ]
+      },
+      {
+        "question": "O que é o protocolo S3?",
+        "answer": [
+          "O protocolo S3 (Simple Storage Service) é um conjunto de especificações que define como acessar, armazenar e gerenciar dados no serviço de armazenamento S3 da Amazon Web Services (AWS)."
+        ]
+      },
+      {
+        "question": "Quanto espaço de armazenamento eu recebo?",
+        "answer": [
+          "O armazenamento de objetos da Internxt é escalável de acordo com suas necessidades. Nós cobramos com base nos GB realmente usados a cada mês, e você pode aumentar ou diminuir o espaço de armazenamento a qualquer momento."
+        ]
+      },
+      {
+        "question": "Posso integrar o armazenamento de objetos da Internxt com meus aplicativos e serviços existentes?",
+        "answer": [
+          "Sim, o armazenamento de objetos da Internxt é totalmente compatível com a API AWS S3, então você pode integrá-lo facilmente com uma ampla gama de aplicativos, ferramentas e serviços que suportam o protocolo S3.",
+          "A compatibilidade com S3 torna a Internxt uma solução ideal como complemento ou alternativa para armazenar e gerenciar objetos."
+        ]
+      },
+      {
+        "question": "O Internxt tem uma política de armazenamento mínimo?",
+        "answer": [
+          "O armazenamento de objetos da Internxt tem um espaço mínimo de 1 TB. Se você remover objetos armazenados dentro de 30 dias, serão cobrados os custos correspondentes para o espaço excluído, calculados com base nos dias restantes.",
+          "Isso é semelhante ao que oferecem outros grandes provedores de armazenamento como a AWS."
+        ]
+      },
+      {
+        "question": "A Internxt cobra taxas mensais pelo armazenamento?",
+        "answer": [
+          "A Internxt cobra uma taxa mensal mínima para 1 TB de espaço de armazenamento. Se você armazenar menos de 1 TB (como 4 KB), ainda será cobrado por 1 TB de espaço de armazenamento."
+        ]
+      },
+      {
+        "question": "O que acontece se armazenar arquivos pequenos (menos de 4 KB)?",
+        "answer": [
+          "A Internxt cobrará esses arquivos menores que 4 KB pelo mesmo preço de 1 TB, como para outros dados armazenados."
+        ]
+      },
+      {
+        "question": "Qual é a diferença entre armazenamento de objetos e armazenamento de arquivos?",
+        "answer": [
+          "O armazenamento de objetos armazena os dados em uma estrutura plana, onde cada arquivo é tratado como um objeto separado, enquanto o armazenamento de arquivos organiza os dados em uma estrutura hierárquica de árvore."
+        ]
+      },
+      {
+        "question": "Posso mover dados entre AWS S3 e Internxt?",
+        "answer": [
+          "Sim, o armazenamento de objetos da Internxt é compatível com a API AWS S3, o que significa que você pode mover facilmente os dados entre AWS S3 e Internxt usando nossa API simples e opções de configuração.",
+          "A compatibilidade com S3 torna a Internxt uma opção ideal para integrar ou substituir serviços existentes."
+        ]
+      },
+      {
+        "question": "Quão rápido é o armazenamento de objetos da Internxt?",
+        "answer": [
+          "A Internxt utiliza uma rede de servidores distribuídos para otimizar o acesso aos dados armazenados, permitindo uma recuperação rápida das informações e escalabilidade dos dados para atender às suas necessidades."
+        ]
+      },
+      {
+        "question": "Posso testar o armazenamento de objetos da Internxt gratuitamente?",
+        "answer": [
+          "Sim, você pode testar o armazenamento de objetos da Internxt gratuitamente. Nosso plano de teste inclui 1 TB de espaço, permitindo que você experimente as funcionalidades e o desempenho da Internxt."
+        ]
+      }
+    ]
+  }
+}

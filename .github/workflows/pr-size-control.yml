@@ -1,0 +1,46 @@
+name: PR Size Checker
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check_pr_size:
+    name: Check PR size doesn't break set limit
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the code with full history
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # Calculate PR size
+      - name: Calculate PR size
+        id: calculate_pr_size
+        run: |
+          size=$(git diff --stat origin/main \
+          | grep -v .lock \
+          | awk -F"|" '{ print $2 }' \
+          | awk '{ print $1 }' \
+          | sed '/^$/d' \
+          | paste -sd+ - \
+          | bc)
+
+          echo "size=${size}" >> $GITHUB_ENV
+          echo ""
+          echo "Total lines changed (note: *.lock files are excluded from this count):"
+          echo $size
+        shell: bash
+
+      # Check if PR size exceeds limit
+      - name: Validate PR size
+        run: |
+          if [[ $size -gt 500 ]]; then
+            echo "Warning - total lines changed is greater than 500."
+            echo "Please consider breaking this PR down."
+            exit 1
+          else
+            echo "PR size is within acceptable limits."
+          fi
+        shell: bash

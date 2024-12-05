@@ -47,21 +47,45 @@ module.exports = {
   async redirects() {
     return [
       // REDIRECTS TO HOME
-      ...['/cloud', '/roadmap', '/home', '/core', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
-        (src) => ({
-          source: src,
-          destination: '/',
-          permanent: false,
-        }),
-      ),
+      ...[
+        '/cloud',
+        '/roadmap',
+        '/home',
+        '/core',
+        '/default.html',
+        '/default.htm',
+        '/merch',
+        '/giveawayoftheday',
+        '/child-safety-ebook',
+        '/use-cases',
+        '/internxt-library',
+        '/online-privacy-ebook',
+        '/token',
+      ].map((src) => ({
+        source: src,
+        destination: '/',
+        permanent: false,
+      })),
       // REDIRECTS TO HOME (WITH LANG)
-      ...['/cloud', '/roadmap', '/home', '/core', '/default.html', '/default.htm', '/merch', '/giveawayoftheday'].map(
-        (src) => ({
-          source: `/:lang${src}`,
-          destination: '/:lang',
-          permanent: false,
-        }),
-      ),
+      ...[
+        '/cloud',
+        '/roadmap',
+        '/home',
+        '/core',
+        '/default.html',
+        '/default.htm',
+        '/merch',
+        '/giveawayoftheday',
+        '/child-safety-ebook',
+        '/use-cases',
+        '/internxt-library',
+        '/online-privacy-ebook',
+        '/token',
+      ].map((src) => ({
+        source: `/:lang${src}`,
+        destination: '/:lang',
+        permanent: false,
+      })),
       // =======================================================
       // REDIRECTS TO PRICING
       ...['/sharewareonsale', '/special-offer', '/pricing-individuals-annually'].map((src) => ({
@@ -181,7 +205,15 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST],
+    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST, 'haveibeenpwned.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: process.env.CLOUDFLARE_STATIC_ASSETS_HOST,
+        port: '',
+        pathname: '/website/**',
+      },
+    ],
   },
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,

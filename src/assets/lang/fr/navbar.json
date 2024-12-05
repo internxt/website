@@ -7,7 +7,8 @@
     "login": "Se connecter",
     "getStarted": "Commencer",
     "chooseStorage": "Choisir le stockage",
-    "checkout": "Offre de réclamation"
+    "checkout": "Offre de réclamation",
+    "business": "Entreprises"
   },
   "ourValues": {
     "openSource": "Open Source",
@@ -15,6 +16,7 @@
   },
   "products": {
     "drive": "Internxt Drive",
+    "s3": "Internxt S3",
     "webDAV": "Internxt WebDAV",
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
