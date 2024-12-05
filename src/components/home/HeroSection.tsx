@@ -1,5 +1,4 @@
 import dynamic from 'next/dynamic';
-
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
@@ -17,6 +16,16 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
+function getSecureRandom(min, max) {
+  if (typeof window !== 'undefined' && window.crypto) {
+    const randomBuffer = new Uint32Array(1);
+    window.crypto.getRandomValues(randomBuffer);
+    const randomValue = randomBuffer[0] / (0xffffffff + 1);
+    return randomValue * (max - min) + min;
+  }
+
+  return Math.random() * (max - min) + min;
+}
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
@@ -73,12 +82,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   key={i}
                   className={`absolute animate-fall rounded-full bg-white opacity-75`}
                   style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    width: `${Math.random() * 8 + 2}px`,
-                    height: `${Math.random() * 8 + 2}px`,
-                    animationDelay: `${Math.random() * 5}s`,
-                    animationDuration: `${Math.random() * 20 + 10}s`,
+                    top: `${getSecureRandom(0, 100)}%`,
+                    left: `${getSecureRandom(0, 100)}%`,
+                    width: `${getSecureRandom(2, 10)}px`,
+                    height: `${getSecureRandom(2, 10)}px`,
+                    animationDelay: `${getSecureRandom(0, 5)}s`,
+                    animationDuration: `${getSecureRandom(10, 30)}s`,
                   }}
                 ></div>
               ))}
