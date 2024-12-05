@@ -217,6 +217,7 @@ module.exports = {
         'rotate-tree': 'rotate-tree 3s linear infinite',
         'float-sock': 'float-sock 1.5s ease-in-out infinite',
         'move-vertical': 'move-vertical 5s linear infinite',
+        fall: 'fall 5s linear infinite',
       },
 
       keyframes: {
@@ -252,10 +253,9 @@ module.exports = {
           '50%': { transform: 'translateY(-15px)' },
           '100%': { transform: 'translateY(0)' },
         },
-        'sleigh-vertical-snow': {
-          '0%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-25px)' },
-          '100%': { transform: 'translateY(0)' },
+        fall: {
+          '0%': { transform: 'translateY(-100vh)', opacity: '1' },
+          '100%': { transform: 'translateY(100vh)', opacity: '0' },
         },
       },
 

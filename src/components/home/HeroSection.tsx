@@ -67,18 +67,25 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           <div className="relative pt-20">
+            <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
+              {[...Array(120)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`absolute animate-fall rounded-full bg-white opacity-75`}
+                  style={{
+                    top: `${Math.random() * 100}%`,
+                    left: `${Math.random() * 100}%`,
+                    width: `${Math.random() * 8 + 2}px`,
+                    height: `${Math.random() * 8 + 2}px`,
+                    animationDelay: `${Math.random() * 5}s`,
+                    animationDuration: `${Math.random() * 20 - 10}s`,
+                  }}
+                ></div>
+              ))}
+            </div>
             <div className="hidden h-max w-max py-20 lg:flex">
               <Link href="/pricing">
                 <div className="relative h-[400px] w-[600px] animate-sleigh-vertical">
-                  <Image
-                    src={getImage('/images/christmas/snow.png')}
-                    alt="Snow Background"
-                    draggable={false}
-                    quality={100}
-                    height={506}
-                    width={542}
-                    className="absolute animate-sleigh-vertical-snow object-cover"
-                  />
                   <Image
                     src={getImage('/images/christmas/internxt_christmas_discount.webp')}
                     alt="Internxt Secure Cloud Storage"
