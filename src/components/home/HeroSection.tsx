@@ -9,7 +9,6 @@ import { Check } from '@phosphor-icons/react';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import Link from 'next/link';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
@@ -17,6 +16,12 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
+function getRandomInt(min, max) {
+  const randomBuffer = new Uint32Array(1);
+  window.crypto.getRandomValues(randomBuffer); // Generate a cryptographically secure random value
+  const randomNumber = randomBuffer[0] / (0xffffffff + 1); // Normalize to [0, 1)
+  return Math.floor(randomNumber * (max - min + 1)) + min; // Scale to desired range
+}
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
@@ -73,12 +78,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   key={i}
                   className={`absolute animate-fall rounded-full bg-white opacity-75`}
                   style={{
-                    top: `${Math.random() * 100}%`,
-                    left: `${Math.random() * 100}%`,
-                    width: `${Math.random() * 8 + 2}px`,
-                    height: `${Math.random() * 8 + 2}px`,
-                    animationDelay: `${Math.random() * 5}s`,
-                    animationDuration: `${Math.random() * 20 + 10}s`,
+                    top: `${getRandomInt(0, 100)}%`,
+                    left: `${getRandomInt(0, 100)}%`,
+                    width: `${getRandomInt(2, 10)}px`,
+                    height: `${getRandomInt(2, 10)}px`,
+                    animationDelay: `${getRandomInt(0, 5)}s`,
+                    animationDuration: `${getRandomInt(10, 30)}s`,
                   }}
                 ></div>
               ))}
