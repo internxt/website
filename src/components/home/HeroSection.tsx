@@ -24,9 +24,9 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-      <div className="relative flex h-full flex-col bg-white pt-16">
+      <div className="relative flex h-full flex-col bg-white pt-16 xl:mx-32">
         {/* Desktop version */}
-        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:py-10">
+        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:py-10 ">
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
