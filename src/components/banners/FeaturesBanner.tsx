@@ -44,7 +44,7 @@ const FeaturesBanner = () => {
     <div
       className={`${
         showBanner ? 'flex' : 'hidden'
-      } fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0 `}
+      } fixed bottom-0 left-0 right-0 top-0 z-50 h-screen bg-black bg-opacity-50 px-10 lg:px-0`}
     >
       <div
         className={
@@ -98,7 +98,7 @@ const FeaturesBanner = () => {
           </div>
         </div>
         <div className="fixed bottom-0 left-0 right-0 flex w-full items-center justify-center bg-primary py-4 text-center text-white">
-          🎄 Christmas Web App Theme + Chance to win up to 10TB of storage!
+          {textContent.featuresBanner.lastCta}
         </div>
       </div>
     </div>
