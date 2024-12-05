@@ -17,15 +17,15 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
               loading="lazy"
               src={getImage('/logos/featured/techradar.svg')}
               draggable={false}
-              width="94"
-              height="16"
+              width="171"
+              height="28"
               alt="techradar logo"
             />
 
             <Image
               src={getImage('/logos/featured/wired.svg')}
-              width={82}
-              height={16}
+              width={113}
+              height={22}
               alt="Wired logo"
               loading="lazy"
               draggable={false}
@@ -33,8 +33,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/itsfoss-logo.webp')}
-              width={73}
-              height={15}
+              width={110}
+              height={27}
               alt="Its Foss logo"
               loading="lazy"
               draggable={false}
@@ -42,8 +42,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/zdnet.svg')}
-              width={83}
-              height={16}
+              width={118}
+              height={21}
               alt="ZDNet logo"
               loading="lazy"
               draggable={false}
@@ -51,8 +51,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/toms_guide.svg')}
-              width={113}
-              height={20}
+              width={161}
+              height={28}
               alt="Toms logo"
               loading="lazy"
               draggable={false}
@@ -60,8 +60,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/heise_online.svg')}
-              width={128}
-              height={24}
+              width={181}
+              height={34}
               alt="Heise logo"
               loading="lazy"
               draggable={false}

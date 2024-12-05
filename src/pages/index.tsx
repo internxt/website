@@ -46,7 +46,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
+    couponCode: PromoCodeName.Christmas,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
