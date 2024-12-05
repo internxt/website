@@ -48,13 +48,14 @@ export const HomePageBannerForMobile = (redirectTo) => {
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover py-4">
+        <div className="flex h-auto w-full justify-center py-4">
           <Image
             src={getImage('/images/christmas/christmas_mobile.webp')}
-            width={280}
-            height={160}
-            alt="Christmas Mobile image"
-            className="w-full rounded-b-[16px] object-cover"
+            width={600}
+            height={300}
+            alt="Christmas Discount Image"
+            className="h-auto w-full rounded-b-[16px] object-cover"
+            priority
           />
         </div>
       </div>
