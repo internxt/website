@@ -17,14 +17,10 @@ interface HeroSectionForHomeProps {
 }
 
 function getSecureRandom(min, max) {
-  if (typeof window !== 'undefined' && window.crypto) {
-    const randomBuffer = new Uint32Array(1);
-    window.crypto.getRandomValues(randomBuffer);
-    const randomValue = randomBuffer[0] / (0xffffffff + 1);
-    return randomValue * (max - min) + min;
-  }
-
-  return Math.random() * (max - min) + min;
+  const randomBuffer = new Uint32Array(1);
+  crypto.getRandomValues(randomBuffer);
+  const randomValue = randomBuffer[0] / (0xffffffff + 1);
+  return randomValue * (max - min) + min;
 }
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
