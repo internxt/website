@@ -104,15 +104,6 @@
       "10TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
       "tooltip": "Achetez un forfait à vie pour avoir une chance de gagner !"
     },
-    "christmasFeatures": {
-      "title": "Cadeaux du Père Noël : ",
-      "200GB": ["Participez à notre tirage Secret Santa", "Thème de l'application Web de Noël"],
-      "1TB": ["Participez à notre tirage Secret Santa", "Thème de l'application Web de Noël"],
-      "2TB": ["Participez à notre tirage Secret Santa", "Thème de l'application Web de Noël"],
-      "5TB": ["Participez à notre tirage Secret Santa", "Thème de l'application Web de Noël"],
-      "10TB": ["Participez à notre tirage Secret Santa", "Thème de l'application Web de Noël"],
-      "tooltip": "Gagnez jusqu'à 10 To de stockage gratuit !"
-    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Jusqu'à ",

@@ -105,15 +105,6 @@
       "10TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
       "tooltip": "Acquista un piano a vita per avere la possibilità di vincere!"
     },
-    "christmasFeatures": {
-      "title": "Regali di Babbo Natale: ",
-      "200GB": ["Partecipa alla nostra lotteria Secret Santa", "Tema dell'App Web di Natale"],
-      "1TB": ["Partecipa alla nostra lotteria Secret Santa", "Tema dell'App Web di Natale"],
-      "2TB": ["Partecipa alla nostra lotteria Secret Santa", "Tema dell'App Web di Natale"],
-      "5TB": ["Partecipa alla nostra lotteria Secret Santa", "Tema dell'App Web di Natale"],
-      "10TB": ["Partecipa alla nostra lotteria Secret Santa", "Tema dell'App Web di Natale"],
-      "tooltip": "Vinci fino a 10TB di spazio di archiviazione gratuito!"
-    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Fino a ",
