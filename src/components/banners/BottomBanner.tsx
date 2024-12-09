@@ -33,10 +33,10 @@ const BottomBanner = () => {
     switch (lang) {
       case 'en':
         return {
-          title1: 'Save 85%',
+          title1: 'Save 80%',
           title2: {
-            line1: 'Back to',
-            line2: 'Black Friday!',
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
       case 'es':

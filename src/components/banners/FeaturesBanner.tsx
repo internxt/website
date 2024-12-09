@@ -87,18 +87,44 @@ const FeaturesBanner = () => {
           <div className="hidden w-full items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
-                {textContent.featuresBanner.features.map((card) => (
-                  <div className="flex flex-row space-x-4" key={card}>
-                    <Snowflake size={32} className="text-red" />
-                    <p className="text-lg font-semibold text-gray-80 ">{card}</p>
-                  </div>
-                ))}
+                {textContent.featuresBanner.features.map((card, index) => {
+                  if (index === textContent.featuresBanner.features.length - 2) {
+                    return (
+                      <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
+                        <div className="flex">
+                          <Snowflake size={32} className="mr-4 text-red" />
+                          <p className="text-lg font-semibold text-gray-80">{card}</p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="text-lg font-semibold text-red">
+                            {textContent.featuresBanner.features[index + 1]}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  }
+
+                  if (index === textContent.featuresBanner.features.length - 1) {
+                    return null;
+                  }
+                  return (
+                    <div
+                      className={`flex flex-row space-x-4 ${
+                        index === textContent.featuresBanner.features.length - 1 ? 'font-bold text-red' : ''
+                      }`}
+                      key={index}
+                    >
+                      <Snowflake size={32} className="text-red" />
+                      <p className="text-lg font-semibold text-gray-80">{card}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>
         </div>
         <div className="fixed bottom-0 left-0 right-0 flex w-full items-center justify-center bg-primary py-4 text-center text-white">
-          {textContent.featuresBanner.lastCta}
+          🎄{textContent.featuresBanner.subtitle}
         </div>
       </div>
     </div>
