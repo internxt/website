@@ -41,10 +41,10 @@ const BottomBanner = () => {
         };
       case 'es':
         return {
-          title1: 'Ahorra 85%',
+          title1: '80% en TODOS los planes.',
           title2: {
-            line1: 'De vuelta',
-            line2: 'al Black Friday!',
+            line1: 'Estas Navidades,',
+            line2: 'ahorros a lo grande! ',
           },
         };
       case 'ru':
@@ -111,7 +111,7 @@ const BottomBanner = () => {
       case 'en':
         return 'Claim deal';
       case 'es':
-        return 'Reclamar oferta';
+        return 'Consigue tu plan';
       case 'ru':
         return 'Получить скидку';
       case 'fr':
@@ -157,8 +157,8 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-white">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-white">
+              <p className={`font-bold text-white ${lang === 'es' ? 'text-4xl' : 'text-6xl'}`}>{title().title1}</p>
+              <p className={`max-w-[370px] font-semibold text-white ${lang === 'es' ? 'text-xl' : 'text-2xl'}`}>
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
