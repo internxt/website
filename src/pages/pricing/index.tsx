@@ -152,6 +152,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           CustomDescription={
             <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
           }
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

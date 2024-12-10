@@ -105,6 +105,15 @@
       "10TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
       "tooltip": "Kaufen Sie einen Lifetime-Plan für die Chance zu gewinnen!"
     },
+    "christmasFeatures": {
+      "title": "Die Geschenke des Weihnachtsmanns:",
+      "200GB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "1TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "2TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "5TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "10TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "tooltip": "Gewinnen Sie bis zu 10TB freien Speicher!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Bis zu ",
