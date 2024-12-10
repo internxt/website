@@ -27,7 +27,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="70"
+        percent="80"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
@@ -35,10 +35,10 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.SoftSales}
+        couponCode={PromoCodeName.Christmas}
         discount={discount}
         lang={lang}
-        percent={'70%'}
+        percent={'80%'}
         showPriceBefore
         lifetimeMode="celebration"
       />
