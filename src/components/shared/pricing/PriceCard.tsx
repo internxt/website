@@ -136,7 +136,7 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      <div className="mx-auto w-fit space-y-2 bg-red px-4 py-3">
+      <div className="mx-auto w-full space-y-2 bg-red px-4 py-3">
         <p className="text-sm font-bold text-white">{contentText.productFeatures.christmasFeatures.title}</p>
         {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
           <div className="flex items-start space-x-2 text-left" key={feature}>
