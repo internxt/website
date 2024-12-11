@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CheckCircle, Snowflake, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('2025-01-07');
+const HIDE_BANNER_DATE = new Date('4-01-07');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
