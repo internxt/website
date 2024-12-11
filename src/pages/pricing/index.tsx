@@ -150,7 +150,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           CustomDescription={
-            <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">
+              {textContent.tableSection.planDescription}
+            </span>
           }
           hideSwitchSelector
         />
