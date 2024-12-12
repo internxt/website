@@ -48,9 +48,9 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 85%!",
-    "title": "The best Black Friday deals",
-    "subtitle": "Win our premium backpack with our lifetime plans.",
+    "label": "Save 80%!",
+    "title": "Secret Santa surprise!",
+    "subtitle": "Christmas Web App Theme + Chance to win up to 10TB of storage!",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
     "lastCta": "*Offer is for free accounts or new customers",
@@ -60,7 +60,8 @@
       "Open-source and audited",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends December 3rd"
+      "Offer ends",
+      "January 7"
     ]
   },
   "s3StorageBanner": {
@@ -145,9 +146,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% off ALL premium plans for Black Friday!",
-      "normalText": "Black by popular demand!",
-      "cta": "Buy plan"
+      "boldText": "80% off ALL premium plans!",
+      "normalText": "It’s the most wonderful time of the year!",
+      "cta": "Claim deal"
     }
   },
   "lifetimeBanner": {
