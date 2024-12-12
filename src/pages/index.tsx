@@ -119,7 +119,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         CustomDescription={
-          <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">
+            {textContent.tableSection.planDescription}
+          </span>
         }
         hideSwitchSelector
       />
