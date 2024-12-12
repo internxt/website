@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CheckCircle, Snowflake, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('4-01-07');
+const HIDE_BANNER_DATE = new Date('2024-01-07');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
@@ -87,38 +87,26 @@ const FeaturesBanner = () => {
           <div className="hidden w-full items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
-                {textContent.featuresBanner.features.map((card, index) => {
-                  if (index === textContent.featuresBanner.features.length - 2) {
-                    return (
-                      <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
-                        <div className="flex">
-                          <Snowflake size={32} className="mr-4 text-red" />
-                          <p className="text-lg font-semibold text-gray-80">{card}</p>
-                        </div>
-                        <div className="flex flex-row">
-                          <p className="text-lg font-semibold text-red">
-                            {textContent.featuresBanner.features[index + 1]}
-                          </p>
-                        </div>
+                {textContent.featuresBanner.features.map((card, index) =>
+                  index === textContent.featuresBanner.features.length - 2 ? (
+                    <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
+                      <div className="flex">
+                        <Snowflake size={32} className="mr-4 text-red" />
+                        <p className="text-lg font-semibold text-gray-80">{card}</p>
                       </div>
-                    );
-                  }
-
-                  if (index === textContent.featuresBanner.features.length - 1) {
-                    return null;
-                  }
-                  return (
-                    <div
-                      className={`flex flex-row space-x-4 ${
-                        index === textContent.featuresBanner.features.length - 1 ? 'font-bold text-red' : ''
-                      }`}
-                      key={index}
-                    >
+                      <div className="flex flex-row">
+                        <p className="text-lg font-semibold text-red">
+                          {textContent.featuresBanner.features[index + 1]}
+                        </p>
+                      </div>
+                    </div>
+                  ) : index === textContent.featuresBanner.features.length - 1 ? null : (
+                    <div className="flex flex-row space-x-4" key={index}>
                       <Snowflake size={32} className="text-red" />
                       <p className="text-lg font-semibold text-gray-80">{card}</p>
                     </div>
-                  );
-                })}
+                  ),
+                )}
               </div>
             </div>
           </div>
