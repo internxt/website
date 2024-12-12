@@ -6,9 +6,8 @@ import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check } from '@phosphor-icons/react';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
-import Header from '../shared/Header';
 const Animation = dynamic(() => import('./components/Animation'));
-import Image from 'next/image';
+
 interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
   lang: string;
