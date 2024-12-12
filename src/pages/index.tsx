@@ -121,6 +121,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         CustomDescription={
           <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
         }
+        hideSwitchSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

@@ -33,74 +33,74 @@ const BottomBanner = () => {
     switch (lang) {
       case 'en':
         return {
-          title1: 'Save 85%',
+          title1: 'Save 80%',
           title2: {
-            line1: 'Back to',
-            line2: 'Black Friday!',
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra 85%',
+          title1: '80% en TODOS los planes.',
           title2: {
-            line1: 'De vuelta',
-            line2: 'al Black Friday!',
+            line1: 'Estas Navidades,',
+            line2: 'ahorros a lo grande! ',
           },
         };
       case 'ru':
         return {
-          title1: 'Сэкономьте 85%',
+          title1: 'Сэкономьте 80%',
           title2: {
-            line1: 'Назад к',
-            line2: 'Чёрной пятнице!',
+            line1: 'Рождественские скидки',
+            line2: 'уже здесь!',
           },
         };
       case 'fr':
         return {
-          title1: 'Économisez 85 %',
+          title1: 'Économisez 80%',
           title2: {
-            line1: 'Retour',
-            line2: 'au Black Friday!',
+            line1: 'Économies de Noël',
+            line2: 'sont là!',
           },
         };
       case 'it':
         return {
-          title1: 'Risparmia il 85%',
+          title1: 'Risparmia il 80%',
           title2: {
-            line1: 'Torna il',
-            line2: 'Black Friday!',
+            line1: 'Risparmi di Natale',
+            line2: 'sono qui!',
           },
         };
       case 'zh':
         return {
-          title1: '节省85%',
+          title1: '节省 80%',
           title2: {
-            line1: '',
-            line2: '回到黑色星期五！',
+            line1: '圣诞节省钱',
+            line2: '已经到来！',
           },
         };
       case 'zh-tw':
         return {
-          title1: '節省 85%',
+          title1: '節省 80%',
           title2: {
-            line1: '',
-            line2: '回到黑色星期五！',
+            line1: '聖誕節省錢',
+            line2: '已經到來！',
           },
         };
       case 'de':
         return {
-          title1: 'Spare 85%',
+          title1: 'Sparen Sie 80%',
           title2: {
-            line1: 'Zurück zum',
-            line2: 'Black Friday!',
+            line1: 'Weihnachtssparen',
+            line2: 'ist hier!',
           },
         };
       default:
         return {
-          title1: 'Save 85%',
+          title1: 'Save 80%',
           title2: {
-            line1: 'Back to',
-            line2: 'Black Friday!',
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
     }
@@ -111,7 +111,7 @@ const BottomBanner = () => {
       case 'en':
         return 'Claim deal';
       case 'es':
-        return 'Reclamar oferta';
+        return 'Consigue tu plan';
       case 'ru':
         return 'Получить скидку';
       case 'fr':
@@ -157,8 +157,8 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-white">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-white">
+              <p className={`font-bold text-white ${lang === 'es' ? 'text-4xl' : 'text-6xl'}`}>{title().title1}</p>
+              <p className={`max-w-[370px] font-semibold text-white ${lang === 'es' ? 'text-xl' : 'text-2xl'}`}>
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
