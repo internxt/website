@@ -100,12 +100,12 @@ const FeaturesBanner = () => {
                         </p>
                       </div>
                     </div>
-                  ) : index === textContent.featuresBanner.features.length - 1 ? null : (
+                  ) : index !== textContent.featuresBanner.features.length - 1 ? (
                     <div className="flex flex-row space-x-4">
                       <Snowflake size={32} className="text-red" />
                       <p className="text-lg font-semibold text-gray-80">{card}</p>
                     </div>
-                  ),
+                  ) : null,
                 )}
               </div>
             </div>
