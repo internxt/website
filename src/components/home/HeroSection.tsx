@@ -5,6 +5,7 @@ import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check } from '@phosphor-icons/react';
+import Link from 'next/link';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 const Animation = dynamic(() => import('./components/Animation'));
 
