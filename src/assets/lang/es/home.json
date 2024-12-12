@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Ahorra un 80%",
+    "label": "Ahorra un 70%",
     "title": {
       "line1": "El almacenamiento ",
       "line2": "en la nube",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "80% más barato"
+        "blueText": "70% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% DE DESCUENTO ",
-        "normal2": "en todos los planes"
+        "blue": "80% de descuento",
+        "normal2": "en los planes Premium"
       },
       "features": ["Hasta 10TB de almacenamiento", "Criptografía postcuántica", "Código abierto y auditado"],
       "startFrom": {

@@ -34,7 +34,9 @@ module.exports = {
       'teal-dark': 'rgb(45,164,185)',
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
-      highlight:'rgba(17, 17, 17, 1)',
+      highlight: 'rgba(17, 17, 17, 1)',
+      green8: 'rgb(50, 195, 86, 0.08)',
+      red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
         5: 'rgb(243,243,248)',
@@ -163,6 +165,10 @@ module.exports = {
           '0%, 100%': { top: '0%' },
           '50%': { top: '100%' },
         },
+        'scroll-x': {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       transitionDelay: {
         250: '250ms',
@@ -187,6 +193,7 @@ module.exports = {
       },
       rotate: {
         10: '10deg',
+        sleigh: '-7deg',
       },
       scale: {
         98: '.98',
@@ -203,21 +210,55 @@ module.exports = {
         'scroll-y-reverse': '60s linear scroll-y reverse infinite',
         'spin-slow': 'spin 3s linear infinite',
         'spin-refresh': 'spin 1s',
+        'scroll-x': 'scroll-x 10s linear infinite',
+        'sleigh-vertical': 'sleigh-vertical 3s ease-in-out infinite',
+        'sleigh-vertical-snow': 'sleigh-vertical-snow 4s ease-in-out infinite',
+        'move-candy-stick': 'move-candy-stick 2s ease-in-out infinite',
+        'rotate-tree': 'rotate-tree 3s linear infinite',
+        'float-sock': 'float-sock 1.5s ease-in-out infinite',
+        'move-vertical': 'move-vertical 5s linear infinite',
+        fall: 'fall 5s linear infinite',
       },
+
       keyframes: {
         'fade-r-large': {
           '0%': { transform: 'translateX(80px)', opacity: 0 },
-          '100%': { transform: 'translateX(0px)', opacity: 100 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         'fade-r': {
           '0%': { transform: 'translateX(24px)', opacity: 0 },
-          '100%': { transform: 'translateX(0px)', opacity: 100 },
+          '100%': { transform: 'translateX(0px)', opacity: 1 },
         },
         'scroll-y': {
           '0%': { transform: 'translateY(0%)' },
           '100%': { transform: 'translateY(25%)' },
         },
+        'sleigh-vertical': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'move-candy-stick': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'rotate-tree': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        'float-sock': {
+          '0%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-15px)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        fall: {
+          '0%': { transform: 'translateY(-100vh)', opacity: '1' },
+          '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
       },
+
       aspectRatio: {
         '1/1': '1 / 1',
         '4/3': '4 / 3',

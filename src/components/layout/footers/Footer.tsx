@@ -444,6 +444,17 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
+                    <Link
+                      href="/dark-web-monitor"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -458,10 +469,15 @@ export default function Footer({
 
             {/* Logos */}
             <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
-             {lang !== 'es' ? (
+              {lang !== 'es' ? (
                 <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
               ) : (
-                <Image src={getImage('/icons/social/gdpr-internxt-2.jpg')} alt="GDPR Internxt" width={180} height={48} />
+                <Image
+                  src={getImage('/icons/social/gdpr-internxt-2.jpg')}
+                  alt="GDPR Internxt"
+                  width={180}
+                  height={48}
+                />
               )}
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
@@ -849,6 +865,9 @@ export default function Footer({
                       </Link>
                       <Link href="/file-converter" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.fileConverter}
+                      </Link>
+                      <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
+                        {textContent.FooterSection.sections.tools.haveIBeenPwned}
                       </Link>
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}

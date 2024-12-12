@@ -74,6 +74,14 @@
     "description": "Sichere Dateispeicherung mit passwortgeschützter Technologie für deine Dateien.",
     "cta": "Melde dich kostenlos an"
   },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Erhalte Ende-zu-Ende verschlüsselten Cloud-Speicher ohne zusätzliche Kosten.",
+    "blueText": " Melde dich kostenlos bei Internxt an"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "für eine sicherere, offene und kosteneffektive Cloud-Speicherlösung.",
+    "blueText": "Wechsle zu Internxt "
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Verwende dieses sichere Passwort mit einem",
     "blueText": "kostenlosen Internxt Konto"
@@ -111,9 +119,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85 % Rabatt auf ALLE Premium-Pläne.",
-      "normalText": "Super Black Friday Angebot!",
-      "cta": "Kaufe deinen Plan"
+      "boldText": "80% Rabatt auf ALLE Premium-Pläne!",
+      "normalText": "Es ist die schönste Zeit des Jahres!",
+      "cta": "Angebot sichern"
     }
   },
   "lifetimeBanner": {

@@ -73,9 +73,9 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       </div>
 
       {footer ?? (
-        <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-30 lg:justify-start">
+        <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-primary" />
-          <p className="whitespace-nowrap text-gray-100 lg:text-lg ">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap text-white lg:text-lg ">{textContent.guarantee}</p>
         </div>
       )}
     </div>

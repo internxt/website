@@ -37,16 +37,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 85%",
-      "title": "Tödliche Halloween-Rabatte",
-      "subtitle": "Der Black Friday ist da!",
+      "label": "Sparen Sie 80%",
+      "title": "Halloween-Verkauf",
+      "subtitle": "Hören Sie das Läuten der Verkaufsglocken!",
       "cta": "Wähle deinen Plan",
       "cta2": "Erhalte 85% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
       "lastCta": "*Das Angebot gilt nur für kostenlose Konten oder Neukunden",
-      "titleMbl1": " Der Black Friday",
-      "titleMbl2": "ist da!",
-      "titleMbl3": "",
+      "titleMbl1": "Weihnachten",
+      "titleMbl2": "Ersparnisse",
+      "titleMbl3": "sind hier!",
       "ctaMbl": "Plan auswählen"
     },
     "planTitles": {

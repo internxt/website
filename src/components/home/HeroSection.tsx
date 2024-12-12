@@ -1,7 +1,10 @@
 import dynamic from 'next/dynamic';
+import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
+import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import Header from '../shared/Header';
+import { Check } from '@phosphor-icons/react';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import Header from '../shared/Header';
 const Animation = dynamic(() => import('./components/Animation'));
@@ -12,10 +15,13 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
+function getSecureRandom(min, max) {
+  const randomBuffer = new Uint32Array(1);
+  crypto.getRandomValues(randomBuffer);
+  const randomValue = randomBuffer[0] / (0xffffffff + 1);
+  return randomValue * (max - min) + min;
+}
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
-  const { dialogIsOpen } = useGlobalDialog();
-  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const previewImg = getImage('/images/lifetime/file_item.webp');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
@@ -28,10 +34,93 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <TitleAndOnePlan textContent={titleAndOnePlanText} />
+            <TitleAndOnePlan
+              textContent={titleAndOnePlanText}
+              header={
+                <div className="flex flex-col gap-9">
+                  <div className="flex flex-col gap-4">
+                    <Header maxWidth="max-w-[500px]" className="text-white">
+                      {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
+                      {textContent.title.line2}{' '}
+                    </Header>
+                  </div>
+                  <p className="text-xl font-bold text-white">
+                    {textContent.TitleAndOnePlan.description.normal1}
+                    <span className="text-primary">{textContent.TitleAndOnePlan.description.blue}</span>
+                    {textContent.TitleAndOnePlan.description.normal2}
+                  </p>
+                  <div className="mx-auto flex flex-col gap-2 lg:mx-0">
+                    {titleAndOnePlanText.features.map((feat) => (
+                      <div className="flex flex-row gap-2" key={feat}>
+                        <Check className="text-green" weight="bold" size={24} />
+                        <p className="text-lg font-semibold text-white">{feat}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              }
+            />
           </div>
-          <div className="hidden h-[580px] w-full lg:flex">
-            <Animation previewImg={previewImg} />
+
+          <div className="relative pt-20">
+            <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
+              {[...Array(150)].map((_, i) => (
+                <div
+                  key={i}
+                  className={`absolute animate-fall rounded-full bg-white opacity-75`}
+                  style={{
+                    top: `${getSecureRandom(0, 100)}%`,
+                    left: `${getSecureRandom(0, 100)}%`,
+                    width: `${getSecureRandom(2, 10)}px`,
+                    height: `${getSecureRandom(2, 10)}px`,
+                    animationDelay: `${getSecureRandom(0, 5)}s`,
+                    animationDuration: `${getSecureRandom(10, 30)}s`,
+                  }}
+                ></div>
+              ))}
+            </div>
+            <div className="hidden h-max w-max py-20 lg:flex">
+              <Link href="/pricing">
+                <div className="relative h-[400px] w-[600px] animate-sleigh-vertical">
+                  <Image
+                    src={getImage('/images/christmas/internxt_christmas_discount.webp')}
+                    alt="Internxt Secure Cloud Storage"
+                    draggable={false}
+                    quality={100}
+                    width={562}
+                    height={540}
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-sleigh transform object-cover"
+                  />
+                  <Image
+                    src={getImage('/images/christmas/candy_stick.webp')}
+                    alt="Candy Stick"
+                    draggable={false}
+                    quality={100}
+                    width={100}
+                    height={119}
+                    className="absolute bottom-[0%] left-[50%] animate-[move-candy-stick_2s_ease-in-out_infinite] object-cover"
+                  />
+                  <Image
+                    src={getImage('/images/christmas/christmas_tree.webp')}
+                    alt="Christmas Tree"
+                    draggable={false}
+                    quality={100}
+                    width={100}
+                    height={100}
+                    className="absolute left-[5%] top-[5%] animate-[rotate-tree_3s_linear_infinite] object-cover"
+                  />
+                  <Image
+                    src={getImage('/images/christmas/sock.webp')}
+                    alt="Sock"
+                    draggable={false}
+                    quality={100}
+                    width={86}
+                    height={153}
+                    className="absolute right-[-10%] top-[25%] animate-[float-sock_1.5s_ease-in-out_infinite] object-cover"
+                  />
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
         {/* Mobile version */}

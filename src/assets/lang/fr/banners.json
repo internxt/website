@@ -46,6 +46,14 @@
     "description": "Stockage en nuage basé sur la confidentialité.",
     "cta": "Essayez-le gratuitement"
   },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Obtenez un stockage cloud chiffré de bout en bout sans coût supplémentaire.",
+    "blueText": " Rejoignez Internxt gratuitement"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "pour une solution de stockage cloud plus sécurisée, ouverte et économique.",
+    "blueText": "Passez à Internxt "
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Saisissez votre mot de passe fort lors de la création",
     "blueText": "d'un compte Internxt"
@@ -89,9 +97,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85 % de réduction sur TOUS les plans premium.",
-      "normalText": "Super offre de Black Friday!",
-      "cta": "Achetez votre plan"
+      "boldText": "80% de réduction sur TOUS les plans premium!",
+      "normalText": "C’est la plus belle période de l’année!",
+      "cta": "Profitez de l'offre"
     }
   },
   "lifetimeBanner": {

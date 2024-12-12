@@ -74,6 +74,14 @@
     "description": "Secure file storage with password-protected technology for your files.",
     "cta": "Sign up for free"
   },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Ottieni storage cloud crittografato end-to-end senza costi aggiuntivi.",
+    "blueText": " Unisciti a Internxt gratuitamente"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "per una soluzione di storage cloud più sicura, aperta ed economica.",
+    "blueText": "Passa a Internxt "
+  },
   "SignUpPwdCheckerBanner": {
     "line1": "Utilizzate la vostra password forte con un",
     "blueText": "conto Internxt gratuito"
@@ -117,9 +125,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% di sconto su TUTTI i piani premium.",
-      "normalText": "Super offerta per il Black Friday!",
-      "cta": "Acquista il tuo piano"
+      "boldText": "80% di sconto su TUTTI i piani premium!",
+      "normalText": "È il periodo più bello dell'anno!",
+      "cta": "Richiedi l'offerta"
     }
   },
   "lifetimeBanner": {

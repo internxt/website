@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BlackFriday,
+    couponCode: PromoCodeName.Christmas,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -150,8 +150,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
           CustomDescription={
-            <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">
+              {textContent.tableSection.planDescription}
+            </span>
           }
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

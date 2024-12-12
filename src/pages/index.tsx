@@ -38,7 +38,16 @@ interface HomeProps {
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
-  const { products, loadingCards, currencyValue } = usePricing();
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    businessCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Christmas,
+  });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -82,7 +91,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
 
       <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
@@ -105,7 +114,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         CustomDescription={
           <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
         }
-        backgroundColorComponent="bg-white"
+        hideSwitchSelector
       />
 
       <ComponentsInColumnSection

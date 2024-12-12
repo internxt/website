@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "80% cheaper"
+        "blueText": "70% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% off ",
+        "blue": "Get 80% off ",
         "normal2": "all premium plans"
       },
       "features": ["Up to 10TB storage", "Post-quantum encryption", "Open source and audited"],
