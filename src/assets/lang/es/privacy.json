@@ -26,9 +26,9 @@
         "title": "Código abierto",
         "description": "Cada bit de nuestro código es de código abierto y está publicado en GitHub. Todos nuestros sistemas son de conocimiento público y pueden ser autenticados de manera independiente. Revísalo por ti mismo."
       },
-      "endToEnd": {
-        "title": "Cifrado de extremo a extremo",
-        "description": "Todos los datos que almacenas con Internxt están cifrados de extremo a extremo con AES-256. Eso significa que el procesador más poderoso del mundo necesitaría el doble de la edad del universo para descifrar incluso un pequeño archivo."
+      "postQuantum": {
+        "title": "Criptografía post-cuántica",
+        "description": "Internxt es uno de los primeros productos de privacidad en utilizar criptografía post-cuántica, ofreciendo la mayor protección para tu privacidad en línea. Tus archivos están protegidos hoy y seguirán siendo seguros en el futuro."
       },
       "zeroKnowledge": {
         "title": "Tecnología de conocimiento cero",
@@ -50,24 +50,24 @@
   },
   "InxtAppsSection": {
     "title": {
-      "line1": "Aplicaciones diseñadas para proteger",
-      "line2": "tu información"
+      "line1": "Los productos más seguros para ",
+      "line2": "protegerte en línea"
     },
     "subtitle": "Los productos gratuitos de las grandes empresas tecnológicas no son realmente gratuitos, pagas con datos personales. Nuestros productos nunca venderán tu información ni tus datos. Cuando decimos gratis, lo decimos en serio.",
     "square1": {
-      "title": "Drive te permite elegir qué almacenar y compartir",
-      "description": "Drive no accede a tus datos personales o archivos, en su lugar fue diseñado desde cero para devolverte el control sobre tus archivos y protegerte de recolectores de datos y compañías de publicidad. Protege tu almacenamiento.",
-      "cta": "Recupera el control sobre tus archivos"
+      "title": "Internxt Drive",
+      "description": "Recupera el control de tus archivos y datos con Internxt Drive. Almacenar y hacer copias de seguridad de tus archivos en completa privacidad nunca fue tan fácil. El almacenamiento en la nube moderno se encuentra con la encriptación de grado militar.",
+      "cta": "Asegura con Drive"
     },
     "square2": {
-      "title": "Con Photos, la privacidad siempre está en primer plano",
-      "description": "Photos se desarrolló para ayudarte a mantener una galería sincronizada de tus momentos más perfectos sin temer por tu privacidad y sin preocuparte por la pérdida repentina de datos. Recuerdos respaldados, seguros y protegidos.",
-      "cta": "Sincroniza tus fotos y recuerdos"
+      "title": "Internxt Send",
+      "description": "Send te permite encriptar de extremo a extremo y compartir archivos grandes rápidamente sin preocuparte por la seguridad de tus documentos, imágenes o videos. Transfiere a cualquier persona con total confidencialidad.",
+      "cta": "Comparte con Send"
     },
     "square3": {
-      "title": "Envía con total certeza",
-      "description": "Send te permite cifrar y compartir archivos grandes sin preocuparte por la seguridad de tus documentos, imágenes o videos. Transfiere a cualquiera con total confidencialidad.",
-      "cta": "Envía un archivo cifrado"
+      "title": "Internxt VPN",
+      "description": "Internxt VPN encripta y asegura tu conexión a internet, protegiéndote de fugas de datos, hackers y ataques a la red. Mantén tus datos privados y protegidos de miradas curiosas.",
+      "cta": "Navega con VPN"
     }
   },
   "FaqSection": {

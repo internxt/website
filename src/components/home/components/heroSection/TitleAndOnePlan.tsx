@@ -51,9 +51,9 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       )}
 
       <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-white">
+        <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-white">
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
@@ -67,7 +67,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         >
           {textContent.claimDeal}
         </Link>
-        <div className="flex w-full max-w-[177px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-primary shadow-sm">
+        <div className="flex w-full max-w-[177px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-gray-100 shadow-sm">
           <Countdown textFont="font-medium" textHeight="text-xl" />
         </div>
       </div>
