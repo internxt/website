@@ -106,7 +106,7 @@ const FeaturesBanner = () => {
                     );
                   } else if (isNotLast) {
                     return (
-                      <div className="flex flex-row space-x-4" key={index}>
+                      <div className="flex flex-row space-x-4">
                         <Snowflake size={32} className="text-red" />
                         <p className="text-lg font-semibold text-gray-80">{card}</p>
                       </div>
