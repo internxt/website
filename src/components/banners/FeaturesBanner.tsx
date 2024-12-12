@@ -87,26 +87,33 @@ const FeaturesBanner = () => {
           <div className="hidden w-full items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
-                {textContent.featuresBanner.features.map((card, index) =>
-                  index === textContent.featuresBanner.features.length - 2 ? (
-                    <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
-                      <div className="flex">
-                        <Snowflake size={32} className="mr-4 text-red" />
+                {textContent.featuresBanner.features.map((card, index) => {
+                  const isSecondToLast = index === textContent.featuresBanner.features.length - 2;
+                  const isNotLast = index !== textContent.featuresBanner.features.length - 1;
+                  if (isSecondToLast) {
+                    return (
+                      <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
+                        <div className="flex">
+                          <Snowflake size={32} className="mr-4 text-red" />
+                          <p className="text-lg font-semibold text-gray-80">{card}</p>
+                        </div>
+                        <div className="flex flex-row">
+                          <p className="text-lg font-semibold text-red">
+                            {textContent.featuresBanner.features[index + 1]}
+                          </p>
+                        </div>
+                      </div>
+                    );
+                  } else if (isNotLast) {
+                    return (
+                      <div className="flex flex-row space-x-4" key={index}>
+                        <Snowflake size={32} className="text-red" />
                         <p className="text-lg font-semibold text-gray-80">{card}</p>
                       </div>
-                      <div className="flex flex-row">
-                        <p className="text-lg font-semibold text-red">
-                          {textContent.featuresBanner.features[index + 1]}
-                        </p>
-                      </div>
-                    </div>
-                  ) : index !== textContent.featuresBanner.features.length - 1 ? (
-                    <div className="flex flex-row space-x-4">
-                      <Snowflake size={32} className="text-red" />
-                      <p className="text-lg font-semibold text-gray-80">{card}</p>
-                    </div>
-                  ) : null,
-                )}
+                    );
+                  }
+                  return null;
+                })}
               </div>
             </div>
           </div>
