@@ -472,12 +472,7 @@ export default function Footer({
               {lang !== 'es' ? (
                 <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
               ) : (
-                <Image
-                  src={getImage('/icons/social/gdpr-internxt-2.jpg')}
-                  alt="GDPR Internxt"
-                  width={180}
-                  height={48}
-                />
+                <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
               )}
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
