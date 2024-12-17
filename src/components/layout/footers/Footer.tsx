@@ -963,6 +963,11 @@ export default function Footer({
             </div>
           </div>
         </footer>
+        {lang === 'es' && (
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-sm font-medium text-cool-gray-100">
+            {textContent.FooterSection.financialProject}
+          </p>
+        )}
       </div>
     </section>
   );
