@@ -11,7 +11,7 @@ import { CardGroup } from '@/components/shared/CardGroup';
 import { Globe, Lightbulb, Recycle, SealPercent } from '@phosphor-icons/react';
 
 import CtaSection from '@/components/sustainability/CtaSection';
-import FeatureSectionV3 from '@/components/sustainability/FeatureSectionv3';
+
 import FeatureSection from '@/components/sustainability/FeatureSection';
 import HeroSection from '@/components/sustainability/HeroSection';
 
@@ -79,7 +79,6 @@ const Sustainability = ({
         }
         backgroundColor="bg-white"
       />
-      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
 
       <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
 
