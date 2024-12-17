@@ -46,7 +46,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
+    couponCode: PromoCodeName.Christmas,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -119,8 +119,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         CustomDescription={
-          <span className="text-regular text-xl text-gray-80">{textContent.tableSection.planDescription}</span>
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">
+            {textContent.tableSection.planDescription}
+          </span>
         }
+        hideSwitchSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

@@ -73,7 +73,7 @@ const PaymentSection = ({
 
                     <span className="text-5xl font-bold text-primary">
                       {formatText(title.blueText, {
-                        percent: percent ?? '70',
+                        percent: percent ?? '80',
                       })}
                     </span>
                   </p>
@@ -89,7 +89,7 @@ const PaymentSection = ({
                     {title.previousBlueText && <span>{title.previousBlueText}</span>}
                     <span className="text-primary">
                       {formatText(title.blueText, {
-                        percent: percent ?? '70',
+                        percent: percent ?? '80',
                       })}
                     </span>
                     {title.postBlueText && <span>{title.postBlueText}</span>}
