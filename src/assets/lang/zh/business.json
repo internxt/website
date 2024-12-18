@@ -33,22 +33,22 @@
     "description": "使用我们的企业安全云存储优化您的组织文件管理、安全和隐私。",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "管理您的组织",
         "description": "Internxt 使企业能够管理组织成员、自定义工作区并管理账户计费和付款。轻松切换您的 Internxt 商业和个人账户以优化生产力和文件组织。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "部门间的安全文件共享",
         "description": "安全云存储包括在不同部门之间进行安全文件共享的功能，以便团队安全协作。通过密码保护和限制文件访问来发送机密文件给合作伙伴，确保您对其安全性保持控制。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "会话管理",
         "description": "Internxt 云存储提供高级会话管理，提供实时登录通知和详细的远程会话监控（客户端、操作系统、IP、位置、最后活跃时间）。这种高级别的安全性使账户管理者能够检测未授权访问、有效管理会话并保护敏感数据。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "灵活的存储分配",
         "description": "Internxt 为您的团队提供灵活的存储分配，以根据您的需要升级存储。通过我们的计划，您可以添加用户，根据需要分配存储，并在必要时增加容量，确保成本效益、可扩展性和资源的最佳利用。"
       },

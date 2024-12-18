@@ -33,22 +33,22 @@
     "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube seguro para negocios.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "Gestiona tu organización",
         "description": "Internxt empodera a las empresas con funciones para gestionar miembros de tu organización, personalizar espacios de trabajo y gestionar la facturación y pagos de tu cuenta. Cambia fácilmente entre tu cuenta de negocio y personal de Internxt para optimizar la productividad y organización de archivos."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "Compartición segura de archivos entre departamentos",
         "description": "El almacenamiento en la nube seguro incluye funciones de compartición de archivos seguras dentro de diferentes departamentos para colaborar de manera segura en equipos. Protege con contraseña y restringe el acceso a archivos para enviar archivos confidenciales a socios, asegurando que mantienes el control sobre su seguridad."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "Gestión de sesiones",
         "description": "El almacenamiento en la nube de Internxt ofrece gestión avanzada de sesiones, proporcionando notificaciones de inicio de sesión en tiempo real y monitoreo detallado de sesiones remotas (cliente, SO, IP, ubicación, última hora activa). Este nivel de seguridad permite al administrador de la cuenta detectar accesos no autorizados, gestionar sesiones de manera eficiente y proteger datos sensibles."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "Asignación flexible de almacenamiento",
         "description": "Internxt ofrece a tu equipo una asignación flexible completa de almacenamiento para aumentar tu capacidad según tus necesidades. Con nuestros planes, puedes añadir usuarios, asignar almacenamiento según las necesidades y aumentar la capacidad según sea necesario, asegurando eficiencia de costos, escalabilidad y utilización óptima de recursos."
       },

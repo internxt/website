@@ -33,22 +33,22 @@
     "description": "Optimisez la gestion, la sécurité et la confidentialité des fichiers de votre organisation avec notre stockage cloud sécurisé pour les entreprises.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "Gérez votre organisation",
         "description": "Internxt permet aux entreprises de gérer les membres de votre organisation, personnaliser les espaces de travail et gérer la facturation et les paiements de votre compte. Passez facilement entre vos comptes professionnels et personnels Internxt pour optimiser la productivité et l'organisation des fichiers."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "Partage de fichiers sécurisé entre départements",
         "description": "Le stockage cloud sécurisé inclut des fonctionnalités de partage de fichiers sécurisé au sein des différents départements pour collaborer en toute sécurité en équipe. Protégez par mot de passe et restreignez l'accès aux fichiers pour envoyer des fichiers confidentiels à des partenaires, en vous assurant de maintenir leur sécurité."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "Gestion des sessions",
         "description": "Le stockage cloud Internxt offre une gestion avancée des sessions, fournissant des notifications de connexion en temps réel et une surveillance détaillée des sessions à distance (client, OS, IP, localisation, dernière activité). Cette sécurité de haut niveau permet au gestionnaire de compte de détecter les accès non autorisés, de gérer les sessions efficacement et de protéger les données sensibles."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "Allocation flexible du stockage",
         "description": "Internxt offre à votre équipe une allocation de stockage flexible pour augmenter votre stockage en fonction de vos besoins. Avec nos plans, vous pouvez ajouter des utilisateurs, allouer du stockage selon les besoins et augmenter la capacité si nécessaire, garantissant ainsi l'efficacité des coûts, l'évolutivité et l'utilisation optimale des ressources."
       },

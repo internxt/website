@@ -33,22 +33,22 @@
     "description": "Ottimizza la gestione dei file, la sicurezza e la privacy della tua organizzazione con la nostra archiviazione cloud sicura per aziende.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "Gestisci la tua organizzazione",
         "description": "Internxt consente alle aziende di gestire i membri della tua organizzazione, personalizzare gli spazi di lavoro e gestire la fatturazione e i pagamenti del tuo account. Passa facilmente tra i tuoi account aziendali e personali Internxt per ottimizzare la produttività e l'organizzazione dei file."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "Condivisione sicura dei file tra reparti",
         "description": "L'archiviazione cloud sicura include funzionalità di condivisione dei file sicura all'interno dei diversi reparti per collaborare in sicurezza in team. Proteggi con password e limita l'accesso ai file per inviare file confidenziali ai partner, garantendo di mantenere il controllo sulla loro sicurezza."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "Gestione delle sessioni",
         "description": "L'archiviazione cloud Internxt offre una gestione avanzata delle sessioni, fornendo notifiche di accesso in tempo reale e un monitoraggio dettagliato delle sessioni remote (client, OS, IP, posizione, ultimo tempo di attività). Questa sicurezza di alto livello consente al gestore dell'account di rilevare accessi non autorizzati, gestire le sessioni in modo efficiente e proteggere i dati sensibili."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "Allocazione flessibile dello spazio di archiviazione",
         "description": "Internxt offre al tuo team un'allocazione flessibile dello spazio di archiviazione per aumentare il tuo spazio in base alle tue esigenze. Con i nostri piani, puoi aggiungere utenti, allocare lo spazio di archiviazione in base alle necessità e aumentare la capacità se necessario, garantendo efficienza dei costi, scalabilità e utilizzo ottimale delle risorse."
       },
