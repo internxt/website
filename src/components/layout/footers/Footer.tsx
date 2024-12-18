@@ -959,7 +959,7 @@ export default function Footer({
           </div>
         </footer>
         {lang === 'es' && (
-          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-sm font-medium text-cool-gray-100">
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
             {textContent.FooterSection.financialProject}
           </p>
         )}
