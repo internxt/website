@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "Asignación flexible de almacenamiento",
         "description": "Internxt ofrece a tu equipo una asignación flexible completa de almacenamiento para aumentar tu capacidad según tus necesidades. Con nuestros planes, puedes añadir usuarios, asignar almacenamiento según las necesidades y aumentar la capacidad según sea necesario, asegurando eficiencia de costos, escalabilidad y utilización óptima de recursos."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Registros de Acceso",
+        "description": "Monitoriza fácilmente la actividad del equipo con un registro de actividad completo, que ofrece una visión clara de las interacciones con archivos y el acceso de los usuarios. Rastrea quién ha iniciado sesión, subido o modificado archivos, brindándote control total y garantizando la seguridad de los datos en todo tu equipo."
       }
     ]
   },

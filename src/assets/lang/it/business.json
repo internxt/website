@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "Allocazione flessibile dello spazio di archiviazione",
         "description": "Internxt offre al tuo team un'allocazione flessibile dello spazio di archiviazione per aumentare il tuo spazio in base alle tue esigenze. Con i nostri piani, puoi aggiungere utenti, allocare lo spazio di archiviazione in base alle necessità e aumentare la capacità se necessario, garantendo efficienza dei costi, scalabilità e utilizzo ottimale delle risorse."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Registri di Accesso",
+        "description": "Monitora facilmente l'attività del tuo team con un registro completo delle attività, che offre una visione chiara delle interazioni con i file e degli accessi degli utenti. Tieni traccia di chi ha effettuato l'accesso, caricato o modificato file, garantendoti un controllo totale e assicurando la sicurezza dei dati all'interno del tuo team."
       }
     ]
   },

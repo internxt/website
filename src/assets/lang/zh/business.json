@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "灵活的存储分配",
         "description": "Internxt 为您的团队提供灵活的存储分配，以根据您的需要升级存储。通过我们的计划，您可以添加用户，根据需要分配存储，并在必要时增加容量，确保成本效益、可扩展性和资源的最佳利用。"
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "访问日志",
+        "description": "通过完整的活动日志轻松监控团队活动，提供文件交互和用户访问的清晰视图。跟踪谁已登录、上传或修改了文件，确保您对团队数据的完全控制，保障数据安全。"
       }
     ]
   },

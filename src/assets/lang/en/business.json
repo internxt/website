@@ -33,24 +33,29 @@
     "description": "Optimize your organization's file management, security, and privacy with our secure cloud storage for business.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "Manage your organization",
         "description": "Internxt empowers businesses with features to manage members of your organization, customize workspaces, and manage your account billing and payments.  Easily switch between your Internxt business and personal accounts to optimize productivity and file organization."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "Secure file sharing between departments",
         "description": "Secure cloud storage includes secure file-sharing features within different departments to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "Session management",
         "description": "Internxt cloud storage offers advanced session management, providing real-time login notifications and detailed remote session monitoring (client, OS, IP, location, last active time). This high-level security allows the account manager to detect unauthorized access, manage sessions efficiently, and protect sensitive data."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "Flexible storage allocation",
         "description": "Internxt gives your team full flexible storage allocation to upgrade your storage based on your needs. With our plans, you can add users, allocate storage based on needs, and increase capacity as necessary, ensuring cost efficiency, scalability, and optimal resource utilization."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Access Logs",
+        "description": "Easily monitor team activity with a comprehensive activity log, offering a clear view of file interactions and user access. Track who has signed in, uploaded, or modified files, giving you total control and ensuring data security across your team."
       }
     ]
   },

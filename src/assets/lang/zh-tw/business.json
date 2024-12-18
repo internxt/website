@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "靈活的存儲分配",
         "description": "Internxt 為您的團隊提供靈活的存儲分配，以根據您的需要升級存儲。通過我們的計劃，您可以添加用戶，根據需要分配存儲，並在必要時增加容量，確保成本效益、可擴展性和資源的最佳利用。"
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "訪問日誌",
+        "description": "透過完整的活動日誌輕鬆監控團隊活動，提供清晰的檔案互動與使用者訪問視圖。追蹤誰已登入、上傳或修改檔案，讓您對團隊資料擁有完全控制，確保資料安全。"
       }
     ]
   },

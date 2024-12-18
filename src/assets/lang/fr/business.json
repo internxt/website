@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "Allocation flexible du stockage",
         "description": "Internxt offre à votre équipe une allocation de stockage flexible pour augmenter votre stockage en fonction de vos besoins. Avec nos plans, vous pouvez ajouter des utilisateurs, allouer du stockage selon les besoins et augmenter la capacité si nécessaire, garantissant ainsi l'efficacité des coûts, l'évolutivité et l'utilisation optimale des ressources."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Journaux d'accès",
+        "description": "Surveillez facilement l'activité de votre équipe grâce à un journal d'activité complet, offrant une vue claire des interactions avec les fichiers et des accès des utilisateurs. Suivez qui s'est connecté, a téléchargé ou modifié des fichiers, vous donnant un contrôle total et garantissant la sécurité des données au sein de votre équipe."
       }
     ]
   },

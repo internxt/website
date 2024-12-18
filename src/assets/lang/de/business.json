@@ -51,6 +51,11 @@
         "imagePathname": "internxt_b2b_feature_4",
         "selectorTab": "Flexible Speicherzuweisung",
         "description": "Internxt bietet Ihrem Team eine flexible Speicherzuweisung, um Ihren Speicherbedarf zu decken. Mit unseren Plänen können Sie Benutzer hinzufügen, Speicher je nach Bedarf zuweisen und die Kapazität bei Bedarf erhöhen, wodurch Kosten, Skalierbarkeit und optimale Ressourcennutzung gewährleistet werden."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Zugriffsprotokolle",
+        "description": "Überwachen Sie ganz einfach die Aktivitäten Ihres Teams mit einem umfassenden Aktivitätsprotokoll, das einen klaren Überblick über Datei-Interaktionen und Benutzerzugriffe bietet. Verfolgen Sie, wer sich angemeldet, Dateien hochgeladen oder geändert hat, und behalten Sie die volle Kontrolle, um die Datensicherheit in Ihrem Team zu gewährleisten."
       }
     ]
   },
