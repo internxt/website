@@ -10,15 +10,20 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import cookies from '@/lib/cookies';
+import { GetServerSidePropsContext } from 'next';
 
-const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }) => {
+const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
+      <ComparisonHeader
+        maxWithForTitle={'max-w-[600px]'}
+        textContent={langJson.HeaderSection}
+        redirectUrl={'/pricing'}
+      />
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -37,7 +42,7 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = 'en';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

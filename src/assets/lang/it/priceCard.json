@@ -29,7 +29,11 @@
   },
   "businessLabels": {
     "1TB": "Standard",
-    "2TB": "Pro"
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
   },
   "billingFrequencyLabel": {
     "lifetime": "Pagamento unico",
@@ -92,6 +96,24 @@
       "5TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App"],
       "10TB": ["Sfondi di Star Wars", "Tema di Star Wars per Web App", "Adesivi di Star Wars"]
     },
+    "halloweenFeatures": {
+      "title": "Gadget a tema Internxt:",
+      "200GB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "1TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "2TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "5TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "10TB": ["Zaino Internxt x Swiss Peak", "Tema di Halloween per l'app Web"],
+      "tooltip": "Acquista un piano a vita per avere la possibilità di vincere!"
+    },
+    "christmasFeatures": {
+      "title": "I regali di Babbo Natale:",
+      "200GB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
+      "1TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
+      "2TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
+      "5TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
+      "10TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
+      "tooltip": "Vinci fino a 10TB di spazio di archiviazione gratuito!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Fino a ",
@@ -111,6 +133,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -120,6 +143,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "2TB": [
+        "2TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -129,6 +153,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "5TB": [
+        "5TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",
@@ -138,6 +163,7 @@
         "Garanzia di rimborso di 30 giorni"
       ],
       "10TB": [
+        "10TB di archiviazione crittografata",
         "Condivisione crittografata di file e cartelle",
         "Condivisione protetta da password",
         "Accedi ai tuoi file da qualsiasi dispositivo",

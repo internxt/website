@@ -4,7 +4,6 @@ const Header = ({
   className,
   textHeightForDesk = 'sm:text-5xl',
   withoutLeading,
-  isToolsPage,
 }: {
   children: React.ReactNode;
   maxWidth?: string;
@@ -12,7 +11,7 @@ const Header = ({
   withoutLeading?: boolean;
   isToolsPage?: boolean;
   textHeightForDesk?: string;
-}) => {
+}): JSX.Element => {
   const leading = withoutLeading ? '' : 'sm:leading-tight';
   return (
     <h1

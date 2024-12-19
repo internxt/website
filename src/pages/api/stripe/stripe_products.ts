@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export interface Product {
@@ -11,25 +10,50 @@ export interface Product {
 }
 
 const PRODUCTS_URL = `${process.env.NEXT_PUBLIC_PAYMENTS_API}/prices`;
-export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<Product | void> {
+const CACHE_EXPIRY_TIME = 12 * 60 * 60 * 1000;
+
+const cachedProductsData: {
+  timestamp: number;
+  data: {
+    individuals: Product[];
+    business: Product[];
+  } | null;
+} = {
+  timestamp: 0,
+  data: null,
+};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse): Promise<void> {
   if (req.method === 'GET') {
     const { currency } = req.query;
+
+    // const now = Date.now();
+
+    // const isCacheValid = cachedProductsData.data && now - cachedProductsData.timestamp < CACHE_EXPIRY_TIME;
+
+    // if (isCacheValid) {
+    //   return res.status(200).json(cachedProductsData.data);
+    // }
 
     try {
       const individualsProductsRequest = axios.get(`${PRODUCTS_URL}?currency=${currency}`);
       const businessProductsRequest = axios.get(`${PRODUCTS_URL}?userType=business&currency=${currency}`);
 
       const promises = await Promise.all([individualsProductsRequest, businessProductsRequest]);
-
       const [individualsProductsResponse, businessProductsResponse] = promises;
 
-      const businessProductsData = businessProductsResponse.data;
       const individualsProductsData: Product[] = individualsProductsResponse.data;
+      const businessProductsData: Product[] = businessProductsResponse.data;
 
       const productsData = {
         individuals: individualsProductsData,
         business: businessProductsData,
       };
+
+      // cachedProductsData = {
+      //   timestamp: Date.now(),
+      //   data: productsData,
+      // };
 
       return res.status(200).json(productsData);
     } catch (err) {
@@ -39,6 +63,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
   } else {
-    return res.status(405).end(); // Method Not Allowed
+    return res.status(405).end();
   }
 }

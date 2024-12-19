@@ -1,9 +1,6 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "Cloud Storage",
-      "line2": "Security Comparison"
-    },
+    "title": "Cloud Storage Security Comparison",
     "description": "Compare cloud services and choose the best secure cloud storage for you.",
     "cta": "Switch to Internxt for free",
 

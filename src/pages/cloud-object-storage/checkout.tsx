@@ -145,7 +145,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       mode: plan?.interval === 'lifetime' ? 'payment' : 'subscription',
       amount: plan?.amount ?? 0,
       currency: plan?.currency,
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'paypal'],
     };
 
     setStripeElementsOptions(stripeElementsOptions);
@@ -154,7 +154,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   };
 
   const onCheckoutButtonClicked = async (
-    event: BaseSyntheticEvent<object, any, any> | undefined,
+    event: BaseSyntheticEvent<Record<string, unknown>, any, any> | undefined,
     stripeSDK: Stripe | null,
     elements: StripeElements | null,
     formData: IFormValues,

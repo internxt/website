@@ -32,13 +32,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省75%",
-      "title": "为您的隐私获得大幅节省",
-      "subtitle": "隐私的黄金目标",
-      "cta": "选择计划",
-      "cta2": "节省75%",
-      "guarantee": "30天退款保证",
-      "lastCta": "*优惠适用于免费账户或新客户"
+      "label": "节省 80%",
+      "title": "万圣节促销",
+      "subtitle": "听到那销售铃声响起！",
+      "cta": "选择你的计划",
+      "cta2": "享受 85% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠仅适用于免费账户或新客户",
+      "titleMbl1": "圣诞",
+      "titleMbl2": "节省",
+      "titleMbl3": "已到来！",
+      "ctaMbl": "选择计划"
     },
     "save": "省高达",
     "planTitles": {
@@ -48,6 +52,10 @@
       "lifetimeCampaign": {
         "blueText": "五折优惠",
         "normalText": "我们的所有独家终身计划"
+      },
+      "blackFriday": {
+        "title": "黑色星期五超级促销：最安全的云存储方案立享85%折扣",
+        "description": "使用 Internxt 保护您的数据，避免数据泄露、财务损失和隐私风险。告别那些从您的个人信息中牟利的科技巨头。"
       }
     },
     "lifetimeDescription": "购买一次，永远获得隐私和安全。",

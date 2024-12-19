@@ -29,7 +29,11 @@
   },
   "businessLabels": {
     "1TB": "Standard",
-    "2TB": "Pro"
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
   },
   "billingFrequencyLabel": {
     "lifetime": "Einmalzahlung",
@@ -92,6 +96,24 @@
       "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
       "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
     },
+    "halloweenFeatures": {
+      "title": "Internxt-Themen-Goodies:",
+      "200GB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "1TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "2TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "5TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "10TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
+      "tooltip": "Kaufen Sie einen Lifetime-Plan für die Chance zu gewinnen!"
+    },
+    "christmasFeatures": {
+      "title": "Die Geschenke des Weihnachtsmanns:",
+      "200GB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "1TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "2TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "5TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "10TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
+      "tooltip": "Gewinnen Sie bis zu 10TB freien Speicher!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Bis zu ",
@@ -111,6 +133,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -119,6 +142,7 @@
         "Premium-Kundensupport"
       ],
       "2TB": [
+        "2TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -127,6 +151,7 @@
         "Premium-Kundensupport"
       ],
       "5TB": [
+        "5TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
@@ -135,6 +160,7 @@
         "Premium-Kundensupport"
       ],
       "10TB": [
+        "10TB verschlüsselter Speicher",
         "Verschlüsselte Datei- und Ordnerfreigabe",
         "Passwortgeschützte Dateifreigabe",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",

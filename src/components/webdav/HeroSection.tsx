@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Button from '../shared/Button';
 import Header from '../shared/Header';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Link from 'next/link';
@@ -14,7 +13,7 @@ export const HeroSection = ({ textContent }) => {
             <p className="text-xl text-gray-80">{textContent.description}</p>
             <Link
               href={'#downloadCli'}
-              className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+              className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
             >
               {textContent.cta}
             </Link>

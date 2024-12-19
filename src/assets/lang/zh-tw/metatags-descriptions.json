@@ -15,6 +15,11 @@
     "description": "使用 Internxt 的加密企業雲端存儲防止數據丟失—註冊以受益於行業領先的雲端數據保護。"
   },
   {
+    "id": "family",
+    "title": "Internxt家庭計畫 — 最安全的家庭雲端儲存",
+    "description": "使用我們的Internxt家庭計畫雲端儲存管理您家庭的線上隱私。安全地儲存、組織和分享您家庭的私人文件。"
+  },
+  {
     "id": "free-user",
     "title": "Internxt — 所有安全雲存儲計劃75%折扣",
     "description": "獲取任何Internxt計劃75%的折扣，讓您的文件保持私密，再也不用擔心空間不足。"
@@ -313,5 +318,25 @@
     "id": "image-to-text",
     "title": "免費在線將圖像轉換為文本文件 | Internxt",
     "description": "Internxt 的文件轉換器免費將您的圖像轉換為文本文件。我們的圖像轉文本轉換器是一種快速且安全的方式，保護您的文件 100% 私密。"
+  },
+  {
+    "id": "singles-day",
+    "title": "Internxt 光棍節特惠 - 終身雲端儲存促銷",
+    "description": "Internxt 光棍節 2024 特惠：享受我們所有高級終身存儲計劃 80% 的折扣。立即在 Internxt 雲端儲存省錢！"
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – 私密安全的雲端存儲",
+    "description": "Internxt 萬聖節活動：所有年度計劃享 8 折優惠。一次支付，終生保護您的文件。"
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt 監控：我是否被駭？",
+    "description": "Internxt 深網監控是一項「我是否被駭」的服務，檢查您的電子郵件是否在任何線上資料洩露中被泄露。"
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — 物件儲存",
+    "description": "Internxt 提供私密且實惠的物件儲存，使用 S3 協議安全地存儲資料，有效地管理您的儲存需求。"
   }
 ]

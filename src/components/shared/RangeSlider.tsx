@@ -8,7 +8,7 @@ interface PricingRangeSliderProps {
   rangeItems: string[];
 }
 
-export const RangeSlider = ({ max, min = 0, rangeItems, valueLabelFormat }: PricingRangeSliderProps) => {
+export const RangeSlider = ({ max, min = 0, rangeItems, valueLabelFormat }: PricingRangeSliderProps): JSX.Element => {
   return (
     <div className="flex w-full max-w-[840px] flex-col gap-2">
       <div className="inset-0 flex w-full items-center justify-between">

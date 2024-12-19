@@ -4,8 +4,6 @@ import { useRouter } from 'next/router';
 import Script from 'next/script';
 import axios from 'axios';
 import moment from 'moment';
-
-import isBrave from '@/lib/brave';
 import TopBanner from '@/components/banners/TopBanner';
 import {
   COOKIE_DOMAIN,
@@ -36,6 +34,7 @@ interface LayoutProps {
   readonly specialOffer?: string;
   readonly isBannerFixed?: boolean;
   readonly lang?: string;
+  readonly pathnameForSEO?: string;
 }
 
 const imageLang = ['ES', 'FR', 'EN'];
@@ -47,6 +46,7 @@ export default function Layout({
   segmentName = null,
   disableMailerlite = false,
   specialOffer,
+  pathnameForSEO,
   disableDrift = true,
   isBannerFixed,
   isProduction = process.env.NODE_ENV === 'production',
@@ -55,7 +55,7 @@ LayoutProps) {
   const pageURL = segmentName === 'home' ? '' : segmentName;
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
-  const pathname = router.pathname === '/' ? '' : router.pathname;
+  const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
 
@@ -88,10 +88,6 @@ LayoutProps) {
       .catch((err) => {
         console.log(err);
       });
-
-    window.rudderanalytics.page(segmentName, {
-      brave: isBrave(),
-    });
 
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
@@ -188,6 +184,7 @@ LayoutProps) {
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
 
         {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           <>
@@ -230,8 +227,7 @@ LayoutProps) {
             }}
           />
         )}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="/js/cookiebanner.script.js"></script>
+        <script src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>

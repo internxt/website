@@ -60,6 +60,7 @@ module.exports = {
         '/use-cases',
         '/internxt-library',
         '/online-privacy-ebook',
+        '/token',
       ].map((src) => ({
         source: src,
         destination: '/',
@@ -79,6 +80,7 @@ module.exports = {
         '/use-cases',
         '/internxt-library',
         '/online-privacy-ebook',
+        '/token',
       ].map((src) => ({
         source: `/:lang${src}`,
         destination: '/:lang',
@@ -203,7 +205,15 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST],
+    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST, 'haveibeenpwned.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: process.env.CLOUDFLARE_STATIC_ASSETS_HOST,
+        port: '',
+        pathname: '/website/**',
+      },
+    ],
   },
   env: {
     SEGMENT_API_KEY_PROD: process.env.SEGMENT_API_KEY_PROD,

@@ -12,7 +12,6 @@ import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
-import { BeforeCloseTabBanner } from '@/components/banners/BeforeCloseTabBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
 const EXCLUDE_INTERCOM_PATHS = [
@@ -32,6 +31,10 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/pccomponentes-products-b2b',
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
+  '/',
+  '/pricing',
+  '/family',
+  '/business',
 ];
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -40,7 +43,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const shouldShowFeaturesBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
   const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
@@ -71,11 +73,11 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.TopBanner,
@@ -93,17 +95,22 @@ function MyApp({ Component, pageProps }: AppProps) {
             key: GlobalDialog.BeforeYouGoBanner,
             isOpen: false,
           },
+          {
+            key: GlobalDialog.S3Banner,
+            isOpen: false,
+          },
         ]}
       >
         <>
-          <Script strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>
               <Script
+                defer
                 strategy="afterInteractive"
                 src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
               />
               <Script
+                defer
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -123,10 +130,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
-          {shouldShowBanner ? <BottomBanner /> : undefined}
-          {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined}
+          {shouldShowBanner ? (
+            <>
+              <BottomBanner />
+              <FeaturesBanner />
+              {/* <S3Banner /> */}
+            </>
+          ) : undefined}
+          {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
-        {shouldShowFeaturesBanner ? <FeaturesBanner /> : undefined}
         <FreeCardPromoBanner />
 
         {/* Show snackbar in all pages */}

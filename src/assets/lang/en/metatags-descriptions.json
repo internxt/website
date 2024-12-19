@@ -10,6 +10,11 @@
     "description": "Prevent data loss with Internxt’s encrypted cloud storage for business—sign up to benefit from industry-leading cloud data protection."
   },
   {
+    "id": "family",
+    "title": "Internxt for Family Plan — The Most Secure Family Cloud Storage",
+    "description": "Manage your family's online privacy with our Internxt cloud storage for family plans. Securely store, organize, and share your family’s private documents in one place."
+  },
+  {
     "id": "cloud-object-storage",
     "title": "Internxt — Object Storage",
     "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
@@ -81,8 +86,8 @@
   },
   {
     "id": "partner-discount",
-    "title": "Partner Deals - Save big on Internxt cloud storage!",
-    "description": "Redeem your exclusive coupon code provided by a certified Internxt partner. Get a special discount on Internxt secure cloud storage."
+    "title": "Partner Discount — Internxt",
+    "description": "Get Internxt annual plans at an exclusive 75% discount. Enjoy privacy and security with up to 10TB storage."
   },
   {
     "id": "affiliates",
@@ -110,14 +115,19 @@
     "description": "Compare Internxt with all the other services out there. Internxt is the most private and secure alternative to Google Drive, Dropbox, and other services."
   },
   {
+    "id": "dropbox-alternative",
+    "title": "Internxt — A Secure, Encrypted, and Open Source Alternative to Dropbox",
+    "description": "Internxt cloud storage is a secure Dropbox alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
+  },
+  {
     "id": "pcloud-alternative",
-    "title": "Internxt - A Secure, Encrypted, Open-Source pCloud Alternative",
+    "title": "Internxt - A Secure, Encrypted, Open Source pCloud Alternative",
     "description": "Internxt cloud storage is a secure pCloud alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
   },
   {
     "id": "black-friday",
     "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
-    "description": "Internxt Black Friday Deal 2023: Enjoy a 91% discount on all our annual plans. Save big on Internxt cloud storage today!"
+    "description": "Internxt Black Friday Deal 2024: Enjoy a 85% discount on all our annual plans. Save big on Internxt cloud storage today!"
   },
   {
     "id": "cloudwards",
@@ -333,5 +343,30 @@
     "id": "image-to-text",
     "title": "Convert Image to Text Files Online For Free | Internxt",
     "description": "Internxt’s File Converter converts your image to text files for free. Our image-to-text converter is fast and secure, keeping your files 100% private."
+  },
+  {
+    "id": "singles-day",
+    "title": "Internxt Singles Day Deal – Lifetime Cloud Storage Sale!",
+    "description": "Internxt Singles Day 2024 Deals: Enjoy an 80% discount on all our premium lifetime storage plans. Save big on Internxt cloud storage today! "
+  },
+  {
+    "id": "resurrection-campaign",
+    "title": "Internxt Cloud Storage Offer - 90% off Subscription and Lifetime Plans!",
+    "description": "Internxt is offering 90% off our new and improved private cloud storage. Choose from our subscription and lifetime plans to get huge savings."
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Private & Secure Cloud Storage",
+    "description": "Internxt's Halloween Campaign: Get 80% off all our annual plans. Secure your files for a lifetime with a single payment."
+  },
+  {
+    "id": "elections-campaign",
+    "title": "Make Internxt Great Again",
+    "description": "Internxt's Elections Campaign 2024"
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Dark Web Monitor",
+    "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]

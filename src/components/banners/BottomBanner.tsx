@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
@@ -35,72 +35,72 @@ const BottomBanner = () => {
         return {
           title1: 'Save 80%',
           title2: {
-            line1: "Sun's out, ",
-            line2: "sale's on!",
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra un 80%',
+          title1: '80% en TODOS los planes.',
           title2: {
-            line1: 'Este verano, ',
-            line2: '¡no te quedes sin tu oferta!',
+            line1: 'Estas Navidades,',
+            line2: 'ahorros a lo grande! ',
           },
         };
       case 'ru':
         return {
           title1: 'Сэкономьте 80%',
           title2: {
-            line1: 'Этим летом, ',
-            line2: 'не упустите свою скидку!',
+            line1: 'Рождественские скидки',
+            line2: 'уже здесь!',
           },
         };
       case 'fr':
         return {
           title1: 'Économisez 80%',
           title2: {
-            line1: 'Cet été, ',
-            line2: 'ne manquez pas votre offre!',
+            line1: 'Économies de Noël',
+            line2: 'sont là!',
           },
         };
       case 'it':
         return {
-          title1: 'Risparmia 80%',
+          title1: 'Risparmia il 80%',
           title2: {
-            line1: "Quest'estate, ",
-            line2: "non perderti l'offerta!",
+            line1: 'Risparmi di Natale',
+            line2: 'sono qui!',
           },
         };
       case 'zh':
         return {
-          title1: '节省80%',
+          title1: '节省 80%',
           title2: {
-            line1: '这个夏天，',
-            line2: '不要错过你的优惠！',
+            line1: '圣诞节省钱',
+            line2: '已经到来！',
           },
         };
       case 'zh-tw':
         return {
-          title1: '節省80%',
+          title1: '節省 80%',
           title2: {
-            line1: '這個夏天，',
-            line2: '不要錯過你的優惠！',
+            line1: '聖誕節省錢',
+            line2: '已經到來！',
           },
         };
       case 'de':
         return {
-          title1: 'Spare 80%',
+          title1: 'Sparen Sie 80%',
           title2: {
-            line1: 'Diesen Sommer, ',
-            line2: 'verpassen Sie nicht Ihr Angebot!',
+            line1: 'Weihnachtssparen',
+            line2: 'ist hier!',
           },
         };
       default:
         return {
           title1: 'Save 80%',
           title2: {
-            line1: "Sun's out, ",
-            line2: "sale's on!",
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
     }
@@ -109,55 +109,61 @@ const BottomBanner = () => {
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'Choose plan';
+        return 'Claim deal';
       case 'es':
-        return 'Elige tu plan';
+        return 'Consigue tu plan';
       case 'ru':
-        return 'Выбрать план';
+        return 'Получить скидку';
       case 'fr':
-        return 'Choisissez plan';
+        return 'Obtenez une offre';
       case 'it':
-        return 'Scegli un piano';
+        return 'Ottieni offerta';
       case 'zh':
-        return '选择计划';
+        return '领取优惠';
+      case 'zh-tw':
+        return '領取優惠';
       case 'de':
-        return 'Wählen Sie einen Plan';
+        return 'Angebot sichern';
       default:
         return 'Choose plan';
     }
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden lg:${
-        shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
+        styles.linearGradient
+      } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
     >
-      <div className="flex flex-col justify-center pr-20">
+      <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">
-          <button onClick={handleClose} className="absolute top-3 right-3 z-50 flex h-auto pb-2 text-white">
+          <button
+            id="close-bottom-banner"
+            aria-label="close-bottom-banner"
+            onClick={handleClose}
+            className="absolute right-3 top-3 z-50 flex h-auto pb-2 text-white"
+          >
             <X size={24} />
           </button>
         </div>
-        <div className="z-40 flex flex-row gap-24">
+        <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/banners/internxt_summer_discount.webp')}
-              width={178}
-              height={70}
-              className="flex w-full object-fill"
+              src={getImage('/images/christmas/internxt_christmas_horizontal.webp')}
+              width={243}
+              height={100}
               draggable={false}
-              alt={"Internxt's summer discount"}
+              alt={'Surveillance left'}
             />
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-white">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-white">
+              <p className={`font-bold text-white ${lang === 'es' ? 'text-4xl' : 'text-6xl'}`}>{title().title1}</p>
+              <p className={`max-w-[370px] font-semibold text-white ${lang === 'es' ? 'text-xl' : 'text-2xl'}`}>
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
             <button
-              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white py-2.5 px-5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
+              className="flex w-max flex-row items-center justify-center space-x-4 rounded-lg bg-white px-5 py-2.5 text-lg font-medium text-gray-100 transition duration-100 focus:outline-none focus-visible:bg-gray-1 active:bg-gray-10 sm:text-lg"
               onClick={() => {
                 router.push('/pricing');
                 handleClose();
@@ -166,6 +172,7 @@ const BottomBanner = () => {
               {ctaText()}
             </button>
           </div>
+          <div className="flex flex-col justify-end object-contain"></div>
         </div>
       </div>
     </section>

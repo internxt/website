@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Économisez 75%",
+    "label": "Économisez 70%",
     "title": {
       "line1": "Obtenez le ",
       "blueText": "plus sécurisé",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Stockez vos fichiers en toute sécurité, maintenant ",
-        "blueText": "75% moins cher"
+        "blueText": "70% moins cher"
       },
       "trustedBy": "Fiable par plus de 330 000 personnes",
       "description": {
@@ -63,9 +63,9 @@
         "blueText": "Garanti."
       },
       "description": {
-        "normal1": "",
-        "blue": "75% DE RÉDUCTION ",
-        "normal2": "sur tous les plans premium."
+        "normal1": "Obtenez ",
+        "blue": "80 % de réduction ",
+        "normal2": "sur tous les plans premium"
       },
       "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
       "startFrom": {

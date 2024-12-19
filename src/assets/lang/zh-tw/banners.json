@@ -9,7 +9,7 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "所有高級計劃享受75%折扣",
+    "title": "獲得獨家折扣",
     "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
     "getDealCta": "獲取優惠",
     "freePlanCta": "繼續使用免費計劃",
@@ -45,20 +45,27 @@
     }
   },
   "featuresBanner": {
-    "label": "高達 75% 的折扣",
-    "title": "轉向隱私的時候到了！",
-    "subtitle": "透過我們的終身計劃贏得我們的高級背包。",
-    "cta": "選擇計劃",
+    "label": "節省85%！",
+    "title": "黑色星期五最佳優惠",
+    "subtitle": "選擇我們的終身方案，獲得我們的高級背包。",
+    "cta": "選擇您的方案",
     "guarantee": "30天退款保證",
-    "lastCta": "*優惠適用於免費帳戶或新客戶",
+    "lastCta": "*此優惠僅適用於免費帳戶或新客戶",
     "features": [
-      "節省所有Internxt計劃的費用",
-      "安全可靠的雲存儲",
-      "零知識技術",
-      "開源且透明",
+      "所有高級方案享有巨大的折扣",
+      "私人加密雲端存儲",
+      "開源且經過審查",
       "端到端加密傳輸",
-      "無未經授權的訪問"
+      "無未經授權的訪問",
+      "優惠截止至12月3日"
     ]
+  },
+  "s3StorageBanner": {
+    "label": "現已上線！",
+    "title": "兼容S3的對象存儲",
+    "feat": ["比AWS便宜多達80%", "安全、可擴展、兼容S3", "原生Rclone支持"],
+    "cta": "免費獲取1TB",
+    "offerEnds": "*僅限首月優惠"
   },
   "tryOutInternxtGeneralBanner": {
     "title": "試用 Internxt",
@@ -69,6 +76,14 @@
     "title": "試用 Internxt",
     "description": "為您的文件提供密碼保護技術的安全文件存儲。",
     "cta": "免費註冊"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "获取端到端加密的云存储，无需额外费用。",
+    "blueText": " 免费加入Internxt"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "为更安全、开放、经济的云存储解决方案。",
+    "blueText": "切换到Internxt "
   },
   "SignUpPwdCheckerBanner": {
     "line1": "使用強密碼註冊一個",
@@ -136,9 +151,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "所有儲存計劃高達 75% 的折扣！",
-      "normalText": "以更低的價格獲得完整的隱私：",
-      "cta": "選擇計劃"
+      "boldText": "所有高級計劃 80% 折扣！",
+      "normalText": "這是一年中最美好的時光！",
+      "cta": "申領優惠"
     }
   },
   "lifetimeBanner": {

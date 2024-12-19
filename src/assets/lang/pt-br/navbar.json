@@ -1,0 +1,93 @@
+{
+  "links": {
+    "products": "Produtos",
+    "about": "Sobre Nós",
+    "ourValues": "Nossos Valores",
+    "privacy": "Privacidade",
+    "pricing": "Preços",
+    "login": "Entrar",
+    "getStarted": "Obtenha o Internxt",
+    "chooseStorage": "Obtenha o Internxt",
+    "checkout": "Reivindique agora!",
+    "business": "Negócios"
+  },
+  "products": {
+    "drive": "Internxt Drive",
+    "s3": "Internxt S3",
+    "webDAV": "Internxt WebDAV",
+    "vpn": "Internxt VPN",
+    "send": "Internxt Send",
+    "comingSoon": "Em breve",
+    "new": "Novo"
+  },
+  "ourValues": {
+    "privacy": "Privacidade",
+    "openSource": "Código Aberto"
+  },
+  "Auth": {
+    "SignUp": {
+      "title": "Criar uma conta Internxt",
+      "or": "ou",
+      "login": "Entrar",
+      "disclaimer": {
+        "text": "Ao criar uma conta, você aceita os",
+        "link": "termos e condições"
+      },
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "strength": {
+            "complexity": "A senha não é complexa o suficiente",
+            "length": "A senha deve ter pelo menos 8 caracteres",
+            "weak": "Senha fraca",
+            "strong": "Senha forte"
+          }
+        },
+        "submit": "Começar"
+      }
+    },
+    "LogIn": {
+      "title": "Entrar no Internxt",
+      "or": "ou",
+      "signup": "Criar conta",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "password": {
+          "label": "Senha",
+          "placeholder": "Senha",
+          "helper": "Esqueceu sua senha?"
+        },
+        "tfa": {
+          "label": "Autenticação de Dois Fatores",
+          "placeholder": "Código 2FA",
+          "hint": "O código 2FA deve ter 6 dígitos"
+        },
+        "submit": "Entrar"
+      }
+    },
+    "Recover": {
+      "title": "Recuperar conta",
+      "back": "Voltar para entrar",
+      "disclaimer": "Conforme especificado nas configurações do aplicativo, apenas você tem acesso à sua senha, portanto, não podemos restaurar sua conta sem ela. Você pode se inscrever novamente inserindo seu email abaixo para que possamos excluir sua conta e todos os seus arquivos.",
+      "fields": {
+        "email": {
+          "label": "Email",
+          "placeholder": "Email"
+        },
+        "submit": "Enviar email de confirmação"
+      },
+      "success": {
+        "title": "Verifique seu email",
+        "subtitle": "Enviamos um link de redefinição de conta para"
+      }
+    }
+  }
+}

@@ -12,6 +12,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import HeroSection2 from '@/components/privacy-directory/HeroSection2';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
+import { GetServerSidePropsContext } from 'next';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -20,8 +21,7 @@ const PrivacyDirectory = ({
   footerLang,
   lang,
   bannerText,
-  // lang
-}) => {
+}): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'privacy-directory');
 
   return (
@@ -78,7 +78,7 @@ const PrivacyDirectory = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);

@@ -24,12 +24,12 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
         "token": "Token",
         "pricing": "价格",
-        "business": "Internxt 企业版"
+        "business": "Internxt 企业版",
+        "family": "Internxt 为家庭"
       },
       "company": {
         "title": "公司",
@@ -66,6 +66,7 @@
         "writeForUs": "为我们写信",
         "cyberSecurityGlossary": "网络安全词汇表",
         "pCloudAlternative": "pCloud 替代方案",
+        "dropboxAlternative": "Dropbox 替代品",
         "cyberAwareness": "网络意识",
         "whatGoogleKnowsAboutMe": "What Google Knows",
         "comparison": "比较"
@@ -77,7 +78,8 @@
         "passwordChecker": "密码检查器",
         "byteConverter": "字节转换器",
         "passwordGenerator": "密码生成器",
-        "fileConverter": "文件转换器"
+        "fileConverter": "文件转换器",
+        "haveIBeenPwned": "我被入侵了"
       }
     }
   },

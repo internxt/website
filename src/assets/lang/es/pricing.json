@@ -41,13 +41,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra 75%",
-      "title": "Protege tu datos y tu privacidad",
-      "subtitle": "Defiende tu privacidad como un campeón",
-      "cta": "Elige un plan",
-      "cta2": "Obtén un 75% de descuento",
+      "label": "80% de descuento",
+      "title": "Descuentos Mortales de Halloween",
+      "subtitle": "¡Tu regalo de Navidad ya está aquí!",
+      "cta": "Elige tu plan",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes"
+      "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
+      "titleMbl1": "¡Tu regalo de Navidad ya está aquí!",
+      "ctaMbl": "Seleccionar plan"
     },
     "planTitles": {
       "individuals": "Planes individuales",
@@ -56,6 +58,10 @@
       "lifetimeCampaign": {
         "blueText": "50% de descuento",
         "normalText": "en todos nuestros planes exclusivos de por vida"
+      },
+      "blackFriday": {
+        "title": "Mega oferta de Black Friday: consigue un 85 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
+        "description": "Protege tus datos con Internxt para evitar brechas de seguridad, pérdidas financieras y riesgos de privacidad. Di adiós a las grandes tecnológicas que se benefician de tu información personal."
       }
     },
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",

@@ -24,11 +24,11 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "Internxt S3",
         "token": "Token",
         "pricing": "價格",
-        "business": "Internxt 企業版"
+        "business": "Internxt 企業版",
+        "family": "Internxt 為家庭"
       },
       "company": {
         "title": "公司",
@@ -64,6 +64,7 @@
         "comparison": "雲存儲比較",
         "directoryOfPrivacyOrganizations": "隱私組織目錄",
         "pCloudAlternative": "pCloud 替代方案",
+        "dropboxAlternative": "Dropbox 替代品",
         "cyberAwareness": "網絡安全意識",
         "whatGoogleKnowsAboutMe": "Google 了解我什麼"
       },
@@ -75,7 +76,8 @@
         "byteConverter": "字節轉換器",
         "passwordGenerator": "密碼生成器",
         "fileConverter": "文件轉換器",
-        "vpn": "VPN 擴展"
+        "vpn": "VPN 擴展",
+        "haveIBeenPwned": "我被駭客入侵了嗎"
       }
     }
   },

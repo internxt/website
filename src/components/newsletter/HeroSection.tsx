@@ -12,7 +12,7 @@ const HeroSection = ({ textContent }) => {
     e.preventDefault();
 
     await axios
-      .post(`api/subscribe`, {
+      .post(`/api/subscribe`, {
         email,
         groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
       })

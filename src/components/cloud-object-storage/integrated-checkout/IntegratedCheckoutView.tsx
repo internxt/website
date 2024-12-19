@@ -141,7 +141,12 @@ export const IntegratedCheckoutView = ({
                       leaveTo="scale-100 opacity-0"
                     >
                       <Menu.Items onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-5">
-                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
+                        <div
+                          role="menuitem"
+                          tabIndex={0}
+                          onKeyDown={(e) => e.stopPropagation()}
+                          className="flex w-full flex-col gap-1"
+                        >
                           <p className="text-sm text-gray-80">{textContent.addressBilling.companyName}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyName}
@@ -152,7 +157,12 @@ export const IntegratedCheckoutView = ({
                             required={true}
                           />
                         </div>
-                        <div onKeyDown={(e) => e.stopPropagation()} className="flex w-full flex-col gap-1">
+                        <div
+                          role="menuitem"
+                          tabIndex={0}
+                          onKeyDown={(e) => e.stopPropagation()}
+                          className="flex w-full flex-col gap-1"
+                        >
                           <p className="text-sm text-gray-80">{textContent.addressBilling.companyVatId}</p>
                           <TextInput
                             placeholder={textContent.addressBilling.companyVatId}
@@ -183,7 +193,6 @@ export const IntegratedCheckoutView = ({
             </div>
             <div className="top-5 flex w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
               <ProductFeaturesComponent textContent={textContent.productCard} selectedPlan={objStoragePlan} />
-              <p className="text-gray-50">{textContent.oneTimePayment}</p>
               <Button
                 id="submit"
                 type="submit"

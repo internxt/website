@@ -4,7 +4,13 @@ import bannerText from '@/assets/lang/en/banners.json';
 import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 
-export const HeroSection = ({ textContent }) => {
+interface HeroSectionProps {
+  textContent: any;
+  logo?: string;
+  hideTooltip?: boolean;
+}
+
+export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps) => {
   const competitors = [
     {
       name: 'Internxt',
@@ -20,16 +26,16 @@ export const HeroSection = ({ textContent }) => {
       },
     },
     {
-      name: 'pCloud',
-      logo: '../../../logos/pcloud-alternative/pcloud-logo-and-name.svg',
+      name: 'alternative',
+      logo: logo ?? '../../../logos/pcloud-alternative/pcloud-logo-and-name.svg',
       features: {
-        codeTransparency: textContent.tableSection.pCloudFeatures.codeTransparency,
-        encryption: textContent.tableSection.pCloudFeatures.encryption,
-        pricing: textContent.tableSection.pCloudFeatures.pricing,
-        securityAudits: textContent.tableSection.pCloudFeatures.securityAudits,
-        liveSupport: textContent.tableSection.pCloudFeatures.liveSupport,
-        dataTrackers: textContent.tableSection.pCloudFeatures.dataTrackers,
-        privacyLaws: textContent.tableSection.pCloudFeatures.privacyLaws,
+        codeTransparency: textContent.tableSection.features.codeTransparency,
+        encryption: textContent.tableSection.features.encryption,
+        pricing: textContent.tableSection.features.pricing,
+        securityAudits: textContent.tableSection.features.securityAudits,
+        liveSupport: textContent.tableSection.features.liveSupport,
+        dataTrackers: textContent.tableSection.features.dataTrackers,
+        privacyLaws: textContent.tableSection.features.privacyLaws,
       },
     },
   ];
@@ -80,7 +86,7 @@ export const HeroSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 py-20 px-5">
+    <section className="overflow-hidden bg-gray-1 px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
@@ -151,7 +157,7 @@ export const HeroSection = ({ textContent }) => {
                         <td className="h-14 bg-white md:h-16" key={`${row.title}${columnIndex.toString()}`}>
                           <div className="flex h-full flex-row items-center justify-center gap-3">
                             {typeof feature === 'string' && <span className="text-gray-100">{feature}</span>}
-                            {row.id === 6 && (
+                            {row.id === 6 && !hideTooltip && (
                               <div className="hidden lg:flex">
                                 <Tooltip
                                   variant="dark"

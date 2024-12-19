@@ -1,0 +1,155 @@
+{
+  "HeroSection": {
+    "title": "Total security and privacy for your family",
+    "subtitle": "Secure your family’s online privacy with Internxt family plans.",
+    "description": "Get up to 2TB of encrypted cloud storage for each family member, ensuring everyone’s data is protected and easily accessible.",
+    "cta": "Get Internxt for Family"
+  },
+  "ProtectYourFamilySection": {
+    "title": "Protect your family’s online privacy with Internxt cloud storage",
+    "description": "Internxt offers encrypted cloud storage for the whole family to store and share files, photos, and videos—all managed from one secure platform."
+  },
+  "PriceTable": {
+    "planTitles": {
+      "business": "Family plans"
+    },
+    "businessDescription2": "Manage, share, and protect your family files, documents and more with our secure, encrypted cloud storage.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
+  },
+  "WhatMakesInternxtPerfectSection": {
+    "title": "What makes Internxt perfect for families?",
+    "description": "Internxt’s family cloud storage plans offer a secure space with zero-access and end-to-end encryption to prevent unauthorized access and guarantee your family’s privacy.",
+    "features": [
+      {
+        "title": "Family management",
+        "description": "Internxt lets the account manager add members, customize storage, and handle billing, helping families stay organized. Members get their own space and can easily switch between their family cloud and personal accounts."
+      },
+      {
+        "title": "Share family files securely",
+        "description": "Internxt allows family members to collaborate easily while keeping your own sensitive information safe. With features to password-protect and restrict access, you can ensure that important family data remains secure and only accessible to those you trust."
+      },
+      {
+        "title": "Monitor sessions",
+        "description": "Get a detailed overview of sessions and view real-time login notifications and detailed remote session monitoring of family members, Operating Systems, IP, location, and last active time). This high-level security detects unauthorized access and protects your family’s sensitive data."
+      },
+      {
+        "title": "Flexible storage allocation",
+        "description": "With a family cloud storage plan, you can easily add users and expand storage as needed, ensuring cost efficiency, scalability, and optimal resource utilization. Each family member gets the space they need, and your family's data stays organized and easily accessible."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Join the most secure cloud plan for your family",
+    "description": "Protect and secure what matters most with Internxt",
+    "cta": "Choose plan"
+  },
+  "WhyChooseInternxt": {
+    "title": "Why choose Internxt?",
+    "description": "Internxt’s family cloud storage offers a straightforward solution that everyone can use, regardless of tech expertise. With powerful yet simple encrypted storage, your family can safely manage and access important files with ease.",
+    "cards": [
+      {
+        "title": "Independently verified",
+        "description": "Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum, to verify that your family’s files are protected from hackers. As a GDPR Compliant company, we also follow strict laws to keep your family’s data private."
+      },
+      {
+        "title": "Zero access, maximum encryption",
+        "description": "End-to-end encryption secures your files by encrypting everything on your device. Nobody, not even Internxt, can view your files. In the unlikely event of a data breach, hackers cannot decrypt and steal any data from your family."
+      },
+      {
+        "title": "You control your data",
+        "description": "Unlike Google Drive, Dropbox, and OneDrive, Internxt has zero trackers and never shares data with third parties. Your family data remains private and protected with the maximum security measures available."
+      },
+      {
+        "title": "100% transparent and secure",
+        "description": "All our products are built using open source. The code we use to protect data is available for everyone to inspect. We have nothing to hide except your data."
+      }
+    ]
+  },
+  "MaximumSecuritySection": {
+    "title": "Maximum security and encryption to protect your family",
+    "description": "Internxt protects your family’s files during sharing and storage, ensuring sensitive documents and family memories remain secure and private.",
+    "cta": "Get Internxt for Family"
+  },
+  "TestimonialsSection": {
+    "title": "What experts say about us",
+    "testimonials": [
+      {
+        "imageBrandName": "techradar",
+        "brand": "Techradar",
+        "review": "Internxt is an excellent cloud storage service due to its affordable plans and intuitive interface. It excels in security measures and commitment to privacy, making it a top choice for family users prioritizing security."
+      },
+      {
+        "imageBrandName": "PCWorld",
+        "brand": "PCWorld",
+        "review": "Internxt’s intuitively blended web access, file sync, and true backup services are impressive. This online storage and backup service is easy, covers all bases, and the lifetime plans are a steal."
+      },
+      {
+        "imageBrandName": "cloudwards",
+        "brand": "Cloudwards",
+        "review": "Internxt is known as a secure cloud storage solution that prioritizes user privacy. If privacy and security are your highest concerns with cloud storage, it’s definitely worth considering Internxt."
+      },
+      {
+        "imageBrandName": "bitcatcha",
+        "brand": "Bitcatcha",
+        "review": "Internxt goes above and beyond in protecting you and gives you ownership of your data, so they’re excellent for businesses. Recommended for anyone who values privacy."
+      },
+      {
+        "imageBrandName": "ffstoppers",
+        "brand": "Fstoppers",
+        "review": "Why choose Internxt? I would say the streamlined and simple nature of how it works. It's simply just a no-nonsense 256-bit encrypted cloud storage option that anyone can use."
+      },
+      {
+        "imageBrandName": "guru99",
+        "brand": "Guru99",
+        "review": "Internxt Drive is the best secure cloud storage service for privacy and encryption. It enables you and your team to store different types of files with total security."
+      }
+    ]
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Internxt Internxt for family?",
+        "answer": [
+          "A family cloud storage plan provides a shared storage solution for multiple family members. It allows you to store, manage, and share files securely across devices with up to 100 users."
+        ]
+      },
+      {
+        "question": "Is Internxt the right cloud storage for my family?",
+        "answer": [
+          "Internxt is the perfect solution for families looking for a secure cloud storage solution that keeps personal and confidential information private.",
+          "Our encrypted suite of products includes the highest industry security standards, allowing families to share files or folders without worrying about data leaks."
+        ]
+      },
+      {
+        "question": "How does storage space work?",
+        "answer": [
+          "Depending on the plan you choose, each member you add to your family plan will get either 1TB or 2TB. When your family members accept the invite, they will be added to your family cloud storage account and allocated their personal cloud storage."
+        ]
+      },
+      {
+        "question": "Can other members of my Internxt Family plan see my info?",
+        "answer": [
+          "Each member of your Internxt Family plan has a separate account with 2TB of storage. All their files are encrypted with a private key. You cannot see other family members' files unless they share access with you."
+        ]
+      },
+      {
+        "question": "What level of technical support do you provide?",
+        "answer": [
+          "We have a dedicated customer support team that can answer any questions or concerns or provide additional information based on your needs. You can visit our help center or contact us at [hello@internxt.com](mailto:hello@internxt.com), and our team will be happy to assist you."
+        ]
+      }
+    ]
+  }
+}

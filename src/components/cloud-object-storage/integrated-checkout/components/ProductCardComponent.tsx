@@ -1,6 +1,5 @@
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Check } from '@phosphor-icons/react';
-import bytes from 'bytes';
 import { currency } from '@/components/services/currency.service';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import Image from 'next/image';
@@ -14,7 +13,6 @@ interface ProductFeaturesComponentProps {
 const Separator = () => <div className="border border-gray-10" />;
 
 export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductFeaturesComponentProps): JSX.Element => {
-  const totalBytes = bytes(selectedPlan.bytes);
   const features = textContent.planDetails.features;
 
   const planAmount = selectedPlan.decimalAmount;
@@ -37,13 +35,6 @@ export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductF
         <div className="flex w-full flex-col space-y-5">
           <p>{textContent.selectedPlan}</p>
           <p className="text-2xl font-bold text-gray-100">Object storage - {textContent.billed.month}</p>
-          {/* <div className="flex flex-row items-center justify-between text-gray-100">
-              <p className="font-medium">{textContent.}</p>
-              <p className="font-semibold">
-                {planAmount}
-                {priceValue[selectedPlan.currency]}
-              </p>
-            </div> */}
           <Separator />
           <div className="flex flex-col space-y-5">
             <p className="font-medium text-gray-100">{textContent.planDetails.title}</p>

@@ -170,7 +170,7 @@ const redirectToCheckout = (
   currencyValue: string,
   planType: 'individual' | 'business',
   isCheckoutForLifetime: boolean,
-  promoCodeId?: PromoCodeProps['codeId'],
+  promoCodeId?: PromoCodeProps['name'],
 ) => {
   checkout({
     planId,
