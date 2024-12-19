@@ -4,6 +4,7 @@ import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
+import { ReactNode } from 'react';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -14,13 +15,17 @@ interface PricingSectionWrapperProps {
   hideBusinessSelector?: boolean;
   hideBusinessCards?: boolean;
   hidePlanSelectorComponent?: boolean;
+  hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
-  startFromInterval?: Interval;
+  startIndividualPlansFromInterval?: Interval;
+  startBusinessPlansFromInterval?: Interval;
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
   isFamilyPage?: boolean;
+  darkMode?: boolean;
+  hideTitle?: boolean;
   decimalDiscount?: {
     individuals?: number;
     lifetime?: number;
@@ -29,6 +34,7 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  CustomDescription?: ReactNode;
 }
 
 export const PricingSectionWrapper = ({
@@ -37,7 +43,8 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startFromInterval = Interval.Year,
+  startIndividualPlansFromInterval = Interval.Year,
+  startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Individuals',
   hideBusinessSelector,
   hideBusinessCards,
@@ -45,12 +52,16 @@ export const PricingSectionWrapper = ({
   backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
   hideFreeCard,
+  hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
+  hideTitle,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
+  CustomDescription,
+  darkMode,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -59,12 +70,16 @@ export const PricingSectionWrapper = ({
     onPlanTypeChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
-  } = usePlanSelection(startFromPlan, startFromInterval, handlePageNameUpdate);
+  } = usePlanSelection(
+    startFromPlan,
+    startIndividualPlansFromInterval,
+    startBusinessPlansFromInterval,
+    handlePageNameUpdate,
+  );
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
 
   const individualPlansTitle =
-    textContent.planTitles.homePage ??
-    (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
+    billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
   const businessTitle = textContent.planTitles.business;
 
   const title = () => {
@@ -79,12 +94,8 @@ export const PricingSectionWrapper = ({
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual
-              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
-              : `${textContent.planDescription}`}
-          </p>
+          {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
+          {CustomDescription}
         </div>
 
         <PricingSection
@@ -113,6 +124,9 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           onBusinessPlansSelected={onBusinessPlansSelected}
+          hideSwitchSelector={hideSwitchSelector}
+          isMonthly
+          darkMode={darkMode}
         />
       </div>
     </section>

@@ -78,10 +78,12 @@
         "passwordChecker": "Comprobador de Contraseñas",
         "byteConverter": "Convertidor de Unidades",
         "passwordGenerator": "Generador de Contraseñas",
-        "fileConverter": "Convertidor de archivos"
+        "fileConverter": "Convertidor de archivos",
+        "haveIBeenPwned": "Internxt Monitor"
       },
       "language": "Idioma"
-    }
+    },
+    "financialProject": "Proyecto financiado por el CDTI y financiado por los fondos FEDER de la UE. Internxt Mail e Internxt Meet: Servicio de correo seguro Internxt Mail y servicio de videollamadas seguras Internxt Meet, mediante el uso de encriptación post-cuántica e inteligencia artificial."
   },
   "Cookies": {
     "title": "Internxt usa cookies para mejorar la experiencia de navegación",

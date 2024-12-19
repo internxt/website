@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 const SHOW_SQUARE_BANNER_LS = 'showBottomBanner';
 
 const BottomBanner = () => {
@@ -35,72 +35,72 @@ const BottomBanner = () => {
         return {
           title1: 'Save 80%',
           title2: {
-            line1: 'Secure your',
-            line2: 'world!',
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
       case 'es':
         return {
-          title1: 'Ahorra 80%',
+          title1: '80% en TODOS los planes.',
           title2: {
-            line1: 'Asegura tu',
-            line2: 'mundo!',
+            line1: 'Estas Navidades,',
+            line2: 'ahorros a lo grande! ',
           },
         };
       case 'ru':
         return {
           title1: 'Сэкономьте 80%',
           title2: {
-            line1: 'Защитите свой',
-            line2: 'мир!',
+            line1: 'Рождественские скидки',
+            line2: 'уже здесь!',
           },
         };
       case 'fr':
         return {
-          title1: 'Économisez 80 %',
+          title1: 'Économisez 80%',
           title2: {
-            line1: 'Sécurise ton',
-            line2: 'monde!',
+            line1: 'Économies de Noël',
+            line2: 'sont là!',
           },
         };
       case 'it':
         return {
           title1: 'Risparmia il 80%',
           title2: {
-            line1: 'Proteggi il tuo',
-            line2: 'mondo!',
+            line1: 'Risparmi di Natale',
+            line2: 'sono qui!',
           },
         };
       case 'zh':
         return {
-          title1: '节省80%',
+          title1: '节省 80%',
           title2: {
-            line1: '保护你的',
-            line2: '世界!',
+            line1: '圣诞节省钱',
+            line2: '已经到来！',
           },
         };
       case 'zh-tw':
         return {
           title1: '節省 80%',
           title2: {
-            line1: '保護你的',
-            line2: '世界!',
+            line1: '聖誕節省錢',
+            line2: '已經到來！',
           },
         };
       case 'de':
         return {
-          title1: 'Spare 80%',
+          title1: 'Sparen Sie 80%',
           title2: {
-            line1: 'Sichere deine',
-            line2: 'Welt!',
+            line1: 'Weihnachtssparen',
+            line2: 'ist hier!',
           },
         };
       default:
         return {
           title1: 'Save 80%',
           title2: {
-            line1: 'Work smart, ',
-            line2: 'not hard!',
+            line1: 'Christmas savings',
+            line2: 'are here!',
           },
         };
     }
@@ -109,28 +109,30 @@ const BottomBanner = () => {
   const ctaText = () => {
     switch (lang) {
       case 'en':
-        return 'Choose plan';
+        return 'Claim deal';
       case 'es':
-        return 'Elige tu plan';
+        return 'Consigue tu plan';
       case 'ru':
-        return 'Выбрать план';
+        return 'Получить скидку';
       case 'fr':
-        return 'Choisissez plan';
+        return 'Obtenez une offre';
       case 'it':
-        return 'Scegli un piano';
+        return 'Ottieni offerta';
       case 'zh':
-        return '选择计划';
+        return '领取优惠';
+      case 'zh-tw':
+        return '領取優惠';
       case 'de':
-        return 'Wählen Sie einen Plan';
+        return 'Angebot sichern';
       default:
         return 'Choose plan';
     }
   };
   return (
     <section
-      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] lg:${
-        shouldShowBanner ? 'flex' : 'hidden'
-      } overflow-hidden rounded-lg bg-primary px-5 lg:px-0`}
+      className={`${shouldShowBanner ? 'fixed' : 'hidden'} bottom-10 z-50 hidden max-h-[100px] ${
+        styles.linearGradient
+      } lg:${shouldShowBanner ? 'flex' : 'hidden'} overflow-hidden rounded-lg bg-orange px-5 lg:px-0`}
     >
       <div className="flex flex-col justify-center">
         <div className="flex items-end justify-end">
@@ -146,8 +148,8 @@ const BottomBanner = () => {
         <div className="z-40 flex flex-row justify-between gap-24">
           <div className="flex flex-col">
             <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_left.webp')}
-              width={160}
+              src={getImage('/images/christmas/internxt_christmas_horizontal.webp')}
+              width={243}
               height={100}
               draggable={false}
               alt={'Surveillance left'}
@@ -155,8 +157,8 @@ const BottomBanner = () => {
           </div>
           <div className="flex flex-row items-center justify-center gap-14">
             <div className="flex flex-row items-center gap-5">
-              <p className="text-6xl font-bold text-white">{title().title1}</p>
-              <p className="max-w-[370px] text-2xl font-semibold text-white">
+              <p className={`font-bold text-white ${lang === 'es' ? 'text-4xl' : 'text-6xl'}`}>{title().title1}</p>
+              <p className={`max-w-[370px] font-semibold text-white ${lang === 'es' ? 'text-xl' : 'text-2xl'}`}>
                 {title().title2.line1} <br /> {title().title2.line2}
               </p>
             </div>
@@ -170,15 +172,7 @@ const BottomBanner = () => {
               {ctaText()}
             </button>
           </div>
-          <div className="flex flex-col justify-end object-contain">
-            <Image
-              src={getImage('/images/cyber-awareness/cyber-awareness-2024/surveillance_right.webp')}
-              width={160}
-              height={100}
-              draggable={false}
-              alt={'Surveillance right'}
-            />
-          </div>
+          <div className="flex flex-col justify-end object-contain"></div>
         </div>
       </div>
     </section>

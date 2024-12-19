@@ -1,0 +1,113 @@
+{
+  "HeroSection": {
+    "title": "Internxt Dark Web Monitor",
+    "subtitle": "Prüfe, ob deine E-Mail-Adresse einem Datenleck ausgesetzt war",
+    "description": "Deine E-Mail wird nur mit Datenbanken auf Verstöße abgeglichen.",
+    "AllGoodSection": {
+      "title": "Alles in Ordnung!",
+      "description": "Keine durchgesickerten oder auf einer Website kopierten Konten gefunden.",
+      "StaySecure": "Bleibe sicher mit starken Passwörtern und mehrstufiger Authentifizierung."
+    },
+    "EmailToolBar": {
+      "placeHolder": "Deine E-Mail-Adresse",
+      "toolTip": "Wir speichern oder teilen deine E-Mail-Adresse nicht.",
+      "toolTipEmergent": "Deine E-Mail wird nur mit Datenbanken auf Lecks überprüft.",
+      "pleaseEnterEmail": "Bitte gib eine gültige E-Mail ein",
+      "noBreachesFound": "E-Mail nicht gefunden",
+      "errorPwned": "Fehler bei der Überprüfung der E-Mail",
+      "check": "Überprüfen",
+      "checking": "Überprüfung läuft..."
+    },
+    "breaches": {
+      "error405": "Die Anforderungsmethode wird nicht unterstützt. Bitte wende dich an den Support oder versuche, die Seite neu zu laden.",
+      "error400": "Die Anfrage war ungültig. Bitte stelle sicher, dass deine E-Mail-Adresse korrekt eingegeben wurde und versuche es erneut.",
+      "error500": "Es gibt ein Problem auf dem Server. Bitte warte einen Moment und versuche es später erneut. Wenn das Problem weiterhin besteht, kontaktiere den Support."
+    },
+    "PwnedSection": {
+      "title": "Oh nein!",
+      "description": "Deine E-Mail-Adresse wurde in X Datenverletzungen und X Paste-Einträgen gefunden.",
+      "recomendation": "Wir empfehlen, sofortige Maßnahmen zu ergreifen, um deine Konten zu schützen.",
+      "breachesSection": {
+        "title": "Websites, auf denen deine E-Mail und dein Passwort durchgesickert sind",
+        "description": "Ein Datenleck tritt auf, wenn deine E-Mail, dein Name, deine Adresse oder andere persönliche Informationen unfreiwillig durchsickern und im Internet veröffentlicht werden.",
+        "linkToPasswordGenerator": {
+          "previousText": "Der ",
+          "linkText": "Passwortgenerator",
+          "otherText": "von Internxt erstellt einzigartige und sichere Passwörter, um deine Konten und Daten zu schützen."
+        }
+      },
+      "compromisedData": "Kompromittierte Daten"
+    }
+  },
+  "InfoSection": {
+    "pwnedWebsites": "Gehackte Websites",
+    "pwnedWebsitesData": "817",
+    "pwnedAccounts": "Gestohlene Konten",
+    "pwnedAccountsData": "14,169,230,255",
+    "pastes": "Kopien",
+    "pastesData": "115,796"
+  },
+  "CtaSection": {
+    "title": "Wurden dein Konto und Passwort geleakt?",
+    "description": "Finde es mit dem Dark Web Monitor von Internxt heraus und ergreife sofortige Maßnahmen, um deine Konten zu schützen",
+    "cta": "Registrieren"
+  },
+  "CtaSection2": {
+    "title": "Warte nicht, bis deine Daten durchsickern",
+    "description": "Schütze deine Informationen mit Internxt",
+    "cta": "Jetzt überprüfen"
+  },
+  "FeatureSection": {
+    "title": "Was tun, wenn deine E-Mail auf dem Dark Web durchgesickert ist",
+    "description": "Internxt Dark Web Monitor ist Teil unserer Mission, dich vor Hackern zu schützen, die deine Daten auf dem Dark Web durchsickern lassen",
+    "description2": "Bei Internxt verpflichten wir uns, dich in der digitalen Welt sicher zu halten. Erfahre mehr über die effektivsten Strategien, um deine Konten zu schützen und die Risiken zu mindern, falls deine E-Mail auf dem Dark Web kompromittiert wurde.",
+    "cards": [
+      {
+        "title": "Erstelle sichere Passwörter",
+        "description": "Wenn deine E-Mail auf dem Dark Web durchgesickert ist, solltest du zuerst deine Passwörter ändern.",
+        "cta": "Passwort generieren",
+        "redirect": "/password-generator"
+      },
+      {
+        "title": "Nutze ein VPN beim Surfen",
+        "description": "Internxt VPN reduziert deutlich die Wahrscheinlichkeit von Datenverletzungen, indem es deine IP-Adresse verschlüsselt und verbirgt. Unsere VPN gewährleistet, dass alle Daten, die während des Surfens online übertragen werden, verschlüsselt und vor unbefugtem Zugriff geschützt sind.",
+        "cta": "VPN herunterladen",
+        "redirect": "/vpn"
+      },
+      {
+        "title": "Überprüfe die Sicherheit deines Passworts",
+        "description": "Überprüfe mit dem Passwort-Checker von Internxt, wie sicher dein Passwort ist. Überprüfe die Sicherheit deines Passworts, die Häufigkeit, mit der es in Lecks gefunden wurde, und die Zeit, die Hacker benötigen würden, um dein Passwort mit spezialisierter Software zu knacken.",
+        "cta": "Überprüfen",
+        "redirect": "/password-checker"
+      },
+      {
+        "title": "Speichere deine Dateien privat",
+        "description": "Das verschlüsselte Cloud-Storage von Internxt Drive verwendet Ende-zu-Ende-Verschlüsselung, um deine vertraulichen Informationen zu schützen und Datenlecks sowie das Durchsickern deiner Informationen auf dem Dark Web zu verhindern.",
+        "cta": "Internxt Drive testen",
+        "redirect": "/drive"
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Warst du in den größten Datenverletzungen der Welt involviert?",
+    "description": "Überprüfe deine E-Mail und ergreife Maßnahmen, um deine Konten mit Internxt Monitor zu schützen",
+    "cards": [
+      {
+        "title": "Internetarchiv",
+        "description": "Im September 2024 erlebte die 'Wayback Machine' des Internet Archive eine bedeutende Datenleck, bei dem ein Bedrohungsakteur eine Benutzerauthentifizierungsdatenbank mit 31 Millionen Einträgen stahl. Die Daten des Lecks umfassten E-Mail-Adressen, Bildschirmnamen und bcrypt-Passworthashes."
+      },
+      {
+        "title": "Facebook",
+        "description": "Im April 2021 waren die Daten von mehr als 500 Millionen Facebook-Nutzern zum Download auf dem Dark Web verfügbar. Die Daten des Lecks enthielten Telefonnummern, 2,5 Millionen E-Mail-Adressen und andere persönliche Informationen, die in Cyberangriffen wie Phishing verwendet werden können."
+      },
+      {
+        "title": "Verifications.io",
+        "description": "Verifications.io erlitt eine Datenpanne, weil die Daten in einer öffentlich zugänglichen MongoDB-Instanz ohne Passwortschutz gespeichert wurden. Der Vorfall legte 763 Millionen E-Mails, Namen, Telefonnummern, IP-Adressen, Geburtsdaten und Geschlechter offen."
+      },
+      {
+        "title": "Collection #1 ",
+        "description": "Im Januar 2018 leckte die Datenleck der 'Collection #1' 2,7 Milliarden Datensätze, die auf dem Dark Web und in Online-Foren verfügbar waren. Die Daten umfassten mehr als 77 Millionen E-Mail-Adressen und mehr als 21 Millionen Passwörter aus verschiedenen Lecks."
+      }
+    ]
+  }
+}

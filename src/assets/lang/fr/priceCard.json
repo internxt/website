@@ -95,6 +95,24 @@
       "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
       "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
     },
+    "halloweenFeatures": {
+      "title": "Goodies sur le thème d'Internxt :",
+      "200GB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
+      "1TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
+      "2TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
+      "5TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
+      "10TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
+      "tooltip": "Achetez un forfait à vie pour avoir une chance de gagner !"
+    },
+    "christmasFeatures": {
+      "title": "Les cadeaux du Père Noël :",
+      "200GB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
+      "1TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
+      "2TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
+      "5TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
+      "10TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
+      "tooltip": "Gagnez jusqu'à 10 To de stockage gratuit !"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Jusqu'à ",
@@ -114,6 +132,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB de stockage chiffré",
         "Partage chiffré de fichiers et de dossiers",
         "Partage de fichiers protégé par mot de passe",
         "Accédez à vos fichiers depuis n'importe quel appareil",
@@ -123,6 +142,7 @@
         "Garantie de remboursement de 30 jours"
       ],
       "2TB": [
+        "2TB de stockage chiffré",
         "Partage chiffré de fichiers et de dossiers",
         "Partage de fichiers protégé par mot de passe",
         "Accédez à vos fichiers depuis n'importe quel appareil",
@@ -132,6 +152,7 @@
         "Garantie de remboursement de 30 jours"
       ],
       "5TB": [
+        "5TB de stockage chiffré",
         "Partage chiffré de fichiers et de dossiers",
         "Partage de fichiers protégé par mot de passe",
         "Accédez à vos fichiers depuis n'importe quel appareil",
@@ -141,6 +162,7 @@
         "Garantie de remboursement de 30 jours"
       ],
       "10TB": [
+        "10TB de stockage chiffré",
         "Partage chiffré de fichiers et de dossiers",
         "Partage de fichiers protégé par mot de passe",
         "Accédez à vos fichiers depuis n'importe quel appareil",

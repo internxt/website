@@ -127,7 +127,7 @@
   {
     "id": "black-friday",
     "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
-    "description": "Internxt Black Friday Deal 2023: Enjoy a 91% discount on all our annual plans. Save big on Internxt cloud storage today!"
+    "description": "Internxt Black Friday Deal 2024: Enjoy a 85% discount on all our annual plans. Save big on Internxt cloud storage today!"
   },
   {
     "id": "cloudwards",
@@ -343,5 +343,30 @@
     "id": "image-to-text",
     "title": "Convert Image to Text Files Online For Free | Internxt",
     "description": "Internxt’s File Converter converts your image to text files for free. Our image-to-text converter is fast and secure, keeping your files 100% private."
+  },
+  {
+    "id": "singles-day",
+    "title": "Internxt Singles Day Deal – Lifetime Cloud Storage Sale!",
+    "description": "Internxt Singles Day 2024 Deals: Enjoy an 80% discount on all our premium lifetime storage plans. Save big on Internxt cloud storage today! "
+  },
+  {
+    "id": "resurrection-campaign",
+    "title": "Internxt Cloud Storage Offer - 90% off Subscription and Lifetime Plans!",
+    "description": "Internxt is offering 90% off our new and improved private cloud storage. Choose from our subscription and lifetime plans to get huge savings."
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Private & Secure Cloud Storage",
+    "description": "Internxt's Halloween Campaign: Get 80% off all our annual plans. Secure your files for a lifetime with a single payment."
+  },
+  {
+    "id": "elections-campaign",
+    "title": "Make Internxt Great Again",
+    "description": "Internxt's Elections Campaign 2024"
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Dark Web Monitor",
+    "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
   }
 ]

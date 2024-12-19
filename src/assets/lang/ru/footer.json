@@ -79,7 +79,8 @@
         "byteConverter": "Конвертер байтов",
         "passwordGenerator": "Генератор паролей",
         "fileConverter": "Преобразователь файлов",
-        "vpn": "Расширение VPN"
+        "vpn": "Расширение VPN",
+        "haveIBeenPwned": "Internxt Monitor"
       }
     }
   },

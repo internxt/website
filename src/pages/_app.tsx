@@ -85,7 +85,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.BottomBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.FreeSpaceCardBanner,
@@ -102,7 +102,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
-          <Script defer strategy="beforeInteractive" src="/js/rudderlib.js" />
           {lang !== 'es' && (
             <>
               <Script

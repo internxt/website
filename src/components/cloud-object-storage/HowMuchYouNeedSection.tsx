@@ -1,9 +1,7 @@
 import { useState, useEffect } from 'react';
 import { RangeSlider } from '../shared/RangeSlider';
-import { useDebounce } from '@/hooks/useDebounce';
 import { CloudObjectStorageText } from '@/assets/types/cloud-object-storage';
 import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
 
 interface HowMuchYouNeedSectionProps {
   textContent: CloudObjectStorageText['HowMuchYouNeedSection'];
@@ -55,8 +53,6 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   const [storageAmountValue, setStorageAmountValue] = useState<number>(500);
   const [percentDownloadValue, setPercentDownloadValue] = useState<number>(2);
 
-  const debouncedStorageAmountValue = useDebounce(storageAmountValue, 500);
-  const debouncedPercentDownloadValue = useDebounce(percentDownloadValue, 500);
   const [costs, setCosts] = useState<Record<string, any>>({
     internxt: 0,
     azure: {
@@ -74,12 +70,12 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   });
 
   const calculateCosts = () => {
-    const tbDownloaded = debouncedStorageAmountValue * (debouncedPercentDownloadValue / 100);
+    const tbDownloaded = storageAmountValue * (percentDownloadValue / 100);
 
-    const wasabiCost = 6.99 * debouncedStorageAmountValue;
-    const azureCost = 19.25 * debouncedStorageAmountValue + 0.082 * 1024 * tbDownloaded;
-    const awsCost = 23.55 * debouncedStorageAmountValue + 0.09 * 1024 * tbDownloaded;
-    const googleCost = 23.55 * debouncedStorageAmountValue + 0.12 * 1024 * tbDownloaded;
+    const wasabiCost = 6.99 * storageAmountValue;
+    const azureCost = 19.25 * storageAmountValue + 0.082 * 1024 * tbDownloaded;
+    const awsCost = 23.55 * storageAmountValue + 0.09 * 1024 * tbDownloaded;
+    const googleCost = 23.55 * storageAmountValue + 0.12 * 1024 * tbDownloaded;
 
     const calculateDifference = (providerCost) => ((providerCost - wasabiCost) / wasabiCost) * 100;
 
@@ -104,7 +100,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
 
   useEffect(() => {
     calculateCosts();
-  }, [debouncedStorageAmountValue, debouncedPercentDownloadValue]);
+  }, [storageAmountValue, percentDownloadValue]);
 
   const maxPrice = Math.max(costs.internxt.cost, costs.azure.cost, costs.aws.cost, costs.google.cost);
 
@@ -159,6 +155,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                 </div>
               </div>
               {/* Percent download slider */}
+              <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
@@ -177,15 +174,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                   activeBackground="bg-primary"
                   background="bg-primary/7"
                   isBlueLabel
-                  maxPrice={
-                    debouncedPercentDownloadValue > 50
-                      ? maxPrice / 4
-                      : debouncedPercentDownloadValue > 10
-                      ? maxPrice / 2
-                      : maxPrice
-                  }
-                  srcImg={getImage('/images/cloud-object-storage/inxt-logo.svg')}
-                  altImg="Internxt Logo"
+                  maxPrice={maxPrice}
                 />
                 <p className="text-lg font-bold">{textContent.companies[0]}</p>
               </div>

@@ -1,8 +1,9 @@
 import { PromoCodeProps } from '@/lib/types';
-import { Coins, Fire } from '@phosphor-icons/react';
+import { Coins, Fire, Gift, Info } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
+import { Tooltip } from 'react-tooltip';
 
 export interface PriceCardProps {
   planType: string;
@@ -107,9 +108,7 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${'border-primary ring-[1px]'} flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
@@ -199,6 +198,23 @@ export default function PriceCard({
             </div>
           </>
         ) : null}
+        <div className="mx-auto w-full space-y-2 bg-red px-4 py-3">
+          <p className="text-sm font-bold text-white">{contentText.productFeatures.christmasFeatures.title}</p>
+          {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
+            <div className="flex items-start space-x-2 text-left" key={feature}>
+              <Gift size={16} className="flex-shrink-0 text-white" />
+              <span className="text-sm leading-5 text-white">{feature}</span>
+              {index === 0 && (
+                <>
+                  <Info size={16} className="flex-shrink-0 text-white" data-tooltip-id="email-tooltip" />
+                  <Tooltip id="email-tooltip" place="top">
+                    {contentText.productFeatures.christmasFeatures.tooltip}
+                  </Tooltip>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature) => (
             <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>

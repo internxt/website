@@ -76,7 +76,8 @@
         "passwordChecker": "Password Checker",
         "byteConverter": "Byte Converter",
         "passwordGenerator": "Password Generator",
-        "fileConverter": "File Converter"
+        "fileConverter": "File Converter",
+        "haveIBeenPwned": "Internxt Monitor"
       }
     }
   },

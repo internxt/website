@@ -41,8 +41,17 @@ const CloudObjectStorage = ({
         TextComponent={
           <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 text-center text-white lg:items-start lg:text-left">
             <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
-              {textContent.HeroSection.title.line1}
-              <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2}</span>
+              {lang === 'es' ? (
+                <>
+                  <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2} </span>
+                  {textContent.HeroSection.title.line1}
+                </>
+              ) : (
+                <>
+                  {textContent.HeroSection.title.line1}
+                  <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2}</span>
+                </>
+              )}
             </Header>
             <p className="text-xl">{textContent.HeroSection.description}</p>
             <Button
@@ -81,10 +90,10 @@ const CloudObjectStorage = ({
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
   const locale = ctx.locale as string;
 
-  const metatagsDescription = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const navbarText = require(`@/assets/lang/en/navbar.json`);
-  const textContent = require(`@/assets/lang/en/cloud-object-storage.json`);
-  const footerText = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescription = require(`@/assets/lang/${locale}/metatags-descriptions.json`);
+  const navbarText = require(`@/assets/lang/${locale}/navbar.json`);
+  const textContent = require(`@/assets/lang/${locale}/cloud-object-storage.json`);
+  const footerText = require(`@/assets/lang/${locale}/footer.json`);
 
   return {
     props: {

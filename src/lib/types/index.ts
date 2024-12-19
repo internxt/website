@@ -105,6 +105,14 @@ export enum PromoCodeName {
   Lifetime78OFF = 'BACK2WORK',
   CyberAwarenessPromoCode = 'CYBER80',
   PartnerDiscount75OFF = 'partner75',
+  BlackFriday = 'BLACKFRIDAY85',
+  SinglesDay = 'SELFLOVE83',
+  Resurrection = 'COMEBACK',
+  Halloween = 'HORROR80',
+  KamalaHarris = 'KAMALA',
+  DonaldTrump = 'TRUMP',
+  SoftSales = '70OFF4YOU',
+  Christmas = 'SECRETSANTA80',
 }
 
 export interface PromoCodeProps {
