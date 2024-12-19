@@ -44,7 +44,7 @@
     "lodash": "^4.17.21",
     "memory-cache": "^0.2.0",
     "moment": "^2.29.1",
-    "next": "14",
+    "next": "13",
     "next-csrf": "^0.2.1",
     "next-share": "^0.18.1",
     "pdf-lib": "^1.17.1",
