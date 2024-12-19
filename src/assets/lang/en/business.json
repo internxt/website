@@ -16,10 +16,10 @@
         "description": "Average cost of a data breach"
       },
       { "title": "73 m", "description": "AT&T customer records leaked in 2024" },
-      { "title": "258 days", "description": "Average time to identify a data breach" },
-      { "title": "46%", "description": "Of breaches involve personal data" }
+      { "title": "318 days", "description": "Average time to identify a data breach" },
+      { "title": "24%", "description": "Of breaches involve personal data" }
     ],
-    "footerText": "*Data collected from IBM Security Cost of a Data Breach Report 2023."
+    "footerText": "*Data collected from IBM Security Cost of a Data Breach Report 2024."
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt protects your business from data breaches",

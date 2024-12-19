@@ -12,14 +12,14 @@
     "description": "Datenverstöße können Unternehmen ruinieren, schwere finanzielle Verluste verursachen, betriebliche Störungen auslösen und den Ruf Ihres Unternehmens schädigen.",
     "cards": [
       {
-        "title": "4,45 Mio. $",
+        "title": "4,88 Mio. $",
         "description": "Durchschnittliche Kosten eines Datenverstoßes"
       },
       { "title": "73 Mio.", "description": "AT&T-Kundendaten, die 2024 durchgesickert sind" },
       { "title": "318 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
       { "title": "24%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
     ],
-    "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2023."
+    "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2024."
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt schützt Ihr Unternehmen vor Datenverstößen",

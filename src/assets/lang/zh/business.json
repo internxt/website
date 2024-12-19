@@ -15,11 +15,11 @@
         "title": "445 万美元",
         "description": "数据泄露的平均成本"
       },
-      { "title": "7300 万", "description": "2024 年 AT&T 客户记录泄露" },
       { "title": "318 天", "description": "识别数据泄露的平均时间" },
+      { "title": "7300 万", "description": "2024 年 AT&T 客户记录泄露" },
       { "title": "24%", "description": "勒索软件攻击的目标是企业" }
     ],
-    "footerText": "*数据来源于 IBM 安全数据泄露成本报告 2023。"
+    "footerText": "*数据来源于 IBM 安全数据泄露成本报告 2024"
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt 保护您的企业免受数据泄露",

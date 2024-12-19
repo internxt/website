@@ -12,14 +12,14 @@
     "description": "Les violations de données peuvent dévaster les entreprises, causant des pertes financières sévères, des perturbations opérationnelles et des dommages à la réputation de votre entreprise.",
     "cards": [
       {
-        "title": "4,45 M$",
+        "title": "4,88 M$",
         "description": "Coût moyen d'une violation de données"
       },
       { "title": "73 M", "description": "Dossiers clients d'AT&T divulgués en 2024" },
       { "title": "318 jours", "description": "Temps moyen pour identifier une violation de données" },
       { "title": "24%", "description": "Des attaques de ransomware ciblent les entreprises" }
     ],
-    "footerText": "*Données collectées à partir du rapport IBM Security Cost of a Data Breach 2023."
+    "footerText": "*Données collectées à partir du rapport IBM Security Cost of a Data Breach 2024."
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt protège votre entreprise contre les violations de données",
