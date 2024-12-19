@@ -4,15 +4,16 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 
-import CtaSection from '@/components/annual-plans-for-affiliates/CtaSection';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { Interval, stripeService } from '@/components/services/stripe.service';
+import { GetServerSidePropsContext } from 'next';
+import CtaSection from '@/components/shared/CtaSection';
 
-export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }) {
+export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const offerDiscount = 0.25;
   const { products, loadingCards, currencyValue, coupon } = usePricing({
@@ -43,7 +44,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   ];
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.codeId);
+    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.name);
   };
 
   return (
@@ -60,7 +61,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        startFromInterval={Interval.Year}
+        startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
         hidePlanSelectorAndSwitch
       />
@@ -75,13 +76,13 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         cards={cardsData}
       />
 
-      <CtaSection textContent={textContent.CtaSection} />
+      <CtaSection textContent={textContent.CtaSection} url="#priceTable" />
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
 }
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/en/locker.json`);

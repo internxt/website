@@ -8,11 +8,9 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
-import { useRouter } from 'next/router';
 
 const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const { locale } = useRouter();
 
   return (
     <Layout

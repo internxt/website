@@ -6,9 +6,8 @@ import FeatureSection from '@/components/drive/FeatureSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
-import ProductsNavigation from '@/components/layout/ProductsNavigation';
+
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import WhatWeDoSection from '@/components/drive/WhatWeDoSection';
 import CtaSection from '@/components/drive/CtaSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
@@ -18,6 +17,9 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { CliCard } from '@/components/drive/CliCard';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import { CaretRight, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
+import Link from 'next/link';
 
 interface DriveProps {
   textContent: DriveText;
@@ -47,6 +49,29 @@ const Drive = ({
 }: DriveProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'drive');
 
+  const Cards = [
+    {
+      icon: Password,
+      title: textContent.FeaturesSection.section7.card1.title,
+      description: textContent.FeaturesSection.section7.card1.subtitle,
+    },
+    {
+      icon: Key,
+      title: textContent.FeaturesSection.section7.card2.title,
+      description: textContent.FeaturesSection.section7.card2.subtitle,
+    },
+    {
+      icon: ShieldCheck,
+      title: textContent.FeaturesSection.section7.card3.title,
+      description: textContent.FeaturesSection.section7.card3.subtitle,
+    },
+    {
+      icon: LockKey,
+      title: textContent.FeaturesSection.section7.card4.title,
+      description: textContent.FeaturesSection.section7.card4.subtitle,
+    },
+  ];
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -60,8 +85,6 @@ const Drive = ({
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="drive" />
-
         <HeroSection textContent={textContent.HeroSection} lang={lang} download={download} />
 
         <div className="flex items-center justify-center px-2 pb-20">
@@ -72,7 +95,32 @@ const Drive = ({
 
         <FileParallaxSection />
 
-        <WhatWeDoSection textContent={textContent.FeaturesSection} lang={lang} />
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
+              <h3 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">
+                {textContent.FeaturesSection.section7.title.line1}
+                <br />
+                {textContent.FeaturesSection.section7.title.line2}
+              </h3>
+
+              <p className="mb-6 text-xl text-gray-80">
+                {textContent.FeaturesSection.section7.subtitle.line1} <br className="hidden sm:flex" />
+                {textContent.FeaturesSection.section7.subtitle.line2} <br className="hidden sm:flex" />
+              </p>
+
+              <Link
+                href={'/privacy'}
+                target="_blank"
+                className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"
+              >
+                <span>{textContent.FeaturesSection.section7.cta}</span>
+                <CaretRight size={16} weight="bold" />
+              </Link>
+            </div>
+          }
+          cards={Cards}
+        />
 
         <FeatureSection textContent={textContent.FeatureSection} />
 

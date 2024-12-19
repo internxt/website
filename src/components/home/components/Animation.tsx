@@ -13,13 +13,13 @@ interface AnimationProps {
 }
 
 const Animation = ({
-  browserImg = getImage('/images/home/header/browser.webp'),
-  folderImg = getImage('/images/home/header/folder.svg'),
-  zipImg = getImage('/images/home/header/zip.svg'),
-  powerpointImg = getImage('/images/home/header/powerpoint.svg'),
-  csvImg = getImage('/images/home/header/csv.svg'),
-  previewImg = getImage('/images/home/header/file_item.webp'),
-  taskloggerImg = getImage('/images/home/header/tasklogger.webp'),
+  browserImg = getImage('/images/home/header/browser.webp', true),
+  folderImg = getImage('/images/home/header/folder.svg', true),
+  zipImg = getImage('/images/home/header/zip.svg', true),
+  powerpointImg = getImage('/images/home/header/powerpoint.svg', true),
+  csvImg = getImage('/images/home/header/csv.svg', true),
+  previewImg = getImage('/images/home/header/file_item.webp', true),
+  taskloggerImg = getImage('/images/home/header/tasklogger.webp', true),
 }: AnimationProps) => {
   // Header animation
   const [headerAnimation1, setHeaderAnimation1] = useState<boolean>(false);

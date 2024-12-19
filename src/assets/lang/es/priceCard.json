@@ -29,7 +29,11 @@
   },
   "businessLabels": {
     "1TB": "Standard",
-    "2TB": "Pro"
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
   },
   "billingFrequencyLabel": {
     "lifetime": "Pago único",
@@ -91,6 +95,24 @@
       "5TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App"],
       "10TB": ["Fondos de pantalla Star Wars", "Star Wars Theme para la Web App", "Stickers de Star Wars"]
     },
+    "halloweenFeatures": {
+      "title": "Regalitos de Internxt",
+      "200GB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "1TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "2TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "5TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "10TB": ["Mochila Internxt x Swiss Peak ", "Tema de Halloween para Web App"],
+      "tooltip": "Comprando cualquier plan lifetime!"
+    },
+    "christmasFeatures": {
+      "title": "Regalitos navideños",
+      "200GB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "1TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "2TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "5TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "10TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
+      "tooltip": "Consigue hasta 10TB de almacenamiento extra!!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",
@@ -110,6 +132,7 @@
     },
     "individuals": {
       "200GB": [
+        "200 GB de almacenamiento encriptado",
         "Compartir archivos y carpetas cifrados",
         "Compartir archivos protegidos con contraseña",
         "Accede a tus archivos desde cualquier dispositivo",
@@ -119,6 +142,7 @@
         "Garantía de devolución de 30 días"
       ],
       "2TB": [
+        "2TB de almacenamiento encriptado",
         "Compartir archivos y carpetas cifrados",
         "Compartir archivos protegidos con contraseña",
         "Accede a tus archivos desde cualquier dispositivo",
@@ -128,6 +152,7 @@
         "Garantía de devolución de 30 días"
       ],
       "5TB": [
+        "5TB de almacenamiento encriptado",
         "Compartir archivos y carpetas cifrados",
         "Compartir archivos protegidos con contraseña",
         "Accede a tus archivos desde cualquier dispositivo",
@@ -137,6 +162,7 @@
         "Garantía de devolución de 30 días"
       ],
       "10TB": [
+        "10TB de almacenamiento encriptado",
         "Compartir archivos y carpetas cifrados",
         "Compartir archivos protegidos con contraseña",
         "Accede a tus archivos desde cualquier dispositivo",

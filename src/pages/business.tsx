@@ -1,7 +1,7 @@
 import { BusinessText } from '@/assets/types/business';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { EncryptedCloudSolution } from '@/components/business/EncryptedCloudSolution';
-import { BusinessHeroSection } from '@/components/business/HeroSection';
+import { HeroSection } from '@/components/shared/components/HeroSection';
 import { InternxtProtectsYourBusiness } from '@/components/business/InternxtProtectsYourBusiness';
 import { SecureYourCompany } from '@/components/business/SecureYourCompany';
 import { TestimonialsSectionForBusiness } from '@/components/business/TestimonialsSectionForBusiness';
@@ -15,6 +15,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
+import Header from '@/components/shared/Header';
+import Button from '@/components/shared/Button';
+import { getImage } from '@/lib/getImage';
+import { PromoCodeName } from '@/lib/types';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -32,19 +36,42 @@ export const BusinessPage = ({
   lang,
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
-  const { products, loadingCards, currencyValue } = usePricing();
+  const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
+    couponCodeForBusiness: PromoCodeName.Christmas,
+  });
 
   const locale = lang as string;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime);
+    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
+  const onButtonClick = () => (window.location.href = '#priceTable');
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
 
-      <BusinessHeroSection textContent={textContent.HeroSection} />
+      <HeroSection
+        TextComponent={
+          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
+            <Header>{textContent.HeroSection.title}</Header>
+            <div className="flex flex-col gap-4">
+              <p className="text-xl">{textContent.HeroSection.description[0]}</p>
+              <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
+            </div>
+            <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
+          </div>
+        }
+        style={{
+          background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
+        }}
+        imageProperties={{
+          src: getImage('/images/business/Internxt_b2b_business_solution.webp'),
+          alt: 'Internxt B2B Business Solution',
+          width: 671,
+          height: 563,
+        }}
+      />
 
       <SecureYourCompany textContent={textContent.SecureYourCompany} />
 
@@ -56,11 +83,15 @@ export const BusinessPage = ({
         loadingCards={loadingCards}
         lang={locale}
         products={products}
+        decimalDiscount={{
+          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+        }}
         hideFreeCard
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideSwitchSelector
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
@@ -76,7 +107,7 @@ export const BusinessPage = ({
   );
 };
 
-export async function getServerSideProps(ctx) {
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

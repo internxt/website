@@ -9,7 +9,7 @@
     "cancelCta": "Abbrechen"
   },
   "FreeCardPromoBanner": {
-    "title": "Erhalten Sie 75% Rabatt auf alle unsere Premium-Pläne",
+    "title": "Erhalten Sie einen exklusiven Rabatt!",
     "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
@@ -42,20 +42,27 @@
     }
   },
   "featuresBanner": {
-    "label": "Bis zu 75% Rabatt",
-    "title": "Zeit, zur Privatsphäre zu wechseln!",
-    "subtitle": "Gewinnen Sie unseren Premium-Rucksack mit unseren lebenslangen Plänen.",
+    "label": "Spare 85%",
+    "title": "Boo! Sparen Sie mit uns...",
+    "subtitle": "Gewinne unseren Premium-Rucksack mit unseren lebenslangen Plänen.",
     "cta": "Plan wählen",
-    "guarantee": "30-Tage Geld-zurück-Garantie",
-    "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden",
+    "guarantee": "30-Tage-Geld-zurück-Garantie",
+    "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
     "features": [
-      "Sparen bei allen Internxt-Plänen",
-      "Sicherer und geschützter Cloud-Speicher",
-      "Zero-Knowledge-Technologie",
-      "Open Source und transparent",
-      "Ende-zu-Ende verschlüsselte Übertragungen",
-      "Kein unbefugter Zugang"
+      "Spare bei allen lebenslangen Plänen",
+      "Privater, verschlüsselter Cloud-Speicher",
+      "Quelloffen und geprüft",
+      "End-to-End-verschlüsselte Übertragungen",
+      "Kein unbefugter Zugriff",
+      "Angebot endet am 3. Dezember"
     ]
+  },
+  "s3StorageBanner": {
+    "label": "Jetzt verfügbar!",
+    "title": "S3-kompatibler Objektspeicher",
+    "feat": ["Bis zu 80% günstiger als AWS", "Sicher, skalierbar, S3-kompatibel", "Native Rclone-Unterstützung"],
+    "cta": "Holen Sie sich 1TB kostenlos",
+    "offerEnds": "*Angebot nur für den ersten Monat"
   },
   "tryOutInternxtGeneralBanner": {
     "title": "Versuche Internxt",
@@ -66,6 +73,14 @@
     "title": "Versuche Internxt",
     "description": "Sichere Dateispeicherung mit passwortgeschützter Technologie für deine Dateien.",
     "cta": "Melde dich kostenlos an"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Erhalte Ende-zu-Ende verschlüsselten Cloud-Speicher ohne zusätzliche Kosten.",
+    "blueText": " Melde dich kostenlos bei Internxt an"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "für eine sicherere, offene und kosteneffektive Cloud-Speicherlösung.",
+    "blueText": "Wechsle zu Internxt "
   },
   "SignUpPwdCheckerBanner": {
     "line1": "Verwende dieses sichere Passwort mit einem",
@@ -104,9 +119,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Bis zu 75% Rabatt auf alle Speicherpläne!",
-      "normalText": "Erhalten Sie vollständige Privatsphäre für weniger: ",
-      "cta": "Plan wählen"
+      "boldText": "80% Rabatt auf ALLE Premium-Pläne!",
+      "normalText": "Es ist die schönste Zeit des Jahres!",
+      "cta": "Angebot sichern"
     }
   },
   "lifetimeBanner": {

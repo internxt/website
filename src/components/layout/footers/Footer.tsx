@@ -40,7 +40,7 @@ export default function Footer({
     e.preventDefault();
 
     await axios
-      .post(`api/subscribe`, {
+      .post(`/api/subscribe`, {
         email,
         groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
       })
@@ -172,14 +172,6 @@ export default function Footer({
                     <Link href="/drive" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.drive}
                     </Link>
-                    <Link
-                      href="/webdav"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex flex-row items-center hover:text-primary"
-                    >
-                      <div className="flex flex-row">{textContent.FooterSection.sections.products.webDAV}</div>
-                    </Link>
 
                     <Link
                       href="/cloud-object-storage"
@@ -216,6 +208,19 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </div>
                     </Link>
+
+                    <Link
+                      href="/family"
+                      locale={'en'}
+                      passHref
+                      className="flex max-w-[250px] items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.products.family}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
+
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
@@ -367,6 +372,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/dropbox-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.dropboxAlternative}
+                    </Link>
+
+                    <Link
                       href="/privacy-directory"
                       locale={lang}
                       passHref
@@ -430,6 +444,17 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
+                    <Link
+                      href="/dark-web-monitor"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -443,7 +468,12 @@ export default function Footer({
             />
 
             {/* Logos */}
-            <div className="flex w-full max-w-[900px] flex-row justify-between">
+            <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
+              {lang !== 'es' ? (
+                <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
+              ) : (
+                <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
+              )}
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
                   <Image
@@ -454,11 +484,11 @@ export default function Footer({
                     alt="Internxt logo"
                   />
                 </Link>
-                <p className={`text-xs ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
+                <p className={`text-sm font-medium ${darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'}`}>
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
-              <div className="flex flex-row items-center gap-2">
+              <div className="flex flex-row items-center gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={15}
@@ -469,14 +499,14 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
                     loading="lazy"
-                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
+                    src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
-                    alt="facebook icon"
+                    alt="Reddit icon"
                   />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
@@ -549,16 +579,6 @@ export default function Footer({
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
-
-                      <Link
-                        href="/webdav"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.products.webDAV}
-                      </Link>
-
                       <Link
                         href="/cloud-object-storage"
                         target="_blank"
@@ -768,6 +788,15 @@ export default function Footer({
                       </Link>
 
                       <Link
+                        href="/dropbox-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.dropboxAlternative}
+                      </Link>
+
+                      <Link
                         href="/privacy-directory"
                         locale={lang}
                         passHref
@@ -832,11 +861,17 @@ export default function Footer({
                       <Link href="/file-converter" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.fileConverter}
                       </Link>
+                      <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
+                        {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      </Link>
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}
                       </Link>
                       <Link href="/business" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.business}
+                      </Link>
+                      <Link href="/family" locale={lang} passHref className="hover:text-primary">
+                        {textContent.FooterSection.sections.products.family}
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
@@ -850,7 +885,7 @@ export default function Footer({
             <LanguageMobileBox darkMode={darkMode} />
 
             <div className="flex flex-col items-center space-y-4 py-10">
-              <div className="flex flex-row gap-2">
+              <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
                     width={15}
@@ -861,14 +896,14 @@ export default function Footer({
                     alt="twitter icon"
                   />
                 </Link>
-                <Link href="https://www.facebook.com/internxt" target="_blank" rel="noreferrer">
+                <Link href="https://www.reddit.com/r/internxt/" target="_blank" rel="noreferrer">
                   <Image
                     width={16}
                     height={16}
                     loading="lazy"
-                    src={getImage(`/icons/social/${darkMode ? 'cool-gray-30' : 'cool-gray-60'}/facebook.svg`)}
+                    src={getImage(`/icons/social/reddit.svg`)}
                     draggable="false"
-                    alt="facebook icon"
+                    alt="Reddit icon"
                   />
                 </Link>
                 <Link href="https://linkedin.com/company/internxt" target="_blank" rel="noreferrer">
@@ -923,6 +958,11 @@ export default function Footer({
             </div>
           </div>
         </footer>
+        {lang === 'es' && (
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
+            {textContent.FooterSection.financialProject}
+          </p>
+        )}
       </div>
     </section>
   );

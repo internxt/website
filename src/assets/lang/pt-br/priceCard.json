@@ -1,0 +1,188 @@
+{
+  "mostPopular": "Mais popular",
+  "mostPopularPlan": "Plano Mais Popular",
+  "valentines": "Oferta especial de Dia dos Namorados!",
+  "onlyForNewClients": "Apenas para novos assinantes ou usuários do plano gratuito",
+  "redeemCode": "Resgatar código",
+  "save": "Economize ",
+  "planTitles": {
+    "individuals": "Planos Individuais",
+    "homePage": "Escolha o plano certo para você",
+    "lifetime": "Planos Vitalícios",
+    "business": "Planos de Negócios",
+    "lifetimeCampaign": {
+      "blueText": "Obtenha 50% de desconto",
+      "normalText": "em todos os nossos planos vitalícios exclusivos"
+    }
+  },
+  "lifetimeDescription": "Compre uma vez e obtenha privacidade e segurança para sempre.",
+  "planDescription": "Todos os planos da Internxt são completamente equipados com acesso total a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
+  "businessDescription": "Garanta a segurança dos dados empresariais com os planos de armazenamento na nuvem criptografados da Internxt.",
+  "billingFrequency": {
+    "monthly": "Mensal",
+    "annually": "Anual",
+    "individual": "Individual",
+    "lifetime": "Vitalício",
+    "business": "Negócios"
+  },
+  "businessLabels": {
+    "1TB": "Padrão",
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Essenciais da Família",
+      "2TB": "Premium da Família"
+    }
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "Pagamento único",
+    "monthly": "Cobrado mensalmente",
+    "semiannually": "Cobrado semestralmente",
+    "annually": "Cobrado anualmente",
+    "afterMonth": "após 30 dias"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/mensal",
+    "semiannually": "/semestral",
+    "annually": "/anual"
+  },
+  "perUserSlash": "Por usuário/",
+  "perUser": "Por usuário",
+  "users": "usuários",
+  "freePlan": "Grátis",
+  "price": {
+    "freeForever": "Grátis para sempre",
+    "free": "Até "
+  },
+  "perMonth": "/mês",
+  "firstMonth": "Primeiros 30 dias",
+  "cta": {
+    "getStarted": "Comece agora",
+    "signUpNow": "Inscreva-se agora",
+    "buy": "Comprar",
+    "get": "Obter",
+    "selectPlan": "Selecionar plano",
+    "redeem": "Resgatar código",
+    "discount": "MELHOR VALOR!",
+    "claimTheDeal": "Aproveite a oferta",
+    "freemonth": "Obtenha 30 dias grátis"
+  },
+  "freePlanCard": {
+    "getStarted": "Comece com nosso plano gratuito",
+    "enjoy10gb": "Aproveite 1GB para sempre e tenha acesso a todos os nossos serviços",
+    "upTo": "1GB",
+    "freeForever": "Grátis para sempre",
+    "cta": "Selecionar plano"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Aproveite",
+      "enjoyUpTo": "Aproveite até",
+      "forFree": "gratuitamente",
+      "forever": "para sempre"
+    },
+    "moneyBack": "Garantia de devolução do dinheiro em 30 dias",
+    "encryptedFiles": "Armazenamento e compartilhamento de arquivos criptografados",
+    "accessFromAnywhere": "Acesse seus arquivos de qualquer dispositivo",
+    "allServices": "Tenha acesso a todos os nossos serviços",
+    "dataAccess": "Sem acesso não autorizado aos dados"
+  },
+  "productFeatures": {
+    "starWarsFeatures": {
+      "title": "Brindes da Edição Especial:",
+      "200GB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web"],
+      "2TB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web"],
+      "5TB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web"],
+      "10TB": ["Papéis de parede de Star Wars", "Tema de Star Wars para o App Web", "Adesivos de Star Wars"]
+    },
+    "halloweenFeatures": {
+      "title": "Brindes temáticos da Internxt:",
+      "200GB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "1TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "2TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "5TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "10TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
+      "tooltip": "Compre qualquer plano vitalício para ter chance de ganhar!"
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Até ",
+        "bold": "4x mais barato ",
+        "normal2": "que outras alternativas de armazenamento na nuvem seguras"
+      },
+      "year": {
+        "normal": "Até ",
+        "bold": "3x mais barato ",
+        "normal2": "que outras alternativas de armazenamento na nuvem seguras"
+      },
+      "month": {
+        "normal": "Até ",
+        "bold": "2x mais barato ",
+        "normal2": "que outras alternativas de armazenamento na nuvem seguras"
+      }
+    },
+    "individuals": {
+      "200GB": [
+        "200GB de armazenamento criptografado",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Compartilhamento de arquivos protegido por senha",
+        "Acesse seus arquivos de qualquer dispositivo",
+        "Envie arquivos de até 20GB",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte ao cliente premium",
+        "Garantia de devolução do dinheiro em 30 dias"
+      ],
+      "2TB": [
+        "2TB de armazenamento criptografado",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Compartilhamento de arquivos protegido por senha",
+        "Acesse seus arquivos de qualquer dispositivo",
+        "Envie arquivos de até 20GB",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte ao cliente premium",
+        "Garantia de devolução do dinheiro em 30 dias"
+      ],
+      "5TB": [
+        "5TB de armazenamento criptografado",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Compartilhamento de arquivos protegido por senha",
+        "Acesse seus arquivos de qualquer dispositivo",
+        "Envie arquivos de até 20GB",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte ao cliente premium",
+        "Garantia de devolução do dinheiro em 30 dias"
+      ],
+      "10TB": [
+        "10TB de armazenamento criptografado",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Compartilhamento de arquivos protegido por senha",
+        "Acesse seus arquivos de qualquer dispositivo",
+        "Envie arquivos de até 20GB",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte ao cliente premium",
+        "Garantia de devolução do dinheiro em 30 dias"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB de armazenamento por usuário",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Crie e gerencie usuários e equipes",
+        "A partir de 3 usuários e até 10",
+        "Conformidade com o GDPR",
+        "Envie arquivos de até 5GB",
+        "Gerencie a faturamento e pagamentos da conta",
+        "Suporte ao cliente premium"
+      ],
+      "2TB": [
+        "2TB de armazenamento por usuário",
+        "Compartilhamento de arquivos e pastas criptografados",
+        "Crie e gerencie usuários e equipes",
+        "A partir de 3 usuários e até 100",
+        "Conformidade com o GDPR",
+        "Envie arquivos de até 20GB",
+        "Gerencie a faturamento e pagamentos da conta",
+        "Suporte ao cliente premium"
+      ]
+    }
+  }
+}

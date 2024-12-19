@@ -43,6 +43,8 @@ export default function Custom404() {
             <div className="flex flex-row flex-wrap items-center justify-center gap-10">
               {cards.map((card, index) => (
                 <div
+                  tabIndex={0}
+                  onKeyDown={() => {}}
                   role="button"
                   className="flex h-full cursor-pointer select-none flex-col items-center justify-center space-y-4 rounded-lg bg-gray-1 px-4 py-8 text-center"
                   key={index}

@@ -37,6 +37,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         <div className="hidden h-full max-h-32 flex-row gap-4 border-b-4 border-b-white xl:flex">
           {textContent.cards.map((feat, index) => (
             <button
+              key={feat.selectorTab}
               className={`flex ${
                 selectedTab === index ? 'border-primary' : 'border-transparent'
               } w-full max-w-[300px] translate-y-1 flex-col items-center justify-center border-b-4 p-5 text-center`}

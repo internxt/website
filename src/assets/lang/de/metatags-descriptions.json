@@ -15,6 +15,11 @@
     "description": "Verhindern Sie Datenverlust mit dem verschlüsselten Cloud-Speicher von Internxt für Unternehmen—melden Sie sich an, um von branchenführendem Schutz für Cloud-Daten zu profitieren."
   },
   {
+    "id": "family",
+    "title": "Internxt für Familienplan – Der sicherste Cloud-Speicher für Familien",
+    "description": "Verwalten Sie die Online-Privatsphäre Ihrer Familie mit unserem Internxt-Cloud-Speicher für Familienpläne. Speichern, organisieren und teilen Sie sicher die privaten Dokumente Ihrer Familie an einem Ort."
+  },
+  {
     "id": "free-user",
     "title": "Internxt — 75% Rabatt auf alle sicheren Cloud-Speicherpläne",
     "description": "Erhalten Sie 75% Rabatt auf jeden Internxt-Plan, um Ihre Dateien privat zu halten und sich nie wieder Sorgen um Platzmangel zu machen."
@@ -139,5 +144,20 @@
     "id": "cloud-storage-for-education",
     "title": "Cloud Storage Discount for Education | Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Private & Sichere Cloud-Speicherung",
+    "description": "Internxt Halloween-Kampagne: 80 % Rabatt auf all unsere Jahrespläne. Sichern Sie Ihre Dateien ein Leben lang mit nur einer Zahlung."
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: Wurde ich gehackt?",
+    "description": "Der Internxt Dark Web Monitor ist ein 'Wurde ich gehackt?'-Dienst, der überprüft, ob Ihre E-Mail in irgendwelchen Online-Datenpannen geleakt wurde."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Objektspeicherung",
+    "description": "Internxt bietet privaten und erschwinglichen Objektspeicher zum sicheren Speichern von Daten mit dem S3-Protokoll, um Ihre Speicheranforderungen effektiv zu verwalten."
   }
 ]

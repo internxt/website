@@ -24,12 +24,12 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
         "token": "Token",
         "pricing": "Tarifs",
-        "business": "Internxt pour les Entreprises"
+        "business": "Internxt pour les Entreprises",
+        "family": "Internxt pour les Familles"
       },
       "company": {
         "title": "Enterprise",
@@ -64,6 +64,7 @@
         "blog": "Blog",
         "directoryOfPrivacyOrganizations": "Organismes de protection de la vie privée",
         "pCloudAlternative": "Alternative à pCloud",
+        "dropboxAlternative": "Alternative à Dropbox",
         "writeForUs": "Escribe para nosotros",
         "cyberSecurityGlossary": "Glosario de ciberseguridad",
         "cyberAwareness": "Cyber Awareness",
@@ -77,7 +78,8 @@
         "passwordChecker": "Vérifier Mot de Passe",
         "byteConverter": "Convertisseur d'Octets",
         "passwordGenerator": "Générateur de Mot de Passe",
-        "fileConverter": "Convertisseur de fichiers"
+        "fileConverter": "Convertisseur de fichiers",
+        "haveIBeenPwned": "Internxt Monitor"
       },
       "language": "Langue"
     }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Check, CheckCircle, PlusCircle, X, XCircle } from '@phosphor-icons/react';
+import { useEffect, useState } from 'react';
+import { PlusCircle } from '@phosphor-icons/react';
 import ReactMarkdown from 'react-markdown';
 
 export default function FaqAccordion({
@@ -10,7 +10,7 @@ export default function FaqAccordion({
   question: string;
   answer: string[];
   isQuestionBigger?: boolean;
-}) {
+}): JSX.Element {
   const [active, setActive] = useState(false);
 
   useEffect(() => {

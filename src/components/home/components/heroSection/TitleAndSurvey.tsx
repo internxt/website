@@ -32,7 +32,7 @@ const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.
           {textContent.description.normal2}
         </h2>
       </div>
-      <div className="flex flex-col gap-5 rounded-xl border border-gray-10 bg-gray-1 py-4 px-6">
+      <div className="flex flex-col gap-5 rounded-xl border border-gray-10 bg-gray-1 px-6 py-4">
         <p className="text-xl font-semibold text-gray-80">{textContent.howMuchYouNeed}</p>
         <div className="flex items-center justify-center gap-5 lg:flex-row lg:justify-start">
           <div className="hidden flex-row lg:flex">
@@ -40,10 +40,9 @@ const TitleAndSurvey = ({ textContent, redirectUrl }: TitleAndSurveyProps): JSX.
             <div className="flex h-full border border-gray-10" />
           </div>
 
-          {/* // TODO: Manage the buttons logic */}
           <div className="flex flex-wrap gap-4 lg:flex-row">
             {textContent.buttonLabel.map((label) => (
-              <div className="flex w-full lg:w-max">
+              <div key={label} className="flex w-full lg:w-max">
                 <Button className="!w-full lg:w-max" text={label} onClick={handleOnPlanButtonClicked} />
               </div>
             ))}

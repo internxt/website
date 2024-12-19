@@ -262,10 +262,10 @@ const MainSection = ({ textContent }) => {
         <div className="-mx-6 flex flex-col overflow-hidden overflow-x-auto px-6">
           <table className="table-auto bg-white">
             <tr>
-              <th className="border border-cool-gray-30 bg-cool-gray-5 py-2 px-8">
+              <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
                 {textContent.privacy_policy_table_row1_column1}
               </th>
-              <th className="border border-cool-gray-30 bg-cool-gray-5 py-2 px-8">
+              <th className="border border-cool-gray-30 bg-cool-gray-5 px-8 py-2">
                 {textContent.privacy_policy_table_row1_column2}
               </th>
             </tr>
@@ -276,10 +276,6 @@ const MainSection = ({ textContent }) => {
             <tr>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row3_column1}</td>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row3_column2}</td>
-            </tr>
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row4_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row4_column2}</td>
             </tr>
             <tr>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row5_column1}</td>
@@ -294,11 +290,6 @@ const MainSection = ({ textContent }) => {
             <tr>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row7_column1}</td>
               <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row7_column2}</td>
-            </tr>
-
-            <tr>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row8_column1}</td>
-              <td className="border border-cool-gray-20 p-2 px-4">{textContent.privacy_policy_table_row8_column2}</td>
             </tr>
           </table>
         </div>

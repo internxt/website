@@ -56,7 +56,7 @@ const InfoSection = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-center space-y-16 py-20 px-5">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
         <div id="incontent_1" className="flex w-full justify-center"></div>
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
@@ -83,7 +83,7 @@ const InfoSection = ({
       {hideLast2Sections ? null : (
         <>
           <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
-          <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20 px-5">
+          <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
             <div id="incontent_3" className="flex w-full justify-center"></div>
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
@@ -96,6 +96,9 @@ const InfoSection = ({
               </ul>
             </div>
             <div
+              role="button"
+              tabIndex={0}
+              onKeyDown={() => {}}
               className="w-full max-w-4xl cursor-pointer px-5"
               onClick={() => {
                 window.open(`${window.origin}${lang === 'en' ? '' : `/${lang}`}/password-checker`, '_blank');

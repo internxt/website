@@ -41,7 +41,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
           </div>
           <div className="mx-auto flex flex-col gap-2 lg:mx-0">
             {textContent.features.map((feat) => (
-              <div className="flex flex-row gap-2">
+              <div key={feat} className="flex flex-row gap-2">
                 <Check className="text-green" weight="bold" size={24} />
                 <p className="text-lg font-semibold text-gray-100">{feat}</p>
               </div>
@@ -51,10 +51,10 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       )}
 
       <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100">
+        <p className="flex flex-row items-end text-white">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
-            <abbr className="mt-0.5 text-base">{currency}</abbr>
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-white">
+            <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
           {textContent.startFrom.normal2}
@@ -67,7 +67,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         >
           {textContent.claimDeal}
         </Link>
-        <div className="flex w-full max-w-[177px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 shadow-sm">
+        <div className="flex w-full max-w-[177px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-primary shadow-sm">
           <Countdown textFont="font-medium" textHeight="text-xl" />
         </div>
       </div>
@@ -75,7 +75,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       {footer ?? (
         <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-primary" />
-          <p className="whitespace-nowrap lg:text-lg">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap text-white lg:text-lg ">{textContent.guarantee}</p>
         </div>
       )}
     </div>

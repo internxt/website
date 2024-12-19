@@ -10,6 +10,11 @@
     "description": "Archiviate, condividete ed eseguite il backup di file e foto nel cloud con Internxt Drive. Archiviazione di file e backup online crittografati end-to-end e open-source."
   },
   {
+    "id": "family",
+    "title": "Internxt per la Famiglia — Il Più Sicuro Archivio Cloud per Famiglie",
+    "description": "Gestisci la privacy online della tua famiglia con il nostro archivio cloud di Internxt per piani familiari. Conserva, organizza e condividi in modo sicuro i documenti privati della tua famiglia in un unico luogo."
+  },
+  {
     "id": "business",
     "title": "Internxt — Archiviazione Cloud Privata e Criptata per le Aziende",
     "description": "Previeni la perdita di dati con l'archiviazione cloud criptata di Internxt per le aziende—registrati per beneficiare della protezione dei dati cloud leader del settore."
@@ -143,5 +148,20 @@
     "id": "cloud-storage-for-education",
     "title": "Cloud Storage Discount for Education | Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Archiviazione Cloud Privata e Sicura",
+    "description": "Campagna di Halloween Internxt: Ottieni l'80% di sconto su tutti i nostri piani annuali. Proteggi i tuoi file a vita con un unico pagamento."
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: Sono Stato Compromesso?",
+    "description": "Internxt Dark Web Monitor è un servizio 'sono stato compromesso' che controlla se la tua email è stata compromessa in violazioni di dati online."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt — Archiviazione di Oggetti",
+    "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
   }
 ]
