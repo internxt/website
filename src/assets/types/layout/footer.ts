@@ -16,6 +16,7 @@ export interface FooterSection {
   comingSoon: string;
   new: string;
   sections: Sections;
+  financialProject: string;
 }
 
 export interface Copyright {
@@ -66,7 +67,6 @@ export interface Products {
   drive: string;
   photos: string;
   send: string;
-  webDAV: string;
   objStorage: string;
   vpn: string;
   token: string;
@@ -95,6 +95,7 @@ export interface Tools {
   passwordGenerator: string;
   fileConverter: string;
   vpn: string;
+  haveIBeenPwned: string;
 }
 
 export interface NewsletterSection {

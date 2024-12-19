@@ -132,6 +132,19 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     });
   }, []);
 
+  useEffect(() => {
+    if (couponCode) {
+      stripeService
+        .getCoupon(couponCode)
+        .then((coupon) => {
+          dispatch({ type: 'SET_COUPON', payload: coupon });
+        })
+        .catch(() => {
+          //
+        });
+    }
+  }, [couponCode]);
+
   return {
     products: state.products,
     loadingCards: state.loadingCards,

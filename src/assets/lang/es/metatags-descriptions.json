@@ -228,5 +228,20 @@
     "id": "image-to-text",
     "title": "Convierte imágenes a archivos de texto en línea de forma gratuita | Internxt",
     "description": "El convertidor de archivos de Internxt convierte tus imágenes a archivos de texto de forma gratuita. Nuestro convertidor de imágenes a texto es rápido y seguro, manteniendo tus archivos 100% privados."
+  },
+  {
+    "id": "halloween-campaign",
+    "title": "Internxt – Almacenamiento en la nube seguro",
+    "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
+  },
+  {
+    "id": "internxt-monitor",
+    "title": "Internxt Monitor: ¿He sido comprometido?",
+    "description": "Internxt Dark Web Monitor es un servicio de '¿he sido comprometido?' que verifica si tu correo electrónico ha sido filtrado en alguna violación de datos en línea."
+  },
+  {
+    "id": "cloud-object-storage",
+    "title": "Internxt – Almacenamiento en la nube seguro",
+    "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
   }
 ]

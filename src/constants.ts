@@ -12,7 +12,6 @@ export const COOKIE_DOMAIN = 'internxt.com';
 export const IMPACT_LOGIN_USER = 'https://app.impact.com/login.user';
 
 export const EXCLUDED_PATHS_FOR_BANNER = [
-  '/lifetime',
   '/pricing',
   '/partner-discount',
   '/techradar-discount',
@@ -35,6 +34,10 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
   '/affiliates',
+  '/comeback',
+  '/black-friday',
+  '/lifetime/celebration/singlesday',
+  '/elections',
 ];
 
 export const SNIGEL_BANNERS = {

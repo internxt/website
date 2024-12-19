@@ -24,8 +24,7 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
         "token": "Токен",
         "pricing": "Тарифные планы",
@@ -80,7 +79,8 @@
         "byteConverter": "Конвертер байтов",
         "passwordGenerator": "Генератор паролей",
         "fileConverter": "Преобразователь файлов",
-        "vpn": "Расширение VPN"
+        "vpn": "Расширение VPN",
+        "haveIBeenPwned": "Internxt Monitor"
       }
     }
   },

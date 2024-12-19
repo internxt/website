@@ -94,6 +94,24 @@
       "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
       "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
     },
+    "halloweenFeatures": {
+      "title": "Internxt themed goodies:",
+      "200GB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "2TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "5TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "10TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
+      "tooltip": "Buy any lifetime plan for a chance to win!"
+    },
+    "christmasFeatures": {
+      "title": "Santa’s gifts:",
+      "200GB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
+      "1TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
+      "2TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
+      "5TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
+      "10TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
+      "tooltip": "Win up to 10TB of free storage!"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Up to ",
@@ -113,6 +131,7 @@
     },
     "individuals": {
       "200GB": [
+        "200GB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
@@ -122,6 +141,7 @@
         "30-day money-back guarantee"
       ],
       "2TB": [
+        "2TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
@@ -131,6 +151,7 @@
         "30-day money-back guarantee"
       ],
       "5TB": [
+        "5TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",
@@ -140,6 +161,7 @@
         "30-day money-back guarantee"
       ],
       "10TB": [
+        "10TB encrypted storage",
         "Encrypted file and folder sharing",
         "Password-protected file sharing",
         "Access your files from any device",

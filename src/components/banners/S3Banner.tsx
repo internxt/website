@@ -74,7 +74,7 @@ const S3Banner = () => {
             </div>
             <div className="flex flex-col gap-2">
               {textContent.feat.map((feature) => (
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row gap-4" key={feature}>
                   <CheckCircle className="text-primary" weight="fill" size={32} />
                   <p className="text-lg font-semibold text-white">{feature}</p>
                 </div>

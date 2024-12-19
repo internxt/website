@@ -36,13 +36,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 78%",
-      "title": "Internxt back to work deals!",
-      "subtitle": "Get a lifetime of storage for less!",
-      "cta": "Choose plan",
-      "cta2": "Score 78% OFF",
+      "label": "Save 80%",
+      "title": "Halloween sale",
+      "subtitle": "Hear those sales bells jingling!",
+      "cta": "Claim deal",
+      "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers"
+      "lastCta": "*Offer is for free accounts or new customers",
+      "titleMbl1": "Christmas",
+      "titleMbl2": "savings",
+      "titleMbl3": "are here!",
+      "ctaMbl": "Buy plan"
     },
     "planTitles": {
       "individuals": "Individual Plans",
@@ -51,6 +55,10 @@
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
         "normalText": "all our exclusive lifetime plans"
+      },
+      "blackFriday": {
+        "title": "Black Friday mega sale: get 85% OFF all the most secure cloud storage plans",
+        "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",

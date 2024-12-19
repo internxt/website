@@ -36,15 +36,19 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia il 78%",
-      "title": "Offerte di ritorno al lavoro di Internxt!",
-      "subtitle": "Ottieni uno spazio di archiviazione a vita per meno!",
-      "cta": "Scegli un piano",
-      "cta2": "Ottieni il 78% di sconto",
+      "label": "Risparmia il 80%",
+      "title": "Saldi di Halloween",
+      "subtitle": "Senti tintinnare quelle campanelle di vendita!",
+      "cta": "Scegli il tuo piano",
+      "cta2": "Ottieni l'85% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti"
+      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
+      "titleMbl1": "Natale",
+      "titleMbl2": "risparmi",
+      "titleMbl3": "sono qui!",
+      "ctaMbl": "Seleziona piano"
     },
-    "save": "Risparmia fino a",
+    "save": "Risparmia fino al",
     "planTitles": {
       "individuals": "Piani individuali",
       "lifetime": "Piani a vita",
@@ -52,6 +56,10 @@
       "lifetimeCampaign": {
         "blueText": "Sconto del 50%",
         "normalText": "su tutti i nostri piani esclusivi a vita"
+      },
+      "blackFriday": {
+        "title": "Mega offerta Black Friday: ottieni l'85% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
+        "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },
     "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
@@ -60,8 +68,8 @@
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
     "billingFrequency": {
       "monthly": "Mensile",
-      "annually": "Annualmente",
-      "lifetime": "Vita",
+      "annually": "Annuale",
+      "lifetime": "A vita",
       "individual": "Individuale",
       "business": "Business"
     },

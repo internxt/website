@@ -145,7 +145,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       mode: plan?.interval === 'lifetime' ? 'payment' : 'subscription',
       amount: plan?.amount ?? 0,
       currency: plan?.currency,
-      payment_method_types: ['card'],
+      payment_method_types: ['card', 'paypal'],
     };
 
     setStripeElementsOptions(stripeElementsOptions);

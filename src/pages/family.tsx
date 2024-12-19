@@ -25,6 +25,7 @@ import usePricing from '@/hooks/usePricing';
 import { getImage } from '@/lib/getImage';
 import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatureInfoSection';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import { PromoCodeName } from '@/lib/types';
 
 interface FamilyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -34,7 +35,9 @@ interface FamilyProps {
 }
 
 export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
-  const { products, loadingCards, currencyValue } = usePricing();
+  const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
+    couponCodeForBusiness: PromoCodeName.Christmas,
+  });
 
   const metatag = metatagsDescriptions.filter((metatag) => metatag.id === 'family')[0];
   const heroSectionText = textContent.HeroSection;
@@ -90,7 +93,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
   ];
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime);
+    stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
 
   return (
@@ -142,12 +145,16 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
         loadingCards={loadingCards}
         lang={'en'}
         products={products}
+        decimalDiscount={{
+          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+        }}
         isFamilyPage={true}
         hideFreeCard
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideSwitchSelector
       />
 
       <SelectFeatureInfoSection

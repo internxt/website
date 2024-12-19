@@ -9,7 +9,7 @@
     "cancelCta": "Annulla"
   },
   "FreeCardPromoBanner": {
-    "title": "Ottieni il 75% di sconto su tutti i nostri piani Premium",
+    "title": "Ottieni uno sconto esclusivo!",
     "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
@@ -42,19 +42,19 @@
     }
   },
   "featuresBanner": {
-    "label": "Fino al 75% di sconto",
-    "title": "È ora di passare alla privacy!",
-    "subtitle": "Vinci il nostro zaino premium con i nostri piani a vita.",
-    "cta": "Scegli piano",
+    "label": "Risparmia l'85%!",
+    "title": "Le migliori offerte del Black Friday",
+    "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
+    "cta": "Scegli il tuo piano",
     "guarantee": "Garanzia di rimborso di 30 giorni",
-    "lastCta": "*L'offerta è valida per conti gratuiti o nuovi clienti",
+    "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
     "features": [
-      "Risparmia su tutti i piani Internxt",
-      "Archiviazione cloud sicura e protetta",
-      "Tecnologia zero-knowledge",
-      "Open source e trasparente",
-      "Trasferimenti cifrati end-to-end",
-      "Nessun accesso non autorizzato"
+      "Risparmia su tutti i piani premium",
+      "Archivio cloud privato e crittografato",
+      "Open source e verificato",
+      "Trasferimenti crittografati end-to-end",
+      "Nessun accesso non autorizzato",
+      "L'offerta termina il 3 dicembre"
     ]
   },
   "s3StorageBanner": {
@@ -73,6 +73,14 @@
     "title": "Try Internxt",
     "description": "Secure file storage with password-protected technology for your files.",
     "cta": "Sign up for free"
+  },
+  "SignUpPCloudAlternativeBanner": {
+    "line1": "Ottieni storage cloud crittografato end-to-end senza costi aggiuntivi.",
+    "blueText": " Unisciti a Internxt gratuitamente"
+  },
+  "SignUpPCloudAlternativeBanner2": {
+    "line1": "per una soluzione di storage cloud più sicura, aperta ed economica.",
+    "blueText": "Passa a Internxt "
   },
   "SignUpPwdCheckerBanner": {
     "line1": "Utilizzate la vostra password forte con un",
@@ -117,9 +125,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Fino al 75% di sconto su tutti i piani di archiviazione!",
-      "normalText": "Ottieni la completa privacy per meno: ",
-      "cta": "Scegli piano"
+      "boldText": "80% di sconto su TUTTI i piani premium!",
+      "normalText": "È il periodo più bello dell'anno! ",
+      "cta": "Richiedi l'offerta"
     }
   },
   "lifetimeBanner": {

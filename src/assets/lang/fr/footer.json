@@ -24,8 +24,7 @@
         "drive": "Internxt Drive",
         "photos": "Internxt Photos",
         "send": "Internxt Send",
-        "webDAV": "WebDAV",
-        "objStorage": "Object Storage",
+        "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
         "token": "Token",
         "pricing": "Tarifs",
@@ -79,7 +78,8 @@
         "passwordChecker": "Vérifier Mot de Passe",
         "byteConverter": "Convertisseur d'Octets",
         "passwordGenerator": "Générateur de Mot de Passe",
-        "fileConverter": "Convertisseur de fichiers"
+        "fileConverter": "Convertisseur de fichiers",
+        "haveIBeenPwned": "Internxt Monitor"
       },
       "language": "Langue"
     }

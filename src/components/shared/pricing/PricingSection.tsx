@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
 import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
-import Header from '../Header';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -12,6 +11,11 @@ import { Detective, FolderLock } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
+
+const SKELETON_CARDS = {
+  Individuals: 4,
+  Business: 2,
+};
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -29,13 +33,15 @@ interface PriceTableProps {
   hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
+  hideSwitchSelector?: boolean;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
+  isMonthly?: boolean;
+  darkMode?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
     business?: number;
   };
-  backgroundColorComponent?: string;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -56,33 +62,29 @@ export const PricingSection = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   hideBusinessSelector,
+  hideSwitchSelector,
   lang,
-  backgroundColorComponent = 'bg-white',
   popularPlanBySize = '10TB',
   lifetimeCoupons,
   isFamilyPage,
+  isMonthly,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
+  darkMode,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
-  const individualPlansTitle =
-    textContent.planTitles.homePage ??
-    (billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals);
-  const businessTitle = textContent.planTitles.business;
-
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isBusiness = activeSwitchPlan === 'Business';
-  const labelDiscount = isBusiness ? '10' : '23';
-  const showLoadingCards = isIndividual && loadingCards;
-  const showIndividualCards = isIndividual && !loadingCards;
+  const labelDiscount = '15';
+  const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
-
+  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
-    (activeSwitchPlan === 'Business' && !hideBusinessCards) || activeSwitchPlan === 'Individuals';
+    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -90,17 +92,9 @@ export const PricingSection = ({
     } else {
       onBusinessPlansSelected?.(false);
     }
-  }, [activeSwitchPlan]);
+  }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
-
-  const title = () => {
-    if (isIndividual) {
-      return individualPlansTitle;
-    } else {
-      return businessTitle;
-    }
-  };
 
   const features = [
     {
@@ -126,28 +120,22 @@ export const PricingSection = ({
   };
 
   return (
-    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
-      <div className="flex w-full flex-col items-center gap-10">
-        <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          <Header maxWidth="max-w-4xl">{title()}</Header>
-          <p className="w-full max-w-3xl text-center text-xl text-gray-80">
-            {!isIndividual
-              ? `${hideBusinessCards ? textContent.businessDescription : textContent.businessDescription2}`
-              : `${textContent.planDescription}`}
-          </p>
-        </div>
-        <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-          {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
-          {!hidePlanSelectorComponent && (
-            <PlanSelector
-              textContent={textContent}
-              activeSwitchPlan={activeSwitchPlan}
-              hideBusinessSelector={hideBusinessSelector}
-              onPlanTypeChange={onPlanTypeChange}
-            />
-          )}
+    <>
+      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
+        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+        {!hidePlanSelectorComponent && (
+          <PlanSelector
+            textContent={textContent}
+            activeSwitchPlan={activeSwitchPlan}
+            hideBusinessSelector={hideBusinessSelector}
+            onPlanTypeChange={onPlanTypeChange}
+            isMonthly
+            darkMode={darkMode}
+          />
+        )}
 
-          {/* Switch buttons for Individual plans (Monthly | Annually) */}
+        {/* Switch buttons for Individual plans (Monthly | Annually) */}
+        {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
           <SwitchComponent
             textContent={textContent}
             show={showSwitchComponent}
@@ -156,117 +144,114 @@ export const PricingSection = ({
             handleOnSwitchIsToggled={switchHandler}
             labelDiscount={labelDiscount}
             showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+            darkMode={darkMode}
           />
-        </div>
-
-        <Transition
-          show={showLoadingCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-            {Array(4)
-              .fill(0)
-              .map((_, i) => (
-                <CardSkeleton key={i} />
-              ))}
-          </div>
-        </Transition>
-
-        <Transition
-          show={showIndividualCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-          className="flex flex-col gap-4"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
-            {products?.individuals
-              ? products.individuals[billingFrequency].map((product) => (
-                  <PriceCard
-                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                    product={product}
-                    onCheckoutButtonClicked={onCheckoutButtonClicked}
-                    label={product.storage}
-                    monthlyProductPrice={
-                      products.individuals[Interval.Month].filter(
-                        (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                      )[0].price
-                    }
-                    key={product.storage}
-                    popular={product.storage === popularPlanBySize}
-                    decimalDiscountValue={
-                      product.interval !== Interval.Lifetime
-                        ? decimalDiscount?.subscriptions
-                        : lifetimeCoupons
-                        ? undefined
-                        : decimalDiscount?.subscriptions
-                    }
-                    fixedDiscount={
-                      product.interval === Interval.Lifetime && lifetimeCoupons
-                        ? lifetimeCoupons?.[product.storage].amountOff
-                        : undefined
-                    }
-                    lang={lang}
-                  />
-                ))
-              : undefined}
-          </div>
-          {!hideFreeCard && (
-            <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
-              <FreePlanCard textContent={textContent.freePlanCard} />
-            </div>
-          )}
-        </Transition>
-
-        {/* Business plans */}
-        <Transition
-          show={showBusinessCards}
-          enter="transition duration-500 ease-out"
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-          className="flex w-full flex-col gap-4"
-        >
-          <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
-            {hideBusinessCards ? (
-              <BusinessBanner textContent={banner.BusinessBanner} />
-            ) : (
-              <>
-                {businessBillingFrequency && products?.business
-                  ? products.business[businessBillingFrequency].map((product) => (
-                      <PriceCard
-                        isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                        product={product}
-                        onCheckoutButtonClicked={onCheckoutButtonClicked}
-                        productCardPlan="business"
-                        label={product.storage}
-                        monthlyProductPrice={
-                          products.business[Interval.Month].filter(
-                            (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                          )[0].price
-                        }
-                        key={product.storage}
-                        popular={product.storage === '10TB'}
-                        decimalDiscountValue={decimalDiscount?.business}
-                        isFamilyPage={isFamilyPage}
-                        lang={lang}
-                      />
-                    ))
-                  : undefined}
-              </>
-            )}
-          </div>
-        </Transition>
-        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
-          {features.map((feature) => (
-            <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary md:pb-0" />
-              <p className="text-xl font-medium text-gray-80">{feature.text}</p>
-            </div>
-          ))}
-        </div>
+        )}
       </div>
-    </section>
+      <Transition
+        show={showLoadingCards}
+        enter="transition duration-500 ease-out"
+        enterFrom="scale-95 translate-y-20 opacity-0"
+        enterTo="scale-100 translate-y-0 opacity-100"
+      >
+        <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
+          {Array(4)
+            .fill(0)
+            .map((_, i) => (
+              <CardSkeleton key={i} />
+            ))}
+        </div>
+      </Transition>
+
+      <Transition
+        show={showIndividualCards}
+        enter="transition duration-500 ease-out"
+        enterFrom="scale-95 translate-y-20 opacity-0"
+        enterTo="scale-100 translate-y-0 opacity-100"
+        className="flex flex-col gap-4"
+      >
+        <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+          {products?.individuals
+            ? products.individuals[billingFrequency].map((product) => (
+                <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  label={product.storage}
+                  monthlyProductPrice={
+                    products.individuals[Interval.Month].filter(
+                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                    )[0].price
+                  }
+                  key={product.storage}
+                  popular={product.storage === popularPlanBySize}
+                  decimalDiscountValue={
+                    product.interval === Interval.Lifetime ||
+                    product.interval === Interval.Year ||
+                    product.interval === Interval.Month
+                      ? decimalDiscount?.lifetime
+                      : undefined
+                  }
+                  lang={lang}
+                  darkMode={darkMode}
+                />
+              ))
+            : undefined}
+        </div>
+        {!hideFreeCard && (
+          <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
+            <FreePlanCard textContent={textContent.freePlanCard} />
+          </div>
+        )}
+      </Transition>
+
+      {/* Business plans */}
+      <Transition
+        show={showBusinessCards}
+        enter="transition duration-500 ease-out"
+        enterFrom="scale-95 translate-y-20 opacity-0"
+        enterTo="scale-100 translate-y-0 opacity-100"
+        className="flex w-full flex-col gap-4"
+      >
+        <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
+          {hideBusinessCards ? (
+            <BusinessBanner textContent={banner.BusinessBanner} />
+          ) : (
+            <>
+              {businessBillingFrequency && products?.business
+                ? products.business[businessBillingFrequency].map((product) => (
+                    <PriceCard
+                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
+                      product={product}
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
+                      monthlyProductPrice={
+                        products.business[Interval.Month].filter(
+                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                        )[0].price
+                      }
+                      key={product.storage}
+                      popular={product.storage === '10TB'}
+                      decimalDiscountValue={decimalDiscount?.business}
+                      isFamilyPage={isFamilyPage}
+                      lang={lang}
+                      darkMode={darkMode}
+                    />
+                  ))
+                : undefined}
+            </>
+          )}
+        </div>
+      </Transition>
+      <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
+        {features.map((feature) => (
+          <div key={feature.text} className="flex flex-row items-center space-x-3">
+            <feature.icon size={40} className="text-primary md:pb-0" />
+            <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };

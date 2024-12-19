@@ -1,6 +1,6 @@
 module.exports = {
   i18n: {
-    locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw', 'pt-br'],
+    locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw'],
     defaultLocale: 'en',
   },
   experimental: {
@@ -205,7 +205,7 @@ module.exports = {
     ];
   },
   images: {
-    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST],
+    domains: ['cdn-images-1.medium.com', process.env.CLOUDFLARE_STATIC_ASSETS_HOST, 'haveibeenpwned.com'],
     remotePatterns: [
       {
         protocol: 'https',

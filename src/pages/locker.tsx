@@ -44,7 +44,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   ];
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.codeId);
+    stripeService.redirectToCheckout(planId, currencyValue, 'individual', isCheckoutForLifetime, coupon?.name);
   };
 
   return (
@@ -61,7 +61,7 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        startFromInterval={Interval.Year}
+        startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
         hidePlanSelectorAndSwitch
       />

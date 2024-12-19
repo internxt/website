@@ -8,6 +8,7 @@ interface SwitchComponentProps {
   lang: string;
   labelDiscount?: string;
   showLabelDiscount: boolean;
+  darkMode?: boolean;
   handleOnSwitchIsToggled: (interval: Interval) => void;
 }
 
@@ -29,13 +30,24 @@ export const SwitchComponent = ({
   billedFrequency,
   showLabelDiscount,
   labelDiscount,
+  darkMode,
   handleOnSwitchIsToggled,
 }: SwitchComponentProps): JSX.Element => {
-  const isSwitchEnabled = billedFrequency === Interval.Year;
+  const isSwitchEnabled = billedFrequency === Interval.Year || billedFrequency === Interval.Lifetime;
 
   return (
     <div className={`${show ? 'flex' : 'hidden'} flex-row items-start gap-5 lg:items-center`}>
-      <p className={`text-base font-semibold ${!isSwitchEnabled ? 'text-gray-100' : 'text-gray-50'}`}>
+      <p
+        className={`text-base font-semibold ${
+          darkMode
+            ? !isSwitchEnabled
+              ? 'text-gray-1'
+              : 'text-gray-50'
+            : !isSwitchEnabled
+            ? 'text-gray-100'
+            : 'text-gray-50'
+        }`}
+      >
         {textContent.billingFrequency.monthly}
       </p>
 
@@ -47,7 +59,7 @@ export const SwitchComponent = ({
           handleOnSwitchIsToggled(isSwitchEnabled ? Interval.Month : Interval.Year);
         }}
         className={`${
-          isSwitchEnabled ? 'bg-green' : 'bg-gray-10'
+          isSwitchEnabled ? 'bg-green' : darkMode ? 'bg-gray-90' : 'bg-gray-10'
         } relative inline-flex h-6 w-11 items-center rounded-full`}
       >
         <span
@@ -59,11 +71,22 @@ export const SwitchComponent = ({
       </Switch>
 
       <div className="relative flex flex-col lg:flex-row lg:items-center">
-        <p className={`text-base font-semibold ${isSwitchEnabled ? 'text-gray-100' : 'text-gray-50'}`}>
+        <p
+          className={`text-base font-semibold ${
+            darkMode
+              ? isSwitchEnabled
+                ? 'text-gray-1'
+                : 'text-gray-50'
+              : isSwitchEnabled
+              ? 'text-gray-100'
+              : 'text-gray-50'
+          }`}
+        >
           {textContent.billingFrequency.annually}
         </p>
+
         {showLabelDiscount ? (
-          <p className="absolute top-full whitespace-nowrap font-semibold text-green-dark lg:left-full lg:top-0 lg:pl-1.5">
+          <p className="absolute left-1/2 top-full -translate-x-1/2 whitespace-nowrap font-semibold text-green-dark lg:left-full lg:top-0 lg:translate-x-0 lg:pl-1.5">
             {SAVE_LABEL[lang]} {labelDiscount}%
           </p>
         ) : null}

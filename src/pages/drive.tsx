@@ -20,7 +20,6 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { CaretRight, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
-import ProductsNavigation from '@/components/shared/components/ProductsNavigation';
 
 interface DriveProps {
   textContent: DriveText;
@@ -85,8 +84,6 @@ const Drive = ({
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
-        <ProductsNavigation textContent={navbarLang} lang={lang} selectedItem="drive" />
 
         <HeroSection textContent={textContent.HeroSection} lang={lang} download={download} />
 

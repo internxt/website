@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "省75%",
+    "label": "省70%",
     "title": {
       "line1": "获取最",
       "blueText": "安全的",
@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "高达75%的折扣 ",
-        "normal2": "所有高级计划。"
+        "blue": "80% 折扣 ",
+        "normal2": "所有高级计划"
       },
       "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
       "startFrom": {
@@ -126,8 +126,8 @@
     },
     "freePlanCard": {
       "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多10GB的容量，并获得所有我们的服务",
-      "upTo": "最高10GB",
+      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
+      "upTo": "最高1GB",
       "freeForever": "永久免费",
       "cta": "选择计划"
     },
