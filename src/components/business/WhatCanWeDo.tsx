@@ -35,7 +35,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           <h2 className="text-5xl font-semibold">{textContent.title}</h2>
           <h3 className="text-xl">{textContent.description}</h3>
         </div>
-        <div className="hidden max-w-[1310px] flex-row items-start py-20 lg:flex">
+        <div className="hidden max-w-[1330px] flex-row items-start py-20 lg:flex">
           <div className="flex flex-col">
             {textContent.cards.map((info, index) => (
               <Fragment key={info.title}>
@@ -47,7 +47,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                     onTabSelectorButtonClicked(index);
                   }}
                 >
-                  <p className="text-2xl font-medium text-white  hover:text-primary">{info.selectorTab}</p>
+                  <p className="text-start text-2xl font-medium text-white  hover:text-primary">{info.selectorTab}</p>
                 </button>
                 <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
               </Fragment>
