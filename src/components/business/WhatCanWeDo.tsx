@@ -32,7 +32,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
     >
       <div className="flex flex-col items-center justify-center gap-10 xl:gap-20">
         <div className="flex max-w-[774px] flex-col gap-4 text-center text-white">
-          <h2 className="text-5xl font-semibold">{textContent.title}</h2>
+          <h2 className="text-3xl font-semibold lg:text-5xl">{textContent.title}</h2>
           <h3 className="text-xl">{textContent.description}</h3>
         </div>
         <div className="hidden max-w-[1330px] flex-row items-start py-20 lg:flex">
@@ -81,9 +81,9 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           {textContent.cards.map((testimonial) => (
             <div
               key={testimonial.selectorTab}
-              className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl p-8"
+              className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
             >
-              <div className="flex h-full flex-col items-center justify-between gap-5" key={testimonial.review}>
+              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
                 <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
                 <div className="flex w-full max-w-[890px] flex-col">
                   <p className="text-center text-xl text-white">{testimonial.description}</p>

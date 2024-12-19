@@ -41,7 +41,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   return (
     <section className="overflow-hidden bg-gray-1 px-5 py-20">
       <div className="flex h-full w-full flex-col items-center justify-center gap-20">
-        <h2 className="text-center text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+        <h2 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <div className="hidden gap-8 lg:px-14 xl:flex">
           <button onClick={onLeftArrowClick}>
             <CaretLeft size={24} />
@@ -67,7 +67,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
                   <Image
                     src={getImage(`/images/business/logos-b2b/${testimonial.imageBrandName}.svg`)}
                     alt={testimonial.imageBrandName}
-                    width={185}
+                    width={150}
                     height={30}
                   />
                 </div>
