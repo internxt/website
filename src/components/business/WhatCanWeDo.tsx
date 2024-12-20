@@ -96,7 +96,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                 key={testimonial.selectorTab}
                 className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
-                <div className="flex h-full flex-col">
+                <div className="flex h-full flex-col overflow-scroll">
                   <div className="flex min-h-[100px] w-full max-w-[890px] flex-col justify-end">
                     <p className=" text-center text-3xl font-medium text-white">
                       {textContent.cards[selectedTab].selectorTab}
