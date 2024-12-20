@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import { Transition } from '@headlessui/react';
 import Image from 'next/image';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
@@ -13,7 +13,6 @@ interface WhatCanWeDoProps {
 export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const onRightArrowClick = () => {
     const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
@@ -35,40 +34,6 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
       }, 200);
     }
   };
-
-  const handleScroll = () => {
-    if (!scrollContainerRef.current) return;
-    const scrollContainer = scrollContainerRef.current;
-    const children = scrollContainer.children;
-
-    let closestIndex = 0;
-    let closestDistance = Infinity;
-
-    Array.from(children).forEach((child, index) => {
-      const rect = (child as HTMLElement).getBoundingClientRect();
-      const distance = Math.abs(rect.left - window.innerWidth / 2);
-
-      if (distance < closestDistance) {
-        closestDistance = distance;
-        closestIndex = index;
-      }
-    });
-
-    if (selectedTab !== closestIndex) {
-      setSelectedTab(closestIndex);
-    }
-  };
-
-  useEffect(() => {
-    const scrollContainer = scrollContainerRef.current;
-    if (!scrollContainer) return;
-
-    scrollContainer.addEventListener('scroll', handleScroll);
-
-    return () => {
-      scrollContainer.removeEventListener('scroll', handleScroll);
-    };
-  }, [selectedTab]);
 
   return (
     <section
@@ -124,10 +89,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div
-          ref={scrollContainerRef}
-          className="relative w-full snap-x snap-mandatory  flex-row justify-start gap-6 overflow-scroll lg:hidden"
-        >
+        <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 lg:hidden">
           <div className="flex w-full snap-x snap-mandatory space-y-5">
             {textContent.cards.map((testimonial) => (
               <div
@@ -135,22 +97,20 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                 className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
                 <div className="flex h-full flex-col">
-                  <div className="flex min-h-[100px] w-full max-w-[890px] flex-col justify-end">
-                    <p className=" text-center text-3xl font-medium text-white">
+                  <div className="flex min-h-[110px] w-full max-w-[890px] flex-col items-end justify-end">
+                    <p className="py-5 text-center text-3xl font-medium text-white">
                       {textContent.cards[selectedTab].selectorTab}
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-center space-x-2 py-4">
-                    <button
-                      onClick={onLeftArrowClick}
-                      disabled={selectedTab === 0}
-                      className={`${
-                        selectedTab === 0 ? 'text-gray-400 cursor-not-allowed' : 'hover:text-gray-300 text-white'
-                      }`}
-                    >
-                      <CaretLeft size={24} />
-                    </button>
+                  <div className="flex flex-row items-center justify-center space-x-2 py-4">
+                    {selectedTab !== 0 && (
+                      <button onClick={onLeftArrowClick} className="flex items-center text-white">
+                        <CaretLeft size={24} />
+                        <span className="ml-2">{textContent.betweenDots}</span>
+                      </button>
+                    )}
+
                     <button
                       onClick={onRightArrowClick}
                       disabled={selectedTab === textContent.cards.length - 1}
