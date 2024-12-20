@@ -15,7 +15,7 @@ export const EncryptedCloudSolution = ({ textContent }: EncryptedCloudSolutionPr
     >
       <div className="flex flex-col items-center gap-16">
         <div className="flex flex-col items-center gap-6 text-center text-white">
-          <h2 className="text-5xl font-semibold">{textContent.title}</h2>
+          <h2 className="text-3xl font-semibold lg:text-5xl">{textContent.title}</h2>
           <h3 className="max-w-[774px] text-xl">{textContent.description}</h3>
         </div>
 
