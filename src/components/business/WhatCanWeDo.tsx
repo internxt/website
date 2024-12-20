@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 interface WhatCanWeDoProps {
   textContent: any;
@@ -12,6 +13,17 @@ interface WhatCanWeDoProps {
 export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const onRightArrowClick = () => {
+    const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
+    onTabSelectorButtonClicked(newIndex);
+    selectedTab;
+  };
+
+  const onLeftArrowClick = () => {
+    const newIndex = selectedTab === 0 ? textContent.cards.length - 1 : selectedTab - 1;
+    onTabSelectorButtonClicked(newIndex);
+  };
 
   const onTabSelectorButtonClicked = (tabId: number) => {
     if (selectedTab !== tabId) {
@@ -85,20 +97,35 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                 className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
                 <div className="flex h-full flex-col">
-                  <p className="py-10 text-center text-3xl font-medium text-white">
-                    {textContent.cards[selectedTab].selectorTab}
-                  </p>
-                  <div className="flex w-full px-4 pb-10">
-                    {textContent.cards.map((_, index) => (
-                      <button
-                        key={index}
-                        className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
-                        onClick={() => {
-                          onTabSelectorButtonClicked(index);
-                        }}
-                      />
-                    ))}
+                  <div className="flex min-h-[100px] w-full max-w-[890px] flex-col justify-end">
+                    <p className=" text-center text-3xl font-medium text-white">
+                      {textContent.cards[selectedTab].selectorTab}
+                    </p>
                   </div>
+
+                  <div className="flex items-center justify-center space-x-2 py-4">
+                    <button
+                      onClick={onLeftArrowClick}
+                      disabled={selectedTab === 0}
+                      className={`${
+                        selectedTab === 0 ? 'text-gray-400 cursor-not-allowed' : 'hover:text-gray-300 text-white'
+                      }`}
+                    >
+                      <CaretLeft size={24} />
+                    </button>
+                    <button
+                      onClick={onRightArrowClick}
+                      disabled={selectedTab === textContent.cards.length - 1}
+                      className={`${
+                        selectedTab === textContent.cards.length - 1
+                          ? 'text-gray-400 cursor-not-allowed'
+                          : 'hover:text-gray-300 text-white'
+                      }`}
+                    >
+                      <CaretRight size={24} />
+                    </button>
+                  </div>
+
                   <div className="flex w-full max-w-[890px] flex-col">
                     <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
                   </div>
