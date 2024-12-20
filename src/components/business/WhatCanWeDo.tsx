@@ -88,22 +88,22 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                   <p className="py-10 text-center text-3xl font-medium text-white">
                     {textContent.cards[selectedTab].selectorTab}
                   </p>
+                  <div className="flex w-full px-4 pb-10">
+                    {textContent.cards.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
+                        onClick={() => {
+                          onTabSelectorButtonClicked(index);
+                        }}
+                      />
+                    ))}
+                  </div>
                   <div className="flex w-full max-w-[890px] flex-col">
                     <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="flex w-full px-4 pt-5">
-            {textContent.cards.map((_, index) => (
-              <button
-                key={index}
-                className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
-                onClick={() => {
-                  onTabSelectorButtonClicked(index);
-                }}
-              />
             ))}
           </div>
         </div>
