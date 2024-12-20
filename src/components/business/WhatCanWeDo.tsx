@@ -35,8 +35,6 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           <h2 className="text-3xl font-semibold lg:text-5xl">{textContent.title}</h2>
           <h3 className="text-xl">{textContent.description}</h3>
         </div>
-
-        {/* Desktop View */}
         <div className="hidden max-w-[1330px] flex-row items-start py-20 lg:flex">
           <div className="flex flex-col">
             {textContent.cards.map((info, index) => (
@@ -49,7 +47,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                     onTabSelectorButtonClicked(index);
                   }}
                 >
-                  <p className="text-start text-2xl font-medium text-white hover:text-primary">{info.selectorTab}</p>
+                  <p className="text-start text-2xl font-medium text-white  hover:text-primary">{info.selectorTab}</p>
                 </button>
                 <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
               </Fragment>
@@ -58,7 +56,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           <RevealX direction="left" className="flex flex-col justify-start">
             <div className="flex w-auto justify-center px-6">
               <div className="flex flex-col rounded-3xl pl-6">
-                <div className="flex w-full max-w-[710px] flex-col space-y-6">
+                <div className="flex  w-full max-w-[710px] flex-col space-y-6">
                   <p className="text-4xl font-semibold text-white">{textContent.cards[selectedTab].selectorTab}</p>
                   <ReactMarkdown className="font-regular text-xl text-white">
                     {textContent.cards[selectedTab].description}
@@ -78,40 +76,21 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
           </RevealX>
         </div>
 
-        {/* Mobile/Tablet View */}
-        <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll lg:hidden">
-          <div className="sapce-y-5 flex w-full snap-x snap-mandatory">
-            {textContent.cards.map((testimonial) => (
-              <div
-                key={testimonial.selectorTab}
-                className="rounded- flex w-full shrink-0 snap-center flex-col justify-end"
-              >
-                <div className=" flex h-full flex-col space-y-5">
-                  <div className="flex w-full max-w-[890px] flex-col py-5">
-                    <p className="text-center text-3xl font-medium text-white">
-                      {textContent.cards[selectedTab].selectorTab}
-                    </p>
-                  </div>
-
-                  <div className="flex w-full max-w-[890px] flex-col py-5">
-                    <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
-                  </div>
+        {/*Mobile/Tablet View*/}
+        <div className="scroll-container flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll lg:hidden">
+          {textContent.cards.map((testimonial) => (
+            <div
+              key={testimonial.selectorTab}
+              className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
+            >
+              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
+                <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
+                <div className="flex w-full max-w-[890px] flex-col">
+                  <p className="text-center text-xl text-white">{testimonial.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
-
-          <div className="flex w-full px-5 py-5">
-            {textContent.cards.map((info, index) => (
-              <button
-                key={index}
-                className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
-                onClick={() => {
-                  onTabSelectorButtonClicked(index);
-                }}
-              ></button>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
