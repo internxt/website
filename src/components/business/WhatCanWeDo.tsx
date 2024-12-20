@@ -79,10 +79,10 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         {/*Mobile/Tablet View*/}
         <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 lg:hidden">
           <div className="flex w-full snap-x snap-mandatory space-y-5">
-            {textContent.cards.map((testimonial, index) => (
+            {textContent.cards.map((testimonial) => (
               <div
                 key={testimonial.selectorTab}
-                className="rounded- flex w-full shrink-0 snap-center flex-col justify-end"
+                className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
                 <div className="flex h-full flex-col">
                   <p className="py-10 text-center text-3xl font-medium text-white">
@@ -95,7 +95,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
               </div>
             ))}
           </div>
-          <div className="absolute bottom-0 left-0 mt-5 flex w-full px-5">
+          <div className="flex w-full px-4 pt-5">
             {textContent.cards.map((_, index) => (
               <button
                 key={index}
