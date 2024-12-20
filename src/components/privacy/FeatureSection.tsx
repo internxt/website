@@ -10,8 +10,8 @@ const FeatureSection = ({ textContent }) => {
     },
     {
       icon: LockKey,
-      title: textContent.cards.endToEnd.title,
-      description: textContent.cards.endToEnd.description,
+      title: textContent.cards.postQuantum.title,
+      description: textContent.cards.postQuantum.description,
     },
     {
       icon: ShieldCheck,

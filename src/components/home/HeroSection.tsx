@@ -5,9 +5,8 @@ import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
 import { Check } from '@phosphor-icons/react';
-import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -29,17 +28,9 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
-        <div
-          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 ${styles.radialGradient} bg-cover bg-center bg-no-repeat md:flex`}
-        />
-        {/* Mobile Version */}
-        <div className="lg:hidden">
-          <HomePageBannerForMobile />
-        </div>
-
+      <div className="relative flex h-full flex-col bg-white pt-32">
         {/* Desktop version */}
-        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center justify-between lg:flex lg:flex-row lg:items-center lg:py-10">
+        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center lg:flex lg:flex-row lg:items-center lg:justify-between lg:py-10">
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
@@ -131,6 +122,21 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               </Link>
             </div>
           </div>
+        </div>
+        {/* Mobile version */}
+        <div className="flex flex-col items-center px-5 py-5 lg:hidden">
+          <Header maxWidth="max-w-max" className="text-center text-gray-100">
+            <span>{textContent.title.line1}</span>
+            <span className="text-primary">{textContent.title.blueText}</span>
+            <span>{textContent.title.line2}</span>
+          </Header>
+
+          <Image
+            src={getImage('/images/lifetime/image_mobile.webp')}
+            alt={'Internxt Header Image'}
+            width={641}
+            height={401}
+          />
         </div>
       </div>
     </section>
