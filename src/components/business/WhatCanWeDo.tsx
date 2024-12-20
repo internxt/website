@@ -77,26 +77,26 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll lg:hidden">
+        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll  lg:hidden">
           {textContent.cards.map((testimonial) => (
-            <div key={testimonial.selectorTab} className="shrink-0 snap-center flex-col items-center rounded-3xl ">
-              <Fragment key={testimonial.title}>
-                <button
-                  className={`${
-                    selectedTab === testimonial ? 'border-b-4 border-primary' : 'border-b-4 border-gray-10'
-                  } flex w-full cursor-pointer items-center justify-center py-2`}
-                  onClick={() => {
-                    onTabSelectorButtonClicked(testimonial);
-                  }}
-                >
-                  <div className="flex flex-col space-y-4 pt-4">
-                    <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
-                    <div className="flex w-full max-w-[250px] flex-col">
-                      <p className="text-center text-xl text-white">{testimonial.description}</p>
-                    </div>
+            <div
+              key={testimonial.selectorTab}
+              className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
+            >
+              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
+                <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
+                <div className="flex w-full max-w-[890px] flex-col">
+                  <p className="text-center text-xl text-white">{testimonial.description}</p>
+                  <div className="absolute bottom-20 left-0 flex w-full px-5">
+                    {textContent.cards.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
+                      />
+                    ))}
                   </div>
-                </button>
-              </Fragment>
+                </div>
+              </div>
             </div>
           ))}
         </div>
