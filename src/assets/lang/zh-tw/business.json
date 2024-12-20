@@ -31,6 +31,7 @@
   "WhatCanWeDo": {
     "title": "Internxt 能為您做什麼？",
     "description": "使用我們的企業安全雲端存儲優化您的組織文件管理、安全和隱私。",
+    "betweenDots": "...",
     "cards": [
       {
         "imagePathname": "internxt_b2b_feature1",

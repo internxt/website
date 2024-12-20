@@ -160,7 +160,7 @@ export default function Footer({
         <footer className="flex max-w-[896px] items-center justify-center">
           {/* Desktop version */}
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
-            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20">
+            <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
