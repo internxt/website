@@ -89,14 +89,14 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 lg:hidden">
+        <div className="relative w-full snap-x snap-mandatory  flex-row justify-start gap-6 overflow-scroll lg:hidden">
           <div className="flex w-full snap-x snap-mandatory space-y-5">
             {textContent.cards.map((testimonial) => (
               <div
                 key={testimonial.selectorTab}
                 className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
-                <div className="flex h-full flex-col overflow-scroll">
+                <div className="flex h-full flex-col">
                   <div className="flex min-h-[100px] w-full max-w-[890px] flex-col justify-end">
                     <p className=" text-center text-3xl font-medium text-white">
                       {textContent.cards[selectedTab].selectorTab}
