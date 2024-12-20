@@ -17,7 +17,6 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const onRightArrowClick = () => {
     const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
     onTabSelectorButtonClicked(newIndex);
-    selectedTab;
   };
 
   const onLeftArrowClick = () => {
@@ -34,6 +33,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
       }, 200);
     }
   };
+  const isLastTab = selectedTab === textContent.cards.length - 1;
 
   return (
     <section
@@ -113,12 +113,8 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
 
                     <button
                       onClick={onRightArrowClick}
-                      disabled={selectedTab === textContent.cards.length - 1}
-                      className={`${
-                        selectedTab === textContent.cards.length - 1
-                          ? 'text-gray-400 cursor-not-allowed'
-                          : 'hover:text-gray-300 text-white'
-                      }`}
+                      disabled={isLastTab}
+                      className={`${isLastTab ? 'text-gray-400 cursor-not-allowed' : 'hover:text-gray-300 text-white'}`}
                     >
                       <CaretRight size={24} />
                     </button>
