@@ -15,11 +15,11 @@
         "title": "445 萬美元",
         "description": "數據洩露的平均成本"
       },
-      { "title": "7300 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
       { "title": "318 天", "description": "識別數據洩露的平均時間" },
+      { "title": "7300 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
       { "title": "24%", "description": "勒索軟件攻擊的目標是企業" }
     ],
-    "footerText": "*數據來源於 IBM 安全數據洩露成本報告 2023。"
+    "footerText": "*數據來源於 IBM 安全數據洩露成本報告 2024。"
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt 保護您的企業免受數據洩露",
@@ -33,24 +33,29 @@
     "description": "使用我們的企業安全雲端存儲優化您的組織文件管理、安全和隱私。",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "管理您的組織",
         "description": "Internxt 使企業能夠管理組織成員、自定義工作區並管理帳戶計費和付款。輕鬆切換您的 Internxt 商業和個人帳戶以優化生產力和文件組織。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "部門間的安全文件共享",
         "description": "安全雲端存儲包括在不同部門之間進行安全文件共享的功能，以便團隊安全協作。通過密碼保護和限制文件訪問來發送機密文件給合作夥伴，確保您對其安全性保持控制。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "會話管理",
         "description": "Internxt 雲端存儲提供高級會話管理，提供實時登錄通知和詳細的遠程會話監控（客戶端、操作系統、IP、位置、最後活動時間）。這種高級別的安全性使帳戶管理者能夠檢測未授權訪問、有效管理會話並保護敏感數據。"
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "靈活的存儲分配",
         "description": "Internxt 為您的團隊提供靈活的存儲分配，以根據您的需要升級存儲。通過我們的計劃，您可以添加用戶，根據需要分配存儲，並在必要時增加容量，確保成本效益、可擴展性和資源的最佳利用。"
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "訪問日誌",
+        "description": "透過完整的活動日誌輕鬆監控團隊活動，提供清晰的檔案互動與使用者訪問視圖。追蹤誰已登入、上傳或修改檔案，讓您對團隊資料擁有完全控制，確保資料安全。"
       }
     ]
   },

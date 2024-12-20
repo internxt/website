@@ -40,7 +40,7 @@ export default function Footer({
     e.preventDefault();
 
     await axios
-      .post(`api/subscribe`, {
+      .post(`/api/subscribe`, {
         email,
         groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
       })
@@ -966,6 +966,11 @@ export default function Footer({
             </div>
           </div>
         </footer>
+        {lang === 'es' && (
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
+            {textContent.FooterSection.financialProject}
+          </p>
+        )}
       </div>
     </section>
   );
