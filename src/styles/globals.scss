@@ -216,16 +216,3 @@ input[type='number'] {
   }
 }
 
-/* Personalizar las barras de desplazamiento */
-.scroll-container::-webkit-scrollbar {
-  width: 8px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 10px;
-}
-
-.scroll-container::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(15, 98, 254, 1);
-}
