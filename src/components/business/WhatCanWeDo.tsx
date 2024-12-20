@@ -77,20 +77,35 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="scroll-container flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll lg:hidden">
-          {textContent.cards.map((testimonial) => (
-            <div
-              key={testimonial.selectorTab}
-              className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
-            >
-              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
-                <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
-                <div className="flex w-full max-w-[890px] flex-col">
-                  <p className="text-center text-xl text-white">{testimonial.description}</p>
+        <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 lg:hidden">
+          <div className="flex w-full snap-x snap-mandatory space-y-5">
+            {textContent.cards.map((testimonial, index) => (
+              <div
+                key={testimonial.selectorTab}
+                className="rounded- flex w-full shrink-0 snap-center flex-col justify-end"
+              >
+                <div className="flex h-full flex-col">
+                  <p className="py-10 text-center text-3xl font-medium text-white">
+                    {textContent.cards[selectedTab].selectorTab}
+                  </p>
+                  <div className="flex w-full max-w-[890px] flex-col">
+                    <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="absolute bottom-0 left-0 mt-5 flex w-full px-5">
+            {textContent.cards.map((_, index) => (
+              <button
+                key={index}
+                className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
+                onClick={() => {
+                  onTabSelectorButtonClicked(index);
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
