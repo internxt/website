@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
+import { CaretRight } from '@phosphor-icons/react';
 
 interface WhatCanWeDoProps {
   textContent: any;
@@ -77,14 +78,23 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
-          {textContent.cards.map((testimonial) => (
+        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll  xl:hidden">
+          {textContent.cards.map((testimonial, index) => (
             <div
               key={testimonial.selectorTab}
               className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
             >
-              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
+              <button
+                className={`flex ${
+                  selectedTab === index ? 'border-primary' : 'border-transparent'
+                } w-full max-w-[300px] translate-y-1 flex-col items-center justify-center border-b-4 p-5 text-center`}
+                onClick={() => {
+                  onTabSelectorButtonClicked(index);
+                }}
+              >
                 <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
+              </button>
+              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
                 <div className="flex w-full max-w-[890px] flex-col">
                   <p className="text-center text-xl text-white">{testimonial.description}</p>
                 </div>
