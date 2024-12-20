@@ -31,29 +31,30 @@
   "WhatCanWeDo": {
     "title": "¿Qué puedes hacer con Internxt?",
     "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube para empresas.",
+    "betweenDots": "...",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature1",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_1_es",
         "selectorTab": "Gestiona tu organización",
         "description": "Internxt ofrece a las empresas funciones para administrar a los miembros de tu organización, personalizar espacios de trabajo y administrar la facturación y los pagos de tu cuenta.  Cambia fácilmente entre tus cuentas comerciales y personales de Internxt para optimizar la productividad y la organización de archivos."
       },
       {
-        "imagePathname": "internxt_b2b_feature2",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_2_es",
         "selectorTab": "Comparte archivos de forma segura",
         "description": "El servicio de almacenamiento en la nube incluye funciones seguras para compartir archivos dentro de diferentes departamentos para colaborar de forma privada entre equipos. Protege con contraseña y restringe el acceso de archivos confidenciales para garantizar el control total sobre tu seguridad."
       },
       {
-        "imagePathname": "internxt_b2b_feature3",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_3_es",
         "selectorTab": "Gestión de sesiones",
         "description": "El almacenamiento en la nube para empresas de Internxt ofrece gestión avanzada de sesiones, proporcionando notificaciones de inicio de sesión en tiempo real y monitoreo remoto detallado de la sesión (cliente, sistema operativo, IP, ubicación, última hora activa). Esta seguridad de alto nivel permite al administrador de cuentas detectar accesos no autorizados, administrar sesiones de manera eficiente y proteger datos confidenciales."
       },
       {
-        "imagePathname": "internxt_b2b_feature4",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_4_es",
         "selectorTab": "Almacenamiento flexible",
         "description": "Internxt ofrece a los equipos una asignación de almacenamiento totalmente flexible para actualizar tu almacenamiento según tus necesidades. Con nuestros planes, puedes agregar usuarios, asignar almacenamiento y aumentar la capacidad según tus necesidades, lo que garantiza rentabilidad, escalabilidad y utilización óptima de los recursos."
       },
       {
-        "imagePathname": "internxt_b2b_feature5",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_5_es",
         "selectorTab": "Registros de Acceso",
         "description": "Supervisa fácilmente la actividad de tu equipo con un registro de actividad completo que ofrece una visualización de las interacciones de archivos y el acceso de los usuarios. Realiza un seguimiento de quién inició sesión, subió o modificó archivos, y disfruta de un control y seguridad total de los datos de tu empresa."
       }
