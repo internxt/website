@@ -132,6 +132,7 @@ export const ItemsNavigation = ({
           items={[
             { href: '/privacy', text: textContent.ourValues.privacy },
             { href: '/open-source', text: textContent.ourValues.openSource },
+            { href: '/green-cloud-computing', text: textContent.ourValues.sustainability },
           ]}
           darkMode={darkMode}
           lang={lang}

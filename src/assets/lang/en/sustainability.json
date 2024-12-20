@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " at Internxt",
+      "greenText": " Sustainability"
+    },
+    "description": "Internxt is committed to green cloud computing, providing eco-friendly storage solutions for a cleaner, sustainable future.",
+    "goals": {
+      "element1": "Renewable energy sourcing",
+      "element2": "Reduce carbon energy",
+      "element3": "Green data centers",
+      "element4": "Climate-neutral by 2050",
+      "element5": "Zero waste"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt: the future of privacy and sustainability",
+    "cta": "Select a plan"
+  },
+  "CtaSection2": {
+    "title": "Commit to a sustainable future with Internxt!",
+    "cta": "Select a plan"
+  },
+  "FeatureSectionV2": {
+    "title": "Managing our environmental impactwith green cloud computing",
+    "description": "Internxt encourages innovation by promoting sustainable practices in cloud infrastructure without compromising performance or reliability.",
+    "cards": {
+      "element1": {
+        "title": "Renewable energy",
+        "description": "Our data center uses renewable energy to reduce carbon emissions, conserve energy, and minimize e-waste, helping businesses lower their environmental impact and preserve the world’s natural resources."
+      },
+      "element2": {
+        "title": "Increased savings",
+        "description": "We only use energy-efficient data centers that minimize hardware needs, lower operational expenses, and increase utility cost savings, which aligns with our eco-friendly goals."
+      },
+      "element3": {
+        "title": "Efficiency",
+        "description": "Our data centers are ISO50001 certified and participate in the European Code of Conduct for Energy Efficiency in Data Center, the internationally recognized standard for energy management."
+      },
+      "element4": {
+        "title": "European Green Capital 2024",
+        "description": "Based in Valencia, Internxt is inspired by the city's sustainability efforts, driving our own green initiatives through eco-friendly cloud storage solutions."
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Managing our environmental impact",
+    "description": "Internxt leads by example in working for a more sustainable future through energy-efficient practices to minimize resource consumption and contribute to a greener future.",
+    "cards": {
+      "power": {
+        "title": "Power",
+        "description": "Our data centers' Power Usage Effectiveness (PUE) is measured and audited every 12 months. Values measured closer to 1 indicate more efficient energy consumption.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Water",
+        "description": "The metric measures how efficiently water is used; values closer to 0 indicate optimal performance.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbon",
+        "description": "This tracks direct emissions and indirect commissions from electricity use, with values closest to 0 representing better performance.",
+        "value": "0.16",
+        "unit": "Kg C02e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renewables",
+        "description": "This refers to the percentage of Renewable Energy Factor (REF) rates used in our data centers.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "How we commit to a sustainable future",
+    "description": "By advancing green initiatives, we aim to protect the planet and strive for a cleaner, more green cloud storage solution by 2025.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Reduce carbon energy",
+        "description": "By 2025, the centers we use will limit their reliance on carbon energy, switching to more renewable and lower-carbon energy sources, such as nuclear and hydroelectricity."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Global NetZero",
+        "description": "We are committed to achieving zero net emissions for Scope 1 (direct emissions from fuel) and Scope 2 (indirect emissions from electricity). 2023 will cover all other indirect emissions."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Zero waste",
+        "description": "To reduce the environmental impact of landfill disposal and promote green initiatives, we are committed to zero waste to landfill by 2025 across all our server locations."
+      }
+    }
+  }
+}
