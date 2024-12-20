@@ -1,7 +1,7 @@
 import { getImage } from '@/lib/getImage';
 import { Transition } from '@headlessui/react';
 import Image from 'next/image';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
@@ -13,6 +13,7 @@ interface WhatCanWeDoProps {
 export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const onRightArrowClick = () => {
     const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
@@ -34,6 +35,40 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
       }, 200);
     }
   };
+
+  const handleScroll = () => {
+    if (!scrollContainerRef.current) return;
+    const scrollContainer = scrollContainerRef.current;
+    const children = scrollContainer.children;
+
+    let closestIndex = 0;
+    let closestDistance = Infinity;
+
+    Array.from(children).forEach((child, index) => {
+      const rect = (child as HTMLElement).getBoundingClientRect();
+      const distance = Math.abs(rect.left - window.innerWidth / 2);
+
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestIndex = index;
+      }
+    });
+
+    if (selectedTab !== closestIndex) {
+      setSelectedTab(closestIndex);
+    }
+  };
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    scrollContainer.addEventListener('scroll', handleScroll);
+
+    return () => {
+      scrollContainer.removeEventListener('scroll', handleScroll);
+    };
+  }, [selectedTab]);
 
   return (
     <section
@@ -89,7 +124,10 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="relative w-full snap-x snap-mandatory  flex-row justify-start gap-6 overflow-scroll lg:hidden">
+        <div
+          ref={scrollContainerRef}
+          className="relative w-full snap-x snap-mandatory  flex-row justify-start gap-6 overflow-scroll lg:hidden"
+        >
           <div className="flex w-full snap-x snap-mandatory space-y-5">
             {textContent.cards.map((testimonial) => (
               <div
