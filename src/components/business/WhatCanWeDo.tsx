@@ -89,9 +89,12 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                   <p className="text-center text-xl text-white">{testimonial.description}</p>
                   <div className="absolute bottom-20 left-0 flex w-full px-5">
                     {textContent.cards.map((_, index) => (
-                      <div
+                      <button
                         key={index}
                         className={`h-1 flex-1 ${selectedTab === index ? 'bg-primary' : 'bg-white'} transition-all`}
+                        onClick={() => {
+                          onTabSelectorButtonClicked(index);
+                        }}
                       />
                     ))}
                   </div>
