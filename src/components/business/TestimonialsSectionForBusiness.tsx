@@ -80,7 +80,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
+        <div className="scrollbar-thumb-primary scrollbar-track-white flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
           {textContent.testimonials.map((testimonial) => (
             <div
               className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8"
