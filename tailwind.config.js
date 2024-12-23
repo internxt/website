@@ -1,5 +1,4 @@
 /* eslint-disable no-dupe-keys */
-const { dark } = require('@mui/material/styles/createPalette');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
