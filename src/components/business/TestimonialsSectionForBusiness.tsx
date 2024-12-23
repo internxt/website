@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { FiveStars } from '../shared/StarsRate';
 import { getImage } from '@/lib/getImage';
 import { useState } from 'react';
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight, DotsThree } from '@phosphor-icons/react';
 import { Transition } from '@headlessui/react';
 
 interface TestimonialsSectionForBusinessProps {
@@ -94,7 +94,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
           <div className="flex items-center justify-center space-x-2 text-center">
             <button onClick={onLeftMobileArrowClick} className="flex items-center">
               <CaretLeft size={24} />
-              <span className="ml-2 text-gray-100">{textContent.betweenDots}</span>
+              <DotsThree size={24} />
             </button>
             <button onClick={onRightMobileArrowClick} className="flex items-center">
               <CaretRight size={24} />

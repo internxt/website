@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
-import { CaretLeft, CaretRight } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight, DotsThree } from '@phosphor-icons/react';
 
 interface WhatCanWeDoProps {
   textContent: any;
@@ -107,7 +107,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                     {selectedTab !== 0 && (
                       <button onClick={onLeftArrowClick} className="flex items-center text-white">
                         <CaretLeft size={24} />
-                        <span className="ml-2">{textContent.betweenDots}</span>
+                        <DotsThree size={24} />
                       </button>
                     )}
 

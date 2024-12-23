@@ -82,7 +82,7 @@ export interface TestimonialsSection {
 
 export interface Testimonial {
   imageBrandName: string;
-  betweenDots: string;
+
   brand: string;
   review: string;
 }
@@ -90,7 +90,6 @@ export interface Testimonial {
 export interface WhatCanWeDo {
   title: string;
   description: string;
-  betweenDots: string;
   cards: Card[];
 }
 

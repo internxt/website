@@ -31,7 +31,6 @@
   "WhatCanWeDo": {
     "title": "What can you do with Internxt?",
     "description": "Optimize your organization's file management, security, and privacy with our secure cloud storage for business.",
-    "betweenDots": "...",
     "cards": [
       {
         "imagePathname": "internxt_b2b_feature1",
@@ -111,7 +110,6 @@
   },
   "TestimonialsSection": {
     "title": "What experts are saying about us",
-    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",

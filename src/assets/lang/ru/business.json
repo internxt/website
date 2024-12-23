@@ -31,7 +31,6 @@
   "WhatCanWeDo": {
     "title": "Что вы можете делать с Internxt?",
     "description": "Оптимизируйте управление файлами, безопасность и конфиденциальность вашей организации с нашим безопасным облачным хранилищем для бизнеса.",
-    "betweenDots": "...",
     "cards": [
       {
         "imagePathname": "internxt_b2b_feature1",
@@ -111,7 +110,6 @@
   },
   "TestimonialsSection": {
     "title": "Что говорят о нас эксперты",
-    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",

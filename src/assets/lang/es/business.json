@@ -31,7 +31,6 @@
   "WhatCanWeDo": {
     "title": "¿Qué puedes hacer con Internxt?",
     "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube para empresas.",
-    "betweenDots": "...",
     "cards": [
       {
         "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_1_es",
@@ -111,7 +110,6 @@
   },
   "TestimonialsSection": {
     "title": "Lo que los expertos dicen sobre nosotros",
-    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",

@@ -31,7 +31,6 @@
   "WhatCanWeDo": {
     "title": "Was können Sie mit Internxt tun?",
     "description": "Optimieren Sie das Datei-Management, die Sicherheit und den Datenschutz Ihrer Organisation mit unserem sicheren Cloud-Speicher für Unternehmen.",
-    "betweenDots": "...",
     "cards": [
       {
         "imagePathname": "internxt_b2b_feature1",
@@ -111,7 +110,6 @@
   },
   "TestimonialsSection": {
     "title": "Was Experten über uns sagen",
-    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",
