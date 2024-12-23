@@ -111,6 +111,7 @@
   },
   "TestimonialsSection": {
     "title": "專家對我們的評價",
+    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",

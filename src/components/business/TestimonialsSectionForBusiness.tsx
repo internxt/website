@@ -17,6 +17,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [mobileIndex, setMobileIndex] = useState(0);
 
   const onLeftArrowClick = () => {
     const newIndex = currentIndex === 0 ? testimonialsParts.length - 1 : currentIndex - 1;
@@ -26,6 +27,15 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   const onRightArrowClick = () => {
     const newIndex = currentIndex === testimonialsParts.length - 1 ? 0 : currentIndex + 1;
     onTabSelectorButtonClicked(newIndex);
+  };
+  const onLeftMobileArrowClick = () => {
+    const newIndex = mobileIndex === 0 ? textContent.testimonials.length - 1 : mobileIndex - 1;
+    setMobileIndex(newIndex);
+  };
+
+  const onRightMobileArrowClick = () => {
+    const newIndex = mobileIndex === textContent.testimonials.length - 1 ? 0 : mobileIndex + 1;
+    setMobileIndex(newIndex);
   };
 
   const onTabSelectorButtonClicked = (index: number) => {
@@ -80,28 +90,35 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="scrollbar-thumb-primary scrollbar-track-white flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll xl:hidden">
-          {textContent.testimonials.map((testimonial) => (
-            <div
-              className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8"
-              key={testimonial.review}
-            >
-              <div className="flex h-full flex-col justify-between gap-3" key={testimonial.review}>
-                <div className="flex flex-col gap-3">
-                  <FiveStars totalStars={5} />
-                  <p className="text-xl text-gray-80">{testimonial.review}</p>
-                </div>
-                <div className="flex h-full items-end">
-                  <Image
-                    src={getImage(`/images/business/logos-b2b/${testimonial.imageBrandName}.svg`)}
-                    alt={testimonial.imageBrandName}
-                    width={185}
-                    height={30}
-                  />
-                </div>
+        <div className="flex w-full snap-x snap-mandatory flex-row flex-col justify-start gap-6 xl:hidden">
+          <div className="flex items-center justify-center space-x-2 text-center">
+            <button onClick={onLeftMobileArrowClick} className="flex items-center">
+              <CaretLeft size={24} />
+              <span className="ml-2 text-gray-100">{textContent.betweenDots}</span>
+            </button>
+            <button onClick={onRightMobileArrowClick} className="flex items-center">
+              <CaretRight size={24} />
+            </button>
+          </div>
+
+          <div className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8">
+            <div className="flex h-full flex-col justify-between gap-3">
+              <div className="flex flex-col gap-3">
+                <FiveStars totalStars={5} />
+                <p className="text-xl text-gray-80">{textContent.testimonials[mobileIndex].review}</p>
+              </div>
+              <div className="flex h-full items-end">
+                <Image
+                  src={getImage(
+                    `/images/business/logos-b2b/${textContent.testimonials[mobileIndex].imageBrandName}.svg`,
+                  )}
+                  alt={textContent.testimonials[mobileIndex].imageBrandName}
+                  width={185}
+                  height={30}
+                />
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </div>
     </section>

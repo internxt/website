@@ -111,6 +111,7 @@
   },
   "TestimonialsSection": {
     "title": "Was Experten über uns sagen",
+    "betweenDots": "...",
     "testimonials": [
       {
         "imageBrandName": "techradar",

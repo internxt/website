@@ -82,6 +82,7 @@ export interface TestimonialsSection {
 
 export interface Testimonial {
   imageBrandName: string;
+  betweenDots: string;
   brand: string;
   review: string;
 }
