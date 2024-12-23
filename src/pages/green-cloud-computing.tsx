@@ -5,15 +5,13 @@ import { GetServerSidePropsContext } from 'next';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
 import { SustainabilityText } from '@/assets/types/sustainability';
-
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { Globe, Lightbulb, Recycle, SealPercent } from '@phosphor-icons/react';
-
 import CtaSection from '@/components/sustainability/CtaSection';
-
 import FeatureSection from '@/components/sustainability/FeatureSection';
 import HeroSection from '@/components/sustainability/HeroSection';
+import FeatureSectionV3 from '@/components/sustainability/FeatureSectionV3';
 
 interface SustainabilityProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -63,6 +61,7 @@ const Sustainability = ({
       <FeatureSection textContent={langJson.FeatureSection} />
 
       <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
@@ -79,6 +78,8 @@ const Sustainability = ({
         }
         backgroundColor="bg-white"
       />
+
+      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
 
       <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
 
