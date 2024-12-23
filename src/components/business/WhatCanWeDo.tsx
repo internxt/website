@@ -1,5 +1,4 @@
 import { getImage } from '@/lib/getImage';
-import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
