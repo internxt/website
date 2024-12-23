@@ -105,10 +105,12 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
 
                   <div className="flex flex-row items-center justify-center space-x-2 py-4">
                     {selectedTab !== 0 && (
-                      <button onClick={onLeftArrowClick} className="flex items-center text-white">
-                        <CaretLeft size={24} />
-                        <DotsThree size={24} />
-                      </button>
+                      <>
+                        <button onClick={onLeftArrowClick} className="flex items-center text-white">
+                          <CaretLeft size={24} />
+                        </button>
+                        <DotsThree size={24} className="text-white"></DotsThree>
+                      </>
                     )}
 
                     <button

@@ -94,8 +94,8 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
           <div className="flex items-center justify-center space-x-2 text-center">
             <button onClick={onLeftMobileArrowClick} className="flex items-center">
               <CaretLeft size={24} />
-              <DotsThree size={24} />
             </button>
+            <DotsThree size={24} />
             <button onClick={onRightMobileArrowClick} className="flex items-center">
               <CaretRight size={24} />
             </button>
