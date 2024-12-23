@@ -168,5 +168,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 对象存储",
     "description": "Internxt 提供私密且实惠的对象存储，使用 S3 协议安全地存储数据，有效地管理您的存储需求。"
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "绿色与可持续的云存储",
+    "description": "Internxt 的绿色数据中心推动我们对可持续性和绿色云计算的承诺，支持一个更绿、更可持续的环境。"
   }
 ]

@@ -163,5 +163,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Объектное Хранилище",
     "description": "Internxt предоставляет частное и доступное объектное хранилище для безопасного хранения данных с использованием протокола S3 для эффективного управления вашими потребностями в хранении."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Archiviazione cloud verde e sostenibile",
+    "description": "I data center ecologici di Internxt promuovono il nostro impegno per la sostenibilità e l'informatica cloud ecologica, supportando un ambiente più verde e sostenibile."
   }
 ]
