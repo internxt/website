@@ -30,7 +30,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
         </div>
 
         {/* Display goals */}
-        <div className="grid grid-cols-3 pt-6">
+        <div className="grid grid-cols-3 pt-6 hidden lg:grid">
           {goals.slice(0, 3).map((goal, index) => {
             const bgColor = index === 1 || index === 3 ? 'bg-green-25' : 'bg-green-40';
 
@@ -67,6 +67,46 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
             })}
           </div>
         </div>
+       <div className="grid grid-cols-3 pt-4 block lg:hidden justify-center items-center">
+  <div className="flex justify-center col-span-3">
+    {goals.slice(0, 3).map((goal, index) => {
+      const bgColor = index === 1 || index === 3 ? 'bg-green-25' : 'bg-green-40';
+
+      const isFirstOrThirdGoal = index === 0 || index === 2;
+
+      if (isFirstOrThirdGoal) return null;
+
+      return (
+        <div
+          key={index}
+          className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${bgColor} z-40 border-4 border-white text-center`}
+        >
+          <goal.icon size={50} className="mb-2 text-gray-100" />
+          <p className="max-w-[150px] text-xl font-medium text-gray-100">{goal.title}</p>
+        </div>
+      );
+    })}
+  </div>
+
+  <div className="col-span-3 -mt-[100px] flex justify-center">
+    {goals.slice(3, 5).map((goal, index) => {
+      const bgColor = index === 1 ? 'bg-green-40' : 'bg-green-55';
+
+      return (
+        <div
+          key={index}
+          className={`flex h-[200px] w-[200px] transform flex-col items-center justify-center rounded-full ${bgColor} mt-10 border-4 border-white text-center ${
+            index === 0 ? 'z-10 mr-[-30px]' : 'z-0'
+          }`}
+        >
+          <goal.icon size={50} className="mb-2 text-gray-100" />
+          <p className="max-w-[150px] text-xl font-medium text-gray-100">{goal.title}</p>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
       </div>
     </section>
   );
