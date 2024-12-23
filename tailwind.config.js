@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-keys */
+const { dark } = require('@mui/material/styles/createPalette');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
@@ -54,9 +55,10 @@ module.exports = {
       green: {
         1: 'rgb(50,195,86)',
         8: 'rgb(50, 195, 86, 0.08)',
-        25: 'rgba(50,195,86, 0.25)',
-        40: 'rgba(50,195,86, 0.4)',
-        55: 'rgba(50,195,86, 0.55)',
+        25: 'rgb(204, 240, 213)',
+        40: 'rgb(173, 231, 187)',
+        55: 'rgb(142, 222, 162)',
+        dark: 'rgb(45, 174, 77, 1)',
       },
       // OLD DESIGN SYSTEM
       'cool-gray': {
