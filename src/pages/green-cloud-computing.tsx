@@ -66,8 +66,8 @@ const Sustainability = ({
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
-              <p className="font-regular text-xl text-gray-80">{langJson.FeatureSection.description}</p>
+              <h2 className="text-3xl font-semibold text-gray-100 sm:text-5xl">{langJson.FeatureSection.title}</h2>
+              <p className="font-regular text-gray-80 sm:text-xl">{langJson.FeatureSection.description}</p>
             </div>
           </div>
         }

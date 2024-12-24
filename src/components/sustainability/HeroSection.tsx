@@ -12,7 +12,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
       title: textContent.goals.element1,
       icon: Sun,
       bgColor: 'bg-green-40',
-      size: 60,
+
       position: 'mt-8',
       zIndex: 'z-0',
       lgDisplay: true,
@@ -21,7 +21,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
       title: textContent.goals.element2,
       icon: Leaf,
       bgColor: 'bg-green-25',
-      size: 60,
+
       position: '',
       zIndex: 'z-20',
       lgDisplay: true,
@@ -30,7 +30,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
       title: textContent.goals.element3,
       icon: Database,
       bgColor: 'bg-green-40',
-      size: 60,
+
       position: 'mt-8',
       zIndex: 'z-0',
       lgDisplay: true,
@@ -39,7 +39,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
       title: textContent.goals.element4,
       icon: GlobeHemisphereWest,
       bgColor: 'bg-green-55',
-      size: 60,
+
       position: ' mr-[-50px]',
       zIndex: 'z-10',
       lgDisplay: false,
@@ -48,7 +48,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
       title: textContent.goals.element5,
       icon: Heart,
       bgColor: 'bg-green-40',
-      size: 60,
+
       position: '',
       zIndex: 'z-5',
       lgDisplay: false,
@@ -78,7 +78,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                   key={index}
                   className={`flex h-[300px] w-[300px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} border-4 border-white text-center ${goal.position} ${goal.zIndex}`}
                 >
-                  <goal.icon size={goal.size} className="mb-2 text-gray-100" />
+                  <goal.icon size={60} className="mb-2 text-gray-100" />
                   <p className="max-w-[200px] text-2xl font-medium text-gray-100">{goal.title}</p>
                 </div>
               ),
@@ -92,7 +92,7 @@ const FeatureSection = ({ textContent }: HeroSectionsProps) => {
                     key={index}
                     className={`flex h-[300px] w-[300px] transform flex-col items-center justify-center rounded-full ${goal.bgColor} border-4 border-white text-center ${goal.position} ${goal.zIndex}`}
                   >
-                    <goal.icon size={goal.size} className="mb-2 text-gray-100" />
+                    <goal.icon size={60} className="mb-2 text-gray-100" />
                     <p className="max-w-[200px] text-2xl font-medium text-gray-100">{goal.title}</p>
                   </div>
                 ),
