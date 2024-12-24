@@ -1,10 +1,9 @@
 import { getImage } from '@/lib/getImage';
-import { Transition } from '@headlessui/react';
 import Image from 'next/image';
 import { Fragment, useState } from 'react';
 import RevealX from '../components/RevealX';
 import ReactMarkdown from 'react-markdown';
-import { CaretRight } from '@phosphor-icons/react';
+import { CaretLeft, CaretRight, DotsThree } from '@phosphor-icons/react';
 
 interface WhatCanWeDoProps {
   textContent: any;
@@ -13,6 +12,16 @@ interface WhatCanWeDoProps {
 export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const onRightArrowClick = () => {
+    const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
+    onTabSelectorButtonClicked(newIndex);
+  };
+
+  const onLeftArrowClick = () => {
+    const newIndex = selectedTab === 0 ? textContent.cards.length - 1 : selectedTab - 1;
+    onTabSelectorButtonClicked(newIndex);
+  };
 
   const onTabSelectorButtonClicked = (tabId: number) => {
     if (selectedTab !== tabId) {
@@ -23,6 +32,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
       }, 200);
     }
   };
+  const isLastTab = selectedTab === textContent.cards.length - 1;
 
   return (
     <section
@@ -78,29 +88,46 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
         </div>
 
         {/*Mobile/Tablet View*/}
-        <div className="flex w-full snap-x snap-mandatory flex-row justify-start gap-6 overflow-scroll  xl:hidden">
-          {textContent.cards.map((testimonial, index) => (
-            <div
-              key={testimonial.selectorTab}
-              className="flex w-full shrink-0 snap-center flex-col justify-end rounded-3xl p-2"
-            >
-              <button
-                className={`flex ${
-                  selectedTab === index ? 'border-primary' : 'border-transparent'
-                } w-full max-w-[300px] translate-y-1 flex-col items-center justify-center border-b-4 p-5 text-center`}
-                onClick={() => {
-                  onTabSelectorButtonClicked(index);
-                }}
+        <div className="relative w-full snap-x snap-mandatory flex-row justify-start gap-6 lg:hidden">
+          <div className="flex w-full snap-x snap-mandatory space-y-5">
+            {textContent.cards.map((testimonial) => (
+              <div
+                key={testimonial.selectorTab}
+                className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
-                <p className="text-center text-3xl font-medium text-white">{testimonial.selectorTab}</p>
-              </button>
-              <div className="items- flex h-full flex-col space-y-10" key={testimonial.review}>
-                <div className="flex w-full max-w-[890px] flex-col">
-                  <p className="text-center text-xl text-white">{testimonial.description}</p>
+                <div className="flex h-full flex-col">
+                  <div className="flex min-h-[110px] w-full max-w-[890px] flex-col items-end justify-end">
+                    <p className="py-5 text-center text-3xl font-medium text-white">
+                      {textContent.cards[selectedTab].selectorTab}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-row items-center justify-center space-x-2 py-4">
+                    {selectedTab !== 0 && (
+                      <>
+                        <button onClick={onLeftArrowClick} className="flex items-center text-white">
+                          <CaretLeft size={24} />
+                        </button>
+                        <DotsThree size={24} className="text-white"></DotsThree>
+                      </>
+                    )}
+
+                    <button
+                      onClick={onRightArrowClick}
+                      disabled={isLastTab}
+                      className={`${isLastTab ? 'text-gray-400 cursor-not-allowed' : 'hover:text-gray-300 text-white'}`}
+                    >
+                      <CaretRight size={24} />
+                    </button>
+                  </div>
+
+                  <div className="flex w-full max-w-[890px] flex-col">
+                    <p className="text-center text-xl text-white">{textContent.cards[selectedTab].description}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
