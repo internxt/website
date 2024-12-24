@@ -14,7 +14,7 @@
     }
   },
   "CtaSection": {
-    "title": "Internxt: the future of privacy and sustainability",
+    "title": "Internxt, the future of privacy and sustainability",
     "cta": "Select a plan"
   },
   "CtaSection2": {
@@ -84,8 +84,8 @@
       },
       "globalNetZero": {
         "number": "2",
-        "title": "Global NetZero",
-        "description": "We are committed to achieving zero net emissions for Scope 1 (direct emissions from fuel) and Scope 2 (indirect emissions from electricity). 2023 will cover all other indirect emissions."
+        "title": "Water cooling",
+        "description": "By taking advantage of the lower thermal resistance of water compared to air, we are constantly refining our cooling techniques to achieve the best energy use efficiency and water."
       },
       "zeroWaste": {
         "number": "3",
