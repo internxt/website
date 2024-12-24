@@ -276,6 +276,14 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.company.mediaArea}
                     </Link>
+                    <Link
+                      href="/green-cloud-computing"
+                      locale={lang}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.company.sustainability}
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " 在 Internxt",
+      "greenText": "可持續性"
+    },
+    "description": "Internxt 致力於環保雲計算，並提供綠色存儲解決方案，為一個更清潔、更綠、更可持續的未來而努力。",
+    "goals": {
+      "element1": "可再生能源採購",
+      "element2": "減少碳能源",
+      "element3": "綠色數據中心",
+      "element4": "2050 年實現氣候中和",
+      "element5": "零浪費"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt：隱私與可持續性的未來",
+    "cta": "選擇您的計劃"
+  },
+  "CtaSection2": {
+    "title": "與 Internxt 一起承諾一個更可持續和綠色的未來",
+    "cta": "選擇您的計劃"
+  },
+  "FeatureSectionV2": {
+    "title": "通過綠色雲計算管理我們的環境影響",
+    "description": "Internxt 透過推動可持續實踐促進創新，在不妥協性能或可靠性的情況下，推動雲基礎設施的可持續性。",
+    "cards": {
+      "element1": {
+        "title": "減少環境影響",
+        "description": "我們的數據中心利用可再生能源減少碳排放，節省能源，並最大程度減少電子廢物，幫助企業減少環境影響並保護全球自然資源。"
+      },
+      "element2": {
+        "title": "更多節省",
+        "description": "我們只使用能源高效的數據中心，減少硬體需求，降低運營成本，並增加公用事業費用的節省，這與我們的綠色可持續發展目標保持一致。"
+      },
+      "element3": {
+        "title": "效率",
+        "description": "我們的數據中心已獲得 ISO50001 認證，並參與歐洲數據中心能源效率行為準則，這是全球公認的能源管理標準。"
+      },
+      "element4": {
+        "title": "2024 年歐洲綠色資本",
+        "description": "Internxt 總部位於瓦倫西亞，從該市的可持續發展努力中汲取靈感，推動我們的生態倡議，通過綠色的雲存儲解決方案。"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "數字中的可持續性",
+    "description": "Internxt 透過能源效率實踐，為更綠、更可持續的未來而努力，致力於最小化資源消耗並為可持續的未來貢獻力量。",
+    "cards": {
+      "power": {
+        "title": "能源",
+        "description": "我們數據中心的能源使用效率（PUE）每 12 個月進行測量和審計。接近 1 的值表示能源消耗更高效。",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "水",
+        "description": "該指標衡量水資源使用效率，接近 0 的值表示最佳性能。",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "碳",
+        "description": "該指標追踪直接和間接電力使用的碳排放，接近 0 的值表示更好的性能。",
+        "value": "0.16",
+        "unit": "kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "可再生能源",
+        "description": "這是指我們數據中心中使用的可再生能源因子（REF）的比例。",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "我們如何承諾實現可持續未來",
+    "description": "通過推動生態倡議，我們的目標是保護地球，並致力於到 2025 年實現更清潔、更綠的雲存儲解決方案。",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "減少碳能源",
+        "description": "到 2025 年，我們使用的數據中心將減少對碳能源的依賴，轉向更多可再生和低碳的能源來源，如核能和水力發電。"
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "全球淨零排放",
+        "description": "我們致力於實現範圍 1（燃料直接排放）和範圍 2（電力間接排放）的零排放。2023 年將涵蓋所有其他間接排放。"
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "零浪費",
+        "description": "為了減少填埋廢物的環境影響並推動綠色倡議，我們承諾到 2025 年在所有伺服器位置實現零廢物填埋。"
+      }
+    }
+  }
+}

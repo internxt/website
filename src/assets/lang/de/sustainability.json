@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " bei Internxt",
+      "greenText": "Nachhaltigkeit"
+    },
+    "description": "Internxt setzt sich für umweltfreundliches Cloud-Computing ein und bietet nachhaltige Speicherlösungen für eine sauberere, grünere und nachhaltigere Zukunft.",
+    "goals": {
+      "element1": "Erneuerbare Energiequelle",
+      "element2": "Reduzierung von Kohlenenergie",
+      "element3": "Grüne Rechenzentren",
+      "element4": "Klimaneutralität bis 2050",
+      "element5": "Null Abfall"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt: Die Zukunft der Privatsphäre und Nachhaltigkeit",
+    "cta": "Wählen Sie Ihren Plan"
+  },
+  "CtaSection2": {
+    "title": "Setzen Sie sich mit Internxt für eine nachhaltigere und grünere Zukunft ein",
+    "cta": "Wählen Sie Ihren Plan"
+  },
+  "FeatureSectionV2": {
+    "title": "Unser Umwelteinfluss durch grünes Cloud-Computing managen",
+    "description": "Internxt fördert Innovationen, indem es nachhaltige Praktiken in der Cloud-Infrastruktur unterstützt, ohne die Leistung oder Zuverlässigkeit zu beeinträchtigen.",
+    "cards": {
+      "element1": {
+        "title": "Reduzierung des ökologischen Fußabdrucks",
+        "description": "Unser Rechenzentrum nutzt erneuerbare Energie, um die CO2-Emissionen zu reduzieren, Energie zu sparen und Elektronikabfälle zu minimieren, wodurch Unternehmen ihren ökologischen Fußabdruck verringern und die natürlichen Ressourcen der Erde bewahren können."
+      },
+      "element2": {
+        "title": "Erhöhte Einsparungen",
+        "description": "Wir verwenden nur energieeffiziente Rechenzentren, die den Hardwarebedarf minimieren, Betriebskosten senken und Energiekosteneinsparungen maximieren, was mit unseren Zielen für nachhaltige Entwicklung übereinstimmt."
+      },
+      "element3": {
+        "title": "Effizienz",
+        "description": "Unsere Rechenzentren sind ISO50001-zertifiziert und nehmen am Europäischen Verhaltenskodex für die Energieeffizienz in Rechenzentren teil, einem international anerkannten Standard für das Energiemanagement."
+      },
+      "element4": {
+        "title": "Europäische Grüne Hauptstadt 2024",
+        "description": "Mit Sitz in Valencia lässt sich Internxt von den Nachhaltigkeitsbemühungen der Stadt inspirieren und fördert durch ökologische Cloud-Speicherlösungen eigene ökologische Initiativen."
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Nachhaltigkeit in Zahlen",
+    "description": "Internxt gibt mit gutem Beispiel vor und arbeitet für eine nachhaltigere Zukunft, indem es energieeffiziente Praktiken anwendet, um den Ressourcenverbrauch zu minimieren und zu einer grüneren und nachhaltigeren Zukunft beizutragen.",
+    "cards": {
+      "power": {
+        "title": "Energie",
+        "description": "Die Energieeffizienz (PUE) unserer Rechenzentren wird alle 12 Monate gemessen und auditiert. Werte näher an 1 bedeuten eine effizientere Energieverbrauch.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Wasser",
+        "description": "Diese Kennzahl misst die Effizienz der Wassernutzung; Werte näher bei 0 deuten auf eine optimale Leistung hin.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Kohlenstoff",
+        "description": "Dies verfolgt direkte und indirekte Emissionen durch den Stromverbrauch, wobei Werte näher bei 0 eine bessere Leistung anzeigen.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Erneuerbare",
+        "description": "Dies bezieht sich auf den Anteil des verwendeten erneuerbaren Energiesatzes (REF) in unseren Rechenzentren.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "So engagieren wir uns für eine nachhaltige Zukunft",
+    "description": "Indem wir ökologische Initiativen fördern, haben wir uns zum Ziel gesetzt, den Planeten zu schützen und bis 2025 eine sauberere und grünere Cloud-Speicherlösung zu erreichen.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Reduzierung von Kohlenenergie",
+        "description": "Bis 2025 werden die von uns genutzten Rechenzentren ihre Abhängigkeit von Kohlenenergie reduzieren und auf erneuerbare und kohlenstoffarme Energiequellen wie Kernkraft und Wasserkraft umsteigen."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "Globales NetZero",
+        "description": "Wir verpflichten uns, Netto-Null-Emissionen für den Scope 1 (direkte Emissionen aus Brennstoffen) und Scope 2 (indirekte Emissionen aus Strom) zu erreichen. 2023 werden alle anderen indirekten Emissionen abgedeckt."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Null Abfall",
+        "description": "Um die Umweltauswirkungen der Deponierung von Abfällen zu verringern und ökologische Initiativen zu fördern, verpflichten wir uns, bis 2025 auf allen unseren Serverstandorten null Abfall auf die Deponie zu bringen."
+      }
+    }
+  }
+}
