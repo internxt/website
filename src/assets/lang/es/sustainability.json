@@ -79,18 +79,18 @@
     "cards": {
       "reduceCarbonEnergy": {
         "number": "1",
-        "title": "Reduce carbon energy",
-        "description": "By 2025, the centers we use will limit their reliance on carbon energy, switching to more renewable and lower-carbon energy sources, such as nuclear and hydroelectricity."
+        "title": "Reducir la energía del carbono",
+        "description": "Para el año 2025, los centros que utilizamos limitarán su dependencia de la energía de carbono, cambiando a fuentes de energía más renovables y con menores emisiones de carbono, como la energía nuclear y la hidroeléctrica."
       },
       "globalNetZero": {
         "number": "2",
-        "title": "Global NetZero",
-        "description": "We are committed to achieving zero net emissions for Scope 1 (direct emissions from fuel) and Scope 2 (indirect emissions from electricity). 2023 will cover all other indirect emissions."
+        "title": "Neutralidad climática para 2050",
+        "description": "Estamos comprometidos a lograr emisiones netas cero para el Alcance 1 (emisiones directas por el uso de combustible) y el Alcance 2 (emisiones indirectas por el consumo de electricidad). En 2023, abordaremos todas las demás emisiones indirectas."
       },
       "zeroWaste": {
         "number": "3",
-        "title": "Zero waste",
-        "description": "To reduce the environmental impact of landfill disposal and promote green initiatives, we are committed to zero waste to landfill by 2025 across all our server locations."
+        "title": "Desperdicio cero",
+        "description": "Para reducir el impacto ambiental de la eliminación de residuos en vertederos y promover iniciativas ecológicas, nos comprometemos a lograr cero residuos a vertederos para el año 2025 en todas nuestras ubicaciones de servidores."
       }
     }
   }
