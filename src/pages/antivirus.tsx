@@ -10,9 +10,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import cookies from '@/lib/cookies';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
-import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
 import { InfoSection } from '@/components/antivirus/InfoSection';
-import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
 
 interface HomeProps {
@@ -98,8 +96,6 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
         }
       />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
-
       <InfoSection
         FirstComponent={
           <div className="flex flex-col items-center justify-center space-y-10 md:flex-row md:space-x-20 md:space-y-0">
@@ -119,8 +115,6 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
         customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
       />
 
-      <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
-
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9 ">
@@ -137,6 +131,7 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
         }
         backgroundColor="bg-gray-1"
       />
+      
       <CtaSection
         textContent={langJson.cta2}
         url={'/pricing'}
