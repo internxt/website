@@ -16,7 +16,8 @@
       "noBreachesFound": "E-mail não encontrado",
       "errorPwned": "Ocorreu um erro ao verificar seu e-mail. Por favor, tente novamente mais tarde.",
       "check": "Verificar",
-      "checking": "Verificando..."
+      "checking": "Verificando...",
+      "duringCheck": "Estamos verificando se o seu e-mail foi parte de uma violação de dados. Por favor, aguarde um momento."
     },
     "breaches": {
       "error405": "O método de solicitação não é suportado. Por favor, entre em contato com o suporte ou tente atualizar a página.",

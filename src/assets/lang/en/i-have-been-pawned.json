@@ -16,7 +16,8 @@
       "noBreachesFound": "Email not found",
       "errorPwned": "An error occurred while checking your email. Please try again later.",
       "check": "Check",
-      "checking": "Checking..."
+      "checking": "Checking...",
+      "duringCheck": "We are checking if your email has been part of a data breach. Please wait a moment."
     },
     "breaches": {
       "error405": "The request method is not supported. Please contact support or try refreshing the page.",

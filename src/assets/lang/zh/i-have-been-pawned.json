@@ -16,7 +16,8 @@
       "noBreachesFound": "未找到电子邮件",
       "errorPwned": "检查您的电子邮件时发生错误，请稍后再试。",
       "check": "检查",
-      "checking": "正在检查..."
+      "checking": "正在检查...",
+      "duringCheck": "我们正在检查您的电子邮件是否在数据泄露中。请稍等片刻。"
     },
     "breaches": {
       "error405": "不支持请求方法。请联系支持或尝试刷新页面。",

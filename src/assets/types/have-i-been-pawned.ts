@@ -59,6 +59,7 @@ export interface EmailToolBar {
   errorPwned: string;
   check: string;
   checking: string;
+  duringCheck: string;
 }
 
 export interface PwnedSection {
