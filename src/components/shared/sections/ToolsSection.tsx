@@ -78,7 +78,7 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
               <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:text-left">
                 <tool.icon size={32} className="text-primary" />
                 <p className="text-xl font-medium">
-                  <span className="font-semibold text-primary">{textContent.free}</span> {tool.title}
+                  <span className="mr-2 font-semibold text-primary">{textContent.free}</span> {tool.title}
                 </p>
               </div>
               <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
