@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " na Internxt",
+      "greenText": "Sustentabilidade"
+    },
+    "description": "A Internxt está comprometida com a computação em nuvem ecológica e oferece soluções de armazenamento sustentáveis para um futuro mais limpo, verde e sustentável.",
+    "goals": {
+      "element1": "Fornecimento de energia renovável",
+      "element2": "Reduzir a energia de carbono",
+      "element3": "Centros de dados ecológicos",
+      "element4": "Neutralidade climática até 2050",
+      "element5": "Desperdício zero"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt: o futuro da privacidade e da sustentabilidade",
+    "cta": "Escolha seu plano"
+  },
+  "CtaSection2": {
+    "title": "Comprometa-se com um futuro mais sustentável e verde com a Internxt",
+    "cta": "Escolha seu plano"
+  },
+  "FeatureSectionV2": {
+    "title": "Gerenciando nosso impacto ambiental com a nuvem verde",
+    "description": "A Internxt promove a inovação incentivando práticas sustentáveis na infraestrutura em nuvem sem comprometer o desempenho ou a confiabilidade.",
+    "cards": {
+      "element1": {
+        "title": "Impacto ambiental reduzido",
+        "description": "Nosso data center utiliza energia renovável para reduzir as emissões de carbono, conservar energia e minimizar resíduos eletrônicos, ajudando as empresas a reduzir seu impacto ambiental e preservar os recursos naturais do planeta."
+      },
+      "element2": {
+        "title": "Maior economia",
+        "description": "Utilizamos apenas data centers com alta eficiência energética que reduzem a necessidade de hardware, diminuem os custos operacionais e aumentam as economias nas contas de energia, alinhando-se aos nossos objetivos de desenvolvimento sustentável."
+      },
+      "element3": {
+        "title": "Eficiência",
+        "description": "Nossos data centers são certificados ISO50001 e participam do Código de Conduta Europeu para Eficiência Energética em Data Centers, o padrão internacional reconhecido para gestão de energia."
+      },
+      "element4": {
+        "title": "Capital Verde Europeu 2024",
+        "description": "Com sede em Valência, a Internxt se inspira nos esforços de sustentabilidade da cidade, promovendo suas próprias iniciativas ecológicas por meio de soluções sustentáveis de armazenamento em nuvem."
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "Sustentabilidade em números",
+    "description": "A Internxt lidera pelo exemplo, trabalhando para um futuro mais sustentável por meio de práticas de eficiência energética que minimizam o consumo de recursos e contribuem para um futuro mais verde e sustentável.",
+    "cards": {
+      "power": {
+        "title": "Energia",
+        "description": "A eficiência do uso de energia (PUE) dos nossos data centers é medida e auditada a cada 12 meses. Valores mais próximos de 1 indicam um consumo de energia mais eficiente.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Água",
+        "description": "Esta métrica mede a eficiência no uso da água; valores mais próximos de 0 indicam um desempenho ideal.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbono",
+        "description": "Esta métrica rastreia as emissões diretas e indiretas relacionadas ao uso de eletricidade, onde valores mais próximos de 0 representam um desempenho melhor.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renováveis",
+        "description": "Este valor se refere à porcentagem de tarifas de energia renovável utilizadas em nossos data centers.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Como nos comprometemos com um futuro sustentável",
+    "description": "Promovendo iniciativas ecológicas, nosso objetivo é proteger o planeta e trabalhar para uma solução de armazenamento em nuvem mais limpa e sustentável até 2025.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Reduzir a energia de carbono",
+        "description": "Até 2025, os centros que utilizamos limitarão sua dependência de energia de carbono, migrando para fontes de energia mais renováveis e de baixo carbono, como nuclear e hidrelétrica."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "NetZero global",
+        "description": "Estamos comprometidos em alcançar emissões líquidas zero para o escopo 1 (emissões diretas de combustíveis) e o escopo 2 (emissões indiretas da eletricidade). Até 2023, cobriremos todas as outras emissões indiretas."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Desperdício zero",
+        "description": "Para reduzir o impacto ambiental dos resíduos em aterros e promover iniciativas ecológicas, estamos comprometidos em não enviar resíduos para aterros até 2025 em todos os nossos locais de servidores."
+      }
+    }
+  }
+}

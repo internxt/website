@@ -24,8 +24,6 @@ module.exports = {
       'orange-dark': 'rgb(230,134,0)',
       yellow: 'rgb(255,204,0)',
       'yellow-dark': 'rgb(230,184,0)',
-      green: 'rgb(50,195,86)',
-      'green-dark': 'rgb(45,174,77)',
       pink: 'rgb(255,36,76)',
       'pink-dark': 'rgb(235,0,63)',
       indigo: 'rgb(81,78,212)',
@@ -35,7 +33,6 @@ module.exports = {
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
       highlight: 'rgba(17, 17, 17, 1)',
-      green8: 'rgb(50, 195, 86, 0.08)',
       red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
@@ -53,6 +50,14 @@ module.exports = {
       },
       gradients: {
         'electric-cyan': 'rgb(0,191,255)',
+      },
+      green: {
+        1: 'rgb(50,195,86)',
+        8: 'rgb(50, 195, 86, 0.08)',
+        25: 'rgb(204, 240, 213)',
+        40: 'rgb(173, 231, 187)',
+        55: 'rgb(142, 222, 162)',
+        dark: 'rgb(45, 174, 77, 1)',
       },
       // OLD DESIGN SYSTEM
       'cool-gray': {
