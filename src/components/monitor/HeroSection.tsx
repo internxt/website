@@ -17,13 +17,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [breaches, setBreaches] = useState<Breach[]>([]);
   const [pastes, setPastes] = useState<Paste[]>([]);
   const [view, setView] = useState<ViewProps>('default');
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const isFetchingData = view === 'loading';
 
   const onResultBreachesChange = (data: Breach[]) => setBreaches(data);
   const onResultPastesChange = (data: Paste[]) => setPastes(data);
-  const onErrorChange = (err: string | null) => {
+  const onErrorChange = (err: string) => {
     setBreaches([]);
     setPastes([]);
+    setErrorMessage(err);
   };
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -31,15 +33,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const handleCheckEmail = async (email: string) => {
     if (!email.trim()) {
       onErrorChange(textContent.EmailToolBar.pleaseEnterEmail);
-      onResultBreachesChange([]);
-      onResultPastesChange([]);
+      setView('error');
       return;
     }
 
     if (isFetchingData) return;
 
     setView('loading');
-    onErrorChange(null);
+    onErrorChange('');
     onResultBreachesChange([]);
     onResultPastesChange([]);
 
@@ -55,10 +56,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
-      const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
+      const statusCode = err.response?.status;
+
+      if (statusCode === 400) {
+        onErrorChange(textContent.breaches.error400);
+      } else if (statusCode === 500) {
+        onErrorChange(textContent.breaches.error500);
+      } else {
+        onErrorChange(textContent.breaches.error405);
+      }
 
       setView('error');
-      onErrorChange(errorMessage);
     }
   };
 
@@ -82,7 +90,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
             <LoadingPulse />
           </div>
         ) : view === 'error' ? (
-          <ErrorSection textContent={textContent.breaches} />
+          <ErrorSection errorMessage={errorMessage} />
         ) : (
           view === 'success' && (
             <PwnedStatusSection
