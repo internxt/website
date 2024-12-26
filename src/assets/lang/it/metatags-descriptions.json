@@ -163,5 +163,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Archiviazione di Oggetti",
     "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Archiviazione cloud verde e sostenibile",
+    "description": "I data center ecologici di Internxt promuovono il nostro impegno per la sostenibilità e l'informatica cloud ecologica, supportando un ambiente più verde e sostenibile."
   }
 ]

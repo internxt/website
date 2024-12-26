@@ -243,5 +243,10 @@
     "id": "cloud-object-storage",
     "title": "Internxt – Almacenamiento en la nube seguro",
     "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Almacenamiento en la nube verde y sostenible",
+    "description": "Los centros de datos ecológicos de Internxt impulsan nuestro compromiso con la sostenibilidad y la informática en la nube ecológica, apoyando un entorno más verde y sostenible."
   }
 ]

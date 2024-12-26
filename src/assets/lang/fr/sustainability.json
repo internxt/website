@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " chez Internxt",
+      "greenText": "Durabilité"
+    },
+    "description": "Internxt s'engage en faveur de l'informatique en nuage écologique et propose des solutions de stockage écologiques pour un avenir plus propre, plus vert et plus durable.",
+    "goals": {
+      "element1": "Approvisionnement en énergie renouvelable",
+      "element2": "Réduire l'énergie carbonée",
+      "element3": "Centres de données verts",
+      "element4": "Neutralité climatique d'ici 2050",
+      "element5": "Zéro déchet"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt : l'avenir de la confidentialité et de la durabilité",
+    "cta": "Choisissez votre plan"
+  },
+  "CtaSection2": {
+    "title": "Engagez-vous pour un avenir plus durable et plus vert avec Internxt",
+    "cta": "Choisissez votre plan"
+  },
+  "FeatureSectionV2": {
+    "title": "Gérer notre impact environnemental avec l'informatique en nuage verte",
+    "description": "Internxt favorise l'innovation en promouvant des pratiques durables dans l'infrastructure cloud sans compromettre les performances ou la fiabilité.",
+    "cards": {
+      "element1": {
+        "title": "Réduction de l'empreinte écologique",
+        "description": "Notre centre de données utilise de l'énergie renouvelable pour réduire les émissions de carbone, économiser de l'énergie et minimiser les déchets électroniques, aidant ainsi les entreprises à réduire leur empreinte écologique et à préserver les ressources naturelles de la planète."
+      },
+      "element2": {
+        "title": "Économies accrues",
+        "description": "Nous n'utilisons que des centres de données écoénergétiques qui minimisent les besoins en matériel, réduisent les coûts opérationnels et augmentent les économies d'énergie, en ligne avec nos objectifs de développement durable."
+      },
+      "element3": {
+        "title": "Efficacité",
+        "description": "Nos centres de données sont certifiés ISO50001 et participent au Code de conduite européen pour l'efficacité énergétique dans les centres de données, une norme internationale reconnue pour la gestion de l'énergie."
+      },
+      "element4": {
+        "title": "Capitale verte européenne 2024",
+        "description": "Basé à Valence, Internxt s'inspire des efforts de durabilité de la ville, en stimulant nos propres initiatives écologiques à travers des solutions de stockage cloud écologiques."
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "La durabilité en chiffres",
+    "description": "Internxt montre l'exemple en travaillant pour un avenir plus durable grâce à des pratiques d'efficacité énergétique pour minimiser la consommation de ressources et contribuer à un avenir plus vert et plus durable.",
+    "cards": {
+      "power": {
+        "title": "Énergie",
+        "description": "L'efficacité énergétique (PUE) de nos centres de données est mesurée et auditée tous les 12 mois. Des valeurs proches de 1 indiquent une consommation d'énergie plus efficace.",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "Eau",
+        "description": "Cette mesure évalue l'efficacité de l'utilisation de l'eau ; les valeurs proches de 0 indiquent une performance optimale.",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "Carbone",
+        "description": "Cela suit les émissions directes et indirectes de l'utilisation de l'électricité, où les valeurs proches de 0 indiquent de meilleures performances.",
+        "value": "0.16",
+        "unit": "Kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "Renouvelables",
+        "description": "Cela fait référence au pourcentage de l'énergie renouvelable utilisée dans nos centres de données.",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Comment nous nous engageons pour un avenir durable",
+    "description": "En promouvant des initiatives écologiques, notre objectif est de protéger la planète et de travailler à une solution de stockage cloud plus propre et plus écologique d'ici 2025.",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "Réduire l'énergie carbonée",
+        "description": "D'ici 2025, les centres que nous utilisons limiteront leur dépendance à l'énergie carbonée, en passant à des sources d'énergie plus renouvelables et à faible teneur en carbone, telles que l'énergie nucléaire et l'hydroélectricité."
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "NetZero mondial",
+        "description": "Nous nous engageons à atteindre des émissions nettes nulles pour les émissions de portée 1 (émissions directes de combustibles) et de portée 2 (émissions indirectes d'électricité). 2023 couvrira toutes les autres émissions indirectes."
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "Zéro déchet",
+        "description": "Pour réduire l'impact environnemental de l'élimination des déchets en décharge et promouvoir des initiatives écologiques, nous nous engageons à avoir zéro déchet en décharge d'ici 2025 dans tous nos sites de serveurs."
+      }
+    }
+  }
+}
