@@ -41,6 +41,7 @@ export interface Company {
   security: string;
   legal: string;
   whyInternxt: string;
+  sustainability: string;
 }
 
 export interface Join {
