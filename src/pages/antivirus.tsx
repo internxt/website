@@ -91,7 +91,7 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
             {infoSectionData.map((item, index) => (
               <div key={index} className="flex flex-col items-center justify-center px-5 py-2 text-center">
                 <p className="pb-5 text-5xl font-semibold text-primary">{item.title}</p>
-                <p className="max-w-[350px] text-xl font-medium text-gray-80">{item.description}</p>
+                <p className="min-h-[100px] max-w-[300px] text-xl font-medium text-gray-80">{item.description}</p>
               </div>
             ))}
           </div>
