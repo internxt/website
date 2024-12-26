@@ -5,12 +5,13 @@ import EmailToolbar from './components/EmailToolBar';
 import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 import PwnedStatusSection from './PwnedStatusSection';
 import LoadingPulse from '../shared/loader/LoadingPulse';
+import { ErrorSection } from './ErrorSection';
 
 interface HeroSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection'];
 }
 
-type ViewProps = 'default' | 'success' | 'loading';
+type ViewProps = 'default' | 'success' | 'loading' | 'error';
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [breaches, setBreaches] = useState<Breach[]>([]);
@@ -55,7 +56,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       setView('success');
     } catch (err: any) {
       const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
-      setView('default');
+
+      setView('error');
       onErrorChange(errorMessage);
     }
   };
@@ -76,11 +78,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           />
         </div>
         {isFetchingData ? (
-          <div className="relative flex h-52 w-full flex-col">
+          <div className="relative flex h-40 w-full flex-col">
             <LoadingPulse />
           </div>
+        ) : view === 'error' ? (
+          <ErrorSection textContent={textContent.breaches} />
         ) : (
-          view !== 'default' && (
+          view === 'success' && (
             <PwnedStatusSection
               breaches={breaches}
               resultPastes={pastes}
