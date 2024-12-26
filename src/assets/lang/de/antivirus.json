@@ -1,0 +1,102 @@
+{
+  "HeroSection": {
+    "title": "Schützen Sie Ihre Dateien mit",
+    "blueText": "Internxt Antivirus",
+    "description": "Schützen Sie sich vor Malware, Phishing und Ransomware mit einem fortschrittlichen Schutz, der Ihre Dateien sicher hält.",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Schützen Sie Ihre Dateien vor Malware für den ultimativen Online-Schutz",
+    "cta": "Holen Sie sich Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Maximaler Schutz für Ihre Dateien",
+    "cta": "Holen Sie sich Internxt"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was macht eine Antivirensoftware?",
+        "answer": [
+          "Antivirensoftware schützt Ihre Dateien und Geräte vor Beschädigungen, indem sie Dateien auf bekannte Malware-Signaturen überwacht und scannt. Sobald schädliche Software durch einen Antivirus-Scan erkannt wird, wird die Bedrohung entfernt und Ihre Dateien bleiben sicher und geschützt."
+        ]
+      },
+      {
+        "question": "Brauche ich ein Antivirusprogramm?",
+        "answer": [
+          "Ohne Antivirenschutz ist Ihr Gerät anfällig für Datenschutz- und Sicherheitsangriffe. Es besteht auch ein höheres Risiko von Infektionen, Datenverlust, Datenschutzverletzungen und Systemschäden.",
+          "Da Internxt Antivirus in Ihrem Abonnement enthalten ist, profitieren Sie von privatem Cloud-Speicher und umfassendem Schutz für Geräte und Dateien."
+        ]
+      },
+      {
+        "question": "Welche Geräte unterstützen Internxt Antivirus?",
+        "answer": [
+          "Internxt Antivirus ist für Microsoft, Mac und Linux mit einem Premium-Abonnement über die Internxt Drive Desktop-App verfügbar."
+        ]
+      },
+      {
+        "question": "Kann ich Internxt Antivirus separat erwerben?",
+        "answer": [
+          "Nein, Internxt Antivirus ist Teil unserer kostenpflichtigen Abonnements und kann nicht separat erworben werden. Mit einem monatlichen Abonnement von 10,99 $ erhalten Sie privaten Cloud-Speicher, Antivirus, VPN und vieles mehr."
+        ]
+      },
+      {
+        "question": "Was ist der Unterschied zwischen Malware und einem Virus?",
+        "answer": [
+          "Malware ist ein Sammelbegriff für Software, die entwickelt wurde, um ohne Autorisierung Schaden anzurichten, auszunutzen oder Zugriff auf ein Netzwerk oder Gerät zu erhalten. Sie umfasst Viren sowie andere schädliche Programme wie Ransomware, Spyware, Würmer und Trojaner.",
+          "Ein Virus ist eine spezielle Art von Malware, die sich an Ihre Dateien anhängt und sich auf andere Systeme ausbreitet, wenn sie geöffnet oder ausgeführt wird. Ein regelmäßiger Antivirus-Scan mit Internxt erkennt und beseitigt diese Bedrohungen."
+        ]
+      },
+      {
+        "question": "Was ist die beste Antivirensoftware?",
+        "answer": [
+          "Die beste Antivirensoftware hängt von Ihren spezifischen Bedürfnissen und Vorlieben ab. Es wird daher empfohlen, Ihre Optionen zu recherchieren und eine Lösung zu wählen, die Ihren Anforderungen entspricht – abhängig von Budget, Gerät und zusätzlichen Funktionen.",
+          "Wenn Sie ein Antivirusprogramm für Mac, Windows oder Linux benötigen, das in Ihren Cloud-Speicher integriert ist und ein schnelles und einfaches System zum Scannen und Löschen von Viren bietet, probieren Sie einen Internxt-Plan aus."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Anzeichen, dass Ihr Gerät infiziert sein könnte",
+    "description": "Befürchten Sie, dass Ihr Gerät mit Malware infiziert ist? Holen Sie sich Internxt Antivirus mit einem Premium-Abonnement für sicheren Speicher und Dateischutz.",
+    "cards": {
+      "element1": {
+        "title": "Übermäßiger Batterieverbrauch",
+        "description": "Wenn Ihre Batterie schneller als gewöhnlich leer wird, könnte dies ein Zeichen dafür sein, dass Malware im Hintergrund läuft und Ihre Ressourcen unbemerkt nutzt."
+      },
+      "element2": {
+        "title": "Häufige Systemabstürze oder Einfrieren",
+        "description": "Viren können Systemabstürze verursachen, da Malware wichtige Dateien oder Programme beschädigt und so Instabilität, Abstürze oder plötzliche Systemausfälle verursacht."
+      },
+      "element3": {
+        "title": "Unerklärliche Pop-ups oder Fenster",
+        "description": "Unerwartete Pop-ups, die erscheinen, obwohl Sie nicht surfen, könnten auf Malware auf Ihrem Gerät hinweisen. Führen Sie einen Antivirus-Scan durch, um weiteren Schaden zu vermeiden."
+      },
+      "element4": {
+        "title": "Überhitzung des Geräts",
+        "description": "Ähnlich wie beim schnellen Batterieverbrauch kann Malware Ressourcen stehlen und im Hintergrund intensive Aufgaben ausführen, wodurch Ihr Gerät überhitzt."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "All-in-One-Sicherheit zum Schutz Ihrer Geräte vor Datenbedrohungen",
+    "description": "Schützen Sie Ihre Cloud und Dateien vor Malware mit modernem Antivirenschutz. Verfügbar für Windows-, Linux- und macOS-Desktops.",
+    "cards": {
+      "element1": {
+        "title": "Maßgeschneiderte Sicherheitslösungen",
+        "description": "Beseitigen Sie Bedrohungen sofort und passen Sie Ihre Sicherheitsbedürfnisse an. Wählen Sie Dateien aus, die Sie scannen möchten, oder laden Sie mehrere Dateien gleichzeitig hoch."
+      },
+      "element2": {
+        "title": "Ultimativer Schutz",
+        "description": "Mit fortschrittlicher Antivirensoftware ist der Schutz vor Viren schnell und einfach. Scannen und bereinigen Sie Ihre Dateien, optimieren Sie die Leistung Ihres Geräts und schützen Sie sich online."
+      },
+      "element3": {
+        "title": "Sicherheit auf allen Plattformen",
+        "description": "Antivirenschutz für Windows, Mac und Linux, integriert in Ihr Premium-Abonnement. Wir sorgen dafür, dass Ihre Dateien für eine optimale Leistung sauber bleiben, unabhängig davon, wo sie gespeichert sind."
+      }
+    }
+  }
+}

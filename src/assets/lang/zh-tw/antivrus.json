@@ -1,0 +1,100 @@
+{
+  "HeroSection": {
+    "title": "使用",
+    "blueText": "Internxt Antivirus",
+    "description": "通過先進的保護防禦惡意軟體、網路釣魚和勒索軟體，確保您的檔案安全。",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "保護您的檔案免受惡意軟體攻擊，獲得終極的線上保護",
+    "cta": "立即取得 Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "為您的檔案提供最強保護",
+    "cta": "立即取得 Internxt"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "殺毒軟體有什麼作用？",
+        "answer": [
+          "殺毒軟體通過監控和掃描檔案，檢測已知的惡意軟體簽名，保護您的檔案和設備不受損壞。一旦殺毒軟體檢測到並識別出有害軟體，威脅將被移除，您的檔案將保持安全。"
+        ]
+      },
+      {
+        "question": "我需要殺毒軟體嗎？",
+        "answer": [
+          "沒有殺毒軟體的保護，您的設備容易受到隱私和安全攻擊，感染惡意軟體、資料遺失、隱私洩漏和系統損壞的風險增加。",
+          "由於Internxt Antivirus包含在您的訂閱中，您可以享受私人雲端存儲和完整的設備與檔案保護。"
+        ]
+      },
+      {
+        "question": "哪些設備支援Internxt Antivirus？",
+        "answer": ["Internxt Antivirus支援Windows、Mac和Linux，並透過Internxt Drive桌面應用程式提供高級訂閱。"]
+      },
+      {
+        "question": "我可以單獨購買Internxt Antivirus嗎？",
+        "answer": [
+          "不可以，Internxt Antivirus是我們付費訂閱計劃的一部分，無法單獨購買。每月$10.99的訂閱可讓您獲得私人雲端存儲、殺毒軟體、VPN等服務。"
+        ]
+      },
+      {
+        "question": "惡意軟體和病毒有什麼區別？",
+        "answer": [
+          "惡意軟體是指旨在傷害、利用或未經授權訪問網路或設備的軟體。它包括病毒，並擴展到其他有害程式，如勒索軟體、間諜軟體、蠕蟲和木馬。",
+          "病毒是惡意軟體的一種類型，它附加在您的檔案上，並在開啟或執行時傳播到其他系統。定期使用Internxt進行殺毒掃描，可以識別並消除這些威脅。"
+        ]
+      },
+      {
+        "question": "什麼是最好的殺毒軟體？",
+        "answer": [
+          "最好的殺毒軟體取決於您的具體需求和偏好，因此建議您進行研究，選擇最適合您需求的產品，考慮預算、設備和其他附加功能。",
+          "如果您需要為Mac、Windows或Linux提供內建雲端存儲的殺毒軟體，並且可以快速輕鬆地掃描和刪除病毒，請嘗試Internxt計劃。"
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "您的設備可能已感染的徵兆",
+    "description": "擔心您的設備感染了惡意軟體？透過高級訂閱取得Internxt Antivirus，確保安全存儲和檔案保護。",
+    "cards": {
+      "element1": {
+        "title": "電池過度耗損",
+        "description": "如果您的電池比平常更快耗盡，可能是惡意軟體在背景中運行，消耗設備資源而您未察覺。"
+      },
+      "element2": {
+        "title": "頻繁的系統崩潰或凍結",
+        "description": "病毒可能導致系統崩潰，因為惡意軟體會損壞重要檔案或程式，造成不穩定、系統崩潰或設備意外凍結。"
+      },
+      "element3": {
+        "title": "無法解釋的彈出廣告或視窗",
+        "description": "當您不在瀏覽時出現無法解釋的彈出視窗，可能表示您的設備上有惡意軟體，應該運行殺毒掃描以防止進一步損害檔案。"
+      },
+      "element4": {
+        "title": "設備過熱",
+        "description": "類似於電池消耗，惡意軟體可能在背景中執行高強度任務，未經您同意，導致設備過熱。"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "一體化安全防護，抵禦資料威脅",
+    "description": "使用先進的殺毒保護保持您的雲端安全，防止檔案受到惡意軟體攻擊。適用於Windows、Linux和macOS桌面設備。",
+    "cards": {
+      "element1": {
+        "title": "量身定制的安全解決方案",
+        "description": "立即消除安全威脅，並自訂您的檔案安全需求。選擇您要進行掃描的檔案，或同時拖放多個檔案進行掃描。"
+      },
+      "element2": {
+        "title": "終極保護",
+        "description": "我們通過先進的殺毒軟體快速簡便地防禦病毒，掃描並清除惡意軟體，清潔您的檔案。隨時掃描檔案，優化設備性能，並保護自己免受網路攻擊。"
+      },
+      "element3": {
+        "title": "跨平台的安全防護",
+        "description": "為Windows、Mac和Linux提供殺毒保護，並與您的高級Drive訂閱集成。我們確保您的檔案在任何地方存儲時都保持清潔，設備性能達到最佳狀態。"
+      }
+    }
+  }
+}
