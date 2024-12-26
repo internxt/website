@@ -368,5 +368,10 @@
     "id": "internxt-monitor",
     "title": "Internxt Dark Web Monitor",
     "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protect your devices from malware with Internxt Antivirus",
+    "description": "Internxt Antivirus scans and removes viruses from your files. Protect your devices from malware and ensure complete security in the cloud."
   }
 ]
