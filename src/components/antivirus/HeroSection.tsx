@@ -3,7 +3,7 @@ import Header from '../shared/Header';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => (
-  <section className="flex w-full flex-col">
+  <section className="flex w-full flex-col px-2">
     <div className="flex flex-col items-center pb-32 pt-32 lg:pt-40">
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
