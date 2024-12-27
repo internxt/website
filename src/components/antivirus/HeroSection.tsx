@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const HeroSection = ({ textContent }) => (
   <section className="flex w-full flex-col px-2">
-    <div className="flex flex-col items-center pb-32 pt-32 lg:pt-40">
+    <div className="flex flex-col items-center pb-26 pt-32 lg:pt-40">
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyeBrow}</h2>
@@ -15,11 +15,11 @@ const HeroSection = ({ textContent }) => (
         {textContent.blueText}
       </Header>
 
-      <p className="font-regular max-w-[800px] px-5 pt-5 text-center text-xl text-gray-80 sm:text-xl">
+      <p className="font-regular max-w-[800px] px-5 md:pb-5 pt-5 text-center text-xl text-gray-80 sm:text-xl">
         {textContent.description}
       </p>
 
-     <div className="relative flex h-[50vh] md:h-screen items-center justify-center">   
+     <div className="relative flex h-[50vh] md:h-[450px] items-center justify-center">   
         <Image
           src={getImage('/images/antivirus/Internxt_Antivirus_Header.png')}
           width={600}
