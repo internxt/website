@@ -7,6 +7,7 @@ import FeatureSection from '@/components/annual/FeatureSection';
 import CtaSection from '@/components/pricing/CtaSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -37,27 +38,31 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
   ];
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <AhrefsAnalytics lang={lang} />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+        <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
-      <InfoSection
-        textContent={infoSectionLang.InfoSection}
-        lang={lang}
-        withoutCta
-        backgroundColor="bg-gray-1"
-        cards={cardsData}
-      />
+        <FeatureSection textContent={langJson.FeatureSection} />
 
-      <CtaSection textContent={langJson.CtaSection} />
+        <InfoSection
+          textContent={infoSectionLang.InfoSection}
+          lang={lang}
+          withoutCta
+          backgroundColor="bg-gray-1"
+          cards={cardsData}
+        />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <CtaSection textContent={langJson.CtaSection} />
+
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 
