@@ -10,6 +10,9 @@ interface PlanSwitchProps {
   hideBusinessSelector?: boolean;
   isMonthly?: boolean;
   darkMode?: boolean;
+  isIndividualsOffer?: boolean;
+  isLifetimeOffer?: boolean;
+  isBusinessOffer?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
 }
 
@@ -19,7 +22,9 @@ export const PlanSelector = ({
   hideBusinessSelector,
   onPlanTypeChange,
   darkMode,
-  isMonthly,
+  isIndividualsOffer,
+  isLifetimeOffer,
+  isBusinessOffer,
 }: PlanSwitchProps): JSX.Element => (
   <div id="billingButtons" className={`flex flex-row rounded-lg ${darkMode ? 'bg-gray-90' : 'bg-cool-gray-10'} p-0.5`}>
     <button

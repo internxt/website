@@ -72,21 +72,21 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
       <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
         <div className={`featured flex w-full flex-row justify-center overflow-x-auto ${bgColor} px-4 py-5`}>
-          <div className="flex flex-row items-center space-x-12">
+          <div className="flex flex-row items-center space-x-20">
             {label ? <p className="text-xl font-medium text-gray-60">{label}</p> : undefined}
             <Image
               loading="lazy"
               src={getImage('/logos/featured/techradar.svg')}
               draggable={false}
-              width="94"
-              height="16"
+              width="171"
+              height="28"
               alt="techradar logo"
             />
 
             <Image
               src={getImage('/logos/featured/wired.svg')}
-              width={82}
-              height={16}
+              width={113}
+              height={22}
               alt="Wired logo"
               loading="lazy"
               draggable={false}
@@ -94,8 +94,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/itsfoss-logo.webp')}
-              width={78}
-              height={19}
+              width={110}
+              height={27}
               alt="Its Foss logo"
               loading="lazy"
               draggable={false}
@@ -103,8 +103,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/zdnet.svg')}
-              width={83}
-              height={16}
+              width={118}
+              height={22}
               alt="ZDNet logo"
               loading="lazy"
               draggable={false}
@@ -112,8 +112,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/toms_guide.svg')}
-              width={113}
-              height={20}
+              width={161}
+              height={28}
               alt="Toms logo"
               loading="lazy"
               draggable={false}
@@ -121,8 +121,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/heise_online.svg')}
-              width={128}
-              height={24}
+              width={181}
+              height={34}
               alt="Heise logo"
               loading="lazy"
               draggable={false}

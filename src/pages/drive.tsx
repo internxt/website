@@ -18,7 +18,7 @@ import { CliCard } from '@/components/drive/CliCard';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { CaretRight, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
+import { CaretRight, Eye, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 interface DriveProps {
@@ -51,7 +51,7 @@ const Drive = ({
 
   const Cards = [
     {
-      icon: Password,
+      icon: LockKey,
       title: textContent.FeaturesSection.section7.card1.title,
       description: textContent.FeaturesSection.section7.card1.subtitle,
     },
@@ -66,7 +66,7 @@ const Drive = ({
       description: textContent.FeaturesSection.section7.card3.subtitle,
     },
     {
-      icon: LockKey,
+      icon: Eye,
       title: textContent.FeaturesSection.section7.card4.title,
       description: textContent.FeaturesSection.section7.card4.subtitle,
     },
