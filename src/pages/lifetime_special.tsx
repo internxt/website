@@ -8,38 +8,44 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import Script from 'next/script';
 
 const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Lifetime"
-      lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Lifetime"
+        lang={lang}
+        specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        previewImg="/images/lifetime/file_item.webp"
-        hideTimer
-        bgImage="/images/lifetime/celebration/normal-bg.png"
-      />
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
+        <HeroSection
+          textContent={langJson.HeroSection}
+          previewImg="/images/lifetime/file_item.webp"
+          hideTimer
+          bgImage="/images/lifetime/celebration/normal-bg.png"
+        />
+        <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
 
-      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
+        <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} withoutCta />
+        <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 
-      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
+        <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
 
-      <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection textContent={langJson.CtaSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
-    </Layout>
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

@@ -26,15 +26,23 @@ import { getImage } from '@/lib/getImage';
 import SelectFeatureInfoSection from '@/components/shared/components/SelectFeatureInfoSection';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
 import { PromoCodeName } from '@/lib/types';
+import Script from 'next/script';
 
 interface FamilyProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarText: NavigationBarText;
   textContent: FamilyText;
   footerText: FooterText;
+  lang: string;
 }
 
-export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
+export const FamilyLP = ({
+  metatagsDescriptions,
+  navbarText,
+  textContent,
+  footerText,
+  lang,
+}: FamilyProps): JSX.Element => {
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
     couponCodeForBusiness: PromoCodeName.Christmas,
   });
@@ -97,109 +105,114 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
   };
 
   return (
-    <Layout title={metatag.title} description={metatag.description}>
-      <Navbar fixed cta={['default']} lang="en" textContent={navbarText} />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout title={metatag.title} description={metatag.description}>
+        <Navbar fixed cta={['default']} lang="en" textContent={navbarText} />
 
-      <HeroSection
-        TextComponent={
-          <div className="flex flex-col items-center gap-8 text-center lg:items-start lg:text-start">
-            <Header>{heroSectionText.title}</Header>
-            <div className="flex flex-col gap-4">
-              <h3 className="text-xl font-bold text-gray-80">{heroSectionText.subtitle}</h3>
-              <p className="text-xl text-gray-80">{heroSectionText.description}</p>
+        <HeroSection
+          TextComponent={
+            <div className="flex flex-col items-center gap-8 text-center lg:items-start lg:text-start">
+              <Header>{heroSectionText.title}</Header>
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl font-bold text-gray-80">{heroSectionText.subtitle}</h3>
+                <p className="text-xl text-gray-80">{heroSectionText.description}</p>
+              </div>
+              <Button
+                text={heroSectionText.cta}
+                onClick={() => {
+                  window.location.href = '#priceTable';
+                }}
+              />
             </div>
-            <Button
-              text={heroSectionText.cta}
-              onClick={() => {
-                window.location.href = '#priceTable';
-              }}
-            />
-          </div>
-        }
-        imageProperties={{
-          src: getImage('/images/family/internxt_family_storage_plans.webp'),
-          alt: 'Internxt Family Storage Plans',
-          width: 896,
-          height: 778,
-        }}
-      />
+          }
+          imageProperties={{
+            src: getImage('/images/family/internxt_family_storage_plans.webp'),
+            alt: 'Internxt Family Storage Plans',
+            width: 896,
+            height: 778,
+          }}
+        />
 
-      <TextAndImageColumnSection
-        TextComponent={
-          <div className="flex max-w-[925px] flex-col gap-12">
-            <h2 className="text-5xl font-semibold text-gray-100">{featureSection.title}</h2>
-            <p className="text-xl text-gray-80">{featureSection.description}</p>
-          </div>
-        }
-        imageProperties={{
-          src: getImage('/images/family/internxt_family_plans_storage.webp'),
-          alt: 'Internxt Family Storage Plans',
-          width: 896,
-          height: 778,
-          className: 'shadow-lg rounded-xl',
-        }}
-        background="bg-gray-1"
-      />
-
-      <PricingSectionWrapper
-        loadingCards={loadingCards}
-        lang={'en'}
-        products={products}
-        decimalDiscount={{
-          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
-        }}
-        isFamilyPage={true}
-        hideFreeCard
-        startFromPlan="Business"
-        hidePlanSelectorComponent={true}
-        textContent={textContent.PriceTable}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-      />
-
-      <SelectFeatureInfoSection
-        textContent={textContent.WhatMakesInternxtPerfectSection}
-        cards={selectInfoCards}
-        lang="en"
-      />
-
-      <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
-
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
-            <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
-            <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
-          </div>
-        }
-        cards={cardsForGroupCards}
-        background="bg-gray-1"
-        backgroundColorForCard="bg-white"
-      />
-
-      <TextAndImageColumnSection
-        TextComponent={
-          <div className="flex max-w-[772px] flex-col items-center gap-8 text-center">
-            <div className="flex flex-col gap-6">
-              <h2 className="text-5xl font-semibold text-gray-100">{maxSecuritySection.title}</h2>
-              <h3 className="text-xl text-gray-80">{maxSecuritySection.description}</h3>
+        <TextAndImageColumnSection
+          TextComponent={
+            <div className="flex max-w-[925px] flex-col gap-12">
+              <h2 className="text-5xl font-semibold text-gray-100">{featureSection.title}</h2>
+              <p className="text-xl text-gray-80">{featureSection.description}</p>
             </div>
-            <Button text={maxSecuritySection.cta} onClick={() => (window.location.href = '#priceTable')} />
-          </div>
-        }
-        imageProperties={{
-          src: getImage('/images/family/Internxt_family_plans.webp'),
-          alt: 'Internxt Family Plans',
-          width: 925,
-          height: 41,
-        }}
-      />
+          }
+          imageProperties={{
+            src: getImage('/images/family/internxt_family_plans_storage.webp'),
+            alt: 'Internxt Family Storage Plans',
+            width: 896,
+            height: 778,
+            className: 'shadow-lg rounded-xl',
+          }}
+          background="bg-gray-1"
+        />
 
-      <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
+        <PricingSectionWrapper
+          loadingCards={loadingCards}
+          lang={'en'}
+          products={products}
+          decimalDiscount={{
+            business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+          }}
+          isFamilyPage={true}
+          hideFreeCard
+          startFromPlan="Business"
+          hidePlanSelectorComponent={true}
+          textContent={textContent.PriceTable}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+        />
 
-      <FAQSection textContent={textContent.FaqSection} />
-      <Footer lang="en" textContent={footerText} />
-    </Layout>
+        <SelectFeatureInfoSection
+          textContent={textContent.WhatMakesInternxtPerfectSection}
+          cards={selectInfoCards}
+          lang="en"
+        />
+
+        <CtaSection textContent={textContent.CtaSection} url={'#priceTable'} maxWidth="max-w-[500px]" />
+
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
+              <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
+              <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
+            </div>
+          }
+          cards={cardsForGroupCards}
+          background="bg-gray-1"
+          backgroundColorForCard="bg-white"
+        />
+
+        <TextAndImageColumnSection
+          TextComponent={
+            <div className="flex max-w-[772px] flex-col items-center gap-8 text-center">
+              <div className="flex flex-col gap-6">
+                <h2 className="text-5xl font-semibold text-gray-100">{maxSecuritySection.title}</h2>
+                <h3 className="text-xl text-gray-80">{maxSecuritySection.description}</h3>
+              </div>
+              <Button text={maxSecuritySection.cta} onClick={() => (window.location.href = '#priceTable')} />
+            </div>
+          }
+          imageProperties={{
+            src: getImage('/images/family/Internxt_family_plans.webp'),
+            alt: 'Internxt Family Plans',
+            width: 925,
+            height: 41,
+          }}
+        />
+
+        <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
+
+        <FAQSection textContent={textContent.FaqSection} />
+        <Footer lang="en" textContent={footerText} />
+      </Layout>
+    </>
   );
 };
 

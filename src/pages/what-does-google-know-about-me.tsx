@@ -7,6 +7,7 @@ import ManageGoogleDataSection from '@/components/what-does-google-know-about-me
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 import { GetServerSidePropsContext } from 'next';
+import Script from 'next/script';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -22,29 +23,34 @@ const WhatDoesGoogleKnowAboutMe = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'what-google-knows');
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="What Does Google Know About Me"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="What Does Google Know About Me"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
+        <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
 
-      <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
+        <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
+        <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
 
-      <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
+        <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
-      <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

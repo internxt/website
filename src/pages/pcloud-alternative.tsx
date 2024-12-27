@@ -16,29 +16,39 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="pCloud Comparison"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <ComparisonHeader
-        maxWithForTitle={'max-w-[600px]'}
-        textContent={langJson.HeaderSection}
-        redirectUrl={'/pricing'}
-      />
+        <ComparisonHeader
+          maxWithForTitle={'max-w-[600px]'}
+          textContent={langJson.HeaderSection}
+          redirectUrl={'/pricing'}
+        />
 
-      <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <TablesSection textContent={langJson.TablesSection} />
+        <TablesSection textContent={langJson.TablesSection} />
 
-      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
+        <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
 
-      <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
+        <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+        <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
 
-      <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
+        <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
-    </Layout>
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      </Layout>
+    </>
   );
 };
 

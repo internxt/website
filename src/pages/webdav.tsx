@@ -8,30 +8,35 @@ import { HowToUseCLISection } from '@/components/webdav/HowToUseCLISection';
 import Footer from '@/components/layout/footers/Footer';
 import { SIGNUP_DRIVE_WEB } from '../constants';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import Script from 'next/script';
 
 const WebDAV = ({ metatagsDescriptions, langJson, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'webDAV');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
-      <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
+    <>
+      <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={'en'}>
+        <Navbar textContent={navbarLang} lang={'en'} cta={['default']} fixed />
 
-      <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <DownloadCLISection textContent={langJson.DownloadCLISection} />
+        <WebDAVSupportSection textContent={langJson.WebDAVSupportSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+        <DownloadCLISection textContent={langJson.DownloadCLISection} />
 
-      <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
+        <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB} />
+        <HowToUseCLISection textContent={langJson.HowToUseCLISection} />
 
-      <FAQSection textContent={langJson.FaqSection} />
+        <CtaSection textContent={langJson.CtaSection2} url={SIGNUP_DRIVE_WEB} />
 
-      <Footer textContent={footerLang} lang={'en'} />
-    </Layout>
+        <FAQSection textContent={langJson.FaqSection} />
+
+        <Footer textContent={footerLang} lang={'en'} />
+      </Layout>
+    </>
   );
 };
 

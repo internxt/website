@@ -6,25 +6,31 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import MakePrivacySection from '@/components/newsletter/MakePrivacySection';
 import WhatGetSection from '@/components/newsletter/WhatGetSection';
 import CtaSection from '@/components/shared/CtaSection';
+import Script from 'next/script';
 
 const Newsletter = ({ lang, metatagsDescriptions, textContent, navbar, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'newsletter-subscribe');
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description}>
-      <Navbar fixed lang="en" textContent={navbar} cta={['default']} />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout title={metatags[0].title} description={metatags[0].description}>
+        <Navbar fixed lang="en" textContent={navbar} cta={['default']} />
 
-      <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <FileParallaxSection />
+        <FileParallaxSection />
 
-      <MakePrivacySection textContent={textContent.MakePrivacySection} />
+        <MakePrivacySection textContent={textContent.MakePrivacySection} />
 
-      <WhatGetSection textContent={textContent.WhatGetSection} />
+        <WhatGetSection textContent={textContent.WhatGetSection} />
 
-      <CtaSection url={'https://drive.internxt.com/new'} textContent={textContent.CtaSection} />
+        <CtaSection url={'https://drive.internxt.com/new'} textContent={textContent.CtaSection} />
 
-      <Footer textContent={footer} lang={'en'} />
-    </Layout>
+        <Footer textContent={footer} lang={'en'} />
+      </Layout>
+    </>
   );
 };
 

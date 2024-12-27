@@ -33,7 +33,9 @@ const PrivacyDirectory = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Privacy Directory', 'privacy-directory')}
       </Script>
-
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
       <Layout
         segmentName="Privacy Directory"
         title={metatags[0].title}

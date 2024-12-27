@@ -6,22 +6,28 @@ import PaymentsSection from '@/components/techradar-discount/PaymentsSection';
 import InfoSection from '@/components/techradar-discount/InfoSection';
 import Footer from '@/components/layout/footers/Footer';
 import { GetServerSidePropsContext } from 'next';
+import Script from 'next/script';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <PaymentsSection textContent={langJson.PaymentSection} />
+        <PaymentsSection textContent={langJson.PaymentSection} />
 
-      <InfoSection textContent={langJson.InfoSection} />
+        <InfoSection textContent={langJson.InfoSection} />
 
-      <Footer textContent={footerLang} lang="en" />
-    </Layout>
+        <Footer textContent={footerLang} lang="en" />
+      </Layout>
+    </>
   );
 };
 

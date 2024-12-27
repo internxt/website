@@ -25,6 +25,9 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('About', 'about')}
       </Script>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
 
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

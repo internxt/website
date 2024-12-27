@@ -32,6 +32,9 @@ const Scan = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
       </Script>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

@@ -14,6 +14,7 @@ import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
+import Script from 'next/script';
 
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -65,32 +66,37 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
   ];
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} isStartPage />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} isStartPage />
 
-      <PriceTable
-        textContent={textContent.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.SpringCoupon}
-        discount={offerDiscount}
-        billingFrequency="lifetime"
-        isStartPage
-      />
+        <PriceTable
+          textContent={textContent.PriceTable}
+          handlePriceCardButton={handlePriceCardButton}
+          couponType={PromoCodeName.SpringCoupon}
+          discount={offerDiscount}
+          billingFrequency="lifetime"
+          isStartPage
+        />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-      <InfoSection
-        textContent={textContent.SecureCloudSection}
-        lang="en"
-        withoutCta
-        backgroundColor="bg-gray-1"
-        cards={cardsData}
-      />
+        <InfoSection
+          textContent={textContent.SecureCloudSection}
+          lang="en"
+          withoutCta
+          backgroundColor="bg-gray-1"
+          cards={cardsData}
+        />
 
-      <CtaSection textContent={textContent.CtaSection} url="#payment" />
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-    </Layout>
+        <CtaSection textContent={textContent.CtaSection} url="#payment" />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 }
 

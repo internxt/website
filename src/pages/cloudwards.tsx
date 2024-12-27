@@ -48,31 +48,36 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
   ];
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <MinimalNavbar lang={lang} />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
+        <MinimalNavbar lang={lang} />
 
-      <HeroSectionForPartner
-        textContent={langJson.HeroSection}
-        cardsType={'all'}
-        pathname={'cloudwards'}
-        couponName={PromoCodeName.CloudwardsCoupon}
-      />
+        <HeroSectionForPartner
+          textContent={langJson.HeroSection}
+          cardsType={'all'}
+          pathname={'cloudwards'}
+          couponName={PromoCodeName.CloudwardsCoupon}
+        />
 
-      <SecondFeaturesSection
-        textContent={langJson.SecondFeaturesSection}
-        lang={lang}
-        cards={cardInfo}
-        bgColor="bg-white"
-      />
+        <SecondFeaturesSection
+          textContent={langJson.SecondFeaturesSection}
+          lang={lang}
+          cards={cardInfo}
+          bgColor="bg-white"
+        />
 
-      <DevicesSection textContent={langJson.DevicesSection} />
+        <DevicesSection textContent={langJson.DevicesSection} />
 
-      <TestimonialsSection textContent={homeJson.TestimonialsSection} />
+        <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
-      <CtaSection textContent={langJson.CtaSection['all']} />
+        <CtaSection textContent={langJson.CtaSection['all']} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
-    </Layout>
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      </Layout>
+    </>
   );
 };
 
