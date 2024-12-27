@@ -82,6 +82,10 @@ const Drive = ({
         {sm_breadcrumb('Drive', 'drive')}
       </Script>
 
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Drive" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 

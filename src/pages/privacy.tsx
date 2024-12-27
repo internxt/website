@@ -40,6 +40,10 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
         {sm_breadcrumb('Privacy', 'privacy')}
       </Script>
 
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         <HeroSection textContent={textContent.HeroSection} />

@@ -26,6 +26,9 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
         {sm_breadcrumb('About', 'about')}
       </Script>
 
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         {ACCEPTED_LANGUAGES_FOR_NEW_VERSION.includes(lang) ? (

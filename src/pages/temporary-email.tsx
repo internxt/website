@@ -38,6 +38,10 @@ const TempEmail = () => {
         {sm_breadcrumb('Temporary Email', 'temporary-email')}
       </Script>
 
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
+
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
