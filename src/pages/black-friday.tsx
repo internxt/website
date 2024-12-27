@@ -21,6 +21,7 @@ import { PricingText } from '@/assets/types/pricing';
 import SuiteSection from '@/components/black-friday/SuiteSection';
 import BestStorageSection from '@/components/black-friday/BestStorageSection';
 import FeaturesSection from '@/components/black-friday/FeaturesSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const BLACK_FRIDAY_METATAG_ID = 'black-friday';
 interface BlackFridayProps {
@@ -88,65 +89,69 @@ const BlackFriday = ({
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon?.percentOff;
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
-      <Navbar
-        lang={locale}
-        darkMode={true}
-        textContent={navbarLang}
-        cta={['Hide Login']}
-        isLinksHidden
-        hideNavbar
-        fixed
-      />
+    <>
+      <AhrefsAnalytics lang={locale} />
 
-      <HeroSection lang={locale} textContent={langJson.blackFriday} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Black Friday">
+        <Navbar
+          lang={locale}
+          darkMode={true}
+          textContent={navbarLang}
+          cta={['Hide Login']}
+          isLinksHidden
+          hideNavbar
+          fixed
+        />
 
-      <FeaturesSection textContent={langJson.blackFriday} />
+        <HeroSection lang={locale} textContent={langJson.blackFriday} />
 
-      <BestStorageSection textContent={langJson.blackFriday} lang={locale} />
+        <FeaturesSection textContent={langJson.blackFriday} />
 
-      <SuiteSection textContent={langJson.blackFriday} lang={locale} />
+        <BestStorageSection textContent={langJson.blackFriday} lang={locale} />
 
-      <CtaSection textContent={langJson.cta} lang={locale} />
+        <SuiteSection textContent={langJson.blackFriday} lang={locale} />
 
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-white">{langJson.blackFriday.FeatureSection.title}</p>
-            <p className="font-regular text-xl text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
-          </div>
-        }
-        cards={groupCards}
-        background="bg-highlight"
-        backgroundColorForCard="bg-gray-100"
-        textCardColor="text-white"
-      />
+        <CtaSection textContent={langJson.cta} lang={locale} />
 
-      <PlatformSection textContent={langJson.blackFriday} />
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+              <p className="text-5xl font-semibold text-white">{langJson.blackFriday.FeatureSection.title}</p>
+              <p className="font-regular text-xl text-gray-5">{langJson.blackFriday.FeatureSection.subtitle}</p>
+            </div>
+          }
+          cards={groupCards}
+          background="bg-highlight"
+          backgroundColorForCard="bg-gray-100"
+          textCardColor="text-white"
+        />
 
-      <TestimonialsSection
-        textContent={langJson.blackFriday.TestimonialsSection}
-        bgColor="bg-highlight"
-        textColor="text-white"
-        textComponent={
-          <p className="text-center text-4xl font-semibold !leading-tight text-white sm:text-5xl">
-            {langJson.blackFriday.TestimonialsSection.title}
-          </p>
-        }
-      />
+        <PlatformSection textContent={langJson.blackFriday} />
 
-      <CtaSection textContent={langJson.cta2} lang={locale} />
+        <TestimonialsSection
+          textContent={langJson.blackFriday.TestimonialsSection}
+          bgColor="bg-highlight"
+          textColor="text-white"
+          textComponent={
+            <p className="text-center text-4xl font-semibold !leading-tight text-white sm:text-5xl">
+              {langJson.blackFriday.TestimonialsSection.title}
+            </p>
+          }
+        />
 
-      <FaqSection textContent={langJson.blackFriday} />
+        <CtaSection textContent={langJson.cta2} lang={locale} />
 
-      <MinimalFooter
-        footerLang={footerLang.FooterSection}
-        lang={locale}
-        bgColor="bg-highlight"
-        textColor="text-gray-50"
-        logoColor="white"
-      />
-    </Layout>
+        <FaqSection textContent={langJson.blackFriday} />
+
+        <MinimalFooter
+          footerLang={footerLang.FooterSection}
+          lang={locale}
+          bgColor="bg-highlight"
+          textColor="text-gray-50"
+          logoColor="white"
+        />
+      </Layout>
+    </>
   );
 };
 

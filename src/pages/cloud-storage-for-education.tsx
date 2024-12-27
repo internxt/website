@@ -11,6 +11,7 @@ import BenefitsOfInternxtSection from '@/components/cloud-storage-for-education/
 import WhyChooseInternxtSection from '@/components/cloud-storage-for-education/WhyChooseInternxtSection';
 import ClaimYourDiscountSection from '@/components/cloud-storage-for-education/ClaimYourDiscountSection';
 import IntercomTicketCreatedBanner from '@/components/banners/IntercomTicketCreatedBanner';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textContent, footer }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-storage-for-education');
@@ -25,31 +26,35 @@ const CloudStorageForEducation = ({ lang, metatagsDescriptions, navbar, textCont
   };
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description}>
-      <Navbar fixed lang={lang} textContent={navbar} cta={['default']} />
+    <>
+      <AhrefsAnalytics lang={lang} />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description}>
+        <Navbar fixed lang={lang} textContent={navbar} cta={['default']} />
 
-      <IntercomTicketCreatedBanner
-        textContent={textContent.banner}
-        bannerVisible={bannerVisible}
-        onClose={onBannerClose}
-      />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <AchieveSecurityAndPrivacySection textContent={textContent.AchieveSecurityAndPrivacySection} />
+        <IntercomTicketCreatedBanner
+          textContent={textContent.banner}
+          bannerVisible={bannerVisible}
+          onClose={onBannerClose}
+        />
 
-      <BenefitsOfInternxtSection textContent={textContent.BenefitsOfInternxtSection} />
+        <AchieveSecurityAndPrivacySection textContent={textContent.AchieveSecurityAndPrivacySection} />
 
-      <ClaimYourDiscountSection textContent={textContent.ClaimYourDiscountSection} openBanner={onOpenBanner} />
+        <BenefitsOfInternxtSection textContent={textContent.BenefitsOfInternxtSection} />
 
-      <WhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
+        <ClaimYourDiscountSection textContent={textContent.ClaimYourDiscountSection} openBanner={onOpenBanner} />
 
-      <CtaSection textContent={textContent.CtaSection} />
+        <WhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <CtaSection textContent={textContent.CtaSection} />
 
-      <Footer textContent={footer} lang={lang} />
-    </Layout>
+        <FAQSection textContent={textContent.FaqSection} />
+
+        <Footer textContent={footer} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

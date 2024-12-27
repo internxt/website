@@ -16,6 +16,7 @@ import { GetServerSidePropsContext } from 'next';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { ToolsSectionText } from '@/assets/types/components/toolsSection';
 import { BannersText } from '@/assets/types/components/banners';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface MonitorProps {
   lang: GetServerSidePropsContext['locale'];
@@ -60,49 +61,53 @@ const Monitor = ({
     },
   ];
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
-      <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
+    <>
+      <AhrefsAnalytics lang={locale} />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Monitor" lang={locale}>
+        <Navbar textContent={navbarLang} cta={['default']} fixed lang={locale} />
 
-      <InfoSection textContent={langJson.InfoSection} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+        <InfoSection textContent={langJson.InfoSection} />
 
-      <CtaSection
-        textContent={langJson.CtaSection}
-        customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
-        url={''}
-      />
+        <FeatureSection textContent={langJson.FeatureSection} />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
-              <p className="font-regular text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
+        <CtaSection
+          textContent={langJson.CtaSection}
+          customDescription={<p className="font-regular text-xl">{langJson.CtaSection.description}</p>}
+          url={''}
+        />
+
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex w-full flex-col items-center gap-9">
+              <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+                <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
+                <p className="font-regular text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
+              </div>
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center space-y-12">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
-            <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={locale} />
-          </div>
-        }
-        backgroundColor="bg-gray-1"
-      />
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center space-y-12">
+              <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
+              <SignUpBanner textContent={bannerLang.SignUpPCloudAlternativeBanner} lang={locale} />
+            </div>
+          }
+          backgroundColor="bg-gray-1"
+        />
 
-      <CtaSection
-        textContent={langJson.CtaSection2}
-        customDescription={<p className="font-regular text-xl">{langJson.CtaSection2.description}</p>}
-        url={''}
-      />
+        <CtaSection
+          textContent={langJson.CtaSection2}
+          customDescription={<p className="font-regular text-xl">{langJson.CtaSection2.description}</p>}
+          url={''}
+        />
 
-      <ToolsSection textContent={toolsContent} lang={locale} />
+        <ToolsSection textContent={toolsContent} lang={locale} />
 
-      <Footer textContent={footerLang} lang={locale} hideNewsletter={false} />
-    </Layout>
+        <Footer textContent={footerLang} lang={locale} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 };
 

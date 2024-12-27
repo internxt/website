@@ -8,6 +8,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { CtaSection } from '@/components/affiliates/affiliates-partners-template/CtaSection';
 import { PromoCodeName } from '@/lib/types';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 export type CardsType = 'all' | 'one';
 
@@ -48,31 +49,35 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
   ];
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <MinimalNavbar lang={lang} />
+    <>
+      <AhrefsAnalytics lang={lang} />
 
-      <HeroSectionForPartner
-        textContent={langJson.HeroSection}
-        cardsType={'all'}
-        pathname={'cloudwards'}
-        couponName={PromoCodeName.CloudwardsCoupon}
-      />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
+        <MinimalNavbar lang={lang} />
 
-      <SecondFeaturesSection
-        textContent={langJson.SecondFeaturesSection}
-        lang={lang}
-        cards={cardInfo}
-        bgColor="bg-white"
-      />
+        <HeroSectionForPartner
+          textContent={langJson.HeroSection}
+          cardsType={'all'}
+          pathname={'cloudwards'}
+          couponName={PromoCodeName.CloudwardsCoupon}
+        />
 
-      <DevicesSection textContent={langJson.DevicesSection} />
+        <SecondFeaturesSection
+          textContent={langJson.SecondFeaturesSection}
+          lang={lang}
+          cards={cardInfo}
+          bgColor="bg-white"
+        />
 
-      <TestimonialsSection textContent={homeJson.TestimonialsSection} />
+        <DevicesSection textContent={langJson.DevicesSection} />
 
-      <CtaSection textContent={langJson.CtaSection['all']} />
+        <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
-    </Layout>
+        <CtaSection textContent={langJson.CtaSection['all']} />
+
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      </Layout>
+    </>
   );
 };
 

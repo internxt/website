@@ -19,6 +19,7 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { ClockClockwise, CloudCheck, Devices, ShieldCheck } from '@phosphor-icons/react';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface ResurrectionCampaignProps {
   lang: GetServerSidePropsContext['locale'];
@@ -28,7 +29,13 @@ interface ResurrectionCampaignProps {
   footerLang: FooterText;
 }
 
-const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: ResurrectionCampaignProps): JSX.Element => {
+const ResurrectionCampaign = ({
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+}: ResurrectionCampaignProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'resurrection-campaign');
   const router = useRouter();
   const {
@@ -41,7 +48,7 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
     couponCode: PromoCodeName.Resurrection,
   });
   const locale = lang as string;
- 
+
   const percent = '90%';
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -52,7 +59,13 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
         ? (lifetimeCoupons?.[lifetimeSpacePlan.storage] as any).promoCodeName
         : individualCoupon?.name;
 
-    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForB2CPlans);
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForB2CPlans,
+    );
   };
 
   const groupCards = [
@@ -79,57 +92,61 @@ const ResurrectionCampaign = ({ metatagsDescriptions, textContent, lang, navbarL
   ];
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Comeback"
-      lang={lang}
-      isBannerFixed={false}
-    >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
-      <HeroSection
-        textContent={textContent.HeroSection}
-        isCelebrationPage
-        percent={percent}
-        
-      />
-      
-      <PricingSectionWrapper
-        textContent={textContent.tableSection}
-        decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-          lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideBusinessSelector
-        hideFreeCard
-      />
-    
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title}</p>
-            <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title2}</p>
-            <p className="max-w-[796px] text-xl text-gray-80">{textContent.WhyComebackToInternxt.description}</p>
-            <Image src={getImage('/images/home/internxt_secure_cloud_storage.webp')} width={774} height={411} alt={'Cloud Storage'} />
-          </div>
-        }
-        cards={groupCards}
-        background='bg-gray-1'
-        backgroundColorForCard='bg-white'
-      />
-      <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor='bg-white' />
-      <CtaSection
-        textContent={textContent.CtaSection}
-        bgImage='/images/lifetime/celebration/normal-bg.png'
-        url="#billingButtons"
-      />
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
-    </Layout>
+    <>
+      <AhrefsAnalytics lang={locale} />
+
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Comeback"
+        lang={lang}
+        isBannerFixed={false}
+      >
+        <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
+        <HeroSection textContent={textContent.HeroSection} isCelebrationPage percent={percent} />
+
+        <PricingSectionWrapper
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideBusinessSelector
+          hideFreeCard
+        />
+
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+              <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title}</p>
+              <p className="text-5xl font-semibold text-gray-100">{textContent.WhyComebackToInternxt.title2}</p>
+              <p className="max-w-[796px] text-xl text-gray-80">{textContent.WhyComebackToInternxt.description}</p>
+              <Image
+                src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+                width={774}
+                height={411}
+                alt={'Cloud Storage'}
+              />
+            </div>
+          }
+          cards={groupCards}
+          background="bg-gray-1"
+          backgroundColorForCard="bg-white"
+        />
+        <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor="bg-white" />
+        <CtaSection
+          textContent={textContent.CtaSection}
+          bgImage="/images/lifetime/celebration/normal-bg.png"
+          url="#billingButtons"
+        />
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      </Layout>
+    </>
   );
 };
 

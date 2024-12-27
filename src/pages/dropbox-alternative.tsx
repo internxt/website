@@ -10,6 +10,7 @@ import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import ReactMarkdown from 'react-markdown';
@@ -47,46 +48,50 @@ const DropboxComparison = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Dropbox Comparison"
-      lang={lang}
-    >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <AhrefsAnalytics lang={lang} />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Dropbox Comparison"
+        lang={lang}
+      >
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
+        <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
 
-      <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
+        <HeroSection textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
 
-      <CtaSection textContent={langJson.CtaSection} url="" />
+        <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
 
-      <div className="flex flex-col items-center gap-16 px-5 py-20">
-        <div className="flex max-w-[850px] flex-col gap-6 text-center">
-          <h2 className="text-3xl font-semibold lg:text-5xl">{langJson.TablesSection.title}</h2>
-          <h3 className="text-xl text-gray-80">{langJson.TablesSection.description}</h3>
-        </div>
-        <div className="flex flex-col gap-16">
-          {langJson.TablesSection.tables.map((table) => (
-            <div key={table.title} className="flex flex-col items-center gap-10 lg:gap-16">
-              <p className="text-center text-3xl font-semibold text-gray-100">{table.title}</p>
-              <div className=" flex h-full flex-col gap-10 md:flex-row">
-                <InxtTable textContent={table.inxtTable} />
-                <CompetitorTable textContent={table.table} logo={getImage('/icons/dropbox-icon.svg')} />
+        <CtaSection textContent={langJson.CtaSection} url="" />
+
+        <div className="flex flex-col items-center gap-16 px-5 py-20">
+          <div className="flex max-w-[850px] flex-col gap-6 text-center">
+            <h2 className="text-3xl font-semibold lg:text-5xl">{langJson.TablesSection.title}</h2>
+            <h3 className="text-xl text-gray-80">{langJson.TablesSection.description}</h3>
+          </div>
+          <div className="flex flex-col gap-16">
+            {langJson.TablesSection.tables.map((table) => (
+              <div key={table.title} className="flex flex-col items-center gap-10 lg:gap-16">
+                <p className="text-center text-3xl font-semibold text-gray-100">{table.title}</p>
+                <div className=" flex h-full flex-col gap-10 md:flex-row">
+                  <InxtTable textContent={table.inxtTable} />
+                  <CompetitorTable textContent={table.table} logo={getImage('/icons/dropbox-icon.svg')} />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
 
-      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
+        <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
 
-      <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
+        <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
-    </Layout>
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
+      </Layout>
+    </>
   );
 };
 

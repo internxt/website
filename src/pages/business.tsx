@@ -19,6 +19,7 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -49,62 +50,66 @@ export const BusinessPage = ({
   const imagePath = lang === 'es' ? 'almacenamiento_en_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
 
   return (
-    <Layout title={metatags.title} description={metatags.description}>
-      <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
+    <>
+      <AhrefsAnalytics lang={locale} />
 
-      <HeroSection
-        TextComponent={
-          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
-            <Header>{textContent.HeroSection.title}</Header>
-            <div className="flex flex-col gap-4">
-              <p className="text-xl">{textContent.HeroSection.description[0]}</p>
-              <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
+      <Layout title={metatags.title} description={metatags.description}>
+        <Navbar cta={['default']} lang={locale} textContent={navbarText} fixed />
+
+        <HeroSection
+          TextComponent={
+            <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
+              <Header>{textContent.HeroSection.title}</Header>
+              <div className="flex flex-col gap-4">
+                <p className="text-xl">{textContent.HeroSection.description[0]}</p>
+                <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
+              </div>
+              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
             </div>
-            <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
-          </div>
-        }
-        style={{
-          background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
-        }}
-        imageProperties={{
-          src: getImage(`/images/business/${imagePath}.webp`),
-          alt: 'Internxt B2B Business Solution',
-          width: 671,
-          height: 563,
-        }}
-      />
+          }
+          style={{
+            background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
+          }}
+          imageProperties={{
+            src: getImage(`/images/business/${imagePath}.webp`),
+            alt: 'Internxt B2B Business Solution',
+            width: 671,
+            height: 563,
+          }}
+        />
 
-      <SecureYourCompany textContent={textContent.SecureYourCompany} />
+        <SecureYourCompany textContent={textContent.SecureYourCompany} />
 
-      <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
+        <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
 
-      <WhatCanWeDo textContent={textContent.WhatCanWeDo} />
+        <WhatCanWeDo textContent={textContent.WhatCanWeDo} />
 
-      <PricingSectionWrapper
-        loadingCards={loadingCards}
-        lang={locale}
-        products={products}
-        decimalDiscount={{
-          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
-        }}
-        hideFreeCard
-        startFromPlan="Business"
-        hidePlanSelectorComponent={true}
-        textContent={textContent.PriceTable}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
-      />
+        <PricingSectionWrapper
+          loadingCards={loadingCards}
+          lang={locale}
+          products={products}
+          decimalDiscount={{
+            business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
+          }}
+          hideFreeCard
+          startFromPlan="Business"
+          hidePlanSelectorComponent={true}
+          textContent={textContent.PriceTable}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          hideSwitchSelector
+        />
 
-      <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+        <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
 
-      <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
+        <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 
-      <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
+        <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerText} lang={locale} />
-    </Layout>
+        <Footer textContent={footerText} lang={locale} />
+      </Layout>
+    </>
   );
 };
 
