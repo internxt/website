@@ -19,42 +19,52 @@ const HeroSection = ({ textContent }) => (
         {textContent.description}
       </p>
 
-      <div className="relative flex h-full flex-col items-center">
-        <Image
-          src={getImage('/images/antivirus/internxt_antivirus_1.webp')}
-          width={88}
-          height={88}
-          alt="Internxt Antivirus checklist"
-          draggable="false"
-          className="absolute top-20 -translate-x-1/2 transform object-cover"
-        />
+      <div className="relative flex h-screen items-center justify-center">
+        {/* Contenedor 3D */}
+        <div className="perspective-3d relative h-[600px] w-[600px]">
+          {/* Imagen principal (Estática) */}
+          <Image
+            src={getImage('/images/antivirus/Internxt_Antivirus_Header.png')}
+            width={600}
+            height={460}
+            alt="Internxt Antivirus"
+            draggable="false"
+            className="object-cover"
+          />
 
-        <Image
-          src={getImage('/images/antivirus/internxt_antivirus_2.webp')}
-          width={90}
-          height={90}
-          alt="Internxt Antivirus shield"
-          draggable="false"
-          className="absolute left-1/2 top-0 -translate-x-1/2 transform object-cover"
-        />
+          {/* Orbita de imágenes pequeñas */}
+          <div className="absolute inset-0">
+            {/* Imagen 1 */}
+            <Image
+              src={getImage('/images/antivirus/internxt_antivirus_1.webp')}
+              width={88}
+              height={88}
+              alt="Internxt Antivirus checklist"
+              draggable="false"
+              className="absolute left-1/2 top-0 animate-orbit object-cover"
+            />
 
-        <Image
-          src={getImage('/images/antivirus/internxt_antivirus_3.webp')}
-          width={172}
-          height={172}
-          alt="Internxt Antivirus person checking"
-          draggable="false"
-          className="fade-in-r-large absolute bottom-0 left-1/2 -translate-x-1/2 transform animate-[spinAround-5s-linear-infinite] object-cover"
-        />
+            {/* Imagen 2 */}
+            <Image
+              src={getImage('/images/antivirus/internxt_antivirus_2.webp')}
+              width={90}
+              height={90}
+              alt="Internxt Antivirus shield"
+              draggable="false"
+              className="absolute left-0 top-1/2 object-cover animate-orbit-diagonal"
+            />
 
-        {/* Imagen principal estática */}
-        <Image
-          src={getImage('/images/antivirus/Internxt_Antivirus_Header.png')}
-          width={600}
-          height={460}
-          alt="Internxt Antivirus"
-          draggable="false"
-        />
+            {/* Imagen 3 */}
+            <Image
+              src={getImage('/images/antivirus/internxt_antivirus_3.webp')}
+              width={172}
+              height={172}
+              alt="Internxt Antivirus person checking"
+              draggable="false"
+              className=" absolute bottom-1/2 left-1/2 object-cover animate-orbit-vertical"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </section>
