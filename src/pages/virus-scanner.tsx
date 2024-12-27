@@ -11,6 +11,7 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const Scan = ({
   metatagsDescriptions,
@@ -33,9 +34,7 @@ const Scan = ({
         {sm_breadcrumb('Virus Scanner', 'virus-scanner')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

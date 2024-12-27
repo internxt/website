@@ -13,6 +13,7 @@ import HeroSection2 from '@/components/privacy-directory/HeroSection2';
 import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { GetServerSidePropsContext } from 'next';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const PrivacyDirectory = ({
   metatagsDescriptions,
@@ -34,9 +35,7 @@ const PrivacyDirectory = ({
         {sm_breadcrumb('Privacy Directory', 'privacy-directory')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout
         segmentName="Privacy Directory"

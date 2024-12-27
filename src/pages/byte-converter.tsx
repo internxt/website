@@ -13,6 +13,7 @@ import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
 
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const CONVERTER_TOOL_METATAG_ID = 'converter-tool';
 
@@ -29,9 +30,7 @@ const ConverterTool = ({ lang, metatagsDescriptions, navbarLang, langJson, tools
         {sm_breadcrumb('Byte Converter', 'byte-converter')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Converter Tool">
         <Navbar lang={'en'} textContent={navbarLang} cta={['default']} fixed />

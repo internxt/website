@@ -12,6 +12,7 @@ import { sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import CtaSection from '@/components/shared/CtaSection';
 import CompanySection from '@/components/about/CompanySection';
 import HeroSection2 from '@/components/about/HeroSection2';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const CTA_URL = 'https://internxt.com/pricing';
 
@@ -26,9 +27,8 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
         {sm_breadcrumb('About', 'about')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
+
       <Layout segmentName="About" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         {ACCEPTED_LANGUAGES_FOR_NEW_VERSION.includes(lang) ? (

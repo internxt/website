@@ -10,6 +10,7 @@ import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { sm_breadcrumb, sm_faq } from '@/components/utils/schema-markup-generator';
 import Script from 'next/script';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const DRIVE_URL = 'https://drive.internxt.com/new';
 
@@ -34,9 +35,7 @@ const PasswordGenerator = ({
         {sm_breadcrumb('Password Generator', 'password-generator')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>

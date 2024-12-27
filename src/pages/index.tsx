@@ -27,6 +27,7 @@ import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import useIsMobile from '@/hooks/useIsMobile';
 import Script from 'next/script';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -91,13 +92,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  const isMobile = useIsMobile();
-
   return (
     <>
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={locale} />
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
         <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />

@@ -12,6 +12,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import CtaSection from '@/components/shared/CtaSection';
 import InfoSection from '@/components/password-generator/InfoSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const PasswordChecker = ({
   metatagsDescriptions,
@@ -34,9 +35,7 @@ const PasswordChecker = ({
         {sm_breadcrumb('Password Checker', 'password-checker')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <div id="sidebar_right" className="left-0 z-10 mt-36 hidden w-80 justify-end 3xl:fixed 3xl:flex"></div>
       <div id="sidebar_left" className="right-0 z-10 mt-36 hidden w-80 3xl:fixed 3xl:flex"></div>

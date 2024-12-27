@@ -17,6 +17,7 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import FeatureSection from '@/components/cyber-awareness/FeatureSection';
 import QuizSection from '@/components/cyber-awareness/QuizSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarLang, lang, bannerText }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cyber-awareness');
@@ -31,9 +32,7 @@ const CyberAwareness = ({ metatagsDescriptions, textContent, footerLang, navbarL
         {sm_breadcrumb('Cyber Awareness', 'cyber-awareness')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout
         title={metatags[0].title}

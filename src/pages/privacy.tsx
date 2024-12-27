@@ -17,6 +17,7 @@ import FeatureSection from '@/components/privacy/FeatureSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PrivacyText } from '@/assets/types/privacy';
 import { GetServerSidePropsContext } from 'next';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
   textContent: PrivacyText;
@@ -40,9 +41,7 @@ const Privacy = ({ metatagsDescriptions, textContent, navbarLang, footerLang, la
         {sm_breadcrumb('Privacy', 'privacy')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Privacy" lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />

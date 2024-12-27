@@ -16,6 +16,7 @@ import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
@@ -55,9 +56,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
         {sm_breadcrumb('Cloud Storage Comparison', 'comparison')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout
         title={metatags[0].title}

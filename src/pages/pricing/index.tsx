@@ -30,6 +30,7 @@ import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -128,9 +129,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         {sm_breadcrumb('Pricing', 'pricing')}
       </Script>
 
-      {lang === 'en' && (
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-      )}
+      <AhrefsAnalytics lang={lang} />
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
