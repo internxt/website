@@ -3,18 +3,22 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import TermsAndConditionsOverview from '@/components/legal/TermsAndConditionsOverview';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'legal');
 
   return (
-    <Layout segmentName="Legal" title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <AhrefsAnalytics lang={lang} />
+      <Layout segmentName="Legal" title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <TermsAndConditionsOverview textContent={textContent} />
+        <TermsAndConditionsOverview textContent={textContent} />
 
-      <Footer lang={lang} textContent={footerLang} hideNewsletter={false} />
-    </Layout>
+        <Footer lang={lang} textContent={footerLang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 };
 

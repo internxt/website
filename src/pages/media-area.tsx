@@ -19,6 +19,7 @@ import { TextAndImageColumnSection } from '@/components/shared/components/TextAn
 import RenderDescription from '@/components/shared/RenderDescription';
 import { KitCard } from '@/components/media-area/components/KitCard';
 import downloadItem from '@/lib/downloadItem';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface MediaAreaProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -49,81 +50,84 @@ const MediaArea = ({
   }, []);
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Media Area" lang={lang}>
-      <Navbar textContent={navbarText} lang={locale} cta={['default']} fixed />
+    <>
+      <AhrefsAnalytics lang={locale} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Media Area" lang={lang}>
+        <Navbar textContent={navbarText} lang={locale} cta={['default']} fixed />
 
-      <TextAndImageColumnSection
-        TextComponent={
-          <div className="flex w-full flex-shrink-0 flex-col items-center justify-center pt-10 text-center">
-            <Header>{textContent.HeroSection.title}</Header>
-            <h3 className="mb-6 w-full max-w-3xl text-xl font-normal text-gray-80">
-              {textContent.HeroSection.description}
-            </h3>
-          </div>
-        }
-        imageProperties={{
-          src: getImage('/images/home/internxt_secure_cloud_storage.webp'),
-          alt: 'Internxt Secure Cloud Storage',
-          width: 1920,
-          height: 1080,
-        }}
-      />
+        <TextAndImageColumnSection
+          TextComponent={
+            <div className="flex w-full flex-shrink-0 flex-col items-center justify-center pt-10 text-center">
+              <Header>{textContent.HeroSection.title}</Header>
+              <h3 className="mb-6 w-full max-w-3xl text-xl font-normal text-gray-80">
+                {textContent.HeroSection.description}
+              </h3>
+            </div>
+          }
+          imageProperties={{
+            src: getImage('/images/home/internxt_secure_cloud_storage.webp'),
+            alt: 'Internxt Secure Cloud Storage',
+            width: 1920,
+            height: 1080,
+          }}
+        />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-screen bg-gray-1">
-            <div className="flex w-full flex-col items-center justify-center px-5 py-20">
-              <div className="flex max-w-[774px] flex-col items-center space-y-6 text-center">
-                <p className="max-w-[500px] text-5xl font-semibold leading-tight text-gray-100">
-                  {textContent.StandForPrivacySection.title}
-                </p>
-                <RenderDescription description={textContent.StandForPrivacySection.description} fontSize="text-xl" />
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex w-screen bg-gray-1">
+              <div className="flex w-full flex-col items-center justify-center px-5 py-20">
+                <div className="flex max-w-[774px] flex-col items-center space-y-6 text-center">
+                  <p className="max-w-[500px] text-5xl font-semibold leading-tight text-gray-100">
+                    {textContent.StandForPrivacySection.title}
+                  </p>
+                  <RenderDescription description={textContent.StandForPrivacySection.description} fontSize="text-xl" />
+                </div>
               </div>
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center justify-center gap-20 px-5">
-            <div className="flex max-w-[914px] flex-col items-center gap-6 text-center">
-              <p className="text-5xl font-semibold text-gray-100">{textContent.KitSection.title}</p>
-              <p className="text-xl text-gray-80">{textContent.KitSection.description}</p>
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center justify-center gap-20 px-5">
+              <div className="flex max-w-[914px] flex-col items-center gap-6 text-center">
+                <p className="text-5xl font-semibold text-gray-100">{textContent.KitSection.title}</p>
+                <p className="text-xl text-gray-80">{textContent.KitSection.description}</p>
+              </div>
+              <div className="flex flex-row flex-wrap items-stretch gap-10">
+                <KitCard
+                  downloadImagesLink={`https://internxt.com/media-area/internxt-logo-set.zip`}
+                  image={getImage('/images/media-area/inxt-logo-set.svg')}
+                  textContent={textContent.KitSection.firstSection}
+                />
+                <KitCard
+                  downloadImagesLink={`${inxtScreenshotMockups}`}
+                  image={getImage('/images/media-area/screenshots-mockup.webp')}
+                  textContent={textContent.KitSection.secondSection}
+                />
+              </div>
+              <p className="max-w-[976px] text-center text-xl text-gray-50">
+                <span className="font-semibold">{textContent.KitSection.footer.boldText}</span>{' '}
+                {textContent.KitSection.footer.normalText}
+              </p>
             </div>
-            <div className="flex flex-row flex-wrap items-stretch gap-10">
-              <KitCard
-                downloadImagesLink={`https://internxt.com/media-area/internxt-logo-set.zip`}
-                image={getImage('/images/media-area/inxt-logo-set.svg')}
-                textContent={textContent.KitSection.firstSection}
-              />
-              <KitCard
-                downloadImagesLink={`${inxtScreenshotMockups}`}
-                image={getImage('/images/media-area/screenshots-mockup.webp')}
-                textContent={textContent.KitSection.secondSection}
-              />
-            </div>
-            <p className="max-w-[976px] text-center text-xl text-gray-50">
-              <span className="font-semibold">{textContent.KitSection.footer.boldText}</span>{' '}
-              {textContent.KitSection.footer.normalText}
-            </p>
-          </div>
-        }
-      />
+          }
+        />
 
-      <CtaSection textContent={textContent.CtaSection} />
+        <CtaSection textContent={textContent.CtaSection} />
 
-      <ProductsSection textContent={textContent.ProductsSection} lang={lang} />
+        <ProductsSection textContent={textContent.ProductsSection} lang={lang} />
 
-      <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
+        <SocialProofSection textContent={textContent.InvestorsSection} lang={lang} />
 
-      <ThirdFeaturesSection textContent={textContent.FeatureSection} />
+        <ThirdFeaturesSection textContent={textContent.FeatureSection} />
 
-      <InternxtInTheNews textContent={textContent.InternxtInTheNewsSection} />
+        <InternxtInTheNews textContent={textContent.InternxtInTheNewsSection} />
 
-      <AnalysisSection textContent={textContent.AnalysisSection} />
+        <AnalysisSection textContent={textContent.AnalysisSection} />
 
-      <CtaSection textContent={textContent.CtaSection} />
+        <CtaSection textContent={textContent.CtaSection} />
 
-      <Footer textContent={footerText} lang={locale} />
-    </Layout>
+        <Footer textContent={footerText} lang={locale} />
+      </Layout>
+    </>
   );
 };
 

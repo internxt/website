@@ -12,6 +12,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 export default function Locker({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -48,37 +49,40 @@ export default function Locker({ metatagsDescriptions, navbarLang, footerLang, l
   };
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-      <HeroSection textContent={textContent.HeroSection} />
+    <>
+      <AhrefsAnalytics lang={lang} />
+      <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+        <HeroSection textContent={textContent.HeroSection} />
 
-      <PricingSectionWrapper
-        textContent={textContent.PriceTable}
-        decimalDiscount={{
-          individuals: offerDiscount,
-        }}
-        lang={lang}
-        products={products}
-        loadingCards={loadingCards}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        startIndividualPlansFromInterval={Interval.Year}
-        hideFreeCard
-        hidePlanSelectorAndSwitch
-      />
+        <PricingSectionWrapper
+          textContent={textContent.PriceTable}
+          decimalDiscount={{
+            individuals: offerDiscount,
+          }}
+          lang={lang}
+          products={products}
+          loadingCards={loadingCards}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          startIndividualPlansFromInterval={Interval.Year}
+          hideFreeCard
+          hidePlanSelectorAndSwitch
+        />
 
-      <FeatureSection textContent={textContent.FeatureSection} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-      <InfoSection
-        textContent={textContent.SecureCloudSection}
-        lang="en"
-        withoutCta
-        backgroundColor="bg-gray-1"
-        cards={cardsData}
-      />
+        <InfoSection
+          textContent={textContent.SecureCloudSection}
+          lang="en"
+          withoutCta
+          backgroundColor="bg-gray-1"
+          cards={cardsData}
+        />
 
-      <CtaSection textContent={textContent.CtaSection} url="#priceTable" />
-      <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-    </Layout>
+        <CtaSection textContent={textContent.CtaSection} url="#priceTable" />
+        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+      </Layout>
+    </>
   );
 }
 

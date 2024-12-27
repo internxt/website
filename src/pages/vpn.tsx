@@ -18,6 +18,7 @@ import Header from '@/components/shared/Header';
 import { RedirectButton } from '@/components/shared/RedirectButton';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface VPNProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -41,73 +42,76 @@ const VPN = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'vpn-extension');
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+    <>
+      <AhrefsAnalytics lang={lang} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection
-        TextComponent={
-          <div className="flex w-full flex-col items-center space-y-8 lg:max-w-[524px] lg:items-start">
-            <div className="flex flex-col items-center space-y-4 text-center lg:items-start lg:text-start">
-              <div className="flex w-max rounded-lg bg-gray-5 px-4 py-2">
-                <p className="text-xl font-medium text-gray-80">{textContent.HeroSection.label}</p>
+        <HeroSection
+          TextComponent={
+            <div className="flex w-full flex-col items-center space-y-8 lg:max-w-[524px] lg:items-start">
+              <div className="flex flex-col items-center space-y-4 text-center lg:items-start lg:text-start">
+                <div className="flex w-max rounded-lg bg-gray-5 px-4 py-2">
+                  <p className="text-xl font-medium text-gray-80">{textContent.HeroSection.label}</p>
+                </div>
+                <Header>
+                  {textContent.HeroSection.title.line1}
+                  <span> {textContent.HeroSection.title.line2}</span>
+                </Header>
               </div>
-              <Header>
-                {textContent.HeroSection.title.line1}
-                <span> {textContent.HeroSection.title.line2}</span>
-              </Header>
-            </div>
-            <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
+              <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
 
-            <RedirectButton
-              className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-              url={VPN_CHROME_WEB_STORE}
-            >
-              {textContent.HeroSection.cta}
-            </RedirectButton>
-          </div>
-        }
-        ImageComponent={
-          <div className="relative flex h-full flex-col items-center justify-center bg-transparent">
-            <Image
-              src={getImage('/images/vpn-extension/vpn-widget.svg')}
-              alt="VPN Widget"
-              className="rounded-lg shadow-subtle"
-              width={364}
-              draggable={false}
-              height={444}
-            />
-            <div className="hidden xl:flex">
+              <RedirectButton
+                className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+                url={VPN_CHROME_WEB_STORE}
+              >
+                {textContent.HeroSection.cta}
+              </RedirectButton>
+            </div>
+          }
+          ImageComponent={
+            <div className="relative flex h-full flex-col items-center justify-center bg-transparent">
               <Image
-                src={getImage('/images/vpn-extension/vpn-hero.svg')}
-                alt="VPN Hero"
-                className={`left-0 top-10 -translate-x-72 rounded-lg lg:absolute`}
-                width={328}
-                height={385}
+                src={getImage('/images/vpn-extension/vpn-widget.svg')}
+                alt="VPN Widget"
+                className="rounded-lg shadow-subtle"
+                width={364}
                 draggable={false}
+                height={444}
               />
+              <div className="hidden xl:flex">
+                <Image
+                  src={getImage('/images/vpn-extension/vpn-hero.svg')}
+                  alt="VPN Hero"
+                  className={`left-0 top-10 -translate-x-72 rounded-lg lg:absolute`}
+                  width={328}
+                  height={385}
+                  draggable={false}
+                />
+              </div>
             </div>
-          </div>
-        }
-      />
+          }
+        />
 
-      <EncryptedVPNSection textContent={textContent.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} />
+        <EncryptedVPNSection textContent={textContent.EncryptedVPNSection} bannerText={bannerJson.SignUpVPNBanner} />
 
-      <SecureVPNSection textContent={textContent.SecureVPNSection} />
+        <SecureVPNSection textContent={textContent.SecureVPNSection} />
 
-      <HowItWorksSection textContent={textContent.HowItWorksSection} />
+        <HowItWorksSection textContent={textContent.HowItWorksSection} />
 
-      <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
+        <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} />
+        <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} />
 
-      <ToolsSection textContent={toolsContent} lang="en" />
+        <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} />
+        <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

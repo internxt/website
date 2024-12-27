@@ -12,6 +12,7 @@ import CtaSection from '@/components/sustainability/CtaSection';
 import FeatureSection from '@/components/sustainability/FeatureSection';
 import HeroSection from '@/components/sustainability/HeroSection';
 import FeatureSectionV3 from '@/components/sustainability/FeatureSectionV3';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface SustainabilityProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -53,38 +54,42 @@ const Sustainability = ({
     },
   ];
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} />
+    <>
+      <AhrefsAnalytics lang={locale} />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
+        <Navbar textContent={navbarLang} lang={locale} cta={['default']} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+        <HeroSection textContent={langJson.HeroSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+        <FeatureSection textContent={langJson.FeatureSection} />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
-              <h2 className="text-3xl font-semibold text-gray-100 sm:text-5xl">{langJson.FeatureSection.title}</h2>
-              <p className="font-regular text-gray-80 sm:text-xl">{langJson.FeatureSection.description}</p>
+        <CtaSection textContent={langJson.CtaSection} url={'/pricing'} />
+
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex w-full flex-col items-center gap-9">
+              <div className="flex max-w-[850px] flex-col items-center gap-6 text-center">
+                <h2 className="text-3xl font-semibold text-gray-100 sm:text-5xl">{langJson.FeatureSection.title}</h2>
+                <p className="font-regular text-gray-80 sm:text-xl">{langJson.FeatureSection.description}</p>
+              </div>
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-gray-1" iconColor="text-green" />
-          </div>
-        }
-        backgroundColor="bg-white"
-      />
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center">
+              <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-gray-1" iconColor="text-green" />
+            </div>
+          }
+          backgroundColor="bg-white"
+        />
 
-      <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
+        <FeatureSectionV3 textContent={langJson.FeatureSectionV3} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
+        <CtaSection textContent={langJson.CtaSection2} url={'/pricing'} />
 
-      <Footer textContent={footerLang} lang={locale} />
-    </Layout>
+        <Footer textContent={footerLang} lang={locale} />
+      </Layout>
+    </>
   );
 };
 

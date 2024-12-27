@@ -16,6 +16,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PartnerDiscountText } from '@/assets/types/partner-discount';
 import Image from 'next/image';
 import { CardGroup } from '@/components/shared/CardGroup';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -75,99 +76,102 @@ const PartnerDiscount = ({
   };
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isLinksHidden />
+    <>
+      <AhrefsAnalytics lang={lang} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
+        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isLinksHidden />
 
-      <HeroSection
-        TextComponent={
-          <div className="flex flex-col gap-10">
-            <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
-              <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
-                <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
-              </div>
-              <div className="flex flex-col space-y-8">
-                <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-6xl font-semibold">
-                    {langJson.HeroSection.title.normalText}
-                    <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+        <HeroSection
+          TextComponent={
+            <div className="flex flex-col gap-10">
+              <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
+                <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
+                  <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
+                </div>
+                <div className="flex flex-col space-y-8">
+                  <div className="flex flex-col text-center lg:text-start">
+                    <p className="text-6xl font-semibold">
+                      {langJson.HeroSection.title.normalText}
+                      <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                    </p>
+                  </div>
+                  <p className="text-center text-xl text-gray-80 lg:text-left">
+                    {langJson.HeroSection.description.normal}{' '}
+                    <span className="text-primary">{langJson.HeroSection.description.blue}</span>
+                    {langJson.HeroSection.description.normal1}
                   </p>
                 </div>
-                <p className="text-center text-xl text-gray-80 lg:text-left">
-                  {langJson.HeroSection.description.normal}{' '}
-                  <span className="text-primary">{langJson.HeroSection.description.blue}</span>
-                  {langJson.HeroSection.description.normal1}
-                </p>
+              </div>
+              <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
+                <Button
+                  className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
+                  text={langJson.HeroSection.cta}
+                  onClick={() => (window.location.hash = '#priceTable')}
+                />
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
-              <Button
-                className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
-                text={langJson.HeroSection.cta}
-                onClick={() => (window.location.hash = '#priceTable')}
-              />
-            </div>
-          </div>
-        }
-        imageProperties={{
-          src: getImage('/images/partners-discount/internxt_cloud_storage.webp'),
-          alt: 'Internxt Partners Discount',
-          width: 671,
-          height: 563,
-        }}
-      />
-
-      <div className="-mt-20">
-        <PricingSectionWrapper
-          textContent={langJson.PaymentSection}
-          decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+          }
+          imageProperties={{
+            src: getImage('/images/partners-discount/internxt_cloud_storage.webp'),
+            alt: 'Internxt Partners Discount',
+            width: 671,
+            height: 563,
           }}
-          lang={lang}
-          products={products}
-          popularPlanBySize={'5TB'}
-          loadingCards={loadingCards}
-          startIndividualPlansFromInterval={Interval.Year}
-          hidePlanSelectorAndSwitch
-          hideFreeCard
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
         />
-      </div>
 
-      <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
+        <div className="-mt-20">
+          <PricingSectionWrapper
+            textContent={langJson.PaymentSection}
+            decimalDiscount={{
+              individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            }}
+            lang={lang}
+            products={products}
+            popularPlanBySize={'5TB'}
+            loadingCards={loadingCards}
+            startIndividualPlansFromInterval={Interval.Year}
+            hidePlanSelectorAndSwitch
+            hideFreeCard
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+          />
+        </div>
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex flex-col items-center gap-9">
-            <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
-              <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
+        <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
+
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex flex-col items-center gap-9">
+              <div className="flex flex-col items-center gap-4 text-center">
+                <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
+                <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
+              </div>
+              <div className="content flex h-full w-full flex-col px-5 pt-6">
+                <Image
+                  src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+                  alt="Internxt secure cloud storage"
+                  draggable={false}
+                  loading="lazy"
+                  width={1920}
+                  height={1080}
+                />
+              </div>
             </div>
-            <div className="content flex h-full w-full flex-col px-5 pt-6">
-              <Image
-                src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-                alt="Internxt secure cloud storage"
-                draggable={false}
-                loading="lazy"
-                width={1920}
-                height={1080}
-              />
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center">
+              <CardGroup cards={cardsData} backgroundColorCard="bg-white" />
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center">
-            <CardGroup cards={cardsData} backgroundColorCard="bg-white" />
-          </div>
-        }
-        backgroundColor="bg-gray-1"
-      />
+          }
+          backgroundColor="bg-gray-1"
+        />
 
-      <TestimonialsSection textContent={langJson.TestimonialsSection} />
+        <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
+        <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
 
-      <Footer textContent={footerLang} lang={lang} />
-    </Layout>
+        <Footer textContent={footerLang} lang={lang} />
+      </Layout>
+    </>
   );
 };
 

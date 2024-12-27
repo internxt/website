@@ -17,6 +17,7 @@ import HeroSection from '@/components/lifetime/HeroSection';
 import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { SwitchButtonOptions } from '@/components/elections/PlanSelector';
+import AhrefsAnalytics from '@/components/shared/components/AhrefAnalytics';
 
 interface ElectionsProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -83,56 +84,67 @@ const Elections = ({
   ];
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="Lifetime"
-      lang={lang}
-      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
-    >
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
+    <>
+      <AhrefsAnalytics lang={locale} />
+      <Layout
+        title={metatags[0].title}
+        description={metatags[0].description}
+        segmentName="Lifetime"
+        lang={lang}
+        specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+      >
+        <Navbar
+          textContent={navbarLang}
+          lang={locale}
+          cta={['default']}
+          fixed
+          mode="payment"
+          isLinksHidden
+          hideNavbar
+        />
 
-      <HeroSection
-        textContent={langJson.elections.HeroSection}
-        percent={percent}
-        bgImage={getImage('/images/lifetime/celebration/usa/usa-bg.webp')}
-        isCelebrationPage
-        onRedirectButtonClicked={() => router.push('#payment')}
-      />
+        <HeroSection
+          textContent={langJson.elections.HeroSection}
+          percent={percent}
+          bgImage={getImage('/images/lifetime/celebration/usa/usa-bg.webp')}
+          isCelebrationPage
+          onRedirectButtonClicked={() => router.push('#payment')}
+        />
 
-      <PaymentSection
-        textContent={langJson.elections.PaymentSection}
-        couponCode={couponToUse}
-        discount={discount}
-        lang={locale}
-        percent={percent}
-        showPriceBefore
-        lifetimeMode="celebration"
-        isElectionsPage
-        activeSwitchPlan={currentPlan}
-        onPlanTypeChange={handlePlanTypeChange}
-        currencySpecified={currencySpecified}
-      />
-      <GetLifetimeSection textContent={langJson.elections.GetLifetimeSection} isCelebrationPage />
+        <PaymentSection
+          textContent={langJson.elections.PaymentSection}
+          couponCode={couponToUse}
+          discount={discount}
+          lang={locale}
+          percent={percent}
+          showPriceBefore
+          lifetimeMode="celebration"
+          isElectionsPage
+          activeSwitchPlan={currentPlan}
+          onPlanTypeChange={handlePlanTypeChange}
+          currencySpecified={currencySpecified}
+        />
+        <GetLifetimeSection textContent={langJson.elections.GetLifetimeSection} isCelebrationPage />
 
-      <TextAndCardsGroupColumnSection
-        TextComponent={
-          <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{langJson.elections.FeatureSection.title}</p>
-            <p className="max-w-[796px] text-xl text-gray-80">{langJson.elections.FeatureSection.description}</p>
-          </div>
-        }
-        cards={groupCards}
-        background="bg-white"
-        backgroundColorForCard="bg-gray-1"
-      />
+        <TextAndCardsGroupColumnSection
+          TextComponent={
+            <div className="flex max-w-[930px] flex-col space-y-6 text-center">
+              <p className="text-5xl font-semibold text-gray-100">{langJson.elections.FeatureSection.title}</p>
+              <p className="max-w-[796px] text-xl text-gray-80">{langJson.elections.FeatureSection.description}</p>
+            </div>
+          }
+          cards={groupCards}
+          background="bg-white"
+          backgroundColorForCard="bg-gray-1"
+        />
 
-      <TestimonialsSection textContent={langJson.elections.TestimonialsSection} bgColor="bg-gray-1" />
+        <TestimonialsSection textContent={langJson.elections.TestimonialsSection} bgColor="bg-gray-1" />
 
-      <CtaSection textContent={langJson.elections.CtaSection} />
+        <CtaSection textContent={langJson.elections.CtaSection} />
 
-      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
-    </Layout>
+        <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
+      </Layout>
+    </>
   );
 };
 
