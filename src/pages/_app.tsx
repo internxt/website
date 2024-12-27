@@ -126,7 +126,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             </>
           )}
 
-          {lang !== 'en' && (
+          {lang === 'en' && (
             <>
               <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
             </>
