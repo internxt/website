@@ -26,6 +26,7 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import useIsMobile from '@/hooks/useIsMobile';
+import Script from 'next/script';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -93,84 +94,90 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   const isMobile = useIsMobile();
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
+    <>
+      {lang === 'en' && (
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+      )}
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+        <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
 
-      <ChooseStorageSizeSection
-        textContent={textContent.ChooseStorageSizeSection}
-        onButtonClicked={onChooseStorageButtonClicked}
-      />
+        <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-      <TestimonialsSection textContent={textContent.TestimonialsSection} />
+        <ChooseStorageSizeSection
+          textContent={textContent.ChooseStorageSizeSection}
+          onButtonClicked={onChooseStorageButtonClicked}
+        />
 
-      <PricingSectionWrapper
-        textContent={textContent.tableSection}
-        decimalDiscount={{
-          individuals: decimalDiscount,
-          business: decimalDiscount,
-          lifetime: decimalDiscount,
-        }}
-        lifetimeCoupons={lifetimeCoupons}
-        lang={locale}
-        products={products}
-        loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansSelected}
-        onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
-        hideSwitchSelector
-      />
+        <TestimonialsSection textContent={textContent.TestimonialsSection} />
 
-      <div className={`${marqueeBgColor} py-10`}>
-        <MarqueeComponent bgColor={marqueeBgColor} />
-      </div>
+        <PricingSectionWrapper
+          textContent={textContent.tableSection}
+          decimalDiscount={{
+            individuals: decimalDiscount,
+            business: decimalDiscount,
+            lifetime: decimalDiscount,
+          }}
+          lifetimeCoupons={lifetimeCoupons}
+          lang={locale}
+          products={products}
+          loadingCards={loadingCards}
+          onBusinessPlansSelected={onBusinessPlansSelected}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          CustomDescription={
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">
+              {textContent.tableSection.planDescription}
+            </span>
+          }
+          hideSwitchSelector
+        />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
-              <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
-            </div>
-            <div className="flex flex-col items-center gap-12">
-              <Button
-                text={textContent.FeatureSectionV2.cta}
-                onClick={() => {
-                  router.push('/pricing');
-                }}
-              />
-              <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
-                <Image
-                  src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-                  alt="Internxt secure cloud storage"
-                  draggable={false}
-                  loading="lazy"
-                  width={1920}
-                  height={1080}
+        <div className={`${marqueeBgColor} py-10`}>
+          <MarqueeComponent bgColor={marqueeBgColor} />
+        </div>
+
+        <ComponentsInColumnSection
+          FirstComponent={
+            <div className="flex w-full flex-col items-center gap-9">
+              <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+                <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
+                <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
+              </div>
+              <div className="flex flex-col items-center gap-12">
+                <Button
+                  text={textContent.FeatureSectionV2.cta}
+                  onClick={() => {
+                    router.push('/pricing');
+                  }}
                 />
-              </RevealY>
+                <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+                  <Image
+                    src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+                    alt="Internxt secure cloud storage"
+                    draggable={false}
+                    loading="lazy"
+                    width={1920}
+                    height={1080}
+                  />
+                </RevealY>
+              </div>
             </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
-          </div>
-        }
-        backgroundColor="bg-gray-1"
-      />
+          }
+          SecondComponent={
+            <div className="flex flex-col items-center">
+              <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
+            </div>
+          }
+          backgroundColor="bg-gray-1"
+        />
 
-      <FAQSection textContent={textContent.FaqSection} />
+        <FAQSection textContent={textContent.FaqSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
+        <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
-      <Footer textContent={footerLang} lang={locale} />
-    </Layout>
+        <Footer textContent={footerLang} lang={locale} />
+      </Layout>
+    </>
   );
 };
 
