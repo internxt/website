@@ -116,6 +116,7 @@ export const ItemsNavigation = ({
             { href: '/cloud-object-storage', text: textContent.products.s3 },
             { href: 'https://send.internxt.com', text: textContent.products.send },
             { href: '/vpn', text: textContent.products.vpn },
+            { href: '/antivirus', text: textContent.products.antivirus },
           ]}
           darkMode={darkMode}
           lang={lang}
