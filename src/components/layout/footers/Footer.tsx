@@ -197,6 +197,14 @@ export default function Footer({
                     <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
                     </Link>
+
+                    <Link href="/antivirus" locale={lang} passHref className="flex items-center hover:text-primary">
+                      {textContent.FooterSection.sections.products.antivirus}
+                       <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
+
                     <Link
                       href="/business"
                       locale={'en'}
