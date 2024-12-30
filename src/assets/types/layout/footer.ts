@@ -70,7 +70,6 @@ export interface Products {
   send: string;
   objStorage: string;
   vpn: string;
-  antivirus: string;
   token: string;
   business: string;
   pricing: string;
