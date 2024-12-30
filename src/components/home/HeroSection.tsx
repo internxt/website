@@ -4,10 +4,10 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
-import { Check } from '@phosphor-icons/react';
+import { Check, Star } from '@phosphor-icons/react';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -31,7 +31,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
         <div
-          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 ${styles.radialGradient} bg-cover bg-center bg-no-repeat md:flex`}
+          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex`}
         />
         {/* Mobile Version */}
         <div className="lg:hidden">
@@ -48,12 +48,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               header={
                 <div className="flex flex-col gap-9">
                   <div className="flex flex-col gap-4">
-                    <Header maxWidth="max-w-[500px]" className="text-white">
+                    <Header maxWidth="max-w-[500px]" className="text-gray-100">
                       {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
                       {textContent.title.line2}{' '}
                     </Header>
                   </div>
-                  <p className="text-xl font-bold text-white">
+                  <p className="text-xl font-bold text-gray-100">
                     {textContent.TitleAndOnePlan.description.normal1}
                     <span className="text-primary">{textContent.TitleAndOnePlan.description.blue}</span>
                     {textContent.TitleAndOnePlan.description.normal2}
@@ -61,75 +61,34 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   <div className="mx-auto flex flex-col gap-2 lg:mx-0">
                     {titleAndOnePlanText.features.map((feat) => (
                       <div className="flex flex-row gap-2" key={feat}>
-                        <Check className="text-green" weight="bold" size={24} />
-                        <p className="text-lg font-semibold text-white">{feat}</p>
+                        <Check className="text-green-1" weight="bold" size={24} />
+                        <p className="text-lg font-semibold text-gray-100">{feat}</p>
                       </div>
                     ))}
                   </div>
                 </div>
               }
+              footer={
+                isHomePageV2 ? (
+                  <div className="flex flex-row items-center justify-center gap-2 pt-2 text-gray-100 lg:justify-start">
+                    <Star size={24} weight="fill" className="text-[#E40784]" />
+                    <div className="flex flex-row items-center gap-1">
+                      <p className="whitespace-nowrap font-semibold text-gray-100">{titleAndOnePlanText.guarantee}</p>
+                      <Image
+                        src={getImage('/logos/featured/techradar-pink.svg')}
+                        width={98}
+                        height={16}
+                        alt="Techradar logo"
+                      />
+                    </div>
+                  </div>
+                ) : undefined
+              }
             />
           </div>
 
-          <div className="relative pt-20">
-            <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
-              {[...Array(150)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`absolute animate-fall rounded-full bg-white opacity-75`}
-                  style={{
-                    top: `${getSecureRandom(0, 100)}%`,
-                    left: `${getSecureRandom(0, 100)}%`,
-                    width: `${getSecureRandom(2, 10)}px`,
-                    height: `${getSecureRandom(2, 10)}px`,
-                    animationDelay: `${getSecureRandom(0, 5)}s`,
-                    animationDuration: `${getSecureRandom(10, 30)}s`,
-                  }}
-                ></div>
-              ))}
-            </div>
-            <div className="hidden h-max w-max py-20 lg:flex">
-              <Link href="/pricing">
-                <div className="relative h-[400px] w-[600px] animate-sleigh-vertical">
-                  <Image
-                    src={getImage('/images/christmas/internxt_christmas_discount.webp')}
-                    alt="Internxt Secure Cloud Storage"
-                    draggable={false}
-                    quality={100}
-                    width={562}
-                    height={540}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-sleigh transform object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/candy_stick.webp')}
-                    alt="Candy Stick"
-                    draggable={false}
-                    quality={100}
-                    width={100}
-                    height={119}
-                    className="absolute bottom-[0%] left-[50%] animate-[move-candy-stick_2s_ease-in-out_infinite] object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/christmas_tree.webp')}
-                    alt="Christmas Tree"
-                    draggable={false}
-                    quality={100}
-                    width={100}
-                    height={100}
-                    className="absolute left-[5%] top-[5%] animate-[rotate-tree_3s_linear_infinite] object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/sock.webp')}
-                    alt="Sock"
-                    draggable={false}
-                    quality={100}
-                    width={86}
-                    height={153}
-                    className="absolute right-[-10%] top-[25%] animate-[float-sock_1.5s_ease-in-out_infinite] object-cover"
-                  />
-                </div>
-              </Link>
-            </div>
+          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <Animation />
           </div>
         </div>
       </div>

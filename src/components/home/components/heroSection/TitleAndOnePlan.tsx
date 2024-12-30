@@ -51,9 +51,9 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       )}
 
       <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-white">
+        <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-white">
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
@@ -75,7 +75,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       {footer ?? (
         <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-primary" />
-          <p className="whitespace-nowrap text-white lg:text-lg ">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap text-gray-100 lg:text-lg ">{textContent.guarantee}</p>
         </div>
       )}
     </div>
