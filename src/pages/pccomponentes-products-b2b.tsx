@@ -1,16 +1,10 @@
-import { Transition } from '@headlessui/react';
-
 import Layout from '@/components/layout/Layout';
-import { Interval, stripeService } from '@/components/services/stripe.service';
-import CardSkeleton from '@/components/components/CardSkeleton';
+import { stripeService } from '@/components/services/stripe.service';
 
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { PriceCard } from '@/components/shared/pricing/PriceCard';
-import Button from '@/components/shared/Button';
 import router from 'next/router';
 import { getImage } from '@/lib/getImage';
-import { HowMuchYouNeedSection } from '@/components/cloud-object-storage/HowMuchYouNeedSection';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
 
 const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): JSX.Element => {
