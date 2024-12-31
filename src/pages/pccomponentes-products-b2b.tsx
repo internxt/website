@@ -1,37 +1,16 @@
 import Layout from '@/components/layout/Layout';
-import { stripeService } from '@/components/services/stripe.service';
-
-import usePricing from '@/hooks/usePricing';
-import { PromoCodeName } from '@/lib/types';
 import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
 
 const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const { products, currencyValue, loadingCards, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.PcComponentesCouponForB2B,
-  });
 
   const pageName = 'Pricing Business Annually';
-
-  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = businessCoupon?.name;
-    const planType = 'business';
-
-    stripeService.redirectToCheckoutForPcComponentes(
-      priceId,
-      currencyValue,
-      planType,
-      isCheckoutForLifetime,
-      couponCodeForCheckout,
-    );
-  };
 
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <div className="flex flex-row space-x-5 space-y-10">
-        {/* Subscriptions cards */}
         <div className="ml-5 mt-10 flex h-full w-full max-w-[400px] flex-col rounded-2xl border border-gray-10 md:w-screen md:max-w-[320px]">
           {/* First part */}
           <div className="flex h-full flex-col items-center justify-between gap-8 px-6 py-6 text-center">
@@ -53,7 +32,6 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
               {textContent.cardText.cta}
             </button>
           </div>
-          {/* What's included */}
           <div className="flex h-full flex-col gap-6 rounded-b-2xl bg-gray-1 px-6 py-6">
             <p className="text-lg font-medium text-gray-100">{textContent.cardText.whatsIncluded.title}</p>
             <div className="flex flex-col gap-4">
