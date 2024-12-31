@@ -111,15 +111,10 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
   }
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-10">
-      <div className="flex w-full flex-col items-center gap-16">
-        <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
-        </div>
-
+    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+      <div className="flex w-full flex-col items-center gap-20">
         {/* Cards */}
-        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 sm:min-w-[1115px] md:flex-row">
+        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-8 sm:min-w-[1115px] sm:px-1  sm:pb-10 md:flex-row">
           <div className="flex w-full flex-col gap-2">
             {/* Pricing */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
