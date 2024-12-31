@@ -51,11 +51,13 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
               </p>
               <p className="text-gray-50">{textContent.cardText.perTB}</p>
             </div>
+
             <button
               className="!w-full rounded-lg border-2 border-orange bg-white py-3 font-medium text-orange"
               onClick={() => router.push('/cloud-object-storage/checkout')}
-              children={textContent.cardText.cta}
-            />
+            >
+              {textContent.cardText.cta}
+            </button>
           </div>
           {/* What's included */}
           <div className="flex h-full flex-col gap-6 rounded-b-2xl bg-gray-1 px-6 py-6">
