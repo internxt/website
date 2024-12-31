@@ -173,8 +173,8 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                 <GraphComponent
                   priceLabel={costs?.internxt.cost}
                   price={costs?.internxt.cost}
-                  activeBackground="bg-primary"
-                  background="bg-primary/7"
+                  activeBackground="bg-orange"
+                  background="bg-orange/10"
                   isBlueLabel
                   maxPrice={maxPrice}
                 />
@@ -184,8 +184,8 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                 <GraphComponent
                   priceLabel={costs?.azure.cost}
                   price={(costs?.internxt.cost * costs?.azure.difference) / 100}
-                  activeBackground="bg-yellow"
-                  background="bg-yellow/6"
+                  activeBackground="bg-primary"
+                  background="bg-primary/7"
                   maxPrice={maxPrice}
                 />
                 <p className="text-lg font-medium">{textContent.companies[1]}</p>
@@ -194,8 +194,8 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                 <GraphComponent
                   priceLabel={costs?.aws.cost}
                   price={(costs?.internxt.cost * costs?.aws.difference) / 100}
-                  activeBackground="bg-orange"
-                  background="bg-orange/6"
+                  activeBackground="bg-yellow"
+                  background="bg-yellow/7"
                   maxPrice={maxPrice}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>
