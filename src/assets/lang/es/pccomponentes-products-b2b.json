@@ -5,10 +5,10 @@
     "perYear": "/por año",
     "storageAmount": "Cantidad de almacenamiento",
     "percentDownloadPerMonth": "Porcentaje de descarga mensual",
-    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+    "companies": ["PcCloud", "Microsoft", "Amazon", "Google"]
   },
   "cardText": {
-    "label": "Internxt S3",
+    "label": "PcCloud S3",
     "perTB": "Por TB/facturado mensualmente*",
     "price": "7",
     "cta": "Comprar plan ",
@@ -17,7 +17,7 @@
       "features": [
         "Facturado mensualmente",
         "Servidor cifrado",
-        "Compatible con AWS S3 y API IAM",
+        "Compatible con AWS S3",
         "Mayor velocidad",
         "Almacenamiento flexible",
         "Código abierto",
