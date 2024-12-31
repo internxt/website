@@ -23,22 +23,23 @@ const GraphComponent = ({
 }): JSX.Element => {
   return (
     <div
-      className={`relative flex h-64 w-20 flex-col items-center justify-end gap-5 rounded-lg lg:h-full ${background}`}
+      className={`relative flex h-48 w-20 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
     >
       <div
         className={`${
           isBlueLabel ? 'bg-orange text-white' : 'bg-gray-5 text-gray-100'
-        } z-40 flex w-screen max-w-[113px] items-center justify-center rounded-full px-3 py-1 text-sm font-semibold`}
+        } z-40 flex w-24 items-center justify-center rounded-full px-2 py-1 text-xs font-semibold sm:max-w-[113px] sm:text-sm`}
       >
         <p className="lg:whitespace-nowrap">€{Math.round(Number(priceLabel) * 12).toLocaleString('en')}/yr</p>
       </div>
+
       <div
-        className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-4`}
+        className={`flex w-full rounded-lg ${activeBackground} items-end justify-center pb-2 sm:pb-4`}
         style={{
           height: `${(price / maxPrice) * 100}%`,
         }}
       >
-        {srcImg && altImg ? <Image src={srcImg} alt={altImg} width={40} height={40} draggable={false} /> : undefined}
+        {srcImg && altImg ? <Image src={srcImg} alt={altImg} width={30} height={30} draggable={false} /> : undefined}
       </div>
     </div>
   );
@@ -110,10 +111,15 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
   }
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className="overflow-hidden bg-gray-1 px-5 py-10">
       <div className="flex w-full flex-col items-center gap-16">
+        <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
+          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
+        </div>
+
         {/* Cards */}
-        <div className="flex h-full w-full min-w-[1100px] flex-col items-stretch gap-16 md:flex-row">
+        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 sm:min-w-[1115px] md:flex-row">
           <div className="flex w-full flex-col gap-2">
             {/* Pricing */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
@@ -166,6 +172,7 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
               </div>
             </div>
           </div>
+
           {/* Graphs (Comparison) */}
           <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
             <div className="flex h-full flex-row flex-wrap justify-center gap-12">
@@ -174,7 +181,7 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                   priceLabel={costs?.internxt.cost}
                   price={costs?.internxt.cost}
                   activeBackground="bg-orange"
-                  background="bg-orange/10"
+                  background="bg-orange/6"
                   isBlueLabel
                   maxPrice={maxPrice}
                 />
@@ -195,7 +202,7 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
                   priceLabel={costs?.aws.cost}
                   price={(costs?.internxt.cost * costs?.aws.difference) / 100}
                   activeBackground="bg-yellow"
-                  background="bg-yellow/7"
+                  background="bg-yellow/6"
                   maxPrice={maxPrice}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>

@@ -10,15 +10,15 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
 
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <div className="flex flex-row space-x-5 space-y-10">
-        <div className="ml-5 mt-10 flex h-full w-full max-w-[400px] flex-col rounded-2xl border border-gray-10 md:w-screen md:max-w-[320px]">
+      <div className="flex flex-col space-x-0 space-y-10 md:flex-row md:space-x-5">
+        <div className="ml-5 mt-10 flex h-full w-full max-w-[350px] flex-col rounded-2xl border border-gray-10 sm:max-w-[320px] md:w-screen">
           {/* First part */}
           <div className="flex h-full flex-col items-center justify-between gap-8 px-6 py-6 text-center">
             <div className="flex flex-col items-center rounded-full bg-orange/10 px-3 py-0.5">
               <p className="text-2xl font-medium text-orange">{textContent.cardText.label}</p>
             </div>
             <div className="flex flex-col items-center gap-2 text-center">
-              <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
+              <p className={`flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
                 <span className={`currency`}>€</span>
                 <span className="price text-4xl font-bold">{textContent.cardText.price}</span>
               </p>
