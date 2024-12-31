@@ -23,7 +23,7 @@ const GraphComponent = ({
 }): JSX.Element => {
   return (
     <div
-      className={`relative flex h-48 w-20 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
+      className={`relative flex h-48 w-16 flex-col items-center justify-end gap-3 rounded-lg sm:h-64 lg:h-full ${background}`}
     >
       <div
         className={`${
@@ -111,7 +111,7 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
   }
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-10">
+    <section className="overflow-hidden bg-gray-1 px-10 py-10">
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
@@ -119,7 +119,7 @@ export const SlidersComparsion = ({ textContent }): JSX.Element => {
         </div>
 
         {/* Cards */}
-        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 sm:min-w-[1115px] md:flex-row">
+        <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-6 px-10 sm:min-w-[1115px] md:flex-row">
           <div className="flex w-full flex-col gap-2">
             {/* Pricing */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
