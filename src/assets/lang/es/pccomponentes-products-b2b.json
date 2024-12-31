@@ -1,0 +1,29 @@
+{
+  "HowMuchYouNeedSection": {
+    "pay-as-you-go": "Paga por lo que usas",
+    "perMonth": "/por mes",
+    "perYear": "/por año",
+    "storageAmount": "Cantidad de almacenamiento",
+    "percentDownloadPerMonth": "Porcentaje de descarga mensual",
+    "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
+  },
+  "cardText": {
+    "label": "Internxt S3",
+    "perTB": "Por TB/facturado mensualmente*",
+    "price": "7",
+    "cta": "Comprar plan ",
+    "whatsIncluded": {
+      "title": "Incluye:",
+      "features": [
+        "Facturado mensualmente",
+        "Servidor cifrado",
+        "Compatible con AWS S3 y API IAM",
+        "Mayor velocidad",
+        "Almacenamiento flexible",
+        "Código abierto",
+        "Cumplimiento con RGPD",
+        "Atención al cliente premium"
+      ]
+    }
+  }
+}
