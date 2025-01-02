@@ -2,6 +2,7 @@ import Layout from '@/components/layout/Layout';
 import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
+import { GetServerSidePropsContext } from 'next';
 
 const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -56,10 +57,11 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
   );
 };
 
-export async function getServerSideProps() {
-  const lang = 'es';
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/pccomponentes-products-b2b.json`);
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const lang = ctx.locale;
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/pccomponentes-products-b2b.json`);
   return {
     props: {
       metatagsDescriptions,
