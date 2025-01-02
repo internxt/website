@@ -1,0 +1,29 @@
+{
+  "HowMuchYouNeedSection": {
+    "pay-as-you-go": "Pague pelo que usar",
+    "perMonth": "/por mês",
+    "perYear": "/por ano",
+    "storageAmount": "Quantidade de armazenamento",
+    "percentDownloadPerMonth": "Percentual de download mensal",
+    "companies": ["PcCloud", "Microsoft", "Amazon", "Google"]
+  },
+  "cardText": {
+    "label": "PcCloud S3",
+    "perTB": "Por TB/faturado mensalmente*",
+    "price": "7",
+    "cta": "Comprar plano ",
+    "whatsIncluded": {
+      "title": "Inclui:",
+      "features": [
+        "Faturado mensalmente",
+        "Servidor criptografado",
+        "Compatível com AWS S3",
+        "Maior velocidade",
+        "Armazenamento flexível",
+        "Código aberto",
+        "Conformidade com RGPD",
+        "Atendimento ao cliente premium"
+      ]
+    }
+  }
+}
