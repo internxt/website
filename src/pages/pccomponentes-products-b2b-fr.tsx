@@ -58,11 +58,12 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
 };
 
 export async function getServerSideProps() {
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/pccomponentes-products-b2b.json`);
+  const metatagsDescriptions = require(`@/assets/lang/fr/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/fr/pccomponentes-products-b2b.json`);
   return {
     props: {
       metatagsDescriptions,
+
       textContent,
     },
   };
