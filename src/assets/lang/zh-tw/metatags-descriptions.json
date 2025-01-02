@@ -343,5 +343,10 @@
     "id": "green-cloud-computing",
     "title": "綠色與可持續的雲存儲",
     "description": "Internxt 的綠色數據中心推動我們對可持續性和綠色雲計算的承諾，支持一個更綠、更可持續的環境。"
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "使用 Internxt Antivirus 保護您的設備免受惡意軟體侵害",
+    "description": "Internxt Antivirus 掃描並移除檔案中的病毒。保護您的設備免受惡意軟體侵害，確保雲端的全面安全。"
   }
 ]

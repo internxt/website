@@ -1,0 +1,102 @@
+{
+  "HeroSection": {
+    "title": "Proteja seus arquivos com",
+    "blueText": "Internxt Antivirus",
+    "description": "Defenda-se contra malware, phishing e ransomware com proteção avançada que mantém seus arquivos seguros.",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Proteja seus arquivos contra malware para uma segurança online completa",
+    "cta": "Obtenha o Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Máxima proteção para seus arquivos",
+    "cta": "Obtenha o Internxt"
+  },
+  "FaqSection": {
+    "title": "Perguntas? Temos respostas",
+    "faq": [
+      {
+        "question": "O que o software antivírus faz?",
+        "answer": [
+          "O software antivírus protege seus arquivos e dispositivos contra corrupção monitorando e verificando arquivos em busca de assinaturas de malware conhecidas. Assim que o software nocivo é detectado, a ameaça é removida e seus arquivos permanecem seguros e protegidos."
+        ]
+      },
+      {
+        "question": "Preciso de um antivírus?",
+        "answer": [
+          "Sem proteção antivírus, seu dispositivo fica vulnerável a ataques de privacidade e segurança. Ele também corre um risco maior de infecção, perda de dados, violações de privacidade e danos ao sistema.",
+          "Com o Internxt Antivirus incluído na sua assinatura, você pode se beneficiar de armazenamento em nuvem privado e proteção completa para dispositivos e arquivos."
+        ]
+      },
+      {
+        "question": "Quais dispositivos são compatíveis com o Internxt Antivirus?",
+        "answer": [
+          "O Internxt Antivirus é compatível com Windows, Mac e Linux com uma assinatura premium através do aplicativo Internxt Drive para desktop."
+        ]
+      },
+      {
+        "question": "Posso adquirir o Internxt Antivirus separadamente?",
+        "answer": [
+          "Não, o Internxt Antivirus faz parte dos nossos planos de assinatura pagos e não pode ser adquirido separadamente. Com uma assinatura mensal de $10,99, você obtém armazenamento em nuvem privado, antivírus, VPN e muito mais."
+        ]
+      },
+      {
+        "question": "Qual é a diferença entre malware e vírus?",
+        "answer": [
+          "Malware é um termo geral para software projetado para danificar, explorar ou acessar uma rede ou dispositivo sem autorização. Inclui vírus, ransomware, spyware, worms e trojans.",
+          "Um vírus é um tipo específico de malware que se anexa aos seus arquivos e se espalha para outros sistemas quando aberto ou executado. Realizar verificações antivírus regulares com o Internxt identifica e elimina essas ameaças."
+        ]
+      },
+      {
+        "question": "Qual é o melhor software antivírus?",
+        "answer": [
+          "O melhor software antivírus depende de suas necessidades e preferências específicas. É recomendável pesquisar opções e escolher uma que atenda às suas necessidades, considerando orçamento, dispositivo e recursos adicionais.",
+          "Se você precisa de antivírus para Mac, Windows ou Linux integrado ao seu armazenamento em nuvem com um sistema rápido e fácil para verificar e excluir vírus, experimente um plano Internxt."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Sinais de que seu dispositivo pode estar infectado",
+    "description": "Está preocupado que seu dispositivo esteja infectado por malware? Obtenha o Internxt Antivirus com uma assinatura premium para armazenamento seguro e proteção de arquivos.",
+    "cards": {
+      "element1": {
+        "title": "Drenagem excessiva da bateria",
+        "description": "Se a bateria acabar mais rápido que o normal, isso pode ser um sinal de que malware está sendo executado em segundo plano, consumindo recursos do dispositivo sem o seu conhecimento."
+      },
+      "element2": {
+        "title": "Travamentos ou congelamentos frequentes",
+        "description": "Vírus podem causar travamentos devido à corrupção de arquivos ou programas essenciais, levando a instabilidade e bloqueios inesperados."
+      },
+      "element3": {
+        "title": "Pop-ups ou janelas inexplicáveis",
+        "description": "Pop-ups que aparecem sem motivo podem indicar a presença de malware. Execute uma verificação antivírus para evitar mais danos aos seus arquivos."
+      },
+      "element4": {
+        "title": "Superaquecimento do dispositivo",
+        "description": "Assim como o esgotamento da bateria, malware pode forçar dispositivos a executar tarefas de alta intensidade em segundo plano, causando superaquecimento."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Segurança tudo-em-um para proteger seus dispositivos contra ameaças de dados",
+    "description": "Mantenha sua nuvem protegida e seus arquivos seguros contra malware com proteção antivírus avançada. Disponível para Windows, Linux e macOS.",
+    "cards": {
+      "element1": {
+        "title": "Soluções de segurança personalizadas",
+        "description": "Elimine ameaças instantaneamente e personalize suas necessidades de segurança. Escolha os arquivos para verificar ou arraste vários arquivos ao mesmo tempo."
+      },
+      "element2": {
+        "title": "Proteção avançada",
+        "description": "Tornamos a defesa contra vírus rápida e fácil com um software antivírus avançado que verifica e remove malware. Melhore o desempenho do dispositivo e proteja-se online."
+      },
+      "element3": {
+        "title": "Segurança em todas as plataformas",
+        "description": "Proteção antivírus para Windows, Mac e Linux integrada à sua assinatura premium do Drive. Garantimos que seus arquivos permaneçam limpos para um desempenho máximo."
+      }
+    }
+  }
+}

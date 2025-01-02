@@ -87,11 +87,11 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
 
       <InfoSection
         FirstComponent={
-          <div className="flex flex-col items-center justify-center space-y-10 md:flex-row md:space-x-20 md:space-y-0">
+          <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20 md:space-y-0">
             {infoSectionData.map((item, index) => (
-              <div key={index} className="flex flex-col items-center justify-center px-5 py-2 text-center">
-                <p className="text-5xl font-semibold text-primary">{item.title}</p>
-                <p className="max-w-[250px] pt-5 text-xl font-medium text-gray-80">{item.description}</p>
+              <div key={index} className="flex flex-col items-center justify-center px-5 text-center">
+                <p className="pb-5 text-4xl font-semibold text-primary">{item.title}</p>
+                <p className="min-h-[80px] max-w-[300px] text-lg font-medium text-gray-80">{item.description}</p>
               </div>
             ))}
           </div>
@@ -102,9 +102,9 @@ const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang
 
       <InfoSection
         FirstComponent={
-          <div className="flex flex-col items-center justify-center space-y-10 md:flex-row md:space-x-20 md:space-y-0">
+          <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20 md:space-y-0">
             {InfoSectionV2.map((item, index) => (
-              <div key={index} className="flex flex-col items-center justify-center px-5 py-2 text-center">
+              <div key={index} className="flex flex-col items-center justify-center px-5 text-center">
                 <item.icon className="text-primary" size={64} />
                 <p className="pt-5 text-xl font-medium text-gray-80">{item.title}</p>
               </div>

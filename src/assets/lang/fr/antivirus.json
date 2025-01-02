@@ -1,0 +1,102 @@
+{
+  "HeroSection": {
+    "title": "Protégez vos fichiers avec",
+    "blueText": "Internxt Antivirus",
+    "description": "Défendez-vous contre les logiciels malveillants, le phishing et les ransomwares grâce à une protection avancée qui garde vos fichiers en sécurité.",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Sécurisez vos fichiers contre les logiciels malveillants pour une protection ultime en ligne",
+    "cta": "Obtenez Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Protection maximale pour vos fichiers",
+    "cta": "Obtenez Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Que fait un logiciel antivirus ?",
+        "answer": [
+          "Un logiciel antivirus protège vos fichiers et votre appareil contre les corruptions en surveillant et en analysant les fichiers pour détecter les signatures de logiciels malveillants connus. Une fois un logiciel nuisible détecté, la menace est supprimée et vos fichiers restent sécurisés."
+        ]
+      },
+      {
+        "question": "Ai-je besoin d’un antivirus ?",
+        "answer": [
+          "Sans protection antivirus, votre appareil est vulnérable aux attaques de sécurité et de confidentialité. Il est également plus exposé aux infections, à la perte de données, aux violations de la vie privée et aux dommages système.",
+          "Internxt Antivirus étant inclus dans votre abonnement, vous bénéficiez d’un stockage cloud privé et d’une protection complète pour vos appareils et vos fichiers."
+        ]
+      },
+      {
+        "question": "Quels appareils prennent en charge Internxt Antivirus ?",
+        "answer": [
+          "Internxt Antivirus est disponible pour Microsoft, Mac et Linux avec un abonnement premium via l’application de bureau Internxt Drive."
+        ]
+      },
+      {
+        "question": "Puis-je obtenir Internxt Antivirus seul ?",
+        "answer": [
+          "Non, Internxt Antivirus fait partie de nos abonnements payants et ne peut pas être acheté séparément. Avec un abonnement mensuel de 10,99 $, vous bénéficiez d’un stockage cloud privé, d’un antivirus, d’un VPN et bien plus encore."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre un logiciel malveillant et un virus ?",
+        "answer": [
+          "Un logiciel malveillant (malware) est un terme générique désignant des logiciels conçus pour nuire, exploiter ou accéder à un réseau ou un appareil sans autorisation. Il inclut les virus ainsi que d’autres programmes nuisibles comme les ransomwares, les spywares, les vers et les chevaux de Troie.",
+          "Un virus est un type spécifique de logiciel malveillant qui s’attache à vos fichiers et se propage à d’autres systèmes lorsqu’il est ouvert ou exécuté. Effectuer un scan antivirus régulier avec Internxt permet d’identifier et d’éliminer ces menaces."
+        ]
+      },
+      {
+        "question": "Quel est le meilleur logiciel antivirus ?",
+        "answer": [
+          "Le meilleur logiciel antivirus dépend de vos besoins et préférences spécifiques. Il est recommandé de faire des recherches et de choisir celui qui répond le mieux à vos besoins en fonction de votre budget, de vos appareils et des fonctionnalités supplémentaires.",
+          "Si vous avez besoin d’un antivirus pour Mac, Windows ou Linux intégré à votre stockage cloud, avec un système rapide et facile pour scanner et supprimer les virus, essayez un plan Internxt."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Signes que votre appareil peut être infecté",
+    "description": "Vous craignez que votre appareil soit infecté par un logiciel malveillant ? Obtenez Internxt Antivirus avec un abonnement premium pour un stockage sécurisé et une protection des fichiers.",
+    "cards": {
+      "element1": {
+        "title": "Batterie qui se décharge rapidement",
+        "description": "Si votre batterie se vide plus rapidement que d’habitude, cela peut indiquer qu’un logiciel malveillant fonctionne en arrière-plan et utilise vos ressources sans votre consentement."
+      },
+      "element2": {
+        "title": "Pannes ou blocages fréquents",
+        "description": "Les virus peuvent provoquer des pannes système en corrompant des fichiers ou des programmes essentiels, entraînant une instabilité ou des blocages inattendus."
+      },
+      "element3": {
+        "title": "Fenêtres pop-up inexpliquées",
+        "description": "Des fenêtres pop-up apparaissant alors que vous ne naviguez pas peuvent indiquer la présence de logiciels malveillants sur votre appareil. Lancez un scan antivirus pour éviter d’endommager vos fichiers."
+      },
+      "element4": {
+        "title": "Appareils en surchauffe",
+        "description": "Comme pour la batterie, les logiciels malveillants peuvent forcer les appareils à exécuter des tâches intensives en arrière-plan, provoquant une surchauffe."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Sécurité tout-en-un pour protéger vos appareils contre les menaces",
+    "description": "Protégez votre cloud et vos fichiers contre les logiciels malveillants grâce à une protection antivirus avancée. Disponible sur Windows, Linux et macOS.",
+    "cards": {
+      "element1": {
+        "title": "Solutions de sécurité sur mesure",
+        "description": "Éliminez instantanément les menaces et personnalisez vos besoins en matière de sécurité des fichiers. Sélectionnez les fichiers à scanner ou déposez-en plusieurs simultanément."
+      },
+      "element2": {
+        "title": "Protection ultime",
+        "description": "Nous rendons la défense contre les virus rapide et facile grâce à un logiciel avancé qui scanne et élimine les logiciels malveillants. Optimisez les performances de votre appareil et protégez-vous en ligne."
+      },
+      "element3": {
+        "title": "Sécurité sur toutes les plateformes",
+        "description": "Protection antivirus pour Windows, Mac et Linux, intégrée à votre abonnement premium Drive. Vos fichiers restent propres pour des performances optimales."
+      }
+    }
+  }
+}
