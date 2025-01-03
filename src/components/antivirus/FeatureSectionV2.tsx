@@ -32,7 +32,7 @@ const FeatureSectionV2 = ({ textContent }: FeatureSectionV2Props) => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex min-h-[300px] w-full flex-col space-y-4 bg-gray-1 p-4  sm:max-w-[350px] sm:space-y-5 sm:p-6"
+              className="flex min-h-[300px] w-full flex-col rounded-lg space-y-4 bg-gray-1 p-4  sm:max-w-[350px] sm:space-y-5 sm:p-6"
             >
               <Image
                 src={getImage(cards[index].image)}
