@@ -312,6 +312,13 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                     <p>{props.textContent.products.vpn}</p>
                                   </div>
                                 </Link>
+
+                                <Link href="/antivirus" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <HardDrives className="h-6 w-6 text-gray-80" />
+                                    <p>{props.textContent.products.antivirus}</p>
+                                  </div>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>

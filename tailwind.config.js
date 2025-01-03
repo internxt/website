@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-keys */
+const { default: zIndex } = require('@mui/material/styles/zIndex');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
@@ -223,6 +224,10 @@ module.exports = {
         'float-sock': 'float-sock 1.5s ease-in-out infinite',
         'move-vertical': 'move-vertical 5s linear infinite',
         fall: 'fall 5s linear infinite',
+        orbit: 'orbit 10s linear infinite',
+        'orbit-vertical': 'vertical-orbit 9s linear infinite',
+        'orbit-angular': 'angular-orbit 15s linear infinite',
+        'orbit-diagonal': 'diagonal-orbit 12s linear infinite',
       },
 
       keyframes: {
@@ -262,6 +267,45 @@ module.exports = {
           '0%': { transform: 'translateY(-100vh)', opacity: '1' },
           '100%': { transform: 'translateY(100vh)', opacity: '0' },
         },
+       orbit: {
+        '0%': {
+          transform: 'translateX(-370px) rotateY(0deg)', // Empieza en la izquierda sin rotación
+        },
+        '50%': {
+          transform: 'translateX(270px) rotateY(180deg)', // Mitad del movimiento con media rotación
+        },
+        '100%': {
+          transform: 'translateX(-370px) rotateY(360deg)', // Regresa a la izquierda con rotación completa
+          zIndex: '-1',
+        },
+      },
+        'vertical-orbit': {
+          '0%': {
+            transform: 'translateX(300px)',
+            
+          },
+          '50%': {
+            transform: 'translateX(-420px)',
+           
+          },
+          '100%': {
+            transform: 'translateX(300px)',
+            zIndex: '-1',
+          },
+        },
+        'diagonal-orbit': {
+          '0%': {
+            transform: 'translateY(-370px)',
+            zIndex: '-1',
+          },
+          '50%': {
+            transform: 'translateY(120px)',
+          },
+          '100%': {
+            transform: 'translateY(-370px)', 
+            
+          },
+        }
       },
 
       aspectRatio: {
