@@ -17,15 +17,15 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
               loading="lazy"
               src={getImage('/logos/featured/ESET_logo.svg')}
               draggable={false}
-              width="171"
+              width="120"
               height="40"
               alt="eset logo"
             />
 
             <Image
               src={getImage('/logos/featured/telefonica.svg')}
-              width={113}
-              height={60}
+              width={120}
+              height={40}
               alt="Telefonica logo"
               loading="lazy"
               draggable={false}
@@ -33,8 +33,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/startpage.svg')}
-              width={110}
-              height={27}
+              width={120}
+              height={40}
               alt="Start Page logo"
               loading="lazy"
               draggable={false}
@@ -42,8 +42,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/Revolut.svg')}
-              width={118}
-              height={18}
+              width={120}
+              height={40}
               alt="Telefonica logo"
               loading="lazy"
               draggable={false}
@@ -51,8 +51,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/gobierno_de_espana.png')}
-              width={181}
-              height={28}
+              width={120}
+              height={40}
               alt="Gobierno de Espana logo"
               loading="lazy"
               draggable={false}
@@ -60,8 +60,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/aepd.svg')}
-              width={181}
-              height={34}
+              width={120}
+              height={40}
               alt="AEPD logo"
               loading="lazy"
               draggable={false}
@@ -69,8 +69,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/pc_componentes.svg')}
-              width={181}
-              height={34}
+              width={120}
+              height={40}
               alt="Heise logo"
               loading="lazy"
               draggable={false}
@@ -80,22 +80,22 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
       </div>
 
       <div className={'mx-auto hidden w-full overflow-hidden xl:flex'}>
-        <div className={`featured flex w-full flex-row justify-center overflow-x-auto ${bgColor} px-4 py-5`}>
+        <div className={`featured flex w-full flex-row justify-center overflow-x-auto ${bgColor}  px-4 pb-10`}>
           <div className="flex flex-row items-center space-x-12">
             {label ? <p className="text-xl font-medium text-gray-60">{label}</p> : undefined}
             <Image
               loading="lazy"
               src={getImage('/logos/featured/ESET_logo.svg')}
               draggable={false}
-              width="94"
-              height="16"
+              width="100"
+              height="20"
               alt="eset logo"
             />
 
             <Image
               src={getImage('/logos/featured/telefonica.svg')}
-              width={82}
-              height={16}
+              width="140"
+              height="30"
               alt="Telefonica logo"
               loading="lazy"
               draggable={false}
@@ -103,8 +103,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/startpage.svg')}
-              width={78}
-              height={19}
+              width="100"
+              height="20"
               alt="StartPage logo"
               loading="lazy"
               draggable={false}
@@ -112,8 +112,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/Revolut.svg')}
-              width={83}
-              height={16}
+              width="100"
+              height="20"
               alt="Revolut logo"
               loading="lazy"
               draggable={false}
@@ -121,8 +121,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/gobierno_de_espana.png')}
-              width={113}
-              height={20}
+              width="150"
+              height="40"
               alt="Gobierno de España logo"
               loading="lazy"
               draggable={false}
@@ -130,8 +130,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/aepd.svg')}
-              width={128}
-              height={24}
+              width="110"
+              height="30"
               alt="AEPD logo"
               loading="lazy"
               draggable={false}
@@ -139,8 +139,8 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/pc_componentes.svg')}
-              width={128}
-              height={24}
+              width="100"
+              height="20"
               alt="PCComponentes logo"
               loading="lazy"
               draggable={false}
