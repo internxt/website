@@ -19,6 +19,7 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -96,6 +97,10 @@ export const BusinessPage = ({
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+
+      <div className={`bg-gray-1 py-10`}>
+        <MarqueeComponentV2 bgColor="bg-gray-1" />
+      </div>
 
       <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 
