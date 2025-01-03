@@ -4,18 +4,16 @@
   "paying": "正在支付...",
   "checkout": "結帳",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "您的電子郵件地址",
       "password": "創建密碼"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "您的電子郵件地址",
       "password": "您的密碼"
     },
     "title": {
-      "signUp": "創建帳戶",
-      "signIn": "登錄",
-      "userIsSignedIn": "用戶已登錄為"
+      "signUp": "創建帳戶"
     },
     "emailMustNotBeEmpty": "電子郵件不能為空",
     "privacyGuarantee": "隱私保證：我們不會分享您的信息，並且只會在提供服務時與您聯繫。"
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "訂單摘要",
     "selectedPlan": "選擇的計劃",
-    "renewalPeriod": {
-      "month": "每月",
-      "year": "每年",
-      "lifetime": "終身"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 {{interval}} 計劃",
       "year": "{{spaceToUpgrade}} - 1 {{interval}} 計劃",

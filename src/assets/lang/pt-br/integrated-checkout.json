@@ -1,0 +1,65 @@
+{
+  "title": "Você está quase lá! Finalize sua compra com segurança:",
+  "pay": "Pagar",
+  "paying": "Pagando...",
+  "checkout": "Finalizar compra",
+  "authComponent": {
+    "signup": {
+      "emailAddress": "Seu endereço de e-mail",
+      "password": "Crie uma senha"
+    },
+    "login": {
+      "emailAddress": "Seu endereço de e-mail",
+      "password": "Sua senha"
+    },
+    "title": {
+      "signUp": "Criar uma conta"
+    },
+    "emailMustNotBeEmpty": "O e-mail não pode estar vazio",
+    "privacyGuarantee": "Garantia de privacidade: Não compartilhamos suas informações e entraremos em contato apenas quando for necessário para fornecer nosso serviço."
+  },
+  "addressBillingTitle": "Endereço de Cobrança",
+  "addressBilling": {
+    "optionalData": "Opcional",
+    "companyName": "Nome da Empresa",
+    "companyVatId": "ID de IVA"
+  },
+  "paymentTitle": "Selecione um método de pagamento",
+  "productCard": {
+    "title": "Resumo do pedido",
+    "selectedPlan": "Plano selecionado",
+    "plan": {
+      "month": "{{spaceToUpgrade}} - 1 plano {{interval}}",
+      "year": "{{spaceToUpgrade}} - 1 plano {{interval}}",
+      "lifetime": "{{spaceToUpgrade}} - plano {{interval}}"
+    },
+    "billed": {
+      "month": "Cobrança mensal",
+      "year": "Cobrança anual",
+      "lifetime": "Pagamento único"
+    },
+    "saving": "Você está economizando {{percent}}%",
+    "planDetails": {
+      "title": "Detalhes do plano:",
+      "features": [
+        "Taxa mensal mínima de 7€",
+        "Armazenamento mínimo de 1TB",
+        "Compatível com AWS S3 e API IAM",
+        "Velocidade aumentada",
+        "Armazenamento flexível",
+        "Código aberto",
+        "Conformidade com GDPR",
+        "Suporte premium ao cliente"
+      ]
+    },
+    "total": "Total: ",
+    "addCoupon": {
+      "buttonTitle": "Adicionar cupom",
+      "inputText": "Código do cupom",
+      "applyCodeButtonTitle": "Aplicar"
+    },
+    "amountSaved": "Economize ",
+    "withAnnualBilling": "com cobrança anual"
+  },
+  "oneTimePayment": "*Uma taxa única de 1€ é necessária para verificação da conta"
+}

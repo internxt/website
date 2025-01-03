@@ -4,18 +4,16 @@
   "paying": "Оплата...",
   "checkout": "Оформить заказ",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "Ваш адрес электронной почты",
       "password": "Создайте пароль"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "Ваш адрес электронной почты",
       "password": "Ваш пароль"
     },
     "title": {
-      "signUp": "Создать аккаунт",
-      "signIn": "Войти",
-      "userIsSignedIn": "Пользователь вошел как"
+      "signUp": "Создать аккаунт"
     },
     "emailMustNotBeEmpty": "Электронная почта не должна быть пустой",
     "privacyGuarantee": "Гарантия конфиденциальности: Мы не передаем вашу информацию и будем связываться с вами только при необходимости для предоставления наших услуг."
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "Сводка заказа",
     "selectedPlan": "Выбранный план",
-    "renewalPeriod": {
-      "month": "ежемесячный",
-      "year": "ежегодный",
-      "lifetime": "пожизненный"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 {{interval}} план",
       "year": "{{spaceToUpgrade}} - 1 {{interval}} план",

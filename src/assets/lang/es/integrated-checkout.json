@@ -4,23 +4,21 @@
   "paying": "Pagando...",
   "checkout": "Finalizar compra",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "Tu dirección de correo electrónico",
       "password": "Crea una contraseña"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "Tu dirección de correo electrónico",
       "password": "Tu contraseña"
     },
     "title": {
-      "signUp": "Crea una cuenta",
-      "signIn": "Inicia sesión",
-      "userIsSignedIn": "Has iniciado sesión como"
+      "signUp": "Crea una cuenta"
     },
     "emailMustNotBeEmpty": "El correo electrónico no debe estar vacío",
-    "privacyGuarantee": "Garantía de privacidad: No compartimos su información y solo contactaremos contigo cuando sea necesario para brindar nuestro servicio."
+    "privacyGuarantee": "Garantía de privacidad: No compartimos tu información y solo te contactaremos cuando sea necesario para brindar nuestro servicio."
   },
-  "addressBillingTitle": "Facturación de Dirección",
+  "addressBillingTitle": "Dirección de Facturación",
   "addressBilling": {
     "optionalData": "Opcional",
     "companyName": "Nombre de la Empresa",
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "Resumen del pedido",
     "selectedPlan": "Plan seleccionado",
-    "renewalPeriod": {
-      "month": "mensual",
-      "year": "anual",
-      "lifetime": "lifetime"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 plan {{interval}}",
       "year": "{{spaceToUpgrade}} - 1 plan {{interval}}",
@@ -65,7 +58,7 @@
       "inputText": "Código de cupón",
       "applyCodeButtonTitle": "Aplicar"
     },
-    "amountSaved": "Ahorre ",
+    "amountSaved": "Ahorra ",
     "withAnnualBilling": "con facturación anual"
   },
   "oneTimePayment": "*Se requiere una tarifa única de 1€ para la verificación de la cuenta"
