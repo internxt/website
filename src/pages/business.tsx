@@ -98,9 +98,7 @@ export const BusinessPage = ({
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
 
-      <div className={`bg-gray-1 py-10`}>
-        <MarqueeComponentV2 bgColor="bg-gray-1" />
-      </div>
+      <MarqueeComponentV2 bgColor="bg-gray-1" />
 
       <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 
