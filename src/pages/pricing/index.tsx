@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SoftSales,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -154,7 +154,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
               {textContent.tableSection.planDescription}
             </span>
           }
-          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
