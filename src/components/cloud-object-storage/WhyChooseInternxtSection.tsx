@@ -4,6 +4,7 @@ import { HandCoins, HardDrives, NumberCircleZero, ShieldPlus, SketchLogo, Speedo
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Button from '../shared/Button';
+import { MarqueeComponentV2 } from '../specialoffer/MarqueeComponentV2';
 
 interface CloudObjectStorageWhyChooseInternxtSectionProps {
   textContent: CloudObjectStorageText['WhyChooseInternxtSection'];
@@ -53,6 +54,10 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
           <p className="max-w-[774px] text-xl text-gray-80">{textContent.description}</p>
         </div>
         <CardGroup cards={cards} backgroundColorCard="bg-white" />
+
+        <div className={`bg-gray-1 py-10`}>
+          <MarqueeComponentV2 bgColor="bg-gray-1" />
+        </div>
 
         {/* Banner */}
         <div
