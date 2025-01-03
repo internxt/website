@@ -103,7 +103,7 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/startpage.svg')}
-              width="100"
+              width="120"
               height="20"
               alt="StartPage logo"
               loading="lazy"
