@@ -56,7 +56,6 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
           <div className="border border-gray-10" />
           <div className="flex flex-col">
             <MainSection textContent={textContent} />
-            <CookiesSection textContent={textContent} />
             <CookiesSection textContent={textContent} lang={lang} />
             <WhenWhyHowSection textContent={textContent} />
           </div>
