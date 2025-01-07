@@ -34,7 +34,6 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
             <div className="flex scroll-smooth">
               <div className="flex flex-col">
                 <MainSection textContent={textContent} />
-                <CookiesSection textContent={textContent} />
                 <CookiesSection textContent={textContent} lang={lang} />
                 <WhenWhyHowSection textContent={textContent} />
               </div>
