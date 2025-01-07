@@ -67,7 +67,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         >
           {textContent.claimDeal}
         </Link>
-        <div className="flex w-full max-w-[177px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-primary shadow-sm">
+        <div className="flex w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-primary shadow-sm">
           <Countdown textFont="font-medium" textHeight="text-xl" />
         </div>
       </div>
