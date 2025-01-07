@@ -67,7 +67,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   <div className="mx-auto flex flex-col gap-2 lg:mx-0">
                     {titleAndOnePlanText.features.map((feat) => (
                       <div className="flex flex-row gap-2" key={feat}>
-                        <Check className="text-green" weight="bold" size={24} />
+                        <Check className="text-primary" weight="bold" size={24} />
                         <p className="text-lg font-semibold text-gray-100">{feat}</p>
                       </div>
                     ))}
