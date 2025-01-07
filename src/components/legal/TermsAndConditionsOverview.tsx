@@ -6,7 +6,6 @@ import MainSection from './MainSection';
 import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
 
-const TermsAndConditionsOverview = ({ textContent }) => {
 const TermsAndConditionsOverview = ({ textContent, lang }) => {
   const [itemSelected, setItemSelected] = useState();
 
