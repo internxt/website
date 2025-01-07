@@ -19,6 +19,7 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -46,7 +47,7 @@ export const BusinessPage = ({
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
-  const imagePath = lang === 'es' ? 'almacenamiento_en_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
+  const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -96,6 +97,8 @@ export const BusinessPage = ({
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+
+      <MarqueeComponentV2 bgColor="bg-gray-1" />
 
       <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 
