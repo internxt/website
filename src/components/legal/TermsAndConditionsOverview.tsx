@@ -7,6 +7,7 @@ import { CalendarBlank } from '@phosphor-icons/react';
 import { isMobile } from 'react-device-detect';
 
 const TermsAndConditionsOverview = ({ textContent }) => {
+const TermsAndConditionsOverview = ({ textContent, lang }) => {
   const [itemSelected, setItemSelected] = useState();
 
   // Set the scroll at center of the screen with anchor tag
@@ -35,6 +36,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
               <div className="flex flex-col">
                 <MainSection textContent={textContent} />
                 <CookiesSection textContent={textContent} />
+                <CookiesSection textContent={textContent} lang={lang} />
                 <WhenWhyHowSection textContent={textContent} />
               </div>
             </div>
@@ -56,6 +58,7 @@ const TermsAndConditionsOverview = ({ textContent }) => {
           <div className="flex flex-col">
             <MainSection textContent={textContent} />
             <CookiesSection textContent={textContent} />
+            <CookiesSection textContent={textContent} lang={lang} />
             <WhenWhyHowSection textContent={textContent} />
           </div>
         </div>
