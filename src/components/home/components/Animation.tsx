@@ -68,7 +68,7 @@ const Animation = ({
           }}
         >
           <Image
-            loading="eager"
+            loading="lazy"
             src={browserImg}
             draggable="false"
             width={800}
@@ -90,7 +90,7 @@ const Animation = ({
           borderRadius: '24px',
         }}
       >
-        <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
+        <Image loading="lazy" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
       </div>
 
       {/* Tasklogger */}
@@ -104,7 +104,7 @@ const Animation = ({
         }}
       >
         <Image
-          loading="eager"
+          loading="lazy"
           src={taskloggerImg}
           draggable="false"
           width={211}
@@ -118,7 +118,7 @@ const Animation = ({
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '64px', height: '64px' }}
       >
-        <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="lazy" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* Icon / Zip */}
@@ -134,7 +134,7 @@ const Animation = ({
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '52px', height: '52px' }}
       >
-        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
+        <Image loading="lazy" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
       </div>
 
       {/* Icon / Csv */}
@@ -142,7 +142,7 @@ const Animation = ({
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
       >
-        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
+        <Image loading="lazy" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
       </div>
     </div>
   );
