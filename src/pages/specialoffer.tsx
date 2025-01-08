@@ -5,7 +5,6 @@ import { HeroSection } from '@/components/shared/components/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
-import Button from '@/components/shared/Button';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '@/components/services/stripe.service';
@@ -17,6 +16,7 @@ import { PartnerDiscountText } from '@/assets/types/partner-discount';
 import Image from 'next/image';
 import { CardGroup } from '@/components/shared/CardGroup';
 import Link from 'next/link';
+import Header from '@/components/shared/Header';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -135,6 +135,14 @@ const PartnerDiscount = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
+        CustomDescription={
+          <>
+            <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">
+              {langJson.PaymentSection.planDescription}
+            </span>
+          </>
+        }
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
