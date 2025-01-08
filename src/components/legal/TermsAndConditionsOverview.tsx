@@ -35,7 +35,7 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
               <div className="flex flex-col text-gray-80">
                 <MainSection textContent={textContent} lang={lang} />
                 <CookiesSection textContent={textContent} lang={lang} />
-                <WhenWhyHowSection textContent={textContent} />
+                <WhenWhyHowSection textContent={textContent} lang={lang} />
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
           <div className="flex flex-col">
             <MainSection textContent={textContent} lang={lang} />
             <CookiesSection textContent={textContent} lang={lang} />
-            <WhenWhyHowSection textContent={textContent} />
+            <WhenWhyHowSection textContent={textContent} lang={lang} />
           </div>
         </div>
       </div>
