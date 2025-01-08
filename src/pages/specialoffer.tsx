@@ -79,7 +79,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed isLinksHidden />
 
       <HeroSection
         TextComponent={
@@ -97,7 +97,7 @@ const PartnerDiscount = ({
                 </div>
                 <p className="text-center text-xl text-gray-80 lg:text-left">
                   {langJson.HeroSection.description.normal}{' '}
-                  <span className="text-primary">{langJson.HeroSection.description.blue}</span>
+                  <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
                 </p>
               </div>

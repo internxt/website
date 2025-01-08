@@ -186,6 +186,17 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               </button>
             ) : undefined}
 
+            {props.cta[0] === 'priceTable' ? (
+              <button
+                onClick={() => router.push('#priceTable')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+              >
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+              </button>
+            ) : undefined}
+
             {props.cta[0] === 'checkout' ? (
               <button
                 type="button"
