@@ -46,7 +46,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SoftSales,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -90,8 +90,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  const isMobile = useIsMobile();
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -123,7 +121,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
             {textContent.tableSection.planDescription}
           </span>
         }
-        hideSwitchSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>
