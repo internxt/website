@@ -1,0 +1,87 @@
+{
+  "HeroSection": {
+    "header": " Internxt Special Offer",
+    "title": {
+      "normalText": "Get the most secure cloud storage ",
+      "blueText": "for less"
+    },
+    "description": {
+      "normal": "Join Internxt, the leading Google Drive alternative, and get ",
+      "blue": "80% OFF ",
+      "normal1": "any annual and lifetime plan. Securely store and share your files in complete privacy."
+    },
+    "cta": "Choose plan"
+  },
+  "PaymentSection": {
+    "planTitles": { "homePage": "Choose the storage you need" },
+    "planDescription": "Every Internxt plan features complete access to our privacy services. Enjoy year-long security to meet your storage needs.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    }
+  },
+  "FeatureSection": {
+    "title": "Why choose Internxt to secure your files?",
+    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data and we don’t store or sell your data to third parties. We take every step to ensure your information remains secure.",
+    "cta": "Choose storage size",
+    "cards": [
+      {
+        "title": "Unhackable and unleakable data",
+        "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can  be personally reviewed, audited, and verified by anyone. We have  nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for  it. Internxt has been independently audited and verified by Europe’s  leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Hundreds of thousands are ditching iCloud, Google Drive, and Dropbox for ",
+      "blue": "the most secure cloud storage - Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journalist for FixThePhoto.com",
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Review from GetApp",
+        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Review from Trustpilot",
+        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Get an entire year’s worth of storage with 80% off now!",
+    "description": "Internxt is offering an exclusive discount with full privacy and security guaranteed.",
+    "cta": "Choose plan"
+  },
+  "CtaSection1": {
+    "title": "The world's most private cloud storage",
+    "description": "Claim your exclusive 80% discount to access Internxt's secure, private, and encrypted cloud storage for an entire year.",
+    "cta": "Find your plan"
+  }
+}

@@ -113,6 +113,7 @@ export enum PromoCodeName {
   DonaldTrump = 'TRUMP',
   SoftSales = '70OFF4YOU',
   Christmas = 'SECRETSANTA80',
+  Special80Coupon = 'SPECIAL80',
 }
 
 export interface PromoCodeProps {
