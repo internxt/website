@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -12,7 +12,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
@@ -25,7 +25,6 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import useIsMobile from '@/hooks/useIsMobile';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -43,7 +42,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
