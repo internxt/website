@@ -1097,6 +1097,30 @@ const MainSection = ({ textContent, lang }) => {
               <p className="mb-6">{textContent.privacy_policy_subtitle11}</p>
             </div>
           </div>
+          <div className="mb-16 flex flex-col">
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title28}>
+              {textContent.title28}
+            </h2>
+            <p className="mb-6">{textContent.subtitle28}</p>
+          </div>
+          <div className="mb-16 flex flex-col">
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title29}>
+              {textContent.title29}
+            </h2>
+            <p className="mb-6">{textContent.subtitle29}</p>
+          </div>
+          <div className="mb-16 flex flex-col">
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title30}>
+              {textContent.title30}
+            </h2>
+            <p className="mb-6">{textContent.subtitle30}</p>
+          </div>
+          <div className="mb-16 flex flex-col">
+            <h2 className="mb-3 text-2xl font-medium" id={textContent.title31}>
+              {textContent.title31}
+            </h2>
+            <p className="mb-6">{textContent.subtitle31}</p>
+          </div>
         </>
       )}
     </>

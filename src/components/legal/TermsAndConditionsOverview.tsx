@@ -33,9 +33,9 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
             <div className="border border-gray-10" />
             <div className="flex scroll-smooth">
               <div className="flex flex-col text-gray-80">
+                <WhenWhyHowSection textContent={textContent} lang={lang} />
                 <MainSection textContent={textContent} lang={lang} />
                 <CookiesSection textContent={textContent} lang={lang} />
-                <WhenWhyHowSection textContent={textContent} lang={lang} />
               </div>
             </div>
           </div>
@@ -54,9 +54,9 @@ const TermsAndConditionsOverview = ({ textContent, lang }) => {
           </div>
           <div className="border border-gray-10" />
           <div className="flex flex-col">
+            <WhenWhyHowSection textContent={textContent} lang={lang} />
             <MainSection textContent={textContent} lang={lang} />
             <CookiesSection textContent={textContent} lang={lang} />
-            <WhenWhyHowSection textContent={textContent} lang={lang} />
           </div>
         </div>
       </div>
