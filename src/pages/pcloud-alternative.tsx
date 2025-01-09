@@ -24,7 +24,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PcCloud,
+    couponCode: PromoCodeName.PCLOUD80,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -44,7 +44,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   console.log('individualCoupon:', individualCoupon);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
       <ComparisonHeader
         maxWithForTitle={'max-w-[600px]'}
@@ -53,8 +53,6 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       />
 
       <HeroSection textContent={langJson.HeroSection} />
-
-      <TablesSection textContent={langJson.TablesSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -75,7 +73,10 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
             {langJson.tableSection.planDescription}
           </span>
         }
+        backgroundColorComponent="bg-gray-1"
       />
+
+      <TablesSection textContent={langJson.TablesSection} />
 
       <CouponSection textContent={langJson.UseCodeSection} redirectUrl="#priceTable" />
 
