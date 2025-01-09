@@ -18,13 +18,12 @@ const CodeComponent = ({ textContent }) => (
 
 export const CouponSection = ({ textContent, redirectUrl }: UseCouponSectionProps) => {
   return (
-    <section className="flex flex-col bg-primary-dark py-20 px-5">
+    <section className="flex flex-col bg-primary-dark px-5 py-20">
       <div className="flex flex-col items-center gap-12 text-center">
         <div className="flex max-w-[810px] flex-col items-center gap-8 text-center">
           <CodeComponent textContent={textContent.title} />
           <Link
             href={redirectUrl}
-            target="_blank"
             rel="noopener noreferrer"
             id="get-started-link"
             className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-max"
