@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/legacy/image';
 import { getImage } from '@/lib/getImage';
-
 interface AnimationProps {
   browserImg?: string;
   folderImg?: string;
@@ -11,7 +10,6 @@ interface AnimationProps {
   previewImg?: string;
   taskloggerImg?: string;
 }
-
 const Animation = ({
   browserImg = getImage('/images/home/header/browser.webp', true),
   folderImg = getImage('/images/home/header/folder.svg', true),
@@ -29,7 +27,6 @@ const Animation = ({
   const [headerAnimation5, setHeaderAnimation5] = useState<boolean>(false);
   const [headerAnimation6, setHeaderAnimation6] = useState<boolean>(false);
   const [headerAnimation7, setHeaderAnimation7] = useState<boolean>(false);
-
   useEffect(() => {
     setTimeout(() => {
       setHeaderAnimation1(true);
@@ -53,7 +50,6 @@ const Animation = ({
       setHeaderAnimation7(true);
     }, 1700);
   }, []);
-
   return (
     <div className="relative ml-10 hidden max-w-2xl flex-grow lg:flex xl:ml-20">
       {/* Browser window */}
@@ -68,7 +64,7 @@ const Animation = ({
           }}
         >
           <Image
-            loading="lazy"
+            loading="eager"
             src={browserImg}
             draggable="false"
             width={800}
@@ -78,7 +74,6 @@ const Animation = ({
           />
         </div>
       </div>
-
       {/* File preview */}
       <div
         className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
@@ -90,7 +85,7 @@ const Animation = ({
           borderRadius: '24px',
         }}
       >
-        <Image loading="lazy" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
+        <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
       </div>
 
       {/* Tasklogger */}
@@ -104,7 +99,7 @@ const Animation = ({
         }}
       >
         <Image
-          loading="lazy"
+          loading="eager"
           src={taskloggerImg}
           draggable="false"
           width={211}
@@ -112,13 +107,12 @@ const Animation = ({
           alt="file logger with items downloading"
         />
       </div>
-
       {/* Icon / Folder */}
       <div
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '64px', height: '64px' }}
       >
-        <Image loading="lazy" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
+        <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
       </div>
 
       {/* Icon / Zip */}
@@ -128,13 +122,12 @@ const Animation = ({
       >
         <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />
       </div>
-
       {/* Icon / Powerpoint */}
       <div
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '52px', height: '52px' }}
       >
-        <Image loading="lazy" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
+        <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
       </div>
 
       {/* Icon / Csv */}
@@ -142,10 +135,9 @@ const Animation = ({
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{ filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))', width: '48px', height: '48px' }}
       >
-        <Image loading="lazy" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
+        <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />
       </div>
     </div>
   );
 };
-
 export default Animation;
