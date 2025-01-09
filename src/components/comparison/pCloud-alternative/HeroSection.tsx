@@ -3,7 +3,6 @@ import { Fragment } from 'react';
 import bannerText from '@/assets/lang/en/banners.json';
 import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
-import { post } from 'cypress/types/jquery';
 
 interface HeroSectionProps {
   textContent: any;
