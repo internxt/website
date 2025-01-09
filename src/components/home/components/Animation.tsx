@@ -68,12 +68,12 @@ const Animation = ({
           }}
         >
           <Image
-            loading="lazy"
             src={browserImg}
             draggable="false"
             width={800}
             height={520}
             className="rounded-2xl"
+            priority
             alt="drive web app"
           />
         </div>
