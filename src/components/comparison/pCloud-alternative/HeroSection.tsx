@@ -61,40 +61,40 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         },
         {
           id: 2,
+          title: `${textContent.tableSection.comparisons.postQuantumEncryption}`,
+          feature: getFeature('postQuantumEncryption'),
+        },
+        {
+          id: 2,
           title: `${textContent.tableSection.comparisons.pricing}`,
           feature: getFeature('pricing'),
         },
         {
-          id: 3,
+          id: 4,
           title: `${textContent.tableSection.comparisons.securityAudits}`,
           feature: getFeature('securityAudits'),
         },
         {
-          id: 4,
+          id: 5,
           title: `${textContent.tableSection.comparisons.liveSupport}`,
           feature: getFeature('liveSupport'),
         },
         {
-          id: 5,
+          id: 6,
           title: `${textContent.tableSection.comparisons.dataTrackers}`,
           feature: getFeature('dataTrackers'),
         },
         {
-          id: 6,
+          id: 7,
           title: `${textContent.tableSection.comparisons.privacyLaws}`,
           feature: getFeature('privacyLaws'),
-        },
-        {
-          id: 7,
-          title: `${textContent.tableSection.comparisons.postQuantumEncryption}`,
-          feature: getFeature('postQuantumEncryption'),
         },
       ],
     },
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className="overflow-hidden bg-white px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex flex-col items-center gap-6 text-center">
           <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>

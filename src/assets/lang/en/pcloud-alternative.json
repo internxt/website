@@ -19,32 +19,32 @@
       "comparisons": {
         "codeTransparency": "Code transparency",
         "encryption": "Encryption",
+        "postQuantumEncryption": "Post-Quantum Encryption",
         "pricing": "Pricing",
         "securityAudits": "Security Audits",
         "liveSupport": "Live Support",
         "dataTrackers": "Data Trackers",
-        "privacyLaws": "Privacy Laws",
-        "postQuantumEncryption": "Post-Quantum Encryption"
+        "privacyLaws": "Privacy Laws"
       },
       "internxtFeatures": {
         "codeTransparency": "Open-Source",
         "encryption": "Included in all plans",
+        "postQuantumEncryption": "Yes",
         "pricing": "Competitive, no hidden costs",
         "securityAudits": "Regular security audits by the community",
         "liveSupport": "Yes",
         "dataTrackers": "No",
-        "privacyLaws": "GDPR, Spanish Data Protection Laws",
-        "postQuantumEncryption": "Yes"
+        "privacyLaws": "GDPR, Spanish Data Protection Laws"
       },
       "features": {
         "codeTransparency": "Closed-Source",
         "encryption": "Paid extra (pCloud Crypto)",
+        "postQuantumEncryption": "No",
         "pricing": "Affordable, but extra for encryption",
         "securityAudits": "Not available",
         "liveSupport": "No",
         "dataTrackers": "Yes (Facebook pixel, TikTok, Linkedin, etc)",
-        "privacyLaws": "Claims Swiss privacy laws",
-        "postQuantumEncryption": "No"
+        "privacyLaws": "Claims Swiss privacy laws"
       },
       "drag": {
         "line1": "Drag horizontally",
