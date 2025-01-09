@@ -15,7 +15,7 @@ import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/components/services/stripe.service';
 
-const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
   const {
     products,
@@ -111,4 +111,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default pCloudComparison;
+export default PCloudComparison;
