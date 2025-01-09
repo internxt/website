@@ -11,10 +11,38 @@ import CtaSection from '@/components/shared/CtaSection';
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
+import { stripeService } from '@/components/services/stripe.service';
 
 const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.PcCloud,
+  });
 
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = individualCoupon?.name;
+
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
+  };
+
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
+  console.log('individualCoupon:', individualCoupon);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
@@ -22,18 +50,39 @@ const pCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       <ComparisonHeader
         maxWithForTitle={'max-w-[600px]'}
         textContent={langJson.HeaderSection}
-        redirectUrl={'/pricing'}
+        redirectUrl={'#priceTable'}
       />
 
       <HeroSection textContent={langJson.HeroSection} />
 
       <TablesSection textContent={langJson.TablesSection} />
 
-      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscount,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideSwitchSelector
+        hideBusinessSelector
+        hideFreeCard
+        CustomDescription={
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">
+            {langJson.tableSection.planDescription}
+          </span>
+        }
+      />
+
+      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="#priceTable" />
 
       <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+      <CtaSection textContent={langJson.CtaSection} url={'#priceTable'} />
 
       <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
 
