@@ -3,6 +3,7 @@ import { Fragment } from 'react';
 import bannerText from '@/assets/lang/en/banners.json';
 import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
+import { post } from 'cypress/types/jquery';
 
 interface HeroSectionProps {
   textContent: any;
@@ -23,6 +24,7 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         liveSupport: textContent.tableSection.internxtFeatures.liveSupport,
         dataTrackers: textContent.tableSection.internxtFeatures.dataTrackers,
         privacyLaws: textContent.tableSection.internxtFeatures.privacyLaws,
+        postQuantumEncryption: textContent.tableSection.internxtFeatures.postQuantumEncryption,
       },
     },
     {
@@ -36,6 +38,7 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         liveSupport: textContent.tableSection.features.liveSupport,
         dataTrackers: textContent.tableSection.features.dataTrackers,
         privacyLaws: textContent.tableSection.features.privacyLaws,
+        postQuantumEncryption: textContent.tableSection.features.postQuantumEncryption,
       },
     },
   ];
@@ -80,6 +83,11 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
           id: 6,
           title: `${textContent.tableSection.comparisons.privacyLaws}`,
           feature: getFeature('privacyLaws'),
+        },
+        {
+          id: 7,
+          title: `${textContent.tableSection.comparisons.postQuantumEncryption}`,
+          feature: getFeature('postQuantumEncryption'),
         },
       ],
     },
