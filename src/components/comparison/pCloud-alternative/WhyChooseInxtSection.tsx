@@ -52,7 +52,7 @@ export const WhyChooseInxtSection = ({ textContent }) => {
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
             >
-              <card.icon className="mb-6 text-4xl text-green" size={32} />
+              <card.icon className="mb-6 text-4xl text-green-1" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
                 <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
                 <p className="text-base text-cool-gray-80 sm:text-lg">{card.subtitle}</p>
