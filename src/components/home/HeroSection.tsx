@@ -39,7 +39,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 <Image
                   src={mobileImage}
                   draggable={false}
-                  quality={100}
+                  quality={80}
                   width={600}
                   height={450}
                   alt="Laptop and phone with Internxt app"
