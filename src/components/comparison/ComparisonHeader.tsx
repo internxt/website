@@ -25,13 +25,13 @@ export const ComparisonHeader = ({ textContent, redirectUrl, maxWithForTitle }: 
       </Header>
 
       <h2 className="max-w-3xl text-center text-xl">{textContent.description}</h2>
+      <h2 className="max-w-3xl text-center text-xl">{textContent.description2}</h2>
       {textContent.useCode ? <CodeComponent textContent={textContent.useCode} /> : undefined}
     </div>
 
     <div className="relative z-10 flex flex-col items-center justify-center">
       <Link
         href={redirectUrl}
-        target="_blank"
         rel="noopener noreferrer"
         id="get-started-link"
         className="flex w-full items-center justify-center rounded-lg border border-transparent bg-white px-6 py-2 text-lg font-medium text-primary hover:bg-blue-10 focus:outline-none sm:inline-flex sm:w-auto"
