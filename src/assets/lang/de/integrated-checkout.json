@@ -1,65 +1,65 @@
 {
-  "title": "Sie sind fast da! Sicher zur Kasse gehen:",
-  "pay": "Bezahlen",
-  "paying": "Bezahlen...",
-  "checkout": "Zur Kasse",
+  "title": "Você está quase lá! Finalize sua compra com segurança:",
+  "pay": "Pagar",
+  "paying": "Pagando...",
+  "checkout": "Finalizar compra",
   "authComponent": {
     "signup": {
-      "emailAddress": "Ihre E-Mail-Adresse",
-      "password": "Passwort erstellen"
+      "emailAddress": "Seu endereço de e-mail",
+      "password": "Crie uma senha"
     },
     "login": {
-      "emailAddress": "Ihre E-Mail-Adresse",
-      "password": "Ihr Passwort"
+      "emailAddress": "Seu endereço de e-mail",
+      "password": "Sua senha"
     },
     "title": {
-      "signUp": "Ein Konto erstellen"
+      "signUp": "Criar uma conta"
     },
-    "emailMustNotBeEmpty": "Die E-Mail darf nicht leer sein",
-    "privacyGuarantee": "Datenschutzgarantie: Wir teilen Ihre Informationen nicht und werden Sie nur kontaktieren, wenn es notwendig ist, um unseren Service zu bieten."
+    "emailMustNotBeEmpty": "O e-mail não pode estar vazio",
+    "privacyGuarantee": "Garantia de privacidade: Não compartilhamos suas informações e entraremos em contato apenas quando for necessário para fornecer nosso serviço."
   },
-  "addressBillingTitle": "Rechnungsadresse",
+  "addressBillingTitle": "Endereço de Cobrança",
   "addressBilling": {
-    "optionalData": "Optional",
-    "companyName": "Firmenname",
-    "companyVatId": "USt-ID"
+    "optionalData": "Opcional",
+    "companyName": "Nome da Empresa",
+    "companyVatId": "ID de IVA"
   },
-  "paymentTitle": "Wählen Sie eine Zahlungsmethode",
+  "paymentTitle": "Selecione um método de pagamento",
   "productCard": {
-    "title": "Bestellübersicht",
-    "selectedPlan": "Ausgewählter Plan",
+    "title": "Resumo do pedido",
+    "selectedPlan": "Plano selecionado",
     "plan": {
-      "month": "{{spaceToUpgrade}} - 1 {{interval}}-Plan",
-      "year": "{{spaceToUpgrade}} - 1 {{interval}}-Plan",
-      "lifetime": "{{spaceToUpgrade}} - {{interval}}-Plan"
+      "month": "{{spaceToUpgrade}} - 1 plano {{interval}}",
+      "year": "{{spaceToUpgrade}} - 1 plano {{interval}}",
+      "lifetime": "{{spaceToUpgrade}} - plano {{interval}}"
     },
     "billed": {
-      "month": "Monatliche Abrechnung",
-      "year": "Jährliche Abrechnung",
-      "lifetime": "Einmalige Zahlung"
+      "month": "Cobrança mensal",
+      "year": "Cobrança anual",
+      "lifetime": "Pagamento único"
     },
-    "saving": "Sie sparen {{percent}}%",
+    "saving": "Você está economizando {{percent}}%",
     "planDetails": {
-      "title": "Plandetails:",
+      "title": "Detalhes do plano:",
       "features": [
-        "Mindestmonatliche Gebühr von 7€",
-        "Mindestspeicher von 1TB",
-        "Kompatibel mit AWS S3 und IAM API",
-        "Erhöhte Geschwindigkeit",
-        "Flexibler Speicher",
-        "Open Source",
-        "DSGVO-konform",
-        "Premium-Kundensupport"
+        "Taxa mensal mínima de 7€",
+        "Armazenamento mínimo de 1TB",
+        "Compatível com AWS S3 e API IAM",
+        "Velocidade aumentada",
+        "Armazenamento flexível",
+        "Código aberto",
+        "Conformidade com GDPR",
+        "Suporte premium ao cliente"
       ]
     },
-    "total": "Gesamt: ",
+    "total": "Total: ",
     "addCoupon": {
-      "buttonTitle": "Gutschein hinzufügen",
-      "inputText": "Gutscheincode",
-      "applyCodeButtonTitle": "Anwenden"
+      "buttonTitle": "Adicionar cupom",
+      "inputText": "Código do cupom",
+      "applyCodeButtonTitle": "Aplicar"
     },
-    "amountSaved": "Sparen ",
-    "withAnnualBilling": "mit jährlicher Abrechnung"
+    "amountSaved": "Economize ",
+    "withAnnualBilling": "com cobrança anual"
   },
-  "oneTimePayment": "*Es wird eine einmalige Gebühr von 1€ für die Kontoverifizierung benötigt"
+  "oneTimePayment": "*Uma taxa única de 1€ é necessária para verificação da conta"
 }
