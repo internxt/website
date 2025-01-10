@@ -20,6 +20,7 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
+import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -105,6 +106,8 @@ export const BusinessPage = ({
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
+
+      <ContactSalesForm textContent={textContent.ContactSales} />
 
       <Footer textContent={footerText} lang={locale} />
     </Layout>
