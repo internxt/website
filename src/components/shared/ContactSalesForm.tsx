@@ -120,16 +120,6 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
               </div>
             </form>
           </div>
-          <div className="flex-1">
-            <Image
-              src={getImage('/images/business/internxt_sales_contact.webp')}
-              width={560}
-              draggable={false}
-              height={618}
-              alt="Internxt cloud Storage"
-              className="h-full w-full rounded-r-lg object-cover"
-            />
-          </div>
         </div>
       </div>
     </section>
