@@ -8,6 +8,26 @@ export interface BusinessText {
   EncryptedCloudSolution: EncryptedCloudSolution;
   TestimonialsSection: TestimonialsSection;
   FaqSection: FAQSection;
+  ContactSales: ContactSales;
+}
+
+export interface ContactSales {
+  title: string;
+  description: string;
+  form: Form;
+}
+
+export interface Form {
+  name: string;
+  surname: string;
+  email: string;
+  company: string;
+  phone: string;
+  howMuchStorage: string;
+  totalCharacters: string;
+  options: string[];
+  howWeCanHelp: string;
+  cta: string;
 }
 
 export interface EncryptedCloudSolution {
@@ -82,7 +102,6 @@ export interface TestimonialsSection {
 
 export interface Testimonial {
   imageBrandName: string;
-
   brand: string;
   review: string;
 }
