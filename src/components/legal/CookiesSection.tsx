@@ -4,8 +4,8 @@ const CookiesSection = ({ textContent, lang }) => {
   return (
     <>
       {lang !== 'es' ? (
-        <div className="flex w-full flex-col" id={textContent.cookies_title}>
-          <h2 className="mb-3 text-2xl font-medium">{textContent.cookies_title}</h2>
+        <div className="flex w-full flex-col" id={textContent.title32}>
+          <h2 className="mb-3 text-2xl font-medium">{textContent.title32}</h2>
           <h5 className="mb-6 text-2xl">{textContent.cookies_subtitle1}</h5>
           <p className="mb-6">{textContent.cookies_data_part1}</p>
           <p className="mb-6">{textContent.cookies_data_part2}</p>
@@ -52,8 +52,8 @@ const CookiesSection = ({ textContent, lang }) => {
           <p className="mb-6">{textContent.cookies_data_part42}</p>
         </div>
       ) : (
-        <div className="mb-6 flex flex-col" id={textContent.cookies_title}>
-          <h2 className="mb-3 text-2xl font-medium">{textContent.cookies_title}</h2>
+        <div className="mb-6 flex flex-col" id={textContent.title32}>
+          <h2 className="mb-3 text-2xl font-medium">{textContent.title32}</h2>
           <p className="mb-6">{textContent.cookies_data_part1}</p>
           <p className="mb-6">{textContent.cookies_data_part2}</p>
 

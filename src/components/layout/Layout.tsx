@@ -180,7 +180,7 @@ LayoutProps) {
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
-        <link rel="stylesheet" href="/cookiebanner.style.css" />
+        <link rel="preload" href="/cookiebanner.style.css" as="style" />
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
@@ -227,7 +227,7 @@ LayoutProps) {
             }}
           />
         )}
-        <script src="/js/cookiebanner.script.js" />
+        <script async src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
