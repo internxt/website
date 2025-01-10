@@ -59,7 +59,7 @@ export const SwitchComponent = ({
           handleOnSwitchIsToggled(isSwitchEnabled ? Interval.Month : Interval.Year);
         }}
         className={`${
-          isSwitchEnabled ? 'bg-green' : darkMode ? 'bg-gray-90' : 'bg-gray-10'
+          isSwitchEnabled ? 'bg-green-1' : darkMode ? 'bg-gray-90' : 'bg-gray-10'
         } relative inline-flex h-6 w-11 items-center rounded-full`}
       >
         <span
