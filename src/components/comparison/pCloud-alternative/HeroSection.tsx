@@ -187,7 +187,6 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
             ))}
           </table>
         </div>
-        <SignUpBanner lang="en" textContent={bannerText.SignUpPCloudAlternativeBanner} />
       </div>
     </section>
   );
