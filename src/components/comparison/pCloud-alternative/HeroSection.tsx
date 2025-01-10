@@ -64,7 +64,7 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
           feature: getFeature('postQuantumEncryption'),
         },
         {
-          id: 2,
+          id: 3,
           title: `${textContent.tableSection.comparisons.pricing}`,
           feature: getFeature('pricing'),
         },

@@ -42,7 +42,6 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-  console.log('individualCoupon:', individualCoupon);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
