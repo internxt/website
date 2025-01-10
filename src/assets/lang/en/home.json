@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Save 80%",
+    "label": "Save 70%",
     "title": {
       "line1": "Get the ",
       "blueText": "most secure",
@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "Get 80% off ",
+        "blue": "Get 70% off ",
         "normal2": "all premium plans"
       },
       "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],

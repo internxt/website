@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -12,7 +12,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
@@ -25,7 +25,6 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import useIsMobile from '@/hooks/useIsMobile';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -43,10 +42,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SoftSales,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -90,8 +88,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
-  const isMobile = useIsMobile();
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -123,7 +119,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
             {textContent.tableSection.planDescription}
           </span>
         }
-        hideSwitchSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

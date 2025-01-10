@@ -11,7 +11,7 @@ const Legal = ({ lang, metatagsDescriptions, textContent, navbarLang, footerLang
     <Layout segmentName="Legal" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <TermsAndConditionsOverview textContent={textContent} />
+      <TermsAndConditionsOverview textContent={textContent} lang={lang} />
 
       <Footer lang={lang} textContent={footerLang} hideNewsletter={false} />
     </Layout>
