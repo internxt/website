@@ -4,18 +4,16 @@
   "paying": "Pagando...",
   "checkout": "Pagamento",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "Il tuo indirizzo email",
       "password": "Crea una password"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "Il tuo indirizzo email",
       "password": "La tua password"
     },
     "title": {
-      "signUp": "Crea un account",
-      "signIn": "Accedi",
-      "userIsSignedIn": "Utente connesso come"
+      "signUp": "Crea un account"
     },
     "emailMustNotBeEmpty": "L'email non deve essere vuota",
     "privacyGuarantee": "Garanzia di privacy: Non condividiamo le tue informazioni e ti contatteremo solo se necessario per fornire il nostro servizio."
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "Riepilogo dell'ordine",
     "selectedPlan": "Piano selezionato",
-    "renewalPeriod": {
-      "month": "mensile",
-      "year": "annuale",
-      "lifetime": "a vita"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 piano {{interval}}",
       "year": "{{spaceToUpgrade}} - 1 piano {{interval}}",

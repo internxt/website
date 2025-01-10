@@ -4,18 +4,16 @@
   "paying": "Bezahlen...",
   "checkout": "Zur Kasse",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "Ihre E-Mail-Adresse",
       "password": "Passwort erstellen"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "Ihre E-Mail-Adresse",
       "password": "Ihr Passwort"
     },
     "title": {
-      "signUp": "Ein Konto erstellen",
-      "signIn": "Anmelden",
-      "userIsSignedIn": "Benutzer angemeldet als"
+      "signUp": "Ein Konto erstellen"
     },
     "emailMustNotBeEmpty": "Die E-Mail darf nicht leer sein",
     "privacyGuarantee": "Datenschutzgarantie: Wir teilen Ihre Informationen nicht und werden Sie nur kontaktieren, wenn es notwendig ist, um unseren Service zu bieten."
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "Bestellübersicht",
     "selectedPlan": "Ausgewählter Plan",
-    "renewalPeriod": {
-      "month": "monatlich",
-      "year": "jährlich",
-      "lifetime": "lebenslang"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 {{interval}}-Plan",
       "year": "{{spaceToUpgrade}} - 1 {{interval}}-Plan",
@@ -49,14 +42,14 @@
     "planDetails": {
       "title": "Plandetails:",
       "features": [
-        "Charge mensuelle minimale de 7€",
-        "Stockage minimum de 1TB",
-        "Compatible avec AWS S3 et IAM API",
-        "Vitesse accrue",
-        "Stockage flexible",
-        "Open source",
-        "Conforme au GDPR",
-        "Support client premium"
+        "Mindestmonatliche Gebühr von 7€",
+        "Mindestspeicher von 1TB",
+        "Kompatibel mit AWS S3 und IAM API",
+        "Erhöhte Geschwindigkeit",
+        "Flexibler Speicher",
+        "Open Source",
+        "DSGVO-konform",
+        "Premium-Kundensupport"
       ]
     },
     "total": "Gesamt: ",

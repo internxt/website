@@ -43,6 +43,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   quality={100}
                   width={600}
                   height={450}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
@@ -93,9 +94,11 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             />
           </div>
           {/* Desktop animation/image */}
-          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
-            <Animation />
-          </div>
+          {!shouldShowMobileBanner ? (
+            <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+              <Animation />
+            </div>
+          ) : undefined}
         </div>
       </div>
     </section>
