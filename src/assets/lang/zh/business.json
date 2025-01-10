@@ -179,5 +179,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "联系销售",
+    "description": "填写联系表格，团队将尽快与您联系。",
+    "form": {
+      "name": "名字",
+      "surname": "姓氏",
+      "email": "电子邮箱地址",
+      "company": "公司名称",
+      "phone": "电话号码",
+      "howMuchStorage": "您需要多少存储空间？",
+      "totalCharacters": " /1000",
+      "options": [
+        "选择",
+        "少于25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我们如何帮助您？",
+      "cta": "发送消息"
+    }
   }
 }

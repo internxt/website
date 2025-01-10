@@ -179,5 +179,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contatta vendite",
+    "description": "Compila il modulo di contatto e il team ti contatterà a breve.",
+    "form": {
+      "name": "Nome",
+      "surname": "Cognome",
+      "email": "Indirizzo email",
+      "company": "Nome dell'azienda",
+      "phone": "Numero di telefono",
+      "howMuchStorage": "Quanto spazio di archiviazione ti serve?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Seleziona",
+        "Meno di 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Come possiamo aiutarti?",
+      "cta": "Invia messaggio"
+    }
   }
 }

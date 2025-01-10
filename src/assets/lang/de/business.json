@@ -179,5 +179,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Vertrieb kontaktieren",
+    "description": "Füllen Sie das Kontaktformular aus und das Team wird Sie in Kürze kontaktieren.",
+    "form": {
+      "name": "Vorname",
+      "surname": "Nachname",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "howMuchStorage": "Wie viel Speicher benötigen Sie?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Auswählen",
+        "Weniger als 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Wie können wir Ihnen helfen?",
+      "cta": "Nachricht senden"
+    }
   }
 }

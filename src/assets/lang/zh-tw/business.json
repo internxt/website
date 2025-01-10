@@ -179,5 +179,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "聯繫銷售",
+    "description": "填寫聯絡表格，團隊將盡快與您聯繫。",
+    "form": {
+      "name": "名字",
+      "surname": "姓氏",
+      "email": "電子郵件地址",
+      "company": "公司名稱",
+      "phone": "電話號碼",
+      "howMuchStorage": "您需要多少儲存空間？",
+      "totalCharacters": " /1000",
+      "options": [
+        "選擇",
+        "少於25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我們如何幫助您？",
+      "cta": "發送消息"
+    }
   }
 }

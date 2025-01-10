@@ -179,5 +179,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contacter les ventes",
+    "description": "Remplissez le formulaire de contact et l'équipe vous contactera sous peu.",
+    "form": {
+      "name": "Prénom",
+      "surname": "Nom de famille",
+      "email": "Adresse e-mail",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "howMuchStorage": "De combien de stockage avez-vous besoin?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Sélectionner",
+        "Moins de 25 To",
+        "25 - 50 To",
+        "50 - 100 To",
+        "100 - 150 To",
+        "150 - 200 To",
+        "250 - 500 To",
+        "1 - 20 Po",
+        "20+ Po"
+      ],
+      "howWeCanHelp": "Comment pouvons-nous vous aider?",
+      "cta": "Envoyer le message"
+    }
   }
 }
