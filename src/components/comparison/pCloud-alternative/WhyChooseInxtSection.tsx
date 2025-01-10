@@ -70,7 +70,7 @@ export const WhyChooseInxtSection = ({ textContent }) => {
             quality={100}
             className="cursor-pointer"
             onClick={() => {
-              window.open(SIGNUP_DRIVE_WEB, '_blank', 'noopener noreferrer');
+              window.location.hash = 'priceTable';
             }}
           />
         </div>

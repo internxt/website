@@ -14,6 +14,7 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/components/services/stripe.service';
+import { SIGNUP_DRIVE_WEB } from '@/constants';
 
 const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
@@ -82,7 +83,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
 
       <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
 
-      <CtaSection textContent={langJson.CtaSection} url={'#priceTable'} />
+      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
 
       <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
 
