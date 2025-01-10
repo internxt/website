@@ -28,7 +28,7 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
 
             <button
               className="!w-full rounded-lg border-2 border-orange bg-white py-3 font-medium text-orange"
-              onClick={() => router.push('/cloud-object-storage/checkout')}
+              onClick={() => router.push('/es/cloud-object-storage/checkout')}
             >
               {textContent.cardText.cta}
             </button>
