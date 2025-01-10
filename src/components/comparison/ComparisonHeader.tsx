@@ -25,7 +25,7 @@ export const ComparisonHeader = ({ textContent, redirectUrl, maxWithForTitle }: 
       </Header>
 
       <h2 className="max-w-3xl text-center text-xl">{textContent.description}</h2>
-      <h2 className="max-w-3xl text-center text-xl">{textContent.description2}</h2>
+
       {textContent.useCode ? <CodeComponent textContent={textContent.useCode} /> : undefined}
     </div>
 

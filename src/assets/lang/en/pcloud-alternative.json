@@ -1,18 +1,17 @@
 {
   "HeaderSection": {
-    "title": "Internxt: a more secure pCloud alternative",
-    "description": "With phishing emails targeting pCloud users, the company denies a breach but gives no clear answers about how hackers obtained user emails.",
-    "description2": "Internxt provides the private cloud storage you can trust, with open-source transparency and built-in post-quantum encryption to keep your data safe and secure.",
+    "title": "Switch to Internxt",
+    "description": "Internxt provides the private cloud storage you can trust, with open-source transparency and built-in post-quantum encryption to keep your data safe and secure.",
 
     "useCode": {
       "line1": "Use code ",
       "code": "PCLOUD80",
-      "line2": " at checkout for 80% off any annual or lifetime Internxt plan."
+      "line2": "and claim your 80% discount."
     },
-    "cta": "Choose plan"
+    "cta": "Select plan"
   },
   "HeroSection": {
-    "title": "Internxt vs. pCloud comparison",
+    "title": "Internxt vs pCloud comparison",
     "description": "Discover characteristics of Internxt that make it a more private pCloud alternative",
     "tooltip": "Although pCloud identifies as a Swiss company and claims compliance with Swiss privacy laws, it operates entirely in Bulgaria. Therefore, Bulgarian privacy laws apply. Users should consider this distinction regarding their data protection.",
     "tableSection": {
