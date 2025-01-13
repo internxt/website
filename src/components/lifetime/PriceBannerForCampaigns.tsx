@@ -41,7 +41,7 @@ export const PriceBannerForCampaigns = ({
               </Link>
             </div>
             <div className="flex flex-row items-center space-y-1 text-gray-100 sm:space-x-2">
-              <CheckCircle size={20} className="text-primary" />
+              <CheckCircle size={20} className="text-gray-30" />
               <p className="whitespace-nowrap text-base font-medium text-gray-30 sm:text-lg">{textContent.guarantee}</p>
             </div>
             <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
