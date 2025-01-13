@@ -51,7 +51,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -64,7 +64,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="surname"
                     type="text"
                     placeholder={textContent.form.surname}
-                    className="w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                     value={formData.surname}
                     onChange={handleChange}
                   />
@@ -78,7 +78,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   id="company"
                   type="text"
                   placeholder={textContent.form.company}
-                  className="w-full rounded-lg border px-3 py-2"
+                  className="w-full rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                   value={formData.company}
                   onChange={handleChange}
                 />
@@ -92,7 +92,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -105,7 +105,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="phone"
                     type="tel"
                     placeholder={textContent.form.phone}
-                    className="w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                     value={formData.phone}
                     onChange={handleChange}
                   />
@@ -117,7 +117,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 </label>
                 <select
                   id="storage"
-                  className="w-full rounded-lg border bg-white px-3 py-2"
+                  className="w-full appearance-none rounded-lg border bg-white px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                   value={formData.storage}
                   onChange={handleChange}
                 >
@@ -138,7 +138,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
-                  className="h-32 w-full resize-none rounded-lg border px-3 py-2"
+                  className="h-32 w-full resize-none rounded-lg border px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                 />
               </div>
               <p className="mt-1 text-right text-sm text-gray-100">
@@ -149,7 +149,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 <button
                   type="submit"
                   className={`w-full rounded-lg px-4 py-2 text-white transition lg:w-1/3 ${
-                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-gray-30'
+                    isFormValid ? 'bg-primary' : 'bg-gray-300 cursor-not-allowed'
                   }`}
                   disabled={!isFormValid}
                 >
