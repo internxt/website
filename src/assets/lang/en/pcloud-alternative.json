@@ -11,7 +11,7 @@
     "cta": "Select plan"
   },
   "HeroSection": {
-    "title": "Internxt vs pCloud comparison",
+    "title": "Internxt vs pCloud",
     "description": "Discover characteristics of Internxt that make it a more private pCloud alternative",
     "tooltip": "Although pCloud identifies as a Swiss company and claims compliance with Swiss privacy laws, it operates entirely in Bulgaria. Therefore, Bulgarian privacy laws apply. Users should consider this distinction regarding their data protection.",
     "tableSection": {
