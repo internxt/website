@@ -82,8 +82,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
             <Image
               src={getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp')}
-              width={570}
-              height={529}
+              width={600}
+              height={540}
               alt="Header Logo"
             />
           </div>
