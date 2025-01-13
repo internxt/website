@@ -13,6 +13,7 @@ import { GetServerSidePropsContext } from 'next';
 import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
+import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -54,11 +55,19 @@ const CloudObjectStorage = ({
               )}
             </Header>
             <p className="text-xl">{textContent.HeroSection.description}</p>
-            <Button
-              className="!w-full lg:!w-max"
-              text={textContent.HeroSection.cta}
-              onClick={() => (window.location.hash = '#storageSection')}
-            />
+            <div className="flex flex-row items-center gap-4">
+              <Button
+                className="!w-full lg:!w-max"
+                text={textContent.HeroSection.cta}
+                onClick={() => (window.location.hash = '#storageSection')}
+              />
+              <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
+              <Button
+                className="!w-full lg:!w-max"
+                text={textContent.HeroSection.cta2}
+                onClick={() => (window.location.hash = '#contactSales')}
+              />
+            </div>
           </div>
         }
         style={{
@@ -81,6 +90,8 @@ const CloudObjectStorage = ({
       <CloudObjectStorageWhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
+
+      <ContactSalesForm textContent={textContent.ContactSales} />
 
       <Footer textContent={footerText} lang={lang} />
     </Layout>
