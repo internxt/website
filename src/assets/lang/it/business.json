@@ -5,7 +5,9 @@
       "Internxt protegge la tua azienda dalla perdita di dati con un'archiviazione cloud sicura costruita con una crittografia ultra-potente.",
       "Forniamo tutto ciò di cui hai bisogno per gestire la tua azienda in modo sicuro."
     ],
-    "cta": "Ottieni Internxt per aziende"
+    "cta": "Seleziona piano",
+    "separator": "|",
+    "cta2": "Contatta vendite"
   },
   "SecureYourCompany": {
     "title": "Proteggi il futuro della tua azienda con l'archiviazione cloud crittografata di Internxt",

@@ -5,7 +5,9 @@
       "Internxt secures your business from data loss with secure cloud storage built with ultra-powerful encryption.",
       "We provide everything you need to manage your business securely."
     ],
-    "cta": "Get Internxt for business"
+    "cta": "Select plan",
+    "separator": "|",
+    "cta2": "Contact sales"
   },
   "SecureYourCompany": {
     "title": "Secure your company’s future with Internxt encrypted cloud storage",

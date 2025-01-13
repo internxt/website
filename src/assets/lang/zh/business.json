@@ -5,7 +5,9 @@
       "Internxt 通过超强加密的安全云存储保护您的企业免受数据丢失的影响。",
       "我们提供您管理企业安全所需的一切。"
     ],
-    "cta": "获取 Internxt 企业版"
+    "cta": "选择计划",
+    "separator": "|",
+    "cta2": "联系销售"
   },
   "SecureYourCompany": {
     "title": "使用 Internxt 加密云存储保障公司未来",

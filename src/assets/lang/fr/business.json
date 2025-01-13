@@ -5,7 +5,9 @@
       "Internxt protège votre entreprise contre la perte de données avec un stockage cloud sécurisé construit avec un cryptage ultra-puissant.",
       "Nous fournissons tout ce dont vous avez besoin pour gérer votre entreprise en toute sécurité."
     ],
-    "cta": "Obtenez Internxt pour les entreprises"
+    "cta": "Sélectionner un plan",
+    "separator": "|",
+    "cta2": "Contacter les ventes"
   },
   "SecureYourCompany": {
     "title": "Sécurisez l'avenir de votre entreprise avec le stockage cloud crypté d'Internxt",
