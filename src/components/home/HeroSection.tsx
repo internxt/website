@@ -34,20 +34,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            {!shouldShowMobileBanner ? (
-              <div className="flex lg:hidden">
-                <Image
-                  loading="eager"
-                  src={mobileImage}
-                  draggable="false"
-                  quality={100}
-                  width={600}
-                  height={450}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Laptop and phone with Internxt app"
-                />
-              </div>
-            ) : undefined}
             <HomePageBannerForMobile />
 
             <TitleAndOnePlan
@@ -93,12 +79,14 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               }
             />
           </div>
-          <Image
-            src={getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp')}
-            width={570}
-            height={529}
-            alt="Header Logo"
-          />
+          <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <Image
+              src={getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp')}
+              width={570}
+              height={529}
+              alt="Header Logo"
+            />
+          </div>
           {/* Desktop animation/image
          
           {!shouldShowMobileBanner ? (
