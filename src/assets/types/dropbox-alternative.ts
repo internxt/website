@@ -48,6 +48,7 @@ export interface TableSection {
 export interface Comparisons {
   codeTransparency: string;
   encryption: string;
+  postQuantumEncryption: string;
   pricing: string;
   securityAudits: string;
   liveSupport: string;
