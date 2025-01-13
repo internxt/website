@@ -59,12 +59,10 @@ export const PriceBannerForCampaigns = ({
       </div>
 
       {/* Mobile View */}
-      <div
-        className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] lg:hidden ${styles.linearGradient}`}
-      >
+      <div className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] bg-primary lg:hidden`}>
         <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-3">
-            <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.label}</p>
+          <div className="flex w-max rounded-xl border-2 border-gray-5 bg-white px-2 py-3">
+            <p className="text-4xl font-bold text-primary sm:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col text-white">
             <p className="text-4xl font-bold">{textContent.titleMbl1}</p>
@@ -85,13 +83,13 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover py-5">
+        <div className="flex h-full w-full flex-col object-cover xl:hidden">
           <Image
-            src={getImage('/images/christmas/christmas_mobile.webp')}
-            width={280}
-            height={150}
-            alt="Christmas Mobile image"
-            className="w-full rounded-b-[16px] object-cover"
+            src={getImage('/images/home/back-to-work/mobile-header.webp')}
+            width={377}
+            height={200}
+            alt="Privacy Week"
+            className="w-full  object-cover"
           />
         </div>
       </div>
