@@ -5,7 +5,9 @@
       "line2": "Stockage d'objets compatible Cloud"
     },
     "description": "Une solution de stockage cloud sécurisée, abordable et évolutive pour stocker, accéder et gérer de grandes quantités de données.",
-    "cta": "Commencer maintenant"
+    "cta": "Commencer maintenant",
+    "separator": "|",
+    "cta2": "Contacter les ventes"
   },
   "PredictablePricingSection": {
     "title": "Des prix simples et prévisibles sans frais API",
@@ -175,5 +177,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contacter les ventes",
+    "description": "Remplissez le formulaire de contact et l'équipe vous contactera sous peu.",
+    "form": {
+      "name": "Prénom",
+      "surname": "Nom de famille",
+      "email": "Adresse e-mail",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "howMuchStorage": "De combien de stockage avez-vous besoin?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Sélectionner",
+        "Moins de 25 To",
+        "25 - 50 To",
+        "50 - 100 To",
+        "100 - 150 To",
+        "150 - 200 To",
+        "250 - 500 To",
+        "1 - 20 Po",
+        "20+ Po"
+      ],
+      "howWeCanHelp": "Comment pouvons-nous vous aider?",
+      "cta": "Envoyer le message"
+    }
   }
 }

@@ -5,7 +5,9 @@
       "line2": "Almacenamiento de objetos compatible con"
     },
     "description": "Una solución de almacenamiento en la nube eficiente y escalable para almacenar, acceder y administrar datos a gran escala.",
-    "cta": "Empieza ya"
+    "cta": "Empieza ya",
+    "separator": "|",
+    "cta2": "Contactar ventas"
   },
   "PredictablePricingSection": {
     "title": "Sin cargos ni tarifas adicionales de API",
@@ -162,5 +164,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contactar ventas",
+    "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
+    "form": {
+      "name": "Nombre",
+      "surname": "Apellidos",
+      "email": "Correo electrónico",
+      "company": "Nombre de la empresa",
+      "phone": "Número de teléfono",
+      "howMuchStorage": "Capacidad de almacenamiento necesario",
+      "totalCharacters": " /1000",
+      "options": [
+        "Selecciona",
+        "Menos de 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "¿Cómo podemos ayudarte?",
+      "cta": "Enviar mensaje"
+    }
   }
 }
