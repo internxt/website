@@ -1,3 +1,4 @@
+import { CaretDown } from '@phosphor-icons/react';
 import { useState } from 'react';
 
 interface ContactSalesFormProps {
@@ -121,6 +122,10 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   value={formData.storage}
                   onChange={handleChange}
                 >
+                  <option value="" disabled hidden>
+                    {textContent.form.howMuchStorage}
+                    <CaretDown className="text-gray-400 pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 transform" />
+                  </option>
                   {textContent.form.options.map((option, index) => (
                     <option key={index} value={option === 'Select' ? '' : option}>
                       {option}
