@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { CheckCircle, ShieldCheck, Snowflake, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('2024-01-15');
+const HIDE_BANNER_DATE = new Date('2025-01-15');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
@@ -86,7 +86,7 @@ const FeaturesBanner = () => {
           </div>
           <div className="hidden w-full items-center lg:flex">
             <div className="flex flex-col">
-              <div className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card, index) => {
                   return (
                     <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
