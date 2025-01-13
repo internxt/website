@@ -112,23 +112,29 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   />
                 </div>
               </div>
-              <div>
+              <div className="relative">
                 <label className="font-regular mb-1 block text-sm" htmlFor="storage">
                   {textContent.form.howMuchStorage}
                 </label>
                 <select
                   id="storage"
-                  className="w-full appearance-none rounded-lg border-2 border-transparent bg-white px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                  className="w-full appearance-none rounded-lg border-2 border-transparent bg-white px-3 py-2 pr-12 focus:border-primary focus:ring-2 focus:ring-primary"
                   value={formData.storage}
-                  onChange={handleChange}
+                  onChange={(e) => {
+                    handleChange(e); // Actualiza el valor seleccionado
+                  }}
                 >
                   {textContent.form.options.map((option, index) => (
-                    <option key={index} value={option === index ? '' : option}>
+                    <option key={index} value={index === 0 ? '' : option}>
                       {option}
                     </option>
                   ))}
                 </select>
+                {formData.storage === '' && (
+                  <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100" />
+                )}
               </div>
+
               <div>
                 <label className="font-regular mb-1 block text-sm" htmlFor="help">
                   {textContent.form.howWeCanHelp}
