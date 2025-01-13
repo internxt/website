@@ -149,7 +149,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 <button
                   type="submit"
                   className={`w-full rounded-lg px-4 py-2 text-white transition lg:w-1/3 ${
-                    isFormValid ? 'bg-primary' : 'bg-gray-300 cursor-not-allowed'
+                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-gray-30'
                   }`}
                   disabled={!isFormValid}
                 >
