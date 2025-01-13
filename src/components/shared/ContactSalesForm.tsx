@@ -1,18 +1,34 @@
-import Image from 'next/image';
-import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
-import { getImage } from '@/lib/getImage';
-import Header from '../shared/Header';
-import Button from '../shared/Button';
 import { useState } from 'react';
 
 interface ContactSalesFormProps {
   textContent: any;
 }
-export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
-  const [charCount, setCharCount] = useState(0);
 
-  const handleTextareaChange = (e) => {
-    setCharCount(e.target.value.length);
+export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
+  const [formData, setFormData] = useState({
+    name: '',
+    surname: '',
+    company: '',
+    email: '',
+    phone: '',
+    storage: '',
+    help: '',
+  });
+  const [charCount, setCharCount] = useState(0);
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData((prev) => {
+      const updatedFormData = { ...prev, [id]: value };
+      const isValid = Object.values(updatedFormData).every((field) => field.trim() !== '');
+      setIsFormValid(isValid);
+      return updatedFormData;
+    });
+
+    if (id === 'help') {
+      setCharCount(value.length);
+    }
   };
 
   return (
@@ -36,6 +52,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     type="text"
                     placeholder={textContent.form.name}
                     className="w-full rounded-lg border px-3 py-2"
+                    value={formData.name}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
@@ -47,6 +65,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     type="text"
                     placeholder={textContent.form.surname}
                     className="w-full rounded-lg border px-3 py-2"
+                    value={formData.surname}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -59,6 +79,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   type="text"
                   placeholder={textContent.form.company}
                   className="w-full rounded-lg border px-3 py-2"
+                  value={formData.company}
+                  onChange={handleChange}
                 />
               </div>
               <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
@@ -71,6 +93,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     type="email"
                     placeholder={textContent.form.email}
                     className="w-full rounded-lg border px-3 py-2"
+                    value={formData.email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
@@ -82,6 +106,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     type="tel"
                     placeholder={textContent.form.phone}
                     className="w-full rounded-lg border px-3 py-2"
+                    value={formData.phone}
+                    onChange={handleChange}
                   />
                 </div>
               </div>
@@ -89,7 +115,12 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 <label className="mb-1 block text-sm font-medium" htmlFor="storage">
                   {textContent.form.howMuchStorage}
                 </label>
-                <select id="storage" className="w-full rounded-lg border bg-white px-3 py-2">
+                <select
+                  id="storage"
+                  className="w-full rounded-lg border bg-white px-3 py-2"
+                  value={formData.storage}
+                  onChange={handleChange}
+                >
                   {textContent.form.options.map((option, index) => (
                     <option key={index} value={option === 'Select' ? '' : option}>
                       {option}
@@ -105,7 +136,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   id="help"
                   placeholder={textContent.form.howWeCanHelp}
                   maxLength={1000}
-                  onChange={handleTextareaChange}
+                  value={formData.help}
+                  onChange={handleChange}
                   className="h-32 w-full resize-none rounded-lg border px-3 py-2"
                 />
               </div>
@@ -114,7 +146,13 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 {textContent.form.totalCharacters}
               </p>
               <div className="flex pt-4">
-                <button type="submit" className="w-full rounded-lg bg-gray-30 px-4 py-2 text-white transition lg:w-1/3">
+                <button
+                  type="submit"
+                  className={`w-full rounded-lg px-4 py-2 text-white transition lg:w-1/3 ${
+                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-gray-30'
+                  }`}
+                  disabled={!isFormValid}
+                >
                   {textContent.form.cta}
                 </button>
               </div>
