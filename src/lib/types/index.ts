@@ -115,6 +115,7 @@ export enum PromoCodeName {
   Christmas = 'SECRETSANTA80',
   Special80Coupon = 'SPECIAL80',
   PCLOUD80 = 'PCLOUD80',
+  PRIVACY85 = 'PRIVACY85',
 }
 
 export interface PromoCodeProps {
