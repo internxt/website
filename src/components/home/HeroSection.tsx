@@ -7,6 +7,7 @@ import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -15,13 +16,18 @@ interface HeroSectionForHomeProps {
   lang: string;
   isHomePageV2?: boolean;
 }
+
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/home/image_mobile.webp');
+  const mobileImage = getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
+  const handleOnClick = () => {
+    router.push('/pricing');
+  };
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
@@ -34,7 +40,21 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <HomePageBannerForMobile />
+            {!shouldShowMobileBanner ? (
+              <div className="flex lg:hidden">
+                <Image
+                  loading="eager"
+                  src={mobileImage}
+                  draggable="false"
+                  quality={100}
+                  width={600}
+                  height={450}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt="Laptop and phone with Internxt app"
+                  onClick={handleOnClick}
+                />
+              </div>
+            ) : undefined}
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
