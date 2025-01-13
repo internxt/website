@@ -93,12 +93,20 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               }
             />
           </div>
-          {/* Desktop animation/image */}
+          <Image
+            src={getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp')}
+            width={570}
+            height={529}
+            alt="Header Logo"
+          />
+          {/* Desktop animation/image
+         
           {!shouldShowMobileBanner ? (
             <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
               <Animation />
             </div>
           ) : undefined}
+          */}
         </div>
       </div>
     </section>
