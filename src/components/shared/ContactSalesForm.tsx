@@ -17,12 +17,12 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
 
   return (
     <section className="overflow-hidden pt-5 lg:pt-10">
-      <div className="text-cente flex flex-col items-center gap-6">
+      <div className="text-cente flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] text-xl text-gray-80">{textContent.description}</h3>
       </div>
 
-      <div className="mb-10 mt-10 flex h-screen items-stretch justify-center lg:mb-20 lg:mt-20">
+      <div className="mb-10 mt-10 flex h-screen items-stretch justify-center lg:mb-20 lg:mt-20 " id="contactSales">
         <div className="flex w-full max-w-screen-lg">
           <div className="flex-1 rounded-l-lg bg-gray-1 p-10">
             <form className="space-y-4">
@@ -35,7 +35,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="border-highligth-10 w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2"
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
@@ -46,7 +46,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="surname"
                     type="text"
                     placeholder={textContent.form.surname}
-                    className="border-gray-300 w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2"
                   />
                 </div>
               </div>
@@ -58,7 +58,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   id="company"
                   type="text"
                   placeholder={textContent.form.company}
-                  className="border-gray-300 w-full rounded-lg border px-3 py-2"
+                  className="w-full rounded-lg border px-3 py-2"
                 />
               </div>
               <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
@@ -70,7 +70,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="border-gray-300 w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2"
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
@@ -81,7 +81,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="phone"
                     type="tel"
                     placeholder={textContent.form.phone}
-                    className="border-gray-300 w-full rounded-lg border px-3 py-2"
+                    className="w-full rounded-lg border px-3 py-2"
                   />
                 </div>
               </div>
@@ -89,7 +89,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                 <label className="mb-1 block text-sm font-medium" htmlFor="storage">
                   {textContent.form.howMuchStorage}
                 </label>
-                <select id="storage" className="border-gray-300 w-full rounded-lg border bg-white px-3 py-2">
+                <select id="storage" className="w-full rounded-lg border bg-white px-3 py-2">
                   {textContent.form.options.map((option, index) => (
                     <option key={index} value={option === 'Select' ? '' : option}>
                       {option}
@@ -106,7 +106,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   placeholder={textContent.form.howWeCanHelp}
                   maxLength={1000}
                   onChange={handleTextareaChange}
-                  className="border-gray-300 h-32 w-full resize-none rounded-lg border px-3 py-2"
+                  className="h-32 w-full resize-none rounded-lg border px-3 py-2"
                 />
               </div>
               <p className="mt-1 text-right text-sm text-gray-100">
