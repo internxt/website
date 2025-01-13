@@ -93,7 +93,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                    className="border-highlight-10 w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -121,7 +121,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   className="w-full appearance-none rounded-lg border-2 border-transparent bg-white px-3 py-2 pr-12 focus:border-primary focus:ring-2 focus:ring-primary"
                   value={formData.storage}
                   onChange={(e) => {
-                    handleChange(e); // Actualiza el valor seleccionado
+                    handleChange(e);
                   }}
                 >
                   {textContent.form.options.map((option, index) => (
