@@ -11,7 +11,7 @@ const FeaturesBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [showBanner, setShowBanner] = useState<boolean>(false);
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
 
   const handleClose = () => {

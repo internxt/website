@@ -180,7 +180,7 @@ LayoutProps) {
         <link rel="manifest" href="/manifest.json" crossOrigin="use-credentials" />
         <link rel="icon" href="/favicon.ico" />
 
-        <link rel="preload" href="/cookiebanner.style.css" as="style" />
+        <link rel="stylesheet" href="/cookiebanner.style.css" />
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
