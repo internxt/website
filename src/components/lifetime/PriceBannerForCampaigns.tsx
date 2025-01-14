@@ -46,13 +46,13 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex items-center justify-center lg:ml-10 lg:mt-6">
+          <div className="relative flex items-center justify-center">
             <Image
               src={getImage('/images/privacy_week/internxt_dataprivacyweek_pricing.webp')}
               width={593}
               height={540}
               alt="Internxt Cloud Storage Pricing"
-              className="-translate-y-20 translate-x-30 transform rounded-xl "
+              className="transform rounded-xl  xs:translate-x-20 xs:translate-y-20 md:-translate-y-20 md:translate-x-20 lg:-translate-y-10 lg:translate-x-30 "
             />
           </div>
         </div>
