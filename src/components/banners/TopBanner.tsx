@@ -18,12 +18,12 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-red text-white lg:flex`}
+        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-normal">
-              🎄{textContent.title.normalText} <span className="font-bold">{textContent.title.boldText}</span>
+              🔐 {textContent.title.normalText} <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
           <Link
@@ -41,12 +41,12 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       <Link
         href={'/pricing'}
         target="_blank"
-        className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-red text-white lg:hidden`}
+        className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className="flex flex-col items-center justify-center px-2 py-2 text-center">
           <div className="flex flex-col items-center justify-center">
             <p className="font-normal">
-              🎄 {textContent.title.normalText}
+              🔐{textContent.title.normalText}
               <span className="font-semibold">{textContent.title.boldText}</span>
             </p>
           </div>

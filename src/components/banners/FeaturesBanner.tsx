@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { CheckCircle, Snowflake, X } from '@phosphor-icons/react';
+import { CheckCircle, ShieldCheck, Snowflake, X } from '@phosphor-icons/react';
 
-const HIDE_BANNER_DATE = new Date('2024-01-07');
+const HIDE_BANNER_DATE = new Date('2024-01-15');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
@@ -11,7 +11,7 @@ const FeaturesBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const [showBanner, setShowBanner] = useState<boolean>(false);
+  const [showBanner, setShowBanner] = useState<boolean>(true);
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
 
   const handleClose = () => {
@@ -57,21 +57,21 @@ const FeaturesBanner = () => {
           className="absolute right-0 m-7 flex rounded-md  hover:bg-gray-1/10"
           onClick={handleClose}
         >
-          <X size={32} />
+          <X size={32} className="text-gray-100" />
         </button>
         <div className="flex max-w-[800px] flex-col items-center justify-between py-16 md:flex-row md:pb-20 lg:w-screen">
           <div className="flex h-max w-full flex-col items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
-            <div className="flex rounded-lg border-2 border-pink bg-red-dark px-3 py-1.5">
-              <p className="text-2xl font-bold text-white">{textContent.featuresBanner.label}</p>
+            <div className="flex rounded-lg  border-2 border-gray-5 bg-white px-3 py-1.5">
+              <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[400px] text-5xl font-bold leading-tight text-gray-80">
+            <p className="w-full max-w-[400px] text-4xl font-bold leading-tight text-gray-80 lg:text-5xl">
               {textContent.featuresBanner.title}
             </p>
 
             <div className="flex flex-col items-center space-y-3 lg:items-start">
               <button
                 onClick={handleOnClick}
-                className="flex w-max items-center rounded-lg bg-gray-5 px-5 py-3 text-lg font-medium text-gray-80"
+                className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
               >
                 {textContent.featuresBanner.cta}
               </button>
@@ -81,53 +81,25 @@ const FeaturesBanner = () => {
                   {textContent.featuresBanner.guarantee}
                 </p>
               </div>
-              <p className="text-sm font-medium text-gray-80">{textContent.featuresBanner.lastCta}</p>
+              <p className="text-sm font-medium text-gray-50">{textContent.featuresBanner.lastCta}</p>
             </div>
           </div>
           <div className="hidden w-full items-center lg:flex">
             <div className="flex flex-col">
               <div className="flex flex-col space-y-8">
                 {textContent.featuresBanner.features.map((card, index) => {
-                  if (index === textContent.featuresBanner.features.length - 2) {
-                    return (
-                      <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
-                        <div className="flex">
-                          <Snowflake size={32} className="mr-4 text-red" />
-                          <p className="text-lg font-semibold text-gray-80">{card}</p>
-                        </div>
-                        <div className="flex flex-row">
-                          <p className="text-lg font-semibold text-red">
-                            {textContent.featuresBanner.features[index + 1]}
-                          </p>
-                        </div>
-                      </div>
-                    );
-                  }
-
-                  if (index === textContent.featuresBanner.features.length - 1) {
-                    return null;
-                  }
                   return (
-                    <div
-                      className={`flex flex-row space-x-4 ${
-                        index === textContent.featuresBanner.features.length - 1 ? 'font-bold text-red' : ''
-                      }`}
-                      key={index}
-                    >
-                      <Snowflake size={32} className="text-red" />
-                      <p className="text-lg font-semibold text-gray-80">{card}</p>
+                    <div className="flex flex-row space-x-1 font-bold text-red" key={index}>
+                      <div className="flex">
+                        <ShieldCheck size={32} className="mr-4 text-primary" weight="fill" />
+                        <p className="text-lg font-semibold text-gray-80">{card}</p>
+                      </div>
                     </div>
                   );
                 })}
               </div>
             </div>
           </div>
-        </div>
-        <div
-          className={`fixed bottom-0 left-0 right-0 mt-8 flex w-full items-center justify-center bg-primary px-1 
-          py-1 text-center text-white lg:mt-0 lg:py-4`}
-        >
-          🎄{textContent.featuresBanner.subtitle}
         </div>
       </div>
     </div>
