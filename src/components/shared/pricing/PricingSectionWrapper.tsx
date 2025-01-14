@@ -43,7 +43,7 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Year,
+  startIndividualPlansFromInterval = Interval.Lifetime,
   startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Lifetime',
   hideBusinessSelector,
