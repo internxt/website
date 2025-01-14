@@ -82,7 +82,12 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isBusiness
+      ? PromoCodeName.SoftSales
+      : isCheckoutForLifetime
+      ? PromoCodeName.PrivacyWeek
+      : PromoCodeName.SoftSales;
+
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
@@ -104,7 +109,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
+          individuals: decimalDiscount,
           lifetime: decimalDiscount,
+          business: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
