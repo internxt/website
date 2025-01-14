@@ -11,7 +11,7 @@ const FeaturesBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const [showBanner, setShowBanner] = useState<boolean>(false);
+  const [showBanner, setShowBanner] = useState<boolean>(true);
   const textContent = require(`@/assets/lang/${lang}/banners.json`);
 
   const handleClose = () => {
@@ -64,7 +64,7 @@ const FeaturesBanner = () => {
             <div className="flex rounded-lg  border-2 border-gray-5 bg-white px-3 py-1.5">
               <p className="text-2xl font-bold text-primary">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[400px] text-5xl font-bold leading-tight text-gray-80">
+            <p className="w-full max-w-[400px] text-4xl font-bold leading-tight text-gray-80 lg:text-5xl">
               {textContent.featuresBanner.title}
             </p>
 
