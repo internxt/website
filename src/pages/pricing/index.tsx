@@ -138,8 +138,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            business: decimalDiscount,
             lifetime: decimalDiscount,
           }}
           lang={lang}
