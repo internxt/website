@@ -111,6 +111,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    // Google Ads conversion tracking
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-728922855/NyyXCLj9z4caEOf1ydsC',
+        value: 1.0,
+        currency: 'EUR',
+      });
+    }
+
     const couponCodeForCheckout = isBusiness
       ? PromoCodeName.SoftSales
       : isCheckoutForLifetime
