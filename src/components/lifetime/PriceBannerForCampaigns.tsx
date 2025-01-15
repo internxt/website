@@ -4,6 +4,8 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 
+const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+
 export const PriceBannerForCampaigns = ({
   textContent,
   redirectTo,
@@ -14,7 +16,6 @@ export const PriceBannerForCampaigns = ({
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
 
-  // Google Ads conversion tracking
   const handleConversion = (url: string) => {
     const callback = () => {
       if (url) {
@@ -24,7 +25,7 @@ export const PriceBannerForCampaigns = ({
 
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        send_to: SEND_TO,
         value: 1.0,
         currency: 'EUR',
         event_callback: callback,
