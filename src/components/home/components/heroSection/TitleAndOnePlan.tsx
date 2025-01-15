@@ -25,6 +25,17 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       });
   }, []);
 
+  // Google Ads conversion tracking
+  const handleButtonClick = () => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        value: 1.0,
+        currency: 'EUR',
+      });
+    }
+  };
+
   return (
     <div className="flex max-w-[544px] flex-col gap-6">
       {header ?? (
@@ -63,6 +74,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
           href={'#priceTable'}
+          onClick={handleButtonClick} // Register the conversion event here
           className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}
