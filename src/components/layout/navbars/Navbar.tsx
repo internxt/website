@@ -14,6 +14,8 @@ import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 
+const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+
 export interface NavbarProps {
   textContent: NavigationBarText;
   lang: string;
@@ -89,7 +91,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        send_to: SEND_TO,
         value: 1.0,
         currency: 'EUR',
         event_callback: callback,
