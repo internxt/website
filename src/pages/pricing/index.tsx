@@ -51,7 +51,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.SoftSales,
+    couponCodeForBusiness: PromoCodeName.PrivacyWeek,
     couponCodeForLifetime: PromoCodeName.PrivacyWeek,
   });
 
@@ -122,7 +122,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -144,9 +143,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
-            business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+            business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
           lang={lang}
           products={products}
