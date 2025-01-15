@@ -5,6 +5,7 @@ import { Check, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
   header?: JSX.Element;
@@ -29,7 +30,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   const handleButtonClick = () => {
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        send_to: SEND_TO,
         value: 1.0,
         currency: 'EUR',
       });
@@ -74,7 +75,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
           href={'#priceTable'}
-          onClick={handleButtonClick} // Register the conversion event here
+          onClick={handleButtonClick}
           className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}
