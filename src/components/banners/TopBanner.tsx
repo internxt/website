@@ -5,13 +5,13 @@ interface TopBannerProps {
   isBannerFixed?: boolean;
 }
 
+const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
 const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const router = useRouter();
   const lang = router.locale;
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
 
-  // Google Ads conversion tracking
   const handleConversion = (url: string) => {
     const callback = () => {
       if (url) {
@@ -20,7 +20,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
     };
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        send_to: SEND_TO,
         value: 1.0,
         currency: 'EUR',
         event_callback: callback,
