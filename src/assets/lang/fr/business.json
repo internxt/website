@@ -186,8 +186,7 @@
     "title": "Contacter les ventes",
     "description": "Remplissez le formulaire de contact et l'équipe vous contactera sous peu.",
     "form": {
-      "name": "Prénom",
-      "surname": "Nom de famille",
+      "name": "Nom complet",
       "email": "Adresse e-mail",
       "company": "Nom de l'entreprise",
       "phone": "Numéro de téléphone",
