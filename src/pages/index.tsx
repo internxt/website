@@ -26,6 +26,8 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 
+const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
@@ -84,12 +86,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    // Google Ads conversion tracking
     if (window.gtag) {
       window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/NyyXCLj9z4caEOf1ydsC',
+        send_to: SEND_TO,
         value: 1.0,
-        currency: 'EUR',
+        currency: currencyValue,
       });
     }
 
