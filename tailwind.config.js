@@ -224,7 +224,12 @@ module.exports = {
         'move-vertical': 'move-vertical 5s linear infinite',
         fall: 'fall 5s linear infinite',
       },
-
+      translate: {
+        25: '6.25rem',
+        30: '7.5rem',
+        40: '10rem',
+        50: '12.5rem',
+      },
       keyframes: {
         'fade-r-large': {
           '0%': { transform: 'translateX(80px)', opacity: 0 },
