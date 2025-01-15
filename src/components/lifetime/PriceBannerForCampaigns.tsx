@@ -3,8 +3,6 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
-import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -16,6 +14,26 @@ export const PriceBannerForCampaigns = ({
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
 
+  // Google Ads conversion tracking
+  const handleConversion = (url: string) => {
+    const callback = () => {
+      if (url) {
+        window.location.href = url;
+      }
+    };
+
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        value: 1.0,
+        currency: 'EUR',
+        event_callback: callback,
+      });
+    } else {
+      callback();
+    }
+  };
+
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
@@ -23,7 +41,7 @@ export const PriceBannerForCampaigns = ({
         className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] bg-primary sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
       >
         <div className="flex max-h-[384px] w-full min-w-[800px] flex-col items-center gap-6 px-2 py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
-          <div className="flex  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
+          <div className="flex flex-col items-center gap-2 text-center lg:items-start lg:text-left">
             <div className="flex w-max rounded-xl border-2 border-gray-5 bg-white px-2 py-5 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-primary sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
@@ -33,12 +51,12 @@ export const PriceBannerForCampaigns = ({
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
-              <Link
-                href={redirectTo ?? '#billingButtons'}
+              <button
+                onClick={() => handleConversion(redirectTo ?? '#billingButtons')}
                 className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
               >
                 {textContent.cta}
-              </Link>
+              </button>
             </div>
             <div className="flex flex-row items-center space-y-1 text-gray-100 sm:space-x-2">
               <CheckCircle size={20} className="text-gray-30" />
@@ -52,7 +70,7 @@ export const PriceBannerForCampaigns = ({
               width={593}
               height={540}
               alt="Internxt Cloud Storage Pricing"
-              className="transform rounded-xl  xs:translate-x-20 xs:translate-y-20 md:-translate-y-20 md:translate-x-20 lg:-translate-y-10 lg:translate-x-30 "
+              className="transform rounded-xl xs:translate-x-20 xs:translate-y-20 md:-translate-y-20 md:translate-x-20 lg:-translate-y-10 lg:translate-x-30 "
             />
           </div>
         </div>
@@ -74,12 +92,12 @@ export const PriceBannerForCampaigns = ({
               <CheckCircle size={20} className="text-primary" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
-            <Link
-              href={redirectTo ?? '#billingButtons'}
+            <button
+              onClick={() => handleConversion(redirectTo ?? '#billingButtons')}
               className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
             >
               {textContent.cta}
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -89,7 +107,7 @@ export const PriceBannerForCampaigns = ({
             width={377}
             height={200}
             alt="Privacy Week"
-            className="w-full  object-cover"
+            className="w-full object-cover"
           />
         </div>
       </div>
