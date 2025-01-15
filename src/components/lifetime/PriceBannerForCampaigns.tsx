@@ -16,7 +16,7 @@ export const PriceBannerForCampaigns = ({
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
 
-  const handleConversion = (url: string) => {
+  const handleAdsConversion = (url: string) => {
     const callback = () => {
       if (url) {
         window.location.href = url;
@@ -53,7 +53,7 @@ export const PriceBannerForCampaigns = ({
             </div>
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
               <button
-                onClick={() => handleConversion(redirectTo ?? '#billingButtons')}
+                onClick={() => handleAdsConversion(redirectTo ?? '#billingButtons')}
                 className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
               >
                 {textContent.cta}
@@ -94,7 +94,7 @@ export const PriceBannerForCampaigns = ({
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
             <button
-              onClick={() => handleConversion(redirectTo ?? '#billingButtons')}
+              onClick={() => handleAdsConversion(redirectTo ?? '#billingButtons')}
               className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
             >
               {textContent.cta}

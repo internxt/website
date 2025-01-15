@@ -26,8 +26,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       });
   }, []);
 
-  // Google Ads conversion tracking
-  const handleButtonClick = () => {
+  const handleAdsConversion = () => {
     if (window.gtag) {
       window.gtag('event', 'conversion', {
         send_to: SEND_TO,
@@ -75,7 +74,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
           href={'#priceTable'}
-          onClick={handleButtonClick}
+          onClick={handleAdsConversion}
           className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}

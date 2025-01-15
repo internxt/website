@@ -12,7 +12,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
 
-  const handleConversion = (url: string) => {
+  const handleAdsConversion = (url: string) => {
     const callback = () => {
       if (url) {
         window.location.href = url;
@@ -45,7 +45,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
           <button
-            onClick={() => handleConversion('/pricing')}
+            onClick={() => handleAdsConversion('/pricing')}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
           >
@@ -56,7 +56,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       </div>
       {/* Mobile view */}
       <button
-        onClick={() => handleConversion('/pricing')}
+        onClick={() => handleAdsConversion('/pricing')}
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className="flex flex-col items-center justify-center px-2 py-2 text-center">

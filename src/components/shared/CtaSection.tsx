@@ -27,7 +27,6 @@ const CtaSection = ({
       }
     };
 
-    // Google Ads conversion tracking
     if (window.gtag) {
       window.gtag('event', 'conversion', {
         send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',

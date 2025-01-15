@@ -81,8 +81,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     };
   }, []);
 
-  // Google Ads conversion tracking
-  const handleConversion = (eventAction: string, redirectURL: string) => {
+  const handleAdsConversion = (eventAction: string, redirectURL: string) => {
     const callback = () => {
       if (redirectURL) {
         router.push(redirectURL);
@@ -187,7 +186,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => handleConversion('choose_storage', '/pricing')}
+                onClick={() => handleAdsConversion('choose_storage', '/pricing')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -199,7 +198,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'chooseStorage' ? (
               <button
-                onClick={() => handleConversion('choose_storage', '/pricing')}
+                onClick={() => handleAdsConversion('choose_storage', '/pricing')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -210,7 +209,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
             {props.cta[0] === 'priceTable' ? (
               <button
-                onClick={() => handleConversion('choose_storage', '#priceTable')}
+                onClick={() => handleAdsConversion('choose_storage', '#priceTable')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
