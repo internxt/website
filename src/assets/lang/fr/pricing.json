@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% de réduction", "line2": "sur nos plans annuels" },
+    "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
     "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
@@ -8,7 +8,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "80% de réduction",
+      "title": "85% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -41,16 +41,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80%",
+      "label": "Économisez 85%",
       "title": "Soldes d'Halloween",
       "subtitle": "Écoutez ces cloches de soldes tinter!",
       "cta": "Choisissez votre plan",
       "cta2": "Obtenez 85 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
-      "titleMbl1": "Noël",
-      "titleMbl2": "économies",
-      "titleMbl3": "sont là!",
+      "titleMbl1": "Écoutez  de ",
+      "titleMbl2": "ces cloches de",
+      "titleMbl3": "soldes tinter!",
       "ctaMbl": "Sélectionner un plan"
     },
     "planTitles": {
