@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
-import Link from 'next/link';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
@@ -11,6 +10,25 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const lang = router.locale;
   const bannersJson = require(`@/assets/lang/${lang}/banners.json`);
   const textContent = bannersJson.TopBarBanner;
+
+  // Google Ads conversion tracking
+  const handleConversion = (url: string) => {
+    const callback = () => {
+      if (url) {
+        window.location.href = url;
+      }
+    };
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
+        value: 1.0,
+        currency: 'EUR',
+        event_callback: callback,
+      });
+    } else {
+      callback();
+    }
+  };
 
   return (
     <>
@@ -26,21 +44,19 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               🔐 {textContent.title.normalText} <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
-          <Link
-            href={'/pricing'}
-            target="_blank"
+          <button
+            onClick={() => handleConversion('/pricing')}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
           >
             <p className="font-semibold underline hover:no-underline">{textContent.title.cta}</p>
             <CaretRight size={16} />
-          </Link>
+          </button>
         </div>
       </div>
       {/* Mobile view */}
-      <Link
-        href={'/pricing'}
-        target="_blank"
+      <button
+        onClick={() => handleConversion('/pricing')}
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className="flex flex-col items-center justify-center px-2 py-2 text-center">
@@ -51,7 +67,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
         </div>
-      </Link>
+      </button>
     </>
   );
 };
