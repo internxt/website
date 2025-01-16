@@ -186,11 +186,7 @@ export const PricingSection = ({
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
-                    product.interval === Interval.Lifetime ||
-                    product.interval === Interval.Year ||
-                    product.interval === Interval.Month
-                      ? decimalDiscount?.lifetime
-                      : undefined
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
                   }
                   lang={lang}
                   darkMode={darkMode}
