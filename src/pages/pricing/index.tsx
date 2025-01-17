@@ -31,7 +31,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];

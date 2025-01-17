@@ -26,7 +26,7 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];

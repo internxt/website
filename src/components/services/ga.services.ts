@@ -1,4 +1,4 @@
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
 
 const handleAdsConversion = (url, elementConversion, value, currency) => {
   const callback = () => {

@@ -18,7 +18,7 @@ import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];

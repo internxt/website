@@ -15,8 +15,6 @@ import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 import { handleAdsConversion } from '@/components/services/ga.services';
 
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
-
 export interface NavbarProps {
   textContent: NavigationBarText;
   lang: string;
