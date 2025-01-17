@@ -87,7 +87,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     if (window.gtag) {
-      window.gtag('event', 'HomePage', {
+      window.gtag('event', 'HomePage-Conversion', {
         send_to: SEND_TO,
         value: 1.0,
         currency: currencyValue,

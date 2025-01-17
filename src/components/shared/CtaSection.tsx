@@ -37,7 +37,7 @@ const CtaSection = ({
           href={url}
           target={target}
           onClick={() => {
-            handleAdsConversion(url, 'PriceBanner', 1, 'USD');
+            handleAdsConversion(url, 'Cta-Conversion', 1, 'USD');
             if (onClick) onClick();
           }}
           className={`flex rounded-lg px-5 py-3 text-lg font-medium ${

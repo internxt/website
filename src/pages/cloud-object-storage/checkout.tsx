@@ -208,7 +208,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       }
 
       if (window && window.gtag) {
-        window.gtag('event', 'checkoutS3', {
+        window.gtag('event', 'checkoutS3-Conversion', {
           send_to: SEND_TO,
           value: plan?.amount ?? 1.0,
           currency: plan?.currency,
