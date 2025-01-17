@@ -121,7 +121,7 @@ LayoutProps) {
       cookieData.anonymousId
     };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
-    const planCookie = `impactPlan=${structuredUUID};expires=${new Date(
+    const planCookie = `gaPlan=${structuredUUID};expires=${new Date(
       expirationDate,
     ).toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
