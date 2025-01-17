@@ -102,30 +102,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
-          {lang !== 'es' && (
-            <>
-              <Script
-                defer
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-              />
-              <Script
-                defer
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gtag.GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-                }}
-              />
-            </>
-          )}
-
           {lang === 'en' && (
             <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
           )}
