@@ -13,6 +13,7 @@ import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
+import { handleAdsConversion } from '@/components/services/ga.services';
 
 const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
 
@@ -80,25 +81,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  const handleAdsConversion = (eventAction: string, redirectURL: string) => {
-    const callback = () => {
-      if (redirectURL) {
-        router.push(redirectURL);
-      }
-    };
-
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: SEND_TO,
-        value: 1.0,
-        currency: 'EUR',
-        event_callback: callback,
-      });
-    } else {
-      callback();
-    }
-  };
 
   return (
     <div
@@ -186,7 +168,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => handleAdsConversion('choose_storage', '/pricing')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -198,7 +180,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'chooseStorage' ? (
               <button
-                onClick={() => handleAdsConversion('choose_storage', '/pricing')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -209,7 +191,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
             {props.cta[0] === 'priceTable' ? (
               <button
-                onClick={() => handleAdsConversion('choose_storage', '#priceTable')}
+                onClick={() => handleAdsConversion('#priceTable', 'Navbar', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}

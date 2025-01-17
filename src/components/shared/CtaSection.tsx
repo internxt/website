@@ -1,5 +1,6 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
+import { handleAdsConversion } from '../services/ga.services';
 
 const CtaSection = ({
   textContent,
@@ -20,25 +21,6 @@ const CtaSection = ({
 }) => {
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 
-  const handleClick = () => {
-    const callback = () => {
-      if (url) {
-        window.location.href = url;
-      }
-    };
-
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
-        value: 1.0,
-        currency: 'EUR',
-        event_callback: callback,
-      });
-    } else {
-      callback();
-    }
-  };
-
   return (
     <section
       style={{
@@ -54,14 +36,10 @@ const CtaSection = ({
         <Link
           href={url}
           target={target}
-          onClick={
-            onClick
-              ? () => {
-                  onClick();
-                  handleClick();
-                }
-              : handleClick
-          } // Combina onClick existente con la lógica de conversión
+          onClick={() => {
+            handleAdsConversion(url, 'PriceBanner', 1, 'USD');
+            if (onClick) onClick();
+          }}
           className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
             bgImage && bgImage !== defaultBgImage
               ? 'bg-primary text-xl text-white hover:bg-primary-dark'

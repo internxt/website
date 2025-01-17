@@ -3,8 +3,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
-
-const SEND_TO = process.env.GOOGLE_ANALYTICS_SENDTO;
+import { handleAdsConversion } from '../services/ga.services';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -15,25 +14,6 @@ export const PriceBannerForCampaigns = ({
 }) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
-
-  const handleAdsConversion = (url: string) => {
-    const callback = () => {
-      if (url) {
-        window.location.href = url;
-      }
-    };
-
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: SEND_TO,
-        value: 1.0,
-        currency: 'EUR',
-        event_callback: callback,
-      });
-    } else {
-      callback();
-    }
-  };
 
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
@@ -53,7 +33,7 @@ export const PriceBannerForCampaigns = ({
             </div>
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
               <button
-                onClick={() => handleAdsConversion(redirectTo ?? '#billingButtons')}
+                onClick={() => handleAdsConversion('#billingButtons', 'PriceBanner', 1, 'USD')}
                 className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
               >
                 {textContent.cta}
@@ -94,7 +74,7 @@ export const PriceBannerForCampaigns = ({
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
             <button
-              onClick={() => handleAdsConversion(redirectTo ?? '#billingButtons')}
+              onClick={() => handleAdsConversion('#billingButtons', 'PriceBanner', 1, 'USD')}
               className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
             >
               {textContent.cta}

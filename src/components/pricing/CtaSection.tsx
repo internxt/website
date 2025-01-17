@@ -1,20 +1,8 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
+import { handleAdsConversion } from '../services/ga.services';
 
 const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
-  const handleAdsConversion = (callback: () => void) => {
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        send_to: 'AW-728922855/-RgbCLv9z4caEOf1ydsC',
-        value: 1.0,
-        currency: 'EUR',
-        event_callback: callback,
-      });
-    } else {
-      callback();
-    }
-  };
-
   return (
     <section className="overflow-hidden bg-primary py-14">
       <div className="flex flex-col items-center justify-center space-y-8 px-5 text-center">
@@ -25,19 +13,18 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            handleAdsConversion(() => {
-              if (freePlan) {
-                goToSignUpURL();
-              } else {
-                const priceTable = document.getElementById('priceTable');
-                if (priceTable) {
-                  window.scrollTo({
-                    top: priceTable.offsetTop,
-                    behavior: 'smooth',
-                  });
-                }
+            handleAdsConversion('#priceTable', 'Cta', 1, 'USD');
+            if (freePlan) {
+              goToSignUpURL();
+            } else {
+              const priceTable = document.getElementById('priceTable');
+              if (priceTable) {
+                window.scrollTo({
+                  top: priceTable.offsetTop,
+                  behavior: 'smooth',
+                });
               }
-            });
+            }
           }}
         >
           {textContent.cta}
