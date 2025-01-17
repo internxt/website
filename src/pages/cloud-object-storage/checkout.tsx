@@ -208,11 +208,11 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       }
 
       if (window && window.gtag) {
-        window.gtag('event', 'conversion', {
+        window.gtag('event', 'checkoutS3', {
           send_to: SEND_TO,
           value: plan?.amount ?? 1.0,
           currency: plan?.currency,
-          transaction_id: '',
+          transaction_id: plan?.bytes + '-' + plan?.amount,
         });
       }
     } catch (err) {
