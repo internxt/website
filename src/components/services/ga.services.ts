@@ -8,7 +8,7 @@ const handleAdsConversion = (url, elementConversion, value, currency) => {
   };
 
   if (window.gtag) {
-    window.gtag('event', 'conversion', {
+    window.gtag('event', elementConversion, {
       send_to: SEND_TO,
       value: value,
       currency: currency,
