@@ -108,10 +108,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
           )}
 
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=NEXT_PUBLIC_GA_ID=${gtag.GA_TRACKING_ID}`}
-          ></script>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
 
           <script
             dangerouslySetInnerHTML={{
