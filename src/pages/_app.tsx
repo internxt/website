@@ -8,14 +8,12 @@ import 'react-tooltip/dist/react-tooltip.css';
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
-
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
-const TRACK_BUTTONS = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
