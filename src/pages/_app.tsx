@@ -108,7 +108,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
           )}
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=NEXT_PUBLIC_GA_ID=${gtag.GA_TRACKING_ID}`}
+          ></script>
 
           <script
             dangerouslySetInnerHTML={{
@@ -116,7 +119,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           window.dataLayer = window.dataLayer || [];
           function gtag() { dataLayer.push(arguments); }
           gtag('js', new Date());
-          gtag('config', 'AW-728922855');
+          gtag('config', ${gtag.GA_TRACKING_ID});
           `,
             }}
           />
