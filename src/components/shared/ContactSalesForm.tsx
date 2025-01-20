@@ -8,14 +8,13 @@ interface ContactSalesFormProps {
 export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
-    surname: '',
     company: '',
     email: '',
     phone: '',
     storage: '',
     help: '',
   });
-  const [charCount, setCharCount] = useState(0);
+
   const [isFormValid, setIsFormValid] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -26,10 +25,6 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
       setIsFormValid(isValid);
       return updatedFormData;
     });
-
-    if (id === 'help') {
-      setCharCount(value.length);
-    }
   };
 
   return (
@@ -58,32 +53,20 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <label className="font-regular mb-1 block text-sm" htmlFor="surname">
-                    {textContent.form.surname}
+                  <label className="font-regular mb-1 block text-sm" htmlFor="company">
+                    {textContent.form.company}
                   </label>
                   <input
-                    id="surname"
+                    id="company"
                     type="text"
-                    placeholder={textContent.form.surname}
+                    placeholder={textContent.form.company}
                     className="w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
-                    value={formData.surname}
+                    value={formData.company}
                     onChange={handleChange}
                   />
                 </div>
               </div>
-              <div>
-                <label className="font-regular mb-1 block text-sm" htmlFor="company">
-                  {textContent.form.company}
-                </label>
-                <input
-                  id="company"
-                  type="text"
-                  placeholder={textContent.form.company}
-                  className="w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
-                  value={formData.company}
-                  onChange={handleChange}
-                />
-              </div>
+
               <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
                   <label className="font-regular mb-1 block text-sm" htmlFor="email">
@@ -148,10 +131,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   className="h-32 w-full resize-none rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
                 />
               </div>
-              <p className="mt-1 text-right text-sm text-gray-100">
-                {charCount}
-                {textContent.form.totalCharacters}
-              </p>
+
               <div className="flex pt-4">
                 <button
                   type="submit"
