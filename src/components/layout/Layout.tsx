@@ -238,19 +238,6 @@ LayoutProps) {
         <script async src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', 'AW-728922855');
-          `,
-          }}
-        />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
