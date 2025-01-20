@@ -26,6 +26,8 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
@@ -84,6 +86,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    if (window.gtag) {
+      window.gtag('event', 'HomePage-Conversion', {
+        send_to: SEND_TO,
+        value: 1.0,
+        currency: currencyValue,
+      });
+    }
+
     const couponCodeForCheckout = isBusiness
       ? PromoCodeName.SoftSales
       : isCheckoutForLifetime

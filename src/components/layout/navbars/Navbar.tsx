@@ -13,6 +13,7 @@ import { getImage } from '@/lib/getImage';
 import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
+import { handleAdsConversion } from '@/components/services/ga.services';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -165,7 +166,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => router.push('/pricing')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -177,7 +178,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'chooseStorage' ? (
               <button
-                onClick={() => router.push('/pricing')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -188,7 +189,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
             {props.cta[0] === 'priceTable' ? (
               <button
-                onClick={() => router.push('#priceTable')}
+                onClick={() => handleAdsConversion('#priceTable', 'Navbar-Conversion', 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}

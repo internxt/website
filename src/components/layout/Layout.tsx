@@ -92,11 +92,14 @@ LayoutProps) {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
 
+    const priceId = localStorage.getItem('priceId') || 'defaultPriceId';
+    const isBusiness = localStorage.getItem('userType') === 'business';
+
     if (source !== 'Impact') return;
 
     const impactAnonymousId = getCookie('impactAnonymousId');
-
     const randomUUID = impactAnonymousId || crypto.randomUUID();
+    const structuredUUID = `${randomUUID}-${priceId}-${isBusiness ? 'business' : 'personal'}`;
 
     const cookieData = {
       anonymousId: randomUUID,
@@ -118,8 +121,13 @@ LayoutProps) {
       cookieData.anonymousId
     };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
+    const planCookie = `gaPlanId=${structuredUUID};expires=${new Date(
+      expirationDate,
+    ).toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
+
     document.cookie = sourceCookie;
     document.cookie = anonymousIdCookie;
+    document.cookie = planCookie;
 
     axios
       .post(IMPACT_API, {
@@ -230,6 +238,19 @@ LayoutProps) {
         <script async src="/js/cookiebanner.script.js" />
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'AW-728922855');
+          `,
+          }}
+        />
       </Head>
 
       <Script type="application/ld+json" strategy="beforeInteractive">

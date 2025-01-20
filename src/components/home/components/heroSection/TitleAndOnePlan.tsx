@@ -1,5 +1,6 @@
 import Countdown from '@/components/components/Countdown';
 import { currencyService } from '@/components/services/currency.service';
+import { handleAdsConversion } from '@/components/services/ga.services';
 import Header from '@/components/shared/Header';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
@@ -63,6 +64,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
           href={'#priceTable'}
+          onClick={() => handleAdsConversion('/pricing', 'HeaderHomePage-Conversion', 1, 'USD')}
           className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}

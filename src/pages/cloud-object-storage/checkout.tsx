@@ -18,6 +18,8 @@ import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
   textContent: IntegratedCheckoutText;
@@ -203,6 +205,15 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       if (error) {
         throw new Error(error.message);
+      }
+
+      if (window && window.gtag) {
+        window.gtag('event', 'checkoutS3-Conversion', {
+          send_to: SEND_TO,
+          value: plan?.amount ?? 1.0,
+          currency: plan?.currency,
+          transaction_id: plan?.bytes + '-' + plan?.amount,
+        });
       }
     } catch (err) {
       notificationService.openErrorToast('Something went wrong');
