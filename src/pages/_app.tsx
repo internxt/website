@@ -100,24 +100,22 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        <>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
 
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag() { dataLayer.push(arguments); }
           gtag('js', new Date());
           gtag('config', ${gtag.GA_TRACKING_ID});
           `,
-            }}
-          />
+          }}
+        />
 
-          {lang === 'en' && (
-            <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-          )}
-        </>
+        {lang === 'en' && (
+          <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+        )}
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
