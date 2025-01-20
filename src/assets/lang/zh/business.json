@@ -186,8 +186,7 @@
     "title": "联系销售",
     "description": "填写联系表格，团队将尽快与您联系。",
     "form": {
-      "name": "名字",
-      "surname": "姓氏",
+      "name": "全名",
       "email": "电子邮箱地址",
       "company": "公司名称",
       "phone": "电话号码",

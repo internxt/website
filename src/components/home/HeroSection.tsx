@@ -7,6 +7,7 @@ import { Check, Star } from '@phosphor-icons/react';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -15,13 +16,18 @@ interface HeroSectionForHomeProps {
   lang: string;
   isHomePageV2?: boolean;
 }
+
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/home/image_mobile.webp');
+  const mobileImage = getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
+  const handleOnClick = () => {
+    router.push('/pricing');
+  };
   return (
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
@@ -45,10 +51,10 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   height={450}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="Laptop and phone with Internxt app"
+                  onClick={handleOnClick}
                 />
               </div>
             ) : undefined}
-            <HomePageBannerForMobile />
 
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
@@ -93,12 +99,23 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               }
             />
           </div>
-          {/* Desktop animation/image */}
+          <div className=" hidden h-screen max-h-[700px] w-full justify-center lg:flex">
+            <Image
+              src={getImage('/images/privacy_week/internxt_dataprivacyweek_header.webp')}
+              width={619}
+              height={576}
+              alt="Header Logo"
+              className="object-contain"
+            />
+          </div>
+          {/* Desktop animation/image
+         
           {!shouldShowMobileBanner ? (
             <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
               <Animation />
             </div>
           ) : undefined}
+          */}
         </div>
       </div>
     </section>

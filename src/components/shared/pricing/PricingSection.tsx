@@ -155,7 +155,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(4)
+          {Array(3)
             .fill(0)
             .map((_, i) => (
               <CardSkeleton key={i} />
@@ -186,11 +186,7 @@ export const PricingSection = ({
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
-                    product.interval === Interval.Lifetime ||
-                    product.interval === Interval.Year ||
-                    product.interval === Interval.Month
-                      ? decimalDiscount?.lifetime
-                      : undefined
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
                   }
                   lang={lang}
                   darkMode={darkMode}

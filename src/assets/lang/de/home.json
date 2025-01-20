@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "70% günstiger"
+        "blueText": "85% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -63,7 +63,7 @@
       },
       "description": {
         "normal1": "Erhalten Sie ",
-        "blue": "70% Rabatt ",
+        "blue": "85% Rabatt ",
         "normal2": "auf alle Premium-Pläne."
       },
       "features": ["Bis zu 10TB Speicher", "Zero-Knowledge-Verschlüsselung", "Open source und geprüft"],
