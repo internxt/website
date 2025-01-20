@@ -8,12 +8,14 @@ import 'react-tooltip/dist/react-tooltip.css';
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
+
 import ShowSnackbar from '@/components/Snackbar';
 import BottomBanner from '@/components/banners/BottomBanner';
 import { EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { FreeCardPromoBanner } from '@/components/banners/FreeCardPromoBanner';
 import FeaturesBanner from '@/components/banners/FeaturesBanner';
 
+const TRACK_BUTTONS = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
 const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
@@ -129,6 +131,19 @@ function MyApp({ Component, pageProps }: AppProps) {
           {lang === 'en' && (
             <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
           )}
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-728922855"></script>
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'AW-728922855');
+          `,
+            }}
+          />
         </>
 
         <Component {...pageProps} />
