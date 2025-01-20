@@ -4,7 +4,6 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import 'react-tooltip/dist/react-tooltip.css';
-
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
@@ -102,10 +101,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <>
-          {lang === 'en' && (
-            <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-          )}
-
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
 
           <script
@@ -118,6 +113,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
             }}
           />
+
+          {lang === 'en' && (
+            <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+          )}
         </>
 
         <Component {...pageProps} />
