@@ -11,6 +11,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Encriptación en reposo y en tránsito",
             "end_to_end_encrypted_storage": "Almacenamiento cifrado de extremo a extremo",
+            "post_quantum_encryption": "Encriptación post-cuántica",
             "end_to_end_encrypted_file_sharing": "Compartir archivos cifrados de extremo a extremo",
             "zero_knowledge_encryption": "Encriptación de conocimiento cero",
             "two_factor_authentication": "Autenticación de dos factores",

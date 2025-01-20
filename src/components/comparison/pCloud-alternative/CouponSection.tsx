@@ -7,10 +7,10 @@ interface UseCouponSectionProps {
 }
 
 const CodeComponent = ({ textContent }) => (
-  <div className="flex flex-col items-center gap-4 text-center text-3xl font-semibold text-white md:flex-row md:text-5xl">
+  <div className="flex flex-col items-center gap-4 text-center text-2xl font-semibold text-white md:flex-row md:text-5xl">
     <p className="leading-snug">
       {textContent.line1}
-      <label className="mx-4 rounded-full border-2 border-white px-3 py-1">{textContent.code}</label>
+      <label className="mx-2 rounded-full border-2 border-white px-3 py-1">{textContent.code}</label>
       {textContent.line2}
     </p>
   </div>

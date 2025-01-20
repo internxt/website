@@ -331,6 +331,13 @@
         "answer": [
           "Sim, você pode adicionar tanto armazenamento quanto desejar à sua associação vitalícia à Internxt. Os planos vitalícios da Internxt são empilháveis. Basta comprá-los com o mesmo endereço de e-mail e entrar em contato conosco pelo hello@internxt.com para que possamos empilhá-los juntos para você na mesma conta."
         ]
+      },
+      {
+        "question": "O Internxt é uma solução de armazenamento em nuvem sustentável e ecológica?",
+        "answer": [
+          "Sim, o Internxt está comprometido com a computação em nuvem sustentável, oferecendo soluções de armazenamento ecológicas para apoiar um futuro mais limpo e sustentável. Nossos data centers operam com 92% de energia renovável e são projetados para minimizar emissões de carbono, consumo de recursos e resíduos eletrônicos.",
+          "Nossos esforços contribuem para a meta de neutralidade climática até 2050. [Saiba mais](https://internxt.com/es/green-cloud-computing)"
+        ]
       }
     ]
   },

@@ -11,6 +11,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Encryption at rest and in transit",
             "end_to_end_encrypted_storage": "End-to-end encrypted storage",
+            "post_quantum_encryption": "Post-quantum encryption",
             "end_to_end_encrypted_file_sharing": "End-to-end encrypted file sharing",
             "zero_knowledge_encryption": "Zero-knowledge encryption",
             "two_factor_authentication": "Two-Factor authentication",

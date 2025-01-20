@@ -11,6 +11,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "靜態和傳輸中的加密",
             "end_to_end_encrypted_storage": "端到端加密存儲",
+            "post_quantum_encryption": "後量子加密",
             "end_to_end_encrypted_file_sharing": "端到端加密文件共享",
             "zero_knowledge_encryption": "零知識加密",
             "two_factor_authentication": "雙因素身份驗證",

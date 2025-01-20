@@ -91,7 +91,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
       } ${scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
-      } z-50 border-b border-black`}
+      } z-40 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
