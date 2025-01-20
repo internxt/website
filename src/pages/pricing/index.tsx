@@ -31,6 +31,8 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -50,7 +52,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PrivacyWeek,
+    couponCode: PromoCodeName.SoftSales,
+    couponCodeForBusiness: PromoCodeName.PrivacyWeek,
+    couponCodeForLifetime: PromoCodeName.PrivacyWeek,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -111,6 +115,14 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    if (window.gtag) {
+      window.gtag('event', 'PricingPage-Conversion', {
+        send_to: SEND_TO,
+        value: 1.0,
+        currency: currencyValue,
+      });
+    }
+
     const couponCodeForCheckout = isBusiness
       ? PromoCodeName.SoftSales
       : isCheckoutForLifetime
@@ -120,7 +132,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -142,9 +153,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
-            business: decimalDiscount,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+            business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
           lang={lang}
           products={products}

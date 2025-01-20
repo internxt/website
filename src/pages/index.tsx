@@ -26,6 +26,8 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 
+const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
@@ -42,9 +44,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PrivacyWeek,
+    couponCode: PromoCodeName.SoftSales,
+    couponCodeForBusiness: PromoCodeName.PrivacyWeek,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -72,7 +76,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       description: textContent.FeatureSectionV2.cards![3].description,
     },
   ];
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
   };
@@ -82,6 +86,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    if (window.gtag) {
+      window.gtag('event', 'HomePage-Conversion', {
+        send_to: SEND_TO,
+        value: 1.0,
+        currency: currencyValue,
+      });
+    }
+
     const couponCodeForCheckout = isBusiness
       ? PromoCodeName.SoftSales
       : isCheckoutForLifetime
@@ -109,9 +121,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
-          business: decimalDiscount,
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
