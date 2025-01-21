@@ -31,7 +31,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 
-const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+const SELECT_PLAN_TAG = 'NyyXCLj9z4caEOf1ydsC';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -117,7 +117,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     if (window.gtag) {
       window.gtag('event', 'PricingPage-Conversion', {
-        send_to: SEND_TO,
+        send_to: SELECT_PLAN_TAG,
         value: 1.0,
         currency: currencyValue,
       });

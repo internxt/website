@@ -21,6 +21,8 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
 
+const SELECT_PLAN_TAG = 'NyyXCLj9z4caEOf1ydsC';
+
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarText: NavigationBarText;
@@ -44,6 +46,14 @@ export const BusinessPage = ({
   const locale = lang as string;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    if (window.gtag) {
+      window.gtag('event', 'BusinessPage-Conversion', {
+        send_to: SELECT_PLAN_TAG,
+        value: 1.0,
+        currency: currencyValue,
+      });
+    }
+
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
