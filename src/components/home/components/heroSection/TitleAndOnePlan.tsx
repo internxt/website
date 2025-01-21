@@ -1,6 +1,7 @@
 import Countdown from '@/components/components/Countdown';
 import { currencyService } from '@/components/services/currency.service';
 import { handleAdsConversion } from '@/components/services/ga.services';
+import GA_TAGS from '@/components/services/ga.tags';
 import Header from '@/components/shared/Header';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
@@ -12,7 +13,7 @@ interface TitleAndOnePlanProps {
   footer?: JSX.Element;
 }
 
-const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
 
 const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');

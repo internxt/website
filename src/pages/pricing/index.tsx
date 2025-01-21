@@ -30,9 +30,10 @@ import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
+import GA_TAGS from '@/components/services/ga.tags';
 
 const SEND_TO=process.env.NEXT_PUBLIC_GA_ID;
-const SELECT_PLAN_TAG = 'NyyXCLj9z4caEOf1ydsC';
+const SELECT_PLAN_TAG = GA_TAGS.SELECT_PLAN_TAG;
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];

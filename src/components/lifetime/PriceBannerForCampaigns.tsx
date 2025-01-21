@@ -4,8 +4,9 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { handleAdsConversion } from '../services/ga.services';
+import GA_TAGS from '../services/ga.tags';
 
-const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+const VIEW_PLANS_TAG =GA_TAGS.VIEW_PLANS_TAG;
 
 export const PriceBannerForCampaigns = ({
   textContent,

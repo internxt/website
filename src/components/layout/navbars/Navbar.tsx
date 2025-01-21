@@ -14,6 +14,7 @@ import { NavigationBarText } from '@/assets/types/layout/types';
 import Button from '@/components/shared/Button';
 import LanguageMobileBox from '../components/LanguageMobileBox';
 import { handleAdsConversion } from '@/components/services/ga.services';
+import GA_TAGS from '@/components/services/ga.tags';
 
 export interface NavbarProps {
   textContent: NavigationBarText;
@@ -28,7 +29,7 @@ export interface NavbarProps {
   isQuizSection?: boolean;
   mode?: 'subscription' | 'payment';
 }
-const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
 
 const EXCLUDED_PATHS_FOR_RIBBON = [
   '/pricing',

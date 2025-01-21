@@ -17,8 +17,9 @@ import { useRouter } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
+import GA_TAGS from '@/components/services/ga.tags';
 
-const SEND_TO = '-tQWCIXIzYcaEOf1ydsC';
+const SEND_TO = GA_TAGS.CHECKOUT_S3_TAG;
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];

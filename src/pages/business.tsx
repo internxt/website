@@ -20,8 +20,9 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
+import GA_TAGS from '@/components/services/ga.tags';
 
-const SELECT_PLAN_TAG = 'NyyXCLj9z4caEOf1ydsC';
+const SELECT_PLAN_TAG = GA_TAGS.SELECT_PLAN_TAG;
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];

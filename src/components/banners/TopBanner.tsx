@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import { handleAdsConversion } from '../services/ga.services';
+import GA_TAGS from '../services/ga.tags';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
 }
-const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
 
 const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const router = useRouter();
