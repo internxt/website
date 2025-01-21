@@ -119,7 +119,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     if (window.gtag) {
       window.gtag('event', 'PricingPage-Conversion', {
         send_to: `${SEND_TO}/${SELECT_PLAN_TAG}`,
-        value: priceId,
+        value: 1.0,
         currency: currencyValue.toUpperCase (),
       });
     }
