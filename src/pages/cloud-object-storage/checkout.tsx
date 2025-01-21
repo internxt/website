@@ -19,7 +19,8 @@ import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import GA_TAGS from '@/components/services/ga.tags';
 
-const SEND_TO = GA_TAGS.CHECKOUT_S3_TAG;
+const SEND_TO = process.env.NEXT_PUBLIC_GA_ID;
+const CHECKOUT_S3_TAG=GA_TAGS.CHECKOUT_S3_TAG;
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -210,7 +211,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       if (window && window.gtag) {
         window.gtag('event', 'checkoutS3-Conversion', {
-          send_to: SEND_TO,
+          send_to: `${SEND_TO}/${CHECKOUT_S3_TAG}`,
           value: plan?.amount ?? 1.0,
           currency: plan?.currency,
           transaction_id: plan?.bytes + '-' + plan?.amount,
