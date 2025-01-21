@@ -2,6 +2,8 @@ import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
 import { handleAdsConversion } from '../services/ga.services';
 
+const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+
 const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
   return (
     <section className="overflow-hidden bg-primary py-14">
@@ -13,7 +15,7 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            handleAdsConversion('#priceTable', 'Cta-Conversion', 1, 'USD');
+            handleAdsConversion('#priceTable', 'Cta-Conversion', VIEW_PLANS_TAG, 1, 'USD');
             if (freePlan) {
               goToSignUpURL();
             } else {

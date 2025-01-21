@@ -2,6 +2,8 @@ import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 import { handleAdsConversion } from '../services/ga.services';
 
+const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
+
 const CtaSection = ({
   textContent,
   url,
@@ -37,7 +39,7 @@ const CtaSection = ({
           href={url}
           target={target}
           onClick={() => {
-            handleAdsConversion(url, 'Cta-Conversion', 1, 'USD');
+            handleAdsConversion(url, 'Cta-Conversion', VIEW_PLANS_TAG, 1, 'USD');
             if (onClick) onClick();
           }}
           className={`flex rounded-lg px-5 py-3 text-lg font-medium ${

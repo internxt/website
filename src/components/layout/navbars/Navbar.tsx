@@ -28,6 +28,7 @@ export interface NavbarProps {
   isQuizSection?: boolean;
   mode?: 'subscription' | 'payment';
 }
+const VIEW_PLANS_TAG = '-RgbCLv9z4caEOf1ydsC';
 
 const EXCLUDED_PATHS_FOR_RIBBON = [
   '/pricing',
@@ -166,7 +167,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'default' ? (
               <button
-                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', 1, 'USD')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -178,7 +179,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             )}
             {props.cta[0] === 'chooseStorage' ? (
               <button
-                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', 1, 'USD')}
+                onClick={() => handleAdsConversion('/pricing', 'Navbar-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
@@ -189,7 +190,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
 
             {props.cta[0] === 'priceTable' ? (
               <button
-                onClick={() => handleAdsConversion('#priceTable', 'Navbar-Conversion', 1, 'USD')}
+                onClick={() => handleAdsConversion('#priceTable', 'Navbar-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
