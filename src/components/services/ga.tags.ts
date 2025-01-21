@@ -4,7 +4,7 @@ const GA_TAGS = {
     SELECT_PLAN_TAG: 'NyyXCLj9z4caEOf1ydsC',
   } as const;
   
-  type GA_TAGS = typeof GA_TAGS; // Tipo derivado del objeto
+  type GA_TAGS = typeof GA_TAGS;
   
   export default GA_TAGS;
   
