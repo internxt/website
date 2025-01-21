@@ -42,17 +42,17 @@
       "description": "Store your files with confidence. Internxt offers you a safe space for your essential documents with client-side and end-to-end encryption. With Drive, you control your privacy. Internxt will never view, save, or share your data.",
       "cta": "Save with Drive"
     },
-    "photos": {
-      "title": "Internxt Photos",
-      "subtitle": "Capture, share, and secure your photos in one place.",
-      "description": "Sync your photos in total privacy and access them from anywhere, on any device. Create and share your favorite moments with a secure link, and control who can view, access, and download your memories.",
-      "cta": "Sync with Photos"
-    },
     "send": {
       "title": "Internxt Send",
       "subtitle": "Encrypt and securely send your files.",
       "description": "Share your files in any format via a password-protected link or email. Internxt’s zero-knowledge architecture maximizes the security and privacy of your files. Maintain rock-solid confidentiality of your sensitive information from the moment you hit send.",
       "cta": "Share with Internxt"
+    },
+    "vpn": {
+      "title": "Internxt VPN",
+      "subtitle": "Secure your online activity with a VPN.",
+      "description": "Internxt VPN encrypts and secures your internet connection, protecting your privacy and data.Keep your data private and protected from prying eyes.",
+      "cta": "Browse with VPN"
     }
   },
   "InvestorsSection": {
