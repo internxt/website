@@ -89,8 +89,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     if (window.gtag) {
       window.gtag('event', 'HomePage-Conversion', {
         send_to: SELECT_PLAN_TAG,
-        value: 1.0,
-        currency: currencyValue,
+        value: priceId,
+        currency: currencyValue.toUpperCase (),
       });
     }
 
