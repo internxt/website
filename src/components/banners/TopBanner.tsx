@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router';
 import { CaretRight } from '@phosphor-icons/react';
 import { handleAdsConversion } from '../services/ga.services';
+import GA_TAGS from '../services/ga.tags';
 
 interface TopBannerProps {
   isBannerFixed?: boolean;
 }
+const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
 
 const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
   const router = useRouter();
@@ -27,7 +29,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
             </p>
           </div>
           <button
-            onClick={() => handleAdsConversion('/pricing', 'TopBanner-Conversion', 1, 'USD')}
+            onClick={() => handleAdsConversion('/pricing', 'TopBanner-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
           >
@@ -38,7 +40,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       </div>
       {/* Mobile view */}
       <button
-        onClick={() => handleAdsConversion('/pricing', 'TopBanner-Conversion', 1, 'USD')}
+        onClick={() => handleAdsConversion('/pricing', 'TopBanner-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
         className={`group fixed left-0 z-30 flex h-[65px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className="flex flex-col items-center justify-center px-2 py-2 text-center">

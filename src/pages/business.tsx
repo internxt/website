@@ -20,6 +20,9 @@ import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
+import GA_TAGS from '@/components/services/ga.tags';
+
+const SELECT_PLAN_TAG = GA_TAGS.SELECT_PLAN_TAG;
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -44,6 +47,14 @@ export const BusinessPage = ({
   const locale = lang as string;
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
+    if (window.gtag) {
+      window.gtag('event', 'BusinessPage-Conversion', {
+        send_to: SELECT_PLAN_TAG,
+        value: 1.0,
+        currency: currencyValue,
+      });
+    }
+
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');

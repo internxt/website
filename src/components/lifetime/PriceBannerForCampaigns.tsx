@@ -4,6 +4,9 @@ import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { handleAdsConversion } from '../services/ga.services';
+import GA_TAGS from '../services/ga.tags';
+
+const VIEW_PLANS_TAG =GA_TAGS.VIEW_PLANS_TAG;
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -33,7 +36,9 @@ export const PriceBannerForCampaigns = ({
             </div>
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
               <button
-                onClick={() => handleAdsConversion('#billingButtons', 'PriceBanner-Conversion', 1, 'USD')}
+                onClick={() =>
+                  handleAdsConversion('#billingButtons', 'PriceBanner-Conversion', VIEW_PLANS_TAG, 1, 'USD')
+                }
                 className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
               >
                 {textContent.cta}
@@ -74,7 +79,7 @@ export const PriceBannerForCampaigns = ({
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
             <button
-              onClick={() => handleAdsConversion('#billingButtons', 'PriceBanner-Conversion', 1, 'USD')}
+              onClick={() => handleAdsConversion('#billingButtons', 'PriceBanner-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
               className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
             >
               {textContent.cta}
