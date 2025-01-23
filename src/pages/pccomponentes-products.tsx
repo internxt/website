@@ -10,6 +10,8 @@ import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 import { GetServerSidePropsContext } from 'next';
 
+const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
+
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -150,8 +152,12 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
   );
 };
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const lang = 'es';
+export async function getServerSideProps(ctx) {
+  let lang = ctx.locale;
+
+  if (!ALLOWED_LANGUAGES.includes(lang)) {
+    lang = 'es';
+  }
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/priceCard.json`);
 
