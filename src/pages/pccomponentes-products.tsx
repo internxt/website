@@ -153,11 +153,12 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
 };
 
 export async function getServerSideProps(ctx) {
-  let lang = ctx.locale;
+  const acceptLanguage = ctx.req.headers['accept-language'];
 
-  if (!ALLOWED_LANGUAGES.includes(lang)) {
-    lang = 'es';
-  }
+  const browserLang = acceptLanguage.split(',')[0].split('-')[0];
+
+  const lang = ALLOWED_LANGUAGES.includes(browserLang) ? browserLang : 'es';
+
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/priceCard.json`);
 
