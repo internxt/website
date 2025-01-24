@@ -101,7 +101,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         ]}
       >
         <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -112,11 +111,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           `,
           }}
         />
-
+        <Script src="/js/twitter.js" />
         {lang === 'en' && (
           <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
         )}
-
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
         <div className="flex justify-center">
@@ -130,7 +128,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
         <FreeCardPromoBanner />
-
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
