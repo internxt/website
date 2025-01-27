@@ -1,9 +1,5 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import { handleAdsConversion } from '../services/ga.services';
-import GA_TAGS from '../services/ga.tags';
-
-const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
 
 const CtaSection = ({
   textContent,
@@ -39,10 +35,6 @@ const CtaSection = ({
         <Link
           href={url}
           target={target}
-          onClick={() => {
-            handleAdsConversion(url, 'Cta-Conversion', VIEW_PLANS_TAG, 1, 'USD');
-            if (onClick) onClick();
-          }}
           className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
             bgImage && bgImage !== defaultBgImage
               ? 'bg-primary text-xl text-white hover:bg-primary-dark'
