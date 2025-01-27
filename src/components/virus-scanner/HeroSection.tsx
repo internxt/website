@@ -67,18 +67,6 @@ const HeroSection = ({ textContent }) => {
   };
   const handleConfirmScan = () => {
     setIsScannig(true);
-    setProgress(0);
-
-    const intervalDuration = 2000 / 100;
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 99) {
-          clearInterval(interval);
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, intervalDuration);
 
     scanFiles();
   };
@@ -264,7 +252,9 @@ const HeroSection = ({ textContent }) => {
                         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
                           <div className="relative">
                             <div className="absolute inset-1">
-                              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 animate-fill-bar rounded-xl bg-primary shadow-2xl" />
+                              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary/45 shadow-2xl">
+                                <div className="absolute left-0 z-10 h-1 w-1/6 -translate-y-1/2 animate-line-scan rounded-xl bg-primary shadow-2xl" />
+                              </div>
                             </div>
                             <svg
                               width="80"
