@@ -1,4 +1,4 @@
-import { Fire, Gift, Info } from '@phosphor-icons/react';
+import { Fire, Football, Gift, Info } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -136,7 +136,15 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-
+      <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
+        <p className="text-sm font-bold text-orange">{contentText.productFeatures.christmasFeatures.title}</p>
+        {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
+          <div className="flex items-start space-x-2 text-left" key={feature}>
+            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+            <span className="text-sm leading-5 text-white">{feature}</span>
+          </div>
+        ))}
+      </div>
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
