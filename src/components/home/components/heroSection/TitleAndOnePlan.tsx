@@ -13,8 +13,6 @@ interface TitleAndOnePlanProps {
   footer?: JSX.Element;
 }
 
-const VIEW_PLANS_TAG = GA_TAGS.VIEW_PLANS_TAG;
-
 const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -67,7 +65,6 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       <div className="flex flex-col items-center gap-4 lg:flex-row">
         <Link
           href={'#priceTable'}
-          onClick={() => handleAdsConversion('/pricing', 'HeaderHomePage-Conversion', VIEW_PLANS_TAG, 1, 'USD')}
           className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
         >
           {textContent.claimDeal}

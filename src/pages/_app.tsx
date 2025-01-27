@@ -100,22 +100,20 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        <script async src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-          gtag('js', new Date());
-          gtag('config', '${gtag.GA_TRACKING_ID}');
-          `,
-          }}
-        />
-
         {lang === 'en' && (
           <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
         )}
+
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P7N7LW5G"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
@@ -130,7 +128,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
         <FreeCardPromoBanner />
-
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>
