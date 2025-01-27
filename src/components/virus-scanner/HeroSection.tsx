@@ -255,7 +255,11 @@ const HeroSection = ({ textContent }) => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                    <a href="https://drive.internxt.com/new" target="_top" className="button-primary">
+                                    <a
+                                      href="https://internxt.com/virus-scanner"
+                                      target="_top"
+                                      className="button-primary"
+                                    >
                                       {textContent.table.noVirusesDetected.cta}
                                     </a>
                                   </div>
