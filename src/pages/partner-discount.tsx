@@ -38,7 +38,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.PartnerDiscount75OFF,
+    couponCode: PromoCodeName.SuperBowlCampaign,
   });
 
   const cardsData = [
