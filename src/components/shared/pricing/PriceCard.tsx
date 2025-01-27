@@ -137,13 +137,12 @@ export const PriceCard = ({
         </button>
       </div>
       <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
-        <p className="text-sm font-bold text-orange">{contentText.productFeatures.christmasFeatures.title}</p>
-        {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
-          <div className="flex items-start space-x-2 text-left" key={feature}>
-            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
-            <span className="text-sm leading-5 text-white">{feature}</span>
-          </div>
-        ))}
+        <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+
+        <div className="flex items-start space-x-2 text-left">
+          <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+          <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+        </div>
       </div>
       <div
         className={`featureList flex flex-col  ${

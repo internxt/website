@@ -103,6 +103,10 @@
       "10TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
       "tooltip": "Compre qualquer plano vitalício para ter chance de ganhar!"
     },
+    "superBowlFeatures": {
+      "title": "Brindes com tema Internxt:",
+      "gift": "Tema Super Bowl para Aplicativo Web"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Até ",
