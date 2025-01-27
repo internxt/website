@@ -152,7 +152,7 @@ const HeroSection = ({ textContent }) => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-      <div className="mx-8 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
+      <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${
             !isScannig && isDragging ? 'pointer-events-none' : ''
