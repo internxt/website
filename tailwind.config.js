@@ -224,7 +224,7 @@ module.exports = {
         'float-sock': 'float-sock 1.5s ease-in-out infinite',
         'move-vertical': 'move-vertical 5s linear infinite',
         fall: 'fall 5s linear infinite',
-        'line-scan': 'lineMove 1s linear infinite',
+        'fill-bar': 'fill 1s linear forwards',
       },
       translate: {
         25: '6.25rem',
@@ -272,10 +272,6 @@ module.exports = {
         fill: {
           '0%': { width: '0%' },
           '100%': { width: '100%' },
-        },
-        lineMove: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(550%)' },
         },
       },
 
