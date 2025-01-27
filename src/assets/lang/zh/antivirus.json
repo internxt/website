@@ -1,0 +1,100 @@
+{
+  "HeroSection": {
+    "title": "保护您的文件与",
+    "blueText": "Internxt Antivirus",
+    "description": "通过先进的保护防御恶意软件、网络钓鱼和勒索软件，确保您的文件安全。",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "保护您的文件免受恶意软件攻击，获得终极的在线保护",
+    "cta": "获取 Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "为您的文件提供最大保护",
+    "cta": "获取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "杀毒软件的作用是什么？",
+        "answer": [
+          "杀毒软件通过监控和扫描文件，检测已知的恶意软件签名，保护您的文件和设备免受损坏。一旦杀毒软件检测到并识别出有害软件，威胁将被移除，您的文件将保持安全。"
+        ]
+      },
+      {
+        "question": "我需要杀毒软件吗？",
+        "answer": [
+          "没有杀毒软件的保护，您的设备容易遭受隐私和安全攻击，感染恶意软件、数据丢失、隐私泄露和系统损坏的风险增加。",
+          "由于Internxt Antivirus包含在您的订阅中，您可以享受私人云存储和完整的设备和文件保护。"
+        ]
+      },
+      {
+        "question": "哪些设备支持Internxt Antivirus？",
+        "answer": ["Internxt Antivirus支持Windows、Mac和Linux，且通过Internxt Drive桌面应用程序提供高级订阅。"]
+      },
+      {
+        "question": "我可以单独购买Internxt Antivirus吗？",
+        "answer": [
+          "不可以，Internxt Antivirus是我们付费订阅计划的一部分，不能单独购买。通过每月$10.99的订阅，您可以获得私人云存储、杀毒软件、VPN等服务。"
+        ]
+      },
+      {
+        "question": "恶意软件和病毒有什么区别？",
+        "answer": [
+          "恶意软件是指旨在伤害、利用或未经授权访问网络或设备的软件。它包括病毒，并扩展到其他有害程序，如勒索软件、间谍软件、蠕虫和木马。",
+          "病毒是恶意软件的一种，它附加在您的文件上，并在打开或运行时传播到其他系统。定期使用Internxt进行杀毒扫描，将识别并消除这些威胁。"
+        ]
+      },
+      {
+        "question": "什么是最好的杀毒软件？",
+        "answer": [
+          "最好的杀毒软件取决于您的具体需求和偏好，因此建议您进行研究，选择最适合您需求的产品，考虑预算、设备和其他附加功能。",
+          "如果您需要为Mac、Windows或Linux提供内置云存储的杀毒软件，并且可以快速轻松地扫描和删除病毒，试试Internxt计划。"
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "您的设备可能感染的迹象",
+    "description": "担心您的设备感染了恶意软件？通过高级订阅获取Internxt Antivirus，确保安全存储和文件保护。",
+    "cards": {
+      "element1": {
+        "title": "电池消耗过快",
+        "description": "如果您的电池比平时耗电更快，可能是恶意软件在后台运行，消耗设备资源而您未察觉。"
+      },
+      "element2": {
+        "title": "频繁的系统崩溃或冻结",
+        "description": "病毒可能导致系统崩溃，因为恶意软件会破坏重要文件或程序，造成不稳定、系统崩溃或设备意外冻结。"
+      },
+      "element3": {
+        "title": "无法解释的弹窗广告或窗口",
+        "description": "当您不在浏览时出现无法解释的弹窗，可能意味着设备上有恶意软件，您应运行杀毒扫描，防止进一步损害文件。"
+      },
+      "element4": {
+        "title": "设备过热",
+        "description": "类似于电池消耗，恶意软件可能在后台执行高强度任务，未经您知情，导致设备过热。"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "一体化安全防护，抵御数据威胁",
+    "description": "使用先进的杀毒保护来保持您的云端安全和文件免受恶意软件攻击。适用于Windows、Linux和macOS桌面设备。",
+    "cards": {
+      "element1": {
+        "title": "量身定制的安全解决方案",
+        "description": "立即消除安全威胁并自定义文件安全需求。选择要扫描的文件，或同时拖放多个文件进行扫描。"
+      },
+      "element2": {
+        "title": "终极保护",
+        "description": "我们通过先进的杀毒软件快速简便地防御病毒，扫描并清除恶意软件以清洁您的文件。随时扫描文件，优化设备性能，并在线保护自己。"
+      },
+      "element3": {
+        "title": "跨平台安全性",
+        "description": "Windows、Mac和Linux的杀毒保护，已与您的高级Drive订阅集成。无论您将文件存储在哪里，我们都确保它们保持清洁，设备性能达到最佳。"
+      }
+    }
+  }
+}

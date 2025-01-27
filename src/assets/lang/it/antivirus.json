@@ -1,0 +1,102 @@
+{
+  "HeroSection": {
+    "title": "Proteggi i tuoi file con",
+    "blueText": "Internxt Antivirus",
+    "description": "Difenditi da malware, phishing e ransomware con una protezione avanzata che mantiene i tuoi file al sicuro.",
+    "eyeBrow": "Internxt Antivirus"
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Proteggi i tuoi file dai malware per la massima sicurezza online",
+    "cta": "Ottieni Internxt"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Protezione massima per i tuoi file",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cosa fa un software antivirus?",
+        "answer": [
+          "Il software antivirus protegge i tuoi file e dispositivi dalla corruzione monitorando e scansionando i file per rilevare firme di malware conosciute. Una volta rilevato e identificato un software dannoso, la minaccia viene rimossa e i tuoi file restano protetti."
+        ]
+      },
+      {
+        "question": "Ho bisogno di un antivirus?",
+        "answer": [
+          "Senza una protezione antivirus, il tuo dispositivo è vulnerabile ad attacchi alla sicurezza e alla privacy. È inoltre più esposto a infezioni, perdita di dati, violazioni della privacy e danni al sistema.",
+          "Internxt Antivirus è incluso nel tuo abbonamento, permettendoti di beneficiare di uno spazio di archiviazione cloud privato e di una protezione completa per dispositivi e file."
+        ]
+      },
+      {
+        "question": "Quali dispositivi supportano Internxt Antivirus?",
+        "answer": [
+          "Internxt Antivirus è disponibile per Microsoft, Mac e Linux con un abbonamento premium tramite l’app desktop Internxt Drive."
+        ]
+      },
+      {
+        "question": "Posso ottenere Internxt Antivirus da solo?",
+        "answer": [
+          "No, Internxt Antivirus fa parte dei nostri piani di abbonamento a pagamento e non può essere acquistato separatamente. Con un abbonamento mensile di 10,99 $, ottieni spazio di archiviazione cloud privato, antivirus, VPN e molto altro."
+        ]
+      },
+      {
+        "question": "Qual è la differenza tra malware e virus?",
+        "answer": [
+          "Il malware è un termine generico per software progettati per danneggiare, sfruttare o accedere a una rete o un dispositivo senza autorizzazione. Include virus, ransomware, spyware, worm e trojan.",
+          "Un virus è un tipo specifico di malware che si attacca ai tuoi file e si diffonde ad altri sistemi quando viene aperto o eseguito. Eseguendo scansioni antivirus regolari con Internxt, puoi identificare ed eliminare queste minacce."
+        ]
+      },
+      {
+        "question": "Qual è il miglior software antivirus?",
+        "answer": [
+          "Il miglior software antivirus dipende dalle tue esigenze e preferenze specifiche. È consigliabile ricercare le opzioni disponibili e scegliere quella che meglio soddisfa le tue esigenze, considerando il budget, il dispositivo e le funzionalità aggiuntive.",
+          "Se hai bisogno di un antivirus per Mac, Windows o Linux integrato nel tuo spazio di archiviazione cloud, con un sistema rapido e facile per scansionare ed eliminare i virus, prova un piano Internxt."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Segnali che il tuo dispositivo potrebbe essere infetto",
+    "description": "Temi che il tuo dispositivo sia infetto da malware? Ottieni Internxt Antivirus con un abbonamento premium per uno spazio di archiviazione sicuro e una protezione dei file.",
+    "cards": {
+      "element1": {
+        "title": "Scarica della batteria eccessiva",
+        "description": "Se la batteria si scarica più velocemente del solito, potrebbe essere un segno che un malware sta funzionando in background, utilizzando le risorse del tuo dispositivo senza il tuo consenso."
+      },
+      "element2": {
+        "title": "Crash o blocchi frequenti del sistema",
+        "description": "I virus possono causare crash di sistema danneggiando file o programmi essenziali, portando a instabilità, blocchi imprevisti o malfunzionamenti."
+      },
+      "element3": {
+        "title": "Finestre pop-up inspiegabili",
+        "description": "Finestre pop-up che appaiono mentre non stai navigando potrebbero indicare la presenza di malware sul tuo dispositivo. Esegui una scansione antivirus per proteggere i tuoi file."
+      },
+      "element4": {
+        "title": "Surriscaldamento dei dispositivi",
+        "description": "Come per la batteria, il malware può forzare i dispositivi a eseguire attività intense in background senza che tu lo sappia, causando surriscaldamento."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Sicurezza all-in-one per proteggere i dispositivi dalle minacce ai dati",
+    "description": "Proteggi il tuo cloud e i tuoi file da malware con una protezione antivirus avanzata. Disponibile per Windows, Linux e macOS.",
+    "cards": {
+      "element1": {
+        "title": "Soluzioni di sicurezza personalizzate",
+        "description": "Elimina istantaneamente le minacce e personalizza le tue esigenze di sicurezza. Seleziona i file da scansionare o caricane più di uno contemporaneamente."
+      },
+      "element2": {
+        "title": "Protezione avanzata",
+        "description": "Rendiamo la difesa contro i virus semplice e veloce con un software antivirus avanzato che scansiona e rimuove il malware. Migliora le prestazioni del dispositivo e proteggiti online."
+      },
+      "element3": {
+        "title": "Sicurezza su tutte le piattaforme",
+        "description": "Protezione antivirus per Windows, Mac e Linux integrata nel tuo abbonamento premium Drive. Manteniamo i tuoi file puliti per prestazioni ottimali."
+      }
+    }
+  }
+}

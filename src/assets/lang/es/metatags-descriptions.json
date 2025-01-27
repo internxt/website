@@ -248,5 +248,10 @@
     "id": "green-cloud-computing",
     "title": "Almacenamiento en la nube verde y sostenible",
     "description": "Los centros de datos ecológicos de Internxt impulsan nuestro compromiso con la sostenibilidad y la informática en la nube ecológica, apoyando un entorno más verde y sostenible."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protege tus dispositivos de malware con Internxt Antivirus",
+    "description": "Internxt Antivirus escanea y elimina virus de tus archivos. Protege tus dispositivos del malware y asegura una completa seguridad en la nube."
   }
 ]
