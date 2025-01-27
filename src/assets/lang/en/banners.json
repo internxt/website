@@ -48,8 +48,8 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 85%!",
-    "title": "Your Data Privacy Week deal!",
+    "label": "80% OFF ",
+    "title": "Make your privacy play!",
     "subtitle": "Christmas Web App Theme + Chance to win up to 10TB of storage!",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
@@ -60,7 +60,8 @@
       "Open-source and audited",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends January 31st"
+      "Free Super Bowl Web app theme",
+      "Offer ends February 9"
     ]
   },
   "s3StorageBanner": {
@@ -145,9 +146,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": " 85% OFF all lifetime plans",
-      "normalText": "Data Privacy Week deal!",
-      "cta": "Claim deal"
+      "boldText": "  80% OFF all premium plans!",
+      "normalText": "Touchdown!!!",
+      "cta": "Score big savings"
     }
   },
   "lifetimeBanner": {
