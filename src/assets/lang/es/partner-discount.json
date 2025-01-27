@@ -1,0 +1,87 @@
+{
+  "HeroSection": {
+    "header": "Descuento Anual de Internxt",
+    "title": {
+      "normalText": "Obtén el almacenamiento en la nube más seguro ",
+      "blueText": "por menos"
+    },
+    "description": {
+      "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén ",
+      "blue": "75% DE DESCUENTO ",
+      "normal1": "en cualquier plan anual. Almacena y comparte tus archivos de forma segura y con total privacidad."
+    },
+    "cta": "Elige un plan"
+  },
+  "PaymentSection": {
+    "planTitles": { "homePage": "Elige el almacenamiento que necesitas" },
+    "planDescription": "Cada plan de Internxt incluye acceso completo a nuestros servicios de privacidad. Disfruta de un año completo de seguridad para satisfacer tus necesidades de almacenamiento.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "De por vida",
+      "business": "Empresarial"
+    },
+    "features": {
+      "endToEnd": "Cifrado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima"
+    }
+  },
+  "FeatureSection": {
+    "title": "¿Por qué elegir Internxt para proteger tus archivos?",
+    "description": "Internxt te devuelve el control sobre tu privacidad. A diferencia del almacenamiento en la nube tradicional, garantizamos que solo tú tienes las claves de tus datos cifrados y no almacenamos ni vendemos tu información a terceros. Tomamos todas las medidas necesarias para asegurar que tu información permanezca protegida.",
+    "cta": "Elige el tamaño de almacenamiento",
+    "cards": [
+      {
+        "title": "Datos inhackeables e incomprometidos",
+        "description": "No almacenamos contraseñas ni datos de usuario, y todos tus datos están cifrados tanto en tránsito como en reposo. Internxt te da el control total de tus archivos. Tus datos son asunto tuyo. Protegerlos es el nuestro."
+      },
+      {
+        "title": "Seguridad sin compromisos",
+        "description": "Tus archivos se cifran de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, eres la única persona con acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por eso nuestro código es público en GitHub y puede ser revisado, auditado y verificado por cualquier persona. No tenemos nada que ocultar, excepto tus datos."
+      },
+      {
+        "title": "Verificado de forma independiente",
+        "description": "Somos completamente compatibles con el RGPD y 100% seguros, pero no tienes que confiar solo en nuestra palabra. Internxt ha sido auditado y verificado de forma independiente por la principal empresa de pruebas de penetración de Europa, Securitum."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Cientos de miles están dejando iCloud, Google Drive y Dropbox por ",
+      "blue": "el almacenamiento en la nube más seguro: Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Periodista de FixThePhoto.com",
+        "review": "Internxt es un servicio de almacenamiento en la nube conveniente para clientes preocupados por la privacidad. Tiene una interfaz simplificada y un equipo de soporte confiable, lo que lo convierte en una gran opción para quienes necesitan almacenar sus archivos de manera segura."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Opinión de GetApp",
+        "review": "La mejor alternativa cifrada a Dropbox. En general: Necesitábamos una alternativa que nos permitiera almacenar archivos de clientes y trabajo (archivos de redes sociales) y como Internxt cumple con el RGPD, encajó perfectamente para nosotros."
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Opinión de Trustpilot",
+        "review": "He estado usando Google Drive durante varios años, pero necesitaba una alternativa que garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me mudé a Internxt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "¡Consigue un año completo de almacenamiento con un 75% de descuento ahora!",
+    "description": "Internxt ofrece un descuento exclusivo con privacidad y seguridad garantizadas.",
+    "cta": "Elige un plan"
+  },
+  "CtaSection1": {
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "description": "Reclama tu descuento exclusivo del 75% para acceder al almacenamiento en la nube seguro, privado y cifrado de Internxt durante todo un año.",
+    "cta": "Encuentra tu plan"
+  }
+}

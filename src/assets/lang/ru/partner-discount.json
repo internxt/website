@@ -1,61 +1,87 @@
 {
   "HeroSection": {
-    "title": "The most secure cloud for all your photos and files",
-    "title1": {
-      "line1": "Get the safest cloud storage",
-      "line2": "for all your files, photos and more"
+    "header": "Годовая скидка Internxt",
+    "title": {
+      "normalText": "Получите самое безопасное облачное хранилище ",
+      "blueText": "по сниженной цене"
     },
-    "subtitle": "Use the coupon code SPECIAL15 for an additional discount",
-    "subtitle1": "Don't forget to use the exclusive coupon code TECHRADAR",
-    "card": "\"Individual users and businesses that prioritize security will enjoy advanced security features and commitment to privacy\"",
-    "cta": "Choose your plan"
+    "description": {
+      "normal": "Присоединяйтесь к Internxt, ведущей альтернативе Google Drive, и получите ",
+      "blue": "75% СКИДКУ ",
+      "normal1": "на любой годовой план. Безопасно храните и делитесь файлами с полной конфиденциальностью."
+    },
+    "cta": "Выберите план"
   },
   "PaymentSection": {
-    "title": "Privacy at a reasonable price",
-    "subtitle": "Who says best-in-class security can't be affordable? Protect your privacy and take back total control of your data with any one of our three plans:",
-    "billedAnnually": "Billed annually",
-    "popular": "Most popular",
-    "month": "/month",
-    "card1": {
-      "plan": "20GB",
-      "price": "0.89",
-      "annualPrice": "10.68"
+    "planTitles": { "homePage": "Выберите необходимый объем хранилища" },
+    "planDescription": "Каждый план Internxt включает полный доступ к нашим сервисам конфиденциальности. Наслаждайтесь годовой безопасностью, соответствующей вашим потребностям в хранении.",
+    "billingFrequency": {
+      "monthly": "Ежемесячно",
+      "annually": "Ежегодно",
+      "individual": "Индивидуальный",
+      "lifetime": "Пожизненно",
+      "business": "Бизнес"
     },
-    "card2": {
-      "plan": "200GB",
-      "price": "3.49",
-      "annualPrice": "41.88"
-    },
-    "card3": {
-      "plan": "2TB",
-      "price": "8.99",
-      "annualPrice": "107.88"
-    },
-    "infoPlan": {
-      "info1": "30 days money-back guarantee",
-      "info2": "Encrypted file storage and sharing",
-      "info3": "Access your files from any device",
-      "info4": "Get access to all our services"
+    "features": {
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый исходный код и проверено",
+      "anonymousAccount": "Анонимное создание аккаунта"
     }
   },
-  "InfoSection": {
-    "title": "How we ensure user privacy",
-    "subtitle": "We take privacy and security very seriously, that's why we employ a stack of technologies and protocols to always ensure tht your data remains safe and private.",
-    "card1": {
-      "title": "Military-grade encryption",
-      "description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerful processor in the world would need twice the age of the universe to decrypt a small file."
+  "FeatureSection": {
+    "title": "Почему выбирать Internxt для защиты ваших файлов?",
+    "description": "Internxt возвращает вам контроль над вашей конфиденциальностью. В отличие от традиционных облачных хранилищ, мы гарантируем, что только вы владеете ключами от ваших зашифрованных данных, и мы не храним и не продаем ваши данные третьим сторонам. Мы предпринимаем все необходимые шаги, чтобы ваша информация оставалась защищенной.",
+    "cta": "Выберите размер хранилища",
+    "cards": [
+      {
+        "title": "Невзламываемые и неразглашаемые данные",
+        "description": "Мы не храним пароли или пользовательские данные, и все ваши данные шифруются как при передаче, так и при хранении. Internxt дает вам полный контроль над вашими файлами. Ваши данные — это ваше дело. Их защита — наша задача."
+      },
+      {
+        "title": "Безупречная безопасность",
+        "description": "Ваши файлы шифруются от конца до конца еще до того, как они покидают ваше устройство. Благодаря нулевому знанию AES-256 шифрования, только вы имеете доступ к вашим данным."
+      },
+      {
+        "title": "Открытый исходный код и прозрачность",
+        "description": "Мы гордимся своей работой, поэтому наш код открыт на GitHub и может быть проверен, аудирован и подтвержден любым. У нас нет ничего, что нужно скрывать, кроме ваших данных."
+      },
+      {
+        "title": "Независимая проверка",
+        "description": "Мы полностью соответствуем GDPR и на 100% безопасны, но не полагайтесь только на наши слова. Internxt был независимо аудирован и проверен ведущей европейской компанией по тестированию на проникновение, Securitum."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Сотни тысяч людей отказываются от iCloud, Google Drive и Dropbox в пользу ",
+      "blue": "самого безопасного облачного хранилища — Internxt Drive"
     },
-    "card2": {
-      "title": "Zero-knowledge technology",
-      "description": "We make sure that there is no point in time where files, photos, passwords, or any unencrypted data is visible to unauthorized users or servers."
-    },
-    "card3": {
-      "title": "GDPR-compliant synchronization",
-      "description": "We conform with all GDPR provisions, such as privacy by design, the right to information, and the right to be forgotten, among many others, and are committed to meeting all future provisions."
-    },
-    "card4": {
-      "title": "End-to-end encryption",
-      "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission. Even we can't access your files, photos, or passwords."
-    }
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Журналист FixThePhoto.com",
+        "review": "Internxt — удобный облачный сервис для клиентов, заботящихся о конфиденциальности. Он имеет упрощенный интерфейс и надежную службу поддержки, что делает его отличным выбором для тех, кто хочет безопасно хранить свои файлы."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Отзыв от GetApp",
+        "review": "Лучшая зашифрованная альтернатива Dropbox. В целом: нам нужна была альтернатива для хранения файлов клиентов и рабочих файлов (файлов социальных сетей), и Internxt, соответствующий GDPR, идеально подошел для нас!"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Отзыв от Trustpilot",
+        "review": "Я использовал Google Drive несколько лет, но мне нужна была альтернатива, которая гарантировала бы конфиденциальность моих данных. То, что Google или другие известные платформы не могут обеспечить. Вот почему я перешел на Internxt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Получите целый год хранилища со скидкой 75% прямо сейчас!",
+    "description": "Internxt предлагает эксклюзивную скидку с гарантией конфиденциальности и безопасности.",
+    "cta": "Выберите план"
+  },
+  "CtaSection1": {
+    "title": "Самое приватное облачное хранилище в мире",
+    "description": "Воспользуйтесь эксклюзивной скидкой 75%, чтобы получить доступ к безопасному, приватному и зашифрованному облачному хранилищу Internxt на целый год.",
+    "cta": "Найдите свой план"
   }
 }
