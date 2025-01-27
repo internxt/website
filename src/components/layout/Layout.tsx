@@ -92,14 +92,10 @@ LayoutProps) {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
 
-    const priceId = localStorage.getItem('priceId') || 'defaultPriceId';
-    const isBusiness = localStorage.getItem('userType') === 'business';
-
     if (source !== 'Impact') return;
 
     const impactAnonymousId = getCookie('impactAnonymousId');
     const randomUUID = impactAnonymousId || crypto.randomUUID();
-    const structuredUUID = `${randomUUID}-${priceId}-${isBusiness ? 'business' : 'personal'}`;
 
     const cookieData = {
       anonymousId: randomUUID,
@@ -121,13 +117,8 @@ LayoutProps) {
       cookieData.anonymousId
     };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
-    const planCookie = `gaPlanId=${structuredUUID};expires=${new Date(
-      expirationDate,
-    ).toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
-
     document.cookie = sourceCookie;
     document.cookie = anonymousIdCookie;
-    document.cookie = planCookie;
 
     axios
       .post(IMPACT_API, {

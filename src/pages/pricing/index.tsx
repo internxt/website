@@ -30,10 +30,6 @@ import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
-import GA_TAGS from '@/components/services/ga.tags';
-
-const SEND_TO=process.env.NEXT_PUBLIC_GA_ID;
-const SELECT_PLAN_TAG = GA_TAGS.SELECT_PLAN_TAG;
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -117,14 +113,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    if (window.gtag) {
-      window.gtag('event', 'PricingPage-Conversion', {
-        send_to: `${SEND_TO}/${SELECT_PLAN_TAG}`,
-        value: 1.0,
-        currency: currencyValue.toUpperCase (),
-      });
-    }
-
     const couponCodeForCheckout = isBusiness
       ? PromoCodeName.SoftSales
       : isCheckoutForLifetime
