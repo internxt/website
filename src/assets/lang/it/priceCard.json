@@ -114,6 +114,10 @@
       "10TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
       "tooltip": "Vinci fino a 10TB di spazio di archiviazione gratuito!"
     },
+    "superBowlFeatures": {
+      "title": "Gadget a tema Internxt:",
+      "gift": "Tema Super Bowl per l'app Web"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Fino a ",

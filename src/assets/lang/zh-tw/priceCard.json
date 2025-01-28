@@ -112,6 +112,10 @@
       "10TB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
       "tooltip": "贏得多達10TB的免費儲存空間！"
     },
+    "superBowlFeatures": {
+      "title": "Internxt 主題好禮：",
+      "gift": "適用於網頁應用的超級碗主題"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "最多 ",
