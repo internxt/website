@@ -48,70 +48,31 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   draggable="false"
                   quality={100}
                   width={600}
-                  height={450}
+                  height={1000}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Laptop and phone with Internxt app"
+                  alt="Superbowl Mobile Image"
                   onClick={handleOnClick}
                 />
               </div>
-            ) : undefined}
+            ) : (
+              <HomePageBannerForMobile />
+            )}
 
-            <TitleAndOnePlan
-              textContent={titleAndOnePlanText}
-              header={
-                <div className="flex flex-col gap-9">
-                  <div className="flex flex-col gap-4">
-                    <Header maxWidth="max-w-[500px]" className="text-white">
-                      {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-                      {textContent.title.line2}{' '}
-                    </Header>
-                  </div>
-                  <p className="text-xl font-bold text-white">
-                    {textContent.TitleAndOnePlan.description.normal1}
-                    <span className="text-white">{textContent.TitleAndOnePlan.description.blue}</span>
-                    {textContent.TitleAndOnePlan.description.normal2}
-                  </p>
-                  <div className="mx-auto flex flex-col gap-2 lg:mx-0">
-                    {titleAndOnePlanText.features.map((feat) => (
-                      <div className="flex flex-row gap-2" key={feat}>
-                        <Check className="text-green-1" weight="bold" size={24} />
-                        <p className="text-lg font-semibold text-white">{feat}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              }
-              footer={
-                isHomePageV2 ? (
-                  <div className="flex flex-row items-center justify-center gap-2 pt-2 text-gray-100 lg:justify-start">
-                    <Star size={24} weight="fill" className="text-[#E40784]" />
-                    <div className="flex flex-row items-center gap-1">
-                      <p className="whitespace-nowrap font-semibold text-white">{titleAndOnePlanText.guarantee}</p>
-                      <Image
-                        src={getImage('/logos/featured/techradar-pink.svg')}
-                        width={98}
-                        height={16}
-                        alt="Techradar logo"
-                      />
-                    </div>
-                  </div>
-                ) : undefined
-              }
-            />
+            <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-          <div className="relative ml-32 hidden h-screen max-h-[700px] w-full justify-center lg:flex">
+          <div className="relative ml-32 hidden h-screen max-h-[900px] w-full justify-center lg:flex">
             <Image
               src={getImage('/images/campaigns/superbowl/dust.png')}
               width={920}
-              height={650}
-              alt="Header Logo"
-              className="absolute -left-14 top-20 z-0 object-contain"
+              height={900}
+              alt="Dust Hero Section"
+              className="absolute -left-14 top-20 z-0"
             />
             <Image
               src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
               width={586}
               height={385}
-              alt="Header Logo"
+              alt="SuperBowl Scorer"
               className="absolute left-0 top-20 z-10 object-contain"
             />
           </div>
