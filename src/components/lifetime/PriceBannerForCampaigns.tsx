@@ -46,20 +46,20 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap pt-6 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex items-center justify-center pl-20 pr-6">
+          <div className="relative flex max-h-[300px] items-center justify-center pl-20 pr-6 ">
             <Image
               src={getImage('/images/campaigns/superbowl/dust.png')}
               width={1500}
               height={1500}
               alt="Dust for scorer"
-              className="absolute -left-10 top-0 z-0 object-contain"
+              className=" absolute left-0 top-0 z-0 object-contain"
             />
             <Image
               src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
-              width={404}
-              height={323}
+              width={300}
+              height={100}
               alt="Internxt Cloud Storage Pricing"
-              className="z-10 w-full object-cover"
+              className="top-10 z-10 w-full object-cover"
             />
           </div>
         </div>
