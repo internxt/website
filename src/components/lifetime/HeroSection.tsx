@@ -85,8 +85,15 @@ const HeroSection = ({
                 />
               </div>
             ) : null}
-            <div className="hidden h-[580px] lg:flex">
-                <Animation previewImg={previewImg} />
+
+            <div className="absolute -top-36 right-0 hidden h-screen lg:flex">
+              <Image
+                src={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
+                alt="Lifetime superbowl image"
+                width={600}
+                height={100}
+                quality={100}
+              />
             </div>
           </div>
         </div>
