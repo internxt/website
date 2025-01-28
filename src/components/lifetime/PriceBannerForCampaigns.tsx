@@ -35,7 +35,7 @@ export const PriceBannerForCampaigns = ({
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
               <Link
                 href={redirectTo ?? '#billingButtons'}
-                className="flex w-max items-center rounded-lg bg-primary px-3 py-2 text-base font-medium text-white sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
+                className="flex w-max items-center rounded-lg bg-primary px-3 py-2 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
               >
                 {textContent.cta}
               </Link>
@@ -80,13 +80,13 @@ export const PriceBannerForCampaigns = ({
             <p className="text-4xl font-bold">{textContent.titleMbl3}</p>
           </div>
           <div className="flex flex-col items-center">
-            <div className="mb-2 flex flex-row items-center space-x-1 text-gray-30">
-              <CheckCircle size={20} className="text-primary" fill="weight" />
+            <div className="mb-2 flex flex-row items-center space-x-1 pb-5 text-gray-5">
+              <CheckCircle size={20} className="text-primary" weight="fill" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
             <Link
               href={redirectTo ?? '#billingButtons'}
-              className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
+              className="flex w-max items-center rounded-lg bg-primary px-3 py-2 text-base font-medium text-white hover:bg-primary/95"
             >
               {textContent.cta}
             </Link>
