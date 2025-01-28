@@ -5,24 +5,27 @@ import EmailToolbar from './components/EmailToolBar';
 import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 import PwnedStatusSection from './PwnedStatusSection';
 import LoadingPulse from '../shared/loader/LoadingPulse';
+import { ErrorSection } from './ErrorSection';
 
 interface HeroSectionProps {
   textContent: HaveIbeenPwnedText['HeroSection'];
 }
 
-type ViewProps = 'default' | 'success' | 'loading';
+type ViewProps = 'default' | 'success' | 'loading' | 'error';
 
 export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const [breaches, setBreaches] = useState<Breach[]>([]);
   const [pastes, setPastes] = useState<Paste[]>([]);
   const [view, setView] = useState<ViewProps>('default');
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const isFetchingData = view === 'loading';
 
   const onResultBreachesChange = (data: Breach[]) => setBreaches(data);
   const onResultPastesChange = (data: Paste[]) => setPastes(data);
-  const onErrorChange = (err: string | null) => {
+  const onErrorChange = (err: string) => {
     setBreaches([]);
     setPastes([]);
+    setErrorMessage(err);
   };
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -30,15 +33,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
   const handleCheckEmail = async (email: string) => {
     if (!email.trim()) {
       onErrorChange(textContent.EmailToolBar.pleaseEnterEmail);
-      onResultBreachesChange([]);
-      onResultPastesChange([]);
+      setView('error');
       return;
     }
 
     if (isFetchingData) return;
 
     setView('loading');
-    onErrorChange(null);
+    onErrorChange('');
     onResultBreachesChange([]);
     onResultPastesChange([]);
 
@@ -54,9 +56,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
       onResultPastesChange(pastes.data);
       setView('success');
     } catch (err: any) {
-      const errorMessage = err.response?.data?.error || textContent.EmailToolBar.errorPwned;
-      setView('default');
-      onErrorChange(errorMessage);
+      const statusCode = err.response?.status;
+
+      if (statusCode === 400) {
+        onErrorChange(textContent.breaches.error400);
+      } else if (statusCode === 500) {
+        onErrorChange(textContent.breaches.error500);
+      } else {
+        onErrorChange(textContent.breaches.error405);
+      }
+
+      setView('error');
     }
   };
 
@@ -76,11 +86,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
           />
         </div>
         {isFetchingData ? (
-          <div className="relative flex h-52 w-full flex-col">
+          <div className="relative flex h-40 w-full flex-col">
             <LoadingPulse />
           </div>
+        ) : view === 'error' ? (
+          <ErrorSection errorMessage={errorMessage} />
         ) : (
-          view !== 'default' && (
+          view === 'success' && (
             <PwnedStatusSection
               breaches={breaches}
               resultPastes={pastes}
