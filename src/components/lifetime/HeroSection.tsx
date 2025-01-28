@@ -86,13 +86,12 @@ const HeroSection = ({
               </div>
             ) : null}
 
-            <div className="absolute -top-36 right-0 hidden h-screen lg:flex">
+            <div className="ml-20 hidden h-[620px] lg:flex">
               <Image
                 src={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
-                alt="Lifetime superbowl image"
+                alt="Confetti"
                 width={600}
-                height={100}
-                quality={100}
+                height={580}
               />
             </div>
           </div>
