@@ -28,14 +28,14 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   }, []);
 
   return (
-    <div className="flex max-w-[544px] flex-col gap-6">
+    <div className="hidden max-w-[544px] flex-col gap-6 lg:flex  ">
       {header ?? (
         <div className="flex flex-col gap-9">
           <div className="flex flex-col gap-4">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100">
+            <Header maxWidth="max-w-[500px]" className="text-white">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
             </Header>
-            <p className="text-xl font-bold text-gray-100">
+            <p className="text-xl font-bold text-white">
               {textContent.description.normal1}
               <span className="text-primary">{textContent.description.blue}</span>
               {textContent.description.normal2}
@@ -44,8 +44,8 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
           <div className="mx-auto flex flex-col gap-2 lg:mx-0">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex flex-row gap-2">
-                <Check className="text-green" weight="bold" size={24} />
-                <p className="text-lg font-semibold text-gray-100">{feat}</p>
+                <Check className="text-green-1" weight="bold" size={24} />
+                <p className="text-lg font-semibold text-white">{feat}</p>
               </div>
             ))}
           </div>
