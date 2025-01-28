@@ -30,7 +30,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   };
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
+      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-2 xl:mx-32">
         <div
           className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block "
           style={{ backgroundImage: `url('${blurBgImage}')` }}
@@ -60,20 +60,20 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
             <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-          <div className="relative ml-32 hidden h-screen max-h-[900px] w-full justify-center lg:flex">
+          <div className="relative ml-32  hidden h-screen max-h-[900px] w-full justify-center lg:flex">
             <Image
               src={getImage('/images/campaigns/superbowl/dust.png')}
               width={920}
               height={900}
               alt="Dust Hero Section"
-              className="absolute -left-14 top-20 z-0"
+              className="absolute -left-14 top-40 z-0"
             />
             <Image
               src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
               width={586}
               height={385}
               alt="SuperBowl Scorer"
-              className="absolute left-0 top-20 z-10 object-contain"
+              className="absolute left-0 top-40 z-10 object-contain"
             />
           </div>
 
