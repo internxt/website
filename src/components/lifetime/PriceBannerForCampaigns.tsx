@@ -22,9 +22,9 @@ export const PriceBannerForCampaigns = ({
         className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] bg-primary sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
         style={{ backgroundImage: `url('${blurBgImage}')` }}
       >
-        <div className="flex max-h-[384px] w-full min-w-[800px] flex-col items-center gap-6 px-2 py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
-          <div className="flex flex-col items-center gap-2 text-center lg:items-start lg:text-left">
-            <div className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-5 pt-10 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
+        <div className=" flex max-h-[384px] w-full min-w-[800px] flex-col items-center gap-6 py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
+          <div className="flex flex-col items-center gap-2 pl-6 pr-10 text-center lg:items-start lg:text-left">
+            <div className="mt-8 flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-5 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full pt-5">
@@ -46,7 +46,7 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap pt-6 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex items-center justify-center">
+          <div className="relative flex items-center justify-center pl-20 pr-6">
             <Image
               src={getImage('/images/campaigns/superbowl/dust.png')}
               width={1500}
