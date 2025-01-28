@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { CheckCircle, Football, ShieldCheck, Snowflake, X } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 
-const HIDE_BANNER_DATE = new Date('2026-01-15');
+const HIDE_BANNER_DATE = new Date('2024-01-15');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
