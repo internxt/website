@@ -91,11 +91,11 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} />
+      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} redirect="#priceTable" />
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url="#payment" isBrave />
+      <CtaSection textContent={textContent.CtaSection} url="#priceTable" isBrave />
 
       <InfoSection
         textContent={textContent.SecureCloudSection}
@@ -123,7 +123,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
         startIndividualPlansFromInterval={Interval.Year}
       />
 
-      <CtaSection textContent={textContent.CtaSection2} url="#payment" isBrave />
+      <CtaSection textContent={textContent.CtaSection2} url="#priceTable" isBrave />
 
       <FAQSection textContent={textContent.FaqSection} />
 
