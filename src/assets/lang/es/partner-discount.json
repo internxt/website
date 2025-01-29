@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén ",
-      "blue": "75% DE DESCUENTO ",
+      "blue": "80% DE DESCUENTO ",
       "normal1": "en cualquier plan anual. Almacena y comparte tus archivos de forma segura y con total privacidad."
     },
     "cta": "Elige un plan"
@@ -75,13 +75,13 @@
     ]
   },
   "CtaSection": {
-    "title": "¡Consigue un año completo de almacenamiento con un 75% de descuento ahora!",
+    "title": "¡Consigue un año completo de almacenamiento con un 80% de descuento ahora!",
     "description": "Internxt ofrece un descuento exclusivo con privacidad y seguridad garantizadas.",
     "cta": "Elige un plan"
   },
   "CtaSection1": {
     "title": "El almacenamiento en la nube más privado del mundo",
-    "description": "Reclama tu descuento exclusivo del 75% para acceder al almacenamiento en la nube seguro, privado y cifrado de Internxt durante todo un año.",
+    "description": "Reclama tu descuento exclusivo del 80% para acceder al almacenamiento en la nube seguro, privado y cifrado de Internxt durante todo un año.",
     "cta": "Encuentra tu plan"
   }
 }
