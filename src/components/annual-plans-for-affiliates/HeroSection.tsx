@@ -8,6 +8,7 @@ interface HeroSectionProps {
   textContent: any;
   InfoTextComponent?: React.ReactNode;
   isStartPage?: boolean;
+  redirect?: string;
 }
 
 const StartPageLabel = () => {
@@ -29,7 +30,7 @@ const StartPageLabel = () => {
 
 const BraveLabel = () => {
   return (
-    <div className="flex flex-row items-center justify-center space-x-3.5">
+    <div className="flex flex-row space-x-3.5 lg:items-center ">
       <Image
         src={getImage('/images/partnerships/brave/Brave_Browser_logotype.svg')}
         width={117}
@@ -49,15 +50,15 @@ const BraveLabel = () => {
   );
 };
 
-const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage, redirect }) => {
   function redirectToPricingTable() {
-    window.location.href = '#payment';
+    window.location.href = redirect ? redirect : '#payment';
   }
 
   return (
     <section className="overflow-hidden pt-12">
       <HeroSectionSafeArea>
-        <div className="flex max-w-[550px] flex-col items-center items-center justify-center space-y-8 text-center text-center lg:items-start lg:text-left">
+        <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center text-center lg:items-start lg:text-left">
           <div className="flex flex-col space-y-4">
             {isStartPage ? <StartPageLabel /> : <BraveLabel />}
             <h1 className="text-6xl font-bold text-gray-100">{textContent.title}</h1>
