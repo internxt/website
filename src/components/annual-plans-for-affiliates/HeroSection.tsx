@@ -30,7 +30,7 @@ const StartPageLabel = () => {
 
 const BraveLabel = () => {
   return (
-    <div className="flex flex-row space-x-3.5 lg:items-center ">
+    <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
       <Image
         src={getImage('/images/partnerships/brave/Brave_Browser_logotype.svg')}
         width={117}
