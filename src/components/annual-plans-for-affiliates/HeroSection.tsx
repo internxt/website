@@ -29,7 +29,7 @@ const StartPageLabel = () => {
 
 const BraveLabel = () => {
   return (
-    <div className="flex flex-row items-center space-x-3.5">
+    <div className="flex flex-row items-center justify-center space-x-3.5">
       <Image
         src={getImage('/images/partnerships/brave/Brave_Browser_logotype.svg')}
         width={117}
@@ -57,7 +57,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponen
   return (
     <section className="overflow-hidden pt-12">
       <HeroSectionSafeArea>
-        <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
+        <div className="flex max-w-[550px] flex-col items-center items-center justify-center space-y-8 text-center text-center lg:items-start lg:text-left">
           <div className="flex flex-col space-y-4">
             {isStartPage ? <StartPageLabel /> : <BraveLabel />}
             <h1 className="text-6xl font-bold text-gray-100">{textContent.title}</h1>
