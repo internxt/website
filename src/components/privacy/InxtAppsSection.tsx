@@ -31,6 +31,14 @@ const InxtAppsSection = ({ textContent, lang }) => {
             lang={lang}
             textContent={textContent.square3}
           />
+
+          <ProductCard
+            imageUrl={getImage('/images/privacy/Internxt-VPN.png')}
+            animationDirection={'right'}
+            redirect={'/vpn'}
+            lang={lang}
+            textContent={textContent.square3}
+          />
         </div>
       </div>
     </section>
