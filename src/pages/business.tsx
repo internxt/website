@@ -93,7 +93,6 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
