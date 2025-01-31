@@ -16,6 +16,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
   });
 
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
@@ -27,85 +28,128 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
     });
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const apiKey = process.env.NEXT_PUBLIC_MAILERLITE_API_CONTACT_SALES;
+    const groupId = '145043133822928056';
+
+    const payload = {
+      email: formData.email,
+      fields: {
+        name: formData.name,
+        company: formData.company,
+        phone: formData.phone,
+        storage: formData.storage,
+        help: formData.help,
+      },
+      groups: [groupId],
+    };
+
+    try {
+      const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error('Error al enviar el formulario');
+      }
+
+      alert('Formulario enviado con éxito!');
+      setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' }); // 🔹 Reiniciar formulario
+      setIsFormValid(false);
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Hubo un problema al enviar el formulario');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="overflow-hidden pt-5 lg:pt-10">
-      <div className="text-cente flex flex-col items-center gap-6 text-center">
+      <div className="flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] text-xl text-gray-80">{textContent.description}</h3>
       </div>
 
-      <div className="mb-10 mt-10 flex h-screen items-stretch justify-center lg:mb-20 lg:mt-20 " id="contactSales">
+      <div className="mb-10 mt-10 flex h-screen items-center justify-center lg:mb-20 lg:mt-20" id="contactSales">
         <div className="flex w-full max-w-screen-lg">
-          <div className="flex-1 rounded-l-lg bg-gray-1 p-10 text-gray-100">
-            <form className="space-y-4">
-              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+          <div className="flex-1 rounded-lg bg-gray-1 p-10 text-gray-100">
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="flex flex-col lg:flex-row lg:space-x-4">
                 <div className="w-full lg:w-1/2">
-                  <label className="font-regular mb-1 block text-sm" htmlFor="name">
+                  <label className="mb-1 block text-sm" htmlFor="name">
                     {textContent.form.name}
                   </label>
                   <input
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-lg border px-3 py-2 outline-none focus:border-black focus:ring-0 focus:ring-black"
                     value={formData.name}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <label className="font-regular mb-1 block text-sm" htmlFor="company">
+                  <label className="mb-1 block text-sm" htmlFor="company">
                     {textContent.form.company}
                   </label>
                   <input
                     id="company"
                     type="text"
                     placeholder={textContent.form.company}
-                    className="w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-lg border px-3 py-2 focus:outline-none  "
                     value={formData.company}
                     onChange={handleChange}
                   />
                 </div>
               </div>
 
-              <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
+              <div className="flex flex-col lg:flex-row lg:space-x-4">
                 <div className="w-full lg:w-1/2">
-                  <label className="font-regular mb-1 block text-sm" htmlFor="email">
+                  <label className="mb-1 block text-sm" htmlFor="email">
                     {textContent.form.email}
                   </label>
                   <input
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="border-highlight-10 w-full rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-lg border px-3 py-2 focus:outline-none "
                     value={formData.email}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="w-full lg:w-1/2">
-                  <label className="font-regular mb-1 block text-sm" htmlFor="phone">
+                  <label className="mb-1 block text-sm" htmlFor="phone">
                     {textContent.form.phone}
                   </label>
                   <input
                     id="phone"
                     type="tel"
                     placeholder={textContent.form.phone}
-                    className="w-full rounded-lg border-2 border-gray-1 px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                    className="w-full rounded-lg border px-3 py-2 focus:outline-none "
                     value={formData.phone}
                     onChange={handleChange}
                   />
                 </div>
               </div>
+
               <div className="relative">
-                <label className="font-regular mb-1 block text-sm" htmlFor="storage">
+                <label className="mb-1 block text-sm" htmlFor="storage">
                   {textContent.form.howMuchStorage}
                 </label>
                 <select
                   id="storage"
-                  className="w-full appearance-none rounded-lg border-2 border-transparent bg-white px-3 py-2 pr-12 focus:border-primary focus:ring-2 focus:ring-primary"
+                  className="w-full appearance-none rounded-lg border bg-white px-3 py-2"
                   value={formData.storage}
-                  onChange={(e) => {
-                    handleChange(e);
-                  }}
+                  onChange={handleChange}
                 >
                   {textContent.form.options.map((option, index) => (
                     <option key={index} value={index === 0 ? '' : option}>
@@ -119,7 +163,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
               </div>
 
               <div>
-                <label className="font-regular mb-1 block text-sm" htmlFor="help">
+                <label className="mb-1 block text-sm" htmlFor="help">
                   {textContent.form.howWeCanHelp}
                 </label>
                 <textarea
@@ -128,7 +172,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
-                  className="h-32 w-full resize-none rounded-lg border-2 border-transparent px-3 py-2 focus:border-primary focus:ring-2 focus:ring-primary"
+                  className="h-32 w-full resize-none rounded-lg border px-3 py-2 focus:outline-none "
                 />
               </div>
 
@@ -138,9 +182,9 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
                   className={`w-full rounded-lg px-4 py-2 text-white transition lg:w-1/3 ${
                     isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-gray-30'
                   }`}
-                  disabled={!isFormValid}
+                  disabled={!isFormValid || isSubmitting}
                 >
-                  {textContent.form.cta}
+                  {isSubmitting ? 'Enviando...' : textContent.form.cta}
                 </button>
               </div>
             </form>
