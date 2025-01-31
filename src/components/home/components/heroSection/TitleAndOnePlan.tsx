@@ -62,14 +62,16 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
           {textContent.startFrom.normal2}
         </p>
       </div>
-      <div className="flex flex-col items-center gap-4 space-y-4 pt-4 lg:flex-row">
-        <Link
-          href={'#priceTable'}
-          className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
-        >
-          {textContent.claimDeal}
-        </Link>
-        <div className="flex w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/45 px-5 py-3 text-primary shadow-sm">
+      <div className="flex flex-row justify-center gap-4 pt-4 lg:justify-start ">
+        <div className="flex flex-col items-center lg:flex-row">
+          <Link
+            href={'#priceTable'}
+            className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+          >
+            {textContent.claimDeal}
+          </Link>
+        </div>
+        <div className="flex w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/45 text-primary shadow-sm lg:justify-center">
           <Countdown textFont="font-medium" textHeight="text-xl text-white" />
         </div>
       </div>
