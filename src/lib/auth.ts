@@ -289,7 +289,7 @@ export function checkoutForPcComponentes({
 
     const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
-    window.open(checkoutUrl, '_parent', 'noopener noreferrer');
+    window.open(checkoutUrl, '_self', 'noopener noreferrer');
   }
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
