@@ -5,7 +5,9 @@
       "line2": "Serviço de Armazenamento de Objetos na Nuvem"
     },
     "description": "Uma solução de armazenamento na nuvem segura, acessível e escalável para armazenar, acessar e gerenciar grandes volumes de dados.",
-    "cta": "Comece Agora"
+    "cta": "Comece Agora",
+    "separator": "|",
+    "cta2": "Fale com Vendas"
   },
   "PredictablePricingSection": {
     "title": "Preços Simples e Previsíveis, Sem Custos de API",
@@ -173,5 +175,31 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Fale com Vendas",
+    "description": "Preencha o formulário de contato e nossa equipe entrará em contato com você o mais breve possível.",
+    "form": {
+      "name": "Nome",
+      "surname": "Sobrenome",
+      "email": "Endereço de e-mail",
+      "company": "Nome da empresa",
+      "phone": "Número de telefone",
+      "howMuchStorage": "Quanto armazenamento você precisa?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Selecione",
+        "Menos de 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "Mais de 20 PB"
+      ],
+      "howWeCanHelp": "Como podemos ajudar você?",
+      "cta": "Enviar mensagem"
+    }
   }
 }
