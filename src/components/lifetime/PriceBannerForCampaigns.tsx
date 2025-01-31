@@ -58,7 +58,7 @@ export const PriceBannerForCampaigns = ({
               src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
               width={300}
               height={100}
-              alt="Internxt Cloud Storage Pricing"
+              alt="Superbowl 2025 pricing banner image"
               className="top-10 z-10 w-full object-cover"
             />
           </div>
@@ -98,7 +98,7 @@ export const PriceBannerForCampaigns = ({
             src={getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp')}
             width={377}
             height={200}
-            alt="Privacy Week"
+            alt="Superbowl 2025 pricing banner image for mobile"
             className="w-full object-cover"
           />
         </div>

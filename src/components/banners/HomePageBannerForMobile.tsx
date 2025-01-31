@@ -46,7 +46,7 @@ export const HomePageBannerForMobile = () => {
           src={getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp')}
           width={404}
           height={400}
-          alt="Privacy Week"
+          alt="Superbowl 2025 mobile image"
           className="top-10 w-full object-cover"
         />
       </div>
