@@ -30,7 +30,6 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
           </div>
           <Link
             href={'/pricing'}
-            target="_blank"
             id={'topBannerActionButton'}
             className="flex cursor-pointer flex-row items-center space-x-2"
           >
@@ -42,7 +41,6 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       {/* Mobile view */}
       <Link
         href={'/pricing'}
-        target="_blank"
         className={`group fixed left-0 z-30 flex h-[65px]  w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
         <div className="flex h-full w-full items-center justify-center px-3 text-center md:mb-3">
