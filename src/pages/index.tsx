@@ -45,8 +45,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.PrivacyWeek,
+    couponCode: PromoCodeName.SuperBowlCampaign,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -84,17 +83,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.PrivacyWeek
-      : PromoCodeName.SoftSales;
-
+    const couponCodeForCheckout = individualCoupon?.name;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
 
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -111,9 +106,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          individuals: decimalDiscount,
+          lifetime: decimalDiscount,
+          business: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}

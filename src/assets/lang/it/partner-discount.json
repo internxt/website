@@ -1,61 +1,87 @@
 {
   "HeroSection": {
-    "title": "The most secure cloud for all your photos and files",
-    "title1": {
-      "line1": "Get the safest cloud storage",
-      "line2": "for all your files, photos and more"
+    "header": "Sconto Annuale Internxt",
+    "title": {
+      "normalText": "Ottieni lo storage cloud più sicuro ",
+      "blueText": "a un prezzo inferiore"
     },
-    "subtitle": "Use the coupon code SPECIAL15 for an additional discount",
-    "subtitle1": "Don't forget to use the exclusive coupon code TECHRADAR",
-    "card": "\"Individual users and businesses that prioritize security will enjoy advanced security features and commitment to privacy\"",
-    "cta": "Choose your plan"
+    "description": {
+      "normal": "Unisciti a Internxt, l'alternativa principale a Google Drive, e beneficia di ",
+      "blue": "80% DI SCONTO ",
+      "normal1": "su qualsiasi piano annuale. Archivia e condividi i tuoi file in modo sicuro e privato."
+    },
+    "cta": "Scegli un piano"
   },
   "PaymentSection": {
-    "title": "Privacy at a reasonable price",
-    "subtitle": "Who says best-in-class security can't be affordable? Protect your privacy and take back total control of your data with any one of our three plans:",
-    "billedAnnually": "Billed annually",
-    "popular": "Most popular",
-    "month": "/month",
-    "card1": {
-      "plan": "20GB",
-      "price": "0.89",
-      "annualPrice": "10.68"
+    "planTitles": { "homePage": "Scegli lo spazio di archiviazione di cui hai bisogno" },
+    "planDescription": "Ogni piano Internxt include l'accesso completo ai nostri servizi di privacy. Goditi un anno intero di sicurezza per soddisfare le tue esigenze di archiviazione.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "individual": "Individuale",
+      "lifetime": "A vita",
+      "business": "Aziendale"
     },
-    "card2": {
-      "plan": "200GB",
-      "price": "3.49",
-      "annualPrice": "41.88"
-    },
-    "card3": {
-      "plan": "2TB",
-      "price": "8.99",
-      "annualPrice": "107.88"
-    },
-    "infoPlan": {
-      "info1": "30 days money-back guarantee",
-      "info2": "Encrypted file storage and sharing",
-      "info3": "Access your files from any device",
-      "info4": "Get access to all our services"
+    "features": {
+      "endToEnd": "Cifrato end-to-end",
+      "openSource": "Open-source e verificato",
+      "anonymousAccount": "Creazione di account anonimo"
     }
   },
-  "InfoSection": {
-    "title": "How we ensure user privacy",
-    "subtitle": "We take privacy and security very seriously, that's why we employ a stack of technologies and protocols to always ensure tht your data remains safe and private.",
-    "card1": {
-      "title": "Military-grade encryption",
-      "description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerful processor in the world would need twice the age of the universe to decrypt a small file."
+  "FeatureSection": {
+    "title": "Perché scegliere Internxt per proteggere i tuoi file?",
+    "description": "Internxt ti restituisce il controllo sulla tua privacy. A differenza delle soluzioni di storage cloud tradizionali, garantiamo che solo tu possiedi le chiavi dei tuoi dati cifrati e non memorizziamo né vendiamo le tue informazioni a terzi. Facciamo tutto il necessario per garantire la sicurezza delle tue informazioni.",
+    "cta": "Scegli la dimensione dello storage",
+    "cards": [
+      {
+        "title": "Dati ininvasibili e inviolabili",
+        "description": "Non memorizziamo password né dati degli utenti e tutti i tuoi dati sono cifrati in transito e a riposo. Internxt ti dà il pieno controllo sui tuoi file. I tuoi dati sono tua responsabilità. Proteggerli è il nostro compito."
+      },
+      {
+        "title": "Sicurezza senza compromessi",
+        "description": "I tuoi file sono cifrati end-to-end prima ancora di lasciare il tuo dispositivo. Grazie alla crittografia AES-256 a conoscenza zero, sei l'unica persona ad avere accesso ai tuoi dati."
+      },
+      {
+        "title": "Open-source e trasparente",
+        "description": "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è pubblico su GitHub e può essere esaminato, verificato e controllato da chiunque. Non abbiamo nulla da nascondere, tranne i tuoi dati."
+      },
+      {
+        "title": "Verificato in modo indipendente",
+        "description": "Siamo completamente conformi al GDPR e al 100% sicuri, ma non fidarti solo della nostra parola. Internxt è stato auditato e verificato in modo indipendente dalla principale azienda europea di penetration testing, Securitum."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Centinaia di migliaia stanno abbandonando iCloud, Google Drive e Dropbox per ",
+      "blue": "il storage cloud più sicuro: Internxt Drive"
     },
-    "card2": {
-      "title": "Zero-knowledge technology",
-      "description": "We make sure that there is no point in time where files, photos, passwords, or any unencrypted data is visible to unauthorized users or servers."
-    },
-    "card3": {
-      "title": "GDPR-compliant synchronization",
-      "description": "We conform with all GDPR provisions, such as privacy by design, the right to information, and the right to be forgotten, among many others, and are committed to meeting all future provisions."
-    },
-    "card4": {
-      "title": "End-to-end encryption",
-      "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission. Even we can't access your files, photos, or passwords."
-    }
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Giornalista per FixThePhoto.com",
+        "review": "Internxt è un servizio di storage cloud comodo per i clienti attenti alla privacy. Dispone di un'interfaccia semplificata e di un team di supporto affidabile, rendendolo un'ottima opzione per chi desidera archiviare i propri file in modo sicuro."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Recensione di GetApp",
+        "review": "La migliore alternativa cifrata a Dropbox. In generale: avevamo bisogno di un'alternativa per archiviare i file dei clienti e di lavoro (file dei social media) e Internxt, rispettoso del GDPR, ha risposto perfettamente alle nostre esigenze."
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Recensione di Trustpilot",
+        "review": "Ho utilizzato Google Drive per diversi anni, ma avevo bisogno di un'alternativa che garantisse la privacy dei miei dati. Qualcosa che Google o altre piattaforme conosciute non possono fare. Ecco perché sono passato a Internxt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Ottieni un anno completo di storage con il 80% di sconto ora!",
+    "description": "Internxt offre uno sconto esclusivo con privacy e sicurezza garantite.",
+    "cta": "Scegli un piano"
+  },
+  "CtaSection1": {
+    "title": "Il storage cloud più privato al mondo",
+    "description": "Approfitta del tuo sconto esclusivo del 80% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
+    "cta": "Trova il tuo piano"
   }
 }
