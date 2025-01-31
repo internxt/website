@@ -3,9 +3,10 @@ import { useState } from 'react';
 
 interface ContactSalesFormProps {
   textContent: any;
+  isBusiness?: boolean;
 }
 
-export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
+export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -22,7 +23,8 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
     const { id, value } = e.target;
     setFormData((prev) => {
       const updatedFormData = { ...prev, [id]: value };
-      const isValid = Object.values(updatedFormData).every((field) => field.trim() !== '');
+      const fieldsToValidate = ['name', 'company', 'email', 'phone', 'storage', 'help'];
+      const isValid = fieldsToValidate.every((field) => updatedFormData[field].trim() !== '');
       setIsFormValid(isValid);
       return updatedFormData;
     });
@@ -43,7 +45,9 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
         phone: formData.phone,
         storage: formData.storage,
         help: formData.help,
+        origin_contact: isBusiness ? 'B2B' : 'S3',
       },
+
       groups: [groupId],
     };
 
@@ -62,7 +66,7 @@ export const ContactSalesForm = ({ textContent }: ContactSalesFormProps) => {
       }
 
       alert('Formulario enviado con éxito!');
-      setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' }); // 🔹 Reiniciar formulario
+      setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
       setIsFormValid(false);
     } catch (error) {
       console.error('Error:', error);
