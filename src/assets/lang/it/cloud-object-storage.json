@@ -180,8 +180,7 @@
     "title": "Contatta vendite",
     "description": "Compila il modulo di contatto e il team ti contatterà a breve.",
     "form": {
-      "name": "Nome",
-      "surname": "Cognome",
+      "name": "Nome completo",
       "email": "Indirizzo email",
       "company": "Nome dell'azienda",
       "phone": "Numero di telefono",

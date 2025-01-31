@@ -169,8 +169,7 @@
     "title": "Contactar ventas",
     "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
     "form": {
-      "name": "Nombre",
-      "surname": "Apellidos",
+      "name": "Nombre Completo",
       "email": "Correo electrónico",
       "company": "Nombre de la empresa",
       "phone": "Número de teléfono",

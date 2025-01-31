@@ -16,7 +16,6 @@ export interface ContactSales {
 
 export interface Form {
   name: string;
-  surname: string;
   email: string;
   company: string;
   phone: string;

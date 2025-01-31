@@ -176,8 +176,7 @@
     "title": "Contact sales",
     "description": "Fill out the contact form and the team will contact you shortly.",
     "form": {
-      "name": "Name",
-      "surname": "Surname",
+      "name": "Full Name",
       "email": "Email address",
       "company": "Company Name",
       "phone": "Phone number",
