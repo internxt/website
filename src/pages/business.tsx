@@ -112,7 +112,7 @@ export const BusinessPage = ({
 
       <FAQSection textContent={textContent.FaqSection} />
 
-      <ContactSalesForm textContent={textContent.ContactSales} />
+      <ContactSalesForm textContent={textContent.ContactSales} isBusiness />
 
       <Footer textContent={footerText} lang={locale} />
     </Layout>
