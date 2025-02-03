@@ -34,6 +34,12 @@ const CloudObjectStorage = ({
 
   const lang = locale as string;
 
+  const scrollToTop = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
@@ -62,13 +68,7 @@ const CloudObjectStorage = ({
                 onClick={() => (window.location.hash = '#storageSection')}
               />
               <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
-              <Button
-                className="!w-full lg:!w-max"
-                text={textContent.HeroSection.cta2}
-                onClick={() =>
-                  document.querySelector('#contactSales')?.scrollIntoView({ behavior: 'smooth', block: 'end' })
-                }
-              />
+              <Button className="!w-full lg:!w-max" text={textContent.HeroSection.cta2} onClick={scrollToTop} />
             </div>
           </div>
         }
