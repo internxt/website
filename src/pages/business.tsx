@@ -48,8 +48,11 @@ export const BusinessPage = ({
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
-  const onButtonClick2 = () => {
-    document.querySelector('#contactSales')?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  const scrollToTop = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
   };
 
   const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
@@ -69,7 +72,7 @@ export const BusinessPage = ({
             <div className="flex flex-row items-center gap-4">
               <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
               <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
-              <Button text={textContent.HeroSection.cta2} onClick={onButtonClick2} />
+              <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
             </div>
           </div>
         }
