@@ -13,7 +13,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import CtaSection from '@/components/affiliates/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { BraveText } from '@/lib/brave';
+import { BraveText } from '@/assets/types/brave-page';
 
 interface BravePageProps {
   metatagsDescriptions: MetatagsDescription[];
