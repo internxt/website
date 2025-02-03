@@ -23,6 +23,7 @@ export interface Form {
   totalCharacters: string;
   options: string[];
   howWeCanHelp: string;
+  howWeCanHelpPlaceholder: string;
   cta: string;
   successMessage: string;
   errorMessage: string;

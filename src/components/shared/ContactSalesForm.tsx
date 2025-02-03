@@ -184,7 +184,11 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                 </label>
                 <textarea
                   id="help"
-                  placeholder={textContent.form.howWeCanHelp}
+                  placeholder={
+                    textContent.form.howWeCanHelpPlaceholder
+                      ? textContent.form.howWeCanHelpPlaceholder
+                      : textContent.form.howWeCanHelp
+                  }
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}

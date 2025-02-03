@@ -203,7 +203,8 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "¿Cómo podemos ayudarte?",
+      "howWeCanHelp": "¿Cómo podemos ayudarte? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Cuentanos que necesitas...",
       "cta": "Enviar mensaje",
       "successMessage": "Su mensaje ha sido enviado con éxito.",
       "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."

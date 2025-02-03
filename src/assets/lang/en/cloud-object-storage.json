@@ -193,7 +193,8 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "How can we help you?",
+      "howWeCanHelp": "How can we help you? (Optional)",
+      "howWeCanHelpPlaceHolder": "Tell us more about your  needs",
       "cta": "Send message",
       "successMessage": "Your message has been sent successfully.",
       "errorMessage": "An error occurred. Please try again."
