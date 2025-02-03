@@ -48,7 +48,10 @@ export const BusinessPage = ({
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
-  const onButtonClick2 = () => (window.location.href = '#contactSales');
+  const onButtonClick2 = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+  };
+
   const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
 
   return (

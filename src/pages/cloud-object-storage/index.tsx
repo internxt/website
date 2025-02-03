@@ -65,7 +65,9 @@ const CloudObjectStorage = ({
               <Button
                 className="!w-full lg:!w-max"
                 text={textContent.HeroSection.cta2}
-                onClick={() => (window.location.hash = '#contactSales')}
+                onClick={() =>
+                  document.querySelector('#contactSales')?.scrollIntoView({ behavior: 'smooth', block: 'end' })
+                }
               />
             </div>
           </div>

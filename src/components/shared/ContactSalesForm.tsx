@@ -83,13 +83,13 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   };
 
   return (
-    <section className="mt-6 overflow-hidden">
+    <section className="mt-6 overflow-hidden" id="contactSales">
       <div className="flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] text-xl text-gray-80">{textContent.description}</h3>
       </div>
 
-      <div className="flex items-center justify-center py-8 " id="contactSales">
+      <div className="flex items-center justify-center py-8 ">
         <div className="flex w-full max-w-[850px]">
           <div className="flex-1 rounded-lg bg-gray-1 p-10 text-gray-100">
             <form className="space-y-4" onSubmit={handleSubmit}>
