@@ -28,6 +28,7 @@ export default function PriceCard({
   contentText,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
+  const priceBeforeDiscount = priceBefore ? Number(priceBefore).toFixed(2).replace('.00', '') : undefined;
   return (
     <div
       className={`${
@@ -47,7 +48,9 @@ export default function PriceCard({
           </div>
         </div>
         <div
-          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
+          className={`planPrice flex flex-col items-center justify-center ${
+            priceBeforeDiscount ? 'space-y-1' : 'space-y-4'
+          }`}
         >
           <div
             className={`priceBreakdown flex flex-row
@@ -68,11 +71,11 @@ export default function PriceCard({
           </span>
           <p
             className={`${
-              priceBefore ? 'flex' : 'hidden'
+              priceBeforeDiscount ? 'flex' : 'hidden'
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">{priceBefore}</span>
+            <span className="price text-2xl font-medium">{priceBeforeDiscount}</span>
           </p>
 
           <p className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-sm text-gray-50`}>
