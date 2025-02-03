@@ -1,11 +1,12 @@
-import { CaretDown } from '@phosphor-icons/react';
+import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
+import { set } from 'cypress/types/lodash';
 import { useState } from 'react';
 
 interface ContactSalesFormProps {
   textContent: any;
   isBusiness?: boolean;
 }
-
+type result = 'error' | 'success' | 'default';
 export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -19,11 +20,13 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const [view, setView] = useState<result>('default');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => {
       const updatedFormData = { ...prev, [id]: value };
-      const fieldsToValidate = ['name', 'company', 'email', 'phone', 'storage', 'help'];
+      const fieldsToValidate = ['name', 'company', 'email', 'phone', 'storage'];
       const isValid = fieldsToValidate.every((field) => updatedFormData[field].trim() !== '');
       setIsFormValid(isValid);
       return updatedFormData;
@@ -36,6 +39,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
 
     const apiKey = process.env.NEXT_PUBLIC_MAILERLITE_API_CONTACT_SALES;
     const groupId = '145043133822928056';
+
+    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
     const payload = {
       email: formData.email,
@@ -65,26 +70,28 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
         throw new Error('Error al enviar el formulario');
       }
 
-      alert('Formulario enviado con éxito!');
+      setView('success');
+      await sleep(2000);
       setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
       setIsFormValid(false);
+      setView('default');
     } catch (error) {
       console.error('Error:', error);
-      alert('Hubo un problema al enviar el formulario');
+      setView('error');
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section className="overflow-hidden pt-5 lg:pt-10">
+    <section className="mt-6 overflow-hidden">
       <div className="flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] text-xl text-gray-80">{textContent.description}</h3>
       </div>
 
-      <div className="mb-10 mt-10 flex h-screen items-center justify-center lg:mb-20 lg:mt-20" id="contactSales">
-        <div className="flex w-full max-w-screen-lg">
+      <div className="flex items-center justify-center py-8 " id="contactSales">
+        <div className="flex w-full max-w-[850px]">
           <div className="flex-1 rounded-lg bg-gray-1 p-10 text-gray-100">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex flex-col lg:flex-row lg:space-x-4">
@@ -167,9 +174,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                     </option>
                   ))}
                 </select>
-                {formData.storage === '' && (
-                  <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100" />
-                )}
+
+                <CaretDown className="pointer-events-none absolute right-6 top-1/2 h-6 w-6 transform text-gray-100" />
               </div>
 
               <div>
@@ -197,6 +203,19 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                   {isSubmitting ? 'Enviando...' : textContent.form.cta}
                 </button>
               </div>
+              {view === 'success' && (
+                <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                  <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
+                  <p className="ml-2 text-sm text-gray-80">{textContent.form.successMessage}</p>
+                </div>
+              )}
+
+              {view === 'error' && (
+                <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                  <WarningCircle height={24} width={24} weight="fill" className="text-red" />
+                  <p className="ml-2 text-sm text-gray-80">{textContent.form.errorMessage}</p>
+                </div>
+              )}
             </form>
           </div>
         </div>

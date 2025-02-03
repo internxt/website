@@ -187,7 +187,9 @@
         "20+ PB"
       ],
       "howWeCanHelp": "¿Cómo podemos ayudarte?",
-      "cta": "Enviar mensaje"
+      "cta": "Enviar mensaje",
+      "successMessage": "Su mensaje ha sido enviado con éxito.",
+      "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."
     }
   }
 }

@@ -194,7 +194,9 @@
         "20+ PB"
       ],
       "howWeCanHelp": "How can we help you?",
-      "cta": "Send message"
+      "cta": "Send message",
+      "successMessage": "Your message has been sent successfully.",
+      "errorMessage": "An error occurred. Please try again."
     }
   }
 }

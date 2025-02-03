@@ -200,7 +200,9 @@
         "20+ Po"
       ],
       "howWeCanHelp": "Comment pouvons-nous vous aider?",
-      "cta": "Envoyer le message"
+      "cta": "Envoyer le message",
+      "successMessage": "Votre message a été envoyé avec succès.",
+      "errorMessage": "Une erreur s’est produite. Veuillez réessayer."
     }
   }
 }

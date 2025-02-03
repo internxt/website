@@ -27,6 +27,8 @@ export interface Form {
   options: string[];
   howWeCanHelp: string;
   cta: string;
+  successMessage: string;
+  errorMessage: string;
 }
 
 export interface EncryptedCloudSolution {
