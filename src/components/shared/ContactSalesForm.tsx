@@ -66,7 +66,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
       });
 
       if (!response.ok) {
-        throw new Error('Error al enviar el formulario');
+        throw new Error('Error sending the form');
       }
 
       setView('success');
@@ -83,10 +83,12 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   };
 
   return (
-    <section className="mt-6 overflow-hidden" id="contactSales">
+    <section className="mt-6 overflow-hidden">
       <div className="flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
-        <h3 className="max-w-[774px] text-xl text-gray-80">{textContent.description}</h3>
+        <h3 className="max-w-[774px] text-xl text-gray-80" id="contactSales">
+          {textContent.description}
+        </h3>
       </div>
 
       <div className="flex items-center justify-center py-8 ">
