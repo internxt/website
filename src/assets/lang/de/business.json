@@ -204,6 +204,7 @@
         "20+ PB"
       ],
       "howWeCanHelp": "Wie können wir Ihnen helfen?",
+      "howWeCanHelpPlaceHolder": "Bitte geben Sie hier an, wie wir Ihnen helfen können.",
       "cta": "Nachricht senden",
       "successMessage": "Ihre Nachricht wurde erfolgreich gesendet.",
       "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."

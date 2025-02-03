@@ -1,5 +1,4 @@
 import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import { set } from 'cypress/types/lodash';
 import { useState } from 'react';
 
 interface ContactSalesFormProps {
@@ -184,11 +183,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                 </label>
                 <textarea
                   id="help"
-                  placeholder={
-                    textContent.form.howWeCanHelpPlaceholder
-                      ? textContent.form.howWeCanHelpPlaceholder
-                      : textContent.form.howWeCanHelp
-                  }
+                  placeholder={textContent.form.howWeCanHelpPlaceHolder}
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
