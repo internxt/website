@@ -96,7 +96,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                     id="name"
                     type="text"
                     placeholder={textContent.form.name}
-                    className="w-full rounded-lg border px-3 py-2 outline-none focus:border-black focus:ring-0 focus:ring-black"
+                    className="w-full rounded-lg border border-highlight px-3 py-2 outline-none"
                     value={formData.name}
                     onChange={handleChange}
                   />
@@ -109,7 +109,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                     id="company"
                     type="text"
                     placeholder={textContent.form.company}
-                    className="w-full rounded-lg border px-3 py-2 focus:outline-none  "
+                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none  "
                     value={formData.company}
                     onChange={handleChange}
                   />
@@ -125,7 +125,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                     id="email"
                     type="email"
                     placeholder={textContent.form.email}
-                    className="w-full rounded-lg border px-3 py-2 focus:outline-none "
+                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none "
                     value={formData.email}
                     onChange={handleChange}
                   />
@@ -138,7 +138,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                     id="phone"
                     type="tel"
                     placeholder={textContent.form.phone}
-                    className="w-full rounded-lg border px-3 py-2 focus:outline-none "
+                    className="w-full rounded-lg border border-highlight px-3 py-2 focus:outline-none "
                     value={formData.phone}
                     onChange={handleChange}
                   />
@@ -151,12 +151,18 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                 </label>
                 <select
                   id="storage"
-                  className="w-full appearance-none rounded-lg border bg-white px-3 py-2"
+                  className={`w-full appearance-none rounded-lg border border-highlight bg-white px-3 py-2 ${
+                    formData.storage === '' ? 'text-gray-40' : 'text-gray-100'
+                  }`}
                   value={formData.storage}
                   onChange={handleChange}
                 >
                   {textContent.form.options.map((option, index) => (
-                    <option key={index} value={index === 0 ? '' : option}>
+                    <option
+                      key={index}
+                      value={index === 0 ? '' : option}
+                      className={index === 0 ? 'text-gray-40' : 'text-gray-100'}
+                    >
                       {option}
                     </option>
                   ))}
@@ -176,7 +182,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                   maxLength={1000}
                   value={formData.help}
                   onChange={handleChange}
-                  className="h-32 w-full resize-none rounded-lg border px-3 py-2 focus:outline-none "
+                  className="h-32 w-full resize-none rounded-lg border border-highlight px-3 py-2 focus:outline-none "
                 />
               </div>
 
