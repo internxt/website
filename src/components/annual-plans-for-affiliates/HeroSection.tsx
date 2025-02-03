@@ -52,7 +52,7 @@ const BraveLabel = () => {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponent, isStartPage, redirect }) => {
   function redirectToPricingTable() {
-    window.location.href = redirect ? redirect : '#payment';
+    window.location.href = redirect ?? '#payment';
   }
 
   return (
