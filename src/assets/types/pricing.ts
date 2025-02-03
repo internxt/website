@@ -149,6 +149,7 @@ export interface FreePlanCard {
 }
 
 export interface PlanTitles {
+  header: string;
   individuals: string;
   lifetime: string;
   business: string;
