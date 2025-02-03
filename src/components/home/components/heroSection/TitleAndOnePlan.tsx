@@ -28,14 +28,14 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   }, []);
 
   return (
-    <div className="flex max-w-[544px] flex-col gap-6">
+    <div className="max-w-[544px] flex-col gap-6  ">
       {header ?? (
         <div className="flex flex-col gap-9">
           <div className="flex flex-col gap-4">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100">
+            <Header maxWidth="max-w-[500px]" className="text-gray-100 lg:text-white">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
             </Header>
-            <p className="text-xl font-bold text-gray-100">
+            <p className="text-xl font-bold text-gray-100 lg:text-white">
               {textContent.description.normal1}
               <span className="text-primary">{textContent.description.blue}</span>
               {textContent.description.normal2}
@@ -44,8 +44,8 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
           <div className="mx-auto flex flex-col gap-2 lg:mx-0">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex flex-row gap-2">
-                <Check className="text-green" weight="bold" size={24} />
-                <p className="text-lg font-semibold text-gray-100">{feat}</p>
+                <Check className="text-green-1" weight="bold" size={24} />
+                <p className="text-lg font-semibold text-gray-100 lg:text-white">{feat}</p>
               </div>
             ))}
           </div>
@@ -53,31 +53,33 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       )}
 
       <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100">
+        <p className="flex flex-row items-end text-gray-100 lg:text-white">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100 lg:text-white">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
           {textContent.startFrom.normal2}
         </p>
       </div>
-      <div className="flex flex-col items-center gap-4 lg:flex-row">
-        <Link
-          href={'#priceTable'}
-          className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
-        >
-          {textContent.claimDeal}
-        </Link>
-        <div className="flex w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/7 px-5 py-3 text-primary shadow-sm">
-          <Countdown textFont="font-medium" textHeight="text-xl" />
+      <div className="flex flex-row justify-center gap-4 pt-4 lg:justify-start ">
+        <div className="flex flex-col items-center lg:flex-row">
+          <Link
+            href={'#priceTable'}
+            className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+          >
+            {textContent.claimDeal}
+          </Link>
+        </div>
+        <div className="hidden w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/45 text-primary shadow-sm lg:flex lg:justify-center">
+          <Countdown textFont="font-medium" textHeight="text-xl text-white" />
         </div>
       </div>
 
       {footer ?? (
-        <div className="flex flex-row items-center justify-center space-x-3 pt-2 text-gray-100 lg:justify-start">
-          <ShieldCheck size={24} weight="fill" className="text-primary" />
-          <p className="whitespace-nowrap text-gray-100 lg:text-lg ">{textContent.guarantee}</p>
+        <div className="flex flex-row items-center justify-center space-x-3 pt-2 pt-4 text-gray-100 lg:justify-start">
+          <ShieldCheck size={24} weight="fill" className="text-green-1" />
+          <p className="whitespace-nowrap text-gray-100 lg:text-lg lg:text-white ">{textContent.guarantee}</p>
         </div>
       )}
     </div>

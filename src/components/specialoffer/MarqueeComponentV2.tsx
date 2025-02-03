@@ -42,17 +42,17 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/Revolut.svg')}
-              width={120}
-              height={40}
-              alt="Telefonica logo"
+              width={340}
+              height={10}
+              alt="Revolut logo"
               loading="lazy"
               draggable={false}
             />
 
             <Image
               src={getImage('/logos/featured/gobierno_de_espana.png')}
-              width={120}
-              height={40}
+              width={340}
+              height={10}
               alt="Gobierno de Espana logo"
               loading="lazy"
               draggable={false}
@@ -68,10 +68,10 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
             />
 
             <Image
-              src={getImage('/logos/featured/pc_componentes.svg')}
+              src={getImage('/logos/featured/levante_ud.svg')}
               width={120}
               height={40}
-              alt="Heise logo"
+              alt="Levante Union Deportiva logo"
               loading="lazy"
               draggable={false}
             />
@@ -142,6 +142,15 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
               width="100"
               height="20"
               alt="PCComponentes logo"
+              loading="lazy"
+              draggable={false}
+            />
+
+            <Image
+              src={getImage('/logos/featured/levante_ud.svg')}
+              width={40}
+              height={15}
+              alt="Levante Union Deportiva logo"
               loading="lazy"
               draggable={false}
             />

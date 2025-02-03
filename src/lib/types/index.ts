@@ -117,6 +117,7 @@ export enum PromoCodeName {
   PCLOUD80 = 'PCLOUD80',
   PrivacyWeek = 'PRIVACY85',
   Brave = 'BRAVE85',
+  SuperBowlCampaign = 'SUPERBOWL80',
 }
 
 export interface PromoCodeProps {

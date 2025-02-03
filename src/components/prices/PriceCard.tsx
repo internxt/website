@@ -1,5 +1,5 @@
 import { PromoCodeProps } from '@/lib/types';
-import { Coins, Fire, Gift, Info } from '@phosphor-icons/react';
+import { Coins, Fire, Football, Gift, Info } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
@@ -164,14 +164,19 @@ export default function PriceCard({
         >
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
-        {isOffer ? (
-          <div className="text-green flex flex-row gap-2">
-            <Coins size={24} />
-            <p className="font-bold">
-              {contentText.save + ' '} {priceBefore && priceForSubscriptions(Number(priceBefore - price).toFixed(2))} €
-            </p>
+      </div>
+      <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
+        <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+        {lifetimeMode === 'normal' ? (
+          <div className="flex items-start space-x-2 text-left">
+            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.extra}</span>
           </div>
-        ) : undefined}
+        ) : null}
+        <div className="flex items-start space-x-2 text-left">
+          <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+          <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+        </div>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
