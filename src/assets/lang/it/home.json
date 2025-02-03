@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "Ottieni il ",
-        "blue": "85% di sconto ",
+        "blue": "80% di sconto ",
         "normal2": "su tutti i piani premium"
       },
       "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source verificato"],
@@ -310,6 +310,13 @@
         "question": "Posso aggiungere più spazio di archiviazione al mio piano a vita?",
         "answer": [
           "Sì, puoi aggiungere tutto lo spazio di archiviazione che desideri alla tua adesione a vita di Internxt. I piani a vita di Internxt sono cumulabili. Acquistali semplicemente con lo stesso indirizzo email e contattaci a [hello@internxt.com](mailto:hello@internxt.com) in modo che possiamo accumularli insieme per te sullo stesso account."
+        ]
+      },
+      {
+        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center funzionano con il 92% di energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
+          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

@@ -1,6 +1,6 @@
-const SEND_TO = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_SENDTO;
+const SEND_TO = process.env.NEXT_PUBLIC_GA_ID;
 
-const handleAdsConversion = (url, elementConversion, value, currency) => {
+const handleAdsConversion = (url, elementConversion, tag, value, currency) => {
   const callback = () => {
     if (url) {
       window.location.href = url;
@@ -9,7 +9,7 @@ const handleAdsConversion = (url, elementConversion, value, currency) => {
 
   if (window.gtag) {
     window.gtag('event', elementConversion, {
-      send_to: SEND_TO,
+      send_to: `${SEND_TO}/${tag}`,
       value: value,
       currency: currency,
       event_callback: callback,

@@ -10,6 +10,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Шифрование в покое и во время передачи",
             "end_to_end_encrypted_storage": "Шифрование хранения от конца к концу",
+            "post_quantum_encryption": "Пост-квантовое шифрование",
             "end_to_end_encrypted_file_sharing": "Обмен файлами с шифрованием от конца к концу",
             "zero_knowledge_encryption": "Шифрование без знания",
             "two_factor_authentication": "Двухфакторная аутентификация",

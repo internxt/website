@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% 折扣 ",
+        "blue": "80% 折扣 ",
         "normal2": "所有高级计划"
       },
       "features": ["最高 10TB 存储", "零知识加密", "开源和审计"],
@@ -311,6 +311,13 @@
         "question": "我可以向我的终身计划添加更多存储空间吗？",
         "answer": [
           "是的，您可以向您的Internxt终身会员资格添加任意数量的存储空间。Internxt终身计划是可堆叠的。只需使用相同的电子邮件地址购买，并联系我们 [hello@internxt.com](mailto:hello@internxt.com)，我们可以将它们堆叠在同一账户上。"
+        ]
+      },
+      {
+        "question": "Internxt 是可持续且环保的云存储解决方案吗？",
+        "answer": [
+          "是的，Internxt 致力于绿色云计算，提供环保的存储解决方案，支持更清洁、更可持续的未来。我们的数据中心使用 92% 的可再生能源运行，旨在最大程度地减少碳排放、资源消耗和电子垃圾。",
+          "我们的努力目标是在 2050 年实现碳中和。 [了解更多](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

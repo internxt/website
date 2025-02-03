@@ -10,6 +10,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Crittografia a riposo e in transito",
             "end_to_end_encrypted_storage": "Archiviazione crittografata end-to-end",
+            "post_quantum_encryption": "Crittografia post-quantistica",
             "end_to_end_encrypted_file_sharing": "Condivisione di file crittografata end-to-end",
             "zero_knowledge_encryption": "Crittografia a conoscenza zero",
             "two_factor_authentication": "Autenticazione a due fattori",

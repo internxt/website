@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "Get 85% off ",
-        "normal2": "all lifetime plans"
+        "blue": "Get 80% off ",
+        "normal2": "all premium plans"
       },
       "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
       "startFrom": {
@@ -332,6 +332,13 @@
         "question": "Can I add more storage to my lifetime plan?",
         "answer": [
           "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

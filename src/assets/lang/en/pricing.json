@@ -36,19 +36,20 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 85%",
+      "label": "Save 80%",
       "title": "Halloween sale",
-      "subtitle": "Data Privacy Week deal!",
+      "subtitle": "SuperBowl Savings!",
       "cta": "Claim deal",
       "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl1": "Data Privacy ",
-      "titleMbl2": "Week deal!",
+      "titleMbl1": "SuperBowl ",
+      "titleMbl2": "Savings!",
       "titleMbl3": "",
       "ctaMbl": "Buy plan"
     },
     "planTitles": {
+      "header": "Total privacy for 85% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",

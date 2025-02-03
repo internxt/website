@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% de descuento ",
-        "normal2": "en los planes Lifetime"
+        "blue": "80% de descuento ",
+        "normal2": "en todos planes Premium"
       },
       "features": ["Hasta 10TB de almacenamiento", "Cifrado de conocimiento cero", "Código abierto y auditado"],
       "startFrom": {
@@ -310,6 +310,13 @@
         "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
         "answer": [
           "Sí, puedes añadir tanto almacenamiento como desees a tu membresía de por vida de Internxt. Los planes de por vida de Internxt son acumulables. Simplemente cómpralos con el mismo correo electrónico y contáctanos en [hello@internxt.com](mailto:hello@internxt.com) para que podamos acumularlos juntos en la misma cuenta."
+        ]
+      },
+      {
+        "question": "¿Internxt es una solución de almacenamiento en la nube sostenible y ecológica?",
+        "answer": [
+          "Sí, Internxt está comprometido con la computación en la nube ecológica, ofreciendo soluciones de almacenamiento respetuosas con el medio ambiente para apoyar un futuro más limpio y sostenible. Nuestros centros de datos funcionan con un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los residuos electrónicos.",
+          "Nuestros esfuerzos contribuyen a un objetivo de neutralidad climática para 2050. [Más información](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

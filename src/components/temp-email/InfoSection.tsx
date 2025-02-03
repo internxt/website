@@ -101,7 +101,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
                 quality={100}
                 className="cursor-pointer"
                 onClick={() => {
-                  window.open(SIGNUP_DRIVE_WEB, '_blank', 'noopener noreferrer');
+                  window.open('https://internxt.com/pricing', '_blank', 'noopener noreferrer');
                 }}
               />
             </div>

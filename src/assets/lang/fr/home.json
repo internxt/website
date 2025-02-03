@@ -64,7 +64,7 @@
       },
       "description": {
         "normal1": "Obtenez ",
-        "blue": "85% de réduction ",
+        "blue": "80% de réduction ",
         "normal2": "sur tous les plans premium"
       },
       "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
@@ -310,6 +310,13 @@
         "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez ajouter autant de stockage que vous le souhaitez à votre abonnement à vie Internxt. Les plans à vie Internxt sont cumulables. Achetez-les simplement avec la même adresse e-mail et contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) pour que nous puissions les cumuler sur le même compte pour vous."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "answer": [
+          "Oui, Internxt s'engage pour un cloud computing respectueux de l'environnement, offrant des solutions de stockage qui soutiennent un avenir plus propre et plus durable. Nos centres de données fonctionnent avec 92 % d'énergie renouvelable et sont conçus pour minimiser les émissions de CO2, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

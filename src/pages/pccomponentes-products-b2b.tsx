@@ -4,6 +4,8 @@ import { getImage } from '@/lib/getImage';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
 import { GetServerSidePropsContext } from 'next';
 
+const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
+
 const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
@@ -57,9 +59,14 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
   );
 };
 
-export async function getServerSideProps() {
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/pccomponentes-products-b2b.json`);
+export async function getServerSideProps(ctx) {
+  let lang = ctx.locale;
+
+  if (!ALLOWED_LANGUAGES.includes(lang)) {
+    lang = 'es';
+  }
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/pccomponentes-products-b2b.json`);
   return {
     props: {
       metatagsDescriptions,
