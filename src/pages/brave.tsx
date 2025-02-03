@@ -1,26 +1,37 @@
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 import { checkout } from '@/lib/auth';
-
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
-import { GetServerSidePropsContext } from 'next';
 import { Interval, stripeService } from '@/components/services/stripe.service';
 import FAQSection from '@/components/shared/sections/FaqSection';
-
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import CtaSection from '@/components/affiliates/CtaSection';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { BraveText } from '@/lib/brave';
 
-export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
+interface BravePageProps {
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  textContent: BraveText;
+  footerLang: FooterText;
+}
+
+export default function BravePage({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  textContent,
+}: BravePageProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
-  const offerDiscount = 15;
+  const lang = 'en';
+
   const {
     products,
     loadingCards,
@@ -112,7 +123,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
           lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
-        lang={'en'}
+        lang={lang}
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
@@ -132,8 +143,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
   );
 }
 
-export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const lang = ctx.locale;
+export async function getServerSideProps() {
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/en/brave.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
@@ -144,7 +154,6 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       metatagsDescriptions,
       footerLang,
       navbarLang,
-      lang,
       textContent,
     },
   };
