@@ -85,9 +85,6 @@ export const BusinessPage = ({
         loadingCards={loadingCards}
         lang={locale}
         products={products}
-        decimalDiscount={{
-          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
-        }}
         hideFreeCard
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
