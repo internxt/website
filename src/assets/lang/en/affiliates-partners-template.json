@@ -1,5 +1,12 @@
 {
   "recommendedBy": "Recommended by:",
+  "HeroSectionV2": {
+    "title": "Secure, encrypted cloud storage",
+    "subtitle": "for a lifetime privacy",
+    "info": "Pay once, get lifetime storage at ",
+    "infoHighlight": "80% OFF.",
+    "cta": "Choose your plan"
+  },
   "HeroSection": {
     "exclusiveLabel": {
       "pcmag": "Exclusive offer for PCMag readers",
@@ -117,6 +124,99 @@
       "title": "Running out of storage?",
       "description": "Get 80% off an extra 5TB!",
       "cta": "Upgrade plan"
+    },
+    "two": {
+      "title": "The world's most private cloud storage",
+      "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+      "cta": "Choose your plan"
     }
+  },
+  "PriceTable": {
+    "header": "Unlock 80% OFF",
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation"
+    },
+    "title": "Lifetime storage plans",
+    "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime security.",
+    "priceCard": {
+      "mostPopular": "Most popular",
+      "billedAnnually": "One-time payment",
+      "cta": "Redeem deal",
+      "features": {
+        "200GB": [
+          "200GB encrypted storage",
+          "Encrypted file and folder sharing",
+          "Password-protected file sharing",
+          "Access your files from any device",
+          "Get access to all our services",
+          "Upload files up to 20GB",
+          "Two-factor authentication (2FA)",
+          "Premium customer support",
+          "30-day money-back guarantee"
+        ],
+        "2TB": [
+          "2TB encrypted storage",
+          "Encrypted file and folder sharing",
+          "Password-protected file sharing",
+          "Access your files from any device",
+          "Get access to all our services",
+          "Upload files up to 20GB",
+          "Two-factor authentication (2FA)",
+          "Premium customer support",
+          "30-day money-back guarantee"
+        ],
+        "5TB": [
+          "5TB encrypted storage",
+          "Encrypted file and folder sharing",
+          "Password-protected file sharing",
+          "Access your files from any device",
+          "Get access to all our services",
+          "Upload files up to 20GB",
+          "Two-factor authentication (2FA)",
+          "Premium customer support",
+          "30-day money-back guarantee"
+        ],
+        "10TB": [
+          "10TB encrypted storage",
+          "Encrypted file and folder sharing",
+          "Password-protected file sharing",
+          "Access your files from any device",
+          "Get access to all our services",
+          "Upload files up to 20GB",
+          "Two-factor authentication (2FA)",
+          "Premium customer support",
+          "30-day money-back guarantee"
+        ]
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "cards": [
+      {
+        "title": "Private by design",
+        "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+      },
+      {
+        "title": "Open source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can  be personally reviewed, audited, and verified by anyone. We have  nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for  it. Internxt has been independently audited and verified by Europe’s  leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "FeatureSectionV2": {
+    "title": "Take back control of your privacy",
+    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
+    "cta": "Select lifetime plans"
   }
 }
