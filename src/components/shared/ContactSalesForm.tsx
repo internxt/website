@@ -1,4 +1,5 @@
 import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
+import axios from 'axios';
 import { useState } from 'react';
 
 interface ContactSalesFormProps {
@@ -6,7 +7,10 @@ interface ContactSalesFormProps {
   isBusiness?: boolean;
 }
 type result = 'error' | 'success' | 'default';
+
 export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
+  const API_URL = process.env.NEXT_PUBLIC_MAILERLITE_API_URL_CONTACT_SALES!;
+  const API_KEY = process.env.NEXT_PUBLIC_MAILERLITE_API_KEY_CONTACT_SALES;
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -35,8 +39,6 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const apiKey = process.env.NEXT_PUBLIC_MAILERLITE_API_CONTACT_SALES;
     const groupId = '145043133822928056';
 
     const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -56,18 +58,12 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
     };
 
     try {
-      const response = await fetch('https://connect.mailerlite.com/api/subscribers', {
-        method: 'POST',
+      const response = await axios.post(API_URL, payload, {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${apiKey}`,
+          Authorization: `Bearer ${API_KEY}`,
         },
-        body: JSON.stringify(payload),
       });
-
-      if (!response.ok) {
-        throw new Error('Error sending the form');
-      }
 
       setView('success');
       await sleep(2000);
