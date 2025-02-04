@@ -1,4 +1,4 @@
-import { Fire, Football, Gift, Info } from '@phosphor-icons/react';
+import { Fire, Football, Gift, Heart, Info } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -139,11 +139,11 @@ export const PriceCard = ({
         </button>
       </div>
       {!isBrave && (
-        <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
-          <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+        <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
+          <p className="text-sm font-bold text-white">{contentText.productFeatures.superBowlFeatures.title}</p>
 
           <div className="flex items-start space-x-2 text-left">
-            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+            <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
             <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
           </div>
         </div>
