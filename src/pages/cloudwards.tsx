@@ -104,7 +104,10 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
           <Button
             text={langJson.FeatureSectionV2.cta}
             onClick={() => {
-              router.push('#payment');
+              document.querySelector('#payment')?.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end',
+              });
             }}
           />
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">

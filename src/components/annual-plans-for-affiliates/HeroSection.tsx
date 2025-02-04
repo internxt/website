@@ -78,7 +78,10 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isCloudWards,
 }) => {
   function redirectToPricingTable() {
-    window.location.href = redirect ?? '#payment';
+    document.querySelector('#payment')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+    });
   }
 
   return (
