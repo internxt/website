@@ -13,8 +13,8 @@ import { checkout } from '@/lib/auth';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import { CardGroup } from '@/components/shared/CardGroup';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/pricing/CtaSection';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
+import CtaSection from '@/components/shared/CtaSection';
 
 export type CardsType = 'all' | 'one';
 
@@ -65,7 +65,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['priceTable']} />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
@@ -89,7 +89,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.Special80Coupon}
+        couponType={PromoCodeName.CloudwardsCoupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage
@@ -104,7 +104,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
           <Button
             text={langJson.FeatureSectionV2.cta}
             onClick={() => {
-              router.push('/lifetime');
+              router.push('#payment');
             }}
           />
           <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
@@ -120,7 +120,13 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
         </div>
       </div>
 
-      <CtaSection textContent={langJson.CtaSection['two']} />
+      <CtaSection
+        textContent={langJson.CtaSection['two']}
+        url="#payment"
+        customDescription={
+          <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
+        }
+      />
 
       <Footer textContent={footerLang} lang={lang} />
     </Layout>

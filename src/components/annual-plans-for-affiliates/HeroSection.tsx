@@ -106,7 +106,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             width={500}
             height={500}
           />
-        ) : (
+        ) : null}
+        {isBrave ? (
           <Image
             src={getImage('/images/partnerships/brave/internxt_brave_secure_cloud_storage.webp')}
             alt="Affiliates Hero Section"
@@ -114,7 +115,16 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             width={500}
             height={500}
           />
-        )}
+        ) : null}
+        {isCloudWards ? (
+          <Image
+            src={getImage('/images/partnerships/cloudwards/internxt_lifetime_cloudwards.webp')}
+            alt="Affiliates Hero Section"
+            draggable={false}
+            width={500}
+            height={500}
+          />
+        ) : null}
       </HeroSectionSafeArea>
     </section>
   );
