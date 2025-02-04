@@ -275,6 +275,13 @@
         ]
       },
       {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
+          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
+        ]
+      },
+      {
         "question": "Does Internxt store my password?",
         "answer": [
           "No. As such, Internxt does not (and cannot) store your password.",
