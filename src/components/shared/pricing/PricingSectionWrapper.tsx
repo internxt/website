@@ -133,6 +133,7 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
+          isBrave={isBrave}
         />
       </div>
     </section>

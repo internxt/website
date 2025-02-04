@@ -22,6 +22,7 @@ export interface PriceCardProps {
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
+  isBrave?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -46,6 +47,7 @@ export const PriceCard = ({
   label,
   isFamilyPage,
   darkMode,
+  isBrave,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -136,14 +138,17 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
-        <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+      {!isBrave && (
+        <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
+          <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
 
-        <div className="flex items-start space-x-2 text-left">
-          <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
-          <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+          <div className="flex items-start space-x-2 text-left">
+            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+          </div>
         </div>
-      </div>
+      )}
+
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
