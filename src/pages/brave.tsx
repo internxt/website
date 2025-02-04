@@ -102,7 +102,12 @@ export default function BravePage({
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} InfoTextComponent={InfoTextComponent} redirect="#priceTable" />
+      <HeroSection
+        textContent={textContent.HeroSection}
+        InfoTextComponent={InfoTextComponent}
+        redirect="#priceTable"
+        isBrave
+      />
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
