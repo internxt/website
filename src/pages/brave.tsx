@@ -100,7 +100,7 @@ export default function BravePage({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
       <HeroSection
         textContent={textContent.HeroSection}
