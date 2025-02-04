@@ -1,7 +1,7 @@
 import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-import { CheckCircle } from '@phosphor-icons/react';
+import { ArrowCircleDown, CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -87,13 +87,17 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover xl:hidden">
+        <div className="relative flex h-full w-full flex-col xl:hidden">
           <Image
             src={getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp')}
             width={377}
             height={200}
             alt="Superbowl 2025 pricing banner image for mobile"
             className="w-full object-cover"
+          />
+          <ArrowCircleDown
+            className="absolute bottom-4 left-1/2 translate-x-1/2 transform animate-float-sock text-pink-dark"
+            size={40}
           />
         </div>
       </div>
