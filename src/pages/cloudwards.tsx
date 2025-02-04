@@ -89,7 +89,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.SpringCoupon}
+        couponType={PromoCodeName.Special80Coupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage
