@@ -29,14 +29,14 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
       <HeroSection
         textContent={langJson.HeroSection}
         percent="80"
-        bgImage={getImage('/images/campaigns/euro/grass.webp')}
-        imageMobile={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
+        previewImg="/images/lifetime/file_item.webp"
+        bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
       />
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.SuperBowlCampaign}
+        couponCode={PromoCodeName.ValentinesCampaign}
         discount={discount}
         lang={lang}
         percent={'80%'}
