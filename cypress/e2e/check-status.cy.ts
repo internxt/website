@@ -31,7 +31,6 @@ const nameFiles = [
   'temporary-email',
   'virus-scanner',
   'what-does-google-know-about-me',
-  'locker',
   'startpage',
   'file-converter',
   'specialoffer/freeuser',
