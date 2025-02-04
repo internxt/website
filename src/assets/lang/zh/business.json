@@ -206,6 +206,7 @@
       "howWeCanHelp": "我们如何帮助您？",
       "howWeCanHelpPlaceHolder": "请告诉我们您的需求",
       "cta": "发送消息",
+      "ctaSending": "发送中...",
       "successMessage": "您的消息已成功发送。",
       "errorMessage": "发生错误。请再试一次。"
     }

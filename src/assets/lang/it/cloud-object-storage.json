@@ -200,6 +200,7 @@
       "howWeCanHelp": "Come possiamo aiutarti?",
       "howWeCanHelpPlaceHolder": "Facci sapere come possiamo aiutarti",
       "cta": "Invia messaggio",
+      "ctaSending": "Invio in corso...",
       "successMessage": "Il tuo messaggio è stato inviato con successo.",
       "errorMessage": "Si è verificato un errore. Per favore riprova."
     }

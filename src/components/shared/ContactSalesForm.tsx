@@ -7,10 +7,7 @@ interface ContactSalesFormProps {
   isBusiness?: boolean;
 }
 type result = 'error' | 'success' | 'default';
-
 export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
-  const API_URL = process.env.NEXT_PUBLIC_MAILERLITE_API_URL_CONTACT_SALES!;
-  const API_KEY = process.env.NEXT_PUBLIC_MAILERLITE_API_KEY_CONTACT_SALES;
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -39,7 +36,6 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const groupId = '145043133822928056';
 
     const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -53,23 +49,20 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
         help: formData.help,
         origin_contact: isBusiness ? 'B2B' : 'S3',
       },
-
-      groups: [groupId],
     };
 
     try {
-      const response = await axios.post(API_URL, payload, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${API_KEY}`,
-        },
-      });
+      const response = await axios.post('/api/subscribe', payload);
 
-      setView('success');
-      await sleep(2000);
-      setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
-      setIsFormValid(false);
-      setView('default');
+      if (response.status === 200) {
+        setView('success');
+        await sleep(2000);
+        setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
+        setIsFormValid(false);
+        setView('default');
+      } else {
+        throw new Error('Unexpected response');
+      }
     } catch (error) {
       console.error('Error:', error);
       setView('error');

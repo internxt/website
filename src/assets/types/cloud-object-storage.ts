@@ -25,6 +25,7 @@ export interface Form {
   howWeCanHelp: string;
   howWeCanHelpPlaceholder: string;
   cta: string;
+  ctaSending: string;
   successMessage: string;
   errorMessage: string;
 }
