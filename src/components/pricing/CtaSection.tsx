@@ -1,6 +1,5 @@
 import React from 'react';
 import { goToSignUpURL } from '@/lib/auth';
-import { handleAdsConversion } from '../services/ga.services';
 
 const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: boolean }) => {
   return (
@@ -13,18 +12,12 @@ const CtaSection = ({ textContent, freePlan }: { textContent: any; freePlan?: bo
         <button
           className="flex rounded-lg bg-white px-5 py-3 text-lg font-medium text-primary hover:bg-blue-10"
           onClick={() => {
-            handleAdsConversion('#priceTable', 'Cta-Conversion', 1, 'USD');
-            if (freePlan) {
-              goToSignUpURL();
-            } else {
-              const priceTable = document.getElementById('priceTable');
-              if (priceTable) {
-                window.scrollTo({
-                  top: priceTable.offsetTop,
+            freePlan
+              ? goToSignUpURL()
+              : window.scrollTo({
+                  top: document.getElementById('priceTable')?.offsetTop,
                   behavior: 'smooth',
                 });
-              }
-            }
           }}
         >
           {textContent.cta}

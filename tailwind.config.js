@@ -164,6 +164,7 @@ module.exports = {
       },
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        scanning: 'scanning 1s linear infinite',
       },
       keyframes: {
         'pingpong-v': {
@@ -223,6 +224,8 @@ module.exports = {
         'float-sock': 'float-sock 1.5s ease-in-out infinite',
         'move-vertical': 'move-vertical 5s linear infinite',
         fall: 'fall 5s linear infinite',
+        'fill-bar': 'fill 1s linear forwards',
+        'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       translate: {
         25: '6.25rem',
@@ -266,6 +269,14 @@ module.exports = {
         fall: {
           '0%': { transform: 'translateY(-100vh)', opacity: '1' },
           '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
+        fill: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        'pingpong-v': {
+          '0%, 100%': { top: '0%' },
+          '50%': { top: '100%' },
         },
       },
 

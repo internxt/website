@@ -42,6 +42,7 @@ interface PriceTableProps {
     lifetime?: number;
     business?: number;
   };
+  isBrave?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -74,6 +75,7 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
+  isBrave,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -190,6 +192,7 @@ export const PricingSection = ({
                   }
                   lang={lang}
                   darkMode={darkMode}
+                  isBrave={isBrave}
                 />
               ))
             : undefined}

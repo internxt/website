@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Join Internxt, the leading Google Drive alternative, and get ",
-      "blue": "75% OFF ",
+      "blue": "80% OFF ",
       "normal1": "any annual plan. Securely store and share your files in complete privacy."
     },
     "cta": "Choose plan"
@@ -75,13 +75,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Get an entire year’s worth of storage with 75% off now!",
+    "title": "Get an entire year’s worth of storage with 80% off now!",
     "description": "Internxt is offering an exclusive discount with full privacy and security guaranteed.",
     "cta": "Choose plan"
   },
   "CtaSection1": {
     "title": "The world's most private cloud storage",
-    "description": "Claim your exclusive 75% discount to access Internxt's secure, private, and encrypted cloud storage for an entire year.",
+    "description": "Claim your exclusive 80% discount to access Internxt's secure, private, and encrypted cloud storage for an entire year.",
     "cta": "Find your plan"
   }
 }
