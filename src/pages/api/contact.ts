@@ -31,7 +31,7 @@ export default async function handleSubscribe(req: NextApiRequest, res: NextApiR
   } catch (error: any) {
     res.status(500).json({
       status: 'Error',
-      message: error.response?.data?.message || 'Error en el servidor.',
+      message: error.response?.data?.message,
     });
   }
 }
