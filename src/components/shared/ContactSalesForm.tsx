@@ -6,7 +6,10 @@ interface ContactSalesFormProps {
   textContent: any;
   isBusiness?: boolean;
 }
-type result = 'error' | 'success' | 'default';
+type FormStatus = 'error' | 'success' | 'default';
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
 export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormProps) => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,10 +23,11 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   const [isFormValid, setIsFormValid] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [view, setView] = useState<result>('default');
+  const [formStatus, setFormStatus] = useState<FormStatus>('default');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { id, value } = e.target;
+
     setFormData((prev) => {
       const updatedFormData = { ...prev, [id]: value };
       const fieldsToValidate = ['name', 'company', 'email', 'phone', 'storage'];
@@ -33,11 +37,22 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
     });
   };
 
+  const onSubmitSuccess = async () => {
+    setFormStatus('success');
+    await sleep(2000);
+    setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
+    setIsFormValid(false);
+    setFormStatus('default');
+  };
+
+  const onSubmitError = (error: unknown) => {
+    console.error('Error:', error);
+    setFormStatus('error');
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
     const payload = {
       email: formData.email,
@@ -52,20 +67,10 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
     };
 
     try {
-      const response = await axios.post('/api/subscribe', payload);
-
-      if (response.status === 200) {
-        setView('success');
-        await sleep(2000);
-        setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
-        setIsFormValid(false);
-        setView('default');
-      } else {
-        throw new Error('Unexpected response');
-      }
+      await axios.post('/api/subscribe', payload);
+      await onSubmitSuccess();
     } catch (error) {
-      console.error('Error:', error);
-      setView('error');
+      onSubmitError(error);
     } finally {
       setIsSubmitting(false);
     }
@@ -193,14 +198,14 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                   {isSubmitting ? 'Enviando...' : textContent.form.cta}
                 </button>
               </div>
-              {view === 'success' && (
+              {formStatus === 'success' && (
                 <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
                   <p className="ml-2 text-sm text-gray-80">{textContent.form.successMessage}</p>
                 </div>
               )}
 
-              {view === 'error' && (
+              {formStatus === 'error' && (
                 <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <WarningCircle height={24} width={24} weight="fill" className="text-red" />
                   <p className="ml-2 text-sm text-gray-80">{textContent.form.errorMessage}</p>

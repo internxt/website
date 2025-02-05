@@ -8,8 +8,6 @@ export default async function handleSuscribe(req: NextApiRequest, res: NextApiRe
 
   try {
     await contactSales(email, name, company, phone, storage, help, isBusiness);
-
-    res.status(200).json({ status: 'OK' });
   } catch (error) {
     res.status(500).json({ status: 'Error', message: error.message });
   }
