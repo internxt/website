@@ -3,30 +3,37 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const API_KEY = process.env.MAILERLITE_API_KEY_CONTACT_SALES;
 
-const emailLimiter = rateLimit({
-  windowMs: 60 * 1000,
-  max: 5,
-  message: { status: 'Error' },
-});
+const requestTimestamps = new Map<string, number>();
+const THROTTLE_TIME = 60 * 1000;
 
 export default async function handleSubscribe(req: NextApiRequest, res: NextApiResponse) {
-  await emailLimiter(req as any, res as any, async () => {
-    if (req.method !== 'POST') {
-      return res.status(405).json({ status: 'Error',);
-    }
+  if (req.method !== 'POST') {
+    return res.status(405).json({ status: 'Error' });
+  }
 
-    const { email, name, company, phone, storage, help, isBusiness } = req.body;
+  const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
+  const now = Date.now();
 
-    try {
-      const response = await contactSales(email, name, company, phone, storage, help, isBusiness);
-      res.status(200).json({ status: 'Success', data: response });
-    } catch (error: any) {
-      res.status(500).json({
-        status: 'Error',
-        message: error.response?.data?.message ,
-      });
+  if (requestTimestamps.has(ip as string)) {
+    const lastRequest = requestTimestamps.get(ip as string) || 0;
+    if (now - lastRequest < THROTTLE_TIME) {
+      return res.status(429).json({ status: 'Error' });
     }
-  });
+  }
+
+  requestTimestamps.set(ip as string, now);
+
+  const { email, name, company, phone, storage, help, isBusiness } = req.body;
+
+  try {
+    const response = await contactSales(email, name, company, phone, storage, help, isBusiness);
+    res.status(200).json({ status: 'Success', data: response });
+  } catch (error: any) {
+    res.status(500).json({
+      status: 'Error',
+      message: error.response?.data?.message || 'Error en el servidor.',
+    });
+  }
 }
 
 async function contactSales(
