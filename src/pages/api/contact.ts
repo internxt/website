@@ -3,14 +3,30 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 const API_KEY = process.env.MAILERLITE_API_KEY_CONTACT_SALES;
 
-export default async function handleSuscribe(req: NextApiRequest, res: NextApiResponse) {
-  const { email, name, company, phone, storage, help, isBusiness } = req.body;
+const emailLimiter = rateLimit({
+  windowMs: 60 * 1000,
+  max: 5,
+  message: { status: 'Error' },
+});
 
-  try {
-    await contactSales(email, name, company, phone, storage, help, isBusiness);
-  } catch (error) {
-    res.status(500).json({ status: 'Error', message: error.message });
-  }
+export default async function handleSubscribe(req: NextApiRequest, res: NextApiResponse) {
+  await emailLimiter(req as any, res as any, async () => {
+    if (req.method !== 'POST') {
+      return res.status(405).json({ status: 'Error',);
+    }
+
+    const { email, name, company, phone, storage, help, isBusiness } = req.body;
+
+    try {
+      const response = await contactSales(email, name, company, phone, storage, help, isBusiness);
+      res.status(200).json({ status: 'Success', data: response });
+    } catch (error: any) {
+      res.status(500).json({
+        status: 'Error',
+        message: error.response?.data?.message ,
+      });
+    }
+  });
 }
 
 async function contactSales(
@@ -24,25 +40,28 @@ async function contactSales(
 ) {
   const groupId = '145043133822928056';
   const payload = {
-    email: email,
+    email,
     fields: {
-      name: name,
-      company: company,
-      phone: phone,
-      storage: storage,
-      help: help,
+      name,
+      company,
+      phone,
+      storage,
+      help,
       origin_contact: isBusiness ? 'B2B' : 'S3',
     },
-
     groups: [groupId],
   };
 
-  const contactSales = await axios.post(`${process.env.MAILERLITE_API}/api/subscribers`, payload, {
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${API_KEY}`,
-    },
-  });
+  try {
+    const response = await axios.post(`${process.env.MAILERLITE_API}/api/subscribers`, payload, {
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${API_KEY}`,
+      },
+    });
 
-  return contactSales.data;
+    return response.data;
+  } catch (error: any) {
+    throw new Error(error.response?.data?.message);
+  }
 }

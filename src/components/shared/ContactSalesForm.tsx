@@ -1,6 +1,7 @@
 import { CaretDown, CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import axios from 'axios';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
+import debounce from 'lodash.debounce';
 
 interface ContactSalesFormProps {
   textContent: any;
@@ -50,31 +51,34 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
     setFormStatus('error');
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const handleSubmit = useCallback(
+    debounce(async (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setIsSubmitting(true);
 
-    const payload = {
-      email: formData.email,
-      fields: {
-        name: formData.name,
-        company: formData.company,
-        phone: formData.phone,
-        storage: formData.storage,
-        help: formData.help,
-        origin_contact: isBusiness ? 'B2B' : 'S3',
-      },
-    };
+      const payload = {
+        email: formData.email,
+        fields: {
+          name: formData.name,
+          company: formData.company,
+          phone: formData.phone,
+          storage: formData.storage,
+          help: formData.help,
+          origin_contact: isBusiness ? 'B2B' : 'S3',
+        },
+      };
 
-    try {
-      await axios.post('/api/subscribe', payload);
-      await onSubmitSuccess();
-    } catch (error) {
-      onSubmitError(error);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+      try {
+        await axios.post('/api/contact', payload);
+        await onSubmitSuccess();
+      } catch (error) {
+        onSubmitError(error);
+      } finally {
+        setIsSubmitting(false);
+      }
+    }, 3000),
+    [formData, isBusiness],
+  );
 
   return (
     <section className="mt-6 overflow-hidden">
