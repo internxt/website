@@ -187,7 +187,6 @@
     "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
     "form": {
       "name": "Nombre completo",
-
       "email": "Correo electrónico",
       "company": "Nombre de la empresa",
       "phone": "Número de teléfono",
@@ -204,8 +203,12 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "¿Cómo podemos ayudarte?",
-      "cta": "Enviar mensaje"
+      "howWeCanHelp": "¿Cómo podemos ayudarte? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Cuentanos que necesitas...",
+      "cta": "Enviar mensaje",
+      "ctaSending": "Enviando...",
+      "successMessage": "Su mensaje ha sido enviado con éxito.",
+      "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."
     }
   }
 }

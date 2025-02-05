@@ -204,7 +204,11 @@
         "20+ PB"
       ],
       "howWeCanHelp": "Come possiamo aiutarti?",
-      "cta": "Invia messaggio"
+      "howWeCanHelpPlaceHolder": "Inserisci qui il tuo messaggio...",
+      "cta": "Invia messaggio",
+      "ctaSending": "Invio...",
+      "successMessage": "Il tuo messaggio è stato inviato con successo.",
+      "errorMessage": "Si è verificato un errore. Per favore riprova."
     }
   }
 }

@@ -204,7 +204,11 @@
         "20+ PB"
       ],
       "howWeCanHelp": "我們如何幫助您？",
-      "cta": "發送消息"
+      "howWeCanHelpPlaceHolder": "請告訴我們您的需求",
+      "cta": "發送消息",
+      "ctaSending": "發送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请再试一次。"
     }
   }
 }

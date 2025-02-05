@@ -203,8 +203,12 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "How can we help you?",
-      "cta": "Send message"
+      "howWeCanHelp": "How can we help you? (Optional)",
+      "howWeCanHelpPlaceHolder": "Tell us more about your business needs",
+      "cta": "Send message",
+      "ctaSending": "Sending...",
+      "successMessage": "Your message has been sent successfully.",
+      "errorMessage": "An error occurred. Please try again."
     }
   }
 }

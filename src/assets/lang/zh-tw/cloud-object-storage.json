@@ -5,7 +5,9 @@
       "line2": "雲端物件儲存服務"
     },
     "description": "一個安全、經濟實惠且可擴展的雲端儲存解決方案，用於儲存、訪問和管理大量數據。",
-    "cta": "立即開始"
+    "cta": "立即開始",
+    "separator": "|",
+    "cta2": "聯繫銷售"
   },
   "PredictablePricingSection": {
     "title": "簡單且可預測的價格，無 API 費用",
@@ -170,5 +172,35 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "聯繫銷售",
+    "description": "填寫聯絡表格，團隊將盡快與您聯繫。",
+    "form": {
+      "name": "名字",
+      "surname": "姓氏",
+      "email": "電子郵件地址",
+      "company": "公司名稱",
+      "phone": "電話號碼",
+      "howMuchStorage": "您需要多少儲存空間？",
+      "totalCharacters": " /1000",
+      "options": [
+        "選擇",
+        "少於25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我們如何幫助您？",
+      "howWeCanHelpPlaceHolder": "請告訴我們您的需求",
+      "cta": "發送消息",
+      "ctaSending": "發送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请再试一次。"
+    }
   }
 }

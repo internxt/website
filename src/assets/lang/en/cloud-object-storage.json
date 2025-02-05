@@ -5,7 +5,9 @@
       "line2": "compatible cloud object storage"
     },
     "description": "A secure, affordable, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
-    "cta": "Get started"
+    "cta": "Get started",
+    "separator": "|",
+    "cta2": "Contact sales"
   },
   "PredictablePricingSection": {
     "title": "Simple, predictable pricing with zero fees and no API charges",
@@ -169,5 +171,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contact sales",
+    "description": "Fill out the contact form and the team will contact you shortly.",
+    "form": {
+      "name": "Full Name",
+      "email": "Email address",
+      "company": "Company Name",
+      "phone": "Phone number",
+      "howMuchStorage": "How much storage do you need?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Select",
+        "Less than 25TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "How can we help you? (Optional)",
+      "howWeCanHelpPlaceHolder": "Tell us more about your  needs",
+      "cta": "Send message",
+      "ctaSending": "Sending...",
+      "successMessage": "Your message has been sent successfully.",
+      "errorMessage": "An error occurred. Please try again."
+    }
   }
 }

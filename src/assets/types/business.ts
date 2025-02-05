@@ -26,7 +26,11 @@ export interface Form {
   totalCharacters: string;
   options: string[];
   howWeCanHelp: string;
+  howWeCanHelpPlaceHolder: string;
   cta: string;
+  ctaSending: string;
+  successMessage: string;
+  errorMessage: string;
 }
 
 export interface EncryptedCloudSolution {
