@@ -40,7 +40,7 @@ export default function Footer({
     e.preventDefault();
 
     await axios
-      .post(`api/subscribe`, {
+      .post(`/api/subscribe`, {
         email,
         groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
       })
@@ -160,7 +160,7 @@ export default function Footer({
         <footer className="flex max-w-[896px] items-center justify-center">
           {/* Desktop version */}
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
-            <div className="flex w-full flex-row justify-between md:justify-center lg:space-x-20">
+            <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
               <div className="flex flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
@@ -275,6 +275,14 @@ export default function Footer({
                       className="flex max-w-[200px] flex-row items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.company.mediaArea}
+                    </Link>
+                    <Link
+                      href="/green-cloud-computing"
+                      locale={lang}
+                      passHref
+                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.company.sustainability}
                     </Link>
                   </div>
                 </div>
@@ -472,12 +480,7 @@ export default function Footer({
               {lang !== 'es' ? (
                 <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
               ) : (
-                <Image
-                  src={getImage('/icons/social/gdpr-internxt-2.jpg')}
-                  alt="GDPR Internxt"
-                  width={180}
-                  height={48}
-                />
+                <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
               )}
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
@@ -963,6 +966,11 @@ export default function Footer({
             </div>
           </div>
         </footer>
+        {lang === 'es' && (
+          <p className="text- max-w-[896px] pb-5 pt-10 text-center text-xs text-cool-gray-60">
+            {textContent.FooterSection.financialProject}
+          </p>
+        )}
       </div>
     </section>
   );

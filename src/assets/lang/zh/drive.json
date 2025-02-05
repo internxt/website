@@ -220,6 +220,13 @@
         "answer": [
           "是的，你可以为你的Internxt账户配置双因素认证（2FA），从Drive Web应用程序。此外，你可以使用Authy或任何其他2FA工具，用Internxt生成你的2FA代码。"
         ]
+      },
+      {
+        "question": "Internxt 是可持续且环保的云存储解决方案吗？",
+        "answer": [
+          "是的，Internxt 致力于绿色云计算，提供环保的存储解决方案，支持更清洁、更可持续的未来。我们的数据中心使用 92% 的可再生能源运行，旨在最大程度地减少碳排放、资源消耗和电子垃圾。",
+          "我们的努力目标是在 2050 年实现碳中和。 [了解更多](https://internxt.com/es/green-cloud-computing)"
+        ]
       }
     ]
   }

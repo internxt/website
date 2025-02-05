@@ -39,7 +39,8 @@
         "mediaArea": "Media Area",
         "security": "Security",
         "legal": "Legal",
-        "whyInternxt": "Why Internxt?"
+        "whyInternxt": "Why Internxt?",
+        "sustainability": "Sustainability"
       },
       "join": {
         "title": "Join Us",
@@ -64,7 +65,7 @@
         "blog": "Blog",
         "comparison": "Cloud Storage Comparison",
         "pCloudAlternative": "pCloud Alternative",
-        "dropboxAlternative": "Dropbox alternative",
+        "dropboxAlternative": "Dropbox Alternative",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows"

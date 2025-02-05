@@ -114,6 +114,11 @@
       "10TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
       "tooltip": "Gewinnen Sie bis zu 10TB freien Speicher!"
     },
+    "superBowlFeatures": {
+      "title": "Internxt thematische Goodies:",
+      "extra": "1TB zusätzlicher Speicher kostenlos",
+      "gift": "Superbowl-Thema für die Web-App"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Bis zu ",

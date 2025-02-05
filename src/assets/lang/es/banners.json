@@ -16,20 +16,19 @@
     "guarantee": "Garantía de devolución de 30 días"
   },
   "featuresBanner": {
-    "label": "¡Ahorra un 80%!",
-    "title": "Tu regalo de Navidad ya está aquí!",
-    "subtitle": "Entra en nuestro sorteo y consigue hasta 10TB extra",
-    "cta": "Elige tu plan",
+    "label": "¡Ahorra un 85%!",
+    "title": "Oferta para la semana de Privacidad de Datos.",
+    "subtitle": "85% en TODOS los planes lifetime",
+    "cta": "Consigue el tuyo",
     "guarantee": "Garantía de devolución de 30 días",
     "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
     "features": [
-      "Ahorra a lo grande en todos los planes premium",
-      "Almacenamiento en la nube privado y encriptado",
+      "Seguridad de por vida",
+      "Almacenamiento 100% privado y cifrado ",
       "Código abierto y auditado",
-      "Transferencias encriptadas de extremo a extremo",
-      "Sin acceso no autorizado",
-      "La oferta termina el",
-      "7 de enero"
+      "Cifrado de extremo a extremo",
+      "Cumple con RGPD",
+      "Oferta finaliza el 31 de enero"
     ]
   },
   "s3StorageBanner": {
@@ -105,9 +104,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de descuento en TODOS los planes premium!",
-      "normalText": " Navidad, Navidad, dulce Navidad!",
-      "cta": "Comprar"
+      "boldText": "80 % de descuento en todos los planes premium! ",
+      "normalText": "Touchdown!!!  ",
+      "cta": "Ahorra a lo grande"
     }
   },
   "lifetimeBanner": {

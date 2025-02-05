@@ -10,6 +10,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { PromoCodeName } from '@/lib/types';
 import router, { useRouter } from 'next/router';
+import { getImage } from '@/lib/getImage';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -28,14 +29,14 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
       <HeroSection
         textContent={langJson.HeroSection}
         percent="80"
-        previewImg="/images/lifetime/file_item.webp"
-        bgImage="/images/lifetime/celebration/normal-bg.png"
+        bgImage={getImage('/images/campaigns/euro/grass.webp')}
+        imageMobile={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
         onRedirectButtonClicked={() => router.push('#payment')}
       />
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Christmas}
+        couponCode={PromoCodeName.SuperBowlCampaign}
         discount={discount}
         lang={lang}
         percent={'80%'}

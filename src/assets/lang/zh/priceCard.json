@@ -115,6 +115,11 @@
       "10TB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
       "tooltip": "赢得多达10TB的免费存储空间！"
     },
+    "superBowlFeatures": {
+      "title": "Internxt 主题好礼：",
+      "extra": "1TB 免费额外存储空间",
+      "gift": "适用于网页应用的超级碗主题"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "最多 ",

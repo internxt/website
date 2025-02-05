@@ -4,17 +4,14 @@ import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => (
   <section className="overflow-hidden">
-    <div className="flex flex-col items-center space-y-8 px-5 pt-20 pb-16">
+    <div className="flex flex-col items-center space-y-8 bg-gray-1 px-5 pb-16 pt-20">
       <div className=" flex flex-col items-center justify-center space-y-6 px-6 text-center font-semibold">
         <h2 className="max-w-[550px] text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</h2>
         <p className="max-w-3xl text-xl font-normal text-gray-100">{textContent.description}</p>
         <button
           className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
           onClick={() => {
-            window.scrollTo({
-              top: document.getElementById('payment')?.offsetTop,
-              behavior: 'smooth',
-            });
+            window.location.hash = '#priceTable';
           }}
         >
           {textContent.cta}

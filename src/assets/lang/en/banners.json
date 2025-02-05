@@ -48,20 +48,20 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 80%!",
-    "title": "Secret Santa surprise!",
+    "label": "80% OFF ",
+    "title": "Make your privacy play!",
     "subtitle": "Christmas Web App Theme + Chance to win up to 10TB of storage!",
     "cta": "Choose plan",
     "guarantee": "30-day money-back guarantee",
     "lastCta": "*Offer is for free accounts or new customers",
     "features": [
-      "Save big on all premium plans",
-      "Private, encrypted cloud storage",
+      "Get a lifetime of privacy",
+      "End-to-end encrypted cloud storage",
       "Open-source and audited",
       "End-to-end encrypted transfers",
       "No unauthorized access",
-      "Offer ends",
-      "January 7"
+      "Free Super Bowl Web app theme",
+      "Offer ends February 9"
     ]
   },
   "s3StorageBanner": {
@@ -146,9 +146,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% off ALL premium plans!",
-      "normalText": "It’s the most wonderful time of the year!",
-      "cta": "Claim deal"
+      "boldText": "  80% OFF all premium plans!",
+      "normalText": "Touchdown!!!",
+      "cta": "Score big savings"
     }
   },
   "lifetimeBanner": {

@@ -1,4 +1,4 @@
-import { Fire, Gift, Info } from '@phosphor-icons/react';
+import { Fire, Football, Gift, Info } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
@@ -22,6 +22,7 @@ export interface PriceCardProps {
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
+  isBrave?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -46,6 +47,7 @@ export const PriceCard = ({
   label,
   isFamilyPage,
   darkMode,
+  isBrave,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -136,23 +138,16 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      <div className="mx-auto w-full space-y-2 bg-red px-4 py-3">
-        <p className="text-sm font-bold text-white">{contentText.productFeatures.christmasFeatures.title}</p>
-        {contentText.productFeatures.christmasFeatures[storage].map((feature, index) => (
-          <div className="flex items-start space-x-2 text-left" key={feature}>
-            <Gift size={16} className="flex-shrink-0 text-white" />
-            <span className="text-sm leading-5 text-white">{feature}</span>
-            {index === 0 && (
-              <>
-                <Info size={16} className="flex-shrink-0 text-white" data-tooltip-id="email-tooltip" />
-                <Tooltip id="email-tooltip" place="top">
-                  {contentText.productFeatures.christmasFeatures.tooltip}
-                </Tooltip>
-              </>
-            )}
+      {!isBrave && (
+        <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
+          <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+
+          <div className="flex items-start space-x-2 text-left">
+            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
+            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
           </div>
-        ))}
-      </div>
+        </div>
+      )}
 
       <div
         className={`featureList flex flex-col  ${

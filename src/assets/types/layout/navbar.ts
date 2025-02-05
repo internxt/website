@@ -101,6 +101,7 @@ export interface Links {
 export interface OurValues {
   privacy: string;
   openSource: string;
+  sustainability: string;
 }
 
 export interface Products {

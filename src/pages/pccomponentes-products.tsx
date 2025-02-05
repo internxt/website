@@ -8,6 +8,9 @@ import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
+import { GetServerSidePropsContext } from 'next';
+
+const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -70,43 +73,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
             >
               {contentText.billingFrequency.lifetime}
             </button>
-          </div>
-          {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <div className={`flex-row items-start gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
-            <p
-              className={`text-base font-semibold ${
-                billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
-              }`}
-            >
-              {contentText.billingFrequency.monthly}
-            </p>
-
-            <Switch
-              checked={isIndividualSwitchEnabled}
-              onChange={() => {
-                setBillingFrequency(isIndividualSwitchEnabled ? Interval.Month : Interval.Year);
-              }}
-              className={`${
-                isIndividualSwitchEnabled ? 'bg-green' : 'bg-gray-10'
-              } relative inline-flex h-6 w-11 items-center rounded-full`}
-            >
-              <span
-                id={'switchButton'}
-                className={`${
-                  isIndividualSwitchEnabled ? 'translate-x-6' : 'translate-x-1'
-                } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-              />
-            </Switch>
-
-            <div className="relative flex flex-col lg:flex-row lg:items-center">
-              <p
-                className={`text-base font-semibold ${
-                  billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
-                }`}
-              >
-                {contentText.billingFrequency.annually}
-              </p>
-            </div>
           </div>
         </div>
         {/* Skeleton cards while fetching products data */}
@@ -186,10 +152,15 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
   );
 };
 
-export async function getServerSideProps() {
-  const lang = 'es';
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/priceCard.json`);
+export async function getServerSideProps(ctx) {
+  const acceptLanguage = ctx.req.headers['accept-language'];
+
+  const browserLang = acceptLanguage.split(',')[0].split('-')[0];
+
+  const lang = ALLOWED_LANGUAGES.includes(browserLang) ? browserLang : 'es';
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/priceCard.json`);
 
   return {
     props: {

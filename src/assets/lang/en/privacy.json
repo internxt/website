@@ -90,6 +90,13 @@
         "answer": [
           "Unlike some of our competitors, we don't operate based on advertising or data collection. Your data is exclusively yours. We prioritize your security, privacy, and the security of your file and photos. Using Internxt, you can be sure you're secure."
         ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+        ]
       }
     ]
   },

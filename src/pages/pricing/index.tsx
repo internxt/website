@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SuperBowlCampaign,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -112,12 +112,13 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
+
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -139,8 +140,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           decimalDiscount={{
             individuals: decimalDiscount,
-            business: decimalDiscount,
             lifetime: decimalDiscount,
+            business: decimalDiscount,
           }}
           lang={lang}
           products={products}
@@ -154,7 +155,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
               {textContent.tableSection.planDescription}
             </span>
           }
-          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

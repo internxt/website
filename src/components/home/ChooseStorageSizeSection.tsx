@@ -5,7 +5,7 @@ import Button from '../shared/Button';
 
 export const ChooseStorageSizeSection = ({ textContent, onButtonClicked }) => {
   return (
-    <section className="overflow-hidden bg-gray-1 py-20 px-5">
+    <section className="overflow-hidden bg-gray-1 px-5 py-20">
       <div className="flex flex-col-reverse items-center justify-center gap-20 lg:flex-row">
         <div className="flex">
           <Image
@@ -16,6 +16,7 @@ export const ChooseStorageSizeSection = ({ textContent, onButtonClicked }) => {
             alt="Internxt Drive"
             className="rounded-[32px]"
             draggable={false}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="flex max-w-[540px] flex-col items-center gap-6 lg:items-start">

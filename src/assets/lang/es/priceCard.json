@@ -113,6 +113,11 @@
       "10TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
       "tooltip": "Consigue hasta 10TB de almacenamiento extra!!"
     },
+    "superBowlFeatures": {
+      "title": "Regalitos de Internxt",
+      "extra": "1TB de almacenamiento extra gratis",
+      "gift": "Tema de SuperBowl para Web App"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",

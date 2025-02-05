@@ -113,6 +113,11 @@
       "10TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
       "tooltip": "Gagnez jusqu'à 10 To de stockage gratuit !"
     },
+    "superBowlFeatures": {
+      "title": "Objets à thème Internxt :",
+      "extra": "1 To de stockage supplémentaire gratuit",
+      "gift": "Thème Super Bowl pour l'application web"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Jusqu'à ",

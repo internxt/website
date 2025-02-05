@@ -19,6 +19,7 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,7 +38,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.Christmas,
+    couponCodeForBusiness: PromoCodeName.SuperBowlCampaign,
   });
 
   const locale = lang as string;
@@ -46,6 +47,7 @@ export const BusinessPage = ({
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
+  const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -66,7 +68,7 @@ export const BusinessPage = ({
           background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
         }}
         imageProperties={{
-          src: getImage('/images/business/Internxt_b2b_business_solution.webp'),
+          src: getImage(`/images/business/${imagePath}.webp`),
           alt: 'Internxt B2B Business Solution',
           width: 671,
           height: 563,
@@ -91,10 +93,11 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+
+      <MarqueeComponentV2 bgColor="bg-gray-1" />
 
       <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 

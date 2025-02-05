@@ -12,14 +12,14 @@
     "description": "Datenverstöße können Unternehmen ruinieren, schwere finanzielle Verluste verursachen, betriebliche Störungen auslösen und den Ruf Ihres Unternehmens schädigen.",
     "cards": [
       {
-        "title": "4,45 Mio. $",
+        "title": "4,88 Mio. $",
         "description": "Durchschnittliche Kosten eines Datenverstoßes"
       },
       { "title": "73 Mio.", "description": "AT&T-Kundendaten, die 2024 durchgesickert sind" },
       { "title": "318 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
       { "title": "24%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
     ],
-    "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2023."
+    "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2024."
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt schützt Ihr Unternehmen vor Datenverstößen",
@@ -33,24 +33,29 @@
     "description": "Optimieren Sie das Datei-Management, die Sicherheit und den Datenschutz Ihrer Organisation mit unserem sicheren Cloud-Speicher für Unternehmen.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "internxt_b2b_feature1",
         "selectorTab": "Verwalten Sie Ihre Organisation",
         "description": "Internxt ermöglicht es Unternehmen, Mitglieder Ihrer Organisation zu verwalten, Arbeitsbereiche anzupassen und die Abrechnung und Zahlungen Ihres Kontos zu verwalten. Wechseln Sie mühelos zwischen Ihren Internxt-Geschäfts- und Privatkonten, um Produktivität und Dateiorganisation zu optimieren."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
+        "imagePathname": "internxt_b2b_feature2",
         "selectorTab": "Sicherer Dateiaustausch zwischen Abteilungen",
         "description": "Der sichere Cloud-Speicher umfasst sichere Dateifreigabefunktionen zwischen verschiedenen Abteilungen, um sicher im Team zu kollaborieren. Schützen Sie vertrauliche Dateien durch Passwörter und beschränken Sie den Zugriff auf Dateien, um sie sicher an Partner zu senden."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "internxt_b2b_feature3",
         "selectorTab": "Sitzungsmanagement",
         "description": "Der Cloud-Speicher von Internxt bietet ein fortschrittliches Sitzungsmanagement, das Echtzeit-Anmeldebenachrichtigungen und eine detaillierte Überwachung von Remote-Sitzungen (Client, OS, IP, Standort, letzte Aktivität) bietet. Diese hohe Sicherheit ermöglicht es dem Kontomanager, unbefugten Zugriff zu erkennen, Sitzungen effizient zu verwalten und sensible Daten zu schützen."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
+        "imagePathname": "internxt_b2b_feature4",
         "selectorTab": "Flexible Speicherzuweisung",
         "description": "Internxt bietet Ihrem Team eine flexible Speicherzuweisung, um Ihren Speicherbedarf zu decken. Mit unseren Plänen können Sie Benutzer hinzufügen, Speicher je nach Bedarf zuweisen und die Kapazität bei Bedarf erhöhen, wodurch Kosten, Skalierbarkeit und optimale Ressourcennutzung gewährleistet werden."
+      },
+      {
+        "imagePathname": "internxt_b2b_feature5",
+        "selectorTab": "Zugriffsprotokolle",
+        "description": "Überwachen Sie ganz einfach die Aktivitäten Ihres Teams mit einem umfassenden Aktivitätsprotokoll, das einen klaren Überblick über Datei-Interaktionen und Benutzerzugriffe bietet. Verfolgen Sie, wer sich angemeldet, Dateien hochgeladen oder geändert hat, und behalten Sie die volle Kontrolle, um die Datensicherheit in Ihrem Team zu gewährleisten."
       }
     ]
   },

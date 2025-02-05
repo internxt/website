@@ -95,7 +95,7 @@ const PaymentSection = ({
                     {title.postBlueText && <span>{title.postBlueText}</span>}
                     <br />
                     <span>{title.normalText}</span>
-                    <p className="max-w-[839px] pt-4 text-xl font-normal">{description}</p>
+                    <p className="w-full items-center pt-4 text-center text-xl font-normal">{description}</p>
                   </p>
                 </>
               )}

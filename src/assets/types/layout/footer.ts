@@ -16,6 +16,7 @@ export interface FooterSection {
   comingSoon: string;
   new: string;
   sections: Sections;
+  financialProject: string;
 }
 
 export interface Copyright {
@@ -40,6 +41,7 @@ export interface Company {
   security: string;
   legal: string;
   whyInternxt: string;
+  sustainability: string;
 }
 
 export interface Join {

@@ -39,9 +39,9 @@
       "cta2": "享受 85% 折扣",
       "guarantee": "30 天退款保证",
       "lastCta": "*优惠仅适用于免费账户或新客户",
-      "titleMbl1": "圣诞",
-      "titleMbl2": "节省",
-      "titleMbl3": "已到来！",
+      "titleMbl1": "听到那销售铃声响起！",
+      "titleMbl2": "",
+      "titleMbl3": "",
       "ctaMbl": "选择计划"
     },
     "save": "省高达",
@@ -72,8 +72,8 @@
     },
     "freePlanCard": {
       "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多10GB的容量，并获得所有我们的服务",
-      "upTo": "最高10GB",
+      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
+      "upTo": "最高1GB",
       "freeForever": "永久免费",
       "cta": "选择计划"
     },

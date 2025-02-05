@@ -12,6 +12,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Cryptage au repos et en transit",
             "end_to_end_encrypted_storage": "Stockage chiffré de bout en bout",
+            "post_quantum_encryption": "Cryptage post-quantique",
             "end_to_end_encrypted_file_sharing": "Partage de fichiers chiffré de bout en bout",
             "zero_knowledge_encryption": "Cryptage à connaissance zéro",
             "two_factor_authentication": "Authentification à deux facteurs",

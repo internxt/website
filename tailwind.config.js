@@ -24,8 +24,6 @@ module.exports = {
       'orange-dark': 'rgb(230,134,0)',
       yellow: 'rgb(255,204,0)',
       'yellow-dark': 'rgb(230,184,0)',
-      green: 'rgb(50,195,86)',
-      'green-dark': 'rgb(45,174,77)',
       pink: 'rgb(255,36,76)',
       'pink-dark': 'rgb(235,0,63)',
       indigo: 'rgb(81,78,212)',
@@ -35,7 +33,6 @@ module.exports = {
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
       highlight: 'rgba(17, 17, 17, 1)',
-      green8: 'rgb(50, 195, 86, 0.08)',
       red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
@@ -53,6 +50,14 @@ module.exports = {
       },
       gradients: {
         'electric-cyan': 'rgb(0,191,255)',
+      },
+      green: {
+        1: 'rgb(50,195,86)',
+        8: 'rgb(50, 195, 86, 0.08)',
+        25: 'rgb(204, 240, 213)',
+        40: 'rgb(173, 231, 187)',
+        55: 'rgb(142, 222, 162)',
+        dark: 'rgb(45, 174, 77, 1)',
       },
       // OLD DESIGN SYSTEM
       'cool-gray': {
@@ -159,6 +164,7 @@ module.exports = {
       },
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        scanning: 'scanning 1s linear infinite',
       },
       keyframes: {
         'pingpong-v': {
@@ -218,8 +224,15 @@ module.exports = {
         'float-sock': 'float-sock 1.5s ease-in-out infinite',
         'move-vertical': 'move-vertical 5s linear infinite',
         fall: 'fall 5s linear infinite',
+        'fill-bar': 'fill 1s linear forwards',
+        'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
-
+      translate: {
+        25: '6.25rem',
+        30: '7.5rem',
+        40: '10rem',
+        50: '12.5rem',
+      },
       keyframes: {
         'fade-r-large': {
           '0%': { transform: 'translateX(80px)', opacity: 0 },
@@ -256,6 +269,14 @@ module.exports = {
         fall: {
           '0%': { transform: 'translateY(-100vh)', opacity: '1' },
           '100%': { transform: 'translateY(100vh)', opacity: '0' },
+        },
+        fill: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        'pingpong-v': {
+          '0%, 100%': { top: '0%' },
+          '50%': { top: '100%' },
         },
       },
 

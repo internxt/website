@@ -1,62 +1,67 @@
 {
   "HeroSection": {
-    "title": "Protege tu negocio con almacenamiento en la nube privado y seguro",
+    "title": "Almacenamiento en la nube para empresas privado y seguro",
     "description": [
-      "Internxt asegura tu negocio contra la pérdida de datos con almacenamiento en la nube seguro construido con cifrado ultra potente.",
+      "Internxt protege tu negocio contra la pérdida de datos con su servicio de almacenamiento en la nube para empresas construido con cifrado ultra potente para mantener toda tu información segura y privada.",
       "Proporcionamos todo lo que necesitas para gestionar tu negocio de manera segura."
     ],
-    "cta": "Obtén Internxt para negocios"
+    "cta": "Obtén Internxt para tu empresa"
   },
   "SecureYourCompany": {
-    "title": "Asegura el futuro de tu empresa con el almacenamiento en la nube cifrado de Internxt",
+    "title": "Protege tu empresa con el almacenamiento en la nube de empresas de Internxt",
     "description": "Las violaciones de datos pueden devastar a las empresas, causando graves pérdidas financieras, interrupciones operativas y dañando la reputación de tu negocio.",
     "cards": [
       {
-        "title": "$4.45 m",
-        "description": "Costo promedio de una violación de datos"
+        "title": "$4.88 m",
+        "description": "Coste promedio de una violación de datos"
       },
       { "title": "73 m", "description": "Registros de clientes de AT&T filtrados en 2024" },
       { "title": "318 días", "description": "Tiempo promedio para identificar una violación de datos" },
       { "title": "24%", "description": "De los ataques de ransomware apuntan a empresas" }
     ],
-    "footerText": "*Datos recopilados del Informe de Costo de una Violación de Datos de IBM Security 2023."
+    "footerText": "*Datos recopilados del Informe de Costo de una Violación de Datos de IBM Security 2024."
   },
   "InternxtProtectsYourBusiness": {
     "title": "Internxt protege tu negocio de las violaciones de datos",
     "description": [
-      "Otros proveedores tienen las claves de descifrado de tus datos y teóricamente pueden ver tus archivos, exponiendo tu negocio a violaciones de datos, hacks o filtraciones.",
-      "Ofrecemos verdadera privacidad de datos — no tenemos acceso a la información de tu negocio, tus datos están completamente cifrados y solo tú puedes acceder a ellos."
+      "Otros proveedores tienen las claves de descifrado de tus datos y pueden acceder a tus archivos, exponiendo tu negocio a violaciones de datos, hackers o filtraciones. Nosotros no.",
+      "Internxt te ofrece una privacidad de datos completa — no tenemos acceso a la información de tu negocio, tus datos están completamente cifrados y solo tú puedes acceder a ellos."
     ]
   },
   "WhatCanWeDo": {
     "title": "¿Qué puedes hacer con Internxt?",
-    "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube seguro para negocios.",
+    "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube para empresas.",
     "cards": [
       {
-        "imagePathname": "internxt_b2b_feature_1",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_1_es",
         "selectorTab": "Gestiona tu organización",
-        "description": "Internxt empodera a las empresas con funciones para gestionar miembros de tu organización, personalizar espacios de trabajo y gestionar la facturación y pagos de tu cuenta. Cambia fácilmente entre tu cuenta de negocio y personal de Internxt para optimizar la productividad y organización de archivos."
+        "description": "Internxt ofrece a las empresas funciones para administrar a los miembros de tu organización, personalizar espacios de trabajo y administrar la facturación y los pagos de tu cuenta.  Cambia fácilmente entre tus cuentas comerciales y personales de Internxt para optimizar la productividad y la organización de archivos."
       },
       {
-        "imagePathname": "internxt_b2b_feature_2",
-        "selectorTab": "Compartición segura de archivos entre departamentos",
-        "description": "El almacenamiento en la nube seguro incluye funciones de compartición de archivos seguras dentro de diferentes departamentos para colaborar de manera segura en equipos. Protege con contraseña y restringe el acceso a archivos para enviar archivos confidenciales a socios, asegurando que mantienes el control sobre su seguridad."
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_2_es",
+        "selectorTab": "Comparte archivos de forma segura",
+        "description": "El servicio de almacenamiento en la nube incluye funciones seguras para compartir archivos dentro de diferentes departamentos para colaborar de forma privada entre equipos. Protege con contraseña y restringe el acceso de archivos confidenciales para garantizar el control total sobre tu seguridad."
       },
       {
-        "imagePathname": "internxt_b2b_feature_3",
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_3_es",
         "selectorTab": "Gestión de sesiones",
-        "description": "El almacenamiento en la nube de Internxt ofrece gestión avanzada de sesiones, proporcionando notificaciones de inicio de sesión en tiempo real y monitoreo detallado de sesiones remotas (cliente, SO, IP, ubicación, última hora activa). Este nivel de seguridad permite al administrador de la cuenta detectar accesos no autorizados, gestionar sesiones de manera eficiente y proteger datos sensibles."
+        "description": "El almacenamiento en la nube para empresas de Internxt ofrece gestión avanzada de sesiones, proporcionando notificaciones de inicio de sesión en tiempo real y monitoreo remoto detallado de la sesión (cliente, sistema operativo, IP, ubicación, última hora activa). Esta seguridad de alto nivel permite al administrador de cuentas detectar accesos no autorizados, administrar sesiones de manera eficiente y proteger datos confidenciales."
       },
       {
-        "imagePathname": "internxt_b2b_feature_4",
-        "selectorTab": "Asignación flexible de almacenamiento",
-        "description": "Internxt ofrece a tu equipo una asignación flexible completa de almacenamiento para aumentar tu capacidad según tus necesidades. Con nuestros planes, puedes añadir usuarios, asignar almacenamiento según las necesidades y aumentar la capacidad según sea necesario, asegurando eficiencia de costos, escalabilidad y utilización óptima de recursos."
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_4_es",
+        "selectorTab": "Almacenamiento flexible",
+        "description": "Internxt ofrece a los equipos una asignación de almacenamiento totalmente flexible para actualizar tu almacenamiento según tus necesidades. Con nuestros planes, puedes agregar usuarios, asignar almacenamiento y aumentar la capacidad según tus necesidades, lo que garantiza rentabilidad, escalabilidad y utilización óptima de los recursos."
+      },
+      {
+        "imagePathname": "almacenamiento_en_la_nube_para_empresas_feature_5_es",
+        "selectorTab": "Registros de Acceso",
+        "description": "Supervisa fácilmente la actividad de tu equipo con un registro de actividad completo que ofrece una visualización de las interacciones de archivos y el acceso de los usuarios. Realiza un seguimiento de quién inició sesión, subió o modificó archivos, y disfruta de un control y seguridad total de los datos de tu empresa."
       }
     ]
   },
   "PriceTable": {
     "planTitles": {
-      "business": "Planes para negocios"
+      "business": "Planes para empresa"
     },
     "businessDescription2": "Asegura la seguridad de los datos de tu negocio con los planes de almacenamiento en la nube cifrados de Internxt.",
     "billingFrequency": {
@@ -83,25 +88,25 @@
     "cards": [
       {
         "title": "Cumple con el RGPD",
-        "description": "El Reglamento General de Protección de Datos (RGPD) y otras leyes europeas de privacidad imponen una estricta protección de datos. Siguiendo estas leyes, Internxt toma todas las medidas para proteger los datos de tu negocio."
+        "description": "El Reglamento General de Protección de Datos (GDPR) y otras leyes de privacidad europeas imponen una estricta protección de datos. Al seguir estas leyes, Internxt cumple todas las medidas necesarias para proteger los datos de tu empresa."
       },
       {
-        "title": "Cero acceso, máximo cifrado",
-        "description": "El cifrado de extremo a extremo asegura tus archivos cifrando todo en tu dispositivo. Nadie, ni siquiera Internxt, puede ver tus archivos. En el improbable caso de una violación de datos, los hackers no pueden descifrar y robar los datos de tu negocio."
+        "title": "Acceso cero, máximo cifrado",
+        "description": "El cifrado de extremo a extremo protege tus archivos al cifrar todo lo que hay en tu dispositivo. Nadie, ni siquiera Internxt, puede acceder a tus archivos. En el improbable caso de que se produzca una filtración de datos, los piratas informáticos no pueden descifrar ni robar los datos de tu empresa."
       },
       {
         "title": "Tú controlas tus datos",
-        "description": "A diferencia de Google Drive, Dropbox y OneDrive, Internxt no tiene rastreadores y nunca comparte datos con terceros. Los datos de tu negocio permanecen privados y protegidos con las máximas medidas de seguridad disponibles."
+        "description": "A diferencia de Google Drive, Dropbox y OneDrive, Internxt no tiene rastreadores y nunca comparte datos con terceros. Los datos de tu empresa permanecen privados y protegidos con las máximas medidas de seguridad disponibles."
       },
       {
         "title": "100% transparente y seguro",
-        "description": "Todos nuestros productos están construidos usando código abierto. El código que usamos para proteger los datos está disponible para que todos lo inspeccionen. No tenemos nada que ocultar excepto tus datos."
+        "description": "Todos nuestros productos están construidos utilizando código abierto. El código que utilizamos para proteger los datos está disponible para que todos lo inspeccionen y auditen. No tenemos nada que ocultar excepto tus datos."
       }
     ]
   },
   "EncryptedCloudSolution": {
-    "title": "Soluciones de nube cifrada para tu negocio",
-    "description": "Internxt proporciona una avanzada seguridad de almacenamiento en la nube con cifrado de grado militar para compartir y almacenar archivos de manera segura y gestionar tu organización."
+    "title": "Solución de almacenamiento en la nube encriptada para empresas",
+    "description": "Internxt proporciona seguridad avanzada de almacenamiento en la nube con cifrado de nivel militar para compartir archivos, almacenamiento y copias de seguridad para administrar de forma segura tu organización."
   },
   "TestimonialsSection": {
     "title": "Lo que los expertos dicen sobre nosotros",
@@ -109,27 +114,27 @@
       {
         "imageBrandName": "techradar",
         "brand": "Techradar",
-        "review": "Internxt es un excelente servicio de almacenamiento en la nube debido a sus planes asequibles y su interfaz intuitiva. Sobresale en medidas de seguridad y compromiso con la privacidad, lo que lo convierte en una excelente opción para los usuarios de negocios que priorizan la seguridad."
+        "review": "Internxt es un excelente servicio de almacenamiento en la nube debido a sus planes asequibles y su interfaz muy intuitiva. Gracias a sus medidas de seguridad y compromiso con la privacidad, lo convierte en una excelente opción para las empresas que priorizan su seguridad."
       },
       {
         "imageBrandName": "PCWorld",
         "brand": "PCWorld",
-        "review": "El acceso web intuitivamente integrado de Internxt, la sincronización de archivos y los verdaderos servicios de copia de seguridad son impresionantes. Este servicio de almacenamiento y copia de seguridad en línea es fácil de usar, cubre todas las bases y los planes de por vida son una ganga."
+        "review": "El acceso web, la sincronización de archivos y las copias de seguridad son increíbles. Internxt Drive es muy fácil de usar, y los planes de por vida son muy económicos. "
       },
       {
         "imageBrandName": "cloudwards",
         "brand": "Cloudwards",
-        "review": "Internxt es conocido como una solución de almacenamiento en la nube segura que prioriza la privacidad del usuario. Si la privacidad y la seguridad son tus mayores preocupaciones con el almacenamiento en la nube, definitivamente vale la pena considerar Internxt."
+        "review": "Internxt es una solución de almacenamiento en la nube segura que prioriza la privacidad del usuario. Si la privacidad y la seguridad son tus mayores preocupaciones, vale la pena considerar Internxt."
       },
       {
         "imageBrandName": "bitcatcha",
         "brand": "Bitcatcha",
-        "review": "Internxt va más allá para protegerte y darte propiedad de tus datos, por lo que son excelentes para negocios. Recomendado para cualquiera que valore la privacidad."
+        "review": "Internxt va más allá para protegerte y darte control total de tus datos, por lo que son excelentes para almacenar los archivos de tu empresa. Lo recomiendo para cualquier negocio que valore su privacidad."
       },
       {
         "imageBrandName": "ffstoppers",
         "brand": "Fstoppers",
-        "review": "¿Por qué elegir Internxt? Diría que la naturaleza simplificada y simple de cómo funciona. Es simplemente una opción de almacenamiento en la nube cifrada con 256 bits sin complicaciones que cualquiera puede usar."
+        "review": "¿Por qué elegir Internxt? Diría que su interfaz es simple y clara, y es muy fácil de usar. Una buena opción de almacenamiento en la nube cifrada."
       },
       {
         "imageBrandName": "guru99",

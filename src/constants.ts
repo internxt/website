@@ -12,7 +12,6 @@ export const COOKIE_DOMAIN = 'internxt.com';
 export const IMPACT_LOGIN_USER = 'https://app.impact.com/login.user';
 
 export const EXCLUDED_PATHS_FOR_BANNER = [
-  '/lifetime',
   '/pricing',
   '/partner-discount',
   '/techradar-discount',
@@ -25,6 +24,8 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime_special',
   '/pccomponentes-products',
   '/pccomponentes-products-b2b',
+  '/pccomponentes-products-b2b-fr',
+  '/pccomponentes-products-b2b-pt',
   '/lifetime/celebration/[filename]',
   '/pcloud-alternative',
   '/dealmirror',
@@ -39,6 +40,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/black-friday',
   '/lifetime/celebration/singlesday',
   '/elections',
+  '/brave',
 ];
 
 export const SNIGEL_BANNERS = {

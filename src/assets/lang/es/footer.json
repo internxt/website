@@ -39,7 +39,8 @@
         "security": "Seguridad",
         "legal": "Legal",
         "whyInternxt": "¿Por qué Internxt?",
-        "mediaArea": "Área de Recursos"
+        "mediaArea": "Área de Recursos",
+        "sustainability": "Sostenibilidad"
       },
       "join": {
         "title": "Únete",
@@ -82,7 +83,8 @@
         "haveIBeenPwned": "Internxt Monitor"
       },
       "language": "Idioma"
-    }
+    },
+    "financialProject": "Proyecto financiado por el CDTI y financiado por los fondos FEDER de la UE. Internxt Mail e Internxt Meet: Servicio de correo seguro Internxt Mail y servicio de videollamadas seguras Internxt Meet, mediante el uso de encriptación post-cuántica e inteligencia artificial."
   },
   "Cookies": {
     "title": "Internxt usa cookies para mejorar la experiencia de navegación",
