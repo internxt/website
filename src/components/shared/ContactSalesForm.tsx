@@ -40,7 +40,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
 
   const onSubmitSuccess = async () => {
     setFormStatus('success');
-    await sleep(2000);
+    await sleep(3000);
     setFormData({ name: '', company: '', email: '', phone: '', storage: '', help: '' });
     setIsFormValid(false);
     setFormStatus('default');
@@ -48,12 +48,12 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
 
   const onSubmitError = (error: unknown) => {
     console.error('Error:', error);
+    console.log('Error:', error);
     setFormStatus('error');
   };
 
-  const handleSubmit = useCallback(
-    debounce(async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
+  const handleSubmitDebounced = useCallback(
+    debounce(async (formData, isBusiness, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
       setIsSubmitting(true);
 
       const payload = {
@@ -76,9 +76,14 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
       } finally {
         setIsSubmitting(false);
       }
-    }, 3000),
-    [formData, isBusiness],
+    }, 250),
+    [],
   );
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    handleSubmitDebounced(formData, isBusiness, onSubmitSuccess, onSubmitError, setIsSubmitting);
+  };
 
   return (
     <section className="mt-6 overflow-hidden">
