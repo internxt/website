@@ -16,7 +16,8 @@
       "noBreachesFound": "E-Mail nicht gefunden",
       "errorPwned": "Fehler bei der Überprüfung der E-Mail",
       "check": "Überprüfen",
-      "checking": "Überprüfung läuft..."
+      "checking": "Überprüfung läuft...",
+      "duringCheck": "Wir überprüfen, ob deine E-Mail-Adresse in einem Datenleck enthalten war. Bitte warte einen Moment."
     },
     "breaches": {
       "error405": "Die Anforderungsmethode wird nicht unterstützt. Bitte wende dich an den Support oder versuche, die Seite neu zu laden.",
