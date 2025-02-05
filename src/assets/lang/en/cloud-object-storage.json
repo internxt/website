@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Internxt object cloud storage",
       "description": "Experience superior data management, speed, and efficiency",
-      "cta": "Get started"
+      "cta": "Get started",
+      "separator": "|",
+      "cta2": "Contact sales"
     }
   },
   "FaqSection": {

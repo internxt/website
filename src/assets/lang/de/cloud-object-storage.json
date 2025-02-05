@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Internxts Cloud-Objektspeicher",
       "description": "Erleben Sie eine überlegene Datenverwaltung, Geschwindigkeit und Effizienz",
-      "cta": "Jetzt starten"
+      "cta": "Jetzt starten",
+      "separator": "|",
+      "cta2": "Vertrieb kontaktieren"
     }
   },
   "FaqSection": {

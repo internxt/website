@@ -107,4 +107,6 @@ export interface BannerText {
   title: string;
   description: string;
   cta: string;
+  separator: string;
+  cta2: string;
 }

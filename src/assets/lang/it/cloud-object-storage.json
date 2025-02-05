@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Archiviazione Oggetti di Internxt",
       "description": "Approfitta di una gestione dei dati senza pari, alta velocità e performance superiori",
-      "cta": "Inizia Ora"
+      "cta": "Inizia Ora",
+      "separator": "|",
+      "cta2": "Contatta vendite"
     }
   },
   "FaqSection": {

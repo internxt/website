@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Almacenamiento en la nube de objetos de Internxt",
       "description": "Experimente una gestión de datos, velocidad y eficiencia superiores",
-      "cta": "Empieza ya"
+      "cta": "Empieza ya",
+      "separator": "|",
+      "cta2": "Contactar ventas"
     }
   },
   "FaqSection": {

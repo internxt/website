@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Stockage d'objets d'Internxt dans le cloud",
       "description": "Découvrez une gestion des données supérieure, une vitesse et une efficacité accrues",
-      "cta": "Commencer maintenant"
+      "cta": "Commencer maintenant",
+      "separator": "|",
+      "cta2": "Contacter les ventes"
     }
   },
   "FaqSection": {

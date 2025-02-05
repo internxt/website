@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Internxt 的雲端物件儲存",
       "description": "享受超越的數據管理、高效能和更高速度",
-      "cta": "立即開始"
+      "cta": "立即開始",
+      "separator": "|",
+      "cta2": "聯繫銷售"
     }
   },
   "FaqSection": {

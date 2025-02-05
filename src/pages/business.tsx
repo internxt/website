@@ -107,7 +107,7 @@ export const BusinessPage = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
       />
 
-      <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+      <WhyChooseInternxtForBusiness textContent={textContent} />
 
       <MarqueeComponentV2 bgColor="bg-gray-1" />
 

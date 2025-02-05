@@ -97,7 +97,9 @@
     "bannerText": {
       "title": "Internxt 的云存储",
       "description": "体验前所未有的数据管理、速度和卓越的性能",
-      "cta": "立即开始"
+      "cta": "立即开始",
+      "separator": "|",
+      "cta2": "联系销售"
     }
   },
   "FaqSection": {
