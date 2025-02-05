@@ -10,6 +10,13 @@ interface CloudObjectStorageWhyChooseInternxtSectionProps {
   textContent: CloudObjectStorageText['WhyChooseInternxtSection'];
 }
 
+const scrollToTop = () => {
+  document.querySelector('#contactSales')?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  });
+};
+
 export const CloudObjectStorageWhyChooseInternxtSection = ({
   textContent,
 }: CloudObjectStorageWhyChooseInternxtSectionProps): JSX.Element => {
@@ -80,7 +87,11 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
               <p className="text-4xl font-semibold">{textContent.bannerText.title}</p>
               <p className="text-xl">{textContent.bannerText.description}</p>
             </div>
-            <Button text={textContent.bannerText.cta} onClick={() => (window.location.hash = '#storageSection')} />
+            <div className="flex flex-row items-center gap-4">
+              <Button text={textContent.bannerText.cta} onClick={() => (window.location.hash = '#storageSection')} />
+              <p className="text-center text-xl text-gray-40">{textContent.bannerText.separator}</p>
+              <Button text={textContent.bannerText.cta2} onClick={scrollToTop} />
+            </div>
           </div>
           <div className="hidden items-center lg:flex">
             <Image

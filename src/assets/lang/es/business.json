@@ -5,7 +5,9 @@
       "Internxt protege tu negocio contra la pérdida de datos con su servicio de almacenamiento en la nube para empresas construido con cifrado ultra potente para mantener toda tu información segura y privada.",
       "Proporcionamos todo lo que necesitas para gestionar tu negocio de manera segura."
     ],
-    "cta": "Obtén Internxt para tu empresa"
+    "cta": "Seleccionar plan",
+    "separator": "|",
+    "cta2": "Contactar ventas"
   },
   "SecureYourCompany": {
     "title": "Protege tu empresa con el almacenamiento en la nube de empresas de Internxt",
@@ -179,5 +181,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contactar ventas",
+    "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "company": "Nombre de la empresa",
+      "phone": "Número de teléfono",
+      "howMuchStorage": "Capacidad de almacenamiento necesario",
+      "totalCharacters": " /1000",
+      "options": [
+        "Selecciona",
+        "Menos de 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "¿Cómo podemos ayudarte? (Opcional)",
+      "howWeCanHelpPlaceHolder": "Cuentanos que necesitas...",
+      "cta": "Enviar mensaje",
+      "ctaSending": "Enviando...",
+      "successMessage": "Su mensaje ha sido enviado con éxito.",
+      "errorMessage": "Ocurrió un error. Por favor, inténtelo de nuevo."
+    }
   }
 }
