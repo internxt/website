@@ -142,8 +142,9 @@
     "individuals": {
       "200GB": [
         "200 GB de stockage chiffré",
-        "Partage chiffré de fichiers et de dossiers",
+        "Chiffrement à connaissance nulle",
         "Partage de fichiers protégé par mot de passe",
+        "Chiffrement post-quantique",
         "Accédez à vos fichiers depuis n'importe quel appareil",
         "Téléchargez des fichiers jusqu'à 20 Go",
         "Authentification à deux facteurs (2FA)",
@@ -152,8 +153,9 @@
       ],
       "2TB": [
         "2TB de stockage chiffré",
-        "Partage chiffré de fichiers et de dossiers",
+        "Chiffrement à connaissance nulle",
         "Partage de fichiers protégé par mot de passe",
+        "Chiffrement post-quantique",
         "Accédez à vos fichiers depuis n'importe quel appareil",
         "Téléchargez des fichiers jusqu'à 20 Go",
         "Authentification à deux facteurs (2FA)",
@@ -162,8 +164,9 @@
       ],
       "5TB": [
         "5TB de stockage chiffré",
-        "Partage chiffré de fichiers et de dossiers",
+        "Chiffrement à connaissance nulle",
         "Partage de fichiers protégé par mot de passe",
+        "Chiffrement post-quantique",
         "Accédez à vos fichiers depuis n'importe quel appareil",
         "Téléchargez des fichiers jusqu'à 20 Go",
         "Authentification à deux facteurs (2FA)",
@@ -172,8 +175,9 @@
       ],
       "10TB": [
         "10TB de stockage chiffré",
-        "Partage chiffré de fichiers et de dossiers",
+        "Chiffrement à connaissance nulle",
         "Partage de fichiers protégé par mot de passe",
+        "Chiffrement post-quantique",
         "Accédez à vos fichiers depuis n'importe quel appareil",
         "Téléchargez des fichiers jusqu'à 20 Go",
         "Authentification à deux facteurs (2FA)",
@@ -184,7 +188,7 @@
     "business": {
       "1TB": [
         "1TB de stockage/utilisateur",
-        "Partage de fichiers et dossiers chiffrés",
+        "Chiffrement à connaissance nulle",
         "Créer et gérer des utilisateurs et des équipes",
         "À partir de 3 utilisateurs et jusqu'à 10",
         "Conforme au RGPD",
@@ -194,7 +198,7 @@
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
-        "Partage de fichiers et dossiers chiffrés",
+        "Chiffrement à connaissance nulle",
         "Créer et gérer des utilisateurs et des équipes",
         "À partir de 3 utilisateurs et jusqu'à 100",
         "Conforme au RGPD",

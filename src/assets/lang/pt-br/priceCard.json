@@ -132,8 +132,9 @@
     "individuals": {
       "200GB": [
         "200GB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -142,8 +143,9 @@
       ],
       "2TB": [
         "2TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -152,8 +154,9 @@
       ],
       "5TB": [
         "5TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -162,8 +165,9 @@
       ],
       "10TB": [
         "10TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -174,7 +178,7 @@
     "business": {
       "1TB": [
         "1TB de armazenamento por usuário",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 10",
         "Conformidade com o GDPR",
@@ -184,7 +188,7 @@
       ],
       "2TB": [
         "2TB de armazenamento por usuário",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 100",
         "Conformidade com o GDPR",

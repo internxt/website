@@ -67,7 +67,7 @@
         "blue": "80% de réduction ",
         "normal2": "sur tous les plans premium"
       },
-      "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
+      "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
       "startFrom": {
         "normal1": "À partir de ",
         "price": " 0.95",
@@ -248,7 +248,7 @@
         "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non. Internxt, ainsi que toute autre tierce partie, ne peut pas accéder à vos fichiers, photos ou données.",
-          "Les services d'Internxt disposent d'un chiffrement sans connaissance, ce qui signifie que seul vous pouvez réellement accéder à vos données privées. De plus, l'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier complet, mais seulement un fragment chiffré que seul vous pouvez déchiffrer."
+          "Les services d’Internxt proposent un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez accéder à vos données privées et les déchiffrer. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos fichiers contre les menaces futures."
         ]
       },
       {

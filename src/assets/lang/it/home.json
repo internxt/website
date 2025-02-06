@@ -67,7 +67,7 @@
         "blue": "80% di sconto ",
         "normal2": "su tutti i piani premium"
       },
-      "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source verificato"],
+      "features": ["Crittografia a conoscenza zero", "Crittografia a conoscenza zero", "Open source verificato"],
       "startFrom": {
         "normal1": "A partire da ",
         "price": " 0.95",
@@ -248,7 +248,7 @@
         "question": "Internxt può accedere ai miei file?",
         "answer": [
           "No. Internxt, insieme a qualsiasi altra terza parte, non può accedere ai tuoi file, foto o dati.",
-          "I servizi di Internxt dispongono di crittografia a conoscenza zero, il che significa che solo tu puoi davvero accedere ai tuoi dati privati. Inoltre, l'architettura di Internxt frammenta i tuoi file prima di crittografarli, quindi un server non contiene mai un file completo, solo un frammento crittografato dello stesso, che solo tu puoi decrittografare."
+          "I servizi di Internxt offrono una crittografia a conoscenza zero, il che significa che solo tu puoi accedere e decriptare i tuoi dati privati. Inoltre, Internxt utilizza la crittografia post-quantistica, la tecnologia più avanzata disponibile per proteggere i tuoi file dalle minacce future."
         ]
       },
       {

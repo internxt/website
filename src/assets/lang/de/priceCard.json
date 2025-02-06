@@ -143,8 +143,9 @@
     "individuals": {
       "200GB": [
         "200 GB verschlüsselter Speicher",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Passwortgeschützte Dateifreigabe",
+        "Post-quantum Verschlüsselung",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
         "Dateien bis zu 20 GB hochladen",
         "Zwei-Faktor-Authentifizierung (2FA)",
@@ -152,8 +153,9 @@
       ],
       "2TB": [
         "2TB verschlüsselter Speicher",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Passwortgeschützte Dateifreigabe",
+        "Post-quantum Verschlüsselung",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
         "Dateien bis zu 20 GB hochladen",
         "Zwei-Faktor-Authentifizierung (2FA)",
@@ -161,8 +163,9 @@
       ],
       "5TB": [
         "5TB verschlüsselter Speicher",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Passwortgeschützte Dateifreigabe",
+        "Post-quantum Verschlüsselung",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
         "Dateien bis zu 20 GB hochladen",
         "Zwei-Faktor-Authentifizierung (2FA)",
@@ -170,8 +173,9 @@
       ],
       "10TB": [
         "10TB verschlüsselter Speicher",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Passwortgeschützte Dateifreigabe",
+        "Post-quantum Verschlüsselung",
         "Zugriff auf Ihre Dateien von jedem Gerät aus",
         "Dateien bis zu 20 GB hochladen",
         "Zwei-Faktor-Authentifizierung (2FA)",
@@ -181,7 +185,7 @@
     "business": {
       "1TB": [
         "1TB Speicher/Benutzer",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Benutzer und Teams erstellen und verwalten",
         "Ab 3 Benutzern und bis zu 10",
         "DSGVO-konform",
@@ -191,7 +195,7 @@
       ],
       "2TB": [
         "2TB Speicher/Benutzer",
-        "Verschlüsselte Datei- und Ordnerfreigabe",
+        "Zero-Knowledge-Verschlüsselung",
         "Benutzer und Teams erstellen und verwalten",
         "Ab 3 Benutzern und bis zu 100",
         "DSGVO-konform",

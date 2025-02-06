@@ -142,8 +142,9 @@
     "individuals": {
       "200GB": [
         "200GB encrypted storage",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -152,8 +153,9 @@
       ],
       "2TB": [
         "2TB encrypted storage",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -162,8 +164,9 @@
       ],
       "5TB": [
         "5TB encrypted storage",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -172,8 +175,9 @@
       ],
       "10TB": [
         "10TB encrypted storage",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Password-protected file sharing",
+        "Post-quantum cryptography",
         "Access your files from any device",
         "Guaranteed GDPR compliance",
         "Two-factor authentication (2FA)",
@@ -184,7 +188,7 @@
     "business": {
       "1TB": [
         "1TB storage/user",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Create and manage users & teams",
         "Starting at 3 users and up to 10",
         "Guaranteed GDPR compliance",
@@ -194,7 +198,7 @@
       ],
       "2TB": [
         "2TB storage/user",
-        "Encrypted file and folder sharing",
+        "Zero-knowledge encryption",
         "Create and manage users & teams",
         "Starting at 3 users and up to 100",
         "Guaranteed GDPR compliance",
