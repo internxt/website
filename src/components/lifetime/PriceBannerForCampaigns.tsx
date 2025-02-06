@@ -19,15 +19,15 @@ export const PriceBannerForCampaigns = ({
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
-        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] border border-2 border-gray-5 bg-white sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
+        className={`relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col  rounded-[16px] border border-2 border-gray-5 bg-white sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
       >
-        <div className=" flex max-h-[384px] w-full min-w-[800px] flex-col items-center gap-6 py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
-          <div className="flex flex-col items-center gap-2 pl-6 pr-10 text-center lg:items-start lg:text-left">
+        <div className=" flex min-h-[400px] w-full   flex-col items-center  py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
+          <div className="flex min-h-[400px] min-w-[600px]  max-w-[600px] flex-col items-center gap-2  text-center lg:items-start lg:text-left">
             <div className="mt-8 flex w-max rounded-xl border-2 border-pink bg-pink-dark px-2 py-5 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full flex-col pt-5 ">
-              <p className="whitespace-nowrap text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
+              <p className=" flex min-h-[86px] items-center bg-white text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
                 {textContent.title}
               </p>
               <p className="whitespace-nowrap pt-2 text-lg font-medium text-gray-80 sm:text-lg md:text-lg lg:text-lg">
@@ -50,13 +50,12 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap pt-6 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex max-h-[300px] items-center justify-center pl-20 pr-6 ">
+          <div className="relative flex min-h-[400px] min-w-[500px] max-w-[500px] items-center">
             <Image
               src={getImage('/images/campaigns/valentines/internxt_valentines_sale2025.webp')}
               width={525}
               height={263}
               alt="Dust for scorer"
-              className="top-10 z-10 w-full object-cover"
             />
           </div>
         </div>

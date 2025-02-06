@@ -24,7 +24,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
-            <p className="font-normal">
+            <p className="font-semibold">
               {textContent.title.normalText}💘 <span className="font-bold">{textContent.title.boldText}</span>
             </p>
           </div>
