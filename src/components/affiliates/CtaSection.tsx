@@ -32,7 +32,7 @@ const CtaSection = ({
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className={`flex max-w-[700px] flex-col items-center space-y-4 text-center text-white`}>
+        <div className={`flex max-w-[500px] flex-col items-center space-y-4  text-center text-white`}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
           {customDescription}
         </div>
