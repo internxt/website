@@ -67,7 +67,7 @@
         "blue": "Get 80% off ",
         "normal2": "all premium plans"
       },
-      "features": ["Up to 10TB storage", "Post-quantum encryption", "Open source and audited"],
+      "features": ["Zero-Knowledge encryption", "Post-quantum encryption", "Open source and audited"],
       "startFrom": {
         "normal1": "Start from ",
         "price": " 0.95",

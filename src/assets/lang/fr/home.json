@@ -67,7 +67,7 @@
         "blue": "80% de réduction ",
         "normal2": "sur tous les plans premium"
       },
-      "features": ["Jusqu'à 10TB de stockage", "Chiffrement post-quantique", "Open source et audité"],
+      "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
       "startFrom": {
         "normal1": "À partir de ",
         "price": " 0.95",
