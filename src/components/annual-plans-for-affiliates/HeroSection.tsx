@@ -60,7 +60,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ textContent, InfoTextComponen
       <HeroSectionSafeArea>
         <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center text-center lg:items-start lg:text-left">
           <div className="flex flex-col space-y-4">
-            {isStartPage ? <StartPageLabel /> : <BraveLabel />}
+            {isStartPage ? <StartPageLabel /> : null}
             <h1 className="text-6xl font-bold text-gray-100">{textContent.title}</h1>
             <h2 className="text-4xl font-semibold text-primary">{textContent.subtitle}</h2>
           </div>
