@@ -14,9 +14,7 @@ export const HomePageBannerForMobile = () => {
   const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
 
   return (
-    <div
-      className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] border-4 border-gray-5 bg-white lg:hidden`}
-    >
+    <div className="z-10 flex  max-h-[560px] w-full flex-col justify-between gap-10 overflow-hidden rounded-[16px] border-4 border-gray-5 bg-white lg:hidden">
       <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
         <div className="flex w-max rounded-xl border-4 border-pink bg-red-dark px-2 py-3">
           <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.tableSection.ctaBanner.label}</p>
@@ -41,16 +39,15 @@ export const HomePageBannerForMobile = () => {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="flex h-full w-full flex-col object-cover xl:hidden">
-        <Image
-          src={getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp')}
-          width={404}
-          height={400}
-          alt="Superbowl 2025 mobile image"
-          className="top-10 w-full object-cover"
-        />
+        <div className="relative ">
+          <Image
+            src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
+            width={349}
+            height={349}
+            quality={100}
+            alt="Valentines Mobile"
+          />
+        </div>
       </div>
     </div>
   );

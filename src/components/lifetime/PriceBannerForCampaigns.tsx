@@ -49,17 +49,10 @@ export const PriceBannerForCampaigns = ({
           </div>
           <div className="relative flex max-h-[300px] items-center justify-center pl-20 pr-6 ">
             <Image
-              src={getImage('/images/campaigns/superbowl/dust.png')}
-              width={1500}
-              height={1500}
+              src={getImage('/images/campaigns/valentines/internxt_valentines_sale2025.webp')}
+              width={525}
+              height={263}
               alt="Dust for scorer"
-              className=" absolute left-0 top-0 z-0 object-contain"
-            />
-            <Image
-              src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
-              width={300}
-              height={100}
-              alt="Superbowl 2025 pricing banner image"
               className="top-10 z-10 w-full object-cover"
             />
           </div>
@@ -87,16 +80,16 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="relative flex h-full w-full flex-col xl:hidden">
+        <div className="relative flex h-full w-full flex-col py-4 xl:hidden">
           <Image
-            src={getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp')}
-            width={377}
-            height={200}
-            alt="Superbowl 2025 pricing banner image for mobile"
-            className="w-full object-cover"
+            src={getImage('/images/campaigns/valentines/internxt_valentines_sale2025.webp')}
+            width={525}
+            height={263}
+            alt="Dust for scorer"
+            className="top-10 -z-10 w-full object-cover"
           />
           <ArrowCircleDown
-            className="absolute bottom-4 left-1/2 translate-x-1/2 transform animate-float-sock text-pink-dark"
+            className="absolute bottom-4 left-40 translate-x-1/2 transform animate-float-sock text-pink-dark"
             size={40}
           />
         </div>

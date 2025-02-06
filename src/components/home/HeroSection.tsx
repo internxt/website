@@ -21,7 +21,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/campaigns/superbowl/internxt_superbowl2025_mobile.webp');
+  const mobileImage = getImage('/images/campaigns/valentines/internxt_superbowl2025_mobile.webp');
   const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
@@ -57,20 +57,20 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
             <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-          <div className="relative ml-32  hidden h-screen max-h-[900px] w-full justify-center lg:flex">
+          <div className="relative ml-32  hidden h-screen max-h-[900px] w-full justify-center py-40 lg:flex">
             <Image
-              src={getImage('/images/campaigns/superbowl/dust.png')}
-              width={920}
-              height={900}
-              alt="Dust Hero Section"
-              className="absolute -left-14 top-40 z-0"
+              src={getImage('/images/campaigns/valentines/cloud_internxt.webp')}
+              width={653}
+              height={327}
+              alt="Cloud Valentines Hero Section"
+              className="absolute -left-20 bottom-80 z-0"
             />
             <Image
-              src={getImage('/images/campaigns/superbowl/internxt_superbowl2025.webp')}
-              width={586}
-              height={385}
-              alt="SuperBowl Scorer"
-              className="absolute left-0 top-40 z-10 object-contain"
+              src={getImage('/images/campaigns/valentines/internxt_valentines2025.webp')}
+              width={412}
+              height={560}
+              alt="Valentines Mobile"
+              className="absolute left-0  z-10 object-contain"
             />
           </div>
 
