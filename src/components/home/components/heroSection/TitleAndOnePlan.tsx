@@ -30,15 +30,13 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   return (
     <div className="max-w-[544px] flex-col gap-6  ">
       {header ?? (
-
         <div className="flex flex-col gap-6">
           <div className="flex flex-col">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100 lg:text-white">
+            <Header maxWidth="max-w-[500px]" className="text-gray-100">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
               {textContent.title.line2}
             </Header>
-            <p className="text-xl font-bold text-gray-100 ">
-              {textContent.description.normal1}
+            <p className="pt-6 text-xl font-bold text-gray-100 ">
               <span className="text-primary">{textContent.description.blue}</span>
               {textContent.description.normal2}
             </p>
@@ -54,9 +52,8 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         </div>
       )}
 
-
-      <div className="flex flex-row justify-center pb-4 lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100 lg:text-white">
+      <div className="flex flex-row justify-center pb-4  pt-4 lg:justify-start">
+        <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
