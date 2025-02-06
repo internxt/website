@@ -140,11 +140,13 @@ export const PriceCard = ({
       </div>
       {!isBrave && (
         <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-          <p className="text-sm font-bold text-white">{contentText.productFeatures.superBowlFeatures.title}</p>
+          <p className="text-sm font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
 
-          <div className="flex items-start space-x-2 text-left">
+          <div className="flex items-center space-x-2 text-left">
             <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+            <span className="font-regular text-base leading-5 text-white">
+              {contentText.productFeatures.valentinesFeatures.gift}
+            </span>
           </div>
         </div>
       )}
