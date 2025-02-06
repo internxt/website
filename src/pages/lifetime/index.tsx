@@ -14,7 +14,7 @@ import { getImage } from '@/lib/getImage';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.2;
+  const discount = 0.15;
 
   return (
     <Layout
@@ -28,7 +28,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="80"
+        percent="85"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
@@ -39,7 +39,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
         couponCode={PromoCodeName.ValentinesCampaign}
         discount={discount}
         lang={lang}
-        percent={'80%'}
+        percent={'85%'}
         showPriceBefore
         lifetimeMode="celebration"
       />

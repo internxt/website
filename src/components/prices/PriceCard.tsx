@@ -166,16 +166,16 @@ export default function PriceCard({
         </button>
       </div>
       <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-        <p className="text-sm font-bold text-white">{contentText.productFeatures.superBowlFeatures.title}</p>
+        <p className="text-sm font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
         {lifetimeMode === 'normal' ? (
           <div className="flex items-start space-x-2 text-left">
             <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.extra}</span>
+            <span className="text-sm leading-5 text-white">{contentText.productFeatures.valentinesFeatures.extra}</span>
           </div>
         ) : null}
         <div className="flex items-start space-x-2 text-left">
           <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-          <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+          <span className="text-sm leading-5 text-white">{contentText.productFeatures.valentinesFeatures.gift}</span>
         </div>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
