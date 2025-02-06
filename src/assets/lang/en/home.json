@@ -59,13 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Secure cloud storage.",
-        "blueText": "Guaranteed."
+        "line1": "Get the",
+        "blueText": "most secure ",
+        "line2": "cloud storage"
       },
       "description": {
         "normal1": "",
-        "blue": "Get 80% off ",
-        "normal2": "all premium plans"
+        "blue": "85% OFF ",
+        "normal2": "all lifetime plans"
       },
       "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
       "startFrom": {

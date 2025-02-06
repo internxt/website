@@ -26,8 +26,11 @@ export const PriceBannerForCampaigns = ({
             <div className="mt-8 flex w-max rounded-xl border-2 border-pink bg-pink-dark px-2 py-5 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
-            <div className="flex w-full pt-5">
+            <div className="flex w-full flex-col pt-5 ">
               <p className="whitespace-nowrap text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
+                {textContent.title}
+              </p>
+              <p className="whitespace-nowrap pt-2 text-lg font-medium text-gray-80 sm:text-lg md:text-lg lg:text-lg">
                 {textContent.subtitle}
               </p>
             </div>
@@ -63,24 +66,27 @@ export const PriceBannerForCampaigns = ({
       <div
         className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] border-4 border-gray-5 bg-white lg:hidden`}
       >
-        <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-4 border-pink bg-pink-dark px-2 py-3">
+        <div className="flex w-full flex-col items-center  space-y-5 px-2 py-6 text-center">
+          <div className="flex w-max rounded-xl border-4 border-pink bg-red-dark px-2 py-3">
             <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col text-gray-80">
             <p className="text-4xl font-bold">{textContent.titleMbl1}</p>
             <p className="text-4xl font-bold">{textContent.titleMbl2}</p>
-            <p className="text-4xl font-bold">{textContent.titleMbl3}</p>
           </div>
+          <div className="min-h-auto flex max-w-[250px] flex-col items-center ">
+            <p className="font-regular break-words text-center text-xl text-gray-80">{textContent.subtitle}</p>
+          </div>
+
           <div className="flex flex-col items-center">
-            <div className="mb-2 flex flex-row items-center space-x-1 pb-5 text-gray-80">
+            <div className="mb-2 flex flex-row items-center space-x-1 pt-2 text-gray-80">
               <CheckCircle size={20} className="text-green-1" weight="fill" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
           </div>
         </div>
 
-        <div className="relative flex h-full w-full flex-col py-4 xl:hidden">
+        <div className="relative flex h-full w-full flex-col xl:hidden">
           <Image
             src={getImage('/images/campaigns/valentines/internxt_valentines_sale2025.webp')}
             width={525}

@@ -63,7 +63,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               width={653}
               height={327}
               alt="Cloud Valentines Hero Section"
-              className="absolute -left-20 bottom-80 z-0"
+              className="absolute -left-20 bottom-24 z-0"
             />
             <Image
               src={getImage('/images/campaigns/valentines/internxt_valentines2025.webp')}

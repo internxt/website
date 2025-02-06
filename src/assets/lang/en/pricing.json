@@ -36,16 +36,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 80%",
-      "title": "Halloween sale",
-      "subtitle": "SuperBowl Savings!",
+      "label": "Save 85%",
+      "title": "A lifetime of privacy",
+
+      "subtitle": "Win two Internxt x Swiss Peak backpacks!",
       "cta": "Claim deal",
       "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl1": "SuperBowl ",
-      "titleMbl2": "Savings!",
-      "titleMbl3": "",
+      "titleMbl1": "A lifetime ",
+      "titleMbl2": " of privacy",
+      "titleMbl3": "Protect what you love, forever!",
       "ctaMbl": "Buy plan"
     },
     "planTitles": {

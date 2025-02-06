@@ -14,14 +14,12 @@ export const HomePageBannerForMobile = () => {
   const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
 
   return (
-    <div className="z-10 flex  max-h-[560px] w-full flex-col justify-between gap-10 overflow-hidden rounded-[16px] border-4 border-gray-5 bg-white lg:hidden">
+    <div className="z-10 flex  max-h-[550px] w-full flex-col justify-between gap-10 overflow-hidden rounded-[16px] border-4 border-gray-5 bg-white lg:hidden">
       <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
         <div className="flex w-max rounded-xl border-4 border-pink bg-red-dark px-2 py-3">
           <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.tableSection.ctaBanner.label}</p>
         </div>
-        <div className="flex w-full flex-col px-10 text-gray-80">
-          <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl1}</p>
-          <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl2}</p>
+        <div className="flex w-full flex-col text-gray-80">
           <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl3}</p>
         </div>
         <div className="flex flex-col items-center">
