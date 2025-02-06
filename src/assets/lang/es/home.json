@@ -67,7 +67,7 @@
         "blue": "80% de descuento ",
         "normal2": "en todos planes Premium"
       },
-      "features": ["Cifrado de conocimiento zero", "Criptografía postcuántica", "Código abierto y auditado"],
+      "features": ["Cifrado de conocimiento cero", "Criptografía postcuántica", "Código abierto y auditado"],
       "startFrom": {
         "normal1": "Desde ",
         "price": " 0.95",
