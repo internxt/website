@@ -67,7 +67,7 @@
         "blue": "80% di sconto ",
         "normal2": "su tutti i piani premium"
       },
-      "features": ["Fino a 10TB di storage", "Crittografia a conoscenza zero", "Open source verificato"],
+      "features": ["Crittografia a conoscenza zero", "Crittografia a conoscenza zero", "Open source verificato"],
       "startFrom": {
         "normal1": "A partire da ",
         "price": " 0.95",
