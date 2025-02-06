@@ -67,7 +67,7 @@
         "blue": "80% de descuento ",
         "normal2": "en todos planes Premium"
       },
-      "features": ["Hasta 10TB de almacenamiento", "Cifrado de conocimiento cero", "Código abierto y auditado"],
+      "features": ["Hasta 10TB de almacenamiento", "Criptografía postcuántica", "Código abierto y auditado"],
       "startFrom": {
         "normal1": "Desde ",
         "price": " 0.95",
@@ -87,9 +87,10 @@
         "title": "Datos cifrados y protegidos",
         "description": "No almacenamos contraseñas ni información de usuarios y todos tus datos están cifrados. Internxt te da el control total de tus archivos. Tus datos son tu responsabilidad. Protegerlos es la nuestra."
       },
+
       {
         "title": "Seguridad impenetrable",
-        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al cifrado AES-256 de conocimiento cero, tú eres el único que tiene acceso a tus datos."
+        "description": "Internxt es el único almacenamiento en la nube que cifra automáticamente tus archivos mediante criptografía poscuántica y de extremo a extremo, lo que significa que solo tú puedes acceder a tus datos."
       },
       {
         "title": "Código abierto y transparente",
@@ -248,7 +249,7 @@
         "question": "¿Puede Internxt acceder a mis archivos?",
         "answer": [
           "No. Internxt, junto con cualquier otra tercera parte, no puede acceder a tus archivos, fotos o datos.",
-          "Los servicios de Internxt cuentan con cifrado de conocimiento cero, lo que significa que solo tú puedes acceder realmente a tus datos privados. Además, la arquitectura de Internxt fragmenta tus archivos antes de cifrarlos, por lo que un servidor nunca contiene un archivo completo, solo un fragmento cifrado del mismo, que solo tú puedes descifrar."
+          "Los servicios de Internxt cuentan con cifrado de conocimiento cero, lo que significa que solo tú puedes acceder y descifrar tus datos e información privada. Además, Internxt utiliza criptografía post-cuántica, la tecnología más avanzada que existe para proteger tu información de cualquier amenaza. "
         ]
       },
       {

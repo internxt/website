@@ -53,6 +53,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       )}
 
       <div className="flex flex-row justify-center lg:justify-start">
+
         <p className="flex flex-row items-end text-gray-100 lg:text-white">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100 lg:text-white">

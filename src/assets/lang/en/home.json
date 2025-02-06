@@ -2,9 +2,9 @@
   "HeroSection": {
     "label": "Save 70%",
     "title": {
-      "line1": "Get the ",
-      "blueText": "most secure",
-      "line2": " cloud storage"
+      "line1": "Secure cloud storage.",
+      "blueText": "Guaranteed.",
+      "line2": ""
     },
     "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
@@ -67,7 +67,7 @@
         "blue": "Get 80% off ",
         "normal2": "all premium plans"
       },
-      "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
+      "features": ["Up to 10TB storage", "Post-quantum encryption", "Open source and audited"],
       "startFrom": {
         "normal1": "Start from ",
         "price": " 0.95",
@@ -105,17 +105,17 @@
     "youKnow": "Did you know?"
   },
   "FeatureSectionV2": {
-    "title": "Zero-knowledge encryption: only you can see your data",
-    "description": "Securely access all your files from your computer, smartphone, tablet, or any other device with a connection to the internet via the most secure cloud storage app. ",
-    "cta": "Choose storage size",
+    "title": "Post-quantum and zero-knowledge encryption: the most advanced technology for data protection",
+    "description": "We protect your file’s security and privacy with advanced encryption to future-proof against emerging threats.",
+    "cta": "Select storage plan",
     "cards": [
       {
         "title": "Unhackable and unleakable data",
         "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+        "title": "Next-generation security",
+        "description": "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data."
       },
       {
         "title": "Open source and transparent",
@@ -271,7 +271,7 @@
         "question": "Can Internxt access my files?",
         "answer": [
           "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
         ]
       },
       {
