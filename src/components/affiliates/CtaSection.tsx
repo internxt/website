@@ -23,18 +23,7 @@ const CtaSection = ({
   isBrave?: boolean;
 }) => {
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
-  const BraveLabel = () => {
-    return (
-      <div className="flex flex-row items-center space-x-3.5">
-        <Image
-          src={getImage('/images/partnerships/brave/internxt_x_brave.svg')}
-          width={287}
-          height={36}
-          alt="Brave logo"
-        />
-      </div>
-    );
-  };
+
   return (
     <section
       style={{
@@ -43,7 +32,6 @@ const CtaSection = ({
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        {isBrave ? <BraveLabel /> : null}
         <div className={`flex max-w-[700px] flex-col items-center space-y-4 text-center text-white`}>
           <p className="text-4xl font-semibold">{textContent.title}</p>
           {customDescription}
