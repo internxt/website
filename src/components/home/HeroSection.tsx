@@ -31,7 +31,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   };
   return (
     <section className="overflow-hidden">
-
       <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-2 xl:mx-32">
         <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block " />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center lg:py-10">
@@ -86,20 +85,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           */}
         </div>
         {/* Mobile version */}
-        <div className="flex flex-col items-center px-5 py-5 lg:hidden">
-          <Header maxWidth="max-w-max" className="text-center text-gray-100">
-            <span>{textContent.title.line1}</span>
-            <span className="text-primary">{textContent.title.blueText}</span>
-            <span>{textContent.title.line2}</span>
-          </Header>
-
-          <Image
-            src={getImage('/images/lifetime/image_mobile.webp')}
-            alt={'Internxt Header Image'}
-            width={641}
-            height={401}
-          />
-        </div>
       </div>
     </section>
   );
