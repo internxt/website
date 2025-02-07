@@ -50,7 +50,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.ValentinesCampaign,
+    couponCode: PromoCodeName.SoftSales,
+    couponCodeForBusiness: PromoCodeName.SoftSales,
+    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -139,7 +141,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            lifetime: decimalDiscount,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
+            business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
           }}
           lang={lang}
           products={products}
