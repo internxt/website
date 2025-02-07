@@ -55,7 +55,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
         textContent={langJson.HeroSection}
         cardsType={'all'}
         pathname={'cloudwards'}
-        couponName={PromoCodeName.CloudwardsCoupon}
+        couponName={PromoCodeName.ValentinesCampaign}
       />
 
       <SecondFeaturesSection
