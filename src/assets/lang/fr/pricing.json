@@ -1,11 +1,7 @@
 {
   "HeroSection": {
     "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
-    "lifetimeTitle": {
-      "line1": " Obtenez un ",
-      "blueText": " plan à vie ",
-      "line2": " d'Internxt ! "
-    },
+    "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
@@ -45,17 +41,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 85 %",
-      "title": "Protégez ce que vous aimez, pour toujours !",
-      "subtitle": "Gagnez deux sacs à dos Internxt x Swiss Peak !",
-      "cta": "Profitez de l'offre",
+      "label": "Économisez 80%",
+      "title": "Soldes d'Halloween",
+      "subtitle": "Écoutez ces cloches de soldes tinter!",
+      "cta": "Choisissez votre plan",
       "cta2": "Obtenez 85 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
-      "titleMbl1": "Une vie ",
-      "titleMbl2": " de confidentialité",
-      "titleMbl3": "Protégez ce que vous aimez, pour toujours !",
-      "ctaMbl": "Acheter un plan"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
+      "titleMbl1": "Écoutez  de ",
+      "titleMbl2": "ces cloches de",
+      "titleMbl3": "soldes tinter!",
+      "ctaMbl": "Sélectionner un plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",
