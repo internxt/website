@@ -142,7 +142,7 @@ export const PriceCard = ({
       </div>
       {!isBrave && isLifetimePlan && (
         <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-          <p className="text-sm font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
+          <p className="text-base font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
 
           <div className="flex items-center space-x-2 text-left">
             <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
