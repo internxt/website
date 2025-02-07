@@ -37,17 +37,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85 % sparen",
-      "title": "Schützen Sie, was Sie lieben, für immer!",
-      "subtitle": "Gewinnen Sie zwei Internxt x Swiss Peak Rucksäcke!",
-      "cta": "Angebot einlösen",
-      "cta2": "85 % Rabatt sichern",
-      "guarantee": "30-tägige Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
-      "titleMbl1": "Ein Leben lang ",
-      "titleMbl2": " Privatsphäre",
-      "titleMbl3": "Schützen Sie, was Sie lieben, für immer!",
-      "ctaMbl": "Plan kaufen"
+      "label": "Sparen Sie 80%",
+      "title": "Halloween-Verkauf",
+      "subtitle": "Hören Sie das Läuten der Verkaufsglocken!",
+      "cta": "Wähle deinen Plan",
+      "cta2": "Erhalte 85% Rabatt",
+      "guarantee": "30 Tage Geld-zurück-Garantie",
+      "lastCta": "*Das Angebot gilt nur für kostenlose Konten oder Neukunden",
+      "titleMbl1": "Hören Sie",
+      "titleMbl2": "das Läuten",
+      "titleMbl3": "der Verkaufsglocken!",
+      "ctaMbl": "Plan auswählen"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",

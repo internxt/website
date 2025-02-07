@@ -59,14 +59,13 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Obtenez le",
-        "blueText": "stockage cloud le plus sécurisé ",
-        "line2": ""
+        "line1": "Stockage cloud sécurisé.",
+        "blueText": "Garanti."
       },
       "description": {
-        "normal1": "",
-        "blue": "85 % de réduction ",
-        "normal2": "sur tous les plans à vie"
+        "normal1": "Obtenez ",
+        "blue": "80% de réduction ",
+        "normal2": "sur tous les plans premium"
       },
       "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
       "startFrom": {

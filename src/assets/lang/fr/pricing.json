@@ -1,7 +1,11 @@
 {
   "HeroSection": {
     "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
-    "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
+    "lifetimeTitle": {
+      "line1": " Obtenez un ",
+      "blueText": " plan à vie ",
+      "line2": " d'Internxt ! "
+    },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
