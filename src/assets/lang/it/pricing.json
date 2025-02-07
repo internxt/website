@@ -1,7 +1,11 @@
 {
   "HeroSection": {
     "title": { "line1": "80% OFF", "line2": "i nostri piani annuali" },
-    "lifetimeTitle": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
+    "lifetimeTitle": {
+      "line1": "Ottenete un piano Internxt ",
+      "blueText": " a vita",
+      "line2": "!"
+    },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
       "secondFeed": "Pagamento sicuro al 100%",
@@ -36,17 +40,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia l'85%",
-      "title": "Proteggi ciò che ami, per sempre!",
-      "subtitle": "Vinci due zaini Internxt x Swiss Peak!",
-      "cta": "Richiedi l'offerta",
+      "label": "Risparmia il 80%",
+      "title": "Saldi di Halloween",
+      "subtitle": "Senti tintinnare quelle campanelle di vendita!",
+      "cta": "Scegli il tuo piano",
       "cta2": "Ottieni l'85% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Una vita ",
-      "titleMbl2": " di privacy",
-      "titleMbl3": "Proteggi ciò che ami, per sempre!",
-      "ctaMbl": "Acquista piano"
+      "titleMbl1": "Senti tintinnare",
+      "titleMbl2": "quelle campanelle",
+      "titleMbl3": "di vendita!",
+      "ctaMbl": "Seleziona piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {
