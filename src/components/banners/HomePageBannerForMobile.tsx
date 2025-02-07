@@ -40,8 +40,8 @@ export const HomePageBannerForMobile = () => {
         <div className="relative ">
           <Image
             src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
-            width={349}
-            height={349}
+            width={380}
+            height={300}
             quality={100}
             alt="Valentines Mobile"
           />
