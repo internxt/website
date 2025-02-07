@@ -53,6 +53,8 @@ export const PriceCard = ({
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
 
+  const isLifetimePlan = interval === 'lifetime';
+
   const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
   const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
   const priceNow = decimalDiscountValue
@@ -138,7 +140,7 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      {!isBrave && (
+      {!isBrave && isLifetimePlan && (
         <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
           <p className="text-sm font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
 
