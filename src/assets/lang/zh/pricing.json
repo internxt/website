@@ -32,17 +32,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省 80%",
-      "title": "万圣节促销",
-      "subtitle": "听到那销售铃声响起！",
-      "cta": "选择你的计划",
+      "label": "节省 85%",
+      "title": "保护你所爱的一切，永远！",
+      "subtitle": "赢取两个 Internxt x Swiss Peak 背包！",
+      "cta": "领取优惠",
       "cta2": "享受 85% 折扣",
       "guarantee": "30 天退款保证",
-      "lastCta": "*优惠仅适用于免费账户或新客户",
-      "titleMbl1": "听到那销售铃声响起！",
-      "titleMbl2": "",
-      "titleMbl3": "",
-      "ctaMbl": "选择计划"
+      "lastCta": "*优惠适用于免费账户或新客户",
+      "titleMbl1": "终身 ",
+      "titleMbl2": " 隐私保护",
+      "titleMbl3": "保护你所爱的一切，永远！",
+      "ctaMbl": "购买计划"
     },
     "save": "省高达",
     "planTitles": {

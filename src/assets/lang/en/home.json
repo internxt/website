@@ -59,14 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Get the",
-        "blueText": "most secure ",
-        "line2": "cloud storage"
+        "line1": "Holen Sie sich",
+        "blueText": "die sicherste ",
+        "line2": "Cloud-Speicherung"
       },
       "description": {
         "normal1": "",
-        "blue": "85% OFF ",
-        "normal2": "all lifetime plans"
+        "blue": "85 % Rabatt ",
+        "normal2": "auf alle Lifetime-Pläne"
       },
       "features": ["Zero-knowledge encryption", "Post-quantum encryption", "Open source and audited"],
       "startFrom": {

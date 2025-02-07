@@ -27,7 +27,7 @@ export const PriceBannerForCampaigns = ({
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full flex-col pt-5 ">
-              <p className=" flex min-h-[86px] items-center bg-white text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
+              <p className=" flex min-h-[86px] max-w-[450px] items-center bg-white text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
                 {textContent.title}
               </p>
               <p className="whitespace-nowrap pt-2 text-lg font-medium text-gray-80 sm:text-lg md:text-lg lg:text-lg">

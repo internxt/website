@@ -59,13 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Armazenamento na nuvem seguro.",
-        "blueText": "Garantido."
+        "line1": "Obtenha o",
+        "blueText": "armazenamento em nuvem mais seguro ",
+        "line2": ""
       },
       "description": {
         "normal1": "",
-        "blue": "80% de desconto ",
-        "normal2": "em todos os planos premium"
+        "blue": "85% de desconto ",
+        "normal2": "em todos os planos vitalícios"
       },
       "features": ["Criptografia de conhecimento zero", "Criptografia pós-quântica", "Código aberto e auditado"],
       "startFrom": {

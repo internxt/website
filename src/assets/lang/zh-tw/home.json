@@ -59,13 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "安全的雲存儲。",
-        "blueText": "有保障。"
+        "line1": "獲取",
+        "blueText": "最安全的 ",
+        "line2": "雲端存儲"
       },
       "description": {
         "normal1": "",
-        "blue": "80% 折扣 ",
-        "normal2": "所有高級計劃"
+        "blue": "85% 折扣 ",
+        "normal2": "適用於所有終身方案"
       },
       "features": [" 零知識加密", "後量子加密", "開源和審計"],
       "startFrom": {
