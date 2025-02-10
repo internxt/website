@@ -28,9 +28,9 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   }, []);
 
   return (
-    <div className="max-w-[544px] flex-col gap-6  ">
+    <div className="max-w-[544px] flex-col">
       {header ?? (
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-10">
           <div className="flex flex-col">
             <Header maxWidth="max-w-[500px]" className="text-gray-100">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
@@ -52,7 +52,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
         </div>
       )}
 
-      <div className="flex flex-row justify-center pb-4  pt-4 lg:justify-start">
+      <div className="flex flex-row justify-center pb-4  pt-10 lg:justify-start">
         <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
@@ -77,7 +77,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
       </div>
 
       {footer ?? (
-        <div className="flex flex-row items-center justify-center space-x-3 pt-2 pt-4 text-gray-100 lg:justify-start">
+        <div className="flex flex-row items-center justify-center space-x-3 pt-10 text-gray-100 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-primary" />
           <p className="whitespace-nowrap text-gray-100 lg:text-lg">{textContent.guarantee}</p>
         </div>
