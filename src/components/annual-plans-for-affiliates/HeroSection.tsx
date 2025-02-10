@@ -78,10 +78,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isCloudWards,
 }) => {
   function redirectToPricingTable() {
-    document.querySelector('#payment')?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end',
-    });
+    window.location.href = '#payment';
   }
 
   return (
@@ -96,7 +93,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             <h2 className="text-4xl font-semibold text-primary">{textContent.subtitle}</h2>
           </div>
           <div className="flex flex-row items-center space-x-2.5 rounded-lg bg-primary/7 p-4">
-            <Percent className="h-16 w-16 text-primary" />
+            <Percent className="h-12 w-12 text-primary" />
             {InfoTextComponent ?? <p className="text-xl text-gray-80">{textContent.info}</p>}
           </div>
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
