@@ -5,7 +5,9 @@
       "Internxt protegge la tua azienda dalla perdita di dati con un'archiviazione cloud sicura costruita con una crittografia ultra-potente.",
       "Forniamo tutto ciò di cui hai bisogno per gestire la tua azienda in modo sicuro."
     ],
-    "cta": "Ottieni Internxt per aziende"
+    "cta": "Seleziona piano",
+    "separator": "|",
+    "cta2": "Contatta vendite"
   },
   "SecureYourCompany": {
     "title": "Proteggi il futuro della tua azienda con l'archiviazione cloud crittografata di Internxt",
@@ -179,5 +181,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Contatta vendite",
+    "description": "Compila il modulo di contatto e il team ti contatterà a breve.",
+    "form": {
+      "name": "Nome completo",
+      "email": "Indirizzo email",
+      "company": "Nome dell'azienda",
+      "phone": "Numero di telefono",
+      "howMuchStorage": "Quanto spazio di archiviazione ti serve?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Seleziona",
+        "Meno di 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Come possiamo aiutarti?",
+      "howWeCanHelpPlaceHolder": "Inserisci qui il tuo messaggio...",
+      "cta": "Invia messaggio",
+      "ctaSending": "Invio...",
+      "successMessage": "Il tuo messaggio è stato inviato con successo.",
+      "errorMessage": "Si è verificato un errore. Per favore riprova."
+    }
   }
 }

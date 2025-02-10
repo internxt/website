@@ -85,14 +85,8 @@ const HeroSection = ({
                 />
               </div>
             ) : null}
-
-            <div className="ml-20 hidden h-[620px] lg:flex">
-              <Image
-                src={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
-                alt="Confetti"
-                width={600}
-                height={580}
-              />
+            <div className="hidden h-[580px] lg:flex">
+              <Animation previewImg={previewImg} />
             </div>
           </div>
         </div>

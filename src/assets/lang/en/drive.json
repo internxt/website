@@ -7,7 +7,7 @@
     },
     "subtitle": {
       "line1": "Storing, backing up, and sharing your files in total privacy couldn’t be any easier. With Internxt Drive, you",
-      "line2": "get user-friendly storage, military-grade encryption, and full control over your files and data.",
+      "line2": "get user-friendly storage, post-quantum encryption, and full control over your files and data.",
       "line3": ""
     },
     "DownloadLinks": {
@@ -143,8 +143,8 @@
       },
       "cta": "Our commitment on privacy",
       "card1": {
-        "title": "Military-grade encryption",
-        "subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
+        "title": "Next-generation security",
+        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
       },
       "card2": {
         "title": "Zero-knowledge technology",
