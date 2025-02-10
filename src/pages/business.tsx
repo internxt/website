@@ -95,6 +95,9 @@ export const BusinessPage = ({
 
       <PricingSectionWrapper
         loadingCards={loadingCards}
+        decimalDiscount={{
+          business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+        }}
         lang={locale}
         products={products}
         hideFreeCard
