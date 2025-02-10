@@ -59,13 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Archiviazione cloud sicura.",
-        "blueText": "Garantito."
+        "line1": "Ottieni il",
+        "blueText": "cloud storage più sicuro ",
+        "line2": ""
       },
       "description": {
-        "normal1": "Ottieni il ",
-        "blue": "80% di sconto ",
-        "normal2": "su tutti i piani premium"
+        "normal1": "",
+        "blue": "85% di sconto ",
+        "normal2": "su tutti i piani a vita"
       },
       "features": ["Crittografia a conoscenza zero", "Crittografia a conoscenza zero", "Open source verificato"],
       "startFrom": {
