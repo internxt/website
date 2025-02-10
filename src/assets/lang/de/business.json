@@ -5,7 +5,9 @@
       "Internxt schützt Ihr Unternehmen vor Datenverlust mit sicherem Cloud-Speicher, der mit ultra-starker Verschlüsselung ausgestattet ist.",
       "Wir bieten alles, was Sie benötigen, um Ihr Unternehmen sicher zu verwalten."
     ],
-    "cta": "Internxt für Unternehmen erhalten"
+    "cta": "Plan auswählen",
+    "separator": "|",
+    "cta2": "Vertrieb kontaktieren"
   },
   "SecureYourCompany": {
     "title": "Sichern Sie die Zukunft Ihres Unternehmens mit dem verschlüsselten Cloud-Speicher von Internxt",
@@ -179,5 +181,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "Vertrieb kontaktieren",
+    "description": "Füllen Sie das Kontaktformular aus und das Team wird Sie in Kürze kontaktieren.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "howMuchStorage": "Wie viel Speicher benötigen Sie?",
+      "totalCharacters": " /1000",
+      "options": [
+        "Auswählen",
+        "Weniger als 25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "Wie können wir Ihnen helfen?",
+      "howWeCanHelpPlaceHolder": "Bitte geben Sie hier an, wie wir Ihnen helfen können.",
+      "cta": "Nachricht senden",
+      "ctaSending": "Senden...",
+      "successMessage": "Ihre Nachricht wurde erfolgreich gesendet.",
+      "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    }
   }
 }

@@ -32,7 +32,7 @@ module.exports = {
       'teal-dark': 'rgb(45,164,185)',
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
-      highlight: 'rgba(17, 17, 17, 1)',
+      highlight: 'rgba(17, 17, 17, 0.1)',
       red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
