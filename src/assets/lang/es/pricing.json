@@ -41,14 +41,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 80%",
-      "title": "Descuentos Mortales de Halloween",
-      "subtitle": "En todos los planes premium",
+      "label": "Ahorra un 85%",
+      "title": "¡Protege lo que quieres, para siempre!",
+      "subtitle": "Entra en el sorteo y gana 2 mochilas Swiss Peak x Internxt",
       "cta": "Consigue tu plan",
       "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
       "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
-      "titleMbl1": "En todos los planes premium",
+      "titleMbl1": "¡Protege lo que quieres, para siempre!",
+      "titleMbl3": "¡Protege lo que quieres, para siempre!",
       "ctaMbl": "Consigue tu plan"
     },
     "planTitles": {

@@ -59,13 +59,14 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "安全的云存储。",
-        "blueText": "有保障。"
+        "line1": "获取",
+        "blueText": "最安全的 ",
+        "line2": "云存储"
       },
       "description": {
         "normal1": "",
-        "blue": "80% 折扣 ",
-        "normal2": "所有高级计划"
+        "blue": "85% 折扣 ",
+        "normal2": "适用于所有终身计划"
       },
       "features": ["零知识加密", "后量子加密", "开源和审计"],
       "startFrom": {

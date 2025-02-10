@@ -117,6 +117,11 @@
       "extra": "1TB of extra storage for free",
       "gift": "Superbowl theme for Web App"
     },
+    "valentinesFeatures": {
+      "title": "Internxt themed goodies:",
+      "gift": "Chance to win two Internxt x Swiss Peak backpacks"
+    },
+
     "cheaperThan": {
       "lifetime": {
         "normal": "Up to ",

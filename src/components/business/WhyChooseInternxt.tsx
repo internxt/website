@@ -72,9 +72,9 @@ export const WhyChooseInternxtForBusiness = ({
                 <p className="text-4xl font-semibold">{textContent.WhyChooseInternxt.banner.title}</p>
                 <p className="text-xl">{textContent.WhyChooseInternxt.banner.description}</p>
               </div>
-              <div className="flex flex-row items-center gap-4">
+              <div className="flex flex-col items-center gap-4 lg:flex-row ">
                 <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} />
-                <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
+                <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
                 <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
               </div>
             </div>

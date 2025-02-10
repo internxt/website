@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "80% de descuento ",
-        "normal2": "en todos planes Premium"
+        "blue": "85% de descuento ",
+        "normal2": "en todos los planes de por vida"
       },
       "features": ["Cifrado de conocimiento cero", "Criptografía postcuántica", "Código abierto y auditado"],
       "startFrom": {
