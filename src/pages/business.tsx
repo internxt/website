@@ -69,9 +69,9 @@ export const BusinessPage = ({
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
               <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
             </div>
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-col items-center gap-4 lg:flex-row ">
               <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
-              <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
+              <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
               <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
             </div>
           </div>
