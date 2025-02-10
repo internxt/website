@@ -29,7 +29,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: coupon.promoCodeName ?? undefined,
+      promoCodeId: coupon.CloudwardsCoupon ?? undefined,
     });
   }
 
@@ -67,7 +67,6 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
 
-
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
       <ComponentsInColumnSection
@@ -90,7 +89,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
+        couponType={PromoCodeName.ValentinesCampaign}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

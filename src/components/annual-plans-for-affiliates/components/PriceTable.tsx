@@ -83,11 +83,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       planType="individual"
                       key={product.storage}
                       storage={product.storage}
-                      price={
-                        lifetimeCoupons && lifetimeCoupons[product.storage]
-                          ? product.price - lifetimeCoupons[product.storage].amountOff / 100
-                          : product.price
-                      }
+                      price={discount ? (product.price * discount) / 100 : product.price}
                       billingFrequency={billingFrequency}
                       popular={product.storage === '5TB'}
                       cta={['checkout', product.priceId]}
