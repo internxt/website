@@ -118,6 +118,7 @@ export enum PromoCodeName {
   PrivacyWeek = 'PRIVACY85',
   Brave = 'BRAVE85',
   SuperBowlCampaign = 'SUPERBOWL80',
+  ValentinesCampaign = 'MYVALENTINE85',
 }
 
 export interface PromoCodeProps {

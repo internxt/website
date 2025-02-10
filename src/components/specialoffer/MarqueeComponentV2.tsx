@@ -12,37 +12,34 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
     <div className={`relative left-1/2 z-10 w-screen -translate-x-1/2`}>
       <div className={'flex xl:hidden'}>
         <Marquee gradientColor={[255, 255, 255]} className={bgColor} gradientWidth="32px" speed={30}>
-          <div className="featured flex w-full flex-row space-x-10 p-6">
+          <div className="featured flex w-full flex-row items-center space-x-10 p-6">
             <Image
               loading="lazy"
               src={getImage('/logos/featured/ESET_logo.svg')}
               draggable={false}
-              width="120"
-              height="40"
+              width="140"
+              height="60"
               alt="eset logo"
             />
-
             <Image
               src={getImage('/logos/featured/telefonica.svg')}
-              width={120}
-              height={40}
+              width="200"
+              height="80"
               alt="Telefonica logo"
               loading="lazy"
               draggable={false}
             />
-
             <Image
               src={getImage('/logos/featured/startpage.svg')}
-              width={120}
-              height={40}
-              alt="Start Page logo"
+              width="160"
+              height="80"
+              alt="StartPage logo"
               loading="lazy"
               draggable={false}
             />
-
             <Image
               src={getImage('/logos/featured/Revolut.svg')}
-              width={340}
+              width={190}
               height={10}
               alt="Revolut logo"
               loading="lazy"
@@ -51,26 +48,35 @@ export const MarqueeComponentV2 = ({ label, bgColor = 'bg-color-1' }: MarqueeCom
 
             <Image
               src={getImage('/logos/featured/gobierno_de_espana.png')}
-              width={340}
-              height={10}
-              alt="Gobierno de Espana logo"
+              width="300"
+              height="150"
+              alt="Gobierno de España logo"
               loading="lazy"
               draggable={false}
             />
 
             <Image
               src={getImage('/logos/featured/aepd.svg')}
-              width={120}
-              height={40}
+              width="180"
+              height="60"
               alt="AEPD logo"
               loading="lazy"
               draggable={false}
             />
 
             <Image
+              src={getImage('/logos/featured/pc_componentes.svg')}
+              width="180"
+              height="60"
+              alt="PCComponentes logo"
+              loading="lazy"
+              draggable={false}
+            />
+
+            <Image
               src={getImage('/logos/featured/levante_ud.svg')}
-              width={120}
-              height={40}
+              width={80}
+              height={15}
               alt="Levante Union Deportiva logo"
               loading="lazy"
               draggable={false}

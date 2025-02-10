@@ -1,5 +1,5 @@
 import { PromoCodeProps } from '@/lib/types';
-import { Coins, Fire, Football, Gift, Info } from '@phosphor-icons/react';
+import { Coins, Fire, Football, Gift, Heart, Info } from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
@@ -165,17 +165,17 @@ export default function PriceCard({
           <p className="">{lifetimeMode === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan}</p>
         </button>
       </div>
-      <div className="mx-auto w-full space-y-2 bg-gray-100 px-4 py-3">
-        <p className="text-sm font-bold text-orange">{contentText.productFeatures.superBowlFeatures.title}</p>
+      <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
+        <p className="text-sm font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
         {lifetimeMode === 'normal' ? (
           <div className="flex items-start space-x-2 text-left">
-            <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
-            <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.extra}</span>
+            <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
+            <span className="text-sm leading-5 text-white">{contentText.productFeatures.valentinesFeatures.extra}</span>
           </div>
         ) : null}
         <div className="flex items-start space-x-2 text-left">
-          <Football size={22} className="flex-shrink-0 text-orange" weight="fill" />
-          <span className="text-sm leading-5 text-white">{contentText.productFeatures.superBowlFeatures.gift}</span>
+          <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
+          <span className="text-sm leading-5 text-white">{contentText.productFeatures.valentinesFeatures.gift}</span>
         </div>
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">

@@ -30,32 +30,32 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   return (
     <div className="max-w-[544px] flex-col gap-6  ">
       {header ?? (
-        <div className="flex flex-col gap-9">
-          <div className="flex flex-col gap-4">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100 lg:text-white">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-col">
+            <Header maxWidth="max-w-[500px]" className="text-gray-100">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
+              {textContent.title.line2}
             </Header>
-            <p className="text-xl font-bold text-gray-100 lg:text-white">
-              {textContent.description.normal1}
+            <p className="pt-6 text-xl font-bold text-gray-100 ">
               <span className="text-primary">{textContent.description.blue}</span>
               {textContent.description.normal2}
             </p>
           </div>
-          <div className="mx-auto flex flex-col gap-2 lg:mx-0">
+          <div className="mx-auto flex flex-col lg:mx-0">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex flex-row gap-2">
                 <Check className="text-green-1" weight="bold" size={24} />
-                <p className="text-lg font-semibold text-gray-100 lg:text-white">{feat}</p>
+                <p className="text-lg font-semibold text-gray-100 ">{feat}</p>
               </div>
             ))}
           </div>
         </div>
       )}
 
-      <div className="flex flex-row justify-center lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100 lg:text-white">
+      <div className="flex flex-row justify-center pb-4  pt-4 lg:justify-start">
+        <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100 lg:text-white">
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
@@ -78,8 +78,8 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
 
       {footer ?? (
         <div className="flex flex-row items-center justify-center space-x-3 pt-2 pt-4 text-gray-100 lg:justify-start">
-          <ShieldCheck size={24} weight="fill" className="text-green-1" />
-          <p className="whitespace-nowrap text-gray-100 lg:text-lg lg:text-white ">{textContent.guarantee}</p>
+          <ShieldCheck size={24} weight="fill" className="text-primary" />
+          <p className="whitespace-nowrap text-gray-100 lg:text-lg">{textContent.guarantee}</p>
         </div>
       )}
     </div>

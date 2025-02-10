@@ -119,9 +119,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80 % Rabatt auf alle Premium-Pläne! ",
-      "normalText": "Touchdown!!!  ",
-      "cta": "Groß sparen"
+      "boldText": "85 % Rabatt auf alle Lifetime-Pläne",
+      "normalText": "Liebe auf den ersten Byte!",
+      "cta": "Schützen Sie, was Sie lieben"
     }
   },
   "lifetimeBanner": {

@@ -101,10 +101,9 @@ function appendScriptInHead(e) {
   });
 }
 var injectScripts = function () {
-  'undefined' != typeof headerScripts &&
-    (cookieBanner.isPreferenceAccepted('analytics') === !0 && appendScriptInHead('analytics'),
-    cookieBanner.isPreferenceAccepted('marketing') === !0 && appendScriptInHead('marketing'),
-    cookieBanner.isPreferenceAccepted('preferences') === !0 && appendScriptInHead('preferences'));
+  appendScriptInHead('analytics');
+  appendScriptInHead('marketing');
+  appendScriptInHead('preferences');
 };
 
 !(function (e) {

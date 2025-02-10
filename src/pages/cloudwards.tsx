@@ -67,6 +67,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
 
+
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
       <ComponentsInColumnSection
