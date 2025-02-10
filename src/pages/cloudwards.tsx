@@ -15,10 +15,21 @@ import { CardGroup } from '@/components/shared/CardGroup';
 import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { AffiliatesPartnersText } from '@/lib/affiliates-partners';
+import { GetServerSidePropsContext } from 'next';
+
+interface CloudWardsProps {
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  langJson: AffiliatesPartnersText;
+  footerLang: FooterText;
+  lang: string;
+}
 
 export type CardsType = 'all' | 'one';
 
-const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang, navbarLang }) => {
+function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
   const offerDiscount = 20;
   const { currencyValue } = usePricing({});
@@ -134,7 +145,7 @@ const Cloudwards = ({ langJson, homeJson, lang, metatagsDescriptions, footerLang
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
-};
+}
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
