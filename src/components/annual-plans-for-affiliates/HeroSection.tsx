@@ -89,12 +89,12 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {isStartPage ? <StartPageLabel /> : null}
             {isCloudWards ? <CloudWardsLabel /> : null}
             {isBrave ? <BraveLabel /> : null}
-            <h1 className="text-6xl font-bold text-gray-100">{textContent.title}</h1>
-            <h2 className="text-4xl font-semibold text-primary">{textContent.subtitle}</h2>
+            <h1 className="text-4xl font-bold text-gray-100 xl:text-6xl">{textContent.title}</h1>
+            <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.subtitle}</h2>
           </div>
           <div className="flex flex-row items-center space-x-2.5 rounded-lg bg-primary/7 p-4">
-            <Percent className="h-12 w-12 text-primary" />
-            {InfoTextComponent ?? <p className="text-xl text-gray-80">{textContent.info}</p>}
+            <Percent className="h-10 w-10 text-primary xl:h-12 xl:w-12" />
+            {InfoTextComponent ?? <p className="text-md text-gray-80">{textContent.info}</p>}
           </div>
           <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>

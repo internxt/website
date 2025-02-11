@@ -68,7 +68,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
   ];
 
   const InfoTextComponent = (
-    <p className="text-xl text-gray-80">
+    <p className="text-lg text-gray-80 xl:text-xl">
       {langJson.HeroSectionV2.info}
       <span className="font-semibold text-gray-80">{langJson.HeroSectionV2.infoHighlight}</span>
     </p>
@@ -84,8 +84,8 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
-              <p className="text-xl text-gray-80">{langJson.FeatureSection.description}</p>
+              <h2 className="text-4xl font-semibold text-gray-100 xl:text-5xl">{langJson.FeatureSection.title}</h2>
+              <p className="text-lg text-gray-80">{langJson.FeatureSection.description}</p>
             </div>
           </div>
         }
@@ -108,8 +108,10 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <div className="mt-20 flex w-full flex-col items-center gap-9">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="max-w-[550px] text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
-          <p className="text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
+          <h2 className="max-w-[550px] text-4xl font-semibold text-gray-100 xl:text-5xl">
+            {langJson.FeatureSectionV2.title}
+          </h2>
+          <p className="px-2 text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
         </div>
         <div className="flex flex-col items-center gap-12">
           <Button
