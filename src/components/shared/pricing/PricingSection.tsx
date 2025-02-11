@@ -37,6 +37,8 @@ interface PriceTableProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
   darkMode?: boolean;
+  hideFeatures?: boolean;
+
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -76,6 +78,7 @@ export const PricingSection = ({
   onBusinessPlansSelected,
   darkMode,
   isBrave,
+  hideFeatures,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -243,14 +246,16 @@ export const PricingSection = ({
           )}
         </div>
       </Transition>
-      <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
-        {features.map((feature) => (
-          <div key={feature.text} className="flex flex-row items-center space-x-3">
-            <feature.icon size={40} className="text-primary md:pb-0" />
-            <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
-          </div>
-        ))}
-      </div>
+      {!hideFeatures && (
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary md:pb-0" />
+              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
