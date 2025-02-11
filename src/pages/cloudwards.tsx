@@ -15,7 +15,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { AffiliatesPartnersText } from '@/lib/affiliates-partners';
+import { AffiliatesPartnersText } from '@/assets/types/affiliates-partners';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
