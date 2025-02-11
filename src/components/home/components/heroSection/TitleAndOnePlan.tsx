@@ -30,7 +30,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   return (
     <div className="max-w-[544px] flex-col">
       {header ?? (
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 lg:pt-28">
           <div className="flex flex-col">
             <Header maxWidth="max-w-[500px]" className="text-gray-100">
               {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
