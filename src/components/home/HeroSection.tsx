@@ -60,18 +60,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
           <div className="relative ml-32  hidden h-screen max-h-[900px] w-full justify-center py-40 lg:flex">
             <Image
-              src={getImage('/images/campaigns/valentines/cloud_internxt.webp')}
+              src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
               width={653}
               height={327}
               alt="Cloud Valentines Hero Section"
-              className="absolute -left-20 bottom-24 z-0"
-            />
-            <Image
-              src={getImage('/images/campaigns/valentines/internxt_valentines2025.webp')}
-              width={412}
-              height={560}
-              alt="Valentines Mobile"
-              className="absolute left-0  z-10 object-contain"
+              className="absolute -left-20  z-0 pt-20"
+              quality={100}
             />
           </div>
 

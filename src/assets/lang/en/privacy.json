@@ -80,6 +80,13 @@
         ]
       },
       {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
+          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
+        ]
+      },
+      {
         "question": "What is the most private cloud storage?",
         "answer": [
           "Many cloud providers say their service is private, but Internxt goes a step above and beyond. Internxt is a zero-knowledge file storage service that’s built for absolute privacy and strict security. Internxt cannot access your data stored in the cloud storage."
