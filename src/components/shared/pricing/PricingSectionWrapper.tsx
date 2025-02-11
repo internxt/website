@@ -31,11 +31,13 @@ interface PricingSectionWrapperProps {
     lifetime?: number;
     business?: number;
   };
+  hideDescription?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
   isBrave?: boolean;
+  hideFeatures?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -58,6 +60,8 @@ export const PricingSectionWrapper = ({
   decimalDiscount,
   isFamilyPage,
   hideTitle,
+  hideDescription,
+  hideFeatures,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
@@ -100,7 +104,9 @@ export const PricingSectionWrapper = ({
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
+          {!hideDescription && (
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
+          )}
           {CustomDescription}
         </div>
 
@@ -134,6 +140,7 @@ export const PricingSectionWrapper = ({
           isMonthly
           darkMode={darkMode}
           isBrave={isBrave}
+          hideFeatures={hideFeatures}
         />
       </div>
     </section>
