@@ -38,7 +38,7 @@ interface PriceTableProps {
   isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
-  1;
+
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
