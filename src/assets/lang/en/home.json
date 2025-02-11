@@ -276,6 +276,13 @@
         ]
       },
       {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
+          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
+        ]
+      },
+      {
         "question": "Does Internxt store my password?",
         "answer": [
           "No. As such, Internxt does not (and cannot) store your password.",
@@ -306,7 +313,7 @@
         "question": "What is Internxt’s refund policy?",
         "answer": [
           "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
         ]
       },
       {

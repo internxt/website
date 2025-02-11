@@ -80,6 +80,13 @@
         ]
       },
       {
+        "question": "Ist Internxt eine nachhaltige und umweltfreundliche Cloud-Speicherlösung?",
+        "answer": [
+          "Ja, Internxt engagiert sich für grünes Cloud-Computing und bietet umweltfreundliche Speicherlösungen, um eine sauberere und nachhaltigere Zukunft zu unterstützen. Unsere Rechenzentren werden zu 92 % mit erneuerbaren Energien betrieben und sind darauf ausgelegt, CO₂-Emissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
+          "Unsere Bemühungen tragen zu dem Ziel der Klimaneutralität bis 2050 bei. Erfahren Sie mehr"
+        ]
+      },
+      {
         "question": "Was ist der privateste Cloud-Speicher?",
         "answer": [
           "Viele Cloud-Anbieter behaupten, dass ihr Dienst privat ist, aber Internxt geht noch einen Schritt weiter. Internxt ist ein Zero-Knowledge-Dateispeicherdienst, der für absolute Privatsphäre und strenge Sicherheit entwickelt wurde. Internxt kann nicht auf Ihre Daten zugreifen, die im Cloud-Speicher gespeichert sind."

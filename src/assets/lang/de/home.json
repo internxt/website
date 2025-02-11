@@ -251,6 +251,13 @@
         ]
       },
       {
+        "question": "Ist Internxt eine nachhaltige und umweltfreundliche Cloud-Speicherlösung?",
+        "answer": [
+          "Ja, Internxt engagiert sich für grünes Cloud-Computing und bietet umweltfreundliche Speicherlösungen, um eine sauberere und nachhaltigere Zukunft zu unterstützen. Unsere Rechenzentren werden zu 92 % mit erneuerbaren Energien betrieben und sind darauf ausgelegt, CO₂-Emissionen, Ressourcenverbrauch und Elektroschrott zu minimieren.",
+          "Unsere Bemühungen tragen zu dem Ziel der Klimaneutralität bis 2050 bei. Erfahren Sie mehr"
+        ]
+      },
+      {
         "question": "Speichert Internxt mein Passwort?",
         "answer": [
           "Nein. Internxt kann Ihr Passwort daher nicht speichern.",
@@ -282,7 +289,7 @@
         "question": "Wie lautet die Rückerstattungsrichtlinie von Internxt?",
         "answer": [
           "Internxt bietet eine Standard-30-Tage-Geld-zurück-Garantie für alle kostenpflichtigen Abonnements, die sofort nach der Anmeldung beginnt.",
-          "Und wenn Sie jemals mit unserem Service unzufrieden sind, wenden Sie sich an [hello@internxt.com](mailto:hello@internxt.com) und fordern Sie eine Rückerstattung an. Wir werden Ihre Anfrage ohne Fragen akzeptieren!"
+          "Und wenn Sie jemals mit unserem Service unzufrieden sind, wenden Sie sich an [hello@internxt.com](mailto:hello@internxt.com) und fordern Sie eine Rückerstattung an."
         ]
       },
       {
