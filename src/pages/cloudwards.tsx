@@ -3,7 +3,6 @@ import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import Button from '@/components/shared/Button';
-import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealY from '@/components/components/RevealY';
@@ -17,7 +16,6 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { AffiliatesPartnersText } from '@/lib/affiliates-partners';
-import { GetServerSidePropsContext } from 'next';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -40,7 +38,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: coupon.CloudwardsCoupon ?? undefined,
+      promoCodeId: PromoCodeName.ValentinesCampaign ?? undefined,
     });
   }
 
@@ -100,10 +98,9 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.ValentinesCampaign}
+        couponType={PromoCodeName.CloudwardsCoupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
-        isStartPage
       />
 
       <div className="mt-20 flex w-full flex-col items-center gap-9">
