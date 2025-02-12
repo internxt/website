@@ -67,7 +67,7 @@ export const WhyChooseInternxtForBusiness = ({
                 className="hidden lg:flex"
               />
             </div>
-            <div className="flex w-full flex-col items-center justify-center gap-9 px-5 py-20 lg:w-max lg:px-0">
+            <div className="+ flex w-full flex-col items-center justify-center  gap-9 py-20 pr-10 lg:w-max lg:px-0">
               <div className="flex w-full max-w-[460px] flex-col gap-4 text-center text-white">
                 <p className="text-4xl font-semibold">{textContent.WhyChooseInternxt.banner.title}</p>
                 <p className="text-xl">{textContent.WhyChooseInternxt.banner.description}</p>
