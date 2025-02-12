@@ -194,7 +194,7 @@ const HeroSection = ({ textContent }) => {
                               </div>
                             ) : (
                               <div className="flex flex-row gap-2">
-                                <CheckCircle weight="fill" size={24} className="text-green" />
+                                <CheckCircle weight="fill" size={24} className="text-green-1" />
                                 <span className={`text-lg font-semibold text-green-dark`}>
                                   {textContent.table.noVirusDetected}
                                 </span>
@@ -252,7 +252,7 @@ const HeroSection = ({ textContent }) => {
                         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
                           <div className="relative">
                             <div className="absolute inset-1">
-                              <div className="animate-pingpong-v absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl"></div>
+                              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 animate-pingpong-v rounded-xl bg-primary shadow-2xl"></div>
                             </div>
                             <svg
                               width="80"
