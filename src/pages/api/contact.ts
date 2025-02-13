@@ -23,10 +23,10 @@ export default async function handleSubscribe(req: NextApiRequest, res: NextApiR
 
   requestTimestamps.set(ip as string, now);
 
-  const { email, name, company, phone, storage, help, isBusiness } = req.body;
+  const { email, name, company, phone, storage, help, origin_contact } = req.body;
 
   try {
-    const response = await contactSales(email, name, company, phone, storage, help, isBusiness);
+    const response = await contactSales(email, name, company, phone, storage, help, origin_contact);
     res.status(200).json({ status: 'Success', data: response });
   } catch (error: any) {
     res.status(500).json({
@@ -43,22 +43,20 @@ async function contactSales(
   phone: string,
   storage: string,
   help: string,
-  isBusiness: boolean,
+  origin_contact: string,
 ) {
   const groupId = '145043133822928056';
   const payload = {
     email,
-    fields: {
-      name,
-      company,
-      phone,
-      storage,
-      help,
-      origin_contact: isBusiness ? 'B2B' : 'S3',
-    },
+    name,
+    company,
+    phone,
+    storage,
+    help,
+    origin_contact,
     groups: [groupId],
   };
-
+  console.log('payload', payload);
   try {
     const response = await axios.post(`${process.env.MAILERLITE_API}/api/subscribers`, payload, {
       headers: {
