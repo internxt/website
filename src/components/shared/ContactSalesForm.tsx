@@ -55,21 +55,21 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   const handleSubmitDebounced = useCallback(
     debounce(async (formData, isBusiness, onSubmitSuccess, onSubmitError, setIsSubmitting) => {
       setIsSubmitting(true);
-
+      const origin_contact = isBusiness ? 'B2B' : 'S3';
+      const help = formData.help;
       const payload = {
         email: formData.email,
-        fields: {
-          name: formData.name,
-          company: formData.company,
-          phone: formData.phone,
-          storage: formData.storage,
-          help: formData.help,
-          origin_contact: isBusiness ? 'B2B' : 'S3',
-        },
+        name: formData.name,
+        company: formData.company,
+        phone: formData.phone,
+        origin_contact: origin_contact,
+        help: help,
+        storage: formData.storage,
       };
 
       try {
         await axios.post('/api/contact', payload);
+
         await onSubmitSuccess();
       } catch (error) {
         onSubmitError(error);
@@ -204,7 +204,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                   }`}
                   disabled={!isFormValid || isSubmitting}
                 >
-                  {isSubmitting ? 'Enviando...' : textContent.form.cta}
+                  {isSubmitting ? textContent.form.ctaSending : textContent.form.cta}
                 </button>
               </div>
               {formStatus === 'success' && (
