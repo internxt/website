@@ -227,6 +227,8 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               isPaying={isUserPaying}
               onCheckoutButtonClicked={onCheckoutButtonClicked}
               onCountryAddressChange={setCountry}
+              onRemoveAppliedCouponCode={() => {}}
+              onCouponInputChange={() => {}}
             />
           </Elements>
         ) : (
