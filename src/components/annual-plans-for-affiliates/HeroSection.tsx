@@ -56,7 +56,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   isBrave,
 }) => {
   function redirectToPricingTable() {
-    window.location.href = '#payment';
+    window.location.href = redirect ?? '#payment';
   }
 
   return (
