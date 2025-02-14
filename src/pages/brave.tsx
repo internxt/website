@@ -111,7 +111,7 @@ export default function BravePage({
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url="#priceTable" isBrave />
+      <CtaSection textContent={textContent.CtaSection} url="#priceTable" />
 
       <InfoSection
         textContent={textContent.SecureCloudSection}
@@ -139,7 +139,7 @@ export default function BravePage({
         startIndividualPlansFromInterval={Interval.Year}
       />
 
-      <CtaSection textContent={textContent.CtaSection2} url="#priceTable" isBrave />
+      <CtaSection textContent={textContent.CtaSection2} url="#priceTable" />
 
       <FAQSection textContent={textContent.FaqSection} />
 

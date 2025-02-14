@@ -30,28 +30,6 @@ const StartPageLabel = () => {
   );
 };
 
-const BraveLabel = () => {
-  return (
-    <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
-      <Image
-        src={getImage('/images/partnerships/brave/Brave_Browser_logotype.svg')}
-        width={117}
-        height={27}
-        alt="Brave logo"
-      />
-      <X size={16} />
-      <Image
-        loading="lazy"
-        className="select-none"
-        src={`../../logos/internxt/cool-gray-90.svg`}
-        alt="Internxt logo"
-        width={130}
-        height={16}
-      />
-    </div>
-  );
-};
-
 const CloudWardsLabel = () => {
   return (
     <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
@@ -74,8 +52,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({
   InfoTextComponent,
   isStartPage,
   redirect,
-  isBrave,
   isCloudWards,
+  isBrave,
 }) => {
   function redirectToPricingTable() {
     window.location.href = '#payment';
@@ -88,7 +66,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="flex flex-col space-y-4">
             {isStartPage ? <StartPageLabel /> : null}
             {isCloudWards ? <CloudWardsLabel /> : null}
-            {isBrave ? <BraveLabel /> : null}
             <h1 className="text-4xl font-bold text-gray-100 xl:text-6xl">{textContent.title}</h1>
             <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.subtitle}</h2>
           </div>
