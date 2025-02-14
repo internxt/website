@@ -52,16 +52,9 @@ export default function BravePage({
     });
   }
 
-  // Split the info from the textContent object in STARTPAGE
   const heroSectionText = textContent.HeroSection;
 
-  const InfoTextComponent = (
-    <p className="text-xl text-gray-80">
-      {heroSectionText.info.split('your')[0]}
-      <span className="font-bold text-primary">{heroSectionText.infoHighlight}</span>
-      {heroSectionText.info.split('your')[1]}
-    </p>
-  );
+  const InfoTextComponent = <p className="text-xl text-gray-80">{heroSectionText.info}</p>;
 
   const cardsData = [
     {
