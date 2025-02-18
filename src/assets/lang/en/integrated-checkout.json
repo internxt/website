@@ -1,5 +1,5 @@
 {
-  "title": "You're almost there! Checkout securely:",
+  "title": "You're almost there! Checkout securely",
   "pay": "Pay",
   "paying": "Paying...",
   "checkout": "Checkout",
@@ -52,7 +52,7 @@
         "Premium customer support"
       ]
     },
-    "total": "Total: ",
+    "total": "Total ",
     "addCoupon": {
       "buttonTitle": "Add coupon",
       "inputText": "Coupon code",

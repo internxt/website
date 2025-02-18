@@ -155,6 +155,7 @@ export const IntegratedCheckoutView = ({
                             type="text"
                             register={register}
                             required={true}
+                            error={errors.companyName}
                           />
                         </div>
                         <div
@@ -171,6 +172,7 @@ export const IntegratedCheckoutView = ({
                             type="text"
                             register={register}
                             required={true}
+                            error={errors.vatId}
                           />
                         </div>
                       </Menu.Items>
