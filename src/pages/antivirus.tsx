@@ -10,8 +10,10 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import cookies from '@/lib/cookies';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
-import { InfoSection } from '@/components/antivirus/InfoSecction';
+import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
+import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
+import { InfoSection } from '@/components/antivirus/InfoSecction';
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
@@ -102,6 +104,8 @@ const AntivirusPage = ({
         }
       />
 
+      <FeatureSection textContent={langJson.FeatureSection} />
+
       <InfoSection
         FirstComponent={
           <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-20 md:space-y-0">
@@ -120,6 +124,8 @@ const AntivirusPage = ({
         url={'/pricing'}
         customDescription={<p className="w-full text-xl font-normal">{langJson.cta1.subtitle}</p>}
       />
+
+      <FeatureSectionV2 textContent={langJson.FeatureSectionV2} />
 
       <ComponentsInColumnSection
         FirstComponent={
