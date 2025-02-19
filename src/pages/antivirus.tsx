@@ -11,6 +11,9 @@ import cookies from '@/lib/cookies';
 import { BatteryCharging, Bomb, Broom, Browsers, Devices, ShieldCheck, ThermometerHot } from '@phosphor-icons/react';
 import { AntivirusText } from '@/assets/types/antivirus';
 import HeroSection from '@/components/antivirus/HeroSection';
+import { InfoSection } from '@/components/antivirus/InfoSection';
+import FeatureSection from '@/components/antivirus/FeatureSection';
+import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
