@@ -1,5 +1,5 @@
 {
-  "title": "Você está quase lá! Finalize sua compra com segurança:",
+  "title": "Você está quase lá! Finalize sua compra com segurança",
   "pay": "Pagar",
   "paying": "Pagando...",
   "checkout": "Finalizar compra",
@@ -52,7 +52,7 @@
         "Suporte premium ao cliente"
       ]
     },
-    "total": "Total: ",
+    "total": "Total ",
     "addCoupon": {
       "buttonTitle": "Adicionar cupom",
       "inputText": "Código do cupom",

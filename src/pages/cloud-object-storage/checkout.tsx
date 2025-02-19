@@ -206,7 +206,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(error.message);
       }
     } catch (err) {
-      notificationService.openErrorToast('Something went wrong');
+      notificationService.openErrorToast(err.message);
     } finally {
       setIsUserPaying(false);
     }
