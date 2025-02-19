@@ -41,7 +41,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
 
-          <p className="text-xl text-gray-80">{formattedDescription}</p>
+          <p className="font-regular text-xl text-gray-80">{formattedDescription}</p>
         </div>
         <Link
           href={'/pricing'}
