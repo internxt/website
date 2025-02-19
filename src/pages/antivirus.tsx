@@ -24,7 +24,7 @@ interface AntivirusProps {
 }
 
 const AntivirusPage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }: AntivirusProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
 
   const cardsForComponentsIncolumn = [
