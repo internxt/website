@@ -36,17 +36,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia il 80%",
-      "title": "Saldi di Halloween",
-      "subtitle": "Senti tintinnare quelle campanelle di vendita!",
-      "cta": "Scegli il tuo piano",
+      "label": "Risparmia l'85%",
+      "title": "Proteggi ciò che ami, per sempre!",
+      "subtitle": "Vinci due zaini Internxt x Swiss Peak!",
+      "cta": "Richiedi l'offerta",
       "cta2": "Ottieni l'85% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Natale",
-      "titleMbl2": "risparmi",
-      "titleMbl3": "sono qui!",
-      "ctaMbl": "Seleziona piano"
+      "titleMbl1": "Una vita ",
+      "titleMbl2": " di privacy",
+      "titleMbl3": "Proteggi ciò che ami, per sempre!",
+      "ctaMbl": "Acquista piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {
@@ -129,7 +129,7 @@
         "question": "Qual è la politica di rimborso di Internxt?",
         "answer": [
           "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
-          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso. Accetteremo la vostra richiesta, senza fare domande!"
+          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso."
         ]
       },
       {

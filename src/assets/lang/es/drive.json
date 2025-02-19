@@ -2,14 +2,14 @@
   "HeroSection": {
     "eyebrow": "Internxt Drive",
     "title": {
-      "line1": "El cloud storage más seguro",
+      "line1": "El almacenamiento más seguro",
       "line2": "para tus archivos fotos y mucho más.",
       "line3": ""
     },
     "subtitle": {
       "line1": "Sincronizar, hacer backups y compartir tus archivos en total privacidad no puede ser más fácil.",
       "line2": "En Internxt Drive nos centramos en un almacenamiento cifrado fácil de usar, con encriptación de",
-      "line3": "grado militar y fragmentación de archivos, para que solo tú tengas el control de tus archivos y datos."
+      "line3": "grado militar y criptografía post-cuántica, para que solo tú tengas el control de tus archivos y datos."
     },
     "DownloadLinks": {
       "downloadTitle": "Descarga Internxt Drive",
@@ -148,8 +148,8 @@
       },
       "cta": "Nuestro compromiso con la privacidad",
       "card1": {
-        "title": "Encriptación de grado militar.",
-        "subtitle": "Nos tomamos muy en serio tu privacidad, por eso tus archivos están codificados para que solo tú puedas acceder a ellos."
+        "title": "Seguridad de próxima generación",
+        "subtitle": "Internxt Drive protege tus archivos utilizando criptografía de extremo a extremo y post-cuántica. Somos el primer servicio de almacenamiento en la nube en proteger los datos contra futuras amenazas de las computadoras cuánticas."
       },
       "card2": {
         "title": "Tecnología de conocimiento cero.",
@@ -202,6 +202,13 @@
         ]
       },
       {
+        "question": "¿Es Internxt una solución de almacenamiento en la nube sostenible y ecológica?",
+        "answer": [
+          "Sí, Internxt está comprometida con la computación en la nube ecológica, ofreciendo soluciones de almacenamiento ecoamigables para apoyar un futuro más limpio y sostenible. Nuestros centros de datos funcionan con un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los desechos electrónicos.",
+          "Nuestros esfuerzos contribuyen a un objetivo de neutralidad climática para 2050. Más información"
+        ]
+      },
+      {
         "question": "¿Cómo crear una cuenta en Internxt?",
         "answer": [
           "En nuestra web, haz clic en 'Comenzar' en la esquina superior derecha. Rellena el formulario de registro introduciendo una correo electrónico y, a continuación, crea tu contraseña. Para empezar a utilizar los servicios de Internxt no es necesario identificarse ni verificar el correo electrónico."
@@ -223,6 +230,13 @@
         "question": "¿Puedo configurar 2FA con Internxt?",
         "answer": [
           "Sí. Puedes configurar la autenticación de dos factores (2FA) para tu cuenta Internxt desde la aplicación Drive Web. Además, puedes utilizar Authy o cualquier otra herramienta similar para generar tu código 2FA con Internxt."
+        ]
+      },
+      {
+        "question": "¿Internxt es una solución de almacenamiento en la nube sostenible y ecológica?",
+        "answer": [
+          "Sí, Internxt está comprometido con la computación en la nube ecológica, ofreciendo soluciones de almacenamiento respetuosas con el medio ambiente para apoyar un futuro más limpio y sostenible. Nuestros centros de datos funcionan con un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los residuos electrónicos.",
+          "Nuestros esfuerzos contribuyen a un objetivo de neutralidad climática para 2050. [Más información](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

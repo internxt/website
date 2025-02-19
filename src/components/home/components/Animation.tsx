@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/legacy/image';
 import { getImage } from '@/lib/getImage';
-
 interface AnimationProps {
   browserImg?: string;
   folderImg?: string;
@@ -11,7 +10,6 @@ interface AnimationProps {
   previewImg?: string;
   taskloggerImg?: string;
 }
-
 const Animation = ({
   browserImg = getImage('/images/home/header/browser.webp', true),
   folderImg = getImage('/images/home/header/folder.svg', true),
@@ -29,7 +27,6 @@ const Animation = ({
   const [headerAnimation5, setHeaderAnimation5] = useState<boolean>(false);
   const [headerAnimation6, setHeaderAnimation6] = useState<boolean>(false);
   const [headerAnimation7, setHeaderAnimation7] = useState<boolean>(false);
-
   useEffect(() => {
     setTimeout(() => {
       setHeaderAnimation1(true);
@@ -53,7 +50,6 @@ const Animation = ({
       setHeaderAnimation7(true);
     }, 1700);
   }, []);
-
   return (
     <div className="relative ml-10 hidden max-w-2xl flex-grow lg:flex xl:ml-20">
       {/* Browser window */}
@@ -78,7 +74,6 @@ const Animation = ({
           />
         </div>
       </div>
-
       {/* File preview */}
       <div
         className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
@@ -112,7 +107,6 @@ const Animation = ({
           alt="file logger with items downloading"
         />
       </div>
-
       {/* Icon / Folder */}
       <div
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
@@ -128,7 +122,6 @@ const Animation = ({
       >
         <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />
       </div>
-
       {/* Icon / Powerpoint */}
       <div
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
@@ -147,5 +140,4 @@ const Animation = ({
     </div>
   );
 };
-
 export default Animation;

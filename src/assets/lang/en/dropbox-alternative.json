@@ -16,6 +16,7 @@
       "comparisons": {
         "codeTransparency": "Code transparency",
         "encryption": "Encryption",
+        "postQuantumEncryption": "Post-quantum encryption",
         "pricing": "Pricing",
         "securityAudits": "Security Audits",
         "liveSupport": "Live Support",
@@ -25,6 +26,7 @@
       "internxtFeatures": {
         "codeTransparency": "Open-Source",
         "encryption": "Encrypted on your device",
+        "postQuantumEncryption": "Yes",
         "pricing": "Competitive, no hidden costs",
         "securityAudits": "Regular security audits",
         "liveSupport": "Yes",
@@ -34,6 +36,7 @@
       "features": {
         "codeTransparency": "Closed-Source",
         "encryption": "Encrypted by Dropbox",
+        "postQuantumEncryption": "No",
         "pricing": "More expensive plans",
         "securityAudits": "Regular security audits",
         "liveSupport": "Paid feature",

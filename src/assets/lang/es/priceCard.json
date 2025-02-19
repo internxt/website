@@ -113,6 +113,15 @@
       "10TB": ["¡Participa en nuestro sorteo de Navidad!", "Tema de Navidad para Web App"],
       "tooltip": "Consigue hasta 10TB de almacenamiento extra!!"
     },
+    "superBowlFeatures": {
+      "title": "Regalitos de Internxt",
+      "extra": "1TB de almacenamiento extra gratis",
+      "gift": "Tema de SuperBowl para Web App"
+    },
+    "valentinesFeatures": {
+      "title": "Regalitos de Internxt:",
+      "gift": "Sorteo 2 mochilas Swiss Peak x Internxt"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",
@@ -133,8 +142,9 @@
     "individuals": {
       "200GB": [
         "200 GB de almacenamiento encriptado",
-        "Compartir archivos y carpetas cifrados",
+        "Cifrado de conocimiento cero",
         "Compartir archivos protegidos con contraseña",
+        "Criptografía postcuántica",
         "Accede a tus archivos desde cualquier dispositivo",
         "Sube archivos de hasta 20 GB",
         "Autenticación de dos factores (2FA)",
@@ -143,8 +153,9 @@
       ],
       "2TB": [
         "2TB de almacenamiento encriptado",
-        "Compartir archivos y carpetas cifrados",
+        "Cifrado de conocimiento cero",
         "Compartir archivos protegidos con contraseña",
+        "Criptografía postcuántica",
         "Accede a tus archivos desde cualquier dispositivo",
         "Sube archivos de hasta 20 GB",
         "Autenticación de dos factores (2FA)",
@@ -153,8 +164,9 @@
       ],
       "5TB": [
         "5TB de almacenamiento encriptado",
-        "Compartir archivos y carpetas cifrados",
+        "Cifrado de conocimiento cero",
         "Compartir archivos protegidos con contraseña",
+        "Criptografía postcuántica",
         "Accede a tus archivos desde cualquier dispositivo",
         "Sube archivos de hasta 20 GB",
         "Autenticación de dos factores (2FA)",
@@ -163,8 +175,9 @@
       ],
       "10TB": [
         "10TB de almacenamiento encriptado",
-        "Compartir archivos y carpetas cifrados",
+        "Cifrado de conocimiento cero",
         "Compartir archivos protegidos con contraseña",
+        "Criptografía postcuántica",
         "Accede a tus archivos desde cualquier dispositivo",
         "Sube archivos de hasta 20 GB",
         "Autenticación de dos factores (2FA)",
@@ -175,7 +188,7 @@
     "business": {
       "1TB": [
         "1TB de almacenamiento/usuario",
-        "Compartir archivos y carpetas cifradas",
+        "Cifrado de conocimiento cero",
         "Crear y gestionar usuarios y equipos",
         "A partir de 3 usuarios y hasta 10",
         "Cumple con el RGPD",
@@ -185,7 +198,7 @@
       ],
       "2TB": [
         "2TB de almacenamiento/usuario",
-        "Compartir archivos y carpetas cifrados",
+        "Cifrado de conocimiento cero",
         "Crear y gestionar usuarios y equipos",
         "A partir de 3 usuarios y hasta 100",
         "Cumple con el RGPD",

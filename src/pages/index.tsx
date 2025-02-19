@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -12,7 +12,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
@@ -25,7 +25,6 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import useIsMobile from '@/hooks/useIsMobile';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -46,7 +45,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SoftSales,
+    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
+    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -74,7 +75,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       description: textContent.FeatureSectionV2.cards![3].description,
     },
   ];
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
   };
@@ -84,14 +85,16 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isBusiness
+      ? PromoCodeName.SoftSales
+      : isCheckoutForLifetime
+      ? PromoCodeName.ValentinesCampaign
+      : PromoCodeName.SoftSales;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
-
-  const isMobile = useIsMobile();
-
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -108,9 +111,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
-          business: decimalDiscount,
-          lifetime: decimalDiscount,
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
@@ -123,7 +126,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
             {textContent.tableSection.planDescription}
           </span>
         }
-        hideSwitchSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

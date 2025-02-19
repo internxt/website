@@ -31,10 +31,13 @@ interface PricingSectionWrapperProps {
     lifetime?: number;
     business?: number;
   };
+  hideDescription?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
+  isBrave?: boolean;
+  hideFeatures?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -43,9 +46,9 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Year,
+  startIndividualPlansFromInterval = Interval.Lifetime,
   startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Individuals',
+  startFromPlan = 'Lifetime',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -57,11 +60,14 @@ export const PricingSectionWrapper = ({
   decimalDiscount,
   isFamilyPage,
   hideTitle,
+  hideDescription,
+  hideFeatures,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
   CustomDescription,
   darkMode,
+  isBrave,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -82,6 +88,8 @@ export const PricingSectionWrapper = ({
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
   const businessTitle = textContent.planTitles.business;
 
+  const individualPLansDescription = Interval.Lifetime ? textContent.lifetimeDescription : textContent.planDescription;
+
   const title = () => {
     if (isIndividual) {
       return individualPlansTitle;
@@ -94,7 +102,11 @@ export const PricingSectionWrapper = ({
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+          {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
+          {!hideDescription && (
+            <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
+          )}
           {CustomDescription}
         </div>
 
@@ -127,6 +139,8 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
+          isBrave={isBrave}
+          hideFeatures={hideFeatures}
         />
       </div>
     </section>

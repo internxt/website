@@ -143,8 +143,8 @@
       },
       "cta": "Notre engagement en matière de confidentialité",
       "card1": {
-        "title": "Un cryptage de qualité militaire.",
-        "subtitle": "Nous prenons votre vie privée très au sérieux, c'est pourquoi vos fichiers sont cryptés afin que vous soyez le seul à pouvoir y accéder."
+        "title": "Sécurité de prochaine génération",
+        "subtitle": "Internxt Drive protège vos fichiers en utilisant une cryptographie de bout en bout et post-quantique. Nous sommes le premier service de stockage en nuage à protéger les données contre les futures menaces des ordinateurs quantiques."
       },
       "card2": {
         "title": "Technologie connaissance zéro.",
@@ -203,6 +203,13 @@
         ]
       },
       {
+        "question": "Internxt est-il une solution de stockage cloud durable et respectueuse de l'environnement ?",
+        "answer": [
+          "Oui, Internxt s'engage dans l'informatique en nuage verte, offrant des solutions de stockage écologiques pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. En savoir plus"
+        ]
+      },
+      {
         "question": "Comment télécharger des fichiers sur Internxt Drive ?",
         "answer": [
           "Affichez Drive Web et connectez-vous. Glissez-déposez les fichiers que vous souhaitez télécharger dans la fenêtre du navigateur. Vous pouvez également cliquer sur 'Nouveau' dans le coin droit du navigateur et sélectionner les fichiers que vous souhaitez télécharger."
@@ -218,6 +225,13 @@
         "question": "Peut-on configurer 2FA avec Internxt ?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification de deux facteurs (2FA) pour votre compte d’Internxt depuis l'application Drive Web. De plus, vous pouvez utiliser Authy ou tout autre outil similaire pour générer votre code 2FA avec Internxt."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "answer": [
+          "Oui, Internxt s'engage pour un cloud computing respectueux de l'environnement, offrant des solutions de stockage qui soutiennent un avenir plus propre et plus durable. Nos centres de données fonctionnent avec 92 % d'énergie renouvelable et sont conçus pour minimiser les émissions de CO2, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

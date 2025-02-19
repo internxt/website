@@ -26,9 +26,9 @@
         "title": "Codice open-source",
         "description": "Ogni bit del nostro codice è open-source e pubblicato su GitHub. Tutti i nostri sistemi sono resi pubblici e possono essere autenticati indipendentemente. Controlla tu stesso."
       },
-      "endToEnd": {
-        "title": "Crittografia end-to-end",
-        "description": "Tutti i dati che memorizzi con Internxt sono crittografati end-to-end con AES-256. Ciò significa che il processore più potente al mondo avrebbe bisogno del doppio dell'età dell'universo per decrittografare anche un piccolo file."
+      "postQuantum": {
+        "title": "Criptografia post-quantistica",
+        "description": "Internxt è uno dei primi prodotti di privacy a utilizzare la criptografia post-quantistica, offrendo la massima protezione per la tua privacy online. I tuoi file sono protetti oggi e rimarranno sicuri anche in futuro."
       },
       "zeroKnowledge": {
         "title": "Tecnologia a conoscenza zero",
@@ -50,24 +50,24 @@
   },
   "InxtAppsSection": {
     "title": {
-      "line1": "App progettate per proteggere",
-      "line2": "le tue informazioni"
+      "line1": "I prodotti più sicuri per ",
+      "line2": "proteggerti online"
     },
     "subtitle": "I prodotti gratuiti delle grandi aziende tecnologiche non sono realmente gratuiti, paghi con i dati personali. I nostri prodotti non venderanno mai le tue informazioni o i tuoi dati. Quando diciamo gratuito, lo intendiamo davvero.",
     "square1": {
-      "title": "Drive ti consente di scegliere cosa memorizzare e condividere",
-      "description": "Drive non accede ai tuoi dati personali o file, invece è stato progettato da zero per restituirti il controllo sui tuoi file e proteggerti dai raccoglitori di dati e dalle aziende pubblicitarie. Salvaguarda il tuo storage.",
-      "cta": "Riprendi il controllo sui tuoi file"
+      "title": "Internxt Drive",
+      "description": "Riprendi il controllo dei tuoi file e dati con Internxt Drive. Archiviare e fare il backup dei tuoi file in totale privacy non è mai stato così facile. Il moderno storage cloud incontra la crittografia di livello militare.",
+      "cta": "Proteggi con Drive"
     },
     "square2": {
-      "title": "Con Photos, la privacy è sempre al centro",
-      "description": "Photos è stato sviluppato per aiutarti a mantenere una galleria sincronizzata dei tuoi momenti più perfetti senza temere per la tua privacy e senza preoccuparti della perdita improvvisa dei dati. Ricordi salvati, sicuri e protetti.",
-      "cta": "Sincronizza le tue foto e i tuoi ricordi"
+      "title": "Internxt Send",
+      "description": "Send ti consente di criptare end-to-end e condividere rapidamente file di grandi dimensioni senza preoccuparti della sicurezza dei tuoi documenti, immagini o video. Trasferisci a chiunque in totale riservatezza.",
+      "cta": "Condividi con Send"
     },
     "square3": {
-      "title": "Invia con assoluta certezza",
-      "description": "Send ti consente di crittografare e condividere file di grandi dimensioni senza preoccuparti della sicurezza dei tuoi documenti, immagini o video. Trasferisci a chiunque in totale riservatezza.",
-      "cta": "Invia un file crittografato"
+      "title": "Internxt VPN",
+      "description": "Internxt VPN cripta e protegge la tua connessione internet, proteggendoti da perdite di dati, hacker e attacchi alla rete. Tieni i tuoi dati privati e protetti da occhi indiscreti.",
+      "cta": "Naviga con VPN"
     }
   },
   "FaqSection": {
@@ -80,6 +80,13 @@
         ]
       },
       {
+        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center sono alimentati per il 92% da energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
+          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. Scopri di più"
+        ]
+      },
+      {
         "question": "Qual è il cloud storage più privato?",
         "answer": [
           "Molti fornitori di cloud affermano che il loro servizio è privato, ma Internxt va oltre. Internxt è un servizio di archiviazione file a conoscenza zero progettato per una privacy assoluta e una sicurezza rigorosa. Internxt non può accedere ai tuoi dati memorizzati nel cloud storage."
@@ -89,6 +96,13 @@
         "question": "Internxt è privato?",
         "answer": [
           "A differenza di alcuni nostri concorrenti, non operiamo basandoci sulla pubblicità o sulla raccolta di dati. I tuoi dati sono esclusivamente tuoi. Diamo priorità alla tua sicurezza, privacy e alla sicurezza dei tuoi file e foto. Utilizzando Internxt, puoi essere sicuro di essere protetto."
+        ]
+      },
+      {
+        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center funzionano con il 92% di energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
+          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

@@ -4,7 +4,6 @@ import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import 'react-tooltip/dist/react-tooltip.css';
-
 import '@/styles/globals.scss';
 import { GlobalDialog, GlobalUIManager } from '@/contexts/GlobalUIManager';
 import * as gtag from '@/lib/gtag';
@@ -18,6 +17,7 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/temporary-email',
   '/virus-scanner',
   '/pccomponentes-products',
+  '/pccomponentes-business',
   '/pccomponentes-products-b2b',
   '/lifetime/celebration/[filename]',
 ];
@@ -28,6 +28,7 @@ const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
   '/lifetime/celebration/[filename]',
   '/lifetime/security82',
   '/pccomponentes-products',
+  '/pccomponentes-business',
   '/pccomponentes-products-b2b',
   '/cloud-object-storage',
   '/cloud-object-storage/checkout',
@@ -101,35 +102,20 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        <>
-          {lang !== 'es' && (
-            <>
-              <Script
-                defer
-                strategy="afterInteractive"
-                src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-              />
-              <Script
-                defer
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                  __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gtag.GA_TRACKING_ID}', {
-                  page_path: window.location.pathname,
-                });
-              `,
-                }}
-              />
-            </>
-          )}
+        {lang === 'en' && (
+          <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
+        )}
 
-          {lang === 'en' && (
-            <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-          )}
-        </>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-P7N7LW5G"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          ></iframe>
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
 
         <Component {...pageProps} />
         {hideIntercomButton ? null : <Intercom />}
@@ -144,7 +130,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           {/* {shouldShowBeforeYouGoBanner ? <BeforeCloseTabBanner /> : undefined} */}
         </div>
         <FreeCardPromoBanner />
-
         {/* Show snackbar in all pages */}
         <ShowSnackbar />
       </GlobalUIManager>

@@ -1,13 +1,15 @@
-import dynamic from 'next/dynamic';
 import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
 import Header from '../shared/Header';
-import { Check } from '@phosphor-icons/react';
+
+import { Check, Star } from '@phosphor-icons/react';
+import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
-import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import dynamic from 'next/dynamic';
+import { useRouter } from 'next/router';
+
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -16,122 +18,67 @@ interface HeroSectionForHomeProps {
   isHomePageV2?: boolean;
 }
 
-function getSecureRandom(min, max) {
-  const randomBuffer = new Uint32Array(1);
-  crypto.getRandomValues(randomBuffer);
-  const randomValue = randomBuffer[0] / (0xffffffff + 1);
-  return randomValue * (max - min) + min;
-}
 export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const router = useRouter();
+  const { dialogIsOpen } = useGlobalDialog();
+  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
+  const mobileImage = getImage('/images/campaigns/valentines/internxt_superbowl2025_mobile.webp');
+  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
-
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
-
+  const handleOnClick = () => {
+    router.push('/pricing');
+  };
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24 lg:mx-10 lg:pt-14 xl:mx-32">
-        <div
-          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 ${styles.radialGradient} bg-cover bg-center bg-no-repeat md:flex`}
-        />
-        {/* Mobile Version */}
-        <div className="lg:hidden">
-          <HomePageBannerForMobile />
-        </div>
-
-        {/* Desktop version */}
-        <div className="relative mx-auto hidden w-full max-w-screen-xl flex-col items-center justify-between lg:flex lg:flex-row lg:items-center lg:py-10">
+      <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
+        <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block " />
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
+          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
-            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 pt-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <TitleAndOnePlan
-              textContent={titleAndOnePlanText}
-              header={
-                <div className="flex flex-col gap-9">
-                  <div className="flex flex-col gap-4">
-                    <Header maxWidth="max-w-[500px]" className="text-white">
-                      {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-                      {textContent.title.line2}{' '}
-                    </Header>
-                  </div>
-                  <p className="text-xl font-bold text-white">
-                    {textContent.TitleAndOnePlan.description.normal1}
-                    <span className="text-primary">{textContent.TitleAndOnePlan.description.blue}</span>
-                    {textContent.TitleAndOnePlan.description.normal2}
-                  </p>
-                  <div className="mx-auto flex flex-col gap-2 lg:mx-0">
-                    {titleAndOnePlanText.features.map((feat) => (
-                      <div className="flex flex-row gap-2" key={feat}>
-                        <Check className="text-green" weight="bold" size={24} />
-                        <p className="text-lg font-semibold text-white">{feat}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              }
+            {!shouldShowMobileBanner ? (
+              <div className="flex lg:hidden">
+                <Image
+                  loading="eager"
+                  src={mobileImage}
+                  draggable="false"
+                  quality={100}
+                  width={600}
+                  height={1000}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt="Superbowl Mobile Image"
+                  onClick={handleOnClick}
+                />
+              </div>
+            ) : (
+              <HomePageBannerForMobile />
+            )}
+
+            <TitleAndOnePlan textContent={titleAndOnePlanText} />
+          </div>
+          <div className="relative ml-32  hidden h-screen max-h-[700px] w-full justify-center py-40 lg:flex">
+            <Image
+              src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
+              width={653}
+              height={327}
+              alt="Cloud Valentines Hero Section"
+              className="absolute -left-20  z-0 "
+              quality={100}
             />
           </div>
 
-          <div className="relative pt-20">
-            <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
-              {[...Array(150)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`absolute animate-fall rounded-full bg-white opacity-75`}
-                  style={{
-                    top: `${getSecureRandom(0, 100)}%`,
-                    left: `${getSecureRandom(0, 100)}%`,
-                    width: `${getSecureRandom(2, 10)}px`,
-                    height: `${getSecureRandom(2, 10)}px`,
-                    animationDelay: `${getSecureRandom(0, 5)}s`,
-                    animationDuration: `${getSecureRandom(10, 30)}s`,
-                  }}
-                ></div>
-              ))}
+          {/* Desktop animation/image
+         
+          {!shouldShowMobileBanner ? (
+            <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+              <Animation />
             </div>
-            <div className="hidden h-max w-max py-20 lg:flex">
-              <Link href="/pricing">
-                <div className="relative h-[400px] w-[600px] animate-sleigh-vertical">
-                  <Image
-                    src={getImage('/images/christmas/internxt_christmas_discount.webp')}
-                    alt="Internxt Secure Cloud Storage"
-                    draggable={false}
-                    quality={100}
-                    width={562}
-                    height={540}
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 rotate-sleigh transform object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/candy_stick.webp')}
-                    alt="Candy Stick"
-                    draggable={false}
-                    quality={100}
-                    width={100}
-                    height={119}
-                    className="absolute bottom-[0%] left-[50%] animate-[move-candy-stick_2s_ease-in-out_infinite] object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/christmas_tree.webp')}
-                    alt="Christmas Tree"
-                    draggable={false}
-                    quality={100}
-                    width={100}
-                    height={100}
-                    className="absolute left-[5%] top-[5%] animate-[rotate-tree_3s_linear_infinite] object-cover"
-                  />
-                  <Image
-                    src={getImage('/images/christmas/sock.webp')}
-                    alt="Sock"
-                    draggable={false}
-                    quality={100}
-                    width={86}
-                    height={153}
-                    className="absolute right-[-10%] top-[25%] animate-[float-sock_1.5s_ease-in-out_infinite] object-cover"
-                  />
-                </div>
-              </Link>
-            </div>
-          </div>
+          ) : undefined}
+          */}
         </div>
+        {/* Mobile version */}
       </div>
     </section>
   );

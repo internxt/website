@@ -103,6 +103,15 @@
       "10TB": ["Mochila Internxt x Swiss Peak", "Tema de Halloween para o Web App"],
       "tooltip": "Compre qualquer plano vitalício para ter chance de ganhar!"
     },
+    "superBowlFeatures": {
+      "title": "Brindes com tema Internxt:",
+      "extra": "1TB de armazenamento criptografado",
+      "gift": "Tema Super Bowl para Aplicativo Web"
+    },
+    "valentinesFeatures": {
+      "title": "Presentes da Internxt:",
+      "gift": "Sorteio de 2 mochilas Swiss Peak x Internxt"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Até ",
@@ -123,8 +132,9 @@
     "individuals": {
       "200GB": [
         "200GB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -133,8 +143,9 @@
       ],
       "2TB": [
         "2TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -143,8 +154,9 @@
       ],
       "5TB": [
         "5TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -153,8 +165,9 @@
       ],
       "10TB": [
         "10TB de armazenamento criptografado",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Compartilhamento de arquivos protegido por senha",
+        "Criptografia pós-quântica",
         "Acesse seus arquivos de qualquer dispositivo",
         "Envie arquivos de até 20GB",
         "Autenticação de dois fatores (2FA)",
@@ -165,7 +178,7 @@
     "business": {
       "1TB": [
         "1TB de armazenamento por usuário",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 10",
         "Conformidade com o GDPR",
@@ -175,7 +188,7 @@
       ],
       "2TB": [
         "2TB de armazenamento por usuário",
-        "Compartilhamento de arquivos e pastas criptografados",
+        "Criptografia de conhecimento zero",
         "Crie e gerencie usuários e equipes",
         "A partir de 3 usuários e até 100",
         "Conformidade com o GDPR",

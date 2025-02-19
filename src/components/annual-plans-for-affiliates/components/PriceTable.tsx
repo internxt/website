@@ -47,11 +47,13 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center py-20">
+      <div className="flex flex-col items-center ">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
-          {isStartPage ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          <p className={`${titleFontSize ?? 'text-5xl'} font-semibold text-gray-100`}>{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.subtitle}</p>
+          {isStartPage ? <p className="text-3xl font-semibold text-primary xl:text-4xl">{textContent.header}</p> : null}
+          <p className={`${titleFontSize ?? 'text-4xl xl:text-5xl'} px-2 font-semibold text-gray-100`}>
+            {textContent.title}
+          </p>
+          <p className="px-1 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
         <Transition
           show={loadingCards}
@@ -83,11 +85,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       planType="individual"
                       key={product.storage}
                       storage={product.storage}
-                      price={
-                        lifetimeCoupons && lifetimeCoupons[product.storage]
-                          ? product.price - lifetimeCoupons[product.storage].amountOff / 100
-                          : product.price
-                      }
+                      price={discount ? (product.price * discount) / 100 : product.price}
                       billingFrequency={billingFrequency}
                       popular={product.storage === '5TB'}
                       cta={['checkout', product.priceId]}

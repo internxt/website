@@ -9,6 +9,13 @@ interface WhyChooseInternxtForBusinessProps {
   withoutBanner?: boolean;
 }
 
+const scrollToTop = () => {
+  document.querySelector('#contactSales')?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  });
+};
+
 export const WhyChooseInternxtForBusiness = ({
   textContent,
   withoutBanner,
@@ -20,23 +27,23 @@ export const WhyChooseInternxtForBusiness = ({
   const cards = [
     {
       icon: Scales,
-      title: textContent.cards[0].title,
-      description: textContent.cards[0].description,
+      title: textContent.WhyChooseInternxt.cards[0].title,
+      description: textContent.WhyChooseInternxt.cards[0].description,
     },
     {
       icon: NumberCircleZero,
-      title: textContent.cards[1].title,
-      description: textContent.cards[1].description,
+      title: textContent.WhyChooseInternxt.cards[1].title,
+      description: textContent.WhyChooseInternxt.cards[1].description,
     },
     {
       icon: UserGear,
-      title: textContent.cards[2].title,
-      description: textContent.cards[2].description,
+      title: textContent.WhyChooseInternxt.cards[2].title,
+      description: textContent.WhyChooseInternxt.cards[2].description,
     },
     {
       icon: Eye,
-      title: textContent.cards[3].title,
-      description: textContent.cards[3].description,
+      title: textContent.WhyChooseInternxt.cards[3].title,
+      description: textContent.WhyChooseInternxt.cards[3].description,
     },
   ];
 
@@ -60,12 +67,16 @@ export const WhyChooseInternxtForBusiness = ({
                 className="hidden lg:flex"
               />
             </div>
-            <div className="flex w-full flex-col items-center justify-center gap-9 px-5 py-20 lg:w-max lg:px-0">
+            <div className="+ flex w-full flex-col items-center justify-center  gap-9 py-20 pr-10 lg:w-max lg:px-0">
               <div className="flex w-full max-w-[460px] flex-col gap-4 text-center text-white">
-                <p className="text-4xl font-semibold">{textContent.banner.title}</p>
-                <p className="text-xl">{textContent.banner.description}</p>
+                <p className="text-4xl font-semibold">{textContent.WhyChooseInternxt.banner.title}</p>
+                <p className="text-xl">{textContent.WhyChooseInternxt.banner.description}</p>
               </div>
-              <Button text={textContent.banner.cta} onClick={onButtonClick} />
+              <div className="flex flex-col items-center gap-4 lg:flex-row ">
+                <Button text={textContent.WhyChooseInternxt.banner.cta} onClick={onButtonClick} />
+                <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
+                <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+              </div>
             </div>
             <div className="hidden items-center lg:flex">
               <Image
@@ -79,8 +90,8 @@ export const WhyChooseInternxtForBusiness = ({
         )}
         {/* Title and description */}
         <div className="flex w-full max-w-[774px] flex-col items-center justify-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
-          <h3 className="text-xl text-gray-80">{textContent.description}</h3>
+          <h2 className="text-5xl font-semibold text-gray-100">{textContent.WhyChooseInternxt.title}</h2>
+          <h3 className="text-xl text-gray-80">{textContent.WhyChooseInternxt.description}</h3>
         </div>
 
         {/* Cards */}

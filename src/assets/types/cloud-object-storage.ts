@@ -5,6 +5,29 @@ export interface CloudObjectStorageText {
   HowMuchYouNeedSection: HowMuchYouNeedSection;
   WhyChooseInternxtSection: WhyChooseInternxtSection;
   FaqSection: FAQSection;
+  ContactSales: ContactSales;
+}
+
+export interface ContactSales {
+  title: string;
+  description: string;
+  form: Form;
+}
+
+export interface Form {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  howMuchStorage: string;
+  totalCharacters: string;
+  options: string[];
+  howWeCanHelp: string;
+  howWeCanHelpPlaceholder: string;
+  cta: string;
+  ctaSending: string;
+  successMessage: string;
+  errorMessage: string;
 }
 
 export interface FAQSection {
@@ -18,12 +41,16 @@ export interface FAQ {
 }
 
 export interface HeroSection {
-  title: {
-    line1: string;
-    line2: string;
-  };
+  title: Title;
   description: string;
   cta: string;
+  separator: string;
+  cta2: string;
+}
+
+export interface Title {
+  line1: string;
+  line2: string;
 }
 
 export interface HowMuchYouNeedSection {
@@ -40,10 +67,10 @@ export interface HowMuchYouNeedSection {
 export interface PredictablePricingSection {
   title: string;
   description: string;
-  info: Info[];
+  info: PayAsYouGoCard[];
 }
 
-export interface Info {
+export interface PayAsYouGoCard {
   title: string;
   description: string;
 }
@@ -51,22 +78,17 @@ export interface Info {
 export interface PriceCardSection {
   title: string;
   description: string;
-  payAsYouGoCard: PayAsYouGoCardText;
+  payAsYouGoCard: PayAsYouGoCard;
   cardText: CardText;
   oneTimePayment: string;
-}
-
-export interface PayAsYouGoCardText {
-  title: string;
-  description: string;
 }
 
 export interface CardText {
   label: string;
   perTB: string;
   price: string;
-  whatsIncluded: WhatsIncluded;
   cta: string;
+  whatsIncluded: WhatsIncluded;
 }
 
 export interface WhatsIncluded {
@@ -77,10 +99,14 @@ export interface WhatsIncluded {
 export interface WhyChooseInternxtSection {
   title: string;
   description: string;
-  cards: Info[];
-  bannerText: {
-    title: string;
-    description: string;
-    cta: string;
-  };
+  cards: PayAsYouGoCard[];
+  bannerText: BannerText;
+}
+
+export interface BannerText {
+  title: string;
+  description: string;
+  cta: string;
+  separator: string;
+  cta2: string;
 }

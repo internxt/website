@@ -33,7 +33,7 @@ module.exports = {
       'teal-dark': 'rgb(45,164,185)',
       mint: 'rgb(5,189,180)',
       'mint-dark': 'rgb(4,164,156)',
-      highlight: 'rgba(17, 17, 17, 1)',
+      highlight: 'rgba(17, 17, 17, 0.1)',
       red8: 'rgb(255, 13, 0, 0.08)',
       gray: {
         1: 'rgb(249,249,252)',
@@ -165,6 +165,7 @@ module.exports = {
       },
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        scanning: 'scanning 1s linear infinite',
       },
       keyframes: {
         'pingpong-v': {
@@ -228,8 +229,16 @@ module.exports = {
         'orbit-vertical': 'vertical-orbit 9s linear infinite',
         'orbit-angular': 'angular-orbit 15s linear infinite',
         'orbit-diagonal': 'diagonal-orbit 12s linear infinite',
+        'fill-bar': 'fill 1s linear forwards',
+        'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
+      translate: {
+        25: '6.25rem',
+        30: '7.5rem',
+        40: '10rem',
+        50: '12.5rem',
 
+      },
       keyframes: {
         'fade-r-large': {
           '0%': { transform: 'translateX(80px)', opacity: 0 },
@@ -306,6 +315,15 @@ module.exports = {
             
           },
         }
+
+        fill: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+        'pingpong-v': {
+          '0%, 100%': { top: '0%' },
+          '50%': { top: '100%' },
+        },
       },
 
       aspectRatio: {

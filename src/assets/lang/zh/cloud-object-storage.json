@@ -5,7 +5,9 @@
       "line2": "对象存储"
     },
     "description": "安全、经济且可扩展的云存储，用于存储、访问和管理大规模数据。",
-    "cta": "立即开始"
+    "cta": "立即开始",
+    "separator": "|",
+    "cta2": "联系销售"
   },
   "PredictablePricingSection": {
     "title": "简单且可预测的定价，无API费用",
@@ -95,7 +97,9 @@
     "bannerText": {
       "title": "Internxt 的云存储",
       "description": "体验前所未有的数据管理、速度和卓越的性能",
-      "cta": "立即开始"
+      "cta": "立即开始",
+      "separator": "|",
+      "cta2": "联系销售"
     }
   },
   "FaqSection": {
@@ -159,5 +163,35 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "联系销售",
+    "description": "填写联系表格，团队将尽快与您联系。",
+    "form": {
+      "name": "名字",
+      "surname": "姓氏",
+      "email": "电子邮箱地址",
+      "company": "公司名称",
+      "phone": "电话号码",
+      "howMuchStorage": "您需要多少存储空间？",
+      "totalCharacters": " /1000",
+      "options": [
+        "选择",
+        "少于25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我们如何帮助您？",
+      "howWeCanHelpPlaceHolder": "请告诉我们您的需求",
+      "cta": "发送消息",
+      "ctaSending": "发送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请再试一次。"
+    }
   }
 }

@@ -37,11 +37,14 @@ interface PriceTableProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
   darkMode?: boolean;
+  hideFeatures?: boolean;
+
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
     business?: number;
   };
+  isBrave?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -74,6 +77,8 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
+  isBrave,
+  hideFeatures,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -155,7 +160,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(4)
+          {Array(3)
             .fill(0)
             .map((_, i) => (
               <CardSkeleton key={i} />
@@ -186,14 +191,11 @@ export const PricingSection = ({
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
-                    product.interval === Interval.Lifetime ||
-                    product.interval === Interval.Year ||
-                    product.interval === Interval.Month
-                      ? decimalDiscount?.lifetime
-                      : undefined
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
                   }
                   lang={lang}
                   darkMode={darkMode}
+                  isBrave={isBrave}
                 />
               ))
             : undefined}
@@ -244,14 +246,16 @@ export const PricingSection = ({
           )}
         </div>
       </Transition>
-      <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
-        {features.map((feature) => (
-          <div key={feature.text} className="flex flex-row items-center space-x-3">
-            <feature.icon size={40} className="text-primary md:pb-0" />
-            <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
-          </div>
-        ))}
-      </div>
+      {!hideFeatures && (
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="text-primary md:pb-0" />
+              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };

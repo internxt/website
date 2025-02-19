@@ -36,19 +36,20 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 80%",
-      "title": "Halloween sale",
-      "subtitle": "Hear those sales bells jingling!",
+      "label": "Save 85%",
+      "title": "Protect what you love, forever!",
+      "subtitle": "Win two Internxt x Swiss Peak backpacks!",
       "cta": "Claim deal",
       "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl1": "Christmas",
-      "titleMbl2": "savings",
-      "titleMbl3": "are here!",
+      "titleMbl1": "A lifetime ",
+      "titleMbl2": " of privacy",
+      "titleMbl3": "Protect what you love, forever!",
       "ctaMbl": "Buy plan"
     },
     "planTitles": {
+      "header": "Total privacy for 85% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
@@ -128,7 +129,7 @@
         "question": "What is Internxt’s refund policy?",
         "answer": [
           "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
         ]
       },
       {

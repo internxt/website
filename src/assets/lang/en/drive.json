@@ -7,7 +7,7 @@
     },
     "subtitle": {
       "line1": "Storing, backing up, and sharing your files in total privacy couldn’t be any easier. With Internxt Drive, you",
-      "line2": "get user-friendly storage, military-grade encryption, and full control over your files and data.",
+      "line2": "get user-friendly storage, post-quantum encryption, and full control over your files and data.",
       "line3": ""
     },
     "DownloadLinks": {
@@ -143,8 +143,8 @@
       },
       "cta": "Our commitment on privacy",
       "card1": {
-        "title": "Military-grade encryption",
-        "subtitle": "We take your privacy very seriously, that’s why your files are encrypted so only you can access your files."
+        "title": "Next-generation security",
+        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
       },
       "card2": {
         "title": "Zero-knowledge technology",
@@ -192,6 +192,13 @@
         ]
       },
       {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
+          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
+        ]
+      },
+      {
         "question": "How to create an Internxt account?",
         "answer": [
           "Head to our website and click 'Get started' in the upper right-hand corner. Fill out the registration form by entering an email address, then create your password. No identity or email verification is required to start using Internxt's services."
@@ -213,6 +220,13 @@
         "question": "Can I configure 2FA with Internxt?",
         "answer": [
           "Yes. You can configure two-factor authentication (2FA) for your Internxt account from the Drive Web app. Moreover, you can use Authy or any other 2FA tool to generate your 2FA code with Internxt, to log into our online drive app."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

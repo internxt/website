@@ -17,6 +17,7 @@ import { useRouter } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
+import GA_TAGS from '@/components/services/ga.tags';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -205,7 +206,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(error.message);
       }
     } catch (err) {
-      notificationService.openErrorToast('Something went wrong');
+      notificationService.openErrorToast(err.message);
     } finally {
       setIsUserPaying(false);
     }
@@ -237,7 +238,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 };
 
 export function getServerSideProps(ctx: GetServerSidePropsContext) {
-  const locale = 'en';
+  const locale = ctx.locale;
 
   const textContent = require(`@/assets/lang/${locale}/integrated-checkout.json`);
 

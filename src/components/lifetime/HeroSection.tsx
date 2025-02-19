@@ -86,7 +86,7 @@ const HeroSection = ({
               </div>
             ) : null}
             <div className="hidden h-[580px] lg:flex">
-                <Animation previewImg={previewImg} />
+              <Animation previewImg={previewImg} />
             </div>
           </div>
         </div>

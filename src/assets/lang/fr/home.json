@@ -59,15 +59,16 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Stockage cloud sécurisé.",
-        "blueText": "Garanti."
+        "line1": "Obtenez le",
+        "blueText": "stockage cloud le plus sécurisé ",
+        "line2": ""
       },
       "description": {
-        "normal1": "Obtenez ",
-        "blue": "80 % de réduction ",
-        "normal2": "sur tous les plans premium"
+        "normal1": "",
+        "blue": "85 % de réduction ",
+        "normal2": "sur tous les plans à vie"
       },
-      "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
+      "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
       "startFrom": {
         "normal1": "À partir de ",
         "price": " 0.95",
@@ -248,7 +249,14 @@
         "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non. Internxt, ainsi que toute autre tierce partie, ne peut pas accéder à vos fichiers, photos ou données.",
-          "Les services d'Internxt disposent d'un chiffrement sans connaissance, ce qui signifie que seul vous pouvez réellement accéder à vos données privées. De plus, l'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier complet, mais seulement un fragment chiffré que seul vous pouvez déchiffrer."
+          "Les services d’Internxt proposent un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez accéder à vos données privées et les déchiffrer. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos fichiers contre les menaces futures."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et respectueuse de l'environnement ?",
+        "answer": [
+          "Oui, Internxt s'engage dans l'informatique en nuage verte, offrant des solutions de stockage écologiques pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. En savoir plus"
         ]
       },
       {
@@ -283,7 +291,7 @@
         "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
-          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement. Nous honorerons votre demande, sans poser de questions !"
+          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
         ]
       },
       {
@@ -310,6 +318,13 @@
         "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez ajouter autant de stockage que vous le souhaitez à votre abonnement à vie Internxt. Les plans à vie Internxt sont cumulables. Achetez-les simplement avec la même adresse e-mail et contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) pour que nous puissions les cumuler sur le même compte pour vous."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "answer": [
+          "Oui, Internxt s'engage pour un cloud computing respectueux de l'environnement, offrant des solutions de stockage qui soutiennent un avenir plus propre et plus durable. Nos centres de données fonctionnent avec 92 % d'énergie renouvelable et sont conçus pour minimiser les émissions de CO2, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

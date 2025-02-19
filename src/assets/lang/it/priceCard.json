@@ -114,6 +114,15 @@
       "10TB": ["Partecipa alla nostra lotteria di Babbo Natale Segreto", "Tema dell'app web di Natale"],
       "tooltip": "Vinci fino a 10TB di spazio di archiviazione gratuito!"
     },
+    "superBowlFeatures": {
+      "title": "Gadget a tema Internxt:",
+      "extra": "1TB di spazio di archiviazione extra gratuito",
+      "gift": "Tema Super Bowl per l'app Web"
+    },
+    "valentinesFeatures": {
+      "title": "Regali di Internxt:",
+      "gift": "Sorteggio di 2 zaini Swiss Peak x Internxt"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Fino a ",
@@ -134,8 +143,9 @@
     "individuals": {
       "200GB": [
         "200 GB di archiviazione crittografata",
-        "Condivisione crittografata di file e cartelle",
+        "Crittografia a conoscenza zero",
         "Condivisione protetta da password",
+        "Crittografia a conoscenza zero",
         "Accedi ai tuoi file da qualsiasi dispositivo",
         "Carica file fino a 20 GB",
         "Autenticazione a due fattori (2FA)",
@@ -144,8 +154,9 @@
       ],
       "2TB": [
         "2TB di archiviazione crittografata",
-        "Condivisione crittografata di file e cartelle",
+        "Crittografia a conoscenza zero",
         "Condivisione protetta da password",
+        "Crittografia a conoscenza zero",
         "Accedi ai tuoi file da qualsiasi dispositivo",
         "Carica file fino a 20 GB",
         "Autenticazione a due fattori (2FA)",
@@ -154,8 +165,9 @@
       ],
       "5TB": [
         "5TB di archiviazione crittografata",
-        "Condivisione crittografata di file e cartelle",
+        "Crittografia a conoscenza zero",
         "Condivisione protetta da password",
+        "Crittografia a conoscenza zero",
         "Accedi ai tuoi file da qualsiasi dispositivo",
         "Carica file fino a 20 GB",
         "Autenticazione a due fattori (2FA)",
@@ -164,8 +176,9 @@
       ],
       "10TB": [
         "10TB di archiviazione crittografata",
-        "Condivisione crittografata di file e cartelle",
+        "Crittografia a conoscenza zero",
         "Condivisione protetta da password",
+        "Crittografia a conoscenza zero",
         "Accedi ai tuoi file da qualsiasi dispositivo",
         "Carica file fino a 20 GB",
         "Autenticazione a due fattori (2FA)",
@@ -176,7 +189,7 @@
     "business": {
       "1TB": [
         "1TB di archiviazione/utente",
-        "Condivisione di file e cartelle crittografati",
+        "Crittografia a conoscenza zero",
         "Creare e gestire utenti e team",
         "A partire da 3 utenti e fino a 10",
         "Conforme al GDPR",
@@ -186,7 +199,7 @@
       ],
       "2TB": [
         "2TB di archiviazione/utente",
-        "Condivisione di file e cartelle crittografati",
+        "Crittografia a conoscenza zero",
         "Creare e gestire utenti e team",
         "A partire da 3 utenti e fino a 100",
         "Conforme al GDPR",

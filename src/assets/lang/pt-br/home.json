@@ -59,15 +59,16 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Armazenamento na nuvem seguro.",
-        "blueText": "Garantido."
+        "line1": "Obtenha o",
+        "blueText": "armazenamento em nuvem mais seguro ",
+        "line2": ""
       },
       "description": {
         "normal1": "",
-        "blue": "70% de desconto ",
-        "normal2": "em todos os planos premium"
+        "blue": "85% de desconto ",
+        "normal2": "em todos os planos vitalícios"
       },
-      "features": ["Até 10TB de armazenamento", "Criptografia de conhecimento zero", "Código aberto e auditado"],
+      "features": ["Criptografia de conhecimento zero", "Criptografia pós-quântica", "Código aberto e auditado"],
       "startFrom": {
         "normal1": "A partir de ",
         "price": "0,95",
@@ -269,7 +270,7 @@
         "question": "A Internxt pode acessar meus arquivos?",
         "answer": [
           "Não. A Internxt, juntamente com qualquer outra terceira parte, não pode acessar seus arquivos, fotos ou dados.",
-          "Os serviços da Internxt apresentam criptografia de conhecimento zero, o que significa que apenas você pode acessar verdadeiramente seus dados privados. Além disso, a arquitetura da Internxt fragmenta seus arquivos antes de criptografá-los, então um servidor nunca possui um arquivo inteiro, apenas um fragmento criptografado dele, que apenas você pode descriptografar."
+          "Os serviços da Internxt oferecem criptografia de conhecimento zero, o que significa que apenas você pode acessar e descriptografar seus dados privados. Além disso, a Internxt utiliza criptografia pós-quântica, a tecnologia mais avançada disponível para proteger seus arquivos contra ameaças futuras."
         ]
       },
       {
@@ -330,6 +331,13 @@
         "question": "Posso adicionar mais armazenamento ao meu plano vitalício?",
         "answer": [
           "Sim, você pode adicionar tanto armazenamento quanto desejar à sua associação vitalícia à Internxt. Os planos vitalícios da Internxt são empilháveis. Basta comprá-los com o mesmo endereço de e-mail e entrar em contato conosco pelo hello@internxt.com para que possamos empilhá-los juntos para você na mesma conta."
+        ]
+      },
+      {
+        "question": "O Internxt é uma solução de armazenamento em nuvem sustentável e ecológica?",
+        "answer": [
+          "Sim, o Internxt está comprometido com a computação em nuvem sustentável, oferecendo soluções de armazenamento ecológicas para apoiar um futuro mais limpo e sustentável. Nossos data centers operam com 92% de energia renovável e são projetados para minimizar emissões de carbono, consumo de recursos e resíduos eletrônicos.",
+          "Nossos esforços contribuem para a meta de neutralidade climática até 2050. [Saiba mais](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

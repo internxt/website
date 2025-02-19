@@ -90,7 +90,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
       } ${scrolled && props.fixed ? 'border-opacity-5' : 'border-opacity-0'} ${
         menuState ? 'bg-opacity-100' : ''
-      } z-50 border-b border-black`}
+      } z-40 border-b border-black`}
     >
       <div className="mx-4 w-full lg:mx-10 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
@@ -178,6 +178,28 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             {props.cta[0] === 'chooseStorage' ? (
               <button
                 onClick={() => router.push('/pricing')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+              >
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+              </button>
+            ) : undefined}
+
+            {props.cta[0] === 'priceTable' ? (
+              <button
+                onClick={() => router.push('#priceTable')}
+                id="choose-storage-button"
+                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+              >
+                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+              </button>
+            ) : undefined}
+
+            {props.cta[0] === 'payment' ? (
+              <button
+                onClick={() => router.push('#payment')}
                 id="choose-storage-button"
                 className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
                 transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% de réduction", "line2": "sur nos plans annuels" },
+    "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
     "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
@@ -8,7 +8,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "80% de réduction",
+      "title": "85% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -41,17 +41,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80%",
-      "title": "Soldes d'Halloween",
-      "subtitle": "Écoutez ces cloches de soldes tinter!",
-      "cta": "Choisissez votre plan",
+      "label": "Économisez 85 %",
+      "title": "Protégez ce que vous aimez, pour toujours !",
+      "subtitle": "Gagnez deux sacs à dos Internxt x Swiss Peak !",
+      "cta": "Profitez de l'offre",
       "cta2": "Obtenez 85 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
-      "titleMbl1": "Noël",
-      "titleMbl2": "économies",
-      "titleMbl3": "sont là!",
-      "ctaMbl": "Sélectionner un plan"
+      "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
+      "titleMbl1": "Une vie ",
+      "titleMbl2": " de confidentialité",
+      "titleMbl3": "Protégez ce que vous aimez, pour toujours !",
+      "ctaMbl": "Acheter un plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",
@@ -133,7 +133,7 @@
         "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
-          "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions !"
+          "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
         ]
       },
       {
