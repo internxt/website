@@ -1,102 +1,130 @@
 {
   "HeroSection": {
-    "title": "Schützen Sie Ihre Dateien mit",
+    "title": "Protect your files with",
     "blueText": "Internxt Antivirus",
-    "description": "Schützen Sie sich vor Malware, Phishing und Ransomware mit einem fortschrittlichen Schutz, der Ihre Dateien sicher hält.",
+    "description": "Defend against malware, phishing, and ransomware with advanced protection hat keeps your files safe.",
     "eyeBrow": "Internxt Antivirus"
   },
   "cta1": {
     "title": "Internxt Antivirus",
-    "subtitle": "Schützen Sie Ihre Dateien vor Malware für den ultimativen Online-Schutz",
-    "cta": "Holen Sie sich Internxt"
+    "subtitle": "Secure your files from malware for the ultimate protection online",
+    "cta": "Get Internxt"
   },
   "cta2": {
     "title": "Internxt Antivirus",
-    "subtitle": "Maximaler Schutz für Ihre Dateien",
-    "cta": "Holen Sie sich Internxt"
+    "subtitle": "Maximum protection for your files",
+    "cta": "Get Internxt"
   },
   "FaqSection": {
-    "title": "Fragen? Wir haben Antworten",
+    "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Was macht eine Antivirensoftware?",
+        "question": "What does antivirus software do?",
         "answer": [
-          "Antivirensoftware schützt Ihre Dateien und Geräte vor Beschädigungen, indem sie Dateien auf bekannte Malware-Signaturen überwacht und scannt. Sobald schädliche Software durch einen Antivirus-Scan erkannt wird, wird die Bedrohung entfernt und Ihre Dateien bleiben sicher und geschützt."
+          "Antivirus software protects your files and device from corruption by monitoring and scanning files for known malware signatures. Once harmful software is detected and identified by an antivirus scan, the threat is removed, and your files remain secure and protected."
         ]
       },
       {
-        "question": "Brauche ich ein Antivirusprogramm?",
+        "question": "Do I need an antivirus?",
         "answer": [
-          "Ohne Antivirenschutz ist Ihr Gerät anfällig für Datenschutz- und Sicherheitsangriffe. Es besteht auch ein höheres Risiko von Infektionen, Datenverlust, Datenschutzverletzungen und Systemschäden.",
-          "Da Internxt Antivirus in Ihrem Abonnement enthalten ist, profitieren Sie von privatem Cloud-Speicher und umfassendem Schutz für Geräte und Dateien."
+          "Without antivirus protection, your device is vulnerable to privacy and security attacks. It is also at a higher risk of being infected, data loss, privacy breaches, and system damage.",
+          "As Internxt Antivirus is included in your subscription, you can benefit from private cloud storage and complete device and file protection."
         ]
       },
       {
-        "question": "Welche Geräte unterstützen Internxt Antivirus?",
+        "question": "What devices support Internxt antivirus?",
         "answer": [
-          "Internxt Antivirus ist für Microsoft, Mac und Linux mit einem Premium-Abonnement über die Internxt Drive Desktop-App verfügbar."
+          "Internxt antivirus includes Microsoft antivirus, antivirus for Mac, and Linux with a premium subscription through the Internxt Drive desktop app."
         ]
       },
       {
-        "question": "Kann ich Internxt Antivirus separat erwerben?",
+        "question": "Can I get Internxt antivirus on its own?",
         "answer": [
-          "Nein, Internxt Antivirus ist Teil unserer kostenpflichtigen Abonnements und kann nicht separat erworben werden. Mit einem monatlichen Abonnement von 10,99 $ erhalten Sie privaten Cloud-Speicher, Antivirus, VPN und vieles mehr."
+          "No, Internxt Antivirus is part of our paid subscription plans and cannot be purchased separately. With a monthly subscription of $10,99 you can get private cloud storage, antivirus, VPN and much more."
         ]
       },
       {
-        "question": "Was ist der Unterschied zwischen Malware und einem Virus?",
+        "question": "What is the difference between malware and a virus?",
         "answer": [
-          "Malware ist ein Sammelbegriff für Software, die entwickelt wurde, um ohne Autorisierung Schaden anzurichten, auszunutzen oder Zugriff auf ein Netzwerk oder Gerät zu erhalten. Sie umfasst Viren sowie andere schädliche Programme wie Ransomware, Spyware, Würmer und Trojaner.",
-          "Ein Virus ist eine spezielle Art von Malware, die sich an Ihre Dateien anhängt und sich auf andere Systeme ausbreitet, wenn sie geöffnet oder ausgeführt wird. Ein regelmäßiger Antivirus-Scan mit Internxt erkennt und beseitigt diese Bedrohungen."
+          "Malware is the broader term for software designed to harm, exploit, or gain access to a network or device without authorization. It includes viruses and extends to other harmful programs like ransomware, spyware, worms, and trojans.",
+          "A virus is a specific kind of malware that attaches itself to your files and spreads to other systems when opened or run. Performing a regular antivirus scan with Internxt will identify and eliminate these threats."
         ]
       },
       {
-        "question": "Was ist die beste Antivirensoftware?",
+        "question": "What is the best antivirus software?",
         "answer": [
-          "Die beste Antivirensoftware hängt von Ihren spezifischen Bedürfnissen und Vorlieben ab. Es wird daher empfohlen, Ihre Optionen zu recherchieren und eine Lösung zu wählen, die Ihren Anforderungen entspricht – abhängig von Budget, Gerät und zusätzlichen Funktionen.",
-          "Wenn Sie ein Antivirusprogramm für Mac, Windows oder Linux benötigen, das in Ihren Cloud-Speicher integriert ist und ein schnelles und einfaches System zum Scannen und Löschen von Viren bietet, probieren Sie einen Internxt-Plan aus."
+          "The best antivirus software depends on your specific needs and preferences, so it is always recommended to research your options and choose one that meets your needs, depending on your budget, device, and any additional features.",
+          "If you need antivirus for Mac, Windows, or Linux built into your cloud storage with a quick and easy system to scan and delete viruses from your device, try an Internxt plan."
         ]
       }
     ]
   },
   "ComponentsInColumn": {
-    "title": "Anzeichen, dass Ihr Gerät infiziert sein könnte",
-    "description": "Befürchten Sie, dass Ihr Gerät mit Malware infiziert ist? Holen Sie sich Internxt Antivirus mit einem Premium-Abonnement für sicheren Speicher und Dateischutz.",
+    "title": "Signs your device may be infected",
+    "description": "Are you worried your device is infected with malware? Get Internxt Antivirus with a premium subscription for secure storage and file protection.",
     "cards": {
       "element1": {
-        "title": "Übermäßiger Batterieverbrauch",
-        "description": "Wenn Ihre Batterie schneller als gewöhnlich leer wird, könnte dies ein Zeichen dafür sein, dass Malware im Hintergrund läuft und Ihre Ressourcen unbemerkt nutzt."
+        "title": "Excessive battery drain",
+        "description": "If your battery runs out quicker than usual, it can be a sign that malware is running in the background, draining your power by using your device’s resources without your knowledge. "
       },
       "element2": {
-        "title": "Häufige Systemabstürze oder Einfrieren",
-        "description": "Viren können Systemabstürze verursachen, da Malware wichtige Dateien oder Programme beschädigt und so Instabilität, Abstürze oder plötzliche Systemausfälle verursacht."
+        "title": "Frequent system crashes or freezes",
+        "description": "Viruses can cause your system to crash due to malware that corrupts essential files or programs, causing instability, system crashes, or the device freezing unexpectedly. "
       },
       "element3": {
-        "title": "Unerklärliche Pop-ups oder Fenster",
-        "description": "Unerwartete Pop-ups, die erscheinen, obwohl Sie nicht surfen, könnten auf Malware auf Ihrem Gerät hinweisen. Führen Sie einen Antivirus-Scan durch, um weiteren Schaden zu vermeiden."
+        "title": "Unexplained pop-up ads or windows",
+        "description": "Unexplained pop-ups appearing when you’re not browsing could mean malware on your device, and you should run an antivirus scan to avoid further harm to your files."
       },
       "element4": {
-        "title": "Überhitzung des Geräts",
-        "description": "Ähnlich wie beim schnellen Batterieverbrauch kann Malware Ressourcen stehlen und im Hintergrund intensive Aufgaben ausführen, wodurch Ihr Gerät überhitzt."
+        "title": "Devices overheating",
+        "description": "Similar to draining battery life, malware can force devices to steal performance while running high-intensity tasks in the background without you knowing, causing your device to overheat."
       }
     }
   },
   "FeatureSection": {
-    "title": "All-in-One-Sicherheit zum Schutz Ihrer Geräte vor Datenbedrohungen",
-    "description": "Schützen Sie Ihre Cloud und Dateien vor Malware mit modernem Antivirenschutz. Verfügbar für Windows-, Linux- und macOS-Desktops.",
+    "title": "All-in-one security to defend your devices against data threats",
+    "description": "Keep your cloud protected and files safe from malware with cutting-edge antivirus protection. Available on Windows, Linux, and macOS desktop devices.",
     "cards": {
       "element1": {
-        "title": "Maßgeschneiderte Sicherheitslösungen",
-        "description": "Beseitigen Sie Bedrohungen sofort und passen Sie Ihre Sicherheitsbedürfnisse an. Wählen Sie Dateien aus, die Sie scannen möchten, oder laden Sie mehrere Dateien gleichzeitig hoch."
+        "title": "Tailored security solutions for you",
+        "description": "Eliminate security threats instantly and customize your file security needs. Choose the files you want to perform an antivirus scan on or drop multiple files simultaneously."
       },
       "element2": {
-        "title": "Ultimativer Schutz",
-        "description": "Mit fortschrittlicher Antivirensoftware ist der Schutz vor Viren schnell und einfach. Scannen und bereinigen Sie Ihre Dateien, optimieren Sie die Leistung Ihres Geräts und schützen Sie sich online."
+        "title": "Ultimate protection",
+        "description": "We make defending against viruses quick and easy with advanced antivirus software that scans and removes malware to clean your files. Scan files whenever you want, optimize device performance, and protect yourself online."
       },
       "element3": {
-        "title": "Sicherheit auf allen Plattformen",
-        "description": "Antivirenschutz für Windows, Mac und Linux, integriert in Ihr Premium-Abonnement. Wir sorgen dafür, dass Ihre Dateien für eine optimale Leistung sauber bleiben, unabhängig davon, wo sie gespeichert sind."
+        "title": "Security across all platforms",
+        "description": "Antivirus protection for Windows, Mac, and Linux integrated with your premium Drive subscription. We ensure your files are kept clean for peak device performance no matter where you store them.  "
       }
     }
+  },
+  "FeatureSectionV2": {
+    "title": "What is antivirus software?",
+    "description": "Antivirus software detects and removes malicious software (malware) from your device to prevent common cyber threats such as viruses, spyware, and ransomware. Internxt Antivirus is included in your premium subscription, letting you scan your files and keep your cloud secure.",
+    "cards": {
+      "element1": {
+        "description": "Detect and remove malware"
+      },
+      "element2": {
+        "description": "Full system or custom file scanning"
+      },
+      "element3": {
+        "description": "File and device protection "
+      }
+    }
+  },
+  "InfoSection": {
+    "Percentage": "81%",
+    "PercentageText": "Organizations that faced malware threats",
+    "MalwareRegisteredDaily": "300.000+",
+    "MalwareRegisteredDailyText": "New malware registered daily",
+    "MalwareAttacks": "190,000",
+    "MalwareAttacksText": "New malware attacks every second"
+  },
+  "InfoSectionV2": {
+    "AntivirusProtection": "Antivirus protection",
+    "RemoveMalware": "Remove malware",
+    "DeviceProtection": "Device protection"
   }
 }
