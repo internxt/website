@@ -15,7 +15,7 @@ import { InfoSection } from '@/components/antivirus/InfoSection';
 import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
 
-interface HomeProps {
+interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
@@ -23,7 +23,7 @@ interface HomeProps {
   footerLang: FooterText;
 }
 
-const HomePage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const AntivirusPage = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }: AntivirusProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const locale = lang as string;
 
@@ -171,4 +171,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default HomePage;
+export default AntivirusPage;
