@@ -168,5 +168,10 @@
     "id": "green-cloud-computing",
     "title": "Archiviazione cloud verde e sostenibile",
     "description": "I data center ecologici di Internxt promuovono il nostro impegno per la sostenibilità e l'informatica cloud ecologica, supportando un ambiente più verde e sostenibile."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Proteggi i tuoi dispositivi dai malware con Internxt Antivirus",
+    "description": "Internxt Antivirus esegue la scansione e rimuove i virus dai tuoi file. Proteggi i tuoi dispositivi dai malware e garantisci una sicurezza completa nel cloud."
   }
 ]
