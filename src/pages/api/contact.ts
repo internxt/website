@@ -48,14 +48,17 @@ async function contactSales(
   const groupId = '145043133822928056';
   const payload = {
     email,
-    name,
-    company,
-    phone,
-    storage,
-    help,
-    origin_contact,
     groups: [groupId],
+    fields: {
+      name,
+      company,
+      phone,
+      storage,
+      help,
+      origin_contact,
+    },
   };
+
   console.log('payload', payload);
   try {
     const response = await axios.post(`${process.env.MAILERLITE_API}/api/subscribers`, payload, {
@@ -64,7 +67,7 @@ async function contactSales(
         Authorization: `Bearer ${API_KEY}`,
       },
     });
-
+    console.log('Respuesta de MailerLite:', response.data);
     return response.data;
   } catch (error: any) {
     throw new Error(error.response?.data?.message);
