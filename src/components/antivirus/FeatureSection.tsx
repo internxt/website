@@ -39,7 +39,11 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
+          <p className="space-y-4 text-3xl font-semibold text-gray-100 lg:text-5xl">
+            {textContent.title}
+            <br />
+            {textContent.titleLine2}
+          </p>
 
           <p className="text-xl text-gray-80">{formattedDescription}</p>
         </div>

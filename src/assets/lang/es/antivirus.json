@@ -88,7 +88,8 @@
     }
   },
   "FeatureSection": {
-    "title": "Escanea. Detecta. Protege.",
+    "title": "Internxt Antivirus",
+    "titleLine2": "Escanea. Detecta. Protege.",
     "description": "Mantén tu nube protegida y todos tus archivos a salvo del software malicioso con protección antivirus de última generación. Disponible en dispositivos de escritorio Windows, Linux y macOS.",
     "cta": "Obtén Internxt",
     "cards": {
