@@ -1,35 +1,8 @@
-import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 
 import { ArrowCircleRight } from '@phosphor-icons/react';
-import { useRouter } from 'next/router';
 
 const DownloadComponent = ({ textContent, lang, download }) => {
-  const router = useRouter();
-  const language = router.locale;
-
-  function getOS() {
-    const osList = [
-      { keyword: 'Android', name: 'Android' },
-      { keyword: 'iPad', name: 'iPad' },
-      { keyword: 'iPhone', name: 'iPhone' },
-      { keyword: 'Win', name: 'Windows' },
-      { keyword: 'Mac', name: isMobile ? 'iPad' : 'MacOS' },
-      { keyword: 'X11', name: 'UNIX' },
-      { keyword: 'Linux', name: 'Linux' },
-    ];
-
-    const res = osList.find((os) => window.navigator.appVersion.indexOf(os.keyword) !== -1);
-
-    return res ? res.name : `Not known (${window.navigator.appVersion})`;
-  }
-
-  const [OS, setOS] = useState<string>('');
-
-  useEffect(() => {
-    setOS(getOS());
-  }, [download]);
-
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9 pb-6">
       <p className="text-center text-4xl font-semibold text-gray-100">{textContent.downloadTitle}</p>

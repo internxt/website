@@ -2,6 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Header from '../shared/Header';
 import Image from 'next/image';
 import DownloadComponent from './DownloadComponent';
+import { isMobile } from 'react-device-detect';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col px-2">
@@ -60,7 +61,7 @@ const HeroSection = ({ textContent, lang, download }) => (
         </div>
       </div>
 
-      <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
+      {!isMobile && <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />}
     </div>
   </section>
 );
