@@ -72,7 +72,6 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
                     quality={100}
                     loading="lazy"
                     layout="intrinsic"
-                    className="rounded-3xl shadow-md"
                     alt={`${card.title} image`}
                   />
                 </RevealX>
@@ -89,7 +88,6 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
                     quality={100}
                     loading="lazy"
                     layout="intrinsic"
-                    className="rounded-3xl"
                     alt={`${card.title} image`}
                   />
                   <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
