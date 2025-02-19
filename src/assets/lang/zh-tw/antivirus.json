@@ -1,0 +1,136 @@
+{
+  "HeroSection": {
+    "title": "使用 Internxt Antivirus 保护您的文件",
+    "blueText": "Internxt Antivirus",
+    "description": "使用我们的杀毒软件防范恶意软件、网络钓鱼和勒索软件，确保所有文件都安全无虞。",
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "下载 Internxt Antivirus",
+      "downloadForMac": "下载适用于 Mac",
+      "downloadForWindows": "下载适用于 Windows",
+      "downloadForLinux": "下载适用于 Linux"
+    }
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "防范恶意软件，最大程度地保障您的文件安全",
+    "cta": "购买您的订阅"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "为您的文件提供最高级别的保护",
+    "cta": "获取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "什么是杀毒软件？",
+        "answer": [
+          "杀毒软件通过监控和扫描文件中已知的恶意软件特征，来保护您的文件和设备免受恶意程序的侵害。一旦杀毒扫描检测到并识别出恶意软件，该威胁会被立即移除，确保您的文件保持安全。"
+        ]
+      },
+      {
+        "question": "我需要杀毒软件吗？",
+        "answer": [
+          "没有杀毒保护，您的设备将容易受到恶意攻击，您的隐私和数据也将面临风险。设备被感染、数据丢失、隐私泄露和系统损坏的可能性都会增大。",
+          "由于 Internxt Antivirus 已包含在您的订阅中，您可以享受到私有云存储以及对设备和文件的全面保护。"
+        ]
+      },
+      {
+        "question": "哪些设备支持 Internxt Antivirus？",
+        "answer": [
+          "Internxt Antivirus 提供适用于 Microsoft、Mac 和 Linux 的保护，您可通过 Internxt Drive 桌面应用并订阅高级版本来使用此功能。"
+        ]
+      },
+      {
+        "question": "我可以单独购买 Internxt Antivirus 吗？",
+        "answer": [
+          "不可以，Internxt Antivirus 隶属于我们的付费订阅计划，无法单独购买。只需每月支付 9,99€，您就能获得私有云存储、杀毒软件、VPN 等更多功能。"
+        ]
+      },
+      {
+        "question": "恶意软件和病毒有什么区别？",
+        "answer": [
+          "“恶意软件”是对任何旨在未经授权而破坏、利用或访问网络或设备的程序、软件或代码的统称。它包含病毒，也包括其他恶意程序，如勒索软件、间谍软件、蠕虫和木马。",
+          "病毒是一种特定类型的恶意软件，它会附着在您的文件上，并在文件被打开或执行时扩散到其他系统。通过定期使用 Internxt 进行杀毒扫描，您可以识别并删除这些威胁。"
+        ]
+      },
+      {
+        "question": "哪款杀毒软件最好？",
+        "answer": [
+          "最好的杀毒软件取决于您的具体需求和偏好，因此建议您调查不同选项并选择最符合您预算、设备和额外功能需求的方案。",
+          "如果您需要一款与云存储集成、适用于 Mac、Windows 或 Linux 的杀毒软件，并希望快速简便地扫描并删除设备上的病毒，不妨试试 Internxt 的订阅计划。"
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "设备可能被感染的迹象",
+    "description": "担心您的设备已被恶意软件感染？订阅高级版以使用 Internxt Antivirus，享受安全存储和对文件的全面保护。",
+    "cards": {
+      "element1": {
+        "title": "电池消耗过快",
+        "description": "如果电池比平时消耗更快，可能说明恶意软件在后台运行，并在您不知情的情况下占用设备资源。"
+      },
+      "element2": {
+        "title": "系统频繁崩溃或卡死",
+        "description": "病毒可能会破坏系统中的关键文件或程序，从而导致系统不稳定、故障或意外死机。"
+      },
+      "element3": {
+        "title": "弹窗或广告窗口",
+        "description": "当您没有进行浏览时却出现莫名弹窗，这很可能意味着您的设备已受到恶意软件的影响。请立即进行杀毒扫描，以防止更严重的损害。"
+      },
+      "element4": {
+        "title": "设备过热，即使在空闲状态",
+        "description": "与电池过度消耗类似，恶意软件可能会在后台执行高强度任务，导致设备过热。"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "一站式安全保护，抵御任何数据威胁",
+    "description": "使用先进的杀毒保护，防范恶意软件，保护您的云端和所有文件。适用于 Windows、Linux、macOS 桌面设备。",
+    "cards": {
+      "element1": {
+        "title": "定制化的安全解决方案",
+        "description": "即时消除安全威胁，量身定制您的文件保护需求。您可以选择要扫描的文件，或一次性删除多个文件。"
+      },
+      "element2": {
+        "title": "全面保护",
+        "description": "我们提供先进的杀毒软件，让您能够快速轻松地对抗病毒并清除恶意软件，以清理您的文件。随时扫描文件，优化设备性能，并保护您的在线安全。"
+      },
+      "element3": {
+        "title": "跨平台安全",
+        "description": "面向 Windows、Mac 和 Linux 的杀毒保护，直接集成在您的高级版 Drive 订阅中。我们确保您的文件保持干净，从而充分发挥设备性能，无论文件存储在哪里。"
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "什么是杀毒软件？",
+    "description": "杀毒软件可检测并清除设备中的任何恶意程序（恶意软件），以防御常见的网络威胁，例如病毒、间谍软件和勒索软件。Internxt Antivirus 已包含在您的高级版订阅中，让您能够扫描文件并保持云端安全。",
+    "cards": {
+      "element1": {
+        "description": "检测并清除任何恶意软件"
+      },
+      "element2": {
+        "description": "支持全系统或自定义文件扫描"
+      },
+      "element3": {
+        "description": "保护文件和设备安全"
+      }
+    }
+  },
+  "InfoSection": {
+    "Percentage": "81%",
+    "PercentageText": "遭受恶意软件威胁的企业比例",
+    "MalwareRegisteredDaily": "300.000+",
+    "MalwareRegisteredDailyText": "每天记录的全新恶意代码",
+    "MalwareAttacks": "190,000",
+    "MalwareAttacksText": "每秒钟出现的新恶意软件攻击数量"
+  },
+  "InfoSectionV2": {
+    "AntivirusProtection": "为您的文件提供杀毒保护",
+    "RemoveMalware": "清除任何恶意程序（恶意软件）",
+    "DeviceProtection": "保护您的设备"
+  }
+}
