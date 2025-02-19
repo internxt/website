@@ -59,6 +59,14 @@ export interface HeroSection {
   blueText: string;
   description: string;
   eyeBrow: string;
+  DownloadLinks: DownloadLinks;
+}
+
+export interface DownloadLinks {
+  downloadTitle: string;
+  downloadForMac: string;
+  downloadForWindows: string;
+  downloadForLinux: string;
 }
 
 export interface InfoSection {

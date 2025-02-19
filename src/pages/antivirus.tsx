@@ -21,6 +21,16 @@ interface AntivirusProps {
   navbarLang: NavigationBarText;
   langJson: AntivirusText;
   footerLang: FooterText;
+  download: {
+    Android: string;
+    iPad: string;
+    iPhone: string;
+    Windows: any;
+    MacOS: any;
+    UNIX: any;
+    Linux: any;
+    all: string;
+  };
 }
 
 const AntivirusPage = ({
@@ -29,6 +39,7 @@ const AntivirusPage = ({
   lang,
   navbarLang,
   footerLang,
+  download,
 }: AntivirusProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-antivirus');
   const locale = lang as string;
@@ -89,7 +100,7 @@ const AntivirusPage = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection textContent={langJson.HeroSection} lang={locale} download={download} />
 
       <InfoSection
         FirstComponent={

@@ -3,7 +3,13 @@
     "title": "Protect your files with",
     "blueText": "Internxt Antivirus",
     "description": "Defend against malware, phishing, and ransomware with advanced protection hat keeps your files safe.",
-    "eyeBrow": "Internxt Antivirus"
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "Download Internxt Antivirus",
+      "downloadForMac": "Download for Mac",
+      "downloadForWindows": "Download for Windows",
+      "downloadForLinux": "Download for Linux"
+    }
   },
   "cta1": {
     "title": "Internxt Antivirus",
