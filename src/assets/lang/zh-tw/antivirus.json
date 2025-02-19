@@ -90,6 +90,7 @@
   "FeatureSection": {
     "title": "一站式安全保护，抵御任何数据威胁",
     "description": "使用先进的杀毒保护，防范恶意软件，保护您的云端和所有文件。适用于 Windows、Linux、macOS 桌面设备。",
+    "cta": "获取 Internxt",
     "cards": {
       "element1": {
         "title": "定制化的安全解决方案",

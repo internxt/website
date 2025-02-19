@@ -90,6 +90,7 @@
   "FeatureSection": {
     "title": "Sécurité tout-en-un pour défendre vos dispositifs contre toute menace de données",
     "description": "Protégez votre cloud et tous vos fichiers contre les logiciels malveillants avec une protection antivirus de pointe. Disponible pour les ordinateurs de bureau sous Windows, Linux et macOS.",
+    "cta": "Obtiens Internxt",
     "cards": {
       "element1": {
         "title": "Solutions de sécurité sur mesure",
