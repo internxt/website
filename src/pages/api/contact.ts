@@ -59,7 +59,6 @@ async function contactSales(
     },
   };
 
-  console.log('payload', payload);
   try {
     const response = await axios.post(`${process.env.MAILERLITE_API}/api/subscribers`, payload, {
       headers: {
@@ -67,7 +66,7 @@ async function contactSales(
         Authorization: `Bearer ${API_KEY}`,
       },
     });
-    console.log('Respuesta de MailerLite:', response.data);
+
     return response.data;
   } catch (error: any) {
     throw new Error(error.response?.data?.message);
