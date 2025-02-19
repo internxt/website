@@ -1,5 +1,5 @@
 {
-  "title": "您快完成了！请安全结账：",
+  "title": "您快完成了！请安全结账",
   "pay": "支付",
   "paying": "正在支付...",
   "checkout": "结账",
@@ -52,7 +52,7 @@
         "高级客户支持"
       ]
     },
-    "total": "总计：",
+    "total": "总计",
     "addCoupon": {
       "buttonTitle": "添加优惠券",
       "inputText": "优惠券代码",

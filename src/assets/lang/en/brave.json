@@ -4,7 +4,6 @@
     "subtitle": "that protects your right to privacy",
     "description": "Internxt’s open-source, web3 cloud storage protects your privacy with zero-knowledge post-quantum encryption.",
     "info": "Claim your exclusive 85% discount on all Internxt annual and lifetime plans!",
-    "infoHighlight": "BRAVE85",
     "cta": "Get 85% OFF"
   },
   "PriceTable": {
@@ -179,7 +178,7 @@
         ]
       },
       {
-        "question": "Can I add more storage to my lifetime plan??",
+        "question": "Can I add more storage to my lifetime plan?",
         "answer": [
           "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack the storage for you on the same account."
         ]

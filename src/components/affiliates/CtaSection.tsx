@@ -1,7 +1,5 @@
 import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
-import Image from 'next/image';
-import { X } from '@phosphor-icons/react';
 
 const CtaSection = ({
   textContent,
@@ -11,7 +9,6 @@ const CtaSection = ({
   bgImage,
   onClick,
   customDescription,
-  isBrave,
 }: {
   textContent: any;
   url: string;
@@ -20,7 +17,6 @@ const CtaSection = ({
   bgImage?: string;
   onClick?: () => void;
   customDescription?: React.ReactNode;
-  isBrave?: boolean;
 }) => {
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
 

@@ -1,5 +1,5 @@
 {
-  "title": "¡Ya casi está! Finaliza tu compra de forma segura:",
+  "title": "¡Ya casi está! Finaliza tu compra de forma segura",
   "pay": "Pagar",
   "paying": "Pagando...",
   "checkout": "Finalizar compra",
@@ -52,7 +52,7 @@
         "Soporte al cliente premium"
       ]
     },
-    "total": "Total: ",
+    "total": "Total ",
     "addCoupon": {
       "buttonTitle": "Añadir cupón",
       "inputText": "Código de cupón",

@@ -1,5 +1,5 @@
 {
-  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité :",
+  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité ",
   "pay": "Payer",
   "paying": "Paiement en cours...",
   "checkout": "Commander",
@@ -52,7 +52,7 @@
         "Support client premium"
       ]
     },
-    "total": "Total : ",
+    "total": "Total  ",
     "addCoupon": {
       "buttonTitle": "Ajouter un coupon",
       "inputText": "Code de coupon",
