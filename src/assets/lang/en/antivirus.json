@@ -88,8 +88,9 @@
     }
   },
   "FeatureSection": {
-    "title": "All-in-one security to defend your devices against data threats",
+    "title": "Internxt Antivirus Scan. Detect. Protect.",
     "description": "Keep your cloud protected and files safe from malware with cutting-edge antivirus protection. Available on Windows, Linux, and macOS desktop devices.",
+    "cta": "Get Internxt",
     "cards": {
       "element1": {
         "title": "Tailored security solutions for you",

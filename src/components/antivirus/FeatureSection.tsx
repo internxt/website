@@ -2,6 +2,7 @@ import { AntivirusText } from '@/assets/types/antivirus';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
+import Link from 'next/link';
 
 export interface FeatureSectionProps {
   textContent: AntivirusText['FeatureSection'];
@@ -29,13 +30,26 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
     },
   ];
 
+  const wordsToBold = ['Windows', 'Linux', 'macOS'];
+  const formattedDescription = textContent.description
+    .split(/(Windows|Linux|macOS)/g)
+    .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
+
   return (
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
         <div className="flex max-w-[850px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
+
+          <p className="text-xl text-gray-80">{formattedDescription}</p>
         </div>
+        <Link
+          href={'/pricing'}
+          className={`flex rounded-lg bg-primary px-5 py-3 text-lg text-xl font-medium text-white hover:bg-primary-dark`}
+        >
+          {textContent.cta}
+        </Link>
+
         <div>
           {cards.map((card, index) => {
             const isEven = index % 2 === 0;
