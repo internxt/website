@@ -2,10 +2,21 @@
   "HeroSection": {
     "title": {
       "line1": "Internxt S3 ",
-      "line2": "compatible cloud object storage"
+      "line2": "compatible object storage"
     },
-    "description": "A secure, affordable, scalable cloud storage solution for storing, accessing, and managing large-scale data.",
-    "cta": "Get started",
+    "features": ["No data transfer fees", "Pay-as-you-go pricing", "Compatible with AWS, Azure, Google Cloud"],
+    "firstYearDiscount": "First year 80% OFF!",
+    "priceInfoLine1": {
+      "normalText": "Starts at ",
+      "boldText": " €1.42 TB/month ",
+      "crossedText": " (€7 TB/month)"
+    },
+    "priceInfoLine2": {
+      "normalText": "Or ",
+      "boldText": " €16.8 TB/First year ",
+      "crossedText": " (€84 TB/year)"
+    },
+    "cta": "Get S3 now",
     "separator": "|",
     "cta2": "Contact sales"
   },
@@ -14,11 +25,11 @@
     "description": "Avoid the hassle of unpredictable storage bills. Internxt offers a straightforward rate for storage capacity with no hidden fees.",
     "info": [
       {
-        "title": "100% Hot",
-        "description": "Ultra fast and instantly accessible"
+        "title": "100%",
+        "description": "Hot Ultra-fast and instantly accessible"
       },
       {
-        "title": "Up to 80%",
+        "title": "Up to 90%",
         "description": "More affordable than AWS"
       },
       {
@@ -37,7 +48,10 @@
     "cardText": {
       "label": "Internxt S3",
       "perTB": "Per TB/Billed monthly",
-      "price": "7",
+      "priceNow": "1.42",
+      "priceBefore": "7",
+      "month": "/month",
+      "greenText": "80% OFF | Save €66.96/year",
       "cta": "Select plan",
       "whatsIncluded": {
         "title": "What's included:",
