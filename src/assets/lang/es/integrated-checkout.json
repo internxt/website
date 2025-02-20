@@ -22,7 +22,7 @@
   "addressBilling": {
     "optionalData": "Opcional",
     "companyName": "Nombre de la Empresa",
-    "companyVatId": "ID de IVA"
+    "companyVatId": "VAT ID de la Empresa"
   },
   "paymentTitle": "Selecciona un método de pago",
   "productCard": {
