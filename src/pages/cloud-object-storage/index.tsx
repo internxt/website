@@ -14,7 +14,9 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
-
+import Image from 'next/image';
+import { Check } from '@phosphor-icons/react';
+import { isMobile } from 'react-device-detect';
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
   navbarText: NavigationBarText;
@@ -40,37 +42,68 @@ const CloudObjectStorage = ({
       block: 'center',
     });
   };
+
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
 
       <HeroSection
         TextComponent={
-          <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 text-center text-white lg:items-start lg:text-left">
-            <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
-              {lang === 'es' ? (
-                <>
-                  <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2} </span>
-                  {textContent.HeroSection.title.line1}
-                </>
-              ) : (
-                <>
-                  {textContent.HeroSection.title.line1}
-                  <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2}</span>
-                </>
-              )}
-            </Header>
-            <p className="text-xl">{textContent.HeroSection.description}</p>
-            <div className="flex flex-row items-center gap-4">
-              <Button
-                className="!w-full lg:!w-max"
-                text={textContent.HeroSection.cta}
-                onClick={() => (window.location.hash = '#storageSection')}
+          <>
+            <div
+              className={`flex min-h-[92px] items-center justify-center gap-4 rounded-2xl border-2 border-black/15 bg-black/50 text-center ${
+                isMobile ? 'px-16a' : 'px-24 md:px-4'
+              } md:max-h-[92px] md:min-h-[92px] md:min-w-[390px] md:max-w-[390px]`}
+            >
+              <Image
+                src={getImage('/images/cloud-object-storage/discount.svg')}
+                alt="S3 discount badge"
+                width={40}
+                height={56}
+                draggable={false}
               />
-              <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
-              <Button className="!w-full lg:!w-max" text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+              <p className="text-center text-3xl font-bold text-green-1">{textContent.HeroSection.firstYearDiscount}</p>
             </div>
-          </div>
+
+            <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 pt-4 text-center text-white lg:items-start lg:text-left">
+              <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
+                <span className="font-bold lg:text-5xl">
+                  {textContent.HeroSection.title.line1}
+                  {textContent.HeroSection.title.line2}
+                </span>
+              </Header>
+              <div className="mx-auto flex min-w-[280px] max-w-[300px] flex-col space-y-2 px-4 text-start md:px-0 lg:mx-0">
+                {textContent.HeroSection.features.map((feat) => (
+                  <div key={feat} className="flex min-w-[300px] flex-row gap-2 md:min-w-[400px]">
+                    <Check className="min-h-[24px] min-w-[24px] text-green-1 " weight="bold" />
+                    <p className="font-regular text-lg text-white ">{feat}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="flex flex-col gap-2 text-start">
+                <span className="font-regular text-lg text-white">
+                  {textContent.HeroSection.priceInfoLine1.normalText}
+                  <span className="font-bold">{textContent.HeroSection.priceInfoLine1.boldText}</span>
+                  <span className="line-through">{textContent.HeroSection.priceInfoLine1.crossedText}</span>
+                </span>
+                <span className="font-regular text-lg text-white">
+                  {textContent.HeroSection.priceInfoLine2.normalText}
+                  <span className="font-bold">{textContent.HeroSection.priceInfoLine2.boldText}</span>
+                  <span className="line-through">{textContent.HeroSection.priceInfoLine2.crossedText}</span>
+                </span>
+              </div>
+
+              <div className="flex flex-row items-center gap-4">
+                <Button
+                  className="!w-full lg:!w-max"
+                  text={textContent.HeroSection.cta}
+                  onClick={() => (window.location.hash = '#storageSection')}
+                />
+                <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
+                <Button className="!w-full lg:!w-max" text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+              </div>
+            </div>
+          </>
         }
         style={{
           background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',

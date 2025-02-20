@@ -3,6 +3,8 @@ import { getImage } from '@/lib/getImage';
 import Button from '../shared/Button';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { ArrowsOutSimple, CalendarDot, CloudCheck, Eye, Gauge, Key, Lifebuoy, LockSimple } from '@phosphor-icons/react';
+import React from 'react';
 
 interface PriceCardSectionProps {
   textContent: CloudObjectStorageText['PriceCardSection'];
@@ -10,6 +12,34 @@ interface PriceCardSectionProps {
 
 export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSectionProps): JSX.Element => {
   const router = useRouter();
+
+  const iconsFeatures = [
+    {
+      icon: CalendarDot,
+    },
+    {
+      icon: Key,
+    },
+    {
+      icon: CloudCheck,
+    },
+    {
+      icon: Gauge,
+    },
+    {
+      icon: ArrowsOutSimple,
+    },
+    {
+      icon: Eye,
+    },
+    {
+      icon: LockSimple,
+    },
+    {
+      icon: Lifebuoy,
+    },
+  ];
+
   return (
     <section className="overflow-hidden px-5 py-20" id="storageSection">
       <div className="flex flex-col items-center justify-center gap-16">
@@ -40,13 +70,24 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
               <div className="flex flex-col items-center rounded-full bg-primary/7 px-3 py-0.5">
                 <p className="text-2xl font-medium text-primary">{textContent.cardText.label}</p>
               </div>
-              <div className="flex flex-col items-center gap-2 text-center">
+              <div className="flex flex-col items-center text-center">
                 <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
                   <span className={`currency`}>€</span>
-                  <span className="price text-4xl font-bold">{textContent.cardText.price}</span>
+                  <span className="text-4xl font-bold">{textContent.cardText.priceNow}</span>
+                  <span className="self-end pt-2 text-base font-semibold">{textContent.cardText.month}</span>
                 </p>
-                <p className="text-gray-50">{textContent.cardText.perTB}</p>
+                <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-50`}>
+                  <span className="text-sm">€</span>
+                  <span className="text-xl font-bold line-through">{textContent.cardText.priceBefore}</span>
+                </p>
+                <p className="pb-4 text-gray-50">{textContent.cardText.perTB}</p>
+                <div className="flex flex-row items-center gap-2 bg-green-1/10 px-2 py-1 text-center">
+                  <p className="items-center justify-center text-center text-green-dark">
+                    {textContent.cardText.greenText}
+                  </p>
+                </div>
               </div>
+
               <Button
                 className="!w-full"
                 text={textContent.cardText.cta}
@@ -58,15 +99,13 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
             <div className="flex flex-col gap-6 rounded-b-2xl bg-gray-1 px-6 py-6">
               <p className="text-lg font-medium text-gray-100">{textContent.cardText.whatsIncluded.title}</p>
               <div className="flex flex-col gap-4">
-                {textContent.cardText.whatsIncluded.features.map((feature) => (
+                {textContent.cardText.whatsIncluded.features.map((feature, index) => (
                   <div className="flex flex-row items-center gap-2" key={feature}>
-                    <img
-                      loading="lazy"
-                      className="translate-y-px select-none"
-                      src={getImage('/icons/checkPrimary.svg')}
-                      draggable="false"
-                      alt="check icon"
-                    />
+                    {iconsFeatures[index] ? (
+                      React.createElement(iconsFeatures[index].icon, { size: 24, className: 'text-primary' })
+                    ) : (
+                      <CloudCheck size={24} className="text-primary" />
+                    )}
                     <p className="text-gray-80">{feature}</p>
                   </div>
                 ))}
