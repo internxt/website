@@ -112,4 +112,5 @@ export interface Products {
   send: string;
   comingSoon: string;
   new: string;
+  antivirus: string;
 }

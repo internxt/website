@@ -1,0 +1,138 @@
+{
+  "HeroSection": {
+    "title": "Protege tus archivos con",
+    "blueText": "Internxt Antivirus",
+    "description": "Protégete contra el programa malicioso, phishing y el ransomware con nuestro Antivirus. Mantén todos tus archivos seguros y protegidos.",
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "Descarga Internxt Antivirus",
+      "downloadForMac": "Descarga Mac",
+      "downloadForWindows": "Descarga Windows",
+      "downloadForLinux": "Descarga Linux"
+    }
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Protege tus archivos contra software malicioso para obtener la máxima protección y seguridad",
+    "cta": "Compra tu plan"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Máxima protección para tus archivos",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es un antivirus?",
+        "answer": [
+          "El software antivirus protege tus archivos y tus dispositivos contra programas maliciosos al monitorear y escanear archivos en busca de firmas de malware conocidas. Una vez que un análisis antivirus detecta e identifica el software dañino, la amenaza se elimina y tus archivos permanecen seguros y protegidos."
+        ]
+      },
+      {
+        "question": "¿Necesito un antivirus?",
+        "answer": [
+          "Sin protección antivirus, tu dispositivo es vulnerable a ataques maliciosos, y tu privacidad y datos quedan en peligro. También corre un mayor riesgo de infección, pérdida de datos, violaciones de la privacidad y daños al sistema.",
+          "Como Internxt Antivirus está incluido en tu suscripción, puedes beneficiarte del almacenamiento privado en la nube y de una protección completa de dispositivos y archivos."
+        ]
+      },
+      {
+        "question": "¿Qué dispositivos son compatibles con el antivirus Internxt?",
+        "answer": [
+          "El antivirus Internxt incluye antivirus de Microsoft, antivirus para Mac y Linux con una suscripción premium a través de la aplicación de escritorio Internxt Drive."
+        ]
+      },
+      {
+        "question": "¿Puedo obtener el antivirus Internxt solo?",
+        "answer": [
+          "No, Internxt Antivirus forma parte de nuestros planes de suscripción de pago y no se puede comprar por separado. Con una suscripción mensual de 9,99€ puedes conseguir almacenamiento en la nube privado, antivirus, VPN y mucho más."
+        ]
+      },
+      {
+        "question": "¿Cuál es la diferencia entre malware y virus?º",
+        "answer": [
+          "Malware es el término amplio para el software, programa o código diseñado para dañar, explotar u obtener acceso a una red o dispositivo sin autorización. Incluye virus y se extiende a otros programas dañinos como ransomware, spyware, gusanos y troyanos.",
+          "Un virus es un tipo específico de malware que se adhiere a tus archivos y se propaga a otros sistemas cuando se abre o ejecuta. Realizando un análisis antivirus periódico con Internxt podrás identificar y eliminar estas amenazas."
+        ]
+      },
+      {
+        "question": "¿Cuál es el mejor software antivirus?",
+        "answer": [
+          "El mejor software antivirus depende de tus necesidades y preferencias específicas, por lo que siempre se recomienda investigar diferentes opciones y elegir una que se adapte a tus necesidades, según tu presupuesto, dispositivo y cualquier característica adicional.",
+          "Si necesitas un antivirus para Mac, Windows o Linux integrado en tu almacenamiento en la nube con un sistema rápido y sencillo para escanear y eliminar virus de tu dispositivo, prueba un plan Internxt."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Señales de que tu dispositivo puede estar infectado",
+    "description": "¿Te preocupa que tu dispositivo esté infectado con malware? Consigue Internxt Antivirus con una suscripción premium para un almacenamiento seguro y una protección completa de tus archivos.",
+    "cards": {
+      "element1": {
+        "title": "Drenaje excesivo de la batería",
+        "description": "Si tu batería se agota más rápido de lo habitual, puede ser una señal de que el malware está ejecutándose en segundo plano, agotando tu energía al utilizar los recursos de tu dispositivo sin que lo sepas."
+      },
+      "element2": {
+        "title": "El sistema falla o se congela frecuentemente",
+        "description": "Los virus pueden hacer que tu sistema falle debido a malware que corrompe tus archivos o programas esenciales, provocando inestabilidad, fallos del sistema o que el dispositivo se congele inesperadamente."
+      },
+      "element3": {
+        "title": "Ventanas o anuncios emergentes",
+        "description": "Las ventanas emergentes inexplicables que aparecen cuando no estás navegando podrían significar que ya existe malware en tu dispositivo, y debes ejecutar un análisis antivirus para evitar mayores daños a tus archivos."
+      },
+      "element4": {
+        "title": "Dispositivos que se sobrecalientan, incluso cuando están inactivos",
+        "description": "De manera similar al de agotar la vida útil de la batería, el malware puede obligar a los dispositivos a robar rendimiento mientras ejecutan tareas de alta intensidad en segundo plano sin que lo sepas, lo que provoca que tu dispositivo se sobrecaliente."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Internxt Antivirus",
+    "titleLine2": "Escanea. Detecta. Protege.",
+    "description": "Mantén tu nube protegida y tus archivos a salvo del malware con protección antivirus de última generación. Disponible en dispositivos de escritorio Windows, Linux y macOS.",
+    "cta": "Obtén Internxt",
+    "cards": {
+      "element1": {
+        "title": "Soluciones de seguridad a medida",
+        "description": "Elimina las amenazas de seguridad al instante y personaliza tus necesidades de seguridad para tus archivos. Elige los archivos en los que deseas realizar un análisis antivirus o elimina varios archivos simultáneamente."
+      },
+      "element2": {
+        "title": "Protección completa",
+        "description": "Hacemos que la defensa contra virus sea rápida y sencilla con un software antivirus avanzado que escanea y elimina malware para limpiar tus archivos. Escanea archivos cuando quieras, optimiza el rendimiento del dispositivo y protégete en línea."
+      },
+      "element3": {
+        "title": "Seguridad en todas las plataformas",
+        "description": "Protección antivirus para Windows, Mac y Linux integrada con tu suscripción premium a Drive. Nos aseguramos de que tus archivos se mantengan limpios para lograr el máximo rendimiento de tu dispositivo sin importar dónde los almacenes."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "¿Qué es el software de antivirus?",
+    "description": "El software antivirus detecta y elimina cualquier programa malicioso (malware) de su dispositivo para evitar amenazas cibernéticas comunes, como virus, spyware y ransomware. Internxt Antivirus está incluido en tu suscripción premium, lo que te permite escanear tus archivos y mantener tu nube segura.",
+    "cards": {
+      "element1": {
+        "description": "Detecta y elimina cualquier programa malicioso "
+      },
+      "element2": {
+        "description": "Escaneo del sistema completo o de archivos personalizados"
+      },
+      "element3": {
+        "description": "Protección de archivos y dispositivos"
+      }
+    }
+  },
+  "InfoSection": {
+    "Percentage": "81%",
+    "PercentageText": "Empresas que sufrieron amenazas de programas maliciosos",
+    "MalwareRegisteredDaily": "300.000+",
+    "MalwareRegisteredDailyText": "Nuevos códigos malignos registrados diariamente",
+    "MalwareAttacks": "190,000",
+    "MalwareAttacksText": "Nuevos ataques de malware cada segundo"
+  },
+  "InfoSectionV2": {
+    "AntivirusProtection": "Protección antivirus para tus archivos",
+    "RemoveMalware": "Elimina cualquier programa malicioso (malware)",
+    "DeviceProtection": "Protege tus dispositivos"
+  }
+}
