@@ -12,6 +12,7 @@ export interface AntivirusText {
 
 export interface ComponentsInColumn {
   title: string;
+  titleLine2: string;
   description: string;
   cta: string;
   cards: ComponentsInColumnCards;

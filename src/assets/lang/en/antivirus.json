@@ -88,7 +88,8 @@
     }
   },
   "FeatureSection": {
-    "title": "Internxt Antivirus Scan. Detect. Protect.",
+    "title": "Internxt Antivirus",
+    "titleLine2": "Scan. Detect. Protect.",
     "description": "Keep your cloud protected and files safe from malware with cutting-edge antivirus protection. Available on Windows, Linux, and macOS desktop devices.",
     "cta": "Get Internxt",
     "cards": {
