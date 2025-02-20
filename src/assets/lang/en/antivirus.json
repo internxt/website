@@ -3,7 +3,13 @@
     "title": "Protect your files with",
     "blueText": "Internxt Antivirus",
     "description": "Defend against malware, phishing, and ransomware with advanced protection hat keeps your files safe.",
-    "eyeBrow": "Internxt Antivirus"
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "Download Internxt Antivirus",
+      "downloadForMac": "Download for Mac",
+      "downloadForWindows": "Download for Windows",
+      "downloadForLinux": "Download for Linux"
+    }
   },
   "cta1": {
     "title": "Internxt Antivirus",
@@ -82,7 +88,8 @@
     }
   },
   "FeatureSection": {
-    "title": "Internxt Antivirus Scan. Detect. Protect.",
+    "title": "Internxt Antivirus",
+    "titleLine2": "Scan. Detect. Protect.",
     "description": "Keep your cloud protected and files safe from malware with cutting-edge antivirus protection. Available on Windows, Linux, and macOS desktop devices.",
     "cta": "Get Internxt",
     "cards": {

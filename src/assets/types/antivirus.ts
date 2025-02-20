@@ -12,6 +12,7 @@ export interface AntivirusText {
 
 export interface ComponentsInColumn {
   title: string;
+  titleLine2: string;
   description: string;
   cta: string;
   cards: ComponentsInColumnCards;
@@ -60,6 +61,14 @@ export interface HeroSection {
   blueText: string;
   description: string;
   eyeBrow: string;
+  DownloadLinks: DownloadLinks;
+}
+
+export interface DownloadLinks {
+  downloadTitle: string;
+  downloadForMac: string;
+  downloadForWindows: string;
+  downloadForLinux: string;
 }
 
 export interface InfoSection {
