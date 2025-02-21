@@ -35,7 +35,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.SoftSales}
+        couponCode={PromoCodeName.freeUserCoupon}
         discount={discount}
         lang={lang}
         percent={'70%'}
