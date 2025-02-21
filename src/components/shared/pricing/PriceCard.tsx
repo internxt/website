@@ -140,19 +140,6 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      {!isBrave && isLifetimePlan && (
-        <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-          <p className="text-base font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
-
-          <div className="flex items-center space-x-2 text-left">
-            <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-            <span className="font-regular text-base leading-5 text-white">
-              {contentText.productFeatures.valentinesFeatures.gift}
-            </span>
-          </div>
-        </div>
-      )}
-
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
