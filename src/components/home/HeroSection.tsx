@@ -58,27 +58,13 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
             <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-          <div className="relative ml-32  hidden h-screen max-h-[700px] w-full justify-center py-40 lg:flex">
-            <Image
-              src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
-              width={653}
-              height={327}
-              alt="Cloud Valentines Hero Section"
-              className="absolute -left-20  z-0 "
-              quality={100}
-            />
-          </div>
 
-          {/* Desktop animation/image
-         
           {!shouldShowMobileBanner ? (
             <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
               <Animation />
             </div>
           ) : undefined}
-          */}
         </div>
-        {/* Mobile version */}
       </div>
     </section>
   );
