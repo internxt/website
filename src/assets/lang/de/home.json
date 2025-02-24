@@ -58,22 +58,24 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Sicherer Cloud-Speicher.",
-        "blueText": "Garantiert."
+        "textBeforeBlueText": " Sicherer ",
+        "blueText": " Cloud-Speicher ",
+        "textAfterBlueText": " und Datenschutz-Suite"
       },
-      "description": {
-        "normal1": "Erhalten Sie ",
-        "blue": "80% Rabatt ",
-        "normal2": "auf alle Premium-Pläne."
-      },
-      "features": ["Zero-Knowledge-Verschlüsselung", "Post-quantum Verschlüsselung", "Open source und geprüft"],
+      "subtitle": "Sicherheit und vollständige Kontrolle.",
+      "description": "Erhalten Sie 80% Rabatt auf unsere Datenschutzdienste",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus und mehr",
+        "Post-Quanten-Verschlüsselung und Zero-Knowledge",
+        "Open-Source und geprüft"
+      ],
       "startFrom": {
-        "normal1": "Starten ab ",
-        "price": " 0.95",
+        "normal1": "Ab ",
+        "price": " 1,99",
         "normal2": " /Monat"
       },
-      "claimDeal": "Angebot sichern",
-      "guarantee": "30 Tage Geld-zurück-Garantie"
+      "claimDeal": "Angebot erhalten",
+      "guarantee": "30-Tage Geld-zurück-Garantie"
     },
     "youKnow": "Wussten Sie das?"
   },

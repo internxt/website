@@ -59,18 +59,20 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Almacenamiento seguro en la nube.",
-        "blueText": "Garantizado."
+        "textBeforeBlueText": " Almacenamiento ",
+        "blueText": " seguro ",
+        "textAfterBlueText": " en la nube y suite de privacidad"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85% de descuento ",
-        "normal2": "en todos los planes de por vida"
-      },
-      "features": ["Cifrado de conocimiento cero", "Criptografía postcuántica", "Código abierto y auditado"],
+      "subtitle": "Seguridad y control completo.",
+      "description": "Obtén 80% de descuento en nuestros servicios de privacidads",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus y más",
+        "Cifrado postcuántico y conocimiento cero",
+        "Código abierto y auditado"
+      ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 0.95",
+        "price": " 1.99",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",

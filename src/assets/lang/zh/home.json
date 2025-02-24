@@ -59,19 +59,16 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "获取",
-        "blueText": "最安全的 ",
-        "line2": "云存储"
+        "textBeforeBlueText": " 安全的 ",
+        "blueText": " 云存储 ",
+        "textAfterBlueText": " 和隐私套件"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85% 折扣 ",
-        "normal2": "适用于所有终身计划"
-      },
-      "features": ["零知识加密", "后量子加密", "开源和审计"],
+      "subtitle": "安全和完全控制。",
+      "description": "我们的隐私服务享受80%折扣",
+      "features": ["Drive、Meet、Mail、VPN、防病毒等", "后量子加密和零知识", "开源和审计"],
       "startFrom": {
         "normal1": "起价 ",
-        "price": " 0.95",
+        "price": " 1.99",
         "normal2": " /月"
       },
       "claimDeal": "获取优惠",

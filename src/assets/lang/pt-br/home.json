@@ -57,25 +57,27 @@
       "upTo": "Até: ",
       "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
+
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Obtenha o",
-        "blueText": "armazenamento em nuvem mais seguro ",
-        "line2": ""
+        "textBeforeBlueText": " Armazenamento ",
+        "blueText": " seguro ",
+        "textAfterBlueText": " na nuvem e suíte de privacidade"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85% de desconto ",
-        "normal2": "em todos os planos vitalícios"
-      },
-      "features": ["Criptografia de conhecimento zero", "Criptografia pós-quântica", "Código aberto e auditado"],
+      "subtitle": "Segurança e controle total.",
+      "description": "Obtenha 80% de desconto em nossos serviços de privacidade",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus e mais",
+        "Criptografia pós-quântica e conhecimento zero",
+        "Código aberto e auditado"
+      ],
       "startFrom": {
         "normal1": "A partir de ",
-        "price": "0,95",
+        "price": " 1,99",
         "normal2": " /mês"
       },
-      "claimDeal": "Reivindicar oferta",
-      "guarantee": "Garantia de devolução do dinheiro em 30 dias"
+      "claimDeal": "Obter oferta",
+      "guarantee": "Garantia de devolução de 30 dias"
     },
     "TitleAndOnePlanV2": {
       "title": {
