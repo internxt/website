@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "85% más barato"
+        "blueText": "70% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,8 +64,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% de descuento ",
-        "normal2": "en todos los planes de por vida"
+        "blue": "70% de descuento ",
+        "normal2": "en todos los planes"
       },
       "features": ["Cifrado de conocimiento cero", "Criptografía postcuántica", "Código abierto y auditado"],
       "startFrom": {

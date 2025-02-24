@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "85% günstiger"
+        "blueText": "70% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -63,7 +63,7 @@
       },
       "description": {
         "normal1": "Erhalten Sie ",
-        "blue": "80% Rabatt ",
+        "blue": "70% Rabatt ",
         "normal2": "auf alle Premium-Pläne."
       },
       "features": ["Zero-Knowledge-Verschlüsselung", "Post-quantum Verschlüsselung", "Open source und geprüft"],

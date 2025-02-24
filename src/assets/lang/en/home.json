@@ -65,8 +65,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% OFF ",
-        "normal2": "all lifetime plans"
+        "blue": "70% OFF ",
+        "normal2": "all plans"
       },
       "features": ["Zero-knowledge encryption", "Post-quantum encryption", "Open source and audited"],
       "startFrom": {
@@ -82,13 +82,13 @@
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "85% OFF "
+        "blue2": "70% OFF "
       },
       "description": {
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "8% OFF "
+        "blue2": "70% OFF "
       },
       "features": [
         "Zero-knowledge military-grade encryption",
