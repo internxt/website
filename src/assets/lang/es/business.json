@@ -183,8 +183,8 @@
     ]
   },
   "ContactSales": {
-    "title": "Contáctanos",
-    "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
+    "title": "Contacta con ventas",
+    "description": "Completa el formulario y nuestro equipo se pondrá en contacto contigo en breves ",
     "form": {
       "name": "Nombre completo",
       "email": "Correo electrónico",
