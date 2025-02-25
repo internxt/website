@@ -4,10 +4,10 @@
       "line1": "Internxt S3 ",
       "line2": "Almacenamiento de objetos compatible con"
     },
-    "description": "Una solución de almacenamiento en la nube eficiente y escalable para almacenar, acceder y administrar datos a gran escala.",
+    "description": "Una solución de almacenamiento eficiente para almacenar, acceder y gestionar datos a gran escala.",
     "cta": "Empieza ya",
     "separator": "|",
-    "cta2": "Contactar ventas"
+    "cta2": "Contáctanos"
   },
   "PredictablePricingSection": {
     "title": "Sin cargos ni tarifas adicionales de API",
@@ -99,7 +99,7 @@
       "description": "Experimente una gestión de datos, velocidad y eficiencia superiores",
       "cta": "Empieza ya",
       "separator": "|",
-      "cta2": "Contactar ventas"
+      "cta2": "Contáctanos"
     }
   },
   "FaqSection": {
@@ -168,8 +168,8 @@
     ]
   },
   "ContactSales": {
-    "title": "Contactar ventas",
-    "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
+    "title": "Contacta con ventas",
+    "description": "Completa el formulario y nuestro equipo se pondrá en contacto contigo en breves ",
     "form": {
       "name": "Nombre Completo",
       "email": "Correo electrónico",
