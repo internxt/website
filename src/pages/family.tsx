@@ -150,7 +150,6 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
         }}
         isFamilyPage={true}
         hideFreeCard
-        startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
