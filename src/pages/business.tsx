@@ -101,7 +101,6 @@ export const BusinessPage = ({
         lang={locale}
         products={products}
         hideFreeCard
-        startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
