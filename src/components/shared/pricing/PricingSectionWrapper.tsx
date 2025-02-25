@@ -37,6 +37,7 @@ interface PricingSectionWrapperProps {
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   isBrave?: boolean;
   hideFeatures?: boolean;
+  CustomDescription?: ReactNode;
 }
 
 export const PricingSectionWrapper = ({
@@ -66,6 +67,7 @@ export const PricingSectionWrapper = ({
   onBusinessPlansSelected,
   darkMode,
   isBrave,
+  CustomDescription,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -116,6 +118,7 @@ export const PricingSectionWrapper = ({
             className="text-regular max-w-[800px] text-xl text-gray-80"
             dangerouslySetInnerHTML={{ __html: highlightKeywords(textContent.planDescription) }}
           />
+          {CustomDescription}
         </div>
 
         <PricingSection
