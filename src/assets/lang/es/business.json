@@ -7,7 +7,7 @@
     ],
     "cta": "Seleccionar plan",
     "separator": "|",
-    "cta2": "Contactar con ventas"
+    "cta2": "Contáctanos"
   },
   "SecureYourCompany": {
     "title": "Protege tu empresa con el almacenamiento en la nube de empresas de Internxt",
@@ -183,7 +183,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contactar con ventas",
+    "title": "Contáctanos",
     "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
     "form": {
       "name": "Nombre completo",

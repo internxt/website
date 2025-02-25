@@ -7,7 +7,7 @@
     "description": "Una solución de almacenamiento eficiente para almacenar, acceder y gestionar datos a gran escala.",
     "cta": "Empieza ya",
     "separator": "|",
-    "cta2": "Contactar con ventas"
+    "cta2": "Contáctanos"
   },
   "PredictablePricingSection": {
     "title": "Sin cargos ni tarifas adicionales de API",
@@ -99,7 +99,7 @@
       "description": "Experimente una gestión de datos, velocidad y eficiencia superiores",
       "cta": "Empieza ya",
       "separator": "|",
-      "cta2": "Contactar con ventas"
+      "cta2": "Contáctanos"
     }
   },
   "FaqSection": {
@@ -168,7 +168,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contactar con ventas",
+    "title": "Contáctanos",
     "description": "Complete el formulario de contacto y el equipo se pondrá en contacto con usted en breve.",
     "form": {
       "name": "Nombre Completo",
