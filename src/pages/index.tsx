@@ -25,6 +25,7 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import { PriceCardText } from '@/assets/types/components/priceCard';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -32,9 +33,17 @@ interface HomeProps {
   navbarLang: NavigationBarText;
   textContent: HomeText;
   footerLang: FooterText;
+  priceCardLang: PriceCardText;
 }
 
-const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
+const HomePage = ({
+  metatagsDescriptions,
+  textContent,
+  lang,
+  navbarLang,
+  footerLang,
+  priceCardLang,
+}: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
   const {
@@ -44,11 +53,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     businessCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
-  });
+  } = usePricing({});
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -109,11 +114,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <TestimonialsSection textContent={textContent.TestimonialsSection} />
 
       <PricingSectionWrapper
-        textContent={textContent.tableSection}
+        textContent={priceCardLang}
         decimalDiscount={{
           individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
@@ -121,11 +125,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
       />
 
       <div className={`${marqueeBgColor} py-10`}>
@@ -183,6 +182,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const textContent = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const priceCardLang = require(`@/assets/lang/${lang}/priceCard.json`);
 
   cookies.setReferralCookie(ctx);
 
@@ -193,6 +193,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       textContent,
       navbarLang,
       footerLang,
+      priceCardLang,
     },
   };
 }

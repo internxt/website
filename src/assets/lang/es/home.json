@@ -63,9 +63,13 @@
         "blueText": " seguro ",
         "textAfterBlueText": " en la nube y ecosistema"
       },
-      "subtitle": "Seguridad y control completo.",
+      "subtitle": "",
       "description": "80% de descuento",
-      "features": ["Drive, Meet, Mail, VPN, Antivirus y más", "Código abierto y auditado"],
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus y más",
+        "Cifrado postcuántico y conocimiento cero",
+        "Código abierto y auditado"
+      ],
       "startFrom": {
         "normal1": "Desde ",
         "price": " 1.99",

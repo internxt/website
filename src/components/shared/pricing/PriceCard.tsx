@@ -1,17 +1,31 @@
-import { Fire, Football, Gift, Heart, Info } from '@phosphor-icons/react';
+import {
+  ArrowsClockwise,
+  CodeBlock,
+  Database,
+  Envelope,
+  Fingerprint,
+  Fire,
+  Gauge,
+  Key,
+  LockSimple,
+  Password,
+  ShieldPlus,
+  VideoConference,
+} from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import { Tooltip } from 'react-tooltip';
+import React from 'react';
+
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
   lang: string;
   label: string;
   isCheckoutForLifetime: boolean;
-  monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
   labelBackground?: string;
@@ -40,7 +54,6 @@ export const PriceCard = ({
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
   checkIconName = 'checkPrimary',
-  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -64,10 +77,25 @@ export const PriceCard = ({
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
-  const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
-  const cardLabel = productCardPlan === 'business' ? businessLabel : label;
+
+  const cardLabel = label;
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
+
+  const iconsFeatures = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    VideoConference,
+    Envelope,
+  ];
+
   return (
     <div
       className={`${
@@ -119,11 +147,6 @@ export const PriceCard = ({
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">{priceBefore}</span>
           </p>
-
-          <p className={`flex text-sm text-gray-50`}>
-            {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
-            {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-          </p>
         </div>
         <button
           id={`planButton${storage}`}
@@ -140,37 +163,20 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      {!isBrave && isLifetimePlan && (
-        <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-          <p className="text-base font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
-
-          <div className="flex items-center space-x-2 text-left">
-            <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-            <span className="font-regular text-base leading-5 text-white">
-              {contentText.productFeatures.valentinesFeatures.gift}
-            </span>
-          </div>
-        </div>
-      )}
 
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
         } pb-6 text-sm`}
       >
-        <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures[productCardPlan][storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              <Image
-                width={16}
-                height={17}
-                loading="lazy"
-                className="translate-y-px select-none"
-                src={getImage(`/icons/${checkIconName}.svg`)}
-                draggable="false"
-                alt="check icon"
-              />
-              <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
+        <div className="flex flex-col gap-4">
+          {contentText.productFeatures.individuals[storage].map((feature, index) => (
+            <div className="flex flex-row items-center gap-2 px-4" key={feature}>
+              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                size: 24,
+                className: 'text-primary',
+              })}
+              <p className="text-gray-80">{feature}</p>
             </div>
           ))}
         </div>

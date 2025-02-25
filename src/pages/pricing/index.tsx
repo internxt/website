@@ -49,11 +49,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     coupon: individualCoupon,
     businessCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
-  });
+  } = usePricing({});
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);

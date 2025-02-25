@@ -82,60 +82,41 @@ export const PricingSectionWrapper = ({
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
   );
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
 
+  const isLifetime = billingFrequency === Interval.Lifetime;
   const individualPlansTitle =
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
-  const businessTitle = textContent.planTitles.business;
-
-  const individualPLansDescription = Interval.Lifetime ? textContent.lifetimeDescription : textContent.planDescription;
-
-  const title = () => {
-    if (isIndividual) {
-      return individualPlansTitle;
-    } else {
-      return businessTitle;
-    }
-  };
 
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
-          {!hideDescription && (
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
-          )}
-          {CustomDescription}
+          {!hideTitle && <Header maxWidth="max-w-4xl">{individualPlansTitle}</Header>}
+          {isLifetime ? <p className="font-regular text-xl text-gray-80">{textContent.lifetimeDescription}</p> : null}
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">{textContent.description}</span>
         </div>
 
         <PricingSection
           textContent={textContent}
           lang={lang}
           billingFrequency={billingFrequency}
-          businessBillingFrequency={businessBillingFrequency}
           lifetimeCoupons={lifetimeCoupons}
           isFamilyPage={isFamilyPage}
           decimalDiscount={{
             subscriptions: decimalDiscount?.individuals,
             lifetime: decimalDiscount?.lifetime,
-            business: decimalDiscount?.business,
           }}
           products={products}
           popularPlanBySize={popularPlanBySize}
           hideFreeCard={hideFreeCard}
-          hideBusinessSelector={hideBusinessSelector}
           hidePlanSelectorComponent={hidePlanSelectorComponent}
-          hideBusinessCards={hideBusinessCards}
           hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
           loadingCards={loadingCards}
           activeSwitchPlan={activeSwitchPlan}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           onPlanTypeChange={onPlanTypeChange}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
-          onBusinessSwitchToggled={onBusinessSwitchToggled}
-          onBusinessPlansSelected={onBusinessPlansSelected}
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
