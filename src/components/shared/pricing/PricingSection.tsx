@@ -7,7 +7,7 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
@@ -51,7 +51,11 @@ interface PriceTableProps {
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
-
+const PLANS_LEVELS = {
+  '1TB': 'Essential ',
+  '3TB': 'Premium ',
+  '5TB': 'Ultimate ',
+};
 export const PricingSection = ({
   textContent,
   products,
@@ -67,7 +71,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   hideSwitchSelector,
   lang,
-  popularPlanBySize = '10TB',
+  popularPlanBySize = '3TB',
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,
@@ -85,11 +89,8 @@ export const PricingSection = ({
   const isBusiness = activeSwitchPlan === 'Business';
   const labelDiscount = '15';
   const showLoadingCards = loadingCards;
-  const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
-  const showSwitchComponent =
-    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -103,16 +104,16 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumCustomerSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.moneyBack,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 
@@ -122,6 +123,10 @@ export const PricingSection = ({
     } else {
       onBusinessSwitchToggled?.(interval);
     }
+  };
+
+  const getPlanLevel = (storage) => {
+    return PLANS_LEVELS[storage];
   };
 
   return (
@@ -135,20 +140,6 @@ export const PricingSection = ({
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
-            darkMode={darkMode}
-          />
-        )}
-
-        {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
-          <SwitchComponent
-            textContent={textContent}
-            show={showSwitchComponent}
-            lang={lang}
-            billedFrequency={billingFrequencyForSwitch}
-            handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={labelDiscount}
-            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
             darkMode={darkMode}
           />
         )}
@@ -175,19 +166,14 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+        <div className="content flex flex-row flex-wrap items-start justify-center justify-items-center">
           {products?.individuals
             ? products.individuals[billingFrequency].map((product) => (
                 <PriceCard
                   isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
-                  label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
+                  label={getPlanLevel(product.storage)}
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
@@ -207,45 +193,6 @@ export const PricingSection = ({
         )}
       </Transition>
 
-      {/* Business plans */}
-      <Transition
-        show={showBusinessCards}
-        enter="transition duration-500 ease-out"
-        enterFrom="scale-95 translate-y-20 opacity-0"
-        enterTo="scale-100 translate-y-0 opacity-100"
-        className="flex w-full flex-col gap-4"
-      >
-        <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
-          {hideBusinessCards ? (
-            <BusinessBanner textContent={banner.BusinessBanner} />
-          ) : (
-            <>
-              {businessBillingFrequency && products?.business
-                ? products.business[businessBillingFrequency].map((product) => (
-                    <PriceCard
-                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                      product={product}
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
-                      monthlyProductPrice={
-                        products.business[Interval.Month].filter(
-                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                        )[0].price
-                      }
-                      key={product.storage}
-                      popular={product.storage === '10TB'}
-                      decimalDiscountValue={decimalDiscount?.business}
-                      isFamilyPage={isFamilyPage}
-                      lang={lang}
-                      darkMode={darkMode}
-                    />
-                  ))
-                : undefined}
-            </>
-          )}
-        </div>
-      </Transition>
       {!hideFeatures && (
         <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
           {features.map((feature) => (

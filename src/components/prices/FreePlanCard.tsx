@@ -11,11 +11,11 @@ const FreePlanCard = ({ textContent }: FreePlanCardProps): JSX.Element => {
     <div className="flex min-h-[300px] w-full flex-col justify-center rounded-2xl border border-gray-10 md:max-h-[208px] md:min-h-[208px]">
       <div className="bg-green flex flex-col items-center space-y-6">
         <div className="flex  max-h-[28px] min-w-[154px] flex-col rounded-full bg-primary/7 text-center">
-          <p className="text-xl font-medium text-primary">{textContent.title}</p>
+          <p className="text-xl font-medium text-primary">{textContent.eyeBrow}</p>
         </div>
         <div className={`flex flex-row items-start justify-start ${isMobile ? 'px-20' : 'px-10'} text-center`}>
           <CheckSquare className="min-h-[24px] min-w-[24px] pt-1 text-primary" />
-          <p className="font-regular text-lg text-gray-80">{textContent.getStarted}</p>
+          <p className="font-regular text-lg text-gray-80">{textContent.description}</p>
         </div>
 
         <button

@@ -37,18 +37,7 @@ interface HomeProps {
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
   const router = useRouter();
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    businessCoupon,
-    lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
-  });
+  const { products, loadingCards, currencyValue, coupon: individualCoupon, lifetimeCoupons } = usePricing({});
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -85,14 +74,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
-    const planType = isBusiness ? 'business' : 'individual';
+    const planType = 'individual';
 
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, PromoCodeName.SoftSales);
   };
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   return (
@@ -112,8 +96,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.tableSection}
         decimalDiscount={{
           individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
@@ -121,11 +104,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

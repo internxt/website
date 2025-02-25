@@ -35,7 +35,6 @@ interface PricingSectionWrapperProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
-  CustomDescription?: ReactNode;
   isBrave?: boolean;
   hideFeatures?: boolean;
 }
@@ -65,7 +64,6 @@ export const PricingSectionWrapper = ({
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
-  CustomDescription,
   darkMode,
   isBrave,
 }: PricingSectionWrapperProps): JSX.Element => {
@@ -83,7 +81,7 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-
+  const isLifetime = activeSwitchPlan === 'Lifetime';
   const individualPlansTitle =
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
   const businessTitle = textContent.planTitles.business;
@@ -98,16 +96,26 @@ export const PricingSectionWrapper = ({
     }
   };
 
+  const highlightKeywords = (text) => {
+    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
+    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
+
+    return text.replace(regex, '<strong>$1</strong>');
+  };
+
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
-          {!hideDescription && (
+          {isLifetime && (
             <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
           )}
-          {CustomDescription}
+          <span
+            className="text-regular max-w-[800px] text-xl text-gray-80"
+            dangerouslySetInnerHTML={{ __html: highlightKeywords(textContent.planDescription) }}
+          />
         </div>
 
         <PricingSection

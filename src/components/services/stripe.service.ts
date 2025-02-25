@@ -21,7 +21,8 @@ export enum Products {
   '200GB' = '200GB',
   '2TB' = '2TB',
   '5TB' = '5TB',
-  '10TB' = '10TB',
+  '1TB' = '1TB',
+  '3TB' = '3TB',
 }
 
 interface ProductValue {
@@ -78,6 +79,7 @@ async function getCurrency(currencySpecified?: string): Promise<string> {
 async function fetchProductData(currency: string) {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
+    console.log('res', res.data);
     return res.data;
   } catch (error) {
     console.error('Error fetching product data:', error);

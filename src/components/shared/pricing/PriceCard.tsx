@@ -1,17 +1,30 @@
-import { Fire, Football, Gift, Heart, Info } from '@phosphor-icons/react';
+import {
+  ArrowsClockwise,
+  CodeBlock,
+  Database,
+  Envelope,
+  Fingerprint,
+  Fire,
+  Gauge,
+  Key,
+  LockSimple,
+  Password,
+  ShieldPlus,
+  VideoConference,
+} from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-import { Tooltip } from 'react-tooltip';
+import React from 'react';
+
 export interface PriceCardProps {
   product: TransformedProduct;
   popular: boolean;
   lang: string;
   label: string;
   isCheckoutForLifetime: boolean;
-  monthlyProductPrice: number;
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
   labelBackground?: string;
@@ -40,7 +53,6 @@ export const PriceCard = ({
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
   checkIconName = 'checkPrimary',
-  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -61,6 +73,12 @@ export const PriceCard = ({
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
 
+  const priceNowAnnual = decimalDiscountValue
+    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
+    : Number(price / 12)
+        .toFixed(2)
+        .replace('.00', '');
+
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -68,29 +86,45 @@ export const PriceCard = ({
   const cardLabel = productCardPlan === 'business' ? businessLabel : label;
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
+
+  const iconsFeatures = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    VideoConference,
+    Envelope,
+  ];
+
   return (
     <div
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      } m-2 flex ${cardMaxWidth} max-h-[680px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl ${
+        className={`info flex min-h-[280px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pt-6`}
       >
-        <div className="flex flex-col items-center justify-center space-y-4">
-          {popular ? (
-            <div
-              className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-${colorCard} px-3 py-1`}
-            >
-              <Fire size={28} className="text-white" />
-              <p className="font-semibold text-white">{contentText.mostPopular}</p>
-            </div>
-          ) : null}
-          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
-            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
+        <div className="flex flex-col items-center justify-center">
+          <div
+            className={`flex flex-row items-center justify-center space-x-2 rounded-full px-3 py-1 transition-all ${
+              popular ? `bg-${colorCard}` : 'invisible opacity-0'
+            }`}
+          >
+            <Fire size={28} className="text-white" />
+            <p className="font-semibold text-white">{contentText.mostPopular}</p>
           </div>
+        </div>
+
+        <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
+          <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
         </div>
         <div
           className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
@@ -106,7 +140,10 @@ export const PriceCard = ({
               } flex flex-row items-start space-x-1 whitespace-nowrap font-medium`}
             >
               <span className={`currency`}>{currency}</span>
-              <span className="price text-4xl font-bold">{fixedDiscountPriceNow ?? priceNow}</span>
+              <span className="price text-4xl font-bold">
+                {fixedDiscountPriceNow ?? isLifetimePlan ? priceNow : priceNowAnnual}
+              </span>
+              <span className="self-end font-semibold">{contentText.perMonth}</span>
             </p>
           </div>
           <p
@@ -122,7 +159,6 @@ export const PriceCard = ({
 
           <p className={`flex text-sm text-gray-50`}>
             {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
-            {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
           </p>
         </div>
         <button
@@ -140,37 +176,21 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      {!isBrave && isLifetimePlan && (
-        <div className="mx-auto w-full space-y-2 bg-pink-dark px-4 py-3">
-          <p className="text-base font-bold text-white">{contentText.productFeatures.valentinesFeatures.title}</p>
-
-          <div className="flex items-center space-x-2 text-left">
-            <Heart size={22} className="flex-shrink-0 text-white" weight="fill" />
-            <span className="font-regular text-base leading-5 text-white">
-              {contentText.productFeatures.valentinesFeatures.gift}
-            </span>
-          </div>
-        </div>
-      )}
 
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } pb-6 text-sm`}
+        } min-h-[470px] pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures[productCardPlan][storage].map((feature) => (
+          {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              <Image
-                width={16}
-                height={17}
-                loading="lazy"
-                className="translate-y-px select-none"
-                src={getImage(`/icons/${checkIconName}.svg`)}
-                draggable="false"
-                alt="check icon"
-              />
+              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                size: 24,
+                className: 'text-primary',
+              })}
               <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
+              {index > 8 ? <span className="rounded-lg bg-orange/10 px-1 text-orange">Coming Soon</span> : null}
             </div>
           ))}
         </div>
