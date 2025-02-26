@@ -50,9 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
+    couponCode: PromoCodeName.SpringCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -113,11 +111,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
+    const couponCodeForCheckout = individualCoupon?.name;
 
     const planType = isBusiness ? 'business' : 'individual';
 

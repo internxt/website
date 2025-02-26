@@ -67,7 +67,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   hideSwitchSelector,
   lang,
-  popularPlanBySize = '10TB',
+  popularPlanBySize = '3TB',
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,

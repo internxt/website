@@ -142,67 +142,72 @@
         "normal2": "als andere sichere Cloud-Speicher-Alternativen"
       }
     },
+    "planTypes": {
+      "essentials": "Essentials",
+      "standard": "Standard",
+      "premium": "Premium",
+      "ultimate": "Ultimate",
+      "pro": "Pro"
+    },
     "individuals": {
-      "200GB": [
-        "200 GB verschlüsselter Speicher",
-        "Zero-Knowledge-Verschlüsselung",
-        "Passwortgeschützte Dateifreigabe",
-        "Post-quantum Verschlüsselung",
-        "Zugriff auf Ihre Dateien von jedem Gerät aus",
-        "Dateien bis zu 20 GB hochladen",
+      "1TB": [
+        "1TB Zero-Knowledge-verschlüsselter Speicher",
+        "Post-Quanten-Verschlüsselung",
+        "Ultraschnelles unbegrenztes VPN (FR)",
+        "Antivirus",
+        "Sichern Sie Ihre Dateien",
+        "Passwortgeschütztes Datei-Sharing",
+        "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "Premium-Kundensupport"
+        "CLI-, WebDav- & Rclone-Unterstützung"
       ],
-      "2TB": [
-        "2TB verschlüsselter Speicher",
-        "Zero-Knowledge-Verschlüsselung",
-        "Passwortgeschützte Dateifreigabe",
-        "Post-quantum Verschlüsselung",
-        "Zugriff auf Ihre Dateien von jedem Gerät aus",
-        "Dateien bis zu 20 GB hochladen",
+      "3TB": [
+        "3TB Zero-Knowledge-verschlüsselter Speicher",
+        "Post-Quanten-Verschlüsselung",
+        "Ultraschnelles unbegrenztes VPN (FR, DE, PL)",
+        "Antivirus",
+        "Sichern Sie Ihre Dateien",
+        "Passwortgeschütztes Datei-Sharing",
+        "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "Premium-Kundensupport"
+        "CLI-, WebDav- & Rclone-Unterstützung",
+        "Meet (3 Teilnehmer)",
+        "Mail (3 Adressen)"
       ],
       "5TB": [
-        "5TB verschlüsselter Speicher",
-        "Zero-Knowledge-Verschlüsselung",
-        "Passwortgeschützte Dateifreigabe",
-        "Post-quantum Verschlüsselung",
-        "Zugriff auf Ihre Dateien von jedem Gerät aus",
-        "Dateien bis zu 20 GB hochladen",
+        "5TB Zero-Knowledge-verschlüsselter Speicher",
+        "Post-Quanten-Verschlüsselung",
+        "Ultraschnelles unbegrenztes VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Sichern Sie Ihre Dateien",
+        "Passwortgeschütztes Datei-Sharing",
+        "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "Premium-Kundensupport"
+        "CLI-, WebDav- & Rclone-Unterstützung",
+        "Meet (5 Teilnehmer)",
+        "Mail (5 Adressen)"
       ],
-      "10TB": [
-        "10TB verschlüsselter Speicher",
-        "Zero-Knowledge-Verschlüsselung",
-        "Passwortgeschützte Dateifreigabe",
-        "Post-quantum Verschlüsselung",
-        "Zugriff auf Ihre Dateien von jedem Gerät aus",
-        "Dateien bis zu 20 GB hochladen",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "Premium-Kundensupport"
-      ]
+      "10TB": []
     },
     "business": {
       "1TB": [
-        "1TB Speicher/Benutzer",
+        "1TB Speicher/Nutzer",
         "Zero-Knowledge-Verschlüsselung",
-        "Benutzer und Teams erstellen und verwalten",
-        "Ab 3 Benutzern und bis zu 10",
-        "DSGVO-konform",
-        "Dateien bis zu 5GB hochladen",
-        "Kontenabrechnung und Zahlungen verwalten",
+        "Erstellen und verwalten Sie Benutzer & Teams",
+        "Ab 3 Benutzer bis zu 10",
+        "Garantierte DSGVO-Konformität",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Verwalten Sie Kontorechnungen & Zahlungen",
         "Premium-Kundensupport"
       ],
       "2TB": [
-        "2TB Speicher/Benutzer",
+        "2TB Speicher/Nutzer",
         "Zero-Knowledge-Verschlüsselung",
-        "Benutzer und Teams erstellen und verwalten",
-        "Ab 3 Benutzern und bis zu 100",
-        "DSGVO-konform",
-        "Dateien bis zu 20GB hochladen",
-        "Kontenabrechnung und Zahlungen verwalten",
+        "Erstellen und verwalten Sie Benutzer & Teams",
+        "Ab 3 Benutzer bis zu 100",
+        "Garantierte DSGVO-Konformität",
+        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Verwalten Sie Kontorechnungen & Zahlungen",
         "Premium-Kundensupport"
       ]
     }
