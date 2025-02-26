@@ -59,25 +59,26 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Obtenez le",
-        "blueText": "stockage cloud le plus sécurisé ",
-        "line2": ""
+        "textBeforeBlueText": "Stockage ",
+        "blueText": "sécurisé ",
+        "textAfterBlueText": "dans le cloud et l'écosystème"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85 % de réduction ",
-        "normal2": "sur tous les plans à vie"
-      },
-      "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
+      "subtitle": "Sécurité et contrôle complets.",
+      "description": "80% de réduction",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus et plus",
+        "Cryptographie post-quantique et connaissance zéro",
+        "Open-source et audité"
+      ],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 0.95",
+        "price": " 1,99",
         "normal2": " /mois"
       },
-      "claimDeal": "Obtenir l'offre",
+      "claimDeal": "Obtenez l'offre",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
-    "youKnow": "Le saviez-vous ?"
+    "youKnow": "Saviez-vous cela?"
   },
   "FeatureSectionV2": {
     "title": "Chiffrement sans connaissance : vous seul pouvez voir vos données",
