@@ -61,5 +61,6 @@
     "amountSaved": "Save ",
     "withAnnualBilling": "with annual billing"
   },
-  "oneTimePayment": "*A €1 one-time fee is required for account verification"
+  "oneTimePayment": "*A €1 one-time fee is required for account verification",
+  "error500": "Please introduce a valid VAT ID"
 }

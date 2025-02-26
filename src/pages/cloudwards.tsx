@@ -29,7 +29,7 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 20;
+  const offerDiscount = 15;
   const { currencyValue } = usePricing({});
 
   function handlePriceCardButton(planId, coupon) {
