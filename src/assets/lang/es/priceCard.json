@@ -4,6 +4,7 @@
   "save": "Ahorra hasta un",
   "valentines": "¡Oferta especial de San Valentín!",
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
+  "discount": "% OFF",
   "planTitles": {
     "individuals": "Planes individuales",
     "homePage": "Elige el plan adecuado para ti",
@@ -27,6 +28,7 @@
     "individual": "Individual",
     "business": "Empresa"
   },
+  "perYear": "€/año",
   "businessLabels": {
     "1TB": "Standard",
     "2TB": "Pro",
