@@ -107,17 +107,17 @@
     "planTitles": {
       "individuals": "Plans individuels",
       "homePage": "Choisissez le plan qui vous convient",
-      "lifetime": "Planes à vie",
-      "business": "Plans d'entreprise",
+      "lifetime": "Plans à vie",
+      "business": "Plans pour les entreprises",
       "lifetimeCampaign": {
         "blueText": "50% de réduction",
-        "normalText": "tous nos plans exclusifs à vie"
+        "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
-    "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
-    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
-    "businessDescription2": "Assurez la sécurité des données d'entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "lifetimeDescription": "Payez une fois et obtenez une confidentialité et une sécurité à vie",
+    "planDescription": "Tous les plans Internxt offrent un accès complet à notre pack de solutions privées avec la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et garantir votre rentabilité.",
+    "businessDescription2": "Garantissez la sécurité des données de l'entreprise avec les plans de stockage cloud cryptés d'Internxt.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",

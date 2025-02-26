@@ -146,7 +146,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
             lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-            business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
           lang={lang}
           products={products}
@@ -155,11 +154,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
-          CustomDescription={
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {textContent.tableSection.planDescription}
-            </span>
-          }
+          hideBusinessCards
+          hideBusinessSelector
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

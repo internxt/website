@@ -42,14 +42,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
+    couponCode: PromoCodeName.SpringCoupon,
   });
-  const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
   const marqueeBgColor = 'bg-white';
@@ -80,21 +76,19 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     router.push('/pricing');
   };
 
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
-
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
-    const planType = isBusiness ? 'business' : 'individual';
-
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    const couponCodeForCheckout = individualCoupon?.name;
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
   };
+
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -111,21 +105,16 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          individuals: decimalDiscount,
+          lifetime: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
         products={products}
         loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>

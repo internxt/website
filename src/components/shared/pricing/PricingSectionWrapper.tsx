@@ -86,9 +86,13 @@ export const PricingSectionWrapper = ({
 
   const individualPlansTitle =
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
+
   const businessTitle = textContent.planTitles.business;
 
-  const individualPLansDescription = Interval.Lifetime ? textContent.lifetimeDescription : textContent.planDescription;
+  const lifetimeSubtitles = billingFrequency === Interval.Lifetime ? textContent.lifetimeDescription : '';
+  const individualPLansDescription = textContent.planDescription;
+
+  const businessPlanDescription = textContent.businessDescription2;
 
   const title = () => {
     if (isIndividual) {
@@ -98,16 +102,35 @@ export const PricingSectionWrapper = ({
     }
   };
 
+  const description = () => {
+    if (isIndividual) {
+      return individualPLansDescription;
+    } else {
+      return businessPlanDescription;
+    }
+  };
+
+  const highlightKeywords = (text) => {
+    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
+    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
+
+    return text.replace(regex, '<strong>$1</strong>');
+  };
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
-          {!hideDescription && (
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">{individualPLansDescription}</span>
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
+          {CustomDescription ? (
+            CustomDescription
+          ) : (
+            <span
+              className="text-regular max-w-[800px] text-xl text-gray-80"
+              dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
+            />
           )}
-          {CustomDescription}
         </div>
 
         <PricingSection
