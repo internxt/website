@@ -5,6 +5,7 @@
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
   "save": "Save ",
+  "discount": "% OFF ",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -53,6 +54,7 @@
     "freeForever": "Free forever",
     "free": "Up to "
   },
+  "perYear": "€/year",
   "perMonth": "/month",
   "firstMonth": "First 30 days",
   "cta": {

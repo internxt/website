@@ -5,6 +5,7 @@
   "valentines": "情人節特別優惠！",
   "onlyForNewClients": "僅適用於新訂閱者或免費計劃用戶",
   "redeemCode": "兌換代碼",
+  "discount": "% OFF",
   "planTitles": {
     "individuals": "個人計劃",
     "lifetime": "終身計劃",
@@ -49,6 +50,7 @@
   "perUser": "每用戶",
   "users": "用戶",
   "freePlan": "免費",
+  "perYear": "€/年",
   "price": {
     "freeForever": "永遠免費",
     "free": "高達"
