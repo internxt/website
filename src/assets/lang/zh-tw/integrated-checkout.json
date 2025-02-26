@@ -61,5 +61,6 @@
     "amountSaved": "節省 ",
     "withAnnualBilling": "按年計費"
   },
-  "oneTimePayment": "*帳戶驗證需要一次性費用1€"
+  "oneTimePayment": "*帳戶驗證需要一次性費用1€",
+  "error500": "請輸入有效的增值稅號"
 }

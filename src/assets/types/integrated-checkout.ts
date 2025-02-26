@@ -9,6 +9,7 @@ export interface IntegratedCheckoutText {
   paymentTitle: string;
   productCard: ProductCard;
   oneTimePayment: string;
+  error500: string;
 }
 
 export interface AddressBilling {
