@@ -59,25 +59,22 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "獲取",
-        "blueText": "最安全的 ",
-        "line2": "雲端存儲"
+        "textBeforeBlueText": "存储空间 ",
+        "blueText": "安全 ",
+        "textAfterBlueText": "在云端和生态系统中"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85% 折扣 ",
-        "normal2": "適用於所有終身方案"
-      },
-      "features": [" 零知識加密", "後量子加密", "開源和審計"],
+      "subtitle": "完全的安全和控制。",
+      "description": "80%折扣",
+      "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
-        "normal1": "起價 ",
-        "price": " 0.95",
+        "normal1": "从 ",
+        "price": " 1.99",
         "normal2": " /月"
       },
-      "claimDeal": "獲取優惠",
-      "guarantee": "30天退款保證"
+      "claimDeal": "领取优惠",
+      "guarantee": "30天退款保证"
     },
-    "youKnow": "你知道嗎？"
+    "youKnow": "你知道吗？"
   },
   "FeatureSectionV2": {
     "title": "零知識加密：只有您可以看到您的數據",
