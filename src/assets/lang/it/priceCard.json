@@ -142,71 +142,72 @@
         "normal2": "rispetto ad altre alternative di cloud storage sicuro"
       }
     },
+    "planTypes": {
+      "essentials": "Essenziali",
+      "standard": "Standard",
+      "premium": "Premium",
+      "ultimate": "Definitivo",
+      "pro": "Pro"
+    },
     "individuals": {
-      "200GB": [
-        "200 GB di archiviazione crittografata",
-        "Crittografia a conoscenza zero",
-        "Condivisione protetta da password",
-        "Crittografia a conoscenza zero",
-        "Accedi ai tuoi file da qualsiasi dispositivo",
-        "Carica file fino a 20 GB",
+      "1TB": [
+        "1TB di archiviazione crittografata a conoscenza zero",
+        "Crittografia post-quantistica",
+        "VPN ultraveloce illimitata (FR)",
+        "Antivirus",
+        "Esegui il backup dei tuoi file",
+        "Condivisione di file protetta da password",
+        "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
-        "Supporto premium per i clienti",
-        "Garanzia di rimborso di 30 giorni"
+        "Supporto CLI, WebDav e Rclone"
       ],
-      "2TB": [
-        "2TB di archiviazione crittografata",
-        "Crittografia a conoscenza zero",
-        "Condivisione protetta da password",
-        "Crittografia a conoscenza zero",
-        "Accedi ai tuoi file da qualsiasi dispositivo",
-        "Carica file fino a 20 GB",
+      "3TB": [
+        "3TB di archiviazione crittografata a conoscenza zero",
+        "Crittografia post-quantistica",
+        "VPN ultraveloce illimitata (FR, DE, PL)",
+        "Antivirus",
+        "Esegui il backup dei tuoi file",
+        "Condivisione di file protetta da password",
+        "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
-        "Supporto premium per i clienti",
-        "Garanzia di rimborso di 30 giorni"
+        "Supporto CLI, WebDav e Rclone",
+        "Meet (3 partecipanti)",
+        "Mail (3 indirizzi)"
       ],
       "5TB": [
-        "5TB di archiviazione crittografata",
-        "Crittografia a conoscenza zero",
-        "Condivisione protetta da password",
-        "Crittografia a conoscenza zero",
-        "Accedi ai tuoi file da qualsiasi dispositivo",
-        "Carica file fino a 20 GB",
+        "5TB di archiviazione crittografata a conoscenza zero",
+        "Crittografia post-quantistica",
+        "VPN ultraveloce illimitata (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Esegui il backup dei tuoi file",
+        "Condivisione di file protetta da password",
+        "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
-        "Supporto premium per i clienti",
-        "Garanzia di rimborso di 30 giorni"
+        "Supporto CLI, WebDav e Rclone",
+        "Meet (5 partecipanti)",
+        "Mail (5 indirizzi)"
       ],
-      "10TB": [
-        "10TB di archiviazione crittografata",
-        "Crittografia a conoscenza zero",
-        "Condivisione protetta da password",
-        "Crittografia a conoscenza zero",
-        "Accedi ai tuoi file da qualsiasi dispositivo",
-        "Carica file fino a 20 GB",
-        "Autenticazione a due fattori (2FA)",
-        "Supporto premium per i clienti",
-        "Garanzia di rimborso di 30 giorni"
-      ]
+      "10TB": []
     },
     "business": {
       "1TB": [
         "1TB di archiviazione/utente",
         "Crittografia a conoscenza zero",
-        "Creare e gestire utenti e team",
-        "A partire da 3 utenti e fino a 10",
-        "Conforme al GDPR",
-        "Caricare file fino a 5GB",
-        "Gestire la fatturazione e i pagamenti dell'account",
+        "Crea e gestisci utenti e team",
+        "Da 3 utenti fino a 10",
+        "Conformità GDPR garantita",
+        "Autenticazione a due fattori (2FA)",
+        "Gestisci la fatturazione e i pagamenti",
         "Assistenza clienti premium"
       ],
       "2TB": [
         "2TB di archiviazione/utente",
         "Crittografia a conoscenza zero",
-        "Creare e gestire utenti e team",
-        "A partire da 3 utenti e fino a 100",
-        "Conforme al GDPR",
-        "Caricare file fino a 20GB",
-        "Gestire la fatturazione e i pagamenti dell'account",
+        "Crea e gestisci utenti e team",
+        "Da 3 utenti fino a 100",
+        "Conformità GDPR garantita",
+        "Autenticazione a due fattori (2FA)",
+        "Gestisci la fatturazione e i pagamenti",
         "Assistenza clienti premium"
       ]
     }
