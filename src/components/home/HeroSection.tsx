@@ -60,7 +60,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           {!shouldShowMobileBanner ? (
-            <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <div className=" hidden h-screen max-h-[667px] w-full justify-center pt-10 lg:flex">
               <Animation />
             </div>
           ) : undefined}

@@ -28,7 +28,7 @@ const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps):
   }, []);
 
   return (
-    <div className="max-w-[544px] flex-col pt-8 lg:pt-20">
+    <div className="min-h-[630px] max-w-[544px] flex-col pt-8 lg:pt-20">
       {header ?? (
         <div className="flex flex-col gap-10 ">
           <div className="flex flex-col">
