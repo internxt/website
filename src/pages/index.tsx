@@ -42,12 +42,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
   });
-  const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
   const marqueeBgColor = 'bg-white';
@@ -78,14 +76,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     router.push('/pricing');
   };
 
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
-
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    const planType = isBusiness ? 'business' : 'individual';
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
@@ -108,19 +101,14 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         decimalDiscount={{
           individuals: decimalDiscount,
           lifetime: decimalDiscount,
-          business: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
         products={products}
         loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>
@@ -141,7 +129,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
                   router.push('/pricing');
                 }}
               />
-              <RevealY className="content flex w-full flex-col bg-primary px-5 pt-6">
+              <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
                 <Image
                   src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
                   alt="Internxt secure cloud storage"
