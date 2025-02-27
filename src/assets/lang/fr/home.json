@@ -126,16 +126,16 @@
       "business": "Entreprise"
     },
     "freePlanCard": {
-      "getStarted": "Commencez avec notre plan gratuit",
-      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
-      "upTo": "Jusqu'à 10 Go",
-      "freeForever": "Gratuit pour toujours",
-      "cta": "Sélectionner un plan"
+      "eyeBrow": "Internxt Free",
+      "description": "Obtenez jusqu'à 1 Go de stockage cloud chiffré et profitez de notre écosystème privé : VPN (FR), CLI/WebDav/Rclone et bien plus encore.",
+      "cta": "Sélectionner le plan"
     },
     "features": {
-      "endToEnd": "Chiffré de bout en bout",
-      "openSource": "Open-source et vérifié",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "ChooseStorageSizeSection": {

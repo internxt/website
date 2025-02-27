@@ -123,16 +123,16 @@
       "business": "商业"
     },
     "freePlanCard": {
-      "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
-      "upTo": "最高1GB",
-      "freeForever": "永久免费",
-      "cta": "选择计划"
+      "eyeBrow": "Internxt Free",
+      "description": "获取高达 1GB 的加密云存储，并享受我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "cta": "选择方案"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源且经过审核",
-      "anonymousAccount": "匿名帐户创建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "ChooseStorageSizeSection": {
