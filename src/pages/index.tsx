@@ -46,8 +46,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
   });
   const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
@@ -85,16 +83,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
+    const couponCodeForCheckout = individualCoupon?.name;
     const planType = isBusiness ? 'business' : 'individual';
-
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
+
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -111,9 +106,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-          lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-          business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          individuals: decimalDiscount,
+          lifetime: decimalDiscount,
+          business: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
@@ -136,7 +131,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
+              <h2 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.FeatureSectionV2.title}</h2>
               <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
             </div>
             <div className="flex flex-col items-center gap-12">

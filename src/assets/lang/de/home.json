@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "85% günstiger"
+        "blueText": "70% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -69,6 +69,7 @@
         "Post-Quanten-Kryptografie und Null-Wissen",
         "Open-Source und geprüft"
       ],
+
       "startFrom": {
         "normal1": "Ab ",
         "price": " 1,99",

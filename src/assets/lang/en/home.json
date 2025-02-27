@@ -70,6 +70,7 @@
         "Post-quantum zero-knowledge encryption",
         "Open source and audited"
       ],
+
       "startFrom": {
         "normal1": "Start from ",
         "price": " 0.85",
@@ -83,13 +84,13 @@
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "85% OFF "
+        "blue2": "70% OFF "
       },
       "description": {
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "8% OFF "
+        "blue2": "70% OFF "
       },
       "features": [
         "Zero-knowledge military-grade encryption",
