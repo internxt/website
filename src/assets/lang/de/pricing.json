@@ -74,16 +74,16 @@
       "business": "Geschäftlich"
     },
     "freePlanCard": {
-      "getStarted": "Starten Sie mit unserem kostenlosen Plan",
-      "enjoy10gb": "Genießen Sie dauerhaft bis zu 1 GB und erhalten Sie Zugriff auf alle unsere Dienstleistungen",
-      "upTo": "1 GB",
-      "freeForever": "Für immer kostenlos",
+      "eyeBrow": "Internxt Free",
+      "description": "Erhalte bis zu 1 GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
       "cta": "Plan auswählen"
     },
     "features": {
-      "endToEnd": "End-to-End-verschlüsselt",
-      "openSource": "Open Source und überprüft",
-      "anonymousAccount": "Anonyme Kontenerstellung"
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-tägige Geld-zurück-Garantie"
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",

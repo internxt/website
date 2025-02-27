@@ -69,16 +69,16 @@
       "business": "商業"
     },
     "freePlanCard": {
-      "getStarted": "從我們的免費計劃開始使用",
-      "enjoy10gb": "享受 1 GB 的存储空间，并可永久使用我们的所有服务。",
-      "upTo": "1GB",
-      "freeForever": "永遠免費",
-      "cta": "選擇計劃"
+      "eyeBrow": "Internxt Free",
+      "description": "获取高达 1GB 的加密云存储，并享受我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "cta": "选择方案"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "開源且經過審計",
-      "anonymousAccount": "匿名帳戶創建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "FaqSection": {

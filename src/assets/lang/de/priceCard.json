@@ -69,10 +69,8 @@
     "freemonth": "Erhalte 30 Tage kostenlos"
   },
   "freePlanCard": {
-    "getStarted": "Starten Sie mit unserem kostenlosen Plan",
-    "enjoy10gb": "Genießen Sie dauerhaft bis zu 1 GB und erhalten Sie Zugriff auf alle unsere Dienstleistungen",
-    "upTo": "1 GB",
-    "freeForever": "Für immer kostenlos",
+    "eyeBrow": "Internxt Kostenlos",
+    "description": "Erhalte bis zu 1GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
     "cta": "Plan auswählen"
   },
   "features": {
