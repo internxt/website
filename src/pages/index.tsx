@@ -44,7 +44,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.SoftSales,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -78,13 +78,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    stripeService.redirectToCheckout(
-      priceId,
-      currencyValue,
-      'individual',
-      isCheckoutForLifetime,
-      couponCodeForCheckout,
-    );
+    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
@@ -125,7 +119,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
+              <h2 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.FeatureSectionV2.title}</h2>
               <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
             </div>
             <div className="flex flex-col items-center gap-12">
