@@ -1,0 +1,137 @@
+{
+  "HeroSection": {
+    "title": "Protégez vos fichiers avec",
+    "blueText": "Internxt Antivirus",
+    "description": "Protégez-vous contre les logiciels malveillants, le phishing et les rançongiciels avec notre antivirus. Gardez tous vos fichiers en sécurité et protégés.",
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "Téléchargez Internxt Antivirus",
+      "downloadForMac": "Télécharger pour Mac",
+      "downloadForWindows": "Télécharger pour Windows",
+      "downloadForLinux": "Télécharger pour Linux"
+    }
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Protégez vos fichiers contre les logiciels malveillants pour une sécurité et une protection maximales",
+    "cta": "Achetez votre plan"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Protection maximale pour vos fichiers",
+    "cta": "Obtenez Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce qu'un antivirus ?",
+        "answer": [
+          "Le logiciel antivirus protège vos fichiers et vos dispositifs contre les logiciels malveillants en surveillant et en scannant les fichiers à la recherche de signatures de malware connues. Une fois qu'une analyse antivirus détecte et identifie un logiciel malveillant, la menace est éliminée et vos fichiers restent sécurisés et protégés."
+        ]
+      },
+      {
+        "question": "Ai-je besoin d'un antivirus ?",
+        "answer": [
+          "Sans protection antivirus, votre dispositif est vulnérable aux attaques malveillantes et votre vie privée ainsi que vos données sont en danger. Il existe également un risque accru d'infection, de perte de données, de violation de la vie privée et de dommages au système.",
+          "Comme Internxt Antivirus est inclus dans votre abonnement, vous bénéficiez d'un stockage cloud privé et d'une protection complète pour vos dispositifs et fichiers."
+        ]
+      },
+      {
+        "question": "Quels dispositifs sont compatibles avec l'antivirus Internxt ?",
+        "answer": [
+          "L'antivirus Internxt inclut un antivirus pour Microsoft ainsi que pour Mac et Linux, disponible via un abonnement premium avec l'application de bureau Internxt Drive."
+        ]
+      },
+      {
+        "question": "Puis-je obtenir uniquement l'antivirus Internxt ?",
+        "answer": [
+          "Non, Internxt Antivirus fait partie de nos plans d'abonnement payants et ne peut pas être acheté séparément. Avec un abonnement mensuel de 9,99€, vous obtenez un stockage cloud privé, un antivirus, un VPN et bien plus encore."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre un malware et un virus ?",
+        "answer": [
+          "Le terme malware désigne de manière générale tout logiciel, programme ou code conçu pour endommager, exploiter ou obtenir un accès non autorisé à un réseau ou à un dispositif. Il inclut les virus et s'étend à d'autres programmes malveillants tels que les rançongiciels, les spywares, les vers et les chevaux de Troie.",
+          "Un virus est un type spécifique de malware qui se fixe à vos fichiers et se propage à d'autres systèmes lorsqu'il est ouvert ou exécuté. En effectuant régulièrement une analyse antivirus avec Internxt, vous pouvez identifier et éliminer ces menaces."
+        ]
+      },
+      {
+        "question": "Quel est le meilleur logiciel antivirus ?",
+        "answer": [
+          "Le meilleur logiciel antivirus dépend de vos besoins et préférences spécifiques. Il est toujours recommandé de rechercher différentes options et de choisir celle qui correspond le mieux à votre budget, à votre dispositif et aux fonctionnalités supplémentaires dont vous avez besoin.",
+          "Si vous avez besoin d'un antivirus pour Mac, Windows ou Linux intégré à votre stockage cloud, avec un système rapide et simple pour scanner et éliminer les virus de votre dispositif, essayez un plan Internxt."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Signes que votre dispositif pourrait être infecté",
+    "description": "Vous craignez que votre dispositif soit infecté par un malware ? Procurez-vous Internxt Antivirus avec un abonnement premium pour un stockage sécurisé et une protection complète de vos fichiers.",
+    "cards": {
+      "element1": {
+        "title": "Consommation excessive de la batterie",
+        "description": "Si votre batterie se décharge plus rapidement que d'habitude, cela peut être un signe que le malware fonctionne en arrière-plan et utilise les ressources de votre dispositif sans que vous le sachiez."
+      },
+      "element2": {
+        "title": "Système qui plante ou se fige fréquemment",
+        "description": "Les virus peuvent faire planter votre système en corrompant des fichiers ou des programmes essentiels, provoquant ainsi une instabilité, des pannes système ou des blocages inattendus."
+      },
+      "element3": {
+        "title": "Fenêtres ou pop-ups",
+        "description": "Les pop-ups inexpliqués qui apparaissent lorsque vous ne naviguez pas pourraient indiquer que votre dispositif est déjà infecté par un malware. Effectuez une analyse antivirus pour éviter d'autres dommages à vos fichiers."
+      },
+      "element4": {
+        "title": "Dispositifs qui surchauffent, même lorsqu'ils sont inactifs",
+        "description": "Tout comme une consommation excessive de la batterie, le malware peut forcer votre dispositif à exécuter des tâches intensives en arrière-plan, entraînant une surchauffe."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "Sécurité tout-en-un pour défendre vos dispositifs contre toute menace de données",
+    "description": "Protégez votre cloud et tous vos fichiers contre les logiciels malveillants avec une protection antivirus de pointe. Disponible pour les ordinateurs de bureau sous Windows, Linux et macOS.",
+    "cta": "Obtiens Internxt",
+    "cards": {
+      "element1": {
+        "title": "Solutions de sécurité sur mesure",
+        "description": "Éliminez immédiatement les menaces et personnalisez vos besoins de sécurité pour vos fichiers. Choisissez les fichiers à analyser ou supprimez plusieurs fichiers simultanément."
+      },
+      "element2": {
+        "title": "Protection complète",
+        "description": "Nous rendons la défense contre les virus rapide et simple grâce à un logiciel antivirus avancé qui scanne et élimine les logiciels malveillants pour nettoyer vos fichiers. Scannez vos fichiers quand vous le souhaitez, optimisez les performances de votre dispositif et protégez-vous en ligne."
+      },
+      "element3": {
+        "title": "Sécurité sur toutes les plateformes",
+        "description": "Protection antivirus pour Windows, Mac et Linux intégrée à votre abonnement premium à Drive. Nous veillons à ce que vos fichiers restent propres afin d'assurer des performances optimales, où que vous les stockiez."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Qu'est-ce que le logiciel antivirus ?",
+    "description": "Le logiciel antivirus détecte et élimine tout programme malveillant (malware) de votre dispositif afin d'éviter les menaces informatiques courantes telles que les virus, les spywares et les rançongiciels. Internxt Antivirus est inclus dans votre abonnement premium, vous permettant de scanner vos fichiers et de maintenir votre cloud en sécurité.",
+    "cards": {
+      "element1": {
+        "description": "Détecte et élimine tout programme malveillant"
+      },
+      "element2": {
+        "description": "Analyse complète du système ou analyse personnalisée de fichiers"
+      },
+      "element3": {
+        "description": "Protection des fichiers et des dispositifs"
+      }
+    }
+  },
+  "InfoSection": {
+    "Percentage": "81%",
+    "PercentageText": "Entreprises ayant subi des menaces de logiciels malveillants",
+    "MalwareRegisteredDaily": "300.000+",
+    "MalwareRegisteredDailyText": "Nouveaux codes malveillants enregistrés quotidiennement",
+    "MalwareAttacks": "190,000",
+    "MalwareAttacksText": "Nouveaux attaques de malware chaque seconde"
+  },
+  "InfoSectionV2": {
+    "AntivirusProtection": "Protection antivirus pour vos fichiers",
+    "RemoveMalware": "Élimine tout logiciel malveillant (malware)",
+    "DeviceProtection": "Protège vos dispositifs"
+  }
+}

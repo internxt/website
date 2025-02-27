@@ -611,6 +611,10 @@ export default function Footer({
                       <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
                       </Link>
+
+                      <Link href="/antivirus" locale={lang} passHref className="flex items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.antivirus}
+                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>

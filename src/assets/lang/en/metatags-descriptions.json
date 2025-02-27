@@ -383,5 +383,10 @@
     "id": "internxt-brave",
     "title": "Internxt x Brave - Special offer for Brave Private Browser users",
     "description": "Internxt has partnered with Brave Private Browser to offer secure, private, and encrypted cloud storage."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protect your devices from malware with Internxt Antivirus",
+    "description": "Internxt Antivirus scans and removes viruses from your files. Protect your devices from malware and ensure complete security in the cloud."
   }
 ]

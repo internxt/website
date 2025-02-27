@@ -113,8 +113,7 @@ export const ItemsNavigation = ({
           label={textContent.links.products}
           items={[
             { href: '/drive', text: textContent.products.drive },
-            { href: '/cloud-object-storage', text: textContent.products.s3 },
-            { href: 'https://send.internxt.com', text: textContent.products.send },
+            { href: '/antivirus', text: textContent.products.antivirus },
             { href: '/vpn', text: textContent.products.vpn },
           ]}
           darkMode={darkMode}

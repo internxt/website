@@ -22,7 +22,8 @@
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
     "comingSoon": "В разработке",
-    "new": "Новый"
+    "new": "Новый",
+    "antivirus": "Internxt Antivirus"
   },
   "Auth": {
     "SignUp": {
