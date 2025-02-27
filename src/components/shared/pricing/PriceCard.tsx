@@ -113,9 +113,9 @@ export const PriceCard = ({
     <div
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} max-h-[760px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
+      } m-2 flex ${cardMaxWidth} max-h-[820px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
-      <div className="flex flex-col items-center justify-center pt-6">
+      <div className="flex flex-col items-center justify-center pb-6 pt-6">
         <div
           className={`flex flex-row items-center justify-center space-x-2 rounded-full px-3 py-1 transition-all ${
             popular ? `bg-${colorCard}` : 'invisible opacity-0'
@@ -196,7 +196,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } min-h-[470px] pb-6 text-sm`}
+        } min-h-[420px] pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
@@ -207,7 +207,7 @@ export const PriceCard = ({
               })}
               <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
               {index > (isBusiness ? 9 : 8) ? (
-                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+                <span className="rounded-md bg-orange/10 px-1 text-center text-orange">{contentText.commingSoon}</span>
               ) : null}
             </div>
           ))}
