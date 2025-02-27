@@ -51,8 +51,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -113,16 +111,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
-
+    const couponCodeForCheckout = individualCoupon?.name;
     const planType = isBusiness ? 'business' : 'individual';
-
     stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
   };
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>

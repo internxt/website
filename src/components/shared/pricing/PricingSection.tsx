@@ -7,7 +7,7 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
@@ -103,16 +103,16 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.guarantee,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 

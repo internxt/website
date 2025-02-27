@@ -74,16 +74,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Inizia con il nostro piano gratuito",
-      "enjoy10gb": "Goditi 1 GB per sempre e accedi a tutti i nostri servizi",
-      "upTo": "1 GB",
-      "freeForever": "Gratuito per sempre",
-      "cta": "Seleziona piano"
+      "eyeBrow": "Internxt Free",
+      "description": "Ottieni fino a 1 GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato: VPN (FR), CLI/WebDav/Rclone e molto altro.",
+      "cta": "Seleziona il piano"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open source e verificato",
-      "anonymousAccount": "Creazione di account anonimi"
+      "openSource": "Open-source e verificato",
+      "anonymousAccount": "Creazione anonima dell'account",
+      "premiumSupport": "Assistenza clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
   "FaqSection": {
