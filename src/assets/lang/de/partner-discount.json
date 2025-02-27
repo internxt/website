@@ -25,7 +25,9 @@
     "features": {
       "endToEnd": "Ende-zu-Ende-Verschlüsselung",
       "openSource": "Open-Source und geprüft",
-      "anonymousAccount": "Anonyme Kontoerstellung"
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-tägige Geld-zurück-Garantie"
     }
   },
   "FeatureSection": {
