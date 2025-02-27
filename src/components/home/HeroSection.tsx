@@ -49,7 +49,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   height={1000}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="HeroSection Mobile Image"
-
                   onClick={handleOnClick}
                 />
               </div>
@@ -60,7 +59,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           </div>
 
           {!shouldShowMobileBanner ? (
-            <div className=" hidden h-screen max-h-[600px] w-full justify-center pt-6 lg:flex">
+            <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
               <Animation />
             </div>
           ) : undefined}
