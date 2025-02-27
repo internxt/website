@@ -64,6 +64,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.business}
+      <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />
     </button>
   </div>
 );

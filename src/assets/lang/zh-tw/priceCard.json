@@ -69,11 +69,9 @@
     "freemonth": "獲取 30 天免費"
   },
   "freePlanCard": {
-    "getStarted": "從我們的免費計劃開始使用",
-    "enjoy10gb": "享受 1 GB 的存储空间，并可永久使用我们的所有服务。",
-    "upTo": "1GB",
-    "freeForever": "永遠免費",
-    "cta": "選擇計劃"
+    "eyeBrow": "Internxt 免费",
+    "description": "获取高达 1GB 的加密云存储，并享受我们的私人生态系统：VPN（法国）、CLI/WebDav/Rclone 等更多功能。",
+    "cta": "选择计划"
   },
   "features": {
     "enjoyForever": {

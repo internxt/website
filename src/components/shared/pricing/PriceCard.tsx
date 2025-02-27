@@ -182,7 +182,6 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'

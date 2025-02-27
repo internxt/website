@@ -60,11 +60,11 @@ const TestimonialsSection = ({
   ];
 
   return (
-    <section className={`overflow-hidden ${bgColor ?? 'bg-white'} px-5 py-20 lg:px-16`}>
+    <section className={`overflow-hidden ${bgColor ?? 'bg-white'} lg:py:20 px-5 py-10 lg:px-16`}>
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
-          <p className="text-center text-4xl font-semibold !leading-tight sm:text-5xl">
+          <p className="text-center text-3xl font-semibold !leading-tight sm:text-5xl">
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
