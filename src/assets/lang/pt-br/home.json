@@ -65,8 +65,8 @@
       },
       "description": {
         "normal1": "",
-        "blue": "85% de desconto ",
-        "normal2": "em todos os planos vitalícios"
+        "blue": "70% de desconto ",
+        "normal2": "em todos os planos"
       },
       "features": ["Criptografia de conhecimento zero", "Criptografia pós-quântica", "Código aberto e auditado"],
       "startFrom": {

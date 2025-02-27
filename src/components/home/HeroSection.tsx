@@ -22,8 +22,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/campaigns/valentines/internxt_superbowl2025_mobile.webp');
-  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
+  const mobileImage = getImage('/images/home/image_mobile.webp');
+  const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
   const handleOnClick = () => {
@@ -48,7 +48,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   width={600}
                   height={1000}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Superbowl Mobile Image"
+                  alt="HeroSectiond Mobile Image"
                   onClick={handleOnClick}
                 />
               </div>
@@ -58,27 +58,13 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
             <TitleAndOnePlan textContent={titleAndOnePlanText} />
           </div>
-          <div className="relative ml-32  hidden h-screen max-h-[700px] w-full justify-center py-40 lg:flex">
-            <Image
-              src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
-              width={653}
-              height={327}
-              alt="Cloud Valentines Hero Section"
-              className="absolute -left-20  z-0 "
-              quality={100}
-            />
-          </div>
 
-          {/* Desktop animation/image
-         
           {!shouldShowMobileBanner ? (
             <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
               <Animation />
             </div>
           ) : undefined}
-          */}
         </div>
-        {/* Mobile version */}
       </div>
     </section>
   );
