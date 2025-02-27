@@ -4,6 +4,7 @@
   "save": "Économisez ",
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
+  "discount": "% OFF",
   "planTitles": {
     "individuals": "Plans individuels",
     "homePage": "Choisissez le plan qui vous convient",
@@ -35,6 +36,7 @@
       "2TB": "Family Premium"
     }
   },
+  "perYear": "€/an",
   "billingFrequencyLabel": {
     "lifetime": "Paiement unique",
     "monthly": "Facturé mensuellement",

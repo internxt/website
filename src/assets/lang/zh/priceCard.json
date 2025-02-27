@@ -4,6 +4,7 @@
   "save": "省高达",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
+  "discount": "% OFF ",
   "planTitles": {
     "individuals": "个人计划",
     "homePage": "选择适合您的计划",
@@ -50,6 +51,7 @@
   },
   "perUserSlash": "每用户/",
   "perUser": "每个用户",
+  "perYear": "€/年",
   "users": "用户",
   "freePlan": "免费",
   "price": {

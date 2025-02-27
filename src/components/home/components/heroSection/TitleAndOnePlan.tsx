@@ -28,7 +28,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
   }, []);
 
   return (
-    <div className="max-w-[544px] flex-col pt-8 lg:pt-20">
+    <div className="max-w-[544px] flex-col pt-8 lg:pt-24">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
@@ -69,13 +69,13 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
         <div className="flex flex-col items-center lg:flex-row">
           <Link
             href={'#priceTable'}
-            className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+            className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
           >
             {textContent.claimDeal}
           </Link>
         </div>
-        <div className="hidden w-full max-w-[240px] flex-col items-center rounded-lg bg-primary/45 text-primary shadow-sm lg:flex lg:justify-center">
-          <Countdown textFont="font-medium" textHeight="text-xl text-white" />
+        <div className="hidden w-full max-w-[164px] flex-col items-center rounded-lg bg-primary/7 text-primary shadow-sm lg:flex lg:justify-center">
+          <Countdown textFont="font-medium" textHeight="text-xl text-gray-100" />
         </div>
       </div>
 

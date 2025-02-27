@@ -183,11 +183,6 @@ export const PricingSection = ({
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
@@ -228,11 +223,6 @@ export const PricingSection = ({
                       onCheckoutButtonClicked={onCheckoutButtonClicked}
                       productCardPlan="business"
                       label={product.storage}
-                      monthlyProductPrice={
-                        products.business[Interval.Month].filter(
-                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                        )[0].price
-                      }
                       key={product.storage}
                       popular={product.storage === '10TB'}
                       decimalDiscountValue={decimalDiscount?.business}
