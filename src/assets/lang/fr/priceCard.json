@@ -5,6 +5,7 @@
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "discount": "% OFF",
+  "commingSoon": "Bientôt disponible",
   "planTitles": {
     "individuals": "Plans individuels",
     "homePage": "Choisissez le plan qui vous convient",
@@ -189,23 +190,31 @@
     "business": {
       "1TB": [
         "1TB de stockage/utilisateur",
-        "Chiffrement à connaissance zéro",
-        "Créer et gérer des utilisateurs & équipes",
-        "À partir de 3 utilisateurs et jusqu'à 10",
-        "Conformité RGPD garantie",
+        "Chiffrement post-quantique",
+        "VPN ultra rapide et illimité (FR, DE, PL)",
+        "Antivirus",
+        "Sauvegarde de vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Gérez la facturation et les paiements",
-        "Support client premium"
+        "Support CLI, WebDav & Rclone",
+        "Gérer la facturation et les paiements du compte",
+        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
+        "1 adresse e-mail personnalisée/utilisateur"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
-        "Chiffrement à connaissance zéro",
-        "Créer et gérer des utilisateurs & équipes",
-        "À partir de 3 utilisateurs et jusqu'à 100",
-        "Conformité RGPD garantie",
+        "Chiffrement post-quantique",
+        "VPN ultra rapide et illimité (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Sauvegarde de vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Gérez la facturation et les paiements",
-        "Support client premium"
+        "Support CLI, WebDav & Rclone",
+        "Gérer la facturation et les paiements du compte",
+        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
+        "1 adresse e-mail personnalisée/utilisateur"
       ]
     }
   }

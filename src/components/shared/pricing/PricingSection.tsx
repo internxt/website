@@ -220,11 +220,16 @@ export const PricingSection = ({
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
+                      monthlyProductPrice={
+                        products.business[Interval.Month].filter(
+                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                        )[0].price
+                      }
                       onCheckoutButtonClicked={onCheckoutButtonClicked}
                       productCardPlan="business"
                       label={product.storage}
                       key={product.storage}
-                      popular={product.storage === '10TB'}
+                      popular={product.storage === '2TB'}
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}

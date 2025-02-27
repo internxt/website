@@ -5,6 +5,7 @@
   "valentines": "Offerta speciale di San Valentino!",
   "onlyForNewClients": "Solo per i nuovi abbonati o per gli utenti del piano gratuito",
   "discount": "% OFF",
+  "commingSoon": "Disponibile presto",
   "planTitles": {
     "individuals": "Piani individuali",
     "homePage": "Scegli il piano giusto per te",
@@ -190,23 +191,31 @@
     "business": {
       "1TB": [
         "1TB di archiviazione/utente",
-        "Crittografia a conoscenza zero",
-        "Crea e gestisci utenti e team",
-        "Da 3 utenti fino a 10",
-        "Conformità GDPR garantita",
+        "Crittografia post-quantistica",
+        "VPN ultra veloce e illimitata (FR, DE, PL)",
+        "Antivirus",
+        "Backup dei tuoi file",
+        "Condivisione di file protetta da password",
+        "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
-        "Gestisci la fatturazione e i pagamenti",
-        "Assistenza clienti premium"
+        "Supporto CLI, WebDav & Rclone",
+        "Gestisci fatturazione e pagamenti dell'account",
+        "Riunioni fino a 10 utenti (max. 10 partecipanti)",
+        "1 indirizzo email personalizzato/utente"
       ],
       "2TB": [
         "2TB di archiviazione/utente",
-        "Crittografia a conoscenza zero",
-        "Crea e gestisci utenti e team",
-        "Da 3 utenti fino a 100",
-        "Conformità GDPR garantita",
+        "Crittografia post-quantistica",
+        "VPN ultra veloce e illimitata (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup dei tuoi file",
+        "Condivisione di file protetta da password",
+        "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
-        "Gestisci la fatturazione e i pagamenti",
-        "Assistenza clienti premium"
+        "Supporto CLI, WebDav & Rclone",
+        "Gestisci fatturazione e pagamenti dell'account",
+        "Riunioni fino a 10 utenti (max. 10 partecipanti)",
+        "1 indirizzo email personalizzato/utente"
       ]
     }
   }

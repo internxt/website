@@ -32,6 +32,7 @@ export interface PriceCardProps {
   decimalDiscountValue?: number;
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
+  monthlyProductPrice?: number;
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
@@ -53,6 +54,7 @@ export const PriceCard = ({
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
   checkIconName = 'checkPrimary',
+  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -111,7 +113,7 @@ export const PriceCard = ({
     <div
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} max-h-[780px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
+      } m-2 flex ${cardMaxWidth} max-h-[760px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div className="flex flex-col items-center justify-center pt-6">
         <div
@@ -204,7 +206,9 @@ export const PriceCard = ({
                 className: 'text-primary',
               })}
               <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
-              {index > 8 ? <span className="rounded-lg bg-orange/10 px-1 text-orange">Coming Soon</span> : null}
+              {index > (isBusiness ? 9 : 8) ? (
+                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+              ) : null}
             </div>
           ))}
         </div>

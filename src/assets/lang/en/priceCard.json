@@ -6,6 +6,7 @@
   "redeemCode": "Redeem code",
   "save": "Save ",
   "discount": "% OFF ",
+  "commingSoon": "Coming soon",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -189,23 +190,31 @@
     "business": {
       "1TB": [
         "1TB storage/user",
-        "Zero-knowledge encryption",
-        "Create and manage users & teams",
-        "Starting at 3 users and up to 10",
-        "Guaranteed GDPR compliance",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
+        "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Premium customer support"
+        "Meet up to 10 users (max. 10 participants)",
+        "1 custom email address/user"
       ],
       "2TB": [
         "2TB storage/user",
-        "Zero-knowledge encryption",
-        "Create and manage users & teams",
-        "Starting at 3 users and up to 100",
-        "Guaranteed GDPR compliance",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
+        "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Premium customer support"
+        "Meet up to 10 users (max. 10 participants)",
+        "1 custom email address/user"
       ]
     }
   }

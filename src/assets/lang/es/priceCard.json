@@ -1,10 +1,11 @@
 {
   "mostPopular": "Más popular",
   "mostPopularPlan": "Plan más popular",
-  "save": "Ahorra hasta un",
+  "save": "Ahorra hasta ",
   "valentines": "¡Oferta especial de San Valentín!",
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "discount": "% OFF",
+  "commingSoon": "Próximamente",
   "planTitles": {
     "individuals": "Planes individuales",
     "homePage": "Elige el plan adecuado para ti",
