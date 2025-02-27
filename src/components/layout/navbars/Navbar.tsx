@@ -309,25 +309,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                   </div>
                                 </Link>
 
-                                <Link href="/cloud-object-storage" locale={props.lang} passHref legacyBehavior>
-                                  <div className="flex flex-row space-x-2">
-                                    <HardDrives className="h-6 w-6 text-gray-80" />
-                                    <p>{props.textContent.products.s3}</p>
-                                  </div>
-                                </Link>
-
-                                <a
-                                  href="https://send.internxt.com"
-                                  target="_blank"
-                                  rel="noreferrer"
-                                  className="flex flex-row items-center"
-                                >
-                                  <div className="flex flex-row space-x-2">
-                                    <PaperPlaneTilt className="h-6 w-6 text-gray-80" />
-                                    <p>{props.textContent.products.send}</p>
-                                  </div>
-                                </a>
-
                                 <Link href="/vpn" locale={props.lang} passHref legacyBehavior>
                                   <div className="flex flex-row space-x-2">
                                     <HardDrives className="h-6 w-6 text-gray-80" />
