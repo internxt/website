@@ -141,7 +141,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
                   router.push('/pricing');
                 }}
               />
-              <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+              <RevealY className="content flex w-full flex-col bg-primary px-5 pt-6">
                 <Image
                   src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
                   alt="Internxt secure cloud storage"
