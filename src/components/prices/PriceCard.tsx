@@ -139,7 +139,9 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${'border-primary ring-[1px]'} flex max-h-[740px] min-h-[740px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${
+        popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
+      } flex max-h-[740px] min-h-[740px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
         className={`info flex max-h-[340px]  min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}

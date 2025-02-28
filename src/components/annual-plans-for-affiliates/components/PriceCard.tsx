@@ -136,7 +136,7 @@ export default function PriceCard({
       <div className="featureList flex max-h-[500px] min-h-[500px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+            <div className="flex flex-row items-start space-x-1 first:font-semibold" key={feature}>
               {React.createElement(iconsFeatures[index % iconsFeatures.length], {
                 size: 24,
                 className: 'text-primary',
