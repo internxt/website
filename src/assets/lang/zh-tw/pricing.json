@@ -58,7 +58,7 @@
       }
     },
     "lifetimeDescription": "一次購買，永久享受隱私和安全。",
-    "planDescription": "所有 Internxt 計劃都具有完整的功能，完全訪問我們的所有隱私服務。適用於各種規模的安全保障。",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
     "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
     "businessDescription2": "通過 Internxt 的加密雲存儲計劃確保企業數據安全。",
     "billingFrequency": {
@@ -70,7 +70,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "获取高达 1GB 的加密云存储，并享受我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "description": "免费 – 免费获取 1GB 加密云存储",
       "cta": "选择方案"
     },
     "features": {

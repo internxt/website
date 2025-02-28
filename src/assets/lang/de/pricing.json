@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",
-    "planDescription": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten vollständigen Zugriff auf alle unsere Datenschutzdienste. Sicherheit für alle Formen und Größen.",
+    "planDescription": "Alle Internxt-Pläne bieten vollen Zugang zu unserem Paket privater Lösungen mit der neuesten Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die ausschließlich darauf ausgelegt sind, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
     "businessDescription2": "Stellen Sie die Sicherheit von Unternehmensdaten mit den verschlüsselten Cloud-Speicherplänen von Internxt sicher.",
     "billingFrequency": {
@@ -75,7 +75,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Erhalte bis zu 1 GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
+      "description": "Erhalte 1 GB verschlüsselten Cloud-Speicher kostenlos",
       "cta": "Plan auswählen"
     },
     "features": {

@@ -59,9 +59,9 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "存储空间 ",
-        "blueText": "安全 ",
-        "textAfterBlueText": "在云端和生态系统中"
+        "textBeforeBlueText": "生态系统 ",
+        "blueText": "安全",
+        "textAfterBlueText": " 在云端"
       },
       "subtitle": "完全的安全和控制。",
       "description": "70%折扣",
@@ -124,7 +124,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "获取高达 1GB 的加密云存储，并享受我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "description": "免费 – 免费获取 1GB 加密云存储",
       "cta": "选择方案"
     },
     "features": {

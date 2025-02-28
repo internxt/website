@@ -58,9 +58,9 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Speicherplatz ",
-        "blueText": "sicher ",
-        "textAfterBlueText": "in der Cloud und Ökosystem"
+        "textBeforeBlueText": "Ecosystem ",
+        "blueText": "sicher",
+        "textAfterBlueText": " in der Cloud"
       },
       "subtitle": "Komplette Sicherheit und Kontrolle.",
       "description": "70% Rabatt",
@@ -127,7 +127,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Erhalte bis zu 1 GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
+      "description": "Erhalte 1 GB verschlüsselten Cloud-Speicher kostenlos",
       "cta": "Plan auswählen"
     },
     "features": {

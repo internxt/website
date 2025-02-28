@@ -183,7 +183,8 @@ export const PriceCard = ({
           </p>
           {decimalDiscountValue && (
             <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
-              {percentOff} {contentText.discount}
+              {percentOff}
+              {contentText.discount}
               {showTotalDiscountPrice && (
                 <>
                   {' | '}

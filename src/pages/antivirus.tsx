@@ -14,6 +14,7 @@ import FeatureSectionV2 from '@/components/antivirus/FeatureSectionV2';
 import FeatureSection from '@/components/antivirus/FeatureSection';
 import HeroSection from '@/components/antivirus/HeroSection';
 import { InfoSection } from '@/components/antivirus/InfoSecction';
+import { downloadDriveLinks } from '@/lib/get-download-url';
 
 interface AntivirusProps {
   lang: GetServerSidePropsContext['locale'];
@@ -22,14 +23,9 @@ interface AntivirusProps {
   langJson: AntivirusText;
   footerLang: FooterText;
   download: {
-    Android: string;
-    iPad: string;
-    iPhone: string;
     Windows: any;
     MacOS: any;
-    UNIX: any;
     Linux: any;
-    all: string;
   };
 }
 
@@ -168,6 +164,7 @@ const AntivirusPage = ({
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const download = await downloadDriveLinks();
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
@@ -184,6 +181,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       langJson,
       navbarLang,
       footerLang,
+      download,
     },
   };
 }
