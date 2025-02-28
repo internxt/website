@@ -205,6 +205,9 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
                     </Link>
                     <Link
                       href="/business"
@@ -213,9 +216,6 @@ export default function Footer({
                       className="flex max-w-[250px] items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.business}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </div>
                     </Link>
 
                     <Link
@@ -225,9 +225,6 @@ export default function Footer({
                       className="flex max-w-[250px] items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.family}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </div>
                     </Link>
 
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
