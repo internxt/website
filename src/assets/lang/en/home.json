@@ -153,8 +153,8 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "Free Get 1GB of encrypted cloud storage for free",
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
