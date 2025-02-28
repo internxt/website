@@ -70,7 +70,9 @@ export const PriceCard = ({
   const isLifetime = interval === 'lifetime';
   const isAnnual = interval === 'year';
 
-  const showMonthlyLabel = productCardPlan === 'business' || (interval === 'year' && productCardPlan === 'individuals');
+  const showMonthlyLabel =
+    (productCardPlan === 'business' && interval === 'month') ||
+    (interval === 'year' && productCardPlan === 'individuals');
   const showTotalDiscountPrice = interval === 'year';
 
   const priceNow = decimalDiscountValue
@@ -83,7 +85,7 @@ export const PriceCard = ({
         .toFixed(2)
         .replace('.00', '')
     : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.00', '');
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.0', '');
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -171,7 +173,7 @@ export const PriceCard = ({
           >
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">
-              {isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+              {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
             </span>
           </p>
 

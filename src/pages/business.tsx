@@ -96,7 +96,7 @@ export const BusinessPage = ({
       <PricingSectionWrapper
         loadingCards={loadingCards}
         decimalDiscount={{
-          business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+          business: 30,
         }}
         lang={locale}
         products={products}
