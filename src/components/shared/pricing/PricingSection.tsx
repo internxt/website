@@ -196,7 +196,7 @@ export const PricingSection = ({
             : undefined}
         </div>
         {!hideFreeCard && (
-          <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
+          <div id="freeAccountCard" className="content flex w-full px-6 pb-10 md:px-0 md:pb-0">
             <FreePlanCard textContent={textContent.freePlanCard} />
           </div>
         )}
@@ -245,7 +245,7 @@ export const PricingSection = ({
         <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary md:pb-0" />
+              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
               <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
             </div>
           ))}

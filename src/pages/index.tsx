@@ -78,7 +78,13 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;

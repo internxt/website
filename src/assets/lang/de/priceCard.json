@@ -142,7 +142,7 @@
       }
     },
     "planTypes": {
-      "essentials": "Essentials",
+      "essentials": "Essential",
       "standard": "Standard",
       "premium": "Premium",
       "ultimate": "Ultimate",
@@ -200,7 +200,7 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 10 Benutzern (max. 10 Teilnehmer)",
+        "Meetings mit bis zu 100 Benutzern",
         "1 benutzerdefinierte E-Mail-Adresse pro Benutzer"
       ],
       "2TB": [
@@ -214,8 +214,8 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 10 Benutzern (max. 10 Teilnehmer)",
-        "1 benutzerdefinierte E-Mail-Adresse pro Benutzer"
+        "Meetings mit bis zu 100 Benutzern ",
+        "2 benutzerdefinierte E-Mail-Adresse pro Benutzer"
       ]
     }
   }

@@ -200,7 +200,7 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
         "Gestisci fatturazione e pagamenti dell'account",
-        "Riunioni fino a 10 utenti (max. 10 partecipanti)",
+        "Riunioni fino a 10 utenti ",
         "1 indirizzo email personalizzato/utente"
       ],
       "2TB": [
@@ -214,8 +214,8 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
         "Gestisci fatturazione e pagamenti dell'account",
-        "Riunioni fino a 10 utenti (max. 10 partecipanti)",
-        "1 indirizzo email personalizzato/utente"
+        "Riunioni fino a 100 utenti",
+        "2 indirizzo email personalizzato/utente"
       ]
     }
   }

@@ -1,5 +1,5 @@
 {
-  "mostPopular": "Más popular",
+  "mostPopular": "Recomendado",
   "mostPopularPlan": "Plan más popular",
   "save": "Ahorra hasta ",
   "valentines": "¡Oferta especial de San Valentín!",
@@ -141,7 +141,7 @@
       }
     },
     "planTypes": {
-      "essentials": "Essentials",
+      "essentials": "Essential",
       "standard": "Standard",
       "premium": "Premium",
       "ultimate": "Ultimate",
@@ -199,7 +199,7 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Reuniones de hasta 10 usuarios (máx. 10 participantes)",
+        "Reuniones de hasta 10 usuarios",
         "1 correo electrónico personalizado/usuario "
       ],
       "2TB": [
@@ -213,8 +213,8 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Reuniones de hasta 10 usuarios (máx. 10 participantes)",
-        "1 correo electrónico personalizado/usuario "
+        "Reuniones de hasta 100 usuarios ",
+        "2 correos electrónico personalizado/usuario "
       ],
       "20GB": []
     }

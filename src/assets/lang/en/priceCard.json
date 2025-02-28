@@ -1,5 +1,5 @@
 {
-  "mostPopular": "Most popular",
+  "mostPopular": "RECOMMENDED",
   "mostPopularPlan": "Most Popular Plan",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
@@ -141,7 +141,7 @@
       }
     },
     "planTypes": {
-      "essentials": "Essentials",
+      "essentials": "Essential",
       "standard": "Standard",
       "premium": "Premium",
       "ultimate": "Ultimate",
@@ -184,8 +184,7 @@
         "CLI, WebDav & Rclone support",
         "Meet (5 participants)",
         "Mail (5 addresses)"
-      ],
-      "10TB": []
+      ]
     },
     "business": {
       "1TB": [
@@ -199,7 +198,7 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet up to 10 users (max. 10 participants)",
+        "Meet up to 10 users",
         "1 custom email address/user"
       ],
       "2TB": [
@@ -213,10 +212,9 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet up to 10 users (max. 10 participants)",
-        "1 custom email address/user"
-      ],
-      "20GB": []
+        "Meet up to 100 users ",
+        "2 custom email address/user"
+      ]
     }
   }
 }

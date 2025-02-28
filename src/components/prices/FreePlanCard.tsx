@@ -8,7 +8,7 @@ interface FreePlanCardProps {
 const FreePlanCard = ({ textContent }: FreePlanCardProps): JSX.Element => {
   const { openDialog } = useGlobalDialog();
   return (
-    <div className="flex min-h-[300px] w-full flex-col justify-center rounded-2xl border border-gray-10 md:max-h-[208px] md:min-h-[208px]">
+    <div className="flex min-h-[300px] w-full flex-col justify-center rounded-2xl border border-gray-10 py-4 md:max-h-[208px] md:min-h-[208px]">
       <div className="bg-green flex flex-col items-center space-y-6">
         <div className="flex  max-h-[28px] min-w-[154px] flex-col rounded-full bg-primary/7 text-center">
           <p className="text-xl font-medium text-primary">{textContent.eyeBrow}</p>

@@ -141,7 +141,7 @@
       }
     },
     "planTypes": {
-      "essentials": "Essentiels",
+      "essentials": "Essentiel",
       "standard": "Standard",
       "premium": "Premium",
       "ultimate": "Ultime",
@@ -199,8 +199,8 @@
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
-        "1 adresse e-mail personnalisée/utilisateur"
+        "Réunions jusqu'à 10 utilisateurs",
+        "1 adresse e-mail personnalisée/utiliateur"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
@@ -213,8 +213,8 @@
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
-        "1 adresse e-mail personnalisée/utilisateur"
+        "Réunions jusqu'à 100 utilisateurs ",
+        "2 adresse e-mail personnalisée/utilisateur"
       ]
     }
   }

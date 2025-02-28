@@ -67,29 +67,37 @@ export const PriceCard = ({
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
 
-  const isLifetimePlan = interval === 'lifetime';
+  const isLifetime = interval === 'lifetime';
+  const isAnnual = interval === 'year';
+
   const showMonthlyLabel = productCardPlan === 'business' || (interval === 'year' && productCardPlan === 'individuals');
   const showTotalDiscountPrice = interval === 'year';
-  const fixedDiscountWithDecimals = fixedDiscount && Math.abs(fixedDiscount / 100).toFixed(2);
-  const fixedDiscountPriceNow = fixedDiscount ? price - Number(fixedDiscountWithDecimals) : undefined;
+
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
-
-  const annualSave = ((Number(price) - Number(priceNow)) * 12).toFixed(2).replace('.00', '');
+  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
+  const monthlyPriceBefore = decimalDiscountValue
+    ? Number(price / 12)
+        .toFixed(2)
+        .replace('.00', '')
+    : undefined;
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.00', '');
+  const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
-  const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
 
   const planTypes = {
     '1TB': isBusiness
-      ? contentText.productFeatures.planTypes.standard
+      ? isFamilyPage
+        ? contentText.businessLabels.family['1TB']
+        : contentText.productFeatures.planTypes.standard
       : contentText.productFeatures.planTypes.essentials,
-    '2TB': contentText.productFeatures.planTypes.pro,
+    '2TB': isFamilyPage ? contentText.businessLabels.family['2TB'] : contentText.productFeatures.planTypes.pro,
     '3TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
@@ -113,25 +121,28 @@ export const PriceCard = ({
     <div
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} max-h-[820px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
+      } m-2 flex ${cardMaxWidth} ${
+        isBusiness ? `max-h-[760px] min-h-[700px]` : ` h-[700px] `
+      } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
-      <div className="flex flex-col items-center justify-center pb-6 pt-6">
-        <div
-          className={`flex flex-row items-center justify-center space-x-2 rounded-full px-3 py-1 transition-all ${
-            popular ? `bg-${colorCard}` : 'invisible opacity-0'
-          }`}
-        >
-          <Fire size={28} className="text-white" />
-          <p className="font-semibold text-white">{contentText.mostPopular}</p>
-        </div>
-      </div>
       <div
         className={`info flex min-h-[150px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pt-6`}
       >
-        <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
-          <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
+        <div className="flex flex-col items-center justify-center space-y-4">
+          <div
+            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-${colorCard} px-3 py-1 ${
+              !popular ? 'invisible' : ''
+            }`}
+          >
+            <Fire size={28} className="text-white" />
+            <p className="font-semibold text-white">{contentText.mostPopular}</p>
+          </div>
+
+          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
+            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
+          </div>
         </div>
         <div
           className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
@@ -147,7 +158,7 @@ export const PriceCard = ({
               } flex flex-row items-start space-x-1 whitespace-nowrap font-medium`}
             >
               <span className={`currency`}>{currency}</span>
-              <span className="price text-4xl font-bold">{priceNow}</span>
+              <span className="price text-4xl font-bold">{isAnnual && !isBusiness ? monthlyPriceNow : priceNow}</span>
               {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
             </p>
           </div>
@@ -159,7 +170,9 @@ export const PriceCard = ({
             } line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">{priceBefore}</span>
+            <span className="price text-2xl font-medium">
+              {isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+            </span>
           </p>
 
           <p className={`flex text-sm text-gray-50`}>
@@ -168,7 +181,7 @@ export const PriceCard = ({
           </p>
           {decimalDiscountValue && (
             <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
-              {decimalDiscountValue} {contentText.discount}
+              {percentOff} {contentText.discount}
               {showTotalDiscountPrice && (
                 <>
                   {' | '}
