@@ -253,5 +253,10 @@
     "id": "partner-discount",
     "title": "Descuento para Socios — Internxt",
     "description": "Obtén los planes anuales de Internxt con un exclusivo 75% de descuento. Disfruta de privacidad y seguridad con hasta 10TB de almacenamiento."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protege tus dispositivos de malware con Internxt Antivirus",
+    "description": "Internxt Antivirus escanea y elimina virus de tus archivos. Protege tus dispositivos del malware y asegura una completa seguridad en la nube."
   }
 ]

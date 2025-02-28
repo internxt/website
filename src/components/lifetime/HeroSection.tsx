@@ -44,7 +44,7 @@ const HeroSection = ({
               {!hideTimer && (
                 <div className="flex flex-row items-center rounded-lg py-2">
                   <Alarm size={32} className="mr-4 text-white" />
-                  <Countdown textColor={'white'} dt={dt} />
+                  <Countdown textColor={'white'} dt={dt} isComebackPage />
                 </div>
               )}
               <div className="flex px-5 lg:hidden">

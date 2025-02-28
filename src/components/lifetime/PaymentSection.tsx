@@ -64,7 +64,7 @@ const PaymentSection = ({
 
   return (
     <section id="payment" className="overflow-hidden bg-white">
-      <div className="flex flex-col space-y-8 pt-20">
+      <div className="flex flex-col space-y-4 pt-10">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p>
@@ -124,7 +124,7 @@ const PaymentSection = ({
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
         />
-        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white py-10 text-center md:flex-row md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white pb-10  text-center md:flex-row md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3 ">
               <feature.icon size={40} className="text-primary" />

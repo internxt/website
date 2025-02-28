@@ -46,7 +46,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1 py-12">
       <div className="flex flex-col items-center ">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
           {isStartPage ? <p className="text-3xl font-semibold text-primary xl:text-4xl">{textContent.header}</p> : null}
