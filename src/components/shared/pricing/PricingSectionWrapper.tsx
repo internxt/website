@@ -47,7 +47,7 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Year,
+  startBusinessPlansFromInterval = Interval.Month,
   startFromPlan = 'Lifetime',
   hideBusinessSelector,
   hideBusinessCards,
@@ -123,14 +123,15 @@ export const PricingSectionWrapper = ({
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
           <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
+
           {CustomDescription ? (
             CustomDescription
-          ) : (
+          ) : !hideDescription ? (
             <span
               className="text-regular max-w-[800px] text-xl text-gray-80"
               dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
             />
-          )}
+          ) : null}
         </div>
 
         <PricingSection

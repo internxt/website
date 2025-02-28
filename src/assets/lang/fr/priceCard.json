@@ -5,6 +5,7 @@
   "valentines": "Offre spéciale pour la Saint-Valentin!",
   "onlyForNewClients": "Uniquement pour les nouveaux abonnés ou les utilisateurs du forfait gratui",
   "discount": "% OFF",
+  "commingSoon": "Bientôt disponible",
   "planTitles": {
     "individuals": "Plans individuels",
     "homePage": "Choisissez le plan qui vous convient",
@@ -139,72 +140,81 @@
         "normal2": "que les autres alternatives de stockage cloud sécurisé"
       }
     },
+    "planTypes": {
+      "essentials": "Essentiels",
+      "standard": "Standard",
+      "premium": "Premium",
+      "ultimate": "Ultime",
+      "pro": "Pro"
+    },
     "individuals": {
-      "200GB": [
-        "200 GB de stockage chiffré",
-        "Chiffrement à connaissance nulle",
-        "Partage de fichiers protégé par mot de passe",
+      "1TB": [
+        "Stockage chiffré 1TB à connaissance zéro",
         "Chiffrement post-quantique",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Téléchargez des fichiers jusqu'à 20 Go",
+        "VPN ultra rapide illimité (FR)",
+        "Antivirus",
+        "Sauvegardez vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support client premium",
-        "Garantie de remboursement de 30 jours"
+        "Support CLI, WebDav & Rclone"
       ],
-      "2TB": [
-        "2TB de stockage chiffré",
-        "Chiffrement à connaissance nulle",
-        "Partage de fichiers protégé par mot de passe",
+      "3TB": [
+        "Stockage chiffré 3TB à connaissance zéro",
         "Chiffrement post-quantique",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Téléchargez des fichiers jusqu'à 20 Go",
+        "VPN ultra rapide illimité (FR, DE, PL)",
+        "Antivirus",
+        "Sauvegardez vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support client premium",
-        "Garantie de remboursement de 30 jours"
+        "Support CLI, WebDav & Rclone",
+        "Meet (3 participants)",
+        "Mail (3 adresses)"
       ],
       "5TB": [
-        "5TB de stockage chiffré",
-        "Chiffrement à connaissance nulle",
-        "Partage de fichiers protégé par mot de passe",
+        "Stockage chiffré 5TB à connaissance zéro",
         "Chiffrement post-quantique",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Téléchargez des fichiers jusqu'à 20 Go",
+        "VPN ultra rapide illimité (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Sauvegardez vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support client premium",
-        "Garantie de remboursement de 30 jours"
+        "Support CLI, WebDav & Rclone",
+        "Meet (5 participants)",
+        "Mail (5 adresses)"
       ],
-      "10TB": [
-        "10TB de stockage chiffré",
-        "Chiffrement à connaissance nulle",
-        "Partage de fichiers protégé par mot de passe",
-        "Chiffrement post-quantique",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Téléchargez des fichiers jusqu'à 20 Go",
-        "Authentification à deux facteurs (2FA)",
-        "Support client premium",
-        "Garantie de remboursement de 30 jours"
-      ]
+      "10TB": []
     },
     "business": {
       "1TB": [
         "1TB de stockage/utilisateur",
-        "Chiffrement à connaissance nulle",
-        "Créer et gérer des utilisateurs et des équipes",
-        "À partir de 3 utilisateurs et jusqu'à 10",
-        "Conforme au RGPD",
-        "Télécharger des fichiers jusqu'à 5GB",
+        "Chiffrement post-quantique",
+        "VPN ultra rapide et illimité (FR, DE, PL)",
+        "Antivirus",
+        "Sauvegarde de vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité au RGPD",
+        "Authentification à deux facteurs (2FA)",
+        "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Support client premium"
+        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
+        "1 adresse e-mail personnalisée/utilisateur"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
-        "Chiffrement à connaissance nulle",
-        "Créer et gérer des utilisateurs et des équipes",
-        "À partir de 3 utilisateurs et jusqu'à 100",
-        "Conforme au RGPD",
-        "Télécharger des fichiers jusqu'à 20GB",
+        "Chiffrement post-quantique",
+        "VPN ultra rapide et illimité (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Sauvegarde de vos fichiers",
+        "Partage de fichiers protégé par mot de passe",
+        "Conformité au RGPD",
+        "Authentification à deux facteurs (2FA)",
+        "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Support client premium"
+        "Réunions jusqu'à 10 utilisateurs (max. 10 participants)",
+        "1 adresse e-mail personnalisée/utilisateur"
       ]
     }
   }

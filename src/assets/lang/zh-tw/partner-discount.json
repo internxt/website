@@ -24,8 +24,10 @@
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "開源且經過審計",
-      "anonymousAccount": "匿名創建帳戶"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "FeatureSection": {

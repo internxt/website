@@ -87,7 +87,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       storage={product.storage}
                       price={discount ? (product.price * discount) / 100 : product.price}
                       billingFrequency={billingFrequency}
-                      popular={product.storage === '5TB'}
+                      popular={product.storage === '3TB'}
                       cta={['checkout', product.priceId]}
                       currency={currency}
                       contentText={textContent.priceCard}

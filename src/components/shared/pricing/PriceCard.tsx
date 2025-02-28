@@ -32,6 +32,7 @@ export interface PriceCardProps {
   decimalDiscountValue?: number;
   fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
+  monthlyProductPrice?: number;
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
@@ -53,6 +54,7 @@ export const PriceCard = ({
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
   checkIconName = 'checkPrimary',
+  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
@@ -79,9 +81,19 @@ export const PriceCard = ({
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const businessLabel = isFamilyPage ? contentText.businessLabels.family[storage] : contentText.businessLabels[storage];
-  const cardLabel = productCardPlan === 'business' ? businessLabel : label;
+  const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
+
+  const planTypes = {
+    '1TB': isBusiness
+      ? contentText.productFeatures.planTypes.standard
+      : contentText.productFeatures.planTypes.essentials,
+    '2TB': contentText.productFeatures.planTypes.pro,
+    '3TB': contentText.productFeatures.planTypes.premium,
+    '5TB': contentText.productFeatures.planTypes.ultimate,
+  };
+  const cardLabel = planTypes[product.storage] || null;
 
   const iconsFeatures = [
     Database,
@@ -101,24 +113,23 @@ export const PriceCard = ({
     <div
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} max-h-[680px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
+      } m-2 flex ${cardMaxWidth} max-h-[820px] min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
+      <div className="flex flex-col items-center justify-center pb-6 pt-6">
+        <div
+          className={`flex flex-row items-center justify-center space-x-2 rounded-full px-3 py-1 transition-all ${
+            popular ? `bg-${colorCard}` : 'invisible opacity-0'
+          }`}
+        >
+          <Fire size={28} className="text-white" />
+          <p className="font-semibold text-white">{contentText.mostPopular}</p>
+        </div>
+      </div>
       <div
-        className={`info flex min-h-[350px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`info flex min-h-[150px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pt-6`}
       >
-        <div className="flex flex-col items-center justify-center">
-          <div
-            className={`flex flex-row items-center justify-center space-x-2 rounded-full px-3 py-1 transition-all ${
-              popular ? `bg-${colorCard}` : 'invisible opacity-0'
-            }`}
-          >
-            <Fire size={28} className="text-white" />
-            <p className="font-semibold text-white">{contentText.mostPopular}</p>
-          </div>
-        </div>
-
         <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
           <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
         </div>
@@ -185,7 +196,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } min-h-[470px] pb-6 text-sm`}
+        } min-h-[420px] pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
@@ -195,7 +206,9 @@ export const PriceCard = ({
                 className: 'text-primary',
               })}
               <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
-              {index > 8 ? <span className="rounded-lg bg-orange/10 px-1 text-orange">Coming Soon</span> : null}
+              {index > (isBusiness ? 9 : 8) ? (
+                <span className="rounded-md bg-orange/10 px-1 text-center text-orange">{contentText.commingSoon}</span>
+              ) : null}
             </div>
           ))}
         </div>
