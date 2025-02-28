@@ -1,0 +1,137 @@
+{
+  "HeroSection": {
+    "title": "Schützen Sie Ihre Dateien mit",
+    "blueText": "Internxt Antivirus",
+    "description": "Schützen Sie sich vor Schadsoftware, Phishing und Ransomware mit unserem Antivirus. Halten Sie alle Ihre Dateien sicher und geschützt.",
+    "eyeBrow": "Internxt Antivirus",
+    "DownloadLinks": {
+      "downloadTitle": "Internxt Antivirus herunterladen",
+      "downloadForMac": "Mac herunterladen",
+      "downloadForWindows": "Windows herunterladen",
+      "downloadForLinux": "Linux herunterladen"
+    }
+  },
+  "cta1": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Schützen Sie Ihre Dateien vor Schadsoftware für maximalen Schutz und Sicherheit",
+    "cta": "Plan kaufen"
+  },
+  "cta2": {
+    "title": "Internxt Antivirus",
+    "subtitle": "Maximaler Schutz für Ihre Dateien",
+    "cta": "Internxt holen"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist ein Antivirus?",
+        "answer": [
+          "Antivirensoftware schützt Ihre Dateien und Geräte vor Schadsoftware, indem sie Dateien auf bekannte Malware-Signaturen überwacht und scannt. Sobald ein Antivirus-Scan schädliche Software erkennt, wird die Bedrohung entfernt und Ihre Dateien bleiben sicher und geschützt."
+        ]
+      },
+      {
+        "question": "Brauche ich einen Antivirus?",
+        "answer": [
+          "Ohne Antivirenschutz ist Ihr Gerät anfällig für bösartige Angriffe, und Ihre Privatsphäre sowie Ihre Daten sind gefährdet. Es besteht auch ein höheres Risiko für Infektionen, Datenverlust, Verletzungen der Privatsphäre und Systemschäden.",
+          "Da Internxt Antivirus in Ihrem Abonnement enthalten ist, profitieren Sie von privatem Cloud-Speicher und umfassendem Schutz für Geräte und Dateien."
+        ]
+      },
+      {
+        "question": "Welche Geräte unterstützen Internxt Antivirus?",
+        "answer": [
+          "Internxt Antivirus ist als Microsoft Antivirus sowie für Mac und Linux verfügbar – über ein Premium-Abonnement mit der Internxt Drive Desktop-App."
+        ]
+      },
+      {
+        "question": "Kann ich Internxt Antivirus separat erwerben?",
+        "answer": [
+          "Nein, Internxt Antivirus ist Teil unserer kostenpflichtigen Abonnements und kann nicht separat erworben werden. Mit einem monatlichen Abonnement von 9,99€ erhalten Sie privaten Cloud-Speicher, Antivirus, VPN und vieles mehr."
+        ]
+      },
+      {
+        "question": "Was ist der Unterschied zwischen Malware und einem Virus?",
+        "answer": [
+          "Malware ist der Sammelbegriff für Software, Programme oder Code, der entwickelt wurde, um ohne Autorisierung Schaden anzurichten, auszunutzen oder Zugriff auf ein Netzwerk oder Gerät zu erhalten. Er umfasst Viren und schließt auch andere schädliche Programme wie Ransomware, Spyware, Würmer und Trojaner ein.",
+          "Ein Virus ist eine spezielle Art von Malware, die sich an Ihre Dateien anheftet und sich auf andere Systeme ausbreitet, wenn sie geöffnet oder ausgeführt wird. Ein regelmäßiger Antivirus-Scan mit Internxt kann diese Bedrohungen erkennen und beseitigen."
+        ]
+      },
+      {
+        "question": "Welches ist die beste Antivirensoftware?",
+        "answer": [
+          "Die beste Antivirensoftware hängt von Ihren spezifischen Bedürfnissen und Vorlieben ab. Es wird empfohlen, verschiedene Optionen zu recherchieren und diejenige auszuwählen, die am besten zu Ihrem Budget, Ihrem Gerät und Ihren zusätzlichen Anforderungen passt.",
+          "Wenn Sie einen Antivirus für Mac, Windows oder Linux benötigen, der in Ihren Cloud-Speicher integriert ist und einen schnellen und einfachen Weg bietet, Viren von Ihrem Gerät zu scannen und zu entfernen, probieren Sie einen Internxt-Plan aus."
+        ]
+      }
+    ]
+  },
+  "ComponentsInColumn": {
+    "title": "Anzeichen, dass Ihr Gerät infiziert sein könnte",
+    "description": "Befürchten Sie, dass Ihr Gerät mit Malware infiziert ist? Holen Sie sich Internxt Antivirus mit einem Premium-Abonnement für sicheren Speicher und umfassenden Dateischutz.",
+    "cards": {
+      "element1": {
+        "title": "Übermäßiger Batterieverbrauch",
+        "description": "Wenn Ihre Batterie schneller als gewöhnlich leer wird, könnte dies ein Zeichen dafür sein, dass Malware im Hintergrund läuft und Ihre Ressourcen unbemerkt nutzt."
+      },
+      "element2": {
+        "title": "Häufige Systemabstürze oder Einfrieren",
+        "description": "Viren können Ihr System zum Absturz bringen, da Malware wichtige Dateien oder Programme beschädigt und so Instabilität, Systemfehler oder unerwartetes Einfrieren verursacht."
+      },
+      "element3": {
+        "title": "Unerklärliche Pop-ups oder Fenster",
+        "description": "Ungewöhnliche Pop-ups, die erscheinen, wenn Sie nicht surfen, könnten darauf hindeuten, dass Ihr Gerät bereits mit Malware infiziert ist. Führen Sie einen Antivirus-Scan durch, um weitere Schäden zu vermeiden."
+      },
+      "element4": {
+        "title": "Geräte, die sich überhitzen, selbst wenn sie inaktiv sind",
+        "description": "Ähnlich wie beim übermäßigen Batterieverbrauch kann Malware dazu führen, dass Geräte Leistung stehlen, indem sie im Hintergrund intensive Aufgaben ausführen, was zu einer Überhitzung führt."
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "All-in-One-Sicherheit zum Schutz Ihrer Geräte vor Datenbedrohungen",
+    "description": "Schützen Sie Ihre Cloud und alle Ihre Dateien vor Schadsoftware mit modernem Antivirenschutz. Verfügbar für Windows-, Linux- und macOS-Desktops.",
+    "cta": "Hol dir Internxt",
+    "cards": {
+      "element1": {
+        "title": "Maßgeschneiderte Sicherheitslösungen",
+        "description": "Beseitigen Sie Sicherheitsbedrohungen sofort und passen Sie Ihre Sicherheitsanforderungen an. Wählen Sie die Dateien, die Sie scannen möchten, oder entfernen Sie mehrere Dateien gleichzeitig."
+      },
+      "element2": {
+        "title": "Ultimativer Schutz",
+        "description": "Mit fortschrittlicher Antivirensoftware ist der Schutz vor Viren schnell und einfach. Scannen und bereinigen Sie Ihre Dateien, optimieren Sie die Leistung Ihres Geräts und schützen Sie sich online."
+      },
+      "element3": {
+        "title": "Sicherheit auf allen Plattformen",
+        "description": "Antivirenschutz für Windows, Mac und Linux, integriert in Ihr Premium-Abonnement. Wir sorgen dafür, dass Ihre Dateien sauber bleiben, um die optimale Leistung Ihres Geräts zu gewährleisten, egal wo sie gespeichert sind."
+      }
+    }
+  },
+  "FeatureSectionV2": {
+    "title": "Was ist Antivirensoftware?",
+    "description": "Antivirensoftware erkennt und entfernt jegliche Schadsoftware von Ihrem Gerät, um gängige Cyberbedrohungen wie Viren, Spyware und Ransomware zu verhindern. Internxt Antivirus ist in Ihrem Premium-Abonnement enthalten, sodass Sie Ihre Dateien scannen und Ihre Cloud sicher halten können.",
+    "cards": {
+      "element1": {
+        "description": "Erkennt und entfernt jegliche Schadsoftware"
+      },
+      "element2": {
+        "description": "Vollständiger Systemscan oder benutzerdefinierte Dateiscans"
+      },
+      "element3": {
+        "description": "Schutz von Dateien und Geräten"
+      }
+    }
+  },
+  "InfoSection": {
+    "Percentage": "81%",
+    "PercentageText": "Unternehmen, die Bedrohungen durch Schadsoftware ausgesetzt waren",
+    "MalwareRegisteredDaily": "300.000+",
+    "MalwareRegisteredDailyText": "Täglich registrierte neue bösartige Codes",
+    "MalwareAttacks": "190,000",
+    "MalwareAttacksText": "Jede Sekunde neue Malware-Angriffe"
+  },
+  "InfoSectionV2": {
+    "AntivirusProtection": "Antivirenschutz für Ihre Dateien",
+    "RemoveMalware": "Entfernt jegliche Schadsoftware (Malware)",
+    "DeviceProtection": "Schützt Ihre Geräte"
+  }
+}
