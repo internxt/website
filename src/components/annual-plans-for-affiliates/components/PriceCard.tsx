@@ -66,12 +66,14 @@ export default function PriceCard({
         className={`info flex max-h-[300px] min-h-[300px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
-          {popular ? (
-            <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
-              <Fire size={28} className="text-white" />
-              <p className="font-semibold text-white">{contentText.mostPopular}</p>
-            </div>
-          ) : null}
+          <div
+            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${
+              !popular ? 'invisible' : ''
+            }`}
+          >
+            <Fire size={28} className="text-white" />
+            <p className="font-semibold text-white">{contentText.mostPopular}</p>
+          </div>
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
             <p className="text-lg font-medium text-primary">{storage}</p>
           </div>

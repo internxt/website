@@ -2,7 +2,7 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 import PriceCard from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
@@ -32,16 +32,16 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.guarantee,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 
@@ -101,7 +101,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
           </div>
         </Transition>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-x-32 md:space-y-0">
+        <div className="flex flex-col justify-center space-y-8 pb-4 text-center md:flex-row md:items-center md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
