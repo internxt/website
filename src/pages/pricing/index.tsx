@@ -51,8 +51,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
-    couponCodeForBusiness: PromoCodeName.ValentinesCampaign,
-    couponCodeForLifetime: PromoCodeName.ValentinesCampaign,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -113,16 +111,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness
-      ? PromoCodeName.SoftSales
-      : isCheckoutForLifetime
-      ? PromoCodeName.ValentinesCampaign
-      : PromoCodeName.SoftSales;
-
-    const planType = isBusiness ? 'business' : 'individual';
-
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    const couponCodeForCheckout = individualCoupon?.name;
+    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
   };
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -146,7 +138,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
             lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
-            business: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
           }}
           lang={lang}
           products={products}
@@ -155,11 +146,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
-          CustomDescription={
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {textContent.tableSection.planDescription}
-            </span>
-          }
+          hideBusinessCards
+          hideBusinessSelector
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

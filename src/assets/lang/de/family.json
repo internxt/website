@@ -22,9 +22,11 @@
       "business": "Geschäftlich"
     },
     "features": {
-      "endToEnd": "Ende-zu-Ende verschlüsselt",
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
       "openSource": "Open-Source und geprüft",
-      "anonymousAccount": "Anonyme Kontoerstellung"
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-tägige Geld-zurück-Garantie"
     }
   },
   "WhatMakesInternxtPerfectSection": {

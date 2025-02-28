@@ -22,7 +22,7 @@
   "addressBilling": {
     "optionalData": "Opcional",
     "companyName": "Nombre de la Empresa",
-    "companyVatId": "ID de IVA"
+    "companyVatId": "VAT ID de la Empresa"
   },
   "paymentTitle": "Selecciona un método de pago",
   "productCard": {
@@ -61,5 +61,6 @@
     "amountSaved": "Ahorra ",
     "withAnnualBilling": "con facturación anual"
   },
-  "oneTimePayment": "*Se requiere una tarifa única de 1€ para la verificación de la cuenta"
+  "oneTimePayment": "*Se requiere una tarifa única de 1€ para la verificación de la cuenta",
+  "error500": "Por favor, introduce un VAT ID válido"
 }

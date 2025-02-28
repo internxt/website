@@ -32,9 +32,9 @@
     },
     "securePayment": "Pago 100% seguro, con tecnología de Stripe",
     "features": {
-      "endToEnd": "Encriptado de extremo a extremo",
+      "endToEnd": "Soporte al cliente premium",
       "openSource": "Código abierto y auditado",
-      "anonymousAccount": "Creación de cuenta anónima"
+      "anonymousAccount": "Garantía de devolución de dinero de 30 días"
     }
   },
   "GetLifetimeSection": {

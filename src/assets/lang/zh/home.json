@@ -59,22 +59,19 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "获取",
-        "blueText": "最安全的 ",
-        "line2": "云存储"
+        "textBeforeBlueText": "存储空间 ",
+        "blueText": "安全 ",
+        "textAfterBlueText": "在云端和生态系统中"
       },
-      "description": {
-        "normal1": "",
-        "blue": "85% 折扣 ",
-        "normal2": "适用于所有终身计划"
-      },
-      "features": ["零知识加密", "后量子加密", "开源和审计"],
+      "subtitle": "完全的安全和控制。",
+      "description": "70%折扣",
+      "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
-        "normal1": "起价 ",
-        "price": " 0.95",
+        "normal1": "从 ",
+        "price": " 2.49",
         "normal2": " /月"
       },
-      "claimDeal": "获取优惠",
+      "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
     "youKnow": "你知道吗？"
@@ -107,16 +104,16 @@
       "individuals": "个人计划",
       "homePage": "选择适合您的计划",
       "lifetime": "终身计划",
-      "business": "商业计划",
+      "business": "企业计划",
       "lifetimeCampaign": {
-        "blueText": "五折优惠",
-        "normalText": "我们的所有独家终身计划"
+        "blueText": "50%折扣",
+        "normalText": "适用于我们所有独家终身计划"
       }
     },
-    "lifetimeDescription": "购买一次，永远获得隐私和安全。",
-    "planDescription": "所有Internxt计划都有完整的功能，可以完全访问我们所有的隐私服务。所有形状和大小的安全。",
-    "businessDescription": "我们目前正在开发新的 Internxt 计划，专为保护您的业务、保护您的员工和确保您的利润而设计。",
-    "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",
+    "lifetimeDescription": "一次付款，获得永久的隐私和安全",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
+    "businessDescription": "我们目前正在开发新的Internxt计划，专门用于保护您的企业、员工，并确保盈利能力。",
+    "businessDescription2": "通过Internxt的加密云存储计划确保公司数据的安全。",
     "billingFrequency": {
       "monthly": "月度",
       "semiannually": "Semiannually",
@@ -126,16 +123,16 @@
       "business": "商业"
     },
     "freePlanCard": {
-      "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
-      "upTo": "最高1GB",
-      "freeForever": "永久免费",
-      "cta": "选择计划"
+      "eyeBrow": "Internxt Free",
+      "description": "获取高达 1GB 的加密云存储，并享受我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "cta": "选择方案"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源且经过审核",
-      "anonymousAccount": "匿名帐户创建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "ChooseStorageSizeSection": {

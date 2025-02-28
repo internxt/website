@@ -1,5 +1,5 @@
 import PriceTable from './PriceTable';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
@@ -40,16 +40,16 @@ const PaymentSection = ({
   const router = useRouter();
   const features = [
     {
-      icon: FolderLock,
+      icon: Lifebuoy,
       text: textContent.features.endToEnd,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.anonymousAccount,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 

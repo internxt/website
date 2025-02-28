@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "85% günstiger"
+        "blueText": "70% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -58,24 +58,27 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Sicherer Cloud-Speicher.",
-        "blueText": "Garantiert."
+        "textBeforeBlueText": "Speicherplatz ",
+        "blueText": "sicher ",
+        "textAfterBlueText": "in der Cloud und Ökosystem"
       },
-      "description": {
-        "normal1": "Erhalten Sie ",
-        "blue": "80% Rabatt ",
-        "normal2": "auf alle Premium-Pläne."
-      },
-      "features": ["Zero-Knowledge-Verschlüsselung", "Post-quantum Verschlüsselung", "Open source und geprüft"],
+      "subtitle": "Komplette Sicherheit und Kontrolle.",
+      "description": "70% Rabatt",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus und mehr",
+        "Post-Quanten-Kryptografie und Null-Wissen",
+        "Open-Source und geprüft"
+      ],
+
       "startFrom": {
-        "normal1": "Starten ab ",
-        "price": " 0.95",
+        "normal1": "Ab ",
+        "price": " 2.49",
         "normal2": " /Monat"
       },
-      "claimDeal": "Angebot sichern",
+      "claimDeal": "Angebot einlösen",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
-    "youKnow": "Wussten Sie das?"
+    "youKnow": "Wusstest du das?"
   },
   "FeatureSectionV2": {
     "title": "Zero-Knowledge-Verschlüsselung: Nur Sie können Ihre Daten sehen",
@@ -105,16 +108,16 @@
       "individuals": "Individuelle Pläne",
       "homePage": "Wählen Sie den richtigen Plan für Sie",
       "lifetime": "Lebenslange Pläne",
-      "business": "Geschäftspläne",
+      "business": "Pläne für Unternehmen",
       "lifetimeCampaign": {
-        "blueText": "Erhalte 50 % RABATT",
-        "normalText": "Alle unsere exklusiven Lifetime-Pläne"
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven lebenslangen Pläne"
       }
     },
-    "lifetimeDescription": "Kaufe einmal und erhalte Privatsphäre und Sicherheit für immer.",
-    "planDescription": "Alle Internxt-Pläne sind umfassend ausgestattet und bieten vollständigen Zugriff auf alle unsere Datenschutzdienste. Sicherheit für alle Formen und Größen.",
-    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die ausschließlich darauf ausgelegt sind, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
-    "businessDescription2": "Stellen Sie die Sicherheit von Unternehmensdaten mit den verschlüsselten Cloud-Speicherplänen von Internxt sicher.",
+    "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
+    "planDescription": "Alle Internxt-Pläne bieten vollen Zugang zu unserem Paket privater Lösungen mit der neuesten Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die exklusiv entwickelt wurden, um Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Sichern Sie die Unternehmensdaten mit den verschlüsselten Cloud-Speicherplänen von Internxt.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
@@ -123,16 +126,16 @@
       "business": "Geschäftlich"
     },
     "freePlanCard": {
-      "getStarted": "Starten Sie mit unserem kostenlosen Plan",
-      "enjoy10gb": "Genießen Sie dauerhaft bis zu 1 GB und erhalten Sie Zugriff auf alle unsere Dienstleistungen",
-      "upTo": "1 GB",
-      "freeForever": "Für immer kostenlos",
+      "eyeBrow": "Internxt Free",
+      "description": "Erhalte bis zu 1 GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
       "cta": "Plan auswählen"
     },
     "features": {
-      "endToEnd": "End-to-End-verschlüsselt",
-      "openSource": "Open Source und überprüft",
-      "anonymousAccount": "Anonyme Kontenerstellung"
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-tägige Geld-zurück-Garantie"
     }
   },
   "ChooseStorageSizeSection": {
