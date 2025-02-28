@@ -59,9 +59,9 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Хранение ",
-        "blueText": "безопасное ",
-        "textAfterBlueText": "в облаке и экосистеме"
+        "textBeforeBlueText": "Экосистема ",
+        "blueText": "безопасная",
+        "textAfterBlueText": " в облаке"
       },
       "subtitle": "Полная безопасность и контроль.",
       "description": "Скидка 70%",
@@ -127,7 +127,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Получите до 1 ГБ зашифрованного облачного хранилища и наслаждайтесь нашей приватной экосистемой: VPN (FR), CLI/WebDav/Rclone и многое другое.",
+      "description": "Получите 1 ГБ зашифрованного облачного хранилища бесплатно.",
       "cta": "Выбрать план"
     },
     "features": {

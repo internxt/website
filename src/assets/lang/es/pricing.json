@@ -66,7 +66,7 @@
       }
     },
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
-    "planDescription": "Todos los planes de Internxt cuentan con todas las funciones y acceso completo a todos nuestros servicios de privacidad. Seguridad para todas las formas y tamaños.",
+    "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas que cuenta con la última tecnología de seguridad: Internxt Drive, Send, VPN, Antivirus, Meet y Mail. ",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su negocio, proteger a sus empleados y asegurar su rentabilidad.",
     "businessDescription2": "Garantiza la seguridad de los datos de la empresa con los planes de almacenamiento en la nube cifrados de Internxt.",
     "billingFrequency": {
@@ -78,7 +78,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Obtén hasta 1GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado: VPN (FR), CLI/WebDav/Rclone y mucho más.",
+      "description": "Obtén 1 GB de almacenamiento en la nube cifrado gratis",
       "cta": "Seleccionar plan"
     },
     "features": {

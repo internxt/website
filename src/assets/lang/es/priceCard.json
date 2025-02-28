@@ -4,7 +4,7 @@
   "save": "Ahorra hasta ",
   "valentines": "¡Oferta especial de San Valentín!",
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
-  "discount": "% OFF",
+  "discount": "% off",
   "commingSoon": "Próximamente",
   "planTitles": {
     "individuals": "Planes individuales",
@@ -200,7 +200,7 @@
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
         "Reuniones de hasta 10 usuarios",
-        "1 correo electrónico personalizado/usuario "
+        "1 email personalizado por usuario "
       ],
       "2TB": [
         "2TB de almacenamiento",
@@ -214,7 +214,7 @@
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
         "Reuniones de hasta 100 usuarios ",
-        "2 correos electrónico personalizado/usuario "
+        "2 emails personalizados por usuario "
       ],
       "20GB": []
     }

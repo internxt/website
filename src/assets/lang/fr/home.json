@@ -59,9 +59,9 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Stockage ",
-        "blueText": "sécurisé ",
-        "textAfterBlueText": "dans le cloud et l'écosystème"
+        "textBeforeBlueText": "Écosystème ",
+        "blueText": "sécurisé",
+        "textAfterBlueText": " dans le cloud"
       },
       "subtitle": "Sécurité et contrôle complets.",
       "description": "70% de réduction",
@@ -127,7 +127,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Obtenez jusqu'à 1 Go de stockage cloud chiffré et profitez de notre écosystème privé : VPN (FR), CLI/WebDav/Rclone et bien plus encore.",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
       "cta": "Sélectionner le plan"
     },
     "features": {
