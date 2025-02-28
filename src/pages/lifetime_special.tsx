@@ -31,7 +31,7 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJso
         imageMobile={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
         onRedirectButtonClicked={() => router.push('#payment')}
       />
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} discount={0} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

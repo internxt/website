@@ -64,7 +64,7 @@ export default function PriceCard({
   isLifetimePage,
   lifetimeMode,
   label,
-  percentOff,
+  percentOff = 0,
   onButtonClicked,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
@@ -188,10 +188,12 @@ export default function PriceCard({
             {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
           </p>
 
-          <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
-            {percentOff}
-            {contentText.discount}
-          </p>
+          {percentOff > 0 && (
+            <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
+              {percentOff}
+              {contentText.discount}
+            </p>
+          )}
         </div>
         <button
           id={`planButton${storage}`}
