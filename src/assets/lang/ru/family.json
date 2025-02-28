@@ -22,9 +22,11 @@
       "business": "Бизнес"
     },
     "features": {
-      "endToEnd": "Шифрование от конца к концу",
-      "openSource": "Открытое ПО и проверено",
-      "anonymousAccount": "Создание анонимного аккаунта"
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый исходный код и аудит",
+      "anonymousAccount": "Анонимная регистрация",
+      "premiumSupport": "Премиум-поддержка клиентов",
+      "guarantee": "Гарантия возврата денег в течение 30 дней"
     }
   },
   "WhatMakesInternxtPerfectSection": {

@@ -67,7 +67,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   hideSwitchSelector,
   lang,
-  popularPlanBySize = '10TB',
+  popularPlanBySize = '3TB',
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,
@@ -183,11 +183,6 @@ export const PricingSection = ({
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
@@ -225,16 +220,16 @@ export const PricingSection = ({
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
                       monthlyProductPrice={
                         products.business[Interval.Month].filter(
                           (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
                         )[0].price
                       }
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
                       key={product.storage}
-                      popular={product.storage === '10TB'}
+                      popular={product.storage === '2TB'}
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
