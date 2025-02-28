@@ -68,7 +68,9 @@
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {
@@ -128,16 +130,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Internxt Free",
+      "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
       "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FaqSection": {

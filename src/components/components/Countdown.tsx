@@ -5,6 +5,7 @@ interface CountdownProps {
   dt?: string;
   textFont?: string;
   textHeight?: string;
+  isComebackPage?: boolean;
 }
 
 const DAYS = 24 * 3600 * 1000;
@@ -14,6 +15,7 @@ const Countdown: React.FC<CountdownProps> = ({
   dt,
   textFont = 'font-semibold',
   textHeight = 'text-2xl',
+  isComebackPage = false,
 }) => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);
@@ -89,19 +91,19 @@ const Countdown: React.FC<CountdownProps> = ({
     <div className={`flex text-${textColor}`}>
       <div className={`flex flex-row items-end gap-1 lg:gap-1 ${textHeight} ${textFont}`}>
         <div className="text-center">
-          <p className="w-6">{days < 10 ? `0${days}` : days}</p>
+          <p className={isComebackPage ? 'w-8' : 'w-'}>{days < 10 ? `0${days}` : days}</p>
         </div>
         <p>:</p>
         <div className="text-center">
-          <p className="w-6">{hours < 10 ? `0${hours}` : hours}</p>
+          <p className={isComebackPage ? 'w-8' : 'w-6'}>{hours < 10 ? `0${hours}` : hours}</p>
         </div>
         <p>:</p>
         <div className="text-center">
-          <p className="w-6">{minutes < 10 ? `0${minutes}` : minutes}</p>
+          <p className={isComebackPage ? 'w-8' : 'w-6'}>{minutes < 10 ? `0${minutes}` : minutes}</p>
         </div>
         <p>:</p>
         <div className="text-center">
-          <p className="w-6">{seconds < 10 ? `0${seconds}` : seconds}</p>
+          <p className={isComebackPage ? 'w-8' : 'w-6'}>{seconds < 10 ? `0${seconds}` : seconds}</p>
         </div>
       </div>
     </div>

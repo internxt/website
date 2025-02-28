@@ -13,6 +13,7 @@
       "mostPopular": "Most popular",
       "billedAnnually": "One-time payment",
       "commingSoon": "Coming soon",
+      "discount": "% OFF",
       "cta": "Redeem deal",
       "features": {
         "1TB": [
@@ -58,7 +59,9 @@
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {
