@@ -129,19 +129,19 @@
   },
   "tableSection": {
     "planTitles": {
-      "individuals": "Planos Individuais",
+      "individuals": "Planos individuais",
       "homePage": "Escolha o plano certo para você",
-      "lifetime": "Planos Vitalícios",
-      "business": "Planos de Negócios",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos para empresas",
       "lifetimeCampaign": {
-        "blueText": "Obtenha 50% de desconto",
-        "normalText": "em todos os nossos planos vitalícios exclusivos"
+        "blueText": "50% de desconto",
+        "normalText": "em todos os nossos planos exclusivos vitalícios"
       }
     },
-    "lifetimeDescription": "Compre uma vez e obtenha privacidade e segurança para sempre.",
-    "planDescription": "Todos os planos da Internxt são totalmente completos com acesso completo a todos os nossos serviços de privacidade. Segurança para todos os formatos e tamanhos.",
-    "businessDescription": "Atualmente estamos trabalhando em novos planos da Internxt projetados exclusivamente para defender seu negócio, proteger seus funcionários e garantir seu resultado final.",
-    "businessDescription2": "Garanta a segurança dos dados do negócio com os planos de armazenamento na nuvem criptografado da Internxt.",
+    "lifetimeDescription": "Pague uma vez e obtenha privacidade e segurança para sempre",
+    "planDescription": "Todos os planos do Internxt oferecem acesso completo ao nosso pacote de soluções privadas com a tecnologia de segurança mais recente: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "businessDescription": "Atualmente estamos trabalhando em novos planos Internxt projetados exclusivamente para defender seu negócio, proteger seus funcionários e garantir sua rentabilidade.",
+    "businessDescription2": "Garanta a segurança dos dados da empresa com os planos de armazenamento em nuvem criptografados do Internxt.",
     "billingFrequency": {
       "monthly": "Mensal",
       "annually": "Anual",

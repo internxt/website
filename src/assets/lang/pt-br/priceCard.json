@@ -5,6 +5,7 @@
   "onlyForNewClients": "Apenas para novos assinantes ou usuários do plano gratuito",
   "redeemCode": "Resgatar código",
   "save": "Economize ",
+  "commingSoon": "Em breve",
   "planTitles": {
     "individuals": "Planos Individuais",
     "homePage": "Escolha o plano certo para você",
@@ -177,24 +178,32 @@
     },
     "business": {
       "1TB": [
-        "1TB de armazenamento por usuário",
-        "Criptografia de conhecimento zero",
-        "Crie e gerencie usuários e equipes",
-        "A partir de 3 usuários e até 10",
-        "Conformidade com o GDPR",
-        "Envie arquivos de até 5GB",
-        "Gerencie a faturamento e pagamentos da conta",
-        "Suporte ao cliente premium"
+        "1TB de armazenamento/usuário",
+        "Criptografia pós-quântica",
+        "VPN ultra-rápida e ilimitada (FR, DE, PL)",
+        "Antivírus",
+        "Backup dos seus arquivos",
+        "Compartilhamento de arquivos protegido por senha",
+        "Conformidade com a GDPR",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte para CLI, WebDav e Rclone",
+        "Gerenciar faturamento e pagamentos da conta",
+        "Reuniões com até 10 usuários (máx. 10 participantes)",
+        "1 endereço de e-mail personalizado/usuário"
       ],
       "2TB": [
-        "2TB de armazenamento por usuário",
-        "Criptografia de conhecimento zero",
-        "Crie e gerencie usuários e equipes",
-        "A partir de 3 usuários e até 100",
-        "Conformidade com o GDPR",
-        "Envie arquivos de até 20GB",
-        "Gerencie a faturamento e pagamentos da conta",
-        "Suporte ao cliente premium"
+        "2TB de armazenamento/usuário",
+        "Criptografia pós-quântica",
+        "VPN ultra-rápida e ilimitada (FR, DE, PL, CA, UK)",
+        "Antivírus",
+        "Backup dos seus arquivos",
+        "Compartilhamento de arquivos protegido por senha",
+        "Conformidade com a GDPR",
+        "Autenticação de dois fatores (2FA)",
+        "Suporte para CLI, WebDav e Rclone",
+        "Gerenciar faturamento e pagamentos da conta",
+        "Reuniões com até 10 usuários (máx. 10 participantes)",
+        "1 endereço de e-mail personalizado/usuário"
       ]
     }
   }

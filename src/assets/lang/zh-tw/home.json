@@ -102,18 +102,18 @@
   "tableSection": {
     "planTitles": {
       "individuals": "個人計劃",
-      "lifetime": "終身計劃",
       "homePage": "選擇適合您的計劃",
-      "business": "商業計劃",
+      "lifetime": "終身計劃",
+      "business": "企業計劃",
       "lifetimeCampaign": {
-        "blueText": "獲得 50% 折扣",
-        "normalText": "所有我們的獨家終身計劃"
+        "blueText": "50%折扣",
+        "normalText": "適用於我們所有獨家的終身計劃"
       }
     },
-    "lifetimeDescription": "一次購買，永久享受隱私和安全。",
-    "planDescription": "所有 Internxt 計劃都具有完整的功能，完全訪問我們的所有隱私服務。適用於各種規模的安全保障。",
-    "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
-    "businessDescription2": "通過 Internxt 的加密雲存儲計劃確保企業數據安全。",
+    "lifetimeDescription": "一次付款，獲得永久的隱私和安全",
+    "planDescription": "所有Internxt計劃都提供對我們私人解決方案包的完全訪問，其中包含最新的安全技術：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
+    "businessDescription": "我們目前正在開發新的Internxt計劃，專門用於保護您的企業、員工，並確保盈利能力。",
+    "businessDescription2": "通過Internxt的加密雲端儲存計劃確保公司數據的安全。",
     "billingFrequency": {
       "monthly": "每月",
       "annually": "每年",

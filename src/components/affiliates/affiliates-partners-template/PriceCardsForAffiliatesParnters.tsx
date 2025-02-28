@@ -1,6 +1,21 @@
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
-import { Fire } from '@phosphor-icons/react';
+
+import {
+  ArrowsClockwise,
+  CodeBlock,
+  Database,
+  Envelope,
+  Fingerprint,
+  Fire,
+  Gauge,
+  Key,
+  LockSimple,
+  Password,
+  ShieldPlus,
+  VideoConference,
+} from '@phosphor-icons/react';
+import React from 'react';
 
 interface PriceCardsForAffiliatesPartnersProps {
   storage: string;
@@ -35,6 +50,28 @@ export const PriceCardsForAffiliatesPartners = ({
     });
   }
 
+  const iconsFeatures = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    VideoConference,
+    Envelope,
+  ];
+
+  const planTypes = {
+    '1TB': contentText.productFeatures.planTypes.essentials,
+    '2TB': contentText.productFeatures.planTypes.pro,
+    '3TB': contentText.productFeatures.planTypes.premium,
+    '5TB': contentText.productFeatures.planTypes.ultimate,
+  };
+  const cardLabel = planTypes[storage] || null;
+
   return (
     <div
       className={`${
@@ -50,7 +87,7 @@ export const PriceCardsForAffiliatesPartners = ({
             </div>
           ) : null}
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{storage}</p>
+            <p className="text-lg font-medium text-primary">{cardLabel}</p>
           </div>
         </div>
         <div
@@ -92,19 +129,16 @@ export const PriceCardsForAffiliatesPartners = ({
       </div>
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures.individuals[storage].map((feature) => (
-            <div
-              className="flex flex-row items-start space-x-2 px-6 first:whitespace-nowrap last:font-semibold"
-              key={feature}
-            >
-              <img
-                loading="lazy"
-                className="translate-y-px select-none"
-                src="/icons/checkPrimary.svg"
-                draggable="false"
-                alt="check icon"
-              />
+          {contentText.productFeatures.individuals[storage].map((feature, index) => (
+            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                size: 24,
+                className: 'text-primary',
+              })}
               <span className="text-gray-80">{feature}</span>
+              {index > 8 ? (
+                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+              ) : null}
             </div>
           ))}
         </div>

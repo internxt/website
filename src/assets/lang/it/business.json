@@ -76,7 +76,9 @@
     "features": {
       "endToEnd": "Crittografia end-to-end",
       "openSource": "Open-source e verificato",
-      "anonymousAccount": "Creazione account anonima"
+      "anonymousAccount": "Creazione anonima dell'account",
+      "premiumSupport": "Assistenza clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
   "WhyChooseInternxt": {

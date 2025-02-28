@@ -112,8 +112,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    const planType = isBusiness ? 'business' : 'individual';
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
   };
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
@@ -137,9 +136,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
-            business: decimalDiscount,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
           }}
           lang={lang}
           products={products}
@@ -148,11 +146,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           onBusinessPlansSelected={onBusinessPlansSelected}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           lifetimeCoupons={lifetimeCoupons}
-          CustomDescription={
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {textContent.tableSection.planDescription}
-            </span>
-          }
+          hideBusinessCards
+          hideBusinessSelector
+          hideSwitchSelector
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
