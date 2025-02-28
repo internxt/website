@@ -112,7 +112,13 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    stripeService.redirectToCheckout(priceId, currencyValue, 'individual', isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
   };
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
@@ -136,8 +142,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-            lifetime: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+            individuals: decimalDiscount,
+            lifetime: decimalDiscount,
           }}
           lang={lang}
           products={products}
