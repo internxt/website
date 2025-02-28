@@ -1,8 +1,22 @@
 import { PromoCodeProps } from '@/lib/types';
-import { Fire } from '@phosphor-icons/react';
+import {
+  ArrowsClockwise,
+  CodeBlock,
+  Database,
+  Envelope,
+  Fingerprint,
+  Fire,
+  Gauge,
+  Key,
+  LockSimple,
+  Password,
+  ShieldPlus,
+  VideoConference,
+} from '@phosphor-icons/react';
 import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
+import React from 'react';
 
 export interface PriceCardProps {
   planType: string;
@@ -22,11 +36,14 @@ export interface PriceCardProps {
   lifetimeMode?: LifetimeMode;
   onButtonClicked?: () => void;
   label?: string;
+  percentOff?: number;
 }
 
 const STORAGE_LEVELS = {
+  '1TB': 'Essential ',
+  '3TB': 'Premium ',
   '2TB': 'Lite ',
-  '5TB': 'Pro ',
+  '5TB': 'Ultimate ',
   '10TB': 'Ultra ',
 };
 
@@ -47,6 +64,7 @@ export default function PriceCard({
   isLifetimePage,
   lifetimeMode,
   label,
+  percentOff = 0,
   onButtonClicked,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
@@ -56,6 +74,20 @@ export default function PriceCard({
   };
 
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
+
+  const iconsFeatures = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    VideoConference,
+    Envelope,
+  ];
 
   function onCheckoutButtonClicked() {
     if (lifetimeMode === 'redeem') return onButtonClicked?.();
@@ -96,7 +128,7 @@ export default function PriceCard({
 
   const getPlanStorage = (storage) => {
     if (isLifetimePage) {
-      return STORAGE_LEVELS[storage] + storage;
+      return STORAGE_LEVELS[storage];
     }
 
     return storage;
@@ -107,18 +139,24 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${'border-primary ring-[1px]'} flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${
+        popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
+      } flex max-h-[740px] min-h-[740px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
-      <div className={`info flex flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
+      <div
+        className={`info flex max-h-[340px]  min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+      >
         <div className="flex flex-col items-center justify-center space-y-4">
-          {popular ? (
-            <div className="flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1">
-              <Fire size={28} className="text-white" />
-              <p className="font-semibold text-white">{contentText.mostPopular}</p>
-            </div>
-          ) : null}
+          <div
+            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${
+              !popular ? 'invisible' : ''
+            }`}
+          >
+            <Fire size={28} className="text-white" />
+            <p className="font-semibold text-white">{contentText.mostPopular}</p>
+          </div>
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{label ?? getPlanStorage(storage)}</p>
+            <p className="text-lg font-medium text-primary">{getPlanStorage(storage)}</p>
           </div>
         </div>
         <div
@@ -151,6 +189,13 @@ export default function PriceCard({
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
             {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
           </p>
+
+          {percentOff > 0 && (
+            <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
+              {percentOff}
+              {contentText.discount}
+            </p>
+          )}
         </div>
         <button
           id={`planButton${storage}`}
@@ -191,17 +236,17 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex flex-col space-y-2 pt-6">
-          {contentText.productFeatures.individuals[storage].map((feature) => (
-            <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
-              <img
-                loading="lazy"
-                className="translate-y-px select-none"
-                src="/icons/checkPrimary.svg"
-                draggable="false"
-                alt="check icon"
-              />
+        <div className="flex max-h-[500px] min-h-[500px] flex-col  space-y-2 pt-6">
+          {contentText.productFeatures.individuals[storage].map((feature, index) => (
+            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                size: 24,
+                className: 'text-primary',
+              })}
               <span className="text-gray-80">{feature}</span>
+              {index > 8 ? (
+                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+              ) : null}
             </div>
           ))}
         </div>

@@ -59,19 +59,20 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Ottieni il",
-        "blueText": "cloud storage più sicuro ",
-        "line2": ""
+        "textBeforeBlueText": "Spazio di archiviazione ",
+        "blueText": "sicuro ",
+        "textAfterBlueText": "nel cloud e nell'ecosistema"
       },
-      "description": {
-        "normal1": "",
-        "blue": "70% di sconto ",
-        "normal2": "su tutti i piani"
-      },
-      "features": ["Crittografia a conoscenza zero", "Crittografia post-quantistic", "Open source verificato"],
+      "subtitle": "Sicurezza e controllo completo.",
+      "description": "70% di sconto",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus e altro",
+        "Crittografia post-quantistica e conoscenza zero",
+        "Open-source e auditato"
+      ],
       "startFrom": {
         "normal1": "A partire da ",
-        "price": " 0.95",
+        "price": " 2.49",
         "normal2": " /mese"
       },
       "claimDeal": "Ottieni l'offerta",
@@ -107,16 +108,16 @@
       "individuals": "Piani individuali",
       "homePage": "Scegli il piano giusto per te",
       "lifetime": "Piani a vita",
-      "business": "Piani aziendali",
+      "business": "Piani per le aziende",
       "lifetimeCampaign": {
-        "blueText": "Sconto del 50%",
+        "blueText": "50% di sconto",
         "normalText": "su tutti i nostri piani esclusivi a vita"
       }
     },
-    "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
-    "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
-    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
-    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
+    "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre",
+    "planDescription": "Tutti i piani di Internxt offrono un accesso completo al nostro pacchetto di soluzioni private con la tecnologia di sicurezza più recente: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "businessDescription": "Attualmente stiamo lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud criptati di Internxt.",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annualmente",
@@ -125,16 +126,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Inizia con il nostro piano gratuito",
-      "enjoy10gb": "Goditi 1 GB per sempre e accedi a tutti i nostri servizi",
-      "upTo": "1 GB",
-      "freeForever": "Gratuito per sempre",
-      "cta": "Seleziona piano"
+      "eyeBrow": "Internxt Free",
+      "description": "Ottieni fino a 1 GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato: VPN (FR), CLI/WebDav/Rclone e molto altro.",
+      "cta": "Seleziona il piano"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open source e verificato",
-      "anonymousAccount": "Creazione di account anonimi"
+      "openSource": "Open-source e verificato",
+      "anonymousAccount": "Creazione anonima dell'account",
+      "premiumSupport": "Assistenza clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
   "ChooseStorageSizeSection": {

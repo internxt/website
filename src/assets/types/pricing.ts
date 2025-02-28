@@ -138,13 +138,13 @@ export interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }
 
 export interface FreePlanCard {
-  getStarted: string;
-  enjoy10gb: string;
-  upTo: string;
-  freeForever: string;
+  eyeBrown: string;
+  description: string;
   cta: string;
 }
 

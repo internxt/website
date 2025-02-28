@@ -74,9 +74,11 @@
       "business": "Entreprise"
     },
     "features": {
-      "endToEnd": "Cryptage de bout en bout",
-      "openSource": "Open source et audité",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "WhyChooseInternxt": {

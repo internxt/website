@@ -7,7 +7,7 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
@@ -67,7 +67,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   hideSwitchSelector,
   lang,
-  popularPlanBySize = '10TB',
+  popularPlanBySize = '3TB',
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,
@@ -103,16 +103,16 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.guarantee,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 
@@ -183,11 +183,6 @@ export const PricingSection = ({
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
@@ -201,7 +196,7 @@ export const PricingSection = ({
             : undefined}
         </div>
         {!hideFreeCard && (
-          <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
+          <div id="freeAccountCard" className="content flex w-full px-6 pb-10 md:px-0 md:pb-0">
             <FreePlanCard textContent={textContent.freePlanCard} />
           </div>
         )}
@@ -225,16 +220,16 @@ export const PricingSection = ({
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
                       monthlyProductPrice={
                         products.business[Interval.Month].filter(
                           (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
                         )[0].price
                       }
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
                       key={product.storage}
-                      popular={product.storage === '10TB'}
+                      popular={product.storage === '2TB'}
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
@@ -250,7 +245,7 @@ export const PricingSection = ({
         <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
-              <feature.icon size={40} className="text-primary md:pb-0" />
+              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
               <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
             </div>
           ))}

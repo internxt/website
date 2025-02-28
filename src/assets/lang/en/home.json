@@ -59,19 +59,21 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Get the",
-        "blueText": "most secure ",
-        "line2": "cloud storage"
+        "textBeforeBlueText": "",
+        "blueText": "Secure ",
+        "textAfterBlueText": " cloud storage and privacy suite"
       },
-      "description": {
-        "normal1": "",
-        "blue": "70% OFF ",
-        "normal2": "all plans"
-      },
-      "features": ["Zero-knowledge encryption", "Post-quantum encryption", "Open source and audited"],
+      "subtitle": "Full Security. Total control.",
+      "description": "Get 70% OFF our award-winning privacy services",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus & more",
+        "Post-quantum zero-knowledge encryption",
+        "Open source and audited"
+      ],
+
       "startFrom": {
         "normal1": "Start from ",
-        "price": " 0.95",
+        "price": " 0.85",
         "normal2": " /month"
       },
       "claimDeal": "Claim deal",
@@ -97,7 +99,7 @@
       ],
       "startFrom": {
         "normal1": "Start from ",
-        "price": " 0.95",
+        "price": " 2.49",
         "normal2": " /month"
       },
       "claimDeal": "Reveal limited-time offer",
@@ -130,17 +132,17 @@
   },
   "tableSection": {
     "planTitles": {
-      "individuals": "Individual Plans",
+      "individuals": "Individuals",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
+      "lifetime": "Lifetimes",
+      "business": "Business",
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
         "normalText": "all our exclusive lifetime plans"
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -151,16 +153,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Internxt Free",
+      "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
       "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "ChooseStorageSizeSection": {

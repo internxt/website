@@ -28,11 +28,10 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJso
         textContent={langJson.HeroSection}
         previewImg="/images/lifetime/file_item.webp"
         hideTimer
-        bgImage={getImage('/images/campaigns/euro/grass.webp')}
         imageMobile={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
         onRedirectButtonClicked={() => router.push('#payment')}
       />
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} discount={0} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

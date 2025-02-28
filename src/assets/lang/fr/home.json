@@ -59,25 +59,26 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Obtenez le",
-        "blueText": "stockage cloud le plus sécurisé ",
-        "line2": ""
+        "textBeforeBlueText": "Stockage ",
+        "blueText": "sécurisé ",
+        "textAfterBlueText": "dans le cloud et l'écosystème"
       },
-      "description": {
-        "normal1": "",
-        "blue": "70 % de réduction ",
-        "normal2": "sur tous les plans"
-      },
-      "features": ["Chiffrement à connaissance nulle", "Chiffrement post-quantique", "Open source et audité"],
+      "subtitle": "Sécurité et contrôle complets.",
+      "description": "70% de réduction",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus et plus",
+        "Cryptographie post-quantique et connaissance zéro",
+        "Open-source et audité"
+      ],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 0.95",
+        "price": " 2.49",
         "normal2": " /mois"
       },
-      "claimDeal": "Obtenir l'offre",
+      "claimDeal": "Obtenez l'offre",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
-    "youKnow": "Le saviez-vous ?"
+    "youKnow": "Saviez-vous cela?"
   },
   "FeatureSectionV2": {
     "title": "Chiffrement sans connaissance : vous seul pouvez voir vos données",
@@ -106,17 +107,17 @@
     "planTitles": {
       "individuals": "Plans individuels",
       "homePage": "Choisissez le plan qui vous convient",
-      "lifetime": "Planes à vie",
-      "business": "Plans d'entreprise",
+      "lifetime": "Plans à vie",
+      "business": "Plans pour les entreprises",
       "lifetimeCampaign": {
         "blueText": "50% de réduction",
-        "normalText": "tous nos plans exclusifs à vie"
+        "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
-    "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
-    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
-    "businessDescription2": "Assurez la sécurité des données d'entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "lifetimeDescription": "Payez une fois et obtenez une confidentialité et une sécurité à vie",
+    "planDescription": "Tous les plans Internxt offrent un accès complet à notre pack de solutions privées avec la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et garantir votre rentabilité.",
+    "businessDescription2": "Garantissez la sécurité des données de l'entreprise avec les plans de stockage cloud cryptés d'Internxt.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
@@ -125,16 +126,16 @@
       "business": "Entreprise"
     },
     "freePlanCard": {
-      "getStarted": "Commencez avec notre plan gratuit",
-      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
-      "upTo": "Jusqu'à 10 Go",
-      "freeForever": "Gratuit pour toujours",
-      "cta": "Sélectionner un plan"
+      "eyeBrow": "Internxt Free",
+      "description": "Obtenez jusqu'à 1 Go de stockage cloud chiffré et profitez de notre écosystème privé : VPN (FR), CLI/WebDav/Rclone et bien plus encore.",
+      "cta": "Sélectionner le plan"
     },
     "features": {
-      "endToEnd": "Chiffré de bout en bout",
-      "openSource": "Open-source et vérifié",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "ChooseStorageSizeSection": {

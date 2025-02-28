@@ -1,10 +1,12 @@
 {
-  "mostPopular": "Most popular",
+  "mostPopular": "RECOMMENDED",
   "mostPopularPlan": "Most Popular Plan",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new subscriptors or free plan users",
   "redeemCode": "Redeem code",
   "save": "Save ",
+  "discount": "% OFF ",
+  "commingSoon": "Coming soon",
   "planTitles": {
     "individuals": "Individual Plans",
     "homePage": "Choose the right plan for you",
@@ -53,6 +55,7 @@
     "freeForever": "Free forever",
     "free": "Up to "
   },
+  "perYear": "€/year",
   "perMonth": "/month",
   "firstMonth": "First 30 days",
   "cta": {
@@ -67,10 +70,8 @@
     "freemonth": "Get 30 days for free"
   },
   "freePlanCard": {
-    "getStarted": "Get started with our free plan",
-    "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-    "upTo": "1GB",
-    "freeForever": "Free forever",
+    "eyeBrow": "Internxt Free",
+    "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
     "cta": "Select plan"
   },
   "features": {
@@ -139,72 +140,80 @@
         "normal2": "than other secure cloud storage alternatives"
       }
     },
+    "planTypes": {
+      "essentials": "Essential",
+      "standard": "Standard",
+      "premium": "Premium",
+      "ultimate": "Ultimate",
+      "pro": "Pro"
+    },
     "individuals": {
-      "200GB": [
-        "200GB encrypted storage",
-        "Zero-knowledge encryption",
+      "1TB": [
+        "1TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR)",
+        "Antivirus",
+        "Backup your files",
         "Password-protected file sharing",
-        "Post-quantum cryptography",
-        "Access your files from any device",
-        "Guaranteed GDPR compliance",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "Premium customer support",
-        "30-day money-back guarantee"
+        "CLI, WebDav & Rclone support"
       ],
-      "2TB": [
-        "2TB encrypted storage",
-        "Zero-knowledge encryption",
+      "3TB": [
+        "3TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "Antivirus",
+        "Backup your files",
         "Password-protected file sharing",
-        "Post-quantum cryptography",
-        "Access your files from any device",
-        "Guaranteed GDPR compliance",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "Premium customer support",
-        "30-day money-back guarantee"
+        "CLI, WebDav & Rclone support",
+        "Meet (3 participants)",
+        "Mail (3 addresses)"
       ],
       "5TB": [
-        "5TB encrypted storage",
-        "Zero-knowledge encryption",
+        "5TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup your files",
         "Password-protected file sharing",
-        "Post-quantum cryptography",
-        "Access your files from any device",
-        "Guaranteed GDPR compliance",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "Premium customer support",
-        "30-day money-back guarantee"
-      ],
-      "10TB": [
-        "10TB encrypted storage",
-        "Zero-knowledge encryption",
-        "Password-protected file sharing",
-        "Post-quantum cryptography",
-        "Access your files from any device",
-        "Guaranteed GDPR compliance",
-        "Two-factor authentication (2FA)",
-        "Premium customer support",
-        "30-day money-back guarantee"
+        "CLI, WebDav & Rclone support",
+        "Meet (5 participants)",
+        "Mail (5 addresses)"
       ]
     },
     "business": {
       "1TB": [
         "1TB storage/user",
-        "Zero-knowledge encryption",
-        "Create and manage users & teams",
-        "Starting at 3 users and up to 10",
-        "Guaranteed GDPR compliance",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
+        "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Premium customer support"
+        "Meet up to 10 users",
+        "1 custom email address/user"
       ],
       "2TB": [
         "2TB storage/user",
-        "Zero-knowledge encryption",
-        "Create and manage users & teams",
-        "Starting at 3 users and up to 100",
-        "Guaranteed GDPR compliance",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "GDPR compliance",
         "Two-factor authentication (2FA)",
+        "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Premium customer support"
+        "Meet up to 100 users ",
+        "2 custom email address/user"
       ]
     }
   }

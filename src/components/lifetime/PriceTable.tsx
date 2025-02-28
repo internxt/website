@@ -40,7 +40,7 @@ const PriceTable = ({
   currencySpecified,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
-  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '10TB' : '5TB';
+  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '3TB' : '5TB';
   const [specialCoupons, setSpecialCoupons] = useState();
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
@@ -115,6 +115,7 @@ const PriceTable = ({
     }
   };
 
+  const percentOff = discount ? 100 - discount * 100 : 0;
   return (
     <section className="overflow-hidden">
       <div
@@ -161,6 +162,7 @@ const PriceTable = ({
                       isLifetimePage={true}
                       lifetimeMode={lifetimeMode}
                       onButtonClicked={onButtonClicked}
+                      percentOff={percentOff}
                     />
                   );
                 })
