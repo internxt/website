@@ -21,6 +21,7 @@ interface PaymentSectionProps {
   activeSwitchPlan?: SwitchButtonOptions;
   onButtonClicked?: () => void;
   onPlanTypeChange?: (activeSwitchPlan: SwitchButtonOptions) => void;
+  isStackCommerce?: boolean;
 }
 
 const PaymentSection = ({
@@ -36,6 +37,7 @@ const PaymentSection = ({
   activeSwitchPlan,
   onPlanTypeChange,
   onButtonClicked,
+  isStackCommerce,
 }: PaymentSectionProps): JSX.Element => {
   const router = useRouter();
   const features = [
@@ -120,6 +122,7 @@ const PaymentSection = ({
           lifetimeMode={lifetimeMode}
           currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}
+          isStackCommerce={isStackCommerce}
         />
         <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white py-10 text-center md:flex-row md:space-x-32 md:space-y-0">
           {features.map((feature) => (

@@ -14,6 +14,7 @@ interface PriceTableProps {
   lifetimeMode?: LifetimeMode;
   showPriceBefore?: boolean;
   currencySpecified?: string;
+  isStackCommerce?: boolean;
   onButtonClicked?: () => void;
 }
 
@@ -38,6 +39,7 @@ const PriceTable = ({
   showPriceBefore,
   lifetimeMode,
   currencySpecified,
+  isStackCommerce,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
   const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '3TB' : '5TB';
@@ -144,7 +146,7 @@ const PriceTable = ({
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-16">
             {lifetimeProducts
-              ? lifetimeProducts.map((product: any) => {
+              ? lifetimeProducts.map((product: any, index) => {
                   return (
                     <PriceCard
                       planType="individual"
@@ -163,6 +165,8 @@ const PriceTable = ({
                       lifetimeMode={lifetimeMode}
                       onButtonClicked={onButtonClicked}
                       percentOff={percentOff}
+                      isStackCommerce={isStackCommerce}
+                      index={index}
                     />
                   );
                 })

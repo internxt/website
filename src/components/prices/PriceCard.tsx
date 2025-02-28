@@ -37,6 +37,8 @@ export interface PriceCardProps {
   onButtonClicked?: () => void;
   label?: string;
   percentOff?: number;
+  isStackCommerce?: boolean;
+  index?: number;
 }
 
 const STORAGE_LEVELS = {
@@ -66,6 +68,8 @@ export default function PriceCard({
   label,
   percentOff = 0,
   onButtonClicked,
+  isStackCommerce = false,
+  index,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -137,6 +141,55 @@ export default function PriceCard({
   const isFreePlan = price <= 0;
   const isIndividualPlan = planType.toLowerCase() === 'individual';
 
+  const STACKCOMMERCE_STORAGE_PLANS = {
+    '2TB': {
+      title: 'Lite 2TB',
+      price: '€900',
+      features: [
+        '2TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+    '5TB': {
+      title: 'Pro 5TB',
+      price: '€1900',
+      features: [
+        '5TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+    '10TB': {
+      title: 'Ultra 10TB',
+      price: '€2900',
+      features: [
+        '10TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+  };
+
+  const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
   return (
     <div
       className={`${
@@ -156,7 +209,9 @@ export default function PriceCard({
             <p className="font-semibold text-white">{contentText.mostPopular}</p>
           </div>
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
-            <p className="text-lg font-medium text-primary">{getPlanStorage(storage)}</p>
+            <p className="text-lg font-medium text-primary">
+              {isStackCommerce ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title : getPlanStorage(storage)}
+            </p>
           </div>
         </div>
         <div
@@ -237,18 +292,35 @@ export default function PriceCard({
         ) : null}
 
         <div className="flex max-h-[500px] min-h-[500px] flex-col  space-y-2 pt-6">
-          {contentText.productFeatures.individuals[storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                size: 24,
-                className: 'text-primary',
-              })}
-              <span className="text-gray-80">{feature}</span>
-              {index > 8 ? (
-                <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
-              ) : null}
+          {isStackCommerce ? (
+            STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
+              <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
+                <img
+                  loading="lazy"
+                  className="translate-y-px select-none"
+                  src="/icons/checkPrimary.svg"
+                  draggable="false"
+                  alt="check icon"
+                />
+                <span className="text-gray-80">{feature}</span>
+              </div>
+            ))
+          ) : (
+            <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
+              {contentText.productFeatures.individuals[storage].map((feature, index) => (
+                <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                    size: 24,
+                    className: 'text-primary',
+                  })}
+                  <span className="text-gray-80">{feature}</span>
+                  {index > 8 ? (
+                    <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
+                  ) : null}
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>
