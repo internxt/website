@@ -78,7 +78,6 @@ async function getCurrency(currencySpecified?: string): Promise<string> {
 async function fetchProductData(currency: string) {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/stripe_products?currency=${currency}`);
-    console.log('res', res.data);
     return res.data;
   } catch (error) {
     console.error('Error fetching product data:', error);

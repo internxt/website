@@ -28,6 +28,7 @@ export interface PriceCardProps {
   popular?: boolean;
   priceId?: string;
   coupon?: PromoCodeName;
+  percentOff?: number;
 }
 
 export default function PriceCard({
@@ -40,6 +41,7 @@ export default function PriceCard({
   currency,
   coupon,
   contentText,
+  percentOff,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
   const priceBeforeDiscount = priceBefore ? Number(priceBefore).toFixed(2).replace('.00', '') : undefined;
@@ -56,14 +58,15 @@ export default function PriceCard({
     VideoConference,
     Envelope,
   ];
+
   return (
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex max-h-[720px] min-h-[400px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } m-2 flex max-h-[740px] min-h-[400px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`info flex max-h-[300px] min-h-[300px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -111,6 +114,11 @@ export default function PriceCard({
 
           <p className={`${planType.toLowerCase() === 'individual' ? 'flex' : 'hidden'} text-sm text-gray-50`}>
             {contentText.billedAnnually}
+          </p>
+
+          <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
+            {percentOff}
+            {contentText.discount}
           </p>
         </div>
         <button

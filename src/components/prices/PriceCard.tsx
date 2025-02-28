@@ -36,6 +36,7 @@ export interface PriceCardProps {
   lifetimeMode?: LifetimeMode;
   onButtonClicked?: () => void;
   label?: string;
+  percentOff?: number;
 }
 
 const STORAGE_LEVELS = {
@@ -63,6 +64,7 @@ export default function PriceCard({
   isLifetimePage,
   lifetimeMode,
   label,
+  percentOff,
   onButtonClicked,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
@@ -137,10 +139,10 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${'border-primary ring-[1px]'} flex max-h-[720px] min-h-[400px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      className={`${'border-primary ring-[1px]'} flex max-h-[740px] min-h-[740px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`info flex max-h-[300px]  min-h-[300px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex max-h-[340px]  min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -184,6 +186,11 @@ export default function PriceCard({
 
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
             {contentText.billingFrequencyLabel[billingFrequencyList[billingFrequency as string]]}
+          </p>
+
+          <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
+            {percentOff}
+            {contentText.discount}
           </p>
         </div>
         <button

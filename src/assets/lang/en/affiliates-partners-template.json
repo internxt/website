@@ -133,6 +133,7 @@
   },
   "PriceTable": {
     "header": "Unlock 85% OFF",
+
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
@@ -146,6 +147,7 @@
     "priceCard": {
       "mostPopular": "RECOMMENDED",
       "commingSoon": "Coming soon",
+      "discount": "% OFF",
       "billedAnnually": "One-time payment",
       "cta": "Redeem deal",
       "features": {

@@ -88,7 +88,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
+  console.log('individualCoupon', individualCoupon?.name);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -105,7 +105,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
+          individuals: 30,
           lifetime: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}

@@ -94,6 +94,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       onButtonClicked={handlePriceCardButton}
                       coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                       priceBefore={discount ? product.price : undefined}
+                      percentOff={discount ? 100 - discount : 0}
                     />
                   );
                 })

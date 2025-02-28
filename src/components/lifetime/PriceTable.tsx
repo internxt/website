@@ -115,6 +115,7 @@ const PriceTable = ({
     }
   };
 
+  const percentOff = discount ? 100 - discount * 100 : 0;
   return (
     <section className="overflow-hidden">
       <div
@@ -161,6 +162,7 @@ const PriceTable = ({
                       isLifetimePage={true}
                       lifetimeMode={lifetimeMode}
                       onButtonClicked={onButtonClicked}
+                      percentOff={percentOff}
                     />
                   );
                 })
