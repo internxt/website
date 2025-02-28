@@ -132,9 +132,9 @@
   },
   "tableSection": {
     "planTitles": {
-      "individuals": "Individuals",
+      "individuals": "Annual",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetimes",
+      "lifetime": "Lifetime",
       "business": "Business",
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
