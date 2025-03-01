@@ -64,7 +64,7 @@
         "textAfterBlueText": " cloud storage and privacy suite"
       },
       "subtitle": "Full Security. Total control.",
-      "description": "Get 70% OFF our award-winning privacy services",
+      "description": "Get 70% off our award-winning privacy services",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus & more",
         "Post-quantum zero-knowledge encryption",
@@ -73,7 +73,7 @@
 
       "startFrom": {
         "normal1": "Start from ",
-        "price": " 0.85",
+        "price": " 2.99",
         "normal2": " /month"
       },
       "claimDeal": "Claim deal",
@@ -84,13 +84,13 @@
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "70% OFF "
+        "blue2": "70% off "
       },
       "description": {
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "70% OFF "
+        "blue2": "70% off "
       },
       "features": [
         "Zero-knowledge military-grade encryption",
@@ -132,9 +132,9 @@
   },
   "tableSection": {
     "planTitles": {
-      "individuals": "Individuals",
+      "individuals": "Annual",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetimes",
+      "lifetime": "Lifetime",
       "business": "Business",
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
@@ -147,14 +147,14 @@
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
-      "annually": "Annually",
+      "annually": "Annual",
       "individual": "Individual",
       "lifetime": "Lifetime",
       "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {

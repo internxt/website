@@ -59,15 +59,15 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": " Almacenamiento ",
+        "textBeforeBlueText": " Ecosistema  ",
         "blueText": " seguro ",
-        "textAfterBlueText": " en la nube y ecosistema"
+        "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
       "description": "70% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
-        "Criptografía postcuántica y conocimiento cero",
+        "Cifrado postcuántico y cero conocimiento",
         "Código abierto y auditado"
       ],
       "startFrom": {
@@ -128,7 +128,7 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Obtén hasta 1GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado: VPN (FR), CLI/WebDav/Rclone y mucho más.",
+      "description": "Obtén 1 GB de almacenamiento en la nube cifrado gratis",
       "cta": "Seleccionar plan"
     },
     "features": {
