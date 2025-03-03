@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Rejoignez Internxt, l'alternative principale à Google Drive, et bénéficiez de ",
-      "blue": "75% DE RÉDUCTION ",
+      "blue": "80% DE RÉDUCTION ",
       "normal1": "sur n'importe quel plan annuel. Stockez et partagez vos fichiers en toute sécurité et confidentialité."
     },
     "cta": "Choisissez un plan"
@@ -77,13 +77,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Obtenez une année complète de stockage avec 75% de réduction maintenant !",
+    "title": "Obtenez une année complète de stockage avec 80% de réduction maintenant !",
     "description": "Internxt propose une réduction exclusive avec confidentialité et sécurité garanties.",
     "cta": "Choisissez un plan"
   },
   "CtaSection1": {
     "title": "Le stockage cloud le plus privé au monde",
-    "description": "Profitez de votre réduction exclusive de 75% pour accéder au stockage cloud sécurisé, privé et crypté d'Internxt pendant une année entière.",
+    "description": "Profitez de votre réduction exclusive de 80% pour accéder au stockage cloud sécurisé, privé et crypté d'Internxt pendant une année entière.",
     "cta": "Trouvez votre plan"
   }
 }
