@@ -98,7 +98,7 @@ export default function PriceCard({
     Envelope,
   ];
 
-  function onCheckoutButtonClicked() {
+  function onCheckoutButtonClicked(priceId) {
     if (lifetimeMode === 'redeem') return onButtonClicked?.();
 
     if (cta[1] === 'Free plan') {
@@ -106,7 +106,7 @@ export default function PriceCard({
     } else {
       if (isIframe) {
         checkoutForPcComponentes({
-          planId: cta[1],
+          planId: priceId,
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
@@ -198,6 +198,7 @@ export default function PriceCard({
       '2TB': {
         title: '2TB',
         price: '900',
+        priceId: 'price_1PNxYtFAOdcgaBMQzkimr6OU',
         features: [
           '2TB encrypted storage',
           'Zero-knowledge encryption',
@@ -213,6 +214,7 @@ export default function PriceCard({
       '5TB': {
         title: '5TB',
         price: '1900',
+        priceId: 'price_1PNxZkFAOdcgaBMQi0UCtXBj',
         features: [
           '5TB encrypted storage',
           'Zero-knowledge encryption',
@@ -228,6 +230,7 @@ export default function PriceCard({
       '10TB': {
         title: '10TB',
         price: '2900',
+        priceId: 'price_1PNxaDFAOdcgaBMQnKXWQRs0',
         features: [
           '10TB encrypted storage',
           'Zero-knowledge encryption',
@@ -245,6 +248,7 @@ export default function PriceCard({
       '200GB': {
         title: '200GB',
         price: '45.99',
+        priceId: 'price_1OQ3LKFAOdcgaBMQMK2UHHRM',
         features: [
           '2TB encrypted storage',
           'Zero-knowledge encryption',
@@ -260,6 +264,7 @@ export default function PriceCard({
       '2TB': {
         title: '2TB',
         price: '109.99',
+        priceId: 'price_1OQ3JbFAOdcgaBMQsawuy1PI',
         features: [
           '2TB encrypted storage',
           'Zero-knowledge encryption',
@@ -275,6 +280,7 @@ export default function PriceCard({
       '5TB': {
         title: '5TB',
         price: '199.99',
+        priceId: 'price_1OQ3H5FAOdcgaBMQwMJ734rd',
         features: [
           '5TB encrypted storage',
           'Zero-knowledge encryption',
@@ -290,6 +296,7 @@ export default function PriceCard({
       '10TB': {
         title: '10TB',
         price: '299.99',
+        priceId: 'price_1OQ3CtFAOdcgaBMQFq2xX79Q',
         features: [
           '10TB encrypted storage',
           'Zero-knowledge encryption',
@@ -304,6 +311,7 @@ export default function PriceCard({
       },
     },
   };
+
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
   const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
   const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
@@ -387,7 +395,9 @@ export default function PriceCard({
         </div>
         <button
           id={`planButton${storage}`}
-          onClick={onCheckoutButtonClicked}
+          onClick={() =>
+            onCheckoutButtonClicked(PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].priceId)
+          }
           className={`flex w-full flex-col items-center rounded-lg border ${
             popular
               ? 'border-primary bg-primary text-white hover:bg-primary-dark'
