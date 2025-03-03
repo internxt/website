@@ -1,13 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { CheckCircle, Football, ShieldCheck, Snowflake, X } from '@phosphor-icons/react';
+import { CheckCircle, Flower, X } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 
-const HIDE_BANNER_DATE = new Date('2024-01-15');
+const HIDE_BANNER_DATE = new Date('2024-1-03');
 const TODAY_DATE = new Date();
 
 const shouldHideBannerAutomatically = TODAY_DATE > HIDE_BANNER_DATE;
-const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
 
 const FeaturesBanner = () => {
   const router = useRouter();
@@ -50,9 +49,8 @@ const FeaturesBanner = () => {
     >
       <div
         className={
-          ' fixed left-1/2 top-1/2 flex h-max -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl  bg-white px-10'
+          ' fixed left-1/2 top-1/2 flex h-max -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden rounded-2xl border-primary/7  bg-white px-10'
         }
-        style={{ backgroundImage: `url('${blurBgImage}')` }}
       >
         <button
           id="close-banner"
@@ -64,10 +62,10 @@ const FeaturesBanner = () => {
         </button>
         <div className="flex max-w-[800px] flex-col items-center justify-between py-16 md:flex-row md:pb-20 lg:w-screen">
           <div className="flex h-max w-full flex-col items-center justify-center space-y-3 text-center lg:items-start lg:justify-between lg:text-start">
-            <div className="flex rounded-lg  border-2 border-primary bg-gray-100 px-3 py-1.5">
+            <div className="flex rounded-lg  border-2 border-green-dark bg-green-1 px-3 py-1.5">
               <p className="text-2xl font-bold text-white">{textContent.featuresBanner.label}</p>
             </div>
-            <p className="w-full max-w-[400px] text-4xl font-bold leading-tight text-white lg:text-5xl">
+            <p className="w-full max-w-[400px] text-4xl font-bold leading-tight text-gray-100 lg:text-5xl">
               {textContent.featuresBanner.title}
             </p>
 
@@ -79,12 +77,12 @@ const FeaturesBanner = () => {
                 {textContent.featuresBanner.cta}
               </button>
               <div className="flex flex-row items-center space-x-3 pt-2 ">
-                <CheckCircle size={24} className="text-primary" />
-                <p className="whitespace-nowrap font-medium text-white lg:text-lg">
+                <CheckCircle size={24} className="text-green-1" weight="fill" />
+                <p className="whitespace-nowrap font-medium text-gray-80 lg:text-lg">
                   {textContent.featuresBanner.guarantee}
                 </p>
               </div>
-              <p className="text-sm font-medium text-gray-50">{textContent.featuresBanner.lastCta}</p>
+              <p className="text-sm font-medium text-gray-80">{textContent.featuresBanner.lastCta}</p>
             </div>
           </div>
           <div className="hidden w-full items-center lg:flex">
@@ -98,10 +96,8 @@ const FeaturesBanner = () => {
                       key={index}
                     >
                       <div className="flex">
-                        <Football size={32} className="mr-4 text-primary" weight="fill" />
-                        <p className={`text-lg font-semibold ${isSecondLast ? 'text-primary' : 'text-white'}`}>
-                          {card}
-                        </p>
+                        <Flower size={32} className="mr-4 text-primary" weight="fill" />
+                        <p className={'text-lg font-semibold text-gray-80'}>{card}</p>
                       </div>
                     </div>
                   );

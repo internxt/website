@@ -22,7 +22,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/home/image_mobile.webp');
+  const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
@@ -58,11 +58,9 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          {!shouldShowMobileBanner ? (
-            <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-              <Animation />
-            </div>
-          ) : undefined}
+          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
+            <Animation />
+          </div>
         </div>
       </div>
     </section>
