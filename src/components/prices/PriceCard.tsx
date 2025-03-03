@@ -305,10 +305,12 @@ export default function PriceCard({
     },
   };
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
-  const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
   const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
+  const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
+  const selectStorage = !isLifetimePage ? storageSelectedPcComponentes : storageSelected;
+
   const discountPCComponentes = (
-    parseFloat(PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].price) * 0.25
+    parseFloat(PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].price) * 0.25
   )
     .toFixed(2)
     .replace(/\.00$/, '');
@@ -336,7 +338,7 @@ export default function PriceCard({
               {isStackCommerce
                 ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title
                 : isPcComponentes
-                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].title
+                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].title
                 : getPlanStorage(storage)}
             </p>
           </div>
@@ -367,7 +369,7 @@ export default function PriceCard({
             <span className={`text-sm`}>{currency}</span>
             <span className="price text-2xl font-medium">
               {isPcComponentes
-                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].price
+                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].price
                 : formattedPriceBefore}
             </span>
           </p>
@@ -437,20 +439,18 @@ export default function PriceCard({
               </div>
             ))
           ) : isPcComponentes ? (
-            PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes]?.features.map(
-              (feature) => (
-                <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
-                  <img
-                    loading="lazy"
-                    className="translate-y-px select-none"
-                    src="/icons/checkPrimary.svg"
-                    draggable="false"
-                    alt="check icon"
-                  />
-                  <span className="text-gray-80">{feature}</span>
-                </div>
-              ),
-            )
+            PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage]?.features.map((feature) => (
+              <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
+                <img
+                  loading="lazy"
+                  className="translate-y-px select-none"
+                  src="/icons/checkPrimary.svg"
+                  draggable="false"
+                  alt="check icon"
+                />
+                <span className="text-gray-80">{feature}</span>
+              </div>
+            ))
           ) : (
             <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (

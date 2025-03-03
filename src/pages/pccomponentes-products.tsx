@@ -200,6 +200,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                     coupon={coupon ?? undefined}
                     isPcComponentes
                     index={index}
+                    isLifetimePage
                   />
                 );
               })}
