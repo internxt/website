@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Save 70%",
+    "label": "Save 80%",
     "title": {
       "line1": "Secure cloud storage.",
       "blueText": "Guaranteed.",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "70% cheaper"
+        "blueText": "80% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " cloud storage and privacy suite"
       },
       "subtitle": "Full Security. Total control.",
-      "description": "Get 70% off our award-winning privacy services",
+      "description": "Get 80% off our award-winning privacy services",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus & more",
         "Post-quantum zero-knowledge encryption",
@@ -84,13 +84,13 @@
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "70% off "
+        "blue2": "80% off "
       },
       "description": {
         "normal1": "Get the ",
         "blue1": "most secure ",
         "normal2": "cloud storage, now with ",
-        "blue2": "70% off "
+        "blue2": "80% off "
       },
       "features": [
         "Zero-knowledge military-grade encryption",

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "優惠 70%",
+    "label": "優惠 80%",
     "title": {
       "line1": "獲取最",
       "blueText": "安全的",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "現在安全存儲您的文件，",
-        "blueText": "便宜70%"
+        "blueText": "便宜80%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " 在雲端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "70%折扣",
+      "description": "80%折扣",
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
