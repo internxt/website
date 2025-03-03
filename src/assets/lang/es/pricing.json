@@ -41,15 +41,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 85%",
-      "title": "¡Protege lo que quieres, para siempre!",
-      "subtitle": "Entra en el sorteo y gana 2 mochilas Swiss Peak x Internxt",
-      "cta": "Consigue tu plan",
+      "label": "Ahorra un 80%",
+      "title": "Oferta de primavera!",
+      "subtitle": "Nuevos planes con Antivirus y VPN premium",
+      "cta": "Comprar",
       "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de dinero de 30 días",
       "lastCta": "*La oferta es válida para cuentas gratuitas o nuevos clientes",
-      "titleMbl1": "¡Protege lo que quieres, para siempre!",
-      "titleMbl3": "¡Protege lo que quieres, para siempre!",
+      "titleMbl1": "Oferta de primavera",
+      "titleMbl3": "Nuevos planes con Antivirus y VPN premium",
       "ctaMbl": "Consigue tu plan"
     },
     "planTitles": {

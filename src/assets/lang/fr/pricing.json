@@ -41,15 +41,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 85 %",
-      "title": "Protégez ce que vous aimez, pour toujours !",
-      "subtitle": "Gagnez deux sacs à dos Internxt x Swiss Peak !",
+      "label": "Économisez 80%",
+      "title": "Passez au printemps de la confidentialité !",
+      "subtitle": "Nouveaux plans avec Antivirus et VPN premium",
       "cta": "Profitez de l'offre",
-      "cta2": "Obtenez 85 % de réduction",
+      "cta2": "Bénéficiez de 85 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
-      "titleMbl1": "Une vie ",
-      "titleMbl2": " de confidentialité",
+      "titleMbl1": "Nouveaux",
+      "titleMbl2": "plans tarifaires",
       "titleMbl3": "Protégez ce que vous aimez, pour toujours !",
       "ctaMbl": "Acheter un plan"
     },
