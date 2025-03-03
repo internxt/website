@@ -44,7 +44,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
+    couponCode: PromoCodeName.SpringCoupon,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
