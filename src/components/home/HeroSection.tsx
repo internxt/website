@@ -30,9 +30,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     router.push('/pricing');
   };
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
-        <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block " />
+        <div
+          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
+          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block "
+        />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
