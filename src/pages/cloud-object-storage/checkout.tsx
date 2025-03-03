@@ -206,7 +206,11 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(error.message);
       }
     } catch (err) {
-      notificationService.openErrorToast(err.message);
+      if (err.message.includes('500')) {
+        notificationService.openErrorToast(textContent.error500);
+      } else {
+        notificationService.openErrorToast(err.message);
+      }
     } finally {
       setIsUserPaying(false);
     }

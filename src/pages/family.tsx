@@ -36,7 +36,7 @@ interface FamilyProps {
 
 export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.SuperBowlCampaign,
+    couponCodeForBusiness: PromoCodeName.SoftSales,
   });
 
   const metatag = metatagsDescriptions.filter((metatag) => metatag.id === 'family')[0];

@@ -67,7 +67,7 @@
       }
     },
     "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
+    "planDescription": "Tous les plans Internxt offrent un accès complet à notre pack de solutions privées avec la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données d'entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -78,16 +78,16 @@
       "business": "Entreprise"
     },
     "freePlanCard": {
-      "getStarted": "Commencez avec notre plan gratuit",
-      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
-      "upTo": "Jusqu'à 10 Go",
-      "freeForever": "Gratuit pour toujours",
-      "cta": "Sélectionner un plan"
+      "eyeBrow": "Internxt Free",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona il piano"
     },
     "features": {
-      "endToEnd": "Chiffré de bout en bout",
-      "openSource": "Open-source et vérifié",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "FaqSection": {

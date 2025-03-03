@@ -59,7 +59,7 @@
       }
     },
     "lifetimeDescription": "购买一次，永远获得隐私和安全。",
-    "planDescription": "所有Internxt计划都有完整的功能，可以完全访问我们所有的隐私服务。所有形状和大小的安全。",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
     "businessDescription": "我们目前正在开发新的 Internxt 计划，专为保护您的业务、保护您的员工和确保您的利润而设计。",
     "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",
     "billingFrequency": {
@@ -71,16 +71,16 @@
       "business": "商业"
     },
     "freePlanCard": {
-      "getStarted": "开始使用我们的免费计划",
-      "enjoy10gb": "永远享受最多1GB的容量，并获得所有我们的服务",
-      "upTo": "最高1GB",
-      "freeForever": "永久免费",
-      "cta": "选择计划"
+      "eyeBrow": "Internxt Free",
+      "description": "免费 – 免费获取 1GB 加密云存储",
+      "cta": "选择方案"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源且经过审核",
-      "anonymousAccount": "匿名帐户创建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "FaqSection": {

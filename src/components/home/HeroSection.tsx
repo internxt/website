@@ -22,15 +22,15 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
-  const mobileImage = getImage('/images/campaigns/valentines/internxt_superbowl2025_mobile.webp');
-  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
+  const mobileImage = getImage('/images/home/image_mobile.webp');
+  const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
   const handleOnClick = () => {
     router.push('/pricing');
   };
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden bg-gray-1">
       <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
         <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block " />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
@@ -48,37 +48,22 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   width={600}
                   height={1000}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="Superbowl Mobile Image"
+                  alt="HeroSection Mobile Image"
                   onClick={handleOnClick}
                 />
               </div>
             ) : (
               <HomePageBannerForMobile />
             )}
-
-            <TitleAndOnePlan textContent={titleAndOnePlanText} />
-          </div>
-          <div className="relative ml-32  hidden h-screen max-h-[700px] w-full justify-center py-40 lg:flex">
-            <Image
-              src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
-              width={653}
-              height={327}
-              alt="Cloud Valentines Hero Section"
-              className="absolute -left-20  z-0 "
-              quality={100}
-            />
+            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          {/* Desktop animation/image
-         
           {!shouldShowMobileBanner ? (
-            <div className=" hidden h-screen max-h-[600px] w-full justify-center lg:flex">
+            <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
               <Animation />
             </div>
           ) : undefined}
-          */}
         </div>
-        {/* Mobile version */}
       </div>
     </section>
   );

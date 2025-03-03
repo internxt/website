@@ -63,27 +63,27 @@
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, and VPN.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
-      "annually": "Annually",
+      "annually": "Annual",
       "individual": "Individual",
       "lifetime": "Lifetime",
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Internxt Free",
+      "description": "Free Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FaqSection": {
@@ -260,7 +260,7 @@
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Introducing the Internxt Team",
+    "cta": "Meet the Internxt Team",
     "cards": [
       {
         "title": "Private by design",

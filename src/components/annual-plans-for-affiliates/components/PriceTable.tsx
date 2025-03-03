@@ -2,7 +2,7 @@ import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 
 import PriceCard from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
 
 import OpenSource from '../../../../public/icons/open-source.svg';
 import usePricing from '@/hooks/usePricing';
@@ -32,21 +32,21 @@ const PriceTable: React.FC<PriceTableProps> = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.guarantee,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
     },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
-    },
   ];
 
   return (
-    <section className="overflow-hidden bg-gray-1">
+    <section className="overflow-hidden bg-gray-1 py-12">
       <div className="flex flex-col items-center ">
         <div className="flex max-w-[774px] flex-col space-y-4 text-center">
           {isStartPage ? <p className="text-3xl font-semibold text-primary xl:text-4xl">{textContent.header}</p> : null}
@@ -87,13 +87,14 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       storage={product.storage}
                       price={discount ? (product.price * discount) / 100 : product.price}
                       billingFrequency={billingFrequency}
-                      popular={product.storage === '5TB'}
+                      popular={product.storage === '3TB'}
                       cta={['checkout', product.priceId]}
                       currency={currency}
                       contentText={textContent.priceCard}
                       onButtonClicked={handlePriceCardButton}
                       coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                       priceBefore={discount ? product.price : undefined}
+                      percentOff={discount ? 100 - discount : 0}
                     />
                   );
                 })
@@ -101,7 +102,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
           </div>
         </Transition>
 
-        <div className="flex flex-col justify-center space-y-8 text-center md:flex-row md:items-center md:space-x-32 md:space-y-0">
+        <div className="flex flex-col justify-center space-y-8 pb-4 text-center md:flex-row md:items-center md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />

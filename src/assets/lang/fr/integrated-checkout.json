@@ -61,5 +61,6 @@
     "amountSaved": "Économisez ",
     "withAnnualBilling": "avec facturation annuelle"
   },
-  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte"
+  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte",
+  "error500": "Veuillez saisir un numéro de TVA valide"
 }
