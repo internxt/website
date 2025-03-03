@@ -68,11 +68,17 @@
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 2.99",
+        "price": " 2",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
+    },
+    "TitleAndOnePlanV2": {
+      "saveLabel": "立省 80%",
+      "title": "全新定价方案现已推出！",
+      "cta": "立即领取优惠！",
+      "guarantee": "30 天退款保证"
     },
     "youKnow": "你知道吗？"
   },

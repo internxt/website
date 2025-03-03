@@ -119,9 +119,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85 % Rabatt auf alle Lifetime-Pläne",
-      "normalText": "Liebe auf den ersten Byte!",
-      "cta": "Schützen Sie, was Sie lieben"
+      "boldText": "80 % Rabatt auf unsere brandneuen Preispläne.",
+      "normalText": "Der Frühling ist da!",
+      "cta": "Angebot sichern"
     }
   },
   "lifetimeBanner": {
@@ -133,11 +133,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Warten Sie! Sonderangebot ",
-      "blue": "75% RABATT ",
+      "blue": "80% RABATT ",
       "normal2": "!"
     },
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
-    "cta": "75% RABATT",
+    "cta": "80% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }

@@ -6,46 +6,40 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const HomePageBannerForMobile = () => {
-  const { dialogIsOpen } = useGlobalDialog();
-  const shouldShowBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../assets/lang/${lang}/pricing.json`);
-  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
-
+  const textContent = require(`../../assets/lang/${lang}/home.json`);
+  const handleOnClick = () => {
+    router.push('#priceTable');
+  };
   return (
-    <div className="z-10 flex  max-h-[550px] w-full flex-col justify-between gap-10 overflow-hidden rounded-[16px] border-4 border-gray-5 bg-white lg:hidden">
-      <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
-        <div className="flex w-max rounded-xl border-4 border-pink bg-red-dark px-2 py-3">
-          <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.tableSection.ctaBanner.label}</p>
+    <div className="flex flex-col items-center justify-center lg:hidden">
+      <div className="flex flex-col items-center justify-center gap-4">
+        <p className="rounded-sm bg-green-1/15 px-2 text-center text-sm font-medium text-green-dark">
+          {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
+        </p>
+        <p className="text-center text-5xl font-bold text-gray-100">
+          {textContent.HeroSection.TitleAndOnePlanV2.title}
+        </p>
+        <button
+          onClick={handleOnClick}
+          className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
+        >
+          {textContent.HeroSection.TitleAndOnePlanV2.cta}
+        </button>
+        <div className="flex flex-row items-center space-x-3 pt-2 ">
+          <CheckCircle size={24} className="text-green-1" weight="fill" />
+          <p className="whitespace-nowrap font-medium text-gray-80 lg:text-lg">
+            {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
+          </p>
         </div>
-        <div className="flex w-full flex-col text-gray-80">
-          <p className="text-4xl font-bold">{textContent.tableSection.ctaBanner.titleMbl3}</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Link
-            href={'#priceTable'}
-            className="flex w-max items-center rounded-lg bg-gray-5 px-3 py-2 text-base font-medium text-gray-80"
-          >
-            {textContent.tableSection.ctaBanner.cta}
-          </Link>
-
-          <div className="mt-4 flex flex-row items-center space-x-1 text-white">
-            <CheckCircle size={20} className="text-green-1" weight="fill" />
-            <p className="whitespace-nowrap text-sm font-medium text-gray-80">
-              {textContent.tableSection.ctaBanner.guarantee}
-            </p>
-          </div>
-        </div>
-        <div className="relative ">
-          <Image
-            src={getImage('/images/campaigns/valentines/valentine_mobile.webp')}
-            width={380}
-            height={300}
-            quality={100}
-            alt="Valentines Mobile"
-          />
-        </div>
+        <Image
+          src={getImage('/images/campaigns/spring/image_mobile.webp')}
+          width={380}
+          height={300}
+          quality={100}
+          alt="Valentines Mobile"
+        />
       </div>
     </div>
   );

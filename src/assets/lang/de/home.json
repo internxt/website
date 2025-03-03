@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Spare 70%",
+    "label": "Spare 80%",
     "title": {
       "line1": "Erhalten Sie den ",
       "blueText": "sichersten",
@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "70% günstiger"
+        "blueText": "80% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -63,7 +63,7 @@
         "textAfterBlueText": " in der Cloud"
       },
       "subtitle": "Komplette Sicherheit und Kontrolle.",
-      "description": "70% Rabatt",
+      "description": "80% Rabatt",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus und mehr",
         "Post-Quanten-Kryptografie und Null-Wissen",
@@ -72,10 +72,16 @@
 
       "startFrom": {
         "normal1": "Ab ",
-        "price": " 2.99",
+        "price": " 2",
         "normal2": " /Monat"
       },
       "claimDeal": "Angebot einlösen",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "TitleAndOnePlanV2": {
+      "saveLabel": "Spare 80%",
+      "title": "Neue Preispläne jetzt verfügbar!",
+      "cta": "Angebot sichern!",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "youKnow": "Wusstest du das?"
