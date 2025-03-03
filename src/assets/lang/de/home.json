@@ -78,6 +78,12 @@
       "claimDeal": "Angebot einlösen",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
+    "TitleAndOnePlanV2": {
+      "saveLabel": "Spare 80%",
+      "title": "Neue Preispläne jetzt verfügbar!",
+      "cta": "Angebot sichern!",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
     "youKnow": "Wusstest du das?"
   },
   "FeatureSectionV2": {

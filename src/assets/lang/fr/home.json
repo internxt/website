@@ -78,6 +78,12 @@
       "claimDeal": "Obtenez l'offre",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
+    "TitleAndOnePlanV2": {
+      "saveLabel": "Économisez 80%",
+      "title": "Nouveaux plans tarifaires disponibles maintenant !",
+      "cta": "Profitez de l'offre !",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
     "youKnow": "Saviez-vous cela?"
   },
   "FeatureSectionV2": {

@@ -8,24 +8,30 @@ import { useRouter } from 'next/router';
 export const HomePageBannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../assets/lang/${lang}/pricing.json`);
+  const textContent = require(`../../assets/lang/${lang}/home.json`);
   const handleOnClick = () => {
     router.push('#priceTable');
   };
   return (
     <div className="flex flex-col items-center justify-center lg:hidden">
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className="rounded-sm bg-green-1/15 px-2 text-center text-sm font-medium text-green-dark">Save 75%</p>
-        <p className="text-center text-5xl font-bold text-gray-100">New pricing plans available now!</p>
+        <p className="rounded-sm bg-green-1/15 px-2 text-center text-sm font-medium text-green-dark">
+          {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
+        </p>
+        <p className="text-center text-5xl font-bold text-gray-100">
+          {textContent.HeroSection.TitleAndOnePlanV2.title}
+        </p>
         <button
           onClick={handleOnClick}
           className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
         >
-          Claim deal!
+          {textContent.HeroSection.TitleAndOnePlanV2.cta}
         </button>
         <div className="flex flex-row items-center space-x-3 pt-2 ">
           <CheckCircle size={24} className="text-green-1" weight="fill" />
-          <p className="whitespace-nowrap font-medium text-gray-80 lg:text-lg">30-day money-back guarantee</p>
+          <p className="whitespace-nowrap font-medium text-gray-80 lg:text-lg">
+            {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
+          </p>
         </div>
         <Image
           src={getImage('/images/campaigns/spring/image_mobile.webp')}

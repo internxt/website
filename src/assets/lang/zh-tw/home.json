@@ -74,6 +74,12 @@
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
+    "TitleAndOnePlanV2": {
+      "saveLabel": "立省 80%",
+      "title": "全新定價方案現已推出！",
+      "cta": "立即領取優惠！",
+      "guarantee": "30 天退款保證"
+    },
     "youKnow": "你知道吗？"
   },
   "FeatureSectionV2": {

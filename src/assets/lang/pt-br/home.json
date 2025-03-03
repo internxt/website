@@ -79,28 +79,10 @@
       "guarantee": "Garantia de devolução de 30 dias"
     },
     "TitleAndOnePlanV2": {
-      "title": {
-        "normal1": "Obtenha o ",
-        "blue1": "armazenamento na nuvem mais seguro, agora com ",
-        "blue2": "80% de desconto"
-      },
-      "description": {
-        "normal1": "Obtenha o ",
-        "blue1": "armazenamento na nuvem mais seguro, agora com ",
-        "blue2": "80% de desconto"
-      },
-      "features": [
-        "Criptografia de conhecimento zero de nível militar",
-        "Privacidade máxima: somente você pode acessar seus arquivos",
-        "Suporte ao cliente premium para transição sem problemas"
-      ],
-      "startFrom": {
-        "normal1": "A partir de ",
-        "price": "0,95",
-        "normal2": " /mês"
-      },
-      "claimDeal": "Revelar oferta por tempo limitado",
-      "guarantee": "Nº 1 em Nuvem em 2024 por"
+      "saveLabel": "Economize 80%",
+      "title": "Novos planos de preços disponíveis agora!",
+      "cta": "Aproveite a oferta!",
+      "guarantee": "Garantia de reembolso de 30 dias"
     },
     "youKnow": "Você sabia?"
   },
