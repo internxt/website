@@ -17,6 +17,7 @@ import { Interval } from '../services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
+import Lifetime from '@/pages/lifetime';
 
 export interface PriceCardProps {
   planType: string;
@@ -39,6 +40,8 @@ export interface PriceCardProps {
   percentOff?: number;
   isStackCommerce?: boolean;
   index?: number;
+  isPcComponentes?: boolean;
+  isPcComponentesLifetime?: boolean;
 }
 
 const STORAGE_LEVELS = {
@@ -70,6 +73,8 @@ export default function PriceCard({
   onButtonClicked,
   isStackCommerce = false,
   index,
+  isPcComponentes = false,
+  isPcComponentesLifetime = false,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -188,8 +193,126 @@ export default function PriceCard({
       ],
     },
   };
-
+  const PCCOMPONENTES_STORAGE_PLANS = {
+    Lifetime: {
+      '2TB': {
+        title: '2TB',
+        price: '900',
+        features: [
+          '2TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+      '5TB': {
+        title: '5TB',
+        price: '1900',
+        features: [
+          '5TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+      '10TB': {
+        title: '10TB',
+        price: '2900',
+        features: [
+          '10TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+    },
+    Subscription: {
+      '200GB': {
+        title: '200GB',
+        price: '45.99',
+        features: [
+          '2TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+      '2TB': {
+        title: '2TB',
+        price: '109.99',
+        features: [
+          '2TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+      '5TB': {
+        title: '5TB',
+        price: '199.99',
+        features: [
+          '5TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+      '10TB': {
+        title: '10TB',
+        price: '299.99',
+        features: [
+          '10TB encrypted storage',
+          'Zero-knowledge encryption',
+          'Password-protected file sharing',
+          'Post-quantum cryptography',
+          'Access your files from any device',
+          'Guaranteed GDPR compliance',
+          'Two-factor authentication (2FA)',
+          'Premium customer support',
+          '30-day money-back guarantee',
+        ],
+      },
+    },
+  };
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
+  const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
+  const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
+  const discountPCComponentes = (
+    parseFloat(PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].price) * 0.25
+  )
+    .toFixed(2)
+    .replace(/\.00$/, '');
+
   return (
     <div
       className={`${
@@ -210,7 +333,11 @@ export default function PriceCard({
           </div>
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
             <p className="text-lg font-medium text-primary">
-              {isStackCommerce ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title : getPlanStorage(storage)}
+              {isStackCommerce
+                ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title
+                : isPcComponentes
+                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].title
+                : getPlanStorage(storage)}
             </p>
           </div>
         </div>
@@ -225,7 +352,7 @@ export default function PriceCard({
             <p className={` flex flex-row items-start space-x-1 whitespace-nowrap font-medium text-gray-100`}>
               <span className={`currency ${isFreePlan ? 'hidden' : ''}`}>{currency}</span>
               <span className="price text-4xl font-bold">
-                {isFreePlan ? `${contentText.freePlan}` : formattedPrice}
+                {isFreePlan ? `${contentText.freePlan}` : isPcComponentes ? discountPCComponentes : formattedPrice}
               </span>
             </p>
           </div>
@@ -238,7 +365,11 @@ export default function PriceCard({
             } flex-row items-start space-x-1 whitespace-nowrap font-semibold text-gray-50 line-through`}
           >
             <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">{formattedPriceBefore}</span>
+            <span className="price text-2xl font-medium">
+              {isPcComponentes
+                ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes].price
+                : formattedPriceBefore}
+            </span>
           </p>
 
           <p className={`${isIndividualPlan ? 'flex' : 'hidden'} text-sm text-gray-50`}>
@@ -291,7 +422,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[500px] min-h-[500px] flex-col  space-y-2 pt-6">
+        <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
@@ -305,6 +436,21 @@ export default function PriceCard({
                 <span className="text-gray-80">{feature}</span>
               </div>
             ))
+          ) : isPcComponentes ? (
+            PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][storageSelectedPcComponentes]?.features.map(
+              (feature) => (
+                <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
+                  <img
+                    loading="lazy"
+                    className="translate-y-px select-none"
+                    src="/icons/checkPrimary.svg"
+                    draggable="false"
+                    alt="check icon"
+                  />
+                  <span className="text-gray-80">{feature}</span>
+                </div>
+              ),
+            )
           ) : (
             <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
