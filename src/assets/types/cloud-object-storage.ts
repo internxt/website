@@ -23,7 +23,7 @@ export interface Form {
   totalCharacters: string;
   options: string[];
   howWeCanHelp: string;
-  howWeCanHelpPlaceholder: string;
+  howWeCanHelpPlaceHolder: string;
   cta: string;
   ctaSending: string;
   successMessage: string;
@@ -42,10 +42,19 @@ export interface FAQ {
 
 export interface HeroSection {
   title: Title;
-  description: string;
+  features: string[];
+  firstYearDiscount: string;
+  priceInfoLine1: PriceInfoLine;
+  priceInfoLine2: PriceInfoLine;
   cta: string;
   separator: string;
   cta2: string;
+}
+
+export interface PriceInfoLine {
+  normalText: string;
+  boldText: string;
+  crossedText: string;
 }
 
 export interface Title {
@@ -86,7 +95,10 @@ export interface PriceCardSection {
 export interface CardText {
   label: string;
   perTB: string;
-  price: string;
+  priceNow: string;
+  priceBefore: string;
+  month: string;
+  greenText: string;
   cta: string;
   whatsIncluded: WhatsIncluded;
 }
