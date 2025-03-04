@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
+      promoCodeId: PromoCodeName.SpringCoupon,
     });
   }
 

@@ -11,7 +11,7 @@ const FeatureSection = ({ textContent }) => (
         <button
           className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
           onClick={() => {
-            window.location.hash = '#priceTable';
+            window.location.hash = '#payment';
           }}
         >
           {textContent.cta}
