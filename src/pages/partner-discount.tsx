@@ -125,13 +125,15 @@ const PartnerDiscount = ({
           textContent={langJson.PaymentSection}
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
           }}
           lang="en"
           products={products}
-          popularPlanBySize={'5TB'}
+          popularPlanBySize={'3TB'}
           loadingCards={loadingCards}
           startIndividualPlansFromInterval={Interval.Year}
-          hidePlanSelectorAndSwitch
+          hideBusinessCards
+          hideBusinessSelector
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
         />

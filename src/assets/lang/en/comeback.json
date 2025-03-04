@@ -1,5 +1,5 @@
 {
-   "FaqSection": {
+  "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
@@ -100,7 +100,7 @@
       }
     ]
   },
-   "tableSection": {
+  "tableSection": {
     "planTitles": {
       "individuals": "Individual Plans",
       "homePage": "Give Internxt another chance and see all the major improvements we’ve made",
@@ -111,13 +111,12 @@
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription":
-    {
-      "planDescription":"We’ve worked nonstop to give you the Internxt you deserve since you left.",
-      "previousBlueText":"As a thanks for giving us another try, we’re giving you a",
-      "blueText":"special 90% comeback discount",
-      "postBlueText":"to give us another try."
-    } ,
+    "planDescription": {
+      "planDescription": "We’ve worked nonstop to give you the Internxt you deserve since you left.",
+      "previousBlueText": "As a thanks for giving us another try, we’re giving you a",
+      "blueText": "special 90% comeback discount",
+      "postBlueText": "to give us another try."
+    },
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
@@ -128,7 +127,9 @@
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "ChooseStorageSizeSection": {
@@ -137,10 +138,10 @@
     "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
     "cta": "Choose storage size"
   },
- 
+
   "WhyComebackToInternxt": {
     "title": "Why come back to Internxt?",
-    "title2":"New features, updates, and fixes",
+    "title2": "New features, updates, and fixes",
     "description": "Internxt Drive has had significant upgrades for all our Mac, Windows, and Linux apps. Now’s your perfect chance to try our new and improved product before your 90% discount expires. ",
     "features": [
       {
@@ -165,12 +166,11 @@
     "title": "Come back and see what’s new!",
     "description": "Increased performance, same unmatched privacy",
     "cta1": "Claim ${{percent}} OFF"
-    
   },
-  "CtaSection":{
-    "title":"One more chance?",
-    "description":"Give us another try for 90% OFF!",
-    "description2":"All subscription and lifetime plans",
-    "cta":"Claim your deal"
+  "CtaSection": {
+    "title": "One more chance?",
+    "description": "Give us another try for 90% OFF!",
+    "description2": "All subscription and lifetime plans",
+    "cta": "Claim your deal"
   }
 }
