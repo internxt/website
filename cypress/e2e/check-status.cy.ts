@@ -12,7 +12,6 @@ const nameFiles = [
   'cloud-storage-comparison',
   'cloudwards',
   'cyber-awareness',
-  'dealfuel',
   'drive',
   'legal',
   'lifetime_special',
