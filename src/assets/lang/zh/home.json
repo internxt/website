@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "省70%",
+    "label": "省80%",
     "title": {
       "line1": "获取最",
       "blueText": "安全的",
@@ -64,7 +64,7 @@
         "textAfterBlueText": " 在云端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "70%折扣",
+      "description": "80%折扣",
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
