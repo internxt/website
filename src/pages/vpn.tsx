@@ -71,7 +71,7 @@ const VPN = ({
             <Image
               src={getImage('/images/privacy/vpn_extension_internxt.webp')}
               alt="VPN Widget"
-              className="rounded-lg shadow-subtle"
+              className="rounded-lg shadow-2xl"
               width={364}
               draggable={false}
               height={444}
@@ -112,7 +112,7 @@ const VPN = ({
 };
 
 export async function getServerSideProps() {
-  const lang = 'en';
+  const lang = 'es';
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/vpn.json`);
