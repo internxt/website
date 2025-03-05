@@ -17,7 +17,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
           {/* Internxt Drive */}
           <ProductCard
             imageUrl={getImage('/images/privacy/Internxt-Drive.webp')}
-            animationDirection={'right'}
+            animationDirection={'left'}
             redirect={'/drive'}
             lang={lang}
             textContent={textContent.square1}
@@ -26,7 +26,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
           {/* Internxt Send */}
           <ProductCard
             imageUrl={getImage('/images/privacy/Share-by-email.webp')}
-            animationDirection={'left'}
+            animationDirection={'right'}
             redirect={'https://send.internxt.com'}
             lang={lang}
             textContent={textContent.square2}
@@ -34,7 +34,7 @@ const InxtAppsSection = ({ textContent, lang }) => {
 
           {/* Internxt VPN */}
           <ProductCard
-            imageUrl={getImage('/images/privacy/Share-by-email.webp')}
+            imageUrl={getImage('/images/privacy/internxt_vpn_extension.webp')}
             animationDirection={'left'}
             redirect={'/vpn'}
             lang={lang}

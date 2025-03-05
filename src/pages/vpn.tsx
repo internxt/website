@@ -69,7 +69,7 @@ const VPN = ({
         ImageComponent={
           <div className="relative flex h-full flex-col items-center justify-center bg-transparent">
             <Image
-              src={getImage('/images/vpn-extension/vpn-widget.svg')}
+              src={getImage('/images/privacy/vpn_extension_internxt.webp')}
               alt="VPN Widget"
               className="rounded-lg shadow-subtle"
               width={364}
