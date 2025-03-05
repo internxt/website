@@ -119,7 +119,7 @@ const PaymentSection = ({
           isStackCommerce={isStackCommerce}
         />
 
-        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white pb-10 text-center md:flex-row md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 bg-white pb-12 text-center md:flex-row md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />

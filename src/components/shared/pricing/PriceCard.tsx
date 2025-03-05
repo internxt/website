@@ -85,7 +85,7 @@ export const PriceCard = ({
         .toFixed(2)
         .replace('.00', '')
     : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.0', '');
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -188,7 +188,8 @@ export const PriceCard = ({
               {showTotalDiscountPrice && (
                 <>
                   {' | '}
-                  {contentText.save} {annualSave} {contentText.perYear}
+                  {contentText.save} {annualSave}
+                  {currency}
                 </>
               )}
             </p>
