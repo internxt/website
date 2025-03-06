@@ -1,0 +1,118 @@
+{
+  "HeroSection": {
+    "label": "免费 VPN",
+    "title": {
+      "line1": "Internxt 的安全 VPN",
+      "line2": "保护您的网络隐私"
+    },
+    "description": "通过 Internxt 的免费、无限制且加密的 VPN，自由畅享私密的网络体验。",
+    "cta": "下载 VPN"
+  },
+  "EncryptedVPNSection": {
+    "title": "Internxt 加密 VPN 插件",
+    "subtitle": "这款免费且安全的 VPN 能隐藏您的 IP 地址，使您的上网体验保持私密、安全且不受限制。",
+    "description": "我们基于让互联网更加注重隐私的使命开发了这款 VPN。有了这个插件，您的连接将被加密并防止网络攻击或数据泄漏。您专注于安全浏览，我们则负责为您提供安全保障。",
+    "cta": "下载 VPN"
+  },
+  "SecureVPNSection": {
+    "title": "为什么要使用安全 VPN",
+    "subtitle": "不安全的网络连接（如公共 Wi-Fi）可能会使您的信息面临数据泄露、黑客攻击或安全漏洞等风险。",
+    "description": "Internxt 的免费 VPN 会加密您的连接，让您的在线体验更加安全和私密。",
+    "cards": [
+      {
+        "title": "加密您的网络流量",
+        "description": "我们会加密您的数据，以保护您的隐私权，并隐藏您的上网活动，不让黑客、ISP 或 Google 看到。"
+      },
+      {
+        "title": "避免定向广告",
+        "description": "安全的 VPN 能帮助您避免个性化广告，并减少 Google 等公司对数据的收集。"
+      },
+      {
+        "title": "解锁全球内容",
+        "description": "绕过地理限制，访问您所在地区无法使用的网站。"
+      },
+      {
+        "title": "掌控您的网络身份",
+        "description": "Internxt 的安全 VPN 让您重新掌控自己在网上分享的信息，并确保这些信息受到保护。"
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "工作原理",
+    "subtitle": "Internxt 的 VPN 插件采用快速、安全的服务器来加密并传输敏感数据。",
+    "description": "我们的免费 VPN 插件会隐藏您的 IP 地址，并防止第三方收集您的信息。",
+    "cards": [
+      {
+        "title": "高级加密",
+        "description": "Internxt VPN 插件使用安全的数据加密协议，为您提供最强大的保护，确保连接安全并保护隐私。"
+      },
+      {
+        "title": "安全网络",
+        "description": "安全访问私人网络，无论是办公网络还是家用网络，均能保持数据机密性。"
+      },
+      {
+        "title": "增强匿名性",
+        "description": "VPN 插件会更改您的 IP 地址以隐藏您的位置，并且不会记录浏览历史或连接日志。"
+      }
+    ]
+  },
+  "WhenUseVPNSection": {
+    "title": "何时使用 VPN",
+    "subtitle": "Internxt 的 VPN 插件采用快速且安全的服务器来加密并传输敏感数据。",
+    "description": "我们的免费 VPN 插件会隐藏您的 IP 地址，并防止第三方收集您的信息。",
+    "cta": "下载 VPN",
+    "cards": [
+      "防止定向广告",
+      "匿名创建账户",
+      "绕过恼人的地理限制",
+      "免费 VPN",
+      "保护您的隐私",
+      "无需注册",
+      "防御网络攻击",
+      "零日志政策"
+    ]
+  },
+  "CtaSection": {
+    "title": "摆脱在线追踪器",
+    "description": "使用 Internxt VPN 隐藏您的数据，实现安全的网络浏览",
+    "cta": "下载 VPN"
+  },
+  "CtaSection2": {
+    "title": "摆脱在线追踪器",
+    "description": "使用 Internxt VPN 隐藏您的数据，实现安全的网络浏览",
+    "cta": "下载 VPN"
+  },
+  "FaqSection": {
+    "title": "有疑问？我们来解答",
+    "faq": [
+      {
+        "question": "什么是 Chrome VPN 插件？",
+        "answer": [
+          "VPN（虚拟专用网络）能够为您提供安全且私密的上网体验。它旨在创建加密通道来保护您的私人数据，让您在公共 Wi-Fi 热点等高风险连接上也能保护自己的网络身份。"
+        ]
+      },
+      {
+        "question": "如何安装 VPN 插件？",
+        "answer": [
+          "要安装 Internxt 的 VPN，请点击本页面的“下载 VPN”按钮。下载安装后，您可以启动该 VPN 并选择您喜欢的服务器。"
+        ]
+      },
+      {
+        "question": "使用 VPN 连接是否安全？",
+        "answer": [
+          "我们在开发这款免费 VPN 插件时采用了行业标准的安全协议，这与 Internxt 的使命一致，旨在保护您的数据免受黑客和互联网服务提供商（ISP）的侵扰。该插件能防止外部方追踪您的在线活动。"
+        ]
+      },
+      {
+        "question": "VPN 支持哪些平台？",
+        "answer": ["您可以在 Windows 和 MacOS 的桌面设备上，通过 Google Chrome 浏览器下载我们的 VPN Chrome 插件。"]
+      },
+      {
+        "question": "VPN 如何保障我的隐私？",
+        "answer": [
+          "VPN 通过加密您的网络流量、隐藏您的 IP 地址以及遵循严格的不记录日志政策来保障您的隐私。多重安全措施组合在一起，使第三方无法监控您的在线活动，从而保持您的匿名性并保护您的数据隐私。"
+        ]
+      }
+    ]
+  }
+}

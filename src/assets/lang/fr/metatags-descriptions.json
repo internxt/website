@@ -158,5 +158,10 @@
     "id": "internxt-antivirus",
     "title": "Protégez vos appareils contre les logiciels malveillants avec Internxt Antivirus",
     "description": "Internxt Antivirus analyse et supprime les virus de vos fichiers. Protégez vos appareils contre les logiciels malveillants et assurez une sécurité complète dans le cloud."
+  },
+  {
+    "id": "vpn-extension",
+    "title": "Internxt VPN gratuit et sécurisé | Internxt",
+    "description": "Extension VPN gratuite d’Internxt pour Chrome : navigation sécurisée, Wi-Fi chiffré et protection de la vie privée. Téléchargez notre VPN sécurisé pour protéger vos données en ligne."
   }
 ]
