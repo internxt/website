@@ -115,6 +115,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
+        popularPlanBySize="5TB"
       />
 
       <div className={`${marqueeBgColor} py-10`}>
