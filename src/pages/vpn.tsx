@@ -99,11 +99,11 @@ const VPN = ({
 
       <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} customDescription />
 
       <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} customDescription />
 
       <FAQSection textContent={textContent.FaqSection} />
 
