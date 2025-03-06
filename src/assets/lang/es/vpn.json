@@ -1,0 +1,121 @@
+{
+  "HeroSection": {
+    "label": "VPN gratuita",
+    "title": {
+      "line1": "La VPN segura de Internxt",
+      "line2": "te protege online"
+    },
+    "description": "Navega por la web con total libertad y privacidad con la VPN gratuita de Internxt.",
+    "cta": "Descarga VPN"
+  },
+  "EncryptedVPNSection": {
+    "title": "La extensión VPN cifrada de Internxt",
+    "subtitle": "Nuestra VPN gratuita y segura oculta tu dirección IP para mantener tu navegación privada, segura y sin restricciones.",
+    "description": "Creamos esta VPN de acuerdo con nuestra misión de crear una Internet más privada y, con esta extensión, tu conexión está cifrada y a salvo de ataques de red y fugas de datos. Nosotros nos encargamos de tu seguridad, y tú sólo tienes que disfrutar y navegar por internet.",
+    "cta": "Descarga VPN"
+  },
+  "SecureVPNSection": {
+    "title": "¿Por qué utilizar una VPN segura y cifrada?",
+    "subtitle": "Las conexiones a Internet no seguras, como las Wi-Fi públicas, pueden exponer tu información a fugas, hackeos o infracciones de datos.",
+    "description": "La VPN gratuita de Internxt cifra tu conexión para una experiencia en línea más segura y privada.",
+    "cards": [
+      {
+        "title": "Cifra tu tráfico de Internet",
+        "description": "Ciframos tus datos para proteger tu derecho a la privacidad y mantener tu actividad de navegación oculta a los piratas informáticos, los ISP y Google."
+      },
+      {
+        "title": "Evita la publicidad dirigida",
+        "description": "Una VPN segura te ayuda a evitar anuncios personalizados y reduce la recopilación de datos de empresas como Google."
+      },
+      {
+        "title": "Desbloquea contenido global",
+        "description": "Evita las restricciones geográficas y accede a sitios web y servicios de transmisión que no están disponibles en tu región."
+      },
+      {
+        "title": "Controla tu identidad en línea",
+        "description": "La VPN segura de Internxt te devuelve el control sobre cuánta información compartes en línea y la mantiene protegida."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Cómo funciona",
+    "subtitle": "La extensión VPN de Internxt utiliza servidores rápidos y seguros para cifrar y transmitir datos confidenciales.",
+    "description": "Nuestra extensión VPN gratuita enmascara tu dirección IP y protege tu información de la recopilación de datos de terceros.",
+    "cards": [
+      {
+        "title": "Cifrado avanzado",
+        "description": "La extensión Internxt VPN utiliza protocolos seguros de cifrado de datos, ofreciendo la máxima protección para una conexión segura y privada."
+      },
+      {
+        "title": "Redes seguras",
+        "description": "Disfruta de un acceso seguro a redes privadas y conéctate a tus redes domésticas o de trabajo manteniendo tus datos ocultos."
+      },
+      {
+        "title": "Anonimato mejorado",
+        "description": "Una extensión VPN cambia tu dirección IP para ocultar tu ubicación y no rastrear tu historial de navegación ni tus registros de conexión."
+      }
+    ]
+  },
+  "WhenUseVPNSection": {
+    "title": "Cuándo utilizar una VPN",
+    "subtitle": "La extensión VPN de Internxt utiliza servidores rápidos y seguros para cifrar y transmitir datos confidenciales.",
+    "description": "Nuestra extensión VPN gratuita oculta tu dirección IP y protege tu información de la recopilación de datos de terceros.",
+    "cta": "Descarga VPN",
+    "cards": [
+      "Evita anuncios personalizados",
+      "Crea cuentas de forma anónima",
+      "Evita las molestas restricciones geográficas",
+      "VPN gratuita",
+      "Protege tu privacidad",
+      "Sin necesidad de registrarse",
+      "Defensa contra ataques de red",
+      "Sin monitoreo de actividad"
+    ]
+  },
+  "CtaSection": {
+    "title": "Libérate de los rastreadores en línea",
+    "description": "Oculta tus datos para disfrutar de una experiencia de navegación segura con Internxt VPN",
+    "cta": "Descarga VPN"
+  },
+  "CtaSection2": {
+    "title": "No más miradas indiscretas",
+    "description": "Cifra tu conexión para una privacidad total con Internxt VPN",
+    "cta": "Descargar VPN"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es una extensión VPN para Chrome?",
+        "answer": [
+          "Una VPN o red privada virtual garantiza una navegación privada segura en Internet. Está diseñada para crear un canal cifrado para datos privados y te permite proteger tu identidad en línea en conexiones de mayor riesgo, como puntos de acceso Wi-Fi públicos."
+        ]
+      },
+      {
+        "question": "¿Cómo instalar la extensión VPN?",
+        "answer": [
+          "Para instalar la VPN de Internxt, haz clic en el botón de descarga de VPN en esta página. Una vez descargada, puedes iniciar la VPN y elegir tu servidor VPN preferido.",
+          "Si deseas instalar la VPN Premium (con más localizaciones), puedes conseguirla con la compra de un plan Premium o Ultimate en internxt.com/pricing."
+        ]
+      },
+      {
+        "question": "¿Es seguro utilizar una conexión VPN?",
+        "answer": [
+          "Desarrollamos nuestra extensión VPN gratuita utilizando protocolos de seguridad estándar de la industria de acuerdo con la misión de Internxt de proteger tus datos de piratas informáticos y proveedores de servicios de Internet (ISP). Una extensión VPN evita que terceros rastreen tu actividad en línea."
+        ]
+      },
+      {
+        "question": "¿Qué plataformas admite la VPN?",
+        "answer": [
+          "Puedes descargar nuestra extensión VPN Chrome en los navegadores web Google Chrome para dispositivos de escritorio Windows y MacOS."
+        ]
+      },
+      {
+        "question": "¿Cómo garantiza mi privacidad el uso de la conexión VPN?",
+        "answer": [
+          "Una VPN garantiza tu privacidad al cifrar tu tráfico de Internet, ocultar tu dirección IP y cumplir con estrictas políticas de no registros. Esta combinación de medidas de seguridad evita que terceros puedan controlar tus actividades en línea, manteniendo tu anonimato y la privacidad de tus datos."
+        ]
+      }
+    ]
+  }
+}
