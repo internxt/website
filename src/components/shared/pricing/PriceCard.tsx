@@ -213,7 +213,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `h-[480px] ` : `h-[400px]`} pb-6 text-sm`}
+        } ${isBusiness ? `h-[480px] ` : `h-[415px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
