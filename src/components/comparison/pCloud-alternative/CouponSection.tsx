@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImage } from '@/lib/getImage';
 
 interface UseCouponSectionProps {
   textContent: any;
@@ -31,9 +32,9 @@ export const CouponSection = ({ textContent, redirectUrl }: UseCouponSectionProp
             {textContent.cta}
           </Link>
         </div>
-        <div className="content flex h-full w-full flex-col px-5 pt-6">
+        <div className="content flex h-full w-full flex-col ">
           <Image
-            src="/images/home/internxt_secure_cloud_storage.webp"
+            src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
             alt="Internxt secure cloud storage"
             draggable={false}
             loading="lazy"

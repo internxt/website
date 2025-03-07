@@ -7,8 +7,8 @@
   },
   "PaymentSection": {
     "limitedOffer": "限時優惠！",
-    "title": { "blueText": "", "normalText": "Internxt終身方案" },
-    "description": "安全地永久存儲和分享您的回憶。",
+    "title": { "blueText": "", "normalText": "終身方案" },
+    "description": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
     "normalSection": {
       "title": "探索我們所有獨家終身方案",
       "description": "只需購買一次，即可永久獲得隱私和安全。"

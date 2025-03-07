@@ -79,6 +79,8 @@ const FreeUserPage = ({
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />

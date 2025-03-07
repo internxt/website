@@ -1,20 +1,29 @@
 {
   "HeroSection": {
-    "header": "Réduction Annuelle Internxt",
+    "header": "Remise Annuelle d'Internxt",
     "title": {
-      "normalText": "Obtenez le stockage cloud le plus sécurisé ",
-      "blueText": "à moindre coût"
+      "normalText": "Obtenez le stockage en nuage le plus sécurisé ",
+      "blueText": "pour moins cher"
     },
     "description": {
-      "normal": "Rejoignez Internxt, l'alternative principale à Google Drive, et bénéficiez de ",
+      "normal": "Rejoignez Internxt, la meilleure alternative à Google Drive, et obtenez ",
       "blue": "80% DE RÉDUCTION ",
-      "normal1": "sur n'importe quel plan annuel. Stockez et partagez vos fichiers en toute sécurité et confidentialité."
+      "normal1": "sur tout plan annuel ou à vie. Stockez et partagez vos fichiers en toute sécurité et avec une confidentialité totale."
     },
     "cta": "Choisissez un plan"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "Choisissez l’espace de stockage dont vous avez besoin" },
-    "planDescription": "Chaque plan Internxt inclut un accès complet à nos services de confidentialité. Profitez d’une année complète de sécurité pour répondre à vos besoins de stockage.",
+    "planTitles": {
+      "individuals": "Plans individuels",
+      "homePage": "Choisissez le plan qui vous convient",
+      "lifetime": "Plans à vie",
+      "business": "Plans pour entreprises",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur tous nos plans exclusifs à vie"
+      }
+    },
+    "planDescription": "Tous les plans Internxt donnent accès à notre suite de solutions privées dotée des dernières technologies de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
@@ -24,7 +33,7 @@
     },
     "features": {
       "endToEnd": "Chiffrement de bout en bout",
-      "openSource": "Open-source et audité",
+      "openSource": "Code source ouvert et audité",
       "anonymousAccount": "Création de compte anonyme",
       "premiumSupport": "Support client premium",
       "guarantee": "Garantie de remboursement de 30 jours"

@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 import RevealY from '@/components/components/RevealY';
 
 const FeatureSection = ({ textContent }) => (
@@ -19,25 +20,24 @@ const FeatureSection = ({ textContent }) => (
       </div>
 
       <RevealY className="hidden w-full flex-col items-center justify-center pt-6 md:flex">
-        <picture>
-          <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-          <img
-            src="/images/home/internxt_secure_cloud_storage.webp"
-            alt="Internxt secure cloud storage"
-            width={757}
-            draggable={false}
-          />
-        </picture>
+        <Image
+          src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+          alt="Internxt secure cloud storage"
+          draggable={false}
+          loading="lazy"
+          width={757}
+          height={426}
+        />
       </RevealY>
       <RevealY className="flex h-full w-full flex-col pt-6 md:hidden">
-        <picture>
-          <source srcSet="/images/home/internxt_secure_cloud_storage.webp" type="image/webp" />
-          <img
-            src="/images/home/internxt_secure_cloud_storage.webp"
-            alt="Internxt secure cloud storage"
-            draggable={false}
-          />
-        </picture>
+        <Image
+          src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
+          alt="Internxt secure cloud storage"
+          draggable={false}
+          loading="lazy"
+          width={757}
+          height={426}
+        />
       </RevealY>
     </div>
   </section>

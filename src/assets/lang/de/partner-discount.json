@@ -1,26 +1,35 @@
 {
   "HeroSection": {
-    "header": "Jahresrabatt bei Internxt",
+    "header": "Jahresrabatt von Internxt",
     "title": {
-      "normalText": "Holen Sie sich den sichersten Cloud-Speicher ",
-      "blueText": "zum günstigeren Preis"
+      "normalText": "Erhalten Sie den sichersten Cloud-Speicher ",
+      "blueText": "für weniger"
     },
     "description": {
-      "normal": "Treten Sie Internxt bei, der führenden Alternative zu Google Drive, und erhalten Sie ",
+      "normal": "Treten Sie Internxt bei, der besten Alternative zu Google Drive, und erhalten Sie ",
       "blue": "80% RABATT ",
-      "normal1": "auf jeden Jahresplan. Speichern und teilen Sie Ihre Dateien sicher und privat."
+      "normal1": "auf alle Jahres- oder Lifetime-Pläne. Speichern und teilen Sie Ihre Dateien sicher und mit vollständiger Privatsphäre."
     },
     "cta": "Wählen Sie einen Plan"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "Wählen Sie den Speicherplatz, den Sie benötigen" },
-    "planDescription": "Jeder Internxt-Plan umfasst vollständigen Zugriff auf unsere Datenschutzdienste. Genießen Sie ein Jahr lang Sicherheit, um Ihre Speicheranforderungen zu erfüllen.",
+    "planTitles": {
+      "individuals": "Einzelpläne",
+      "homePage": "Wählen Sie den richtigen Plan für sich",
+      "lifetime": "Lebenslange Pläne",
+      "business": "Pläne für Unternehmen",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Pläne"
+      }
+    },
+    "planDescription": "Alle Internxt-Pläne bieten vollständigen Zugriff auf unser Paket privater Lösungen mit modernster Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
       "individual": "Individuell",
       "lifetime": "Lebenslang",
-      "business": "Geschäftlich"
+      "business": "Unternehmen"
     },
     "features": {
       "endToEnd": "Ende-zu-Ende-Verschlüsselung",

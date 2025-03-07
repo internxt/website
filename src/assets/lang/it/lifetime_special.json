@@ -8,8 +8,8 @@
   },
   "PaymentSection": {
     "limitedOffer": "Offerta a tempo limitato!",
-    "title": { "blueText": "", "normalText": "Piani a vita di Internxt" },
-    "description": "Acquista una volta in modo sicuro, archivia, condividi e accedi ai tuoi file su tutti i dispositivi.",
+    "title": { "blueText": "", "normalText": "Piani a vita" },
+    "description": "Tutti i piani di Internxt offrono un accesso completo al nostro pacchetto di soluzioni private con la tecnologia di sicurezza più recente: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
     "normalSection": {
       "title": "Esplora tutti i nostri esclusivi piani a vita",
       "description": "Acquista una volta e ottieni privacy e sicurezza per sempre."

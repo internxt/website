@@ -42,7 +42,7 @@ const PriceTable = ({
   isStackCommerce,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
-  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '3TB' : '5TB';
+  const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '5TB' : '3TB';
   const [specialCoupons, setSpecialCoupons] = useState();
 
   const { products, currency, currencyValue, coupon, loadingCards } = usePricing({
@@ -78,13 +78,13 @@ const PriceTable = ({
     : null;
 
   const lifetimeProducts = lifetimeMode === 'normal' ? updatedProductsArray : productsArray;
-
+  const finalDiscount = discount ? discount : 1;
   const lifetimePrices = (price, discount, storage) => {
     switch (lifetimeMode) {
       case 'normal':
         return price.split('.')[0];
       case 'celebration':
-        return Number(price * discount)
+        return Number(price * finalDiscount)
           .toFixed(2)
           .replace(/\.00$/, '');
 
@@ -130,7 +130,7 @@ const PriceTable = ({
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-20">
+          <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 pb-10">
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
@@ -144,7 +144,7 @@ const PriceTable = ({
           enterFrom="scale-95 translate-y-20 opacity-0"
           enterTo="scale-100 translate-y-0 opacity-100"
         >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-16">
+          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
             {lifetimeProducts
               ? lifetimeProducts.map((product: any, index) => {
                   return (

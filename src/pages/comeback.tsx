@@ -113,8 +113,8 @@ const ResurrectionCampaign = ({
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessSelector
+        hideSwitchSelector
         hideFreeCard
-        hideDescription
       />
 
       <TextAndCardsGroupColumnSection

@@ -24,9 +24,9 @@ export const HeroSection = ({
   background,
 }: HeroSectionProps): JSX.Element => {
   return (
-    <section className={`overflow-hidden  py-20 ${background}`} style={style}>
+    <section className={`overflow-hidden  ${background}`} style={style}>
       <HeroSectionSafeArea>
-        <div className={`flex w-full flex-col items-center  gap-10 lg:flex-row lg:justify-between`}>
+        <div className={`flex w-full flex-col items-center lg:flex-row lg:justify-between`}>
           <div className="flex max-w-[550px] flex-col">{TextComponent}</div>
           <div className="flex flex-col items-center">
             {ImageComponent}
