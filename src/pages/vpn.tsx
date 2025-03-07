@@ -18,6 +18,7 @@ import Header from '@/components/shared/Header';
 import { RedirectButton } from '@/components/shared/RedirectButton';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { GetServerSidePropsContext } from 'next';
 
 interface VPNProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -69,9 +70,9 @@ const VPN = ({
         ImageComponent={
           <div className="relative flex h-full flex-col items-center justify-center bg-transparent">
             <Image
-              src={getImage('/images/vpn-extension/vpn-widget.svg')}
+              src={getImage('/images/privacy/vpn_extension_internxt.webp')}
               alt="VPN Widget"
-              className="rounded-lg shadow-subtle"
+              className="rounded-lg shadow-2xl"
               width={364}
               draggable={false}
               height={444}
@@ -98,11 +99,19 @@ const VPN = ({
 
       <WhenUseVPNSection textContent={textContent.WhenUseVPNSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection
+        textContent={textContent.CtaSection}
+        url={VPN_CHROME_WEB_STORE}
+        customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection.description}</p>}
+      />
 
       <ToolsSection textContent={toolsContent} lang="en" />
 
-      <CtaSection textContent={textContent.CtaSection2} url={VPN_CHROME_WEB_STORE} />
+      <CtaSection
+        textContent={textContent.CtaSection2}
+        url={VPN_CHROME_WEB_STORE}
+        customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
+      />
 
       <FAQSection textContent={textContent.FaqSection} />
 
@@ -111,8 +120,8 @@ const VPN = ({
   );
 };
 
-export async function getServerSideProps() {
-  const lang = 'en';
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const textContent = require(`@/assets/lang/${lang}/vpn.json`);

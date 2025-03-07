@@ -1,0 +1,120 @@
+{
+  "HeroSection": {
+    "label": "VPN Gratuito",
+    "title": {
+      "line1": "Il VPN sicuro di Internxt",
+      "line2": "ti protegge online"
+    },
+    "description": "Naviga sul web in completa libertà e privacy con il VPN gratuito, illimitato e crittografato di Internxt.",
+    "cta": "Scarica VPN"
+  },
+  "EncryptedVPNSection": {
+    "title": "L’estensione VPN crittografata di Internxt",
+    "subtitle": "Il nostro VPN gratuito e sicuro nasconde il tuo indirizzo IP per mantenere l’esperienza di navigazione privata, protetta e senza restrizioni.",
+    "description": "Abbiamo creato questo VPN in linea con la nostra missione di realizzare un internet più privato. Con questa estensione, la tua connessione sarà crittografata e al riparo da attacchi di rete e fughe di dati. Tu concentrati sulla navigazione sicura, mentre noi ci occupiamo della sicurezza.",
+    "cta": "Scarica VPN"
+  },
+  "SecureVPNSection": {
+    "title": "Perché usare un VPN sicuro",
+    "subtitle": "Le connessioni internet non protette, come il Wi-Fi pubblico, possono esporre le tue informazioni a fughe di dati, attacchi hacker o violazioni.",
+    "description": "Il VPN gratuito di Internxt crittografa la tua connessione per un’esperienza online più sicura e privata.",
+    "cards": [
+      {
+        "title": "Crittografa il tuo traffico internet",
+        "description": "Criptiamo i tuoi dati per proteggere il tuo diritto alla privacy e tenere le tue attività di navigazione nascoste a hacker, ISP e Google."
+      },
+      {
+        "title": "Evita la pubblicità mirata",
+        "description": "Un VPN sicuro ti aiuta a evitare le pubblicità personalizzate e riduce la raccolta di dati da parte di aziende come Google."
+      },
+      {
+        "title": "Sblocca contenuti globali",
+        "description": "Aggira le restrizioni geografiche e accedi a siti non disponibili nella tua regione."
+      },
+      {
+        "title": "Controlla la tua identità online",
+        "description": "Il VPN sicuro di Internxt ti restituisce il controllo su quante informazioni condividi online e le tiene protette."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Come funziona",
+    "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per crittografare e trasmettere dati sensibili.",
+    "description": "La nostra estensione VPN gratuita maschera il tuo indirizzo IP e protegge le tue informazioni dalla raccolta di dati da parte di terzi.",
+    "cards": [
+      {
+        "title": "Crittografia avanzata",
+        "description": "L’estensione VPN di Internxt utilizza protocolli di crittografia sicuri, offrendo la massima protezione per una connessione sicura e privata."
+      },
+      {
+        "title": "Reti sicure",
+        "description": "Goditi l’accesso sicuro a reti private e connettiti alle reti di lavoro o domestiche mantenendo la riservatezza dei dati."
+      },
+      {
+        "title": "Anonimato migliorato",
+        "description": "Un’estensione VPN modifica il tuo indirizzo IP per nascondere la tua posizione e non traccia la cronologia di navigazione o i log di connessione."
+      }
+    ]
+  },
+  "WhenUseVPNSection": {
+    "title": "Quando utilizzare un VPN",
+    "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per crittografare e trasmettere dati sensibili.",
+    "description": "La nostra estensione VPN gratuita maschera il tuo indirizzo IP e protegge le tue informazioni dalla raccolta di dati di terze parti.",
+    "cta": "Scarica VPN",
+    "cards": [
+      "Impedisci la pubblicità mirata",
+      "Crea account in modo anonimo",
+      "Aggira le fastidiose restrizioni geografiche",
+      "VPN gratuito",
+      "Proteggi la tua privacy",
+      "Nessuna registrazione richiesta",
+      "Difenditi dagli attacchi di rete",
+      "Nessun log conservato"
+    ]
+  },
+  "CtaSection": {
+    "title": "Libèrati dai tracker online",
+    "description": "Nascondi i tuoi dati per una navigazione sicura con il VPN di Internxt",
+    "cta": "Scarica VPN"
+  },
+  "CtaSection2": {
+    "title": "Basta occhi indiscreti",
+    "description": "Cripta la tua connessione per una privacy totale con Internxt VPN",
+    "cta": "Scarica VPN"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Che cos’è un’estensione VPN per Chrome?",
+        "answer": [
+          "Un VPN, o rete privata virtuale, garantisce una navigazione su Internet sicura e privata. Un VPN è progettato per creare un canale crittografato per i dati privati e ti consente di proteggere la tua identità online su connessioni più a rischio, come gli hotspot Wi-Fi pubblici."
+        ]
+      },
+      {
+        "question": "Come installare l’estensione VPN?",
+        "answer": [
+          "Per installare il VPN di Internxt, fai clic sul pulsante ‘Scarica VPN’ in questa pagina. Una volta scaricato, puoi avviare il VPN e scegliere il server VPN che preferisci."
+        ]
+      },
+      {
+        "question": "È sicuro utilizzare una connessione VPN?",
+        "answer": [
+          "Abbiamo sviluppato la nostra estensione VPN gratuita utilizzando protocolli di sicurezza standard del settore, in linea con la missione di Internxt di proteggere i tuoi dati da hacker e fornitori di servizi Internet (ISP). Un’estensione VPN impedisce a terze parti di monitorare la tua attività online."
+        ]
+      },
+      {
+        "question": "Su quali piattaforme è disponibile il VPN?",
+        "answer": [
+          "Puoi scaricare la nostra estensione VPN per Chrome sui browser Google Chrome per dispositivi desktop Windows e MacOS."
+        ]
+      },
+      {
+        "question": "In che modo il VPN garantisce la mia privacy?",
+        "answer": [
+          "Un VPN tutela la tua privacy crittografando il tuo traffico internet, nascondendo il tuo indirizzo IP e aderendo a rigide politiche ‘no-log’. Questa combinazione di misure di sicurezza impedisce a terzi di monitorare le tue attività online, preservando il tuo anonimato e la riservatezza dei dati."
+        ]
+      }
+    ]
+  }
+}
