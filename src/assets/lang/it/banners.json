@@ -103,6 +103,10 @@
     "line1": "Now that you’re aware, protect yourself with",
     "blueText": "Internxt secure cloud storage"
   },
+  "SignUpVPNBanner": {
+    "line1": "Sicuro mentre navighi.",
+    "blueText": "Goditi un'esperienza online più privata con Internxt"
+  },
   "privacyDirectoryBanner": {
     "line1": "Join the fight for privacy and build a better internet",
     "blueText": "with Internxt"

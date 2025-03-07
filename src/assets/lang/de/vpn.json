@@ -1,0 +1,120 @@
+{
+  "HeroSection": {
+    "label": "Kostenloses VPN",
+    "title": {
+      "line1": "Das sichere VPN von Internxt",
+      "line2": "schützt Sie online"
+    },
+    "description": "Surfen Sie frei und privat im Internet mit Internxts kostenlosem, unbegrenztem und verschlüsseltem VPN.",
+    "cta": "VPN herunterladen"
+  },
+  "EncryptedVPNSection": {
+    "title": "Internxts verschlüsselte VPN-Erweiterung",
+    "subtitle": "Unser kostenloses und sicheres VPN verbirgt Ihre IP-Adresse, um Ihr Surferlebnis privat, sicher und uneingeschränkt zu halten.",
+    "description": "Wir haben dieses VPN im Einklang mit unserer Mission entwickelt, das Internet privater zu gestalten. Mit dieser Erweiterung wird Ihre Verbindung verschlüsselt und vor Netzwerkangriffen und Datenlecks geschützt. Sie konzentrieren sich auf sicheres Surfen, während wir uns um die Sicherheit kümmern.",
+    "cta": "VPN herunterladen"
+  },
+  "SecureVPNSection": {
+    "title": "Warum ein sicheres VPN verwenden",
+    "subtitle": "Ungesicherte Internetverbindungen, wie öffentliches WLAN, können Ihre Informationen Datenlecks, Hacks oder Sicherheitsverletzungen aussetzen.",
+    "description": "Das kostenlose VPN von Internxt verschlüsselt Ihre Verbindung für ein sichereres und privateres Online-Erlebnis.",
+    "cards": [
+      {
+        "title": "Verschlüsseln Sie Ihren Internetverkehr",
+        "description": "Wir verschlüsseln Ihre Daten, um Ihr Recht auf Privatsphäre zu schützen und Ihre Browser-Aktivitäten vor Hackern, Internetanbietern und Google verborgen zu halten."
+      },
+      {
+        "title": "Vermeiden Sie zielgerichtete Werbung",
+        "description": "Ein sicheres VPN hilft Ihnen, personalisierte Werbung zu vermeiden, und reduziert die Datenerfassung durch Unternehmen wie Google."
+      },
+      {
+        "title": "Schalten Sie globale Inhalte frei",
+        "description": "Umgehen Sie Geobeschränkungen und greifen Sie auf Websites zu, die in Ihrer Region nicht verfügbar sind."
+      },
+      {
+        "title": "Kontrollieren Sie Ihre Online-Identität",
+        "description": "Das sichere VPN von Internxt gibt Ihnen die Kontrolle darüber zurück, wie viele Informationen Sie online teilen, und schützt diese."
+      }
+    ]
+  },
+  "HowItWorksSection": {
+    "title": "Wie es funktioniert",
+    "subtitle": "Die VPN-Erweiterung von Internxt verwendet schnelle, sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
+    "description": "Unsere kostenlose VPN-Erweiterung verbirgt Ihre IP-Adresse und schützt Ihre Informationen vor der Datenerfassung durch Dritte.",
+    "cards": [
+      {
+        "title": "Erweiterte Verschlüsselung",
+        "description": "Die Internxt VPN-Erweiterung verwendet sichere Datenverschlüsselungsprotokolle und bietet den höchsten Schutz für eine sichere und private Verbindung."
+      },
+      {
+        "title": "Sichere Netzwerke",
+        "description": "Genießen Sie sicheren Zugriff auf private Netzwerke und verbinden Sie sich mit Ihren Arbeits- oder Heimnetzwerken, während die Vertraulichkeit Ihrer Daten gewahrt bleibt."
+      },
+      {
+        "title": "Erhöhte Anonymität",
+        "description": "Eine VPN-Erweiterung ändert Ihre IP-Adresse, um Ihren Standort zu verbergen, und zeichnet weder Ihren Browserverlauf noch Verbindungsprotokolle auf."
+      }
+    ]
+  },
+  "WhenUseVPNSection": {
+    "title": "Wann sollten Sie ein VPN verwenden",
+    "subtitle": "Die VPN-Erweiterung von Internxt verwendet schnelle, sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
+    "description": "Unsere kostenlose VPN-Erweiterung verbirgt Ihre IP-Adresse und schützt Ihre Informationen vor der Datenerfassung durch Dritte.",
+    "cta": "VPN herunterladen",
+    "cards": [
+      "Verhindern Sie zielgerichtete Werbung",
+      "Erstellen Sie Konten anonym",
+      "Umgehen Sie lästige Geobeschränkungen",
+      "Kostenloses VPN",
+      "Schützen Sie Ihre Privatsphäre",
+      "Keine Registrierung erforderlich",
+      "Wehren Sie sich gegen Netzwerkangriffe",
+      "Keine Protokollierung"
+    ]
+  },
+  "CtaSection": {
+    "title": "Befreien Sie sich von Online-Trackern",
+    "description": "Verbergen Sie Ihre Daten für ein sicheres Surferlebnis mit dem Internxt VPN",
+    "cta": "VPN herunterladen"
+  },
+  "CtaSection2": {
+    "title": "Keine neugierigen Blicke mehr",
+    "description": "Verschlüsseln Sie Ihre Verbindung für volle Privatsphäre mit Internxt VPN",
+    "cta": "VPN herunterladen"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben die Antworten",
+    "faq": [
+      {
+        "question": "Was ist eine VPN-Erweiterung für Chrome?",
+        "answer": [
+          "Ein VPN oder virtuelles privates Netzwerk gewährleistet sicheres, privates Surfen im Internet. Ein VPN ist darauf ausgelegt, einen verschlüsselten Kanal für private Daten zu erstellen, und ermöglicht es Ihnen, Ihre Online-Identität bei risikoreicheren Verbindungen wie öffentlichen WLAN-Hotspots zu schützen."
+        ]
+      },
+      {
+        "question": "Wie installiert man die VPN-Erweiterung?",
+        "answer": [
+          "Um das VPN von Internxt zu installieren, klicken Sie auf dieser Seite auf die Schaltfläche „VPN herunterladen“. Nach dem Download können Sie das VPN starten und Ihren bevorzugten VPN-Server auswählen."
+        ]
+      },
+      {
+        "question": "Ist es sicher, eine VPN-Verbindung zu nutzen?",
+        "answer": [
+          "Wir haben unsere kostenlose VPN-Erweiterung unter Verwendung branchenüblicher Sicherheitsprotokolle entwickelt, im Einklang mit der Mission von Internxt, Ihre Daten vor Hackern und Internetdienstanbietern (ISPs) zu schützen. Eine VPN-Erweiterung verhindert, dass Dritte Ihre Online-Aktivitäten verfolgen."
+        ]
+      },
+      {
+        "question": "Welche Plattformen unterstützt das VPN?",
+        "answer": [
+          "Sie können unsere VPN-Chrome-Erweiterung auf Google Chrome-Webbrowsern für Windows- und MacOS-Desktopgeräte herunterladen."
+        ]
+      },
+      {
+        "question": "Wie gewährleistet das VPN meine Privatsphäre?",
+        "answer": [
+          "Ein VPN stellt Ihre Privatsphäre sicher, indem es Ihren Internetverkehr verschlüsselt, Ihre IP-Adresse verbirgt und strikte No-Logs-Richtlinien einhält. Diese Kombination von Sicherheitsmaßnahmen verhindert, dass Dritte Ihre Online-Aktivitäten überwachen, und bewahrt Ihre Anonymität und Datensicherheit."
+        ]
+      }
+    ]
+  }
+}
