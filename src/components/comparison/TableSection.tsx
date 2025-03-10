@@ -11,6 +11,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
+        post_quantum_encryption: true,
         end_to_end_encrypted_file_sharing: true,
         zero_knowledge_encryption: true,
         two_factor_authentication: true,
@@ -50,6 +51,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: false,
+        post_quantum_encryption: true,
         end_to_end_encrypted_file_sharing: false,
         zero_knowledge_encryption: false,
         business_plans: true,
@@ -88,6 +90,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
+        post_quantum_encryption: true,
         end_to_end_encrypted_file_sharing: true,
         zero_knowledge_encryption: true,
         two_factor_authentication: true,
@@ -126,6 +129,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: false,
+        post_quantum_encryption: true,
         end_to_end_encrypted_file_sharing: false,
         zero_knowledge_encryption: false,
         two_factor_authentication: true,
@@ -164,6 +168,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: false,
+        post_quantum_encryption: false,
         end_to_end_encrypted_file_sharing: false,
         zero_knowledge_encryption: false,
         two_factor_authentication: true,
@@ -202,6 +207,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
+        post_quantum_encryption: false,
         end_to_end_encrypted_file_sharing: true,
         zero_knowledge_encryption: true,
         two_factor_authentication: true,
@@ -240,6 +246,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
+        post_quantum_encryption: false,
         end_to_end_encrypted_file_sharing: true,
         zero_knowledge_encryption: true,
         two_factor_authentication: true,
@@ -278,6 +285,7 @@ const TableSection = ({ textContent }) => {
       features: {
         encryption_at_rest_and_in_transit: true,
         end_to_end_encrypted_storage: true,
+        post_quantum_encryption: false,
         end_to_end_encrypted_file_sharing: true,
         zero_knowledge_encryption: true,
         two_factor_authentication: true,
@@ -325,6 +333,10 @@ const TableSection = ({ textContent }) => {
         {
           title: `${textContent.table.sections.encryption_and_security.features.end_to_end_encrypted_storage}`,
           feature: getFeature('end_to_end_encrypted_storage'),
+        },
+        {
+          title: `${textContent.table.sections.encryption_and_security.features.post_quantum_encryption}`,
+          feature: getFeature('post_quantum_encryption'),
         },
         {
           title: `${textContent.table.sections.encryption_and_security.features.end_to_end_encrypted_file_sharing}`,
@@ -589,7 +601,7 @@ const TableSection = ({ textContent }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       id="get-started-link"
-                      className="absolute top-full left-0 flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
+                      className="absolute left-0 top-full flex h-14 w-full cursor-pointer flex-col items-center justify-center whitespace-nowrap rounded-b-2xl bg-primary text-lg font-medium text-white hover:bg-primary-dark md:h-10 md:text-base"
                     >
                       {textContent.table.startNow}
                     </Link>

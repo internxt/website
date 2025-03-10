@@ -12,7 +12,8 @@
   },
   "ourValues": {
     "openSource": "Open Source",
-    "privacy": "Confidentialité"
+    "privacy": "Confidentialité",
+    "sustainability": "Durabilité"
   },
   "products": {
     "drive": "Internxt Drive",
@@ -21,7 +22,8 @@
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
     "comingSoon": "Proximité",
-    "new": "Nouveau"
+    "new": "Nouveau",
+    "antivirus": "Internxt Antivirus"
   },
   "Auth": {
     "SignUp": {

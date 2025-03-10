@@ -163,5 +163,20 @@
     "id": "cloud-object-storage",
     "title": "Internxt — Archiviazione di Oggetti",
     "description": "Internxt offre archiviazione di oggetti privata ed economica per memorizzare i dati in modo sicuro utilizzando il protocollo S3 per gestire efficacemente le tue esigenze di archiviazione."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Archiviazione cloud verde e sostenibile",
+    "description": "I data center ecologici di Internxt promuovono il nostro impegno per la sostenibilità e l'informatica cloud ecologica, supportando un ambiente più verde e sostenibile."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Proteggi i tuoi dispositivi dai malware con Internxt Antivirus",
+    "description": "Internxt Antivirus esegue la scansione e rimuove i virus dai tuoi file. Proteggi i tuoi dispositivi dai malware e garantisci una sicurezza completa nel cloud."
+  },
+  {
+    "id": "vpn-extension",
+    "title": "Internxt VPN gratuito e sicuro | Internxt",
+    "description": "Estensione VPN gratuita di Internxt per Chrome: navigazione sicura, Wi-Fi crittografato e protezione della privacy. Scarica la nostra VPN sicura per proteggere i tuoi dati online."
   }
 ]

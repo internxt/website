@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -12,7 +12,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
@@ -25,7 +25,6 @@ import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import useIsMobile from '@/hooks/useIsMobile';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -43,12 +42,10 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Christmas,
+    couponCode: PromoCodeName.SpringCoupon,
   });
-  const [isBusiness, setIsBusiness] = useState<boolean>();
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
   const marqueeBgColor = 'bg-white';
@@ -74,24 +71,24 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       description: textContent.FeatureSectionV2.cards![3].description,
     },
   ];
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
   };
 
-  const onBusinessPlansSelected = (isBusiness: boolean) => {
-    setIsBusiness(isBusiness);
-  };
-
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
-    const planType = isBusiness ? 'business' : 'individual';
-
-    stripeService.redirectToCheckout(priceId, currencyValue, planType, isCheckoutForLifetime, couponCodeForCheckout);
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
   };
 
-  const isMobile = useIsMobile();
-
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  console.log('individualCoupon', individualCoupon?.name);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -109,21 +106,15 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.tableSection}
         decimalDiscount={{
           individuals: decimalDiscount,
-          business: decimalDiscount,
           lifetime: decimalDiscount,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
         products={products}
         loadingCards={loadingCards}
-        onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {textContent.tableSection.planDescription}
-          </span>
-        }
-        hideSwitchSelector
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <div className={`${marqueeBgColor} py-10`}>
@@ -134,7 +125,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
             <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{textContent.FeatureSectionV2.title}</h2>
+              <h2 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.FeatureSectionV2.title}</h2>
               <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
             </div>
             <div className="flex flex-col items-center gap-12">

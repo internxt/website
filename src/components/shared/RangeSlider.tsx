@@ -4,11 +4,18 @@ import { ReactNode } from 'react';
 interface PricingRangeSliderProps {
   max: number;
   min?: number;
+  color?: string;
   valueLabelFormat: (value: number, index: number) => ReactNode;
   rangeItems: string[];
 }
 
-export const RangeSlider = ({ max, min = 0, rangeItems, valueLabelFormat }: PricingRangeSliderProps): JSX.Element => {
+export const RangeSlider = ({
+  max,
+  min = 0,
+  rangeItems,
+  valueLabelFormat,
+  color,
+}: PricingRangeSliderProps): JSX.Element => {
   return (
     <div className="flex w-full max-w-[840px] flex-col gap-2">
       <div className="inset-0 flex w-full items-center justify-between">
@@ -20,7 +27,7 @@ export const RangeSlider = ({ max, min = 0, rangeItems, valueLabelFormat }: Pric
       </div>
       <Slider
         aria-label="Storage"
-        className="text-primary"
+        className={color ? `text-${color}` : 'text-primary'}
         defaultValue={0}
         valueLabelDisplay="auto"
         valueLabelFormat={valueLabelFormat}

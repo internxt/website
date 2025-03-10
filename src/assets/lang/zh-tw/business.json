@@ -5,7 +5,9 @@
       "Internxt 通過超強加密的安全雲端存儲保護您的企業免受數據丟失的影響。",
       "我們提供您管理企業安全所需的一切。"
     ],
-    "cta": "獲取 Internxt 企業版"
+    "cta": "選擇方案",
+    "separator": "|",
+    "cta2": "聯繫銷售"
   },
   "SecureYourCompany": {
     "title": "使用 Internxt 加密雲端存儲保障公司未來",
@@ -73,8 +75,10 @@
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "開源並經過審核",
-      "anonymousAccount": "匿名帳戶創建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "WhyChooseInternxt": {
@@ -179,5 +183,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "聯繫銷售",
+    "description": "填寫聯絡表格，團隊將盡快與您聯繫。",
+    "form": {
+      "name": "全名",
+      "email": "電子郵件地址",
+      "company": "公司名稱",
+      "phone": "電話號碼",
+      "howMuchStorage": "您需要多少儲存空間？",
+      "totalCharacters": " /1000",
+      "options": [
+        "選擇",
+        "少於25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我們如何幫助您？",
+      "howWeCanHelpPlaceHolder": "請告訴我們您的需求",
+      "cta": "發送消息",
+      "ctaSending": "發送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请再试一次。"
+    }
   }
 }

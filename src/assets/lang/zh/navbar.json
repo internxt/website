@@ -18,11 +18,13 @@
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
     "comingSoon": "即将推出",
-    "new": "新的"
+    "new": "新的",
+    "antivirus": "Internxt Antivirus"
   },
   "ourValues": {
     "privacy": "隐私",
-    "openSource": "通过"
+    "openSource": "通过",
+    "sustainability": "可持续性"
   },
   "Auth": {
     "SignUp": {

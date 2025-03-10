@@ -168,5 +168,20 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 对象存储",
     "description": "Internxt 提供私密且实惠的对象存储，使用 S3 协议安全地存储数据，有效地管理您的存储需求。"
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "绿色与可持续的云存储",
+    "description": "Internxt 的绿色数据中心推动我们对可持续性和绿色云计算的承诺，支持一个更绿、更可持续的环境。"
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "使用 Internxt Antivirus 保護您的設備免受惡意軟體侵害",
+    "description": "Internxt Antivirus 掃描並移除檔案中的病毒。保護您的設備免受惡意軟體侵害，確保雲端的全面安全。"
+  },
+  {
+    "id": "vpn-extension",
+    "title": "Internxt 免费安全 VPN | Internxt",
+    "description": "Internxt 免费 VPN Chrome 扩展：安全浏览、加密 Wi-Fi 和隐私保护。下载我们的安全 VPN，在网上保护您的数据。"
   }
 ]

@@ -60,14 +60,14 @@ export interface SubtitleClass {
 
 export interface HeroSection {
   label: string;
-  title: TitleAndOnePlanTitle;
+  title: HeroSectionTitle;
   subtitle: string;
   cta: Cta;
   featuredIn: string;
   SignUp: SignUp;
   TitleAndSurvey: TitleAndSurvey;
   TitleAndOnePlan: TitleAndOnePlan;
-  TitleAndOnePlanV2: TitleAndOnePlan;
+  TitleAndOnePlanV2: TitleAndOnePlanV2;
   youKnow: string;
 }
 
@@ -118,17 +118,12 @@ export interface Submit {
 
 export interface TitleAndOnePlan {
   title: TitleAndOnePlanTitle;
-  description: TitleAndOnePlanDescription;
+  subtitle: string;
+  description: string;
   features: string[];
   startFrom: StartFrom;
   claimDeal: string;
   guarantee: string;
-}
-
-export interface TitleAndOnePlanDescription {
-  normal1: string;
-  blue: string;
-  normal2: string;
 }
 
 export interface StartFrom {
@@ -138,28 +133,42 @@ export interface StartFrom {
 }
 
 export interface TitleAndOnePlanTitle {
-  line1: string;
-  line2?: string;
+  textBeforeBlueText: string;
   blueText: string;
-  normal1?: string;
-  normal2?: string;
-  blue1?: string;
-  blue2?: string;
+  textAfterBlueText: string;
+}
+
+export interface TitleAndOnePlanV2 {
+  saveLabel: string;
+  title: string;
+  cta: string;
+  guarantee: string;
 }
 
 export interface TitleAndSurvey {
-  title: TitleAndOnePlanTitle;
+  title: TitleAndSurveyTitle;
   trustedBy: string;
-  description: TitleAndSurveyDescription;
+  description: Description;
   howMuchYouNeed: string;
   upTo: string;
   buttonLabel: string[];
 }
 
-export interface TitleAndSurveyDescription {
+export interface Description {
   normal1: string;
   bold: string;
   normal2: string;
+}
+
+export interface TitleAndSurveyTitle {
+  line1: string;
+  blueText: string;
+}
+
+export interface HeroSectionTitle {
+  line1: string;
+  blueText: string;
+  line2: string;
 }
 
 export interface InvestorsSection {
@@ -213,13 +222,13 @@ export interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }
 
 export interface FreePlanCard {
-  getStarted: string;
-  enjoy10gb: string;
-  upTo: string;
-  freeForever: string;
+  eyeBrow: string;
+  description: string;
   cta: string;
 }
 

@@ -18,11 +18,13 @@
     "vpn": "Internxt VPN",
     "send": "Internxt Send",
     "comingSoon": "Em breve",
-    "new": "Novo"
+    "new": "Novo",
+    "antivirus": "Internxt Antivirus"
   },
   "ourValues": {
     "privacy": "Privacidade",
-    "openSource": "Código Aberto"
+    "openSource": "Código Aberto",
+    "sustainability": "Sustentabilidade"
   },
   "Auth": {
     "SignUp": {

@@ -7,7 +7,7 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
@@ -37,11 +37,14 @@ interface PriceTableProps {
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   isMonthly?: boolean;
   darkMode?: boolean;
+  hideFeatures?: boolean;
+
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
     business?: number;
   };
+  isBrave?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -64,7 +67,7 @@ export const PricingSection = ({
   hideBusinessSelector,
   hideSwitchSelector,
   lang,
-  popularPlanBySize = '10TB',
+  popularPlanBySize = '3TB',
   lifetimeCoupons,
   isFamilyPage,
   isMonthly,
@@ -74,6 +77,8 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
+  isBrave,
+  hideFeatures,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -98,16 +103,16 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: FolderLock,
-      text: textContent.features.endToEnd,
+      icon: Lifebuoy,
+      text: textContent.features.premiumSupport,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.guarantee,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 
@@ -155,7 +160,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
       >
         <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(4)
+          {Array(3)
             .fill(0)
             .map((_, i) => (
               <CardSkeleton key={i} />
@@ -178,28 +183,20 @@ export const PricingSection = ({
                   product={product}
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
-                  monthlyProductPrice={
-                    products.individuals[Interval.Month].filter(
-                      (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                    )[0].price
-                  }
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
                   decimalDiscountValue={
-                    product.interval === Interval.Lifetime ||
-                    product.interval === Interval.Year ||
-                    product.interval === Interval.Month
-                      ? decimalDiscount?.lifetime
-                      : undefined
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
                   }
                   lang={lang}
                   darkMode={darkMode}
+                  isBrave={isBrave}
                 />
               ))
             : undefined}
         </div>
         {!hideFreeCard && (
-          <div id="freeAccountCard" className="content flex w-full pb-10 md:pb-0">
+          <div id="freeAccountCard" className="content flex w-full px-6 pb-10 md:px-0 md:pb-0">
             <FreePlanCard textContent={textContent.freePlanCard} />
           </div>
         )}
@@ -223,16 +220,16 @@ export const PricingSection = ({
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
                       monthlyProductPrice={
                         products.business[Interval.Month].filter(
                           (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
                         )[0].price
                       }
+                      onCheckoutButtonClicked={onCheckoutButtonClicked}
+                      productCardPlan="business"
+                      label={product.storage}
                       key={product.storage}
-                      popular={product.storage === '10TB'}
+                      popular={product.storage === '2TB'}
                       decimalDiscountValue={decimalDiscount?.business}
                       isFamilyPage={isFamilyPage}
                       lang={lang}
@@ -244,14 +241,16 @@ export const PricingSection = ({
           )}
         </div>
       </Transition>
-      <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
-        {features.map((feature) => (
-          <div key={feature.text} className="flex flex-row items-center space-x-3">
-            <feature.icon size={40} className="text-primary md:pb-0" />
-            <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
-          </div>
-        ))}
-      </div>
+      {!hideFeatures && (
+        <div className="flex flex-col justify-center space-y-8 md:flex-row md:space-x-32 md:space-y-0 md:pt-10">
+          {features.map((feature) => (
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
+              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
+              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </>
   );
 };

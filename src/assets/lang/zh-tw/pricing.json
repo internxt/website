@@ -31,17 +31,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "節省 80%",
-      "title": "萬聖節特賣",
-      "subtitle": "聽到那銷售鈴聲響起！",
-      "cta": "選擇您的計劃",
-      "cta2": "享受 85% 折扣",
-      "guarantee": "30 天退款保證",
-      "lastCta": "*優惠僅適用於免費帳戶或新客戶",
-      "titleMbl1": "聖誕",
-      "titleMbl2": "節省",
-      "titleMbl3": "已到來！",
-      "ctaMbl": "選擇計劃"
+      "label": "立省 80%",
+      "title": "迎接隐私新时代！",
+      "subtitle": "全新套餐，包含高级杀毒软件和 VPN",
+      "cta": "立即领取优惠",
+      "cta2": "立享 85% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠适用于免费账户或新客户",
+      "titleMbl1": "全新",
+      "titleMbl2": "定价方案",
+      "titleMbl3": "保护您所爱的一切，直到永远！",
+      "ctaMbl": "购买套餐"
     },
     "save": "節省高達",
     "planTitles": {
@@ -58,7 +58,7 @@
       }
     },
     "lifetimeDescription": "一次購買，永久享受隱私和安全。",
-    "planDescription": "所有 Internxt 計劃都具有完整的功能，完全訪問我們的所有隱私服務。適用於各種規模的安全保障。",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
     "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
     "businessDescription2": "通過 Internxt 的加密雲存儲計劃確保企業數據安全。",
     "billingFrequency": {
@@ -69,16 +69,16 @@
       "business": "商業"
     },
     "freePlanCard": {
-      "getStarted": "從我們的免費計劃開始使用",
-      "enjoy10gb": "享受 1 GB 的存储空间，并可永久使用我们的所有服务。",
-      "upTo": "1GB",
-      "freeForever": "永遠免費",
-      "cta": "選擇計劃"
+      "eyeBrow": "Internxt Free",
+      "description": "免费 – 免费获取 1GB 加密云存储",
+      "cta": "选择方案"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "開源且經過審計",
-      "anonymousAccount": "匿名帳戶創建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "FaqSection": {

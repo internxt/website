@@ -19,6 +19,8 @@ import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
+import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
+import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,7 +39,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.Christmas,
+    couponCodeForBusiness: PromoCodeName.SpringCoupon,
   });
 
   const locale = lang as string;
@@ -46,6 +48,14 @@ export const BusinessPage = ({
     stripeService.redirectToCheckout(planId, currencyValue, 'business', isCheckoutForLifetime, businessCoupon?.name);
   };
   const onButtonClick = () => (window.location.href = '#priceTable');
+  const scrollToTop = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
+
+  const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -59,14 +69,18 @@ export const BusinessPage = ({
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
               <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
             </div>
-            <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
+            <div className="flex flex-col items-center gap-4 lg:flex-row ">
+              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
+              <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
+              <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+            </div>
           </div>
         }
         style={{
           background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
         }}
         imageProperties={{
-          src: getImage('/images/business/Internxt_b2b_business_solution.webp'),
+          src: getImage(`/images/business/${imagePath}.webp`),
           alt: 'Internxt B2B Business Solution',
           width: 671,
           height: 563,
@@ -81,26 +95,29 @@ export const BusinessPage = ({
 
       <PricingSectionWrapper
         loadingCards={loadingCards}
+        decimalDiscount={{
+          business: businessCoupon?.percentOff && 100 - businessCoupon.percentOff,
+        }}
         lang={locale}
         products={products}
-        decimalDiscount={{
-          business: businessCoupon?.percentOff && 100 - businessCoupon?.percentOff,
-        }}
         hideFreeCard
         startFromPlan="Business"
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        hideSwitchSelector
       />
 
-      <WhyChooseInternxtForBusiness textContent={textContent.WhyChooseInternxt} />
+      <WhyChooseInternxtForBusiness textContent={textContent} />
+
+      <MarqueeComponentV2 bgColor="bg-gray-1" />
 
       <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
 
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
+
+      <ContactSalesForm textContent={textContent.ContactSales} isBusiness />
 
       <Footer textContent={footerText} lang={locale} />
     </Layout>

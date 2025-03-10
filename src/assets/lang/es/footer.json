@@ -26,6 +26,7 @@
         "send": "Internxt Send",
         "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
+        "antivirus": "Internxt Antivirus",
         "token": "Token",
         "business": "Internxt para Empresas",
         "family": "Internxt para Familias",
@@ -39,7 +40,8 @@
         "security": "Seguridad",
         "legal": "Legal",
         "whyInternxt": "¿Por qué Internxt?",
-        "mediaArea": "Área de Recursos"
+        "mediaArea": "Área de Recursos",
+        "sustainability": "Sostenibilidad"
       },
       "join": {
         "title": "Únete",

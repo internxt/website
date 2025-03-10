@@ -2,9 +2,9 @@
   "HeroSection": {
     "label": "Save 80%",
     "title": {
-      "line1": "Get the ",
-      "blueText": "most secure",
-      "line2": " cloud storage"
+      "line1": "Secure cloud storage.",
+      "blueText": "Guaranteed.",
+      "line2": ""
     },
     "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
     "cta": {
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "70% cheaper"
+        "blueText": "80% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -59,63 +59,46 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Secure cloud storage.",
-        "blueText": "Guaranteed."
+        "textBeforeBlueText": "",
+        "blueText": "Secure ",
+        "textAfterBlueText": " cloud storage and privacy suite"
       },
-      "description": {
-        "normal1": "",
-        "blue": "Get 80% off ",
-        "normal2": "all premium plans"
-      },
-      "features": ["Up to 10TB storage", "Zero knowledge encryption", "Open source and audited"],
+      "subtitle": "Full Security. Total control.",
+      "description": "Get 80% off our award-winning privacy services",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus & more",
+        "Post-quantum zero-knowledge encryption",
+        "Open source and audited"
+      ],
+
       "startFrom": {
         "normal1": "Start from ",
-        "price": " 0.95",
+        "price": " 2",
         "normal2": " /month"
       },
       "claimDeal": "Claim deal",
       "guarantee": "30-day money-back guarantee"
     },
     "TitleAndOnePlanV2": {
-      "title": {
-        "normal1": "Get the ",
-        "blue1": "most secure ",
-        "normal2": "cloud storage, now with ",
-        "blue2": "85% OFF "
-      },
-      "description": {
-        "normal1": "Get the ",
-        "blue1": "most secure ",
-        "normal2": "cloud storage, now with ",
-        "blue2": "8% OFF "
-      },
-      "features": [
-        "Zero-knowledge military-grade encryption",
-        "Maximum privacy: only you can access your files",
-        "Premium customer support for seamless transition"
-      ],
-      "startFrom": {
-        "normal1": "Start from ",
-        "price": " 0.95",
-        "normal2": " /month"
-      },
-      "claimDeal": "Reveal limited-time offer",
-      "guarantee": "No. 1 Cloud in 2024 by "
+      "saveLabel": "Save 80%",
+      "title": "New pricing plans available now!",
+      "cta": "Claim deal!",
+      "guarantee": "30-day money-back guarantee"
     },
     "youKnow": "Did you know?"
   },
   "FeatureSectionV2": {
-    "title": "Zero-knowledge encryption: only you can see your data",
-    "description": "Securely access all your files from your computer, smartphone, tablet, or any other device with a connection to the internet via the most secure cloud storage app. ",
-    "cta": "Choose storage size",
+    "title": "Post-quantum and zero-knowledge encryption: the most advanced technology for data protection",
+    "description": "We protect your file’s security and privacy with advanced encryption to future-proof against emerging threats.",
+    "cta": "Select storage plan",
     "cards": [
       {
         "title": "Unhackable and unleakable data",
         "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+        "title": "Next-generation security",
+        "description": "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data."
       },
       {
         "title": "Open source and transparent",
@@ -129,37 +112,37 @@
   },
   "tableSection": {
     "planTitles": {
-      "individuals": "Individual Plans",
+      "individuals": "Annual",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
+      "lifetime": "Lifetime",
+      "business": "Business",
       "lifetimeCampaign": {
         "blueText": "Get 50% OFF",
         "normalText": "all our exclusive lifetime plans"
       }
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
-      "annually": "Annually",
+      "annually": "Annual",
       "individual": "Individual",
       "lifetime": "Lifetime",
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "ChooseStorageSizeSection": {
@@ -271,7 +254,14 @@
         "question": "Can Internxt access my files?",
         "answer": [
           "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
+          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
         ]
       },
       {
@@ -305,7 +295,7 @@
         "question": "What is Internxt’s refund policy?",
         "answer": [
           "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund. We will honor your request, no questions asked!"
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
         ]
       },
       {
@@ -332,6 +322,13 @@
         "question": "Can I add more storage to my lifetime plan?",
         "answer": [
           "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

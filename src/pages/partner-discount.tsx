@@ -16,8 +16,10 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PartnerDiscountText } from '@/assets/types/partner-discount';
 import Image from 'next/image';
 import { CardGroup } from '@/components/shared/CardGroup';
+import { GetServerSidePropsContext } from 'next';
 
 interface PartnerDiscountProps {
+  lang: GetServerSidePropsContext['locale'];
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: PartnerDiscountText;
@@ -29,16 +31,17 @@ const PartnerDiscount = ({
   langJson,
   navbarLang,
   footerLang,
+  lang,
 }: PartnerDiscountProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'partner-discount');
-  const lang = 'en';
+
   const {
     products,
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.PartnerDiscount75OFF,
+    couponCode: PromoCodeName.SpringCoupon,
   });
 
   const cardsData = [
@@ -64,6 +67,7 @@ const PartnerDiscount = ({
     },
   ];
 
+  const locale = lang as string;
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     stripeService.redirectToCheckout(
       priceId,
@@ -76,7 +80,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden />
 
       <HeroSection
         TextComponent={
@@ -122,7 +126,7 @@ const PartnerDiscount = ({
           decimalDiscount={{
             individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
           }}
-          lang={lang}
+          lang="en"
           products={products}
           popularPlanBySize={'5TB'}
           loadingCards={loadingCards}
@@ -166,16 +170,18 @@ const PartnerDiscount = ({
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/partner-discount.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const lang = ctx.locale;
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/partner-discount.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

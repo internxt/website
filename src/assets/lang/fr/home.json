@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Économisez 70%",
+    "label": "Économisez 80%",
     "title": {
       "line1": "Obtenez le ",
       "blueText": "plus sécurisé",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Stockez vos fichiers en toute sécurité, maintenant ",
-        "blueText": "70% moins cher"
+        "blueText": "80% moins cher"
       },
       "trustedBy": "Fiable par plus de 330 000 personnes",
       "description": {
@@ -59,24 +59,32 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "line1": "Stockage cloud sécurisé.",
-        "blueText": "Garanti."
+        "textBeforeBlueText": "Écosystème ",
+        "blueText": "sécurisé",
+        "textAfterBlueText": " dans le cloud"
       },
-      "description": {
-        "normal1": "Obtenez ",
-        "blue": "80 % de réduction ",
-        "normal2": "sur tous les plans premium"
-      },
-      "features": ["Jusqu'à 10TB de stockage", "Chiffrement sans connaissance", "Open source et audité"],
+      "subtitle": "Sécurité et contrôle complets.",
+      "description": "80% de réduction",
+      "features": [
+        "Drive, Meet, Mail, VPN, Antivirus et plus",
+        "Cryptographie post-quantique et connaissance zéro",
+        "Open-source et audité"
+      ],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 0.95",
+        "price": " 2",
         "normal2": " /mois"
       },
-      "claimDeal": "Obtenir l'offre",
+      "claimDeal": "Obtenez l'offre",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
-    "youKnow": "Le saviez-vous ?"
+    "TitleAndOnePlanV2": {
+      "saveLabel": "Économisez 80%",
+      "title": "Nouveaux plans tarifaires disponibles maintenant !",
+      "cta": "Profitez de l'offre !",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "youKnow": "Saviez-vous cela?"
   },
   "FeatureSectionV2": {
     "title": "Chiffrement sans connaissance : vous seul pouvez voir vos données",
@@ -105,17 +113,17 @@
     "planTitles": {
       "individuals": "Plans individuels",
       "homePage": "Choisissez le plan qui vous convient",
-      "lifetime": "Planes à vie",
-      "business": "Plans d'entreprise",
+      "lifetime": "Plans à vie",
+      "business": "Plans pour les entreprises",
       "lifetimeCampaign": {
         "blueText": "50% de réduction",
-        "normalText": "tous nos plans exclusifs à vie"
+        "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
-    "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
-    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
-    "businessDescription2": "Assurez la sécurité des données d'entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "lifetimeDescription": "Payez une fois et obtenez une confidentialité et une sécurité à vie",
+    "planDescription": "Tous les plans Internxt offrent un accès complet à notre pack de solutions privées avec la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et garantir votre rentabilité.",
+    "businessDescription2": "Garantissez la sécurité des données de l'entreprise avec les plans de stockage cloud cryptés d'Internxt.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
@@ -124,16 +132,16 @@
       "business": "Entreprise"
     },
     "freePlanCard": {
-      "getStarted": "Commencez avec notre plan gratuit",
-      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
-      "upTo": "Jusqu'à 10 Go",
-      "freeForever": "Gratuit pour toujours",
-      "cta": "Sélectionner un plan"
+      "eyeBrow": "Internxt Free",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le plan"
     },
     "features": {
-      "endToEnd": "Chiffré de bout en bout",
-      "openSource": "Open-source et vérifié",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "ChooseStorageSizeSection": {
@@ -248,7 +256,14 @@
         "question": "Internxt peut-il accéder à mes fichiers ?",
         "answer": [
           "Non. Internxt, ainsi que toute autre tierce partie, ne peut pas accéder à vos fichiers, photos ou données.",
-          "Les services d'Internxt disposent d'un chiffrement sans connaissance, ce qui signifie que seul vous pouvez réellement accéder à vos données privées. De plus, l'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, de sorte qu'un serveur ne contient jamais un fichier complet, mais seulement un fragment chiffré que seul vous pouvez déchiffrer."
+          "Les services d’Internxt proposent un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez accéder à vos données privées et les déchiffrer. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos fichiers contre les menaces futures."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et respectueuse de l'environnement ?",
+        "answer": [
+          "Oui, Internxt s'engage dans l'informatique en nuage verte, offrant des solutions de stockage écologiques pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. En savoir plus"
         ]
       },
       {
@@ -283,7 +298,7 @@
         "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
-          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement. Nous honorerons votre demande, sans poser de questions !"
+          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
         ]
       },
       {
@@ -310,6 +325,13 @@
         "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
         "answer": [
           "Oui, vous pouvez ajouter autant de stockage que vous le souhaitez à votre abonnement à vie Internxt. Les plans à vie Internxt sont cumulables. Achetez-les simplement avec la même adresse e-mail et contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) pour que nous puissions les cumuler sur le même compte pour vous."
+        ]
+      },
+      {
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "answer": [
+          "Oui, Internxt s'engage pour un cloud computing respectueux de l'environnement, offrant des solutions de stockage qui soutiennent un avenir plus propre et plus durable. Nos centres de données fonctionnent avec 92 % d'énergie renouvelable et sont conçus pour minimiser les émissions de CO2, la consommation de ressources et les déchets électroniques.",
+          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

@@ -1,21 +1,19 @@
 {
-  "title": "您快完成了！请安全结账：",
+  "title": "您快完成了！请安全结账",
   "pay": "支付",
   "paying": "正在支付...",
   "checkout": "结账",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "您的电子邮件地址",
       "password": "创建密码"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "您的电子邮件地址",
       "password": "您的密码"
     },
     "title": {
-      "signUp": "创建账户",
-      "signIn": "登录",
-      "userIsSignedIn": "用户已登录为"
+      "signUp": "创建账户"
     },
     "emailMustNotBeEmpty": "电子邮件不能为空",
     "privacyGuarantee": "隐私保证：我们不会分享您的信息，并且只会在提供服务时与您联系。"
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "订单摘要",
     "selectedPlan": "选择的计划",
-    "renewalPeriod": {
-      "month": "每月",
-      "year": "每年",
-      "lifetime": "终身"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 {{interval}} 计划",
       "year": "{{spaceToUpgrade}} - 1 {{interval}} 计划",
@@ -59,7 +52,7 @@
         "高级客户支持"
       ]
     },
-    "total": "总计：",
+    "total": "总计",
     "addCoupon": {
       "buttonTitle": "添加优惠券",
       "inputText": "优惠券代码",
@@ -68,5 +61,6 @@
     "amountSaved": "节省 ",
     "withAnnualBilling": "按年计费"
   },
-  "oneTimePayment": "*账户验证需要一次性费用1€"
+  "oneTimePayment": "*账户验证需要一次性费用1€",
+  "error500": "请输入有效的增值税号"
 }

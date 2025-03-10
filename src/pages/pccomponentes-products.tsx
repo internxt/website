@@ -8,6 +8,9 @@ import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
+import { GetServerSidePropsContext } from 'next';
+
+const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 
 const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -37,6 +40,8 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
       return priceWithDiscount;
     }
   };
+
+  const productsToDisplay = products?.individuals?.[billingFrequency][0];
 
   return (
     <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
@@ -71,43 +76,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
               {contentText.billingFrequency.lifetime}
             </button>
           </div>
-          {/* Switch buttons for Individual plans (Monthly | Annually) */}
-          <div className={`flex-row items-start gap-5 lg:items-center ${isSubscription ? 'flex' : 'hidden'}`}>
-            <p
-              className={`text-base font-semibold ${
-                billingFrequency === Interval.Month ? 'text-gray-100' : 'text-gray-50'
-              }`}
-            >
-              {contentText.billingFrequency.monthly}
-            </p>
-
-            <Switch
-              checked={isIndividualSwitchEnabled}
-              onChange={() => {
-                setBillingFrequency(isIndividualSwitchEnabled ? Interval.Month : Interval.Year);
-              }}
-              className={`${
-                isIndividualSwitchEnabled ? 'bg-green' : 'bg-gray-10'
-              } relative inline-flex h-6 w-11 items-center rounded-full`}
-            >
-              <span
-                id={'switchButton'}
-                className={`${
-                  isIndividualSwitchEnabled ? 'translate-x-6' : 'translate-x-1'
-                } inline-block h-4 w-4 transform rounded-full bg-white transition`}
-              />
-            </Switch>
-
-            <div className="relative flex flex-col lg:flex-row lg:items-center">
-              <p
-                className={`text-base font-semibold ${
-                  billingFrequency === Interval.Year ? 'text-gray-100' : 'text-gray-50'
-                }`}
-              >
-                {contentText.billingFrequency.annually}
-              </p>
-            </div>
-          </div>
         </div>
         {/* Skeleton cards while fetching products data */}
         <Transition
@@ -131,24 +99,78 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
           enterTo="scale-100 translate-y-0 opacity-100"
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-4">
-            {products?.individuals?.[billingFrequency] &&
-              products.individuals[billingFrequency].map((product: any) => (
+            {productsToDisplay && (
+              <>
                 <PriceCard
                   planType="individual"
-                  key={product.storage}
-                  storage={product.storage}
-                  price={coupon ? Number(priceForSubscriptions(product)) : product.price}
+                  key={productsToDisplay.storage}
+                  storage={productsToDisplay.storage}
+                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
                   billingFrequency={billingFrequency}
-                  popular={product.storage === '5TB'}
-                  cta={['checkout', product.priceId]}
-                  priceBefore={product.price}
+                  popular={productsToDisplay.storage === '5TB'}
+                  cta={['checkout', 'price_1OQ3LKFAOdcgaBMQMK2UHHRM']}
+                  priceBefore={productsToDisplay.price}
                   lang={lang}
                   currency={currency}
                   coupon={coupon ?? undefined}
                   currencyValue={currencyValue}
                   isIframe={true}
+                  isPcComponentes
+                  index={0}
                 />
-              ))}
+                <PriceCard
+                  planType="individual"
+                  key={productsToDisplay.storage}
+                  storage={productsToDisplay.storage}
+                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
+                  billingFrequency={billingFrequency}
+                  popular={productsToDisplay.storage === '5TB'}
+                  cta={['checkout', 'price_1OQ3JbFAOdcgaBMQsawuy1PI']}
+                  priceBefore={productsToDisplay.price}
+                  lang={lang}
+                  currency={currency}
+                  coupon={coupon ?? undefined}
+                  currencyValue={currencyValue}
+                  isIframe={true}
+                  isPcComponentes
+                  index={1}
+                />
+                <PriceCard
+                  planType="individual"
+                  key={productsToDisplay.storage}
+                  storage={productsToDisplay.storage}
+                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
+                  billingFrequency={billingFrequency}
+                  popular={productsToDisplay.storage === '5TB'}
+                  cta={['checkout', 'price_1OQ3H5FAOdcgaBMQwMJ734rd']}
+                  priceBefore={productsToDisplay.price}
+                  lang={lang}
+                  currency={currency}
+                  coupon={coupon ?? undefined}
+                  currencyValue={currencyValue}
+                  isIframe={true}
+                  isPcComponentes
+                  index={2}
+                />
+                <PriceCard
+                  planType="individual"
+                  key={productsToDisplay.storage}
+                  storage={productsToDisplay.storage}
+                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
+                  billingFrequency={billingFrequency}
+                  popular={productsToDisplay.storage === '5TB'}
+                  cta={['checkout', 'price_1OQ3H5FAOdcgaBMQwMJ734rd']}
+                  priceBefore={productsToDisplay.price}
+                  lang={lang}
+                  currency={currency}
+                  coupon={coupon ?? undefined}
+                  currencyValue={currencyValue}
+                  isIframe={true}
+                  isPcComponentes
+                  index={3}
+                />
+              </>
+            )}
           </div>
         </Transition>
         {/* Lifetime cards */}
@@ -160,7 +182,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
         >
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-4">
             {products?.individuals?.[Interval.Lifetime] &&
-              products.individuals[Interval.Lifetime].map((product: any) => {
+              products.individuals[Interval.Lifetime].map((product: any, index) => {
                 return (
                   <PriceCard
                     planType="individual"
@@ -176,6 +198,9 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                     currencyValue={currencyValue}
                     isIframe={true}
                     coupon={coupon ?? undefined}
+                    isPcComponentes
+                    index={index}
+                    isLifetimePage
                   />
                 );
               })}
@@ -186,10 +211,15 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
   );
 };
 
-export async function getServerSideProps() {
-  const lang = 'es';
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/es/priceCard.json`);
+export async function getServerSideProps(ctx) {
+  const acceptLanguage = ctx.req.headers['accept-language'];
+
+  const browserLang = acceptLanguage.split(',')[0].split('-')[0];
+
+  const lang = ALLOWED_LANGUAGES.includes(browserLang) ? browserLang : 'es';
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const textContent = require(`@/assets/lang/${lang}/priceCard.json`);
 
   return {
     props: {

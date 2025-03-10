@@ -36,17 +36,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia il 80%",
-      "title": "Saldi di Halloween",
-      "subtitle": "Senti tintinnare quelle campanelle di vendita!",
-      "cta": "Scegli il tuo piano",
+      "label": "Risparmia 80%",
+      "title": "Passa alla privacy questa primavera!",
+      "subtitle": "Nuovi piani con Antivirus premium e VPN",
+      "cta": "Richiedi l'offerta",
       "cta2": "Ottieni l'85% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Natale",
-      "titleMbl2": "risparmi",
-      "titleMbl3": "sono qui!",
-      "ctaMbl": "Seleziona piano"
+      "lastCta": "*Offerta valida per account gratuiti o nuovi clienti",
+      "titleMbl1": "Nuovi",
+      "titleMbl2": "piani tariffari",
+      "titleMbl3": "Proteggi ciò che ami, per sempre!",
+      "ctaMbl": "Acquista un piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {
@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
-    "planDescription": "Tutti i piani Internxt sono dotati di tutte le funzionalità e di un accesso completo a tutti i nostri servizi per la privacy. Sicurezza per tutte le forme e dimensioni.",
+    "planDescription": "Tutti i piani di Internxt offrono un accesso completo al nostro pacchetto di soluzioni private con la tecnologia di sicurezza più recente: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
     "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
     "billingFrequency": {
@@ -74,16 +74,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Inizia con il nostro piano gratuito",
-      "enjoy10gb": "Goditi 1 GB per sempre e accedi a tutti i nostri servizi",
-      "upTo": "1 GB",
-      "freeForever": "Gratuito per sempre",
-      "cta": "Seleziona piano"
+      "eyeBrow": "Internxt Free",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona il piano"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open source e verificato",
-      "anonymousAccount": "Creazione di account anonimi"
+      "openSource": "Open-source e verificato",
+      "anonymousAccount": "Creazione anonima dell'account",
+      "premiumSupport": "Assistenza clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
   "FaqSection": {
@@ -129,7 +129,7 @@
         "question": "Qual è la politica di rimborso di Internxt?",
         "answer": [
           "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
-          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso. Accetteremo la vostra richiesta, senza fare domande!"
+          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso."
         ]
       },
       {

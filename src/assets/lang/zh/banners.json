@@ -89,6 +89,10 @@
     "line1": "为更安全、开放、经济的云存储解决方案。",
     "blueText": "切换到Internxt "
   },
+  "SignUpVPNBanner": {
+    "line1": "上网时保持安全。",
+    "blueText": "使用 Internxt 享受更私密的在线体验"
+  },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
@@ -119,9 +123,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "所有高级计划 80% 折扣！",
-      "normalText": "这是一年中最美好的时光！",
-      "cta": "领取优惠"
+      "boldText": "全新定价方案立享 80% 折扣。",
+      "normalText": "春天来了！",
+      "cta": "立即领取优惠"
     }
   },
   "lifetimeBanner": {

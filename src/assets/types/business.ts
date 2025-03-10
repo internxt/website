@@ -8,6 +8,29 @@ export interface BusinessText {
   EncryptedCloudSolution: EncryptedCloudSolution;
   TestimonialsSection: TestimonialsSection;
   FaqSection: FAQSection;
+  ContactSales: ContactSales;
+}
+
+export interface ContactSales {
+  title: string;
+  description: string;
+  form: Form;
+}
+
+export interface Form {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  howMuchStorage: string;
+  totalCharacters: string;
+  options: string[];
+  howWeCanHelp: string;
+  howWeCanHelpPlaceHolder: string;
+  cta: string;
+  ctaSending: string;
+  successMessage: string;
+  errorMessage: string;
 }
 
 export interface EncryptedCloudSolution {
@@ -29,6 +52,8 @@ export interface HeroSection {
   title: string;
   description: string[];
   cta: string;
+  separator: string;
+  cta2: string;
 }
 
 export interface InternxtProtectsYourBusiness {

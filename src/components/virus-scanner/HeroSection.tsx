@@ -3,9 +3,7 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
-
 const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
-
 const HeroSection = ({ textContent }) => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
@@ -18,34 +16,28 @@ const HeroSection = ({ textContent }) => {
   const [file, setFile] = useState<File | null>(null);
   const isDragging = dragEnter;
   const maxFileSize = 1_000_000_000;
-
   const handleDragEnter = () => {
     if (!dragEnter && !isScannig && !isScanFinished) {
       setDragEnter(true);
       setIsSelectedFile(false);
     }
   };
-
   const handleDragExit = () => {
     setDragEnter(false);
   };
-
   const scanFiles = () => {
     setScanResult(null);
     const fileInput = uploadFileRef.current;
     const formdata = new FormData();
     formdata.append('', (fileInput as any).files[0], 'test.txt');
-
     const requestOptions = {
       method: 'POST',
       body: formdata,
     };
-
     fetch(`https://clamav.internxt.com/filescan`, requestOptions)
       .then(async (res) => {
         if (res.status === 200) {
           const data = await res.json();
-
           setScanResult(data);
           setIsScanFinished(true);
         } else {
@@ -62,7 +54,6 @@ const HeroSection = ({ textContent }) => {
         setIsScanFinished(false);
       });
   };
-
   const handleRestartScan = () => {
     setScanResult(null);
     setIsSelectedFile(false);
@@ -71,16 +62,14 @@ const HeroSection = ({ textContent }) => {
     setIsError(false);
     setFile(null);
   };
-
   const handleCancelScan = () => {
     setIsSelectedFile(false);
   };
-
   const handleConfirmScan = () => {
     setIsScannig(true);
+
     scanFiles();
   };
-
   const handleFiles = () => {
     const fileInput = uploadFileRef.current;
     if (fileInput?.files) {
@@ -96,18 +85,15 @@ const HeroSection = ({ textContent }) => {
       console.error('No files to scan');
     }
   };
-
   const handleFileInput = () => {
     const fileInput = uploadFileRef.current;
     if (fileInput?.files) {
       handleFiles();
     }
   };
-
   const handleOpenFileExplorer = () => {
     (document.querySelector('input[type=file]') as any).click();
   };
-
   const handleDrop = async (e) => {
     e.preventDefault();
     const fileInput = uploadFileRef.current;
@@ -116,7 +102,6 @@ const HeroSection = ({ textContent }) => {
       handleFiles();
     }
   };
-
   const scanAgainButton = (onlyOneVirus) => {
     return (
       <Transition
@@ -143,6 +128,8 @@ const HeroSection = ({ textContent }) => {
     );
   };
 
+  const [progress, setProgress] = useState(0);
+
   return (
     <section
       className="relative pb-20 pt-32"
@@ -155,7 +142,6 @@ const HeroSection = ({ textContent }) => {
       <label className="pointer-events-none absolute h-0 w-0 overflow-hidden">
         <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
-
       <div
         className={`fixed inset-0 z-50 ${isScannig || !isDragging ? 'pointer-events-none' : ''}`}
         onDragLeave={(e) => {
@@ -166,7 +152,7 @@ const HeroSection = ({ textContent }) => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-      <div className="mx-4 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
+      <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-stretch ${
             !isScannig && isDragging ? 'pointer-events-none' : ''
@@ -185,7 +171,6 @@ const HeroSection = ({ textContent }) => {
               <p className=" text-xl font-normal text-cool-gray-80">{textContent.subtitle2}</p>
             </div>
           </div>
-
           {/* Scan container (drop area & scan information) */}
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
@@ -209,7 +194,7 @@ const HeroSection = ({ textContent }) => {
                               </div>
                             ) : (
                               <div className="flex flex-row gap-2">
-                                <CheckCircle weight="fill" size={24} className="text-green" />
+                                <CheckCircle weight="fill" size={24} className="text-green-1" />
                                 <span className={`text-lg font-semibold text-green-dark`}>
                                   {textContent.table.noVirusDetected}
                                 </span>
@@ -219,13 +204,11 @@ const HeroSection = ({ textContent }) => {
                         ) : (
                           <div></div>
                         )}
-
                         <div className="hidden w-1/2 flex-col items-end sm:flex">
                           <p className="max-w-xs truncate text-base font-medium text-cool-gray-80">{file?.name}</p>
                           <p className="text-sm text-cool-gray-60">{file?.type}</p>
                         </div>
                       </div>
-
                       {isScanFinished ? (
                         <>
                           {scanResult.isInfected ? (
@@ -255,7 +238,7 @@ const HeroSection = ({ textContent }) => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                    <a href="https://drive.internxt.com/new" target="_top" className="button-primary">
+                                    <a href="https://internxt.com/pricing" target="_top" className="button-primary">
                                       {textContent.table.noVirusesDetected.cta}
                                     </a>
                                   </div>
@@ -269,7 +252,7 @@ const HeroSection = ({ textContent }) => {
                         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
                           <div className="relative">
                             <div className="absolute inset-1">
-                              <div className="animate-pingpong-v absolute left-0 z-10 h-1 w-full -translate-y-1/2 rounded-xl bg-primary shadow-2xl" />
+                              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 animate-pingpong-v rounded-xl bg-primary shadow-2xl"></div>
                             </div>
                             <svg
                               width="80"
@@ -328,7 +311,6 @@ const HeroSection = ({ textContent }) => {
                                 <p className="text-2xl font-medium">{textContent.maxFileSize.title}</p>
                                 <p className="text-xl text-cool-gray-60">{textContent.maxFileSize.description}</p>
                               </div>
-
                               <button
                                 type="button"
                                 className="flex h-10 flex-row items-center rounded-lg bg-primary px-5 font-medium text-white transition duration-150 ease-out active:scale-98"
@@ -360,7 +342,6 @@ const HeroSection = ({ textContent }) => {
                                   {file?.name}
                                 </p>
                               </div>
-
                               <div className="flex flex-row items-center justify-center space-x-4">
                                 <button
                                   type="button"
@@ -371,7 +352,6 @@ const HeroSection = ({ textContent }) => {
                                 >
                                   {textContent.cancel}
                                 </button>
-
                                 <button
                                   type="button"
                                   className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
@@ -442,7 +422,6 @@ const HeroSection = ({ textContent }) => {
                 )}
               </label>
             )}
-
             {isError && (
               <div className="fixed inset-0 z-50 flex h-screen w-full flex-row items-center justify-center overflow-hidden rounded-xl bg-primary bg-opacity-3">
                 <button
@@ -481,5 +460,4 @@ const HeroSection = ({ textContent }) => {
     </section>
   );
 };
-
 export default HeroSection;

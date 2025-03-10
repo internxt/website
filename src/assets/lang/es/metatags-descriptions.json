@@ -243,5 +243,25 @@
     "id": "cloud-object-storage",
     "title": "Internxt – Almacenamiento en la nube seguro",
     "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "Almacenamiento en la nube verde y sostenible",
+    "description": "Los centros de datos ecológicos de Internxt impulsan nuestro compromiso con la sostenibilidad y la informática en la nube ecológica, apoyando un entorno más verde y sostenible."
+  },
+  {
+    "id": "partner-discount",
+    "title": "Descuento para Socios — Internxt",
+    "description": "Obtén los planes anuales de Internxt con un exclusivo 75% de descuento. Disfruta de privacidad y seguridad con hasta 10TB de almacenamiento."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protege tus dispositivos de malware con Internxt Antivirus",
+    "description": "Internxt Antivirus escanea y elimina virus de tus archivos. Protege tus dispositivos del malware y asegura una completa seguridad en la nube."
+  },
+  {
+    "id": "vpn-extension",
+    "title": "VPN segura y gratis de Internxt | Internxt",
+    "description": "Internxt free VPN Chrome Extension: secure browsing, encrypted Wi-Fi & privacy protection. Download our secure VPN to protect your data online. Extensión VPN gratuita para Chrome de Internxt: navegación segura y Wi-Fi cifrado. Descarga nuestra VPN privada para proteger tus datos en línea."
   }
 ]

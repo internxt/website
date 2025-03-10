@@ -26,6 +26,7 @@
         "send": "Internxt Send",
         "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
+        "antivirus": "Internxt Antivirus",
         "token": "Token",
         "pricing": "Tarifs",
         "business": "Internxt pour les Entreprises",
@@ -39,7 +40,8 @@
         "openSource": "Open Source",
         "legal": "Mentions légales",
         "whyInternxt": "¿Por qué Internxt?",
-        "mediaArea": "Espace Médias"
+        "mediaArea": "Espace Médias",
+        "sustainability": "Durabilité"
       },
       "join": {
         "title": "Rejoindre",

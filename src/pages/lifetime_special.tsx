@@ -8,6 +8,8 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
+import { getImage } from '@/lib/getImage';
+import router from 'next/router';
 
 const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -20,15 +22,16 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJso
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
+      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed mode="payment" isLinksHidden />
 
       <HeroSection
         textContent={langJson.HeroSection}
         previewImg="/images/lifetime/file_item.webp"
         hideTimer
-        bgImage="/images/lifetime/celebration/normal-bg.png"
+        imageMobile={getImage('/images/campaigns/superbowl/internxt_superbowl_secure_storage.webp')}
+        onRedirectButtonClicked={() => router.push('#payment')}
       />
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} />
+      <PaymentSection textContent={langJson.PaymentSection} lang={lang} lifetimeMode={'normal'} discount={0} />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
 

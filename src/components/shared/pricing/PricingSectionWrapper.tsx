@@ -31,10 +31,13 @@ interface PricingSectionWrapperProps {
     lifetime?: number;
     business?: number;
   };
+  hideDescription?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
+  isBrave?: boolean;
+  hideFeatures?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -43,9 +46,9 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Year,
-  startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Individuals',
+  startIndividualPlansFromInterval = Interval.Lifetime,
+  startBusinessPlansFromInterval = Interval.Month,
+  startFromPlan = 'Lifetime',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -57,11 +60,14 @@ export const PricingSectionWrapper = ({
   decimalDiscount,
   isFamilyPage,
   hideTitle,
+  hideDescription,
+  hideFeatures,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
   CustomDescription,
   darkMode,
+  isBrave,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -80,7 +86,13 @@ export const PricingSectionWrapper = ({
 
   const individualPlansTitle =
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
+
   const businessTitle = textContent.planTitles.business;
+
+  const lifetimeSubtitles = billingFrequency === Interval.Lifetime ? textContent.lifetimeDescription : '';
+  const individualPLansDescription = textContent.planDescription;
+
+  const businessPlanDescription = textContent.businessDescription2;
 
   const title = () => {
     if (isIndividual) {
@@ -90,12 +102,36 @@ export const PricingSectionWrapper = ({
     }
   };
 
+  const description = () => {
+    if (isIndividual) {
+      return individualPLansDescription;
+    } else {
+      return businessPlanDescription;
+    }
+  };
+
+  const highlightKeywords = (text) => {
+    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
+    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
+
+    return text.replace(regex, '<strong>$1</strong>');
+  };
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+          {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
-          {CustomDescription}
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
+
+          {CustomDescription ? (
+            CustomDescription
+          ) : !hideDescription ? (
+            <span
+              className="text-regular max-w-[800px] text-xl text-gray-80"
+              dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
+            />
+          ) : null}
         </div>
 
         <PricingSection
@@ -127,6 +163,8 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
+          isBrave={isBrave}
+          hideFeatures={hideFeatures}
         />
       </div>
     </section>

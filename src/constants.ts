@@ -24,6 +24,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime_special',
   '/pccomponentes-products',
   '/pccomponentes-products-b2b',
+  '/pccomponentes-business',
   '/lifetime/celebration/[filename]',
   '/pcloud-alternative',
   '/dealmirror',
@@ -38,6 +39,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/black-friday',
   '/lifetime/celebration/singlesday',
   '/elections',
+  '/brave',
 ];
 
 export const SNIGEL_BANNERS = {

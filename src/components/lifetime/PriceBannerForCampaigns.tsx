@@ -1,10 +1,9 @@
 import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-import { CheckCircle } from '@phosphor-icons/react';
+import { ArrowCircleDown, CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -15,83 +14,88 @@ export const PriceBannerForCampaigns = ({
 }) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
-
+  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
-        className={`relative z-10 hidden w-full flex-col justify-between rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row ${styles.linearGradient}`}
+        className={`relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] border border-2 border-gray-5 bg-white sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
       >
-        <div className="flex w-full min-w-[800px] flex-col items-center gap-6 px-2 py-6 text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
-          <div className="flex  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
-            <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-5 sm:rounded-2xl sm:border-4 sm:px-4 sm:py-2">
+        <div className=" flex h-[400px] w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
+          <div className="flex min-h-[400px] min-w-[600px]  max-w-[600px]  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
+            <div className="mt-14 flex w-max rounded-xl border-green-dark bg-green-1 px-2 py-4 sm:rounded-2xl sm:border-2 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
-            <div className="flex w-full pt-5">
-              <p className="whitespace-nowrap text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-5xl">
+            <div className="flex w-full flex-col pt-4 ">
+              <p className=" flex min-h-[42px] max-w-[450px] items-center text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
+                {textContent.title}
+              </p>
+              <p className="whitespace-nowrap text-lg font-medium text-gray-80 sm:text-lg md:text-lg lg:text-lg">
                 {textContent.subtitle}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
               <Link
                 href={redirectTo ?? '#billingButtons'}
-                className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 sm:px-5 sm:py-3 sm:text-lg lg:hover:bg-gray-5"
+                className="flex w-max items-center rounded-lg bg-primary px-3 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-2 sm:text-lg"
               >
                 {textContent.cta}
               </Link>
+              <div className="flex flex-row items-center space-y-1 text-white sm:space-x-2">
+                <CheckCircle size={20} className="text-green-1" weight="fill" />
+                <p className="whitespace-nowrap text-base font-medium text-gray-80 sm:text-lg">
+                  {textContent.guarantee}
+                </p>
+              </div>
             </div>
-            <div className="flex flex-row items-center space-y-1 text-gray-100 sm:space-x-2">
-              <CheckCircle size={20} className="text-primary" />
-              <p className="whitespace-nowrap text-base font-medium text-gray-30 sm:text-lg">{textContent.guarantee}</p>
-            </div>
-            <p className="whitespace-nowrap text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
+            <p className="whitespace-nowrap pt-4 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="min-width-[521px] min-height-[320px] flex items-center justify-center">
+          <div className="relative flex h-[500px] w-[600px] items-center overflow-hidden">
             <Image
-              src={getImage('/images/christmas/internxt_christmas_pricing.webp')}
-              width={521}
-              height={320}
-              alt="Internxt Cloud Storage Pricing"
-              className=""
+              src={getImage('/images/campaigns/spring/internxt_spring_sale_pricing.webp')}
+              width={590}
+              height={250}
+              alt="Internxt Spring Sale Campaign"
             />
           </div>
         </div>
       </div>
 
       {/* Mobile View */}
-      <div
-        className={`relative z-10 flex w-full flex-col justify-between gap-10 rounded-[16px] lg:hidden ${styles.linearGradient}`}
-      >
-        <div className="flex w-full flex-col items-center gap-4 space-y-5 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-2 border-pink bg-red-dark px-2 py-3">
-            <p className="text-4xl font-bold text-white sm:text-5xl">{textContent.label}</p>
+      <div className={`relative z-10 flex w-full flex-col justify-between rounded-[16px] bg-white lg:hidden`}>
+        <div className="flex w-full flex-col items-center  space-y-5 px-2 py-6 text-center">
+          <div className="flex w-max rounded-sm bg-green-1/15 px-2 py-1">
+            <p className="text-sm font-medium text-green-dark">{textContent.label}</p>
           </div>
-          <div className="flex w-full flex-col text-white">
+          <div className="flex w-full flex-col text-gray-100">
             <p className="text-4xl font-bold">{textContent.titleMbl1}</p>
             <p className="text-4xl font-bold">{textContent.titleMbl2}</p>
-            <p className="text-4xl font-bold">{textContent.titleMbl3}</p>
           </div>
+          <div className="min-h-auto flex max-w-[250px] flex-col items-center ">
+            <p className="font-regular break-words text-center text-xl text-gray-80">{textContent.subtitle}</p>
+          </div>
+
           <div className="flex flex-col items-center">
-            <div className="mb-2 flex flex-row items-center space-x-1 text-gray-30">
-              <CheckCircle size={20} className="text-primary" />
-              <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
-            </div>
             <Link
               href={redirectTo ?? '#billingButtons'}
-              className="flex w-max items-center rounded-lg bg-white px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-5"
+              className="flex w-max items-center rounded-lg bg-primary px-3 py-2 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
             >
               {textContent.cta}
             </Link>
+            <div className="mb-2 flex flex-row items-center space-x-1 pt-3 text-gray-80">
+              <CheckCircle size={20} className="text-green-1" weight="fill" />
+              <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
+            </div>
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col object-cover py-5">
+        <div className="relative flex h-auto w-full flex-col xl:hidden">
           <Image
-            src={getImage('/images/christmas/christmas_mobile.webp')}
-            width={280}
-            height={150}
-            alt="Christmas Mobile image"
-            className="w-full rounded-b-[16px] object-cover"
+            src={getImage('/images/campaigns/spring/internxt_spring_sale.webp')}
+            width={525}
+            height={263}
+            alt="Dust for scorer"
+            className="top-10 -z-10 w-full object-cover"
           />
         </div>
       </div>

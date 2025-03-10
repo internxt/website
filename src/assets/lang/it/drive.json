@@ -143,8 +143,8 @@
       },
       "cta": "Il nostro impegno per la privacy",
       "card1": {
-        "title": "Crittografia di livello militare.",
-        "subtitle": "Prendiamo molto sul serio la tua privacy, ecco perché i tuoi file sono crittografati in modo che solo tu possa accedervi."
+        "title": "Sicurezza di prossima generazione",
+        "subtitle": "Internxt Drive protegge i tuoi file utilizzando crittografia end-to-end e post-quantistica. Siamo il primo servizio di archiviazione cloud a proteggere i dati contro le minacce future dei computer quantistici."
       },
       "card2": {
         "title": "Tecnologia zero-knowledge.",
@@ -198,6 +198,13 @@
         ]
       },
       {
+        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center sono alimentati per il 92% da energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
+          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. Scopri di più"
+        ]
+      },
+      {
         "question": "Come creare un account Internxt?",
         "answer": [
           "Visitate il nostro sito web e fate clic su \"Inizia\" nell'angolo in alto a destra. Compilate il modulo di registrazione inserendo un indirizzo e-mail, quindi create la vostra password. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
@@ -219,6 +226,13 @@
         "question": "Posso configurare la 2FA con Internxt?",
         "answer": [
           "Sì. È possibile configurare l'autenticazione a due fattori (2FA) per il proprio account Internxt dall'app Drive Web. Inoltre, è possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare il codice 2FA con Internxt."
+        ]
+      },
+      {
+        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center funzionano con il 92% di energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
+          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

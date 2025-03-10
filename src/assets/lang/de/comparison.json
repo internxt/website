@@ -11,6 +11,7 @@
           "features": {
             "encryption_at_rest_and_in_transit": "Verschlüsselung im Ruhezustand und während der Übertragung",
             "end_to_end_encrypted_storage": "End-to-End-verschlüsselter Speicher",
+            "post_quantum_encryption": "Post-Quantum-Verschlüsselung",
             "end_to_end_encrypted_file_sharing": "End-to-End-verschlüsseltes Dateifreigeben",
             "zero_knowledge_encryption": "Zero-Knowledge-Verschlüsselung",
             "two_factor_authentication": "Zwei-Faktor-Authentifizierung",

@@ -13,6 +13,7 @@ import { GetServerSidePropsContext } from 'next';
 import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
+import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 
 interface CloudObjectStorageProps {
   metatagsDescription: MetatagsDescription[];
@@ -33,6 +34,12 @@ const CloudObjectStorage = ({
 
   const lang = locale as string;
 
+  const scrollToTop = () => {
+    document.querySelector('#contactSales')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+    });
+  };
   return (
     <Layout title={metatags.title} description={metatags.description}>
       <Navbar cta={['default']} lang={lang} textContent={navbarText} fixed />
@@ -40,7 +47,7 @@ const CloudObjectStorage = ({
       <HeroSection
         TextComponent={
           <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 text-center text-white lg:items-start lg:text-left">
-            <Header withoutLeading className="leading-none" textHeightForDesk="sm:text-7xl">
+            <Header withoutLeading className="leading-none" textHeightForDesk="text-5xl">
               {lang === 'es' ? (
                 <>
                   <span className="font-bold lg:text-5xl">{textContent.HeroSection.title.line2} </span>
@@ -54,11 +61,15 @@ const CloudObjectStorage = ({
               )}
             </Header>
             <p className="text-xl">{textContent.HeroSection.description}</p>
-            <Button
-              className="!w-full lg:!w-max"
-              text={textContent.HeroSection.cta}
-              onClick={() => (window.location.hash = '#storageSection')}
-            />
+            <div className="flex flex-row items-center gap-4">
+              <Button
+                className="!w-full lg:!w-max"
+                text={textContent.HeroSection.cta}
+                onClick={() => (window.location.hash = '#storageSection')}
+              />
+              <p className="text-center text-xl text-gray-40">{textContent.HeroSection.separator}</p>
+              <Button className="!w-full lg:!w-max" text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+            </div>
           </div>
         }
         style={{
@@ -81,6 +92,8 @@ const CloudObjectStorage = ({
       <CloudObjectStorageWhyChooseInternxtSection textContent={textContent.WhyChooseInternxtSection} />
 
       <FAQSection textContent={textContent.FaqSection} />
+
+      <ContactSalesForm textContent={textContent.ContactSales} />
 
       <Footer textContent={footerText} lang={lang} />
     </Layout>

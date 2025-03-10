@@ -25,7 +25,9 @@
         "photos": "Internxt Photos",
         "send": "Internxt Send",
         "objStorage": "Internxt S3",
+        "vpn": "Internxt VPN",
         "token": "Token",
+        "antivirus": "Internxt Antivirus",
         "pricing": "價格",
         "business": "Internxt 企業版",
         "family": "Internxt 為家庭"
@@ -38,7 +40,8 @@
         "mediaArea": "媒體區",
         "security": "安全",
         "legal": "法律",
-        "whyInternxt": "為何選擇 Internxt？"
+        "whyInternxt": "為何選擇 Internxt？",
+        "sustainability": "可持續發展"
       },
       "join": {
         "title": "加入我們",

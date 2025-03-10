@@ -78,8 +78,8 @@
     "cta": "下載 VPN"
   },
   "CtaSection2": {
-    "title": "擺脫線上追蹤器的束縛",
-    "description": "使用 Internxt VPN 隱藏您的數據，享受安全的瀏覽體驗",
+    "title": "杜絕窺探",
+    "description": "使用 Internxt VPN 加密連線，享受全面隱私",
     "cta": "下載 VPN"
   },
   "FaqSection": {
@@ -105,9 +105,7 @@
       },
       {
         "question": "VPN 支援哪些平台？",
-        "answer": [
-          "您可以在 Windows 和 MacOS 桌面設備的 Google Chrome 瀏覽器上下載我們的 VPN Chrome 擴展。"
-        ]
+        "answer": ["您可以在 Windows 和 MacOS 桌面設備的 Google Chrome 瀏覽器上下載我們的 VPN Chrome 擴展。"]
       },
       {
         "question": "VPN 如何確保我的隱私？",

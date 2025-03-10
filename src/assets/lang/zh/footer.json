@@ -26,6 +26,7 @@
         "send": "Internxt Send",
         "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
+        "antivirus": "Internxt Antivirus",
         "token": "Token",
         "pricing": "价格",
         "business": "Internxt 企业版",
@@ -39,7 +40,8 @@
         "security": "安全",
         "legal": "法律",
         "whyInternxt": "为什么选择 Internxt？",
-        "mediaArea": "媒体区"
+        "mediaArea": "媒体区",
+        "sustainability": "可持续性"
       },
       "join": {
         "title": "加入我们",

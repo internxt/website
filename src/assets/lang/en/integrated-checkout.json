@@ -1,5 +1,5 @@
 {
-  "title": "You're almost there! Checkout securely:",
+  "title": "You're almost there! Checkout securely",
   "pay": "Pay",
   "paying": "Paying...",
   "checkout": "Checkout",
@@ -52,7 +52,7 @@
         "Premium customer support"
       ]
     },
-    "total": "Total: ",
+    "total": "Total ",
     "addCoupon": {
       "buttonTitle": "Add coupon",
       "inputText": "Coupon code",
@@ -61,5 +61,6 @@
     "amountSaved": "Save ",
     "withAnnualBilling": "with annual billing"
   },
-  "oneTimePayment": "*A €1 one-time fee is required for account verification"
+  "oneTimePayment": "*A €1 one-time fee is required for account verification",
+  "error500": "Please introduce a valid VAT ID"
 }

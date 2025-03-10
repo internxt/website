@@ -113,8 +113,7 @@ export const ItemsNavigation = ({
           label={textContent.links.products}
           items={[
             { href: '/drive', text: textContent.products.drive },
-            { href: '/cloud-object-storage', text: textContent.products.s3 },
-            { href: 'https://send.internxt.com', text: textContent.products.send },
+            { href: '/antivirus', text: textContent.products.antivirus },
             { href: '/vpn', text: textContent.products.vpn },
           ]}
           darkMode={darkMode}
@@ -132,6 +131,7 @@ export const ItemsNavigation = ({
           items={[
             { href: '/privacy', text: textContent.ourValues.privacy },
             { href: '/open-source', text: textContent.ourValues.openSource },
+            { href: '/green-cloud-computing', text: textContent.ourValues.sustainability },
           ]}
           darkMode={darkMode}
           lang={lang}

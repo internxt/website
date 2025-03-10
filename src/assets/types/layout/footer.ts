@@ -41,6 +41,7 @@ export interface Company {
   security: string;
   legal: string;
   whyInternxt: string;
+  sustainability: string;
 }
 
 export interface Join {
@@ -69,6 +70,7 @@ export interface Products {
   send: string;
   objStorage: string;
   vpn: string;
+  antivirus: string;
   token: string;
   business: string;
   pricing: string;

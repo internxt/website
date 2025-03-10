@@ -26,6 +26,7 @@
         "send": "Internxt Send",
         "objStorage": "Internxt S3",
         "vpn": "Internxt VPN",
+        "antivirus": "Internxt Antivirus",
         "token": "Токен",
         "pricing": "Тарифные планы",
         "business": "Internxt для Бизнеса",
@@ -39,7 +40,8 @@
         "security": "Безопасность",
         "legal": "Условия и положения",
         "WhyInternxt": "Почему Internxt?",
-        "mediaArea": "Медиа-зона"
+        "mediaArea": "Медиа-зона",
+        "sustainability": "Устойчивость"
       },
       "join": {
         "title": "Присоединяйтесь к нам",

@@ -1,5 +1,5 @@
 import PriceTable from './PriceTable';
-import { Detective, FolderLock } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
@@ -21,6 +21,7 @@ interface PaymentSectionProps {
   activeSwitchPlan?: SwitchButtonOptions;
   onButtonClicked?: () => void;
   onPlanTypeChange?: (activeSwitchPlan: SwitchButtonOptions) => void;
+  isStackCommerce?: boolean;
 }
 
 const PaymentSection = ({
@@ -36,20 +37,21 @@ const PaymentSection = ({
   activeSwitchPlan,
   onPlanTypeChange,
   onButtonClicked,
+  isStackCommerce,
 }: PaymentSectionProps): JSX.Element => {
   const router = useRouter();
   const features = [
     {
-      icon: FolderLock,
+      icon: Lifebuoy,
       text: textContent.features.endToEnd,
+    },
+    {
+      icon: CurrencyCircleDollar,
+      text: textContent.features.anonymousAccount,
     },
     {
       icon: OpenSource,
       text: textContent.features.openSource,
-    },
-    {
-      icon: Detective,
-      text: textContent.features.anonymousAccount,
     },
   ];
 
@@ -62,7 +64,7 @@ const PaymentSection = ({
 
   return (
     <section id="payment" className="overflow-hidden bg-white">
-      <div className="flex flex-col space-y-8 pt-20">
+      <div className="flex flex-col space-y-4 pt-10">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
             <p>
@@ -95,7 +97,7 @@ const PaymentSection = ({
                     {title.postBlueText && <span>{title.postBlueText}</span>}
                     <br />
                     <span>{title.normalText}</span>
-                    <p className="max-w-[839px] pt-4 text-xl font-normal">{description}</p>
+                    <p className="w-full items-center pt-4 text-center text-xl font-normal">{description}</p>
                   </p>
                 </>
               )}
@@ -120,8 +122,9 @@ const PaymentSection = ({
           lifetimeMode={lifetimeMode}
           currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}
+          isStackCommerce={isStackCommerce}
         />
-        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white py-10 text-center md:flex-row md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white pb-10  text-center md:flex-row md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3 ">
               <feature.icon size={40} className="text-primary" />

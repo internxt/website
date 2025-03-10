@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "title": {
+      "normalText": " 在 Internxt",
+      "greenText": "可持续性"
+    },
+    "description": "Internxt 致力于环保云计算，并提供绿色存储解决方案，以实现一个更清洁、更绿色、更可持续的未来。",
+    "goals": {
+      "element1": "可再生能源采购",
+      "element2": "减少碳能量",
+      "element3": "绿色数据中心",
+      "element4": "2050 年实现气候中和",
+      "element5": "零废物"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt：隐私与可持续性的未来",
+    "cta": "选择您的计划"
+  },
+  "CtaSection2": {
+    "title": "与 Internxt 一起承诺一个更可持续和绿色的未来",
+    "cta": "选择您的计划"
+  },
+  "FeatureSectionV2": {
+    "title": "通过绿色云计算管理我们的环境影响",
+    "description": "Internxt 通过促进可持续实践推动创新，在不牺牲性能或可靠性的情况下，推动云基础设施的可持续性。",
+    "cards": {
+      "element1": {
+        "title": "减少环境影响",
+        "description": "我们的数据中心利用可再生能源减少碳排放，节省能源，并最大限度地减少电子废物，帮助企业减少环境影响并保护全球自然资源。"
+      },
+      "element2": {
+        "title": "更多节省",
+        "description": "我们只使用能源高效的数据中心，减少硬件需求，降低运营成本，并提高公用事业费用的节省，这与我们的绿色可持续发展目标保持一致。"
+      },
+      "element3": {
+        "title": "效率",
+        "description": "我们的数据中心通过 ISO50001 认证，并参与欧洲数据中心能源效率行为准则，这是全球公认的能源管理标准。"
+      },
+      "element4": {
+        "title": "2024 年欧洲绿色资本",
+        "description": "Internxt 总部位于瓦伦西亚，从该市的可持续发展努力中汲取灵感，推动我们的生态倡议，通过绿色的云存储解决方案。"
+      }
+    }
+  },
+  "FeatureSectionV3": {
+    "title": "数字中的可持续性",
+    "description": "Internxt 通过能源效率实践，为更绿色、更可持续的未来努力，致力于最小化资源消耗并贡献于可持续的未来。",
+    "cards": {
+      "power": {
+        "title": "能源",
+        "description": "我们数据中心的能源使用效率（PUE）每 12 个月进行测量和审计。接近 1 的值表示能源消耗更高效。",
+        "value": "1.26",
+        "unit": "PUE"
+      },
+      "water": {
+        "title": "水",
+        "description": "该指标衡量水资源使用效率，接近 0 的值表示最佳性能。",
+        "value": "0.37",
+        "unit": "L/kWh IT"
+      },
+      "carbon": {
+        "title": "碳",
+        "description": "该指标追踪直接和间接电力使用的碳排放，接近 0 的值表示更好的性能。",
+        "value": "0.16",
+        "unit": "kg CO2e / kWh IT"
+      },
+      "renewables": {
+        "title": "可再生能源",
+        "description": "这是指我们数据中心中使用的可再生能源因子（REF）的比例。",
+        "value": "92%",
+        "unit": "REF"
+      }
+    }
+  },
+  "FeatureSection": {
+    "title": "我们如何承诺实现可持续未来",
+    "description": "通过推动生态倡议，我们的目标是保护地球，并致力于到 2025 年实现更清洁、更绿色的云存储解决方案。",
+    "cards": {
+      "reduceCarbonEnergy": {
+        "number": "1",
+        "title": "减少碳能源",
+        "description": "到 2025 年，我们使用的数据中心将减少对碳能源的依赖，转向更多可再生和低碳的能源来源，如核能和水力发电。"
+      },
+      "globalNetZero": {
+        "number": "2",
+        "title": "全球净零排放",
+        "description": "我们致力于实现 Scope 1（燃料直接排放）和 Scope 2（电力间接排放）的零排放。2023 年将涵盖所有其他间接排放。"
+      },
+      "zeroWaste": {
+        "number": "3",
+        "title": "零废物",
+        "description": "为了减少填埋废物的环境影响并推动绿色倡议，我们承诺到 2025 年在所有服务器位置实现零废物填埋。"
+      }
+    }
+  }
+}

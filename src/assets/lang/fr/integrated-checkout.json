@@ -1,21 +1,19 @@
 {
-  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité :",
+  "title": "Vous y êtes presque ! Finalisez votre achat en toute sécurité ",
   "pay": "Payer",
   "paying": "Paiement en cours...",
   "checkout": "Commander",
   "authComponent": {
-    "signUp": {
+    "signup": {
       "emailAddress": "Votre adresse email",
       "password": "Créer un mot de passe"
     },
-    "signIn": {
+    "login": {
       "emailAddress": "Votre adresse email",
       "password": "Votre mot de passe"
     },
     "title": {
-      "signUp": "Créer un compte",
-      "signIn": "Se connecter",
-      "userIsSignedIn": "Utilisateur connecté en tant que"
+      "signUp": "Créer un compte"
     },
     "emailMustNotBeEmpty": "L'email ne doit pas être vide",
     "privacyGuarantee": "Garantie de confidentialité : Nous ne partageons pas vos informations et ne vous contacterons que si nécessaire pour fournir notre service."
@@ -30,11 +28,6 @@
   "productCard": {
     "title": "Récapitulatif de la commande",
     "selectedPlan": "Plan sélectionné",
-    "renewalPeriod": {
-      "month": "mensuel",
-      "year": "annuel",
-      "lifetime": "à vie"
-    },
     "plan": {
       "month": "{{spaceToUpgrade}} - 1 plan {{interval}}",
       "year": "{{spaceToUpgrade}} - 1 plan {{interval}}",
@@ -59,7 +52,7 @@
         "Support client premium"
       ]
     },
-    "total": "Total : ",
+    "total": "Total  ",
     "addCoupon": {
       "buttonTitle": "Ajouter un coupon",
       "inputText": "Code de coupon",
@@ -68,5 +61,6 @@
     "amountSaved": "Économisez ",
     "withAnnualBilling": "avec facturation annuelle"
   },
-  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte"
+  "oneTimePayment": "*Un frais unique de 1€ est requis pour la vérification du compte",
+  "error500": "Veuillez saisir un numéro de TVA valide"
 }

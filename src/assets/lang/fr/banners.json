@@ -62,7 +62,10 @@
     "line1": "Sauvegardez vos fichiers sans virus dans le nuage",
     "blueText": "d'Internxt"
   },
-  "SignUpByteConverterBanner": { "line1": "Des milliers d'octets dans le nuage sécurisé", "blueText": "d'Internxt" },
+  "SignUpByteConverterBanner": {
+    "line1": "Des milliers d'octets dans le nuage sécurisé",
+    "blueText": "d'Internxt"
+  },
   "SignUpTempMailBanner": {
     "line1": "Gardez votre courrier propre et vos fichiers en sécurité",
     "blueText": "avec Internxt"
@@ -78,6 +81,10 @@
   "privacyDirectoryBanner": {
     "line1": "Protégez votre vie privée en ligne et rejoignez",
     "blueText": "Internxt"
+  },
+  "SignUpVPNBanner": {
+    "line1": "Sécurisé pendant que vous surfez.",
+    "blueText": "Profitez d’une expérience en ligne plus privée avec Internxt"
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
@@ -97,9 +104,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de réduction sur TOUS les plans premium!",
-      "normalText": "C’est la plus belle période de l’année! ",
-      "cta": "Profitez de l'offre"
+      "boldText": "80 % de réduction sur nos tout nouveaux plans tarifaires.",
+      "normalText": "Le printemps est arrivé ! ",
+      "cta": "Profitez de l’offre !"
     }
   },
   "lifetimeBanner": {

@@ -90,6 +90,11 @@
     "description": "Get Internxt annual plans at an exclusive 75% discount. Enjoy privacy and security with up to 10TB storage."
   },
   {
+    "id": "special-offer",
+    "title": "Special Offer — Internxt",
+    "description": "Get Internxt annual and lifetime plans at an exclusive 80% discount. Enjoy privacy and security with up to 10TB storage."
+  },
+  {
     "id": "affiliates",
     "title": "Affiliate Program | Internxt",
     "description": "Join Internxt’s affiliate marketing program! How to get started plus program details, benefits, and perks."
@@ -368,5 +373,20 @@
     "id": "internxt-monitor",
     "title": "Internxt Dark Web Monitor",
     "description": "Internxt Dark Web Monitor is a have i been pwned service that checks if your email has been leaked in any online data breaches."
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "A Commitment to Green Cloud Computing and Sustainability",
+    "description": " Internxt’s eco-friendly data centers drive our commitment to green cloud computing and sustainability, supporting a cleaner, greener environment."
+  },
+  {
+    "id": "internxt-brave",
+    "title": "Internxt x Brave - Special offer for Brave Private Browser users",
+    "description": "Internxt has partnered with Brave Private Browser to offer secure, private, and encrypted cloud storage."
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "Protect your devices from malware with Internxt Antivirus",
+    "description": "Internxt Antivirus scans and removes viruses from your files. Protect your devices from malware and ensure complete security in the cloud."
   }
 ]

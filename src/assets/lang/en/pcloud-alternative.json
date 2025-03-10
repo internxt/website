@@ -1,22 +1,24 @@
 {
   "HeaderSection": {
-    "title": "Internxt: a more secure pCloud alternative",
-    "description": "Worried about pCloud’s hidden source code and extra cost for encryption? Are you certain pCloud doesn’t store your password or access your files? Internxt offers free, built-in encryption and open-source transparency.",
+    "title": "Switch to Internxt",
+    "description": "The most private cloud storage, with open-source transparency and built-in post-quantum encryption to keep your data safe and secure.",
+
     "useCode": {
       "line1": "Use code ",
-      "code": "SPECIAL75",
-      "line2": " at checkout for 75% off any Internxt plan!"
+      "code": "PCLOUD80",
+      "line2": "and claim your 80% discount."
     },
-    "cta": "Choose plan"
+    "cta": "Select plan"
   },
   "HeroSection": {
-    "title": "Internxt vs. pCloud comparison",
+    "title": "Internxt vs pCloud",
     "description": "Discover characteristics of Internxt that make it a more private pCloud alternative",
     "tooltip": "Although pCloud identifies as a Swiss company and claims compliance with Swiss privacy laws, it operates entirely in Bulgaria. Therefore, Bulgarian privacy laws apply. Users should consider this distinction regarding their data protection.",
     "tableSection": {
       "comparisons": {
         "codeTransparency": "Code transparency",
         "encryption": "Encryption",
+        "postQuantumEncryption": "Post-Quantum Encryption",
         "pricing": "Pricing",
         "securityAudits": "Security Audits",
         "liveSupport": "Live Support",
@@ -26,8 +28,9 @@
       "internxtFeatures": {
         "codeTransparency": "Open-Source",
         "encryption": "Included in all plans",
+        "postQuantumEncryption": "Yes",
         "pricing": "Competitive, no hidden costs",
-        "securityAudits": "Regular security audits",
+        "securityAudits": "Regular security audits by the community",
         "liveSupport": "Yes",
         "dataTrackers": "No",
         "privacyLaws": "GDPR, Spanish Data Protection Laws"
@@ -35,6 +38,7 @@
       "features": {
         "codeTransparency": "Closed-Source",
         "encryption": "Paid extra (pCloud Crypto)",
+        "postQuantumEncryption": "No",
         "pricing": "Affordable, but extra for encryption",
         "securityAudits": "Not available",
         "liveSupport": "No",
@@ -60,8 +64,8 @@
             "description": "As Internxt's code is open to anyone, everyone may examine it and ensure its security. This transparency guarantees that no vulnerabilities are hidden."
           },
           {
-            "title": "End-to-End Encryption",
-            "description": "Your data is encrypted on the client side, guaranteeing that only you can access it."
+            "title": "Post-Quantum encryption",
+            "description": "Internxt uses post-quantum end-to-end encryption. This encrypts files on your device and protects against the threat of quantum computers breaking current encryption technology."
           },
           {
             "title": "Audited",
@@ -182,8 +186,8 @@
   "UseCodeSection": {
     "title": {
       "line1": "Use code ",
-      "code": "SPECIAL75 ",
-      "line2": "for 75% off secure, encrypted cloud storage"
+      "code": "PCLOUD80 ",
+      "line2": " for 80% off secure, encrypted cloud storage"
     },
     "cta": "Choose plan"
   },
@@ -235,13 +239,50 @@
         "description": "Internxt operates with complete transparency, ensuring your data privacy is protected by European laws. Our GDPR compliance guarantees your information is handled securely and according to strict regulations."
       },
       {
-        "title": "Privacy-focused encryption",
-        "description": "Internxt includes zero knowledge and end-to-end encryption for your free and paid accounts. We only store the encrypted version of your data, and only you have the key to decrypt and access it."
+        "title": "Advanced encryption",
+        "description": "Internxt includes post-quantum encryption, the most secure and advanced cryptography available for free and paid accounts. We only store the encrypted version of your data, and only you have the key to decrypt and access it. "
       },
       {
         "title": "Flexible storage plans",
         "description": "Internxt Drive offers more paid plans and greater storage options than the pCloud pricing structure. If you need a pCloud alternative that offers monthly, annual, and lifetime plans, choose from any of our affordable plans, starting at 200GB to 10TB."
       }
     ]
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Individual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annually",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Get started with our free plan",
+      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
+      "upTo": "1GB",
+      "freeForever": "Free forever",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    }
   }
 }

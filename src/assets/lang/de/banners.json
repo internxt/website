@@ -117,10 +117,14 @@
     "line1": "Schütze deine Konten mit einzigartigen Passwörtern,",
     "blueText": "Komm kostenlos zu Internxt"
   },
+  "SignUpVPNBanner": {
+    "line1": "Sicher surfen.",
+    "blueText": "Genießen Sie ein noch privateres Online-Erlebnis mit Internxt"
+  },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% Rabatt auf ALLE Premium-Pläne!",
-      "normalText": "Es ist die schönste Zeit des Jahres!",
+      "boldText": "80 % Rabatt auf unsere brandneuen Preispläne.",
+      "normalText": "Der Frühling ist da!",
       "cta": "Angebot sichern"
     }
   },
@@ -133,11 +137,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Warten Sie! Sonderangebot ",
-      "blue": "75% RABATT ",
+      "blue": "80% RABATT ",
       "normal2": "!"
     },
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
-    "cta": "75% RABATT",
+    "cta": "80% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
   }
 }

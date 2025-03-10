@@ -338,5 +338,15 @@
     "id": "cloud-object-storage",
     "title": "Internxt — 物件儲存",
     "description": "Internxt 提供私密且實惠的物件儲存，使用 S3 協議安全地存儲資料，有效地管理您的儲存需求。"
+  },
+  {
+    "id": "green-cloud-computing",
+    "title": "綠色與可持續的雲存儲",
+    "description": "Internxt 的綠色數據中心推動我們對可持續性和綠色雲計算的承諾，支持一個更綠、更可持續的環境。"
+  },
+  {
+    "id": "internxt-antivirus",
+    "title": "使用 Internxt Antivirus 保护您的设备免受恶意软件侵害",
+    "description": "Internxt Antivirus 扫描并删除文件中的病毒。保护您的设备免受恶意软件侵害，确保云端的全面安全。"
   }
 ]

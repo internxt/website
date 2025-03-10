@@ -1,29 +1,89 @@
 {
   "HeroSection": {
-    "header": "Internxt 年度計劃",
+    "header": "Internxt 年度折扣",
     "title": {
-      "normalText": "最安全的雲端存儲 ",
-      "blueText": "適用於您的所有照片和文件"
+      "normalText": "獲取最安全的雲存儲 ",
+      "blueText": "更低價"
     },
-    "description": "註冊 Internxt 年度計劃，獲得 365 天的完全隱私。使用優惠代碼 SPECIAL15 可享受額外折扣",
-    "cta": "選擇您的計劃"
+    "description": {
+      "normal": "加入 Internxt，領先的 Google Drive 替代方案，享受 ",
+      "blue": "80% 折扣 ",
+      "normal1": "任何年度計劃。安全地存儲和分享您的文件，完全保護隱私。"
+    },
+    "cta": "選擇計劃"
   },
   "PaymentSection": {
-    "title": "年度計劃",
-    "description": "所有 Internxt 計劃都配備完整的隱私服務訪問權限。全年安全，適用於各種需求。",
-    "firstFeed": "30 天退款保證",
-    "secondFeed": "100% 安全支付",
-    "thirdFeed": "匿名帳戶創建"
+    "planTitles": { "homePage": "選擇您需要的存儲空間" },
+    "planDescription": "每個 Internxt 計劃都包含完整訪問我們的隱私服務。享受一整年的安全，滿足您的存儲需求。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "individual": "個人",
+      "lifetime": "終身",
+      "business": "企業"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    }
   },
   "FeatureSection": {
-    "title": "重新掌控您的隱私",
-    "description": "Internxt 創建了私密和安全的雲服務，旨在讓您——用戶，重新掌控您的數據。保護您的文件和您基本的隱私權，所有 Internxt 服務從零開始設計，提供無與倫比的安全性。",
-    "cta": "獲取一年計劃"
+    "title": "為什麼選擇 Internxt 來保護您的文件？",
+    "description": "Internxt 讓您重新掌控隱私。與傳統雲存儲不同，我們確保只有您擁有加密數據的密鑰，並且不存儲或出售您的數據給第三方。 我們採取一切措施確保您的信息保持安全。",
+    "cta": "選擇存儲大小",
+    "cards": [
+      {
+        "title": "無法被駭客攻擊和洩露的數據",
+        "description": "我們不存儲密碼或用戶數據，所有數據在傳輸和存儲時均被加密。Internxt 讓您完全控制您的文件。您的數據是您的事。保護它是我們的責任。"
+      },
+      {
+        "title": "毫不妥協的安全性",
+        "description": "您的文件在離開設備之前就已端到端加密。得益於零知識 AES-256 加密，您是唯一能夠訪問數據的人。"
+      },
+      {
+        "title": "開源且透明",
+        "description": "我們為自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以審查、審計和驗證。我們沒有任何隱瞞，除了您的數據。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合 GDPR 標準，100% 安全，但不僅僅聽我們說。Internxt 已被歐洲領先的滲透測試公司 Securitum 獨立審計和驗證。"
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "成千上萬的人正在拋棄 iCloud、Google Drive 和 Dropbox，轉而使用 ",
+      "blue": "最安全的雲存儲——Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "FixThePhoto.com 記者",
+        "review": "Internxt 是一個方便的雲存儲服務，適合注重隱私的客戶。它擁有簡化的界面和可靠的支持團隊，是需要安全存儲文件的人的絕佳選擇。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "GetApp 評價",
+        "review": "最佳加密 Dropbox 替代方案。總體來說：我們需要一個能夠存儲客戶文件和工作文件（社交媒體文件）的替代方案，而 Internxt 符合 GDPR 的要求，非常適合我們！"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Trustpilot 評價",
+        "review": "我使用 Google Drive 已有數年，但我需要一個能夠保證我的數據隱私的替代方案。Google 或其他知名平台無法做到這一點。這就是我轉向 Internxt 的原因。"
+      }
+    ]
   },
   "CtaSection": {
-    "title": "世界上最私密的雲端存儲",
-    "description": "使用 Internxt 的安全、私密和加密雲存儲保護重要的東西。",
-    "cta": "選擇您的計劃"
+    "title": "立即以 80% 的折扣獲取整整一年的存儲空間！",
+    "description": "Internxt 提供獨家折扣，保證隱私和安全。",
+    "cta": "選擇計劃"
+  },
+  "CtaSection1": {
+    "title": "全球最私密的雲存儲",
+    "description": "享受獨家 80% 的折扣，訪問 Internxt 安全、私密和加密的雲存儲，整整一年。",
+    "cta": "找到您的計劃"
   }
 }
-

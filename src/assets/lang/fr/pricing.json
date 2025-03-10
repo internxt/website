@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% de réduction", "line2": "sur nos plans annuels" },
+    "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
     "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
@@ -8,7 +8,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "80% de réduction",
+      "title": "85% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -42,16 +42,16 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Économisez 80%",
-      "title": "Soldes d'Halloween",
-      "subtitle": "Écoutez ces cloches de soldes tinter!",
-      "cta": "Choisissez votre plan",
-      "cta2": "Obtenez 85 % de réduction",
+      "title": "Passez au printemps de la confidentialité !",
+      "subtitle": "Nouveaux plans avec Antivirus et VPN premium",
+      "cta": "Profitez de l'offre",
+      "cta2": "Bénéficiez de 85 % de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
-      "titleMbl1": "Noël",
-      "titleMbl2": "économies",
-      "titleMbl3": "sont là!",
-      "ctaMbl": "Sélectionner un plan"
+      "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
+      "titleMbl1": "Nouveaux",
+      "titleMbl2": "plans tarifaires",
+      "titleMbl3": "Protégez ce que vous aimez, pour toujours !",
+      "ctaMbl": "Acheter un plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",
@@ -67,7 +67,7 @@
       }
     },
     "lifetimeDescription": "Payez une fois et bénéficiez de la confidentialité et de la sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt sont complets et offrent un accès total à tous nos services de protection de la vie privée. La sécurité à tous les niveaux",
+    "planDescription": "Tous les plans Internxt offrent un accès complet à notre pack de solutions privées avec la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données d'entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -78,16 +78,16 @@
       "business": "Entreprise"
     },
     "freePlanCard": {
-      "getStarted": "Commencez avec notre plan gratuit",
-      "enjoy10gb": "Profitez 1 Go pour toujours et accédez à tous nos services",
-      "upTo": "Jusqu'à 10 Go",
-      "freeForever": "Gratuit pour toujours",
-      "cta": "Sélectionner un plan"
+      "eyeBrow": "Internxt Free",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona il piano"
     },
     "features": {
-      "endToEnd": "Chiffré de bout en bout",
-      "openSource": "Open-source et vérifié",
-      "anonymousAccount": "Création de compte anonyme"
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open-source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
   "FaqSection": {
@@ -133,7 +133,7 @@
         "question": "Quelle est la politique de remboursement d'Internxt ?",
         "answer": [
           "Internxt offre une garantie de remboursement standard de 30 jours pour tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
-          "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement. Nous répondrons votre demande, sans poser de questions !"
+          "Et si vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
         ]
       },
       {

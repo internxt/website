@@ -4,10 +4,18 @@ import { HandCoins, HardDrives, NumberCircleZero, ShieldPlus, SketchLogo, Speedo
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Button from '../shared/Button';
+import { MarqueeComponentV2 } from '../specialoffer/MarqueeComponentV2';
 
 interface CloudObjectStorageWhyChooseInternxtSectionProps {
   textContent: CloudObjectStorageText['WhyChooseInternxtSection'];
 }
+
+const scrollToTop = () => {
+  document.querySelector('#contactSales')?.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center',
+  });
+};
 
 export const CloudObjectStorageWhyChooseInternxtSection = ({
   textContent,
@@ -54,6 +62,10 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
         </div>
         <CardGroup cards={cards} backgroundColorCard="bg-white" />
 
+        <div className={`bg-gray-1 py-10`}>
+          <MarqueeComponentV2 bgColor="bg-gray-1" />
+        </div>
+
         {/* Banner */}
         <div
           className="flex w-full max-w-[1200px] flex-row justify-between rounded-[32px]"
@@ -75,7 +87,11 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
               <p className="text-4xl font-semibold">{textContent.bannerText.title}</p>
               <p className="text-xl">{textContent.bannerText.description}</p>
             </div>
-            <Button text={textContent.bannerText.cta} onClick={() => (window.location.hash = '#storageSection')} />
+            <div className="flex flex-row items-center gap-4">
+              <Button text={textContent.bannerText.cta} onClick={() => (window.location.hash = '#storageSection')} />
+              <p className="text-center text-xl text-gray-40">{textContent.bannerText.separator}</p>
+              <Button text={textContent.bannerText.cta2} onClick={scrollToTop} />
+            </div>
           </div>
           <div className="hidden items-center lg:flex">
             <Image

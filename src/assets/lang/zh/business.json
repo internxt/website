@@ -5,7 +5,9 @@
       "Internxt 通过超强加密的安全云存储保护您的企业免受数据丢失的影响。",
       "我们提供您管理企业安全所需的一切。"
     ],
-    "cta": "获取 Internxt 企业版"
+    "cta": "选择计划",
+    "separator": "|",
+    "cta2": "联系销售"
   },
   "SecureYourCompany": {
     "title": "使用 Internxt 加密云存储保障公司未来",
@@ -73,8 +75,10 @@
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源并经过审核",
-      "anonymousAccount": "匿名账户创建"
+      "openSource": "开源并已审核",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
     }
   },
   "WhyChooseInternxt": {
@@ -179,5 +183,34 @@
         ]
       }
     ]
+  },
+  "ContactSales": {
+    "title": "联系销售",
+    "description": "填写联系表格，团队将尽快与您联系。",
+    "form": {
+      "name": "全名",
+      "email": "电子邮箱地址",
+      "company": "公司名称",
+      "phone": "电话号码",
+      "howMuchStorage": "您需要多少存储空间？",
+      "totalCharacters": " /1000",
+      "options": [
+        "选择",
+        "少于25 TB",
+        "25 - 50 TB",
+        "50 - 100 TB",
+        "100 - 150 TB",
+        "150 - 200 TB",
+        "250 - 500 TB",
+        "1 - 20 PB",
+        "20+ PB"
+      ],
+      "howWeCanHelp": "我们如何帮助您？",
+      "howWeCanHelpPlaceHolder": "请告诉我们您的需求",
+      "cta": "发送消息",
+      "ctaSending": "发送中...",
+      "successMessage": "您的消息已成功发送。",
+      "errorMessage": "发生错误。请再试一次。"
+    }
   }
 }

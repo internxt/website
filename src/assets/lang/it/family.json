@@ -22,9 +22,11 @@
       "business": "Aziendale"
     },
     "features": {
-      "endToEnd": "Criptato end-to-end",
+      "endToEnd": "Crittografia end-to-end",
       "openSource": "Open-source e verificato",
-      "anonymousAccount": "Creazione di un account anonimo"
+      "anonymousAccount": "Creazione anonima dell'account",
+      "premiumSupport": "Assistenza clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
   "WhatMakesInternxtPerfectSection": {
