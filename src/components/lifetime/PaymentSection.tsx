@@ -5,6 +5,7 @@ import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
 import { PlanSelector, SwitchButtonOptions } from '../elections/PlanSelector';
+import { highlightKeywords } from '@/utils/highlightKeywords';
 
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
@@ -53,12 +54,6 @@ const PaymentSection = ({
     router.pathname === '/dealmirror' || router.pathname === '/dealfuel'
       ? textContent.description2
       : textContent.description;
-
-  const highlightKeywords = (text: string) => {
-    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
-    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
-    return text.replace(regex, '<strong>$1</strong>');
-  };
 
   return (
     <section id="payment" className="overflow-hidden bg-white">
