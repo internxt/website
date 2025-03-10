@@ -1,10 +1,11 @@
 import PriceTable from './PriceTable';
-import { CurrencyCircleDollar, Detective, FolderLock, Lifebuoy } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import OpenSource from '../../../public/icons/open-source.svg';
 import { PromoCodeName } from '@/lib/types';
 import { formatText } from '../utils/format-text';
 import { useRouter } from 'next/router';
 import { PlanSelector, SwitchButtonOptions } from '../elections/PlanSelector';
+import { highlightKeywords } from '@/utils/highlightKeywords';
 
 export type LifetimeMode = 'celebration' | 'custom-disc' | 'normal' | 'redeem';
 
@@ -40,19 +41,11 @@ const PaymentSection = ({
   isStackCommerce,
 }: PaymentSectionProps): JSX.Element => {
   const router = useRouter();
+
   const features = [
-    {
-      icon: Lifebuoy,
-      text: textContent.features.endToEnd,
-    },
-    {
-      icon: CurrencyCircleDollar,
-      text: textContent.features.anonymousAccount,
-    },
-    {
-      icon: OpenSource,
-      text: textContent.features.openSource,
-    },
+    { icon: Lifebuoy, text: textContent.features.endToEnd },
+    { icon: CurrencyCircleDollar, text: textContent.features.anonymousAccount },
+    { icon: OpenSource, text: textContent.features.openSource },
   ];
 
   const title =
@@ -67,41 +60,36 @@ const PaymentSection = ({
       <div className="flex flex-col space-y-4 pt-10">
         <div className="flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center px-6 text-center">
-            <p>
-              {isElectionsPage ? (
-                <div className="flex flex-col items-center gap-4">
-                  <p className="max-w-[700px] text-5xl font-bold leading-tight text-gray-100">
-                    {title.normalText}
-
-                    <span className="text-5xl font-bold text-primary">
-                      {formatText(title.blueText, {
-                        percent: percent ?? '80',
-                      })}
-                    </span>
-                  </p>
-                  <p className="font-regular text-xl text-gray-100">
-                    {description.normalText}
-                    <span className="text-primary">{description.blueText}</span>
-                  </p>
-                  <p className="font-regular text-xl text-gray-100 ">{description.normalText2}</p>
-                </div>
-              ) : (
-                <>
-                  <p className="w-full text-5xl font-semibold leading-tight">
-                    {title.previousBlueText && <span>{title.previousBlueText}</span>}
-                    <span className="text-primary">
-                      {formatText(title.blueText, {
-                        percent: percent ?? '80',
-                      })}
-                    </span>
-                    {title.postBlueText && <span>{title.postBlueText}</span>}
-                    <br />
-                    <span>{title.normalText}</span>
-                    <p className="w-full items-center pt-4 text-center text-xl font-normal">{description}</p>
-                  </p>
-                </>
-              )}
-            </p>
+            {isElectionsPage ? (
+              <div className="flex flex-col items-center gap-4">
+                <p className="text-5xl font-bold leading-tight text-gray-100">
+                  {title.normalText}
+                  <span className="text-5xl font-bold text-primary">
+                    {formatText(title.blueText, { percent: percent ?? '80' })}
+                  </span>
+                </p>
+                <p className="font-regular text-xl text-gray-100">
+                  <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description.normalText) }} />
+                  <span className="text-primary">{description.blueText}</span>
+                </p>
+                <p className="font-regular text-xl text-gray-100">
+                  <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description.normalText2) }} />
+                </p>
+              </div>
+            ) : (
+              <>
+                <p className="text-5xl font-semibold leading-tight">
+                  {title.previousBlueText && <span>{title.previousBlueText}</span>}
+                  <span className="text-primary">{formatText(title.blueText, { percent: percent ?? '80' })}</span>
+                  {title.postBlueText && <span>{title.postBlueText}</span>}
+                  <br />
+                  <span>{title.normalText}</span>
+                </p>
+                <p className="max-w-[1000px] items-center pt-4 text-center text-xl font-normal">
+                  <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description) }} />
+                </p>
+              </>
+            )}
           </div>
         </div>
 
@@ -114,6 +102,7 @@ const PaymentSection = ({
             />
           </div>
         )}
+
         <PriceTable
           lang={lang}
           discount={discount}
@@ -124,9 +113,10 @@ const PaymentSection = ({
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
         />
-        <div className="flex flex-col items-center justify-center space-y-8 bg-gray-1 bg-white pb-10  text-center md:flex-row md:space-x-32 md:space-y-0">
+
+        <div className="flex flex-col items-center justify-center space-y-8 bg-white pb-12 text-center md:flex-row md:space-x-32 md:space-y-0">
           {features.map((feature) => (
-            <div key={feature.text} className="flex flex-row items-center space-x-3 ">
+            <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
               <p className="text-xl font-medium text-gray-80">{feature.text}</p>
             </div>

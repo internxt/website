@@ -8,8 +8,8 @@
   },
   "PaymentSection": {
     "limitedOffer": "限时优惠！",
-    "title": { "blueText": "", "normalText": "Internxt终身计划。" },
-    "description": "购买一次，安全地存储、共享和访问您在所有设备上的文件。",
+    "title": { "blueText": "", "normalText": "终身计划。" },
+    "description": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
     "normalSection": {
       "title": "探索我们所有的终身独家计划",
       "description": "一次购买，永久获得隐私和安全。"
