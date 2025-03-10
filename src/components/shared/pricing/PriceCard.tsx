@@ -85,7 +85,7 @@ export const PriceCard = ({
         .toFixed(2)
         .replace('.00', '')
     : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.0', '');
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -188,7 +188,8 @@ export const PriceCard = ({
               {showTotalDiscountPrice && (
                 <>
                   {' | '}
-                  {contentText.save} {annualSave} {contentText.perYear}
+                  {contentText.save} {annualSave}
+                  {currency}
                 </>
               )}
             </p>
@@ -212,7 +213,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `h-[480px] ` : `h-[400px]`} pb-6 text-sm`}
+        } ${isBusiness ? `h-[480px] ` : `h-[415px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

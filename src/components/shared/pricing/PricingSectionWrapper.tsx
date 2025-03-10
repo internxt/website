@@ -5,6 +5,7 @@ import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
 import { ReactNode } from 'react';
+import { highlightKeywords } from '@/utils/highlightKeywords';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -110,12 +111,6 @@ export const PricingSectionWrapper = ({
     }
   };
 
-  const highlightKeywords = (text) => {
-    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
-    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
-
-    return text.replace(regex, '<strong>$1</strong>');
-  };
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
