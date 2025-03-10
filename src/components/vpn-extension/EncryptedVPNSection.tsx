@@ -1,4 +1,3 @@
-import SignUpBanner from '../banners/SignUpBanner';
 import { RedirectButton } from '../shared/RedirectButton';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
 
