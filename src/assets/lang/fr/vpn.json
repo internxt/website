@@ -1,118 +1,125 @@
 {
   "HeroSection": {
-    "label": "VPN Gratuit",
+    "label": "Internxt VPN",
     "title": {
-      "line1": "Le VPN sécurisé d’Internxt",
+      "line1": "Le VPN sécurisé d'Internxt",
       "line2": "vous protège en ligne"
     },
-    "description": "Naviguez sur le Web en toute liberté et confidentialité avec le VPN gratuit, illimité et chiffré d’Internxt.",
-    "cta": "Télécharger le VPN"
+    "description": "Naviguez sur le web en toute liberté et confidentialité avec le VPN sécurisé d'Internxt.",
+    "cta": "Choisissez votre abonnement"
   },
   "EncryptedVPNSection": {
-    "title": "L’extension VPN chiffrée d’Internxt",
-    "subtitle": "Notre VPN gratuit et sécurisé masque votre adresse IP pour que votre navigation demeure privée, sûre et sans restriction.",
-    "description": "Nous avons développé ce VPN conformément à notre mission de créer un Internet plus respectueux de la vie privée. Avec cette extension, votre connexion sera chiffrée et protégée des attaques réseau et des fuites de données. Vous vous concentrez sur une navigation sûre, pendant que nous nous chargeons de votre sécurité.",
-    "cta": "Télécharger le VPN"
+    "title": "L'extension VPN cryptée d'Internxt",
+    "subtitle": "Notre VPN masque votre adresse IP afin de préserver votre navigation privée, sécurisée et sans restrictions dans jusqu'à 5 pays : France, Allemagne, Pologne, Canada et Royaume-Uni.",
+    "description": "Nous avons conçu ce VPN conformément à notre mission de créer un Internet plus privé. En souscrivant à un abonnement premium Internxt, votre connexion sera cryptée et protégée contre les attaques réseau et les fuites de données. Nous assurons votre sécurité pendant que vous profitez simplement d'Internet.",
+    "cta": "Obtenez Internxt"
   },
   "SecureVPNSection": {
-    "title": "Pourquoi utiliser un VPN sécurisé",
-    "subtitle": "Les connexions Internet non sécurisées, comme le Wi-Fi public, peuvent exposer vos informations à des fuites de données, des piratages ou des infractions de sécurité.",
-    "description": "Le VPN gratuit d’Internxt chiffre votre connexion pour une expérience en ligne plus sûre et plus privée.",
+    "title": "Pourquoi utiliser un VPN sécurisé et crypté ?",
+    "subtitle": "Les connexions Internet non sécurisées comme les Wi-Fi publics peuvent exposer vos données à des risques tels que des piratages ou des fuites. Le VPN sécurisé d'Internxt chiffre votre connexion pour une expérience en ligne plus privée et protégée.",
+    "description": "Le VPN gratuit d'Internxt chiffre votre connexion pour une expérience de navigation plus sécurisée et confidentielle.",
     "cards": [
       {
-        "title": "Chiffrez votre trafic Internet",
-        "description": "Nous chiffrons vos données pour protéger votre droit à la confidentialité et garder votre activité de navigation à l’abri des pirates, des FAI et de Google."
+        "title": "Cryptez votre trafic Internet",
+        "description": "Nous cryptons vos données afin de protéger votre droit à la vie privée et de masquer votre activité en ligne aux pirates, aux fournisseurs d'accès et à Google."
       },
       {
-        "title": "Évitez la publicité ciblée",
-        "description": "Un VPN sécurisé vous aide à éviter les publicités personnalisées et réduit la collecte de données par des entreprises comme Google."
+        "title": "Évitez les publicités ciblées",
+        "description": "Un VPN sécurisé vous aide à éviter les annonces personnalisées et à réduire la collecte de données par des entreprises comme Google."
       },
       {
-        "title": "Débloquez le contenu mondial",
-        "description": "Contournez les restrictions géographiques et accédez à des sites indisponibles dans votre région."
+        "title": "Accédez à du contenu mondial",
+        "description": "Contournez les restrictions géographiques et accédez à des sites et services de streaming non disponibles dans votre région."
       },
       {
         "title": "Contrôlez votre identité en ligne",
-        "description": "Le VPN sécurisé d’Internxt vous redonne le contrôle sur les informations que vous partagez en ligne et les protège."
+        "description": "Le VPN sécurisé d'Internxt vous permet de reprendre le contrôle sur la quantité d'informations que vous partagez en ligne et de les protéger."
       }
     ]
   },
   "HowItWorksSection": {
-    "title": "Comment ça marche",
-    "subtitle": "L’extension VPN d’Internxt utilise des serveurs rapides et sécurisés pour chiffrer et transmettre des données sensibles.",
-    "description": "Notre extension VPN gratuite masque votre adresse IP et protège vos informations contre la collecte de données par des tiers.",
+    "title": "Comment ça marche ?",
+    "subtitle": "Le VPN d'Internxt utilise des serveurs rapides et sécurisés pour chiffrer et transmettre des données sensibles. Il masque votre adresse IP et protège vos informations de la collecte par des tiers.",
+    "description": "Notre extension VPN gratuite masque votre adresse IP et protège vos informations de la collecte par des tiers.",
     "cards": [
       {
-        "title": "Chiffrement avancé",
-        "description": "L’extension VPN d’Internxt utilise des protocoles de chiffrement de données sécurisés pour offrir la meilleure protection possible pour une connexion sûre et privée."
+        "title": "Cryptage avancé",
+        "description": "L'extension VPN Internxt utilise des protocoles de cryptage avancés pour une protection maximale et une connexion sécurisée et privée."
       },
       {
         "title": "Réseaux sécurisés",
-        "description": "Profitez d’un accès sécurisé aux réseaux privés et connectez-vous à vos réseaux professionnels ou domestiques tout en maintenant la confidentialité de vos données."
+        "description": "Profitez d'un accès sécurisé aux réseaux privés et connectez-vous à vos réseaux domestiques ou professionnels tout en protégeant vos données."
       },
       {
         "title": "Anonymat renforcé",
-        "description": "Une extension VPN change votre adresse IP pour masquer votre localisation et ne suit pas votre historique de navigation ni vos journaux de connexion."
+        "description": "Une extension VPN modifie votre adresse IP afin de masquer votre localisation et de ne pas suivre votre historique de navigation ou vos journaux de connexion."
       }
     ]
   },
   "WhenUseVPNSection": {
-    "title": "Quand utiliser un VPN",
-    "subtitle": "L’extension VPN d’Internxt utilise des serveurs rapides et sécurisés pour chiffrer et transmettre des données sensibles.",
-    "description": "Notre extension VPN gratuite masque votre adresse IP et protège vos informations contre la collecte de données par des tiers.",
+    "title": "Quand utiliser un VPN ?",
+    "subtitle": "L'extension VPN d'Internxt utilise des serveurs rapides et sécurisés pour chiffrer et transmettre des données sensibles.",
+    "description": "Notre extension VPN gratuite masque votre adresse IP et protège vos informations de la collecte par des tiers.",
     "cta": "Télécharger le VPN",
     "cards": [
-      "Empêcher la publicité ciblée",
-      "Créer des comptes de manière anonyme",
-      "Contourner les restrictions géographiques ennuyeuses",
+      "Éviter les publicités personnalisées",
+      "Créer des comptes anonymes",
+      "Contourner les restrictions géographiques",
       "VPN gratuit",
       "Protéger votre vie privée",
       "Aucune inscription requise",
-      "Se défendre contre les attaques réseau",
-      "Aucune conservation des logs"
+      "Protection contre les attaques réseau",
+      "Aucun suivi d'activité"
     ]
   },
   "CtaSection": {
-    "title": "Libérez-vous des traqueurs en ligne",
-    "description": "Protégez vos données pour une navigation sécurisée avec le VPN d’Internxt",
+    "title": "Libérez-vous des trackers en ligne",
+    "description": "Masquez vos données pour profiter d'une navigation sécurisée avec Internxt VPN",
     "cta": "Télécharger le VPN"
   },
   "CtaSection2": {
-    "title": "Plus d'yeux indiscrets",
-    "description": "Chiffrez votre connexion pour une confidentialité totale avec Internxt VPN",
-    "cta": "Télécharger VPN"
+    "title": "Plus aucun regard indiscret",
+    "description": "Cryptez votre connexion pour une confidentialité totale avec Internxt VPN",
+    "cta": "Télécharger le VPN"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons les réponses",
+    "title": "Des questions ? Nous avons des réponses",
     "faq": [
       {
-        "question": "Qu’est-ce qu’une extension VPN pour Chrome ?",
+        "question": "Qu'est-ce qu'une extension VPN pour Chrome ?",
         "answer": [
-          "Un VPN ou réseau privé virtuel assure une navigation sur Internet sûre et privée. Un VPN est conçu pour créer un canal chiffré pour les données privées, et vous permet de protéger votre identité en ligne sur des connexions plus à risque comme les points d’accès Wi-Fi publics."
+          "Un VPN (réseau privé virtuel) permet une navigation sécurisée et privée sur Internet. Il crée un tunnel chiffré pour protéger vos données personnelles et votre identité en ligne, notamment lors de connexions à des réseaux Wi-Fi publics à risque."
         ]
       },
       {
-        "question": "Comment installer l’extension VPN ?",
+        "question": "Quels pays sont disponibles ?",
         "answer": [
-          "Pour installer le VPN d’Internxt, cliquez sur le bouton « Télécharger le VPN » sur cette page. Une fois téléchargé, vous pouvez lancer le VPN et choisir votre serveur VPN préféré."
+          "Avec Internxt VPN, vous pouvez vous connecter gratuitement à la France.",
+          "Avec un abonnement payant, le VPN offre une vitesse illimitée. La France est incluse dans l'offre Essential. Les abonnements Premium incluent la France, l'Allemagne, la Pologne et le Canada. Les abonnements Ultimate permettent de se connecter à la France, l'Allemagne, la Pologne, le Canada et le Royaume-Uni."
         ]
       },
       {
-        "question": "Est-il sûr d’utiliser une connexion VPN ?",
+        "question": "Comment obtenir Internxt VPN ?",
         "answer": [
-          "Nous avons développé notre extension VPN gratuite en utilisant des protocoles de sécurité standard dans l’industrie, conformément à la mission d’Internxt qui consiste à protéger vos données des pirates et des fournisseurs d’accès Internet (FAI). Une extension VPN empêche les parties externes de suivre votre activité en ligne."
+          "Vous pouvez installer Internxt VPN gratuitement depuis le Chrome Web Store et vous connecter à un pays (France). Pour bénéficier d'une connexion illimitée à haute vitesse et accéder à plus de pays, vous pouvez choisir parmi des abonnements ou des plans à vie."
         ]
       },
       {
-        "question": "Sur quelles plateformes le VPN est-il disponible ?",
+        "question": "Est-il sécurisé d'utiliser une connexion VPN ?",
         "answer": [
-          "Vous pouvez télécharger notre extension VPN pour Chrome sur les navigateurs Google Chrome, pour les appareils de bureau sous Windows et MacOS."
+          "Nous avons conçu notre extension VPN gratuite selon les normes de l'industrie afin de protéger vos données contre les hackers et les fournisseurs d'accès Internet (FAI), conformément à la mission d'Internxt. Une extension VPN empêche les tiers de suivre vos activités en ligne."
         ]
       },
       {
-        "question": "Comment le VPN garantit-il ma confidentialité ?",
+        "question": "Quelles plateformes sont prises en charge par le VPN ?",
         "answer": [
-          "Un VPN préserve votre confidentialité en chiffrant votre trafic Internet, en masquant votre adresse IP et en adhérant à des politiques strictes de non-conservation des logs. Cette combinaison de mesures de sécurité empêche les tiers de surveiller vos activités en ligne et protège votre anonymat et vos données."
+          "Vous pouvez télécharger notre extension VPN pour Chrome sur les appareils de bureau Windows et MacOS via le navigateur Google Chrome."
+        ]
+      },
+      {
+        "question": "Comment une connexion VPN protège-t-elle ma vie privée ?",
+        "answer": [
+          "Un VPN protège votre vie privée en chiffrant votre trafic Internet, en masquant votre adresse IP et en appliquant des politiques strictes de non-conservation des logs. Cette combinaison de mesures de sécurité empêche les tiers de surveiller vos activités en ligne, garantissant ainsi votre anonymat et la sécurité de vos données."
         ]
       }
     ]
