@@ -12,13 +12,12 @@ export const EncryptedVPNSection = ({ textContent, bannerText }) => {
           <p className="text-lg text-gray-80">{textContent.description}</p>
         </div>
         <RedirectButton
-          className="flex w-max rounded-lg bg-primary py-3 px-5 text-xl font-medium text-white hover:bg-primary-dark"
+          className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
           url={VPN_CHROME_WEB_STORE}
         >
           {textContent.cta}
         </RedirectButton>
       </div>
-      <SignUpBanner textContent={bannerText} lang="en" />
     </section>
   );
 };
