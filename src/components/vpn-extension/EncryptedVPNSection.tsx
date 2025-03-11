@@ -1,4 +1,4 @@
-import { RedirectButton } from '../shared/RedirectButton';
+import Link from 'next/link';
 
 export const EncryptedVPNSection = ({ textContent, bannerText }) => {
   return (
@@ -9,12 +9,12 @@ export const EncryptedVPNSection = ({ textContent, bannerText }) => {
           <p className="text-2xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg text-gray-80">{textContent.description}</p>
         </div>
-        <RedirectButton
+        <Link
           className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-          url={'/pricing'}
+          href={'/pricing'}
         >
           {textContent.cta}
-        </RedirectButton>
+        </Link>
       </div>
     </section>
   );

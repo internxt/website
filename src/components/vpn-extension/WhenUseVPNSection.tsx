@@ -1,6 +1,5 @@
-import { CheckSquare } from '@phosphor-icons/react';
+import { CheckSquare, Link } from '@phosphor-icons/react';
 import Image from 'next/image';
-import { RedirectButton } from '../shared/RedirectButton';
 
 export const WhenUseVPNSection = ({ textContent }) => {
   return (
@@ -11,12 +10,12 @@ export const WhenUseVPNSection = ({ textContent }) => {
           <p className="text-xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg font-medium text-gray-80">{textContent.description}</p>
         </div>
-        <RedirectButton
+        <Link
           className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-          url={'/pricing'}
+          href="/pricing"
         >
           {textContent.cta}
-        </RedirectButton>
+        </Link>
         <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat sm:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
           <div className="inset-0 ml-5 hidden items-center justify-center lg:absolute lg:flex">
             <Image
