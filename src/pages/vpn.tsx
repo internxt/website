@@ -5,7 +5,6 @@ import { EncryptedVPNSection } from '@/components/vpn-extension/EncryptedVPNSect
 import { SecureVPNSection } from '@/components/vpn-extension/SecureVPNSection';
 import { HowItWorksSection } from '@/components/vpn-extension/HowItWorksSection';
 import { WhenUseVPNSection } from '@/components/vpn-extension/WhenUseVPNSection';
-import CtaSection from '@/components/shared/CtaSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { VPN_CHROME_WEB_STORE } from '@/constants';
@@ -15,10 +14,11 @@ import { VPNText } from '@/assets/types/vpn';
 import { ToolsSectionText } from '@/assets/types/components/toolsSection';
 import { BannersText } from '@/assets/types/components/banners';
 import Header from '@/components/shared/Header';
-import { RedirectButton } from '@/components/shared/RedirectButton';
+import Link from 'next/link';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GetServerSidePropsContext } from 'next';
+import CtaSection from '@/components/shared/CtaSection';
 
 interface VPNProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -59,12 +59,12 @@ const VPN = ({
             </div>
             <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
 
-            <RedirectButton
+            <Link
               className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-              url={'/pricing'}
+              href={'/pricing'}
             >
               {textContent.HeroSection.cta}
-            </RedirectButton>
+            </Link>
           </div>
         }
         ImageComponent={
