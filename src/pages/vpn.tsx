@@ -61,7 +61,7 @@ const VPN = ({
 
             <RedirectButton
               className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-              url={VPN_CHROME_WEB_STORE}
+              url={'/pricing'}
             >
               {textContent.HeroSection.cta}
             </RedirectButton>
