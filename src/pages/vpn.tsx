@@ -101,7 +101,7 @@ const VPN = ({
 
       <CtaSection
         textContent={textContent.CtaSection}
-        url={VPN_CHROME_WEB_STORE}
+        url={'/pricing'}
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection.description}</p>}
       />
 
