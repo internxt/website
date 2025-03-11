@@ -1,5 +1,6 @@
-import { CheckSquare, Link } from '@phosphor-icons/react';
+import { CheckSquare } from '@phosphor-icons/react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const WhenUseVPNSection = ({ textContent }) => {
   return (
