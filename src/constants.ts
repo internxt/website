@@ -49,7 +49,6 @@ export const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-
 
 export const INCLUDED_PATHS_FOR_SNIGEL = [
   '/temporary-email',
-  '/virus-scanner',
   '/password-generator',
   '/password-checker',
   '/byte-converter',
