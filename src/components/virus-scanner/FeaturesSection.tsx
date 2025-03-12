@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import SignUpBanner from '../banners/SignUpBanner';
+import { getImage } from '@/lib/getImage';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
@@ -8,11 +9,30 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     textContent.scanFiles.description.indexOf('malicious malware'),
     17,
   );
+  const languageForImage = ['zh', 'tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className="relative bg-gray-1 py-20 lg:pt-10 lg:pb-0">
-      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20 px-5 lg:p-16">
-        <SignUpBanner textContent={bannerText} lang={lang} />
+    <section className="relative bg-gray-1 py-20 lg:pb-0 lg:pt-10">
+      <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
+        <div className="flex w-full flex-col items-center justify-center ">
+          <SignUpBanner textContent={bannerText} lang={lang} />
+          <div className="flex w-full flex-col items-center justify-center pt-10">
+            <Image
+              src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+              alt="File Arrow Up icon"
+              width={800}
+              height={110}
+              quality={100}
+              style={{ cursor: 'pointer' }}
+              onClick={() =>
+                window.open(
+                  `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                  '_blank', // Abre en una nueva pestaña
+                )
+              }
+            />
+          </div>
+        </div>
         <div id="incontent_2" className="flex w-full max-w-[1000px] justify-center"></div>
         {/* Marketing text */}
         <div className="flex w-full flex-col space-y-16">
@@ -56,7 +76,22 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 <p className="text-xl text-gray-80">{textContent.stopMalware.description}</p>
               </div>
             </div>
-
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank', // Abre en una nueva pestaña
+                  )
+                }
+              />
+            </div>
             <div id="incontent_3" className="flex w-full max-w-[1000px] justify-center"></div>
             {/* Free online scanner */}
             <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
