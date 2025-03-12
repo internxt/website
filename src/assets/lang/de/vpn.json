@@ -1,118 +1,125 @@
 {
   "HeroSection": {
-    "label": "Kostenloses VPN",
+    "label": "Internxt VPN",
     "title": {
-      "line1": "Das sichere VPN von Internxt",
-      "line2": "schützt Sie online"
+      "line1": "Das sichere Internxt VPN",
+      "line2": "schützt dich online"
     },
-    "description": "Surfen Sie frei und privat im Internet mit Internxts kostenlosem, unbegrenztem und verschlüsseltem VPN.",
-    "cta": "VPN herunterladen"
+    "description": "Surfe mit dem sicheren VPN von Internxt völlig frei und privat im Internet.",
+    "cta": "Hol dir deinen Plan"
   },
   "EncryptedVPNSection": {
-    "title": "Internxts verschlüsselte VPN-Erweiterung",
-    "subtitle": "Unser kostenloses und sicheres VPN verbirgt Ihre IP-Adresse, um Ihr Surferlebnis privat, sicher und uneingeschränkt zu halten.",
-    "description": "Wir haben dieses VPN im Einklang mit unserer Mission entwickelt, das Internet privater zu gestalten. Mit dieser Erweiterung wird Ihre Verbindung verschlüsselt und vor Netzwerkangriffen und Datenlecks geschützt. Sie konzentrieren sich auf sicheres Surfen, während wir uns um die Sicherheit kümmern.",
-    "cta": "VPN herunterladen"
+    "title": "Die verschlüsselte VPN-Erweiterung von Internxt",
+    "subtitle": "Unser VPN verbirgt deine IP-Adresse, um dein Surferlebnis privat, sicher und ohne Einschränkungen in bis zu 5 Ländern zu halten: Frankreich, Deutschland, Polen, Kanada und Großbritannien.",
+    "description": "Wir haben dieses VPN gemäß unserer Mission für ein privateres Internet entwickelt. Mit einem Premium-Plan von Internxt wird deine Verbindung verschlüsselt und vor Netzwerkangriffen und Datenlecks geschützt. Wir kümmern uns um deine Sicherheit, während du einfach das Internet genießen kannst.",
+    "cta": "Hol dir Internxt"
   },
   "SecureVPNSection": {
-    "title": "Warum ein sicheres VPN verwenden",
-    "subtitle": "Ungesicherte Internetverbindungen, wie öffentliches WLAN, können Ihre Informationen Datenlecks, Hacks oder Sicherheitsverletzungen aussetzen.",
-    "description": "Das kostenlose VPN von Internxt verschlüsselt Ihre Verbindung für ein sichereres und privateres Online-Erlebnis.",
+    "title": "Warum ein sicheres und verschlüsseltes VPN nutzen?",
+    "subtitle": "Unsichere Internetverbindungen wie öffentliche WLAN-Netze können deine Daten Risiken wie Hacks oder Datenlecks aussetzen. Das sichere Internxt VPN verschlüsselt deine Verbindung für mehr Privatsphäre und Sicherheit online.",
+    "description": "Das kostenlose Internxt VPN verschlüsselt deine Verbindung für ein sichereres und privateres Surferlebnis.",
     "cards": [
       {
-        "title": "Verschlüsseln Sie Ihren Internetverkehr",
-        "description": "Wir verschlüsseln Ihre Daten, um Ihr Recht auf Privatsphäre zu schützen und Ihre Browser-Aktivitäten vor Hackern, Internetanbietern und Google verborgen zu halten."
+        "title": "Verschlüssele deinen Internetverkehr",
+        "description": "Wir verschlüsseln deine Daten, um dein Recht auf Privatsphäre zu schützen und deine Surfaktivitäten vor Hackern, ISPs und Google zu verbergen."
       },
       {
-        "title": "Vermeiden Sie zielgerichtete Werbung",
-        "description": "Ein sicheres VPN hilft Ihnen, personalisierte Werbung zu vermeiden, und reduziert die Datenerfassung durch Unternehmen wie Google."
+        "title": "Gezielte Werbung verhindern",
+        "description": "Ein sicheres VPN hilft dir dabei, personalisierte Anzeigen zu umgehen und die Datenerfassung durch Unternehmen wie Google zu reduzieren."
       },
       {
-        "title": "Schalten Sie globale Inhalte frei",
-        "description": "Umgehen Sie Geobeschränkungen und greifen Sie auf Websites zu, die in Ihrer Region nicht verfügbar sind."
+        "title": "Weltweite Inhalte freischalten",
+        "description": "Umgehe geografische Einschränkungen und greife auf Webseiten und Streaming-Dienste zu, die in deiner Region nicht verfügbar sind."
       },
       {
-        "title": "Kontrollieren Sie Ihre Online-Identität",
-        "description": "Das sichere VPN von Internxt gibt Ihnen die Kontrolle darüber zurück, wie viele Informationen Sie online teilen, und schützt diese."
+        "title": "Kontrolliere deine Online-Identität",
+        "description": "Das sichere Internxt VPN gibt dir die Kontrolle darüber zurück, wie viele Informationen du online teilst, und hält diese geschützt."
       }
     ]
   },
   "HowItWorksSection": {
-    "title": "Wie es funktioniert",
-    "subtitle": "Die VPN-Erweiterung von Internxt verwendet schnelle, sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
-    "description": "Unsere kostenlose VPN-Erweiterung verbirgt Ihre IP-Adresse und schützt Ihre Informationen vor der Datenerfassung durch Dritte.",
+    "title": "So funktioniert es",
+    "subtitle": "Das Internxt VPN nutzt schnelle und sichere Server, um sensible Daten zu verschlüsseln und zu übertragen. Es verbirgt deine IP-Adresse und schützt deine Informationen vor Datensammlung Dritter.",
+    "description": "Unsere kostenlose VPN-Erweiterung verbirgt deine IP-Adresse und schützt deine Informationen vor Datenerfassung durch Dritte.",
     "cards": [
       {
         "title": "Erweiterte Verschlüsselung",
-        "description": "Die Internxt VPN-Erweiterung verwendet sichere Datenverschlüsselungsprotokolle und bietet den höchsten Schutz für eine sichere und private Verbindung."
+        "description": "Die Internxt VPN-Erweiterung nutzt sichere Datenverschlüsselungsprotokolle, um maximalen Schutz für eine sichere und private Verbindung zu bieten."
       },
       {
         "title": "Sichere Netzwerke",
-        "description": "Genießen Sie sicheren Zugriff auf private Netzwerke und verbinden Sie sich mit Ihren Arbeits- oder Heimnetzwerken, während die Vertraulichkeit Ihrer Daten gewahrt bleibt."
+        "description": "Genieße sicheren Zugang zu privaten Netzwerken und verbinde dich sicher mit Heim- oder Firmennetzwerken, während deine Daten geschützt bleiben."
       },
       {
-        "title": "Erhöhte Anonymität",
-        "description": "Eine VPN-Erweiterung ändert Ihre IP-Adresse, um Ihren Standort zu verbergen, und zeichnet weder Ihren Browserverlauf noch Verbindungsprotokolle auf."
+        "title": "Verbesserte Anonymität",
+        "description": "Eine VPN-Erweiterung ändert deine IP-Adresse, um deinen Standort zu verbergen und deine Surf- und Verbindungsprotokolle nicht zu verfolgen."
       }
     ]
   },
   "WhenUseVPNSection": {
-    "title": "Wann sollten Sie ein VPN verwenden",
-    "subtitle": "Die VPN-Erweiterung von Internxt verwendet schnelle, sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
-    "description": "Unsere kostenlose VPN-Erweiterung verbirgt Ihre IP-Adresse und schützt Ihre Informationen vor der Datenerfassung durch Dritte.",
+    "title": "Wann sollte man ein VPN nutzen?",
+    "subtitle": "Die VPN-Erweiterung von Internxt nutzt schnelle und sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
+    "description": "Unsere kostenlose VPN-Erweiterung verbirgt deine IP-Adresse und schützt deine Informationen vor Datenerfassung durch Dritte.",
     "cta": "VPN herunterladen",
     "cards": [
-      "Verhindern Sie zielgerichtete Werbung",
-      "Erstellen Sie Konten anonym",
-      "Umgehen Sie lästige Geobeschränkungen",
+      "Personalisierte Werbung vermeiden",
+      "Konten anonym erstellen",
+      "Lästige geografische Sperren umgehen",
       "Kostenloses VPN",
-      "Schützen Sie Ihre Privatsphäre",
+      "Deine Privatsphäre schützen",
       "Keine Registrierung erforderlich",
-      "Wehren Sie sich gegen Netzwerkangriffe",
-      "Keine Protokollierung"
+      "Schutz vor Netzwerkangriffen",
+      "Keine Aktivitätsüberwachung"
     ]
   },
   "CtaSection": {
-    "title": "Befreien Sie sich von Online-Trackern",
-    "description": "Verbergen Sie Ihre Daten für ein sicheres Surferlebnis mit dem Internxt VPN",
+    "title": "Befreie dich von Online-Trackern",
+    "description": "Verbirg deine Daten und genieße ein sicheres Surferlebnis mit Internxt VPN",
     "cta": "VPN herunterladen"
   },
   "CtaSection2": {
     "title": "Keine neugierigen Blicke mehr",
-    "description": "Verschlüsseln Sie Ihre Verbindung für volle Privatsphäre mit Internxt VPN",
+    "description": "Verschlüssele deine Verbindung für vollständige Privatsphäre mit Internxt VPN",
     "cta": "VPN herunterladen"
   },
   "FaqSection": {
-    "title": "Fragen? Wir haben die Antworten",
+    "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
         "question": "Was ist eine VPN-Erweiterung für Chrome?",
         "answer": [
-          "Ein VPN oder virtuelles privates Netzwerk gewährleistet sicheres, privates Surfen im Internet. Ein VPN ist darauf ausgelegt, einen verschlüsselten Kanal für private Daten zu erstellen, und ermöglicht es Ihnen, Ihre Online-Identität bei risikoreicheren Verbindungen wie öffentlichen WLAN-Hotspots zu schützen."
+          "Ein VPN (virtuelles privates Netzwerk) sorgt für sicheres und privates Surfen im Internet. Ein VPN erstellt einen verschlüsselten Kanal für private Daten und schützt deine Online-Identität insbesondere bei risikoreichen Verbindungen, wie öffentlichen WLAN-Hotspots."
         ]
       },
       {
-        "question": "Wie installiert man die VPN-Erweiterung?",
+        "question": "Welche Länder sind verfügbar?",
         "answer": [
-          "Um das VPN von Internxt zu installieren, klicken Sie auf dieser Seite auf die Schaltfläche „VPN herunterladen“. Nach dem Download können Sie das VPN starten und Ihren bevorzugten VPN-Server auswählen."
+          "Mit Internxt VPN kannst du dich mit einem kostenlosen Konto mit Frankreich verbinden.",
+          "Bei kostenpflichtigen Tarifen bietet das VPN unbegrenzte Hochgeschwindigkeit. Frankreich ist im Essential-Tarif enthalten. Premium-Tarife umfassen Frankreich, Deutschland, Polen und Kanada. Ultimate-Tarife ermöglichen Verbindungen zu Frankreich, Deutschland, Polen, Kanada und Großbritannien."
         ]
       },
       {
-        "question": "Ist es sicher, eine VPN-Verbindung zu nutzen?",
+        "question": "Wie bekomme ich Internxt VPN?",
         "answer": [
-          "Wir haben unsere kostenlose VPN-Erweiterung unter Verwendung branchenüblicher Sicherheitsprotokolle entwickelt, im Einklang mit der Mission von Internxt, Ihre Daten vor Hackern und Internetdienstanbietern (ISPs) zu schützen. Eine VPN-Erweiterung verhindert, dass Dritte Ihre Online-Aktivitäten verfolgen."
+          "Du kannst Internxt VPN kostenlos über den Chrome Web Store installieren und dich mit 1 Land (Frankreich) verbinden. Für unbegrenzte Hochgeschwindigkeitsverbindungen und zusätzliche Länder kannst du zwischen einem neuen Abo oder lebenslangen Plänen wählen."
+        ]
+      },
+      {
+        "question": "Ist es sicher, eine VPN-Verbindung zu verwenden?",
+        "answer": [
+          "Wir haben unsere kostenlose VPN-Erweiterung nach Industriestandards entwickelt, um deine Daten gemäß der Mission von Internxt vor Hackern und Internetanbietern (ISP) zu schützen. Eine VPN-Erweiterung verhindert, dass Dritte deine Online-Aktivitäten verfolgen können."
         ]
       },
       {
         "question": "Welche Plattformen unterstützt das VPN?",
         "answer": [
-          "Sie können unsere VPN-Chrome-Erweiterung auf Google Chrome-Webbrowsern für Windows- und MacOS-Desktopgeräte herunterladen."
+          "Du kannst unsere VPN-Erweiterung für Chrome auf Windows- und MacOS-Desktopgeräten im Google Chrome Webbrowser herunterladen."
         ]
       },
       {
-        "question": "Wie gewährleistet das VPN meine Privatsphäre?",
+        "question": "Wie schützt eine VPN-Verbindung meine Privatsphäre?",
         "answer": [
-          "Ein VPN stellt Ihre Privatsphäre sicher, indem es Ihren Internetverkehr verschlüsselt, Ihre IP-Adresse verbirgt und strikte No-Logs-Richtlinien einhält. Diese Kombination von Sicherheitsmaßnahmen verhindert, dass Dritte Ihre Online-Aktivitäten überwachen, und bewahrt Ihre Anonymität und Datensicherheit."
+          "Ein VPN schützt deine Privatsphäre, indem es deinen Internetverkehr verschlüsselt, deine IP-Adresse verbirgt und strenge No-Log-Richtlinien einhält. Diese Kombination von Sicherheitsmaßnahmen verhindert, dass Dritte deine Online-Aktivitäten überwachen können, wodurch deine Anonymität und die Sicherheit deiner Daten gewahrt bleiben."
         ]
       }
     ]
