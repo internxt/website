@@ -9,7 +9,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
     textContent.scanFiles.description.indexOf('malicious malware'),
     17,
   );
-  const languageForImage = ['zh', 'tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="relative bg-gray-1 py-20 lg:pb-0 lg:pt-10">

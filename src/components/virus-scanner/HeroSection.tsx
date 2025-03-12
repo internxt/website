@@ -139,7 +139,7 @@ const HeroSection = ({ textContent, lang }) => {
 
   const [progress, setProgress] = useState(0);
 
-  const languageForImage = ['zh', 'tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section
