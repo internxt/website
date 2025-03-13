@@ -250,7 +250,7 @@ export default function PriceCard({
         price: '45.99',
         priceId: 'price_1OQ3LKFAOdcgaBMQMK2UHHRM',
         features: [
-          '2TB encrypted storage',
+          '200GB encrypted storage',
           'Zero-knowledge encryption',
           'Password-protected file sharing',
           'Post-quantum cryptography',
@@ -327,10 +327,10 @@ export default function PriceCard({
     <div
       className={`${
         popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex max-h-[740px] min-h-[740px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
-        className={`info flex max-h-[340px]  min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -434,7 +434,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
+        <div className="flex max-h-[500px] min-h-[300px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
