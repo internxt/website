@@ -480,7 +480,7 @@ const HeroSection = ({ textContent, lang }) => {
           onClick={() =>
             window.open(
               `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank', // Abre en una nueva pestaña
+              '_blank',
             )
           }
         />
