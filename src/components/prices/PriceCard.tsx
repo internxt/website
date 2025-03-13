@@ -331,10 +331,7 @@ export default function PriceCard({
     >
       <div
         className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
-
-      } flex h-[760px] min-w-[340px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
-    >
-
+      >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
             className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-primary px-3 py-1 ${
@@ -436,6 +433,7 @@ export default function PriceCard({
             </div>
           </>
         ) : null}
+
         <div className="flex max-h-[500px] min-h-[300px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
@@ -464,9 +462,9 @@ export default function PriceCard({
               </div>
             ))
           ) : (
-            <div className="flex h-[540px] flex-col space-y-2 pt-6">
+            <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
-                <div className="flex  flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+                <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
                   {React.createElement(iconsFeatures[index % iconsFeatures.length], {
                     size: 24,
                     className: 'text-primary',
