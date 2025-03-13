@@ -49,6 +49,11 @@ interface IntegratedCheckoutViewProps {
     formData?: IFormValues,
   ) => Promise<void>;
   onCountryAddressChange: (name: string) => void;
+  onCouponInputChange: (promoCode: string) => void;
+  onCouponError?: string;
+  onRemoveAppliedCouponCode: () => void;
+  showCouponCode: boolean;
+  couponCodeName?: string;
 }
 
 export const IntegratedCheckoutView = ({
@@ -58,6 +63,11 @@ export const IntegratedCheckoutView = ({
   error,
   onCheckoutButtonClicked,
   onCountryAddressChange,
+  onCouponInputChange,
+  onRemoveAppliedCouponCode,
+  showCouponCode,
+  onCouponError,
+  couponCodeName,
 }: IntegratedCheckoutViewProps): JSX.Element => {
   const stripeSDK = useStripe();
   const elements = useElements();
@@ -194,7 +204,15 @@ export const IntegratedCheckoutView = ({
               </div>
             </div>
             <div className="top-5 flex w-full max-w-xl flex-col gap-5 pb-10 lg:sticky lg:max-w-lg lg:pb-0">
-              <ProductFeaturesComponent textContent={textContent.productCard} selectedPlan={objStoragePlan} />
+              <ProductFeaturesComponent
+                textContent={textContent.productCard}
+                selectedPlan={objStoragePlan}
+                onCouponInputChange={onCouponInputChange}
+                couponError={onCouponError}
+                onRemoveAppliedCouponCode={onRemoveAppliedCouponCode}
+                showCouponCode={showCouponCode}
+                couponCodeName={couponCodeName}
+              />
               <Button
                 id="submit"
                 type="submit"
