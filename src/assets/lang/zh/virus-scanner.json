@@ -23,7 +23,7 @@
     "table": {
       "loading": "加载中..",
       "virusDetected": "已检测到此文件的病毒",
-      "noVirusDetected": "未检测到此文件的病毒",
+      "noVirusDetected": "未检测到病毒",
       "detected": "检测到",
       "undetected": "未检测到",
       "unableToProcess": "无法处理",
