@@ -61,5 +61,6 @@
     "amountSaved": "Economize ",
     "withAnnualBilling": "com cobrança anual"
   },
+  "invalidCoupon": "Cupom inválido",
   "oneTimePayment": "*Uma taxa única de 1€ é necessária para verificação da conta"
 }
