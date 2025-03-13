@@ -34,7 +34,7 @@ const getCustomerId = async (name: string, email: string, country?: string, comp
   return res.data;
 };
 
-const getPaymentIntent = async (customerId: string, plan: PlanData, token: string, couponCode?: string) => {
+const getPaymentIntent = async (customerId: string, plan: PlanData, token: string) => {
   const { id: priceId, amount, currency } = plan;
 
   const response = await axios.get(`${process.env.NEXT_PUBLIC_PAYMENTS_API}/payment-intent-for-object-storage`, {
@@ -44,7 +44,6 @@ const getPaymentIntent = async (customerId: string, plan: PlanData, token: strin
       amount,
       token,
       currency,
-      couponCode,
     },
   });
 
