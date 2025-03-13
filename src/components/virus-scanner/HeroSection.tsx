@@ -4,11 +4,16 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
-import { set } from 'cypress/types/lodash';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
+import { VirusScannerText } from '@/assets/types/virusScanner';
 const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
 
-const HeroSection = ({ textContent, lang }) => {
+interface HeroSectionProps {
+  textContent: VirusScannerText['HeroSection'];
+  lang: string;
+}
+
+const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);
