@@ -4,17 +4,29 @@ import { currency } from '@/components/services/currency.service';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
+import { useState } from 'react';
+import { Transition } from '@headlessui/react';
+import TextInput from '@/components/components/TextInput';
+import Button from '@/components/shared/Button';
 
 interface ProductFeaturesComponentProps {
   textContent: IntegratedCheckoutText['productCard'];
   selectedPlan: PlanData;
+  onCouponInputChange: (promoCode: string) => void;
+  couponError?: string;
 }
 
 const Separator = () => <div className="border border-gray-10" />;
 
-export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductFeaturesComponentProps): JSX.Element => {
+export const ProductFeaturesComponent = ({
+  textContent,
+  selectedPlan,
+  onCouponInputChange,
+  couponError,
+}: ProductFeaturesComponentProps): JSX.Element => {
   const features = textContent.planDetails.features;
-
+  const [openCouponCodeDropdown, setOpenCouponCodeDropdown] = useState<boolean>(false);
+  const [couponName, setCouponName] = useState<string>('');
   const planAmount = selectedPlan.decimalAmount;
 
   return (
@@ -54,6 +66,66 @@ export const ProductFeaturesComponent = ({ textContent, selectedPlan }: ProductF
               {planAmount}
               {currency[selectedPlan.currency]}
             </p>
+          </div>
+          <div>
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setOpenCouponCodeDropdown(!openCouponCodeDropdown);
+              }}
+              className={'flex rounded-lg text-base transition-all duration-75 ease-in-out hover:underline'}
+            >
+              {textContent.addCoupon.buttonTitle}
+            </button>
+            <Transition
+              show={openCouponCodeDropdown}
+              className={'left-0'}
+              enter="transition duration-50 ease-out"
+              enterFrom="scale-98 opacity-0"
+              enterTo="scale-100 opacity-100"
+              leave="transition duration-50 ease-out"
+              leaveFrom="scale-98 opacity-100"
+              leaveTo="scale-100 opacity-0"
+            >
+              <div className="w-full items-center outline-none">
+                <div className="flex w-full flex-col items-start space-y-1 pt-4">
+                  <p className="text-sm text-gray-80"> {textContent.addCoupon.inputText}</p>
+                  <div className="flex w-full flex-row space-x-3">
+                    <TextInput
+                      value={couponName}
+                      onChange={(e) => {
+                        e.preventDefault();
+                        setCouponName(e.target.value);
+                      }}
+                      placeholder={textContent.addCoupon.inputText}
+                      min={0}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          onCouponInputChange(couponName.toUpperCase().trim());
+                          setCouponName('');
+                        }
+                      }}
+                      style={{
+                        textTransform: 'uppercase',
+                      }}
+                      data-cy={'coupon-code-input'}
+                      className={'inxt-input input-primary dark:bg-transparent'}
+                    />
+                    <Button
+                      disabled={!couponName?.length}
+                      onClick={() => {
+                        if (couponName) onCouponInputChange(couponName.toUpperCase().trim());
+                      }}
+                      text={textContent.addCoupon.applyCodeButtonTitle}
+                      className="h-11 w-32 items-center justify-center bg-primary text-white"
+                    ></Button>
+                  </div>
+                  {couponError && <p className="text-red-dark">{couponError}</p>}
+                </div>
+              </div>
+            </Transition>
           </div>
         </div>
       </div>
