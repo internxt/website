@@ -201,7 +201,14 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token, companyName, vatId);
+      const { clientSecret } = await paymentService.createSubscription(
+        customerId,
+        plan,
+        token,
+        companyName,
+        vatId,
+        coupon || undefined,
+      );
 
       const confirmIntent = stripeSDK.confirmSetup;
 
@@ -241,15 +248,6 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       if (!couponData || !couponData.codeId) {
         throw new Error(textContent.invalidCoupon);
       }
-
-      const hasDiscount =
-        couponData.amountOff !== null || (couponData.percentOff !== null && couponData.percentOff > 0);
-
-      if (!hasDiscount) {
-        throw new Error(textContent.invalidCoupon);
-      }
-
-      const discount = couponData.amountOff || (plan?.amount ?? 0) * ((couponData.percentOff ?? 0) / 100) || 0;
 
       setCoupon(couponCode as PromoCodeName);
 
