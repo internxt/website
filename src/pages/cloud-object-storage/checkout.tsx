@@ -13,11 +13,12 @@ import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { paymentService } from '@/components/services/payments.service';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
-import GA_TAGS from '@/components/services/ga.tags';
+import { stripeService } from '@/components/services/stripe.service';
+import { PromoCodeName } from '@/lib/types';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -72,6 +73,10 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
   const [country, setCountry] = useState<string>();
+  const [coupon, setCoupon] = useState<PromoCodeName | undefined>(undefined);
+  const [couponError, setCouponError] = useState<string>();
+  const searchParams = useSearchParams();
+  const couponCode = searchParams?.get('couponCode');
 
   const { backgroundColor, borderColor, borderInputColor, textColor } = THEME_STYLES['light'];
 
@@ -86,6 +91,12 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         router.push('/cloud-object-storage');
       });
   }, []);
+
+  useEffect(() => {
+    if (couponCode) {
+      handleCouponInputChange(couponCode as string);
+    }
+  }, [couponCode]);
 
   const loadStripeElements = async (
     textColor: string,
@@ -190,7 +201,14 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(customerId, plan, token, companyName, vatId);
+      const { clientSecret } = await paymentService.createSubscription(
+        customerId,
+        plan,
+        token,
+        companyName,
+        vatId,
+        coupon,
+      );
 
       const confirmIntent = stripeSDK.confirmSetup;
 
@@ -216,6 +234,30 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
     }
   };
 
+  const handleCouponInputChange = async (couponCode: string) => {
+    if (!couponCode) {
+      setCoupon(undefined);
+      setCouponError('');
+
+      return;
+    }
+
+    try {
+      const couponData = await stripeService.getCoupon(couponCode as PromoCodeName);
+
+      if (!couponData || !couponData.codeId) {
+        throw new Error(textContent.invalidCoupon);
+      }
+
+      setCoupon(couponCode as PromoCodeName);
+
+      setCouponError('');
+    } catch (error) {
+      setCouponError(textContent.invalidCoupon);
+      setCoupon(undefined);
+    }
+  };
+
   return (
     <>
       <Script strategy="beforeInteractive" src={`https://www.google.com/recaptcha/api.js?render=${CAPTCHA}`} />
@@ -231,6 +273,11 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               isPaying={isUserPaying}
               onCheckoutButtonClicked={onCheckoutButtonClicked}
               onCountryAddressChange={setCountry}
+              onCouponInputChange={handleCouponInputChange}
+              couponError={couponError}
+              onRemoveAppliedCouponCode={() => setCoupon(undefined)}
+              showCouponCode={coupon !== undefined}
+              couponCodeName={coupon}
             />
           </Elements>
         ) : (

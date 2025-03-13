@@ -61,6 +61,7 @@
     "amountSaved": "节省 ",
     "withAnnualBilling": "按年计费"
   },
+  "invalidCoupon": "无效的优惠券",
   "oneTimePayment": "*账户验证需要一次性费用1€",
   "error500": "请输入有效的增值税号"
 }

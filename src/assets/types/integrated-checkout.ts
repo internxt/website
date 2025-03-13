@@ -1,3 +1,5 @@
+import { invalid } from 'moment';
+
 export interface IntegratedCheckoutText {
   title: string;
   pay: string;
@@ -10,6 +12,7 @@ export interface IntegratedCheckoutText {
   productCard: ProductCard;
   oneTimePayment: string;
   error500: string;
+  invalidCoupon: string;
 }
 
 export interface AddressBilling {

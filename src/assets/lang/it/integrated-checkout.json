@@ -61,6 +61,7 @@
     "amountSaved": "Risparmia ",
     "withAnnualBilling": "con fatturazione annuale"
   },
+  "invalidCoupon": "Coupon non valido",
   "oneTimePayment": "*È richiesta una tariffa una tantum di 1€ per la verifica dell'account",
   "error500": "Si prega di inserire un numero di partita IVA valido"
 }
