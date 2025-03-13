@@ -1,84 +1,84 @@
 {
   "HeroSection": {
-    "label": "VPN Gratuito",
+    "label": "Internxt VPN",
     "title": {
-      "line1": "Il VPN sicuro di Internxt",
+      "line1": "La VPN sicura di Internxt",
       "line2": "ti protegge online"
     },
-    "description": "Naviga sul web in completa libertà e privacy con il VPN gratuito, illimitato e crittografato di Internxt.",
-    "cta": "Scarica VPN"
+    "description": "Naviga sul web con totale libertà e privacy grazie alla VPN sicura di Internxt.",
+    "cta": "Scegli il tuo piano"
   },
   "EncryptedVPNSection": {
-    "title": "L’estensione VPN crittografata di Internxt",
-    "subtitle": "Il nostro VPN gratuito e sicuro nasconde il tuo indirizzo IP per mantenere l’esperienza di navigazione privata, protetta e senza restrizioni.",
-    "description": "Abbiamo creato questo VPN in linea con la nostra missione di realizzare un internet più privato. Con questa estensione, la tua connessione sarà crittografata e al riparo da attacchi di rete e fughe di dati. Tu concentrati sulla navigazione sicura, mentre noi ci occupiamo della sicurezza.",
-    "cta": "Scarica VPN"
+    "title": "L'estensione VPN criptata di Internxt",
+    "subtitle": "La nostra VPN nasconde il tuo indirizzo IP per mantenere la tua navigazione privata, sicura e senza restrizioni fino a 5 paesi: Francia, Germania, Polonia, Canada e Regno Unito.",
+    "description": "Abbiamo sviluppato questa VPN secondo la nostra missione di rendere Internet più privato. Con un abbonamento premium Internxt, la tua connessione sarà criptata e protetta da attacchi di rete e perdite di dati. Noi garantiamo la tua sicurezza, così tu puoi semplicemente navigare e goderti Internet.",
+    "cta": "Ottieni Internxt"
   },
   "SecureVPNSection": {
-    "title": "Perché usare un VPN sicuro",
-    "subtitle": "Le connessioni internet non protette, come il Wi-Fi pubblico, possono esporre le tue informazioni a fughe di dati, attacchi hacker o violazioni.",
-    "description": "Il VPN gratuito di Internxt crittografa la tua connessione per un’esperienza online più sicura e privata.",
+    "title": "Perché utilizzare una VPN sicura e criptata?",
+    "subtitle": "Le connessioni Internet non sicure, come il Wi-Fi pubblico, possono esporre i tuoi dati a rischi come hacking o fughe di informazioni. La VPN sicura di Internxt cripta la tua connessione per un’esperienza online più protetta e privata.",
+    "description": "La VPN gratuita di Internxt cripta la tua connessione per una navigazione più sicura e riservata.",
     "cards": [
       {
-        "title": "Crittografa il tuo traffico internet",
-        "description": "Criptiamo i tuoi dati per proteggere il tuo diritto alla privacy e tenere le tue attività di navigazione nascoste a hacker, ISP e Google."
+        "title": "Cripta il tuo traffico Internet",
+        "description": "Criptiamo i tuoi dati per proteggere il tuo diritto alla privacy e mantenere nascosta la tua attività online da hacker, provider e Google."
       },
       {
-        "title": "Evita la pubblicità mirata",
-        "description": "Un VPN sicuro ti aiuta a evitare le pubblicità personalizzate e riduce la raccolta di dati da parte di aziende come Google."
+        "title": "Evita pubblicità mirate",
+        "description": "Una VPN sicura ti aiuta ad evitare annunci personalizzati e ridurre la raccolta dati da aziende come Google."
       },
       {
-        "title": "Sblocca contenuti globali",
-        "description": "Aggira le restrizioni geografiche e accedi a siti non disponibili nella tua regione."
+        "title": "Accedi a contenuti globali",
+        "description": "Evita restrizioni geografiche e accedi a siti e servizi streaming non disponibili nella tua regione."
       },
       {
         "title": "Controlla la tua identità online",
-        "description": "Il VPN sicuro di Internxt ti restituisce il controllo su quante informazioni condividi online e le tiene protette."
+        "description": "La VPN sicura di Internxt ti consente di riprendere il controllo sulle informazioni che condividi online, mantenendole protette."
       }
     ]
   },
   "HowItWorksSection": {
-    "title": "Come funziona",
-    "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per crittografare e trasmettere dati sensibili.",
-    "description": "La nostra estensione VPN gratuita maschera il tuo indirizzo IP e protegge le tue informazioni dalla raccolta di dati da parte di terzi.",
+    "title": "Come funziona?",
+    "subtitle": "La VPN di Internxt utilizza server veloci e sicuri per criptare e trasmettere dati sensibili. Nasconde il tuo indirizzo IP e protegge le tue informazioni dalla raccolta dati da parte di terzi.",
+    "description": "La nostra estensione VPN gratuita nasconde il tuo indirizzo IP e protegge le tue informazioni dalla raccolta dati di terze parti.",
     "cards": [
       {
         "title": "Crittografia avanzata",
-        "description": "L’estensione VPN di Internxt utilizza protocolli di crittografia sicuri, offrendo la massima protezione per una connessione sicura e privata."
+        "description": "L’estensione VPN Internxt usa protocolli avanzati di crittografia per una protezione massima e una connessione sicura e privata."
       },
       {
         "title": "Reti sicure",
-        "description": "Goditi l’accesso sicuro a reti private e connettiti alle reti di lavoro o domestiche mantenendo la riservatezza dei dati."
+        "description": "Goditi un accesso sicuro a reti private e connettiti alle tue reti domestiche o aziendali mantenendo i tuoi dati protetti."
       },
       {
-        "title": "Anonimato migliorato",
-        "description": "Un’estensione VPN modifica il tuo indirizzo IP per nascondere la tua posizione e non traccia la cronologia di navigazione o i log di connessione."
+        "title": "Anonimato potenziato",
+        "description": "Un'estensione VPN cambia il tuo indirizzo IP per nascondere la tua posizione e impedire il tracciamento della cronologia di navigazione e dei log di connessione."
       }
     ]
   },
   "WhenUseVPNSection": {
-    "title": "Quando utilizzare un VPN",
-    "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per crittografare e trasmettere dati sensibili.",
-    "description": "La nostra estensione VPN gratuita maschera il tuo indirizzo IP e protegge le tue informazioni dalla raccolta di dati di terze parti.",
+    "title": "Quando utilizzare una VPN?",
+    "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per criptare e trasmettere dati sensibili.",
+    "description": "La nostra estensione VPN gratuita nasconde il tuo indirizzo IP e protegge le tue informazioni dalla raccolta dati di terze parti.",
     "cta": "Scarica VPN",
     "cards": [
-      "Impedisci la pubblicità mirata",
-      "Crea account in modo anonimo",
-      "Aggira le fastidiose restrizioni geografiche",
-      "VPN gratuito",
+      "Evita pubblicità personalizzate",
+      "Crea account anonimi",
+      "Supera restrizioni geografiche",
+      "VPN gratuita",
       "Proteggi la tua privacy",
       "Nessuna registrazione richiesta",
-      "Difenditi dagli attacchi di rete",
-      "Nessun log conservato"
+      "Protezione da attacchi di rete",
+      "Nessun monitoraggio attività"
     ]
   },
   "CtaSection": {
-    "title": "Libèrati dai tracker online",
-    "description": "Nascondi i tuoi dati per una navigazione sicura con il VPN di Internxt",
+    "title": "Liberati dai tracker online",
+    "description": "Nascondi i tuoi dati per una navigazione sicura con Internxt VPN",
     "cta": "Scarica VPN"
   },
   "CtaSection2": {
-    "title": "Basta occhi indiscreti",
+    "title": "Mai più occhi indiscreti",
     "description": "Cripta la tua connessione per una privacy totale con Internxt VPN",
     "cta": "Scarica VPN"
   },
@@ -86,33 +86,40 @@
     "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Che cos’è un’estensione VPN per Chrome?",
+        "question": "Che cos'è un'estensione VPN per Chrome?",
         "answer": [
-          "Un VPN, o rete privata virtuale, garantisce una navigazione su Internet sicura e privata. Un VPN è progettato per creare un canale crittografato per i dati privati e ti consente di proteggere la tua identità online su connessioni più a rischio, come gli hotspot Wi-Fi pubblici."
+          "Una VPN (rete privata virtuale) consente una navigazione sicura e privata su Internet. Crea un tunnel crittografato per proteggere i tuoi dati personali e la tua identità online, soprattutto quando utilizzi connessioni rischiose come gli hotspot Wi-Fi pubblici."
         ]
       },
       {
-        "question": "Come installare l’estensione VPN?",
+        "question": "Quali paesi sono disponibili?",
         "answer": [
-          "Per installare il VPN di Internxt, fai clic sul pulsante ‘Scarica VPN’ in questa pagina. Una volta scaricato, puoi avviare il VPN e scegliere il server VPN che preferisci."
+          "Con Internxt VPN puoi connetterti gratuitamente alla Francia.",
+          "Con un abbonamento a pagamento, la VPN offre velocità illimitata. La Francia è inclusa nel piano Essential. I piani Premium includono Francia, Germania, Polonia e Canada. I piani Ultimate permettono di connettersi a Francia, Germania, Polonia, Canada e Regno Unito."
+        ]
+      },
+      {
+        "question": "Come posso ottenere Internxt VPN?",
+        "answer": [
+          "Puoi installare Internxt VPN gratuitamente dal Chrome Web Store e connetterti a un paese (Francia). Per connessioni illimitate ad alta velocità e per accedere a più paesi, puoi scegliere tra abbonamenti o piani a vita."
         ]
       },
       {
         "question": "È sicuro utilizzare una connessione VPN?",
         "answer": [
-          "Abbiamo sviluppato la nostra estensione VPN gratuita utilizzando protocolli di sicurezza standard del settore, in linea con la missione di Internxt di proteggere i tuoi dati da hacker e fornitori di servizi Internet (ISP). Un’estensione VPN impedisce a terze parti di monitorare la tua attività online."
+          "Abbiamo sviluppato la nostra estensione VPN gratuita secondo gli standard del settore per proteggere i tuoi dati da hacker e provider di servizi Internet (ISP), in linea con la missione di Internxt. Un'estensione VPN impedisce a terzi di monitorare la tua attività online."
         ]
       },
       {
-        "question": "Su quali piattaforme è disponibile il VPN?",
+        "question": "Quali piattaforme supporta la VPN?",
         "answer": [
-          "Puoi scaricare la nostra estensione VPN per Chrome sui browser Google Chrome per dispositivi desktop Windows e MacOS."
+          "Puoi scaricare la nostra estensione VPN per Chrome su dispositivi desktop Windows e MacOS tramite il browser Google Chrome."
         ]
       },
       {
-        "question": "In che modo il VPN garantisce la mia privacy?",
+        "question": "Come protegge la mia privacy una connessione VPN?",
         "answer": [
-          "Un VPN tutela la tua privacy crittografando il tuo traffico internet, nascondendo il tuo indirizzo IP e aderendo a rigide politiche ‘no-log’. Questa combinazione di misure di sicurezza impedisce a terzi di monitorare le tue attività online, preservando il tuo anonimato e la riservatezza dei dati."
+          "Una VPN protegge la tua privacy crittografando il tuo traffico Internet, nascondendo il tuo indirizzo IP e applicando rigorose politiche di non registrazione dei log. Questa combinazione di misure di sicurezza impedisce a terzi di monitorare la tua attività online, garantendo il tuo anonimato e la sicurezza dei tuoi dati."
         ]
       }
     ]

@@ -5,7 +5,7 @@ export const CLI_UPDATES_LINK = 'https://github.com/internxt/cli/releases';
 export const SIGNUP_DRIVE_WEB = 'https://drive.internxt.com/new';
 
 export const VPN_CHROME_WEB_STORE =
-  'https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0';
+  'https://chromewebstore.google.com/detail/internxt-vpn-free-encrypt/dpggmcodlahmljkhlmpgpdcffdaoccni?pli=1';
 
 export const INTERNXT_URL = 'https://internxt.com';
 export const COOKIE_DOMAIN = 'internxt.com';
@@ -17,7 +17,6 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
-  '/temporary-email',
   '/locker',
   '/startpage',
   '/oystervpn',
@@ -26,7 +25,6 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/pccomponentes-products-b2b',
   '/pccomponentes-business',
   '/lifetime/celebration/[filename]',
-  '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
   '/affiliates/[filename]',

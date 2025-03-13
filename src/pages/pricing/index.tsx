@@ -155,6 +155,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
+          popularPlanBySize="5TB"
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
