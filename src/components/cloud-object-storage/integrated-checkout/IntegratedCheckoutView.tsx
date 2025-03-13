@@ -50,7 +50,7 @@ interface IntegratedCheckoutViewProps {
   ) => Promise<void>;
   onCountryAddressChange: (name: string) => void;
   onCouponInputChange: (promoCode: string) => void;
-  onCouponError?: string;
+  couponError?: string;
   onRemoveAppliedCouponCode: () => void;
   showCouponCode: boolean;
   couponCodeName?: string;
@@ -66,7 +66,7 @@ export const IntegratedCheckoutView = ({
   onCouponInputChange,
   onRemoveAppliedCouponCode,
   showCouponCode,
-  onCouponError,
+  couponError,
   couponCodeName,
 }: IntegratedCheckoutViewProps): JSX.Element => {
   const stripeSDK = useStripe();
@@ -208,7 +208,7 @@ export const IntegratedCheckoutView = ({
                 textContent={textContent.productCard}
                 selectedPlan={objStoragePlan}
                 onCouponInputChange={onCouponInputChange}
-                couponError={onCouponError}
+                couponError={couponError}
                 onRemoveAppliedCouponCode={onRemoveAppliedCouponCode}
                 showCouponCode={showCouponCode}
                 couponCodeName={couponCodeName}
