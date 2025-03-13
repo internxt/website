@@ -16,7 +16,7 @@ export const CliCard = ({ textContent }) => {
               <div className="text w-max rounded-lg bg-orange/15 px-2.5 py-1.5">
                 <p className="text-sm font-bold text-orange">{textContent.new}</p>
               </div>
-              <h2 className="max-w-[550px] text-5xl font-semibold leading-tight text-gray-100">
+              <h2 className="max-w-[550px]  text-4xl font-semibold leading-tight text-gray-100 lg:text-5xl">
                 {textContent.title.bold} <br /> <span className="text-gray-40">{textContent.title.normal}</span>
               </h2>
               <p className="max-w-[384px] text-lg text-gray-100">{textContent.description}</p>

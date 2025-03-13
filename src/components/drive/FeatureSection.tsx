@@ -22,7 +22,7 @@ const FeatureSection = ({ textContent }) => {
           className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
         >
           <ShieldStar size={64} className="text-primary" weight="light" />
-          <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+          <p className=" text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>
           <button
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
