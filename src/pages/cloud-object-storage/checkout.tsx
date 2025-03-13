@@ -73,7 +73,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
   const [country, setCountry] = useState<string>();
-  const [coupon, setCoupon] = useState<PromoCodeName | ''>('');
+  const [coupon, setCoupon] = useState<PromoCodeName | undefined>(undefined);
   const [couponError, setCouponError] = useState<string>();
   const searchParams = useSearchParams();
   const couponCode = searchParams?.get('couponCode');
@@ -207,7 +207,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         token,
         companyName,
         vatId,
-        coupon || undefined,
+        coupon,
       );
 
       const confirmIntent = stripeSDK.confirmSetup;
@@ -236,7 +236,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
   const handleCouponInputChange = async (couponCode: string) => {
     if (!couponCode) {
-      setCoupon('');
+      setCoupon(undefined);
       setCouponError('');
 
       return;
@@ -254,7 +254,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       setCouponError('');
     } catch (error) {
       setCouponError(textContent.invalidCoupon);
-      setCoupon('');
+      setCoupon(undefined);
     }
   };
 
@@ -274,9 +274,9 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               onCheckoutButtonClicked={onCheckoutButtonClicked}
               onCountryAddressChange={setCountry}
               onCouponInputChange={handleCouponInputChange}
-              onCouponError={couponError}
-              onRemoveAppliedCouponCode={() => setCoupon('')}
-              showCouponCode={coupon !== ''}
+              couponError={couponError}
+              onRemoveAppliedCouponCode={() => setCoupon(undefined)}
+              showCouponCode={coupon !== undefined}
               couponCodeName={coupon}
             />
           </Elements>
