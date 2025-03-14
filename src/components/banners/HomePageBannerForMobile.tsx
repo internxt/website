@@ -34,7 +34,7 @@ export const HomePageBannerForMobile = () => {
           </p>
         </div>
         <Image
-          src={getImage('/images/campaigns/spring/image_mobile.webp')}
+          src={getImage('/images/campaigns/stPatricks/image_mobile.webp')}
           width={380}
           height={300}
           quality={100}
