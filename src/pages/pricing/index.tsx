@@ -49,7 +49,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -119,7 +120,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       couponCodeForCheckout,
     );
   };
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -141,8 +141,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
           }}
           lang={lang}
           products={products}
