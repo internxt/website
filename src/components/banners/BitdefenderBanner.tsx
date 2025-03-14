@@ -27,7 +27,7 @@ const BitdefenderBanner = (languageForImage) => {
     >
       <div
         className={
-          ' fixed left-1/2 top-1/2 flex h-max -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden border-primary/7  bg-white'
+          ' fixed left-1/2 top-1/2 flex h-max -translate-x-[50%] -translate-y-[50%] flex-col overflow-hidden border-primary/7'
         }
       >
         <button
