@@ -21,7 +21,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
-  const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
   const handleOnClick = () => {

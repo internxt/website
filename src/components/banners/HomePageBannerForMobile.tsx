@@ -1,8 +1,6 @@
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
 import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 export const HomePageBannerForMobile = () => {
