@@ -23,7 +23,7 @@
     "table": {
       "loading": "Загрузка...",
       "virusDetected": "В этом файле обнаружен вирус",
-      "noVirusDetected": "В этом файле вирус не обнаружен",
+      "noVirusDetected": "Вирус не обнаружен",
       "detected": "Обнаружен",
       "undetected": "Не обнаружен",
       "unableToProcess": "Невозможно обработать",
