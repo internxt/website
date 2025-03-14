@@ -23,7 +23,7 @@
     "table": {
       "loading": "加載中...",
       "virusDetected": "檢測到此文件的病毒",
-      "noVirusDetected": "未檢測到此文件的病毒",
+      "noVirusDetected": "未檢測到病毒",
       "detected": "已檢測到",
       "undetected": "未檢測到",
       "unableToProcess": "無法處理",
@@ -93,9 +93,7 @@
       },
       {
         "question": "如何在線掃描文件？",
-        "answer": [
-          "使用 Internxt 病毒掃描器，您可以將可疑文件拖放到工具欄中免費檢測惡意軟件和其他漏洞。"
-        ]
+        "answer": ["使用 Internxt 病毒掃描器，您可以將可疑文件拖放到工具欄中免費檢測惡意軟件和其他漏洞。"]
       },
       {
         "question": "如何掃描 PDF 文件？",

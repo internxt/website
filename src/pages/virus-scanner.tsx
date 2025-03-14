@@ -36,7 +36,7 @@ const Scan = ({
       <Layout segmentName="Virus Scanner" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <TryInternxtBanner
           textContent={bannerLang.tryOutInternxtGeneralBanner}

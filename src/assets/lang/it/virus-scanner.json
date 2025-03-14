@@ -23,7 +23,7 @@
     "table": {
       "loading": "Caricamento...",
       "virusDetected": "Rilevati virus in questo file",
-      "noVirusDetected": "Nessun virus rilevato in questo file",
+      "noVirusDetected": "Nessun virus rilevato",
       "detected": "Rilevato",
       "undetected": "Non rilevato",
       "unableToProcess": "Impossibile elaborare",
