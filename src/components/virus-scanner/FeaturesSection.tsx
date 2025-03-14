@@ -28,6 +28,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 window.open(
                   `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
                   '_blank',
+                  'noopener noreferrer',
                 )
               }
             />
@@ -88,6 +89,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                   window.open(
                     `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
                     '_blank',
+                    'noopener noreferrer',
                   )
                 }
               />
