@@ -44,7 +44,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -105,8 +106,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: decimalDiscount,
-          lifetime: decimalDiscount,
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}

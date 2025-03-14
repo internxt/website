@@ -38,16 +38,15 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Spare 80%",
-      "title": "Springe in den Datenschutz!",
-      "subtitle": "Neue Pläne mit Premium-Antivirus und VPN",
-      "cta": "Angebot sichern",
-      "cta2": "85 % Rabatt sichern",
+      "title": "Sonderangebot zum St. Patrick’s Day!",
+      "subtitle": "Lebenslanger Speicher, Antivirus und VPN",
+      "cta": "Sichere dir deinen Plan!",
+      "cta2": "Erhalte 80% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder neue Kunden",
-      "titleMbl1": "Neue",
-      "titleMbl2": "Preispläne",
-      "titleMbl3": "Schütze, was du liebst – für immer!",
-      "ctaMbl": "Plan kaufen"
+      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden",
+      "titleMbl": "Neue lebenslange Pläne!",
+      "subtitleMbl": "Lebenslanger Speicher, Antivirus und VPN",
+      "ctaMbl": "Kaufe deinen Plan"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",

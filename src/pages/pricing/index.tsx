@@ -25,7 +25,7 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -47,10 +47,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -120,7 +120,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       couponCodeForCheckout,
     );
   };
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -142,8 +141,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscount,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
           }}
           lang={lang}
           products={products}

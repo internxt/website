@@ -40,8 +40,10 @@ const PartnerDiscount = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
 
   const cardsData = [
@@ -124,8 +126,8 @@ const PartnerDiscount = ({
         <PricingSectionWrapper
           textContent={langJson.PaymentSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-            lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
           }}
           lang="en"
           products={products}

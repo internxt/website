@@ -36,17 +36,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia 80%",
-      "title": "Passa alla privacy questa primavera!",
-      "subtitle": "Nuovi piani con Antivirus premium e VPN",
-      "cta": "Richiedi l'offerta",
-      "cta2": "Ottieni l'85% di sconto",
+      "label": "Risparmia l'80%",
+      "title": "Offerta speciale per il Giorno di San Patrizio!",
+      "subtitle": "Archiviazione, antivirus e VPN a vita",
+      "cta": "Ottieni il tuo piano!",
+      "cta2": "Ottieni l'80% di sconto",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*Offerta valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Nuovi",
-      "titleMbl2": "piani tariffari",
-      "titleMbl3": "Proteggi ciò che ami, per sempre!",
-      "ctaMbl": "Acquista un piano"
+      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
+      "titleMbl": "Nuovi piani a vita!",
+      "subtitleMbl": "Archiviazione, antivirus e VPN a vita",
+      "ctaMbl": "Acquista il tuo piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {

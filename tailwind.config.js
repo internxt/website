@@ -48,6 +48,7 @@ module.exports = {
         90: 'rgb(44,44,48)',
         100: 'rgb(24,24,27)',
       },
+      surface: 'rgba(255, 255, 255, 0.07)',
       gradients: {
         'electric-cyan': 'rgb(0,191,255)',
       },
