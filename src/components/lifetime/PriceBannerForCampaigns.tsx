@@ -34,7 +34,7 @@ export const PriceBannerForCampaigns = ({
                 {textContent.subtitle}
               </p>
             </div>
-            <div className="flex flex-col items-center gap-2 pt-4 sm:gap-4 lg:flex-row">
+            <div className="flex flex-col items-center gap-2 pt-2 sm:gap-4 lg:flex-row">
               <Link
                 href={redirectTo ?? '#billingButtons'}
                 className="flex w-max items-center rounded-lg bg-primary px-3 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-2 sm:text-lg"
@@ -65,22 +65,21 @@ export const PriceBannerForCampaigns = ({
           <div className="flex w-max rounded-sm bg-green-1/15 px-2 py-1">
             <p className="text-sm font-medium text-green-dark">{textContent.label}</p>
           </div>
-          <div className="flex w-full flex-col text-gray-100">
-            <p className="text-4xl font-bold">{textContent.titleMbl1}</p>
-            <p className="text-4xl font-bold">{textContent.titleMbl2}</p>
+          <div className="flex w-full flex-col px-4 text-gray-100">
+            <p className="text-4xl font-bold">{textContent.titleMbl}</p>
           </div>
-          <div className="min-h-auto flex max-w-[250px] flex-col items-center ">
-            <p className="font-regular break-words text-center text-xl text-white">{textContent.subtitle}</p>
+          <div className="min-h-auto flex flex-col items-center ">
+            <p className="font-regular break-words text-center text-lg text-gray-80">{textContent.subtitle}</p>
           </div>
 
           <div className="flex flex-col items-center">
             <Link
               href={redirectTo ?? '#billingButtons'}
-              className="flex w-max items-center rounded-lg bg-primary px-3 py-2 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
+              className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
             >
               {textContent.cta}
             </Link>
-            <div className="mb-2 flex flex-row items-center space-x-1 pt-3 text-white">
+            <div className="mb-2 flex flex-row items-center space-x-1 pt-3 text-gray-80">
               <CheckCircle size={20} className="text-green-1" weight="fill" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
@@ -89,7 +88,7 @@ export const PriceBannerForCampaigns = ({
 
         <div className="relative flex h-auto w-full flex-col xl:hidden">
           <Image
-            src={getImage('/images/campaigns/spring/internxt_spring_sale.webp')}
+            src={getImage('/images/campaigns/stPatricks/internxt_pricing.webp')}
             width={525}
             height={263}
             alt="Dust for scorer"
