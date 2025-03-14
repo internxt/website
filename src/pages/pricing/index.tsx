@@ -25,7 +25,7 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/components/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -47,7 +47,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SpringCoupon,

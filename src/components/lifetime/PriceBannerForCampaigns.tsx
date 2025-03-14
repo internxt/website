@@ -1,9 +1,10 @@
 import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { getImage } from '@/lib/getImage';
-import { ArrowCircleDown, CheckCircle } from '@phosphor-icons/react';
+import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const PriceBannerForCampaigns = ({
   textContent,
@@ -14,12 +15,11 @@ export const PriceBannerForCampaigns = ({
 }) => {
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
-  const blurBgImage = getImage('/images/campaigns/euro/grass.webp');
   return (
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden px-3 sm:px-5`}>
       {/* Desktop View */}
       <div
-        className={`relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] border border-2 border-gray-5 bg-white sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
+        className={`${styles.linearGradient} relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
       >
         <div className=" flex h-[400px] w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
           <div className="flex min-h-[400px] min-w-[600px]  max-w-[600px]  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
@@ -27,10 +27,10 @@ export const PriceBannerForCampaigns = ({
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full flex-col pt-4 ">
-              <p className=" flex min-h-[42px] max-w-[450px] items-center text-2xl font-bold text-gray-80 sm:text-3xl md:text-4xl lg:text-4xl">
+              <p className=" flex min-h-[42px] max-w-[450px] items-center text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-4xl">
                 {textContent.title}
               </p>
-              <p className="whitespace-nowrap text-lg font-medium text-gray-80 sm:text-lg md:text-lg lg:text-lg">
+              <p className="whitespace-nowrap text-lg font-medium text-white sm:text-lg md:text-lg lg:text-lg">
                 {textContent.subtitle}
               </p>
             </div>
@@ -43,19 +43,17 @@ export const PriceBannerForCampaigns = ({
               </Link>
               <div className="flex flex-row items-center space-y-1 text-white sm:space-x-2">
                 <CheckCircle size={20} className="text-green-1" weight="fill" />
-                <p className="whitespace-nowrap text-base font-medium text-gray-80 sm:text-lg">
-                  {textContent.guarantee}
-                </p>
+                <p className="whitespace-nowrap text-base font-medium text-white sm:text-lg">{textContent.guarantee}</p>
               </div>
             </div>
             <p className="whitespace-nowrap pt-4 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
           <div className="relative flex h-[500px] w-[600px] items-center overflow-hidden">
             <Image
-              src={getImage('/images/campaigns/spring/internxt_spring_sale_pricing.webp')}
+              src={getImage('/images/campaigns/stPatricks/internxt_patrick_pricing.webp')}
               width={590}
               height={250}
-              alt="Internxt Spring Sale Campaign"
+              alt="Internxt StPatrick Sale Campaign"
             />
           </div>
         </div>
@@ -72,7 +70,7 @@ export const PriceBannerForCampaigns = ({
             <p className="text-4xl font-bold">{textContent.titleMbl2}</p>
           </div>
           <div className="min-h-auto flex max-w-[250px] flex-col items-center ">
-            <p className="font-regular break-words text-center text-xl text-gray-80">{textContent.subtitle}</p>
+            <p className="font-regular break-words text-center text-xl text-white">{textContent.subtitle}</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -82,7 +80,7 @@ export const PriceBannerForCampaigns = ({
             >
               {textContent.cta}
             </Link>
-            <div className="mb-2 flex flex-row items-center space-x-1 pt-3 text-gray-80">
+            <div className="mb-2 flex flex-row items-center space-x-1 pt-3 text-white">
               <CheckCircle size={20} className="text-green-1" weight="fill" />
               <p className="whitespace-nowrap text-sm font-medium">{textContent.guarantee}</p>
             </div>
