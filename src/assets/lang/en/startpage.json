@@ -9,12 +9,17 @@
     "header": "Unlock 80% OFF",
     "title": "Lifetime storage plans",
     "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime security.",
+
     "priceCard": {
       "mostPopular": "Most popular",
       "billedAnnually": "One-time payment",
       "commingSoon": "Coming soon",
       "discount": "% OFF",
       "cta": "Redeem deal",
+      "stPatricksFeatures": {
+        "title": "Internxt themed goodies:",
+        "gift": "St. Patrick’s Day theme for Web App"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",
