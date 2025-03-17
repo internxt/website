@@ -1,5 +1,6 @@
 import {
   ArrowsClockwise,
+  Clover,
   CodeBlock,
   Database,
   Envelope,
@@ -128,7 +129,7 @@ export const PriceCard = ({
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex min-h-[150px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pt-6`}
       >
@@ -210,6 +211,17 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
+
+      {isLifetime && (
+        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
+          <span className="font-bold text-white">{contentText.productFeatures.stPatricksFeatures.title}</span>
+          <div className="flex items-center space-x-2">
+            <Clover className="h-6 w-6 text-white" weight="fill" />
+            <span className="text-white">{contentText.productFeatures.stPatricksFeatures.gift}</span>
+          </div>
+        </div>
+      )}
+
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
