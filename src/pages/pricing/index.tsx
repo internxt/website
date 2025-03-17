@@ -47,9 +47,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Subscriptions75OFF,
+    couponCode: PromoCodeName.freeUserCoupon,
     couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
 
@@ -111,15 +112,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      couponCodeForCheckout?.name,
     );
   };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <>
@@ -141,8 +146,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
-            lifetime: lifetimeCoupons?.percentOff && 100 - lifetimeCoupons.percentOff,
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
           }}
           lang={lang}
           products={products}
