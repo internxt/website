@@ -18,7 +18,7 @@ import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { stripeService } from '@/components/services/stripe.service';
-import { PromoCodeName } from '@/lib/types';
+import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -64,7 +64,9 @@ const stripePromise = (async () => {
   return await loadStripe(stripeKey as string);
 })();
 
-const PRICE_ID = process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string;
+const PRICE_ID = IS_PRODUCTION
+  ? (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID as string)
+  : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
   const router = useRouter();
@@ -73,7 +75,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
   const [country, setCountry] = useState<string>();
-  const [coupon, setCoupon] = useState<PromoCodeName | undefined>(undefined);
+  const [coupon, setCoupon] = useState<PromoCodeProps | undefined>(undefined);
   const [couponError, setCouponError] = useState<string>();
   const searchParams = useSearchParams();
   const couponCode = searchParams?.get('couponCode');
@@ -94,7 +96,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
   useEffect(() => {
     if (couponCode) {
-      handleCouponInputChange(couponCode as string);
+      handleCouponInputChange(couponCode);
     }
   }, [couponCode]);
 
@@ -207,7 +209,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         token,
         companyName,
         vatId,
-        coupon,
+        coupon?.codeId,
       );
 
       const confirmIntent = stripeSDK.confirmSetup;
@@ -249,8 +251,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(textContent.invalidCoupon);
       }
 
-      setCoupon(couponCode as PromoCodeName);
-
+      setCoupon(couponData);
       setCouponError('');
     } catch (error) {
       setCouponError(textContent.invalidCoupon);
@@ -277,7 +278,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               couponError={couponError}
               onRemoveAppliedCouponCode={() => setCoupon(undefined)}
               showCouponCode={coupon !== undefined}
-              couponCodeName={coupon}
+              couponCodeName={coupon?.name}
             />
           </Elements>
         ) : (

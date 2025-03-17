@@ -60,7 +60,7 @@ const createSubscription = async (
   token: string,
   companyName: string,
   vatId: string,
-  couponCode?: string,
+  promoCodeId?: string,
 ) => {
   const { id: priceId, currency } = plan;
 
@@ -71,7 +71,7 @@ const createSubscription = async (
     currency,
     companyName,
     companyVatId: vatId,
-    couponCode,
+    promoCodeId,
   });
 
   const res = response.data;
