@@ -45,7 +45,7 @@
     }
   },
   "featuresBanner": {
-    "label": "節省85%！",
+    "label": "節省80%！",
     "title": "黑色星期五最佳優惠",
     "subtitle": "選擇我們的終身方案，獲得我們的高級背包。",
     "cta": "選擇您的方案",
@@ -151,7 +151,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "終身新計劃85%折扣  ",
+      "boldText": "終身新計劃80%折扣  ",
       "normalText": "聖派翠克節快樂！   ",
       "cta": "獲取您的計劃!"
     }

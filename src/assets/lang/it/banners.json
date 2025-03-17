@@ -42,7 +42,7 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia l'85%!",
+    "label": "Risparmia l'80%!",
     "title": "Le migliori offerte del Black Friday",
     "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
     "cta": "Scegli il tuo piano",
@@ -129,7 +129,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% di sconto sui nostri nuovi piani a vita  ",
+      "boldText": "80% di sconto sui nostri nuovi piani a vita  ",
       "normalText": "Felice San Patrizio!   ",
       "cta": "Ottieni il tuo piano!"
     }

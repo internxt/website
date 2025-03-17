@@ -42,7 +42,7 @@
     }
   },
   "featuresBanner": {
-    "label": "Spare 85%",
+    "label": "Spare 80%",
     "title": "Boo! Sparen Sie mit uns...",
     "subtitle": "Gewinne unseren Premium-Rucksack mit unseren lebenslangen Plänen.",
     "cta": "Plan wählen",
@@ -123,7 +123,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% Rabatt auf unsere neuen lebenslangen Pläne  ",
+      "boldText": "80% Rabatt auf unsere neuen lebenslangen Pläne  ",
       "normalText": "Frohen St. Patrick’s Day!   ",
       "cta": "Sichere dir deinen Plan!"
     }
