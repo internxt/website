@@ -6,7 +6,7 @@ import Hamburger from 'hamburger-react';
 import { checkout, goToLoginURL, IFRAME_AUTH_ENABLED } from '@/lib/auth';
 import LanguageBox from '../components/LanguageBox';
 import { useRouter } from 'next/router';
-import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
+import { CaretDown, CaretUp } from '@phosphor-icons/react';
 import Image from 'next/image';
 import { ItemsNavigation } from '../components/navbar/ItemsNavigation';
 import { getImage } from '@/lib/getImage';
@@ -304,21 +304,18 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                               >
                                 <Link href="/drive" locale={props.lang} passHref legacyBehavior>
                                   <div className="flex flex-row space-x-2">
-                                    <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.drive}</p>
                                   </div>
                                 </Link>
 
                                 <Link href="/vpn" locale={props.lang} passHref legacyBehavior>
                                   <div className="flex flex-row space-x-2">
-                                    <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.vpn}</p>
                                   </div>
                                 </Link>
 
                                 <Link href="/antivirus" locale={props.lang} passHref legacyBehavior>
                                   <div className="flex flex-row space-x-2">
-                                    <HardDrives className="h-6 w-6 text-gray-80" />
                                     <p>{props.textContent.products.antivirus}</p>
                                   </div>
                                 </Link>

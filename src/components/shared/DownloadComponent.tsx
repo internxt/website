@@ -32,7 +32,7 @@ const DownloadComponent = ({ textContent, lang, download }) => {
 
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9">
-      <p className="text-center text-4xl font-semibold text-gray-100">{textContent.downloadTitle}</p>
+      <p className="text-center text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.downloadTitle}</p>
 
       <div className="flex w-full flex-row items-center justify-center lg:items-start lg:space-x-32">
         {/* Download for desktop */}

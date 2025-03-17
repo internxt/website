@@ -43,7 +43,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       />
 
       {/* Feature #1 - All your files available in all your devices */}
-      <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-10 lg:grid-cols-2 lg:pt-20 lg:pb-20">
+      <div className="relative grid w-full grid-cols-1 justify-center gap-20 pt-10 lg:grid-cols-2 lg:pb-20 lg:pt-20">
         <RevealX
           className="hidden w-full max-w-[713px] flex-col object-contain object-right lg:right-0 lg:flex"
           direction="right"
@@ -140,7 +140,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       </div>
 
       {/* Feature #3 - Share your files with ease, security is on us */}
-      <div className="grid w-full grid-cols-1 items-center justify-center lg:grid-cols-2 lg:gap-20 lg:pt-20 lg:pb-20">
+      <div className="grid w-full grid-cols-1 items-center justify-center lg:grid-cols-2 lg:gap-20 lg:pb-20 lg:pt-20">
         <div className="hidden flex-col items-start object-contain object-left pt-10 lg:left-0 lg:flex">
           <RevealX className="hidden flex-col shadow-subtle-hard lg:flex" direction="right">
             <Image
@@ -233,7 +233,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       </div> */}
 
       <div className="flex w-full flex-col items-center bg-gray-1 px-10 py-10 lg:px-0 lg:py-20">
-        <h3 className="mb-12 text-center text-5xl font-semibold text-gray-100">
+        <h3 className="mb-12 text-center  text-4xl font-semibold text-gray-100 lg:text-5xl">
           {textContent.section6.title.line1} <br className="hidden sm:flex" />
           {textContent.section6.title.line2}
         </h3>
