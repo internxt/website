@@ -1,5 +1,6 @@
 import {
   ArrowsClockwise,
+  Clover,
   CodeBlock,
   Database,
   Envelope,
@@ -12,10 +13,8 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
 
@@ -210,6 +209,16 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
+
+      {isLifetime && (
+        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
+          <span className="font-bold text-white">{contentText.productFeatures.stPatricksFeatures.title}</span>
+          <div className="flex items-center space-x-2">
+            <Clover className="h-6 w-6 text-white" weight="fill" />
+            <span className="text-white">{contentText.productFeatures.stPatricksFeatures.gift}</span>
+          </div>
+        </div>
+      )}
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
