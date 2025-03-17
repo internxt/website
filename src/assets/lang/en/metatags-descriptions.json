@@ -388,5 +388,10 @@
     "id": "internxt-antivirus",
     "title": "Protect your devices from malware with Internxt Antivirus",
     "description": "Internxt Antivirus scans and removes viruses from your files. Protect your devices from malware and ensure complete security in the cloud."
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Private Cloud Storage Solutions",
+    "description": "Learn more about private cloud storage solutions and how Internxt protects your data with post-quantum encryption, antivirus, and VPN"
   }
 ]
