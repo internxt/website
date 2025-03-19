@@ -45,20 +45,28 @@ const FeaturesSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-gray-1 px-5 py-20">
+        <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
+          <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
+          <div className="flex flex-col space-y-6">
+            <p className="text-lg text-gray-80">{textContent.description}</p>
+          </div>
+        </div>
+      </section>
       {/* Info cards Section */}
-      <div className="hidden flex-row items-start justify-center py-20 lg:flex">
+      <div className="hidden flex-row items-start justify-center pb-20 lg:flex">
         <div className="flex max-w-[378px] flex-col">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <button
                 className={`flex ${
-                  cardIndex === index ? 'border-gray-80' : 'border-gray-10'
+                  cardIndex === index ? 'border-primary' : 'border-gray-10'
                 } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
                 onClick={() => {
                   setCardIndex(index);
                 }}
               >
-                <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
+                <p className="text-2xl font-medium text-gray-100 hover:text-primary">{info.title}</p>
               </button>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
@@ -67,7 +75,7 @@ const FeaturesSection = ({ textContent }) => {
         <RevealX direction="left" className="flex flex-col justify-start">
           <div className="flex w-auto justify-center px-6">
             <div className="flex flex-col rounded-3xl pl-6">
-              <div className="flex  w-full max-w-[384px] flex-col space-y-6">
+              <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
                 <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
                 <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
@@ -93,7 +101,6 @@ const FeaturesSection = ({ textContent }) => {
           </div>
         ))}
       </div>
-      
     </section>
   );
 };

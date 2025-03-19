@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "保護您的資料",
+        "textAfterBlueText": "為您提供私人雲端儲存解決方案"
+      },
+      "description": "Internxt 是一個開源的雲端儲存提供商，採用後量子加密技術，旨在保護您的資料隱私。",
+      "claimDeal": "取得 Internxt",
+      "guarantee": "30天退款保證"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "為保護您的資料提供私人雲端儲存解決方案",
+      "cta": "取得 Internxt",
+      "guarantee": "30天退款保證"
+    }
+  },
+
+  "WhySwitchSection": {
+    "title": "為何選擇私人雲端儲存解決方案",
+    "subtitle": "轉向私人雲端儲存可確保您的資料保持私密，防止駭客和公司濫用。與 Google、Apple 或 Microsoft 不同，Internxt 不會收集、出售或濫用您的資料。您可以完全控制您的檔案。",
+    "description": "投資隱私，確保您的檔案與資料免於安全漏洞的威脅，並獲得更多的安心。",
+    "cta": "取得 Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt 提供私人雲端儲存解決方案",
+      "line2": "適用於個人、企業及大公司"
+    },
+    "subtitle": "Google、Microsoft、Apple 和其他雲端儲存提供商透過收集您的資料來盈利。切換到 Internxt，您將完全控制自己的隱私。",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "我們提供實惠的年費與終身儲存服務，用於儲存、分享、備份和同步您的檔案。Drive 還包括一個高級 VPN 和防毒軟體，全面保護您的隱私和線上安全。",
+      "cta": "取得 Internxt Drive"
+    },
+    "square2": {
+      "title": "Internxt for Business",
+      "description": "Internxt for Business 是符合 GDPR 的雲端儲存解決方案，保護敏感資訊並為最多 100 位使用者提供 2TB 的儲存空間。憑藉我們獲得的加密技術，Internxt 幫助您的公司減少資料外洩的風險。",
+      "cta": "取得 Internxt for Business"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 是一種加密端到端儲存解決方案，適用於需要大規模儲存資料的企業。相比其他提供商，我們的物件儲存解決方案便宜高達 80%。",
+      "cta": "取得 Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "為何 Internxt 是最安全、最私密的雲端儲存解決方案",
+    "description": "Internxt 結合了先進的隱私功能，提供最安全的雲端儲存服務，讓您高枕無憂。",
+    "info": [
+      {
+        "title": "獲獎加密技術",
+        "description": "我們的系統採用了 Kyber 512 後量子加密，是 NIST 為應對量子計算威脅而選擇的最佳加密標準。此技術可以保護您的資料免受未來量子計算機的攻擊，這些計算機理論上可能破解當前的加密協議。選擇 Internxt，您可以為未來的隱私需求做好準備。"
+      },
+      {
+        "title": "告別大公司",
+        "description": "Google、Dropbox 等其他雲端儲存提供商從您的資料中獲利，儲存並分析您的資訊，這可能導致您的電子郵件和其他個人資料洩漏到線上。與這些雲端平台不同，Internxt 採用了零知識與後量子加密技術，確保只有您可以訪問您的檔案。我們不會儲存、分享或出售您的資料。"
+      },
+      {
+        "title": "隨時隨地訪問",
+        "description": "您可以通過 Windows、Mac、Linux、iOS 或 Android 上的 Internxt Drive 應用程式輕鬆訪問雲端儲存。我們還支持 WebDAV 和 Rclone 等其他私人雲端儲存解決方案，使您能夠在多個設備上輕鬆管理檔案、自動備份並遠程訪問資料。"
+      },
+      {
+        "title": "開源並接受審計",
+        "description": "其他雲端平台將其程式碼源隱藏在公眾之外，您永遠無法真正了解他們如何處理您的資料或他們如何使用您的檔案。Internxt 承諾完全透明，所有產品的程式碼都公開在 GitHub 上。我的平台還通過獨立安全審計公司 Securitum 進行安全驗證。"
+      },
+      {
+        "title": "可持續性",
+        "description": "我們致力於建立一個更好的未來，並關注線上隱私，同時也承諾打造一個更環保的未來。我們的資料中心使用可再生能源，如核能和水力發電，利用環保技術來減少碳排放，以實現到 2050 年零碳排放的目標。"
+      },
+      {
+        "title": "符合 GDPR 要求",
+        "description": "Internxt 總部位於西班牙瓦倫西亞，確保您的資料隱私和安全，符合 GDPR 資料保護法。個人帳戶 Drive 保證您的資訊隱私，不會進行監控、分享或未經授權訪問；對於企業使用者，Internxt 減少了違規和法律問題的風險。"
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "想要私人雲端儲存解決方案嗎？",
+    "description": "Internxt Drive 透過後量子加密、VPN 和防毒軟體保護您的隱私。",
+    "cta": "取得 Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "透過 Internxt Drive 保護您的隱私",
+    "description": "透過後量子加密保護您的檔案，從今天開始掌控您的資料。",
+    "cta": "取得 Internxt"
+  },
+
+  "FaqSection": {
+    "title": "有疑問？我們為您解答",
+    "faq": [
+      {
+        "question": "Internxt 是 Google Drive 的替代品嗎？",
+        "answer": [
+          "是的，Internxt 是 Google Drive 和其他雲端儲存提供商的替代品。這些公司會對您的資料進行加密，並將其儲存在自己的伺服器上，這意味著他們可以訪問您的帳戶、查看您的檔案，或在政府要求時允許訪問。",
+          "與這些雲端儲存平台不同，Internxt 使用後量子加密和零知識加密技術，這意味著只有您可以訪問您的檔案。您的資料在上傳之前就在您的裝置上加密，其他人無法查看或解密它們，甚至 Internxt 也不能。"
+        ]
+      },
+      {
+        "question": "什麼是後量子加密？",
+        "answer": [
+          "後量子加密是一種加密算法，用來保護資料免受量子電腦的威脅。量子電腦可能能夠破解目前廣泛使用的傳統加密算法。後量子加密著重於開發算法，使得這些電腦無法解密並訪問您的資料。",
+          "這種加密方法非常適合像 Internxt 這樣的私人雲端儲存解決方案，因為它可以確保您的資料在面對量子計算技術挑戰時保持安全。"
+        ]
+      },
+      {
+        "question": "Internxt for Business 和 Internxt S3 有什麼區別？",
+        "answer": [
+          "Internxt for Business 是一個為企業設計的雲端儲存解決方案，提供團隊協作功能、管理控制和其他功能來幫助企業防止資料外洩。",
+          "Internxt S3 是一種基於雲的儲存解決方案，遵循 Amazon S3 協議，適用於需要擴展和整合儲存的開發者和公司，特別適合儲存大量資料。",
+          "主要區別在於，Internxt for Business 側重於團隊協作功能，而 Internxt S3 則提供一種可擴展的儲存解決方案，比 AWS、Azure 或 Google Cloud 便宜高達 90%。"
+        ]
+      },
+      {
+        "question": "為何選擇 Internxt 而不是其他雲端儲存平台？",
+        "answer": [
+          "我們所有的私人雲端儲存解決方案都將隱私放在首位，提供完全的控制權，並使用後量子加密 Kyber 512 來確保您的個人或企業資料能夠應對未來量子電腦的威脅。",
+          "Internxt 符合 GDPR 要求，降低了法律風險，並提供可擴展且負擔得起的解決方案，如 Internxt S3，提供零進出費用的儲存解決方案，按需付費。此外，我們的開源、獨立審計的透明度和對可持續性的承諾使 Internxt 成為一個可靠且值得信賴的選擇。"
+        ]
+      },
+      {
+        "question": "Internxt 的私人雲端儲存解決方案包括哪些內容？",
+        "answer": [
+          "Internxt 的高級訂閱和終身計劃包括加密的後量子雲端儲存、每月 5 台設備的無限 VPN、高速防毒軟體，並可以訪問我們的電子郵件和視訊會議產品。"
+        ]
+      },
+      {
+        "question": "我可以為我的終身計劃添加更多儲存空間嗎？",
+        "answer": [
+          "是的，Internxt 的終身計劃可以堆疊，因此您可以根據需要為您的終身計劃添加更多儲存空間。您可以使用相同的電子郵件地址購買新的終身計劃。",
+          "請透過 hello@internxt.com 與我們聯繫，我們將幫助您將所有計劃合併到同一帳戶下。"
+        ]
+      },
+      {
+        "question": "我可以通過信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受信用卡（Mastercard、VISA、American Express 等）支付，您還可以透過 PayPal、iDEAL、Sofort 和加密貨幣付款。"
+        ]
+      }
+    ]
+  },
+  "FeatureSection1": {
+    "title": "更多的隱私保護",
+    "description": "以隱私為中心的服務優先保護您的資料，確保它們在傳輸和靜止時都經過加密。與傳統的公共雲端儲存提供商不同，像 Internxt Drive 這樣的服務無法訪問您的加密密鑰，因此除了您之外沒有人可以查看或出售您的資料。"
+  },
+  "FeatureSection2": {
+    "title": "減少企業間諜行為",
+    "description": [
+      "像 Google 這樣的公司在其政策中聲明，透過使用其服務，您授權他們監控並利用您的資料謀取利益。像 Dropbox 這樣的其他服務有過資料外洩和不道德的資料共享歷史。",
+      "相比之下，私人雲端儲存解決方案無法訪問您的檔案，因為密鑰保存在所有者的裝置上，從而保護您的敏感資訊免受第三方侵犯。"
+    ]
+  },
+  "FeatureSection3": {
+    "title": "受到歐洲法律保護",
+    "description": [
+      "英國的近期法律問題和美國隱私法律的寬鬆促使許多人選擇基於歐洲的私人雲端儲存解決方案。像 GDPR 這樣的法規賦予客戶更多控制其資料的權利，包括訪問和刪除權限。",
+      "GDPR 合規不僅是法律要求，也是確保歐洲供應商不受外國政府請求資料的影響的保證，而其他服務可能會在政府或司法部門的要求下訪問資料。"
+    ]
+  },
+  "FeatureSection4": {
+    "title": "更多控制您的安全性",
+    "description": [
+      "不僅您能獲得更多的隱私保護，還能對檔案安全進行更多控制。Internxt 允許您定期或手動備份檔案，以防止資料遺失。",
+      "雲端儲存所提供的其他隱私控制包括加密檔案共享、密碼保護、企業級雙重身份驗證（2FA）和訪問日誌等。"
+    ]
+  }
+}

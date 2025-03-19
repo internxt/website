@@ -44,20 +44,10 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
         </div>
       )}
 
-      <div className="flex flex-row justify-center pb-4  pt-6 lg:justify-start">
-        <p className="flex flex-row items-end text-gray-100  text-white">
-          {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100   text-white">
-            <abbr className="mt-0.5 text-base ">{currency}</abbr>
-            {textContent.startFrom.price}
-          </span>
-          {textContent.startFrom.normal2}
-        </p>
-      </div>
       <div className="flex flex-row justify-center gap-4 pt-4 lg:justify-start ">
         <div className="flex flex-col items-center lg:flex-row">
           <Link
-            href={'#priceTable'}
+            href={'/pricing'}
             className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
           >
             {textContent.claimDeal}

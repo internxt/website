@@ -1,4 +1,4 @@
-import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
+
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
@@ -10,6 +10,7 @@ import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
+import { BannerForMobile } from './components/heroSection/BannerForMobile';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -60,7 +61,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 />
               </div>
             ) : (
-              <HomePageBannerForMobile />
+              <BannerForMobile />
             )}
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>

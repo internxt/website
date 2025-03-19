@@ -183,5 +183,16 @@
     "id": "vpn-extension",
     "title": "Internxt 免费安全 VPN | Internxt",
     "description": "Internxt 免费 VPN Chrome 扩展：安全浏览、加密 Wi-Fi 和隐私保护。下载我们的安全 VPN，在网上保护您的数据。"
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - 私人云存储解决方案",
+    "description": "了解更多关于私人云存储解决方案，以及Internxt如何通过后量子加密、杀毒软件和VPN保护您的数据。"
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - 云存储备份解决方案",
+    "description": "Internxt的云存储备份解决方案使用冗余和获奖的加密技术，保护您和您的企业免受数据丢失的风险。"
   }
+  
 ]

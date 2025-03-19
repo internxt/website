@@ -2,32 +2,31 @@ import Image from 'next/legacy/image';
 import RevealX from '@/components/components/RevealX';
 import { goToSignUpURL } from '@/lib/auth';
 
-const FeatureSection = ({ textContent, IconComponent }) => {
+const FeatureSectionReversed = ({ textContent, IconComponent }) => {
   return (
     <section className="relative overflow-hidden py-20">
-      {/* Icon with replaceable component */}
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-20">
-        <div className="flex items-center justify-center w-32 h-32 rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] shadow-xl">
-          <IconComponent size={64} className="text-white"  />
-        </div>
-      </div> */}
-
-      <div className="relative flex flex-col items-center justify-center px-5 lg:flex-row lg:space-x-20 z-10">
-        
-
+      <div className="relative z-10 flex flex-col items-start justify-center px-5 lg:flex-row lg:space-x-20">
         <RevealX
           direction="right"
           className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
         >
-          <IconComponent size={64} className="text-white flex items-center justify-center w-22 h-22 rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] shadow-xl p-3" weight="light" />
+          <IconComponent
+            size={64}
+            className="w-22 h-22 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] p-3 text-white shadow-xl"
+            weight="light"
+          />
           <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
-          {/* <button
-            className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
-            onClick={() => goToSignUpURL()}
-          >
-            {textContent.cta}
-          </button> */}
+          <p className="text-xl text-gray-80">
+            {Array.isArray(textContent.description)
+              ? textContent.description.map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    <br />
+                    <br />
+                  </span>
+                ))
+              : textContent.description}
+          </p>
         </RevealX>
 
         <RevealX direction="left">
@@ -45,4 +44,4 @@ const FeatureSection = ({ textContent, IconComponent }) => {
   );
 };
 
-export default FeatureSection;
+export default FeatureSectionReversed;

@@ -78,55 +78,8 @@ const PrivateCloudStorageSolutions = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
-        {/* <HeroSection
-          TextComponent={
-            
-            <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
-              <div className="flex w-full flex-col items-center space-y-8 lg:max-w-[524px] lg:items-start">
-                <div className="flex flex-col items-center space-y-4 text-center lg:items-start lg:text-start">
-                  <Header>
-                    {textContent.HeroSection.title.line1}
-                    <span> {textContent.HeroSection.title.line2}</span>
-                  </Header>
-                </div>
-                <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
-                <div className="flex flex-row justify-center pb-4  pt-6 lg:justify-start">
-                  <p className="flex flex-row items-end text-gray-100">
-                    {textContent.HeroSection.startFrom.normal1}{' '}
-                    <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
-                      <abbr className="mt-0.5 text-base ">{currency}</abbr>
-                      {textContent.HeroSection.startFrom.price}
-                    </span>
-                    {textContent.HeroSection.startFrom.normal2}
-                  </p>
-                </div>
-                <Link
-                  className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-                  href={'/pricing'}
-                >
-                  {textContent.HeroSection.cta}
-                </Link>
-                <div className="flex flex-row items-center justify-center space-x-3 pt-10 text-gray-100 lg:justify-start">
-                  <ShieldCheck size={24} weight="fill" className="text-primary" />
-                  <p className="whitespace-nowrap text-gray-100 lg:text-lg">{textContent.HeroSection.guarantee}</p>
-                </div>
-              </div>
-              <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-                <Animation />
-              </div>
-            </div>
-          }
-        /> */}
 
         <WhySwitchSection textContent={textContent.WhySwitchSection} bannerText={bannerJson.SignUpVPNBanner} />
-
-        {/* <FeatureSection textContent={textContent.FeatureSection} />
-
-        <FeatureSectionReversed textContent={textContent.FeatureSection} />
-
-        <FeatureSection textContent={textContent.FeatureSection} />
-
-        <FeatureSectionReversed textContent={textContent.FeatureSection} /> */}
 
         <FeatureSection textContent={textContent.FeatureSection1} IconComponent={LockKey} />
 
@@ -136,11 +89,12 @@ const PrivateCloudStorageSolutions = ({
 
         <FeatureSectionReversed textContent={textContent.FeatureSection4} IconComponent={ShieldPlus} />
 
-        <CtaSection textContent={textContent.CtaSection} />
+        <CtaSection textContent={textContent.CtaSection1} />
+        {/* <WhySwitchSection textContent={textContent.FeaturesSection} bannerText={bannerJson.SignUpVPNBanner} /> */}
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
 
-        <CtaSection textContent={textContent.CtaSection} />
+        <CtaSection textContent={textContent.CtaSection2} />
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} />
 

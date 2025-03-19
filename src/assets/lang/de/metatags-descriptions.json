@@ -176,13 +176,13 @@
     "description": "Kostenlose Internxt VPN-Erweiterung für Chrome: sicheres Surfen, verschlüsseltes WLAN und Schutz der Privatsphäre. Laden Sie unser sicheres VPN herunter, um Ihre Daten online zu schützen."
   },
   {
-    "id": "private-cloud-storage-solutions",
-    "title": "Internxt - Private Cloud Storage Solutions ",
-    "description": "Learn more about private cloud storage solutions and how Internxt protects your data with post-quantum encryption, antivirus, and VPN."
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Private Cloud-Speicherlösungen",
+    "description": "Erfahren Sie mehr über private Cloud-Speicherlösungen und wie Internxt Ihre Daten mit Post-Quantum-Verschlüsselung, Antivirus und VPN schützt."
   },
   {
-    "id": "cloud-storage-backup-solutions",
-    "title": "Internxt - Cloud Storage Backup Solutions ",
-    "description": "Internxt cloud storage backup solutions use redundancy and award-winning encryption that protects you and your business from data loss. "
-  }
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - Cloud-Speicher-Backup-Lösungen",
+    "description": "Internxt Cloud-Speicher-Backup-Lösungen nutzen Redundanz und preisgekrönte Verschlüsselung, die Sie und Ihr Unternehmen vor Datenverlust schützt."
+  }  
 ]

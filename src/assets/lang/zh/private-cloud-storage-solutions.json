@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "保护您的数据",
+        "textAfterBlueText": "为您提供私有云存储解决方案"
+      },
+      "description": "Internxt是一个开源云存储提供商，采用后量子加密技术，旨在保护您的数据隐私。",
+      "claimDeal": "获取Internxt",
+      "guarantee": "30天退款保证"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "为保护您的数据提供私有云存储解决方案",
+      "cta": "获取Internxt",
+      "guarantee": "30天退款保证"
+    }
+  },
+
+  "WhySwitchSection": {
+    "title": "为什么选择私有云存储解决方案",
+    "subtitle": "转向私有云存储可以确保您的数据保持私密，并防止黑客和公司滥用。与Google、Apple或Microsoft不同，Internxt不收集、出售或利用您的数据。您可以完全控制您的文件。",
+    "description": "投资隐私，确保您的文件和数据免受安全漏洞的威胁，获得更多的安心。",
+    "cta": "获取Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt提供私有云存储解决方案",
+      "line2": "适用于个人、企业和大型公司"
+    },
+    "subtitle": "Google、Microsoft、Apple和其他云存储提供商通过收集您的数据来盈利。切换到Internxt，您将完全控制自己的隐私。",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "我们提供实惠的年费和终身存储服务，用于存储、共享、备份和同步您的文件。Drive还包括一款高级VPN和防病毒软件，全面保护您的隐私和在线安全。",
+      "cta": "获取Internxt Drive"
+    },
+    "square2": {
+      "title": "Internxt for Business",
+      "description": "Internxt for Business是符合GDPR的云存储解决方案，保护敏感信息并为多达100个用户提供2TB的存储空间。凭借我们获得的加密技术，Internxt帮助您的公司抵御数据泄露的风险。",
+      "cta": "获取Internxt for Business"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3是一种加密端到端存储解决方案，适用于需要大规模存储数据的企业。我们的对象存储解决方案比其他提供商便宜多达80%。",
+      "cta": "获取Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "为什么Internxt是最安全、最私密的云存储解决方案",
+    "description": "Internxt结合了先进的隐私功能，提供最安全的云存储服务，让您高枕无忧。",
+    "info": [
+      {
+        "title": "获得奖项的加密技术",
+        "description": "我们的系统采用Kyber 512后量子加密，是NIST为应对量子计算威胁而选择的最佳加密标准。此技术可以保护您的数据免受未来量子计算机的攻击，这些计算机理论上可能破解当前的加密协议。选择Internxt，您可以为未来的隐私需求做好准备。"
+      },
+      {
+        "title": "告别大公司",
+        "description": "Google、Dropbox等其他云存储提供商从您的数据中获利，存储和分析您的信息，这可能导致您的电子邮件和其他个人信息泄露到线上。与这些云平台不同，Internxt采用零知识和后量子加密技术，确保只有您能访问自己的文件。我们不会存储、分享或出售您的数据。"
+      },
+      {
+        "title": "随时随地访问",
+        "description": "通过Windows、Mac、Linux、iOS或Android上的Internxt Drive应用程序，您可以轻松访问云存储。我们还支持WebDAV和Rclone等其他私有云存储解决方案，使您能够在多个设备上轻松管理文件、自动备份并远程访问数据。"
+      },
+      {
+        "title": "开源并接受审计",
+        "description": "其他云平台将其代码源隐藏在公众之外，您永远无法真正了解他们如何处理您的数据或他们如何使用您的文件。Internxt承诺完全透明，所有产品的源代码都公开在GitHub上。我们的平台还通过独立安全审计公司Securitum进行安全验证。"
+      },
+      {
+        "title": "可持续性",
+        "description": "我们致力于建立一个更好的未来，同时关注在线隐私，也承诺打造一个更环保的未来。我们的数据中心使用可再生能源，如核能和水力发电，利用环保技术来减少碳排放，以实现到2050年零碳排放的目标。"
+      },
+      {
+        "title": "符合GDPR要求",
+        "description": "Internxt总部位于西班牙瓦伦西亚，确保您的数据隐私和安全，符合GDPR数据保护法。个人账户Drive保证您的信息隐私，不会进行监控、分享或未经授权访问；对于企业用户，Internxt减少了违规和法律问题的风险。"
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "想要私有云存储解决方案吗？",
+    "description": "Internxt Drive通过后量子加密、VPN和防病毒软件保护您的隐私。",
+    "cta": "获取Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "通过Internxt Drive保护您的隐私",
+    "description": "通过后量子加密保护您的文件，从今天开始掌控您的数据。",
+    "cta": "获取Internxt"
+  },
+
+  "FaqSection": {
+    "title": "有疑问？我们为您解答",
+    "faq": [
+      {
+        "question": "Internxt是Google Drive的替代品吗？",
+        "answer": [
+          "是的，Internxt是Google Drive和其他云存储提供商的替代品。这些公司对您的数据进行加密，并将其存储在自己的服务器上，这意味着他们可以访问您的帐户，查看您的文件，或者在政府要求时允许访问。",
+          "与这些云存储平台不同，Internxt使用后量子加密和零知识加密，这意味着只有您可以访问您的文件。您的数据在上传之前就在您的设备上加密，其他人无法查看或解密它们，甚至Internxt也不能。"
+        ]
+      },
+      {
+        "question": "什么是后量子加密？",
+        "answer": [
+          "后量子加密是一种加密算法，用于保护数据免受量子计算机的威胁。量子计算机可能能够破解目前广泛使用的传统加密算法。后量子加密着重于开发算法，使这些计算机无法解密和访问您的数据。",
+          "这种加密方法非常适合像Internxt这样的私有云存储解决方案，因为它可以确保您的数据在面对量子计算技术的挑战时保持安全。"
+        ]
+      },
+      {
+        "question": "Internxt for Business和Internxt S3有什么区别？",
+        "answer": [
+          "Internxt for Business是一个为企业设计的云存储解决方案，提供团队协作功能、管理控制和其他功能来帮助企业防止数据泄露。",
+          "Internxt S3是一种基于云的存储解决方案，遵循Amazon S3协议，适用于需要扩展和集成存储的开发人员和公司，特别适合存储大量数据。",
+          "主要区别在于，Internxt for Business侧重于团队协作功能，而Internxt S3则提供一种可扩展的存储解决方案，比AWS、Azure或Google Cloud便宜多达90%。"
+        ]
+      },
+      {
+        "question": "为什么选择Internxt而不是其他云存储平台？",
+        "answer": [
+          "我们所有的私有云存储解决方案都将隐私放在首位，提供完全的控制权，并使用后量子加密Kyber 512来确保您的个人或企业数据能够应对未来量子计算机的威胁。",
+          "Internxt符合GDPR要求，降低了法律风险，并提供可扩展且负担得起的解决方案，如Internxt S3，提供零入口和出口费用的存储解决方案，按需付费。此外，我们的开源、独立审计的透明性和对可持续性的承诺使Internxt成为一个可靠且值得信赖的选择。"
+        ]
+      },
+      {
+        "question": "Internxt的私有云存储解决方案包括哪些内容？",
+        "answer": [
+          "Internxt的高级订阅和终身计划包括加密的后量子云存储、每月5台设备的无限VPN、高速防病毒软件，并可以访问我们的电子邮件和视频会议产品。"
+        ]
+      },
+      {
+        "question": "我可以为我的终身计划添加更多存储空间吗？",
+        "answer": [
+          "是的，Internxt的终身计划可以叠加，所以您可以根据需要为您的终身计划添加更多存储空间。您可以使用相同的电子邮件地址购买新的终身计划。",
+          "请通过hello@internxt.com与我们联系，我们将帮助您将所有计划合并到同一账户下。"
+        ]
+      },
+      {
+        "question": "我可以通过信用卡、PayPal或加密货币付款吗？",
+        "answer": [
+          "Internxt目前接受信用卡（Mastercard、VISA、American Express等）支付，您还可以通过PayPal、iDEAL、Sofort和加密货币付款。"
+        ]
+      }
+    ]
+  },
+  "FeatureSection1": {
+    "title": "更多的隐私保护",
+    "description": "以隐私为中心的服务优先保护您的数据，确保它们在传输和静止时都经过加密。与传统的公共云存储提供商不同，像Internxt Drive这样的服务无法访问您的加密密钥，因此除了您之外没有人可以查看或出售您的数据。"
+  },
+  "FeatureSection2": {
+    "title": "减少企业间谍行为",
+    "description": [
+      "像Google这样的公司在其政策中声明，通过使用其服务，您授权他们监控并利用您的数据谋取利益。像Dropbox这样的其他服务有过数据泄露和不道德的数据共享历史。",
+      "相比之下，私有云存储解决方案无法访问您的文件，因为密钥保存在所有者的设备上，从而保护您的敏感信息免受第三方侵犯。"
+    ]
+  },
+  "FeatureSection3": {
+    "title": "受到欧洲法律保护",
+    "description": [
+      "英国的近期法律问题和美国隐私法律的宽松促使许多人选择基于欧洲的私有云存储解决方案。像GDPR这样的法规赋予客户更多控制其数据的权利，包括访问和删除权限。",
+      "GDPR合规不仅是法律要求，也是确保欧洲供应商不受外国政府请求数据的影响的保证，而其他服务可能会在政府或司法部门的要求下访问数据。"
+    ]
+  },
+  "FeatureSection4": {
+    "title": "更多控制您的安全性",
+    "description": [
+      "不仅您能获得更多的隐私保护，还能对文件安全进行更多控制。Internxt允许您定期或手动备份文件，以防止数据丢失。",
+      "云存储所提供的其他隐私控制包括加密文件共享、密码保护、企业级双重身份验证（2FA）和访问日志等。"
+    ]
+  }
+}

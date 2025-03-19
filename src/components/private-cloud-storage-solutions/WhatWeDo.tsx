@@ -5,9 +5,9 @@ import ProductCardReversed from '../shared/ProductCardReversed';
 const WhatWeDo = ({ textContent, lang }) => {
   return (
     <section className="overflow-hidden">
-      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 pt-20 text-gray-100 ">
+      <div className="z-10 flex flex-col items-center space-y-16 bg-gray-1 px-5 py-20 text-gray-100 ">
         <div className="px-6 text-center">
-          <h2 className="mb-10 text-5xl font-semibold">
+          <h2 className="mb-5 text-5xl font-semibold">
             {textContent.title.line1} <br className="hidden sm:flex" />
             {textContent.title.line2}
           </h2>
@@ -26,7 +26,7 @@ const WhatWeDo = ({ textContent, lang }) => {
           <ProductCardReversed
             imageUrl={getImage('/images/privacy/Share-by-email.webp')}
             animationDirection={'right'}
-            redirect={'https://send.internxt.com'}
+            redirect={'/business'}
             lang={lang}
             textContent={textContent.square2}
           />
@@ -34,7 +34,7 @@ const WhatWeDo = ({ textContent, lang }) => {
           <ProductCard
             imageUrl={getImage('/images/privacy/internxt_vpn_extension.webp')}
             animationDirection={'left'}
-            redirect={'/vpn'}
+            redirect={'/cloud-object-storage'}
             lang={lang}
             textContent={textContent.square3}
           />

@@ -1,91 +1,20 @@
 {
   "HeroSection": {
-    "label": "Save 80%",
-    "title": {
-      "line1": "Cloud storage backup solutions for",
-      "blueText": "data protection and recovery",
-      "line2": ""
-    },
-    "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
-    "cta": {
-      "title": "Get 1GB",
-      "subtitle": "For free!"
-    },
-    "featuredIn": "Featured in",
-    "SignUp": {
-      "cta": {
-        "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 1GB for FREE"
-      },
-      "disclaimer": {
-        "text": "By creating an account you accept the",
-        "link": "terms of service, and privacy policy"
-      },
-      "fields": {
-        "email": {
-          "label": "Email",
-          "placeholder": "Email"
-        },
-        "password": {
-          "label": "Password",
-          "placeholder": "Password",
-          "strength": {
-            "complexity": "Password is not complex enough",
-            "length": "Password has to be at least 8 characters long",
-            "weak": "Password is weak",
-            "strong": "Password is strong"
-          }
-        },
-        "submit": {
-          "get": "Get 1GB",
-          "free": "For Free!"
-        }
-      }
-    },
-    "TitleAndSurvey": {
-      "title": {
-        "line1": "Store your files safely, now ",
-        "blueText": "80% cheaper"
-      },
-      "trustedBy": "Trusted by 330,000+ people",
-      "description": {
-        "normal1": "Protect your work and personal files with ",
-        "bold": "affordable military-grade encrypted ",
-        "normal2": "cloud storage."
-      },
-      "howMuchYouNeed": "How much online storage do you need?",
-      "upTo": "Up to: ",
-      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
-    },
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
         "blueText": "protect your data",
         "textAfterBlueText": "Private cloud storage solutions to "
       },
-      "subtitle": "Full Security. Total control.",
       "description": "Internxt is an open-source cloud storage provider with post-quantum encryption to keep your data private.",
-      "features": [
-        "Drive, Meet, Mail, VPN, Antivirus & more",
-        "Post-quantum zero-knowledge encryption",
-        "Open source and audited"
-      ],
-
-      "startFrom": {
-        "normal1": "Start from ",
-        "price": " 0.95",
-        "normal2": " /month"
-      },
-      "claimDeal": "Claim deal",
+      "claimDeal": "Get Internxt",
       "guarantee": "30-day money-back guarantee"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Save 80%",
-      "title": "New pricing plans available now!",
-      "cta": "Claim deal!",
+      "title": "Private cloud storage solutions to protect your data",
+      "cta": "Get Internxt",
       "guarantee": "30-day money-back guarantee"
-    },
-    "youKnow": "Did you know?"
+    }
   },
 
   "WhySwitchSection": {
@@ -96,8 +25,8 @@
   },
   "WhatWeDo": {
     "title": {
-      "line1": "Internxt offers private cloud storage solutions ",
-      "line2": "for personal, business, and enterprises."
+      "line1": "Internxt offers private cloud storage solutions",
+      "line2": "for personal, business, and enterprises"
     },
     "subtitle": "Google, Microsoft, Apple, and other cloud storage service providers are exploiting your data for profit. Switch to Internxt to get total control of your privacy.",
     "square1": {
@@ -116,8 +45,10 @@
       "cta": "Get Internxt S3"
     }
   },
-  
+
   "FeaturesSection": {
+    "title": "Why Internxt stands out as the most secure and private cloud storage",
+    "description": "Internxt integrates advanced privacy features to offer the most secure cloud storage for your peace of mind.",
     "info": [
       {
         "title": "Award-winning encryption",
@@ -146,17 +77,16 @@
     ]
   },
 
-
-  "CtaSection": {
-    "title": "Break free from online trackers",
-    "description": "Hide your data for a secure browsing experience with Internxt VPN",
+  "CtaSection1": {
+    "title": "Interested in private cloud solutions?",
+    "description": "Internxt Drive protects you with post-quantum encryption, antivirus, and VPN.",
     "cta": "Get Internxt"
   },
 
   "CtaSection2": {
-    "title": "No more spying eyes",
-    "description": "Encrypt your connection for total privacy with Internxt VPN",
-    "cta": "Try for free"
+    "title": "Protect your privacy with Internxt Drive",
+    "description": "Secure your files with post-quantum encryption and regain control over your data today.",
+    "cta": "Get Internxt"
   },
 
   "FaqSection": {

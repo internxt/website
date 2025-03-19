@@ -88,7 +88,7 @@ const Animation = ({
           height: '152px',
           bottom: '150px',
           borderRadius: '24px',
-          opacity: 0.7, // Add transparency to the image
+          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
@@ -102,7 +102,7 @@ const Animation = ({
           width: '211px',
           height: '190px',
           borderRadius: '24px',
-          opacity: 0.7, // Add transparency to the image
+          opacity: 0.7, 
         }}
       >
         <Image
@@ -122,7 +122,7 @@ const Animation = ({
           filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
           width: '64px',
           height: '64px',
-          opacity: 0.7, // Add transparency to the image
+          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
@@ -135,7 +135,7 @@ const Animation = ({
           filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
           width: '56px',
           height: '56px',
-          opacity: 0.7, // Add transparency to the image
+          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />

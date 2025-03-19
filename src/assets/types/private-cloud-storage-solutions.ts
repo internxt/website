@@ -7,7 +7,8 @@ export interface PrivateCloudStorageSolutionsText {
   FeaturesSection: FeaturesSection;
   WhatWeDo: WhatWeDo;
   FaqSection: FAQSection;
-  CtaSection: BetterTomorrowSection;
+  CtaSection1: BetterTomorrowSection;
+  CtaSection2: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
 }
 

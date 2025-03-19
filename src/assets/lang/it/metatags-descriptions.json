@@ -178,5 +178,15 @@
     "id": "vpn-extension",
     "title": "Internxt VPN gratuito e sicuro | Internxt",
     "description": "Estensione VPN gratuita di Internxt per Chrome: navigazione sicura, Wi-Fi crittografato e protezione della privacy. Scarica la nostra VPN sicura per proteggere i tuoi dati online."
-  }
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Soluzioni di Archiviazione Cloud Privato",
+    "description": "Scopri di più sulle soluzioni di archiviazione cloud privato e su come Internxt protegge i tuoi dati con crittografia post-quantistica, antivirus e VPN."
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - Soluzioni di Backup per Archiviazione Cloud",
+    "description": "Le soluzioni di backup per archiviazione cloud di Internxt utilizzano la ridondanza e una crittografia premiata che protegge te e la tua azienda dalla perdita di dati."
+  }  
 ]
