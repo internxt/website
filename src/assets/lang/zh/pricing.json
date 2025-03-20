@@ -32,17 +32,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "立省 80%",
-      "title": "迎接隐私新时代！",
-      "subtitle": "全新套餐，包含高级杀毒软件和 VPN",
-      "cta": "立即领取优惠",
-      "cta2": "立享 85% 折扣",
-      "guarantee": "30 天退款保证",
+      "label": "节省80%",
+      "title": "圣帕特里克节特别优惠！",
+      "subtitle": "终身存储、杀毒软件和VPN",
+      "cta": "获取您的计划!",
+      "cta2": "享受80%折扣",
+      "guarantee": "30天退款保证",
       "lastCta": "*优惠适用于免费账户或新客户",
-      "titleMbl1": "全新",
-      "titleMbl2": "定价方案",
-      "titleMbl3": "保护您所爱的一切，直到永远！",
-      "ctaMbl": "购买套餐"
+      "titleMbl": "全新终身计划！",
+      "subtitleMbl": "终身存储、杀毒软件和VPN",
+      "ctaMbl": "购买您的计划"
     },
     "save": "省高达",
     "planTitles": {

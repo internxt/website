@@ -13,8 +13,9 @@ const BitdefenderBanner = (languageForImage) => {
   };
 
   const handleOnClick = () => {
-    router.push(
+    window.open(
       `https://www.bitdefender.com/pages/consumer/${languageForImage.languageForImage}/new/trial/ts-trial-3m/internxt/`,
+      '_blank',
     );
   };
 

@@ -42,9 +42,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.freeUserCoupon,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -77,18 +79,20 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      couponCodeForCheckout?.name,
     );
   };
 
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  console.log('individualCoupon', individualCoupon?.name);
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -106,7 +110,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.tableSection}
         decimalDiscount={{
           individuals: decimalDiscount,
-          lifetime: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}

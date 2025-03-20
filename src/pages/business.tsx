@@ -39,7 +39,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.SpringCoupon,
+    couponCodeForBusiness: PromoCodeName.freeUserCoupon,
   });
 
   const locale = lang as string;

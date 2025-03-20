@@ -40,8 +40,11 @@ const PartnerDiscount = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.freeUserCoupon,
+    couponCodeForLifetime: PromoCodeName.StPatricksDay,
   });
 
   const cardsData = [
@@ -68,15 +71,21 @@ const PartnerDiscount = ({
   ];
 
   const locale = lang as string;
+
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      individualCoupon?.name,
+      couponCodeForCheckout?.name,
     );
   };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
@@ -124,8 +133,8 @@ const PartnerDiscount = ({
         <PricingSectionWrapper
           textContent={langJson.PaymentSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
-            lifetime: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
           }}
           lang="en"
           products={products}

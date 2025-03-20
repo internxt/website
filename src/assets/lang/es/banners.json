@@ -16,9 +16,9 @@
     "guarantee": "Garantía de devolución de 30 días"
   },
   "featuresBanner": {
-    "label": "¡Ahorra un 85%!",
+    "label": "¡Ahorra un 80%!",
     "title": "Oferta para la semana de Privacidad de Datos.",
-    "subtitle": "85% en TODOS los planes lifetime",
+    "subtitle": "80% en TODOS los planes lifetime",
     "cta": "Consigue el tuyo",
     "guarantee": "Garantía de devolución de 30 días",
     "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
@@ -108,8 +108,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de descuento en todos los nuevos planes!  ",
-      "normalText": "¡Hola Primavera!   ",
+      "boldText": "80% de descuento en nuestros nuevos planes de por vida  ",
+      "normalText": "¡Feliz San Patricio!   ",
       "cta": "Consigue tu plan!"
     }
   },

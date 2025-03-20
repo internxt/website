@@ -48,7 +48,7 @@
     }
   },
   "featuresBanner": {
-    "label": "Save 85% ",
+    "label": "Save 80% ",
     "title": "Make your privacy play!",
     "subtitle": "Special offer! Win two Internxt x Swiss Peak backpacks",
     "cta": "Choose plan",
@@ -146,8 +146,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": " 80% OFF our brand new pricing plans",
-      "normalText": "Spring has sprung!",
+      "boldText": " 80% OFF our new lifetime plans",
+      "normalText": "Get the luck of the Irish!",
       "cta": " Claim deal"
     }
   },

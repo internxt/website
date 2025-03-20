@@ -101,6 +101,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         couponType={PromoCodeName.CloudwardsCoupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
+        isCloudwards
       />
 
       <div className="mt-20 flex w-full flex-col items-center gap-9">

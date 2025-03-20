@@ -150,6 +150,10 @@
       "discount": "% OFF",
       "billedAnnually": "One-time payment",
       "cta": "Redeem deal",
+      "stPatricksFeatures": {
+        "title": "Internxt themed goodies:",
+        "gift": "St. Patrick’s Day theme for Web App"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",
