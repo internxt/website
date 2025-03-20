@@ -16,6 +16,7 @@ interface PriceTableProps {
   discount?: number;
   isStartPage?: boolean;
   titleFontSize?: string;
+  isCloudwards?: boolean;
 }
 
 const PriceTable: React.FC<PriceTableProps> = ({
@@ -25,6 +26,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
   billingFrequency,
   isStartPage,
   titleFontSize,
+  isCloudwards,
 }) => {
   const { products, currency, lifetimeCoupons, currencyValue, loadingCards } = usePricing({
     fetchLifetimeCoupons: true,
@@ -95,6 +97,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                       priceBefore={discount ? product.price : undefined}
                       percentOff={discount ? 100 - discount : 0}
+                      isCloudwards={isCloudwards}
                     />
                   );
                 })
