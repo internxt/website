@@ -62,5 +62,6 @@
     "withAnnualBilling": "con facturación anual"
   },
   "oneTimePayment": "*Se requiere una tarifa única de 1€ para la verificación de la cuenta",
+  "invalidCoupon": "Cupón inválido",
   "error500": "Por favor, introduce un VAT ID válido"
 }

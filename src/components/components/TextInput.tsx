@@ -3,6 +3,7 @@
 
 import { FieldError, UseFormRegister } from 'react-hook-form';
 import { IFormValues } from '../cloud-object-storage/integrated-checkout/IntegratedCheckoutView';
+import { CSSProperties } from 'react';
 
 export interface TextInputProps {
   className?: string;
@@ -62,8 +63,10 @@ export interface TextInputProps {
   onChangeText?: (text: string) => void;
   onFocus?: (e: any) => void | (() => void);
   onBlur?: (e: any) => void | (() => void);
+  onKeyDown?: (e: any) => void | (() => void);
   autoCompleteOnFocus?: boolean;
   disabledText?: string;
+  style?: CSSProperties;
 }
 
 const validatePassword = (password) => {
@@ -135,6 +138,8 @@ const TextInput = (props: TextInputProps) => {
         }
       }}
       onBlur={props.onBlur}
+      onKeyDown={props.onKeyDown}
+      style={props.style}
     />
   );
 };
