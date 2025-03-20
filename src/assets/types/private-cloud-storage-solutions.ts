@@ -1,9 +1,6 @@
 export interface PrivateCloudStorageSolutionsText {
   HeroSection: HeroSection;
-  FeatureSection1: FeatureSection;
-  FeatureSection2: FeatureSection;
-  FeatureSection3: FeatureSection;
-  FeatureSection4: FeatureSection;
+  FeatureSection: ComponentsInColumn;
   FeaturesSection: FeaturesSection;
   WhatWeDo: WhatWeDo;
   FaqSection: FAQSection;
@@ -11,7 +8,25 @@ export interface PrivateCloudStorageSolutionsText {
   CtaSection2: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
 }
+export interface ComponentsInColumn {
+  title: string;
+  titleLine2: string;
+  description: string;
+  cta: string;
+  cards: ComponentsInColumnCards;
+}
 
+export interface ComponentsInColumnCards {
+  element1: Element4Class;
+  element2: Element4Class;
+  element3: Element4Class;
+  element4: Element4Class;
+}
+
+export interface Element4Class {
+  title: string;
+  description: string;
+}
 export interface CtaSection {
   title: string;
   description: string;
@@ -36,11 +51,6 @@ export interface FAQ {
   answer: string[];
 }
 
-export interface FeatureSection {
-  title: string;
-  description: string;
-  cards: Cards;
-}
 
 export interface FeaturesSection {
   title: string;

@@ -1,33 +1,24 @@
 import Script from 'next/script';
 
-//import HeroSection from '@/components/shared/components/HeroSection';
 import HeroSection from '@/components/private-cloud-storage-solutions/HeroSection';
 
-import FAQSection from '@/components/private-cloud-storage-solutions/FAQSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import { currencyService } from '@/components/services/currency.service';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import CtaSection from '@/components/private-cloud-storage-solutions/CtaSection';
-import FeatureSection from '@/components/private-cloud-storage-solutions/FeatureSection';
-import FeatureSectionReversed from '@/components/private-cloud-storage-solutions/FeatureSectionReversed';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
-import { getImage } from '@/lib/getImage';
-import Header from '@/components/shared/Header';
-import Link from 'next/link';
-import Image from 'next/image';
+
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
 import { BannersText } from '@/assets/types/components/banners';
-import { WhySwitchSection } from '@/components/private-cloud-storage-solutions/WhySwitchSection';
 import FeaturesSection from '@/components/private-cloud-storage-solutions/FeaturesSection';
 import WhatWeDo from '@/components/private-cloud-storage-solutions/WhatWeDo';
-import { Detective, Gavel, LockKey, ShieldCheck, ShieldPlus, Trophy } from '@phosphor-icons/react';
-import { Lock } from '@phosphor-icons/react/dist/ssr';
-import { useEffect, useState } from 'react';
-import Animation from '@/components/private-cloud-storage-solutions/components/Animation';
+import { Detective, Gavel, LockKey, ShieldPlus } from '@phosphor-icons/react';
+import CtaSection from '@/components/shared/CtaSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import FeatureSection from '@/components/private-cloud-storage-solutions/FeatureSection';
+
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -47,20 +38,9 @@ const PrivateCloudStorageSolutions = ({
   lang,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
-  const langForLink = lang === 'en' ? '' : lang;
   const locale = lang as string;
-  const CTA_URL = `https://internxt.com/${langForLink}/pricing`;
-  const [currency, setCurrency] = useState<string>('€');
-  useEffect(() => {
-    currencyService
-      .filterCurrencyByCountry()
-      .then((currency) => {
-        setCurrency(currency.currency);
-      })
-      .catch(() => {
-        // NO OP
-      });
-  }, []);
+  const CTA_URL = `/pricing`;
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -77,24 +57,23 @@ const PrivateCloudStorageSolutions = ({
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-        <WhySwitchSection textContent={textContent.WhySwitchSection} bannerText={bannerJson.SignUpVPNBanner} />
 
-        <FeatureSection textContent={textContent.FeatureSection1} IconComponent={LockKey} />
+        <FeatureSection textContent={textContent.FeatureSection} />
 
-        <FeatureSectionReversed textContent={textContent.FeatureSection2} IconComponent={Detective} />
+        {/* <FeatureSectionReversed textContent={textContent.FeatureSection3} IconComponent={Gavel} />
 
-        <FeatureSection textContent={textContent.FeatureSection3} IconComponent={Gavel} />
+        <FeatureSection textContent={textContent.FeatureSection4} IconComponent={ShieldPlus} />
 
-        <FeatureSectionReversed textContent={textContent.FeatureSection4} IconComponent={ShieldPlus} />
+        <FeatureSectionReversed textContent={textContent.FeatureSection2} IconComponent={Detective} /> */}
 
-        <CtaSection textContent={textContent.CtaSection1} />
-        {/* <WhySwitchSection textContent={textContent.FeaturesSection} bannerText={bannerJson.SignUpVPNBanner} /> */}
+        <CtaSection textContent={textContent.CtaSection1} url={CTA_URL} customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
 
-        <CtaSection textContent={textContent.CtaSection2} />
+        <CtaSection textContent={textContent.CtaSection2} url={CTA_URL} customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>} />
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} />
 

@@ -1,20 +1,11 @@
 {
   "HeroSection": {
-    "TitleAndOnePlan": {
-      "title": {
-        "textBeforeBlueText": "",
-        "blueText": "protect your data",
-        "textAfterBlueText": "Private cloud storage solutions to "
-      },
-      "description": "Internxt is an open-source cloud storage provider with post-quantum encryption to keep your data private.",
-      "claimDeal": "Get Internxt",
-      "guarantee": "30-day money-back guarantee"
+    "title": {
+      "line1": "Private cloud storage solutions to",
+      "line2": "protect your data"
     },
-    "TitleAndOnePlanV2": {
-      "title": "Private cloud storage solutions to protect your data",
-      "cta": "Get Internxt",
-      "guarantee": "30-day money-back guarantee"
-    }
+    "description": "Internxt is an open-source cloud storage provider with post-quantum encryption to keep your data private.",
+    "cta": "Get Internxt"
   },
 
   "WhySwitchSection": {
@@ -23,10 +14,10 @@
     "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
     "cta": "Get Internxt"
   },
-  "WhatWeDo": {
+  "InxtAppsSection": {
     "title": {
-      "line1": "Internxt offers private cloud storage solutions",
-      "line2": "for personal, business, and enterprises"
+      "line1": "Internxt offers private cloud storage solutions ",
+      "line2": "for personal, business, and enterprises."
     },
     "subtitle": "Google, Microsoft, Apple, and other cloud storage service providers are exploiting your data for profit. Switch to Internxt to get total control of your privacy.",
     "square1": {
@@ -45,10 +36,12 @@
       "cta": "Get Internxt S3"
     }
   },
-
-  "FeaturesSection": {
-    "title": "Why Internxt stands out as the most secure and private cloud storage",
-    "description": "Internxt integrates advanced privacy features to offer the most secure cloud storage for your peace of mind.",
+  "BetterTomorrowSection": {
+    "title": "Advocate for a better tomorrow",
+    "description": "It’s time to take your privacy into your own hands. We encourage everyone to become proactive in their own protection. Learn more about the right to privacy. Get involved with our curated list of reputable organizations advocating for digital rights.",
+    "cta": "Directory of digital rights organizations"
+  },
+  "AwardsSection": {
     "info": [
       {
         "title": "Award-winning encryption",
@@ -74,21 +67,86 @@
         "title": "GDPR compliant",
         "description": "Based in Valencia, Spain, Internxt ensures your data is private and secure by complying with GDPR data protection laws. A personal Drive account keeps your information private with no tracking, sharing, or unauthorized access and, for businesses, reduces the risk of fines and legal issues for businesses."
       }
+    ],
+    "BetterFutureSection": {
+      "title": "Let’s build a better future together",
+      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, **we're hiring!**",
+      "cta": "Careers at Internxt"
+    }
+  },
+  "SecureVPNSection": {
+    "title": "Why use a secure VPN",
+    "subtitle": "Unsecured internet connections, such as Public Wi-Fi, can expose your information to data leaks, hacks, or breaches. Internxt’s VPN encrypts your connection for a safer, more private online experience.",
+    "description": " Internxt’s free VPN encrypts your connection for a safer, more private online experience.",
+    "cards": [
+      {
+        "title": "Encrypt your internet traffic",
+        "description": "We encrypt your data to protect your right to privacy and keep your browsing activity hidden from hackers, ISPs, and Google."
+      },
+      {
+        "title": "Avoid targeted advertising",
+        "description": "A secure VPN helps you avoid personalized ads and reduces data collection from companies like Google."
+      },
+      {
+        "title": "Unlock Global Content",
+        "description": "Bypass geo-restrictions and access websites unavailable in your region."
+      },
+      {
+        "title": "Control your online identity",
+        "description": "Internxt’s secure VPN gives you back control over how much information you share online and keeps it protected."
+      }
     ]
   },
 
-  "CtaSection1": {
-    "title": "Interested in private cloud solutions?",
-    "description": "Internxt Drive protects you with post-quantum encryption, antivirus, and VPN.",
+  "HowItWorksSection": {
+    "title": "How it works",
+    "subtitle": "Internxt’s VPN uses unlimited, fast speed, and secure servers to encrypt and transmit sensitive data. Mask your IP address and protect your information from third-party data collection.",
+    "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
+    "cards": [
+      {
+        "title": "Advanced encryption",
+        "description": "Internxt VPN extension uses secure data encryption protocols, offering the highest protection for a safe and private connection."
+      },
+      {
+        "title": "Secure networks",
+        "description": "Enjoy secure and access to private networks and connect to your work or home networks while maintaining data confidentiality."
+      },
+      {
+        "title": "Enhanced anonymity",
+        "description": "A VPN extension changes your IP address to hide your location and doesn’t track your browsing history or connection logs."
+      }
+    ]
+  },
+
+  "WhenUseVPNSection": {
+    "title": "When to use a VPN",
+    "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
+    "description": "Our VPN masks your IP address and protects your information from third-party data collection.",
+    "cta": "Get Internxt",
+    "cards": [
+      "Prevent targeted ads",
+      "Anonymously create accounts",
+      "Bypass annoying Geo-restrictions",
+      "Ultra fast unlimited VPN ",
+      "Connect to up to 5 countries",
+      "Protect your privacy",
+      "Defend against network attacks",
+      "No logs policy"
+    ]
+  },
+
+  "CtaSection": {
+    "title": "Break free from online trackers",
+    "description": "Hide your data for a secure browsing experience with Internxt VPN",
     "cta": "Get Internxt"
   },
 
   "CtaSection2": {
-    "title": "Protect your privacy with Internxt Drive",
-    "description": "Secure your files with post-quantum encryption and regain control over your data today.",
-    "cta": "Get Internxt"
+    "title": "No more spying eyes",
+    "description": "Encrypt your connection for total privacy with Internxt VPN",
+    "cta": "Try for free"
   },
-
+  
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
@@ -143,36 +201,8 @@
     ]
   },
   "FeatureSection": {
-    "title": "Why you should switch to private cloud storage solutions",
-    "titleLine2": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
-    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
-    "cta": "Get Internxt",
-    "cards": {
-      "element1": {
-        "title": "Increased privacy for your data",
-        "description": "Privacy-focused services prioritize your data's security, making sure it's encrypted both during transit and at rest. Unlike traditional public cloud providers, services like Internxt Drive cannot access your encryption keys, so nobody except you can view or sell your data. "
-      },
-      "element2": {
-        "title": "Reduced corporate spying",
-        "description": [
-          "Companies like Google state in their policies that by using their services, you give them access to monitor and use your data for their own benefit and financial gain. Other services like Dropbox have a past filled with data breaches and unethical data sharing. ",
-          "In contrast, private cloud storage solutions cannot access your files as the keys are stored on the owner’s device, keeping sensitive information private, and away from third parties."
-        ]
-      },
-      "element3": {
-        "title": "Protected by European laws",
-        "description": [
-          "Recent legal issues in the UK and less strict privacy laws in the US have caused more people to choose private cloud storage solutions based in Europe. Regulations from the GDPR, for example, give customers more control over their data, with rights to access and deletion.",
-          "GDPR compliance is not only a legal requirement but also a reassurance that European providers are not subject to intrusive data access requests from foreign governments, unlike other services which can give access to data if requested by government or law agencies."
-        ]
-      },
-      "element4": {
-        "title": "More control over your security",
-        "description": [
-          "You don’t just get more privacy with cloud storage, you also get increased control over the security of your files. Internxt allows you to schedule or manually back up your files to protect against accidental data loss.",
-          "Other security controls necessary for increased privacy that cloud storage can offer are encrypted and password-protected file sharing, two-factor authentication (2FA), and access logs for business plans."
-        ]
-      }
-    }
+    "title": "Protect your files with Internxt Drive",
+    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
+    "cta": "Get started"
   }
 }

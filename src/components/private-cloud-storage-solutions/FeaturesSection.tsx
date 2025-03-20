@@ -1,4 +1,4 @@
-import { HandHeart, Lightbulb, Trophy, UsersThree } from '@phosphor-icons/react';
+import { Devices, Eye, FolderLock, HandHeart, Leaf, Lightbulb, LockKey, Trophy, UsersThree } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
@@ -15,27 +15,27 @@ const FeaturesSection = ({ textContent }) => {
       description: textContent.info[0].description,
     },
     {
-      icon: Lightbulb,
+      icon: FolderLock,
       title: textContent.info[1].title,
       description: textContent.info[1].description,
     },
     {
-      icon: UsersThree,
+      icon: Devices,
       title: textContent.info[2].title,
       description: textContent.info[2].description,
     },
     {
-      icon: HandHeart,
+      icon: Eye,
       title: textContent.info[3].title,
       description: textContent.info[3].description,
     },
     {
-      icon: HandHeart,
+      icon: Leaf,
       title: textContent.info[4].title,
       description: textContent.info[4].description,
     },
     {
-      icon: HandHeart,
+      icon: LockKey,
       title: textContent.info[5].title,
       description: textContent.info[5].description,
     },

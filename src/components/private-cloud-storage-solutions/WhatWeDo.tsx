@@ -1,6 +1,5 @@
 import ProductCard from '@/components/shared/ProductCard';
 import { getImage } from '@/lib/getImage';
-import ProductCardReversed from '../shared/ProductCardReversed';
 
 const WhatWeDo = ({ textContent, lang }) => {
   return (
@@ -16,23 +15,24 @@ const WhatWeDo = ({ textContent, lang }) => {
 
         <div className="flex flex-col space-y-20 text-left lg:grid lg:grid-cols-1 lg:grid-rows-2 lg:gap-20 lg:space-y-0">
           <ProductCard
-            imageUrl={getImage('/images/privacy/Internxt-Drive.webp')}
+            imageUrl={getImage('/images/privacy-cloud-storage-solutions/internxt_drive.webp')}
             animationDirection={'left'}
             redirect={'/drive'}
             lang={lang}
             textContent={textContent.square1}
           />
 
-          <ProductCardReversed
-            imageUrl={getImage('/images/privacy/Share-by-email.webp')}
+          <ProductCard
+            imageUrl={getImage('/images/privacy-cloud-storage-solutions/internxt_for_business.webp')}
             animationDirection={'right'}
             redirect={'/business'}
             lang={lang}
             textContent={textContent.square2}
+            imagePosition='left'
           />
 
           <ProductCard
-            imageUrl={getImage('/images/privacy/internxt_vpn_extension.webp')}
+            imageUrl={getImage('/images/privacy-cloud-storage-solutions/internxt_s3.webp')}
             animationDirection={'left'}
             redirect={'/cloud-object-storage'}
             lang={lang}

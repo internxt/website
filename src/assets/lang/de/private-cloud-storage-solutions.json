@@ -3,168 +3,165 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "Schützen Sie Ihre Daten",
-        "textAfterBlueText": "Private Cloud-Speicherlösungen, um Ihre Daten zu"
+        "blueText": "Private Cloud",
+        "textAfterBlueText": "Private Cloud-Speicherlösungen "
       },
-      "description": "Internxt ist ein Open-Source-Cloud-Speicheranbieter mit post-quanten Verschlüsselung, um Ihre Daten privat zu halten.",
-      "claimDeal": "Holen Sie sich Internxt",
-      "guarantee": "30 Tage Geld-zurück-Garantie"
+      "description": "Internxt ist ein Open-Source-Anbieter von Cloud-Speicher mit Post-Quanten-Verschlüsselung, um Ihre Daten privat zu halten.",
+      "claimDeal": "Internxt erhalten",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
     },
     "TitleAndOnePlanV2": {
-      "title": "Private Cloud-Speicherlösungen zum Schutz Ihrer Daten",
-      "cta": "Holen Sie sich Internxt",
-      "guarantee": "30 Tage Geld-zurück-Garantie"
+      "title": "Private Cloud-Speicherlösungen",
+      "cta": "Internxt erhalten",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
     }
-  },
-
-  "WhySwitchSection": {
-    "title": "Warum Sie zu privaten Cloud-Speicherlösungen wechseln sollten",
-    "subtitle": "Der Wechsel zu privaten Cloud-Speicherlösungen garantiert, dass Ihre Daten privat und sicher vor Hackern und Unternehmen bleiben. Im Gegensatz zu Google, Apple oder Microsoft sammelt, verkauft oder missbraucht Internxt Ihre Daten nicht. Sie haben die vollständige Kontrolle über Ihre Dateien.",
-    "description": "Investieren Sie in Ihre Privatsphäre und genießen Sie die Gewissheit, dass Ihre Dateien und Daten gegen Datenschutzverletzungen geschützt sind.",
-    "cta": "Holen Sie sich Internxt"
   },
   "WhatWeDo": {
     "title": {
       "line1": "Internxt bietet private Cloud-Speicherlösungen",
-      "line2": "für Privatpersonen, Unternehmen und große Firmen"
+      "line2": "für Einzelpersonen, KMUs und Großunternehmen"
     },
-    "subtitle": "Google, Microsoft, Apple und andere Cloud-Speicheranbieter nutzen Ihre Daten für ihren Profit. Wechseln Sie zu Internxt, um die vollständige Kontrolle über Ihre Privatsphäre zu erhalten.",
+    "subtitle": "Google, Microsoft, Apple und andere Anbieter von Cloud-Speicher-Diensten nutzen Ihre Daten für Profitzwecke aus. Wechseln Sie zu Internxt, um die volle Kontrolle über Ihre Privatsphäre zu haben.",
     "square1": {
       "title": "Internxt Drive",
-      "description": "Wir bieten erschwinglichen jährlichen und lebenslangen Cloud-Speicher an, um Ihre Dateien zu speichern, zu teilen, zu sichern und zu synchronisieren. Drive umfasst auch ein Premium-VPN und Antivirus, für vollständige Privatsphäre und Online-Schutz.",
-      "cta": "Holen Sie sich Internxt Drive"
+      "description": "Wir bieten erschwinglichen jährlichen und lebenslangen Cloud-Speicher zum Speichern, Teilen, Sichern und Synchronisieren Ihrer Dateien. Drive beinhaltet auch ein Premium-VPN und Antivirus für vollständige Online-Privatsphäre und -Schutz.",
+      "cta": "Plan kaufen"
     },
     "square2": {
       "title": "Internxt für Unternehmen",
-      "description": "Internxt für Unternehmen ist eine DSGVO-konforme Cloud-Speicherlösung, die vertrauliche Informationen schützt und 2 TB Speicher für bis zu 100 Nutzer umfasst. Dank preisgekrönter Verschlüsselung schützt Internxt Ihr Unternehmen vor Datenverletzungen.",
-      "cta": "Holen Sie sich Internxt für Unternehmen"
+      "description": "Internxt für Unternehmen ist eine DSGVO-konforme Cloud-Speicherlösung, die bis zu 2 TB Speicherplatz für 100 Benutzer umfasst. Dank der Verschlüsselung schützt Internxt Ihr Unternehmen vor jeglichen Datenlecks.",
+      "cta": "Plan kaufen"
     },
     "square3": {
       "title": "Internxt S3",
-      "description": "Internxt S3 ist ein Ende-zu-Ende verschlüsselter und skalierbarer Objekt-Speicherdienst für Unternehmen oder Großunternehmen, um große Daten zu verwalten und dabei geringere Kosten zu haben. Mit null Eingangs- und Ausgangsgebühren sind unsere Objekt-Speicherpläne bis zu 80 % günstiger als bei anderen Anbietern.",
-      "cta": "Holen Sie sich Internxt S3"
+      "description": "Internxt S3 ist ein skalierbarer, Ende-zu-Ende-verschlüsselter Objektspeicherdienst für Unternehmen oder KMUs, um große Datenmengen zu geringeren Kosten zu verwalten. Ohne Gebühren für eingehende oder ausgehende Daten sind unsere Objektspeicherpläne bis zu 90 % günstiger als bei anderen Anbietern.",
+      "cta": "Internxt S3 erhalten"
     }
   },
-
   "FeaturesSection": {
-    "title": "Warum Internxt als der sicherste und privateste Cloud-Speicher herausragt",
-    "description": "Internxt integriert fortschrittliche Datenschutzfunktionen, um den sichersten Cloud-Speicher für Ihre Seelenruhe zu bieten.",
+    "title": "Warum Internxt als sicherster und privatester Cloud-Speicher hervorsticht",
+    "description": "Internxt integriert fortschrittliche Datenschutzfunktionen, um den sichersten Cloud-Speicher, Antivirus und VPN online anzubieten.",
     "info": [
       {
-        "title": "Preisgekrönte Verschlüsselung",
-        "description": "Unser System basiert auf der Kyber 512 post-quanten Kryptografie, dem besten Verschlüsselungsstandard, der vom NIST-Institut ausgewählt wurde, um gegen die zukünftigen Bedrohungen durch Quantencomputer zu schützen, die theoretisch die aktuellen Verschlüsselungsprotokolle anderer Cloud-Speicheranbieter brechen könnten. Schützen Sie Ihre Daten mit Internxt, um die Privatsphäre Ihrer Dateien zukunftssicher zu machen."
+        "title": "Modernste Verschlüsselung",
+        "description": "Unser System basiert auf der Post-Quanten-Kryptografie Kyber 512, dem sichersten Verschlüsselungsstandard, der vom NIST-Institut ausgewählt wurde, um vor zukünftigen Bedrohungen durch Quantencomputer zu schützen, die theoretisch die aktuellen Verschlüsselungsprotokolle anderer Cloud-Speicheranbieter brechen könnten. Sichern Sie Ihre Daten mit Internxt, um die Privatsphäre Ihrer Dateien in der Zukunft zu gewährleisten."
       },
       {
-        "title": "Kein Vertrauen auf Big Tech mehr",
-        "description": "Andere Cloud-Speicheranbieter wie Google, Dropbox usw. profitieren von Ihren Daten, indem sie Ihre Dateien speichern und analysieren, was zu einer Leckage von E-Mails und anderen persönlichen Informationen führen kann. Internxt ist anders. Mit anonymer Kontoerstellung und einer strikten No-Tracking-Politik speichern, teilen oder monetisieren wir Ihre Daten in keiner Weise."
+        "title": "Keine Abhängigkeit mehr von großen Technologien",
+        "description": "Andere Cloud-Speicheranbieter – Google, Dropbox, Apple... – profitieren von Ihren Daten, speichern und analysieren Ihre Dateien, was zu Lecks von E-Mails und anderen persönlichen Informationen online führt. Internxt ist anders. Mit der Erstellung anonymer Konten und einer strengen No-Tracking-Richtlinie speichern, teilen oder monetarisieren wir Ihre Daten in keiner Weise."
       },
       {
         "title": "Von überall zugänglich",
-        "description": "Laden Sie Internxt Drive von Ihrer bevorzugten Cloud-Speicher-App herunter, um auf die Cloud unter Windows, Mac, Linux, iOS oder Android zuzugreifen. Wir bieten auch andere private Cloud-Speicherlösungen mit WebDAV- und Rclone-Unterstützung an, mit denen Sie Ihre Dateien mühelos auf mehreren Geräten verwalten, Backups automatisieren und auf Ihre Daten aus der Ferne zugreifen können."
+        "description": "Laden Sie Internxt Drive von Ihrer bevorzugten Cloud-Speicheranwendung herunter, um von Windows, Mac, Linux, iOS oder Android auf die Cloud zuzugreifen. Wir bieten auch andere private Cloud-Speicherlösungen mit WebDAV- und Rclone-Unterstützung an, mit denen Sie Ihre Dateien mühelos auf mehreren Geräten verwalten, Backups automatisieren und von überall aus auf Ihre Daten zugreifen können."
       },
       {
         "title": "Open Source und geprüft",
-        "description": "Andere Cloud-Speicherplattformen verbergen ihren Quellcode vor der Öffentlichkeit, was bedeutet, dass Sie nie wirklich wissen können, wie sie mit Ihren Daten umgehen oder was sie mit Ihren Dateien machen. Internxt verspricht vollständige Transparenz, da der Quellcode für alle unsere Produkte öffentlich auf GitHub verfügbar ist. Internxt ist auch als sichere Plattform von Securitum, einer unabhängigen Penetrationstests-Firma, verifiziert."
+        "description": "Andere Cloud-Speicherplattformen verbergen ihren Quellcode vor der Öffentlichkeit, was bedeutet, dass Sie nie wirklich wissen können, wie sie Ihre Daten verarbeiten oder was sie mit Ihren Dateien machen. Internxt verspricht vollständige Transparenz, da der Quellcode aller unserer Produkte öffentlich auf GitHub verfügbar ist. Internxt ist auch von Securitum, einem unabhängigen Penetrationstestunternehmen, als sichere Plattform verifiziert."
       },
       {
         "title": "Nachhaltigkeit",
-        "description": "Unser Engagement für eine bessere Zukunft, die auf Online-Privatsphäre basiert, erstreckt sich auch auf unser Engagement für eine grünere Zukunft. Unsere Rechenzentren nutzen erneuerbare Energiequellen wie Kernenergie und Wasserkraft. Der Einsatz umweltfreundlicher Technologie unterstützt unser Engagement, eine nachhaltigere Zukunft aufzubauen und bis 2050 klimaneutral zu werden."
+        "description": "Unser Engagement für den Aufbau einer besseren Zukunft, die auf Online-Privatsphäre basiert, erstreckt sich auch auf unser Engagement für eine umweltfreundlichere Zukunft. Unsere Rechenzentren nutzen erneuerbare Energiequellen wie Kernkraft und Wasserkraft. Der Einsatz umweltfreundlicher Technologie trägt zu unserem Engagement für den Aufbau einer nachhaltigeren Zukunft bei und dafür, bis 2050 klimaneutral zu sein."
       },
       {
         "title": "DSGVO-konform",
-        "description": "Mit Sitz in Valencia, Spanien, stellt Internxt sicher, dass Ihre Daten privat und sicher sind, indem es den Datenschutzgesetzen der DSGVO entspricht. Ein persönliches Drive-Konto hält Ihre Informationen privat, ohne Tracking, Teilen oder unbefugten Zugriff und für Unternehmen verringert es das Risiko von Strafen und rechtlichen Problemen."
+        "description": "Mit Sitz in Valencia, Spanien, garantiert Internxt, dass Ihre Daten privat und sicher sind, indem es die DSGVO-Datenschutzgesetze einhält. Ein persönliches Drive-Konto hält Ihre Informationen privat, ohne Tracking, Weitergabe oder unbefugten Zugriff, und für Unternehmen reduziert es das Risiko von Bußgeldern und rechtlichen Problemen."
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Interessiert an privaten Cloud-Lösungen?",
-    "description": "Internxt Drive schützt Sie mit post-quanten Verschlüsselung, Antivirus und VPN.",
-    "cta": "Holen Sie sich Internxt"
+    "description": "Internxt Drive schützt Sie mit Post-Quanten-Verschlüsselung, Antivirus und VPN.",
+    "cta": "Plan erhalten"
   },
-
   "CtaSection2": {
     "title": "Schützen Sie Ihre Privatsphäre mit Internxt Drive",
-    "description": "Sichern Sie Ihre Dateien mit post-quanten Verschlüsselung und gewinnen Sie die Kontrolle über Ihre Daten zurück.",
-    "cta": "Holen Sie sich Internxt"
+    "description": "Ihre Dateien sicher mit modernster Post-Quanten-Verschlüsselung.",
+    "cta": "Internxt erhalten"
   },
-
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
         "question": "Ist Internxt eine Alternative zu Google Drive?",
         "answer": [
-          "Ja, Internxt ist eine Alternative zu Google Drive und anderen großen Tech-Unternehmen. Diese Unternehmen verschlüsseln Daten auf Servern, die ihnen gehören, was bedeutet, dass sie auf Ihr Konto zugreifen und Ihre Dateien ansehen können oder Zugang zu Ihrem Konto gewähren können, wenn die Regierung dies verlangt.",
-          "Im Gegensatz zu diesen Cloud-Speicherplattformen verwendet Internxt post-quanten und Null-Wissen-Verschlüsselung, sodass nur Sie auf Ihre Dateien zugreifen können. Ihre Daten werden auf Ihrem Gerät verschlüsselt, bevor sie hochgeladen werden, und niemand kann sie ansehen oder entschlüsseln, nicht einmal Internxt. Dies gewährleistet vollständige Privatsphäre, verhindert unbefugten Zugriff und schützt Sie vor Datenpannen und Überwachung."
+          "Ja, Internxt ist eine Alternative zu Google Drive und anderen großen Technologieunternehmen. Diese Unternehmen verschlüsseln Daten auf Servern, die ihnen gehören, was bedeutet, dass sie auf Ihr Konto zugreifen und Ihre Dateien anzeigen oder der Regierung auf Anfrage Zugriff auf Ihr Konto gewähren können.",
+          "Im Gegensatz zu diesen Cloud-Speicherplattformen verwendet Internxt Post-Quanten- und Zero-Knowledge-Verschlüsselung, sodass nur Sie auf Ihre Dateien zugreifen können. Ihre Daten werden auf Ihrem Gerät verschlüsselt, bevor sie hochgeladen werden, und niemand kann sie anzeigen oder entschlüsseln, nicht einmal Internxt. Dies gewährleistet vollständige Privatsphäre, verhindert unbefugten Zugriff und schützt Sie vor Überwachung und Datenlecks."
         ]
       },
       {
-        "question": "Was ist post-quanten Verschlüsselung?",
+        "question": "Was ist Post-Quanten-Verschlüsselung?",
         "answer": [
-          "Post-quanten Verschlüsselung verwendet kryptografische Algorithmen, um Daten gegen die Bedrohung durch Quantencomputer abzusichern, die potenziell traditionelle Verschlüsselungsmethoden brechen könnten. Post-quanten Verschlüsselung konzentriert sich darauf, Algorithmen zu entwickeln, die verhindern, dass diese Computer Ihre Daten entschlüsseln und darauf zugreifen.",
-          "Diese Methode ist ideal für private Cloud-Speicherlösungen wie Internxt, weil sie sicherstellt, dass Ihre Daten trotz fortschreitender Quantencomputing-Technologie sicher bleiben."
+          "Die Post-Quanten-Verschlüsselung verwendet kryptografische Algorithmen, um Daten vor der Bedrohung durch Quantencomputer zu schützen, die traditionelle Verschlüsselungsmethoden brechen könnten. Die Post-Quanten-Verschlüsselung konzentriert sich auf die Entwicklung von Algorithmen, die verhindern, dass diese Computer Ihre Daten entschlüsseln und darauf zugreifen.",
+          "Diese Methode ist ideal für private Cloud-Speicherlösungen wie Internxt, da sie sicherstellt, dass Ihre Daten trotz des Fortschritts der Quantencomputertechnologie sicher bleiben."
         ]
       },
       {
         "question": "Was ist der Unterschied zwischen Internxt für Unternehmen und Internxt S3?",
         "answer": [
-          "Internxt für Unternehmen ist eine Cloud-Speicherlösung, die speziell für Unternehmen entwickelt wurde und Teamarbeit, Administratorsteuerung und andere Funktionen bietet, um Unternehmen vor Datenverletzungen zu schützen.",
-          "Internxt S3 ist ein Cloud-basierter Speichersystem, das dem Amazon S3-Protokoll folgt. Es ist ideal für Entwickler und Unternehmen, die Speicher in ihre Anwendungen oder Dienste integrieren und Datenlager oder -speicher speichern müssen.",
-          "Der Hauptunterschied besteht darin, dass Internxt für Unternehmen sich auf teamorientierte Funktionen konzentriert, während Internxt S3 eine skalierbare Speicherlösung bietet, die bis zu 90% günstiger ist als AWS, Azure oder Google Cloud."
+          "Internxt für Unternehmen ist eine Cloud-Speicherlösung, die für Unternehmen und KMUs entwickelt wurde und Teamzusammenarbeit, administrative Kontrollen und andere Funktionen bietet, um Unternehmen vor Datenlecks zu schützen.",
+          "Internxt S3 ist ein Cloud-basiertes Speichersystem, das dem Amazon S3-Protokoll folgt. Es ist ideal für Entwickler und Unternehmen, die Speicher in ihre Anwendungen oder Dienste skalieren und integrieren und Data Lakes oder Data Warehouses speichern müssen.",
+          "Der Hauptunterschied besteht darin, dass sich Internxt für Unternehmen auf teamorientierte Funktionen konzentriert, während Internxt S3 eine skalierbare und kostengünstige Speicherlösung bietet, die bis zu 90 % günstiger ist als AWS, Azure oder Google Cloud."
         ]
       },
       {
         "question": "Warum sollten Sie Internxt gegenüber anderen Cloud-Plattformen wählen?",
         "answer": [
-          "Alle unsere privaten Cloud-Speicherlösungen legen großen Wert auf Privatsphäre, sodass wir Ihnen vollständige Kontrolle über Ihre Privatsphäre mit Kyber 512 post-quanten Verschlüsselung bieten, die Ihre persönlichen oder geschäftlichen Daten gegen potenzielle Bedrohungen durch Quantencomputing absichert.",
-          "Internxt ist DSGVO-konform, reduziert rechtliche Risiken und bietet skalierbare, kostengünstige Lösungen wie Internxt S3, mit null Eingangs- und Ausgangsgebühren und einem Pay-as-you-go-Preismodell. Darüber hinaus machen seine Open-Source-Natur, unabhängige Sicherheitsprüfungen und das Engagement für Nachhaltigkeit es zu einer zuverlässigen und transparenten Wahl für Unternehmen."
+          "Alle unsere privaten Cloud-Speicherlösungen betonen die Privatsphäre, sodass wir Ihnen mit der Post-Quanten-Verschlüsselung Kyber 512, die Ihre persönlichen oder geschäftlichen Daten in Zukunft vor potenziellen Bedrohungen durch Quantencomputing schützt, die vollständige Kontrolle über Ihre Privatsphäre geben.",
+          "Internxt ist DSGVO-konform, was das rechtliche Risiko reduziert, und bietet skalierbare und kostengünstige Lösungen wie Internxt S3 ohne zusätzliche Gebühren für die Datenübertragung und ein Pay-as-you-go-Modell. Darüber hinaus machen seine Open-Source-Natur, unabhängige Sicherheitsaudits und das Engagement für Nachhaltigkeit es zu einer vertrauenswürdigen und transparenten Wahl für Unternehmen."
         ]
       },
       {
         "question": "Was ist in den privaten Cloud-Speicherlösungen von Internxt enthalten?",
         "answer": [
-          "Internxt Premium-Abonnements und lebenslange Pläne bieten post-quanten verschlüsselten Cloud-Speicher, ein ultraschnelles unbegrenztes VPN für bis zu 5 Standorte, Antivirus und zukünftigen Zugang zu unseren Mail- und Meet-Produkten."
+          "Premium-Abonnements und lebenslange Pläne von Internxt bieten Post-Quanten-verschlüsselten Cloud-Speicher, ein unbegrenztes und ultraschnelles VPN mit bis zu 5 Standorten, Antivirus und zukünftigen Zugriff auf unsere Mail- und Meet-Produkte."
         ]
       },
       {
-        "question": "Kann ich mehr Speicher zu meinem Lifetime-Plan hinzufügen?",
+        "question": "Kann ich meinem lebenslangen Plan mehr Speicherplatz hinzufügen?",
         "answer": [
-          "Ja, Internxt Lifetime-Pläne sind stapelbar, sodass Sie so viel Speicher hinzufügen können, wie Sie möchten, zu Ihrem Internxt Lifetime-Konto. Sie können diese mit der gleichen E-Mail-Adresse wie Ihr aktuelles Lifetime-Konto kaufen.",
-          "Kontaktieren Sie uns unter hello@internxt.com, damit wir sie zusammen auf demselben Konto stapeln können."
+          "Ja, lebenslange Pläne von Internxt sind stapelbar, sodass Sie Ihrem lebenslangen Plan so viel Speicherplatz hinzufügen können, wie Sie möchten. Sie können sie mit derselben E-Mail-Adresse wie Ihren aktuellen lebenslangen Plan kaufen.",
+          "Kontaktieren Sie uns unter hello@internxt.com, damit wir sie im selben Konto zusammenfassen können."
         ]
       },
       {
         "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
         "answer": [
-          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, iDEAL, Sofort und Kryptowährung bezahlen."
+          "Ja, Internxt akzeptiert Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, iDEAL, Sofort und Kryptowährung bezahlen."
         ]
       }
     ]
   },
-  "FeatureSection1": {
-    "title": "Erhöhte Privatsphäre für Ihre Daten",
-    "description": "Privatsphäre-orientierte Dienste priorisieren die Sicherheit Ihrer Daten und stellen sicher, dass diese sowohl während der Übertragung als auch im Ruhezustand verschlüsselt sind. Im Gegensatz zu traditionellen öffentlichen Cloud-Anbietern können Dienste wie Internxt Drive nicht auf Ihre Verschlüsselungsschlüssel zugreifen, sodass niemand außer Ihnen Ihre Daten einsehen oder verkaufen kann."
-  },
-  "FeatureSection2": {
-    "title": "Reduzierte Unternehmensüberwachung",
-    "description": [
-      "Unternehmen wie Google geben in ihren Richtlinien an, dass Sie ihnen durch die Nutzung ihrer Dienste Zugang zu Ihren Daten gewähren, die sie zu ihrem eigenen Vorteil und finanziellen Gewinn überwachen und nutzen. Andere Dienste wie Dropbox haben eine Vergangenheit voller Datenschutzverletzungen und unethischer Datennutzung.",
-      "Im Gegensatz dazu können private Cloud-Speicherlösungen nicht auf Ihre Dateien zugreifen, da die Schlüssel auf dem Gerät des Besitzers gespeichert sind, wodurch sensible Informationen privat bleiben und nicht von Dritten eingesehen werden können."
-    ]
-  },
-  "FeatureSection3": {
-    "title": "Durch europäische Gesetze geschützt",
-    "description": [
-      "Jüngste rechtliche Probleme im Vereinigten Königreich und weniger strenge Datenschutzgesetze in den USA haben dazu geführt, dass immer mehr Menschen private Cloud-Speicherlösungen mit Sitz in Europa wählen. Vorschriften wie die DSGVO geben den Kunden mehr Kontrolle über ihre Daten, mit Rechten auf Zugang und Löschung.",
-      "Die DSGVO-Konformität ist nicht nur eine gesetzliche Anforderung, sondern auch eine Bestätigung, dass europäische Anbieter nicht den invasiven Datenanforderungen fremder Regierungen ausgesetzt sind, im Gegensatz zu anderen Diensten, die bei Anforderung durch Regierungen oder Behörden Zugang zu Daten gewähren können."
-    ]
-  },
-  "FeatureSection4": {
-    "title": "Mehr Kontrolle über Ihre Sicherheit",
-    "description": [
-      "Sie erhalten nicht nur mehr Privatsphäre mit Cloud-Speicher, sondern auch mehr Kontrolle über die Sicherheit Ihrer Dateien. Internxt ermöglicht es Ihnen, Ihre Dateien zu planen oder manuell zu sichern, um sich vor versehentlichem Datenverlust zu schützen.",
-      "Weitere notwendige Sicherheitskontrollen, die Cloud-Speicher bieten kann, um die Privatsphäre zu erhöhen, sind verschlüsselte und passwortgeschützte Dateifreigabe, Zwei-Faktor-Authentifizierung (2FA) und Zugriffprotokolle für Business-Pläne."
-    ]
+  "FeatureSection": {
+    "title": "Warum Sie zu privaten Cloud-Speicherlösungen wechseln sollten",
+    "titleLine2": "Der Wechsel zu privaten Cloud-Speicherlösungen stellt sicher, dass Ihre Daten privat und sicher vor Hackern und Unternehmen bleiben. Im Gegensatz zu Google, Apple oder Microsoft sammelt, verkauft oder missbraucht Internxt Ihre Daten nicht. Sie haben die volle Kontrolle über Ihre Dateien.",
+    "description": "Investieren Sie in Ihre Privatsphäre und haben Sie die Gewissheit, dass Ihre Dateien und Daten vor Datenschutzverletzungen geschützt sind.",
+    "cta": "Internxt erhalten",
+    "cards": {
+      "element1": {
+        "title": "Mehr Privatsphäre für Ihre Daten",
+        "description": "Datenschutzorientierte Dienste priorisieren die Sicherheit Ihrer Daten und stellen sicher, dass sie sowohl während der Übertragung als auch im Ruhezustand verschlüsselt sind. Im Gegensatz zu herkömmlichen öffentlichen Cloud-Anbietern können Dienste wie Internxt Drive nicht auf Ihre Verschlüsselungsschlüssel zugreifen, sodass niemand außer Ihnen Ihre Daten anzeigen oder verkaufen kann."
+      },
+      "element2": {
+        "title": "Reduzierung von Unternehmensspionage",
+        "description": [
+          "Unternehmen wie Google legen in ihren Richtlinien fest, dass Sie ihnen durch die Nutzung ihrer Dienste Zugriff gewähren, um Ihre Daten zu überwachen und für ihren eigenen Nutzen und finanziellen Gewinn zu verwenden. Andere Dienste wie Dropbox haben eine Vergangenheit voller Datenschutzverletzungen und unethischer Datenweitergabe.",
+          "Im Gegensatz dazu können private Cloud-Speicherlösungen nicht auf Ihre Dateien zugreifen, da die Schlüssel auf dem Gerät des Eigentümers gespeichert werden, wodurch vertrauliche Informationen privat und von Dritten ferngehalten werden."
+        ]
+      },
+      "element3": {
+        "title": "Durch europäische Gesetze geschützt",
+        "description": [
+          "Jüngste rechtliche Probleme in Großbritannien und weniger strenge Datenschutzgesetze in den USA haben dazu geführt, dass mehr Menschen private Cloud-Speicherlösungen mit Sitz in Europa wählen. Die DSGVO-Bestimmungen geben Kunden beispielsweise mehr Kontrolle über ihre Daten, mit Zugriffs- und Löschrechten.",
+          "Die Einhaltung der DSGVO ist nicht nur eine gesetzliche Anforderung, sondern auch eine Garantie dafür, dass europäische Anbieter nicht durch aufdringliche Datenzugriffsanfragen ausländischer Regierungen belastet werden, im Gegensatz zu anderen Diensten, die auf Anfrage von Regierungs- oder Strafverfolgungsbehörden Datenzugriff gewähren können."
+        ]
+      },
+      "element4": {
+        "title": "Mehr Kontrolle über Ihre Sicherheit",
+        "description": [
+          "Sie erhalten nicht nur mehr Privatsphäre mit Cloud-Speicher, sondern auch mehr Kontrolle über die Sicherheit Ihrer Dateien. Internxt ermöglicht es Ihnen, Ihre Dateien zu planen oder manuell zu sichern, um sie vor versehentlichem Datenverlust zu schützen.",
+          "Weitere Sicherheitskontrollen, die für mehr Privatsphäre erforderlich sind, die Cloud-Speicher bieten kann, sind verschlüsselte und passwortgeschützte Dateifreigabe, Zwei-Faktor-Authentifizierung (2FA) und Zugriffsprotokolle für Unternehmenspläne."
+        ]
+      }
+    }
   }
 }

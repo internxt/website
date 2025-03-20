@@ -1,44 +1,107 @@
-import Image from 'next/legacy/image';
-import RevealX from '@/components/components/RevealX';
-import { goToSignUpURL } from '@/lib/auth';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
+import RevealX from '../components/RevealX';
+import Link from 'next/link';
+import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
+import { Detective, Gavel, LockKey, ShieldPlus } from '@phosphor-icons/react';
 
-const FeatureSection = ({ textContent, IconComponent }) => {
+export interface FeatureSectionProps {
+  textContent: PrivateCloudStorageSolutionsText['FeatureSection'];
+}
+
+const FeatureSection = ({ textContent }: FeatureSectionProps) => {
+  const cards = [
+    {
+      icon: <LockKey size={60} weight="light" className="text-white" />,
+      title: textContent.cards.element1.title,
+      description: textContent.cards.element1.description,
+      image: '/images/privacy-cloud-storage-solutions/internxt_increased_privacy_for_data.webp',
+    },
+    {
+      icon: <Gavel size={60} weight="light" className="text-white" />,
+      title: textContent.cards.element2.title,
+      description: textContent.cards.element2.description,
+      image: 'images/privacy-cloud-storage-solutions/internxt_european_law_protection.webp',
+    },
+    {
+      icon: <ShieldPlus size={60} weight="light" className="text-white" />,
+      title: textContent.cards.element3.title,
+      description: textContent.cards.element3.description,
+      image: 'images/privacy-cloud-storage-solutions/internxt_security_control.webp',
+    },
+    {
+      icon: <Detective size={60} weight="light" className="text-white" />,
+      title: textContent.cards.element4.title,
+      description: textContent.cards.element4.description,
+      image: 'images/privacy-cloud-storage-solutions/internxt_reduced_corporate_spying.webp',
+    },
+  ];
+
+  const wordsToBold = ['Windows', 'Linux', 'macOS'];
+  const formattedDescription = textContent.description
+    .split(/(Windows|Linux|macOS)/g)
+    .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
+
   return (
-    <section className="relative overflow-hidden py-20">
-      <div className="relative z-10 flex flex-col items-start justify-center px-5 lg:flex-row lg:space-x-20">
-        <RevealX direction="right">
-          <Image
-            src="/images/drive/secure-file-storage.webp"
-            width={496}
-            height={520}
-            quality={100}
-            draggable={false}
-            alt="Protect your data"
-          />
-        </RevealX>
+    <section className="overflow-hidden px-5">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
+        <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-gray-1 px-5">
+          <div className="flex w-full max-w-[800px] flex-col items-center justify-center space-y-12 text-center">
+            <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
+            <div className="flex flex-col space-y-6">
+              <p className="text-2xl font-medium text-gray-80">{textContent.titleLine2}</p>
+              <p className="text-lg text-gray-80">{textContent.description}</p>
+            </div>
+            <Link
+              className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+              href={'/pricing'}
+            >
+              {textContent.cta}
+            </Link>
+          </div>
+        </section>
 
-        <RevealX
-          direction="left"
-          className="flex w-full max-w-[388px] flex-col items-center space-y-6 pt-8 text-center lg:items-start lg:pt-0 lg:text-start"
-        >
-          <IconComponent
-            size={64}
-            className="w-22 h-22 flex items-center justify-center rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] p-3 text-white shadow-xl"
-            weight="light"
-          />
-          <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
-          <p className="text-xl text-gray-80">
-            {Array.isArray(textContent.description)
-              ? textContent.description.map((line, index) => (
-                  <span key={index}>
-                    {line}
-                    <br />
-                    <br />
-                  </span>
-                ))
-              : textContent.description}
-          </p>
-        </RevealX>
+        <div>
+          {cards.map((card, index) => {
+            const isEven = index % 2 === 0;
+
+            return (
+              <div
+                key={index}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
+                  isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
+                } md:text-start`}
+              >
+                <RevealX
+                  direction={isEven ? 'right' : 'left'}
+                  className="flex w-full max-w-[90%] flex-col rounded-3xl pt-5 sm:max-w-[75%] md:w-auto md:pt-0"
+                >
+                  <Image
+                    src={getImage(card.image)}
+                    width={600}
+                    height={480}
+                    quality={100}
+                    loading="lazy"
+                    layout="intrinsic"
+                    alt={`${card.title} image`}
+                  />
+                </RevealX>
+
+                <div
+                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
+                    isEven ? 'md:pl-10' : 'md:pr-10'
+                  }`}
+                >
+                  <div className="flex h-[88px] w-[88px] items-center justify-center rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] p-3 shadow-xl">
+                    {card.icon}
+                  </div>
+                  <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
+                  <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
