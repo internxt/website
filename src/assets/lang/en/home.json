@@ -81,7 +81,7 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "Save 80%",
-      "title": "New pricing plans available now!",
+      "title": "New lifetime plans!",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee"
     },
@@ -258,10 +258,10 @@
         ]
       },
       {
-        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "question": "Will I get access to all Internxt services?",
         "answer": [
-          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste. ",
-          "Our efforts contribute to a climate-neutral goal by 2050. Learn more"
+          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
+          "An Internxt Free plan will only give you access to Internxt Drive."
         ]
       },
       {

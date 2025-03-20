@@ -42,7 +42,7 @@
     }
   },
   "featuresBanner": {
-    "label": "Risparmia l'85%!",
+    "label": "Risparmia l'80%!",
     "title": "Le migliori offerte del Black Friday",
     "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
     "cta": "Scegli il tuo piano",
@@ -129,9 +129,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% di sconto sui nostri nuovi piani tariffari.",
-      "normalText": "La primavera è arrivata!",
-      "cta": "Richiedi l'offerta"
+      "boldText": "80% di sconto sui nostri nuovi piani a vita  ",
+      "normalText": "Felice San Patrizio!   ",
+      "cta": "Ottieni il tuo piano!"
     }
   },
   "lifetimeBanner": {
@@ -140,6 +140,7 @@
     "cta": "Scegli il tuo piano",
     "guarantee": "Garanzia di rimborso entro 30 giorni"
   },
+
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Aspetta! Offerta speciale ",

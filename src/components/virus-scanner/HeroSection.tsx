@@ -3,8 +3,17 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
+import { getImage } from '@/lib/getImage';
+import BitdefenderBanner from '../banners/BitdefenderBanner';
+import { VirusScannerText } from '@/assets/types/virusScanner';
 const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
-const HeroSection = ({ textContent }) => {
+
+interface HeroSectionProps {
+  textContent: VirusScannerText['HeroSection'];
+  lang: string;
+}
+
+const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isScannig, setIsScannig] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -14,6 +23,7 @@ const HeroSection = ({ textContent }) => {
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
+  const [showPopup, setShowPopup] = useState(true);
   const isDragging = dragEnter;
   const maxFileSize = 1_000_000_000;
   const handleDragEnter = () => {
@@ -40,11 +50,13 @@ const HeroSection = ({ textContent }) => {
           const data = await res.json();
           setScanResult(data);
           setIsScanFinished(true);
+          setShowPopup(true);
         } else {
           setIsError(true);
           setIsSelectedFile(false);
           setIsScannig(false);
           setIsScanFinished(false);
+          setShowPopup(false);
         }
       })
       .catch(() => {
@@ -52,6 +64,7 @@ const HeroSection = ({ textContent }) => {
         setIsSelectedFile(false);
         setIsScannig(false);
         setIsScanFinished(false);
+        setShowPopup(false);
       });
   };
   const handleRestartScan = () => {
@@ -60,6 +73,7 @@ const HeroSection = ({ textContent }) => {
     setIsScannig(false);
     setIsScanFinished(false);
     setIsError(false);
+    setShowPopup(false);
     setFile(null);
   };
   const handleCancelScan = () => {
@@ -129,6 +143,8 @@ const HeroSection = ({ textContent }) => {
   };
 
   const [progress, setProgress] = useState(0);
+
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section
@@ -211,6 +227,7 @@ const HeroSection = ({ textContent }) => {
                       </div>
                       {isScanFinished ? (
                         <>
+                          {showPopup && <BitdefenderBanner languageForImage={languageForImage} />}
                           {scanResult.isInfected ? (
                             <div className="flex h-full w-full flex-col items-center justify-center">
                               <p className="text-2xl font-semibold">Virus identified:</p>
@@ -456,6 +473,23 @@ const HeroSection = ({ textContent }) => {
           </div>
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
+      </div>
+      <div className="flex w-full flex-col items-center justify-center ">
+        <Image
+          src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+          alt="File Arrow Up icon"
+          width={800}
+          height={110}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
       </div>
     </section>
   );

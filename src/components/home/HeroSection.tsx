@@ -2,9 +2,7 @@ import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
-import Header from '../shared/Header';
-
-import { Check, Star } from '@phosphor-icons/react';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
@@ -23,7 +21,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
-  const blurBgImage = getImage('/images/home/header/bg.svg');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
   const handleOnClick = () => {
@@ -33,8 +30,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
         <div
-          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block "
+          className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block `}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />

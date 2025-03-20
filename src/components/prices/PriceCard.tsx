@@ -1,6 +1,7 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
+  Clover,
   CodeBlock,
   Database,
   Envelope,
@@ -434,7 +435,17 @@ export default function PriceCard({
           </>
         ) : null}
 
+
         <div className="flex max-h-[500px] min-h-[300px] flex-col space-y-2 pt-6">
+        {isLifetimePage && (
+          <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
+            <span className="font-bold text-white">{contentText.productFeatures.stPatricksFeatures.title}</span>
+            <div className="flex items-center space-x-2">
+              <Clover className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-white">{contentText.productFeatures.stPatricksFeatures.gift}</span>
+            </div>
+          </div>
+        )}
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>

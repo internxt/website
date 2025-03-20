@@ -42,16 +42,15 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Économisez 80%",
-      "title": "Passez au printemps de la confidentialité !",
-      "subtitle": "Nouveaux plans avec Antivirus et VPN premium",
-      "cta": "Profitez de l'offre",
-      "cta2": "Bénéficiez de 85 % de réduction",
+      "title": "Offre spéciale pour la Saint-Patrick!",
+      "subtitle": "Stockage, antivirus et VPN à vie",
+      "cta": "Obtenez votre plan!",
+      "cta2": "Profitez de 80% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre réservée aux comptes gratuits ou aux nouveaux clients",
-      "titleMbl1": "Nouveaux",
-      "titleMbl2": "plans tarifaires",
-      "titleMbl3": "Protégez ce que vous aimez, pour toujours !",
-      "ctaMbl": "Acheter un plan"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
+      "titleMbl": "Nouveaux plans à vie!",
+      "subtitleMbl": "Stockage, antivirus et VPN à vie",
+      "ctaMbl": "Achetez votre plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",

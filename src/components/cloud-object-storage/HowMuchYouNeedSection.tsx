@@ -118,7 +118,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
     <section className="overflow-hidden bg-gray-1 px-5 py-20">
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+          <h2 className="text-4xl font-semibold text-gray-100 lg:text-4xl lg:text-5xl">{textContent.title}</h2>
           <h3 className="text-xl text-gray-80">{textContent.description}</h3>
         </div>
 
@@ -130,14 +130,14 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
               {/* Monthly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">
+                <p className="text-4xl font-semibold text-primary lg:text-5xl">
                   €{Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
               </div>
               {/* Yearly price */}
               <div className="flex flex-row items-end gap-2">
-                <p className="text-5xl font-semibold text-primary">
+                <p className="text-4xl font-semibold text-primary lg:text-5xl">
                   €{Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
                 </p>
                 <p className="text-3xl text-gray-50">{textContent.perYear}</p>
