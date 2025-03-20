@@ -19,7 +19,7 @@ const Animation = ({
   powerpointImg = getImage('/images/home/header/powerpoint.svg', true),
   csvImg = getImage('/images/home/header/csv.svg', true),
   previewImg = getImage('/images/campaigns/spring/preview.webp', true),
-  taskloggerImg = getImage('/images/home/header/tasklogger.webp', true),
+  taskloggerImg = getImage('/images/antivirus/Internxt_Antivirus_Header.png', true),
 }: AnimationProps) => {
   // Header animation
   const [headerAnimation1, setHeaderAnimation1] = useState<boolean>(false);
@@ -84,11 +84,10 @@ const Animation = ({
         className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
         style={{
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
-          width: '142px',
-          height: '152px',
+          width: '178px',
+          height: '165px',
           bottom: '150px',
           borderRadius: '24px',
-          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={previewImg} draggable="false" layout="fill" alt="photo file preview" />
@@ -96,21 +95,20 @@ const Animation = ({
 
       {/* Tasklogger */}
       <div
-        className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute bottom-0 left-[416px]`}
+        className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute bottom-0 left-[716px]`}
         style={{
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
-          width: '211px',
-          height: '190px',
+          width: '355px',
+          height: '257px',
           borderRadius: '24px',
-          opacity: 0.7, 
         }}
       >
         <Image
           loading="eager"
           src={taskloggerImg}
           draggable="false"
-          width={211}
-          height={190}
+          width={355}
+          height={257}
           alt="file logger with items downloading"
         />
       </div>
@@ -119,10 +117,9 @@ const Animation = ({
       <div
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '64px',
           height: '64px',
-          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={folderImg} draggable="false" layout="fill" alt="folder icon" />
@@ -132,10 +129,9 @@ const Animation = ({
       <div
         className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '56px',
           height: '56px',
-          opacity: 0.7, 
         }}
       >
         <Image loading="eager" src={zipImg} draggable="false" layout="fill" alt="zip icon" />
@@ -145,10 +141,9 @@ const Animation = ({
       <div
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '52px',
           height: '52px',
-          opacity: 0.7, // Add transparency to the image
         }}
       >
         <Image loading="eager" src={powerpointImg} draggable="false" layout="fill" alt="powerpoint icon" />
@@ -158,10 +153,9 @@ const Animation = ({
       <div
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1))',
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '48px',
           height: '48px',
-          opacity: 0.7, // Add transparency to the image
         }}
       >
         <Image loading="eager" src={csvImg} draggable="false" layout="fill" alt="Csv icon" />

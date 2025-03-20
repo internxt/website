@@ -23,7 +23,7 @@ const WhatWeDo = ({ textContent, lang }) => {
           />
 
           <ProductCard
-            imageUrl={getImage('/images/privacy-cloud-storage-solutions/internxt_for_business.webp')}
+            imageUrl={getImage('/images/privacy-cloud-storage-solutions/internxt_for_business-1.webp')}
             animationDirection={'right'}
             redirect={'/business'}
             lang={lang}

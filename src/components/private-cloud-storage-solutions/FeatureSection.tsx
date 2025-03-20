@@ -15,25 +15,25 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
       icon: <LockKey size={60} weight="light" className="text-white" />,
       title: textContent.cards.element1.title,
       description: textContent.cards.element1.description,
-      image: '/images/privacy-cloud-storage-solutions/internxt_increased_privacy_for_data.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_increased_privacy_for_data.webp',
     },
     {
       icon: <Gavel size={60} weight="light" className="text-white" />,
       title: textContent.cards.element2.title,
       description: textContent.cards.element2.description,
-      image: 'images/privacy-cloud-storage-solutions/internxt_european_law_protection.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_european_law_protection.webp',
     },
     {
       icon: <ShieldPlus size={60} weight="light" className="text-white" />,
       title: textContent.cards.element3.title,
       description: textContent.cards.element3.description,
-      image: 'images/privacy-cloud-storage-solutions/internxt_security_control.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_security_control.webp',
     },
     {
       icon: <Detective size={60} weight="light" className="text-white" />,
       title: textContent.cards.element4.title,
       description: textContent.cards.element4.description,
-      image: 'images/privacy-cloud-storage-solutions/internxt_reduced_corporate_spying.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_reduced_corporate_spying.webp',
     },
   ];
 
@@ -68,7 +68,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-10 ${
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-20 ${
                   isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
                 } md:text-start`}
               >
@@ -96,7 +96,18 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
                     {card.icon}
                   </div>
                   <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
-                  <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p>
+                  {/* <p className="font-regular text-base sm:text-lg md:text-xl">{card.description}</p> */}
+                  <p className="font-regular text-base sm:text-lg md:text-xl">
+                    {Array.isArray(card.description)
+                      ? card.description.map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            <br />
+                            <br />
+                          </span>
+                        ))
+                      : card.description}
+                  </p>
                 </div>
               </div>
             );
