@@ -328,7 +328,7 @@ export default function PriceCard({
     <div
       className={`${
         popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } flex w-[330px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
@@ -435,17 +435,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-
-        <div className="flex max-h-[500px] min-h-[300px] flex-col space-y-2 pt-6">
-        {isLifetimePage && (
-          <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
-            <span className="font-bold text-white">{contentText.productFeatures.stPatricksFeatures.title}</span>
-            <div className="flex items-center space-x-2">
-              <Clover className="h-6 w-6 text-white" weight="fill" />
-              <span className="text-white">{contentText.productFeatures.stPatricksFeatures.gift}</span>
-            </div>
-          </div>
-        )}
+        <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>

@@ -38,6 +38,7 @@ export interface PriceCardProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
   isBrave?: boolean;
+  showPromo?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -63,6 +64,7 @@ export const PriceCard = ({
   isFamilyPage,
   darkMode,
   isBrave,
+  showPromo = true,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -212,7 +214,7 @@ export const PriceCard = ({
         </button>
       </div>
 
-      {isLifetime && (
+      {showPromo && isLifetime && (
         <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
           <span className="font-bold text-white">{contentText.productFeatures.stPatricksFeatures.title}</span>
           <div className="flex items-center space-x-2">
