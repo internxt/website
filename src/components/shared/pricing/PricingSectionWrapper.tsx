@@ -39,6 +39,7 @@ interface PricingSectionWrapperProps {
   CustomDescription?: ReactNode;
   isBrave?: boolean;
   hideFeatures?: boolean;
+  showPromo?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -69,6 +70,7 @@ export const PricingSectionWrapper = ({
   CustomDescription,
   darkMode,
   isBrave,
+  showPromo = true,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -160,6 +162,7 @@ export const PricingSectionWrapper = ({
           darkMode={darkMode}
           isBrave={isBrave}
           hideFeatures={hideFeatures}
+          showPromo={showPromo}
         />
       </div>
     </section>
