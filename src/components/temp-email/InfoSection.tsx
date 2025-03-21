@@ -46,7 +46,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
       <Image
         src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-        alt="File Arrow Up icon"
+        alt="BitDefender ad banner"
         width={800}
         height={110}
         quality={100}
