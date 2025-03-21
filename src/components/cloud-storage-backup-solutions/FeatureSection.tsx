@@ -3,7 +3,7 @@ import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
-import { Detective, Gavel, LockKey, ShieldPlus } from '@phosphor-icons/react';
+import { ArrowsClockwise, Devices, LockKey, MagicWand } from '@phosphor-icons/react';
 
 export interface FeatureSectionProps {
   textContent: PrivateCloudStorageSolutionsText['FeatureSection'];
@@ -15,25 +15,25 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
       icon: <LockKey size={60} weight="light" className="text-white" />,
       title: textContent.cards.element1.title,
       description: textContent.cards.element1.description,
-      image: '/images/cloud-storage-backup-solutions/internxt_increased_privacy_for_data.webp',
+      image: '/images/privacy-cloud-storage-solutions/internxt_increased_protection.webp',
     },
     {
-      icon: <Gavel size={60} weight="light" className="text-white" />,
+      icon: <MagicWand size={60} weight="light" className="text-white" />,
       title: textContent.cards.element2.title,
       description: textContent.cards.element2.description,
-      image: '/images/cloud-storage-backup-solutions/internxt_european_law_protection.webp',
+      image: '/images/privacy-cloud-storage-solutions/internxt_ease_of_use.webp',
     },
     {
-      icon: <ShieldPlus size={60} weight="light" className="text-white" />,
+      icon: <ArrowsClockwise size={60} weight="light" className="text-white" />,
       title: textContent.cards.element3.title,
       description: textContent.cards.element3.description,
-      image: '/images/cloud-storage-backup-solutions/internxt_security_control.webp',
+      image: '/images/privacy-cloud-storage-solutions/internxt_recover_your_files.webp',
     },
     {
-      icon: <Detective size={60} weight="light" className="text-white" />,
+      icon: <Devices size={60} weight="light" className="text-white" />,
       title: textContent.cards.element4.title,
       description: textContent.cards.element4.description,
-      image: '/images/cloud-storage-backup-solutions/internxt_reduced_corporate_spying.webp',
+      image: '/images/privacy-cloud-storage-solutions/internxt_cross_platform_access.webp',
     },
   ];
 
@@ -50,7 +50,6 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
             <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
             <div className="flex flex-col space-y-6">
               <p className="text-2xl font-medium text-gray-80">{textContent.titleLine2}</p>
-              <p className="text-lg text-gray-80">{textContent.description}</p>
             </div>
             <Link
               className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"

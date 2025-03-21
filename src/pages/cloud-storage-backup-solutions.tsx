@@ -1,6 +1,6 @@
 import Script from 'next/script';
 
-import HeroSection from '@/components/private-cloud-storage-solutions/HeroSection';
+import HeroSection from '@/components/cloud-storage-backup-solutions/HeroSection';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -10,31 +10,31 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
 
-import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
+import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 import { BannersText } from '@/assets/types/components/banners';
-import FeaturesSection from '@/components/private-cloud-storage-solutions/FeaturesSection';
-import WhatWeDo from '@/components/private-cloud-storage-solutions/WhatWeDo';
+import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
+import WhatWeDo from '@/components/cloud-storage-backup-solutions/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import FeatureSection from '@/components/private-cloud-storage-solutions/FeatureSection';
+import FeatureSection from '@/components/cloud-storage-backup-solutions/FeatureSection';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
-  textContent: PrivateCloudStorageSolutionsText;
+  textContent: CloudStorageBackupSolutionsText;
   navbarLang: NavigationBarText;
   footerLang: FooterText;
   lang: string;
   bannerJson: BannersText;
 }
 
-const PrivateCloudStorageSolutions = ({
+const CloudStorageBackupSolutions = ({
   metatagsDescriptions,
   textContent,
   navbarLang,
   footerLang,
   lang,
 }: PrivacyProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
   const locale = lang as string;
   const CTA_URL = `/pricing`;
 
@@ -87,7 +87,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/${lang}/private-cloud-storage-solutions.json`);
+  const textContent = require(`@/assets/lang/${lang}/cloud-storage-backup-solutions.json`);
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
@@ -106,4 +106,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default PrivateCloudStorageSolutions;
+export default CloudStorageBackupSolutions;

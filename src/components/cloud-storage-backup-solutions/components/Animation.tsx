@@ -81,7 +81,7 @@ const Animation = ({
 
       {/* File preview */}
       <div
-        className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-[157px]`}
+        className={`${headerAnimation2 ? 'animate-fade-in-r-large' : 'hidden'} absolute left-20`}
         style={{
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
           width: '178px',
@@ -100,7 +100,6 @@ const Animation = ({
           boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
           width: '355px',
           height: '257px',
-          bottom: '-15px',
           borderRadius: '24px',
         }}
       >
@@ -118,7 +117,7 @@ const Animation = ({
       <div
         className={`${headerAnimation4 ? 'animate-fade-in-r' : 'hidden'} absolute left-0 top-12`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.5)', // Darken the image
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '64px',
           height: '64px',
         }}
@@ -130,7 +129,7 @@ const Animation = ({
       <div
         className={`${headerAnimation5 ? 'animate-fade-in-r' : 'hidden'} absolute left-20 top-32`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.5)', // Darken the image
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '56px',
           height: '56px',
         }}
@@ -142,7 +141,7 @@ const Animation = ({
       <div
         className={`${headerAnimation6 ? 'animate-fade-in-r' : 'hidden'} absolute left-7 top-52`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.5)', // Darken the image
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '52px',
           height: '52px',
         }}
@@ -154,7 +153,7 @@ const Animation = ({
       <div
         className={`${headerAnimation7 ? 'animate-fade-in-r' : 'hidden'} absolute bottom-20 left-14`}
         style={{
-          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.5)', // Darken the image
+          filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) brightness(0.7)', // Darken the image
           width: '48px',
           height: '48px',
         }}

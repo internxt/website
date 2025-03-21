@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
@@ -20,11 +21,11 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
-
-  const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';
+  
+  const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';  
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
-
+  
   const handleOnClick = () => {
     router.push('/pricing');
   };
@@ -39,7 +40,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
-            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`} 
           >
             {!shouldShowMobileBanner ? (
               <div className="flex lg:hidden">
@@ -63,18 +64,10 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
           <div className="hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
             <Animation />
-            {/* <Image
-              src={getImage("/images/cloud-storage-backup-solutions/internxt_cloud_storage.webp")}
-              width={600}
-              height={480}
-              quality={100}
-              loading="lazy"
-              layout="intrinsic"
-              alt={`image`}
-            /> */}
           </div>
         </div>
       </div>
     </section>
   );
 }
+

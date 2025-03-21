@@ -1,11 +1,19 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "Private cloud storage solutions to",
-      "line2": "protect your data"
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "data protection and recovery ",
+        "textAfterBlueText": "Cloud storage backup solutions for "
+      },
+      "description": "Internxt Drive allows you to back up your cloud storage and protect your files from ransomware and data loss protected by post-quantum encryption.",
+      "features": ["Schedule your backups", "Backed up across multiple servers", "Open source and audited"],
+      "claimDeal": "View plans"
     },
-    "description": "Internxt is an open-source cloud storage provider with post-quantum encryption to keep your data private.",
-    "cta": "Get Internxt"
+    "TitleAndOnePlanV2": {
+      "title": "Cloud storage backup solutions for data protection and recovery ",
+      "cta": "View plans"
+    }
   },
 
   "WhySwitchSection": {
@@ -14,182 +22,102 @@
     "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
     "cta": "Get Internxt"
   },
-  "InxtAppsSection": {
+  "WhatWeDo": {
     "title": {
-      "line1": "Internxt offers private cloud storage solutions ",
-      "line2": "for personal, business, and enterprises."
+      "line1": "Internxt offers secure and private",
+      "line2": "cloud-based backup storage for",
+      "line3": "for personal, business, or enterprise use"
     },
-    "subtitle": "Google, Microsoft, Apple, and other cloud storage service providers are exploiting your data for profit. Switch to Internxt to get total control of your privacy.",
+    "subtitle": "Choose Internxt for secure cloud storage so your files are always backed up, easily recoverable, and protected from data loss.",
     "square1": {
       "title": "Internxt Drive",
-      "description": "We offer affordable annual and lifetime cloud storage to store, share, back up, and sync your files. Drive also includes a premium VPN and antivirus, for complete privacy and protection online.",
+      "description": "Internxt Drive is one of the most private and secure cloud storage backup solutions for your data. With it, you are protected from ransomware with automated and scheduled backups for your folders. On top of that, all your folders are protected with zero-knowledge encryption, meaning you have total control of your data and privacy. ",
       "cta": "Get Internxt Drive"
     },
     "square2": {
-      "title": "Internxt for Business",
-      "description": "Internxt for Business is a GDPR cloud storage solution that protects confidential information and includes 2TB of storage for up to 100 users. Thanks to award-winning encryption, Internxt protects your company from data breaches.",
-      "cta": "Get Internxt for Business"
-    },
-    "square3": {
       "title": "Internxt S3",
-      "description": "Internxt S3 is an end-to-end encrypted and scalable object storage service for businesses or enterprises to manage large data at lower costs. With zero ingress and egress fees, our object storage plans are up to 80% cheaper than other providers.",
+      "description": "Internxt S3-compatible is an online backup cloud storage option that suits businesses and enterprises to manage large amounts of data. With predictable pay-as-you-go pricing and zero data transfer fees, your organization won’t be charged for restoring or accessing your backups, keeping your costs predictable and data secure. ",
       "cta": "Get Internxt S3"
     }
   },
-  "BetterTomorrowSection": {
-    "title": "Advocate for a better tomorrow",
-    "description": "It’s time to take your privacy into your own hands. We encourage everyone to become proactive in their own protection. Learn more about the right to privacy. Get involved with our curated list of reputable organizations advocating for digital rights.",
-    "cta": "Directory of digital rights organizations"
-  },
-  "AwardsSection": {
+
+  "FeaturesSection": {
+    "title": "How Internxt Drive can backup and protect your files",
+    "description": "Internxt offers private cloud storage and secure backups protected by post-quantum cryptography to give you total control of your files and maximum protection for your folders.",
     "info": [
       {
-        "title": "Award-winning encryption",
-        "description": "Our system is built with Kyber 512 post-quantum cryptography, the best encryption standard chosen by the NIST Institute to protect against the future threats of quantum computers, which could theoretically break the current encryption protocols used by other cloud storage service providers. Secure your data with Internxt to future-proof the privacy of your files."
+        "title": "Automatic backups",
+        "description": "Internxt allows you to back up to cloud storage manually or schedule your folders for automatic backups daily, hourly, or every 6 or 12 hours. By automatically backing up your folders, you ensure they are regularly updated and securely stored in the cloud for easy recovery in case something goes wrong. "
       },
       {
-        "title": "No more reliance on Big Tech",
-        "description": "Other cloud storage service providers, Google, Dropbox, etc, profit from your data, storing and analyzing your files, leading to emails and other personal information leaking online. Internxt is different. With anonymous account creation and a strict no-tracking policy, we don’t store, share, or monetize your data in any way. "
+        "title": "Ransomware protection",
+        "description": "Cloud storage backup solutions protect your files against ransomware by allowing you to restore and recover files that are locked and encrypted by a ransomware attack. Cloud-based backup storage means you can regain access to your folders and files without paying extortionate fees or losing your data."
       },
       {
-        "title": "Accessible from anywhere",
-        "description": "Download Internxt Drive from your favorite cloud storage app to access the cloud on Windows, Mac, Linux, iOS, or Android. We also offer other private cloud storage solutions with WebDAV and Rclone support, allowing you to manage your files effortlessly across multiple devices, automate backups, and access your data remotely."
+        "title": "Protected by post-quantum encryption",
+        "description": "Internxt is the first cloud storage backup solution to use post-quantum cryptography to protect files you store, share, and back up. Our Post-quantum encryption uses algorithms designed to resist these quantum attacks, ensuring your backed-up data remains secure even as technology advances."
+      },
+      {
+        "title": "Data redundancy",
+        "description": "Internxt’s cloud storage backup solutions encrypt and back up multiple copies of your data across multiple servers for maximum protection and data recovery. This increased redundancy in our cloud-based backup storage ensures that if one copy of your files becomes corrupted, lost, or inaccessible, other copies are available elsewhere for quick recovery."
       },
       {
         "title": "Open source and audited",
-        "description": "Other cloud storage platforms hide their source code from the public, meaning you can never truly know how they handle your data or what they do with your files. Internxt promises full transparency, as the source code for all our products is publicly available on GitHub. Internxt is also verified as a secure platform by Securitum, an independent penetration testing company."
+        "description": "Our cloud storage is fully open source and available to view via our GitHub page for full transparency on how your data and files are protected. Internxt also passed an independent security audit by Securitum, verifying that your cloud storage for backup ensures your files are safe and protected against hackers and cyberattacks. "
       },
       {
-        "title": "Sustainability",
-        "description": "Our commitment to building a better future built on online privacy also extends to our commitment to a greener future. Our data centers use renewable energy sources such as nuclear and hydroelectricity. Using environmentally friendly technology helps our commitment to build a more sustainable future and be climate-neutral by 2050. "
-      },
-      {
-        "title": "GDPR compliant",
-        "description": "Based in Valencia, Spain, Internxt ensures your data is private and secure by complying with GDPR data protection laws. A personal Drive account keeps your information private with no tracking, sharing, or unauthorized access and, for businesses, reduces the risk of fines and legal issues for businesses."
-      }
-    ],
-    "BetterFutureSection": {
-      "title": "Let’s build a better future together",
-      "description": "Is privacy as important to you as it is to us? If you think you have what it takes to make a difference and build a safer internet, **we're hiring!**",
-      "cta": "Careers at Internxt"
-    }
-  },
-  "SecureVPNSection": {
-    "title": "Why use a secure VPN",
-    "subtitle": "Unsecured internet connections, such as Public Wi-Fi, can expose your information to data leaks, hacks, or breaches. Internxt’s VPN encrypts your connection for a safer, more private online experience.",
-    "description": " Internxt’s free VPN encrypts your connection for a safer, more private online experience.",
-    "cards": [
-      {
-        "title": "Encrypt your internet traffic",
-        "description": "We encrypt your data to protect your right to privacy and keep your browsing activity hidden from hackers, ISPs, and Google."
-      },
-      {
-        "title": "Avoid targeted advertising",
-        "description": "A secure VPN helps you avoid personalized ads and reduces data collection from companies like Google."
-      },
-      {
-        "title": "Unlock Global Content",
-        "description": "Bypass geo-restrictions and access websites unavailable in your region."
-      },
-      {
-        "title": "Control your online identity",
-        "description": "Internxt’s secure VPN gives you back control over how much information you share online and keeps it protected."
+        "title": "Access your backups from any device",
+        "description": "You can back up to cloud storage from your preferred device or platform, as Internxt is available on Windows, Mac, Linux, iOS, or Android. You can also back up your files using WebDAV or Rclone for easier management of your backups and access your data remotely on your preferred device."
       }
     ]
   },
 
-  "HowItWorksSection": {
-    "title": "How it works",
-    "subtitle": "Internxt’s VPN uses unlimited, fast speed, and secure servers to encrypt and transmit sensitive data. Mask your IP address and protect your information from third-party data collection.",
-    "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
-    "cards": [
-      {
-        "title": "Advanced encryption",
-        "description": "Internxt VPN extension uses secure data encryption protocols, offering the highest protection for a safe and private connection."
-      },
-      {
-        "title": "Secure networks",
-        "description": "Enjoy secure and access to private networks and connect to your work or home networks while maintaining data confidentiality."
-      },
-      {
-        "title": "Enhanced anonymity",
-        "description": "A VPN extension changes your IP address to hide your location and doesn’t track your browsing history or connection logs."
-      }
-    ]
-  },
-
-  "WhenUseVPNSection": {
-    "title": "When to use a VPN",
-    "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
-    "description": "Our VPN masks your IP address and protects your information from third-party data collection.",
-    "cta": "Get Internxt",
-    "cards": [
-      "Prevent targeted ads",
-      "Anonymously create accounts",
-      "Bypass annoying Geo-restrictions",
-      "Ultra fast unlimited VPN ",
-      "Connect to up to 5 countries",
-      "Protect your privacy",
-      "Defend against network attacks",
-      "No logs policy"
-    ]
-  },
-
-  "CtaSection": {
-    "title": "Break free from online trackers",
-    "description": "Hide your data for a secure browsing experience with Internxt VPN",
+  "CtaSection1": {
+    "title": "Back up your files with Internxt",
+    "description": "Recover files & protect against ransomware",
     "cta": "Get Internxt"
   },
 
   "CtaSection2": {
-    "title": "No more spying eyes",
-    "description": "Encrypt your connection for total privacy with Internxt VPN",
-    "cta": "Try for free"
+    "title": "Back up with confidence",
+    "description": "Total protection against ransomware, data loss, or corruption",
+    "cta": "Get Internxt"
   },
-  
+
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Is Internxt an alternative to Google Drive?",
+        "question": "How does Internxt protect my data?",
         "answer": [
-          "Yes, Internxt is an alternative to Google Drive and other Big Tech companies. These companies encrypt data on servers they own, meaning they can access your account and view your files or give access to your account to the government if requested. ",
-          "Unlike these cloud storage platforms, Internxt uses post-quantum and zero-knowledge encryption, so only you can access your files. Your data is encrypted on your device before being uploaded, and no one can view or decrypt it, not even Internxt. This ensures complete privacy, prevents unauthorized access, and protects you from data breaches and surveillance."
+          "Internxt uses award-winning Kyber-512 post-quantum cryptography and zero-knowledge encryption to ensure only you have access to your files. All your files are encrypted on your device before they are sent to the cloud, preventing anybody, including Internxt, from viewing the contents. ",
+          "You can also activate Two-Factor Authentication to prevent unauthorized access to your account."
         ]
       },
       {
-        "question": "What is post-quantum encryption?",
+        "question": "How often should I back up to cloud storage?",
         "answer": [
-          "Post-quantum encryption uses cryptographic algorithms to secure data against the threat of quantum computers that could potentially break traditional encryption methods. Post-quantum encryption focuses on developing algorithms that prevent these computers from decrypting and accessing your data.",
-          "This method is ideal for private cloud storage solutions like Internxt because it ensures your data remains secure despite advancing quantum computing technology. "
+          "With Internxt, you can back up your folders at different intervals to suit your needs. The more frequently you backup your files, the less data you will lose in case of an emergency. For this reason, we recommend daily backups for maximum protection or more frequently depending on how often your data changes. "
         ]
       },
       {
-        "question": "What’s the difference between Internxt for Business and Internxt S3?",
+        "question": "How do I restore my data from cloud storage?",
         "answer": [
-          "Internxt for Business is a cloud storage solution tailored for companies, offering team collaboration, admin controls, and other features to protect businesses from data breaches. ",
-          "Internxt S3 is a cloud-based storage system that follows the Amazon S3 protocol. It is ideal for developers and enterprises that need to scale and integrate storage into their applications or services and store data lakes or warehouses. ",
-          "The main difference is that Internxt for Business focuses on team-oriented features, while Internxt S3 provides scalable storage solution up to 90% cheaper than AWS, Azure, or Google Cloud."
+          "To restore your backups, log in to your Internxt Drive account via our website, navigate to backups, and select the device and folder you wish to download to access the backed-up folders.e"
         ]
       },
       {
-        "question": "Why should you choose Internxt over other cloud platforms?",
+        "question": "What is the difference between cloud storage and cloud storage backup solutions?",
         "answer": [
-          "All our private cloud storage solutions emphasize privacy, so we offer you complete control over your privacy with Kyber 512 post-quantum encryption, future-proofing your personal or business data against potential quantum computing threats.",
-          "Internxt is GDPR compliant, reducing legal risks, and offers scalable, cost-effective solutions like Internxt S3, with zero ingress and egress fees and a pay-as-you-go pricing model. Additionally, its open-source nature, independent security audits, and commitment to sustainability make it a reliable and transparent choice for enterprises."
+          "Cloud storage focuses on saving and managing the files that you need to access or share regularly in the cloud.",
+          "Cloud storage for backup, like Internxt Drive, also lets you create copies of your folders for increased data protection, ensuring they can be recovered in case of accidental deletion, data loss, or cyberattacks.",
+          "Backup solutions are designed to create secure copies of your data for protection. Backup solutions automatically store data at regular intervals, ensuring it can be recovered in case of data loss due to failure or accidents."
         ]
       },
       {
-        "question": "What’s included with Internxt’s private cloud storage solutions?",
+        "question": "How do I contact support?",
         "answer": [
-          "Internxt premium subscription and lifetime plans offer post-quantum encrypted cloud storage, an ultra-fast unlimited VPN for up to 5 locations, antivirus, and future access to our Mail and Meet products."
-        ]
-      },
-      {
-        "question": "Can I add more storage to my lifetime plan?",
-        "answer": [
-          "Yes, Internxt lifetime plans are stackable, so you can add as much storage as you want to your Internxt lifetime membership. You can purchase them with the same email address as your current lifetime account. ",
-          "Contact us at hello@internxt.com so we can stack them together for you on the same account."
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
         ]
       },
       {
@@ -201,8 +129,39 @@
     ]
   },
   "FeatureSection": {
-    "title": "Protect your files with Internxt Drive",
-    "description": "With Internxt, you are the absolute only one with access to your files. Store, share, and back up your data in complete privacy.",
-    "cta": "Get started"
+    "title": "Cloud storage backup solutions",
+    "titleLine2": "No matter what happens to your device, backing up your files means your important photos, files, and memories can be recovered forever.",
+    "description": "",
+    "cta": "Get Internxt",
+    "cards": {
+      "element1": {
+        "title": "Increased protection",
+        "description": [
+          "Files can be lost for any reason, such as device failure, malware, ransomware, or other factors outside our control. Creating backups in the cloud lets you automatically save copies of your files in a secure, encrypted environment, even if your device is lost, stolen, or damaged.",
+          "Cloud storage backup solutions create copies of your files, encrypt them, and store them in multiple locations for quick access and data recovery. You can control the schedule of these backups to suit your needs, minimizing the chances of losing important files and protecting against common cybersecurity threats like ransomware."
+        ]
+      },
+      "element2": {
+        "title": "Recover your files",
+        "description": [
+          "Without a backup system in place, recovering your files becomes extremely difficult or even impossible. ",
+          "When you back up your files with Internxt, copies of the files are backed up across multiple servers for extra security, protection, and data recovery. This offers a dependable, quick, and easy way to regain access to your files and guarantee their protection for the future."
+        ]
+      },
+      "element3": {
+        "title": "Ease of use",
+        "description": [
+          "Managing backups manually can be time-consuming and challenging to manage for multiple folders. The process becomes much simpler once you set up backups with cloud storage providers such as Internxt.",
+          "Internxt Drive can run your backups automatically without requiring any action; whenever you need to regain access, you can restore your file in just a few clicks. You can protect against advanced cyberattacks with cloud storage backup solutions regardless of technical skill."
+        ]
+      },
+      "element4": {
+        "title": "Cross-platform access",
+        "description": [
+          "It’s essential to have access to your files no matter where you are and no matter what device you’re using. With Internxt, you can manage your cloud storage and backups from our Windows, Mac, or Linus apps. WebDAV and Rclone support are also available for increased accessibility.",
+          "By offering multiple ways to access and manage your backups online, you can retrieve and manage your data effortlessly, making it easier to work and collaborate from anywhere."
+        ]
+      }
+    }
   }
 }

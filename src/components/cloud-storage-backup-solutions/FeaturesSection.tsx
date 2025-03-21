@@ -1,4 +1,4 @@
-import { Devices, Eye, FolderLock, Leaf, LockKey, Trophy  } from '@phosphor-icons/react';
+import { ClockCounterClockwise, CloudCheck, Devices, Eye, Key, ShieldCheck } from '@phosphor-icons/react';
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
@@ -8,32 +8,32 @@ const FeaturesSection = ({ textContent }) => {
 
   const cardInfo = [
     {
-      icon: Trophy,
+      icon: ClockCounterClockwise,
       title: textContent.info[0].title,
       description: textContent.info[0].description,
     },
     {
-      icon: FolderLock,
+      icon: ShieldCheck,
       title: textContent.info[1].title,
       description: textContent.info[1].description,
     },
     {
-      icon: Devices,
+      icon: Key,
       title: textContent.info[2].title,
       description: textContent.info[2].description,
     },
     {
-      icon: Eye,
+      icon: CloudCheck,
       title: textContent.info[3].title,
       description: textContent.info[3].description,
     },
     {
-      icon: Leaf,
+      icon: Eye,
       title: textContent.info[4].title,
       description: textContent.info[4].description,
     },
     {
-      icon: LockKey,
+      icon: Devices,
       title: textContent.info[5].title,
       description: textContent.info[5].description,
     },
@@ -52,7 +52,7 @@ const FeaturesSection = ({ textContent }) => {
         </div>
       </section>
       <div className="hidden flex-row items-start justify-center pb-20 lg:flex">
-        <div className="flex max-w-[378px] flex-col">
+        <div className="flex max-w-[378px] flex-col ">
           {textContent.info.map((info, index) => (
             <Fragment key={info.title}>
               <button
@@ -83,7 +83,7 @@ const FeaturesSection = ({ textContent }) => {
           </div>
         </RevealX>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-10 py-10 px-5 lg:hidden">
+      <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
         {cardInfo.map((info) => (
           <div
             key={info.title}
