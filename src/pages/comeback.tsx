@@ -115,6 +115,7 @@ const ResurrectionCampaign = ({
         hideBusinessSelector
         hideSwitchSelector
         hideFreeCard
+        showPromo={false}
       />
 
       <TextAndCardsGroupColumnSection
