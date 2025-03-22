@@ -131,6 +131,7 @@ export default function BravePage({
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
+        showPromo={false}
       />
 
       <CtaSection textContent={textContent.CtaSection2} url="#priceTable" />
