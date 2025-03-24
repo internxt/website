@@ -8,7 +8,8 @@ const WhatWeDo = ({ textContent, lang }) => {
         <div className="px-6 text-center">
           <h2 className="mb-5 text-5xl font-semibold">
             {textContent.title.line1} <br className="hidden sm:flex" />
-            {textContent.title.line2}
+            {textContent.title.line2} <br className="hidden sm:flex" />
+            {textContent.title.line3}
           </h2>
           <h3 className="mx-auto w-full max-w-[774px] text-center text-xl font-normal text-gray-80">
             {textContent.subtitle}

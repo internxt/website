@@ -1,0 +1,160 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "vos données",
+        "textAfterBlueText": "Solution de sauvegarde cloud pour "
+      },
+      "description": "Internxt Drive vous permet de sauvegarder vos fichiers et de les protéger contre les pertes et les ransomwares",
+      "features": ["Planifiez vos sauvegardes", "Sauvegarde sur plusieurs serveurs", "Open source et audité"],
+      "claimDeal": "Voir les plans"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Solution de sauvegarde cloud pour vos données",
+      "cta": "Voir les plans"
+    }
+  },
+
+
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt offre des solutions de stockage",
+      "line2": "cloud privé pour les particuliers, les PME et les grandes entreprises."
+    },
+    "subtitle": "Choisissez Internxt pour un stockage cloud sécurisé afin que vos fichiers soient toujours sauvegardés, facilement récupérables et protégés contre la perte de données.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Nous offrons un stockage cloud annuel et à vie abordable pour stocker, partager, sauvegarder et synchroniser vos fichiers. Drive comprend également un VPN et un antivirus premium pour une confidentialité et une protection en ligne totales.",
+      "cta": "Acheter votre plan"
+    },
+    "square2": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 est un service de stockage d'objets évolutif et chiffré de bout en bout permettant aux entreprises ou aux PME de gérer de grandes quantités de données à moindre coût. Sans frais d'entrée et de sortie, nos plans de stockage d'objets sont jusqu'à 90 % moins chers que ceux des autres fournisseurs.",
+      "cta": "Obtenir Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "Comment Internxt Drive peut sauvegarder et protéger vos fichiers",
+    "description": "Internxt offre un stockage cloud privé et des sauvegardes sécurisées protégées par une cryptographie post-quantique pour vous donner un contrôle total sur vos fichiers et une protection maximale pour vos dossiers.",
+    "info": [
+      {
+        "title": "Sauvegardes cloud automatiques",
+        "description": "Internxt vous permet de sauvegarder manuellement votre stockage cloud ou de planifier vos dossiers pour des sauvegardes automatiques quotidiennes, horaires ou toutes les 6 ou 12 heures. En sauvegardant automatiquement vos dossiers, vous vous assurez qu'ils sont mis à jour régulièrement et stockés en toute sécurité dans le cloud pour une récupération facile en cas de problème."
+      },
+      {
+        "title": "Protection contre les ransomwares",
+        "description": "Les solutions de sauvegarde de stockage cloud protègent vos fichiers contre les ransomwares en vous permettant de restaurer et de récupérer les fichiers verrouillés et chiffrés par une attaque de ransomware. Le stockage de sauvegarde basé sur le cloud signifie que vous pouvez récupérer l'accès à vos dossiers et fichiers sans payer de frais exorbitants ni perdre vos données."
+      },
+      {
+        "title": "Protégé par une cryptographie post-quantique",
+        "description": "Internxt est la première solution de sauvegarde de stockage cloud qui utilise la cryptographie post-quantique pour protéger les fichiers que vous stockez, partagez et sauvegardez. Notre chiffrement post-quantique utilise des algorithmes conçus pour résister à ces attaques quantiques, garantissant ainsi que vos données sauvegardées restent sécurisées même à mesure que la technologie progresse."
+      },
+      {
+        "title": "Redondance des données",
+        "description": "Les solutions de sauvegarde de stockage cloud d'Internxt chiffrent et sauvegardent plusieurs copies de vos données sur plusieurs serveurs pour une protection et une récupération maximales des données. Cette redondance accrue dans notre stockage de sauvegarde basé sur le cloud garantit que si une copie de vos fichiers est endommagée, perdue ou inaccessible, d'autres copies seront disponibles ailleurs pour une récupération rapide."
+      },
+      {
+        "title": "Open source et audité",
+        "description": "Notre stockage cloud est entièrement open source et disponible pour consultation via notre page GitHub pour une transparence totale sur la manière dont vos données et fichiers sont protégés. Internxt a également passé un audit de sécurité indépendant réalisé par Securitum, vérifiant que son stockage cloud pour la sauvegarde garantit que vos fichiers sont sécurisés et protégés contre les pirates informatiques et les cyberattaques."
+      },
+      {
+        "title": "Accédez à vos sauvegardes cloud depuis n'importe quel appareil",
+        "description": "Vous pouvez effectuer une sauvegarde cloud depuis votre appareil ou plateforme préféré, car Internxt est disponible sur Windows, Mac, Linux, iOS ou Android. Vous pouvez également sauvegarder vos fichiers dans le cloud en utilisant WebDAV ou Rclone pour une gestion plus facile de vos sauvegardes et accéder à vos données à distance sur votre appareil préféré."
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Sauvegardez votre cloud avec Internxt Drive",
+    "description": "Récupération instantanée des données lorsque vous en avez le plus besoin",
+    "cta": "Obtenir Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "Effectuez vos sauvegardes cloud en toute confiance",
+    "description": "Protection totale contre les ransomwares, la perte de données ou la corruption",
+    "cta": "Acheter votre plan"
+  },
+
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Comment Internxt protège-t-il mes données ?",
+        "answer": [
+          "Internxt utilise la cryptographie post-quantique primée Kyber-512 et le chiffrement à connaissance nulle pour garantir que vous seul avez accès à vos fichiers. Tous vos fichiers sont chiffrés sur votre appareil avant d'être envoyés dans le cloud, empêchant quiconque, y compris Internxt, de voir le contenu.",
+          "Vous pouvez également activer l'authentification à deux facteurs pour empêcher tout accès non autorisé à votre compte."
+        ]
+      },
+      {
+        "question": "À quelle fréquence dois-je effectuer une sauvegarde dans le stockage cloud ?",
+        "answer": [
+          "Avec Internxt, vous pouvez sauvegarder vos dossiers à différents intervalles pour répondre à vos besoins. Plus vous sauvegardez vos fichiers fréquemment, moins vous perdrez de données en cas d'urgence. Pour cette raison, nous recommandons des sauvegardes quotidiennes pour une protection maximale ou plus fréquentes en fonction de la modification de vos données."
+        ]
+      },
+      {
+        "question": "Comment restaurer mes données à partir du stockage cloud ?",
+        "answer": [
+          "Pour restaurer vos sauvegardes, vous devez acheter l'un de nos plans payants. Connectez-vous à votre compte Internxt Drive via notre site Web, naviguez jusqu'aux sauvegardes et sélectionnez l'appareil et le dossier que vous souhaitez télécharger pour accéder aux dossiers sauvegardés."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre le stockage cloud et les solutions de sauvegarde de stockage cloud ?",
+        "answer": [
+          "Le stockage cloud se concentre sur l'enregistrement et la gestion des fichiers qui doivent être consultés ou partagés régulièrement dans le cloud.",
+          "Le stockage cloud pour les sauvegardes, comme Internxt Drive, vous permet également de créer des copies de vos dossiers pour une protection supplémentaire des données, garantissant qu'elles peuvent être récupérées en cas de suppression accidentelle, de perte de données ou de cyberattaques.",
+          "Les solutions de sauvegarde sont conçues pour créer des copies sécurisées de vos données pour la protection. Les solutions de sauvegarde stockent automatiquement les données à intervalles réguliers, garantissant qu'elles peuvent être récupérées en cas de perte de données due à des pannes ou à des accidents."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support client via le chat en ligne ou en envoyant un e-mail à hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaie ?",
+        "answer": [
+          "Oui, Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et crypto-monnaie."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Solution de sauvegarde cloud",
+    "titleLine2": "Peu importe ce qui arrive à votre appareil, la sauvegarde de vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent toujours être récupérés lorsque vous en avez besoin.",
+    "description": "",
+    "cta": "Obtenir Internxt",
+    "cards": {
+      "element1": {
+        "title": "Plus de protection",
+        "description": [
+          "Les fichiers peuvent être perdus pour diverses raisons, telles que des pannes d'appareil, des logiciels malveillants, des ransomwares ou d'autres facteurs indépendants de notre volonté. La création de sauvegardes cloud vous permet d'enregistrer automatiquement des copies de vos fichiers dans un environnement sécurisé et chiffré, même si votre appareil est perdu, volé ou endommagé.",
+          "Les solutions de sauvegarde de stockage cloud créent des copies de vos fichiers, les chiffrent et les stockent à plusieurs emplacements pour un accès rapide et une récupération des données. Vous pouvez contrôler la planification de ces sauvegardes pour les adapter à vos besoins, minimisant ainsi les risques de perte de fichiers importants et vous protégeant contre les menaces de cybersécurité courantes telles que les ransomwares."
+        ]
+      },
+      "element2": {
+        "title": "Récupérez vos fichiers",
+        "description": [
+          "Lorsque vous sauvegardez vos fichiers avec Internxt, des sauvegardes cloud et des copies de fichiers sont effectuées sur plusieurs serveurs pour une sécurité, une protection et une récupération des données accrues. Cela offre un moyen fiable, rapide et facile de récupérer l'accès à vos fichiers et de garantir leur protection pour l'avenir."
+        ]
+      },
+      "element3": {
+        "title": "Facile à utiliser",
+        "description": [
+          "La gestion manuelle des sauvegardes peut prendre beaucoup de temps et être difficile pour plusieurs dossiers. Le processus devient beaucoup plus simple une fois que vous configurez des sauvegardes avec des fournisseurs de stockage cloud comme Internxt.",
+          "Internxt Drive peut exécuter automatiquement vos sauvegardes dans le cloud sans nécessiter d'action ; chaque fois que vous avez besoin de récupérer l'accès, vous pouvez restaurer votre fichier en quelques clics. Vous pouvez vous protéger contre les cyberattaques avancées avec des solutions de sauvegarde de stockage cloud, quelles que soient vos compétences techniques."
+        ]
+      },
+      "element4": {
+        "title": "Accès multiplateforme",
+        "description": [
+          "Il est essentiel d'avoir accès à vos fichiers, peu importe où vous vous trouvez ou quel appareil vous utilisez. Avec Internxt, vous pouvez gérer votre stockage cloud et vos sauvegardes à partir de nos applications Windows, Mac ou Linux. La compatibilité WebDAV et Rclone est également disponible pour une accessibilité accrue.",
+          "En offrant plusieurs façons d'accéder et de gérer vos sauvegardes en ligne, vous pouvez récupérer et gérer vos données sans effort, ce qui facilite le travail et la collaboration depuis n'importe où."
+        ]
+      }
+    }
+  }
+}

@@ -61,17 +61,25 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className="hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-            <Animation />
-            {/* <Image
-              src={getImage("/images/cloud-storage-backup-solutions/internxt_cloud_storage.webp")}
-              width={600}
-              height={480}
-              quality={100}
-              loading="lazy"
-              layout="intrinsic"
-              alt={`image`}
-            /> */}
+          
+          <div className="relative ml-10 hidden flex-grow lg:flex xl:ml-20">
+            <div
+              className="relative  top-40 min-h-[700px] w-full min-w-[500]"
+              style={{
+                width: '1080px',
+                height: '600px',
+                borderRadius: '24px',
+              }}
+            >
+              <Image
+                loading="eager"
+                src={getImage('/images/cloud-storage-backup-solutions/internxt_cloud_storage.webp')}
+                draggable="false"
+                width={1080}
+                height={600}
+                alt="drive web app"
+              />
+            </div>
           </div>
         </div>
       </div>

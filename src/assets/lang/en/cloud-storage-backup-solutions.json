@@ -6,7 +6,7 @@
         "blueText": "data protection and recovery ",
         "textAfterBlueText": "Cloud storage backup solutions for "
       },
-      "description": "Internxt Drive allows you to back up your cloud storage and protect your files from ransomware and data loss protected by post-quantum encryption.",
+      "description": "Internxt Drive allows you to back up and protect your files from ransomware and data loss",
       "features": ["Schedule your backups", "Backed up across multiple servers", "Open source and audited"],
       "claimDeal": "View plans"
     },
@@ -24,7 +24,7 @@
   },
   "WhatWeDo": {
     "title": {
-      "line1": "Internxt offers secure and private",
+      "line1": "Internxt offers secure and sprivate",
       "line2": "cloud-based backup storage for",
       "line3": "for personal, business, or enterprise use"
     },

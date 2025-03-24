@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
@@ -21,11 +20,11 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const { dialogIsOpen } = useGlobalDialog();
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
-  
-  const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';  
+
+  const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
-  
+
   const handleOnClick = () => {
     router.push('/pricing');
   };
@@ -40,7 +39,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
-            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`} 
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
             {!shouldShowMobileBanner ? (
               <div className="flex lg:hidden">
@@ -62,12 +61,28 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className="hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-            <Animation />
+          
+          <div className="relative ml-10 hidden flex-grow lg:flex xl:ml-20">
+            <div
+              className="relative  top-40 min-h-[700px] w-full min-w-[500]"
+              style={{
+                width: '1080px',
+                height: '600px',
+                borderRadius: '24px',
+              }}
+            >
+              <Image
+                loading="eager"
+                src={getImage('/images/cloud-storage-backup-solutions/internxt_cloud_storage.webp')}
+                draggable="false"
+                width={1080}
+                height={600}
+                alt="drive web app"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-

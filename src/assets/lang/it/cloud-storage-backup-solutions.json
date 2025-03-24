@@ -1,0 +1,159 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "i tuoi dati",
+        "textAfterBlueText": "Soluzione di backup cloud per "
+      },
+      "description": "Internxt Drive ti permette di eseguire il backup dei tuoi file e proteggerli da perdite e ransomware",
+      "features": ["Pianifica i tuoi backup", "Backup su più server", "Open source e controllato"],
+      "claimDeal": "Vedi i piani"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Soluzione di backup cloud per i tuoi dati",
+      "cta": "Vedi i piani"
+    }
+  },
+
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt offre soluzioni di archiviazione",
+      "line2": "cloud privato per privati, PMI e grandi aziende."
+    },
+    "subtitle": "Scegli Internxt per un'archiviazione cloud sicura, in modo che i tuoi file siano sempre sottoposti a backup, facilmente recuperabili e protetti dalla perdita di dati.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Offriamo archiviazione cloud annuale e a vita a prezzi accessibili per archiviare, condividere, eseguire il backup e sincronizzare i tuoi file. Drive include anche una VPN e un antivirus premium per la massima privacy e protezione online.",
+      "cta": "Acquista il tuo piano"
+    },
+    "square2": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 è un servizio di archiviazione oggetti scalabile e crittografato end-to-end per aziende o PMI per gestire grandi quantità di dati a costi inferiori. Senza costi di ingresso e uscita, i nostri piani di archiviazione oggetti sono fino al 90% più economici rispetto ad altri fornitori.",
+      "cta": "Ottieni Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "Come Internxt Drive può eseguire il backup e proteggere i tuoi file",
+    "description": "Internxt offre archiviazione cloud privata e backup sicuri protetti da crittografia post-quantistica per darti il controllo totale sui tuoi file e la massima protezione per le tue cartelle.",
+    "info": [
+      {
+        "title": "Backup cloud automatici",
+        "description": "Internxt ti permette di eseguire il backup del tuo archivio cloud manualmente o di pianificare le tue cartelle per backup automatici giornalieri, orari o ogni 6 o 12 ore. Eseguendo il backup automatico delle tue cartelle, ti assicuri che vengano aggiornate regolarmente e archiviate in modo sicuro nel cloud per un facile recupero in caso di problemi."
+      },
+      {
+        "title": "Protezione contro ransomware",
+        "description": "Le soluzioni di backup dell'archiviazione cloud proteggono i tuoi file dal ransomware permettendoti di ripristinare e recuperare i file bloccati e crittografati da un attacco ransomware. L'archiviazione di backup basata su cloud significa che puoi recuperare l'accesso alle tue cartelle e ai tuoi file senza pagare tariffe esorbitanti o perdere i tuoi dati."
+      },
+      {
+        "title": "Protetto da crittografia post-quantistica",
+        "description": "Internxt è la prima soluzione di backup dell'archiviazione cloud che utilizza la crittografia post-quantistica per proteggere i file che archivi, condividi e di cui esegui il backup. La nostra crittografia post-quantistica utilizza algoritmi progettati per resistere a questi attacchi quantistici, garantendo che i tuoi dati di backup rimangano sicuri anche con il progredire della tecnologia."
+      },
+      {
+        "title": "Ridondanza dei dati",
+        "description": "Le soluzioni di backup dell'archiviazione cloud di Internxt crittografano ed eseguono il backup di più copie dei tuoi dati su più server per la massima protezione e recupero dei dati. Questa maggiore ridondanza nel nostro archivio di backup basato su cloud garantisce che, se una copia dei tuoi file viene danneggiata, persa o diventa inaccessibile, altre copie saranno disponibili altrove per un rapido recupero."
+      },
+      {
+        "title": "Open source e controllato",
+        "description": "Il nostro archivio cloud è completamente open source ed è disponibile per la visualizzazione tramite la nostra pagina GitHub per una trasparenza totale su come vengono protetti i tuoi dati e file. Internxt ha anche superato un controllo di sicurezza indipendente condotto da Securitum, verificando che il suo archivio cloud per il backup garantisce che i tuoi file siano sicuri e protetti da hacker e attacchi informatici."
+      },
+      {
+        "title": "Accedi ai tuoi backup cloud da qualsiasi dispositivo",
+        "description": "Puoi eseguire un backup cloud dal tuo dispositivo o piattaforma preferita, poiché Internxt è disponibile su Windows, Mac, Linux, iOS o Android. Puoi anche eseguire il backup dei tuoi file nel cloud utilizzando WebDAV o Rclone per una gestione più semplice dei tuoi backup e accedere ai tuoi dati da remoto sul tuo dispositivo preferito."
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Esegui il backup del tuo cloud con Internxt Drive",
+    "description": "Recupero dati istantaneo quando ne hai più bisogno",
+    "cta": "Ottieni Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "Esegui i tuoi backup cloud con fiducia",
+    "description": "Protezione totale contro ransomware, perdita di dati o corruzione",
+    "cta": "Acquista il tuo piano"
+  },
+
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Come protegge Internxt i miei dati?",
+        "answer": [
+          "Internxt utilizza la pluripremiata crittografia post-quantistica Kyber-512 e la crittografia a conoscenza zero per garantire che solo tu abbia accesso ai tuoi file. Tutti i tuoi file vengono crittografati sul tuo dispositivo prima di essere inviati al cloud, impedendo a chiunque, incluso Internxt, di visualizzare il contenuto.",
+          "Puoi anche attivare l'autenticazione a due fattori per impedire l'accesso non autorizzato al tuo account."
+        ]
+      },
+      {
+        "question": "Con quale frequenza devo eseguire il backup nell'archivio cloud?",
+        "answer": [
+          "Con Internxt, puoi eseguire il backup delle tue cartelle a intervalli diversi per soddisfare le tue esigenze. Più frequentemente esegui il backup dei tuoi file, meno dati perderai in caso di emergenza. Per questo motivo, consigliamo backup giornalieri per la massima protezione o più frequenti a seconda della modifica dei tuoi dati."
+        ]
+      },
+      {
+        "question": "Come ripristino i miei dati dall'archivio cloud?",
+        "answer": [
+          "Per ripristinare i tuoi backup, devi acquistare uno dei nostri piani a pagamento. Accedi al tuo account Internxt Drive tramite il nostro sito web, vai a backup e seleziona il dispositivo e la cartella che desideri scaricare per accedere alle cartelle di cui è stato eseguito il backup."
+        ]
+      },
+      {
+        "question": "Qual è la differenza tra l'archiviazione cloud e le soluzioni di backup dell'archiviazione cloud?",
+        "answer": [
+          "L'archiviazione cloud si concentra sul salvataggio e sulla gestione dei file a cui è necessario accedere o condividere regolarmente nel cloud.",
+          "L'archiviazione cloud per i backup, come Internxt Drive, ti permette anche di creare copie delle tue cartelle per una maggiore protezione dei dati, garantendo che possano essere recuperate in caso di eliminazione accidentale, perdita di dati o attacchi informatici.",
+          "Le soluzioni di backup sono progettate per creare copie sicure dei tuoi dati per la protezione. Le soluzioni di backup archiviano automaticamente i dati a intervalli regolari, garantendo che possano essere recuperati in caso di perdita di dati dovuta a guasti o incidenti."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": [
+          "Non trovi quello che stai cercando? Puoi contattare il nostro team di assistenza clienti tramite la chat online o inviando un'e-mail a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Sì, Internxt accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort e criptovaluta."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Soluzione di backup cloud",
+    "titleLine2": "Non importa cosa succede al tuo dispositivo, il backup dei tuoi file significa che le tue foto, i tuoi file e i tuoi ricordi importanti possono sempre essere recuperati quando ne hai bisogno.",
+    "description": "",
+    "cta": "Ottieni Internxt",
+    "cards": {
+      "element1": {
+        "title": "Maggiore protezione",
+        "description": [
+          "I file possono essere persi per vari motivi, come guasti del dispositivo, malware, ransomware o altri fattori fuori dal nostro controllo. La creazione di backup cloud ti permette di salvare automaticamente copie dei tuoi file in un ambiente sicuro e crittografato, anche se il tuo dispositivo viene perso, rubato o danneggiato.",
+          "Le soluzioni di backup dell'archiviazione cloud creano copie dei tuoi file, le crittografano e le archiviano in più posizioni per un accesso rapido e il recupero dei dati. Puoi controllare la pianificazione di questi backup per adattarli alle tue esigenze, minimizzando le possibilità di perdere file importanti e proteggendoti da comuni minacce alla cybersicurezza come il ransomware."
+        ]
+      },
+      "element2": {
+        "title": "Recupera i tuoi file",
+        "description": [
+          "Quando esegui il backup dei tuoi file con Internxt, vengono eseguiti backup cloud e copie dei file su più server per una maggiore sicurezza, protezione e recupero dei dati. Questo offre un modo affidabile, rapido e facile per recuperare l'accesso ai tuoi file e garantirne la protezione per il futuro."
+        ]
+      },
+      "element3": {
+        "title": "Facile da usare",
+        "description": [
+          "La gestione manuale dei backup può richiedere molto tempo ed essere difficile per più cartelle. Il processo diventa molto più semplice una volta configurati i backup con fornitori di archiviazione cloud come Internxt.",
+          "Internxt Drive può eseguire automaticamente i tuoi backup nel cloud senza richiedere alcuna azione; ogni volta che hai bisogno di recuperare l'accesso, puoi ripristinare il tuo file con pochi clic. Puoi proteggerti da attacchi informatici avanzati con soluzioni di backup dell'archiviazione cloud, indipendentemente dalle tue capacità tecniche."
+        ]
+      },
+      "element4": {
+        "title": "Accesso multipiattaforma",
+        "description": [
+          "È essenziale avere accesso ai tuoi file indipendentemente da dove ti trovi o da quale dispositivo stai utilizzando. Con Internxt, puoi gestire il tuo archivio cloud e i tuoi backup dalle nostre applicazioni Windows, Mac o Linux. La compatibilità WebDAV e Rclone è disponibile anche per una maggiore accessibilità.",
+          "Offrendo più modi per accedere e gestire i tuoi backup online, puoi recuperare e gestire i tuoi dati senza sforzo, facilitando il lavoro e la collaborazione da qualsiasi luogo."
+        ]
+      }
+    }
+  }
+}

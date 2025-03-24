@@ -3,7 +3,6 @@ import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
-import { ArrowsClockwise, Devices, LockKey, MagicWand } from '@phosphor-icons/react';
 
 export interface FeatureSectionProps {
   textContent: PrivateCloudStorageSolutionsText['FeatureSection'];
@@ -12,28 +11,24 @@ export interface FeatureSectionProps {
 const FeatureSection = ({ textContent }: FeatureSectionProps) => {
   const cards = [
     {
-      icon: <LockKey size={60} weight="light" className="text-white" />,
       title: textContent.cards.element1.title,
       description: textContent.cards.element1.description,
       image: '/images/privacy-cloud-storage-solutions/internxt_increased_protection.webp',
     },
     {
-      icon: <MagicWand size={60} weight="light" className="text-white" />,
-      title: textContent.cards.element2.title,
-      description: textContent.cards.element2.description,
-      image: '/images/privacy-cloud-storage-solutions/internxt_ease_of_use.webp',
-    },
-    {
-      icon: <ArrowsClockwise size={60} weight="light" className="text-white" />,
       title: textContent.cards.element3.title,
       description: textContent.cards.element3.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_ease_of_use.webp',
+    },
+    {
+      title: textContent.cards.element2.title,
+      description: textContent.cards.element2.description,
       image: '/images/privacy-cloud-storage-solutions/internxt_recover_your_files.webp',
     },
     {
-      icon: <Devices size={60} weight="light" className="text-white" />,
       title: textContent.cards.element4.title,
       description: textContent.cards.element4.description,
-      image: '/images/privacy-cloud-storage-solutions/internxt_cross_platform_access.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_cross_platforms.webp',
     },
   ];
 
@@ -91,9 +86,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
                     isEven ? 'md:pl-10' : 'md:pr-10'
                   }`}
                 >
-                  <div className="flex h-[88px] w-[88px] items-center justify-center rounded-2xl bg-gradient-to-br from-[#A7C5FD] to-[#0052D4] p-3 shadow-xl">
-                    {card.icon}
-                  </div>
+                  
                   <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <p className="font-regular text-base sm:text-lg md:text-xl">
                     {Array.isArray(card.description)

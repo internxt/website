@@ -1,0 +1,161 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "tus datos",
+        "textAfterBlueText": "Solución de cloud backup para "
+      },
+      "description": "Internxt Drive te permite realizar copias de seguridad de tus archivos y protegerlos de pérdidas y ransomware",
+      "features": ["Programa tus copias de seguridad", "Copia de seguridad en múltiples servidores", "Código abierto y auditado"],
+      "claimDeal": "Ver planes"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Solución de cloud backup para tus datos ",
+      "cta": "Ver planes"
+    }
+  },
+
+
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt ofrece soluciones de almacenamiento",
+      "line2": "en la nube privada para",
+      "line3": "particulares, pymes y grandes empresas."
+    },
+    "subtitle": "Elige Internxt para un almacenamiento seguro en la nube para que tus archivos siempre tengan una copia de seguridad, sean fácilmente recuperables y estén protegidos contra la pérdida de datos.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Ofrecemos almacenamiento en la nube anual y de por vida asequible para almacenar, compartir, realizar copias de seguridad y sincronizar tus archivos. Drive también incluye una VPN y un antivirus premium para una total privacidad y protección en línea. ",
+      "cta": "Compra tu plan"
+    },
+    "square2": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 es un servicio de almacenamiento de objetos escalable y cifrado de extremo a extremo para que empresas o pymes administren grandes cantidades de datos a costos más bajos. Sin tarifas de entrada y salida, nuestros planes de almacenamiento de objetos son hasta un 90 % más baratos que otros proveedores.",
+      "cta": "Consigue Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "Cómo Internxt Drive puede realizar copias de seguridad y proteger tus archivos",
+    "description": "Internxt ofrece almacenamiento en la nube privada y copias de seguridad seguras protegidas por criptografía postcuántica para brindarte un control total de tus archivos y la máxima protección para tus carpetas.",
+    "info": [
+      {
+        "title": "Backups automáticas en la nube",
+        "description": "Internxt te permite realizar copias de seguridad de tu almacenamiento en la nube manualmente o programar tus carpetas para realizar copias de seguridad automáticas diariamente, cada hora o cada 6 o 12 horas. Al realizar una copia de seguridad automática de tus carpetas, te aseguras de que se actualicen periódicamente y se almacenen de forma segura en la nube para una fácil recuperación en caso de que algo salga mal."
+      },
+      {
+        "title": "Protección contra ransomware",
+        "description": "Las soluciones de copia de seguridad de almacenamiento en la nube protegen tus archivos contra el ransomware al permitirte restaurar y recuperar archivos bloqueados y cifrados por un ataque de ransomware. El almacenamiento de respaldo basado en la nube significa que puedes recuperar el acceso a tus carpetas y archivos sin pagar tarifas exorbitantes ni perder tus datos."
+      },
+      {
+        "title": "Protegido por criptografía postcuántica",
+        "description": "Internxt es la primera solución de copia de seguridad de almacenamiento en la nube, conocido como cloud backups que utiliza criptografía postcuántica para proteger los archivos que almacena, comparte y realiza copias de seguridad. Nuestro cifrado postcuántico utiliza algoritmos diseñados para resistir estos ataques cuánticos, lo que garantiza que tus datos respaldados permanezcan seguros incluso a medida que avanza la tecnología."
+      },
+      {
+        "title": "Redundancia de datos",
+        "description": "Las soluciones de respaldo de almacenamiento en la nube de Internxt cifran y respaldan múltiples copias de tus datos en múltiples servidores para una máxima protección y recuperación de datos. Esta mayor redundancia en nuestro almacenamiento de respaldo basado en la nube garantiza que si una copia de tus archivos se daña, se pierde o resulta inaccesible, otras copias estarán disponibles en otro lugar para una recuperación rápida."
+      },
+      {
+        "title": "Código abierto y auditado",
+        "description": "Nuestro almacenamiento en la nube es completamente de código abierto y está disponible para verlo a través de nuestra página de GitHub para obtener total transparencia sobre cómo se protegen tus datos y archivos. Internxt también pasó una auditoría de seguridad independiente realizada por Securitum, verificando que su almacenamiento en la nube para respaldo garantiza que tus archivos estén seguros y protegidos contra piratas informáticos y ataques cibernéticos. "
+      },
+      {
+        "title": "Accede a tus copias de seguridad en la nube desde cualquier dispositivo",
+        "description": "Puede realizar un backup en la nube desde tu dispositivo o plataforma preferida, ya que Internxt está disponible en Windows, Mac, Linux, iOS o Android. También puedes realizar una copia de seguridad en la nube de tus archivos utilizando WebDAV o Rclone para una administración más sencilla de tus copias de seguridad y acceder a tus datos de forma remota en tu dispositivo preferido."
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Haz una copia de seguridad de tu nube con Internxt Drive",
+    "description": "Recuperación instantánea de datos para cuando más los necesitas",
+    "cta": "Obtén Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "Realiza tus cloud backups con confianza",
+    "description": "Protección total contra ransomware, pérdida de datos o corrupción",
+    "cta": "Compra tu plan"
+  },
+
+  "FaqSection": {
+    "title": "¿Preguntas? tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo protege Internxt mis datos?",
+        "answer": [
+          "Internxt utiliza la galardonada criptografía poscuántica Kyber-512 y cifrado de conocimiento cero para garantizar que solo tú tengas acceso a tus archivos. Todos tus archivos se cifran en tu dispositivo antes de enviarlos a la nube, evitando que nadie, incluido Internxt, pueda ver el contenido. ",
+          "También puedes activar la autenticación de dos factores para evitar el acceso no autorizado a tu cuenta."
+        ]
+      },
+      {
+        "question": "¿Con qué frecuencia debo realizar un backup en el almacenamiento en la nube?",
+        "answer": [
+          "Con Internxt, puedes realizar copias de seguridad de tus carpetas en diferentes intervalos para satisfacer tus necesidades. Cuanto más frecuentemente hagas copias de seguridad de tus archivos, menos datos perderás en caso de una emergencia. Por este motivo, recomendamos realizar copias de seguridad diarias para una máxima protección o con mayor frecuencia dependiendo del cambio de tus datos."
+        ]
+      },
+      {
+        "question": "¿Cómo restauro mis datos desde el almacenamiento en la nube?",
+        "answer": [
+          "Para restaurar tus copias de seguridad, necesitas comprar alguno de nuestros planes de pago. Inicia sesión en tu cuenta de Internxt Drive a través de nuestro sitio web, navega hasta copias de seguridad y selecciona el dispositivo y la carpeta que deseas descargar para acceder a las carpetas respaldadas."
+        ]
+      },
+      {
+        "question": "¿Cuál es la diferencia entre el almacenamiento en la nube y las soluciones de respaldo de almacenamiento en la nube?",
+        "answer": [
+          "El almacenamiento en la nube se centra en guardar y administrar los archivos a los que se necesita acceder o compartir regularmente en la nube.",
+          "El almacenamiento en la nube para copias de seguridad o backups, como Internxt Drive, también te permite crear copias de tus carpetas para una mayor protección de los datos, garantizando que puedan recuperarse en caso de eliminación accidental, pérdida de datos o ataques cibernéticos. ",
+          "Las soluciones de respaldo están diseñadas para crear copias seguras de tus datos para su protección. Las soluciones de respaldo almacenan datos automáticamente a intervalos regulares, lo que garantiza que se puedan recuperar en caso de pérdida de datos debido a fallas o accidentes."
+        ]
+      },
+      {
+        "question": "¿Cómo me comunico con soporte?",
+        "answer": [
+          "¿No encuentras lo que estás buscando? Puedes ponerte en contacto con nuestro equipo de atención al cliente a través del chat en línea o enviando un correo electrónico a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Sí, Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc). También puedes pagar a través de PayPal, iDEAL, Sofort y Criptomoneda."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Solución de cloud backup o copia de seguridad en la nube",
+    "titleLine2": "No importa lo que le suceda a tu dispositivo, hacer un cloud backup o copia de seguridad de tus archivos significa que tus fotos, archivos y recuerdos importantes se pueden recuperar siempre que lo necesites.",
+    "description": "",
+    "cta": "Obtén Internxt",
+    "cards": {
+      "element1": {
+        "title": "Mayor protección",
+        "description": [
+          "Los archivos se pueden perder por cualquier motivo, como falla del dispositivo, malware, ransomware u otros factores fuera de nuestro control. La creación de backups en la nube te permite guardar automáticamente copias de tus archivos en un entorno seguro y cifrado, incluso si tu dispositivo se pierde, te lo roban o se daña.",
+          "Las soluciones de respaldo de almacenamiento en la nube crean copias de tus archivos, las cifran y las almacenan en múltiples ubicaciones para un acceso rápido y una recuperación de datos. Puede controlar la programación de estas copias de seguridad para adaptarlas a tus necesidades, minimizando las posibilidades de perder archivos importantes y protegiéndote contra amenazas comunes de ciberseguridad como el ransomware."
+        ]
+      },
+      "element2": {
+        "title": "Recupera tus archivos",
+        "description": [
+          "Cuando realiza una copia de seguridad de tus archivos con Internxt, se realizan cloud backups y copias de seguridad de los archivos en varios servidores para mayor seguridad, protección y recuperación de datos. Esto ofrece una manera confiable, rápida y fácil de recuperar el acceso a tus archivos y garantizar su protección para el futuro."
+        ]
+      },
+      "element3": {
+        "title": "Fácil de usar",
+        "description": [
+          "Administrar copias de seguridad manualmente puede llevar mucho tiempo y ser un desafío para varias carpetas. El proceso se vuelve mucho más sencillo una vez que configuras copias de seguridad con proveedores de almacenamiento en la nube como Internxt.",
+          "Internxt Drive puede ejecutar tus copias de seguridad automáticamente en la nube sin requerir ninguna acción; Siempre que necesites recuperar el acceso, puede restaurar tu archivo con solo unos pocos clics. Puedes protegerte contra ataques cibernéticos avanzados con soluciones de respaldo de almacenamiento en la nube, independientemente de tus habilidades técnicas."
+        ]
+      },
+      "element4": {
+        "title": "Acceso multiplataforma",
+        "description": [
+          "Es esencial tener acceso a tus archivos sin importar dónde te encuentres ni qué dispositivo estés utilizando. Con Internxt, puedes administrar tu almacenamiento en la nube y tus copias de seguridad desde nuestras aplicaciones de Windows, Mac o Linux. La compatibilidad con WebDAV y Rclone también está disponible para una mayor accesibilidad.",
+          "Al ofrecer múltiples formas de acceder y administrar tus copias de seguridad en línea, puedes recuperar y administrar tus datos sin esfuerzo, lo que facilita trabajar y colaborar desde cualquier lugar."
+        ]
+      }
+    }
+  }
+}
