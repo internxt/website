@@ -2,9 +2,9 @@
   "HeroSection": {
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "for your data",
+        "textBeforeBlueText": "",
         "blueText": "Cloud storage backup solutions",
-        "textAfterBlueText": ""
+        "textAfterBlueText": "for your data"
       },
       "description": "Internxt Drive allows you to back up and protect your files from ransomware and data loss",
       "features": ["Schedule your backups", "Backed up across multiple servers", "Open source and audited"],

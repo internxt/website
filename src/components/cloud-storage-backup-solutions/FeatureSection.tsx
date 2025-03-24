@@ -62,9 +62,12 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-20 md:flex-row md:space-x-8 md:space-y-0 ${
-                  isEven ? '' : 'md:flex-row-reverse'
-                }`}
+                // className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:flex-row md:space-x-8 md:space-y-0 md:py-20 ${
+                //   isEven ? '' : 'md:flex-row-reverse'
+                // }`}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-20 ${
+                  isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'
+                } md:text-start`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
