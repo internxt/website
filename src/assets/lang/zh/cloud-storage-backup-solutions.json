@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "您的数据",
-        "textAfterBlueText": "数据云备份解决方案"
+        "blueText": "数据云备份解决方案",
+        "textAfterBlueText": "您的数据"
       },
       "description": "Internxt Drive 允许您备份文件，并保护它们免受丢失和勒索软件的侵害",
       "features": ["安排备份", "在多个服务器上备份", "开源和审计"],

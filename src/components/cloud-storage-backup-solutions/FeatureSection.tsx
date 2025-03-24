@@ -13,7 +13,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
     {
       title: textContent.cards.element1.title,
       description: textContent.cards.element1.description,
-      image: '/images/privacy-cloud-storage-solutions/internxt_increased_protection.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_increased_protection.webp',
     },
     {
       title: textContent.cards.element3.title,
@@ -23,7 +23,7 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
     {
       title: textContent.cards.element2.title,
       description: textContent.cards.element2.description,
-      image: '/images/privacy-cloud-storage-solutions/internxt_recover_your_files.webp',
+      image: '/images/cloud-storage-backup-solutions/internxt_recover_your_files.webp',
     },
     {
       title: textContent.cards.element4.title,
@@ -62,9 +62,9 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
             return (
               <div
                 key={index}
-                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-20 ${
-                  isEven ? 'md:flex-row md:justify-between md:space-x-20' : 'md:flex-row-reverse md:justify-between'
-                } md:text-start`}
+                className={`flex flex-col items-center justify-center space-y-8 py-10 text-center  md:py-20 md:flex-row md:space-x-8 md:space-y-0 ${
+                  isEven ? '' : 'md:flex-row-reverse'
+                }`}
               >
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
@@ -82,11 +82,10 @@ const FeatureSection = ({ textContent }: FeatureSectionProps) => {
                 </RevealX>
 
                 <div
-                  className={`flex max-h-[385px] w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
+                  className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
                     isEven ? 'md:pl-10' : 'md:pr-10'
                   }`}
                 >
-                  
                   <p className=" text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <p className="font-regular text-base sm:text-lg md:text-xl">
                     {Array.isArray(card.description)

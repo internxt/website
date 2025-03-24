@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "seus dados",
-        "textAfterBlueText": "Solução de backup na nuvem para "
+        "blueText": "Solução de backup na nuvem para",
+        "textAfterBlueText": "seus dados"
       },
       "description": "O Internxt Drive permite que você faça backup de seus arquivos e os proteja contra perdas e ransomware",
       "features": ["Agende seus backups", "Backup em vários servidores", "Código aberto e auditado"],

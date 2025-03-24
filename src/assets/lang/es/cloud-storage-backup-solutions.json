@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "tus datos",
-        "textAfterBlueText": "Solución de cloud backup para "
+        "blueText": "Solución de cloud backup para ",
+        "textAfterBlueText": "tus datos"
       },
       "description": "Internxt Drive te permite realizar copias de seguridad de tus archivos y protegerlos de pérdidas y ransomware",
       "features": ["Programa tus copias de seguridad", "Copia de seguridad en múltiples servidores", "Código abierto y auditado"],

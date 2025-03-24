@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "ваши данные",
-        "textAfterBlueText": "Решение для облачного резервного копирования "
+        "blueText": "Решение для облачного резервного копирования ",
+        "textAfterBlueText": "ваши данные"
       },
       "description": "Internxt Drive позволяет вам создавать резервные копии ваших файлов и защищать их от потери и программ-вымогателей",
       "features": [

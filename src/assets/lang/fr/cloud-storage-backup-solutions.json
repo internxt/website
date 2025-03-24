@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "vos données",
-        "textAfterBlueText": "Solution de sauvegarde cloud pour "
+        "blueText": "Solution de sauvegarde cloud pour ",
+        "textAfterBlueText": "vos données"
       },
       "description": "Internxt Drive vous permet de sauvegarder vos fichiers et de les protéger contre les pertes et les ransomwares",
       "features": ["Planifiez vos sauvegardes", "Sauvegarde sur plusieurs serveurs", "Open source et audité"],

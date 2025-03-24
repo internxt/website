@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "您的資料",
-        "textAfterBlueText": "資料雲端備份解決方案"
+        "blueText": "資料雲端備份解決方案",
+        "textAfterBlueText": "您的資料"
       },
       "description": "Internxt Drive 讓您備份檔案，並保護它們免受遺失和勒索軟體的侵害",
       "features": ["安排備份", "在多個伺服器上備份", "開源和稽核"],
