@@ -7,7 +7,11 @@
         "textAfterBlueText": "seus dados"
       },
       "description": "O Internxt Drive permite que você faça backup de seus arquivos e os proteja contra perdas e ransomware",
-      "features": ["Agende seus backups", "Backup em vários servidores", "Código aberto e auditado"],
+      "features": [
+        "Agende seus backups",
+        "Backup em vários servidores",
+        "Código aberto e auditado"
+      ],
       "claimDeal": "Ver planos"
     },
     "TitleAndOnePlanV2": {
@@ -16,7 +20,6 @@
       "cta": "Ver planos"
     }
   },
-
   "WhatWeDo": {
     "title": {
       "line1": "A Internxt oferece soluções de armazenamento",
@@ -34,7 +37,6 @@
       "cta": "Obtenha Internxt S3"
     }
   },
-
   "FeaturesSection": {
     "title": "Como o Internxt Drive pode fazer backup e proteger seus arquivos",
     "description": "A Internxt oferece armazenamento em nuvem privada e backups seguros protegidos por criptografia pós-quântica para fornecer controle total sobre seus arquivos e proteção máxima para suas pastas.",
@@ -65,19 +67,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Faça backup da sua nuvem com o Internxt Drive",
     "description": "Recuperação instantânea de dados para quando você mais precisa",
     "cta": "Obtenha Internxt"
   },
-
   "CtaSection2": {
     "title": "Faça seus backups na nuvem com confiança",
     "description": "Proteção total contra ransomware, perda de dados ou corrupção",
     "cta": "Compre seu plano"
   },
-
   "FaqSection": {
     "title": "Perguntas? Temos respostas",
     "faq": [
@@ -123,31 +122,38 @@
     ]
   },
   "FeatureSection": {
-    "title": "Solução de backup na nuvem",
-    "titleLine2": "Não importa o que aconteça com seu dispositivo, fazer backup de seus arquivos significa que suas fotos, arquivos e memórias importantes podem sempre ser recuperados quando você precisar.",
-    "description": [
-      "Os arquivos podem ser perdidos por vários motivos, como falha do dispositivo, malware, ransomware ou outros fatores fora de nosso controle. Criar backups na nuvem permite que você salve automaticamente cópias de seus arquivos em um ambiente seguro e criptografado, mesmo que seu dispositivo seja perdido, roubado ou danificado.",
-      "As soluções de backup de armazenamento em nuvem criam cópias de seus arquivos, criptografam-nas e as armazenam em vários locais para acesso rápido e recuperação de dados. Você pode controlar o agendamento desses backups para adaptá-los às suas necessidades, minimizando as chances de perder arquivos importantes e protegendo-se contra ameaças comuns de segurança cibernética, como ransomware."
-    ]
-  },
-  "element2": {
-    "title": "Recupere seus arquivos",
-    "description": [
-      "Quando você faz backup de seus arquivos com a Internxt, backups na nuvem e cópias de arquivos são feitos em vários servidores para maior segurança, proteção e recuperação de dados. Isso oferece uma maneira confiável, rápida e fácil de recuperar o acesso aos seus arquivos e garantir sua proteção para o futuro."
-    ]
-  },
-  "element3": {
-    "title": "Fácil de usar",
-    "description": [
-      "Gerenciar backups manualmente pode ser demorado e desafiador para várias pastas. O processo se torna muito mais simples depois de configurar backups com provedores de armazenamento em nuvem como a Internxt.",
-      "O Internxt Drive pode executar seus backups automaticamente na nuvem sem exigir nenhuma ação; sempre que você precisar recuperar o acesso, poderá restaurar seu arquivo com apenas alguns cliques. Você pode se proteger contra ataques cibernéticos avançados com soluções de backup de armazenamento em nuvem, independentemente de suas habilidades técnicas."
-    ]
-  },
-  "element4": {
-    "title": "Acesso multiplataforma",
-    "description": [
-      "É essencial ter acesso aos seus arquivos, não importa onde você esteja ou qual dispositivo esteja usando. Com a Internxt, você pode gerenciar seu armazenamento em nuvem e seus backups a partir de nossos aplicativos Windows, Mac ou Linux. A compatibilidade com WebDAV e Rclone também está disponível para maior acessibilidade.",
-      "Ao oferecer várias maneiras de acessar e gerenciar seus backups online, você pode recuperar e gerenciar seus dados sem esforço, facilitando o trabalho e a colaboração de qualquer lugar."
-    ]
+    "title": "Solução de backup em nuvem",
+    "titleLine2": "Não importa o que aconteça com seu dispositivo, fazer backup dos seus arquivos significa que suas fotos, arquivos e memórias importantes podem ser recuperados para sempre. Escolha o Internxt para backups seguros e redundância de dados, protegendo seus arquivos contra ransomware e falhas no dispositivo.",
+    "description": "Invista na sua privacidade e tenha a tranquilidade de saber que sempre terá uma cópia dos seus arquivos.",
+    "cta": "Obtenha o Internxt",
+    "cards": {
+      "element1": {
+        "title": "Maior proteção",
+        "description": [
+          "Os arquivos podem ser perdidos por qualquer motivo, como falha do dispositivo, malware, ransomware ou outros fatores fora do nosso controle. Fazer backups em nuvem permite que você guarde automaticamente cópias dos seus arquivos em um ambiente seguro e criptografado, mesmo que seu dispositivo seja perdido, roubado ou danificado.",
+          "As soluções de backup em armazenamento em nuvem criam cópias dos seus arquivos, criptografam-nas e as armazenam em várias localizações para acesso rápido e recuperação de dados. Você pode controlar a programação desses backups para adaptá-los às suas necessidades, minimizando as chances de perder arquivos importantes e se protegendo contra ameaças comuns de cibersegurança, como o ransomware."
+        ]
+      },
+      "element2": {
+        "title": "Recupere seus arquivos",
+        "description": [
+          "Quando você faz backup dos seus arquivos com o Internxt, backups em nuvem e cópias de segurança são feitas dos arquivos em vários servidores para maior segurança, proteção e recuperação de dados. Isso oferece uma maneira confiável, rápida e fácil de recuperar o acesso aos seus arquivos e garantir sua proteção no futuro."
+        ]
+      },
+      "element3": {
+        "title": "Fácil de usar",
+        "description": [
+          "Gerenciar backups manualmente pode ser demorado e desafiador para várias pastas. O processo se torna muito mais simples depois de configurar backups com provedores de armazenamento em nuvem, como o Internxt.",
+          "O Internxt Drive pode executar seus backups automaticamente na nuvem sem necessidade de qualquer ação; sempre que você precisar recuperar o acesso, pode restaurar seu arquivo com apenas alguns cliques. Você pode se proteger contra ataques cibernéticos avançados com soluções de backup em armazenamento em nuvem, independentemente de suas habilidades técnicas."
+        ]
+      },
+      "element4": {
+        "title": "Acesso multiplataforma",
+        "description": [
+          "É essencial ter acesso aos seus arquivos, não importa onde você esteja ou qual dispositivo esteja utilizando. Com o Internxt, você pode gerenciar seu armazenamento em nuvem e seus backups a partir dos nossos aplicativos para Windows, Mac ou Linux. A compatibilidade com WebDAV e Rclone também está disponível para maior acessibilidade.",
+          "Oferecendo várias formas de acessar e gerenciar seus backups online, você pode recuperar e gerenciar seus dados sem esforço, facilitando o trabalho e a colaboração de qualquer lugar."
+        ]
+      }
+    }
   }
 }

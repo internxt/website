@@ -7,7 +7,11 @@
         "textAfterBlueText": "vos données"
       },
       "description": "Internxt Drive vous permet de sauvegarder vos fichiers et de les protéger contre les pertes et les ransomwares",
-      "features": ["Planifiez vos sauvegardes", "Sauvegarde sur plusieurs serveurs", "Open source et audité"],
+      "features": [
+        "Planifiez vos sauvegardes",
+        "Sauvegarde sur plusieurs serveurs",
+        "Open source et audité"
+      ],
       "claimDeal": "Voir les plans"
     },
     "TitleAndOnePlanV2": {
@@ -16,8 +20,6 @@
       "cta": "Voir les plans"
     }
   },
-
-
   "WhatWeDo": {
     "title": {
       "line1": "Internxt offre des solutions de stockage",
@@ -35,7 +37,6 @@
       "cta": "Obtenir Internxt S3"
     }
   },
-
   "FeaturesSection": {
     "title": "Comment Internxt Drive peut sauvegarder et protéger vos fichiers",
     "description": "Internxt offre un stockage cloud privé et des sauvegardes sécurisées protégées par une cryptographie post-quantique pour vous donner un contrôle total sur vos fichiers et une protection maximale pour vos dossiers.",
@@ -66,19 +67,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Sauvegardez votre cloud avec Internxt Drive",
     "description": "Récupération instantanée des données lorsque vous en avez le plus besoin",
     "cta": "Obtenir Internxt"
   },
-
   "CtaSection2": {
     "title": "Effectuez vos sauvegardes cloud en toute confiance",
     "description": "Protection totale contre les ransomwares, la perte de données ou la corruption",
     "cta": "Acheter votre plan"
   },
-
   "FaqSection": {
     "title": "Des questions ? Nous avons des réponses",
     "faq": [
@@ -125,8 +123,8 @@
   },
   "FeatureSection": {
     "title": "Solution de sauvegarde cloud",
-    "titleLine2": "Peu importe ce qui arrive à votre appareil, la sauvegarde de vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent toujours être récupérés lorsque vous en avez besoin.",
-    "description": "",
+    "titleLine2": "Peu importe ce qui arrive à votre appareil, sauvegarder vos fichiers signifie que vos photos, fichiers et souvenirs importants peuvent être récupérés pour toujours. Choisissez Internxt pour des sauvegardes sécurisées et la redondance des données, protégeant vos fichiers contre les ransomwares et les pannes d'appareil.",
+    "description": "Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vous aurez toujours une copie de vos fichiers.",
     "cta": "Obtenir Internxt",
     "cards": {
       "element1": {

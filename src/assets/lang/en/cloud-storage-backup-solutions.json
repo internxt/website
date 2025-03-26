@@ -3,7 +3,7 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "Cloud storage backup solutions",
+        "blueText": "Cloud storage backup solutions ",
         "textAfterBlueText": "for your data"
       },
       "description": "Internxt Drive allows you to back up and protect your files from ransomware and data loss.",
@@ -25,19 +25,19 @@
   },
   "WhatWeDo": {
     "title": {
-      "line1": "Internxt offers secure and sprivate",
+      "line1": "Internxt offers secure and private",
       "line2": "cloud-based backup storage for",
       "line3": "for personal, business, or enterprise use"
     },
     "subtitle": "Choose Internxt for secure cloud storage so your files are always backed up, easily recoverable, and protected from data loss.",
     "square1": {
       "title": "Internxt Drive",
-      "description": "Internxt Drive is one of the most private and secure cloud storage backup solutions for your data. With it, you are protected from ransomware with automated and scheduled backups for your folders. On top of that, all your folders are protected with zero-knowledge encryption, meaning you have total control of your data and privacy. ",
+      "description": "Internxt Drive is the most private cloud storage backup solution for your data. With it, you are protected from ransomware with automated and scheduled backups for your folders, zero-knowledge encryption and post-quantum encryption.",
       "cta": "Get Internxt Drive"
     },
     "square2": {
       "title": "Internxt S3",
-      "description": "Internxt S3-compatible is an online backup cloud storage option that suits businesses and enterprises to manage large amounts of data. With predictable pay-as-you-go pricing and zero data transfer fees, your organization won’t be charged for restoring or accessing your backups, keeping your costs predictable and data secure. ",
+      "description": "Internxt S3-compatible is an online backup cloud storage option that suits businesses and enterprises to manage large amounts of data. With predictable pay-as-you-go pricing and zero data transfer fees. Keep your data safe without hidden fees.",
       "cta": "Get Internxt S3"
     }
   },
@@ -131,8 +131,8 @@
   },
   "FeatureSection": {
     "title": "Cloud storage backup solutions",
-    "titleLine2": "No matter what happens to your device, backing up your files means your important photos, files, and memories can be recovered forever.",
-    "description": "",
+    "titleLine2": "No matter what happens to your device, backing up your files means your important photos, files, and memories can be recovered forever. Choose Internxt for secure backups and data redundancy, protecting your files from ransomware and device failures.",
+    "description": "Invest in your privacy and get peace of mind that you will always have a copy of your files.",
     "cta": "Get Internxt",
     "cards": {
       "element1": {

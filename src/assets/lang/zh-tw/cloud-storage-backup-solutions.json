@@ -7,7 +7,11 @@
         "textAfterBlueText": "您的資料"
       },
       "description": "Internxt Drive 讓您備份檔案，並保護它們免受遺失和勒索軟體的侵害",
-      "features": ["安排備份", "在多個伺服器上備份", "開源和稽核"],
+      "features": [
+        "安排備份",
+        "在多個伺服器上備份",
+        "開源和稽核"
+      ],
       "claimDeal": "查看方案"
     },
     "TitleAndOnePlanV2": {
@@ -16,7 +20,6 @@
       "cta": "查看方案"
     }
   },
-
   "WhatWeDo": {
     "title": {
       "line1": "Internxt 為個人、中小企業和大型企業提供",
@@ -34,7 +37,6 @@
       "cta": "取得 Internxt S3"
     }
   },
-
   "FeaturesSection": {
     "title": "Internxt Drive 如何備份和保護您的檔案",
     "description": "Internxt 提供受後量子密碼學保護的私有雲端儲存和安全備份，讓您完全控制您的檔案，並為您的資料夾提供最大程度的保護。",
@@ -65,19 +67,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "使用 Internxt Drive 備份您的雲端",
     "description": "在您最需要時即時恢復資料",
     "cta": "取得 Internxt"
   },
-
   "CtaSection2": {
     "title": "放心進行雲端備份",
     "description": "全面防範勒索軟體、資料遺失或損壞",
     "cta": "購買您的方案"
   },
-
   "FaqSection": {
     "title": "有問題？我們有答案",
     "faq": [
@@ -110,7 +109,9 @@
       },
       {
         "question": "如何聯絡支援？",
-        "answer": ["找不到您要找的東西？您可以透過線上聊天或傳送電子郵件至 hello@internxt.com 聯絡我們的客戶支援團隊。"]
+        "answer": [
+          "找不到您要找的東西？您可以透過線上聊天或傳送電子郵件至 hello@internxt.com 聯絡我們的客戶支援團隊。"
+        ]
       },
       {
         "question": "我可以用信用卡、PayPal 或加密貨幣支付嗎？",
@@ -120,11 +121,10 @@
       }
     ]
   },
-
   "FeatureSection": {
     "title": "雲端備份解決方案",
-    "titleLine2": "無論您的裝置發生什麼情況，備份檔案都意味著您的照片、檔案和重要回憶始終可以在您需要時恢復。",
-    "description": "",
+    "titleLine2": "無論您的裝置發生什麼，備份您的檔案意味著您的重要照片、檔案和回憶可以永遠恢復。選擇 Internxt 進行安全備份和資料冗餘，保護您的檔案免受勒索病毒和裝置故障的威脅。",
+    "description": "投資您的隱私，確保您永遠擁有檔案的副本，安心無虞。",
     "cta": "取得 Internxt",
     "cards": {
       "element1": {

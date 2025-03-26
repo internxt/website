@@ -7,7 +7,11 @@
         "textAfterBlueText": "i tuoi dati"
       },
       "description": "Internxt Drive ti permette di eseguire il backup dei tuoi file e proteggerli da perdite e ransomware",
-      "features": ["Pianifica i tuoi backup", "Backup su più server", "Open source e controllato"],
+      "features": [
+        "Pianifica i tuoi backup",
+        "Backup su più server",
+        "Open source e controllato"
+      ],
       "claimDeal": "Vedi i piani"
     },
     "TitleAndOnePlanV2": {
@@ -16,7 +20,6 @@
       "cta": "Vedi i piani"
     }
   },
-
   "WhatWeDo": {
     "title": {
       "line1": "Internxt offre soluzioni di archiviazione",
@@ -34,7 +37,6 @@
       "cta": "Ottieni Internxt S3"
     }
   },
-
   "FeaturesSection": {
     "title": "Come Internxt Drive può eseguire il backup e proteggere i tuoi file",
     "description": "Internxt offre archiviazione cloud privata e backup sicuri protetti da crittografia post-quantistica per darti il controllo totale sui tuoi file e la massima protezione per le tue cartelle.",
@@ -65,19 +67,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Esegui il backup del tuo cloud con Internxt Drive",
     "description": "Recupero dati istantaneo quando ne hai più bisogno",
     "cta": "Ottieni Internxt"
   },
-
   "CtaSection2": {
     "title": "Esegui i tuoi backup cloud con fiducia",
     "description": "Protezione totale contro ransomware, perdita di dati o corruzione",
     "cta": "Acquista il tuo piano"
   },
-
   "FaqSection": {
     "title": "Domande? Abbiamo risposte",
     "faq": [
@@ -124,8 +123,8 @@
   },
   "FeatureSection": {
     "title": "Soluzione di backup cloud",
-    "titleLine2": "Non importa cosa succede al tuo dispositivo, il backup dei tuoi file significa che le tue foto, i tuoi file e i tuoi ricordi importanti possono sempre essere recuperati quando ne hai bisogno.",
-    "description": "",
+    "titleLine2": "Non importa cosa succede al tuo dispositivo, fare il backup dei tuoi file significa che le tue foto, i tuoi file e i tuoi ricordi importanti possono essere recuperati per sempre. Scegli Internxt per backup sicuri e ridondanza dei dati, proteggendo i tuoi file da ransomware e guasti del dispositivo.",
+    "description": "Investi nella tua privacy e goditi la tranquillità di sapere che avrai sempre una copia dei tuoi file.",
     "cta": "Ottieni Internxt",
     "cards": {
       "element1": {

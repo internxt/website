@@ -140,3 +140,26 @@ export interface Links {
   web: string;
   mobile: string;
 }
+
+export interface Position {
+  top: string;
+  left: string;
+  bottom?: string;
+}
+
+export interface ImageConfig {
+  src: string;
+  alt: string;
+  animationDelay: number;
+  size: { width: number; height: number };
+  position: Position;
+  boxShadow?: string;
+  filter?: string;
+  borderRadius?: string;
+  className?: string;
+}
+
+
+export interface AnimationProps {
+  images: ImageConfig[];
+}

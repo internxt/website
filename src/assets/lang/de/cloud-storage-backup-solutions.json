@@ -7,7 +7,11 @@
         "textAfterBlueText": "Ihre Daten"
       },
       "description": "Mit Internxt Drive können Sie Ihre Dateien sichern und vor Verlust und Ransomware schützen",
-      "features": ["Planen Sie Ihre Backups", "Backup auf mehreren Servern", "Open Source und geprüft"],
+      "features": [
+        "Planen Sie Ihre Backups",
+        "Backup auf mehreren Servern",
+        "Open Source und geprüft"
+      ],
       "claimDeal": "Pläne anzeigen"
     },
     "TitleAndOnePlanV2": {
@@ -16,7 +20,6 @@
       "cta": "Pläne anzeigen"
     }
   },
-
   "WhatWeDo": {
     "title": {
       "line1": "Internxt bietet private Cloud-Speicherlösungen",
@@ -34,7 +37,6 @@
       "cta": "Internxt S3 erhalten"
     }
   },
-
   "FeaturesSection": {
     "title": "Wie Internxt Drive Ihre Dateien sichern und schützen kann",
     "description": "Internxt bietet privaten Cloud-Speicher und sichere Backups, geschützt durch Postquanten-Kryptographie, um Ihnen die volle Kontrolle über Ihre Dateien und maximalen Schutz für Ihre Ordner zu geben.",
@@ -65,19 +67,16 @@
       }
     ]
   },
-
   "CtaSection1": {
     "title": "Sichern Sie Ihre Cloud mit Internxt Drive",
     "description": "Sofortige Datenwiederherstellung, wenn Sie sie am meisten brauchen",
     "cta": "Internxt erhalten"
   },
-
   "CtaSection2": {
     "title": "Führen Sie Ihre Cloud-Backups vertrauensvoll durch",
     "description": "Vollständiger Schutz vor Ransomware, Datenverlust oder Beschädigung",
     "cta": "Plan kaufen"
   },
-
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [
@@ -124,8 +123,8 @@
   },
   "FeatureSection": {
     "title": "Cloud-Backup-Lösung",
-    "titleLine2": "Egal, was mit Ihrem Gerät passiert, das Sichern Ihrer Dateien bedeutet, dass Ihre Fotos, Dateien und wichtigen Erinnerungen jederzeit wiederhergestellt werden können.",
-    "description": "",
+    "titleLine2": "Egal, was mit deinem Gerät passiert, das Sichern deiner Dateien bedeutet, dass deine wichtigen Fotos, Dateien und Erinnerungen für immer wiederhergestellt werden können. Wähle Internxt für sichere Backups und Datenredundanz, um deine Dateien vor Ransomware und Gerätefehlern zu schützen.",
+    "description": "Investiere in deine Privatsphäre und genieße die Gewissheit, dass du immer eine Kopie deiner Dateien haben wirst.",
     "cta": "Internxt erhalten",
     "cards": {
       "element1": {

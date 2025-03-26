@@ -1,7 +1,7 @@
 import Script from 'next/script';
 
 import HeroSection from '@/components/cloud-storage-backup-solutions/HeroSection';
-
+import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -13,10 +13,10 @@ import { GetServerSidePropsContext } from 'next';
 import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/cloud-storage-backup-solutions/FeaturesSection';
-import WhatWeDo from '@/components/cloud-storage-backup-solutions/WhatWeDo';
+import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import FeatureSection from '@/components/cloud-storage-backup-solutions/FeatureSection';
+//import FeatureSection from '@/components/cloud-storage-backup-solutions/FeatureSection';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,7 +37,42 @@ const CloudStorageBackupSolutions = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
   const locale = lang as string;
   const CTA_URL = `/pricing`;
-
+  const cardsData: FeatureCard[] = [
+    {
+      title: textContent.FeatureSection.cards.element1.title,
+      description: textContent.FeatureSection.cards.element1.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_increased_protection.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element3.title,
+      description: textContent.FeatureSection.cards.element3.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_ease_of_use.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_recover_your_files.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element4.title,
+      description: textContent.FeatureSection.cards.element4.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_cross_platforms.webp',
+    },
+  ];
+  const products = [
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
+      animationDirection: 'left',
+      redirect: '/drive',
+      textContent: textContent.WhatWeDo.square1,
+    },
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
+      animationDirection: 'left',
+      redirect: '/cloud-object-storage',
+      textContent: textContent.WhatWeDo.square2,
+    },
+  ];
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -57,8 +92,15 @@ const CloudStorageBackupSolutions = ({
 
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-        <FeatureSection textContent={textContent.FeatureSection} />
-
+        {/* <FeatureSection textContent={textContent.FeatureSection} /> */}
+        <FeatureSection
+          title= {textContent.FeatureSection.title} 
+          subtitle={textContent.FeatureSection.titleLine2}
+          description={textContent.FeatureSection.description}
+          ctaText={textContent.FeatureSection.cta}
+          ctaLink="/signup"
+          cards={cardsData}
+        />
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
@@ -73,7 +115,7 @@ const CloudStorageBackupSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
         <FAQSection textContent={textContent.FaqSection} />
 
