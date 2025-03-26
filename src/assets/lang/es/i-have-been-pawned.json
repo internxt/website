@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt Monitor de la web oscura",
+    "title": "Internxt Monitor de la web oscura:",
     "subtitle": "Comprueba si tu correo electrónico ha sido expuesto a una violación de datos",
     "description": "Tu correo se comparará con las bases de datos para detectar si hay alguna infracción.",
     "AllGoodSection": {
@@ -16,12 +16,14 @@
       "noBreachesFound": "Email no encontrado",
       "errorPwned": "Error al comprobar el correo electrónico",
       "check": "Comprobar",
-      "checking": "Comprobando..."
+      "checking": "Comprobando...",
+      "duringCheck": "Estamos comprobando si tu correo electrónico ha sido filtrado en la web oscura. Por favor, espera un momento."
     },
+
     "breaches": {
-      "error405": "The request method is not supported. Please contact support or try refreshing the page.",
-      "error400": "The request was invalid. Please ensure your email address is correctly entered and try again.",
-      "error500": "There is an issue on the server. Please wait a moment and try again later. If the issue persists, contact support."
+      "error405": "El método de solicitud no es compatible. Por favor, contacta con soporte o intenta refrescar la página.",
+      "error400": "El correo electrónico no es válido. Por favor, introduce un correo electrónico válido.",
+      "error500": "Servidor no disponible. Por favor, inténtalo de nuevo más tarde."
     },
     "PwnedSection": {
       "title": "Oh no!",

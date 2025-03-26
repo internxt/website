@@ -16,7 +16,8 @@
       "noBreachesFound": "Email non trovata",
       "errorPwned": "Si è verificato un errore durante il controllo della tua email. Riprova più tardi.",
       "check": "Verifica",
-      "checking": "Verifica in corso..."
+      "checking": "Verifica in corso...",
+      "duringCheck": "Stiamo verificando se la tua email è stata parte di una violazione dei dati. Attendere un momento."
     },
     "breaches": {
       "error405": "Il metodo di richiesta non è supportato. Si prega di contattare l'assistenza o provare ad aggiornare la pagina.",
