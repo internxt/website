@@ -13,10 +13,10 @@ import { GetServerSidePropsContext } from 'next';
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/private-cloud-storage-solutions/FeaturesSection';
-import WhatWeDo from '@/components/private-cloud-storage-solutions/WhatWeDo';
+import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import FeatureSection from '@/components/private-cloud-storage-solutions/FeatureSection';
+import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,7 +37,49 @@ const PrivateCloudStorageSolutions = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
   const locale = lang as string;
   const CTA_URL = `/pricing`;
-
+  const products = [
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
+      animationDirection: 'left',
+      redirect: '/drive',
+      textContent: textContent.WhatWeDo.square1,
+    },
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business-1.webp',
+      animationDirection: 'right',
+      redirect: '/business',
+      textContent: textContent.WhatWeDo.square2,
+      imagePosition: 'right'
+    },
+    {
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
+      animationDirection: 'left',
+      redirect: '/cloud-object-storage',
+      textContent: textContent.WhatWeDo.square3,
+    },
+  ];
+  const cardsData: FeatureCard[] = [
+    {
+      title: textContent.FeatureSection.cards.element1.title,
+      description: textContent.FeatureSection.cards.element1.description,
+      image: '/images/cloud-storage-backup-solutions/internxt_increased_privacy_for_data.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
+      image: '/images/privacy-cloud-storage-solutions/internxt_corporate_spying.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element4.title,
+      description: textContent.FeatureSection.cards.element4.description,
+      image: '/images/privacy-cloud-storage-solutions/internxt_security_control.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element3.title,
+      description: textContent.FeatureSection.cards.element3.description,
+      image: '/images/privacy-cloud-storage-solutions/internxt_european_laws.webp',
+    },
+  ];
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -57,7 +99,14 @@ const PrivateCloudStorageSolutions = ({
 
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-        <FeatureSection textContent={textContent.FeatureSection} />
+        <FeatureSection
+          title= {textContent.FeatureSection.title} 
+          subtitle={textContent.FeatureSection.titleLine2}
+          description={textContent.FeatureSection.description}
+          ctaText={textContent.FeatureSection.cta}
+          ctaLink="/pricing"
+          cards={cardsData}
+        />
 
         <CtaSection
           textContent={textContent.CtaSection1}
@@ -73,7 +122,7 @@ const PrivateCloudStorageSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products}  />
 
         <FAQSection textContent={textContent.FaqSection} />
 
