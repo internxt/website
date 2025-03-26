@@ -2,10 +2,10 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
-import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
+import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 
 export interface FeatureSectionProps {
-  textContent: PrivateCloudStorageSolutionsText['FeatureSection'];
+  textContent: CloudStorageBackupSolutionsText['FeatureSection'];
 }
 
 const FeatureSection = ({ textContent }: FeatureSectionProps) => {

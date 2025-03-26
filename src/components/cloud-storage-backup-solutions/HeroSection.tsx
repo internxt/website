@@ -4,13 +4,13 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
+import { CloudStorageBackupSolutionsText } from '@/assets/types/cloud-storage-backup-solutions';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
-  textContent: PrivateCloudStorageSolutionsText['HeroSection'];
+  textContent: CloudStorageBackupSolutionsText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
