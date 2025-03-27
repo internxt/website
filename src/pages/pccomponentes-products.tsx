@@ -108,23 +108,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                   price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
                   billingFrequency={billingFrequency}
                   popular={productsToDisplay.storage === '5TB'}
-                  cta={['checkout', 'price_1OQ3LKFAOdcgaBMQMK2UHHRM']}
-                  priceBefore={productsToDisplay.price}
-                  lang={lang}
-                  currency={currency}
-                  coupon={coupon ?? undefined}
-                  currencyValue={currencyValue}
-                  isIframe={true}
-                  isPcComponentes
-                  index={0}
-                />
-                <PriceCard
-                  planType="individual"
-                  key={productsToDisplay.storage}
-                  storage={productsToDisplay.storage}
-                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
-                  billingFrequency={billingFrequency}
-                  popular={productsToDisplay.storage === '5TB'}
                   cta={['checkout', 'price_1OQ3JbFAOdcgaBMQsawuy1PI']}
                   priceBefore={productsToDisplay.price}
                   lang={lang}

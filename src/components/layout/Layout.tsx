@@ -215,6 +215,11 @@ LayoutProps) {
                       return unit !== "sidebar_right" && unit !== "sidebar_left";
                     });
                   }
+                  if (window.location.pathname.includes('temporary-email')) {
+                    adUnits = adUnits.filter(function(unit) {
+                      return unit !== "incontent_1";
+                    });
+                  }
                   return adUnits;
                 })()
               }

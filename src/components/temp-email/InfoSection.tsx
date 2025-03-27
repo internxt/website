@@ -39,8 +39,27 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
       },
     ];
   };
+
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   return (
-    <section className="flex justify-center overflow-hidden bg-gray-1 px-5 py-16">
+    <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
+      <Image
+        src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+        alt="Bitdefender banner"
+        width={800}
+        height={110}
+        quality={100}
+        style={{ cursor: 'pointer' }}
+        onClick={() =>
+          window.open(
+            `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+            '_blank',
+            'noopener noreferrer',
+          )
+        }
+      />
+
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
           <div id="incontent_1" className="flex w-full justify-center"></div>
