@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
 import { CloudStorageBackupSolutionsText, ImageConfig } from '@/assets/types/cloud-storage-backup-solutions';
-// const Animation = dynamic(() => import('./components/Animation'));
 const Animation = dynamic(() => import('../shared/Animation'));
 interface HeroSectionForHomeProps {
   textContent: CloudStorageBackupSolutionsText['HeroSection'];

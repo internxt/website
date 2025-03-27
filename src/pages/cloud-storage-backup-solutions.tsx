@@ -16,7 +16,6 @@ import FeaturesSection from '@/components/cloud-storage-backup-solutions/Feature
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-//import FeatureSection from '@/components/cloud-storage-backup-solutions/FeatureSection';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -61,13 +60,13 @@ const CloudStorageBackupSolutions = ({
   ];
   const products = [
     {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
+      imageUrl: '/images/cloud-storage-backup-solutions/internxt_drive.webp',
       animationDirection: 'left',
       redirect: '/drive',
       textContent: textContent.WhatWeDo.square1,
     },
     {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
+      imageUrl: '/images/cloud-storage-backup-solutions/internxt_s3.webp',
       animationDirection: 'left',
       redirect: '/cloud-object-storage',
       textContent: textContent.WhatWeDo.square2,
@@ -80,19 +79,18 @@ const CloudStorageBackupSolutions = ({
       </Script>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
-        {sm_breadcrumb('Private Cloud Storage Solutions', 'privacy')}
+        {sm_breadcrumb('Cloud Storage Backup Solutions', 'privacy')}
       </Script>
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
-        segmentName="Private Cloud Storage Solutions"
+        segmentName="Cloud Storage Backup Solutions"
         lang={lang}
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
-        {/* <FeatureSection textContent={textContent.FeatureSection} /> */}
         <FeatureSection
           title= {textContent.FeatureSection.title} 
           subtitle={textContent.FeatureSection.titleLine2}
