@@ -130,12 +130,11 @@ const PartnerDiscount = ({
         products={products}
         popularPlanBySize={'5TB'}
         loadingCards={loadingCards}
-        startIndividualPlansFromInterval={Interval.Year}
+        startIndividualPlansFromInterval={Interval.Lifetime}
         hideFreeCard
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        startFromPlan="Individuals"
         showPromo={false}
         CustomDescription={
           <>

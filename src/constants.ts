@@ -38,6 +38,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime/celebration/singlesday',
   '/elections',
   '/brave',
+  '/specialoffer',
 ];
 
 export const SNIGEL_BANNERS = {
