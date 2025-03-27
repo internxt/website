@@ -62,7 +62,7 @@ const PrivateCloudStorageSolutions = ({
     {
       title: textContent.FeatureSection.cards.element1.title,
       description: textContent.FeatureSection.cards.element1.description,
-      image: '/images/cloud-storage-backup-solutions/internxt_increased_privacy_for_data.webp',
+      image: '/images/privacy-cloud-storage-solutions/internxt_increased_privacy_for_data.webp',
     },
     {
       title: textContent.FeatureSection.cards.element2.title,
@@ -104,7 +104,7 @@ const PrivateCloudStorageSolutions = ({
           subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
           ctaText={textContent.FeatureSection.cta}
-          ctaLink="/pricing"
+          ctaLink={CTA_URL}
           cards={cardsData}
         />
 
