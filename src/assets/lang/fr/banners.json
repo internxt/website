@@ -37,7 +37,11 @@
   "s3StorageBanner": {
     "label": "Disponible maintenant !",
     "title": "Stockage d'objets compatible S3",
-    "feat": ["Jusqu'à 80% moins cher que AWS", "Sécurisé, évolutif, compatible S3", "Support natif de Rclone"],
+    "feat": [
+      "Jusqu'à 80% moins cher que AWS",
+      "Sécurisé, évolutif, compatible S3",
+      "Support natif de Rclone"
+    ],
     "cta": "Obtenez 1TB gratuitement",
     "offerEnds": "*Offre valable uniquement pour le premier mois"
   },
@@ -104,9 +108,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de réduction sur nos nouveaux plans à vie  ",
-      "normalText": "Joyeuse Saint-Patrick!   ",
-      "cta": "Obtenez votre plan!"
+      "boldText": "75% de réduction! Achetez votre plan",
+      "normalText": "Journée mondiale de la sécurité dans le cloud",
+      "cta": "Achetez votre plan!"
     }
   },
   "lifetimeBanner": {

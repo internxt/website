@@ -55,7 +55,12 @@
       },
       "howMuchYouNeed": "De combien de stockage en ligne avez-vous besoin?",
       "upTo": "Jusqu'à :",
-      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+      "buttonLabel": [
+        "200GB",
+        "2TB",
+        "5TB",
+        "10TB"
+      ]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -64,7 +69,7 @@
         "textAfterBlueText": " dans le cloud"
       },
       "subtitle": "Sécurité et contrôle complets.",
-      "description": "80% de réduction",
+      "description": "75% de réduction",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus et plus",
         "Cryptographie post-quantique et connaissance zéro",
@@ -79,9 +84,10 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Économisez 80%",
-      "title": "Nouveaux plans à vie!",
-      "cta": "Profitez de l'offre !",
+      "saveLabel": "Offre 75%",
+      "title": "Écosystème sécurisé dans le cloud",
+      "subtitle": "Nouveaux plans disponibles !",
+      "cta": "Obtenez votre plan",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "youKnow": "Saviez-vous cela?"
@@ -365,7 +371,10 @@
     "cta": "Choisissez votre plan"
   },
   "GetStartedSection": {
-    "title": { "line1": "Commencez et", "line2": "obtenez 1 Go gratuitement" },
+    "title": {
+      "line1": "Commencez et",
+      "line2": "obtenez 1 Go gratuitement"
+    },
     "subtitle": {
       "line1": "Nos clients sont très satisfaits d'Internxt Drive, mais",
       "line2": "ils sont plus heureux de savoir qu'ils sont dans une totale confidentialité."

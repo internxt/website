@@ -54,7 +54,12 @@
       },
       "howMuchYouNeed": "Wie viel Online-Speicher benötigen Sie?",
       "upTo": "Bis zu:",
-      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+      "buttonLabel": [
+        "200GB",
+        "2TB",
+        "5TB",
+        "10TB"
+      ]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -63,13 +68,12 @@
         "textAfterBlueText": " in der Cloud"
       },
       "subtitle": "Komplette Sicherheit und Kontrolle.",
-      "description": "80% Rabatt",
+      "description": "75% Rabatt",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus und mehr",
         "Post-Quanten-Kryptografie und Null-Wissen",
         "Open-Source und geprüft"
       ],
-
       "startFrom": {
         "normal1": "Ab ",
         "price": " 2",
@@ -79,9 +83,10 @@
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Spare 80%",
-      "title": "Neue lebenslange Pläne!",
-      "cta": "Angebot sichern!",
+      "saveLabel": "75% Angebot",
+      "title": "Sicheres Cloud-Ökosystem",
+      "subtitle": "Neue Pläne verfügbar!",
+      "cta": "Hol dir deinen Plan",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "youKnow": "Wusstest du das?"
@@ -365,7 +370,10 @@
     "cta": "Wählen Sie Ihren Plan"
   },
   "GetStartedSection": {
-    "title": { "line1": "Starte jetzt und", "line2": "1 GB frei" },
+    "title": {
+      "line1": "Starte jetzt und",
+      "line2": "1 GB frei"
+    },
     "subtitle": {
       "line1": "Unsere Kunden sind sehr glücklich mit Internxt, aber",
       "line2": "sie sind glücklicher, wenn sie wissen, dass sie absolute Privatsphäre haben."

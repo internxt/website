@@ -10,7 +10,10 @@
   },
   "FreeCardPromoBanner": {
     "title": "Erhalten Sie einen exklusiven Rabatt!",
-    "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
+    "subtitle": {
+      "blue": "Sonderangebot:",
+      "normal": " Dateien privat speichern für weniger"
+    },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
     "guarantee": "30-tägige Geld-zurück-Garantie"
@@ -60,7 +63,11 @@
   "s3StorageBanner": {
     "label": "Jetzt verfügbar!",
     "title": "S3-kompatibler Objektspeicher",
-    "feat": ["Bis zu 80% günstiger als AWS", "Sicher, skalierbar, S3-kompatibel", "Native Rclone-Unterstützung"],
+    "feat": [
+      "Bis zu 80% günstiger als AWS",
+      "Sicher, skalierbar, S3-kompatibel",
+      "Native Rclone-Unterstützung"
+    ],
     "cta": "Holen Sie sich 1TB kostenlos",
     "offerEnds": "*Angebot nur für den ersten Monat"
   },
@@ -94,7 +101,10 @@
     "line1": "Hole dir den Byte für Byte sicheren Cloud-Speicher",
     "blueText": "mit Internxt"
   },
-  "SignUpTempMailBanner": { "line1": "Halte deine E-Mails sauber und Dateien sicher", "blueText": "mit Internxt" },
+  "SignUpTempMailBanner": {
+    "line1": "Halte deine E-Mails sauber und Dateien sicher",
+    "blueText": "mit Internxt"
+  },
   "SignUpCyberAwareness": {
     "line1": "Jetzt, da du dir dessen bewusst bist, schütze dich mit",
     "blueText": "dem sicherem Cloud-Speicher von Internxt"
@@ -123,9 +133,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% Rabatt auf unsere neuen lebenslangen Pläne  ",
-      "normalText": "Frohen St. Patrick’s Day!   ",
-      "cta": "Sichere dir deinen Plan!"
+      "boldText": "75% Rabatt! Kaufe deinen Plan",
+      "normalText": "Weltweiter Tag der Cloud-Sicherheit",
+      "cta": "Kaufe deinen Plan!"
     }
   },
   "lifetimeBanner": {

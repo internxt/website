@@ -64,7 +64,7 @@
         "textAfterBlueText": " cloud storage and privacy suite"
       },
       "subtitle": "Full Security. Total control.",
-      "description": "Get 80% off our award-winning privacy services",
+      "description": "Get 75% OFF our award-winning privacy services",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus & more",
         "Post-quantum zero-knowledge encryption",
@@ -80,8 +80,9 @@
       "guarantee": "30-day money-back guarantee"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Save 80%",
-      "title": "New lifetime plans!",
+      "saveLabel": "Save 75%",
+      "title": "Secure Cloud Storage",
+      "subtitle":"New plans available now!",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee"
     },
