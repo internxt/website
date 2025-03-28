@@ -37,7 +37,7 @@ export const HomePageBannerForMobile = () => {
         </div>
         <Image
           src={getImage('/images/security-day/internxt_security_day.png')}
-          width={300}
+          width={350}
           height={300}
           quality={100}
           alt="World Secure Day"

@@ -35,10 +35,10 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Special82}
+        couponCode={PromoCodeName.Special80Coupon}
         discount={discount}
         lang={lang}
-        percent={'82%'}
+        percent={'80%'}
         showPriceBefore
         lifetimeMode="celebration"
       />
