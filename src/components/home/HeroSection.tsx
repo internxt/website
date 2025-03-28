@@ -28,14 +28,14 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   };
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4  pt-24 lg:pt-0 xl:mx-32">
+      <div className="relative mx-4 pt-24 lg:pt-0 xl:mx-32">
         <div
           className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block `}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
-            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center  text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center  text-center sm:w-auto sm:px-0 md:ml-0 lg:ml-0 lg:items-start lg:text-left`}
           >
             {!shouldShowMobileBanner ? (
               <div className="flex lg:hidden">
@@ -57,18 +57,18 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className=" hidden min-h-[600px] w-full justify-end pt-24 lg:flex pb-20">
+          <div className=" hidden w-full justify-end pt-24 lg:flex pb-20 px-20">
             <Image
-                  loading="eager"
-                  src={getImage("/images/security-day/internxt_security_day.png")}
-                  draggable="false"
-                  quality={100}
-                  width={600}
-                  height={600}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="HeroSection Image"
-                  onClick={handleOnClick}
-                />
+              loading="eager"
+              src={getImage("/images/security-day/internxt_security_day.png")}
+              draggable="false"
+              quality={100}
+              width={475}
+              height={437}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="HeroSection Image"
+              onClick={handleOnClick}
+            />
           </div>
         </div>
       </div>

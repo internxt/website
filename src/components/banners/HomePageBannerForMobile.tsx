@@ -17,7 +17,7 @@ export const HomePageBannerForMobile = () => {
         <p className="flex w-max rounded-md border-green-dark bg-green-1 px-2 py-1 text-sm font-medium text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
-        <p className="text-center text-5xl font-bold text-white">
+        <p className="text-center text-4xl font-bold text-white px-5">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
         <p className="text-center text-2xl text-white">
@@ -41,6 +41,7 @@ export const HomePageBannerForMobile = () => {
           height={300}
           quality={100}
           alt="Valentines Mobile"
+          objectFit="contain"
         />
       </div>
     </div>

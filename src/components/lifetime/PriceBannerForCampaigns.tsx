@@ -96,6 +96,7 @@ export const PriceBannerForCampaigns = ({
             src={getImage('/images/security-day/internxt_security_day.png')}
             width={425}
             height={263}
+            objectFit="contain"
             alt="Dust for scorer"
             className="top-10 -z-10 max-w-[300px] object-cover"
           />
