@@ -53,7 +53,7 @@ export const PriceBannerForCampaigns = ({
               src={getImage('/images/security-day/internxt_security_day.png')}
               width={400}
               height={400}
-              alt="Internxt images/security-day/internxt_security_day.png"
+              alt="World Secure Day"
             />
           </div>
         </div>

@@ -214,7 +214,7 @@ export const PriceCard = ({
         </button>
       </div>
 
-      {showPromo && (isLifetime || isAnnual) && (
+      {showPromo && (
         <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
           <span className="font-bold text-white">{contentText.productFeatures.worldCloudSecurityDay.title}</span>
           <div className="flex items-center space-x-2">
