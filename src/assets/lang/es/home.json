@@ -72,7 +72,7 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2",
+        "price": " 2.5",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
@@ -143,7 +143,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "ChooseStorageSizeSection": {

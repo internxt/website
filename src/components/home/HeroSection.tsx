@@ -28,7 +28,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   };
   return (
     <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
+      <div className="relative mx-4  pt-24 lg:pt-0 xl:mx-32">
         <div
           className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block `}
         />
@@ -57,7 +57,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className=" hidden min-h-[600px] w-full justify-end pt-24 lg:flex">
+          <div className=" hidden min-h-[600px] w-full justify-end pt-24 lg:flex pb-20">
             <Image
                   loading="eager"
                   src={getImage("/images/security-day/internxt_security_day.png")}

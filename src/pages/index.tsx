@@ -46,7 +46,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.freeUserCoupon,
-    couponCodeForLifetime: PromoCodeName.StPatricksDay,
+    couponCodeForLifetime: PromoCodeName.freeUserCoupon,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';

@@ -108,7 +108,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": " 75% de descuento! Compra tu plan ",
+      "boldText": " 75% de descuento!",
       "normalText": "Día Mundial de la Seguridad en la Nube   ",
       "cta": "Compra tu plan!"
     }
@@ -127,6 +127,6 @@
     },
     "subtitle": "Hay una oferta exclusiva esperándote.",
     "cta": "75% DE DESCUENTO",
-    "guarantee": "Garantía de devolución de dinero de 30 días"
+    "guarantee": "Garantía de devolución de 30 días"
   }
 }

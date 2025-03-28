@@ -12,8 +12,8 @@ export const HomePageBannerForMobile = () => {
     router.push('#priceTable');
   };
   return (
-    <div className={`${styles.linearGradient} flex w-full flex-col items-center justify-center lg:hidden pb-5`}>
-      <div className="flex flex-col items-center justify-center gap-4 pt-2">
+    <div className={`${styles.linearGradient} flex w-screen flex-col items-center justify-center lg:hidden pb-20`}>
+      <div className="flex flex-col items-center justify-center gap-4 pt-5">
         <p className="flex w-max rounded-md border-green-dark bg-green-1 px-2 py-1 text-sm font-medium text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>

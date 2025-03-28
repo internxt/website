@@ -16,7 +16,7 @@ export const PriceBannerForCampaigns = ({
   const globalDialog = useGlobalDialog();
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
   return (
-    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden sm:px-5`}>
+    <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden `}>
       {/* Desktop View */}
       <div
         className={`${styles.linearGradient} relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
@@ -60,9 +60,10 @@ export const PriceBannerForCampaigns = ({
       </div>
 
       {/* Mobile View */}
-      <div className={`${styles.linearGradient} relative z-10 flex w-full flex-col justify-between  lg:hidden`}>
+      <div className={`${styles.linearGradient} relative z-10 flex w-screen  flex-col justify-between lg:hidden`}>
 
-        <div className="flex w-full flex-col items-center  space-y-5 px-2 py-6 text-center">
+
+        <div className="flex w-full flex-col items-center space-y-5 px-2 py-6 text-center">
 
           <div className="flex w-max rounded-md border-green-dark bg-green-1 px-2 py-1">
             <p className="text-sm font-medium text-white">{textContent.label}</p>

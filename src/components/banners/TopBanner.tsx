@@ -47,7 +47,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
         <div className="flex h-full w-full items-center justify-center px-3 text-center md:mb-3">
           <div className="flex flex-col items-center justify-center">
             <p className="font-normal">
-              🌼 {textContent.title.normalText} <span className="ml-1 font-semibold">{textContent.title.boldText}</span>
+            🌐 {textContent.title.normalText} <span className="ml-1 font-semibold">{textContent.title.boldText}</span>
             </p>
           </div>
         </div>
