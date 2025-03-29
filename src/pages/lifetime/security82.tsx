@@ -55,7 +55,7 @@ const Security82 = ({
         discount={discount}
         lang={locale}
         couponCode={PromoCodeName.Protect82Coupon}
-        percent={'82%'}
+        percent={'80%'}
         showPriceBefore
         lifetimeMode="celebration"
       />

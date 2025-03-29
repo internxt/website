@@ -1,7 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% OFF", "line2": "our annual plans" },
-    "lifetimeTitle": { "line1": "Get a", "blueText": " lifetime ", "line2": " Internxt plan!" },
+    "title": {
+      "line1": "80% OFF",
+      "line2": "our annual plans"
+    },
+    "lifetimeTitle": {
+      "line1": "Get a",
+      "blueText": " lifetime ",
+      "line2": " Internxt plan!"
+    },
     "feeds": {
       "firstFeed": "30-day money-back guarantee",
       "secondFeed": "100% secure payment",
@@ -30,21 +37,26 @@
       "normal2": "of the most secure cloud storage"
     },
     "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
-    "features": ["The most secure cloud storage", "Cheaper than alternatives", "30-day money-back guarantee"],
+    "features": [
+      "The most secure cloud storage",
+      "Cheaper than alternatives",
+      "30-day money-back guarantee"
+    ],
     "offerEnds": "Offer ends in:",
     "howMuchStorage": "How much online storage do you need?"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 80%",
-      "title": "St. Patrick’s Day special!",
-      "subtitle": "A lifetime of storage, Antivirus, and VPN",
+      "label": "Save 75%",
+      "title": "World Cloud Security Day offer!",
+      "subtitle": "Private cloud storage, Antivirus, and VPN",
       "cta": "Claim deal!",
       "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl": "New lifetime plans!",
-      "subtitleMbl": "Lifetime storage, Antivirus, and VPN",
+      "titleMbl": "New Internxt plans!",
+      "subtitleMbl": "Internxt Drive, Antivirus, and VPN.",
+      "descriptionMbl": "Chance to win an Internxt x Swiss Peak backpack!",
       "ctaMbl": "Claim deal!"
     },
     "planTitles": {
@@ -87,7 +99,6 @@
   },
   "FaqSection": {
     "title": "Questions? We have answers",
-
     "faq": [
       {
         "question": "Can Internxt access my files?",

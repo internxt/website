@@ -108,9 +108,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de descuento en nuestros nuevos planes de por vida  ",
-      "normalText": "¡Feliz San Patricio!   ",
-      "cta": "Consigue tu plan!"
+      "boldText": " 75% de descuento!",
+      "normalText": "Día Mundial de la Seguridad en la Nube   ",
+      "cta": "Compra tu plan!"
     }
   },
   "lifetimeBanner": {
@@ -127,6 +127,6 @@
     },
     "subtitle": "Hay una oferta exclusiva esperándote.",
     "cta": "75% DE DESCUENTO",
-    "guarantee": "Garantía de devolución de dinero de 30 días"
+    "guarantee": "Garantía de devolución de 30 días"
   }
 }

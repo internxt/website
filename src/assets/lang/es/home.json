@@ -64,7 +64,7 @@
         "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
-      "description": "80% de descuento",
+      "description": "75% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
         "Cifrado postcuántico y cero conocimiento",
@@ -72,16 +72,17 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2",
+        "price": " 2.5",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Ahorra un 80%",
-      "title": "¡Nuevos planes de por vida!",
-      "cta": "Comprar",
+      "saveLabel": "Oferta 75%",
+      "title": "Ecosistema seguro en la nube",
+      "subtitle":"Nuevos planes disponibles!",
+      "cta": "Consigue tu plan",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"
@@ -142,7 +143,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "ChooseStorageSizeSection": {

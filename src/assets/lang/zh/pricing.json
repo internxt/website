@@ -1,8 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "八折优惠", "line2": "我们的年度计划" },
-    "lifetimeTitle": { "line1": "获得", "blueText": "终身", "line2": " Internxt 计划！" },
-
+    "title": {
+      "line1": "八折优惠",
+      "line2": "我们的年度计划"
+    },
+    "lifetimeTitle": {
+      "line1": "获得",
+      "blueText": "终身",
+      "line2": " Internxt 计划！"
+    },
     "feeds": {
       "firstFeed": "30天退款保证",
       "secondFeed": "100%安全支付",
@@ -17,7 +23,12 @@
     "title": "您需要多少在线存储空间？",
     "description": "选择数量以查看适合您需求的计划。",
     "cta": "找到您的理想计划",
-    "features": ["最安全的云存储", "匿名账户创建", "军用级加密", "您的数据不会被出售"]
+    "features": [
+      "最安全的云存储",
+      "匿名账户创建",
+      "军用级加密",
+      "您的数据不会被出售"
+    ]
   },
   "PriceTableForAlternativePricing": {
     "title": {
@@ -27,21 +38,25 @@
     },
     "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
     "howMuchStorage": "您需要多少在线存储空间？",
-    "features": ["最安全的云存储", "比其他选择更便宜", "30天退款保证"],
+    "features": [
+      "最安全的云存储",
+      "比其他选择更便宜",
+      "30天退款保证"
+    ],
     "offerEnds": "优惠结束于:"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省80%",
-      "title": "圣帕特里克节特别优惠！",
-      "subtitle": "终身存储、杀毒软件和VPN",
-      "cta": "获取您的计划!",
-      "cta2": "享受80%折扣",
-      "guarantee": "30天退款保证",
-      "lastCta": "*优惠适用于免费账户或新客户",
+      "label": "优惠 75%",
+      "title": "世界云安全日",
+      "subtitle": "Internxt 云盘、杀毒软件和 VPN",
+      "cta": "获取您的方案！",
+      "cta2": "享受 80% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠仅适用于免费账户或新用户",
       "titleMbl": "全新终身计划！",
-      "subtitleMbl": "终身存储、杀毒软件和VPN",
-      "ctaMbl": "购买您的计划"
+      "descriptionMbl": "私人存储、杀毒软件和 VPN",
+      "ctaMbl": "购买您的方案"
     },
     "save": "省高达",
     "planTitles": {
@@ -136,11 +151,15 @@
       },
       {
         "question": "我如何联系技术支持？",
-        "answer": ["找不到你要找的东西？你可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的客户成功团队。"]
+        "answer": [
+          "找不到你要找的东西？你可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的客户成功团队。"
+        ]
       },
       {
         "question": "Internxt计划的费用是多少？",
-        "answer": ["需要更多的存储空间？我们也提供个人计划，范围从20GB到2TB，低至0.89欧元/月。"]
+        "answer": [
+          "需要更多的存储空间？我们也提供个人计划，范围从20GB到2TB，低至0.89欧元/月。"
+        ]
       },
       {
         "question": "Internxt是否有终身计划？",

@@ -13,7 +13,7 @@ import router, { useRouter } from 'next/router';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.18;
+  const discount = 0.20;
 
   return (
     <Layout
@@ -35,10 +35,10 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Special82}
+        couponCode={PromoCodeName.Special80Coupon}
         discount={discount}
         lang={lang}
-        percent={'82%'}
+        percent={'80%'}
         showPriceBefore
         lifetimeMode="celebration"
       />

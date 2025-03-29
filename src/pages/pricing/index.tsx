@@ -51,7 +51,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.freeUserCoupon,
-    couponCodeForLifetime: PromoCodeName.StPatricksDay,
+    couponCodeForLifetime: PromoCodeName.freeUserCoupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');

@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
-    couponCodeForLifetime: PromoCodeName.Special82,
+    couponCode: PromoCodeName.Special80Coupon,
+    couponCodeForLifetime: PromoCodeName.Special80Coupon,
   });
 
   const cardsData = [

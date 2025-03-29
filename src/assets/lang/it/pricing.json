@@ -1,7 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% OFF", "line2": "i nostri piani annuali" },
-    "lifetimeTitle": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
+    "title": {
+      "line1": "80% OFF",
+      "line2": "i nostri piani annuali"
+    },
+    "lifetimeTitle": {
+      "line1": "Ottenete un piano Internxt ",
+      "blueText": " a vita",
+      "line2": "!"
+    },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
       "secondFeed": "Pagamento sicuro al 100%",
@@ -31,20 +38,24 @@
     },
     "howMuchStorage": "Quanta memoria online ti serve?",
     "description": "Proteggi i tuoi file di lavoro e personali con un cloud storage crittografato di livello militare a prezzi accessibili.",
-    "features": ["Il cloud storage più sicuro", "Più economico delle alternative", "Garanzia di rimborso di 30 giorni"],
+    "features": [
+      "Il cloud storage più sicuro",
+      "Più economico delle alternative",
+      "Garanzia di rimborso di 30 giorni"
+    ],
     "offerEnds": "Termina tra:"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia l'80%",
-      "title": "Offerta speciale per il Giorno di San Patrizio!",
-      "subtitle": "Archiviazione, antivirus e VPN a vita",
+      "label": "Offerta 75%",
+      "title": "Giornata Mondiale della Sicurezza Cloud",
+      "subtitle": "Internxt Drive, Antivirus e VPN",
       "cta": "Ottieni il tuo piano!",
-      "cta2": "Ottieni l'80% di sconto",
+      "cta2": "Ricevi uno sconto dell'80%",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
+      "lastCta": "*Offerta valida per account gratuiti o nuovi utenti",
       "titleMbl": "Nuovi piani a vita!",
-      "subtitleMbl": "Archiviazione, antivirus e VPN a vita",
+      "descriptionMbl": "Archivio privato, Antivirus e VPN",
       "ctaMbl": "Acquista il tuo piano"
     },
     "save": "Risparmia fino al",
@@ -87,7 +98,6 @@
   },
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
-
     "faq": [
       {
         "question": "Internxt può accedere ai miei file?",
