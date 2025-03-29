@@ -135,6 +135,8 @@ const PartnerDiscount = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
+        startFromPlan="Individuals"
+        showPromo={false}
         CustomDescription={
           <>
             <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>
