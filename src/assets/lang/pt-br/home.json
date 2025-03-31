@@ -72,17 +72,18 @@
       ],
       "startFrom": {
         "normal1": "A partir de ",
-        "price": " 1,99",
+        "price": " 2.5",
         "normal2": " /mês"
       },
       "claimDeal": "Obter oferta",
       "guarantee": "Garantia de devolução de 30 dias"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Economize 80%",
-      "title": "Novos planos vitalícios!",
-      "cta": "Aproveite a oferta!",
-      "guarantee": "Garantia de reembolso de 30 dias"
+      "saveLabel": "Oferta 80%",
+      "title": "Ecossistema seguro na nuvem",
+      "subtitle": "Novos planos disponíveis!",
+      "cta": "Adquira seu plano",
+      "guarantee": "Garantia de devolução de 30 dias"
     },
     "youKnow": "Você sabia?"
   },
@@ -357,7 +358,10 @@
     "cta": "Escolha seu plano"
   },
   "GetStartedSection": {
-    "title": { "line1": "Comece e", "line2": "obtenha 1GB gratuitamente" },
+    "title": {
+      "line1": "Comece e",
+      "line2": "obtenha 1GB gratuitamente"
+    },
     "subtitle": {
       "line1": "Nossos clientes estão muito felizes com o Internxt Drive, mas",
       "line2": "eles estão mais felizes sabendo que estão em total privacidade."

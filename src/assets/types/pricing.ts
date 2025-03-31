@@ -129,6 +129,7 @@ export interface CtaBanner {
   guarantee: string;
   lastCta: string;
   titleMbl: string;
+  subtitleMbl: string;
   descriptionMbl: string;
   ctaMbl: string;
 }

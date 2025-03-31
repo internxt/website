@@ -1,8 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "八折优惠", "line2": "我们的年度计划" },
-    "lifetimeTitle": { "line1": "获得", "blueText": "终身", "line2": " Internxt 计划！" },
-
+    "title": {
+      "line1": "八折优惠",
+      "line2": "我们的年度计划"
+    },
+    "lifetimeTitle": {
+      "line1": "获得",
+      "blueText": "终身",
+      "line2": " Internxt 计划！"
+    },
     "feeds": {
       "firstFeed": "30天退款保证",
       "secondFeed": "100%安全支付",
@@ -32,16 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "节省80%",
-      "title": "圣帕特里克节特别优惠！",
-      "subtitle": "终身存储、杀毒软件和VPN",
-      "cta": "获取您的计划!",
-      "cta2": "享受80%折扣",
-      "guarantee": "30天退款保证",
-      "lastCta": "*优惠适用于免费账户或新客户",
+      "label": "优惠 80%",
+      "title": "世界云安全日",
+      "subtitle": "Internxt 云盘、杀毒软件和 VPN",
+      "cta": "获取您的方案！",
+      "cta2": "享受 80% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠仅适用于免费账户或新用户",
       "titleMbl": "全新终身计划！",
-      "subtitleMbl": "终身存储、杀毒软件和VPN",
-      "ctaMbl": "购买您的计划"
+      "descriptionMbl": "私人存储、杀毒软件和 VPN",
+      "ctaMbl": "购买您的方案"
     },
     "save": "省高达",
     "planTitles": {
