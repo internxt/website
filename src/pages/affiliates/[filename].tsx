@@ -90,7 +90,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
   const couponCode = {
     pcmag: PromoCodeName.PcmagCoupon,
-    oneplan: PromoCodeName.Special80Coupon,
+    oneplan: PromoCodeName.Special82,
   };
 
   useEffect(() => {
