@@ -5,7 +5,6 @@ interface CountdownProps {
   dt?: string;
   textFont?: string;
   textHeight?: string;
-  isComebackPage?: boolean;
 }
 
 const DAYS = 24 * 3600 * 1000;
