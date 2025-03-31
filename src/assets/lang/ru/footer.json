@@ -83,6 +83,11 @@
         "fileConverter": "Преобразователь файлов",
         "vpn": "Расширение VPN",
         "haveIBeenPwned": "Internxt Monitor"
+      },
+      "features": {
+        "title": "Функции",
+        "privateCloud": "Решение для частного облака",
+        "cloudBakcup": "Решение для облачного резервного копирования"
       }
     }
   },

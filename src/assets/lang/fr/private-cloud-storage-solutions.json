@@ -3,8 +3,8 @@
     "TitleAndOnePlan": {
       "title": {
         "textBeforeBlueText": "",
-        "blueText": "Cloud Privé",
-        "textAfterBlueText": "Solutions de stockage cloud privé "
+        "blueText": "cloud privé",
+        "textAfterBlueText": "Solutions de stockage "
       },
       "description": "Internxt est un fournisseur de stockage cloud open source avec chiffrement post-quantique pour protéger la confidentialité de vos données.",
       "claimDeal": "Obtenir Internxt",
