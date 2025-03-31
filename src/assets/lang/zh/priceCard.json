@@ -93,70 +93,27 @@
   "productFeatures": {
     "starWarsFeatures": {
       "title": "特别版免费赠品：",
-      "200GB": [
-        "星球大战壁纸",
-        "星球大战 Web 应用主题"
-      ],
-      "2TB": [
-        "星球大战壁纸",
-        "星球大战 Web 应用主题"
-      ],
-      "5TB": [
-        "星球大战壁纸",
-        "星球大战 Web 应用主题"
-      ],
-      "10TB": [
-        "星球大战壁纸",
-        "星球大战 Web 应用主题",
-        "星球大战贴纸"
-      ]
+      "200GB": ["星球大战壁纸", "星球大战 Web 应用主题"],
+      "2TB": ["星球大战壁纸", "星球大战 Web 应用主题"],
+      "5TB": ["星球大战壁纸", "星球大战 Web 应用主题"],
+      "10TB": ["星球大战壁纸", "星球大战 Web 应用主题", "星球大战贴纸"]
     },
     "halloweenFeatures": {
       "title": "Internxt 主题好礼：",
-      "200GB": [
-        "Internxt x Swiss Peak 背包",
-        "Web 应用的万圣节主题"
-      ],
-      "1TB": [
-        "Internxt x Swiss Peak 背包",
-        "Web 应用的万圣节主题"
-      ],
-      "2TB": [
-        "Internxt x Swiss Peak 背包",
-        "Web 应用的万圣节主题"
-      ],
-      "5TB": [
-        "Internxt x Swiss Peak 背包",
-        "Web 应用的万圣节主题"
-      ],
-      "10TB": [
-        "Internxt x Swiss Peak 背包",
-        "Web 应用的万圣节主题"
-      ],
+      "200GB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "1TB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "2TB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "5TB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
+      "10TB": ["Internxt x Swiss Peak 背包", "Web 应用的万圣节主题"],
       "tooltip": "购买任意终身套餐，赢取好礼机会！"
     },
     "christmasFeatures": {
       "title": "圣诞老人的礼物：",
-      "200GB": [
-        "参加我们的秘密圣诞老人抽奖",
-        "圣诞网页应用主题"
-      ],
-      "1TB": [
-        "参加我们的秘密圣诞老人抽奖",
-        "圣诞网页应用主题"
-      ],
-      "2TB": [
-        "参加我们的秘密圣诞老人抽奖",
-        "圣诞网页应用主题"
-      ],
-      "5TB": [
-        "参加我们的秘密圣诞老人抽奖",
-        "圣诞网页应用主题"
-      ],
-      "10TB": [
-        "参加我们的秘密圣诞老人抽奖",
-        "圣诞网页应用主题"
-      ],
+      "200GB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
+      "1TB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
+      "2TB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
+      "5TB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
+      "10TB": ["参加我们的秘密圣诞老人抽奖", "圣诞网页应用主题"],
       "tooltip": "赢得多达10TB的免费存储空间！"
     },
     "superBowlFeatures": {
@@ -174,9 +131,8 @@
     },
     "worldCloudSecurityDay": {
       "title": "Internxt 礼品：",
-      "gift": "赢取一个 Internxt x Swiss Peak 背包"
+      "gift": "Internxt x Swiss Peak 背包抽奖"
     },
-
     "cheaperThan": {
       "lifetime": {
         "normal": "最多 ",
