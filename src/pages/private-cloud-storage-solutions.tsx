@@ -45,11 +45,11 @@ const PrivateCloudStorageSolutions = ({
       textContent: textContent.WhatWeDo.square1,
     },
     {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business-1.webp',
+      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
       animationDirection: 'right',
       redirect: '/business',
       textContent: textContent.WhatWeDo.square2,
-      imagePosition: 'right'
+      imagePosition: 'right',
     },
     {
       imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
@@ -100,7 +100,7 @@ const PrivateCloudStorageSolutions = ({
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
         <FeatureSection
-          title= {textContent.FeatureSection.title} 
+          title={textContent.FeatureSection.title}
           subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
           ctaText={textContent.FeatureSection.cta}
@@ -122,7 +122,7 @@ const PrivateCloudStorageSolutions = ({
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
 
-        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products}  />
+        <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
 
         <FAQSection textContent={textContent.FaqSection} />
 
