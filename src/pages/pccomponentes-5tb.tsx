@@ -8,7 +8,7 @@ import { PromoCodeName } from '@/lib/types';
 import { Transition } from '@headlessui/react';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
-const websiteToken = process.env.WEBSITE_TOKEN;
+const websiteToken = 'pc-componentes-25';
 const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
