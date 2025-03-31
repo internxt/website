@@ -55,12 +55,7 @@
       },
       "howMuchYouNeed": "Quanto de armazenamento online você precisa?",
       "upTo": "Até: ",
-      "buttonLabel": [
-        "200GB",
-        "2TB",
-        "5TB",
-        "10TB"
-      ]
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -84,7 +79,7 @@
       "guarantee": "Garantia de devolução de 30 dias"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta 75%",
+      "saveLabel": "Oferta 80%",
       "title": "Ecossistema seguro na nuvem",
       "subtitle": "Novos planos disponíveis!",
       "cta": "Adquira seu plano",

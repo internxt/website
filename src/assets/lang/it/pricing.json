@@ -38,16 +38,12 @@
     },
     "howMuchStorage": "Quanta memoria online ti serve?",
     "description": "Proteggi i tuoi file di lavoro e personali con un cloud storage crittografato di livello militare a prezzi accessibili.",
-    "features": [
-      "Il cloud storage più sicuro",
-      "Più economico delle alternative",
-      "Garanzia di rimborso di 30 giorni"
-    ],
+    "features": ["Il cloud storage più sicuro", "Più economico delle alternative", "Garanzia di rimborso di 30 giorni"],
     "offerEnds": "Termina tra:"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offerta 75%",
+      "label": "Offerta 80%",
       "title": "Giornata Mondiale della Sicurezza Cloud",
       "subtitle": "Internxt Drive, Antivirus e VPN",
       "cta": "Ottieni il tuo piano!",

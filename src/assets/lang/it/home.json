@@ -55,12 +55,7 @@
       },
       "howMuchYouNeed": "Di quanto spazio di archiviazione online hai bisogno?",
       "upTo": "Fino a:",
-      "buttonLabel": [
-        "200GB",
-        "2TB",
-        "5TB",
-        "10TB"
-      ]
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -69,7 +64,7 @@
         "textAfterBlueText": " nel cloud"
       },
       "subtitle": "Sicurezza e controllo completo.",
-      "description": "75% di sconto",
+      "description": "80% di sconto",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus e altro",
         "Crittografia post-quantistica e conoscenza zero",
@@ -77,14 +72,14 @@
       ],
       "startFrom": {
         "normal1": "A partire da ",
-        "price": " 2.5",
+        "price": " 2",
         "normal2": " /mese"
       },
       "claimDeal": "Ottieni l'offerta",
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Offerta 75%",
+      "saveLabel": "Offerta 80%",
       "title": "Ecosistema sicuro nel cloud",
       "subtitle": "Nuovi piani disponibili!",
       "cta": "Ottieni il tuo piano",

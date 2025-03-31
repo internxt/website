@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "现在安全存储您的文件，",
-        "blueText": "便宜75%"
+        "blueText": "便宜80%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -55,12 +55,7 @@
       },
       "howMuchYouNeed": "您需要多少在线存储空间？",
       "upTo": "最多：",
-      "buttonLabel": [
-        "200GB",
-        "2TB",
-        "5TB",
-        "10TB"
-      ]
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -69,22 +64,18 @@
         "textAfterBlueText": " 在云端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "75%折扣",
-      "features": [
-        "Drive, Meet, Mail, VPN, Antivirus等",
-        "后量子加密和零知识",
-        "开源和经过审计"
-      ],
+      "description": "80%折扣",
+      "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 2.5",
+        "price": " 2",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "75% 优惠",
+      "saveLabel": "80% 优惠",
       "title": "安全的云生态系统",
       "subtitle": "新计划上线！",
       "cta": "获取您的计划",

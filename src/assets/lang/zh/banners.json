@@ -110,7 +110,7 @@
   },
   "GeneralBanner": {
     "title": "Before you bounce...",
-    "description": "Get 75% off our 2TB plan for the first year.",
+    "description": "Get 80% off our 2TB plan for the first year.",
     "cta": "Sure, I'll try it out",
     "ctaCancel": "No, thanks"
   },
@@ -123,7 +123,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% 折扣！",
+      "boldText": "80% 折扣！",
       "normalText": "世界云安全日",
       "cta": "购买你的计划！"
     }
@@ -137,11 +137,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "等等！特别优惠 ",
-      "blue": "75% 折扣 ",
+      "blue": "80% 折扣 ",
       "normal2": "!"
     },
     "subtitle": "有一个独家优惠在等着你。",
-    "cta": "所有计划75% 折扣",
+    "cta": "所有计划80% 折扣",
     "guarantee": "30天退款保证"
   }
 }

@@ -37,11 +37,7 @@
   "s3StorageBanner": {
     "label": "Disponible maintenant !",
     "title": "Stockage d'objets compatible S3",
-    "feat": [
-      "Jusqu'à 80% moins cher que AWS",
-      "Sécurisé, évolutif, compatible S3",
-      "Support natif de Rclone"
-    ],
+    "feat": ["Jusqu'à 80% moins cher que AWS", "Sécurisé, évolutif, compatible S3", "Support natif de Rclone"],
     "cta": "Obtenez 1TB gratuitement",
     "offerEnds": "*Offre valable uniquement pour le premier mois"
   },
@@ -92,7 +88,7 @@
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
-    "description": "Bénéficiez de 75% de réduction sur notre plan 2 To pendant un an.",
+    "description": "Bénéficiez de 80% de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
   },
@@ -108,7 +104,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% de réduction!",
+      "boldText": "80% de réduction!",
       "normalText": "Journée mondiale de la sécurité dans le cloud",
       "cta": "Achetez votre plan!"
     }
@@ -122,11 +118,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Attendez! Offre spéciale ",
-      "blue": "75% DE RÉDUCTION ",
+      "blue": "80% DE RÉDUCTION ",
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "75% DE RÉDUCTION",
+    "cta": "80% DE RÉDUCTION",
     "guarantee": "Garantie de remboursement de 30 jours"
   }
 }

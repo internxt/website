@@ -55,12 +55,7 @@
       },
       "howMuchYouNeed": "De combien de stockage en ligne avez-vous besoin?",
       "upTo": "Jusqu'à :",
-      "buttonLabel": [
-        "200GB",
-        "2TB",
-        "5TB",
-        "10TB"
-      ]
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -69,7 +64,7 @@
         "textAfterBlueText": " dans le cloud"
       },
       "subtitle": "Sécurité et contrôle complets.",
-      "description": "75% de réduction",
+      "description": "80% de réduction",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus et plus",
         "Cryptographie post-quantique et connaissance zéro",
@@ -77,14 +72,14 @@
       ],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 2.5",
+        "price": " 2",
         "normal2": " /mois"
       },
       "claimDeal": "Obtenez l'offre",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Offre 75%",
+      "saveLabel": "Offre 80%",
       "title": "Écosystème sécurisé dans le cloud",
       "subtitle": "Nouveaux plans disponibles !",
       "cta": "Obtenez votre plan",

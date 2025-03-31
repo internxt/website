@@ -55,12 +55,7 @@
       },
       "howMuchYouNeed": "Сколько онлайн-хранилища вам нужно?",
       "upTo": "До:",
-      "buttonLabel": [
-        "200GB",
-        "2TB",
-        "5TB",
-        "10TB"
-      ]
+      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
     },
     "TitleAndOnePlan": {
       "title": {
@@ -69,7 +64,7 @@
         "textAfterBlueText": " в облаке"
       },
       "subtitle": "Полная безопасность и контроль.",
-      "description": "Скидка 75%",
+      "description": "Скидка 80%",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus и другие",
         "Постквантовая криптография и нулевое знание",
@@ -77,14 +72,14 @@
       ],
       "startFrom": {
         "normal1": "От ",
-        "price": " 2.5",
+        "price": " 2",
         "normal2": " /месяц"
       },
       "claimDeal": "Получить предложение",
       "guarantee": "Гарантия возврата денег в течение 30 дней"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Скидка 75%",
+      "saveLabel": "Скидка 80%",
       "title": "Безопасная облачная экосистема",
       "subtitle": "Новые тарифы доступны!",
       "cta": "Получите ваш план",

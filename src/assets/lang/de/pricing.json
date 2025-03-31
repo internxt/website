@@ -38,11 +38,7 @@
     },
     "howMuchStorage": "Wie viel Online-Speicherplatz benötigen Sie?",
     "description": "Schützen Sie Ihre Arbeits- und persönlichen Dateien mit einem erschwinglichen, militärisch verschlüsselten Cloud-Speicher.",
-    "features": [
-      "Der sicherste Cloud-Speicher",
-      "Günstiger als Alternativen",
-      "30-Tage Geld-zurück-Garantie"
-    ],
+    "features": ["Der sicherste Cloud-Speicher", "Günstiger als Alternativen", "30-Tage Geld-zurück-Garantie"],
     "offerEnds": "Endet in:"
   },
   "tableSection": {

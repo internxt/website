@@ -64,7 +64,7 @@
         "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
-      "description": "75% de descuento",
+      "description": "80% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
         "Cifrado postcuántico y cero conocimiento",
@@ -72,16 +72,16 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2.5",
+        "price": " 2",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta 75%",
+      "saveLabel": "Oferta 80%",
       "title": "Ecosistema seguro en la nube",
-      "subtitle":"Nuevos planes disponibles!",
+      "subtitle": "Nuevos planes disponibles!",
       "cta": "Consigue tu plan",
       "guarantee": "Garantía de devolución de 30 días"
     },

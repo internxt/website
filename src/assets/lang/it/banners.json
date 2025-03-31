@@ -113,7 +113,7 @@
   },
   "GeneralBanner": {
     "title": "Before you bounce...",
-    "description": "Get 75% off our 2TB plan for the first year.",
+    "description": "Get 80% off our 2TB plan for the first year.",
     "cta": "Sure, I'll try it out",
     "ctaCancel": "No, thanks"
   },
@@ -129,7 +129,7 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "75% di sconto!",
+      "boldText": "80% di sconto!",
       "normalText": "Giornata mondiale della sicurezza nel cloud",
       "cta": "Acquista il tuo piano!"
     }
@@ -144,11 +144,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Aspetta! Offerta speciale ",
-      "blue": "75% DI SCONTO ",
+      "blue": "80% DI SCONTO ",
       "normal2": "!"
     },
     "subtitle": "C'è un'offerta esclusiva che ti aspetta.",
-    "cta": "75% DI SCONTO",
+    "cta": "80% DI SCONTO",
     "guarantee": "Garanzia di rimborso di 30 giorni"
   }
 }

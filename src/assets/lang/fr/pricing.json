@@ -47,7 +47,7 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offre 75%",
+      "label": "Offre 80%",
       "title": "Journée mondiale de la sécurité du cloud",
       "subtitle": "Internxt Drive, Antivirus et VPN",
       "cta": "Obtiens ton plan !",
@@ -155,9 +155,7 @@
       },
       {
         "question": "Combien coûte un plan Internxt ?",
-        "answer": [
-          "Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."
-        ]
+        "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
       },
       {
         "question": "Internxt a-t-il des plans à vie ?",
@@ -208,9 +206,7 @@
     "faq": [
       {
         "question": "Combien coûte un plan Internxt ?",
-        "answer": [
-          "Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."
-        ]
+        "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
       },
       {
         "question": "Internxt a-t-il des plans à vie ?",

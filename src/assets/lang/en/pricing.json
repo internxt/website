@@ -37,17 +37,13 @@
       "normal2": "of the most secure cloud storage"
     },
     "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
-    "features": [
-      "The most secure cloud storage",
-      "Cheaper than alternatives",
-      "30-day money-back guarantee"
-    ],
+    "features": ["The most secure cloud storage", "Cheaper than alternatives", "30-day money-back guarantee"],
     "offerEnds": "Offer ends in:",
     "howMuchStorage": "How much online storage do you need?"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 75%",
+      "label": "Save 80%",
       "title": "World Cloud Security Day offer!",
       "subtitle": "Private cloud storage, Antivirus, and VPN",
       "cta": "Claim deal!",
