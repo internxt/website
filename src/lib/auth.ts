@@ -248,9 +248,10 @@ type PaymentCheckoutConfig = {
   promoCodeId?: PromoCodeProps['codeId'];
   planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
+  websiteToken?: string;
   currency?: string;
 };
-export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, planType, mode, currency, websiteToken }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
@@ -261,6 +262,7 @@ export function checkout({ planId, promoCodeId, planType, mode, currency }: Paym
     planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
+    websiteToken && params.set('websiteToken', websiteToken);
 
     window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }

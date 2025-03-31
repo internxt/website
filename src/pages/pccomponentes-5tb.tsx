@@ -1,16 +1,14 @@
 import { useState } from 'react';
-
 import Layout from '@/components/layout/Layout';
 import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
 import { Transition } from '@headlessui/react';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
-
+const websiteToken = process.env.WEBSITE_TOKEN;
 const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -71,6 +69,7 @@ const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Elem
             isIframe={true}
             isPcComponentes
             index={2}
+            websiteToken={websiteToken}
           />
         </Transition>
       </div>
