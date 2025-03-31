@@ -13,10 +13,8 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { getImage } from '@/lib/getImage';
 import { TransformedProduct } from '@/components/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
 
@@ -50,20 +48,15 @@ const BILLING_FREQUENCY_LIST = {
 export const PriceCard = ({
   product,
   decimalDiscountValue,
-  fixedDiscount,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
-  checkIconName = 'checkPrimary',
-  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
-  label,
   isFamilyPage,
   darkMode,
-  isBrave,
   showPromo = true,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
