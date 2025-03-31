@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.SpringCoupon}
+        couponType={PromoCodeName.Special80Coupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage
