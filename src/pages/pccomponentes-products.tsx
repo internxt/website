@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { Switch, Transition } from '@headlessui/react';
+import { Transition } from '@headlessui/react';
 
 import Layout from '@/components/layout/Layout';
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
-import { GetServerSidePropsContext } from 'next';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 

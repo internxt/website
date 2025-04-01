@@ -9,7 +9,7 @@ import usePricing from '@/hooks/usePricing';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { GetServerSidePropsContext } from 'next';
 import CtaSection from '@/components/shared/CtaSection';
 

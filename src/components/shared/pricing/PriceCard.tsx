@@ -13,7 +13,7 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { TransformedProduct } from '@/components/services/stripe.service';
+import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';

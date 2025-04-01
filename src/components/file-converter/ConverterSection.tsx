@@ -16,7 +16,7 @@ import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
-import fileConverterService from '../services/file-converter.service';
+import fileConverterService from '@/services/file-converter.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
@@ -207,7 +207,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   return (
-    <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
+    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
       <input
         className="pointer-events-none absolute h-0 w-0 overflow-hidden"
         type="file"
