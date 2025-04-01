@@ -473,7 +473,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[320px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
                   <div
