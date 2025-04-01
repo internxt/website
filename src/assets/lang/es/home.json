@@ -79,9 +79,10 @@
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Ahorra un 80%",
-      "title": "¡Nuevos planes de por vida!",
-      "cta": "Comprar",
+      "saveLabel": "Oferta 80%",
+      "title": "Ecosistema seguro en la nube",
+      "subtitle": "Nuevos planes disponibles!",
+      "cta": "Consigue tu plan",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"
@@ -142,7 +143,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "ChooseStorageSizeSection": {

@@ -41,15 +41,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Ahorra un 80%",
-      "title": "¡Oferta especial del Día de San Patricio!",
-      "subtitle": "Almacenamiento, antivirus y VPN para toda la vida",
+      "label": "Oferta 80%",
+      "title": "Día Mundial de la Seguridad en la Nube",
+      "subtitle": "Internxt Drive, Antivirus, y VPN",
       "cta": "Consigue tu plan!",
       "cta2": "Obtén un 80% de descuento",
-      "guarantee": "Garantía de devolución de dinero de 30 días",
-      "lastCta": "*Oferta es válida para cuentas gratuitas o nuevos clientes",
+      "guarantee": "Garantía de devolución de 30 días",
+      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
       "titleMbl": "¡Nuevos planes de por vida!",
-      "subtitleMbl": "Almacenamiento, antivirus y VPN de por vida",
+      "descriptionMbl": "Almacenamiento privado, Antivirus y VPN",
       "ctaMbl": "Compra tu plan"
     },
     "planTitles": {

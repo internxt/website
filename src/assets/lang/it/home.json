@@ -79,9 +79,10 @@
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Risparmia 80%",
-      "title": "Nuovi piani a vita!",
-      "cta": "Richiedi l'offerta!",
+      "saveLabel": "Offerta 80%",
+      "title": "Ecosistema sicuro nel cloud",
+      "subtitle": "Nuovi piani disponibili!",
+      "cta": "Ottieni il tuo piano",
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "youKnow": "Lo sapevi?"
@@ -365,7 +366,10 @@
     "cta": "Scegli il tuo piano"
   },
   "GetStartedSection": {
-    "title": { "line1": "Inizia subito", "line2": "get 1GB for free" },
+    "title": {
+      "line1": "Inizia subito",
+      "line2": "get 1GB for free"
+    },
     "subtitle": {
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."

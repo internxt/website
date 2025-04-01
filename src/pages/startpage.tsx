@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StPatricksDay,
+      promoCodeId: PromoCodeName.Special80Coupon,
     });
   }
 
@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.SpringCoupon}
+        couponType={PromoCodeName.Special80Coupon}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage
