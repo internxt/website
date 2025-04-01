@@ -27,6 +27,8 @@ const WhatWeDo = ({ textContent, lang, products }) => {
               redirect={product.redirect}
               lang={lang}
               textContent={product.textContent}
+
+              imagePosition={product.imagePosition || 'left'}
             />
             
           ))}

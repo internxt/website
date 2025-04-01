@@ -472,6 +472,40 @@ export default function Footer({
                   </div>
                 </div>
               </div>
+
+              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <Link
+                      href="/private-cloud-storage-solutions"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.privateCloud}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
+                    <Link
+                      href="/cloud-storage-backup-solutions"
+                      locale={lang}
+                      passHref
+                      className="flex items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudBakcup}
+                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Separator */}

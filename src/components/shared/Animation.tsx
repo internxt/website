@@ -70,5 +70,4 @@ const Animation = ({ images }: AnimationProps) => {
         </div>
     );
 };
-
 export default Animation;

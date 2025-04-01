@@ -1,0 +1,171 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "nube privada",
+        "textAfterBlueText": "Soluciones de almacenamiento en la "
+      },
+      "description": "Internxt es un proveedor de almacenamiento en la nube de código abierto con cifrado postcuántico para mantener la privacidad de tus datos.",
+      "claimDeal": "Get Internxt",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Soluciones de almacenamiento en la nube privada",
+      "cta": "Get Internxt",
+      "guarantee": "30-day money-back guarantee"
+    }
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt ofrece soluciones de almacenamiento ",
+      "line2": "en la nube privada para particulares, pymes y grandes empresas"
+    },
+    "subtitle": "Google, Microsoft, Apple y otros proveedores de servicios de almacenamiento en la nube están explotando tus datos con fines de lucro. Cámbiate a Internxt para tener control total de tu privacidad.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Ofrecemos almacenamiento en la nube anual y de por vida asequible para almacenar, compartir, realizar copias de seguridad y sincronizar tus archivos. Drive también incluye una VPN y un antivirus premium para una total privacidad y protección en línea.",
+      "cta": "Compra tu plan"
+    },
+    "square2": {
+      "title": "Internxt para empresas",
+      "description": "Internxt para empresas es una solución de almacenamiento en la nube que cumple con RGPD, que incluye hasta 2 TB de almacenamiento para 100 usuarios. Gracias a su cifrado, Internxt protege a tu empresa de cualquier filtración de datos.",
+      "cta": "Compra tu plan"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 es un servicio de almacenamiento de objetos escalable y cifrado de extremo a extremo para que empresas o pymes administren grandes cantidades de datos a costos más bajos. Sin tarifas de entrada y salida, nuestros planes de almacenamiento de objetos son hasta un 90 % más baratos que otros proveedores.",
+      "cta": "Consigue Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "Por qué Internxt destaca como el almacenamiento en la nube más seguro y privado",
+    "description": "Internxt integra funciones de privacidad avanzadas para ofrecer el almacenamiento en la nube, antivirus y VPN más seguros en línea.",
+    "info": [
+      {
+        "title": "Cifrado de última generación",
+        "description": "Nuestro sistema está construido con criptografía postcuántica Kyber 512, el mejor estándar de cifrado más seguro elegido por el Instituto NIST para proteger contra las amenazas futuras de las computadoras cuánticas, que en teoría podrían romper los protocolos de cifrado actuales utilizados por otros proveedores de servicios de almacenamiento en la nube. Asegura tus datos con Internxt para garantizar la privacidad de tus archivos en el futuro."
+      },
+      {
+        "title": "No más dependencia de las grandes tecnologías",
+        "description": "Otros proveedores de servicios de almacenamiento en la nube: Google, Dropbox, Apple.., se benefician de tus datos, almacenan y analizan tus archivos, lo que genera filtraciones de correos electrónicos y otra información personal en línea. Internxt es diferente. Con la creación de cuentas anónimas y una estricta política de no seguimiento, no almacenamos, compartimos ni monetizamos tus datos de ninguna manera."
+      },
+      {
+        "title": "Accesible desde cualquier lugar",
+        "description": "Descarga Internxt Drive desde tu aplicación de almacenamiento en la nube favorita para acceder a la nube en Windows, Mac, Linux, iOS o Android. También ofrecemos otras soluciones de almacenamiento en la nube privada con soporte WebDAV y Rclone, lo que te permite administrar tus archivos sin esfuerzo en múltiples dispositivos, automatizar copias de seguridad y acceder a tus datos de forma remota desde cualquier sitio."
+      },
+      {
+        "title": "Código abierto y auditado",
+        "description": "Otras plataformas de almacenamiento en la nube ocultan su código fuente al público, lo que significa que nunca podrás saber realmente cómo manejan tus datos o qué hacen con tus archivos. Internxt promete total transparencia, ya que el código fuente de todos nuestros productos está disponible públicamente en GitHub. Internxt también está verificado como una plataforma segura por Securitum, una empresa independiente de pruebas de penetración."
+      },
+      {
+        "title": "Sostenibilidad",
+        "description": "Nuestro compromiso de construir un futuro mejor basado en la privacidad en línea también se extiende a nuestro compromiso con un futuro más ecológico. Nuestros centros de datos utilizan fuentes de energía renovables como la nuclear y la hidroelectricidad. El uso de tecnología respetuosa con el medio ambiente contribuye a nuestro compromiso de construir un futuro más sostenible y ser climáticamente neutros para 2050."
+      },
+      {
+        "title": "Cumple con el RGPD",
+        "description": "Con sede en Valencia, España, Internxt garantiza que tus datos sean privados y seguros cumpliendo con las leyes de protección de datos RGPD. Una cuenta personal de Drive mantiene tu información privada, sin seguimiento, uso compartido ni acceso no autorizado y, para las empresas, reduce el riesgo de multas y problemas legales."
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "¿Interesado en soluciones de nube privada?",
+    "description": "Internxt Drive te protege con cifrado postcuántico, antivirus y VPN.",
+    "cta": "Consigue tu plan"
+  },
+
+  "CtaSection2": {
+    "title": "Protege tu privacidad con Internxt Drive",
+    "description": "Tus archivos seguros con cifrado postcuántico de última generación.",
+    "cta": "Obtén Internxt"
+  },
+
+  "FaqSection": {
+    "title": "¿Preguntas? tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Internxt es una alternativa a Google Drive?",
+        "answer": [
+          "Sí, Internxt es una alternativa a Google Drive y otras grandes empresas tecnológicas. Estas empresas cifran datos en servidores de su propiedad, lo que significa que pueden acceder a tu cuenta y ver tus archivos o dar acceso a tu cuenta al gobierno si así lo solicita. ",
+          "A diferencia de estas plataformas de almacenamiento en la nube, Internxt utiliza cifrado postcuántico y de conocimiento cero, por lo que solo tú puedes acceder a rus archivos. Tus datos se cifran en tu dispositivo antes de cargarse y nadie puede verlos ni descifrarlos, ni siquiera Internxt. Esto garantiza una privacidad total, evita el acceso no autorizado y lo protege de la vigilancia y la filtración de datos."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado postcuántico?",
+        "answer": [
+          "El cifrado postcuántico utiliza algoritmos criptográficos para proteger los datos contra la amenaza de las computadoras cuánticas que podrían romper los métodos de cifrado tradicionales. El cifrado postcuántico se centra en desarrollar algoritmos que impidan que estas computadoras descifren y accedan a tus datos.",
+          "Este método es ideal para soluciones de almacenamiento en la nube privada como Internxt porque garantiza que tus datos permanezcan seguros a pesar del avance de la tecnología de computación cuántica."
+        ]
+      },
+      {
+        "question": "¿Cuál es la diferencia entre Internxt para empresas e Internxt S3?",
+        "answer": [
+          "Internxt para empresas es una solución de almacenamiento en la nube diseñada para empresas y pymes que ofrece colaboración en equipo, controles administrativos y otras funciones para proteger a las empresas de filtraciones de datos. ",
+          "Internxt S3 es un sistema de almacenamiento basado en la nube que sigue el protocolo de Amazon S3. Es ideal para desarrolladores y empresas que necesitan escalar e integrar el almacenamiento en sus aplicaciones o servicios y almacenar lagos o almacenes de datos. ",
+          "La principal diferencia es que Internxt para empresas se centra en funciones orientadas al equipo, mientras que Internxt S3 proporciona una solución de almacenamiento escalable hasta un 90% más barata que AWS, Azure o Google Cloud."
+        ]
+      },
+      {
+        "question": "¿Por qué deberías elegir Internxt sobre otras plataformas en la nube?",
+        "answer": [
+          "Todas nuestras soluciones de almacenamiento en la nube privada hacen hincapié en la privacidad, por lo que te ofrecemos un control total sobre tu privacidad con el cifrado postcuántico Kyber 512, que protege tus datos personales o comerciales en el futuro contra posibles amenazas de la computación cuántica.",
+          "Internxt cumple con el RGPD, lo que reduce los riesgos legales y ofrece soluciones escalables y rentables como Internxt S3, sin tarifas adicionales por transferencia de datos y un modelo de pago por uso. Además, su naturaleza de código abierto, sus auditorías de seguridad independientes y su compromiso con la sostenibilidad lo convierten en una opción confiable y transparente para las empresas."
+        ]
+      },
+      {
+        "question": "¿Qué se incluye con las soluciones de almacenamiento en la nube privada de Internxt?",
+        "answer": [
+          "La suscripción de pago de Internxt y los planes de por vida ofrecen almacenamiento en la nube con cifrado postcuántico, una VPN ilimitada y ultrarrápida para hasta 5 ubicaciones, antivirus y acceso futuro a nuestros productos Mail y Meet para los planes Premium y Ultimate."
+        ]
+      },
+      {
+        "question": "¿Puedo agregar más almacenamiento a mi plan de por vida?",
+        "answer": [
+          "Sí, los planes de por vida de Internxt son acumulables, por lo que puedes agregar todo el almacenamiento que deseas a tu plan de por vida. Puedes comprarlos con la misma dirección de correo electrónico que tu plan de por vida actual. ",
+          "Contáctanos en hello@internxt.com para que podamos agruparlos en la misma cuenta."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Sí, Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc). También puedes pagar a través de PayPal, iDEAL, Sofort y Criptomoneda."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Por qué deberías cambiarte a soluciones de almacenamiento en la nube privada",
+    "titleLine2": "Cambiar a soluciones de almacenamiento en la nube privada garantiza que tus datos se mantengan privados y seguros frente a piratas informáticos y corporaciones. A diferencia de Google, Apple o Microsoft, Internxt no recopila, vende ni hace mal uso de tus datos. Tienes control total sobre tus archivos.",
+    "description": "Invierte en tu privacidad y ten la tranquilidad de saber que tus archivos y datos están protegidos contra violaciones de datos.",
+    "cta": "Get Internxt",
+    "cards": {
+      "element1": {
+        "title": "Mayor privacidad para tus datos",
+        "description": "Los servicios centrados en la privacidad priorizan la seguridad de tus datos, asegurándose de que estén cifrados tanto durante el tránsito como en reposo. A diferencia de los proveedores tradicionales de nube pública, servicios como Internxt Drive no pueden acceder a tus claves de cifrado, por lo que nadie, excepto tú mismo, puede ver o vender tus datos. "
+      },
+      "element2": {
+        "title": "Reducción del espionaje corporativo",
+        "description": [
+          "Empresas como Google establecen en sus políticas que al utilizar sus servicios, les das acceso para monitorear y utilizar tus datos para su propio beneficio y beneficio financiero. Otros servicios como Dropbox tienen un pasado lleno de violaciones de datos e intercambio de datos poco ético.",
+          "Por el contrario, las soluciones de almacenamiento en la nube privada no pueden acceder a tus archivos ya que las claves se almacenan en el dispositivo del propietario, lo que mantiene la información confidencial privada y alejada de terceros."
+        ]
+      },
+      "element3": {
+        "title": "Protegido por las leyes europeas",
+        "description": [
+          "Los problemas legales recientes en el Reino Unido y las leyes de privacidad menos estrictas en los EE. UU. han provocado que más personas elijan soluciones de almacenamiento en la nube privada con sede en Europa. Las regulaciones del GDPR, por ejemplo, otorgan a los clientes más control sobre sus datos, con derechos de acceso y eliminación.",
+          "El cumplimiento del RGPD no es solo un requisito legal, sino también una garantía de que los proveedores europeos no están sujetos a solicitudes intrusivas de acceso a datos por parte de gobiernos extranjeros, a diferencia de otros servicios que pueden brindar acceso a datos si lo solicitan el gobierno o las agencias legales."
+        ]
+      },
+      "element4": {
+        "title": "Más control sobre tu seguridad",
+        "description": [
+          "No sólo obtienes más privacidad con el almacenamiento en la nube, sino que también obtienes un mayor control sobre la seguridad de tus archivos. Internxt te permite programar o realizar copias de seguridad manualmente de tus archivos para protegerlos contra la pérdida accidental de datos. ",
+          "Otros controles de seguridad necesarios para una mayor privacidad que puede ofrecer el almacenamiento en la nube son el intercambio de archivos cifrados y protegidos con contraseña, la autenticación de dos factores (2FA) y los registros de acceso para planes de empresa."
+        ]
+      }
+    }
+  }
+}

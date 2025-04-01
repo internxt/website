@@ -83,6 +83,11 @@
         "fileConverter": "Convertisseur de fichiers",
         "haveIBeenPwned": "Internxt Monitor"
       },
+      "features": {
+        "title": "Fonctionnalités",
+        "privateCloud": "Solution de cloud privé",
+        "cloudBakcup": "Solution de sauvegarde cloud"
+      },
       "language": "Langue"
     }
   },
