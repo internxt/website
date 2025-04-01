@@ -1,4 +1,4 @@
-import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
+import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';

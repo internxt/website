@@ -3,7 +3,7 @@ import { Transition } from '@headlessui/react';
 import PriceCard from '@/components/prices/PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
-import { Interval, TransformedProduct } from '../services/stripe.service';
+import { Interval, TransformedProduct } from '@/services/stripe.service';
 
 export default function PriceTable({ lang }: Readonly<{ lang: string }>) {
   const { products, currency, loadingCards } = usePricing();

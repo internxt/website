@@ -4,7 +4,7 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import usePricing from '@/hooks/usePricing';
 import PriceCard from '@/components/prices/PriceCard';
 import { PromoCodeName } from '@/lib/types';
-import { Interval, stripeService } from '../services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { LifetimeMode } from './PaymentSection';
 
 interface PriceTableProps {

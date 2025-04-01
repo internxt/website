@@ -12,13 +12,13 @@ import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
-import { paymentService } from '@/components/services/payments.service';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
-import { stripeService } from '@/components/services/stripe.service';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+import { paymentService } from '@/services/payments.service';
+import { stripeService } from '@/services/stripe.service';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
