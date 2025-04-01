@@ -8,7 +8,7 @@ import { getImage } from '@/lib/getImage';
 import Button from '@/components/shared/Button';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -43,7 +43,7 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
+    couponCode: PromoCodeName.Special82,
     couponCodeForLifetime: PromoCodeName.Special82,
   });
 

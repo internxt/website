@@ -1,8 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% AUS", "line2": "unsere Jahrespläne" },
-    "lifetimeTitle": { "line1": "Holen Sie sich einen", "blueText": " lebenslangen ", "line2": "Internxt!" },
-
+    "title": {
+      "line1": "80% AUS",
+      "line2": "unsere Jahrespläne"
+    },
+    "lifetimeTitle": {
+      "line1": "Holen Sie sich einen",
+      "blueText": " lebenslangen ",
+      "line2": "Internxt!"
+    },
     "feeds": {
       "firstFeed": "30-Tage Geld-zurück-Garantie",
       "secondFeed": "100% sichere Zahlung",
@@ -37,15 +43,15 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Spare 80%",
-      "title": "Sonderangebot zum St. Patrick’s Day!",
-      "subtitle": "Lebenslanger Speicher, Antivirus und VPN",
+      "label": "Angebot 75%",
+      "title": "Weltweiter Tag der Cloud-Sicherheit",
+      "subtitle": "Internxt Drive, Antivirus und VPN",
       "cta": "Sichere dir deinen Plan!",
       "cta2": "Erhalte 80% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gilt für kostenlose Konten oder Neukunden",
+      "lastCta": "*Angebot gültig für kostenlose Konten oder neue Benutzer",
       "titleMbl": "Neue lebenslange Pläne!",
-      "subtitleMbl": "Lebenslanger Speicher, Antivirus und VPN",
+      "descriptionMbl": "Privater Speicher, Antivirus und VPN",
       "ctaMbl": "Kaufe deinen Plan"
     },
     "planTitles": {
@@ -86,7 +92,6 @@
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",
-
   "CtaSection": {
     "title": "Probiere Internxt risikofrei aus",
     "description": "Schütze deine wirklich wichtigen Dinge mit Internxt's sicherem, privatem und verschlüsseltem Cloud-Speicher.",
@@ -94,7 +99,6 @@
   },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
-
     "faq": [
       {
         "question": "Behalte ich den Rabatt, wenn mein Plan endet?",

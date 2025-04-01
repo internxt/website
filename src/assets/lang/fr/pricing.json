@@ -1,7 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "85% de réduction", "line2": "sur nos plans annuels" },
-    "lifetimeTitle": { "line1": " Obtenez un ", "blueText": " plan à vie ", "line2": " d'Internxt ! " },
+    "title": {
+      "line1": "85% de réduction",
+      "line2": "sur nos plans annuels"
+    },
+    "lifetimeTitle": {
+      "line1": " Obtenez un ",
+      "blueText": " plan à vie ",
+      "line2": " d'Internxt ! "
+    },
     "feeds": {
       "firstFeed": "Garantie de remboursement de 30 jours",
       "secondFeed": "Paiement 100% sécurisé",
@@ -36,21 +43,20 @@
       "Moins cher que les alternatives",
       "Garantie de remboursement de 30 jours"
     ],
-
     "offerEnds": "Termine dans :"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80%",
-      "title": "Offre spéciale pour la Saint-Patrick!",
-      "subtitle": "Stockage, antivirus et VPN à vie",
-      "cta": "Obtenez votre plan!",
-      "cta2": "Profitez de 80% de réduction",
+      "label": "Offre 80%",
+      "title": "Journée mondiale de la sécurité du cloud",
+      "subtitle": "Internxt Drive, Antivirus et VPN",
+      "cta": "Obtiens ton plan !",
+      "cta2": "Bénéficie de 80% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux clients",
-      "titleMbl": "Nouveaux plans à vie!",
-      "subtitleMbl": "Stockage, antivirus et VPN à vie",
-      "ctaMbl": "Achetez votre plan"
+      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs",
+      "titleMbl": "Nouveaux forfaits à vie !",
+      "descriptionMbl": "Stockage privé, Antivirus et VPN",
+      "ctaMbl": "Achète ton plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",
@@ -91,7 +97,6 @@
   },
   "FaqSection": {
     "title": "Questions ? Nous avons les réponses",
-
     "faq": [
       {
         "question": "Internxt peut-il accéder à mes fichiers ?",

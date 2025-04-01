@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
-import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
+import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';

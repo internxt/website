@@ -1,4 +1,4 @@
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { Switch } from '@headlessui/react';
 
 interface SwitchComponentProps {

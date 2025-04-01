@@ -1,6 +1,6 @@
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Check, X } from '@phosphor-icons/react';
-import { currency } from '@/components/services/currency.service';
+import { currency } from '@/services/currency.service';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
