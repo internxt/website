@@ -48,7 +48,8 @@ export const handleImpact = async ({
 }) => {
   let ip: string | undefined;
   try {
-    ip = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
+    const { data } = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`);
+    ip = data.ip;
   } catch (error) {
     ip = undefined;
   }
