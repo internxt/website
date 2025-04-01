@@ -1,7 +1,7 @@
 import { ClockCounterClockwise, HandCoins, ShieldCheck } from '@phosphor-icons/react';
 import PriceCard from '../PriceCard';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import { TransformedProduct } from '@/components/services/stripe.service';
+import { TransformedProduct } from '@/services/stripe.service';
 import FreePlanCard from '../FreePlanCard';
 
 interface PriceTableForAlternativePricingProps {
@@ -41,7 +41,7 @@ export const PriceTableForAlternativePricing = ({
   const priceText = require(`@/assets/lang/${lang}/pricing.json`);
 
   return (
-    <section id={'priceTable'} className="overflow-hidden py-20 px-5">
+    <section id={'priceTable'} className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center justify-center gap-10 pb-6">
           <div className="flex flex-col items-center gap-4 text-center">
@@ -66,7 +66,7 @@ export const PriceTableForAlternativePricing = ({
                   onClick={() => {
                     handleOnPlanButtonClicked(plan.storage);
                   }}
-                  className={`rounded-lg py-0.5 px-6 font-semibold ${
+                  className={`rounded-lg px-6 py-0.5 font-semibold ${
                     plan.storage === selectedPlanStorage ? 'bg-white text-cool-gray-80 shadow-sm' : 'text-cool-gray-50'
                   }`}
                 >

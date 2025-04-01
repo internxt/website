@@ -1,5 +1,5 @@
-import { currencyService } from '@/components/services/currency.service';
-import { ProductsDataProps, stripeService } from '@/components/services/stripe.service';
+import { currencyService } from '@/services/currency.service';
+import { ProductsDataProps, stripeService } from '@/services/stripe.service';
 import { useEffect, useReducer } from 'react';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 

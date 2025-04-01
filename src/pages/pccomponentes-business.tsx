@@ -1,10 +1,7 @@
 import { useState } from 'react';
-import { Transition } from '@headlessui/react';
 
 import Layout from '@/components/layout/Layout';
-import { Interval, stripeService } from '@/components/services/stripe.service';
-import CardSkeleton from '@/components/components/CardSkeleton';
-import PriceCard from '@/components/prices/PriceCard';
+import { Interval, stripeService } from '@/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';

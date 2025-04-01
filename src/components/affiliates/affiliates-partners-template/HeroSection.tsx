@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Alarm } from '@phosphor-icons/react';
 
 import Countdown from '@/components/components/Countdown';
-import { Interval, TransformedProduct } from '@/components/services/stripe.service';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import { getImage } from '@/lib/getImage';
@@ -11,6 +10,7 @@ import { CardsType } from '@/pages/affiliates/[filename]';
 import { PriceCardsForAffiliatesPartners } from './PriceCardsForAffiliatesParnters';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PromoCodeName } from '@/lib/types';
+import { Interval, TransformedProduct } from '@/services/stripe.service';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
