@@ -1,4 +1,3 @@
-import { currencyService } from '@/components/services/currency.service';
 import Header from '@/components/shared/Header';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
@@ -14,17 +13,6 @@ interface TitleAndOnePlanProps {
 
 const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');
-
-  useEffect(() => {
-    currencyService
-      .filterCurrencyByCountry()
-      .then((currency) => {
-        setCurrency(currency.currency);
-      })
-      .catch(() => {
-        // NO OP
-      });
-  }, []);
 
   return (
     <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24 ">
