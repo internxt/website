@@ -1,7 +1,6 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
-  Clover,
   CodeBlock,
   Database,
   Envelope,
@@ -14,11 +13,10 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { Interval } from '../services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
-import Lifetime from '@/pages/lifetime';
 
 export interface PriceCardProps {
   planType: string;

@@ -1,5 +1,5 @@
+import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import axios from 'axios';
-import { PlanData } from '../../pages/cloud-object-storage/checkout';
 
 const fetchPlanById = async (priceId: string, currency?: string): Promise<PlanData> => {
   const response = await fetch(

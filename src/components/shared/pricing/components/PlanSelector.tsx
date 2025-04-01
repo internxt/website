@@ -1,4 +1,4 @@
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { SealPercent } from '@phosphor-icons/react';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
