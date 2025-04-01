@@ -82,6 +82,11 @@
         "passwordGenerator": "密码生成器",
         "fileConverter": "文件转换器",
         "haveIBeenPwned": "我被入侵了"
+      },
+      "features": {
+        "title": "功能",
+        "privateCloud": "私有云解决方案",
+        "cloudBakcup": "云备份解决方案"
       }
     }
   },
