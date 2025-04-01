@@ -119,7 +119,9 @@ export enum PromoCodeName {
   Brave = 'BRAVE85',
   SuperBowlCampaign = 'SUPERBOWL80',
   ValentinesCampaign = 'MYVALENTINE85',
+  PcCloudS3 = 'PCCLOUDS3',
   StPatricksDay = 'STPADDYS80',
+  Special82 = 'AFFSPECIAL82',
 }
 
 export interface PromoCodeProps {

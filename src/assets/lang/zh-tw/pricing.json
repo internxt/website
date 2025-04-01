@@ -1,7 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% 折扣", "line2": "我們的年度計劃" },
-    "lifetimeTitle": { "line1": "獲取", "blueText": "終身", "line2": "Internxt 計劃！" },
+    "title": {
+      "line1": "80% 折扣",
+      "line2": "我們的年度計劃"
+    },
+    "lifetimeTitle": {
+      "line1": "獲取",
+      "blueText": "終身",
+      "line2": "Internxt 計劃！"
+    },
     "feeds": {
       "firstFeed": "30 天退款保證",
       "secondFeed": "100% 安全付款",
@@ -31,16 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "節省80%",
-      "title": "聖派翠克節特別優惠！",
-      "subtitle": "終身存儲、防毒軟件和VPN",
-      "cta": "獲取您的計劃!",
-      "cta2": "享受80%折扣",
-      "guarantee": "30天退款保證",
-      "lastCta": "*優惠適用於免費帳戶或新客戶",
+      "label": "優惠 80%",
+      "title": "世界雲端安全日",
+      "subtitle": "Internxt 雲端硬碟、防毒軟體與 VPN",
+      "cta": "獲取您的方案！",
+      "cta2": "享受 80% 折扣",
+      "guarantee": "30 天退款保證",
+      "lastCta": "*優惠僅適用於免費帳號或新使用者",
       "titleMbl": "全新終身計劃！",
-      "subtitleMbl": "終身存儲、防毒軟件和VPN",
-      "ctaMbl": "購買您的計劃"
+      "descriptionMbl": "私人儲存、防毒軟體與 VPN",
+      "ctaMbl": "購買您的方案"
     },
     "save": "節省高達",
     "planTitles": {

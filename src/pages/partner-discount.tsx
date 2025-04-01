@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
-    couponCodeForLifetime: PromoCodeName.StPatricksDay,
+    couponCode: PromoCodeName.Special82,
+    couponCodeForLifetime: PromoCodeName.Special82,
   });
 
   const cardsData = [
@@ -145,6 +145,7 @@ const PartnerDiscount = ({
           hideBusinessSelector
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
+          showPromo={false}
         />
       </div>
 

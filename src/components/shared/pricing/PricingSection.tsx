@@ -38,7 +38,7 @@ interface PriceTableProps {
   isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
-
+  showPromo?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -79,6 +79,7 @@ export const PricingSection = ({
   darkMode,
   isBrave,
   hideFeatures,
+  showPromo = true,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -193,6 +194,7 @@ export const PricingSection = ({
                   lang={lang}
                   darkMode={darkMode}
                   isBrave={isBrave}
+                  showPromo={showPromo}
                 />
               ))
             : undefined}

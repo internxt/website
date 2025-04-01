@@ -88,7 +88,7 @@
   },
   "GeneralBanner": {
     "title": "Avant de partir...",
-    "description": "Bénéficiez de 75% de réduction sur notre plan 2 To pendant un an.",
+    "description": "Bénéficiez de 80% de réduction sur notre plan 2 To pendant un an.",
     "cta": "Oui, je veux l'offre",
     "ctaCancel": "Non, merci"
   },
@@ -104,9 +104,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de réduction sur nos nouveaux plans à vie  ",
-      "normalText": "Joyeuse Saint-Patrick!   ",
-      "cta": "Obtenez votre plan!"
+      "boldText": "80% de réduction!",
+      "normalText": "Journée mondiale de la sécurité dans le cloud",
+      "cta": "Achetez votre plan!"
     }
   },
   "lifetimeBanner": {
@@ -118,11 +118,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "Attendez! Offre spéciale ",
-      "blue": "75% DE RÉDUCTION ",
+      "blue": "80% DE RÉDUCTION ",
       "normal2": "!"
     },
     "subtitle": "Il y a une offre exclusive qui vous attend.",
-    "cta": "75% DE RÉDUCTION",
+    "cta": "80% DE RÉDUCTION",
     "guarantee": "Garantie de remboursement de 30 jours"
   }
 }
