@@ -41,6 +41,7 @@ export interface PriceCardProps {
   index?: number;
   isPcComponentes?: boolean;
   isPcComponentesLifetime?: boolean;
+  trialToken?: string;
 }
 
 const STORAGE_LEVELS = {
@@ -74,6 +75,7 @@ export default function PriceCard({
   index,
   isPcComponentes = false,
   isPcComponentesLifetime = false,
+  trialToken,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -109,6 +111,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
+          trialToken: trialToken,
           promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       } else {
