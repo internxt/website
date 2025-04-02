@@ -17,7 +17,7 @@ import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
-import { paymentService } from '@/services/payments.service';
+import { PaymentsService } from '@/services/payments.service';
 import { stripeService } from '@/services/stripe.service';
 
 interface IntegratedCheckoutProps {
@@ -69,6 +69,7 @@ const PRICE_ID = IS_PRODUCTION
   : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
+  const paymentService = new PaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
 
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
@@ -203,7 +204,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(
+      const { clientSecret } = await paymentService.createObjectStorageSubscription(
         customerId,
         plan,
         token,
