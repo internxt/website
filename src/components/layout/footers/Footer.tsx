@@ -157,11 +157,11 @@ export default function Footer({
         />
 
         {/* Footer content */}
-        <footer className="flex max-w-[896px] items-center justify-center">
+        <footer className="flex max-w-[1920px] items-center justify-center">
           {/* Desktop version */}
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
             <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
                   <div
@@ -234,7 +234,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.company.title}</h3>
                   <div
@@ -294,7 +294,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
@@ -351,7 +351,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
@@ -417,7 +417,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -473,7 +473,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14.5%] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
                   <div
