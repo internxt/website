@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
-import { Interval } from '@/components/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
