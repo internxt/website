@@ -248,10 +248,10 @@ type PaymentCheckoutConfig = {
   promoCodeId?: PromoCodeProps['codeId'];
   planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
-  websiteToken?: string;
+  trialToken?: string;
   currency?: string;
 };
-export function checkout({ planId, promoCodeId, planType, mode, currency, websiteToken }: PaymentCheckoutConfig): void {
+export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
 
@@ -262,7 +262,6 @@ export function checkout({ planId, promoCodeId, planType, mode, currency, websit
     planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
-    websiteToken && params.set('websiteToken', websiteToken);
 
     window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
@@ -276,6 +275,7 @@ export function checkoutForPcComponentes({
   promoCodeId,
   planType,
   mode,
+  trialToken,
   currency,
 }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
@@ -288,7 +288,7 @@ export function checkoutForPcComponentes({
     planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
-
+    trialToken && params.set('mobileToken', trialToken);
     const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
     window.open(checkoutUrl, '_self', 'noopener noreferrer');

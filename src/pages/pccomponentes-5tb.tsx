@@ -8,7 +8,8 @@ import { Transition } from '@headlessui/react';
 import { Interval } from '@/services/stripe.service';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
-const websiteToken = 'pc-componentes-25';
+const trialToken = 'pc-cloud-25';
+
 const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -69,7 +70,7 @@ const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Elem
             isIframe={true}
             isPcComponentes
             index={2}
-            websiteToken={websiteToken}
+            trialToken={trialToken}
           />
         </Transition>
       </div>
