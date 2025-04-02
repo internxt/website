@@ -5,6 +5,7 @@ import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Transition } from '@headlessui/react';
+import { Interval } from '@/services/stripe.service';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 const websiteToken = 'pc-componentes-25';
