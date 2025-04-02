@@ -77,16 +77,6 @@ LayoutProps) {
 
   // THIS USE EFFECT SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
-    // let ip: string | undefined;
-    // axios
-    //   .get(`${process.env.NEXT_PUBLIC_COUNTRY_API_URL}`)
-    //   .then((res) => {
-    //     ip = res.data.ip;
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
 
@@ -100,50 +90,6 @@ LayoutProps) {
         referrer: document.referrer,
       },
     });
-
-    // const impactAnonymousId = getCookie('impactAnonymousId');
-    // const randomUUID = impactAnonymousId || crypto.randomUUID();
-
-    // const cookieData = {
-    //   anonymousId: randomUUID,
-    //   source: source || 'direct',
-    // };
-
-    // const expirationDate = new Date();
-    // expirationDate.setHours(expirationDate.getHours() + 1);
-
-    // const anonymousDate = new Date();
-    // anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
-
-    // // To check if the link is from an affiliate
-    // const sourceCookie = `impactSource=${cookieData.source};expires=${new Date(
-    //   expirationDate,
-    // ).toUTCString()};domain=${COOKIE_DOMAIN}; Path=/`;
-
-    // const anonymousIdCookie = `impactAnonymousId=${
-    //   cookieData.anonymousId
-    // };expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
-
-    // document.cookie = sourceCookie;
-    // document.cookie = anonymousIdCookie;
-
-    // axios
-    //   .post(IMPACT_API, {
-    //     anonymousId: randomUUID,
-    //     timestamp: moment().format('YYYY-MM-DDTHH:mm:ss.sssZ'),
-    //     request_ip: ip,
-    //     context: {
-    //       userAgent: navigator.userAgent,
-    //       page: {
-    //         url: window.location.href,
-    //         referrer: document.referrer,
-    //       },
-    //     },
-    //     type: 'page',
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
   }, [segmentName]);
 
   return (

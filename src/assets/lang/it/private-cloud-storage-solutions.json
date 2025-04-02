@@ -1,0 +1,167 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "cloud privato",
+        "textAfterBlueText": "Soluzioni di archiviazione  "
+      },
+      "description": "Internxt è un provider di archiviazione cloud open source con crittografia post-quantistica per mantenere la privacy dei tuoi dati.",
+      "claimDeal": "Ottieni Internxt",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Soluzioni di archiviazione cloud privato",
+      "cta": "Ottieni Internxt",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    }
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt offre soluzioni di archiviazione",
+      "line2": "cloud privato per privati, PMI e grandi aziende"
+    },
+    "subtitle": "Google, Microsoft, Apple e altri fornitori di servizi di archiviazione cloud sfruttano i tuoi dati a scopo di lucro. Passa a Internxt per avere il controllo totale sulla tua privacy.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Offriamo archiviazione cloud annuale e a vita a prezzi accessibili per archiviare, condividere, eseguire il backup e sincronizzare i tuoi file. Drive include anche una VPN premium e un antivirus per una privacy e una protezione online complete.",
+      "cta": "Acquista il tuo piano"
+    },
+    "square2": {
+      "title": "Internxt per le aziende",
+      "description": "Internxt per le aziende è una soluzione di archiviazione cloud conforme al GDPR, che include fino a 2 TB di spazio di archiviazione per 100 utenti. Grazie alla sua crittografia, Internxt protegge la tua azienda da qualsiasi fuga di dati.",
+      "cta": "Acquista il tuo piano"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 è un servizio di archiviazione di oggetti scalabile e crittografato end-to-end per aziende o PMI per gestire grandi quantità di dati a costi inferiori. Senza tariffe di ingresso e uscita, i nostri piani di archiviazione di oggetti sono fino al 90% più economici rispetto ad altri fornitori.",
+      "cta": "Ottieni Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "Perché Internxt si distingue come l'archiviazione cloud più sicura e privata",
+    "description": "Internxt integra funzionalità di privacy avanzate per offrire l'archiviazione cloud, l'antivirus e la VPN online più sicuri.",
+    "info": [
+      {
+        "title": "Crittografia all'avanguardia",
+        "description": "Il nostro sistema è costruito con la crittografia post-quantistica Kyber 512, il miglior standard di crittografia più sicuro scelto dall'istituto NIST per proteggere dalle future minacce dei computer quantistici, che in teoria potrebbero rompere gli attuali protocolli di crittografia utilizzati da altri fornitori di servizi di archiviazione cloud. Proteggi i tuoi dati con Internxt per garantire la privacy dei tuoi file in futuro."
+      },
+      {
+        "title": "Niente più dipendenza dalle grandi tecnologie",
+        "description": "Altri fornitori di servizi di archiviazione cloud – Google, Dropbox, Apple... – traggono profitto dai tuoi dati, archiviano e analizzano i tuoi file, il che porta a fughe di e-mail e altre informazioni personali online. Internxt è diverso. Con la creazione di account anonimi e una rigorosa politica di non tracciamento, non archiviamo, condividiamo o monetizziamo i tuoi dati in alcun modo."
+      },
+      {
+        "title": "Accessibile da qualsiasi luogo",
+        "description": "Scarica Internxt Drive dalla tua applicazione di archiviazione cloud preferita per accedere al cloud su Windows, Mac, Linux, iOS o Android. Offriamo anche altre soluzioni di archiviazione cloud privato con supporto WebDAV e Rclone, permettendoti di gestire i tuoi file senza sforzo su più dispositivi, automatizzare i backup e accedere ai tuoi dati da remoto da qualsiasi luogo."
+      },
+      {
+        "title": "Open source e verificato",
+        "description": "Altre piattaforme di archiviazione cloud nascondono il loro codice sorgente al pubblico, il che significa che non potrai mai sapere veramente come gestiscono i tuoi dati o cosa fanno con i tuoi file. Internxt promette una trasparenza totale, poiché il codice sorgente di tutti i nostri prodotti è disponibile pubblicamente su GitHub. Internxt è anche verificato come piattaforma sicura da Securitum, una società di test di penetrazione indipendente."
+      },
+      {
+        "title": "Sostenibilità",
+        "description": "Il nostro impegno per costruire un futuro migliore basato sulla privacy online si estende anche al nostro impegno per un futuro più ecologico. I nostri data center utilizzano fonti di energia rinnovabile come il nucleare e l'idroelettrico. L'uso di tecnologie rispettose dell'ambiente contribuisce al nostro impegno per costruire un futuro più sostenibile e per essere climaticamente neutri entro il 2050."
+      },
+      {
+        "title": "Conforme al GDPR",
+        "description": "Con sede a Valencia, in Spagna, Internxt garantisce che i tuoi dati siano privati e sicuri rispettando le leggi sulla protezione dei dati GDPR. Un account Drive personale mantiene le tue informazioni private, senza tracciamento, condivisione o accesso non autorizzato e, per le aziende, riduce il rischio di multe e problemi legali."
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Interessato alle soluzioni cloud privato?",
+    "description": "Internxt Drive ti protegge con crittografia post-quantistica, antivirus e VPN.",
+    "cta": "Ottieni il tuo piano"
+  },
+  "CtaSection2": {
+    "title": "Proteggi la tua privacy con Internxt Drive",
+    "description": "I tuoi file al sicuro con crittografia post-quantistica all'avanguardia.",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Internxt è un'alternativa a Google Drive?",
+        "answer": [
+          "Sì, Internxt è un'alternativa a Google Drive e ad altre grandi aziende tecnologiche. Queste aziende crittografano i dati su server di loro proprietà, il che significa che possono accedere al tuo account e visualizzare i tuoi file o dare accesso al tuo account al governo se richiesto.",
+          "A differenza di queste piattaforme di archiviazione cloud, Internxt utilizza la crittografia post-quantistica e a conoscenza zero, quindi solo tu puoi accedere ai tuoi file. I tuoi dati sono crittografati sul tuo dispositivo prima di essere caricati e nessuno può visualizzarli o decrittografarli, nemmeno Internxt. Ciò garantisce una privacy totale, impedisce l'accesso non autorizzato e ti protegge dalla sorveglianza e dalla fuga di dati."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia post-quantistica?",
+        "answer": [
+          "La crittografia post-quantistica utilizza algoritmi crittografici per proteggere i dati dalla minaccia dei computer quantistici che potrebbero rompere i metodi di crittografia tradizionali. La crittografia post-quantistica si concentra sullo sviluppo di algoritmi che impediscono a questi computer di decrittografare e accedere ai tuoi dati.",
+          "Questo metodo è ideale per soluzioni di archiviazione cloud privato come Internxt perché garantisce che i tuoi dati rimangano sicuri nonostante l'avanzamento della tecnologia informatica quantistica."
+        ]
+      },
+      {
+        "question": "Qual è la differenza tra Internxt per le aziende e Internxt S3?",
+        "answer": [
+          "Internxt per le aziende è una soluzione di archiviazione cloud progettata per aziende e PMI, che offre collaborazione di team, controlli amministrativi e altre funzionalità per proteggere le aziende dalla fuga di dati.",
+          "Internxt S3 è un sistema di archiviazione basato su cloud che segue il protocollo Amazon S3. È ideale per sviluppatori e aziende che necessitano di scalare e integrare l'archiviazione nelle loro applicazioni o servizi e archiviare data lake o data warehouse.",
+          "La principale differenza è che Internxt per le aziende si concentra sulle funzionalità orientate al team, mentre Internxt S3 fornisce una soluzione di archiviazione scalabile fino al 90% più economica di AWS, Azure o Google Cloud."
+        ]
+      },
+      {
+        "question": "Perché dovresti scegliere Internxt rispetto ad altre piattaforme cloud?",
+        "answer": [
+          "Tutte le nostre soluzioni di archiviazione cloud privato enfatizzano la privacy, quindi ti offriamo il controllo totale sulla tua privacy con la crittografia post-quantistica Kyber 512, che protegge i tuoi dati personali o aziendali in futuro dalle potenziali minacce del calcolo quantistico.",
+          "Internxt è conforme al GDPR, il che riduce i rischi legali, e offre soluzioni scalabili e convenienti come Internxt S3, senza costi aggiuntivi per il trasferimento di dati e un modello pay-as-you-go. Inoltre, la sua natura open source, gli audit di sicurezza indipendenti e l'impegno per la sostenibilità lo rendono una scelta affidabile e trasparente per le aziende."
+        ]
+      },
+      {
+        "question": "Cosa è incluso nelle soluzioni di archiviazione cloud privato di Internxt?",
+        "answer": [
+          "Gli abbonamenti a pagamento di Internxt e i piani a vita offrono archiviazione cloud con crittografia post-quantistica, una VPN illimitata e ultraveloce per fino a 5 posizioni, antivirus e accesso futuro ai nostri prodotti Mail e Meet per i piani Premium e Ultimate."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio di archiviazione al mio piano a vita?",
+        "answer": [
+          "Sì, i piani a vita di Internxt sono cumulabili, quindi puoi aggiungere tutto lo spazio di archiviazione che desideri al tuo piano a vita. Puoi acquistarli con lo stesso indirizzo e-mail del tuo piano a vita attuale.",
+          "Contattaci a hello@internxt.com in modo che possiamo raggrupparli nello stesso account."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Sì, Internxt accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort e criptovaluta."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Perché dovresti passare alle soluzioni di archiviazione cloud privato",
+    "titleLine2": "Il passaggio alle soluzioni di archiviazione cloud privato garantisce che i tuoi dati rimangano privati e sicuri da hacker e aziende. A differenza di Google, Apple o Microsoft, Internxt non raccoglie, vende o abusa dei tuoi dati. Hai il controllo totale sui tuoi file.",
+    "description": "Investi nella tua privacy e abbi la tranquillità di sapere che i tuoi file e dati sono protetti da violazioni dei dati.",
+    "cta": "Ottieni Internxt",
+    "cards": {
+      "element1": {
+        "title": "Maggiore privacy per i tuoi dati",
+        "description": "I servizi incentrati sulla privacy danno la priorità alla sicurezza dei tuoi dati, assicurandosi che siano crittografati sia durante il transito che a riposo. A differenza dei provider di cloud pubblico tradizionali, i servizi come Internxt Drive non possono accedere alle tue chiavi di crittografia, quindi nessuno tranne te può visualizzare o vendere i tuoi dati."
+      },
+      "element2": {
+        "title": "Riduzione dello spionaggio aziendale",
+        "description": [
+          "Aziende come Google dichiarano nelle loro politiche che, utilizzando i loro servizi, concedi loro l'accesso per monitorare e utilizzare i tuoi dati per il loro vantaggio e profitto finanziario. Altri servizi come Dropbox hanno un passato pieno di violazioni dei dati e condivisione di dati non etica.",
+          "Al contrario, le soluzioni di archiviazione cloud privato non possono accedere ai tuoi file poiché le chiavi sono archiviate sul dispositivo del proprietario, mantenendo le informazioni riservate private e lontane da terze parti."
+        ]
+      },
+      "element3": {
+        "title": "Protetto dalle leggi europee",
+        "description": [
+          "I recenti problemi legali nel Regno Unito e le leggi sulla privacy meno severe negli Stati Uniti hanno portato più persone a scegliere soluzioni di archiviazione cloud privato con sede in Europa. Le normative GDPR, ad esempio, danno ai clienti un maggiore controllo sui loro dati, con diritti di accesso ed eliminazione.",
+          "La conformità al GDPR non è solo un requisito legale, ma anche una garanzia che i fornitori europei non siano soggetti a richieste intrusive di accesso ai dati da parte di governi stranieri, a differenza di altri servizi che possono fornire accesso ai dati se richiesto da governi o agenzie legali."
+        ]
+      },
+      "element4": {
+        "title": "Maggiore controllo sulla tua sicurezza",
+        "description": [
+          "Non solo ottieni più privacy con l'archiviazione cloud, ma ottieni anche un maggiore controllo sulla sicurezza dei tuoi file. Internxt ti consente di pianificare o eseguire manualmente il backup dei tuoi file per proteggerli dalla perdita accidentale di dati.",
+          "Altri controlli di sicurezza necessari per una maggiore privacy che l'archiviazione cloud può offrire sono la condivisione di file crittografati e protetti da password, l'autenticazione a due fattori (2FA) e i registri di accesso per i piani aziendali."
+        ]
+      }
+    }
+  }
+}

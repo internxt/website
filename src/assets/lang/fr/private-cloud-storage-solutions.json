@@ -1,0 +1,167 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "cloud privé",
+        "textAfterBlueText": "Solutions de stockage "
+      },
+      "description": "Internxt est un fournisseur de stockage cloud open source avec chiffrement post-quantique pour protéger la confidentialité de vos données.",
+      "claimDeal": "Obtenir Internxt",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Solutions de stockage cloud privé",
+      "cta": "Obtenir Internxt",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    }
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt propose des solutions de stockage",
+      "line2": "cloud privé pour les particuliers, les PME et les grandes entreprises"
+    },
+    "subtitle": "Google, Microsoft, Apple et d'autres fournisseurs de services de stockage cloud exploitent vos données à des fins lucratives. Passez à Internxt pour avoir un contrôle total sur votre vie privée.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Nous proposons un stockage cloud annuel et à vie abordable pour stocker, partager, sauvegarder et synchroniser vos fichiers. Drive comprend également un VPN premium et un antivirus pour une confidentialité et une protection en ligne complètes.",
+      "cta": "Acheter votre forfait"
+    },
+    "square2": {
+      "title": "Internxt pour les entreprises",
+      "description": "Internxt pour les entreprises est une solution de stockage cloud conforme au RGPD, comprenant jusqu'à 2 To de stockage pour 100 utilisateurs. Grâce à son chiffrement, Internxt protège votre entreprise contre toute fuite de données.",
+      "cta": "Acheter votre forfait"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 est un service de stockage d'objets évolutif et chiffré de bout en bout permettant aux entreprises ou aux PME de gérer de grandes quantités de données à moindre coût. Sans frais d'entrée ni de sortie, nos forfaits de stockage d'objets sont jusqu'à 90 % moins chers que ceux des autres fournisseurs.",
+      "cta": "Obtenir Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "Pourquoi Internxt se distingue comme le stockage cloud le plus sûr et le plus privé",
+    "description": "Internxt intègre des fonctionnalités de confidentialité avancées pour offrir le stockage cloud, l'antivirus et le VPN en ligne les plus sécurisés.",
+    "info": [
+      {
+        "title": "Chiffrement de pointe",
+        "description": "Notre système est construit avec la cryptographie post-quantique Kyber 512, la meilleure norme de chiffrement la plus sécurisée choisie par l'institut NIST pour se protéger contre les menaces futures des ordinateurs quantiques, qui pourraient théoriquement casser les protocoles de chiffrement actuels utilisés par d'autres fournisseurs de services de stockage cloud. Sécurisez vos données avec Internxt pour garantir la confidentialité de vos fichiers à l'avenir."
+      },
+      {
+        "title": "Plus de dépendance vis-à-vis des grandes technologies",
+        "description": "D'autres fournisseurs de services de stockage cloud – Google, Dropbox, Apple... – profitent de vos données, stockent et analysent vos fichiers, ce qui entraîne des fuites d'e-mails et d'autres informations personnelles en ligne. Internxt est différent. Avec la création de comptes anonymes et une politique stricte de non-suivi, nous ne stockons, ne partageons ni ne monétisons vos données de quelque manière que ce soit."
+      },
+      {
+        "title": "Accessible de n'importe où",
+        "description": "Téléchargez Internxt Drive depuis votre application de stockage cloud préférée pour accéder au cloud sur Windows, Mac, Linux, iOS ou Android. Nous proposons également d'autres solutions de stockage cloud privé avec prise en charge WebDAV et Rclone, vous permettant de gérer vos fichiers sans effort sur plusieurs appareils, d'automatiser les sauvegardes et d'accéder à vos données à distance depuis n'importe où."
+      },
+      {
+        "title": "Open source et audité",
+        "description": "D'autres plateformes de stockage cloud cachent leur code source au public, ce qui signifie que vous ne pouvez jamais vraiment savoir comment elles gèrent vos données ou ce qu'elles font de vos fichiers. Internxt promet une transparence totale, car le code source de tous nos produits est disponible publiquement sur GitHub. Internxt est également vérifié comme une plateforme sécurisée par Securitum, une société de tests d'intrusion indépendante."
+      },
+      {
+        "title": "Durabilité",
+        "description": "Notre engagement à construire un avenir meilleur basé sur la confidentialité en ligne s'étend également à notre engagement envers un avenir plus écologique. Nos centres de données utilisent des sources d'énergie renouvelables telles que le nucléaire et l'hydroélectricité. L'utilisation de technologies respectueuses de l'environnement contribue à notre engagement à construire un avenir plus durable et à être neutres en carbone d'ici 2050."
+      },
+      {
+        "title": "Conforme au RGPD",
+        "description": "Basé à Valence, en Espagne, Internxt garantit que vos données sont privées et sécurisées en respectant les lois de protection des données RGPD. Un compte Drive personnel protège vos informations, sans suivi, partage ou accès non autorisé, et pour les entreprises, il réduit le risque d'amendes et de problèmes juridiques."
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Intéressé par les solutions de cloud privé ?",
+    "description": "Internxt Drive vous protège avec un chiffrement post-quantique, un antivirus et un VPN.",
+    "cta": "Obtenir votre forfait"
+  },
+  "CtaSection2": {
+    "title": "Protégez votre vie privée avec Internxt Drive",
+    "description": "Vos fichiers sécurisés avec un chiffrement post-quantique de pointe.",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative à Google Drive ?",
+        "answer": [
+          "Oui, Internxt est une alternative à Google Drive et à d'autres grandes entreprises technologiques. Ces entreprises chiffrent les données sur des serveurs qui leur appartiennent, ce qui signifie qu'elles peuvent accéder à votre compte et consulter vos fichiers ou donner accès à votre compte au gouvernement si celui-ci le demande.",
+          "Contrairement à ces plateformes de stockage cloud, Internxt utilise un chiffrement post-quantique et à connaissance nulle, de sorte que vous seul pouvez accéder à vos fichiers. Vos données sont chiffrées sur votre appareil avant d'être téléchargées, et personne ne peut les consulter ou les déchiffrer, pas même Internxt. Cela garantit une confidentialité totale, empêche l'accès non autorisé et vous protège de la surveillance et des fuites de données."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique ?",
+        "answer": [
+          "Le chiffrement post-quantique utilise des algorithmes cryptographiques pour protéger les données contre la menace des ordinateurs quantiques qui pourraient casser les méthodes de chiffrement traditionnelles. Le chiffrement post-quantique se concentre sur le développement d'algorithmes qui empêchent ces ordinateurs de déchiffrer et d'accéder à vos données.",
+          "Cette méthode est idéale pour les solutions de stockage cloud privé comme Internxt car elle garantit que vos données restent sécurisées malgré l'avancement de la technologie informatique quantique."
+        ]
+      },
+      {
+        "question": "Quelle est la différence entre Internxt pour les entreprises et Internxt S3 ?",
+        "answer": [
+          "Internxt pour les entreprises est une solution de stockage cloud conçue pour les entreprises et les PME, offrant une collaboration d'équipe, des contrôles administratifs et d'autres fonctionnalités pour protéger les entreprises contre les fuites de données.",
+          "Internxt S3 est un système de stockage basé sur le cloud qui suit le protocole Amazon S3. Il est idéal pour les développeurs et les entreprises qui ont besoin de mettre à l'échelle et d'intégrer le stockage dans leurs applications ou services, et de stocker des lacs ou des entrepôts de données.",
+          "La principale différence est qu'Internxt pour les entreprises se concentre sur les fonctionnalités axées sur l'équipe, tandis qu'Internxt S3 fournit une solution de stockage évolutive jusqu'à 90 % moins chère qu'AWS, Azure ou Google Cloud."
+        ]
+      },
+      {
+        "question": "Pourquoi devriez-vous choisir Internxt plutôt que d'autres plateformes cloud ?",
+        "answer": [
+          "Toutes nos solutions de stockage cloud privé mettent l'accent sur la confidentialité, nous vous offrons donc un contrôle total sur votre vie privée grâce au chiffrement post-quantique Kyber 512, qui protège vos données personnelles ou professionnelles à l'avenir contre les menaces potentielles de l'informatique quantique.",
+          "Internxt est conforme au RGPD, ce qui réduit les risques juridiques, et propose des solutions évolutives et rentables comme Internxt S3, sans frais supplémentaires pour le transfert de données et un modèle de paiement à l'utilisation. De plus, sa nature open source, ses audits de sécurité indépendants et son engagement envers la durabilité en font un choix fiable et transparent pour les entreprises."
+        ]
+      },
+      {
+        "question": "Qu'est-ce qui est inclus dans les solutions de stockage cloud privé d'Internxt ?",
+        "answer": [
+          "L'abonnement payant d'Internxt et les forfaits à vie offrent un stockage cloud crypté post-quantique, un VPN illimité et ultra-rapide pour jusqu'à 5 emplacements, un antivirus et un accès futur à nos produits Mail et Meet pour les forfaits Premium et Ultimate."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "answer": [
+          "Oui, les forfaits à vie d'Internxt sont cumulables, vous pouvez donc ajouter autant de stockage que vous le souhaitez à votre forfait à vie. Vous pouvez les acheter avec la même adresse e-mail que votre forfait à vie actuel.",
+          "Contactez-nous à hello@internxt.com afin que nous puissions les regrouper dans le même compte."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Oui, Internxt accepte les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et cryptomonnaie."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Pourquoi devriez-vous passer aux solutions de stockage cloud privé",
+    "titleLine2": "Le passage aux solutions de stockage cloud privé garantit que vos données restent privées et sécurisées contre les pirates et les entreprises. Contrairement à Google, Apple ou Microsoft, Internxt ne collecte, ne vend ni n'utilise abusivement vos données. Vous avez un contrôle total sur vos fichiers.",
+    "description": "Investissez dans votre vie privée et ayez l'esprit tranquille en sachant que vos fichiers et vos données sont protégés contre les violations de données.",
+    "cta": "Obtenir Internxt",
+    "cards": {
+      "element1": {
+        "title": "Plus de confidentialité pour vos données",
+        "description": "Les services axés sur la confidentialité accordent la priorité à la sécurité de vos données, en s'assurant qu'elles sont chiffrées à la fois pendant le transit et au repos. Contrairement aux fournisseurs de cloud public traditionnels, les services comme Internxt Drive ne peuvent pas accéder à vos clés de chiffrement, de sorte que personne d'autre que vous ne peut consulter ou vendre vos données."
+      },
+      "element2": {
+        "title": "Réduction de l'espionnage d'entreprise",
+        "description": [
+          "Les entreprises comme Google stipulent dans leurs politiques qu'en utilisant leurs services, vous leur donnez accès pour surveiller et utiliser vos données à leur propre avantage et à leur profit financier. D'autres services comme Dropbox ont un passé rempli de violations de données et de partage de données contraire à l'éthique.",
+          "En revanche, les solutions de stockage cloud privé ne peuvent pas accéder à vos fichiers car les clés sont stockées sur l'appareil du propriétaire, ce qui maintient les informations confidentielles privées et à l'abri des tiers."
+        ]
+      },
+      "element3": {
+        "title": "Protégé par les lois européennes",
+        "description": [
+          "Les récents problèmes juridiques au Royaume-Uni et les lois sur la confidentialité moins strictes aux États-Unis ont incité davantage de personnes à choisir des solutions de stockage cloud privé basées en Europe. Les réglementations du RGPD, par exemple, donnent aux clients plus de contrôle sur leurs données, avec des droits d'accès et de suppression.",
+          "La conformité au RGPD n'est pas seulement une exigence légale, mais aussi une garantie que les fournisseurs européens ne sont pas soumis à des demandes intrusives d'accès aux données de la part de gouvernements étrangers, contrairement à d'autres services qui peuvent fournir un accès aux données si les gouvernements ou les agences juridiques le demandent."
+        ]
+      },
+      "element4": {
+        "title": "Plus de contrôle sur votre sécurité",
+        "description": [
+          "Non seulement vous obtenez plus de confidentialité avec le stockage cloud, mais vous obtenez également un meilleur contrôle sur la sécurité de vos fichiers. Internxt vous permet de planifier ou de sauvegarder manuellement vos fichiers pour les protéger contre la perte accidentelle de données.",
+          "D'autres contrôles de sécurité nécessaires pour une plus grande confidentialité que le stockage cloud peut offrir sont le partage de fichiers chiffrés et protégés par mot de passe, l'authentification à deux facteurs (2FA) et les journaux d'accès pour les forfaits d'entreprise."
+        ]
+      }
+    }
+  }
+}
