@@ -473,7 +473,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[320px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
                   <div
@@ -485,23 +485,23 @@ export default function Footer({
                       href="/private-cloud-storage-solutions"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className=" items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.privateCloud}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
-                      </div>
+                      </span>
                     </Link>
                     <Link
                       href="/cloud-storage-backup-solutions"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className=" items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudBakcup}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
-                      </div>
+                      </span>
                     </Link>
                   </div>
                 </div>
