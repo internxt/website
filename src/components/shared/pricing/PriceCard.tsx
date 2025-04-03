@@ -131,7 +131,7 @@ export const PriceCard = ({
       <div
         className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pt-6`}
+        } p-6 pt-6 pb-10`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -213,11 +213,17 @@ export const PriceCard = ({
       </div>
 
       {showPromo && (
-        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
-          <span className="font-bold text-white">{contentText.productFeatures.worldCloudSecurityDay.title}</span>
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-white">{contentText.productFeatures.worldCloudSecurityDay.gift}</span>
+        <div className="flex flex-col items-start space-y-2 bg-primary px-5 py-2">
+          <span className="font-bold text-white">{contentText.productFeatures.IdentityManagementDay.title}</span>
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-white">{contentText.productFeatures.IdentityManagementDay.gift1}</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-white">{contentText.productFeatures.IdentityManagementDay.gift2}</span>
+            </div>
           </div>
         </div>
       )}
