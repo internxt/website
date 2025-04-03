@@ -44,8 +44,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Special80Coupon,
-    couponCodeForLifetime: PromoCodeName.Special80Coupon,
+    couponCode: PromoCodeName.Special82,
+    couponCodeForLifetime: PromoCodeName.Special82,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';

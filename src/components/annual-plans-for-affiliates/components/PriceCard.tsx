@@ -137,13 +137,17 @@ export default function PriceCard({
         </button>
       </div>
       {!isCloudwards ? (
-        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
-          <span className="font-bold text-white">{contentText.IdentityManagementDay.title}</span>
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-white">{contentText.IdentityManagementDay.gift}</span>
-            <Gift className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-white">{contentText.worldCloudSecurityDay.gift}</span>
+        <div className="flex flex-col items-start space-y-2 bg-primary px-5 py-2">
+          <span className="font-bold text-white">{contentText.productFeatures.IdentityManagementDay.title}</span>
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-white">{contentText.productFeatures.IdentityManagementDay.gift1}</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-white">{contentText.productFeatures.IdentityManagementDay.gift2}</span>
+            </div>
           </div>
         </div>
       ) : null}

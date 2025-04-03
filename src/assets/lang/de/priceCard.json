@@ -132,6 +132,12 @@
       "title": "Geschenke von Internxt:",
       "gift": "Verlosung eines Internxt x Swiss Peak Rucksacks"
     },
+    "IdentityManagementDay": {
+      "title": "Regalitos von Internxt:",
+      "gift1": "Internxt x Swiss Peak Rucksack Verlosung",
+      "gift2": "Kostenloses Thema für Web-App"
+    },
+
     "cheaperThan": {
       "lifetime": {
         "normal": "Bis zu ",

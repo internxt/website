@@ -131,6 +131,11 @@
       "title": "Cadeaux d'Internxt :",
       "gift": "Tirage au sort d'un sac à dos Internxt x Swiss Peak"
     },
+    "IdentityManagementDay": {
+      "title": "Cadeaux d'Internxt :",
+      "gift1": "Tirage au sort du sac à dos Internxt x Swiss Peak",
+      "gift2": "Thème gratuit pour l'application web"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Jusqu'à ",
