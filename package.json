@@ -34,7 +34,7 @@
     "@types/offscreencanvas": "^2019.7.3",
     "aos": "^2.3.4",
     "autoprefixer": "^10.0.2",
-    "axios": "^0.28.0",
+    "axios": "^0.30.0",
     "bytes": "^3.1.0",
     "clamscan": "^2.0.1",
     "cookies": "^0.8.0",
