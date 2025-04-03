@@ -1,4 +1,5 @@
 import { PromoCodeName } from '@/lib/types';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import {
   ArrowsClockwise,
   Gift,
@@ -137,7 +138,7 @@ export default function PriceCard({
         </button>
       </div>
       {!isCloudwards ? (
-        <div className="flex flex-col items-start space-y-2 bg-primary px-5 py-2">
+        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-2`}>
           <span className="font-bold text-white">{contentText.productFeatures.IdentityManagementDay.title}</span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
