@@ -1703,8 +1703,8 @@
 
 "@internxt/sdk@^1.9.11":
   version "1.9.11"
-  resolved "https://npm.pkg.github.com/download/@internxt/sdk/1.9.11/928a4d6a324f2474d7a974a49a335a328f7b00a6#928a4d6a324f2474d7a974a49a335a328f7b00a6"
-  integrity sha512-8DoIfSK8odQtjAxOa8UOKSTalVzlBMBtT7RthH1e70rKLJEXImjoTk63FlVrUXyLORNTxpqfrj1LQaucghP2HQ==
+  resolved "https://registry.yarnpkg.com/@internxt/sdk/-/sdk-1.9.11.tgz#5ca3db3f7473f6d582dd1f1beed511a74cd78c30"
+  integrity sha512-tHgq3rvizug9rp7IRVRzJY3lsPEJF3gMSg8Sc5LqKyrlTfmvS6rA57tNPQTrHwngwlV+swSkOmllfPsSpZ4iHA==
   dependencies:
     axios "^0.24.0"
     query-string "^7.1.0"
