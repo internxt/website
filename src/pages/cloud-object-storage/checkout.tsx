@@ -193,25 +193,25 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       await objectStorageActivationAccount(email, password, captchaToken);
 
-      const { customerId, token } = await paymentService.getCustomerId(
-        companyName ?? 'My Internxt Object Storage',
+      const { customerId, token } = await paymentService.getCustomerId({
+        name: companyName ?? 'My Internxt Object Storage',
         email,
         country,
-        vatId,
-      );
+        companyVatId: vatId,
+      });
 
       if (elementsError) {
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createObjectStorageSubscription(
+      const { clientSecret } = await paymentService.createObjectStorageSubscription({
         customerId,
         plan,
         token,
         companyName,
         vatId,
-        coupon?.codeId,
-      );
+        promoCodeId: coupon?.codeId,
+      });
 
       const confirmIntent = stripeSDK.confirmSetup;
 

@@ -22,31 +22,44 @@ export class ObjStoragePaymentsService {
     return objStoragePlan;
   }
 
-  public async getCustomerId(name: string, email: string, country?: string, companyVatId?: string) {
+  public async getCustomerId({
+    name,
+    email,
+    country,
+    companyVatId,
+  }: {
+    name: string;
+    email: string;
+    country?: string;
+    companyVatId?: string;
+  }) {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
-    const customerId = await client.createCustomerForObjectStorage(name, email, country, companyVatId);
-
-    return customerId;
+    return client.createCustomerForObjectStorage({ name, email, country, companyVatId });
   }
 
-  public async createObjectStorageSubscription(
-    customerId: string,
-    plan: PlanData,
-    token: string,
-    companyName: string,
-    vatId: string,
-    promoCodeId?: string,
-  ) {
+  public async createObjectStorageSubscription({
+    customerId,
+    plan,
+    token,
+    companyName,
+    vatId,
+    promoCodeId,
+  }: {
+    customerId: string;
+    plan: PlanData;
+    token: string;
+    companyName: string;
+    vatId: string;
+    promoCodeId?: string;
+  }) {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
-    const subscription = await client.createObjectStorageSubscription(
+    return client.createObjectStorageSubscription({
       customerId,
       plan,
       token,
       companyName,
       vatId,
       promoCodeId,
-    );
-
-    return subscription;
+    });
   }
 }
