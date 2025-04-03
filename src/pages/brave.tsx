@@ -4,7 +4,6 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
-import { checkout } from '@/lib/auth';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
@@ -41,16 +40,6 @@ export default function BravePage({
   } = usePricing({
     couponCode: PromoCodeName.Brave,
   });
-
-  function handlePriceCardButton(planId, coupon) {
-    checkout({
-      planId: planId,
-      planType: 'individual',
-      mode: 'payment',
-      currency: currencyValue,
-      promoCodeId: coupon.promoCodeName ?? undefined,
-    });
-  }
 
   const heroSectionText = textContent.HeroSection;
 
@@ -128,8 +117,8 @@ export default function BravePage({
         hideBusinessSelector
         hideSwitchSelector
         isBrave
-        startFromPlan="Individuals"
-        startIndividualPlansFromInterval={Interval.Year}
+        startFromPlan="Lifetime"
+        startIndividualPlansFromInterval={Interval.Lifetime}
         hideFreeCard
         showPromo={false}
       />
