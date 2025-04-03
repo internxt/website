@@ -14,7 +14,9 @@
     "prod": "next export",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "lint": "eslint --quiet './**/*.{js,ts,tsx}'"
+    "lint": "eslint --quiet './**/*.{js,ts,tsx}'",
+    "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc",
+    "vercel:install": "yarn run add:npmrc && yarn install"
   },
   "dependencies": {
     "@cemalgnlts/mailjs": "^3.0.1",
