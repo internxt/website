@@ -1,7 +1,7 @@
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Drive } from '@internxt/sdk';
 
-export class PaymentsService {
+export class ObjStoragePaymentsService {
   private apiUrl: string;
 
   constructor(apiUrl: string) {
@@ -16,14 +16,14 @@ export class PaymentsService {
   }
 
   public async fetchPlanById(priceId: string, currency?: string): Promise<PlanData> {
-    const client = PaymentsService.client(this.apiUrl);
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
     const objStoragePlan = await client.getObjectStoragePlanById(priceId, currency);
 
     return objStoragePlan;
   }
 
   public async getCustomerId(name: string, email: string, country?: string, companyVatId?: string) {
-    const client = PaymentsService.client(this.apiUrl);
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
     const customerId = await client.createCustomerForObjectStorage(name, email, country, companyVatId);
 
     return customerId;
@@ -37,7 +37,7 @@ export class PaymentsService {
     vatId: string,
     promoCodeId?: string,
   ) {
-    const client = PaymentsService.client(this.apiUrl);
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
     const subscription = await client.createObjectStorageSubscription(
       customerId,
       plan,
