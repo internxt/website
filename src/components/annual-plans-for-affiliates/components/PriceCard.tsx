@@ -140,19 +140,19 @@ export default function PriceCard({
       {!isCloudwards ? (
         <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
           <span className="text-[13.5px] font-bold text-white">
-            {contentText.productFeatures.IdentityManagementDay.title}
+            {contentText.IdentityManagementDay.title}
           </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
               <Fingerprint className="h-6 w-6 text-white" weight="fill" />
               <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift1}
+                {contentText.IdentityManagementDay.gift1}
               </span>
             </div>
             <div className="flex items-center space-x-2">
               <Fingerprint className="h-6 w-6 text-white" weight="fill" />
               <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift2}
+                {contentText.IdentityManagementDay.gift2}
               </span>
             </div>
           </div>
