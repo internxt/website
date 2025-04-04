@@ -1,7 +1,6 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
-  Clover,
   CodeBlock,
   Database,
   Envelope,
@@ -14,11 +13,10 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { Interval } from '../services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
-import Lifetime from '@/pages/lifetime';
 
 export interface PriceCardProps {
   planType: string;
@@ -43,6 +41,8 @@ export interface PriceCardProps {
   index?: number;
   isPcComponentes?: boolean;
   isPcComponentesLifetime?: boolean;
+  isPcComponentes5tb?: boolean;
+  trialToken?: string;
 }
 
 const STORAGE_LEVELS = {
@@ -75,7 +75,9 @@ export default function PriceCard({
   isStackCommerce = false,
   index,
   isPcComponentes = false,
+  isPcComponentes5tb = false,
   isPcComponentesLifetime = false,
+  trialToken,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -111,6 +113,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
+          trialToken: trialToken,
           promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       } else {
@@ -280,7 +283,7 @@ export default function PriceCard({
       },
       '5TB': {
         title: '5TB',
-        price: '199.99',
+        price: isPcComponentes5tb ? '50' : '199.99',
         priceId: 'price_1OQ3H5FAOdcgaBMQwMJ734rd',
         features: [
           '5TB encrypted storage',

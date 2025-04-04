@@ -83,6 +83,11 @@
         "fileConverter": "Convertidor de archivos",
         "haveIBeenPwned": "Internxt Monitor"
       },
+      "features": {
+        "title": "Funciones",
+        "privateCloud": "Solución nube privada",
+        "cloudBakcup": "Solución cloud backup"
+      },
       "language": "Idioma"
     },
     "financialProject": "Proyecto financiado por el CDTI y financiado por los fondos FEDER de la UE. Internxt Mail e Internxt Meet: Servicio de correo seguro Internxt Mail y servicio de videollamadas seguras Internxt Meet, mediante el uso de encriptación post-cuántica e inteligencia artificial."

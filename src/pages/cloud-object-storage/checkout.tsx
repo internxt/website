@@ -12,13 +12,13 @@ import LoadingPulse from '@/components/shared/loader/LoadingPulse';
 import { Elements } from '@stripe/react-stripe-js';
 import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
-import { paymentService } from '@/components/services/payments.service';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
 import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
-import { stripeService } from '@/components/services/stripe.service';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+import { ObjStoragePaymentsService } from '@/services/payments.service';
+import { stripeService } from '@/services/stripe.service';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -69,6 +69,7 @@ const PRICE_ID = IS_PRODUCTION
   : (process.env.NEXT_PUBLIC_OBJECT_STORAGE_PRICE_ID_TEST as string);
 
 const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): JSX.Element => {
+  const paymentService = new ObjStoragePaymentsService(process.env.NEXT_PUBLIC_PAYMENTS_API as string);
   const router = useRouter();
 
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
@@ -192,25 +193,25 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
 
       await objectStorageActivationAccount(email, password, captchaToken);
 
-      const { customerId, token } = await paymentService.getCustomerId(
-        companyName ?? 'My Internxt Object Storage',
+      const { customerId, token } = await paymentService.getCustomerId({
+        name: companyName ?? 'My Internxt Object Storage',
         email,
         country,
-        vatId,
-      );
+        companyVatId: vatId,
+      });
 
       if (elementsError) {
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createSubscription(
+      const { clientSecret } = await paymentService.createObjectStorageSubscription({
         customerId,
         plan,
         token,
         companyName,
         vatId,
-        coupon?.codeId,
-      );
+        promoCodeId: coupon?.codeId,
+      });
 
       const confirmIntent = stripeSDK.confirmSetup;
 

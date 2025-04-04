@@ -1,5 +1,3 @@
-import { invalid } from 'moment';
-
 export interface IntegratedCheckoutText {
   title: string;
   pay: string;

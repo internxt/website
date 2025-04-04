@@ -163,5 +163,15 @@
     "id": "vpn-extension",
     "title": "Internxt VPN gratuit et sécurisé | Internxt",
     "description": "Extension VPN gratuite d’Internxt pour Chrome : navigation sécurisée, Wi-Fi chiffré et protection de la vie privée. Téléchargez notre VPN sécurisé pour protéger vos données en ligne."
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Stockage en cloud privé",
+    "description": "Qu'est-ce que le stockage en cloud privé et comment Internxt protège vos informations avec de la cryptographie post-quantique, un antivirus et un VPN"
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - Solutions de Sauvegarde de Stockage Cloud",
+    "description": "Les solutions de sauvegarde de stockage cloud d'Internxt utilisent la redondance et un chiffrement primé qui protège vous et votre entreprise contre la perte de données."
   }
 ]

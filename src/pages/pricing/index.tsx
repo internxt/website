@@ -25,7 +25,7 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -50,8 +50,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
-    couponCodeForLifetime: PromoCodeName.StPatricksDay,
+    couponCode: PromoCodeName.Special80Coupon,
+    couponCodeForLifetime: PromoCodeName.Special80Coupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');

@@ -80,6 +80,11 @@
         "passwordGenerator": "Password Generator",
         "fileConverter": "File Converter",
         "haveIBeenPwned": "Internxt Monitor"
+      },
+      "features": {
+        "title": "Features",
+        "privateCloud": "Private cloud storage",
+        "cloudBakcup": "Cloud storage backup"
       }
     }
   },

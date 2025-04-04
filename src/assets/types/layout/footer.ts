@@ -30,6 +30,7 @@ export interface Sections {
   join: Join;
   resources: Resources;
   tools: Tools;
+  features: Features;
 }
 
 export interface Company {
@@ -98,6 +99,12 @@ export interface Tools {
   fileConverter: string;
   vpn: string;
   haveIBeenPwned: string;
+}
+
+export interface Features {
+  title: string;
+  privateCloud: string;
+  cloudBakcup: string;
 }
 
 export interface NewsletterSection {

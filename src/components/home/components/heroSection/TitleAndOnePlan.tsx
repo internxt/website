@@ -1,5 +1,5 @@
 import Countdown from '@/components/components/Countdown';
-import { currencyService } from '@/components/services/currency.service';
+import { currencyService } from '@/services/currency.service';
 import Header from '@/components/shared/Header';
 import { Check, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
@@ -28,7 +28,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
   }, []);
 
   return (
-    <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24">
+    <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pb-10 lg:pt-24">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">

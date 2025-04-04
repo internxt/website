@@ -13,7 +13,7 @@ import { TestimonialsSectionForBusiness } from '@/components/business/Testimonia
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
 import CtaSection from '@/components/shared/CtaSection';

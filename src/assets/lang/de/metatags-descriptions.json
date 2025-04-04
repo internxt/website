@@ -174,5 +174,15 @@
     "id": "vpn-extension",
     "title": "Internxt Kostenloses und sicheres VPN | Internxt",
     "description": "Kostenlose Internxt VPN-Erweiterung für Chrome: sicheres Surfen, verschlüsseltes WLAN und Schutz der Privatsphäre. Laden Sie unser sicheres VPN herunter, um Ihre Daten online zu schützen."
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Private Cloud-Speicher",
+    "description": "Was ist privater Cloud-Speicher und wie schützt Internxt Ihre Informationen mit postquantischer Kryptografie, Antivirus und VPN"
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - Cloud-Speicher-Backup-Lösungen",
+    "description": "Internxt Cloud-Speicher-Backup-Lösungen nutzen Redundanz und preisgekrönte Verschlüsselung, die Sie und Ihr Unternehmen vor Datenverlust schützt."
   }
 ]

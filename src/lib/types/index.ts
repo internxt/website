@@ -122,6 +122,7 @@ export enum PromoCodeName {
   PcCloudS3 = 'PCCLOUDS3',
   StPatricksDay = 'STPADDYS80',
   Special82 = 'AFFSPECIAL82',
+  PcComponentes5TB = 'PCMOVIL',
 }
 
 export interface PromoCodeProps {
