@@ -75,7 +75,7 @@ export default function HeroSection({ textContent }: HeroSectionBraveProps): JSX
   ];
 
   function redirectToPricingTable() {
-    window.location.href = '#pricingTable';
+    window.location.href = '#priceTable';
   }
 
   return (
