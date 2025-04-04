@@ -93,7 +93,7 @@ export const PricingSectionWrapper = ({
   const businessTitle = textContent.planTitles.business;
 
   const lifetimeSubtitles = billingFrequency === Interval.Lifetime ? textContent.lifetimeDescription : '';
-  const individualPLansDescription = textContent.planDescription;
+  const individualPLansDescription = billingFrequency === Interval.Year ? textContent.planDescription : '';
 
   const businessPlanDescription = textContent.businessDescription2;
 
