@@ -156,6 +156,11 @@
         "title": "Internxt themed goodies:",
         "gift": "Chance to win an Internxt x Swiss Peak backpack"
       },
+      "IdentityManagementDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Special theme for Web App",
+        "gift2": "Chance to win an Internxt backpack"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",

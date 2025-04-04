@@ -57,14 +57,14 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className=" hidden w-full justify-end lg:flex pt-16 px-20">
+          <div className=" hidden w-full justify-end lg:flex pt-16 pl-40">
             <Image
               loading="eager"
-              src={getImage("/images/security-day/internxt_security_day.png")}
+              src={getImage("/images/campaigns/identity/encrypted_lock.webp")}
               draggable="false"
               quality={100}
-              width={475}
-              height={437}
+              width={641}
+              height={641}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt="HeroSection Image"
               onClick={handleOnClick}

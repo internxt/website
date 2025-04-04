@@ -130,6 +130,11 @@
       "title": "Internxt themed goodies:",
       "gift": "Chance to win an Internxt backpack"
     },
+    "IdentityManagementDay": {
+      "title": "Internxt themed goodies:",
+      "gift1": "Special theme for Web App",
+      "gift2": "Chance to win an Internxt backpack"
+    },
 
     "cheaperThan": {
       "lifetime": {

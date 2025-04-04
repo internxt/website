@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Ahorra un 80%",
+    "label": "Ahorra un 82%",
     "title": {
       "line1": "El almacenamiento ",
       "line2": "en la nube",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "80% más barato"
+        "blueText": "82% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
-      "description": "80% de descuento",
+      "description": "82% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
         "Cifrado postcuántico y cero conocimiento",
@@ -72,15 +72,15 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2",
+        "price": " 1.8",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta 80%",
-      "title": "Ecosistema seguro en la nube",
+      "saveLabel": "Oferta 82%",
+      "title": "Nuevos planes lifetime",
       "subtitle": "Nuevos planes disponibles!",
       "cta": "Consigue tu plan",
       "guarantee": "Garantía de devolución de 30 días"

@@ -131,6 +131,11 @@
       "title": "Regalitos de Internxt:",
       "gift": "Sorteo mochila Internxt x Swiss Peak"
     },
+    "IdentityManagementDay": {
+      "title": "Regalitos de Internxt:",
+      "gift1": "Sorteo mochila Internxt x Swiss Peak",
+      "gift2": "Tema gratis para Web app"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Hasta ",
