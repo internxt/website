@@ -7,5 +7,9 @@
 }
 
 .linearGradient {
-  background: linear-gradient(0deg, #0143A6 0%, #000000 100%);
+  background: linear-gradient(0deg, #0143a6 0%, #000000 100%);
+}
+
+.inverseLinearGradient {
+  background: linear-gradient(180deg, #001d6c 0%, #121923 100%);
 }
