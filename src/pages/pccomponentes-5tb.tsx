@@ -59,10 +59,10 @@ const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Elem
             planType="individual"
             key={product.storage}
             storage={product.storage}
-            price={coupon ? Number(product) : parseFloat(product.price)}
+            price={0}
             billingFrequency={Interval.Year}
             cta={['checkout', product.priceId]}
-            priceBefore={parseFloat(product.price)}
+            priceBefore={200}
             lang={lang}
             currency={currency}
             coupon={coupon ?? undefined}
@@ -71,6 +71,7 @@ const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Elem
             isPcComponentes
             index={2}
             trialToken={trialToken}
+            isPcComponentes5tb
           />
         </Transition>
       </div>
