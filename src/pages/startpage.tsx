@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Special82,
+      promoCodeId: PromoCodeName.Identity82AFF,
     });
   }
 
@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.Special82}
+        couponType={PromoCodeName.Identity82AFF}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

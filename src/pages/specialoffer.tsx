@@ -39,7 +39,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Special82,
+    couponCode: PromoCodeName.Identity82AFF,
   });
 
   const cardsData = [
