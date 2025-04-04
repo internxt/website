@@ -1,5 +1,6 @@
 import {
   ArrowsClockwise,
+  Gift,
   CodeBlock,
   Database,
   Envelope,
@@ -12,10 +13,8 @@ import {
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
-import { getImage } from '@/lib/getImage';
-import { TransformedProduct } from '@/components/services/stripe.service';
+import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import Image from 'next/image';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
 
@@ -37,6 +36,7 @@ export interface PriceCardProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
   isBrave?: boolean;
+  showPromo?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -62,6 +62,7 @@ export const PriceCard = ({
   isFamilyPage,
   darkMode,
   isBrave,
+  showPromo = true,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -85,7 +86,7 @@ export const PriceCard = ({
         .toFixed(2)
         .replace('.00', '')
     : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(1).replace('.0', '');
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
@@ -124,11 +125,11 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[760px] min-h-[700px] `
+        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[810px] min-h-[710px] `
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex min-h-[150px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pt-6`}
       >
@@ -188,7 +189,8 @@ export const PriceCard = ({
               {showTotalDiscountPrice && (
                 <>
                   {' | '}
-                  {contentText.save} {annualSave} {contentText.perYear}
+                  {contentText.save} {annualSave}
+                  {currency}
                 </>
               )}
             </p>
@@ -209,10 +211,21 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
+
+      {showPromo && (
+        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
+          <span className="font-bold text-white">{contentText.productFeatures.worldCloudSecurityDay.title}</span>
+          <div className="flex items-center space-x-2">
+            <Gift className="h-6 w-6 text-white" weight="fill" />
+            <span className="text-white">{contentText.productFeatures.worldCloudSecurityDay.gift}</span>
+          </div>
+        </div>
+      )}
+
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `h-[480px] ` : `h-[400px]`} pb-6 text-sm`}
+        } ${isBusiness ? `max-h-[490px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

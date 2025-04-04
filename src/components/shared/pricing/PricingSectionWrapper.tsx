@@ -1,10 +1,11 @@
-import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
+import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
 import { ReactNode } from 'react';
+import { highlightKeywords } from '@/utils/highlightKeywords';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -38,6 +39,7 @@ interface PricingSectionWrapperProps {
   CustomDescription?: ReactNode;
   isBrave?: boolean;
   hideFeatures?: boolean;
+  showPromo?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -68,6 +70,7 @@ export const PricingSectionWrapper = ({
   CustomDescription,
   darkMode,
   isBrave,
+  showPromo = true,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -110,12 +113,6 @@ export const PricingSectionWrapper = ({
     }
   };
 
-  const highlightKeywords = (text) => {
-    const keywords = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
-    const regex = new RegExp(`\\b(${keywords.join('|')})\\b`, 'gi');
-
-    return text.replace(regex, '<strong>$1</strong>');
-  };
   return (
     <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
       <div className="flex flex-col items-center gap-10">
@@ -165,6 +162,7 @@ export const PricingSectionWrapper = ({
           darkMode={darkMode}
           isBrave={isBrave}
           hideFeatures={hideFeatures}
+          showPromo={showPromo}
         />
       </div>
     </section>

@@ -26,12 +26,11 @@ export const SecureVPNSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center space-y-12">
-        <p className="text-center text-5xl font-semibold text-gray-100 md:text-left">{textContent.title}</p>
+        <p className="text-center text-4xl font-semibold text-gray-100 md:text-left lg:text-5xl">{textContent.title}</p>
         <div className="flex max-w-[800px] flex-col space-y-6 text-center">
-          <p className="text-2xl font-medium text-gray-80">{textContent.subtitle}</p>
-          <p className="text-lg text-gray-80">{textContent.description}</p>
+          <p className="text-xl font-medium text-gray-80">{textContent.subtitle}</p>
         </div>
         <RevealY className="grid grid-cols-1 flex-row flex-wrap justify-center gap-8 sm:grid-cols-2">
           {cards.map((card) => (

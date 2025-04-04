@@ -25,7 +25,7 @@ import FileParallaxSection from '@/components/home/FileParallaxSection';
 import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
@@ -47,10 +47,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
-    businessCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Special80Coupon,
+    couponCodeForLifetime: PromoCodeName.Special80Coupon,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -111,15 +112,18 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      couponCodeForCheckout?.name,
     );
   };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
@@ -143,7 +147,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           textContent={textContent.tableSection}
           decimalDiscount={{
             individuals: decimalDiscount,
-            lifetime: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
           }}
           lang={lang}
           products={products}
@@ -155,6 +159,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
+          popularPlanBySize="5TB"
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

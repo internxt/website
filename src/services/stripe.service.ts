@@ -138,7 +138,7 @@ async function getSelectedPrice(
   return selectedPrice;
 }
 
-async function getCoupon(couponName: PromoCodeName) {
+async function getCoupon(couponName: PromoCodeName): Promise<PromoCodeProps> {
   try {
     const res = await axios.get(`${window.origin}/api/stripe/get_coupons`, {
       params: {

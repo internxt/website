@@ -15,6 +15,14 @@
       "commingSoon": "Coming soon",
       "discount": "% OFF",
       "cta": "Redeem deal",
+      "stPatricksFeatures": {
+        "title": "Internxt themed goodies:",
+        "gift": "St. Patrick’s Day theme for Web App"
+      },
+      "worldCloudSecurityDay": {
+        "title": "Internxt themed goodies:",
+        "gift": "Chance to win an Internxt x Swiss Peak backpack"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",

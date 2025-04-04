@@ -1,116 +1,123 @@
 {
   "HeroSection": {
-    "label": "免費 VPN",
+    "label": "Internxt VPN",
     "title": {
-      "line1": "Internxt 安全 VPN 保護",
-      "line2": "您的網路活動"
+      "line1": "Internxt 安全 VPN",
+      "line2": "線上全面保護你"
     },
-    "description": "使用 Internxt 的免費 VPN，完全自由且隱私保護地瀏覽網絡。",
-    "cta": "下載 VPN"
+    "description": "使用 Internxt 安全 VPN 自由且安全地瀏覽網頁。",
+    "cta": "選擇你的方案"
   },
   "EncryptedVPNSection": {
-    "title": "Internxt 的加密 VPN 擴展",
-    "subtitle": "我們的免費且安全 VPN 隱藏您的 IP 地址，讓您的瀏覽體驗保持私密、安全且無限制。",
-    "description": "我們建立了這個 VPN，符合我們創建更私密互聯網的使命，通過此擴展，您的連接將被加密，免受網絡攻擊和數據泄漏的威脅。您專注於安全瀏覽，我們將為安全性負責。",
-    "cta": "下載 VPN"
+    "title": "Internxt 加密 VPN 擴充功能",
+    "subtitle": "我們的 VPN 隱藏你的 IP 位址，在 5 個國家（法國、德國、波蘭、加拿大、英國）提供私人、安全且無限制的內容存取。",
+    "description": "我們開發這個 VPN 是為了使網路更加私人化。透過 Internxt Premium 訂閱，你的連線將獲得加密，免受網路攻擊和資料外洩的風險。我們負責你的安全，讓你安心上網。",
+    "cta": "取得 Internxt"
   },
   "SecureVPNSection": {
-    "title": "為什麼使用安全 VPN",
-    "subtitle": "不安全的互聯網連接，如公共 Wi-Fi，可能會導致信息泄漏、黑客攻擊或違規。",
-    "description": "Internxt 的免費 VPN 為您的線上體驗提供更安全、更私密的連接。",
+    "title": "為何使用安全且加密的 VPN？",
+    "subtitle": "不安全的網路連線（如公共 Wi-Fi）可能導致資料被駭或外洩風險。Internxt 安全 VPN 加密你的連線，確保你的隱私和安全。",
+    "description": "Internxt 免費 VPN 加密你的連線，提供安全與隱私的上網體驗。",
     "cards": [
       {
-        "title": "加密您的網路流量",
-        "description": "我們加密您的數據，以保護您的隱私權，並將您的瀏覽活動隱藏起來，使黑客、ISP 和 Google 無法追蹤。"
+        "title": "加密你的網路流量",
+        "description": "我們加密你的資料，保障你的隱私權，防止駭客、網路供應商和 Google 追蹤你的上網活動。"
       },
       {
-        "title": "避免定向廣告",
-        "description": "安全 VPN 幫助您避免個性化廣告，減少來自 Google 等公司的數據收集。"
+        "title": "避免精準廣告",
+        "description": "安全的 VPN 可幫助你避免個人化廣告，減少 Google 等公司蒐集你的資料。"
       },
       {
-        "title": "解鎖全球內容",
-        "description": "繞過地理限制，訪問您地區不可用的網站和流媒體服務。"
+        "title": "存取全球內容",
+        "description": "繞過地區限制，訪問你所在地區無法使用的網站和串流服務。"
       },
       {
-        "title": "控制您的在線身份",
-        "description": "Internxt 的安全 VPN 讓您重新控制您在線分享的信息量，並保護它。"
+        "title": "掌控你的線上身份",
+        "description": "Internxt 安全 VPN 讓你掌握自己在網路上分享的資訊，並確保資訊安全。"
       }
     ]
   },
   "HowItWorksSection": {
-    "title": "它是如何運作的",
-    "subtitle": "Internxt 的 VPN 擴展使用快速、安全的服務器來加密和傳輸敏感數據。",
-    "description": "我們的免費 VPN 擴展掩藏您的 IP 地址，保護您的信息免受第三方數據收集。",
+    "title": "它如何運作？",
+    "subtitle": "Internxt VPN 使用快速安全的伺服器加密並傳輸敏感資料。它隱藏你的 IP 位址，防止第三方蒐集你的資訊。",
+    "description": "我們的免費 VPN 擴充功能隱藏你的 IP 位址，防止第三方蒐集你的資料。",
     "cards": [
       {
-        "title": "高級加密",
-        "description": "Internxt VPN 擴展使用安全的數據加密協議，為安全和私密的連接提供最高保護。"
+        "title": "進階加密",
+        "description": "Internxt VPN 擴充功能使用先進的加密協定，確保最大程度的保護與安全連線。"
       },
       {
         "title": "安全網路",
-        "description": "享受對私人網路的安全訪問，並在保持數據機密性的同時連接到您的工作或家庭網絡。"
+        "description": "安全存取私人網路，安心連結至家用或辦公室網路，保障你的資料安全。"
       },
       {
-        "title": "增強匿名性",
-        "description": "VPN 擴展會更改您的 IP 地址以隱藏您的位置，並且不會跟蹤您的瀏覽歷史或連接日誌。"
+        "title": "提升匿名性",
+        "description": "VPN 擴充功能更改你的 IP 位址，隱藏你的位置，防止瀏覽紀錄和連線記錄被追蹤。"
       }
     ]
   },
   "WhenUseVPNSection": {
-    "title": "何時使用 VPN",
-    "subtitle": "Internxt 的 VPN 擴展使用快速、安全的服務器來加密和傳輸敏感數據。",
-    "description": "我們的免費 VPN 擴展掩藏您的 IP 地址，保護您的信息免受第三方數據收集。",
+    "title": "何時使用 VPN？",
+    "subtitle": "Internxt VPN 擴充功能使用快速安全的伺服器加密並傳輸敏感資料。",
+    "description": "我們的免費 VPN 擴充功能隱藏你的 IP 位址，防止第三方蒐集你的資料。",
     "cta": "下載 VPN",
     "cards": [
-      "防止定向廣告",
-      "匿名創建帳戶",
-      "繞過討厭的地理限制",
+      "避免個人化廣告",
+      "匿名建立帳戶",
+      "繞過地區限制",
       "免費 VPN",
-      "保護您的隱私",
+      "保護你的隱私",
       "無需註冊",
-      "防禦網絡攻擊",
-      "無日誌政策"
+      "防護網路攻擊",
+      "不追蹤活動"
     ]
   },
   "CtaSection": {
-    "title": "擺脫線上追蹤器的束縛",
-    "description": "使用 Internxt VPN 隱藏您的數據，享受安全的瀏覽體驗",
+    "title": "擺脫線上追蹤",
+    "description": "使用 Internxt VPN 隱藏你的資料，享受安全的上網體驗。",
     "cta": "下載 VPN"
   },
   "CtaSection2": {
-    "title": "杜絕窺探",
-    "description": "使用 Internxt VPN 加密連線，享受全面隱私",
+    "title": "再無窺探的眼光",
+    "description": "使用 Internxt VPN 加密你的連線，實現完全的隱私保護。",
     "cta": "下載 VPN"
   },
   "FaqSection": {
     "title": "有問題？我們有答案",
     "faq": [
       {
-        "question": "什麼是 Chrome 擴展 VPN？",
+        "question": "什麼是 Chrome 的 VPN 擴充功能？",
         "answer": [
-          "VPN 或虛擬私人網絡可確保在互聯網上進行安全的私人瀏覽。VPN 設計用於創建一個加密通道，用於私人數據，並允許您在較高風險的連接（如公共 Wi-Fi 熱點）上保護您的在線身份。"
+          "VPN（虛擬私人網路）可確保您在網路上的安全與隱私瀏覽。它會建立加密通道來保護您的個人數據與線上身份，特別是在使用公共 Wi-Fi 熱點等高風險連線時。"
         ]
       },
       {
-        "question": "如何安裝 VPN 擴展？",
+        "question": "有哪些國家可用？",
         "answer": [
-          "要安裝 Internxt 的 VPN，請單擊此頁面上的下載 VPN 按鈕。下載後，您可以啟動 VPN 並選擇您首選的 VPN 伺服器。"
+          "使用 Internxt VPN，您可以免費連線到法國。",
+          "付費方案可享有無限高速 VPN 連線。Essential 方案包含法國，Premium 方案包含法國、德國、波蘭和加拿大，Ultimate 方案則可連線至法國、德國、波蘭、加拿大和英國。"
         ]
       },
       {
-        "question": "使用 VPN 連接是否安全？",
+        "question": "如何獲取 Internxt VPN？",
         "answer": [
-          "我們開發了免費的 VPN 擴展，使用符合行業標準的安全協議，符合 Internxt 保護您的數據免受黑客和互聯網服務提供商（ISP）的任務。 VPN 擴展可防止外部方追蹤您的在線活動。"
+          "您可以在 Chrome 線上應用商店免費安裝 Internxt VPN，並連線至 1 個國家（法國）。如果您想享受無限高速連線及更多國家的選擇，可以訂閱付費方案或購買終身計劃。"
+        ]
+      },
+      {
+        "question": "使用 VPN 連線是否安全？",
+        "answer": [
+          "我們的免費 VPN 擴充功能是依據業界標準開發的，旨在保護您的數據，避免駭客與網際網路供應商（ISP）監視您的活動，這符合 Internxt 的使命。VPN 擴充功能可防止第三方追蹤您的線上活動。"
         ]
       },
       {
         "question": "VPN 支援哪些平台？",
-        "answer": ["您可以在 Windows 和 MacOS 桌面設備的 Google Chrome 瀏覽器上下載我們的 VPN Chrome 擴展。"]
+        "answer": ["您可以在 Windows 和 MacOS 桌上型設備上透過 Google Chrome 瀏覽器下載我們的 VPN 擴充功能。"]
       },
       {
-        "question": "VPN 如何確保我的隱私？",
+        "question": "VPN 連線如何保護我的隱私？",
         "answer": [
-          "VPN 通過加密您的互聯網流量、掩藏您的 IP 地址並遵守嚴格的無日誌政策來確保您的隱私。這些安全措施的結合防止第三方監視您的在線活動，保護您的匿名性和數據隱私。"
+          "VPN 可透過加密您的網路流量、隱藏您的 IP 地址以及執行嚴格的無日誌政策來保護您的隱私。這些安全措施可防止第三方監控您的線上活動，確保您的匿名性與數據安全。"
         ]
       }
     ]

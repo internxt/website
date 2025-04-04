@@ -14,7 +14,7 @@ export const CloudObjectStoragePriceCardSection = ({ textContent }: PriceCardSec
     <section className="overflow-hidden px-5 py-20" id="storageSection">
       <div className="flex flex-col items-center justify-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+          <h2 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
           <h3 className="text-xl text-gray-80">{textContent.description}</h3>
         </div>
         <div className="flex flex-col-reverse gap-16 md:flex-row">

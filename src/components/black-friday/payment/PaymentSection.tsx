@@ -1,4 +1,4 @@
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import { Transition } from '@headlessui/react';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { CreditCard, CurrencyCircleDollar, Detective } from '@phosphor-icons/react';
@@ -53,7 +53,7 @@ const PaymentSection = ({ textContent }) => {
               ))}
           </div>
         </Transition>
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-y-0 md:space-x-32">
+        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-x-32 md:space-y-0">
           <div className="flex max-w-[183px] flex-col items-center space-y-3">
             <CurrencyCircleDollar size={40} className="text-primary" />
             <p className="text-lg font-medium text-gray-20">{textContent.feeds.firstFeature}</p>

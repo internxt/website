@@ -1,5 +1,5 @@
 {
-  "mostPopular": "HOT",
+  "mostPopular": "Popular",
   "mostPopularPlan": "Most Popular Plan",
   "valentines": "Special Valentine’s Day offer!",
   "onlyForNewClients": "Only for new customers",
@@ -121,6 +121,14 @@
     "valentinesFeatures": {
       "title": "Internxt themed goodies:",
       "gift": "Chance to win two Internxt x Swiss Peak backpacks"
+    },
+    "stPatricksFeatures": {
+      "title": "Internxt themed goodies:",
+      "gift": "St. Patrick’s Day theme for Web App"
+    },
+    "worldCloudSecurityDay": {
+      "title": "Internxt themed goodies:",
+      "gift": "Chance to win an Internxt backpack"
     },
 
     "cheaperThan": {

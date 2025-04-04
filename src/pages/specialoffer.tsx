@@ -7,7 +7,7 @@ import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -130,11 +130,12 @@ const PartnerDiscount = ({
         products={products}
         popularPlanBySize={'5TB'}
         loadingCards={loadingCards}
-        startIndividualPlansFromInterval={Interval.Year}
+        startIndividualPlansFromInterval={Interval.Lifetime}
         hideFreeCard
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
+        showPromo={false}
         CustomDescription={
           <>
             <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>

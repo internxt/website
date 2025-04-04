@@ -10,7 +10,10 @@
   },
   "FreeCardPromoBanner": {
     "title": "Erhalten Sie einen exklusiven Rabatt!",
-    "subtitle": { "blue": "Sonderangebot:", "normal": " Dateien privat speichern für weniger" },
+    "subtitle": {
+      "blue": "Sonderangebot:",
+      "normal": " Dateien privat speichern für weniger"
+    },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
     "guarantee": "30-tägige Geld-zurück-Garantie"
@@ -42,7 +45,7 @@
     }
   },
   "featuresBanner": {
-    "label": "Spare 85%",
+    "label": "Spare 80%",
     "title": "Boo! Sparen Sie mit uns...",
     "subtitle": "Gewinne unseren Premium-Rucksack mit unseren lebenslangen Plänen.",
     "cta": "Plan wählen",
@@ -94,7 +97,10 @@
     "line1": "Hole dir den Byte für Byte sicheren Cloud-Speicher",
     "blueText": "mit Internxt"
   },
-  "SignUpTempMailBanner": { "line1": "Halte deine E-Mails sauber und Dateien sicher", "blueText": "mit Internxt" },
+  "SignUpTempMailBanner": {
+    "line1": "Halte deine E-Mails sauber und Dateien sicher",
+    "blueText": "mit Internxt"
+  },
   "SignUpCyberAwareness": {
     "line1": "Jetzt, da du dir dessen bewusst bist, schütze dich mit",
     "blueText": "dem sicherem Cloud-Speicher von Internxt"
@@ -123,9 +129,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80 % Rabatt auf unsere brandneuen Preispläne.",
-      "normalText": "Der Frühling ist da!",
-      "cta": "Angebot sichern"
+      "boldText": "80% Rabatt!",
+      "normalText": "Weltweiter Tag der Cloud-Sicherheit",
+      "cta": "Kaufe deinen Plan!"
     }
   },
   "lifetimeBanner": {

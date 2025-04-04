@@ -1,20 +1,29 @@
 {
   "HeroSection": {
-    "header": "Internxt 年度折扣",
+    "header": "Internxt年度折扣",
     "title": {
       "normalText": "获取最安全的云存储 ",
-      "blueText": "更低价"
+      "blueText": "更低价格"
     },
     "description": {
-      "normal": "加入 Internxt，领先的 Google Drive 替代方案，享受 ",
-      "blue": "80% 折扣 ",
-      "normal1": "任何年度计划。安全地存储和分享您的文件，完全保护隐私。"
+      "normal": "加入Internxt，最佳的Google Drive替代方案，并享受 ",
+      "blue": "82%折扣 ",
+      "normal1": "适用于所有方案，包括终身方案。安全存储和共享您的文件，确保完全隐私。"
     },
-    "cta": "选择计划"
+    "cta": "选择一个计划"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "选择您需要的存储空间" },
-    "planDescription": "每个 Internxt 计划都包含完整访问我们的隐私服务。享受一整年的安全，满足您的存储需求。",
+    "planTitles": {
+      "individuals": "个人计划",
+      "homePage": "选择适合您的计划",
+      "lifetime": "终身计划",
+      "business": "企业计划",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "适用于所有独家终身计划"
+      }
+    },
+    "planDescription": "所有Internxt计划都提供完整访问权限，涵盖我们最新的安全技术解决方案：Internxt Drive、Send、VPN、杀毒软件、Meet 和 Mail。",
     "billingFrequency": {
       "monthly": "每月",
       "annually": "每年",
@@ -24,10 +33,10 @@
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源并已审核",
+      "openSource": "开源且已审核",
       "anonymousAccount": "匿名账户创建",
       "premiumSupport": "高级客户支持",
-      "guarantee": "30 天退款保证"
+      "guarantee": "30天退款保证"
     }
   },
   "FeatureSection": {
@@ -77,13 +86,13 @@
     ]
   },
   "CtaSection": {
-    "title": "立即以 80% 的折扣获取整整一年的存储空间！",
+    "title": "立即以 82% 的折扣获取整整一年的存储空间！",
     "description": "Internxt 提供独家折扣，保证隐私和安全。",
     "cta": "选择计划"
   },
   "CtaSection1": {
     "title": "全球最私密的云存储",
-    "description": "享受独家 80% 的折扣，访问 Internxt 安全、私密和加密的云存储，整整一年。",
+    "description": "享受独家 82% 的折扣，访问 Internxt 安全、私密和加密的云存储，整整一年。",
     "cta": "找到您的计划"
   }
 }

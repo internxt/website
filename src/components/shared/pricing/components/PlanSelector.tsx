@@ -1,4 +1,5 @@
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
+import { SealPercent } from '@phosphor-icons/react';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 
@@ -38,6 +39,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.annually}
+      {isIndividualsOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -51,6 +53,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.lifetime}
+      {isLifetimeOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -64,6 +67,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.business}
+      {isBusinessOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
   </div>
 );

@@ -79,9 +79,10 @@
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Risparmia 80%",
-      "title": "Nuovi piani tariffari disponibili ora!",
-      "cta": "Richiedi l'offerta!",
+      "saveLabel": "Offerta 80%",
+      "title": "Ecosistema sicuro nel cloud",
+      "subtitle": "Nuovi piani disponibili!",
+      "cta": "Ottieni il tuo piano",
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
     "youKnow": "Lo sapevi?"
@@ -260,10 +261,10 @@
         ]
       },
       {
-        "question": "Internxt è una soluzione di archiviazione cloud sostenibile ed ecologica?",
+        "question": "Avrò accesso a tutti i servizi Internxt?",
         "answer": [
-          "Sì, Internxt è impegnata nel cloud computing ecologico, offrendo soluzioni di archiviazione rispettose dell'ambiente per supportare un futuro più pulito e sostenibile. I nostri data center sono alimentati per il 92% da energia rinnovabile e sono progettati per ridurre al minimo le emissioni di carbonio, il consumo di risorse e i rifiuti elettronici.",
-          "I nostri sforzi contribuiscono a un obiettivo di neutralità climatica entro il 2050. Scopri di più"
+          "Sì, un abbonamento a pagamento a Internxt o un abbonamento a vita ti garantiscono l'accesso alla nostra suite all-in-one per la privacy, composta da Internxt Mail, Meet, VPN, Drive, Send, Antivirus e altro.",
+          "Un piano Internxt Free ti darà accesso solo a Internxt Drive."
         ]
       },
       {
@@ -365,7 +366,10 @@
     "cta": "Scegli il tuo piano"
   },
   "GetStartedSection": {
-    "title": { "line1": "Inizia subito", "line2": "get 1GB for free" },
+    "title": {
+      "line1": "Inizia subito",
+      "line2": "get 1GB for free"
+    },
     "subtitle": {
       "line1": "Our clients are very happy with Internxt Drive, but",
       "line2": "they are happier knowing they are in total privacy."

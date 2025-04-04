@@ -1,20 +1,29 @@
 {
   "HeroSection": {
-    "header": "Sconto Annuale Internxt",
+    "header": "Sconto Annuale di Internxt",
     "title": {
-      "normalText": "Ottieni lo storage cloud più sicuro ",
-      "blueText": "a un prezzo inferiore"
+      "normalText": "Ottieni il cloud storage più sicuro ",
+      "blueText": "a meno"
     },
     "description": {
-      "normal": "Unisciti a Internxt, l'alternativa principale a Google Drive, e beneficia di ",
-      "blue": "80% DI SCONTO ",
-      "normal1": "su qualsiasi piano annuale. Archivia e condividi i tuoi file in modo sicuro e privato."
+      "normal": "Unisciti a Internxt, la migliore alternativa a Google Drive, e ottieni ",
+      "blue": "82% DI SCONTO ",
+      "normal1": "su qualsiasi piano a vita. Archivia e condividi i tuoi file in modo sicuro e con totale privacy."
     },
     "cta": "Scegli un piano"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "Scegli lo spazio di archiviazione di cui hai bisogno" },
-    "planDescription": "Ogni piano Internxt include l'accesso completo ai nostri servizi di privacy. Goditi un anno intero di sicurezza per soddisfare le tue esigenze di archiviazione.",
+    "planTitles": {
+      "individuals": "Piani individuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a vita",
+      "business": "Piani per aziende",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri piani esclusivi a vita"
+      }
+    },
+    "planDescription": "Tutti i piani Internxt offrono accesso completo alla nostra suite di soluzioni private con l'ultima tecnologia di sicurezza: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",
@@ -24,9 +33,9 @@
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open-source e verificato",
-      "anonymousAccount": "Creazione anonima dell'account",
-      "premiumSupport": "Assistenza clienti premium",
+      "openSource": "Codice open-source e verificato",
+      "anonymousAccount": "Creazione account anonima",
+      "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso di 30 giorni"
     }
   },
@@ -77,13 +86,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Ottieni un anno completo di storage con il 80% di sconto ora!",
+    "title": "Ottieni un anno completo di storage con il 82% di sconto ora!",
     "description": "Internxt offre uno sconto esclusivo con privacy e sicurezza garantite.",
     "cta": "Scegli un piano"
   },
   "CtaSection1": {
     "title": "Il storage cloud più privato al mondo",
-    "description": "Approfitta del tuo sconto esclusivo del 80% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
+    "description": "Approfitta del tuo sconto esclusivo del 82% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
     "cta": "Trova il tuo piano"
   }
 }

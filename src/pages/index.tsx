@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { GetServerSidePropsContext } from 'next';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
@@ -12,7 +11,7 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
@@ -42,9 +41,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Special80Coupon,
+    couponCodeForLifetime: PromoCodeName.Special80Coupon,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -77,18 +78,20 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = individualCoupon?.name;
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      couponCodeForCheckout,
+      couponCodeForCheckout?.name,
     );
   };
 
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  console.log('individualCoupon', individualCoupon?.name);
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
@@ -106,7 +109,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         textContent={textContent.tableSection}
         decimalDiscount={{
           individuals: decimalDiscount,
-          lifetime: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
         lang={locale}
@@ -115,6 +118,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
+        popularPlanBySize="5TB"
       />
 
       <div className={`${marqueeBgColor} py-10`}>

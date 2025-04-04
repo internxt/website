@@ -1,7 +1,7 @@
 {
-  "mostPopular": "最受歡迎",
+  "mostPopular": "受欢迎 ",
   "mostPopularPlan": "最受歡迎的計劃",
-  "save": "節省高達",
+  "save": "節省",
   "valentines": "情人節特別優惠！",
   "onlyForNewClients": "僅適用於新訂閱者或免費計劃用戶",
   "redeemCode": "兌換代碼",
@@ -121,6 +121,14 @@
     "valentinesFeatures": {
       "title": "Internxt 的小禮物：",
       "gift": "抽獎活動：2 個 Swiss Peak x Internxt 背包"
+    },
+    "stPatricksFeatures": {
+      "title": "Internxt 的小禮物：",
+      "gift": "圣帕特里克主题用于Web应用"
+    },
+    "worldCloudSecurityDay": {
+      "title": "Internxt 禮物：",
+      "gift": "Internxt x Swiss Peak 背包抽獎"
     },
     "cheaperThan": {
       "lifetime": {

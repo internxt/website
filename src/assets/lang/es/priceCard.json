@@ -1,7 +1,7 @@
 {
-  "mostPopular": "Recomendado",
+  "mostPopular": "Popular",
   "mostPopularPlan": "Plan más popular",
-  "save": "Ahorra hasta ",
+  "save": "Ahorra ",
   "valentines": "¡Oferta especial de San Valentín!",
   "onlyForNewClients": "Sólo para usuarios nuevos o de plan gratuito",
   "discount": "% off",
@@ -122,6 +122,14 @@
     "valentinesFeatures": {
       "title": "Regalitos de Internxt:",
       "gift": "Sorteo 2 mochilas Swiss Peak x Internxt"
+    },
+    "stPatricksFeatures": {
+      "title": "Regalitos de Internxt:",
+      "gift": "Tema de San Patricio para Web App"
+    },
+    "worldCloudSecurityDay": {
+      "title": "Regalitos de Internxt:",
+      "gift": "Sorteo mochila Internxt x Swiss Peak"
     },
     "cheaperThan": {
       "lifetime": {

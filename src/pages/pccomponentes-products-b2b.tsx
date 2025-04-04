@@ -3,6 +3,7 @@ import router from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { SlidersComparsion } from '@/components/comparison/SlidersComparsion';
 import { GetServerSidePropsContext } from 'next';
+import { PromoCodeName } from '@/lib/types';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 
@@ -30,7 +31,10 @@ const PCComponentesProductsB2B = ({ metatagsDescriptions, lang, textContent }): 
 
             <button
               className="!w-full rounded-lg border-2 border-orange bg-white py-3 font-medium text-orange"
-              onClick={() => router.push('/es/cloud-object-storage/checkout')}
+              onClick={() => {
+                const couponQueryParam = `?couponCode=${PromoCodeName.PcCloudS3}`;
+                router.push(`/es/cloud-object-storage/checkout${couponQueryParam}`);
+              }}
             >
               {textContent.cardText.cta}
             </button>

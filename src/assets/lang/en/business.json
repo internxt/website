@@ -7,7 +7,7 @@
     ],
     "cta": "Select plan",
     "separator": "|",
-    "cta2": "Contact sales"
+    "cta2": "Contact us"
   },
   "SecureYourCompany": {
     "title": "Secure your company’s future with Internxt encrypted cloud storage",
@@ -185,7 +185,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contact sales",
+    "title": "Contact us",
     "description": "Fill out the contact form and the team will contact you shortly.",
     "form": {
       "name": "Full Name",

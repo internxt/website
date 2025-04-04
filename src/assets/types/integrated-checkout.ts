@@ -10,6 +10,7 @@ export interface IntegratedCheckoutText {
   productCard: ProductCard;
   oneTimePayment: string;
   error500: string;
+  invalidCoupon: string;
 }
 
 export interface AddressBilling {

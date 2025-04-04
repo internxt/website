@@ -157,11 +157,11 @@ export default function Footer({
         />
 
         {/* Footer content */}
-        <footer className="flex max-w-[896px] items-center justify-center">
+        <footer className="flex max-w-[1920px] items-center justify-center">
           {/* Desktop version */}
           <div className="hidden w-full flex-col items-center justify-center md:space-y-16 lg:flex">
             <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
                   <div
@@ -186,12 +186,12 @@ export default function Footer({
                       href="/antivirus"
                       target="_blank"
                       rel="noreferrer"
-                      className="flex flex-row items-center hover:text-primary"
+                      className="items-center hover:text-primary"
                     >
-                      <div className="flex flex-row">{textContent.FooterSection.sections.products.antivirus}</div>
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      {textContent.FooterSection.sections.products.antivirus}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
-                      </div>
+                      </span>
                     </Link>
 
                     <a
@@ -203,11 +203,11 @@ export default function Footer({
                       <div>{textContent.FooterSection.sections.products.send}</div>
                     </a>
 
-                    <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
+                    <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
-                      </div>
+                      </span>
                     </Link>
                     <Link
                       href="/business"
@@ -234,7 +234,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.company.title}</h3>
                   <div
@@ -294,7 +294,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
@@ -351,7 +351,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[180px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
@@ -410,14 +410,14 @@ export default function Footer({
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[220px] flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -445,7 +445,7 @@ export default function Footer({
                       href="/password-generator"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.passwordGenerator}
                     </Link>
@@ -454,7 +454,7 @@ export default function Footer({
                       href="/file-converter"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
@@ -462,12 +462,46 @@ export default function Footer({
                       href="/dark-web-monitor"
                       locale={lang}
                       passHref
-                      className="flex items-center hover:text-primary"
+                      className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      <div className="ml-2 flex h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
-                      </div>
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+                <div className="flex flex-shrink-0 flex-col space-y-3">
+                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
+                  <div
+                    className={`flex flex-col space-y-1.5 text-base ${
+                      darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
+                    }`}
+                  >
+                    <Link
+                      href="/private-cloud-storage-solutions"
+                      locale={lang}
+                      passHref
+                      className=" items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.privateCloud}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
+                    <Link
+                      href="/cloud-storage-backup-solutions"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudBakcup}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
                     </Link>
                   </div>
                 </div>
@@ -623,11 +657,11 @@ export default function Footer({
                         </div>
                       </a>
 
-                      <Link href="/vpn" locale={lang} passHref className="flex items-center hover:text-primary">
+                      <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
                       </Link>
 
-                      <Link href="/antivirus" locale={lang} passHref className="flex items-center hover:text-primary">
+                      <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.antivirus}
                       </Link>
                     </Disclosure.Panel>
@@ -839,7 +873,7 @@ export default function Footer({
                         href="/what-does-google-know-about-me"
                         locale={lang}
                         passHref
-                        className="flex items-center hover:text-primary"
+                        className="items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
                       </Link>

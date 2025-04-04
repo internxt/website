@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
-import { stripeService } from '@/components/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { FeatureSectionForSpecialOffer } from '@/components/specialoffer/FeatureSection';
@@ -79,6 +79,8 @@ const FreeUserPage = ({
         loadingCards={loadingCards}
         onBusinessPlansSelected={onBusinessPlansSelected}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />

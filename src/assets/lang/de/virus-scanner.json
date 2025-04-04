@@ -23,7 +23,7 @@
     "table": {
       "loading": "Lade...",
       "virusDetected": "Bei dieser Datei wurde ein Virus erkannt",
-      "noVirusDetected": "Kein Virus wurde bei dieser Datei erkannt",
+      "noVirusDetected": "Kein Virus erkannt",
       "detected": "Erkannt",
       "undetected": "Nicht erkannt",
       "unableToProcess": "Kann nicht verarbeitet werden",

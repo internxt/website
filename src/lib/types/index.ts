@@ -86,7 +86,7 @@ export enum PromoCodeName {
   Lifetime5TBDiscount = '5TB70OFF',
   Lifetime10TBDiscount = '10TB70OFF',
   lifetime70OFF = 'LIFETIME_70OFF',
-  Subscriptions75OFF = '75OFFSUBS',
+  Subscriptions75OFF = '75OFF4YOU',
   IndependenceDayItaly = 'HAPPY80',
   TierraDeHackers = 'tierradehackers',
   Lifetime82 = 'lifetime82',
@@ -119,6 +119,10 @@ export enum PromoCodeName {
   Brave = 'BRAVE85',
   SuperBowlCampaign = 'SUPERBOWL80',
   ValentinesCampaign = 'MYVALENTINE85',
+  PcCloudS3 = 'PCCLOUDS3',
+  StPatricksDay = 'STPADDYS80',
+  Special82 = 'AFFSPECIAL82',
+  PcComponentes5TB = 'PCMOVIL',
 }
 
 export interface PromoCodeProps {

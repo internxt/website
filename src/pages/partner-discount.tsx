@@ -8,7 +8,7 @@ import { getImage } from '@/lib/getImage';
 import Button from '@/components/shared/Button';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -40,8 +40,11 @@ const PartnerDiscount = ({
     loadingCards,
     currencyValue,
     coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SpringCoupon,
+    couponCode: PromoCodeName.Special82,
+    couponCodeForLifetime: PromoCodeName.Special82,
   });
 
   const cardsData = [
@@ -68,15 +71,21 @@ const PartnerDiscount = ({
   ];
 
   const locale = lang as string;
+
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
     stripeService.redirectToCheckout(
       priceId,
       currencyValue,
       'individual',
       isCheckoutForLifetime,
-      individualCoupon?.name,
+      couponCodeForCheckout?.name,
     );
   };
+
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
@@ -124,16 +133,19 @@ const PartnerDiscount = ({
         <PricingSectionWrapper
           textContent={langJson.PaymentSection}
           decimalDiscount={{
-            individuals: individualCoupon?.percentOff && 100 - individualCoupon?.percentOff,
+            individuals: decimalDiscount,
+            lifetime: decimalDiscountForLifetime,
           }}
           lang="en"
           products={products}
-          popularPlanBySize={'5TB'}
+          popularPlanBySize={'3TB'}
           loadingCards={loadingCards}
-          startIndividualPlansFromInterval={Interval.Year}
-          hidePlanSelectorAndSwitch
+          startIndividualPlansFromInterval={Interval.Lifetime}
+          hideBusinessCards
+          hideBusinessSelector
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
+          showPromo={false}
         />
       </div>
 

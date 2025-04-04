@@ -5,7 +5,7 @@ export const CLI_UPDATES_LINK = 'https://github.com/internxt/cli/releases';
 export const SIGNUP_DRIVE_WEB = 'https://drive.internxt.com/new';
 
 export const VPN_CHROME_WEB_STORE =
-  'https://chromewebstore.google.com/detail/internxt-vpn-free-and-enc/dpggmcodlahmljkhlmpgpdcffdaoccni?hl=en&authuser=0';
+  'https://chromewebstore.google.com/detail/internxt-vpn-free-encrypt/dpggmcodlahmljkhlmpgpdcffdaoccni?pli=1';
 
 export const INTERNXT_URL = 'https://internxt.com';
 export const COOKIE_DOMAIN = 'internxt.com';
@@ -17,16 +17,16 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/techradar-discount',
   '/stackcommerce',
   '/dealfuel',
-  '/temporary-email',
   '/locker',
   '/startpage',
   '/oystervpn',
   '/lifetime_special',
+  '/lifetime',
   '/pccomponentes-products',
   '/pccomponentes-products-b2b',
   '/pccomponentes-business',
+  '/pccomponentes-5tb',
   '/lifetime/celebration/[filename]',
-  '/pcloud-alternative',
   '/dealmirror',
   '/specialoffer/freeuser',
   '/affiliates/[filename]',
@@ -40,6 +40,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/lifetime/celebration/singlesday',
   '/elections',
   '/brave',
+  '/specialoffer',
 ];
 
 export const SNIGEL_BANNERS = {
@@ -51,7 +52,6 @@ export const PATHS_WITH_CUSTOM_SNIGEL_BANNERS = ['/temporary-email', '/password-
 
 export const INCLUDED_PATHS_FOR_SNIGEL = [
   '/temporary-email',
-  '/virus-scanner',
   '/password-generator',
   '/password-checker',
   '/byte-converter',

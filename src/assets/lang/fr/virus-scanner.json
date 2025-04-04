@@ -21,8 +21,8 @@
     },
     "table": {
       "loading": "Loading...",
-      "virusDetected": "Virus détecté pour ce fichier",
-      "noVirusDetected": "Aucun virus n'a été détecté pour ce fichier",
+      "virusDetected": "Virus détecté",
+      "noVirusDetected": "Aucun virus détecté",
       "detected": "Détecté",
       "undetected": "Non détecté",
       "unableToProcess": "Impossible de traiter",

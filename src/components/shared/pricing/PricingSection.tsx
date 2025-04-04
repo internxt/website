@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
-import { Interval, ProductsDataProps } from '@/components/services/stripe.service';
+import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
@@ -38,7 +38,7 @@ interface PriceTableProps {
   isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
-
+  showPromo?: boolean;
   decimalDiscount?: {
     subscriptions?: number;
     lifetime?: number;
@@ -79,6 +79,7 @@ export const PricingSection = ({
   darkMode,
   isBrave,
   hideFeatures,
+  showPromo = true,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -136,6 +137,8 @@ export const PricingSection = ({
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
             darkMode={darkMode}
+            isLifetimeOffer
+            isIndividualsOffer
           />
         )}
 
@@ -191,6 +194,7 @@ export const PricingSection = ({
                   lang={lang}
                   darkMode={darkMode}
                   isBrave={isBrave}
+                  showPromo={showPromo}
                 />
               ))
             : undefined}

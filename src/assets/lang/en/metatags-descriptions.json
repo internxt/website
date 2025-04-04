@@ -251,8 +251,8 @@
   },
   {
     "id": "vpn-extension",
-    "title": "Internxt Free and Secure VPN | Internxt",
-    "description": "Internxt free VPN Chrome Extension: secure browsing, encrypted Wi-Fi & privacy protection. Download our secure VPN to protect your data online."
+    "title": " Internxt - Encrypted and Private VPN ",
+    "description": "Internxt VPN offers secure browsing, encrypted Wi-Fi & privacy protection. Select your plan to start protecting your data online."
   },
   {
     "id": "file-converter",
@@ -388,5 +388,20 @@
     "id": "internxt-antivirus",
     "title": "Protect your devices from malware with Internxt Antivirus",
     "description": "Internxt Antivirus scans and removes viruses from your files. Protect your devices from malware and ensure complete security in the cloud."
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Private Cloud Storage Solutions",
+    "description": "Learn more about private cloud storage solutions and how Internxt protects your data with post-quantum encryption, antivirus, and VPN"
+  },
+  {
+    "id": "internxt-private-cloud-storage-solutions",
+    "title": "Internxt - Private Cloud Storage Solutions",
+    "description": "Learn more about private cloud storage solutions and how Internxt protects your data with post-quantum encryption, antivirus, and VPN"
+  },
+  {
+    "id": "internxt-cloud-storage-backup-solutions",
+    "title": "Internxt - Cloud Storage Backup Solutions ",
+    "description": "Internxt cloud storage backup solutions use redundancy and award-winning encryption that protects you and your business from data loss. "
   }
 ]

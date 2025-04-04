@@ -1,22 +1,22 @@
 {
   "HeroSection": {
-    "label": "Free VPN",
+    "label": "Internxt VPN",
     "title": {
       "line1": "Internxt's secure VPN",
       "line2": "protects you online"
     },
-    "description": "Surf the web in complete freedom and privacy with Internxt's free, unlimited & encrypted VPN.",
-    "cta": "Download VPN"
+    "description": "Surf the web in complete freedom and privacy with Internxt VPN.",
+    "cta": "Get Internxt"
   },
   "EncryptedVPNSection": {
     "title": "Internxt's encrypted VPN extension",
-    "subtitle": "Our free and secure VPN hides your IP address to keep your browsing experience private, secure, and unrestricted.",
-    "description": "We built this VPN in line with our mission of creating a more private internet, and with this extension, your connection will be encrypted and safe from network attacks and data leaks. You focus on safe surfing, and we’ll take care of the security.",
-    "cta": "Download VPN"
+    "subtitle": "Our VPN hides your IP address to keep your browsing experience private, secure, and unrestricted for up to 5 countries: France, Germany, Poland, Canada, and the UK.",
+    "description": "We built this VPN in line with our mission of creating a more private internet. By purchasing a premium Internxt plan, your connection will be encrypted and safe from network attacks and data leaks. You focus on safe surfing, and we’ll take care of the security.",
+    "cta": "Get Internxt"
   },
   "SecureVPNSection": {
     "title": "Why use a secure VPN",
-    "subtitle": "Unsecured internet connections, such as Public Wi-Fi, can expose your information to data leaks, hacks, or breaches.",
+    "subtitle": "Unsecured internet connections, such as Public Wi-Fi, can expose your information to data leaks, hacks, or breaches. Internxt’s VPN encrypts your connection for a safer, more private online experience.",
     "description": " Internxt’s free VPN encrypts your connection for a safer, more private online experience.",
     "cards": [
       {
@@ -39,7 +39,7 @@
   },
   "HowItWorksSection": {
     "title": "How it works",
-    "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
+    "subtitle": "Internxt’s VPN uses unlimited, fast speed, and secure servers to encrypt and transmit sensitive data. Mask your IP address and protect your information from third-party data collection.",
     "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
     "cards": [
       {
@@ -48,7 +48,7 @@
       },
       {
         "title": "Secure networks",
-        "description": "Enjoy secure access to private networks and connect to your work or home networks while maintaining data confidentiality."
+        "description": "Enjoy secure and access to private networks and connect to your work or home networks while maintaining data confidentiality."
       },
       {
         "title": "Enhanced anonymity",
@@ -59,15 +59,15 @@
   "WhenUseVPNSection": {
     "title": "When to use a VPN",
     "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
-    "description": "Our free VPN extension masks your IP address and protects your information from third-party data collection.",
-    "cta": "Download VPN",
+    "description": "Our VPN masks your IP address and protects your information from third-party data collection.",
+    "cta": "Get Internxt",
     "cards": [
       "Prevent targeted ads",
       "Anonymously create accounts",
       "Bypass annoying Geo-restrictions",
-      "Free VPN",
+      "Ultra fast unlimited VPN ",
+      "Connect to up to 5 countries",
       "Protect your privacy",
-      "No registration required",
       "Defend against network attacks",
       "No logs policy"
     ]
@@ -75,26 +75,27 @@
   "CtaSection": {
     "title": "Break free from online trackers",
     "description": "Hide your data for a secure browsing experience with Internxt VPN",
-    "cta": "Download VPN"
+    "cta": "Get Internxt"
   },
   "CtaSection2": {
     "title": "No more spying eyes",
     "description": "Encrypt your connection for total privacy with Internxt VPN",
-    "cta": "Download VPN"
+    "cta": "Try for free"
   },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "What is a VPN for Chrome extension?",
+        "question": "What countries are available?",
         "answer": [
-          "A VPN or virtual private network ensures secure private browsing on the internet. A VPN is designed to create an encrypted channel for private data and lets you protect your online identity on higher-risk connections such as public Wi-Fi hotspots."
+          "With Internxt VPN, you can connect to France with a free account. ",
+          "For paid plans, the VPN is unlimited with ultra fast speeds. France is available with the Essential plan. Premium plans include France, Germany, Poland, Canada. Ultimate plans can connect to France, Germany, Poland, Canada and the UK."
         ]
       },
       {
-        "question": "How to install the VPN extension?",
+        "question": "How do I get the Internxt VPN?",
         "answer": [
-          "To install Internxt’s VPN, click the download VPN button on this page. Once downloaded, you can launch the VPN and choose your preferred VPN server."
+          "You can install Internxt’s VPN via the Chrome store for free, and connect to 1 country (FR). To access the ultra fast speed and unlimited VPN and connect to more countries, you can choose from our new subscription or lifetime plans."
         ]
       },
       {

@@ -8,7 +8,7 @@ import { checkout } from '@/lib/auth';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import InfoSection from '@/components/shared/sections/InfoSection';
-import { Interval, stripeService } from '@/components/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import CtaSection from '@/components/affiliates/CtaSection';
@@ -130,6 +130,8 @@ export default function BravePage({
         isBrave
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
+        hideFreeCard
+        showPromo={false}
       />
 
       <CtaSection textContent={textContent.CtaSection2} url="#priceTable" />

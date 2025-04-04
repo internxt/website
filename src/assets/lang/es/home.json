@@ -79,9 +79,10 @@
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Ahorra un 80%",
-      "title": "¡Descubre los nuevos planes!",
-      "cta": "Comprar",
+      "saveLabel": "Oferta 80%",
+      "title": "Ecosistema seguro en la nube",
+      "subtitle": "Nuevos planes disponibles!",
+      "cta": "Consigue tu plan",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"
@@ -142,7 +143,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "ChooseStorageSizeSection": {
@@ -261,10 +262,10 @@
         ]
       },
       {
-        "question": "¿Es Internxt una solución de almacenamiento en la nube sostenible y ecológica?",
+        "question": "¿Tendré acceso a todos los servicios de Internxt?",
         "answer": [
-          "Sí, Internxt está comprometida con la computación en la nube ecológica, ofreciendo soluciones de almacenamiento ecoamigables para apoyar un futuro más limpio y sostenible. Nuestros centros de datos funcionan con un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los desechos electrónicos.",
-          "Nuestros esfuerzos contribuyen a un objetivo de neutralidad climática para 2050. Más información"
+          "Sí, una suscripción de pago a Internxt o una membresía vitalicia te da acceso a nuestra suite de privacidad integral, que incluye Internxt Mail, Meet, VPN, Drive, Send, Antivirus y más.",
+          "Un plan gratuito de Internxt solo te dará acceso a Internxt Drive."
         ]
       },
       {

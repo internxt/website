@@ -1,6 +1,7 @@
 import { PromoCodeName } from '@/lib/types';
 import {
   ArrowsClockwise,
+  Gift,
   CodeBlock,
   Database,
   Envelope,
@@ -29,6 +30,7 @@ export interface PriceCardProps {
   priceId?: string;
   coupon?: PromoCodeName;
   percentOff?: number;
+  isCloudwards?: boolean;
 }
 
 export default function PriceCard({
@@ -42,6 +44,7 @@ export default function PriceCard({
   coupon,
   contentText,
   percentOff,
+  isCloudwards,
   onButtonClicked,
 }: Readonly<PriceCardProps>) {
   const priceBeforeDiscount = priceBefore ? Number(priceBefore).toFixed(2).replace('.00', '') : undefined;
@@ -133,6 +136,15 @@ export default function PriceCard({
           <p className="">{contentText.cta}</p>
         </button>
       </div>
+      {!isCloudwards ? (
+        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
+          <span className="font-bold text-white">{contentText.worldCloudSecurityDay.title}</span>
+          <div className="flex items-center space-x-2">
+            <Gift className="h-6 w-6 text-white" weight="fill" />
+            <span className="text-white">{contentText.worldCloudSecurityDay.gift}</span>
+          </div>
+        </div>
+      ) : null}
       <div className="featureList flex max-h-[500px] min-h-[500px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (

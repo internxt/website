@@ -1,7 +1,14 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% OFF", "line2": "i nostri piani annuali" },
-    "lifetimeTitle": { "line1": "Ottenete un piano Internxt ", "blueText": " a vita", "line2": "!" },
+    "title": {
+      "line1": "80% OFF",
+      "line2": "i nostri piani annuali"
+    },
+    "lifetimeTitle": {
+      "line1": "Ottenete un piano Internxt ",
+      "blueText": " a vita",
+      "line2": "!"
+    },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
       "secondFeed": "Pagamento sicuro al 100%",
@@ -36,17 +43,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia 80%",
-      "title": "Passa alla privacy questa primavera!",
-      "subtitle": "Nuovi piani con Antivirus premium e VPN",
-      "cta": "Richiedi l'offerta",
-      "cta2": "Ottieni l'85% di sconto",
+      "label": "Offerta 80%",
+      "title": "Giornata Mondiale della Sicurezza Cloud",
+      "subtitle": "Internxt Drive, Antivirus e VPN",
+      "cta": "Ottieni il tuo piano!",
+      "cta2": "Ricevi uno sconto dell'80%",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*Offerta valida per account gratuiti o nuovi clienti",
-      "titleMbl1": "Nuovi",
-      "titleMbl2": "piani tariffari",
-      "titleMbl3": "Proteggi ciò che ami, per sempre!",
-      "ctaMbl": "Acquista un piano"
+      "lastCta": "*Offerta valida per account gratuiti o nuovi utenti",
+      "titleMbl": "Nuovi piani a vita!",
+      "descriptionMbl": "Archivio privato, Antivirus e VPN",
+      "ctaMbl": "Acquista il tuo piano"
     },
     "save": "Risparmia fino al",
     "planTitles": {
@@ -88,7 +94,6 @@
   },
   "FaqSection": {
     "title": "Domande? Abbiamo le risposte",
-
     "faq": [
       {
         "question": "Internxt può accedere ai miei file?",

@@ -1,14 +1,13 @@
 import { useState } from 'react';
-import { Switch, Transition } from '@headlessui/react';
+import { Transition } from '@headlessui/react';
 
 import Layout from '@/components/layout/Layout';
-import { Interval } from '@/components/services/stripe.service';
+import { Interval } from '@/services/stripe.service';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import PriceCard from '@/components/prices/PriceCard';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { SwitchButtonOptions } from '@/components/shared/pricing/components/PlanSelector';
-import { GetServerSidePropsContext } from 'next';
 
 const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 
@@ -101,23 +100,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
           <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-4">
             {productsToDisplay && (
               <>
-                <PriceCard
-                  planType="individual"
-                  key={productsToDisplay.storage}
-                  storage={productsToDisplay.storage}
-                  price={coupon ? Number(priceForSubscriptions(productsToDisplay)) : productsToDisplay.price}
-                  billingFrequency={billingFrequency}
-                  popular={productsToDisplay.storage === '5TB'}
-                  cta={['checkout', 'price_1OQ3LKFAOdcgaBMQMK2UHHRM']}
-                  priceBefore={productsToDisplay.price}
-                  lang={lang}
-                  currency={currency}
-                  coupon={coupon ?? undefined}
-                  currencyValue={currencyValue}
-                  isIframe={true}
-                  isPcComponentes
-                  index={0}
-                />
                 <PriceCard
                   planType="individual"
                   key={productsToDisplay.storage}

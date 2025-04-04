@@ -7,14 +7,16 @@
     "preinstall": "node ./scripts/use-yarn.js",
     "find:unused": "next-unused",
     "prebuild": "node ./scripts/check-envs.js",
-    "dev": "yarn && next dev -p 3001",
+    "dev": "next dev -p 3001",
     "dev:tw": "TAILWIND_MODE=watch tailwindcss -o src/tailwind.css --watch",
     "build": "node ./scripts/check-envs.js && next build",
     "start": "next start",
     "prod": "next export",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run --browser chrome",
-    "lint": "eslint --quiet './**/*.{js,ts,tsx}'"
+    "lint": "eslint --quiet './**/*.{js,ts,tsx}'",
+    "add:npmrc": "echo \"registry=https://registry.yarnpkg.com/\" >> .npmrc && echo \"@internxt:registry=https://npm.pkg.github.com\" >> .npmrc && echo \"//npm.pkg.github.com/:_authToken=$NPM_TOKEN\" >> .npmrc && echo \"always-auth=true\" >> .npmrc",
+    "vercel:install": "yarn run add:npmrc && yarn install"
   },
   "dependencies": {
     "@cemalgnlts/mailjs": "^3.0.1",
@@ -23,6 +25,7 @@
     "@emotion/styled": "^11.11.5",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
+    "@internxt/sdk": "^1.9.11",
     "@mui/material": "^5.15.21",
     "@phosphor-icons/react": "^2.1.5",
     "@sendgrid/mail": "^8.1.0",

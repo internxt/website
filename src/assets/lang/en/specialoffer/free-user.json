@@ -31,16 +31,16 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation"
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {

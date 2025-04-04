@@ -16,9 +16,9 @@
     "guarantee": "Garantía de devolución de 30 días"
   },
   "featuresBanner": {
-    "label": "¡Ahorra un 85%!",
+    "label": "¡Ahorra un 80%!",
     "title": "Oferta para la semana de Privacidad de Datos.",
-    "subtitle": "85% en TODOS los planes lifetime",
+    "subtitle": "80% en TODOS los planes lifetime",
     "cta": "Consigue el tuyo",
     "guarantee": "Garantía de devolución de 30 días",
     "lastCta": "*La oferta es para cuentas gratuitas o nuevos clientes",
@@ -92,7 +92,7 @@
   },
   "GeneralBanner": {
     "title": "Antes de que te vayas...",
-    "description": "Obtén un 75% de descuento en nuestro plan de 2TB durante un año.",
+    "description": "Obtén un 80% de descuento en nuestro plan de 2TB durante un año.",
     "cta": "Sí, quiero la oferta",
     "ctaCancel": "No, gracias"
   },
@@ -108,9 +108,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de descuento en todos los nuevos planes!  ",
-      "normalText": "¡Hola Primavera!   ",
-      "cta": "Consigue tu plan!"
+      "boldText": " 80% de descuento!",
+      "normalText": "Día Mundial de la Seguridad en la Nube   ",
+      "cta": "Compra tu plan!"
     }
   },
   "lifetimeBanner": {
@@ -122,11 +122,11 @@
   "BeforeCloseBanner": {
     "title": {
       "normal1": "¡Oferta especial del",
-      "blue": "75% DE DESCUENTO ",
+      "blue": "80% DE DESCUENTO ",
       "normal2": "en todos los planes!"
     },
     "subtitle": "Hay una oferta exclusiva esperándote.",
-    "cta": "75% DE DESCUENTO",
-    "guarantee": "Garantía de devolución de dinero de 30 días"
+    "cta": "80% DE DESCUENTO",
+    "guarantee": "Garantía de devolución de 30 días"
   }
 }

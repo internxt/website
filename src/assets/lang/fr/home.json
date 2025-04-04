@@ -79,9 +79,10 @@
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Économisez 80%",
-      "title": "Nouveaux plans tarifaires disponibles maintenant !",
-      "cta": "Profitez de l'offre !",
+      "saveLabel": "Offre 80%",
+      "title": "Écosystème sécurisé dans le cloud",
+      "subtitle": "Nouveaux plans disponibles !",
+      "cta": "Obtenez votre plan",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "youKnow": "Saviez-vous cela?"
@@ -260,49 +261,49 @@
         ]
       },
       {
-        "question": "Internxt est-il une solution de stockage cloud durable et respectueuse de l'environnement ?",
+        "question": "Aurai-je accès à tous les services Internxt?",
         "answer": [
-          "Oui, Internxt s'engage dans l'informatique en nuage verte, offrant des solutions de stockage écologiques pour soutenir un avenir plus propre et durable. Nos centres de données sont alimentés à 92 % par des énergies renouvelables et sont conçus pour minimiser les émissions de carbone, la consommation de ressources et les déchets électroniques.",
-          "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. En savoir plus"
+          "Oui, un abonnement Internxt payant ou à vie vous donne accès à notre suite de confidentialité tout-en-un, comprenant Internxt Mail, Meet, VPN, Drive, Send, Antivirus et bien plus encore.",
+          "L'abonnement Internxt Gratuit vous donne uniquement accès à Internxt Drive."
         ]
       },
       {
-        "question": "Internxt stocke-t-il mon mot de passe ?",
+        "question": "Internxt stocke-t-il mon mot de passe?",
         "answer": [
           "Non. En tant que tel, Internxt ne peut pas stocker votre mot de passe.",
           "Votre mot de passe Internxt est unique pour vous et sert à chiffrer et déchiffrer vos données Internxt. Mais si vous souhaitez changer votre mot de passe, vous pouvez le faire depuis notre application."
         ]
       },
       {
-        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
+        "question": "Puis-je activer l'authentification à deux facteurs?",
         "answer": [
           "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web d'Internxt.",
           "Vous pouvez également utiliser Authy ou d'autres outils 2FA pour générer un code 2FA personnel avec Internxt."
         ]
       },
       {
-        "question": "Comment créer un compte Internxt ?",
+        "question": "Comment créer un compte Internxt?",
         "answer": [
           "Pour créer un compte Internxt gratuit, cliquez simplement sur le meilleur plan ci-dessus et suivez les instructions.",
           "Ou rendez-vous sur notre page d'accueil et cliquez sur 'Commencer'. Vous obtiendrez instantanément 1 Go de stockage gratuit à vie avec un abonnement gratuit à Internxt. Vous pouvez utiliser votre abonnement gratuit pour accéder à tous nos services. Pour vous inscrire, entrez simplement votre nom et votre adresse e-mail. Aucune vérification d'identité ni d'e-mail n'est requise pour commencer à utiliser les services d'Internxt."
         ]
       },
       {
-        "question": "Puis-je payer avec une carte de crédit, PayPal ou une cryptomonnaie ?",
+        "question": "Puis-je payer avec une carte de crédit, PayPal ou une cryptomonnaie?",
         "answer": [
           "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Bancontact.",
           "Sur demande, nous acceptons également les cryptomonnaies et les prélèvements SEPA. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un e-mail à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "question": "Quelle est la politique de remboursement d'Internxt?",
         "answer": [
           "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
           "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
         ]
       },
       {
-        "question": "Comment puis-je annuler mon abonnement ?",
+        "question": "Comment puis-je annuler mon abonnement?",
         "answer": [
           "Annuler votre abonnement est simple. Ouvrez l'application Internxt, allez dans les paramètres et sélectionnez 'Annuler l'abonnement'. Cette action mettra fin à votre abonnement immédiatement, et votre compte reviendra à un plan gratuit.",
           "Veuillez noter que tout temps restant sur votre abonnement payant actuel ne sera ni remboursé ni reporté. Par exemple, si vous annulez un plan d'un an avec quatre mois restants, vous perdrez l'accès à ces quatre mois restants.",
@@ -310,25 +311,25 @@
         ]
       },
       {
-        "question": "Comment contacter le support ?",
+        "question": "Comment contacter le support?",
         "answer": [
           "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe Customer Success via le chat en direct ou en envoyant un e-mail à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "Internxt propose-t-il des plans à vie ?",
+        "question": "Internxt propose-t-il des plans à vie?",
         "answer": [
           "Nous proposons des plans à vie que vous pouvez acheter sur notre site Web. Ceux-ci vous accordent un accès à vie à nos plans, avec jusqu'à 10 To de stockage pour un paiement unique."
         ]
       },
       {
-        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie?",
         "answer": [
           "Oui, vous pouvez ajouter autant de stockage que vous le souhaitez à votre abonnement à vie Internxt. Les plans à vie Internxt sont cumulables. Achetez-les simplement avec la même adresse e-mail et contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) pour que nous puissions les cumuler sur le même compte pour vous."
         ]
       },
       {
-        "question": "Internxt est-il une solution de stockage cloud durable et écologique ?",
+        "question": "Internxt est-il une solution de stockage cloud durable et écologique?",
         "answer": [
           "Oui, Internxt s'engage pour un cloud computing respectueux de l'environnement, offrant des solutions de stockage qui soutiennent un avenir plus propre et plus durable. Nos centres de données fonctionnent avec 92 % d'énergie renouvelable et sont conçus pour minimiser les émissions de CO2, la consommation de ressources et les déchets électroniques.",
           "Nos efforts contribuent à un objectif de neutralité climatique d'ici 2050. [En savoir plus](https://internxt.com/es/green-cloud-computing)"
@@ -365,7 +366,10 @@
     "cta": "Choisissez votre plan"
   },
   "GetStartedSection": {
-    "title": { "line1": "Commencez et", "line2": "obtenez 1 Go gratuitement" },
+    "title": {
+      "line1": "Commencez et",
+      "line2": "obtenez 1 Go gratuitement"
+    },
     "subtitle": {
       "line1": "Nos clients sont très satisfaits d'Internxt Drive, mais",
       "line2": "ils sont plus heureux de savoir qu'ils sont dans une totale confidentialité."
