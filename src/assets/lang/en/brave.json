@@ -1,10 +1,37 @@
 {
   "HeroSection": {
-    "title": "Secure, encrypted cloud storage",
+    "title": "Secure, private cloud storage",
     "subtitle": "that protects your right to privacy",
     "description": "Internxt’s open-source, web3 cloud storage protects your privacy with zero-knowledge post-quantum encryption.",
-    "info": "Claim your exclusive 85% discount on all Internxt annual and lifetime plans!",
+    "info": "Claim your <strong>BRAVE85</strong> discount on all Internxt annual and lifetime plans thanks to Brave!",
     "cta": "Get 85% OFF"
+  },
+  "MostSecureSection": {
+    "title": "The most secure cloud storage for your files, photos, and more",
+    "description": "Internxt Drive is an open-source, end-to-end encrypted cloud storage solution to store, back up, and share your files in total privacy. Internxt Drive offers award-winning encryption and control over your data. ",
+    "cta": "Claim deal"
+  },
+  "ScrollableSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "elements": [
+      {
+        "title": "Unmatched privacy",
+        "description": "Protecting your privacy is our top priority; we never store passwords or personal data. Your files are encrypted in transit and at rest, giving you complete control over your information. "
+      },
+      {
+        "title": "Next-generation security",
+        "description": ""
+      },
+      {
+        "title": "Open-source and transparent",
+        "description": ""
+      },
+      {
+        "title": "Independently verified",
+        "description": ""
+      }
+    ]
   },
   "PriceTable": {
     "header": "Unlock 75% OFF",
@@ -101,12 +128,12 @@
     ]
   },
   "CtaSection": {
-    "title": "Say goodbye to Google Drive, Microsoft OneDrive, and Dropbox once and for all. De-Google your life.",
-    "cta": "Choose your plan"
+    "title": "Say goodbye to Google Drive, Microsoft OneDrive, and Dropbox once and for all. De-Google your life."
   },
   "CtaSection2": {
     "title": "Get the world’s most secure cloud storage",
-    "cta": "Claim deal"
+    "description": "Internxt’s zero-knowledge encryption gives you total control of your privacy.",
+    "cta": "Choose your plan"
   },
   "tableSection": {
     "planTitles": {

@@ -1,16 +1,23 @@
 export interface BraveText {
   HeroSection: HeroSection;
+  MostSecureSection: CtaSection2;
+  ScrollableSection: ScrollableSection;
   PriceTable: PriceTable;
-  FeatureSection: FeatureSection;
+  FeatureSection: CtaSection2;
   SecureCloudSection: SecureCloudSection;
   CtaSection: CtaSection;
-  CtaSection2: CtaSection;
+  CtaSection2: CtaSection2;
   tableSection: TableSection;
   FaqSection: FAQSection;
 }
 
 export interface CtaSection {
   title: string;
+}
+
+export interface CtaSection2 {
+  title: string;
+  description: string;
   cta: string;
 }
 
@@ -24,18 +31,11 @@ export interface FAQ {
   answer: string[];
 }
 
-export interface FeatureSection {
-  title: string;
-  description: string;
-  cta: string;
-}
-
 export interface HeroSection {
   title: string;
   subtitle: string;
   description: string;
   info: string;
-  infoHighlight: string;
   cta: string;
 }
 
@@ -57,6 +57,8 @@ export interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }
 
 export interface PriceCard {
@@ -66,15 +68,21 @@ export interface PriceCard {
   features: { [key: string]: string[] };
 }
 
+export interface ScrollableSection {
+  title: string;
+  description: string;
+  elements: Element[];
+}
+
+export interface Element {
+  title: string;
+  description: string;
+}
+
 export interface SecureCloudSection {
   title: string;
   description: string;
-  cards: Card[];
-}
-
-export interface Card {
-  title: string;
-  description: string;
+  cards: Element[];
 }
 
 export interface TableSection {
@@ -96,10 +104,8 @@ export interface TableSectionBillingFrequency {
 }
 
 export interface FreePlanCard {
-  getStarted: string;
-  enjoy10gb: string;
-  upTo: string;
-  freeForever: string;
+  eyeBrow: string;
+  description: string;
   cta: string;
 }
 
