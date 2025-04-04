@@ -25,6 +25,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/pccomponentes-products',
   '/pccomponentes-products-b2b',
   '/pccomponentes-business',
+  '/pccomponentes-5tb',
   '/lifetime/celebration/[filename]',
   '/dealmirror',
   '/specialoffer/freeuser',

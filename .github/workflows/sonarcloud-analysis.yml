@@ -29,6 +29,7 @@ jobs:
       # Generate a .npmrc file with the NPM_TOKEN
       - run: echo '${{ secrets.CYPRESS_ENV }}' > cypress.env.json
       - run: echo '${{ secrets.ENV_LOCAL }}' > .env.local
+
       # Install dependencies, build and run tests
       - name: Test and coverage
         uses: cypress-io/github-action@v6

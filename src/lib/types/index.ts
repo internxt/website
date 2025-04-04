@@ -123,6 +123,7 @@ export enum PromoCodeName {
   StPatricksDay = 'STPADDYS80',
   Special82 = 'AFFSPECIAL82',
   Identity82 = 'IDENTITY82'
+  PcComponentes5TB = 'PCMOVIL',
 }
 
 export interface PromoCodeProps {
