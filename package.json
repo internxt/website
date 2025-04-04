@@ -39,7 +39,7 @@
     "clamscan": "^2.0.1",
     "cookies": "^0.8.0",
     "dgram": "^1.0.1",
-    "dompurify": "^3.2.0",
+    "dompurify": "^3.2.4",
     "dotenv": "^8.2.0",
     "eslint-config-next": "13",
     "hamburger-react": "^2.4.1",
