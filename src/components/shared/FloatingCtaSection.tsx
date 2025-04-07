@@ -24,10 +24,12 @@ const FloatingCtaSection = ({
         backgroundImage: `url(${bgImage ? getImage(bgImage) : defaultBgImage})`,
         borderRadius: '32px',
       }}
-      className="mx-80 hidden overflow-hidden bg-primary bg-cover py-14 lg:flex"
+      className=" mx-6 overflow-hidden bg-primary bg-cover py-14 xl:mx-80"
     >
-      <div className="flex flex-row items-center justify-center text-center">
-        <div className={`flex ${maxWidth} mr-20 flex-col items-center space-y-4 text-center text-white`}>
+      <div className="flex flex-col items-center justify-center space-y-4 text-center xl:flex-row xl:space-y-0">
+        <div
+          className={`flex ${maxWidth} flex-col items-center space-y-4 px-12 text-center text-white xl:mr-20 xl:px-0`}
+        >
           <p className="text-3xl font-semibold xl:text-4xl">{textContent.title}</p>
           {customDescription}
         </div>
@@ -35,7 +37,7 @@ const FloatingCtaSection = ({
           <Link
             href={url}
             target={target}
-            className={`mr-10 flex rounded-lg px-5 py-3 text-lg font-medium ${
+            className={`flex rounded-lg px-5 py-3 text-lg font-medium xl:mr-10 ${
               bgImage && bgImage !== defaultBgImage
                 ? 'bg-primary text-xl text-white hover:bg-primary-dark'
                 : 'bg-white text-primary hover:bg-blue-10'

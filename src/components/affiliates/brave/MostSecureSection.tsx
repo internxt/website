@@ -27,7 +27,6 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({ textContent }) =>
             <h1 className="text-3xl font-semibold text-gray-100 xl:text-5xl">{textContent.title}</h1>
             <h2 className="font-regular text-xl text-gray-80 xl:text-xl">{textContent.description}</h2>
           </div>
-          <Button onClick={redirectToPricingTable} text={textContent.cta} />
         </div>
       </HeroSectionSafeArea>
     </section>
