@@ -16,7 +16,7 @@ export const HomePageBannerForMobile = () => {
       className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
     >
       <div className="flex flex-col items-center justify-center gap-4 pt-5">
-        <p className="flex w-max rounded-md border-[#0066FF33] bg-white px-2 py-1 text-sm  font-bold text-primary">
+        <p className="flex w-max rounded-md border-blue-20 bg-white px-2 py-1 text-sm  font-bold text-primary">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
         <p className="px-5 text-center text-4xl font-bold text-white">

@@ -23,11 +23,11 @@ export const PriceBannerForCampaigns = ({
       >
         <div className=" flex h-[400px] w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
           <div className="flex min-h-[400px] min-w-[600px]  max-w-[800px]  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
-            <div className="mt-14 flex w-max rounded-xl border-[#0066FF33] bg-white px-2 py-4 sm:rounded-2xl sm:border-2 sm:px-4 sm:py-2">
+            <div className="mt-14 flex w-max rounded-xl border-blue-20 bg-white px-2 py-4 sm:rounded-2xl sm:border-2 sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-primary sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
             <div className="flex w-full flex-col pt-4 ">
-              <p className=" flex min-h-[42px] pb-2 max-w-[600px] items-center text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-4xl">
+              <p className=" flex min-h-[42px] max-w-[600px] items-center pb-2 text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-4xl">
                 {textContent.title}
               </p>
               <p className="whitespace-nowrap text-lg font-medium text-white sm:text-lg md:text-lg lg:text-lg">
@@ -48,7 +48,7 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap pt-4 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex pl-24 h-[400px] w-[600px] items-center overflow-hidden">
+          <div className="relative flex h-[400px] w-[600px] items-center overflow-hidden pl-24">
             <Image
               src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
               width={400}
@@ -61,20 +61,18 @@ export const PriceBannerForCampaigns = ({
 
       {/* Mobile View */}
       <div className={`${styles.linearGradient} relative z-10 flex w-screen  flex-col justify-between lg:hidden`}>
-
-
         <div className="flex w-full flex-col items-center space-y-5 px-2 py-6 text-center">
-
-          <div className="flex w-max rounded-md border-[#0066FF33] bg-white px-2 py-1">
+          <div className="flex w-max rounded-md border-blue-20 bg-white px-2 py-1">
             <p className="text-sm font-medium text-primary">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col px-4 text-gray-100">
-            <p className="text-4xl font-bold text-white" >{textContent.titleMbl}</p>
+            <p className="text-4xl font-bold text-white">{textContent.titleMbl}</p>
           </div>
           <div className="min-h-auto flex flex-col items-center ">
-            <p className="font-regular break-words text-center text-lg text-white font-bold">{textContent.subtitleMbl}</p>
+            <p className="font-regular break-words text-center text-lg font-bold text-white">
+              {textContent.subtitleMbl}
+            </p>
             <p className="font-regular break-words text-center text-lg text-white ">{textContent.descriptionMbl}</p>
-
           </div>
 
           <div className="flex flex-col items-center">
@@ -91,7 +89,7 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="relative flex h-auto w-full flex-col xl:hidden items-center px-20 pb-10">
+        <div className="relative flex h-auto w-full flex-col items-center px-20 pb-10 xl:hidden">
           <Image
             src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
             width={425}
