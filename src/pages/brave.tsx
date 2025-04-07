@@ -12,6 +12,7 @@ import CtaSection from '@/components/shared/CtaSection';
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
 import HeroSection from '@/components/affiliates/brave/HeroSection';
+import FloatingCtaSection from '../components/shared/FloatingCtaSection';
 
 interface BravePageProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -60,7 +61,7 @@ export default function BravePage({
 
       <MostSecureSection textContent={textContent.MostSecureSection} />
 
-      <CtaSection textContent={textContent.CtaSection} maxWidth=" w-[400px] xl:w-[860px]" />
+      <FloatingCtaSection textContent={textContent.CtaSection} maxWidth=" w-[400px] xl:w-[860px]" url="#priceTable" />
 
       <ScrollableSection textContent={textContent.ScrollableSection} />
 

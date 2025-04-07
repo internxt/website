@@ -12,6 +12,7 @@ export interface BraveText {
 
 export interface CtaSection {
   title: string;
+  cta: string;
 }
 
 export interface CtaSection2 {
