@@ -82,12 +82,12 @@ export default function HeroSection({ textContent }: HeroSectionBraveProps): JSX
     <section className={`${styles.inverseLinearGradient} overflow-hidden`}>
       <div className=" relative mx-4 pb-12 pt-24 lg:px-10 lg:pt-0">
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
-          <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
+          <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:pt-20 lg:text-left">
             <div className="flex flex-col space-y-4">
-              <h1 className="text-4xl font-bold text-white xl:text-6xl">{textContent.title}</h1>
-              <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.subtitle}</h2>
+              <h1 className="text-4xl font-bold text-white xl:text-5xl">{textContent.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{textContent.subtitle}</h2>
             </div>
-            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-4 xl:items-center">
+            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
               <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
               <p className="text-md font-regular text-white" dangerouslySetInnerHTML={{ __html: textContent.info }}></p>
             </div>

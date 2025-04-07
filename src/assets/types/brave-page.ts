@@ -4,7 +4,6 @@ export interface BraveText {
   ScrollableSection: ScrollableSection;
   PriceTable: PriceTable;
   FeatureSection: CtaSection2;
-  SecureCloudSection: SecureCloudSection;
   CtaSection: CtaSection;
   CtaSection2: CtaSection2;
   tableSection: TableSection;
@@ -77,12 +76,6 @@ export interface ScrollableSection {
 export interface Element {
   title: string;
   description: string;
-}
-
-export interface SecureCloudSection {
-  title: string;
-  description: string;
-  cards: Element[];
 }
 
 export interface TableSection {
