@@ -137,8 +137,6 @@ export const PricingSection = ({
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
             darkMode={darkMode}
-            isLifetimeOffer
-            isIndividualsOffer
           />
         )}
 

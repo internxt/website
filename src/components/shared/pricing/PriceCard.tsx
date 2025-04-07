@@ -1,6 +1,5 @@
 import {
   ArrowsClockwise,
-  Gift,
   CodeBlock,
   Database,
   Envelope,

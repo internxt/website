@@ -39,7 +39,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.annually}
-      {/* {isIndividualsOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />} */}
+      {isIndividualsOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -53,7 +53,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.lifetime}
-      {/* {isLifetimeOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />} */}
+      {isLifetimeOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
     <button
       type="button"
@@ -67,7 +67,7 @@ export const PlanSelector = ({
       }`}
     >
       {textContent.billingFrequency.business}
-      {/* {isBusinessOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />} */}
+      {isBusinessOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
   </div>
 );
