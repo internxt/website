@@ -24,7 +24,7 @@ const FloatingCtaSection = ({
         backgroundImage: `url(${bgImage ? getImage(bgImage) : defaultBgImage})`,
         borderRadius: '32px',
       }}
-      className="mx-80 overflow-hidden bg-primary bg-cover py-14"
+      className="mx-80 hidden overflow-hidden bg-primary bg-cover py-14 lg:flex"
     >
       <div className="flex flex-row items-center justify-center text-center">
         <div className={`flex ${maxWidth} mr-20 flex-col items-center space-y-4 text-center text-white`}>
