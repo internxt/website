@@ -37,8 +37,8 @@ export const HomePageBannerForMobile = () => {
         </div>
         <Image
           src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
-          width={350}
-          height={300}
+          width={450}
+          height={400}
           quality={100}
           alt="World Secure Day"
           objectFit="contain"
