@@ -80,7 +80,7 @@ export default function HeroSection({ textContent }: HeroSectionBraveProps): JSX
 
   return (
     <section className={`${styles.inverseLinearGradient} overflow-hidden`}>
-      <div className=" relative mx-4 pb-12 pt-24 lg:px-10 lg:pt-0">
+      <div className=" relative mx-4 pb-12 pt-36 lg:px-10 lg:pt-0">
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
           <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:pt-20 lg:text-left">
             <div className="flex flex-col space-y-4">
