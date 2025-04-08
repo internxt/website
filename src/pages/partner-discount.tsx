@@ -145,7 +145,7 @@ const PartnerDiscount = ({
           hideBusinessSelector
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          showPromo={false}
+          showPromo={true}
         />
       </div>
 
