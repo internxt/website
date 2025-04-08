@@ -61,23 +61,23 @@ const PrivateCloudStorageSolutions = ({
   ];
   const cardsData: FeatureCard[] = [
     {
-      title: textContent.FeatureSection.cards.element1.title,
-      description: textContent.FeatureSection.cards.element1.description,
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
       image: '/images/GDPR_cloud_storage/internxt_increased_privacy_for_data.webp',
     },
     {
-      title: textContent.FeatureSection.cards.element2.title,
-      description: textContent.FeatureSection.cards.element2.description,
+      title: textContent.FeatureSection.cards.element1.title,
+      description: textContent.FeatureSection.cards.element1.description,
       image: '/images/GDPR_cloud_storage/internxt_encryption.webp',
-    },
-    {
-      title: textContent.FeatureSection.cards.element4.title,
-      description: textContent.FeatureSection.cards.element4.description,
-      image: '/images/GDPR_cloud_storage/internxt_recover_your_files.webp',
     },
     {
       title: textContent.FeatureSection.cards.element3.title,
       description: textContent.FeatureSection.cards.element3.description,
+      image: '/images/GDPR_cloud_storage/internxt_recover_your_files.webp',
+    },
+    {
+      title: textContent.FeatureSection.cards.element4.title,
+      description: textContent.FeatureSection.cards.element4.description,
       image: '/images/GDPR_cloud_storage/internxt_data_minimization.webp',
     },
   ];
@@ -123,9 +123,9 @@ const PrivateCloudStorageSolutions = ({
         />
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
         <CtaSection
-          textContent={textContent.CtaSection2}
+          textContent={textContent.CtaSection3}
           url={CTA_URL}
-          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
+          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection3.description}</p>}
         />
         <FAQSection textContent={textContent.FaqSection} />
         <Footer textContent={footerLang} lang={lang} />

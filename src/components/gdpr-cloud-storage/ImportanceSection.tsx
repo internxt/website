@@ -30,7 +30,7 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
 
             {/* Text Section */}
             <div
-              className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 md:pl-10`}
+              className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}
             >
               <p className="text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{textContent.title}</p>
               <p className="font-regular text-base sm:text-lg md:text-xl">

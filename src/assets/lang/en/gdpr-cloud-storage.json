@@ -32,23 +32,23 @@
   },
   "WhatWeDo": {
     "title": {
-      "line1": "Internxt offers private cloud storage solutions",
-      "line2": "for personal, business, and enterprises"
+      "line1": "Internxt’s GDPR compliance cloud services",
+      "line2": ""
     },
-    "subtitle": "Google, Microsoft, Apple, and other cloud storage service providers are exploiting your data for profit. Switch to Internxt to get total control of your privacy.",
+    "subtitle": "Internxt offers GDPR cloud storage for personal, business, or enterprise use. With our advanced encryption, access controls, and privacy-focused approach, our cloud storage provides the best solution for GDPR compliance.",
     "square1": {
       "title": "Internxt Drive",
-      "description": "We offer affordable annual and lifetime cloud storage to store, share, back up, and sync your files. Drive also includes a premium VPN and antivirus, for complete privacy and protection online.",
+      "description": "Internxt Drive is a private, GDPR-compliant cloud storage solution designed with privacy at its core. It only collects the necessary data to provide the best service and never shares your information with anyone. ",
       "cta": "Get Internxt Drive"
     },
     "square2": {
       "title": "Internxt for Business",
-      "description": "Internxt for Business is a GDPR cloud storage solution that protects confidential information and includes 2TB of storage for up to 100 users. Thanks to award-winning encryption, Internxt protects your company from data breaches.",
+      "description": "Non-compliance with the GDPR can lead to heavy fines, making it essential for businesses to align their data practices with its standards. Internxt for Business provides a GDPR-compliant cloud storage solution that secures your company’s data with advanced security features.",
       "cta": "Get Internxt for Business"
     },
     "square3": {
       "title": "Internxt S3",
-      "description": "Internxt S3 is an end-to-end encrypted and scalable object storage service for businesses or enterprises to manage large data at lower costs. With zero ingress and egress fees, our object storage plans are up to 80% cheaper than other providers.",
+      "description": "Internxt S3 is an enterprise-grade object storage solution that ensures your data is fully protected and compliant with GDPR. Internxt S3 offers GDPR compliant cloud storage, which guarantees 99.999999999% (11 9s) data durability for backed-up files, protecting them from loss or corruption.",
       "cta": "Get Internxt S3"
     }
   },
@@ -65,23 +65,32 @@
         ]
       },
       {
-        "title": "No more reliance on Big Tech",
-        "description": "Other cloud storage service providers, Google, Dropbox, etc, profit from your data, storing and analyzing your files, leading to emails and other personal information leaking online. Internxt is different. With anonymous account creation and a strict no-tracking policy, we don’t store, share, or monetize your data in any way. "
+        "title": "Right to be forgotten",
+        "description": [
+          "You have the power to request deletion of your personal data from a service when it is no longer needed, collected unlawfully, or you wish to withdraw your consent for your data to be used.",
+          "This gives you more control over your digital footprint, helping prevent identity theft, data breaches, or fraud. This prevents companies from holding your data indefinitely without a valid reason, making GDPR cloud services a stronger option if you want more privacy online."
+        ]
       },
       {
-        "title": "Accessible from anywhere",
-        "description": "Download Internxt Drive from your favorite cloud storage app to access the cloud on Windows, Mac, Linux, iOS, or Android. We also offer other private cloud storage solutions with WebDAV and Rclone support, allowing you to manage your files effortlessly across multiple devices, automate backups, and access your data remotely."
+        "title": "Object to data processing",
+        "description": [
+          "The GDPR also gives you the right to stop a company from using your data for marketing, profiling, or other purposes outside legal obligations. ",
+          "With the right to object to data processing, you can prevent unwanted data tracking, targeted advertising, or data profiling. GDPR compliant cloud services such as Internxt never use your personal data for these purposes, guaranteeing your privacy from the moment you create your account. "
+        ]
       },
       {
-        "title": "Open source and audited",
-        "description": "Other cloud storage platforms hide their source code from the public, meaning you can never truly know how they handle your data or what they do with your files. Internxt promises full transparency, as the source code for all our products is publicly available on GitHub. Internxt is also verified as a secure platform by Securitum, an independent penetration testing company."
+        "title": "Withdraw consent",
+        "description": [
+          "To prevent you from being locked into agreements with a company, the GDPR also gives you the right to revoke permission for a company to process your personal information. ",
+          "By withdrawing consent for companies to process your data, you can keep it away from third-party companies and reduce the risk of data breaches, preventing malicious actors and external companies from profiting from your data."
+        ]
       }
     ]
   },
 
   "CtaSection1": {
-    "title": "Interested in private cloud solutions?",
-    "description": "Internxt Drive protects you with post-quantum encryption, antivirus, and VPN.",
+    "title": "Store securely and stay compliant",
+    "description": "GDPR compliant cloud storage focused on privacy",
     "cta": "Get Internxt"
   },
 
@@ -90,37 +99,38 @@
     "description": "Secure your files with post-quantum encryption and regain control over your data today.",
     "cta": "Get Internxt"
   },
+  "CtaSection3": {
+    "title": "GDPR compliance made simple",
+    "description": "Private cloud storage to store and share data securely",
+    "cta": "Get Internxt"
+  },
 
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Is Internxt an alternative to Google Drive?",
+        "question": "What is the GDPR?",
         "answer": [
-          "Yes, Internxt is an alternative to Google Drive and other Big Tech companies. These companies encrypt data on servers they own, meaning they can access your account and view your files or give access to your account to the government if requested. ",
-          "Unlike these cloud storage platforms, Internxt uses post-quantum and zero-knowledge encryption, so only you can access your files. Your data is encrypted on your device before being uploaded, and no one can view or decrypt it, not even Internxt. This ensures complete privacy, prevents unauthorized access, and protects you from data breaches and surveillance."
+          "The General Data Protection Regulation (GDPR) is a comprehensive data protection law by the European Union that protects personal data and privacy for individuals within the EU. ",
+          "It outlines strict rules regarding how personal data is collected, stored, processed, and shared, requiring businesses to implement security measures and adhere to privacy principles. "
         ]
       },
       {
-        "question": "What is post-quantum encryption?",
+        "question": "What is GDPR cloud storage?",
         "answer": [
-          "Post-quantum encryption uses cryptographic algorithms to secure data against the threat of quantum computers that could potentially break traditional encryption methods. Post-quantum encryption focuses on developing algorithms that prevent these computers from decrypting and accessing your data.",
-          "This method is ideal for private cloud storage solutions like Internxt because it ensures your data remains secure despite advancing quantum computing technology. "
+          "GDPR compliance cloud services refer to cloud companies operating in the EU that must comply with regulations that protect personal data with encryption, access controls, backups, and follow protocols to handle data safely. "
         ]
       },
       {
-        "question": "What’s the difference between Internxt for Business and Internxt S3?",
+        "question": "How can I ensure my business remains GDPR compliant when using cloud storage? ",
         "answer": [
-          "Internxt for Business is a cloud storage solution tailored for companies, offering team collaboration, admin controls, and other features to protect businesses from data breaches. ",
-          "Internxt S3 is a cloud-based storage system that follows the Amazon S3 protocol. It is ideal for developers and enterprises that need to scale and integrate storage into their applications or services and store data lakes or warehouses. ",
-          "The main difference is that Internxt for Business focuses on team-oriented features, while Internxt S3 provides scalable storage solution up to 90% cheaper than AWS, Azure, or Google Cloud."
+          "To ensure GDPR compliance, choose a cloud storage provider that offers encryption, access controls, backup solutions, and transparency about data handling. Internxt’s business plans can provide GDPR compliant cloud storage with full control over your customer, employee, and business data."
         ]
       },
       {
-        "question": "Why should you choose Internxt over other cloud platforms?",
+        "question": "Can I store sensitive personal data in GDPR-compliant cloud storage?",
         "answer": [
-          "All our private cloud storage solutions emphasize privacy, so we offer you complete control over your privacy with Kyber 512 post-quantum encryption, future-proofing your personal or business data against potential quantum computing threats.",
-          "Internxt is GDPR compliant, reducing legal risks, and offers scalable, cost-effective solutions like Internxt S3, with zero ingress and egress fees and a pay-as-you-go pricing model. Additionally, its open-source nature, independent security audits, and commitment to sustainability make it a reliable and transparent choice for enterprises."
+          "Yes, GDPR compliant cloud storage is designed to securely store sensitive personal data. Zero-knowledge encryption protects your files with Internxt to meet the GDPR's stringent data protection laws."
         ]
       },
       {
@@ -130,10 +140,9 @@
         ]
       },
       {
-        "question": "Can I add more storage to my lifetime plan?",
+        "question": "How do I contact support?",
         "answer": [
-          "Yes, Internxt lifetime plans are stackable, so you can add as much storage as you want to your Internxt lifetime membership. You can purchase them with the same email address as your current lifetime account. ",
-          "Contact us at hello@internxt.com so we can stack them together for you on the same account."
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
         ]
       },
       {
@@ -145,34 +154,36 @@
     ]
   },
   "FeatureSection": {
-    "title": "Why you should switch to private cloud storage solutions",
-    "titleLine2": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
-    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
-    "cta": "Get Internxt",
+    "title": "How GDPR cloud storage protects your data",
+    "titleLine2": "",
+    "description": "Internxt meets GDPR’s strict requirements by providing zero-knowledge encryption, user access control, and secure backups to keep your data safe and private.",
     "cards": {
       "element1": {
-        "title": "Increased privacy for your data",
-        "description": "Privacy-focused services prioritize your data's security, making sure it's encrypted both during transit and at rest. Unlike traditional public cloud providers, services like Internxt Drive cannot access your encryption keys, so nobody except you can view or sell your data. "
+        "title": "End-to-end encryption",
+        "description": [
+          "End-to-end encryption is a secure method to protect your files from hackers, but many companies manage the keys and could give access to your files to the government if requested. Internxt uses zero-knowledge and post-quantum encryption, ensuring the keys are stored only on your device, so no one but you can access your data.",
+          "Our advanced, award-winning encryption gives you maximum security that aligns with GDPR's strict requirements for protecting personal data and preventing cyberattacks."
+        ]
       },
       "element2": {
-        "title": "Reduced corporate spying",
+        "title": "Access controls and user permissions",
         "description": [
-          "Companies like Google state in their policies that by using their services, you give them access to monitor and use your data for their own benefit and financial gain. Other services like Dropbox have a past filled with data breaches and unethical data sharing. ",
-          "In contrast, private cloud storage solutions cannot access your files as the keys are stored on the owner’s device, keeping sensitive information private, and away from third parties."
+          "The GDPR instructs organizations to implement appropriate technical and organizational measures to ensure a level of security appropriate to the risk, including controls and user permissions to limit access to sensitive data.",
+          "GDPR compliance cloud services include access and user permissions to meet these requirements. Internxt Drive includes password-protected file sharing and controls to restrict access. Internxt Business plans include access logs to track who signed in, uploaded, or modified files, ensuring compliance across the whole team."
         ]
       },
       "element3": {
-        "title": "Protected by European laws",
+        "title": "Data backups and recovery",
         "description": [
-          "Recent legal issues in the UK and less strict privacy laws in the US have caused more people to choose private cloud storage solutions based in Europe. Regulations from the GDPR, for example, give customers more control over their data, with rights to access and deletion.",
-          "GDPR compliance is not only a legal requirement but also a reassurance that European providers are not subject to intrusive data access requests from foreign governments, unlike other services which can give access to data if requested by government or law agencies."
+          "The GDPR states that companies must take measures to restore the availability and access to personal data in a timely manner in the event of a physical or technical incident.",
+          "With Internxt, you get GDPR-compliant cloud storage thanks to scheduled or manual backups, and your data is securely stored across multiple data centers. This approach increases redundancy and guarantees fast access to your backed-up files, allowing you to restore data quickly in case of an incident and maintain personal security and compliance for businesses."
         ]
       },
       "element4": {
-        "title": "More control over your security",
+        "title": "Data minimization",
         "description": [
-          "You don’t just get more privacy with cloud storage, you also get increased control over the security of your files. Internxt allows you to schedule or manually back up your files to protect against accidental data loss.",
-          "Other security controls necessary for increased privacy that cloud storage can offer are encrypted and password-protected file sharing, two-factor authentication (2FA), and access logs for business plans."
+          "Data minimization is a fundamental principle for the GDPR and private cloud storage providers. It requires organizations to collect and process only the personal data that is adequate, relevant, and necessary for specific purposes. ",
+          "We prioritize your privacy by protecting all your data with zero-knowledge encryption, ensuring only you can access it. We never share your data with anyone, giving you complete control and peace of mind over your personal information."
         ]
       }
     }

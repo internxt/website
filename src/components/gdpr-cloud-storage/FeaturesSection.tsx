@@ -65,7 +65,7 @@ const FeaturesSection = ({ textContent }) => {
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
                 <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
+                <p className="font-regular text-base sm:text-lg md:text-xl">
                   {Array.isArray(cardInfo[cardIndex].description)
                     ? cardInfo[cardIndex].description.map((line, index) => (
                         <span key={index}>
@@ -75,7 +75,7 @@ const FeaturesSection = ({ textContent }) => {
                         </span>
                       ))
                     : cardInfo[cardIndex].description}
-                </ReactMarkdown>
+                </p>
               </div>
             </div>
           </div>

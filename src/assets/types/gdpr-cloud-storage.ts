@@ -7,6 +7,7 @@ export interface gdprCloudStorageText {
   FaqSection: FAQSection;
   CtaSection1: BetterTomorrowSection;
   CtaSection2: BetterTomorrowSection;
+  CtaSection3: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
 }
 export interface ComponentsInColumn {
