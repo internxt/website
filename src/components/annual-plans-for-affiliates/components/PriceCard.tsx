@@ -1,7 +1,7 @@
 import { PromoCodeName } from '@/lib/types';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import {
   ArrowsClockwise,
-  Gift,
   CodeBlock,
   Database,
   Envelope,
@@ -137,11 +137,17 @@ export default function PriceCard({
         </button>
       </div>
       {!isCloudwards ? (
-        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
-          <span className="font-bold text-white">{contentText.worldCloudSecurityDay.title}</span>
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-white">{contentText.worldCloudSecurityDay.gift}</span>
+        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
+          <span className="text-[13.5px] font-bold text-white">{contentText.IdentityManagementDay.title}</span>
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">{contentText.IdentityManagementDay.gift1}</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">{contentText.IdentityManagementDay.gift2}</span>
+            </div>
           </div>
         </div>
       ) : null}

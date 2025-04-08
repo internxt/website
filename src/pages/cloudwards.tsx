@@ -38,7 +38,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Special82 ?? undefined,
+      promoCodeId: PromoCodeName.Identity82AFF ?? undefined,
     });
   }
 
@@ -125,8 +125,8 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
               alt="Internxt secure cloud storage"
               draggable={false}
               loading="lazy"
-              width={1920}
-              height={1080}
+              width={757}
+              height={426}
             />
           </RevealY>
         </div>
