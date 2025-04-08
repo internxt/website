@@ -124,7 +124,7 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[810px] min-h-[710px] `
+        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[840px] min-h-[710px] `
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
@@ -236,7 +236,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `max-h-[490px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
+        } ${isBusiness ? `max-h-[550px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
