@@ -12,7 +12,8 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { GetServerSidePropsContext } from 'next';
 
 import { BannersText } from '@/assets/types/components/banners';
-import {FeaturesSection} from '@/components/meet/FeaturesSection';
+import { FeaturesSection } from '@/components/meet/FeaturesSection';
+import { FeaturesSectionImg } from '@/components/meet/FeaturesSectionImg';
 // import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -78,7 +79,6 @@ const PrivateCloudStorageSolutions = ({
       description: textContent.FeatureSection.cards.element4.description,
       image: '/images/meet/european_privacy.webp',
       icon: Fingerprint,
-
     },
     {
       title: textContent.FeatureSection.cards.element3.title,
@@ -127,7 +127,7 @@ const PrivateCloudStorageSolutions = ({
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
         {/* <HeroSection textContent={textContent.HeroSection} lang={locale} /> */}
-        <HeroSection textContent={textContent.HeroSection}/>
+        <HeroSection textContent={textContent.HeroSection} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
 
@@ -144,11 +144,10 @@ const PrivateCloudStorageSolutions = ({
           ctaText={textContent.FeatureSection.cta}
           ctaLink={CTA_URL}
           cards={cardsData}
-          
         />
         {/* <FeaturesSection textContent={textContent.FeaturesSection} /> */}
-        <FeaturesSection textContent={textContent.FeaturesSection} />
-    
+        <FeaturesSectionImg textContent={textContent.FeaturesSection} />
+
         <CtaSection
           textContent={textContent.CtaSection2}
           url={CTA_URL}

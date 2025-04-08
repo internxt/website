@@ -26,7 +26,7 @@ export const FeaturesSection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden px-5 py-20">
+    <section className="overflow-hidden bg-gray-1 px-5 py-20">
       <div className="flex flex-col items-center space-y-12">
         <p className="text-center text-4xl font-semibold text-gray-100 md:text-left lg:text-5xl">{textContent.title}</p>
         <div className="flex max-w-[800px] flex-col space-y-6 text-center">
@@ -36,7 +36,7 @@ export const FeaturesSection = ({ textContent }) => {
           {cards.map((card) => (
             <div
               key={card.title}
-              className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]`}
+              className={`flex flex-col items-start justify-start rounded-2xl bg-white p-8 sm:p-10 md:max-w-[488px]`}
             >
               <card.icon className="mb-6 text-4xl text-primary" size={32} />
               <div className="flex w-full max-w-[400px] flex-col">
