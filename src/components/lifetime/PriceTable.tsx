@@ -155,7 +155,6 @@ const PriceTable = ({
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
                 popular={false}
-                priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
                 currency={currency}
                 currencyValue={currencyValue}
                 coupon={couponCodeFiltered('2TB')}
