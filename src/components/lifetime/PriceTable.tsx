@@ -139,40 +139,132 @@ const PriceTable = ({
 
         {/* Render cards */}
 
-        <Transition
-          show={!loadingCards}
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
-            {lifetimeProducts
-              ? lifetimeProducts.map((product: any, index) => {
-                  return (
-                    <PriceCard
-                      planType="individual"
-                      key={product.storage}
-                      storage={product.storage}
-                      price={lifetimePrices(product.price, discount, product.storage)}
-                      cta={['checkout', product.priceId]}
-                      lang={lang}
-                      billingFrequency={Interval.Lifetime}
-                      popular={product.storage === popularStoragePlan}
-                      priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
-                      currency={currency}
-                      currencyValue={currencyValue}
-                      coupon={couponCodeFiltered(product.storage)}
-                      isLifetimePage={true}
-                      lifetimeMode={lifetimeMode}
-                      onButtonClicked={onButtonClicked}
-                      percentOff={percentOff}
-                      isStackCommerce={isStackCommerce}
-                      index={index}
-                    />
-                  );
-                })
-              : null}
-          </div>
-        </Transition>
+        {isStackCommerce ? (
+          <Transition
+            show={!loadingCards}
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
+              <PriceCard
+                planType="individual"
+                key={'2TB'}
+                storage={'2TB'}
+                price={lifetimePrices('900.0', discount, '2TB')}
+                cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
+                lang={lang}
+                billingFrequency={Interval.Lifetime}
+                popular={'2TB' === popularStoragePlan}
+                priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
+                currency={currency}
+                currencyValue={currencyValue}
+                coupon={couponCodeFiltered('2TB')}
+                isLifetimePage={true}
+                lifetimeMode={lifetimeMode}
+                onButtonClicked={onButtonClicked}
+                percentOff={percentOff}
+                isStackCommerce={isStackCommerce}
+                index={0}
+                showOffer={false}
+              />
+              <PriceCard
+                planType="individual"
+                key={'5TB'}
+                storage={'5TB'}
+                price={lifetimePrices('1900.0', discount, '5TB')}
+                cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
+                lang={lang}
+                billingFrequency={Interval.Lifetime}
+                popular={'5TB' === popularStoragePlan}
+                currency={currency}
+                currencyValue={currencyValue}
+                coupon={couponCodeFiltered('5TB')}
+                isLifetimePage={true}
+                lifetimeMode={lifetimeMode}
+                onButtonClicked={onButtonClicked}
+                percentOff={percentOff}
+                isStackCommerce={isStackCommerce}
+                index={1}
+                showOffer={false}
+              />
+              <PriceCard
+                planType="individual"
+                key={'10TB'}
+                storage={'10TB'}
+                price={lifetimePrices('2900.0', discount, '10TB')}
+                cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
+                lang={lang}
+                billingFrequency={Interval.Lifetime}
+                popular={'10TB' === popularStoragePlan}
+                currency={currency}
+                currencyValue={currencyValue}
+                coupon={couponCodeFiltered('10TB')}
+                isLifetimePage={true}
+                lifetimeMode={lifetimeMode}
+                onButtonClicked={onButtonClicked}
+                percentOff={percentOff}
+                isStackCommerce={isStackCommerce}
+                index={2}
+                showOffer={false}
+              />
+              <PriceCard
+                planType="individual"
+                key={'20TB'}
+                storage={'20TB'}
+                price={lifetimePrices('4900.0', discount, '20TB')}
+                cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
+                lang={lang}
+                billingFrequency={Interval.Lifetime}
+                popular={'20TB' === popularStoragePlan}
+                currency={currency}
+                currencyValue={currencyValue}
+                coupon={couponCodeFiltered('20TB')}
+                isLifetimePage={true}
+                lifetimeMode={lifetimeMode}
+                onButtonClicked={onButtonClicked}
+                percentOff={percentOff}
+                isStackCommerce={isStackCommerce}
+                index={3}
+                showOffer={false}
+              />
+            </div>
+          </Transition>
+        ) : (
+          <Transition
+            show={!loadingCards}
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
+              {lifetimeProducts
+                ? lifetimeProducts.map((product: any, index) => {
+                    return (
+                      <PriceCard
+                        planType="individual"
+                        key={product.storage}
+                        storage={product.storage}
+                        price={lifetimePrices(product.price, discount, product.storage)}
+                        cta={['checkout', product.priceId]}
+                        lang={lang}
+                        billingFrequency={Interval.Lifetime}
+                        popular={product.storage === popularStoragePlan}
+                        priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
+                        currency={currency}
+                        currencyValue={currencyValue}
+                        coupon={couponCodeFiltered(product.storage)}
+                        isLifetimePage={true}
+                        lifetimeMode={lifetimeMode}
+                        onButtonClicked={onButtonClicked}
+                        percentOff={percentOff}
+                        isStackCommerce={isStackCommerce}
+                        index={index}
+                      />
+                    );
+                  })
+                : null}
+            </div>
+          </Transition>
+        )}
       </div>
     </section>
   );

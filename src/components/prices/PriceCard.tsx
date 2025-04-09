@@ -44,6 +44,7 @@ export interface PriceCardProps {
   isPcComponentesLifetime?: boolean;
   isPcComponentes5tb?: boolean;
   trialToken?: string;
+  showOffer?: boolean;
 }
 
 const STORAGE_LEVELS = {
@@ -79,6 +80,7 @@ export default function PriceCard({
   isPcComponentes5tb = false,
   isPcComponentesLifetime = false,
   trialToken,
+  showOffer = true,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -183,7 +185,7 @@ export default function PriceCard({
       ],
     },
     '10TB': {
-      title: 'Ultra 10TB',
+      title: 'Super 10TB',
       price: '€2900',
       features: [
         '10TB encrypted storage',
@@ -197,7 +199,23 @@ export default function PriceCard({
         '30-day money-back guarantee',
       ],
     },
+    '20TB': {
+      title: 'Ultra 20TB',
+      price: '€4900',
+      features: [
+        '20TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
   };
+
   const PCCOMPONENTES_STORAGE_PLANS = {
     Lifetime: {
       '2TB': {
@@ -237,7 +255,7 @@ export default function PriceCard({
         price: '2900',
         priceId: 'price_1PNxaDFAOdcgaBMQnKXWQRs0',
         features: [
-          '10TB encrypted storage',
+          '0TB encrypted storage',
           'Zero-knowledge encryption',
           'Password-protected file sharing',
           'Post-quantum cryptography',
@@ -318,6 +336,7 @@ export default function PriceCard({
   };
 
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
+  const storageSelectedStackCommerce = index === 0 ? '2TB' : index === 1 ? '5TB' : index === 2 ? '10TB' : '20TB';
   const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
   const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
   const selectStorage = !isLifetimePage ? storageSelectedPcComponentes : storageSelected;
@@ -330,9 +349,9 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex w-[360px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
+        isStackCommerce ? 'w-[280px]' : 'w-[340px]'
+      } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
@@ -349,7 +368,7 @@ export default function PriceCard({
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
             <p className="text-lg font-medium text-primary">
               {isStackCommerce
-                ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title
+                ? STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].title
                 : isPcComponentes
                 ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].title
                 : getPlanStorage(storage)}
@@ -413,21 +432,28 @@ export default function PriceCard({
         </button>
       </div>
 
-      <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
-        <span className="text-[13.5px] font-bold text-white">
-          {contentText.productFeatures.IdentityManagementDay.title}
-        </span>
-        <div className="flex flex-col items-start space-y-2">
-          <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.IdentityManagementDay.gift1}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.IdentityManagementDay.gift2}</span>
+      {showOffer ? (
+        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
+          <span className="text-[13.5px] font-bold text-white">
+            {contentText.productFeatures.IdentityManagementDay.title}
+          </span>
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">
+                {contentText.productFeatures.IdentityManagementDay.gift1}
+              </span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">
+                {contentText.productFeatures.IdentityManagementDay.gift2}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
+
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
           <>
@@ -456,7 +482,7 @@ export default function PriceCard({
 
         <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
-            STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
+            STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
                 <img
                   loading="lazy"
