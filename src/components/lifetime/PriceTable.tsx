@@ -154,7 +154,7 @@ const PriceTable = ({
                 cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
-                popular={'2TB' === popularStoragePlan}
+                popular={false}
                 priceBefore={showPriceBefore ? product.price.split('.')[0] : undefined}
                 currency={currency}
                 currencyValue={currencyValue}
@@ -175,7 +175,7 @@ const PriceTable = ({
                 cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
-                popular={'5TB' === popularStoragePlan}
+                popular={false}
                 currency={currency}
                 currencyValue={currencyValue}
                 coupon={couponCodeFiltered('5TB')}
@@ -195,7 +195,7 @@ const PriceTable = ({
                 cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
-                popular={'10TB' === popularStoragePlan}
+                popular={true}
                 currency={currency}
                 currencyValue={currencyValue}
                 coupon={couponCodeFiltered('10TB')}
@@ -215,7 +215,7 @@ const PriceTable = ({
                 cta={['checkout', 'price_1PNxYtFAOdcgaBMQzkimr6OU']}
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
-                popular={'20TB' === popularStoragePlan}
+                popular={false}
                 currency={currency}
                 currencyValue={currencyValue}
                 coupon={couponCodeFiltered('20TB')}
