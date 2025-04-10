@@ -1,10 +1,10 @@
 {
   "HeroSection": {
     "title": {
-      "blue": "Save 75% ",
+      "blue": "Save 80% ",
       "normal": "on all secure cloud storage plans"
     },
-    "description": "Upgrade your free account to get 75% off any plan. With our open-source, encrypted cloud storage, you can store and share your files in complete privacy.",
+    "description": "Upgrade your free account to get 80% off any plan. With our open-source, encrypted cloud storage, you can store and share your files in complete privacy.",
     "cta": "Upgrade plan",
     "recommendedBy": "Recommended by:"
   },
@@ -25,7 +25,7 @@
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
-      "annually": "Annually",
+      "annually": "Annual",
       "individual": "Individual",
       "lifetime": "Lifetime",
       "business": "Business"
@@ -49,7 +49,7 @@
       "With our paid plans, you can store and access your files locally without consuming your device’s physical drive space.",
       "Enjoy peace of mind knowing your memories and important documents are safely backed up in the cloud, accessible on any device."
     ],
-    "cta": "Get 75% OFF"
+    "cta": "Get 80% OFF"
   },
   "InxtFeaturesSection": {
     "title": "Internxt offers secure cloud storage designed to protect your privacy",
@@ -83,7 +83,7 @@
   },
   "CtaSection": {
     "title": "Need more storage?",
-    "description": "Get 75% OFF any plan.",
+    "description": "Get 80% OFF any plan.",
     "cta": "Upgrade plan"
   },
   "WhatWeDoSection": {
@@ -97,7 +97,7 @@
         "Two-Factor Authentication",
         "Backups across multiple servers"
       ],
-      "cta": "Get 75% OFF"
+      "cta": "Get 80% OFF"
     }
   },
   "FaqSection": {
@@ -112,7 +112,7 @@
       {
         "question": "How do I upgrade my free plan?",
         "answer": [
-          "Your 75% discount will be applied automatically at checkout. To claim your discount, select your monthly, annual, or lifetime plan and proceed to the checkout page."
+          "Your 80% discount will be applied automatically at checkout. To claim your discount, select your monthly, annual, or lifetime plan and proceed to the checkout page."
         ]
       },
       {

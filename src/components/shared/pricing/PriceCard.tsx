@@ -61,7 +61,7 @@ export const PriceCard = ({
   isFamilyPage,
   darkMode,
   isBrave,
-  showPromo = true,
+  showPromo,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -124,11 +124,11 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[840px] min-h-[710px] `
+        isBusiness ? `h-[820px]` : `max-h-[840px] min-h-[710px] `
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[330px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pb-10 pt-6`}
       >
@@ -232,7 +232,6 @@ export const PriceCard = ({
           </div>
         </div>
       )}
-
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
