@@ -2,14 +2,37 @@ import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/annual/HeroSection';
+import { PromoCodeName } from '@/lib/types';
 import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import CtaSection from '@/components/pricing/CtaSection';
 import FeaturesSection from '@/components/annual/FeaturesSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import usePricing from '@/hooks/usePricing';
+import { Interval, stripeService } from '@/services/stripe.service';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Identity82AFF,
+  });
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = individualCoupon?.name;
 
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
+  };
   const lang = 'en';
 
   return (
@@ -20,7 +43,28 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
       <FeaturesSection textContent={langJson.FeaturesSection} />
 
-      <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
+      {/* <PaymentSection textContent={langJson.PaymentSection} lang={lang} /> */}
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+          lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hidePlanSelectorComponent={true}
+        hideBusinessSelector
+        hideSwitchSelector
+        isBrave
+        startFromPlan="Individuals"
+        startIndividualPlansFromInterval={Interval.Year}
+        hideFreeCard
+        showPromo={false}
+        backgroundColorComponent="bg-gray-1"
+      />
 
       <FeatureSection textContent={langJson.FeatureSection} />
 

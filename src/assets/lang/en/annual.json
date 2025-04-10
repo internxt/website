@@ -8,6 +8,40 @@
     "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
     "cta": "Choose your plan"
   },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Annual storage Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "header": "Total privacy for 82% off",
+    "lifetimeDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "planDescription": "All Internxt plans come with complete access to our privacy-focused features. Subscribe to Internxt and secure a year of encrypted cloud storage. ",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Free",
+      "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    }
+  },
   "PaymentSection": {
     "blueTitle": "Total privacy for 82% OFF",
     "title": "Annual plans",
