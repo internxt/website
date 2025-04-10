@@ -5,9 +5,9 @@ import { getImage } from '@/lib/getImage';
 
 const FeatureSection = ({ textContent }) => {
   return (
-    <section className="overflow-hidden">
-      <div className="flex flex-col items-center justify-center space-y-10 px-6 py-20 lg:flex-row lg:space-x-56 lg:space-y-0 ">
-        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1   ">
+    <section className="overflow-hidden bg-gray-1">
+      <div className="flex flex-col items-center justify-center space-y-10 px-6 py-20 lg:flex-row lg:space-x-48 lg:space-y-0 ">
+        <div className="flex flex-col rounded-3xl bg-gray-1  from-white   ">
           <Image
             loading="eager"
             src={getImage('/images/affiliates/internxt_secure_file_storage.webp')}

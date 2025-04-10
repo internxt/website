@@ -41,6 +41,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/elections',
   '/brave',
   '/specialoffer',
+  '/annual',
 ];
 
 export const SNIGEL_BANNERS = {

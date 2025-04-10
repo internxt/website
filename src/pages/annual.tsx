@@ -37,7 +37,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} isLinksHidden={true} lang={lang} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -63,7 +63,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
         startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
         showPromo={false}
-        backgroundColorComponent="bg-gray-1"
+        backgroundColorComponent="bg-white"
       />
 
       <FeatureSection textContent={langJson.FeatureSection} />

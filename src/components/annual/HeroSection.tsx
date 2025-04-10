@@ -38,7 +38,7 @@ const HeroSection = ({ textContent }) => {
             </button>
           </div>
         </div>
-        <div className="flex flex-col rounded-3xl bg-gradient-to-b from-white to-gray-1   ">
+        <div className="flex flex-col rounded-3xl  from-white to-gray-1   ">
           <Image
             loading="eager"
             src={getImage('/images/yearly/internxt_yearly_plans.webp')}

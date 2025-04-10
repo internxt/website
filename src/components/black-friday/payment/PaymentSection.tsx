@@ -54,19 +54,7 @@ const PaymentSection = ({ textContent }) => {
           </div>
         </Transition>
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:space-x-32 md:space-y-0">
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CurrencyCircleDollar size={40} className="text-primary" />
-            <p className="text-lg font-medium text-gray-20">{textContent.feeds.firstFeature}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <CreditCard size={40} className="text-primary" />
-            <p className="text-lg font-medium text-gray-20">{textContent.feeds.secondFeature}</p>
-          </div>
-          <div className="flex max-w-[183px] flex-col items-center space-y-3">
-            <Detective size={40} className="text-primary" />
-            <p className="text-lg font-medium text-gray-20">{textContent.feeds.thirdFeature}</p>
-          </div>
-        </div>
+          
       </div>
     </section>
   );
