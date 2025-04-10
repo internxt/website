@@ -5,7 +5,7 @@ import HeroSection from '@/components/annual/HeroSection';
 import { PromoCodeName } from '@/lib/types';
 import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
-import CtaSection from '@/components/pricing/CtaSection';
+import CtaSection from '@/components/annual/CtaSection';
 import FeaturesSection from '@/components/annual/FeaturesSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
