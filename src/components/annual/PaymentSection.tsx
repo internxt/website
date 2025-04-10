@@ -14,9 +14,9 @@ const PaymentSection = ({ lang, textContent }) => {
         <div className="flex flex-col items-center justify-center">
           <div className="flex w-full max-w-3xl flex-col justify-center space-y-3 px-6 pt-4 text-center">
             <p className="pt-4 text-4xl">
-              <span className="font-semibold text-primary">{textContent.blueTitle}</span>
+              <span className="text-4xl font-semibold text-primary">{textContent.blueTitle}</span>
             </p>
-            <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+            <p className="text-4xl font-semibold text-gray-100 md:text-5xl">{textContent.title}</p>
             <p className="pt-4 text-xl font-normal text-gray-80">{formattedDescription}</p>
           </div>
         </div>
