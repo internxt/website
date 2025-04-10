@@ -12,7 +12,7 @@ const HeroSection = ({ textContent }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center justify-center space-y-10 px-6 py-24 lg:flex-row lg:space-x-48 lg:space-y-0">
-        <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:pt-20 lg:text-left">
+        <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start  lg:text-left">
           <div className="flex flex-col">
             <Header maxWidth="max-w-[500px]" className="text-6xl text-gray-100 ">
               <p className="pt-4 text-4xl font-bold xl:text-5xl ">
