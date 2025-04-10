@@ -5,37 +5,12 @@ import HeroSection from '@/components/annual/HeroSection';
 import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import CtaSection from '@/components/pricing/CtaSection';
-import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
-import InfoSection from '@/components/shared/sections/InfoSection';
 import FeaturesSection from '@/components/annual/FeaturesSection';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const lang = 'en';
-
-  const cardsData = [
-    {
-      icon: ShieldCheck,
-      title: infoSectionLang.InfoSection.cards[0].title,
-      description: infoSectionLang.InfoSection.cards[0].description,
-    },
-    {
-      icon: LockKey,
-      title: infoSectionLang.InfoSection.cards[1].title,
-      description: infoSectionLang.InfoSection.cards[1].description,
-    },
-    {
-      icon: Eye,
-      title: infoSectionLang.InfoSection.cards[2].title,
-      description: infoSectionLang.InfoSection.cards[2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: infoSectionLang.InfoSection.cards[3].title,
-      description: infoSectionLang.InfoSection.cards[3].description,
-    },
-  ];
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>

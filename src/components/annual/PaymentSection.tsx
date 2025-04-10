@@ -4,6 +4,10 @@ import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
 import PriceTable from '@/components/annual/PriceTable';
 
 const PaymentSection = ({ lang, textContent }) => {
+  const wordsToBold = ['Drive', 'Send', 'VPN', 'Antivirus', 'Meet', 'Mail'];
+  const formattedDescription = textContent.description
+    .split(/(Drive|Send|VPN|Antivirus|Meet|Mail)/g)
+    .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
   return (
     <section id="payment" className="overflow-hidden bg-gray-1 py-10">
       <div className="flex flex-col space-y-8 pt-10 lg:pt-0">
@@ -13,7 +17,7 @@ const PaymentSection = ({ lang, textContent }) => {
               <span className="font-semibold text-primary">{textContent.blueTitle}</span>
             </p>
             <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
-            <p className="pt-4 text-xl font-normal text-gray-80">{textContent.description}</p>
+            <p className="pt-4 text-xl font-normal text-gray-80">{formattedDescription}</p>
           </div>
         </div>
 
