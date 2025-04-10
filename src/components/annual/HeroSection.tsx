@@ -24,7 +24,7 @@ const HeroSection = ({ textContent }) => {
             </Header>
           </div>
           <div className="flex max-w-[500px] flex-row items-center space-x-3 rounded-lg bg-gray-5 px-5  py-2">
-            <Percent className="text-primary" weight="bold" size={38} />
+            <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
             <p className="text-xl font-medium text-gray-80">{formattedHero}</p>
           </div>
           <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">

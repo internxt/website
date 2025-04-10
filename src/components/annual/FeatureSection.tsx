@@ -13,8 +13,8 @@ const FeatureSection = ({ textContent }) => {
             src={getImage('/images/affiliates/internxt_secure_file_storage.webp')}
             draggable="false"
             quality={100}
-            width={600}
-            height={600}
+            width={500}
+            height={500}
             className="mx-auto h-auto w-full max-w-[400px] object-contain"
             alt="Man with laptop"
           />
@@ -27,7 +27,7 @@ const FeatureSection = ({ textContent }) => {
               </p>
             </Header>
             <p className="pt-4 ">
-              <span className="pt-4 text-xl font-normal text-gray-80">{textContent.description}</span>
+              <span className="font-regular text-xl text-gray-80 xl:text-xl">{textContent.description}</span>
             </p>
           </div>
 
