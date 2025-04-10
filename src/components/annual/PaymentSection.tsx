@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Coin, CreditCard, Detective } from '@phosphor-icons/react';
+import { Coin, CreditCard, CurrencyCircleDollar, Detective, Lifebuoy } from '@phosphor-icons/react';
 import PriceTable from '@/components/annual/PriceTable';
 
 const PaymentSection = ({ lang, textContent }) => {
@@ -25,11 +25,11 @@ const PaymentSection = ({ lang, textContent }) => {
 
         <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           <div className="p flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">
-            <Coin size={40} className="text-primary" />
+            <Lifebuoy size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.firstFeed}</p>
           </div>
           <div className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row ">
-            <CreditCard size={40} className="text-primary" />
+            <CurrencyCircleDollar size={40} className="text-primary" />
             <p className="text-xl font-medium text-gray-80">{textContent.secondFeed}</p>
           </div>
           <div className="flex flex-col items-center space-x-3 md:max-w-[33%]  md:flex-row">
