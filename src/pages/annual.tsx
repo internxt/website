@@ -7,6 +7,7 @@ import FeatureSection from '@/components/annual/FeatureSection';
 import CtaSection from '@/components/pricing/CtaSection';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import FeaturesSection from '@/components/annual/FeaturesSection';
 
 const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
@@ -42,17 +43,11 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
       <HeroSection textContent={langJson.HeroSection} />
 
+      <FeaturesSection textContent={langJson.FeaturesSection} />
+
       <PaymentSection textContent={langJson.PaymentSection} lang={lang} />
 
       <FeatureSection textContent={langJson.FeatureSection} />
-
-      <InfoSection
-        textContent={infoSectionLang.InfoSection}
-        lang={lang}
-        withoutCta
-        backgroundColor="bg-gray-1"
-        cards={cardsData}
-      />
 
       <CtaSection textContent={langJson.CtaSection} />
 
