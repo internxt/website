@@ -130,7 +130,7 @@ export const PriceCard = ({
       <div
         className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pb-10 pt-6`}
+        } p-6 pb-10 pt-10`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
