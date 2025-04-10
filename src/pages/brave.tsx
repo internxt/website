@@ -61,8 +61,6 @@ export default function BravePage({
 
       <MostSecureSection textContent={textContent.MostSecureSection} />
 
-      <CtaSection textContent={textContent.CtaSection} url="#priceTable" />
-
       <ScrollableSection textContent={textContent.ScrollableSection} />
 
       <PricingSectionWrapper
