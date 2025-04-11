@@ -1,0 +1,188 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": " die DSGVO-konform ist",
+        "textAfterBlueText": "Cloud-Speicherlösung"
+      },
+      "description": "Internxt bietet DSGVO-konformen Cloud-Speicher, um deine Daten gemäß den EU-Vorschriften zu schützen.",
+      "claimDeal": "Pläne vergleichen",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Cloud-Speicher, der DSGVO-konform ist",
+      "cta": "Pläne vergleichen",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    }
+  },
+  "Importance": {
+    "title": "Warum DSGVO-konformer Cloud-Speicher für deine Dateien wichtig ist",
+    "description": [
+      "DSGVO-konformer Cloud-Speicher schützt deine sensiblen Informationen und hilft Unternehmen, Datenlecks und Bußgelder wegen Nichteinhaltung zu vermeiden.",
+      "Mit Anbietern wie Internxt mit Sitz in der EU hast du die volle Kontrolle über deine Daten – du kannst sie verwalten, darauf zugreifen und löschen, wann immer du möchtest."
+    ],
+    "ctaText": "Internxt erhalten"
+  },
+  "WhySwitchSection": {
+    "title": "Warum du auf privaten Cloud-Speicher umsteigen solltest",
+    "subtitle": "Private Cloud-Speicherlösungen sorgen dafür, dass deine Daten privat und sicher vor Hackern und Unternehmen bleiben. Im Gegensatz zu Google, Apple oder Microsoft sammelt, verkauft oder missbraucht Internxt deine Daten nicht. Du hast die volle Kontrolle über deine Dateien.",
+    "description": "Investiere in deine Privatsphäre und sei dir sicher, dass deine Daten vor Datenpannen geschützt sind.",
+    "cta": "Internxt erhalten"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "DSGVO-konforme Cloud-Dienste von Internxt",
+      "line2": ""
+    },
+    "subtitle": "Internxt bietet DSGVO-konformen Cloud-Speicher für den privaten, geschäftlichen oder unternehmensweiten Einsatz. Durch fortschrittliche Verschlüsselung, Zugriffskontrollen und ein datenschutzorientiertes Design ist unser Cloud-Speicher die beste Lösung für DSGVO-Compliance.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive ist eine private Cloud-Speicherlösung, die DSGVO-konform ist und bei der der Datenschutz oberste Priorität hat. Es werden nur die notwendigsten Daten erhoben, um besten Service zu bieten, und deine Daten werden niemals weitergegeben.",
+      "cta": "Wähle deinen Plan"
+    },
+    "square2": {
+      "title": "Internxt Drive für Unternehmen",
+      "description": "Die Nichteinhaltung der DSGVO kann zu hohen Bußgeldern führen. Deshalb müssen Unternehmen ihre Datenmanagementpraktiken anpassen. Internxt für Unternehmen bietet eine DSGVO-konforme Cloud-Speicherlösung mit erweiterten Sicherheitsfunktionen zum Schutz deiner Unternehmensdaten.",
+      "cta": "Internxt für Unternehmen"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 ist eine objektbasierte Speicherlösung für Unternehmen, die vollständigen Datenschutz und DSGVO-Compliance garantiert. Mit einer Haltbarkeit von 99,999999999 % (11 Neunen) schützt Internxt S3 deine Dateien vor Verlust oder Beschädigung.",
+      "cta": "Internxt S3 erhalten"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "Welche Rechte hast du laut DSGVO?",
+    "description": "Laut DSGVO hast du das Recht, auf deine Daten zuzugreifen, deren Löschung zu verlangen und der Verarbeitung zu widersprechen. Mit einem datenschutzfokussierten Cloud-Service wie Internxt behältst du die Kontrolle über deine Daten.",
+    "info": [
+      {
+        "title": "Recht auf Auskunft",
+        "description": [
+          "Die DSGVO gibt dir das Recht zu wissen, welche personenbezogenen Daten ein Unternehmen über dich speichert, wie sie verwendet werden und wer Zugang dazu hat – einschließlich Drittländern oder internationalen Organisationen.",
+          "Mit einem DSGVO-konformen Cloud-Speicher hast du vollständige Kontrolle darüber, wie deine Daten verwaltet werden und kannst Maßnahmen ergreifen, wenn du mit der Datenverarbeitung nicht einverstanden bist."
+        ]
+      },
+      {
+        "title": "Recht auf Vergessenwerden",
+        "description": [
+          "Du hast das Recht, die Löschung deiner personenbezogenen Daten zu verlangen, wenn sie nicht mehr benötigt werden, unrechtmäßig erhoben wurden oder du deine Zustimmung widerrufst.",
+          "Das gibt dir mehr Kontrolle über deinen digitalen Fußabdruck und hilft, Identitätsdiebstahl, Datenlecks und Betrug zu verhindern. DSGVO-konforme Cloud-Dienste bieten dir hierbei den stärksten Schutz."
+        ]
+      },
+      {
+        "title": "Widerspruch gegen Datenverarbeitung",
+        "description": [
+          "Du kannst der Nutzung deiner Daten zu Marketingzwecken, Profilbildung oder anderen nicht gesetzlich vorgeschriebenen Zwecken widersprechen.",
+          "So kannst du unerwünschtes Tracking, gezielte Werbung oder Profiling verhindern. DSGVO-konforme Cloud-Dienste wie Internxt verwenden deine Daten nie für solche Zwecke – deine Privatsphäre ist von Anfang an geschützt."
+        ]
+      },
+      {
+        "title": "Einwilligung widerrufen",
+        "description": [
+          "Damit du nicht gezwungen bist, bestimmten Bedingungen zuzustimmen, gibt dir die DSGVO das Recht, eine bereits erteilte Einwilligung zur Datenverarbeitung zu widerrufen.",
+          "So kannst du deine persönlichen Informationen vor Dritten schützen und das Risiko von Datenlecks oder Missbrauch deiner Daten durch Unternehmen oder Hacker reduzieren."
+        ]
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Speichere deine Daten sicher",
+    "description": "mit einem Cloud-Speicher, der den DSGVO-Vorgaben entspricht",
+    "cta": "Internxt erhalten"
+  },
+
+  "CtaSection2": {
+    "title": "Privater Cloud-Speicher",
+    "description": "DSGVO- und EU-rechtskonform",
+    "cta": "Internxt erhalten"
+  },
+
+  "CtaSection3": {
+    "title": "DSGVO-Compliance leicht gemacht",
+    "description": "Privater Cloud-Speicher zum sicheren Speichern und Teilen von Daten",
+    "cta": "Internxt erhalten"
+  },
+
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist die DSGVO?",
+        "answer": [
+          "Die DSGVO (Datenschutz-Grundverordnung) ist ein EU-Gesetz, das regelt, wie personenbezogene Daten von EU-Bürgern verarbeitet werden dürfen.",
+          "Sie stellt sicher, dass Unternehmen persönliche Daten transparent, sicher und unter Achtung der Privatsphäre behandeln. Nutzer haben dadurch mehr Kontrolle, z. B. durch Einwilligungspflicht und das Recht auf Auskunft, Berichtigung oder Löschung."
+        ]
+      },
+      {
+        "question": "Was ist DSGVO-konformer Cloud-Speicher?",
+        "answer": [
+          "Das sind Cloud-Dienste, die innerhalb der EU betrieben werden und Vorschriften wie Verschlüsselung, Zugriffskontrollen, Backups und sichere Datenverarbeitung einhalten, um personenbezogene Daten zu schützen."
+        ]
+      },
+      {
+        "question": "Wie kann ich sicherstellen, dass mein Unternehmen bei der Cloud-Nutzung DSGVO-konform ist?",
+        "answer": [
+          "Wähle einen Cloud-Anbieter, der Verschlüsselung, Zugriffskontrollen, Backups und transparente Datenverarbeitung bietet. Internxt bietet DSGVO-konforme Unternehmenslösungen mit voller Kontrolle über die Daten von Kunden, Mitarbeitenden und dem Unternehmen."
+        ]
+      },
+      {
+        "question": "Kann ich sensible und vertrauliche Daten in einem DSGVO-konformen Cloud-Speicher speichern?",
+        "answer": [
+          "Ja, DSGVO-konformer Cloud-Speicher ist speziell dafür ausgelegt, sensible und vertrauliche Daten sicher zu speichern. Internxt nutzt Zero-Knowledge-Verschlüsselung zur Einhaltung strengster Datenschutzvorschriften."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Support kontaktieren?",
+        "answer": [
+          "Du findest keine Antwort? Unser Support-Team hilft dir gerne via Live-Chat oder per E-Mail an hello@internxt.com weiter."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährungen bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express etc.), sowie PayPal, iDEAL, Sofort und Kryptowährungen."
+        ]
+      }
+    ]
+  },
+
+  "FeatureSection": {
+    "title": "Wie DSGVO-konformer Cloud-Speicher deine Daten schützt",
+    "titleLine2": "",
+    "description": "Internxt erfüllt die strengen DSGVO-Vorgaben durch Zero-Knowledge-Verschlüsselung, Benutzerzugriffskontrollen und sichere Backups, um deine Daten sicher und privat zu halten.",
+    "cards": {
+      "element1": {
+        "title": "Ende-zu-Ende-Verschlüsselung",
+        "description": [
+          "Ende-zu-Ende-Verschlüsselung schützt deine Dateien vor Hackern – aber viele Anbieter verwalten diese Schlüssel und können auf staatliche Anfrage Zugriff gewähren.",
+          "Internxt nutzt Zero-Knowledge- und Post-Quantum-Verschlüsselung – nur du hast Zugriff auf deine Daten, da die Schlüssel nur auf deinem Gerät gespeichert werden.",
+          "Unsere preisgekrönte Verschlüsselung bietet höchste Online-Sicherheit und erfüllt strenge DSGVO-Anforderungen zum Schutz personenbezogener Daten."
+        ]
+      },
+      "element2": {
+        "title": "Zugriffskontrollen und Benutzerberechtigungen",
+        "description": [
+          "Die DSGVO verlangt technische und organisatorische Maßnahmen wie Zugriffskontrollen, um sensible Daten zu schützen.",
+          "Internxt Drive bietet Passwortschutz für Datei-Freigaben und Berechtigungen zur Zugriffsbeschränkung. Die Business-Pläne umfassen Zugrifflogs, die nachvollziehen, wer auf Dateien zugegriffen oder sie geändert hat – DSGVO-Compliance für dein ganzes Team."
+        ]
+      },
+      "element3": {
+        "title": "Backups und Datenwiederherstellung",
+        "description": [
+          "Die DSGVO verlangt, dass Unternehmen bei Zwischenfällen den Zugang zu personenbezogenen Daten schnellstmöglich wiederherstellen können.",
+          "Internxt bietet DSGVO-konformen Cloud-Speicher mit geplanten oder manuellen Backups. Deine Daten werden redundant in mehreren Rechenzentren gespeichert und können im Ernstfall schnell wiederhergestellt werden."
+        ]
+      },
+      "element4": {
+        "title": "Datenminimierung",
+        "description": [
+          "Datenminimierung ist ein Grundprinzip der DSGVO. Es verlangt, dass nur notwendige und relevante Daten für bestimmte Zwecke erhoben werden.",
+          "Wir setzen auf Datenschutz durch Zero-Knowledge-Verschlüsselung und geben keine Daten weiter. Du behältst stets die Kontrolle und kannst sicher sein, dass deine Informationen geschützt sind."
+        ]
+      }
+    }
+  }
+}

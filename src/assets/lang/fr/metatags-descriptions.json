@@ -173,5 +173,10 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Solutions de Sauvegarde de Stockage Cloud",
     "description": "Les solutions de sauvegarde de stockage cloud d'Internxt utilisent la redondance et un chiffrement primé qui protège vous et votre entreprise contre la perte de données."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt - Stockage cloud conforme au RGPD",
+    "description": "Internxt est un service de stockage en nuage conforme au RGPD et aux lois strictes de confidentialité de l'UE pour protéger vos informations."
   }
 ]

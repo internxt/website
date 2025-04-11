@@ -184,5 +184,10 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Cloud-Speicher-Backup-Lösungen",
     "description": "Internxt Cloud-Speicher-Backup-Lösungen nutzen Redundanz und preisgekrönte Verschlüsselung, die Sie und Ihr Unternehmen vor Datenverlust schützt."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt – DSGVO-konformer Cloud-Speicher",
+    "description": "Internxt ist ein Cloud-Speicherdienst, der der DSGVO und den strengen Datenschutzgesetzen der EU entspricht, um deine Informationen zu schützen."
   }
 ]

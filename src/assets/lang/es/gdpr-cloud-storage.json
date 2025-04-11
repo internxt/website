@@ -1,0 +1,186 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": " que cumple con RGPD",
+        "textAfterBlueText": "Almacenamiento en la nube"
+      },
+      "description": "Internxt ofrece almacenamiento en la nube compatible con RGPD para proteger tus datos según las regulaciones de la UE.",
+      "claimDeal": "Compara planes",
+      "guarantee": "Garantía de devolución de 30 días"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Almacenamiento en la nube que cumple con RGPD",
+      "cta": "Compara planes",
+      "guarantee": "Garantía de devolución de 30 días"
+    }
+  },
+  "Importance": {
+    "title": "La importancia de elegir un almacenamiento en la nube RGPD para tus archivos",
+    "description": [
+      "El almacenamiento en la nube conforme al RGPD protege tu información confidencial y ayuda a las empresas a prevenir filtraciones de datos y multas por su incumplimiento.",
+      "Al elegir empresas con sede en la UE como Internxt, obtienes control total sobre tus datos, lo que te permite gestionar, acceder y eliminar archivos según tus necesidades."
+    ],
+    "ctaText": "Get Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "Why you should switch to private cloud storage solutions",
+    "subtitle": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
+    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
+    "cta": "Get Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Servicios en la nube de Internxt que cumplen con el RGPD",
+      "line2": ""
+    },
+    "subtitle": "Internxt ofrece almacenamiento en la nube conforme al RGPD para uso personal, empresarial o corporativo. Gracias a nuestro cifrado avanzado, controles de acceso y un enfoque centrado en la privacidad, nuestro almacenamiento en la nube ofrece la mejor solución para el cumplimiento del RGPD.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive es una solución de almacenamiento en la nube privada que cumple con el RGPD y está diseñada con la privacidad como prioridad. Solo recopila los datos necesarios para brindar el mejor servicio y nunca comparte tu información con nadie.",
+      "cta": "Elige tu plan"
+    },
+    "square2": {
+      "title": "Internxt Drive para empresas",
+      "description": "El incumplimiento del RGPD puede conllevar multas costosas, por lo que es fundamental que las empresas adapten sus prácticas de gestión de datos a sus estándares. Internxt para empresas ofrece una solución de almacenamiento en la nube que cumple con el RGPD y protege los datos de tu empresa con funciones de seguridad avanzadas.",
+      "cta": "Internxt para empresas"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 es una solución de almacenamiento de objetos de nivel empresarial que garantiza la total protección de tus datos y el cumplimiento del RGPD. Internxt S3 garantiza una durabilidad del 99,999999999 % (11 9 s) para los archivos respaldados, protegiéndolos contra pérdidas o daños.",
+      "cta": "Get Internxt S3"
+    }
+  },
+
+  "FeaturesSection": {
+    "title": "¿Cuáles son tus derechos según el RGPD?",
+    "description": "Según el RGPD, tienes derecho a acceder a tus datos, solicitar su eliminación y oponerte a su uso. Con un servicio en la nube que prioriza la privacidad como Internxt, tú controlas tus datos.",
+    "info": [
+      {
+        "title": "Derecho a acceder a tus datos",
+        "description": [
+          "La política de derecho de acceso del RGPD te permite saber qué datos personales tuyos almacena una empresa, cómo los utiliza y quién tiene acceso a ellos, incluidos terceros países u organizaciones internacionales.",
+          "Con un almacenamiento en la nube conforme al RGPD, tú tienes control total sobre tus datos, cómo se gestionan y la decisión de tomar medidas si no estás de acuerdo con las políticas de gestión de datos de una empresa."
+        ]
+      },
+      {
+        "title": "Derecho al olvido o de supresión",
+        "description": [
+          "Tienes el derecho de solicitar la eliminación de tus datos personales de un servicio cuando ya no sean necesarios, se hayan recopilado ilegalmente o desees retirar tu consentimiento para el uso de tus datos.",
+          "Esto te brinda mayor control sobre tu huella digital, lo que ayuda a prevenir el robo de identidad, las filtraciones de datos y el fraude para evitar que las empresas conserven tus datos indefinidamente sin una razón válida. Si quieres mayor privacidad en línea, los servicios en la nube conformes al RGPD son la opción más sólida para tus datos. "
+        ]
+      },
+      {
+        "title": "Oposición al procesamiento de datos",
+        "description": [
+          "El RGPD también te otorga el derecho a impedir que una empresa utilice tus datos con fines de marketing, elaboración de perfiles u otros fines ajenos a las obligaciones legales.",
+          "Con el derecho a oponerte al tratamiento de datos, puedes evitar el seguimiento no deseado de datos, la publicidad dirigida o la elaboración de perfiles. Los servicios en la nube que cumplen con el RGPD, como Internxt, nunca utilizan tus datos personales para estos fines, lo que garantiza tu privacidad desde el momento en que creas tu cuenta."
+        ]
+      },
+      {
+        "title": "Retirar tu consentimiento",
+        "description": [
+          "Para evitar que te veas obligado a firmar acuerdos con una empresa, el RGPD también te otorga el derecho a revocar el permiso para que una empresa procese tu información personal. ",
+          "Al retirar ese consentimiento, puedes mantener tus datos y tu información personal alejados de terceros y reducir el riesgo de filtraciones de datos, evitando que agentes maliciosos y empresas externas se beneficien de tus datos."
+        ]
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Almacena de forma segura tu información",
+    "description": "con un almacenamiento en la nube que cumple con las normativas RGPD",
+    "cta": "Consigue Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "Almacenamiento en la nube privado",
+    "description": "Cumple con RGPD y leyes europeas",
+    "cta": "Get Internxt"
+  },
+  "CtaSection3": {
+    "title": "GDPR compliance made simple",
+    "description": "Private cloud storage to store and share data securely",
+    "cta": "Get Internxt"
+  },
+
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es el RGPD?",
+        "answer": [
+          "El RGPD, o el Reglamento General de Protección de Datos, es una ley europea que regula cómo se tratan los datos personales de los ciudadanos de la Unión Europea (UE). ",
+          "El RGPD tiene como objetivo garantizar que las empresas y organizaciones manejen la información personal de manera transparente, segura y respetuosa con la privacidad de los usuarios. Esto otorga a los ciudadanos de la UE un mayor control sobre tus datos, exigiendo el consentimiento explícito para su recopilación y el derecho a acceder, corregir o eliminar la información almacenada. "
+        ]
+      },
+      {
+        "question": "¿Qué es el almacenamiento en la nube GDPR? ",
+        "answer": [
+          "Los servicios en la nube que cumplen con el RGPD se refieren a empresas de la nube que operan en la UE y que deben cumplir con las regulaciones que protegen los datos personales con cifrado, controles de acceso, copias de seguridad y seguir protocolos para manejar los datos de forma segura."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo garantizar que mi empresa siga cumpliendo con el RGPD al utilizar almacenamiento en la nube?",
+        "answer": [
+          "Para garantizar el cumplimiento del RGPD, elige un proveedor de almacenamiento en la nube que ofrezca cifrado, controles de acceso, soluciones de copia de seguridad y transparencia en el manejo de datos. Los planes empresariales de Internxt ofrecen almacenamiento en la nube que cumple con el RGPD, con control total sobre los datos de tus clientes, empleados y empresa."
+        ]
+      },
+      {
+        "question": "¿Puedo almacenar datos personales sensibles y confidenciales en un almacenamiento en la nube que cumpla con el RGPD?",
+        "answer": [
+          "Sí, el almacenamiento en la nube, que cumple con el RGPD, está diseñado para almacenar de forma segura datos personales sensibles y confidenciales. El cifrado de conocimiento cero protege tus archivos con Internxt para cumplir con las estrictas leyes de protección de datos del RGPD."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo contactar con el soporte técnico?",
+        "answer": [
+          "¿No encuentras lo que buscas? Puedes contactar con nuestro equipo de Atención al Cliente a través del chat en línea o enviando un correo electrónico a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar con PayPal, iDEAL, Sofort y criptomonedas."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Cómo el almacenamiento en la nube GDPR protege tus datos",
+    "titleLine2": "",
+    "description": "Internxt cumple con los estrictos requisitos del RGPD al proporcionar cifrado de conocimiento cero, control de acceso de usuarios y copias de seguridad seguras para mantener tus datos seguros y privados.",
+    "cards": {
+      "element1": {
+        "title": "Cifrado de extremo a extremo",
+        "description": [
+          "El cifrado de extremo a extremo es un método seguro para proteger tus archivos de los hackers, pero muchas empresas gestionan estas claves de cifrado y pueden dar acceso a tus archivos al gobierno si así lo solicitan.",
+          "Internxt utiliza cifrado de conocimiento cero y postcuántico, lo que garantiza que las claves se almacenen únicamente en tu dispositivo, para que nadie más que tú puedas acceder a tus datos.",
+          "Nuestro cifrado avanzado y galardonado te ofrece la máxima seguridad en línea y cumple con estrictos requisitos del RGPD para la protección de datos personales y la prevención de ciberataques."
+        ]
+      },
+      "element2": {
+        "title": "Controles de acceso y permisos de usuario",
+        "description": [
+          "El RGPD exige a las organizaciones implementar medidas técnicas y organizativas adecuadas para garantizar un nivel de seguridad adecuado al riesgo, incluyendo controles y permisos de usuario para limitar el acceso a datos confidenciales.",
+          "Los servicios en la nube que cumplen con el RGPD incluyen acceso y permisos de usuario para cumplir estos requisitos. Internxt Drive incluye intercambio de archivos protegido con contraseña y controles para restringir el acceso. Los planes de Internxt Business incluyen registros de acceso para rastrear quién inició sesión, cargó o modificó archivos, lo que garantiza el cumplimiento normativo de todo el equipo."
+        ]
+      },
+      "element3": {
+        "title": "Copias de seguridad y recuperación de datos",
+        "description": [
+          "El RGPD establece que las empresas deben tomar medidas para restablecer la disponibilidad y el acceso a los datos personales de forma oportuna en caso de incidente físico o técnico.",
+          "Con Internxt, obtienes almacenamiento en la nube que cumple con el RGPD gracias a copias de seguridad programadas o manuales, y tus datos se almacenan de forma segura en múltiples centros de datos. Este enfoque aumenta la redundancia y garantiza un acceso rápido a tus archivos respaldados, lo que te permite restaurar los datos rápidamente en caso de incidente y mantener la seguridad personal y el cumplimiento normativo de las empresas."
+        ]
+      },
+      "element4": {
+        "title": "Minimización de datos",
+        "description": [
+          "La minimización de datos es un principio fundamental para el RGPD y los proveedores de almacenamiento en la nube privada. Exige que las organizaciones recopilen y procesen únicamente los datos personales adecuados, relevantes y necesarios para fines específicos.",
+          "Priorizamos tu privacidad protegiendo todos tus datos con cifrado de conocimiento cero, garantizando así que solo tú puedas acceder a ellos. Nunca compartimos tus datos con nadie, lo que te brinda total control y tranquilidad sobre tu información personal."
+        ]
+      }
+    }
+  }
+}
