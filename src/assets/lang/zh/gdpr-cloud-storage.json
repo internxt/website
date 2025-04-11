@@ -1,0 +1,180 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "符合GDPR",
+        "textAfterBlueText": "云存储"
+      },
+      "description": "Internxt提供符合GDPR的云存储，以确保您的数据符合欧盟法律要求。",
+      "claimDeal": "比较价格",
+      "guarantee": "30天退款保证"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "符合GDPR的云存储",
+      "cta": "比较价格",
+      "guarantee": "30天退款保证"
+    }
+  },
+  "Importance": {
+    "title": "为什么选择符合GDPR的云存储对于您的文件至关重要",
+    "description": [
+      "符合GDPR的云存储可以保护您的敏感信息，帮助公司避免数据泄露和因不合规而受到的罚款。",
+      "选择像Internxt这样的欧盟服务提供商，您将完全控制自己的数据，可以随时访问、管理和删除它们。"
+    ],
+    "ctaText": "获取Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "为什么要转向私人云存储解决方案",
+    "subtitle": "转向私人云存储解决方案，确保您的数据免受黑客和大型公司侵害。与谷歌、苹果或微软不同，Internxt不会收集、出售或利用您的数据。您完全控制自己的文件。",
+    "description": "投资您的隐私，确保您的文件和数据免受泄露。",
+    "cta": "获取Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Internxt提供符合GDPR的云存储服务",
+      "line2": ""
+    },
+    "subtitle": "Internxt提供符合GDPR的云存储，适用于个人、专业和企业用途。通过我们的先进加密技术、访问控制和隐私优先的理念，我们的云存储是确保GDPR合规性的最佳选择。",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive是一款专为隐私而设计的私人云存储，符合GDPR要求。我们只收集提供优质服务所必需的数据，您的信息永远不会被第三方访问。",
+      "cta": "选择计划"
+    },
+    "square2": {
+      "title": "Internxt Drive for Business",
+      "description": "不符合GDPR的企业可能面临重罚，因此公司必须确保数据管理实践符合GDPR要求。Internxt for Business为企业提供符合GDPR的云存储，通过先进的安全功能保护公司数据。",
+      "cta": "企业版Internxt"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3是一个企业级对象存储解决方案，确保您的数据受到保护并符合GDPR要求。Internxt S3提供99.999999999%（11个9）的可靠性，确保文件不会丢失或损坏。",
+      "cta": "获取Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "GDPR规定下，您有哪些权利？",
+    "description": "根据GDPR，您有权访问、删除您的数据，并反对其处理。选择像Internxt这样的注重隐私的云服务，您将完全控制自己的数据。",
+    "info": [
+      {
+        "title": "访问您数据的权利",
+        "description": [
+          "根据GDPR，您有权了解公司存储的个人数据、其使用方式以及谁能访问这些数据，包括第三方国家或国际组织。",
+          "选择符合GDPR的云存储，您可以完全控制数据，随时访问、管理和行动，如果您不同意公司的数据管理实践。"
+        ]
+      },
+      {
+        "title": "被遗忘权",
+        "description": [
+          "您有权请求删除个人数据，如果它们不再需要，或在非法收集数据时，或您撤回同意时。",
+          "这让您对自己的数字足迹拥有更多的控制权，防止身份盗窃、数据泄露、欺诈行为以及不必要的数据存储。"
+        ]
+      },
+      {
+        "title": "反对数据处理的权利",
+        "description": [
+          "GDPR还赋予您反对数据用于营销、分析或其他法律规定以外目的的权利。",
+          "通过行使此权利，您可以防止不必要的跟踪、定向广告或数据分析。像Internxt这样的符合GDPR的云服务永远不会将您的个人数据用于这些目的，确保您的隐私从一开始就得到保护。"
+        ]
+      },
+      {
+        "title": "撤回同意",
+        "description": [
+          "GDPR确保您可以随时撤回对公司收集和处理您个人数据的同意，从而避免强迫您与公司签署协议。",
+          "撤回同意有助于保护您的数据和个人信息免受第三方访问，减少数据泄露的风险，并防止未经授权的使用。"
+        ]
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "保护您的数据安全",
+    "description": "使用符合GDPR的云存储",
+    "cta": "获取Internxt"
+  },
+  "CtaSection2": {
+    "title": "私人云存储",
+    "description": "符合GDPR和欧洲法律要求",
+    "cta": "获取Internxt"
+  },
+  "CtaSection3": {
+    "title": "轻松遵守GDPR要求",
+    "description": "为您的数据提供安全存储和共享的私人云存储",
+    "cta": "获取Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们找到了解答",
+    "faq": [
+      {
+        "question": "什么是GDPR？",
+        "answer": [
+          "GDPR（通用数据保护条例）是欧盟的法规，旨在监管欧盟公民个人数据的处理。",
+          "GDPR要求公司和组织以透明、安全的方式处理个人数据，尊重隐私，为公民提供更多控制个人信息的权利，包括明确的同意、访问、更正和删除数据的权利。"
+        ]
+      },
+      {
+        "question": "什么是符合GDPR的云存储？",
+        "answer": [
+          "符合GDPR的云存储是由欧盟服务提供商提供的，符合个人数据保护规定的云存储解决方案，包括加密、访问控制、备份和安全的数据处理协议。"
+        ]
+      },
+      {
+        "question": "我如何确保我的公司在使用云存储时符合GDPR要求？",
+        "answer": [
+          "为了确保GDPR合规性，选择一个提供加密、访问控制、备份解决方案并对数据管理过程保持透明的云存储供应商。Internxt的企业方案提供符合GDPR的云存储，全面控制客户、员工和公司数据。"
+        ]
+      },
+      {
+        "question": "我可以将敏感和机密数据存储在符合GDPR要求的云存储中吗？",
+        "answer": [
+          "是的，符合GDPR要求的云存储专为安全存储敏感和机密的个人数据而设计。Internxt使用零知识加密（Zero-Knowledge）以符合GDPR的严格数据保护标准。"
+        ]
+      },
+      {
+        "question": "如何联系我们的技术支持？",
+        "answer": ["没有找到答案？您可以通过在线聊天联系我们的支持团队，或发送邮件至hello@internxt.com。"]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal或加密货币支付吗？",
+        "answer": [
+          "Internxt目前接受信用卡（Mastercard、VISA、American Express等）、PayPal、iDEAL、Sofort和加密货币支付。"
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "符合GDPR的云存储如何保护您的数据",
+    "titleLine2": "",
+    "description": "Internxt通过零知识加密、访问控制和安全备份技术，严格遵守GDPR要求，确保您的数据始终安全、私密。",
+    "cards": {
+      "element1": {
+        "title": "端到端加密",
+        "description": [
+          "端到端加密保护您的文件不被黑客攻击，但许多公司管理这些加密密钥，并可能根据要求提供访问权限。",
+          "Internxt使用零知识加密和后量子加密，确保加密密钥仅存储在您的设备上，任何人都无法访问您的数据，除非是您自己。",
+          "我们的获奖加密技术提供最强的网络安全性，并符合GDPR数据保护标准。"
+        ]
+      },
+      "element2": {
+        "title": "访问控制和用户权限",
+        "description": [
+          "GDPR要求组织实施适当的技术和组织措施来确保安全，包括对敏感数据的访问控制。",
+          "符合GDPR的云服务包括管理用户的访问权限。Internxt Drive提供密码保护的文件共享和访问限制，企业计划包括访问日志，以追踪谁访问、上传或更改了文件，确保团队成员合规。"
+        ]
+      },
+      "element3": {
+        "title": "数据备份和恢复",
+        "description": [
+          "GDPR要求公司采取措施，确保在技术或物理事件发生时，能够恢复个人数据的可用性和访问权限。",
+          "通过Internxt，您获得符合GDPR的云存储，提供定期或手动备份，您的数据存储在多个数据中心，确保在发生事件时可以快速恢复。"
+        ]
+      },
+      "element4": {
+        "title": "数据最小化",
+        "description": [
+          "数据最小化是GDPR的核心原则，要求只收集和处理必要、相关和适当的个人数据。",
+          "我们将您的隐私放在首位，通过零知识加密保护您的数据，确保只有您能访问它们。您的数据永远不会被共享，让您对自己的数据拥有完全的控制权。"
+        ]
+      }
+    }
+  }
+}
