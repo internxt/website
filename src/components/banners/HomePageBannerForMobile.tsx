@@ -14,6 +14,7 @@ export const HomePageBannerForMobile = () => {
   return (
     <div
       className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
+      style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
     >
       <div className="flex flex-col items-center justify-center gap-4 pt-5">
         <p className="flex w-max rounded-md border-blue-20 bg-white px-2 py-1 text-sm  font-bold text-primary">
@@ -36,7 +37,7 @@ export const HomePageBannerForMobile = () => {
           </p>
         </div>
         <Image
-          src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
+          src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
           width={450}
           height={400}
           quality={100}

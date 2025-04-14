@@ -31,6 +31,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
       <div className="relative mx-4 lg:pt-0 xl:mx-32">
         <div
           className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
+          style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
         />
 
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col-reverse items-center justify-between gap-y-10 lg:flex-row lg:gap-x-12 xl:gap-x-20">
@@ -64,11 +65,11 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div className="hidden w-full max-w-[640px] justify-end pt-12 lg:flex xl:pt-20">
             <Image
               loading="eager"
-              src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
+              src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
               draggable="false"
               quality={100}
-              width={641}
-              height={641}
+              width={463}
+              height={441}
               className="h-auto w-full object-contain"
               alt="HeroSection Image"
               onClick={handleOnClick}
