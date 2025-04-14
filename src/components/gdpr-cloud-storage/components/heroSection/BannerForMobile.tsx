@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 export const BannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../../../assets/lang/${lang}/private-cloud-storage-solutions.json`);
+  const textContent = require(`../../../../assets/lang/${lang}/gdpr-cloud-storage.json`);
   const handleOnClick = () => {
     router.push('/pricing');
   };

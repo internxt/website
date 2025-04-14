@@ -90,7 +90,16 @@ const FeaturesSection = ({ textContent }) => {
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
               <p className="mb-6 text-2xl font-medium text-gray-100">{info.title}</p>
-              <ReactMarkdown className="text-base text-cool-gray-80 sm:text-lg">{info.description}</ReactMarkdown>
+              {/* Render the description as an array of paragraphs */}
+              {Array.isArray(info.description) ? (
+                info.description.map((line, index) => (
+                  <p key={index} className="mb-4 text-base text-cool-gray-80 sm:text-lg">
+                    {line}
+                  </p>
+                ))
+              ) : (
+                <p className="text-base text-cool-gray-80 sm:text-lg">{info.description}</p>
+              )}
             </div>
           </div>
         ))}

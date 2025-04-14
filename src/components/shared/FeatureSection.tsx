@@ -21,7 +21,7 @@ export interface FeatureSectionProps {
 const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards }: FeatureSectionProps) => {
   return (
     <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-20">
+      <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
         {/* Header Section */}
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full max-w-[800px] flex-col items-center justify-center space-y-6 text-center">
