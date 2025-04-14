@@ -139,7 +139,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                 {textContent.features.map((feat) => (
                   <div key={feat} className="flex flex-row gap-2">
                     <Check className="pt-2 text-green-1 lg:pt-0" weight="bold" size={24} />
-                    <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                    <p className="text-left text-lg font-semibold text-gray-100 lg:text-white ">{feat}</p>
                   </div>
                 ))}
               </div>
