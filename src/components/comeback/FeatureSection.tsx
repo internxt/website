@@ -1,4 +1,15 @@
-import { ChartLineUp, ClockUser, Fingerprint, Rocket } from '@phosphor-icons/react';
+import {
+  ChartLineUp,
+  ClockUser,
+  Devices,
+  Eye,
+  Fingerprint,
+  FolderLock,
+  Leaf,
+  LockKey,
+  Rocket,
+  Trophy,
+} from '@phosphor-icons/react';
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
@@ -6,7 +17,7 @@ import RevealX from '@/components/components/RevealX';
 const FeaturesSection = ({ textContent }) => {
   const [cardIndex, setCardIndex] = useState(0);
 
-  const groupCards = [
+  const cardInfo = [
     {
       icon: ChartLineUp,
       title: textContent.features[0].title,
@@ -29,12 +40,12 @@ const FeaturesSection = ({ textContent }) => {
     },
   ];
 
-  const DescriptionIcon = groupCards[cardIndex].icon;
+  const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className="h-[850px] overflow-hidden bg-gray-1">
-      <section className="flex  flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
-        <div className="flex w-full max-w-[898px] flex-col items-center justify-center space-y-6 text-center">
+    <section className="overflow-hidden">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
+        <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <div className="flex flex-col space-y-6">
             <p className="text-lg text-gray-80">{textContent.description}</p>
@@ -64,9 +75,9 @@ const FeaturesSection = ({ textContent }) => {
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
-                <p className="text-4xl font-semibold text-gray-100">{groupCards[cardIndex].title}</p>
+                <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
                 <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
-                  {groupCards[cardIndex].description}
+                  {cardInfo[cardIndex].description}
                 </ReactMarkdown>
               </div>
             </div>
@@ -74,7 +85,7 @@ const FeaturesSection = ({ textContent }) => {
         </RevealX>
       </div>
       <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
-        {groupCards.map((info) => (
+        {cardInfo.map((info) => (
           <div
             key={info.title}
             className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]"
