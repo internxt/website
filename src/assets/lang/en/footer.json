@@ -84,7 +84,8 @@
       "features": {
         "title": "Features",
         "privateCloud": "Private cloud storage",
-        "cloudBakcup": "Cloud storage backup"
+        "cloudBakcup": "Cloud storage backup",
+        "GDPRCloud": "GDPR Cloud Storage"
       }
     }
   },

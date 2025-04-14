@@ -85,7 +85,8 @@
       "features": {
         "title": "Funktionen",
         "privateCloud": "Private-Cloud-Lösung",
-        "cloudBakcup": "Cloud-Backup-Lösung"
+        "cloudBakcup": "Cloud-Backup-Lösung",
+        "GDPRCloud": "DSGVO-Speicher"
       }
     }
   },
