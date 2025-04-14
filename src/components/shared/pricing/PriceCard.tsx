@@ -128,7 +128,7 @@ export const PriceCard = ({
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`flex h-[330px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
         } p-6 pb-10 pt-10`}
       >
