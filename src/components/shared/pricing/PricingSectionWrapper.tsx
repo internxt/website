@@ -118,14 +118,14 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          {!hideTitle && <Header maxWidth="max-w-4xl text-4xl">{title()}</Header>}
+          {!hideTitle && <Header maxWidth="max-w-4xl max-w-[1000px] text-4xl">{title()}</Header>}
           <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
 
           {CustomDescription ? (
             CustomDescription
           ) : !hideDescription ? (
             <span
-              className="text-regular max-w-[800px] text-xl text-gray-80"
+              className="text-regular max-w-[1000px] text-xl text-gray-80"
               dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
             />
           ) : null}
