@@ -37,7 +37,7 @@ const FreeUserPage = ({
   const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
+    couponCode: PromoCodeName.Special80Coupon,
   });
 
   const [isBusiness, setIsBusiness] = useState<boolean>();
@@ -47,7 +47,7 @@ const FreeUserPage = ({
   };
 
   const onCheckoutButtonClicked = (planId: string, isCheckoutForLifetime: boolean) => {
-    const couponCodeForCheckout = isBusiness ? businessCoupon : coupon;
+    const couponCodeForCheckout = coupon;
     const planType = isBusiness ? 'business' : 'individual';
 
     stripeService.redirectToCheckout(
@@ -72,7 +72,8 @@ const FreeUserPage = ({
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: 25,
+          individuals: 20,
+          lifetime: 20,
         }}
         lang={locale}
         products={products}
@@ -81,6 +82,7 @@ const FreeUserPage = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
+        showPromo={false}
       />
 
       <FeatureSectionForSpecialOffer textContent={textContent.FeatureSection} />
