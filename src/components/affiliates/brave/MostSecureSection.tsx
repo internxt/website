@@ -27,6 +27,14 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({ textContent }) =>
             <h1 className="text-3xl font-semibold text-gray-100 xl:text-5xl">{textContent.title}</h1>
             <h2 className="font-regular text-xl text-gray-80 xl:text-xl">{textContent.description}</h2>
           </div>
+          <button
+            className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
+            onClick={() => {
+              window.location.hash = '#priceTable';
+            }}
+          >
+            {textContent.cta}
+          </button>
         </div>
       </HeroSectionSafeArea>
     </section>

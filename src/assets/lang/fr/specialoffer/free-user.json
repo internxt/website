@@ -1,10 +1,10 @@
 {
   "HeroSection": {
     "title": {
-      "blue": "Économisez 75% ",
+      "blue": "Économisez 80% ",
       "normal": "sur tous les plans de stockage cloud sécurisé"
     },
-    "description": "Mettez à niveau votre compte gratuit pour obtenir 75% de réduction sur n'importe quel plan. Avec notre stockage cloud crypté et open-source, vous pouvez stocker et partager vos fichiers en toute confidentialité.",
+    "description": "Mettez à niveau votre compte gratuit pour obtenir 80% de réduction sur n'importe quel plan. Avec notre stockage cloud crypté et open-source, vous pouvez stocker et partager vos fichiers en toute confidentialité.",
     "cta": "Mettre à niveau le plan",
     "recommendedBy": "Recommandé par:"
   },
@@ -49,7 +49,7 @@
       "Avec nos plans payants, vous pouvez stocker et accéder à vos fichiers localement sans consommer l'espace de stockage physique de votre appareil.",
       "Profitez de la tranquillité d'esprit en sachant que vos souvenirs et documents importants sont sauvegardés en toute sécurité dans le cloud, accessibles depuis n'importe quel appareil."
     ],
-    "cta": "Obtenez 75% de RÉDUCTION"
+    "cta": "Obtenez 80% de RÉDUCTION"
   },
   "InxtFeaturesSection": {
     "title": "Internxt offre un stockage cloud sécurisé conçu pour protéger votre vie privée",
@@ -83,7 +83,7 @@
   },
   "CtaSection": {
     "title": "Besoin de plus de stockage?",
-    "description": "Obtenez 75% de réduction sur n'importe quel plan.",
+    "description": "Obtenez 80% de réduction sur n'importe quel plan.",
     "cta": "Mettre à niveau le plan"
   },
   "WhatWeDoSection": {
@@ -97,7 +97,7 @@
         "Authentification 2FA",
         "Sauvegardes sur plusieurs serveurs"
       ],
-      "cta": "Obtenez 75% de RÉDUCTION"
+      "cta": "Obtenez 80% de RÉDUCTION"
     }
   },
   "FaqSection": {
@@ -112,7 +112,7 @@
       {
         "question": "Comment puis-je mettre à niveau mon plan gratuit?",
         "answer": [
-          "Votre réduction de 75% sera automatiquement appliquée à la caisse. Pour réclamer votre réduction, sélectionnez votre plan mensuel, annuel ou à vie et procédez à la page de paiement."
+          "Votre réduction de 80% sera automatiquement appliquée à la caisse. Pour réclamer votre réduction, sélectionnez votre plan mensuel, annuel ou à vie et procédez à la page de paiement."
         ]
       },
       {
