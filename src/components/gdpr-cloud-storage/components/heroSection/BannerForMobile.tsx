@@ -15,7 +15,7 @@ export const BannerForMobile = () => {
   return (
     <div className="flex flex-col items-center justify-center lg:hidden">
       <div className="flex flex-col items-center justify-center gap-4">
-        <p className="text-center text-5xl font-bold text-gray-100">
+        <p className=" text-center text-4xl font-bold text-gray-100">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
         <button
