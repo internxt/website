@@ -14,7 +14,6 @@ export interface Section {
   description: string;
   peaceOfMind?: string;
   cta: string;
-  description2?: string;
   subtitle?: string;
 }
 

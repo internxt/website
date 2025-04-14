@@ -94,7 +94,11 @@ const ResurrectionCampaign = ({
 
       <TestimonialsSection textContent={textContent.TestimonialsSection} bgColor="bg-white" />
 
-      <CtaSection textContent={textContent.CtaSection} url="#billingButtons" />
+      <CtaSection
+        textContent={textContent.CtaSection}
+        url="#billingButtons"
+        customDescription={<p className="font-regular max-w-[360px] text-xl">{textContent.CtaSection.description}</p>}
+      />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
