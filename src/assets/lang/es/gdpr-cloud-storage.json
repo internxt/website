@@ -17,18 +17,18 @@
     }
   },
   "Importance": {
-    "title": "La importancia de elegir un almacenamiento en la nube RGPD para tus archivos",
+    "title": "Almacenamiento RGPD para tus archivos",
     "description": [
       "El almacenamiento en la nube conforme al RGPD protege tu información confidencial y ayuda a las empresas a prevenir filtraciones de datos y multas por su incumplimiento.",
       "Al elegir empresas con sede en la UE como Internxt, obtienes control total sobre tus datos, lo que te permite gestionar, acceder y eliminar archivos según tus necesidades."
     ],
-    "ctaText": "Get Internxt"
+    "ctaText": "Elige tu plan "
   },
   "WhySwitchSection": {
     "title": "Why you should switch to private cloud storage solutions",
     "subtitle": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
     "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
-    "cta": "Get Internxt"
+    "cta": "Elige tu plan "
   },
   "WhatWeDo": {
     "title": {
@@ -97,12 +97,12 @@
   "CtaSection2": {
     "title": "Almacenamiento en la nube privado",
     "description": "Cumple con RGPD y leyes europeas",
-    "cta": "Get Internxt"
+    "cta": "Elige tu plan"
   },
   "CtaSection3": {
-    "title": "GDPR compliance made simple",
-    "description": "Private cloud storage to store and share data securely",
-    "cta": "Get Internxt"
+    "title": "Almacenamiento en la nube RGPD",
+    "description": "Protege y almacena tu información de forma segura y confidencial",
+    "cta": "Elige tu plan"
   },
 
   "FaqSection": {
