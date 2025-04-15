@@ -1,11 +1,13 @@
-export interface PrivateCloudStorageSolutionsText {
+export interface gdprCloudStorageText {
   HeroSection: HeroSection;
+  Importance: Importance;
   FeatureSection: ComponentsInColumn;
   FeaturesSection: FeaturesSection;
   WhatWeDo: WhatWeDo;
   FaqSection: FAQSection;
   CtaSection1: BetterTomorrowSection;
   CtaSection2: BetterTomorrowSection;
+  CtaSection3: BetterTomorrowSection;
   WhySwitchSection: CtaSection;
 }
 export interface ComponentsInColumn {
@@ -22,7 +24,11 @@ export interface ComponentsInColumnCards {
   element3: Element4Class;
   element4: Element4Class;
 }
-
+export interface Importance {
+  title: string;
+  description: string;
+  ctaText: string;
+}
 export interface Element4Class {
   title: string;
   description: string;
