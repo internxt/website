@@ -32,6 +32,11 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
+            <Header maxWidth="max-w-[500px]" className="text-white">
+              {textContent.title.textBeforeBlueText}
+              <span className="text-primary">{textContent.title.blueText}</span>
+              {textContent.title.textAfterBlueText}
+            </Header>
             <p className="pt-4 text-xl font-bold ">
               <span className="text-primary">{textContent.subtitle}</span>
             </p>
