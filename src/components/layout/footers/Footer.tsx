@@ -441,29 +441,14 @@ export default function Footer({
                       {textContent.FooterSection.sections.tools.fileVirusScan}
                     </Link>
 
-                    <Link
-                      href="/password-generator"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.passwordGenerator}
                     </Link>
 
-                    <Link
-                      href="/file-converter"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
-                    <Link
-                      href="/dark-web-monitor"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
                       <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
@@ -536,6 +521,7 @@ export default function Footer({
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
+
               <div className="flex flex-row items-center gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -593,7 +579,7 @@ export default function Footer({
                 </Link>
               </div>
             </div>
-            {/* <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p> */}
+            <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p>
           </div>
 
           {/* Mobile version */}

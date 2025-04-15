@@ -8,6 +8,7 @@ import {
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -141,11 +142,11 @@ export default function PriceCard({
           <span className="text-[13.5px] font-bold text-white">{contentText.starWarsDay.title}</span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <Gift className="bg-green h-6 w-6 " weight="fill" color="#32C356" />
               <span className="text-[13.5px] text-white">{contentText.starWarsDay.gift1}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <Gift className="bg-green h-6 w-6 " weight="fill" color="#32C356" />
               <span className="text-[13.5px] text-white">{contentText.starWarsDay.gift2}</span>
             </div>
           </div>

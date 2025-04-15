@@ -9,6 +9,7 @@ import {
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -131,11 +132,11 @@ export const PriceCardsForAffiliatesPartners = ({
         <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.starWarsDay.title}</span>
         <div className="flex flex-col items-start space-y-2">
           <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+            <Gift className="h-6 w-6 text-white" weight="fill" color="#32C356" />
             <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift1}</span>
           </div>
           <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+            <Gift className="h-6 w-6 text-white" weight="fill" color="#32C356" />
             <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift2}</span>
           </div>
         </div>
