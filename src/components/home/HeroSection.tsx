@@ -62,7 +62,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             </div>
           </div>
 
-          <div className="hidden w-full max-w-[640px] justify-end pt-12 lg:flex xl:pt-20">
+          <div className="hidden w-full max-w-[540px] justify-end pt-12 lg:flex xl:pt-20">
             <Image
               loading="eager"
               src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
