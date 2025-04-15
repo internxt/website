@@ -29,7 +29,7 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 18;
+  const offerDiscount = 15;
   const { currencyValue } = usePricing({});
 
   function handlePriceCardButton(planId, coupon) {
@@ -38,7 +38,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Identity82AFF ?? undefined,
+      promoCodeId: PromoCodeName.StarWars ?? undefined,
     });
   }
 

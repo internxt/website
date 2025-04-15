@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Spare 82%",
+    "label": "Spare 85%",
     "title": {
       "line1": "Erhalten Sie den ",
       "blueText": "sichersten",
@@ -44,7 +44,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Speichern Sie Ihre Dateien sicher, jetzt ",
-        "blueText": "82% günstiger"
+        "blueText": "85% günstiger"
       },
       "trustedBy": "Vertrauenswürdig von über 330.000 Menschen",
       "description": {
@@ -63,7 +63,7 @@
         "textAfterBlueText": " in der Cloud"
       },
       "subtitle": "Komplette Sicherheit und Kontrolle.",
-      "description": "82% Rabatt",
+      "description": "85% Rabatt",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus und mehr",
         "Post-Quanten-Kryptografie und Null-Wissen",
@@ -71,17 +71,17 @@
       ],
       "startFrom": {
         "normal1": "Ab ",
-        "price": " 1.80",
+        "price": " 1.50",
         "normal2": " /Monat"
       },
       "claimDeal": "Angebot einlösen",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "82% Angebot",
-      "title": "Neue Lifetime-Pläne",
-      "subtitle": "Neue Pläne verfügbar!",
-      "cta": "Hol dir deinen Plan",
+      "saveLabel": "85% Rabatt",
+      "title": "Schütze deine Daten vor der dunklen Seite",
+      "subtitle": "Internxt Drive, Antivirus und VPN",
+      "cta": "Sichere dir deinen Plan",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "youKnow": "Wusstest du das?"

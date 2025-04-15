@@ -23,7 +23,7 @@ export const HomePageBannerForMobile = () => {
         <p className="px-5 text-center text-4xl font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
-        <p className="text-center text-2xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
+        <p className=" text-center text-xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
         <button
           onClick={handleOnClick}
           className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"

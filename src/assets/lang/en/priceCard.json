@@ -135,7 +135,11 @@
       "gift1": "Special theme for Web App",
       "gift2": "Chance to win an Internxt backpack"
     },
-
+    "starWarsDay": {
+      "title": "Internxt themed goodies:",
+      "gift1": "Chance to win an Internxt backpack",
+      "gift2": "Free Star Wars Webtheme for web app"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Up to ",
