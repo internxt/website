@@ -179,7 +179,8 @@
       "totalCharacters": " /1000",
       "options": [
         "Selecciona",
-        "Menos de 25 TB",
+        "1 - 10TB",
+        "15 - 25TB",
         "25 - 50 TB",
         "50 - 100 TB",
         "100 - 150 TB",
