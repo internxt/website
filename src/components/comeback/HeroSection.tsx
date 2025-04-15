@@ -120,7 +120,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             ) : undefined}
 
             <div className="flex flex-col gap-6  pt-6 lg:pt-20 ">
-              <div className="flex w-full flex-row items-center justify-center rounded-lg lg:justify-start">
+              <div className="flex w-full flex-row items-center justify-center rounded-lg lg:justify-center">
                 <Alarm className="mr-6 h-6 w-6 text-white" />
                 <Countdown textFont="font-medium" textHeight="text-2xl text-white" />
               </div>
