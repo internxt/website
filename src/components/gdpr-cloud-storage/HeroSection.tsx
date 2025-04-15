@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
@@ -20,7 +21,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/campaigns/spring/image_mobile.webp');
 
-  const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
 
@@ -94,8 +94,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
         <div
-          style={{ backgroundImage: BgImage }}
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block"
+          className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />

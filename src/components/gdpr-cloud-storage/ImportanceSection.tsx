@@ -7,16 +7,11 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
   return (
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 pt-20">
-        {/* Cards Section */}
         <div>
           <div
             className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:flex-row md:justify-between md:space-x-8 md:pb-20 md:text-start`}
           >
-            {/* Image Section */}
-            <RevealX
-              //   direction={isEven ? 'right' : 'left'}
-              className="flex w-full max-w-[90%] flex-col rounded-3xl pt-5 sm:max-w-[75%] md:w-auto md:pt-0"
-            >
+            <RevealX className="flex w-full max-w-[90%] flex-col rounded-3xl pt-5 sm:max-w-[75%] md:w-auto md:pt-0">
               <Image
                 src={getImage('/images/GDPR_cloud_storage/internxt_GDPR.webp')}
                 width={480}
@@ -28,7 +23,6 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
               />
             </RevealX>
 
-            {/* Text Section */}
             <div
               className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}
             >
