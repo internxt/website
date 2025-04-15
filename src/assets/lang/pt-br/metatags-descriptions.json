@@ -378,5 +378,10 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Soluções de Backup de Armazenamento em Nuvem",
     "description": "As soluções de backup de armazenamento em nuvem do Internxt utilizam redundância e criptografia premiada que protege você e sua empresa contra a perda de dados."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt - Armazenamento em nuvem compatível com a GDPR",
+    "description": "Internxt é um serviço de armazenamento em nuvem que está em conformidade com a GDPR e com as rigorosas leis de privacidade da UE para proteger suas informações."
   }
 ]

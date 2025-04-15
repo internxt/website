@@ -86,7 +86,8 @@
       "features": {
         "title": "Funciones",
         "privateCloud": "Solución nube privada",
-        "cloudBakcup": "Solución cloud backup"
+        "cloudBakcup": "Solución cloud backup",
+        "GDPRCloud": "Almacenamiento RGPD"
       },
       "language": "Idioma"
     },

@@ -441,29 +441,14 @@ export default function Footer({
                       {textContent.FooterSection.sections.tools.fileVirusScan}
                     </Link>
 
-                    <Link
-                      href="/password-generator"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/password-generator" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.passwordGenerator}
                     </Link>
 
-                    <Link
-                      href="/file-converter"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/file-converter" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileConverter}
                     </Link>
-                    <Link
-                      href="/dark-web-monitor"
-                      locale={lang}
-                      passHref
-                      className="items-center hover:text-primary"
-                    >
+                    <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
                       <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
@@ -499,6 +484,12 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudBakcup}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
+                    <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.features.GDPRCloud}
                       <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
                         {textContent.FooterSection.new}
                       </span>
