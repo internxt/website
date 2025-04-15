@@ -26,6 +26,7 @@ const ALLOWED_PATHS = [
   'taiwan',
   'germany',
   'spain',
+  'uk',
 ];
 
 const IMAGES_PER_PATH = {
@@ -89,9 +90,14 @@ const IMAGES_PER_PATH = {
     previewImage: '/images/lifetime/celebration/germany/file-item.webp',
     mobileImage: '/images/lifetime/celebration/germany/image-mobile.webp',
   },
+  uk: {
+    backgroundImage: '/images/lifetime/celebration/uk/bg.webp',
+    previewImage: '/images/lifetime/celebration/uk/file_item.webp',
+    mobileImage: '/images/lifetime/celebration/uk/image_mobile.webp',
+  },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico','taiwan'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico', 'taiwan'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
@@ -110,7 +116,6 @@ const LifetimeCelebrationTemplate = ({
   const currencySpecified = PATHS_WITH_CURRENCY_SPECIFIED.includes(filename) ? 'US' : undefined;
 
   useEffect(() => {
-    console.log('FILENAME: ', filename);
     if (!selectedPathName) {
       router.push('/lifetime');
     }
@@ -129,6 +134,7 @@ const LifetimeCelebrationTemplate = ({
     belgium: 0.17,
     switzerland: 0.17,
     singapore: 0.17,
+    uk: 0.17,
   };
 
   const couponCode = {
@@ -144,6 +150,7 @@ const LifetimeCelebrationTemplate = ({
     belgium: PromoCodeName.Lifetime83DiscountCoupon,
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
     singapore: PromoCodeName.Lifetime83DiscountCoupon,
+    uk: PromoCodeName.Lifetime83DiscountCoupon,
   };
 
   const percent = {
@@ -159,7 +166,10 @@ const LifetimeCelebrationTemplate = ({
     belgium: '83%',
     switzerland: '83%',
     singapore: '83%',
+    uk: '83%',
   };
+
+  const textForCta = filename === 'uk' ? langJson.NationalDayCtaSection : langJson.CtaSection;
 
   return (
     <Layout
@@ -189,6 +199,7 @@ const LifetimeCelebrationTemplate = ({
         currencySpecified={currencySpecified}
         couponCode={couponCode[pathname]}
         lifetimeMode="celebration"
+        showOffer={false}
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} isCelebrationPage />
@@ -197,7 +208,7 @@ const LifetimeCelebrationTemplate = ({
 
       <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      <CtaSection textContent={textForCta} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
     </Layout>
