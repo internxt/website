@@ -61,7 +61,6 @@ const handleImageConverter = async (fileToConvert: File, fromExtension: string, 
 
   try {
     const response = await imageConverter(fileToConvert, fromExtension, toExtension);
-
     const url = window.URL.createObjectURL(response as Blob);
     const fileName = `${fileToConvert.name.split('.')[0]}.${toExtension}`;
 
