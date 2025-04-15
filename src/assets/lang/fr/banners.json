@@ -104,9 +104,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% de réduction!",
-      "normalText": "Journée mondiale de la sécurité dans le cloud",
-      "cta": "Achetez votre plan!"
+      "boldText": "Offre de 82% sur les plans lifetime, VPN & Antivirus !",
+      "normalText": "Journée de la gestion des identités",
+      "cta": "Acheter"
     }
   },
   "lifetimeBanner": {

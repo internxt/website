@@ -1,6 +1,5 @@
 import {
   ArrowsClockwise,
-  Gift,
   CodeBlock,
   Database,
   Envelope,
@@ -62,7 +61,7 @@ export const PriceCard = ({
   isFamilyPage,
   darkMode,
   isBrave,
-  showPromo = true,
+  showPromo,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
@@ -125,13 +124,13 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? `max-h-[820px] min-h-[700px]` : `max-h-[810px] min-h-[710px] `
+        isBusiness ? `h-[820px]` : `max-h-[840px] min-h-[710px] `
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
     >
       <div
-        className={`flex h-[310px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pt-6`}
+        } p-6 pb-10 pt-10`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -213,19 +212,30 @@ export const PriceCard = ({
       </div>
 
       {showPromo && (
-        <div className="flex flex-col items-start space-y-1 bg-green-1 px-5 py-2">
-          <span className="font-bold text-white">{contentText.productFeatures.worldCloudSecurityDay.title}</span>
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-white">{contentText.productFeatures.worldCloudSecurityDay.gift}</span>
+        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
+          <span className="text-[13.5px] font-bold text-white">
+            {contentText.productFeatures.IdentityManagementDay.title}
+          </span>
+          <div className="flex flex-col items-start space-y-2">
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">
+                {contentText.productFeatures.IdentityManagementDay.gift1}
+              </span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
+              <span className="text-[13.5px] text-white">
+                {contentText.productFeatures.IdentityManagementDay.gift2}
+              </span>
+            </div>
           </div>
         </div>
       )}
-
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `max-h-[490px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
+        } ${isBusiness ? `max-h-[550px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

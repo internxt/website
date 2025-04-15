@@ -1,13 +1,16 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
-import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
-import { BannerForMobile } from './components/heroSection/BannerForMobile';
+import { BannerForMobile } from '../cloud-storage-backup-solutions/components/heroSection/BannerForMobile';
+import Countdown from '../components/Countdown';
+import Header from '../shared/Header';
+import { Alarm, Check } from '@phosphor-icons/react';
+import Link from 'next/link';
 const Animation = dynamic(() => import('../shared/Animation'));
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 interface HeroSectionForHomeProps {
   textContent: any;
   lang: string;
@@ -22,7 +25,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
 
   const BgImage = 'linear-gradient(to bottom, #001D6C, #121923)';
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
-  const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
 
   const handleOnClick = () => {
     router.push('/pricing');
@@ -91,11 +93,10 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   ];
 
   return (
-    <section className="overflow-hidden">
+    <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
       <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
         <div
-          style={{ backgroundImage: BgImage }}
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block"
+          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
@@ -116,10 +117,42 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   onClick={handleOnClick}
                 />
               </div>
-            ) : (
-              <BannerForMobile />
-            )}
-            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
+            ) : undefined}
+
+            <div className="flex flex-col gap-6  pt-6 lg:pt-20 ">
+              <div className="flex w-full flex-row items-start justify-center lg:justify-start rounded-lg lg:flex-row">
+                <Alarm className="mr-6 h-6 w-6 text-white" />
+                <Countdown textFont="font-medium" textHeight="text-2xl text-white" />
+              </div>
+
+              <div className="flex flex-col">
+                <Header maxWidth="max-w-[500px]" className="text-5xl text-white">
+                  {textContent.title}
+                </Header>
+                <p className="font-regular pt-4 text-2xl ">
+                  <span className="text-white">{textContent.subtitle}</span>
+                </p>
+              </div>
+              <div className="mx-auto flex flex-col lg:mx-0">
+                {textContent.features.map((feat) => (
+                  <div key={feat} className="flex flex-row gap-2">
+                    <Check className="pt-2 text-green-1 lg:pt-0" weight="bold" size={24} />
+                    <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-row justify-center gap-4 pt-4 lg:justify-start ">
+                <div className="flex flex-col items-center lg:flex-row">
+                  <Link
+                    href={'#priceTable'}
+                    className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                  >
+                    {textContent.cta1}
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
