@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "省82%",
+    "label": "省85%",
     "title": {
       "line1": "获取最",
       "blueText": "安全的",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "现在安全存储您的文件，",
-        "blueText": "便宜82%"
+        "blueText": "便宜85%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -64,21 +64,21 @@
         "textAfterBlueText": " 在云端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "82%折扣",
+      "description": "85%折扣",
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 1.80",
+        "price": " 1.50",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "82% 优惠",
-      "title": "全新终身计划",
-      "subtitle": "新计划上线！",
-      "cta": "获取您的计划",
+      "saveLabel": "85%优惠",
+      "title": "保护你的数据免受黑暗势力的侵害",
+      "subtitle": "Internxt 云端硬盘、防病毒软件与 VPN",
+      "cta": "获取你的方案",
       "guarantee": "30天退款保证"
     },
     "youKnow": "你知道吗？"

@@ -38,16 +38,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "優惠 82%",
-      "title": "身份管理日",
+      "label": "85%優惠",
+      "title": "讓隱私與你同在！",
       "subtitle": "Internxt 雲端硬碟、防毒軟體與 VPN",
-      "cta": "獲取您的方案！",
-      "cta2": "享受 82% 折扣",
-      "guarantee": "30 天退款保證",
-      "lastCta": "*優惠僅適用於免費帳號或新使用者",
-      "titleMbl": "全新終身計畫！",
-      "descriptionMbl": "私人儲存、防毒軟體與 VPN",
-      "ctaMbl": "購買您的方案"
+      "cta": "立即取得你的方案！",
+      "cta2": "享有85%折扣",
+      "guarantee": "30天退款保證",
+      "lastCta": "*優惠僅適用於免費帳號或新用戶",
+      "titleMbl": "讓隱私與你同在！",
+      "subtitleMbl": "Internxt 雲端硬碟、防毒軟體與 VPN。",
+      "descriptionMbl": "參加抽獎，有機會獲得 Internxt 後背包",
+      "ctaMbl": "購買你的方案"
     },
     "save": "節省高達",
     "planTitles": {

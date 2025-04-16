@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Identity82AFF,
-    couponCodeForLifetime: PromoCodeName.Identity82AFF,
+    couponCode: PromoCodeName.StarWars,
+    couponCodeForLifetime: PromoCodeName.StarWars,
   });
 
   const cardsData = [
