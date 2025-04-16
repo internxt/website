@@ -78,6 +78,15 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
+      <PriceTable
+        textContent={langJson.PriceTable}
+        handlePriceCardButton={handlePriceCardButton}
+        couponType={PromoCodeName.CloudwardsCoupon}
+        discount={offerDiscount}
+        billingFrequency="lifetime"
+        isCloudwards
+      />
+
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
@@ -93,15 +102,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           </div>
         }
         backgroundColor="bg-gray-1"
-      />
-
-      <PriceTable
-        textContent={langJson.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
-        discount={offerDiscount}
-        billingFrequency="lifetime"
-        isCloudwards
       />
 
       <div className="mt-20 flex w-full flex-col items-center gap-9">
