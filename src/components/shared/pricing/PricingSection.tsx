@@ -79,7 +79,7 @@ export const PricingSection = ({
   darkMode,
   isBrave,
   hideFeatures,
-  showPromo = true,
+  showPromo,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -88,6 +88,7 @@ export const PricingSection = ({
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const showPromos = activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
@@ -192,7 +193,7 @@ export const PricingSection = ({
                   lang={lang}
                   darkMode={darkMode}
                   isBrave={isBrave}
-                  showPromo={showPromo}
+                  showPromo={showPromos}
                 />
               ))
             : undefined}
