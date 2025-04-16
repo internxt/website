@@ -109,7 +109,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           <h2 className="max-w-[550px] text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
           <p className="text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
         </div>
-        <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center ">
           <Button
             text={langJson.FeatureSectionV2.cta}
             onClick={() => {
@@ -119,7 +119,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
               });
             }}
           />
-          <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+          <RevealY className="content flex h-full w-full flex-col px-5 py-5 pb-5">
             <Image
               src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               alt="Internxt secure cloud storage"
