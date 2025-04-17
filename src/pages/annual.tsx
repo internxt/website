@@ -3,7 +3,6 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/annual/HeroSection';
 import { PromoCodeName } from '@/lib/types';
-import PaymentSection from '@/components/annual/PaymentSection';
 import FeatureSection from '@/components/annual/FeatureSection';
 import CtaSection from '@/components/annual/CtaSection';
 import FeaturesSection from '@/components/annual/FeaturesSection';
@@ -43,7 +42,6 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
       <FeaturesSection textContent={langJson.FeaturesSection} />
 
-      {/* <PaymentSection textContent={langJson.PaymentSection} lang={lang} /> */}
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
