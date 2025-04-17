@@ -38,6 +38,7 @@ interface PricingSectionWrapperProps {
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
   isBrave?: boolean;
+  isAnnual?: boolean;
   hideFeatures?: boolean;
   showPromo?: boolean;
 }
@@ -70,6 +71,7 @@ export const PricingSectionWrapper = ({
   CustomDescription,
   darkMode,
   isBrave,
+  isAnnual,
   showPromo = true,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
@@ -160,7 +162,7 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
-          isBrave={isBrave}
+          isAnnual={isAnnual}
           hideFeatures={hideFeatures}
           showPromo={showPromo}
         />
