@@ -26,11 +26,8 @@ export interface PriceCardProps {
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
   labelBackground?: string;
-  checkIconName?: string;
   decimalDiscountValue?: number;
-  fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
-  monthlyProductPrice?: number;
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
