@@ -1,5 +1,5 @@
 import RevealY from '@/components/components/RevealY';
-import { CaretRight, Devices, ShieldCheck, UserCircleGear } from '@phosphor-icons/react';
+import { CaretRight, Eye, ShieldCheck, UserCircleGear } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -34,17 +34,17 @@ const FeatureSection = ({
       description: textContent.cards[0].description,
     },
     {
-      icon: UserCircleGear,
+      icon: InfinityIcon,
       title: textContent.cards[1].title,
       description: textContent.cards[1].description,
     },
     {
-      icon: Devices,
+      icon: UserCircleGear,
       title: textContent.cards[2].title,
       description: textContent.cards[2].description,
     },
     {
-      icon: InfinityIcon,
+      icon: Eye,
       title: textContent.cards[3].title,
       description: textContent.cards[3].description,
     },
@@ -52,11 +52,11 @@ const FeatureSection = ({
 
   return (
     <section className={`overflow-hidden ${backgroundColor ?? ''}`}>
-      <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
-        <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
+      <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
+        <div className="flex flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
-          <p className="text-xl text-gray-80">{textContent.description}</p>
-          
+          <p className="max-w-5xl text-xl text-gray-80">{textContent.description}</p>
+
           {!withoutCta && (
             <Link
               className="flex cursor-pointer flex-row items-center justify-center space-x-1 text-lg font-semibold text-primary hover:underline"

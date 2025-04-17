@@ -125,6 +125,7 @@ export enum PromoCodeName {
   Identity82 = 'IDENTITY82',
   Identity82AFF = 'IDENTITY82AFF',
   PcComponentes5TB = 'PCMOVIL',
+  Celebration83 = 'CELEBRATION83',
 }
 
 export interface PromoCodeProps {

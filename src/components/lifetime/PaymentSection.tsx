@@ -23,6 +23,7 @@ interface PaymentSectionProps {
   onButtonClicked?: () => void;
   onPlanTypeChange?: (activeSwitchPlan: SwitchButtonOptions) => void;
   isStackCommerce?: boolean;
+  showOffer?: boolean;
 }
 
 const PaymentSection = ({
@@ -39,6 +40,7 @@ const PaymentSection = ({
   onPlanTypeChange,
   onButtonClicked,
   isStackCommerce,
+  showOffer,
 }: PaymentSectionProps): JSX.Element => {
   const router = useRouter();
 
@@ -112,6 +114,7 @@ const PaymentSection = ({
           currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
+          showOffer={showOffer}
         />
 
         <div className="flex flex-col items-center justify-center space-y-8 bg-white pb-12 text-center md:flex-row md:space-x-32 md:space-y-0">
