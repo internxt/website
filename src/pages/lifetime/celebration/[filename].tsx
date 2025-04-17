@@ -150,7 +150,7 @@ const LifetimeCelebrationTemplate = ({
     belgium: PromoCodeName.Lifetime83DiscountCoupon,
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
     singapore: PromoCodeName.Lifetime83DiscountCoupon,
-    uk: PromoCodeName.Lifetime83DiscountCoupon,
+    uk: PromoCodeName.Celebration83,
   };
 
   const percent = {
