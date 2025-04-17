@@ -56,7 +56,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
         hidePlanSelectorComponent={true}
         hideBusinessSelector
         hideSwitchSelector
-        isBrave
+        isAnnual
         startFromPlan="Individuals"
         startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
