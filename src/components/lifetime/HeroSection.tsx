@@ -32,13 +32,13 @@ const HeroSection = ({
 }: HeroSectionProps): JSX.Element => {
   return (
     <section
-      className={`overflow-hidden bg-cover bg-no-repeat py-20`}
+      className={`overflow-hidden bg-cover bg-no-repeat py-10 lg:py-20`}
       style={{
         backgroundImage: `url('${bgImage}')`,
       }}
     >
       <div className="relative flex h-full flex-col pt-10 ">
-        <div className="lg:mx-10 xl:mx-32">
+        <div className=" lg:mx-10 xl:mx-32">
           <div className="relative mx-auto flex w-full max-w-screen-xl flex-col lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
               {!hideTimer && (
@@ -58,10 +58,12 @@ const HeroSection = ({
                   alt="Laptop and phone with Internxt app"
                 />
               </div>
-              <div className="flex max-w-[650px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <Header maxWidth="w-[400px]">{textContent.title}</Header>
-                <p className="pt-6 text-2xl font-semibold">{textContent.subtitle}</p>
-                <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
+              <div className="flex max-w-[650px] flex-col items-center  text-center text-white lg:items-start  lg:text-start">
+                <Header maxWidth="w-[400px]" textHeightForDesk="text-5xl">
+                  {textContent.title}
+                </Header>
+                <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-6 lg:text-2xl">{textContent.subtitle}</p>
+                <p className="px-6 pt-2 text-xl font-normal lg:px-0 lg:pt-6 lg:text-2xl">{textContent.description}</p>
               </div>
               <button
                 onClick={onRedirectButtonClicked}
