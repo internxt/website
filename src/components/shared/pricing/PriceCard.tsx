@@ -27,15 +27,12 @@ export interface PriceCardProps {
   productCardPlan?: 'individuals' | 'business';
   colorCard?: string;
   labelBackground?: string;
-  checkIconName?: string;
   decimalDiscountValue?: number;
-  fixedDiscount?: number;
   redeemCodeCta?: LifetimeMode;
   monthlyProductPrice?: number;
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
-  isBrave?: boolean;
   showPromo?: boolean;
 }
 
@@ -48,20 +45,15 @@ const BILLING_FREQUENCY_LIST = {
 export const PriceCard = ({
   product,
   decimalDiscountValue,
-  fixedDiscount,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
   colorCard = 'primary',
   labelBackground = 'bg-primary/10',
-  checkIconName = 'checkPrimary',
-  monthlyProductPrice,
   popular,
   lang,
   redeemCodeCta,
-  label,
   isFamilyPage,
   darkMode,
-  isBrave,
   showPromo,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
@@ -125,13 +117,13 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? `h-[820px]` : `max-h-[840px] min-h-[710px] `
-      } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col  overflow-hidden rounded-2xl`}
+        isBusiness ? 'h-[820px]' : showPromo ? 'h-[880px]' : 'h-[740px]'
+      } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`flex h-[330px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
+        className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
           darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pb-10 pt-6`}
+        } p-6 pb-10 pt-10`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -230,7 +222,7 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `max-h-[550px] min-h-[450px] ` : `h-[415px]`} pb-6 text-sm`}
+        } ${isBusiness ? `max-h-[550px] min-h-[400px] ` : `max-h-[450px] min-h-[300px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

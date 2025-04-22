@@ -358,5 +358,10 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - 雲端儲存備份解決方案",
     "description": "Internxt的雲端儲存備份解決方案使用冗餘和獲獎的加密技術，保護您和您的企業免於資料遺失的風險。"
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt - 符合 GDPR 的雲端儲存服務",
+    "description": "Internxt 是一項雲端儲存服務，遵循 GDPR 及歐盟嚴格的隱私法規，保障您的資訊安全。"
   }
 ]

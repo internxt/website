@@ -1,0 +1,182 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": " conforme al GDPR",
+        "textAfterBlueText": "Archiviazione Cloud"
+      },
+      "description": "Internxt offre archiviazione cloud conforme al GDPR per proteggere i tuoi dati secondo le normative dell'UE.",
+      "claimDeal": "Confronta i piani",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Archiviazione Cloud conforme al GDPR",
+      "cta": "Confronta i piani",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    }
+  },
+  "Importance": {
+    "title": "Archiviazione GDPR per i tuoi file",
+    "description": [
+      "L'archiviazione cloud conforme al GDPR protegge le tue informazioni sensibili e aiuta le aziende a prevenire le violazioni dei dati e le multe per la non conformità.",
+      "Scegliendo fornitori con sede nell'UE, come Internxt, hai il pieno controllo dei tuoi dati: puoi gestirli, accedervi e eliminarli quando necessario."
+    ],
+    "ctaText": "Ottieni Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "Perché passare a soluzioni di archiviazione cloud private",
+    "subtitle": "Passare a soluzioni di archiviazione cloud private garantisce che i tuoi dati rimangano privati e protetti da hacker e grandi aziende. A differenza di Google, Apple o Microsoft, Internxt non raccoglie, vende o sfrutta indebitamente i tuoi dati. Hai il pieno controllo dei tuoi file.",
+    "description": "Investi nella tua privacy e riposa tranquillo sapendo che i tuoi file e dati sono protetti dalle violazioni dei dati.",
+    "cta": "Ottieni Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Servizi cloud conformi al GDPR di Internxt",
+      "line2": ""
+    },
+    "subtitle": "Internxt offre archiviazione cloud conforme al GDPR per uso personale, professionale o aziendale. Con la nostra crittografia avanzata, il controllo degli accessi e l'approccio incentrato sulla privacy, la nostra soluzione di archiviazione cloud è l'opzione migliore per rispettare il GDPR.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive è una soluzione di archiviazione cloud privata conforme al GDPR, progettata con la privacy come priorità. Vengono raccolti solo i dati strettamente necessari per offrire il miglior servizio e le tue informazioni non vengono mai condivise.",
+      "cta": "Scegli il tuo piano"
+    },
+    "square2": {
+      "title": "Internxt Drive per aziende",
+      "description": "La non conformità al GDPR può comportare multe considerevoli, quindi è fondamentale per le aziende adeguare le proprie pratiche di gestione dei dati. Internxt per aziende offre una soluzione di archiviazione cloud conforme al GDPR e protegge i dati aziendali con funzionalità di sicurezza avanzate.",
+      "cta": "Internxt per aziende"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 è una soluzione di archiviazione oggetti a livello aziendale che garantisce una protezione totale dei tuoi dati e la conformità al GDPR. Internxt S3 assicura una durata del 99,999999999 % (11 9) per i file salvati, proteggendoli da perdite o danni.",
+      "cta": "Ottieni Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "Quali sono i tuoi diritti secondo il GDPR?",
+    "description": "Secondo il GDPR, hai il diritto di accedere ai tuoi dati, richiederne la cancellazione e opporti al loro trattamento. Con un servizio cloud che mette la privacy al primo posto, come Internxt, mantieni il controllo sui tuoi dati.",
+    "info": [
+      {
+        "title": "Diritto di accesso ai tuoi dati",
+        "description": [
+          "La politica di accesso ai dati del GDPR ti consente di sapere quali dati personali una società detiene su di te, come vengono utilizzati e chi vi ha accesso, inclusi paesi terzi o organizzazioni internazionali.",
+          "Con l'archiviazione cloud conforme al GDPR, hai il controllo totale sui tuoi dati, la loro gestione e la possibilità di agire se non sei d'accordo con le pratiche di gestione dei dati di un'azienda."
+        ]
+      },
+      {
+        "title": "Diritto all'oblio",
+        "description": [
+          "Hai il diritto di richiedere la cancellazione dei tuoi dati personali quando non sono più necessari, sono stati raccolti illegalmente o se ritiri il tuo consenso al loro utilizzo.",
+          "Ciò ti offre un maggiore controllo sulla tua impronta digitale, aiutando a prevenire il furto d'identità, le violazioni dei dati e le frodi, evitando che le aziende conservino i tuoi dati indefinitamente senza una giustificazione."
+        ]
+      },
+      {
+        "title": "Diritto di opposizione al trattamento dei dati",
+        "description": [
+          "Il GDPR ti consente anche di opporsi all'uso dei tuoi dati per scopi di marketing, profilazione o per altri scopi non previsti dalla legge.",
+          "Esercitando questo diritto, puoi impedire il tracciamento indesiderato, la pubblicità mirata o la profilazione. I servizi cloud conformi al GDPR, come Internxt, non utilizzano mai i tuoi dati personali per questi scopi, garantendo la tua privacy fin dall'inizio."
+        ]
+      },
+      {
+        "title": "Revoca del consenso",
+        "description": [
+          "Per evitare di essere costretto a firmare accordi con una società, il GDPR ti conferisce il diritto di ritirare il tuo consenso alla raccolta e al trattamento dei tuoi dati personali.",
+          "Revocando tale consenso, puoi proteggere i tuoi dati e le tue informazioni personali da terze parti e ridurre il rischio di violazioni dei dati, impedendo a malintenzionati e aziende esterne di sfruttare le tue informazioni."
+        ]
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Archivia i tuoi dati in sicurezza",
+    "description": "con un'archiviazione cloud conforme ai requisiti del GDPR",
+    "cta": "Ottieni Internxt"
+  },
+  "CtaSection2": {
+    "title": "Archiviazione cloud privata",
+    "description": "Conforme al GDPR e alle leggi europee",
+    "cta": "Ottieni Internxt"
+  },
+  "CtaSection3": {
+    "title": "Conformità GDPR semplificata",
+    "description": "Archiviazione cloud privata per archiviare e condividere i tuoi dati in sicurezza",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Che cos'è il GDPR?",
+        "answer": [
+          "Il GDPR, o Regolamento Generale sulla Protezione dei Dati, è una legge europea che regola il trattamento dei dati personali dei cittadini dell'Unione Europea (UE).",
+          "Il GDPR mira a garantire che le aziende e le organizzazioni trattino i dati personali in modo trasparente, sicuro e rispettoso della privacy, dando ai cittadini un controllo maggiore sulle proprie informazioni, anche attraverso il consenso esplicito e il diritto di accesso, correzione o cancellazione."
+        ]
+      },
+      {
+        "question": "Che cos'è l'archiviazione cloud conforme al GDPR?",
+        "answer": [
+          "Si tratta di servizi cloud gestiti all'interno dell'UE che rispettano le normative di protezione dei dati personali attraverso misure come la crittografia, il controllo degli accessi, i backup e i protocolli sicuri di trattamento dei dati."
+        ]
+      },
+      {
+        "question": "Come posso garantire che la mia azienda rimanga conforme al GDPR utilizzando un'archiviazione cloud?",
+        "answer": [
+          "Per garantire la conformità al GDPR, scegli un fornitore di archiviazione cloud che offra crittografia, controllo degli accessi, soluzioni di backup e trasparenza nella gestione dei dati. I piani aziendali di Internxt offrono archiviazione cloud conforme al GDPR e il pieno controllo sui dati dei tuoi clienti, dipendenti e dell'azienda."
+        ]
+      },
+      {
+        "question": "Posso archiviare dati sensibili e riservati in un'archiviazione cloud conforme al GDPR?",
+        "answer": [
+          "Sì, l'archiviazione cloud conforme al GDPR è progettata per archiviare in sicurezza dati personali sensibili e riservati. Internxt utilizza la crittografia a conoscenza zero (Zero-Knowledge) per rispettare gli standard rigorosi di protezione dei dati imposti dal GDPR."
+        ]
+      },
+      {
+        "question": "Come posso contattare l'assistenza tecnica?",
+        "answer": [
+          "Non trovi la risposta alla tua domanda? Puoi contattare il nostro team di supporto tramite chat online o inviare un'email a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovalute?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc.), PayPal, iDEAL, Sofort e criptovalute."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Come l'archiviazione cloud conforme al GDPR protegge i tuoi dati",
+    "titleLine2": "",
+    "description": "Internxt soddisfa i requisiti rigorosi del GDPR grazie alla crittografia a conoscenza zero, ai controlli di accesso e ai backup sicuri, garantendo che i tuoi dati rimangano protetti e privati.",
+    "cards": {
+      "element1": {
+        "title": "Crittografia end-to-end",
+        "description": [
+          "La crittografia end-to-end protegge i tuoi file dagli hacker, ma molte aziende gestiscono queste chiavi di crittografia e possono essere costrette a fornire accesso alle autorità su richiesta.",
+          "Internxt utilizza la crittografia Zero-Knowledge e post-quantistica, assicurando che le chiavi siano memorizzate solo sul tuo dispositivo, così che nessun altro possa accedere ai tuoi dati.",
+          "La nostra crittografia premiata ti offre la massima sicurezza online e soddisfa gli standard del GDPR per la protezione dei dati personali."
+        ]
+      },
+      "element2": {
+        "title": "Controlli di accesso e permessi utente",
+        "description": [
+          "Il GDPR impone alle organizzazioni di implementare misure tecniche e organizzative appropriate per garantire un livello di sicurezza adeguato al rischio, anche tramite controlli di accesso ai dati sensibili.",
+          "I servizi cloud conformi al GDPR includono controlli e permessi utente per soddisfare questi requisiti. Internxt Drive offre la condivisione sicura dei file con password e restrizioni di accesso, mentre i piani Business includono registri di accesso per tracciare chi si è connesso, ha caricato o modificato i file, garantendo la conformità per l'intero team."
+        ]
+      },
+      "element3": {
+        "title": "Backup e recupero dei dati",
+        "description": [
+          "Il GDPR richiede alle aziende di adottare misure per ripristinare rapidamente la disponibilità e l'accesso ai dati personali in caso di incidente tecnico o fisico.",
+          "Con Internxt, benefici di archiviazione cloud conforme al GDPR grazie a backup programmati o manuali, e i tuoi dati sono memorizzati in sicurezza in più data center, consentendo un rapido recupero in caso di incidente."
+        ]
+      },
+      "element4": {
+        "title": "Minimizzazione dei dati",
+        "description": [
+          "La minimizzazione dei dati è un principio fondamentale del GDPR, che richiede che vengano raccolti e trattati solo i dati personali adeguati, pertinenti e necessari per scopi specifici.",
+          "Mettiamo la tua privacy al primo posto proteggendo i tuoi dati con crittografia Zero-Knowledge, garantendo che solo tu possa accedervi. I tuoi dati non vengono mai condivisi, offrendoti il pieno controllo e tranquillità riguardo alla sicurezza delle tue informazioni personali."
+        ]
+      }
+    }
+  }
+}
