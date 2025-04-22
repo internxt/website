@@ -22,7 +22,6 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
   return (
     <section className="overflow-hidden px-5">
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
-        {/* Header Section */}
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
           <div className="flex w-full max-w-[800px] flex-col items-center justify-center space-y-6 text-center">
             <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{title}</p>
@@ -40,8 +39,6 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
             )}
           </div>
         </section>
-
-        {/* Cards Section */}
         <div>
           {cards.map((card, index) => {
             const isEven = index % 2 === 0;
@@ -53,7 +50,6 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                   isEven ? 'md:flex-row md:justify-between md:space-x-8' : 'md:flex-row-reverse md:justify-between'
                 } md:text-start`}
               >
-                {/* Image Section */}
                 <RevealX
                   direction={isEven ? 'right' : 'left'}
                   className="flex w-full max-w-[90%] flex-col rounded-3xl pt-5 sm:max-w-[75%] md:w-auto md:pt-0"
@@ -68,8 +64,6 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     alt={`${card.title} image`}
                   />
                 </RevealX>
-
-                {/* Text Section */}
                 <div
                   className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[400px] md:items-start md:space-y-6 ${
                     isEven ? 'md:pl-10' : 'md:pr-10'

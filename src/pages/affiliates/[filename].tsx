@@ -18,6 +18,9 @@ import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import WhatWeDo from '@/components/shared/WhatWeDo';
+import FeaturesSection from '@/components/gdpr-cloud-storage/FeaturesSection';
+import ScrollableFeatureSection from '@/components/shared/components/ScrollableFeatureSection';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -209,22 +212,20 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
           <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
 
-          <TextAndCardsGroupColumnSection
-            background="bg-gray-1"
-            backgroundColorForCard="bg-white"
-            TextComponent={
-              <div className="flex max-w-[775px] flex-col gap-6 text-center">
-                <h2 className="text-5xl font-semibold text-gray-100">{langJson.WhyChooseInternxtForOneplan.title}</h2>
-                <p className="text-xl text-gray-80">{langJson.WhyChooseInternxtForOneplan.description}</p>
-              </div>
-            }
-            cards={cards}
+          <ScrollableFeatureSection
+            textContent={{
+              title: langJson.WhyChooseInternxtForOneplan.title,
+              description: langJson.WhyChooseInternxtForOneplan.description,
+            }}
+            cardInfo={cards}
           />
+
+          <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
           <WhatWeDoSectionForSpecialOffer
             textContent={langJson.WhatWeDoForOneplan}
             handleOnButtonClick={handleOnButtonClick}
-            bgColor="bg-white"
+            bgColor="bg-gray-1"
             bgColorCard="bg-gray-1"
           />
         </>

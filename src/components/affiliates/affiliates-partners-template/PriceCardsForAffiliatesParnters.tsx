@@ -76,7 +76,7 @@ export const PriceCardsForAffiliatesPartners = ({
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-screen`}
+      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
       <div className={`flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
@@ -127,21 +127,7 @@ export const PriceCardsForAffiliatesPartners = ({
           <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
-      <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
-        <span className="text-[13.5px] font-bold text-white">
-          {contentText.productFeatures.IdentityManagementDay.title}
-        </span>
-        <div className="flex flex-col items-start space-y-2">
-          <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.IdentityManagementDay.gift1}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.IdentityManagementDay.gift2}</span>
-          </div>
-        </div>
-      </div>
+
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature, index) => (

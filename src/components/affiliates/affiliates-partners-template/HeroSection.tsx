@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { Alarm } from '@phosphor-icons/react';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import Countdown from '@/components/components/Countdown';
 import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
@@ -41,12 +41,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
   }, [loadingCards, lifetimePlans]);
 
   return (
-    <section
-      className="overflow-hidden bg-cover bg-no-repeat pt-12 lg:pb-10"
-      style={{
-        backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
-      }}
-    >
+    <section className={`overflow-hidden bg-cover bg-no-repeat pt-12 lg:pb-10 ${styles.inverseLinearGradient}`}>
       <div className="w-full px-4 lg:px-10 xl:px-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 px-5 py-20 lg:flex-row lg:items-start lg:justify-between lg:space-y-0 lg:px-0">
           <div className="flex max-w-[545px] flex-col items-center justify-center gap-12 text-white lg:items-start lg:justify-start">
