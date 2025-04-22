@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "優惠 82%",
+    "label": "優惠 70%",
     "title": {
       "line1": "獲取最",
       "blueText": "安全的",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "現在安全存儲您的文件，",
-        "blueText": "便宜82%"
+        "blueText": "便宜70%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -64,18 +64,18 @@
         "textAfterBlueText": " 在雲端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "82%折扣",
+      "description": "70%折扣",
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 1.80",
+        "price": " 2.10",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "82% 優惠",
+      "saveLabel": "70% 優惠",
       "title": "全新終身計畫",
       "subtitle": "新方案上線！",
       "cta": "獲取您的方案",

@@ -106,7 +106,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
                   currencyValue={currencyValue}
                   planId={activeProduct?.priceId}
                   popular={activeProduct?.storage === '5TB'}
-                  price={Number(activeProduct?.price) * 0.18}
+                  price={Number(activeProduct?.price) * 0.2}
                   priceBefore={activeProduct?.price.toString().split('.')[0]}
                   storage={activeProduct.storage}
                 />
