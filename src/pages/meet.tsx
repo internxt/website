@@ -19,7 +19,7 @@ import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import { MeetText } from '@/assets/types/meet';
-import { Crosshair, Fingerprint, MonitorPlay, Password } from '@phosphor-icons/react';
+import { Crosshair, Fingerprint, Gavel, Leaf, MonitorPlay, Password, ShieldPlus } from '@phosphor-icons/react';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -66,25 +66,19 @@ const PrivateCloudStorageSolutions = ({
       title: textContent.FeatureSection.cards.element1.title,
       description: textContent.FeatureSection.cards.element1.description,
       image: '/images/meet/european_privacy.webp',
-      icon: Fingerprint,
+      icon: Gavel,
     },
     {
       title: textContent.FeatureSection.cards.element2.title,
       description: textContent.FeatureSection.cards.element2.description,
-      image: '/images/meet/european_privacy.webp',
-      icon: Fingerprint,
+      image: '/images/meet/internxt_security.webp',
+      icon: ShieldPlus,
     },
     {
       title: textContent.FeatureSection.cards.element4.title,
       description: textContent.FeatureSection.cards.element4.description,
-      image: '/images/meet/european_privacy.webp',
-      icon: Fingerprint,
-    },
-    {
-      title: textContent.FeatureSection.cards.element3.title,
-      description: textContent.FeatureSection.cards.element3.description,
-      image: '/images/meet/european_privacy.webp',
-      icon: Fingerprint,
+      image: '/images/meet/internxt_sustainability.webp',
+      icon: Leaf,
     },
   ];
   // const cards = [
