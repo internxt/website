@@ -171,6 +171,9 @@ const LifetimeCelebrationTemplate = ({
 
   const textForCta = filename === 'uk' ? langJson.NationalDayCtaSection : langJson.CtaSection;
 
+  const handleOnClick = () => {
+    router.push('#priceTable');
+  };
   return (
     <Layout
       title={metatags[0].title}
@@ -188,6 +191,7 @@ const LifetimeCelebrationTemplate = ({
         imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
         bgImage={getImage(IMAGES_PER_PATH[filename].backgroundImage)}
         percent={percent[pathname]}
+        onRedirectButtonClicked={handleOnClick}
       />
 
       <PaymentSection
