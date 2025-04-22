@@ -38,7 +38,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.CloudwardsCoupon ?? undefined,
+      promoCodeId: PromoCodeName.Identity82AFF ?? undefined,
     });
   }
 

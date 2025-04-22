@@ -1,10 +1,10 @@
 {
   "HeroSection": {
     "title": {
-      "blue": "Ahorra un 75% ",
+      "blue": "Ahorra un 82% ",
       "normal": "en todos los planes de almacenamiento seguro en la nube"
     },
-    "description": "Actualiza tu cuenta gratuita para obtener un 75% de descuento en cualquier plan. Con nuestro almacenamiento en la nube cifrado y de código abierto, puedes almacenar y compartir tus archivos con total privacidad.",
+    "description": "Actualiza tu cuenta gratuita para obtener un 82% de descuento en cualquier plan. Con nuestro almacenamiento en la nube cifrado y de código abierto, puedes almacenar y compartir tus archivos con total privacidad.",
     "cta": "Actualizar plan",
     "recommendedBy": "Recomendado por:"
   },
@@ -49,7 +49,7 @@
       "Con nuestros planes de pago, puedes almacenar y acceder a tus archivos localmente sin consumir el espacio de la unidad física de tu dispositivo.",
       "Disfruta de la tranquilidad sabiendo que tus recuerdos y documentos importantes están respaldados de manera segura en la nube, accesibles desde cualquier dispositivo."
     ],
-    "cta": "Obtén un 75% de DESCUENTO"
+    "cta": "Obtén un 82% de DESCUENTO"
   },
   "InxtFeaturesSection": {
     "title": "Internxt ofrece almacenamiento en la nube seguro diseñado para proteger tu privacidad",
@@ -83,7 +83,7 @@
   },
   "CtaSection": {
     "title": "¿Necesitas más almacenamiento?",
-    "description": "Obtén un 75% de descuento en cualquier plan.",
+    "description": "Obtén un 82% de descuento en cualquier plan.",
     "cta": "Actualizar plan"
   },
   "WhatWeDoSection": {
@@ -97,7 +97,7 @@
         "Autenticación 2FA",
         "Copias de seguridad en varios servidores"
       ],
-      "cta": "Obtén un 75% de DESCUENTO"
+      "cta": "Obtén un 82% de DESCUENTO"
     }
   },
   "FaqSection": {
@@ -112,7 +112,7 @@
       {
         "question": "¿Cómo puedo actualizar mi plan gratuito?",
         "answer": [
-          "Tu descuento del 75% se aplicará automáticamente en el proceso de compra. Para reclamar tu descuento, selecciona tu plan mensual, anual o de por vida y procede a la página de pago."
+          "Tu descuento del 82% se aplicará automáticamente en el proceso de compra. Para reclamar tu descuento, selecciona tu plan mensual, anual o de por vida y procede a la página de pago."
         ]
       },
       {

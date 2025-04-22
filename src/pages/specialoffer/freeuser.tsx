@@ -37,7 +37,7 @@ const FreeUserPage = ({
   const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.freeUserCoupon,
+    couponCode: PromoCodeName.Identity82AFF,
   });
 
   const [isBusiness, setIsBusiness] = useState<boolean>();
