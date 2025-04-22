@@ -38,11 +38,9 @@ const ResurrectionCampaign = ({
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Resurrection,
+    couponCode: PromoCodeName.SoftSales,
   });
   const locale = lang as string;
-
-  const percent = '90%';
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const lifetimeSpacePlan = products?.individuals[Interval.Lifetime].find((product) => product.priceId === priceId);
