@@ -136,14 +136,6 @@ const PartnerDiscount = ({
         hideSwitchSelector
         hideBusinessSelector
         showPromo={false}
-        CustomDescription={
-          <>
-            <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {langJson.PaymentSection.planDescription}
-            </span>
-          </>
-        }
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />

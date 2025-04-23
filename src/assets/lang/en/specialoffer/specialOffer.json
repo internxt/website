@@ -13,8 +13,18 @@
     "cta": "Choose plan"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "Choose the storage you need" },
-    "planDescription": "Every Internxt plan features complete access to our privacy services. Enjoy year-long security to meet your storage needs.",
+    "planTitles": {
+      "individuals": "Annual",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "A lifetime of privacy and security for your files for a unique, one-time payment",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
@@ -77,8 +87,7 @@
     ]
   },
   "CtaSection": {
-    "title": "Get an entire year’s worth of storage with 82% off now!",
-    "description": "Internxt is offering an exclusive discount with full privacy and security guaranteed.",
+    "title": "Get 82% off all plans with Drive, VPN, and Antivirus included!",
     "cta": "Choose plan"
   },
   "CtaSection1": {
