@@ -61,7 +61,7 @@ const ScrollableFeatureSection = ({ textContent, cardInfo }) => {
         {cardInfo.map((info) => (
           <div
             key={info.title}
-            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]"
+            className="flex flex-col items-start justify-start rounded-2xl bg-white lg:bg-gray-1 p-8 sm:p-10 md:max-w-[488px]"
           >
             <info.icon className="mb-6 text-4xl text-primary" size={32} />
             <div className="flex w-full max-w-[400px] flex-col">
