@@ -3,12 +3,11 @@ import { useRouter } from 'next/navigation';
 import {
   ClockCounterClockwise,
   Eye,
+  Fingerprint,
   Key,
-  ListChecks,
-  LockSimple,
+  LockKey,
   MonitorArrowUp,
   NumberCircleZero,
-  Scales,
   ShieldCheck,
 } from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
@@ -17,9 +16,6 @@ import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
-import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import WhatWeDo from '@/components/shared/WhatWeDo';
-import FeaturesSection from '@/components/gdpr-cloud-storage/FeaturesSection';
 import ScrollableFeatureSection from '@/components/shared/components/ScrollableFeatureSection';
 
 const SecondFeaturesSection = dynamic(
@@ -139,34 +135,24 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
   const cards = [
     {
-      icon: LockSimple,
+      icon: ShieldCheck,
       title: langJson.WhyChooseInternxtForOneplan.cards[0].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[0].description,
     },
     {
-      icon: ShieldCheck,
+      icon: LockKey,
       title: langJson.WhyChooseInternxtForOneplan.cards[1].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[1].description,
     },
     {
-      icon: NumberCircleZero,
+      icon: Eye,
       title: langJson.WhyChooseInternxtForOneplan.cards[2].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[2].description,
     },
     {
-      icon: Eye,
+      icon: Fingerprint,
       title: langJson.WhyChooseInternxtForOneplan.cards[3].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[3].description,
-    },
-    {
-      icon: Scales,
-      title: langJson.WhyChooseInternxtForOneplan.cards[4].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[4].description,
-    },
-    {
-      icon: ListChecks,
-      title: langJson.WhyChooseInternxtForOneplan.cards[5].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[5].description,
     },
   ];
 

@@ -41,28 +41,20 @@
     "description": "We provide the best security to protect your files at all costs.",
     "cards": [
       {
-        "title": "End-to-end encryption",
-        "description": "Your files are automatically secured before leaving your device."
+        "title": "Unmatched privacy",
+        "description": "Protecting your privacy is our top priority; we never store passwords or personal data. Your files are encrypted in transit and at rest, giving you complete control over your information. "
       },
       {
-        "title": "Data protection",
-        "description": "Internxt protects your data, unlike Big Tech companies who profit from it."
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge and post-quantum encryption, you are the only one with access to your data."
       },
       {
-        "title": "Zero-knowledge policies",
-        "description": "Your files remain completely confidential — even from us"
+        "title": "Open-source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
       },
       {
-        "title": "Open source",
-        "description": "Our code is available to everyone for complete transparency."
-      },
-      {
-        "title": "GDPR compliant",
-        "description": "We follow strict European laws created to protect your data."
-      },
-      {
-        "title": "Independently audited",
-        "description": "Our apps have undergone rigorous testing and are certified as secure."
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
     ]
   },
