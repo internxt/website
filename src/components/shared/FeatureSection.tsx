@@ -24,7 +24,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
       <div className="flex flex-col items-center justify-center space-y-16 bg-white py-10 md:py-20">
         {/* Header Section */}
         <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
-          <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[70%]">
+          <div className="flex w-full flex-col items-center justify-center space-y-6 text-center lg:max-w-[75%]">
             <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{title}</p>
             <div className="flex flex-col space-y-6 lg:max-w-[75%]">
               {subtitle && <p className="text-2xl font-medium text-gray-80">{subtitle}</p>}

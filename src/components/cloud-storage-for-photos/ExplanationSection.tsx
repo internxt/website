@@ -28,13 +28,13 @@ const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
           <p className="text-lg text-xl font-normal text-gray-80">{textContent.costExp.description}</p>
         </div>
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-3xl font-medium">{textContent.costExp.title}</p>
-          <p className="text-lg text-xl font-normal text-gray-80">{textContent.costExp.description}</p>
+          <p className="text-3xl font-medium">{textContent.securityExp.title}</p>
+          <p className="text-lg text-xl font-normal text-gray-80">{textContent.securityExp.description}</p>
         </div>
 
         <div className="flex max-w-2xl flex-col space-y-3">
-          <p className="text-3xl font-medium">{textContent.costExp.title}</p>
-          <p className="text-lg text-xl font-normal text-gray-80">{textContent.costExp.description}</p>
+          <p className="text-3xl font-medium">{textContent.extraFeaturesExp.title}</p>
+          <p className="text-lg text-xl font-normal text-gray-80">{textContent.extraFeaturesExp.description}</p>
         </div>
         {ctaText && ctaLink && (
           <Link
