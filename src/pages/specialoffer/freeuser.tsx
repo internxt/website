@@ -37,7 +37,7 @@ const FreeUserPage = ({
   const locale = lang as string;
 
   const { products, loadingCards, currencyValue, coupon, businessCoupon } = usePricing({
-    couponCode: PromoCodeName.Special80Coupon,
+    couponCode: PromoCodeName.Identity82AFF,
   });
 
   const [isBusiness, setIsBusiness] = useState<boolean>();
@@ -72,8 +72,8 @@ const FreeUserPage = ({
       <PricingSectionWrapper
         textContent={textContent.tableSection}
         decimalDiscount={{
-          individuals: 20,
-          lifetime: 20,
+          individuals: 25,
+          lifetime: 25,
         }}
         lang={locale}
         products={products}
