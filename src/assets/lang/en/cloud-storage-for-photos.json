@@ -1,0 +1,181 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "Private Cloud storage ",
+        "blueText": "for photos ",
+        "textAfterBlueText": ""
+      },
+      "description": "Internxt cloud storage for photos lets you create private albums and securely store and share memories with friends and family.",
+      "features": [
+        "Store your photos in privacy ",
+        "Post-quantum & zero-knowledge encryption",
+        "Open source and audited"
+      ],
+      "claimDeal": "View plans"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Private Cloud storage for photos",
+      "description": "Internxt cloud storage for photos lets you create private albums and securely store and share memories with friends and family.",
+      "cta": "View plans"
+    }
+  },
+  "ExplanationSection": {
+    "title": "How to choose the right cloud storage for photos",
+    "description": "Finding online cloud storage for photos can be challenging. To make things easier, consider the following advice to help you choose.",
+    "costExp": {
+      "title": "Cost",
+      "description": "Free cloud storage for photos may work for small collections, but it may come with storage limits and fewer security features. It's important to compare pricing based on the amount of storage and features you need. With Internxt, you can get secure cloud storage for photos from €2 per month, or choose from our lifetime plans, which you can stack to get as much storage as you need."
+    },
+    "securityExp": {
+      "title": "Security",
+      "description": "Not all providers offer the same level of protection, and many online cloud storage for photos providers, while secure, often prioritize convenience over privacy. Some use data tracking, scan your files for AI training, or share data with third parties. To keep your photos private, look for a provider offering end-to-end encryption, zero-knowledge policies, and independent security audits. "
+    },
+    "extraFeaturesExp": {
+      "title": "Extra features",
+      "description": "Extra features may be necessary depending on your needs, and choosing the right cloud storage for photos can make your cloud storage experience more efficient, reliable, and secure. Internxt offers secure cloud storage for photos and includes a VPN and antivirus with all paid plans, providing an all-in-one solution to protect you from data breaches, losses, and other cyberattacks."
+    },
+    "cta": "Get Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "Why you should switch to private cloud storage solutions",
+    "subtitle": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
+    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
+    "cta": "Get Internxt"
+  },
+
+  "FeaturesSection": {
+    "title": "Secure photo storage to meet your needs",
+    "description": "Securely manage and back up photos and clean up your local storage to recover your files if you accidentally lose or delete your albums ",
+    "info": [
+      {
+        "title": "Free up local storage",
+        "description": [
+          "We offer a virtual drive to manage your online storage for photos, which acts like a regular hard drive on your computer to automatically sync photos in the cloud without taking up storage on your device.",
+          "This setup gives you quick access to your photos to back up, organize, and sync them, freeing up your device storage. Any changes you make are synced automatically, so you always have access to the latest versions of your files. "
+        ]
+      },
+      {
+        "title": "Cloud storage for RAW photos",
+        "description": [
+          "For photographers working with large, high-quality images, it can be challenging to find cloud storage for RAW photos with adequate storage plans to meet the demands of these image types.  ",
+          "RAW photos are unprocessed and contain more data than standard image formats, making them ideal for editing, but they have the disadvantage of being much larger. Internxt offers up to 5TB of online storage for photos to meet your needs."
+        ]
+      },
+      {
+        "title": "Restore your photos",
+        "description": [
+          "A problem many people face is losing access to their photos due to device failure, accidental deletion, data loss, or ransomware. Secure cloud storage for photos also includes backups, a reliable solution to protect your memories so you can access them whenever you need them.",
+          "Internxt encrypts all your files and backs them up automatically to the cloud. They are only accessible to you, so nobody except you can view your files. Our zero-knowledge encryption guarantees your privacy so you can get the most secure cloud storage for photos. "
+        ]
+      },
+      {
+        "title": "Post-quantum encryption",
+        "description": [
+          "Internxt is the first cloud storage for photos that secures your files with award-winning post-quantum encryption.",
+          "This means we offer the most secure cloud storage for photos to protect your files against quantum computers, which could break current encryption protocols, ensuring that your images remain safe and private even as technology advances."
+        ]
+      },
+      {
+        "title": "Antivirus protection",
+        "description": [
+          "Internxt paid plans also include Antivirus protection built into Internxt Drive, offering increased security for your files to prevent malware from infecting your devices or deleting your data.",
+          "With Internxt Antivirus, you get additional protection for your photos by running custom or full system scans on your photos. The software will scan for potential malware so you can identify and delete potential infections that could corrupt or steal your images."
+        ]
+      },
+      {
+        "title": "Open source and verified",
+        "description": [
+          "Open-source cloud storage for photos means the code we use to build our software is publicly available, allowing security experts to audit and verify its safety. ",
+          "Choosing an open-source, audited cloud storage provider offers increased transparency, ensuring no hidden vulnerabilities, backdoors, or data tracking. We provide everything you need to give you complete confidence that your data remains private and secure from unauthorized access."
+        ]
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "The most private cloud storage for your photos",
+    "description": "Protected by post-quantum encryption",
+    "cta": "Get Internxt"
+  },
+
+  "CtaSection2": {
+    "title": "Never worry about losing your photos",
+    "description": "Protect your memories with encrypted backups",
+    "cta": "Get Internxt"
+  },
+
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How do I store my photos with Internxt Drive?",
+        "answer": [
+          "Storing your photos with Internxt is simple; you can create an account for free or choose from any of our personal, business, family, or lifetime plans. You can then access your online storage for photos via your web browser.",
+          "Download the Windows, Mac, and Linux app from our website and access your photos via WebDAV with the Internxt CLI. You can download the Internxt app for iOS and Android to access your photos from your phone. All your photos are in the cloud so that you can access them from anywhere."
+        ]
+      },
+      {
+        "question": "How do I back up photos to Internxt Drive?",
+        "answer": [
+          "Backups are available for all our Essential, Premium, and Ultimate plans. From there, you can back up your photos via our virtual drive, and they will be available to download the next time you access your Internxt account on the web. "
+        ]
+      },
+      {
+        "question": "Is Internxt Drive a suitable cloud storage for RAW photos?",
+        "answer": [
+          "Yes, Internxt is a suitable cloud storage for photos and RAW files. We offer 1TB, 3TB, and 5TB cloud storage plans. A 5TB plan, for example, is enough to store over 60,000 large RAW photo files with an average file size of 80MB."
+        ]
+      },
+      {
+        "question": "What is the most secure cloud storage for photos?",
+        "answer": [
+          "The most secure cloud storage services use end-to-end encryption, meaning no one but you can access your photos. However, many companies track and sell your data, increasing the chances of data breaches. ",
+          "Furthermore, these companies manage encryption keys to your files, meaning they can access them anytime.",
+          "To get the most secure cloud storage for photos, choose an open-source and zero-knowledge cloud provider like Internxt, as encryption keys are managed on your device so that nobody except you can access them. "
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Get the most secure cloud storage for photos to keep your albums and memories safe forever",
+    "titleLine2": "Whether you need to store personal photos or share work projects with others, Internxt offers private cloud storage for photos to prevent AI and Big Tech from using them without your consent.",
+    "description": "",
+    "cta": "Get Internxt",
+    "cards": {
+      "element1": {
+        "title": "Shared links",
+        "description": [
+          "Protect your photos from being intercepted by hackers by encrypting your albums directly on your device. ",
+          "Quickly create a secure link to your pictures and copy and paste them into emails or messaging platforms to share with anyone, even if they don’t have an Internxt account."
+        ]
+      },
+      "element2": {
+        "title": "Password protection",
+        "description": [
+          "Get more privacy for your photos by adding password controls to protect personal and sensitive images from hackers, data breaches, or accidental sharing. ",
+          "Secure photo storage also protects you from identity theft by preventing hackers from viewing or gaining access to images that could be reused with malicious intent."
+        ]
+      },
+      "element3": {
+        "title": "Share folders",
+        "description": [
+          "Easily organize your online storage for photos with our easy-to-use interface and Windows, Mac, and Linux apps for increased collaboration and productivity. ",
+          "Allow others to contribute to your shared folders to access and upload to your photo albums in one place. We include permission controls so you can decide who can view or edit your photos for more control over your account security."
+        ]
+      }
+    }
+  }
+}
