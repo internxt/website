@@ -12,7 +12,6 @@ import CtaSection from '@/components/shared/CtaSection';
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
 import HeroSection from '@/components/affiliates/brave/HeroSection';
-import FloatingCtaSection from '../components/shared/FloatingCtaSection';
 
 interface BravePageProps {
   metatagsDescriptions: MetatagsDescription[];

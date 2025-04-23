@@ -23,6 +23,7 @@ interface PaymentSectionProps {
   onButtonClicked?: () => void;
   onPlanTypeChange?: (activeSwitchPlan: SwitchButtonOptions) => void;
   isStackCommerce?: boolean;
+  showOffer?: boolean;
 }
 
 const PaymentSection = ({
@@ -39,6 +40,7 @@ const PaymentSection = ({
   onPlanTypeChange,
   onButtonClicked,
   isStackCommerce,
+  showOffer,
 }: PaymentSectionProps): JSX.Element => {
   const router = useRouter();
 
@@ -78,14 +80,14 @@ const PaymentSection = ({
               </div>
             ) : (
               <>
-                <p className="text-5xl font-semibold leading-tight">
+                <p className="text-4xl font-semibold leading-tight lg:text-5xl">
                   {title.previousBlueText && <span>{title.previousBlueText}</span>}
                   <span className="text-primary">{formatText(title.blueText, { percent: percent ?? '80' })}</span>
                   {title.postBlueText && <span>{title.postBlueText}</span>}
                   <br />
                   <span>{title.normalText}</span>
                 </p>
-                <p className="max-w-[1000px] items-center pt-4 text-center text-xl font-normal">
+                <p className="max-w-[1000px] items-center pt-4 text-center text-lg font-normal lg:text-xl">
                   <span dangerouslySetInnerHTML={{ __html: highlightKeywords(description) }} />
                 </p>
               </>
@@ -112,9 +114,10 @@ const PaymentSection = ({
           currencySpecified={currencySpecified}
           onButtonClicked={onButtonClicked}
           isStackCommerce={isStackCommerce}
+          showOffer={showOffer}
         />
 
-        <div className="flex flex-col items-center justify-center space-y-8 bg-white pb-12 text-center md:flex-row md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-start justify-start space-y-8 pb-12 pl-10 text-center md:flex-row md:space-x-32 md:space-y-0 lg:justify-center">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-row items-center space-x-3">
               <feature.icon size={40} className="text-primary" />
