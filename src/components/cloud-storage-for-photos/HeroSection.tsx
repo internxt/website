@@ -79,15 +79,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
       boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
       borderRadius: '24px',
     },
-    {
-      src: '/images/antivirus/Internxt_Antivirus_Header.png',
-      alt: 'Task logger',
-      animationDelay: 900,
-      size: { width: 355, height: 257 },
-      position: { top: '65%', left: '95%' },
-      boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
-      borderRadius: '24px',
-    },
   ];
 
   return (

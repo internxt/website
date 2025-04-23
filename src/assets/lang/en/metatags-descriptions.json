@@ -403,5 +403,10 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt - GDPR Cloud Storage",
     "description": "Internxt is a GDPR cloud storage service committed to protecting your data by complying with strict EU privacy laws that prioritize privacy."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt - Cloud Storage for Photos",
+    "description": "Internxt offers cloud storage for photos, Antivirus, and VPN with post-quantum encryption for maximum security and privacy."
   }
 ]
