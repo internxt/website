@@ -57,9 +57,9 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
             </div>
             {cardsType && (
               <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-                <Header>{textContent[cardsType].title}</Header>
+                <Header className="text-5xl">{textContent[cardsType].title}</Header>
                 {textContent[cardsType].description.map((text) => (
-                  <p key={text} className="hidden text-2xl font-semibold text-white md:flex">
+                  <p key={text} className=" text-2xl font-semibold text-white md:flex">
                     {text}
                   </p>
                 ))}
