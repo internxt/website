@@ -12,11 +12,11 @@ const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
     <section className="overflow-hidden bg-white">
       {/* Header Section */}
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5">
-        <div className="flex w-full  flex-col items-center justify-center space-y-6 pt-20 text-center">
+        <div className="flex w-full flex-col items-center justify-center space-y-6 pt-20 text-center lg:max-w-[75%]">
           <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <div className="flex flex-col items-center space-y-6">
             {textContent.description && (
-              <p className="font-regular max-w-[75%] text-xl text-gray-80">{textContent.description}</p>
+              <p className="font-regular text-xl text-gray-80 lg:max-w-[800px] ">{textContent.description}</p>
             )}
           </div>
         </div>

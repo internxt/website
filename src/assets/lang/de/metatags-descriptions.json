@@ -189,5 +189,10 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt – DSGVO-konformer Cloud-Speicher",
     "description": "Internxt ist ein Cloud-Speicherdienst, der der DSGVO und den strengen Datenschutzgesetzen der EU entspricht, um deine Informationen zu schützen."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Meta-Titel: Internxt – Fotos in der Cloud",
+    "description": "Internxt bietet dir den besten Speicherplatz, um deine Fotos privat und sicher in der Cloud zu speichern – inklusive Antivirus und VPN."
   }
 ]

@@ -1,162 +1,172 @@
 {
   "HeroSection": {
-    "inxtLabel": "Internxt",
-    "educationLabel": "Education",
-    "title": {
-      "line1": "Secure file sharing for ",
-      "line2": "schools and universities"
-    },
-    "description": {
-      "boldText": "Exclusive 50% discount ",
-      "text": "for students, teachers, educators and graduates. Study hard, work safely, and secure your education journey with Internxt!"
-    },
-    "cta": "Claim discount"
-  },
-  "AchieveSecurityAndPrivacySection": {
-    "title": "Cloud Storage for Education: Achieve security and privacy with Internxt",
-    "subtitle": "Maximize academic productivity, collaboration, and file management for half the price.",
-    "description": "Internxt realizes the importance of a secure file-sharing method for schools, educators, and students to keep information safe. If you are a student, graduate, or working in education, you can enjoy a 50% discount on our secure cloud storage plans.",
-    "claimOffer": {
+    "TitleAndOnePlan": {
       "title": {
-        "normalText1": "Claim your ",
-        "blueText": "one-time ",
-        "normalText2": "special offer to get 50% off"
+        "textBeforeBlueText": "",
+        "blueText": "Fotos ",
+        "textAfterBlueText": "in der privaten Cloud"
       },
-      "description": "Choose from our monthly, annual, or lifetime plans to enjoy our encrypted suite of products at half the price.",
-      "paragraph": [
-        "Whichever plan you choose, you will enjoy the same end-to-end encryption and secure services to protect your confidential files or projects.",
-        "Once it’s time to renew your plan, simply confirm your education status with us via email to get continued access to your discount."
+      "description": "Internxts Fotospeicher ermöglicht es dir, private Alben zu erstellen sowie deine Fotos sicher in der Cloud zu speichern und zu teilen.",
+      "features": [
+        "Speichere deine Fotos privat",
+        "Postquanten- und Zero-Knowledge-Verschlüsselung",
+        "Open-Source und geprüft"
       ],
-      "cta": "Claim discount"
-    }
-  },
-  "BenefitsOfInternxtSection": {
-    "title": "The benefits of internxt cloud storage for education",
-    "subtitle": "A safe platform to share and store your files so you can focus on learning.",
-    "paragraph": [
-      "Schools, students, graduates, and employees need a safe, private way to back up sensitive information, resources, data, lesson plans, and more.",
-      "Internxt’s privacy-focused product suite helps schools, universities, and staff members to enjoy the following benefits of cloud storage for education including:"
-    ],
-    "cta": "Claim discount",
-    "cards": {
-      "workFromAnywhere": {
-        "title": "Work, study, and plan from anywhere",
-        "description": "No matter where or when you’re studying, Internxt is available on all devices. You have the freedom and ease to work at a time that suits you."
-      },
-      "sendFiles": {
-        "title": "Send files with peace of mind",
-        "description": "Enjoy advanced sharing options with Internxt Drive or encrypted file transfer with Internxt Send to protect your work from unauthorized access. Our secure file sharing for schools is designed to secure confidential student and staff information against data breaches."
-      },
-      "secureBackup": {
-        "title": "Secure backup and recovery",
-        "description": "You no longer need to worry about losing your work, as you can choose to back up your files from the desktop app every 6, 12, or 24 hours or select manual backups only."
-      }
-    }
-  },
-  "ClaimYourDiscountSection": {
-    "title": "How to Claim Your Discount",
-    "subtitle": "Get 50% off our monthly or annual plans with a valid education email address.",
-    "paragraph": [
-      "If you’re a student, teacher, graduate, or work in the education sector with a valid email address from an accredited institution, please fill out the form below to claim your discount.",
-      "Once we confirm your status, we will contact you to confirm how to claim your discount."
-    ],
-    "card": {
-      "title": "Contact us to claim your 50% education discount",
-      "fillForm": "Please fill in the form below:",
-      "institutionName": "Institution name*",
-      "nameLabel": "Name",
-      "institutionEmail": "Your institution email address*",
-      "emailLabel": "Email address",
-      "whichPlan": "Which plan you would like your discount applied to?*",
-      "select": "Select",
-      "annual": "Annual",
-      "monthly": "Monthly"
+      "claimDeal": "Wähle deinen Plan"
     },
-    "privacyCheckbox": "I have read and understood the [privacy policy](https://internxt.com/legal).",
-    "cta": "Claim discount"
+    "TitleAndOnePlanV2": {
+      "title": "Fotos in der privaten Cloud",
+      "description": "Internxts Fotospeicher ermöglicht es dir, private Alben zu erstellen sowie deine Fotos sicher in der Cloud zu speichern und zu teilen.",
+      "cta": "Wähle deinen Plan"
+    }
   },
-  "WhyChooseInternxtSection": {
-    "title": "Why choose Internxt?",
-    "subtitle": "Privacy is at the heart of what we do. We don't run our business on data collection or advertising. We build it on trust.",
-    "description": "Our encrypted technology is perfect for schools and universities to secure confidential information and keep your fundamental right to privacy.",
-    "cards": [
+  "ExplanationSection": {
+    "title": "Wie du den richtigen Cloud-Speicher für Fotos auswählst",
+    "description": "Befolge diese Tipps, um den besten Cloud-Speicher für deine Fotos zu finden",
+    "costExp": {
+      "title": "Kosten",
+      "description": "Kostenloser Cloud-Speicher für Fotos kann für kleine Sammlungen ausreichen, bietet jedoch oft begrenzten Speicherplatz und weniger Sicherheitsfunktionen. Es ist wichtig, Preise nach Speicherbedarf und Funktionen zu vergleichen. Mit Internxt erhältst du sicheren Cloud-Speicher für Fotos ab 2 € im Monat oder kannst einen lebenslangen Plan wählen, bei dem du nur einmal zahlst und lebenslangen Zugang erhältst."
+    },
+    "securityExp": {
+      "title": "Sicherheit",
+      "description": "Nicht alle Anbieter bieten das gleiche Maß an Schutz, und viele Cloud-Speicheranbieter für Fotos setzen auf Bequemlichkeit statt Datenschutz. Einige verfolgen deine Daten, scannen deine Dateien zur KI-Trainingszwecken oder teilen sie mit Dritten. Um die Privatsphäre deiner Fotos zu wahren, suche nach einem Anbieter mit Ende-zu-Ende-Verschlüsselung, Zero-Knowledge-Richtlinien und unabhängigen Sicherheitsprüfungen."
+    },
+    "extraFeaturesExp": {
+      "title": "Zusätzliche Funktionen",
+      "description": "Je nach deinen Anforderungen können zusätzliche Funktionen nötig sein. Die Wahl des richtigen Cloud-Speichers für Fotos kann deine Erfahrung effizienter, zuverlässiger und sicherer machen. Internxt bietet sicheren Cloud-Speicher für Fotos und enthält bei allen kostenpflichtigen Plänen ein VPN und Antivirus – eine All-in-One-Lösung zum Schutz vor Datenlecks, Verlusten und Cyberangriffen."
+    },
+    "cta": "Wähle deinen Plan"
+  },
+  "FeaturesSection": {
+    "title": "Sicherer Fotospeicher, der deinen Anforderungen entspricht",
+    "description": "Verwalte und sichere deine Fotos sicher in der Cloud und bereinige deinen lokalen Speicher, um deine Dateien zurückzugewinnen.",
+    "info": [
       {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
+        "title": "Lokalen Speicherplatz freigeben",
+        "description": [
+          "Wir bieten ein virtuelles Laufwerk zur Verwaltung deines Cloud-Fotospeichers, das wie eine normale Festplatte auf deinem Computer funktioniert und Fotos automatisch mit der Cloud synchronisiert, ohne Speicherplatz auf deinem Gerät zu belegen.",
+          "Diese Einrichtung ermöglicht schnellen Zugriff auf deine Fotos zur Sicherung, Organisation und Synchronisation, wodurch Speicherplatz auf deinem Gerät freigegeben wird. Änderungen werden automatisch synchronisiert, sodass du immer Zugriff auf die neueste Version deiner Dateien hast."
+        ]
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
+        "title": "Cloud-Speicher für RAW-Fotos",
+        "description": [
+          "Für Fotografen, die mit großen, hochwertigen Bildern arbeiten, kann es schwierig sein, Cloud-Speicher für RAW-Fotos mit geeigneten Speicherplänen zu finden.",
+          "RAW-Fotos sind unbearbeitet und enthalten mehr Daten als Standardbildformate, ideal zur Bearbeitung, aber auch deutlich größer. Internxt bietet Pläne bis zu 5 TB Cloud-Speicher für Fotos. Bei Bedarf kannst du zusätzliche Pläne erwerben, um deinen Speicher zu erweitern."
+        ]
       },
       {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "title": "Fotos wiederherstellen",
+        "description": [
+          "Ein häufiges Problem ist der Verlust von Fotos durch Geräteausfall, versehentliches Löschen, Datenverlust oder Ransomware. Sicherer Cloud-Speicher für Fotos beinhaltet Backups, eine zuverlässige Lösung zum Schutz deiner Erinnerungen.",
+          "Internxt verschlüsselt alle deine Dateien und sichert sie automatisch in der Cloud. Nur du hast Zugriff darauf – niemand sonst kann deine Dateien sehen. Unsere Zero-Knowledge-Verschlüsselung garantiert deine Privatsphäre für den sichersten Cloud-Speicher deiner Fotos."
+        ]
       },
       {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+        "title": "Postquanten-Verschlüsselung",
+        "description": [
+          "Internxt ist der erste Cloud-Fotospeicher mit Postquanten-Verschlüsselung – der derzeit sichersten Technologie.",
+          "Das bedeutet, dass wir den sichersten Cloud-Speicher für Fotos bieten, der deine Dateien gegen Quantencomputer schützt, die heutige Verschlüsselung knacken könnten. So bleiben deine Bilder auch in Zukunft sicher und privat."
+        ]
+      },
+      {
+        "title": "Antivirus-Schutz",
+        "description": [
+          "Internxt-Pläne enthalten integrierten Antivirus-Schutz in Internxt Drive für mehr Sicherheit deiner Dateien gegen Malware-Angriffe und unbeabsichtigtes Löschen sowie ein unbegrenztes, ultraschnelles VPN für privates Surfen.",
+          "Mit Internxt Antivirus kannst du deine Cloud-Fotos mit vollständigen oder benutzerdefinierten Scans auf potenzielle Malware prüfen. Die Software erkennt und entfernt Infektionen, die deine Bilder beschädigen oder stehlen könnten."
+        ]
+      },
+      {
+        "title": "Open-Source und geprüft",
+        "description": [
+          "Der Open-Source-Cloud-Speicher für Fotos bedeutet, dass der von uns genutzte Code öffentlich einsehbar ist und von Sicherheitsexperten geprüft werden kann.",
+          "Ein auditierter, Open-Source-Anbieter bietet mehr Transparenz und garantiert, dass es keine versteckten Schwachstellen, Hintertüren oder Datenverfolgung gibt – für vollständiges Vertrauen in die Sicherheit deiner Daten."
+        ]
       }
     ]
   },
-  "CtaSection": {
-    "title": "Internxt for education. Stand for privacy. Switch to internxt",
-    "description": "Verify your eligibility to get 50% off.",
-    "cta": "Claim discount"
+  "CtaSection1": {
+    "title": "Der privateste Cloud-Speicher für deine Fotos",
+    "description": "Gesichert mit Postquanten-Verschlüsselung",
+    "cta": "Wähle deinen Plan"
+  },
+  "CtaSection2": {
+    "title": "Mach dir nie wieder Sorgen, deine Fotos zu verlieren",
+    "description": "Schütze deine Daten mit verschlüsselten Backups",
+    "cta": "Kaufe deinen Plan"
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "Am I eligible for Internxt’s education discount?",
+        "question": "Wie speichere ich meine Fotos mit Internxt Drive?",
         "answer": [
-          "If you're currently enrolled in an educational institution as a student or employee and possess a valid education email, you qualify for Internxt's education discount. This discount remains active as long as your education email remains valid.",
-          "For plan renewals, changes, or upgrades, please contact us with the required details so we can apply the discount to your next subscription period."
+          "Fotos mit Internxt zu speichern ist einfach. Du kannst ein kostenloses Konto erstellen oder einen unserer persönlichen, geschäftlichen, Familien- oder lebenslangen Pläne wählen. Danach hast du Zugriff auf deinen Cloud-Fotospeicher über deinen Webbrowser.",
+          "Lade die App für Windows, Mac und Linux von unserer Website herunter und greife per WebDAV mit Internxt CLI auf deine Fotos zu. Mit der Internxt-App für iOS und Android kannst du von deinem Handy oder anderen Geräten auf deine Fotos zugreifen – jederzeit und überall."
         ]
       },
       {
-        "question": "How can I apply?",
+        "question": "Wie mache ich ein Backup meiner Fotos bei Internxt Drive?",
         "answer": [
-          "Please contact us at [hello@internxt.com](mailto:hello@internxt.com) and state your institution name, email, and the plan you would like to choose. Once verified, a member of our team will contact you, and you can start enjoying the benefits of Internxt!"
+          "Backups sind bei allen unseren Essential-, Premium- und Ultimate-Plänen verfügbar. Darüber kannst du deine Fotos über unser virtuelles Laufwerk sichern und sie sind beim nächsten Web-Zugriff auf dein Internxt-Konto zum Download verfügbar."
         ]
       },
       {
-        "question": "How much will I be charged?",
+        "question": "Ist Internxt Drive ein geeigneter Cloud-Speicher für RAW-Fotos?",
         "answer": [
-          "You will be charged 50% off your chosen monthly or annual plan. For a detailed look at our pricing and to decide which storage option suits your needs, please visit our [pricing page](https://internxt.com/pricing 'Internxt Pricing – Get 1GB Free!')."
+          "Ja, Internxt ist geeignet für RAW-Fotos. Wir bieten Cloud-Speicherpläne mit 1 TB, 3 TB und 5 TB. Ein 5-TB-Plan reicht aus, um über 60.000 große RAW-Fotodateien mit durchschnittlich 80 MB zu speichern. Wenn du mehr Speicher brauchst, kannst du jederzeit weitere Pläne hinzufügen."
         ]
       },
       {
-        "question": "What payment methods do you accept?",
+        "question": "Was ist der sicherste Cloud-Speicher für meine Fotos?",
         "answer": [
-          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
+          "Die sichersten Cloud-Speicher nutzen Ende-zu-Ende-Verschlüsselung – nur du kannst auf deine Fotos zugreifen. Viele Anbieter verfolgen und verkaufen deine Daten an Dritte, was zu Datenverletzungen führen kann.",
+          "Diese Unternehmen verwalten auch deine Verschlüsselungsschlüssel, sodass sie theoretisch jederzeit Zugriff auf deine Dateien haben.",
+          "Für den sichersten Cloud-Fotospeicher wähle einen Open-Source- und Zero-Knowledge-Anbieter wie Internxt, bei dem die Schlüssel auf deinem Gerät verwaltet werden – nur du hast Zugriff."
         ]
       },
       {
-        "question": "When will my discount expire?",
+        "question": "Wie kann ich den Support kontaktieren?",
         "answer": [
-          "For monthly plans, the discounted price will apply to renewals until you cancel or delete your subscription or if you choose to downgrade to a free plan.",
-          "If you have an annual plan, your discount will remain valid for one year from the purchase date and will automatically renew at the standard cost unless you cancel or reconfirm your eligibility status with us.",
-          "If you wish to re-subscribe to any plan and keep your education discount, you must contact us so we can verify your eligibility."
+          "Du findest nicht, wonach du suchst? Kontaktiere unser Support-Team über den Online-Chat oder per E-Mail an hello@internxt.com."
         ]
       },
       {
-        "question": "What if I want to change my plan?",
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung zahlen?",
         "answer": [
-          "You can change your subscription plan at any time. If you want to upgrade your storage and still enjoy Internxt and cloud storage for education, please contact us with the necessary details to re-verify your status. We will be in touch if you are still eligible for the discount."
-        ]
-      },
-      {
-        "question": "More questions?",
-        "answer": [
-          "Contact us on our live chat from our website (Mon - Fri), [hello@internxt.com](mailto:hello@internxt.com), or visit our [help center](https://help.internxt.com 'Internxt Help Center')."
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Außerdem kannst du mit PayPal, iDEAL, Sofort und Bancontact zahlen.",
+          "Auf Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Bei Fragen zu Zahlungsmethoden sende uns einfach eine E-Mail an hello@internxt.com."
         ]
       }
     ]
   },
-  "banner": {
-    "thanks": "Thank you!",
-    "title": "We have successfully received your request.",
-    "description": "We will be in touch with instructions on how to claim your discount!",
-    "cta": "Close"
+  "FeatureSection": {
+    "title": "Der sicherste Speicher für deine Fotos in der Cloud",
+    "titleLine2": "",
+    "description": "Halte deine Alben und Erinnerungen für immer sicher. Egal ob du persönliche Fotos speicherst oder Arbeitsprojekte teilst – tue es sicher und privat.",
+    "cta": "Wähle deinen Plan",
+    "cards": {
+      "element1": {
+        "title": "Geteilte Links",
+        "description": [
+          "Schütze deine Fotos vor Hackerangriffen, indem du deine Alben direkt auf deinem Gerät verschlüsselst.",
+          "Erstelle schnell einen sicheren Link zu deinen Bildern und teile ihn per E-Mail oder Nachricht – auch mit Personen ohne Internxt-Konto."
+        ]
+      },
+      "element2": {
+        "title": "Passwortschutz",
+        "description": [
+          "Erhalte mehr Privatsphäre für deine Cloud-Fotos durch Passwortschutz, um persönliche und vertrauliche Bilder vor Hackern, Datenlecks oder versehentlichem Teilen zu schützen.",
+          "Sicherer Fotospeicher schützt auch vor Identitätsdiebstahl, indem er verhindert, dass Hacker auf Bilder zugreifen, die böswillig wiederverwendet werden könnten."
+        ]
+      },
+      "element3": {
+        "title": "Geteilte Ordner",
+        "description": [
+          "Organisiere deinen Online-Fotospeicher einfach über unsere benutzerfreundliche Oberfläche und die Apps für Windows, Mac und Linux – für mehr Zusammenarbeit und Produktivität.",
+          "Erlaube anderen, zu deinen geteilten Cloud-Ordnern beizutragen und Alben an einem Ort hochzuladen. Mit Berechtigungskontrollen entscheidest du, wer deine Fotos sehen oder bearbeiten darf."
+        ]
+      }
+    }
   }
 }

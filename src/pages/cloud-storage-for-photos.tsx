@@ -32,23 +32,23 @@ const CloudStorageBackupSolutions = ({
   footerLang,
   lang,
 }: PrivacyProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-for-photos');
   const locale = lang as string;
   const CTA_URL = `/pricing`;
   const cardsData: FeatureCard[] = [
     {
+      title: textContent.FeatureSection.cards.element2.title,
+      description: textContent.FeatureSection.cards.element2.description,
+      image: '/images/cloud-storage-for-photos/password_protection.webp',
+    },
+    {
       title: textContent.FeatureSection.cards.element1.title,
       description: textContent.FeatureSection.cards.element1.description,
-      image: '/images/cloud-storage-for-photos/password_protection.webp',
+      image: '/images/cloud-storage-for-photos/shared_links.webp',
     },
     {
       title: textContent.FeatureSection.cards.element3.title,
       description: textContent.FeatureSection.cards.element3.description,
-      image: '/images/cloud-storage-for-photos/shared_links.webp',
-    },
-    {
-      title: textContent.FeatureSection.cards.element2.title,
-      description: textContent.FeatureSection.cards.element2.description,
       image: '/images/cloud-storage-for-photos/share_folders.webp',
     },
   ];

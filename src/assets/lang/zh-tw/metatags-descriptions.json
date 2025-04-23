@@ -363,5 +363,10 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt - 符合 GDPR 的雲端儲存服務",
     "description": "Internxt 是一項雲端儲存服務，遵循 GDPR 及歐盟嚴格的隱私法規，保障您的資訊安全。"
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Meta 標題：Internxt – 雲端照片儲存",
+    "description": "Internxt 為您提供最安全、最私密的雲端照片儲存服務，包含防毒軟體與 VPN 功能。"
   }
 ]
