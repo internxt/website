@@ -44,7 +44,7 @@ interface PriceTableProps {
     lifetime?: number;
     business?: number;
   };
-  isBrave?: boolean;
+  isAnnual?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -68,16 +68,14 @@ export const PricingSection = ({
   hideSwitchSelector,
   lang,
   popularPlanBySize = '3TB',
-  lifetimeCoupons,
   isFamilyPage,
-  isMonthly,
   onPlanTypeChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-  isBrave,
+  isAnnual,
   hideFeatures,
   showPromo = true,
 }: PriceTableProps): JSX.Element => {
@@ -176,25 +174,28 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center">
+        <div className="content flex flex-row flex-wrap items-start justify-center justify-items-center">
           {products?.individuals
-            ? products.individuals[billingFrequency].map((product) => (
-                <PriceCard
-                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                  product={product}
-                  onCheckoutButtonClicked={onCheckoutButtonClicked}
-                  label={product.storage}
-                  key={product.storage}
-                  popular={product.storage === popularPlanBySize}
-                  decimalDiscountValue={
-                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
-                  }
-                  lang={lang}
-                  darkMode={darkMode}
-                  isBrave={isBrave}
-                  showPromo={showPromo}
-                />
-              ))
+            ? products.individuals[billingFrequency]
+                .filter((_, index) => !(isAnnual && index === 0))
+                .map((product) => (
+                  <PriceCard
+                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                    product={product}
+                    onCheckoutButtonClicked={onCheckoutButtonClicked}
+                    label={product.storage}
+                    key={product.storage}
+                    popular={product.storage === popularPlanBySize}
+                    decimalDiscountValue={
+                      product.interval === Interval.Lifetime
+                        ? decimalDiscount?.lifetime
+                        : decimalDiscount?.subscriptions
+                    }
+                    lang={lang}
+                    darkMode={darkMode}
+                    showPromo={showPromo}
+                  />
+                ))
             : undefined}
         </div>
         {!hideFreeCard && (
