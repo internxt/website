@@ -126,6 +126,7 @@ export enum PromoCodeName {
   PcComponentes5TB = 'PCMOVIL',
   Celebration83 = 'CELEBRATION83',
   Special82 = '82SPECIAL',
+  TechRadarDiscount = 'TECHRADAR',
 }
 
 export interface PromoCodeProps {
