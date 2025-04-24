@@ -22,8 +22,8 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Special82,
-    couponCodeForLifetime: PromoCodeName.Special82,
+    couponCode: PromoCodeName.TechRadarDiscount,
+    couponCodeForLifetime: PromoCodeName.TechRadarDiscount,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {

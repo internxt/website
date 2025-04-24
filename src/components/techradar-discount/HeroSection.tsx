@@ -102,10 +102,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
                 <h1 className="text-4xl font-bold text-white xl:text-6xl">{textContent.title1.line1}</h1>
                 <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.title1.line2}</h2>
               </div>
-              <div className="flex w-[350px] flex-row items-center space-x-2.5 rounded-lg bg-primary/7 p-4 px-2 lg:w-[470px] xl:items-center">
-                <Percent className="h-48 w-48 text-primary xl:h-12 xl:w-12" />
-                <p className="font-regular pl-10 pr-20 text-xl text-white">{textContent.subtitle1}</p>
-              </div>
+
               <Link
                 href={'#priceTable'}
                 className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
