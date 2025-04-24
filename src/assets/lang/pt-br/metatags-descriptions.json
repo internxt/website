@@ -383,5 +383,10 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt - Armazenamento em nuvem compatível com a GDPR",
     "description": "Internxt é um serviço de armazenamento em nuvem que está em conformidade com a GDPR e com as rigorosas leis de privacidade da UE para proteger suas informações."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Oferta especial para seus planos anuais!",
+    "description": "Garanta um desconto em qualquer plano anual da Internxt. Todos os planos incluem armazenamento em nuvem privada, VPN e antivírus."
   }
 ]
