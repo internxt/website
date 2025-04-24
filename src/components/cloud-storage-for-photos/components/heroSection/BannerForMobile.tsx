@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 export const BannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../../../assets/lang/${lang}/cloud-storage-backup-solutions.json`);
+  const textContent = require(`../../../../assets/lang/${lang}/cloud-storage-for-photos.json`);
   const handleOnClick = () => {
     router.push('/pricing');
   };
@@ -18,16 +18,16 @@ export const BannerForMobile = () => {
         <p className="text-center text-5xl font-bold text-gray-100">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
-        <p className="text-center pt-4 text-xl">
-              <span className="text-gray-100">{textContent.HeroSection.TitleAndOnePlanV2.description}</span>
-            </p>
+        <p className="pt-4 text-center text-xl">
+          <span className="text-gray-100">{textContent.HeroSection.TitleAndOnePlanV2.description}</span>
+        </p>
         <button
           onClick={handleOnClick}
           className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
         >
           {textContent.HeroSection.TitleAndOnePlanV2.cta}
         </button>
-        
+
         <Image
           src={getImage('/images/campaigns/spring/image_mobile.webp')}
           width={380}

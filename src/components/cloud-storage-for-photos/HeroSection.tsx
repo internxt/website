@@ -5,10 +5,10 @@ import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
-import { CloudStorageBackupSolutionsText, ImageConfig } from '@/assets/types/cloud-storage-backup-solutions';
+import { CloudStorageForPhotosText, ImageConfig } from '@/assets/types/cloud-storage-for-photos';
 const Animation = dynamic(() => import('../shared/Animation'));
 interface HeroSectionForHomeProps {
-  textContent: CloudStorageBackupSolutionsText['HeroSection'];
+  textContent: CloudStorageForPhotosText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
 }
