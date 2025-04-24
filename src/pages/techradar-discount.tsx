@@ -64,6 +64,7 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
         backgroundColorComponent="bg-white-1"
         isBrave
       />
+
       <FloatingCtaSection textContent={langJson.CtaSection} />
 
       <ScrollableSection textContent={langJson.ScrollableSection} />

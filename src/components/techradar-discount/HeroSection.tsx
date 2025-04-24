@@ -5,7 +5,6 @@ import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 import { Percent } from '@phosphor-icons/react';
 const Animation = dynamic(() => import('../shared/Animation'));
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-import Button from '../shared/Button';
 import Link from 'next/link';
 interface HeroSectionForHomeProps {
   textContent: any;
@@ -81,7 +80,7 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
 
   return (
     <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
-      <div className="relative mx-4 pb-12 pt-24 lg:pt-0 xl:mx-32">
+      <div className="relative mx-4 pb-12 pt-0 lg:pt-0 xl:mx-32">
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
@@ -90,9 +89,9 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
           <div
             className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 pt-32 text-center lg:items-start lg:text-left">
+            <div className="flex max-w-[550px] flex-col items-center justify-center space-y-6 pt-32 text-center lg:items-start lg:text-left">
               <div className="flex flex-col space-y-4">
-                <div className="flex flex-row items-center space-x-3.5 pb-6">
+                <div className="px-18 flex flex-row items-center space-x-3.5 pb-6 pl-8 lg:pl-0">
                   <Image
                     src={getImage('/icons/techradarXInternxt.svg')}
                     width={300}
@@ -103,9 +102,9 @@ export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionFo
                 <h1 className="text-4xl font-bold text-white xl:text-6xl">{textContent.title1.line1}</h1>
                 <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.title1.line2}</h2>
               </div>
-              <div className="flex w-[470px] flex-row items-start space-x-2.5 rounded-lg bg-primary/7 p-4 px-4 xl:items-center">
-                <Percent className="h-8 w-8 text-primary xl:h-12 xl:w-12" />
-                <p className="font-regular pr-20 text-xl text-white">{textContent.subtitle1}</p>
+              <div className="flex w-[350px] flex-row items-center space-x-2.5 rounded-lg bg-primary/7 p-4 px-2 lg:w-[470px] xl:items-center">
+                <Percent className="h-48 w-48 text-primary xl:h-12 xl:w-12" />
+                <p className="font-regular pl-10 pr-20 text-xl text-white">{textContent.subtitle1}</p>
               </div>
               <Link
                 href={'#priceTable'}
