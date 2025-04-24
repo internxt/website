@@ -1,59 +1,76 @@
 {
   "HeroSection": {
     "title1": {
-      "line1": "Get the safest cloud storage",
-      "line2": "for all your files, photos and more"
+      "line1": "Secure, private cloud storage",
+      "line2": "that protects your right to privacy"
     },
     "subtitle1": "Don't forget to use the exclusive coupon code TECHRADAR",
-    "card": "\"Individual users and businesses that prioritize security will enjoy advanced security features and commitment to privacy\"",
     "cta": "Choose your plan"
   },
-  "PaymentSection": {
-    "title": "Privacy at a reasonable price",
-    "subtitle": "Who says best-in-class security can't be affordable? Protect your privacy and take back total control of your data with any one of our three plans:",
-    "billedAnnually": "Billed annually",
-    "popular": "Most popular",
-    "month": "/month",
-    "20GB": {
-      "plan": "20GB",
-      "price": "0.89",
-      "annualPrice": "10.68"
+  "tableSection": {
+    "header": "Total privacy for 82% OFF",
+    "planTitles": {
+      "individuals": "Annual",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime storage plans",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
     },
-    "200GB": {
-      "plan": "200GB",
-      "price": "3.49",
-      "annualPrice": "41.88"
+    "lifetimeDescription": "All Internxt plans come with complete access to our privacy-focused features. Subscribe to Internxt and secure a year of encrypted cloud storage.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
     },
-    "2TB": {
-      "plan": "2TB",
-      "price": "8.99",
-      "annualPrice": "107.88"
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
     },
-    "infoPlan": {
-      "info1": "30 days money-back guarantee",
-      "info2": "Encrypted file storage and sharing",
-      "info3": "Access your files from any device",
-      "info4": "Get access to all our services"
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
-  "InfoSection": {
-    "title": "How we ensure user privacy",
-    "subtitle": "We take privacy and security very seriously, that's why we employ a stack of technologies and protocols to always ensure tht your data remains safe and private.",
-    "card1": {
-      "title": "Military-grade encryption",
-      "description": "All the data you store in your Internxt account is encrypted with AES-256. This means that the most powerful processor in the world would need twice the age of the universe to decrypt a small file."
-    },
-    "card2": {
-      "title": "Zero-knowledge technology",
-      "description": "We make sure that there is no point in time where files, photos, passwords, or any unencrypted data is visible to unauthorized users or servers."
-    },
-    "card3": {
-      "title": "GDPR-compliant synchronization",
-      "description": "We conform with all GDPR provisions, such as privacy by design, the right to information, and the right to be forgotten, among many others, and are committed to meeting all future provisions."
-    },
-    "card4": {
-      "title": "End-to-end encryption",
-      "description": "Everything you store or transfer is encrypted before leaving your device, making it impossible to decrypt without the user's permission. Even we can't access your files, photos, or passwords."
-    }
+  "ScrollableSection": {
+    "title": "Secure cloud storage with unmatched privacy",
+    "subtitle": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
+    "elements": [
+      {
+        "title": "Unmatched privacy",
+        "description": "Protecting your privacy is our top priority; we never store passwords or personal data. Your files are encrypted in transit and at rest, giving you complete control over your information. "
+      },
+      {
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge and post-quantum encryption, you are the only one with access to your data."
+      },
+      {
+        "title": "Open-source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      },
+      {
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "\"Individual users and businesses that prioritize security will enjoy advanced security features and commitment to privacy\""
+  },
+  "CtaSection2": {
+    "title": "Get the world’s most secure cloud storage",
+    "description": "Internxt’s zero-knowledge encryption gives you total control of your privacy.",
+    "cta": "Choose your plan"
   }
 }
