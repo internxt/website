@@ -92,7 +92,7 @@ const CloudStorageBackupSolutions = ({
         <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
         <FeatureSection
-          title= {textContent.FeatureSection.title} 
+          title={textContent.FeatureSection.title}
           subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
           ctaText={textContent.FeatureSection.cta}
