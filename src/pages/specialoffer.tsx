@@ -39,7 +39,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Identity82AFF,
+    couponCode: PromoCodeName.Special82,
   });
 
   const cardsData = [
@@ -102,7 +102,7 @@ const PartnerDiscount = ({
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
+            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 pb-4 lg:flex-row lg:justify-start lg:space-y-0 lg:pb-0">
               <Link
                 href={'#priceTable'}
                 className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
@@ -136,14 +136,7 @@ const PartnerDiscount = ({
         hideSwitchSelector
         hideBusinessSelector
         showPromo={false}
-        CustomDescription={
-          <>
-            <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {langJson.PaymentSection.planDescription}
-            </span>
-          </>
-        }
+        backgroundColorComponent="bg-gray-1"
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />

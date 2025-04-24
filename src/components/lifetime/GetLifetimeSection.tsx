@@ -29,7 +29,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
               </h2>
             ) : lang === 'en' ? (
               <div className="max-w-[800px]">
-                <p className="text-5xl font-semibold leading-tight text-primary">{textContent.title}</p>
+                <p className="text-4xl font-semibold leading-tight text-primary lg:text-5xl">{textContent.title}</p>
                 <p className="pt-4 text-xl font-semibold leading-tight text-white">{textContent.subtitle}</p>
               </div>
             ) : (
