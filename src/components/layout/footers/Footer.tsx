@@ -933,6 +933,41 @@ export default function Footer({
                 </>
               )}
             </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                      } space-y-8 p-4`}
+                    >
+                      <Link href="/private-cloud-storage-solutions" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.privateCloud}
+                      </Link>
+
+                      <Link href="/cloud-storage-backup-solutions" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.cloudBakcup}
+                      </Link>
+
+                      <Link href="/gdpr-cloud-storage" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.GDPRCloud}
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
             {/* Language selection for mobile view */}
             <LanguageMobileBox darkMode={darkMode} />
 
