@@ -11,10 +11,11 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { GetServerSidePropsContext } from 'next';
 import { CloudStorageForPhotosText } from '@/assets/types/cloud-storage-for-photos';
 import { BannersText } from '@/assets/types/components/banners';
-import FeaturesSection from '@/components/cloud-storage-for-photos/FeaturesSection';
+import FeaturesSlider from '@/components/shared/FeaturesSlider';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import ExplanationSection from '@/components/cloud-storage-for-photos/ExplanationSection';
+import { ClockClockwise, CloudArrowUp, Eye, Images, Key, ShieldPlus } from '@phosphor-icons/react';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -51,6 +52,14 @@ const CloudStorageBackupSolutions = ({
       description: textContent.FeatureSection.cards.element3.description,
       image: '/images/cloud-storage-for-photos/share_folders.webp',
     },
+  ];
+  const cardInfo = [
+    { icon: CloudArrowUp, ...textContent.FeaturesSection.info[0] },
+    { icon: Images, ...textContent.FeaturesSection.info[1] },
+    { icon: ClockClockwise, ...textContent.FeaturesSection.info[2] },
+    { icon: Key, ...textContent.FeaturesSection.info[3] },
+    { icon: ShieldPlus, ...textContent.FeaturesSection.info[4] },
+    { icon: Eye, ...textContent.FeaturesSection.info[5] },
   ];
 
   return (
@@ -93,8 +102,11 @@ const CloudStorageBackupSolutions = ({
           ctaLink={CTA_URL}
         ></ExplanationSection>
 
-        <FeaturesSection textContent={textContent.FeaturesSection} />
-
+        <FeaturesSlider
+          textContent={textContent.FeaturesSection}
+          cardInfo={cardInfo}
+          backgroundClass="bg-white lg:bg-gray-1"
+        />
         <CtaSection
           textContent={textContent.CtaSection2}
           url={CTA_URL}

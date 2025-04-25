@@ -69,21 +69,12 @@ export interface FAQ {
 export interface FeaturesSection {
   title: string;
   description: string;
-  cards: Cards;
+  info: InfoCard[];
 }
 
-export interface Cards {
-  openSource: EndToEnd;
-  endToEnd: EndToEnd;
-  zeroKnowledge: EndToEnd;
-  gdpr: EndToEnd;
-  noUnwantedAccess: EndToEnd;
-  freeTools: EndToEnd;
-}
-
-export interface EndToEnd {
+export interface InfoCard {
   title: string;
-  description: string;
+  description: string[] | string;
 }
 
 export interface HeroSection {
