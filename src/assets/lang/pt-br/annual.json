@@ -1,0 +1,85 @@
+{
+  "HeroSection": {
+    "header": "Garanta seu desconto exclusivo de 82% em todos os planos anuais!",
+    "title": {
+      "normalText": "O armazenamento em nuvem mais seguro e privado ",
+      "blueText": "para seus arquivos"
+    },
+    "description": "Assine um plano anual da Internxt e tenha 365 dias de total privacidade.",
+    "cta": "Escolha seu plano"
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Planos anuais",
+      "homePage": "Escolha o plano ideal para você",
+      "lifetime": "Planos vitalícios",
+      "business": "Planos empresariais",
+      "lifetimeCampaign": {
+        "blueText": "Ganhe 50% DE DESCONTO",
+        "normalText": "em todos os nossos planos vitalícios exclusivos"
+      }
+    },
+    "header": "Privacidade total com 82% de desconto",
+    "lifetimeDescription": "Com um pagamento único, você garante privacidade vitalícia. Tenha acesso para sempre a todos os recursos focados em privacidade e ao armazenamento em nuvem criptografado da Internxt.",
+    "planDescription": "Todos os planos da Internxt oferecem acesso completo ao nosso pacote de soluções privadas: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "billingFrequency": {
+      "monthly": "Mensal",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Vitalício",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Grátis",
+      "description": "Tenha até 1GB de armazenamento criptografado e aproveite nosso ecossistema privado: VPN (FR), CLI/WebDav/Rclone e muito mais.",
+      "cta": "Selecionar plano"
+    },
+    "features": {
+      "endToEnd": "Criptografia de ponta a ponta",
+      "openSource": "Código aberto e auditado",
+      "anonymousAccount": "Criação anônima de conta",
+      "premiumSupport": "Suporte premium ao cliente",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    }
+  },
+  "PaymentSection": {
+    "blueTitle": "Privacidade total com 82% de desconto",
+    "title": "Planos anuais",
+    "description": "Todos os planos da Internxt oferecem acesso completo ao nosso pacote de soluções privadas: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "firstFeed": "Suporte premium ao cliente",
+    "secondFeed": "Garantia de reembolso de 30 dias",
+    "thirdFeed": "Código aberto e auditado"
+  },
+  "FeatureSection": {
+    "title": "Recupere o controle da sua privacidade",
+    "description": "A Internxt cria serviços em nuvem privados e seguros, desenvolvidos para te ajudar a recuperar o controle dos seus dados. Protegendo seus arquivos e seu direito fundamental à privacidade, todos os serviços da Internxt são projetados desde o início para oferecer segurança e proteção incomparáveis.",
+    "cta": "Escolha seu plano"
+  },
+  "CtaSection": {
+    "title": "O armazenamento em nuvem da Internxt ",
+    "description": "A nuvem mais privada, segura e criptografada do mundo. Proteja o que realmente importa: suas informações.",
+    "cta": "Escolha seu plano"
+  },
+  "FeaturesSection": {
+    "title": "Armazenamento em nuvem seguro com privacidade incomparável",
+    "description": "O que torna a Internxt especial? Somos uma equipe unida de profissionais totalmente dedicados a proteger você online. Tudo o que fazemos e cada decisão que tomamos é focada em proteger seus dados e evitar que eles sejam explorados.",
+    "info": [
+      {
+        "title": "Privacidade incomparável",
+        "description": "Proteger sua privacidade é nossa prioridade máxima. Nunca armazenamos senhas ou dados pessoais. Seus arquivos são sempre criptografados, garantindo controle total sobre suas informações."
+      },
+      {
+        "title": "Segurança sem concessões",
+        "description": "Seus arquivos são criptografados de ponta a ponta antes mesmo de saírem do seu dispositivo. Com arquitetura zero-knowledge e criptografia pós-quântica, apenas você tem acesso aos seus dados."
+      },
+      {
+        "title": "Código aberto e transparente",
+        "description": "Temos orgulho do que fazemos, por isso nosso código é público no GitHub. Qualquer pessoa pode revisá-lo, auditá-lo e verificar por conta própria. Não temos nada a esconder — exceto seus dados."
+      },
+      {
+        "title": "Verificado independentemente",
+        "description": "Somos totalmente compatíveis com a GDPR e 100% seguros. A Internxt foi auditada e verificada de forma independente pela Securitum, empresa líder em testes de penetração na Europa."
+      }
+    ]
+  }
+}
