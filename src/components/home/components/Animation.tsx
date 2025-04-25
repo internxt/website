@@ -16,7 +16,7 @@ const Animation = ({
   zipImg = getImage('/images/home/header/zip.svg', true),
   powerpointImg = getImage('/images/home/header/powerpoint.svg', true),
   csvImg = getImage('/images/home/header/csv.svg', true),
-  previewImg = getImage('/images/campaigns/stPatricks/file_item.webp', true),
+  previewImg = getImage('/images/home/header/file_item.webp', true),
   taskloggerImg = getImage('/images/home/header/tasklogger.webp', true),
 }: AnimationProps) => {
   // Header animation

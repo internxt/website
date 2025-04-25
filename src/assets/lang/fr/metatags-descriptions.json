@@ -183,5 +183,10 @@
     "id": "internxt-cloud-storage-for-photos",
     "title": "Meta titre : Internxt – Photos dans le cloud",
     "description": "Internxt vous offre le meilleur espace de stockage pour sauvegarder vos photos dans le cloud de manière privée et sécurisée, avec antivirus et VPN inclus."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
+    "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
   }
 ]
