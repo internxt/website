@@ -191,8 +191,15 @@
     "description": "Internxt ist ein Cloud-Speicherdienst, der der DSGVO und den strengen Datenschutzgesetzen der EU entspricht, um deine Informationen zu schützen."
   },
   {
+
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Meta-Titel: Internxt – Fotos in der Cloud",
+    "description": "Internxt bietet dir den besten Speicherplatz, um deine Fotos privat und sicher in der Cloud zu speichern – inklusive Antivirus und VPN."
+  },
+  {
     "id": "internxt-annual",
     "title": "Internxt – Spezialangebot für deine Jahrespläne!",
     "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
+
   }
 ]

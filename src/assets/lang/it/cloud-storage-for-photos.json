@@ -1,0 +1,176 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "Foto ",
+        "textAfterBlueText": "nel cloud privato"
+      },
+      "description": "Lo spazio di archiviazione di Internxt per le foto ti consente di creare album privati e archiviare e condividere le tue foto nel cloud in modo sicuro.",
+      "features": [
+        "Archivia le tue foto in privato",
+        "Crittografia post-quantistica e zero conoscenza",
+        "Codice aperto e auditato"
+      ],
+      "claimDeal": "Scegli il tuo piano"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Foto nel cloud privato",
+      "description": "Lo spazio di archiviazione di Internxt per le foto ti consente di creare album privati e archiviare e condividere le tue foto nel cloud in modo sicuro.",
+      "cta": "Scegli il tuo piano"
+    }
+  },
+  "ExplanationSection": {
+    "title": "Come scegliere lo spazio di archiviazione giusto per le tue foto nel cloud",
+    "description": "Per trovare la migliore opzione di archiviazione per le tue foto nel cloud, segui questi suggerimenti",
+    "costExp": {
+      "title": "Costo",
+      "description": "Lo spazio di archiviazione gratuito per le foto nel cloud potrebbe andare bene per piccole collezioni, ma potrebbe avere limitazioni di spazio di archiviazione e meno funzionalità di sicurezza. È importante confrontare i prezzi in base alla quantità di archiviazione e alle funzionalità necessarie. Con Internxt, puoi ottenere spazio di archiviazione sicuro nel cloud per le tue foto a partire da 2 € al mese, oppure scegliere tra i nostri piani a vita, dove fai un pagamento una tantum e ottieni l'accesso a vita."
+    },
+    "securityExp": {
+      "title": "Sicurezza",
+      "description": "Non tutti i fornitori offrono lo stesso livello di protezione, e molti fornitori di archiviazione nel cloud per le foto, anche se sicuri, spesso danno la priorità alla convenienza rispetto alla privacy. Alcuni monitorano i tuoi dati, scansionano i tuoi file per addestrare l'IA o condividono i dati con terze parti. Per garantire la privacy delle tue foto, cerca un fornitore che offra crittografia end-to-end, politiche di zero conoscenza e audit di sicurezza indipendenti."
+    },
+    "extraFeaturesExp": {
+      "title": "Funzionalità aggiuntive",
+      "description": "Potresti aver bisogno di funzionalità aggiuntive a seconda delle tue necessità, e scegliere lo spazio di archiviazione giusto per le tue foto nel cloud può rendere la tua esperienza di archiviazione nel cloud più efficiente, affidabile e sicura. Internxt offre archiviazione sicura nel cloud per le tue foto e include un VPN e un antivirus con tutti i piani a pagamento, fornendo così una soluzione completa per proteggerti da fughe di dati, perdite e altri attacchi informatici."
+    },
+    "cta": "Scegli il tuo piano"
+  },
+
+  "FeaturesSection": {
+    "title": "Archiviazione sicura delle foto per soddisfare le tue esigenze",
+    "description": "Gestisci e salva le tue foto nel cloud in modo sicuro e libera spazio di archiviazione locale per recuperare i tuoi file.",
+    "info": [
+      {
+        "title": "Libera spazio di archiviazione locale",
+        "description": [
+          "Offriamo un'unità virtuale per gestire lo spazio di archiviazione delle foto nel cloud, che funziona come un normale disco rigido sul tuo computer per sincronizzare automaticamente le foto nel cloud senza occupare spazio di archiviazione sul tuo dispositivo.",
+          "Questa configurazione consente un accesso rapido alle tue foto per archiviarle, organizzarle e sincronizzarle, liberando allo stesso tempo spazio sul tuo dispositivo. Ogni modifica che apporti si sincronizza automaticamente, garantendoti l'accesso alle versioni più recenti dei tuoi file."
+        ]
+      },
+      {
+        "title": "Archiviazione nel cloud per foto RAW",
+        "description": [
+          "Per i fotografi che lavorano con immagini di grandi dimensioni e alta qualità, può essere difficile trovare uno spazio di archiviazione nel cloud per le foto RAW con piani di archiviazione adatti alle esigenze di questo tipo di immagine.",
+          "Le foto RAW non sono trattate e contengono più dati rispetto ai formati immagine standard, il che le rende ideali per la modifica, ma sono molto più grandi. Internxt offre piani fino a 5 TB di archiviazione nel cloud per le foto, per soddisfare le tue esigenze. Se hai bisogno di più spazio, puoi acquistare altri piani e aumentare la tua capacità di archiviazione."
+        ]
+      },
+      {
+        "title": "Ripristina le tue foto",
+        "description": [
+          "Un problema comune che molte persone affrontano è la perdita di accesso alle proprie foto a causa di un guasto del dispositivo, una cancellazione accidentale, una perdita di dati o un attacco ransomware. L'archiviazione sicura nel cloud per le foto include anche backup, una soluzione affidabile per proteggere i tuoi ricordi e accedervi quando ne hai bisogno.",
+          "Internxt crittografa tutti i tuoi file e li salva automaticamente nel cloud. Solo tu puoi accedervi, nessun altro può vedere i tuoi file. La nostra crittografia a zero conoscenza garantisce la tua privacy, in modo che tu possa ottenere l'archiviazione nel cloud più sicura per le tue foto."
+        ]
+      },
+      {
+        "title": "Crittografia post-quantistica",
+        "description": [
+          "Internxt è il primo servizio di archiviazione per le foto nel cloud a proteggere i tuoi file con crittografia post-quantistica, la tecnologia più sicura attualmente disponibile.",
+          "Ciò significa che offriamo l'archiviazione nel cloud più sicura per le foto per proteggere i tuoi file contro i computer quantistici, che potrebbero compromettere i protocolli di crittografia attuali, garantendo che le tue immagini rimangano sicure e private anche con il progresso della tecnologia."
+        ]
+      },
+      {
+        "title": "Protezione antivirus",
+        "description": [
+          "I piani Internxt includono anche una protezione antivirus integrata in Internxt Drive, offrendo una sicurezza migliorata per i tuoi file per evitare che malware infetti i tuoi dispositivi o cancelli i tuoi dati, oltre a una VPN illimitata e ultra-veloce per navigare in modo privato su internet.",
+          "Con l'antivirus di Internxt, otterrai una protezione aggiuntiva per le tue foto eseguendo scansioni personalizzate o complete del tuo sistema per le foto nel cloud. Il software cercherà malware potenziali per identificare ed eliminare infezioni che potrebbero danneggiare o rubare le tue immagini."
+        ]
+      },
+      {
+        "title": "Codice aperto e verificato",
+        "description": [
+          "L'archiviazione nel cloud open-source per le foto significa che il codice che usiamo per creare il nostro software è disponibile pubblicamente, il che consente agli esperti di sicurezza di eseguire audit e verificare la sua sicurezza.",
+          "Scegliere un fornitore di archiviazione nel cloud auditato e open-source offre maggiore trasparenza, garantendo che non ci siano vulnerabilità nascoste, backdoor o tracciamento dei dati. Forniamo tutto il necessario per darti totale fiducia che i tuoi dati rimangano privati e protetti da accessi non autorizzati."
+        ]
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "Il cloud più privato per le tue foto",
+    "description": "Protetto da crittografia post-quantistica",
+    "cta": "Scegli il tuo piano"
+  },
+
+  "CtaSection2": {
+    "title": "Non preoccuparti mai di perdere le tue foto",
+    "description": "Proteggi i tuoi dati con backup crittografati",
+    "cta": "Acquista il tuo piano"
+  },
+
+  "FaqSection": {
+    "title": "Hai domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Come archivio le mie foto con Internxt Drive?",
+        "answer": [
+          "Archiviare le tue foto con Internxt è semplice; puoi creare un account gratuitamente o scegliere uno dei nostri piani personali, professionali, familiari o a vita. Poi accedi al tuo spazio di archiviazione per le foto nel cloud tramite il browser.",
+          "Scarica l'app per Windows, Mac e Linux dal nostro sito web e accedi alle tue foto tramite WebDAV con Internxt CLI. Puoi anche scaricare l'app Internxt per iOS e Android per accedere alle tue foto da telefono o da altri dispositivi. Tutte le tue foto sono nel cloud, così puoi accedervi da ovunque."
+        ]
+      },
+      {
+        "question": "Come posso fare il backup delle mie foto su Internxt Drive?",
+        "answer": [
+          "I backup sono disponibili per tutti i nostri piani Essential, Premium e Ultimate. Da lì, puoi fare il backup delle tue foto tramite la nostra unità virtuale e saranno disponibili per il download alla tua prossima connessione al tuo account Internxt sul web."
+        ]
+      },
+      {
+        "question": "Internxt Drive è un'archiviazione nel cloud adatta per foto RAW?",
+        "answer": [
+          "Sì, Internxt è un'archiviazione nel cloud adatta per foto RAW e file di grandi dimensioni. Offriamo piani di archiviazione nel cloud da 1 TB, 3 TB e 5 TB. Ad esempio, un piano da 5 TB è sufficiente per archiviare oltre 60.000 file di foto RAW di grandi dimensioni, con una dimensione media di 80 MB per file. Inoltre, se in futuro avrai bisogno di più spazio, puoi acquistare altri piani e aumentare la tua capacità."
+        ]
+      },
+      {
+        "question": "Qual è lo spazio di archiviazione nel cloud più sicuro per le mie foto?",
+        "answer": [
+          "I servizi di archiviazione nel cloud più sicuri utilizzano la crittografia end-to-end, il che significa che nessuno tranne te può accedere alle tue foto. Tuttavia, molte aziende monitorano e vendono i tuoi dati a terzi, aumentando il rischio di violazioni dei dati.",
+          "Inoltre, queste aziende gestiscono le chiavi di crittografia dei tuoi file, il che significa che possono accedervi in qualsiasi momento.",
+          "Per ottenere lo spazio di archiviazione nel cloud più sicuro per le tue foto, scegli un fornitore di cloud open-source e zero-knowledge come Internxt, poiché le chiavi di crittografia sono gestite sul tuo dispositivo, quindi nessun altro può accedervi."
+        ]
+      },
+      {
+        "question": "Come posso contattare il supporto?",
+        "answer": [
+          "Non trovi quello che stai cercando? Puoi contattare il nostro team di supporto tramite chat online o inviando un'e-mail a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovalute?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort e Bancontact.",
+          "Su richiesta, accettiamo anche criptovalute e addebiti SEPA. Se hai domande sui metodi di pagamento, inviaci semplicemente un'e-mail a hello@internxt.com."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Lo spazio di archiviazione più sicuro per le tue foto nel cloud",
+    "titleLine2": "",
+    "description": "Tieni al sicuro i tuoi album e ricordi per sempre. Che si tratti di archiviare foto personali o condividere progetti professionali, fallo in modo sicuro e privato.",
+    "cta": "Scegli il tuo piano",
+    "cards": {
+      "element1": {
+        "title": "Link condivisi",
+        "description": [
+          "Proteggi le tue foto affinché non vengano intercettate da hacker crittografando direttamente i tuoi album sul tuo dispositivo.",
+          "Crea rapidamente un link sicuro per le tue immagini e copialo nelle email o nelle piattaforme di messaggistica per condividerlo con chiunque, anche se non ha un account Internxt."
+        ]
+      },
+      "element2": {
+        "title": "Protezione con password",
+        "description": [
+          "Ottieni maggiore privacy per le tue foto nel cloud aggiungendo controlli tramite password per proteggere immagini personali e riservate da hacker, fughe di dati o condivisioni accidentali.",
+          "Lo spazio di archiviazione sicuro delle foto ti protegge anche dal furto d'identità, impedendo agli hacker di vedere o ottenere immagini che potrebbero essere riutilizzate per scopi dannosi."
+        ]
+      },
+      "element3": {
+        "title": "Cartelle condivise",
+        "description": [
+          "Organizza facilmente il tuo spazio di archiviazione online per le tue foto nel cloud con la nostra interfaccia intuitiva e le app per Windows, Mac e Linux per migliorare la collaborazione e la produttività.",
+          "Permetti ad altri di contribuire alle tue cartelle condivise nel cloud per accedere e scaricare i tuoi album fotografici nello stesso posto. Includiamo i controlli di autorizzazione in modo che tu possa decidere chi può vedere o modificare le tue foto per avere più controllo sulla sicurezza del tuo account."
+        ]
+      }
+    }
+  }
+}
