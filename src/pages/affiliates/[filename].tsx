@@ -16,7 +16,7 @@ import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
-import ScrollableFeatureSection from '@/components/shared/components/ScrollableFeatureSection';
+import FeaturesSlider from '@/components/shared/FeaturesSlider';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -198,7 +198,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
           <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
 
-          <ScrollableFeatureSection
+          <FeaturesSlider
             textContent={{
               title: langJson.WhyChooseInternxtForOneplan.title,
               description: langJson.WhyChooseInternxtForOneplan.description,
