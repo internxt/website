@@ -200,6 +200,11 @@
     "description": "Internxt 是一项云存储服务，符合GDPR及欧盟严格的隐私法律，以保护您的信息。"
   },
   {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – 云端照片存储",
+    "description": "Internxt 为您提供最安全私密的云端照片存储服务，包含防病毒和 VPN 功能。"
+  },
+  {
     "id": "internxt-annual",
     "title": "Internxt – 年度计划特惠！",
     "description": "获取 Internxt 任意年度计划的折扣。所有计划均包含私人云存储、VPN 和杀毒软件。"

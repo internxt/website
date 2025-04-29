@@ -365,6 +365,11 @@
     "description": "Internxt 是一項雲端儲存服務，遵循 GDPR 及歐盟嚴格的隱私法規，保障您的資訊安全。"
   },
   {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – 雲端照片儲存",
+    "description": "Internxt 為您提供最安全、最私密的雲端照片儲存服務，包含防毒軟體與 VPN 功能。"
+  },
+  {
     "id": "internxt-annual",
     "title": "Internxt – 年度方案限時優惠！",
     "description": "立即享有 Internxt 任一年度方案的折扣優惠。所有方案皆包含私人雲端儲存、VPN 及防毒軟體。"

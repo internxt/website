@@ -86,7 +86,8 @@
         "title": "功能",
         "privateCloud": "私有雲解決方案",
         "cloudBakcup": "雲端備份解決方案",
-        "GDPRCloud": "GDPR儲存"
+        "GDPRCloud": "GDPR儲存",
+        "cloudPhotos": "雲端照片"
       }
     }
   },

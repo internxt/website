@@ -87,7 +87,8 @@
         "title": "Funciones",
         "privateCloud": "Solución nube privada",
         "cloudBakcup": "Solución cloud backup",
-        "GDPRCloud": "Almacenamiento RGPD"
+        "GDPRCloud": "Almacenamiento RGPD",
+        "cloudPhotos": "Fotos en la nube"
       },
       "language": "Idioma"
     },

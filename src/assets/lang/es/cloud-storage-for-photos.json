@@ -1,0 +1,176 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": "Fotos ",
+        "textAfterBlueText": "en la nube privada"
+      },
+      "description": "El almacenamiento de Internxt para fotos te permite crear álbumes privados y guardar y compartir tus fotos en la nube de forma segura.",
+      "features": [
+        "Guarda tus fotos en privado ",
+        "Cifrado postcuántico y de conocimiento cero",
+        "Código abierto y auditado"
+      ],
+      "claimDeal": "Elige tu plan"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Fotos en la nube privada",
+      "description": "El almacenamiento de Internxt para fotos te permite crear álbumes privados y guardar y compartir tus fotos en la nube de forma segura.",
+      "cta": "Elige tu plan"
+    }
+  },
+  "ExplanationSection": {
+    "title": "Cómo elegir el almacenamiento adecuado para fotos en la nube",
+    "description": "Para encontrar el mejor almacenamiento para tus fotografías en la nube, sigue estos consejos",
+    "costExp": {
+      "title": "Coste",
+      "description": "El almacenamiento gratuito para fotos en la nube puede funcionar para colecciones pequeñas, pero puede tener límites de almacenamiento y menos funciones de seguridad. Es importante comparar precios según la cantidad de almacenamiento y las funciones que se necesitan. Con Internxt, puedes obtener almacenamiento seguro en la nube para fotos desde 2 € al mes, o elegir entre nuestros planes de por vida, donde se realiza un único pago y tienes acceso para toda la vida. "
+    },
+    "securityExp": {
+      "title": "Seguridad",
+      "description": "No todos los proveedores ofrecen el mismo nivel de protección, y muchos proveedores de almacenamiento en la nube en línea para fotografías en la nube, aunque son seguros, a menudo priorizan la conveniencia sobre la privacidad. Algunos utilizan el seguimiento de datos, escanean tus archivos para el entrenamiento de IA o comparten datos con terceros. Para mantener la privacidad de tus fotos, busca un proveedor que ofrezca cifrado de extremo a extremo, políticas de conocimiento cero y auditorías de seguridad independientes."
+    },
+    "extraFeaturesExp": {
+      "title": "Funciones adicionales",
+      "description": "Es posible que se necesiten funciones adicionales según tus necesidades, y elegir el almacenamiento en la nube adecuado para tus fotos puede hacer que tu experiencia de almacenamiento en la nube sea más eficiente, confiable y segura. Internxt ofrece almacenamiento seguro en la nube para tus fotografías e incluye una VPN y un antivirus con todos los planes pagos, lo que brinda una solución todo en uno para protegerlo de filtraciones de datos, pérdidas y otros ataques cibernéticos."
+    },
+    "cta": "Elige tu plan"
+  },
+
+  "FeaturesSection": {
+    "title": "Almacenamiento seguro de fotografías para satisfacer tus necesidades",
+    "description": "Administra y realiza copias de seguridad de tus fotos en la nube de forma segura y limpia tu almacenamiento local para recuperar tus archivos.",
+    "info": [
+      {
+        "title": "Libera almacenamiento local",
+        "description": [
+          "Ofrecemos una unidad virtual para administrar tu almacenamiento de fotos en la nube, que actúa como un disco duro normal en tu ordenador para sincronizar automáticamente las fotos en la nube sin ocupar espacio de almacenamiento en tu dispositivo.",
+          "Esta configuración brinda acceso rápido a tus fotos para realizar copias de seguridad, organizarlas y sincronizarlas, liberando almacenamiento en tu dispositivo. Cualquier cambio que realices se sincroniza automáticamente, por lo que siempre tendrás acceso a las últimas versiones de tus archivos."
+        ]
+      },
+      {
+        "title": "Almacenamiento en la nube para fotos RAW",
+        "description": [
+          "Para los fotógrafos que trabajan con imágenes grandes y de alta calidad, puede resultar complicado encontrar almacenamiento en la nube para fotografías RAW con planes de almacenamiento adecuados para satisfacer las demandas de este tipo de imágenes.",
+          "Las fotografías RAW no están procesadas y contienen más datos que los formatos de imagen estándar, lo que las hace ideales para editar, pero tienen la desventaja de ser mucho más grandes. Internxt ofrece planes de hasta 5 TB de almacenamiento en línea para fotografías en la nube para satisfacer tus necesidades. Si necesitas más, puedes comprar más planes y aumentar tu almacenamiento. "
+        ]
+      },
+      {
+        "title": "Restaura tus fotos",
+        "description": [
+          "Un problema al que se enfrentan muchas personas es la pérdida de acceso a sus fotografías debido a una falla del dispositivo, una eliminación accidental, una pérdida de datos o un ransomware. El almacenamiento seguro en la nube para fotos también incluye copias de seguridad, una solución confiable para proteger tus recuerdos y poder acceder a ellos cuando los necesites.",
+          "Internxt cifra todos tus archivos y los respalda automáticamente en la nube. Sólo tú puedes acceder a ellos, por lo que nadie excepto tú puede ver tus archivos. Nuestro cifrado de conocimiento cero garantiza tu privacidad para que puedas obtener el almacenamiento en la nube más seguro para tus fotos."
+        ]
+      },
+      {
+        "title": "Cifrado postcuántico",
+        "description": [
+          "Internxt es el primer almacenamiento para fotos en la nube que protege tus archivos con un cifrado postcuántico, la tecnología más segura que existe actualmente.",
+          "Esto significa que ofrecemos el almacenamiento en la nube más seguro para fotografías para proteger tus archivos contra computadoras cuánticas, que podrían romper los protocolos de cifrado actuales, garantizando que tus imágenes permanezcan seguras y privadas incluso a medida que avanza la tecnología."
+        ]
+      },
+      {
+        "title": "Protección antivirus",
+        "description": [
+          "Los planes de Internxt también incluyen protección antivirus integrada en Internxt Drive, que ofrece mayor seguridad para tus archivos para evitar que el malware infecte tus dispositivos o borre tus datos, y una VPN ilimitada y ultra rápida para navegar de forma privada en la web.",
+          "Con Internxt Antivirus, podrás obtener una protección adicional para tus fotos al ejecutar escaneos personalizados o completos del sistema en tus fotos en la nube. El software buscará malware potencial para que pueda identificar y eliminar posibles infecciones que podrían dañar o robar tus imágenes."
+        ]
+      },
+      {
+        "title": "Código abierto y verificado.",
+        "description": [
+          "El almacenamiento en la nube de código abierto para fotografías en la nube significa que el código que utilizamos para crear nuestro software está disponible públicamente, lo que permite a los expertos en seguridad auditar y verificar su seguridad. ",
+          "Elegir un proveedor de almacenamiento en la nube auditado y de código abierto ofrece una mayor transparencia, lo que garantiza que no haya vulnerabilidades ocultas, puertas traseras ni seguimiento de datos. Proporcionamos todo lo que necesitas para brindarte total confianza de que tus datos permanecen privados y protegidos contra cualquier acceso no autorizado."
+        ]
+      }
+    ]
+  },
+
+  "CtaSection1": {
+    "title": "El almacenamiento en la nube más privado para tus fotos en la nube",
+    "description": "Protegido con cifrado postcuántico",
+    "cta": "Elige tu plan"
+  },
+
+  "CtaSection2": {
+    "title": "Nunca te preocupes por perder tus fotos",
+    "description": "Protege tu información con copias de seguridad cifradas",
+    "cta": "Compra tu plan"
+  },
+
+  "FaqSection": {
+    "title": "¿Preguntas? tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo almaceno mis fotos con Internxt Drive?",
+        "answer": [
+          "Almacenar tus fotos con Internxt es simple; puedes crear una cuenta de forma gratuita o elegir cualquiera de nuestros planes personales, de empresa, familiares o de por vida. Luego podrás acceder a tu almacenamiento para tus fotos en la nube a través de tu navegador web.",
+          "Descarga la aplicación para Windows, Mac y Linux desde nuestro sitio web y accede a tus fotos a través de WebDAV con Internxt CLI. Puedes descargar la aplicación Internxt para iOS y Android para acceder a tus fotos desde tu teléfono o cualquier dispositivo. Todas tus fotos están en la nube para que puedas acceder a ellas desde cualquier lugar."
+        ]
+      },
+      {
+        "question": "¿Cómo hago una copia de seguridad de las fotos en Internxt Drive?",
+        "answer": [
+          "Las copias de seguridad están disponibles para todos nuestros planes Essential, Premium y Ultimate. Desde allí, puedes hacer una copia de seguridad de tus fotos a través de nuestra unidad virtual y estarán disponibles para descargar la próxima vez que accedas a tu cuenta de Internxt en la web.  "
+        ]
+      },
+      {
+        "question": "¿Internxt Drive es un almacenamiento en la nube adecuado para fotografías RAW?",
+        "answer": [
+          "Sí, Internxt es un almacenamiento en la nube adecuado para fotografías y archivos RAW. Ofrecemos planes de almacenamiento en la nube de 1TB, 3TB y 5TB. Un plan de 5 TB, por ejemplo, es suficiente para almacenar más de 60.000 archivos de fotografías RAW de gran tamaño con un tamaño de archivo promedio de 80 MB. Igualmente si en un futuro necesitas más almacenamiento, siempre puedes comprar más planes y aumentar tu capacidad. "
+        ]
+      },
+      {
+        "question": "¿Cuál es el almacenamiento en la nube más seguro para mis fotos en la nube?",
+        "answer": [
+          "Los servicios de almacenamiento en la nube más seguros utilizan cifrado de extremo a extremo, lo que significa que nadie excepto tú mismo puede acceder a tus fotos. Sin embargo, muchas empresas rastrean y venden tus datos a terceros, lo que aumenta las posibilidades de que se produzcan violaciones de datos. ",
+          "Además, estas empresas administran claves de cifrado de tus archivos, lo que significa que pueden acceder a ellos en cualquier momento.",
+          "Para obtener el almacenamiento en la nube más seguro para fotos, elige un proveedor de nube de código abierto y sin conocimiento como Internxt, ya que las claves de cifrado se administran en tu dispositivo para que nadie, excepto tú, pueda acceder a ellas. "
+        ]
+      },
+      {
+        "question": "¿Cómo puedo contactar con soporte?",
+        "answer": [
+          "¿No encuentras lo que estás buscando? Puedes ponerte en contacto con nuestro equipo de soporte a través del chat en línea o enviando un correo electrónico a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, iDEAL, Sofort y Bancontact.",
+          "Bajo solicitud, también aceptamos criptomonedas y SEPA Debit. Si tienes dudas sobre los métodos de pago, simplemente envíanos un correo electrónico a hello@internxt.com."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "El almacenamiento más seguro para tus fotos en la nube",
+    "titleLine2": "",
+    "description": "Mantén tus álbumes y recuerdos seguros para siempre. Ya sea para  almacenar fotos personales o compartir proyectos de trabajo, hazlo todo de forma segura y privada. ",
+    "cta": "Elige tu plan",
+    "cards": {
+      "element1": {
+        "title": "Enlaces compartidos",
+        "description": [
+          "Protege tus fotos para que no sean interceptadas por piratas informáticos cifrando tus álbumes directamente en su dispositivo. ",
+          "Crea rápidamente un enlace seguro a tus imágenes y cópialas y pégalas en correos electrónicos o plataformas de mensajería para compartirlas con cualquier persona, incluso si no tienen una cuenta de Internxt."
+        ]
+      },
+      "element2": {
+        "title": "Protección con contraseña",
+        "description": [
+          "Obtén más privacidad para tus fotos en la nube agregando controles de contraseña para proteger imágenes personales y confidenciales contra piratas informáticos, filtraciones de datos o uso compartido accidental.",
+          "El almacenamiento seguro de fotografías también te protege del robo de identidad al evitar que los piratas informáticos vean u obtengan acceso a imágenes que podrían reutilizarse con intenciones maliciosas."
+        ]
+      },
+      "element3": {
+        "title": "Carpetas compartidas",
+        "description": [
+          "Organiza fácilmente tu almacenamiento en línea para fotografías en la nube con nuestra interfaz fácil de usar y aplicaciones de Windows, Mac y Linux para aumentar la colaboración y la productividad. ",
+          "Permite que otros contribuyan a tus carpetas compartidas en la nube para acceder y cargar tus álbumes de fotos en un solo lugar. Incluimos controles de permisos para que puedas decidir quién puede ver o editar tus fotos para tener más control sobre la seguridad de tu cuenta."
+        ]
+      }
+    }
+  }
+}

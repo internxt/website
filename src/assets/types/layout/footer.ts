@@ -106,6 +106,7 @@ export interface Features {
   privateCloud: string;
   cloudBakcup: string;
   GDPRCloud: string;
+  cloudPhotos: string;
 }
 
 export interface NewsletterSection {
