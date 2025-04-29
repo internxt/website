@@ -29,7 +29,7 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 20;
+  const offerDiscount = 18;
   const { currencyValue } = usePricing({});
 
   function handlePriceCardButton(planId, coupon) {
@@ -81,7 +81,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
+        couponType={PromoCodeName.Identity82AFF}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isCloudwards
