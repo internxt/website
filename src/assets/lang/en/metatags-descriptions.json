@@ -1,7 +1,7 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Private & Secure Cloud Storage",
+    "title": "Internxt - Private & Secure Cloud Storage",
     "description": "Stand for privacy, switch to Internxt. Internxt's open-source cloud storage services protect your right to privacy. Internxt Drive, Photos, Send, and more."
   },
   {
@@ -403,5 +403,15 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt - GDPR Cloud Storage",
     "description": "Internxt is a GDPR cloud storage service committed to protecting your data by complying with strict EU privacy laws that prioritize privacy."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt - Cloud Storage for Photos",
+    "description": "Internxt offers cloud storage for photos, Antivirus, and VPN with post-quantum encryption for maximum security and privacy."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt - Get a discount on any Internxt annual plans",
+    "description": "Meta description: Get a special offer for any Internxt annual plan. All plans include private cloud storage, VPN, and Antivirus."
   }
 ]

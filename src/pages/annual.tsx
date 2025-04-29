@@ -9,9 +9,19 @@ import FeaturesSection from '@/components/annual/FeaturesSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import usePricing from '@/hooks/usePricing';
 import { Interval, stripeService } from '@/services/stripe.service';
+import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import { AnnualText } from '@/assets/types/annual';
 
-const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSectionLang }) => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
+interface AnnualProps {
+  metatagsDescriptions: MetatagsDescription[];
+  navbarLang: NavigationBarText;
+  langJson: AnnualText;
+  footerLang: FooterText;
+  lang: string;
+}
+
+const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }: AnnualProps): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-annual');
   const {
     products,
     loadingCards,
@@ -32,11 +42,11 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
       couponCodeForCheckout,
     );
   };
-  const lang = 'en';
+  const locale = lang as string;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
-      <Navbar textContent={navbarLang} isLinksHidden={true} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} isLinksHidden={true} lang={locale} cta={['default']} fixed />
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -47,7 +57,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
           lifetime: individualCoupon?.percentOff && 100 - individualCoupon.percentOff,
         }}
         lifetimeCoupons={lifetimeCoupons}
-        lang={lang}
+        lang={locale}
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
@@ -68,7 +78,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, infoSe
 
       <CtaSection textContent={langJson.CtaSection} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };
@@ -77,13 +87,14 @@ export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/annual.json`);
+  const langJson = require(`@/assets/lang/${lang}/annual.json`);
   const infoSectionLang = require(`@/assets/lang/${lang}/home.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {
+      lang,
       metatagsDescriptions,
       langJson,
       navbarLang,

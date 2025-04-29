@@ -178,5 +178,15 @@
     "id": "internxt-gdpr-cloud-storage",
     "title": "Internxt - Stockage cloud conforme au RGPD",
     "description": "Internxt est un service de stockage en nuage conforme au RGPD et aux lois strictes de confidentialité de l'UE pour protéger vos informations."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – Photos dans le cloud",
+    "description": "Internxt vous offre le meilleur espace de stockage pour sauvegarder vos photos dans le cloud de manière privée et sécurisée, avec antivirus et VPN inclus."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
+    "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
   }
 ]

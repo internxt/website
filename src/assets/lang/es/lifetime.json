@@ -39,7 +39,8 @@
   },
   "GetLifetimeSection": {
     "title": "¡La vida no es corta! Pero esta oferta por tiempo limitado sí lo es...",
-    "description": "Internxt está ofreciendo una oferta de 3 días para una vida de privacidad y tranquilidad."
+    "description": "Internxt está ofreciendo una oferta de 3 días para una vida de privacidad y tranquilidad.",
+    "cta": "Elige tu plan"
   },
   "FeatureSection": {
     "title": "¿Por qué elegir Internxt para asegurar tus archivos?",

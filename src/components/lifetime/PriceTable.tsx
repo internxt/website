@@ -15,6 +15,7 @@ interface PriceTableProps {
   showPriceBefore?: boolean;
   currencySpecified?: string;
   isStackCommerce?: boolean;
+  showOffer?: boolean;
   onButtonClicked?: () => void;
 }
 
@@ -40,6 +41,7 @@ const PriceTable = ({
   lifetimeMode,
   currencySpecified,
   isStackCommerce,
+  showOffer,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
   const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '5TB' : '3TB';
@@ -257,6 +259,7 @@ const PriceTable = ({
                         percentOff={percentOff}
                         isStackCommerce={isStackCommerce}
                         index={index}
+                        showOffer={false}
                       />
                     );
                   })
