@@ -26,7 +26,10 @@ const AvatarAndText = ({ testimonial, textColor }: TestimonialProps): JSX.Elemen
       <Image src={testimonial.testimonialImage} width={40} height={40} alt="FixThePhoto Avatar" />
     </div>
     <div className="flex flex-col">
-      <p className={`text-xl font-semibold ${textColor}`}>{testimonial.testimonialName}</p>
+      <div className="flex flex-row items-center gap-3">
+        <p className={`text-justify text-xl  font-semibold ${textColor}`}>{testimonial.testimonialName}</p>
+        <FiveStars totalStars={5} />
+      </div>
       <p className={`text-lg ${textColor}`}>{testimonial.company}</p>
     </div>
   </div>
@@ -46,12 +49,6 @@ const TestimonialsSection = ({
       testimonialImage: getImage('/images/home/testimonials/avatar1.webp'),
     },
     {
-      review: textContent.cards[1].review,
-      testimonialName: textContent.cards[1].name,
-      company: textContent.cards[1].enterprise,
-      testimonialImage: getImage('/images/home/testimonials/avatar2.webp'),
-    },
-    {
       review: textContent.cards[2].review,
       testimonialName: textContent.cards[2].name,
       company: textContent.cards[2].enterprise,
@@ -68,16 +65,23 @@ const TestimonialsSection = ({
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
-        <div className="flex w-full flex-row  flex-wrap justify-center gap-12">
-          {testimonials.map((testimonial) => (
-            <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
-              <div className="flex flex-col gap-3">
-                <FiveStars totalStars={5} />
-                <p className={`text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonial.review}</p>
-              </div>
-              <AvatarAndText testimonial={testimonial} textColor={textColor} />
-            </div>
-          ))}
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row" key={testimonials[0].review}>
+          <div className="flex max-w-[375px] flex-col gap-3 ">
+            <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
+            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
+          </div>
+
+          <Image
+            src={getImage('/logos/featured/valencia_cf_internxt.webp')}
+            width={300}
+            height={300}
+            alt="Internxt x ValenciaCF"
+          />
+
+          <div className="flex  max-w-[375px] flex-col gap-3">
+            <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
+            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
+          </div>
         </div>
       </div>
     </section>

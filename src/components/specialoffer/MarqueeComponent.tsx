@@ -33,8 +33,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
 
             <Image
               src={getImage('/logos/featured/itsfoss-logo.webp')}
-              width={110}
-              height={27}
+              width={122}
+              height={22}
               alt="Its Foss logo"
               loading="lazy"
               draggable={false}
@@ -59,10 +59,10 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
             />
 
             <Image
-              src={getImage('/logos/featured/heise_online.svg')}
-              width={181}
-              height={34}
-              alt="Heise logo"
+              src={getImage('/logos/featured/Valenciacf.png')}
+              width={64}
+              height={16}
+              alt="Valencia CF logo"
               loading="lazy"
               draggable={false}
             />
@@ -120,10 +120,10 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
             />
 
             <Image
-              src={getImage('/logos/featured/heise_online.svg')}
-              width={181}
-              height={34}
-              alt="Heise logo"
+              src={getImage('/logos/featured/Valenciacf.png')}
+              width={64}
+              height={16}
+              alt="Valencia CF logo"
               loading="lazy"
               draggable={false}
             />

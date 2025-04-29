@@ -53,9 +53,6 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
       <div className="flex h-full w-full flex-col items-center justify-center gap-20">
         <h2 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <div className="hidden gap-8 lg:px-14 xl:flex">
-          <button onClick={onLeftArrowClick}>
-            <CaretLeft size={24} />
-          </button>
           <Transition
             appear={true}
             show={!isTransitioning}
@@ -70,23 +67,21 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
             {testimonialsParts[currentIndex].map((testimonial) => (
               <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
                 <div className="flex flex-col gap-3">
-                  <FiveStars totalStars={5} />
+                  <div className="flex flex-row items-center gap-3">
+                    <Image
+                      src={getImage(`/images/business/logos-b2b/${testimonial.imageBrandName}.svg`)}
+                      alt={testimonial.imageBrandName}
+                      width={150}
+                      height={30}
+                    />
+                    <FiveStars totalStars={5} />
+                  </div>
                   <p className="text-xl text-gray-80">{testimonial.review}</p>
                 </div>
-                <div className="flex h-full items-end">
-                  <Image
-                    src={getImage(`/images/business/logos-b2b/${testimonial.imageBrandName}.svg`)}
-                    alt={testimonial.imageBrandName}
-                    width={150}
-                    height={30}
-                  />
-                </div>
+                <div className="flex h-full items-end"></div>
               </div>
             ))}
           </Transition>
-          <button onClick={onRightArrowClick}>
-            <CaretRight size={24} />
-          </button>
         </div>
 
         {/*Mobile/Tablet View*/}
@@ -104,18 +99,18 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
           <div className="mx-auto flex w-full max-w-[375px] shrink-0 snap-center flex-col justify-start rounded-3xl bg-white p-8">
             <div className="flex h-full flex-col justify-between gap-3">
               <div className="flex flex-col gap-3">
-                <FiveStars totalStars={5} />
+                <div className="flex flex-row items-center gap-3">
+                  <Image
+                    src={getImage(
+                      `/images/business/logos-b2b/${textContent.testimonials[mobileIndex].imageBrandName}.svg`,
+                    )}
+                    alt={textContent.testimonials[mobileIndex].imageBrandName}
+                    width={185}
+                    height={30}
+                  />
+                  <FiveStars totalStars={5} />
+                </div>
                 <p className="text-xl text-gray-80">{textContent.testimonials[mobileIndex].review}</p>
-              </div>
-              <div className="flex h-full items-end">
-                <Image
-                  src={getImage(
-                    `/images/business/logos-b2b/${textContent.testimonials[mobileIndex].imageBrandName}.svg`,
-                  )}
-                  alt={textContent.testimonials[mobileIndex].imageBrandName}
-                  width={185}
-                  height={30}
-                />
               </div>
             </div>
           </div>
