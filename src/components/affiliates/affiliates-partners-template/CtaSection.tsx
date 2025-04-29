@@ -1,3 +1,5 @@
+import { getImage } from '@/lib/getImage';
+
 export const CtaSection = ({ textContent }) => {
   const handleOnButtonClick = () => {
     window.scrollTo({
