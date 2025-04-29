@@ -155,7 +155,7 @@ export default function PriceCard({
 
   const STACKCOMMERCE_STORAGE_PLANS = {
     '2TB': {
-      title: 'Lite 2TB',
+      title: '2TB',
       price: '€900',
       features: [
         '2TB encrypted storage',
@@ -170,7 +170,7 @@ export default function PriceCard({
       ],
     },
     '5TB': {
-      title: 'Pro 5TB',
+      title: '5TB',
       price: '€1900',
       features: [
         '5TB encrypted storage',
@@ -185,7 +185,7 @@ export default function PriceCard({
       ],
     },
     '10TB': {
-      title: 'Super 10TB',
+      title: '10TB',
       price: '€2900',
       features: [
         '10TB encrypted storage',
@@ -200,7 +200,7 @@ export default function PriceCard({
       ],
     },
     '20TB': {
-      title: 'Ultra 20TB',
+      title: '20TB',
       price: '€4900',
       features: [
         '20TB encrypted storage',
