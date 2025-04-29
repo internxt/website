@@ -72,7 +72,7 @@ const TestimonialsSection = ({
           </div>
 
           <Image
-            src={getImage('/logos/featured/valencia_cf_internxt.webp')}
+            src={getImage('/logos/featured/valencia_cf_internxt.webp.webp')}
             width={300}
             height={300}
             alt="Internxt x ValenciaCF"
