@@ -72,6 +72,7 @@ const PCComponentes5tb = ({ metatagsDescriptions, textContent, lang }): JSX.Elem
             index={2}
             trialToken={trialToken}
             isPcComponentes5tb
+            showOffer={false}
           />
         </Transition>
       </div>

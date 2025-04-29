@@ -4,7 +4,7 @@
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime privacy",
     "info": "Pay once, get lifetime storage at ",
-    "infoHighlight": "82% OFF",
+    "infoHighlight": "80% OFF",
     "cta": "Choose your plan"
   },
   "HeroSection": {
@@ -13,7 +13,7 @@
       "cloudwards": "Exclusive offer for Cloudwards readers"
     },
     "all": {
-      "title": "82% off all lifetime plans",
+      "title": "80% off all lifetime plans",
       "description": [
         "Internxt offers secure cloud storage guaranteed to protect your data and right to privacy.",
         "Get lifetime storage with a single payment."
@@ -21,7 +21,7 @@
       "choosePlanLabel": "Choose your plan: "
     },
     "one": {
-      "title": "Save 82% on 5TB lifetime cloud storage",
+      "title": "Save 80% on 5TB lifetime cloud storage",
       "description": [
         "Increase your cloud storage by 5TB.",
         "Store and share your files in complete privacy forever without using your hard disk space."
@@ -34,7 +34,7 @@
       "With a 5TB lifetime plan, you can store and access your files locally without consuming your device’s physical drive space.",
       " Enjoy peace of mind knowing your memories and important documents are safely backed up in the cloud, accessible on any device."
     ],
-    "cta": "Get 82% OFF"
+    "cta": "Get 80% OFF"
   },
   "WhyChooseInternxtForOneplan": {
     "title": "Protect your files for a lifetime with unparalleled security built-in",
@@ -114,7 +114,7 @@
     },
     "one": {
       "title": "Running out of storage?",
-      "description": "Get 82% off an extra 5TB!",
+      "description": "Get 80% off an extra 5TB!",
       "cta": "Upgrade plan"
     },
     "two": {
