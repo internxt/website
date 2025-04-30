@@ -58,9 +58,8 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
               draggable={false}
             />
 
-            <p className="text-4xl">Valencia CF</p>
             <Image
-              src={getImage('/logos/featured/Valencia_CF.png')}
+              src={getImage('/logos/featured/ValenciaCf_Logo.png')}
               width={200}
               height={200}
               alt="Valencia CF logo"
@@ -121,7 +120,7 @@ export const MarqueeComponent = ({ label, bgColor = 'bg-color-1' }: MarqueeCompo
             />
 
             <Image
-              src={getImage('/logos/featured/Valencia_CF.png')}
+              src={getImage('/logos/featured/ValenciaCf_Logo.png')}
               width={200}
               height={200}
               alt="Valencia CF logo"
