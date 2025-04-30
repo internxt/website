@@ -49,9 +49,9 @@ const TestimonialsSection = ({
       testimonialImage: getImage('/images/home/testimonials/avatar1.webp'),
     },
     {
-      review: textContent.cards[2].review,
-      testimonialName: textContent.cards[2].name,
-      company: textContent.cards[2].enterprise,
+      review: textContent.cards[1].review,
+      testimonialName: textContent.cards[1].name,
+      company: textContent.cards[1].enterprise,
       testimonialImage: getImage('/images/home/testimonials/avatar3.webp'),
     },
   ];
@@ -72,7 +72,7 @@ const TestimonialsSection = ({
           </div>
 
           <Image
-            src={getImage('/logos/featured/valencia_cf_internxt.webp.webp')}
+            src={getImage('/logos/featured/valencia_cf.webp')}
             width={300}
             height={300}
             alt="Internxt x ValenciaCF"
@@ -80,7 +80,7 @@ const TestimonialsSection = ({
 
           <div className="flex  max-w-[375px] flex-col gap-3">
             <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
-            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
+            <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[1].review}</p>
           </div>
         </div>
       </div>
