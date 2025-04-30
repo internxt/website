@@ -21,8 +21,8 @@ interface TestimonialsSectionProps {
 }
 
 const AvatarAndText = ({ testimonial, textColor }: TestimonialProps): JSX.Element => (
-  <div className="flex flex-row items-center gap-3">
-    <div className="flex h-10 w-10 rounded-full">
+  <div className="flex h-[60px] flex-row items-center gap-3 ">
+    <div className="flex h-10 w-10 items-center rounded-full">
       <Image src={testimonial.testimonialImage} width={40} height={40} alt="FixThePhoto Avatar" />
     </div>
     <div className="flex flex-col">
@@ -66,7 +66,7 @@ const TestimonialsSection = ({
           </p>
         </div>
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row" key={testimonials[0].review}>
-          <div className="flex max-w-[375px] flex-col gap-3 ">
+          <div className="flex h-[300px] max-w-[375px] flex-col gap-3 ">
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
           </div>
@@ -78,7 +78,7 @@ const TestimonialsSection = ({
             alt="Internxt x ValenciaCF"
           />
 
-          <div className="flex  max-w-[375px] flex-col gap-3">
+          <div className="flex h-[300px] max-w-[375px]  flex-col gap-3 ">
             <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[1].review}</p>
           </div>
