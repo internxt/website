@@ -1,0 +1,224 @@
+{
+  "HeroSection": {
+    "title": "Virus Scanner",
+    "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
+    "subtitle2": "Scan any document, image, PDF, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
+    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
+
+    "dropFile": {
+      "line1": "Drop your file to scan for viruses"
+    },
+    "fileSelected": "File selected for scanning",
+    "cancel": "Cancel",
+    "close": "Close",
+    "scanNow": "Scan now",
+    "selectFile": "Choose file",
+    "dropHere": "Drop file here",
+    "scanAgain": "Scan another file",
+    "loading": "Loading...",
+    "maxFileSize": {
+      "title": "File size limit exceeded",
+      "description": "Max file size of 1GB"
+    },
+    "table": {
+      "loading": "Loading...",
+      "virusDetected": "Virus detected for this file",
+      "noVirusDetected": "No virus detected for this file",
+      "detected": "Detected",
+      "undetected": "Undetected",
+      "unableToProcess": "Unable to process",
+      "noVirusesDetected": {
+        "message": "No viruses detected",
+        "title": "Want to keep your files safe?",
+        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
+        "cta": "Get started now"
+      },
+      "analyzing": "Scanning file...",
+      "scanTime": "Scan time",
+      "name": "Name",
+      "detection": "Detection"
+    },
+    "error": {
+      "title": "Something went wrong",
+      "description": "An error occurred while sending the file, please try again later"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "Why it’s vital to use a virus scanner",
+      "description": "Scan first, ask questions later. Spot viruses before they infiltrate your devices."
+    },
+    "virusesHatePrivacy": {
+      "title": "Viruses hate your privacy",
+      "description": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to access nearly everything that is locked away on your hardware."
+    },
+    "stopMalware": {
+      "title": "Stop malware before it stops you",
+      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize virus scanner."
+    },
+    "freeOnlineScanner": {
+      "title": "A free online virus scanner you can trust",
+      "description": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer."
+    },
+    "scanFiles": {
+      "title": "Scan files for viruses in complete confidence",
+      "description": "Internxt has and will always put users' privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That's why we created our free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
+    },
+    "hero": {
+      "title": "Keep your personal information safe from data leaks",
+      "description": [
+        "Remove hidden data from your files, including author information, location tags, and device details that could compromise your privacy if shared with the wrong people.",
+        "Use our free metadata remover online to keep your files anonymous and secure before you share them. Uploaded files are cleaned of metadata instantly and then deleted. We never store your data; we just keep it private."
+      ]
+    },
+    "howToUse": {
+      "title": "How to use Internxt's metadata remover",
+      "steps": [
+        {
+          "step": 1,
+          "text": "Upload the file from your device, or click & drag it onto the page."
+        },
+        {
+          "step": 2,
+          "text": "Wait a few seconds for us to strip the metadata."
+        },
+        {
+          "step": 3,
+          "text": "Your download will start automatically."
+        },
+        {
+          "step": 4,
+          "text": "All emails received will appear in your inbox above"
+        }
+      ]
+    },
+    "whatIs": {
+      "title": "What is a metadata remover?",
+      "description": [
+        "Metadata is data that describes information about other data. When you share or store files, this type of data contains information about the files, device details, location, author, editing history, and more.",
+        "Internxt's metadata remover solves the problem of exposed metadata by quickly deleting the information that is linked to your files. It's a simple, free, and secure way to increase your anonymity online."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Safety is only a click away",
+    "description": "Protect your personal data with Internxt's privacy suite.",
+    "cta": "Create account"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How to check if a file is infected?",
+        "answer": [
+          "Internxt’s Virus Scanner is a tool to help you locate any viruses that may have compromised your files. Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos."
+        ]
+      },
+      {
+        "question": "How to know if your files have malware?",
+        "answer": [
+          "Submit your files, and relax knowing that your files are safe and secure. Using our Virus Scanner is a safe practice to evade a privacy nightmare. Scan before you click!"
+        ]
+      },
+      {
+        "question": "How to scan a file for viruses?",
+        "answer": [
+          "Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos. Drag and drop the chosen file in the Virus Scanner toolbar, and it will automatically scan the file for any viruses or malware."
+        ]
+      },
+      {
+        "question": "How to scan a file online?",
+        "answer": [
+          "With Internxt Virus Scanner you can drag and drop suspicious files into the toolbar to detect malware and other breaches for free."
+        ]
+      },
+      {
+        "question": "How to scan a PDF file?",
+        "answer": [
+          "Drag and drop the PDF into the toolbar like you would with any other file. With Internxt Virus Scanner, you can scan any document, image, PDF, or other file type. Make sure your files are safe and free from viruses before you open them with Internxt's Virus Scanner."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Sicherer Fotospeicher, der deinen Anforderungen entspricht",
+    "description": "Verwalte und sichere deine Fotos sicher in der Cloud und bereinige deinen lokalen Speicher, um deine Dateien zurückzugewinnen.",
+    "info": [
+      {
+        "title": "Lokalen Speicherplatz freigeben",
+        "description": [
+          "Wir bieten ein virtuelles Laufwerk zur Verwaltung deines Cloud-Fotospeichers, das wie eine normale Festplatte auf deinem Computer funktioniert und Fotos automatisch mit der Cloud synchronisiert, ohne Speicherplatz auf deinem Gerät zu belegen.",
+          "Diese Einrichtung ermöglicht schnellen Zugriff auf deine Fotos zur Sicherung, Organisation und Synchronisation, wodurch Speicherplatz auf deinem Gerät freigegeben wird. Änderungen werden automatisch synchronisiert, sodass du immer Zugriff auf die neueste Version deiner Dateien hast."
+        ]
+      },
+      {
+        "title": "Cloud-Speicher für RAW-Fotos",
+        "description": [
+          "Für Fotografen, die mit großen, hochwertigen Bildern arbeiten, kann es schwierig sein, Cloud-Speicher für RAW-Fotos mit geeigneten Speicherplänen zu finden.",
+          "RAW-Fotos sind unbearbeitet und enthalten mehr Daten als Standardbildformate, ideal zur Bearbeitung, aber auch deutlich größer. Internxt bietet Pläne bis zu 5 TB Cloud-Speicher für Fotos. Bei Bedarf kannst du zusätzliche Pläne erwerben, um deinen Speicher zu erweitern."
+        ]
+      },
+      {
+        "title": "Fotos wiederherstellen",
+        "description": [
+          "Ein häufiges Problem ist der Verlust von Fotos durch Geräteausfall, versehentliches Löschen, Datenverlust oder Ransomware. Sicherer Cloud-Speicher für Fotos beinhaltet Backups, eine zuverlässige Lösung zum Schutz deiner Erinnerungen.",
+          "Internxt verschlüsselt alle deine Dateien und sichert sie automatisch in der Cloud. Nur du hast Zugriff darauf – niemand sonst kann deine Dateien sehen. Unsere Zero-Knowledge-Verschlüsselung garantiert deine Privatsphäre für den sichersten Cloud-Speicher deiner Fotos."
+        ]
+      },
+      {
+        "title": "Postquanten-Verschlüsselung",
+        "description": [
+          "Internxt ist der erste Cloud-Fotospeicher mit Postquanten-Verschlüsselung – der derzeit sichersten Technologie.",
+          "Das bedeutet, dass wir den sichersten Cloud-Speicher für Fotos bieten, der deine Dateien gegen Quantencomputer schützt, die heutige Verschlüsselung knacken könnten. So bleiben deine Bilder auch in Zukunft sicher und privat."
+        ]
+      },
+      {
+        "title": "Antivirus-Schutz",
+        "description": [
+          "Internxt-Pläne enthalten integrierten Antivirus-Schutz in Internxt Drive für mehr Sicherheit deiner Dateien gegen Malware-Angriffe und unbeabsichtigtes Löschen sowie ein unbegrenztes, ultraschnelles VPN für privates Surfen.",
+          "Mit Internxt Antivirus kannst du deine Cloud-Fotos mit vollständigen oder benutzerdefinierten Scans auf potenzielle Malware prüfen. Die Software erkennt und entfernt Infektionen, die deine Bilder beschädigen oder stehlen könnten."
+        ]
+      },
+      {
+        "title": "Open-Source und geprüft",
+        "description": [
+          "Der Open-Source-Cloud-Speicher für Fotos bedeutet, dass der von uns genutzte Code öffentlich einsehbar ist und von Sicherheitsexperten geprüft werden kann.",
+          "Ein auditierter, Open-Source-Anbieter bietet mehr Transparenz und garantiert, dass es keine versteckten Schwachstellen, Hintertüren oder Datenverfolgung gibt – für vollständiges Vertrauen in die Sicherheit deiner Daten."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Password Strength Checker",
+        "description": "Scan now"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte Unit Converter",
+        "description": "Convert now"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Free Temporary Email",
+        "width": 95,
+        "description": "Mail now"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Free Password Generator",
+        "width": 124,
+        "description": "Generate now"
+      }
+    ]
+  }
+}
