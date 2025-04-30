@@ -41,7 +41,8 @@
   },
   "GetLifetimeSection": {
     "title": "Das Leben ist nicht kurz! Aber dieses zeitlich begrenzte Angebot schon...",
-    "description": "Internxt bietet ein 3-tägiges Angebot für ein Leben voller Privatsphäre und Seelenfrieden."
+    "description": "Internxt bietet ein 3-tägiges Angebot für ein Leben voller Privatsphäre und Seelenfrieden.",
+    "cta": "Plan auswählen"
   },
   "FeatureSection": {
     "title": "Warum Internxt zur Sicherung Ihrer Dateien wählen?",
