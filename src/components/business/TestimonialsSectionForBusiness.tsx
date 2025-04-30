@@ -48,7 +48,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
             {testimonialsParts[currentIndex].map((testimonial) => (
               <div className="flex max-w-[375px] flex-col justify-between gap-3" key={testimonial.review}>
                 <div className="flex flex-col gap-3">
-                  <div className="flex flex-row items-center gap-3">
+                  <div className="flex h-[60px] flex-row items-center gap-3">
                     <Image
                       src={getImage(`/images/business/logos-b2b/${testimonial.imageBrandName}.svg`)}
                       alt={testimonial.imageBrandName}
