@@ -15,19 +15,10 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
     textContent.testimonials.slice(textContent.testimonials.length - 3, textContent.testimonials.length),
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [currentIndex] = useState(0);
+  const [isTransitioning] = useState(false);
   const [mobileIndex, setMobileIndex] = useState(0);
 
-  const onLeftArrowClick = () => {
-    const newIndex = currentIndex === 0 ? testimonialsParts.length - 1 : currentIndex - 1;
-    onTabSelectorButtonClicked(newIndex);
-  };
-
-  const onRightArrowClick = () => {
-    const newIndex = currentIndex === testimonialsParts.length - 1 ? 0 : currentIndex + 1;
-    onTabSelectorButtonClicked(newIndex);
-  };
   const onLeftMobileArrowClick = () => {
     const newIndex = mobileIndex === 0 ? textContent.testimonials.length - 1 : mobileIndex - 1;
     setMobileIndex(newIndex);
@@ -36,16 +27,6 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   const onRightMobileArrowClick = () => {
     const newIndex = mobileIndex === textContent.testimonials.length - 1 ? 0 : mobileIndex + 1;
     setMobileIndex(newIndex);
-  };
-
-  const onTabSelectorButtonClicked = (index: number) => {
-    if (currentIndex !== index) {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setCurrentIndex(index);
-        setIsTransitioning(false);
-      }, 200);
-    }
   };
 
   return (
