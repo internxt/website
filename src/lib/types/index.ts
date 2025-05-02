@@ -124,6 +124,7 @@ export enum PromoCodeName {
   Identity82 = 'IDENTITY82',
   Identity82AFF = 'IDENTITY82AFF',
   PcComponentes5TB = 'PCMOVIL',
+  StarWars = 'STARWARS85',
   Celebration83 = 'CELEBRATION83',
   Special82 = '82SPECIAL',
   TechRadarDiscount = 'TECHRADAR',

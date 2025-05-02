@@ -14,15 +14,16 @@ export const HomePageBannerForMobile = () => {
   return (
     <div
       className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
+      style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
     >
       <div className="flex flex-col items-center justify-center gap-4 pt-5">
-        <p className="flex w-max rounded-md border-blue-20 bg-white px-2 py-1 text-sm  font-bold text-primary">
+        <p className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 text-sm font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
         <p className="px-5 text-center text-4xl font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
-        <p className="text-center text-2xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
+        <p className=" text-center text-xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
         <button
           onClick={handleOnClick}
           className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
@@ -36,9 +37,9 @@ export const HomePageBannerForMobile = () => {
           </p>
         </div>
         <Image
-          src={getImage('/images/campaigns/identity/encrypted_lock.webp')}
-          width={450}
-          height={400}
+          src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
+          width={350}
+          height={300}
           quality={100}
           alt="World Secure Day"
           objectFit="contain"

@@ -41,6 +41,7 @@ interface PricingSectionWrapperProps {
   isAnnual?: boolean;
   hideFeatures?: boolean;
   showPromo?: boolean;
+  isAffiliate?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -73,6 +74,7 @@ export const PricingSectionWrapper = ({
   isBrave,
   isAnnual,
   showPromo = true,
+  isAffiliate,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -165,6 +167,7 @@ export const PricingSectionWrapper = ({
           isAnnual={isAnnual}
           hideFeatures={hideFeatures}
           showPromo={showPromo}
+          isAffiliate={isAffiliate}
         />
       </div>
     </section>
