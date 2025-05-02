@@ -39,7 +39,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.StarWars,
+    couponCode: PromoCodeName.Special82,
   });
 
   const cardsData = [
@@ -135,9 +135,8 @@ const PartnerDiscount = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        showPromo
+        showPromo={false}
         backgroundColorComponent="bg-gray-1"
-        isAffiliate
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
