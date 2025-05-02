@@ -260,7 +260,7 @@ const PriceTable = ({
                         percentOff={percentOff}
                         isStackCommerce={isStackCommerce}
                         index={index}
-                        showOffer={true}
+                        showOffer={false}
                       />
                     );
                   })

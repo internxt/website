@@ -538,7 +538,6 @@ export default function Footer({
                   {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
                 </p>
               </div>
-
               <div className="flex flex-row items-center gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -596,7 +595,7 @@ export default function Footer({
                 </Link>
               </div>
             </div>
-            <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p>
+            {/* <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p> */}
           </div>
 
           {/* Mobile version */}

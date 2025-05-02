@@ -32,6 +32,7 @@ export type CardsType = 'all' | 'one';
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
   const offerDiscount = 15;
+
   const {
     products,
     loadingCards,
@@ -43,14 +44,13 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     couponCode: PromoCodeName.CloudwardsCoupon,
     couponCodeForLifetime: PromoCodeName.CloudwardsCoupon,
   });
-
   function handlePriceCardButton(planId, coupon) {
     checkout({
       planId: planId,
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StarWars ?? undefined,
+      promoCodeId: PromoCodeName.Identity82AFF ?? undefined,
     });
   }
 

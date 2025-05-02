@@ -45,7 +45,6 @@ interface PriceTableProps {
     business?: number;
   };
   isAnnual?: boolean;
-  isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -78,8 +77,7 @@ export const PricingSection = ({
   darkMode,
   isAnnual,
   hideFeatures,
-  showPromo,
-  isAffiliate,
+  showPromo = true,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -88,7 +86,6 @@ export const PricingSection = ({
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const showPromos = activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
@@ -197,7 +194,6 @@ export const PricingSection = ({
                     lang={lang}
                     darkMode={darkMode}
                     showPromo={showPromo}
-                    isAffiliate={isAffiliate}
                   />
                 ))
             : undefined}

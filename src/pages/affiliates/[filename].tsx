@@ -89,8 +89,8 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === pathname);
 
   const couponCode = {
-    pcmag: PromoCodeName.StarWars,
-    oneplan: PromoCodeName.StarWars,
+    pcmag: PromoCodeName.Identity82AFF,
+    oneplan: PromoCodeName.Identity82AFF,
   };
 
   useEffect(() => {

@@ -38,17 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85%优惠",
-      "title": "让隐私与你同在！",
-      "subtitle": "Internxt 云盘、防病毒软件和 VPN",
-      "cta": "获取你的方案！",
-      "cta2": "立享85%折扣",
-      "guarantee": "30天退款保证",
-      "lastCta": "*仅适用于免费账户或新用户",
-      "titleMbl": "让隐私与你同在！",
-      "subtitleMbl": "Internxt 云盘、防病毒软件和 VPN。",
-      "descriptionMbl": "参与抽奖赢取 Internxt 背包",
-      "ctaMbl": "购买你的方案"
+      "label": "优惠 82%",
+      "title": "身份管理日",
+      "subtitle": "Internxt 云盘、杀毒软件和 VPN",
+      "cta": "获取您的方案！",
+      "cta2": "享受 82% 折扣",
+      "guarantee": "30 天退款保证",
+      "lastCta": "*优惠仅适用于免费账户或新用户",
+      "titleMbl": "全新终身计划！",
+      "descriptionMbl": "私人存储、杀毒软件和 VPN",
+      "ctaMbl": "购买您的方案"
     },
     "save": "省高达",
     "planTitles": {

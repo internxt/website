@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.StarWars,
-    couponCodeForLifetime: PromoCodeName.StarWars,
+    couponCode: PromoCodeName.Identity82AFF,
+    couponCodeForLifetime: PromoCodeName.Identity82AFF,
   });
 
   const cardsData = [
@@ -145,8 +145,7 @@ const PartnerDiscount = ({
           hideBusinessSelector
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
-          showPromo={true}
-          isAffiliate
+          showPromo={false}
         />
       </div>
 

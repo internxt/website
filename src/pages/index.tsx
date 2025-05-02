@@ -45,7 +45,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.SoftSales,
-    couponCodeForLifetime: PromoCodeName.StarWars,
+    couponCodeForLifetime: PromoCodeName.SoftSales,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -119,7 +119,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        showPromo={true}
+        showPromo={false}
       />
 
       <div className={`${marqueeBgColor} py-10`}>

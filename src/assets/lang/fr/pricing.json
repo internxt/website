@@ -47,17 +47,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offre de 85%",
-      "title": "Que la vie privée soit avec toi !",
+      "label": "Offre 82%",
+      "title": "Journée de la gestion des identités",
       "subtitle": "Internxt Drive, Antivirus et VPN",
-      "cta": "Obtiens ton abonnement !",
-      "cta2": "Profite de 85% de réduction",
+      "cta": "Obtiens ton plan !",
+      "cta2": "Bénéficie de 82% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs",
-      "titleMbl": "Que la vie privée soit avec toi !",
-      "subtitleMbl": "Internxt Drive, Antivirus et VPN.",
-      "descriptionMbl": "Participe au tirage au sort pour gagner un sac à dos Internxt",
-      "ctaMbl": "Achète ton abonnement"
+      "titleMbl": "Nouveaux plans à vie !",
+      "descriptionMbl": "Stockage privé, Antivirus et VPN",
+      "ctaMbl": "Achète ton plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",
