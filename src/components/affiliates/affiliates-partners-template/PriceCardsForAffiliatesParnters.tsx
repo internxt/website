@@ -128,19 +128,7 @@ export const PriceCardsForAffiliatesPartners = ({
           <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
-      <div className={`flex flex-col items-start space-y-2 bg-gray-100  px-5 py-5`}>
-        <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.starWarsDay.title}</span>
-        <div className="flex flex-col items-start space-y-2">
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-green-1" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift1}</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <Gift className="h-6 w-6 text-green-1" weight="fill" />
-            <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift2}</span>
-          </div>
-        </div>
-      </div>
+
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature, index) => (
