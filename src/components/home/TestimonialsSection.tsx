@@ -73,7 +73,7 @@ const TestimonialsSection = ({
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
           </div>
-          <div className="flex h-[300px] max-w-[355px] flex-col items-center justify-center gap-3  pb-12 lg:pb-24">
+          <div className="flex h-[300px] max-w-[355px] flex-col items-center justify-center gap-3  pb-11 lg:pb-20">
             <Image
               src={getImage('/logos/featured/Picture1.png')}
               width={350}
