@@ -137,21 +137,7 @@ export default function PriceCard({
           <p className="">{contentText.cta}</p>
         </button>
       </div>
-      {!isCloudwards ? (
-        <div className={`flex flex-col items-start space-y-2 bg-gray-100  px-5 py-5`}>
-          <span className="text-[13.5px] font-bold text-white">{contentText.starWarsDay.title}</span>
-          <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift1}</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift2}</span>
-            </div>
-          </div>
-        </div>
-      ) : null}
+
       <div className="featureList flex max-h-[500px] min-h-[500px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (
