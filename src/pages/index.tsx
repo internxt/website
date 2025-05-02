@@ -44,7 +44,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.StarWars,
+    couponCode: PromoCodeName.SoftSales,
     couponCodeForLifetime: PromoCodeName.StarWars,
   });
   const locale = lang as string;

@@ -23,6 +23,12 @@
         "title": "Internxt themed goodies:",
         "gift": "Chance to win an Internxt x Swiss Peak backpack"
       },
+
+      "starWarsDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Chance to win an Internxt backpack",
+        "gift2": "Free Star Wars theme for Web App"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",

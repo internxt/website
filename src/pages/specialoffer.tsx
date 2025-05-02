@@ -135,8 +135,9 @@ const PartnerDiscount = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        showPromo={false}
+        showPromo
         backgroundColorComponent="bg-gray-1"
+        isAffiliate
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />

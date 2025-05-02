@@ -41,6 +41,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
         percent={'85%'}
         showPriceBefore
         lifetimeMode="celebration"
+        showOffer
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />

@@ -34,6 +34,7 @@ export interface PriceCardProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
   showPromo?: boolean;
+  isAffiliate?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -56,6 +57,7 @@ export const PriceCard = ({
   darkMode,
   showPromo,
   onCheckoutButtonClicked,
+  isAffiliate,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -204,8 +206,8 @@ export const PriceCard = ({
         </button>
       </div>
 
-      {showPromo && (
-        <div className={`flex flex-col items-start space-y-2 bg-gray-100  px-5 py-5`}>
+      {showPromo && (isLifetime || isAffiliate) && (
+        <div className="flex flex-col items-start space-y-2 bg-gray-100 px-5 py-5">
           <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.starWarsDay.title}</span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
@@ -219,10 +221,11 @@ export const PriceCard = ({
           </div>
         </div>
       )}
+
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `h-[550px] ` : `h-[450px]`} pb-6 text-sm`}
+        } ${isBusiness ? `h-[550px] ` : `h-[550px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
