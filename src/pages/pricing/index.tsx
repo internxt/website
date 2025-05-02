@@ -50,7 +50,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
     couponCodeForLifetime: PromoCodeName.StarWars,
   });
 

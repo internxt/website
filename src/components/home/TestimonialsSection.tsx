@@ -65,13 +65,15 @@ const TestimonialsSection = ({
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
-        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row" key={testimonials[0].review}>
+        <div
+          className="flex max-w-[1200px] flex-col items-center justify-between gap-12 lg:flex-row"
+          key={testimonials[0].review}
+        >
           <div className="flex h-[300px] max-w-[355px] flex-col gap-3">
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
           </div>
-
-          <div className="gap- flex h-[260px] pb-10  ">
+          <div className="flex h-[300px] max-w-[355px] flex-col items-center justify-center gap-3  pb-12 lg:pb-24">
             <Image
               src={getImage('/logos/featured/Picture1.png')}
               width={350}
