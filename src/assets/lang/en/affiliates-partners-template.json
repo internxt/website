@@ -4,7 +4,7 @@
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime privacy",
     "info": "Pay once, get lifetime storage at ",
-    "infoHighlight": "82% OFF",
+    "infoHighlight": "85% OFF",
     "cta": "Choose your plan"
   },
   "HeroSection": {
@@ -13,7 +13,7 @@
       "cloudwards": "Exclusive offer for Cloudwards readers"
     },
     "all": {
-      "title": "82% off all lifetime plans",
+      "title": "85% off all lifetime plans",
       "description": [
         "Internxt offers secure cloud storage guaranteed to protect your data and right to privacy.",
         "Get lifetime storage with a single payment."
@@ -21,7 +21,7 @@
       "choosePlanLabel": "Choose your plan: "
     },
     "one": {
-      "title": "Save 82% on 5TB lifetime cloud storage",
+      "title": "Save 85% on 5TB lifetime cloud storage",
       "description": [
         "Increase your cloud storage by 5TB.",
         "Store and share your files in complete privacy forever without using your hard disk space."
@@ -34,7 +34,7 @@
       "With a 5TB lifetime plan, you can store and access your files locally without consuming your device’s physical drive space.",
       " Enjoy peace of mind knowing your memories and important documents are safely backed up in the cloud, accessible on any device."
     ],
-    "cta": "Get 82% OFF"
+    "cta": "Get 85% OFF"
   },
   "WhyChooseInternxtForOneplan": {
     "title": "Why choose Internxt?",
@@ -122,7 +122,7 @@
     },
     "one": {
       "title": "Running out of storage?",
-      "description": "Get 82% off an extra 5TB!",
+      "description": "Get 85% off an extra 5TB!",
       "cta": "Upgrade plan"
     },
     "two": {
@@ -201,6 +201,41 @@
         ],
         "10TB": []
       }
+    }
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Annual",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {
