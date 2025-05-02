@@ -6,7 +6,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
