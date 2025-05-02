@@ -494,6 +494,17 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
+                    <Link
+                      href="/cloud-storage-for-photos"
+                      locale={lang}
+                      passHref
+                      className="items-center hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.features.cloudPhotos}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -928,6 +939,45 @@ export default function Footer({
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
+                      </Link>
+                    </Disclosure.Panel>
+                  </Transition>
+                </>
+              )}
+            </Disclosure>
+            <Disclosure as="div" className="w-screen">
+              {({ open }) => (
+                <>
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                    <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
+                    <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                    <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
+                  </Disclosure.Button>
+                  <Transition
+                    enter="transition duration-200 ease-out"
+                    enterFrom="-translate-y-10 opacity-0"
+                    enterTo="translate-y-0 opacity-100"
+                    leave="transition duration-200 ease-out"
+                  >
+                    <Disclosure.Panel
+                      className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                      } space-y-8 p-4`}
+                    >
+                      <Link href="/private-cloud-storage-solutions" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.privateCloud}
+                      </Link>
+
+                      <Link href="/cloud-storage-backup-solutions" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.cloudBakcup}
+                      </Link>
+
+                      <Link href="/gdpr-cloud-storage" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.GDPRCloud}
+                      </Link>
+
+                      <Link href="/cloud-storage-for-photos" locale={lang} passHref>
+                        {textContent.FooterSection.sections.features.cloudPhotos}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

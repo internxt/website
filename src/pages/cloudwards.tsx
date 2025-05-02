@@ -81,7 +81,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       <PriceTable
         textContent={langJson.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
+        couponType={PromoCodeName.Identity82AFF}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isCloudwards

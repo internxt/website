@@ -2,6 +2,8 @@ import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import Link from 'next/link';
 
 interface GetLifetimeSectionProps {
   textContent: any;
@@ -17,12 +19,7 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
   const secondTitle = splitTitle[1];
 
   return (
-    <section
-      className="overflow-hidden bg-cover bg-no-repeat"
-      style={{
-        backgroundImage: `url('${getImage('/images/lifetime/celebration/normal-bg.png')}')`,
-      }}
-    >
+    <section className={`overflow-hidden bg-cover bg-no-repeat ${styles.inverseLinearGradient}`}>
       <div className="relative mx-auto flex max-w-screen-2xl flex-col">
         <div className="flex flex-col items-center py-16">
           <div className="mb-8 flex flex-col items-center px-6 text-center font-semibold text-white">
@@ -30,6 +27,11 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
               <h2 className="max-w-[900px] text-5xl font-semibold leading-tight">
                 {firstTitle}!{secondTitle}
               </h2>
+            ) : lang === 'en' ? (
+              <div className="max-w-[800px]">
+                <p className="text-4xl font-semibold leading-tight text-primary lg:text-5xl">{textContent.title}</p>
+                <p className="pt-4 text-xl font-semibold leading-tight text-white">{textContent.subtitle}</p>
+              </div>
             ) : (
               <h2 className="max-w-[800px] text-5xl font-semibold leading-tight">
                 {firstTitle}!
@@ -38,10 +40,16 @@ const GetLifetimeSection = ({ textContent, isCelebrationPage }: GetLifetimeSecti
               </h2>
             )}
 
-            <p className="pt-4 text-xl font-normal">{textContent.description}</p>
+            <p className="pb-4 pt-4 text-xl font-normal">{textContent.description}</p>
+            <Link
+              href={'#priceTable'}
+              className={`z-10 flex w-max justify-center rounded-lg bg-white px-4 py-3 text-xl font-medium text-gray-100 hover:bg-white/95`}
+            >
+              {textContent.cta}
+            </Link>
           </div>
 
-          <RevealY className="content relative flex h-full w-full flex-col items-center px-5 pt-6">
+          <RevealY className="content relative flex h-full w-full flex-col items-center px-5 pt-2">
             {isCelebrationPage ? (
               <Image
                 src={getImage('/images/lifetime/celebration/confetti-horizontal.svg')}

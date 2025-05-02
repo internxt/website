@@ -25,6 +25,12 @@
         "title": "Celebrate today for a lifetime of privacy",
         "description": "Secure your files forever with your Brazil National Day discount.",
         "cta1": "Get 80% OFF"
+      },
+      "uk": {
+        "title": "Celebrate today for a lifetime of privacy",
+        "subtitle": "83% off Internxt Drive, VPN & Antivirus.",
+        "description": "Secure your files forever with your St. George’s Day discount.",
+        "cta1": "Claim deal"
       }
     }
   },
@@ -44,28 +50,30 @@
     }
   },
   "GetLifetimeSection": {
-    "title": "Life is not short! But this limited-time deal is...",
-    "description": "Internxt is offering a deal on a lifetime of privacy and peace of mind."
+    "title": "83% off a lifetime of privacy",
+    "subtitle": "Don’t miss the chance of a lifetime! This deal ends in 3 days.",
+    "description": "Internxt Drive, VPN & Antivirus.",
+    "cta": "Choose your plan"
   },
   "FeatureSection": {
     "title": "Why choose Internxt to secure your files?",
-    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data. We take every step to ensure your information remains secure.",
+    "description": "Internxt puts you back in control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your data and secure them with post-quantum encryption. ",
     "cta": "",
     "cards": [
       {
-        "title": "Enhanced Privacy",
+        "title": "Next-generation security",
         "description": "Our powerful encryption protects your data from unauthorized access. We never store passwords; all your data is encrypted in transit and at rest."
       },
       {
-        "title": "User Control",
+        "title": "One-time payment",
         "description": "To protect you from data breaches, Internxt protects your data by making it inaccessible to third parties, including Internxt."
       },
       {
-        "title": "Cross-Platform Access",
+        "title": "Zero-knowledge technology",
         "description": "Work freely and access all your files across various devices and operating systems."
       },
       {
-        "title": "One-Time Payment",
+        "title": "Open source and transparent",
         "description": "Internxt's lifetime plans offer secure access to your files forever with a single, upfront payment.  Pay once to secure your data for life without any recurring fees."
       }
     ]
@@ -80,5 +88,11 @@
     "title": "The world's most private cloud storage",
     "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
     "cta": "Select plan"
+  },
+  "NationalDayCtaSection": {
+    "title": "A lifetime of privacy online with Internxt",
+    "subtitle": "83% off Internxt Drive, VPN & Antivirus.",
+    "description": "One-time payment, lifetime access",
+    "cta": "Select a plan now!"
   }
 }

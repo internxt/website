@@ -11,6 +11,7 @@ import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
 import { PromoCodeName } from '@/lib/types';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
+import router from 'next/router';
 
 interface Protect82Props {
   metatagsDescriptions: MetatagsDescription[];
@@ -48,6 +49,7 @@ const Security82 = ({
         percent="82"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
+        onRedirectButtonClicked={() => router.push('#payment')}
       />
 
       <PaymentSection

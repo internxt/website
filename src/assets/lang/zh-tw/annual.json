@@ -1,29 +1,85 @@
 {
   "HeroSection": {
-    "header": "Internxt 年度計劃",
+    "header": "立即享有年度方案最高 82% 專屬折扣！",
     "title": {
-      "normalText": "最安全的雲端 ",
-      "blueText": "適用於所有照片和文件"
+      "normalText": "最安全、最隱私的雲端儲存空間 ",
+      "blueText": "保護你的檔案"
     },
-    "description": "註冊 Internxt 年度計劃，獲得 365 天的全面隱私保護。",
-    "cta": "選擇您的計劃"
+    "description": "訂閱 Internxt 年度方案，享受 365 天的全面隱私保障。",
+    "cta": "選擇你的方案"
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "年度方案",
+      "homePage": "選擇最適合你的方案",
+      "lifetime": "終身方案",
+      "business": "商用方案",
+      "lifetimeCampaign": {
+        "blueText": "限時 5 折優惠",
+        "normalText": "尊享我們所有專屬終身方案"
+      }
+    },
+    "header": "全面隱私保障，限時 82% 折扣",
+    "lifetimeDescription": "只需一次付費，即可享受終身的隱私保障。你將永久擁有 Internxt 所有注重隱私的功能與加密雲端儲存服務。",
+    "planDescription": "所有 Internxt 方案均可完整使用我們的私密解決方案組合：Internxt Drive、Send、VPN、防毒軟體、Meet 和 Mail。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "individual": "個人",
+      "lifetime": "終身",
+      "business": "商用"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt 免費版",
+      "description": "享有最多 1GB 的加密雲端空間，並使用我們的私密服務生態系：VPN（FR）、CLI/WebDav/Rclone 等。",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源並經過審核",
+      "anonymousAccount": "匿名註冊帳號",
+      "premiumSupport": "頂級客服支援",
+      "guarantee": "30 天退款保證"
+    }
   },
   "PaymentSection": {
-    "title": "年度計劃",
-    "description": "所有 Internxt 計劃均具備完整功能，可完全訪問我們的所有隱私服務。全年安全，適用於各種形狀和大小的文件。",
-    "firstFeed": "30 天退款保證",
-    "secondFeed": "100% 安全付款",
-    "thirdFeed": "匿名帳戶創建"
+    "blueTitle": "全面隱私保障，限時 82% 折扣",
+    "title": "年度方案",
+    "description": "所有 Internxt 方案均可完整使用我們的私密解決方案組合：Internxt Drive、Send、VPN、防毒軟體、Meet 和 Mail。",
+    "firstFeed": "頂級客服支援",
+    "secondFeed": "30 天退款保證",
+    "thirdFeed": "開源並經過審核"
   },
   "FeatureSection": {
-    "title": "重新掌控您的隱私",
-    "description": "Internxt 創建的私人和安全的雲服務旨在讓用戶重新掌控數據。保護您的文件和基本的隱私權利，所有 Internxt 服務均從零開始設計，確保無與倫比的安全性。",
-    "cta": "獲取一年計劃"
+    "title": "重新掌握你的隱私權",
+    "description": "Internxt 打造私密又安全的雲端服務，讓你重新掌握資料主導權。我們所有的產品從零開始設計，提供無與倫比的安全與資料保護。",
+    "cta": "選擇你的方案"
   },
   "CtaSection": {
-    "title": "全球最私密的雲端存儲",
-    "description": "使用 Internxt 安全、私密和加密的雲端存儲來保護真正重要的東西。",
-    "cta": "找到您的計劃"
+    "title": "Internxt 雲端儲存空間",
+    "description": "全世界最隱私、安全且加密的雲端。保護最重要的資訊——你的資料。",
+    "cta": "選擇你的方案"
+  },
+  "FeaturesSection": {
+    "title": "安全雲端儲存，極致隱私保護",
+    "description": "Internxt 有何特別？我們是一群致力於線上隱私保護的團隊。我們的每一個產品決策，都是為了保護你的資料、避免濫用。",
+    "info": [
+      {
+        "title": "無與倫比的隱私保護",
+        "description": "我們不儲存密碼或個人資訊。你的檔案始終加密，由你自行掌控。"
+      },
+      {
+        "title": "絕不妥協的安全性",
+        "description": "檔案在離開你的裝置前就已經加密。透過零知識技術與後量子加密，只有你可以讀取資料。"
+      },
+      {
+        "title": "開源且透明",
+        "description": "我們的原始碼在 GitHub 完全開放，歡迎任何人審查與驗證。我們不藏任何東西——除了你的資料。"
+      },
+      {
+        "title": "經第三方驗證",
+        "description": "我們完全遵守 GDPR 法規，並通過歐洲領先的滲透測試公司 Securitum 的獨立安全審核。"
+      }
+    ]
   }
 }
-

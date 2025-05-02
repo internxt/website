@@ -88,7 +88,8 @@
         "title": "Funcionalidades",
         "privateCloud": "Solução de nuvem privada",
         "cloudBakcup": "Solução de backup em nuvem",
-        "GDPRCloud": "Armazenamento GDPR"
+        "GDPRCloud": "Armazenamento GDPR",
+        "cloudPhotos": "Fotos na nuvem"
       }
     }
   },

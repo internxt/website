@@ -34,7 +34,8 @@
   },
   "GetLifetimeSection": {
     "title": "生命并不短暂！但这一限时优惠却......",
-    "description": "Internxt 提供 3 天的优惠，享受终身的隐私和安心。"
+    "description": "Internxt 提供 3 天的优惠，享受终身的隐私和安心。",
+    "cta": "立即选择计划"
   },
   "FeatureSection": {
     "title": "为什么选择 Internxt 来保护您的文件？",

@@ -1,10 +1,10 @@
 {
   "HeroSection": {
     "title": {
-      "blue": "Sparen Sie 80% ",
+      "blue": "Sparen Sie 82% ",
       "normal": "bei allen sicheren Cloud-Speicherplänen"
     },
-    "description": "Aktualisieren Sie Ihr kostenloses Konto, um 80% Rabatt auf jeden Plan zu erhalten. Mit unserem verschlüsselten, Open-Source-Cloud-Speicher können Sie Ihre Dateien mit vollständiger Privatsphäre speichern und teilen.",
+    "description": "Aktualisieren Sie Ihr kostenloses Konto, um 82% Rabatt auf jeden Plan zu erhalten. Mit unserem verschlüsselten, Open-Source-Cloud-Speicher können Sie Ihre Dateien mit vollständiger Privatsphäre speichern und teilen.",
     "cta": "Plan aktualisieren",
     "recommendedBy": "Empfohlen von:"
   },
@@ -49,7 +49,7 @@
       "Mit unseren kostenpflichtigen Plänen können Sie Ihre Dateien lokal speichern und darauf zugreifen, ohne den physischen Speicherplatz Ihres Geräts zu verbrauchen.",
       "Genießen Sie die Gewissheit, dass Ihre Erinnerungen und wichtigen Dokumente sicher in der Cloud gesichert sind, die von jedem Gerät aus zugänglich ist."
     ],
-    "cta": "Erhalten Sie 80% RABATT"
+    "cta": "Erhalten Sie 82% RABATT"
   },
   "InxtFeaturesSection": {
     "title": "Internxt bietet sicheren Cloud-Speicher, der Ihre Privatsphäre schützt",
@@ -83,7 +83,7 @@
   },
   "CtaSection": {
     "title": "Brauchen Sie mehr Speicherplatz?",
-    "description": "Erhalten Sie 80% Rabatt auf jeden Plan.",
+    "description": "Erhalten Sie 82% Rabatt auf jeden Plan.",
     "cta": "Plan aktualisieren"
   },
   "WhatWeDoSection": {
@@ -97,7 +97,7 @@
         "2FA-Authentifizierung",
         "Backups auf mehreren Servern"
       ],
-      "cta": "Erhalten Sie 80% RABATT"
+      "cta": "Erhalten Sie 82% RABATT"
     }
   },
   "FaqSection": {
@@ -112,7 +112,7 @@
       {
         "question": "Wie kann ich meinen kostenlosen Plan aktualisieren?",
         "answer": [
-          "Ihr 80%-Rabatt wird automatisch an der Kasse angewendet. Um Ihren Rabatt zu erhalten, wählen Sie Ihren monatlichen, jährlichen oder lebenslangen Plan und fahren Sie mit der Checkout-Seite fort."
+          "Ihr 82%-Rabatt wird automatisch an der Kasse angewendet. Um Ihren Rabatt zu erhalten, wählen Sie Ihren monatlichen, jährlichen oder lebenslangen Plan und fahren Sie mit der Checkout-Seite fort."
         ]
       },
       {

@@ -28,11 +28,11 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
   }, []);
 
   return (
-    <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pb-10 lg:pt-24">
+    <div className="max-w-[544px] flex-col pt-8 lg:flex lg:pb-10 lg:pt-24">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <Header maxWidth="max-w-[500px]" className="text-white">
+            <Header maxWidth="max-w-[500px]" className="text-4xl text-gray-100">
               {textContent.title.textBeforeBlueText}
               <span className="text-primary">{textContent.title.blueText}</span>
               {textContent.title.textAfterBlueText}
@@ -41,14 +41,14 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
               <span className="text-primary">{textContent.subtitle}</span>
             </p>
             <p className="pt-4 text-xl font-bold ">
-              <span className="text-white">{textContent.description}</span>
+              <span className="text-gray-100">{textContent.description}</span>
             </p>
           </div>
           <div className="mx-auto flex flex-col lg:mx-0">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex flex-row gap-2">
                 <Check className="pt-2 text-green-1 lg:pt-0" weight="bold" size={24} />
-                <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                <p className="text-left text-lg font-semibold text-gray-100 ">{feat}</p>
               </div>
             ))}
           </div>
@@ -56,9 +56,9 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
       )}
 
       <div className="flex flex-row justify-center pb-4  pt-6 lg:justify-start">
-        <p className="flex flex-row items-end text-white">
+        <p className="flex flex-row items-end text-gray-100">
           {textContent.startFrom.normal1}{' '}
-          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-white">
+          <span className="flex w-max flex-row items-start justify-start text-4xl font-bold text-gray-100">
             <abbr className="mt-0.5 text-base ">{currency}</abbr>
             {textContent.startFrom.price}
           </span>
@@ -82,7 +82,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
       {footer ?? (
         <div className="flex flex-row items-center justify-center space-x-3 pt-10 lg:justify-start">
           <ShieldCheck size={24} weight="fill" className="text-green-1" />
-          <p className="whitespace-nowrap text-white lg:text-lg">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap text-gray-100 lg:text-lg">{textContent.guarantee}</p>
         </div>
       )}
     </div>
