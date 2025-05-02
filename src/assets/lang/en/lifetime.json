@@ -19,7 +19,7 @@
       "singapore": {
         "title": "Celebrate today for a lifetime of privacy",
         "description": "Secure your files forever with your Singapore National Day discount.",
-        "cta1": "Get 83% OFF"
+        "cta1": "Get 85% OFF"
       },
       "brazil": {
         "title": "Celebrate today for a lifetime of privacy",
@@ -28,7 +28,7 @@
       },
       "uk": {
         "title": "Celebrate today for a lifetime of privacy",
-        "subtitle": "83% off Internxt Drive, VPN & Antivirus.",
+        "subtitle": "85% off Internxt Drive, VPN & Antivirus.",
         "description": "Secure your files forever with your St. George’s Day discount.",
         "cta1": "Claim deal"
       }
@@ -50,7 +50,7 @@
     }
   },
   "GetLifetimeSection": {
-    "title": "83% off a lifetime of privacy",
+    "title": "85% off a lifetime of privacy",
     "subtitle": "Don’t miss the chance of a lifetime! This deal ends in 3 days.",
     "description": "Internxt Drive, VPN & Antivirus.",
     "cta": "Choose your plan"
@@ -91,7 +91,7 @@
   },
   "NationalDayCtaSection": {
     "title": "A lifetime of privacy online with Internxt",
-    "subtitle": "83% off Internxt Drive, VPN & Antivirus.",
+    "subtitle": "85% off Internxt Drive, VPN & Antivirus.",
     "description": "One-time payment, lifetime access",
     "cta": "Select a plan now!"
   }
