@@ -5,11 +5,10 @@ import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
-import { VirusScannerText } from '@/assets/types/virusScanner';
-const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
+import { MetadataRemoverText } from '@/assets/types/metadataRemover';
 
 interface HeroSectionProps {
-  textContent: VirusScannerText['HeroSection'];
+  textContent: MetadataRemoverText['HeroSection'];
   lang: string;
 }
 
@@ -148,7 +147,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   return (
     <section
-      className="relative pb-20 pt-32"
+      className="relative  pt-32"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -179,12 +178,13 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between ">
             <div className="flex w-full flex-col items-center space-y-5 text-center   ">
-              <Header isToolsPage>{textContent.title}</Header>
-              <h2 className="text-xl font-semibold text-cool-gray-80">
-                {textContent.subtitle1}
-                <br />
-              </h2>
-              <p className=" text-xl font-normal text-cool-gray-80">{textContent.subtitle2}</p>
+              {/* <Header isToolsPage>{textContent.title}</Header> */}
+              <h1 className="text-3xl font-semibold text-cool-gray-100 md:text-6xl">{textContent.title}</h1>
+              <p className=" text-xl font-normal text-cool-gray-80 md:text-xl">{textContent.subtitle2}</p>
+              <p className=" md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80">
+                <CheckCircle size={24} weight="fill" className="text-green-1" />
+                {textContent.secure}
+              </p>
             </div>
           </div>
           {/* Scan container (drop area & scan information) */}
@@ -474,7 +474,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center ">
+      {/* <div className="flex w-full flex-col items-center justify-center ">
         <Image
           src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
           alt="File Arrow Up icon"
@@ -490,7 +490,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             )
           }
         />
-      </div>
+      </div> */}
     </section>
   );
 };

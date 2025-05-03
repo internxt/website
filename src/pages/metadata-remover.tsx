@@ -1,12 +1,22 @@
 import Script from 'next/script';
-import { CloudArrowUp, Images, ClockClockwise, Key, ShieldPlus, Eye } from '@phosphor-icons/react';
+import {
+  Infinity as InfinityIcon,
+  LockKey,
+  ShieldStar,
+  Files,
+  Fingerprint,
+  FileLock,
+  ImageSquare,
+  Detective,
+  ShareNetwork,
+} from '@phosphor-icons/react';
 
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import HeroSection from '@/components/metadata-remover/HeroSection';
 import FeaturesSection from '@/components/metadata-remover/FeaturesSection';
-import CtaSection from '@/components/metadata-remover/CtaSection';
+import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import TryInternxtBanner from '@/components/banners/TryInternxtBanner';
@@ -15,6 +25,8 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import FeaturesSliderImg from '@/components/metadata-remover/FeaturesSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
 import { getImage } from '@/lib/getImage';
+
+const CTA_URL = `/pricing`;
 
 const Scan = ({
   metatagsDescriptions,
@@ -27,30 +39,34 @@ const Scan = ({
 }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
   const cardInfo = [
-    { icon: CloudArrowUp, ...langJson.FeaturesSlider.info[0] },
-    { icon: Images, ...langJson.FeaturesSlider.info[1] },
-    { icon: ClockClockwise, ...langJson.FeaturesSlider.info[2] },
-    { icon: Key, ...langJson.FeaturesSlider.info[3] },
-    { icon: ShieldPlus, ...langJson.FeaturesSlider.info[4] },
-    { icon: Eye, ...langJson.FeaturesSlider.info[5] },
+    { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },
+    { icon: LockKey, ...langJson.FeaturesSlider.info[1] },
+    { icon: ShieldStar, ...langJson.FeaturesSlider.info[2] },
+    { icon: Files, ...langJson.FeaturesSlider.info[3] },
+    { icon: Fingerprint, ...langJson.FeaturesSlider.info[4] },
+    { icon: FileLock, ...langJson.FeaturesSlider.info[5] },
   ];
   const cardInfoImg = [
     {
-      icon: CloudArrowUp,
+      icon: ImageSquare,
       ...langJson.FeaturesSlider.info[0],
       image: getImage('/images/metadata-remover/protected_data.webp'),
     },
     {
-      icon: Images,
+      icon: ShieldStar,
       ...langJson.FeaturesSlider.info[1],
-      image: getImage('/images/metadata-remover/protected_data.webp'),
+      image: getImage('/images/metadata-remover/data_leaks.webp'),
     },
     {
-      icon: ClockClockwise,
+      icon: Detective,
       ...langJson.FeaturesSlider.info[2],
-      image: getImage('/images/metadata-remover/protected_data.webp'),
+      image: getImage('/images/metadata-remover/anonymous_submissions.webp'),
     },
-    { icon: Key, ...langJson.FeaturesSlider.info[3], image: getImage('/images/metadata-remover/protected_data.webp') },
+    {
+      icon: ShareNetwork,
+      ...langJson.FeaturesSlider.info[3],
+      image: getImage('/images/metadata-remover/file_sharing.webp'),
+    },
   ];
 
   return (
@@ -78,15 +94,23 @@ const Scan = ({
           bannerText={bannerLang.SignUpMetadataRemoverBanner}
           lang={lang}
         />
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection
+          textContent={langJson.CtaSection1}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection1.description}</p>}
+        />
 
-        <FeaturesSlider textContent={langJson.FeaturesSection} cardInfo={cardInfo} />
+        <FeaturesSlider textContent={langJson.FeaturesSlider} cardInfo={cardInfo} />
 
-        <FeaturesSliderImg textContent={langJson.FeaturesSection} cardInfo={cardInfoImg} />
+        <FeaturesSliderImg textContent={langJson.FeaturesSliderImg} cardInfo={cardInfoImg} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection
+          textContent={langJson.CtaSection2}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection2.description}</p>}
+        />
 
         <FAQSection textContent={langJson.FaqSection} />
 

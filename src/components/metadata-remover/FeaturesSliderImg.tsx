@@ -7,8 +7,8 @@ const FeaturesSliderImg = ({ textContent, cardInfo, backgroundClass = 'bg-white'
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className={`overflow-hidden ${backgroundClass}`}>
-      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-20">
+    <section className={`overflow-hidden bg-gray-1`}>
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <div className="flex flex-col space-y-6">
@@ -68,9 +68,9 @@ const FeaturesSliderImg = ({ textContent, cardInfo, backgroundClass = 'bg-white'
       </div> */}
 
       {/* Mobile view */}
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-5 py-10 md:grid-cols-2">
+      <div className="mx-auto grid max-w-[1200px] grid-cols-1 gap-8 px-5 pb-20 md:grid-cols-2">
         {cardInfo.map((info) => (
-          <div key={info.title} className="flex h-full flex-col items-start justify-start rounded-2xl bg-gray-1">
+          <div key={info.title} className="flex h-full flex-col items-start justify-start rounded-2xl bg-white">
             {info.image && (
               <div className="w-full overflow-hidden rounded-t-lg pb-10">
                 <Image

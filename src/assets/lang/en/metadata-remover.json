@@ -1,10 +1,8 @@
 {
   "HeroSection": {
-    "title": "Virus Scanner",
-    "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
-    "subtitle2": "Scan any document, image, PDF, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
-    "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
-
+    "title": "Metadata Remover",
+    "subtitle2": "Remove metadata from your files to stay anonymous online.",
+    "secure": "Secure uploads are protected by HTTPS",
     "dropFile": {
       "line1": "Drop your file to scan for viruses"
     },
@@ -100,90 +98,129 @@
       ]
     }
   },
-  "CtaSection": {
-    "title": "Safety is only a click away",
-    "description": "Protect your personal data with Internxt's privacy suite.",
-    "cta": "Create account"
+  "CtaSection1": {
+    "title": "Every file tells a story",
+    "description": "Wipe your file’s metadata and secure your files with Internxt",
+    "cta": "Choose your plan"
+  },
+  "CtaSection2": {
+    "title": "Stop oversharing online",
+    "description": "Delete your file’s metadata for maximum privacy.",
+    "cta": "Get Internxt"
   },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "How to check if a file is infected?",
+        "question": "What is metadata, and why should I remove it?",
         "answer": [
-          "Internxt’s Virus Scanner is a tool to help you locate any viruses that may have compromised your files. Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos."
+          "Metadata describes the files, device details, location, author, editing history, and more. ",
+          "You should delete this information using a video, photo, or image metadata remover to prevent external bodies from gaining access to personalised information about you that you would rather keep private."
         ]
       },
       {
         "question": "How to know if your files have malware?",
         "answer": [
-          "Submit your files, and relax knowing that your files are safe and secure. Using our Virus Scanner is a safe practice to evade a privacy nightmare. Scan before you click!"
+          "Basically, all files you create online. Word, Excel, PDFs, videos, images, etc, all have metadata in some form or another. ",
+          "The kind of metadata these files contain will vary depending on their contents, so if you have a file you want to keep private, using a metadata cleaner will delete this information for you. "
         ]
       },
       {
-        "question": "How to scan a file for viruses?",
+        "question": "Is it safe to upload sensitive files?",
         "answer": [
-          "Our free Virus Scanner was designed to help you avoid infection and identify malware from your documents and photos. Drag and drop the chosen file in the Virus Scanner toolbar, and it will automatically scan the file for any viruses or malware."
+          "With Internxt’s metadata remover, yes. Files are encrypted, processed securely, and everything is deleted once the metadata is removed. We cannot store or view the contents of your files, only delete the metadata."
         ]
       },
       {
-        "question": "How to scan a file online?",
+        "question": "Does removing metadata change the content of my file?",
         "answer": [
-          "With Internxt Virus Scanner you can drag and drop suspicious files into the toolbar to detect malware and other breaches for free."
+          "No, only the metadata is deleted. We don’t add watermarks, compress your files, or make any other unnecessary changes to your files. Once you delete the metadata, you will get the exact same version of your files with zero alterations. "
         ]
       },
       {
-        "question": "How to scan a PDF file?",
+        "question": "What happens to my files after they’re cleaned?",
         "answer": [
-          "Drag and drop the PDF into the toolbar like you would with any other file. With Internxt Virus Scanner, you can scan any document, image, PDF, or other file type. Make sure your files are safe and free from viruses before you open them with Internxt's Virus Scanner."
+          "Once you upload and delete the data, everything is automatically deleted from our system to maintain your privacy and our GDPR compliance."
+        ]
+      },
+      {
+        "question": "How do I know if a file contains metadata?",
+        "answer": [
+          "All files contain metadata. In Windows, you can view it by right-clicking on the file and selecting “Properties”",
+          "Mac users again need to right-click the file, select “Get Info”, then go to the “Details” section to view the metadata.",
+          "Finally, you can view the metadata of PDFs by opening them in Adobe Acrobat and going to “File” > “Properties” > “Description”"
         ]
       }
     ]
   },
   "FeaturesSlider": {
-    "title": "Sicherer Fotospeicher, der deinen Anforderungen entspricht",
-    "description": "Verwalte und sichere deine Fotos sicher in der Cloud und bereinige deinen lokalen Speicher, um deine Dateien zurückzugewinnen.",
+    "title": "Why you should use a metadata remover online",
+    "description": "Your documents, photos, videos, or PDFs can carry more information than you think. When you share these files online, you could risk this metadata falling into the wrong hands, leading to data leaks. Our free metadata cleaner removes this information for free whenever you need it.",
     "info": [
       {
-        "title": "Lokalen Speicherplatz freigeben",
+        "title": "100% free and unlimited",
         "description": [
-          "Wir bieten ein virtuelles Laufwerk zur Verwaltung deines Cloud-Fotospeichers, das wie eine normale Festplatte auf deinem Computer funktioniert und Fotos automatisch mit der Cloud synchronisiert, ohne Speicherplatz auf deinem Gerät zu belegen.",
-          "Diese Einrichtung ermöglicht schnellen Zugriff auf deine Fotos zur Sicherung, Organisation und Synchronisation, wodurch Speicherplatz auf deinem Gerät freigegeben wird. Änderungen werden automatisch synchronisiert, sodass du immer Zugriff auf die neueste Version deiner Dateien hast."
+          "You can use this metadata cleaner for free without signing up for an account or entering your credit card information. It works directly in your browser, so you can remove metadata for as many files as you like without limitations. "
         ]
       },
       {
-        "title": "Cloud-Speicher für RAW-Fotos",
+        "title": "GDPR compliant",
         "description": [
-          "Für Fotografen, die mit großen, hochwertigen Bildern arbeiten, kann es schwierig sein, Cloud-Speicher für RAW-Fotos mit geeigneten Speicherplänen zu finden.",
-          "RAW-Fotos sind unbearbeitet und enthalten mehr Daten als Standardbildformate, ideal zur Bearbeitung, aber auch deutlich größer. Internxt bietet Pläne bis zu 5 TB Cloud-Speicher für Fotos. Bei Bedarf kannst du zusätzliche Pläne erwerben, um deinen Speicher zu erweitern."
+          "Internxt is a GDPR-compliant company, and just like our cloud storage, VPN, and Antivirus products, our online metadata remover tool protects your data to the highest privacy standards. When we remove your metadata, all files and information are deleted to ensure compliance and protection from data leaks."
         ]
       },
       {
-        "title": "Fotos wiederherstellen",
+        "title": "Secure",
         "description": [
-          "Ein häufiges Problem ist der Verlust von Fotos durch Geräteausfall, versehentliches Löschen, Datenverlust oder Ransomware. Sicherer Cloud-Speicher für Fotos beinhaltet Backups, eine zuverlässige Lösung zum Schutz deiner Erinnerungen.",
-          "Internxt verschlüsselt alle deine Dateien und sichert sie automatisch in der Cloud. Nur du hast Zugriff darauf – niemand sonst kann deine Dateien sehen. Unsere Zero-Knowledge-Verschlüsselung garantiert deine Privatsphäre für den sichersten Cloud-Speicher deiner Fotos."
+          "Your files are cleaned instantly, removing the private data and keeping the original format preserved. Once you upload the file, everything is encrypted to maintain the security and privacy of your files. We store no data, we just remove the metadata for increased anonymity."
         ]
       },
       {
-        "title": "Postquanten-Verschlüsselung",
+        "title": "Supports multiple files",
         "description": [
-          "Internxt ist der erste Cloud-Fotospeicher mit Postquanten-Verschlüsselung – der derzeit sichersten Technologie.",
-          "Das bedeutet, dass wir den sichersten Cloud-Speicher für Fotos bieten, der deine Dateien gegen Quantencomputer schützt, die heutige Verschlüsselung knacken könnten. So bleiben deine Bilder auch in Zukunft sicher und privat."
+          "We support multiple file formats, so you can use this tool as an image, photo, video, or PDF metadata remover to ensure the privacy of any files you want to share online.  It’s a quick, reliable way to clean up your files and prevent your data from being misused or tracked."
         ]
       },
       {
-        "title": "Antivirus-Schutz",
+        "title": "Prevent digital fingerprinting",
         "description": [
-          "Internxt-Pläne enthalten integrierten Antivirus-Schutz in Internxt Drive für mehr Sicherheit deiner Dateien gegen Malware-Angriffe und unbeabsichtigtes Löschen sowie ein unbegrenztes, ultraschnelles VPN für privates Surfen.",
-          "Mit Internxt Antivirus kannst du deine Cloud-Fotos mit vollständigen oder benutzerdefinierten Scans auf potenzielle Malware prüfen. Die Software erkennt und entfernt Infektionen, die deine Bilder beschädigen oder stehlen könnten."
+          "Your metadata can be used to create a digital fingerprint of your online activity, which can, in turn, be used to trace where a file originated, who created it, and more. By stripping your files of this metadata, you make it more challenging for threat actors to track your digital footprint."
         ]
       },
       {
-        "title": "Open-Source und geprüft",
+        "title": "No file altering",
         "description": [
-          "Der Open-Source-Cloud-Speicher für Fotos bedeutet, dass der von uns genutzte Code öffentlich einsehbar ist und von Sicherheitsexperten geprüft werden kann.",
-          "Ein auditierter, Open-Source-Anbieter bietet mehr Transparenz und garantiert, dass es keine versteckten Schwachstellen, Hintertüren oder Datenverfolgung gibt – für vollständiges Vertrauen in die Sicherheit deiner Daten."
+          "All we do is strip your files of their metadata for increased privacy; the photos, videos, or content are left unaltered. We don’t compress your files, leave watermarks, or make any other alterations except those that need to be removed, so you're left with a private, unaltered file."
+        ]
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "When to use a metadata remover?",
+    "description": "Maintaining your privacy online has become an essential aspect of our internet lives. By keeping the metadata of your documents, photos, or videos, you can maintain confidentiality in both your personal and business life, prevent data leaks, and enjoy increased privacy and anonymity.",
+    "info": [
+      {
+        "title": "Protect data in photos or videos",
+        "description": [
+          "Photos taken with your phone or camera can include hidden location data, like GPS coordinates, place names, or even the direction your camera was facing. A photo metadata remover deletes location data to help you keep your home, workplace, or current whereabouts private and prevents cyberthreats like doxxing."
+        ]
+      },
+      {
+        "title": "Avoid data leaks",
+        "description": [
+          "Your full name, email, device, and software details can become embedded in your images, documents, or videos. An image or video metadata remover protects you even if you share these files with the wrong person there is no sensitive or private information being shared. "
+        ]
+      },
+      {
+        "title": "Send anonymous submissions",
+        "description": [
+          "There are many use cases for a metadata remover online beyond photos and videos. Journalists or whistleblowers who need maximum privacy will use this tool to anonymize data linked to document authorship, revision history, thumbnail previews, and internal file paths."
+        ]
+      },
+      {
+        "title": "Share files between employees",
+        "description": [
+          "Businesses are a constant target for data breaches, which can occur due to cyberattacks, or human error. When sharing documents within departments, metadata could expose employee names, internal file structures, or comments. In this case, a metadata remover ensures a company's integrity and compliance. "
         ]
       }
     ]

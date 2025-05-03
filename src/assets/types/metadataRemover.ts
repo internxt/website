@@ -2,7 +2,9 @@ export interface MetadataRemoverText {
   HeroSection: HeroSection;
   FeaturesSection: FeaturesSection;
   FeaturesSlider: FeaturesSlider;
-  CtaSection: CtaSection;
+  FeaturesSliderImg: FeaturesSliderImg;
+  CtaSection1: CtaSection1;
+  CtaSection2: CtaSection2;
   FaqSection: FAQSection;
   ToolsSection: ToolsSection;
 }
@@ -24,7 +26,14 @@ export interface EndToEnd {
   title: string;
   description: string;
 }
-export interface CtaSection {
+export interface CtaSection1 {
+  title: string;
+  description: string;
+  cta: string;
+  cards?: CtaSectionCard[];
+}
+
+export interface CtaSection2 {
   title: string;
   description: string;
   cta: string;
@@ -34,11 +43,6 @@ export interface CtaSection {
 export interface CtaSectionCard {
   title: string;
   description: string;
-}
-export interface CtaSection {
-  title: string;
-  description: string;
-  cta: string;
 }
 
 export interface FAQSection {
@@ -68,6 +72,7 @@ export interface HeroSection {
   title: string;
   subtitle1: string;
   subtitle2: string;
+  secure: string;
   footer: string;
   dropFile: DropFile;
   fileSelected: string;
