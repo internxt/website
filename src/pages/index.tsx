@@ -118,6 +118,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
+        showPromo
       />
 
       <div className={`${marqueeBgColor} py-10`}>
