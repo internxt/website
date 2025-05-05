@@ -72,7 +72,7 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 3.00",
+        "price": " 9.99",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
@@ -347,17 +347,17 @@
       {
         "name": "Eva Williams",
         "enterprise": "Periodista de FixThePhoto.com",
-        "review": "Me cambié a Internxt por su tecnología de conocimiento cero y cifrado postcuántico, donde solo yo puedo acceder a mis archivos. Los enlaces para compartir archivos también me permiten compartirlos sin comprometer mi privacidad en línea."
+        "review": "Me cambié a Internxt por su tecnología de conocimiento cero, cifrado postcuántico y código abierto. Ahora sólo yo puedo acceder a mis archivos e información, y lo tengo todo protegido en línea."
       },
       {
         "name": "Cristian M.",
         "enterprise": "Reseña de GetApp",
-        "review": "Internxt es un servicio de almacenamiento en la nube privado. Tiene una interfaz simplificada y una buena atención al cliente, lo que lo convierte en una excelente opción para aquellos que necesitan almacenar sus archivos de manera segura."
+        "review": "Internxt es un servicio de almacenamiento en la nube privado y seguro. Tiene una interfaz simplificada, fácil de usar y una buena atención al cliente, lo que lo convierte en una excelente opción."
       },
       {
         "name": "Josep Carrizo",
         "enterprise": "Reseña de Trustpilot",
-        "review": "He estado usando Google Drive durante varios años, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me mudé a Internxt."
+        "review": "Internxt es un servicio de almacenamiento en la nube privado y seguro. Tiene una interfaz simplificada, fácil de usar y una buena atención al cliente, lo que lo convierte en una excelente opción."
       }
     ]
   },
