@@ -44,9 +44,9 @@ const PasswordGenerator = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
-        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
+        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 

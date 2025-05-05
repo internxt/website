@@ -29,9 +29,9 @@
       "unableToProcess": "Unable to process",
       "noVirusesDetected": {
         "message": "No viruses detected",
-        "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
-        "cta": "Get started now"
+        "title": "Keep your files safe from virus",
+        "subtitle": "Internxt has partnered with Bitdefender to offer you ultimate real time protection on your device. Claim 3 months of ultimate antivirus protection for free. ",
+        "cta": "Claim deal"
       },
       "analyzing": "Scanning file...",
       "scanTime": "Scan time",
