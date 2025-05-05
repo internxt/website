@@ -77,7 +77,7 @@ export const PriceCardsForAffiliatesPartners = ({
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-screen`}
+      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
       <div className={`flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
