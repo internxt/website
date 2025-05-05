@@ -46,7 +46,7 @@ const PasswordGenerator = ({
 
         <HeroSection textContent={langJson.HeroSection} />
 
-        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} />
+        <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 

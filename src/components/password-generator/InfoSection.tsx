@@ -3,21 +3,21 @@ import { useRouter } from 'next/router';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
-
+import { getImage } from '@/lib/getImage';
+import Image from 'next/legacy/image';
 const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({
   textContent,
   bannerText,
   hideLast2Sections,
+  lang,
 }: {
   textContent: any;
   bannerText: any;
   hideLast2Sections?: boolean;
+  lang: string;
 }): JSX.Element => {
-  const router = useRouter();
-  const lang = router.locale;
-
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -45,6 +45,8 @@ const InfoSection = ({
     },
   ];
 
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   const getSectionText = (text) => {
     return (
       <div className="flex w-full max-w-2xl flex-col space-y-3 ">
@@ -57,7 +59,23 @@ const InfoSection = ({
   return (
     <section className="overflow-hidden bg-gray-1">
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
-        <div id="incontent_1" className="flex w-full justify-center"></div>
+        <div className="flex w-full flex-col items-center justify-center">
+          <Image
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
@@ -78,13 +96,45 @@ const InfoSection = ({
             ))}
           </div>
         </div>
-        <div id="incontent_2" className="flex w-full justify-center"></div>
+        <div className="flex w-full flex-col items-center justify-center">
+          <Image
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
       </div>
       {hideLast2Sections ? null : (
         <>
           <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
           <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
-            <div id="incontent_3" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
               {getSectionText(textContent.fourthSection)}
@@ -124,7 +174,23 @@ const InfoSection = ({
                 </div>
               ))}
             </div>
-            <div id="incontent_4" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
           </div>
         </>
       )}

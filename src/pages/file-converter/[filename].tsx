@@ -39,7 +39,7 @@ const FileConverter = ({
         pathname={pathname}
       />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} />
+      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} />
 
       <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
 

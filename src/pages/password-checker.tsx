@@ -57,6 +57,7 @@ const PasswordChecker = ({
           textContent={langJson.InfoSection}
           bannerText={bannerLang.SignUpPasswordGenerator}
           hideLast2Sections
+          lang={lang}
         />
 
         <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />
