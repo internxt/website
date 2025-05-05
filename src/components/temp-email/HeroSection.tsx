@@ -229,7 +229,7 @@ export const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className="flex justify-center overflow-hidden px-6 pb-20 pt-32">
+    <section className="flex items-start justify-center overflow-hidden px-6 pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
@@ -247,8 +247,8 @@ export const HeroSection = ({ textContent, lang }) => {
           }
         />
       </div>
-      <div className="flex w-full flex-col items-center justify-center space-y-10 px-4 md:max-w-[1000px]">
-        <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center">
+      <div className="flex w-full flex-col items-center justify-center space-y-10 px-4 md:max-w-[1000px] ">
+        <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center lg:max-w-2xl">
           <Header isToolsPage>{textContent.title}</Header>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
