@@ -50,8 +50,6 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
 
       <HeroSection textContent={langJson.HeroSection} />
 
-      <FeaturesSection textContent={langJson.FeaturesSection} />
-
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
@@ -73,6 +71,8 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
         showPromo={false}
         backgroundColorComponent="bg-white"
       />
+
+      <FeaturesSection textContent={langJson.FeaturesSection} />
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
