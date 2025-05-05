@@ -4,7 +4,8 @@ import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
 import Header from '@/components/shared/Header';
-
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 const CheckboxButton = ({ checked, id }) => (
   <>
     <div
@@ -32,7 +33,7 @@ const CheckboxButton = ({ checked, id }) => (
   </>
 );
 
-const HeroSection = ({ textContent }) => {
+const HeroSection = ({ textContent, lang }) => {
   const [passwordType, setPasswordType] = useState<'password' | 'passphrase'>('password');
   const [password, setPassword] = useState<any>();
   const [regenerate, setRegenerate] = useState(false);
@@ -40,9 +41,28 @@ const HeroSection = ({ textContent }) => {
   const passwordProperties = { length: 13 };
   const passphraseProperties = { words: 5 };
 
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   return (
-    <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center pt-32 pb-20">
+    <section className="flex flex-row overflow-hidden px-5">
+      <div className="flex w-full flex-col items-center justify-center">
+        <Image
+          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          alt="BitDefender Vertical Banner"
+          width={210}
+          height={210}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
+      </div>
+      <div className="flex flex-col items-center justify-center pb-20 pt-32">
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
             <Header isToolsPage className="text-gray-100">
@@ -54,7 +74,7 @@ const HeroSection = ({ textContent }) => {
             <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
               <div
                 id="input"
-                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white py-3 px-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
+                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white px-3 py-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
               >
                 <p className="flex-row text-xl font-medium text-gray-100">{password}</p>
               </div>
@@ -105,7 +125,7 @@ const HeroSection = ({ textContent }) => {
             </div>
           </div>
           <div className="flex w-full flex-col space-y-8">
-            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-2">
+            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-x-2 lg:space-y-0">
               <button
                 onClick={() => setPasswordType('password')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
@@ -151,6 +171,23 @@ const HeroSection = ({ textContent }) => {
             )}
           </div>
         </div>
+      </div>
+      <div className="flex w-full flex-col items-center justify-center">
+        <Image
+          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          alt="BitDefender Vertical Banner"
+          width={210}
+          height={210}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
       </div>
     </section>
   );
