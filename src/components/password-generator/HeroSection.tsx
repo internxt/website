@@ -44,8 +44,8 @@ const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className="flex flex-row overflow-hidden px-5">
-      <div className="flex w-full flex-col items-center justify-center">
+    <section className="flex flex-row overflow-hidden px-5 pt-32">
+      <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
@@ -172,7 +172,7 @@ const HeroSection = ({ textContent, lang }) => {
           </div>
         </div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center">
+      <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
