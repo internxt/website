@@ -234,8 +234,8 @@ export const HeroSection = ({ textContent, lang }) => {
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={300}
-          height={300}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
@@ -282,8 +282,8 @@ export const HeroSection = ({ textContent, lang }) => {
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={300}
-          height={300}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
