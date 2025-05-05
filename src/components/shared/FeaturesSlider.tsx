@@ -16,7 +16,6 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
         </div>
       </section>
 
-      {/* Desktop view */}
       <div className="hidden flex-row items-start justify-center pb-20 lg:flex">
         <div className="flex max-w-[378px] flex-col">
           {cardInfo.map((info, index) => (
@@ -57,7 +56,6 @@ const FeaturesSlider = ({ textContent, cardInfo, backgroundClass = 'bg-white' })
         </RevealX>
       </div>
 
-      {/* Mobile view */}
       <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
         {cardInfo.map((info) => (
           <div
