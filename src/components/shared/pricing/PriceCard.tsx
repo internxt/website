@@ -6,6 +6,7 @@ import {
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -33,6 +34,7 @@ export interface PriceCardProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
   showPromo?: boolean;
+  isAffiliate?: boolean;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -55,6 +57,7 @@ export const PriceCard = ({
   darkMode,
   showPromo,
   onCheckoutButtonClicked,
+  isAffiliate,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -116,7 +119,7 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'h-[820px]' : showPromo ? 'h-[880px]' : 'h-[750px]'
+        isBusiness ? 'h-[830px]' : showPromo ? 'h-[880px]' : 'h-[750px]'
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
@@ -203,31 +206,10 @@ export const PriceCard = ({
         </button>
       </div>
 
-      {showPromo && (
-        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
-          <span className="text-[13.5px] font-bold text-white">
-            {contentText.productFeatures.IdentityManagementDay.title}
-          </span>
-          <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-              <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift1}
-              </span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-              <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift2}
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `max-h-[550px] min-h-[400px] ` : `max-h-[450px] min-h-[300px]`} pb-6 text-sm`}
+        } ${isBusiness ? `h-[550px] ` : `h-[550px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

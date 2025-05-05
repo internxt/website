@@ -50,8 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForLifetime: PromoCodeName.SoftSales,
+    couponCodeForLifetime: PromoCodeName.StarWars,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -139,6 +138,10 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
+        <div className="flex justify-center pt-24">
+          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
+        </div>
+
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
@@ -156,7 +159,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessSelector
           hideSwitchSelector
           popularPlanBySize="5TB"
-          showPromo={false}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

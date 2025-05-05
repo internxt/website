@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Save 70%",
+    "label": "Save 85%",
     "title": {
       "line1": "Secure cloud storage.",
       "blueText": "Guaranteed.",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "70% cheaper"
+        "blueText": "85% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " cloud storage and privacy suite"
       },
       "subtitle": "Full Security. Total control.",
-      "description": "Get 70% OFF our award-winning privacy services",
+      "description": "Get 85% OFF our award-winning privacy services",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus & more",
         "Post-quantum zero-knowledge encryption",
@@ -73,16 +73,16 @@
 
       "startFrom": {
         "normal1": "Start from ",
-        "price": "3.00",
+        "price": "9.99",
         "normal2": " /month"
       },
       "claimDeal": "Claim deal",
       "guarantee": "30-day money-back guarantee"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Save 70%",
-      "title": "All lifetime plans",
-      "subtitle": "New plans available now!",
+      "saveLabel": "Save 85%",
+      "title": "Save on privacy, you will...",
+      "subtitle": "Internxt Drive, Antivirus, and VPN",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee"
     },
@@ -346,12 +346,12 @@
       {
         "name": "Eva Williams",
         "enterprise": "Journalist for FixThePhoto.com",
-        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        "review": "I switched to Internxt for its zero-knowledge architecture—only I can access my files. Internxt’s secure file-sharing links let me share files confidently without compromising my privacy and security online."
       },
       {
         "name": "Cristian M.",
         "enterprise": "Review from GetApp",
-        "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
+        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
       },
       {
         "name": "Josep Carrizo",

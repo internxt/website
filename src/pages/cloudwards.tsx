@@ -16,6 +16,8 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { AffiliatesPartnersText } from '@/assets/types/afiliates-partners';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -29,8 +31,18 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 20;
-  const { currencyValue } = usePricing({});
+  const offerDiscount = 15;
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.CloudwardsCoupon,
+    couponCodeForLifetime: PromoCodeName.CloudwardsCoupon,
+  });
 
   function handlePriceCardButton(planId, coupon) {
     checkout({
@@ -38,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Identity82AFF ?? undefined,
+      promoCodeId: PromoCodeName.StarWars ?? undefined,
     });
   }
 
@@ -72,19 +84,39 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     </p>
   );
 
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout?.name,
+    );
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
-      <PriceTable
-        textContent={langJson.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
-        discount={offerDiscount}
-        billingFrequency="lifetime"
-        isCloudwards
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: offerDiscount,
+          lifetime: offerDiscount,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={'en'}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
+        popularPlanBySize="5TB"
+        showPromo={false}
       />
 
       <ComponentsInColumnSection
