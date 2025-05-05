@@ -86,7 +86,7 @@ const HeroSection = ({ textContent, lang }) => {
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
           width={180}
-          height={180}
+          height={179}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
