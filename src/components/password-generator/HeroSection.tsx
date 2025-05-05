@@ -44,13 +44,13 @@ const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className="flex flex-row overflow-hidden px-5 pt-32">
+    <section className=" relative flex flex-row items-start pb-8 pt-32">
       <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={210}
-          height={210}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
@@ -62,7 +62,7 @@ const HeroSection = ({ textContent, lang }) => {
           }
         />
       </div>
-      <div className="flex flex-col items-center justify-center pb-20 pt-32">
+      <div className="flex flex-col items-center justify-center px-10 pb-20">
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
             <Header isToolsPage className="text-gray-100">
@@ -176,8 +176,8 @@ const HeroSection = ({ textContent, lang }) => {
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={210}
-          height={210}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
