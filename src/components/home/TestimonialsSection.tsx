@@ -66,7 +66,7 @@ const TestimonialsSection = ({
           </p>
         </div>
         <div className="flex flex-col items-center justify-between gap-12 lg:flex-row" key={testimonials[0].review}>
-          <div className="flex h-[300px] max-w-[375px] flex-col gap-3 ">
+          <div className="flex max-w-[375px] flex-col gap-3 lg:h-[300px] ">
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
           </div>
@@ -78,7 +78,7 @@ const TestimonialsSection = ({
             alt="Internxt x ValenciaCF"
           />
 
-          <div className="flex h-[300px] max-w-[375px]  flex-col gap-3 ">
+          <div className="flex max-w-[375px] flex-col  gap-3 lg:h-[300px] ">
             <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[1].review}</p>
           </div>
