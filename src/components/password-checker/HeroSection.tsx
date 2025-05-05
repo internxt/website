@@ -80,13 +80,13 @@ const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className=" relative flex flex-row pt-32">
+    <section className=" relative flex flex-row items-start pb-8 pt-32">
       <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={210}
-          height={210}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
@@ -98,8 +98,8 @@ const HeroSection = ({ textContent, lang }) => {
           }
         />
       </div>
-      <div className="flex flex-col items-center justify-center space-y-6  px-2">
-        <div className="flex flex-col items-center space-y-5 px-4 text-center lg:px-0">
+      <div className="flex flex-col items-center justify-center space-y-6 px-2">
+        <div className="lg:max flex flex-col items-center space-y-5 px-4 text-center lg:max-w-2xl lg:px-0">
           <Header isToolsPage className="text-gray-100">
             {textContent.title}
           </Header>
@@ -152,7 +152,7 @@ const HeroSection = ({ textContent, lang }) => {
         </div>
 
         {/* Password dynamic feedback */}
-        <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:flex-row lg:space-x-5 lg:space-y-0">
+        <div className="flex w-full flex-col items-stretch space-y-4 lg:h-48 lg:w-auto lg:max-w-2xl lg:flex-row lg:space-x-5 lg:space-y-0">
           <div className="relative flex h-40 w-full flex-col space-y-1 rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
             <span className="text-sm text-gray-50">{textContent.result.feedback.title}</span>
             <span className={`text-2xl font-semibold text-gray-80`}>{crackFeedback}</span>
@@ -175,7 +175,7 @@ const HeroSection = ({ textContent, lang }) => {
             </div>
           </div>
 
-          <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64">
+          <div className="flex h-40 w-full flex-col rounded-2xl bg-gray-1 p-8 lg:h-auto lg:w-64 ">
             <div className="flex h-full flex-col space-y-1">
               <span className="text-sm text-gray-50">{textContent.result.crack.title}</span>
               <span className={`text-2xl font-semibold text-gray-80`}>{crackTime}</span>
@@ -189,8 +189,8 @@ const HeroSection = ({ textContent, lang }) => {
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
-          width={210}
-          height={210}
+          width={180}
+          height={180}
           quality={100}
           style={{ cursor: 'pointer' }}
           onClick={() =>
