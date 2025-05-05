@@ -16,7 +16,7 @@ const CheckboxButton = ({ checked, id }) => (
       {checked && (
         <div
           className={`flex cursor-pointer flex-col items-center justify-center rounded-full
-                      text-white`}
+                      text-black`}
         >
           <div className="rounded-full bg-white p-1" />
         </div>
@@ -42,7 +42,7 @@ const HeroSection = ({ textContent }) => {
 
   return (
     <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center pt-32 pb-20">
+      <div className="flex flex-col items-center justify-center pb-20 pt-32">
         <div className="flex w-full max-w-[702px] flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
             <Header isToolsPage className="text-gray-100">
@@ -54,7 +54,7 @@ const HeroSection = ({ textContent }) => {
             <div className="flex w-full flex-col items-center justify-center space-y-4 p-9">
               <div
                 id="input"
-                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white py-3 px-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
+                className="flex w-full flex-col justify-center overflow-x-auto rounded-lg border-2 border-primary bg-white px-3 py-3 text-center placeholder-gray-30 shadow-subtle outline-none ring-4 ring-primary ring-opacity-10"
               >
                 <p className="flex-row text-xl font-medium text-gray-100">{password}</p>
               </div>
@@ -105,7 +105,7 @@ const HeroSection = ({ textContent }) => {
             </div>
           </div>
           <div className="flex w-full flex-col space-y-8">
-            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-2">
+            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:space-x-2 lg:space-y-0">
               <button
                 onClick={() => setPasswordType('password')}
                 className={`flex w-full cursor-pointer flex-row items-center space-x-3 rounded-lg border ${
