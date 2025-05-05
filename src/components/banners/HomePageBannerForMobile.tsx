@@ -16,7 +16,7 @@ export const HomePageBannerForMobile = () => {
       className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
       style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
     >
-      <div className="gap- flex flex-col items-center justify-center space-y-2">
+      <div className="flex flex-col items-center justify-center space-y-2">
         <p className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 text-sm font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
