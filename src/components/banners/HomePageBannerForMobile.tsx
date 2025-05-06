@@ -13,8 +13,18 @@ export const HomePageBannerForMobile = () => {
   };
   return (
     <div
-      className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
-      style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
+      className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-10 lg:hidden`}
+      style={{
+        backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        marginLeft: '-8px',
+        marginTop: '-16px',
+        width: 'calc(100vw + 16px)',
+        padding: 0,
+        overflow: 'hidden',
+      }}
     >
       <div className="flex flex-col items-center justify-center space-y-2">
         <p className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 text-sm font-bold text-white">

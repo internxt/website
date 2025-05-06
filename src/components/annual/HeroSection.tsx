@@ -5,9 +5,9 @@ import { getImage } from '@/lib/getImage';
 import { Percent } from '@phosphor-icons/react';
 
 const HeroSection = ({ textContent }) => {
-  const wordsToBold = ['exclusive 82%'];
+  const wordsToBold = ['exclusive 85%'];
   const formattedHero = textContent.header
-    .split(/(exclusive 82%)/g)
+    .split(/(exclusive 85%)/g)
     .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
   return (
     <section className="overflow-hidden">

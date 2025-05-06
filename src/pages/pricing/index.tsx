@@ -138,7 +138,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <div className="flex justify-center pt-24">
+        <div className="flex justify-center pt-20 lg:pt-24">
           <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
         </div>
 

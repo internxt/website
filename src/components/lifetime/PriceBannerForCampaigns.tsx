@@ -62,7 +62,7 @@ export const PriceBannerForCampaigns = ({
 
       {/* Mobile View */}
       <div
-        className={`${styles.linearGradient} relative z-10 flex w-screen  flex-col justify-between lg:hidden`}
+        className={`${styles.linearGradient} relative z-10 flex w-screen flex-col  justify-between pt-5 lg:hidden`}
         style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
       >
         <div className="flex w-full flex-col items-center space-y-5 px-2 py-6 text-center">
