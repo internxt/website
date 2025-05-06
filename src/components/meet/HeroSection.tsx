@@ -2,6 +2,7 @@
 import DownloadComponent from '@/components/shared/DownloadComponent';
 import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
+import { Image } from 'react-bootstrap';
 
 const HeroSection = ({ textContent }) => (
   <section className="flex w-full flex-col">
@@ -12,9 +13,10 @@ const HeroSection = ({ textContent }) => (
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
 
-        <Header maxWidth="max-w-max" className="text-4xl text-gray-100 lg:text-5xl">
-          <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
-          {textContent.title.line2}
+        <Header className="text-gray-100 ">
+          <span className="text-5xl"> {textContent.title.textBeforeBlueText} </span>
+          <span className="text-5xl text-primary"> {textContent.title.blueText} </span>
+          <span className="text-5xl"> {textContent.title.textAfterBlueText} </span>
         </Header>
 
         <h3 className="px-2 text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
@@ -26,9 +28,9 @@ const HeroSection = ({ textContent }) => (
 
       {/* Main title Mockup */}
       <div className="flex h-full flex-col px-5 py-16">
-        <img
+        <Image
           src={getImage('/images/meet/internxt_meet.webp')}
-          width={757}
+          width={1120}
           height={419}
           alt="Internxt secure cloud storage"
           draggable="false"

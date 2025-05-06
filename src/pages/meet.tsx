@@ -40,27 +40,27 @@ const PrivateCloudStorageSolutions = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
   const locale = lang as string;
   const CTA_URL = `/pricing`;
-  const products = [
-    {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
-      animationDirection: 'left',
-      redirect: '/drive',
-      textContent: textContent.WhatWeDo.square1,
-    },
-    {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
-      animationDirection: 'right',
-      redirect: '/business',
-      textContent: textContent.WhatWeDo.square2,
-      imagePosition: 'right',
-    },
-    {
-      imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
-      animationDirection: 'left',
-      redirect: '/cloud-object-storage',
-      textContent: textContent.WhatWeDo.square3,
-    },
-  ];
+  // const products = [
+  //   {
+  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
+  //     animationDirection: 'left',
+  //     redirect: '/drive',
+  //     textContent: textContent.WhatWeDo.square1,
+  //   },
+  //   {
+  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
+  //     animationDirection: 'right',
+  //     redirect: '/business',
+  //     textContent: textContent.WhatWeDo.square2,
+  //     imagePosition: 'right',
+  //   },
+  //   {
+  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
+  //     animationDirection: 'left',
+  //     redirect: '/cloud-object-storage',
+  //     textContent: textContent.WhatWeDo.square3,
+  //   },
+  // ];
   const cardsData: FeatureCard[] = [
     {
       title: textContent.FeatureSection.cards.element1.title,

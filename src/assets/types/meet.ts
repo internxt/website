@@ -53,7 +53,6 @@ export interface FAQ {
   answer: string[];
 }
 
-
 export interface FeaturesSection {
   title: string;
   description: string;
@@ -99,8 +98,9 @@ export interface HeroSection {
   subtitle: Section2Subtitle;
 }
 export interface Section1Title {
-  line1: string;
-  line2: string;
+  textBeforeBlueText: string;
+  blueText: string;
+  textAfterBlueText: string;
 }
 export interface Section2Subtitle {
   line1: string;
@@ -184,7 +184,6 @@ export interface ImageConfig {
   borderRadius?: string;
   className?: string;
 }
-
 
 export interface AnimationProps {
   images: ImageConfig[];
