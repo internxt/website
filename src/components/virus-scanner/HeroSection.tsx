@@ -255,7 +255,12 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                    <a href="https://internxt.com/pricing" target="_top" className="button-primary">
+                                    <a
+                                      href={`https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="button-primary"
+                                    >
                                       {textContent.table.noVirusesDetected.cta}
                                     </a>
                                   </div>

@@ -65,23 +65,20 @@ const TestimonialsSection = ({
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
-        <div
-          className="flex max-w-[1200px] flex-col items-center justify-between gap-12 lg:flex-row"
-          key={testimonials[0].review}
-        >
-          <div className="flex h-[300px] max-w-[355px] flex-col gap-3">
+        <div className="flex flex-col items-center justify-between gap-12 lg:flex-row" key={testimonials[0].review}>
+          <div className="flex max-w-[375px] flex-col gap-3 lg:h-[300px] ">
             <AvatarAndText testimonial={testimonials[0]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[0].review}</p>
           </div>
-          <div className="flex h-[300px] max-w-[355px] flex-col items-center justify-center gap-3  pb-11 lg:pb-20">
-            <Image
-              src={getImage('/logos/featured/Picture1.png')}
-              width={350}
-              height={260}
-              alt="Internxt x ValenciaCF"
-            />
-          </div>
-          <div className="flex h-[300px] max-w-[355px] flex-col  gap-3">
+
+          <Image
+            src={getImage('/logos/featured/valencia_cf.webp')}
+            width={300}
+            height={300}
+            alt="Internxt x ValenciaCF"
+          />
+
+          <div className="flex max-w-[375px] flex-col  gap-3 lg:h-[300px] ">
             <AvatarAndText testimonial={testimonials[1]} textColor={textColor} />
             <p className={`text-start text-xl ${textColor ? textColor : 'text-gray-80'}`}>{testimonials[1].review}</p>
           </div>

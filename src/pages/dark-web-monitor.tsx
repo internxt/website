@@ -67,7 +67,7 @@ const Monitor = ({
 
       <InfoSection textContent={langJson.InfoSection} />
 
-      <FeatureSection textContent={langJson.FeatureSection} />
+      <FeatureSection textContent={langJson.FeatureSection} lang={locale} />
 
       <CtaSection
         textContent={langJson.CtaSection}

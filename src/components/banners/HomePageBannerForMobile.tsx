@@ -26,11 +26,11 @@ export const HomePageBannerForMobile = () => {
         overflow: 'hidden',
       }}
     >
-      <div className="flex flex-col items-center justify-center gap-4 pt-5">
+      <div className="flex flex-col items-center justify-center space-y-2">
         <p className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 text-sm font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
-        <p className="px-5 text-center text-4xl font-bold text-white">
+        <p className="px-10 text-center text-4xl font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
         <p className=" text-center text-xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
