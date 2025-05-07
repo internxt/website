@@ -76,7 +76,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent, lang }) =>
   return (
     <section>
       <div className="my-10 mb-20 flex flex-col items-center space-y-12 md:my-20 md:mb-32">
-        <div className="flex w-full flex-col items-center justify-center px-10 pb-10">
+        <div className="flex w-full flex-col items-center justify-center px-6 pb-10">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"
