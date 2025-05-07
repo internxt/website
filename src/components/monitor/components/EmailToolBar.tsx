@@ -30,8 +30,8 @@ export const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: 
         />
       </div>
 
-      <div className="mt-5 flex flex-row items-center space-x-1 text-sm text-gray-50">
-        <Info size={16} data-tooltip-id="email-tooltip" />
+      <div className="mt-5 flex flex-row items-center justify-start space-x-2 text-sm text-gray-50">
+        <Info size={16} data-tooltip-id="email-tooltip" className="pt-2"/>
         <span data-tooltip>{textContent.toolTip}</span>
         <Tooltip id="email-tooltip" place="top">
           {textContent.toolTipEmergent}
