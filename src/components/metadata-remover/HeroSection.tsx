@@ -4,7 +4,6 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
-import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { MetadataRemoverText } from '@/assets/types/metadataRemover';
 
 interface HeroSectionProps {
@@ -14,75 +13,149 @@ interface HeroSectionProps {
 
 const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
-  const [isScannig, setIsScannig] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
-  const [isScanFinished, setIsScanFinished] = useState(false);
-  const [scanResult, setScanResult] = useState<any>(null);
+  const [isProcessFinished, setIsProcessFinished] = useState(false);
+  const [processResult, setProcessResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
   const [showPopup, setShowPopup] = useState(true);
   const isDragging = dragEnter;
-  const maxFileSize = 1_000_000_000;
+  const maxFileSize = 1_000_000_000; // 1GB limit
+
   const handleDragEnter = () => {
-    if (!dragEnter && !isScannig && !isScanFinished) {
+    if (!dragEnter && !isProcessing && !isProcessFinished) {
       setDragEnter(true);
       setIsSelectedFile(false);
     }
   };
+
   const handleDragExit = () => {
     setDragEnter(false);
   };
-  const scanFiles = () => {
-    setScanResult(null);
+
+  const removeMetadata = async () => {
+    setProcessResult(null);
     const fileInput = uploadFileRef.current;
-    const formdata = new FormData();
-    formdata.append('', (fileInput as any).files[0], 'test.txt');
-    const requestOptions = {
-      method: 'POST',
-      body: formdata,
-    };
-    fetch(`https://clamav.internxt.com/filescan`, requestOptions)
-      .then(async (res) => {
-        if (res.status === 200) {
-          const data = await res.json();
-          setScanResult(data);
-          setIsScanFinished(true);
-          setShowPopup(true);
-        } else {
-          setIsError(true);
-          setIsSelectedFile(false);
-          setIsScannig(false);
-          setIsScanFinished(false);
-          setShowPopup(false);
-        }
-      })
-      .catch(() => {
-        setIsError(true);
-        setIsSelectedFile(false);
-        setIsScannig(false);
-        setIsScanFinished(false);
-        setShowPopup(false);
+    if (!fileInput?.files?.[0]) return;
+
+    try {
+      // First, upload the file to Box
+      const uploadFormData = new FormData();
+      uploadFormData.append('file', fileInput.files[0]);
+
+      const uploadResponse = await fetch('https://upload.box.com/api/2.0/files/content', {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
+        },
+        body: uploadFormData,
       });
+
+      if (!uploadResponse.ok) {
+        throw new Error('Failed to upload file to Box');
+      }
+
+      const uploadData = await uploadResponse.json();
+      const fileId = uploadData.entries[0].id;
+
+      // Get all metadata templates for the file
+      const metadataResponse = await fetch(`https://api.box.com/2.0/files/${fileId}/metadata`, {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
+        },
+      });
+
+      if (!metadataResponse.ok) {
+        throw new Error('Failed to get metadata templates');
+      }
+
+      const metadataTemplates = await metadataResponse.json();
+
+      // Remove metadata for each template
+      const removePromises = metadataTemplates.entries.map(async (template) => {
+        const removeResponse = await fetch(
+          `https://api.box.com/2.0/files/${fileId}/metadata/${template.scope}/${template.template}`,
+          {
+            method: 'DELETE',
+            headers: {
+              Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
+            },
+          },
+        );
+
+        if (!removeResponse.ok) {
+          console.error(`Failed to remove metadata for template ${template.template}`);
+        }
+      });
+
+      await Promise.all(removePromises);
+
+      // Download the cleaned file
+      const downloadResponse = await fetch(`https://api.box.com/2.0/files/${fileId}/content`, {
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
+        },
+      });
+
+      if (!downloadResponse.ok) {
+        throw new Error('Failed to download cleaned file');
+      }
+
+      const cleanedFileBlob = await downloadResponse.blob();
+
+      // Create a download link for the cleaned file
+      const downloadUrl = URL.createObjectURL(cleanedFileBlob);
+      const downloadLink = document.createElement('a');
+      downloadLink.href = downloadUrl;
+      downloadLink.download = `cleaned_${fileInput.files[0].name}`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      URL.revokeObjectURL(downloadUrl);
+
+      // Delete the file from Box
+      await fetch(`https://api.box.com/2.0/files/${fileId}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
+        },
+      });
+
+      setProcessResult({ success: true });
+      setIsProcessFinished(true);
+      setShowPopup(true);
+    } catch (error) {
+      console.error('Error processing file:', error);
+      setIsError(true);
+      setIsSelectedFile(false);
+      setIsProcessing(false);
+      setIsProcessFinished(false);
+      setShowPopup(false);
+    }
   };
-  const handleRestartScan = () => {
-    setScanResult(null);
+
+  const handleRestartProcess = () => {
+    setProcessResult(null);
     setIsSelectedFile(false);
-    setIsScannig(false);
-    setIsScanFinished(false);
+    setIsProcessing(false);
+    setIsProcessFinished(false);
     setIsError(false);
     setShowPopup(false);
     setFile(null);
   };
-  const handleCancelScan = () => {
+
+  const handleCancelProcess = () => {
     setIsSelectedFile(false);
   };
-  const handleConfirmScan = () => {
-    setIsScannig(true);
 
-    scanFiles();
+  const handleConfirmProcess = () => {
+    setIsProcessing(true);
+    removeMetadata();
   };
+
   const handleFiles = () => {
     const fileInput = uploadFileRef.current;
     if (fileInput?.files) {
@@ -95,31 +168,35 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         setFile(fileInput.files[0]);
       }
     } else {
-      console.error('No files to scan');
+      console.error('No files to process');
     }
   };
+
   const handleFileInput = () => {
     const fileInput = uploadFileRef.current;
     if (fileInput?.files) {
       handleFiles();
     }
   };
+
   const handleOpenFileExplorer = () => {
     (document.querySelector('input[type=file]') as any).click();
   };
+
   const handleDrop = async (e) => {
     e.preventDefault();
     const fileInput = uploadFileRef.current;
-    if (!isScannig && fileInput) {
+    if (!isProcessing && fileInput) {
       fileInput.files = e.dataTransfer.files;
       handleFiles();
     }
   };
-  const scanAgainButton = (onlyOneVirus) => {
+
+  const processAgainButton = () => {
     return (
       <Transition
         as={Fragment}
-        show={!isError && isScanFinished}
+        show={!isError && isProcessFinished}
         enter="transition duration-200 ease-in-out"
         enterFrom="opacity-0 translate-y-2"
         enterTo="opacity-100 translate-y-0"
@@ -127,11 +204,9 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         <div className="flex w-full flex-row justify-center pt-6">
           <button
             type="button"
-            className={`group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 px-6 text-lg transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base ${
-              onlyOneVirus ? 'bg-primary text-white' : 'bg-white text-black'
-            }`}
+            className="group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-primary px-6 text-lg text-white transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base"
             onClick={() => {
-              handleRestartScan();
+              handleRestartProcess();
             }}
           >
             <p className="text-base font-medium">{textContent.scanAgain}</p>
@@ -141,13 +216,9 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     );
   };
 
-  const [progress, setProgress] = useState(0);
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section
-      className="relative  pt-32"
+      className="relative pt-32"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -158,7 +229,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
       <div
-        className={`fixed inset-0 z-50 ${isScannig || !isDragging ? 'pointer-events-none' : ''}`}
+        className={`fixed inset-0 z-50 ${isProcessing || !isDragging ? 'pointer-events-none' : ''}`}
         onDragLeave={(e) => {
           e.stopPropagation();
           e.preventDefault();
@@ -169,53 +240,41 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       />
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
-          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between   ${
-            !isScannig && isDragging ? 'pointer-events-none' : ''
+          className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${
+            !isProcessing && isDragging ? 'pointer-events-none' : ''
           }`}
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >
           {/* Title and subtitle */}
-          <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between ">
-            <div className="flex w-full flex-col items-center space-y-5 text-center   ">
-              {/* <Header isToolsPage>{textContent.title}</Header> */}
+          <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between">
+            <div className="flex w-full flex-col items-center space-y-5 text-center">
               <h1 className="text-3xl font-semibold text-cool-gray-100 md:text-6xl">{textContent.title}</h1>
-              <p className=" text-xl font-normal text-cool-gray-80 md:text-xl">{textContent.subtitle2}</p>
-              <p className=" md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80">
+              <p className="text-xl font-normal text-cool-gray-80 md:text-xl">{textContent.subtitle2}</p>
+              <p className="md:text-regular flex items-center justify-center gap-2 text-sm font-normal text-cool-gray-80">
                 <CheckCircle size={24} weight="fill" className="text-green-1" />
                 {textContent.secure}
               </p>
             </div>
           </div>
-          {/* Scan container (drop area & scan information) */}
+
+          {/* Process container (drop area & process information) */}
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
-                {isScannig ? (
+                {isProcessing ? (
                   <>
-                    {/* Scan process */}
+                    {/* Processing state */}
                     <div className="relative flex w-full flex-col items-start justify-start overflow-hidden rounded-xl sm:h-96">
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
-                        {isScanFinished ? (
+                        {isProcessFinished ? (
                           <div className="flex flex-row items-center space-x-1.5">
-                            {scanResult?.isInfected ? (
-                              <div className="flex flex-row gap-2">
-                                <WarningCircle weight="fill" size={24} className="text-red" />
-                                <span
-                                  className={`text-lg font-semibold text-red
-                              `}
-                                >
-                                  {textContent.table.virusDetected}
-                                </span>
-                              </div>
-                            ) : (
-                              <div className="flex flex-row gap-2">
-                                <CheckCircle weight="fill" size={24} className="text-green-1" />
-                                <span className={`text-lg font-semibold text-green-dark`}>
-                                  {textContent.table.noVirusDetected}
-                                </span>
-                              </div>
-                            )}
+                            <div className="flex flex-row gap-2">
+                              <CheckCircle weight="fill" size={24} className="text-green-1" />
+                              <span className="text-lg font-semibold text-green-dark">
+                                {textContent.table.noVirusDetected}
+                              </span>
+                            </div>
                           </div>
                         ) : (
                           <div></div>
@@ -225,46 +284,28 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                           <p className="text-sm text-cool-gray-60">{file?.type}</p>
                         </div>
                       </div>
-                      {isScanFinished ? (
-                        <>
-                          {showPopup && <BitdefenderBanner languageForImage={languageForImage} />}
-                          {scanResult.isInfected ? (
-                            <div className="flex h-full w-full flex-col items-center justify-center">
-                              <p className="text-2xl font-semibold">Virus identified:</p>
-                              <div className="flex max-w-xl flex-row space-x-1 text-center">
-                                {scanResult.viruses
-                                  ? scanResult.viruses.map((virus) => (
-                                      <p key={virus} className="text-lg font-semibold text-gray-50">
-                                        {virus};
-                                      </p>
-                                    ))
-                                  : null}
-                              </div>
-                              {scanResult.viruses.length > 1 ? scanAgainButton(false) : scanAgainButton(true)}
-                            </div>
-                          ) : (
-                            <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80">
-                              {/* CTA */}
-                              <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20  bg-primary bg-opacity-6">
-                                <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
-                                  <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
-                                    <div className="flex flex-col space-y-2">
-                                      <span className="text-xl font-medium">
-                                        {textContent.table.noVirusesDetected.title}
-                                      </span>
-                                      <span>{textContent.table.noVirusesDetected.subtitle}</span>
-                                    </div>
 
-                                    <a href="https://internxt.com/pricing" target="_top" className="button-primary">
-                                      {textContent.table.noVirusesDetected.cta}
-                                    </a>
-                                  </div>
+                      {isProcessFinished ? (
+                        <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80">
+                          {/* CTA */}
+                          <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20 bg-primary bg-opacity-6">
+                            <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
+                              <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
+                                <div className="flex flex-col space-y-2">
+                                  <span className="text-xl font-medium">
+                                    {textContent.table.noVirusesDetected.title}
+                                  </span>
+                                  <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                 </div>
+
+                                <a href="https://internxt.com/pricing" target="_top" className="button-primary">
+                                  {textContent.table.noVirusesDetected.cta}
+                                </a>
                               </div>
-                              {scanAgainButton(false)}
                             </div>
-                          )}
-                        </>
+                          </div>
+                          {processAgainButton()}
+                        </div>
                       ) : (
                         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
                           <div className="relative">
@@ -332,7 +373,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                 type="button"
                                 className="flex h-10 flex-row items-center rounded-lg bg-primary px-5 font-medium text-white transition duration-150 ease-out active:scale-98"
                                 onClick={() => {
-                                  handleCancelScan();
+                                  handleCancelProcess();
                                 }}
                               >
                                 {textContent.scanAgain}
@@ -343,7 +384,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       </>
                     ) : (
                       <>
-                        {/* Scan confirmation */}
+                        {/* Process confirmation */}
                         <div className="flex h-60 w-full flex-col items-stretch justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
                             as="div"
@@ -364,7 +405,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                   type="button"
                                   className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                                   onClick={() => {
-                                    handleCancelScan();
+                                    handleCancelProcess();
                                   }}
                                 >
                                   {textContent.cancel}
@@ -373,7 +414,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                   type="button"
                                   className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                                   onClick={() => {
-                                    handleConfirmScan();
+                                    handleConfirmProcess();
                                   }}
                                 >
                                   {textContent.scanNow}
@@ -390,7 +431,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             ) : (
               <label
                 htmlFor="uploadFile"
-                className={`flex h-60 w-full flex-col sm:h-96 ${!isScannig && isDragging && 'pointer-events-none'}`}
+                className={`flex h-60 w-full flex-col sm:h-96 ${!isProcessing && isDragging && 'pointer-events-none'}`}
               >
                 {isDragging ? (
                   <>
@@ -408,7 +449,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                 ) : (
                   <>
                     {/* Default state */}
-                    <div className=" flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
+                    <div className="flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
                       <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">
                           <Image
@@ -444,7 +485,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                 <button
                   className="absolute inset-0 cursor-pointer bg-black bg-opacity-40"
                   onClick={() => {
-                    handleRestartScan();
+                    handleRestartProcess();
                   }}
                 />
                 <Transition
@@ -461,7 +502,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       type="button"
                       className="-bottom-14 z-10 flex h-10 w-full flex-row items-center justify-center space-x-2 rounded-lg bg-blue-10 px-5 text-primary transition duration-150 ease-out active:scale-98"
                       onClick={() => {
-                        handleRestartScan();
+                        handleRestartProcess();
                       }}
                     >
                       <p>{textContent.close}</p>
@@ -474,24 +515,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
       </div>
-      {/* <div className="flex w-full flex-col items-center justify-center ">
-        <Image
-          src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-          alt="File Arrow Up icon"
-          width={800}
-          height={110}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div> */}
     </section>
   );
 };
+
 export default HeroSection;
