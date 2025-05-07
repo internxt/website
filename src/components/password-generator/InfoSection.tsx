@@ -58,7 +58,7 @@ const InfoSection = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
