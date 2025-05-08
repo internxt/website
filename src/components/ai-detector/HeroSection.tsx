@@ -6,6 +6,7 @@ import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
+import { PDFDocument } from 'pdf-lib';
 const ZEROGPT_API_KEY = process.env.NEXT_PUBLIC_ZEROGPT_API_KEY;
 
 interface HeroSectionProps {
@@ -29,17 +30,41 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     setError(null);
   };
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const fileText = event.target?.result as string;
-        setText(fileText);
-        setDetectionScore(null);
-        setError(null);
-      };
-      reader.readAsText(file);
+    if (!file) return;
+
+    try {
+      if (file.type === 'application/pdf') {
+        // Handle PDF files
+        const arrayBuffer = await file.arrayBuffer();
+        const pdfDoc = await PDFDocument.load(arrayBuffer);
+        const pages = pdfDoc.getPages();
+        let extractedText = '';
+
+        for (const page of pages) {
+          const text = await page.getText();
+          extractedText += text + '\n';
+        }
+
+        setText(extractedText);
+      } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
+        // Handle text files
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          const fileText = event.target?.result as string;
+          setText(fileText);
+        };
+        reader.readAsText(file);
+      } else {
+        setError(textContent.error.unsupportedFile);
+      }
+
+      setDetectionScore(null);
+      setError(null);
+    } catch (err) {
+      setError(textContent.error.fileReadError);
+      console.error('Error reading file:', err);
     }
   };
 
@@ -110,7 +135,13 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                 </span>
               </div>
               <div className="flex gap-3">
-                <input type="file" accept=".txt" ref={uploadFileRef} className="hidden" onChange={handleFileUpload} />
+                <input
+                  type="file"
+                  accept=".txt,.pdf"
+                  ref={uploadFileRef}
+                  className="hidden"
+                  onChange={handleFileUpload}
+                />
                 <button
                   className="text-gray-700 rounded-lg border border-[#ededf0] bg-white px-6 py-2 text-base font-medium shadow-sm transition hover:bg-[#ededf0]"
                   onClick={() => uploadFileRef.current?.click()}
