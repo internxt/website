@@ -5,11 +5,11 @@ import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
-import { VirusScannerText } from '@/assets/types/virusScanner';
-const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
+import { AiDetectorText } from '@/assets/types/aiDetector';
+const ZEROGPT_API_KEY = process.env.NEXT_PUBLIC_ZEROGPT_API_KEY;
 
 interface HeroSectionProps {
-  textContent: VirusScannerText['HeroSection'];
+  textContent: AiDetectorText['HeroSection'];
   lang: string;
 }
 
@@ -45,20 +45,42 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   const handleScan = async () => {
     if (text.length < MIN_CHARS) {
-      setError(`Enter at least ${MIN_CHARS} characters.`);
+      setError(textContent.error.minChars);
       return;
     }
     setIsScanning(true);
     setError(null);
-    // Placeholder: Replace with real AI detection API call
-    setTimeout(() => {
-      // Simulate a detection score
-      setDetectionScore(Math.floor(Math.random() * 100));
-      setIsScanning(false);
-    }, 1500);
-  };
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+    try {
+      const response = await fetch('/api/ai-detector', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          input_text: text,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('API request failed');
+      }
+
+      const result = await response.json();
+
+      if (result.success && result.data) {
+        const aiPercentage = parseFloat(result.data.fakePercentage);
+        setDetectionScore(aiPercentage);
+      } else {
+        throw new Error('Invalid response format');
+      }
+    } catch (err) {
+      setError(textContent.error.apiError);
+      console.error('Error:', err);
+    } finally {
+      setIsScanning(false);
+    }
+  };
 
   return (
     <section className="flex min-h-screen items-center justify-center bg-white py-12">
@@ -66,11 +88,11 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         <div className="flex flex-col md:flex-row">
           {/* Left: Input area */}
           <div className="flex-1 p-8">
-            <label className="mb-6 block text-lg font-medium">Paste or write your text here</label>
+            <label className="mb-6 block text-lg font-medium">{textContent.title}</label>
             <div>
               <textarea
                 className="placeholder-gray-400 min-h-[260px] w-full rounded-xl border-2 border-[#ededf0] bg-[#f7f7fa] p-5 text-base focus:outline-none focus:ring-2 focus:ring-blue-100"
-                placeholder={`Enter at least ${MIN_CHARS} characters`}
+                placeholder={textContent.placeholder}
                 value={text}
                 onChange={handleTextChange}
                 minLength={MIN_CHARS}
@@ -81,9 +103,11 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             <div className="mt-4 flex flex-col items-start justify-between sm:flex-row sm:items-center">
               <div className="text-gray-400 mb-2 flex flex-col text-[15px] leading-5 sm:mb-0">
                 <span>
-                  {text.length.toLocaleString()}/{MAX_CHARS.toLocaleString()} characters
+                  {text.length.toLocaleString()}/{MAX_CHARS.toLocaleString()} {textContent.maxChars}
                 </span>
-                <span>Minimum {MIN_CHARS} characters</span>
+                <span>
+                  {textContent.minChars} {MIN_CHARS}
+                </span>
               </div>
               <div className="flex gap-3">
                 <input type="file" accept=".txt" ref={uploadFileRef} className="hidden" onChange={handleFileUpload} />
@@ -92,7 +116,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   onClick={() => uploadFileRef.current?.click()}
                   type="button"
                 >
-                  Upload
+                  {textContent.uploadButton}
                 </button>
                 <button
                   className="rounded-lg bg-[#1673ff] px-6 py-2 text-base font-semibold text-white shadow-sm transition hover:bg-[#005ae0]"
@@ -100,14 +124,14 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   disabled={isScanning || text.length < MIN_CHARS}
                   type="button"
                 >
-                  {isScanning ? 'Scanning...' : 'Scan for AI'}
+                  {isScanning ? textContent.scanningText : textContent.scanButton}
                 </button>
               </div>
             </div>
             {error && <div className="text-red-500 mt-2 text-sm">{error}</div>}
           </div>
           {/* Right: Detection score */}
-          <div className="flex w-full flex-col items-center justify-center  bg-gray-1 p-8 md:w-[320px] ">
+          <div className="flex w-full flex-col items-center justify-center bg-gray-1 p-8 md:w-[320px]">
             <div className="flex w-full flex-col items-center">
               <div className="mb-4 text-6xl font-medium text-gray-50">
                 {detectionScore !== null ? <span className="text-[#1673ff]">{detectionScore}%</span> : '%'}
@@ -132,7 +156,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   </div>
                 )}
               </div>
-              <div className="text-base font-semibold text-gray-50">Detection score</div>
+              <div className="text-base font-semibold text-gray-50">{textContent.detectionScore}</div>
             </div>
           </div>
         </div>

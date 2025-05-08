@@ -7,6 +7,7 @@ export interface AiDetectorText {
   FeaturesSliderImg: FeaturesSliderImg;
   FeaturesSlider: FeaturesSlider;
 }
+
 export interface FeaturesSliderImg {
   title: string;
   description: string;
@@ -18,6 +19,7 @@ export interface FeaturesSlider {
   description: string;
   cards: Cards;
 }
+
 export interface Cards {
   openSource: EndToEnd;
   endToEnd: EndToEnd;
@@ -26,20 +28,24 @@ export interface Cards {
   noUnwantedAccess: EndToEnd;
   freeTools: EndToEnd;
 }
+
 export interface EndToEnd {
   title: string;
   description: string;
 }
+
 export interface CtaSection1 {
   title: string;
   description: string;
   cta: string;
   cards?: CtaSectionCard[];
 }
+
 export interface CtaSectionCard {
   title: string;
   description: string;
 }
+
 export interface CtaSection {
   title: string;
   description: string;
@@ -71,21 +77,18 @@ export interface FreeOnlineScanner {
 
 export interface HeroSection {
   title: string;
-  subtitle1: string;
-  subtitle2: string;
-  footer: string;
-  dropFile: DropFile;
-  fileSelected: string;
-  cancel: string;
-  close: string;
-  scanNow: string;
-  selectFile: string;
-  dropHere: string;
-  scanAgain: string;
-  loading: string;
-  maxFileSize: FreeOnlineScanner;
-  table: Table;
-  error: FreeOnlineScanner;
+  subtitle: string;
+  placeholder: string;
+  uploadButton: string;
+  scanButton: string;
+  scanningText: string;
+  detectionScore: string;
+  minChars: string;
+  maxChars: string;
+  error: {
+    minChars: string;
+    apiError: string;
+  };
 }
 
 export interface DropFile {
