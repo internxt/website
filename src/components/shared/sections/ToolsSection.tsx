@@ -11,7 +11,7 @@ import {
 } from '@phosphor-icons/react';
 import { useRouter } from 'next/router';
 
-export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: string }) => {
+export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any; lang: string; bgColor?: string }) => {
   const router = useRouter();
   const pathname = router.pathname;
 
@@ -62,7 +62,7 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
   const filteredCards = cards.filter((item) => item.pathname !== pathname);
 
   return (
-    <section className="flex justify-center overflow-hidden py-20">
+    <section className={`flex justify-center overflow-hidden py-20 ${bgColor}`}>
       <div className="flex max-w-[1000px] flex-col items-center justify-center space-y-16 px-5">
         <p className="max-w-[720px] text-center text-4xl font-semibold sm:text-5xl">
           {textContent.title.text1}

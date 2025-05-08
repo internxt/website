@@ -45,8 +45,8 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 lg:px-10 lg:pt-20">
-          <div className="flex w-full flex-col items-center justify-center ">
+        <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
+          <div className="flex w-full flex-col items-center justify-center">
             <Image
               src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
               alt="File Arrow Up icon"
@@ -167,7 +167,7 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div className="flex w-full flex-col items-center justify-center">
+            <div className="flex w-full flex-col items-center justify-center pt-6">
               <Image
                 src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
                 alt="File Arrow Up icon"
