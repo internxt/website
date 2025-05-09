@@ -8,6 +8,7 @@
     "scanButton": "Check for AI",
     "scanningText": "Checking...",
     "detectionScore": "AI Detection Score",
+    "humanGeneratedText": "Human Generated Text",
     "error": {
       "minChars": "Text must be at least 250 characters long",
       "apiError": "An error occurred while checking the text. Please try again."

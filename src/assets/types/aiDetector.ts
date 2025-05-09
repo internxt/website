@@ -83,6 +83,7 @@ export interface HeroSection {
   scanButton: string;
   scanningText: string;
   detectionScore: string;
+  humanGeneratedText: string;
   minChars: string;
   maxChars: string;
   error: {

@@ -95,7 +95,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
       if (result.success && result.data) {
         const aiPercentage = parseFloat(result.data.fakePercentage);
-        setDetectionScore(aiPercentage);
+        const humanPercentage = Math.round(100 - aiPercentage);
+        setDetectionScore(humanPercentage);
       } else {
         throw new Error('Invalid response format');
       }
@@ -164,30 +165,50 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           {/* Right: Detection score */}
           <div className="flex w-full flex-col items-center justify-center bg-gray-1 p-8 md:w-[320px]">
             <div className="flex w-full flex-col items-center">
-              <div className="mb-4 text-6xl font-medium text-gray-50">
-                {detectionScore !== null ? <span className="text-[#1673ff]">{detectionScore}%</span> : '%'}
-              </div>
-
-              <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
-                {detectionScore !== null && (
-                  <div
-                    className="flex h-8 items-center justify-end rounded-full bg-gray-10 pr-4 text-lg font-bold text-white transition-all duration-500"
-                    style={{
-                      width: `${detectionScore}%`,
-                      background: `linear-gradient(90deg, ${
-                        detectionScore < 40
-                          ? '#22c55e, #16a34a' // green
-                          : detectionScore < 70
-                          ? '#facc15, #eab308' // yellow
-                          : '#ef4444, #b91c1c' // red
-                      })`,
-                    }}
-                  >
-                    <span className="drop-shadow-md">{detectionScore}%</span>
+              {isScanning ? (
+                <>
+                  <div className="mb-4 flex flex-col items-center">
+                    <div className="loader mb-2"></div>
+                    <span className="text-gray-400 text-lg font-medium">Scanning...</span>
                   </div>
-                )}
-              </div>
-              <div className="text-base font-semibold text-gray-50">{textContent.detectionScore}</div>
+                </>
+              ) : (
+                <>
+                  <div className="mb-4 text-6xl font-semibold text-gray-50">
+                    {detectionScore !== null ? (
+                      <span className="text-semibold text-gray-100">{detectionScore}%</span>
+                    ) : (
+                      '%'
+                    )}
+                  </div>
+
+                  <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
+                    {detectionScore !== null && (
+                      <div
+                        className="flex h-8 items-center justify-end rounded-full bg-gray-10 pr-4 text-lg font-bold transition-all duration-500"
+                        style={{
+                          width: `${detectionScore}%`,
+                          background: `linear-gradient(90deg, ${
+                            detectionScore > 60
+                              ? '#22c55e, #16a34a' // green
+                              : detectionScore > 30
+                              ? '#facc15, #eab308' // yellow
+                              : '#ef4444, #b91c1c' // red
+                          })`,
+                        }}
+                      ></div>
+                    )}
+                  </div>
+                  <div className="mb-4 text-xl font-medium text-gray-50">
+                    {detectionScore !== null ? (
+                      <span className="text-semibold text-gray-100">{textContent.humanGeneratedText}</span>
+                    ) : (
+                      ''
+                    )}
+                  </div>
+                  <div className="text-base font-semibold text-gray-50">{textContent.detectionScore}</div>
+                </>
+              )}
             </div>
           </div>
         </div>
@@ -197,3 +218,19 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 };
 
 export default HeroSection;
+
+/* Add spinner CSS at the bottom of the file or in a global CSS file */
+/*
+.loader {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #1673ff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+*/
