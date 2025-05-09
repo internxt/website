@@ -102,9 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        {lang === 'en' && (
-          <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-        )}
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
 
         {/* Google Tag Manager (noscript) */}
         <noscript>
