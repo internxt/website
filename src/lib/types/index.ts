@@ -129,6 +129,7 @@ export enum PromoCodeName {
   Special82 = '82SPECIAL',
   TechRadarDiscount = 'TECHRADAR',
   Affiliates85 = 'DRIVE85',
+  Off704You = '70OFF4YOU',
 }
 
 export interface PromoCodeProps {
