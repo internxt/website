@@ -42,7 +42,7 @@
     "feeds": [
       {
         "title": "WebDAV Support",
-        "description": "User your preferred WebDAV client with the Internxt CLI."
+        "description": "Use your preferred WebDAV client with the Internxt CLI."
       },
       {
         "title": "Scriptable",
