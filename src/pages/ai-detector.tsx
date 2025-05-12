@@ -35,7 +35,7 @@ const Scan = ({
   lang,
   bannerLang,
 }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'zerogpt-ai-checker');
   const CTA_URL = `/pricing`;
   const cardInfo = [
     { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },

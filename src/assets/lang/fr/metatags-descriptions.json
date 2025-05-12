@@ -188,5 +188,10 @@
     "id": "internxt-annual",
     "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
     "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Détecteur d'IA - Détecteur de texte IA gratuit",
+    "description": "Internxt Détecteur d'IA. Analysez gratuitement le contenu pour vérifier s'il a été rédigé par ChatGPT, Gemini ou d'autres plateformes d'intelligence artificielle."
   }
 ]
