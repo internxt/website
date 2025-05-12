@@ -40,6 +40,21 @@
       "title": "VPN Chrome扩展",
       "cta": "立即下载",
       "pathname": "/vpn"
+    },
+    {
+      "title": "暗网监控",
+      "cta": "立即检测",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "AI检测器",
+      "cta": "立即检测",
+      "pathname": "/ai-detector"
+    },
+    {
+      "title": "元数据移除器",
+      "cta": "立即移除",
+      "pathname": "/metadata-remover"
     }
   ]
 }

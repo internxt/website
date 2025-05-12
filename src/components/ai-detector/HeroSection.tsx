@@ -109,7 +109,15 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   return (
-    <section className="flex min-h-screen items-center justify-center bg-white py-12">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-white py-20 md:py-12">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10">
+        <div className="flex w-full flex-col items-center justify-center space-y-6 text-center ">
+          <p className="text-6xl font-semibold text-gray-100 lg:text-5xl">{textContent.mainTitle}</p>
+          <div className="flex flex-col space-y-6 lg:max-w-[800px]">
+            {textContent.subtitle && <p className="font-regular text-xl text-gray-80">{textContent.subtitle}</p>}
+          </div>
+        </div>
+      </section>
       <div className="w-full max-w-4xl rounded-2xl border border-[#ededf0] bg-white p-0 shadow-xl">
         <div className="flex flex-col md:flex-row">
           {/* Left: Input area */}
@@ -163,7 +171,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             {error && <div className="text-red-500 mt-2 text-sm">{error}</div>}
           </div>
           {/* Right: Detection score */}
-          <div className="flex w-full flex-col items-center justify-center bg-gray-1 p-8 md:w-[320px]">
+          <div className="flex w-full flex-col items-center justify-center rounded-br-2xl rounded-tr-2xl bg-gray-1 p-8 md:w-[320px]">
             <div className="flex w-full flex-col items-center">
               {isScanning ? (
                 <>

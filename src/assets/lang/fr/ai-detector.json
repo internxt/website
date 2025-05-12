@@ -1,0 +1,174 @@
+{
+  "HeroSection": {
+    "mainTitle": "Détecteur d'IA",
+    "subtitle": "Analysez le contenu généré par l'intelligence artificielle avec notre outil gratuit de détection d'IA.",
+    "title": "Collez ou écrivez votre texte ici",
+    "placeholder": "Entrez au moins 250 caractères pour commencer l'analyse",
+    "maxChars": "caractères",
+    "minChars": "Entrez au moins",
+    "uploadButton": "Téléverser",
+    "scanButton": "Analyser l'IA",
+    "scanningText": "Analyse en cours...",
+    "detectionScore": "Score de détection",
+    "humanGeneratedText": "Texte généré par un humain",
+    "error": {
+      "minChars": "Le texte doit contenir au moins 250 caractères",
+      "apiError": "Une erreur s'est produite lors de la vérification du texte. Veuillez réessayer.",
+      "invalidPdf": "Fichier PDF invalide",
+      "emptyPdf": "Le fichier PDF est vide",
+      "emptyFile": "Le fichier est vide",
+      "fileReadError": "Erreur lors de la lecture du fichier",
+      "unsupportedFile": "Type de fichier non pris en charge"
+    }
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Détecteur d'IA gratuit d'Internxt",
+    "aiCheckerDescription": "Détectez le contenu IA de ChatGPT ou d'autres textes générés par intelligence artificielle avec notre détecteur d'IA gratuit. Téléversez un fichier ou collez votre texte pour obtenir des résultats instantanés, afin d'apporter toute modification avant de publier ou d'envoyer votre contenu.\n\nNous ne stockons aucun contenu ni information dans notre détecteur d'IA. Notre outil recherche uniquement des motifs générés par l'IA sans stocker le contenu que vous soumettez. Ainsi, nous gardons votre contenu sécurisé et privé, à l'abri des outils d'IA qui utilisent vos données pour entraîner leurs propres modèles d'apprentissage automatique.",
+    "aiDetectorTitle": "Détecteur d'IA ZeroGPT pour ChatGPT, Gemini, CoPilot et autres",
+    "aiDetectorDescription": "L'outil de détection d'IA d'Internxt analyse avec précision et rapidité le contenu généré par des outils d'intelligence artificielle populaires, tels que ChatGPT et Gemini, entre autres. Une fois analysé, il fournit un retour et différencie le texte généré par des humains de celui généré par l'IA, vous offrant une analyse détaillée du texte.\n\nNotre détecteur d'IA avancé et gratuit détecte les derniers modèles d'IA, comme GPT-4, avec une grande précision. Notez qu'aucun vérificateur d'IA n'est précis à 100 % en raison de l'évolution des modèles de langage IA, mais nous nous efforçons de vous offrir une analyse aussi avancée et précise que possible."
+  },
+  "CtaSection": {
+    "title": "Vérifiez et détectez le texte IA",
+    "description": "Assurez-vous que votre texte est unique et original",
+    "cta": "Obtenez Internxt"
+  },
+  "CtaSection2": {
+    "title": "Ne laissez pas l'IA écrire votre histoire",
+    "description": "Détectez le texte IA de ChatGPT, Gemini ou d'autres intelligences artificielles",
+    "cta": "Obtenez Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Comment fonctionne le détecteur d'IA d'Internxt ?",
+        "answer": [
+          "Lorsque vous soumettez votre contenu, le logiciel analyse les motifs courants dans le contenu généré par l'IA, tels que le vocabulaire, la structure et la grammaire. Ces modèles d'apprentissage sont entraînés pour détecter les différences entre l'IA et l'écriture humaine."
+        ]
+      },
+      {
+        "question": "Quelle est la précision du détecteur de texte IA ?",
+        "answer": [
+          "Nos algorithmes avancés peuvent détecter le contenu écrit par l'IA avec un haut niveau de succès, mais aucun outil de détection d'IA ne peut détecter le texte IA avec une précision de 100 %."
+        ]
+      },
+      {
+        "question": "L'outil de détection d'IA d'Internxt peut-il suggérer des améliorations ?",
+        "answer": [
+          "Non, il peut seulement mettre en évidence le contenu écrit par l'IA et indiquer la quantité de texte qui a probablement été rédigée par une personne réelle."
+        ]
+      },
+      {
+        "question": "Pourquoi choisir le détecteur Internxt plutôt que d'autres outils de détection d'IA ?",
+        "answer": [
+          "L'outil gratuit de détection d'IA d'Internxt vous permet d'analyser du contenu qui n'est ni stocké ni partagé avec d'autres entreprises, ni utilisé pour entraîner des modèles de langage IA, ce qui en fait une ressource précieuse pour vérifier l'IA sans compromettre votre vie privée."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Essayez les outils de sécurité en ligne gratuits d'Internxt :",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Vérificateur de robustesse de mot de passe",
+        "description": "Analyser maintenant"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertisseur d'unités d'octets",
+        "description": "Convertir maintenant"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Email temporaire gratuit",
+        "width": 95,
+        "description": "Envoyer maintenant"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Générateur de mot de passe gratuit",
+        "width": 124,
+        "description": "Générer maintenant"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Détecteur d'IA d'Internxt pour un usage quotidien, éducatif ou professionnel",
+    "description": "Quels que soient vos besoins, notre outil de détection d'IA fournit des résultats instantanés et très précis, afin que vous puissiez rapidement analyser les motifs d'IA et modifier votre contenu si nécessaire.",
+    "info": [
+      {
+        "title": "Étudiants",
+        "description": [
+          "Le détecteur d'IA gratuit d'Internxt est parfait pour les étudiants qui doivent soumettre des travaux conformes aux directives de leur école ou université. Ils peuvent identifier le contenu créé par ChatGPT ou d'autres modèles à vérifier."
+        ]
+      },
+      {
+        "title": "Enseignants",
+        "description": [
+          "De plus en plus d'étudiants s'appuient sur des outils d'intelligence artificielle pour les aider ou rédiger leurs devoirs. Avec notre outil de vérification d'IA, vous pouvez vérifier le travail de vos étudiants pour vous assurer qu'il ne contient pas de texte généré par l'IA."
+        ]
+      },
+      {
+        "title": "Journalistes",
+        "description": [
+          "Pour éviter la diffusion de fausses informations provenant de contenus IA, les journalistes doivent s'efforcer de proposer des histoires authentiques, objectives et fiables. Les détecteurs d'IA aident à préserver la réputation d'une entreprise de médias en fournissant des informations provenant d'une source fiable et non d'un robot."
+        ]
+      },
+      {
+        "title": "Blogueurs",
+        "description": [
+          "Notre vérificateur d'IA vous aide à créer un contenu unique et de haute qualité qui attire votre audience, génère du trafic vers votre site web et vous aide à éviter les pénalités des moteurs de recherche. Vous pouvez également vérifier le contenu des éditeurs externes avant de le publier sur votre site."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Pourquoi utiliser le détecteur d'IA d'Internxt",
+    "description": "Vous pouvez utiliser notre détecteur de texte IA en toute confiance, sachant que votre contenu reste privé et que vous obtenez des résultats rapides et fiables pour publier ou envoyer votre contenu.",
+    "info": [
+      {
+        "title": "Algorithmes avancés",
+        "description": [
+          "Notre outil de détection d'IA utilise des algorithmes avancés qui recherchent des motifs courants utilisés par ChatGPT, Gemini et d'autres outils pour détecter le contenu écrit par l'IA. Lorsque vous téléversez ou copiez votre contenu, les algorithmes peuvent distinguer le contenu écrit par des humains de celui généré par l'IA."
+        ]
+      },
+      {
+        "title": "Analyses illimitées",
+        "description": [
+          "Effectuez des analyses de texte IA gratuitement, à tout moment. Nous ne cachons pas ce service derrière des paywalls ; nous offrons un outil de détection d'IA sécurisé et privé, disponible gratuitement chaque fois que vous devez authentifier votre propre travail ou celui des autres."
+        ]
+      },
+      {
+        "title": "Confidentialité garantie",
+        "description": [
+          "Tout ce que vous téléversez dans notre outil Détecteur d'IA est confidentiel et privé. Rien de ce que vous copiez dans le service n'est stocké, partagé ou utilisé pour entraîner des modèles de langage IA. Soyez assuré que votre contenu est en sécurité."
+        ]
+      },
+      {
+        "title": "Support multilingue",
+        "description": [
+          "Nous prenons en charge plusieurs langues pour vous aider à vérifier et analyser le contenu avec une grande précision. Cela facilite la détection et la modification du contenu IA, quel que soit le langage, pour un détecteur d'IA cohérent et fiable."
+        ]
+      },
+      {
+        "title": "Réponses instantanées",
+        "description": [
+          "Téléversez, copiez ou collez votre texte dans notre outil et nous analyserons instantanément le contenu à la recherche de texte IA. Ce processus ne prend que quelques secondes et, une fois terminé, vous recevrez une réponse sur le contenu et s'il contient du texte généré par l'IA."
+        ]
+      },
+      {
+        "title": "Aucun enregistrement",
+        "description": [
+          "Notre détecteur d'IA est 100 % gratuit et sans limite d'utilisation. Pas besoin de créer un compte ni d'abonnement premium, il suffit de téléverser ou de coller le contenu à analyser, et c'est tout !"
+        ]
+      }
+    ]
+  }
+}

@@ -36,34 +36,35 @@ const Scan = ({
   bannerLang,
 }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
+  const CTA_URL = `/pricing`;
   const cardInfo = [
-    { icon: InfinityIcon, ...langJson.FeaturesSliderImg.info[0] },
-    { icon: LockKey, ...langJson.FeaturesSliderImg.info[1] },
-    { icon: ShieldStar, ...langJson.FeaturesSliderImg.info[2] },
-    { icon: Files, ...langJson.FeaturesSliderImg.info[3] },
-    { icon: Fingerprint, ...langJson.FeaturesSliderImg.info[4] },
-    { icon: FileLock, ...langJson.FeaturesSliderImg.info[5] },
+    { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },
+    { icon: LockKey, ...langJson.FeaturesSlider.info[1] },
+    { icon: ShieldStar, ...langJson.FeaturesSlider.info[2] },
+    { icon: Files, ...langJson.FeaturesSlider.info[3] },
+    { icon: Fingerprint, ...langJson.FeaturesSlider.info[4] },
+    { icon: FileLock, ...langJson.FeaturesSlider.info[5] },
   ];
   const cardInfoImg = [
     {
       icon: ImageSquare,
-      ...langJson.FeaturesSlider.info[0],
-      image: getImage('/images/metadata-remover/protected_data.webp'),
+      ...langJson.FeaturesSliderImg.info[0],
+      image: getImage('/images/AI_detector/students.webp'),
     },
     {
       icon: ShieldStar,
-      ...langJson.FeaturesSlider.info[1],
-      image: getImage('/images/metadata-remover/data_leaks.webp'),
+      ...langJson.FeaturesSliderImg.info[1],
+      image: getImage('/images/AI_detector/educators.webp'),
     },
     {
       icon: Detective,
-      ...langJson.FeaturesSlider.info[2],
-      image: getImage('/images/metadata-remover/anonymous_submissions.webp'),
+      ...langJson.FeaturesSliderImg.info[2],
+      image: getImage('/images/AI_detector/journalists.webp'),
     },
     {
       icon: ShareNetwork,
-      ...langJson.FeaturesSlider.info[3],
-      image: getImage('/images/metadata-remover/file_sharing.webp'),
+      ...langJson.FeaturesSliderImg.info[3],
+      image: getImage('/images/AI_detector/bloggers.webp'),
     },
   ];
   return (
@@ -86,21 +87,25 @@ const Scan = ({
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxt'}
         />
 
-        <FeaturesSection
-          textContent={langJson.FeaturesSection}
-          bannerText={bannerLang.SignUpVirusScannerBanner}
-          lang={lang}
-        />
+        <FeaturesSection textContent={langJson.FeaturesSection} bannerText={bannerLang.SignUpAiDetector} lang={lang} />
 
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection
+          textContent={langJson.CtaSection}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection.description}</p>}
+        />
 
         <FeaturesSlider textContent={langJson.FeaturesSlider} cardInfo={cardInfo} />
 
-        <FeaturesSliderImg textContent={langJson.FeaturesSlider} cardInfo={cardInfoImg} />
+        <FeaturesSliderImg textContent={langJson.FeaturesSliderImg} cardInfo={cardInfoImg} />
 
         <ToolsSection textContent={toolsContent} lang={lang} />
 
-        <CtaSection textContent={langJson.CtaSection} />
+        <CtaSection
+          textContent={langJson.CtaSection2}
+          url={CTA_URL}
+          customDescription={<p className="w-full text-xl font-normal">{langJson.CtaSection2.description}</p>}
+        />
 
         <FAQSection textContent={langJson.FaqSection} />
 

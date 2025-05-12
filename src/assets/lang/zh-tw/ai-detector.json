@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "mainTitle": "AI 偵測器",
+    "subtitle": "使用我們免費的 AI 偵測工具掃描由人工智慧生成的內容。",
+    "title": "請在此貼上或輸入您的文字",
+    "placeholder": "請輸入至少 250 個字元以開始掃描",
+    "maxChars": "字元",
+    "minChars": "請輸入至少",
+    "uploadButton": "上傳",
+    "scanButton": "掃描 AI",
+    "scanningText": "檢查中...",
+    "detectionScore": "檢測分數",
+    "humanGeneratedText": "人類撰寫的文字",
+    "error": {
+      "minChars": "文字長度必須至少 250 個字元",
+      "apiError": "檢查文字時發生錯誤，請再試一次。",
+      "invalidPdf": "無效的 PDF 檔案",
+      "emptyPdf": "PDF 檔案為空",
+      "emptyFile": "檔案為空",
+      "fileReadError": "讀取檔案時發生錯誤",
+      "unsupportedFile": "不支援的檔案類型"
+    }
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Internxt 免費 AI 偵測器",
+    "aiCheckerDescription": "使用我們免費的 AI 偵測器檢查 ChatGPT 或其他人工智慧生成的內容。上傳檔案或貼上您的文字，即可立即獲得結果，方便您在發佈或提交內容前進行修改。\n\n我們的 AI 偵測器不會儲存任何內容或資訊。該工具僅檢查 AI 生成的模式，不會儲存您提交的內容。這樣可確保您的內容安全且不會被用於訓練其他 AI 工具的機器學習模型。",
+    "aiDetectorTitle": "ZeroGPT AI 偵測器，支援 ChatGPT、Gemini、CoPilot 等",
+    "aiDetectorDescription": "Internxt 的 AI 偵測工具能快速且精確地掃描由 ChatGPT、Gemini 等熱門 AI 工具生成的內容。掃描後，會提供人類與 AI 生成文字的區分與詳細分析。\n\n我們先進且免費的 AI 偵測器能高精度偵測最新的 AI 模型，如 GPT-4。請注意，沒有任何 AI 偵測工具能達到 100% 準確率，但我們致力於為您提供最先進且精確的分析。"
+  },
+  "CtaSection": {
+    "title": "檢查並偵測 AI 文字",
+    "description": "確保您的文字獨特且原創",
+    "cta": "取得 Internxt"
+  },
+  "CtaSection2": {
+    "title": "別讓 AI 替你寫故事",
+    "description": "找出 ChatGPT、Gemini 或其他 AI 生成的文字",
+    "cta": "取得 Internxt"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有解答",
+    "faq": [
+      {
+        "question": "Internxt 的 AI 偵測器如何運作？",
+        "answer": [
+          "當您上傳內容時，軟體會分析 AI 生成內容常見的模式，如詞彙、結構和文法。這些學習模型能分辨 AI 與人類寫作的差異。"
+        ]
+      },
+      {
+        "question": "AI 文字偵測器的準確度如何？",
+        "answer": ["我們的先進演算法能高成功率偵測 AI 撰寫的內容，但沒有任何 AI 偵測工具能達到 100% 準確率。"]
+      },
+      {
+        "question": "Internxt 的 AI 偵測工具能建議改進嗎？",
+        "answer": ["不能，它只能標示 AI 撰寫的內容，並顯示可能由真人撰寫的文字比例。"]
+      },
+      {
+        "question": "為什麼選擇 Internxt 的 AI 偵測器？",
+        "answer": [
+          "Internxt 免費的 AI 偵測工具讓您掃描內容時不會被儲存或分享給其他公司，也不會用於訓練 AI 語言模型，是檢查 AI 內容又不犧牲隱私的寶貴資源。"
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "試用 Internxt 免費線上安全工具：",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "密碼強度檢查器",
+        "description": "立即檢查"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "位元組單位轉換器",
+        "description": "立即轉換"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "免費臨時信箱",
+        "width": 95,
+        "description": "立即收信"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "免費密碼產生器",
+        "width": 124,
+        "description": "立即產生"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Internxt AI 偵測器，適用於日常、教育或工作",
+    "description": "無論您的需求為何，我們的 AI 偵測工具都能提供即時且精確的結果，讓您快速檢查 AI 模式並根據需要修改內容。",
+    "info": [
+      {
+        "title": "學生",
+        "description": [
+          "Internxt 免費 AI 偵測器非常適合需要提交作業並遵守學校或大學規範的學生。可識別由 ChatGPT 或其他模型生成的內容，協助驗證與檢查。"
+        ]
+      },
+      {
+        "title": "教育工作者",
+        "description": [
+          "越來越多學生依賴 AI 工具協助或撰寫作業。透過我們的 AI 檢查工具，您可以檢查學生作業，確保分析是否有 AI 生成的文字。"
+        ]
+      },
+      {
+        "title": "記者",
+        "description": [
+          "為避免 AI 內容造成錯誤資訊傳播，記者應致力於提供真實、客觀且可靠的報導。AI 偵測器有助於維護媒體公司的聲譽，確保新聞來自可信來源而非機器人。"
+        ]
+      },
+      {
+        "title": "部落客",
+        "description": [
+          "我們的 AI 檢查器協助您創作獨特且高品質的內容，吸引讀者、提升網站流量，並避免搜尋引擎懲罰。您也可在發佈前檢查外部編輯者的內容。"
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "為什麼要使用 Internxt AI 偵測器",
+    "description": "您可以完全信任我們的 AI 文字偵測器，確保內容隱私並快速獲得可靠結果，方便發佈或提交。",
+    "info": [
+      {
+        "title": "先進演算法",
+        "description": [
+          "我們的 AI 偵測工具採用先進演算法，能偵測 ChatGPT、Gemini 等工具常見的 AI 生成模式。當您上傳或貼上內容時，演算法能分辨人類與 AI 生成的內容。"
+        ]
+      },
+      {
+        "title": "無限次掃描",
+        "description": [
+          "隨時免費進行 AI 文字掃描。我們不會將此服務藏在付費牆後，提供安全且私密的 AI 偵測工具，讓您隨時驗證自己的或他人的作品。"
+        ]
+      },
+      {
+        "title": "隱私保障",
+        "description": [
+          "您上傳到我們 AI 偵測工具的所有內容都會保密且私密。我們不會儲存、分享或用於訓練 AI 語言模型。請安心，您的內容很安全。"
+        ]
+      },
+      {
+        "title": "多語言支援",
+        "description": [
+          "我們支援多種語言，協助您高精度檢查與分析內容。無論哪種語言，都能輕鬆偵測與修改 AI 內容，確保偵測器一貫且可靠。"
+        ]
+      },
+      {
+        "title": "即時回應",
+        "description": [
+          "上傳、貼上或輸入文字到我們的工具，即可即時掃描 AI 內容。整個過程只需幾秒鐘，完成後會立即告知是否偵測到 AI 生成的文字。"
+        ]
+      },
+      {
+        "title": "無需註冊",
+        "description": [
+          "我們的 AI 偵測器 100% 免費且無使用次數限制。無需註冊帳號或訂閱，只要上傳或貼上要分析的內容即可！"
+        ]
+      }
+    ]
+  }
+}

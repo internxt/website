@@ -3,14 +3,6 @@ import SignUpBanner from '../banners/SignUpBanner';
 import { getImage } from '@/lib/getImage';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
-  const maliciousMalwareText = textContent.scanFiles.description.split('malicious malware')[0];
-
-  const maliciousMalware = textContent.scanFiles.description.substr(
-    textContent.scanFiles.description.indexOf('malicious malware'),
-    17,
-  );
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section className="relative bg-gray-1 py-20 lg:pb-0 lg:pt-10">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:pt-10">

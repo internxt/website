@@ -76,6 +76,8 @@ export interface FreeOnlineScanner {
 }
 
 export interface HeroSection {
+  mainTitle: string;
+  sybtitle: string;
   title: string;
   subtitle: string;
   placeholder: string;
@@ -89,6 +91,12 @@ export interface HeroSection {
   error: {
     minChars: string;
     apiError: string;
+    invalidPdf: string;
+    emptyPdf: string;
+    emptyFile: string;
+    pdfProcessingError: string;
+    fileReadError: string;
+    unsupportedFile: string;
   };
 }
 
