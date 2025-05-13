@@ -38,29 +38,8 @@ const PrivateCloudStorageSolutions = ({
   lang,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
-  const locale = lang as string;
   const CTA_URL = `/pricing`;
-  // const products = [
-  //   {
-  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_drive.webp',
-  //     animationDirection: 'left',
-  //     redirect: '/drive',
-  //     textContent: textContent.WhatWeDo.square1,
-  //   },
-  //   {
-  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_for_business.webp',
-  //     animationDirection: 'right',
-  //     redirect: '/business',
-  //     textContent: textContent.WhatWeDo.square2,
-  //     imagePosition: 'right',
-  //   },
-  //   {
-  //     imageUrl: '/images/privacy-cloud-storage-solutions/internxt_s3.webp',
-  //     animationDirection: 'left',
-  //     redirect: '/cloud-object-storage',
-  //     textContent: textContent.WhatWeDo.square3,
-  //   },
-  // ];
+
   const cardsData: FeatureCard[] = [
     {
       title: textContent.FeatureSection.cards.element1.title,
@@ -75,34 +54,13 @@ const PrivateCloudStorageSolutions = ({
       icon: ShieldPlus,
     },
     {
-      title: textContent.FeatureSection.cards.element4.title,
-      description: textContent.FeatureSection.cards.element4.description,
+      title: textContent.FeatureSection.cards.element3.title,
+      description: textContent.FeatureSection.cards.element3.description,
       image: '/images/meet/internxt_sustainability.webp',
       icon: Leaf,
     },
   ];
-  // const cards = [
-  //     {
-  //       icon: Password,
-  //       title: textContent.FeaturesSection.cards.element1.title,
-  //       description: textContent.FeaturesSection.cards[0].description,
-  //     },
-  //     {
-  //       icon: Crosshair,
-  //       title: textContent.FeaturesSection.cards[0].title,
-  //       description: textContent.FeaturesSection.cards[1].description,
-  //     },
-  //     {
-  //       icon: MonitorPlay,
-  //       title: textContent.FeaturesSection.cards.element1.title,
-  //       description: textContent.FeaturesSection.cards[2].description,
-  //     },
-  //     {
-  //       icon: Fingerprint,
-  //       title: textContent.FeaturesSection.cards[3].title,
-  //       description: textContent.FeaturesSection.cards[3].description,
-  //     },
-  //   ];
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -120,7 +78,6 @@ const PrivateCloudStorageSolutions = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        {/* <HeroSection textContent={textContent.HeroSection} lang={locale} /> */}
         <HeroSection textContent={textContent.HeroSection} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
@@ -135,12 +92,9 @@ const PrivateCloudStorageSolutions = ({
           title={textContent.FeatureSection.title}
           subtitle={textContent.FeatureSection.titleLine2}
           description={textContent.FeatureSection.description}
-          ctaText={textContent.FeatureSection.cta}
-          ctaLink={CTA_URL}
           cards={cardsData}
         />
-        {/* <FeaturesSection textContent={textContent.FeaturesSection} /> */}
-        <FeaturesSectionImg textContent={textContent.FeaturesSection} />
+        <FeaturesSectionImg textContent={textContent.FeaturesSectionImg} />
 
         <CtaSection
           textContent={textContent.CtaSection2}

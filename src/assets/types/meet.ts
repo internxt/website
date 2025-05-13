@@ -1,8 +1,8 @@
 export interface MeetText {
   HeroSection: HeroSection;
   FeatureSection: ComponentsInColumn;
-  // FeaturesSection: ComponentsInColumn;
   FeaturesSection: CtaSection;
+  FeaturesSectionImg: CtaSection;
 
   WhatWeDo: WhatWeDo;
   FaqSection: FAQSection;
@@ -58,16 +58,7 @@ export interface FeaturesSection {
   description: string;
   cards: Cards;
 }
-// export interface FeaturesSection {
-//   section1: Section1Class;
-//   section2: Section2;
-//   section3: Section3;
-//   section4: Section4;
-//   section5: Section5;
-//   section6: Section1Class;
-//   section7: Section7;
-//   DownloadLinks: DownloadLinks;
-// }
+
 export interface Cards {
   openSource: EndToEnd;
   endToEnd: EndToEnd;
@@ -82,20 +73,12 @@ export interface EndToEnd {
   description: string;
 }
 
-// export interface HeroSection {
-//   label: string;
-//   title: Title;
-//   description: string;
-//   cta: string;
-//   startFrom: StartFrom;
-//   TitleAndOnePlan: TitleAndOnePlan;
-//   TitleAndOnePlanV2: TitleAndOnePlanV2;
-//   guarantee: string;
-// }
 export interface HeroSection {
   eyebrow: string;
   title: Section1Title;
   subtitle: Section2Subtitle;
+  include: string;
+  cta: string;
 }
 export interface Section1Title {
   textBeforeBlueText: string;

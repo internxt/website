@@ -1,25 +1,25 @@
-import { Crosshair, Fingerprint, MonitorPlay, Password } from '@phosphor-icons/react';
+import { EyeSlash, MonitorArrowUp, ShieldCheck, Speedometer } from '@phosphor-icons/react';
 import RevealY from '../components/RevealY';
 
 export const FeaturesSection = ({ textContent }) => {
   const cards = [
     {
-      icon: Password,
+      icon: EyeSlash,
       title: textContent.cards[0].title,
       description: textContent.cards[0].description,
     },
     {
-      icon: Crosshair,
+      icon: MonitorArrowUp,
       title: textContent.cards[1].title,
       description: textContent.cards[1].description,
     },
     {
-      icon: MonitorPlay,
+      icon: ShieldCheck,
       title: textContent.cards[2].title,
       description: textContent.cards[2].description,
     },
     {
-      icon: Fingerprint,
+      icon: Speedometer,
       title: textContent.cards[3].title,
       description: textContent.cards[3].description,
     },

@@ -1,21 +1,4 @@
 {
-  "HeroSection1": {
-    "TitleAndOnePlan": {
-      "title": {
-        "textBeforeBlueText": "Unmatched ",
-        "blueText": "privacy for secure",
-        "textAfterBlueText": " video conferencing"
-      },
-      "description": "Internxt is an open-source cloud storage provider with post-quantum encryption to keep your data private.",
-      "claimDeal": "Get Internxt",
-      "guarantee": "30-day money-back guarantee"
-    },
-    "TitleAndOnePlanV2": {
-      "title": "Private cloud storage solutions to protect your data",
-      "cta": "Get Internxt",
-      "guarantee": "30-day money-back guarantee"
-    }
-  },
   "HeroSection": {
     "eyebrow": "Internxt Meet",
     "title": {
@@ -28,7 +11,8 @@
       "line2": " meetings are secure, confidential, and free from trackers.",
       "line3": ""
     },
-    "include": "Included with Premium and Ultimate plans"
+    "include": "Included with Premium and Ultimate plans",
+    "cta": "Get Internxt Meet"
   },
 
   "FeaturesSection1": {
@@ -61,7 +45,7 @@
       }
     ]
   },
-  "FeaturesSection": {
+  "FeaturesSectionImg": {
     "title": "A private video call platform for everyone",
     "subtitle": "Internxt Meet is built to meet the needs of everyone looking to communicate and collaborate with others with guaranteed privacy and security.",
     "cards": [
@@ -81,31 +65,29 @@
         "title": "Medical",
         "description": "Reduce the risk of medical data breaches by hosting and sharing your own private video call with patients."
       }
-    ],
-    "cards1": {
-      "element1": {
-        "title": "European privacy",
-        "description": "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information. "
+    ]
+  },
+  "FeaturesSection": {
+    "title": "Enjoy the freedom of speech and privacy ",
+    "subtitle": "Chat with others with our encrypted video chat platform for private meetings protected with the most advanced post-quantum encryption.",
+    "cards": [
+      {
+        "title": "Private video calls",
+        "description": "Use Internxt Meet for video or audio calls you want to keep private. Zero trackers. Zero data collection and nothing linking you or anybody else to your calls.  "
       },
-      "element2": {
-        "title": "European privacy",
-        "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
-        ]
+      {
+        "title": "Screen sharing",
+        "description": "Collaborate easily and share your presentations, spreadsheets, and more with Internxt’s screen-sharing feature. "
       },
-      "element3": {
-        "title": "European privacy",
-        "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
-        ]
+      {
+        "title": "Security",
+        "description": "All your conversations, videos, chats, and messages are kept secure with zero-knowledge encryption. We give you total control of your privacy, and we never access your conversations or messages. "
       },
-      "element4": {
-        "title": "European privacy",
-        "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
-        ]
+      {
+        "title": "Superior speed and video quality",
+        "description": "AI powers crystal-clear video calls at lightning speed, optimizing bandwidth and quality while ensuring end-to-end encryption for total privacy."
       }
-    }
+    ]
   },
   "CtaSection1": {
     "title": "Meet in total privacy",
@@ -123,59 +105,42 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Is Internxt an alternative to Google Drive?",
+        "question": "What is Internxt Meet?",
         "answer": [
-          "Yes, Internxt is an alternative to Google Drive and other Big Tech companies. These companies encrypt data on servers they own, meaning they can access your account and view your files or give access to your account to the government if requested. ",
-          "Unlike these cloud storage platforms, Internxt uses post-quantum and zero-knowledge encryption, so only you can access your files. Your data is encrypted on your device before being uploaded, and no one can view or decrypt it, not even Internxt. This ensures complete privacy, prevents unauthorized access, and protects you from data breaches and surveillance."
+          "Internxt Meet is the most secure video conferencing platform where you can talk, chat, and host meetings in complete privacy. With Internxt Meet, all your conversations and calls are held in complete privacy thanks to our advanced and award-winning encryption. All calls between you and your team are kept private and secure"
         ]
       },
       {
-        "question": "What is post-quantum encryption?",
+        "question": "Is Internxt Meet an alternative to Google Meet?",
         "answer": [
-          "Post-quantum encryption uses cryptographic algorithms to secure data against the threat of quantum computers that could potentially break traditional encryption methods. Post-quantum encryption focuses on developing algorithms that prevent these computers from decrypting and accessing your data.",
-          "This method is ideal for private cloud storage solutions like Internxt because it ensures your data remains secure despite advancing quantum computing technology. "
+          "Yes, Internxt Meet is a secure alternative to Google Meet, Zoom, and Teams. We use zero-knowledge encryption with post-quantum cryptography to ensure only you can hear or see your video calls. Not even Internxt has access to your chats or calls. "
         ]
       },
       {
-        "question": "What’s the difference between Internxt for Business and Internxt S3?",
+        "question": "Is Internxt Meet free?",
         "answer": [
-          "Internxt for Business is a cloud storage solution tailored for companies, offering team collaboration, admin controls, and other features to protect businesses from data breaches. ",
-          "Internxt S3 is a cloud-based storage system that follows the Amazon S3 protocol. It is ideal for developers and enterprises that need to scale and integrate storage into their applications or services and store data lakes or warehouses. ",
-          "The main difference is that Internxt for Business focuses on team-oriented features, while Internxt S3 provides scalable storage solution up to 90% cheaper than AWS, Azure, or Google Cloud."
+          "Internxt Meet is available when you subscribe to any of our premium plans, offering access to our full suite of privacy-focused products, including Internxt Drive, Mail, Antivirus, and VPN."
         ]
       },
       {
-        "question": "Why should you choose Internxt over other cloud platforms?",
+        "question": "How do I contact support?",
         "answer": [
-          "All our private cloud storage solutions emphasize privacy, so we offer you complete control over your privacy with Kyber 512 post-quantum encryption, future-proofing your personal or business data against potential quantum computing threats.",
-          "Internxt is GDPR compliant, reducing legal risks, and offers scalable, cost-effective solutions like Internxt S3, with zero ingress and egress fees and a pay-as-you-go pricing model. Additionally, its open-source nature, independent security audits, and commitment to sustainability make it a reliable and transparent choice for enterprises."
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
         ]
       },
       {
-        "question": "What’s included with Internxt’s private cloud storage solutions?",
+        "question": "What is Internxt’s refund policy?",
         "answer": [
-          "Internxt paid subscription and lifetime plans offer post-quantum encrypted cloud storage, an ultra-fast unlimited VPN for up to 5 locations, antivirus, and future access to our Mail and Meet products for Premium and Ultimate plans."
-        ]
-      },
-      {
-        "question": "Can I add more storage to my lifetime plan?",
-        "answer": [
-          "Yes, Internxt lifetime plans are stackable, so you can add as much storage as you want to your Internxt lifetime membership. You can purchase them with the same email address as your current lifetime account. ",
-          "Contact us at hello@internxt.com so we can stack them together for you on the same account."
-        ]
-      },
-      {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
-        "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "If you're ever unsatisfied with our service, email us at hello@internxt.com to request a refund. "
         ]
       }
     ]
   },
   "FeatureSection": {
-    "title": "Why you should switch to private cloud storage solutions",
-    "titleLine2": "Switching to private cloud storage solutions guarantees your data stays private and secure from hackers and corporations. Unlike Google, Apple, or Microsoft, Internxt doesn’t collect, sell, or misuse your data. You have complete control over your files.",
-    "description": "Invest in your privacy and get peace of mind that your files and data are protected against data breaches.",
+    "title": "The most secure video conferencing alternative to Big Tech",
+    "titleLine2": "Join Internxt in building a more secure, private web experience with our encrypted, private suite of products designed to give you control of your privacy. ",
+    "description": "Enjoy Meet, Mail, Antivirus, and VPN as part of your Internxt Drive plan on Windows, Mac, or Linux.",
     "cta": "Get Internxt",
     "cards": {
       "element1": {
@@ -183,21 +148,15 @@
         "description": "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information. "
       },
       "element2": {
-        "title": "European privacy",
+        "title": "Security",
         "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
+          "Internxt uses end-to-end and post-quantum encryption, providing you with the most secure video conferencing platform for your privacy. "
         ]
       },
       "element3": {
-        "title": "European privacy",
+        "title": "Sustainability",
         "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
-        ]
-      },
-      "element4": {
-        "title": "European privacy",
-        "description": [
-          "Internxt complies with the GDPR, which protects your data with the best privacy laws for security, transparency, and control over your personal information."
+          "We are committed to a more sustainable and green future, so our products only use renewable and energy-efficient power technologies. "
         ]
       }
     }
