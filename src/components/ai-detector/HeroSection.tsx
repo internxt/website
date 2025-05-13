@@ -39,12 +39,12 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         const arrayBuffer = await file.arrayBuffer();
         const pdfDoc = await PDFDocument.load(arrayBuffer);
         const pages = pdfDoc.getPages();
-        let extractedText = '';
+        const extractedText = '';
 
-        for (const page of pages) {
-          const text = await page.getText();
-          extractedText += text + '\n';
-        }
+        // for (const page of pages) {
+        //   const text = await page.getText();
+        //   extractedText += text + '\n';
+        // }
 
         setText(extractedText);
       } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
