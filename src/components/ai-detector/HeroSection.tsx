@@ -7,7 +7,6 @@ import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
 import { PDFDocument } from 'pdf-lib';
-const ZEROGPT_API_KEY = process.env.NEXT_PUBLIC_ZEROGPT_API_KEY;
 
 interface HeroSectionProps {
   textContent: AiDetectorText['HeroSection'];
