@@ -81,11 +81,11 @@
     "startEarning": "Start earning",
     "cards": [
       {
-        "OFF": "50%",
-        "plans": "on annual and monthly plans"
+        "OFF": "30%",
+        "plans": "on annual"
       },
       {
-        "OFF": "30%",
+        "OFF": "15%",
         "plans": "on lifetime sales"
       }
     ],
