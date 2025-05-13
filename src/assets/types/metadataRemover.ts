@@ -13,6 +13,11 @@ export interface FeaturesSlider {
   description: string;
   cards: Cards;
 }
+export interface FeaturesSliderImg {
+  title: string;
+  description: string;
+  cards: Cards;
+}
 export interface Cards {
   openSource: EndToEnd;
   endToEnd: EndToEnd;
