@@ -9,7 +9,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const response = await fetch('https://api.zerogpt.com/api/detect/detectText', {
       method: 'POST',
       headers: {
-        ApiKey: process.env.NEXT_PUBLIC_ZEROGPT_API_KEY || '',
+        // ApiKey: process.env.NEXT_PUBLIC_ZEROGPT_API_KEY || '',
+        ApiKey: 'aadad734-5fb6-46d4-ab98-5ec16498cded',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(req.body),
