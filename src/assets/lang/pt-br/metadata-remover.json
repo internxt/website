@@ -1,0 +1,237 @@
+{
+  "HeroSection": {
+    "title": "Removedor de metadados",
+    "subtitle2": "Remova os metadados dos seus arquivos para permanecer anônimo online.",
+    "secure": "Uploads de arquivos protegidos por HTTPS",
+    "dropFile": {
+      "line1": "Solte arquivos ou clique aqui"
+    },
+    "fileSelected": "Arquivo selecionado para verificação",
+    "cancel": "Cancelar",
+    "close": "Fechar",
+    "scanNow": "Verificar agora",
+    "selectFile": "Escolher arquivo",
+    "dropHere": "Solte o arquivo aqui",
+    "scanAgain": "Verificar outro arquivo",
+    "loading": "Carregando...",
+    "maxFileSize": {
+      "title": "Limite de tamanho de arquivo excedido",
+      "description": "Tamanho máximo de arquivo de 1GB"
+    },
+    "table": {
+      "loading": "Carregando...",
+      "virusDetected": "Vírus detectado neste arquivo",
+      "noVirusDetected": "Nenhum vírus detectado neste arquivo",
+      "detected": "Detectado",
+      "undetected": "Não detectado",
+      "unableToProcess": "Não foi possível processar",
+      "noVirusesDetected": {
+        "message": "Nenhum vírus detectado",
+        "title": "Quer manter seus arquivos seguros?",
+        "subtitle": "A Internxt é um serviço de armazenamento em nuvem privado com verificação de vírus integrada e criptografia de ponta a ponta.",
+        "cta": "Comece agora"
+      },
+      "analyzing": "Verificando arquivo...",
+      "scanTime": "Tempo de verificação",
+      "name": "Nome",
+      "detection": "Detecção"
+    },
+    "error": {
+      "title": "Algo deu errado",
+      "description": "Ocorreu um erro ao enviar o arquivo, tente novamente mais tarde"
+    }
+  },
+  "FeaturesSection": {
+    "hero": {
+      "title": "Removedor de metadados gratuito da Internxt",
+      "description": [
+        "Mantenha suas informações pessoais protegidas contra vazamentos de dados com nosso limpador de metadados. Nossa ferramenta gratuita remove dados ocultos dos seus arquivos, incluindo informações do autor, etiquetas de localização e detalhes do dispositivo.",
+        "Use nosso removedor de metadados online gratuito para manter seus arquivos anônimos e seguros antes de compartilhá-los. Os arquivos enviados são limpos de metadados instantaneamente e depois excluídos permanentemente. Nunca armazenamos seus dados; apenas mantemos sua privacidade."
+      ]
+    },
+    "howToUse": {
+      "title": "Como usar o removedor de metadados da Internxt",
+      "steps": [
+        {
+          "step": 1,
+          "text": "Faça upload do arquivo desejado do seu dispositivo ou arraste-o para a página."
+        },
+        {
+          "step": 2,
+          "text": "Aguarde alguns segundos enquanto removemos os metadados."
+        },
+        {
+          "step": 3,
+          "text": "O download começará automaticamente."
+        }
+      ]
+    },
+    "whatIs": {
+      "title": "O que é um removedor de metadados?",
+      "description": [
+        "Metadados são dados que descrevem informações sobre outros dados. Ao compartilhar ou armazenar um arquivo, os metadados contêm informações sobre os arquivos, como detalhes do dispositivo, localização, autor, histórico de edição e mais.",
+        "Um limpador de metadados de imagens ou fotos é uma ferramenta de privacidade online que remove dados ocultos dos arquivos. O removedor de metadados da Internxt remove rapidamente as informações vinculadas aos seus arquivos. É uma forma simples, gratuita e segura de aumentar seu anonimato online."
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "Cada arquivo conta uma história",
+    "description": "Limpe os metadados dos seus arquivos e proteja-os com a Internxt",
+    "cta": "Escolha seu plano"
+  },
+  "CtaSection2": {
+    "title": "Evite acidentes e vazamentos de dados",
+    "description": "Proteja e armazene suas informações com a Internxt",
+    "cta": "Escolha seu plano"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos respostas",
+    "faq": [
+      {
+        "question": "O que são metadados e por que devo removê-los?",
+        "answer": [
+          "Metadados são simplesmente dados que descrevem informações sobre outros dados. Ao compartilhar ou armazenar arquivos, esse tipo de metadado contém informações sobre os arquivos, detalhes do dispositivo, localização, autor, histórico de edição e mais.",
+          "Você deve remover essas informações usando um removedor de metadados de vídeo, foto ou imagem para evitar que terceiros tenham acesso a informações pessoais sobre você que preferiria manter privadas."
+        ]
+      },
+      {
+        "question": "Que tipos de arquivos contêm metadados?",
+        "answer": [
+          "Praticamente todos os arquivos que você cria online têm metadados. Word, Excel, arquivos PDF, vídeos, imagens, etc., todos têm metadados de uma forma ou de outra.",
+          "O tipo de metadado que esses arquivos contêm varia de acordo com o conteúdo, então se você tem um arquivo que deseja manter privado, usar um limpador de metadados removerá essas informações de forma rápida e segura."
+        ]
+      },
+      {
+        "question": "É seguro enviar arquivos confidenciais?",
+        "answer": [
+          "Com o removedor de metadados da Internxt, sim. Os arquivos são criptografados, processados com segurança e tudo é excluído permanentemente assim que os metadados são removidos. Não podemos armazenar ou ver o conteúdo dos seus arquivos, apenas remover os metadados."
+        ]
+      },
+      {
+        "question": "Remover metadados altera o conteúdo do meu arquivo?",
+        "answer": [
+          "Não, apenas os metadados são removidos. Não adicionamos marcas d'água, não comprimimos seus arquivos nem fazemos qualquer outra alteração desnecessária. Assim que os metadados forem removidos, você terá exatamente a mesma versão dos seus arquivos, sem modificações."
+        ]
+      },
+      {
+        "question": "O que acontece com meus arquivos após limpá-los?",
+        "answer": [
+          "Assim que você faz upload e remove os dados, tudo é excluído automaticamente do nosso sistema para manter sua privacidade e conformidade com a LGPD."
+        ]
+      },
+      {
+        "question": "Como sei se um arquivo contém metadados?",
+        "answer": [
+          "Todos os arquivos contêm metadados. No Windows, você pode ver clicando com o botão direito no arquivo e selecionando \"Propriedades\".",
+          "Usuários de Mac também devem clicar com o botão direito no arquivo, selecionar \"Obter informações\" e depois ir à seção \"Detalhes\" para ver os metadados.",
+          "Por fim, você pode ver os metadados de arquivos PDF abrindo-os no Adobe Acrobat e indo em \"Arquivo\" > \"Propriedades\" > \"Descrição\"."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Por que você deve usar um removedor de metadados online",
+    "description": "Seus documentos, fotos, vídeos ou arquivos PDF podem conter mais informações do que você imagina. Ao compartilhar esses arquivos online, você corre o risco de que esses metadados caiam em mãos erradas, causando vazamentos de dados. Nosso limpador de metadados remove essas informações gratuitamente sempre que você precisar.",
+    "info": [
+      {
+        "title": "100% grátis e ilimitado",
+        "description": [
+          "Use este limpador de metadados gratuitamente, sem necessidade de criar uma conta. Funciona diretamente no seu navegador, então você pode remover metadados de quantos arquivos quiser, sem limitações."
+        ]
+      },
+      {
+        "title": "Conformidade com a LGPD",
+        "description": [
+          "A Internxt é uma empresa em conformidade com a LGPD e, assim como nossos produtos de armazenamento em nuvem, VPN e antivírus, nossa ferramenta de remoção de metadados online protege seus dados com os mais altos padrões de privacidade. Quando removemos seus metadados, o restante dos arquivos e informações é excluído permanentemente para garantir conformidade e proteção contra vazamentos de dados."
+        ]
+      },
+      {
+        "title": "Segurança total",
+        "description": [
+          "Seus arquivos são limpos instantaneamente, removendo dados privados e mantendo o formato original. Assim que você faz upload do arquivo, tudo é criptografado para manter a segurança e privacidade dos seus arquivos. Não armazenamos dados, apenas removemos os metadados para aumentar o anonimato."
+        ]
+      },
+      {
+        "title": "Suporta múltiplos arquivos",
+        "description": [
+          "Suportamos vários formatos de arquivos, então você pode usar esta ferramenta como removedor de metadados de imagens, fotos, vídeos ou PDF para garantir a privacidade de qualquer arquivo que queira compartilhar online. É uma forma rápida e confiável de limpar seus arquivos e evitar que seus dados sejam usados indevidamente ou rastreados."
+        ]
+      },
+      {
+        "title": "Previna rastreamento digital",
+        "description": [
+          "Seus metadados podem ser usados para criar um rastreamento digital da sua atividade online, que pode ser usado para rastrear de onde um arquivo se originou, quem o criou e mais. Ao remover esses metadados dos seus arquivos, fica mais difícil para agentes mal-intencionados rastrearem seu rastro digital."
+        ]
+      },
+      {
+        "title": "Sem alteração de arquivos",
+        "description": [
+          "Tudo o que fazemos é remover os metadados dos seus arquivos para aumentar a privacidade; as fotos, vídeos ou conteúdos permanecem inalterados. Não comprimimos seus arquivos, não deixamos marcas d'água nem fazemos outras modificações, exceto aquelas que precisam ser removidas, então você fica com um arquivo privado e inalterado."
+        ]
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Quando usar um removedor de metadados?",
+    "description": "Manter sua privacidade online se tornou um aspecto essencial da nossa vida na internet. Ao remover os metadados dos seus documentos, fotos ou vídeos, você pode manter a confidencialidade tanto na vida pessoal quanto profissional, evitar vazamentos de dados e desfrutar de mais privacidade e anonimato.",
+    "info": [
+      {
+        "title": "Proteja seus dados em fotos ou vídeos",
+        "description": [
+          "Fotos tiradas com seu telefone ou câmera podem incluir dados de localização ocultos, como coordenadas de GPS, nomes de lugares ou até mesmo a direção para onde a câmera estava apontando. Um removedor de metadados de fotos remove os dados de localização para ajudar a proteger a privacidade da sua casa, local de trabalho ou paradeiro atual e previne ameaças cibernéticas como o doxxing."
+        ]
+      },
+      {
+        "title": "Evite vazamentos de dados",
+        "description": [
+          "Seu nome completo, e-mail, dispositivo e detalhes de software podem permanecer em suas imagens, documentos ou vídeos. Um removedor de metadados de imagens ou vídeos protege você mesmo se compartilhar esses arquivos com a pessoa errada, garantindo que nenhuma informação confidencial ou privada seja compartilhada."
+        ]
+      },
+      {
+        "title": "Envios anônimos",
+        "description": [
+          "Existem muitos casos de uso para um removedor de metadados online além de fotos e vídeos. Jornalistas ou denunciantes que precisam de máxima privacidade usam esta ferramenta para anonimizar dados vinculados à autoria do documento, histórico de revisões, visualizações em miniatura e caminhos internos de arquivos."
+        ]
+      },
+      {
+        "title": "Compartilhe arquivos entre funcionários",
+        "description": [
+          "Empresas são alvos constantes de vazamentos de dados, que podem ocorrer devido a ataques cibernéticos ou erros humanos. Ao compartilhar documentos entre departamentos, os metadados podem expor nomes de funcionários, estruturas internas de arquivos ou comentários. Nesse caso, um removedor de metadados garante a integridade e conformidade da empresa."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Experimente as ferramentas de segurança online gratuitas da Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Verificador de força de senha",
+        "description": "Verificar agora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Conversor de unidades de bytes",
+        "description": "Converter agora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "E-mail temporário gratuito",
+        "width": 95,
+        "description": "Enviar agora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Gerador de senhas gratuito",
+        "width": 124,
+        "description": "Gerar agora"
+      }
+    ]
+  }
+}

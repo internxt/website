@@ -37,7 +37,7 @@ const Scan = ({
   lang,
   bannerLang,
 }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'virus-scanner');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-metadata-remover');
   const cardInfo = [
     { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },
     { icon: LockKey, ...langJson.FeaturesSlider.info[1] },

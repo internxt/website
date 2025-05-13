@@ -90,6 +90,10 @@
     "line1": "Tieni al sicuro quei file ormai puliti",
     "blueText": "unisciti gratuitamente a Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Rimuovi i metadati rivelatori dai tuoi file.",
+    "blueText": "Pulisci la tua impronta digitale con Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
   "SignUpTempMailBanner": {
     "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
