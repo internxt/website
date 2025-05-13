@@ -29,7 +29,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
         <div className="flex w-full max-w-[800px] flex-col space-y-8 pb-10 ">
           <div className=" p-4  ">
             <h2 className="mb-2 text-2xl text-3xl font-semibold">{textContent.aiCheckerTitle}</h2>
-            <p className="text-gray-80text-lg whitespace-pre-line">{textContent.aiCheckerDescription}</p>
+            <p className="whitespace-pre-line text-lg text-gray-80">{textContent.aiCheckerDescription}</p>
           </div>
           <div className="   p-4">
             <h2 className="mb-2 text-2xl text-3xl font-semibold">{textContent.aiDetectorTitle}</h2>
