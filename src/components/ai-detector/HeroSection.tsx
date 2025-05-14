@@ -6,7 +6,10 @@ import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
+<<<<<<< Updated upstream
 import { PDFDocument } from 'pdf-lib';
+=======
+>>>>>>> Stashed changes
 import pdfToText from 'react-pdftotext';
 
 interface HeroSectionProps {
@@ -45,23 +48,27 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           })
           .catch((err: any) => {
             setError(textContent.error.fileReadError);
+<<<<<<< Updated upstream
             console.error('Error extracting PDF text:', err);
           });
         return;
+=======
+            console.error('Error reading PDF:', err);
+          });
+>>>>>>> Stashed changes
       } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
         // Handle text files
         const reader = new FileReader();
         reader.onload = (event) => {
           const fileText = event.target?.result as string;
           setText(fileText);
+          setDetectionScore(null);
+          setError(null);
         };
         reader.readAsText(file);
       } else {
         setError(textContent.error.unsupportedFile);
       }
-
-      setDetectionScore(null);
-      setError(null);
     } catch (err) {
       setError(textContent.error.fileReadError);
       console.error('Error reading file:', err);
