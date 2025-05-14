@@ -352,7 +352,7 @@ export default function PriceCard({
     <div
       className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
         isStackCommerce ? 'w-[280px]' : 'w-[340px]'
-      } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      } h-800 flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
@@ -459,7 +459,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
+        <div className="flex max-h-[440px] min-h-[200px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
