@@ -6,10 +6,6 @@ import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
-<<<<<<< Updated upstream
-import { PDFDocument } from 'pdf-lib';
-=======
->>>>>>> Stashed changes
 import pdfToText from 'react-pdftotext';
 
 interface HeroSectionProps {
@@ -48,14 +44,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           })
           .catch((err: any) => {
             setError(textContent.error.fileReadError);
-<<<<<<< Updated upstream
-            console.error('Error extracting PDF text:', err);
-          });
-        return;
-=======
             console.error('Error reading PDF:', err);
           });
->>>>>>> Stashed changes
       } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
         // Handle text files
         const reader = new FileReader();
@@ -116,10 +106,10 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center bg-white ">
-      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10 pt-20 ">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-white py-20 md:py-12">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10">
         <div className="flex w-full flex-col items-center justify-center space-y-6 text-center ">
-          <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
+          <p className="text-6xl font-semibold text-gray-100 lg:text-5xl">{textContent.mainTitle}</p>
           <div className="flex flex-col space-y-6 lg:max-w-[800px]">
             {textContent.subtitle && <p className="font-regular text-xl text-gray-80">{textContent.subtitle}</p>}
           </div>
