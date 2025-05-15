@@ -69,6 +69,10 @@
     "line1": "Guarda tus archivos libres de virus,",
     "blueText": "regístrate en Internxt gratis"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Elimina metadatos reveladores de tus archivos.",
+    "blueText": "Limpia tu huella digital con Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "Usa miles de bytes en la nube de almacenamiento segura",
     "blueText": "de Internxt"

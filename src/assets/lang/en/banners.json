@@ -106,6 +106,10 @@
     "blueText": "Enjoy a more private online experience with Internxt"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Strip your files of revealing metadata.",
+    "blueText": "Clean your digital footprint with Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
   "SignUpSuccessStoriesBanner": {

@@ -208,5 +208,10 @@
     "id": "internxt-annual",
     "title": "Internxt – 年度计划特惠！",
     "description": "获取 Internxt 任意年度计划的折扣。所有计划均包含私人云存储、VPN 和杀毒软件。"
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt 元数据清除器 - 如何在线清除 PDF、照片和文档中的元数据",
+    "description": "几秒钟内即可移除文件中的隐藏数据。Internxt 的元数据清除器在您分享前清理文档，最大程度保护隐私。"
   }
 ]

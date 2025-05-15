@@ -373,5 +373,10 @@
     "id": "internxt-annual",
     "title": "Internxt – 年度方案限時優惠！",
     "description": "立即享有 Internxt 任一年度方案的折扣優惠。所有方案皆包含私人雲端儲存、VPN 及防毒軟體。"
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt 元資料清除器 - 如何清除 PDF、照片及線上文件的元資料",
+    "description": "只需幾秒鐘即可移除檔案中的隱藏資料。Internxt 的元資料清除器在分享前徹底清理您的文件，確保最大隱私。"
   }
 ]

@@ -62,6 +62,10 @@
     "line1": "Sauvegardez vos fichiers sans virus dans le nuage",
     "blueText": "d'Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Supprimez les métadonnées révélatrices de vos fichiers.",
+    "blueText": "Nettoyez votre empreinte numérique avec Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "Des milliers d'octets dans le nuage sécurisé",
     "blueText": "d'Internxt"

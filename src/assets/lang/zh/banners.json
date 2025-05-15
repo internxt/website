@@ -94,6 +94,10 @@
     "blueText": "使用 Internxt 享受更私密的在线体验"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "去除文件中暴露隐私的元数据。",
+    "blueText": "用 Internxt 清理您的数字足迹"
+  },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
   "SignUpCyberAwareness": {

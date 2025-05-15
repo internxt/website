@@ -199,5 +199,10 @@
     "id": "internxt-annual",
     "title": "Internxt – Spezialangebot für deine Jahrespläne!",
     "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadaten-Entferner – So entfernen Sie Metadaten aus PDFs, Fotos und Ihren Dokumenten online",
+    "description": "Entfernen Sie versteckte Daten aus Ihren Dateien in Sekundenschnelle. Der Internxt Metadaten-Entferner säubert Ihre Dokumente für maximale Privatsphäre vor dem Teilen."
   }
 ]

@@ -188,5 +188,10 @@
     "id": "internxt-annual",
     "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
     "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Suppression de Métadonnées - Comment nettoyer les métadonnées dans les PDF, photos et vos documents en ligne",
+    "description": "Supprimez les données cachées de vos fichiers en quelques secondes. Le nettoyeur de métadonnées d'Internxt purifie vos documents pour une confidentialité maximale avant de les partager."
   }
 ]
