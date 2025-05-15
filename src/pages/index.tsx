@@ -122,10 +122,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         showPromo
       />
 
-      <div className={`${marqueeBgColor} py-10`}>
-        <MarqueeComponent bgColor={marqueeBgColor} />
-      </div>
-
       <ComponentsInColumnSection
         FirstComponent={
           <div className="flex w-full flex-col items-center gap-9">
