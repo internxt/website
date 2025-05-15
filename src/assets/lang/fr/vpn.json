@@ -6,13 +6,15 @@
       "line2": "vous protège en ligne"
     },
     "description": "Naviguez sur le web en toute liberté et confidentialité avec le VPN sécurisé d'Internxt.",
-    "cta": "Choisissez votre abonnement"
+    "cta": "Choisissez votre abonnement",
+    "download": "Télécharger"
   },
   "EncryptedVPNSection": {
     "title": "L'extension VPN cryptée d'Internxt",
     "subtitle": "Notre VPN masque votre adresse IP afin de préserver votre navigation privée, sécurisée et sans restrictions dans jusqu'à 5 pays : France, Allemagne, Pologne, Canada et Royaume-Uni.",
     "description": "Nous avons conçu ce VPN conformément à notre mission de créer un Internet plus privé. En souscrivant à un abonnement premium Internxt, votre connexion sera cryptée et protégée contre les attaques réseau et les fuites de données. Nous assurons votre sécurité pendant que vous profitez simplement d'Internet.",
-    "cta": "Obtenez Internxt"
+    "cta": "Obtenez Internxt",
+    "download": "Télécharger"
   },
   "SecureVPNSection": {
     "title": "Pourquoi utiliser un VPN sécurisé et crypté ?",

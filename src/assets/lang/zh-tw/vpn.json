@@ -6,13 +6,15 @@
       "line2": "線上全面保護你"
     },
     "description": "使用 Internxt 安全 VPN 自由且安全地瀏覽網頁。",
-    "cta": "選擇你的方案"
+    "cta": "選擇你的方案",
+    "download": "下載"
   },
   "EncryptedVPNSection": {
     "title": "Internxt 加密 VPN 擴充功能",
     "subtitle": "我們的 VPN 隱藏你的 IP 位址，在 5 個國家（法國、德國、波蘭、加拿大、英國）提供私人、安全且無限制的內容存取。",
     "description": "我們開發這個 VPN 是為了使網路更加私人化。透過 Internxt Premium 訂閱，你的連線將獲得加密，免受網路攻擊和資料外洩的風險。我們負責你的安全，讓你安心上網。",
-    "cta": "取得 Internxt"
+    "cta": "取得 Internxt",
+    "download": "下載"
   },
   "SecureVPNSection": {
     "title": "為何使用安全且加密的 VPN？",

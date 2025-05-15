@@ -6,13 +6,15 @@
       "line2": "te protege online"
     },
     "description": "Navega por la web con total libertad y privacidad con la VPN segura de Internxt.",
-    "cta": "Compra tu plan"
+    "cta": "Compra tu plan",
+    "download": "Descargar"
   },
   "EncryptedVPNSection": {
     "title": "La extensión VPN cifrada de Internxt",
     "subtitle": "Nuestra VPN oculta tu dirección IP para mantener tu experiencia de navegación privada, segura y sin restricciones en hasta 5 países: Francia, Alemania, Polonia, Canadá y el Reino Unido.",
     "description": "Hemos creado esta VPN de acuerdo con nuestra misión de conseguir una Internet más privada. Al comprar un plan premium de Internxt, tu conexión estará cifrada y a salvo de ataques de red y fugas de datos. Nosotros nos encargamos de tu seguridad, y tú sólo tienes que disfrutar y navegar por internet.",
-    "cta": "Consigue Internxt"
+    "cta": "Consigue Internxt",
+    "download": "Descargar"
   },
   "SecureVPNSection": {
     "title": "¿Por qué utilizar una VPN segura y cifrada?",
