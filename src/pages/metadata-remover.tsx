@@ -94,6 +94,7 @@ const Scan = ({
           bannerText={bannerLang.SignUpMetadataRemoverBanner}
           lang={lang}
         />
+
         <CtaSection
           textContent={langJson.CtaSection1}
           url={CTA_URL}
