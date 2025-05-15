@@ -44,7 +44,7 @@ const PrivateCloudStorageSolutions = ({
     {
       title: textContent.FeatureSection.cards.element1.title,
       description: textContent.FeatureSection.cards.element1.description,
-      image: '/images/meet/european_privacy.webp',
+      image: '/images/meet/internxt_european_privacy.webp',
       icon: Gavel,
     },
     {
