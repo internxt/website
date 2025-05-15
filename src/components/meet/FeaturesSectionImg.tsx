@@ -29,14 +29,14 @@ export const FeaturesSectionImg = ({ textContent }) => {
     },
     {
       icon: Stethoscope,
-      title: textContent.cards[2].title,
-      description: textContent.cards[2].description,
+      title: textContent.cards[3].title,
+      description: textContent.cards[3].description,
       image: getImage('/images/meet/medical.webp'),
     },
     {
       icon: HandFist,
-      title: textContent.cards[3].title,
-      description: textContent.cards[3].description,
+      title: textContent.cards[2].title,
+      description: textContent.cards[2].description,
       image: getImage('/images/meet/activists.webp'),
     },
   ];
@@ -61,7 +61,7 @@ export const FeaturesSectionImg = ({ textContent }) => {
               )}
 
               {/* Content below the image, with padding */}
-              <div className="sm:p-10">
+              <div className="p-5 sm:p-10">
                 <card.icon className="mb-6 text-4xl text-primary" size={32} />
                 <div className="flex w-full max-w-[400px] flex-col">
                   <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>

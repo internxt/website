@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const HeroSection = ({ textContent }) => (
   <section className="flex w-full flex-col">
-    <div className="flex flex-col items-center pb-32 pt-32">
+    <div className="flex flex-col items-center pb-10 pt-32">
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
@@ -16,9 +16,9 @@ const HeroSection = ({ textContent }) => (
         </div>
 
         <Header className="text-gray-100 ">
-          <span className="text-6xl"> {textContent.title.textBeforeBlueText} </span>
-          <span className="text-6xl text-primary"> {textContent.title.blueText} </span>
-          <span className="text-6xl"> {textContent.title.textAfterBlueText} </span>
+          <span className="text-5xl md:text-6xl"> {textContent.title.textBeforeBlueText} </span>
+          <span className="text-5xl text-primary md:text-6xl"> {textContent.title.blueText} </span>
+          <span className="text-5xl md:text-6xl"> {textContent.title.textAfterBlueText} </span>
         </Header>
 
         <h3 className="px-2 text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
@@ -34,7 +34,7 @@ const HeroSection = ({ textContent }) => (
             {textContent.cta}
           </button>
         </Link>
-        <div className="flex flex-row items-center space-x-3 pt-2 ">
+        <div className=" flex flex-row items-center space-x-1 pt-2">
           <CheckCircle size={24} className="text-green-1" weight="fill" />
           <p className="font-regular whitespace-nowrap text-base lg:text-lg">{textContent.include}</p>
         </div>
