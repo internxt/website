@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "header": "Offre spéciale Internxt",
+    "title": {
+      "normalText": "Obtenez le stockage cloud le plus sécurisé ",
+      "blueText": "à moindre coût"
+    },
+    "description": {
+      "normal": "Rejoignez Internxt, l’alternative leader à Google Drive, et bénéficiez de ",
+      "blue": "82 % DE RÉDUCTION ",
+      "normal1": "sur tous les abonnements annuels et à vie. Stockez et partagez vos fichiers en toute confidentialité."
+    },
+    "cta": "Choisir un plan"
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "Annuel",
+      "homePage": "Choisissez le plan qui vous convient",
+      "lifetime": "À vie",
+      "business": "Entreprise",
+      "lifetimeCampaign": {
+        "blueText": "Profitez de 50 % DE RÉDUCTION",
+        "normalText": "sur tous nos plans à vie exclusifs"
+      }
+    },
+    "lifetimeDescription": "Une vie de confidentialité et de sécurité pour vos fichiers moyennant un paiement unique",
+    "planDescription": "Tous les plans Internxt sont complets et donnent un accès total à notre suite primée de confidentialité composée de Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "individual": "Particulier",
+      "lifetime": "À vie",
+      "business": "Entreprise"
+    },
+    "features": {
+      "endToEnd": "Chiffré de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    }
+  },
+  "FeatureSection": {
+    "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers ?",
+    "description": "Internxt vous redonne le contrôle de votre vie privée. Contrairement aux solutions cloud traditionnelles, nous nous assurons que vous seul détenez les clés de vos données chiffrées et nous ne stockons ni ne vendons vos données à des tiers. Nous mettons tout en œuvre pour garantir la sécurité de vos informations.",
+    "cta": "Choisir la taille de stockage",
+    "cards": [
+      {
+        "title": "Données infranchissables et inviolables",
+        "description": "Nous ne stockons ni mots de passe ni données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne un contrôle total sur vos fichiers. Vos données sont votre affaire, les protéger est la nôtre."
+      },
+      {
+        "title": "Sécurité sans compromis",
+        "description": "Vos fichiers sont chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 zero-knowledge, vous êtes le seul à pouvoir y accéder."
+      },
+      {
+        "title": "Open source et transparent",
+        "description": "Nous sommes fiers de notre travail ; notre code est public sur GitHub et peut être examiné, audité et vérifié par chacun. Nous n’avons rien à cacher, sauf vos données."
+      },
+      {
+        "title": "Vérifié de manière indépendante",
+        "description": "Nous sommes entièrement conformes au RGPD et 100 % sûrs, mais ne vous fiez pas qu’à nos dires : Internxt a été audité et vérifié de manière indépendante par Securitum, la principale entreprise européenne de tests de pénétration."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Des centaines de milliers d’utilisateurs abandonnent iCloud, Google Drive et Dropbox pour ",
+      "blue": "le cloud le plus sécurisé – Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journaliste pour FixThePhoto.com",
+        "review": "Internxt est un service de stockage cloud pratique pour les clients soucieux de leur vie privée. Son interface épurée et son équipe de support fiable en font une excellente option pour ceux qui ont besoin de stocker leurs fichiers en toute sécurité."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Avis GetApp",
+        "review": "La meilleure alternative chiffrée à Dropbox. Globalement : nous cherchions une solution pour stocker les fichiers clients et de travail (fichiers de réseaux sociaux) et, comme Internxt est compatible RGPD, c’était parfait pour nous !"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Avis Trustpilot",
+        "review": "J’utilisais Google Drive depuis plusieurs années, mais j’avais besoin d’une alternative garantissant la confidentialité de mes données. Quelque chose que Google ou d’autres grandes plateformes ne peuvent pas offrir. C’est pourquoi je suis passé à Internxt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Profitez de 82 % de réduction sur tous les plans avec Drive, VPN et Antivirus inclus !",
+    "cta": "Choisir un plan"
+  },
+  "CtaSection1": {
+    "title": "Le cloud le plus privé au monde",
+    "description": "Profitez de votre réduction exclusive de 82 % et accédez pendant un an au stockage cloud sécurisé, privé et chiffré d’Internxt.",
+    "cta": "Trouvez votre plan"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "header": "Internxt 特惠",
+    "title": {
+      "normalText": "以更低价格获得最安全的云存储 ",
+      "blueText": ""
+    },
+    "description": {
+      "normal": "加入 Internxt——领先的 Google Drive 替代品，立享 ",
+      "blue": "82% 折扣 ",
+      "normal1": "所有年度和终身计划。安全保存并分享您的文件，确保隐私。"
+    },
+    "cta": "选择方案"
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "年度",
+      "homePage": "为您选择合适的套餐",
+      "lifetime": "终身",
+      "business": "企业",
+      "lifetimeCampaign": {
+        "blueText": "全场终身计划 5 折",
+        "normalText": ""
+      }
+    },
+    "lifetimeDescription": "终身隐私与安全，只需一次性付款",
+    "planDescription": "所有 Internxt 计划都功能齐全，可完全访问我们获奖的隐私套件，包括 Internxt Drive、Send、VPN、Antivirus、Meet 和 Mail。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "individual": "个人",
+      "lifetime": "终身",
+      "business": "企业"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名创建账户",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保证"
+    }
+  },
+  "FeatureSection": {
+    "title": "为什么选择 Internxt 来保护您的文件？",
+    "description": "Internxt 让您重新掌控隐私。与传统云存储不同，我们确保只有您拥有解密密钥，且不会将您的数据存储或出售给第三方。我们竭尽全力保障您的信息安全。",
+    "cta": "选择存储大小",
+    "cards": [
+      {
+        "title": "数据无法被黑或泄露",
+        "description": "我们不存储密码或用户数据，所有数据在传输和静止时均已加密。Internxt 让您完全掌控文件。您的数据是您的事务，保护数据是我们的责任。"
+      },
+      {
+        "title": "安全性无可妥协",
+        "description": "您的文件在离开设备前即已进行端到端加密。凭借零知识 AES-256 加密，只有您自己能够访问数据。"
+      },
+      {
+        "title": "开源且透明",
+        "description": "我们为自己的工作自豪，代码公开托管在 GitHub 上，任何人都可审查、审计和验证。我们唯独对您的数据保密。"
+      },
+      {
+        "title": "独立验证",
+        "description": "我们完全符合 GDPR 要求且安全可靠，不过不要只听我们说。Internxt 已由欧洲领先的渗透测试公司 Securitum 独立审计与验证。"
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "数十万人正在放弃 iCloud、Google Drive 和 Dropbox，转向 ",
+      "blue": "最安全的云存储 – Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "FixThePhoto.com 记者",
+        "review": "Internxt 是一款方便的隐私优先云存储服务，界面简洁，支持团队可靠，是需要安全存储文件用户的理想选择。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "GetApp 评论",
+        "review": "最佳加密 Dropbox 替代品。总体体验：我们需要一个既能保存客户文件又能处理社交媒体文件的方案，而 Internxt 符合 GDPR 要求，非常适合我们！"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Trustpilot 评论",
+        "review": "我已使用 Google Drive 多年，但需要一个能保证数据隐私的替代品，这是 Google 等大平台无法实现的。因此我选择了 Internxt。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "所有方案 82% 折扣，包含 Drive、VPN 和 Antivirus！",
+    "cta": "选择方案"
+  },
+  "CtaSection1": {
+    "title": "全球最私密的云存储",
+    "description": "立即领取专属 82% 折扣，享受 Internxt 一整年的安全、私密且加密的云存储。",
+    "cta": "查找您的方案"
+  }
+}

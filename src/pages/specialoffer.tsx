@@ -178,8 +178,10 @@ const PartnerDiscount = ({
 };
 
 export async function getServerSideProps(ctx) {
+  const lang = ctx.locale;
+
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/specialoffer/specialOffer.json`);
+  const langJson = require(`@/assets/lang/${lang}/specialoffer/specialOffer.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 

@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "header": "Internxt Spezialangebot",
+    "title": {
+      "normalText": "Erhalte den sichersten Cloud-Speicher ",
+      "blueText": "für weniger"
+    },
+    "description": {
+      "normal": "Tritt Internxt bei, der führenden Alternative zu Google Drive, und erhalte ",
+      "blue": "82% RABATT ",
+      "normal1": "auf alle Jahres- und Lifetime-Tarife. Speichere und teile deine Dateien sicher und privat."
+    },
+    "cta": "Plan auswählen"
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "Jährlich",
+      "homePage": "Wähle den passenden Tarif für dich",
+      "lifetime": "Lifetime",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "50% RABATT erhalten",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "lifetimeDescription": "Ein Leben lang Privatsphäre und Sicherheit für deine Dateien mit einmaliger Zahlung",
+    "planDescription": "Alle Internxt-Tarife sind voll ausgestattet mit vollständigem Zugriff auf unsere preisgekrönte Datenschutz-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "individual": "Einzelnutzer",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende verschlüsselt",
+      "openSource": "Open Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    }
+  },
+  "FeatureSection": {
+    "title": "Warum Internxt wählen, um deine Dateien zu sichern?",
+    "description": "Internxt gibt dir die Kontrolle über deine Privatsphäre zurück. Im Gegensatz zu herkömmlichen Cloud-Speichern sorgen wir dafür, dass nur du die Schlüssel zu deinen verschlüsselten Daten besitzt, und wir speichern oder verkaufen deine Daten nicht an Dritte. Wir tun alles dafür, dass deine Informationen sicher bleiben.",
+    "cta": "Speichergröße wählen",
+    "cards": [
+      {
+        "title": "Unhackbare und undurchlässige Daten",
+        "description": "Wir speichern keine Passwörter oder Nutzerdaten und alle deine Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt dir die volle Kontrolle über deine Dateien. Deine Daten sind dein Geschäft. Wir schützen sie."
+      },
+      {
+        "title": "Unkompromittierte Sicherheit",
+        "description": "Deine Dateien werden Ende-zu-Ende verschlüsselt, noch bevor sie dein Gerät verlassen. Dank Zero-Knowledge-AES-256-Verschlüsselung hast nur du Zugang zu deinen Daten."
+      },
+      {
+        "title": "Open Source und transparent",
+        "description": "Wir sind stolz auf unsere Arbeit, daher ist unser Code auf GitHub öffentlich zugänglich und kann von jedem persönlich geprüft, auditiert und verifiziert werden. Wir haben nichts zu verbergen außer deinen Daten."
+      },
+      {
+        "title": "Unabhängig verifiziert",
+        "description": "Wir sind vollständig DSGVO-konform und 100% sicher, aber nimm es nicht nur von uns an. Internxt wurde unabhängig von Europas führendem Penetrationstesting-Unternehmen Securitum geprüft und verifiziert."
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "Hunderttausende wechseln iCloud, Google Drive und Dropbox zu ",
+      "blue": "dem sichersten Cloud-Speicher – Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "Journalistin bei FixThePhoto.com",
+        "review": "Internxt ist ein praktischer Cloud-Speicherdienst für datenschutzbewusste Kunden. Er verfügt über eine übersichtliche Oberfläche und ein zuverlässiges Support-Team, was ihn zu einer großartigen Option für alle macht, die ihre Dateien sicher speichern müssen."
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "Bewertung von GetApp",
+        "review": "Die beste verschlüsselte Dropbox-Alternative. Gesamtbewertung: Wir suchten eine Alternative, die es uns ermöglicht, Kunden- und Arbeitsdateien (Social Media) zu speichern, und da Internxt DSGVO-freundlich ist, passte es perfekt zu uns!"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Bewertung von Trustpilot",
+        "review": "Ich habe Google Drive mehrere Jahre genutzt, brauchte aber eine Alternative, die mir die Privatsphäre meiner Daten garantiert. Etwas, das Google oder andere bekannte Plattformen nicht bieten können. Deshalb bin ich zu Internxt gewechselt."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Erhalte 82% Rabatt auf alle Tarife mit Drive, VPN und Antivirus inklusive!",
+    "cta": "Plan auswählen"
+  },
+  "CtaSection1": {
+    "title": "Der weltweit privateste Cloud-Speicher",
+    "description": "Sichere dir deinen exklusiven 82%-Rabatt und erhalte ein ganzes Jahr lang sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt.",
+    "cta": "Finde deinen Tarif"
+  }
+}
