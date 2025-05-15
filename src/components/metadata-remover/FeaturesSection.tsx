@@ -1,33 +1,13 @@
-import Image from 'next/legacy/image';
 import SignUpBanner from '../banners/SignUpBanner';
-import { getImage } from '@/lib/getImage';
 
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section className="relative bg-gray-1 ">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
         <div className="flex w-full flex-col items-center justify-center">
           <SignUpBanner textContent={bannerText} lang={lang} />
-          <div className="flex w-full flex-col items-center justify-center">
-            <Image
-              src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-              alt="File Arrow Up icon"
-              width={800}
-              height={110}
-              quality={100}
-              style={{ cursor: 'pointer' }}
-              onClick={() =>
-                window.open(
-                  `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                  '_blank',
-                  'noopener noreferrer',
-                )
-              }
-            />
-          </div>
-          <div className="mb-12 w-full max-w-3xl space-y-8">
+
+          <div className="mb-12 w-full max-w-3xl space-y-8 pt-10">
             <h1 className="mb-4 text-3xl font-bold">{textContent.hero.title}</h1>
             {textContent.hero.description.map((paragraph, index) => (
               <p key={index} className="text-gray-700 text-lg">

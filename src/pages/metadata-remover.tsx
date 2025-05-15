@@ -6,9 +6,9 @@ import {
   Files,
   Fingerprint,
   FileLock,
-  ImageSquare,
   Detective,
   ShareNetwork,
+  ImagesSquare,
 } from '@phosphor-icons/react';
 
 import Footer from '@/components/layout/footers/Footer';
@@ -48,23 +48,23 @@ const Scan = ({
   ];
   const cardInfoImg = [
     {
-      icon: ImageSquare,
-      ...langJson.FeaturesSlider.info[0],
+      icon: ImagesSquare,
+      ...langJson.FeaturesSliderImg.info[0],
       image: getImage('/images/metadata-remover/protected_data.webp'),
     },
     {
       icon: ShieldStar,
-      ...langJson.FeaturesSlider.info[1],
+      ...langJson.FeaturesSliderImg.info[1],
       image: getImage('/images/metadata-remover/data_leaks.webp'),
     },
     {
       icon: Detective,
-      ...langJson.FeaturesSlider.info[2],
+      ...langJson.FeaturesSliderImg.info[2],
       image: getImage('/images/metadata-remover/anonymous_submissions.webp'),
     },
     {
       icon: ShareNetwork,
-      ...langJson.FeaturesSlider.info[3],
+      ...langJson.FeaturesSliderImg.info[3],
       image: getImage('/images/metadata-remover/file_sharing.webp'),
     },
   ];
