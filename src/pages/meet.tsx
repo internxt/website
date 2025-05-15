@@ -70,6 +70,7 @@ const PrivateCloudStorageSolutions = ({
       <Script type="application/ld+json" strategy="beforeInteractive">
         {sm_breadcrumb('Private Cloud Storage Solutions', 'privacy')}
       </Script>
+
       <Layout
         title={metatags[0].title}
         description={metatags[0].description}
