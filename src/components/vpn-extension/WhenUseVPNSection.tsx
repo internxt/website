@@ -11,12 +11,24 @@ export const WhenUseVPNSection = ({ textContent }) => {
           <p className="text-xl font-medium text-gray-80">{textContent.subtitle}</p>
           <p className="text-lg font-medium text-gray-80">{textContent.description}</p>
         </div>
-        <Link
-          className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-          href="/pricing"
-        >
-          {textContent.cta}
-        </Link>
+        <div className="flex w-full flex-col items-center justify-center space-y-4 lg:flex-row lg:items-start lg:space-x-4 lg:space-y-0">
+          <Link
+            className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+            href="/pricing"
+          >
+            {textContent.cta}
+          </Link>
+          <Link
+            className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+            href={
+              'https://chromewebstore.google.com/detail/internxt-vpn-free-encrypt/dpggmcodlahmljkhlmpgpdcffdaoccni?pli=1'
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {textContent.download}
+          </Link>
+        </div>
         <div className="relative grid w-full max-w-6xl grid-cols-1 flex-row justify-between gap-5 bg-contain bg-center bg-no-repeat sm:grid-cols-2 lg:bg-[url(/images/vpn-extension/map.svg)]">
           <div className="inset-0 ml-5 hidden items-center justify-center lg:absolute lg:flex">
             <Image

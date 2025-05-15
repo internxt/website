@@ -13,8 +13,7 @@
     "title": "Internxt 加密 VPN 扩展功能",
     "subtitle": "我们的 VPN 隐藏你的 IP 地址，在 5 个国家（法国、德国、波兰、加拿大、英国）提供私人、安全且无限制的内容访问。",
     "description": "我们开发此 VPN 的目标是让网络更加私密。通过 Internxt Premium 订阅，你的连接将被加密，免受网络攻击和数据泄露风险。我们保障你的安全，让你放心上网。",
-    "cta": "获取 Internxt",
-    "download": "下载"
+    "cta": "获取 Internxt"
   },
   "SecureVPNSection": {
     "title": "为什么使用安全且加密的 VPN？",
@@ -63,6 +62,7 @@
     "subtitle": "Internxt VPN 扩展使用快速安全的服务器加密和传输敏感数据。",
     "description": "我们的免费 VPN 扩展隐藏你的 IP 地址，防止第三方收集你的信息。",
     "cta": "下载 VPN",
+    "download": "下载",
     "cards": [
       "避免个性化广告",
       "匿名创建账户",

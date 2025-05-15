@@ -13,8 +13,7 @@
     "title": "Internxt's encrypted VPN extension",
     "subtitle": "Our VPN hides your IP address to keep your browsing experience private, secure, and unrestricted for up to 5 countries: France, Germany, Poland, Canada, and the UK.",
     "description": "We built this VPN in line with our mission of creating a more private internet. By purchasing a premium Internxt plan, your connection will be encrypted and safe from network attacks and data leaks. You focus on safe surfing, and we’ll take care of the security.",
-    "cta": "Get Internxt",
-    "download": "Download"
+    "cta": "Get Internxt"
   },
   "SecureVPNSection": {
     "title": "Why use a secure VPN",
@@ -63,6 +62,7 @@
     "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
     "description": "Our VPN masks your IP address and protects your information from third-party data collection.",
     "cta": "Get Internxt",
+    "download": "Download",
     "cards": [
       "Prevent targeted ads",
       "Anonymously create accounts",

@@ -67,9 +67,7 @@ const VPN = ({
               </Link>
               <Link
                 className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-                href={
-                  'https://chromewebstore.google.com/detail/internxt-vpn-free-encrypt/dpggmcodlahmljkhlmpgpdcffdaoccni?pli=1'
-                }
+                href={VPN_CHROME_WEB_STORE}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -121,6 +119,7 @@ const VPN = ({
       <CtaSection
         textContent={textContent.CtaSection2}
         url={VPN_CHROME_WEB_STORE}
+        target="_blank"
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
       />
 

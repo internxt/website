@@ -13,8 +13,7 @@
     "title": "L'estensione VPN criptata di Internxt",
     "subtitle": "La nostra VPN nasconde il tuo indirizzo IP per mantenere la tua navigazione privata, sicura e senza restrizioni fino a 5 paesi: Francia, Germania, Polonia, Canada e Regno Unito.",
     "description": "Abbiamo sviluppato questa VPN secondo la nostra missione di rendere Internet più privato. Con un abbonamento premium Internxt, la tua connessione sarà criptata e protetta da attacchi di rete e perdite di dati. Noi garantiamo la tua sicurezza, così tu puoi semplicemente navigare e goderti Internet.",
-    "cta": "Ottieni Internxt",
-    "download": "Scarica"
+    "cta": "Ottieni Internxt"
   },
   "SecureVPNSection": {
     "title": "Perché utilizzare una VPN sicura e criptata?",
@@ -63,6 +62,7 @@
     "subtitle": "L’estensione VPN di Internxt utilizza server veloci e sicuri per criptare e trasmettere dati sensibili.",
     "description": "La nostra estensione VPN gratuita nasconde il tuo indirizzo IP e protegge le tue informazioni dalla raccolta dati di terze parti.",
     "cta": "Scarica VPN",
+    "download": "Scarica",
     "cards": [
       "Evita pubblicità personalizzate",
       "Crea account anonimi",
