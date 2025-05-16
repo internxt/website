@@ -90,12 +90,12 @@ const PartnerDiscount = ({
               </div>
               <div className="flex flex-col space-y-8">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-6xl font-semibold">
+                  <p className="text-5xl font-semibold">
                     {langJson.HeroSection.title.normalText}
-                    <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                    <span className="text-5xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
                   </p>
                 </div>
-                <p className="text-center text-xl text-gray-80 lg:text-left">
+                <p className="text-center text-lg text-gray-80 lg:text-left">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
