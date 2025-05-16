@@ -84,18 +84,20 @@ const PartnerDiscount = ({
       <HeroSection
         TextComponent={
           <div className="flex flex-col gap-10">
-            <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
+            <div className="flex flex-col items-center justify-center space-y-10 lg:max-w-[533px] lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
               </div>
-              <div className="flex flex-col space-y-8">
+              <div className="flex flex-col space-y-8 px-10 lg:px-0">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-5xl font-semibold">
+                  <p className="text-4xl font-semibold lg:text-5xl">
                     {langJson.HeroSection.title.normalText}
-                    <span className="text-5xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                    <span className="text-4xl font-semibold text-primary lg:text-5xl">
+                      {langJson.HeroSection.title.blueText}
+                    </span>
                   </p>
                 </div>
-                <p className="text-center text-lg text-gray-80 lg:text-left">
+                <p className="text-md text-center text-gray-80 lg:text-left lg:text-lg">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
