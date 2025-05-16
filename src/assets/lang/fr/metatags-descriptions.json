@@ -188,5 +188,10 @@
     "id": "internxt-annual",
     "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
     "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
+  },
+  {
+    "id": "special-offer",
+    "title": "Offre spéciale — Internxt",
+    "description": "Profitez des forfaits annuels et à vie d'Internxt avec une réduction exclusive de 80 %. Bénéficiez de confidentialité et de sécurité avec jusqu'à 10 To de stockage."
   }
 ]

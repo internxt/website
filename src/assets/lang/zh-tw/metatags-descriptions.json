@@ -373,5 +373,10 @@
     "id": "internxt-annual",
     "title": "Internxt – 年度方案限時優惠！",
     "description": "立即享有 Internxt 任一年度方案的折扣優惠。所有方案皆包含私人雲端儲存、VPN 及防毒軟體。"
+  },
+  {
+    "id": "special-offer",
+    "title": "特別優惠 — Internxt",
+    "description": "以獨家80%折扣獲取 Internxt 的年度和終身方案。享受隱私和安全，提供高達10TB的儲存空間。"
   }
 ]

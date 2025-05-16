@@ -288,5 +288,10 @@
     "id": "internxt-annual",
     "title": "Internxt - Oferta especial para tus planes anuales!",
     "description": "Consigue un descuento para cualquier plan anual de Internxt. Todos los planes incluyen almacenamiento en la nube privada, VPN y antivirus."
+  },
+  {
+    "id": "special-offer",
+    "title": "Oferta especial — Internxt",
+    "description": "Obtén planes anuales y de por vida de Internxt con un descuento exclusivo del 80 %. Disfruta de privacidad y seguridad con hasta 10 TB de almacenamiento."
   }
 ]

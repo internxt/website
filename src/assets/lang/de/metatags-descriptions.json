@@ -199,5 +199,10 @@
     "id": "internxt-annual",
     "title": "Internxt – Spezialangebot für deine Jahrespläne!",
     "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
+  },
+  {
+    "id": "special-offer",
+    "title": "Sonderangebot — Internxt",
+    "description": "Erhalten Sie Internxt-Jahres- und Lifetime-Tarife mit einem exklusiven 80 % Rabatt. Genießen Sie Privatsphäre und Sicherheit mit bis zu 10 TB Speicherplatz."
   }
 ]
