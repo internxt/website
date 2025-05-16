@@ -83,7 +83,7 @@ const PartnerDiscount = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-6">
             <div className="flex flex-col items-center justify-center space-y-10 lg:max-w-[533px] lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
