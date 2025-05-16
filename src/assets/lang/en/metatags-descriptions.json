@@ -413,5 +413,10 @@
     "id": "internxt-annual",
     "title": "Internxt - Get a discount on any Internxt annual plans",
     "description": "Meta description: Get a special offer for any Internxt annual plan. All plans include private cloud storage, VPN, and Antivirus."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt ZeroGPT AI Checker - Free AI Checker Tool",
+    "description": "Internxt ZeroGPT AI checker. Scan content to check if it’s been written by ChatGPT, Gemini, or other AI platforms. Try now for free!"
   }
 ]

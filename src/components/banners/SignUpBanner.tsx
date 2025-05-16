@@ -13,10 +13,10 @@ const SignUpBanner = ({
   const signUpLang = require(`../../assets/lang/${lang}/home.json`);
 
   return (
-    <section className="flex w-full max-w-[877px] overflow-hidden bg-gradient-to-br from-blue-20 to-white">
+    <section className="flex w-full max-w-[977px] overflow-hidden bg-gradient-to-br from-blue-20 to-white">
       <div className="flex w-full flex-row items-center justify-center md:w-max">
-        <div className="mt-11 mb-11 flex w-full max-w-[390px] flex-col items-center justify-center px-5 md:ml-11 md:items-start md:space-y-8 md:px-0 lg:max-w-[490px]">
-          <div className="flex w-full max-w-[400px] items-start text-left">
+        <div className="mb-11 mt-11 flex w-full max-w-[390px] flex-col items-center justify-center px-5 md:ml-11 md:items-start md:space-y-8 md:px-0 lg:max-w-[490px]">
+          <div className="flex w-full max-w-[500px] items-start text-left">
             <p className=" text-center text-4xl font-semibold md:text-left">
               {changeTextOrder ? (
                 <>

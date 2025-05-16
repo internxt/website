@@ -1,0 +1,174 @@
+{
+  "HeroSection": {
+    "mainTitle": "KI-Detektor",
+    "subtitle": "Scannen Sie KI-generierte Inhalte mit unserem kostenlosen KI-Detektor-Tool.",
+    "title": "Fügen Sie hier Ihren Text ein oder schreiben Sie ihn",
+    "placeholder": "Geben Sie mindestens 250 Zeichen ein, um den Scan zu starten",
+    "maxChars": "Zeichen",
+    "minChars": "Geben Sie mindestens",
+    "uploadButton": "Hochladen",
+    "scanButton": "Auf KI prüfen",
+    "scanningText": "Überprüfung läuft...",
+    "detectionScore": "Erkennungsergebnis",
+    "humanGeneratedText": "Menschlich erstellter Text",
+    "error": {
+      "minChars": "Der Text muss mindestens 250 Zeichen lang sein",
+      "apiError": "Beim Überprüfen des Textes ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+      "invalidPdf": "Ungültige PDF-Datei",
+      "emptyPdf": "PDF-Datei ist leer",
+      "emptyFile": "Datei ist leer",
+      "fileReadError": "Fehler beim Lesen der Datei",
+      "unsupportedFile": "Nicht unterstützter Dateityp"
+    }
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Kostenloser KI-Detektor von Internxt",
+    "aiCheckerDescription": "Erkennen Sie KI-Inhalte von ChatGPT oder anderen KI-Texten mit unserem kostenlosen KI-Detektor. Laden Sie eine Datei hoch oder fügen Sie Ihren Text ein, um sofortige Ergebnisse zu erhalten, damit Sie Änderungen vor der Veröffentlichung oder Einreichung Ihres Inhalts vornehmen können.\n\nWir speichern keine Inhalte oder Informationen in unserem KI-Detektor. Unser Tool sucht nur nach KI-generierten Mustern, ohne die von Ihnen gesendeten Inhalte zu speichern. So bleiben Ihre Inhalte sicher und privat vor KI-Tools, die Ihre Daten zum Trainieren ihrer eigenen Modelle verwenden.",
+    "aiDetectorTitle": "ZeroGPT KI-Detektor für ChatGPT, Gemini, CoPilot und andere",
+    "aiDetectorDescription": "Das KI-Detektor-Tool von Internxt scannt schnell und präzise Inhalte, die von beliebten KI-Tools wie ChatGPT und Gemini generiert wurden. Nach dem Scan erhalten Sie Feedback und eine Unterscheidung zwischen menschlich und KI-generiertem Text sowie eine detaillierte Analyse.\n\nUnser fortschrittlicher und kostenloser KI-Detektor erkennt die neuesten KI-Modelle wie GPT-4 mit hoher Genauigkeit. Beachten Sie, dass kein KI-Checker 100 % genau ist, da sich KI-Sprachmodelle ständig weiterentwickeln, aber wir bieten Ihnen die bestmögliche und fortschrittlichste Analyse."
+  },
+  "CtaSection": {
+    "title": "Überprüfen und erkennen Sie KI-Text",
+    "description": "Stellen Sie sicher, dass Ihr Text einzigartig und original ist",
+    "cta": "Internxt erhalten"
+  },
+  "CtaSection2": {
+    "title": "Lassen Sie nicht zu, dass KI Ihre Geschichte schreibt",
+    "description": "Finden Sie KI-Text von ChatGPT, Gemini oder anderer künstlicher Intelligenz",
+    "cta": "Internxt erhalten"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wie funktioniert der KI-Detektor von Internxt?",
+        "answer": [
+          "Wenn Sie Ihren Inhalt hochladen, analysiert die Software Muster, die in KI-generierten Inhalten üblich sind, wie Vokabular, Struktur und Grammatik. Diese Modelle sind darauf trainiert, Unterschiede zwischen KI und menschlichem Schreiben zu erkennen."
+        ]
+      },
+      {
+        "question": "Wie genau ist der KI-Textdetektor?",
+        "answer": [
+          "Unsere fortschrittlichen Algorithmen können von KI geschriebene Inhalte mit hoher Erfolgsquote erkennen, aber kein KI-Detektor kann KI-Text mit 100 % Genauigkeit erkennen."
+        ]
+      },
+      {
+        "question": "Kann das KI-Erkennungstool von Internxt Verbesserungen vorschlagen?",
+        "answer": [
+          "Nein, es kann nur KI-geschriebenen Inhalt hervorheben und anzeigen, wie viel Text wahrscheinlich von einer echten Person geschrieben wurde."
+        ]
+      },
+      {
+        "question": "Warum Internxt-Detektor gegenüber anderen KI-Erkennungstools wählen?",
+        "answer": [
+          "Das kostenlose KI-Erkennungstool von Internxt ermöglicht es Ihnen, Inhalte zu scannen, die weder gespeichert noch mit anderen Unternehmen geteilt werden oder zum Trainieren von KI-Sprachmodellen verwendet werden, was es zu einer wertvollen Ressource macht, um KI zu überprüfen, ohne Ihre Privatsphäre zu gefährden."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Probieren Sie die kostenlosen Online-Sicherheitstools von Internxt aus:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Passwortstärke-Prüfer",
+        "description": "Jetzt prüfen"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte-Einheiten-Umrechner",
+        "description": "Jetzt umrechnen"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Kostenlose temporäre E-Mail",
+        "width": 95,
+        "description": "Jetzt mailen"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Kostenloser Passwortgenerator",
+        "width": 124,
+        "description": "Jetzt generieren"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Internxt KI-Detektor für den täglichen, schulischen oder beruflichen Gebrauch",
+    "description": "Was auch immer Ihre Bedürfnisse sind, unser KI-Detektionstool liefert sofortige und sehr genaue Ergebnisse, damit Sie KI-Muster schnell scannen und Ihren Inhalt bei Bedarf anpassen können.",
+    "info": [
+      {
+        "title": "Studierende",
+        "description": [
+          "Der kostenlose KI-Detektor von Internxt ist perfekt für Studierende, die Arbeiten einreichen müssen, die den Richtlinien ihrer Schule oder Universität entsprechen sollen. Sie können Inhalte erkennen, die mit ChatGPT oder anderen Modellen erstellt wurden, und diese überprüfen."
+        ]
+      },
+      {
+        "title": "Lehrkräfte",
+        "description": [
+          "Immer mehr Studierende verlassen sich auf KI-Tools, um ihre Aufgaben zu verfassen. Mit unserem KI-Prüftool können Sie die Arbeiten Ihrer Studierenden überprüfen, um sicherzustellen, dass Sie diese auf KI-generierten Text analysieren können."
+        ]
+      },
+      {
+        "title": "Journalisten",
+        "description": [
+          "Um die Verbreitung von Fehlinformationen durch KI-Inhalte zu vermeiden, sollten Journalisten authentische, objektive und vertrauenswürdige Geschichten liefern. KI-Detektoren helfen, den Ruf eines Medienunternehmens zu wahren, indem sie Nachrichten aus einer zuverlässigen Quelle und nicht von einem Roboter liefern."
+        ]
+      },
+      {
+        "title": "Blogger",
+        "description": [
+          "Unser KI-Prüfer hilft Ihnen, einzigartige und hochwertige Inhalte zu erstellen, die Ihr Publikum ansprechen, den Traffic auf Ihre Website lenken und Ihnen helfen, Suchmaschinenstrafen zu vermeiden. Sie können auch Inhalte externer Redakteure überprüfen, bevor Sie sie auf Ihrer Website veröffentlichen."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Warum den KI-Detektor von Internxt verwenden?",
+    "description": "Sie können unseren KI-Textdetektor mit voller Zuversicht nutzen, dass Ihre Inhalte privat bleiben und Sie schnelle und zuverlässige Ergebnisse für Ihre Veröffentlichungen oder Einreichungen erhalten.",
+    "info": [
+      {
+        "title": "Fortschrittliche Algorithmen",
+        "description": [
+          "Unser KI-Erkennungstool verwendet fortschrittliche Algorithmen, die nach Mustern suchen, die von ChatGPT, Gemini und anderen Tools verwendet werden, um KI-geschriebene Inhalte zu finden. Wenn Sie Ihren Inhalt hochladen oder einfügen, können die Algorithmen zwischen menschlich geschriebenen und KI-generierten Inhalten unterscheiden."
+        ]
+      },
+      {
+        "title": "Unbegrenzte Scans",
+        "description": [
+          "Führen Sie kostenlose KI-Textscans durch, wann immer Sie möchten. Wir verstecken diesen Service nicht hinter einer Paywall; wir bieten ein sicheres und privates KI-Erkennungstool, das immer kostenlos verfügbar ist, wenn Sie Ihre eigene oder fremde Arbeit authentifizieren müssen."
+        ]
+      },
+      {
+        "title": "Garantierte Privatsphäre",
+        "description": [
+          "Alles, was Sie in unser KI-Detektor-Tool hochladen, ist vertraulich und privat. Nichts, was Sie in den Service einfügen, wird gespeichert, geteilt oder zum Trainieren von KI-Sprachmodellen verwendet. Sie können sicher sein, dass Ihre Inhalte geschützt sind."
+        ]
+      },
+      {
+        "title": "Mehrsprachige Unterstützung",
+        "description": [
+          "Wir unterstützen mehrere Sprachen, um Ihnen zu helfen, Inhalte mit hoher Genauigkeit zu überprüfen und zu analysieren. So können Sie KI-Inhalte unabhängig von der Sprache erkennen und anpassen – für einen konsistenten und zuverlässigen KI-Detektor."
+        ]
+      },
+      {
+        "title": "Sofortige Antworten",
+        "description": [
+          "Laden Sie Ihren Text hoch, kopieren oder fügen Sie ihn in unser Tool ein, und wir scannen den Inhalt sofort auf KI-Text. Dieser Vorgang dauert nur wenige Sekunden, und Sie erhalten eine Rückmeldung, ob KI-generierter Text gefunden wurde."
+        ]
+      },
+      {
+        "title": "Keine Registrierung",
+        "description": [
+          "Unser KI-Detektor ist 100 % kostenlos und es gibt keine Nutzungsbeschränkungen. Sie müssen kein Konto erstellen oder ein Premium-Abonnement abschließen – laden Sie einfach den Inhalt hoch, den Sie analysieren möchten, und los geht's!"
+        ]
+      }
+    ]
+  }
+}

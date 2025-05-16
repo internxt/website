@@ -1,0 +1,174 @@
+{
+  "HeroSection": {
+    "mainTitle": "Rilevatore di IA",
+    "subtitle": "Scansiona contenuti generati dall'intelligenza artificiale con il nostro strumento gratuito di rilevamento IA.",
+    "title": "Incolla o scrivi qui il tuo testo",
+    "placeholder": "Inserisci almeno 250 caratteri per iniziare la scansione",
+    "maxChars": "caratteri",
+    "minChars": "Inserisci almeno",
+    "uploadButton": "Carica",
+    "scanButton": "Scansiona per IA",
+    "scanningText": "Verifica in corso...",
+    "detectionScore": "Punteggio di rilevamento",
+    "humanGeneratedText": "Testo generato da umano",
+    "error": {
+      "minChars": "Il testo deve contenere almeno 250 caratteri",
+      "apiError": "Si è verificato un errore durante la verifica del testo. Riprova.",
+      "invalidPdf": "File PDF non valido",
+      "emptyPdf": "Il file PDF è vuoto",
+      "emptyFile": "Il file è vuoto",
+      "fileReadError": "Errore nella lettura del file",
+      "unsupportedFile": "Tipo di file non supportato"
+    }
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Rilevatore di IA gratuito di Internxt",
+    "aiCheckerDescription": "Cerca contenuti IA da ChatGPT o altri tipi di testo generato dall'intelligenza artificiale con il nostro rilevatore di IA gratuito. Carica un file o incolla il tuo testo per ottenere risultati immediati, così puoi apportare modifiche prima di pubblicare o inviare il tuo contenuto.\n\nNon memorizziamo alcun contenuto o informazione nel nostro rilevatore di IA. Il nostro strumento cerca solo schemi generati dall'IA senza salvare il contenuto che invii. In questo modo, manteniamo il tuo contenuto sicuro e privato dalle IA che utilizzano i tuoi dati per addestrare i propri modelli di apprendimento automatico.",
+    "aiDetectorTitle": "ZeroGPT rilevatore di IA per ChatGPT, Gemini, CoPilot e altri",
+    "aiDetectorDescription": "Lo strumento di rilevamento IA di Internxt scansiona con precisione e rapidità i contenuti generati da strumenti di intelligenza artificiale popolari, come ChatGPT e Gemini, tra gli altri. Una volta scansionato, fornisce feedback e distingue tra testo generato da umani e testo generato da IA, offrendoti un'analisi dettagliata del testo.\n\nIl nostro rilevatore di IA avanzato e gratuito rileva i modelli IA più recenti, come GPT-4, con alta precisione. Tieni presente che nessun rilevatore di IA è preciso al 100% a causa dello sviluppo dei modelli linguistici, ma cerchiamo di offrirti un'analisi il più avanzata e precisa possibile."
+  },
+  "CtaSection": {
+    "title": "Verifica e rileva testo IA",
+    "description": "Assicurati che il tuo testo sia unico e originale",
+    "cta": "Ottieni Internxt"
+  },
+  "CtaSection2": {
+    "title": "Non lasciare che l'IA scriva la tua storia",
+    "description": "Trova testo IA da ChatGPT, Gemini o altra intelligenza artificiale",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Come funziona il rilevatore di IA di Internxt?",
+        "answer": [
+          "Quando carichi il tuo contenuto, il software analizza schemi comuni nei contenuti generati dall'IA, come vocabolario, struttura e grammatica. Questi modelli di apprendimento sono addestrati per rilevare le differenze tra IA e scrittura umana."
+        ]
+      },
+      {
+        "question": "Quanto è preciso il rilevatore di testo IA?",
+        "answer": [
+          "I nostri algoritmi avanzati possono rilevare contenuti scritti da IA con un alto livello di successo, ma nessuno strumento di rilevamento IA può identificare testo IA con una precisione del 100%."
+        ]
+      },
+      {
+        "question": "Lo strumento di rilevamento IA di Internxt può suggerire miglioramenti?",
+        "answer": [
+          "No, può solo evidenziare contenuti scritti da IA e mostrare la quantità di testo che probabilmente è stato scritto da una persona reale."
+        ]
+      },
+      {
+        "question": "Perché scegliere il rilevatore Internxt rispetto ad altri strumenti di rilevamento IA",
+        "answer": [
+          "Lo strumento gratuito di rilevamento IA di Internxt ti permette di scansionare contenuti che non vengono memorizzati né condivisi con altre aziende, né utilizzati per addestrare modelli linguistici di IA, rendendolo una risorsa preziosa per verificare l'IA senza compromettere la tua privacy."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Prova gli strumenti di sicurezza online gratuiti di Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Verificatore di robustezza password",
+        "description": "Scansiona ora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertitore unità byte",
+        "description": "Converti ora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Email temporanea gratuita",
+        "width": 95,
+        "description": "Invia ora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Generatore di password gratuito",
+        "width": 124,
+        "description": "Genera ora"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Rilevatore di IA di Internxt per uso quotidiano, educativo o lavorativo",
+    "description": "Qualunque siano le tue esigenze, il nostro strumento di rilevamento IA fornisce risultati istantanei e molto precisi, così puoi scansionare rapidamente schemi IA e modificare il tuo contenuto secondo necessità.",
+    "info": [
+      {
+        "title": "Studenti",
+        "description": [
+          "Il rilevatore di IA gratuito di Internxt è perfetto per studenti che devono inviare lavori conformi alle linee guida della loro scuola o università. Possono identificare contenuti creati da ChatGPT o altri modelli che potrebbero dover essere verificati."
+        ]
+      },
+      {
+        "title": "Insegnanti",
+        "description": [
+          "Sempre più studenti si affidano a strumenti di intelligenza artificiale per aiutare o redigere i loro compiti. Con il nostro strumento di verifica IA, puoi controllare il lavoro dei tuoi studenti per assicurarti che sia privo di testo generato da IA."
+        ]
+      },
+      {
+        "title": "Giornalisti",
+        "description": [
+          "Per evitare la diffusione di informazioni errate da contenuti IA, i giornalisti devono impegnarsi a offrire storie autentiche, obiettive e affidabili. I rilevatori di IA aiutano a mantenere la reputazione di un'azienda di media fornendo notizie da una fonte affidabile e non da un robot."
+        ]
+      },
+      {
+        "title": "Blogger",
+        "description": [
+          "Il nostro verificatore di IA ti aiuta a creare contenuti unici e di alta qualità che attraggono il tuo pubblico, portano traffico al tuo sito web e ti aiutano a evitare penalizzazioni nei motori di ricerca. Puoi anche verificare i contenuti di editor esterni prima di pubblicarli sul tuo sito."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Perché usare il rilevatore di IA di Internxt",
+    "description": "Puoi utilizzare il nostro rilevatore di testo IA con la massima fiducia che il tuo contenuto rimarrà privato e otterrai risultati rapidi e affidabili per pubblicare o inviare i tuoi contenuti.",
+    "info": [
+      {
+        "title": "Algoritmi avanzati",
+        "description": [
+          "Il nostro strumento di rilevamento IA utilizza algoritmi avanzati che cercano schemi comuni utilizzati da ChatGPT, Gemini e altri strumenti per trovare contenuti scritti da IA. Quando carichi o incolli il tuo contenuto, gli algoritmi possono distinguere tra contenuto scritto da umani e contenuto generato da IA."
+        ]
+      },
+      {
+        "title": "Scansioni illimitate",
+        "description": [
+          "Esegui scansioni di testo IA gratuitamente ogni volta che ne hai bisogno. Non nascondiamo questo servizio dietro paywall; offriamo uno strumento di rilevamento IA sicuro e privato, sempre disponibile gratuitamente per autenticare il tuo lavoro o quello degli altri."
+        ]
+      },
+      {
+        "title": "Privacy garantita",
+        "description": [
+          "Tutto ciò che carichi nel nostro strumento Rilevatore di IA è confidenziale e privato. Nulla di ciò che incolli nel servizio viene memorizzato, condiviso o utilizzato per addestrare modelli linguistici di IA. Puoi stare tranquillo sapendo che il tuo contenuto è al sicuro."
+        ]
+      },
+      {
+        "title": "Supporto multilingue",
+        "description": [
+          "Supportiamo diverse lingue per aiutarti a revisionare e analizzare i contenuti con alta precisione. Questo facilita la rilevazione e la modifica dei contenuti IA, indipendentemente dalla lingua, per ottenere un rilevatore IA coerente e affidabile."
+        ]
+      },
+      {
+        "title": "Risposte istantanee",
+        "description": [
+          "Carica, copia o incolla il tuo testo nel nostro strumento e scansioneremo istantaneamente il contenuto alla ricerca di testo IA. Questo processo richiede solo pochi secondi e, una volta completato, riceverai una risposta sul contenuto e se è stato trovato testo generato da IA."
+        ]
+      },
+      {
+        "title": "Nessuna registrazione",
+        "description": [
+          "Il nostro rilevatore di IA è completamente gratuito e senza limiti di utilizzo. Non è necessario creare un account o abbonamenti premium, basta caricare o incollare il contenuto che desideri analizzare, e il gioco è fatto!"
+        ]
+      }
+    ]
+  }
+}

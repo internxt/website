@@ -40,7 +40,21 @@
       "title": "VPN Chrome 擴充功能",
       "cta": "立即下載",
       "pathname": "/vpn"
+    },
+    {
+      "title": "暗網監控",
+      "cta": "立即檢查",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "AI 偵測器",
+      "cta": "立即檢查",
+      "pathname": "/ai-detector"
+    },
+    {
+      "title": "移除中繼資料",
+      "cta": "立即移除",
+      "pathname": "/metadata-remover"
     }
   ]
 }
-
