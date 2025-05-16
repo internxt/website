@@ -97,7 +97,7 @@ const PartnerDiscount = ({
                     </span>
                   </p>
                 </div>
-                <p className="text-md pr-2 text-center text-gray-80 lg:text-left lg:text-lg">
+                <p className="text-md  text-center text-gray-80 lg:text-left lg:text-lg">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
