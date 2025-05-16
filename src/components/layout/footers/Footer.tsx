@@ -473,9 +473,6 @@ export default function Footer({
                       className=" items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.privateCloud}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link
                       href="/cloud-storage-backup-solutions"
@@ -484,15 +481,9 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudBakcup}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.features.GDPRCloud}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link
                       href="/cloud-storage-for-photos"
@@ -501,9 +492,6 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudPhotos}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                   </div>
                 </div>
