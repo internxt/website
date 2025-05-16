@@ -28,7 +28,7 @@ export const HeroSection = ({
       <HeroSectionSafeArea>
         <div className={`flex w-full flex-col items-center lg:flex-row lg:justify-between`}>
           <div className="flex max-w-[800px] flex-col">{TextComponent}</div>
-          <div className="flex flex-col items-center pl-20">
+          <div className="flex flex-col items-center lg:pl-20">
             {ImageComponent}
             {imageProperties && (
               <Image

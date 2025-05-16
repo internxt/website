@@ -147,7 +147,7 @@ const PartnerDiscount = ({
         FirstComponent={
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
+              <h2 className="text-4xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
               <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
             </div>
             <div className="content flex h-full w-full flex-col px-5 pt-6">
