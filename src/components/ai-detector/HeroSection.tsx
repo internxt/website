@@ -6,8 +6,7 @@ import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
-import { PDFDocument } from 'pdf-lib';
-const ZEROGPT_API_KEY = process.env.NEXT_PUBLIC_ZEROGPT_API_KEY;
+import pdfToText from 'react-pdftotext';
 
 interface HeroSectionProps {
   textContent: AiDetectorText['HeroSection'];
@@ -36,32 +35,30 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
     try {
       if (file.type === 'application/pdf') {
-        // Handle PDF files
-        const arrayBuffer = await file.arrayBuffer();
-        const pdfDoc = await PDFDocument.load(arrayBuffer);
-        const pages = pdfDoc.getPages();
-        let extractedText = '';
-
-        for (const page of pages) {
-          const text = await page.getText();
-          extractedText += text + '\n';
-        }
-
-        setText(extractedText);
+        // Use react-pdftotext to extract text from PDF
+        pdfToText(file)
+          .then((text: string) => {
+            setText(text);
+            setDetectionScore(null);
+            setError(null);
+          })
+          .catch((err: any) => {
+            setError(textContent.error.fileReadError);
+            console.error('Error reading PDF:', err);
+          });
       } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
         // Handle text files
         const reader = new FileReader();
         reader.onload = (event) => {
           const fileText = event.target?.result as string;
           setText(fileText);
+          setDetectionScore(null);
+          setError(null);
         };
         reader.readAsText(file);
       } else {
         setError(textContent.error.unsupportedFile);
       }
-
-      setDetectionScore(null);
-      setError(null);
     } catch (err) {
       setError(textContent.error.fileReadError);
       console.error('Error reading file:', err);
@@ -109,10 +106,10 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center bg-white py-20 md:py-12">
-      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-white ">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10 pt-20 ">
         <div className="flex w-full flex-col items-center justify-center space-y-6 text-center ">
-          <p className="text-6xl font-semibold text-gray-100 lg:text-5xl">{textContent.mainTitle}</p>
+          <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
           <div className="flex flex-col space-y-6 lg:max-w-[800px]">
             {textContent.subtitle && <p className="font-regular text-xl text-gray-80">{textContent.subtitle}</p>}
           </div>

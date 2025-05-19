@@ -15,12 +15,13 @@ import {
   Files,
   Fingerprint,
   FileLock,
-  ImageSquare,
-  ShareNetwork,
-  Infinity as InfinityIcon,
   LockKey,
+  Student,
+  Briefcase,
+  MicrophoneStage,
+  Pen,
+  FileMagnifyingGlass,
 } from '@phosphor-icons/react';
-import { Detective } from '@phosphor-icons/react';
 import { getImage } from '@/lib/getImage';
 import { ShieldStar } from '@phosphor-icons/react';
 import FeaturesSliderImg from '@/components/ai-detector/FeatureSliderImg';
@@ -38,7 +39,7 @@ const Scan = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'zerogpt-ai-checker');
   const CTA_URL = `/pricing`;
   const cardInfo = [
-    { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },
+    { icon: FileMagnifyingGlass, ...langJson.FeaturesSlider.info[0] },
     { icon: LockKey, ...langJson.FeaturesSlider.info[1] },
     { icon: ShieldStar, ...langJson.FeaturesSlider.info[2] },
     { icon: Files, ...langJson.FeaturesSlider.info[3] },
@@ -47,22 +48,22 @@ const Scan = ({
   ];
   const cardInfoImg = [
     {
-      icon: ImageSquare,
+      icon: Student,
       ...langJson.FeaturesSliderImg.info[0],
       image: getImage('/images/AI_detector/students.webp'),
     },
     {
-      icon: ShieldStar,
+      icon: Briefcase,
       ...langJson.FeaturesSliderImg.info[1],
       image: getImage('/images/AI_detector/educators.webp'),
     },
     {
-      icon: Detective,
+      icon: MicrophoneStage,
       ...langJson.FeaturesSliderImg.info[2],
       image: getImage('/images/AI_detector/journalists.webp'),
     },
     {
-      icon: ShareNetwork,
+      icon: Pen,
       ...langJson.FeaturesSliderImg.info[3],
       image: getImage('/images/AI_detector/bloggers.webp'),
     },
