@@ -222,8 +222,8 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 100 Benutzern",
-        "1 benutzerdefinierte E-Mail-Adresse pro Benutzer"
+        "Meet ",
+        "Mail "
       ],
       "2TB": [
         "2TB Speicher pro Benutzer",
@@ -236,8 +236,8 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 100 Benutzern ",
-        "2 benutzerdefinierte E-Mail-Adresse pro Benutzer"
+        "Meet ",
+        "Mail "
       ]
     }
   }

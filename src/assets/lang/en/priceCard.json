@@ -219,8 +219,8 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet (up to 10 participants)",
-        "1 custom email address/user"
+        "Meet ",
+        "Mail "
       ],
       "2TB": [
         "2TB storage/user",
@@ -233,8 +233,8 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet (up to 100 participants)",
-        "2 custom email address/user"
+        "Meet ",
+        "Mail "
       ]
     }
   }

@@ -125,7 +125,7 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'h-[830px]' : showPromo && isLifetime ? 'h-[1000px]' : 'h-[900px]'
+        isBusiness ? 'h-[750px]' : showPromo && isLifetime ? 'h-[1010px]' : 'h-[900px]'
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
@@ -233,15 +233,29 @@ export const PriceCard = ({
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                size: 24,
-                className: 'text-primary',
-              })}
-              <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
-              {index > (isBusiness ? 9 : 8) ? (
-                <span className="rounded-md bg-orange/10 px-1 text-center text-orange">{contentText.commingSoon}</span>
-              ) : null}
+            <div
+              className={`flex flex-row items-start space-x-2 px-6 first:font-semibold ${
+                isBusiness && index === 6 ? 'hidden' : ''
+              }`}
+              key={`${feature}-${index}`}
+            >
+              {React.createElement(
+                iconsFeatures[
+                  isBusiness && index >= 9 ? (index + 2) % iconsFeatures.length : index % iconsFeatures.length
+                ],
+                {
+                  size: 24,
+                  className: 'text-primary',
+                },
+              )}
+              <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                {feature}
+                {index > 9 && (
+                  <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                    {contentText.commingSoon}
+                  </span>
+                )}
+              </span>
             </div>
           ))}
         </div>
