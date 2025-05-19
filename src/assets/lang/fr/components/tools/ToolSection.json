@@ -50,11 +50,6 @@
       "title": "Détecteur d'IA",
       "cta": "Vérifier maintenant",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Suppression des Métadonnées",
-      "cta": "Supprimer maintenant",
-      "pathname": "/metadata-remover"
     }
   ]
 }

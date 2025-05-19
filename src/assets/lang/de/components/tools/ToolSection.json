@@ -50,11 +50,6 @@
       "title": "KI-Prüfer",
       "cta": "Jetzt prüfen",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Metadaten-Entferner",
-      "cta": "Jetzt entfernen",
-      "pathname": "/metadata-remover"
     }
   ]
 }

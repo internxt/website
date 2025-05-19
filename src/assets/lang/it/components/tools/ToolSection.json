@@ -50,11 +50,6 @@
       "title": "Rilevatore AI",
       "cta": "Verifica ora",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Rimozione Metadati",
-      "cta": "Rimuovi ora",
-      "pathname": "/metadata-remover"
     }
   ]
 }

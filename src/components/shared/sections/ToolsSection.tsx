@@ -73,12 +73,6 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
       cta: textContent.toolsCard[8].cta,
       pathname: textContent.toolsCard[8].pathname,
     },
-    {
-      icon: Broom,
-      title: textContent.toolsCard[9].title,
-      cta: textContent.toolsCard[9].cta,
-      pathname: textContent.toolsCard[9].pathname,
-    },
   ];
   const filteredCards = cards.filter((item) => item.pathname !== pathname);
 

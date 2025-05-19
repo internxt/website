@@ -50,11 +50,6 @@
       "title": "AI-детектор",
       "cta": "Проверить сейчас",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Удаление метаданных",
-      "cta": "Удалить сейчас",
-      "pathname": "/metadata-remover"
     }
   ]
 }

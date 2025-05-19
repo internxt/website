@@ -50,11 +50,6 @@
       "title": "Detector de IA",
       "cta": "Comprobar ahora",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Eliminador de metadatos",
-      "cta": "Eliminar ahora",
-      "pathname": "/metadata-remover"
     }
   ]
 }

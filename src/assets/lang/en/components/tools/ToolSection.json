@@ -50,11 +50,6 @@
       "title": "AI checker",
       "cta": "Check now",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "Metadata Remover",
-      "cta": "Remove now",
-      "pathname": "/metadata-remover"
     }
   ]
 }

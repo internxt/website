@@ -50,11 +50,6 @@
       "title": "AI 偵測器",
       "cta": "立即檢查",
       "pathname": "/ai-detector"
-    },
-    {
-      "title": "移除中繼資料",
-      "cta": "立即移除",
-      "pathname": "/metadata-remover"
     }
   ]
 }
