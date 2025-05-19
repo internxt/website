@@ -50,8 +50,8 @@
         "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+        "title": "Next-generation security",
+        "description": "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data."
       },
       {
         "title": "Open source and transparent",

@@ -94,7 +94,7 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 }
               />
             </div>
-            <div id="incontent_3" className="flex w-full max-w-[1000px] justify-center"></div>
+
             {/* Free online scanner */}
             <div className="flex flex-col justify-center space-y-5 py-7 text-left md:max-w-3xl md:py-0 md:text-center">
               <p className=" text-4xl font-semibold">{textContent.freeOnlineScanner.title}</p>
@@ -127,7 +127,23 @@ const FeaturesSection = ({ textContent, bannerText, lang }) => {
                 />
               </div>
             </div>
-            <div id="incontent_4" className="flex w-full max-w-[1000px] justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -1,0 +1,104 @@
+{
+  "HeroSection": {
+    "header": "Internxt特別優惠",
+    "title": {
+      "normalText": "雲端儲存 ",
+      "blueText": "最安全"
+    },
+    "description": {
+      "normal": "加入Internxt，Google Drive的領先替代方案，享受 ",
+      "blue": "82% 折扣 ",
+      "normal1": "適用於所有年度和終身方案。"
+    },
+    "cta": "選擇您的方案"
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "個人方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
+      "lifetimeCampaign": {
+        "blueText": "50% 折扣",
+        "normalText": "適用於我們所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次付費，永久享有隱私與安全",
+    "planDescription": "所有Internxt方案皆可完整使用我們的私有解決方案套件，採用最新的安全技術：Internxt Drive、Send、VPN、防毒軟體、Meet和Mail。",
+    "businessDescription": "我們正在開發專為保護您的企業、員工並確保獲利能力設計的全新Internxt企業方案。",
+    "businessDescription2": "利用Internxt加密雲端儲存方案保障企業資料安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt免費版",
+      "description": "免費獲得1GB加密雲端儲存空間",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過審計",
+      "anonymousAccount": "匿名帳號創建",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    }
+  },
+  "FeatureSection": {
+    "title": "為何選擇Internxt保護您的檔案？",
+    "description": "Internxt讓您重新掌控隱私。不同於傳統雲端儲存，我們保證只有您持有加密資料的鑰匙，且不會儲存或販售您的資料給第三方。我們採取一切必要措施確保您的資訊安全。",
+    "cards": [
+      {
+        "title": "資料加密與保護",
+        "description": "我們不儲存密碼或用戶資訊，您的所有資料均已加密。Internxt賦予您對檔案的完全控制權。您的資料是您的責任，保護它們是我們的職責。"
+      },
+      {
+        "title": "無懈可擊的安全性",
+        "description": "Internxt是唯一自動使用後量子與端對端加密技術保護您的檔案的雲端儲存，意味著只有您能存取您的資料。"
+      },
+      {
+        "title": "開源透明",
+        "description": "我們為自己的工作感到自豪，程式碼公開於GitHub，任何人皆可審查、審計與驗證。除您的資料外，我們沒有任何隱瞞。"
+      },
+      {
+        "title": "獨立驗證",
+        "description": "我們完全符合GDPR且安全可靠，但請不要只聽我們說。Internxt已通過歐洲領先的安全測試公司Securitum的獨立審計與驗證。"
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "成千上萬的用戶正在放棄iCloud、Google Drive與Dropbox，選擇",
+      "blue": "最安全的雲端儲存 — Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "FixThePhoto.com記者",
+        "review": "我選擇Internxt因為它的零知識技術、後量子加密和開源程式碼。現在只有我能存取我的檔案和資訊，所有資料都在線上受到保護。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "GetApp評論",
+        "review": "Internxt是一個私密且安全的雲端儲存服務。介面簡潔易用，客戶支援良好，是一個極佳的選擇。"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Trustpilot評論",
+        "review": "Internxt是一個私密且安全的雲端儲存服務。介面簡潔易用，客戶支援良好，是一個極佳的選擇。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密且安全的儲存",
+    "cta": "選擇您的方案"
+  },
+  "CtaSection1": {
+    "title": "世界上最私密的雲端儲存",
+    "description": "獲得82%獨家優惠，享受一年安全、私密和加密的儲存服務。",
+    "cta": "選擇您的方案"
+  }
+}

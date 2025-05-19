@@ -44,7 +44,7 @@ const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className=" relative flex flex-row items-start px-5 pb-8 pt-32">
+    <section className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32">
       <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
@@ -62,8 +62,8 @@ const HeroSection = ({ textContent, lang }) => {
           }
         />
       </div>
-      <div className="flex flex-col items-center justify-center pb-20">
-        <div className="flex w-full min-w-[700px] flex-col items-center justify-center space-y-16">
+      <div className="flex w-full flex-col items-center justify-center space-y-10  ">
+        <div className="flex flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
             <Header isToolsPage className="text-gray-100">
               {textContent.title}
@@ -97,8 +97,8 @@ const HeroSection = ({ textContent, lang }) => {
                   />
                 ))}
               </div>
-              <div className="flex flex-row items-center justify-center space-x-1 text-gray-50">
-                <Info size={16} weight="bold" />
+              <div className="flex flex-row items-center justify-start space-x-3 text-gray-50">
+                <Info size={16} weight="bold" className="pt-2" />
                 <p className="text-sm">{textContent.info}</p>
               </div>
               <div className="flex w-full flex-col gap-2 md:flex-row">

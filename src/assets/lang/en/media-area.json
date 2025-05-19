@@ -53,6 +53,11 @@
       "subtitle": "Encrypt and securely send your files.",
       "description": "Share your files in any format via a password-protected link or email. Internxt’s zero-knowledge architecture maximizes the security and privacy of your files. Maintain rock-solid confidentiality of your sensitive information from the moment you hit send.",
       "cta": "Share with Internxt"
+    },
+    "vpn": {
+      "title": "Internxt VPN",
+      "description": "Internxt VPN encrypts and secures your internet connection, protecting you from data leaks, hackers, and network attacks. Keep your data private and protected from prying eyes.",
+      "cta": "Browse with VPN"
     }
   },
   "InvestorsSection": {

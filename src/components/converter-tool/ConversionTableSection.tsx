@@ -105,8 +105,8 @@ const ConversionTableSection = ({ textContent, lang }) => {
 
   return (
     <section className="bg-gray-1">
-      <div className="flex flex-col space-y-16 py-20 lg:items-center lg:justify-center">
-        <div className="flex w-full flex-col items-center justify-center">
+      <div className="flex flex-col space-y-16 py-16 lg:items-center lg:justify-center">
+        <div className="flex w-full flex-col items-center justify-center px-6">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"
@@ -165,7 +165,7 @@ const ConversionTableSection = ({ textContent, lang }) => {
             />
           </Link>
         </div>
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center px-6">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"

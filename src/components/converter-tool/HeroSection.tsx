@@ -55,7 +55,7 @@ const HeroSection = ({ textContent }) => {
   }
 
   return (
-    <section className="pt-32 pb-20">
+    <section className="pb-20 pt-32">
       <div className="mx-3 flex md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
           {/* Title and subtitle */}
@@ -168,7 +168,7 @@ const HeroSection = ({ textContent }) => {
               </div>
             </div>
             <button
-              className="absolute top-1/2 left-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 lg:rotate-0"
+              className="absolute left-1/2 top-1/2 z-20 -translate-x-1/2 -translate-y-1/2 rotate-90 cursor-pointer items-center justify-center rounded-full border border-gray-20 bg-white p-2 lg:rotate-0"
               onClick={() => {
                 setReverse(!reverse);
                 if (reverse && value1) {

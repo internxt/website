@@ -195,6 +195,14 @@ var injectScripts = function () {
           }),
             t('cookieConsentPrefs', encodeURIComponent(JSON.stringify(c)), { expires: o(365), path: '/' }),
             injectScripts();
+          if (typeof gtag === 'function') {
+            gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+              ad_user_data: 'granted',
+              ad_personalization: 'granted',
+            });
+          }
         }),
         e('body').on('click', '#cookieSettings', function () {
           e('input[name="gdprPrefItem"]:not(:disabled)').attr('data-compulsory', 'off').prop('checked', !0),
