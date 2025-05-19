@@ -220,9 +220,7 @@
         "Conformité au RGPD",
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
-        "Gérer la facturation et les paiements du compte",
-        "Meet ",
-        "Mail "
+        "Gérer la facturation et les paiements du compte"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
