@@ -35,7 +35,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
     try {
       if (file.type === 'application/pdf') {
-        // Use react-pdftotext to extract text from PDF
         pdfToText(file)
           .then((text: string) => {
             setText(text);
@@ -47,7 +46,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             console.error('Error reading PDF:', err);
           });
       } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
-        // Handle text files
         const reader = new FileReader();
         reader.onload = (event) => {
           const fileText = event.target?.result as string;
@@ -115,14 +113,13 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           </div>
         </div>
       </section>
-      <div className="w-full max-w-4xl rounded-2xl border border-[#ededf0] bg-white p-0 shadow-xl">
+      <div className="w-full max-w-4xl rounded-2xl border border-gray-10 bg-white p-0 shadow-xl">
         <div className="flex flex-col md:flex-row">
-          {/* Left: Input area */}
           <div className="flex-1 p-8">
             <label className="mb-6 block text-lg font-medium">{textContent.title}</label>
             <div>
               <textarea
-                className="placeholder-gray-400 min-h-[260px] w-full rounded-xl border-2 border-[#ededf0] bg-[#f7f7fa] p-5 text-base focus:outline-none focus:ring-2 focus:ring-blue-100"
+                className="placeholder-gray-400 min-h-[260px] w-full rounded-xl border-2 border-gray-10 bg-gray-1 p-5 text-base focus:outline-none focus:ring-2 focus:ring-blue-100"
                 placeholder={textContent.placeholder}
                 value={text}
                 onChange={handleTextChange}
@@ -132,7 +129,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               />
             </div>
             <div className="mt-4 flex flex-col items-start justify-between sm:flex-row sm:items-center">
-              <div className="text-gray-400 mb-2 flex flex-col text-[15px] leading-5 sm:mb-0">
+              <div className="mb-2 flex flex-col text-[15px] leading-5 text-gray-100 sm:mb-0">
                 <span>
                   {text.length.toLocaleString()}/{MAX_CHARS.toLocaleString()} {textContent.maxChars}
                 </span>
@@ -149,14 +146,14 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   onChange={handleFileUpload}
                 />
                 <button
-                  className="text-gray-700 rounded-lg border border-[#ededf0] bg-white px-6 py-2 text-base font-medium shadow-sm transition hover:bg-[#ededf0]"
+                  className="rounded-lg border border-gray-10 bg-white px-6 py-2 text-base font-medium text-gray-100 shadow-sm transition hover:bg-gray-10"
                   onClick={() => uploadFileRef.current?.click()}
                   type="button"
                 >
                   {textContent.uploadButton}
                 </button>
                 <button
-                  className="rounded-lg bg-[#1673ff] px-6 py-2 text-base font-semibold text-white shadow-sm transition hover:bg-[#005ae0]"
+                  className="rounded-lg bg-primary px-6 py-2 text-base font-semibold text-white shadow-sm transition hover:bg-primary-dark"
                   onClick={handleScan}
                   disabled={isScanning || text.length < MIN_CHARS}
                   type="button"
@@ -167,14 +164,13 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             </div>
             {error && <div className="text-red-500 mt-2 text-sm">{error}</div>}
           </div>
-          {/* Right: Detection score */}
           <div className="flex w-full flex-col items-center justify-center rounded-br-2xl rounded-tr-2xl bg-gray-1 p-8 md:w-[320px]">
             <div className="flex w-full flex-col items-center">
               {isScanning ? (
                 <>
                   <div className="mb-4 flex flex-col items-center">
                     <div className="loader mb-2"></div>
-                    <span className="text-gray-400 text-lg font-medium">Scanning...</span>
+                    <span className="text-lg font-medium text-gray-100">Scanning...</span>
                   </div>
                 </>
               ) : (
@@ -190,16 +186,12 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
                     {detectionScore !== null && (
                       <div
-                        className="flex h-8 items-center justify-end rounded-full bg-gray-10 pr-4 text-lg font-bold transition-all duration-500"
+                        className={[
+                          'flex h-8 items-center justify-end rounded-full pr-4 text-lg font-bold transition-all duration-500',
+                          detectionScore > 60 ? 'bg-green-1' : detectionScore > 30 ? 'bg-yellow' : 'bg-red',
+                        ].join(' ')}
                         style={{
                           width: `${detectionScore}%`,
-                          background: `linear-gradient(90deg, ${
-                            detectionScore > 60
-                              ? '#22c55e, #16a34a' // green
-                              : detectionScore > 30
-                              ? '#facc15, #eab308' // yellow
-                              : '#ef4444, #b91c1c' // red
-                          })`,
                         }}
                       ></div>
                     )}
@@ -223,19 +215,3 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 };
 
 export default HeroSection;
-
-/* Add spinner CSS at the bottom of the file or in a global CSS file */
-/*
-.loader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #1673ff;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  animation: spin 1s linear infinite;
-}
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-*/

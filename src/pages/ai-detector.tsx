@@ -27,7 +27,7 @@ import { ShieldStar } from '@phosphor-icons/react';
 import FeaturesSliderImg from '@/components/ai-detector/FeatureSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
 
-const Scan = ({
+const AIDetector = ({
   metatagsDescriptions,
   langJson,
   toolsContent,
@@ -39,12 +39,36 @@ const Scan = ({
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'zerogpt-ai-checker');
   const CTA_URL = `/pricing`;
   const cardInfo = [
-    { icon: FileMagnifyingGlass, ...langJson.FeaturesSlider.info[0] },
-    { icon: LockKey, ...langJson.FeaturesSlider.info[1] },
-    { icon: ShieldStar, ...langJson.FeaturesSlider.info[2] },
-    { icon: Files, ...langJson.FeaturesSlider.info[3] },
-    { icon: Fingerprint, ...langJson.FeaturesSlider.info[4] },
-    { icon: FileLock, ...langJson.FeaturesSlider.info[5] },
+    {
+      icon: FileMagnifyingGlass,
+      title: langJson.FeaturesSlider.info[0].title,
+      description: langJson.FeaturesSlider.info[0].description,
+    },
+    {
+      icon: LockKey,
+      title: langJson.FeaturesSlider.info[1].title,
+      description: langJson.FeaturesSlider.info[1].description,
+    },
+    {
+      icon: ShieldStar,
+      title: langJson.FeaturesSlider.info[2].title,
+      description: langJson.FeaturesSlider.info[2].description,
+    },
+    {
+      icon: Files,
+      title: langJson.FeaturesSlider.info[3].title,
+      description: langJson.FeaturesSlider.info[3].description,
+    },
+    {
+      icon: Fingerprint,
+      title: langJson.FeaturesSlider.info[4].title,
+      description: langJson.FeaturesSlider.info[4].description,
+    },
+    {
+      icon: FileLock,
+      title: langJson.FeaturesSlider.info[5].title,
+      description: langJson.FeaturesSlider.info[5].description,
+    },
   ];
   const cardInfoImg = [
     {
@@ -139,4 +163,4 @@ export async function getServerSideProps(ctx) {
   };
 }
 
-export default Scan;
+export default AIDetector;
