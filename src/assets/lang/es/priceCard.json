@@ -184,11 +184,12 @@
         "Antivirus",
         "Copias de seguridad",
         "Comparte archivos protegidos con contraseña",
+        "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Internxt Cleaner",
-        "Interxt Monitor"
+        "Limpieza y optimización de dispositivo",
+        "Monitor automático de la dark web"
       ],
       "5TB": [
         "5TB de almacenamiento",
@@ -197,11 +198,12 @@
         "Antivirus",
         "Copias de seguridad",
         "Comparte archivos protegidos con contraseña",
+        "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Internxt Cleaner",
-        "Interxt Monitor",
+        "Limpieza y optimización de dispositivo",
+        "Monitor automático de la dark web",
         "Meet",
         "Mail"
       ],

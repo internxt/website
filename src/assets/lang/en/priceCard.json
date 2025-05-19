@@ -183,11 +183,12 @@
         "Antivirus",
         "Backup your files",
         "Password-protected file sharing",
+        "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Internxt Cleaner",
-        "Interxt Monitor"
+        "Device Cleaner & Performance Booster",
+        "Automated Dark Web Monitor"
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -196,11 +197,12 @@
         "Antivirus",
         "Backup your files",
         "Password-protected file sharing",
+        "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Internxt Cleaner",
-        "Interxt Monitor",
+        "Device Cleaner & Performance Booster",
+        "Automated Dark Web Monitor",
         "Meet",
         "Mail"
       ]
