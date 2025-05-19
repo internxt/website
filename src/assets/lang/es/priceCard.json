@@ -187,8 +187,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Meet (3 participantes)",
-        "Mail (3 correos)"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "5TB de almacenamiento",
@@ -200,6 +200,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet (5 participantes)",
         "Mail (5 correos)"
       ],

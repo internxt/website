@@ -188,8 +188,8 @@
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Meet (3 Teilnehmer)",
-        "Mail (3 Adressen)"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "5TB Zero-Knowledge-verschlüsselter Speicher",
@@ -201,6 +201,8 @@
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet (5 Teilnehmer)",
         "Mail (5 Adressen)"
       ],

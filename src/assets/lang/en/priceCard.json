@@ -186,8 +186,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Meet (3 participants)",
-        "Mail (3 addresses)"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -199,6 +199,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet (5 participants)",
         "Mail (5 addresses)"
       ]

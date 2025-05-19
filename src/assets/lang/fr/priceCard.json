@@ -187,8 +187,8 @@
         "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
-        "Meet (3 participants)",
-        "Mail (3 adresses)"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "Stockage chiffré 5TB à connaissance zéro",
@@ -200,6 +200,8 @@
         "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet (5 participants)",
         "Mail (5 adresses)"
       ],

@@ -189,8 +189,8 @@
         "符合 GDPR 规定",
         "双重身份验证（2FA）",
         "支持 CLI、WebDav 和 Rclone",
-        "Meet（3 名参与者）",
-        "Mail（3 个地址）"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "5TB 零知识加密存储",
@@ -202,6 +202,8 @@
         "符合 GDPR 规定",
         "双重身份验证（2FA）",
         "支持 CLI、WebDav 和 Rclone",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet（5 名参与者）",
         "Mail（5 个地址）"
       ],

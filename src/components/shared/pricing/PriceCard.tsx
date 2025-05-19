@@ -1,7 +1,9 @@
 import {
   ArrowsClockwise,
+  Broom,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
@@ -110,6 +112,8 @@ export const PriceCard = ({
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -119,7 +123,7 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'h-[830px]' : showPromo ? 'h-[880px]' : 'h-[750px]'
+        isBusiness ? 'h-[830px]' : showPromo ? 'h-[950px]' : 'h-[850px]'
       } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div

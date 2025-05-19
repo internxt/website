@@ -188,8 +188,8 @@
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
-        "Meet (3 partecipanti)",
-        "Mail (3 indirizzi)"
+        "Internxt Cleaner",
+        "Interxt Monitor"
       ],
       "5TB": [
         "5TB di archiviazione crittografata a conoscenza zero",
@@ -201,6 +201,8 @@
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
+        "Internxt Cleaner",
+        "Interxt Monitor",
         "Meet (5 partecipanti)",
         "Mail (5 indirizzi)"
       ],
