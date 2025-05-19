@@ -48,7 +48,7 @@ const PasswordGenerator = ({
 
         <InfoSection textContent={langJson.InfoSection} bannerText={bannerText.SignUpPasswordGenerator} lang={lang} />
 
-        <ToolsSection textContent={toolsContent} lang={lang} />
+        <ToolsSection textContent={toolsContent} lang={lang} bgColor="bg-gray-1" />
 
         <CtaSection textContent={langJson.CtaSection} url={DRIVE_URL} />
 

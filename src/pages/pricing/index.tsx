@@ -50,6 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.Off704You,
     couponCodeForLifetime: PromoCodeName.StarWars,
   });
 
@@ -159,7 +160,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessSelector
           hideSwitchSelector
           popularPlanBySize="5TB"
-          showPromo={false}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}

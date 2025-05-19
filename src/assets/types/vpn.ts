@@ -15,6 +15,7 @@ export interface CtaSection {
   cta?: string;
   subtitle?: string;
   cards?: Array<CardClass | string>;
+  download?: string;
 }
 
 export interface CardClass {
@@ -37,6 +38,7 @@ export interface HeroSection {
   title: Title;
   description: string;
   cta: string;
+  download: string;
 }
 
 export interface Title {

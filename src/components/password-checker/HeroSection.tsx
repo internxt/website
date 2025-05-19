@@ -144,8 +144,8 @@ const HeroSection = ({ textContent, lang }) => {
                 />
               ))}
             </div>
-            <div className="flex flex-row items-center space-x-1 text-sm text-gray-50">
-              <Info size={16} />
+            <div className="flex flex-row items-start space-x-1 px-10 text-sm text-gray-50">
+              <Info size={16} className="pt-1" />
               <span>{textContent.subtitle3}</span>
             </div>
           </div>

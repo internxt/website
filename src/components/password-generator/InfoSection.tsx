@@ -58,7 +58,7 @@ const InfoSection = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
+      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
@@ -79,8 +79,8 @@ const InfoSection = ({
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
-        <div className="gap flex flex-row flex-wrap items-center justify-center ">
-          <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl p-10">
+        <div className="gap flex flex-row flex-wrap items-center justify-center bg-gray-1">
+          <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl px-10 pt-10">
             {cards1.map((item) => (
               <div className="1 100% flex flex-1" key={item.title}>
                 <div className="flex h-full flex-col rounded-2xl bg-white p-10">
@@ -96,7 +96,7 @@ const InfoSection = ({
             ))}
           </div>
         </div>
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center bg-gray-1">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"

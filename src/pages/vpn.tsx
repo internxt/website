@@ -58,13 +58,22 @@ const VPN = ({
               </Header>
             </div>
             <h3 className="text-center text-xl text-gray-80 lg:text-left">{textContent.HeroSection.description}</h3>
-
-            <Link
-              className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
-              href={'/pricing'}
-            >
-              {textContent.HeroSection.cta}
-            </Link>
+            <div className="flex w-full flex-col items-center space-y-4 lg:flex-row lg:items-start lg:space-x-4 lg:space-y-0">
+              <Link
+                className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+                href={'/pricing'}
+              >
+                {textContent.HeroSection.cta}
+              </Link>
+              <Link
+                className="flex w-max rounded-lg bg-primary px-5 py-3 text-xl font-medium text-white hover:bg-primary-dark"
+                href={VPN_CHROME_WEB_STORE}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {textContent.HeroSection.download}
+              </Link>
+            </div>
           </div>
         }
         ImageComponent={
@@ -110,6 +119,7 @@ const VPN = ({
       <CtaSection
         textContent={textContent.CtaSection2}
         url={VPN_CHROME_WEB_STORE}
+        target="_blank"
         customDescription={<p className="font-regular text-lg xl:text-lg">{textContent.CtaSection2.description}</p>}
       />
 

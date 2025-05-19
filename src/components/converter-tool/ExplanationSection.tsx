@@ -14,7 +14,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 pt-20 lg:px-10">
+      <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 pt-14 lg:px-10">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}

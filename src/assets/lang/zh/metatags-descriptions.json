@@ -213,5 +213,10 @@
     "id": "zerogpt-ai-checker",
     "title": "Internxt AI 检测器 - 免费 AI 文本检测工具",
     "description": "Internxt AI 检测器。免费扫描内容，检查其是否由 ChatGPT、Gemini 或其他人工智能平台生成。"
+  },
+  {
+    "id": "special-offer",
+    "title": "特别优惠 — Internxt",
+    "description": "以独家80%折扣获取 Internxt 的年度和终身计划。享受隐私和安全，提供高达10TB的存储空间。"
   }
 ]

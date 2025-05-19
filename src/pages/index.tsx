@@ -18,7 +18,6 @@ import { ComponentsInColumnSection } from '@/components/shared/components/Compon
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
@@ -44,11 +43,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.Off704You,
     couponCodeForLifetime: PromoCodeName.StarWars,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
-  const marqueeBgColor = 'bg-white';
   const cardsForFeatureSection = [
     {
       icon: ShieldCheck,
@@ -118,12 +117,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        showPromo={false}
+        showPromo
       />
-
-      <div className={`${marqueeBgColor} py-10`}>
-        <MarqueeComponent bgColor={marqueeBgColor} />
-      </div>
 
       <ComponentsInColumnSection
         FirstComponent={
