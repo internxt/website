@@ -263,7 +263,7 @@ export const HeroSection = ({ textContent, lang }) => {
           textContent={textContent}
         />
 
-        <BitdefenderBanner languageForImage={lang} isTempMail />
+        <BitdefenderBanner languageForImage={languageForImage} isTempMail />
 
         <Inbox
           textContent={textContent.inbox}
