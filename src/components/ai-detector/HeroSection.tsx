@@ -252,6 +252,3 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 };
 
 export default HeroSection;
-function pdfToText(file: File) {
-  throw new Error('Function not implemented.');
-}
