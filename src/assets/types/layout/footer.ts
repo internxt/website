@@ -99,6 +99,7 @@ export interface Tools {
   fileConverter: string;
   vpn: string;
   haveIBeenPwned: string;
+  aiDetector: string;
 }
 
 export interface Features {
