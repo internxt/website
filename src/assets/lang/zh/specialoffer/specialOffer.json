@@ -1,0 +1,104 @@
+{
+  "HeroSection": {
+    "header": "Internxt特别优惠",
+    "title": {
+      "normalText": "云存储 ",
+      "blueText": "最安全"
+    },
+    "description": {
+      "normal": "加入Internxt，Google Drive的领先替代方案，享受 ",
+      "blue": "82% 折扣 ",
+      "normal1": "适用于所有年度和终身计划。"
+    },
+    "cta": "选择您的计划"
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "个人计划",
+      "homePage": "选择适合您的计划",
+      "lifetime": "终身计划",
+      "business": "企业计划",
+      "lifetimeCampaign": {
+        "blueText": "50% 折扣",
+        "normalText": "适用于我们所有独家终身计划"
+      }
+    },
+    "lifetimeDescription": "一次支付，永久享受隐私和安全",
+    "planDescription": "所有Internxt计划均可完全访问我们的私有解决方案套件，采用最新的安全技术：Internxt Drive、Send、VPN、杀毒软件、Meet和Mail。",
+    "businessDescription": "我们正在开发专为保护您的企业、员工并确保盈利能力而设计的全新Internxt企业计划。",
+    "businessDescription2": "使用Internxt加密云存储计划保障企业数据安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt免费版",
+      "description": "免费获得1GB加密云存储空间",
+      "cta": "选择计划"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    }
+  },
+  "FeatureSection": {
+    "title": "为什么选择Internxt保护您的文件？",
+    "description": "Internxt让您重新掌控隐私。不同于传统云存储，我们保证只有您持有加密数据的密钥，我们不存储也不出售您的数据给第三方。我们采取一切必要措施确保您的信息安全。",
+    "cards": [
+      {
+        "title": "数据加密与保护",
+        "description": "我们不存储密码或用户信息，您的所有数据均已加密。Internxt赋予您对文件的完全控制权。您的数据是您的责任，保护它们是我们的职责。"
+      },
+      {
+        "title": "坚不可摧的安全",
+        "description": "Internxt是唯一自动使用后量子和端到端加密技术保护您的文件的云存储，这意味着只有您可以访问您的数据。"
+      },
+      {
+        "title": "开源透明",
+        "description": "我们为自己的工作感到自豪，代码在GitHub公开，任何人都可审查、审核和验证。除了您的数据，我们没有任何隐瞒。"
+      },
+      {
+        "title": "独立验证",
+        "description": "我们完全符合GDPR且安全可靠，但请不要只听我们说。Internxt已通过欧洲领先的安全测试公司Securitum的独立审计和验证。"
+      }
+    ]
+  },
+  "TestimonialsSection": {
+    "title": {
+      "normal": "成千上万的用户正在放弃iCloud、Google Drive和Dropbox，选择",
+      "blue": "最安全的云存储 — Internxt Drive"
+    },
+    "cards": [
+      {
+        "name": "Eva Williams",
+        "enterprise": "FixThePhoto.com记者",
+        "review": "我选择Internxt因为它的零知识技术、后量子加密和开源代码。现在只有我能访问我的文件和信息，所有数据都在线保护。"
+      },
+      {
+        "name": "Cristian M.",
+        "enterprise": "GetApp评论",
+        "review": "Internxt是一个私密且安全的云存储服务。界面简洁易用，客户支持良好，是一个极佳的选择。"
+      },
+      {
+        "name": "Josep Carrizo",
+        "enterprise": "Trustpilot评论",
+        "review": "Internxt是一个私密且安全的云存储服务。界面简洁易用，客户支持良好，是一个极佳的选择。"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "世界上最私密且安全的存储",
+    "cta": "选择您的计划"
+  },
+  "CtaSection1": {
+    "title": "世界上最私密的云存储",
+    "description": "获取82%独家优惠，享受一年安全、私密和加密的存储服务。",
+    "cta": "选择您的计划"
+  }
+}

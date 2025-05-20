@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "header": "¡Consigue tu descuento exclusivo del 82% en todos los planes anuales!",
+    "header": "¡Consigue tu descuento exclusivo del 85% en todos los planes anuales!",
     "title": {
       "normalText": "El almacenamiento en la nube ",
       "blueText": "más seguro y privado para tus archivos"
@@ -19,7 +19,7 @@
         "normalText": "all our exclusive lifetime plans"
       }
     },
-    "header": "Privacidad total con un 82% de descuento",
+    "header": "Privacidad total con un 85% de descuento",
     "lifetimeDescription": "With a one-time payment, you can get a lifetime of privacy. You'll have access to all of Internxt’s privacy-focused features and encrypted cloud storage forever.",
     "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas: Internxt Drive, Send, VPN, Antivirus, Meet y Mail.",
     "billingFrequency": {
@@ -43,7 +43,7 @@
     }
   },
   "PaymentSection": {
-    "blueTitle": "Privacidad total con un 82% de descuento",
+    "blueTitle": "Privacidad total con un 85% de descuento",
     "title": "Planes anuales",
     "description": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas: Internxt Drive, Send, VPN, Antivirus, Meet y Mail.",
     "firstFeed": "Premium customer support",

@@ -203,5 +203,17 @@
     "id": "internxt-annual",
     "title": "Internxt – Offerta speciale per i tuoi piani annuali!",
     "description": "Ottieni uno sconto su qualsiasi piano annuale di Internxt. Tutti i piani includono archiviazione cloud privata, VPN e antivirus."
+  },
+  {
+
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Rilevatore di AI - Rilevatore di testo AI gratuito",
+    "description": "Internxt Rilevatore di AI. Scansiona gratuitamente i contenuti per verificare se sono stati scritti da ChatGPT, Gemini o altre piattaforme di intelligenza artificiale."
+  },
+  {
+    "id": "special-offer",
+    "title": "Offerta speciale — Internxt",
+    "description": "Ottieni i piani annuali e a vita di Internxt con uno sconto esclusivo dell’80 %. Goditi privacy e sicurezza con fino a 10 TB di spazio di archiviazione."
+
   }
 ]

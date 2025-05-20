@@ -6,7 +6,8 @@
       "line2": "schützt dich online"
     },
     "description": "Surfe mit dem sicheren VPN von Internxt völlig frei und privat im Internet.",
-    "cta": "Hol dir deinen Plan"
+    "cta": "Hol dir deinen Plan",
+    "download": "Download"
   },
   "EncryptedVPNSection": {
     "title": "Die verschlüsselte VPN-Erweiterung von Internxt",
@@ -61,6 +62,7 @@
     "subtitle": "Die VPN-Erweiterung von Internxt nutzt schnelle und sichere Server, um sensible Daten zu verschlüsseln und zu übertragen.",
     "description": "Unsere kostenlose VPN-Erweiterung verbirgt deine IP-Adresse und schützt deine Informationen vor Datenerfassung durch Dritte.",
     "cta": "VPN herunterladen",
+    "download": "Download",
     "cards": [
       "Personalisierte Werbung vermeiden",
       "Konten anonym erstellen",

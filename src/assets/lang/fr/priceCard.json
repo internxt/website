@@ -184,11 +184,12 @@
         "Antivirus",
         "Sauvegardez vos fichiers",
         "Partage de fichiers protégé par mot de passe",
+        "Invitez, partagez et collaborez",
         "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
-        "Meet (3 participants)",
-        "Mail (3 adresses)"
+        "Nettoyage de l’appareil",
+        "Surveillance du dark web"
       ],
       "5TB": [
         "Stockage chiffré 5TB à connaissance zéro",
@@ -197,11 +198,14 @@
         "Antivirus",
         "Sauvegardez vos fichiers",
         "Partage de fichiers protégé par mot de passe",
+        " Invitez, partagez et collaborez",
         "Conformité RGPD",
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
-        "Meet (5 participants)",
-        "Mail (5 adresses)"
+        "Nettoyage de l’appareil",
+        "Surveillance du dark web",
+        "Meet",
+        "Mail"
       ],
       "10TB": []
     },
@@ -217,8 +221,8 @@
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Réunions jusqu'à 10 utilisateurs",
-        "1 adresse e-mail personnalisée/utiliateur"
+        "Nettoyage de l’appareil",
+        "Surveillance du dark web"
       ],
       "2TB": [
         "2TB de stockage/utilisateur",
@@ -231,8 +235,10 @@
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
         "Gérer la facturation et les paiements du compte",
-        "Réunions jusqu'à 100 utilisateurs ",
-        "2 adresse e-mail personnalisée/utilisateur"
+        "Nettoyage de l’appareil",
+        "Surveillance du dark web",
+        "Meet",
+        "Mail"
       ]
     }
   }

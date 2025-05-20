@@ -40,6 +40,16 @@
       "title": "Расширение VPN для Chrome",
       "cta": "Скачать сейчас",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Мониторинг Даркнета",
+      "cta": "Проверить сейчас",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "AI-детектор",
+      "cta": "Проверить сейчас",
+      "pathname": "/ai-detector"
     }
   ]
 }
