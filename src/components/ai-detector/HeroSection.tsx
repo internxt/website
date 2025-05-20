@@ -104,9 +104,9 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   return (
-    <section className="flex min-h-screen flex-col items-center justify-center bg-white ">
-      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 pb-10 pt-20 ">
-        <div className="flex w-full flex-col items-center justify-center space-y-6 text-center ">
+    <section className="relative flex flex-col  items-center justify-center pb-8 pt-32 ">
+      <section className="flex flex-col items-center justify-center space-y-6 px-2">
+        <div className="flex w-full flex-col items-center justify-center space-y-6 pb-10 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
           <div className="flex flex-col space-y-6 lg:max-w-[800px]">
             {textContent.subtitle && <p className="font-regular text-xl text-gray-80">{textContent.subtitle}</p>}
