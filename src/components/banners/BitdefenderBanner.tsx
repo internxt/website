@@ -6,16 +6,20 @@ import Image from 'next/image';
 
 interface BitdefenderBannerProps {
   languageForImage: string;
+  isTempMail?: boolean;
 }
 
-const BitdefenderBanner = ({ languageForImage }: BitdefenderBannerProps) => {
+const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerProps) => {
   const router = useRouter();
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBanner(true);
-    }, 3000);
+    const timer = setTimeout(
+      () => {
+        setShowBanner(true);
+      },
+      isTempMail ? 10000 : 3000,
+    );
 
     return () => clearTimeout(timer);
   }, []);
