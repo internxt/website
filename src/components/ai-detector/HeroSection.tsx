@@ -6,6 +6,7 @@ import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
+import pdfToText from 'react-pdftotext';
 
 interface HeroSectionProps {
   textContent: AiDetectorText['HeroSection'];
