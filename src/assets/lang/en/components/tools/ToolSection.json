@@ -40,6 +40,16 @@
       "title": "VPN Chrome Extension",
       "cta": "Download now",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Dark Web Monitor",
+      "cta": "Check now",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "AI checker",
+      "cta": "Check now",
+      "pathname": "/ai-detector"
     }
   ]
 }
