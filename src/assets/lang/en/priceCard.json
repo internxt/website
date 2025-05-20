@@ -183,11 +183,12 @@
         "Antivirus",
         "Backup your files",
         "Password-protected file sharing",
+        "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Meet (3 participants)",
-        "Mail (3 addresses)"
+        "Device Cleaner ",
+        "Dark Web Monitor"
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -196,11 +197,14 @@
         "Antivirus",
         "Backup your files",
         "Password-protected file sharing",
+        "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Meet (5 participants)",
-        "Mail (5 addresses)"
+        "Device Cleaner ",
+        "Dark Web Monitor",
+        "Meet",
+        "Mail"
       ]
     },
     "business": {
@@ -215,8 +219,8 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet (up to 10 participants)",
-        "1 custom email address/user"
+        "Device Cleaner ",
+        "Dark Web Monitor"
       ],
       "2TB": [
         "2TB storage/user",
@@ -229,8 +233,10 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Meet (up to 100 participants)",
-        "2 custom email address/user"
+        "Device Cleaner ",
+        "Dark Web Monitor",
+        "Meet ",
+        "Mail "
       ]
     }
   }

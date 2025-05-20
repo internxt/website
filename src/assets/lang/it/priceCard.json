@@ -185,11 +185,12 @@
         "Antivirus",
         "Esegui il backup dei tuoi file",
         "Condivisione di file protetta da password",
+        " Invita, condividi e collabora",
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
-        "Meet (3 partecipanti)",
-        "Mail (3 indirizzi)"
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web"
       ],
       "5TB": [
         "5TB di archiviazione crittografata a conoscenza zero",
@@ -198,11 +199,14 @@
         "Antivirus",
         "Esegui il backup dei tuoi file",
         "Condivisione di file protetta da password",
+        " Invita, condividi e collabora",
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
-        "Meet (5 partecipanti)",
-        "Mail (5 indirizzi)"
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web",
+        "Meet",
+        "Mail"
       ],
       "10TB": []
     },
@@ -218,8 +222,8 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
         "Gestisci fatturazione e pagamenti dell'account",
-        "Riunioni fino a 10 utenti ",
-        "1 indirizzo email personalizzato/utente"
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web"
       ],
       "2TB": [
         "2TB di archiviazione/utente",
@@ -232,8 +236,10 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
         "Gestisci fatturazione e pagamenti dell'account",
-        "Riunioni fino a 100 utenti",
-        "2 indirizzo email personalizzato/utente"
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web",
+        "Meet",
+        "Mail"
       ]
     }
   }
