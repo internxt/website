@@ -1,8 +1,11 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
@@ -98,9 +101,12 @@ export default function PriceCard({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -459,7 +465,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
+        <div className="flex min-h-[200px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
@@ -487,7 +493,7 @@ export default function PriceCard({
               </div>
             ))
           ) : (
-            <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
+            <div className="flex flex-col space-y-2 pt-6 lg:h-[500px]">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
                   {React.createElement(iconsFeatures[index % iconsFeatures.length], {
@@ -495,7 +501,7 @@ export default function PriceCard({
                     className: 'text-primary',
                   })}
                   <span className="text-gray-80">{feature}</span>
-                  {index > 8 ? (
+                  {index > 9 ? (
                     <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
                   ) : null}
                 </div>
