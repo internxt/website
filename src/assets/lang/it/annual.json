@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "header": "Ottieni il tuo sconto esclusivo dell'82% su tutti i piani annuali!",
+    "header": "Ottieni il tuo sconto esclusivo dell'85% su tutti i piani annuali!",
     "title": {
       "normalText": "Il cloud storage ",
       "blueText": "più sicuro e privato per i tuoi file"
@@ -19,7 +19,7 @@
         "normalText": "su tutti i nostri esclusivi piani a vita"
       }
     },
-    "header": "Privacy totale con uno sconto dell'82%",
+    "header": "Privacy totale con uno sconto dell'85%",
     "lifetimeDescription": "Con un pagamento unico, ottieni una privacy a vita. Avrai accesso per sempre a tutte le funzionalità focalizzate sulla privacy e all'archiviazione cloud crittografata di Internxt.",
     "planDescription": "Tutti i piani Internxt includono l'accesso completo al nostro pacchetto di soluzioni private: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
     "billingFrequency": {
@@ -43,7 +43,7 @@
     }
   },
   "PaymentSection": {
-    "blueTitle": "Privacy totale con uno sconto dell'82%",
+    "blueTitle": "Privacy totale con uno sconto dell'85%",
     "title": "Piani annuali",
     "description": "Tutti i piani Internxt includono l'accesso completo al nostro pacchetto di soluzioni private: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
     "firstFeed": "Supporto clienti premium",
