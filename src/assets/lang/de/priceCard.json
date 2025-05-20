@@ -189,8 +189,8 @@
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Geräte-Cleaner und Leistungs-Booster",
-        "Automatisierte Dark-Web-Überwachung"
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung"
       ],
       "5TB": [
         "5TB Zero-Knowledge-verschlüsselter Speicher",
@@ -203,8 +203,8 @@
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Geräte-Cleaner und Leistungs-Booster",
-        "Automatisierte Dark-Web-Überwachung",
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung",
         "Meet",
         "Mail"
       ],
@@ -221,7 +221,9 @@
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Kontoverwaltung für Abrechnung & Zahlungen"
+        "Kontoverwaltung für Abrechnung & Zahlungen".
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung"
       ],
       "2TB": [
         "2TB Speicher pro Benutzer",
@@ -234,8 +236,10 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meet ",
-        "Mail "
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung",
+        "Meet",
+        "Mail"
       ]
     }
   }

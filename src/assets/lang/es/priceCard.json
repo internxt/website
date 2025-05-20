@@ -188,8 +188,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Limpieza y optimización de dispositivo",
-        "Monitor automático de la dark web"
+        "Limpieza de dispositivo",
+        "Monitor de dark web"
       ],
       "5TB": [
         "5TB de almacenamiento",
@@ -202,8 +202,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Limpieza y optimización de dispositivo",
-        "Monitor automático de la dark web",
+        "Limpieza de dispositivo",
+        "Monitor de dark web",
         "Meet",
         "Mail"
       ],
@@ -222,8 +222,8 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpieza y optimización de dispositivo",
-        "Monitor automático de la dark web"
+        "Limpieza de dispositivo",
+        "Monitor de dark web"
       ],
       "2TB": [
         "2TB de almacenamiento",
@@ -237,8 +237,8 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpieza y optimización de dispositivo",
-        "Monitor automático de la dark web",
+        "Limpieza de dispositivo",
+        "Monitor de dark web",
         "Meet ",
         "Mail "
       ],

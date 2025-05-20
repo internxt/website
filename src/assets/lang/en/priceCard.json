@@ -187,8 +187,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Device Cleaner & Performance Booster",
-        "Automated Dark Web Monitor"
+        "Device Cleaner ",
+        "Dark Web Monitor"
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -201,8 +201,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Device Cleaner & Performance Booster",
-        "Automated Dark Web Monitor",
+        "Device Cleaner ",
+        "Dark Web Monitor",
         "Meet",
         "Mail"
       ]
@@ -218,7 +218,9 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Manage account billing & payments"
+        "Manage account billing & payments",
+        "Device Cleaner ",
+        "Dark Web Monitor"
       ],
       "2TB": [
         "2TB storage/user",
@@ -231,6 +233,8 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
+        "Device Cleaner ",
+        "Dark Web Monitor",
         "Meet ",
         "Mail "
       ]

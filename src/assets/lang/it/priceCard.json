@@ -189,8 +189,8 @@
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
-        "Pulitore del dispositivo e ottimizzatore delle prestazioni",
-        "Monitoraggio automatizzato del Dark Web"
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web"
       ],
       "5TB": [
         "5TB di archiviazione crittografata a conoscenza zero",
@@ -203,8 +203,8 @@
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
-        "Pulitore del dispositivo e ottimizzatore delle prestazioni",
-        "Monitoraggio automatizzato del Dark Web",
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web",
         "Meet",
         "Mail"
       ],
@@ -221,7 +221,9 @@
         "Conformità GDPR",
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
-        "Gestisci fatturazione e pagamenti dell'account"
+        "Gestisci fatturazione e pagamenti dell'account",
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web"
       ],
       "2TB": [
         "2TB di archiviazione/utente",
@@ -234,8 +236,10 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav & Rclone",
         "Gestisci fatturazione e pagamenti dell'account",
-        "Meet ",
-        "Mail "
+        "Pulizia del dispositivo",
+        "Monitoraggio del dark web",
+        "Meet",
+        "Mail"
       ]
     }
   }
