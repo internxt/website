@@ -290,8 +290,15 @@
     "description": "Consigue un descuento para cualquier plan anual de Internxt. Todos los planes incluyen almacenamiento en la nube privada, VPN y antivirus."
   },
   {
+
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Detector de AI - Detector de texto AI gratis",
+    "description": "Internxt Detector de AI. Escanea gratis el contenido para comprobar si ha sido escrito por ChatGPT, Gemini u otras plataformas de inteligencia artificial "
+  },
+  {
     "id": "special-offer",
     "title": "Oferta especial — Internxt",
     "description": "Obtén planes anuales y de por vida de Internxt con un descuento exclusivo del 80 %. Disfruta de privacidad y seguridad con hasta 10 TB de almacenamiento."
+
   }
 ]

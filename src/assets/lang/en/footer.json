@@ -79,7 +79,8 @@
         "byteConverter": "Byte Converter",
         "passwordGenerator": "Password Generator",
         "fileConverter": "File Converter",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "aiDetector": "AI Detector"
       },
       "features": {
         "title": "Features",

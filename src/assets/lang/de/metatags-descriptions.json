@@ -201,8 +201,15 @@
     "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
   },
   {
+
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt ZeroGPT KI-Checker – Kostenloses KI-Prüftool",
+    "description": "Internxt ZeroGPT KI-Checker. Überprüfe Inhalte, um festzustellen, ob sie von ChatGPT, Gemini oder anderen KI-Plattformen erstellt wurden. Jetzt kostenlos ausprobieren!"
+  },
+  {
     "id": "special-offer",
     "title": "Sonderangebot — Internxt",
     "description": "Erhalten Sie Internxt-Jahres- und Lifetime-Tarife mit einem exklusiven 80 % Rabatt. Genießen Sie Privatsphäre und Sicherheit mit bis zu 10 TB Speicherplatz."
+
   }
 ]

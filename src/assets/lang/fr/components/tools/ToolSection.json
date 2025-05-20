@@ -40,6 +40,16 @@
       "title": "Extension VPN pour Chrome",
       "cta": "Télécharger maintenant",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Surveillance du Dark Web",
+      "cta": "Vérifier maintenant",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "Détecteur d'IA",
+      "cta": "Vérifier maintenant",
+      "pathname": "/ai-detector"
     }
   ]
 }

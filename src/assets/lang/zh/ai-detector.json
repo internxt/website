@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "mainTitle": "AI检测器",
+    "subtitle": "使用我们的免费AI检测工具扫描由人工智能生成的内容。",
+    "title": "在此粘贴或输入您的文本",
+    "placeholder": "请输入至少250个字符以开始扫描",
+    "maxChars": "字符",
+    "minChars": "请输入至少",
+    "uploadButton": "上传",
+    "scanButton": "检测AI",
+    "scanningText": "正在检测...",
+    "detectionScore": "检测分数",
+    "humanGeneratedText": "人工生成文本",
+    "error": {
+      "minChars": "文本长度必须至少为250个字符",
+      "apiError": "检测文本时发生错误，请重试。",
+      "invalidPdf": "无效的PDF文件",
+      "emptyPdf": "PDF文件为空",
+      "emptyFile": "文件为空",
+      "fileReadError": "读取文件时出错",
+      "unsupportedFile": "不支持的文件类型"
+    }
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Internxt免费AI检测器",
+    "aiCheckerDescription": "使用我们的免费AI检测器查找ChatGPT或其他人工智能生成的内容。上传文件或粘贴文本即可获得即时结果，便于在发布或提交内容前进行修改。\n\n我们不会在AI检测器中存储任何内容或信息。我们的工具仅检测AI生成的模式，不会存储您提交的内容。这样可以确保您的内容安全且不会被用于训练其他AI工具的机器学习模型。",
+    "aiDetectorTitle": "ZeroGPT AI检测器，适用于ChatGPT、Gemini、CoPilot等",
+    "aiDetectorDescription": "Internxt的AI检测工具能够快速准确地扫描由ChatGPT、Gemini等流行AI工具生成的内容。扫描后，它会反馈并区分人类与AI生成的文本，为您提供详细的文本分析。\n\n我们先进且免费的AI检测器能够高精度检测最新的AI模型，如GPT-4。请注意，由于AI语言模型的发展，没有任何AI检测器能做到100%准确，但我们致力于为您提供最先进、最准确的分析。"
+  },
+  "CtaSection": {
+    "title": "验证并检测AI文本",
+    "description": "确保您的文本独特且原创",
+    "cta": "获取Internxt"
+  },
+  "CtaSection2": {
+    "title": "不要让AI书写你的故事",
+    "description": "检测ChatGPT、Gemini或其他AI生成的文本",
+    "cta": "获取Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt的AI检测器如何工作？",
+        "answer": [
+          "当您上传内容时，软件会分析AI生成内容常见的模式，如词汇、结构和语法。这些学习模型经过训练，可以检测AI与人类写作之间的差异。"
+        ]
+      },
+      {
+        "question": "AI文本检测器有多准确？",
+        "answer": ["我们的先进算法可以高成功率检测AI写作的内容，但没有任何AI检测工具能做到100%准确。"]
+      },
+      {
+        "question": "Internxt的AI检测工具能否提出改进建议？",
+        "answer": ["不能，它只能突出显示AI写作的内容，并显示可能由真人撰写的文本比例。"]
+      },
+      {
+        "question": "为什么选择Internxt检测器而不是其他AI检测工具？",
+        "answer": [
+          "Internxt的免费AI检测工具允许您扫描内容，且不会存储或与其他公司共享，也不会用于训练AI语言模型，因此是检测AI而不影响隐私的宝贵资源。"
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "试用Internxt的免费在线安全工具：",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "密码强度检测器",
+        "description": "立即检测"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "字节单位转换器",
+        "description": "立即转换"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "免费临时邮箱",
+        "width": 95,
+        "description": "立即获取"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "免费密码生成器",
+        "width": 124,
+        "description": "立即生成"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Internxt AI检测器适用于日常、教育或工作场景",
+    "description": "无论您的需求是什么，我们的AI检测工具都能提供即时且高精度的结果，让您快速检测AI模式并根据需要修改内容。",
+    "info": [
+      {
+        "title": "学生",
+        "description": [
+          "Internxt的免费AI检测器非常适合需要提交作业并遵守学校或大学规定的学生。可以识别由ChatGPT或其他模型生成的内容，便于获取和验证。"
+        ]
+      },
+      {
+        "title": "教育工作者",
+        "description": [
+          "越来越多的学生依赖AI工具来协助或撰写作业。通过我们的AI检测工具，您可以检查学生的作业，确保分析其是否包含AI生成的文本。"
+        ]
+      },
+      {
+        "title": "记者",
+        "description": [
+          "为避免AI内容带来的错误信息传播，记者应努力提供真实、客观、可靠的报道。AI检测器有助于媒体公司维护声誉，确保新闻来自可信来源而非机器人。"
+        ]
+      },
+      {
+        "title": "博主",
+        "description": [
+          "我们的AI检测器帮助您创作独特且高质量的内容，吸引受众、提升网站流量，并避免搜索引擎惩罚。您还可以在发布前检查外部编辑的内容。"
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "为什么使用Internxt的AI检测器",
+    "description": "您可以完全放心地使用我们的AI文本检测器，您的内容将保持私密，并能快速获得可靠的检测结果，便于发布或提交。",
+    "info": [
+      {
+        "title": "先进算法",
+        "description": [
+          "我们的AI检测工具采用先进算法，检测ChatGPT、Gemini等工具常用的AI写作模式。上传或粘贴内容后，算法可区分人类与AI生成的文本。"
+        ]
+      },
+      {
+        "title": "无限扫描",
+        "description": [
+          "随时免费进行AI文本扫描。我们不会将此服务隐藏在付费墙后，始终为您提供安全、私密且免费的AI检测工具，无论是验证自己的作品还是他人的内容。"
+        ]
+      },
+      {
+        "title": "隐私保障",
+        "description": [
+          "您上传到AI检测工具的所有内容都是保密和私密的。不会存储、共享或用于训练AI语言模型。请放心，您的内容是安全的。"
+        ]
+      },
+      {
+        "title": "多语言支持",
+        "description": [
+          "我们支持多种语言，帮助您高精度地检查和分析内容。无论使用哪种语言，都能轻松检测和修改AI内容，获得一致且可靠的检测体验。"
+        ]
+      },
+      {
+        "title": "即时响应",
+        "description": [
+          "上传、复制或粘贴文本到我们的工具，我们会立即扫描内容是否包含AI生成的文本。整个过程只需几秒钟，完成后您将收到检测结果。"
+        ]
+      },
+      {
+        "title": "无需注册",
+        "description": [
+          "我们的AI检测器100%免费且无限制。无需创建账户或订阅高级服务，只需上传或粘贴需要分析的内容即可！"
+        ]
+      }
+    ]
+  }
+}
