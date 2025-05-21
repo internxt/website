@@ -19,7 +19,9 @@
       "emptyFile": "Datei ist leer",
       "fileReadError": "Fehler beim Lesen der Datei",
       "unsupportedFile": "Nicht unterstützter Dateityp"
-    }
+    },
+    "likelyHumanText": "Dieser Text ist wahrscheinlich von einem Menschen geschrieben",
+    "likelyAiText": "Dieser Text ist wahrscheinlich von einer KI geschrieben"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Kostenloser KI-Detektor von Internxt",

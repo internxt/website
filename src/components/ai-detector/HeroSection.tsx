@@ -105,7 +105,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className="relative flex flex-row  items-center justify-center pb-8 pt-32">
+    <section className="relative flex flex-row  items-center justify-center pb-20 pt-32">
       <div className="flex  flex-col items-center justify-center px-10 ">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
@@ -221,7 +221,17 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                         ''
                       )}
                     </div>
-                    <div className="text-base font-semibold text-gray-50">{textContent.detectionScore}</div>
+                    <div className="text-base font-semibold text-gray-50">
+                      {detectionScore === null ? (
+                        textContent.detectionScore
+                      ) : (
+                        <>
+                          <div className=" text-center text-base font-semibold text-gray-50">
+                            {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
+                          </div>
+                        </>
+                      )}
+                    </div>
                   </>
                 )}
               </div>
