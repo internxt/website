@@ -1,10 +1,4 @@
 import { useState, Fragment, createRef } from 'react';
-import { Transition } from '@headlessui/react';
-import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
-import Header from '../shared/Header';
-import { getImage } from '@/lib/getImage';
-import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
 import pdfToText from 'react-pdftotext';
 
@@ -182,6 +176,12 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       '%'
                     )}
                   </div>
+
+                  {detectionScore !== null && (
+                    <div className="mb-4 text-center text-lg font-medium text-gray-100">
+                      {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
+                    </div>
+                  )}
 
                   <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
                     {detectionScore !== null && (

@@ -19,7 +19,9 @@
       "emptyFile": "Il file è vuoto",
       "fileReadError": "Errore nella lettura del file",
       "unsupportedFile": "Tipo di file non supportato"
-    }
+    },
+    "likelyHumanText": "Questo testo è stato probabilmente scritto da un umano",
+    "likelyAiText": "Questo testo è stato probabilmente scritto da una IA"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Rilevatore di IA gratuito di Internxt",

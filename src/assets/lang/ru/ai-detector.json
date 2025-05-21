@@ -19,7 +19,9 @@
       "emptyFile": "Файл пуст",
       "fileReadError": "Ошибка чтения файла",
       "unsupportedFile": "Неподдерживаемый тип файла"
-    }
+    },
+    "likelyHumanText": "Этот текст, вероятно, был написан человеком",
+    "likelyAiText": "Этот текст, вероятно, был написан ИИ"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Бесплатный детектор ИИ от Internxt",

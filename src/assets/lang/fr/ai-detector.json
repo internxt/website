@@ -19,7 +19,9 @@
       "emptyFile": "Le fichier est vide",
       "fileReadError": "Erreur lors de la lecture du fichier",
       "unsupportedFile": "Type de fichier non pris en charge"
-    }
+    },
+    "likelyHumanText": "Ce texte a probablement été écrit par un humain",
+    "likelyAiText": "Ce texte a probablement été écrit par une IA"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Détecteur d'IA gratuit d'Internxt",
