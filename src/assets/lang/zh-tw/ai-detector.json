@@ -19,7 +19,9 @@
       "emptyFile": "檔案為空",
       "fileReadError": "讀取檔案時發生錯誤",
       "unsupportedFile": "不支援的檔案類型"
-    }
+    },
+    "likelyHumanText": "這段文字很可能是人類寫的",
+    "likelyAiText": "這段文字很可能是 AI 寫的"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Internxt 免費 AI 偵測器",
