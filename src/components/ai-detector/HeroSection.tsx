@@ -106,7 +106,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   return (
     <section className="relative flex flex-row  items-center justify-center pb-8 pt-32">
-      <div className="flex  flex-col items-center justify-center px-10 ">
+      <div className="hidden flex-col  items-center justify-center lg:flex lg:px-10 ">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
@@ -147,7 +147,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                 />
               </div>
               <div className="mt-4 flex flex-col items-start justify-between sm:flex-row sm:items-center">
-                <div className="mb-2 flex flex-col text-[15px] leading-5 text-gray-100 sm:mb-0">
+                <div className="mb-2 flex flex-col pr-2 text-[15px] leading-5 text-gray-100 sm:mb-0">
                   <span>
                     {text.length.toLocaleString()}/{MAX_CHARS.toLocaleString()} {textContent.maxChars}
                   </span>
@@ -229,7 +229,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           </div>
         </div>
       </section>
-      <div className="flex flex-col items-center justify-center px-10">
+      <div className="hidden flex-col items-center justify-center lg:flex lg:px-10">
         <Image
           src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
