@@ -19,7 +19,9 @@
       "emptyFile": "文件为空",
       "fileReadError": "读取文件时出错",
       "unsupportedFile": "不支持的文件类型"
-    }
+    },
+    "likelyHumanText": "此文本可能由真人撰写",
+    "likelyAiText": "此文本可能由AI撰写"
   },
   "FeaturesSection": {
     "aiCheckerTitle": "Internxt免费AI检测器",
