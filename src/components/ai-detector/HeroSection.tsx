@@ -98,7 +98,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   return (
-    <section className="relative flex flex-col  items-center justify-center pb-8 pt-32 ">
+    <section className="relative flex flex-col  items-center justify-center pb-20 pt-32 ">
       <section className="flex flex-col items-center justify-center space-y-6 px-2">
         <div className="flex w-full flex-col items-center justify-center space-y-6 pb-10 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
@@ -177,12 +177,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                     )}
                   </div>
 
-                  {detectionScore !== null && (
-                    <div className="mb-4 text-center text-lg font-medium text-gray-100">
-                      {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
-                    </div>
-                  )}
-
                   <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
                     {detectionScore !== null && (
                       <div
@@ -203,7 +197,17 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       ''
                     )}
                   </div>
-                  <div className="text-base font-semibold text-gray-50">{textContent.detectionScore}</div>
+                  <div className="text-base font-semibold text-gray-50">
+                    {detectionScore === null ? (
+                      textContent.detectionScore
+                    ) : (
+                      <>
+                        <div className=" text-center text-base font-semibold text-gray-50">
+                          {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
+                        </div>
+                      </>
+                    )}
+                  </div>
                 </>
               )}
             </div>
