@@ -19,7 +19,9 @@
       "emptyFile": "File is empty",
       "fileReadError": "Error reading file",
       "unsupportedFile": "Unsupported file type"
-    }
+    },
+    "likelyHumanText": "This text is likely written by a human",
+    "likelyAiText": "This text is likely written by an AI"
   },
   "FeaturesSection": {
     "whyToScan": {
