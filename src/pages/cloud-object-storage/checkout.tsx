@@ -18,6 +18,7 @@ import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { ObjStoragePaymentsService } from '@/services/payments.service';
 import { stripeService } from '@/services/stripe.service';
+import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
