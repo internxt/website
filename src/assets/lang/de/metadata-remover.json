@@ -1,44 +1,37 @@
 {
   "HeroSection": {
     "title": "Metadaten-Entferner",
-    "subtitle2": "Entferne Metadaten aus deinen Dateien, um online anonym zu bleiben.",
-    "secure": "Datei-Uploads sind durch HTTPS geschützt",
+    "subtitle2": "Elimina Metadaten von Dateien, um online anonym zu bleiben.",
+    "secure": "Datei-Uploads sind mit HTTPS gesichert",
     "dropFile": {
-      "line1": "Dateien hier ablegen oder hier klicken"
+      "line1": "Lade Dateien hoch oder klicke hier"
     },
-    "fileSelected": "Datei zum Scannen ausgewählt",
+    "fileSelected": "Datei hochgeladen erfolgreich",
     "cancel": "Abbrechen",
     "close": "Schließen",
-    "scanNow": "Jetzt scannen",
+    "scanNow": "Metadaten entfernen",
     "selectFile": "Datei auswählen",
     "dropHere": "Datei hier ablegen",
-    "scanAgain": "Weitere Datei scannen",
-    "loading": "Lädt...",
+    "loading": "Laden...",
     "maxFileSize": {
       "title": "Dateigrößenlimit überschritten",
-      "description": "Maximale Dateigröße 1GB"
+      "description": "Maximale Dateigröße von 1GB"
     },
     "table": {
-      "loading": "Lädt...",
-      "virusDetected": "Virus in dieser Datei erkannt",
-      "noVirusDetected": "Kein Virus in dieser Datei erkannt",
-      "detected": "Erkannt",
-      "undetected": "Nicht erkannt",
-      "unableToProcess": "Nicht verarbeitbar",
-      "noVirusesDetected": {
-        "message": "Keine Viren erkannt",
-        "title": "Möchtest du deine Dateien sicher aufbewahren?",
-        "subtitle": "Internxt ist ein privater Cloud-Speicherdienst mit integriertem Virenscanner und Ende-zu-Ende-Verschlüsselung.",
-        "cta": "Jetzt starten"
-      },
-      "analyzing": "Datei wird gescannt...",
+      "loading": "Laden...",
+      "metadataRemoved": "Alle Metadaten wurden entfernt",
+      "automaticDownload": "Deine Download wird automatisch starten",
+      "detected": "Detektiert",
+      "undetected": "Nicht detektiert",
+      "unableToProcess": "Nicht verarbeiten",
+      "analyzing": "Metadaten entfernen...",
       "scanTime": "Scanzeit",
       "name": "Name",
-      "detection": "Erkennung"
+      "detection": "Detektion"
     },
     "error": {
-      "title": "Etwas ist schiefgelaufen",
-      "description": "Beim Senden der Datei ist ein Fehler aufgetreten, bitte versuche es später erneut"
+      "title": "Etwas ist schief gelaufen",
+      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
     }
   },
   "FeaturesSection": {

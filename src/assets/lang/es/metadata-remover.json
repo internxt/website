@@ -1,44 +1,37 @@
 {
   "HeroSection": {
     "title": "Eliminador de metadatos",
-    "subtitle2": "Elimina los metadatos de tus archivos para permanecer anónimo en línea.",
+    "subtitle2": "Elimina metadatos de tus archivos para mantenerte anónimo en línea.",
     "secure": "Las subidas de archivos están protegidas por HTTPS",
     "dropFile": {
       "line1": "Suelta archivos o haz clic aquí"
     },
-    "fileSelected": "File selected for scanning",
-    "cancel": "Cancel",
-    "close": "Close",
-    "scanNow": "Scan now",
-    "selectFile": "Elige archivo",
-    "dropHere": "Drop file here",
-    "scanAgain": "Scan another file",
-    "loading": "Loading...",
+    "fileSelected": "Archivo cargado exitosamente",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "scanNow": "Eliminar metadatos",
+    "selectFile": "Seleccionar archivo",
+    "dropHere": "Suelta archivo aquí",
+    "loading": "Cargando...",
     "maxFileSize": {
-      "title": "File size limit exceeded",
-      "description": "Max file size of 1GB"
+      "title": "Se ha excedido el tamaño del archivo",
+      "description": "Tamaño máximo de 1GB"
     },
     "table": {
-      "loading": "Loading...",
-      "virusDetected": "Virus detected for this file",
-      "noVirusDetected": "No virus detected for this file",
-      "detected": "Detected",
-      "undetected": "Undetected",
-      "unableToProcess": "Unable to process",
-      "noVirusesDetected": {
-        "message": "No viruses detected",
-        "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
-        "cta": "Get started now"
-      },
-      "analyzing": "Scanning file...",
-      "scanTime": "Scan time",
-      "name": "Name",
-      "detection": "Detection"
+      "loading": "Cargando...",
+      "metadataRemoved": "Todos los metadatos han sido eliminados",
+      "automaticDownload": "Tu descarga comenzará automáticamente",
+      "detected": "Detectado",
+      "undetected": "No detectado",
+      "unableToProcess": "No se puede procesar",
+      "analyzing": "Eliminando metadatos...",
+      "scanTime": "Tiempo de escaneo",
+      "name": "Nombre",
+      "detection": "Detección"
     },
     "error": {
-      "title": "Something went wrong",
-      "description": "An error occurred while sending the file, please try again later"
+      "title": "Algo salió mal",
+      "description": "Ocurrió un error al enviar el archivo, por favor, inténtelo de nuevo más tarde"
     }
   },
   "FeaturesSection": {

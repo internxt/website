@@ -40,7 +40,11 @@
       "title": "VPN Chrome 擴充功能",
       "cta": "立即下載",
       "pathname": "/vpn"
+    },
+    {
+      "title": "元数据删除器",
+      "cta": "立即删除",
+      "pathname": "/metadata-remover"
     }
   ]
 }
-

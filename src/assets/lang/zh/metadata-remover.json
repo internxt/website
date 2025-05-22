@@ -1,18 +1,17 @@
 {
   "HeroSection": {
     "title": "元数据清除器",
-    "subtitle2": "删除文件元数据，保持在线匿名。",
-    "secure": "文件上传通过 HTTPS 保护",
+    "subtitle2": "删除元数据以保持在线匿名。",
+    "secure": "上传受 HTTPS 保护",
     "dropFile": {
-      "line1": "拖放文件或点击此处"
+      "line1": "上传文件或点击这里"
     },
-    "fileSelected": "已选择文件进行扫描",
+    "fileSelected": "文件上传成功",
     "cancel": "取消",
     "close": "关闭",
-    "scanNow": "立即扫描",
+    "scanNow": "删除元数据",
     "selectFile": "选择文件",
-    "dropHere": "将文件拖到此处",
-    "scanAgain": "扫描另一个文件",
+    "dropHere": "上传文件",
     "loading": "加载中...",
     "maxFileSize": {
       "title": "文件大小超出限制",
@@ -20,25 +19,19 @@
     },
     "table": {
       "loading": "加载中...",
-      "virusDetected": "该文件检测到病毒",
-      "noVirusDetected": "该文件未检测到病毒",
+      "metadataRemoved": "所有元数据已删除",
+      "automaticDownload": "您的下载将自动开始",
       "detected": "已检测",
       "undetected": "未检测",
       "unableToProcess": "无法处理",
-      "noVirusesDetected": {
-        "message": "未检测到病毒",
-        "title": "想让您的文件更安全？",
-        "subtitle": "Internxt 是一款内置病毒扫描和端到端加密的私人云存储服务。",
-        "cta": "立即开始"
-      },
-      "analyzing": "正在扫描文件...",
+      "analyzing": "正在删除元数据...",
       "scanTime": "扫描时间",
       "name": "名称",
       "detection": "检测"
     },
     "error": {
-      "title": "出现错误",
-      "description": "发送文件时发生错误，请稍后重试"
+      "title": "出错了",
+      "description": "上传文件时出错，请稍后再试"
     }
   },
   "FeaturesSection": {

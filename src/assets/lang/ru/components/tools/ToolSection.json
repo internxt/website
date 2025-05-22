@@ -40,6 +40,11 @@
       "title": "Расширение VPN для Chrome",
       "cta": "Скачать сейчас",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Удалить метаданные",
+      "cta": "Удалить сейчас",
+      "pathname": "/metadata-remover"
     }
   ]
 }

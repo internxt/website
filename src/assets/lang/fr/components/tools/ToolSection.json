@@ -40,6 +40,11 @@
       "title": "Extension VPN pour Chrome",
       "cta": "Télécharger maintenant",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Eliminateur de Métadonnées",
+      "cta": "Supprimer maintenant",
+      "pathname": "/metadata-remover"
     }
   ]
 }

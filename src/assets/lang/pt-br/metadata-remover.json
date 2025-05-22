@@ -1,44 +1,37 @@
 {
   "HeroSection": {
-    "title": "Removedor de metadados",
-    "subtitle2": "Remova os metadados dos seus arquivos para permanecer anônimo online.",
-    "secure": "Uploads de arquivos protegidos por HTTPS",
+    "title": "Eliminador de metadatos",
+    "subtitle2": "Elimina metadatos de tus archivos para mantenerte anónimo en línea.",
+    "secure": "Las subidas de archivos están protegidas por HTTPS",
     "dropFile": {
-      "line1": "Solte arquivos ou clique aqui"
+      "line1": "Suelta archivos o haz clic aquí"
     },
-    "fileSelected": "Arquivo selecionado para verificação",
-    "cancel": "Cancelar",
-    "close": "Fechar",
-    "scanNow": "Verificar agora",
-    "selectFile": "Escolher arquivo",
-    "dropHere": "Solte o arquivo aqui",
-    "scanAgain": "Verificar outro arquivo",
-    "loading": "Carregando...",
+    "fileSelected": "Datei erfolgreich hochgeladen",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "scanNow": "Metadaten entfernen",
+    "selectFile": "Datei auswählen",
+    "dropHere": "Suelta archivo aquí",
+    "loading": "Cargando...",
     "maxFileSize": {
-      "title": "Limite de tamanho de arquivo excedido",
-      "description": "Tamanho máximo de arquivo de 1GB"
+      "title": "Dateigrößenlimit überschritten",
+      "description": "Maximale Dateigröße von 1GB"
     },
     "table": {
-      "loading": "Carregando...",
-      "virusDetected": "Vírus detectado neste arquivo",
-      "noVirusDetected": "Nenhum vírus detectado neste arquivo",
-      "detected": "Detectado",
-      "undetected": "Não detectado",
-      "unableToProcess": "Não foi possível processar",
-      "noVirusesDetected": {
-        "message": "Nenhum vírus detectado",
-        "title": "Quer manter seus arquivos seguros?",
-        "subtitle": "A Internxt é um serviço de armazenamento em nuvem privado com verificação de vírus integrada e criptografia de ponta a ponta.",
-        "cta": "Comece agora"
-      },
-      "analyzing": "Verificando arquivo...",
-      "scanTime": "Tempo de verificação",
-      "name": "Nome",
-      "detection": "Detecção"
+      "loading": "Laden...",
+      "metadataRemoved": "Alle Metadaten wurden entfernt",
+      "automaticDownload": "Ihre Herunterladung beginnt automatisch",
+      "detected": "Detektiert",
+      "undetected": "Nicht detektiert",
+      "unableToProcess": "Nicht verarbeiten",
+      "analyzing": "Metadaten entfernen...",
+      "scanTime": "Scanzeit",
+      "name": "Name",
+      "detection": "Detektion"
     },
     "error": {
-      "title": "Algo deu errado",
-      "description": "Ocorreu um erro ao enviar o arquivo, tente novamente mais tarde"
+      "title": "Etwas ist schief gelaufen",
+      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
     }
   },
   "FeaturesSection": {

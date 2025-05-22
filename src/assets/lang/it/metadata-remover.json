@@ -1,44 +1,37 @@
 {
   "HeroSection": {
-    "title": "Rimuovi metadati",
-    "subtitle2": "Rimuovi i metadati dai tuoi file per rimanere anonimo online.",
-    "secure": "I caricamenti dei file sono protetti da HTTPS",
+    "title": "Eliminatore di metadati",
+    "subtitle2": "Elimina metadati dai tuoi file per rimanere anonimo online.",
+    "secure": "Le tue upload sono protette da HTTPS",
     "dropFile": {
-      "line1": "Trascina i file o clicca qui"
+      "line1": "Lädt Dateien oder klicken Sie hier"
     },
-    "fileSelected": "File selezionato per la scansione",
-    "cancel": "Annulla",
-    "close": "Chiudi",
-    "scanNow": "Scansiona ora",
-    "selectFile": "Scegli file",
-    "dropHere": "Trascina il file qui",
-    "scanAgain": "Scansiona un altro file",
-    "loading": "Caricamento...",
+    "fileSelected": "Datei erfolgreich hochgeladen",
+    "cancel": "Abbrechen",
+    "close": "Schließen",
+    "scanNow": "Metadaten entfernen",
+    "selectFile": "Datei auswählen",
+    "dropHere": "Datei hier ablegen",
+    "loading": "Laden...",
     "maxFileSize": {
-      "title": "Limite dimensione file superato",
-      "description": "Dimensione massima del file: 1GB"
+      "title": "Dateigrößenlimit überschritten",
+      "description": "Maximale Dateigröße von 1GB"
     },
     "table": {
-      "loading": "Caricamento...",
-      "virusDetected": "Virus rilevato in questo file",
-      "noVirusDetected": "Nessun virus rilevato in questo file",
-      "detected": "Rilevato",
-      "undetected": "Non rilevato",
-      "unableToProcess": "Impossibile elaborare",
-      "noVirusesDetected": {
-        "message": "Nessun virus rilevato",
-        "title": "Vuoi mantenere i tuoi file al sicuro?",
-        "subtitle": "Internxt è un servizio di cloud storage privato con scansione antivirus integrata e crittografia end-to-end.",
-        "cta": "Inizia ora"
-      },
-      "analyzing": "Scansione del file in corso...",
-      "scanTime": "Tempo di scansione",
-      "name": "Nome",
-      "detection": "Rilevamento"
+      "loading": "Laden...",
+      "metadataRemoved": "Alle Metadaten wurden entfernt",
+      "automaticDownload": "Ihre Herunterladung beginnt automatisch",
+      "detected": "Detektiert",
+      "undetected": "Nicht detektiert",
+      "unableToProcess": "Nicht verarbeiten",
+      "analyzing": "Metadaten entfernen...",
+      "scanTime": "Scanzeit",
+      "name": "Name",
+      "detection": "Detektion"
     },
     "error": {
-      "title": "Qualcosa è andato storto",
-      "description": "Si è verificato un errore durante l'invio del file, riprova più tardi"
+      "title": "Etwas ist schief gelaufen",
+      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
     }
   },
   "FeaturesSection": {

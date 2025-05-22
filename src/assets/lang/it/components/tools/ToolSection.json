@@ -40,6 +40,11 @@
       "title": "Estensione VPN per Chrome",
       "cta": "Scarica ora",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Eliminatore di Metadati",
+      "cta": "Elimina ora",
+      "pathname": "/metadata-remover"
     }
   ]
 }

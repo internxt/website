@@ -4,7 +4,8 @@ import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
-import { MetadataRemoverText } from '@/assets/types/metadataRemover';
+import { MetadataRemoverText } from '@/assets/types/metadata-remover';
+import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
@@ -19,6 +20,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const [processResult, setProcessResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
+  const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
   const [showPopup, setShowPopup] = useState(true);
@@ -36,97 +38,33 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     setDragEnter(false);
   };
 
-  const removeMetadata = async () => {
+  const handleMetadataRemoval = async () => {
     setProcessResult(null);
     const fileInput = uploadFileRef.current;
     if (!fileInput?.files?.[0]) return;
 
     try {
-      // First, upload the file to Box
-      const uploadFormData = new FormData();
-      uploadFormData.append('file', fileInput.files[0]);
+      setIsProcessing(true);
+      const file = fileInput.files[0];
 
-      const uploadResponse = await fetch('https://upload.box.com/api/2.0/files/content', {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
-        },
-        body: uploadFormData,
-      });
-
-      if (!uploadResponse.ok) {
-        throw new Error('Failed to upload file to Box');
-      }
-
-      const uploadData = await uploadResponse.json();
-      const fileId = uploadData.entries[0].id;
-
-      // Get all metadata templates for the file
-      const metadataResponse = await fetch(`https://api.box.com/2.0/files/${fileId}/metadata`, {
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
-        },
-      });
-
-      if (!metadataResponse.ok) {
-        throw new Error('Failed to get metadata templates');
-      }
-
-      const metadataTemplates = await metadataResponse.json();
-
-      // Remove metadata for each template
-      const removePromises = metadataTemplates.entries.map(async (template) => {
-        const removeResponse = await fetch(
-          `https://api.box.com/2.0/files/${fileId}/metadata/${template.scope}/${template.template}`,
-          {
-            method: 'DELETE',
-            headers: {
-              Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
-            },
-          },
-        );
-
-        if (!removeResponse.ok) {
-          console.error(`Failed to remove metadata for template ${template.template}`);
-        }
-      });
-
-      await Promise.all(removePromises);
-
-      // Download the cleaned file
-      const downloadResponse = await fetch(`https://api.box.com/2.0/files/${fileId}/content`, {
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
-        },
-      });
-
-      if (!downloadResponse.ok) {
-        throw new Error('Failed to download cleaned file');
-      }
-
-      const cleanedFileBlob = await downloadResponse.blob();
+      // Use our local metadata remover
+      const cleanedFileBlob = await removeFileMetadata(file);
 
       // Create a download link for the cleaned file
-      const downloadUrl = URL.createObjectURL(cleanedFileBlob);
-      const downloadLink = document.createElement('a');
-      downloadLink.href = downloadUrl;
-      downloadLink.download = `cleaned_${fileInput.files[0].name}`;
-      document.body.appendChild(downloadLink);
-      downloadLink.click();
-      document.body.removeChild(downloadLink);
-      URL.revokeObjectURL(downloadUrl);
-
-      // Delete the file from Box
-      await fetch(`https://api.box.com/2.0/files/${fileId}`, {
-        method: 'DELETE',
-        headers: {
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BOX_ACCESS_TOKEN}`,
-        },
-      });
+      const url = URL.createObjectURL(cleanedFileBlob);
+      setDownloadUrl(url);
 
       setProcessResult({ success: true });
       setIsProcessFinished(true);
       setShowPopup(true);
+
+      // Start download automatically
+      const downloadLink = document.createElement('a');
+      downloadLink.href = url;
+      downloadLink.download = `cleaned_${file.name}`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
     } catch (error) {
       console.error('Error processing file:', error);
       setIsError(true);
@@ -135,6 +73,25 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsProcessFinished(false);
       setShowPopup(false);
     }
+  };
+
+  const handleDownload = () => {
+    if (downloadUrl && file) {
+      const downloadLink = document.createElement('a');
+      downloadLink.href = downloadUrl;
+      downloadLink.download = `cleaned_${file.name}`;
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+  };
+
+  const handleCancel = () => {
+    if (downloadUrl) {
+      URL.revokeObjectURL(downloadUrl);
+      setDownloadUrl(null);
+    }
+    handleRestartProcess();
   };
 
   const handleRestartProcess = () => {
@@ -153,7 +110,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   const handleConfirmProcess = () => {
     setIsProcessing(true);
-    removeMetadata();
+    handleMetadataRemoval();
   };
 
   const handleFiles = () => {
@@ -216,6 +173,103 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     );
   };
 
+  const renderProcessStatus = () => {
+    if (isProcessing && !isProcessFinished) {
+      return (
+        <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
+          <div className="relative">
+            <div className="absolute inset-1">
+              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 animate-pingpong-v rounded-xl bg-primary shadow-2xl"></div>
+            </div>
+            <svg
+              width="80"
+              height="80"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="drop-shadow-soft filter"
+            >
+              <g clipPath="url(#clip0_1573_1124)">
+                <path
+                  d="M10 3.75C10 1.67893 11.6789 0 13.75 0H40.4053C43.3714 0 46.2409 1.05475 48.5009 2.97576L65.5956 17.5063C68.3897 19.8813 70 23.3634 70 27.0305V76.25C70 78.3211 68.3211 80 66.25 80H13.75C11.6789 80 10 78.3211 10 76.25V3.75Z"
+                  fill="#FCFCFD"
+                />
+                <path
+                  d="M66.25 79.5H13.75C11.9551 79.5 10.5 78.0449 10.5 76.25V3.75C10.5 1.95507 11.9551 0.5 13.75 0.5H40.4053C43.2528 0.5 46.0075 1.51256 48.1771 3.35673L65.2718 17.8872C67.9541 20.1672 69.5 23.5101 69.5 27.0305V76.25C69.5 78.0449 68.0449 79.5 66.25 79.5Z"
+                  stroke="#DDE1E6"
+                />
+                <path
+                  d="M43.3336 1.53303C42.9225 1.09458 42.3683 0.702914 41.75 0.558744V0.512885C43.8731 0.622393 45.9067 1.42689 47.5335 2.80969L65.8665 18.3927C68.0442 20.2438 69.3503 22.91 69.4879 25.75H69.4413C69.2971 25.1318 68.9054 24.5775 68.467 24.1665C67.9178 23.6516 67.1762 23.25 66.5 23.25H47.5C45.7051 23.25 44.25 21.7949 44.25 20V3.5C44.25 2.82384 43.8484 2.08225 43.3336 1.53303Z"
+                  fill="#F2F4F8"
+                  stroke="#DDE1E6"
+                />
+                <path
+                  d="M13.75 80H66.25C68.3211 80 70 78.3211 70 76.25V73.75C70 75.8211 68.3211 77.5 66.25 77.5H13.75C11.6789 77.5 10 75.8211 10 73.75V76.25C10 78.3211 11.6789 80 13.75 80Z"
+                  fill="#DDE1E6"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1573_1124">
+                  <rect width="80" height="80" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <p className="text-2xl font-semibold">In progress</p>
+        </div>
+      );
+    }
+
+    if (isProcessFinished) {
+      return (
+        <div className="flex h-full w-full flex-col items-center justify-center space-y-6 bg-opacity-3 px-5 py-5 text-center">
+          <div className="flex flex-col items-center space-y-4">
+            <CheckCircle weight="fill" size={48} className="text-green-1" />
+            <div className="flex flex-col space-y-2">
+              <p className="text-2xl font-semibold">{textContent.table.metadataRemoved}</p>
+              <p className="text-lg text-cool-gray-60">{textContent.table.automaticDownload}</p>
+            </div>
+            <div className="flex flex-row items-center space-x-4">
+              <button
+                type="button"
+                className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                onClick={handleCancel}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+                onClick={handleDownload}
+              >
+                Download
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    if (isSelectedFile && !isProcessing) {
+      return (
+        <div className="flex h-full w-full flex-col items-center justify-center space-y-6 bg-opacity-3 px-5 py-5">
+          <div className="flex flex-col items-center space-y-4">
+            <p className="text-2xl font-semibold">File uploaded successfully</p>
+            <button
+              type="button"
+              className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
+              onClick={handleMetadataRemoval}
+            >
+              Remove metadata
+            </button>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   return (
     <section
       className="relative pt-32"
@@ -268,14 +322,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                     <div className="relative flex w-full flex-col items-start justify-start overflow-hidden rounded-xl sm:h-96">
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
                         {isProcessFinished ? (
-                          <div className="flex flex-row items-center space-x-1.5">
-                            <div className="flex flex-row gap-2">
-                              <CheckCircle weight="fill" size={24} className="text-green-1" />
-                              <span className="text-lg font-semibold text-green-dark">
-                                {textContent.table.noVirusDetected}
-                              </span>
-                            </div>
-                          </div>
+                          <div className="flex flex-row items-center space-x-1.5"></div>
                         ) : (
                           <div></div>
                         )}
@@ -285,70 +332,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                         </div>
                       </div>
 
-                      {isProcessFinished ? (
-                        <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80">
-                          {/* CTA */}
-                          <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20 bg-primary bg-opacity-6">
-                            <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
-                              <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
-                                <div className="flex flex-col space-y-2">
-                                  <span className="text-xl font-medium">
-                                    {textContent.table.noVirusesDetected.title}
-                                  </span>
-                                  <span>{textContent.table.noVirusesDetected.subtitle}</span>
-                                </div>
-
-                                <a href="https://internxt.com/pricing" target="_top" className="button-primary">
-                                  {textContent.table.noVirusesDetected.cta}
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          {processAgainButton()}
-                        </div>
-                      ) : (
-                        <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
-                          <div className="relative">
-                            <div className="absolute inset-1">
-                              <div className="absolute left-0 z-10 h-1 w-full -translate-y-1/2 animate-pingpong-v rounded-xl bg-primary shadow-2xl"></div>
-                            </div>
-                            <svg
-                              width="80"
-                              height="80"
-                              viewBox="0 0 80 80"
-                              fill="none"
-                              xmlns="http://www.w3.org/2000/svg"
-                              className="drop-shadow-soft filter"
-                            >
-                              <g clipPath="url(#clip0_1573_1124)">
-                                <path
-                                  d="M10 3.75C10 1.67893 11.6789 0 13.75 0H40.4053C43.3714 0 46.2409 1.05475 48.5009 2.97576L65.5956 17.5063C68.3897 19.8813 70 23.3634 70 27.0305V76.25C70 78.3211 68.3211 80 66.25 80H13.75C11.6789 80 10 78.3211 10 76.25V3.75Z"
-                                  fill="#FCFCFD"
-                                />
-                                <path
-                                  d="M66.25 79.5H13.75C11.9551 79.5 10.5 78.0449 10.5 76.25V3.75C10.5 1.95507 11.9551 0.5 13.75 0.5H40.4053C43.2528 0.5 46.0075 1.51256 48.1771 3.35673L65.2718 17.8872C67.9541 20.1672 69.5 23.5101 69.5 27.0305V76.25C69.5 78.0449 68.0449 79.5 66.25 79.5Z"
-                                  stroke="#DDE1E6"
-                                />
-                                <path
-                                  d="M43.3336 1.53303C42.9225 1.09458 42.3683 0.702914 41.75 0.558744V0.512885C43.8731 0.622393 45.9067 1.42689 47.5335 2.80969L65.8665 18.3927C68.0442 20.2438 69.3503 22.91 69.4879 25.75H69.4413C69.2971 25.1318 68.9054 24.5775 68.467 24.1665C67.9178 23.6516 67.1762 23.25 66.5 23.25H47.5C45.7051 23.25 44.25 21.7949 44.25 20V3.5C44.25 2.82384 43.8484 2.08225 43.3336 1.53303Z"
-                                  fill="#F2F4F8"
-                                  stroke="#DDE1E6"
-                                />
-                                <path
-                                  d="M13.75 80H66.25C68.3211 80 70 78.3211 70 76.25V73.75C70 75.8211 68.3211 77.5 66.25 77.5H13.75C11.6789 77.5 10 75.8211 10 73.75V76.25C10 78.3211 11.6789 80 13.75 80Z"
-                                  fill="#DDE1E6"
-                                />
-                              </g>
-                              <defs>
-                                <clipPath id="clip0_1573_1124">
-                                  <rect width="80" height="80" fill="white" />
-                                </clipPath>
-                              </defs>
-                            </svg>
-                          </div>
-                          <p className="text-2xl font-semibold">{textContent.table.analyzing}</p>
-                        </div>
-                      )}
+                      {renderProcessStatus()}
                     </div>
                   </>
                 ) : (

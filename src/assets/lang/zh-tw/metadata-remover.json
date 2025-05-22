@@ -1,44 +1,37 @@
 {
   "HeroSection": {
-    "title": "中繼資料移除器",
-    "subtitle2": "移除檔案的中繼資料，讓你在網路上保持匿名。",
-    "secure": "檔案上傳受 HTTPS 保護",
+    "title": "元数据清除器",
+    "subtitle2": "删除元数据以保持在线匿名。",
+    "secure": "上传受 HTTPS 保护",
     "dropFile": {
-      "line1": "拖放檔案或點擊這裡"
+      "line1": "上传文件或点击这里"
     },
-    "fileSelected": "已選擇檔案進行掃描",
+    "fileSelected": "文件上传成功",
     "cancel": "取消",
-    "close": "關閉",
-    "scanNow": "立即掃描",
-    "selectFile": "選擇檔案",
-    "dropHere": "將檔案拖到這裡",
-    "scanAgain": "掃描其他檔案",
-    "loading": "載入中...",
+    "close": "关闭",
+    "scanNow": "删除元数据",
+    "selectFile": "选择文件",
+    "dropHere": "上传文件",
+    "loading": "加载中...",
     "maxFileSize": {
-      "title": "檔案大小超過限制",
-      "description": "最大檔案大小為 1GB"
+      "title": "文件大小超出限制",
+      "description": "最大文件大小为 1GB"
     },
     "table": {
-      "loading": "載入中...",
-      "virusDetected": "此檔案已偵測到病毒",
-      "noVirusDetected": "此檔案未偵測到病毒",
-      "detected": "已偵測",
-      "undetected": "未偵測",
-      "unableToProcess": "無法處理",
-      "noVirusesDetected": {
-        "message": "未偵測到病毒",
-        "title": "想要保護你的檔案安全嗎？",
-        "subtitle": "Internxt 是一個內建病毒掃描和端對端加密的私人雲端儲存服務。",
-        "cta": "立即開始"
-      },
-      "analyzing": "正在掃描檔案...",
-      "scanTime": "掃描時間",
-      "name": "名稱",
-      "detection": "偵測"
+      "loading": "加载中...",
+      "metadataRemoved": "所有元数据已删除",
+      "automaticDownload": "您的下载将自动开始",
+      "detected": "已检测",
+      "undetected": "未检测",
+      "unableToProcess": "无法处理",
+      "analyzing": "正在删除元数据...",
+      "scanTime": "扫描时间",
+      "name": "名称",
+      "detection": "检测"
     },
     "error": {
-      "title": "發生錯誤",
-      "description": "傳送檔案時發生錯誤，請稍後再試"
+      "title": "出错了",
+      "description": "上传文件时出错，请稍后再试"
     }
   },
   "FeaturesSection": {

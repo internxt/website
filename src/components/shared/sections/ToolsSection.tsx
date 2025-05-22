@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import {
   ArrowsCounterClockwise,
+  Broom,
   Bug,
   CaretRight,
   Envelope,
@@ -57,6 +58,12 @@ export const ToolsSection = ({ textContent, lang }: { textContent: any; lang: st
       title: textContent.toolsCard[6].title,
       cta: textContent.toolsCard[6].cta,
       pathname: textContent.toolsCard[6].pathname,
+    },
+    {
+      icon: Broom,
+      title: textContent.toolsCard[7].title,
+      cta: textContent.toolsCard[7].cta,
+      pathname: textContent.toolsCard[7].pathname,
     },
   ];
   const filteredCards = cards.filter((item) => item.pathname !== pathname);

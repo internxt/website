@@ -109,6 +109,8 @@ export interface Table {
   scanTime: string;
   name: string;
   detection: string;
+  metadataRemoved: string;
+  automaticDownload: string;
 }
 
 export interface NoVirusesDetected {

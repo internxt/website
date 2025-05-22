@@ -4,15 +4,14 @@
     "subtitle2": "Remove metadata from your files to stay anonymous online.",
     "secure": "Secure uploads are protected by HTTPS",
     "dropFile": {
-      "line1": "Drop your file to scan for viruses"
+      "line1": "Drop your file to remove metadata"
     },
-    "fileSelected": "File selected for scanning",
+    "fileSelected": "File uploaded successfully",
     "cancel": "Cancel",
     "close": "Close",
-    "scanNow": "Scan now",
+    "scanNow": "Remove metadata",
     "selectFile": "Choose file",
     "dropHere": "Drop file here",
-    "scanAgain": "Scan another file",
     "loading": "Loading...",
     "maxFileSize": {
       "title": "File size limit exceeded",
@@ -20,18 +19,12 @@
     },
     "table": {
       "loading": "Loading...",
-      "virusDetected": "Virus detected for this file",
-      "noVirusDetected": "No virus detected for this file",
+      "metadataRemoved": "All metadata has been removed",
+      "automaticDownload": "Your download will start automatically",
       "detected": "Detected",
       "undetected": "Undetected",
       "unableToProcess": "Unable to process",
-      "noVirusesDetected": {
-        "message": "No viruses detected",
-        "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
-        "cta": "Get started now"
-      },
-      "analyzing": "Scanning file...",
+      "analyzing": "Removing Metadata...",
       "scanTime": "Scan time",
       "name": "Name",
       "detection": "Detection"
