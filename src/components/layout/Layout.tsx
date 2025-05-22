@@ -137,20 +137,6 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied'
-              });
-            `,
-          }}
-        />
 
         <script
           dangerouslySetInnerHTML={{
