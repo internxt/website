@@ -61,4 +61,24 @@ export class ObjStoragePaymentsService {
       promoCodeId,
     });
   }
+
+  public paymentMethodVerification({
+    customerId,
+    token,
+    currency = 'eur',
+    paymentMethod,
+  }: {
+    customerId: string;
+    token: string;
+    currency?: string;
+    paymentMethod: string;
+  }) {
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
+    return client.paymentMethodVerification({
+      customerId,
+      token,
+      currency,
+      paymentMethod,
+    });
+  }
 }

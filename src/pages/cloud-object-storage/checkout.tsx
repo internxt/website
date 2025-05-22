@@ -163,6 +163,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       amount: plan?.amount ?? 0,
       currency: plan?.currency,
       payment_method_types: ['card', 'paypal'],
+      paymentMethodCreation: 'manual',
     };
 
     setStripeElementsOptions(stripeElementsOptions);
@@ -207,26 +208,30 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createObjectStorageSubscription({
+      const { error, paymentMethod } = await stripeSDK.createPaymentMethod({
+        elements,
+      });
+
+      const { verified, clientSecret } = await paymentService.paymentMethodVerification({
         customerId,
-        priceId: plan.id,
         currency: plan.currency,
         token,
-        promoCodeId: coupon?.codeId,
+        paymentMethod: paymentMethod?.id as string,
       });
 
-      const confirmIntent = stripeSDK.confirmSetup;
+      if (!verified && clientSecret) {
+        const confirmPaymentIntent = stripeSDK.confirmPayment;
 
-      const { error } = await confirmIntent({
-        elements,
-        clientSecret,
-        confirmParams: {
-          return_url: `${RETURN_URL_DOMAIN}`,
-        },
-      });
-
-      if (error) {
-        throw new Error(error.message);
+        const { error } = await confirmPaymentIntent({
+          elements,
+          clientSecret,
+          confirmParams: {
+            return_url: RETURN_URL_DOMAIN,
+          },
+        });
+        if (error) {
+          throw new Error(error.message);
+        }
       }
     } catch (err) {
       if (err.message.includes('500')) {
