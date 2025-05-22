@@ -36,7 +36,7 @@ export class ObjStoragePaymentsService {
     companyVatId?: string;
   }) {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
-    return client.createCustomerForObjectStorage({ email, customerName, postalCode, country, companyVatId });
+    return client.getObjectStorageCustomerId({ email, customerName, postalCode, country, companyVatId });
   }
 
   public async createObjectStorageSubscription({
