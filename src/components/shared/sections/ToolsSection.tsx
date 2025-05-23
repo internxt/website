@@ -62,19 +62,19 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
       pathname: textContent.toolsCard[6].pathname,
     },
     {
-      icon: Detective,
+      icon: Broom,
       title: textContent.toolsCard[7].title,
       cta: textContent.toolsCard[7].cta,
       pathname: textContent.toolsCard[7].pathname,
     },
     {
-      icon: Brain,
+      icon: Detective,
       title: textContent.toolsCard[8].title,
       cta: textContent.toolsCard[8].cta,
       pathname: textContent.toolsCard[8].pathname,
     },
     {
-      icon: Broom,
+      icon: Brain,
       title: textContent.toolsCard[9].title,
       cta: textContent.toolsCard[9].cta,
       pathname: textContent.toolsCard[9].pathname,
