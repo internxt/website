@@ -398,5 +398,10 @@
     "id": "internxt-metadata-remover",
     "title": "Internxt Removedor de Metadados - Como limpar metadados em PDF, fotos e seus documentos online",
     "description": "Remova dados ocultos dos seus arquivos em segundos. O Removedor de Metadados da Internxt limpa seus documentos para máxima privacidade antes de compartilhar."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Detector de IA - Detector de texto de IA grátis",
+    "description": "Internxt Detector de IA. Analise gratuitamente o conteúdo para verificar se foi escrito por ChatGPT, Gemini ou outras plataformas de inteligência artificial."
   }
 ]

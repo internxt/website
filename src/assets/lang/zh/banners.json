@@ -98,6 +98,10 @@
     "line1": "去除文件中暴露隐私的元数据。",
     "blueText": "用 Internxt 清理您的数字足迹"
   },
+  "SignUpAiDetector": {
+    "line1": "检测AI内容，确保真实性，",
+    "blueText": "安心发布，尽在Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
   "SignUpCyberAwareness": {
@@ -127,8 +131,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "82% 优惠，终身计划、VPN 和杀毒软件！",
-      "normalText": "身份管理日",
+      "boldText": "Internxt 云端硬盘、VPN 和防病毒软件享85%优惠！",
+      "normalText": "愿原力与你同在",
       "cta": "购买"
     }
   },

@@ -45,6 +45,16 @@
       "title": "Eliminateur de Métadonnées",
       "cta": "Supprimer maintenant",
       "pathname": "/metadata-remover"
+    },
+    {
+      "title": "Surveillance du Dark Web",
+      "cta": "Vérifier maintenant",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "Détecteur d'IA",
+      "cta": "Vérifier maintenant",
+      "pathname": "/ai-detector"
     }
   ]
 }

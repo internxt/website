@@ -82,7 +82,8 @@
         "passwordGenerator": "Générateur de Mot de Passe",
         "fileConverter": "Convertisseur de fichiers",
         "haveIBeenPwned": "Internxt Monitor",
-        "metadataRemover": "Supprimer les métadonnées"
+        "metadataRemover": "Supprimer les métadonnées",
+        "aiDetector": "Détecteur de IA"
       },
       "features": {
         "title": "Fonctionnalités",

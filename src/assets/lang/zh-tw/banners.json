@@ -109,6 +109,10 @@
     "line1": "去除檔案中洩漏隱私的中繼資料。",
     "blueText": "用 Internxt 清理您的數位足跡"
   },
+  "SignUpAiDetector": {
+    "line1": "檢測 AI 內容，確保真實性，",
+    "blueText": "安心發佈，盡在 Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "獲取字節和字節的安全雲存儲",
     "blueText": "使用 Internxt"
@@ -155,8 +159,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "終身計劃、VPN 和防毒軟體 82% 優惠！",
-      "normalText": "身份管理日",
+      "boldText": "Internxt 雲端硬碟、VPN 與防毒軟體享85%優惠！",
+      "normalText": "願原力與你同在",
       "cta": "購買"
     }
   },

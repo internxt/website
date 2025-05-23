@@ -45,6 +45,7 @@ interface PriceTableProps {
     business?: number;
   };
   isAnnual?: boolean;
+  isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -77,7 +78,8 @@ export const PricingSection = ({
   darkMode,
   isAnnual,
   hideFeatures,
-  showPromo = true,
+  showPromo,
+  isAffiliate,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -86,6 +88,7 @@ export const PricingSection = ({
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
+  const showPromos = activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
@@ -194,6 +197,7 @@ export const PricingSection = ({
                     lang={lang}
                     darkMode={darkMode}
                     showPromo={showPromo}
+                    isAffiliate={isAffiliate}
                   />
                 ))
             : undefined}
@@ -213,7 +217,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
+        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (

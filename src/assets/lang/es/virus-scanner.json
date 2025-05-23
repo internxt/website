@@ -29,9 +29,9 @@
       "unableToProcess": "No se puede procesar",
       "noVirusesDetected": {
         "message": "No se ha detectado ningún virus",
-        "title": "¿Quieres mantener tus archivos seguros?",
-        "subtitle": "Internxt es un servicio de almacenamiento en la nube totalmente seguro y  cifrado de extremo a extremo.",
-        "cta": "Empieza ahora"
+        "title": "Mantén tus archivos seguros",
+        "subtitle": "Internxt se ha asociado con Bitdefender para ofrecerte la máxima protección en tiempo real para tu dispositivo. Consigue 3 meses de protección antivirus gratis.",
+        "cta": "Pruébalo"
       },
       "analyzing": "Escaneando archivo...",
       "scanTime": "Tiempo de escaneo",

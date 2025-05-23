@@ -4,9 +4,25 @@ import { getImage } from '@/lib/getImage';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
 
-const BitdefenderBanner = (languageForImage) => {
+interface BitdefenderBannerProps {
+  languageForImage: string;
+  isTempMail?: boolean;
+}
+
+const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerProps) => {
   const router = useRouter();
-  const [showBanner, setShowBanner] = useState<boolean>(true);
+  const [showBanner, setShowBanner] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timer = setTimeout(
+      () => {
+        setShowBanner(true);
+      },
+      isTempMail ? 10000 : 3000,
+    );
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleClose = () => {
     setShowBanner(false);
@@ -14,12 +30,11 @@ const BitdefenderBanner = (languageForImage) => {
 
   const handleOnClick = () => {
     window.open(
-      `https://www.bitdefender.com/pages/consumer/${languageForImage.languageForImage}/new/trial/ts-trial-3m/internxt/`,
+      `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
       '_blank',
     );
   };
 
-  console.log('languageForImage', languageForImage.languageForImage);
   return (
     <div
       className={`${
@@ -34,20 +49,20 @@ const BitdefenderBanner = (languageForImage) => {
         <button
           id="close-banner"
           aria-label="close-banner"
-          className="absolute right-0 m-4 flex rounded-md  hover:bg-gray-1/10"
+          className="absolute right-0 m-4 flex rounded-md hover:bg-gray-1/10"
           onClick={handleClose}
         >
           <X size={32} className="text-white" />
         </button>
 
         <Image
-          src={getImage(`/banners/Ban_Internext_800x450_${languageForImage.languageForImage}.jpg`)}
+          src={getImage(`/banners/Ban_Internext_800x450_${languageForImage}.jpg`)}
           alt="File Arrow Up icon"
           width={800}
           height={110}
           quality={100}
           style={{ cursor: 'pointer' }}
-          onClick={() => handleOnClick()}
+          onClick={handleOnClick}
         />
       </div>
     </div>

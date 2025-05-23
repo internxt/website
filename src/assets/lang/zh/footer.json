@@ -82,7 +82,8 @@
         "passwordGenerator": "密码生成器",
         "fileConverter": "文件转换器",
         "haveIBeenPwned": "我被入侵了",
-        "metadataRemover": "元数据删除器"
+        "metadataRemover": "元数据删除器",
+        "aiDetector": "AI 检测器"
       },
       "features": {
         "title": "功能",

@@ -148,7 +148,8 @@ LayoutProps) {
           }}
         ></script>
 
-        {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
+        {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
+          
           <>
             <script
               id="adengine-config"
@@ -182,7 +183,7 @@ LayoutProps) {
             />
             <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
           </>
-        ) : null}
+        ) : null}*/}
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{

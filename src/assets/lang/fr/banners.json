@@ -66,6 +66,10 @@
     "line1": "Supprimez les métadonnées révélatrices de vos fichiers.",
     "blueText": "Nettoyez votre empreinte numérique avec Internxt"
   },
+  "SignUpAiDetector": {
+    "line1": "Détectez le contenu généré par l'IA, assurez l'authenticité et",
+    "blueText": "publiez en toute confiance avec Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "Des milliers d'octets dans le nuage sécurisé",
     "blueText": "d'Internxt"
@@ -108,8 +112,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Offre de 82% sur les plans lifetime, VPN & Antivirus !",
-      "normalText": "Journée de la gestion des identités",
+      "boldText": "85% de réduction sur Internxt Drive, VPN et Antivirus !",
+      "normalText": "Que la force soit avec toi",
       "cta": "Acheter"
     }
   },

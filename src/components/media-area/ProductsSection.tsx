@@ -30,6 +30,14 @@ const ProductsSection = ({ textContent, lang }) => {
               lang={lang}
               textContent={textContent.send}
             />
+
+            <ProductCard
+              imageUrl={getImage('/images/privacy/internxt_vpn_extension.webp')}
+              animationDirection={'left'}
+              redirect={'/vpn'}
+              lang={lang}
+              textContent={textContent.vpn}
+            />
           </div>
         </div>
       </div>

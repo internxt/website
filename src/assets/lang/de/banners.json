@@ -93,9 +93,9 @@
     "line1": "Bewahre diese jetzt sauberen Dateien sicher auf,",
     "blueText": "komme kostenlos zu Internxt"
   },
-  "SignUpMetadataRemoverBanner": {
-    "line1": "Befreien Sie Ihre Dateien von aufschlussreichen Metadaten.",
-    "blueText": "Bereinigen Sie Ihren digitalen Fußabdruck mit Internxt"
+  "SignUpAiDetector": {
+    "line1": "Erkenne KI-Inhalte, stelle Authentizität sicher und",
+    "blueText": "veröffentliche mit Vertrauen mit Internxt"
   },
   "SignUpByteConverterBanner": {
     "line1": "Hole dir den Byte für Byte sicheren Cloud-Speicher",
@@ -133,8 +133,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "82% Rabatt auf Lifetime-Pläne, VPN & Antivirus!",
-      "normalText": "Tag des Identitätsmanagements",
+      "boldText": "85% Rabatt auf Internxt Drive, VPN und Antivirus!",
+      "normalText": "Möge die Macht mit dir sein",
       "cta": "Kaufen"
     }
   },

@@ -1,12 +1,16 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -97,9 +101,12 @@ export default function PriceCard({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -155,7 +162,7 @@ export default function PriceCard({
 
   const STACKCOMMERCE_STORAGE_PLANS = {
     '2TB': {
-      title: 'Lite 2TB',
+      title: '2TB',
       price: '€900',
       features: [
         '2TB encrypted storage',
@@ -170,7 +177,7 @@ export default function PriceCard({
       ],
     },
     '5TB': {
-      title: 'Pro 5TB',
+      title: '5TB',
       price: '€1900',
       features: [
         '5TB encrypted storage',
@@ -185,7 +192,7 @@ export default function PriceCard({
       ],
     },
     '10TB': {
-      title: 'Super 10TB',
+      title: '10TB',
       price: '€2900',
       features: [
         '10TB encrypted storage',
@@ -200,7 +207,7 @@ export default function PriceCard({
       ],
     },
     '20TB': {
-      title: 'Ultra 20TB',
+      title: '20TB',
       price: '€4900',
       features: [
         '20TB encrypted storage',
@@ -432,28 +439,6 @@ export default function PriceCard({
         </button>
       </div>
 
-      {showOffer ? (
-        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2  px-5 py-5`}>
-          <span className="text-[13.5px] font-bold text-white">
-            {contentText.productFeatures.IdentityManagementDay.title}
-          </span>
-          <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-              <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift1}
-              </span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Fingerprint className="h-6 w-6 text-white" weight="fill" />
-              <span className="text-[13.5px] text-white">
-                {contentText.productFeatures.IdentityManagementDay.gift2}
-              </span>
-            </div>
-          </div>
-        </div>
-      ) : null}
-
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         {isOffer ? (
           <>
@@ -480,7 +465,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
+        <div className="flex min-h-[200px] flex-col space-y-2 pt-6">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
@@ -508,7 +493,7 @@ export default function PriceCard({
               </div>
             ))
           ) : (
-            <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
+            <div className="flex flex-col space-y-2 pt-6 lg:h-[500px]">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
                   {React.createElement(iconsFeatures[index % iconsFeatures.length], {
@@ -516,7 +501,7 @@ export default function PriceCard({
                     className: 'text-primary',
                   })}
                   <span className="text-gray-80">{feature}</span>
-                  {index > 8 ? (
+                  {index > 9 ? (
                     <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
                   ) : null}
                 </div>

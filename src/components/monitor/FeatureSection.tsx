@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-
 import { useRouter } from 'next/router';
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import Card from '../shared/Card';
@@ -9,13 +8,12 @@ import { RedirectButton } from '../shared/RedirectButton';
 
 export interface FeatureSectionProps {
   textContent: HaveIbeenPwnedText['FeatureSection'];
+  lang: string;
 }
 export interface CardTextProps {
   textContent: HaveIbeenPwnedText['FeatureSection']['cards'];
 }
 const CardText = ({ textContent }: CardTextProps) => {
-  const router = useRouter();
-
   return (
     <Card className="flex max-w-full flex-col items-center space-y-6 border-none px-10 text-center md:max-w-[400px] md:items-start md:text-left">
       <h3 className="text-3xl font-semibold leading-tight text-gray-100 md:text-5xl">{textContent.title}</h3>
@@ -30,7 +28,7 @@ const CardText = ({ textContent }: CardTextProps) => {
   );
 };
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent }) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent, lang }) => {
   const cards = [
     {
       imageSrc: '/images/monitor/internxt_monitor_1.webp',
@@ -74,9 +72,27 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent }) => {
     },
   ];
 
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section>
       <div className="my-10 mb-20 flex flex-col items-center space-y-12 md:my-20 md:mb-32">
+        <div className="flex w-full flex-col items-center justify-center px-6 pb-10">
+          <Image
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
         <div className="mx-auto max-w-full px-4 text-center md:max-w-[774px]">
           <p className="text-3xl font-semibold text-gray-100 md:text-5xl">{textContent.title}</p>
           <p className="mt-6 text-lg font-bold text-gray-100 md:mt-12 md:text-xl">{textContent.description}</p>
@@ -107,6 +123,23 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent }) => {
             )}
           </div>
         ))}
+      </div>
+      <div className="flex w-full flex-col items-center justify-center px-6 pb-20">
+        <Image
+          src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+          alt="File Arrow Up icon"
+          width={800}
+          height={110}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
       </div>
     </section>
   );

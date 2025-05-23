@@ -83,7 +83,8 @@
         "passwordGenerator": "Gerador de Senhas",
         "fileConverter": "Conversor de Arquivos",
         "haveIBeenPwned": "Internxt Monitor",
-        "metadataRemover": "Remover Metadados"
+        "metadataRemover": "Remover Metadados",
+        "aiDetector": "Detector de IA"
       },
       "features": {
         "title": "Funcionalidades",

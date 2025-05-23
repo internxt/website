@@ -136,6 +136,7 @@ const PriceTable = ({
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
@@ -196,7 +197,7 @@ const PriceTable = ({
                 cta={['checkout', 'price_1PLMTpFAOdcgaBMQ0Jag685H']}
                 lang={lang}
                 billingFrequency={Interval.Lifetime}
-                popular={true}
+                popular={false}
                 currency={currency}
                 currencyValue={currencyValue}
                 coupon={couponCodeFiltered('10TB')}
@@ -259,7 +260,7 @@ const PriceTable = ({
                         percentOff={percentOff}
                         isStackCommerce={isStackCommerce}
                         index={index}
-                        showOffer={false}
+                        showOffer={true}
                       />
                     );
                   })

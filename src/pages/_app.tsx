@@ -74,15 +74,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.PriceBannerForCampaigns,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.MobileBannerForHome,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: false,
+            isOpen: true,
           },
           {
             key: GlobalDialog.BottomBanner,
@@ -102,9 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        {lang === 'en' && (
-          <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-        )}
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
 
         {/* Google Tag Manager (noscript) */}
         <noscript>

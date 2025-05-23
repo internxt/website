@@ -45,6 +45,16 @@
       "title": "元数据删除器",
       "cta": "立即删除",
       "pathname": "/metadata-remover"
+    },
+    {
+      "title": "暗网监控",
+      "cta": "立即检测",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "AI检测器",
+      "cta": "立即检测",
+      "pathname": "/ai-detector"
     }
   ]
 }

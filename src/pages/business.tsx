@@ -63,11 +63,10 @@ export const BusinessPage = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
+          <div className="llg:pr-10 flex w-full flex-col items-center justify-center gap-8  text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
             <Header>{textContent.HeroSection.title}</Header>
             <div className="flex flex-col gap-4">
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
-              <p className="text-xl font-semibold">{textContent.HeroSection.description[1]}</p>
             </div>
             <div className="flex flex-col items-center gap-4 lg:flex-row ">
               <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />

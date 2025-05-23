@@ -10,12 +10,12 @@
       "france": {
         "title": "Célébrez le 14 juillet avec un plan à vie",
         "description": "Sécurisez vos fichiers pour toujours avec votre remise du jour de la Fête Nationale Française",
-        "cta1": "83% de réduction"
+        "cta1": "85% de réduction"
       },
       "belgium": {
         "title": "Célébrez le 21 juillet avec un plan à vie",
         "description": "Sécurisez vos fichiers pour toujours avec votre remise du jour de la Fête Nationale Belge",
-        "cta1": "83% de réduction"
+        "cta1": "85% de réduction"
       }
     }
   },
@@ -36,7 +36,8 @@
   },
   "GetLifetimeSection": {
     "title": "La vie n'est pas courte ! Mais cette offre à temps limité l'est...",
-    "description": "Internxt propose une offre de 3 jours pour une vie de confidentialité et de tranquillité d'esprit."
+    "description": "Internxt propose une offre de 3 jours pour une vie de confidentialité et de tranquillité d'esprit.",
+    "cta": "Choisir un plan"
   },
   "FeatureSection": {
     "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers?",

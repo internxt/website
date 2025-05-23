@@ -95,7 +95,7 @@ export enum PromoCodeName {
   euro2024TenTB = '75OFF10TB',
   freeUserCoupon = 'SPECIAL75',
   PcmagCoupon = 'PCmag80',
-  CloudwardsCoupon = 'Cloudwards80',
+  CloudwardsCoupon = 'CLOUDWARDS85',
   OnePlanCoupon = '5TBplan',
   AllPlansCoupon = 'SUMMER80',
   Lifetime83DiscountCoupon = 'NATIONAL83',
@@ -124,9 +124,12 @@ export enum PromoCodeName {
   Identity82 = 'IDENTITY82',
   Identity82AFF = 'IDENTITY82AFF',
   PcComponentes5TB = 'PCMOVIL',
+  StarWars = 'STARWARS85',
   Celebration83 = 'CELEBRATION83',
   Special82 = '82SPECIAL',
   TechRadarDiscount = 'TECHRADAR',
+  Affiliates85 = 'DRIVE85',
+  Off704You = '70OFF4YOU',
 }
 
 export interface PromoCodeProps {

@@ -83,7 +83,8 @@
         "fileConverter": "Преобразователь файлов",
         "vpn": "Расширение VPN",
         "haveIBeenPwned": "Internxt Monitor",
-        "metadataRemover": "Очиститель метаданных"
+        "metadataRemover": "Очиститель метаданных",
+        "aiDetector": "Детектор ИИ"
       },
       "features": {
         "title": "Функции",

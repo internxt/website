@@ -100,6 +100,7 @@ export interface Tools {
   vpn: string;
   haveIBeenPwned: string;
   metadataRemover: string;
+  aiDetector: string;
 }
 
 export interface Features {

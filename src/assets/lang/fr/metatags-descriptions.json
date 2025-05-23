@@ -193,5 +193,15 @@
     "id": "internxt-metadata-remover",
     "title": "Internxt Suppression de Métadonnées - Comment nettoyer les métadonnées dans les PDF, photos et vos documents en ligne",
     "description": "Supprimez les données cachées de vos fichiers en quelques secondes. Le nettoyeur de métadonnées d'Internxt purifie vos documents pour une confidentialité maximale avant de les partager."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Détecteur d'IA - Détecteur de texte IA gratuit",
+    "description": "Internxt Détecteur d'IA. Analysez gratuitement le contenu pour vérifier s'il a été rédigé par ChatGPT, Gemini ou d'autres plateformes d'intelligence artificielle."
+  },
+  {
+    "id": "special-offer",
+    "title": "Offre spéciale — Internxt",
+    "description": "Profitez des forfaits annuels et à vie d'Internxt avec une réduction exclusive de 80 %. Bénéficiez de confidentialité et de sécurité avec jusqu'à 10 To de stockage."
   }
 ]

@@ -43,15 +43,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Angebot 82%",
-      "title": "Tag des Identitätsmanagements",
-      "subtitle": "Internxt Drive, Antivirus und VPN",
+      "label": "85% Rabatt",
+      "title": "Möge die Privatsphäre mit dir sein!",
+      "subtitle": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN",
       "cta": "Sichere dir deinen Plan!",
-      "cta2": "Erhalte 82% Rabatt",
+      "cta2": "Erhalte 85% Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gültig für kostenlose Konten oder neue Benutzer",
-      "titleMbl": "Neue Lifetime-Pläne!",
-      "descriptionMbl": "Privater Speicher, Antivirus und VPN",
+      "lastCta": "*Angebot gültig für kostenlose Konten oder neue Nutzer",
+      "titleMbl": "Möge die Privatsphäre mit dir sein!",
+      "subtitleMbl": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN.",
+      "descriptionMbl": "Nimm an der Verlosung eines Internxt-Rucksacks teil",
       "ctaMbl": "Kaufe deinen Plan"
     },
     "planTitles": {

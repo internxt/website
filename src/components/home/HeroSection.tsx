@@ -6,7 +6,7 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 const Animation = dynamic(() => import('./components/Animation'));
 
 interface HeroSectionForHomeProps {
@@ -30,8 +30,8 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
     <section className="overflow-hidden">
       <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
         <div
-          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block "
+          className={`${styles.linearGradient} absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
+          style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
@@ -58,8 +58,18 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-            <Animation />
+          <div className="hidden w-full max-w-[540px] justify-end pt-12 lg:flex xl:pt-20">
+            <Image
+              loading="eager"
+              src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
+              draggable="false"
+              quality={100}
+              width={463}
+              height={441}
+              className="h-auto w-full object-contain"
+              alt="HeroSection Image"
+              onClick={handleOnClick}
+            />
           </div>
         </div>
       </div>

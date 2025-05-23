@@ -3,12 +3,11 @@ import { useRouter } from 'next/navigation';
 import {
   ClockCounterClockwise,
   Eye,
+  Fingerprint,
   Key,
-  ListChecks,
-  LockSimple,
+  LockKey,
   MonitorArrowUp,
   NumberCircleZero,
-  Scales,
   ShieldCheck,
 } from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
@@ -17,7 +16,7 @@ import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
-import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import FeaturesSlider from '@/components/shared/FeaturesSlider';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -89,8 +88,8 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === pathname);
 
   const couponCode = {
-    pcmag: PromoCodeName.Identity82AFF,
-    oneplan: PromoCodeName.Identity82AFF,
+    pcmag: PromoCodeName.StarWars,
+    oneplan: PromoCodeName.Affiliates85,
   };
 
   useEffect(() => {
@@ -136,34 +135,24 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
   const cards = [
     {
-      icon: LockSimple,
+      icon: ShieldCheck,
       title: langJson.WhyChooseInternxtForOneplan.cards[0].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[0].description,
     },
     {
-      icon: ShieldCheck,
+      icon: LockKey,
       title: langJson.WhyChooseInternxtForOneplan.cards[1].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[1].description,
     },
     {
-      icon: NumberCircleZero,
+      icon: Eye,
       title: langJson.WhyChooseInternxtForOneplan.cards[2].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[2].description,
     },
     {
-      icon: Eye,
+      icon: Fingerprint,
       title: langJson.WhyChooseInternxtForOneplan.cards[3].title,
       description: langJson.WhyChooseInternxtForOneplan.cards[3].description,
-    },
-    {
-      icon: Scales,
-      title: langJson.WhyChooseInternxtForOneplan.cards[4].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[4].description,
-    },
-    {
-      icon: ListChecks,
-      title: langJson.WhyChooseInternxtForOneplan.cards[5].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[5].description,
     },
   ];
 
@@ -209,22 +198,20 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
           <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
 
-          <TextAndCardsGroupColumnSection
-            background="bg-gray-1"
-            backgroundColorForCard="bg-white"
-            TextComponent={
-              <div className="flex max-w-[775px] flex-col gap-6 text-center">
-                <h2 className="text-5xl font-semibold text-gray-100">{langJson.WhyChooseInternxtForOneplan.title}</h2>
-                <p className="text-xl text-gray-80">{langJson.WhyChooseInternxtForOneplan.description}</p>
-              </div>
-            }
-            cards={cards}
+          <FeaturesSlider
+            textContent={{
+              title: langJson.WhyChooseInternxtForOneplan.title,
+              description: langJson.WhyChooseInternxtForOneplan.description,
+            }}
+            cardInfo={cards}
           />
+
+          <TestimonialsSection textContent={homeJson.TestimonialsSection} />
 
           <WhatWeDoSectionForSpecialOffer
             textContent={langJson.WhatWeDoForOneplan}
             handleOnButtonClick={handleOnButtonClick}
-            bgColor="bg-white"
+            bgColor="bg-gray-1"
             bgColorCard="bg-gray-1"
           />
         </>
