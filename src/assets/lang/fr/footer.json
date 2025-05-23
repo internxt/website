@@ -81,7 +81,8 @@
         "byteConverter": "Convertisseur d'Octets",
         "passwordGenerator": "Générateur de Mot de Passe",
         "fileConverter": "Convertisseur de fichiers",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Supprimer les métadonnées"
       },
       "features": {
         "title": "Fonctionnalités",

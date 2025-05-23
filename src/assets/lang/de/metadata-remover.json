@@ -7,7 +7,8 @@
       "line1": "Lade Dateien hoch oder klicke hier"
     },
     "fileSelected": "Datei hochgeladen erfolgreich",
-    "cancel": "Abbrechen",
+    "cancel": "Neue Datei",
+    "download": "Download",
     "close": "Schließen",
     "scanNow": "Metadaten entfernen",
     "selectFile": "Datei auswählen",

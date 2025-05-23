@@ -1,9 +1,7 @@
 import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
-import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
+import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
-import Header from '../shared/Header';
-import { getImage } from '@/lib/getImage';
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
 
@@ -47,10 +45,8 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsProcessing(true);
       const file = fileInput.files[0];
 
-      // Use our local metadata remover
       const cleanedFileBlob = await removeFileMetadata(file);
 
-      // Create a download link for the cleaned file
       const url = URL.createObjectURL(cleanedFileBlob);
       setDownloadUrl(url);
 
@@ -58,7 +54,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsProcessFinished(true);
       setShowPopup(true);
 
-      // Start download automatically
       const downloadLink = document.createElement('a');
       downloadLink.href = url;
       downloadLink.download = `cleaned_${file.name}`;
@@ -235,14 +230,14 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                 className="flex h-12 flex-row items-center rounded-lg border border-gray-30 bg-white px-6 text-lg font-medium text-black transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                 onClick={handleCancel}
               >
-                Cancel
+                {textContent.cancel}
               </button>
               <button
                 type="button"
                 className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
                 onClick={handleDownload}
               >
-                Download
+                {textContent.download}
               </button>
             </div>
           </div>
@@ -300,7 +295,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >
-          {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 lg:items-start lg:justify-between">
             <div className="flex w-full flex-col items-center space-y-5 text-center">
               <h1 className="text-3xl font-semibold text-cool-gray-100 md:text-6xl">{textContent.title}</h1>
@@ -312,13 +306,11 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
             </div>
           </div>
 
-          {/* Process container (drop area & process information) */}
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
                 {isProcessing ? (
                   <>
-                    {/* Processing state */}
                     <div className="relative flex w-full flex-col items-start justify-start overflow-hidden rounded-xl sm:h-96">
                       <div className="flex h-16 w-full flex-shrink-0 flex-row items-center justify-between bg-primary bg-opacity-6 px-5">
                         {isProcessFinished ? (
@@ -339,7 +331,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   <>
                     {fileSizeLimitReached ? (
                       <>
-                        {/* File size limit reached */}
                         <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
                             as="div"
@@ -368,7 +359,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       </>
                     ) : (
                       <>
-                        {/* Process confirmation */}
                         <div className="flex h-60 w-full flex-col items-stretch justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
                             as="div"
@@ -419,7 +409,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               >
                 {isDragging ? (
                   <>
-                    {/* Drop file here */}
                     <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
                       <Image
                         src="/images/virus-scanner/FileArrowUp.png"
@@ -432,7 +421,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   </>
                 ) : (
                   <>
-                    {/* Default state */}
                     <div className="flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
                       <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">

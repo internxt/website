@@ -82,7 +82,8 @@
         "passwordGenerator": "Генератор паролей",
         "fileConverter": "Преобразователь файлов",
         "vpn": "Расширение VPN",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Очиститель метаданных"
       },
       "features": {
         "title": "Функции",

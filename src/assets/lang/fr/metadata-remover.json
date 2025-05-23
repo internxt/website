@@ -4,30 +4,31 @@
     "subtitle2": "Elimine les métadonnées de vos fichiers pour rester anonyme en ligne.",
     "secure": "Les téléchargements de fichiers sont protégés par HTTPS",
     "dropFile": {
-      "line1": "Lädt Dateien oder klicken Sie hier"
+      "line1": "Glissez-déposez vos fichiers ou cliquez ici"
     },
-    "fileSelected": "Datei erfolgreich hochgeladen",
-    "cancel": "Abbrechen",
-    "close": "Schließen",
-    "scanNow": "Metadaten entfernen",
-    "selectFile": "Datei auswählen",
-    "dropHere": "Datei hier ablegen",
-    "loading": "Laden...",
+    "fileSelected": "Fichier téléchargé avec succès",
+    "cancel": "Nouveau fichier",
+    "download": "Télécharger",
+    "close": "Fermer",
+    "scanNow": "Supprimer les métadonnées",
+    "selectFile": "Sélectionner un fichier",
+    "dropHere": "Déposer le fichier ici",
+    "loading": "Chargement...",
     "maxFileSize": {
-      "title": "Dateigrößenlimit überschritten",
-      "description": "Maximale Dateigröße von 1GB"
+      "title": "Limite de taille de fichier dépassée",
+      "description": "Taille maximale de fichier de 1 Go"
     },
     "table": {
-      "loading": "Laden...",
-      "metadataRemoved": "Alle Metadaten wurden entfernt",
-      "automaticDownload": "Ihre Herunterladung beginnt automatisch",
-      "detected": "Detektiert",
-      "undetected": "Nicht detektiert",
-      "unableToProcess": "Nicht verarbeiten",
-      "analyzing": "Metadaten entfernen...",
-      "scanTime": "Scanzeit",
-      "name": "Name",
-      "detection": "Detektion"
+      "loading": "Chargement...",
+      "metadataRemoved": "Toutes les métadonnées ont été supprimées",
+      "automaticDownload": "Votre téléchargement commence automatiquement",
+      "detected": "Détecté",
+      "undetected": "Non détecté",
+      "unableToProcess": "Impossible de traiter",
+      "analyzing": "Suppression des métadonnées...",
+      "scanTime": "Temps d'analyse",
+      "name": "Nom",
+      "detection": "Détection"
     },
     "error": {
       "title": "Etwas ist schief gelaufen",

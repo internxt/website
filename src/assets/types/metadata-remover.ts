@@ -81,6 +81,7 @@ export interface HeroSection {
   footer: string;
   dropFile: DropFile;
   fileSelected: string;
+  download: string;
   cancel: string;
   close: string;
   scanNow: string;

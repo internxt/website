@@ -20,11 +20,9 @@ import {
 } from '@phosphor-icons/react';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
-import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import FeaturesSliderImg from '@/components/metadata-remover/FeaturesSliderImg';
 import FeaturesSlider from '@/components/shared/FeaturesSlider';
 import { getImage } from '@/lib/getImage';
-// Dynamically import the HeroSection component with no SSR
 const HeroSection = dynamic(() => import('@/components/metadata-remover/HeroSection'), { ssr: false });
 
 const CTA_URL = `/pricing`;

@@ -7,7 +7,8 @@
       "line1": "Drop your file to remove metadata"
     },
     "fileSelected": "File uploaded successfully",
-    "cancel": "Cancel",
+    "cancel": "New file",
+    "download": "Download",
     "close": "Close",
     "scanNow": "Remove metadata",
     "selectFile": "Choose file",

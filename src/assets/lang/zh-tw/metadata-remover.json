@@ -7,7 +7,8 @@
       "line1": "上传文件或点击这里"
     },
     "fileSelected": "文件上传成功",
-    "cancel": "取消",
+    "cancel": "新文件",
+    "download": "下载",
     "close": "关闭",
     "scanNow": "删除元数据",
     "selectFile": "选择文件",

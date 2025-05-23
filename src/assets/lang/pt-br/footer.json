@@ -82,7 +82,8 @@
         "byteConverter": "Conversor de Bytes",
         "passwordGenerator": "Gerador de Senhas",
         "fileConverter": "Conversor de Arquivos",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Remover Metadados"
       },
       "features": {
         "title": "Funcionalidades",

@@ -4,30 +4,31 @@
     "subtitle2": "Elimina metadati dai tuoi file per rimanere anonimo online.",
     "secure": "Le tue upload sono protette da HTTPS",
     "dropFile": {
-      "line1": "Lädt Dateien oder klicken Sie hier"
+      "line1": "Carica file o clicca qui"
     },
-    "fileSelected": "Datei erfolgreich hochgeladen",
-    "cancel": "Abbrechen",
-    "close": "Schließen",
-    "scanNow": "Metadaten entfernen",
-    "selectFile": "Datei auswählen",
-    "dropHere": "Datei hier ablegen",
-    "loading": "Laden...",
+    "fileSelected": "File caricato con successo",
+    "cancel": "Nuovo file",
+    "download": "Scarica",
+    "close": "Chiudi",
+    "scanNow": "Rimuovi metadati",
+    "selectFile": "Seleziona file",
+    "dropHere": "Trascina il file qui",
+    "loading": "Caricamento...",
     "maxFileSize": {
-      "title": "Dateigrößenlimit überschritten",
-      "description": "Maximale Dateigröße von 1GB"
+      "title": "Limite dimensione file superato",
+      "description": "Dimensione massima file di 1GB"
     },
     "table": {
-      "loading": "Laden...",
-      "metadataRemoved": "Alle Metadaten wurden entfernt",
-      "automaticDownload": "Ihre Herunterladung beginnt automatisch",
-      "detected": "Detektiert",
-      "undetected": "Nicht detektiert",
-      "unableToProcess": "Nicht verarbeiten",
-      "analyzing": "Metadaten entfernen...",
-      "scanTime": "Scanzeit",
-      "name": "Name",
-      "detection": "Detektion"
+      "loading": "Caricamento...",
+      "metadataRemoved": "Tutti i metadati sono stati rimossi",
+      "automaticDownload": "Il download inizierà automaticamente",
+      "detected": "Rilevato",
+      "undetected": "Non rilevato",
+      "unableToProcess": "Impossibile elaborare",
+      "analyzing": "Rimozione metadati...",
+      "scanTime": "Tempo di scansione",
+      "name": "Nome",
+      "detection": "Rilevamento"
     },
     "error": {
       "title": "Etwas ist schief gelaufen",

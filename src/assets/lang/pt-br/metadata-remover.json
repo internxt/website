@@ -1,37 +1,38 @@
 {
   "HeroSection": {
-    "title": "Eliminador de metadatos",
-    "subtitle2": "Elimina metadatos de tus archivos para mantenerte anónimo en línea.",
-    "secure": "Las subidas de archivos están protegidas por HTTPS",
+    "title": "Removedor de metadados",
+    "subtitle2": "Remova metadados dos seus arquivos para manter-se anônimo online.",
+    "secure": "Os uploads de arquivos são protegidos por HTTPS",
     "dropFile": {
-      "line1": "Suelta archivos o haz clic aquí"
+      "line1": "Solte arquivos ou clique aqui"
     },
-    "fileSelected": "Datei erfolgreich hochgeladen",
-    "cancel": "Abbrechen",
-    "close": "Schließen",
-    "scanNow": "Metadaten entfernen",
-    "selectFile": "Datei auswählen",
-    "dropHere": "Suelta archivo aquí",
-    "loading": "Cargando...",
+    "fileSelected": "Arquivo carregado com sucesso",
+    "cancel": "Novo arquivo",
+    "download": "Baixar",
+    "close": "Fechar",
+    "scanNow": "Remover metadados",
+    "selectFile": "Selecionar arquivo",
+    "dropHere": "Solte o arquivo aqui",
+    "loading": "Carregando...",
     "maxFileSize": {
-      "title": "Dateigrößenlimit überschritten",
-      "description": "Maximale Dateigröße von 1GB"
+      "title": "Limite de tamanho do arquivo excedido",
+      "description": "Tamanho máximo de arquivo de 1GB"
     },
     "table": {
-      "loading": "Laden...",
-      "metadataRemoved": "Alle Metadaten wurden entfernt",
-      "automaticDownload": "Ihre Herunterladung beginnt automatisch",
-      "detected": "Detektiert",
-      "undetected": "Nicht detektiert",
-      "unableToProcess": "Nicht verarbeiten",
-      "analyzing": "Metadaten entfernen...",
-      "scanTime": "Scanzeit",
-      "name": "Name",
-      "detection": "Detektion"
+      "loading": "Carregando...",
+      "metadataRemoved": "Todos os metadados foram removidos",
+      "automaticDownload": "Seu download começará automaticamente",
+      "detected": "Detectado",
+      "undetected": "Não detectado",
+      "unableToProcess": "Não foi possível processar",
+      "analyzing": "Removendo metadados...",
+      "scanTime": "Tempo de verificação",
+      "name": "Nome",
+      "detection": "Detecção"
     },
     "error": {
-      "title": "Etwas ist schief gelaufen",
-      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
+      "title": "Algo deu errado",
+      "description": "Ocorreu um erro ao fazer upload do arquivo, por favor, tente novamente mais tarde"
     }
   },
   "FeaturesSection": {

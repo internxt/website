@@ -454,6 +454,12 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
+                    <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.metadataRemover}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -926,6 +932,9 @@ export default function Footer({
                       </Link>
                       <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      </Link>
+                      <Link href="/metadata-remover" locale={lang} passHref legacyBehavior>
+                        {textContent.FooterSection.sections.tools.metadataRemover}
                       </Link>
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}

@@ -7,7 +7,8 @@
       "line1": "Suelta archivos o haz clic aquí"
     },
     "fileSelected": "Archivo cargado exitosamente",
-    "cancel": "Cancelar",
+    "cancel": "Nuevo archivo",
+    "download": "Descargar",
     "close": "Cerrar",
     "scanNow": "Eliminar metadatos",
     "selectFile": "Seleccionar archivo",
