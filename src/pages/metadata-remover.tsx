@@ -30,12 +30,36 @@ const CTA_URL = `/pricing`;
 const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbarLang, lang, bannerLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-metadata-remover');
   const cardInfo = [
-    { icon: InfinityIcon, ...langJson.FeaturesSlider.info[0] },
-    { icon: LockKey, ...langJson.FeaturesSlider.info[1] },
-    { icon: ShieldStar, ...langJson.FeaturesSlider.info[2] },
-    { icon: Files, ...langJson.FeaturesSlider.info[3] },
-    { icon: Fingerprint, ...langJson.FeaturesSlider.info[4] },
-    { icon: FileLock, ...langJson.FeaturesSlider.info[5] },
+    {
+      icon: InfinityIcon,
+      title: langJson.FeaturesSlider.info[0].title,
+      description: langJson.FeaturesSlider.info[0].description,
+    },
+    {
+      icon: LockKey,
+      title: langJson.FeaturesSlider.info[1].title,
+      description: langJson.FeaturesSlider.info[1].description,
+    },
+    {
+      icon: ShieldStar,
+      title: langJson.FeaturesSlider.info[2].title,
+      description: langJson.FeaturesSlider.info[2].description,
+    },
+    {
+      icon: Files,
+      title: langJson.FeaturesSlider.info[3].title,
+      description: langJson.FeaturesSlider.info[3].description,
+    },
+    {
+      icon: Fingerprint,
+      title: langJson.FeaturesSlider.info[4].title,
+      description: langJson.FeaturesSlider.info[4].description,
+    },
+    {
+      icon: FileLock,
+      title: langJson.FeaturesSlider.info[5].title,
+      description: langJson.FeaturesSlider.info[5].description,
+    },
   ];
   const cardInfoImg = [
     {

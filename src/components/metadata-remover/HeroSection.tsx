@@ -255,7 +255,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 sm:h-10 sm:px-5 sm:text-base"
               onClick={handleMetadataRemoval}
             >
-              Remove metadata
+              {textContent.removeMetadata}
             </button>
           </div>
         </div>

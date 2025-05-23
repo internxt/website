@@ -83,6 +83,7 @@ export interface HeroSection {
   fileSelected: string;
   download: string;
   cancel: string;
+  removeMetadata: string;
   close: string;
   scanNow: string;
   selectFile: string;
