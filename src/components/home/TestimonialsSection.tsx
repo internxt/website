@@ -51,7 +51,7 @@ const TestimonialsSection = ({
     {
       review: textContent.cards[1].review,
       testimonialName: textContent.cards[1].name,
-      company: textContent.cards[1].enterprise,
+      company: textContent.cards[2].enterprise,
       testimonialImage: getImage('/images/home/testimonials/avatar3.webp'),
     },
   ];

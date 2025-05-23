@@ -185,11 +185,12 @@
         "Antivirus",
         "Sichern Sie Ihre Dateien",
         "Passwortgeschütztes Datei-Sharing",
+        "Einladen, teilen und zusammenarbeiten",
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Meet (3 Teilnehmer)",
-        "Mail (3 Adressen)"
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung"
       ],
       "5TB": [
         "5TB Zero-Knowledge-verschlüsselter Speicher",
@@ -198,42 +199,49 @@
         "Antivirus",
         "Sichern Sie Ihre Dateien",
         "Passwortgeschütztes Datei-Sharing",
+        "Einladen, teilen und zusammenarbeiten",
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Meet (5 Teilnehmer)",
-        "Mail (5 Adressen)"
+        "Gerätebereinigung",
+        "Dark-Web-Überwachung",
+        "Meet",
+        "Mail"
       ],
       "10TB": []
     },
     "business": {
       "1TB": [
-        "1TB Speicher pro Benutzer",
+        "1TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
         "Ultraschnelles unbegrenztes VPN (FR, DE, PL)",
         "Antivirus",
         "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Passwortgeschütztes Teilen von Dateien",
+        "Einladen, Teilen & Zusammenarbeiten",
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 100 Benutzern",
-        "1 benutzerdefinierte E-Mail-Adresse pro Benutzer"
+        "Verwaltung von Kontorechnungen & Zahlungen",
+        "Gerätereiniger",
+        "Dark Web Monitor"
       ],
       "2TB": [
-        "2TB Speicher pro Benutzer",
+        "2TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
         "Ultraschnelles unbegrenztes VPN (FR, DE, PL, CA, UK)",
         "Antivirus",
         "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Passwortgeschütztes Teilen von Dateien",
+        "Einladen, Teilen & Zusammenarbeiten",
         "DSGVO-Konformität",
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
-        "Kontoverwaltung für Abrechnung & Zahlungen",
-        "Meetings mit bis zu 100 Benutzern ",
-        "2 benutzerdefinierte E-Mail-Adresse pro Benutzer"
+        "Verwaltung von Kontorechnungen & Zahlungen",
+        "Gerätereiniger",
+        "Dark Web Monitor",
+        "Meet",
+        "Mail"
       ]
     }
   }

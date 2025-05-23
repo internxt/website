@@ -98,6 +98,8 @@ export interface HeroSection {
     fileReadError: string;
     unsupportedFile: string;
   };
+  likelyHumanText: string;
+  likelyAiText: string;
 }
 
 export interface DropFile {

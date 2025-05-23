@@ -1666,10 +1666,10 @@
   dependencies:
     react ">=15.0.0 <17.0.0"
 
-"@internxt/sdk@^1.9.11":
-  version "1.9.11"
-  resolved "https://registry.yarnpkg.com/@internxt/sdk/-/sdk-1.9.11.tgz#5ca3db3f7473f6d582dd1f1beed511a74cd78c30"
-  integrity sha512-tHgq3rvizug9rp7IRVRzJY3lsPEJF3gMSg8Sc5LqKyrlTfmvS6rA57tNPQTrHwngwlV+swSkOmllfPsSpZ4iHA==
+"@internxt/sdk@=1.9.21":
+  version "1.9.21"
+  resolved "https://registry.yarnpkg.com/@internxt/sdk/-/sdk-1.9.21.tgz#ce2e4d7730ba3fa9cf9baef47f129a8c156f4783"
+  integrity sha512-SaO78pgRl2viEjkFS+UuKCFS1ivibDLCN72nAfh22ackzeBn1viMcX29pJyXiWecrA21FO+zzMxpRxZJScbLNQ==
   dependencies:
     axios "^0.24.0"
     query-string "^7.1.0"

@@ -48,6 +48,8 @@ interface IntegratedCheckoutViewProps {
     elements: StripeElements | null,
     formData?: IFormValues,
   ) => Promise<void>;
+  onUserNameChange: (userName: string) => void;
+  onPostalCodeChange: (postalCode: string) => void;
   onCountryAddressChange: (name: string) => void;
   onCouponInputChange: (promoCode: string) => void;
   couponError?: string;
@@ -63,6 +65,8 @@ export const IntegratedCheckoutView = ({
   error,
   onCheckoutButtonClicked,
   onCountryAddressChange,
+  onPostalCodeChange,
+  onUserNameChange,
   onCouponInputChange,
   onRemoveAppliedCouponCode,
   showCouponCode,
@@ -113,6 +117,8 @@ export const IntegratedCheckoutView = ({
                 <div className="flex flex-col rounded-2xl border border-gray-10 bg-white p-5">
                   <AddressElement
                     onChange={(e) => {
+                      onUserNameChange(e.value.name);
+                      onPostalCodeChange(e.value.address.postal_code);
                       onCountryAddressChange(e.value.address.country);
                     }}
                     options={{
