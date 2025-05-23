@@ -1,0 +1,164 @@
+{
+  "HeroSection": {
+    "eyebrow": "Internxt Meet",
+    "title": {
+      "textBeforeBlueText": "",
+      "blueText": " Privacy senza precedenti ",
+      "textAfterBlueText": " per videoconferenze e collaborazione sicura"
+    },
+    "subtitle": {
+      "line1": "Internxt Meet offre videochiamate completamente private alimentate dalla crittografia post-quantistica, garantendo che ",
+      "line2": " le tue riunioni siano sicure, riservate e prive di tracciamento.",
+      "line3": ""
+    },
+    "include": "Incluso in tutti i piani premium",
+    "cta": "Ottieni Internxt Meet"
+  },
+
+  "FeaturesSection1": {
+    "title": "Perché Internxt si distingue come lo storage cloud più sicuro e privato",
+    "description": "Internxt integra funzionalità avanzate di privacy per offrire lo storage cloud più sicuro per la tua tranquillità.",
+    "info": [
+      {
+        "title": "Crittografia premiata",
+        "description": "Il nostro sistema è costruito con crittografia post-quantistica Kyber 512, il miglior standard di crittografia scelto dall'Istituto NIST per proteggersi dalle future minacce dei computer quantistici, che potrebbero teoricamente violare i protocolli di crittografia attualmente utilizzati da altri provider di storage cloud. Proteggi i tuoi dati con Internxt per garantire la privacy dei tuoi file nel futuro."
+      },
+      {
+        "title": "Basta dipendere dai Big Tech",
+        "description": "Altri provider di storage cloud, come Google, Dropbox, ecc., traggono profitto dai tuoi dati, memorizzando e analizzando i tuoi file, portando a fughe di email e altre informazioni personali online. Internxt è diverso. Con la creazione di account anonimi e una rigorosa politica di non tracciamento, non memorizziamo, condividiamo o monetizziamo i tuoi dati in alcun modo."
+      },
+      {
+        "title": "Accessibile da ovunque",
+        "description": "Scarica Internxt Drive dalla tua app di storage cloud preferita per accedere al cloud su Windows, Mac, Linux, iOS o Android. Offriamo anche altre soluzioni di storage cloud privato con supporto WebDAV e Rclone, permettendoti di gestire i tuoi file senza sforzo su più dispositivi, automatizzare i backup e accedere ai tuoi dati da remoto."
+      },
+      {
+        "title": "Open source e verificato",
+        "description": "Altre piattaforme di storage cloud nascondono il loro codice sorgente al pubblico, il che significa che non potrai mai sapere veramente come gestiscono i tuoi dati o cosa fanno con i tuoi file. Internxt promette piena trasparenza, poiché il codice sorgente di tutti i nostri prodotti è pubblicamente disponibile su GitHub. Internxt è anche verificato come piattaforma sicura da Securitum, un'azienda indipendente di penetration testing."
+      },
+      {
+        "title": "Sostenibilità",
+        "description": "Il nostro impegno per costruire un futuro migliore basato sulla privacy online si estende anche al nostro impegno per un futuro più verde. I nostri data center utilizzano fonti di energia rinnovabile come il nucleare e l'idroelettrico. L'uso di tecnologie rispettose dell'ambiente aiuta il nostro impegno a costruire un futuro più sostenibile e a essere climaticamente neutri entro il 2050."
+      },
+      {
+        "title": "Conforme al GDPR",
+        "description": "Con sede a Valencia, in Spagna, Internxt garantisce che i tuoi dati siano privati e sicuri rispettando le leggi sulla protezione dei dati GDPR. Un account Drive personale mantiene private le tue informazioni senza tracciamento, condivisione o accesso non autorizzato e, per le aziende, riduce il rischio di multe e problemi legali."
+      }
+    ]
+  },
+  "FeaturesSectionImg": {
+    "title": "Una piattaforma di videochiamate privata per tutti",
+    "subtitle": "Internxt Meet è progettato per soddisfare le esigenze di tutti coloro che cercano di comunicare e collaborare con altri con privacy e sicurezza garantite.",
+    "cards": [
+      {
+        "title": "Personale",
+        "description": "Effettua videochiamate private tramite un link sicuro e chatta con i tuoi ospiti sapendo che le tue conversazioni sono protette."
+      },
+      {
+        "title": "Business",
+        "description": "Incontra privatamente clienti, team o dipartimenti e dimentica le fughe di dati."
+      },
+      {
+        "title": "Avvocati",
+        "description": "Incontra i clienti per condividere e discutere informazioni con totale privacy e proteggere il privilegio del cliente."
+      },
+      {
+        "title": "Medico",
+        "description": "Riduci il rischio di fughe di dati medici organizzando e condividendo la tua videochiamata privata con i pazienti."
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "title": "Goditi la libertà di espressione e la privacy",
+    "subtitle": "Chatta con altre persone con la nostra piattaforma di videochiamata crittografata per riunioni completamente private e protette con la crittografia post-quantistica più avanzata.",
+    "cards": [
+      {
+        "title": "Videochiamate private",
+        "description": "Usa Internxt Meet per chiamate video e audio che desideri mantenere private. Zero tracciatori, zero raccolta dati e zero informazioni che ti colleghino a te o a chiunque sia presente nelle tue chiamate."
+      },
+      {
+        "title": "Condivisione schermo",
+        "description": "Collabora facilmente con chi vuoi e condividi le tue presentazioni, fogli di calcolo e altro con la funzione di condivisione schermo di Internxt."
+      },
+      {
+        "title": "Sicurezza",
+        "description": "Tutte le tue conversazioni, video, chat e messaggi sono mantenuti al sicuro con crittografia zero-knowledge. Ti diamo il controllo totale della tua privacy e non accediamo mai alle tue conversazioni o messaggi."
+      },
+      {
+        "title": "Velocità e qualità video superiori",
+        "description": "L'IA alimenta videochiamate nitide alla velocità della luce, ottimizzando la larghezza di banda e la qualità garantendo al contempo la crittografia end-to-end per una privacy totale."
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Incontra in totale privacy",
+    "description": "Connettiti con tranquillità",
+    "cta": "Ottieni Internxt Meet"
+  },
+
+  "CtaSection2": {
+    "title": "Videochiamate che danno priorità alla privacy",
+    "description": "Parla liberamente e connettiti in modo sicuro",
+    "cta": "Ottieni Internxt Meet"
+  },
+
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cos'è Internxt Meet?",
+        "answer": [
+          "Internxt Meet è una piattaforma di videochiamate private dove puoi parlare, chattare e organizzare riunioni in totale sicurezza. Con Internxt Meet, tutte le tue conversazioni e chiamate sono mantenute in totale privacy grazie alla nostra tecnologia di crittografia avanzata. Tutte le chiamate tra te e il tuo team sono mantenute private e sicure."
+        ]
+      },
+      {
+        "question": "Internxt Meet è un'alternativa a Google Meet?",
+        "answer": [
+          "Sì, Internxt Meet è un'alternativa sicura a Google Meet, Zoom e Teams. Utilizziamo la crittografia zero-knowledge con crittografia post-quantistica per garantire che solo tu possa ascoltare o vedere le tue videochiamate. Nemmeno Internxt ha accesso alle tue chat o chiamate."
+        ]
+      },
+      {
+        "question": "Internxt Meet è gratuito?",
+        "answer": [
+          "Internxt Meet è disponibile quando ti abboni a uno qualsiasi dei nostri piani premium, offrendo accesso al nostro pacchetto completo di prodotti incentrati sulla privacy, inclusi Internxt Drive, Mail, Antivirus e VPN."
+        ]
+      },
+      {
+        "question": "Come posso contattare il servizio clienti?",
+        "answer": [
+          "Non trovi quello che stai cercando? Puoi contattare il nostro team di Customer Success tramite chat live o inviando un'email a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia di rimborso standard di 30 giorni su tutti gli abbonamenti a pagamento, che inizia quando ti abbonati.",
+          "Se non sei soddisfatto del nostro servizio, inviaci un'email a hello@internxt.com e spiega la situazione per richiedere il rimborso."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "L'alternativa di videochiamate più sicura alle grandi multinazionali",
+    "titleLine2": "Unisciti a Internxt per un'esperienza web più privata e sicura con la nostra suite di prodotti privati e crittografati progettati per darti il controllo totale della tua privacy.",
+    "description": "Goditi Meet, Mail, Antivirus e VPN come parte del tuo piano Internxt Drive su Windows, Mac o Linux.",
+    "cta": "Ottieni Internxt",
+    "cards": {
+      "element1": {
+        "title": "Privacy europea",
+        "description": "Internxt rispetta il regolamento GDPR, che protegge i tuoi dati con le migliori leggi sulla privacy per sicurezza, trasparenza e controllo sulle tue informazioni personali."
+      },
+      "element2": {
+        "title": "Sicurezza",
+        "description": [
+          "Internxt utilizza la crittografia end-to-end e post-quantistica, fornendoti la migliore piattaforma di videoconferenza crittografata per la tua privacy."
+        ]
+      },
+      "element3": {
+        "title": "Sostenibilità",
+        "description": [
+          "Siamo impegnati in un futuro più sostenibile ed ecologico, quindi i nostri prodotti utilizzano solo tecnologie energetiche rinnovabili ed efficienti."
+        ]
+      }
+    }
+  }
+}
