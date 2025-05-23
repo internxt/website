@@ -415,6 +415,11 @@
     "description": "Meta description: Get a special offer for any Internxt annual plan. All plans include private cloud storage, VPN, and Antivirus."
   },
   {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadata Remover - Clean Your File’s Metadata Online",
+    "description": "Remove hidden data from your files in seconds. Internxt’s Metadata Remover cleans your documents for maximum privacy before sharing."
+  },
+  {
     "id": "zerogpt-ai-checker",
     "title": "Internxt ZeroGPT AI Checker - Free AI Checker Tool",
     "description": "Internxt ZeroGPT AI checker. Scan content to check if it’s been written by ChatGPT, Gemini, or other AI platforms. Try now for free!"

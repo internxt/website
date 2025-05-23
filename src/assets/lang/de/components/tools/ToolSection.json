@@ -42,6 +42,11 @@
       "pathname": "/vpn"
     },
     {
+      "title": "Metadaten-Entferner",
+      "cta": "Jetzt entfernen",
+      "pathname": "/metadata-remover"
+    },
+    {
       "title": "Dark Web Monitor",
       "cta": "Jetzt prüfen",
       "pathname": "/dark-web-monitor"
