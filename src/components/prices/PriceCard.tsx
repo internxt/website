@@ -497,7 +497,7 @@ export default function PriceCard({
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
                   {React.createElement(
-                    index >= 10
+                    index >= 6 && storage === '1TB'
                       ? iconsFeatures[(index + 1) % iconsFeatures.length]
                       : iconsFeatures[index % iconsFeatures.length],
                     {
