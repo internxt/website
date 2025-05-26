@@ -496,14 +496,23 @@ export default function PriceCard({
             <div className="flex flex-col space-y-2 pt-6 lg:h-[500px]">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                    size: 24,
-                    className: 'text-primary',
-                  })}
-                  <span className="text-gray-80">{feature}</span>
-                  {index > 9 ? (
-                    <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
-                  ) : null}
+                  {React.createElement(
+                    index >= 10
+                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className={'text-gray-80'}>
+                    {feature}
+                    {index > 9 ? (
+                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
                 </div>
               ))}
             </div>
