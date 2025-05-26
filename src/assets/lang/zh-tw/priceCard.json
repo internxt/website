@@ -114,29 +114,29 @@
       "tooltip": "贏得多達10TB的免費儲存空間！"
     },
     "superBowlFeatures": {
-      "title": "Internxt 主題好禮：",
+      "title": "Internxt 的禮物：",
       "extra": "1TB 的額外免費存儲空間",
       "gift": "適用於網頁應用的超級碗主題"
     },
     "valentinesFeatures": {
-      "title": "Internxt 的小禮物：",
+      "title": "Internxt 的禮物：",
       "gift": "抽獎活動：2 個 Swiss Peak x Internxt 背包"
     },
     "stPatricksFeatures": {
-      "title": "Internxt 的小禮物：",
+      "title": "Internxt 的禮物：",
       "gift": "圣帕特里克主题用于Web应用"
     },
     "worldCloudSecurityDay": {
-      "title": "Internxt 禮物：",
+      "title": "Internxt 的禮物：",
       "gift": "Internxt x Swiss Peak 背包抽獎"
     },
     "IdentityManagementDay": {
-      "title": "Internxt 贈品：",
+      "title": "Internxt 的禮物：",
       "gift1": "Internxt x Swiss Peak 背包抽獎",
       "gift2": "Web 應用程式免費主題"
     },
     "starWarsDay": {
-      "title": "Internxt 贈品：",
+      "title": "Internxt 的禮物：",
       "gift1": "Internxt x Swiss Peak 後背包抽獎",
       "gift2": "Web 應用程式免費主題"
     },
@@ -210,34 +210,36 @@
     },
     "business": {
       "1TB": [
-        "每用戶 1TB 儲存空間",
+        "每用戶1TB儲存空間",
         "後量子加密",
-        "超高速無限 VPN（法國、德國、波蘭）",
+        "超高速無限VPN（法國、德國、波蘭）",
         "防毒軟體",
-        "文件備份",
-        "密碼保護的文件共享",
-        "符合 GDPR 規範",
+        "備份你的檔案",
+        "密碼保護的檔案分享",
+        "邀請、分享與協作",
+        "GDPR合規",
         "雙重驗證（2FA）",
-        "支援 CLI、WebDav 和 Rclone",
+        "支援CLI、WebDav與Rclone",
         "管理帳戶帳單與付款",
-        "裝置清理",
+        "裝置清理工具",
         "暗網監控"
       ],
       "2TB": [
-        "每用戶 2TB 儲存空間",
+        "每用戶2TB儲存空間",
         "後量子加密",
-        "超高速無限 VPN（法國、德國、波蘭、加拿大、英國）",
+        "超高速無限VPN（法國、德國、波蘭、加拿大、英國）",
         "防毒軟體",
-        "文件備份",
-        "密碼保護的文件共享",
-        "符合 GDPR 規範",
+        "備份你的檔案",
+        "密碼保護的檔案分享",
+        "邀請、分享與協作",
+        "GDPR合規",
         "雙重驗證（2FA）",
-        "支援 CLI、WebDav 和 Rclone",
+        "支援CLI、WebDav與Rclone",
         "管理帳戶帳單與付款",
-        "裝置清理",
+        "裝置清理工具",
         "暗網監控",
         "Meet",
-        "Mail"
+        "郵件"
       ]
     }
   }

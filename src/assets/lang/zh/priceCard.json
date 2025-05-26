@@ -122,24 +122,24 @@
       "gift": "适用于网页应用的超级碗主题"
     },
     "valentinesFeatures": {
-      "title": "Internxt礼物：",
+      "title": "Internxt 的礼物：",
       "gift": "抽奖活动：2个 Swiss Peak x Internxt 背包"
     },
     "stPatricksFeatures": {
-      "title": "Internxt礼物：",
+      "title": "Internxt 的礼物：",
       "gift": "圣帕特里克主题用于Web应用"
     },
     "worldCloudSecurityDay": {
-      "title": "Internxt 礼品：",
+      "title": "Internxt 的礼物：",
       "gift": "Internxt x Swiss Peak 背包抽奖"
     },
     "IdentityManagementDay": {
-      "title": "Internxt 礼品：",
+      "title": "Internxt 的礼物：",
       "gift1": "Internxt x Swiss Peak 背包抽奖",
       "gift2": "Web 应用免费主题"
     },
     "starWarsDay": {
-      "title": "Internxt 礼品：",
+      "title": "Internxt 的礼物：",
       "gift1": "Internxt x Swiss Peak 背包抽奖",
       "gift2": "Web 应用免费主题"
     },
@@ -212,34 +212,36 @@
     },
     "business": {
       "1TB": [
-        "每用户 1TB 存储",
+        "每用户1TB存储",
         "后量子加密",
-        "超高速无限 VPN（法国、德国、波兰）",
+        "超高速无限制VPN（法国、德国、波兰）",
         "杀毒软件",
         "文件备份",
-        "密码保护的文件共享",
-        "符合 GDPR 规定",
+        "密码保护文件共享",
+        "邀请、共享与协作",
+        "GDPR合规",
         "双因素认证（2FA）",
-        "支持 CLI、WebDav 和 Rclone",
+        "支持CLI、WebDav和Rclone",
         "管理账户账单和支付",
-        "设备清理",
+        "设备清理工具",
         "暗网监控"
       ],
       "2TB": [
-        "每用户 2TB 存储",
+        "每用户2TB存储",
         "后量子加密",
-        "超高速无限 VPN（法国、德国、波兰、加拿大、英国）",
+        "超高速无限制VPN（法国、德国、波兰、加拿大、英国）",
         "杀毒软件",
         "文件备份",
-        "密码保护的文件共享",
-        "符合 GDPR 规定",
+        "密码保护文件共享",
+        "邀请、共享与协作",
+        "GDPR合规",
         "双因素认证（2FA）",
-        "支持 CLI、WebDav 和 Rclone",
+        "支持CLI、WebDav和Rclone",
         "管理账户账单和支付",
-        "设备清理",
+        "设备清理工具",
         "暗网监控",
         "Meet",
-        "Mail"
+        "邮件"
       ]
     }
   }
