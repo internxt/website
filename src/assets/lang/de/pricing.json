@@ -43,16 +43,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85% Rabatt",
-      "title": "Möge die Privatsphäre mit dir sein!",
-      "subtitle": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN",
-      "cta": "Sichere dir deinen Plan!",
-      "cta2": "Erhalte 85% Rabatt",
-      "guarantee": "30 Tage Geld-zurück-Garantie",
+      "label": "80% Angebot",
+      "title": "Schütze den Planeten und deine Daten",
+      "subtitle": "Privater und nachhaltiger Cloud-Speicher",
+      "subtitle2": "Drive, Antivirus und VPN alles inklusive",
+      "cta": "Sichere dir deinen Plan",
+      "cta2": "Erhalte 80% Rabatt",
+      "guarantee": "30-tägige Geld-zurück-Garantie",
       "lastCta": "*Angebot gültig für kostenlose Konten oder neue Nutzer",
-      "titleMbl": "Möge die Privatsphäre mit dir sein!",
-      "subtitleMbl": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN.",
-      "descriptionMbl": "Nimm an der Verlosung eines Internxt-Rucksacks teil",
+      "titleMbl": "Weltumwelttag",
+      "subtitleMbl": "Alle Internxt-Pläne",
+      "descriptionMbl": "Verlosung eines Internxt-Rucksacks",
       "ctaMbl": "Kaufe deinen Plan"
     },
     "planTitles": {

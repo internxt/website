@@ -41,16 +41,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Oferta 85%",
-      "title": "Que la privacidad te acompañe!",
-      "subtitle": "Planes lifetime: Internxt Drive, Antivirus, y VPN",
-      "cta": "Consigue tu plan!",
-      "cta2": "Obtén un 85% de descuento",
+      "label": "Oferta 80%",
+      "title": "Cuida el planeta, y protege tus datos",
+      "subtitle": "Almacenamiento en la nube privado y sostenible",
+      "subtitle2": "Drive, Antivirus y VPN todo incluido",
+      "cta": "Consigue tu plan",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de 30 días",
       "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
-      "titleMbl": "Que la privacidad te acompañe!",
-      "subtitleMbl": "Planes lifetime: Internxt Drive, Antivirus, and VPN.",
-      "descriptionMbl": "Entra en el sorteo de una mochila Internxt",
+      "titleMbl": "Día Mundial del Medio Ambiente",
+      "subtitleMbl": "Todos los planes Internxt",
+      "descriptionMbl": "Sorteo de una mochila Internxt",
       "ctaMbl": "Compra tu plan"
     },
     "planTitles": {

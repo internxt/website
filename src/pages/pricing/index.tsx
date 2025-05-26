@@ -51,7 +51,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupons,
   } = usePricing({
     couponCode: PromoCodeName.Off704You,
-    couponCodeForLifetime: PromoCodeName.StarWars,
+    couponCodeForLifetime: PromoCodeName.Planet80,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');

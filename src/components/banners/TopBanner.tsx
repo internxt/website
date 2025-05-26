@@ -18,12 +18,12 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:flex`}
+        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-green-1 text-white lg:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
             <p className="font-semibold">
-              {textContent.title.normalText} 🛡️
+              {textContent.title.normalText} 🌍
               <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
             </p>
           </div>

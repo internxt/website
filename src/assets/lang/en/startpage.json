@@ -29,6 +29,11 @@
         "gift1": "Chance to win an Internxt backpack",
         "gift2": "Free Star Wars theme for Web App"
       },
+      "WorldEnvironmentDay": {
+        "title": "Internxt themed goods:",
+        "gift1": "Sustainable cloud storage ♻️",
+        "gift2": "Chance to win an Internxt backpack"
+      },
       "features": {
         "1TB": [
           "1TB zero-knowledge encrypted storage",

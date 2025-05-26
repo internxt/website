@@ -43,16 +43,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offerta 85%",
-      "title": "Che la privacy sia con te!",
-      "subtitle": "Piani a vita: Internxt Drive, Antivirus e VPN",
-      "cta": "Ottieni il tuo piano!",
-      "cta2": "Ricevi l'85% di sconto",
+      "label": "Offerta 80%",
+      "title": "Prenditi cura del pianeta e proteggi i tuoi dati",
+      "subtitle": "Archiviazione cloud privata e sostenibile",
+      "subtitle2": "Drive, Antivirus e VPN tutto incluso",
+      "cta": "Ottieni il tuo piano",
+      "cta2": "Ottieni uno sconto dell'80%",
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*Offerta valida per account gratuiti o nuovi utenti",
-      "titleMbl": "Che la privacy sia con te!",
-      "subtitleMbl": "Piani a vita: Internxt Drive, Antivirus e VPN.",
-      "descriptionMbl": "Partecipa all’estrazione di uno zaino Internxt",
+      "titleMbl": "Giornata Mondiale dell'Ambiente",
+      "subtitleMbl": "Tutti i piani Internxt",
+      "descriptionMbl": "Estrazione di uno zaino Internxt",
       "ctaMbl": "Acquista il tuo piano"
     },
     "save": "Risparmia fino al",
@@ -65,7 +66,7 @@
         "normalText": "su tutti i nostri piani esclusivi a vita"
       },
       "blackFriday": {
-        "title": "Mega offerta Black Friday: ottieni l'85% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
+        "title": "Mega offerta Black Friday: ottieni l'80% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
         "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },

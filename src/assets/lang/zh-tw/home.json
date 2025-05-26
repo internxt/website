@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "優惠 85%",
+    "label": "優惠 80%",
     "title": {
       "line1": "獲取最",
       "blueText": "安全的",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "現在安全存儲您的文件，",
-        "blueText": "便宜85%"
+        "blueText": "便宜80%"
       },
       "trustedBy": "已被330,000+人信任",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " 在雲端"
       },
       "subtitle": "完全的安全和控制。",
-      "description": "85%折扣",
+      "description": "80%折扣",
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
@@ -75,9 +75,9 @@
       "guarantee": "30天退款保证"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "85%優惠",
-      "title": "保護你的資料免受黑暗勢力的侵害",
-      "subtitle": "Internxt 雲端硬碟、防毒軟體與 VPN",
+      "saveLabel": "80%優惠",
+      "title": "世界環境日",
+      "subtitle": "所有Internxt計劃",
       "cta": "立即取得你的方案",
       "guarantee": "30天退款保證"
     },

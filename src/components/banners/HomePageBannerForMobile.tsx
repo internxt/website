@@ -14,20 +14,9 @@ export const HomePageBannerForMobile = () => {
   return (
     <div
       className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 lg:hidden`}
-      style={{
-        backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        marginLeft: '-8px',
-        marginTop: '-16px',
-        width: 'calc(100vw + 16px)',
-        padding: 0,
-        overflow: 'hidden',
-      }}
     >
       <div className="flex flex-col items-center justify-center space-y-2 pt-10">
-        <p className="flex w-max rounded-xl border-2 border-primary bg-gray-100 px-2 py-1 text-sm font-bold text-white">
+        <p className="flex w-max rounded-xl border-2 border-green-dark bg-green-1 px-2 py-1 text-sm font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
         <p className="px-10 text-center text-4xl font-bold text-white">
@@ -46,14 +35,17 @@ export const HomePageBannerForMobile = () => {
             {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
           </p>
         </div>
-        <Image
-          src={getImage('/images/campaigns/starwars/internxt_may4th.webp')}
-          width={350}
-          height={300}
-          quality={100}
-          alt="World Secure Day"
-          objectFit="contain"
-        />
+        <div className="relative h-[200px] w-full" style={{ overflow: 'visible' }}>
+          <Image
+            src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
+            width={450}
+            height={500}
+            quality={100}
+            alt="World Secure Day"
+            className="z-10 w-full object-contain"
+            style={{ marginTop: '-120px' }}
+          />
+        </div>
       </div>
     </div>
   );

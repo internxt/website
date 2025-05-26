@@ -43,20 +43,21 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 85%",
-      "title": "Save on privacy, you will",
-      "subtitle": "Enjoy Drive, Antivirus, Meet, Mail & VPN for Life",
+      "label": "Save 80%",
+      "title": "Annual and Lifetime plans!",
+      "subtitle": "Private & sustainable cloud storage",
+      "subtitle2": "Drive, Antivirus, and VPN",
       "cta": "Claim deal!",
-      "cta2": "Score 85% OFF",
+      "cta2": "Score 80% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "* Offer is for free accounts or new customers",
-      "titleMbl": "Save on privacy, you will",
-      "subtitleMbl": "Lifetime Plans: Internxt Drive, Antivirus, and VPN.",
+      "titleMbl": "World Environment Day",
+      "subtitleMbl": "Annual and Lifetime plans!",
       "descriptionMbl": "Chance to win an Internxt backpack!",
       "ctaMbl": "Claim deal!"
     },
     "planTitles": {
-      "header": "Total privacy for 85% off",
+      "header": "Total privacy for 80% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
@@ -65,7 +66,7 @@
         "normalText": "all our exclusive lifetime plans"
       },
       "blackFriday": {
-        "title": "Black Friday mega sale: get 85% OFF all the most secure cloud storage plans",
+        "title": "Black Friday mega sale: get 80% OFF all the most secure cloud storage plans",
         "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },
