@@ -465,7 +465,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex min-h-[550px] flex-col space-y-2 pt-6">
+        <div className="flex flex-col space-y-2 pt-6 lg:min-h-[540px]">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
