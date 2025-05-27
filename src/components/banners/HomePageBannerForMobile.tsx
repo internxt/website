@@ -42,8 +42,7 @@ export const HomePageBannerForMobile = () => {
             height={500}
             quality={100}
             alt="World Secure Day"
-            className="z-10 w-full object-contain"
-            style={{ marginTop: '-120px' }}
+            className="z-10 -mt-40 w-full object-contain"
           />
         </div>
       </div>
