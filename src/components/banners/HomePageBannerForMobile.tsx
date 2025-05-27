@@ -13,7 +13,7 @@ export const HomePageBannerForMobile = () => {
   };
   return (
     <div
-      className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 lg:hidden`}
+      className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-56 lg:hidden`}
     >
       <div className="flex flex-col items-center justify-center space-y-2 pt-10">
         <p className="flex w-max rounded-xl border-2 border-green-dark bg-green-1 px-2 py-1 text-sm font-bold text-white">
@@ -35,14 +35,14 @@ export const HomePageBannerForMobile = () => {
             {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
           </p>
         </div>
-        <div className="relative h-[200px] w-full" style={{ overflow: 'visible' }}>
+        <div className="absolute top-40  h-[200px] w-full" style={{ overflow: 'visible' }}>
           <Image
             src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
             width={450}
             height={500}
             quality={100}
             alt="World Secure Day"
-            className="z-10 -mt-40 w-full object-contain"
+            className="z-10 -mt-20 w-full object-contain"
           />
         </div>
       </div>

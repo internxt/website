@@ -57,7 +57,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
           </div>
 
-          <div className="absolute -right-48 -top-72 hidden h-[1000px] w-full max-w-[1400px] lg:block">
+          <div className="absolute -right-60 -top-72 hidden h-[1000px] w-full max-w-[1400px] lg:block">
             <Image
               loading="eager"
               src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
