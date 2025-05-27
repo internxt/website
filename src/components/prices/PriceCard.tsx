@@ -358,7 +358,7 @@ export default function PriceCard({
     <div
       className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
         isStackCommerce ? 'w-[280px]' : 'w-[340px]'
-      } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      } h-800 flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
@@ -465,7 +465,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex min-h-[200px] flex-col space-y-2 pt-6">
+        <div className="flex flex-col space-y-2 pt-6 lg:min-h-[540px]">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
@@ -496,14 +496,23 @@ export default function PriceCard({
             <div className="flex flex-col space-y-2 pt-6 lg:h-[500px]">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                    size: 24,
-                    className: 'text-primary',
-                  })}
-                  <span className="text-gray-80">{feature}</span>
-                  {index > 9 ? (
-                    <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
-                  ) : null}
+                  {React.createElement(
+                    index >= 6 && storage === '1TB'
+                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className={'text-gray-80'}>
+                    {feature}
+                    {index > 9 ? (
+                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
                 </div>
               ))}
             </div>
