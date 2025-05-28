@@ -79,6 +79,13 @@ LayoutProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
+    const gclid = params.get('gclid');
+
+    if (gclid) {
+      const expiryDate = new Date();
+      expiryDate.setTime(expiryDate.getTime() + 90 * 24 * 60 * 60 * 1000);
+      document.cookie = `gclid=${gclid}; expires=${expiryDate.toUTCString()}; path=/`;
+    }
 
     if (source !== 'Impact') return;
 
