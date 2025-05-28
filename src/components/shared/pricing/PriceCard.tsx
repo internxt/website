@@ -22,6 +22,8 @@ import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -221,11 +223,21 @@ export const PriceCard = ({
           </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="h-6 w-6 text-white" weight="fill" />
+              <Image
+                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
+                alt="World Environment Day"
+                width={24}
+                height={24}
+              />
               <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift1}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <ShieldCheck className="h-6 w-6 text-white" weight="fill" />
+              <Image
+                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
+                alt="World Environment Day"
+                width={24}
+                height={24}
+              />
               <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift2}</span>
             </div>
           </div>
