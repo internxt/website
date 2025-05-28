@@ -89,7 +89,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden />
+      {/* <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden /> */}
 
       <HeroSection
         TextComponent={
@@ -183,7 +183,7 @@ const PartnerDiscount = ({
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
 
-      <Footer textContent={footerLang} lang={locale} />
+      {/* <Footer textContent={footerLang} lang={locale} /> */}
     </Layout>
   );
 };
