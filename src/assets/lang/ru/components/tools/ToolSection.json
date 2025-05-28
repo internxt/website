@@ -42,6 +42,11 @@
       "pathname": "/vpn"
     },
     {
+      "title": "Удалить метаданные",
+      "cta": "Удалить сейчас",
+      "pathname": "/metadata-remover"
+    },
+    {
       "title": "Мониторинг Даркнета",
       "cta": "Проверить сейчас",
       "pathname": "/dark-web-monitor"

@@ -77,7 +77,7 @@
   {
     "id": "lifetime",
     "title": "Internxt 终身计划 – 终身安全的云存储！",
-    "description": "Internxt 终身优惠: 支付一次即可永久获得 2TB、5TB 或 10TB 的安全云存储空间。 注册或升级到 Internxt 终身计划以获得终身隐私！ 仅在有限的时间内。"
+    "description": "Internxt 终身优惠: 支付一次即可永久获得 1TB、3TB 或 5TB 的安全云存储空间。 注册或升级到 Internxt 终身计划以获得终身隐私！ 仅在有限的时间内。"
   },
   {
     "id": "partner-discount",
@@ -208,6 +208,11 @@
     "id": "internxt-annual",
     "title": "Internxt – 年度计划特惠！",
     "description": "获取 Internxt 任意年度计划的折扣。所有计划均包含私人云存储、VPN 和杀毒软件。"
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt 元数据清除器 - 如何在线清除 PDF、照片和文档中的元数据",
+    "description": "几秒钟内即可移除文件中的隐藏数据。Internxt 的元数据清除器在您分享前清理文档，最大程度保护隐私。"
   },
   {
     "id": "zerogpt-ai-checker",
