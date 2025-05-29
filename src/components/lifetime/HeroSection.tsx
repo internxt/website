@@ -62,7 +62,7 @@ const HeroSection = ({
                 <Header maxWidth="w-[400px]" textHeightForDesk="text-5xl">
                   {textContent.title}
                 </Header>
-                <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-6 lg:text-2xl">{textContent.subtitle}</p>
+                <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-2 lg:text-2xl">{textContent.subtitle}</p>
                 <p className="px-6 pt-2 text-xl font-normal lg:px-0 lg:pt-6 lg:text-2xl">{textContent.description}</p>
               </div>
               <button
