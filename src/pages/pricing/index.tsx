@@ -50,7 +50,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Off704You,
+    couponCode: PromoCodeName.Planet85,
     couponCodeForLifetime: PromoCodeName.Planet85,
   });
 
