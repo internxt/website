@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% OFF",
+      "line1": "85% OFF",
       "line2": "our annual plans"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "Get 80% OFF",
+      "title": "Get 85% OFF",
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Get ",
-      "blue2": "80% OFF ",
+      "blue2": "85% OFF ",
       "normal2": "of the most secure cloud storage"
     },
     "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
@@ -43,12 +43,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 80%",
+      "label": "Save 85%",
       "title": "Annual and Lifetime plans!",
       "subtitle": "Private & sustainable cloud storage",
       "subtitle2": "Drive, Antivirus, and VPN",
       "cta": "Claim deal!",
-      "cta2": "Score 80% OFF",
+      "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
       "lastCta": "* Offer is for free accounts or new customers",
       "titleMbl": "World Environment Day",
@@ -57,7 +57,7 @@
       "ctaMbl": "Claim deal!"
     },
     "planTitles": {
-      "header": "Total privacy for 80% off",
+      "header": "Total privacy for 85% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
@@ -66,7 +66,7 @@
         "normalText": "all our exclusive lifetime plans"
       },
       "blackFriday": {
-        "title": "Black Friday mega sale: get 80% OFF all the most secure cloud storage plans",
+        "title": "Black Friday mega sale: get 85% OFF all the most secure cloud storage plans",
         "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },

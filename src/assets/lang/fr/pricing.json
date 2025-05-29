@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% de réduction",
+      "line1": "85% de réduction",
       "line2": "sur nos plans annuels"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "80% de réduction",
+      "title": "85% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Obtenez ",
-      "blue2": "80% DE RÉDUCTION ",
+      "blue2": "85% DE RÉDUCTION ",
       "normal2": "sur le stockage cloud le plus sécurisé"
     },
     "howMuchStorage": "De combien de stockage en ligne avez-vous besoin ?",
@@ -47,12 +47,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offre 80%",
+      "label": "Offre 85%",
       "title": "Prenez soin de la planète et protégez vos données",
       "subtitle": "Stockage cloud privé et durable",
       "subtitle2": "Drive, Antivirus et VPN tout inclus",
       "cta": "Obtenez votre plan",
-      "cta2": "Obtenez 80% de réduction",
+      "cta2": "Obtenez 85% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs",
       "titleMbl": "Journée mondiale de l'environnement",

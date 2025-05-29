@@ -131,6 +131,7 @@ export enum PromoCodeName {
   Affiliates85 = 'DRIVE85',
   Off704You = '70OFF4YOU',
   Planet80 = 'PLANET80',
+  Planet85 = 'PLANET85',
 }
 
 export interface PromoCodeProps {

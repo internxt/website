@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Economize 80%",
+    "label": "Economize 85%",
     "title": {
       "line1": "Obtenha o ",
       "blueText": "armazenamento na nuvem mais seguro",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Armazene seus arquivos com segurança, agora ",
-        "blueText": "80% mais barato"
+        "blueText": "85% mais barato"
       },
       "trustedBy": "Confiável por mais de 330.000 pessoas",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": "na nuvem e no ecossistema"
       },
       "subtitle": "Segurança e controle total.",
-      "description": "80% de desconto",
+      "description": "85% de desconto",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus e mais",
         "Criptografia pós-quântica e conhecimento zero",
@@ -79,7 +79,7 @@
       "guarantee": "Garantia de devolução de 30 dias"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta de 80%",
+      "saveLabel": "Oferta de 85%",
       "title": "Dia Mundial do Ambiente",
       "subtitle": "Todos os planos Internxt",
       "cta": "Adquira seu plano",

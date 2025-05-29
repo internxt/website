@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% AUS",
+      "line1": "85% AUS",
       "line2": "unsere Jahrespläne"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Anonyme Kontenerstellung"
     },
     "cta": {
-      "title": "Erhalten Sie 80% Rabatt",
+      "title": "Erhalten Sie 85% Rabatt",
       "description": "Angebot gültig für ein Jahr. Der Plan verlängert sich zum nicht reduzierten Preis für das folgende Jahr."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Erhalten Sie ",
-      "blue2": "80% RABATT ",
+      "blue2": "85% RABATT ",
       "normal2": "auf den sichersten Cloud-Speicher"
     },
     "howMuchStorage": "Wie viel Online-Speicherplatz benötigen Sie?",
@@ -43,12 +43,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "80% Angebot",
+      "label": "85% Angebot",
       "title": "Schütze den Planeten und deine Daten",
       "subtitle": "Privater und nachhaltiger Cloud-Speicher",
       "subtitle2": "Drive, Antivirus und VPN alles inklusive",
       "cta": "Sichere dir deinen Plan",
-      "cta2": "Erhalte 80% Rabatt",
+      "cta2": "Erhalte 85% Rabatt",
       "guarantee": "30-tägige Geld-zurück-Garantie",
       "lastCta": "*Angebot gültig für kostenlose Konten oder neue Nutzer",
       "titleMbl": "Weltumwelttag",
