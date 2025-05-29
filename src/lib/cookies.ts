@@ -5,6 +5,9 @@ const moment = require('moment');
 const url = require('url');
 const queryString = require('querystring');
 
+const GCLID_COOKIE_LIFESPAN_DAYS = 90;
+const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
+
 function parseUri(ctx: GetServerSidePropsContext) {
   const { query } = url.parse(ctx.req.url);
   const parsedQuery = queryString.parse(query);
@@ -72,6 +75,18 @@ function setPublicCookie(ctx: GetServerSidePropsContext, name: string, value: st
     httpOnly: false,
   });
 }
+
+export const saveGclidToCookie = (gclid: string) => {
+  const expiryDate = new Date();
+  expiryDate.setTime(expiryDate.getTime() + GCLID_COOKIE_LIFESPAN_DAYS * MILLISECONDS_PER_DAY);
+  document.cookie = `gclid=${gclid}; expires=${expiryDate.toUTCString()}; path=/`;
+};
+
+export const getGclidFromURL = (): string | null => {
+  if (typeof window === 'undefined') return null;
+  const params = new URLSearchParams(window.location.search);
+  return params.get('gclid');
+};
 
 export default {
   parseUri,

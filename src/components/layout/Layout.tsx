@@ -12,6 +12,7 @@ import {
 } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
+import { saveGclidToCookie } from '@/lib/cookies';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -79,6 +80,11 @@ LayoutProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
+    const gclid = params.get('gclid');
+
+    if (gclid) {
+      saveGclidToCookie(gclid);
+    }
 
     if (source !== 'Impact') return;
 

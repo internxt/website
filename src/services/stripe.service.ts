@@ -3,6 +3,7 @@ import bytes from 'bytes';
 import { currencyService } from './currency.service';
 import { checkout, checkoutForPcComponentes } from '@/lib/auth';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
+import { getGclidFromURL, saveGclidToCookie } from '@/lib/cookies';
 
 const CURRENCY_MAP = {
   eur: '€',
@@ -172,12 +173,19 @@ const redirectToCheckout = (
   isCheckoutForLifetime: boolean,
   promoCodeId?: PromoCodeProps['name'],
 ) => {
+  const gclid = getGclidFromURL();
+
+  if (gclid) {
+    saveGclidToCookie(gclid);
+  }
+
   checkout({
     planId,
     promoCodeId,
     planType,
     currency: currencyValue ?? 'eur',
     mode: isCheckoutForLifetime ? 'payment' : 'subscription',
+    ...(gclid ? { gclid } : {}),
   });
 };
 
