@@ -12,6 +12,7 @@ import {
 } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
+import { saveGclidToCookie } from '@/lib/cookies';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -82,9 +83,7 @@ LayoutProps) {
     const gclid = params.get('gclid');
 
     if (gclid) {
-      const expiryDate = new Date();
-      expiryDate.setTime(expiryDate.getTime() + 90 * 24 * 60 * 60 * 1000);
-      document.cookie = `gclid=${gclid}; expires=${expiryDate.toUTCString()}; path=/`;
+      saveGclidToCookie(gclid);
     }
 
     if (source !== 'Impact') return;
