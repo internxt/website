@@ -15,7 +15,7 @@
   "PaymentSection": {
     "limitedOffer": "Offerta a tempo limitato!",
     "title": {
-      "blueText": "Ottieni il ${{percent}} di sconto",
+      "blueText": "Ottieni il ${{percent}}% di sconto",
       "normalText": " tutti i nostri esclusivi piani a vita"
     },
     "description": "Acquista una volta e ottieni privacy e sicurezza per sempre",
