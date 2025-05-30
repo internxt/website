@@ -66,6 +66,7 @@ export class ObjStoragePaymentsService {
   public paymentMethodVerification({
     customerId,
     token,
+    priceId,
     currency = 'eur',
     paymentMethod,
   }: PaymentMethodVerificationPayload) {
@@ -73,6 +74,7 @@ export class ObjStoragePaymentsService {
     return client.paymentMethodVerification({
       customerId,
       token,
+      priceId,
       currency,
       paymentMethod,
     });
