@@ -175,7 +175,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               />
             </div>
 
-            {/* LOGIN BUTTON: controlled only by hideLoginButton */}
             {props.cta[0] !== 'Hide Login' && !props.hideLoginButton ? (
               <button
                 id="loginButton"
@@ -190,7 +189,6 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               </button>
             ) : null}
 
-            {/* CTA BUTTONS: controlled by hideCTA */}
             {!props.hideCTA && (
               <>
                 {props.cta[0] === 'default' ? (

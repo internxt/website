@@ -172,8 +172,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
         }
       />
-
-      {/* <Footer textContent={footerLang} lang={lang} /> */}
     </Layout>
   );
 }

@@ -182,8 +182,6 @@ const PartnerDiscount = ({
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
-
-      {/* <Footer textContent={footerLang} lang={locale} /> */}
     </Layout>
   );
 };
