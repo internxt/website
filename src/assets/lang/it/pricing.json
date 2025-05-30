@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% OFF",
+      "line1": "85% OFF",
       "line2": "i nostri piani annuali"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Creazione di un account anonimo"
     },
     "cta": {
-      "title": "Ottieni l'80% di sconto",
+      "title": "Ottieni l'85% di sconto",
       "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Ottieni ",
-      "blue2": "80% DI SCONTO ",
+      "blue2": "85% DI SCONTO ",
       "normal2": "sul cloud storage più sicuro"
     },
     "howMuchStorage": "Quanta memoria online ti serve?",
@@ -44,15 +44,16 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Offerta 85%",
-      "title": "Che la privacy sia con te!",
-      "subtitle": "Piani a vita: Internxt Drive, Antivirus e VPN",
-      "cta": "Ottieni il tuo piano!",
-      "cta2": "Ricevi l'85% di sconto",
+      "title": "Prenditi cura del pianeta e proteggi i tuoi dati",
+      "subtitle": "Archiviazione cloud privata e sostenibile",
+      "subtitle2": "Drive, Antivirus e VPN tutto incluso",
+      "cta": "Ottieni il tuo piano",
+      "cta2": "Ottieni uno sconto dell'85%",
       "guarantee": "Garanzia di rimborso di 30 giorni",
       "lastCta": "*Offerta valida per account gratuiti o nuovi utenti",
-      "titleMbl": "Che la privacy sia con te!",
-      "subtitleMbl": "Piani a vita: Internxt Drive, Antivirus e VPN.",
-      "descriptionMbl": "Partecipa all’estrazione di uno zaino Internxt",
+      "titleMbl": "Giornata Mondiale dell'Ambiente",
+      "subtitleMbl": "Tutti i piani Internxt",
+      "descriptionMbl": "Estrazione di uno zaino Internxt",
       "ctaMbl": "Acquista il tuo piano"
     },
     "save": "Risparmia fino al",

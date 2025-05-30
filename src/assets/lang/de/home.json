@@ -71,7 +71,7 @@
       ],
       "startFrom": {
         "normal1": "Ab ",
-        "price": " 3",
+        "price": " 1.5",
         "normal2": " /Monat"
       },
       "claimDeal": "Angebot einlösen",
@@ -79,8 +79,8 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "85% Rabatt",
-      "title": "Schütze deine Daten vor der dunklen Seite",
-      "subtitle": "Internxt Drive, Antivirus und VPN",
+      "title": "Weltumwelttag",
+      "subtitle": "Alle Internxt-Pläne",
       "cta": "Sichere dir deinen Plan",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },

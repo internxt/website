@@ -72,7 +72,7 @@
       ],
       "startFrom": {
         "normal1": "От ",
-        "price": " 3",
+        "price": " 1.5",
         "normal2": " /месяц"
       },
       "claimDeal": "Получить предложение",
@@ -80,8 +80,8 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "Скидка 85%",
-      "title": "Защити свои данные от тёмной стороны",
-      "subtitle": "Internxt Drive, Антивирус и VPN",
+      "title": "Всемирный день окружающей среды",
+      "subtitle": "Все планы Internxt",
       "cta": "Выбери свой план",
       "guarantee": "30-дневная гарантия возврата денег"
     },

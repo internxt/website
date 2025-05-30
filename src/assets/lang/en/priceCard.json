@@ -140,6 +140,11 @@
       "gift1": "Chance to win an Internxt backpack",
       "gift2": "Free Star Wars theme for Web App"
     },
+    "WorldEnvironmentDay": {
+      "title": "Internxt themed goods:",
+      "gift1": "Web App theme for free",
+      "gift2": "Chance to win an Internxt backpack"
+    },
     "cheaperThan": {
       "lifetime": {
         "normal": "Up to ",

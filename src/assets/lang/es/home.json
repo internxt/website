@@ -72,7 +72,7 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 3",
+        "price": " 1.5",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
@@ -80,9 +80,9 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "Oferta 85%",
-      "title": "Protege tu información del lado oscuro",
-      "subtitle": "Internxt Drive, Antivirus y VPN",
-      "cta": "Consigue tu plan",
+      "title": "Día Mundial del Medio Ambiente",
+      "subtitle": "Todos los planes Internxt",
+      "cta": "Consigue la oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"

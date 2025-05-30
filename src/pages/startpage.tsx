@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StarWars,
+      promoCodeId: PromoCodeName.Planet85,
     });
   }
 
@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.StarWars}
+        couponType={PromoCodeName.Planet85}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

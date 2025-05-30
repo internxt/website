@@ -14,6 +14,7 @@ import {
   Key,
   LockSimple,
   Password,
+  ShieldCheck,
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
@@ -21,6 +22,8 @@ import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -214,16 +217,28 @@ export const PriceCard = ({
         </button>
       </div>
       {showPromo && isLifetime ? (
-        <div className="flex flex-col items-start space-y-2 bg-gray-100 px-5 py-5">
-          <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.starWarsDay.title}</span>
+        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2 px-5 py-5`}>
+          <span className="text-[13.5px] font-bold text-white">
+            {contentText.productFeatures.WorldEnvironmentDay.title}
+          </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift1}</span>
+              <Image
+                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
+                alt="World Environment Day"
+                width={24}
+                height={24}
+              />
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift1}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift2}</span>
+              <Image
+                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
+                alt="World Environment Day"
+                width={24}
+                height={24}
+              />
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift2}</span>
             </div>
           </div>
         </div>

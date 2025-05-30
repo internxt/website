@@ -20,19 +20,21 @@ export const PriceBannerForCampaigns = ({
       {/* Desktop View */}
       <div
         className={`${styles.linearGradient} relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
-        style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
       >
         <div className=" flex h-[400px] w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
           <div className="flex min-h-[400px] min-w-[600px]  max-w-[800px]  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
-            <div className="mt-14 flex w-max rounded-xl border-4 border-primary bg-gray-100 px-2 py-4 sm:rounded-2xl sm:px-4 sm:py-2">
+            <div className="mt-14 flex w-max rounded-xl border-4 border-green-dark bg-green-1 px-2 py-4 sm:rounded-2xl sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
             </div>
-            <div className="flex w-full flex-col pt-4 ">
+            <div className="flex w-full flex-col space-y-2 pt-4">
               <p className=" flex min-h-[42px] max-w-[600px] items-center pb-2 text-2xl font-bold text-white sm:text-3xl md:text-4xl lg:text-4xl">
                 {textContent.title}
               </p>
-              <p className="whitespace-nowrap text-lg font-medium text-white sm:text-lg md:text-lg lg:text-lg">
+              <p className="font-regular whitespace-nowrap text-lg text-white sm:text-lg md:text-lg lg:text-lg">
                 {textContent.subtitle}
+              </p>
+              <p className="font-regular whitespace-nowrap text-lg text-white sm:text-lg md:text-lg lg:text-lg">
+                {textContent.subtitle2}
               </p>
             </div>
             <div className="flex flex-col items-center gap-2 pt-2 sm:gap-4 lg:flex-row">
@@ -49,12 +51,16 @@ export const PriceBannerForCampaigns = ({
             </div>
             <p className="whitespace-nowrap pt-4 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
           </div>
-          <div className="relative flex h-[400px] w-[600px] items-center overflow-hidden pl-24">
+          <div className="absolute -right-80 -top-60 hidden h-[700px] w-full max-w-[1400px] lg:block">
             <Image
-              src={getImage('/images/campaigns/starwars/internxt_may4th_2.webp')}
-              width={400}
-              height={400}
-              alt="World Secure Day"
+              loading="eager"
+              src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
+              draggable="false"
+              quality={100}
+              width={1400}
+              height={1200}
+              className="h-full w-full object-contain"
+              alt="HeroSection Image"
             />
           </div>
         </div>
@@ -62,21 +68,18 @@ export const PriceBannerForCampaigns = ({
 
       {/* Mobile View */}
       <div
-        className={`${styles.linearGradient} relative z-10 flex w-screen flex-col  justify-between pt-5 lg:hidden`}
-        style={{ backgroundImage: `url('${getImage('/images/campaigns/starwars/bg.webp')}')` }}
+        className={`${styles.linearGradient} relative z-10 flex w-screen flex-col  justify-between py-5 pb-10 lg:hidden`}
       >
         <div className="flex w-full flex-col items-center space-y-5 px-2 py-6 text-center">
-          <div className="flex w-max rounded-xl border-2 border-primary  bg-gray-100 px-2 py-1">
+          <div className="flex w-max rounded-xl border-2 border-green-dark  bg-green-1 px-2 py-1">
             <p className="text-sm font-medium text-white">{textContent.label}</p>
           </div>
           <div className="flex w-full flex-col px-4 text-gray-100">
             <p className="text-4xl font-bold text-white">{textContent.titleMbl}</p>
           </div>
-          <div className="min-h-auto flex flex-col items-center ">
-            <p className="font-regular break-words text-center text-lg font-bold text-white">
-              {textContent.subtitleMbl}
-            </p>
-            <p className="font-regular break-words text-center text-lg text-white ">{textContent.descriptionMbl}</p>
+          <div className="min-h-auto flex flex-col items-center space-y-2 ">
+            <p className="font-regular break-words text-center text-xl  text-white">{textContent.subtitleMbl}</p>
+            <p className="font-regular break-words text-center text-xl text-white ">{textContent.descriptionMbl}</p>
           </div>
 
           <div className="flex flex-col items-center">
@@ -93,14 +96,15 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="relative flex h-auto w-full flex-col items-center px-20 pb-10 xl:hidden">
+        <div className="relative h-[200px] w-full" style={{ overflow: 'visible' }}>
           <Image
-            src={getImage('/images/campaigns/starwars/internxt_may4th_2.webp')}
-            width={425}
-            height={263}
-            objectFit="contain"
-            alt="Dust for scorer"
-            className="top-10 -z-10 max-w-[300px] object-cover"
+            src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
+            width={450}
+            height={500}
+            quality={100}
+            alt="World Secure Day"
+            className="z-10 w-full object-contain"
+            style={{ marginTop: '-120px' }}
           />
         </div>
       </div>

@@ -50,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StarWars ?? undefined,
+      promoCodeId: PromoCodeName.Planet85 ?? undefined,
     });
   }
 

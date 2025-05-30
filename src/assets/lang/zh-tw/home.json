@@ -68,7 +68,7 @@
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 3",
+        "price": " 1.5",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
@@ -76,8 +76,8 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "85%優惠",
-      "title": "保護你的資料免受黑暗勢力的侵害",
-      "subtitle": "Internxt 雲端硬碟、防毒軟體與 VPN",
+      "title": "世界環境日",
+      "subtitle": "所有Internxt計劃",
       "cta": "立即取得你的方案",
       "guarantee": "30天退款保證"
     },
