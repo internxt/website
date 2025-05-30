@@ -98,7 +98,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      {/* <Navbar lang={lang} textContent={navbarLang} cta={['payment']} /> */}
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
@@ -117,6 +117,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         hideBusinessSelector
         popularPlanBySize="5TB"
         showPromo={false}
+        hideFreeCard
       />
 
       <ComponentsInColumnSection
