@@ -38,7 +38,7 @@ const ResurrectionCampaign = ({
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
+    couponCode: PromoCodeName.Comeback90,
   });
   const locale = lang as string;
 
