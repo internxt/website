@@ -60,11 +60,8 @@ export const handleImpact = async ({
   const expirationDate = new Date();
   expirationDate.setHours(expirationDate.getHours() + 1);
 
-  const anonymousDate = new Date();
-  anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);
-
   document.cookie = `impactSource=${source};expires=${expirationDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
-  document.cookie = `impactAnonymousId=${randomUUID};expires=${anonymousDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
+  document.cookie = `impactAnonymousId=${randomUUID};expires=${expirationDate.toUTCString()};domain=${COOKIE_DOMAIN};Path=/`;
 
   try {
     await sendImpactTrack({ randomUUID, ip, userAgent, page });
