@@ -75,7 +75,7 @@ const TestimonialsSection = ({
           </div>
           <div className="flex max-w-[355px] flex-col items-center justify-center gap-3  lg:h-[300px] lg:pb-20">
             <Image
-              src={getImage('/logos/featured/Picture1.png')}
+              src={getImage('/logos/featured/ValenciaCF.webp')}
               width={350}
               height={260}
               alt="Internxt x ValenciaCF"
