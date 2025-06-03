@@ -9,7 +9,7 @@
     "celebration": {
       "title": "Dì ciao alla tua offerta Internxt a vita",
       "description": "Proteggi i tuoi file per sempre con il tuo sconto per la Festa dell'Indipendenza Italiana.",
-      "cta1": "Ottieni l'80% di SCONTO"
+      "cta1": "Sconto dell'${{percent}}"
     }
   },
   "PaymentSection": {
