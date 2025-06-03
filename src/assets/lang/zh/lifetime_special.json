@@ -23,7 +23,8 @@
   },
   "GetLifetimeSection": {
     "title": "生命并不短暂！但这一限时优惠却......",
-    "description": "Internxt正在提供终身隐私和安心的优惠。"
+    "description": "Internxt正在提供终身隐私和安心的优惠。",
+    "cta": "选择您的计划"
   },
 
   "FeatureSection": {

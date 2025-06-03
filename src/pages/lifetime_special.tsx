@@ -22,7 +22,16 @@ const LifetimeSpecial = ({ lang, metatagsDescriptions, langJson, testimonialsJso
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed mode="payment" isLinksHidden />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['priceTable']}
+        fixed
+        mode="payment"
+        isLinksHidden
+        hideLogoLink
+        hideCTA
+      />
 
       <HeroSection
         textContent={langJson.HeroSection}
