@@ -10,11 +10,9 @@ import {
   Fingerprint,
   Fire,
   Gauge,
-  Gift,
   Key,
   LockSimple,
   Password,
-  ShieldCheck,
   ShieldPlus,
   VideoConference,
 } from '@phosphor-icons/react';
