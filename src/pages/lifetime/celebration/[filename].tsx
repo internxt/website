@@ -141,7 +141,7 @@ const LifetimeCelebrationTemplate = ({
     switzerland: 0.17,
     singapore: 0.17,
     uk: 0.17,
-    italy: 0.2,
+    italy: 0.15,
   };
 
   const couponCode = {
@@ -175,7 +175,7 @@ const LifetimeCelebrationTemplate = ({
     switzerland: '83%',
     singapore: '83%',
     uk: '83%',
-    italy: '80',
+    italy: '85%',
   };
 
   const textForCta = filename === 'uk' ? langJson.NationalDayCtaSection : langJson.CtaSection;
