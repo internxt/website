@@ -40,13 +40,12 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       {/* Mobile view */}
       <Link
         href={'/pricing'}
-        className={`group fixed left-0 z-30 flex h-[65px]  w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
+        className={`group fixed left-0 z-30 flex h-[65px]  w-screen items-center justify-center overflow-hidden bg-green-1 text-white lg:hidden`}
       >
         <div className="flex h-full w-full items-center justify-center px-3 text-center md:mb-3">
           <div className="flex flex-col items-center justify-center">
-            <p className="font-normal">
-              🛡️ {textContent.title.normalText} <span className="ml-1 font-semibold">{textContent.title.boldText}</span>
-            </p>
+            {textContent.title.normalText} 🌍
+            <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
           </div>
         </div>
       </Link>
