@@ -208,15 +208,20 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { error, paymentMethod } = await stripeSDK.createPaymentMethod({
+      const { error: paymentMethodError, paymentMethod } = await stripeSDK.createPaymentMethod({
         elements,
       });
+
+      if (paymentMethodError) {
+        throw new Error(paymentMethodError.message);
+      }
 
       const { verified, clientSecret } = await paymentService.paymentMethodVerification({
         customerId,
         currency: plan.currency,
         token,
-        paymentMethod: paymentMethod?.id as string,
+        paymentMethod: paymentMethod.id,
+        priceId: plan.id,
       });
 
       if (!verified && clientSecret) {
