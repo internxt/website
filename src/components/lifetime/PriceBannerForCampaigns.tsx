@@ -89,7 +89,7 @@ export const PriceBannerForCampaigns = ({
           <div className="flex flex-col items-center">
             <Link
               href={redirectTo ?? '#billingButtons'}
-              className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
+              className=" z-20 flex w-max items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-3 sm:text-lg"
             >
               {textContent.cta}
             </Link>
