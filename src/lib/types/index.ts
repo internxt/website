@@ -130,6 +130,7 @@ export enum PromoCodeName {
   TechRadarDiscount = 'TECHRADAR',
   Affiliates85 = 'DRIVE85',
   Off704You = '70OFF4YOU',
+  Planet85 = 'PLANET85',
   Comeback90 = 'COMEBACK90',
 }
 
