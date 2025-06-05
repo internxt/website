@@ -27,7 +27,7 @@
     "@ffmpeg/util": "^0.12.2",
     "@headlessui/react": "1.6.6",
     "@iconscout/react-unicons": "^1.1.6",
-    "@internxt/sdk": "=1.9.21",
+    "@internxt/sdk": "1.9.27",
     "@mui/material": "^5.15.21",
     "@phosphor-icons/react": "^2.1.5",
     "@sendgrid/mail": "^8.1.0",
