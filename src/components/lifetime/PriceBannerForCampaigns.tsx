@@ -19,9 +19,9 @@ export const PriceBannerForCampaigns = ({
     <div className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden `}>
       {/* Desktop View */}
       <div
-        className={`${styles.linearGradient} relative z-10 hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
+        className={`${styles.linearGradient} relative z-10  hidden w-full min-w-[1200px] max-w-[1200px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row`}
       >
-        <div className=" flex h-[400px] w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
+        <div className=" flex  w-full flex-col items-center text-center lg:flex-row lg:items-start lg:pl-10  lg:text-left">
           <div className="flex min-h-[400px] min-w-[600px]  max-w-[800px]  flex-col items-center gap-2 text-center lg:items-start lg:text-left">
             <div className="mt-14 flex w-max rounded-xl border-4 border-green-dark bg-green-1 px-2 py-4 sm:rounded-2xl sm:px-4 sm:py-2">
               <p className="text-xl font-bold text-white sm:text-2xl md:text-5xl">{textContent.label}</p>
@@ -44,12 +44,16 @@ export const PriceBannerForCampaigns = ({
               >
                 {textContent.cta}
               </Link>
-              <div className="flex flex-row items-center space-y-1 text-white sm:space-x-2">
+              <div className="flex flex-row items-center justify-center space-y-1 text-white sm:space-x-2">
                 <CheckCircle size={20} className="text-green-1" weight="fill" />
-                <p className="whitespace-nowrap text-base font-medium text-white sm:text-lg">{textContent.guarantee}</p>
+                <p className="whitespace-nowrap text-base font-medium text-white sm:text-lg md:pb-1">
+                  {textContent.guarantee}
+                </p>
               </div>
             </div>
-            <p className="whitespace-nowrap pt-4 text-sm font-medium text-gray-30 sm:text-sm">{textContent.lastCta}</p>
+            <p className="whitespace-nowrap pb-8 pt-4 text-sm font-medium text-gray-30 sm:text-sm">
+              {textContent.lastCta}
+            </p>
           </div>
           <div className="absolute -right-80 -top-60 hidden h-[700px] w-full max-w-[1400px] lg:block">
             <Image
@@ -68,7 +72,7 @@ export const PriceBannerForCampaigns = ({
 
       {/* Mobile View */}
       <div
-        className={`${styles.linearGradient} relative z-10 flex w-screen flex-col  justify-between py-5 pb-10 lg:hidden`}
+        className={`${styles.linearGradient} relative z-10 flex w-screen flex-col justify-between py-5 pb-80 md:pb-[1000px] lg:hidden`}
       >
         <div className="flex w-full flex-col items-center space-y-5 px-2 py-6 text-center">
           <div className="flex w-max rounded-xl border-2 border-green-dark  bg-green-1 px-2 py-1">
@@ -96,15 +100,14 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="relative h-[200px] w-full" style={{ overflow: 'visible' }}>
+        <div className="absolute -left-[25vw] h-[500px] w-[150vw] pt-40" style={{ overflow: 'visible' }}>
           <Image
             src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
-            width={450}
-            height={500}
+            width={1000}
+            height={1000}
             quality={100}
             alt="World Secure Day"
             className="z-10 w-full object-contain"
-            style={{ marginTop: '-120px' }}
           />
         </div>
       </div>
