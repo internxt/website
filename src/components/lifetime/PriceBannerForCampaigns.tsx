@@ -100,7 +100,7 @@ export const PriceBannerForCampaigns = ({
           </div>
         </div>
 
-        <div className="absolute -left-[25vw] h-[500px] w-[150vw] pt-40" style={{ overflow: 'visible' }}>
+        <div className="absolute -left-[17vw] h-[500px] w-[135vw] pt-48" style={{ overflow: 'visible' }}>
           <Image
             src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
             width={1000}
