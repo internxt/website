@@ -106,6 +106,10 @@
     "blueText": "Enjoy a more private online experience with Internxt"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Strip your files of revealing metadata.",
+    "blueText": "Clean your digital footprint with Internxt"
+  },
   "SignUpAiDetector": {
     "line1": "Detect AI content, ensure authenticity, and",
     "blueText": "publish in confidence with Internxt"
@@ -150,8 +154,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% off Internxt Drive, VPN, & Antivirus!",
-      "normalText": "May the Fourth be with you ",
+      "boldText": "85% off all plans!",
+      "normalText": "Protect your data, protect the planet",
       "cta": " Claim deal"
     }
   },

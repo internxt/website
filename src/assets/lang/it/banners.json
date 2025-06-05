@@ -90,6 +90,10 @@
     "line1": "Tieni al sicuro quei file ormai puliti",
     "blueText": "unisciti gratuitamente a Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Rimuovi i metadati rivelatori dai tuoi file.",
+    "blueText": "Pulisci la tua impronta digitale con Internxt"
+  },
   "SignUpAiDetector": {
     "line1": "Rileva contenuti AI, garantisci l'autenticità e",
     "blueText": "pubblica con sicurezza con Internxt"
@@ -133,8 +137,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% di sconto su Internxt Drive, VPN e Antivirus!",
-      "normalText": "Che la forza sia con te",
+      "boldText": "85% di sconto su tutti i piani!",
+      "normalText": "Proteggi i tuoi dati, proteggi la Terra",
       "cta": "Acquista"
     }
   },

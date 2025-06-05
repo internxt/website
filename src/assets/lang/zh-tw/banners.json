@@ -105,6 +105,10 @@
     "line1": "保持那些現在乾淨的文件安全，",
     "blueText": "免費加入 Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "去除檔案中洩漏隱私的中繼資料。",
+    "blueText": "用 Internxt 清理您的數位足跡"
+  },
   "SignUpAiDetector": {
     "line1": "檢測 AI 內容，確保真實性，",
     "blueText": "安心發佈，盡在 Internxt"
@@ -155,8 +159,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Internxt 雲端硬碟、VPN 與防毒軟體享85%優惠！",
-      "normalText": "願原力與你同在",
+      "boldText": "85% 折扣在所有計劃！",
+      "normalText": "保護您的資料，保護地球",
       "cta": "購買"
     }
   },

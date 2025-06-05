@@ -50,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StarWars ?? undefined,
+      promoCodeId: PromoCodeName.Planet85 ?? undefined,
     });
   }
 
@@ -98,7 +98,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
@@ -117,6 +117,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         hideBusinessSelector
         popularPlanBySize="5TB"
         showPromo={false}
+        hideFreeCard
       />
 
       <ComponentsInColumnSection
@@ -171,8 +172,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
         }
       />
-
-      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 }

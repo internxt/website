@@ -42,6 +42,11 @@
       "pathname": "/vpn"
     },
     {
+      "title": "元数据删除器",
+      "cta": "立即删除",
+      "pathname": "/metadata-remover"
+    },
+    {
       "title": "暗網監控",
       "cta": "立即檢查",
       "pathname": "/dark-web-monitor"

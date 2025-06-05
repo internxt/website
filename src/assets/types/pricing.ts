@@ -124,6 +124,7 @@ export interface CtaBanner {
 
   title: string;
   subtitle: string;
+  subtitle2: string;
   cta: string;
   cta2: string;
   guarantee: string;

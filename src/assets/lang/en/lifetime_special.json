@@ -22,7 +22,8 @@
   },
   "GetLifetimeSection": {
     "title": "Life is not short! But this limited-time deal is...",
-    "description": "Internxt is offering a deal on a lifetime of privacy and peace of mind."
+    "description": "Internxt is offering a deal on a lifetime of privacy and peace of mind.",
+    "cta": "Choose your plan"
   },
   "FeatureSection": {
     "title": "Why choose Internxt to secure your files?",

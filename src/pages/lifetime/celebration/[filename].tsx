@@ -27,6 +27,7 @@ const ALLOWED_PATHS = [
   'germany',
   'spain',
   'uk',
+  'italy',
 ];
 
 const IMAGES_PER_PATH = {
@@ -95,6 +96,11 @@ const IMAGES_PER_PATH = {
     previewImage: '/images/lifetime/celebration/uk/file_item.webp',
     mobileImage: '/images/lifetime/celebration/uk/image_mobile.webp',
   },
+  italy: {
+    backgroundImage: '/images/lifetime/celebration/italy/Header-IT.webp',
+    previewImage: '/images/lifetime/celebration/italy/file_item.webp',
+    mobileImage: '/images/lifetime/celebration/italy/image_mobile.webp',
+  },
 };
 
 const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico', 'taiwan'];
@@ -135,6 +141,7 @@ const LifetimeCelebrationTemplate = ({
     switzerland: 0.17,
     singapore: 0.17,
     uk: 0.17,
+    italy: 0.15,
   };
 
   const couponCode = {
@@ -151,6 +158,7 @@ const LifetimeCelebrationTemplate = ({
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
     singapore: PromoCodeName.Lifetime83DiscountCoupon,
     uk: PromoCodeName.Celebration83,
+    italy: PromoCodeName.IndependenceDayItaly,
   };
 
   const percent = {
@@ -167,6 +175,7 @@ const LifetimeCelebrationTemplate = ({
     switzerland: '83%',
     singapore: '83%',
     uk: '83%',
+    italy: '85%',
   };
 
   const textForCta = filename === 'uk' ? langJson.NationalDayCtaSection : langJson.CtaSection;
@@ -185,7 +194,7 @@ const LifetimeCelebrationTemplate = ({
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
 
       <HeroSection
-        textContent={langJson.HeroSection.celebration[filename]}
+        textContent={langJson.HeroSection.celebration}
         isCelebrationPage
         previewImg={getImage(IMAGES_PER_PATH[filename].previewImage)}
         imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
@@ -210,7 +219,7 @@ const LifetimeCelebrationTemplate = ({
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
-      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
+      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-white" />
 
       <CtaSection textContent={textForCta} />
 
@@ -245,6 +254,10 @@ export async function getServerSideProps(ctx) {
 
   if (['brazil'].includes(pathname)) {
     lang = 'pt-br';
+  }
+
+  if (['italy'].includes(pathname)) {
+    lang = 'it';
   }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

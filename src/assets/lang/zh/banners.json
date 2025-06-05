@@ -94,6 +94,10 @@
     "blueText": "使用 Internxt 享受更私密的在线体验"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "去除文件中暴露隐私的元数据。",
+    "blueText": "用 Internxt 清理您的数字足迹"
+  },
   "SignUpAiDetector": {
     "line1": "检测AI内容，确保真实性，",
     "blueText": "安心发布，尽在Internxt"
@@ -127,8 +131,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Internxt 云端硬盘、VPN 和防病毒软件享85%优惠！",
-      "normalText": "愿原力与你同在",
+      "boldText": "85% 折扣在所有计划！",
+      "normalText": "保护您的数据，保护地球",
       "cta": "购买"
     }
   },
