@@ -43,8 +43,8 @@ const FeaturesSection = ({ textContent }) => {
   const DescriptionIcon = cardInfo[cardIndex].icon;
 
   return (
-    <section className="overflow-hidden bg-gray-1">
-      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
+    <section className="overflow-hidden ">
+      <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden bg-gray-1 px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <div className="flex flex-col space-y-6">
@@ -52,7 +52,7 @@ const FeaturesSection = ({ textContent }) => {
           </div>
         </div>
       </section>
-      <div className="hidden flex-row items-start justify-center pb-20 lg:flex">
+      <div className="hidden flex-row items-start justify-center bg-gray-1 pb-20 lg:flex">
         <div className="flex max-w-[378px] flex-col">
           {textContent.features.map((info, index) => (
             <Fragment key={info.title}>
