@@ -38,8 +38,10 @@ interface PricingSectionWrapperProps {
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
   CustomDescription?: ReactNode;
   isBrave?: boolean;
+  isAnnual?: boolean;
   hideFeatures?: boolean;
   showPromo?: boolean;
+  isAffiliate?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -70,7 +72,9 @@ export const PricingSectionWrapper = ({
   CustomDescription,
   darkMode,
   isBrave,
+  isAnnual,
   showPromo = true,
+  isAffiliate,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -93,7 +97,7 @@ export const PricingSectionWrapper = ({
   const businessTitle = textContent.planTitles.business;
 
   const lifetimeSubtitles = billingFrequency === Interval.Lifetime ? textContent.lifetimeDescription : '';
-  const individualPLansDescription = textContent.planDescription;
+  const individualPLansDescription = billingFrequency === Interval.Year ? textContent.planDescription : '';
 
   const businessPlanDescription = textContent.businessDescription2;
 
@@ -114,18 +118,18 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`}>
+    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`} id="payment">
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          {!hideTitle && <Header maxWidth="max-w-4xl">{title()}</Header>}
+          {!hideTitle && <Header maxWidth="max-w-4xl max-w-[1000px] text-4xl">{title()}</Header>}
           <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
 
           {CustomDescription ? (
             CustomDescription
           ) : !hideDescription ? (
             <span
-              className="text-regular max-w-[800px] text-xl text-gray-80"
+              className="text-regular max-w-[1000px] text-xl text-gray-80"
               dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
             />
           ) : null}
@@ -160,9 +164,10 @@ export const PricingSectionWrapper = ({
           hideSwitchSelector={hideSwitchSelector}
           isMonthly
           darkMode={darkMode}
-          isBrave={isBrave}
+          isAnnual={isAnnual}
           hideFeatures={hideFeatures}
           showPromo={showPromo}
+          isAffiliate={isAffiliate}
         />
       </div>
     </section>

@@ -59,8 +59,8 @@ const SecondFeaturesSection = ({
   };
 
   return (
-    <section className={`flex flex-col items-center justify-center gap-20 overflow-hidden ${bgColor} py-24 px-5`}>
-      <div className="flex w-full max-w-[840px] flex-col items-center justify-center gap-6">
+    <section className={`flex flex-col items-center justify-center gap-20 overflow-hidden ${bgColor} px-5 py-24`}>
+      <div className="flex w-full max-w-[1040px] flex-col items-center justify-center gap-6">
         <div className="flex flex-col gap-4 text-center">
           <h2 className="text-3xl font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</h2>
           <p className="text-xl text-gray-80">{textContent.description}</p>

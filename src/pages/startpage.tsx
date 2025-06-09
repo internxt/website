@@ -18,7 +18,7 @@ import CtaSection from '@/components/shared/CtaSection';
 export default function Startpage({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }): JSX.Element {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
   const { currencyValue } = usePricing({ couponCode: PromoCodeName.SpringCoupon });
-  const offerDiscount = 20;
+  const offerDiscount = 15;
 
   function handlePriceCardButton(planId, coupon) {
     checkout({
@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Special80Coupon,
+      promoCodeId: PromoCodeName.Planet85,
     });
   }
 
@@ -35,9 +35,9 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
 
   const InfoTextComponent = (
     <p className="text-xl text-gray-80">
-      {heroSectionText.info.split('80% OFF')[0]}
-      <span className="font-bold">80% OFF</span>
-      {heroSectionText.info.split('80% OFF')[1]}
+      {heroSectionText.info.split('85% OFF')[0]}
+      <span className="font-bold">85% OFF</span>
+      {heroSectionText.info.split('85% OFF')[1]}
     </p>
   );
 
@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.Special80Coupon}
+        couponType={PromoCodeName.Planet85}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

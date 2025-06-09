@@ -40,6 +40,7 @@ export interface HeroSectionTitle {
 export interface PaymentSection {
   planTitles: PlanTitles;
   planDescription: string;
+  lifetimeDescription: string;
   billingFrequency: BillingFrequency;
   features: Features;
 }

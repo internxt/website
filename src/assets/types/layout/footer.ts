@@ -99,12 +99,16 @@ export interface Tools {
   fileConverter: string;
   vpn: string;
   haveIBeenPwned: string;
+  metadataRemover: string;
+  aiDetector: string;
 }
 
 export interface Features {
   title: string;
   privateCloud: string;
   cloudBakcup: string;
+  GDPRCloud: string;
+  cloudPhotos: string;
 }
 
 export interface NewsletterSection {

@@ -39,7 +39,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Special80Coupon,
+    couponCode: PromoCodeName.Special82,
   });
 
   const cardsData = [
@@ -83,26 +83,28 @@ const PartnerDiscount = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex flex-col gap-10">
-            <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
+          <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-center justify-center space-y-10 lg:max-w-[533px] lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
               </div>
-              <div className="flex flex-col space-y-8">
+              <div className="flex flex-col space-y-8 px-10 lg:px-0">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-6xl font-semibold">
+                  <p className="text-4xl font-semibold lg:text-5xl">
                     {langJson.HeroSection.title.normalText}
-                    <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                    <span className="text-4xl font-semibold text-primary lg:text-5xl">
+                      {langJson.HeroSection.title.blueText}
+                    </span>
                   </p>
                 </div>
-                <p className="text-center text-xl text-gray-80 lg:text-left">
+                <p className="text-md  text-center text-gray-80 lg:text-left lg:text-lg">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
+            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 pb-4 lg:flex-row lg:justify-start lg:space-y-0 lg:pb-0">
               <Link
                 href={'#priceTable'}
                 className={`z-10 flex w-max justify-center rounded-lg bg-primary px-10 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
@@ -136,14 +138,7 @@ const PartnerDiscount = ({
         hideSwitchSelector
         hideBusinessSelector
         showPromo={false}
-        CustomDescription={
-          <>
-            <Header maxWidth="max-w-4xl">{langJson.PaymentSection.planTitles.homePage}</Header>
-            <span className="text-regular max-w-[800px] text-xl text-gray-80">
-              {langJson.PaymentSection.planDescription}
-            </span>
-          </>
-        }
+        backgroundColorComponent="bg-gray-1"
       />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
@@ -152,7 +147,7 @@ const PartnerDiscount = ({
         FirstComponent={
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
+              <h2 className="text-4xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
               <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
             </div>
             <div className="content flex h-full w-full flex-col px-5 pt-6">
@@ -185,8 +180,10 @@ const PartnerDiscount = ({
 };
 
 export async function getServerSideProps(ctx) {
+  const lang = ctx.locale;
+
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/specialoffer/specialOffer.json`);
+  const langJson = require(`@/assets/lang/${lang}/specialoffer/specialOffer.json`);
   const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 

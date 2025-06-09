@@ -44,25 +44,25 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
 
   return (
     <section className="flex flex-col items-center justify-center overflow-hidden bg-gray-1 px-5 py-16">
-      <Image
-        src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-        alt="Bitdefender banner"
-        width={800}
-        height={110}
-        quality={100}
-        style={{ cursor: 'pointer' }}
-        onClick={() =>
-          window.open(
-            `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-            '_blank',
-            'noopener noreferrer',
-          )
-        }
-      />
-
       <div className="flex max-w-[1000px] flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center space-y-16 pb-8 pt-4">
-          <div id="incontent_1" className="flex w-full justify-center"></div>
+        <div className="flex flex-col items-center justify-start space-y-16  lg:px-10  lg:pt-6">
+          <div className="flex w-full flex-col items-center justify-center">
+            <Image
+              src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+              alt="File Arrow Up icon"
+              width={800}
+              height={110}
+              quality={100}
+              style={{ cursor: 'pointer' }}
+              onClick={() =>
+                window.open(
+                  `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                  '_blank',
+                  'noopener noreferrer',
+                )
+              }
+            />
+          </div>
           <SignUpBanner textContent={bannerText} lang={lang} />
           <div className="flex max-w-2xl flex-col space-y-3 text-start">
             <p className="text-2xl font-medium">{textContent.title}</p>
@@ -81,7 +81,23 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div id="incontent_2" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
 
             <div className="flex max-w-2xl flex-col space-y-3 text-start">
               <p className="text-3xl font-medium lg:text-2xl">{textContent.whatIsTempMail.title}</p>
@@ -108,7 +124,23 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </div>
             </div>
 
-            <div id="incontent_3" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
 
             <div className="flex">
               <Image
@@ -135,7 +167,23 @@ export const InfoSection = ({ textContent, bannerText, lang }) => {
               </ul>
             </div>
 
-            <div id="incontent_4" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center pt-6">
+              <Image
+                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   "HeroSection": {
     "title": "Virus Scanner",
     "subtitle1": "Drag and drop suspicious files to detect malware and other breaches for free.",
-    "subtitle2": "Scan any document, image, PDF, or other file types. Make sure your files are safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
+    "subtitle2": "Scan any document, image, pdf, or other file types. Keep your files safe and free from viruses before you open them with Internxt's zero-knowledge Virus Scanner.",
     "footer": "Internxt is not liable for any personal information you provide. By submitting your files, you agree to our [Terms and Conditions of Service and Privacy Policy.](https://internxt.com/legal)",
 
     "dropFile": {
@@ -29,9 +29,9 @@
       "unableToProcess": "Unable to process",
       "noVirusesDetected": {
         "message": "No viruses detected",
-        "title": "Want to keep your files safe?",
-        "subtitle": "Internxt is a private cloud storage service with built-in virus scanning and end-to-end encryption.",
-        "cta": "Get started now"
+        "title": "Keep your files safe from virus",
+        "subtitle": "Internxt has partnered with Bitdefender to offer you ultimate real time protection on your device. Claim 3 months of ultimate antivirus protection for free. ",
+        "cta": "Claim deal"
       },
       "analyzing": "Scanning file...",
       "scanTime": "Scan time",

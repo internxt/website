@@ -13,7 +13,7 @@ import router, { useRouter } from 'next/router';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.18;
+  const discount = 0.15;
 
   return (
     <Layout
@@ -23,11 +23,20 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
+      <Navbar
+        textContent={navbarLang}
+        lang={lang}
+        cta={['default']}
+        fixed
+        mode="payment"
+        isLinksHidden
+        hideLogoLink
+        hideCTA
+      />
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="82"
+        percent="85"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
@@ -35,12 +44,13 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Special82}
+        couponCode={PromoCodeName.Affiliates85}
         discount={discount}
         lang={lang}
-        percent={'82%'}
+        percent={'85%'}
         showPriceBefore
         lifetimeMode="celebration"
+        showOffer
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} />

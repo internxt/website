@@ -1,0 +1,182 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": " qui est conforme au RGPD",
+        "textAfterBlueText": "Stockage en nuage"
+      },
+      "description": "Internxt propose un stockage en nuage conforme au RGPD pour protéger vos données selon les réglementations de l'UE.",
+      "claimDeal": "Comparer les plans",
+      "guarantee": "Garantie de remboursement sous 30 jours"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Stockage en nuage conforme au RGPD",
+      "cta": "Comparer les plans",
+      "guarantee": "Garantie de remboursement sous 30 jours"
+    }
+  },
+  "Importance": {
+    "title": "Stockage RGPD pour vos fichiers",
+    "description": [
+      "Le stockage en nuage conforme au RGPD protège vos informations sensibles et aide les entreprises à prévenir les fuites de données ainsi que les amendes en cas de non-respect.",
+      "En choisissant des fournisseurs basés dans l'UE, comme Internxt, vous gardez le contrôle total sur vos données : vous pouvez les gérer, y accéder et les supprimer selon vos besoins."
+    ],
+    "ctaText": "Obtenir Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "Pourquoi passer aux solutions de stockage en nuage privé",
+    "subtitle": "Passer aux solutions de stockage en nuage privé garantit que vos données restent privées et sécurisées contre les pirates et les grandes entreprises. Contrairement à Google, Apple ou Microsoft, Internxt ne collecte, ne vend ni n'utilise abusivement vos données. Vous contrôlez entièrement vos fichiers.",
+    "description": "Investissez dans votre vie privée et reposez-vous en sachant que vos fichiers et données sont protégés contre les violations de données.",
+    "cta": "Obtenir Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Services en nuage Internxt conformes au RGPD",
+      "line2": ""
+    },
+    "subtitle": "Internxt propose un stockage en nuage conforme au RGPD pour un usage personnel, professionnel ou entreprise. Grâce à notre cryptage avancé, nos contrôles d'accès et notre approche axée sur la confidentialité, notre solution de stockage en nuage est la meilleure option pour respecter le RGPD.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive est une solution de stockage en nuage privée qui est conforme au RGPD et conçue avec la confidentialité en priorité. Seules les données strictement nécessaires sont collectées pour offrir le meilleur service et vos informations ne sont jamais partagées.",
+      "cta": "Choisir votre plan"
+    },
+    "square2": {
+      "title": "Internxt Drive pour entreprises",
+      "description": "Le non-respect du RGPD peut entraîner des amendes considérables, il est donc essentiel pour les entreprises d'adapter leurs pratiques de gestion des données. Internxt pour entreprises offre une solution de stockage en nuage conforme au RGPD et protège les données de votre entreprise grâce à des fonctionnalités de sécurité avancées.",
+      "cta": "Internxt pour entreprises"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 est une solution de stockage d'objets de niveau entreprise qui garantit une protection totale de vos données ainsi que la conformité au RGPD. Internxt S3 assure une durabilité de 99,999999999 % (11 9) pour les fichiers sauvegardés, les protégeant ainsi contre toute perte ou dommages.",
+      "cta": "Obtenir Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "Quels sont vos droits selon le RGPD ?",
+    "description": "Selon le RGPD, vous avez le droit d'accéder à vos données, d'en demander la suppression et de vous opposer à leur traitement. Avec un service en nuage qui met la confidentialité au premier plan, comme Internxt, vous gardez le contrôle de vos données.",
+    "info": [
+      {
+        "title": "Droit d'accès à vos données",
+        "description": [
+          "La politique d'accès aux données du RGPD vous permet de savoir quelles données personnelles une entreprise détient sur vous, comment elles sont utilisées et qui y a accès, y compris des pays tiers ou des organisations internationales.",
+          "Avec un stockage en nuage conforme au RGPD, vous avez un contrôle total sur vos données, leur gestion et la possibilité d'agir si vous n'êtes pas d'accord avec les pratiques de gestion des données d'une entreprise."
+        ]
+      },
+      {
+        "title": "Droit à l'oubli",
+        "description": [
+          "Vous avez le droit de demander la suppression de vos données personnelles lorsqu'elles ne sont plus nécessaires, ont été collectées illégalement ou si vous retirez votre consentement à leur utilisation.",
+          "Cela vous offre un meilleur contrôle sur votre empreinte numérique, ce qui aide à prévenir le vol d'identité, les fuites de données et la fraude, évitant ainsi que les entreprises ne conservent indéfiniment vos données sans raison valable."
+        ]
+      },
+      {
+        "title": "Droit de s'opposer au traitement des données",
+        "description": [
+          "Le RGPD vous permet également de vous opposer à l'utilisation de vos données à des fins de marketing, de profilage ou pour d'autres usages non prévus par la loi.",
+          "En exerçant ce droit, vous pouvez empêcher le suivi indésirable, la publicité ciblée ou le profilage. Les services en nuage conformes au RGPD, comme Internxt, n'utilisent jamais vos données personnelles à ces fins, garantissant ainsi votre confidentialité dès la création de votre compte."
+        ]
+      },
+      {
+        "title": "Retrait du consentement",
+        "description": [
+          "Pour éviter d'être contraint de signer des accords avec une entreprise, le RGPD vous accorde le droit de retirer votre consentement à la collecte et au traitement de vos données personnelles.",
+          "En retirant ce consentement, vous pouvez protéger vos données et informations personnelles des tiers et réduire le risque de fuites de données, empêchant ainsi les acteurs malveillants et les entreprises extérieures de profiter de vos informations."
+        ]
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Stockez vos données en toute sécurité",
+    "description": "avec un stockage en nuage conforme aux exigences du RGPD",
+    "cta": "Obtenir Internxt"
+  },
+  "CtaSection2": {
+    "title": "Stockage en nuage privé",
+    "description": "Conforme au RGPD et aux lois européennes",
+    "cta": "Obtenir Internxt"
+  },
+  "CtaSection3": {
+    "title": "La conformité RGPD simplifiée",
+    "description": "Stockage en nuage privé pour stocker et partager vos données en toute sécurité",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Qu'est-ce que le RGPD ?",
+        "answer": [
+          "Le RGPD, ou Règlement Général sur la Protection des Données, est une loi européenne qui régit le traitement des données personnelles des citoyens de l'Union européenne (UE).",
+          "Le RGPD vise à garantir que les entreprises et organisations traitent les données personnelles de manière transparente, sécurisée et respectueuse de la vie privée, donnant aux citoyens un contrôle accru sur leurs informations, notamment via le consentement explicite et le droit d'accès, de rectification ou de suppression."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le stockage en nuage conforme au RGPD ?",
+        "answer": [
+          "Il s'agit de services en nuage gérés au sein de l'UE qui se conforment aux réglementations protégeant les données personnelles grâce à des mesures telles que le cryptage, les contrôles d'accès, les sauvegardes et des protocoles sécurisés de traitement des données."
+        ]
+      },
+      {
+        "question": "Comment puis-je m'assurer que mon entreprise reste conforme au RGPD en utilisant un stockage en nuage ?",
+        "answer": [
+          "Pour assurer la conformité au RGPD, choisissez un fournisseur de stockage en nuage offrant du cryptage, des contrôles d'accès, des solutions de sauvegarde et une transparence dans la gestion des données. Les forfaits professionnels d'Internxt proposent un stockage en nuage conforme au RGPD, avec un contrôle total sur les données de vos clients, employés et de l'entreprise."
+        ]
+      },
+      {
+        "question": "Puis-je stocker des données personnelles sensibles et confidentielles dans un stockage en nuage conforme au RGPD ?",
+        "answer": [
+          "Oui, le stockage en nuage conforme au RGPD est conçu pour stocker en toute sécurité des données personnelles sensibles et confidentielles. Internxt utilise un cryptage à connaissance nulle (Zero-Knowledge) pour respecter les normes strictes de protection des données imposées par le RGPD."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter le support technique ?",
+        "answer": [
+          "Vous ne trouvez pas réponse à votre question ? Vous pouvez contacter notre équipe d'assistance via le chat en ligne ou envoyer un e-mail à hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou crypto-monnaies ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.), ainsi que PayPal, iDEAL, Sofort et les crypto-monnaies."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Comment le stockage en nuage conforme au RGPD protège vos données",
+    "titleLine2": "",
+    "description": "Internxt répond aux exigences strictes du RGPD grâce à un cryptage à connaissance nulle, des contrôles d'accès utilisateurs et des sauvegardes sécurisées, garantissant que vos données restent protégées et privées.",
+    "cards": {
+      "element1": {
+        "title": "Cryptage de bout en bout",
+        "description": [
+          "Le cryptage de bout en bout protège vos fichiers contre les pirates, mais de nombreuses entreprises gèrent ces clés de cryptage et peuvent être contraintes de fournir un accès aux autorités sur demande.",
+          "Internxt utilise un cryptage Zero-Knowledge et postquantique, assurant que les clés sont stockées uniquement sur votre appareil, de sorte que personne d'autre ne puisse accéder à vos données.",
+          "Notre cryptage primé vous offre la sécurité maximale en ligne et respecte les exigences strictes du RGPD pour la protection des données personnelles."
+        ]
+      },
+      "element2": {
+        "title": "Contrôles d'accès et permissions utilisateur",
+        "description": [
+          "Le RGPD impose aux organisations de mettre en place des mesures techniques et organisationnelles appropriées pour assurer un niveau de sécurité adapté au risque, notamment à travers des contrôles d'accès aux données sensibles.",
+          "Les services en nuage conformes au RGPD intègrent des contrôles et des permissions utilisateur afin de répondre à ces exigences. Internxt Drive offre le partage de fichiers sécurisé par mot de passe et des restrictions d'accès, tandis que les forfaits Business incluent des journaux d'accès permettant de tracer qui s'est connecté, a téléchargé ou modifié des fichiers, garantissant la conformité pour l'ensemble de l'équipe."
+        ]
+      },
+      "element3": {
+        "title": "Sauvegardes et récupération des données",
+        "description": [
+          "Le RGPD exige que les entreprises prennent des mesures pour rétablir rapidement la disponibilité et l'accès aux données personnelles en cas d'incident technique ou physique.",
+          "Avec Internxt, vous bénéficiez d'un stockage en nuage conforme au RGPD grâce à des sauvegardes planifiées ou manuelles, et vos données sont stockées en toute sécurité dans plusieurs centres de données, permettant une restauration rapide en cas d'incident."
+        ]
+      },
+      "element4": {
+        "title": "Minimisation des données",
+        "description": [
+          "La minimisation des données est un principe fondamental du RGPD, qui exige que seules les données personnelles adéquates, pertinentes et nécessaires soient collectées et traitées pour des finalités spécifiques.",
+          "Nous plaçons votre confidentialité au premier plan en protégeant vos données grâce à un cryptage Zero-Knowledge, garantissant ainsi que vous seul pouvez y accéder. Vos données ne sont jamais partagées, vous offrant ainsi un contrôle total et la tranquillité d'esprit quant à la sécurité de vos informations personnelles."
+        ]
+      }
+    }
+  }
+}

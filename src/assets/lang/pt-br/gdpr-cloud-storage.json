@@ -1,0 +1,182 @@
+{
+  "HeroSection": {
+    "TitleAndOnePlan": {
+      "title": {
+        "textBeforeBlueText": "",
+        "blueText": " em conformidade com o GDPR",
+        "textAfterBlueText": "Armazenamento em Nuvem"
+      },
+      "description": "Internxt oferece armazenamento em nuvem em conformidade com o GDPR para proteger seus dados de acordo com as regulamentações da UE.",
+      "claimDeal": "Compare os planos",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    },
+    "TitleAndOnePlanV2": {
+      "title": "Armazenamento em Nuvem em conformidade com o GDPR",
+      "cta": "Compare os planos",
+      "guarantee": "Garantia de reembolso de 30 dias"
+    }
+  },
+  "Importance": {
+    "title": "Armazenamento GDPR para seus arquivos",
+    "description": [
+      "Armazenamento em nuvem em conformidade com o GDPR protege suas informações sensíveis e ajuda as empresas a evitar violações de dados e multas por não conformidade.",
+      "Ao escolher fornecedores baseados na UE, como o Internxt, você tem controle total sobre seus dados: pode gerenciá-los, acessá-los e excluí-los quando necessário."
+    ],
+    "ctaText": "Obtenha o Internxt"
+  },
+  "WhySwitchSection": {
+    "title": "Por que mudar para soluções de armazenamento em nuvem privadas",
+    "subtitle": "Mudar para soluções de armazenamento em nuvem privadas garante que seus dados permaneçam privados e protegidos contra hackers e grandes empresas. Ao contrário do Google, Apple ou Microsoft, o Internxt não coleta, vende ou explora indevidamente seus dados. Você tem total controle sobre seus arquivos.",
+    "description": "Invista em sua privacidade e tenha tranquilidade sabendo que seus arquivos e dados estão protegidos contra violações de dados.",
+    "cta": "Obtenha o Internxt"
+  },
+  "WhatWeDo": {
+    "title": {
+      "line1": "Serviços de Nuvem em conformidade com o GDPR do Internxt",
+      "line2": ""
+    },
+    "subtitle": "Internxt oferece armazenamento em nuvem em conformidade com o GDPR para uso pessoal, profissional ou empresarial. Com nossa criptografia avançada, controle de acesso e abordagem centrada na privacidade, nossa solução de armazenamento em nuvem é a melhor opção para garantir a conformidade com o GDPR.",
+    "square1": {
+      "title": "Internxt Drive",
+      "description": "Internxt Drive é uma solução de armazenamento em nuvem privada em conformidade com o GDPR, projetada com a privacidade como prioridade. São coletados apenas os dados estritamente necessários para fornecer o melhor serviço, e suas informações nunca são compartilhadas.",
+      "cta": "Escolha seu plano"
+    },
+    "square2": {
+      "title": "Internxt Drive para empresas",
+      "description": "A não conformidade com o GDPR pode resultar em multas substanciais, por isso é fundamental que as empresas ajustem suas práticas de gerenciamento de dados. O Internxt para empresas oferece uma solução de armazenamento em nuvem em conformidade com o GDPR e protege os dados da sua empresa com recursos de segurança avançados.",
+      "cta": "Internxt para empresas"
+    },
+    "square3": {
+      "title": "Internxt S3",
+      "description": "Internxt S3 é uma solução de armazenamento de objetos em nível empresarial que garante proteção total dos seus dados e conformidade com o GDPR. O Internxt S3 oferece durabilidade de 99,999999999 % (11 9) para arquivos armazenados, protegendo-os contra perdas ou danos.",
+      "cta": "Obtenha o Internxt S3"
+    }
+  },
+  "FeaturesSection": {
+    "title": "Quais são os seus direitos sob o GDPR?",
+    "description": "De acordo com o GDPR, você tem o direito de acessar seus dados, solicitar sua exclusão e se opor ao seu processamento. Com um serviço de nuvem que coloca a privacidade em primeiro lugar, como o Internxt, você mantém o controle sobre seus dados.",
+    "info": [
+      {
+        "title": "Direito de acesso aos seus dados",
+        "description": [
+          "A política de acesso a dados do GDPR permite que você saiba quais dados pessoais uma empresa detém sobre você, como são usados e quem tem acesso a eles, incluindo países terceiros ou organizações internacionais.",
+          "Com o armazenamento em nuvem em conformidade com o GDPR, você tem controle total sobre seus dados, como gerenciá-los, acessá-los e agir caso não concorde com as práticas de gerenciamento de dados de uma empresa."
+        ]
+      },
+      {
+        "title": "Direito ao esquecimento",
+        "description": [
+          "Você tem o direito de solicitar a exclusão de seus dados pessoais quando não forem mais necessários, forem coletados ilegalmente ou se você retirar seu consentimento para seu uso.",
+          "Isso oferece maior controle sobre sua pegada digital, ajudando a prevenir roubo de identidade, violações de dados e fraudes, impedindo que as empresas mantenham seus dados indefinidamente sem justificativa."
+        ]
+      },
+      {
+        "title": "Direito de oposição ao processamento de dados",
+        "description": [
+          "O GDPR também permite que você se oponha ao uso de seus dados para fins de marketing, profilação ou outros fins não previstos por lei.",
+          "Ao exercer esse direito, você pode impedir o rastreamento indesejado, publicidade direcionada ou profilação. Os serviços de nuvem em conformidade com o GDPR, como o Internxt, nunca usam seus dados pessoais para esses fins, garantindo sua privacidade desde o início."
+        ]
+      },
+      {
+        "title": "Revogação do consentimento",
+        "description": [
+          "Para evitar ser forçado a assinar acordos com uma empresa, o GDPR concede o direito de retirar seu consentimento para a coleta e o processamento de seus dados pessoais.",
+          "Ao revogar esse consentimento, você pode proteger seus dados e informações pessoais contra terceiros e reduzir o risco de violações de dados, impedindo que agentes mal-intencionados e empresas externas explorem suas informações."
+        ]
+      }
+    ]
+  },
+  "CtaSection1": {
+    "title": "Armazene seus dados com segurança",
+    "description": "com armazenamento em nuvem em conformidade com os requisitos do GDPR",
+    "cta": "Obtenha o Internxt"
+  },
+  "CtaSection2": {
+    "title": "Armazenamento em nuvem privado",
+    "description": "Em conformidade com o GDPR e as leis europeias",
+    "cta": "Obtenha o Internxt"
+  },
+  "CtaSection3": {
+    "title": "Conformidade com o GDPR simplificada",
+    "description": "Armazenamento em nuvem privado para armazenar e compartilhar seus dados com segurança",
+    "cta": "Obtenha o Internxt"
+  },
+  "FaqSection": {
+    "title": "Dúvidas? Temos as respostas",
+    "faq": [
+      {
+        "question": "O que é o GDPR?",
+        "answer": [
+          "O GDPR, ou Regulamento Geral de Proteção de Dados, é uma lei europeia que regula o tratamento de dados pessoais de cidadãos da União Europeia (UE).",
+          "O GDPR visa garantir que as empresas e organizações tratem os dados pessoais de forma transparente, segura e respeitosa com a privacidade, dando aos cidadãos maior controle sobre suas informações pessoais, incluindo o consentimento explícito e o direito de acessar, corrigir ou excluir seus dados."
+        ]
+      },
+      {
+        "question": "O que é armazenamento em nuvem em conformidade com o GDPR?",
+        "answer": [
+          "É o armazenamento em nuvem oferecido por fornecedores baseados na UE, que segue as regulamentações de proteção de dados pessoais, incluindo criptografia, controle de acesso, backup e protocolos seguros de tratamento de dados."
+        ]
+      },
+      {
+        "question": "Como garantir que minha empresa permaneça em conformidade com o GDPR ao usar armazenamento em nuvem?",
+        "answer": [
+          "Para garantir a conformidade com o GDPR, escolha um fornecedor de armazenamento em nuvem que ofereça criptografia, controle de acesso, soluções de backup e transparência no gerenciamento de dados. Os planos empresariais do Internxt oferecem armazenamento em nuvem em conformidade com o GDPR e controle total sobre os dados de seus clientes, funcionários e da empresa."
+        ]
+      },
+      {
+        "question": "Posso armazenar dados sensíveis e confidenciais em um armazenamento em nuvem em conformidade com o GDPR?",
+        "answer": [
+          "Sim, o armazenamento em nuvem em conformidade com o GDPR é projetado para armazenar de forma segura dados pessoais sensíveis e confidenciais. O Internxt usa criptografia de conhecimento zero (Zero-Knowledge) para cumprir os rigorosos padrões de proteção de dados exigidos pelo GDPR."
+        ]
+      },
+      {
+        "question": "Como posso entrar em contato com o suporte técnico?",
+        "answer": [
+          "Não encontrou a resposta para sua pergunta? Você pode entrar em contato com nossa equipe de suporte por meio de chat online ou enviando um e-mail para hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagar com cartão de crédito, PayPal ou criptomoedas?",
+        "answer": [
+          "O Internxt aceita atualmente cartões de débito e crédito (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort e criptomoedas."
+        ]
+      }
+    ]
+  },
+  "FeatureSection": {
+    "title": "Como o armazenamento em nuvem em conformidade com o GDPR protege seus dados",
+    "titleLine2": "",
+    "description": "O Internxt atende aos rigorosos requisitos do GDPR por meio de criptografia de conhecimento zero, controle de acesso e backup seguro, garantindo que seus dados permaneçam protegidos e privados.",
+    "cards": {
+      "element1": {
+        "title": "Criptografia ponta a ponta",
+        "description": [
+          "A criptografia ponta a ponta protege seus arquivos de hackers, mas muitas empresas gerenciam essas chaves de criptografia e podem ser obrigadas a fornecer acesso às autoridades, quando solicitado.",
+          "O Internxt usa criptografia de Conhecimento Zero e pós-quântica, garantindo que as chaves sejam armazenadas apenas em seu dispositivo, para que ninguém mais possa acessar seus dados.",
+          "Nossa criptografia premiada oferece a máxima segurança online e atende aos padrões do GDPR para proteção de dados pessoais."
+        ]
+      },
+      "element2": {
+        "title": "Controles de acesso e permissões de usuário",
+        "description": [
+          "O GDPR exige que as organizações implementem medidas técnicas e organizacionais adequadas para garantir um nível de segurança proporcional ao risco, inclusive por meio de controles de acesso a dados sensíveis.",
+          "Os serviços de nuvem em conformidade com o GDPR incluem controles e permissões de usuário para atender a esses requisitos. O Internxt Drive oferece compartilhamento seguro de arquivos com senha e restrições de acesso, enquanto os planos empresariais incluem registros de acesso para rastrear quem se conectou, carregou ou modificou arquivos, garantindo a conformidade para toda a equipe."
+        ]
+      },
+      "element3": {
+        "title": "Backup e recuperação de dados",
+        "description": [
+          "O GDPR exige que as empresas adotem medidas para restaurar rapidamente a disponibilidade e o acesso aos dados pessoais em caso de incidente técnico ou físico.",
+          "Com o Internxt, você se beneficia do armazenamento em nuvem em conformidade com o GDPR, graças a backups programados ou manuais, e seus dados são armazenados com segurança em múltiplos data centers, permitindo recuperação rápida em caso de incidente."
+        ]
+      },
+      "element4": {
+        "title": "Minimização de dados",
+        "description": [
+          "A minimização de dados é um princípio fundamental do GDPR, que exige que apenas os dados pessoais adequados, relevantes e necessários sejam coletados e processados para fins específicos.",
+          "Colocamos sua privacidade em primeiro lugar, protegendo seus dados com criptografia de Conhecimento Zero, garantindo que apenas você tenha acesso a eles. Seus dados nunca são compartilhados, oferecendo total controle e tranquilidade em relação à segurança de suas informações pessoais."
+        ]
+      }
+    }
+  }
+}

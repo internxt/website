@@ -1,5 +1,6 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
+import { getImage } from '@/lib/getImage';
 
 const language = {
   en: 'EN',
@@ -8,6 +9,7 @@ const language = {
 
 const ConversionTableSection = ({ textContent, lang }) => {
   const langUpperCase = language[lang] || 'EN';
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   const table = [
     {
@@ -103,8 +105,24 @@ const ConversionTableSection = ({ textContent, lang }) => {
 
   return (
     <section className="bg-gray-1">
-      <div className="flex flex-col space-y-16 py-20 lg:items-center lg:justify-center">
-        <div id="incontent_3" className="flex w-full justify-center"></div>
+      <div className="flex flex-col space-y-16 py-16 lg:items-center lg:justify-center">
+        <div className="flex w-full flex-col items-center justify-center px-6">
+          <Image
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
         <div className="flex w-full max-w-[840px] flex-col items-center justify-center space-y-4 px-5 text-center">
           <p className="text-4xl font-semibold">{textContent.title}</p>
           <p className="text-xl font-normal text-gray-100">{textContent.description}</p>
@@ -147,7 +165,23 @@ const ConversionTableSection = ({ textContent, lang }) => {
             />
           </Link>
         </div>
-        <div id="incontent_4" className="flex w-full justify-center"></div>
+        <div className="flex w-full flex-col items-center justify-center px-6">
+          <Image
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
       </div>
     </section>
   );

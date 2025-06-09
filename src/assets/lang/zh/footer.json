@@ -81,12 +81,16 @@
         "byteConverter": "字节转换器",
         "passwordGenerator": "密码生成器",
         "fileConverter": "文件转换器",
-        "haveIBeenPwned": "我被入侵了"
+        "haveIBeenPwned": "我被入侵了",
+        "metadataRemover": "元数据删除器",
+        "aiDetector": "AI 检测器"
       },
       "features": {
         "title": "功能",
         "privateCloud": "私有云解决方案",
-        "cloudBakcup": "云备份解决方案"
+        "cloudBakcup": "云备份解决方案",
+        "GDPRCloud": "GDPR存储",
+        "cloudPhotos": "云端照片"
       }
     }
   },

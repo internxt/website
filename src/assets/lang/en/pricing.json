@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% OFF",
+      "line1": "85% OFF",
       "line2": "our annual plans"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "Get 80% OFF",
+      "title": "Get 85% OFF",
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Get ",
-      "blue2": "80% OFF ",
+      "blue2": "85% OFF ",
       "normal2": "of the most secure cloud storage"
     },
     "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
@@ -43,16 +43,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Save 80%",
-      "title": "World Cloud Security Day offer!",
-      "subtitle": "Private cloud storage, Antivirus, and VPN",
+      "label": "Save 85%",
+      "title": "Annual and Lifetime plans!",
+      "subtitle": "Private & sustainable cloud storage",
+      "subtitle2": "Drive, Antivirus, and VPN",
       "cta": "Claim deal!",
       "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl": "New Internxt plans!",
-      "subtitleMbl": "Internxt Drive, Antivirus, and VPN.",
-      "descriptionMbl": "Chance to win an Internxt x Swiss Peak backpack!",
+      "lastCta": "* Offer is for free accounts or new customers",
+      "titleMbl": "World Environment Day",
+      "subtitleMbl": "Annual and Lifetime plans!",
+      "descriptionMbl": "Chance to win an Internxt backpack!",
       "ctaMbl": "Claim deal!"
     },
     "planTitles": {

@@ -4,7 +4,7 @@
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime privacy",
     "info": "Pay once, get lifetime storage at ",
-    "infoHighlight": "82% OFF",
+    "infoHighlight": "85% OFF",
     "cta": "Choose your plan"
   },
   "HeroSection": {
@@ -13,7 +13,7 @@
       "cloudwards": "Exclusive offer for Cloudwards readers"
     },
     "all": {
-      "title": "82% off all lifetime plans",
+      "title": "85% off all lifetime plans",
       "description": [
         "Internxt offers secure cloud storage guaranteed to protect your data and right to privacy.",
         "Get lifetime storage with a single payment."
@@ -21,7 +21,7 @@
       "choosePlanLabel": "Choose your plan: "
     },
     "one": {
-      "title": "Save 82% on 5TB lifetime cloud storage",
+      "title": "Save 85% on 5TB lifetime cloud storage",
       "description": [
         "Increase your cloud storage by 5TB.",
         "Store and share your files in complete privacy forever without using your hard disk space."
@@ -34,35 +34,27 @@
       "With a 5TB lifetime plan, you can store and access your files locally without consuming your device’s physical drive space.",
       " Enjoy peace of mind knowing your memories and important documents are safely backed up in the cloud, accessible on any device."
     ],
-    "cta": "Get 82% OFF"
+    "cta": "Get 85% OFF"
   },
   "WhyChooseInternxtForOneplan": {
-    "title": "Why choose Internxt?",
-    "description": "Privacy made for everyone and simple-to-use online security that you don’t have to be an expert to understand. Powerful but familiar, Internxt is encrypted cloud storage built for everyday use in all walks of life.",
+    "title": "Protect your files for a lifetime with unparalleled security built-in",
+    "description": "We provide the best security to protect your files at all costs.",
     "cards": [
       {
-        "title": "End-to-end encryption",
-        "description": "Your files are automatically secured before leaving your device."
+        "title": "Unmatched privacy",
+        "description": "Protecting your privacy is our top priority; we never store passwords or personal data. Your files are encrypted in transit and at rest, giving you complete control over your information. "
       },
       {
-        "title": "Data protection",
-        "description": "Internxt protects your data, unlike Big Tech companies who profit from it."
+        "title": "Uncompromising security",
+        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge and post-quantum encryption, you are the only one with access to your data."
       },
       {
-        "title": "Zero-knowledge policies",
-        "description": "Your files remain completely confidential — even from us"
+        "title": "Open-source and transparent",
+        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
       },
       {
-        "title": "Open source",
-        "description": "Our code is available to everyone for complete transparency."
-      },
-      {
-        "title": "GDPR compliant",
-        "description": "We follow strict European laws created to protect your data."
-      },
-      {
-        "title": "Independently audited",
-        "description": "Our apps have undergone rigorous testing and are certified as secure."
+        "title": "Independently verified",
+        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
       }
     ]
   },
@@ -122,7 +114,7 @@
     },
     "one": {
       "title": "Running out of storage?",
-      "description": "Get 82% off an extra 5TB!",
+      "description": "Get 85% off an extra 5TB!",
       "cta": "Upgrade plan"
     },
     "two": {
@@ -155,6 +147,21 @@
       "worldCloudSecurityDay": {
         "title": "Internxt themed goodies:",
         "gift": "Chance to win an Internxt x Swiss Peak backpack"
+      },
+      "IdentityManagementDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Special theme for Web App",
+        "gift2": "Chance to win an Internxt backpack"
+      },
+      "starWarsDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Chance to win an Internxt backpack",
+        "gift2": "Free Star Wars theme for Web App"
+      },
+      "WorldEnvironmentDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Web App theme for free",
+        "gift2": "Chance to win an Internxt backpack"
       },
       "features": {
         "1TB": [
@@ -196,6 +203,41 @@
         ],
         "10TB": []
       }
+    }
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Annual",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
+    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Open-source and audited",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     }
   },
   "FeatureSection": {

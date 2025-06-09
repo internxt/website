@@ -2,10 +2,8 @@ import { Devices, Eye, FolderLock, Leaf, LockKey, Trophy  } from '@phosphor-icon
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
-
 const FeaturesSection = ({ textContent }) => {
   const [cardIndex, setCardIndex] = useState(0);
-
   const cardInfo = [
     {
       icon: Trophy,
@@ -38,9 +36,7 @@ const FeaturesSection = ({ textContent }) => {
       description: textContent.info[5].description,
     },
   ];
-
   const DescriptionIcon = cardInfo[cardIndex].icon;
-
   return (
     <section className="overflow-hidden">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">

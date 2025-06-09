@@ -7,14 +7,24 @@
     },
     "description": {
       "normal": "Join Internxt, the leading Google Drive alternative, and get ",
-      "blue": "80% OFF ",
+      "blue": "82% OFF ",
       "normal1": "any annual and lifetime plan. Securely store and share your files in complete privacy."
     },
     "cta": "Choose plan"
   },
   "PaymentSection": {
-    "planTitles": { "homePage": "Choose the storage you need" },
-    "planDescription": "Every Internxt plan features complete access to our privacy services. Enjoy year-long security to meet your storage needs.",
+    "planTitles": {
+      "individuals": "Annual",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime",
+      "business": "Business",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "lifetimeDescription": "A lifetime of privacy and security for your files for a unique, one-time payment",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
@@ -40,8 +50,8 @@
         "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
       },
       {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device.  Thanks to zero-knowledge AES-256 encryption, you are the absolutely only  one with access to your data."
+        "title": "Next-generation security",
+        "description": "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data."
       },
       {
         "title": "Open source and transparent",
@@ -77,13 +87,12 @@
     ]
   },
   "CtaSection": {
-    "title": "Get an entire year’s worth of storage with 80% off now!",
-    "description": "Internxt is offering an exclusive discount with full privacy and security guaranteed.",
+    "title": "Get 82% off all plans with Drive, VPN, and Antivirus included!",
     "cta": "Choose plan"
   },
   "CtaSection1": {
     "title": "The world's most private cloud storage",
-    "description": "Claim your exclusive 80% discount to access Internxt's secure, private, and encrypted cloud storage for an entire year.",
+    "description": "Claim your exclusive 82% discount to access Internxt's secure, private, and encrypted cloud storage for an entire year.",
     "cta": "Find your plan"
   }
 }

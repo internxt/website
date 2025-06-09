@@ -28,7 +28,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "享受 ",
-      "blue2": "80% 折扣 ",
+      "blue2": "85% 折扣 ",
       "normal2": "的最安全云存储"
     },
     "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
@@ -38,15 +38,17 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "优惠 80%",
-      "title": "世界云安全日",
-      "subtitle": "Internxt 云盘、杀毒软件和 VPN",
-      "cta": "获取您的方案！",
-      "cta2": "享受 80% 折扣",
-      "guarantee": "30 天退款保证",
+      "label": "八折优惠",
+      "title": "保护地球，守护您的数据",
+      "subtitle": "私密且可持续的云存储",
+      "subtitle2": "Drive、杀毒软件和VPN全都包含",
+      "cta": "获取您的方案",
+      "cta2": "立享85%折扣",
+      "guarantee": "30天退款保证",
       "lastCta": "*优惠仅适用于免费账户或新用户",
-      "titleMbl": "全新终身计划！",
-      "descriptionMbl": "私人存储、杀毒软件和 VPN",
+      "titleMbl": "世界环境日",
+      "subtitleMbl": "所有Internxt方案",
+      "descriptionMbl": "抽奖赢取Internxt背包",
       "ctaMbl": "购买您的方案"
     },
     "save": "省高达",

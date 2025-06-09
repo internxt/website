@@ -4,12 +4,12 @@ import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
-import { PrivateCloudStorageSolutionsText, ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
+import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 import { BannerForMobile } from './components/heroSection/BannerForMobile';
 const Animation = dynamic(() => import('../shared/Animation'));
 
 interface HeroSectionForHomeProps {
-  textContent: PrivateCloudStorageSolutionsText['HeroSection'];
+  textContent: any;
   lang: string;
   isHomePageV2?: boolean;
 }
@@ -36,7 +36,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
       position: { top: '12%', left: '200px' },
       boxShadow: '56px 56px 80px rgba(0,0,0,.2)',
       borderRadius: '24px',
-      className: "rounded-2xl"
+      className: 'rounded-2xl',
     },
     {
       src: '/images/home/header/folder.svg',
@@ -125,7 +125,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
           <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
             <Animation images={images} />;
           </div>
-          
         </div>
       </div>
     </section>

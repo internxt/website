@@ -82,12 +82,16 @@
         "byteConverter": "Conversor de Bytes",
         "passwordGenerator": "Gerador de Senhas",
         "fileConverter": "Conversor de Arquivos",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Remover Metadados",
+        "aiDetector": "Detector de IA"
       },
       "features": {
         "title": "Funcionalidades",
         "privateCloud": "Solução de nuvem privada",
-        "cloudBakcup": "Solução de backup em nuvem"
+        "cloudBakcup": "Solução de backup em nuvem",
+        "GDPRCloud": "Armazenamento GDPR",
+        "cloudPhotos": "Fotos na nuvem"
       }
     }
   },

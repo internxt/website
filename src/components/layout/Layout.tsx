@@ -12,6 +12,7 @@ import {
 } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
+import { saveGclidToCookie } from '@/lib/cookies';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -79,6 +80,11 @@ LayoutProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
+    const gclid = params.get('gclid');
+
+    if (gclid) {
+      saveGclidToCookie(gclid);
+    }
 
     if (source !== 'Impact') return;
 
@@ -148,7 +154,8 @@ LayoutProps) {
           }}
         ></script>
 
-        {INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
+        {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
+          
           <>
             <script
               id="adengine-config"
@@ -182,7 +189,7 @@ LayoutProps) {
             />
             <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
           </>
-        ) : null}
+        ) : null}*/}
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{

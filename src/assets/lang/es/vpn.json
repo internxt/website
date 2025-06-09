@@ -6,7 +6,8 @@
       "line2": "te protege online"
     },
     "description": "Navega por la web con total libertad y privacidad con la VPN segura de Internxt.",
-    "cta": "Compra tu plan"
+    "cta": "Compra tu plan",
+    "download": "Descargar"
   },
   "EncryptedVPNSection": {
     "title": "La extensión VPN cifrada de Internxt",
@@ -61,6 +62,7 @@
     "subtitle": "La extensión VPN de Internxt utiliza servidores rápidos y seguros para cifrar y transmitir datos confidenciales.",
     "description": "Nuestra extensión VPN oculta tu dirección IP y protege tu información de la recopilación de datos de terceros.",
     "cta": "Consigue tu plan",
+    "download": "Descargar",
     "cards": [
       "Evita anuncios personalizados",
       "Crea cuentas de forma anónima",

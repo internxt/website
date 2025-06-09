@@ -28,9 +28,9 @@
       "unableToProcess": "Impossible de traiter",
       "noVirusesDetected": {
         "message": "Aucun virus détecté",
-        "title": "Vous voulez garder vos fichiers en sécurité ?",
-        "subtitle": "Internxt est un service de stockage en nuage sécurisée avec analyse antivirus gratuit intégrée et chiffrement de bout en bout",
-        "cta": "Essayer maintenant"
+        "title": "Protégez vos fichiers contre les virus",
+        "subtitle": "Internxt s'est associé à Bitdefender pour vous offrir une protection en temps réel ultime sur votre appareil. Profitez de 3 mois de protection antivirus ultime gratuitement.",
+        "cta": "Profitez de l’offre"
       },
       "analyzing": "Analyse du fichier...",
       "scanTime": "Durée de l'analyse",

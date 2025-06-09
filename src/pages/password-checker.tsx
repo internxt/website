@@ -51,12 +51,13 @@ const PasswordChecker = ({
           url={'https://drive.internxt.com/new?utm_source=website&utm_medium=banner&utm_campaign=internxtpw'}
         />
 
-        <HeroSection textContent={langJson.HeroSection} />
+        <HeroSection textContent={langJson.HeroSection} lang={lang} />
 
         <InfoSection
           textContent={langJson.InfoSection}
           bannerText={bannerLang.SignUpPasswordGenerator}
           hideLast2Sections
+          lang={lang}
         />
 
         <CtaSection textContent={langJson.CtaSection} url="https://drive.internxt.com/new" maxWidth="max-w-lg" />

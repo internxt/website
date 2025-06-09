@@ -1,28 +1,85 @@
 {
   "HeroSection": {
-    "header": "Internxt Yearly Plans",
+    "header": "Получите эксклюзивную скидку 85% на все годовые планы!",
     "title": {
-      "normalText": "The most secure cloud ",
-      "blueText": "for all your photos and files"
+      "normalText": "Самое безопасное и приватное ",
+      "blueText": "облачное хранилище для ваших файлов"
     },
-    "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
-    "cta": "Choose your plan"
+    "description": "Оформите подписку на годовой план Internxt и получите 365 дней полной конфиденциальности.",
+    "cta": "Выбрать план"
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Годовые планы",
+      "homePage": "Выберите подходящий план",
+      "lifetime": "Пожизненные планы",
+      "business": "Бизнес-планы",
+      "lifetimeCampaign": {
+        "blueText": "Скидка 50%",
+        "normalText": "на все наши эксклюзивные пожизненные планы"
+      }
+    },
+    "header": "Полная конфиденциальность со скидкой 85%",
+    "lifetimeDescription": "Сделайте один платёж — и получите пожизненную конфиденциальность. Доступ ко всем функциям Internxt и зашифрованному хранилищу будет навсегда.",
+    "planDescription": "Все планы Internxt предоставляют полный доступ к нашему пакету приватных решений: Internxt Drive, Send, VPN, Antivirus, Meet и Mail.",
+    "billingFrequency": {
+      "monthly": "Ежемесячно",
+      "annually": "Ежегодно",
+      "individual": "Индивидуальный",
+      "lifetime": "Пожизненный",
+      "business": "Бизнес"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Бесплатно",
+      "description": "Получите до 1 ГБ зашифрованного облачного хранилища и доступ к нашему приватному экосистемному набору: VPN (FR), CLI/WebDav/Rclone и многое другое.",
+      "cta": "Выбрать план"
+    },
+    "features": {
+      "endToEnd": "Сквозное шифрование",
+      "openSource": "Открытый и проверенный исходный код",
+      "anonymousAccount": "Анонимная регистрация аккаунта",
+      "premiumSupport": "Премиум-поддержка клиентов",
+      "guarantee": "30-дневная гарантия возврата денег"
+    }
   },
   "PaymentSection": {
-    "title": "Annual plans",
-    "description": "All Internxt plans are fully featured with complete access to all of our privacy services. Year-long security for all shapes and sizes.",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "blueTitle": "Полная конфиденциальность со скидкой 85%",
+    "title": "Годовые планы",
+    "description": "Все планы Internxt предоставляют полный доступ к нашему пакету приватных решений: Internxt Drive, Send, VPN, Antivirus, Meet и Mail.",
+    "firstFeed": "Премиум-поддержка клиентов",
+    "secondFeed": "30-дневная гарантия возврата денег",
+    "thirdFeed": "Открытый и проверенный исходный код"
   },
   "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "title": "Верните контроль над своей конфиденциальностью",
+    "description": "Internxt создаёт облачные сервисы, ориентированные на безопасность и конфиденциальность, чтобы вы могли вновь контролировать свои данные. Все наши решения разработаны с нуля с прицелом на безопасность и защиту вашей информации.",
+    "cta": "Выбрать план"
   },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Find your plan"
+    "title": "Облачное хранилище Internxt ",
+    "description": "Самое приватное, безопасное и зашифрованное облако в мире. Защитите то, что действительно важно — вашу информацию.",
+    "cta": "Выбрать план"
+  },
+  "FeaturesSection": {
+    "title": "Надёжное облачное хранилище с непревзойдённой конфиденциальностью",
+    "description": "Что делает Internxt особенным? Мы — сплочённая команда специалистов, полностью сосредоточенных на вашей онлайн-защите. Каждое наше решение и шаг направлены на защиту ваших данных от любых угроз.",
+    "info": [
+      {
+        "title": "Непревзойдённая конфиденциальность",
+        "description": "Мы никогда не храним пароли или личные данные. Ваши файлы всегда зашифрованы, и только вы контролируете доступ к ним."
+      },
+      {
+        "title": "Безопасность без компромиссов",
+        "description": "Файлы шифруются до того, как покинут ваше устройство. Благодаря нулевому знанию и постквантовому шифрованию только вы имеете доступ к данным."
+      },
+      {
+        "title": "Открытый и прозрачный код",
+        "description": "Наш код открыт и доступен на GitHub. Любой может проверить, протестировать и убедиться в его безопасности лично. У нас нет тайн — кроме ваших данных."
+      },
+      {
+        "title": "Независимая проверка",
+        "description": "Мы полностью соответствуем GDPR и на 100% безопасны. Internxt был независимо проверен Securitum — ведущей европейской компанией по тестированию на проникновение."
+      }
+    ]
   }
 }

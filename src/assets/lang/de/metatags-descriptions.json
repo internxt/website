@@ -82,7 +82,7 @@
   {
     "id": "lifetime",
     "title": "Internxt Lifetime-Pläne – Sicherer Cloud-Speicher ein Leben lang!",
-    "description": "Internxt Lifetime Deal: Einmal zahlen und 2TB, 5TB oder 10TB sicheren Cloud-Speicher für immer erhalten."
+    "description": "Internxt Lifetime Deal: Einmal zahlen und 1TB, 3TB oder 5TB sicheren Cloud-Speicher für immer erhalten."
   },
   {
     "id": "partner-discount",
@@ -184,5 +184,35 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Cloud-Speicher-Backup-Lösungen",
     "description": "Internxt Cloud-Speicher-Backup-Lösungen nutzen Redundanz und preisgekrönte Verschlüsselung, die Sie und Ihr Unternehmen vor Datenverlust schützt."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt – DSGVO-konformer Cloud-Speicher",
+    "description": "Internxt ist ein Cloud-Speicherdienst, der der DSGVO und den strengen Datenschutzgesetzen der EU entspricht, um deine Informationen zu schützen."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – Fotos in der Cloud",
+    "description": "Internxt bietet dir den besten Speicherplatz, um deine Fotos privat und sicher in der Cloud zu speichern – inklusive Antivirus und VPN."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Spezialangebot für deine Jahrespläne!",
+    "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadaten-Entferner – So entfernen Sie Metadaten aus PDFs, Fotos und Ihren Dokumenten online",
+    "description": "Entfernen Sie versteckte Daten aus Ihren Dateien in Sekundenschnelle. Der Internxt Metadaten-Entferner säubert Ihre Dokumente für maximale Privatsphäre vor dem Teilen."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt ZeroGPT KI-Checker – Kostenloses KI-Prüftool",
+    "description": "Internxt ZeroGPT KI-Checker. Überprüfe Inhalte, um festzustellen, ob sie von ChatGPT, Gemini oder anderen KI-Plattformen erstellt wurden. Jetzt kostenlos ausprobieren!"
+  },
+  {
+    "id": "special-offer",
+    "title": "Sonderangebot — Internxt",
+    "description": "Erhalten Sie Internxt-Jahres- und Lifetime-Tarife mit einem exklusiven 80 % Rabatt. Genießen Sie Privatsphäre und Sicherheit mit bis zu 10 TB Speicherplatz."
   }
 ]

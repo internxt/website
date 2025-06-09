@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Special82,
-    couponCodeForLifetime: PromoCodeName.Special82,
+    couponCode: PromoCodeName.Affiliates85,
+    couponCodeForLifetime: PromoCodeName.Affiliates85,
   });
 
   const cardsData = [
@@ -89,7 +89,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection
         TextComponent={
@@ -146,6 +146,7 @@ const PartnerDiscount = ({
           hideFreeCard
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           showPromo={false}
+          isAffiliate
         />
       </div>
 
@@ -181,8 +182,6 @@ const PartnerDiscount = ({
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
-
-      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

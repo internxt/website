@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Obtenez ",
-      "blue2": "80% DE RÉDUCTION ",
+      "blue2": "85% DE RÉDUCTION ",
       "normal2": "sur le stockage cloud le plus sécurisé"
     },
     "howMuchStorage": "De combien de stockage en ligne avez-vous besoin ?",
@@ -47,16 +47,18 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offre 80%",
-      "title": "Journée mondiale de la sécurité du cloud",
-      "subtitle": "Internxt Drive, Antivirus et VPN",
-      "cta": "Obtiens ton plan !",
-      "cta2": "Bénéficie de 80% de réduction",
+      "label": "Offre 85%",
+      "title": "Prenez soin de la planète et protégez vos données",
+      "subtitle": "Stockage cloud privé et durable",
+      "subtitle2": "Drive, Antivirus et VPN tout inclus",
+      "cta": "Obtenez votre plan",
+      "cta2": "Obtenez 85% de réduction",
       "guarantee": "Garantie de remboursement de 30 jours",
       "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs",
-      "titleMbl": "Nouveaux forfaits à vie !",
-      "descriptionMbl": "Stockage privé, Antivirus et VPN",
-      "ctaMbl": "Achète ton plan"
+      "titleMbl": "Journée mondiale de l'environnement",
+      "subtitleMbl": "Tous les plans Internxt",
+      "descriptionMbl": "Tirage au sort d'un sac à dos Internxt",
+      "ctaMbl": "Achetez votre plan"
     },
     "planTitles": {
       "individuals": "Plans individuels",

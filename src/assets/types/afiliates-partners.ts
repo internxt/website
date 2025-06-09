@@ -9,6 +9,7 @@ export interface AffiliatesPartnersText {
   DevicesSection: DevicesSection;
   CtaSection: CtaSection;
   PriceTable: PriceTable;
+  tableSection: TableSection;
   FeatureSection: FeatureSection;
   FeatureSectionV2: FeatureSectionV2;
 }
@@ -89,13 +90,31 @@ export interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
+  premiumSupport: string;
+  guarantee: string;
 }
 
 export interface PriceCard {
   mostPopular: string;
+  commingSoon: string;
+  discount: string;
   billedAnnually: string;
   cta: string;
+  stPatricksFeatures: StPatricksFeatures;
+  worldCloudSecurityDay: StPatricksFeatures;
+  IdentityManagementDay: IdentityManagementDay;
   features: { [key: string]: string[] };
+}
+
+export interface IdentityManagementDay {
+  title: string;
+  gift1: string;
+  gift2: string;
+}
+
+export interface StPatricksFeatures {
+  title: string;
+  gift: string;
 }
 
 export interface SecondFeaturesSection {
@@ -113,4 +132,42 @@ export interface WhatWeDoForOneplan {
 export interface WhatWeDoForOneplanCard {
   features: string[];
   cta: string;
+}
+
+export interface TableSection {
+  planTitles: PlanTitles;
+  lifetimeDescription: string;
+  planDescription: string;
+  businessDescription: string;
+  businessDescription2: string;
+  billingFrequency: BillingFrequency;
+  freePlanCard: FreePlanCard;
+  features: Features;
+}
+
+export interface BillingFrequency {
+  monthly: string;
+  annually: string;
+  individual: string;
+  lifetime: string;
+  business: string;
+}
+
+export interface FreePlanCard {
+  eyeBrow: string;
+  description: string;
+  cta: string;
+}
+
+export interface PlanTitles {
+  individuals: string;
+  homePage: string;
+  lifetime: string;
+  business: string;
+  lifetimeCampaign: LifetimeCampaign;
+}
+
+export interface LifetimeCampaign {
+  blueText: string;
+  normalText: string;
 }

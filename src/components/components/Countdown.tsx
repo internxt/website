@@ -5,6 +5,7 @@ interface CountdownProps {
   dt?: string;
   textFont?: string;
   textHeight?: string;
+  isComeback?: boolean;
 }
 
 const DAYS = 24 * 3600 * 1000;
@@ -14,6 +15,7 @@ const Countdown: React.FC<CountdownProps> = ({
   dt,
   textFont = 'font-semibold',
   textHeight = 'text-2xl',
+  isComeback = false,
 }) => {
   const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState<number>(0);

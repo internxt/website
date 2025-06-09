@@ -14,11 +14,11 @@ import { loadStripe, Stripe, StripeElementsOptions } from '@stripe/stripe-js';
 import { StripeElements } from '@stripe/stripe-js/dist';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { notificationService } from '@/components/Snackbar';
-import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 import { IntegratedCheckoutText } from '@/assets/types/integrated-checkout';
 import { PromoCodeName, PromoCodeProps } from '@/lib/types';
 import { ObjStoragePaymentsService } from '@/services/payments.service';
 import { stripeService } from '@/services/stripe.service';
+import { getCaptchaToken, objectStorageActivationAccount } from '@/lib/auth';
 
 interface IntegratedCheckoutProps {
   locale: GetServerSidePropsContext['locale'];
@@ -75,7 +75,9 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
   const [stripeElementsOptions, setStripeElementsOptions] = useState<StripeElementsOptions>();
   const [plan, setPlan] = useState<PlanData>();
   const [isUserPaying, setIsUserPaying] = useState<boolean>(false);
-  const [country, setCountry] = useState<string>();
+  const [name, setName] = useState<string>();
+  const [postalCode, setPostalCode] = useState<string>('');
+  const [country, setCountry] = useState<string>('');
   const [coupon, setCoupon] = useState<PromoCodeProps | undefined>(undefined);
   const [couponError, setCouponError] = useState<string>();
   const searchParams = useSearchParams();
@@ -161,6 +163,7 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       amount: plan?.amount ?? 0,
       currency: plan?.currency,
       payment_method_types: ['card', 'paypal'],
+      paymentMethodCreation: 'manual',
     };
 
     setStripeElementsOptions(stripeElementsOptions);
@@ -194,9 +197,10 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
       await objectStorageActivationAccount(email, password, captchaToken);
 
       const { customerId, token } = await paymentService.getCustomerId({
-        name: companyName ?? 'My Internxt Object Storage',
+        customerName: companyName ?? name,
         email,
         country,
+        postalCode,
         companyVatId: vatId,
       });
 
@@ -204,27 +208,35 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
         throw new Error(elementsError.message);
       }
 
-      const { clientSecret } = await paymentService.createObjectStorageSubscription({
-        customerId,
-        plan,
-        token,
-        companyName,
-        vatId,
-        promoCodeId: coupon?.codeId,
-      });
-
-      const confirmIntent = stripeSDK.confirmSetup;
-
-      const { error } = await confirmIntent({
+      const { error: paymentMethodError, paymentMethod } = await stripeSDK.createPaymentMethod({
         elements,
-        clientSecret,
-        confirmParams: {
-          return_url: `${RETURN_URL_DOMAIN}`,
-        },
       });
 
-      if (error) {
-        throw new Error(error.message);
+      if (paymentMethodError) {
+        throw new Error(paymentMethodError.message);
+      }
+
+      const { verified, clientSecret } = await paymentService.paymentMethodVerification({
+        customerId,
+        currency: plan.currency,
+        token,
+        paymentMethod: paymentMethod.id,
+        priceId: plan.id,
+      });
+
+      if (!verified && clientSecret) {
+        const confirmPaymentIntent = stripeSDK.confirmPayment;
+
+        const { error } = await confirmPaymentIntent({
+          elements,
+          clientSecret,
+          confirmParams: {
+            return_url: RETURN_URL_DOMAIN,
+          },
+        });
+        if (error) {
+          throw new Error(error.message);
+        }
       }
     } catch (err) {
       if (err.message.includes('500')) {
@@ -274,6 +286,8 @@ const IntegratedCheckout = ({ locale, textContent }: IntegratedCheckoutProps): J
               objStoragePlan={plan}
               isPaying={isUserPaying}
               onCheckoutButtonClicked={onCheckoutButtonClicked}
+              onUserNameChange={setName}
+              onPostalCodeChange={setPostalCode}
               onCountryAddressChange={setCountry}
               onCouponInputChange={handleCouponInputChange}
               couponError={couponError}

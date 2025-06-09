@@ -1,5 +1,6 @@
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Drive } from '@internxt/sdk';
+import { PaymentMethodVerificationPayload } from '@internxt/sdk/dist/payments/types';
 
 export class ObjStoragePaymentsService {
   private apiUrl: string;
@@ -23,43 +24,59 @@ export class ObjStoragePaymentsService {
   }
 
   public async getCustomerId({
-    name,
+    customerName,
     email,
     country,
+    postalCode,
     companyVatId,
   }: {
-    name: string;
+    customerName: string;
     email: string;
-    country?: string;
+    postalCode: string;
+    country: string;
     companyVatId?: string;
   }) {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
-    return client.createCustomerForObjectStorage({ name, email, country, companyVatId });
+    return client.getObjectStorageCustomerId({ email, customerName, postalCode, country, companyVatId });
   }
 
   public async createObjectStorageSubscription({
     customerId,
-    plan,
+    priceId,
+    currency = 'eur',
     token,
-    companyName,
-    vatId,
     promoCodeId,
   }: {
     customerId: string;
-    plan: PlanData;
+    priceId: string;
+    currency?: string;
     token: string;
-    companyName: string;
-    vatId: string;
     promoCodeId?: string;
   }) {
     const client = ObjStoragePaymentsService.client(this.apiUrl);
     return client.createObjectStorageSubscription({
       customerId,
-      plan,
+      priceId,
+      currency,
       token,
-      companyName,
-      vatId,
       promoCodeId,
+    });
+  }
+
+  public paymentMethodVerification({
+    customerId,
+    token,
+    priceId,
+    currency = 'eur',
+    paymentMethod,
+  }: PaymentMethodVerificationPayload) {
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
+    return client.paymentMethodVerification({
+      customerId,
+      token,
+      priceId,
+      currency,
+      paymentMethod,
     });
   }
 }

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "80% OFF", "line2": "en nuestros planes anuales" },
+    "title": { "line1": "85% OFF", "line2": "en nuestros planes anuales" },
     "lifetimeTitle": { "line1": "Consigue un", "blueText": " plan de por vida ", "line2": "de Internxt!" },
     "feeds": {
       "firstFeed": "Garantía de devolución de 30 días",
@@ -8,7 +8,7 @@
       "thirdFeed": "Crea una cuenta anónima"
     },
     "cta": {
-      "title": "Obtén un 80% de descuento",
+      "title": "Obtén un 85% de descuento",
       "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
@@ -27,29 +27,31 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Obtén un ",
-      "blue2": "80% de descuento",
+      "blue2": "85% de descuento",
       "normal2": "de almacenamiento seguro"
     },
     "description": "Protege tus archivos de trabajo y personales con almacenamiento en la nube cifrado de grado militar a un precio accesible.",
     "features": [
       "El almacenamiento en la nube más seguro",
       "Más barato que las alternativas",
-      "Garantía de devolución de dinero de 30 días"
+      "Garantía de devolución de 30 días"
     ],
     "howMuchStorage": "¿Cuánto almacenamiento en línea necesitas?",
     "offerEnds": "Termina en:"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Oferta 80%",
-      "title": "Día Mundial de la Seguridad en la Nube",
-      "subtitle": "Internxt Drive, Antivirus, y VPN",
-      "cta": "Consigue tu plan!",
-      "cta2": "Obtén un 80% de descuento",
+      "label": "Oferta 85%",
+      "title": "Cuida el planeta, protege tus datos",
+      "subtitle": "Almacenamiento en la nube privado y sostenible",
+      "subtitle2": "Drive, Antivirus y VPN todo incluido",
+      "cta": "Consigue tu plan",
+      "cta2": "Obtén un 85% de descuento",
       "guarantee": "Garantía de devolución de 30 días",
       "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
-      "titleMbl": "¡Nuevos planes de por vida!",
-      "descriptionMbl": "Almacenamiento privado, Antivirus y VPN",
+      "titleMbl": "Día Mundial del Medio Ambiente",
+      "subtitleMbl": "Todos los planes Internxt",
+      "descriptionMbl": "Sorteo de una mochila Internxt",
       "ctaMbl": "Compra tu plan"
     },
     "planTitles": {
@@ -86,7 +88,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "FaqSection": {

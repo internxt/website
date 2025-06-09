@@ -26,6 +26,8 @@ const ALLOWED_PATHS = [
   'taiwan',
   'germany',
   'spain',
+  'uk',
+  'italy',
 ];
 
 const IMAGES_PER_PATH = {
@@ -89,9 +91,19 @@ const IMAGES_PER_PATH = {
     previewImage: '/images/lifetime/celebration/germany/file-item.webp',
     mobileImage: '/images/lifetime/celebration/germany/image-mobile.webp',
   },
+  uk: {
+    backgroundImage: '/images/lifetime/celebration/uk/bg.webp',
+    previewImage: '/images/lifetime/celebration/uk/file_item.webp',
+    mobileImage: '/images/lifetime/celebration/uk/image_mobile.webp',
+  },
+  italy: {
+    backgroundImage: '/images/lifetime/celebration/italy/Header-IT.webp',
+    previewImage: '/images/lifetime/celebration/italy/file_item.webp',
+    mobileImage: '/images/lifetime/celebration/italy/image_mobile.webp',
+  },
 };
 
-const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico','taiwan'];
+const PATHS_WITH_CURRENCY_SPECIFIED = ['usa', 'singapore', 'mexico', 'taiwan'];
 
 const LifetimeCelebrationTemplate = ({
   lang,
@@ -110,7 +122,6 @@ const LifetimeCelebrationTemplate = ({
   const currencySpecified = PATHS_WITH_CURRENCY_SPECIFIED.includes(filename) ? 'US' : undefined;
 
   useEffect(() => {
-    console.log('FILENAME: ', filename);
     if (!selectedPathName) {
       router.push('/lifetime');
     }
@@ -129,6 +140,8 @@ const LifetimeCelebrationTemplate = ({
     belgium: 0.17,
     switzerland: 0.17,
     singapore: 0.17,
+    uk: 0.17,
+    italy: 0.15,
   };
 
   const couponCode = {
@@ -144,6 +157,8 @@ const LifetimeCelebrationTemplate = ({
     belgium: PromoCodeName.Lifetime83DiscountCoupon,
     switzerland: PromoCodeName.Lifetime83DiscountCoupon,
     singapore: PromoCodeName.Lifetime83DiscountCoupon,
+    uk: PromoCodeName.Celebration83,
+    italy: PromoCodeName.IndependenceDayItaly,
   };
 
   const percent = {
@@ -159,8 +174,15 @@ const LifetimeCelebrationTemplate = ({
     belgium: '83%',
     switzerland: '83%',
     singapore: '83%',
+    uk: '83%',
+    italy: '85%',
   };
 
+  const textForCta = filename === 'uk' ? langJson.NationalDayCtaSection : langJson.CtaSection;
+
+  const handleOnClick = () => {
+    router.push('#priceTable');
+  };
   return (
     <Layout
       title={metatags[0].title}
@@ -172,12 +194,13 @@ const LifetimeCelebrationTemplate = ({
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden hideNavbar />
 
       <HeroSection
-        textContent={langJson.HeroSection.celebration[filename]}
+        textContent={langJson.HeroSection.celebration}
         isCelebrationPage
         previewImg={getImage(IMAGES_PER_PATH[filename].previewImage)}
         imageMobile={getImage(IMAGES_PER_PATH[filename].mobileImage)}
         bgImage={getImage(IMAGES_PER_PATH[filename].backgroundImage)}
         percent={percent[pathname]}
+        onRedirectButtonClicked={handleOnClick}
       />
 
       <PaymentSection
@@ -189,15 +212,16 @@ const LifetimeCelebrationTemplate = ({
         currencySpecified={currencySpecified}
         couponCode={couponCode[pathname]}
         lifetimeMode="celebration"
+        showOffer={false}
       />
 
       <GetLifetimeSection textContent={langJson.GetLifetimeSection} isCelebrationPage />
 
       <FeatureSection textContent={langJson.FeatureSection} />
 
-      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-gray-1" />
+      <TestimonialsSection textContent={testimonialsJson.TestimonialsSection} bgColor="bg-white" />
 
-      <CtaSection textContent={langJson.CtaSection} />
+      <CtaSection textContent={textForCta} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} />
     </Layout>
@@ -230,6 +254,10 @@ export async function getServerSideProps(ctx) {
 
   if (['brazil'].includes(pathname)) {
     lang = 'pt-br';
+  }
+
+  if (['italy'].includes(pathname)) {
+    lang = 'it';
   }
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

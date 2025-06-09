@@ -1,10 +1,10 @@
 {
   "HeroSection": {
     "title": {
-      "blue": "Risparmia il 75% ",
+      "blue": "Risparmia il 82% ",
       "normal": "su tutti i piani di archiviazione cloud sicura"
     },
-    "description": "Aggiorna il tuo account gratuito per ottenere uno sconto del 75% su qualsiasi piano. Con il nostro storage cloud crittografato e open-source, puoi archiviare e condividere i tuoi file in completa privacy.",
+    "description": "Aggiorna il tuo account gratuito per ottenere uno sconto del 82% su qualsiasi piano. Con il nostro storage cloud crittografato e open-source, puoi archiviare e condividere i tuoi file in completa privacy.",
     "cta": "Aggiorna il piano",
     "recommendedBy": "Raccomandato da:"
   },
@@ -49,7 +49,7 @@
       "Con i nostri piani a pagamento, puoi archiviare e accedere ai tuoi file localmente senza consumare lo spazio del disco fisico del tuo dispositivo.",
       "Goditi la tranquillità sapendo che i tuoi ricordi e documenti importanti sono al sicuro nel cloud, accessibili da qualsiasi dispositivo."
     ],
-    "cta": "Ottieni il 75% di SCONTO"
+    "cta": "Ottieni il 82% di SCONTO"
   },
   "InxtFeaturesSection": {
     "title": "Internxt offre uno storage cloud sicuro progettato per proteggere la tua privacy",
@@ -83,7 +83,7 @@
   },
   "CtaSection": {
     "title": "Hai bisogno di più spazio di archiviazione?",
-    "description": "Ottieni uno sconto del 75% su qualsiasi piano.",
+    "description": "Ottieni uno sconto del 82% su qualsiasi piano.",
     "cta": "Aggiorna il piano"
   },
   "WhatWeDoSection": {
@@ -97,7 +97,7 @@
         "Autenticazione 2FA",
         "Backup su più server"
       ],
-      "cta": "Ottieni il 75% di SCONTO"
+      "cta": "Ottieni il 82% di SCONTO"
     }
   },
   "FaqSection": {
@@ -112,7 +112,7 @@
       {
         "question": "Come posso aggiornare il mio piano gratuito?",
         "answer": [
-          "Il tuo sconto del 75% verrà applicato automaticamente al momento del pagamento. Per richiedere lo sconto, seleziona il tuo piano mensile, annuale o a vita e procedi alla pagina di pagamento."
+          "Il tuo sconto del 82% verrà applicato automaticamente al momento del pagamento. Per richiedere lo sconto, seleziona il tuo piano mensile, annuale o a vita e procedi alla pagina di pagamento."
         ]
       },
       {

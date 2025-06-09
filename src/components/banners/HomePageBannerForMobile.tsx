@@ -13,19 +13,19 @@ export const HomePageBannerForMobile = () => {
   };
   return (
     <div
-      className={`${styles.linearGradient} relative flex w-screen flex-col items-center justify-center pb-20 pt-20 lg:hidden`}
+      className={`${styles.linearGradient} relative  flex w-screen flex-col items-center justify-center pb-80 md:pb-[900px] lg:hidden`}
     >
-      <div className="flex flex-col items-center justify-center gap-4 pt-5">
-        <p className="flex w-max rounded-md border-green-dark bg-green-1 px-2 py-1 text-sm font-medium text-white">
+      <div className="flex flex-col items-center justify-center space-y-2 pt-10">
+        <p className="flex w-max rounded-xl border-2 border-green-dark bg-green-1 px-2 py-1 text-sm font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
         </p>
-        <p className="px-5 text-center text-4xl font-bold text-white">
+        <p className="px-10 text-center text-4xl font-bold text-white">
           {textContent.HeroSection.TitleAndOnePlanV2.title}
         </p>
-        <p className="text-center text-2xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
+        <p className=" text-center text-xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
         <button
           onClick={handleOnClick}
-          className="flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
+          className="z-20 flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
         >
           {textContent.HeroSection.TitleAndOnePlanV2.cta}
         </button>
@@ -35,14 +35,16 @@ export const HomePageBannerForMobile = () => {
             {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
           </p>
         </div>
-        <Image
-          src={getImage('/images/security-day/internxt_security_day.png')}
-          width={350}
-          height={300}
-          quality={100}
-          alt="World Secure Day"
-          objectFit="contain"
-        />
+        <div className="absolute -left-[17vw] h-[500px] w-[135vw] pt-48" style={{ overflow: 'visible' }}>
+          <Image
+            src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
+            width={1000}
+            height={1000}
+            quality={100}
+            alt="World Secure Day"
+            className="z-10 w-full object-contain"
+          />
+        </div>
       </div>
     </div>
   );

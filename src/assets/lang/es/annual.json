@@ -1,28 +1,85 @@
 {
   "HeroSection": {
-    "header": "Internxt Yearly Plans",
+    "header": "¡Consigue tu descuento exclusivo del 85% en todos los planes anuales!",
     "title": {
-      "normalText": "The most secure cloud ",
-      "blueText": "for all your photos and files"
+      "normalText": "El almacenamiento en la nube ",
+      "blueText": "más seguro y privado para tus archivos"
     },
     "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
-    "cta": "Choose your plan"
+    "cta": "Elige tu plan"
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "Planes anuales",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "Get 50% OFF",
+        "normalText": "all our exclusive lifetime plans"
+      }
+    },
+    "header": "Privacidad total con un 85% de descuento",
+    "lifetimeDescription": "With a one-time payment, you can get a lifetime of privacy. You'll have access to all of Internxt’s privacy-focused features and encrypted cloud storage forever.",
+    "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas: Internxt Drive, Send, VPN, Antivirus, Meet y Mail.",
+    "billingFrequency": {
+      "monthly": "Monthly",
+      "annually": "Annual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Free",
+      "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
+      "cta": "Select plan"
+    },
+    "features": {
+      "endToEnd": "End-to-end encrypted",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Anonymous account creation",
+      "premiumSupport": "Soporte al cliente premium",
+      "guarantee": "Devolución de dinero de 30 días"
+    }
   },
   "PaymentSection": {
-    "title": "Annual plans",
-    "description": "All Internxt plans are fully featured with complete access to all of our privacy services. Year-long security for all shapes and sizes.",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "blueTitle": "Privacidad total con un 85% de descuento",
+    "title": "Planes anuales",
+    "description": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas: Internxt Drive, Send, VPN, Antivirus, Meet y Mail.",
+    "firstFeed": "Premium customer support",
+    "secondFeed": "30-day money-back guarantee",
+    "thirdFeed": "Open-source and audited"
   },
   "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "title": "Recupera el control de tu privacidad",
+    "description": "Internxt crea servicios en la nube privados y seguros diseñados para que vuelvas a tener el control de tus datos. Protegiendo tus archivos y tu derecho fundamental a la privacidad, todos los servicios de Internxt están diseñados desde cero para brindar seguridad y protección incomparables.",
+    "cta": "Elige tu plan"
   },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Find your plan"
+    "title": "El almacenamiento en la nube de Internxt ",
+    "description": "La nube más privada, segura y cifrada del mundo. Protege lo que realmente importa, tu información.",
+    "cta": "Elige tu plan"
+  },
+  "FeaturesSection": {
+    "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
+    "description": "¿Qué hace que Internxt sea especial? Somos un equipo muy unido de profesionales completamente dedicados a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos y evitar que sean explotados.",
+    "info": [
+      {
+        "title": "Privacidad inigualable",
+        "description": "Proteger tu privacidad es nuestra prioridad; Nunca almacenamos contraseñas ni datos personales. Tus archivos están cifrados en todo momento, lo que te brinda un control total de tu información."
+      },
+      {
+        "title": "Seguridad sin concesiones",
+        "description": "Tus archivos están cifrados de extremo a extremo antes de salir de tu dispositivo. Gracias al conocimiento cero y al cifrado poscuántico, eres es el único que tiene acceso a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Estamos orgullosos de lo que hacemos, por lo que nuestro código es público en GitHub y cualquier persona puede revisarlo, auditarlo y verificarlo personalmente. No tenemos nada que ocultar excepto tus datos."
+      },
+      {
+        "title": "Verificado independientemente",
+        "description": "Cumplimos totalmente con el RGPD y somos 100 % seguros. Internxt ha sido auditado y verificado de forma independiente por Securitum, empresa de pruebas de penetración líder en Europa."
+      }
+    ]
   }
 }

@@ -23,7 +23,8 @@
   },
   "GetLifetimeSection": {
     "title": "La vie n'est pas courte ! Mais cette offre à temps limité l'est...",
-    "description": "Internxt propose une offre sur son service de cloud privé."
+    "description": "Internxt propose une offre sur son service de cloud privé.",
+    "cta": "Choisissez votre plan"
   },
   "FeatureSection": {
     "title": "Pourquoi choisir Internxt pour sécuriser vos fichiers?",
