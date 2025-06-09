@@ -596,7 +596,6 @@ export default function Footer({
                 </Link>
               </div>
             </div>
-            <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p>
           </div>
 
           {/* Mobile version */}
