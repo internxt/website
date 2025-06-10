@@ -116,11 +116,11 @@ export const PriceCard = ({
     LockSimple,
     Fingerprint,
     CodeBlock,
-    CreditCard,
     Broom,
     Detective,
     VideoConference,
     Envelope,
+    CreditCard,
   ];
 
   return (
@@ -251,10 +251,17 @@ export const PriceCard = ({
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
               {isBusiness ? (
                 <>
-                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                    size: 24,
-                    className: 'text-primary',
-                  })}
+                  {React.createElement(
+                    index === 10
+                      ? iconsFeatures[(index + 4) % iconsFeatures.length]
+                      : index > 10
+                      ? iconsFeatures[(index - 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
                   <span className="text-gray-80">
                     {feature}
                     {index > 10 ? (
@@ -267,8 +274,8 @@ export const PriceCard = ({
               ) : (
                 <>
                   {React.createElement(
-                    index > 9
-                      ? iconsFeatures[(index + 2) % iconsFeatures.length]
+                    index > 10 && storage === '3TB'
+                      ? iconsFeatures[index % iconsFeatures.length]
                       : index >= 6 && storage === '1TB'
                       ? iconsFeatures[(index + 1) % iconsFeatures.length]
                       : iconsFeatures[index % iconsFeatures.length],

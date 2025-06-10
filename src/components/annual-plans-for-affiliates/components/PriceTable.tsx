@@ -67,7 +67,6 @@ const PriceTable: React.FC<PriceTableProps> = ({
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
-            <CardSkeleton />
           </div>
         </Transition>
 

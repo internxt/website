@@ -29,7 +29,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Affiliates85,
+    couponCode: PromoCodeName.DRIVE87,
   });
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
