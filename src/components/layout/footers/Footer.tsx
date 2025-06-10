@@ -343,10 +343,6 @@ export default function Footer({
                     <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
-
-                    <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.storageForEducation}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -392,15 +388,6 @@ export default function Footer({
                       className="w-full max-w-[160px] hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.dropboxAlternative}
-                    </Link>
-
-                    <Link
-                      href="/privacy-directory"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[265px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                     </Link>
 
                     <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
@@ -796,10 +783,6 @@ export default function Footer({
                       <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
                       </Link>
-
-                      <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.storageForEducation}
-                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -857,15 +840,6 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
-                      </Link>
-
-                      <Link
-                        href="/privacy-directory"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[265px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </Link>
 
                       <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
