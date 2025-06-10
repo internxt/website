@@ -2,8 +2,12 @@ import { PromoCodeName } from '@/lib/types';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
+  CreditCard,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
@@ -56,9 +60,13 @@ export default function PriceCard({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    CreditCard,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -67,7 +75,7 @@ export default function PriceCard({
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex max-h-[740px] min-h-[400px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
+      } m-2 flex h-[860px] min-w-[370px] max-w-xs flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl xs:w-72`}
     >
       <div
         className={`info flex max-h-[340px] min-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
@@ -138,18 +146,31 @@ export default function PriceCard({
         </button>
       </div>
 
-      <div className="featureList flex max-h-[500px] min-h-[500px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
+      <div className="featureList flex h-[700px] flex-col border-t border-neutral-20 bg-neutral-10 p-6 text-gray-80">
         <div className="flex flex-col space-y-2 text-sm">
           {contentText.features[storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-1 first:font-semibold" key={feature}>
-              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                size: 24,
-                className: 'text-primary',
-              })}
-              <span className="text-gray-80">{feature}</span>
-              {index > 8 ? (
-                <span className="rounded-lg bg-orange/10 px-1 text-center text-orange">{contentText.commingSoon}</span>
-              ) : null}
+            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
+              <>
+                {React.createElement(
+                  index > 9
+                    ? iconsFeatures[(index + 2) % iconsFeatures.length]
+                    : index >= 6 && storage === '1TB'
+                    ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                    : iconsFeatures[index % iconsFeatures.length],
+                  {
+                    size: 24,
+                    className: 'text-primary',
+                  },
+                )}
+                <span className="text-gray-80">
+                  {feature}
+                  {index > 9 ? (
+                    <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                      {contentText.commingSoon}
+                    </span>
+                  ) : null}
+                </span>
+              </>
             </div>
           ))}
         </div>

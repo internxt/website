@@ -53,11 +53,12 @@
           "Antivirus",
           "Backup your files",
           "Password-protected file sharing",
+          "Invite, share & collaborate",
           "GDPR compliance",
           "Two-factor authentication (2FA)",
           "CLI, WebDav & Rclone support",
-          "Meet (3 participants)",
-          "Mail (3 addresses)"
+          "Device Cleaner ",
+          "Dark Web Monitor"
         ],
         "5TB": [
           "5TB zero-knowledge encrypted storage",
@@ -66,13 +67,15 @@
           "Antivirus",
           "Backup your files",
           "Password-protected file sharing",
+          "Invite, share & collaborate",
           "GDPR compliance",
           "Two-factor authentication (2FA)",
           "CLI, WebDav & Rclone support",
-          "Meet (5 participants)",
-          "Mail (5 addresses)"
-        ],
-        "10TB": []
+          "Device Cleaner ",
+          "Dark Web Monitor",
+          "Meet",
+          "Mail"
+        ]
       }
     },
     "features": {
