@@ -2,11 +2,11 @@
   "HeroSection": {
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime of privacy",
-    "info": "Get your exclusive 85% OFF discount on our lifetime plans!",
+    "info": "Get your exclusive 87% OFF discount on our lifetime plans!",
     "cta": "Choose your plan"
   },
   "PriceTable": {
-    "header": "Unlock 85% OFF",
+    "header": "Unlock 87% OFF",
     "title": "Lifetime storage plans",
     "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime security.",
     "priceCard": {
@@ -53,11 +53,12 @@
           "Antivirus",
           "Backup your files",
           "Password-protected file sharing",
+          "Invite, share & collaborate",
           "GDPR compliance",
           "Two-factor authentication (2FA)",
           "CLI, WebDav & Rclone support",
-          "Meet (3 participants)",
-          "Mail (3 addresses)"
+          "Device Cleaner ",
+          "Dark Web Monitor"
         ],
         "5TB": [
           "5TB zero-knowledge encrypted storage",
@@ -66,13 +67,15 @@
           "Antivirus",
           "Backup your files",
           "Password-protected file sharing",
+          "Invite, share & collaborate",
           "GDPR compliance",
           "Two-factor authentication (2FA)",
           "CLI, WebDav & Rclone support",
-          "Meet (5 participants)",
-          "Mail (5 addresses)"
-        ],
-        "10TB": []
+          "Device Cleaner ",
+          "Dark Web Monitor",
+          "Meet",
+          "Mail"
+        ]
       }
     },
     "features": {
