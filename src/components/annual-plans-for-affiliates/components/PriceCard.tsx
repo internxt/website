@@ -64,7 +64,6 @@ export default function PriceCard({
     LockSimple,
     Fingerprint,
     CodeBlock,
-    CreditCard,
     Broom,
     Detective,
     VideoConference,
@@ -152,8 +151,8 @@ export default function PriceCard({
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
               <>
                 {React.createElement(
-                  index > 9
-                    ? iconsFeatures[(index + 2) % iconsFeatures.length]
+                  index > 10 && storage === '3TB'
+                    ? iconsFeatures[index % iconsFeatures.length]
                     : index >= 6 && storage === '1TB'
                     ? iconsFeatures[(index + 1) % iconsFeatures.length]
                     : iconsFeatures[index % iconsFeatures.length],
