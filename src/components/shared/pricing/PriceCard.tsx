@@ -128,8 +128,8 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[980px]' : 'lg:h-[900px]'
-      } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[900px]'
+      } min-w-[410px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
         className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
@@ -249,23 +249,44 @@ export const PriceCard = ({
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {React.createElement(
-                index >= 6 && storage === '1TB'
-                  ? iconsFeatures[(index + 1) % iconsFeatures.length]
-                  : iconsFeatures[index % iconsFeatures.length],
-                {
-                  size: 24,
-                  className: 'text-primary',
-                },
-              )}
-              <span className={'text-gray-80'}>
-                {feature}
-                {index > 9 ? (
-                  <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
-                    {contentText.commingSoon}
+              {isBusiness ? (
+                <>
+                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
+                    size: 24,
+                    className: 'text-primary',
+                  })}
+                  <span className="text-gray-80">
+                    {feature}
+                    {index > 10 ? (
+                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
                   </span>
-                ) : null}
-              </span>
+                </>
+              ) : (
+                <>
+                  {React.createElement(
+                    index > 9
+                      ? iconsFeatures[(index + 2) % iconsFeatures.length]
+                      : index >= 6 && storage === '1TB'
+                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className="text-gray-80">
+                    {feature}
+                    {index > 9 ? (
+                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
+                </>
+              )}
             </div>
           ))}
         </div>
