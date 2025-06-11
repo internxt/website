@@ -133,6 +133,7 @@ export enum PromoCodeName {
   Planet85 = 'PLANET85',
   Comeback90 = 'COMEBACK90',
   DRIVE87 = 'DRIVE87',
+  CLOUDWARDS87 = 'CLOUDWARDS87',
 }
 
 export interface PromoCodeProps {
