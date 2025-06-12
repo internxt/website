@@ -343,10 +343,6 @@ export default function Footer({
                     <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
-
-                    <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.storageForEducation}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -796,10 +792,6 @@ export default function Footer({
 
                       <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
-                      </Link>
-
-                      <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.storageForEducation}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
