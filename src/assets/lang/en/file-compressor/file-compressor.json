@@ -39,6 +39,11 @@
         "title": " Excel file",
         "description": "Compress Excel files for free.",
         "pathname": "XLS"
+      },
+      {
+        "title": " ZIP file",
+        "description": "Compress ZIP files for free.",
+        "pathname": "ZIP"
       }
     ]
   },
