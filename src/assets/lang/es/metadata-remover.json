@@ -17,7 +17,7 @@
     "loading": "Cargando...",
     "maxFileSize": {
       "title": "Se ha excedido el tamaño del archivo",
-      "description": "Tamaño máximo de 1GB"
+      "description": "Tamaño máximo de 100MB"
     },
     "table": {
       "loading": "Cargando...",
