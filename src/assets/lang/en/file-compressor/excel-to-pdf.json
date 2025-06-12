@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Convert Excel to PDF documents for easier file collaboration and editing.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a Excel to PDF file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your Excel to a PDF document involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your Excel: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click 'Convert to PDF': This converts your file from Excel to PDF."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert Excel to PDF files",
+      "paragraphs": [
+        "An Excel to PDF converter is necessary if you want to let other people see your data but not edit it. PDFs offer universal compatibility, meaning they can be accessed and viewed on virtually any device or operating system without specific software.",
+        "Internxt’s Excel to PDF converter offers a convenient way to share, view, and preserve your data while ensuring compatibility and facilitating the distribution of important data."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

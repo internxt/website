@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "A Secure PNG to JPG converter for preserving the quality of your images",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert PNG to JPG files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your PNG to a JPG file involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your PNG: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click 'Convert to JPG': This converts your file from PNG to JPG."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert PNG to JPG files",
+      "paragraphs": [
+        "You may find a PNG to JPG converter useful when your photos' quality, transparency, and long-term preservation are paramount. While both are common image formats, JPGs are slightly more versatile and supported across various websites and platforms.",
+        "For increased accessibility and benefits for your PNGs, such as image transparency and smaller file sizes, convert your PNG to JPG files with our online file converter for free with Internxt."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}
