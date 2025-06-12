@@ -390,15 +390,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.dropboxAlternative}
                     </Link>
 
-                    <Link
-                      href="/privacy-directory"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[265px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
-                    </Link>
-
                     <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.resources.cyberAwareness}
                     </Link>
@@ -592,7 +583,6 @@ export default function Footer({
                 </Link>
               </div>
             </div>
-            <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p>
           </div>
 
           {/* Mobile version */}
@@ -850,15 +840,6 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
-                      </Link>
-
-                      <Link
-                        href="/privacy-directory"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[265px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </Link>
 
                       <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">

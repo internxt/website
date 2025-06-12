@@ -1,5 +1,6 @@
 import { PlanData } from '@/pages/cloud-object-storage/checkout';
 import { Drive } from '@internxt/sdk';
+import { PaymentMethodVerificationPayload } from '@internxt/sdk/dist/payments/types';
 
 export class ObjStoragePaymentsService {
   private apiUrl: string;
@@ -59,6 +60,23 @@ export class ObjStoragePaymentsService {
       currency,
       token,
       promoCodeId,
+    });
+  }
+
+  public paymentMethodVerification({
+    customerId,
+    token,
+    priceId,
+    currency = 'eur',
+    paymentMethod,
+  }: PaymentMethodVerificationPayload) {
+    const client = ObjStoragePaymentsService.client(this.apiUrl);
+    return client.paymentMethodVerification({
+      customerId,
+      token,
+      priceId,
+      currency,
+      paymentMethod,
     });
   }
 }
