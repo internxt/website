@@ -17,7 +17,7 @@
     "loading": "Loading...",
     "maxFileSize": {
       "title": "File size limit exceeded",
-      "description": "Max file size of 1GB"
+      "description": "Max file size of 100MB"
     },
     "table": {
       "loading": "Loading...",

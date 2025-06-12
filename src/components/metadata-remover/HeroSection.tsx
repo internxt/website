@@ -24,7 +24,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   const [file, setFile] = useState<File | null>(null);
   const [showPopup, setShowPopup] = useState(true);
   const isDragging = dragEnter;
-  const maxFileSize = 1_000_000_000;
+  const maxFileSize = 104_857_600; // 100MB
 
   const handleDragEnter = () => {
     if (!dragEnter && !isProcessing && !isProcessFinished) {
