@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "A secure image to text converter to extract text from images.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert an image to text file",
+      "description": "We made our file converter to be as easy to use as possible. Converting your image to a text document involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your image: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to text’: This converts your file from image to text."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why convert image to text files",
+      "paragraphs": [
+        "An image-to-text converter extracts text from images, making them accessible for people who use screen readers or have visual impairments. Our file converter allows you to access information locked within images on websites, documents or scanned PDFs.",
+        "Internxt’s image-to-text solution provides a secure, versatile way to convert scanned documents and images into searchable and editable text formats."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

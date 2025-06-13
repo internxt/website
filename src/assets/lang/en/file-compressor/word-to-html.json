@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "A Secure WORD to HTML Converter to optimize content for online audiences.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert WORD to HTML files",
+      "description": "We made our file converter to be as easy to use as possible. Converting your WORD to PowerPoint file involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload or drag your WORD"
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to HTML’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file"
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why choose a WORD to HTML converter",
+      "paragraphs": [
+        "Optimize your web pages by converting your WORD to HTML files to make your content accessible for web browsers and indexable for search engines. Our WORD file converter offers a secure platform to convert your PDFs to HTML instantly.",
+        "If you want to convert HTML files to a secure document, you can use our free HTML to WORD tool to protect the privacy of your documents."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

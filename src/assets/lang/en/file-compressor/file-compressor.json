@@ -1,0 +1,161 @@
+{
+  "HeroSection": {
+    "title": "File Converter",
+    "description": {
+      "normal": "Securely convert multiple file formats instantly with our free online file converter."
+    },
+    "cards": [
+      {
+        "title": " MOV file",
+        "description": "Compress MOV files for free.",
+        "pathname": "MOV"
+      },
+      {
+        "title": " PDF file",
+        "description": "Compress PDF files for free.",
+        "pathname": "PDF"
+      },
+      {
+        "title": " JPG file",
+        "description": "Compress JPG files for free",
+        "pathname": "JPG"
+      },
+      {
+        "title": " PNG file",
+        "description": "Compress PNG files for free.",
+        "pathname": "PNG"
+      },
+      {
+        "title": " PPT file",
+        "description": "Compress PPT files for free.",
+        "pathname": "PPT"
+      },
+      {
+        "title": " Word file",
+        "description": "Compress Word files for free.",
+        "pathname": "DOC"
+      },
+      {
+        "title": " Excel file",
+        "description": "Compress Excel files for free.",
+        "pathname": "XLS"
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileConverter": {
+      "title": "Internxt’s free File Compressor",
+      "description": [
+        "This free tool is the best file compressor to help you get the most out of your cloud storage space. With it, you can bypass file attachment limits so you can upload and share your videos, photos, documents, and spreadsheets, without worrying about going over storage limits. ",
+        "It’s a free and easy-to-use service that works on any device, allowing you to reduce the size of your files without compromising on quality, security, or privacy. Unlock the full potential of your cloud storage and collaboration with our unlimited file compression tool today!"
+      ]
+    },
+    "howUseFileConverter": {
+      "title": "How to use Internxt’s File Compressor",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress Word file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyUseFileConverter": {
+      "title": "Why use a file compressor",
+      "description": "Our file compressor provides a fast, secure solution to save storage space and share large video files, photo albums, and more effortlessly. It’s free, easy to use, and doesn’t require risky downloads or third parties collecting your data, making it the best file compressor for your privacy and file management needs."
+    },
+    "cards": [
+      {
+        "title": "Compress multiple formats",
+        "description": "We support the most popular formats you need to compress your documents, images, and videos. Offering multiple options to compress your files gives you increased efficiency, customization, and versatility when you need to edit or collaborate on files."
+      },
+      {
+        "title": "Fully encrypted ",
+        "description": "When you upload your files, Internxt uses advanced encryption via HTTPS to secure your files. The compressed files are then deleted from our servers, and Internxt does not store any of your data for maximum privacy."
+      },
+      {
+        "title": "No registration",
+        "description": "Compress your files without entering any personal information. We don’t ask for your name, email, or billing information, we just offer you free file compression to manage your files with no boundaries. "
+      },
+      {
+        "title": "Integration with Internxt",
+        "description": "This tool is the best file compressor to use with Internxt’s full suite of privacy products. Store compressed files with Internxt Drive, or send secure attachments with Send or Internxt Mail."
+      },
+      {
+        "title": "Quick and easy compression",
+        "description": "Upload your preferred file to our file compressor and let Internxt do all the work. Files are quickly compressed to a smaller size, so you can store, share, and attach compressed files easily."
+      },
+      {
+        "title": "Faster upload speeds",
+        "description": "Compressing your files will increase the upload speeds when uploading to the cloud or sending emails (depending on your internet connection), making sharing files much easier."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Compress, store, and share files with Internxt",
+    "description": "A full privacy suite to protect you online",
+    "cta": "Get Internxt"
+  },
+  "CtaSection2": {
+    "title": "File management, made simple.",
+    "description": "Convert and store files securely with Internxt Drive.",
+    "cta": "Create account"
+  },
+  "QASection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What’s the best file compressor?",
+        "answer": [
+          "The best file compressor will depend on your needs, but it will typically let you compress multiple file formats, be easy to use, and ensures your files are encrypted throughout the whole compression process. ",
+          "Internxt has built this free tool to provide you with a secure, encrypted platform for compressing your files, without worrying about third parties collecting your email or other personal information. This is what makes Internxt’s tool the best file compressor to ensure the privacy of your files."
+        ]
+      },
+      {
+        "question": "What file types can I compress?",
+        "answer": ["With this tool, you can compress Word, Excel, PPT, JPG, PNG, PPT, and PDF files for free."]
+      },
+      {
+        "question": "Can I compress files on a mobile device?",
+        "answer": [
+          "Yes, this tool is available on all devices, so it’s the best file compressor if you need to compress files anywhere at anytime. "
+        ]
+      },
+      {
+        "question": "Is the file compression process secure?",
+        "answer": [
+          "Yes, all your files are encrypted and protected during the whole compression process, so everything is kept secure and private. Once the process is complete, your encrypted files are then deleted from our server. "
+        ]
+      },
+      {
+        "question": "Do I need to create an account to use the file compressor?",
+        "answer": ["No, to keep your personal details safe, there is no email or credit card information required."]
+      },
+      {
+        "question": "Are there limits to how many files I can compress?",
+        "answer": [
+          "No, you can use this tool as often as you like for free, so it’s the best file compressor available if you have many files to compress, as you can use it as many times as you like without limits."
+        ]
+      },
+      {
+        "question": "Can I compress large video files?",
+        "answer": [
+          "Yes, you can compress files of up to XGB, which will help you save storage on your device, or send emails and secure links within the limits of these file sending services. "
+        ]
+      },
+      {
+        "question": "How does file compression help with cloud storage?",
+        "answer": [
+          "File compression is a valuable tool when using cloud storage services like Internxt Drive, as it helps you save space and store more files in the cloud as a result. Many providers also have upload limits for files uploaded to the cloud, so the best file compressor will help you avoid these limits and store all the files in the cloud to bypass these limits. "
+        ]
+      }
+    ]
+  }
+}
