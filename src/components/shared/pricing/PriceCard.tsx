@@ -128,8 +128,8 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[900px]'
-      } min-w-[410px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[850px]'
+      } w-[420px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl lg:min-w-[410px]`}
     >
       <div
         className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
