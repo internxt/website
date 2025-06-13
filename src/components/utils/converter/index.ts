@@ -49,6 +49,8 @@ async function imageConverter(file: File, fromExtension: string, toExtension: st
       body: file,
     });
 
+    console.log('response', response);
+
     if (!response.ok || !response.body) {
       if (response.status === 413) {
         throw new Error('File too large');
@@ -61,6 +63,7 @@ async function imageConverter(file: File, fromExtension: string, toExtension: st
 
     return blob;
   } catch (err) {
+    console.log('error', err);
     const error = new Error(err);
     throw new Error(error.message);
   }
