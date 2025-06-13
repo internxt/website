@@ -15,7 +15,7 @@ interface SheetPayload {
 
 const GOOGLE_RECAPTCHA_V3_ENDPOINT = process.env.RECAPTCHA_V3_ENDPOINT as string;
 
-export async function verifyRecaptcha(captcha: string) {
+async function verifyRecaptcha(captcha: string) {
   const body = {
     secret: process.env.RECAPTCHA_V3,
     response: captcha,
