@@ -68,8 +68,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   // Validate reCAPTCHA
+  console.log('Verifying reCAPTCHA token...');
+
   try {
-    console.log('Verifying reCAPTCHA token...');
     const recaptchaVerification = await verifyRecaptcha(captcha);
     const isRecaptchaValid = recaptchaVerification.data.success && recaptchaVerification.data.action === 'conversion';
 
