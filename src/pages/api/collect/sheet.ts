@@ -59,7 +59,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { gclid, name, value, currency = 'EUR', timestamp, captcha }: SheetPayload = JSON.parse(req.body);
 
-  if (!gclid || !name || !value || !timestamp || !captcha) {
+  if (!gclid || !name || !value || !timestamp) {
     return res.status(400).json({ message: 'Missing required fields' });
   }
 
