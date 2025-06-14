@@ -40,8 +40,8 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CloudwardsCoupon,
-    couponCodeForLifetime: PromoCodeName.CloudwardsCoupon,
+    couponCode: PromoCodeName.CLOUDWARDS87,
+    couponCodeForLifetime: PromoCodeName.CLOUDWARDS87,
   });
 
   function handlePriceCardButton(planId, coupon) {
