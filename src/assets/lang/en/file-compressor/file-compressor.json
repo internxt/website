@@ -1,61 +1,61 @@
 {
   "HeroSection": {
-    "title": "File Converter",
+    "title": "File Compressor",
     "description": {
-      "normal": "Securely convert multiple file formats instantly with our free online file converter."
+      "normal": "The best file compressor to reduce the size of your videos, photos, and documents securely."
     },
     "cards": [
       {
         "title": " MOV file",
         "description": "Compress MOV files for free.",
-        "pathname": "MOV"
+        "pathname": "mov"
       },
       {
         "title": " PDF file",
         "description": "Compress PDF files for free.",
-        "pathname": "PDF"
+        "pathname": "pdf"
       },
       {
         "title": " JPG file",
         "description": "Compress JPG files for free",
-        "pathname": "JPG"
+        "pathname": "jpg"
       },
       {
         "title": " PNG file",
         "description": "Compress PNG files for free.",
-        "pathname": "PNG"
+        "pathname": "png"
       },
       {
         "title": " PPT file",
         "description": "Compress PPT files for free.",
-        "pathname": "PPT"
+        "pathname": "ppt"
       },
       {
         "title": " Word file",
         "description": "Compress Word files for free.",
-        "pathname": "DOC"
+        "pathname": "doc"
       },
       {
         "title": " Excel file",
         "description": "Compress Excel files for free.",
-        "pathname": "XLS"
+        "pathname": "xls"
       },
       {
         "title": " ZIP file",
         "description": "Compress ZIP files for free.",
-        "pathname": "ZIP"
+        "pathname": "zip"
       }
     ]
   },
   "FeaturesSection": {
-    "inxtFileConverter": {
+    "inxtFileCompressor": {
       "title": "Internxt’s free File Compressor",
       "description": [
         "This free tool is the best file compressor to help you get the most out of your cloud storage space. With it, you can bypass file attachment limits so you can upload and share your videos, photos, documents, and spreadsheets, without worrying about going over storage limits. ",
         "It’s a free and easy-to-use service that works on any device, allowing you to reduce the size of your files without compromising on quality, security, or privacy. Unlock the full potential of your cloud storage and collaboration with our unlimited file compression tool today!"
       ]
     },
-    "howUseFileConverter": {
+    "howUseFileCompressor": {
       "title": "How to use Internxt’s File Compressor",
       "steps": [
         {
@@ -72,7 +72,7 @@
         }
       ]
     },
-    "whyUseFileConverter": {
+    "whyUseFileCompressor": {
       "title": "Why use a file compressor",
       "description": "Our file compressor provides a fast, secure solution to save storage space and share large video files, photo albums, and more effortlessly. It’s free, easy to use, and doesn’t require risky downloads or third parties collecting your data, making it the best file compressor for your privacy and file management needs."
     },

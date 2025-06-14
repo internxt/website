@@ -5,7 +5,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/file-compressor/main-state/HeroSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { FeaturesSection } from '@/components/file-compressor/main-state/FeaturesSection';
-import CtaSection from '@/components/file-compressor/CtaSection';
+import CtaSection from '@/components/file-compressor/main-state/CtaSection';
 import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 

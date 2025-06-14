@@ -4,9 +4,9 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Footer from '@/components/layout/footers/Footer';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
-import { ConverterSection } from '@/components/file-converter/ConverterSection';
-import { FeaturesSection } from '@/components/file-converter/FeaturesSection';
-import CtaSection from '@/components/shared/CtaSection';
+import { ConverterSection } from '@/components/file-compressor/ConverterSection';
+import { FeaturesSection } from '@/components/file-compressor/FeaturesSection';
+import CtaSection from '@/components/file-compressor/CtaSection';
 
 const FileConverter = ({
   metatagsDescriptions,
@@ -18,9 +18,10 @@ const FileConverter = ({
   lang,
   toolsContent,
   pathname,
+  bannerLang,
 }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === pathname);
-  const pathnameForSEO = `/file-converter/${pathname}`;
+  const pathnameForSEO = `/file-compressor/${pathname}`;
 
   return (
     <Layout
@@ -39,7 +40,11 @@ const FileConverter = ({
         pathname={pathname}
       />
 
-      <FeaturesSection textContent={textContent.FeaturesSection} lang={lang} />
+      <FeaturesSection
+        textContent={textContent.FeaturesSection}
+        bannerText={bannerLang.SignUpFileCompressorBanner}
+        lang={lang}
+      />
 
       <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
 
@@ -57,11 +62,12 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
-  const textContent = require(`@/assets/lang/${textLang}/file-converter/${pathname}.json`);
-  const converterText = require(`@/assets/lang/${textLang}/file-converter/converter-card.json`);
-  const errorContent = require(`@/assets/lang/${textLang}/file-converter/errorState.json`);
+  const textContent = require(`@/assets/lang/${textLang}/file-compressor/${pathname}.json`);
+  const converterText = require(`@/assets/lang/${textLang}/file-compressor/converter-card.json`);
+  const errorContent = require(`@/assets/lang/${textLang}/file-compressor/errorState.json`);
   const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
   const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
+  const bannerLang = require(`@/assets/lang/${textLang}/banners.json`);
 
   return {
     props: {
@@ -74,6 +80,7 @@ export async function getServerSideProps(ctx) {
       lang,
       toolsContent,
       pathname,
+      bannerLang,
     },
   };
 }

@@ -1,0 +1,41 @@
+{
+  "ConverterSection": {
+    "description": "Convert HEIC to JPG for easier photo sharing and access across various devices.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to convert a HEIC to JPG images",
+      "description": "We made our file converter to be as easy to use as possible. Converting your HEIC to JPG involves three steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your HEIC: drag and drop your file into the area above to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Convert to JPG’: This converts your file’s format from HEIC to JPG."
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ]
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress a MOV file",
+      "intro": "Unfortunately, sending large video files online can be difficult due to upload limits from email, file sharing, or cloud storage services. By using Internxt to compress a MOV file, you get a secure, free tool that, once complete, allows you to:",
+      "bullets": [
+        "Upload videos faster and save bandwidth",
+        "Maintain high video quality",
+        "Keep videos within upload limits"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your videos private, so you can compress, store, and share your files in confidence with Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Tired of incompatible files?",
+    "description": "Convert to the files you need with Internxt",
+    "cta": "Create account"
+  }
+}

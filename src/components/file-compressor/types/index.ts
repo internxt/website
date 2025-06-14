@@ -2,63 +2,57 @@ export const MAX_FILE_SIZE = 1073741824;
 
 export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
 
-export const fileConverter = [
-  'pptx-to-pdf',
-  'word-to-pdf',
-  'xlsx-to-pdf',
-  'html-to-pdf',
-  'pdf-to-html',
-  'excel-to-pdf',
-  'word-to-html',
-  'png-to-pdf',
-];
-export const imageConverter = [
-  'png-to-jpg',
-  'png-to-heic',
-  'jpg-to-png',
-  'jpg-to-heic',
-  'webp-to-jpg',
-  'jpg-to-webp',
-  'webp-to-png',
-  'png-to-webp',
-  'heic-to-jpg',
-  'heic-to-png',
+// Supported compression types
+export const compressionTypes = [
+  'mov-compress',
+  'pdf-compress',
+  'jpg-compress',
+  'png-compress',
+  'ppt-compress',
+  'word-compress',
+  'excel-compress',
 ];
 
-export const imageToTextConverter = ['image-to-text'];
-
+// File MIME types for compression
 export const fileMimeTypes = {
-  word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  mov: 'video/quicktime',
   pdf: 'application/pdf',
-  pptx: 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-  html: 'text/html',
-  excel: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-  png: 'image/png',
   jpg: 'image/jpeg',
-  webp: 'image/webp',
-  heic: 'image/heic',
-  image: 'image/*',
+  png: 'image/png',
+  ppt: 'application/vnd.ms-powerpoint',
+  word: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  excel: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
 };
 
+// Allowed file extensions
 export const allowedExtensions = {
+  mov: 'mov',
   pdf: 'pdf',
-  html: 'html',
-  png: 'png',
   jpg: 'jpg',
-  webp: 'webp',
-  heic: 'heic',
+  png: 'png',
+  ppt: 'ppt',
+  docx: 'docx',
+  xlsx: 'xlsx',
 };
 
+// Human-readable file type names
 export const extensionName = {
-  word: 'Word',
+  mov: 'MOV',
   pdf: 'PDF',
-  html: 'HTML',
-  excel: 'Excel',
-  png: 'PNG',
   jpg: 'JPG',
-  webp: 'WebP',
-  pptx: 'PPTX',
-  heic: 'HEIC',
-  image: 'Image',
-  text: 'Text',
+  png: 'PNG',
+  ppt: 'PPT',
+  word: 'Word',
+  excel: 'Excel',
+};
+
+// Compression descriptions
+export const compressionDescriptions = {
+  mov: 'Compress MOV files for free.',
+  pdf: 'Compress PDF files for free.',
+  jpg: 'Compress JPG files for free.',
+  png: 'Compress PNG files for free.',
+  ppt: 'Compress PPT files for free.',
+  word: 'Compress Word files for free.',
+  excel: 'Compress Excel files for free.',
 };

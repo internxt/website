@@ -23,11 +23,14 @@
       ]
     },
     "whyConvert": {
-      "title": "Why convert HEIC to JPG files",
-      "paragraphs": [
-        "HEIC images are the common format for iPhones, but many platforms and devices don't natively support them. Our HEIC to JPG converter transforms images into a universally recognized format that’s viewable on almost any device with a photo viewer.",
-        "Internxt’s HEIC to JPG converter ensures your photos can be shared, uploaded, and stored easily, eliminating compatibility issues and guaranteeing wider accessibility."
-      ]
+      "title": "Why you may need to compress a MOV file",
+      "intro": "Unfortunately, sending large video files online can be difficult due to upload limits from email, file sharing, or cloud storage services. By using Internxt to compress a MOV file, you get a secure, free tool that, once complete, allows you to:",
+      "bullets": [
+        "Upload videos faster and save bandwidth",
+        "Maintain high video quality",
+        "Keep videos within upload limits"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your videos private, so you can compress, store, and share your files in confidence with Internxt."
     }
   },
   "CtaSection": {

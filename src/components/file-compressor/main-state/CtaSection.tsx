@@ -23,7 +23,7 @@ const CtaSection = ({
       style={{
         background: bgImage
           ? `url(${getImage(bgImage)})`
-          : 'radial-gradient(ellipse at center, #E5EFFF 25%, #F9F9FC 100%)',
+          : 'radial-gradient(ellipse at center, #F9F9FC 0%, #E5EFFF 100%)',
       }}
       className="overflow-hidden bg-primary bg-cover px-5 py-14"
     >

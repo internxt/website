@@ -64,13 +64,13 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
         {/* Text sections */}
         <div className="flex max-w-[832px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.inxtFileConverter.title}</p>
-            <RenderDescription description={textContent.inxtFileConverter.description} />
+            <p className="text-2xl font-medium text-gray-100">{textContent.inxtFileCompressor.title}</p>
+            <RenderDescription description={textContent.inxtFileCompressor.description} />
           </div>
           <div className="flex flex-col space-y-3">
-            <p className="text-2xl font-medium text-gray-100">{textContent.howUseFileConverter.title}</p>
+            <p className="text-2xl font-medium text-gray-100">{textContent.howUseFileCompressor.title}</p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-              {textContent.howUseFileConverter.steps.map((feature, idx) => (
+              {textContent.howUseFileCompressor.steps.map((feature, idx) => (
                 <div key={feature.step} className="flex flex-col items-start rounded-xl bg-gray-1 p-6 shadow-md">
                   <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
                   <span className="text-base text-gray-80">{feature.description}</span>
@@ -79,8 +79,8 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
             </div>
           </div>
           <div className="flex flex-col">
-            <p className="text-2xl font-medium text-gray-100">{textContent.whyUseFileConverter.title}</p>
-            <p className="text-lg text-gray-80">{textContent.whyUseFileConverter.description}</p>
+            <p className="text-2xl font-medium text-gray-100">{textContent.whyUseFileCompressor.title}</p>
+            <p className="text-lg text-gray-80">{textContent.whyUseFileCompressor.description}</p>
           </div>
         </div>
 

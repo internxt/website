@@ -1,8 +1,10 @@
 import RenderDescription from '../shared/RenderDescription';
 import { getImage } from '@/lib/getImage';
+import { Asterisk } from '@phosphor-icons/react';
 import Image from 'next/image';
+import SignUpBanner from '../banners/SignUpBanner';
 
-export const FeaturesSection = ({ textContent, lang }) => {
+export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section className="overflow-hidden px-5 py-20">
@@ -24,21 +26,34 @@ export const FeaturesSection = ({ textContent, lang }) => {
             }
           />
         </div>
-        <div className="flex max-w-[672px] flex-col space-y-3">
-          <p className="text-2xl font-medium text-gray-100">{textContent.howToConvert.title}</p>
-          <p className="text-lg text-gray-80">{textContent.howToConvert.description}</p>
-          <ul className="list-[square] space-y-1.5 pl-6 lg:max-w-2xl">
-            {textContent.howToConvert.steps.map((feature) => (
-              <li key={feature.step} className="text-lg text-primary">
-                {feature.step}
-                <span className="text-gray-80"> {feature.description}</span>
+        <SignUpBanner textContent={bannerText} lang={'en'} />
+        <div className="flex max-w-[832px] flex-col space-y-3">
+          <div className="flex flex-col space-y-3">
+            <p className="text-center text-2xl font-medium text-gray-100">{textContent.howToConvert.title}</p>
+            <div className="flex flex-col space-y-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                {textContent.howToConvert.steps.map((feature, idx) => (
+                  <div key={feature.step} className="flex flex-col items-start rounded-xl bg-gray-1 p-6 shadow-md">
+                    <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
+                    <span className="text-base text-gray-80">{feature.description}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex max-w-[832px] flex-col space-y-3">
+          <p className="text-2xl font-medium text-gray-100">{textContent.whyConvert.title}</p>
+          <p className="text-base text-gray-80">{textContent.whyConvert.intro}</p>
+          <ul className="my-2 flex flex-col space-y-3 pl-2">
+            {textContent.whyConvert.bullets.map((bullet, idx) => (
+              <li key={idx} className="flex items-center space-x-2">
+                <Asterisk size={20} className="mt-1 text-primary" />
+                <span className="text-base text-gray-80">{bullet}</span>
               </li>
             ))}
           </ul>
-        </div>
-        <div className="flex max-w-[672px] flex-col space-y-3">
-          <p className="text-2xl font-medium text-gray-100">{textContent.whyConvert.title}</p>
-          <RenderDescription description={textContent.whyConvert.paragraphs} />
+          <p className="text-base text-gray-80">{textContent.whyConvert.outro}</p>
         </div>
         <div className="flex w-full flex-col items-center justify-center">
           <Image
