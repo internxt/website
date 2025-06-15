@@ -423,5 +423,10 @@
     "id": "zerogpt-ai-checker",
     "title": "Internxt ZeroGPT AI Checker - Free AI Checker Tool",
     "description": "Internxt ZeroGPT AI checker. Scan content to check if it’s been written by ChatGPT, Gemini, or other AI platforms. Try now for free!"
+  },
+  {
+    "id": "file-compressor",
+    "title": "File Compressor - Internxt",
+    "description": "Internxt file compressor,  the best file compressor to reduce the file size of videos, photos, and documents for free."
   }
 ]
