@@ -43,8 +43,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Planet85,
-    couponCodeForLifetime: PromoCodeName.Planet85,
+    couponCode: PromoCodeName.SoftSales,
+    couponCodeForLifetime: PromoCodeName.SoftSales,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -117,7 +117,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        showPromo
+        showPromo={false}
       />
 
       <ComponentsInColumnSection
