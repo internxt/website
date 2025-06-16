@@ -91,7 +91,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
     return res.status(200).send({ message: 'Data sent successfully' });
   } catch {
-    return res.status(500).send({ message: 'Failed to send data to Sheets API' });
+    return res.status(500).send({ message: 'Failed to send data' });
   }
 }
 
