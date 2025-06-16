@@ -68,8 +68,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   // Validate reCAPTCHA
-  console.log('Verifying reCAPTCHA token...');
-
   try {
     const recaptchaVerification = await verifyRecaptcha(captcha);
     const isRecaptchaValid = recaptchaVerification.data.success && recaptchaVerification.data.action === 'conversion';
@@ -80,8 +78,6 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch {
     return res.status(400).json({ message: 'Token verification failed' });
   }
-
-  console.log('ReCAPTCHA verification successful');
 
   // Send data to Sheets API
   try {
