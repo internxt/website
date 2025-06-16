@@ -17,7 +17,7 @@
     "loading": "Chargement...",
     "maxFileSize": {
       "title": "Limite de taille de fichier dépassée",
-      "description": "Taille maximale de fichier de 1 Go"
+      "description": "Taille maximale de fichier de 100MB"
     },
     "table": {
       "loading": "Chargement...",
