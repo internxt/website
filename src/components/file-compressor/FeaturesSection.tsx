@@ -33,12 +33,13 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
             <div className="flex flex-col space-y-3">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 {textContent.howToConvert.steps.map((feature, idx) => (
-                  <div key={feature.step} className="flex flex-col items-start rounded-xl bg-gray-1 p-6 shadow-md">
+                  <div key={feature.step} className="flex flex-col items-start rounded-xl bg-[#F4F8FF] p-6 shadow-md">
                     <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
                     <span className="text-base text-gray-80">{feature.description}</span>
                   </div>
                 ))}
               </div>
+              <p className="pt-5 text-base text-gray-80">{textContent.howToConvert.outro}</p>
             </div>
           </div>
         </div>

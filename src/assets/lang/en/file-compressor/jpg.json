@@ -1,41 +1,42 @@
 {
   "ConverterSection": {
-    "description": "Convert HEIC to JPG for easier photo sharing and access across various devices.",
+    "description": "Compress a JPG file to reduce file size and share photos without reducing the quality of your images with Internxt.  ",
     "secureUpload": "Secure uploads protected by HTTPS."
   },
   "FeaturesSection": {
     "howToConvert": {
-      "title": "How to convert a HEIC to JPG images",
-      "description": "We made our file converter to be as easy to use as possible. Converting your HEIC to JPG involves three steps:",
+      "title": "How to compress a JPG file",
+      "description": "To compress a JPG file, follow these steps:",
       "steps": [
         {
           "step": "Step 1:",
-          "description": "Upload your HEIC: drag and drop your file into the area above to start the conversion."
+          "description": "Upload your JPG file: drag and drop your file into the area above, or upload it from your device to start the conversion."
         },
         {
           "step": "Step 2:",
-          "description": "Click ‘Convert to JPG’: This converts your file’s format from HEIC to JPG."
+          "description": "Click ‘Compress JPG file’"
         },
         {
           "step": "Step 3:",
           "description": "Download your file."
         }
-      ]
+      ],
+      "outro": "Compress a JPG file for free anytime you need, knowing your photos are kept secure and private thanks to encrypted uploads."
     },
     "whyConvert": {
-      "title": "Why you may need to compress a MOV file",
-      "intro": "Unfortunately, sending large video files online can be difficult due to upload limits from email, file sharing, or cloud storage services. By using Internxt to compress a MOV file, you get a secure, free tool that, once complete, allows you to:",
+      "title": "Why you may need to compress a JPG file",
+      "intro": "Similar to when you have to compress a PNG file, you may need to compress a JPG file to keep the quality of your photos at the highest quality with no watermarks applied to your files. You don’t need to register to compress a JPG file with Internxt, so you can focus on optimizing the storage space for your photo albums and libraries. Once complete, you can: ",
       "bullets": [
-        "Upload videos faster and save bandwidth",
-        "Maintain high video quality",
-        "Keep videos within upload limits"
+        "Speeds up website load times",
+        "Maintain high visual quality of photos ",
+        "Save storage space on your device or cloud"
       ],
-      "outro": "All your files are encrypted during the upload and compression process to keep your videos private, so you can compress, store, and share your files in confidence with Internxt."
+      "outro": "All your files are encrypted during the upload and compression process to keep your photos private, so you can compress, store, and share your files in confidence with Internxt."
     }
   },
   "CtaSection": {
-    "title": "Tired of incompatible files?",
-    "description": "Convert to the files you need with Internxt",
-    "cta": "Create account"
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share JPG files",
+    "cta": "Get Internxt"
   }
 }

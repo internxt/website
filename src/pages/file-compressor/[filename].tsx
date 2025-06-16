@@ -46,7 +46,11 @@ const FileConverter = ({
         lang={lang}
       />
 
-      <CtaSection textContent={textContent.CtaSection} url="https://drive.internxt.com/new" />
+      <CtaSection
+        textContent={textContent.CtaSection}
+        customDescription={textContent.CtaSection.description}
+        url="https://drive.internxt.com/new"
+      />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
