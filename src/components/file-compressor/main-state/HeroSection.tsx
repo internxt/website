@@ -1,6 +1,7 @@
 import { useRouter } from 'next/navigation';
 import Header from '../../shared/Header';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 export const HeroSection = ({ textContent }) => {
   const router = useRouter();
@@ -26,10 +27,10 @@ export const HeroSection = ({ textContent }) => {
               >
                 <div className="flex flex-row items-center justify-center">
                   <Image
-                    src={`/icons/file-compressor/${card.pathname}.svg`}
                     width={64}
                     height={62}
                     alt={`${card.title} icon`}
+                    src={getImage(`/icons/file-compressor/${card.pathname}.svg`)}
                   />
                   <p className="px-2 text-2xl font-semibold text-gray-100">{card.title}</p>
                 </div>
