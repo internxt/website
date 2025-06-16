@@ -61,7 +61,7 @@ const InfoSection = ({
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            src={getImage(`/banners/728x90.png`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -69,7 +69,7 @@ const InfoSection = ({
             style={{ cursor: 'pointer' }}
             onClick={() =>
               window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
                 '_blank',
                 'noopener noreferrer',
               )
@@ -98,7 +98,7 @@ const InfoSection = ({
         </div>
         <div className="flex w-full flex-col items-center justify-center bg-gray-1">
           <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+            src={getImage(`/banners/728x90.png`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -106,7 +106,7 @@ const InfoSection = ({
             style={{ cursor: 'pointer' }}
             onClick={() =>
               window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
                 '_blank',
                 'noopener noreferrer',
               )
@@ -120,7 +120,7 @@ const InfoSection = ({
           <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                src={getImage(`/banners/728x90.png`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
@@ -128,7 +128,7 @@ const InfoSection = ({
                 style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
-                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
                     '_blank',
                     'noopener noreferrer',
                   )
@@ -176,7 +176,7 @@ const InfoSection = ({
             </div>
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+                src={getImage(`/banners/728x90.png`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
@@ -184,7 +184,7 @@ const InfoSection = ({
                 style={{ cursor: 'pointer' }}
                 onClick={() =>
                   window.open(
-                    `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+                    `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
                     '_blank',
                     'noopener noreferrer',
                   )
