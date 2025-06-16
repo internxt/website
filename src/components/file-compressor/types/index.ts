@@ -56,3 +56,12 @@ export const compressionDescriptions = {
   word: 'Compress Word files for free.',
   excel: 'Compress Excel files for free.',
 };
+
+// Add this to src/components/file-compressor/types/index.ts
+export const imageToTextConverter = ['jpg', 'png'];
+
+// Add this to src/components/file-compressor/types/index.ts
+export const imageConverter = ['jpg', 'png', 'webp'];
+
+// Add this to src/components/file-compressor/types/index.ts
+export const fileConverter = ['pdf', 'docx', 'xlsx', 'ppt', 'mov', 'jpg', 'png'];
