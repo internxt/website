@@ -60,11 +60,11 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { gclid, name, value, currency = 'EUR', timestamp, captcha }: SheetPayload = JSON.parse(req.body);
 
   if (!gclid || !name || !value || !timestamp) {
-    return res.status(400).json({ message: 'Missing required fields' });
+    return res.status(400).send({ message: 'Missing required fields' });
   }
 
   if (!captcha) {
-    return res.status(401).json({ message: 'Unauthorized' });
+    return res.status(401).send({ message: 'Unauthorized' });
   }
 
   // Validate reCAPTCHA
@@ -73,10 +73,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const isRecaptchaValid = recaptchaVerification.data.success && recaptchaVerification.data.action === 'conversion';
 
     if (!isRecaptchaValid) {
-      return res.status(400).json({ message: 'Invalid token' });
+      return res.status(400).send({ message: 'Invalid token' });
     }
   } catch {
-    return res.status(400).json({ message: 'Token verification failed' });
+    return res.status(400).send({ message: 'Token verification failed' });
   }
 
   // Send data to Sheets API
@@ -89,9 +89,9 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       timestamp,
     });
 
-    return res.status(200).json({ message: 'Data sent successfully' });
+    return res.status(200).send({ message: 'Data sent successfully' });
   } catch {
-    return res.status(500).json({ message: 'Failed to send data to Sheets API' });
+    return res.status(500).send({ message: 'Failed to send data' });
   }
 }
 
