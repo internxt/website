@@ -54,13 +54,22 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setError(null);
     setFiles(null);
     setConverterStates('initialState');
-  }, [error, files, uploadFileRef, converterStates]);
+    setIsDragging(false);
+
+    // Reset the file input value so it can be used again
+    setTimeout(() => {
+      if (uploadFileRef.current) {
+        uploadFileRef.current.value = '';
+      }
+    }, 100);
+  }, []);
 
   const handleDroppedFiles = (files: FileList) => {
     const file = files.length > 0 ? files.item(files.length - 1) : null;
     if (!file) return;
 
     const fileTypes = file.type;
+    const fileExtension = file.name.split('.').pop()?.toLowerCase();
 
     if (!pathnameSegments.length) {
       setError('unsupportedFormat');
@@ -68,9 +77,14 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       return;
     }
 
-    const isExtensionAllowed = fileTypes.includes(pathnameSegments[0]);
+    // Check if the file extension is supported for compression
+    const isExtensionAllowed = compressionTypes.allCompressionTypes.includes(fileExtension || '');
 
-    if (!isExtensionAllowed) {
+    // Also check MIME type as fallback
+    const isMimeTypeAllowed =
+      fileTypes.includes(pathnameSegments[0]) || Object.values(fileMimeTypes).includes(fileTypes);
+
+    if (!isExtensionAllowed && !isMimeTypeAllowed) {
       setError('unsupportedFormat');
       setConverterStates('errorState');
       return;
@@ -81,21 +95,42 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   const handleOpenFileExplorer = () => {
-    (document.querySelector('input[type=file]') as any).click();
+    if (uploadFileRef.current) {
+      uploadFileRef.current.click();
+    }
   };
 
   const handleFileInput = () => {
     const fileInput = uploadFileRef.current;
     if (fileInput?.files && fileInput.files.length > 0) {
+      const file = fileInput.files[0];
       const filesSize = Array.from(fileInput.files).reduce((accumulator, file) => accumulator + file.size, 0);
 
       if (filesSize > MAX_FILE_SIZE) {
         setError('bigFile');
         setConverterStates('errorState');
-      } else {
-        setFiles(fileInput.files);
-        setConverterStates('selectedFileState');
+        return;
       }
+
+      // Use the same validation logic as handleDroppedFiles
+      const fileTypes = file.type;
+      const fileExtension = file.name.split('.').pop()?.toLowerCase();
+
+      // Check if the file extension is supported for compression
+      const isExtensionAllowed = compressionTypes.allCompressionTypes.includes(fileExtension || '');
+
+      // Also check MIME type as fallback
+      const isMimeTypeAllowed =
+        fileTypes.includes(pathnameSegments[0]) || Object.values(fileMimeTypes).includes(fileTypes);
+
+      if (!isExtensionAllowed && !isMimeTypeAllowed) {
+        setError('unsupportedFormat');
+        setConverterStates('errorState');
+        return;
+      }
+
+      setFiles(fileInput.files);
+      setConverterStates('selectedFileState');
     }
   };
 
