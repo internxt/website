@@ -124,6 +124,8 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         compressionType = 'document';
       } else if (compressionTypes.videoCompression.includes(fileExtension)) {
         compressionType = 'video';
+      } else if (compressionTypes.archiveCompression.includes(fileExtension)) {
+        compressionType = 'archive';
       } else {
         throw new Error('Unsupported file type for compression');
       }
