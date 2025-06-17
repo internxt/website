@@ -2,21 +2,13 @@ import { createRef, useCallback, useState } from 'react';
 
 import Header from '../shared/Header';
 
-import {
-  Errors,
-  MAX_FILE_SIZE,
-  extensionName,
-  fileConverter,
-  fileMimeTypes,
-  imageConverter,
-  imageToTextConverter,
-} from './types';
+import { Errors, MAX_FILE_SIZE, extensionName, compressionTypes, fileMimeTypes } from './types';
 
 import InitialState from './states/InitialState';
 import SelectedFile from './states/SelectedFile';
 import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
-import fileConverterService from '@/services/file-converter.service';
+import fileCompressorService from '@/services/file-compressor.service';
 import { ErrorState } from './states/ErrorState';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
@@ -32,13 +24,7 @@ interface ConverterStatesProps {
   state: ConverterStates;
 }
 
-type ConverterStates = 'initialState' | 'selectedFileState' | 'convertingState' | 'downloadFileState' | 'errorState';
-
-const converters = [
-  { type: 'fileConverter', paths: fileConverter },
-  { type: 'imageConverter', paths: imageConverter },
-  { type: 'imageToText', paths: imageToTextConverter },
-];
+type ConverterStates = 'initialState' | 'selectedFileState' | 'compressingState' | 'downloadFileState' | 'errorState';
 
 export const ConverterSection = ({ textContent, converterText, errorContent, pathname }: ConverterSectionProps) => {
   const [files, setFiles] = useState<FileList | null>(null);
@@ -113,43 +99,41 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     }
   };
 
-  const handleConversion = async () => {
+  const handleCompression = async () => {
     if (!pathname || !files) return;
 
-    const extensionToConvertTo = pathname.split('/').pop();
-    if (!extensionToConvertTo) return;
+    const fileExtension = pathname.split('/').pop()?.replace('-compress', '');
+    if (!fileExtension) return;
 
-    const converter = converters.find(({ paths }) => paths.includes(extensionToConvertTo));
-
-    if (!converter) {
+    // Check if the file type is supported for compression
+    const isSupportedType = compressionTypes.allCompressionTypes.includes(fileExtension);
+    if (!isSupportedType) {
       setError('unsupportedFormat');
       setConverterStates('errorState');
       return;
     }
 
-    setConverterStates('convertingState');
+    setConverterStates('compressingState');
 
     try {
-      switch (converter.type) {
-        case 'fileConverter':
-          await fileConverterService.handleFileConverter(files, lastExtensionInPathname);
-          setConverterStates('downloadFileState');
-          break;
-        case 'imageConverter':
-          await fileConverterService.handleImageConverter(files[0], pathnameSegments[0], lastExtensionInPathname);
-          setConverterStates('downloadFileState');
-          break;
-        case 'imageToText':
-          await fileConverterService.handleImageToTextConverter(files[0]);
-          setConverterStates('downloadFileState');
-          break;
-        default:
-          throw new Error('Invalid converter type');
+      // Determine compression type based on file extension
+      let compressionType;
+      if (compressionTypes.imageCompression.includes(fileExtension)) {
+        compressionType = 'image';
+      } else if (compressionTypes.documentCompression.includes(fileExtension)) {
+        compressionType = 'document';
+      } else if (compressionTypes.videoCompression.includes(fileExtension)) {
+        compressionType = 'video';
+      } else {
+        throw new Error('Unsupported file type for compression');
       }
+
+      // Call the compression service
+      await fileCompressorService.handleFileCompression(files[0], compressionType, fileExtension);
+      setConverterStates('downloadFileState');
     } catch (err) {
       const error = err as Error;
       const filteredError = error.message.includes('File too large') ? 'bigFile' : 'internalError';
-
       setError(filteredError);
       setConverterStates('errorState');
     }
@@ -171,11 +155,11 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         <SelectedFile
           textContent={formattedConverterText.fileSelected}
           files={files}
-          onFileConvert={handleConversion}
+          onFileConvert={handleCompression}
           onCancel={resetViewToInitialState}
         />
       ),
-      convertingState: (
+      compressingState: (
         <div className="flex h-full w-full flex-col items-center justify-center space-y-4 bg-opacity-3">
           <div className="relative">
             <div className="absolute inset-1">
@@ -183,14 +167,14 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
             </div>
             <EmptyFile />
           </div>
-          <p className="text-2xl font-semibold">{formattedConverterText.converting}</p>
+          <p className="text-2xl font-semibold">{formattedConverterText.compressing}</p>
         </div>
       ),
       downloadFileState: (
         <DownloadFileState
           textContent={formattedConverterText.fileConverted}
           onConvertMoreFilesButtonPressed={resetViewToInitialState}
-          onDownloadFile={handleConversion}
+          onDownloadFile={handleCompression}
         />
       ),
       errorState: (

@@ -3,15 +3,12 @@ export const MAX_FILE_SIZE = 1073741824;
 export type Errors = 'bigFile' | 'internalError' | 'unsupportedFormat';
 
 // Supported compression types
-export const compressionTypes = [
-  'mov-compress',
-  'pdf-compress',
-  'jpg-compress',
-  'png-compress',
-  'ppt-compress',
-  'word-compress',
-  'excel-compress',
-];
+export const compressionTypes = {
+  imageCompression: ['jpg', 'png', 'webp'],
+  documentCompression: ['pdf', 'docx', 'xlsx', 'ppt', 'doc'],
+  videoCompression: ['mov'],
+  allCompressionTypes: ['pdf', 'docx', 'xlsx', 'ppt', 'mov', 'jpg', 'png', 'webp', 'doc'],
+};
 
 // File MIME types for compression
 export const fileMimeTypes = {
