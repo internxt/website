@@ -1,33 +1,47 @@
 export interface PartnerDiscountText {
   HeroSection: HeroSection;
-  MostSecureSection: CtaSection1;
-  ScrollableSection: ScrollableSection;
   PaymentSection: PaymentSection;
+  FeatureSection: CtaSection;
   TestimonialsSection: TestimonialsSection;
-  CtaSection1: CtaSection1;
+  CtaSection: CtaSection;
+  CtaSection1: CtaSection;
 }
 
-export interface CtaSection1 {
+export interface CtaSection {
   title: string;
   description: string;
   cta: string;
+  cards?: CtaSectionCard[];
+}
+
+export interface CtaSectionCard {
+  title: string;
+  description: string;
 }
 
 export interface HeroSection {
-  title: string;
-  subtitle: string;
-  description: string;
-  info: string;
+  header: string;
+  title: HeroSectionTitle;
+  description: Description;
   cta: string;
+}
+
+export interface Description {
+  normal: string;
+  blue: string;
+  normal1: string;
+}
+
+export interface HeroSectionTitle {
+  normalText: string;
+  blueText: string;
 }
 
 export interface PaymentSection {
   planTitles: PlanTitles;
-  header: string;
-  lifetimeDescription: string;
   planDescription: string;
+  lifetimeDescription: string;
   billingFrequency: BillingFrequency;
-  freePlanCard: FreePlanCard;
   features: Features;
 }
 
@@ -43,52 +57,24 @@ export interface Features {
   endToEnd: string;
   openSource: string;
   anonymousAccount: string;
-  premiumSupport: string;
-  guarantee: string;
-}
-
-export interface FreePlanCard {
-  eyeBrow: string;
-  description: string;
-  cta: string;
 }
 
 export interface PlanTitles {
-  individuals: string;
   homePage: string;
-  lifetime: string;
-  business: string;
-  lifetimeCampaign: LifetimeCampaign;
-}
-
-export interface LifetimeCampaign {
-  blueText: string;
-  normalText: string;
-}
-
-export interface ScrollableSection {
-  title: string;
-  description: string;
-  elements: Element[];
-}
-
-export interface Element {
-  title: string;
-  description: string;
 }
 
 export interface TestimonialsSection {
-  title: Title;
-  cards: Card[];
+  title: TestimonialsSectionTitle;
+  cards: TestimonialsSectionCard[];
 }
 
-export interface Card {
+export interface TestimonialsSectionCard {
   name: string;
   enterprise: string;
   review: string;
 }
 
-export interface Title {
+export interface TestimonialsSectionTitle {
   normal: string;
   blue: string;
 }

@@ -7,16 +7,15 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { Interval, stripeService } from '@/services/stripe.service';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { PartnerDiscountText } from '@/assets/types/partner-discount';
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
+import { SpecialOfferText } from '@/assets/types/specialOffer';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
-  langJson: PartnerDiscountText;
+  langJson: SpecialOfferText;
   footerLang: FooterText;
 }
 
