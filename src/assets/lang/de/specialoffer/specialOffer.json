@@ -1,75 +1,75 @@
 {
   "HeroSection": {
-    "title": "Sichere, private Cloud‑Speicherung",
-    "subtitle": "die dein Recht auf Privatsphäre schützt",
-    "description": "Internxts Open‑Source‑Web3‑Cloud‑Speicher schützt deine Privatsphäre mit Zero‑Knowledge‑Post‑Quantum‑Verschlüsselung.",
-    "info": "Sichere dir deinen <strong>exklusiven 85 %</strong> Rabatt auf alle Internxt‑Jahres‑ und Lebenszeit‑Pläne!",
-    "cta": "85 % RABATT SICHERN"
+    "title": "Cloud-Speicher",
+    "subtitle": "der dein Recht auf Privatsphäre schützt",
+    "description": "Internxts Web3 Open-Source-Cloud-Speicher schützt deine Privatsphäre mit postquantenfähiger Zero-Knowledge-Verschlüsselung.",
+    "info": "Sichere dir deinen <strong>exklusiven 85%-Rabatt</strong> auf alle Jahres- und Lebenspläne.",
+    "cta": "85 % Rabatt sichern"
   },
   "MostSecureSection": {
-    "title": "Der sicherste Cloud‑Speicher für deine Dateien, Fotos und mehr",
-    "description": "Internxt Drive ist eine Open‑Source‑End‑to‑End‑verschlüsselte Cloud‑Speicher‑Lösung, um deine Dateien in völliger Privatsphäre zu speichern, zu sichern und zu teilen. Internxt Drive bietet preisgekrönte Verschlüsselung und Kontrolle über deine Daten.",
+    "description": "Internxt Drive ist eine Open-Source-Cloud-Speicherlösung mit Ende-zu-Ende-Verschlüsselung, um deine Dateien sicher zu speichern, zu sichern und zu teilen. Mit postquantenfähiger Verschlüsselung und voller Datenkontrolle.",
+    "title": "Schütze deine Fotos, Dokumente und alle deine Daten",
     "cta": "Angebot sichern"
   },
   "ScrollableSection": {
-    "title": "Sichere Cloud‑Speicherung mit unvergleichlicher Privatsphäre",
-    "description": "Was macht Internxt so besonders? Wir sind ein eng vernetztes Team von Profis, die sich voll und ganz dem Schutz deiner Online‑Privatsphäre verschrieben haben. Alles, was wir tun und jede Entscheidung, die wir treffen, konzentriert sich darauf, deine Daten vor Ausbeutung zu schützen.",
+    "title": "Sicherster Speicher",
+    "description": "Was macht Internxt so besonders? Wir sind ein kleines Team engagierter Profis, die sich deiner Online-Sicherheit verschrieben haben. Jede Entscheidung zielt darauf ab, deine Daten zu schützen.",
     "elements": [
       {
-        "title": "Unvergleichliche Privatsphäre",
-        "description": "Der Schutz deiner Privatsphäre hat für uns oberste Priorität; wir speichern niemals Passwörter oder persönliche Daten. Deine Dateien werden während der Übertragung und im Ruhezustand verschlüsselt – du behältst die volle Kontrolle über deine Informationen."
+        "title": "Unvergleichlicher Datenschutz",
+        "description": "Deine Privatsphäre ist unsere oberste Priorität – wir speichern niemals Passwörter oder persönliche Daten. Deine Dateien sind während der Übertragung und Speicherung verschlüsselt."
       },
       {
         "title": "Sicherheit der nächsten Generation",
-        "description": "Internxt ist der einzige Cloud‑Speicher, der deine Dateien automatisch mit End‑to‑End‑ und Post‑Quantum‑Kryptographie verschlüsselt, sodass nur du auf deine Daten zugreifen kannst."
+        "description": "Internxt ist der einzige Cloud-Anbieter, der deine Dateien automatisch mit postquantenfähiger Ende-zu-Ende-Verschlüsselung schützt. Nur du hast Zugriff."
       },
       {
-        "title": "Open‑Source und transparent",
-        "description": "Unser Quellcode ist auf GitHub öffentlich einsehbar und kann von jedem persönlich geprüft, auditiert und verifiziert werden. Wir verbergen nichts – außer deinen Daten."
+        "title": "Open Source & transparent",
+        "description": "Unser Quellcode ist auf GitHub einsehbar und überprüfbar. Wir haben nichts zu verbergen – außer deine Daten."
       },
       {
-        "title": "Unabhängig verifiziert",
-        "description": "Wir halten uns an strenge DSGVO‑Vorschriften und gewährleisten eine 100 % sichere Umgebung. Um unsere Behauptungen zu belegen, wurde Internxt von Securitum, einem vertrauenswürdigen Penetration‑Testing‑Führer in Europa, unabhängig geprüft."
+        "title": "Unabhängige Überprüfung",
+        "description": "Wir erfüllen die DSGVO vollständig und arbeiten in einer 100 % sicheren Umgebung. Internxt wurde von Securitum unabhängig geprüft."
       }
     ]
   },
   "PaymentSection": {
     "planTitles": {
-      "individuals": "Jahres‑Speicherpläne",
-      "homePage": "Wähle den passenden Plan für dich",
-      "lifetime": "Lebenszeit‑Pläne",
-      "business": "Business‑Pläne",
+      "individuals": "Jahrespläne",
+      "homePage": "Wähle den passenden Plan",
+      "lifetime": "Lebenslange Pläne",
+      "business": "Business-Pläne",
       "lifetimeCampaign": {
-        "blueText": "50 % RABATT",
-        "normalText": "auf alle unsere exklusiven Lebenszeit‑Pläne"
+        "blueText": "50 % RABATT SICHERN",
+        "normalText": "auf alle exklusiven lebenslangen Pläne"
       }
     },
-    "header": "Totale Privatsphäre mit 85 % Rabatt",
-    "lifetimeDescription": "Mit einer einmaligen Zahlung bekommst du lebenslangen Schutz deiner Privatsphäre. Du erhältst für immer Zugriff auf alle datenschutz‑fokussierten Features und verschlüsselten Cloud‑Speicher von Internxt.",
-    "planDescription": "Alle Internxt‑Pläne beinhalten vollständigen Zugriff auf unsere datenschutz‑fokussierten Funktionen. Abonniere Internxt und sichere dir ein Jahr verschlüsselten Cloud‑Speicher.",
+    "header": "Vollständige Privatsphäre mit 85 % Rabatt",
+    "lifetimeDescription": "Einmal bezahlen und ein Leben lang Privatsphäre genießen. Voller Zugriff auf alle datenschutzorientierten Funktionen von Internxt.",
+    "planDescription": "Alle Internxt-Pläne beinhalten umfassende Datenschutzfunktionen. Abonniere und sichere dir ein Jahr verschlüsselten Cloud-Speicher.",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
-      "individual": "Einzelpersonen",
-      "lifetime": "Lebenszeit",
-      "business": "Business"
+      "individual": "Individuell",
+      "lifetime": "Lebenslang",
+      "business": "Geschäftlich"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "Erhalte bis zu 1 GB verschlüsselten Cloud‑Speicher und nutze unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
-      "cta": "Plan auswählen"
+      "eyeBrow": "Internxt Kostenlos",
+      "description": "Erhalte bis zu 1 GB verschlüsselten Speicher und nutze unser privates Ökosystem: VPN, CLI/WebDav/Rclone und mehr.",
+      "cta": "Plan wählen"
     },
     "features": {
-      "endToEnd": "End‑to‑End verschlüsselt",
-      "openSource": "Open‑Source und geprüft",
-      "anonymousAccount": "Anonyme Kontoregistrierung",
-      "premiumSupport": "Premium‑Kunden‑Support",
-      "guarantee": "30‑Tage Geld‑zurück‑Garantie"
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source & geprüft",
+      "anonymousAccount": "Anonymer Account",
+      "premiumSupport": "Premium-Support",
+      "guarantee": "30 Tage Geld-zurück-Garantie"
     }
   },
   "CtaSection1": {
-    "title": "Der privateste Cloud‑Speicher der Welt",
-    "description": "Sichere dir deinen exklusiven 82 % Rabatt, um Internxts sicheren, privaten und verschlüsselten Cloud‑Speicher für ein ganzes Jahr zu nutzen.",
-    "cta": "Finde deinen Plan"
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Sichere dir 82 % Rabatt für ein Jahr sicheren, privaten und verschlüsselten Cloud-Speicher mit Internxt.",
+    "cta": "Plan entdecken"
   }
 }

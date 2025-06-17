@@ -11,12 +11,14 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
 import { SpecialOfferText } from '@/assets/types/specialOffer';
+import { GetServerSidePropsContext } from 'next';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
   footerLang: FooterText;
+  lang: GetServerSidePropsContext['locale'];
 }
 
 const PartnerDiscount = ({
@@ -24,9 +26,11 @@ const PartnerDiscount = ({
   langJson,
   navbarLang,
   footerLang,
+  lang,
 }: PartnerDiscountProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
-  const lang = 'en';
+  const locale = lang as string;
+  console.log(locale);
   const {
     products,
     loadingCards,
@@ -50,7 +54,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed isLinksHidden />
 
       <HeroSection textContent={langJson.HeroSection} />
 
@@ -64,7 +68,7 @@ const PartnerDiscount = ({
           individuals: decimalDiscount,
           lifetime: decimalDiscount,
         }}
-        lang={lang}
+        lang={locale}
         products={products}
         popularPlanBySize={'5TB'}
         loadingCards={loadingCards}
@@ -80,7 +84,7 @@ const PartnerDiscount = ({
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
 
-      <Footer textContent={footerLang} lang={lang} />
+      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };
@@ -99,6 +103,7 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
+      lang,
     },
   };
 }

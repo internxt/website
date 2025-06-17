@@ -1,75 +1,75 @@
 {
   "HeroSection": {
-    "title": "Archiviazione cloud sicura e privata",
+    "title": "Archiviazione cloud",
     "subtitle": "che protegge il tuo diritto alla privacy",
-    "description": "Lo storage cloud open‑source web3 di Internxt protegge la tua privacy con crittografia post‑quantistica zero‑knowledge.",
-    "info": "Approfitta del <strong>85 %</strong> di sconto esclusivo su tutti i piani annuali e a vita di Internxt!",
-    "cta": "Ottieni l’85 % DI SCONTO"
+    "description": "L’archiviazione cloud Web3 open source di Internxt protegge la tua privacy con crittografia post-quantistica zero-knowledge.",
+    "info": "Ottieni il tuo <strong>sconto esclusivo dell’85%</strong> su tutti i piani annuali e a vita.",
+    "cta": "Ottieni l’85% di sconto"
   },
   "MostSecureSection": {
-    "title": "Lo storage cloud più sicuro per i tuoi file, foto e altro",
-    "description": "Internxt Drive è una soluzione di archiviazione cloud open‑source con crittografia end‑to‑end per conservare, fare backup e condividere i tuoi file in totale privacy. Internxt Drive offre crittografia pluripremiata e controllo sui tuoi dati.",
-    "cta": "Approfitta dell’offerta"
+    "description": "Internxt Drive è una soluzione di archiviazione cloud open source e con crittografia end-to-end per archiviare, eseguire backup e condividere i tuoi file in piena privacy. Offre crittografia post-quantistica e controllo totale sui tuoi dati.",
+    "title": "Proteggi le tue foto, documenti e tutte le tue informazioni",
+    "cta": "Ottieni l’offerta"
   },
   "ScrollableSection": {
-    "title": "Archiviazione cloud sicura con privacy impareggiabile",
-    "description": "Cosa rende Internxt così speciale? Siamo un team coeso di professionisti completamente dedicati a proteggerti online. Tutto ciò che facciamo e ogni decisione che prendiamo è incentrato sulla protezione dei tuoi dati dallo sfruttamento.",
+    "title": "Archiviazione più sicura",
+    "description": "Cosa rende Internxt così speciale? Siamo un team compatto di professionisti completamente dedicati alla tua protezione online. Ogni nostra decisione è volta a garantire la sicurezza dei tuoi dati.",
     "elements": [
       {
-        "title": "Privacy impareggiabile",
-        "description": "Proteggere la tua privacy è la nostra massima priorità; non memorizziamo mai password o dati personali. I tuoi file sono crittografati in transito e a riposo, dandoti il pieno controllo sulle tue informazioni."
+        "title": "Privacy senza compromessi",
+        "description": "La tua privacy è la nostra priorità assoluta: non conserviamo mai password né dati personali. I tuoi file sono crittografati in transito e a riposo, dandoti pieno controllo."
       },
       {
         "title": "Sicurezza di nuova generazione",
-        "description": "Internxt è l’unico storage cloud che crittografa automaticamente i tuoi file usando crittografia end‑to‑end e post‑quantistica, il che significa che solo tu puoi accedere ai tuoi dati."
+        "description": "Internxt è l’unico cloud che crittografa automaticamente i tuoi file con crittografia end-to-end post-quantistica. Solo tu puoi accedere ai tuoi dati."
       },
       {
-        "title": "Open‑source e trasparente",
-        "description": "Il nostro codice sorgente è pubblicato su GitHub e può essere esaminato, controllato e verificato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati."
+        "title": "Open source e trasparente",
+        "description": "Il nostro codice sorgente è su GitHub, verificabile da chiunque. Non abbiamo nulla da nascondere, tranne i tuoi dati."
       },
       {
-        "title": "Verificato in modo indipendente",
-        "description": "Rispettiamo rigide normative GDPR e manteniamo un ambiente al 100 % sicuro. Per confermare le nostre affermazioni, Internxt è stato sottoposto a un audit indipendente da Securitum, leader europeo nei penetration test."
+        "title": "Verifica indipendente",
+        "description": "Rispettiamo pienamente il GDPR e operiamo in un ambiente 100% sicuro. Internxt è stato sottoposto ad audit indipendente da Securitum, leader nei penetration test."
       }
     ]
   },
   "PaymentSection": {
     "planTitles": {
-      "individuals": "Piani di archiviazione annuali",
+      "individuals": "Piani annuali",
       "homePage": "Scegli il piano giusto per te",
       "lifetime": "Piani a vita",
-      "business": "Piani aziendali",
+      "business": "Piani business",
       "lifetimeCampaign": {
-        "blueText": "Ottieni 50 % DI SCONTO",
+        "blueText": "Ottieni il 50% DI SCONTO",
         "normalText": "su tutti i nostri piani a vita esclusivi"
       }
     },
-    "header": "Privacy totale con l’85 % di sconto",
-    "lifetimeDescription": "Con un pagamento una tantum, ottieni privacy a vita. Avrai accesso per sempre a tutte le funzionalità incentrate sulla privacy e all’archiviazione cloud crittografata di Internxt.",
-    "planDescription": "Tutti i piani Internxt includono pieno accesso alle nostre funzionalità orientate alla privacy. Abbonati a Internxt e assicurati un anno di archiviazione cloud crittografata.",
+    "header": "Privacy totale con l’85% di sconto",
+    "lifetimeDescription": "Con un pagamento una tantum, avrai privacy a vita. Accesso completo a tutte le funzionalità e allo storage cifrato di Internxt.",
+    "planDescription": "Tutti i piani Internxt includono pieno accesso alle funzionalità orientate alla privacy. Abbonati e proteggi i tuoi file per un anno.",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",
       "individual": "Individuale",
       "lifetime": "A vita",
-      "business": "Aziendale"
+      "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "Ottieni fino a 1 GB di archiviazione cloud crittografata e approfitta del nostro ecosistema privato: VPN (FR), CLI/WebDav/Rclone e molto altro.",
-      "cta": "Seleziona il piano"
+      "eyeBrow": "Internxt Gratis",
+      "description": "Ottieni fino a 1 GB di archiviazione cifrata e accedi al nostro ecosistema privato: VPN, CLI/WebDav/Rclone e altro.",
+      "cta": "Seleziona piano"
     },
     "features": {
-      "endToEnd": "Crittografia end‑to‑end",
-      "openSource": "Open‑source e verificato",
-      "anonymousAccount": "Creazione account anonimo",
-      "premiumSupport": "Supporto clienti premium",
-      "guarantee": "Garanzia di rimborso di 30 giorni"
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Account anonimo",
+      "premiumSupport": "Supporto premium",
+      "guarantee": "Garanzia di rimborso 30 giorni"
     }
   },
   "CtaSection1": {
-    "title": "Lo storage cloud più privato al mondo",
-    "description": "Approfitta del tuo esclusivo sconto dell’82 % per accedere allo storage cloud sicuro, privato e crittografato di Internxt per un intero anno.",
-    "cta": "Trova il tuo piano"
+    "title": "Il cloud più privato al mondo",
+    "description": "Ottieni l’82% di sconto per un anno di archiviazione cloud sicura, privata e cifrata con Internxt.",
+    "cta": "Scopri il tuo piano"
   }
 }

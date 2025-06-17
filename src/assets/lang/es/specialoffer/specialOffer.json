@@ -1,18 +1,18 @@
 {
   "HeroSection": {
-    "title": "Almacenamiento en la nube seguro y privado",
+    "title": "Almacenamiento en la nube",
     "subtitle": "que protege tu derecho a la privacidad",
     "description": "El almacenamiento en la nube Web3 y de código abierto de Internxt protege tu privacidad con cifrado post-cuántico sin conocimiento.",
-    "info": "¡Consigue tu <strong>descuento exclusivo del 85%</strong> en todos los planes anuales y de por vida de Internxt!",
-    "cta": "Obtén 85% DE DESCUENTO"
+    "info": "¡Consigue tu <strong>descuento exclusivo del 85%</strong> en todos los planes anuales y de por vida.",
+    "cta": "Obtén 85% de descuento"
   },
   "MostSecureSection": {
-    "title": "El almacenamiento en la nube más seguro para tus archivos, fotos y mucho más",
-    "description": "Internxt Drive es una solución de almacenamiento en la nube de código abierto y cifrado de extremo a extremo para guardar, hacer copias de seguridad y compartir tus archivos con total privacidad. Internxt Drive ofrece cifrado galardonado y control total sobre tus datos.",
-    "cta": "Aprovechar oferta"
+    "description": "Internxt Drive es una solución de almacenamiento en la nube de código abierto y cifrado de extremo a extremo para guardar, hacer copias de seguridad y compartir tus archivos con total privacidad. Internxt Drive ofrece cifrado postcuántico y control total sobre tus datos.",
+    "title": "Protege tus fotos, documentos y toda tu información",
+    "cta": "Obtener oferta"
   },
   "ScrollableSection": {
-    "title": "Almacenamiento en la nube seguro con privacidad inigualable",
+    "title": "Almacenamiento más seguro",
     "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo compacto de profesionales completamente dedicados a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos está centrada en proteger tus datos para que no sean explotados.",
     "elements": [
       {
