@@ -1,104 +1,75 @@
 {
   "HeroSection": {
-    "header": "Offre spéciale Internxt",
-    "title": {
-      "normalText": "Le stockage cloud ",
-      "blueText": "le plus sécurisé"
-    },
-    "description": {
-      "normal": "Rejoignez Internxt, l'alternative leader à Google Drive, et obtenez une ",
-      "blue": "82% de réduction ",
-      "normal1": "sur tous les plans annuels et à vie."
-    },
-    "cta": "Choisissez votre plan"
+    "title": "Stockage cloud",
+    "subtitle": "qui protège votre droit à la vie privée",
+    "description": "Le stockage cloud Web3 open source d'Internxt protège votre vie privée grâce à un chiffrement post-quantique sans connaissance.",
+    "info": "Profitez de votre <strong>remise exclusive de 85 %</strong> sur tous les forfaits annuels et à vie.",
+    "cta": "Obtenez 85 % de réduction"
+  },
+  "MostSecureSection": {
+    "description": "Internxt Drive est une solution de stockage cloud open source avec chiffrement de bout en bout pour stocker, sauvegarder et partager vos fichiers en toute confidentialité. Internxt Drive offre un chiffrement post-quantique et un contrôle total de vos données.",
+    "title": "Protégez vos photos, documents et toutes vos informations",
+    "cta": "Obtenir l’offre"
+  },
+  "ScrollableSection": {
+    "title": "Stockage le plus sécurisé",
+    "description": "Qu’est-ce qui rend Internxt si spécial ? Nous sommes une équipe compacte de professionnels entièrement dédiés à votre protection en ligne. Chaque décision que nous prenons vise à garantir que vos données ne soient jamais exploitées.",
+    "elements": [
+      {
+        "title": "Confidentialité inégalée",
+        "description": "Protéger votre vie privée est notre priorité absolue : nous ne stockons jamais vos mots de passe ou données personnelles. Vos fichiers sont chiffrés en transit et au repos, vous assurant un contrôle total."
+      },
+      {
+        "title": "Sécurité de nouvelle génération",
+        "description": "Internxt est le seul cloud à chiffrer automatiquement vos fichiers avec une cryptographie post-quantique de bout en bout. Vous seul avez accès à vos données."
+      },
+      {
+        "title": "Open source et transparent",
+        "description": "Notre code source est disponible sur GitHub et peut être vérifié par n’importe qui. Nous n’avons rien à cacher, sauf vos données."
+      },
+      {
+        "title": "Vérification indépendante",
+        "description": "Nous respectons strictement le RGPD et opérons dans un environnement 100 % sécurisé. Internxt a été audité indépendamment par Securitum, leader européen des tests de pénétration."
+      }
+    ]
   },
   "PaymentSection": {
     "planTitles": {
-      "individuals": "Plans individuels",
+      "individuals": "Forfaits annuels",
       "homePage": "Choisissez le plan qui vous convient",
-      "lifetime": "Plans à vie",
-      "business": "Plans pour entreprises",
+      "lifetime": "Forfaits à vie",
+      "business": "Forfaits professionnels",
       "lifetimeCampaign": {
-        "blueText": "50% de réduction",
-        "normalText": "sur tous nos plans exclusifs à vie"
+        "blueText": "Obtenez 50 % DE RÉDUCTION",
+        "normalText": "sur tous nos forfaits à vie exclusifs"
       }
     },
-    "lifetimeDescription": "Payez une fois et bénéficiez de confidentialité et de sécurité pour toujours",
-    "planDescription": "Tous les plans Internxt donnent un accès complet à notre suite de solutions privées incluant la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
-    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour protéger votre entreprise, vos employés et assurer votre rentabilité.",
-    "businessDescription2": "Garantissez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "header": "Confidentialité totale avec 85 % de réduction",
+    "lifetimeDescription": "Avec un paiement unique, vous bénéficiez de la confidentialité à vie. Accédez à toutes les fonctionnalités de confidentialité et au stockage chiffré d’Internxt à vie.",
+    "planDescription": "Tous les forfaits Internxt incluent un accès complet à nos fonctionnalités de confidentialité. Abonnez-vous et bénéficiez d’un an de stockage cloud chiffré.",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
-      "lifetime": "À vie",
       "individual": "Individuel",
-      "business": "Entreprise"
+      "lifetime": "À vie",
+      "business": "Professionnel"
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Gratuit",
-      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
-      "cta": "Sélectionner un plan"
+      "description": "Obtenez jusqu’à 1 Go de stockage chiffré et profitez de notre écosystème privé : VPN, CLI/WebDav/Rclone et plus.",
+      "cta": "Choisir un forfait"
     },
     "features": {
       "endToEnd": "Chiffrement de bout en bout",
-      "openSource": "Code source ouvert et audité",
-      "anonymousAccount": "Création de compte anonyme",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Compte anonyme",
       "premiumSupport": "Support client premium",
-      "guarantee": "Garantie de remboursement de 30 jours"
+      "guarantee": "Garantie de remboursement de 30 jours"
     }
   },
-  "FeatureSection": {
-    "title": "Pourquoi choisir Internxt pour protéger vos fichiers ?",
-    "description": "Internxt vous rend le contrôle de votre vie privée. Contrairement au stockage cloud traditionnel, nous garantissons que vous êtes le seul à posséder les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures nécessaires pour assurer la sécurité de vos informations.",
-    "cards": [
-      {
-        "title": "Données chiffrées et protégées",
-        "description": "Nous ne stockons pas les mots de passe ni les informations des utilisateurs et toutes vos données sont chiffrées. Internxt vous donne un contrôle total sur vos fichiers. Vos données sont votre responsabilité. Les protéger est la nôtre."
-      },
-      {
-        "title": "Sécurité impénétrable",
-        "description": "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers avec une cryptographie post-quantique et de bout en bout, ce qui signifie que vous êtes le seul à pouvoir accéder à vos données."
-      },
-      {
-        "title": "Code source ouvert et transparent",
-        "description": "Nous sommes fiers de notre travail, c’est pourquoi notre code est public sur GitHub et peut être examiné, audité et vérifié personnellement par n’importe qui. Nous n’avons rien à cacher excepté vos données."
-      },
-      {
-        "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes totalement conformes au RGPD et 100% sécurisés, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale société européenne de tests de sécurité, Securitum."
-      }
-    ]
-  },
-  "TestimonialsSection": {
-    "title": {
-      "normal": "Des milliers d'utilisateurs quittent iCloud, Google Drive et Dropbox pour",
-      "blue": " le stockage cloud le plus sécurisé - Internxt Drive"
-    },
-    "cards": [
-      {
-        "name": "Eva Williams",
-        "enterprise": "Journaliste chez FixThePhoto.com",
-        "review": "Je suis passée à Internxt pour sa technologie zero-knowledge, son chiffrement post-quantique et son code ouvert. Maintenant, je suis la seule à pouvoir accéder à mes fichiers et informations, et tout est protégé en ligne."
-      },
-      {
-        "name": "Cristian M.",
-        "enterprise": "Avis de GetApp",
-        "review": "Internxt est un service de stockage cloud privé et sécurisé. Il dispose d'une interface simplifiée, facile à utiliser, et d’un bon support client, ce qui en fait une excellente option."
-      },
-      {
-        "name": "Josep Carrizo",
-        "enterprise": "Avis de Trustpilot",
-        "review": "Internxt est un service de stockage cloud privé et sécurisé. Il dispose d'une interface simplifiée, facile à utiliser, et d’un bon support client, ce qui en fait une excellente option."
-      }
-    ]
-  },
-  "CtaSection": {
-    "title": "Le stockage le plus privé et sécurisé au monde",
-    "cta": "Choisissez votre plan"
-  },
   "CtaSection1": {
-    "title": "Le stockage cloud le plus privé au monde",
-    "description": "Obtenez votre réduction exclusive de 82 % et profitez d'un an de stockage sécurisé, privé et chiffré avec Internxt.",
-    "cta": "Choisissez votre plan"
+    "title": "Le cloud le plus privé au monde",
+    "description": "Obtenez une remise exclusive de 82 % pour un an de stockage cloud sécurisé, privé et chiffré avec Internxt.",
+    "cta": "Découvrez nos offres"
   }
 }
