@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compressore gratuito per comprimere file Excel (XLS) per collaborare più facilmente e presentare dati essenziali.",
+    "secureUpload": "Caricamenti sicuri protetti da HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Come comprimere un file Excel",
+      "description": "Per comprimere un file Excel, segui questi passaggi:",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "Carica il tuo file Excel (XLS): trascinalo nell'area sopra o caricalo dal tuo dispositivo per iniziare."
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Fai clic su \"Comprimere file Excel\"."
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scarica il tuo file."
+        }
+      ],
+      "outro": "Con questo strumento puoi comprimere gratuitamente i file Excel ogni volta che ne hai bisogno. I file vengono protetti automaticamente con caricamenti crittografati per garantire la privacy dei tuoi documenti."
+    },
+    "whyConvert": {
+      "title": "Perché potrebbe essere necessario comprimere i file Excel",
+      "intro": "Quando crei fogli di calcolo, saggi, rapporti o contratti lunghi, le dimensioni degli allegati possono crescere rapidamente, rendendo difficile la condivisione. Comprimere i file Excel può ridurre significativamente le dimensioni e facilitare la collaborazione:",
+      "bullets": [
+        "Comprimere i file Excel per condividerli e caricarli facilmente.",
+        "Rispettare i limiti di dimensione di caricamento e email.",
+        "Collaborare a progetti basati sui dati."
+      ],
+      "outro": "Tutti i tuoi file vengono crittografati durante il processo di caricamento e compressione per mantenere i tuoi documenti riservati e sicuri con Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una piattaforma sicura per comprimere, archiviare e condividere file Excel.",
+    "cta": "Passa a Internxt"
+  }
+}

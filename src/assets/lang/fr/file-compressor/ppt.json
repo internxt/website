@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compressez vos fichiers PPT avec Internxt pour une collaboration et une présentation plus simples et plus efficaces.",
+    "secureUpload": "Téléversements sécurisés protégés par HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Comment compresser un fichier PPT",
+      "description": "Pour compresser un fichier PPT, suivez ces étapes :",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier PPT : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil."
+        },
+        {
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier PPT »"
+        },
+        {
+          "step": "Étape 3 :",
+          "description": "Téléchargez votre fichier."
+        }
+      ],
+      "outro": "Avec cet outil, vous pouvez compresser vos fichiers PPT gratuitement à tout moment. Tous les fichiers sont protégés grâce à un téléversement chiffré pour assurer la confidentialité de vos présentations."
+    },
+    "whyConvert": {
+      "title": "Pourquoi compresser un fichier PPT ?",
+      "intro": "Il est courant d’envoyer un fichier PPT par e-mail pour un projet de groupe ou une présentation d’équipe, mais les fichiers volumineux peuvent être bloqués par certaines limites de taille. Avec Internxt, il suffit de choisir votre fichier pour :",
+      "bullets": [
+        "Compresser, partager et modifier rapidement vos fichiers PPT",
+        "Respecter les limites de taille des téléchargements",
+        "Gérer efficacement les projets en groupe"
+      ],
+      "outro": "Tous vos fichiers sont chiffrés lors du téléversement et de la compression pour garder vos présentations privées. Vous pouvez donc les compresser, stocker et partager en toute sécurité avec Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Une plateforme sécurisée pour compresser, stocker et partager des fichiers PPT",
+    "cta": "Passez à Internxt"
+  }
+}

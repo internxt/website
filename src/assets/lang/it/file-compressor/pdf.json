@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Internxt ti permette di comprimere gratuitamente più file PDF online. Proteggi e condividi i tuoi PDF senza preoccuparti dei limiti di dimensione.",
+    "secureUpload": "Caricamenti sicuri protetti da HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Come comprimere un file PDF",
+      "description": "Per comprimere un file PDF, segui questi passaggi:",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "Carica il tuo file PDF: trascinalo nell’area in alto o selezionalo dal tuo dispositivo per iniziare la conversione."
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Clicca su «Comprimi PDF»"
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scarica il tuo file."
+        }
+      ],
+      "outro": "Con questo strumento puoi comprimere più file PDF gratuitamente ogni volta che vuoi. Tutti i file sono protetti da caricamenti crittografati per garantirne la riservatezza."
+    },
+    "whyConvert": {
+      "title": "Perché potresti voler comprimere file PDF di grandi dimensioni",
+      "intro": "L’invio di file PDF grandi può essere complicato a causa dei limiti di email, upload o condivisione. Con questo strumento gratuito puoi comprimere più PDF e ottenere i seguenti vantaggi:",
+      "bullets": [
+        "Ottimizzare i file per visualizzazione web o mobile",
+        "Evitare i limiti di caricamento",
+        "Risparmiare spazio di archiviazione"
+      ],
+      "outro": "Questo strumento non ha limiti: puoi comprimere PDF fino a XGB e gestire più file senza registrarti o affrontare restrizioni giornaliere."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una piattaforma sicura per comprimere, archiviare e condividere file PDF",
+    "cta": "Passa a Internxt"
+  }
+}

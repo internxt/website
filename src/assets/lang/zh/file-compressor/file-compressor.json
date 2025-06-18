@@ -1,0 +1,79 @@
+{
+  "HeroSection": {
+    "title": "压缩文件",
+    "description": {
+      "normal": "最佳文件压缩工具，可安全减小视频、照片和文档大小。"
+    },
+    "cards": [
+      { "title": "MOV 文件", "description": "免费视频压缩。", "pathname": "mov" },
+      { "title": "PDF 文件", "description": "免费压缩 PDF 文件。", "pathname": "pdf" },
+      { "title": "JPG 文件", "description": "免费压缩 JPG。", "pathname": "jpg" },
+      { "title": "PNG 文件", "description": "免费压缩 PNG。", "pathname": "png" },
+      { "title": "PPT 文件", "description": "免费压缩 PPT。", "pathname": "ppt" },
+      { "title": "Word 文件", "description": "免费压缩 Word 文件。", "pathname": "doc" },
+      { "title": "Excel 文件", "description": "免费压缩 Excel 文件。", "pathname": "xls" },
+      { "title": "ZIP 文件", "description": "免费压缩 ZIP 文件。", "pathname": "zip" }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileCompressor": {
+      "title": "使用 Internxt 免费在线压缩文件",
+      "description": [
+        "此免费工具是优化云存储的最佳压缩器。可压缩视频、照片、文档和表格，突破附件限制。",
+        "它是一个免费且易于使用的服务，兼容所有设备，在不影响质量、安全和隐私的情况下减小文件大小。立即释放云存储和协作的全部潜力！"
+      ]
+    },
+    "howUseFileCompressor": {
+      "title": "如何使用 Internxt 文件压缩器",
+      "steps": [
+        { "step": "步骤 1：", "description": "上传文件：将其拖放到上方区域或从设备选择。" },
+        { "step": "步骤 2：", "description": "点击“压缩文件”" },
+        { "step": "步骤 3：", "description": "下载压缩后的文件" }
+      ]
+    },
+    "whyUseFileCompressor": {
+      "title": "为什么要使用文件压缩器？",
+      "description": "我们的压缩工具提供快速且安全的方案，以节省存储空间并轻松分享大型视频、照片和文档。它是免费的、易用的，无需下载风险，无第三方数据收集。"
+    },
+    "cards": [
+      { "title": "支持多种格式", "description": "支持文档、图片和视频的常见格式。多种压缩选项提高效率和灵活性。" },
+      { "title": "全面加密", "description": "Internxt 使用 HTTPS 加密上传文件。压缩后文件会被删除，未保存数据。" },
+      { "title": "无需注册", "description": "无需个人信息即可压缩文件。无姓名、邮箱或付款，只为你免费压缩。" },
+      {
+        "title": "与 Internxt 深度集成",
+        "description": "最佳配合 Internxt Drive、Send 和 Mail 使用，安全压缩并保存文件。"
+      },
+      { "title": "快速简便", "description": "上传后 Internxt 自动完成压缩，快速处理，易于保存和分享。" },
+      { "title": "上传更快", "description": "文件较小意味着上传到云或邮件更快—视网络连接而定。" }
+    ]
+  },
+  "CtaSection": {
+    "title": "压缩、存储并分享文件，与 Internxt",
+    "description": "一整套保护隐私的在线套件。",
+    "cta": "切换到 Internxt"
+  },
+  "CtaSection2": {
+    "title": "文件管理更简单。",
+    "description": "使用 Internxt Drive 安全转换和保存文件。",
+    "cta": "创建账户"
+  },
+  "QASection": {
+    "title": "常见问题解答",
+    "faq": [
+      {
+        "question": "哪个是最好的文件压缩器？",
+        "answer": [
+          "最佳工具取决于需求，通常支持多种格式、易用并加密文件。",
+          "Internxt 提供免费、安全，不被第三方收集数据的工具。"
+        ]
+      },
+      { "question": "我可以压缩哪些格式？", "answer": ["可免费压缩 Word、Excel、PPT、JPG、PNG 和 PDF。"] },
+      { "question": "可以在手机上使用吗？", "answer": ["可以，此工具兼容所有设备，适合随时压缩。"] },
+      { "question": "压缩过程安全吗？", "answer": ["是的，文件全程加密并在服务器上完成后删除。"] },
+      { "question": "需要注册账户吗？", "answer": ["不需要，不需邮箱或付款，隐私优先。"] },
+      { "question": "使用次数有限制吗？", "answer": ["没有，免费无限制使用。"] },
+      { "question": "可以压缩大视频文件吗？", "answer": ["可以，支持高达 X GB，帮你节省空间。"] },
+      { "question": "压缩如何帮助云存储？", "answer": ["压缩节省空间，绕过上传限制，存储更多文件。"] }
+    ]
+  }
+}

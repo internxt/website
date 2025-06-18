@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compresseur gratuit pour compresser les fichiers Excel (XLS) afin de faciliter la collaboration sur les feuilles de calcul et de présenter des données essentielles.",
+    "secureUpload": "Téléversements sécurisés protégés par HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Comment compresser un fichier Excel",
+      "description": "Pour compresser un fichier Excel, suivez ces étapes :",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier Excel (XLS) : faites-le glisser dans la zone ci-dessus ou sélectionnez-le depuis votre appareil pour commencer."
+        },
+        {
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier Excel »."
+        },
+        {
+          "step": "Étape 3 :",
+          "description": "Téléchargez votre fichier."
+        }
+      ],
+      "outro": "Avec cet outil, vous pouvez compresser gratuitement plusieurs fichiers Excel à tout moment. Les fichiers sont automatiquement sécurisés avec un téléversement chiffré pour garantir la confidentialité."
+    },
+    "whyConvert": {
+      "title": "Pourquoi compresser des fichiers Excel",
+      "intro": "Lors de la création de feuilles de calcul, d'essais ou de rapports, les fichiers peuvent devenir trop volumineux pour être partagés facilement. La compression des fichiers Excel réduit leur taille et facilite la collaboration :",
+      "bullets": [
+        "Partager et téléverser facilement des fichiers Excel.",
+        "Respecter les limites de taille pour les emails et les téléversements.",
+        "Collaborer sur des projets basés sur les données."
+      ],
+      "outro": "Tous vos fichiers sont chiffrés pendant le processus pour garantir leur confidentialité. Compressez, stockez et partagez vos fichiers Excel en toute confiance avec Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Une plateforme sécurisée pour compresser, stocker et partager vos fichiers Excel.",
+    "cta": "Passez à Internxt"
+  }
+}

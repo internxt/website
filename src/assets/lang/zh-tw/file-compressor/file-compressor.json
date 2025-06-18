@@ -1,0 +1,76 @@
+{
+  "HeroSection": {
+    "title": "壓縮檔案",
+    "description": {
+      "normal": "最佳檔案壓縮工具，可安全縮小影片、照片與文件大小。"
+    },
+    "cards": [
+      { "title": "MOV 檔案", "description": "免費壓縮影片。", "pathname": "mov" },
+      { "title": "PDF 檔案", "description": "免費壓縮 PDF 檔案。", "pathname": "pdf" },
+      { "title": "JPG 檔案", "description": "免費壓縮 JPG。", "pathname": "jpg" },
+      { "title": "PNG 檔案", "description": "免費壓縮 PNG。", "pathname": "png" },
+      { "title": "PPT 檔案", "description": "免費壓縮 PPT。", "pathname": "ppt" },
+      { "title": "Word 檔案", "description": "免費壓縮 Word 檔案。", "pathname": "doc" },
+      { "title": "Excel 檔案", "description": "免費壓縮 Excel 檔案。", "pathname": "xls" },
+      { "title": "ZIP 檔案", "description": "免費壓縮 ZIP 檔案。", "pathname": "zip" }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileCompressor": {
+      "title": "使用 Internxt 免費線上壓縮檔案",
+      "description": [
+        "此免費工具是優化雲端儲存的最佳壓縮器，可壓縮影片、照片、文件與試算表，突破附件限制。",
+        "免費易用，兼容所有裝置，可在不犧牲品質、安全性與隱私的情況下縮減檔案大小。立即解鎖雲端儲存與協作的全部潛力！"
+      ]
+    },
+    "howUseFileCompressor": {
+      "title": "如何使用 Internxt 檔案壓縮器",
+      "steps": [
+        { "step": "步驟 1：", "description": "上傳檔案：將檔案拖放至上方區域或從裝置選擇。" },
+        { "step": "步驟 2：", "description": "點擊「壓縮檔案」" },
+        { "step": "步驟 3：", "description": "下載壓縮後的檔案" }
+      ]
+    },
+    "whyUseFileCompressor": {
+      "title": "為何使用檔案壓縮器？",
+      "description": "我們的工具提供快速且安全的方案，可節省儲存空間並輕鬆分享大型影片、照片與文件。它免費、簡單，無需下載風險與第三方資料收集。"
+    },
+    "cards": [
+      { "title": "支援多種格式", "description": "支持文件、影像與影片的常用格式。多種壓縮選項更高效率與彈性。" },
+      { "title": "全面加密", "description": "Internxt 以上傳 HTTPS 加密保護檔案。檔案壓縮後會刪除，無保存資料。" },
+      { "title": "免註冊", "description": "無需個人資訊即可壓縮檔案。無姓名、電子郵件或付款，只為你免費壓縮。" },
+      { "title": "與 Internxt 整合", "description": "最佳搭配 Internxt Drive、Send 和 Mail，安全壓縮與儲存檔案。" },
+      { "title": "快速簡便", "description": "上傳後 Internxt 會自動壓縮，快速處理，易於儲存與分享。" },
+      { "title": "上傳更快", "description": "檔案較小表示上傳至雲端或郵件更快速—取決於網路速度。" }
+    ]
+  },
+  "CtaSection": {
+    "title": "壓縮、儲存並分享檔案，與 Internxt",
+    "description": "完整隱私保護線上套件。",
+    "cta": "切換到 Internxt"
+  },
+  "CtaSection2": {
+    "title": "檔案管理更簡單。",
+    "description": "使用 Internxt Drive 安全轉檔與儲存檔案。",
+    "cta": "建立帳號"
+  },
+  "QASection": {
+    "title": "常見問題與解答",
+    "faq": [
+      {
+        "question": "哪個是最好的檔案壓縮器？",
+        "answer": [
+          "最佳工具取決於需求，通常支援多種格式、易用且加密檔案。",
+          "Internxt 提供免費、安全且不收集第三方資料的工具。"
+        ]
+      },
+      { "question": "可以壓縮哪些格式？", "answer": ["可免費壓縮 Word、Excel、PPT、JPG、PNG 和 PDF。"] },
+      { "question": "可以在手機上使用嗎？", "answer": ["可以，工具支援所有裝置，方便隨時壓縮。"] },
+      { "question": "壓縮過程安全嗎？", "answer": ["是，檔案全程加密，完成後由服務器刪除。"] },
+      { "question": "需要註冊嗎？", "answer": ["不需要，不需電子郵件或付款，隱私優先。"] },
+      { "question": "使用次數有限制嗎？", "answer": ["沒有，免費無限制使用。"] },
+      { "question": "可以壓縮大型影片檔案嗎？", "answer": ["可以，支援高達 X GB，節省空間無憂。"] },
+      { "question": "壓縮如何幫助雲端儲存？", "answer": ["壓縮節省空間，有助繞過上傳限制，儲存更多檔案。"] }
+    ]
+  }
+}

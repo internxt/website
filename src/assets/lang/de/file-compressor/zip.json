@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Reduziere die Größe großer ZIP-Dateien schnell und sicher mit unserem Online-ZIP-Komprimierer.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine ZIP-Datei",
+      "description": "Um eine ZIP-Datei zu komprimieren, folge diesen Schritten:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine ZIP-Datei hoch: Ziehe sie in den Bereich oben oder lade sie von deinem Gerät hoch."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „ZIP-Datei komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Mit diesem Online-ZIP-Komprimierer kannst du mehrere ZIP-Dateien kostenlos komprimieren, wann immer du willst. Alle Dateien sind durch verschlüsselte Uploads geschützt, um die Privatsphäre deiner Videos zu wahren."
+    },
+    "whyConvert": {
+      "title": "Warum du einen Online-ZIP-Komprimierer brauchst",
+      "intro": "Das Versenden großer Videodateien online kann schwierig sein – durch Upload-Grenzen bei E-Mail-, Dateifreigabe- oder Cloud-Diensten. Mit Internxts Online-ZIP-Komprimierer erhältst du ein sicheres, kostenloses Tool, mit dem du anschließend:",
+      "bullets": [
+        "ZIP-Dateien schneller hochladen und Bandbreite sparen",
+        "Die Qualität deiner Dateien erhalten",
+        "Speicherplatz sparen und Upload-Beschränkungen einhalten"
+      ],
+      "outro": "Alle deine Dateien werden während des Uploads und der Komprimierung verschlüsselt, damit deine Videos privat bleiben. So kannst du sie mit Internxt sicher komprimieren, speichern und teilen."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von ZIP-Dateien",
+    "cta": "Jetzt Internxt holen"
+  }
+}

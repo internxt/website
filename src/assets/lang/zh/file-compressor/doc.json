@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "使用 Internxt 压缩 Word（DOC）文件，让分享和协作重要文档变得更简单、更高效。",
+    "secureUpload": "上传过程受 HTTPS 加密保护，确保安全。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 DOC 文件",
+      "description": "请按照以下步骤压缩 DOC 文件：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传你的 DOC 文件：拖放至上方区域，或从设备中选择文件开始转换。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 DOC 文件”"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载你的文件。"
+        }
+      ],
+      "outro": "使用该工具，你可以随时免费压缩 Word 文件。所有上传都经过加密处理，以确保文档的隐私性。"
+    },
+    "whyConvert": {
+      "title": "为什么要压缩 Word 文件？",
+      "intro": "在撰写论文、报告、合同等较长文件时，附件体积可能迅速变大，导致难以分享。压缩 DOC 文件可以显著减小体积，使你能够：",
+      "bullets": ["更轻松地分享 Word 文件", "符合上传大小限制", "更好地管理和协作团队项目"],
+      "outro": "上传与压缩过程中，所有文件均加密处理，确保隐私。使用 Internxt，你可以自信地压缩、存储与分享你的文档。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个安全的平台，用于压缩、存储和分享 Word 文件",
+    "cta": "立即使用 Internxt"
+  }
+}

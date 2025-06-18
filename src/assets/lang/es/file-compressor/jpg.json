@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprime un archivo JPG para reducir el tamaño del archivo y compartir fotos sin reducir la calidad de tus imágenes con Internxt.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo JPG",
+      "description": "Para comprimir un archivo JPG, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo JPG: arrástralo y suéltalo en el área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en \"Comprimir archivo JPG\"."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Comprime un archivo JPG gratis cuando lo necesites, sabiendo que tus fotos se mantienen seguras y privadas gracias a las cargas encriptadas."
+    },
+    "whyConvert": {
+      "title": "Por qué podría ser necesario comprimir un archivo JPG",
+      "intro": "Al igual que cuando necesitas comprimir un archivo PNG, es posible que necesites comprimir un archivo JPG para mantener la máxima calidad de tus fotos sin marcas de agua. No necesitas registrarte para comprimir un archivo JPG con Internxt, así que puedes concentrarte en optimizar el espacio de almacenamiento de tus álbumes y bibliotecas de fotos. Una vez completado, podrás:",
+      "bullets": [
+        "Acelerar la carga del sitio web.",
+        "Mantener una alta calidad visual de las fotos.",
+        "Ahorrar espacio de almacenamiento en tu dispositivo o en la nube."
+      ],
+      "outro": "Todos tus archivos se encriptan durante el proceso de carga y compresión para mantener tus fotos privadas, de modo que puedes comprimir, almacenar y compartir tus archivos con confianza con Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos JPG.",
+    "cta": "Pásate a Internxt"
+  }
+}
