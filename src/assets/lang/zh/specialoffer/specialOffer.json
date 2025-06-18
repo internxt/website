@@ -1,104 +1,75 @@
 {
   "HeroSection": {
-    "header": "Internxt特别优惠",
-    "title": {
-      "normalText": "云存储 ",
-      "blueText": "最安全"
-    },
-    "description": {
-      "normal": "加入Internxt，Google Drive的领先替代方案，享受 ",
-      "blue": "82% 折扣 ",
-      "normal1": "适用于所有年度和终身计划。"
-    },
-    "cta": "选择您的计划"
+    "title": "云存储",
+    "subtitle": "保护你的隐私权",
+    "description": "Internxt 的 Web3 开源云存储通过后量子零知识加密保护你的隐私。",
+    "info": "立即享受<strong>85% 专属折扣</strong>，适用于所有年付和终身计划。",
+    "cta": "立即享受 85% 折扣"
   },
-  "PaymentSection": {
-    "planTitles": {
-      "individuals": "个人计划",
-      "homePage": "选择适合您的计划",
-      "lifetime": "终身计划",
-      "business": "企业计划",
-      "lifetimeCampaign": {
-        "blueText": "50% 折扣",
-        "normalText": "适用于我们所有独家终身计划"
-      }
-    },
-    "lifetimeDescription": "一次支付，永久享受隐私和安全",
-    "planDescription": "所有Internxt计划均可完全访问我们的私有解决方案套件，采用最新的安全技术：Internxt Drive、Send、VPN、杀毒软件、Meet和Mail。",
-    "businessDescription": "我们正在开发专为保护您的企业、员工并确保盈利能力而设计的全新Internxt企业计划。",
-    "businessDescription2": "使用Internxt加密云存储计划保障企业数据安全。",
-    "billingFrequency": {
-      "monthly": "每月",
-      "annually": "每年",
-      "lifetime": "终身",
-      "individual": "个人",
-      "business": "企业"
-    },
-    "freePlanCard": {
-      "eyeBrow": "Internxt免费版",
-      "description": "免费获得1GB加密云存储空间",
-      "cta": "选择计划"
-    },
-    "features": {
-      "endToEnd": "端到端加密",
-      "openSource": "开源且经过审计",
-      "anonymousAccount": "匿名账户创建",
-      "premiumSupport": "高级客户支持",
-      "guarantee": "30天退款保证"
-    }
+  "MostSecureSection": {
+    "description": "Internxt Drive 是一款开源、端到端加密的云存储解决方案，用于私密地存储、备份和共享你的文件。提供后量子加密和对数据的完全控制。",
+    "title": "保护你的照片、文档和所有信息",
+    "cta": "获取优惠"
   },
-  "FeatureSection": {
-    "title": "为什么选择Internxt保护您的文件？",
-    "description": "Internxt让您重新掌控隐私。不同于传统云存储，我们保证只有您持有加密数据的密钥，我们不存储也不出售您的数据给第三方。我们采取一切必要措施确保您的信息安全。",
-    "cards": [
+  "ScrollableSection": {
+    "title": "最安全的存储",
+    "description": "Internxt 有什么特别之处？我们是一支小型专业团队，专注于在线保护你的隐私。我们所做的一切都以保护你的数据为核心。",
+    "elements": [
       {
-        "title": "数据加密与保护",
-        "description": "我们不存储密码或用户信息，您的所有数据均已加密。Internxt赋予您对文件的完全控制权。您的数据是您的责任，保护它们是我们的职责。"
+        "title": "无与伦比的隐私",
+        "description": "我们从不存储密码或个人数据，隐私是我们的首要任务。你的文件在传输和存储中都已加密。"
       },
       {
-        "title": "坚不可摧的安全",
-        "description": "Internxt是唯一自动使用后量子和端到端加密技术保护您的文件的云存储，这意味着只有您可以访问您的数据。"
+        "title": "新一代安全性",
+        "description": "Internxt 是唯一自动采用后量子端到端加密的云服务，只有你能访问你的数据。"
       },
       {
         "title": "开源透明",
-        "description": "我们为自己的工作感到自豪，代码在GitHub公开，任何人都可审查、审核和验证。除了您的数据，我们没有任何隐瞒。"
+        "description": "我们的源代码已发布在 GitHub 上，任何人都可以审查。我们无所隐瞒，除了你的数据。"
       },
       {
-        "title": "独立验证",
-        "description": "我们完全符合GDPR且安全可靠，但请不要只听我们说。Internxt已通过欧洲领先的安全测试公司Securitum的独立审计和验证。"
+        "title": "独立审计",
+        "description": "我们严格遵守 GDPR 法规，环境 100% 安全。Internxt 已由欧洲渗透测试领导者 Securitum 独立审计。"
       }
     ]
   },
-  "TestimonialsSection": {
-    "title": {
-      "normal": "成千上万的用户正在放弃iCloud、Google Drive和Dropbox，选择",
-      "blue": "最安全的云存储 — Internxt Drive"
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "年度计划",
+      "homePage": "选择适合你的方案",
+      "lifetime": "终身计划",
+      "business": "企业计划",
+      "lifetimeCampaign": {
+        "blueText": "享受 50% 折扣",
+        "normalText": "适用于所有专属终身计划"
+      }
     },
-    "cards": [
-      {
-        "name": "Eva Williams",
-        "enterprise": "FixThePhoto.com记者",
-        "review": "我选择Internxt因为它的零知识技术、后量子加密和开源代码。现在只有我能访问我的文件和信息，所有数据都在线保护。"
-      },
-      {
-        "name": "Cristian M.",
-        "enterprise": "GetApp评论",
-        "review": "Internxt是一个私密且安全的云存储服务。界面简洁易用，客户支持良好，是一个极佳的选择。"
-      },
-      {
-        "name": "Josep Carrizo",
-        "enterprise": "Trustpilot评论",
-        "review": "Internxt是一个私密且安全的云存储服务。界面简洁易用，客户支持良好，是一个极佳的选择。"
-      }
-    ]
-  },
-  "CtaSection": {
-    "title": "世界上最私密且安全的存储",
-    "cta": "选择您的计划"
+    "header": "隐私保护高达 85% 折扣",
+    "lifetimeDescription": "一次性支付，终身享受隐私保护。访问 Internxt 所有功能和加密云存储。",
+    "planDescription": "Internxt 所有计划都包括完整的隐私功能。立即订阅，享受一年加密云存储。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "individual": "个人",
+      "lifetime": "终身",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt 免费版",
+      "description": "获得高达 1GB 的加密存储，畅享我们的私密生态系统：VPN、CLI/WebDav/Rclone 等。",
+      "cta": "选择方案"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源可审计",
+      "anonymousAccount": "匿名账户",
+      "premiumSupport": "高级客服支持",
+      "guarantee": "30 天退款保证"
+    }
   },
   "CtaSection1": {
     "title": "世界上最私密的云存储",
-    "description": "获取82%独家优惠，享受一年安全、私密和加密的存储服务。",
-    "cta": "选择您的计划"
+    "description": "立即获得 82% 独家折扣，体验一年安全、私密的加密云存储。",
+    "cta": "选择你的方案"
   }
 }
