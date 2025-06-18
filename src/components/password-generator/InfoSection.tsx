@@ -61,7 +61,7 @@ const InfoSection = ({
       <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
-            src={getImage(`/banners/728x90.png`)}
+            src={getImage(`/banners/728x90.webp`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -98,7 +98,7 @@ const InfoSection = ({
         </div>
         <div className="flex w-full flex-col items-center justify-center bg-gray-1">
           <Image
-            src={getImage(`/banners/728x90.png`)}
+            src={getImage(`/banners/728x90.webp`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -120,7 +120,7 @@ const InfoSection = ({
           <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/728x90.png`)}
+                src={getImage(`/banners/728x90.webp`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
@@ -176,7 +176,7 @@ const InfoSection = ({
             </div>
             <div className="flex w-full flex-col items-center justify-center">
               <Image
-                src={getImage(`/banners/728x90.png`)}
+                src={getImage(`/banners/728x90.webp`)}
                 alt="File Arrow Up icon"
                 width={800}
                 height={110}
