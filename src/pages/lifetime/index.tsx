@@ -9,11 +9,11 @@ import CtaSection from '@/components/lifetime/CtaSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { PromoCodeName } from '@/lib/types';
-import router, { useRouter } from 'next/router';
+import router from 'next/router';
 
 const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, footerLang, navbarLang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
-  const discount = 0.15;
+  const discount = 0.13;
 
   return (
     <Layout
@@ -36,7 +36,7 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <HeroSection
         textContent={langJson.HeroSection}
-        percent="85"
+        percent="87"
         previewImg="/images/lifetime/file_item.webp"
         bgImage="/images/lifetime/celebration/normal-bg.png"
         onRedirectButtonClicked={() => router.push('#payment')}
@@ -44,10 +44,10 @@ const Lifetime = ({ lang, metatagsDescriptions, langJson, testimonialsJson, foot
 
       <PaymentSection
         textContent={langJson.PaymentSection}
-        couponCode={PromoCodeName.Affiliates85}
+        couponCode={PromoCodeName.DRIVE87}
         discount={discount}
         lang={lang}
-        percent={'85%'}
+        percent={'87%'}
         showPriceBefore
         lifetimeMode="celebration"
         showOffer

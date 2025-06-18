@@ -17,7 +17,7 @@
     "loading": "Caricamento...",
     "maxFileSize": {
       "title": "Limite dimensione file superato",
-      "description": "Dimensione massima file di 1GB"
+      "description": "Dimensione massima file di 100MB"
     },
     "table": {
       "loading": "Caricamento...",

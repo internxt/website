@@ -17,7 +17,7 @@
     "loading": "加载中...",
     "maxFileSize": {
       "title": "文件大小超出限制",
-      "description": "最大文件大小为 1GB"
+      "description": "最大文件大小为 100MB"
     },
     "table": {
       "loading": "加载中...",
