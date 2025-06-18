@@ -157,5 +157,9 @@
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
     "cta": "80% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "Speicherplatz sparen mit Internxt",
+    "blueText": "Komprimieren Sie Ihre Dateien kostenlos, um Ihre Cloud zu optimieren"
   }
 }

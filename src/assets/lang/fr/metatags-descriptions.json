@@ -190,13 +190,11 @@
     "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
   },
   {
-
     "id": "internxt-metadata-remover",
     "title": "Internxt Suppression de Métadonnées - Comment nettoyer les métadonnées dans les PDF, photos et vos documents en ligne",
     "description": "Supprimez les données cachées de vos fichiers en quelques secondes. Le nettoyeur de métadonnées d'Internxt purifie vos documents pour une confidentialité maximale avant de les partager."
   },
   {
-
     "id": "zerogpt-ai-checker",
     "title": "Internxt Détecteur d'IA - Détecteur de texte IA gratuit",
     "description": "Internxt Détecteur d'IA. Analysez gratuitement le contenu pour vérifier s'il a été rédigé par ChatGPT, Gemini ou d'autres plateformes d'intelligence artificielle."
@@ -205,5 +203,50 @@
     "id": "special-offer",
     "title": "Offre spéciale — Internxt",
     "description": "Profitez des forfaits annuels et à vie d'Internxt avec une réduction exclusive de 80 %. Bénéficiez de confidentialité et de sécurité avec jusqu'à 10 To de stockage."
+  },
+  {
+    "id": "file-compressor",
+    "title": "Compresseur de fichiers - Internxt",
+    "description": "Le compresseur de fichiers d'Internxt, le meilleur outil pour réduire gratuitement la taille des vidéos, photos et documents."
+  },
+  {
+    "id": "mov",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "pdf",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "jpg",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "png",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "ppt",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "doc",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "xls",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
+  },
+  {
+    "id": "zip",
+    "title": "Convertir des fichiers PNG en PDF en ligne gratuitement | Internxt",
+    "description": "Le convertisseur de fichiers d'Internxt convertit gratuitement les PNG en PDF. Notre convertisseur PNG vers PDF est un moyen simple, rapide et sécurisé de convertir vos fichiers."
   }
 ]
