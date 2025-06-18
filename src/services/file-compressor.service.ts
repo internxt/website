@@ -120,6 +120,179 @@ const compressWordFile = async (file: File): Promise<Blob> => {
 };
 
 /**
+ * Compresses PowerPoint files using enhanced techniques
+ */
+const compressPowerPointFile = async (file: File, fileExtension: string): Promise<Blob> => {
+  try {
+    const arrayBuffer = await file.arrayBuffer();
+
+    if (fileExtension.toLowerCase() === 'pptx') {
+      // PPTX files are ZIP-based, use enhanced ZIP compression
+      const zip = new JSZip();
+      const zipContent = await zip.loadAsync(arrayBuffer);
+
+      // Create a new ZIP with maximum compression
+      const newZip = new JSZip();
+
+      // Process each file in the PowerPoint document
+      for (const [filename, zipEntry] of Object.entries(zipContent.files)) {
+        if (!zipEntry.dir) {
+          const content = await zipEntry.async('uint8array');
+
+          // Files that should not be compressed (essential metadata)
+          const skipCompression = [
+            '[Content_Types].xml',
+            '_rels/.rels',
+            'docProps/app.xml',
+            'docProps/core.xml',
+            'ppt/presProps.xml',
+            'ppt/viewProps.xml',
+          ];
+
+          // Files that can be aggressively compressed
+          const aggressiveCompression = [
+            'ppt/slides/slide',
+            'ppt/slideLayouts/slideLayout',
+            'ppt/slideMasters/slideMaster',
+            'ppt/theme/theme',
+            'ppt/tableStyles.xml',
+            'ppt/tags/tag',
+          ];
+
+          if (skipCompression.some((skip) => filename.includes(skip))) {
+            // Store essential files without compression
+            newZip.file(filename, content, { compression: 'STORE' });
+          } else if (aggressiveCompression.some((agg) => filename.includes(agg))) {
+            // Apply maximum compression to content files
+            newZip.file(filename, content, {
+              compression: 'DEFLATE',
+              compressionOptions: { level: 9 },
+            });
+          } else {
+            // Apply standard compression to other files
+            newZip.file(filename, content, {
+              compression: 'DEFLATE',
+              compressionOptions: { level: 6 },
+            });
+          }
+        } else {
+          newZip.folder(filename);
+        }
+      }
+
+      // Generate compressed PowerPoint file
+      const compressedPpt = await newZip.generateAsync({
+        type: 'blob',
+        compression: 'DEFLATE',
+        compressionOptions: { level: 9 },
+      });
+
+      return compressedPpt;
+    } else if (fileExtension.toLowerCase() === 'ppt') {
+      // For legacy PPT files, use binary optimization
+      const uint8Array = new Uint8Array(arrayBuffer);
+
+      // PPT files are OLE compound documents
+      // We'll try to optimize by removing unnecessary data
+
+      // Find the end of the actual content
+      let contentEnd = uint8Array.length;
+
+      // Look for common PPT file endings and remove trailing data
+      const pptEndings = [
+        // Common PPT file endings
+        [0x00, 0x00, 0x00, 0x00], // Null padding
+        [0xff, 0xff, 0xff, 0xff], // Filled padding
+        [0x20, 0x20, 0x20, 0x20], // Space padding
+      ];
+
+      // Remove trailing zeros and padding
+      while (contentEnd > 0) {
+        const lastByte = uint8Array[contentEnd - 1];
+        if (lastByte === 0x00 || lastByte === 0xff || lastByte === 0x20) {
+          contentEnd--;
+        } else {
+          break;
+        }
+      }
+
+      // Also try to find the actual end of PPT content
+      // Look for PPT file structure markers
+      const pptMarkers = [
+        [0xd0, 0xcf, 0x11, 0xe0], // OLE header
+        [0x50, 0x50, 0x54], // PPT marker
+        [0x50, 0x6f, 0x77, 0x65, 0x72, 0x50, 0x6f, 0x69, 0x6e, 0x74], // "PowerPoint"
+      ];
+
+      // Find the last occurrence of PPT content
+      for (let i = contentEnd - 1; i >= 0; i--) {
+        let found = false;
+        for (const marker of pptMarkers) {
+          if (i + marker.length <= contentEnd) {
+            let match = true;
+            for (let j = 0; j < marker.length; j++) {
+              if (uint8Array[i + j] !== marker[j]) {
+                match = false;
+                break;
+              }
+            }
+            if (match) {
+              contentEnd = i + marker.length;
+              found = true;
+              break;
+            }
+          }
+        }
+        if (found) break;
+      }
+
+      // Create optimized PPT file
+      const optimizedArray = uint8Array.slice(0, contentEnd);
+
+      // If the optimization didn't reduce size significantly, try alternative approach
+      if (optimizedArray.length > uint8Array.length * 0.95) {
+        // Try to compress the entire file using a different approach
+        // Create a simple compression by removing redundant data
+        const compressed = new Uint8Array(Math.ceil(optimizedArray.length * 0.8));
+        let compressedIndex = 0;
+
+        for (let i = 0; i < optimizedArray.length; i++) {
+          // Simple run-length encoding for repeated bytes
+          let count = 1;
+          while (i + 1 < optimizedArray.length && optimizedArray[i] === optimizedArray[i + 1] && count < 255) {
+            count++;
+            i++;
+          }
+
+          if (count > 3) {
+            // Use run-length encoding
+            compressed[compressedIndex++] = 0xff; // Marker for run-length
+            compressed[compressedIndex++] = count;
+            compressed[compressedIndex++] = optimizedArray[i];
+          } else {
+            // Copy bytes directly
+            for (let j = 0; j < count; j++) {
+              compressed[compressedIndex++] = optimizedArray[i - j];
+            }
+          }
+        }
+
+        // Trim the compressed array to actual size
+        const finalCompressed = compressed.slice(0, compressedIndex);
+        return new Blob([finalCompressed], { type: file.type });
+      }
+
+      return new Blob([optimizedArray], { type: file.type });
+    }
+
+    // Fallback: return original file
+    return file;
+  } catch (error) {
+    throw new Error(`PowerPoint compression failed: ${error.message}`);
+  }
+};
+
+/**
  * Compresses Office documents (DOC, PPT, XLS) by optimizing their internal structure
  * Note: This is a basic implementation that works with the ZIP-based Office formats
  */
@@ -137,63 +310,9 @@ const compressOfficeDocument = async (file: File, fileExtension: string): Promis
       return await compressWordFile(file);
     }
 
-    // For Office documents (PPTX), they are essentially ZIP files
-    // We can compress them by re-compressing their internal contents
-    if (['pptx'].includes(fileExtension.toLowerCase())) {
-      const zip = new JSZip();
-      const zipContent = await zip.loadAsync(arrayBuffer);
-
-      // Create a new ZIP with maximum compression
-      const newZip = new JSZip();
-
-      // Process each file in the Office document
-      for (const [filename, zipEntry] of Object.entries(zipContent.files)) {
-        if (!zipEntry.dir) {
-          const content = await zipEntry.async('uint8array');
-
-          // Skip certain files that shouldn't be compressed or are already optimized
-          const skipCompression = ['[Content_Types].xml', '_rels/.rels', 'docProps/app.xml', 'docProps/core.xml'];
-
-          if (skipCompression.some((skip) => filename.includes(skip))) {
-            newZip.file(filename, content, { compression: 'STORE' });
-          } else {
-            // Compress content files with maximum compression
-            newZip.file(filename, content, {
-              compression: 'DEFLATE',
-              compressionOptions: { level: 9 },
-            });
-          }
-        } else {
-          newZip.folder(filename);
-        }
-      }
-
-      // Generate compressed Office document
-      const compressedDoc = await newZip.generateAsync({
-        type: 'blob',
-        compression: 'DEFLATE',
-        compressionOptions: { level: 9 },
-      });
-
-      return compressedDoc;
-    }
-
-    // For older formats (PPT), we'll use a different approach
-    // These are binary formats that we can't easily compress without parsing
-    if (['ppt'].includes(fileExtension.toLowerCase())) {
-      // For these formats, we'll try to optimize by removing unnecessary metadata
-      // This is a simplified approach - in production you might want to use specific libraries
-
-      const uint8Array = new Uint8Array(arrayBuffer);
-
-      // Basic optimization: try to reduce file size by removing trailing zeros
-      let optimizedLength = uint8Array.length;
-      while (optimizedLength > 0 && uint8Array[optimizedLength - 1] === 0) {
-        optimizedLength--;
-      }
-
-      const optimizedArray = uint8Array.slice(0, optimizedLength);
-      return new Blob([optimizedArray], { type: file.type });
+    // Handle PowerPoint files with enhanced compression
+    if (['ppt', 'pptx'].includes(fileExtension.toLowerCase())) {
+      return await compressPowerPointFile(file, fileExtension);
     }
 
     // Fallback: return original file
