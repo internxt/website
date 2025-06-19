@@ -5,14 +5,14 @@
       "normal": "最佳檔案壓縮工具，可安全縮小影片、照片與文件大小。"
     },
     "cards": [
-      { "title": "MOV 檔案", "description": "免費壓縮影片。", "pathname": "mov" },
-      { "title": "PDF 檔案", "description": "免費壓縮 PDF 檔案。", "pathname": "pdf" },
-      { "title": "JPG 檔案", "description": "免費壓縮 JPG。", "pathname": "jpg" },
-      { "title": "PNG 檔案", "description": "免費壓縮 PNG。", "pathname": "png" },
-      { "title": "PPT 檔案", "description": "免費壓縮 PPT。", "pathname": "ppt" },
-      { "title": "Word 檔案", "description": "免費壓縮 Word 檔案。", "pathname": "doc" },
-      { "title": "Excel 檔案", "description": "免費壓縮 Excel 檔案。", "pathname": "xls" },
-      { "title": "ZIP 檔案", "description": "免費壓縮 ZIP 檔案。", "pathname": "zip" }
+      { "title": "MOV 檔案", "description": "免費壓縮影片。", "pathname": "compress-mov" },
+      { "title": "PDF 檔案", "description": "免費壓縮 PDF 檔案。", "pathname": "compress-pdf" },
+      { "title": "JPG 檔案", "description": "免費壓縮 JPG。", "pathname": "compress-jpg" },
+      { "title": "PNG 檔案", "description": "免費壓縮 PNG。", "pathname": "compress-png" },
+      { "title": "PPT 檔案", "description": "免費壓縮 PPT。", "pathname": "compress-ppt" },
+      { "title": "Word 檔案", "description": "免費壓縮 Word 檔案。", "pathname": "compress-word" },
+      { "title": "Excel 檔案", "description": "免費壓縮 Excel 檔案。", "pathname": "compress-excel" },
+      { "title": "ZIP 檔案", "description": "免費壓縮 ZIP 檔案。", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {

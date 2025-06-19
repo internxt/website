@@ -310,43 +310,43 @@
     "description": "Compresor de archivos de Internxt, el mejor para reducir gratis el tamaño de vídeos, fotos y documentos."
   },
   {
-    "id": "mov",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-mov",
+    "title": "Compresor de Internxt para comprimir videos",
+    "description": "Internxt te permite comprimir videos de forma gratuita para reducir el tamaño del archivo y enviarlos en línea sin preocuparte por los límites de tamaño."
   },
   {
-    "id": "pdf",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-pdf",
+    "title": "Compresor de Internxt para comprimir PDF archivos",
+    "description": "Internxt te permite comprimir archivos PDF de forma gratuita para que puedas proteger y enviar tus documentos con facilidad."
   },
   {
-    "id": "jpg",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-jpg",
+    "title": "Compresor de Internxt para comprimir JPG archivos",
+    "description": "Comprime tus archivos JPG de forma gratuita con Internxt para que puedas proteger y enviar tus imágenes con facilidad."
   },
   {
-    "id": "png",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-png",
+    "title": "Compresor de Internxt para comprimir PNG archivos",
+    "description": "Comprime tus archivos PNG de forma gratuita con Internxt para que puedas proteger y enviar tus imágenes con facilidad."
   },
   {
-    "id": "ppt",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-ppt",
+    "title": "Compresor de Internxt para comprimir PPT archivos",
+    "description": "Comprime tus archivos PPT de forma gratuita con Internxt para reducir el tamaño del archivo y facilitar la gestión del almacenamiento y uso compartido de archivos."
   },
   {
-    "id": "doc",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-word",
+    "title": "Compresor de Internxt para comprimir Word archivos online",
+    "description": "Comprimir archivos de Word (DOC) de forma gratuita y online para reducir su tamaño y facilitar su almacenamiento y su uso compartido."
   },
   {
-    "id": "xls",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-excel",
+    "title": "Compresor de Internxt para comprimir archivos Excel",
+    "description": "Compresor gratuito para comprimir archivos Excel (XLS) - Reduce su tamaño para facilitar su almacenamiento y su intercambio de archivos."
   },
   {
-    "id": "zip",
-    "title": "Convertir PNG a PDF en línea gratis | Internxt",
-    "description": "El convertidor de archivos de Internxt convierte PNG a PDF gratis. Nuestro conversor PNG a PDF es una forma fácil, rápida y segura de convertir tus archivos."
+    "id": "compress-zip",
+    "title": "Compresor de ZIP en línea - Internxt",
+    "description": "Un compresor ZIP en línea reduce el tamaño de tus archivos ZIP para ahorrar almacenamiento, compartir y subir sin preocuparte por los límites de tamaño de archivo."
   }
 ]

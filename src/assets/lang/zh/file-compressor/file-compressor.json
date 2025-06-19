@@ -5,14 +5,14 @@
       "normal": "最佳文件压缩工具，可安全减小视频、照片和文档大小。"
     },
     "cards": [
-      { "title": "MOV 文件", "description": "免费视频压缩。", "pathname": "mov" },
-      { "title": "PDF 文件", "description": "免费压缩 PDF 文件。", "pathname": "pdf" },
-      { "title": "JPG 文件", "description": "免费压缩 JPG。", "pathname": "jpg" },
-      { "title": "PNG 文件", "description": "免费压缩 PNG。", "pathname": "png" },
-      { "title": "PPT 文件", "description": "免费压缩 PPT。", "pathname": "ppt" },
-      { "title": "Word 文件", "description": "免费压缩 Word 文件。", "pathname": "doc" },
-      { "title": "Excel 文件", "description": "免费压缩 Excel 文件。", "pathname": "xls" },
-      { "title": "ZIP 文件", "description": "免费压缩 ZIP 文件。", "pathname": "zip" }
+      { "title": "MOV 文件", "description": "免费视频压缩。", "pathname": "compress-mov" },
+      { "title": "PDF 文件", "description": "免费压缩 PDF 文件。", "pathname": "compress-pdf" },
+      { "title": "JPG 文件", "description": "免费压缩 JPG。", "pathname": "compress-jpg" },
+      { "title": "PNG 文件", "description": "免费压缩 PNG。", "pathname": "compress-png" },
+      { "title": "PPT 文件", "description": "免费压缩 PPT。", "pathname": "compress-ppt" },
+      { "title": "Word 文件", "description": "免费压缩 Word 文件。", "pathname": "compress-word" },
+      { "title": "Excel 文件", "description": "免费压缩 Excel 文件。", "pathname": "compress-excel" },
+      { "title": "ZIP 文件", "description": "免费压缩 ZIP 文件。", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {

@@ -395,43 +395,43 @@
     "description": "Internxt 檔案壓縮器是最佳免費工具，可壓縮影片、照片和文件的檔案大小。"
   },
   {
-    "id": "mov",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-mov",
+    "title": "Internxt 影片壓縮器",
+    "description": "Internxt 讓您免費壓縮影片以減小檔案大小，無需擔心大小限制即可線上傳送。"
   },
   {
-    "id": "pdf",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-pdf",
+    "title": "Internxt PDF 檔案壓縮器",
+    "description": "Internxt 讓您免費壓縮 PDF 檔案，以便您可以輕鬆保護和傳送文件。"
   },
   {
-    "id": "jpg",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-jpg",
+    "title": "Internxt JPG 檔案壓縮器",
+    "description": "使用 Internxt 免費壓縮 JPG 檔案，以便您可以輕鬆保護和傳送圖片。"
   },
   {
-    "id": "png",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-png",
+    "title": "Internxt PNG 檔案壓縮器",
+    "description": "使用 Internxt 免費壓縮 PNG 檔案，以便您可以輕鬆保護和傳送圖片。"
   },
   {
-    "id": "ppt",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-ppt",
+    "title": "Internxt PPT 檔案壓縮器",
+    "description": "使用 Internxt 免費壓縮 PPT 檔案，以減小檔案大小並簡化檔案儲存和共享管理。"
   },
   {
-    "id": "doc",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-word",
+    "title": "Internxt 線上 Word 檔案壓縮器",
+    "description": "免費線上壓縮 Word 檔案(DOC)，減小檔案大小，方便儲存和共享。"
   },
   {
-    "id": "xls",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-excel",
+    "title": "Internxt Excel 檔案壓縮器",
+    "description": "免費 Excel 檔案(XLS)壓縮器 - 減小檔案大小，方便儲存和檔案共享。"
   },
   {
-    "id": "zip",
-    "title": "免費線上將 PNG 轉換為 PDF | Internxt",
-    "description": "Internxt 的檔案轉換器可免費將 PNG 轉換為 PDF。我們的 PNG 轉 PDF 工具是一種簡單、快速且安全的檔案轉換方式。"
+    "id": "compress-zip",
+    "title": "線上 ZIP 壓縮器 - Internxt",
+    "description": "線上 ZIP 壓縮器可減小 ZIP 檔案大小，節省儲存空間，無需擔心檔案大小限制即可共享和上傳。"
   }
 ]

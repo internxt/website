@@ -225,43 +225,43 @@
     "description": "Il compressore di file di Internxt, il miglior strumento per ridurre gratuitamente le dimensioni di video, foto e documenti."
   },
   {
-    "id": "mov",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-mov",
+    "title": "Compressore di video Internxt",
+    "description": "Internxt ti permette di comprimere gratuitamente i video per ridurre le dimensioni del file e inviarli online senza preoccuparti dei limiti di dimensione."
   },
   {
-    "id": "pdf",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-pdf",
+    "title": "Compressore di file PDF Internxt",
+    "description": "Internxt ti permette di comprimere gratuitamente i file PDF per proteggere e inviare facilmente i tuoi documenti."
   },
   {
-    "id": "jpg",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-jpg",
+    "title": "Compressore di file JPG Internxt",
+    "description": "Comprimi gratuitamente i tuoi file JPG con Internxt per proteggere e inviare facilmente le tue immagini."
   },
   {
-    "id": "png",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-png",
+    "title": "Compressore di file PNG Internxt",
+    "description": "Comprimi gratuitamente i tuoi file PNG con Internxt per proteggere e inviare facilmente le tue immagini."
   },
   {
-    "id": "ppt",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-ppt",
+    "title": "Compressore di file PPT Internxt",
+    "description": "Comprimi gratuitamente i tuoi file PPT con Internxt per ridurre le dimensioni del file e facilitare la gestione dell'archiviazione e della condivisione dei file."
   },
   {
-    "id": "doc",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-word",
+    "title": "Compressore di file Word online Internxt",
+    "description": "Comprimi gratuitamente i file Word (DOC) online per ridurre le dimensioni e facilitare l'archiviazione e la condivisione."
   },
   {
-    "id": "xls",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-excel",
+    "title": "Compressore di file Excel Internxt",
+    "description": "Compressore gratuito per file Excel (XLS) - Riduci le dimensioni per facilitare l'archiviazione e la condivisione dei file."
   },
   {
-    "id": "zip",
-    "title": "Converti PNG in PDF online gratis | Internxt",
-    "description": "Il convertitore di file di Internxt converte PNG in PDF gratuitamente. Il nostro convertitore da PNG a PDF è un modo semplice, veloce e sicuro per convertire i tuoi file."
+    "id": "compress-zip",
+    "title": "Compressore ZIP online - Internxt",
+    "description": "Un compressore ZIP online riduce le dimensioni dei tuoi file ZIP per risparmiare spazio di archiviazione, condividere e caricare senza preoccuparti dei limiti di dimensione del file."
   }
 ]

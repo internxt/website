@@ -430,43 +430,43 @@
     "description": "Internxt file compressor,  the best file compressor to reduce the file size of videos, photos, and documents for free."
   },
   {
-    "id": "mov",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-mov",
+    "title": "Compress MOV File - Internxt",
+    "description": "Internxt lets you compress a MOV file for free to reduce file size and send large video files online without worrying about file size limits."
   },
   {
-    "id": "pdf",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-pdf",
+    "title": "Compress PDF File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a PDF file so you can secure and send your documents with ease."
   },
   {
-    "id": "jpg",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-jpg",
+    "title": "Compress JPG File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a JPG file so you can secure and send your photos with ease."
   },
   {
-    "id": "png",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-png",
+    "title": "Compress PNG File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a PNG file so you can secure and send your photos with ease."
   },
   {
-    "id": "ppt",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-ppt",
+    "title": "Compress PPT File - Internxt",
+    "description": "Internxt lets you compress a PPT file for free to reduce file size for easier storage and file sharing management."
   },
   {
-    "id": "doc",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-word",
+    "title": "Compress Word File - Internxt",
+    "description": "Compress Word (DOC) files for free to reduce file size for easier storage and file sharing management for your documents."
   },
   {
-    "id": "xls",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-excel",
+    "title": "Compress Excel File - Internxt",
+    "description": "Compress Excel (XLS) files for free to reduce file size for easier storage and file sharing management for your spreadsheets."
   },
   {
-    "id": "zip",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
-    "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
+    "id": "compress-zip",
+    "title": "Online ZIP Compressor - Internxt",
+    "description": "An online ZIP compressor reduces the size of your ZIP files to save storage, share, and upload without worrying about file size limits."
   }
 ]

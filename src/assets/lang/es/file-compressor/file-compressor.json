@@ -8,42 +8,42 @@
       {
         "title": "Archivo MOV",
         "description": "Comprimir videos gratis.",
-        "pathname": "mov"
+        "pathname": "compress-mov"
       },
       {
         "title": "Archivo PDF",
         "description": "Comprimir archivos PDF gratis.",
-        "pathname": "pdf"
+        "pathname": "compress-pdf"
       },
       {
         "title": "Archivo JPG",
         "description": "Comprimir archivos JPG gratis.",
-        "pathname": "jpg"
+        "pathname": "compress-jpg"
       },
       {
         "title": "Archivo PNG",
         "description": "Comprimir archivos PNG gratis.",
-        "pathname": "png"
+        "pathname": "compress-png"
       },
       {
         "title": "Archivo PPT",
         "description": "Comprimir archivos PPT gratis.",
-        "pathname": "ppt"
+        "pathname": "compress-ppt"
       },
       {
         "title": "Archivo Word",
         "description": "Comprimir archivos Word gratis.",
-        "pathname": "doc"
+        "pathname": "compress-word"
       },
       {
         "title": "Archivo Excel",
         "description": "Comprimir archivos Excel gratis.",
-        "pathname": "xls"
+        "pathname": "compress-excel"
       },
       {
         "title": "Archivo ZIP",
         "description": "Comprimir archivos ZIP gratis.",
-        "pathname": "zip"
+        "pathname": "compress-zip"
       }
     ]
   },

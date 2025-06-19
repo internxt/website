@@ -221,43 +221,43 @@
     "description": "Internxt-Dateikomprimierer, der beste Datei-Komprimierer zur kostenlosen Reduzierung der Dateigröße von Videos, Fotos und Dokumenten."
   },
   {
-    "id": "mov",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-mov",
+    "title": "Internxt Video-Komprimierer",
+    "description": "Mit Internxt können Sie Videos kostenlos komprimieren, um die Dateigröße zu reduzieren und sie online zu versenden, ohne sich um Größenbeschränkungen zu sorgen."
   },
   {
-    "id": "pdf",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-pdf",
+    "title": "Internxt PDF-Datei-Komprimierer",
+    "description": "Mit Internxt können Sie PDF-Dateien kostenlos komprimieren, damit Sie Ihre Dokumente einfach schützen und versenden können."
   },
   {
-    "id": "jpg",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-jpg",
+    "title": "Internxt JPG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre JPG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
   },
   {
-    "id": "png",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-png",
+    "title": "Internxt PNG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PNG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
   },
   {
-    "id": "ppt",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-ppt",
+    "title": "Internxt PPT-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PPT-Dateien kostenlos mit Internxt, um die Dateigröße zu reduzieren und die Verwaltung von Dateispeicherung und -freigabe zu vereinfachen."
   },
   {
-    "id": "doc",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-word",
+    "title": "Internxt Online Word-Datei-Komprimierer",
+    "description": "Word-Dateien (DOC) kostenlos und online komprimieren, um ihre Größe zu reduzieren und die Speicherung und Freigabe zu erleichtern."
   },
   {
-    "id": "xls",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-excel",
+    "title": "Internxt Excel-Datei-Komprimierer",
+    "description": "Kostenloser Komprimierer für Excel-Dateien (XLS) - Reduzieren Sie die Größe für einfache Speicherung und Dateifreigabe."
   },
   {
-    "id": "zip",
-    "title": "PNG in PDF-Dateien online kostenlos umwandeln | Internxt",
-    "description": "Internxts Dateikonverter wandelt PNG kostenlos in PDF-Dateien um. Unser PNG-zu-PDF-Konverter ist eine einfache, schnelle und sichere Möglichkeit, Ihre Dateien zu konvertieren."
+    "id": "compress-zip",
+    "title": "Online ZIP-Komprimierer - Internxt",
+    "description": "Ein Online-ZIP-Komprimierer reduziert die Größe Ihrer ZIP-Dateien, um Speicherplatz zu sparen und Dateien ohne Größenbeschränkungen zu teilen und hochzuladen."
   }
 ]
