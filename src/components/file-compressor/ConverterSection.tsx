@@ -35,19 +35,29 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
 
   const pathnameSegments = pathname.split('-');
+  const fileType = pathnameSegments[1];
 
-  const lastExtensionInPathname = pathnameSegments[pathnameSegments.length - 1];
+  const urlToFileExtensionsMap = {
+    jpg: ['jpg'],
+    png: ['png'],
+    pdf: ['pdf'],
+    mov: ['mov'],
+    zip: ['zip'],
+    word: ['doc', 'docx'],
+    excel: ['xls', 'xlsx'],
+    ppt: ['ppt', 'pptx'],
+  };
 
-  const allowedUploadedFilesExtension = fileMimeTypes[pathnameSegments[0]];
+  const allowedExtensionsForPath = urlToFileExtensionsMap[fileType] || [];
+
+  const allowedUploadedFilesExtension = fileMimeTypes[fileType];
 
   const formattedConverterText = formatText(converterText, {
-    pathFrom: extensionName[pathnameSegments[0]],
-    pathTo: extensionName[lastExtensionInPathname],
+    pathFrom: extensionName[fileType],
   });
 
   const formattedErrorText = formatText(errorContent, {
-    pathFrom: extensionName[pathnameSegments[0]],
-    pathTo: extensionName[lastExtensionInPathname],
+    pathFrom: extensionName[fileType],
   });
 
   const resetViewToInitialState = useCallback(() => {
@@ -68,23 +78,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     const file = files.length > 0 ? files.item(files.length - 1) : null;
     if (!file) return;
 
-    const fileTypes = file.type;
-    const fileExtension = file.name.split('.').pop()?.toLowerCase();
+    const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
 
-    if (!pathnameSegments.length) {
-      setError('unsupportedFormat');
-      setConverterStates('errorState');
-      return;
-    }
-
-    // Check if the file extension is supported for compression
-    const isExtensionAllowed = compressionTypes.allCompressionTypes.includes(fileExtension || '');
-
-    // Also check MIME type as fallback
-    const isMimeTypeAllowed =
-      fileTypes.includes(pathnameSegments[0]) || Object.values(fileMimeTypes).includes(fileTypes);
-
-    if (!isExtensionAllowed && !isMimeTypeAllowed) {
+    if (!allowedExtensionsForPath.includes(fileExtension)) {
       setError('unsupportedFormat');
       setConverterStates('errorState');
       return;
@@ -112,18 +108,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         return;
       }
 
-      // Use the same validation logic as handleDroppedFiles
-      const fileTypes = file.type;
-      const fileExtension = file.name.split('.').pop()?.toLowerCase();
+      const fileExtension = file.name.split('.').pop()?.toLowerCase() || '';
 
-      // Check if the file extension is supported for compression
-      const isExtensionAllowed = compressionTypes.allCompressionTypes.includes(fileExtension || '');
-
-      // Also check MIME type as fallback
-      const isMimeTypeAllowed =
-        fileTypes.includes(pathnameSegments[0]) || Object.values(fileMimeTypes).includes(fileTypes);
-
-      if (!isExtensionAllowed && !isMimeTypeAllowed) {
+      if (!allowedExtensionsForPath.includes(fileExtension)) {
         setError('unsupportedFormat');
         setConverterStates('errorState');
         return;
@@ -135,24 +122,15 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   };
 
   const handleCompression = async () => {
-    if (!pathname || !files) return;
-
-    const fileExtension = pathname.split('/').pop()?.replace('-compress', '');
-    if (!fileExtension) return;
-
-    // Check if the file type is supported for compression
-    const isSupportedType = compressionTypes.allCompressionTypes.includes(fileExtension);
-    if (!isSupportedType) {
-      setError('unsupportedFormat');
-      setConverterStates('errorState');
-      return;
-    }
+    if (!fileType || !files) return;
 
     setConverterStates('compressingState');
 
     try {
       // Determine compression type based on file extension
-      let compressionType;
+      let compressionType: 'image' | 'document' | 'video' | 'archive' | undefined;
+      const fileExtension = files[0].name.split('.').pop()?.toLowerCase() || '';
+
       if (compressionTypes.imageCompression.includes(fileExtension)) {
         compressionType = 'image';
       } else if (compressionTypes.documentCompression.includes(fileExtension)) {
@@ -181,7 +159,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       initialState: (
         <InitialState
           textContent={formattedConverterText.dragNDropArea}
-          pathFrom={extensionName[pathnameSegments[0]]}
+          pathFrom={extensionName[fileType]}
           handleFileDrop={handleDroppedFiles}
           isDragging={isDragging}
           setIsDragging={setIsDragging}
