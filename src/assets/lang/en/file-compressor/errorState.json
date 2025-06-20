@@ -1,0 +1,18 @@
+{
+  "bigFile": {
+    "label": "File size exceeds limit.",
+    "selectFile": "Please select a smaller file"
+  },
+  "internalError": {
+    "label": {
+      "bold": "Something went wrong. ",
+      "normal": "Please try again."
+    }
+  },
+  "unsupportedFormat": {
+    "label": {
+      "bold": "Unsupported file format. ",
+      "normal": "Please upload a valid ${{pathFrom}} file."
+    }
+  }
+}

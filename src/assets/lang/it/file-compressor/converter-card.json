@@ -1,0 +1,24 @@
+{
+  "title": "Comprimi il file ${{pathFrom}}",
+  "secureUpload": "Caricamenti sicuri garantiti dalla protezione della privacy di Internxt. Non memorizziamo alcuna informazione.",
+  "dragNDropArea": {
+    "maxFileSize": "Dimensione massima del file: 1 GB",
+    "dragYourFile": "Trascina e rilascia qui il tuo file ${{pathFrom}}",
+    "cta": "Scegli file ${{pathFrom}}",
+    "draggingFile": "Rilascia il file qui"
+  },
+  "fileSelected": {
+    "title": "File selezionato per la compressione",
+    "cancel": "Annulla",
+    "convert": "Comprimi il file ${{pathFrom}}"
+  },
+  "converting": "Compressione del file in corso",
+  "fileConverted": {
+    "label": "Il tuo file ${{pathFrom}} è stato compresso con successo",
+    "title": "Il download inizierà automaticamente a breve",
+    "description": "Se non succede, clicca il pulsante qui sotto.",
+    "goHome": "Home",
+    "convertAnother": "Comprimi un altro file",
+    "downloadFile": "Scarica file ${{pathFrom}}"
+  }
+}
