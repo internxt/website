@@ -7,12 +7,12 @@
     "cards": [
       {
         "title": " MOV file",
-        "description": "Compress MOV files for free.",
+        "description": "Compress MOV files for free",
         "pathname": "compress-mov"
       },
       {
         "title": " PDF file",
-        "description": "Compress PDF files for free.",
+        "description": "Compress PDF files for free",
         "pathname": "compress-pdf"
       },
       {
@@ -22,27 +22,27 @@
       },
       {
         "title": " PNG file",
-        "description": "Compress PNG files for free.",
+        "description": "Compress PNG files for free",
         "pathname": "compress-png"
       },
       {
         "title": " PPT file",
-        "description": "Compress PPT files for free.",
+        "description": "Compress PPT files for free",
         "pathname": "compress-ppt"
       },
       {
         "title": " Word file",
-        "description": "Compress Word files for free.",
+        "description": "Compress Word files for free",
         "pathname": "compress-word"
       },
       {
         "title": " Excel file",
-        "description": "Compress Excel files for free.",
+        "description": "Compress Excel files for free",
         "pathname": "compress-excel"
       },
       {
         "title": " ZIP file",
-        "description": "Compress ZIP files for free.",
+        "description": "Compress ZIP files for free",
         "pathname": "compress-zip"
       }
     ]

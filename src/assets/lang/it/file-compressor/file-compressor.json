@@ -5,14 +5,14 @@
       "normal": "Il miglior compressore di file per ridurre in modo sicuro le dimensioni di video, foto e documenti."
     },
     "cards": [
-      { "title": "File MOV", "description": "Comprimi video gratis.", "pathname": "compress-mov" },
-      { "title": "File PDF", "description": "Comprimi PDF gratis.", "pathname": "compress-pdf" },
-      { "title": "File JPG", "description": "Comprimi JPG gratis.", "pathname": "compress-jpg" },
-      { "title": "File PNG", "description": "Comprimi PNG gratis.", "pathname": "compress-png" },
-      { "title": "File PPT", "description": "Comprimi PPT gratis.", "pathname": "compress-ppt" },
-      { "title": "File Word", "description": "Comprimi Word gratis.", "pathname": "compress-word" },
-      { "title": "File Excel", "description": "Comprimi Excel gratis.", "pathname": "compress-excel" },
-      { "title": "File ZIP", "description": "Comprimi ZIP gratis.", "pathname": "compress-zip" }
+      { "title": "File MOV", "description": "Comprimi video gratis", "pathname": "compress-mov" },
+      { "title": "File PDF", "description": "Comprimi PDF gratis", "pathname": "compress-pdf" },
+      { "title": "File JPG", "description": "Comprimi JPG gratis", "pathname": "compress-jpg" },
+      { "title": "File PNG", "description": "Comprimi PNG gratis", "pathname": "compress-png" },
+      { "title": "File PPT", "description": "Comprimi PPT gratis", "pathname": "compress-ppt" },
+      { "title": "File Word", "description": "Comprimi Word gratis", "pathname": "compress-word" },
+      { "title": "File Excel", "description": "Comprimi Excel gratis", "pathname": "compress-excel" },
+      { "title": "File ZIP", "description": "Comprimi ZIP gratis", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {

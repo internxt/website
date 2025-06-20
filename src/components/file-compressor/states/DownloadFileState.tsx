@@ -15,9 +15,9 @@ const DownloadFileState = ({
   const route = useRouter();
   return (
     <div className="flex flex-col items-center space-y-8 text-center">
-      <div className="bg-green/8 flex flex-row space-x-2 rounded-lg p-4 text-center md:text-start">
-        <CheckCircle className="text-green hidden md:flex" size={19.5} />
-        <p className="text-gray-100">{textContent.label}</p>
+      <div className="flex flex-row items-center space-x-2 rounded-lg bg-green-40 p-4 text-center text-green-dark md:text-start">
+        <CheckCircle weight="fill" size={19.5} className="hidden shrink-0 md:flex" />
+        <p>{textContent.label}</p>
       </div>
       <h3 className="text-3xl font-semibold">{textContent.title}</h3>
       <p className="text-lg font-semibold text-gray-60">{textContent.description}</p>

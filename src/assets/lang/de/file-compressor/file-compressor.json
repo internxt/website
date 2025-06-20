@@ -5,14 +5,14 @@
       "normal": "Der beste Dateikompressor, um die Größe deiner Videos, Fotos und Dokumente sicher zu reduzieren."
     },
     "cards": [
-      { "title": "MOV-Datei", "description": "Videos kostenlos komprimieren.", "pathname": "compress-mov" },
-      { "title": "PDF-Datei", "description": "PDF-Dateien kostenlos komprimieren.", "pathname": "compress-pdf" },
-      { "title": "JPG-Datei", "description": "JPG-Dateien kostenlos komprimieren.", "pathname": "compress-jpg" },
-      { "title": "PNG-Datei", "description": "PNG-Dateien kostenlos komprimieren.", "pathname": "compress-png" },
-      { "title": "PPT-Datei", "description": "PPT-Dateien kostenlos komprimieren.", "pathname": "compress-ppt" },
-      { "title": "Word-Datei", "description": "Word-Dateien kostenlos komprimieren.", "pathname": "compress-word" },
-      { "title": "Excel-Datei", "description": "Excel-Dateien kostenlos komprimieren.", "pathname": "compress-excel" },
-      { "title": "ZIP-Datei", "description": "ZIP-Dateien kostenlos komprimieren.", "pathname": "compress-zip" }
+      { "title": "MOV-Datei", "description": "Videos kostenlos komprimieren", "pathname": "compress-mov" },
+      { "title": "PDF-Datei", "description": "PDF-Dateien kostenlos komprimieren", "pathname": "compress-pdf" },
+      { "title": "JPG-Datei", "description": "JPG-Dateien kostenlos komprimieren", "pathname": "compress-jpg" },
+      { "title": "PNG-Datei", "description": "PNG-Dateien kostenlos komprimieren", "pathname": "compress-png" },
+      { "title": "PPT-Datei", "description": "PPT-Dateien kostenlos komprimieren", "pathname": "compress-ppt" },
+      { "title": "Word-Datei", "description": "Word-Dateien kostenlos komprimieren", "pathname": "compress-word" },
+      { "title": "Excel-Datei", "description": "Excel-Dateien kostenlos komprimieren", "pathname": "compress-excel" },
+      { "title": "ZIP-Datei", "description": "ZIP-Dateien kostenlos komprimieren", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {

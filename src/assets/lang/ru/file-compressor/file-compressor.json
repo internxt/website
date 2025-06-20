@@ -5,14 +5,14 @@
       "normal": "Лучший компрессор файлов для безопасного уменьшения размера видео, фото и документов."
     },
     "cards": [
-      { "title": "Файл MOV", "description": "Бесплатное сжатие видео.", "pathname": "compress-mov" },
-      { "title": "Файл PDF", "description": "Бесплатное сжатие PDF.", "pathname": "compress-pdf" },
-      { "title": "Файл JPG", "description": "Бесплатное сжатие JPG.", "pathname": "compress-jpg" },
-      { "title": "Файл PNG", "description": "Бесплатное сжатие PNG.", "pathname": "compress-png" },
-      { "title": "Файл PPT", "description": "Бесплатное сжатие PPT.", "pathname": "compress-ppt" },
-      { "title": "Файл Word", "description": "Сжатие Word бесплатно.", "pathname": "compress-word" },
-      { "title": "Файл Excel", "description": "Сжатие Excel бесплатно.", "pathname": "compress-excel" },
-      { "title": "Файл ZIP", "description": "Сжатие ZIP бесплатно.", "pathname": "compress-zip" }
+      { "title": "Файл MOV", "description": "Бесплатное сжатие видео", "pathname": "compress-mov" },
+      { "title": "Файл PDF", "description": "Бесплатное сжатие PDF", "pathname": "compress-pdf" },
+      { "title": "Файл JPG", "description": "Бесплатное сжатие JPG", "pathname": "compress-jpg" },
+      { "title": "Файл PNG", "description": "Бесплатное сжатие PNG", "pathname": "compress-png" },
+      { "title": "Файл PPT", "description": "Бесплатное сжатие PPT", "pathname": "compress-ppt" },
+      { "title": "Файл Word", "description": "Сжатие Word бесплатно", "pathname": "compress-word" },
+      { "title": "Файл Excel", "description": "Сжатие Excel бесплатно", "pathname": "compress-excel" },
+      { "title": "Файл ZIP", "description": "Сжатие ZIP бесплатно", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {

@@ -29,8 +29,8 @@ const InitialState = ({
           </div>
         ) : (
           <>
-            <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
-              <p className="font-medium text-gray-80">{textContent.maxFileSize}</p>
+            <div className="flex flex-col rounded-lg bg-orange-dark/7 px-4 py-2">
+              <p className="font-semibold text-orange-dark">{textContent.maxFileSize}</p>
             </div>
             <p className="text-3xl font-semibold text-gray-100">
               {formatText(textContent.dragYourFile, {

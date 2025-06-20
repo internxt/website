@@ -62,7 +62,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
         </div>
         <SignUpBanner textContent={bannerText} lang={'en'} />
         {/* Text sections */}
-        <div className="flex max-w-[832px] flex-col space-y-16">
+        <div className="flex max-w-[966px] flex-col space-y-16">
           <div className="flex flex-col space-y-3">
             <p className="text-2xl font-medium text-gray-100">{textContent.inxtFileCompressor.title}</p>
             <RenderDescription description={textContent.inxtFileCompressor.description} />
@@ -91,7 +91,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
               key={card.title}
               className={`flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 shadow-lg transition-shadow duration-300 hover:shadow-xl sm:p-10 md:max-w-[488px]`}
             >
-              <div className="flex w-full max-w-[408px] flex-col">
+              <div className="flex w-full max-w-[388px] flex-col">
                 <div className="flex w-full flex-row items-center justify-between">
                   <p className="mb-6 text-2xl font-medium text-gray-100">{card.title}</p>
                   <card.icon className="mb-6 text-4xl text-primary" size={40} />
