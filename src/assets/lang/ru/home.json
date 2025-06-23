@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Скидка 70%",
+    "label": "Скидка 80%",
     "title": {
       "line1": "Получите самое ",
       "blueText": "безопасное",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Храните свои файлы безопасно, теперь ",
-        "blueText": "на 70% дешевле"
+        "blueText": "на 80% дешевле"
       },
       "trustedBy": "Доверяют более 330 000 человек",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " в облаке"
       },
       "subtitle": "Полная безопасность и контроль.",
-      "description": "Скидка 70%",
+      "description": "Скидка 80%",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus и другое",
         "Постквантовая криптография и нулевое знание",
@@ -79,7 +79,7 @@
       "guarantee": "Гарантия возврата денег в течение 30 дней"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Скидка 70%",
+      "saveLabel": "Скидка 80%",
       "title": "Всемирный день окружающей среды",
       "subtitle": "Все планы Internxt",
       "cta": "Выбери свой план",

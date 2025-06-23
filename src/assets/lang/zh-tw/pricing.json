@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "85% 折扣",
+      "line1": "80% 折扣",
       "line2": "我們的年度計劃"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "匿名帳戶創建"
     },
     "cta": {
-      "title": "享受 85% 折扣",
+      "title": "享受 80% 折扣",
       "description": "優惠有效期為一年。計劃將在次年以非折扣價格自動續訂。"
     }
   },
@@ -28,7 +28,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "享受 ",
-      "blue2": "85% 折扣 ",
+      "blue2": "80% 折扣 ",
       "normal2": "的最安全雲端存儲"
     },
     "description": "使用價格實惠的軍用級加密雲端存儲保護您的工作和個人文件。",
@@ -38,12 +38,12 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85% 優惠",
+      "label": "80% 優惠",
       "title": "愛護地球，保護您的資料",
       "subtitle": "私密且永續的雲端儲存",
       "subtitle2": "Drive、Antivirus 和 VPN 全部包含",
       "cta": "立即取得您的方案",
-      "cta2": "獲得 85% 折扣",
+      "cta2": "獲得 80% 折扣",
       "guarantee": "30 天退款保證",
       "lastCta": "*優惠僅適用於免費帳戶或新用戶",
       "titleMbl": "世界環境日",
@@ -61,7 +61,7 @@
         "normalText": "所有我們的獨家終身計劃"
       },
       "blackFriday": {
-        "title": "黑色星期五超級促銷：最安全的雲端儲存方案享85%折扣",
+        "title": "黑色星期五超級促銷：最安全的雲端儲存方案享80%折扣",
         "description": "使用 Internxt 保護您的數據，避免數據洩露、財務損失和隱私風險。告別那些從您的個人信息中牟利的科技巨頭。"
       }
     },

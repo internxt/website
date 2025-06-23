@@ -15,6 +15,8 @@ module.exports = {
       current: 'currentColor',
       black: 'rgb(0,0,0)',
       white: 'rgb(255,255,255)',
+      'white-summer': 'rgb(239, 239, 239, 0.6)',
+      'white-summer-2': 'rgb(255, 255, 255, 0.3)',
       // NEW DESIGN SYSTEM
       primary: 'rgb(0,102,255)',
       'primary-dark': 'rgb(0,88,219)',
