@@ -31,7 +31,10 @@ export const PriceBannerForCampaigns = ({
           <div className="my-10 flex flex-col items-center gap-2 rounded-3xl bg-white-summer px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left">
             <div className="flex flex-row items-center gap-4 pt-10">
               <p className="bg-white-summer-2 px-1 py-0.5 text-xl font-semibold text-primary">{textContent.label}</p>
-              <p className="text-4xl font-semibold text-gray-100">{textContent.title}</p>
+              <p className="text-4xl font-semibold text-gray-100">
+                {textContent.title.line1}
+                {textContent.title.line2}
+              </p>
             </div>
 
             <div className="flex w-full flex-col space-y-2">
@@ -65,17 +68,18 @@ export const PriceBannerForCampaigns = ({
       <div
         style={{
           backgroundImage: `url('${bgImage}')`,
-          backgroundPosition: '100% 90%',
-          backgroundSize: '200%',
+          backgroundPosition: '90% 90%',
+          backgroundSize: '280%',
         }}
         className={'relative z-10 flex w-screen flex-col justify-between py-5 pb-80 md:pb-[1000px] lg:hidden'}
       >
         <div className="mx-4 my-10 flex flex-col items-center gap-2 rounded-2xl bg-white-summer px-6 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left">
-          <div className="flex w-max self-start bg-white-summer-2 px-1 py-0.5">
+          <div className="flex w-max items-center bg-white-summer-2 px-1 py-0.5">
             <p className="text-sm font-semibold text-primary">{textContent.label}</p>
           </div>
-          <div className="-mt-6 flex w-full flex-col px-4">
-            <p className="text-3xl font-semibold text-gray-100">{textContent.title}</p>
+          <div className="flex w-full flex-col ">
+            <p className="text-3xl font-semibold text-gray-100">{textContent.title.line1}</p>
+            <p className="text-3xl font-semibold text-gray-100">{textContent.title.line2}</p>
           </div>
 
           <div className="min-h-auto flex flex-col items-center space-y-2 py-3">

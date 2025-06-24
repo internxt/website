@@ -121,7 +121,7 @@ export interface BillingFrequency {
 
 export interface CtaBanner {
   label: string;
-  title: string;
+  title: HeroSectionTitle;
   subtitle: string;
   subtitle2: string;
   cta: string;

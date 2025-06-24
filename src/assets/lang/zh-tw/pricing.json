@@ -38,18 +38,18 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "80% 優惠",
-      "title": "愛護地球，保護您的資料",
-      "subtitle": "私密且永續的雲端儲存",
-      "subtitle2": "Drive、Antivirus 和 VPN 全部包含",
-      "cta": "立即取得您的方案",
-      "cta2": "獲得 80% 折扣",
+      "label": "省下 80%",
+      "title": {
+        "line1": "年度與終身",
+        "line2": " 方案"
+      },
+      "subtitle": "今夏保護你的資料，隨身攜帶不受限！",
+      "subtitle2": "Drive、防毒與 VPN",
+      "cta": "取得你的方案",
+      "cta2": "享 80% 折扣",
       "guarantee": "30 天退款保證",
-      "lastCta": "*優惠僅適用於免費帳戶或新用戶",
-      "titleMbl": "世界環境日",
-      "subtitleMbl": "所有 Internxt 方案",
-      "descriptionMbl": "抽獎贈送 Internxt 背包",
-      "ctaMbl": "購買您的方案"
+      "gift": "抽獎贈送 Internxt x Swiss Peak 背包",
+      "lastCta": "*優惠僅適用於免費帳戶或新用戶"
     },
     "save": "節省高達",
     "planTitles": {

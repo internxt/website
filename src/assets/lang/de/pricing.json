@@ -43,18 +43,18 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "80% Angebot",
-      "title": "Schütze den Planeten und deine Daten",
-      "subtitle": "Privater und nachhaltiger Cloud-Speicher",
-      "subtitle2": "Drive, Antivirus und VPN alles inklusive",
+      "label": "Spare 80 %",
+      "title": {
+        "line1": "Jahres-",
+        "line2": " und lebenslange Pläne"
+      },
+      "subtitle": "Schütze diesen Sommer deine Daten und nimm sie überall mit!",
+      "subtitle2": "Drive, Antivirus und VPN",
       "cta": "Sichere dir deinen Plan",
-      "cta2": "Erhalte 80% Rabatt",
-      "guarantee": "30-tägige Geld-zurück-Garantie",
-      "lastCta": "*Angebot gültig für kostenlose Konten oder neue Nutzer",
-      "titleMbl": "Weltumwelttag",
-      "subtitleMbl": "Alle Internxt-Pläne",
-      "descriptionMbl": "Verlosung eines Internxt-Rucksacks",
-      "ctaMbl": "Kaufe deinen Plan"
+      "cta2": "Erhalte 80 % Rabatt",
+      "guarantee": "30 Tage Geld-zurück-Garantie",
+      "gift": "Verlosung eines Internxt x Swiss Peak Rucksacks",
+      "lastCta": "*Angebot gilt für kostenlose Konten oder neue Nutzer"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",

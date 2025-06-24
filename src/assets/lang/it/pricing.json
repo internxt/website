@@ -43,18 +43,18 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offerta 80%",
-      "title": "Prenditi cura del pianeta e proteggi i tuoi dati",
-      "subtitle": "Archiviazione cloud privata e sostenibile",
-      "subtitle2": "Drive, Antivirus e VPN tutto incluso",
+      "label": "Risparmia l'80%",
+      "title": {
+        "line1": "Piani",
+        "line2": " annuali e a vita"
+      },
+      "subtitle": "Quest’estate proteggi e porta con te tutte le tue informazioni!",
+      "subtitle2": "Drive, Antivirus e VPN",
       "cta": "Ottieni il tuo piano",
-      "cta2": "Ottieni uno sconto dell'80%",
+      "cta2": "Ricevi uno sconto dell'80%",
       "guarantee": "Garanzia di rimborso di 30 giorni",
-      "lastCta": "*Offerta valida per account gratuiti o nuovi utenti",
-      "titleMbl": "Giornata Mondiale dell'Ambiente",
-      "subtitleMbl": "Tutti i piani Internxt",
-      "descriptionMbl": "Estrazione di uno zaino Internxt",
-      "ctaMbl": "Acquista il tuo piano"
+      "gift": "Estrazione di uno zaino Internxt x Swiss Peak",
+      "lastCta": "*Offerta valida per account gratuiti o nuovi utenti"
     },
     "save": "Risparmia fino al",
     "planTitles": {

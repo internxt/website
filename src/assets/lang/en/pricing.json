@@ -44,7 +44,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Save 80%",
-      "title": "Annual and Lifetime plans!",
+      "title": {
+        "line1": "Annual",
+        "line2": " and Lifetime plans!"
+      },
       "subtitle": "Cool savings for hot days",
       "subtitle2": "Drive, Antivirus, and VPN",
       "cta": "Claim deal!",

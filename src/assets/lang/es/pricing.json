@@ -42,17 +42,17 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Ahorra un 80%",
-      "title": "Planes anuales y de por vida",
+      "title": {
+        "line1": "Planes",
+        "line2": " anuales y de por vida"
+      },
       "subtitle": "Este verano, protege y lleva toda tu información a todas partes!",
       "subtitle2": "Drive, Antivirus y VPN",
       "cta": "Consigue tu plan",
       "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de 30 días",
-      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
-      "titleMbl": "Día Mundial del Medio Ambiente",
-      "subtitleMbl": "Todos los planes Internxt",
-      "descriptionMbl": "Sorteo de una mochila Internxt",
-      "ctaMbl": "Compra tu plan"
+      "gift": "Sorteo mochila Internxt x Swiss Peak",
+      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios"
     },
     "planTitles": {
       "individuals": "Planes individuales",
