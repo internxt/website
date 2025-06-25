@@ -22,9 +22,9 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
-            <p className="font-semibold">
+            <p className="font-bold">
               {textContent.title.normalText}🔥
-              <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
+              <span className=" ml-1 font-semibold">{textContent.title.boldText}</span>
             </p>
           </div>
           <Link
