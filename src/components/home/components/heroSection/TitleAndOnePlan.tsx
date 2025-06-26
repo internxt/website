@@ -1,11 +1,13 @@
 import Countdown from '@/components/components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import Header from '@/components/shared/Header';
-import { Check, ShieldCheck } from '@phosphor-icons/react';
+import { Check, CheckCircle, ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import styles from '@/components/privacy/HeroSection.module.scss';
 import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
@@ -29,64 +31,64 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
   }, []);
 
   return (
-    <div className="lg:pt-24">
-      <div className=" max-w-[544px] flex-col rounded-3xl bg-white-summer px-6 backdrop-blur-[8px] lg:flex">
-        {header ?? (
-          <div className="flex flex-col gap-6 text-start ">
-            <div className="flex flex-col pt-4">
-              <Header maxWidth="max-w-[500px]" className="text-gray-100">
-                {textContent.title.textBeforeBlueText}
-                <span className="text-primary">{textContent.title.blueText}</span>
-                {textContent.title.textAfterBlueText}
-              </Header>
-              <p className="pt-4 text-xl font-medium ">
-                <span className="text-primary">{textContent.subtitle}</span>
-              </p>
-              <p className="pt-4 text-xl font-medium ">
-                <span className="text-gray-100">{textContent.description}</span>
-              </p>
-            </div>
-            <div className="mx-auto flex flex-col lg:mx-0">
-              {textContent.features.map((feat) => (
-                <div key={feat} className="flex flex-row gap-2">
-                  <Check className="pt-2 text-primary lg:pt-0" weight="bold" size={24} />
-                  <p className="text-regular text-left text-lg text-gray-100 ">{feat}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+    <div
+      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-[343px] flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
+    >
+      <div className="w-[303px] overflow-hidden lg:w-[506px]">
+        <Header>
+          {textContent.title.textBeforeBlueText}
+          <span className="text-primary">{textContent.title.blueText}</span>
+          {textContent.title.textAfterBlueText}
+        </Header>
 
-        <div className="flex flex-row justify-start pb-4 pt-6">
-          <p className="flex flex-row items-end text-gray-100">
-            {textContent.startFrom.normal1}{' '}
-            <span className="flex w-max flex-row items-start justify-start text-4xl font-medium text-gray-100">
-              <abbr className="mt-0.5 text-base ">{currency}</abbr>
-              {textContent.startFrom.price}
-            </span>
-            {textContent.startFrom.normal2}
-          </p>
+        <p className="pb-5 pt-3 text-left text-xl font-medium">
+          <span className="text-primary">{textContent.subtitle}</span>
+          <br />
+          <span className="block pt-3 text-gray-100">{textContent.description}</span>
+        </p>
+
+        <div className=" flex flex-col">
+          {textContent.features.map((feat) => (
+            <div key={feat} className="flex min-h-[24px] flex-row items-start gap-1 lg:gap-2 lg:pt-2">
+              <Check className="mt-1 text-primary" weight="bold" size={20} />
+              <p className="text-left text-sm font-normal text-gray-100 lg:text-lg">{feat}</p>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 pt-4 lg:flex-row lg:justify-start lg:gap-4">
-          <div className="flex w-full flex-col items-center rounded-lg bg-white-summer-2 py-3 text-primary shadow-sm lg:order-2 lg:flex lg:w-1/2 lg:justify-center">
-            <Countdown textFont="font-medium" textHeight="text-xl text-gray-100 " />
-          </div>
-          <div className="flex w-full flex-col items-center lg:order-1 lg:w-1/2 lg:flex-row">
-            <Link
-              href={'#priceTable'}
-              className="z-10 flex w-full justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark"
-            >
-              {textContent.claimDeal}
-            </Link>
+
+        <div className="pt flex flex-row items-end pt-6 text-base font-normal lg:pt-8">
+          {textContent.startFrom.normal1}{' '}
+          <span className="flex w-max flex-row text-4xl font-medium text-gray-100">
+            <abbr className="text-base">{currency}</abbr>
+            {textContent.startFrom.price}
+          </span>
+          {textContent.startFrom.normal2}
+        </div>
+
+        <div className="flex flex-col-reverse gap-3 pt-6 md:flex-row">
+          <Link
+            href={'#priceTable'}
+            className="z-10 flex h-[48px] w-full items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark md:w-1/2"
+          >
+            {textContent.claimDeal}
+          </Link>
+
+          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 text-primary md:w-1/2">
+            <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100 shadow-soft" />
           </div>
         </div>
 
-        {footer ?? (
-          <div className="flex flex-row items-center justify-center space-x-3 pb-10 pt-4 lg:justify-start">
-            <ShieldCheck size={24} weight="fill" className="text-primary" />
-            <p className="whitespace-nowrap text-gray-100 lg:text-lg">{textContent.guarantee}</p>
-          </div>
-        )}
+        <div className="flex flex-row gap-2 pt-3">
+          <Image
+            src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
+            alt="Internxt Blue Shield check"
+            width={24}
+            height={24}
+            className="hidden md:block"
+          />
+          <CheckCircle size={24} weight="fill" className="block text-primary md:hidden" />
+          <p className="whitespace-nowrap pt-0.5 text-gray-100 lg:text-lg">{textContent.guarantee}</p>
+        </div>
       </div>
     </div>
   );

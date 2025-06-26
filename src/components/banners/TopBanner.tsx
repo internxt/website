@@ -14,7 +14,6 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
 
   return (
     <>
-      {/* Desktop view */}
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
@@ -22,9 +21,18 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
-            <p className="font-bold">
-              {textContent.title.normalText}🔥
-              <span className=" ml-1 font-semibold">{textContent.title.boldText}</span>
+            <p>
+              {lang === 'en' ? (
+                <>
+                  {textContent.title.normalText}🔥
+                  <span className="ml-1 font-bold">{textContent.title.boldText}</span>
+                </>
+              ) : (
+                <>
+                  <span className="font-bold">{textContent.title.normalText}</span>🔥
+                  {textContent.title.boldText}
+                </>
+              )}
             </p>
           </div>
           <Link
@@ -37,14 +45,14 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
           </Link>
         </div>
       </div>
-      {/* Mobile view */}
+
       <Link
         href={'/pricing'}
         className={`group fixed left-0 z-30 flex h-[65px]  w-screen items-center justify-center overflow-hidden bg-primary pt-2 text-white lg:hidden`}
       >
         <div className=" h-full w-full items-center justify-center px-3 text-center md:mb-3">
           <div className="flex flex-col items-center justify-center">
-            {textContent.title.normalText} ✈️
+            {textContent.title.normalText} 🔥
             <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
           </div>
         </div>

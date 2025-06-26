@@ -1,22 +1,6 @@
-const Header = ({
-  children,
-  maxWidth = 'max-w-[796px]',
-  className,
-  textHeightForDesk = 'sm:text-5xl',
-  withoutLeading,
-}: {
-  children: React.ReactNode;
-  maxWidth?: string;
-  className?: string;
-  withoutLeading?: boolean;
-  isToolsPage?: boolean;
-  textHeightForDesk?: string;
-}): JSX.Element => {
-  const leading = withoutLeading ? '' : 'sm:leading-tight';
+const Header = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
-    <h1
-      className={`${maxWidth} ${className} whitespace-normal  pt-4 text-3xl font-semibold  lg:text-5xl ${textHeightForDesk} ${leading}`}
-    >
+    <h1 className="h-[72px] whitespace-normal text-3xl font-semibold leading-tight lg:text-5xl xl:h-[116px] xl:pt-2">
       {children}
     </h1>
   );

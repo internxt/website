@@ -59,9 +59,9 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Экосистема ",
-        "blueText": "безопасности",
-        "textAfterBlueText": " в облаке"
+        "textBeforeBlueText": "Среда ",
+        "blueText": "безопасная ",
+        "textAfterBlueText": "в облаке"
       },
       "subtitle": "Полная безопасность и контроль.",
       "description": "Скидка 80%",
