@@ -9,7 +9,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
       {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-16 px-6">
         <div className="flex flex-col space-y-6 text-center">
-          <Header>
+          <Header className="text-gray-100">
             {textContent.title.line1} <br />
             {textContent.title.line2} <span className="text-primary">{textContent.blueText}</span>
           </Header>
