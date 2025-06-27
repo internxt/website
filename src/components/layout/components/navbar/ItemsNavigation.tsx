@@ -61,7 +61,7 @@ const DropdownMenu = ({ label, items, darkMode, lang }: DropdownMenuProps) => {
 
   return (
     <div
-      className={`group relative flex cursor-default space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
+      className={`group relative flex cursor-default items-center space-x-1 rounded-lg px-4 py-1.5 pr-2 font-medium transition duration-150 ease-in-out ${menuClasses}`}
     >
       <span>{label}</span>
       <CaretDown
@@ -101,7 +101,7 @@ export const ItemsNavigation = ({
 
   return (
     <div className="links">
-      <div className="hidden space-x-2 lg:inline-flex">
+      <div className="hidden items-center space-x-2 lg:inline-flex">
         <NavigationLink
           href="/pricing"
           text={textContent.links.pricing}

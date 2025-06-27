@@ -21,25 +21,27 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
   const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/home/image_mobile.webp');
   const blurBgImage = getImage('/images/home/header/bg.svg');
+  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
   const handleOnClick = () => {
     router.push('/pricing');
   };
   return (
-    <section className="overflow-hidden">
-      <div className="relative mx-4 pb-12 pt-24  lg:pt-0 xl:mx-32">
+    <section className="overflow-hidden ">
+      <div className="relative">
         <div
-          style={{ backgroundImage: `url('${blurBgImage}')`, filter: 'blur(24px)' }}
-          className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block "
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundPosition: '100% 90%',
+          }}
+          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block"
         />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div
-            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
-          >
+          <div className={`flex w-screen flex-shrink-0 ${componentsFlow} px-5 pb-9  pt-24 xl:pl-28 2xl:pl-0`}>
             {!shouldShowMobileBanner ? (
-              <div className="flex lg:hidden">
+              <div className="hidden">
                 <Image
                   loading="eager"
                   src={mobileImage}
@@ -56,10 +58,6 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
               <HomePageBannerForMobile />
             )}
             <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
-          </div>
-
-          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-            <Animation />
           </div>
         </div>
       </div>
