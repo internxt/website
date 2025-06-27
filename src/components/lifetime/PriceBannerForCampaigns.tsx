@@ -24,7 +24,7 @@ export const PriceBannerForCampaigns = ({
           backgroundSize: '100%',
         }}
         className={
-          'relative z-10 hidden flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1100px] 2xl:w-[1300px]'
+          'relative z-10 hidden flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1000px] 2xl:w-[1300px]'
         }
       >
         <div className=" flex w-full flex-col items-center text-center lg:flex-row lg:items-start lg:text-left">
