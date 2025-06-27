@@ -136,6 +136,10 @@ export enum PromoCodeName {
   CLOUDWARDS87 = 'CLOUDWARDS87',
   PCLOUD87 = 'PCLOUD87',
   Special85 = 'SPECIAL85',
+  Bevalk = 'BEVALK',
+  Hacksviss = 'HACKSVISS',
+  Securiters = 'SECURITERS',
+  Exclusive85 = 'EXCLUSIVE85',
 }
 
 export interface PromoCodeProps {
