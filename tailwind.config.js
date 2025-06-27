@@ -146,14 +146,14 @@ module.exports = {
     },
     extend: {
       screens: {
-        'mobile-sm': '360px',   
-        'mobile': '384px',     
-        'mobile-md': '390px',   
-        'xs': '480px',          
-        '3xl': '1728px',       
-        '4xl': '1920px',        
-        '5xl': '2160px',        
-        '6xl': '2560px',       
+        'mobile-sm': '360px',
+        mobile: '384px',
+        'mobile-md': '390px',
+        xs: '480px',
+        '3xl': '1728px',
+        '4xl': '1920px',
+        '5xl': '2160px',
+        '6xl': '2560px',
         '7xl': '3440px',
         ...defaultTheme.screens,
       },
@@ -165,6 +165,8 @@ module.exports = {
         'full-percentage': '100%',
         20: '20px',
         'sm-6': '6px',
+        32: '32px',
+        2: '2px',
       },
 
       boxShadow: {

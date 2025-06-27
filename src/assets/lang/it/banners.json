@@ -137,9 +137,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Quest’estate porta tutte le tue informazioni con te ",
+      "boldText": "Quest’estate porta i tuoi dati sempre con te ",
       "normalText": "Sconto dell’80% su tutti i piani!",
-      "cta": "Scegli il tuo piano "
+      "cta": "Scegli un piano "
     }
   },
   "lifetimeBanner": {

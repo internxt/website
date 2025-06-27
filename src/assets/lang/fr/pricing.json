@@ -47,18 +47,18 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Économisez 80 %",
+      "label": "Économisez 80%",
       "title": {
-        "line1": "Offre ",
-        "line2": " d'été"
+        "line1": "Offres",
+        "line2": " annuels et à vie"
       },
       "subtitle": "Cet été, protégez et emportez toutes vos données partout !",
       "subtitle2": "Drive, Antivirus et VPN",
-      "cta": "Choisissez votre abonnement",
-      "cta2": "Obtenez 80 % de réduction",
-      "guarantee": "Garantie de remboursement de 30 jours",
-      "gift": "Tirage au sort d’un sac à dos Internxt x Swiss Peak",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs"
+      "cta": "Prenez un forfait",
+      "cta2": "Bénéficiez de 80% de remise",
+      "guarantee": "Garantie de retour sous 30 jours",
+      "gift": "Tirage sac à dos Internxt x Swiss Peak",
+      "lastCta": "*Offre valable pour comptes gratuits ou nouveaux utilisateurs"
     },
     "planTitles": {
       "individuals": "Plans individuels",

@@ -20,46 +20,55 @@ export const PriceBannerForCampaigns = ({
       <div
         style={{
           backgroundImage: `url('${bgImage}')`,
-          backgroundPosition: 'center bottom',
+          backgroundPosition: '0% 100%',
           backgroundSize: '100%',
         }}
         className={
-          'w- relative  z-10 hidden w-[1400px] flex-col overflow-hidden rounded-[16px] sm:gap-40 sm:rounded-[32px] lg:flex lg:flex-row'
+          'relative z-10 hidden flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1100px] 2xl:w-[1300px]'
         }
       >
-        <div className=" flex  w-full flex-col items-center  text-center lg:flex-row lg:items-start  lg:pl-10  lg:text-left">
-          <div className="my-10 flex flex-col items-center gap-2 rounded-3xl bg-white-summer px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left">
-            <div className="flex flex-row items-center gap-4 pt-10">
-              <p className="bg-white-summer-2 px-1 py-0.5 text-xl font-semibold text-primary">{textContent.label}</p>
-              <p className="text-4xl font-semibold text-gray-100">
-                {textContent.title.line1}
-                {textContent.title.line2}
-              </p>
+        <div className=" flex w-full flex-col items-center text-center lg:flex-row lg:items-start lg:text-left">
+          <div className="mx-10 my-10 flex h-[341px] w-[715px] flex-col justify-between rounded-20 bg-white-summer px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[755px]">
+            <div className="flex flex-col">
+              <div className="flex flex-row items-center gap-4 pt-10">
+                <p className=" rounded-2 bg-white-summer-2 px-1 py-0.5 text-xl font-semibold text-primary">
+                  {textContent.label}
+                </p>
+                <p className="text-4xl font-semibold text-gray-100">
+                  {textContent.title.line1}
+                  {textContent.title.line2}
+                </p>
+              </div>
+              <div className="flex w-[630px] flex-col space-y-2 pt-4">
+                <p className="font-regular text-lg text-gray-100 sm:text-lg md:text-lg lg:text-2xl">
+                  {textContent.subtitle}
+                </p>
+                <p className="font-regular text-lg text-gray-100 sm:text-lg md:text-lg lg:text-lg">
+                  {textContent.subtitle2}
+                </p>
+              </div>
             </div>
-
-            <div className="flex w-full flex-col space-y-2">
-              <p className="font-regular whitespace-nowrap text-lg text-gray-100 sm:text-lg md:text-lg lg:text-2xl">
-                {textContent.subtitle}
-              </p>
-              <p className="font-regular whitespace-nowrap text-lg text-gray-100 sm:text-lg md:text-lg lg:text-lg">
-                {textContent.subtitle2}
-              </p>
-            </div>
-            <div className="flex w-full flex-col items-center gap-2 pt-14 sm:gap-4 lg:flex-row">
+            <div className="flex w-full flex-row items-center gap-2 pt-4 ">
               <Link
                 href={redirectTo ?? '#billingButtons'}
                 className="flex w-1/2 items-center justify-center rounded-lg bg-primary px-3 py-2 text-center font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-2 sm:text-lg"
               >
                 {textContent.cta}
               </Link>
-              <div className="flex flex-row items-center justify-center space-y-1 sm:space-x-2">
-                <CheckCircle size={20} className="text-primary" weight="fill" />
-                <p className="whitespace-nowrap text-base font-medium text-gray-100 sm:text-lg md:pb-1">
+              <div className="flex flex-row items-center justify-center space-x-2">
+                <Image
+                  src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
+                  alt="Internxt Blue Shield check"
+                  width={24}
+                  height={24}
+                  className="hidden md:block"
+                />
+                <p className="font-mormal pt-1.5 text-base text-gray-100 sm:text-base md:pb-1">
                   {textContent.guarantee}
                 </p>
               </div>
             </div>
-            <p className="whitespace-nowrap pb-8 pt-4 text-sm font-medium text-gray-50 sm:text-sm">
+            <p className="pb-10 text-center text-sm font-medium text-gray-50 sm:text-sm lg:text-left">
               {textContent.lastCta}
             </p>
           </div>
