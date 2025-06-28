@@ -151,5 +151,9 @@
     "subtitle": "有一个独家优惠在等着你。",
     "cta": "所有计划80% 折扣",
     "guarantee": "30天退款保证"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "使用 Internxt 节省存储空间",
+    "blueText": "免费压缩文件以优化您的云端"
   }
 }

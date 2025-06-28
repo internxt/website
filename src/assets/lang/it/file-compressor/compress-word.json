@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprimi file Word (DOC) con Internxt per un modo più semplice e produttivo di condividere e collaborare su documenti importanti.",
+    "secureUpload": "Caricamenti sicuri protetti da HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Come comprimere un file DOC",
+      "description": "Per comprimere un file DOC, segui questi passaggi:",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "Carica il tuo file DOC: trascinalo nell’area sopra o selezionalo dal tuo dispositivo per iniziare la conversione."
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Clicca su «Comprimi file DOC»"
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scarica il tuo file."
+        }
+      ],
+      "outro": "Con questo strumento puoi comprimere gratuitamente i file Word ogni volta che ne hai bisogno. I tuoi documenti saranno automaticamente protetti grazie a caricamenti crittografati per garantirne la privacy."
+    },
+    "whyConvert": {
+      "title": "Perché potresti aver bisogno di comprimere un file Word",
+      "intro": "Quando scrivi saggi, rapporti, contratti o altri documenti lunghi, la dimensione dei file può aumentare rapidamente, rendendo difficile condividerli o collaborare. La compressione dei file DOC può ridurne significativamente la dimensione per:",
+      "bullets": [
+        "Condividere più facilmente i file Word",
+        "Rispettare i limiti di caricamento",
+        "Gestire e collaborare su progetti di gruppo"
+      ],
+      "outro": "Tutti i tuoi file vengono crittografati durante il processo di caricamento e compressione per mantenere la privacy. Puoi quindi comprimere, archiviare e condividere i tuoi documenti con fiducia grazie a Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una piattaforma sicura per comprimere, archiviare e condividere file Word",
+    "cta": "Passa a Internxt"
+  }
+}

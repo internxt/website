@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Komprimiere PNG-Dateien, um die Dateigröße zu reduzieren und Bilder ohne Qualitätsverlust mit Internxt zu teilen.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine PNG-Datei",
+      "description": "Um eine PNG-Datei zu komprimieren, folge diesen Schritten:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine PNG-Datei hoch: Ziehe sie in den oberen Bereich oder lade sie von deinem Gerät hoch."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „PNG-Datei komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Komprimiere PNG-Dateien kostenlos, wann immer du willst – mit dem Wissen, dass deine Bilder dank verschlüsselter Uploads sicher und privat bleiben."
+    },
+    "whyConvert": {
+      "title": "Warum PNG-Dateien komprimieren?",
+      "intro": "Wie bei JPG-Dateien möchtest du vielleicht auch PNG-Dateien komprimieren, um die maximale Bildqualität ohne Wasserzeichen zu bewahren. Mit Internxt kannst du PNG-Dateien ohne Anmeldung komprimieren und so deine Fotobibliothek effizient verwalten. Nach der Komprimierung kannst du:",
+      "bullets": [
+        "Website-Ladezeiten verkürzen",
+        "Hohe Bildqualität beibehalten",
+        "Speicherplatz auf Geräten oder in der Cloud sparen"
+      ],
+      "outro": "Alle deine Dateien werden während des Upload- und Komprimierungsvorgangs verschlüsselt, damit deine Bilder privat bleiben. Du kannst sie also sicher mit Internxt komprimieren, speichern und teilen."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von PNG-Dateien",
+    "cta": "Jetzt zu Internxt wechseln"
+  }
+}

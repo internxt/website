@@ -1,0 +1,18 @@
+{
+  "bigFile": {
+    "label": "文件大小超出限制。",
+    "selectFile": "请选择一个较小的文件。"
+  },
+  "internalError": {
+    "label": {
+      "bold": "出现了问题。",
+      "normal": "请重试。"
+    }
+  },
+  "unsupportedFormat": {
+    "label": {
+      "bold": "不支持的文件格式。",
+      "normal": "请上传有效的 ${{pathFrom}} 文件。"
+    }
+  }
+}

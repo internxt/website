@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Kostenloser Kompressor zum Komprimieren von Excel-Dateien (XLS) für eine einfachere und produktivere Zusammenarbeit an Tabellen und zur Präsentation wichtiger Daten.",
+    "secureUpload": "Sichere Uploads, geschützt durch HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimieren Sie eine Excel-Datei",
+      "description": "So komprimieren Sie eine Excel-Datei:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Laden Sie Ihre Excel-Datei (XLS) hoch: Ziehen Sie sie in den Bereich oben oder wählen Sie sie von Ihrem Gerät aus, um die Konvertierung zu starten."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicken Sie auf \"Excel-Datei komprimieren\"."
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Laden Sie Ihre Datei herunter."
+        }
+      ],
+      "outro": "Mit diesem Tool können Sie Excel-Dateien kostenlos komprimieren, wann immer Sie es brauchen. Die Dateien werden während des Uploads automatisch verschlüsselt, um Ihre Dokumente zu schützen."
+    },
+    "whyConvert": {
+      "title": "Warum Excel-Dateien komprimieren?",
+      "intro": "Beim Erstellen umfangreicher Tabellen, Berichte, Dokumente oder Verträge kann die Dateigröße schnell ansteigen, was das Teilen erschwert. Das Komprimieren von Excel-Dateien kann die Größe erheblich reduzieren und die Zusammenarbeit erleichtern:",
+      "bullets": [
+        "Excel-Dateien einfacher teilen und hochladen.",
+        "Datei- und E-Mail-Größenbeschränkungen einhalten.",
+        "An datenbasierten Projekten zusammenarbeiten."
+      ],
+      "outro": "Alle Dateien werden während des Upload- und Komprimierungsprozesses verschlüsselt, damit Ihre Excel-Dateien privat bleiben und Sie sie sicher speichern und teilen können."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von Excel-Dateien.",
+    "cta": "Zu Internxt wechseln"
+  }
+}
