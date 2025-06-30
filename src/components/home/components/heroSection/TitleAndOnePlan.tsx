@@ -32,9 +32,9 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-[343px] flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-full flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
     >
-      <div className="w-[303px] overflow-hidden lg:w-[506px]">
+      <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
           {textContent.title.textBeforeBlueText}
           <span className="text-primary">{textContent.title.blueText}</span>
@@ -51,7 +51,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.features.map((feat) => (
             <div key={feat} className="flex min-h-[24px] flex-row items-start gap-1 lg:gap-2 lg:pt-2">
               <Check className="mt-1 text-primary" weight="bold" size={20} />
-              <p className="pt-1 text-left text-sm font-normal text-gray-100 lg:text-lg">{feat}</p>
+              <p className="pt-1 text-left text-sm font-normal text-gray-100 lg:pt-0 lg:text-lg">{feat}</p>
             </div>
           ))}
         </div>
@@ -74,7 +74,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           </Link>
 
           <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 text-primary md:w-1/2">
-            <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100 shadow-soft" />
+            <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100" />
           </div>
         </div>
 

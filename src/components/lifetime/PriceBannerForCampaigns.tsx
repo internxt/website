@@ -63,12 +63,12 @@ export const PriceBannerForCampaigns = ({
                   height={24}
                   className="hidden md:block"
                 />
-                <p className="font-mormal pt-1.5 text-base text-gray-100 sm:text-base md:pb-1">
+                <p className="font-regular pt-1.5 text-base text-gray-100 sm:text-base md:pb-1">
                   {textContent.guarantee}
                 </p>
               </div>
             </div>
-            <p className="pb-10 text-center text-sm font-medium text-gray-50 sm:text-sm lg:text-left">
+            <p className="font-regular pb-10 text-center text-sm text-gray-50 sm:text-sm lg:text-left">
               {textContent.lastCta}
             </p>
           </div>
