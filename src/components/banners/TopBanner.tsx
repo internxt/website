@@ -25,12 +25,11 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
               {lang === 'en' ? (
                 <>
                   {textContent.title.normalText} 🔥
-                  <span className="ml-1 font-bold">{textContent.title.boldText}</span>
+                  <span className="ml-1 font-bold"> {' ' + textContent.title.boldText}</span>
                 </>
               ) : (
                 <>
-                  <span className="font-bold">{textContent.title.normalText}</span>🔥
-                  {textContent.title.boldText}
+                  <span className="font-bold">{textContent.title.normalText}</span>🔥 {' ' + textContent.title.boldText}
                 </>
               )}
             </p>
