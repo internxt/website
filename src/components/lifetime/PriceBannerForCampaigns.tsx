@@ -39,10 +39,8 @@ export const PriceBannerForCampaigns = ({
                   {textContent.title.line2}
                 </p>
               </div>
-              <div className="flex w-[630px] flex-col space-y-2 pt-4">
-                <p className="font-regular text-lg text-gray-100 sm:text-lg md:text-lg lg:text-2xl">
-                  {textContent.subtitle}
-                </p>
+              <div className="flex w-[630px] flex-col space-y-2">
+                <p className="font-regular text-lg text-gray-100 sm:text-lg md:text-lg lg:text-2xl"></p>
                 <p className="font-regular text-lg text-gray-100 sm:text-lg md:text-lg lg:text-lg">
                   {textContent.subtitle2}
                 </p>

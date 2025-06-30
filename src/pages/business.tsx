@@ -39,7 +39,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.Special80Coupon,
+    couponCodeForBusiness: PromoCodeName.SummerCampaign,
   });
 
   const locale = lang as string;
@@ -104,6 +104,7 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
+        showPromo
       />
 
       <WhyChooseInternxtForBusiness textContent={textContent} />
