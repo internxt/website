@@ -41,7 +41,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.title.textAfterBlueText}
         </Header>
 
-        <p className="pt-3 text-left text-xl font-medium mobile-sm:pt-16 mobile-md:pt-5 ">
+        <p className="pt-3 text-left text-xl font-medium mobile-sm:pt-16 mobile-md:pt-10 ">
           <span className="text-primary">{textContent.subtitle}</span>
           <br />
           <span className="block pt-3 text-gray-100">{textContent.description}</span>
