@@ -48,19 +48,20 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
 
       <Link
         href={'/pricing'}
-        className={`group fixed left-0 z-30 flex h-min  w-screen items-center justify-center overflow-hidden bg-primary pt-2 text-white lg:hidden`}
+        className={`group fixed left-0 z-30 flex h-[64px]  w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
-        <div className=" h-min w-full items-center justify-center px-3 text-center md:mb-3">
+        <div className=" w-full items-center justify-center px-3 text-center md:mb-3">
           <div className="flex flex-col items-center justify-center">
             <p>
               {lang === 'en' ? (
                 <>
-                  {textContent.title.normalText}🔥
+                  {textContent.title.normalText}🔥 <br />
                   <span className="ml-1 font-bold">{textContent.title.boldText}</span>
                 </>
               ) : (
                 <>
                   <span className="font-bold">{textContent.title.normalText}</span>🔥
+                  <br />
                   {textContent.title.boldText}
                 </>
               )}

@@ -51,7 +51,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.features.map((feat) => (
             <div key={feat} className="flex min-h-[24px] flex-row items-start gap-1 lg:gap-2 lg:pt-2">
               <Check className="mt-1 text-primary" weight="bold" size={20} />
-              <p className="text-left text-sm font-normal text-gray-100 lg:text-lg">{feat}</p>
+              <p className="pt-1 text-left text-sm font-normal text-gray-100 lg:text-lg">{feat}</p>
             </div>
           ))}
         </div>
