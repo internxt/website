@@ -32,7 +32,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-full flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
@@ -41,7 +41,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.title.textAfterBlueText}
         </Header>
 
-        <p className="pb-5 pt-3 text-left text-xl font-medium">
+        <p className="pt-3 text-left text-xl font-medium mobile-sm:pt-16 mobile-md:pt-5 ">
           <span className="text-primary">{textContent.subtitle}</span>
           <br />
           <span className="block pt-3 text-gray-100">{textContent.description}</span>
@@ -87,7 +87,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             className="hidden md:block"
           />
           <CheckCircle size={24} weight="fill" className="block text-primary md:hidden" />
-          <p className="whitespace-nowrap pt-0.5 text-gray-100 lg:text-lg">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap pt-0.5 text-gray-100 mobile-sm:pt-0 lg:text-lg">{textContent.guarantee}</p>
         </div>
       </div>
     </div>
