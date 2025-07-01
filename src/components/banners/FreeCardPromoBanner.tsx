@@ -33,7 +33,7 @@ export const FreeCardPromoBanner = () => {
       label: 'User accepts the promo',
       value: '',
     });
-    router.push('/pricing');
+    router.push('/specialoffer/exclusiveoffer');
     onCloseBanner();
   };
 
@@ -50,7 +50,7 @@ export const FreeCardPromoBanner = () => {
   return (
     <div
       className={`${shouldShowBanner ? 'flex' : 'hidden'} 
-         fixed top-0 left-0 right-0 bottom-0 z-50 h-screen w-full bg-black bg-opacity-50 px-5`}
+         fixed bottom-0 left-0 right-0 top-0 z-50 h-screen w-full bg-black bg-opacity-50 px-5`}
     >
       <div className="flex w-full flex-col items-center justify-center">
         {/* absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 */}
@@ -64,10 +64,10 @@ export const FreeCardPromoBanner = () => {
             backgroundSize: 'cover',
           }}
         >
-          <button className="absolute top-0 right-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
+          <button className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
             <X size={32} />
           </button>
-          <div className="flex flex-col items-center gap-12 px-5 pt-16 pb-10 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
+          <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
             <div className="flex w-full max-w-[500px] flex-col items-center gap-12 text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-4 text-center lg:text-left">
                 <h2 className="text-3xl font-bold leading-tight text-gray-100 md:text-5xl">
@@ -98,7 +98,7 @@ export const FreeCardPromoBanner = () => {
                 alt="Free Card Promo Banner"
                 width={500}
                 height={359}
-                className="translate-y-5 translate-x-5"
+                className="translate-x-5 translate-y-5"
               />
             </div>
           </div>
