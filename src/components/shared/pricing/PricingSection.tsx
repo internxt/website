@@ -241,6 +241,7 @@ export const PricingSection = ({
                       isFamilyPage={isFamilyPage}
                       lang={lang}
                       darkMode={darkMode}
+                      showPromo={showPromo}
                     />
                   ))
                 : undefined}
