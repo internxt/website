@@ -50,8 +50,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales,
-    couponCodeForLifetime: PromoCodeName.SoftSales,
+    couponCode: PromoCodeName.SummerCampaign,
+    couponCodeForLifetime: PromoCodeName.SummerCampaign,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -160,7 +160,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessSelector
           hideSwitchSelector
           popularPlanBySize="5TB"
-          showPromo={false}
+          showPromo={true}
         />
 
         {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
