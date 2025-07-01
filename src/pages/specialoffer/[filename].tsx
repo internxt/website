@@ -29,7 +29,7 @@ const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   hacksviss: PromoCodeName.Hacksviss,
   securiters: PromoCodeName.Securiters,
-  exclusiveOffer: PromoCodeName.Exclusive85,
+  exclusiveoffer: PromoCodeName.Exclusive85,
 };
 
 const SpecialOfferPage = ({
@@ -74,7 +74,9 @@ const SpecialOfferPage = ({
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
-  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, '87') : text);
+  const percentOff = decimalDiscount === 13 ? '87' : '85';
+
+  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
 
   return (
     <Layout title={metatags[0]?.title} description={metatags[0]?.description} segmentName="Partners" lang={lang}>
