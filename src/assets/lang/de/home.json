@@ -58,11 +58,11 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Sicheres und ",
-        "blueText": "privates",
-        "textAfterBlueText": " Cloud-Ökosystem"
+        "textBeforeBlueText": " Ökosystem ",
+        "blueText": "sicher",
+        "textAfterBlueText": " & privat in der Cloud"
       },
-      "subtitle": "Komplette Sicherheit und Kontrolle.",
+      "subtitle": "Sicherheit und volle Kontrolle.",
       "description": "80% Rabatt",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus und mehr",
