@@ -74,6 +74,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           </span>
         }
         backgroundColorComponent="bg-gray-1"
+        showPromo={false}
       />
 
       <TablesSection textContent={langJson.TablesSection} />

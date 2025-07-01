@@ -1,51 +1,22 @@
 import { getImage } from '@/lib/getImage';
-import { CheckCircle } from '@phosphor-icons/react';
-import Image from 'next/legacy/image';
 import { useRouter } from 'next/router';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export const HomePageBannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
   const textContent = require(`../../assets/lang/${lang}/home.json`);
+  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const handleOnClick = () => {
     router.push('#priceTable');
   };
   return (
     <div
-      className={`${styles.linearGradient} relative  flex w-screen flex-col items-center justify-center pb-80 md:pb-[900px] lg:hidden`}
-    >
-      <div className="flex flex-col items-center justify-center space-y-2 pt-10">
-        <p className="flex w-max rounded-xl border-2 border-green-dark bg-green-1 px-2 py-1 text-sm font-bold text-white">
-          {textContent.HeroSection.TitleAndOnePlanV2.saveLabel}
-        </p>
-        <p className="px-10 text-center text-4xl font-bold text-white">
-          {textContent.HeroSection.TitleAndOnePlanV2.title}
-        </p>
-        <p className=" text-center text-xl text-white">{textContent.HeroSection.TitleAndOnePlanV2.subtitle}</p>
-        <button
-          onClick={handleOnClick}
-          className="z-20 flex w-max items-center rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white"
-        >
-          {textContent.HeroSection.TitleAndOnePlanV2.cta}
-        </button>
-        <div className="flex flex-row items-center space-x-3 pt-2 ">
-          <CheckCircle size={24} className="text-green-1" weight="fill" />
-          <p className="whitespace-nowrap font-medium text-white lg:text-lg">
-            {textContent.HeroSection.TitleAndOnePlanV2.guarantee}
-          </p>
-        </div>
-        <div className="absolute -left-[17vw] h-[500px] w-[135vw] pt-48" style={{ overflow: 'visible' }}>
-          <Image
-            src={getImage('/images/campaigns/world_environment_day/visual-default.svg')}
-            width={1000}
-            height={1000}
-            quality={100}
-            alt="World Secure Day"
-            className="z-10 w-full object-contain"
-          />
-        </div>
-      </div>
-    </div>
+      className={'relative  flex w-screen flex-col items-center justify-center pb-80 md:pb-[900px] lg:hidden'}
+      style={{
+        backgroundImage: `url('${bgImage}')`,
+        backgroundPosition: '100% 95%',
+        backgroundSize: '200%',
+      }}
+    ></div>
   );
 };
