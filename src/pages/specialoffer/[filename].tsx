@@ -23,12 +23,13 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'hacksviss', 'securiters'];
+const ALLOWED_PATHS = ['bevalk', 'hacksviss', 'securiters', 'exclusiveoffer'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   hacksviss: PromoCodeName.Hacksviss,
   securiters: PromoCodeName.Securiters,
+  exclusiveOffer: PromoCodeName.Exclusive85,
 };
 
 const SpecialOfferPage = ({
