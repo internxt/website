@@ -141,6 +141,7 @@ export enum PromoCodeName {
   Hacksviss = 'HACKSVISS',
   Securiters = 'SECURITERS',
   Exclusive85 = 'EXCLUSIVE85',
+  ValenciaCF = 'VALENCIACF',
 }
 
 export interface PromoCodeProps {
