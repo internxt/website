@@ -44,12 +44,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Risparmia l'80%",
-      "title": {
-        "line1": "Piani",
-        "line2": " annuali e a vita"
-      },
+      "title": "Piani annuali e a vita",
       "subtitle": "Quest’estate proteggi e porta i tuoi dati sempre con te!",
       "subtitle2": "Drive, Antivirus e VPN",
+      "subtitle3": "Meet, Mail, Pulitore di Dispositivi e Monitor del Dark Web",
       "cta": "Attiva un piano",
       "cta2": "Ottieni l'80% di sconto",
       "guarantee": "Garanzia rimborso entro 30 giorni",

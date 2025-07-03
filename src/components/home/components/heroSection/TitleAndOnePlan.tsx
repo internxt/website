@@ -41,13 +41,13 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.title.textAfterBlueText}
         </Header>
 
-        <p className="pt-3 text-left text-xl font-medium mobile-sm:pt-16 mobile-md:pt-10 ">
+        <p className="pt-2 text-left text-lg font-medium xs:text-xl ">
           <span className="text-primary">{textContent.subtitle}</span>
           <br />
-          <span className="block pt-3 text-gray-100">{textContent.description}</span>
+          <span className="block pt-1.5 text-gray-100">{textContent.description}</span>
         </p>
 
-        <div className=" flex flex-col">
+        <div className=" flex flex-col pt-2">
           {textContent.features.map((feat) => (
             <div key={feat} className="flex min-h-[24px] flex-row items-start gap-1 lg:gap-2 lg:pt-2">
               <Check className="mt-1 text-primary" weight="bold" size={20} />
@@ -56,7 +56,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           ))}
         </div>
 
-        <div className="pt flex flex-row items-end pt-6 text-base font-normal lg:pt-8">
+        <div className="pt flex flex-row items-end pt-4 text-base font-normal lg:pt-8">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row text-4xl font-medium text-gray-100">
             <abbr className="text-base">{currency}</abbr>

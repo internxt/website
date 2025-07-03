@@ -42,12 +42,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Ahorra un 80%",
-      "title": {
-        "line1": "Planes",
-        "line2": " anuales y de por vida"
-      },
+      "title": "Planes anuales y de por vida",
       "subtitle": "Este verano, protege y lleva toda tu información a todas partes!",
       "subtitle2": "Drive, Antivirus y VPN",
+      "subtitle3": "Meet, Mail, Limpiador de Dispositivos y Dark Web Monitor",
       "cta": "Consigue tu plan",
       "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de 30 días",

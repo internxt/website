@@ -48,12 +48,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Économisez 80%",
-      "title": {
-        "line1": "Offres",
-        "line2": " annuels et à vie"
-      },
+      "title": "Offres annuels et à vie",
       "subtitle": "Cet été, protégez et emportez toutes vos données partout !",
       "subtitle2": "Drive, Antivirus et VPN",
+      "subtitle3": "Meet, Mail, Nettoyeur d'appareils et Moniteur du Dark Web",
       "cta": "Prenez un forfait",
       "cta2": "Bénéficiez de 80% de remise",
       "guarantee": "Garantie de retour sous 30 jours",

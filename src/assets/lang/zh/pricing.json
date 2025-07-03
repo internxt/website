@@ -39,12 +39,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "立省 80%",
-      "title": {
-        "line1": "年度和终身",
-        "line2": " 套餐"
-      },
+      "title": "年度和终身  套餐",
       "subtitle": "这个夏天，保护你的数据，随时随地带着走！",
       "subtitle2": "Drive、防病毒和 VPN",
+      "subtitle3": "Meet、Mail、设备清理器和暗网监控",
       "cta": "获取你的套餐",
       "cta2": "立享 80% 折扣",
       "guarantee": "30 天退款保证",

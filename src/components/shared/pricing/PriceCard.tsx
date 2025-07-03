@@ -219,7 +219,7 @@ export const PriceCard = ({
           }}
           className={'flex flex-col items-start space-y-2 px-5 py-5'}
         >
-          <span className="text-[13.5px] font-bold text-white">
+          <span className="text-[13.5px] font-bold text-gray-100">
             {contentText.productFeatures.WorldEnvironmentDay.title}
           </span>
           <div className="flex flex-col items-start space-y-2">
@@ -230,11 +230,15 @@ export const PriceCard = ({
                 width={24}
                 height={24}
               />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift1}</span>
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift1}
+              </span>
             </div>
             <div className="flex items-center space-x-2">
               <Backpack size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift2}</span>
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift2}
+              </span>
             </div>
           </div>
         </div>
