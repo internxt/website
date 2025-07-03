@@ -39,12 +39,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "省下 80%",
-      "title": {
-        "line1": "年度與終身",
-        "line2": " 方案"
-      },
+      "title": "年度與終身  方案",
       "subtitle": "今夏保護你的資料，隨身攜帶不受限！",
       "subtitle2": "Drive、防毒與 VPN",
+      "subtitle3": "Meet、Mail、裝置清理器和暗網監控",
       "cta": "取得你的方案",
       "cta2": "享 80% 折扣",
       "guarantee": "30 天退款保證",

@@ -44,12 +44,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Spare 80%",
-      "title": {
-        "line1": "Tarife",
-        "line2": " jährlich & lebenslang"
-      },
+      "title": "Tarife jährlich & lebenslang",
       "subtitle": "Schütze und nimm deine Daten überall mit – diesen Sommer!",
       "subtitle2": "Drive, Antivirus und VPN",
+      "subtitle3": "Meet, Mail, Geräte-Cleaner und Dark-Web-Überwachung",
       "cta": "Hol dir ein Paket",
       "cta2": "Sichere dir 80 % Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
