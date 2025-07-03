@@ -142,6 +142,7 @@ export enum PromoCodeName {
   Securiters = 'SECURITERS',
   Exclusive85 = 'EXCLUSIVE85',
   ValenciaCF = 'VALENCIACF',
+  TokinPrivacy = 'TOKINPRIVACY',
 }
 
 export interface PromoCodeProps {
