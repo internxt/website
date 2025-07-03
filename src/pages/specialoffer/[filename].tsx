@@ -23,7 +23,7 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'hacksviss', 'securiters', 'exclusiveoffer', 'valencia'];
+const ALLOWED_PATHS = ['bevalk', 'hacksviss', 'securiters', 'exclusiveoffer', 'valencia', 'tokinprivacy'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -31,6 +31,7 @@ const COUPON_CODES = {
   securiters: PromoCodeName.Securiters,
   exclusiveoffer: PromoCodeName.Exclusive85,
   valencia: PromoCodeName.ValenciaCF,
+  tokinprivacy: PromoCodeName.TokinPrivacy,
 };
 
 const SpecialOfferPage = ({
