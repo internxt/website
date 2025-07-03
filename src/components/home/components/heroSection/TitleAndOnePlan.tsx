@@ -32,7 +32,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
@@ -65,7 +65,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.startFrom.normal2}
         </div>
 
-        <div className="flex flex-col-reverse gap-3 pt-6 md:flex-row">
+        <div className="flex flex-col-reverse gap-5 pt-6 md:flex-row">
           <Link
             href={'#priceTable'}
             className="z-10 flex h-[48px] w-full items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark md:w-1/2"
@@ -73,7 +73,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             {textContent.claimDeal}
           </Link>
 
-          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 text-primary md:w-1/2">
+          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 pt-2 text-primary shadow-soft md:w-1/2">
             <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100" />
           </div>
         </div>
@@ -85,7 +85,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             width={24}
             height={24}
           />
-          <p className="whitespace-nowrap pt-0.5 text-gray-100 mobile-sm:pt-0 lg:text-lg">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap pt-3 text-sm text-gray-100 mobile-sm:pt-1">{textContent.guarantee}</p>
         </div>
       </div>
     </div>

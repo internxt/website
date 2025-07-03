@@ -101,7 +101,7 @@ export const PriceBannerForCampaigns = ({
             <p className="text-2xl font-semibold text-gray-100">{textContent.title}</p>
             <p className="font-regular pt-3 text-center text-lg  text-gray-100">{textContent.subtitle}</p>
           </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-2">
+          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-4">
             <Image
               src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
               alt="Internxt Blue Shield check"
