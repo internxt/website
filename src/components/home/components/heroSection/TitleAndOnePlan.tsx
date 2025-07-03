@@ -32,7 +32,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 mobile-xs:h-[630px] mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
@@ -56,7 +56,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           ))}
         </div>
 
-        <div className="pt flex flex-row items-end pt-4 text-base font-normal lg:pt-8">
+        <div className="flex flex-row items-end pt-4 text-base font-normal text-gray-100 lg:pt-8">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row text-4xl font-medium text-gray-100">
             <abbr className="text-base">{currency}</abbr>
@@ -85,7 +85,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             width={24}
             height={24}
           />
-          <p className="whitespace-nowrap pt-3 text-sm text-gray-100 mobile-sm:pt-1">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap pt-3 text-sm text-gray-100 mobile-xs:pt-1">{textContent.guarantee}</p>
         </div>
       </div>
     </div>

@@ -146,6 +146,7 @@ module.exports = {
     },
     extend: {
       screens: {
+        'mobile-xs': '344px',
         'mobile-sm': '360px',
         mobile: '384px',
         'mobile-md': '390px',
