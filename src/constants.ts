@@ -43,6 +43,7 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/specialoffer',
   '/annual',
   '/pcloud-alternative',
+  '/specialoffer/[filename]',
 ];
 
 export const SNIGEL_BANNERS = {
