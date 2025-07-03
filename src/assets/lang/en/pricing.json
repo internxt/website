@@ -44,12 +44,10 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Save 80%",
-      "title": {
-        "line1": "Annual",
-        "line2": " and Lifetime plans!"
-      },
+      "title": "Annual and Lifetime plans!",
       "subtitle": "Cool savings for hot days",
       "subtitle2": "Drive, Antivirus, and VPN",
+      "subtitle3": "Meet, Mail, Limpiador de Dispositivos y Dark Web Monitor",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee",
       "gift": "Chance to win an Internxt backpack",

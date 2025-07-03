@@ -32,7 +32,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
@@ -41,13 +41,13 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.title.textAfterBlueText}
         </Header>
 
-        <p className="pt-3 text-left text-xl font-medium mobile-sm:pt-16 mobile-md:pt-10 ">
+        <p className="pt-2 text-left text-lg font-medium xs:text-xl ">
           <span className="text-primary">{textContent.subtitle}</span>
           <br />
-          <span className="block pt-3 text-gray-100">{textContent.description}</span>
+          <span className="block pt-1.5 text-gray-100">{textContent.description}</span>
         </p>
 
-        <div className=" flex flex-col">
+        <div className=" flex flex-col pt-2">
           {textContent.features.map((feat) => (
             <div key={feat} className="flex min-h-[24px] flex-row items-start gap-1 lg:gap-2 lg:pt-2">
               <Check className="mt-1 text-primary" weight="bold" size={20} />
@@ -56,7 +56,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           ))}
         </div>
 
-        <div className="pt flex flex-row items-end pt-6 text-base font-normal lg:pt-8">
+        <div className="pt flex flex-row items-end pt-4 text-base font-normal lg:pt-8">
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row text-4xl font-medium text-gray-100">
             <abbr className="text-base">{currency}</abbr>
@@ -65,7 +65,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
           {textContent.startFrom.normal2}
         </div>
 
-        <div className="flex flex-col-reverse gap-3 pt-6 md:flex-row">
+        <div className="flex flex-col-reverse gap-5 pt-6 md:flex-row">
           <Link
             href={'#priceTable'}
             className="z-10 flex h-[48px] w-full items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark md:w-1/2"
@@ -73,7 +73,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             {textContent.claimDeal}
           </Link>
 
-          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 text-primary md:w-1/2">
+          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 pt-2 text-primary shadow-soft md:w-1/2">
             <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100" />
           </div>
         </div>
@@ -84,10 +84,8 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             alt="Internxt Blue Shield check"
             width={24}
             height={24}
-            className="hidden md:block"
           />
-          <CheckCircle size={24} weight="fill" className="block text-primary md:hidden" />
-          <p className="whitespace-nowrap pt-0.5 text-gray-100 mobile-sm:pt-0 lg:text-lg">{textContent.guarantee}</p>
+          <p className="whitespace-nowrap pt-3 text-sm text-gray-100 mobile-sm:pt-1">{textContent.guarantee}</p>
         </div>
       </div>
     </div>
