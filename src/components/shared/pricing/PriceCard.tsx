@@ -216,7 +216,7 @@ export const PriceCard = ({
         <div
           style={{
             backgroundImage: `url('${bgImage}')`,
-            backgroundPosition: '50% 75%',
+            backgroundPosition: '0% 80%',
           }}
           className={'flex flex-col items-start space-y-2 px-5 py-5'}
         >
