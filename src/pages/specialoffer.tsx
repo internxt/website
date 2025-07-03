@@ -51,12 +51,18 @@ const PartnerDiscount = ({
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
+  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, '85') : text);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed isLinksHidden />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <HeroSection
+        textContent={{
+          ...langJson.HeroSection,
+          info: parseText(langJson.HeroSection.info),
+          cta: parseText(langJson.HeroSection.cta),
+        }}
+      />
 
       <MostSecureSection textContent={langJson.MostSecureSection} />
 
