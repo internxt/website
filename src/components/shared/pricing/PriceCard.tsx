@@ -15,6 +15,7 @@ import {
   LockSimple,
   Password,
   ShieldPlus,
+  SunHorizon,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
@@ -224,12 +225,7 @@ export const PriceCard = ({
           </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <Image
-                src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
-                alt="Internxt Blue Shield check"
-                width={24}
-                height={24}
-              />
+              <SunHorizon size={24} className="text-primary" weight="fill" />
               <span className="text-[13.5px] text-gray-100">
                 {contentText.productFeatures.WorldEnvironmentDay.gift1}
               </span>

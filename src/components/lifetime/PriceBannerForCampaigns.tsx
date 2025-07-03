@@ -31,7 +31,7 @@ export const PriceBannerForCampaigns = ({
         <div className={`flex  flex-col items-center text-center lg:flex-row lg:items-start lg:text-left  `}>
           <div className="mx-10 my-10 flex h-[341px] w-[740px] flex-col justify-between rounded-20 bg-white-summer px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[755px]">
             <div className="flex flex-col">
-              <div className="flex flex-row items-center gap-4 pt-10">
+              <div className="flex flex-row items-center gap-3 pt-10">
                 <p className=" rounded-2 bg-white-summer-2 px-1 py-0.5 text-xl font-semibold text-primary">
                   {textContent.label}
                 </p>
@@ -54,30 +54,32 @@ export const PriceBannerForCampaigns = ({
                   </p>
                 </div>
               </div>
-            </div>
-            <div className="flex w-full flex-row items-center gap-2 ">
-              <Link
-                href={redirectTo ?? '#billingButtons'}
-                className="font-regular flex w-1/2 items-center justify-center rounded-lg bg-primary px-3 py-2 text-center text-white hover:bg-primary/95 sm:px-5 sm:py-2 sm:text-lg"
-              >
-                {textContent.cta}
-              </Link>
-              <div className="flex flex-row items-center justify-center space-x-2">
-                <Image
-                  src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
-                  alt="Internxt Blue Shield check"
-                  width={24}
-                  height={24}
-                  className="hidden md:block"
-                />
-                <p className="font-regular pt-1.5 text-base text-gray-100 sm:text-base md:pb-1">
-                  {textContent.guarantee}
+              <div className=" flex w-[600px] flex-col items-start pt-6">
+                <div className="flex w-full flex-row items-center gap-4  ">
+                  <Link
+                    href={redirectTo ?? '#billingButtons'}
+                    className="font-regular text-md flex w-1/2 items-center justify-center rounded-lg bg-primary px-3 py-2 text-center text-white hover:bg-primary/95 sm:px-5 sm:py-2"
+                  >
+                    {textContent.cta}
+                  </Link>
+                  <div className="flex flex-row items-center justify-center space-x-2">
+                    <Image
+                      src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
+                      alt="Internxt Blue Shield check"
+                      width={24}
+                      height={24}
+                      className="hidden md:block"
+                    />
+                    <p className="font-regular pt-1.5 text-base text-gray-100 sm:text-base md:pb-1">
+                      {textContent.guarantee}
+                    </p>
+                  </div>
+                </div>
+                <p className="font-regular h-[10px] pt-3 text-center text-sm text-gray-50 sm:text-sm lg:text-left">
+                  {textContent.lastCta}
                 </p>
               </div>
             </div>
-            <p className="font-regular pb-10 text-center text-sm text-gray-50 sm:text-sm lg:text-left">
-              {textContent.lastCta}
-            </p>
           </div>
         </div>
       </div>
@@ -91,7 +93,7 @@ export const PriceBannerForCampaigns = ({
         }}
         className={'relative z-10 flex w-screen flex-col justify-between py-5 pb-72 md:pb-[1000px] lg:hidden'}
       >
-        <div className="mx-4 flex flex-col items-center gap-2 rounded-2xl bg-white-summer px-6 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left">
+        <div className="mx-4 flex flex-col items-center gap-2 rounded-2xl bg-white-summer px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left">
           <div className="flex w-max items-center bg-white-summer-2 px-1 py-0.5">
             <p className="text-sm font-semibold text-primary">{textContent.label}</p>
           </div>
@@ -99,7 +101,7 @@ export const PriceBannerForCampaigns = ({
             <p className="text-2xl font-semibold text-gray-100">{textContent.title}</p>
             <p className="font-regular pt-3 text-center text-lg  text-gray-100">{textContent.subtitle}</p>
           </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 pt-4">
+          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-2">
             <Image
               src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
               alt="Internxt Blue Shield check"
@@ -108,16 +110,18 @@ export const PriceBannerForCampaigns = ({
             />
             <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-gray-100">{textContent.guarantee}</p>
           </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 pb-2">
+          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pb-2">
             <Backpack size={24} className="text-primary" weight="fill" />
             <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-gray-100">{textContent.gift}</p>
           </div>
-          <Link
-            href={redirectTo ?? '#billingButtons'}
-            className=" z-20 flex w-full items-center justify-center rounded-lg bg-primary px-2 py-3 text-center text-base font-medium text-white hover:bg-primary/95  sm:py-3 sm:text-lg"
-          >
-            {textContent.cta}
-          </Link>
+          <div className="flex w-full flex-row items-center justify-start gap-2 px-0 pb-2">
+            <Link
+              href={redirectTo ?? '#billingButtons'}
+              className=" font-regular z-20 mx-4 flex w-full items-center justify-center rounded-sm-6  bg-primary px-4 py-3 text-center text-base text-white hover:bg-primary/95  sm:py-3 sm:text-lg"
+            >
+              {textContent.cta}
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -84,9 +84,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
             alt="Internxt Blue Shield check"
             width={24}
             height={24}
-            className="hidden md:block"
           />
-          <CheckCircle size={24} weight="fill" className="block text-primary md:hidden" />
           <p className="whitespace-nowrap pt-0.5 text-gray-100 mobile-sm:pt-0 lg:text-lg">{textContent.guarantee}</p>
         </div>
       </div>
