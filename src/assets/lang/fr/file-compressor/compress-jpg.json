@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compressez un fichier JPG pour réduire sa taille et partager vos photos sans compromettre leur qualité grâce à Internxt.",
+    "secureUpload": "Téléversements sécurisés protégés par HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Comment compresser un fichier JPG",
+      "description": "Pour compresser un fichier JPG, suivez ces étapes :",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier JPG : faites-le glisser ici ou sélectionnez-le depuis votre appareil."
+        },
+        {
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier JPG »."
+        },
+        {
+          "step": "Étape 3 :",
+          "description": "Téléchargez votre fichier."
+        }
+      ],
+      "outro": "Compressez gratuitement vos fichiers JPG à tout moment, en toute sécurité, grâce au chiffrement de vos téléchargements."
+    },
+    "whyConvert": {
+      "title": "Pourquoi compresser un fichier JPG",
+      "intro": "Comme pour les fichiers PNG, il peut être nécessaire de compresser un fichier JPG pour conserver la meilleure qualité d'image sans ajouter de filigrane. Vous n'avez pas besoin de vous inscrire pour utiliser Internxt, vous pouvez donc optimiser facilement l’espace de stockage de vos albums. Une fois terminé, vous pouvez :",
+      "bullets": [
+        "Accélérer le chargement des sites web.",
+        "Maintenir une qualité visuelle élevée.",
+        "Économiser de l’espace de stockage sur votre appareil ou dans le cloud."
+      ],
+      "outro": "Tous vos fichiers sont chiffrés durant le processus de chargement et de compression pour préserver votre vie privée. Vous pouvez ainsi compresser, stocker et partager vos fichiers en toute confiance avec Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Une plateforme sécurisée pour compresser, stocker et partager des fichiers JPG.",
+    "cta": "Passez à Internxt"
+  }
+}

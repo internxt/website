@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "压缩 PNG 文件以减少文件大小，并使用 Internxt 在不影响图像质量的前提下分享照片。",
+    "secureUpload": "通过 HTTPS 保护的安全上传。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 PNG 文件",
+      "description": "按照以下步骤压缩 PNG 文件：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传 PNG 文件：将文件拖放至上方区域，或从设备中选择。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 PNG 文件”"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载文件。"
+        }
+      ],
+      "outro": "您可以随时免费压缩 PNG 文件，所有照片上传过程均经过加密处理，确保隐私安全。"
+    },
+    "whyConvert": {
+      "title": "为什么要压缩 PNG 文件？",
+      "intro": "和 JPG 一样，您可能希望压缩 PNG 文件以保持图像质量，无需水印。使用 Internxt 无需注册，您可以专注于优化照片库。一旦完成，您可以：",
+      "bullets": ["加快网站加载速度", "保持图像的高质量", "节省设备或云端的存储空间"],
+      "outro": "所有文件在上传和压缩过程中均经过加密处理，以保障您的图像隐私。您可以放心使用 Internxt 压缩、存储和分享文件。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个安全的平台，用于压缩、存储和分享 PNG 文件",
+    "cta": "立即体验 Internxt"
+  }
+}

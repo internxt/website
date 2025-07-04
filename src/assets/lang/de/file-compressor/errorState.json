@@ -1,0 +1,18 @@
+{
+  "bigFile": {
+    "label": "Dateigröße überschreitet das Limit.",
+    "selectFile": "Bitte wähle eine kleinere Datei aus."
+  },
+  "internalError": {
+    "label": {
+      "bold": "Etwas ist schiefgelaufen. ",
+      "normal": "Bitte versuche es erneut."
+    }
+  },
+  "unsupportedFormat": {
+    "label": {
+      "bold": "Nicht unterstütztes Dateiformat. ",
+      "normal": "Bitte lade eine gültige ${{pathFrom}}-Datei hoch."
+    }
+  }
+}

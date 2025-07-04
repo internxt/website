@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Riduci rapidamente e in sicurezza le dimensioni dei file ZIP di grandi dimensioni con il nostro compressore ZIP online.",
+    "secureUpload": "Caricamenti sicuri protetti da HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Come comprimere un file ZIP",
+      "description": "Per comprimere un file ZIP, segui questi passaggi:",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "Carica il tuo file ZIP: trascinalo nell'area in alto oppure selezionalo dal dispositivo."
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Clicca su «Comprimi file ZIP»"
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scarica il file."
+        }
+      ],
+      "outro": "Con questo strumento online puoi comprimere gratuitamente più file ZIP quando vuoi. Tutti i file sono protetti con caricamenti criptati per garantire la privacy dei tuoi video."
+    },
+    "whyConvert": {
+      "title": "Perché usare un compressore ZIP online",
+      "intro": "L'invio di grandi file video online può essere difficile a causa dei limiti di caricamento imposti da email, condivisione o archiviazione cloud. Il compressore ZIP online di Internxt è uno strumento sicuro e gratuito che ti consente di:",
+      "bullets": [
+        "Caricare più velocemente i file ZIP e risparmiare larghezza di banda",
+        "Mantenere la qualità dei tuoi file",
+        "Risparmiare spazio di archiviazione e rispettare i limiti di upload"
+      ],
+      "outro": "Tutti i tuoi file vengono criptati durante il caricamento e la compressione per garantire la privacy. Con Internxt puoi comprimere, archiviare e condividere i tuoi file in tutta sicurezza."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una piattaforma sicura per comprimere, archiviare e condividere file ZIP",
+    "cta": "Prova Internxt"
+  }
+}

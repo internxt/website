@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Komprimiere PPT-Dateien mit Internxt für eine einfachere und effizientere Zusammenarbeit und Präsentation.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine PPT-Datei",
+      "description": "Um eine PPT-Datei zu komprimieren, folge diesen Schritten:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine PPT-Datei hoch: Ziehe sie in den oberen Bereich oder wähle sie von deinem Gerät aus, um die Konvertierung zu starten."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „PPT-Datei komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Mit diesem Tool kannst du PPT-Dateien jederzeit kostenlos komprimieren. Alle Dateien sind durch verschlüsselte Uploads geschützt, um die Privatsphäre deiner Präsentationen zu wahren."
+    },
+    "whyConvert": {
+      "title": "Warum eine PPT-Datei komprimieren?",
+      "intro": "Oft müssen wir eine PPT-Datei per E-Mail verschicken, z. B. für Gruppenprojekte oder Teampräsentationen. Große Präsentationen können jedoch durch E-Mail- oder Dateifreigabegrenzen eingeschränkt werden. Mit Internxt kannst du deine Datei einfach auswählen und:",
+      "bullets": [
+        "PPT-Dateien schnell komprimieren, teilen und bearbeiten",
+        "Upload-Größenbeschränkungen einhalten",
+        "Gruppenprojekte effizient verwalten"
+      ],
+      "outro": "Alle deine Dateien werden beim Hochladen und Komprimieren verschlüsselt, damit deine PPT-Dateien privat bleiben. So kannst du sie sicher mit Internxt komprimieren, speichern und teilen."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von PPT-Dateien",
+    "cta": "Jetzt zu Internxt wechseln"
+  }
+}

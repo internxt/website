@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "压缩 JPG 文件，减小文件大小，在不降低图片质量的前提下轻松分享照片，尽在 Internxt。",
+    "secureUpload": "通过 HTTPS 保护的安全上传。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 JPG 文件",
+      "description": "按照以下步骤压缩 JPG 文件：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传您的 JPG 文件：将其拖到上方区域，或从设备中选择上传。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 JPG 文件”。"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载您的文件。"
+        }
+      ],
+      "outro": "您可以随时免费压缩 JPG 文件，文件上传过程加密处理，保障照片安全与隐私。"
+    },
+    "whyConvert": {
+      "title": "为什么需要压缩 JPG 文件",
+      "intro": "和 PNG 文件一样，压缩 JPG 文件可以在不添加水印的情况下保留图像的最佳质量。使用 Internxt 压缩 JPG 文件无需注册，让您专注于优化相册和图库的存储空间。完成后您可以：",
+      "bullets": ["加快网站加载速度。", "保持照片的高视觉质量。", "节省设备或云存储空间。"],
+      "outro": "所有文件在上传和压缩过程中都会被加密，确保您的照片隐私。使用 Internxt 可安心压缩、存储和分享。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个安全的平台，用于压缩、存储和分享 JPG 文件。",
+    "cta": "立即使用 Internxt"
+  }
+}

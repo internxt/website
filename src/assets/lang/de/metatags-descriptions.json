@@ -214,5 +214,50 @@
     "id": "special-offer",
     "title": "Sonderangebot — Internxt",
     "description": "Erhalten Sie Internxt-Jahres- und Lifetime-Tarife mit einem exklusiven 80 % Rabatt. Genießen Sie Privatsphäre und Sicherheit mit bis zu 10 TB Speicherplatz."
+  },
+  {
+    "id": "file-compressor",
+    "title": "Datei-Komprimierer - Internxt",
+    "description": "Internxt-Dateikomprimierer, der beste Datei-Komprimierer zur kostenlosen Reduzierung der Dateigröße von Videos, Fotos und Dokumenten."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Internxt Video-Komprimierer",
+    "description": "Mit Internxt können Sie Videos kostenlos komprimieren, um die Dateigröße zu reduzieren und sie online zu versenden, ohne sich um Größenbeschränkungen zu sorgen."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Internxt PDF-Datei-Komprimierer",
+    "description": "Mit Internxt können Sie PDF-Dateien kostenlos komprimieren, damit Sie Ihre Dokumente einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Internxt JPG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre JPG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-png",
+    "title": "Internxt PNG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PNG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Internxt PPT-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PPT-Dateien kostenlos mit Internxt, um die Dateigröße zu reduzieren und die Verwaltung von Dateispeicherung und -freigabe zu vereinfachen."
+  },
+  {
+    "id": "compress-word",
+    "title": "Internxt Online Word-Datei-Komprimierer",
+    "description": "Word-Dateien (DOC) kostenlos und online komprimieren, um ihre Größe zu reduzieren und die Speicherung und Freigabe zu erleichtern."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Internxt Excel-Datei-Komprimierer",
+    "description": "Kostenloser Komprimierer für Excel-Dateien (XLS) - Reduzieren Sie die Größe für einfache Speicherung und Dateifreigabe."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Online ZIP-Komprimierer - Internxt",
+    "description": "Ein Online-ZIP-Komprimierer reduziert die Größe Ihrer ZIP-Dateien, um Speicherplatz zu sparen und Dateien ohne Größenbeschränkungen zu teilen und hochzuladen."
   }
 ]
