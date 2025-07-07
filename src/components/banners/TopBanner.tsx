@@ -14,17 +14,24 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
 
   return (
     <>
-      {/* Desktop view */}
       <div
         className={`group ${
           isBannerFixed ? 'absolute' : 'fixed'
-        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-green-1 text-white lg:flex`}
+        } left-0 z-50 hidden h-[54px] w-screen items-center justify-center overflow-hidden bg-primary text-white lg:flex`}
       >
         <div className="mx-auto flex flex-row items-center justify-center space-x-3">
           <div className="flex cursor-default">
-            <p className="font-semibold">
-              {textContent.title.normalText} 🌍
-              <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
+            <p>
+              {lang === 'en' ? (
+                <>
+                  {textContent.title.normalText} 🔥
+                  <span className="ml-1 font-bold"> {' ' + textContent.title.boldText}</span>
+                </>
+              ) : (
+                <>
+                  <span className="font-bold">{textContent.title.normalText}</span>🔥 {' ' + textContent.title.boldText}
+                </>
+              )}
             </p>
           </div>
           <Link
@@ -37,15 +44,27 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
           </Link>
         </div>
       </div>
-      {/* Mobile view */}
+
       <Link
         href={'/pricing'}
-        className={`group fixed left-0 z-30 flex h-[65px]  w-screen items-center justify-center overflow-hidden bg-green-1 text-white lg:hidden`}
+        className={`group fixed left-0 z-30 flex h-[64px]  w-screen items-center justify-center overflow-hidden bg-primary text-white lg:hidden`}
       >
-        <div className="flex h-full w-full items-center justify-center px-3 text-center md:mb-3">
+        <div className=" w-full items-center justify-center px-3 text-center md:mb-3">
           <div className="flex flex-col items-center justify-center">
-            {textContent.title.normalText} 🌍
-            <span className=" ml-1 font-bold">{textContent.title.boldText}</span>
+            <p>
+              {lang === 'en' ? (
+                <>
+                  {textContent.title.normalText}🔥 <br />
+                  <span className="ml-1 font-bold">{textContent.title.boldText}</span>
+                </>
+              ) : (
+                <>
+                  <span className="font-bold">{textContent.title.normalText}</span>🔥
+                  <br />
+                  {textContent.title.boldText}
+                </>
+              )}
+            </p>
           </div>
         </div>
       </Link>

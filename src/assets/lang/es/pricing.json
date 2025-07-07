@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": { "line1": "85% OFF", "line2": "en nuestros planes anuales" },
+    "title": { "line1": "80% OFF", "line2": "en nuestros planes anuales" },
     "lifetimeTitle": { "line1": "Consigue un", "blueText": " plan de por vida ", "line2": "de Internxt!" },
     "feeds": {
       "firstFeed": "Garantía de devolución de 30 días",
@@ -8,7 +8,7 @@
       "thirdFeed": "Crea una cuenta anónima"
     },
     "cta": {
-      "title": "Obtén un 85% de descuento",
+      "title": "Obtén un 80% de descuento",
       "description": "Oferta válida durante un año. El plan se renovará al precio sin descuento para el año siguiente."
     }
   },
@@ -27,7 +27,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Obtén un ",
-      "blue2": "85% de descuento",
+      "blue2": "80% de descuento",
       "normal2": "de almacenamiento seguro"
     },
     "description": "Protege tus archivos de trabajo y personales con almacenamiento en la nube cifrado de grado militar a un precio accesible.",
@@ -41,18 +41,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Oferta 85%",
-      "title": "Cuida el planeta, protege tus datos",
-      "subtitle": "Almacenamiento en la nube privado y sostenible",
-      "subtitle2": "Drive, Antivirus y VPN todo incluido",
+      "label": "Ahorra un 80%",
+      "title": "Planes anuales y de por vida",
+      "subtitle": "Este verano, protege y lleva toda tu información a todas partes",
+      "subtitle2": "Drive, Antivirus y VPN",
+      "subtitle3": "Meet, Mail, Limpiador de Dispositivos y Dark Web Monitor",
       "cta": "Consigue tu plan",
-      "cta2": "Obtén un 85% de descuento",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de 30 días",
-      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
-      "titleMbl": "Día Mundial del Medio Ambiente",
-      "subtitleMbl": "Todos los planes Internxt",
-      "descriptionMbl": "Sorteo de una mochila Internxt",
-      "ctaMbl": "Compra tu plan"
+      "gift": "Sorteo mochila Internxt x Swiss Peak",
+      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios"
     },
     "planTitles": {
       "individuals": "Planes individuales",
@@ -63,7 +61,7 @@
         "normalText": "en todos nuestros planes exclusivos de por vida"
       },
       "blackFriday": {
-        "title": "Mega oferta de Black Friday: consigue un 85 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
+        "title": "Mega oferta de Black Friday: consigue un 80 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
         "description": "Protege tus datos con Internxt para evitar brechas de seguridad, pérdidas financieras y riesgos de privacidad. Di adiós a las grandes tecnológicas que se benefician de tu información personal."
       }
     },

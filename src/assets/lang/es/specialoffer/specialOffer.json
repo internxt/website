@@ -3,8 +3,8 @@
     "title": "Almacenamiento en la nube",
     "subtitle": "que protege tu derecho a la privacidad",
     "description": "El almacenamiento en la nube Web3 y de código abierto de Internxt protege tu privacidad con cifrado post-cuántico sin conocimiento.",
-    "info": "¡Consigue tu <strong>descuento exclusivo del 85%</strong> en todos los planes anuales y de por vida.",
-    "cta": "Obtén 85% de descuento"
+    "info": "¡Consigue tu <strong>descuento exclusivo del {{discount}}%</strong> en todos los planes anuales y de por vida.",
+    "cta": "Obtén {{discount}}% de descuento"
   },
   "MostSecureSection": {
     "description": "Internxt Drive es una solución de almacenamiento en la nube de código abierto y cifrado de extremo a extremo para guardar, hacer copias de seguridad y compartir tus archivos con total privacidad. Internxt Drive ofrece cifrado postcuántico y control total sobre tus datos.",
@@ -44,14 +44,14 @@
         "normalText": "en todos nuestros planes de por vida exclusivos"
       }
     },
-    "header": "Privacidad total con 85% de descuento",
+    "header": "Privacidad total con {{discount}}% de descuento",
     "lifetimeDescription": "Con un único pago, puedes disfrutar de privacidad para toda la vida. Tendrás acceso para siempre a todas las funciones centradas en la privacidad de Internxt y a su almacenamiento cifrado en la nube.",
     "planDescription": "Todos los planes de Internxt incluyen acceso completo a nuestras funciones enfocadas en la privacidad. Suscríbete a Internxt y garantiza un año de almacenamiento cifrado en la nube.",
     "billingFrequency": {
       "monthly": "Mensual",
       "annually": "Anual",
       "individual": "Individual",
-      "lifetime": "De por vida",
+      "lifetime": "Lifetime",
       "business": "Empresarial"
     },
     "freePlanCard": {

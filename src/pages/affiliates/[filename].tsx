@@ -89,7 +89,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
   const couponCode = {
     pcmag: PromoCodeName.Planet85,
-    oneplan: PromoCodeName.DRIVE87,
+    oneplan: PromoCodeName.Affiliates85,
   };
 
   useEffect(() => {

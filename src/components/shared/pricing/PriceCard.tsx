@@ -1,5 +1,6 @@
 import {
   ArrowsClockwise,
+  Backpack,
   Broom,
   CirclesThreePlus,
   CodeBlock,
@@ -14,6 +15,7 @@ import {
   LockSimple,
   Password,
   ShieldPlus,
+  SunHorizon,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
@@ -92,7 +94,7 @@ export const PriceCard = ({
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
-
+  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -211,28 +213,28 @@ export const PriceCard = ({
         </button>
       </div>
       {showPromo ? (
-        <div className={`${styles.linearGradient} flex flex-col items-start space-y-2 px-5 py-5`}>
-          <span className="text-[13.5px] font-bold text-white">
+        <div
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundPosition: '50% 75%',
+          }}
+          className={'flex flex-col items-start space-y-2 px-5 py-5'}
+        >
+          <span className="text-[13.5px] font-bold text-gray-100">
             {contentText.productFeatures.WorldEnvironmentDay.title}
           </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <Image
-                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
-                alt="World Environment Day"
-                width={24}
-                height={24}
-              />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift1}</span>
+              <SunHorizon size={24} className="text-primary" weight="fill" />
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift1}
+              </span>
             </div>
             <div className="flex items-center space-x-2">
-              <Image
-                src={getImage('/images/campaigns/world_environment_day/shield-white.svg')}
-                alt="World Environment Day"
-                width={24}
-                height={24}
-              />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift2}</span>
+              <Backpack size={24} className="text-primary" weight="fill" />
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift2}
+              </span>
             </div>
           </div>
         </div>

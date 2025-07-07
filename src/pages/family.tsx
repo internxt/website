@@ -36,7 +36,7 @@ interface FamilyProps {
 
 export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footerText }: FamilyProps): JSX.Element => {
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.Special80Coupon,
+    couponCodeForBusiness: PromoCodeName.SummerCampaign,
   });
 
   const metatag = metatagsDescriptions.filter((metatag) => metatag.id === 'family')[0];
@@ -154,7 +154,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        showPromo={false}
+        showPromo
       />
 
       <SelectFeatureInfoSection

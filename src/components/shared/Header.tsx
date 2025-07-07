@@ -15,7 +15,7 @@ const Header = ({
   const leading = withoutLeading ? '' : 'sm:leading-tight';
   return (
     <h1
-      className={`${maxWidth} ${className} whitespace-normal  pt-4 text-4xl font-semibold  lg:text-5xl ${textHeightForDesk} ${leading}`}
+      className={`max-h-[110px] whitespace-normal text-3xl font-semibold leading-tight mobile-md:pt-0   lg:text-5xl xl:h-[116px] xl:pt-2 ${className}  `}
     >
       {children}
     </h1>
