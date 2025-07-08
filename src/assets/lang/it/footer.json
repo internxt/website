@@ -84,7 +84,8 @@
         "vpn": "Extensione VPN",
         "haveIBeenPwned": "Internxt Monitor",
         "metadataRemover": "Eliminatore di metadati",
-        "aiDetector": "Detector di IA"
+        "aiDetector": "Detector di IA",
+        "fileCompressor": "Compressore di File"
       },
       "features": {
         "title": "Funzionalità",

@@ -81,7 +81,8 @@
         "fileConverter": "File Converter",
         "haveIBeenPwned": "Internxt Monitor",
         "metadataRemover": "Metadata Remover",
-        "aiDetector": "AI Detector"
+        "aiDetector": "AI Detector",
+        "fileCompressor": "File Compressor"
       },
       "features": {
         "title": "Features",

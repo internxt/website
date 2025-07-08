@@ -50,6 +50,7 @@ const FileConverter = ({
         textContent={textContent.CtaSection}
         customDescription={textContent.CtaSection.description}
         url="https://drive.internxt.com/new"
+        image="/logos/internxt/internxt.svg"
       />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
@@ -61,17 +62,17 @@ const FileConverter = ({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const textLang = lang === 'es' ? lang : 'en';
+
   const pathname = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/${textLang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${textLang}/navbar.json`);
-  const textContent = require(`@/assets/lang/${textLang}/file-compressor/${pathname}.json`);
-  const converterText = require(`@/assets/lang/${textLang}/file-compressor/converter-card.json`);
-  const errorContent = require(`@/assets/lang/${textLang}/file-compressor/errorState.json`);
-  const footerLang = require(`@/assets/lang/${textLang}/footer.json`);
-  const toolsContent = require(`@/assets/lang/${textLang}/components/tools/ToolSection.json`);
-  const bannerLang = require(`@/assets/lang/${textLang}/banners.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const textContent = require(`@/assets/lang/${lang}/file-compressor/${pathname}.json`);
+  const converterText = require(`@/assets/lang/${lang}/file-compressor/converter-card.json`);
+  const errorContent = require(`@/assets/lang/${lang}/file-compressor/errorState.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const toolsContent = require(`@/assets/lang/${lang}/components/tools/ToolSection.json`);
+  const bannerLang = require(`@/assets/lang/${lang}/banners.json`);
 
   return {
     props: {

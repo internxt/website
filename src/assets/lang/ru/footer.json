@@ -84,7 +84,8 @@
         "vpn": "Расширение VPN",
         "haveIBeenPwned": "Internxt Monitor",
         "metadataRemover": "Очиститель метаданных",
-        "aiDetector": "Детектор ИИ"
+        "aiDetector": "Детектор ИИ",
+        "fileCompressor": "Архиватор файлов"
       },
       "features": {
         "title": "Функции",

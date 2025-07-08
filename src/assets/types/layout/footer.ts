@@ -101,6 +101,7 @@ export interface Tools {
   haveIBeenPwned: string;
   metadataRemover: string;
   aiDetector: string;
+  fileCompressor: string;
 }
 
 export interface Features {

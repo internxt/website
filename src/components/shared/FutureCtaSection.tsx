@@ -16,16 +16,13 @@ const CtaSection = ({
   bgImage?: string;
   customDescription?: React.ReactNode;
 }) => {
-  const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
-
+  const DEFAULT_BACKGROUND = 'radial-gradient(ellipse at center, #F9F9FC 0%, #E5EFFF 100%)';
   return (
     <section
       style={{
-        background: bgImage
-          ? `url(${getImage(bgImage)})`
-          : 'radial-gradient(ellipse at center, #F9F9FC 0%, #E5EFFF 100%)',
+        background: bgImage ? `url(${getImage(bgImage)})` : DEFAULT_BACKGROUND,
       }}
-      className="overflow-hidden bg-primary bg-cover px-5 py-14"
+      className="overflow-hidden bg-cover px-5 py-14"
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
         <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black`}>

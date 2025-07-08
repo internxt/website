@@ -1,7 +1,4 @@
 import { createRef, useCallback, useState } from 'react';
-
-import Header from '../shared/Header';
-
 import { Errors, MAX_FILE_SIZE, extensionName, compressionTypes, fileMimeTypes } from './types';
 
 import InitialState from './states/InitialState';
@@ -10,7 +7,7 @@ import EmptyFile from '../shared/icons/EmptyFile';
 import DownloadFileState from './states/DownloadFileState';
 import fileCompressorService from '@/services/file-compressor.service';
 import { ErrorState } from './states/ErrorState';
-import { ShieldCheck } from '@phosphor-icons/react';
+import { CaretLeft, ShieldCheck } from '@phosphor-icons/react';
 import { formatText } from '../utils/format-text';
 
 interface ConverterSectionProps {
@@ -32,7 +29,9 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
   const [error, setError] = useState<Errors | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const uploadFileRef = createRef<HTMLInputElement>();
-  const borderStyle = isDragging ? 'border border-dashed border-primary' : 'border-4 border-primary/8 bg-primary/2';
+  const borderStyle = isDragging
+    ? 'border border-dashed border-primary'
+    : 'border-4 border-dashed border-primary/8 bg-primary/2';
 
   const pathnameSegments = pathname.split('-');
   const fileType = pathnameSegments[1];
@@ -66,7 +65,6 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setConverterStates('initialState');
     setIsDragging(false);
 
-    // Reset the file input value so it can be used again
     setTimeout(() => {
       if (uploadFileRef.current) {
         uploadFileRef.current.value = '';
@@ -127,7 +125,6 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
     setConverterStates('compressingState');
 
     try {
-      // Determine compression type based on file extension
       let compressionType: 'image' | 'document' | 'video' | 'archive' | undefined;
       const fileExtension = files[0].name.split('.').pop()?.toLowerCase() || '';
 
@@ -143,7 +140,6 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         throw new Error('Unsupported file type for compression');
       }
 
-      // Call the compression service
       await fileCompressorService.handleFileCompression(files[0], compressionType, fileExtension);
       setConverterStates('downloadFileState');
     } catch (err) {
@@ -219,17 +215,27 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <Header maxWidth="w-full">{formattedConverterText.title}</Header>
-          <h2 className="text-xl text-gray-80">{textContent.description}</h2>
+          <div className="flex h-[58px] w-full flex-row items-end justify-end  text-center">
+            <div
+              className="items- flex flex-row justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50"
+              onClick={() => window.history.back()}
+            >
+              <CaretLeft className=" items-center text-primary" size={24} />
+              <p className="pl-1 text-base font-medium text-primary">Back</p>
+            </div>
+
+            <p className="w-full justify-center  text-5xl font-semibold">{formattedConverterText.title}</p>
+          </div>
+
+          <h2 className="max-w-[865px] text-xl text-gray-80">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />
             <p className="text-sm font-medium text-gray-80">{textContent.secureUpload}</p>
           </div>
         </div>
         <div
-          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl px-5 ${borderStyle}  py-12`}
+          className={`flex w-full max-w-screen-lg flex-col items-center space-y-8 rounded-2xl  px-5 ${borderStyle}  py-12`}
         >
-          {/* Card */}
           <State state={converterStates} />
         </div>
       </div>

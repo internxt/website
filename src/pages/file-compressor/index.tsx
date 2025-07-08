@@ -5,7 +5,7 @@ import Navbar from '@/components/layout/navbars/Navbar';
 import { HeroSection } from '@/components/file-compressor/main-state/HeroSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import { FeaturesSection } from '@/components/file-compressor/main-state/FeaturesSection';
-import CtaSection from '@/components/file-compressor/main-state/CtaSection';
+import CtaSection from '@/components/shared/FutureCtaSection';
 import QASection from '@/components/shared/sections/FaqSection';
 import Footer from '@/components/layout/footers/Footer';
 
@@ -23,24 +23,31 @@ const FileConverter = ({
   return (
     <Layout segmentName="File Converter" title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
       <HeroSection textContent={textContent.HeroSection} />
+
       <FeaturesSection
         textContent={textContent.FeaturesSection}
         bannerText={bannerLang.SignUpFileCompressorBanner}
         lang={lang}
       />
+
       <CtaSection
         textContent={textContent.CtaSection}
         url="https://internxt.com"
         customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
       />
+
       <ToolsSection textContent={toolsContent} lang={lang} />
+
       <CtaSection
         textContent={textContent.CtaSection2}
         url="https://drive.internxt.com/new"
         customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
       />
+
       <QASection textContent={textContent.QASection} />
+
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
     </Layout>
   );
