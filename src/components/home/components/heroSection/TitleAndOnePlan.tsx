@@ -32,7 +32,7 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 mobile-sm:h-[620px] mobile-md:h-[543px]  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex h-[32rem] w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
         <Header>
