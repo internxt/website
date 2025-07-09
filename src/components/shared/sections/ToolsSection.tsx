@@ -81,7 +81,7 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
                   </span>
                 </p>
               </div>
-              <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
+              <div className=" flex flex-row items-center gap-2 text-lg font-medium text-primary hover:underline">
                 <Link href={tool.pathname} locale={lang} passHref target="_self" className="hover:text-primary">
                   {tool.cta}
                 </Link>
