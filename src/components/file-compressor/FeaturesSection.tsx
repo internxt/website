@@ -8,7 +8,7 @@ const FirstBold = ({ text, className = '' }) => {
   const palabras = text.split(' ');
   return (
     <span className={className}>
-      <span className="font-bold">{palabras[0]}</span> {palabras.slice(1).join(' ')}
+      <span className="font-semibold">{palabras[0]}</span> {palabras.slice(1).join(' ')}
     </span>
   );
 };
