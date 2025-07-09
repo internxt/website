@@ -217,7 +217,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
         <div className="flex flex-col items-center space-y-5 text-center">
           <div className="flex h-[58px] w-full flex-row items-end justify-end  text-center">
             <div
-              className="items- flex flex-row justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50"
+              className="flex hidden flex-row justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50 lg:flex"
               onClick={() => window.history.back()}
             >
               <CaretLeft className=" items-center text-primary" size={24} />
