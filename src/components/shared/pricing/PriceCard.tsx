@@ -216,7 +216,7 @@ export const PriceCard = ({
         <div
           style={{
             backgroundImage: `url('${bgImage}')`,
-            backgroundPosition: '50% 75%',
+            backgroundPosition: '0% 70%',
           }}
           className={'flex flex-col items-start space-y-2 px-5 py-5'}
         >
@@ -263,7 +263,7 @@ export const PriceCard = ({
                   <span className="text-gray-80">
                     {feature}
                     {index > 10 ? (
-                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                      <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">
                         {contentText.commingSoon}
                       </span>
                     ) : null}
@@ -285,7 +285,7 @@ export const PriceCard = ({
                   <span className="text-gray-80">
                     {feature}
                     {index > 9 ? (
-                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                      <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">
                         {contentText.commingSoon}
                       </span>
                     ) : null}
