@@ -15,12 +15,12 @@ export const HeroSection = ({ textContent }) => {
             <p>{textContent.description.normal}</p>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center justify-center lg:max-w-[1000px] lg-xl:max-w-[1075px] 2xl:max-w-[1250px]">
-          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-8 md:grid-cols-2 lg:grid-cols-4 lg-xl:w-full lg-xl:gap-16">
+        <div className="flex w-full flex-col items-center justify-center lg:max-w-[1000px] lg-xl:max-w-[1000px]">
+          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4 lg-xl:w-full lg-xl:gap-8">
             {textContent.cards.map((card) => (
               <button
                 key={card.title}
-                className="flex w-full max-w-[256px] cursor-pointer flex-col items-start space-y-4 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:p-9"
+                className="flex w-full max-w-[300px] cursor-pointer flex-col items-start space-y-2 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:p-9 "
                 onClick={() => {
                   router.push(`/file-compressor/${card.pathname}`);
                 }}
