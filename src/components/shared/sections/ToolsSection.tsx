@@ -76,7 +76,7 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
                 <tool.icon size={32} className="text-primary" />
                 <p className="flex items-start text-2xl font-medium text-black">
                   {tool.title}
-                  <span className="ml-2 self-start rounded-2 bg-green-100 px-1 py-0.5 text-xs font-semibold text-green-1">
+                  <span className="ml-2 self-start rounded-2 bg-green-100 px-1 py-0.5 text-xs font-semibold text-green-0">
                     {textContent.free}
                   </span>
                 </p>
