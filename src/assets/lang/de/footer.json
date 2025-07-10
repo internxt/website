@@ -82,7 +82,8 @@
         "fileConverter": "Dateikonverter",
         "haveIBeenPwned": "Internxt Monitor",
         "metadataRemover": "Metadaten-Entferner",
-        "aiDetector": "AI Detector"
+        "aiDetector": "AI Detector",
+        "fileCompressor": "Dateikomprimierer"
       },
       "features": {
         "title": "Funktionen",

@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compresor gratuito para comprimir archivos Excel (XLS) para una forma más fácil y productiva de colaborar en hojas de cálculo y presentar datos esenciales.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo de Excel",
+      "description": "Para comprimir un archivo Excel, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo Excel (XLS): arrástralo y suéltalo en el área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en \"Comprimir archivo Excel\"."
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta, puedes comprimir archivos de Excel gratis para varios archivos cuando lo necesites. Al comprimir archivos de Excel, se protegen automáticamente con cargas cifradas para garantizar la privacidad de tus documentos."
+    },
+    "whyConvert": {
+      "title": "Por qué podría ser necesario comprimir archivos de Excel",
+      "intro": "Al elaborar hojas de cálculo, ensayos, informes, documentos, contratos, etc. extensos, el tamaño de los archivos adjuntos puede aumentar rápidamente, lo que dificulta compartir varios documentos en un solo archivo. Comprimir archivos Excel puede reducir significativamente el tamaño de los archivos para facilitar su colaboración:",
+      "bullets": [
+        "Comprimir archivos de Excel para compartirlos y subirlos fácilmente.",
+        "Respetar los límites de tamaño de carga y correo electrónico.",
+        "Colaborar en proyectos basados ​​en datos."
+      ],
+      "outro": "Todos tus archivos se encriptan durante el proceso de carga y compresión para mantener privados tus archivos de Excel, de modo que puedes comprimirlos, almacenarlos y compartirlos con confianza con Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos de Excel.",
+    "cta": "Pásate a Internxt"
+  }
+}

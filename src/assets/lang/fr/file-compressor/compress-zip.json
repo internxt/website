@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Réduisez rapidement et en toute sécurité la taille des fichiers ZIP volumineux avec notre compresseur ZIP en ligne.",
+    "secureUpload": "Téléversements sécurisés protégés par HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Comment compresser un fichier ZIP",
+      "description": "Pour compresser un fichier ZIP, suivez ces étapes :",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier ZIP : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil."
+        },
+        {
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier ZIP »"
+        },
+        {
+          "step": "Étape 3 :",
+          "description": "Téléchargez votre fichier."
+        }
+      ],
+      "outro": "Grâce à cet outil de compression en ligne, vous pouvez compresser gratuitement plusieurs fichiers ZIP à tout moment. Tous les fichiers sont protégés par un chiffrement pendant l'envoi afin de garantir la confidentialité de vos vidéos."
+    },
+    "whyConvert": {
+      "title": "Pourquoi utiliser un compresseur ZIP en ligne",
+      "intro": "Il peut être difficile d’envoyer de grandes vidéos en ligne à cause des limites imposées par les services de messagerie, de partage ou de stockage cloud. Avec le compresseur ZIP en ligne d’Internxt, vous disposez d’un outil sécurisé et gratuit qui vous permet de :",
+      "bullets": [
+        "Téléverser plus rapidement vos fichiers ZIP et économiser de la bande passante",
+        "Préserver la qualité de vos fichiers",
+        "Économiser de l’espace de stockage et respecter les limites d’envoi"
+      ],
+      "outro": "Tous vos fichiers sont chiffrés lors du transfert et de la compression afin de garantir la confidentialité de vos vidéos. Vous pouvez donc compresser, stocker et partager vos fichiers en toute sécurité avec Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Une plateforme sécurisée pour compresser, stocker et partager vos fichiers ZIP",
+    "cta": "Essayez Internxt"
+  }
+}

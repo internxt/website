@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Komprimiere eine JPG-Datei, um die Dateigröße zu reduzieren und Fotos zu teilen, ohne die Bildqualität mit Internxt zu beeinträchtigen.",
+    "secureUpload": "Sichere Uploads, geschützt durch HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine JPG-Datei",
+      "description": "Um eine JPG-Datei zu komprimieren, folge diesen Schritten:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine JPG-Datei hoch: Ziehe sie in den obenstehenden Bereich oder lade sie von deinem Gerät hoch, um die Umwandlung zu starten."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf \"JPG-Datei komprimieren\"."
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Komprimiere eine JPG-Datei kostenlos, wann immer du willst, in dem Wissen, dass deine Fotos dank verschlüsselter Uploads sicher und privat bleiben."
+    },
+    "whyConvert": {
+      "title": "Warum es notwendig sein kann, eine JPG-Datei zu komprimieren",
+      "intro": "Ähnlich wie beim Komprimieren einer PNG-Datei kann es notwendig sein, eine JPG-Datei zu komprimieren, um die maximale Qualität deiner Fotos ohne Wasserzeichen zu bewahren. Du musst dich nicht registrieren, um JPG-Dateien mit Internxt zu komprimieren. So kannst du den Speicherplatz deiner Fotoalben und Bibliotheken optimieren. Nach Abschluss kannst du:",
+      "bullets": [
+        "Die Ladezeiten von Webseiten beschleunigen.",
+        "Hohe visuelle Qualität der Fotos beibehalten.",
+        "Speicherplatz auf deinem Gerät oder in der Cloud sparen."
+      ],
+      "outro": "Alle deine Dateien werden während des Upload- und Komprimierungsvorgangs verschlüsselt, um deine Fotos privat zu halten, sodass du deine Dateien mit Internxt sicher komprimieren, speichern und teilen kannst."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von JPG-Dateien.",
+    "cta": "Wechsle zu Internxt"
+  }
+}

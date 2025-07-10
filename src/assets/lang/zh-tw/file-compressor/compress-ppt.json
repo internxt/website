@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "使用 Internxt 壓縮 PPT 檔案，讓協作與簡報更輕鬆、更有效率。",
+    "secureUpload": "透過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何壓縮 PPT 檔案",
+      "description": "請依照以下步驟操作：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳 PPT 檔案：拖曳至上方區域，或從裝置中選取開始轉換。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊「壓縮 PPT 檔案」"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的檔案。"
+        }
+      ],
+      "outro": "這項工具讓您隨時免費壓縮 PPT 檔案。所有檔案皆透過加密上傳處理，保障您的簡報隱私。"
+    },
+    "whyConvert": {
+      "title": "為什麼需要壓縮 PPT 檔案？",
+      "intro": "在小組專案或團隊簡報中常需透過電子郵件傳送 PPT，但檔案過大常受限於服務供應商。使用 Internxt，只需選取檔案即可：",
+      "bullets": ["快速壓縮、分享與編輯 PPT 檔案", "符合上傳檔案大小限制", "高效管理團隊專案"],
+      "outro": "所有檔案在上傳與壓縮期間皆進行加密處理，確保簡報隱私。使用 Internxt，您可安心壓縮、儲存與分享檔案。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一個安全的平台，用於壓縮、儲存與分享 PPT 檔案",
+    "cta": "立即使用 Internxt"
+  }
+}

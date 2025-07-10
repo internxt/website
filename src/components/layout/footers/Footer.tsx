@@ -453,6 +453,12 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
+                    <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.fileCompressor}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
