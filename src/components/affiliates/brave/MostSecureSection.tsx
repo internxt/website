@@ -5,9 +5,10 @@ import HeroSectionSafeArea from '@/components/shared/HeroSectionSafeArea';
 
 interface MostSecureSectionProps {
   textContent: any;
+  onRedirectButtonClicked?: () => void;
 }
 
-const MostSecureSection: React.FC<MostSecureSectionProps> = ({ textContent }) => {
+const MostSecureSection: React.FC<MostSecureSectionProps> = ({ textContent, onRedirectButtonClicked }) => {
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
   }
@@ -30,7 +31,7 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({ textContent }) =>
           <button
             className="flex items-center rounded-lg bg-primary px-5 py-3 text-base font-medium text-white hover:bg-primary-dark"
             onClick={() => {
-              window.location.href = '#priceTable';
+              onRedirectButtonClicked ? onRedirectButtonClicked() : redirectToPricingTable();
             }}
           >
             {textContent.cta}

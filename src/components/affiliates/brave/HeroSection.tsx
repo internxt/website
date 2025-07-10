@@ -8,9 +8,10 @@ const Animation = dynamic(() => import('@/components/shared/Animation'));
 
 interface HeroSectionBraveProps {
   textContent: any;
+  onButtonClicked?: () => void;
 }
 
-export default function HeroSection({ textContent }: HeroSectionBraveProps): JSX.Element {
+export default function HeroSection({ textContent, onButtonClicked }: HeroSectionBraveProps): JSX.Element {
   const images: ImageConfig[] = [
     {
       src: '/images/home/header/browser.webp',
@@ -91,7 +92,7 @@ export default function HeroSection({ textContent }: HeroSectionBraveProps): JSX
               <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
               <p className="text-md font-regular text-white" dangerouslySetInnerHTML={{ __html: textContent.info }}></p>
             </div>
-            <Button onClick={redirectToPricingTable} text={textContent.cta} />
+            <Button onClick={onButtonClicked ? onButtonClicked : redirectToPricingTable} text={textContent.cta} />
           </div>
           <div className="hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
             <Animation images={images} />
