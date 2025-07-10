@@ -1,19 +1,15 @@
 import { useState } from 'react';
 
-import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
-import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/lifetime/CtaSection';
-
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
-import router from 'next/router';
+import HeroSection from '@/components/affiliates/brave/HeroSection';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -46,26 +42,9 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection
-        hideTimer={true}
-        previewImg="/images/lifetime/file_item.webp"
-        textContent={langJson.HeroSection}
-        onRedirectButtonClicked={() => router.push('#payment')}
-      />
-
-      <PaymentSection
-        textContent={langJson.PaymentSection}
-        lang={'en'}
-        lifetimeMode="redeem"
-        onButtonClicked={onButtonClicked}
-        isStackCommerce
-      />
-
-      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
+      <HeroSection textContent={langJson.HeroSection} onButtonClicked={onButtonClicked} />
 
       <FeatureSection textContent={langJson.FeatureSection} withoutCta />
-
-      <CtaSection textContent={langJson.CtaSection} />
 
       <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
     </Layout>
