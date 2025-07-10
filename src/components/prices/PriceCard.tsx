@@ -21,7 +21,6 @@ import { Interval } from '@/services/stripe.service';
 import { LifetimeMode } from '../lifetime/PaymentSection';
 import { checkout, checkoutForPcComponentes, goToSignUpURL } from '@/lib/auth';
 import React from 'react';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 export interface PriceCardProps {
   planType: string;
@@ -221,6 +220,36 @@ export default function PriceCard({
         '30-day money-back guarantee',
       ],
     },
+    '50TB': {
+      title: '50TB',
+      price: '€7900',
+      features: [
+        '50TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+    '100TB': {
+      title: '100TB',
+      price: '€9900',
+      features: [
+        '100TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
   };
 
   const PCCOMPONENTES_STORAGE_PLANS = {
@@ -343,7 +372,19 @@ export default function PriceCard({
   };
 
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
-  const storageSelectedStackCommerce = index === 0 ? '2TB' : index === 1 ? '5TB' : index === 2 ? '10TB' : '20TB';
+  const storageSelectedStackCommerce =
+    index === 0
+      ? '2TB'
+      : index === 1
+      ? '5TB'
+      : index === 2
+      ? '10TB'
+      : index === 3
+      ? '20TB'
+      : index === 4
+      ? '50TB'
+      : '100TB';
+
   const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
   const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
   const selectStorage = !isLifetimePage ? storageSelectedPcComponentes : storageSelected;
@@ -357,11 +398,11 @@ export default function PriceCard({
   return (
     <div
       className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
-        isStackCommerce ? 'h-[615px] w-[280px]' : 'w-[340px] '
+        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[340px] '
       } h-800 flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex h-[270px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
