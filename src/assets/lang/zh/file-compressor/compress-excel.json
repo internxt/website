@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "免费工具，压缩 Excel (XLS) 文件，更高效地协作处理表格并展示重要数据。",
+    "secureUpload": "通过 HTTPS 保护的安全上传。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 Excel 文件",
+      "description": "请按照以下步骤压缩 Excel 文件：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传 Excel 文件（XLS）：将文件拖放到上方区域，或从设备中选择上传。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 Excel 文件”。"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载您的文件。"
+        }
+      ],
+      "outro": "使用此工具，您可以随时免费压缩多个 Excel 文件。所有上传内容都会自动加密，确保文档的隐私。"
+    },
+    "whyConvert": {
+      "title": "为什么需要压缩 Excel 文件",
+      "intro": "在撰写大型表格、报告、文档或合同时，附件文件可能迅速增大，难以分享。压缩 Excel 文件可显著减小文件体积，提升协作效率：",
+      "bullets": ["更方便地分享和上传 Excel 文件。", "满足上传和邮件附件大小限制。", "便于数据驱动型项目的协作。"],
+      "outro": "上传和压缩过程中，所有文件均已加密，确保 Excel 文件的隐私性。可放心压缩、存储并分享。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个用于压缩、存储和分享 Excel 文件的安全平台。",
+    "cta": "立即使用 Internxt"
+  }
+}

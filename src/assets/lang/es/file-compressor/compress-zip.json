@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Reduce el tamaño de archivos ZIP grandes de forma rápida y segura con nuestro compresor ZIP en línea.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo ZIP",
+      "description": "Para comprimir un archivo ZIP, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo ZIP: arrástralo al área superior o cárgalo desde tu dispositivo."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en «Comprimir archivo ZIP»"
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta en línea puedes comprimir gratis archivos ZIP cuando lo necesites. Todos los archivos están protegidos con subidas cifradas para garantizar la privacidad de tus vídeos."
+    },
+    "whyConvert": {
+      "title": "Por qué podrías necesitar un compresor ZIP en línea",
+      "intro": "Enviar archivos de vídeo grandes por internet puede ser complicado debido a los límites de carga de servicios de correo electrónico, compartición o almacenamiento en la nube. Con el compresor ZIP en línea de Internxt, obtienes una herramienta segura y gratuita que te permite:",
+      "bullets": [
+        "Subir archivos ZIP más rápido y ahorrar ancho de banda",
+        "Mantener la calidad de tus archivos",
+        "Ahorrar almacenamiento y respetar límites de carga"
+      ],
+      "outro": "Todos tus archivos se encriptan durante la carga y compresión para mantener la privacidad de tus vídeos. Puedes comprimir, guardar y compartir con confianza usando Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos ZIP",
+    "cta": "Pásate a Internxt"
+  }
+}

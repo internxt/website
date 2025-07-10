@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compress a MOV file to reduce file size and share videos without reducing quality with Internxt. ",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to compress a MOV file",
+      "description": "To compress a MOV file, follow these steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your MOV file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress MOV file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ],
+      "outro": "With this tool, you can compress a MOV file for free for multiple files whenever you need. All files are secured with encrypted uploads to guarantee the privacy of your videos. "
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress a MOV file",
+      "intro": "Unfortunately, sending large video files online can be difficult due to upload limits from email, file sharing, or cloud storage services. By using Internxt to compress a MOV file, you get a secure, free tool that, once complete, allows you to:",
+      "bullets": [
+        "Upload videos faster and save bandwidth",
+        "Maintain high video quality",
+        "Keep videos within upload limits"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your videos private, so you can compress, store, and share your files in confidence with Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share MOV files",
+    "cta": "Get Internxt"
+  }
+}

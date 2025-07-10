@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprime archivos PPT con Internxt para disfrutar de una forma más sencilla y productiva de colaborar y presentar presentaciones.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo PPT",
+      "description": "Para comprimir un archivo PPT, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo PPT: arrástralo al área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en «Comprimir archivo PPT»"
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta, puedes comprimir archivos PPT gratis cuando lo necesites. Todos los archivos están protegidos mediante subidas cifradas para garantizar la privacidad de tus presentaciones."
+    },
+    "whyConvert": {
+      "title": "Por qué podría ser necesario comprimir un archivo PPT",
+      "intro": "A menudo necesitamos enviar un archivo PPT por correo electrónico para proyectos grupales o presentaciones de equipo, pero las presentaciones más grandes pueden estar limitadas por los proveedores de correo o intercambio de archivos. Para comprimir archivos PPT con Internxt, simplemente selecciona tu archivo y podrás:",
+      "bullets": [
+        "Comprimir, compartir y editar archivos PPT rápidamente",
+        "Respetar los límites de tamaño de carga",
+        "Administrar proyectos grupales"
+      ],
+      "outro": "Todos tus archivos se encriptan durante el proceso de carga y compresión para mantener privados tus archivos PPT, de modo que puedes comprimir, almacenar y compartir tus presentaciones con confianza con Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos PPT",
+    "cta": "Pásate a Internxt"
+  }
+}

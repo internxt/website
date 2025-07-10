@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Internxt 让您可以在线免费压缩多个 PDF 文件。保护并分享您的 PDF，无需担心附件大小限制。",
+    "secureUpload": "通过 HTTPS 加密保障上传安全。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 PDF 文件",
+      "description": "按照以下步骤压缩 PDF 文件：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传 PDF 文件：拖放到上方区域或从设备中选择文件开始转换。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 PDF”"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载文件。"
+        }
+      ],
+      "outro": "使用此工具，您可以随时免费压缩多个 PDF 文件。所有文件上传都经过加密处理，确保您的文档隐私安全。"
+    },
+    "whyConvert": {
+      "title": "为什么压缩大 PDF 文件？",
+      "intro": "发送大型 PDF 文件可能会因邮件、共享或云存储限制而变得困难。该免费工具可让您压缩多个 PDF 文件，并获得以下优势：",
+      "bullets": ["优化文件以便网页或移动端查看", "避免上传大小限制", "节省存储空间"],
+      "outro": "该工具无使用限制，可压缩最大 XGB 的 PDF 文件，并同时处理多个文档，无需注册或面临日常限制。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个安全的平台，用于压缩、存储和共享 PDF 文件",
+    "cta": "立即体验 Internxt"
+  }
+}

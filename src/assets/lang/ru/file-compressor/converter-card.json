@@ -1,0 +1,24 @@
+{
+  "title": "Сжать файл ${{pathFrom}}",
+  "secureUpload": "Безопасная загрузка, гарантированная защитой конфиденциальности Internxt. Мы не сохраняем никакой информации.",
+  "dragNDropArea": {
+    "maxFileSize": "Максимальный размер файла: 1 ГБ",
+    "dragYourFile": "Перетащите файл ${{pathFrom}} сюда",
+    "cta": "Выбрать файл ${{pathFrom}}",
+    "draggingFile": "Отпустите файл здесь"
+  },
+  "fileSelected": {
+    "title": "Файл выбран для сжатия",
+    "cancel": "Отмена",
+    "convert": "Сжать файл ${{pathFrom}}"
+  },
+  "converting": "Идёт сжатие файла",
+  "fileConverted": {
+    "label": "Ваш файл ${{pathFrom}} успешно сжат",
+    "title": "Скачивание начнётся автоматически в ближайшее время",
+    "description": "Если нет, нажмите кнопку ниже.",
+    "goHome": "Главная",
+    "convertAnother": "Сжать другой файл",
+    "downloadFile": "Скачать файл ${{pathFrom}}"
+  }
+}

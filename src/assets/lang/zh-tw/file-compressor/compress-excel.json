@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "免費工具，用於壓縮 Excel (XLS) 檔案，讓您更輕鬆高效地協作處理試算表並展示重要資料。",
+    "secureUpload": "透過 HTTPS 保護的安全上傳。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何壓縮 Excel 檔案",
+      "description": "請依照下列步驟壓縮 Excel 檔案：",
+      "steps": [
+        {
+          "step": "步驟 1：",
+          "description": "上傳您的 Excel (XLS) 檔案：拖放到上方區域，或從裝置中選擇上傳。"
+        },
+        {
+          "step": "步驟 2：",
+          "description": "點擊「壓縮 Excel 檔案」。"
+        },
+        {
+          "step": "步驟 3：",
+          "description": "下載您的檔案。"
+        }
+      ],
+      "outro": "使用這個工具，您可以隨時免費壓縮多個 Excel 檔案。所有檔案在上傳過程中自動加密，確保文件的隱私。"
+    },
+    "whyConvert": {
+      "title": "為什麼需要壓縮 Excel 檔案",
+      "intro": "在撰寫大型報表、文件或合約時，附件可能迅速變大，難以分享。壓縮 Excel 檔案能大幅減小檔案大小，提升協作效率：",
+      "bullets": ["讓分享和上傳 Excel 檔案更輕鬆。", "符合上傳和郵件的大小限制。", "輕鬆協作處理數據專案。"],
+      "outro": "所有檔案在上傳與壓縮過程中皆會加密，確保 Excel 檔案的私密性，讓您安心壓縮、儲存與分享。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一個安全的平台，可壓縮、儲存與分享 Excel 檔案。",
+    "cta": "立即使用 Internxt"
+  }
+}
