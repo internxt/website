@@ -121,5 +121,10 @@
     "title": "The world's most private cloud storage",
     "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
     "cta": "Select plan"
+  },
+  "MostSecureSection": {
+    "title": "The most secure cloud storage for your files, photos, and more",
+    "description": "Internxt Drive is an open-source, end-to-end encrypted cloud storage solution to store, back up, and share your files in total privacy. Internxt Drive offers award-winning encryption and control over your data. ",
+    "cta": "Redeem Code"
   }
 }

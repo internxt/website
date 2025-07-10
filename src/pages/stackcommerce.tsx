@@ -4,12 +4,14 @@ import FeatureSection from '@/components/lifetime/FeatureSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/lifetime/CtaSection';
+
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
 import HeroSection from '@/components/affiliates/brave/HeroSection';
+import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
+import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -43,6 +45,8 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
       <HeroSection textContent={langJson.HeroSection} onButtonClicked={onButtonClicked} />
+
+      <MostSecureSection textContent={langJson.MostSecureSection} onRedirectButtonClicked={onButtonClicked} />
 
       <FeatureSection textContent={langJson.FeatureSection} withoutCta />
 

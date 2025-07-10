@@ -39,19 +39,6 @@ const CtaSection = dynamic(
   () => import('@/components/affiliates/affiliates-partners-template/CtaSection').then((mod) => mod.CtaSection),
   { ssr: false },
 );
-const MarqueeComponent = dynamic(
-  () => import('@/components/specialoffer/MarqueeComponent').then((mod) => mod.MarqueeComponent),
-  { ssr: false },
-);
-const FeaturesSectionForOnePlan = dynamic(
-  () =>
-    import('@/components/affiliates/oneplan/FeaturesSectionForOneplan').then((mod) => mod.FeaturesSectionForOnePlan),
-  { ssr: false },
-);
-const WhatWeDoSectionForSpecialOffer = dynamic(
-  () => import('@/components/specialoffer/WhatWeDoSection').then((mod) => mod.WhatWeDoSectionForSpecialOffer),
-  { ssr: false },
-);
 
 export type CardsType = 'all' | 'one';
 
@@ -62,14 +49,9 @@ interface CardSystemPath {
 
 const ALL_LIFETIME_PLANS_PATHNAMES = ['pcmag'];
 
-const ONE_LIFETIME_PLAN_LIFETIME = ['oneplan'];
+const ALLOWED_PATHS = [...ALL_LIFETIME_PLANS_PATHNAMES];
 
-const ALLOWED_PATHS = [...ALL_LIFETIME_PLANS_PATHNAMES, ...ONE_LIFETIME_PLAN_LIFETIME];
-
-const CARD_SYSTEM_FOR_PATHS: CardSystemPath[] = [
-  { type: 'all', paths: ALL_LIFETIME_PLANS_PATHNAMES },
-  { type: 'one', paths: ONE_LIFETIME_PLAN_LIFETIME },
-];
+const CARD_SYSTEM_FOR_PATHS: CardSystemPath[] = [{ type: 'all', paths: ALL_LIFETIME_PLANS_PATHNAMES }];
 
 const getTypeFromPathname = (pathname: string): CardsType | undefined => {
   for (const cardSystem of CARD_SYSTEM_FOR_PATHS) {
@@ -89,12 +71,11 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
   const couponCode = {
     pcmag: PromoCodeName.Planet85,
-    oneplan: PromoCodeName.Affiliates85,
   };
 
   useEffect(() => {
     if (!selectedPathName) {
-      push('/affiliates');
+      push('/specialoffer');
     }
 
     setCardsType(getTypeFromPathname(pathname) ?? 'all');
@@ -133,36 +114,6 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
     },
   ];
 
-  const cards = [
-    {
-      icon: ShieldCheck,
-      title: langJson.WhyChooseInternxtForOneplan.cards[0].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[0].description,
-    },
-    {
-      icon: LockKey,
-      title: langJson.WhyChooseInternxtForOneplan.cards[1].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[1].description,
-    },
-    {
-      icon: Eye,
-      title: langJson.WhyChooseInternxtForOneplan.cards[2].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: langJson.WhyChooseInternxtForOneplan.cards[3].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[3].description,
-    },
-  ];
-
-  const handleOnButtonClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <MinimalNavbar lang={lang} />
@@ -187,33 +138,6 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
           <DevicesSection textContent={langJson.DevicesSection} />
 
           <TestimonialsSection textContent={homeJson.TestimonialsSection} />
-        </>
-      ) : undefined}
-
-      {cardsType === 'one' ? (
-        <>
-          <div className="flex w-full shadow-inner">
-            <MarqueeComponent label={langJson.recommendedBy} />
-          </div>
-
-          <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
-
-          <FeaturesSlider
-            textContent={{
-              title: langJson.WhyChooseInternxtForOneplan.title,
-              description: langJson.WhyChooseInternxtForOneplan.description,
-            }}
-            cardInfo={cards}
-          />
-
-          <TestimonialsSection textContent={homeJson.TestimonialsSection} />
-
-          <WhatWeDoSectionForSpecialOffer
-            textContent={langJson.WhatWeDoForOneplan}
-            handleOnButtonClick={handleOnButtonClick}
-            bgColor="bg-gray-1"
-            bgColorCard="bg-gray-1"
-          />
         </>
       ) : undefined}
 
