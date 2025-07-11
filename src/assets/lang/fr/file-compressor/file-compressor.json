@@ -5,7 +5,11 @@
       "normal": "Le meilleur compresseur de fichiers pour réduire la taille de vos vidéos, photos et documents en toute sécurité."
     },
     "cards": [
-      { "title": "Fichier MOV", "description": "Compressez des vidéos gratuitement", "pathname": "compress-mov" },
+      {
+        "title": "Fichier MOV",
+        "description": "Compressez des fichiers vidéos gratuitement",
+        "pathname": "compress-mov"
+      },
       {
         "title": "Fichier PDF",
         "description": "Compressez des fichiers PDF gratuitement",

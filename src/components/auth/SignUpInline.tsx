@@ -49,7 +49,7 @@ export default function SignUpInline(props: Readonly<SignUpInlineProps>) {
 
   return (
     <form className="flex w-full flex-col items-center space-y-2 pt-10 md:items-center md:pt-0" onSubmit={onSubmit}>
-      <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-y-0 md:space-x-3">
+      <div className="flex w-full flex-col space-x-0 space-y-3 md:flex-row md:space-x-3 md:space-y-0">
         <div className="w-full">
           <TextInput
             id="signupEmail"

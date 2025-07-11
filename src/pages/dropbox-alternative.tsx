@@ -10,8 +10,12 @@ import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
 import CtaSection from '@/components/shared/CtaSection';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
+import { PromoCodeName } from '@/lib/types';
+import { stripeService } from '@/services/stripe.service';
 import ReactMarkdown from 'react-markdown';
 
 interface DropboxComparisonProps {
@@ -45,6 +49,29 @@ const DropboxComparison = ({
   footerLang,
 }: DropboxComparisonProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.Dropbox87,
+  });
+
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = individualCoupon?.name;
+
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout,
+    );
+  };
+
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   return (
     <Layout
@@ -58,6 +85,29 @@ const DropboxComparison = ({
       <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
 
       <HeroSection textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
+
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscount,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={lang}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideSwitchSelector
+        hideBusinessSelector
+        hideFreeCard
+        CustomDescription={
+          <span className="text-regular max-w-[800px] text-xl text-gray-80">
+            {langJson.tableSection.planDescription}
+          </span>
+        }
+        backgroundColorComponent="bg-gray-1"
+        showPromo={false}
+      />
 
       <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
 

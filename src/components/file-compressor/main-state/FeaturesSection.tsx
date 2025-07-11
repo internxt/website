@@ -81,7 +81,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
 
           <div className="flex flex-col space-y-3">
             <p className="text-center text-2xl font-medium text-gray-100">{textContent.howUseFileCompressor.title}</p>
-            <div className="mx-auto grid grid-cols-1  gap-8  pt-8 sm:grid-cols-3">
+            <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-3">
               {textContent.howUseFileCompressor.steps.map((feature, idx) => (
                 <div
                   key={feature.step}

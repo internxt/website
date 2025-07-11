@@ -12,7 +12,7 @@
       { "title": "Файл PPT", "description": "Бесплатное сжатие PPT", "pathname": "compress-ppt" },
       { "title": "Файл Word", "description": "Сжатие Word бесплатно", "pathname": "compress-word" },
       { "title": "Файл Excel", "description": "Сжатие Excel бесплатно", "pathname": "compress-excel" },
-      { "title": "Файл ZIP", "description": "Сжатие ZIP бесплатно", "pathname": "compress-zip" }
+      { "title": "Файл\n ZIP", "description": "Сжатие ZIP бесплатно", "pathname": "compress-zip" }
     ]
   },
   "FeaturesSection": {
