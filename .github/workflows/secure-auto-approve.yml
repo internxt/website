@@ -6,15 +6,15 @@ on:
 
 jobs:
   auto-approve:
-    if: github.actor == 'jaaaaavier'
+    if: github.actor == 'jaaaaavier' # 👈 Sustituye esto por tu usuario real
     runs-on: ubuntu-latest
 
     steps:
       - name: Verificar rama origen
         run: |
           echo "Rama: ${{ github.head_ref }}"
-          if [[ "${{ github.head_ref }}" != hotfixes/* ]]; then
-            echo "Solo se autoaprueban ramas 'hotfixes/*'"
+          if [[ "${{ github.head_ref }}" != hotfixes && "${{ github.head_ref }}" != hotfixes/* ]]; then
+            echo "Solo se autoaprueban ramas 'hotfixes' o 'hotfixes/*'"
             exit 1
           fi
 
@@ -28,12 +28,13 @@ jobs:
 
       - name: Comprobar archivos modificados
         run: |
+          echo "Analizando archivos del PR..."
           FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files -q '.files[].path')
           echo "$FILES" > files.txt
           echo "Archivos modificados:"
           cat files.txt
           if grep -qvE '^(README\.md|docs/|src/)' files.txt; then
-            echo "Cambios en archivos fuera de rutas seguras. No se aprueba."
+            echo "Cambios fuera de rutas seguras. No se aprueba automáticamente."
             exit 1
           fi
 
