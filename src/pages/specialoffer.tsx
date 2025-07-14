@@ -57,7 +57,8 @@ const PartnerDiscount = ({
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
   }
-
+  const percentOff = decimalDiscount === 13 ? '87' : '85';
+  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={['priceTable']} fixed isLinksHidden />
@@ -65,7 +66,12 @@ const PartnerDiscount = ({
       <AnimatedHeroSection
         textComponent={
           <>
-            <div className="flex flex-col space-y-4 pr-40">
+            <h1 className="block text-4xl font-bold text-white lg:hidden xl:text-5xl">
+              {langJson.HeroSection.title}{' '}
+              <span className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</span>
+            </h1>
+
+            <div className="hidden pr-40 lg:flex lg:flex-col lg:space-y-4">
               <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
               <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
             </div>
@@ -74,11 +80,11 @@ const PartnerDiscount = ({
               <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
               <p
                 className="text-md font-regular text-white"
-                dangerouslySetInnerHTML={{ __html: langJson.HeroSection.info }}
+                dangerouslySetInnerHTML={{ __html: parseText(langJson.HeroSection.info) }}
               />
             </div>
 
-            <Button onClick={redirectToPricingTable} text={langJson.HeroSection.cta} className="z-10" />
+            <Button onClick={redirectToPricingTable} text={parseText(langJson.HeroSection.cta)} className="z-10 " />
           </>
         }
       />

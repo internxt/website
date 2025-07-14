@@ -82,7 +82,9 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="mt-40 flex h-[530px] w-[550px] flex-col justify-evenly">{textComponent}</div>
+            <div className="mt-20 flex h-[500px] w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0">
+              {textComponent}
+            </div>
           </div>
           <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
             <Animation images={images} />;
