@@ -18,7 +18,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden px-5 py-20">
       <div className="flex w-full flex-col items-center space-y-8">
-        <div className="flex w-full flex-col items-center justify-center">
+        <div className="flex w-full flex-col items-center justify-center pb-10">
           <Image
             src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"
@@ -36,7 +36,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
           />
         </div>
         <SignUpBanner textContent={bannerText} lang={'en'} />
-        <div className="flex max-w-[832px] flex-col">
+        <div className="flex max-w-[832px] flex-col pt-16">
           <div className="flex flex-col">
             <p className="pb-4 text-center text-2xl font-medium text-gray-100">{textContent.howToConvert.title}</p>
             <div className="flex flex-col">
@@ -46,7 +46,7 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
                     key={feature.step}
                     className="flex w-[256px] flex-col items-start gap-6 rounded-xl bg-gray-1 p-6 shadow-md"
                   >
-                    <span className="mb-2 text-2xl font-bold text-primary">{idx + 1}</span>
+                    <span className="mb-2 text-2xl font-medium text-primary">{idx + 1}</span>
                     <FirstBold text={feature.description} className="text-base text-gray-80" />
                   </div>
                 ))}

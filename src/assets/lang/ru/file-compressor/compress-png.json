@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "description": "Сжимайте PNG-файлы, чтобы уменьшить их размер и делиться изображениями без потери качества с помощью Internxt.",
-    "secureUpload": "Безопасная загрузка, защищённая HTTPS."
+    "secureUpload": "Безопасная загрузка, защищённая HTTPS"
   },
   "FeaturesSection": {
     "howToConvert": {
