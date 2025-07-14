@@ -1,0 +1,43 @@
+name: Secure Auto-approve PR
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  auto-approve:
+    if: github.actor == 'jaaaaavier'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Verificar rama origen
+        run: |
+          echo "Rama: ${{ github.head_ref }}"
+          if [[ "${{ github.head_ref }}" != feature/* ]]; then
+            echo "Solo se autoaprueban ramas 'feature/*'"
+            exit 1
+          fi
+
+      - name: Instalar GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install gh -y
+
+      - name: Autenticarse con GitHub CLI
+        run: echo "${{ secrets.PAT_TOKEN }}" | gh auth login --with-token
+
+      - name: Comprobar archivos modificados
+        run: |
+          FILES=$(gh pr view ${{ github.event.pull_request.number }} --json files -q '.files[].path')
+          echo "$FILES" > files.txt
+          echo "Archivos modificados:"
+          cat files.txt
+          if grep -qvE '^(README\.md|docs/|src/)' files.txt; then
+            echo "Cambios en archivos fuera de rutas seguras. No se aprueba."
+            exit 1
+          fi
+
+      - name: Autoaprobar PR
+        uses: hmarr/auto-approve-action@v3
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
