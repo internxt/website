@@ -13,8 +13,8 @@ jobs:
       - name: Verificar rama origen
         run: |
           echo "Rama: ${{ github.head_ref }}"
-          if [[ "${{ github.head_ref }}" != feature/* ]]; then
-            echo "Solo se autoaprueban ramas 'feature/*'"
+          if [[ "${{ github.head_ref }}" != hotfixes/* ]]; then
+            echo "Solo se autoaprueban ramas 'hotfixes/*'"
             exit 1
           fi
 
