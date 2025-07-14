@@ -6,10 +6,13 @@ on:
 
 jobs:
   auto-approve:
-    if: github.actor == 'jaaaaavier' # 👈 Sustituye esto por tu usuario real
+    if: github.actor == 'jaaaaavier'
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
       - name: Verificar rama origen
         run: |
           echo "Rama: ${{ github.head_ref }}"
