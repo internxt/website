@@ -65,7 +65,7 @@ export const BusinessPage = ({
         TextComponent={
           <div className="llg:pr-10 flex w-full flex-col items-center justify-center gap-8  text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
             <Header>{textContent.HeroSection.title}</Header>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 pt-10">
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
             </div>
             <div className="flex flex-col items-center gap-4 lg:flex-row ">
