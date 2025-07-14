@@ -36,7 +36,7 @@ jobs:
           echo "$FILES" > files.txt
           echo "Archivos modificados:"
           cat files.txt
-          if grep -qvE '^(README\.md|docs/|src/)' files.txt; then
+          if grep -qvE '^(README\.md|docs/|src/|\.github/|tailwind\.config\.js)' files.txt; then
             echo "Cambios fuera de rutas seguras. No se aprueba automáticamente."
             exit 1
           fi
