@@ -1,17 +1,13 @@
-import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-import Button from '@/components/shared/Button';
-import HeroSectionSafeArea from '@/components/shared/HeroSectionSafeArea';
-import { Percent } from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
-const Animation = dynamic(() => import('@/components/shared/Animation'));
+import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
+const Animation = dynamic(() => import('../Animation'));
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
-interface HeroSectionBraveProps {
-  textContent: any;
-  onButtonClicked?: () => void;
+interface AnimatedHeroSectionProps {
+  textComponent: JSX.Element;
 }
 
-export default function HeroSection({ textContent, onButtonClicked }: HeroSectionBraveProps): JSX.Element {
+export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps): JSX.Element {
   const images: ImageConfig[] = [
     {
       src: '/images/home/header/browser.webp',
@@ -75,27 +71,21 @@ export default function HeroSection({ textContent, onButtonClicked }: HeroSectio
     },
   ];
 
-  function redirectToPricingTable() {
-    window.location.href = '#priceTable';
-  }
-
   return (
-    <section className={`${styles.inverseLinearGradient} overflow-hidden`}>
-      <div className=" relative mx-4 pb-12 pt-36 lg:px-10 lg:pt-0">
+    <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
+      <div className="relative mx-4 pb-12 pt-0 lg:pt-0 xl:mx-32">
+        <div
+          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
+        />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
-          <div className="flex max-w-[2000px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:pt-20 lg:text-left">
-            <div className="flex flex-col space-y-4">
-              <h1 className="text-4xl font-bold text-white xl:text-5xl">{textContent.title}</h1>
-              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{textContent.subtitle}</h2>
-            </div>
-            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
-              <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
-              <p className="text-md font-regular text-white" dangerouslySetInnerHTML={{ __html: textContent.info }}></p>
-            </div>
-            <Button onClick={onButtonClicked ? onButtonClicked : redirectToPricingTable} text={textContent.cta} />
+          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
+          <div
+            className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+          >
+            <div className="mt-40 flex h-[530px] w-[550px] flex-col justify-evenly">{textComponent}</div>
           </div>
-          <div className="hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
-            <Animation images={images} />
+          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
+            <Animation images={images} />;
           </div>
         </div>
       </div>

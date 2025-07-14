@@ -1,6 +1,4 @@
 import Script from 'next/script';
-
-import HeroSection from '@/components/cloud-storage-backup-solutions/HeroSection';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -16,6 +14,9 @@ import FeaturesSection from '@/components/cloud-storage-backup-solutions/Feature
 import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import { Check } from '@phosphor-icons/react';
+import Link from 'next/link';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -34,7 +35,6 @@ const CloudStorageBackupSolutions = ({
   lang,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cloud-storage-backup-solutions');
-  const locale = lang as string;
   const CTA_URL = `/pricing`;
   const cardsData: FeatureCard[] = [
     {
@@ -89,7 +89,37 @@ const CloudStorageBackupSolutions = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} lang={locale} />
+        <AnimatedHeroSection
+          textComponent={
+            <>
+              <div className="flex flex-col">
+                <h1 className=" text-3xl font-semibold text-white lg:text-5xl">
+                  {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
+                  <span className="text-primary"> {textContent.HeroSection.TitleAndOnePlan.title.blueText} </span>
+                  {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
+                </h1>
+
+                <p className="pt-4 text-xl text-white">
+                  <span className=" text-white">{textContent.HeroSection.TitleAndOnePlan.description}</span>
+                </p>
+              </div>
+              <div className="mx-auto flex flex-col lg:mx-0">
+                {textContent.HeroSection.TitleAndOnePlan.features.map((feat) => (
+                  <div key={feat} className="flex flex-row gap-2">
+                    <Check className="pt-2 text-green-1 lg:pt-0" weight="light" size={24} />
+                    <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                  </div>
+                ))}
+              </div>
+              <Link
+                href={'/pricing'}
+                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+              >
+                {textContent.HeroSection.TitleAndOnePlan.claimDeal}
+              </Link>
+            </>
+          }
+        />
 
         <FeatureSection
           title={textContent.FeatureSection.title}
