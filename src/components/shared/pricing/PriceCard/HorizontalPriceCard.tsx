@@ -84,7 +84,7 @@ export const HorizontalPriceCard = ({
   }
   return (
     <div className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:h-[328px] lg:w-[1288px] lg:flex-row">
-      <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white p-6 pb-10 pt-10 lg:w-[455px]">
+      <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white p-6 pb-10 pt-10 lg:w-[455px] lg:border-r lg:border-neutral-20">
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex rounded-full px-3 py-0.5">
             <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{cardLabel}</p>
@@ -123,7 +123,7 @@ export const HorizontalPriceCard = ({
               return (
                 <div className="flex flex-row items-start space-x-2" key={feature}>
                   <Icon size={24} className="text-primary" />
-                  <span className="font-regular text-lg+ text-gray-80">
+                  <span className={`text-lg+ text-gray-80 ${index === 0 ? 'font-semibold' : 'font-regular'}`}>
                     {feature}
                     {index > 9 && (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-orange-1">

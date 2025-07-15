@@ -49,7 +49,7 @@ export const HorizontalPricingSection = ({ textContent, couponName }: PriceTable
   return (
     <>
       <div className="flex flex-col items-center justify-center bg-gray-1 text-center">
-        <div className="space-y-6 pb-12 pt-12 lg:w-[774px] lg:pb-24 lg:pt-24">
+        <div className="space-y-6 pb-12 pt-12 lg:w-[774px] lg:pb-8 lg:pt-24">
           <p className="text-2xl font-semibold text-primary lg:text-4xl">{textContent.mostPopular}</p>
           <p className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
           <p className="font-regular w-[290px] text-lg text-gray-100 lg:w-full lg:text-xl">{textContent.description}</p>
@@ -69,7 +69,7 @@ export const HorizontalPricingSection = ({ textContent, couponName }: PriceTable
         ) : (
           <CardSkeleton maxWidth="max-w-[480px]" cardWidthForDesk="xs:max-w-[480px] xs:w-screen" />
         )}
-        <div className="flex flex-col items-center justify-center space-y-8 py-24 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-8 pb-24 pt-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row">
               <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
