@@ -146,22 +146,6 @@ LayoutProps) {
 
         <script
           dangerouslySetInnerHTML={{
-            __html: `
-                var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
-                (function(){
-                    var t = document.createElement("script");
-                    t.type = "text/javascript";
-                    t.async = true;
-                    t.id = "AddShoppers";
-                    t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
-                    document.getElementsByTagName("head")[0].appendChild(t);
-                })();
-              `,
-          }}
-        />
-
-        <script
-          dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
