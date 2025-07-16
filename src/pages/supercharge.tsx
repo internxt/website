@@ -89,10 +89,6 @@ const PartnerDiscount = ({
         }
       />
 
-      <MostSecureSection textContent={langJson.MostSecureSection} />
-
-      <ScrollableSection textContent={langJson.ScrollableSection} />
-
       <PricingSectionWrapper
         textContent={{
           ...langJson.PaymentSection,
@@ -115,6 +111,10 @@ const PartnerDiscount = ({
         showPromo={false}
         backgroundColorComponent="bg-gray-1"
       />
+
+      <MostSecureSection textContent={langJson.MostSecureSection} />
+
+      <ScrollableSection textContent={langJson.ScrollableSection} />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
 
