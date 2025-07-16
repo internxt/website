@@ -172,46 +172,48 @@
     },
     "individuals": {
       "1TB": [
-        "Stockage chiffré 1TB à connaissance zéro",
-        "Chiffrement post-quantique",
-        "VPN ultra rapide illimité (FR)",
+        "1To de stockage",
+        "Cryptographie post-quantique",
+        "VPN haut débit illimité (FR)",
         "Antivirus",
-        "Sauvegardez vos fichiers",
+        "Sauvegardes",
         "Partage de fichiers protégé par mot de passe",
-        "Conformité RGPD",
+        "Conforme au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support CLI, WebDav & Rclone"
+        "CLI, WebDav & Rclone",
+        "Miner et Gagner"
       ],
       "3TB": [
-        "Stockage chiffré 3TB à connaissance zéro",
-        "Chiffrement post-quantique",
-        "VPN ultra rapide illimité (FR, DE, PL)",
+        "3To de stockage",
+        "Cryptographie post-quantique",
+        "VPN haut débit illimité (FR, DE, PL)",
         "Antivirus",
-        "Sauvegardez vos fichiers",
+        "Sauvegardes",
         "Partage de fichiers protégé par mot de passe",
-        "Invitez, partagez et collaborez",
-        "Conformité RGPD",
+        "Inviter, partager et collaborer",
+        "Conforme au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support CLI, WebDav & Rclone",
-        "Nettoyage de l’appareil",
-        "Surveillance du dark web"
+        "CLI, WebDav & Rclone",
+        "Miner et Gagner",
+        "Nettoyage de l’appareil"
       ],
       "5TB": [
-        "Stockage chiffré 5TB à connaissance zéro",
-        "Chiffrement post-quantique",
-        "VPN ultra rapide illimité (FR, DE, PL, CA, UK)",
+        "5To de stockage",
+        "Cryptographie post-quantique",
+        "VPN haut débit illimité (FR, DE, PL, CA, UK)",
         "Antivirus",
-        "Sauvegardez vos fichiers",
+        "Sauvegardes",
         "Partage de fichiers protégé par mot de passe",
-        " Invitez, partagez et collaborez",
-        "Conformité RGPD",
+        "Inviter, partager et collaborer",
+        "Conforme au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "Support CLI, WebDav & Rclone",
+        "CLI, WebDav & Rclone",
+        "Miner et Gagner",
         "Nettoyage de l’appareil",
-        "Surveillance du dark web",
         "Meet",
         "Mail"
       ],
+
       "10TB": []
     },
     "business": {
@@ -227,8 +229,7 @@
         "Authentification à deux facteurs (2FA)",
         "Support CLI, WebDav & Rclone",
         "Gérez la facturation et les paiements du compte",
-        "Nettoyeur d'appareil",
-        "Surveillance du Dark Web"
+        "Nettoyeur d'appareil"
       ],
       "2TB": [
         "2 To de stockage/utilisateur",
@@ -243,7 +244,6 @@
         "Support CLI, WebDav & Rclone",
         "Gérez la facturation et les paiements du compte",
         "Nettoyeur d'appareil",
-        "Surveillance du Dark Web",
         "Meet",
         "Mail"
       ]

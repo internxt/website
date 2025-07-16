@@ -118,8 +118,8 @@ export const PriceCard = ({
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Coins,
     Broom,
-    Detective,
     VideoConference,
     Envelope,
     CreditCard,
@@ -252,9 +252,8 @@ export const PriceCard = ({
                   {React.createElement(
                     index === 10
                       ? iconsFeatures[(index + 4) % iconsFeatures.length]
-                      : index > 10
-                      ? iconsFeatures[(index - 1) % iconsFeatures.length]
                       : iconsFeatures[index % iconsFeatures.length],
+
                     {
                       size: 24,
                       className: 'text-primary',
@@ -284,7 +283,7 @@ export const PriceCard = ({
                   )}
                   <span className="text-gray-80">
                     {feature}
-                    {index > 9 ? (
+                    {(index > 8 && storage === '1TB') || index > 9 ? (
                       <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
                         {contentText.commingSoon}
                       </span>

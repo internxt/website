@@ -180,7 +180,8 @@
         "Comparte archivos protegidos con contraseña",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone"
+        "CLI, WebDav & Rclone",
+        "Mina y Gana"
       ],
       "3TB": [
         "3TB de almacenamiento",
@@ -193,8 +194,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
-        "Limpieza de dispositivo",
-        "Monitor de dark web"
+        "Mina y Gana",
+        "Limpieza de dispositivo"
       ],
       "5TB": [
         "5TB de almacenamiento",
@@ -207,8 +208,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav & Rclone",
+        "Mina y Gana",
         "Limpieza de dispositivo",
-        "Monitor de dark web",
         "Meet",
         "Mail"
       ],
@@ -227,8 +228,7 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpieza de dispositivo",
-        "Monitor de dark web"
+        "Limpieza de dispositivo"
       ],
       "2TB": [
         "2TB de almacenamiento",
@@ -243,7 +243,6 @@
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
         "Limpieza de dispositivo",
-        "Monitor de dark web",
         "Meet ",
         "Mail "
       ]
