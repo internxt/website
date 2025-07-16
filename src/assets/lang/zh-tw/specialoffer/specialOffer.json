@@ -1,0 +1,75 @@
+{
+  "HeroSection": {
+    "title": "雲端儲存空間",
+    "subtitle": "保障你的隱私權",
+    "description": "Internxt 的 Web3 開源雲端儲存使用後量子零知識加密技術，保障你的隱私。",
+    "info": "立即獲得<strong>85% 獨家折扣</strong>，適用於所有年費與終身方案。",
+    "cta": "立即享 85% 折扣"
+  },
+  "MostSecureSection": {
+    "description": "Internxt Drive 是一套開源且具端對端加密的雲端儲存解決方案，可安全儲存、備份與分享你的檔案。支援後量子加密，全面掌控資料。",
+    "title": "保護你的照片、文件與所有資訊",
+    "cta": "立即獲取優惠"
+  },
+  "ScrollableSection": {
+    "title": "最安全的儲存方式",
+    "description": "Internxt 有何特別？我們是一支致力於網路隱私的小型專業團隊，所有決策都以保障你的資料為首要考量。",
+    "elements": [
+      {
+        "title": "極致隱私",
+        "description": "我們絕不儲存密碼或個人資料，所有檔案在傳輸與靜置時皆加密，保護你的資料主權。"
+      },
+      {
+        "title": "次世代安全",
+        "description": "Internxt 是唯一自動使用端對端與後量子加密的雲端服務，唯有你可讀取資料。"
+      },
+      {
+        "title": "開源與透明",
+        "description": "我們的原始碼已在 GitHub 公開，任何人皆可審查。除了你的資料，我們沒有秘密。"
+      },
+      {
+        "title": "第三方驗證",
+        "description": "我們嚴格遵守 GDPR，並確保 100% 安全環境。Internxt 經歐洲滲透測試權威 Securitum 獨立稽核。"
+      }
+    ]
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "年度方案",
+      "homePage": "選擇適合你的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "立享五折優惠",
+        "normalText": "適用所有獨家終身方案"
+      }
+    },
+    "header": "完整隱私保障，高達 85% 折扣",
+    "lifetimeDescription": "一次付款，終身受益。完整存取 Internxt 的私密功能與加密雲端儲存。",
+    "planDescription": "所有 Internxt 方案皆含完整隱私功能。訂閱即可享一年加密雲端儲存。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "individual": "個人",
+      "lifetime": "終身",
+      "business": "商業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt 免費方案",
+      "description": "享有最高 1GB 加密空間，並使用我們的私密生態系統：VPN、CLI/WebDav/Rclone 等。",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源可審查",
+      "anonymousAccount": "匿名帳戶",
+      "premiumSupport": "頂級客服",
+      "guarantee": "30 天退款保證"
+    }
+  },
+  "CtaSection1": {
+    "title": "全球最私密的雲端儲存",
+    "description": "專享 82% 折扣，體驗一年安全、私密的加密儲存。",
+    "cta": "立即探索方案"
+  }
+}

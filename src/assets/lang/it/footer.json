@@ -82,12 +82,17 @@
         "passwordGenerator": "Generatore di Password",
         "fileConverter": "Convertitore di file",
         "vpn": "Extensione VPN",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Eliminatore di metadati",
+        "aiDetector": "Detector di IA",
+        "fileCompressor": "Compressore di File"
       },
       "features": {
         "title": "Funzionalità",
         "privateCloud": "Soluzione cloud privato",
-        "cloudBakcup": "Soluzione di backup cloud"
+        "cloudBakcup": "Soluzione di backup cloud",
+        "GDPRCloud": "Archiviazione GDPR",
+        "cloudPhotos": "Foto nel cloud"
       }
     }
   },

@@ -51,7 +51,6 @@ export interface FAQ {
   answer: string[];
 }
 
-
 export interface FeaturesSection {
   title: string;
   description: string;
@@ -157,7 +156,6 @@ export interface ImageConfig {
   borderRadius?: string;
   className?: string;
 }
-
 
 export interface AnimationProps {
   images: ImageConfig[];

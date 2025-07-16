@@ -1,103 +1,122 @@
-import { Globe, SketchLogo, CloudCheck, FileArrowUp, ClockCounterClockwise } from '@phosphor-icons/react';
-import styles from './Background.module.scss';
-import { toast } from 'react-toastify';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
+import dynamic from 'next/dynamic';
+import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
+import { Percent } from '@phosphor-icons/react';
+const Animation = dynamic(() => import('../shared/Animation'));
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import Link from 'next/link';
+interface HeroSectionForHomeProps {
+  textContent: any;
 
-const HeroSection = ({ textContent }) => {
-  const open = () => toast.success('Copied to clipboard!');
+  isHomePageV2?: boolean;
+}
 
-  const subtitleTechradar = textContent.subtitle1.split('TECHRADAR')[0];
-  const techradar = textContent.subtitle1.substr(textContent.subtitle1.indexOf('TECHRADAR'), 9);
+export default function HeroSection({ textContent, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+  const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
 
-  const FeatureSection = [
+  const images: ImageConfig[] = [
     {
-      id: 1,
-      icon: SketchLogo,
-      title: 'Clean and intuitive interface',
+      src: '/images/home/header/browser.webp',
+      alt: 'Browser window',
+      animationDelay: 200,
+      size: { width: 800, height: 520 },
+      position: { top: '12%', left: '200px' },
+      boxShadow: '56px 56px 80px rgba(0,0,0,.2)',
+      borderRadius: '24px',
+      className: 'rounded-2xl',
     },
     {
-      id: 2,
-      icon: Globe,
-      title: 'Available on any device',
+      src: '/images/home/header/folder.svg',
+      alt: 'Folder icon',
+      animationDelay: 600,
+      size: { width: 64, height: 64 },
+      position: { top: '12%', left: '12%' },
+      filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) opacity(0.3)',
     },
     {
-      id: 3,
-      icon: CloudCheck,
-      title: 'Offline file access',
+      src: '/images/home/header/zip.svg',
+      alt: 'Zip icon',
+      animationDelay: 800,
+      size: { width: 56, height: 56 },
+      position: { top: '34%', left: '18%' },
+      filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) opacity(0.3)',
     },
     {
-      id: 4,
-      icon: FileArrowUp,
-      title: 'Derestricted file sizes',
+      src: '/images/home/header/powerpoint.svg',
+      alt: 'PowerPoint icon',
+      animationDelay: 1000,
+      size: { width: 56, height: 56 },
+      position: { top: '47%', left: '10%' },
+      filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) opacity(0.3)',
     },
     {
-      id: 5,
-      icon: ClockCounterClockwise,
-      title: 'Backup service included',
+      src: '/images/home/header/csv.svg',
+      alt: 'CSV icon',
+      animationDelay: 1200,
+      size: { width: 56, height: 56 },
+      position: { top: '85%', left: '16%' },
+      filter: 'drop-shadow(8px 16px 16px rgba(0,0,0,.1)) opacity(0.3)',
+    },
+    {
+      src: '/images/cloud-storage-backup-solutions/vpn_item.webp',
+      alt: 'File preview',
+      animationDelay: 400,
+      size: { width: 178, height: 165 },
+      position: { top: '300px', left: '21%' },
+      boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
+      borderRadius: '24px',
+    },
+    {
+      src: '/images/antivirus/Internxt_Antivirus_Header.png',
+      alt: 'Task logger',
+      animationDelay: 900,
+      size: { width: 355, height: 257 },
+      position: { top: '65%', left: '95%' },
+      boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
+      borderRadius: '24px',
     },
   ];
 
-  const copyCoupon = () => {
-    navigator.clipboard.writeText(techradar);
-
-    open();
-  };
-
   return (
-    <>
-      <section className="overflow-hidden pt-16">
-        <div className="mb-20 mt-[77px] flex flex-col justify-center lg:mx-10 lg:flex-row lg:justify-evenly xl:mx-32">
-          <div className="mx-4 flex flex-col items-center justify-center space-y-8 text-center text-white lg:mr-52 lg:max-w-[456px]  lg:items-start lg:text-start">
-            <div>
-              <h1 className=" text-6xl font-semibold">{textContent.title1.line1}</h1>
-              <p className="pt-2 text-3xl font-semibold">{textContent.title1.line2}</p>
-            </div>
-            <p className="text-2xl font-normal">
-              {subtitleTechradar}
-              {
-                <button onClick={copyCoupon} className="">
-                  <b>
-                    <p className="underline underline-offset-4">{techradar}</p>
-                  </b>
-                </button>
-              }
-            </p>
-            <div className="flex rounded-lg bg-white px-9 py-4">
-              <Link href="#pricing" className="text-lg font-normal text-primary">
+    <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
+      <div className="relative mx-4 pb-12 pt-0 lg:pt-0 xl:mx-32">
+        <div
+          className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
+        />
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
+          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
+          <div
+            className={`flex w-screen flex-shrink-0 ${componentsFlow} items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
+          >
+            <div className="flex max-w-[550px] flex-col items-center justify-center space-y-6 pt-32 text-center lg:items-start lg:text-left">
+              <div className="flex flex-col space-y-4">
+                <div className="px-18 flex flex-row items-center space-x-3.5 pb-6 pl-8 lg:pl-0">
+                  <Image
+                    src={getImage('/icons/techradarXInternxt.svg')}
+                    width={300}
+                    height={16}
+                    alt="techradar x internxt logo"
+                  />
+                </div>
+                <h1 className="text-4xl font-bold text-white xl:text-6xl">{textContent.title1.line1}</h1>
+                <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{textContent.title1.line2}</h2>
+              </div>
+
+              <Link
+                href={'#priceTable'}
+                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+              >
                 {textContent.cta}
               </Link>
             </div>
           </div>
-          <div className="relative px-10 pt-20 lg:px-0 lg:pt-10">
-            <div className="absolute z-10 hidden flex-row pr-5 lg:-top-10 lg:flex">
-              <img src="/images/partners-discount/Vector.svg" alt="Vector image" className="pr-3" />
-              <img src="/images/partners-discount/Vector.svg" alt="Vector image" />
-            </div>
-            <div className="z-20 flex flex-col items-center justify-center rounded-2xl bg-white p-5 sm:p-10 lg:pt-10">
-              <div className=" flex max-w-[401px] flex-col p-10 text-center">
-                <p className="text-3xl font-normal text-gray-60">{textContent.card}</p>
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <p className="flex flex-col pb-2 text-center text-lg text-gray-60">Recommended by:</p>
-                <img src="/images/partners-discount/Techradar.svg" alt="Techradar image" />
-              </div>
-            </div>
+
+          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
+            <Animation images={images} />;
           </div>
         </div>
-        <div
-          className={`absolute left-0 top-16 -z-10 flex h-screen w-screen ${styles.partnerHeroSection} pointer-events-none origin-center`}
-        />
-      </section>
-      <div className="sm:gap-x-30 flex flex-row flex-wrap justify-center gap-x-20 gap-y-10 py-14">
-        {FeatureSection.map((item, index) => (
-          <div key={index} className="flex max-w-[185px] flex-col items-center justify-center space-y-8 text-center">
-            <item.icon size={40} className="text-primary" />
-            <p className="text-2xl font-normal">{item.title}</p>
-          </div>
-        ))}
       </div>
-    </>
+    </section>
   );
-};
-
-export default HeroSection;
+}

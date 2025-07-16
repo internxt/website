@@ -75,7 +75,7 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
   return (
     <div
       id="inbox"
-      className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard"
+      className="flex h-[512px] w-full max-w-3xl flex-row space-y-2 overflow-hidden rounded-xl border border-gray-10 shadow-subtle-hard lg:max-w-2xl"
     >
       <div className="flex flex-col">
         <div className="flex h-full w-screen max-w-[256px] flex-col items-start justify-start rounded-l-xl border-r border-gray-10">
@@ -122,12 +122,12 @@ const InboxWeb = ({ getProps }: { getProps: InboxProps }) => {
                         {item.from}
                       </p>
 
-                      <p title={item.subject} className="flex-row text-sm font-semibold line-clamp-2">
+                      <p title={item.subject} className="line-clamp-2 flex-row text-sm font-semibold">
                         {item.subject ? item.subject : '(no subject)'}
                       </p>
 
                       <div className="flex flex-row items-end justify-end space-x-2">
-                        <p className="w-full text-xs line-clamp-2">{item.body}</p>
+                        <p className="line-clamp-2 w-full text-xs">{item.body}</p>
                         <p className="text-supporting-2 font-semibold text-gray-60">
                           {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                         </p>
@@ -252,7 +252,7 @@ const InboxMobile = ({ getProps }: { getProps: InboxProps }) => {
                           {item.subject ? item.subject : '(no subject)'}
                         </p>
                         <div className="flex flex-row items-end justify-end space-x-2">
-                          <p className="w-full text-xs line-clamp-2">{item.body}</p>
+                          <p className="line-clamp-2 w-full text-xs">{item.body}</p>
                           <p className="text-supporting-2 font-semibold text-gray-60">
                             {moment().isSame(date, 'day') ? date.format('HH:mm') : date.format('MMM DD')}
                           </p>

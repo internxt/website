@@ -23,7 +23,6 @@ const nameFiles = [
   'password-generator',
   'photos',
   'pricing',
-  'privacy-directory',
   'privacy',
   'stackcommerce',
   'techradar-discount',

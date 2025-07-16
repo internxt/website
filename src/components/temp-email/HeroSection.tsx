@@ -27,8 +27,11 @@ import { useTempMailReducer } from './hooks/useTempMailReducer';
 import copyToClipboard from '../utils/copy-to-clipboard';
 import useWindowFocus from '@/hooks/useWindowFocus';
 import DOMPurify from 'dompurify';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
+import BitdefenderBanner from '../banners/BitdefenderBanner';
 
-export const HeroSection = ({ textContent }) => {
+export const HeroSection = ({ textContent, lang }) => {
   const isFocused = useWindowFocus();
 
   const { state, setUser, setBorderColor, setIsChangeEmailIconAnimated, setMessages, setSelectedMessage } =
@@ -224,10 +227,29 @@ export const HeroSection = ({ textContent }) => {
     await getNewEmail();
   };
 
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   return (
-    <section className="flex justify-center overflow-hidden pb-20 pt-32">
-      <div className="flex w-full flex-col items-center justify-center space-y-10 px-4 md:max-w-[1000px]">
-        <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center">
+    <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
+      <div className="flex w-full flex-col items-center justify-center ">
+        <Image
+          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          alt="BitDefender Vertical Banner"
+          width={180}
+          height={180}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
+      </div>
+      <div className="flex w-full flex-col items-center justify-center space-y-10  px-2 md:max-w-[720px] ">
+        <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center lg:max-w-xl">
           <Header isToolsPage>{textContent.title}</Header>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
@@ -240,6 +262,8 @@ export const HeroSection = ({ textContent }) => {
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}
         />
+
+        <BitdefenderBanner languageForImage={languageForImage} isTempMail />
 
         <Inbox
           textContent={textContent.inbox}
@@ -256,6 +280,23 @@ export const HeroSection = ({ textContent }) => {
             <span className="font-semibold text-gray-100">{textContent.expireEmail.bold}</span>.
           </p>
         </div>
+      </div>
+      <div className="flex w-full flex-col items-center justify-center">
+        <Image
+          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          alt="BitDefender Vertical Banner"
+          width={180}
+          height={180}
+          quality={100}
+          style={{ cursor: 'pointer' }}
+          onClick={() =>
+            window.open(
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              '_blank',
+              'noopener noreferrer',
+            )
+          }
+        />
       </div>
     </section>
   );

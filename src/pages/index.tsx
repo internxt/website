@@ -18,7 +18,6 @@ import { ComponentsInColumnSection } from '@/components/shared/components/Compon
 import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { MarqueeComponent } from '@/components/specialoffer/MarqueeComponent';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
 import { getImage } from '@/lib/getImage';
@@ -44,12 +43,11 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Special80Coupon,
-    couponCodeForLifetime: PromoCodeName.Special80Coupon,
+    couponCode: PromoCodeName.SummerCampaign,
+    couponCodeForLifetime: PromoCodeName.SummerCampaign,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
-  const marqueeBgColor = 'bg-white';
   const cardsForFeatureSection = [
     {
       icon: ShieldCheck,
@@ -94,7 +92,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} />
+      <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} lang={locale} />
 
@@ -119,11 +117,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
+        showPromo
       />
-
-      <div className={`${marqueeBgColor} py-10`}>
-        <MarqueeComponent bgColor={marqueeBgColor} />
-      </div>
 
       <ComponentsInColumnSection
         FirstComponent={

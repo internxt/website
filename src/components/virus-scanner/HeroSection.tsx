@@ -148,7 +148,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   return (
     <section
-      className="relative pb-20 pt-32"
+      className="relative pb-10 pt-32 lg:pb-20"
       onDragEnter={(e) => {
         e.stopPropagation();
         e.preventDefault();
@@ -255,7 +255,12 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                       <span>{textContent.table.noVirusesDetected.subtitle}</span>
                                     </div>
 
-                                    <a href="https://internxt.com/pricing" target="_top" className="button-primary">
+                                    <a
+                                      href={`https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="button-primary"
+                                    >
                                       {textContent.table.noVirusesDetected.cta}
                                     </a>
                                   </div>
@@ -474,7 +479,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
       </div>
-      <div className="flex w-full flex-col items-center justify-center ">
+      <div className="flex w-full flex-col items-center justify-center px-6 ">
         <Image
           src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
           alt="File Arrow Up icon"

@@ -44,19 +44,17 @@
   "tableSection": {
     "ctaBanner": {
       "label": "Save 80%",
-      "title": "World Cloud Security Day offer!",
-      "subtitle": "Private cloud storage, Antivirus, and VPN",
+      "title": "Annual and Lifetime plans!",
+      "subtitle": "Cool savings for hot days",
+      "subtitle2": "Drive, Antivirus, and VPN",
+      "subtitle3": "Meet, Mail, Device Cleaner and Dark Web Monitor",
       "cta": "Claim deal!",
-      "cta2": "Score 85% OFF",
       "guarantee": "30-day money-back guarantee",
-      "lastCta": "*Offer is for free accounts or new customers",
-      "titleMbl": "New Internxt plans!",
-      "subtitleMbl": "Internxt Drive, Antivirus, and VPN.",
-      "descriptionMbl": "Chance to win an Internxt x Swiss Peak backpack!",
-      "ctaMbl": "Claim deal!"
+      "gift": "Chance to win an Internxt backpack",
+      "lastCta": "* Offer is for free accounts or new customers"
     },
     "planTitles": {
-      "header": "Total privacy for 85% off",
+      "header": "Total privacy for 80% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
@@ -65,7 +63,7 @@
         "normalText": "all our exclusive lifetime plans"
       },
       "blackFriday": {
-        "title": "Black Friday mega sale: get 85% OFF all the most secure cloud storage plans",
+        "title": "Black Friday mega sale: get 80% OFF all the most secure cloud storage plans",
         "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },

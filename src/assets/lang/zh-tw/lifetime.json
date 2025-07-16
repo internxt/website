@@ -30,7 +30,8 @@
   },
   "GetLifetimeSection": {
     "title": "生命並不短暫！但這個限時交易是...",
-    "description": "Internxt正在提供終身隱私和安心的交易。"
+    "description": "Internxt正在提供終身隱私和安心的交易。",
+    "cta": "立即選擇方案"
   },
   "FeatureSection": {
     "title": "具有無與倫比隱私保護的安全雲存儲",

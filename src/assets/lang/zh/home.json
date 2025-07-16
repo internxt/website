@@ -68,17 +68,17 @@
       "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
       "startFrom": {
         "normal1": "从 ",
-        "price": " 2",
+        "price": " 2.00",
         "normal2": " /月"
       },
       "claimDeal": "领取优惠",
       "guarantee": "30天退款保证"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "80% 优惠",
-      "title": "安全的云生态系统",
-      "subtitle": "新计划上线！",
-      "cta": "获取您的计划",
+      "saveLabel": "80%优惠",
+      "title": "世界环境日",
+      "subtitle": "所有Internxt计划",
+      "cta": "获取你的方案",
       "guarantee": "30天退款保证"
     },
     "youKnow": "你知道吗？"

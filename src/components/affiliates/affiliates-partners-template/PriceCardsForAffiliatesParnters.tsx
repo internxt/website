@@ -1,14 +1,18 @@
 import { checkout } from '@/lib/auth';
 import { PromoCodeProps } from '@/lib/types';
-
+import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -57,9 +61,12 @@ export const PriceCardsForAffiliatesPartners = ({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -76,7 +83,7 @@ export const PriceCardsForAffiliatesPartners = ({
     <div
       className={`${
         popular ? 'border-primary/50 ring-[3px]' : 'ring-1 ring-gray-10'
-      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-screen`}
+      } m-2 flex w-full max-w-[480px] flex-shrink-0 flex-col overflow-hidden rounded-2xl lg:w-[400px]`}
     >
       <div className={`flex w-full flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}>
         <div className="flex flex-col items-center justify-center space-y-4">
@@ -127,6 +134,7 @@ export const PriceCardsForAffiliatesPartners = ({
           <p className="">{contentText.cta.selectPlan}</p>
         </button>
       </div>
+
       <div className="featureList flex flex-col border-t border-neutral-20 bg-neutral-10 pb-6 text-sm text-gray-80">
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures.individuals[storage].map((feature, index) => (

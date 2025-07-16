@@ -29,9 +29,9 @@
       "unableToProcess": "Impossibile elaborare",
       "noVirusesDetected": {
         "message": "Nessun virus rilevato",
-        "title": "Vuoi conservare i tuoi file al sicuro?",
-        "subtitle": "Internxt è un servizio di memorizzazione in cloud attento alla privacy, dotato di scansione antivirus integrata e di crittografia end-to-end.",
-        "cta": "Inizia ora"
+        "title": "Proteggi i tuoi file dai virus",
+        "subtitle": "Internxt ha collaborato con Bitdefender per offrirti la massima protezione in tempo reale sul tuo dispositivo. Ottieni 3 mesi di protezione antivirus completa gratis.",
+        "cta": "Richiedi l’offerta"
       },
       "analyzing": "Scansione del file in corso...",
       "scanTime": "Durata scansione",

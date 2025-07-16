@@ -58,11 +58,11 @@
     },
     "TitleAndOnePlan": {
       "title": {
-        "textBeforeBlueText": "Ecosystem ",
+        "textBeforeBlueText": " Ökosystem ",
         "blueText": "sicher",
-        "textAfterBlueText": " in der Cloud"
+        "textAfterBlueText": " & privat in der Cloud"
       },
-      "subtitle": "Komplette Sicherheit und Kontrolle.",
+      "subtitle": "Sicherheit und volle Kontrolle.",
       "description": "80% Rabatt",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus und mehr",
@@ -71,17 +71,17 @@
       ],
       "startFrom": {
         "normal1": "Ab ",
-        "price": " 2",
+        "price": " 2.00",
         "normal2": " /Monat"
       },
       "claimDeal": "Angebot einlösen",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "80% Angebot",
-      "title": "Sicheres Cloud-Ökosystem",
-      "subtitle": "Neue Pläne verfügbar!",
-      "cta": "Hol dir deinen Plan",
+      "saveLabel": "80% Rabatt",
+      "title": "Weltumwelttag",
+      "subtitle": "Alle Internxt-Pläne",
+      "cta": "Sichere dir deinen Plan",
       "guarantee": "30 Tage Geld-zurück-Garantie"
     },
     "youKnow": "Wusstest du das?"

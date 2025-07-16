@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "通过我们的在线 ZIP 压缩工具，快速安全地减小大型 ZIP 文件的体积。",
+    "secureUpload": "通过 HTTPS 加密保障上传安全。"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "如何压缩 ZIP 文件",
+      "description": "按照以下步骤操作：",
+      "steps": [
+        {
+          "step": "步骤 1：",
+          "description": "上传 ZIP 文件：将文件拖至上方区域或从设备中选择上传。"
+        },
+        {
+          "step": "步骤 2：",
+          "description": "点击“压缩 ZIP 文件”"
+        },
+        {
+          "step": "步骤 3：",
+          "description": "下载文件。"
+        }
+      ],
+      "outro": "使用此在线 ZIP 压缩工具，您可以随时免费压缩多个 ZIP 文件。所有文件在上传过程中均进行加密，确保视频的隐私性。"
+    },
+    "whyConvert": {
+      "title": "为什么需要使用在线 ZIP 压缩工具",
+      "intro": "由于邮箱、文件共享或云存储服务的上传限制，发送大型视频文件可能会很困难。使用 Internxt 的在线 ZIP 压缩工具，您将获得一个安全、免费的解决方案，它可以让您：",
+      "bullets": ["更快上传 ZIP 文件并节省带宽", "保持文件质量", "节省存储空间并避免上传限制"],
+      "outro": "所有文件在上传与压缩过程中均进行加密处理，保障您的视频隐私安全。使用 Internxt，您可以放心地压缩、保存和分享文件。"
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "一个安全的平台，用于压缩、存储和分享 ZIP 文件",
+    "cta": "立即体验 Internxt"
+  }
+}

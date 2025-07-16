@@ -1,5 +1,6 @@
 import SignUpInline from '@/components/auth/SignUpInline';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
 
 const SignUpBanner = ({
   textContent,
@@ -13,10 +14,10 @@ const SignUpBanner = ({
   const signUpLang = require(`../../assets/lang/${lang}/home.json`);
 
   return (
-    <section className="flex w-full max-w-[877px] overflow-hidden bg-gradient-to-br from-blue-20 to-white">
+    <section className="flex h-[600px] w-full overflow-hidden rounded-16 bg-gradient-to-br from-blue-20 to-white lg:h-[360px] lg:max-w-[1000px] lg-xl:max-w-[1075px] 2xl:max-w-[1250px]">
       <div className="flex w-full flex-row items-center justify-center md:w-max">
-        <div className="mt-11 mb-11 flex w-full max-w-[390px] flex-col items-center justify-center px-5 md:ml-11 md:items-start md:space-y-8 md:px-0 lg:max-w-[490px]">
-          <div className="flex w-full max-w-[400px] items-start text-left">
+        <div className="mb-11 mt-11 flex w-full max-w-[390px] flex-col items-center justify-center px-5 md:ml-11 md:items-start md:space-y-8 md:px-0 lg:max-w-[490px]">
+          <div className="flex w-full max-w-[500px] items-start text-left">
             <p className=" text-center text-4xl font-semibold md:text-left">
               {changeTextOrder ? (
                 <>
@@ -34,18 +35,18 @@ const SignUpBanner = ({
             <SignUpInline textContent={signUpLang.HeroSection.SignUp} isBanner />
           </div>
         </div>
-        <div className="absolute -right-64 hidden items-center md:flex">
-          <div className="relative right-0  flex flex-col bg-contain">
+        <div className="absolute -right-0  hidden items-center md:flex">
+          <div className="relative right-0 flex flex-col object-contain pt-10">
             <Image
-              src="/images/home/internxt_secure_cloud_storage.webp"
-              width={534}
-              height={300}
+              src={getImage('/banners/components_for_banners/Grid.webp')}
+              width={527}
+              height={840}
               draggable="false"
               quality={100}
               loading="eager"
               className="object-contain"
               layout="intrinsic"
-              alt="desktop, laptop and phone with Internxt app"
+              alt="Internxt Grid"
             />
           </div>
         </div>

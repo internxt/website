@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compress Excel (XLS) files with Internxt for an easier, more productive way to collaborate on spreadsheets and present essential data.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to compress an Excel file",
+      "description": "To compress a PPT file, follow these steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your Excel (XLS) file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress Excel file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ],
+      "outro": "With this tool, you can compress Excel files for free for multiple files whenever you need. When you compress Excel files, they are automatically secured with encrypted uploads to guarantee the privacy of your documents."
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress Excel files",
+      "intro": "When crafting long-form essays, reports, documents, contracts, etc, attachment sizes can soon add up, making it difficult to share multiple documents in one file. Compressing Excel files can significantly reduce the size of your files for easier collaboration and: ",
+      "bullets": [
+        "Compress Excel files for easier sharing and uploading",
+        "Stay within upload and email size limits",
+        "Collaborate on data-driven projects"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your Excel files private, so you can compress, store, and share your Excel files in confidence with Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share Excel files",
+    "cta": "Get Internxt"
+  }
+}

@@ -38,16 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "优惠 80%",
-      "title": "世界云安全日",
-      "subtitle": "Internxt 云盘、杀毒软件和 VPN",
-      "cta": "获取您的方案！",
-      "cta2": "享受 80% 折扣",
+      "label": "立省 80%",
+      "title": "年度和终身  套餐",
+      "subtitle": "这个夏天，保护你的数据，随时随地带着走！",
+      "subtitle2": "Drive、防病毒和 VPN",
+      "subtitle3": "Meet、Mail、设备清理器和暗网监控",
+      "cta": "获取你的套餐",
+      "cta2": "立享 80% 折扣",
       "guarantee": "30 天退款保证",
-      "lastCta": "*优惠仅适用于免费账户或新用户",
-      "titleMbl": "全新终身计划！",
-      "descriptionMbl": "私人存储、杀毒软件和 VPN",
-      "ctaMbl": "购买您的方案"
+      "gift": "抽奖赢取 Internxt x Swiss Peak 背包",
+      "lastCta": "*仅适用于免费账户或新用户"
     },
     "save": "省高达",
     "planTitles": {
@@ -59,7 +59,7 @@
         "normalText": "我们的所有独家终身计划"
       },
       "blackFriday": {
-        "title": "黑色星期五超级促销：最安全的云存储方案立享85%折扣",
+        "title": "黑色星期五超级促销：最安全的云存储方案立享80%折扣",
         "description": "使用 Internxt 保护您的数据，避免数据泄露、财务损失和隐私风险。告别那些从您的个人信息中牟利的科技巨头。"
       }
     },

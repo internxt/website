@@ -22,7 +22,8 @@
   },
   "GetLifetimeSection": {
     "title": "Das Leben ist nicht kurz! Aber dieses zeitlich begrenzte Angebot schon...",
-    "description": "Internxt bietet ein Leben in Privatsphäre und Ruhe."
+    "description": "Internxt bietet ein Leben in Privatsphäre und Ruhe.",
+    "cta": "Wählen Sie Ihren Plan"
   },
   "FeatureSection": {
     "title": "Warum Internxt wählen, um Ihre Dateien zu sichern?",

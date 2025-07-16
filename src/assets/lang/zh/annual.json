@@ -1,28 +1,85 @@
 {
   "HeroSection": {
-    "header": "Internxt Yearly Plans",
+    "header": "立即享受所有年付计划高达85%的专属折扣！",
     "title": {
-      "normalText": "The most secure cloud ",
-      "blueText": "for all your photos and files"
+      "normalText": "最安全私密的云存储服务 ",
+      "blueText": "为你的文件保驾护航"
     },
-    "description": "Sign up for an Internxt annual plan and get 365 days of total privacy.",
-    "cta": "Choose your plan"
+    "description": "订阅 Internxt 年付计划，尊享 365 天全面隐私保护。",
+    "cta": "选择你的计划"
+  },
+  "tableSection": {
+    "planTitles": {
+      "individuals": "年付计划",
+      "homePage": "选择适合你的计划",
+      "lifetime": "终身计划",
+      "business": "企业计划",
+      "lifetimeCampaign": {
+        "blueText": "立享 50% 折扣",
+        "normalText": "专属终身计划全面特惠"
+      }
+    },
+    "header": "享受 85% 折扣，开启全面隐私保护",
+    "lifetimeDescription": "一次性支付，终身隐私保障。永久访问 Internxt 的所有隐私功能和加密云存储服务。",
+    "planDescription": "所有 Internxt 计划均提供对我们全套隐私解决方案的完整访问：Internxt Drive、Send、VPN、防病毒、Meet 和 Mail。",
+    "billingFrequency": {
+      "monthly": "按月计费",
+      "annually": "按年计费",
+      "individual": "个人",
+      "lifetime": "终身",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt 免费版",
+      "description": "获取高达 1GB 的加密云存储，并体验我们的私密生态系统：VPN（FR）、CLI/WebDav/Rclone 等更多功能。",
+      "cta": "选择计划"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源并已审计",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30 天退款保障"
+    }
   },
   "PaymentSection": {
-    "title": "Annual plans",
-    "description": "All Internxt plans are fully featured with complete access to all of our privacy services. Year-long security for all shapes and sizes.",
-    "firstFeed": "30-day money-back guarantee",
-    "secondFeed": "100% secure payment",
-    "thirdFeed": "Anonymous account creation"
+    "blueTitle": "享受 85% 折扣，开启全面隐私保护",
+    "title": "年付计划",
+    "description": "所有 Internxt 计划均提供对我们全套隐私解决方案的完整访问：Internxt Drive、Send、VPN、防病毒、Meet 和 Mail。",
+    "firstFeed": "高级客户支持",
+    "secondFeed": "30 天退款保障",
+    "thirdFeed": "开源并已审计"
   },
   "FeatureSection": {
-    "title": "Take back control of your privacy",
-    "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
-    "cta": "Get a one-year plan"
+    "title": "重新掌握你的隐私权",
+    "description": "Internxt 提供私密、安全的云服务，旨在让你重新掌握数据控制权。我们从零开始构建所有服务，只为带来无与伦比的安全性和隐私保护，保障你的文件和基本隐私权利。",
+    "cta": "选择你的计划"
   },
   "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
-    "cta": "Find your plan"
+    "title": "Internxt 云存储",
+    "description": "全球最私密、安全、加密的云端。保护你的信息，守护你真正重要的数据。",
+    "cta": "选择你的计划"
+  },
+  "FeaturesSection": {
+    "title": "高度安全的云存储，打造无与伦比的隐私体验",
+    "description": "Internxt 有什么特别之处？我们是一支专注于在线隐私保护的专业团队。我们所做的一切，每一个决策，都是为了守护你的数据并防止滥用。",
+    "info": [
+      {
+        "title": "无与伦比的隐私保护",
+        "description": "隐私是我们的首要任务。我们从不存储密码或个人数据。你的文件始终处于加密状态，由你完全掌控。"
+      },
+      {
+        "title": "绝不妥协的安全性",
+        "description": "你的文件在离开设备前就已加密。凭借零知识架构和后量子加密技术，只有你能访问自己的数据。"
+      },
+      {
+        "title": "开源透明",
+        "description": "我们为所做的一切感到自豪，因此我们的代码完全开源，托管在 GitHub 上，任何人都可以查看、审计并验证其安全性。我们无事可隐，除了你的数据。"
+      },
+      {
+        "title": "独立安全审计",
+        "description": "我们完全符合 GDPR 要求，安全性达 100%。Internxt 已通过欧洲领先渗透测试公司 Securitum 的独立安全审计。"
+      }
+    ]
   }
 }

@@ -1,0 +1,38 @@
+{
+  "ConverterSection": {
+    "description": "Internxt offers the best way to compress multiple PDF files for free online. Secure and share PDFs without worrying about attachment limits.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to compress a PDF file",
+      "description": "To compress a PDF file, follow these steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your PDF file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress PDF file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ],
+      "outro": "With this tool, you can compress multiple PDF files for free whenever you need. All files are secured with encrypted uploads to guarantee the privacy of your videos.  "
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress large PDF files",
+      "intro": "Sending large PDF files may cause challenges with email or file sharing limits, upload limits, or slower upload speeds. With this free tool, you can compress multiple PDF files for free and enjoy these benefits: ",
+      "bullets": ["Optimize files for web or mobile viewing", "Bypass upload size restrictions", "Save storage space"],
+      "outro": "There are no limits to this tool, so you can compress large PDF files of up to XGB and handle multiple files without signing up or running into daily restrictions."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share PDF files",
+    "cta": "Get Internxt"
+  }
+}

@@ -58,7 +58,7 @@ export const handleImpact = async ({
   const randomUUID = impactAnonymousId ?? crypto.randomUUID();
 
   const expirationDate = new Date();
-  expirationDate.setHours(expirationDate.getHours() + 1);
+  expirationDate.setHours(expirationDate.getHours() + 2);
 
   const anonymousDate = new Date();
   anonymousDate.setFullYear(anonymousDate.getFullYear() + 10);

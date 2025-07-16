@@ -16,6 +16,8 @@ import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { AffiliatesPartnersText } from '@/assets/types/afiliates-partners';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
+import { stripeService } from '@/services/stripe.service';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -29,8 +31,18 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 18;
-  const { currencyValue } = usePricing({});
+  const offerDiscount = 13;
+  const {
+    products,
+    loadingCards,
+    currencyValue,
+    coupon: individualCoupon,
+    lifetimeCoupon: lifetimeCoupon,
+    lifetimeCoupons,
+  } = usePricing({
+    couponCode: PromoCodeName.CLOUDWARDS87,
+    couponCodeForLifetime: PromoCodeName.CLOUDWARDS87,
+  });
 
   function handlePriceCardButton(planId, coupon) {
     checkout({
@@ -38,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Special82 ?? undefined,
+      promoCodeId: PromoCodeName.CLOUDWARDS87 ?? undefined,
     });
   }
 
@@ -72,11 +84,41 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     </p>
   );
 
+  const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
+    const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
+
+    stripeService.redirectToCheckout(
+      priceId,
+      currencyValue,
+      'individual',
+      isCheckoutForLifetime,
+      couponCodeForCheckout?.name,
+    );
+  };
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
+
+      <PricingSectionWrapper
+        textContent={langJson.tableSection}
+        decimalDiscount={{
+          individuals: offerDiscount,
+          lifetime: offerDiscount,
+        }}
+        lifetimeCoupons={lifetimeCoupons}
+        lang={'en'}
+        products={products}
+        loadingCards={loadingCards}
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        hideBusinessCards
+        hideBusinessSelector
+        popularPlanBySize="5TB"
+        showPromo={false}
+        hideFreeCard
+      />
 
       <ComponentsInColumnSection
         FirstComponent={
@@ -95,21 +137,12 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         backgroundColor="bg-gray-1"
       />
 
-      <PriceTable
-        textContent={langJson.PriceTable}
-        handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.CloudwardsCoupon}
-        discount={offerDiscount}
-        billingFrequency="lifetime"
-        isCloudwards
-      />
-
       <div className="mt-20 flex w-full flex-col items-center gap-9">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
           <h2 className="max-w-[550px] text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
           <p className="text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
         </div>
-        <div className="flex flex-col items-center gap-12">
+        <div className="flex flex-col items-center ">
           <Button
             text={langJson.FeatureSectionV2.cta}
             onClick={() => {
@@ -119,14 +152,14 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
               });
             }}
           />
-          <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
+          <RevealY className="content flex h-full w-full flex-col px-5 py-5 pb-5">
             <Image
               src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
               alt="Internxt secure cloud storage"
               draggable={false}
               loading="lazy"
-              width={1920}
-              height={1080}
+              width={757}
+              height={426}
             />
           </RevealY>
         </div>
@@ -139,8 +172,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
         }
       />
-
-      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 }

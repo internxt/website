@@ -81,12 +81,17 @@
         "byteConverter": "Convertisseur d'Octets",
         "passwordGenerator": "Générateur de Mot de Passe",
         "fileConverter": "Convertisseur de fichiers",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Supprimer les métadonnées",
+        "aiDetector": "Détecteur de IA",
+        "fileCompressor": "Compresseur de Fichiers"
       },
       "features": {
         "title": "Fonctionnalités",
         "privateCloud": "Solution de cloud privé",
-        "cloudBakcup": "Solution de sauvegarde cloud"
+        "cloudBakcup": "Solution de sauvegarde cloud",
+        "GDPRCloud": "Stockage RGPD",
+        "cloudPhotos": "Photos dans le cloud"
       },
       "language": "Langue"
     }

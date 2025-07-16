@@ -1,12 +1,16 @@
 import { PromoCodeProps } from '@/lib/types';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
   Gauge,
+  Gift,
   Key,
   LockSimple,
   Password,
@@ -41,6 +45,9 @@ export interface PriceCardProps {
   index?: number;
   isPcComponentes?: boolean;
   isPcComponentesLifetime?: boolean;
+  isPcComponentes5tb?: boolean;
+  trialToken?: string;
+  showOffer?: boolean;
 }
 
 const STORAGE_LEVELS = {
@@ -73,7 +80,10 @@ export default function PriceCard({
   isStackCommerce = false,
   index,
   isPcComponentes = false,
+  isPcComponentes5tb = false,
   isPcComponentesLifetime = false,
+  trialToken,
+  showOffer = true,
 }: Readonly<PriceCardProps>): JSX.Element {
   const billingFrequencyList = {
     lifetime: 'lifetime',
@@ -90,9 +100,12 @@ export default function PriceCard({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];
@@ -109,6 +122,7 @@ export default function PriceCard({
           mode: billingFrequency === 'lifetime' ? 'payment' : 'subscription',
           planType: 'individual',
           currency: currencyValue ?? 'eur',
+          trialToken: trialToken,
           promoCodeId: (coupon as any)?.promoCodeName ?? undefined,
         });
       } else {
@@ -147,7 +161,7 @@ export default function PriceCard({
 
   const STACKCOMMERCE_STORAGE_PLANS = {
     '2TB': {
-      title: 'Lite 2TB',
+      title: '2TB',
       price: '€900',
       features: [
         '2TB encrypted storage',
@@ -162,7 +176,7 @@ export default function PriceCard({
       ],
     },
     '5TB': {
-      title: 'Pro 5TB',
+      title: '5TB',
       price: '€1900',
       features: [
         '5TB encrypted storage',
@@ -177,7 +191,7 @@ export default function PriceCard({
       ],
     },
     '10TB': {
-      title: 'Ultra 10TB',
+      title: '10TB',
       price: '€2900',
       features: [
         '10TB encrypted storage',
@@ -191,7 +205,53 @@ export default function PriceCard({
         '30-day money-back guarantee',
       ],
     },
+    '20TB': {
+      title: '20TB',
+      price: '€4900',
+      features: [
+        '20TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+    '50TB': {
+      title: '50TB',
+      price: '€7900',
+      features: [
+        '50TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
+    '100TB': {
+      title: '100TB',
+      price: '€9900',
+      features: [
+        '100TB encrypted storage',
+        'Zero-knowledge encryption',
+        'Password-protected file sharing',
+        'Post-quantum cryptography',
+        'Access your files from any device',
+        'Guaranteed GDPR compliance',
+        'Two-factor authentication (2FA)',
+        'Premium customer support',
+        '30-day money-back guarantee',
+      ],
+    },
   };
+
   const PCCOMPONENTES_STORAGE_PLANS = {
     Lifetime: {
       '2TB': {
@@ -231,7 +291,7 @@ export default function PriceCard({
         price: '2900',
         priceId: 'price_1PNxaDFAOdcgaBMQnKXWQRs0',
         features: [
-          '10TB encrypted storage',
+          '0TB encrypted storage',
           'Zero-knowledge encryption',
           'Password-protected file sharing',
           'Post-quantum cryptography',
@@ -278,7 +338,7 @@ export default function PriceCard({
       },
       '5TB': {
         title: '5TB',
-        price: '199.99',
+        price: isPcComponentes5tb ? '50' : '199.99',
         priceId: 'price_1OQ3H5FAOdcgaBMQwMJ734rd',
         features: [
           '5TB encrypted storage',
@@ -312,6 +372,19 @@ export default function PriceCard({
   };
 
   const storageSelected = index === 0 ? '2TB' : index === 1 ? '5TB' : '10TB';
+  const storageSelectedStackCommerce =
+    index === 0
+      ? '2TB'
+      : index === 1
+      ? '5TB'
+      : index === 2
+      ? '10TB'
+      : index === 3
+      ? '20TB'
+      : index === 4
+      ? '50TB'
+      : '100TB';
+
   const planTypePcComponentes = isLifetimePage ? 'Lifetime' : 'Subscription';
   const storageSelectedPcComponentes = index === 0 ? '200GB' : index === 1 ? '2TB' : index === 2 ? '5TB' : '10TB';
   const selectStorage = !isLifetimePage ? storageSelectedPcComponentes : storageSelected;
@@ -324,12 +397,12 @@ export default function PriceCard({
 
   return (
     <div
-      className={`${
-        popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'
-      } flex w-[330px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+      className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
+        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[340px] '
+      } h-800 flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex max-h-[340px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex h-[270px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -343,7 +416,7 @@ export default function PriceCard({
           <div className="flex rounded-full bg-primary/10 px-3 py-0.5">
             <p className="text-lg font-medium text-primary">
               {isStackCommerce
-                ? STACKCOMMERCE_STORAGE_PLANS[storageSelected].title
+                ? STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].title
                 : isPcComponentes
                 ? PCCOMPONENTES_STORAGE_PLANS[planTypePcComponentes][selectStorage].title
                 : getPlanStorage(storage)}
@@ -433,9 +506,9 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex max-h-[410px] min-h-[200px] flex-col space-y-2 pt-6">
+        <div className="flex flex-col space-y-2 pt-6 lg:min-h-[540px]">
           {isStackCommerce ? (
-            STACKCOMMERCE_STORAGE_PLANS[storageSelected].features.map((feature) => (
+            STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
                 <img
                   loading="lazy"
@@ -461,17 +534,26 @@ export default function PriceCard({
               </div>
             ))
           ) : (
-            <div className="flex max-h-[500px] min-h-[500px] flex-col space-y-2 pt-6">
+            <div className="flex flex-col space-y-2 pt-6 lg:h-[500px]">
               {contentText.productFeatures.individuals[storage].map((feature, index) => (
                 <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-                  {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                    size: 24,
-                    className: 'text-primary',
-                  })}
-                  <span className="text-gray-80">{feature}</span>
-                  {index > 8 ? (
-                    <span className="rounded-lg bg-orange/10 px-1 text-orange">{contentText.commingSoon}</span>
-                  ) : null}
+                  {React.createElement(
+                    index >= 6 && storage === '1TB'
+                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className={'text-gray-80'}>
+                    {feature}
+                    {index > 9 ? (
+                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
                 </div>
               ))}
             </div>

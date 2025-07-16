@@ -3,21 +3,21 @@ import { useRouter } from 'next/router';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
-
+import { getImage } from '@/lib/getImage';
+import Image from 'next/legacy/image';
 const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({
   textContent,
   bannerText,
   hideLast2Sections,
+  lang,
 }: {
   textContent: any;
   bannerText: any;
   hideLast2Sections?: boolean;
+  lang: string;
 }): JSX.Element => {
-  const router = useRouter();
-  const lang = router.locale;
-
   const iconSize = 32;
   const tipIcons = [
     <Ruler size={iconSize} key={0} />,
@@ -45,6 +45,8 @@ const InfoSection = ({
     },
   ];
 
+  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   const getSectionText = (text) => {
     return (
       <div className="flex w-full max-w-2xl flex-col space-y-3 ">
@@ -56,13 +58,29 @@ const InfoSection = ({
 
   return (
     <section className="overflow-hidden bg-gray-1">
-      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-20">
-        <div id="incontent_1" className="flex w-full justify-center"></div>
+      <div className="flex flex-col items-center justify-center space-y-16 px-5 py-10 lg:py-20">
+        <div className="flex w-full flex-col items-center justify-center">
+          <Image
+            src={getImage(`/banners/728x90.webp`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
         <SignUpBanner textContent={bannerText} lang={lang as string} />
         {getSectionText(textContent.firstSection)}
         {getSectionText(textContent.secondSection)}
-        <div className="gap flex flex-row flex-wrap items-center justify-center ">
-          <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl p-10">
+        <div className="gap flex flex-row flex-wrap items-center justify-center bg-gray-1">
+          <div className="gap flex h-full flex-row flex-wrap gap-8 rounded-2xl px-10 pt-10">
             {cards1.map((item) => (
               <div className="1 100% flex flex-1" key={item.title}>
                 <div className="flex h-full flex-col rounded-2xl bg-white p-10">
@@ -78,13 +96,45 @@ const InfoSection = ({
             ))}
           </div>
         </div>
-        <div id="incontent_2" className="flex w-full justify-center"></div>
+        <div className="flex w-full flex-col items-center justify-center bg-gray-1">
+          <Image
+            src={getImage(`/banners/728x90.webp`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={() =>
+              window.open(
+                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                '_blank',
+                'noopener noreferrer',
+              )
+            }
+          />
+        </div>
       </div>
       {hideLast2Sections ? null : (
         <>
           <CtaSection textContent={textContent.ctaSection} url="https://drive.internxt.com/new" maxWidth="max-w-2xl" />
           <div className="flex flex-col items-center justify-center space-y-16 bg-white px-5 py-20">
-            <div id="incontent_3" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/728x90.webp`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
             {getSectionText(textContent.thirdSection)}
             <div className="flex max-w-2xl flex-col items-start space-y-3 text-gray-80 md:px-0">
               {getSectionText(textContent.fourthSection)}
@@ -124,7 +174,23 @@ const InfoSection = ({
                 </div>
               ))}
             </div>
-            <div id="incontent_4" className="flex w-full justify-center"></div>
+            <div className="flex w-full flex-col items-center justify-center">
+              <Image
+                src={getImage(`/banners/728x90.webp`)}
+                alt="File Arrow Up icon"
+                width={800}
+                height={110}
+                quality={100}
+                style={{ cursor: 'pointer' }}
+                onClick={() =>
+                  window.open(
+                    `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                    '_blank',
+                    'noopener noreferrer',
+                  )
+                }
+              />
+            </div>
           </div>
         </>
       )}

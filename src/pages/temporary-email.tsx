@@ -43,7 +43,7 @@ const TempEmail = () => {
       <Layout segmentName="Temporary email" title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} />
+        <HeroSection textContent={textContent.HeroSection} lang={lang} />
 
         <InfoSection textContent={textContent.InfoSection} bannerText={bannerLang.SignUpTempMailBanner} lang={lang} />
 

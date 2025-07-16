@@ -25,7 +25,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PCLOUD80,
+    couponCode: PromoCodeName.PCLOUD87,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -74,6 +74,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
           </span>
         }
         backgroundColorComponent="bg-gray-1"
+        showPromo={false}
       />
 
       <TablesSection textContent={langJson.TablesSection} />

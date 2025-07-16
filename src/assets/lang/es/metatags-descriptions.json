@@ -273,5 +273,80 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Soluciones de Respaldo de Almacenamiento en la Nube",
     "description": "Las soluciones de respaldo de almacenamiento en la nube de Internxt utilizan redundancia y cifrado galardonado que protege a usted y a su empresa de la pérdida de datos."
-  }  
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt - Almacenamiento de datos RGPD",
+    "description": "Internxt es un servicio de almacenamiento en la nube que cumple con RGPD y leyes estrictas de privacidad de la UE para proteger tu información."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt - Fotos en la nube",
+    "description": "Internxt te ofrece el mejor almacenamiento para guardar tus fotos en la nube de forma privada y segura incluyendo Antivirus y VPN. "
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt - Oferta especial para tus planes anuales!",
+    "description": "Consigue un descuento para cualquier plan anual de Internxt. Todos los planes incluyen almacenamiento en la nube privada, VPN y antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadatos - Cómo limpiar metadatos en pdf, fotos y tus documentos en línea",
+    "description": "Remove hidden data from your files in seconds. Internxt’s Metadata Remover cleans your documents for maximum privacy before sharing."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Detector de AI - Detector de texto AI gratis",
+    "description": "Internxt Detector de AI. Escanea gratis el contenido para comprobar si ha sido escrito por ChatGPT, Gemini u otras plataformas de inteligencia artificial "
+  },
+  {
+    "id": "special-offer",
+    "title": "Oferta especial — Internxt",
+    "description": "Obtén planes anuales y de por vida de Internxt con un descuento exclusivo del 80 %. Disfruta de privacidad y seguridad con hasta 10 TB de almacenamiento."
+  },
+  {
+    "id": "file-compressor",
+    "title": "Compresor de archivos - Internxt",
+    "description": "Compresor de archivos de Internxt, el mejor para reducir gratis el tamaño de vídeos, fotos y documentos."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Compresor de Internxt para comprimir videos",
+    "description": "Internxt te permite comprimir videos de forma gratuita para reducir el tamaño del archivo y enviarlos en línea sin preocuparte por los límites de tamaño."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Compresor de Internxt para comprimir PDF archivos",
+    "description": "Internxt te permite comprimir archivos PDF de forma gratuita para que puedas proteger y enviar tus documentos con facilidad."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Compresor de Internxt para comprimir JPG archivos",
+    "description": "Comprime tus archivos JPG de forma gratuita con Internxt para que puedas proteger y enviar tus imágenes con facilidad."
+  },
+  {
+    "id": "compress-png",
+    "title": "Compresor de Internxt para comprimir PNG archivos",
+    "description": "Comprime tus archivos PNG de forma gratuita con Internxt para que puedas proteger y enviar tus imágenes con facilidad."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Compresor de Internxt para comprimir PPT archivos",
+    "description": "Comprime tus archivos PPT de forma gratuita con Internxt para reducir el tamaño del archivo y facilitar la gestión del almacenamiento y uso compartido de archivos."
+  },
+  {
+    "id": "compress-word",
+    "title": "Compresor de Internxt para comprimir Word archivos online",
+    "description": "Comprimir archivos de Word (DOC) de forma gratuita y online para reducir su tamaño y facilitar su almacenamiento y su uso compartido."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Compresor de Internxt para comprimir archivos Excel",
+    "description": "Compresor gratuito para comprimir archivos Excel (XLS) - Reduce su tamaño para facilitar su almacenamiento y su intercambio de archivos."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Compresor de ZIP en línea - Internxt",
+    "description": "Un compresor ZIP en línea reduce el tamaño de tus archivos ZIP para ahorrar almacenamiento, compartir y subir sin preocuparte por los límites de tamaño de archivo."
+  }
 ]

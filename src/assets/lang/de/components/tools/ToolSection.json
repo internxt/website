@@ -40,6 +40,21 @@
       "title": "VPN Chrome-Erweiterung",
       "cta": "Jetzt herunterladen",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Metadaten-Entferner",
+      "cta": "Jetzt entfernen",
+      "pathname": "/metadata-remover"
+    },
+    {
+      "title": "Dark Web Monitor",
+      "cta": "Jetzt prüfen",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "KI-Prüfer",
+      "cta": "Jetzt prüfen",
+      "pathname": "/ai-detector"
     }
   ]
 }

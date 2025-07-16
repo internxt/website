@@ -82,12 +82,17 @@
         "passwordGenerator": "Генератор паролей",
         "fileConverter": "Преобразователь файлов",
         "vpn": "Расширение VPN",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Очиститель метаданных",
+        "aiDetector": "Детектор ИИ",
+        "fileCompressor": "Архиватор файлов"
       },
       "features": {
         "title": "Функции",
         "privateCloud": "Решение для частного облака",
-        "cloudBakcup": "Решение для облачного резервного копирования"
+        "cloudBakcup": "Решение для облачного резерва",
+        "GDPRCloud": "Хранение GDPR",
+        "cloudPhotos": "Фотографии в облаке"
       }
     }
   },

@@ -1,0 +1,232 @@
+{
+  "HeroSection": {
+    "title": "Eliminatore di metadati",
+    "subtitle2": "Elimina metadati dai tuoi file per rimanere anonimo online.",
+    "secure": "Le tue upload sono protette da HTTPS",
+    "dropFile": {
+      "line1": "Carica file o clicca qui"
+    },
+    "fileSelected": "File caricato con successo",
+    "cancel": "Nuovo file",
+    "download": "Scarica",
+    "removeMetadata": "Rimuovi metadati",
+    "close": "Chiudi",
+    "scanNow": "Rimuovi metadati",
+    "selectFile": "Seleziona file",
+    "dropHere": "Trascina il file qui",
+    "loading": "Caricamento...",
+    "maxFileSize": {
+      "title": "Limite dimensione file superato",
+      "description": "Dimensione massima file di 100MB"
+    },
+    "table": {
+      "loading": "Caricamento...",
+      "metadataRemoved": "Tutti i metadati sono stati rimossi",
+      "automaticDownload": "Il download inizierà automaticamente",
+      "detected": "Rilevato",
+      "undetected": "Non rilevato",
+      "unableToProcess": "Impossibile elaborare",
+      "analyzing": "Rimozione metadati...",
+      "scanTime": "Tempo di scansione",
+      "name": "Nome",
+      "detection": "Rilevamento"
+    },
+    "error": {
+      "title": "Etwas ist schief gelaufen",
+      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
+    }
+  },
+  "FeaturesSection": {
+    "hero": {
+      "title": "Rimuovi metadati gratuito di Internxt",
+      "description": [
+        "Proteggi le tue informazioni personali da fughe di dati con il nostro strumento di rimozione dei metadati. Il nostro strumento gratuito elimina i dati nascosti dai tuoi file, inclusi informazioni sull'autore, tag di posizione e dettagli del dispositivo.",
+        "Utilizza il nostro rimuovi metadati online gratuito per mantenere i tuoi file anonimi e sicuri prima di condividerli. I file caricati vengono puliti dai metadati istantaneamente e poi eliminati definitivamente. Non memorizziamo mai i tuoi dati; li manteniamo solo privati."
+      ]
+    },
+    "howToUse": {
+      "title": "Come utilizzare il rimuovi metadati di Internxt",
+      "steps": [
+        {
+          "step": 1,
+          "text": "Carica il file desiderato dal tuo dispositivo o trascinalo sulla pagina."
+        },
+        {
+          "step": 2,
+          "text": "Attendi qualche secondo mentre rimuoviamo i metadati."
+        },
+        {
+          "step": 3,
+          "text": "Il download inizierà automaticamente."
+        }
+      ]
+    },
+    "whatIs": {
+      "title": "Cos'è un rimuovi metadati?",
+      "description": [
+        "I metadati sono dati che descrivono informazioni su altri dati. Quando condividi o archivi un file, i metadati contengono informazioni come dettagli del dispositivo, posizione, autore, cronologia delle modifiche e altro.",
+        "Un rimuovi metadati per immagini o foto è uno strumento di privacy online che elimina i dati nascosti dai file. Il rimuovi metadati di Internxt elimina rapidamente le informazioni collegate ai tuoi file. È un modo semplice, gratuito e sicuro per aumentare il tuo anonimato online."
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "Ogni file racconta una storia",
+    "description": "Pulisci i metadati dai tuoi file e proteggili con Internxt",
+    "cta": "Scegli il tuo piano"
+  },
+  "CtaSection2": {
+    "title": "Evita incidenti e fughe di dati",
+    "description": "Proteggi e archivia le tue informazioni con Internxt",
+    "cta": "Scegli il tuo piano"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cosa sono i metadati e perché dovrei rimuoverli?",
+        "answer": [
+          "I metadati sono semplicemente dati che descrivono informazioni su altri dati. Quando condividi o archivi file, questi metadati contengono informazioni sui file, dettagli del dispositivo, posizione, autore, cronologia delle modifiche e altro.",
+          "Dovresti rimuovere queste informazioni utilizzando un rimuovi metadati per video, foto o immagini per evitare che terzi ottengano accesso a informazioni personali che preferiresti mantenere private."
+        ]
+      },
+      {
+        "question": "Che tipi di file contengono metadati?",
+        "answer": [
+          "Praticamente tutti i file che crei online hanno metadati. Word, Excel, PDF, video, immagini, ecc., tutti contengono metadati in qualche forma.",
+          "Il tipo di metadati varia a seconda del contenuto, quindi se hai un file che vuoi mantenere privato, usare un rimuovi metadati eliminerà queste informazioni rapidamente e in modo sicuro."
+        ]
+      },
+      {
+        "question": "È sicuro caricare file sensibili?",
+        "answer": [
+          "Con il rimuovi metadati di Internxt, sì. I file vengono crittografati, elaborati in modo sicuro e tutto viene eliminato definitivamente una volta rimossi i metadati. Non possiamo memorizzare né vedere il contenuto dei tuoi file, li rimuoviamo solo dai metadati."
+        ]
+      },
+      {
+        "question": "Rimuovere i metadati cambia il contenuto del mio file?",
+        "answer": [
+          "No, vengono rimossi solo i metadati. Non aggiungiamo filigrane, non comprimiamo i tuoi file né apportiamo altre modifiche non necessarie. Una volta rimossi i metadati, otterrai esattamente la stessa versione dei tuoi file senza modifiche."
+        ]
+      },
+      {
+        "question": "Cosa succede ai miei file dopo la pulizia?",
+        "answer": [
+          "Una volta che carichi e rimuovi i dati, tutto viene eliminato automaticamente dal nostro sistema per garantire la tua privacy e la conformità al GDPR."
+        ]
+      },
+      {
+        "question": "Come faccio a sapere se un file contiene metadati?",
+        "answer": [
+          "Tutti i file contengono metadati. Su Windows, puoi vederli facendo clic destro sul file e selezionando \"Proprietà\".",
+          "Gli utenti Mac devono anche fare clic destro sul file, selezionare \"Ottieni informazioni\" e poi andare alla sezione \"Dettagli\" per vedere i metadati.",
+          "Infine, puoi vedere i metadati dei file PDF aprendoli in Adobe Acrobat e andando su \"File\" > \"Proprietà\" > \"Descrizione\"."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Perché dovresti usare un rimuovi metadati online",
+    "description": "I tuoi documenti, foto, video o file PDF possono contenere più informazioni di quanto pensi. Quando condividi questi file online, rischi che questi metadati finiscano nelle mani sbagliate, causando fughe di dati. Il nostro rimuovi metadati elimina queste informazioni gratuitamente ogni volta che ne hai bisogno.",
+    "info": [
+      {
+        "title": "100% gratis e illimitato",
+        "description": [
+          "Usa questo rimuovi metadati gratuitamente senza bisogno di registrarti. Funziona direttamente nel tuo browser, quindi puoi rimuovere i metadati da quanti file vuoi senza limiti."
+        ]
+      },
+      {
+        "title": "Conforme al GDPR",
+        "description": [
+          "Internxt è un'azienda conforme al GDPR e, come i nostri prodotti di cloud storage, VPN e antivirus, il nostro strumento di rimozione dei metadati online protegge i tuoi dati con i più alti standard di privacy. Quando rimuoviamo i tuoi metadati, il resto dei file e delle informazioni viene eliminato definitivamente per garantire la conformità e la protezione contro le fughe di dati."
+        ]
+      },
+      {
+        "title": "Sicurezza totale",
+        "description": [
+          "I tuoi file vengono puliti istantaneamente, eliminando i dati privati e mantenendo il formato originale. Una volta caricato il file, tutto viene crittografato per mantenere la sicurezza e la privacy dei tuoi file. Non memorizziamo dati, rimuoviamo solo i metadati per aumentare l'anonimato."
+        ]
+      },
+      {
+        "title": "Supporta più file",
+        "description": [
+          "Supportiamo diversi formati di file, quindi puoi usare questo strumento come rimuovi metadati per immagini, foto, video o PDF per garantire la privacy di qualsiasi file tu voglia condividere online. È un modo rapido e affidabile per pulire i tuoi file ed evitare che i tuoi dati vengano usati impropriamente o tracciati."
+        ]
+      },
+      {
+        "title": "Previeni le impronte digitali",
+        "description": [
+          "I tuoi metadati possono essere usati per creare un'impronta digitale della tua attività online, che può essere usata per tracciare l'origine di un file, chi lo ha creato e altro. Rimuovendo questi metadati dai tuoi file, è più difficile per i malintenzionati tracciare la tua impronta digitale."
+        ]
+      },
+      {
+        "title": "Nessuna alterazione dei file",
+        "description": [
+          "Tutto ciò che facciamo è rimuovere i metadati dai tuoi file per aumentare la privacy; foto, video o contenuti restano inalterati. Non comprimiamo i tuoi file, non aggiungiamo filigrane né apportiamo altre modifiche se non quelle necessarie per rimuovere i metadati, così avrai un file privato e inalterato."
+        ]
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Quando usare un rimuovi metadati?",
+    "description": "Mantenere la privacy online è diventato un aspetto essenziale della nostra vita su Internet. Conservando i metadati di documenti, foto o video, puoi mantenere la riservatezza sia nella vita personale che lavorativa, evitare fughe di dati e godere di maggiore privacy e anonimato.",
+    "info": [
+      {
+        "title": "Proteggi i tuoi dati in foto o video",
+        "description": [
+          "Le foto scattate con il tuo telefono o fotocamera possono includere dati di posizione nascosti, come coordinate GPS, nomi di luoghi o persino la direzione verso cui era puntata la fotocamera. Un rimuovi metadati per foto elimina i dati di posizione per aiutarti a mantenere la privacy della tua casa, lavoro o posizione attuale e previene minacce informatiche come il doxxing."
+        ]
+      },
+      {
+        "title": "Evita le fughe di dati",
+        "description": [
+          "Il tuo nome completo, email, dispositivo e dettagli software possono rimanere nelle tue immagini, documenti o video. Un rimuovi metadati per immagini o video ti protegge anche se condividi questi file con la persona sbagliata, evitando la condivisione di informazioni sensibili o private."
+        ]
+      },
+      {
+        "title": "Invii anonimi",
+        "description": [
+          "Ci sono molti casi d'uso per un rimuovi metadati online oltre a foto e video. Giornalisti o whistleblower che necessitano della massima privacy useranno questo strumento per anonimizzare i dati collegati all'autore del documento, la cronologia delle revisioni, le anteprime e i percorsi dei file interni."
+        ]
+      },
+      {
+        "title": "Condividi file tra dipendenti",
+        "description": [
+          "Le aziende sono costantemente bersaglio di fughe di dati, che possono avvenire a causa di attacchi informatici o errori umani. Condividendo documenti tra reparti, i metadati potrebbero esporre nomi di dipendenti, strutture di file interni o commenti. In questo caso, un rimuovi metadati garantisce l'integrità e la conformità di un'azienda."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Prova i tool di sicurezza online gratuiti di Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Verifica forza password",
+        "description": "Scansiona ora"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Convertitore unità byte",
+        "description": "Converti ora"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Email temporanea gratuita",
+        "width": 95,
+        "description": "Invia ora"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Generatore di password gratuito",
+        "width": 124,
+        "description": "Genera ora"
+      }
+    ]
+  }
+}

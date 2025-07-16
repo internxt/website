@@ -7,15 +7,13 @@ const CtaSection = ({
   maxWidth,
   target,
   bgImage,
-  onClick,
   customDescription,
 }: {
   textContent: any;
-  url: string;
+  url?: string;
   maxWidth?: string;
   target?: string;
   bgImage?: string;
-  onClick?: () => void;
   customDescription?: React.ReactNode;
 }) => {
   const defaultBgImage = getImage('/images/cyber-awareness/Background.svg');
@@ -32,17 +30,19 @@ const CtaSection = ({
           <p className="text-3xl font-semibold xl:text-4xl">{textContent.title}</p>
           {customDescription}
         </div>
-        <Link
-          href={url}
-          target={target}
-          className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
-            bgImage && bgImage !== defaultBgImage
-              ? 'bg-primary text-xl text-white hover:bg-primary-dark'
-              : 'bg-white text-primary hover:bg-blue-10'
-          }`}
-        >
-          {textContent.cta}
-        </Link>
+        {url && (
+          <Link
+            href={url}
+            target={target}
+            className={`flex rounded-lg px-5 py-3 text-lg font-medium ${
+              bgImage && bgImage !== defaultBgImage
+                ? 'bg-primary text-xl text-white hover:bg-primary-dark'
+                : 'bg-white text-primary hover:bg-blue-10'
+            }`}
+          >
+            {textContent.cta}
+          </Link>
+        )}
       </div>
     </section>
   );

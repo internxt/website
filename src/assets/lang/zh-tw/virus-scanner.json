@@ -29,9 +29,9 @@
       "unableToProcess": "無法處理",
       "noVirusesDetected": {
         "message": "未檢測到病毒",
-        "title": "想要保護您的文件安全嗎？",
-        "subtitle": "Internxt 是一家具有內置病毒掃描和端到端加密的私人雲存儲服務。",
-        "cta": "立即開始"
+        "title": "保護您的檔案免受病毒侵害",
+        "subtitle": "Internxt 與 Bitdefender 合作，為您的設備提供終極即時防護。免費獲得 3 個月的頂級防毒保護。",
+        "cta": "立即領取優惠"
       },
       "analyzing": "正在掃描文件...",
       "scanTime": "掃描時間",

@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compress PPT files with Internxt for an easier, more productive way to collaborate and present slideshows.",
+    "secureUpload": "Secure uploads protected by HTTPS."
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to compress a PPT file",
+      "description": "To compress a PPT file, follow these steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your PPT file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress PPT file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ],
+      "outro": "With this tool, you can compress a PPT file for free for multiple files whenever you need. All files are secured with encrypted uploads to guarantee the privacy of your videos.  "
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress a PPT file",
+      "intro": "We often need to send a PPT file for group projects or team presentations via email, but larger presentations may be restricted by email or file-sharing providers. To compress PPT files with Internxt, simply choose your file, and you can:",
+      "bullets": [
+        "Quickly compress, share, and edit PPT files",
+        "Stay within upload size limits ",
+        "Manage group projects"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your PPT files private, so you can compress, store, and share your presentations in confidence with Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share PPT files",
+    "cta": "Get Internxt"
+  }
+}

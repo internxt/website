@@ -72,7 +72,7 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2",
+        "price": " 2.00",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
@@ -80,9 +80,9 @@
     },
     "TitleAndOnePlanV2": {
       "saveLabel": "Oferta 80%",
-      "title": "Ecosistema seguro en la nube",
-      "subtitle": "Nuevos planes disponibles!",
-      "cta": "Consigue tu plan",
+      "title": "Día Mundial del Medio Ambiente",
+      "subtitle": "Todos los planes Internxt",
+      "cta": "Consigue la oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"
@@ -347,17 +347,17 @@
       {
         "name": "Eva Williams",
         "enterprise": "Periodista de FixThePhoto.com",
-        "review": "Internxt es un servicio de almacenamiento en la nube conveniente para clientes conscientes de la privacidad. Tiene una interfaz simplificada y un equipo de soporte confiable, lo que lo convierte en una excelente opción para aquellos que necesitan almacenar sus archivos de manera segura."
+        "review": "Me cambié a Internxt por su tecnología de conocimiento cero, cifrado postcuántico y código abierto. Ahora sólo yo puedo acceder a mis archivos e información, y lo tengo todo protegido en línea."
       },
       {
         "name": "Cristian M.",
         "enterprise": "Reseña de GetApp",
-        "review": "La mejor alternativa cifrada a Dropbox. En general: Necesitábamos una alternativa que nos permitiera almacenar archivos de clientes y trabajo (archivos de redes sociales) y como Internxt es compatible con GDPR, encajó perfectamente para nosotros."
+        "review": "Internxt es un servicio de almacenamiento en la nube privado y seguro. Tiene una interfaz simplificada, fácil de usar y una buena atención al cliente, lo que lo convierte en una excelente opción."
       },
       {
         "name": "Josep Carrizo",
         "enterprise": "Reseña de Trustpilot",
-        "review": "He estado usando Google Drive durante varios años, pero necesitaba una alternativa que me garantizara la privacidad de mis datos. Algo que Google u otras plataformas conocidas no pueden hacer. Por eso me mudé a Internxt."
+        "review": "Internxt es un servicio de almacenamiento en la nube privado y seguro. Tiene una interfaz simplificada, fácil de usar y una buena atención al cliente, lo que lo convierte en una excelente opción."
       }
     ]
   },

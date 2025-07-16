@@ -248,12 +248,14 @@ type PaymentCheckoutConfig = {
   promoCodeId?: PromoCodeProps['codeId'];
   planType: 'individual' | 'business';
   mode?: 'subscription' | 'payment';
+  trialToken?: string;
   currency?: string;
+  gclid?: string;
 };
-export function checkout({ planId, promoCodeId, planType, mode, currency }: PaymentCheckoutConfig): void {
+
+export function checkout({ planId, promoCodeId, planType, mode, currency, gclid }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
     const params = new URLSearchParams();
-
     const pathname = '/checkout';
 
     planId && params.set('planId', planId);
@@ -261,9 +263,11 @@ export function checkout({ planId, promoCodeId, planType, mode, currency }: Paym
     planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
+    gclid && params.set('gclid', gclid);
 
     window.location.href = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
   }
+
   if (IFRAME_AUTH_ENABLED) {
     window.top?.postMessage({ action: 'checkout', planId: planId }, window.location.origin);
   }
@@ -274,6 +278,7 @@ export function checkoutForPcComponentes({
   promoCodeId,
   planType,
   mode,
+  trialToken,
   currency,
 }: PaymentCheckoutConfig): void {
   if (REDIRECT_AUTH_ENABLED) {
@@ -286,7 +291,7 @@ export function checkoutForPcComponentes({
     planType && params.set('planType', planType);
     currency && params.set('currency', currency);
     mode && params.set('mode', mode ? mode : 'subscription');
-
+    trialToken && params.set('mobileToken', trialToken);
     const checkoutUrl = AUTH_FLOW_URL + `${pathname}?${params.toString()}`;
 
     window.open(checkoutUrl, '_self', 'noopener noreferrer');

@@ -1,0 +1,176 @@
+{
+  "HeroSection": {
+    "mainTitle": " Detector de AI",
+    "subtitle": "Escanea contenido generado por inteligencia artificial con nuestra herramienta gratuita de detector de AI.",
+    "title": "Pega o escribe tu texto aquí",
+    "placeholder": "Ingresa al menos 250 carácteres para iniciar el escaneo",
+    "maxChars": "carácteres",
+    "minChars": "Ingresa al menos",
+    "uploadButton": "Upload",
+    "scanButton": "Scan for AI",
+    "scanningText": "Checking...",
+    "detectionScore": "Detection score",
+    "humanGeneratedText": "Human Generated Text",
+    "error": {
+      "minChars": "Text must be at least 250 characters long",
+      "apiError": "An error occurred while checking the text. Please try again.",
+      "invalidPdf": "Invalid PDF file",
+      "emptyPdf": "PDF file is empty",
+      "emptyFile": "File is empty",
+      "fileReadError": "Error reading file",
+      "unsupportedFile": "Unsupported file type"
+    },
+    "likelyHumanText": "Este texto es probablemente escrito por un humano",
+    "likelyAiText": "Este texto es probablemente escrito por una IA"
+  },
+  "FeaturesSection": {
+    "aiCheckerTitle": "Detector de AI gratuito de Internxt",
+    "aiCheckerDescription": "Busca contenido AI de ChatGPT u otro tipo de texto de inteligencia artificial con nuestro detector de AI gratuito. Sube un archivo o pega tu texto para obtener resultados instantáneos, para realizar cualquier modificación antes de publicar o enviar tu contenido.\n\nNo almacenamos ningún contenido ni información en nuestro detector de AI. Nuestra herramienta busca sólo patrones generados por IA sin almacenar el contenido que envías. De esta manera, mantenemos tu contenido seguro y privado de las herramientas de IA que utilizan tus datos para entrenar sus propios modelos de aprendizaje automático de inteligencia artificial.",
+    "aiDetectorTitle": "ZeroGPT AI detector for ChatGPT, Gemini, CoPilot, y otros",
+    "aiDetectorDescription": "La herramienta de detector de AI de Internxt escanea con precisión y rapidez el contenido generado por herramientas de inteligencia artificial populares, como ChatGPT y Gemini, entre otras. Una vez escaneado, proporciona retroalimentación y diferenciación entre texto generado por humanos y texto generado por IA, brindándote un análisis detallado del texto.\n\nNuestro detector de IA avanzado y gratuito detecta los últimos modelos de IA, como GPT-4, con alta precisión. Ten en cuenta que ningún verificador de IA es 100% preciso debido al desarrollo de modelos de lenguaje de IA, pero tratamos de ofrecerte un análisis lo más avanzado y preciso posible."
+  },
+  "CtaSection": {
+    "title": "Verifica y detecta texto AI",
+    "description": "Asegúrate de que tu texto es único y original",
+    "cta": "Obtén Internxt"
+  },
+  "CtaSection2": {
+    "title": "No dejes que la IA escriba tu historia",
+    "description": "Encuentra texto AI de ChatGPT, Gemini u otra inteligencia artificial",
+    "cta": "Obtén Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo funciona el detector de AI de Internxt?",
+        "answer": [
+          "Cuando subes tu contenido, el software analiza patrones que son comunes en el contenido generado por IA, como el vocabulario, la estructura y la gramática. Estos modelos de aprendizaje están entrenados para detectar diferencias entre la IA y la escritura humana. "
+        ]
+      },
+      {
+        "question": "¿Qué tan preciso es el detector de texto IA?",
+        "answer": [
+          "Nuestros algoritmos avanzados pueden detectar contenido escrito por IA con un alto nivel de éxito, pero ninguna herramienta de detección de IA puede detectar texto de IA con un 100 % de precisión."
+        ]
+      },
+      {
+        "question": "¿Puede la herramienta de detección de AI de Internxt sugerir mejoras?",
+        "answer": [
+          "No, solo puede resaltar contenido escrito por IA y mostrar la cantidad de texto que probablemente haya sido escrito por una persona real."
+        ]
+      },
+      {
+        "question": "Por qué elegir Internxt detector sobre otras herramientas de detección de IA",
+        "answer": [
+          "La herramienta gratuita de detección de IA de Internxt te permite escanear contenido que no está almacenado ni compartido con otras empresas, ni se utiliza para entrenar modelos de lenguaje de IA, lo que la convierte en un recurso valioso para comprobar la IA sin comprometer tu privacidad."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Password Strength Checker",
+        "description": "Scan now"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte Unit Converter",
+        "description": "Convert now"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Free Temporary Email",
+        "width": 95,
+        "description": "Mail now"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Free Password Generator",
+        "width": 124,
+        "description": "Generate now"
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Detector de IA de Internxt para uso diario, educativo o laboral",
+    "description": "Sean cuales sean tus necesidades, nuestra herramienta de detección de AI proporciona resultados instantáneos y muy precisos, para que puedas escanear rápidamente patrones de IA y modificar tu contenido según sea necesario.",
+    "info": [
+      {
+        "title": "Estudiantes",
+        "description": [
+          "El detector de AI gratuito de Internxt es perfecto para estudiantes que necesitan enviar trabajos que quieran cumplir con las pautas de su escuela o universidad. Pueden identificar contenido creado por ChatGPT u otros modelos que puedan necesitar obtener y verificar."
+        ]
+      },
+      {
+        "title": "Educators",
+        "description": [
+          "Cada vez más estudiantes confían en las herramientas de inteligencia artificial para ayudar o redactar sus tareas. Con nuestra herramienta de verificación de IA, puedes verificar el trabajo de tus estudiantes para asegurarte de que puedes analizar su trabajo en busca de texto generado por IA."
+        ]
+      },
+      {
+        "title": "Periodistas",
+        "description": [
+          "Para evitar la difusión de información errónea del contenido de IA, los periodistas deben esforzarse por ofrecer historias que sean auténticas, objetivas y confiables. Los detectores de IA ayudan a mantener la reputación de una empresa de medios al proporcionar noticias de una fuente confiable y no de un robot."
+        ]
+      },
+      {
+        "title": "Blogueros",
+        "description": [
+          "Nuestro verificador de IA te ayuda a crear contenido único y de alta calidad que atrae a tu audiencia, dirige el tráfico a tu sitio web y te ayuda a evitar penalizaciones en los motores de búsqueda. También puedes verificar el contenido de editores externos antes de publicarlo en tu sitio web. "
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Por qué usar el detector de AI de Internxt",
+    "description": "Puedes utilizar nuestro detector de texto AI con total confianza de que tu contenido se mantiene privado y de obtener resultados rápidos y confiables de tu contenido para publicar o enviar. ",
+    "info": [
+      {
+        "title": "Algoritmos avanzados",
+        "description": [
+          "Nuestra herramienta de detección de IA utiliza algoritmos avanzados que buscan patrones comunes utilizados por ChatGPT, Gemini y otras herramientas para encontrar contenido escrito por IA. Cuando cargas o copias tu contenido, los algoritmos pueden distinguir entre contenido escrito por humanos y contenido generado por IA."
+        ]
+      },
+      {
+        "title": "Escaneos ilimitados",
+        "description": [
+          "Realiza escaneos de texto AI de forma gratuita cuando lo necesites. No ocultamos este servicio detrás de muros de pago; Ofrecemos una herramienta de detección de IA segura y privada que está disponible gratuitamente siempre que necesites autenticar tu propio trabajo o el de otros."
+        ]
+      },
+      {
+        "title": "Privacidad garantizada",
+        "description": [
+          "Todo lo que subas a nuestra herramienta Detector de AI es confidencial y privado. Nada de lo que copies en el servicio se almacena, comparte ni utiliza para entrenar modelos de lenguaje de IA. Descansa tranquilo sabiendo que tu contenido está seguro."
+        ]
+      },
+      {
+        "title": "Soporte multilingüe",
+        "description": [
+          "Admitimos varios idiomas para ayudarte a revisar y analizar contenido con alta precisión. Esto facilita la detección y modificación del contenido de IA, independientemente del idioma, para obtener un detector de IA consistente y confiable."
+        ]
+      },
+      {
+        "title": "Respuestas instantáneas",
+        "description": [
+          "Suba, copie o pegue su texto en nuestra herramienta y escanearemos instantáneamente el contenido en busca de contenido y texto AI. Este proceso ocurre en solo unos segundos y, una vez que se completa, recibirás una respuesta sobre el contenido y si se encontró texto generado por IA."
+        ]
+      },
+      {
+        "title": "Sin registros",
+        "description": [
+          "Nuestro detector de IA es 100 % gratuito y no hay límites en su uso. No es necesario crear una cuenta ni suscripciones premium, simplemente sube o carga el contenido que necesitas analizar, ¡y listo!"
+        ]
+      }
+    ]
+  }
+}

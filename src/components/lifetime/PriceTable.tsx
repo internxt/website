@@ -15,6 +15,7 @@ interface PriceTableProps {
   showPriceBefore?: boolean;
   currencySpecified?: string;
   isStackCommerce?: boolean;
+  showOffer?: boolean;
   onButtonClicked?: () => void;
 }
 
@@ -30,6 +31,7 @@ const DISC_LIFETIME_PRICES = {
     '10TB': 899,
   },
 };
+
 const LIFETIME_MODES_WITH_POPULAR_10TB = ['celebration', 'normal'];
 
 const PriceTable = ({
@@ -40,6 +42,7 @@ const PriceTable = ({
   lifetimeMode,
   currencySpecified,
   isStackCommerce,
+  showOffer,
   onButtonClicked,
 }: PriceTableProps): JSX.Element => {
   const popularStoragePlan = LIFETIME_MODES_WITH_POPULAR_10TB.includes(lifetimeMode ?? '') ? '5TB' : '3TB';
@@ -79,6 +82,7 @@ const PriceTable = ({
 
   const lifetimeProducts = lifetimeMode === 'normal' ? updatedProductsArray : productsArray;
   const finalDiscount = discount ? discount : 1;
+
   const lifetimePrices = (price, discount, storage) => {
     switch (lifetimeMode) {
       case 'normal':
@@ -87,7 +91,6 @@ const PriceTable = ({
         return Number(price * finalDiscount)
           .toFixed(2)
           .replace(/\.00$/, '');
-
       case 'custom-disc':
         return DISC_LIFETIME_PRICES[currencyValue][storage];
       case 'redeem':
@@ -105,25 +108,20 @@ const PriceTable = ({
     switch (lifetimeMode) {
       case 'custom-disc':
         return specialCoupons?.[storage];
-
       case 'celebration':
         return coupon;
-
       case 'normal':
         return undefined;
-
       default:
         return undefined;
     }
   };
 
   const percentOff = discount ? 100 - discount * 100 : 0;
+
   return (
     <section className="overflow-hidden">
-      <div
-        id="priceTable"
-        className="content flex flex-row flex-wrap items-end justify-center justify-items-center px-6"
-      >
+      <div id="priceTable" className="content px-6">
         <Transition
           show={loadingCards}
           enter="transition duration-500 ease-out"
@@ -134,20 +132,60 @@ const PriceTable = ({
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
+            <CardSkeleton />
           </div>
         </Transition>
 
-        {/* Render cards */}
-
-        <Transition
-          show={!loadingCards}
-          enterFrom="scale-95 translate-y-20 opacity-0"
-          enterTo="scale-100 translate-y-0 opacity-100"
-        >
-          <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
-            {lifetimeProducts
-              ? lifetimeProducts.map((product: any, index) => {
-                  return (
+        {isStackCommerce ? (
+          <Transition
+            show={!loadingCards}
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="always-scroll overflow-x-auto px-6  pb-10">
+              <div className="flex min-w-fit snap-x snap-mandatory flex-row gap-6">
+                {[
+                  { storage: '2TB', price: '900.0', priceId: 'price_1PNxYtFAOdcgaBMQzkimr6OU' },
+                  { storage: '5TB', price: '1900.0', priceId: 'price_1PNxZkFAOdcgaBMQi0UCtXBj' },
+                  { storage: '10TB', price: '2900.0', priceId: 'price_1PLMTpFAOdcgaBMQ0Jag685H' },
+                  { storage: '20TB', price: '4900.0', priceId: 'price_1RByJuFAOdcgaBMQBbzipdbU' },
+                  { storage: '50TB', price: '7900.0', priceId: 'price_1RjEImFAOdcgaBMQZkAFCLqA' },
+                  { storage: '100TB', price: '9900.0', priceId: 'price_1RjEJPFAOdcgaBMQifUoiJgL' },
+                ].map((plan, index) => (
+                  <div key={plan.storage} className="min-w-[250px] snap-start">
+                    <PriceCard
+                      planType="individual"
+                      storage={plan.storage}
+                      price={lifetimePrices(plan.price, discount, plan.storage)}
+                      cta={['checkout', plan.priceId]}
+                      lang={lang}
+                      billingFrequency={Interval.Lifetime}
+                      popular={false}
+                      currency={currency}
+                      currencyValue={currencyValue}
+                      coupon={couponCodeFiltered(plan.storage)}
+                      isLifetimePage={true}
+                      lifetimeMode={lifetimeMode}
+                      onButtonClicked={onButtonClicked}
+                      percentOff={percentOff}
+                      isStackCommerce={isStackCommerce}
+                      index={index}
+                      showOffer={false}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Transition>
+        ) : (
+          <Transition
+            show={!loadingCards}
+            enterFrom="scale-95 translate-y-20 opacity-0"
+            enterTo="scale-100 translate-y-0 opacity-100"
+          >
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
+              {lifetimeProducts
+                ? lifetimeProducts.map((product: any, index) => (
                     <PriceCard
                       planType="individual"
                       key={product.storage}
@@ -167,12 +205,13 @@ const PriceTable = ({
                       percentOff={percentOff}
                       isStackCommerce={isStackCommerce}
                       index={index}
+                      showOffer={true}
                     />
-                  );
-                })
-              : null}
-          </div>
-        </Transition>
+                  ))
+                : null}
+            </div>
+          </Transition>
+        )}
       </div>
     </section>
   );

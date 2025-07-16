@@ -3,12 +3,11 @@ import { useRouter } from 'next/navigation';
 import {
   ClockCounterClockwise,
   Eye,
+  Fingerprint,
   Key,
-  ListChecks,
-  LockSimple,
+  LockKey,
   MonitorArrowUp,
   NumberCircleZero,
-  Scales,
   ShieldCheck,
 } from '@phosphor-icons/react';
 import dynamic from 'next/dynamic';
@@ -17,7 +16,7 @@ import Layout from '@/components/layout/Layout';
 import { MinimalNavbar } from '@/components/layout/navbars/MinimalNavbar';
 import { HeroSectionForPartner } from '@/components/affiliates/affiliates-partners-template/HeroSection';
 import { PromoCodeName } from '@/lib/types';
-import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
+import FeaturesSlider from '@/components/shared/FeaturesSlider';
 
 const SecondFeaturesSection = dynamic(
   () => import('@/components/home/SecondFeaturesSection').then((mod) => mod.default),
@@ -40,19 +39,6 @@ const CtaSection = dynamic(
   () => import('@/components/affiliates/affiliates-partners-template/CtaSection').then((mod) => mod.CtaSection),
   { ssr: false },
 );
-const MarqueeComponent = dynamic(
-  () => import('@/components/specialoffer/MarqueeComponent').then((mod) => mod.MarqueeComponent),
-  { ssr: false },
-);
-const FeaturesSectionForOnePlan = dynamic(
-  () =>
-    import('@/components/affiliates/oneplan/FeaturesSectionForOneplan').then((mod) => mod.FeaturesSectionForOnePlan),
-  { ssr: false },
-);
-const WhatWeDoSectionForSpecialOffer = dynamic(
-  () => import('@/components/specialoffer/WhatWeDoSection').then((mod) => mod.WhatWeDoSectionForSpecialOffer),
-  { ssr: false },
-);
 
 export type CardsType = 'all' | 'one';
 
@@ -63,14 +49,9 @@ interface CardSystemPath {
 
 const ALL_LIFETIME_PLANS_PATHNAMES = ['pcmag'];
 
-const ONE_LIFETIME_PLAN_LIFETIME = ['oneplan'];
+const ALLOWED_PATHS = [...ALL_LIFETIME_PLANS_PATHNAMES];
 
-const ALLOWED_PATHS = [...ALL_LIFETIME_PLANS_PATHNAMES, ...ONE_LIFETIME_PLAN_LIFETIME];
-
-const CARD_SYSTEM_FOR_PATHS: CardSystemPath[] = [
-  { type: 'all', paths: ALL_LIFETIME_PLANS_PATHNAMES },
-  { type: 'one', paths: ONE_LIFETIME_PLAN_LIFETIME },
-];
+const CARD_SYSTEM_FOR_PATHS: CardSystemPath[] = [{ type: 'all', paths: ALL_LIFETIME_PLANS_PATHNAMES }];
 
 const getTypeFromPathname = (pathname: string): CardsType | undefined => {
   for (const cardSystem of CARD_SYSTEM_FOR_PATHS) {
@@ -89,13 +70,12 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   const selectedPathName = ALLOWED_PATHS.find((allowedPathname) => allowedPathname === pathname);
 
   const couponCode = {
-    pcmag: PromoCodeName.PcmagCoupon,
-    oneplan: PromoCodeName.Special82,
+    pcmag: PromoCodeName.Planet85,
   };
 
   useEffect(() => {
     if (!selectedPathName) {
-      push('/affiliates');
+      push('/specialoffer');
     }
 
     setCardsType(getTypeFromPathname(pathname) ?? 'all');
@@ -134,46 +114,6 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
     },
   ];
 
-  const cards = [
-    {
-      icon: LockSimple,
-      title: langJson.WhyChooseInternxtForOneplan.cards[0].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[0].description,
-    },
-    {
-      icon: ShieldCheck,
-      title: langJson.WhyChooseInternxtForOneplan.cards[1].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[1].description,
-    },
-    {
-      icon: NumberCircleZero,
-      title: langJson.WhyChooseInternxtForOneplan.cards[2].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[2].description,
-    },
-    {
-      icon: Eye,
-      title: langJson.WhyChooseInternxtForOneplan.cards[3].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[3].description,
-    },
-    {
-      icon: Scales,
-      title: langJson.WhyChooseInternxtForOneplan.cards[4].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[4].description,
-    },
-    {
-      icon: ListChecks,
-      title: langJson.WhyChooseInternxtForOneplan.cards[5].title,
-      description: langJson.WhyChooseInternxtForOneplan.cards[5].description,
-    },
-  ];
-
-  const handleOnButtonClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <MinimalNavbar lang={lang} />
@@ -198,35 +138,6 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
           <DevicesSection textContent={langJson.DevicesSection} />
 
           <TestimonialsSection textContent={homeJson.TestimonialsSection} />
-        </>
-      ) : undefined}
-
-      {cardsType === 'one' ? (
-        <>
-          <div className="flex w-full shadow-inner">
-            <MarqueeComponent label={langJson.recommendedBy} />
-          </div>
-
-          <FeaturesSectionForOnePlan textContent={langJson.FeaturesSectionForOnePlan} />
-
-          <TextAndCardsGroupColumnSection
-            background="bg-gray-1"
-            backgroundColorForCard="bg-white"
-            TextComponent={
-              <div className="flex max-w-[775px] flex-col gap-6 text-center">
-                <h2 className="text-5xl font-semibold text-gray-100">{langJson.WhyChooseInternxtForOneplan.title}</h2>
-                <p className="text-xl text-gray-80">{langJson.WhyChooseInternxtForOneplan.description}</p>
-              </div>
-            }
-            cards={cards}
-          />
-
-          <WhatWeDoSectionForSpecialOffer
-            textContent={langJson.WhatWeDoForOneplan}
-            handleOnButtonClick={handleOnButtonClick}
-            bgColor="bg-white"
-            bgColorCard="bg-gray-1"
-          />
         </>
       ) : undefined}
 

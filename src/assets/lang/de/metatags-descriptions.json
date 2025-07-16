@@ -82,7 +82,7 @@
   {
     "id": "lifetime",
     "title": "Internxt Lifetime-Pläne – Sicherer Cloud-Speicher ein Leben lang!",
-    "description": "Internxt Lifetime Deal: Einmal zahlen und 2TB, 5TB oder 10TB sicheren Cloud-Speicher für immer erhalten."
+    "description": "Internxt Lifetime Deal: Einmal zahlen und 1TB, 3TB oder 5TB sicheren Cloud-Speicher für immer erhalten."
   },
   {
     "id": "partner-discount",
@@ -184,5 +184,80 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Cloud-Speicher-Backup-Lösungen",
     "description": "Internxt Cloud-Speicher-Backup-Lösungen nutzen Redundanz und preisgekrönte Verschlüsselung, die Sie und Ihr Unternehmen vor Datenverlust schützt."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt – DSGVO-konformer Cloud-Speicher",
+    "description": "Internxt ist ein Cloud-Speicherdienst, der der DSGVO und den strengen Datenschutzgesetzen der EU entspricht, um deine Informationen zu schützen."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – Fotos in der Cloud",
+    "description": "Internxt bietet dir den besten Speicherplatz, um deine Fotos privat und sicher in der Cloud zu speichern – inklusive Antivirus und VPN."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Spezialangebot für deine Jahrespläne!",
+    "description": "Sichere dir einen Rabatt auf jeden Jahresplan von Internxt. Alle Pläne beinhalten privaten Cloud-Speicher, VPN und Antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadaten-Entferner – So entfernen Sie Metadaten aus PDFs, Fotos und Ihren Dokumenten online",
+    "description": "Entfernen Sie versteckte Daten aus Ihren Dateien in Sekundenschnelle. Der Internxt Metadaten-Entferner säubert Ihre Dokumente für maximale Privatsphäre vor dem Teilen."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt ZeroGPT KI-Checker – Kostenloses KI-Prüftool",
+    "description": "Internxt ZeroGPT KI-Checker. Überprüfe Inhalte, um festzustellen, ob sie von ChatGPT, Gemini oder anderen KI-Plattformen erstellt wurden. Jetzt kostenlos ausprobieren!"
+  },
+  {
+    "id": "special-offer",
+    "title": "Sonderangebot — Internxt",
+    "description": "Erhalten Sie Internxt-Jahres- und Lifetime-Tarife mit einem exklusiven 80 % Rabatt. Genießen Sie Privatsphäre und Sicherheit mit bis zu 10 TB Speicherplatz."
+  },
+  {
+    "id": "file-compressor",
+    "title": "Datei-Komprimierer - Internxt",
+    "description": "Internxt-Dateikomprimierer, der beste Datei-Komprimierer zur kostenlosen Reduzierung der Dateigröße von Videos, Fotos und Dokumenten."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Internxt Video-Komprimierer",
+    "description": "Mit Internxt können Sie Videos kostenlos komprimieren, um die Dateigröße zu reduzieren und sie online zu versenden, ohne sich um Größenbeschränkungen zu sorgen."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Internxt PDF-Datei-Komprimierer",
+    "description": "Mit Internxt können Sie PDF-Dateien kostenlos komprimieren, damit Sie Ihre Dokumente einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Internxt JPG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre JPG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-png",
+    "title": "Internxt PNG-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PNG-Dateien kostenlos mit Internxt, damit Sie Ihre Bilder einfach schützen und versenden können."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Internxt PPT-Datei-Komprimierer",
+    "description": "Komprimieren Sie Ihre PPT-Dateien kostenlos mit Internxt, um die Dateigröße zu reduzieren und die Verwaltung von Dateispeicherung und -freigabe zu vereinfachen."
+  },
+  {
+    "id": "compress-word",
+    "title": "Internxt Online Word-Datei-Komprimierer",
+    "description": "Word-Dateien (DOC) kostenlos und online komprimieren, um ihre Größe zu reduzieren und die Speicherung und Freigabe zu erleichtern."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Internxt Excel-Datei-Komprimierer",
+    "description": "Kostenloser Komprimierer für Excel-Dateien (XLS) - Reduzieren Sie die Größe für einfache Speicherung und Dateifreigabe."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Online ZIP-Komprimierer - Internxt",
+    "description": "Ein Online-ZIP-Komprimierer reduziert die Größe Ihrer ZIP-Dateien, um Speicherplatz zu sparen und Dateien ohne Größenbeschränkungen zu teilen und hochzuladen."
   }
 ]

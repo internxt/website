@@ -94,6 +94,14 @@
     "blueText": "使用 Internxt 享受更私密的在线体验"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "去除文件中暴露隐私的元数据。",
+    "blueText": "用 Internxt 清理您的数字足迹"
+  },
+  "SignUpAiDetector": {
+    "line1": "检测AI内容，确保真实性，",
+    "blueText": "安心发布，尽在Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
   "SignUpCyberAwareness": {
@@ -123,9 +131,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% 折扣！",
-      "normalText": "世界云安全日",
-      "cta": "购买你的计划！"
+      "boldText": "这个夏天，随时随地携带你的所有信息 ",
+      "normalText": "所有套餐立减 80%，火速抢购！",
+      "cta": "选择你的套餐 "
     }
   },
   "lifetimeBanner": {
@@ -143,5 +151,9 @@
     "subtitle": "有一个独家优惠在等着你。",
     "cta": "所有计划80% 折扣",
     "guarantee": "30天退款保证"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "使用 Internxt 节省存储空间",
+    "blueText": "免费压缩文件以优化您的云端"
   }
 }

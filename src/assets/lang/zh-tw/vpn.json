@@ -6,7 +6,8 @@
       "line2": "線上全面保護你"
     },
     "description": "使用 Internxt 安全 VPN 自由且安全地瀏覽網頁。",
-    "cta": "選擇你的方案"
+    "cta": "選擇你的方案",
+    "download": "下載"
   },
   "EncryptedVPNSection": {
     "title": "Internxt 加密 VPN 擴充功能",
@@ -61,6 +62,7 @@
     "subtitle": "Internxt VPN 擴充功能使用快速安全的伺服器加密並傳輸敏感資料。",
     "description": "我們的免費 VPN 擴充功能隱藏你的 IP 位址，防止第三方蒐集你的資料。",
     "cta": "下載 VPN",
+    "download": "下載",
     "cards": [
       "避免個人化廣告",
       "匿名建立帳戶",

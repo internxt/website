@@ -215,3 +215,21 @@ input[type='number'] {
     height: 100%;
   }
 }
+
+.always-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.always-scroll::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.always-scroll::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  border-radius: 10px;
+}
+
+.always-scroll {
+  scrollbar-color: #a0aec0 #f0f0f0;
+  scrollbar-width: thin;
+}

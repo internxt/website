@@ -72,17 +72,17 @@
       ],
       "startFrom": {
         "normal1": "À partir de ",
-        "price": " 2",
+        "price": "2.00",
         "normal2": " /mois"
       },
       "claimDeal": "Obtenez l'offre",
-      "guarantee": "Garantie de remboursement de 30 jours"
+      "guarantee": "Garantie de retour sous 30 jours"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Offre 80%",
-      "title": "Écosystème sécurisé dans le cloud",
-      "subtitle": "Nouveaux plans disponibles !",
-      "cta": "Obtenez votre plan",
+      "saveLabel": "Offre de 80%",
+      "title": "Journée mondiale de l'environnement",
+      "subtitle": "Tous les plans Internxt",
+      "cta": "Obtenir ton abonnement",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
     "youKnow": "Saviez-vous cela?"

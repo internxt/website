@@ -378,5 +378,30 @@
     "id": "internxt-cloud-storage-backup-solutions",
     "title": "Internxt - Soluções de Backup de Armazenamento em Nuvem",
     "description": "As soluções de backup de armazenamento em nuvem do Internxt utilizam redundância e criptografia premiada que protege você e sua empresa contra a perda de dados."
+  },
+  {
+    "id": "internxt-gdpr-cloud-storage",
+    "title": "Internxt - Armazenamento em nuvem compatível com a GDPR",
+    "description": "Internxt é um serviço de armazenamento em nuvem que está em conformidade com a GDPR e com as rigorosas leis de privacidade da UE para proteger suas informações."
+  },
+  {
+    "id": "internxt-cloud-storage-for-photos",
+    "title": "Internxt – Fotos na nuvem",
+    "description": "A Internxt oferece o melhor armazenamento para guardar suas fotos na nuvem de forma privada e segura, com Antivírus e VPN incluídos."
+  },
+  {
+    "id": "internxt-annual",
+    "title": "Internxt – Oferta especial para seus planos anuais!",
+    "description": "Garanta um desconto em qualquer plano anual da Internxt. Todos os planos incluem armazenamento em nuvem privada, VPN e antivírus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Removedor de Metadados - Como limpar metadados em PDF, fotos e seus documentos online",
+    "description": "Remova dados ocultos dos seus arquivos em segundos. O Removedor de Metadados da Internxt limpa seus documentos para máxima privacidade antes de compartilhar."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Detector de IA - Detector de texto de IA grátis",
+    "description": "Internxt Detector de IA. Analise gratuitamente o conteúdo para verificar se foi escrito por ChatGPT, Gemini ou outras plataformas de inteligência artificial."
   }
 ]

@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "85% de réduction",
+      "line1": "80% de réduction",
       "line2": "sur nos plans annuels"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Création de compte anonyme"
     },
     "cta": {
-      "title": "85% de réduction",
+      "title": "80% de réduction",
       "description": "L'offre est valide pour un an. Le plan sera renouvelé à un prix non réduit l'année suivante."
     }
   },
@@ -47,16 +47,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Offre 80%",
-      "title": "Journée mondiale de la sécurité du cloud",
-      "subtitle": "Internxt Drive, Antivirus et VPN",
-      "cta": "Obtiens ton plan !",
-      "cta2": "Bénéficie de 80% de réduction",
-      "guarantee": "Garantie de remboursement de 30 jours",
-      "lastCta": "*Offre valable pour les comptes gratuits ou les nouveaux utilisateurs",
-      "titleMbl": "Nouveaux forfaits à vie !",
-      "descriptionMbl": "Stockage privé, Antivirus et VPN",
-      "ctaMbl": "Achète ton plan"
+      "label": "Économisez 80%",
+      "title": "Offres annuels et à vie",
+      "subtitle": "Cet été, protégez et emportez toutes vos données partout !",
+      "subtitle2": "Drive, Antivirus et VPN",
+      "subtitle3": "Meet, Mail, Nettoyeur d'appareils et Moniteur du Dark Web",
+      "cta": "Prenez un forfait",
+      "cta2": "Bénéficiez de 80% de remise",
+      "guarantee": "Garantie de retour sous 30 jours",
+      "gift": "Tirage sac à dos Internxt x Swiss Peak",
+      "lastCta": "*Offre valable pour comptes gratuits ou nouveaux utilisateurs"
     },
     "planTitles": {
       "individuals": "Plans individuels",
@@ -67,7 +67,7 @@
         "normalText": "tous nos plans exclusifs à vie"
       },
       "blackFriday": {
-        "title": "Méga vente Black Friday : obtenez 85 % de RÉDUCTION sur tous les plans de stockage en cloud les plus sécurisés",
+        "title": "Méga vente Black Friday : obtenez 80 % de RÉDUCTION sur tous les plans de stockage en cloud les plus sécurisés",
         "description": "Protégez vos données avec Internxt pour éviter les violations, les pertes financières et les risques pour la vie privée. Dites adieu aux géants de la technologie qui profitent de vos informations personnelles."
       }
     },

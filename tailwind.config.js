@@ -15,6 +15,8 @@ module.exports = {
       current: 'currentColor',
       black: 'rgb(0,0,0)',
       white: 'rgb(255,255,255)',
+      'white-summer': 'rgb(239, 239, 239, 0.6)',
+      'white-summer-2': 'rgb(255, 255, 255, 0.3)',
       // NEW DESIGN SYSTEM
       primary: 'rgb(0,102,255)',
       'primary-dark': 'rgb(0,88,219)',
@@ -53,12 +55,18 @@ module.exports = {
         'electric-cyan': 'rgb(0,191,255)',
       },
       green: {
+        0: 'rgb(30, 117, 51, 1)',
         1: 'rgb(50,195,86)',
         8: 'rgb(50, 195, 86, 0.08)',
         25: 'rgb(204, 240, 213)',
         40: 'rgb(173, 231, 187)',
         55: 'rgb(142, 222, 162)',
+        100: 'rgb(214, 243, 221, 1)',
         dark: 'rgb(45, 174, 77, 1)',
+      },
+      orange: {
+        1: 'rgb(255, 149, 0, 1)',
+        100: 'rgb(255, 233, 204, 1)',
       },
       // OLD DESIGN SYSTEM
       'cool-gray': {
@@ -144,20 +152,46 @@ module.exports = {
     },
     extend: {
       screens: {
-        xs: '512px',
-        '3xl': '1400px',
-        '4xl': '1582px',
-        ...defaultTheme.screens,
+        'mobile-sm': '360px',
+        mobile: '384px',
+        'mobile-md': '390px',
+        xs: '480px',
+        'xs-md': '540px',
+        sm: '640px',
+        md: '768px',
+        'md-lg': '900px',
+        lg: '1024px',
+        'lg-xl': '1152px',
+        xl: '1278px',
+        '1.5xl': '1420px',
+        '2xl': '1536px',
+        '2.5xl': '1600px',
+        '3xl': '1728px',
+        '4xl': '1920px',
+        '5xl': '2160px',
+        '6xl': '2560px',
+        '7xl': '3440px',
+      },
+
+      backdropBlur: {
+        55: '10px',
       },
       borderRadius: {
         '4xl': '2.75rem',
         'full-percentage': '100%',
+        20: '20px',
+        'sm-6': '6px',
+        32: '32px',
+        2: '2px',
+        16: '16px',
       },
+
       boxShadow: {
         subtle: '0 32px 40px 0 rgba(24, 24, 27, 0.04)',
         'switch-button': '0px 8px 12px rgba(0, 0, 0, 0.04)',
         'subtle-hard': '0 32px 40px 0 rgba(24, 24, 27, 0.08)',
         'box-floating': '0 0 96px 0 rgba(24, 24, 27, 0.06), 0 0 48px 0 rgba(24, 24, 27, 0.02)',
+        soft: '0px 4px 20px rgba(0, 0, 0, 0.05)',
       },
       fontSize: {
         'supporting-1': '0.5rem',

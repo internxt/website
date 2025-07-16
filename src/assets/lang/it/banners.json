@@ -90,6 +90,14 @@
     "line1": "Tieni al sicuro quei file ormai puliti",
     "blueText": "unisciti gratuitamente a Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Rimuovi i metadati rivelatori dai tuoi file.",
+    "blueText": "Pulisci la tua impronta digitale con Internxt"
+  },
+  "SignUpAiDetector": {
+    "line1": "Rileva contenuti AI, garantisci l'autenticità e",
+    "blueText": "pubblica con sicurezza con Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
   "SignUpTempMailBanner": {
     "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
@@ -129,9 +137,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% di sconto!",
-      "normalText": "Giornata mondiale della sicurezza nel cloud",
-      "cta": "Acquista il tuo piano!"
+      "boldText": "Quest’estate porta i tuoi dati sempre con te ",
+      "normalText": "Sconto dell’80% su tutti i piani!",
+      "cta": "Scegli un piano "
     }
   },
   "lifetimeBanner": {
@@ -150,5 +158,9 @@
     "subtitle": "C'è un'offerta esclusiva che ti aspetta.",
     "cta": "80% DI SCONTO",
     "guarantee": "Garanzia di rimborso di 30 giorni"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "Risparmia spazio di archiviazione con Internxt",
+    "blueText": "Comprimi gratuitamente i tuoi file per ottimizzare il cloud"
   }
 }

@@ -1,0 +1,232 @@
+{
+  "HeroSection": {
+    "title": "Metadaten-Entferner",
+    "subtitle2": "Elimina Metadaten von Dateien, um online anonym zu bleiben.",
+    "secure": "Datei-Uploads sind mit HTTPS gesichert",
+    "dropFile": {
+      "line1": "Lade Dateien hoch oder klicke hier"
+    },
+    "fileSelected": "Datei hochgeladen erfolgreich",
+    "cancel": "Neue Datei",
+    "download": "Download",
+    "removeMetadata": "Metadaten entfernen",
+    "close": "Schließen",
+    "scanNow": "Metadaten entfernen",
+    "selectFile": "Datei auswählen",
+    "dropHere": "Datei hier ablegen",
+    "loading": "Laden...",
+    "maxFileSize": {
+      "title": "Dateigrößenlimit überschritten",
+      "description": "Maximale Dateigröße von 100MB"
+    },
+    "table": {
+      "loading": "Laden...",
+      "metadataRemoved": "Alle Metadaten wurden entfernt",
+      "automaticDownload": "Deine Download wird automatisch starten",
+      "detected": "Detektiert",
+      "undetected": "Nicht detektiert",
+      "unableToProcess": "Nicht verarbeiten",
+      "analyzing": "Metadaten entfernen...",
+      "scanTime": "Scanzeit",
+      "name": "Name",
+      "detection": "Detektion"
+    },
+    "error": {
+      "title": "Etwas ist schief gelaufen",
+      "description": "Es ist ein Fehler aufgetreten, während der Datei hochgeladen wurde, bitte versuche es später erneut"
+    }
+  },
+  "FeaturesSection": {
+    "hero": {
+      "title": "Kostenloser Metadaten-Entferner von Internxt",
+      "description": [
+        "Schütze deine persönlichen Informationen vor Datenlecks mit unserem Metadaten-Entferner. Unser kostenloses Tool entfernt versteckte Daten aus deinen Dateien, einschließlich Autoreninformationen, Standort-Tags und Geräteinformationen.",
+        "Nutze unseren kostenlosen Online-Metadaten-Entferner, um deine Dateien anonym und sicher zu halten, bevor du sie teilst. Hochgeladene Dateien werden sofort von Metadaten bereinigt und dann dauerhaft gelöscht. Wir speichern deine Daten niemals; sie bleiben privat."
+      ]
+    },
+    "howToUse": {
+      "title": "So verwendest du den Metadaten-Entferner von Internxt",
+      "steps": [
+        {
+          "step": 1,
+          "text": "Lade die gewünschte Datei von deinem Gerät hoch oder ziehe sie auf die Seite."
+        },
+        {
+          "step": 2,
+          "text": "Warte einige Sekunden, während wir die Metadaten entfernen."
+        },
+        {
+          "step": 3,
+          "text": "Der Download startet automatisch."
+        }
+      ]
+    },
+    "whatIs": {
+      "title": "Was ist ein Metadaten-Entferner?",
+      "description": [
+        "Metadaten sind Daten, die Informationen über andere Daten beschreiben. Wenn du eine Datei teilst oder speicherst, enthalten Metadaten Informationen über die Datei, wie Geräteinformationen, Standort, Autor, Bearbeitungshistorie und mehr.",
+        "Ein Metadaten-Entferner für Bilder oder Fotos ist ein Online-Privatsphäre-Tool, das versteckte Daten aus Dateien entfernt. Der Metadaten-Entferner von Internxt entfernt schnell die mit deinen Dateien verknüpften Informationen. Es ist eine einfache, kostenlose und sichere Möglichkeit, deine Online-Anonymität zu erhöhen."
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "Jede Datei erzählt eine Geschichte",
+    "description": "Bereinige die Metadaten deiner Dateien und schütze sie mit Internxt",
+    "cta": "Wähle deinen Plan"
+  },
+  "CtaSection2": {
+    "title": "Vermeide Unfälle und Datenlecks",
+    "description": "Schütze und speichere deine Informationen mit Internxt",
+    "cta": "Wähle deinen Plan"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was sind Metadaten und warum sollte ich sie entfernen?",
+        "answer": [
+          "Metadaten sind einfach Daten, die Informationen über andere Daten beschreiben. Wenn du Dateien teilst oder speicherst, enthalten diese Metadaten Informationen über die Dateien, Geräteinformationen, Standort, Autor, Bearbeitungshistorie und mehr.",
+          "Du solltest diese Informationen mit einem Metadaten-Entferner für Video, Foto oder Bild entfernen, um zu verhindern, dass externe Stellen auf personalisierte Informationen über dich zugreifen, die du lieber privat halten möchtest."
+        ]
+      },
+      {
+        "question": "Welche Dateitypen enthalten Metadaten?",
+        "answer": [
+          "Fast alle Dateien, die du online erstellst, enthalten Metadaten. Word, Excel, PDF-Dateien, Videos, Bilder usw. – alle enthalten in irgendeiner Form Metadaten.",
+          "Die Art der Metadaten, die diese Dateien enthalten, variiert je nach Inhalt. Wenn du eine Datei privat halten möchtest, entfernt ein Metadaten-Entferner diese Informationen schnell und sicher."
+        ]
+      },
+      {
+        "question": "Ist es sicher, vertrauliche Dateien hochzuladen?",
+        "answer": [
+          "Mit dem Metadaten-Entferner von Internxt, ja. Die Dateien werden verschlüsselt, sicher verarbeitet und alles wird dauerhaft gelöscht, sobald die Metadaten entfernt wurden. Wir können den Inhalt deiner Dateien nicht speichern oder einsehen, sondern nur die Metadaten entfernen."
+        ]
+      },
+      {
+        "question": "Verändert das Entfernen von Metadaten den Inhalt meiner Datei?",
+        "answer": [
+          "Nein, es werden nur die Metadaten entfernt. Wir fügen keine Wasserzeichen hinzu, komprimieren deine Dateien nicht und nehmen keine anderen unnötigen Änderungen an deinen Dateien vor. Nach dem Entfernen der Metadaten erhältst du genau die gleiche Version deiner Dateien ohne Modifikationen."
+        ]
+      },
+      {
+        "question": "Was passiert mit meinen Dateien, nachdem sie bereinigt wurden?",
+        "answer": [
+          "Sobald du die Daten hochgeladen und bereinigt hast, wird alles automatisch aus unserem System gelöscht, um deine Privatsphäre und die Einhaltung der DSGVO zu gewährleisten."
+        ]
+      },
+      {
+        "question": "Wie weiß ich, ob eine Datei Metadaten enthält?",
+        "answer": [
+          "Alle Dateien enthalten Metadaten. Unter Windows kannst du sie sehen, indem du mit der rechten Maustaste auf die Datei klickst und \"Eigenschaften\" auswählst.",
+          "Mac-Benutzer sollten ebenfalls mit der rechten Maustaste auf die Datei klicken, \"Informationen\" auswählen und dann zum Abschnitt \"Details\" gehen, um die Metadaten anzuzeigen.",
+          "Schließlich kannst du die Metadaten von PDF-Dateien anzeigen, indem du sie in Adobe Acrobat öffnest und zu \"Datei\" > \"Eigenschaften\" > \"Beschreibung\" gehst."
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Warum solltest du einen Online-Metadaten-Entferner verwenden?",
+    "description": "Deine Dokumente, Fotos, Videos oder PDF-Dateien können mehr Informationen enthalten, als du denkst. Wenn du diese Dateien online teilst, riskierst du, dass diese Metadaten in die falschen Hände geraten und Datenlecks verursachen. Unser Metadaten-Entferner entfernt diese Informationen kostenlos, wann immer du sie benötigst.",
+    "info": [
+      {
+        "title": "100% kostenlos und unbegrenzt",
+        "description": [
+          "Nutze diesen Metadaten-Entferner kostenlos, ohne dich für ein Konto registrieren zu müssen. Er funktioniert direkt in deinem Browser, sodass du Metadaten aus beliebig vielen Dateien ohne Einschränkungen entfernen kannst."
+        ]
+      },
+      {
+        "title": "DSGVO-konform",
+        "description": [
+          "Internxt ist ein DSGVO-konformes Unternehmen und wie unsere Cloud-Speicher-, VPN- und Antivirus-Produkte schützt unser Online-Metadaten-Entferner deine Daten nach höchsten Datenschutzstandards. Wenn wir deine Metadaten entfernen, werden alle übrigen Dateien und Informationen dauerhaft gelöscht, um die Einhaltung und den Schutz vor Datenlecks zu gewährleisten."
+        ]
+      },
+      {
+        "title": "Vollständige Sicherheit",
+        "description": [
+          "Deine Dateien werden sofort bereinigt, private Daten entfernt und das Originalformat beibehalten. Nach dem Hochladen wird alles verschlüsselt, um die Sicherheit und Privatsphäre deiner Dateien zu gewährleisten. Wir speichern keine Daten, sondern entfernen nur die Metadaten, um die Anonymität zu erhöhen."
+        ]
+      },
+      {
+        "title": "Unterstützt mehrere Dateitypen",
+        "description": [
+          "Wir unterstützen mehrere Dateiformate, sodass du dieses Tool als Metadaten-Entferner für Bilder, Fotos, Videos oder PDFs verwenden kannst, um die Privatsphäre jeder Datei zu gewährleisten, die du online teilen möchtest. Es ist eine schnelle und zuverlässige Möglichkeit, deine Dateien zu bereinigen und zu verhindern, dass deine Daten missbraucht oder verfolgt werden."
+        ]
+      },
+      {
+        "title": "Digitale Spuren verhindern",
+        "description": [
+          "Deine Metadaten können verwendet werden, um einen digitalen Fingerabdruck deiner Online-Aktivitäten zu erstellen, der wiederum dazu verwendet werden kann, herauszufinden, woher eine Datei stammt, wer sie erstellt hat und mehr. Durch das Entfernen dieser Metadaten aus deinen Dateien wird es Angreifern erschwert, deine digitale Spur zu verfolgen."
+        ]
+      },
+      {
+        "title": "Keine Dateiveränderung",
+        "description": [
+          "Alles, was wir tun, ist, die Metadaten aus deinen Dateien zu entfernen, um die Privatsphäre zu erhöhen; Fotos, Videos oder Inhalte bleiben unverändert. Wir komprimieren deine Dateien nicht, hinterlassen keine Wasserzeichen und nehmen keine anderen Änderungen vor, außer denen, die entfernt werden müssen, sodass du eine private und unveränderte Datei erhältst."
+        ]
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "Wann solltest du einen Metadaten-Entferner verwenden?",
+    "description": "Deine Online-Privatsphäre zu wahren, ist ein wesentlicher Aspekt unseres Lebens im Internet geworden. Wenn du die Metadaten deiner Dokumente, Fotos oder Videos entfernst, kannst du sowohl im Privat- als auch im Geschäftsleben Vertraulichkeit wahren, Datenlecks vermeiden und mehr Privatsphäre und Anonymität genießen.",
+    "info": [
+      {
+        "title": "Schütze deine Daten in Fotos oder Videos",
+        "description": [
+          "Fotos, die mit deinem Telefon oder deiner Kamera aufgenommen wurden, können versteckte Standortdaten wie GPS-Koordinaten, Ortsnamen oder sogar die Richtung, in die deine Kamera zeigte, enthalten. Ein Metadaten-Entferner für Fotos entfernt Standortdaten, damit du die Privatsphäre deines Zuhauses, Arbeitsplatzes oder aktuellen Standorts wahren und Cyber-Bedrohungen wie Doxxing verhindern kannst."
+        ]
+      },
+      {
+        "title": "Datenlecks vermeiden",
+        "description": [
+          "Dein vollständiger Name, deine E-Mail-Adresse, Geräte- und Softwaredetails können in deinen Bildern, Dokumenten oder Videos verbleiben. Ein Metadaten-Entferner für Bilder oder Videos schützt dich, selbst wenn du diese Dateien an die falsche Person weitergibst, sodass keine sensiblen oder privaten Informationen geteilt werden."
+        ]
+      },
+      {
+        "title": "Anonyme Übermittlungen",
+        "description": [
+          "Es gibt viele Anwendungsfälle für einen Online-Metadaten-Entferner über Fotos und Videos hinaus. Journalisten oder Whistleblower, die maximale Privatsphäre benötigen, nutzen dieses Tool, um Daten zur Dokumentenautorschaft, Bearbeitungshistorie, Miniaturansichten und internen Dateipfaden zu anonymisieren."
+        ]
+      },
+      {
+        "title": "Dateien unter Mitarbeitern teilen",
+        "description": [
+          "Unternehmen sind ständig Ziel von Datenlecks, die durch Cyberangriffe oder menschliche Fehler entstehen können. Beim Teilen von Dokumenten innerhalb von Abteilungen könnten Metadaten Namen von Mitarbeitern, interne Dateistrukturen oder Kommentare offenlegen. In diesem Fall sorgt ein Metadaten-Entferner für die Integrität und Compliance eines Unternehmens."
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Teste die kostenlosen Online-Sicherheitstools von Internxt:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Passwortstärke-Prüfer",
+        "description": "Jetzt prüfen"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte-Einheiten-Umrechner",
+        "description": "Jetzt umrechnen"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Kostenlose temporäre E-Mail",
+        "width": 95,
+        "description": "Jetzt mailen"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Kostenloser Passwortgenerator",
+        "width": 124,
+        "description": "Jetzt generieren"
+      }
+    ]
+  }
+}

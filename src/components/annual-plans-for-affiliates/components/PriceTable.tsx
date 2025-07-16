@@ -67,7 +67,6 @@ const PriceTable: React.FC<PriceTableProps> = ({
             <CardSkeleton />
             <CardSkeleton />
             <CardSkeleton />
-            <CardSkeleton />
           </div>
         </Transition>
 
@@ -97,7 +96,7 @@ const PriceTable: React.FC<PriceTableProps> = ({
                       coupon={lifetimeCoupons?.[product.storage] ?? undefined}
                       priceBefore={discount ? product.price : undefined}
                       percentOff={discount ? 100 - discount : 0}
-                      isCloudwards={isStartPage}
+                      isCloudwards={true}
                     />
                   );
                 })

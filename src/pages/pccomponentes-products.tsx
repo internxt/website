@@ -116,6 +116,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                   isIframe={true}
                   isPcComponentes
                   index={1}
+                  showOffer={false}
                 />
                 <PriceCard
                   planType="individual"
@@ -133,6 +134,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                   isIframe={true}
                   isPcComponentes
                   index={2}
+                  showOffer={false}
                 />
                 <PriceCard
                   planType="individual"
@@ -150,6 +152,7 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
                   isIframe={true}
                   isPcComponentes
                   index={3}
+                  showOffer={false}
                 />
               </>
             )}

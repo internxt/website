@@ -97,6 +97,10 @@
     "line1": "Convert, store, and secure.",
     "blueText": "Effortless file conversion with Internxt"
   },
+  "SignUpFileCompressorBanner": {
+    "line1": "Save storage space with Internxt",
+    "blueText": "Compress your files for free to optimize your cloud"
+  },
   "SignUpWebDAVBanner": {
     "line1": "Use the Internxt CLI for",
     "blueText": "advanced file management with Internxt"
@@ -106,6 +110,14 @@
     "blueText": "Enjoy a more private online experience with Internxt"
   },
   "SignUpVirusScannerBanner": { "line1": "Keep those now clean files safe,", "blueText": "join Internxt for free" },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Strip your files of revealing metadata.",
+    "blueText": "Clean your digital footprint with Internxt"
+  },
+  "SignUpAiDetector": {
+    "line1": "Detect AI content, ensure authenticity, and",
+    "blueText": "publish in confidence with Internxt"
+  },
   "SignUpByteConverterBanner": { "line1": "Get bytes and bytes of secure cloud storage", "blueText": "with Internxt" },
   "SignUpTempMailBanner": { "line1": "Keep your email clean and your files safe", "blueText": "with Internxt" },
   "SignUpSuccessStoriesBanner": {
@@ -146,8 +158,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": " 80% off our new plans: Drive, VPN, & Antivirus!",
-      "normalText": "World Cloud Security Day",
+      "boldText": "80% off all plans!",
+      "normalText": "Hot days, hotter savings",
       "cta": " Claim deal"
     }
   },

@@ -1,0 +1,75 @@
+{
+  "HeroSection": {
+    "title": "Almacenamiento en la nube",
+    "subtitle": "que protege tu derecho a la privacidad",
+    "description": "El almacenamiento en la nube Web3 y de código abierto de Internxt protege tu privacidad con cifrado post-cuántico sin conocimiento.",
+    "info": "¡Consigue tu <strong>descuento exclusivo del {{discount}}%</strong> en todos los planes anuales y de por vida.",
+    "cta": "Obtén {{discount}}% de descuento"
+  },
+  "MostSecureSection": {
+    "description": "Internxt Drive es una solución de almacenamiento en la nube de código abierto y cifrado de extremo a extremo para guardar, hacer copias de seguridad y compartir tus archivos con total privacidad. Internxt Drive ofrece cifrado postcuántico y control total sobre tus datos.",
+    "title": "Protege tus fotos, documentos y toda tu información",
+    "cta": "Obtener oferta"
+  },
+  "ScrollableSection": {
+    "title": "Almacenamiento más seguro",
+    "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo compacto de profesionales completamente dedicados a protegerte en línea. Todo lo que hacemos y cada decisión que tomamos está centrada en proteger tus datos para que no sean explotados.",
+    "elements": [
+      {
+        "title": "Privacidad sin igual",
+        "description": "Proteger tu privacidad es nuestra máxima prioridad; nunca almacenamos contraseñas ni datos personales. Tus archivos están cifrados tanto en tránsito como en reposo, dándote control total sobre tu información."
+      },
+      {
+        "title": "Seguridad de nueva generación",
+        "description": "Internxt es el único almacenamiento en la nube que cifra automáticamente tus archivos usando criptografía de extremo a extremo y post-cuántica, lo que significa que solo tú puedes acceder a tus datos."
+      },
+      {
+        "title": "Código abierto y transparente",
+        "description": "Nuestro código fuente está publicado en GitHub y puede ser revisado, auditado y verificado por cualquiera. No tenemos nada que ocultar, salvo tus datos."
+      },
+      {
+        "title": "Verificación independiente",
+        "description": "Cumplimos estrictamente con el RGPD y mantenemos un entorno 100% seguro. Para garantizar nuestras afirmaciones, Internxt ha sido auditado de forma independiente por Securitum, líder europeo en pruebas de penetración."
+      }
+    ]
+  },
+  "PaymentSection": {
+    "planTitles": {
+      "individuals": "Planes de almacenamiento anuales",
+      "homePage": "Elige el plan adecuado para ti",
+      "lifetime": "Planes de por vida",
+      "business": "Planes empresariales",
+      "lifetimeCampaign": {
+        "blueText": "Consigue 50% DE DESCUENTO",
+        "normalText": "en todos nuestros planes de por vida exclusivos"
+      }
+    },
+    "header": "Privacidad total con {{discount}}% de descuento",
+    "lifetimeDescription": "Con un único pago, puedes disfrutar de privacidad para toda la vida. Tendrás acceso para siempre a todas las funciones centradas en la privacidad de Internxt y a su almacenamiento cifrado en la nube.",
+    "planDescription": "Todos los planes de Internxt incluyen acceso completo a nuestras funciones enfocadas en la privacidad. Suscríbete a Internxt y garantiza un año de almacenamiento cifrado en la nube.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "individual": "Individual",
+      "lifetime": "Lifetime",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Gratis",
+      "description": "Obtén hasta 1 GB de almacenamiento cifrado en la nube y disfruta de nuestro ecosistema privado: VPN (FR), CLI/WebDav/Rclone y mucho más.",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "endToEnd": "Cifrado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima",
+      "premiumSupport": "Atención al cliente premium",
+      "guarantee": "Garantía de devolución de 30 días"
+    }
+  },
+  "CtaSection1": {
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "description": "Obtén tu descuento exclusivo del 82% para acceder durante todo un año al almacenamiento en la nube seguro, privado y cifrado de Internxt.",
+    "cta": "Descubre tu plan"
+  }
+}
