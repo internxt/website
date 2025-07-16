@@ -7,8 +7,12 @@ import ManageGoogleDataSection from '@/components/what-does-google-know-about-me
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
 import WhatGoogleKnowsSection from '@/components/what-does-google-know-about-me/WhatGoogleKnowsSection';
 import { GetServerSidePropsContext } from 'next';
+import RevealY from '@/components/components/RevealY';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const URL_REDIRECT = 'https://drive.internxt.com/new';
+const URL_REDIRECT = 'https://internxt.com/pricing';
 
 const WhatDoesGoogleKnowAboutMe = ({
   lang,
@@ -32,17 +36,31 @@ const WhatDoesGoogleKnowAboutMe = ({
 
       <HeroSection textContent={langJson.HeroSection} bannerText={bannerLang.GoogleLPBanner} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection} url={URL_REDIRECT} />
+      <RevealY className="content flex h-full w-full flex-col items-center justify-center px-5">
+        <Link href={URL_REDIRECT} passHref target="_blank">
+          <Image
+            src={getImage('/banners/PlansBanner.webp')}
+            alt="Internxt plans banner"
+            draggable={false}
+            loading="lazy"
+            width={1200}
+            height={420}
+            quality={100}
+            className="cursor-pointer"
+          />
+        </Link>
+      </RevealY>
 
       <WhatGoogleKnowsSection textContent={langJson.WhatGoogleKnowsSection} />
 
-      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} />
+      <CtaSection textContent={langJson.CtaSection1} url={URL_REDIRECT} target="_blank" />
 
       <ManageGoogleDataSection textContent={langJson.ManageGoogleDataSection} />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} />
+      <CtaSection textContent={langJson.CtaSection2} url={URL_REDIRECT} target="_blank" />
+
       <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
