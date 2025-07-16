@@ -31,10 +31,6 @@ const CtaSection = dynamic(
   () => import('@/components/affiliates/affiliates-partners-template/CtaSection').then((mod) => mod.CtaSection),
   { ssr: false },
 );
-const WhatWeDoSectionForSpecialOffer = dynamic(
-  () => import('@/components/specialoffer/WhatWeDoSection').then((mod) => mod.WhatWeDoSectionForSpecialOffer),
-  { ssr: false },
-);
 
 export type CardsType = 'all' | 'one';
 
@@ -80,10 +76,6 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
       setCardsType(getTypeFromPathname(pathname) ?? 'all');
     }
   }, [pathname, push, selectedPathName]);
-
-  const handleOnButtonClick = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const redirectToPricingTable = () => {
     window.location.href = '#priceTable';
