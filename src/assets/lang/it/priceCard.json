@@ -173,43 +173,44 @@
     },
     "individuals": {
       "1TB": [
-        "1TB di archiviazione crittografata a conoscenza zero",
+        "1TB di spazio di archiviazione",
         "Crittografia post-quantistica",
-        "VPN ultraveloce illimitata (FR)",
+        "VPN ad alta velocità illimitata (FR)",
         "Antivirus",
-        "Esegui il backup dei tuoi file",
-        "Condivisione di file protetta da password",
-        "Conformità GDPR",
+        "Backup",
+        "Condivisione file protetta da password",
+        "Conforme al RGPD",
         "Autenticazione a due fattori (2FA)",
-        "Supporto CLI, WebDav e Rclone"
+        "CLI, WebDav & Rclone",
+        "Mina e guadagna"
       ],
       "3TB": [
-        "3TB di archiviazione crittografata a conoscenza zero",
+        "3TB di spazio di archiviazione",
         "Crittografia post-quantistica",
-        "VPN ultraveloce illimitata (FR, DE, PL)",
+        "VPN ad alta velocità illimitata (FR, DE, PL)",
         "Antivirus",
-        "Esegui il backup dei tuoi file",
-        "Condivisione di file protetta da password",
-        " Invita, condividi e collabora",
-        "Conformità GDPR",
+        "Backup",
+        "Condivisione file protetta da password",
+        "Invita, condividi e collabora",
+        "Conforme al RGPD",
         "Autenticazione a due fattori (2FA)",
-        "Supporto CLI, WebDav e Rclone",
-        "Pulizia del dispositivo",
-        "Monitoraggio del dark web"
+        "CLI, WebDav & Rclone",
+        "Mina e guadagna",
+        "Pulizia del dispositivo"
       ],
       "5TB": [
-        "5TB di archiviazione crittografata a conoscenza zero",
+        "5TB di spazio di archiviazione",
         "Crittografia post-quantistica",
-        "VPN ultraveloce illimitata (FR, DE, PL, CA, UK)",
+        "VPN ad alta velocità illimitata (FR, DE, PL, CA, UK)",
         "Antivirus",
-        "Esegui il backup dei tuoi file",
-        "Condivisione di file protetta da password",
-        " Invita, condividi e collabora",
-        "Conformità GDPR",
+        "Backup",
+        "Condivisione file protetta da password",
+        "Invita, condividi e collabora",
+        "Conforme al RGPD",
         "Autenticazione a due fattori (2FA)",
-        "Supporto CLI, WebDav e Rclone",
+        "CLI, WebDav & Rclone",
+        "Mina e guadagna",
         "Pulizia del dispositivo",
-        "Monitoraggio del dark web",
         "Meet",
         "Mail"
       ],
@@ -228,8 +229,7 @@
         "Autenticazione a due fattori (2FA)",
         "Supporto CLI, WebDav e Rclone",
         "Gestisci fatturazione e pagamenti account",
-        "Pulitore dispositivo",
-        "Monitoraggio Dark Web"
+        "Pulitore dispositivo"
       ],
       "2TB": [
         "2TB di spazio per utente",
@@ -244,7 +244,6 @@
         "Supporto CLI, WebDav e Rclone",
         "Gestisci fatturazione e pagamenti account",
         "Pulitore dispositivo",
-        "Monitoraggio Dark Web",
         "Meet",
         "Mail"
       ]
