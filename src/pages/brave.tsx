@@ -11,7 +11,9 @@ import { BraveText } from '@/assets/types/brave-page';
 import CtaSection from '@/components/shared/CtaSection';
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
-import HeroSection from '@/components/affiliates/brave/HeroSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import { Percent } from '@phosphor-icons/react';
+import Button from '@/components/shared/Button';
 
 interface BravePageProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -52,11 +54,41 @@ export default function BravePage({
     );
   };
 
+  function redirectToPricingTable() {
+    window.location.href = '#priceTable';
+  }
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} />
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <h1 className="block text-4xl font-bold text-white lg:hidden xl:text-5xl">
+              {textContent.HeroSection.title}{' '}
+              <span className="text-2xl font-semibold text-primary xl:text-3xl">
+                {textContent.HeroSection.subtitle}
+              </span>
+            </h1>
+
+            <div className="hidden lg:flex lg:flex-col lg:space-y-4">
+              <h1 className="text-4xl font-bold text-white xl:text-5xl">{textContent.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{textContent.HeroSection.subtitle}</h2>
+            </div>
+
+            <div className="flex max-w-[400px] flex-row items-center space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
+              <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
+              <p
+                className="text-md font-regular text-white"
+                dangerouslySetInnerHTML={{ __html: textContent.HeroSection.info }}
+              />
+            </div>
+
+            <Button onClick={redirectToPricingTable} text={textContent.HeroSection.cta} className="z-10" />
+          </>
+        }
+      />
 
       <MostSecureSection textContent={textContent.MostSecureSection} />
 

@@ -173,43 +173,44 @@
     },
     "individuals": {
       "1TB": [
-        "1TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR)",
+        "1TB Speicherplatz",
+        "Postquanten-Kryptographie",
+        "Unbegrenztes Hochgeschwindigkeits-VPN (FR)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
-        "DSGVO-Konformität",
+        "Backups",
+        "Passwortgeschütztes Teilen von Dateien",
+        "DSGVO-konform",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung"
+        "CLI, WebDav & Rclone",
+        "Minen und Verdienen"
       ],
       "3TB": [
-        "3TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL)",
+        "3TB Speicherplatz",
+        "Postquanten-Kryptographie",
+        "Unbegrenztes Hochgeschwindigkeits-VPN (FR, DE, PL)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Backups",
+        "Passwortgeschütztes Teilen von Dateien",
         "Einladen, teilen und zusammenarbeiten",
-        "DSGVO-Konformität",
+        "DSGVO-konform",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung",
-        "Gerätebereinigung",
-        "Dark-Web-Überwachung"
+        "CLI, WebDav & Rclone",
+        "Minen und Verdienen",
+        "Gerätebereinigung"
       ],
       "5TB": [
-        "5TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL, CA, UK)",
+        "5TB Speicherplatz",
+        "Postquanten-Kryptographie",
+        "Unbegrenztes Hochgeschwindigkeits-VPN (FR, DE, PL, CA, UK)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Backups",
+        "Passwortgeschütztes Teilen von Dateien",
         "Einladen, teilen und zusammenarbeiten",
-        "DSGVO-Konformität",
+        "DSGVO-konform",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung",
+        "CLI, WebDav & Rclone",
+        "Minen und Verdienen",
         "Gerätebereinigung",
-        "Dark-Web-Überwachung",
         "Meet",
         "Mail"
       ],
@@ -228,8 +229,7 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Verwaltung von Kontorechnungen & Zahlungen",
-        "Gerätereiniger",
-        "Dark Web Monitor"
+        "Gerätereiniger"
       ],
       "2TB": [
         "2TB Speicher/Nutzer",
@@ -244,7 +244,6 @@
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Verwaltung von Kontorechnungen & Zahlungen",
         "Gerätereiniger",
-        "Dark Web Monitor",
         "Meet",
         "Mail"
       ]

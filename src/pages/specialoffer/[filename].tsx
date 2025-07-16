@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
-import HeroSection from '@/components/affiliates/brave/HeroSection';
 import CtaSection from '@/components/shared/CtaSection';
 import usePricing from '@/hooks/usePricing';
 import { Interval, stripeService } from '@/services/stripe.service';
@@ -13,6 +12,9 @@ import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
 import { SpecialOfferText } from '@/assets/types/specialOffer';
 import { PromoCodeName } from '@/lib/types';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import { Percent } from '@phosphor-icons/react';
+import Button from '@/components/shared/Button';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -80,16 +82,33 @@ const SpecialOfferPage = ({
 
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
 
+  function redirectToPricingTable() {
+    window.location.href = '#priceTable';
+  }
+
   return (
     <Layout title={metatags[0]?.title} description={metatags[0]?.description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed isLinksHidden />
 
-      <HeroSection
-        textContent={{
-          ...langJson.HeroSection,
-          info: parseText(langJson.HeroSection.info),
-          cta: parseText(langJson.HeroSection.cta),
-        }}
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <div className="flex flex-col space-y-4 pr-40">
+              <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
+            </div>
+
+            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
+              <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
+              <p
+                className="text-md font-regular text-white"
+                dangerouslySetInnerHTML={{ __html: parseText(langJson.HeroSection.info) }}
+              />
+            </div>
+
+            <Button onClick={redirectToPricingTable} text={parseText(langJson.HeroSection.cta)} className="z-10" />
+          </>
+        }
       />
 
       <MostSecureSection textContent={langJson.MostSecureSection} />

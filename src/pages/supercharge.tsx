@@ -39,7 +39,7 @@ const PartnerDiscount = ({
     currencyValue,
     coupon: individualCoupon,
   } = usePricing({
-    couponCode: PromoCodeName.Special85,
+    couponCode: PromoCodeName.Upgrage,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -57,7 +57,7 @@ const PartnerDiscount = ({
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
   }
-  const percentOff = decimalDiscount === 13 ? '87' : '85';
+  const percentOff = '90';
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>

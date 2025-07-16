@@ -1,16 +1,16 @@
 {
   "HeroSection": {
-    "header": "Descuento Anual de Internxt",
+    "header": " Oferta especial",
     "title": {
-      "normalText": "Obtén el almacenamiento en la nube más seguro ",
+      "normalText": "El almacenamiento en la nube más seguro ",
       "blueText": "por menos"
     },
     "description": {
-      "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén ",
+      "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén  ",
       "blue": "85% DE DESCUENTO ",
-      "normal1": "en cualquier plan lifetime. Almacena y comparte tus archivos de forma segura y con total privacidad."
+      "normal1": " en cualquier plan. Almacena y comparte tus archivos de forma segura y con total privacidad."
     },
-    "cta": "Elige un plan"
+    "cta": "Elegir plan"
   },
   "PaymentSection": {
     "planTitles": {

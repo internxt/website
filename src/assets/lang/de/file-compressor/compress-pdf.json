@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "description": "Mit Internxt kannst du mehrere PDF-Dateien kostenlos online komprimieren. Schütze und teile deine PDFs, ohne dir Gedanken über Größenbeschränkungen machen zu müssen.",
-    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
   },
   "FeaturesSection": {
     "howToConvert": {
@@ -18,7 +18,7 @@
         },
         {
           "step": "Schritt 3:",
-          "description": "Lade deine Datei herunter."
+          "description": "Lade deine Datei herunter"
         }
       ],
       "outro": "Mit diesem Tool kannst du jederzeit mehrere PDFs kostenlos komprimieren. Alle Dateien sind durch verschlüsselte Uploads geschützt, um deine Dokumente privat zu halten."

@@ -32,9 +32,31 @@ export const HeroSection = ({ textContent }) => {
                     alt={`${card.title} icon`}
                     src={getImage(`/icons/file-compressor/${card.pathname}.svg`)}
                   />
-                  <p className="text-2xl font-semibold text-gray-100">{card.title}</p>
+                  <>
+                    <p className="block text-2xl font-semibold text-gray-100 lg:block">
+                      {card.title.split('\n').map((line, i) => (
+                        <span key={i}>
+                          {line}
+                          <br />
+                        </span>
+                      ))}
+                    </p>
+                    <p className="hidden text-2xl font-semibold text-gray-100 lg:hidden">
+                      {card.title.replace('\n', ' ')}
+                    </p>
+                  </>
                 </div>
-                <p className="text-regular text-gray-100">{card.description}</p>
+                <>
+                  <p className="text-regular block text-gray-100 lg:block">
+                    {card.description.split('\n').map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        <br />
+                      </span>
+                    ))}
+                  </p>
+                  <p className="text-regular hidden text-gray-100 lg:hidden">{card.description.replace('\n', ' ')}</p>
+                </>
               </button>
             ))}
           </div>

@@ -179,7 +179,8 @@
         "Password-protected file sharing",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support"
+        "CLI, WebDav & Rclone support",
+        "Mine & Earn"
       ],
       "3TB": [
         "3TB zero-knowledge encrypted storage",
@@ -192,8 +193,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
-        "Device Cleaner ",
-        "Dark Web Monitor"
+        "Mine & Earn",
+        "Device Cleaner "
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -206,8 +207,8 @@
         "GDPR compliance",
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
+        "Mine & Earn",
         "Device Cleaner ",
-        "Dark Web Monitor",
         "Meet",
         "Mail"
       ]
@@ -225,8 +226,7 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Device Cleaner ",
-        "Dark Web Monitor"
+        "Device Cleaner "
       ],
       "2TB": [
         "2TB storage/user",
@@ -241,7 +241,6 @@
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
         "Device Cleaner ",
-        "Dark Web Monitor",
         "Meet ",
         "Mail "
       ]
