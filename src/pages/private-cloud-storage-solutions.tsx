@@ -1,7 +1,4 @@
 import Script from 'next/script';
-
-import HeroSection from '@/components/private-cloud-storage-solutions/HeroSection';
-
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
@@ -9,7 +6,6 @@ import cookies from '@/lib/cookies';
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { GetServerSidePropsContext } from 'next';
-
 import { PrivateCloudStorageSolutionsText } from '@/assets/types/private-cloud-storage-solutions';
 import { BannersText } from '@/assets/types/components/banners';
 import FeaturesSection from '@/components/private-cloud-storage-solutions/FeaturesSection';
@@ -17,6 +13,9 @@ import WhatWeDo from '@/components/shared/WhatWeDo';
 import CtaSection from '@/components/shared/CtaSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import FeatureSection, { FeatureCard } from '@/components/shared/FeatureSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import Link from 'next/link';
+import { ShieldCheck } from '@phosphor-icons/react';
 
 interface PrivacyProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -35,7 +34,6 @@ const PrivateCloudStorageSolutions = ({
   lang,
 }: PrivacyProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
-  const locale = lang as string;
   const CTA_URL = `/pricing`;
   const products = [
     {
@@ -97,7 +95,37 @@ const PrivateCloudStorageSolutions = ({
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <HeroSection textContent={textContent.HeroSection} lang={locale} />
+        <AnimatedHeroSection
+          textComponent={
+            <>
+              <div className="flex flex-col text-3xl font-medium lg:text-5xl">
+                <h1 className="font-medium text-white">
+                  {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
+                  <span className="text-primary">{textContent.HeroSection.TitleAndOnePlan.title.blueText}</span>
+                  {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
+                </h1>
+                <p className="pt-4 text-xl text-white">
+                  <span className=" text-white">{textContent.HeroSection.TitleAndOnePlan.description}</span>
+                </p>
+
+                <div className="flex flex-col items-center pt-10 lg:flex-row">
+                  <Link
+                    href={'/pricing'}
+                    className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                  >
+                    {textContent.HeroSection.TitleAndOnePlan.claimDeal}
+                  </Link>
+                </div>
+                <div className="flex flex-row items-center justify-center space-x-3 pt-10  lg:justify-start">
+                  <ShieldCheck size={24} color="#32C356" weight="fill" />
+                  <p className="whitespace-nowrap  text-white  lg:text-lg">
+                    {textContent.HeroSection.TitleAndOnePlan.guarantee}
+                  </p>
+                </div>
+              </div>
+            </>
+          }
+        />
 
         <FeatureSection
           title={textContent.FeatureSection.title}

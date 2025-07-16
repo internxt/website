@@ -12,7 +12,10 @@ import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
 import { PromoCodeName } from '@/lib/types';
 import FeaturesSection from '@/components/comeback/FeatureSection';
-import HeroSection from '@/components/comeback/HeroSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import { Alarm, Check } from '@phosphor-icons/react';
+import Countdown from '@/components/components/Countdown';
+import Link from 'next/link';
 
 interface ResurrectionCampaignProps {
   lang: GetServerSidePropsContext['locale'];
@@ -69,7 +72,36 @@ const ResurrectionCampaign = ({
     >
       <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection lang={locale} textContent={textContent.HeroSection} />
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <div className="flex w-full flex-row items-center justify-center rounded-lg lg:justify-start">
+              <Alarm className="mr-6 h-6 w-6 text-white" />
+              <Countdown textFont="font-medium" textHeight="text-2xl text-white" />
+            </div>
+            <div className="flex flex-col font-medium">
+              <h1 className="text-5xl  text-white">{textContent.HeroSection.title}</h1>
+              <p className="font-regular pt-4 text-2xl ">
+                <span className="text-white">{textContent.HeroSection.subtitle}</span>
+              </p>
+            </div>
+            <div className="mx-auto flex flex-col lg:mx-0">
+              {textContent.HeroSection.features.map((feat) => (
+                <div key={feat} className="flex flex-row gap-2">
+                  <Check className="pt-2 text-green-1 lg:pt-0" weight="bold" size={24} />
+                  <p className="text-left text-lg font-semibold text-white ">{feat}</p>
+                </div>
+              ))}
+            </div>
+            <Link
+              href={'#priceTable'}
+              className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+            >
+              {textContent.HeroSection.cta1}
+            </Link>
+          </>
+        }
+      />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
