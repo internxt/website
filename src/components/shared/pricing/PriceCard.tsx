@@ -263,7 +263,7 @@ export const PriceCard = ({
                   <span className="text-gray-80">
                     {feature}
                     {index > 10 ? (
-                      <span className="bg-orange/10 text-orange ml-2 rounded-md px-1 text-center">
+                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
                         {contentText.commingSoon}
                       </span>
                     ) : null}

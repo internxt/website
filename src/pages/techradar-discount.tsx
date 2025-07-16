@@ -1,7 +1,6 @@
 import cookies from '@/lib/cookies';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import HeroSection from '@/components/techradar-discount/HeroSection';
 import Footer from '@/components/layout/footers/Footer';
 import { GetServerSidePropsContext } from 'next';
 import ScrollableSection from '@/components/affiliates/brave/ScrollableSection';
@@ -11,6 +10,10 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
+import Link from 'next/link';
 
 const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'techradar-discount');
@@ -44,7 +47,30 @@ const PartnerDiscount = ({ lang, metatagsDescriptions, navbarLang, langJson, foo
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <div className="px-18 flex flex-row items-center space-x-3.5  pl-8 lg:pl-0">
+              <Image
+                src={getImage('/icons/techradarXInternxt.svg')}
+                width={300}
+                height={16}
+                alt="techradar x internxt logo"
+              />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold text-white xl:text-6xl">{langJson.HeroSection.title1.line1}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-4xl">{langJson.HeroSection.title1.line2}</h2>
+            </div>
+            <Link
+              href={'#priceTable'}
+              className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+            >
+              {langJson.HeroSection.cta}
+            </Link>
+          </>
+        }
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}

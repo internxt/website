@@ -144,6 +144,7 @@ export enum PromoCodeName {
   ValenciaCF = 'VALENCIACF',
   TokinPrivacy = 'TOKINPRIVACY',
   Dropbox87 = 'DROPBOX87',
+  Upgrage = 'UPGRADE',
 }
 
 export interface PromoCodeProps {
