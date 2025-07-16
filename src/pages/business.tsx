@@ -62,7 +62,7 @@ export const BusinessPage = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:pb-20 lg:pr-10 lg:text-start">
+          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start  lg:pr-10 lg:text-start">
             <h1 className=" text-3xl font-semibold lg:text-5xl">{textContent.HeroSection.title}</h1>
             <div className="flex flex-col gap-4">
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
@@ -81,7 +81,7 @@ export const BusinessPage = ({
           src: getImage(`/images/business/${imagePath}.webp`),
           alt: 'Internxt B2B Business Solution',
           width: 671,
-          height: 563,
+          height: 550,
         }}
       />
 
