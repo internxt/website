@@ -15,7 +15,6 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { GetServerSidePropsContext } from 'next';
-import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
@@ -63,8 +62,8 @@ export const BusinessPage = ({
 
       <HeroSection
         TextComponent={
-          <div className="llg:pr-10 flex w-full flex-col items-center justify-center gap-8  text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start lg:text-start">
-            <Header>{textContent.HeroSection.title}</Header>
+          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start  lg:pr-10 lg:text-start">
+            <h1 className=" text-3xl font-semibold lg:text-5xl">{textContent.HeroSection.title}</h1>
             <div className="flex flex-col gap-4">
               <p className="text-xl">{textContent.HeroSection.description[0]}</p>
             </div>
@@ -82,7 +81,7 @@ export const BusinessPage = ({
           src: getImage(`/images/business/${imagePath}.webp`),
           alt: 'Internxt B2B Business Solution',
           width: 671,
-          height: 563,
+          height: 550,
         }}
       />
 

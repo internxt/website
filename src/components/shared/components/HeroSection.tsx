@@ -29,6 +29,7 @@ export const HeroSection = ({
         <div className={`flex h-[1100px] w-full flex-col  items-center lg:h-[800px] lg:flex-row lg:justify-between`}>
           <div className="flex max-w-[800px] flex-col pt-4">{TextComponent}</div>
           <div className=" flex flex-col items-center pt-6 lg:pl-20">
+
             {ImageComponent}
             {imageProperties && (
               <Image

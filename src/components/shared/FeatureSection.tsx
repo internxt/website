@@ -2,11 +2,13 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import RevealX from '../components/RevealX';
 import Link from 'next/link';
+import { IconProps } from '@phosphor-icons/react'; // Import IconProps type
 
 export interface FeatureCard {
   title: string;
   description: string | string[];
   image: string;
+  icon?: React.ElementType<IconProps> | null; // Accepts a Phosphor Icon component
 }
 
 export interface FeatureSectionProps {
@@ -42,6 +44,7 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
         <div>
           {cards.map((card, index) => {
             const isEven = index % 2 === 0;
+            const IconComponent = card.icon; // Store the icon component
 
             return (
               <div
@@ -69,6 +72,19 @@ const FeatureSection = ({ title, subtitle, description, ctaText, ctaLink, cards 
                     isEven ? 'md:pl-10' : 'md:pr-10'
                   }`}
                 >
+                  {/* Icon Section (Optional) */}
+                  {IconComponent && (
+                    // <IconComponent className="text-primary" size={48} weight="duotone" />
+                    <div
+                      className="flex h-20 w-20 items-center justify-center rounded-xl shadow-md"
+                      style={{
+                        background: 'linear-gradient(135deg, #A2C6FF 0%, #086AFF 100%)',
+                      }}
+                    >
+                      <IconComponent className="text-white" size={48} weight="duotone" />
+                    </div>
+                  )}
+
                   <p className="text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{card.title}</p>
                   <p className="font-regular text-base sm:text-lg md:text-xl">
                     {Array.isArray(card.description)

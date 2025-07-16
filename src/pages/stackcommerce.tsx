@@ -6,12 +6,12 @@ import cookies from '@/lib/cookies';
 import Navbar from '@/components/layout/navbars/Navbar';
 
 import SignUp from '@/components/auth/SignUp';
-import { X } from '@phosphor-icons/react';
+import { Percent, X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
-import HeroSection from '@/components/affiliates/brave/HeroSection';
-import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import Button from '@/components/shared/Button';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -44,7 +44,26 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection textContent={langJson.HeroSection} onButtonClicked={onButtonClicked} />
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <div className="mr-20 flex flex-col ">
+              <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
+            </div>
+
+            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
+              <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
+              <p
+                className="text-md font-regular text-white"
+                dangerouslySetInnerHTML={{ __html: langJson.HeroSection.info }}
+              ></p>
+            </div>
+
+            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" />
+          </>
+        }
+      />
 
       <MostSecureSection textContent={langJson.MostSecureSection} onRedirectButtonClicked={onButtonClicked} />
 
