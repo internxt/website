@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Header from '@/components/shared/Header';
 import CheckboxItem from '@/components/shared/CheckboxItem';
 import axios from 'axios';
 import { notificationService } from '../Snackbar';
@@ -28,12 +27,11 @@ const HeroSection = ({ textContent }) => {
     <section className="overflow-hidden px-5 pt-14">
       <div className="flex flex-col items-center justify-center space-y-12 py-20">
         <div className="flex w-full flex-col items-center space-y-5 text-center">
-          <Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
             {textContent.title.text} <span className="text-primary">{textContent.title.blueText}</span>
-          </Header>
+          </h1>
           <p className="max-w-[700px] text-xl text-gray-80">{textContent.description}</p>
         </div>
-        {/* Card */}
         <form
           data-code="Frjj25"
           method="post"

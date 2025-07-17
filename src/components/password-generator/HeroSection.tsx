@@ -3,7 +3,6 @@ import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
-import Header from '@/components/shared/Header';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 const CheckboxButton = ({ checked, id }) => (
@@ -65,9 +64,7 @@ const HeroSection = ({ textContent, lang }) => {
       <div className="flex w-full flex-col items-center justify-center space-y-10  ">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
-            <Header isToolsPage className="text-gray-100">
-              {textContent.title}
-            </Header>
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
             <p className="text-xl font-semibold text-gray-80">{textContent.subtitle}</p>
           </div>
           <div className="flex w-full flex-col items-center justify-center rounded-2xl border-4 border-primary/7 bg-primary/2">

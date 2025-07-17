@@ -1,7 +1,6 @@
 import Countdown from '@/components/components/Countdown';
 import { currencyService } from '@/services/currency.service';
-import Header from '@/components/shared/Header';
-import { Check, CheckCircle, ShieldCheck } from '@phosphor-icons/react';
+import { Check } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -16,9 +15,8 @@ interface TitleAndOnePlanProps {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => {
   const [currency, setCurrency] = useState<string>('€');
-  const bgImageForMobile = getImage('/images/campaigns/summer/SummerCampaign.png');
   useEffect(() => {
     currencyService
       .filterCurrencyByCountry()
@@ -35,11 +33,11 @@ const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanP
       className={`${styles.titleAndOnePlanSection} flex h-[37rem] w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
     >
       <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
-        <Header>
+        <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
           {textContent.title.textBeforeBlueText}
           <span className="text-primary">{textContent.title.blueText}</span>
           {textContent.title.textAfterBlueText}
-        </Header>
+        </h1>
 
         <p className="pt-2 text-left text-lg font-medium xs:text-xl ">
           <span className="text-primary">{textContent.subtitle}</span>

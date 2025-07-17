@@ -1,15 +1,12 @@
 import React from 'react';
 import styles from '../../components/privacy/HeroSection.module.scss';
 import SignUpBanner from '@/components/banners/SignUpBanner';
-import Header from '@/components/shared/Header';
 
 const HeroSection = ({ textContent, lang, bannerText }) => (
   <>
     <section className={`relative flex w-full flex-col overflow-hidden pt-10 filter ${styles.neonBlur}`}>
       <div className="flex h-[300px] w-screen flex-col items-center justify-center">
-        <Header maxWidth="max-w-max" className="text-center text-white">
-          {textContent.title}
-        </Header>
+        <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
       </div>
     </section>
     <section className="flex flex-col  py-16">

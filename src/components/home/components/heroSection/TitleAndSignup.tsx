@@ -1,5 +1,4 @@
 import SignUpInline from '@/components/auth/SignUpInline';
-import Header from '@/components/shared/Header';
 import { goToSignUpURL } from '@/lib/auth';
 
 interface TitleAndSignupProps {
@@ -8,9 +7,9 @@ interface TitleAndSignupProps {
 
 const TitleAndSignup = ({ textContent }: TitleAndSignupProps): JSX.Element => (
   <div className="z-10 flex flex-col md:max-w-lg">
-    <Header maxWidth="max-w-[500px]" className="text-gray-100">
+    <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
       {textContent.title.line1} <span className="text-primary">{textContent.title.blueText}</span>
-    </Header>
+    </h1>
 
     <h2 className="mb-4 text-xl font-normal text-gray-100">{textContent.subtitle}</h2>
 
