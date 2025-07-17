@@ -3,7 +3,6 @@ import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
-import Header from '../Header';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
 
@@ -122,7 +121,7 @@ export const PricingSectionWrapper = ({
       <div className="flex flex-col items-center gap-10">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          {!hideTitle && <Header maxWidth="max-w-4xl max-w-[1000px] text-4xl">{title()}</Header>}
+          {!hideTitle && <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{title()}</h1>}
           <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
 
           {CustomDescription ? (

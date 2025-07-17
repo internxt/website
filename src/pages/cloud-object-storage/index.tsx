@@ -10,7 +10,6 @@ import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import { GetServerSidePropsContext } from 'next';
-import Header from '@/components/shared/Header';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
@@ -46,8 +45,8 @@ const CloudObjectStorage = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 pb-6 text-center text-white lg:items-start lg:text-left">
-            <Header withoutLeading className=" pt-10 leading-none lg:pt-0" textHeightForDesk="text-4xl lg:text-5xl">
+          <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 pb-6 pt-10 text-center text-white lg:items-start lg:pt-0 lg:text-left">
+            <h1 className="text-3xl font-semibold text-white lg:text-5xl">
               {lang === 'es' ? (
                 <>
                   {textContent.HeroSection.title.line2} {textContent.HeroSection.title.line1}
@@ -58,9 +57,9 @@ const CloudObjectStorage = ({
                   {textContent.HeroSection.title.line2}
                 </>
               )}
-            </Header>
+            </h1>
             <p className="px-10 text-xl lg:px-0">{textContent.HeroSection.description}</p>
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-4 pb-16 lg:pb-0">
               <Button
                 className="w-full lg:w-max"
                 text={textContent.HeroSection.cta}

@@ -1,8 +1,6 @@
-import Header from '@/components/shared/Header';
 import { ShieldCheck } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
@@ -11,19 +9,17 @@ interface TitleAndOnePlanProps {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanProps): JSX.Element => {
-  const [currency, setCurrency] = useState<string>('€');
-
+const TitleAndOnePlan = ({ textContent, header, footer }: TitleAndOnePlanProps): JSX.Element => {
   return (
     <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24 ">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100 text-white">
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
               {textContent.title.textAfterBlueText}
               <span className="text-primary">{textContent.title.blueText}</span>
               {textContent.title.textBeforeBlueText}
-            </Header>
+            </h1>
 
             <p className="pt-4 text-xl text-white">
               <span className="text-gray-100   text-white">{textContent.description}</span>
