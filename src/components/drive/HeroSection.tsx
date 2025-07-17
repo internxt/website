@@ -12,10 +12,10 @@ const HeroSection = ({ textContent, lang, download }) => (
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
 
-        <Header maxWidth="max-w-max" className="text-4xl text-gray-100 lg:text-5xl">
+        <h1 className="text-4xl font-semibold text-gray-100 lg:text-5xl">
           <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
           {textContent.title.line2}
-        </Header>
+        </h1>
 
         <h3 className="px-2 text-lg font-normal text-gray-80 sm:text-xl lg:mb-20">
           {textContent.subtitle.line1} <br className="hidden sm:flex" />
