@@ -49,7 +49,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
   const wordsToBold = ['85%'];
   const formattedHero = langJson.HeroSection.header
     .split(/(85%)/g)
-    .map((word, index) => (wordsToBold.includes(word) ? <b key={index}>{word}</b> : word));
+    .map((word, index) => (wordsToBold.includes(word) ? <b key={`${word}-${index}`}>{word}</b> : word));
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Lifetime" lang={lang}>
