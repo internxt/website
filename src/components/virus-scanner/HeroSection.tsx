@@ -2,7 +2,6 @@ import { useState, Fragment, createRef } from 'react';
 import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
-import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
 import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { VirusScannerText } from '@/assets/types/virusScanner';
@@ -142,8 +141,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     );
   };
 
-  const [progress, setProgress] = useState(0);
-
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
@@ -176,10 +173,9 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           onDrop={(e) => e.preventDefault()}
           onDragOver={(e) => e.preventDefault()}
         >
-          {/* Title and subtitle */}
           <div className="mb-10 flex flex-col items-center space-y-5 lg:mb-0 lg:items-start lg:justify-between lg:text-left">
             <div className="flex w-full flex-col items-center space-y-5 text-center lg:w-[316px] lg:items-start lg:text-left">
-              <Header isToolsPage>{textContent.title}</Header>
+              <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
               <h2 className="text-xl font-semibold text-cool-gray-80">
                 {textContent.subtitle1}
                 <br />
@@ -187,7 +183,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               <p className=" text-xl font-normal text-cool-gray-80">{textContent.subtitle2}</p>
             </div>
           </div>
-          {/* Scan container (drop area & scan information) */}
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
@@ -244,7 +239,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                             </div>
                           ) : (
                             <div className="flex h-full w-full flex-col items-center justify-center overflow-hidden bg-opacity-3 px-5 py-5 text-center text-gray-80">
-                              {/* CTA */}
                               <div className="flex flex-col items-center justify-center rounded-xl border-4 border-blue-20  bg-primary bg-opacity-6">
                                 <div className="flex flex-col items-center justify-center rounded-xl border border-primary p-4">
                                   <div className="flex max-w-[427px] flex-col items-center justify-center space-y-5">
@@ -319,7 +313,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   <>
                     {fileSizeLimitReached ? (
                       <>
-                        {/* File size limit reached */}
                         <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
                             as="div"
@@ -348,7 +341,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       </>
                     ) : (
                       <>
-                        {/* Scan confirmation */}
                         <div className="flex h-60 w-full flex-col items-stretch justify-center rounded-xl bg-opacity-3 sm:h-96">
                           <Transition
                             as="div"
@@ -399,7 +391,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               >
                 {isDragging ? (
                   <>
-                    {/* Drop file here */}
                     <div className="flex h-60 w-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-primary bg-opacity-3 sm:h-96">
                       <Image
                         src="/images/virus-scanner/FileArrowUp.png"
@@ -412,7 +403,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                   </>
                 ) : (
                   <>
-                    {/* Default state */}
                     <div className=" flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-xl">
                       <div className={`flex flex-row items-center lg:space-x-0 xl:space-x-20`}>
                         <div className="hidden lg:flex">

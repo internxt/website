@@ -1,17 +1,15 @@
-/* eslint-disable max-len */
 import DownloadComponent from '@/components/shared/DownloadComponent';
-import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 const HeroSection = ({ textContent, lang, download }) => (
   <section className="flex w-full flex-col">
     <div className="flex flex-col items-center pb-32 pt-32">
-      {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-6 px-5 text-center">
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
-
+        
         <h1 className="text-4xl font-semibold text-gray-100 lg:text-5xl">
           <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
           {textContent.title.line2}
@@ -24,9 +22,8 @@ const HeroSection = ({ textContent, lang, download }) => (
         </h3>
       </div>
 
-      {/* Main title Mockup */}
       <div className="flex h-full flex-col px-5 py-16">
-        <img
+        <Image
           src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
           width={757}
           height={419}
@@ -35,7 +32,6 @@ const HeroSection = ({ textContent, lang, download }) => (
         />
       </div>
 
-      {/* Download links */}
       <DownloadComponent textContent={textContent.DownloadLinks} lang={lang} download={download} />
     </div>
   </section>

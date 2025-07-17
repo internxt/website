@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
-import Header from '@/components/shared/Header';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
@@ -100,9 +99,7 @@ const HeroSection = ({ textContent, lang }) => {
       </div>
       <div className="flex flex-col items-center justify-center space-y-6 px-2">
         <div className="lg:max flex flex-col items-center space-y-5 px-4 text-center lg:max-w-2xl lg:px-0">
-          <Header isToolsPage className="text-gray-100">
-            {textContent.title}
-          </Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
           <h2 className="text-lg font-normal text-gray-80 lg:text-xl">
             <span className="font-semibold">{textContent.subtitle1}</span>
             <br />
