@@ -86,7 +86,7 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
               {textComponent}
             </div>
           </div>
-          <div className=" hidden min-h-[700px] w-full justify-center pb-24 pt-24 lg:flex">
+          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
             <Animation images={images} />;
           </div>
         </div>
