@@ -9,8 +9,8 @@ const HeroSection = ({ textContent, lang, download }) => (
         <div className="flex w-max items-center justify-center rounded-lg bg-gray-5 px-4 py-2">
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyebrow}</h2>
         </div>
-
-        <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
+        
+        <h1 className="text-4xl font-semibold text-gray-100 lg:text-5xl">
           <span className="text-primary">{textContent.title.line1}</span> <br className="hidden sm:flex" />
           {textContent.title.line2}
         </h1>
