@@ -77,7 +77,7 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center lg:pb-24">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
@@ -86,7 +86,7 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
               {textComponent}
             </div>
           </div>
-          <div className=" hidden min-h-[700px] w-full justify-center pt-24 lg:flex">
+          <div className=" hidden min-h-[700px] w-full justify-center pb-24 pt-24 lg:flex">
             <Animation images={images} />;
           </div>
         </div>
