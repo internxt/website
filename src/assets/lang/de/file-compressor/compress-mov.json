@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "description": "Komprimiere eine MOV-Datei, um die Dateigröße zu reduzieren und Videos ohne Qualitätsverlust mit Internxt zu teilen.",
-    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
   },
   "FeaturesSection": {
     "howToConvert": {

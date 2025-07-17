@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "description": "Komprimiere PNG-Dateien, um die Dateigröße zu reduzieren und Bilder ohne Qualitätsverlust mit Internxt zu teilen.",
-    "secureUpload": "Sichere Uploads geschützt durch HTTPS."
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
   },
   "FeaturesSection": {
     "howToConvert": {

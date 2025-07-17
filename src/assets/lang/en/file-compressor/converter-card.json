@@ -4,7 +4,7 @@
   "dragNDropArea": {
     "maxFileSize": "Max file size of 1GB",
     "dragYourFile": "Drag and drop your ${{pathFrom}} file here",
-    "cta": "Choose ${{pathFrom}} file",
+    "cta": " Upload ${{pathFrom}} file",
     "draggingFile": "Drop file here"
   },
   "fileSelected": {
