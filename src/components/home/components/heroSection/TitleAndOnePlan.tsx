@@ -71,7 +71,7 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
             {textContent.claimDeal}
           </Link>
 
-          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 pt-2 text-primary shadow-soft md:w-1/2">
+          <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 pr-1 text-primary shadow-soft md:w-1/2">
             <Countdown textFont="font-medium" textHeight="text-xl font-normal text-gray-100" />
           </div>
         </div>
