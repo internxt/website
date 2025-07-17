@@ -58,7 +58,7 @@ const HeroSection = ({
                 />
               </div>
               <div className="flex max-w-[650px] flex-col items-center  text-center text-white lg:items-start  lg:text-start">
-                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+                <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>
                 <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-2 lg:text-2xl">{textContent.subtitle}</p>
                 <p className="px-6 pt-2 text-xl font-normal lg:px-0 lg:pt-6 lg:text-2xl">{textContent.description}</p>
               </div>
