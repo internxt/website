@@ -398,11 +398,11 @@ export default function PriceCard({
   return (
     <div
       className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
-        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[340px] '
-      } h-800 flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[420px] lg:h-[850px] '
+      } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
-        className={`info flex h-[270px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
+        className={`info flex h-[360px] flex-col items-center justify-center space-y-6 rounded-t-2xl bg-white p-6 pt-6`}
       >
         <div className="flex flex-col items-center justify-center space-y-4">
           <div
@@ -506,7 +506,7 @@ export default function PriceCard({
           </>
         ) : null}
 
-        <div className="flex flex-col space-y-2 pt-6 lg:min-h-[540px]">
+        <div className="flex flex-col space-y-2 lg:h-[530px]">
           {isStackCommerce ? (
             STACKCOMMERCE_STORAGE_PLANS[storageSelectedStackCommerce].features.map((feature) => (
               <div className="flex flex-row items-start space-x-2 px-6 last:font-semibold" key={feature}>
@@ -549,7 +549,7 @@ export default function PriceCard({
                   <span className={'text-gray-80'}>
                     {feature}
                     {index > 9 ? (
-                      <span className="ml-2 rounded-md bg-orange/10 px-1 text-center text-orange">
+                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
                         {contentText.commingSoon}
                       </span>
                     ) : null}
