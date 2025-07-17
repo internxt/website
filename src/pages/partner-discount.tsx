@@ -93,19 +93,19 @@ const PartnerDiscount = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-10 ">
             <div className="flex max-w-[550px] flex-col items-center justify-center space-y-10 lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
               </div>
               <div className="flex flex-col space-y-8">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-6xl font-semibold">
-                    {langJson.HeroSection.title.normalText}
-                    <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                  <p className="text-4xl font-semibold lg:text-6xl">
+                    {langJson.HeroSection.title.normalText}{' '}
+                    <span className="font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
                   </p>
                 </div>
-                <p className="text-center text-xl text-gray-80 lg:text-left">
+                <p className="text-center text-sm text-gray-80 lg:text-left lg:text-xl">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
@@ -156,7 +156,7 @@ const PartnerDiscount = ({
         FirstComponent={
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
+              <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{langJson.FeatureSection.title}</h2>
               <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
             </div>
             <div className="content flex h-full w-full flex-col px-5 pt-6">
