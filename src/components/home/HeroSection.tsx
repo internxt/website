@@ -55,7 +55,7 @@ export default function HeroSection({
               percentOff={percentOff}
               minimumPrice={minimumPrice}
             />
-            <div className="hidden h-full justify-center lg:block xl:flex xl:w-[450px]">
+            <div className="hidden h-full justify-center lg:block xl:flex xl:w-[450px] 1.5xl:w-[600px] 2xl:w-[700px]">
               <Image
                 loading="eager"
                 src={bgImage2}
