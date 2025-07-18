@@ -154,6 +154,22 @@ LayoutProps) {
           }}
         ></script>
 
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
+      (function(){
+          var t = document.createElement("script");
+          t.type = "text/javascript";
+          t.async = true;
+          t.id = "AddShoppers";
+          t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
+          document.getElementsByTagName("head")[0].appendChild(t);
+      })();
+    `,
+          }}
+        />
+
         {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           
           <>
