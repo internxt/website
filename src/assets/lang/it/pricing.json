@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% OFF",
+      "line1": "{{discount}}% OFF",
       "line2": "i nostri piani annuali"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Creazione di un account anonimo"
     },
     "cta": {
-      "title": "Ottieni l'80% di sconto",
+      "title": "Ottieni l'{{discount}}% di sconto",
       "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Ottieni ",
-      "blue2": "80% DI SCONTO ",
+      "blue2": "{{discount}}% DI SCONTO ",
       "normal2": "sul cloud storage più sicuro"
     },
     "howMuchStorage": "Quanta memoria online ti serve?",
@@ -43,16 +43,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Risparmia l'80%",
-      "title": "Piani annuali e a vita",
-      "subtitle": "Quest’estate proteggi e porta i tuoi dati sempre con te!",
-      "subtitle2": "Drive, Antivirus e VPN",
-      "subtitle3": "Meet, Mail, Pulitore di Dispositivi e Monitor del Dark Web",
-      "cta": "Attiva un piano",
-      "cta2": "Ottieni l'80% di sconto",
-      "guarantee": "Garanzia rimborso entro 30 giorni",
-      "gift": "Giveaway zaino Internxt x Swiss Peak",
-      "lastCta": "*Offerta valida per account gratuiti o nuovi utenti"
+      "label": "Risparmia {{discount}}%",
+      "title": "Risparmia su ogni piano!",
+      "subtitle": "Festeggia 5 anni di Internxt",
+      "subtitle2": "Festeggia 5 anni di Internxt",
+      "subtitle3": "Meet, Mail, Cleaner e Monitor Dark Web",
+      "cta": "Scegli un piano",
+      "cta2": "Risparmia {{discount}}% ora",
+      "guarantee": "30 giorni di garanzia rimborso",
+      "gift": "Maglia Valencia CF autografata",
+      "lastCta": "*Solo per account nuovi o gratuiti"
     },
     "save": "Risparmia fino al",
     "planTitles": {
@@ -64,7 +64,7 @@
         "normalText": "su tutti i nostri piani esclusivi a vita"
       },
       "blackFriday": {
-        "title": "Mega offerta Black Friday: ottieni l'80% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
+        "title": "Mega offerta Black Friday: ottieni l'{{discount}}% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
         "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },

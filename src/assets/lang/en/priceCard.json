@@ -88,62 +88,9 @@
     "dataAccess": "No unauthorized data access"
   },
   "productFeatures": {
-    "starWarsFeatures": {
-      "title": "Special Edition freebies:",
-      "200GB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
-      "2TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
-      "5TB": ["Star Wars wallpapers", "Star Wars theme for Web App"],
-      "10TB": ["Star Wars wallpapers", "Star Wars theme for Web App", "Star Wars stickers"]
-    },
-    "halloweenFeatures": {
-      "title": "Internxt themed goodies:",
-      "200GB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "1TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "2TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "5TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "10TB": ["Internxt x Swiss Peak backpack", "Halloween theme for Web App"],
-      "tooltip": "Buy any lifetime plan for a chance to win!"
-    },
-    "christmasFeatures": {
-      "title": "Santa’s gifts:",
-      "200GB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
-      "1TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
-      "2TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
-      "5TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
-      "10TB": ["Enter our Secret Santa raffle", "Christmas Web App theme"],
-      "tooltip": "Win up to 10TB of free storage!"
-    },
-    "superBowlFeatures": {
-      "title": "Internxt themed goods:",
-      "extra": "1TB of extra storage for free",
-      "gift": "Superbowl theme for Web App"
-    },
-    "valentinesFeatures": {
-      "title": "Internxt themed goods:",
-      "gift": "Chance to win two Internxt x Swiss Peak backpacks"
-    },
-    "stPatricksFeatures": {
-      "title": "Internxt themed goods:",
-      "gift": "St. Patrick’s Day theme for Web App"
-    },
-    "worldCloudSecurityDay": {
-      "title": "Internxt themed goods:",
-      "gift": "Chance to win an Internxt backpack"
-    },
-    "IdentityManagementDay": {
-      "title": "Internxt themed goods:",
-      "gift1": "Special theme for Web App",
-      "gift2": "Chance to win an Internxt backpack"
-    },
-    "starWarsDay": {
-      "title": "Internxt themed goods:",
-      "gift1": "Chance to win an Internxt backpack",
-      "gift2": "Free Star Wars theme for Web App"
-    },
-    "WorldEnvironmentDay": {
-      "title": "Internxt themed goods:",
-      "gift1": "Web App theme for free",
-      "gift2": "Chance to win an Internxt backpack"
+    "promoFeatures": {
+      "title": "Internxt themed goodiess:",
+      "features": ["Win a signed Valencia T-Shirt", "Free anniversary theme for Web app"]
     },
     "cheaperThan": {
       "lifetime": {

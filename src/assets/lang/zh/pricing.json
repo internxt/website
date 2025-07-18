@@ -28,7 +28,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "享受 ",
-      "blue2": "80% 折扣 ",
+      "blue2": "{{discount}}% 折扣 ",
       "normal2": "的最安全云存储"
     },
     "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
@@ -38,16 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "立省 80%",
-      "title": "年度和终身  套餐",
-      "subtitle": "这个夏天，保护你的数据，随时随地带着走！",
-      "subtitle2": "Drive、防病毒和 VPN",
-      "subtitle3": "Meet、Mail、设备清理器和暗网监控",
-      "cta": "获取你的套餐",
-      "cta2": "立享 80% 折扣",
-      "guarantee": "30 天退款保证",
-      "gift": "抽奖赢取 Internxt x Swiss Peak 背包",
-      "lastCta": "*仅适用于免费账户或新用户"
+      "label": "立省{{discount}}%",
+      "title": "所有方案享优惠！",
+      "subtitle": "庆祝 Internxt 五周年",
+      "subtitle2": "庆祝 Internxt 五周年",
+      "subtitle3": "Meet、Mail、清理工具和暗网监控",
+      "cta": "选择方案",
+      "cta2": "立享{{discount}}%折扣",
+      "guarantee": "30天退款保证",
+      "gift": "抽奖赢瓦伦西亚签名球衣",
+      "lastCta": "*适用于免费或新账户"
     },
     "save": "省高达",
     "planTitles": {
@@ -59,7 +59,7 @@
         "normalText": "我们的所有独家终身计划"
       },
       "blackFriday": {
-        "title": "黑色星期五超级促销：最安全的云存储方案立享80%折扣",
+        "title": "黑色星期五超级促销：最安全的云存储方案立享{{discount}}%折扣",
         "description": "使用 Internxt 保护您的数据，避免数据泄露、财务损失和隐私风险。告别那些从您的个人信息中牟利的科技巨头。"
       }
     },
