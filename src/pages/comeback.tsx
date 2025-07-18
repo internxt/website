@@ -101,6 +101,7 @@ const ResurrectionCampaign = ({
             </Link>
           </>
         }
+        height="h-[550px]"
       />
 
       <PricingSectionWrapper

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import { Alarm } from '@phosphor-icons/react';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import Countdown from '@/components/components/Countdown';
-import Header from '@/components/shared/Header';
 import usePricing from '@/hooks/usePricing';
 import { getImage } from '@/lib/getImage';
 import { CardsType } from '@/pages/affiliates/[filename]';
@@ -57,7 +56,7 @@ export const HeroSectionForPartner = ({ textContent, cardsType, pathname, coupon
             </div>
             {cardsType && (
               <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-                <Header>{textContent[cardsType].title}</Header>
+                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent[cardsType].title}</h1>
                 {textContent[cardsType].description.map((text) => (
                   <p key={text} className=" text-2xl font-semibold text-white md:flex">
                     {text}

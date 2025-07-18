@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/legacy/image';
-import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
 
 const FeatureSection = ({ textContent }) => {
@@ -21,11 +20,11 @@ const FeatureSection = ({ textContent }) => {
         </div>
         <div className="flex max-w-[550px] flex-col items-center justify-center space-y-8 text-center lg:items-start lg:text-left">
           <div className="flex max-w-[500px] flex-col">
-            <Header className="text-6xl text-gray-100 ">
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
               <p className="pt-4 text-3xl font-semibold md:text-5xl">
                 <span>{textContent.title}</span>
               </p>
-            </Header>
+            </h1>
             <p className="pt-4 ">
               <span className="font-regular text-xl text-gray-80 xl:text-xl">{textContent.description}</span>
             </p>

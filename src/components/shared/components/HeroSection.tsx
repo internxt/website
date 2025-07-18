@@ -26,7 +26,9 @@ export const HeroSection = ({
   return (
     <section className={`overflow-hidden  ${background}`} style={style}>
       <HeroSectionSafeArea>
-        <div className={`flex h-[800px] w-full flex-col items-center  lg:h-[600px] lg:flex-row lg:justify-between`}>
+        <div
+          className={`flex h-[800px] w-full flex-col items-center lg:h-[700px] lg:flex-row lg:justify-between 1.5xl:h-[650px] `}
+        >
           <div className="flex max-w-[800px] flex-col">{TextComponent}</div>
           <div className=" flex flex-col items-center lg:pl-20">
             {ImageComponent}

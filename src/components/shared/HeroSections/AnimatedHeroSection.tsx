@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic';
 import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 const Animation = dynamic(() => import('../Animation'));
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 interface AnimatedHeroSectionProps {
   textComponent: JSX.Element;
+  height?: string;
 }
 
-export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps): JSX.Element {
+export default function AnimatedHero({ textComponent, height }: AnimatedHeroSectionProps): JSX.Element {
   const images: ImageConfig[] = [
     {
       src: '/images/home/header/browser.webp',
@@ -72,17 +72,21 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
   ];
 
   return (
-    <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
-      <div className="relative mx-4 pb-12 pt-0 lg:pt-0 xl:mx-32">
+    <section className="overflow-hidden bg-gradient-to-t from-[#001D6C] to-[#121923] lg:bg-gradient-to-b">
+      <div className="relative mx-4 xl:mx-32">
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center lg:pb-24">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="mt-20 flex h-[500px] w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0">
+            <div
+              className={`mt-20 flex ${
+                height ? height : 'h-[450px]'
+              } w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
+            >
               {textComponent}
             </div>
           </div>

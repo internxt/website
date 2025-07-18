@@ -100,7 +100,7 @@ const PrivateCloudStorageSolutions = ({
         <AnimatedHeroSection
           textComponent={
             <>
-              <div className="flex flex-col text-3xl font-medium lg:text-5xl">
+              <div className="flex w-[350px] flex-col text-3xl font-medium lg:w-auto lg:text-5xl">
                 <h1 className="font-medium text-white">
                   {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
                   <span className="text-primary">{textContent.HeroSection.TitleAndOnePlan.title.blueText}</span>
@@ -120,7 +120,7 @@ const PrivateCloudStorageSolutions = ({
                 </div>
                 <div className="flex flex-row items-center justify-center space-x-3 pt-10  lg:justify-start">
                   <ShieldCheck size={24} color="#32C356" weight="fill" />
-                  <p className="whitespace-nowrap  text-white  lg:text-lg">
+                  <p className="whitespace-nowrap  text-lg text-white">
                     {textContent.HeroSection.TitleAndOnePlan.guarantee}
                   </p>
                 </div>

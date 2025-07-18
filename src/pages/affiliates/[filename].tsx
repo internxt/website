@@ -93,15 +93,13 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
       <AnimatedHeroSection
         textComponent={
           <>
-            <h1 className="block text-4xl font-bold text-white lg:hidden xl:text-5xl">
-              {langJson.HeroSectionV3.title}{' '}
-              <span className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSectionV3.subtitle}</span>
-            </h1>
-            <div className="hidden lg:flex lg:flex-col lg:space-y-4">
-              <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSectionV3.title}</h1>
-              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSectionV3.subtitle}</h2>
+            <div className="flex flex-col items-center space-y-4">
+              <h1 className="text-3xl font-bold text-white xl:text-5xl">{langJson.HeroSectionV3.title}</h1>
+              <h2 className="pr-16 pt-2 text-base font-semibold text-primary lg:pt-0 xl:text-3xl">
+                {langJson.HeroSectionV3.subtitle}
+              </h2>
+              <Button onClick={redirectToPricingTable} text={langJson.HeroSectionV3.cta} className="z-10" />
             </div>
-            <Button onClick={redirectToPricingTable} text={langJson.HeroSectionV3.cta} className="z-10" />
           </>
         }
       />
@@ -122,7 +120,11 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
 
       {cardsType === 'one' && (
         <>
-          <HorizontalPricingSection textContent={langJson.PriceTable.onePlan} couponName={PromoCodeName.Affiliates85} />
+          <HorizontalPricingSection
+            textContent={langJson.PriceTable.onePlan}
+            couponName={PromoCodeName.Affiliates85}
+            bgColor="linear-gradient(360deg, #F9F9FC 58.66%, #001D6C 100%);"
+          />
 
           <CtaSection textContent={langJson.CtaSection.one} />
 

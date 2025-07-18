@@ -1,7 +1,5 @@
 import { createRef, useCallback, useState } from 'react';
 
-import Header from '../shared/Header';
-
 import {
   Errors,
   MAX_FILE_SIZE,
@@ -220,7 +218,7 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <Header maxWidth="w-full">{formattedConverterText.title}</Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{formattedConverterText.title}</h1>
           <h2 className="text-xl text-gray-80">{textContent.description}</h2>
           <div className="flex flex-row items-center space-x-1">
             <ShieldCheck size={16} className="text-green" />

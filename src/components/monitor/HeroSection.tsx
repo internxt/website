@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Header from '@/components/shared/Header';
 import EmailToolbar from './components/EmailToolBar';
 import { HaveIbeenPwnedText, Breach, Paste } from '@/assets/types/have-i-been-pawned';
 import PwnedStatusSection from './PwnedStatusSection';
@@ -64,9 +63,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ textContent }) => {
     <section className="flex justify-center overflow-hidden pt-32">
       <div className="flex w-full flex-col items-center justify-center space-y-5 px-4 md:max-w-[1000px]">
         <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center">
-          <Header isToolsPage>{textContent.title}</Header>
-          <p className="pt-5 text-xl font-bold text-gray-80">{textContent.subtitle}</p>
-          <p className="font-regular pt-5 text-xl text-gray-80">{textContent.description}</p>
+          <h1 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
+          <p className="pt-5 text-base font-bold text-gray-80 lg:text-xl">{textContent.subtitle}</p>
+          <p className="font-regular pt-5 text-base text-gray-80 lg:text-xl">{textContent.description}</p>
         </div>
         <div className="flex w-full flex-col items-center justify-center pb-10">
           <EmailToolbar

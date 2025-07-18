@@ -1,15 +1,14 @@
 import { useRouter } from 'next/navigation';
-import Header from '../../shared/Header';
 import Image from 'next/image';
 
 export const HeroSection = ({ textContent }) => {
   const router = useRouter();
 
   return (
-    <section className="overflow-hidden bg-gray-1 pt-32 pb-20">
+    <section className="overflow-hidden bg-gray-1 pb-20 pt-32">
       <div className="flex w-full flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <Header maxWidth="max-w-[700px]">{textContent.title}</Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
           <div className="flex flex-col text-center text-xl text-gray-80">
             <p>{textContent.description.normal}</p>
           </div>

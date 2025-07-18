@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowsLeftRight } from '@phosphor-icons/react';
 import Select from 'react-select';
-import Header from '@/components/shared/Header';
 
 const options = [
   { value: 'b', label: 'Bytes' },
@@ -58,13 +57,12 @@ const HeroSection = ({ textContent }) => {
     <section className="pb-20 pt-32">
       <div className="mx-3 flex md:mx-10 lg:mx-32">
         <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-20">
-          {/* Title and subtitle */}
           <div className=" flex w-full max-w-[700px] flex-col items-center justify-center text-center">
-            <Header isToolsPage>{textContent.title}</Header>
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
             <p className="pt-5 text-lg font-semibold text-gray-80 lg:text-xl">{textContent.description}</p>
             <p className="pt-5 text-lg font-normal text-gray-80 lg:text-xl">{textContent.description1}</p>
           </div>
-          {/* Container */}
+
           <div className="relative w-full rounded-2xl border-4 border-primary/7 bg-primary/2 p-9 lg:flex lg:w-auto">
             <div
               className={`flex ${

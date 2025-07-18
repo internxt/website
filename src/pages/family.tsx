@@ -17,7 +17,6 @@ import { stripeService } from '@/services/stripe.service';
 import Button from '@/components/shared/Button';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
 import CtaSection from '@/components/shared/CtaSection';
-import Header from '@/components/shared/Header';
 import { HeroSection } from '@/components/shared/components/HeroSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
@@ -103,7 +102,7 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
       <HeroSection
         TextComponent={
           <div className="flex flex-col items-center gap-8 text-center lg:items-start lg:text-start">
-            <Header>{heroSectionText.title}</Header>
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{heroSectionText.title}</h1>
             <div className="flex flex-col gap-4">
               <h3 className="text-xl font-bold text-gray-80">{heroSectionText.subtitle}</h3>
               <p className="text-xl text-gray-80">{heroSectionText.description}</p>

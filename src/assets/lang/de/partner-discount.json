@@ -2,13 +2,13 @@
   "HeroSection": {
     "header": "Jahresrabatt von Internxt",
     "title": {
-      "normalText": "Erhalten Sie den sichersten Cloud-Speicher ",
-      "blueText": "für weniger"
+      "normalText": "Der sicherste Cloud-Speicher ",
+      "blueText": "zum kleinen Preis"
     },
     "description": {
-      "normal": "Treten Sie Internxt bei, der besten Alternative zu Google Drive, und erhalten Sie ",
-      "blue": "85% RABATT ",
-      "normal1": "auf alle Lifetime-Pläne. Speichern und teilen Sie Ihre Dateien sicher und mit vollständiger Privatsphäre."
+      "normal": "Internxt ist die beste Google Drive-Alternative. Hol dir jetzt ",
+      "blue": "85 % RABATT ",
+      "normal1": " auf jeden Plan. Sicher speichern und teilen – ganz privat."
     },
     "cta": "Wählen Sie einen Plan"
   },
@@ -24,6 +24,7 @@
       }
     },
     "planDescription": "Alle Internxt-Pläne bieten vollständigen Zugriff auf unser Paket privater Lösungen mit modernster Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
+    "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",

@@ -1,5 +1,4 @@
 import { getImage } from '@/lib/getImage';
-import Header from '../shared/Header';
 import Image from 'next/image';
 import DownloadComponent from './DownloadComponent';
 import { isMobile } from 'react-device-detect';
@@ -12,10 +11,10 @@ const HeroSection = ({ textContent, lang, download }) => (
           <h2 className="text-xl font-medium text-gray-80">{textContent.eyeBrow}</h2>
         </div>
       </div>
-      <Header maxWidth="max-w-max" className="pt-5 text-center  text-gray-100">
+      <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
         <span className="text-primary">{textContent.title}</span> <br className="hidden sm:flex" />
         {textContent.blueText}
-      </Header>
+      </h1>
 
       <p className="font-regular max-w-[800px] px-5 pt-5 text-center text-xl text-gray-80 sm:text-xl md:pb-5">
         {textContent.description}

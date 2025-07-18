@@ -142,7 +142,7 @@ const PriceTable = ({
             enterFrom="scale-95 translate-y-20 opacity-0"
             enterTo="scale-100 translate-y-0 opacity-100"
           >
-            <div className="always-scroll overflow-x-auto px-6  pb-10">
+            <div className="always-scroll overflow-x-auto px-6 pb-10">
               <div className="flex min-w-fit snap-x snap-mandatory flex-row gap-6">
                 {[
                   { storage: '2TB', price: '900.0', priceId: 'price_1PNxYtFAOdcgaBMQzkimr6OU' },
@@ -183,7 +183,7 @@ const PriceTable = ({
             enterFrom="scale-95 translate-y-20 opacity-0"
             enterTo="scale-100 translate-y-0 opacity-100"
           >
-            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 pb-10">
+            <div className="content flex flex-row flex-wrap items-end justify-center justify-items-center gap-5 p-6 px-20  pb-10">
               {lifetimeProducts
                 ? lifetimeProducts.map((product: any, index) => (
                     <PriceCard

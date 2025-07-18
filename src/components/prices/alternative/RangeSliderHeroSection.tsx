@@ -1,6 +1,4 @@
 import { useState } from 'react';
-
-import Header from '../../shared/Header';
 import Button from '@/components/shared/Button';
 import { RangeSlider } from '../../shared/RangeSlider';
 
@@ -26,13 +24,13 @@ export const RangeSliderHeroSection = ({ textContent, onButtonClick }: RangeSlid
   };
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center gap-10 pt-10">
         <div className="flex max-w-[840px] flex-col items-center gap-4 text-center">
-          <Header>{textContent.title}</Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
-        <div className="flex w-full flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-10 pt-10 pb-7 lg:w-max">
+        <div className="flex w-full flex-col items-center rounded-2xl border-4 border-primary/7 bg-primary/2 px-10 pb-7 pt-10 lg:w-max">
           <div className="flex w-full max-w-[700px] flex-col gap-5 lg:w-screen">
             <div className="flex w-full flex-col items-end gap-10 lg:flex-row">
               <div className="flex w-full items-center justify-center rounded-lg border border-gray-10 bg-white py-2.5 lg:w-screen lg:max-w-[85px]">

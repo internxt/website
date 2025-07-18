@@ -88,7 +88,7 @@ const Countdown: React.FC<CountdownProps> = ({
   }, [dt]);
 
   return (
-    <div className={`flex flex-row items-end gap-1 ${textHeight} ${textFont}`}>
+    <div className={`flex flex-row items-center gap-1 ${textHeight} ${textFont}`}>
       <div className="text-center">
         <p>{days < 10 ? `0${days}` : days}</p>
       </div>

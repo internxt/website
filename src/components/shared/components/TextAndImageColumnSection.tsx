@@ -21,7 +21,7 @@ export const TextAndImageColumnSection = ({
   const { src, alt, width, height, className } = imageProperties;
 
   return (
-    <section className={`overflow-hidden ${background} px-5 py-20`}>
+    <section className={`overflow-hidden ${background} px-5 pt-20`}>
       <div className="flex flex-col items-center gap-16 text-center">
         {TextComponent}
         <div className="content flex flex-col">

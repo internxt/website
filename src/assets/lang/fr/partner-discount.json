@@ -2,13 +2,13 @@
   "HeroSection": {
     "header": "Remise Annuelle d'Internxt",
     "title": {
-      "normalText": "Obtenez le stockage en nuage le plus sécurisé ",
-      "blueText": "pour moins cher"
+      "normalText": "Le cloud le plus sécurisé ",
+      "blueText": "pour moins"
     },
     "description": {
       "normal": "Rejoignez Internxt, la meilleure alternative à Google Drive, et obtenez ",
       "blue": "85% DE RÉDUCTION ",
-      "normal1": "sur tout plan à vie. Stockez et partagez vos fichiers en toute sécurité et avec une confidentialité totale."
+      "normal1": " sur tout forfait. Stockez et partagez en toute sécurité et confidentialité."
     },
     "cta": "Choisissez un plan"
   },
@@ -23,6 +23,7 @@
         "normalText": "sur tous nos plans exclusifs à vie"
       }
     },
+    "lifetimeDescription": "Payez une fois et obtenez une confidentialité et une sécurité à vie",
     "planDescription": "Tous les plans Internxt donnent accès à notre suite de solutions privées dotée des dernières technologies de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "billingFrequency": {
       "monthly": "Mensuel",

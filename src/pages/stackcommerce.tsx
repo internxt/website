@@ -52,8 +52,7 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
               <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
             </div>
 
-            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
-              <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
+            <div className="flex max-w-[400px] flex-row items-start justify-start space-x-2.5 rounded-lg bg-primary/25 p-4 xl:items-center">
               <p
                 className="text-md font-regular text-white"
                 dangerouslySetInnerHTML={{ __html: langJson.HeroSection.info }}
