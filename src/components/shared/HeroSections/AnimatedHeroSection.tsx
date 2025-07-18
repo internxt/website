@@ -1,13 +1,13 @@
 import dynamic from 'next/dynamic';
 import { ImageConfig } from '@/assets/types/private-cloud-storage-solutions';
 const Animation = dynamic(() => import('../Animation'));
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 
 interface AnimatedHeroSectionProps {
   textComponent: JSX.Element;
+  height?: string;
 }
 
-export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps): JSX.Element {
+export default function AnimatedHero({ textComponent, height }: AnimatedHeroSectionProps): JSX.Element {
   const images: ImageConfig[] = [
     {
       src: '/images/home/header/browser.webp',
@@ -82,7 +82,11 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="mt-20 flex h-[250px] w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0">
+            <div
+              className={`mt-20 flex ${
+                height ? height : 'h-[450px]'
+              } w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
+            >
               {textComponent}
             </div>
           </div>
