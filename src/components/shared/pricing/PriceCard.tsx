@@ -95,7 +95,6 @@ export const PriceCard = ({
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
-  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -215,17 +214,15 @@ export const PriceCard = ({
       </div>
       {showPromo ? (
         <div className={`flex flex-col items-start space-y-2 px-5 py-5 ${styles.horizontalLinearGardient}`}>
-          <span className="text-[13.5px] font-bold text-white">
-            {contentText.productFeatures.WorldEnvironmentDay.title}
-          </span>
+          <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
               <TShirt size={24} className="text-primary" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift1}</span>
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[0]}</span>
             </div>
             <div className="flex items-center space-x-2">
               <Cake size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.WorldEnvironmentDay.gift2}</span>
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[1]}</span>
             </div>
           </div>
         </div>

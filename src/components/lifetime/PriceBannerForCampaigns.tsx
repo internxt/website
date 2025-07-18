@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { PricingText } from '@/assets/types/pricing';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { Check, TShirt } from '@phosphor-icons/react';
@@ -9,40 +10,53 @@ import styles from '@/components/privacy/HeroSection.module.scss';
 export const PriceBannerForCampaigns = ({
   textContent,
   redirectTo,
+  percentOff,
 }: {
   textContent: PricingText['tableSection']['ctaBanner'];
   redirectTo?: string;
+  percentOff: string;
 }) => {
   const globalDialog = useGlobalDialog();
+  const [delayedRender, setDelayedRender] = useState(false);
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
+
   const bgImage = getImage('/images/campaigns/5th-anniversary/confetti.webp');
   const bgImage2 = getImage('/images/campaigns/5th-anniversary/visual (hero).webp');
 
+  const parsePercentText = (text: string) =>
+    typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setDelayedRender(true);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div
-      className={`${shouldShowBanner ? 'flex' : 'hidden'} relative flex-col overflow-hidden lg:rounded-32  ${
-        styles.horizontalLinearGardient
-      }`}
+      className={`${
+        shouldShowBanner && delayedRender ? 'flex' : 'hidden'
+      } relative flex-col overflow-hidden lg:rounded-32 ${styles.horizontalLinearGardient}`}
     >
+      {/* Banner Desktop */}
       <div
-        className={`relative z-10 hidden h-[426px]  flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1025px] 1.5xl:w-[1150px] 2xl:w-[1300px]`}
+        className={`relative z-10 hidden h-[426px] flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1025px] 1.5xl:w-[1150px] 2xl:w-[1300px]`}
         style={{
-          backgroundImage: ` url(${bgImage})`,
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div
-          className={`flex flex-col items-center overflow-hidden text-center lg:flex-row lg:items-start lg:text-left `}
-        >
+        <div className="flex flex-col items-center overflow-hidden text-center lg:flex-row lg:items-start lg:text-left">
           <div
-            className={`${styles.titleAndOnePlanSection} my-10 ml-10 flex h-[341px] w-[740px] flex-col justify-between rounded-20 px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[646px]`}
+            className={`${styles.titleAndOnePlanSection} my-10 ml-10 flex h-[341px] w-[70px] flex-col justify-between rounded-20 px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[680px]`}
           >
             <div className="flex flex-col">
               <div className="flex flex-row items-center gap-3 pt-10">
                 <p className="rounded-2 bg-gray-95/30 px-1 py-0.5 text-xl font-semibold text-primary">
-                  {textContent.label}
+                  {parsePercentText(textContent.label)}
                 </p>
                 <p className="text-2xl font-normal text-white">{textContent.title}</p>
               </div>
@@ -52,19 +66,15 @@ export const PriceBannerForCampaigns = ({
                 </p>
                 <div className="flex flex-row items-start gap-1 pt-2 lg:gap-2">
                   <Check className="mt-1 text-primary" weight="bold" size={20} />
-                  <p className=" text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">
-                    {textContent.subtitle2}
-                  </p>
+                  <p className="text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">{textContent.subtitle2}</p>
                 </div>
                 <div className="flex flex-row items-start gap-1 lg:gap-2">
                   <Check className="mt-1 text-primary" weight="bold" size={20} />
-                  <p className=" text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">
-                    {textContent.subtitle3}
-                  </p>
+                  <p className="text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">{textContent.subtitle3}</p>
                 </div>
               </div>
-              <div className=" flex w-[600px] flex-col items-start pt-6">
-                <div className="flex w-full flex-row items-center gap-4  ">
+              <div className="flex w-[600px] flex-col items-start pt-6">
+                <div className="flex w-full flex-row items-center gap-4">
                   <Link
                     href={redirectTo ?? '#billingButtons'}
                     className="flex w-1/2 items-center justify-center rounded-lg bg-primary px-3 py-2 text-center text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-2"
@@ -90,18 +100,19 @@ export const PriceBannerForCampaigns = ({
               </div>
             </div>
           </div>
-
-          <Image
-            src={getImage('/images/campaigns/5th-anniversary/visual (pricing).webp')}
-            alt="Internxt 5th anniversary"
-            width={568}
-            height={502}
-            quality={100}
-          />
+          <div className="relative mr-20 h-[320px] w-full pt-8">
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/visual (pricing).webp')}
+              alt="Internxt 5th anniversary"
+              width={568}
+              height={502}
+              quality={100}
+            />
+          </div>
         </div>
       </div>
 
-      {/* Banner móvil */}
+      {/* Banner Mobile */}
       <div
         style={{
           backgroundImage: `url('${bgImage}')`,
@@ -109,17 +120,17 @@ export const PriceBannerForCampaigns = ({
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
         }}
-        className={'relative z-10 flex h-[630px] w-screen flex-col justify-between py-5 md:pb-[1000px] lg:hidden'}
+        className="relative z-10 flex h-[630px] w-screen flex-col justify-between py-5 md:pb-[1000px] lg:hidden"
       >
         <div
           className={`mx-4 flex flex-col items-center gap-2 rounded-2xl ${styles.titleAndOnePlanSection} px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left`}
         >
           <div className="flex w-max items-center rounded-2 bg-gray-95/30 px-1 py-0.5">
-            <p className="text-sm font-semibold text-primary">{textContent.label}</p>
+            <p className="text-sm font-semibold text-primary">{parsePercentText(textContent.label)}</p>
           </div>
           <div className="flex w-full flex-col pt-1">
             <p className="text-lg font-normal text-white">{textContent.title}</p>
-            <p className="pt-3 text-center text-2xl font-semibold  text-white">{textContent.subtitle}</p>
+            <p className="px-10 pt-3 text-center text-2xl font-semibold text-white">{textContent.subtitle2}</p>
           </div>
           <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-4">
             <Image
@@ -137,13 +148,13 @@ export const PriceBannerForCampaigns = ({
           <div className="flex w-full flex-row items-center justify-start gap-2 px-0 pb-2">
             <Link
               href={redirectTo ?? '#billingButtons'}
-              className="z-20 mx-4 flex w-full items-center justify-center rounded-sm-6 bg-primary  px-4 py-3 text-center text-base font-normal text-white hover:bg-primary/95  sm:py-3 sm:text-lg"
+              className="z-20 mx-4 flex w-full items-center justify-center rounded-sm-6 bg-primary px-4 py-3 text-center text-base font-normal text-white hover:bg-primary/95 sm:py-3 sm:text-lg"
             >
               {textContent.cta}
             </Link>
           </div>
         </div>
-        <div className="relative h-[320px] w-full ">
+        <div className="relative h-[320px] w-full">
           <Image
             src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
             alt="Internxt 5th anniversary"

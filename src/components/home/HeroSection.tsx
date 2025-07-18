@@ -12,9 +12,17 @@ interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
+  percentOff: string;
+  minimumPrice: string;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  textContent,
+  lang,
+  isHomePageV2,
+  percentOff,
+  minimumPrice,
+}: HeroSectionForHomeProps): JSX.Element {
   const router = useRouter();
   const mobileImage = getImage('/images/home/image_mobile.webp');
   const bgImage = getImage('/images/campaigns/5th-anniversary/confetti.webp');
@@ -39,7 +47,12 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div className={`flex h-[700px] w-screen flex-shrink-0 flex-row px-3 pt-[94px] xl:pl-28 1.5xl:pl-0 2xl:pl-0`}>
-            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
+            <TitleAndOnePlan
+              textContent={titleAndOnePlanText}
+              lang={lang}
+              percentOff={percentOff}
+              minimumPrice={minimumPrice}
+            />
             <div className="hidden h-full lg:block">
               <Image
                 loading="eager"

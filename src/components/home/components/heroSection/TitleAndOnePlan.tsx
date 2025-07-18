@@ -13,9 +13,17 @@ interface TitleAndOnePlanProps {
   header?: JSX.Element;
   footer?: JSX.Element;
   lang: GetServerSidePropsContext['locale'];
+  percentOff: string;
+  minimumPrice: string;
 }
 
-const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => {
+const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOnePlanProps): JSX.Element => {
+  const parsePercentText = (text: string) =>
+    typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+
+  const parsePriceText = (text: string) =>
+    typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
+
   const [currency, setCurrency] = useState<string>('€');
 
   useEffect(() => {
@@ -41,7 +49,7 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
             {textContent.title.textAfterBlueText}
           </h1>
           <p className="pb-2 pt-4 text-xl font-medium text-primary ">{textContent.subtitle}</p>
-          <p className="pb-4 text-xl font-medium text-white">{textContent.description}</p>
+          <p className="pb-4 text-xl font-medium text-white">{parsePercentText(textContent.description)}</p>
         </div>
 
         <div className="flex flex-col">
@@ -57,7 +65,7 @@ const TitleAndOnePlan = ({ textContent }: TitleAndOnePlanProps): JSX.Element => 
           {textContent.startFrom.normal1}{' '}
           <span className="flex w-max flex-row text-4xl font-medium ">
             <abbr className="text-base">{currency}</abbr>
-            {textContent.startFrom.price}
+            {parsePriceText(textContent.startFrom.price)}
           </span>
           {textContent.startFrom.normal2}
         </div>
