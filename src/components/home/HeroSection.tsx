@@ -46,14 +46,16 @@ export default function HeroSection({
         <div className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block" />
         <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div className={`flex h-[700px] w-screen flex-shrink-0 flex-row px-3 pt-[94px] xl:pl-28 1.5xl:pl-0 2xl:pl-0`}>
+          <div
+            className={`flex h-[700px] w-screen flex-shrink-0 flex-row px-3 pt-[94px] xl:pl-28  1.5xl:pl-10 2xl:pl-0`}
+          >
             <TitleAndOnePlan
               textContent={titleAndOnePlanText}
               lang={lang}
               percentOff={percentOff}
               minimumPrice={minimumPrice}
             />
-            <div className="hidden h-full lg:block">
+            <div className="hidden h-full justify-center lg:block xl:flex xl:w-[450px]">
               <Image
                 loading="eager"
                 src={bgImage2}
