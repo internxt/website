@@ -43,8 +43,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SummerCampaign,
-    couponCodeForLifetime: PromoCodeName.SummerCampaign,
+    couponCode: PromoCodeName.FifthAnniversary,
+    couponCodeForLifetime: PromoCodeName.FifthAnniversary,
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
@@ -89,12 +89,19 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const minimumPrice = decimalDiscount !== undefined ? (10 * (decimalDiscount / 100)).toFixed(2) : '0.00';
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} lang={locale} />
+      <HeroSection
+        textContent={textContent.HeroSection}
+        lang={locale}
+        percentOff={percentOff}
+        minimumPrice={minimumPrice}
+      />
 
       <ChooseStorageSizeSection
         textContent={textContent.ChooseStorageSizeSection}

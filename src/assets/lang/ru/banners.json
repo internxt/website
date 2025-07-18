@@ -140,9 +140,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Летом бери все свои данные с собой ",
-      "normalText": "Скидка 80% на все тарифы — сейчас!",
-      "cta": "Выбрать план "
+      "boldText": "",
+      "normalText": "Internxt исполняется 5 лет! Скидка 85% на все тарифы ",
+      "cta": "Выберите свой тариф "
     }
   },
   "AndroidSmartBanner": {

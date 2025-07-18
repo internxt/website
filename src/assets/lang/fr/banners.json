@@ -112,9 +112,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Cet été, gardez toutes vos infos avec vous ",
-      "normalText": "80% sur tous les forfaits, profitez-en !",
-      "cta": "Choisissez un plan "
+      "boldText": "",
+      "normalText": "Internxt fête ses 5 ans ! 85% de réduction sur tous les forfaits ",
+      "cta": "Choisissez votre forfait "
     }
   },
   "lifetimeBanner": {

@@ -2,6 +2,7 @@ import {
   ArrowsClockwise,
   Backpack,
   Broom,
+  Cake,
   CirclesThreePlus,
   CodeBlock,
   CreditCard,
@@ -16,14 +17,14 @@ import {
   Password,
   ShieldPlus,
   SunHorizon,
+  TShirt,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import styles from '@/components/privacy/HeroSection.module.scss';
 import React from 'react';
 import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -94,7 +95,6 @@ export const PriceCard = ({
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
-  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -213,28 +213,16 @@ export const PriceCard = ({
         </button>
       </div>
       {showPromo ? (
-        <div
-          style={{
-            backgroundImage: `url('${bgImage}')`,
-            backgroundPosition: '0% 80%',
-          }}
-          className={'flex flex-col items-start space-y-2 px-5 py-5'}
-        >
-          <span className="text-[13.5px] font-bold text-gray-100">
-            {contentText.productFeatures.WorldEnvironmentDay.title}
-          </span>
+        <div className={`flex flex-col items-start space-y-2 px-5 py-5 ${styles.horizontalLinearGardient}`}>
+          <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <SunHorizon size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-gray-100">
-                {contentText.productFeatures.WorldEnvironmentDay.gift1}
-              </span>
+              <TShirt size={24} className="text-primary" />
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[0]}</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Backpack size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-gray-100">
-                {contentText.productFeatures.WorldEnvironmentDay.gift2}
-              </span>
+              <Cake size={24} className="text-primary" weight="fill" />
+              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[1]}</span>
             </div>
           </div>
         </div>

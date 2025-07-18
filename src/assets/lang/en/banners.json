@@ -158,8 +158,8 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "80% off all plans!",
-      "normalText": "Hot days, hotter savings",
+      "boldText": "",
+      "normalText": "Celebrate 5 years of Internxt with 85% off",
       "cta": " Claim deal"
     }
   },

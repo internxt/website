@@ -88,62 +88,9 @@
     "dataAccess": "無未授權的數據訪問"
   },
   "productFeatures": {
-    "starWarsFeatures": {
-      "title": "特別版贈品：",
-      "200GB": ["星際大戰壁紙", "Web App 的星際大戰主題"],
-      "2TB": ["星際大戰壁紙", "Web App 的星際大戰主題"],
-      "5TB": ["星際大戰壁紙", "Web App 的星際大戰主題"],
-      "10TB": ["星際大戰壁紙", "Web App 的星際大戰主題", "星際大戰貼紙"]
-    },
-    "halloweenFeatures": {
-      "title": "Internxt 主題好禮：",
-      "200GB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
-      "1TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
-      "2TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
-      "5TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
-      "10TB": ["Internxt x Swiss Peak 背包", "萬聖節主題網頁應用"],
-      "tooltip": "購買任何終身計劃即可有機會贏得獎品！"
-    },
-    "christmasFeatures": {
-      "title": "聖誕老人的禮物：",
-      "200GB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
-      "1TB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
-      "2TB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
-      "5TB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
-      "10TB": ["參加我們的秘密聖誕老人抽獎", "聖誕網絡應用主題"],
-      "tooltip": "贏得多達10TB的免費儲存空間！"
-    },
-    "superBowlFeatures": {
-      "title": "Internxt 的禮物：",
-      "extra": "1TB 的額外免費存儲空間",
-      "gift": "適用於網頁應用的超級碗主題"
-    },
-    "valentinesFeatures": {
-      "title": "Internxt 的禮物：",
-      "gift": "抽獎活動：2 個 Swiss Peak x Internxt 背包"
-    },
-    "stPatricksFeatures": {
-      "title": "Internxt 的禮物：",
-      "gift": "圣帕特里克主题用于Web应用"
-    },
-    "worldCloudSecurityDay": {
-      "title": "Internxt 的禮物：",
-      "gift": "Internxt x Swiss Peak 背包抽獎"
-    },
-    "IdentityManagementDay": {
-      "title": "Internxt 的禮物：",
-      "gift1": "Internxt x Swiss Peak 背包抽獎",
-      "gift2": "Web 應用程式免費主題"
-    },
-    "starWarsDay": {
-      "title": "Internxt 的禮物：",
-      "gift1": "Internxt x Swiss Peak 後背包抽獎",
-      "gift2": "Web 應用程式免費主題"
-    },
-    "WorldEnvironmentDay": {
-      "title": "Internxt 的禮物：",
-      "gift1": "Web 應用程式免費主題",
-      "gift2": "Internxt x Swiss Peak 背包抽獎"
+    "promoFeatures": {
+      "title": "Internxt 的禮物",
+      "features": ["瓦倫西亞簽名球衣抽獎", "免費週年主題"]
     },
     "cheaperThan": {
       "lifetime": {

@@ -90,62 +90,9 @@
     "dataAccess": "Kein unbefugter Datenzugriff"
   },
   "productFeatures": {
-    "starWarsFeatures": {
-      "title": "Sonderausgabe Gratiszugaben:",
-      "200GB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
-      "2TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
-      "5TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App"],
-      "10TB": ["Star Wars Hintergrundbilder", "Star Wars Design für Web-App", "Star Wars Aufkleber"]
-    },
-    "halloweenFeatures": {
-      "title": "Internxt-Themen-Goodies:",
-      "200GB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "1TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "2TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "5TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "10TB": ["Internxt x Swiss Peak Rucksack", "Halloween-Thema für Web-App"],
-      "tooltip": "Kaufen Sie einen Lifetime-Plan für die Chance zu gewinnen!"
-    },
-    "christmasFeatures": {
-      "title": "Die Geschenke des Weihnachtsmanns:",
-      "200GB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
-      "1TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
-      "2TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
-      "5TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
-      "10TB": ["Nehmen Sie an unserer geheimen Weihnachtsmann-Verlosung teil", "Weihnachts-Web-App-Thema"],
-      "tooltip": "Gewinnen Sie bis zu 10TB freien Speicher!"
-    },
-    "superBowlFeatures": {
-      "title": "Internxt thematische Goodies:",
-      "extra": "1TB zusätzlicher Speicher kostenlos",
-      "gift": "Superbowl-Thema für die Web-App"
-    },
-    "valentinesFeatures": {
-      "title": "Geschenke von Internxt:",
-      "gift": "Verlosung von 2 Swiss Peak x Internxt Rucksäcken"
-    },
-    "stPatricksFeatures": {
-      "title": "Geschenke von Internxt:",
-      "gift": "St. Patrick's Day-Thema für die Web-App"
-    },
-    "worldCloudSecurityDay": {
-      "title": "Geschenke von Internxt:",
-      "gift": "Verlosung eines Internxt x Swiss Peak Rucksacks"
-    },
-    "IdentityManagementDay": {
-      "title": "Regalitos von Internxt:",
-      "gift1": "Internxt x Swiss Peak Rucksack Verlosung",
-      "gift2": "Kostenloses Thema für Web-App"
-    },
-    "starWarsDay": {
-      "title": "Internxt Geschenke:",
-      "gift1": "Gewinnspiel Internxt-Rucksack x Swiss Peak",
-      "gift2": "Kostenloses Theme für Web App"
-    },
-    "WorldEnvironmentDay": {
-      "title": "Internxt Geschenke:",
-      "gift1": "Kostenloses Web App-Thema",
-      "gift2": "Gewinnspiel Internxt-Rucksack x Swiss Peak"
+    "promoFeatures": {
+      "title": "Geschenke von Internxt",
+      "features": ["Verlosung signiertes Valencia-Trikot", "Gratis Geburtstagsthema"]
     },
     "cheaperThan": {
       "lifetime": {

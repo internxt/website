@@ -41,6 +41,7 @@ module.exports = {
         5: 'rgb(243,243,248)',
         10: 'rgb(229,229,235)',
         20: 'rgb(209,209,215)',
+        25: 'rgb(204, 204, 204)',
         30: 'rgb(199,199,205)',
         40: 'rgb(174,174,179)',
         50: 'rgb(142,142,148)',
@@ -48,6 +49,7 @@ module.exports = {
         70: 'rgb(72,72,75)',
         80: 'rgb(58,58,59)',
         90: 'rgb(44,44,48)',
+        95: 'rgb(28, 28, 28)',
         100: 'rgb(24,24,27)',
       },
       surface: 'rgba(255, 255, 255, 0.07)',
@@ -201,6 +203,7 @@ module.exports = {
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         scanning: 'scanning 1s linear infinite',
+        marquee: 'marquee 15s linear infinite',
       },
       keyframes: {
         'pingpong-v': {
@@ -262,6 +265,7 @@ module.exports = {
         fall: 'fall 5s linear infinite',
         'fill-bar': 'fill 1s linear forwards',
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        marquee: 'marquee 8s linear infinite',
       },
       translate: {
         25: '6.25rem',
@@ -313,6 +317,10 @@ module.exports = {
         'pingpong-v': {
           '0%, 100%': { top: '0%' },
           '50%': { top: '100%' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
 
