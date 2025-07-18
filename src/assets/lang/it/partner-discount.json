@@ -2,13 +2,13 @@
   "HeroSection": {
     "header": "Sconto Annuale di Internxt",
     "title": {
-      "normalText": "Ottieni il cloud storage più sicuro ",
+      "normalText": "Lo storage cloud più sicuro ",
       "blueText": "a meno"
     },
     "description": {
-      "normal": "Unisciti a Internxt, la migliore alternativa a Google Drive, e ottieni ",
+      "normal": "Unisciti a Internxt, la miglior alternativa a Google Drive, e ottieni ",
       "blue": "85% DI SCONTO ",
-      "normal1": "su qualsiasi piano a vita. Archivia e condividi i tuoi file in modo sicuro e con totale privacy."
+      "normal1": " su ogni piano. Archivia e condividi in modo sicuro e privato."
     },
     "cta": "Scegli un piano"
   },

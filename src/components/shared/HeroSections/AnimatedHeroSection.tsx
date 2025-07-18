@@ -72,7 +72,7 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
   ];
 
   return (
-    <section className={`overflow-hidden ${styles.inverseLinearGradient}`}>
+    <section className="overflow-hidden bg-gradient-to-t from-[#001D6C] to-[#121923] lg:bg-gradient-to-b">
       <div className="relative mx-4 xl:mx-32">
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
@@ -82,7 +82,7 @@ export default function AnimatedHero({ textComponent }: AnimatedHeroSectionProps
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
           >
-            <div className="mt-20 flex h-[450px] w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0">
+            <div className="mt-20 flex h-[250px] w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0">
               {textComponent}
             </div>
           </div>

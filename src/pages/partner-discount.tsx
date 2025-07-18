@@ -124,8 +124,8 @@ const PartnerDiscount = ({
         imageProperties={{
           src: getImage('/images/partners-discount/internxt_cloud_storage.webp'),
           alt: 'Internxt Partners Discount',
-          width: 671,
-          height: 563,
+          width: 600,
+          height: 500,
         }}
       />
 

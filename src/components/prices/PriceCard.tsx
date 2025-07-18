@@ -398,7 +398,7 @@ export default function PriceCard({
   return (
     <div
       className={`${popular ? 'border-primary ring-[3px]' : 'ring-1 ring-gray-10'} flex ${
-        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[420px] lg:h-[850px] '
+        isStackCommerce ? 'h-[570px] w-[280px] ' : 'w-[400px] lg:h-[850px] '
       } flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
     >
       <div
