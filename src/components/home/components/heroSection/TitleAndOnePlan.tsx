@@ -39,11 +39,11 @@ const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOneP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex h-[37rem] w-full flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55  lg:h-[571px] lg:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex h-[35rem] w-[350px] flex-col items-center justify-center rounded-2xl px-10 shadow-soft backdrop-blur-55 lg:h-[33rem] lg:w-[500px] 1.5xl:h-[37rem] 1.5xl:w-[570px] `}
     >
-      <div className="w-full overflow-hidden px-8 lg:w-[506px] lg:px-0">
+      <div className="w-[440px] overflow-hidden px-16 lg:w-[400px] lg:px-0 1.5xl:w-[490px]">
         <div className="flex flex-col">
-          <h1 className="text-3xl font-semibold leading-tight text-white lg:text-5xl">
+          <h1 className="text-3xl font-semibold leading-tight text-white lg:text-4xl 1.5xl:text-5xl">
             {textContent.title.textBeforeBlueText}
             <span className="text-primary">{textContent.title.blueText}</span>
             {textContent.title.textAfterBlueText}
