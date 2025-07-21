@@ -178,7 +178,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
             {props.cta[0] !== 'Hide Login' && !props.hideLoginButton ? (
               <button
                 id="loginButton"
-                onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
+                onClick={() => goToLoginURL({ redirectURL: 'https://drive.internxt.com/login', lang: lang })}
                 className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-gray-80 focus:opacity-80'

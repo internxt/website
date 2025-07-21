@@ -1,6 +1,5 @@
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '@/components/components/Countdown';
-import Header from '@/components/shared/Header';
 import Animation from '@/components/home/components/Animation';
 import Image from 'next/image';
 
@@ -34,7 +33,7 @@ const HeroSection = ({ textContent, hideTimer }: HeroSectionProps) => {
                 />
               </div>
               <div className="flex max-w-[600px] flex-col items-center px-5 text-center text-white lg:items-start lg:px-0 lg:text-start">
-                <Header maxWidth="max-w-[400px]">{textContent.title}</Header>
+                <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
                 <p className="pt-6 text-2xl font-normal">{textContent.description}</p>
               </div>
               <button

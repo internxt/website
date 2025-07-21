@@ -13,12 +13,11 @@ import AnalysisSection from '@/components/media-area/AnalysisSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { MediaAreaText } from '@/assets/types/media-area';
 import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
-import { getImage } from '@/lib/getImage';
-import Header from '@/components/shared/Header';
 import { TextAndImageColumnSection } from '@/components/shared/components/TextAndImageColumnSection';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { KitCard } from '@/components/media-area/components/KitCard';
 import downloadItem from '@/lib/downloadItem';
+import { getImage } from '@/lib/getImage';
 
 interface MediaAreaProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -55,10 +54,8 @@ const MediaArea = ({
       <TextAndImageColumnSection
         TextComponent={
           <div className="flex w-full flex-shrink-0 flex-col items-center justify-center pt-10 text-center">
-            <Header>{textContent.HeroSection.title}</Header>
-            <h3 className="mb-6 w-full max-w-3xl text-xl font-normal text-gray-80">
-              {textContent.HeroSection.description}
-            </h3>
+            <h1 className="pb-6 text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.HeroSection.title}</h1>
+            <h3 className="w-full max-w-3xl text-xl font-normal text-gray-80">{textContent.HeroSection.description}</h3>
           </div>
         }
         imageProperties={{

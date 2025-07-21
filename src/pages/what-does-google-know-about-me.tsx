@@ -1,7 +1,6 @@
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/shared/CtaSection';
 import HeroSection from '@/components/what-does-google-know-about-me/HeroSection';
 import ManageGoogleDataSection from '@/components/what-does-google-know-about-me/ManageGoogleDataSection';
 import { ToolsSection } from '@/components/shared/sections/ToolsSection';
@@ -11,6 +10,7 @@ import RevealY from '@/components/components/RevealY';
 import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import Link from 'next/link';
+import CtaSection from '@/components/affiliates/CtaSection';
 
 const URL_REDIRECT = 'https://internxt.com/pricing';
 

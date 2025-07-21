@@ -1,10 +1,6 @@
-'use client';
-
 import { useEffect } from 'react';
 import { Info } from '@phosphor-icons/react';
-
 import { Inbox } from './components/InboxView';
-import Header from '@/components/shared/Header';
 import {
   EMAIL_STORAGE_KEY,
   INBOX_STORAGE_KEY,
@@ -250,7 +246,7 @@ export const HeroSection = ({ textContent, lang }) => {
       </div>
       <div className="flex w-full flex-col items-center justify-center space-y-10  px-2 md:max-w-[720px] ">
         <div className="flex w-full max-w-[895px] flex-col items-center justify-center text-center lg:max-w-xl">
-          <Header isToolsPage>{textContent.title}</Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
           <p className="pt-5 text-xl text-gray-80">{textContent.subtitle}</p>
         </div>
 

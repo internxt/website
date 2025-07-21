@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import { getImage } from '@/lib/getImage';
-import Header from '../shared/Header';
 import Button from '../shared/Button';
 import { MarqueeComponent } from './MarqueeComponent';
 
@@ -10,10 +9,10 @@ export const HeroSectionForSpecialOffer = ({ textContent }) => {
     <section className="overflow-hidden pt-5 lg:pt-10">
       <HeroSectionSafeArea>
         <div className="flex max-w-[550px] flex-col items-center gap-6 text-center lg:items-start lg:text-left">
-          <Header>
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
             <span className="text-primary">{textContent.title.blue}</span>
             {textContent.title.normal}
-          </Header>
+          </h1>
           <h3 className="text-xl font-semibold text-gray-100 lg:text-2xl">{textContent.description}</h3>
           <Button
             text={textContent.cta}
