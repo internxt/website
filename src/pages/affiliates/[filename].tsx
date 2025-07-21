@@ -78,7 +78,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
   }, [pathname, push, selectedPathName]);
 
   const redirectToPricingTable = () => {
-    window.location.href = '#priceTable';
+    window.location.href = '#horizontalPriceCard';
   };
 
   return (
