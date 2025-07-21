@@ -41,7 +41,7 @@ export const PriceBannerForCampaigns = ({
     >
       {/* Banner Desktop */}
       <div
-        className={`relative z-10 hidden h-[426px] flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1025px] 1.5xl:w-[1150px] 2xl:w-[1300px]`}
+        className={`relative z-10 hidden h-[426px] flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1100px] 1.5xl:w-[1150px] 2xl:w-[1300px]`}
         style={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: 'cover',
@@ -51,7 +51,7 @@ export const PriceBannerForCampaigns = ({
       >
         <div className="flex flex-col items-center overflow-hidden text-center lg:flex-row lg:items-start lg:text-left">
           <div
-            className={`${styles.titleAndOnePlanSection} my-10 ml-10 flex h-[341px] w-[70px] flex-col justify-between rounded-20 px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[680px]`}
+            className={`${styles.titleAndOnePlanSection} my-10 ml-10 flex h-[341px] w-[700px] flex-col justify-between rounded-20 px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[680px]`}
           >
             <div className="flex flex-col">
               <div className="flex flex-row items-center gap-3 pt-10">
@@ -100,15 +100,24 @@ export const PriceBannerForCampaigns = ({
               </div>
             </div>
           </div>
-          <div className="relative mr-20 h-[320px] w-full pt-8">
-            <Image
-              src={getImage('/images/campaigns/5th-anniversary/visual (pricing).webp')}
-              alt="Internxt 5th anniversary"
-              width={568}
-              height={502}
-              quality={100}
-            />
-          </div>
+        </div>
+        <div className="relative my-10 mr-10 h-[341px] w-[320px] 1.5xl:w-[360px]">
+          <Image
+            src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
+            alt="Internxt 5th anniversary"
+            width={600}
+            height={600}
+            quality={100}
+            className="absolute right-6 top-0 z-0 "
+          />
+          <Image
+            src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+            alt="Internxt x Valencia logo"
+            width={300}
+            height={200}
+            quality={100}
+            className="absolute bottom-8 right-0 z-10"
+          />
         </div>
       </div>
 
