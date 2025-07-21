@@ -192,8 +192,8 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
                 <GraphComponent
                   priceLabel={costs?.aws.cost}
                   price={(costs?.internxt.cost * costs?.aws.difference) / 100}
-                  activeBackground="bg-orange"
-                  background="bg-orange/6"
+                  activeBackground="bg-orange-1"
+                  background="bg-orange-100"
                   maxPrice={maxPrice}
                 />
                 <p className="text-lg font-medium">{textContent.companies[2]}</p>

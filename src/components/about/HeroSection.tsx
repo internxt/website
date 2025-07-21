@@ -1,18 +1,16 @@
-import Header from '@/components/shared/Header';
 import { getImage } from '@/lib/getImage';
 import { CompanyLogosRecognitions } from '../shared/CompanyLogosRecognitions';
 import Image from 'next/image';
 
 const HeroSection = ({ textContent }): JSX.Element => (
-  <section className="relative flex w-full flex-col overflow-hidden pt-20">
+  <section className="relative flex w-full flex-col overflow-hidden pt-10 lg:pt-20">
     <div className="relative flex flex-col items-center justify-center py-16 lg:py-20">
-      {/* Main title */}
       <div className="flex flex-col items-center justify-center space-y-16 px-6">
         <div className="flex flex-col space-y-6 text-center">
-          <Header className="text-gray-100">
+          <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">
             {textContent.title.line1} <br />
             {textContent.title.line2} <span className="text-primary">{textContent.blueText}</span>
-          </Header>
+          </h1>
 
           <p className="text-xl font-normal text-gray-80">{textContent.description}</p>
         </div>

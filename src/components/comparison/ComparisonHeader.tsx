@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import Header from '../shared/Header';
-
 interface ComparisonHeaderProps {
   textContent: any;
   redirectUrl: string;
@@ -17,12 +15,10 @@ const CodeComponent = ({ textContent }) => (
   </div>
 );
 
-export const ComparisonHeader = ({ textContent, redirectUrl, maxWithForTitle }: ComparisonHeaderProps) => (
+export const ComparisonHeader = ({ textContent, redirectUrl }: ComparisonHeaderProps) => (
   <div className="relative z-20 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-primary to-primary-dark px-6 py-16 pt-[130px] text-white">
     <div className="relative z-10 mb-16 flex flex-col items-center justify-center space-y-4 md:mb-8">
-      <Header maxWidth={maxWithForTitle} className="text-center text-white">
-        {textContent.title}
-      </Header>
+      <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>
 
       <h2 className="max-w-3xl text-center text-xl">{textContent.description}</h2>
 

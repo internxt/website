@@ -1,8 +1,6 @@
-import Header from '@/components/shared/Header';
-import { Check, ShieldCheck } from '@phosphor-icons/react';
+import { Check } from '@phosphor-icons/react';
 import { GetServerSidePropsContext } from 'next';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 interface TitleAndOnePlanProps {
   textContent: Record<string, any>;
@@ -11,22 +9,20 @@ interface TitleAndOnePlanProps {
   lang: GetServerSidePropsContext['locale'];
 }
 
-const TitleAndOnePlan = ({ textContent, header, footer, lang }: TitleAndOnePlanProps): JSX.Element => {
-  const [currency, setCurrency] = useState<string>('€');
-
+const TitleAndOnePlan = ({ textContent, header }: TitleAndOnePlanProps): JSX.Element => {
   return (
     <div className="hidden max-w-[544px] flex-col pt-8 lg:flex lg:pt-24 ">
       {header ?? (
         <div className="flex flex-col gap-6 ">
           <div className="flex flex-col">
-            <Header maxWidth="max-w-[500px]" className="text-gray-100 text-white">
+            <h1 className="text-3xl font-semibold text-white lg:text-5xl">
               {textContent.title.textBeforeBlueText}
               <span className="text-primary"> {textContent.title.blueText} </span>
               {textContent.title.textAfterBlueText}
-            </Header>
+            </h1>
 
             <p className="pt-4 text-xl text-white">
-              <span className="text-gray-100   text-white">{textContent.description}</span>
+              <span className="text-white">{textContent.description}</span>
             </p>
           </div>
           <div className="mx-auto flex flex-col lg:mx-0">

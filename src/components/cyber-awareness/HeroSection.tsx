@@ -1,5 +1,4 @@
 import { useRouter } from 'next/router';
-import Header from '@/components/shared/Header';
 import { PriceBannerForCampaigns } from '../lifetime/PriceBannerForCampaigns';
 
 const HeroSection = ({ textContent, bannerText }) => {
@@ -9,7 +8,7 @@ const HeroSection = ({ textContent, bannerText }) => {
   return (
     <section className="overflow-hidden pt-16">
       <div className=" flex h-60 items-center justify-center border-b border-white bg-gradient-to-b from-primary to-primary-dark">
-        <Header className="text-center text-white">{textContent.title}</Header>
+        <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>
       </div>
       <div className="flex flex-col items-center justify-center p-5 text-center md:p-20 lg:text-left">
         <div className="flex w-full max-w-[672px] flex-col">
