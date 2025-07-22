@@ -11,7 +11,7 @@ import { signup } from '@/lib/auth';
 interface SignUpProps {
   textContent: any;
   loading?: boolean;
-  provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR' | 'MIGHTYDEALS' | 'OYSTERVPN';
+  provider?: 'STACKCOMMERCE' | 'TECHCULT' | 'DEALMIRROR' | 'MIGHTYDEALS' | 'OYSTERVPN' | 'COINGATE';
 }
 
 export default function SignUp(props: Readonly<SignUpProps>) {
