@@ -94,25 +94,27 @@ const PartnerDiscount = ({
       <HeroSection
         TextComponent={
           <div className="flex flex-col gap-10">
-            <div className="flex max-w-[533px] flex-col items-center justify-center space-y-10 lg:items-start">
+            <div className="flex  flex-col items-center justify-center space-y-10 lg:items-start">
               <div className="flex flex-row rounded-lg bg-gray-5 px-5 py-2">
                 <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.header}</p>
               </div>
               <div className="flex flex-col space-y-8">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-6xl font-semibold">
+                  <p className="text-4xl font-semibold lg:text-6xl">
                     {langJson.HeroSection.title.normalText}
-                    <span className="text-6xl font-semibold text-primary">{langJson.HeroSection.title.blueText}</span>
+                    <span className="text-4xl font-semibold text-primary lg:text-6xl">
+                      {langJson.HeroSection.title.blueText}
+                    </span>
                   </p>
                 </div>
-                <p className="text-center text-xl text-gray-80 lg:text-left">
+                <p className="text-center text-base text-gray-80 lg:text-left lg:text-xl">
                   {langJson.HeroSection.description.normal}{' '}
-                  <span className="text-primary">{langJson.HeroSection.description.blue}</span>
+                  <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
                 </p>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 lg:flex-row lg:justify-start lg:space-y-0">
+            <div className="flex flex-col items-center justify-center space-x-8 space-y-5 pb-8 lg:flex-row lg:justify-start lg:space-y-0 lg:pb-0">
               <Button
                 className="flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
                 text={langJson.HeroSection.cta}
@@ -124,7 +126,7 @@ const PartnerDiscount = ({
         imageProperties={{
           src: getImage('/images/partners-discount/internxt_cloud_storage.webp'),
           alt: 'Internxt Partners Discount',
-          width: 671,
+          width: 640,
           height: 563,
         }}
       />

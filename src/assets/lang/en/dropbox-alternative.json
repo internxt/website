@@ -4,8 +4,8 @@
     "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you?",
     "useCode": {
       "line1": "Use code ",
-      "code": "SPECIAL75",
-      "line2": " at checkout for 75% off any Internxt plan!"
+      "code": "DROPBOX87",
+      "line2": " at checkout for 87% off any Internxt plan!"
     },
     "cta": "Choose plan"
   },
@@ -73,7 +73,7 @@
   },
   "CtaSection": {
     "title": "Secure your files from data breaches with Internxt",
-    "description": "Get 75% OFF with code SPECIAL75",
+    "description": "Get 87% OFF with code DROPBOX87",
     "cta": "Choose plan"
   },
   "TablesSection": {
@@ -151,8 +151,8 @@
   "UseCodeSection": {
     "title": {
       "line1": "Use code ",
-      "code": "SPECIAL75 ",
-      "line2": "for 75% off secure, encrypted cloud storage"
+      "code": "DROPBOX87 ",
+      "line2": "for 87% off secure, encrypted cloud storage"
     },
     "cta": "Choose plan"
   },
