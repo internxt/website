@@ -89,7 +89,7 @@ const PartnerDiscount = ({
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden />
+      <Navbar textContent={navbarLang} lang={locale} cta={['default']} fixed isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection
         TextComponent={
@@ -158,7 +158,7 @@ const PartnerDiscount = ({
         FirstComponent={
           <div className="flex flex-col items-center gap-9">
             <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
+              <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{langJson.FeatureSection.title}</h2>
               <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
             </div>
             <div className="content flex h-full w-full flex-col px-5 pt-6">
@@ -184,8 +184,6 @@ const PartnerDiscount = ({
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
-
-      <Footer textContent={footerLang} lang={locale} />
     </Layout>
   );
 };

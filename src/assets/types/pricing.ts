@@ -121,17 +121,14 @@ export interface BillingFrequency {
 
 export interface CtaBanner {
   label: string;
-
   title: string;
   subtitle: string;
+  subtitle2: string;
+  subtitle3: string;
   cta: string;
-  cta2: string;
   guarantee: string;
+  gift: string;
   lastCta: string;
-  titleMbl: string;
-  subtitleMbl: string;
-  descriptionMbl: string;
-  ctaMbl: string;
 }
 
 export interface Features {
@@ -143,7 +140,7 @@ export interface Features {
 }
 
 export interface FreePlanCard {
-  eyeBrown: string;
+  eyeBrow: string;
   description: string;
   cta: string;
 }

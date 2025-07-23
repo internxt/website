@@ -81,7 +81,10 @@
         "byteConverter": "Convertidor de Unidades",
         "passwordGenerator": "Generador de Contraseñas",
         "fileConverter": "Convertidor de archivos",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Eliminador de Metadatos",
+        "aiDetector": "Detector de IA",
+        "fileCompressor": "Compresor de Archivos"
       },
       "features": {
         "title": "Funciones",

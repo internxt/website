@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import {
   ArrowsCounterClockwise,
+  Brain,
+  Broom,
   Bug,
   CaretRight,
+  Detective,
   Envelope,
   FileDashed,
   Globe,
@@ -52,12 +55,6 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
       cta: textContent.toolsCard[5].cta,
       pathname: textContent.toolsCard[5].pathname,
     },
-    {
-      icon: Globe,
-      title: textContent.toolsCard[6].title,
-      cta: textContent.toolsCard[6].cta,
-      pathname: textContent.toolsCard[6].pathname,
-    },
   ];
   const filteredCards = cards.filter((item) => item.pathname !== pathname);
 
@@ -77,11 +74,14 @@ export const ToolsSection = ({ textContent, lang, bgColor }: { textContent: any;
             >
               <div className="flex flex-col items-center gap-4 text-center lg:flex-row lg:text-left">
                 <tool.icon size={32} className="text-primary" />
-                <p className="text-2xl font-medium">
-                  <span className="font-semibold text-primary">{textContent.free}</span> {tool.title}
+                <p className="flex items-start text-2xl font-medium text-black">
+                  {tool.title}
+                  <span className="ml-2 self-start rounded-2 bg-green-100 px-1 py-0.5 text-xs font-semibold text-green-0">
+                    {textContent.free}
+                  </span>
                 </p>
               </div>
-              <div className=" flex flex-row items-center gap-2 text-lg font-semibold text-primary hover:underline">
+              <div className=" flex flex-row items-center gap-2 text-lg font-medium text-primary hover:underline">
                 <Link href={tool.pathname} locale={lang} passHref target="_self" className="hover:text-primary">
                   {tool.cta}
                 </Link>

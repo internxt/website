@@ -217,7 +217,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-end justify-center justify-items-center">
+        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (
@@ -241,6 +241,7 @@ export const PricingSection = ({
                       isFamilyPage={isFamilyPage}
                       lang={lang}
                       darkMode={darkMode}
+                      showPromo={showPromo}
                     />
                   ))
                 : undefined}

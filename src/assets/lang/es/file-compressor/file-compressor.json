@@ -1,0 +1,166 @@
+{
+  "HeroSection": {
+    "title": "Comprimir archivos",
+    "description": {
+      "normal": "El mejor compresor de archivos para reducir el tamaño de tus vídeos, fotos y documentos de forma segura."
+    },
+    "cards": [
+      {
+        "title": "Archivo MOV",
+        "description": "Comprimir archivos de video gratis",
+        "pathname": "compress-mov"
+      },
+      {
+        "title": "Archivo PDF",
+        "description": "Comprimir archivos PDF gratis",
+        "pathname": "compress-pdf"
+      },
+      {
+        "title": "Archivo JPG",
+        "description": "Comprimir archivos JPG gratis",
+        "pathname": "compress-jpg"
+      },
+      {
+        "title": "Archivo PNG",
+        "description": "Comprimir archivos PNG gratis",
+        "pathname": "compress-png"
+      },
+      {
+        "title": "Archivo PPT",
+        "description": "Comprimir archivos PPT gratis",
+        "pathname": "compress-ppt"
+      },
+      {
+        "title": "Archivo Word",
+        "description": "Comprimir archivos Word gratis",
+        "pathname": "compress-word"
+      },
+      {
+        "title": "Archivo Excel",
+        "description": "Comprimir archivos Excel gratis",
+        "pathname": "compress-excel"
+      },
+      {
+        "title": "Archivo ZIP",
+        "description": "Comprimir archivos ZIP gratis",
+        "pathname": "compress-zip"
+      }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileCompressor": {
+      "title": "Comprime archivos online gratis con Internxt",
+      "description": [
+        "Esta herramienta gratuita es el mejor compresor de archivos para ayudarte a aprovechar al máximo tu espacio de almacenamiento en la nube. Con ella, puedes superar los límites de archivos adjuntos para subir y compartir tus videos, fotos, documentos y hojas de cálculo sin preocuparte por sobrepasar el límite de almacenamiento.",
+        "Es un servicio gratuito y fácil de usar, compatible con cualquier dispositivo, lo que te permite reducir el tamaño de tus archivos sin comprometer la calidad, la seguridad ni la privacidad. ¡Desbloquea todo el potencial de tu almacenamiento en la nube y tu colaboración con nuestra herramienta de compresión de archivos ilimitada hoy mismo!"
+      ]
+    },
+    "howUseFileCompressor": {
+      "title": "Cómo usar el compresor de archivos de Internxt",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo: arrástralo y suéltalo en el área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en \"Comprimir archivo\""
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descargar archivo"
+        }
+      ]
+    },
+    "whyUseFileCompressor": {
+      "title": "¿Por qué utilizar un compresor de archivos?",
+      "description": "Nuestro compresor de archivos ofrece una solución rápida y segura para ahorrar espacio de almacenamiento y compartir archivos de vídeo grandes, álbumes de fotos y más sin esfuerzo. Es gratuito, fácil de usar y no requiere descargas peligrosas ni que terceros recopilen tus datos, lo que lo convierte en el mejor compresor de archivos para tus necesidades de privacidad y gestión de archivos."
+    },
+    "cards": [
+      {
+        "title": "Comprime múltiples formatos",
+        "description": "Admitimos los formatos más populares que necesitas para comprimir tus documentos, imágenes y vídeos. Ofreciendo múltiples opciones de compresión te brinda mayor eficiencia, personalización y versatilidad al editar o colaborar con archivos."
+      },
+      {
+        "title": "Cifrado completo",
+        "description": "Al subir tus archivos, Internxt utiliza cifrado avanzado mediante HTTPS para protegerlos. Los archivos comprimidos se eliminan de nuestros servidores y, para garantizar la máxima privacidad, Internxt no almacena tus datos."
+      },
+      {
+        "title": "Sin registro",
+        "description": "Comprime tus archivos sin ingresar información personal. No te pedimos tu nombre, correo electrónico ni datos de facturación; simplemente te ofrecemos una compresión gratuita para que gestiones tus archivos sin límites."
+      },
+      {
+        "title": "Integración con Internxt",
+        "description": "Esta herramienta es el mejor compresor de archivos para usar con la gama completa de productos de privacidad de Internxt. Almacena archivos comprimidos con Internxt Drive o envía archivos adjuntos seguros con Send o Internxt Mail."
+      },
+      {
+        "title": "Compresión rápida y sencilla",
+        "description": "Sube tu archivo preferido a nuestro compresor y deja que Internxt se encargue de todo. Los archivos se comprimen rápidamente a un tamaño menor, para que puedas almacenarlos, compartirlos y adjuntarlos fácilmente."
+      },
+      {
+        "title": "Velocidades de carga más rápidas",
+        "description": "Comprimir tus archivos aumentará las velocidades de carga cuando subas a la nube o envíes correos electrónicos (dependiendo de tu conexión a Internet), lo que hará que compartir archivos sea mucho más fácil."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Comprime, almacena y comparte archivos con Internxt",
+    "description": "Una suite de privacidad completa para protegerte en línea.",
+    "cta": "Pásate a Internxt"
+  },
+  "CtaSection2": {
+    "title": "Gestión de archivos, simplificada.",
+    "description": "Convierte y almacena archivos de forma segura con Internxt Drive.",
+    "cta": "Crea tu cuenta"
+  },
+  "QASection": {
+    "title": "¿Tienes preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cuál es el mejor compresor de archivos?",
+        "answer": [
+          "El mejor compresor de archivos dependerá de tus necesidades, pero normalmente te permitirá comprimir varios formatos, será fácil de usar y garantizará que tus archivos estén cifrados durante todo el proceso.",
+          "Internxt ha desarrollado esta herramienta gratuita para ofrecerte una plataforma segura y cifrada para comprimir tus archivos, sin preocuparte de que terceros recopilen tu correo electrónico u otra información personal. Esto es lo que convierte la herramienta de Internxt en el mejor compresor de archivos para proteger la privacidad de tus datos."
+        ]
+      },
+      {
+        "question": "¿Qué tipos de archivo puedo comprimir?",
+        "answer": ["Con esta herramienta puedes comprimir archivos Word, Excel, PPT, JPG, PNG y PDF de forma gratuita."]
+      },
+      {
+        "question": "¿Puedo comprimir archivos desde un dispositivo móvil?",
+        "answer": [
+          "Sí, esta herramienta está disponible en todos los dispositivos, por lo que es el mejor compresor de archivos si necesitas comprimir archivos en cualquier lugar y en cualquier momento."
+        ]
+      },
+      {
+        "question": "¿Es seguro el proceso de compresión?",
+        "answer": [
+          "Sí, todos tus archivos están cifrados y protegidos durante todo el proceso de compresión, por lo que todo se mantiene seguro y privado. Una vez completado el proceso, los archivos se eliminan de nuestro servidor."
+        ]
+      },
+      {
+        "question": "¿Necesito crear una cuenta para usar el compresor?",
+        "answer": ["No, para proteger tus datos personales, no se requiere correo electrónico ni información de pago."]
+      },
+      {
+        "question": "¿Hay límites en la cantidad de archivos que puedo comprimir?",
+        "answer": [
+          "No, puedes usar esta herramienta tantas veces como quieras de forma gratuita, por lo que es el mejor compresor de archivos si tienes muchos archivos para comprimir, ya que no hay límites de uso."
+        ]
+      },
+      {
+        "question": "¿Puedo comprimir archivos de vídeo grandes?",
+        "answer": [
+          "Sí, puedes comprimir archivos de hasta XGB, lo que te ayudará a ahorrar espacio en tu dispositivo o enviar correos electrónicos y enlaces seguros dentro de los límites de estos servicios."
+        ]
+      },
+      {
+        "question": "¿Cómo ayuda la compresión de archivos al almacenamiento en la nube?",
+        "answer": [
+          "La compresión de archivos es una herramienta muy útil cuando se utilizan servicios de almacenamiento en la nube como Internxt Drive, ya que te ayuda a ahorrar espacio y almacenar más archivos en la nube. Muchos proveedores también imponen límites de carga, por lo que un buen compresor te ayudará a evitar estos límites y guardar todos tus archivos sin problema."
+        ]
+      }
+    ]
+  }
+}

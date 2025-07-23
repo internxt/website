@@ -99,6 +99,9 @@ export interface Tools {
   fileConverter: string;
   vpn: string;
   haveIBeenPwned: string;
+  metadataRemover: string;
+  aiDetector: string;
+  fileCompressor: string;
 }
 
 export interface Features {

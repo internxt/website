@@ -26,6 +26,9 @@ export interface NavbarProps {
   isBlackfriday?: boolean;
   isQuizSection?: boolean;
   mode?: 'subscription' | 'payment';
+  hideLogoLink?: boolean;
+  hideCTA?: boolean;
+  hideLoginButton?: boolean;
 }
 
 const EXCLUDED_PATHS_FOR_RIBBON = [
@@ -92,31 +95,53 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
-      <div className="mx-4 w-full lg:mx-10 xl:mx-32">
+      <div className="mx-4 w-full  lg:mx-10 lg:pt-0 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
               {/* Logo */}
-              <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+              {props.hideLogoLink ? (
                 <Image
                   width={96}
                   height={10.5}
                   loading="lazy"
-                  className="select-none"
+                  className="select-none pl-4 lg:hidden"
                   src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
-              </Link>
-              <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
+              ) : (
+                <Link href="/" locale={lang} passHref className="flex flex-shrink-0 pl-4 lg:hidden">
+                  <Image
+                    width={96}
+                    height={10.5}
+                    loading="lazy"
+                    className="select-none"
+                    src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
+                    alt="Internxt logo"
+                  />
+                </Link>
+              )}
+              {props.hideLogoLink ? (
                 <Image
                   width={110}
                   height={12}
                   loading="lazy"
-                  className="select-none"
+                  className="hidden flex-shrink-0 select-none lg:flex"
                   src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
                   alt="Internxt logo"
                 />
-              </Link>
+              ) : (
+                <Link href={'/'} locale={lang} passHref className="hidden flex-shrink-0 lg:flex">
+                  <Image
+                    width={110}
+                    height={12}
+                    loading="lazy"
+                    className="select-none"
+                    src={getImage(`/logos/internxt/${props.darkMode && !menuState ? 'white' : 'cool-gray-90'}.svg`)}
+                    alt="Internxt logo"
+                  />
+                </Link>
+              )}
             </div>
             <ItemsNavigation
               darkMode={props.darkMode ?? false}
@@ -150,10 +175,10 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               />
             </div>
 
-            {props.cta[0] === 'Hide Login' ? null : (
+            {props.cta[0] !== 'Hide Login' && !props.hideLoginButton ? (
               <button
                 id="loginButton"
-                onClick={() => goToLoginURL({ redirectURL: '', lang: lang })}
+                onClick={() => goToLoginURL({ redirectURL: 'https://drive.internxt.com/login', lang: lang })}
                 className={`hidden whitespace-nowrap rounded-lg border px-3 py-1 transition duration-150 ease-in-out focus:border focus:outline-none md:flex ${
                   props.darkMode && !menuState
                     ? 'bg-white text-gray-80 focus:opacity-80'
@@ -162,71 +187,76 @@ export default function Navbar(props: Readonly<NavbarProps>) {
               >
                 {props.textContent.links.login}
               </button>
-            )}
-            {props.cta[0] === 'default' ? (
-              <button
-                onClick={() => router.push('/pricing')}
-                id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
-                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
-              >
-                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
-              </button>
-            ) : (
-              ''
-            )}
-            {props.cta[0] === 'chooseStorage' ? (
-              <button
-                onClick={() => router.push('/pricing')}
-                id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
-                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
-              >
-                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
-              </button>
-            ) : undefined}
+            ) : null}
 
-            {props.cta[0] === 'priceTable' ? (
-              <button
-                onClick={() => router.push('#priceTable')}
-                id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
-                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
-              >
-                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
-              </button>
-            ) : undefined}
+            {!props.hideCTA && (
+              <>
+                {props.cta[0] === 'default' ? (
+                  <button
+                    onClick={() => router.push('/pricing')}
+                    id="choose-storage-button"
+                    className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                    transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+                  >
+                    <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+                  </button>
+                ) : (
+                  ''
+                )}
+                {props.cta[0] === 'chooseStorage' ? (
+                  <button
+                    onClick={() => router.push('/pricing')}
+                    id="choose-storage-button"
+                    className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                    transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+                  >
+                    <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+                  </button>
+                ) : undefined}
 
-            {props.cta[0] === 'payment' ? (
-              <button
-                onClick={() => router.push('#payment')}
-                id="choose-storage-button"
-                className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
-                transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
-              >
-                <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
-              </button>
-            ) : undefined}
+                {props.cta[0] === 'priceTable' ? (
+                  <button
+                    onClick={() => router.push('#priceTable')}
+                    id="choose-storage-button"
+                    className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                    transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+                  >
+                    <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+                  </button>
+                ) : undefined}
 
-            {props.cta[0] === 'checkout' ? (
-              <button
-                type="button"
-                onClick={() => {
-                  checkout({
-                    planId: '',
-                    planType: 'individual',
-                  });
-                }}
-                className={`flex justify-center rounded-lg border border-transparent px-4 py-1.5 text-sm font-medium focus:outline-none sm:inline-flex ${
-                  props.darkMode && !menuState
-                    ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
-                    : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
-                } transition-all duration-75`}
-              >
-                <p className="whitespace-nowrap">{props.textContent.links.checkout}</p>
-              </button>
-            ) : (
-              ''
+                {props.cta[0] === 'payment' ? (
+                  <button
+                    onClick={() => router.push('#payment')}
+                    id="choose-storage-button"
+                    className={`flex justify-center rounded-lg border border-transparent bg-primary px-3 py-1 text-sm font-medium text-white  
+                    transition-all duration-75 hover:bg-primary-dark focus:outline-none active:bg-primary-dark sm:inline-flex`}
+                  >
+                    <p className="whitespace-nowrap">{props.textContent.links.chooseStorage}</p>
+                  </button>
+                ) : undefined}
+
+                {props.cta[0] === 'checkout' ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      checkout({
+                        planId: '',
+                        planType: 'individual',
+                      });
+                    }}
+                    className={`flex justify-center rounded-lg border border-transparent px-4 py-1.5 text-sm font-medium focus:outline-none sm:inline-flex ${
+                      props.darkMode && !menuState
+                        ? 'bg-white text-cool-gray-90 focus:bg-cool-gray-10 active:bg-cool-gray-10'
+                        : 'bg-primary text-white hover:bg-primary-dark active:bg-primary-dark'
+                    } transition-all duration-75`}
+                  >
+                    <p className="whitespace-nowrap">{props.textContent.links.checkout}</p>
+                  </button>
+                ) : (
+                  ''
+                )}
+              </>
             )}
             <div className="hidden items-center justify-center bg-transparent lg:flex">
               {!props.hideNavbar ? <LanguageBox darkMode={props.darkMode} /> : undefined}
@@ -258,7 +288,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                 {/* Mobile hamburger menu */}
                 {
                   <div
-                    className={`absolute right-0 top-20 overflow-hidden bg-white font-semibold transition-all duration-500 ${
+                    className={`absolute right-0 top-10 overflow-hidden bg-white font-semibold transition-all duration-500 ${
                       menuState ? 'h-screen w-screen pb-14' : 'h-0 '
                     }`}
                   >
@@ -324,7 +354,20 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                           </>
                         )}
                       </Disclosure>
-
+                      <Link
+                        href="/business"
+                        locale={props.lang}
+                        role="link"
+                        tabIndex={0}
+                        onClick={() => {
+                          setMenuState(false);
+                        }}
+                        className={`flex w-full translate-y-0 px-8 py-4 outline-none transition delay-100 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
+                        {props.textContent.links.business}
+                      </Link>
                       <Disclosure
                         as="div"
                         className={`flex w-screen translate-y-0 cursor-pointer flex-col outline-none transition delay-200 duration-300 ${

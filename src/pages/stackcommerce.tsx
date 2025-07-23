@@ -1,19 +1,17 @@
 import { useState } from 'react';
 
-import HeroSection from '@/components/lifetime/HeroSection';
 import FeatureSection from '@/components/lifetime/FeatureSection';
-import GetLifetimeSection from '@/components/lifetime/GetLifetimeSection';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
-import PaymentSection from '@/components/lifetime/PaymentSection';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/lifetime/CtaSection';
 
 import SignUp from '@/components/auth/SignUp';
-import { X } from '@phosphor-icons/react';
+import { Percent, X } from '@phosphor-icons/react';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { GetServerSidePropsContext } from 'next';
-import router from 'next/router';
+import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
+import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
+import Button from '@/components/shared/Button';
 
 const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navbarLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
@@ -46,26 +44,29 @@ const StackCommerce = ({ lang, metatagsDescriptions, langJson, footerLang, navba
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed mode="payment" isLinksHidden />
 
-      <HeroSection
-        hideTimer={true}
-        previewImg="/images/lifetime/file_item.webp"
-        textContent={langJson.HeroSection}
-        onRedirectButtonClicked={() => router.push('#payment')}
+      <AnimatedHeroSection
+        textComponent={
+          <>
+            <div className="mr-20 flex flex-col ">
+              <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
+            </div>
+
+            <div className="flex max-w-[400px] flex-row items-start justify-start space-x-2.5 rounded-lg bg-primary/25 p-4 xl:items-center">
+              <p
+                className="text-md font-regular text-white"
+                dangerouslySetInnerHTML={{ __html: langJson.HeroSection.info }}
+              ></p>
+            </div>
+
+            <Button onClick={onButtonClicked} text={langJson.HeroSection.cta} className="z-10" />
+          </>
+        }
       />
 
-      <PaymentSection
-        textContent={langJson.PaymentSection}
-        lang={'en'}
-        lifetimeMode="redeem"
-        onButtonClicked={onButtonClicked}
-        isStackCommerce
-      />
-
-      <GetLifetimeSection textContent={langJson.GetLifetimeSection} />
+      <MostSecureSection textContent={langJson.MostSecureSection} onRedirectButtonClicked={onButtonClicked} />
 
       <FeatureSection textContent={langJson.FeatureSection} withoutCta />
-
-      <CtaSection textContent={langJson.CtaSection} />
 
       <MinimalFooter lang={lang} footerLang={footerLang.FooterSection} />
     </Layout>

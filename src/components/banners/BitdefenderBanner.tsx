@@ -6,16 +6,20 @@ import Image from 'next/image';
 
 interface BitdefenderBannerProps {
   languageForImage: string;
+  isTempMail?: boolean;
 }
 
-const BitdefenderBanner = ({ languageForImage }: BitdefenderBannerProps) => {
+const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerProps) => {
   const router = useRouter();
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowBanner(true);
-    }, 3000);
+    const timer = setTimeout(
+      () => {
+        setShowBanner(true);
+      },
+      isTempMail ? 10000 : 3000,
+    );
 
     return () => clearTimeout(timer);
   }, []);
@@ -51,15 +55,17 @@ const BitdefenderBanner = ({ languageForImage }: BitdefenderBannerProps) => {
           <X size={32} className="text-white" />
         </button>
 
-        <Image
-          src={getImage(`/banners/Ban_Internext_800x450_${languageForImage}.jpg`)}
-          alt="File Arrow Up icon"
-          width={800}
-          height={110}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={handleOnClick}
-        />
+        <div className="w-[350px] lg:w-[650px] ">
+          <Image
+            src={getImage(`/banners/Ban_Internext_800x450_${languageForImage}.jpg`)}
+            alt="File Arrow Up icon"
+            width={800}
+            height={110}
+            quality={100}
+            style={{ cursor: 'pointer' }}
+            onClick={handleOnClick}
+          />
+        </div>
       </div>
     </div>
   );

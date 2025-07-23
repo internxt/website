@@ -69,6 +69,14 @@
     "line1": "Guarda tus archivos libres de virus,",
     "blueText": "regístrate en Internxt gratis"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Elimina metadatos reveladores de tus archivos.",
+    "blueText": "Limpia tu huella digital con Internxt"
+  },
+  "SignUpAiDetector": {
+    "line1": "Detecta texto AI, garantiza su autenticidad y",
+    "blueText": "publica de forma confidencial con Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "Usa miles de bytes en la nube de almacenamiento segura",
     "blueText": "de Internxt"
@@ -108,9 +116,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": " 85% en todos los planes lifetime! ",
-      "normalText": "Que la seguridad te acompañe",
-      "cta": "Comprar"
+      "boldText": "Este verano lleva toda tu información contigo ",
+      "normalText": "¡80% de descuento en todos los planes!",
+      "cta": "Elige tu plan "
     }
   },
   "lifetimeBanner": {
@@ -128,5 +136,9 @@
     "subtitle": "Hay una oferta exclusiva esperándote.",
     "cta": "80% DE DESCUENTO",
     "guarantee": "Garantía de devolución de 30 días"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "Ahorra espacio. ",
+    "blueText": "Comprime tus archivos gratis y optimiza tus dispositivos."
   }
 }

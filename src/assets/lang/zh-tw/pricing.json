@@ -38,17 +38,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85%優惠",
-      "title": "讓隱私與你同在！",
-      "subtitle": "終身規劃: Internxt 雲端硬碟、防毒軟體與 VPN",
-      "cta": "立即取得你的方案！",
-      "cta2": "享有85%折扣",
-      "guarantee": "30天退款保證",
-      "lastCta": "*優惠僅適用於免費帳號或新用戶",
-      "titleMbl": "讓隱私與你同在！",
-      "subtitleMbl": "終身規劃: Internxt 雲端硬碟、防毒軟體與 VPN。",
-      "descriptionMbl": "參加抽獎，有機會獲得 Internxt 後背包",
-      "ctaMbl": "購買你的方案"
+      "label": "省下 80%",
+      "title": "年度與終身  方案",
+      "subtitle": "今夏保護你的資料，隨身攜帶不受限！",
+      "subtitle2": "Drive、防毒與 VPN",
+      "subtitle3": "Meet、Mail、裝置清理器和暗網監控",
+      "cta": "取得你的方案",
+      "cta2": "享 80% 折扣",
+      "guarantee": "30 天退款保證",
+      "gift": "抽獎贈送 Internxt x Swiss Peak 背包",
+      "lastCta": "*優惠僅適用於免費帳戶或新用戶"
     },
     "save": "節省高達",
     "planTitles": {
@@ -60,7 +59,7 @@
         "normalText": "所有我們的獨家終身計劃"
       },
       "blackFriday": {
-        "title": "黑色星期五超級促銷：最安全的雲端儲存方案享85%折扣",
+        "title": "黑色星期五超級促銷：最安全的雲端儲存方案享80%折扣",
         "description": "使用 Internxt 保護您的數據，避免數據洩露、財務損失和隱私風險。告別那些從您的個人信息中牟利的科技巨頭。"
       }
     },

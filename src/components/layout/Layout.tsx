@@ -12,6 +12,7 @@ import {
 } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
+import { saveGclidToCookie } from '@/lib/cookies';
 
 const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
@@ -79,6 +80,11 @@ LayoutProps) {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const source = params.get('utm_source');
+    const gclid = params.get('gclid');
+
+    if (gclid) {
+      saveGclidToCookie(gclid);
+    }
 
     if (source !== 'Impact') return;
 
@@ -137,20 +143,6 @@ LayoutProps) {
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                'ad_storage': 'denied',
-                'analytics_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied'
-              });
-            `,
-          }}
-        />
 
         <script
           dangerouslySetInnerHTML={{
@@ -161,6 +153,22 @@ LayoutProps) {
             })(window,document,'script','dataLayer','GTM-P7N7LW5G');`,
           }}
         ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
+      (function(){
+          var t = document.createElement("script");
+          t.type = "text/javascript";
+          t.async = true;
+          t.id = "AddShoppers";
+          t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
+          document.getElementsByTagName("head")[0].appendChild(t);
+      })();
+    `,
+          }}
+        />
 
         {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
           
@@ -214,6 +222,16 @@ LayoutProps) {
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
         {!disableDrift && <Script defer src="/js/drift.js" />}
       </Head>
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-P7N7LW5G"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+          title="Google Tag Manager iframe"
+        ></iframe>
+      </noscript>
 
       <Script type="application/ld+json" strategy="beforeInteractive">
         {`{

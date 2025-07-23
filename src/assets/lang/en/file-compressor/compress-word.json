@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compress Word (DOC) files with Internxt for an easier, more productive way to share and collaborate on important documents.",
+    "secureUpload": "Secure uploads protected by HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "How to compress a DOC file",
+      "description": "To compress a DOC file, follow these steps:",
+      "steps": [
+        {
+          "step": "Step 1:",
+          "description": "Upload your DOC file: drag and drop your file into the area above, or upload it from your device to start the conversion."
+        },
+        {
+          "step": "Step 2:",
+          "description": "Click ‘Compress DOC file’"
+        },
+        {
+          "step": "Step 3:",
+          "description": "Download your file."
+        }
+      ],
+      "outro": "With this tool, you can compress Word files for free for multiple files whenever you need. When you compress your documents, they are automatically secured with encrypted uploads to guarantee the privacy of your documents."
+    },
+    "whyConvert": {
+      "title": "Why you may need to compress Word files",
+      "intro": "When crafting long-form essays, reports, documents, contracts, etc, attachment sizes can soon add up, making it difficult to share multiple documents in one file. Compressing Doc files can significantly reduce the size of your files for easier collaboration and:",
+      "bullets": [
+        "Compress Word files for easier file sharing",
+        "Stay within upload size limits",
+        "Manage and collaborate on group projects"
+      ],
+      "outro": "All your files are encrypted during the upload and compression process to keep your Word files private, so you can compress, store, and share your documents in confidence with Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "A secure platform to compress, store, and share Word files",
+    "cta": "Get Internxt"
+  }
+}

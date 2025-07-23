@@ -34,24 +34,23 @@
     "features": [
       "El almacenamiento en la nube más seguro",
       "Más barato que las alternativas",
-      "Garantía de devolución de dinero de 30 días"
+      "Garantía de devolución de 30 días"
     ],
     "howMuchStorage": "¿Cuánto almacenamiento en línea necesitas?",
     "offerEnds": "Termina en:"
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "Oferta 85%",
-      "title": "Que la privacidad te acompañe!",
-      "subtitle": "Planes lifetime: Internxt Drive, Antivirus, y VPN",
-      "cta": "Consigue tu plan!",
-      "cta2": "Obtén un 85% de descuento",
+      "label": "Ahorra un 80%",
+      "title": "Planes anuales y de por vida",
+      "subtitle": "Este verano, protege y lleva toda tu información a todas partes",
+      "subtitle2": "Drive, Antivirus y VPN",
+      "subtitle3": "Meet, Mail, Limpiador de Dispositivos y Dark Web Monitor",
+      "cta": "Consigue tu plan",
+      "cta2": "Obtén un 80% de descuento",
       "guarantee": "Garantía de devolución de 30 días",
-      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios",
-      "titleMbl": "Que la privacidad te acompañe!",
-      "subtitleMbl": "Planes lifetime: Internxt Drive, Antivirus, and VPN.",
-      "descriptionMbl": "Entra en el sorteo de una mochila Internxt",
-      "ctaMbl": "Compra tu plan"
+      "gift": "Sorteo mochila Internxt x Swiss Peak",
+      "lastCta": "*Oferta válida para cuentas gratuitas o nuevos usuarios"
     },
     "planTitles": {
       "individuals": "Planes individuales",
@@ -62,7 +61,7 @@
         "normalText": "en todos nuestros planes exclusivos de por vida"
       },
       "blackFriday": {
-        "title": "Mega oferta de Black Friday: consigue un 85 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
+        "title": "Mega oferta de Black Friday: consigue un 80 % de DESCUENTO en todos los planes de almacenamiento en la nube más seguros",
         "description": "Protege tus datos con Internxt para evitar brechas de seguridad, pérdidas financieras y riesgos de privacidad. Di adiós a las grandes tecnológicas que se benefician de tu información personal."
       }
     },
@@ -87,7 +86,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "FaqSection": {

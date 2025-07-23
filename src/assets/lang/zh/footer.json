@@ -81,7 +81,10 @@
         "byteConverter": "字节转换器",
         "passwordGenerator": "密码生成器",
         "fileConverter": "文件转换器",
-        "haveIBeenPwned": "我被入侵了"
+        "haveIBeenPwned": "我被入侵了",
+        "metadataRemover": "元数据删除器",
+        "aiDetector": "AI 检测器",
+        "fileCompressor": "文件压缩器"
       },
       "features": {
         "title": "功能",

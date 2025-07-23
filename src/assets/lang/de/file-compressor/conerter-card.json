@@ -1,0 +1,24 @@
+{
+  "title": "${{pathFrom}}-Datei komprimieren",
+  "secureUpload": "Sichere Uploads garantiert durch Internxts Datenschutz. Wir speichern keine Informationen.",
+  "dragNDropArea": {
+    "maxFileSize": "Maximale Dateigröße: 1 GB",
+    "dragYourFile": "Ziehen Sie Ihre ${{pathFrom}}-Datei hierher",
+    "cta": "${{pathFrom}}-Datei auswählen",
+    "draggingFile": "Datei hier ablegen"
+  },
+  "fileSelected": {
+    "title": "Datei zum Komprimieren ausgewählt",
+    "cancel": "Abbrechen",
+    "convert": "${{pathFrom}}-Datei komprimieren"
+  },
+  "converting": "Ihre Datei wird komprimiert",
+  "fileConverted": {
+    "label": "Ihre ${{pathFrom}}-Datei wurde erfolgreich komprimiert",
+    "title": "Ihr Download startet in Kürze automatisch",
+    "description": "Falls nicht, klicken Sie auf den untenstehenden Button.",
+    "goHome": "Startseite",
+    "convertAnother": "Weitere Datei komprimieren",
+    "downloadFile": "${{pathFrom}}-Datei herunterladen"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Komprimiere eine MOV-Datei, um die Dateigröße zu reduzieren und Videos ohne Qualitätsverlust mit Internxt zu teilen.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine MOV-Datei",
+      "description": "So komprimierst du eine MOV-Datei:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine MOV-Datei hoch: Ziehe sie in den oberen Bereich oder lade sie von deinem Gerät hoch, um die Konvertierung zu starten."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „MOV-Datei komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Mit diesem Tool kannst du MOV-Dateien jederzeit kostenlos komprimieren. Alle Dateien werden mit verschlüsselten Uploads geschützt, um die Privatsphäre deiner Videos zu gewährleisten."
+    },
+    "whyConvert": {
+      "title": "Warum solltest du eine MOV-Datei komprimieren?",
+      "intro": "Große Videodateien online zu versenden kann schwierig sein, da E-Mails, Filesharing- oder Cloud-Dienste Beschränkungen setzen. Mit Internxt erhältst du ein sicheres und kostenloses Tool, das dir erlaubt:",
+      "bullets": [
+        "Videos schneller hochzuladen und Bandbreite zu sparen",
+        "Hohe Videoqualität zu erhalten",
+        "Dateien innerhalb von Upload-Limits zu halten"
+      ],
+      "outro": "Alle deine Dateien werden während des Upload- und Komprimierungsvorgangs verschlüsselt, um die Privatsphäre zu wahren. So kannst du deine Dateien sicher komprimieren, speichern und teilen – mit Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von MOV-Dateien",
+    "cta": "Jetzt zu Internxt wechseln"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Save 85%",
+    "label": "Save 80%",
     "title": {
       "line1": "Secure cloud storage.",
       "blueText": "Guaranteed.",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Store your files safely, now ",
-        "blueText": "85% cheaper"
+        "blueText": "80% cheaper"
       },
       "trustedBy": "Trusted by 330,000+ people",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " cloud storage and privacy suite"
       },
       "subtitle": "Full Security. Total control.",
-      "description": "Get 85% OFF our award-winning privacy services",
+      "description": "Get 80% OFF our award-winning privacy services",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus & more",
         "Post-quantum zero-knowledge encryption",
@@ -73,16 +73,16 @@
 
       "startFrom": {
         "normal1": "Start from ",
-        "price": "3",
+        "price": "2.00",
         "normal2": " /month"
       },
       "claimDeal": "Claim deal",
       "guarantee": "30-day money-back guarantee"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Save 85%",
-      "title": "Save on privacy, you will...",
-      "subtitle": "Internxt Drive, Antivirus, and VPN",
+      "saveLabel": "Save 80%",
+      "title": "World Environment Day",
+      "subtitle": "Annual and Lifetime plans!",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee"
     },

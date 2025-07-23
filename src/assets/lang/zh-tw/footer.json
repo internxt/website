@@ -80,7 +80,10 @@
         "passwordGenerator": "密碼生成器",
         "fileConverter": "文件轉換器",
         "vpn": "VPN 擴展",
-        "haveIBeenPwned": "我被駭客入侵了嗎"
+        "haveIBeenPwned": "我被駭客入侵了嗎",
+        "metadataRemover": "元數據刪除器",
+        "aiDetector": "AI 檢測器",
+        "fileCompressor": "檔案壓縮器"
       },
       "features": {
         "title": "功能",

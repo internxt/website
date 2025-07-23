@@ -6,7 +6,8 @@
       "line2": "protects you online"
     },
     "description": "Surf the web in complete freedom and privacy with Internxt VPN.",
-    "cta": "Get Internxt"
+    "cta": "Get Internxt",
+    "download": "Download"
   },
   "EncryptedVPNSection": {
     "title": "Internxt's encrypted VPN extension",
@@ -61,6 +62,7 @@
     "subtitle": "Internxt’s VPN extension uses fast, secure servers to encrypt and transmit sensitive data.",
     "description": "Our VPN masks your IP address and protects your information from third-party data collection.",
     "cta": "Get Internxt",
+    "download": "Download",
     "cards": [
       "Prevent targeted ads",
       "Anonymously create accounts",

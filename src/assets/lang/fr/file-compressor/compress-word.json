@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Compressez des fichiers Word (DOC) avec Internxt pour une manière plus simple et productive de partager et collaborer sur des documents importants.",
+    "secureUpload": "Téléversements sécurisés protégés par HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Comment compresser un fichier DOC",
+      "description": "Pour compresser un fichier DOC, suivez ces étapes :",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier DOC : glissez-le dans la zone ci-dessus ou sélectionnez-le depuis votre appareil pour démarrer la conversion."
+        },
+        {
+          "step": "Étape 2 :",
+          "description": "Cliquez sur « Compresser le fichier DOC »"
+        },
+        {
+          "step": "Étape 3 :",
+          "description": "Téléchargez votre fichier."
+        }
+      ],
+      "outro": "Avec cet outil, vous pouvez compresser gratuitement des fichiers Word à tout moment. Une fois compressés, vos documents sont automatiquement sécurisés grâce à un téléversement chiffré pour garantir leur confidentialité."
+    },
+    "whyConvert": {
+      "title": "Pourquoi compresser un fichier Word ?",
+      "intro": "Lors de la rédaction d’essais, rapports, contrats ou autres documents longs, la taille des fichiers peut rapidement augmenter, rendant difficile leur envoi ou collaboration. Compresser les fichiers DOC peut considérablement réduire leur taille afin de :",
+      "bullets": [
+        "Faciliter le partage de fichiers Word",
+        "Respecter les limites de taille de téléversement",
+        "Gérer et collaborer sur des projets en équipe"
+      ],
+      "outro": "Tous vos fichiers sont chiffrés pendant le processus de téléversement et de compression pour garantir leur confidentialité. Vous pouvez ainsi compresser, stocker et partager vos documents en toute confiance avec Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Une plateforme sécurisée pour compresser, stocker et partager vos fichiers Word",
+    "cta": "Passez à Internxt"
+  }
+}

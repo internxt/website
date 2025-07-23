@@ -58,7 +58,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                     onTabSelectorButtonClicked(index);
                   }}
                 >
-                  <p className="text-start text-2xl font-medium text-white  hover:text-primary">{info.selectorTab}</p>
+                  <p className=" text-start text-2xl font-medium  text-white hover:text-primary">{info.selectorTab}</p>
                 </button>
                 <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
               </Fragment>
@@ -96,7 +96,7 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
                 className="rounded- flex w-full shrink-0 snap-center flex-col justify-end px-5"
               >
                 <div className="flex h-full flex-col">
-                  <div className="flex min-h-[110px] w-full max-w-[890px] flex-col items-end justify-end">
+                  <div className="flex min-h-[110px] flex-col items-end justify-end px-3">
                     <p className="py-5 text-center text-3xl font-medium text-white">
                       {textContent.cards[selectedTab].selectorTab}
                     </p>

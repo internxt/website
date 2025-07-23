@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Internxt te permite comprimir varios archivos PDF gratis en línea. Protege y comparte tus PDF sin preocuparte por los límites de tamaño de archivo adjunto.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo PDF",
+      "description": "Para comprimir un archivo PDF, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo PDF: arrástralo y suéltalo en el área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en «Comprimir PDF»"
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta, puedes comprimir varios archivos PDF gratis cuando lo necesites. Todos los archivos están protegidos mediante subidas cifradas para garantizar la privacidad de tus documentos."
+    },
+    "whyConvert": {
+      "title": "Por qué podría ser necesario comprimir archivos PDF grandes",
+      "intro": "Enviar archivos PDF grandes puede generar problemas con los límites de correo electrónico, de compartición de archivos, de carga o con velocidades lentas de subida. Con esta herramienta gratuita, puedes comprimir varios archivos PDF gratis y disfrutar de estas ventajas:",
+      "bullets": [
+        "Optimizar archivos para visualización web o móvil",
+        "Evitar restricciones de tamaño de carga",
+        "Ahorrar espacio de almacenamiento"
+      ],
+      "outro": "Esta herramienta no tiene límites, por lo que puedes comprimir archivos PDF grandes de hasta XGB y manejar múltiples archivos sin necesidad de registrarte ni enfrentarte a restricciones diarias."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos PDF",
+    "cta": "Pásate a Internxt"
+  }
+}

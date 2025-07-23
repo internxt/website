@@ -1,0 +1,256 @@
+{
+  "HeroSection": {
+    "title": "Metadata Remover",
+    "subtitle2": "Remove metadata from your files to stay anonymous online.",
+    "secure": "Secure uploads are protected by HTTPS",
+    "dropFile": {
+      "line1": "Drop your file to remove metadata"
+    },
+    "fileSelected": "File uploaded successfully",
+    "cancel": "New file",
+    "download": "Download",
+    "removeMetadata": "Remove metadata",
+    "close": "Close",
+    "scanNow": "Remove metadata",
+    "selectFile": "Choose file",
+    "dropHere": "Drop file here",
+    "loading": "Loading...",
+    "maxFileSize": {
+      "title": "File size limit exceeded",
+      "description": "Max file size of 100MB"
+    },
+    "table": {
+      "loading": "Loading...",
+      "metadataRemoved": "All metadata has been removed",
+      "automaticDownload": "Your download will start automatically",
+      "detected": "Detected",
+      "undetected": "Undetected",
+      "unableToProcess": "Unable to process",
+      "analyzing": "Removing Metadata...",
+      "scanTime": "Scan time",
+      "name": "Name",
+      "detection": "Detection"
+    },
+    "error": {
+      "title": "Something went wrong",
+      "description": "An error occurred while sending the file, please try again later"
+    }
+  },
+  "FeaturesSection": {
+    "whyToScan": {
+      "title": "Why it’s vital to use a virus scanner",
+      "description": "Scan first, ask questions later. Spot viruses before they infiltrate your devices."
+    },
+    "virusesHatePrivacy": {
+      "title": "Viruses hate your privacy",
+      "description": "A potent virus can steal sensitive information like your credentials or passwords, encrypt and lock you out of your data, make individual transactions within apps, monitor your computer, and even attack other devices on connected networks. A virus has the potential to access nearly everything that is locked away on your hardware."
+    },
+    "stopMalware": {
+      "title": "Stop malware before it stops you",
+      "description": "Once a virus has propagated, it can infect all your programs and applications without prejudice. Its destructive code can and likely will spread everywhere. That is why it is crucial to utilize virus scanner."
+    },
+    "freeOnlineScanner": {
+      "title": "A free online virus scanner you can trust",
+      "description": "Safeguard your privacy with our free virus scanner, designed to help you avoid infection and protect your computer."
+    },
+    "scanFiles": {
+      "title": "Scan files for viruses in complete confidence",
+      "description": "Internxt has and will always put users' privacy and security first. We are committed to creating a more fair, more free, and more transparent internet for all. That's why we created our free online virus scanner, to shine a light on stealthy viruses and expose malicious malware."
+    },
+    "hero": {
+      "title": "Keep your personal information safe from data leaks",
+      "description": [
+        "Remove hidden data from your files, including author information, location tags, and device details that could compromise your privacy if shared with the wrong people.",
+        "Use our free metadata remover online to keep your files anonymous and secure before you share them. Uploaded files are cleaned of metadata instantly and then deleted. We never store your data; we just keep it private."
+      ]
+    },
+    "howToUse": {
+      "title": "How to use Internxt's metadata remover",
+      "steps": [
+        {
+          "step": 1,
+          "text": "Upload the file from your device, or click & drag it onto the page."
+        },
+        {
+          "step": 2,
+          "text": "Wait a few seconds for us to strip the metadata."
+        },
+        {
+          "step": 3,
+          "text": "Your download will start automatically."
+        },
+        {
+          "step": 4,
+          "text": "All emails received will appear in your inbox above"
+        }
+      ]
+    },
+    "whatIs": {
+      "title": "What is a metadata remover?",
+      "description": [
+        "Metadata is data that describes information about other data. When you share or store files, this type of data contains information about the files, device details, location, author, editing history, and more.",
+        "Internxt's metadata remover solves the problem of exposed metadata by quickly deleting the information that is linked to your files. It's a simple, free, and secure way to increase your anonymity online."
+      ]
+    }
+  },
+  "CtaSection1": {
+    "title": "Every file tells a story",
+    "description": "Wipe your file’s metadata and secure your files with Internxt",
+    "cta": "Choose your plan"
+  },
+  "CtaSection2": {
+    "title": "Stop oversharing online",
+    "description": "Delete your file’s metadata for maximum privacy.",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is metadata, and why should I remove it?",
+        "answer": [
+          "Metadata describes the files, device details, location, author, editing history, and more. ",
+          "You should delete this information using a video, photo, or image metadata remover to prevent external bodies from gaining access to personalised information about you that you would rather keep private."
+        ]
+      },
+      {
+        "question": "How to know if your files have malware?",
+        "answer": [
+          "Basically, all files you create online. Word, Excel, PDFs, videos, images, etc, all have metadata in some form or another. ",
+          "The kind of metadata these files contain will vary depending on their contents, so if you have a file you want to keep private, using a metadata cleaner will delete this information for you. "
+        ]
+      },
+      {
+        "question": "Is it safe to upload sensitive files?",
+        "answer": [
+          "With Internxt’s metadata remover, yes. Files are encrypted, processed securely, and everything is deleted once the metadata is removed. We cannot store or view the contents of your files, only delete the metadata."
+        ]
+      },
+      {
+        "question": "Does removing metadata change the content of my file?",
+        "answer": [
+          "No, only the metadata is deleted. We don’t add watermarks, compress your files, or make any other unnecessary changes to your files. Once you delete the metadata, you will get the exact same version of your files with zero alterations. "
+        ]
+      },
+      {
+        "question": "What happens to my files after they’re cleaned?",
+        "answer": [
+          "Once you upload and delete the data, everything is automatically deleted from our system to maintain your privacy and our GDPR compliance."
+        ]
+      },
+      {
+        "question": "How do I know if a file contains metadata?",
+        "answer": [
+          "All files contain metadata. In Windows, you can view it by right-clicking on the file and selecting “Properties”",
+          "Mac users again need to right-click the file, select “Get Info”, then go to the “Details” section to view the metadata.",
+          "Finally, you can view the metadata of PDFs by opening them in Adobe Acrobat and going to “File” > “Properties” > “Description”"
+        ]
+      }
+    ]
+  },
+  "FeaturesSlider": {
+    "title": "Why you should use a metadata remover online",
+    "description": "Your documents, photos, videos, or PDFs can carry more information than you think. When you share these files online, you could risk this metadata falling into the wrong hands, leading to data leaks. Our free metadata cleaner removes this information for free whenever you need it.",
+    "info": [
+      {
+        "title": "100% free and unlimited",
+        "description": [
+          "You can use this metadata cleaner for free without signing up for an account or entering your credit card information. It works directly in your browser, so you can remove metadata for as many files as you like without limitations. "
+        ]
+      },
+      {
+        "title": "GDPR compliant",
+        "description": [
+          "Internxt is a GDPR-compliant company, and just like our cloud storage, VPN, and Antivirus products, our online metadata remover tool protects your data to the highest privacy standards. When we remove your metadata, all files and information are deleted to ensure compliance and protection from data leaks."
+        ]
+      },
+      {
+        "title": "Secure",
+        "description": [
+          "Your files are cleaned instantly, removing the private data and keeping the original format preserved. Once you upload the file, everything is encrypted to maintain the security and privacy of your files. We store no data, we just remove the metadata for increased anonymity."
+        ]
+      },
+      {
+        "title": "Supports multiple files",
+        "description": [
+          "We support multiple file formats, so you can use this tool as an image, photo, video, or PDF metadata remover to ensure the privacy of any files you want to share online.  It’s a quick, reliable way to clean up your files and prevent your data from being misused or tracked."
+        ]
+      },
+      {
+        "title": "Prevent digital fingerprinting",
+        "description": [
+          "Your metadata can be used to create a digital fingerprint of your online activity, which can, in turn, be used to trace where a file originated, who created it, and more. By stripping your files of this metadata, you make it more challenging for threat actors to track your digital footprint."
+        ]
+      },
+      {
+        "title": "No file altering",
+        "description": [
+          "All we do is strip your files of their metadata for increased privacy; the photos, videos, or content are left unaltered. We don’t compress your files, leave watermarks, or make any other alterations except those that need to be removed, so you're left with a private, unaltered file."
+        ]
+      }
+    ]
+  },
+  "FeaturesSliderImg": {
+    "title": "When to use a metadata remover?",
+    "description": "Maintaining your privacy online has become an essential aspect of our internet lives. By keeping the metadata of your documents, photos, or videos, you can maintain confidentiality in both your personal and business life, prevent data leaks, and enjoy increased privacy and anonymity.",
+    "info": [
+      {
+        "title": "Protect data in photos or videos",
+        "description": [
+          "Photos taken with your phone or camera can include hidden location data, like GPS coordinates, place names, or even the direction your camera was facing. A photo metadata remover deletes location data to help you keep your home, workplace, or current whereabouts private and prevents cyberthreats like doxxing."
+        ]
+      },
+      {
+        "title": "Avoid data leaks",
+        "description": [
+          "Your full name, email, device, and software details can become embedded in your images, documents, or videos. An image or video metadata remover protects you even if you share these files with the wrong person there is no sensitive or private information being shared. "
+        ]
+      },
+      {
+        "title": "Send anonymous submissions",
+        "description": [
+          "There are many use cases for a metadata remover online beyond photos and videos. Journalists or whistleblowers who need maximum privacy will use this tool to anonymize data linked to document authorship, revision history, thumbnail previews, and internal file paths."
+        ]
+      },
+      {
+        "title": "Share files between employees",
+        "description": [
+          "Businesses are a constant target for data breaches, which can occur due to cyberattacks, or human error. When sharing documents within departments, metadata could expose employee names, internal file structures, or comments. In this case, a metadata remover ensures a company's integrity and compliance. "
+        ]
+      }
+    ]
+  },
+  "ToolsSection": {
+    "title": "Try out Internxt's free online security tools:",
+    "toolsCard": [
+      {
+        "url": "/images/temp-email/password-checker.svg",
+        "UrlRedirectName": "password-checker",
+        "width": 105,
+        "title": "Password Strength Checker",
+        "description": "Scan now"
+      },
+      {
+        "url": "/images/temp-email/byte-converter.svg",
+        "UrlRedirectName": "byte-converter",
+        "width": 95,
+        "title": "Byte Unit Converter",
+        "description": "Convert now"
+      },
+      {
+        "url": "/images/temp-email/temporary-email.svg",
+        "UrlRedirectName": "temporary-email",
+        "title": "Free Temporary Email",
+        "width": 95,
+        "description": "Mail now"
+      },
+      {
+        "url": "/images/temp-email/password-generator.svg",
+        "UrlRedirectName": "password-generator",
+        "title": "Free Password Generator",
+        "width": 124,
+        "description": "Generate now"
+      }
+    ]
+  }
+}

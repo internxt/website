@@ -80,7 +80,10 @@
         "byteConverter": "Byte Konverter",
         "passwordGenerator": "Passwort Generator",
         "fileConverter": "Dateikonverter",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Metadaten-Entferner",
+        "aiDetector": "AI Detector",
+        "fileCompressor": "Dateikomprimierer"
       },
       "features": {
         "title": "Funktionen",

@@ -40,6 +40,21 @@
       "title": "Estensione VPN per Chrome",
       "cta": "Scarica ora",
       "pathname": "/vpn"
+    },
+    {
+      "title": "Eliminatore di Metadati",
+      "cta": "Elimina ora",
+      "pathname": "/metadata-remover"
+    },
+    {
+      "title": "Monitoraggio Dark Web",
+      "cta": "Verifica ora",
+      "pathname": "/dark-web-monitor"
+    },
+    {
+      "title": "Rilevatore AI",
+      "cta": "Verifica ora",
+      "pathname": "/ai-detector"
     }
   ]
 }

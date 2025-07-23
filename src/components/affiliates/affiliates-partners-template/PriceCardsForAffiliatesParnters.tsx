@@ -3,8 +3,11 @@ import { PromoCodeProps } from '@/lib/types';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import {
   ArrowsClockwise,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
@@ -58,9 +61,12 @@ export const PriceCardsForAffiliatesPartners = ({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
   ];

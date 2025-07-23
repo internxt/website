@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Ahorra un 85%",
+    "label": "Ahorra un 80%",
     "title": {
       "line1": "El almacenamiento ",
       "line2": "en la nube",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "85% más barato"
+        "blueText": "80% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
-      "description": "85% de descuento",
+      "description": "80% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
         "Cifrado postcuántico y cero conocimiento",
@@ -72,17 +72,17 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 3",
+        "price": " 2.00",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta 85%",
-      "title": "Protege tu información del lado oscuro",
-      "subtitle": "Internxt Drive, Antivirus y VPN",
-      "cta": "Consigue tu plan",
+      "saveLabel": "Oferta 80%",
+      "title": "Día Mundial del Medio Ambiente",
+      "subtitle": "Todos los planes Internxt",
+      "cta": "Consigue la oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "youKnow": "¿Sabías que?"

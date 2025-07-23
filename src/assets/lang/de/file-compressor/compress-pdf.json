@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Mit Internxt kannst du mehrere PDF-Dateien kostenlos online komprimieren. Schütze und teile deine PDFs, ohne dir Gedanken über Größenbeschränkungen machen zu müssen.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine PDF-Datei",
+      "description": "Um eine PDF-Datei zu komprimieren, folge diesen Schritten:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine PDF-Datei hoch: Ziehe sie in den oberen Bereich oder wähle sie von deinem Gerät aus, um die Konvertierung zu starten."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „PDF komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter"
+        }
+      ],
+      "outro": "Mit diesem Tool kannst du jederzeit mehrere PDFs kostenlos komprimieren. Alle Dateien sind durch verschlüsselte Uploads geschützt, um deine Dokumente privat zu halten."
+    },
+    "whyConvert": {
+      "title": "Warum große PDF-Dateien komprimieren?",
+      "intro": "Das Versenden großer PDFs kann problematisch sein – aufgrund von E-Mail-Limits, Upload-Beschränkungen oder langsamen Internetverbindungen. Mit diesem kostenlosen Tool kannst du mehrere PDFs komprimieren und von diesen Vorteilen profitieren:",
+      "bullets": [
+        "Optimierung für Web- oder Mobilansicht",
+        "Vermeidung von Größenbeschränkungen beim Hochladen",
+        "Speicherplatz sparen"
+      ],
+      "outro": "Dieses Tool hat keine Begrenzung – du kannst PDFs mit bis zu XGB Größe komprimieren und mehrere Dateien gleichzeitig bearbeiten, ohne dich zu registrieren oder tägliche Limits zu beachten."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von PDF-Dateien",
+    "cta": "Jetzt zu Internxt wechseln"
+  }
+}

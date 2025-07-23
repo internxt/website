@@ -9,13 +9,13 @@
     "celebration": {
       "title": "Dì ciao alla tua offerta Internxt a vita",
       "description": "Proteggi i tuoi file per sempre con il tuo sconto per la Festa dell'Indipendenza Italiana.",
-      "cta1": "Ottieni l'80% di SCONTO"
+      "cta1": "Sconto dell'${{percent}}"
     }
   },
   "PaymentSection": {
     "limitedOffer": "Offerta a tempo limitato!",
     "title": {
-      "blueText": "Ottieni il ${{percent}} di sconto",
+      "blueText": "Ottieni il ${{percent}}% di sconto",
       "normalText": " tutti i nostri esclusivi piani a vita"
     },
     "description": "Acquista una volta e ottieni privacy e sicurezza per sempre",

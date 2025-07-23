@@ -7,7 +7,7 @@ import LanguageMobileBox from '../components/LanguageMobileBox';
 import Image from 'next/legacy/image';
 import axios from 'axios';
 import { CaretDown, CaretUp, HardDrives, PaperPlaneTilt } from '@phosphor-icons/react';
-import moment from 'moment';
+import moment, { lang } from 'moment';
 import { notificationService } from '@/components/Snackbar';
 import { FooterText } from '@/assets/types/layout/types';
 import { getImage } from '@/lib/getImage';
@@ -343,10 +343,6 @@ export default function Footer({
                     <Link href="/affiliates" target="_blank" className="hover:text-primary">
                       {textContent.FooterSection.sections.join.affiliates}
                     </Link>
-
-                    <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.storageForEducation}
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -394,15 +390,6 @@ export default function Footer({
                       {textContent.FooterSection.sections.resources.dropboxAlternative}
                     </Link>
 
-                    <Link
-                      href="/privacy-directory"
-                      locale={lang}
-                      passHref
-                      className="w-full max-w-[265px] hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
-                    </Link>
-
                     <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.resources.cyberAwareness}
                     </Link>
@@ -417,7 +404,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[18%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -454,6 +441,24 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
+                    <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.metadataRemover}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
+                    <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.aiDetector}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
+                    <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.tools.fileCompressor}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -473,9 +478,6 @@ export default function Footer({
                       className=" items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.privateCloud}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link
                       href="/cloud-storage-backup-solutions"
@@ -484,15 +486,9 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudBakcup}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/gdpr-cloud-storage" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.features.GDPRCloud}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link
                       href="/cloud-storage-for-photos"
@@ -501,9 +497,6 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.features.cloudPhotos}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                   </div>
                 </div>
@@ -596,7 +589,6 @@ export default function Footer({
                 </Link>
               </div>
             </div>
-            <p className="text-xs text-gray-50">{textContent.FooterSection.independentPromotion}</p>
           </div>
 
           {/* Mobile version */}
@@ -797,10 +789,6 @@ export default function Footer({
                       <Link href="/affiliates" target="_blank" className="hover:text-primary">
                         {textContent.FooterSection.sections.join.affiliates}
                       </Link>
-
-                      <Link lang={lang} href={'/cloud-storage-for-education'} className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.storageForEducation}
-                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -858,15 +846,6 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
-                      </Link>
-
-                      <Link
-                        href="/privacy-directory"
-                        locale={lang}
-                        passHref
-                        className="w-full max-w-[265px] hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.resources.directoryOfPrivacyOrganizations}
                       </Link>
 
                       <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
@@ -927,6 +906,12 @@ export default function Footer({
                       </Link>
                       <Link href="/dark-web-monitor" locale={lang} passHref legacyBehavior>
                         {textContent.FooterSection.sections.tools.haveIBeenPwned}
+                      </Link>
+                      <Link href="/metadata-remover" locale={lang} passHref legacyBehavior>
+                        {textContent.FooterSection.sections.tools.metadataRemover}
+                      </Link>
+                      <Link href="/ai-detector" locale={lang} passHref>
+                        {textContent.FooterSection.sections.tools.aiDetector}
                       </Link>
                       <Link href="/vpn" locale={lang} passHref>
                         {textContent.FooterSection.sections.tools.vpn}

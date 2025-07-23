@@ -1,0 +1,154 @@
+{
+  "HeroSection": {
+    "title": "Compresser des fichiers",
+    "description": {
+      "normal": "Le meilleur compresseur de fichiers pour réduire la taille de vos vidéos, photos et documents en toute sécurité."
+    },
+    "cards": [
+      {
+        "title": "Fichier MOV",
+        "description": "Compressez des fichiers vidéos gratuitement",
+        "pathname": "compress-mov"
+      },
+      {
+        "title": "Fichier PDF",
+        "description": "Compressez des fichiers PDF gratuitement",
+        "pathname": "compress-pdf"
+      },
+      {
+        "title": "Fichier JPG",
+        "description": "Compressez des fichiers JPG gratuitement",
+        "pathname": "compress-jpg"
+      },
+      {
+        "title": "Fichier PNG",
+        "description": "Compressez des fichiers PNG gratuitement",
+        "pathname": "compress-png"
+      },
+      {
+        "title": "Fichier PPT",
+        "description": "Compressez des fichiers PPT gratuitement",
+        "pathname": "compress-ppt"
+      },
+      {
+        "title": "Fichier Word",
+        "description": "Compressez des fichiers Word gratuitement",
+        "pathname": "compress-word"
+      },
+      {
+        "title": "Fichier Excel",
+        "description": "Compressez des fichiers Excel gratuitement",
+        "pathname": "compress-excel"
+      },
+      { "title": "Fichier ZIP", "description": "Compressez des fichiers ZIP gratuitement", "pathname": "compress-zip" }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileCompressor": {
+      "title": "Compressez des fichiers en ligne gratuitement avec Internxt",
+      "description": [
+        "Cet outil gratuit est le meilleur compresseur de fichiers pour optimiser votre espace de stockage cloud. Vous pouvez réduire la taille de vidéos, photos, documents et feuilles de calcul, même au-delà des limites d’attachement.",
+        "C’est un service gratuit et facile à utiliser, compatible avec tous les appareils. Réduisez vos fichiers sans sacrifier qualité, sécurité ou confidentialité. Libérez tout le potentiel de votre stockage cloud et de votre collaboration dès aujourd’hui !"
+      ]
+    },
+    "howUseFileCompressor": {
+      "title": "Comment utiliser le compresseur de fichiers Internxt",
+      "steps": [
+        {
+          "step": "Étape 1 :",
+          "description": "Téléversez votre fichier : glissez-le ici ou choisissez-le depuis votre appareil."
+        },
+        { "step": "Étape 2 :", "description": "Cliquez sur « Compresser le fichier »" },
+        { "step": "Étape 3 :", "description": "Téléchargez le fichier compressé" }
+      ]
+    },
+    "whyUseFileCompressor": {
+      "title": "Pourquoi utiliser un compresseur de fichiers ?",
+      "description": "Notre compresseur offre une solution rapide et sécurisée pour économiser de l’espace de stockage et partager facilement de gros fichiers vidéo, albums photo, etc. C’est gratuit, simple, sans téléchargements risqués ni collecte de données par des tiers — parfait pour la confidentialité et la gestion des fichiers."
+    },
+    "cards": [
+      {
+        "title": "Prise en charge de plusieurs formats",
+        "description": "Nous prenons en charge les formats populaires (documents, images, vidéos). Plusieurs options de compression offrent efficacité et flexibilité."
+      },
+      {
+        "title": "Chiffrement complet",
+        "description": "Internxt protège vos fichiers au téléchargement via HTTPS. Les fichiers compressés sont supprimés, Internxt ne stocke rien."
+      },
+      {
+        "title": "Aucune inscription",
+        "description": "Compressez sans informations personnelles. Pas de nom, e-mail ni paiement — juste une compression gratuite sans limite."
+      },
+      {
+        "title": "Intégration avec Internxt",
+        "description": "Idéal avec les produits Internxt (Drive, Send, Mail). Compressez et stockez vos fichiers en toute sécurité."
+      },
+      {
+        "title": "Rapide et simple",
+        "description": "Téléversez le fichier, Internxt s’occupe du reste. Compression rapide, stockage et partage facilités."
+      },
+      {
+        "title": "Transferts plus rapides",
+        "description": "Moins de taille = vitesses de transfert plus rapides vers le cloud ou par e-mail — selon votre connexion."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Compressez, stockez et partagez avec Internxt",
+    "description": "Une suite complète axée sur la confidentialité pour vous protéger en ligne.",
+    "cta": "Passez à Internxt"
+  },
+  "CtaSection2": {
+    "title": "Gestion des fichiers simplifiée.",
+    "description": "Convertissez et stockez vos fichiers en toute sécurité avec Internxt Drive.",
+    "cta": "Créez votre compte"
+  },
+  "QASection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Quel est le meilleur compresseur de fichiers ?",
+        "answer": [
+          "Le meilleur dépend de vos besoins : il prend en charge plusieurs formats, est facile à utiliser et garantit le chiffrement des fichiers.",
+          "Internxt propose un outil gratuit et sécurisé, sans collecte de données personnelles par des tiers."
+        ]
+      },
+      {
+        "question": "Quels formats de fichiers puis-je compresser ?",
+        "answer": ["Vous pouvez compresser gratuitement les fichiers Word, Excel, PPT, JPG, PNG et PDF."]
+      },
+      {
+        "question": "Puis-je compresser des fichiers depuis un appareil mobile ?",
+        "answer": [
+          "Oui, cet outil fonctionne sur tous les appareils — idéal pour compresser des fichiers n'importe où et à tout moment."
+        ]
+      },
+      {
+        "question": "Le processus de compression est-il sécurisé ?",
+        "answer": [
+          "Oui, tous vos fichiers sont chiffrés et protégés pendant tout le processus. Une fois terminé, les fichiers sont supprimés de nos serveurs."
+        ]
+      },
+      {
+        "question": "Dois-je créer un compte pour utiliser le compresseur ?",
+        "answer": ["Non, vous n'avez pas besoin de fournir d'adresse email ou de données de paiement."]
+      },
+      {
+        "question": "Y a-t-il une limite au nombre de fichiers que je peux compresser ?",
+        "answer": ["Non, vous pouvez utiliser cet outil autant de fois que vous le souhaitez gratuitement."]
+      },
+      {
+        "question": "Puis-je compresser de gros fichiers vidéo ?",
+        "answer": [
+          "Oui, vous pouvez compresser des fichiers jusqu'à X Go pour économiser de l'espace ou les envoyer par mail facilement."
+        ]
+      },
+      {
+        "question": "Comment la compression de fichiers aide-t-elle le stockage cloud ?",
+        "answer": [
+          "La compression de fichiers permet de gagner de l’espace dans le cloud et de contourner les limites d’envoi des fournisseurs de stockage."
+        ]
+      }
+    ]
+  }
+}

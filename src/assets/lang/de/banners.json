@@ -93,6 +93,14 @@
     "line1": "Bewahre diese jetzt sauberen Dateien sicher auf,",
     "blueText": "komme kostenlos zu Internxt"
   },
+  "SignUpMetadataRemoverBanner": {
+    "line1": "Entferne aufschlussreiche Metadaten aus deinen Dateien.",
+    "blueText": "Bereinige deinen digitalen Fußabdruck mit Internxt"
+  },
+  "SignUpAiDetector": {
+    "line1": "Erkenne KI-Inhalte, stelle Authentizität sicher und",
+    "blueText": "veröffentliche mit Vertrauen mit Internxt"
+  },
   "SignUpByteConverterBanner": {
     "line1": "Hole dir den Byte für Byte sicheren Cloud-Speicher",
     "blueText": "mit Internxt"
@@ -129,9 +137,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "85% Rabatt auf Internxt Drive, VPN und Antivirus!",
-      "normalText": "Möge die Macht mit dir sein",
-      "cta": "Kaufen"
+      "boldText": "Nimm diesen Sommer all deine Daten mit ",
+      "normalText": "80 % Rabatt auf alle Tarife jetzt!",
+      "cta": "Tarif wählen "
     }
   },
   "lifetimeBanner": {
@@ -149,5 +157,9 @@
     "subtitle": "Es wartet ein exklusives Angebot auf Sie.",
     "cta": "80% RABATT",
     "guarantee": "30-Tage-Geld-zurück-Garantie"
+  },
+  "SignUpFileCompressorBanner": {
+    "line1": "Speicherplatz sparen mit Internxt",
+    "blueText": "Komprimieren Sie Ihre Dateien kostenlos, um Ihre Cloud zu optimieren"
   }
 }

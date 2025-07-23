@@ -82,7 +82,7 @@
   {
     "id": "lifetime",
     "title": "Internxt Lifetime Plans – Secure Cloud Storage For Life!",
-    "description": "Internxt Lifetime Deal: Pay once and get 2TB, 5TB, or 10TB of secure cloud storage forever. Sign up or upgrade to a Internxt lifetime plan for lifelong privacy! Only for a limited time."
+    "description": "Internxt Lifetime Deal: Pay once and get 1TB, 3TB, or 5TB of secure cloud storage forever. Sign up or upgrade to a Internxt lifetime plan for lifelong privacy! Only for a limited time."
   },
   {
     "id": "partner-discount",
@@ -413,5 +413,60 @@
     "id": "internxt-annual",
     "title": "Internxt - Get a discount on any Internxt annual plans",
     "description": "Meta description: Get a special offer for any Internxt annual plan. All plans include private cloud storage, VPN, and Antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Metadata Remover - Clean Your File’s Metadata Online",
+    "description": "Remove hidden data from your files in seconds. Internxt’s Metadata Remover cleans your documents for maximum privacy before sharing."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt ZeroGPT AI Checker - Free AI Checker Tool",
+    "description": "Internxt ZeroGPT AI checker. Scan content to check if it’s been written by ChatGPT, Gemini, or other AI platforms. Try now for free!"
+  },
+  {
+    "id": "file-compressor",
+    "title": "File Compressor - Internxt",
+    "description": "Internxt file compressor,  the best file compressor to reduce the file size of videos, photos, and documents for free."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Compress MOV File - Internxt",
+    "description": "Internxt lets you compress a MOV file for free to reduce file size and send large video files online without worrying about file size limits."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Compress PDF File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a PDF file so you can secure and send your documents with ease."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Compress JPG File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a JPG file so you can secure and send your photos with ease."
+  },
+  {
+    "id": "compress-png",
+    "title": "Compress PNG File - Internxt",
+    "description": "Internxt’s free tool is the best way to compress a PNG file so you can secure and send your photos with ease."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Compress PPT File - Internxt",
+    "description": "Internxt lets you compress a PPT file for free to reduce file size for easier storage and file sharing management."
+  },
+  {
+    "id": "compress-word",
+    "title": "Compress Word File - Internxt",
+    "description": "Compress Word (DOC) files for free to reduce file size for easier storage and file sharing management for your documents."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Compress Excel File - Internxt",
+    "description": "Compress Excel (XLS) files for free to reduce file size for easier storage and file sharing management for your spreadsheets."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Online ZIP Compressor - Internxt",
+    "description": "An online ZIP compressor reduces the size of your ZIP files to save storage, share, and upload without worrying about file size limits."
   }
 ]

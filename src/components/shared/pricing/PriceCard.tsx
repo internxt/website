@@ -1,22 +1,29 @@
 import {
   ArrowsClockwise,
+  Backpack,
+  Broom,
+  CirclesThreePlus,
   CodeBlock,
+  CreditCard,
   Database,
+  Detective,
   Envelope,
   Fingerprint,
   Fire,
   Gauge,
-  Gift,
   Key,
   LockSimple,
   Password,
   ShieldPlus,
+  SunHorizon,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import styles from '@/components/black-friday/BF-HeroSection.module.scss';
 import React from 'react';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -87,7 +94,7 @@ export const PriceCard = ({
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
-
+  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -107,11 +114,15 @@ export const PriceCard = ({
     ShieldPlus,
     ArrowsClockwise,
     Password,
+    CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Broom,
+    Detective,
     VideoConference,
     Envelope,
+    CreditCard,
   ];
 
   return (
@@ -119,8 +130,8 @@ export const PriceCard = ({
       className={`${
         !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
       } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'h-[830px]' : showPromo ? 'h-[880px]' : 'h-[750px]'
-      } min-w-[380px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl`}
+        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[850px]'
+      } w-[420px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl lg:min-w-[410px]`}
     >
       <div
         className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
@@ -180,13 +191,9 @@ export const PriceCard = ({
             <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
               {percentOff}
               {contentText.discount}
-              {showTotalDiscountPrice && (
-                <>
-                  {' | '}
-                  {contentText.save} {annualSave}
-                  {currency}
-                </>
-              )}
+              {' | '}
+              {contentText.save} {annualSave}
+              {currency}
             </p>
           )}
         </div>
@@ -205,17 +212,29 @@ export const PriceCard = ({
           <p>{ctaText}</p>
         </button>
       </div>
-      {showPromo && isLifetime ? (
-        <div className="flex flex-col items-start space-y-2 bg-gray-100 px-5 py-5">
-          <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.starWarsDay.title}</span>
+      {showPromo ? (
+        <div
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundPosition: '0% 80%',
+          }}
+          className={'flex flex-col items-start space-y-2 px-5 py-5'}
+        >
+          <span className="text-[13.5px] font-bold text-gray-100">
+            {contentText.productFeatures.WorldEnvironmentDay.title}
+          </span>
           <div className="flex flex-col items-start space-y-2">
             <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift1}</span>
+              <SunHorizon size={24} className="text-primary" weight="fill" />
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift1}
+              </span>
             </div>
             <div className="flex items-center space-x-2">
-              <Gift className="h-6 w-6 text-green-1" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.starWarsDay.gift2}</span>
+              <Backpack size={24} className="text-primary" weight="fill" />
+              <span className="text-[13.5px] text-gray-100">
+                {contentText.productFeatures.WorldEnvironmentDay.gift2}
+              </span>
             </div>
           </div>
         </div>
@@ -223,19 +242,56 @@ export const PriceCard = ({
       <div
         className={`featureList flex flex-col  ${
           darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `h-[550px] ` : `h-[550px]`} pb-6 text-sm`}
+        } ${isBusiness ? `lg:h-[530px] ` : `lg:h-[590px]`} pb-6 text-sm`}
       >
         <div className="flex flex-col space-y-2 pt-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {React.createElement(iconsFeatures[index % iconsFeatures.length], {
-                size: 24,
-                className: 'text-primary',
-              })}
-              <span className={`${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature}</span>
-              {index > (isBusiness ? 9 : 8) ? (
-                <span className="rounded-md bg-orange/10 px-1 text-center text-orange">{contentText.commingSoon}</span>
-              ) : null}
+              {isBusiness ? (
+                <>
+                  {React.createElement(
+                    index === 10
+                      ? iconsFeatures[(index + 4) % iconsFeatures.length]
+                      : index > 10
+                      ? iconsFeatures[(index - 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className="text-gray-80">
+                    {feature}
+                    {index > 10 ? (
+                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
+                </>
+              ) : (
+                <>
+                  {React.createElement(
+                    index > 10 && storage === '3TB'
+                      ? iconsFeatures[index % iconsFeatures.length]
+                      : index >= 6 && storage === '1TB'
+                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
+                      : iconsFeatures[index % iconsFeatures.length],
+                    {
+                      size: 24,
+                      className: 'text-primary',
+                    },
+                  )}
+                  <span className="text-gray-80">
+                    {feature}
+                    {index > 9 ? (
+                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                        {contentText.commingSoon}
+                      </span>
+                    ) : null}
+                  </span>
+                </>
+              )}
             </div>
           ))}
         </div>

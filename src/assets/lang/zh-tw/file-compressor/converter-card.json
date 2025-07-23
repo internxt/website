@@ -1,0 +1,24 @@
+{
+  "title": "壓縮 ${{pathFrom}} 檔案",
+  "secureUpload": "由 Internxt 的隱私保護保證安全上傳。我們不會儲存任何資訊。",
+  "dragNDropArea": {
+    "maxFileSize": "最大檔案大小為 1GB",
+    "dragYourFile": "將您的 ${{pathFrom}} 檔案拖放至此",
+    "cta": "選擇 ${{pathFrom}} 檔案",
+    "draggingFile": "在此處釋放檔案"
+  },
+  "fileSelected": {
+    "title": "已選取要壓縮的檔案",
+    "cancel": "取消",
+    "convert": "壓縮 ${{pathFrom}} 檔案"
+  },
+  "converting": "正在壓縮您的檔案",
+  "fileConverted": {
+    "label": "您的 ${{pathFrom}} 檔案已成功壓縮",
+    "title": "下載將在稍後自動開始",
+    "description": "如果沒有，請點擊下方按鈕。",
+    "goHome": "首頁",
+    "convertAnother": "壓縮另一個檔案",
+    "downloadFile": "下載 ${{pathFrom}} 檔案"
+  }
+}

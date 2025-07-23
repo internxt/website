@@ -31,7 +31,7 @@ export type CardsType = 'all' | 'one';
 
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 15;
+  const offerDiscount = 13;
   const {
     products,
     loadingCards,
@@ -40,8 +40,8 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.CloudwardsCoupon,
-    couponCodeForLifetime: PromoCodeName.CloudwardsCoupon,
+    couponCode: PromoCodeName.CLOUDWARDS87,
+    couponCodeForLifetime: PromoCodeName.CLOUDWARDS87,
   });
 
   function handlePriceCardButton(planId, coupon) {
@@ -50,7 +50,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.StarWars ?? undefined,
+      promoCodeId: PromoCodeName.CLOUDWARDS87 ?? undefined,
     });
   }
 
@@ -98,7 +98,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
 
@@ -117,6 +117,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         hideBusinessSelector
         popularPlanBySize="5TB"
         showPromo={false}
+        hideFreeCard
       />
 
       <ComponentsInColumnSection
@@ -171,8 +172,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
           <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
         }
       />
-
-      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 }

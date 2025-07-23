@@ -82,7 +82,10 @@
         "passwordGenerator": "Generatore di Password",
         "fileConverter": "Convertitore di file",
         "vpn": "Extensione VPN",
-        "haveIBeenPwned": "Internxt Monitor"
+        "haveIBeenPwned": "Internxt Monitor",
+        "metadataRemover": "Eliminatore di metadati",
+        "aiDetector": "Detector di IA",
+        "fileCompressor": "Compressore di File"
       },
       "features": {
         "title": "Funzionalità",

@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Komprimiere Word (DOC)-Dateien mit Internxt für eine einfachere und produktivere Möglichkeit, wichtige Dokumente zu teilen und gemeinsam daran zu arbeiten.",
+    "secureUpload": "Sichere Uploads geschützt durch HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "So komprimierst du eine DOC-Datei",
+      "description": "Folge diesen Schritten, um eine DOC-Datei zu komprimieren:",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine DOC-Datei hoch: Ziehe sie in den Bereich oben oder wähle sie von deinem Gerät aus."
+        },
+        {
+          "step": "Schritt 2:",
+          "description": "Klicke auf „DOC-Datei komprimieren“"
+        },
+        {
+          "step": "Schritt 3:",
+          "description": "Lade deine Datei herunter."
+        }
+      ],
+      "outro": "Mit diesem Tool kannst du Word-Dateien kostenlos komprimieren, wann immer du möchtest. Beim Komprimieren werden deine Dokumente automatisch durch verschlüsselte Uploads geschützt, um deine Privatsphäre zu gewährleisten."
+    },
+    "whyConvert": {
+      "title": "Warum eine Word-Datei komprimieren?",
+      "intro": "Beim Verfassen von Aufsätzen, Berichten, Verträgen oder anderen längeren Dokumenten kann die Dateigröße schnell ansteigen, was das Teilen erschwert. Durch das Komprimieren von DOC-Dateien kannst du die Größe deutlich reduzieren und:",
+      "bullets": [
+        "Word-Dateien einfacher teilen",
+        "Upload-Limits einhalten",
+        "Gruppenprojekte besser verwalten und bearbeiten"
+      ],
+      "outro": "Alle deine Dateien werden während des Upload- und Komprimierungsvorgangs verschlüsselt, um deine Daten privat zu halten. So kannst du deine Dokumente sicher mit Internxt komprimieren, speichern und teilen."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Eine sichere Plattform zum Komprimieren, Speichern und Teilen von Word-Dateien",
+    "cta": "Jetzt zu Internxt wechseln"
+  }
+}

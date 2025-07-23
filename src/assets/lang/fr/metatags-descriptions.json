@@ -37,7 +37,7 @@
   {
     "id": "lifetime",
     "title": "Internxt Plan à vie - Cloud sécurisé pour la vie !",
-    "description": "Internxt Lifetime Deal : payez une fois et obtenez 2TB, 5TB ou 10TB de stockage cloud sécurisé pour toujours."
+    "description": "Internxt Lifetime Deal : payez une fois et obtenez 1TB, 3TB ou 5TB de stockage cloud sécurisé pour toujours."
   },
   {
     "id": "pricing",
@@ -188,5 +188,65 @@
     "id": "internxt-annual",
     "title": "Internxt – Offre spéciale sur vos abonnements annuels !",
     "description": "Profitez d'une remise sur tout abonnement annuel Internxt. Tous les forfaits incluent un stockage cloud privé, un VPN et un antivirus."
+  },
+  {
+    "id": "internxt-metadata-remover",
+    "title": "Internxt Suppression de Métadonnées - Comment nettoyer les métadonnées dans les PDF, photos et vos documents en ligne",
+    "description": "Supprimez les données cachées de vos fichiers en quelques secondes. Le nettoyeur de métadonnées d'Internxt purifie vos documents pour une confidentialité maximale avant de les partager."
+  },
+  {
+    "id": "zerogpt-ai-checker",
+    "title": "Internxt Détecteur d'IA - Détecteur de texte IA gratuit",
+    "description": "Internxt Détecteur d'IA. Analysez gratuitement le contenu pour vérifier s'il a été rédigé par ChatGPT, Gemini ou d'autres plateformes d'intelligence artificielle."
+  },
+  {
+    "id": "special-offer",
+    "title": "Offre spéciale — Internxt",
+    "description": "Profitez des forfaits annuels et à vie d'Internxt avec une réduction exclusive de 80 %. Bénéficiez de confidentialité et de sécurité avec jusqu'à 10 To de stockage."
+  },
+  {
+    "id": "file-compressor",
+    "title": "Compresseur de fichiers - Internxt",
+    "description": "Le compresseur de fichiers d'Internxt, le meilleur outil pour réduire gratuitement la taille des vidéos, photos et documents."
+  },
+  {
+    "id": "compress-mov",
+    "title": "Compresseur de vidéos Internxt",
+    "description": "Internxt vous permet de compresser gratuitement des vidéos pour réduire la taille des fichiers et les envoyer en ligne sans vous soucier des limites de taille."
+  },
+  {
+    "id": "compress-pdf",
+    "title": "Compresseur de fichiers PDF Internxt",
+    "description": "Internxt vous permet de compresser gratuitement des fichiers PDF pour protéger et envoyer facilement vos documents."
+  },
+  {
+    "id": "compress-jpg",
+    "title": "Compresseur de fichiers JPG Internxt",
+    "description": "Compressez gratuitement vos fichiers JPG avec Internxt pour protéger et envoyer facilement vos images."
+  },
+  {
+    "id": "compress-png",
+    "title": "Compresseur de fichiers PNG Internxt",
+    "description": "Compressez gratuitement vos fichiers PNG avec Internxt pour protéger et envoyer facilement vos images."
+  },
+  {
+    "id": "compress-ppt",
+    "title": "Compresseur de fichiers PPT Internxt",
+    "description": "Compressez gratuitement vos fichiers PPT avec Internxt pour réduire leur taille et faciliter la gestion du stockage et du partage de fichiers."
+  },
+  {
+    "id": "compress-word",
+    "title": "Compresseur de fichiers Word en ligne Internxt",
+    "description": "Compressez gratuitement vos fichiers Word (DOC) en ligne pour réduire leur taille et faciliter leur stockage et leur partage."
+  },
+  {
+    "id": "compress-excel",
+    "title": "Compresseur de fichiers Excel Internxt",
+    "description": "Compresseur gratuit pour fichiers Excel (XLS) - Réduisez leur taille pour faciliter leur stockage et leur partage."
+  },
+  {
+    "id": "compress-zip",
+    "title": "Compresseur ZIP en ligne - Internxt",
+    "description": "Un compresseur ZIP en ligne réduit la taille de vos fichiers ZIP pour économiser de l'espace de stockage, partager et télécharger sans vous soucier des limites de taille."
   }
 ]

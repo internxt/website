@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprime archivos Word (DOC) con Internxt para disfrutar de una forma más sencilla y productiva de compartir y colaborar en documentos importantes.",
+    "secureUpload": "Subidas seguras y protegidas por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo DOC",
+      "description": "Para comprimir un archivo DOC, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo DOC: arrástralo y suéltalo en el área superior o cárgalo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en «Comprimir archivo DOC»"
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta, puedes comprimir archivos Word gratis cuando lo necesites. Al comprimir tus documentos, se protegen automáticamente con subidas cifradas para garantizar tu privacidad."
+    },
+    "whyConvert": {
+      "title": "¿Por qué podría ser necesario comprimir un archivo Word?",
+      "intro": "Al redactar ensayos, informes, contratos u otros documentos largos, el tamaño de los archivos puede aumentar rápidamente, dificultando el envío o la colaboración. Comprimir archivos DOC puede reducir considerablemente su tamaño y:",
+      "bullets": [
+        "Comprimir archivos Word para compartirlos más fácilmente",
+        "Respetar los límites de tamaño de carga",
+        "Gestionar y colaborar en proyectos grupales"
+      ],
+      "outro": "Todos tus archivos se cifran durante el proceso de carga y compresión para mantenerlos privados. Así puedes comprimir, almacenar y compartir tus documentos con confianza gracias a Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos Word",
+    "cta": "Pásate a Internxt"
+  }
+}

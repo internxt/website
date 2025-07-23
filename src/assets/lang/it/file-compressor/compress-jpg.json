@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprimi un file JPG per ridurre le dimensioni e condividere le foto senza compromettere la qualità delle immagini con Internxt.",
+    "secureUpload": "Caricamenti sicuri protetti da HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Come comprimere un file JPG",
+      "description": "Per comprimere un file JPG, segui questi passaggi:",
+      "steps": [
+        {
+          "step": "Passaggio 1:",
+          "description": "Carica il tuo file JPG: trascinalo nell'area in alto o selezionalo dal tuo dispositivo per iniziare."
+        },
+        {
+          "step": "Passaggio 2:",
+          "description": "Clicca su \"Comprimere file JPG\"."
+        },
+        {
+          "step": "Passaggio 3:",
+          "description": "Scarica il file."
+        }
+      ],
+      "outro": "Comprimi gratuitamente i file JPG ogni volta che ne hai bisogno, sapendo che le tue foto rimarranno sicure e private grazie ai caricamenti crittografati."
+    },
+    "whyConvert": {
+      "title": "Perché potresti aver bisogno di comprimere un file JPG",
+      "intro": "Come accade con i file PNG, potresti aver bisogno di comprimere un file JPG per mantenere la qualità massima delle tue foto senza filigrane. Non è necessario registrarsi per comprimere file JPG con Internxt, così puoi ottimizzare lo spazio per i tuoi album e librerie fotografiche. Una volta completato, puoi:",
+      "bullets": [
+        "Velocizzare il caricamento del sito web.",
+        "Mantenere un'elevata qualità visiva delle foto.",
+        "Risparmiare spazio di archiviazione sul dispositivo o nel cloud."
+      ],
+      "outro": "Tutti i tuoi file sono crittografati durante il caricamento e la compressione per garantire la privacy delle tue foto. Puoi comprimere, salvare e condividere con fiducia i tuoi file con Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una piattaforma sicura per comprimere, archiviare e condividere file JPG.",
+    "cta": "Passa a Internxt"
+  }
+}

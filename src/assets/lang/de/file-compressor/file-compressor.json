@@ -1,0 +1,118 @@
+{
+  "HeroSection": {
+    "title": "Dateien komprimieren",
+    "description": {
+      "normal": "Der beste Dateikompressor, um die Größe deiner Videos, Fotos und Dokumente sicher zu reduzieren."
+    },
+    "cards": [
+      { "title": "MOV-\nDatei", "description": "Videos-Dateien\nkostenlos\n komprimieren", "pathname": "compress-mov" },
+      { "title": "PDF-\nDatei", "description": "PDF-Dateien kostenlos komprimieren", "pathname": "compress-pdf" },
+      { "title": "JPG-\nDatei", "description": "JPG-Dateien kostenlos komprimieren", "pathname": "compress-jpg" },
+      { "title": "PNG-\nDatei", "description": "PNG-Dateien kostenlos komprimieren", "pathname": "compress-png" },
+      { "title": "PPT-\nDatei", "description": "PPT-Dateien\n kostenlos komprimieren", "pathname": "compress-ppt" },
+      { "title": "Word-\nDatei", "description": "Word-Dateien kostenlos komprimieren", "pathname": "compress-word" },
+      { "title": "Excel-\nDatei", "description": "Excel-Dateien kostenlos komprimieren", "pathname": "compress-excel" },
+      { "title": "ZIP-\nDatei", "description": "ZIP-Dateien\n kostenlos komprimieren", "pathname": "compress-zip" }
+    ]
+  },
+  "FeaturesSection": {
+    "inxtFileCompressor": {
+      "title": "Online-Dateien gratis mit Internxt komprimieren",
+      "description": [
+        "Dieses kostenlose Tool ist der beste Dateikompressor, um deinen Cloud-Speicher optimal zu nutzen. Du kannst die Größen von Videos, Fotos, Dokumenten und Tabellen über Dateianhangsgrenzen hinaus reduzieren.",
+        "Es ist ein kostenloser, benutzerfreundlicher Service, kompatibel mit jedem Gerät, mit dem du die Dateigröße reduzieren kannst – ganz ohne Qualitätsverlust, unsicherer Datenübertragung oder mangelnder Privatsphäre. Jetzt die unbegrenzte Dateikompression starten und das Potenzial deines Cloud-Speichers und der Zusammenarbeit freischalten!"
+      ]
+    },
+    "howUseFileCompressor": {
+      "title": "So verwendest du den Internxt-Dateikompressor",
+      "steps": [
+        {
+          "step": "Schritt 1:",
+          "description": "Lade deine Datei hoch: Ziehe sie per Drag & Drop in den oberen Bereich oder lade sie von deinem Gerät hoch."
+        },
+        { "step": "Schritt 2:", "description": "Klicke auf „Datei komprimieren“" },
+        { "step": "Schritt 3:", "description": "Datei herunterladen" }
+      ]
+    },
+    "whyUseFileCompressor": {
+      "title": "Warum einen Dateikompressor verwenden?",
+      "description": "Unser Dateikompressor bietet eine schnelle, sichere Lösung, um Speicherplatz zu sparen und große Videodateien, Fotoalben und mehr mühelos zu teilen – kostenlos, einfach, ohne gefährliche Downloads oder Datenerfassung durch Dritte und ideal für Datenschutz und Dateiverwaltung."
+    },
+    "cards": [
+      {
+        "title": "Mehrere Formate komprimieren",
+        "description": "Wir unterstützen gängige Formate für Dokumente, Bilder und Videos. Mehrere Kompressionsoptionen bieten Effizienz und Flexibilität bei der Bearbeitung und Zusammenarbeit."
+      },
+      {
+        "title": "Volle Verschlüsselung",
+        "description": "Internxt schützt deine Dateien beim Upload mit HTTPS-Verschlüsselung. Komprimierte Dateien werden gelöscht und Internxt speichert keine Daten."
+      },
+      {
+        "title": "Ohne Registrierung",
+        "description": "Komprimiere ohne persönliche Daten. Kein Name, keine E-Mail, keine Zahlung – einfach kostenlose Kompression ohne Grenzen."
+      },
+      {
+        "title": "Integration mit Internxt",
+        "description": "Optimal für Internxt-Produkte wie Drive, Send und Mail. Komprimiere und speichere Dateien sicher und nahtlos."
+      },
+      {
+        "title": "Schnell & einfach",
+        "description": "Lade deine Datei hoch – Internxt erledigt den Rest. Schnell komprimiert, einfach zu speichern und zu teilen."
+      },
+      {
+        "title": "Schnellere Upload-Geschwindigkeit",
+        "description": "Kleinere Dateien bedeuten schnellere Uploads in die Cloud oder per E-Mail – je nach Internetverbindung leichter teilen."
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Komprimiere, speichere und teile Dateien mit Internxt",
+    "description": "Eine vollständige Privatsphäre-Suite zum Schutz im Netz.",
+    "cta": "Wechsle zu Internxt"
+  },
+  "CtaSection2": {
+    "title": "Dateiverwaltung, vereinfacht.",
+    "description": "Konvertiere und speichere Dateien sicher mit Internxt Drive.",
+    "cta": "Erstelle dein Konto"
+  },
+  "QASection": {
+    "title": "Hast du Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Welcher ist der beste Dateikompressor?",
+        "answer": [
+          "Der beste Kompressor hängt von deinen Bedürfnissen ab – meist unterstützt er viele Formate, ist einfach zu bedienen und verschlüsselt deine Dateien.",
+          "Internxt bietet ein kostenloses, sicheres Tool – ohne Drittanbieter, die persönliche Daten sammeln."
+        ]
+      },
+      {
+        "question": "Welches Dateiformat kann ich komprimieren?",
+        "answer": ["Du kannst kostenlos Word‑, Excel‑, PPT‑, JPG‑, PNG‑ und PDF‑Dateien komprimieren."]
+      },
+      {
+        "question": "Kann ich auch mobil komprimieren?",
+        "answer": ["Ja, das Tool funktioniert auf jedem Gerät – ideal zum Komprimieren unterwegs."]
+      },
+      {
+        "question": "Ist der Komprimierungsvorgang sicher?",
+        "answer": ["Ja, alles ist verschlüsselt und nach dem Komprimieren werden Dateien vom Server gelöscht."]
+      },
+      {
+        "question": "Muss ich ein Konto erstellen?",
+        "answer": ["Nein, es ist keine E‑Mail oder Zahlung nötig – Datenschutz steht an erster Stelle."]
+      },
+      {
+        "question": "Gibt es ein Limit für Dateien?",
+        "answer": ["Nein, du kannst es so oft nutzen wie du willst – unbegrenzt und kostenlos."]
+      },
+      {
+        "question": "Kann ich große Videodateien komprimieren?",
+        "answer": ["Ja, du kannst Dateien bis zu X GB komprimieren – ideal, um Speicherplatz zu sparen."]
+      },
+      {
+        "question": "Wie hilft Kompression beim Cloud‑Speicher?",
+        "answer": ["Komprimierte Dateien sparen Platz und ermöglichen, mehr hochzuladen und Speicherlimits zu umgehen."]
+      }
+    ]
+  }
+}

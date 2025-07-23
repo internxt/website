@@ -1,0 +1,42 @@
+{
+  "ConverterSection": {
+    "description": "Comprime un archivo MOV para reducir su tamaño y compartir vídeos sin perder calidad con Internxt.",
+    "secureUpload": "Subidas seguras protegidas por HTTPS"
+  },
+  "FeaturesSection": {
+    "howToConvert": {
+      "title": "Cómo comprimir un archivo MOV",
+      "description": "Para comprimir un archivo MOV, sigue estos pasos:",
+      "steps": [
+        {
+          "step": "Paso 1:",
+          "description": "Sube tu archivo MOV: arrástralo al área superior o súbelo desde tu dispositivo para iniciar la conversión."
+        },
+        {
+          "step": "Paso 2:",
+          "description": "Haz clic en «Comprimir archivo MOV»"
+        },
+        {
+          "step": "Paso 3:",
+          "description": "Descarga tu archivo."
+        }
+      ],
+      "outro": "Con esta herramienta, puedes comprimir archivos MOV de forma gratuita cuando lo necesites. Todos los archivos están protegidos con subidas cifradas para garantizar la privacidad de tus vídeos."
+    },
+    "whyConvert": {
+      "title": "¿Por qué podría ser necesario comprimir un archivo MOV?",
+      "intro": "Desafortunadamente, enviar archivos de vídeo grandes por Internet puede ser difícil debido a los límites de carga en correos, servicios de intercambio o almacenamiento en la nube. Usar Internxt para comprimir un archivo MOV te ofrece una herramienta segura y gratuita que te permite:",
+      "bullets": [
+        "Subir vídeos más rápido y ahorrar ancho de banda",
+        "Mantener alta calidad de vídeo",
+        "Ajustarse a los límites de carga"
+      ],
+      "outro": "Todos tus archivos se cifran durante el proceso de carga y compresión para mantener la privacidad de tus vídeos. Así puedes comprimir, almacenar y compartir tus archivos con confianza gracias a Internxt."
+    }
+  },
+  "CtaSection": {
+    "title": "Internxt",
+    "description": "Una plataforma segura para comprimir, almacenar y compartir archivos MOV",
+    "cta": "Pásate a Internxt"
+  }
+}

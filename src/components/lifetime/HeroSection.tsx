@@ -1,7 +1,6 @@
 import { Alarm } from '@phosphor-icons/react';
 import Countdown from '../components/Countdown';
 import Image from 'next/image';
-import Header from '../shared/Header';
 import Animation from '../home/components/Animation';
 import { getImage } from '@/lib/getImage';
 import { formatText } from '../utils/format-text';
@@ -42,9 +41,9 @@ const HeroSection = ({
           <div className="relative mx-auto flex w-full max-w-screen-xl flex-col lg:flex-row">
             <div className="my-6 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 text-center sm:w-auto sm:px-0 md:my-8 lg:ml-0 lg:max-w-lg lg:items-start lg:text-left">
               {!hideTimer && (
-                <div className="flex flex-row items-center rounded-lg bg-surface/20 px-2 py-2">
+                <div className="flex flex-row items-center rounded-lg  px-2 py-2">
                   <Alarm size={32} className="mr-4 text-white" />
-                  <Countdown textColor={'white'} dt={dt} />
+                  <Countdown textFont={'text-white'} dt={dt} />
                 </div>
               )}
               <div className="flex px-5 lg:hidden">
@@ -59,10 +58,8 @@ const HeroSection = ({
                 />
               </div>
               <div className="flex max-w-[650px] flex-col items-center  text-center text-white lg:items-start  lg:text-start">
-                <Header maxWidth="w-[400px]" textHeightForDesk="text-5xl">
-                  {textContent.title}
-                </Header>
-                <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-6 lg:text-2xl">{textContent.subtitle}</p>
+                <h1 className="text-3xl font-semibold text-white lg:text-5xl">{textContent.title}</h1>
+                <p className="px-6 pt-4 text-xl font-semibold lg:px-0 lg:pt-2 lg:text-2xl">{textContent.subtitle}</p>
                 <p className="px-6 pt-2 text-xl font-normal lg:px-0 lg:pt-6 lg:text-2xl">{textContent.description}</p>
               </div>
               <button

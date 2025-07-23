@@ -6,11 +6,11 @@
       "blueText": ""
     },
     "description": {
-      "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén ",
+      "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén  ",
       "blue": "85% DE DESCUENTO ",
-      "normal1": "en cualquier plan lifetime. Almacena y comparte tus archivos de forma segura y con total privacidad."
+      "normal1": " en cualquier plan. Almacena y comparte tus archivos de forma segura y con total privacidad."
     },
-    "cta": "Elige un plan"
+    "cta": "Elegir plan"
   },
   "PaymentSection": {
     "planTitles": {
@@ -25,6 +25,7 @@
     },
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
     "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas que cuenta con la última tecnología de seguridad: Internxt Drive, Send, VPN, Antivirus, Meet y Mail. ",
+    "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
     "billingFrequency": {
       "monthly": "Mensual",
       "annually": "Anual",
@@ -37,7 +38,7 @@
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
-      "guarantee": "Garantía de devolución de dinero de 30 días"
+      "guarantee": "Garantía de devolución de 30 días"
     }
   },
   "FeatureSection": {

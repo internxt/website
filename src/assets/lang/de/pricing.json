@@ -43,17 +43,16 @@
   },
   "tableSection": {
     "ctaBanner": {
-      "label": "85% Rabatt",
-      "title": "Möge die Privatsphäre mit dir sein!",
-      "subtitle": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN",
-      "cta": "Sichere dir deinen Plan!",
-      "cta2": "Erhalte 85% Rabatt",
+      "label": "Spare 80%",
+      "title": "Tarife jährlich & lebenslang",
+      "subtitle": "Schütze und nimm deine Daten überall mit – diesen Sommer!",
+      "subtitle2": "Drive, Antivirus und VPN",
+      "subtitle3": "Meet, Mail, Geräte-Cleaner und Dark-Web-Überwachung",
+      "cta": "Hol dir ein Paket",
+      "cta2": "Sichere dir 80 % Rabatt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "lastCta": "*Angebot gültig für kostenlose Konten oder neue Nutzer",
-      "titleMbl": "Möge die Privatsphäre mit dir sein!",
-      "subtitleMbl": "Lebenslange Pläne: Internxt Drive, Antivirus und VPN.",
-      "descriptionMbl": "Nimm an der Verlosung eines Internxt-Rucksacks teil",
-      "ctaMbl": "Kaufe deinen Plan"
+      "gift": "Gewinnspiel: Internxt-Rucksack x Swiss Peak",
+      "lastCta": "*Nur für Gratis-Konten oder neue Nutzer gültig"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",
@@ -64,7 +63,7 @@
         "normalText": "Alle unsere exklusiven Lifetime-Pläne"
       },
       "blackFriday": {
-        "title": "Black Friday Mega-Rabatt: 85 % RABATT auf alle sichersten Cloud-Speicherpläne",
+        "title": "Black Friday Mega-Rabatt: 80 % RABATT auf alle sichersten Cloud-Speicherpläne",
         "description": "Schützen Sie Ihre Daten mit Internxt, um Datenschutzverletzungen, finanzielle Verluste und Privatsphäre-Risiken zu vermeiden. Verabschieden Sie sich von Tech-Giganten, die von Ihren persönlichen Informationen profitieren."
       }
     },

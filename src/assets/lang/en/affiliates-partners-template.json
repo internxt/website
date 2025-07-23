@@ -1,10 +1,15 @@
 {
   "recommendedBy": "Recommended by:",
+  "HeroSectionV3": {
+    "title": "Save 85% on 5TB lifetime cloud storage",
+    "subtitle": "Secure cloud storage guaranteed to protect your data and right to privacy",
+    "cta": "Select plan"
+  },
   "HeroSectionV2": {
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime privacy",
     "info": "Pay once, get lifetime storage at ",
-    "infoHighlight": "85% OFF",
+    "infoHighlight": "87% OFF",
     "cta": "Choose your plan"
   },
   "HeroSection": {
@@ -85,7 +90,7 @@
         "description": "Share files securely using encrypted links or email invites. Your files stay safe on your device, ensuring maximum security when sharing online. For extra protection, you can password-protect shared documents and manage access permissions anytime."
       },
       {
-        "title": "Access your files from anywhere",
+        "title": "Access files from anywhere",
         "description": "Use our desktop apps for Windows, Mac, and Linux, or manage your cloud from our mobile apps for iOS and Android. WebDav support lets you integrate Internxt with your favorite file management applications."
       },
       {
@@ -113,13 +118,12 @@
       "cta": "Buy now"
     },
     "one": {
-      "title": "Running out of storage?",
-      "description": "Get 85% off an extra 5TB!",
-      "cta": "Upgrade plan"
+      "title": "Say goodbye to Google Drive, Microsoft OneDrive, and Dropbox once and for all. De-Google your life.",
+      "cta": "Claim deal"
     },
     "two": {
-      "title": "The world's most private cloud storage",
-      "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+      "title": "Get the world’s most secure cloud storage",
+      "description": "Internxt’s zero-knowledge encryption gives you total control of your privacy.",
       "cta": "Choose your plan"
     }
   },
@@ -157,6 +161,11 @@
         "title": "Internxt themed goodies:",
         "gift1": "Chance to win an Internxt backpack",
         "gift2": "Free Star Wars theme for Web App"
+      },
+      "WorldEnvironmentDay": {
+        "title": "Internxt themed goodies:",
+        "gift1": "Web App theme for free",
+        "gift2": "Chance to win an Internxt backpack"
       },
       "features": {
         "1TB": [
@@ -197,6 +206,37 @@
           "Mail (5 addresses)"
         ],
         "10TB": []
+      }
+    },
+    "onePlan": {
+      "mostPopular": "Most popular plan",
+      "title": "5TB Lifetime plan",
+      "description": "Secure all your files and memories forever with a single, one-time payment. Get Internxt Drive, VPN, Antivirus, Meet and Mail forever.",
+      "priceCard": {
+        "planType": "Ultimate",
+        "off": "off",
+        "billingFrequency": "One-time payment",
+        "cta": "Select plan",
+        "5TB": [
+          "5TB zero-knowledge encrypted storage",
+          "Post-quantum encryption",
+          "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+          "Antivirus",
+          "Backup your files",
+          "Password-protected file sharing",
+          "GDPR compliance",
+          "Two-factor authentication (2FA)",
+          "CLI, WebDav & Rclone support",
+          "Meet (5 participants)",
+          "Mail (5 addresses)"
+        ]
+      },
+      "features": {
+        "endToEnd": "End-to-end encrypted",
+        "openSource": "Open-source and audited",
+        "anonymousAccount": "Anonymous account creation",
+        "premiumSupport": "Premium customer support",
+        "guarantee": "30-day money-back guarantee"
       }
     }
   },
@@ -261,5 +301,96 @@
     "title": "Take back control of your privacy",
     "description": "Internxt creates private and secure cloud services designed to put you, the user, back in charge of your data. Protecting your files and your fundamental right to privacy, all Internxt services are built from the ground up for unparalleled safety and security.",
     "cta": "Select lifetime plans"
+  },
+  "MostSecureSection": {
+    "title": "The most secure cloud storage for your files, photos, and more",
+    "description": "Internxt Drive is an open-source, end-to-end encrypted cloud storage solution to store, back up, and share your files in total privacy. Internxt Drive offers award-winning encryption and control over your data. ",
+    "cta": "Redeem Code"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
+        ]
+      },
+      {
+        "question": "Will I get access to all Internxt services?",
+        "answer": [
+          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
+          "An Internxt Free plan will only give you access to Internxt Drive."
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt does not (and cannot) store your password.",
+          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable 2FA?",
+        "answer": [
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "How do I create an Internxt account?",
+        "answer": [
+          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+        ]
+      },
+      {
+        "question": "How can I cancel my subscription?",
+        "answer": [
+          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
+          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
+          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
   }
 }
