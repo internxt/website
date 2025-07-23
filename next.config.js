@@ -202,6 +202,16 @@ module.exports = {
         destination: '/:lang/drive',
         permanent: false,
       },
+      {
+        source: '/coingate',
+        destination: '/redeem/coingate',
+        permanent: false,
+      },
+      {
+        source: '/stackcommerce',
+        destination: '/redeem/stackcommerce',
+        permanent: false,
+      },
     ];
   },
   images: {
