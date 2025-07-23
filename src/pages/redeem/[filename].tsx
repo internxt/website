@@ -6,7 +6,7 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import MostSecureSection from '@/components/affiliates/brave/MostSecureSection';
 import AnimatedHeroSection from '@/components/shared/HeroSections/AnimatedHeroSection';
 import Button from '@/components/shared/Button';
-import { RedeemText } from '@/lib/redeem';
+import { RedeemText } from '@/assets/types/redeem';
 import FeatureSection from '@/components/lifetime/FeatureSection';
 import SignUp from '@/components/auth/SignUp';
 import { X } from '@phosphor-icons/react';
