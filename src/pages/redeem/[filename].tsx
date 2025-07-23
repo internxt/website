@@ -59,7 +59,6 @@ const SpecialOfferPage = ({
   const rawAffiliate = ALLOWED_PATHS.find((p) => p === pathname) ?? '';
   const affiliate = rawAffiliate.charAt(0).toUpperCase() + rawAffiliate.slice(1);
   const provider = toProvider(rawAffiliate);
-  console.log(provider);
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{enterpise}}/g, affiliate) : text);
 
   return (
