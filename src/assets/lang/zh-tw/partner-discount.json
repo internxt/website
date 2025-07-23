@@ -1,16 +1,16 @@
 {
   "HeroSection": {
-    "header": "Internxt年度折扣",
+    "header": "限時優惠",
     "title": {
-      "normalText": "獲得最安全的雲端存儲 ",
-      "blueText": "更低價格"
+      "normalText": "最安全的雲端儲存服務",
+      "blueText": ""
     },
     "description": {
-      "normal": "加入 Internxt，最好的 Google Drive 替代方案，立即獲得 ",
+      "normal": "加入 Internxt，Google Drive 最佳替代方案，享有 ",
       "blue": "85% 折扣 ",
-      "normal1": "，適用於任何方案。安全且私密地儲存與分享您的檔案。"
+      "normal1": "購買任何終身方案。安全私密地儲存與分享檔案。"
     },
-    "cta": "選擇計劃"
+    "cta": "選擇方案"
   },
   "PaymentSection": {
     "planTitles": {

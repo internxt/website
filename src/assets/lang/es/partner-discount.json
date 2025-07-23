@@ -1,9 +1,9 @@
 {
   "HeroSection": {
-    "header": " Oferta especial",
+    "header": "Oferta especial",
     "title": {
-      "normalText": "El almacenamiento en la nube más seguro ",
-      "blueText": "por menos"
+      "normalText": "El almacenamiento en la nube más seguro",
+      "blueText": ""
     },
     "description": {
       "normal": "Únete a Internxt, la mejor alternativa a Google Drive, y obtén  ",
@@ -23,6 +23,7 @@
         "normalText": "en todos nuestros planes exclusivos de por vida"
       }
     },
+    "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
     "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas que cuenta con la última tecnología de seguridad: Internxt Drive, Send, VPN, Antivirus, Meet y Mail. ",
     "lifetimeDescription": "Paga una vez y obtén privacidad y seguridad para siempre",
     "billingFrequency": {
