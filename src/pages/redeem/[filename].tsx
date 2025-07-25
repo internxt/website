@@ -86,7 +86,7 @@ const SpecialOfferPage = ({
       <AnimatedHeroSection
         textComponent={
           <>
-            <div className="mr-20 flex flex-col ">
+            <div className="flex flex-col lg:space-y-4">
               <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
               <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
             </div>
