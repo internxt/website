@@ -1,7 +1,7 @@
 {
   "ConverterSection": {
     "description": "Compress a PNG file to reduce file size and share pixel-perfect photos and albums with Internxt.",
-    "secureUpload": "Secure uploads protected by HTTPS."
+    "secureUpload": "Secure uploads protected by HTTPS"
   },
   "FeaturesSection": {
     "howToConvert": {
