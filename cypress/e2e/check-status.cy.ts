@@ -31,7 +31,6 @@ const nameFiles = [
   'what-does-google-know-about-me',
   'startpage',
   'file-converter',
-  'specialoffer/freeuser',
 ];
 
 const langs = {
