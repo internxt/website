@@ -19,6 +19,11 @@
       "endToEnd": "Chiffré de bout en bout",
       "openSource": "Open-source et vérifié",
       "anonymousAccount": "Création de compte anonyme"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

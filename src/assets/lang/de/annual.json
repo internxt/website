@@ -40,6 +40,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30 Tage Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "PaymentSection": {

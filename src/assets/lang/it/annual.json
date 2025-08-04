@@ -40,6 +40,11 @@
       "anonymousAccount": "Creazione anonima dell'account",
       "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "PaymentSection": {

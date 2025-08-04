@@ -47,6 +47,11 @@
       "endToEnd": "Premium customer support",
       "openSource": "Open-source and audited",
       "anonymousAccount": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

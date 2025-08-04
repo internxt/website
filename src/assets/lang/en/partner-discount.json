@@ -25,7 +25,7 @@
     },
     "lifetimeDescription": "Buy once and get privacy and security forever.",
     "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
-    "lifetimeDescription": "Buy once and get privacy and security forever.",
+
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
@@ -39,6 +39,11 @@
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {

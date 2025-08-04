@@ -25,7 +25,7 @@
     },
     "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
     "planDescription": "Alle Internxt-Pläne bieten vollständigen Zugriff auf unser Paket privater Lösungen mit modernster Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
-    "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
+
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
@@ -39,6 +39,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {

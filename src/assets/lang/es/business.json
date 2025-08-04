@@ -79,6 +79,11 @@
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
       "guarantee": "Garantía de devolución de dinero de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "WhyChooseInternxt": {
