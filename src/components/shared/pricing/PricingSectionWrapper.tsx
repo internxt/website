@@ -60,7 +60,6 @@ export const PricingSectionWrapper = ({
   hidePlanSelectorComponent,
   backgroundColorComponent = 'bg-white',
   lifetimeCoupons,
-  hideFreeCard,
   hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
@@ -156,7 +155,6 @@ export const PricingSectionWrapper = ({
           }}
           products={products}
           popularPlanBySize={popularPlanBySize}
-          hideFreeCard={hideFreeCard}
           hideBusinessSelector={hideBusinessSelector}
           hidePlanSelectorComponent={hidePlanSelectorComponent}
           hideBusinessCards={hideBusinessCards}
@@ -187,7 +185,6 @@ export const PricingSectionWrapper = ({
           lang={lang}
           billingFrequency={billingFrequency}
           businessBillingFrequency={businessBillingFrequency}
-          lifetimeCoupons={lifetimeCoupons}
           isFamilyPage={isFamilyPage}
           decimalDiscount={{
             subscriptions: decimalDiscount?.individuals,
@@ -196,7 +193,6 @@ export const PricingSectionWrapper = ({
           }}
           products={products}
           popularPlanBySize={popularPlanBySize}
-          hideFreeCard={hideFreeCard}
           hideBusinessSelector={hideBusinessSelector}
           hidePlanSelectorComponent={hidePlanSelectorComponent}
           hideBusinessCards={hideBusinessCards}
@@ -206,11 +202,7 @@ export const PricingSectionWrapper = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           onStorageChange={onStorageChange}
           onPlanTypeChange={onPlanTypeChange}
-          onIndividualSwitchToggled={onIndividualSwitchToggled}
-          onBusinessSwitchToggled={onBusinessSwitchToggled}
           onBusinessPlansSelected={onBusinessPlansSelected}
-          hideSwitchSelector={hideSwitchSelector}
-          isMonthly
           darkMode={darkMode}
           isAnnual={isAnnual}
           hideFeatures={hideFeatures}

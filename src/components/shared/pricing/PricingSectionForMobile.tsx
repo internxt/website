@@ -7,7 +7,6 @@ import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from './PriceCard';
 import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
 
@@ -23,14 +22,9 @@ interface PriceTableProps {
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
-  businessSaveUpPrice?: boolean;
   businessBillingFrequency?: Interval;
-  hideFreeCard?: boolean;
   isFamilyPage?: boolean;
   hidePlanSelectorAndSwitch?: boolean;
-  hideSwitchSelector?: boolean;
-  lifetimeCoupons?: Record<string, PromoCodeProps>;
-  isMonthly?: boolean;
   darkMode?: boolean;
   hideFeatures?: boolean;
   showPromo?: boolean;
@@ -43,9 +37,7 @@ interface PriceTableProps {
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onStorageChange: (storageSelected: string) => void;
-  onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
-  onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
 
