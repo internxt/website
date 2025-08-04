@@ -146,6 +146,8 @@ export enum PromoCodeName {
   Dropbox87 = 'DROPBOX87',
   Upgrage = 'UPGRADE',
   FifthAnniversary = 'INTERNXT5',
+  Welcome = 'WELCOME',
+  AchoEsGratiss = 'achoesgratiss',
 }
 
 export interface PromoCodeProps {

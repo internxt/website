@@ -2,13 +2,13 @@
   "HeroSection": {
     "header": "Exclusive Discount",
     "title": {
-      "normalText": "The most secure cloud storage",
+      "normalText": "The most secure cloud storage ",
       "blueText": "for less"
     },
     "description": {
-      "normal": "Join Internxt, the leading Google Drive alternative, and get",
-      "blue": " 85% OFF ",
-      "normal1": " any plan. Securely store and share your files in complete privacy. "
+      "normal": "Join Internxt, the leading Google Drive alternative, and get ",
+      "blue": "85% OFF ",
+      "normal1": "any plan. Securely store and share your files in complete privacy."
     },
     "cta": "Choose plan"
   },
@@ -23,7 +23,9 @@
         "normalText": "all our exclusive lifetime plans"
       }
     },
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
     "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "lifetimeDescription": "Buy once and get privacy and security forever.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",

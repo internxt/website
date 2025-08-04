@@ -1,10 +1,6 @@
 import { useState, Fragment, createRef } from 'react';
-import { Transition } from '@headlessui/react';
-import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
-import Header from '../shared/Header';
 import { getImage } from '@/lib/getImage';
-import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { AiDetectorText } from '@/assets/types/aiDetector';
 import pdfToText from 'react-pdftotext';
 

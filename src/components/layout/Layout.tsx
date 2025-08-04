@@ -154,42 +154,32 @@ LayoutProps) {
           }}
         ></script>
 
-        {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
-          
-          <>
-            <script
-              id="adengine-config"
-              dangerouslySetInnerHTML={{
-                __html: `
-            window.snigelPubConf = {
-              "adengine": {
-                "activeAdUnits": (function() {
-                  var adUnits = ${JSON.stringify(snigelBanners)};
-                  if (window.innerWidth <= 768) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "adhesive" && unit !== "incontent_4";
-                    });
-                  }
-                  if (window.innerWidth <= 1300 && window.location.pathname.includes('temporary-email')) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "sidebar_right" && unit !== "sidebar_left";
-                    });
-                  }
-                  if (window.location.pathname.includes('temporary-email')) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "incontent_1";
-                    });
-                  }
-                  return adUnits;
-                })()
-              }
-            };
-          `,
-              }}
-            />
-            <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
-          </>
-        ) : null}*/}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5GWZKXKB');`,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
+      (function(){
+          var t = document.createElement("script");
+          t.type = "text/javascript";
+          t.async = true;
+          t.id = "AddShoppers";
+          t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
+          document.getElementsByTagName("head")[0].appendChild(t);
+      })();
+    `,
+          }}
+        />
+
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{
@@ -214,6 +204,16 @@ LayoutProps) {
           width="0"
           style={{ display: 'none', visibility: 'hidden' }}
           title="Google Tag Manager iframe"
+        ></iframe>
+      </noscript>
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5GWZKXKB"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+          title="Google Tag Manager segundo contenedor"
         ></iframe>
       </noscript>
 

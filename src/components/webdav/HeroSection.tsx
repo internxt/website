@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Header from '../shared/Header';
 import HeroSectionSafeArea from '../shared/HeroSectionSafeArea';
 import Link from 'next/link';
 
@@ -9,7 +8,7 @@ export const HeroSection = ({ textContent }) => {
       <HeroSectionSafeArea>
         <div className="flex w-full flex-col-reverse items-center justify-between gap-5 md:flex-row md:gap-0">
           <div className="flex h-full max-w-[553px] flex-col items-center justify-center gap-8 text-center md:items-start md:text-left">
-            <Header>{textContent.title}</Header>
+            <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
             <p className="text-xl text-gray-80">{textContent.description}</p>
             <Link
               href={'#downloadCli'}
