@@ -200,6 +200,7 @@ export interface TestimonialsSectionTitle {
 }
 
 export interface TableSection {
+  title: string;
   planTitles: PlanTitles;
   lifetimeDescription: string;
   planDescription: string;

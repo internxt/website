@@ -1,6 +1,5 @@
 import {
   ArrowsClockwise,
-  Backpack,
   Broom,
   Cake,
   CirclesThreePlus,
@@ -16,7 +15,6 @@ import {
   LockSimple,
   Password,
   ShieldPlus,
-  SunHorizon,
   TShirt,
   VideoConference,
 } from '@phosphor-icons/react';
@@ -24,7 +22,6 @@ import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import styles from '@/components/privacy/HeroSection.module.scss';
 import React from 'react';
-import { getImage } from '@/lib/getImage';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -65,7 +62,6 @@ export const PriceCard = ({
   darkMode,
   showPromo,
   onCheckoutButtonClicked,
-  isAffiliate,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -76,7 +72,6 @@ export const PriceCard = ({
   const showMonthlyLabel =
     (productCardPlan === 'business' && interval === 'month') ||
     (interval === 'year' && productCardPlan === 'individuals');
-  const showTotalDiscountPrice = interval === 'year';
 
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
@@ -91,7 +86,6 @@ export const PriceCard = ({
   const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
-  const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const isBusiness = productCardPlan === 'business';
   const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
   const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
@@ -125,161 +119,102 @@ export const PriceCard = ({
     CreditCard,
   ];
 
+  const renderFeatureIcon = (index: number, fill: boolean) => {
+    const Icon = iconsFeatures[index];
+    return Icon ? <Icon className="h-6 w-6 text-primary" {...(fill ? { weight: 'fill' } : {})} /> : null;
+  };
+
   return (
     <div
-      className={`${
-        !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[850px]'
-      } w-[420px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl lg:min-w-[410px]`}
+      className={`flex ${showPromo ? 'h-[983px]' : 'h-[841px]'} flex-col items-end ${
+        popular ? 'bg-blue-10 shadow-lg' : ''
+      } items-center justify-between rounded-16`}
     >
-      <div
-        className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
-          darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pb-10 pt-10`}
-      >
-        <div className="flex flex-col items-center justify-center space-y-4">
-          <div
-            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-${colorCard} px-3 py-1 ${
-              !popular ? 'invisible' : ''
-            }`}
-          >
-            <Fire size={28} className="text-white" />
-            <p className="font-semibold text-white">{contentText.mostPopular}</p>
-          </div>
-
-          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
-            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
-          </div>
-        </div>
-        <div
-          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
-        >
-          <div
-            className={`priceBreakdown flex flex-row
-              items-end space-x-px text-neutral-700
-            `}
-          >
-            <p
-              className={`${
-                darkMode ? 'text-white' : 'text-gray-100'
-              } flex flex-row items-start space-x-1 whitespace-nowrap font-medium`}
-            >
-              <span className={`currency`}>{currency}</span>
-              <span className="price text-4xl font-bold">{isAnnual && !isBusiness ? monthlyPriceNow : priceNow}</span>
-              {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
-            </p>
-          </div>
-          <p
-            className={`${
-              priceBefore ? 'flex' : 'hidden'
-            } flex-row items-start space-x-1 whitespace-nowrap font-semibold ${
-              darkMode ? 'text-white' : 'text-gray-50'
-            } line-through`}
-          >
-            <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">
-              {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
-            </span>
-          </p>
-
-          <p className={`flex text-sm text-gray-50`}>
-            {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
-            {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-          </p>
-          {decimalDiscountValue && (
-            <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
-              {percentOff}
-              {contentText.discount}
-              {' | '}
-              {contentText.save} {annualSave}
-              {currency}
-            </p>
-          )}
-        </div>
-        <button
-          id={`planButton${storage}`}
-          onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
-          className={`flex w-full flex-col items-center rounded-lg border 
-            ${
-              popular
-                ? `border-${colorCard} bg-${colorCard} text-white hover:bg-${colorCard}-dark`
-                : darkMode
-                ? `border-${colorCard} bg-primary text-white hover:bg-${colorCard}-dark active:bg-gray-5`
-                : `border-${colorCard} text-${colorCard} hover:bg-gray-1 active:bg-gray-5`
-            } whitespace-nowrap px-20 py-2.5 font-medium`}
-        >
-          <p>{ctaText}</p>
-        </button>
+      <div className={'flex h-[61px] items-center justify-center'}>
+        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
       </div>
-      {showPromo ? (
-        <div className={`flex flex-col items-start space-y-2 px-5 py-5 ${styles.horizontalLinearGardient}`}>
-          <span className="text-[13.5px] font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
-          <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center space-x-2">
-              <TShirt size={24} className="text-primary" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[0]}</span>
+
+      <div className={`z-10 ${showPromo ? 'h-[922px]' : 'h-[780px]'} w-[380px] rounded-16 border border-gray-10`}>
+        <div className="flex h-[293px] flex-col rounded-t-16 bg-white px-6 py-8">
+          <div className="flex h-full w-full flex-col items-center justify-between">
+            <div className="flex h-[48px] items-center justify-center">
+              <p className="text-3xl font-semibold">
+                {cardLabel} {product.storage}
+              </p>
             </div>
-            <div className="flex items-center space-x-2">
-              <Cake size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-white">{contentText.productFeatures.promoFeatures.features[1]}</span>
+            <div className="flex h-[101px] w-[145px] flex-col items-center justify-between">
+              <div className="flex h-[23px] w-[64px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
+                <p className="text-base font-semibold text-green-0">
+                  {percentOff}
+                  {contentText.discount}
+                </p>
+              </div>
+              <div className="flex h-[43px] w-[145px] flex-row items-baseline justify-evenly">
+                <span className="flex flex-row items-baseline gap-1">
+                  <p className="text-4xl font-bold text-gray-100">{priceNow}</p>
+                  <p className="text-base font-semibold text-gray-100">{currency}</p>
+                </span>
+                <span className="flex flex-row items-baseline gap-1">
+                  <p className="text-xl font-bold text-gray-50 line-through">{priceBefore}</p>
+                  <p className="text-sm font-semibold text-gray-50">{currency}</p>
+                </span>
+              </div>
+              <div className="flex h-[19px] w-full items-center justify-center">
+                <p className="text-base text-gray-50">
+                  {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
+                </p>
+              </div>
+            </div>
+            <div
+              id={`planButton${storage}`}
+              onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
+              className={`${
+                popular
+                  ? 'bg-primary text-white hover:bg-primary-dark'
+                  : 'border-primary bg-white text-primary hover:bg-gray-1'
+              } flex h-[48px] w-[340px] items-center justify-center rounded-md border-[1.5px] `}
+            >
+              <p className="text-base font-medium">{ctaText}</p>
             </div>
           </div>
         </div>
-      ) : null}
-      <div
-        className={`featureList flex flex-col  ${
-          darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `lg:h-[530px] ` : `lg:h-[590px]`} pb-6 text-sm`}
-      >
-        <div className="flex flex-col space-y-2 pt-6">
+        {showPromo ? (
+          <div className={`flex h-[142px] flex-col items-center justify-center  ${styles.horizontalLinearGardient}`}>
+            <div className="flex h-[94px] w-[355px] flex-col gap-4 ">
+              <span className="text-[13.5px] font-bold text-white">
+                {contentText.productFeatures.promoFeatures.title}
+              </span>
+              <div className="flex flex-col items-start gap-2">
+                <div className="flex items-center space-x-2">
+                  <TShirt size={24} className="text-primary" />
+                  <span className="text-[13.5px] text-white">
+                    {contentText.productFeatures.promoFeatures.features[0]}
+                  </span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Cake size={24} className="text-primary" />
+                  <span className="text-[13.5px] text-white">
+                    {contentText.productFeatures.promoFeatures.features[1]}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        <div className="flex h-[485px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {isBusiness ? (
-                <>
-                  {React.createElement(
-                    index === 10
-                      ? iconsFeatures[(index + 4) % iconsFeatures.length]
-                      : index > 10
-                      ? iconsFeatures[(index - 1) % iconsFeatures.length]
-                      : iconsFeatures[index % iconsFeatures.length],
-                    {
-                      size: 24,
-                      className: 'text-primary',
-                    },
+            <div className="flex flex-row items-start" key={feature}>
+              <div className="flex h-[24px] flex-row items-center gap-2">
+                {renderFeatureIcon(index, index > 9)}
+                <span className="text-sm font-normal text-gray-80">
+                  {feature}
+                  {index > 9 && (
+                    <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                      {contentText.commingSoon}
+                    </span>
                   )}
-                  <span className="text-gray-80">
-                    {feature}
-                    {index > 10 ? (
-                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
-                        {contentText.commingSoon}
-                      </span>
-                    ) : null}
-                  </span>
-                </>
-              ) : (
-                <>
-                  {React.createElement(
-                    index > 10 && storage === '3TB'
-                      ? iconsFeatures[index % iconsFeatures.length]
-                      : index >= 6 && storage === '1TB'
-                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
-                      : iconsFeatures[index % iconsFeatures.length],
-                    {
-                      size: 24,
-                      className: 'text-primary',
-                    },
-                  )}
-                  <span className="text-gray-80">
-                    {feature}
-                    {index > 9 ? (
-                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
-                        {contentText.commingSoon}
-                      </span>
-                    ) : null}
-                  </span>
-                </>
-              )}
+                </span>
+              </div>
             </div>
           ))}
         </div>

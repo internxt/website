@@ -6,6 +6,7 @@ import { PromoCodeProps } from '@/lib/types';
 import Header from '../Header';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
+import { PricingSectionForMobile } from './PricingSectionForMobile';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -118,8 +119,8 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={`overflow-hidden px-5 py-20 ${backgroundColorComponent}`} id="payment">
-      <div className="flex flex-col items-center gap-10">
+    <section className={` overflow-hidden px-5 py-20  ${backgroundColorComponent}`} id="payment">
+      <div className="hidden flex-col items-center gap-10 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {!hideTitle && <Header maxWidth="max-w-4xl max-w-[1000px] text-4xl">{title()}</Header>}
@@ -136,6 +137,46 @@ export const PricingSectionWrapper = ({
         </div>
 
         <PricingSection
+          textContent={textContent}
+          lang={lang}
+          billingFrequency={billingFrequency}
+          businessBillingFrequency={businessBillingFrequency}
+          lifetimeCoupons={lifetimeCoupons}
+          isFamilyPage={isFamilyPage}
+          decimalDiscount={{
+            subscriptions: decimalDiscount?.individuals,
+            lifetime: decimalDiscount?.lifetime,
+            business: decimalDiscount?.business,
+          }}
+          products={products}
+          popularPlanBySize={popularPlanBySize}
+          hideFreeCard={hideFreeCard}
+          hideBusinessSelector={hideBusinessSelector}
+          hidePlanSelectorComponent={hidePlanSelectorComponent}
+          hideBusinessCards={hideBusinessCards}
+          hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
+          loadingCards={loadingCards}
+          activeSwitchPlan={activeSwitchPlan}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          onPlanTypeChange={onPlanTypeChange}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
+          onBusinessPlansSelected={onBusinessPlansSelected}
+          hideSwitchSelector={hideSwitchSelector}
+          isMonthly
+          darkMode={darkMode}
+          isAnnual={isAnnual}
+          hideFeatures={hideFeatures}
+          showPromo={showPromo}
+          isAffiliate={isAffiliate}
+        />
+      </div>
+      <div className="flex flex-col items-center gap-10 lg:hidden">
+        <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+          <p className="text-30 font-bold text-gray-100">{textContent.title} </p>
+        </div>
+
+        <PricingSectionForMobile
           textContent={textContent}
           lang={lang}
           billingFrequency={billingFrequency}

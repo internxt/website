@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-keys */
+const { blue } = require('@mui/material/colors');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
@@ -70,6 +71,9 @@ module.exports = {
         1: 'rgb(255, 149, 0, 1)',
         100: 'rgb(255, 233, 204, 1)',
       },
+      blue: {
+        10: 'rgb(204, 224, 255, 1)',
+      },
       // OLD DESIGN SYSTEM
       'cool-gray': {
         5: 'rgb(249,250,252)',
@@ -134,6 +138,7 @@ module.exports = {
       },
       neutral: {
         10: 'rgb(250,251,252)',
+        15: 'rgb(249,249,252)',
         20: 'rgb(244,245,247)',
         30: 'rgb(235,236,240)',
         40: 'rgb(223,225,230)',
@@ -199,6 +204,8 @@ module.exports = {
       fontSize: {
         'supporting-1': '0.5rem',
         'supporting-2': '0.625rem',
+        '3xl': '2.5rem',
+        30: '1.875rem',
       },
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',

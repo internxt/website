@@ -34,54 +34,53 @@ export const PriceBannerForCampaigns = ({
   }, []);
 
   return (
-    <div
-      className={`${
-        shouldShowBanner && delayedRender ? 'flex' : 'hidden'
-      } relative flex-col overflow-hidden lg:rounded-32 ${styles.horizontalLinearGardient}`}
-    >
-      {/* Banner Desktop */}
+    <section className="mr-4 pt-20 lg:pt-24">
       <div
-        className={`relative z-10 hidden h-[426px] flex-col overflow-hidden rounded-32 lg:flex lg:flex-row xl:w-[1100px] 1.5xl:w-[1150px] 2xl:w-[1300px]`}
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+        className={`${
+          shouldShowBanner && delayedRender ? 'flex' : 'hidden'
+        } flex-col overflow-hidden xs-md:mx-10 lg:rounded-32 xl:mx-32 3xl:mx-80 ${styles.horizontalLinearGardient}`}
       >
-        <div className="flex flex-col items-center overflow-hidden text-center lg:flex-row lg:items-start lg:text-left">
+        <div
+          className={`hidden h-[370px] w-full flex-row items-center px-8 lg:flex`}
+          style={{
+            backgroundImage: `url(${bgImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
           <div
-            className={`${styles.titleAndOnePlanSection} my-10 ml-10 flex h-[341px] w-[700px] flex-col justify-between rounded-20 px-8 text-center backdrop-blur-[6px] lg:items-start lg:text-left 2xl:w-[680px]`}
+            className={`${styles.titleAndOnePlanSection} flex h-[314px] w-[670px] shrink-0 flex-col items-center rounded-20 text-center backdrop-blur-[6px]`}
           >
-            <div className="flex flex-col">
-              <div className="flex flex-row items-center gap-3 pt-10">
-                <p className="rounded-2 bg-gray-95/30 px-1 py-0.5 text-xl font-semibold text-primary">
-                  {parsePercentText(textContent.label)}
-                </p>
-                <p className="text-2xl font-normal text-white">{textContent.title}</p>
-              </div>
-              <div className="flex w-[700px] flex-col space-y-2 pt-3">
-                <p className="text-lg font-semibold text-white sm:text-lg md:text-lg lg:text-4xl">
-                  {textContent.subtitle}
-                </p>
-                <div className="flex flex-row items-start gap-1 pt-2 lg:gap-2">
-                  <Check className="mt-1 text-primary" weight="bold" size={20} />
-                  <p className="text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">{textContent.subtitle2}</p>
+            <div className="my-8 flex h-full flex-col justify-between">
+              <div className="flex h-[80px] w-[630px] flex-col justify-between   text-start ">
+                <div className="flex flex-row gap-3 ">
+                  <p className="rounded-2 bg-gray-95/30 px-1 py-0.5 text-xl font-semibold text-primary">
+                    {parsePercentText(textContent.label)}
+                  </p>
+                  <p className="text-2xl font-normal text-white">{textContent.title}</p>
                 </div>
-                <div className="flex flex-row items-start gap-1 lg:gap-2">
+                <p className="text-4xl font-semibold text-white">{textContent.subtitle}</p>
+              </div>
+              <div className="flex h-[56px] w-[549px] flex-col justify-between">
+                <div className="flex h-[24px] flex-row items-start gap-2">
                   <Check className="mt-1 text-primary" weight="bold" size={20} />
-                  <p className="text-left text-sm font-normal text-white lg:pt-0 lg:text-lg">{textContent.subtitle3}</p>
+                  <p className="text-left text-lg font-normal text-white">{textContent.subtitle2}</p>
+                </div>
+                <div className="flex h-[24px] flex-row items-start gap-2">
+                  <Check className="mt-1 text-primary" weight="bold" size={20} />
+                  <p className="text-left text-lg font-normal text-white lg:pt-0">{textContent.subtitle3}</p>
                 </div>
               </div>
-              <div className="flex w-[600px] flex-col items-start pt-6">
-                <div className="flex w-full flex-row items-center gap-4">
+              <div className="flex h-[77px] w-[630px]  flex-col justify-between ">
+                <div className="flex w-full flex-row items-center gap-4 ">
                   <Link
                     href={redirectTo ?? '#billingButtons'}
                     className="flex w-1/2 items-center justify-center rounded-lg bg-primary px-3 py-2 text-center text-base font-medium text-white hover:bg-primary/95 sm:px-5 sm:py-2"
                   >
                     {textContent.cta}
                   </Link>
-                  <div className="flex flex-row items-center justify-center space-x-2">
+                  <div className="flex flex-row items-center justify-center gap-1">
                     <Image
                       src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
                       alt="Internxt Blue Shield check"
@@ -89,99 +88,97 @@ export const PriceBannerForCampaigns = ({
                       height={24}
                       className="hidden md:block"
                     />
-                    <p className="pt-1.5 text-base font-medium text-white sm:text-base md:pb-1">
-                      {textContent.guarantee}
-                    </p>
+                    <p className="pt-1 text-base font-medium text-white sm:text-base ">{textContent.guarantee}</p>
                   </div>
                 </div>
-                <p className="h-[10px] pt-3 text-center text-sm font-medium text-gray-25 sm:text-sm lg:text-left">
-                  {textContent.lastCta}
-                </p>
+                <p className="h-[17px] text-left text-sm font-medium text-gray-25">{textContent.lastCta}</p>
+              </div>
+            </div>
+          </div>
+          <div className="h-[314px] w-[390px] flex-col items-center justify-center lg:flex">
+            <div className="ml-4 flex h-full w-full flex-col items-end justify-evenly">
+              <div className="relative mt-6 h-[234px] w-full ">
+                <Image
+                  src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}
+                  alt="Internxt x Valencia logo"
+                  fill
+                  quality={100}
+                />
+              </div>
+              <div className="relative mb-2 h-[39px] w-[253px] ">
+                <Image
+                  src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+                  alt="Internxt x Valencia logo"
+                  fill
+                  quality={100}
+                />
               </div>
             </div>
           </div>
         </div>
-        <div className="relative my-10 mr-10 h-[341px] w-[320px] 1.5xl:w-[360px]">
-          <Image
-            src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
-            alt="Internxt 5th anniversary"
-            width={600}
-            height={600}
-            quality={100}
-            className="absolute right-6 top-0 z-0 "
-          />
-          <Image
-            src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
-            alt="Internxt x Valencia logo"
-            width={300}
-            height={200}
-            quality={100}
-            className="absolute bottom-8 right-0 z-10"
-          />
-        </div>
-      </div>
 
-      {/* Banner Mobile */}
-      <div
-        style={{
-          backgroundImage: `url('${bgImage}')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-        className="relative z-10 flex h-[630px] w-screen flex-col justify-between py-5 md:pb-[1000px] lg:hidden"
-      >
+        {/* Banner Mobile */}
         <div
-          className={`mx-4 flex flex-col items-center gap-2 rounded-2xl ${styles.titleAndOnePlanSection} px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left`}
+          style={{
+            backgroundImage: `url('${bgImage}')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          className="relative z-10 flex h-[660px] w-screen flex-col justify-between py-5 md:pb-[1000px] lg:hidden"
         >
-          <div className="flex w-max items-center rounded-2 bg-gray-95/30 px-1 py-0.5">
-            <p className="text-sm font-semibold text-primary">{parsePercentText(textContent.label)}</p>
+          <div
+            className={`mx-4 flex flex-col items-center gap-2 rounded-2xl ${styles.titleAndOnePlanSection} px-2 py-4 text-center backdrop-blur-[6px] lg:items-start lg:text-left`}
+          >
+            <div className="flex w-max items-center rounded-2 bg-gray-95/30 px-1 py-0.5">
+              <p className="text-sm font-semibold text-primary">{parsePercentText(textContent.label)}</p>
+            </div>
+            <div className="flex w-full flex-col pt-1">
+              <p className="text-lg font-normal text-white">{textContent.title}</p>
+              <p className="px-10 pt-3 text-center text-2xl font-semibold text-white">{textContent.subtitle2}</p>
+            </div>
+            <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-4">
+              <Image
+                src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
+                alt="Internxt Blue Shield check"
+                width={24}
+                height={24}
+              />
+              <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-white">{textContent.guarantee}</p>
+            </div>
+            <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pb-2">
+              <TShirt size={24} className="text-primary" />
+              <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-white">{textContent.gift}</p>
+            </div>
+            <div className="flex w-full flex-row items-center justify-start gap-2 px-0 pb-2">
+              <Link
+                href={redirectTo ?? '#billingButtons'}
+                className="z-20 mx-4 flex w-full items-center justify-center rounded-sm-6 bg-primary px-4 py-3 text-center text-base font-normal text-white hover:bg-primary/95 sm:py-3 sm:text-lg"
+              >
+                {textContent.cta}
+              </Link>
+            </div>
           </div>
-          <div className="flex w-full flex-col pt-1">
-            <p className="text-lg font-normal text-white">{textContent.title}</p>
-            <p className="px-10 pt-3 text-center text-2xl font-semibold text-white">{textContent.subtitle2}</p>
-          </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pt-4">
+          <div className="relative h-[360px] w-full">
             <Image
-              src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
-              alt="Internxt Blue Shield check"
-              width={24}
-              height={24}
+              src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
+              alt="Internxt 5th anniversary"
+              width={568}
+              height={311}
+              quality={100}
+              className="absolute -top-4 right-1/2 z-10 translate-x-1/2 pr-8"
             />
-            <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-white">{textContent.guarantee}</p>
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+              alt="Internxt x Valencia logo"
+              width={230}
+              height={100}
+              quality={100}
+              className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2"
+            />
           </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 px-4 pb-2">
-            <TShirt size={24} className="text-primary" />
-            <p className="whitespace-nowrap pt-0.5 text-sm font-medium text-white">{textContent.gift}</p>
-          </div>
-          <div className="flex w-full flex-row items-center justify-start gap-2 px-0 pb-2">
-            <Link
-              href={redirectTo ?? '#billingButtons'}
-              className="z-20 mx-4 flex w-full items-center justify-center rounded-sm-6 bg-primary px-4 py-3 text-center text-base font-normal text-white hover:bg-primary/95 sm:py-3 sm:text-lg"
-            >
-              {textContent.cta}
-            </Link>
-          </div>
-        </div>
-        <div className="relative h-[320px] w-full">
-          <Image
-            src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
-            alt="Internxt 5th anniversary"
-            width={568}
-            height={311}
-            quality={100}
-            className="absolute -top-4 right-1/2 z-10 translate-x-1/2 pr-8"
-          />
-          <Image
-            src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
-            alt="Internxt x Valencia logo"
-            width={230}
-            height={100}
-            quality={100}
-            className="absolute bottom-0 left-1/2 z-10 -translate-x-1/2"
-          />
         </div>
       </div>
-    </div>
+    </section>
   );
 };

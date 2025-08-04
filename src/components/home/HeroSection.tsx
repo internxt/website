@@ -5,6 +5,7 @@ import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import styles from '@/components/privacy/HeroSection.module.scss';
+import HeroSafeArea from '../HeroSafeArea';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -43,35 +44,32 @@ export default function HeroSection({
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat  lg:block" />
-        <div className={`flex h-[740px] w-full flex-shrink-0 flex-row pt-8 lg:h-[700px] 1.5xl:h-[800px]`}>
-          <div className="flex h-full w-full items-center mobile-md:m-6 lg:mx-10 xl:mx-32">
-            <TitleAndOnePlan
-              textContent={titleAndOnePlanText}
-              lang={lang}
-              percentOff={percentOff}
-              minimumPrice={minimumPrice}
+        <HeroSafeArea>
+          <TitleAndOnePlan
+            textContent={titleAndOnePlanText}
+            lang={lang}
+            percentOff={percentOff}
+            minimumPrice={minimumPrice}
+          />
+          <div className="relative mx-4 hidden w-full flex-col items-center justify-center lg:flex">
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}
+              alt="Internxt x Valencia logo"
+              width={1000}
+              height={20}
+              quality={100}
+              className="absolute top-10 z-10"
             />
-            <div className="relative flex w-full flex-col items-center justify-center lg:h-[33rem]  1.5xl:h-[37rem] ">
-              <Image
-                src={getImage('/images/campaigns/5th-anniversary/visual (mobile).webp')}
-                alt="Internxt 5th anniversary"
-                width={600}
-                height={600}
-                quality={100}
-                className="absolute top-0 z-0 "
-              />
-              <Image
-                src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
-                alt="Internxt x Valencia logo"
-                width={300}
-                height={200}
-                quality={100}
-                className="absolute bottom-16 right-0 z-10 1.5xl:bottom-24 "
-              />
-            </div>
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+              alt="Internxt x Valencia logo"
+              width={300}
+              height={200}
+              quality={100}
+              className="absolute bottom-16 right-0 z-10"
+            />
           </div>
-        </div>
+        </HeroSafeArea>
       </div>
     </section>
   );

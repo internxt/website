@@ -5,17 +5,12 @@ import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
 import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
-import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
 import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
-
-const SKELETON_CARDS = {
-  Individuals: 4,
-  Business: 2,
-};
+import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -53,7 +48,7 @@ interface PriceTableProps {
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
 
-export const PricingSection = ({
+export const PricingSectionForMobile = ({
   textContent,
   products,
   loadingCards,
@@ -131,26 +126,12 @@ export const PricingSection = ({
       <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
         {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
         {!hidePlanSelectorComponent && (
-          <PlanSelector
+          <PlanSelectorForMobile
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
             isMonthly
-            darkMode={darkMode}
-          />
-        )}
-
-        {/* Switch buttons for Individual plans (Monthly | Annually) */}
-        {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
-          <SwitchComponent
-            textContent={textContent}
-            show={showSwitchComponent}
-            lang={lang}
-            billedFrequency={billingFrequencyForSwitch}
-            handleOnSwitchIsToggled={switchHandler}
-            labelDiscount={labelDiscount}
-            showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
             darkMode={darkMode}
           />
         )}

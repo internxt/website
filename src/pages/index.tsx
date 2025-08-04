@@ -123,8 +123,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
+        popularPlanBySize="3TB"
         showPromo
+        backgroundColorComponent="bg-neutral-15"
       />
 
       <ComponentsInColumnSection
