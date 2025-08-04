@@ -83,7 +83,7 @@ export const HorizontalPriceCard = ({
     });
   }
   return (
-    <div className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:h-[328px] lg:w-[1288px] lg:flex-row">
+    <div className="flex w-[320px] flex-col overflow-hidden rounded-2xl ring-1 ring-gray-10 lg:h-[328px] lg:w-[1100px] lg:flex-row lg-xl:w-[1100px] xl:w-[1200px]">
       <div className="flex w-full flex-col items-center justify-center space-y-4 bg-white p-6 pb-10 pt-10 lg:w-[455px] lg:border-r lg:border-neutral-20">
         <div className="flex flex-col items-center justify-center space-y-4">
           <div className="flex rounded-full px-3 py-0.5">

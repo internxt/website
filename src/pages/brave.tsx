@@ -65,14 +65,7 @@ export default function BravePage({
       <AnimatedHeroSection
         textComponent={
           <>
-            <h1 className="block text-4xl font-bold text-white lg:hidden xl:text-5xl">
-              {textContent.HeroSection.title}{' '}
-              <span className="text-2xl font-semibold text-primary xl:text-3xl">
-                {textContent.HeroSection.subtitle}
-              </span>
-            </h1>
-
-            <div className="hidden lg:flex lg:flex-col lg:space-y-4">
+            <div className="flex flex-col lg:space-y-4">
               <h1 className="text-4xl font-bold text-white xl:text-5xl">{textContent.HeroSection.title}</h1>
               <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{textContent.HeroSection.subtitle}</h2>
             </div>

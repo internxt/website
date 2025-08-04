@@ -1,5 +1,4 @@
 import { useRouter } from 'next/navigation';
-import Header from '../../shared/Header';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 
@@ -15,12 +14,12 @@ export const HeroSection = ({ textContent }) => {
             <p>{textContent.description.normal}</p>
           </div>
         </div>
-        <div className="flex w-full flex-col items-center justify-center lg:max-w-[1000px] lg-xl:max-w-[1000px]">
-          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4 lg-xl:w-full lg-xl:gap-8">
+        <div className="flex w-full flex-col items-center justify-center lg:w-[60rem] lg-xl:w-[65rem] 1.5xl:w-[72rem] 2xl:w-[80rem]">
+          <div className="grid grid-flow-row grid-cols-1 flex-row flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4 lg-xl:w-full lg-xl:gap-6 1.5xl:gap-12">
             {textContent.cards.map((card) => (
               <button
                 key={card.title}
-                className="flex w-full max-w-[300px] cursor-pointer flex-col items-start space-y-2 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:p-9 "
+                className="flex w-[18.75rem] cursor-pointer flex-col items-start space-y-2 rounded-2xl bg-white px-10 py-5 text-start shadow-subtle-hard hover:ring-4 hover:ring-primary/8 lg:w-[14.5rem] lg:p-9 lg-xl:w-[15rem] 2xl:w-[18rem]  "
                 onClick={() => {
                   router.push(`/file-compressor/${card.pathname}`);
                 }}
