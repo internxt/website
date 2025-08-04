@@ -2,8 +2,7 @@ import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
 
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
-import { SwitchComponent } from './components/Switch';
+import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from './PriceCard';
 import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
@@ -11,6 +10,7 @@ import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
+import FreePlanCard from '@/components/prices/FreePlanCard';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -18,6 +18,7 @@ interface PriceTableProps {
   loadingCards: boolean;
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
+  storageSelected: SwitchStorageOptions;
   lang: string;
   popularPlanBySize?: string;
   hideBusinessSelector?: boolean;
@@ -42,6 +43,7 @@ interface PriceTableProps {
   isAnnual?: boolean;
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
+  onStorageChange: (storageSelected: string) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
@@ -53,6 +55,7 @@ export const PricingSectionForMobile = ({
   products,
   loadingCards,
   activeSwitchPlan,
+  storageSelected,
   billingFrequency,
   businessBillingFrequency,
   decimalDiscount,
@@ -66,6 +69,7 @@ export const PricingSectionForMobile = ({
   popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
+  onStorageChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
@@ -79,14 +83,10 @@ export const PricingSectionForMobile = ({
   const banner = require('@/assets/lang/en/banners.json');
 
   const isBusiness = activeSwitchPlan === 'Business';
-  const labelDiscount = '15';
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const showPromos = activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
-  const showSwitchComponent =
-    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -121,18 +121,24 @@ export const PricingSectionForMobile = ({
     }
   };
 
+  const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
+
   return (
     <>
-      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+      <div
+        className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}
+        id="priceTable"
+      >
         {!hidePlanSelectorComponent && (
           <PlanSelectorForMobile
             textContent={textContent}
             activeSwitchPlan={activeSwitchPlan}
             hideBusinessSelector={hideBusinessSelector}
             onPlanTypeChange={onPlanTypeChange}
+            onStorageChange={onStorageChange}
             isMonthly
             darkMode={darkMode}
+            activeStoragePlan={storageSelected}
           />
         )}
       </div>
@@ -158,9 +164,10 @@ export const PricingSectionForMobile = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row justify-end gap-4">
+        <div className="content flex w-[329px] flex-col justify-start px-2 lg:justify-end">
           {products?.individuals
             ? products.individuals[billingFrequency]
+                .filter((product) => product.storage === planStorage)
                 .filter((_, index) => !(isAnnual && index === 0))
                 .map((product) => (
                   <PriceCard
@@ -193,7 +200,7 @@ export const PricingSectionForMobile = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center">
+        <div className="content flex w-full flex-row flex-wrap items-start justify-center  justify-items-center gap-8">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (
@@ -226,11 +233,15 @@ export const PricingSectionForMobile = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="flex h-[88px] w-[300px] flex-col items-start justify-between text-center md:flex-row md:space-x-32 md:space-y-0 lg:w-full">
           {features.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row ">
-              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+            <div key={feature.text} className="flex h-[40px] w-full flex-row items-center justify-start gap-2 ">
+              <div>
+                <feature.icon size={40} className="shrink-0  text-primary " />
+              </div>
+              <p className={`justify-end  text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                {feature.text}
+              </p>
             </div>
           ))}
         </div>

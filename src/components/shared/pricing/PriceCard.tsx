@@ -1,6 +1,5 @@
 import {
   ArrowsClockwise,
-  Broom,
   Cake,
   CirclesThreePlus,
   CodeBlock,
@@ -9,12 +8,12 @@ import {
   Detective,
   Envelope,
   Fingerprint,
-  Fire,
   Gauge,
   Key,
   LockSimple,
   Password,
   ShieldPlus,
+  Sparkle,
   TShirt,
   VideoConference,
 } from '@phosphor-icons/react';
@@ -66,29 +65,15 @@ export const PriceCard = ({
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
 
-  const isLifetime = interval === 'lifetime';
-  const isAnnual = interval === 'year';
-
-  const showMonthlyLabel =
-    (productCardPlan === 'business' && interval === 'month') ||
-    (interval === 'year' && productCardPlan === 'individuals');
-
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
-  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
-  const monthlyPriceBefore = decimalDiscountValue
-    ? Number(price / 12)
-        .toFixed(2)
-        .replace('.00', '')
-    : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
+
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
-  const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
-  const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
+
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -112,7 +97,7 @@ export const PriceCard = ({
     LockSimple,
     Fingerprint,
     CodeBlock,
-    Broom,
+    Sparkle,
     Detective,
     VideoConference,
     Envelope,
@@ -126,37 +111,41 @@ export const PriceCard = ({
 
   return (
     <div
-      className={`flex ${showPromo ? 'h-[983px]' : 'h-[841px]'} flex-col items-end ${
-        popular ? 'bg-blue-10 shadow-lg' : ''
-      } items-center justify-between rounded-16`}
+      className={`flex flex-col items-center justify-between rounded-16 ${
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : 'h-[841px]'
+      } ${popular ? 'bg-blue-10 shadow-lg' : ''}`}
     >
-      <div className={'flex h-[61px] items-center justify-center'}>
+      <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
         <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
       </div>
 
-      <div className={`z-10 ${showPromo ? 'h-[922px]' : 'h-[780px]'} w-[380px] rounded-16 border border-gray-10`}>
-        <div className="flex h-[293px] flex-col rounded-t-16 bg-white px-6 py-8">
-          <div className="flex h-full w-full flex-col items-center justify-between">
-            <div className="flex h-[48px] items-center justify-center">
-              <p className="text-3xl font-semibold">
+      <div
+        className={`z-10 ${
+          showPromo ? (isBusiness ? 'lg:h-[939px] ' : 'lg:h-[922px]') : 'lg:h-[780px]'
+        } w-full rounded-16 border border-gray-10`}
+      >
+        <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
+          <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
+            <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
+              <p className="text-30 font-semibold lg:text-3xl">
                 {cardLabel} {product.storage}
               </p>
             </div>
-            <div className="flex h-[101px] w-[145px] flex-col items-center justify-between">
-              <div className="flex h-[23px] w-[64px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
+            <div className="flex h-[87px] w-[141px] flex-col items-center justify-between  lg:h-[101px] lg:w-[145px]">
+              <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                 <p className="text-base font-semibold text-green-0">
                   {percentOff}
                   {contentText.discount}
                 </p>
               </div>
-              <div className="flex h-[43px] w-[145px] flex-row items-baseline justify-evenly">
+              <div className="flex h-[29px] flex-row items-baseline justify-between gap-2 lg:h-[43px] ">
                 <span className="flex flex-row items-baseline gap-1">
-                  <p className="text-4xl font-bold text-gray-100">{priceNow}</p>
+                  <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{priceNow}</p>
                   <p className="text-base font-semibold text-gray-100">{currency}</p>
                 </span>
                 <span className="flex flex-row items-baseline gap-1">
-                  <p className="text-xl font-bold text-gray-50 line-through">{priceBefore}</p>
-                  <p className="text-sm font-semibold text-gray-50">{currency}</p>
+                  <p className="text-lg font-bold text-gray-50 line-through lg:text-xl">{priceBefore}</p>
+                  <p className="text-md font-semibold text-gray-50 lg:text-sm">{currency}</p>
                 </span>
               </div>
               <div className="flex h-[19px] w-full items-center justify-center">
@@ -172,7 +161,7 @@ export const PriceCard = ({
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
                   : 'border-primary bg-white text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[340px] items-center justify-center rounded-md border-[1.5px] `}
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px] `}
             >
               <p className="text-base font-medium">{ctaText}</p>
             </div>
@@ -180,18 +169,16 @@ export const PriceCard = ({
         </div>
         {showPromo ? (
           <div className={`flex h-[142px] flex-col items-center justify-center  ${styles.horizontalLinearGardient}`}>
-            <div className="flex h-[94px] w-[355px] flex-col gap-4 ">
-              <span className="text-[13.5px] font-bold text-white">
-                {contentText.productFeatures.promoFeatures.title}
-              </span>
+            <div className="flex h-[120px] w-full flex-col justify-center gap-2 px-6 lg:w-[380px]">
+              <span className="text-base font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
               <div className="flex flex-col items-start gap-2">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <TShirt size={24} className="text-primary" />
                   <span className="text-[13.5px] text-white">
                     {contentText.productFeatures.promoFeatures.features[0]}
                   </span>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-start space-x-2">
                   <Cake size={24} className="text-primary" />
                   <span className="text-[13.5px] text-white">
                     {contentText.productFeatures.promoFeatures.features[1]}
@@ -201,10 +188,14 @@ export const PriceCard = ({
             </div>
           </div>
         ) : null}
-        <div className="flex h-[485px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-6">
+        <div
+          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+            isBusiness ? 'lg:h-[520px]' : 'lg:h-[485px]'
+          } lg:py-6`}
+        >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start" key={feature}>
-              <div className="flex h-[24px] flex-row items-center gap-2">
+              <div className="flex min-h-[24px] flex-row items-start gap-2">
                 {renderFeatureIcon(index, index > 9)}
                 <span className="text-sm font-normal text-gray-80">
                   {feature}

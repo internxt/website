@@ -89,6 +89,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",

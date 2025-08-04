@@ -1,7 +1,7 @@
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
-import { SwitchButtonOptions } from './components/PlanSelector';
+import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
@@ -22,6 +22,7 @@ interface PricingSectionWrapperProps {
   startBusinessPlansFromInterval?: Interval;
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
+  startFromStorage?: SwitchStorageOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
   isFamilyPage?: boolean;
@@ -53,6 +54,7 @@ export const PricingSectionWrapper = ({
   startIndividualPlansFromInterval = Interval.Lifetime,
   startBusinessPlansFromInterval = Interval.Month,
   startFromPlan = 'Lifetime',
+  startFromStorage = 'Ultimate',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -78,13 +80,16 @@ export const PricingSectionWrapper = ({
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
+    activeStoragePlan,
     billingFrequency,
     businessBillingFrequency,
     onPlanTypeChange,
+    onStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
   } = usePlanSelection(
     startFromPlan,
+    startFromStorage,
     startIndividualPlansFromInterval,
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
@@ -172,8 +177,8 @@ export const PricingSectionWrapper = ({
           isAffiliate={isAffiliate}
         />
       </div>
-      <div className="flex flex-col items-center gap-10 lg:hidden">
-        <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+      <div className="flex flex-col items-center gap-10 lg:hidden ">
+        <div className="flex flex-col items-center gap-4 text-center">
           <p className="text-30 font-bold text-gray-100">{textContent.title} </p>
         </div>
 
@@ -199,6 +204,7 @@ export const PricingSectionWrapper = ({
           loadingCards={loadingCards}
           activeSwitchPlan={activeSwitchPlan}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
+          onStorageChange={onStorageChange}
           onPlanTypeChange={onPlanTypeChange}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
@@ -210,6 +216,7 @@ export const PricingSectionWrapper = ({
           hideFeatures={hideFeatures}
           showPromo={showPromo}
           isAffiliate={isAffiliate}
+          storageSelected={activeStoragePlan}
         />
       </div>
     </section>

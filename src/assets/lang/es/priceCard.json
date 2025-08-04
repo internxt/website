@@ -1,5 +1,5 @@
 {
-  "mostPopular": "Popular",
+  "mostPopular": "Recomendado",
   "mostPopularPlan": "Plan más popular",
   "save": "Ahorra ",
   "valentines": "¡Oferta especial de San Valentín!",
@@ -91,7 +91,7 @@
   "productFeatures": {
     "promoFeatures": {
       "title": "Regalitos de Internxt",
-      "features": ["Sorteo camiseta firmada del Valencia CF", "Tema de aniversario gratis "]
+      "features": ["Sorteo de una camiseta firmada del Valencia CF", "Tema de aniversario gratis para WebApp"]
     },
     "cheaperThan": {
       "lifetime": {

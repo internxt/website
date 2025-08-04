@@ -141,6 +141,7 @@ export interface TitleAndOnePlanTitle {
 export interface TitleAndOnePlanV2 {
   saveLabel: string;
   title: string;
+  subtitle: string;
   cta: string;
   guarantee: string;
 }
@@ -209,6 +210,7 @@ export interface TableSection {
   billingFrequency: BillingFrequency;
   freePlanCard: FreePlanCard;
   features: Features;
+  planStorage: PlanStorage;
 }
 
 export interface BillingFrequency {
@@ -231,6 +233,12 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
 }
 
 export interface PlanTitles {
