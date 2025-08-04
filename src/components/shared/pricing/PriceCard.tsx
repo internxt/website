@@ -52,13 +52,10 @@ export const PriceCard = ({
   decimalDiscountValue,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
-  colorCard = 'primary',
-  labelBackground = 'bg-primary/10',
   popular,
   lang,
   redeemCodeCta,
   isFamilyPage,
-  darkMode,
   showPromo,
   onCheckoutButtonClicked,
 }: PriceCardProps): JSX.Element => {
@@ -154,17 +151,17 @@ export const PriceCard = ({
                 </p>
               </div>
             </div>
-            <div
+            <button
               id={`planButton${storage}`}
               onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
               className={`${
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
                   : 'border-primary bg-white text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px] `}
+              } flex h-[48px] w-[340px] items-center justify-center rounded-md border-[1.5px]`}
             >
               <p className="text-base font-medium">{ctaText}</p>
-            </div>
+            </button>
           </div>
         </div>
         {showPromo ? (
