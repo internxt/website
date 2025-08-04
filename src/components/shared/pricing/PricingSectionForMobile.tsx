@@ -10,7 +10,6 @@ import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
-import FreePlanCard from '@/components/prices/FreePlanCard';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -59,19 +58,15 @@ export const PricingSectionForMobile = ({
   billingFrequency,
   businessBillingFrequency,
   decimalDiscount,
-  hideFreeCard,
   hidePlanSelectorAndSwitch,
   hideBusinessCards,
   hidePlanSelectorComponent,
   hideBusinessSelector,
-  hideSwitchSelector,
   lang,
   popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,
-  onIndividualSwitchToggled,
-  onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
@@ -96,8 +91,6 @@ export const PricingSectionForMobile = ({
     }
   }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
-  const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
-
   const features = [
     {
       icon: Lifebuoy,
@@ -112,14 +105,6 @@ export const PricingSectionForMobile = ({
       text: textContent.features.openSource,
     },
   ];
-
-  const switchHandler = (interval: Interval) => {
-    if (isIndividual) {
-      onIndividualSwitchToggled(interval);
-    } else {
-      onBusinessSwitchToggled?.(interval);
-    }
-  };
 
   const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
 
