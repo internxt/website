@@ -38,7 +38,9 @@ export const PriceBannerForCampaigns = ({
       <div
         className={`${
           shouldShowBanner && delayedRender ? 'flex' : 'hidden'
-        } flex-col overflow-hidden xs-md:mx-10 lg:rounded-32 xl:mx-32 3xl:mx-80 ${styles.horizontalLinearGardient}`}
+        } flex-col overflow-hidden xs-md:mx-10 lg:rounded-32 xl:mx-32 3xl:mx-80 4xl:mx-96 ${
+          styles.horizontalLinearGardient
+        }`}
       >
         <div
           className={`hidden h-[370px] w-full flex-row items-center px-8 lg:flex`}
@@ -95,24 +97,24 @@ export const PriceBannerForCampaigns = ({
               </div>
             </div>
           </div>
-          <div className="h-[314px] w-[410px] flex-col items-center justify-center lg:flex">
-            <div className="ml-4 flex h-full w-full flex-col items-end justify-evenly ">
-              <div className="relative mt-6 h-[234px] w-full ">
-                <Image
-                  src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}
-                  alt="Internxt x Valencia logo"
-                  fill
-                  quality={100}
-                />
-              </div>
-              <div className="relative mb-2 h-[39px] w-[253px] ">
-                <Image
-                  src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
-                  alt="Internxt x Valencia logo"
-                  fill
-                  quality={100}
-                />
-              </div>
+          <div className="h-[314px] w-full flex-col items-center justify-center lg:flex">
+            <div className="relative mx-4 hidden w-full flex-col items-center justify-center lg:flex">
+              <Image
+                src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}
+                alt="Internxt x Valencia logo"
+                width={400}
+                height={20}
+                quality={100}
+                className="absolute -top-32 left-4  z-10  1.5xl:-top-36 2xl:left-10"
+              />
+              <Image
+                src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+                alt="Internxt x Valencia logo"
+                width={300}
+                height={200}
+                quality={100}
+                className="absolute left-4 top-24 z-10 1.5xl:left-32 1.5xl:top-28 2xl:left-56 2xl:top-24"
+              />
             </div>
           </div>
         </div>
