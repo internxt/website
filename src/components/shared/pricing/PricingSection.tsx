@@ -178,27 +178,23 @@ export const PricingSection = ({
       >
         <div className="content flex flex-row justify-end gap-4">
           {products?.individuals
-            ? products.individuals[billingFrequency]
-                .filter((_, index) => !(isAnnual && index === 0))
-                .map((product) => (
-                  <PriceCard
-                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                    product={product}
-                    onCheckoutButtonClicked={onCheckoutButtonClicked}
-                    label={product.storage}
-                    key={product.storage}
-                    popular={product.storage === popularPlanBySize}
-                    decimalDiscountValue={
-                      product.interval === Interval.Lifetime
-                        ? decimalDiscount?.lifetime
-                        : decimalDiscount?.subscriptions
-                    }
-                    lang={lang}
-                    darkMode={darkMode}
-                    showPromo={showPromo}
-                    isAffiliate={isAffiliate}
-                  />
-                ))
+            ? products.individuals[billingFrequency].map((product) => (
+                <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  label={product.storage}
+                  key={product.storage}
+                  popular={product.storage === popularPlanBySize}
+                  decimalDiscountValue={
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
+                  }
+                  lang={lang}
+                  darkMode={darkMode}
+                  showPromo={showPromo}
+                  isAffiliate={isAffiliate}
+                />
+              ))
             : undefined}
         </div>
       </Transition>

@@ -93,9 +93,9 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
       <AnimatedHeroSection
         textComponent={
           <>
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex h-full flex-col items-start  justify-center space-y-8">
               <h1 className="text-3xl font-bold text-white xl:text-5xl">{langJson.HeroSectionV3.title}</h1>
-              <h2 className="pr-16 pt-2 text-base font-semibold text-primary lg:pt-0 xl:text-3xl">
+              <h2 className="pt-2 text-base font-semibold leading-none text-primary lg:pt-0 xl:text-3xl">
                 {langJson.HeroSectionV3.subtitle}
               </h2>
               <Button onClick={redirectToPricingTable} text={langJson.HeroSectionV3.cta} className="z-10" />
@@ -122,7 +122,7 @@ const AffiliateTemplates = ({ langJson, homeJson, lang, metatagsDescriptions, fo
         <>
           <HorizontalPricingSection
             textContent={langJson.PriceTable.onePlan}
-            couponName={PromoCodeName.Affiliates85}
+            couponName={PromoCodeName.DRIVE87}
             bgColor="linear-gradient(360deg, #F9F9FC 58.66%, #001D6C 100%);"
           />
 

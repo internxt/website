@@ -43,6 +43,7 @@ interface PricingSectionWrapperProps {
   hideFeatures?: boolean;
   showPromo?: boolean;
   isAffiliate?: boolean;
+  hideBillingController?: boolean;
 }
 
 export const PricingSectionWrapper = ({
@@ -76,6 +77,7 @@ export const PricingSectionWrapper = ({
   isAnnual,
   showPromo = true,
   isAffiliate,
+  hideBillingController = false,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -209,6 +211,7 @@ export const PricingSectionWrapper = ({
           showPromo={showPromo}
           isAffiliate={isAffiliate}
           storageSelected={activeStoragePlan}
+          hideBillingController={hideBillingController}
         />
       </div>
     </section>

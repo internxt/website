@@ -35,6 +35,7 @@ interface PriceTableProps {
   };
   isAnnual?: boolean;
   isAffiliate?: boolean;
+  hideBillingController?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onStorageChange: (storageSelected: string) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
@@ -66,6 +67,7 @@ export const PricingSectionForMobile = ({
   hideFeatures,
   showPromo,
   isAffiliate,
+  hideBillingController,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -116,6 +118,7 @@ export const PricingSectionForMobile = ({
             isMonthly
             darkMode={darkMode}
             activeStoragePlan={storageSelected}
+            hideBillingController={hideBillingController}
           />
         )}
       </div>
@@ -145,7 +148,7 @@ export const PricingSectionForMobile = ({
           {products?.individuals
             ? products.individuals[billingFrequency]
                 .filter((product) => product.storage === planStorage)
-                .filter((_, index) => !(isAnnual && index === 0))
+
                 .map((product) => (
                   <PriceCard
                     isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
