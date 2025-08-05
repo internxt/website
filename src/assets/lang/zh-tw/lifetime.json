@@ -26,6 +26,11 @@
       "endToEnd": "端到端加密",
       "openSource": "開源且審計過",
       "anonymousAccount": "匿名帳戶創建"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

@@ -28,6 +28,11 @@
       "endToEnd": "Crittografia end-to-end",
       "openSource": "Open source e verificato",
       "anonymousAccount": "Creazione di account anonimi"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

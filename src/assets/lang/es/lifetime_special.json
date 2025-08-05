@@ -22,6 +22,11 @@
       "endToEnd": "Encriptado de extremo a extremo",
       "openSource": "Código abierto y auditado",
       "anonymousAccount": "Creación de cuenta anónima"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

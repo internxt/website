@@ -32,7 +32,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Affiliates85,
+    couponCode: PromoCodeName.DRIVE87,
   });
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
@@ -46,9 +46,9 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
     );
   };
   const locale = lang as string;
-  const wordsToBold = ['85%'];
+  const wordsToBold = ['87%'];
   const formattedHero = langJson.HeroSection.header
-    .split(/(85%)/g)
+    .split(/(87%)/g)
     .map((word, index) => (wordsToBold.includes(word) ? <b key={`${word}-${index}`}>{word}</b> : word));
 
   return (
@@ -78,7 +78,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
               <Button
                 className="mb-6 flex w-max items-center justify-center rounded-lg bg-primary px-5 py-3 font-semibold text-white hover:bg-primary-dark"
                 text={langJson.HeroSection.cta}
-                onClick={() => (window.location.hash = '#priceTable')}
+                onClick={() => (window.location.hash = '#billingButtons')}
               />
             </div>
           </div>
@@ -113,6 +113,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
         hideFreeCard
         showPromo={false}
         backgroundColorComponent="bg-white"
+        hideBillingController={true}
       />
 
       <FeatureSection textContent={langJson.FeatureSection} />

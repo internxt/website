@@ -65,6 +65,11 @@
       "anonymousAccount": "匿名帳戶",
       "premiumSupport": "頂級客服",
       "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "CtaSection1": {

@@ -109,6 +109,8 @@ export interface TableSection {
   billingFrequency: BillingFrequency;
   freePlanCard: FreePlanCard;
   features: Features;
+  individuals: string;
+  planStorage: PlanStorage;
 }
 
 export interface BillingFrequency {
@@ -143,6 +145,12 @@ export interface FreePlanCard {
   eyeBrow: string;
   description: string;
   cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
 }
 
 export interface PlanTitles {

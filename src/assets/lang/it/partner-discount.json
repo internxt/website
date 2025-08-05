@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Unisciti a Internxt, la miglior alternativa a Google Drive, e ottieni ",
-      "blue": "85% DI SCONTO ",
+      "blue": "87% DI SCONTO ",
       "normal1": "su qualsiasi piano a vita. Archivia e condividi file in modo sicuro e privato."
     },
     "cta": "Scegli un piano"
@@ -39,6 +39,11 @@
       "anonymousAccount": "Creazione account anonima",
       "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -88,13 +93,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Ottieni un anno completo di storage con il 85% di sconto ora!",
+    "title": "Ottieni un anno completo di storage con il 87% di sconto ora!",
     "description": "Internxt offre uno sconto esclusivo con privacy e sicurezza garantite.",
     "cta": "Scegli un piano"
   },
   "CtaSection1": {
     "title": "Il storage cloud più privato al mondo",
-    "description": "Approfitta del tuo sconto esclusivo del 85% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
+    "description": "Approfitta del tuo sconto esclusivo del 87% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
     "cta": "Trova il tuo piano"
   }
 }

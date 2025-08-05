@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "label": "Ahorra un 80%",
+    "label": "Ahorra un {{discount}}%",
     "title": {
       "line1": "El almacenamiento ",
       "line2": "en la nube",
@@ -45,7 +45,7 @@
     "TitleAndSurvey": {
       "title": {
         "line1": "Protege tus archivos, ahora ",
-        "blueText": "80% más barato"
+        "blueText": "{{discount}}% más barato"
       },
       "trustedBy": "Confiado por más de 330,000 personas",
       "description": {
@@ -64,7 +64,7 @@
         "textAfterBlueText": " y privado en la nube"
       },
       "subtitle": "Seguridad y control completo.",
-      "description": "80% de descuento",
+      "description": "{{discount}}% de descuento",
       "features": [
         "Drive, Meet, Mail, VPN, Antivirus y más",
         "Cifrado postcuántico y cero conocimiento",
@@ -72,14 +72,14 @@
       ],
       "startFrom": {
         "normal1": "Desde ",
-        "price": " 2.00",
+        "price": " {{minimumPrice}}",
         "normal2": " /mes"
       },
       "claimDeal": "Obtener oferta",
       "guarantee": "Garantía de devolución de 30 días"
     },
     "TitleAndOnePlanV2": {
-      "saveLabel": "Oferta 80%",
+      "saveLabel": "Oferta {{discount}}%",
       "title": "Día Mundial del Medio Ambiente",
       "subtitle": "Todos los planes Internxt",
       "cta": "Consigue la oferta",
@@ -112,6 +112,7 @@
     ]
   },
   "tableSection": {
+    "title": "Planes de Internxt",
     "planTitles": {
       "individuals": "Planes individuales",
       "homePage": "Elige el plan adecuado para ti",
@@ -144,6 +145,11 @@
       "anonymousAccount": "Creación de cuenta anónima",
       "premiumSupport": "Soporte al cliente premium",
       "guarantee": "Garantía de devolución de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "ChooseStorageSizeSection": {

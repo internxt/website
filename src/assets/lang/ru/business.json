@@ -79,6 +79,11 @@
       "anonymousAccount": "Анонимная регистрация",
       "premiumSupport": "Премиум-поддержка клиентов",
       "guarantee": "Гарантия возврата денег в течение 30 дней"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "WhyChooseInternxt": {

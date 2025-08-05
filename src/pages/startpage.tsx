@@ -26,7 +26,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       planType: 'individual',
       mode: 'payment',
       currency: currencyValue,
-      promoCodeId: PromoCodeName.Affiliates85,
+      promoCodeId: PromoCodeName.DRIVE87,
     });
   }
 
@@ -35,9 +35,9 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
 
   const InfoTextComponent = (
     <p className="text-xl text-gray-80">
-      {heroSectionText.info.split('85% OFF')[0]}
-      <span className="font-bold">85% OFF</span>
-      {heroSectionText.info.split('85% OFF')[1]}
+      {heroSectionText.info.split('87% OFF')[0]}
+      <span className="font-bold">87% OFF</span>
+      {heroSectionText.info.split('87% OFF')[1]}
     </p>
   );
 
@@ -72,7 +72,7 @@ export default function Startpage({ metatagsDescriptions, navbarLang, footerLang
       <PriceTable
         textContent={textContent.PriceTable}
         handlePriceCardButton={handlePriceCardButton}
-        couponType={PromoCodeName.Affiliates85}
+        couponType={PromoCodeName.DRIVE87}
         discount={offerDiscount}
         billingFrequency="lifetime"
         isStartPage

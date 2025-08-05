@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% OFF",
+      "line1": "{{discount}}% OFF",
       "line2": "our annual plans"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Anonymous account creation"
     },
     "cta": {
-      "title": "Get 80% OFF",
+      "title": "Get {{discount}}% OFF",
       "description": "Offer valid for one year. Plan will renew at non-discounted price for the following year."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Get ",
-      "blue2": "80% OFF ",
+      "blue2": "{{discount}}% OFF ",
       "normal2": "of the most secure cloud storage"
     },
     "description": "Protect your work and personal files with affordable military-grade encrypted cloud storage.",
@@ -42,11 +42,12 @@
     "howMuchStorage": "How much online storage do you need?"
   },
   "tableSection": {
+    "title": "Internxt Plans",
     "ctaBanner": {
-      "label": "Save 80%",
-      "title": "Annual and Lifetime plans!",
-      "subtitle": "Cool savings for hot days",
-      "subtitle2": "Drive, Antivirus, and VPN",
+      "label": "Save {{discount}}%",
+      "title": "All plans included",
+      "subtitle": "Celebrate Internxt’s 5th Birthday",
+      "subtitle2": "Internxt’s Birthday deal",
       "subtitle3": "Meet, Mail, Device Cleaner and Dark Web Monitor",
       "cta": "Claim deal!",
       "guarantee": "30-day money-back guarantee",
@@ -54,7 +55,7 @@
       "lastCta": "* Offer is for free accounts or new customers"
     },
     "planTitles": {
-      "header": "Total privacy for 80% off",
+      "header": "Total privacy for {{discount}}% off",
       "individuals": "Individual Plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
@@ -63,7 +64,7 @@
         "normalText": "all our exclusive lifetime plans"
       },
       "blackFriday": {
-        "title": "Black Friday mega sale: get 80% OFF all the most secure cloud storage plans",
+        "title": "Black Friday mega sale: get {{discount}}% OFF all the most secure cloud storage plans",
         "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },
@@ -89,6 +90,12 @@
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "individuals": "Annual",
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FaqSection": {

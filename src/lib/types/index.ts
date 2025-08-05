@@ -145,6 +145,7 @@ export enum PromoCodeName {
   TokinPrivacy = 'TOKINPRIVACY',
   Dropbox87 = 'DROPBOX87',
   Upgrage = 'UPGRADE',
+  FifthAnniversary = 'INTERNXT5',
   Welcome = 'WELCOME',
   AchoEsGratiss = 'achoesgratiss',
 }
