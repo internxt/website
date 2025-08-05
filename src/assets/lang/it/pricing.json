@@ -42,6 +42,7 @@
     "offerEnds": "Termina tra:"
   },
   "tableSection": {
+    "title": "Internxt Piani",
     "ctaBanner": {
       "label": "Risparmia {{discount}}%",
       "title": "Risparmia su ogni piano!",

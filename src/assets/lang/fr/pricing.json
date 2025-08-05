@@ -46,6 +46,7 @@
     "offerEnds": "Termine dans :"
   },
   "tableSection": {
+    "title": "Internxt forfaits",
     "ctaBanner": {
       "label": "Économisez {{discount}}%",
       "title": "Économisez sur tous les plans",

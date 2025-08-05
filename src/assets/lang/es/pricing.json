@@ -40,6 +40,7 @@
     "offerEnds": "Termina en:"
   },
   "tableSection": {
+    "title": "Planes de Internxt",
     "ctaBanner": {
       "label": "Ahorra un {{discount}}%",
       "title": "Ahorra en todos los planes!",

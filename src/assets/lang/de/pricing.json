@@ -42,6 +42,7 @@
     "offerEnds": "Endet in:"
   },
   "tableSection": {
+    "title": "Internxt Pläne",
     "ctaBanner": {
       "label": "Spare {{discount}}%",
       "title": "Spare bei allen Abos!",

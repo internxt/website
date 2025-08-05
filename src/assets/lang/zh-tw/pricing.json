@@ -37,6 +37,7 @@
     "offerEnds": "優惠結束於:"
   },
   "tableSection": {
+    "title": "Internxt 方案",
     "ctaBanner": {
       "label": "立省{{discount}}%",
       "title": "所有方案享优惠！",

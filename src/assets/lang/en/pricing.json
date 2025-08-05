@@ -42,6 +42,7 @@
     "howMuchStorage": "How much online storage do you need?"
   },
   "tableSection": {
+    "title": "Internxt Plans",
     "ctaBanner": {
       "label": "Save {{discount}}%",
       "title": "All plans included",
