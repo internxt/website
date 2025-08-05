@@ -110,7 +110,7 @@ const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOneP
 
         <div className="flex flex-col-reverse gap-3 xs-md:hidden">
           <Link
-            href={'#priceTable'}
+            href={'#billingButtons'}
             className="z-10 flex h-[48px] w-full items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark md:w-1/2"
           >
             {textContent.claimDeal}
@@ -118,7 +118,6 @@ const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOneP
 
           <div className="flex h-[48px] w-full flex-col items-center justify-center rounded-sm-6 bg-white-summer-2 text-primary shadow-soft md:w-1/2">
             <Countdown textFont="font-medium" textHeight="text-xl font-normal text-white" />
-
           </div>
         </div>
         <div className="flex h-[22px] flex-row gap-2 xs-md:hidden ">

@@ -1,5 +1,6 @@
 import {
   ArrowsClockwise,
+  Broom,
   Cake,
   CirclesThreePlus,
   CodeBlock,
@@ -101,8 +102,29 @@ export const PriceCard = ({
     CreditCard,
   ];
 
+  const iconsFeaturesForBusiness = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    CreditCard,
+    Broom,
+    Detective,
+    VideoConference,
+    Envelope,
+    CreditCard,
+  ];
+
+  const newFeaturesNumber = isBusiness ? 10 : 9;
+
   const renderFeatureIcon = (index: number, fill: boolean) => {
-    const Icon = iconsFeatures[index];
+    const Icon = isBusiness ? iconsFeaturesForBusiness[index] : iconsFeatures[index];
     return Icon ? <Icon className="h-6 w-6 text-primary" {...(fill ? { weight: 'fill' } : {})} /> : null;
   };
 
@@ -128,7 +150,7 @@ export const PriceCard = ({
                 {cardLabel} {product.storage}
               </p>
             </div>
-            <div className="flex h-[87px] w-[141px] flex-col items-center justify-between  lg:h-[101px] lg:w-[145px]">
+            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[145px]">
               <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                 <p className="text-base font-semibold text-green-0">
                   {percentOff}
@@ -145,7 +167,7 @@ export const PriceCard = ({
                   <p className="text-md font-semibold text-gray-50 lg:text-sm">{currency}</p>
                 </span>
               </div>
-              <div className="flex h-[19px] w-full items-center justify-center">
+              <div className="flex h-[19px] items-center justify-center">
                 <p className="text-base text-gray-50">
                   {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
                 </p>
@@ -158,7 +180,7 @@ export const PriceCard = ({
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
                   : 'border-primary bg-white text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[340px] items-center justify-center rounded-md border-[1.5px]`}
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`}
             >
               <p className="text-base font-medium">{ctaText}</p>
             </button>
@@ -193,10 +215,10 @@ export const PriceCard = ({
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start" key={feature}>
               <div className="flex min-h-[24px] flex-row items-start gap-2">
-                {renderFeatureIcon(index, index > 9)}
+                {renderFeatureIcon(index, index > newFeaturesNumber)}
                 <span className="text-sm font-normal text-gray-80">
                   {feature}
-                  {index > 9 && (
+                  {index > newFeaturesNumber && (
                     <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
                       {contentText.commingSoon}
                     </span>

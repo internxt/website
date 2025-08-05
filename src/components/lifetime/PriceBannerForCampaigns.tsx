@@ -34,7 +34,7 @@ export const PriceBannerForCampaigns = ({
   }, []);
 
   return (
-    <section className="mr-4 pt-20 lg:pt-24">
+    <section className="pt-20 lg:mr-4 lg:pt-24">
       <div
         className={`${
           shouldShowBanner && delayedRender ? 'flex' : 'hidden'

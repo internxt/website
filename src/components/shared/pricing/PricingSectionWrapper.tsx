@@ -122,7 +122,7 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={` overflow-hidden px-5 py-20  ${backgroundColorComponent}`} id="payment">
+    <section className={` overflow-hidden px-5 py-20  ${backgroundColorComponent}`} id="billingButtons">
       <div className="hidden flex-col items-center gap-10 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
