@@ -179,7 +179,7 @@ export const PriceCard = ({
                   {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
                 </span>
                 <span className="flex h-full flex-row items-end gap-1 pb-[5px]">
-                  <p className="text-md pb-[4px] font-semibold text-gray-50  lg:text-sm">{currency}</p>
+                  <p className="text-md pb-[1px] font-semibold text-gray-50  lg:text-sm">{currency}</p>
                   <p className=" text-lg font-bold text-gray-50 line-through lg:text-xl">
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                   </p>
