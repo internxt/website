@@ -97,7 +97,7 @@ const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOneP
               <Countdown textFont="font-medium" textHeight="text-xl font-normal text-white" />
             </div>
           </div>
-          <div className="b p flex h-[22px] flex-row gap-2">
+          <div className="flex h-[22px] flex-row items-center justify-start gap-2">
             <Image
               src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
               alt="Internxt Blue Shield check"

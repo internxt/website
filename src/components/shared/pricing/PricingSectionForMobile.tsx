@@ -148,7 +148,6 @@ export const PricingSectionForMobile = ({
           {products?.individuals
             ? products.individuals[billingFrequency]
                 .filter((product) => product.storage === planStorage)
-
                 .map((product) => (
                   <PriceCard
                     isCheckoutForLifetime={billingFrequency === Interval.Lifetime}

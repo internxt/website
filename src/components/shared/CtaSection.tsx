@@ -27,7 +27,7 @@ const CtaSection = ({
     >
       <div className="flex flex-col items-center justify-center space-y-8 text-center">
         <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-white`}>
-          <p className="text-3xl font-semibold xl:text-4xl">{textContent.title}</p>
+          <p className="text-30 font-semibold xl:text-4xl">{textContent.title}</p>
           {customDescription}
         </div>
         {url && (

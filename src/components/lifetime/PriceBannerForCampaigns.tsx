@@ -95,8 +95,8 @@ export const PriceBannerForCampaigns = ({
               </div>
             </div>
           </div>
-          <div className="h-[314px] w-[390px] flex-col items-center justify-center lg:flex">
-            <div className="ml-4 flex h-full w-full flex-col items-end justify-evenly">
+          <div className="h-[314px] w-[410px] flex-col items-center justify-center lg:flex">
+            <div className="ml-4 flex h-full w-full flex-col items-end justify-evenly ">
               <div className="relative mt-6 h-[234px] w-full ">
                 <Image
                   src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}

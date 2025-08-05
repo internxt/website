@@ -157,7 +157,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="5TB"
+          popularPlanBySize="3TB"
           showPromo={true}
         />
 

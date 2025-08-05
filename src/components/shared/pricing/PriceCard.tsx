@@ -123,9 +123,9 @@ export const PriceCard = ({
 
   const newFeaturesNumber = isBusiness ? 10 : 9;
 
-  const renderFeatureIcon = (index: number, fill: boolean) => {
+  const renderFeatureIcon = (index: number) => {
     const Icon = isBusiness ? iconsFeaturesForBusiness[index] : iconsFeatures[index];
-    return Icon ? <Icon className="h-6 w-6 text-primary" {...(fill ? { weight: 'fill' } : {})} /> : null;
+    return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
 
   return (
@@ -141,7 +141,7 @@ export const PriceCard = ({
       <div
         className={`z-10 ${
           showPromo ? (isBusiness ? 'lg:h-[939px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
-        } w-full rounded-16 border border-gray-10`}
+        } rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
@@ -215,7 +215,7 @@ export const PriceCard = ({
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start" key={feature}>
               <div className="flex min-h-[24px] flex-row items-start gap-2">
-                {renderFeatureIcon(index, index > newFeaturesNumber)}
+                {renderFeatureIcon(index)}
                 <span className="text-sm font-normal text-gray-80">
                   {feature}
                   {index > newFeaturesNumber && (

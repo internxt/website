@@ -55,7 +55,7 @@ export const PricingSectionWrapper = ({
   startIndividualPlansFromInterval = Interval.Lifetime,
   startBusinessPlansFromInterval = Interval.Month,
   startFromPlan = 'Lifetime',
-  startFromStorage = 'Ultimate',
+  startFromStorage = 'Premium',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
