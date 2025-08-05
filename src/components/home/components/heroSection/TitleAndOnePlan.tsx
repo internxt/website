@@ -39,9 +39,9 @@ const TitleAndOnePlan = ({ textContent, percentOff, minimumPrice }: TitleAndOneP
 
   return (
     <div
-      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-[343px] shrink-0 flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 xs-md:h-[571px] xs-md:w-[570px]`}
+      className={`${styles.titleAndOnePlanSection} flex h-[543px] w-[363px] shrink-0 flex-col items-center justify-center rounded-2xl shadow-soft backdrop-blur-55 xs-md:h-[571px] xs-md:w-[570px]`}
     >
-      <div className="flex h-[503px] w-[303px] flex-col justify-between xs-md:h-[507px] xs-md:w-[506px]">
+      <div className="flex h-[503px] w-[333px] flex-col justify-between xs-md:h-[507px] xs-md:w-[506px]">
         <div className="flex h-[164px] w-full flex-col justify-between xs-md:h-[316px]">
           <div className="justify flex h-[164px] flex-col justify-between  xs-md:h-[196px]">
             <p className="h-[72px] w-full text-30 font-semibold leading-tight text-white xs-md:h-[100px] xs-md:text-5xl">

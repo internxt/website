@@ -63,11 +63,22 @@ export const PriceCard = ({
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
 
+  const isLifetime = interval === 'lifetime';
+  const isAnnual = interval === 'year';
+  const showMonthlyLabel =
+    (productCardPlan === 'business' && interval === 'month') ||
+    (interval === 'year' && productCardPlan === 'individuals');
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
 
+  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
+  const monthlyPriceBefore = decimalDiscountValue
+    ? Number(price / 12)
+        .toFixed(2)
+        .replace('.00', '')
+    : undefined;
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
@@ -146,11 +157,9 @@ export const PriceCard = ({
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
             <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
-              <p className="text-30 font-semibold lg:text-3xl">
-                {cardLabel} {product.storage}
-              </p>
+              <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
-            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[145px]">
+            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[175px]">
               <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                 <p className="text-base font-semibold text-green-0">
                   {percentOff}
@@ -159,11 +168,15 @@ export const PriceCard = ({
               </div>
               <div className="flex h-[29px] flex-row items-baseline justify-between gap-2 lg:h-[43px] ">
                 <span className="flex flex-row items-baseline gap-1">
-                  <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{priceNow}</p>
+                  <p className="text-2xl font-bold text-gray-100 lg:text-4xl">
+                    {isBusiness ? priceBefore : isAnnual ? monthlyPriceNow : priceNow}
+                  </p>
                   <p className="text-base font-semibold text-gray-100">{currency}</p>
                 </span>
                 <span className="flex flex-row items-baseline gap-1">
-                  <p className="text-lg font-bold text-gray-50 line-through lg:text-xl">{priceBefore}</p>
+                  <p className="text-lg font-bold text-gray-50 line-through lg:text-xl">
+                    {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+                  </p>
                   <p className="text-md font-semibold text-gray-50 lg:text-sm">{currency}</p>
                 </span>
               </div>
