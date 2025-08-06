@@ -40,6 +40,7 @@ export interface PriceCardProps {
   isFamilyPage?: boolean;
   showPromo?: boolean;
   isAffiliate?: boolean;
+  cardIndex?: number;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -59,6 +60,7 @@ export const PriceCard = ({
   isFamilyPage,
   showPromo,
   onCheckoutButtonClicked,
+  cardIndex = 0,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
@@ -136,7 +138,8 @@ export const PriceCard = ({
   const newFeaturesNumber = isBusiness ? 10 : 9;
 
   const renderFeatureIcon = (index: number) => {
-    const Icon = isBusiness ? iconsFeaturesForBusiness[index] : iconsFeatures[index];
+    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
+    const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
 
