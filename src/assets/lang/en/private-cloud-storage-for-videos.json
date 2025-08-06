@@ -1,0 +1,152 @@
+{
+  "HeroSection": {
+    "title": "Private cloud storage for video files",
+    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
+    "subtitle": "Get the most secure cloud storage built for video creators to store your videos in total privacy.",
+    "cta": "Get Internxt"
+  },
+  "FeaturesSection": {
+    "intro": "Internxt provides the best cloud storage for videos to store, share, and back up your files. Prevent AI and Big Tech from using your videos without your consent with our zero-knowledge cloud storage.",
+    "features": {
+      "feature1": {
+        "title": "Support for 4K and 8K files",
+        "description": [
+          "Finding a cloud storage that supports uploads and cloud storage for large video files can be challenging, especially for 4K and 8K files. With Internxt Drive, you can upload large video files to the cloud for secure sharing or backups.",
+          "We offer up to 5TB of cloud storage for large video files, enough for around 444 hours of 4K or 139 hours of 8K video. You can upgrade your plan anytime, so you never run out of storage."
+        ]
+      },
+      "feature2": {
+        "title": "Fast upload and download speeds",
+        "description": [
+          "Thanks to our ultra-fast upload and download speeds, you can save time when managing your videos without worrying about long waits to access your content.",
+          "You don’t have to worry about delays when accessing your files, as you can access and download your files quickly, so your videos are always there when you need them."
+        ]
+      },
+      "feature3": {
+        "title": "Secure sharing for videos",
+        "description": [
+          "By choosing a secure video file-sharing service, you can prevent your content from falling into the wrong hands and sensitive information, such as metadata, from being leaked.",
+          "With Internxt Drive, you can share your videos securely, as they are protected by post-quantum encryption. For additional privacy, you can add password protection to shared files to ensure secure collaboration."
+        ]
+      }
+    }
+  },
+  "FeaturesSectionV2": {
+    "title": "Features of Internxt’s cloud storage for videos",
+    "subtitle": "Share, back up, and protect your video files with generous upload limits and strong ransomware protection you can trust.",
+    "featuresForVideos": {
+      "video1": {
+        "title": "Generous upload limits",
+        "description": "Internxt offers a generous 40GB of file uploads for up to 3,000 files, and you can also share large video files of up to 10GB with others via a password-protected link or email for total privacy and secure collaboration."
+      },
+      "video2": {
+        "title": "Ransomware protection",
+        "description": "Internxt offers encrypted backups for your files, so you can keep a copy of your video files secure in the cloud. As these videos are encrypted and backed up in multiple data centres, files can be easily recovered in case of data loss or ransomware attacks."
+      },
+      "video3": {
+        "title": "Post-quantum cryptography",
+        "description": "Internxt is the first cloud storage for video files with zero-knowledge, post-quantum cryptography, the most advanced encryption available to protect files against the threat of quantum computers."
+      },
+      "video4": {
+        "title": "Open source and audited",
+        "description": "Internxt Drive and all our services are open source. Our code is available on GitHub for everybody to verify, check the security, and ensure there are no backdoors that could compromise your data."
+      }
+    }
+  },
+  "cta": {
+    "title": "Secure cloud storage for video files",
+    "subtitle": "Store hours of quality video in privacy",
+    "cta": "Get Internxt"
+  },
+  "cta2": {
+    "title": "The most private cloud storage for video files ",
+    "subtitle": "Protected by post-quantum encryption",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
+        ]
+      },
+      {
+        "question": "Will I get access to all Internxt services?",
+        "answer": [
+          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
+          "An Internxt Free plan will only give you access to Internxt Drive."
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt does not (and cannot) store your password.",
+          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable 2FA?",
+        "answer": [
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "How do I create an Internxt account?",
+        "answer": [
+          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+        ]
+      },
+      {
+        "question": "How can I cancel my subscription?",
+        "answer": [
+          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
+          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
+          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Does Internxt have lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+        ]
+      },
+      {
+        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "answer": [
+          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
+          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}
