@@ -148,7 +148,7 @@ export const PricingSectionForMobile = ({
           {products?.individuals
             ? products.individuals[billingFrequency]
                 .filter((product) => product.storage === planStorage)
-                .map((product) => (
+                .map((product, cardIndex) => (
                   <PriceCard
                     isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
                     product={product}
@@ -165,6 +165,7 @@ export const PricingSectionForMobile = ({
                     darkMode={darkMode}
                     showPromo={showPromo}
                     isAffiliate={isAffiliate}
+                    cardIndex={cardIndex}
                   />
                 ))
             : undefined}
@@ -185,7 +186,7 @@ export const PricingSectionForMobile = ({
           ) : (
             <>
               {businessBillingFrequency && products?.business
-                ? products.business[businessBillingFrequency].map((product) => (
+                ? products.business[businessBillingFrequency].map((product, cardIndex) => (
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
@@ -204,6 +205,7 @@ export const PricingSectionForMobile = ({
                       lang={lang}
                       darkMode={darkMode}
                       showPromo={showPromo}
+                      cardIndex={cardIndex}
                     />
                   ))
                 : undefined}

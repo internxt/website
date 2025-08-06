@@ -178,7 +178,7 @@ export const PricingSection = ({
       >
         <div className="content flex flex-row justify-end gap-4 pb-20">
           {products?.individuals
-            ? products.individuals[billingFrequency].map((product) => (
+            ? products.individuals[billingFrequency].map((product, cardIndex) => (
                 <PriceCard
                   isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
                   product={product}
@@ -186,6 +186,7 @@ export const PricingSection = ({
                   label={product.storage}
                   key={product.storage}
                   popular={product.storage === popularPlanBySize}
+                  productCardPlan="individuals"
                   decimalDiscountValue={
                     product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
                   }
@@ -193,6 +194,7 @@ export const PricingSection = ({
                   darkMode={darkMode}
                   showPromo={showPromo}
                   isAffiliate={isAffiliate}
+                  cardIndex={cardIndex}
                 />
               ))
             : undefined}
@@ -213,7 +215,7 @@ export const PricingSection = ({
           ) : (
             <>
               {businessBillingFrequency && products?.business
-                ? products.business[businessBillingFrequency].map((product) => (
+                ? products.business[businessBillingFrequency].map((product, cardIndex) => (
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
@@ -232,6 +234,7 @@ export const PricingSection = ({
                       lang={lang}
                       darkMode={darkMode}
                       showPromo={showPromo}
+                      cardIndex={cardIndex}
                     />
                   ))
                 : undefined}
