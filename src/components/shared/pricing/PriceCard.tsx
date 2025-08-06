@@ -82,6 +82,7 @@ export const PriceCard = ({
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
 
   const planTypes = {
     '1TB': isBusiness
@@ -159,25 +160,29 @@ export const PriceCard = ({
             <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
-            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[175px]">
+            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[190px]">
               <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                 <p className="text-base font-semibold text-green-0">
                   {percentOff}
                   {contentText.discount}
+                  {' | '}
+                  {contentText.save} {annualSave}
+                  {currency}
                 </p>
               </div>
-              <div className="flex h-[29px] flex-row items-baseline justify-between gap-2 lg:h-[43px] ">
-                <span className="flex flex-row items-baseline gap-1">
+              <div className="flex h-[29px] flex-row items-center justify-between gap-2 lg:h-[43px] ">
+                <span className="flex h-full flex-row items-start gap-1 ">
+                  <p className="text-base font-semibold text-gray-100">{currency}</p>
                   <p className="text-2xl font-bold text-gray-100 lg:text-4xl">
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceNow : priceNow}
                   </p>
-                  <p className="text-base font-semibold text-gray-100">{currency}</p>
+                  {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
                 </span>
-                <span className="flex flex-row items-baseline gap-1">
-                  <p className="text-lg font-bold text-gray-50 line-through lg:text-xl">
+                <span className="flex h-full flex-row items-end gap-1 pb-[5px]">
+                  <p className="text-md pb-[1px] font-semibold text-gray-50  lg:text-sm">{currency}</p>
+                  <p className=" text-lg font-bold text-gray-50 line-through lg:text-xl">
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                   </p>
-                  <p className="text-md font-semibold text-gray-50 lg:text-sm">{currency}</p>
                 </span>
               </div>
               <div className="flex h-[19px] items-center justify-center">
