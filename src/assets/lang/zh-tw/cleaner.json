@@ -1,0 +1,145 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "取得 Internxt",
+    "title": "內建於 Internxt Drive 的裝置優化功能",
+    "features": ["更少垃圾", "移除威脅", "更多儲存空間"],
+    "subTitle": "提升裝置速度、反應能力與整體健康狀況"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Internxt Cleaner 可移除裝置中的垃圾檔案，以提升速度與效能，讓裝置保持如新。我們的 VPN 將加密你的連線，確保瀏覽過程中的隱私與安全。"
+  },
+  "WhyUseSection": {
+    "title": "為什麼要使用裝置清理工具清除垃圾檔案",
+    "description": "舊檔案與不需要的資料會拖慢裝置速度，佔用珍貴的儲存空間。使用 Internxt Cleaner 可找出佔空間的項目，是針對 PC 與 Mac 優化儲存的安全且可靠方式。",
+    "scrollableSection": {
+      "titles": ["釋放空間", "提升速度", "保護隱私"],
+      "descriptions": [
+        "裝置中可能殘留許多未被注意的檔案，這些檔案會占用記憶體並降低效能。Internxt Cleaner 是找出重複檔案與清理垃圾的最佳工具之一。",
+        "清理 RAM 與儲存空間，減少系統資源負擔，讓你的裝置重新煥發新生命。",
+        "應用程式殘留檔案與資料可能包含個人資訊，若裝置遺失、被竊或遭駭，可能導致資料外洩風險。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "最佳化裝置，發揮最高效能",
+    "description": "清除垃圾檔案，可延長 PC 或 Mac 的使用壽命",
+    "cta": "取得 Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "運作方式",
+    "description": "Internxt Cleaner 提供最先進的重複檔案偵測與清理工具，讓你釋放更多空間並維持裝置整潔與高效。",
+    "features": {
+      "titles": ["智慧清理", "提升裝置健康", "安全可靠"],
+      "descriptions": [
+        "我們使用先進演算法協助你找出並清理垃圾檔案。你可以輕鬆決定要刪除哪些項目，達成最高效率與安全性。",
+        "防止裝置過熱、減少硬體磨損並提升電池健康，Internxt Cleaner 讓你的裝置如全新般運作。",
+        "你完全掌控要刪除的檔案內容，保護你的儲存空間與資料隱私。"
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "什麼時候該使用裝置清理工具",
+    "description": "為了提升你的 PC 或 Mac 效能，使用裝置清理工具可預防儲存與效能問題的發生。",
+    "features": [
+      "裝置反應遲鈍或速度緩慢",
+      "儲存空間不足",
+      "解除安裝應用程式後",
+      "經常當機或凍結",
+      "電池耗電過快",
+      "裝置過熱",
+      "應用程式執行緩慢",
+      "啟動時間過長"
+    ]
+  },
+  "CtaSection2": {
+    "title": "找出問題．清理系統．最佳化效能",
+    "description": "清理垃圾檔案，讓你的裝置重獲新生。",
+    "cta": "取得 Internxt"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們來解答",
+    "faq": [
+      {
+        "question": "Internxt 能存取我的檔案嗎？",
+        "answer": [
+          "不會。Internxt 以及任何第三方都無法存取你的檔案、照片或資料。",
+          "Internxt 採用零知識加密，表示只有你本人可以存取與解密你的私人資料。此外，我們也使用後量子加密技術，以保護你的資料免受未來威脅。"
+        ]
+      },
+      {
+        "question": "我是否能使用 Internxt 的全部服務？",
+        "answer": [
+          "是的。付費訂閱或終身會員可使用我們的全方位隱私套件，包括 Internxt Mail、Meet、VPN、Drive、Send、Antivirus 等服務。",
+          "免費方案僅提供 Internxt Drive 的存取權限。"
+        ]
+      },
+      {
+        "question": "Internxt 會儲存我的密碼嗎？",
+        "answer": [
+          "不會。Internxt 不會（也無法）儲存你的密碼。",
+          "你的密碼是用來加密與解密資料的，若需要，你可透過應用程式自行變更。"
+        ]
+      },
+      {
+        "question": "我可以啟用兩步驟驗證（2FA）嗎？",
+        "answer": [
+          "可以。你可透過 Internxt 網頁應用程式啟用兩步驟驗證。",
+          "你也可以使用 Authy 或其他 2FA 工具產生個人驗證碼。"
+        ]
+      },
+      {
+        "question": "我要如何建立 Internxt 帳號？",
+        "answer": [
+          "點選上方方案並依指示操作即可建立免費帳號。",
+          "或前往首頁點選「立即開始」，立即取得 1GB 永久免費空間。只需提供姓名與電子郵件，不需要驗證身分或信箱。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受信用卡與簽帳卡（Mastercard、VISA、American Express 等），以及 PayPal、iDEAL、Sofort 與加密貨幣付款。"
+        ]
+      },
+      {
+        "question": "Internxt 的退款政策是什麼？",
+        "answer": [
+          "Internxt 所有付費訂閱均提供 30 天內無條件退款保證，從購買日起計算。",
+          "若你對服務不滿意，請寫信至 [hello@internxt.com](mailto:hello@internxt.com) 申請退款。"
+        ]
+      },
+      {
+        "question": "如何取消我的訂閱？",
+        "answer": [
+          "開啟 Internxt 應用程式，前往設定並選擇「取消訂閱」，帳戶將立即切換至免費方案。",
+          "請注意：剩餘的付費時長將不會退還或保留。例如，你取消還剩 4 個月的年費方案，這 4 個月將無法使用。",
+          "你也可以在設定中刪除帳戶與訂閱，系統將一併刪除你的所有檔案。"
+        ]
+      },
+      {
+        "question": "我要怎麼聯絡客服？",
+        "answer": [
+          "找不到你想知道的內容嗎？你可以透過即時聊天或寫信至 [hello@internxt.com](mailto:hello@internxt.com) 聯絡我們的客戶成功團隊。"
+        ]
+      },
+      {
+        "question": "Internxt 有終身方案嗎？",
+        "answer": ["有的。我們提供可在官網購買的終身方案，一次付款即可永久使用，最高提供 10TB 儲存空間。"]
+      },
+      {
+        "question": "我可以為終身方案加購儲存空間嗎？",
+        "answer": [
+          "可以。你可以為你的 Internxt 終身帳號加購任意多的儲存空間。這些方案可累加。只要使用相同信箱購買，並聯絡我們合併帳號即可。"
+        ]
+      },
+      {
+        "question": "Internxt 是永續且環保的雲端儲存方案嗎？",
+        "answer": [
+          "是的。Internxt 致力於綠色雲端計算，我們的資料中心有 92% 使用再生能源，並減少碳排放、資源浪費與電子廢棄物。",
+          "我們的目標是在 2050 年達成碳中和。 [了解更多](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}
