@@ -30,7 +30,7 @@
   "HowItWorksSection": {
     "title": "How it works",
     "description": "Internxt Cleaner offers the best duplicate file finder and cleaner to give you extra space for things that matter and a clean, optimized device.",
-    "features": {
+    "cardDescriptions": {
       "titles": ["Smart cleaning", "Improve device health", "Safe and secure"],
       "descriptions": [
         "We use advanced algorithms to help you identify and clear junk files. We help you prioritize which files or data to remove with minimal effort and maximum security.",
