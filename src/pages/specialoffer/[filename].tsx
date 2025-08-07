@@ -102,12 +102,12 @@ const SpecialOfferPage = ({
       <AnimatedHeroSection
         textComponent={
           <>
-            <div className="flex max-w-[400px] flex-col justify-center space-y-4">
-              <h1 className="text-4xl font-bold text-white xl:text-5xl">{langJson.HeroSection.title}</h1>
-              <h2 className="text-2xl font-semibold text-primary xl:text-3xl">{langJson.HeroSection.subtitle}</h2>
+            <div className="flex  flex-col justify-center space-y-4">
+              <h1 className="text-4xl font-bold text-white lg:text-5xl">{langJson.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold text-primary lg:text-3xl">{langJson.HeroSection.subtitle}</h2>
             </div>
 
-            <div className="flex max-w-[400px] flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
+            <div className="flex flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
               <Percent className="h-16 w-16 text-primary xl:h-24 xl:w-24" />
               <p
                 className="text-md font-regular text-white"
