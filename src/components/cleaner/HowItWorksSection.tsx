@@ -3,15 +3,18 @@ import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
 
 const HowItWorksSection = ({ textContent }) => (
-  <section className="flex h-[887px] w-full flex-row items-center justify-center bg-neutral-15 lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-    <div className="flex h-[719px] flex-col justify-between  ">
-      <div className="h-[58px]">
-        <p className="text-5xl font-bold text-gray-100">{textContent.title}</p>
+  <section className="flex h-[780px] w-full flex-row items-center justify-center bg-neutral-15 lg:h-[807px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
+    <div className="flex w-[300px] flex-col justify-between  lg:h-[719px] lg:w-full ">
+      <div className="h-[58px] ">
+        <p className="text-3xl font-bold text-gray-100 lg:text-5xl">{textContent.title}</p>
       </div>
-      <div className="h-[44px]">
+      <div className="h-[44px] ">
         <p className="text-lg font-normal text-gray-55">{textContent.description}</p>
       </div>
-      <div className="flex h-[521px] flex-row justify-between ">
+      <div className="flex h-[521px] flex-row justify-between pt-36 lg:hidden ">
+        <AccordionCards textContent={textContent.cardDescriptions} />
+      </div>
+      <div className="hidden h-[480px] flex-row justify-between lg:flex ">
         <AccordionCards textContent={textContent.cardDescriptions} />
         <div className="h-[314px] w-[530px]">
           <Image

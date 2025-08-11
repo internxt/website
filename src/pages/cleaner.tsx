@@ -9,7 +9,6 @@ import HeroSection from '@/components/cleaner/HeroSection';
 import { CleanerText } from '@/assets/types/cleaner';
 import HowItWorksSection from '@/components/cleaner/HowItWorksSection';
 import WhenToUseSection from '@/components/cleaner/WhenToUseSection';
-import FloatingCtaSection from '@/components/affiliates/FloatingCtaSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FeatureSection from '@/components/cleaner/FeatureSection';
@@ -49,8 +48,10 @@ const CleanerPage = ({
         customText={
           <>
             <div className="flex flex-col gap-4 text-center">
-              <p className="text-4xl font-semibold text-gray-95">{textContent.CtaSection.title}</p>
-              <p className="text-xl font-normal text-gray-55">{textContent.CtaSection.description}</p>
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
+              <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
+                {textContent.CtaSection.description}
+              </p>
             </div>
           </>
         }
@@ -68,9 +69,9 @@ const CleanerPage = ({
         url={'/pricing'}
         customText={
           <>
-            <div className="flex flex-col gap-4 text-center">
-              <p className="text-4xl font-semibold text-gray-95">{textContent.CtaSection2.title}</p>
-              <p className="text-xl font-normal text-gray-55">{textContent.CtaSection2.description}</p>
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
             </div>
           </>
         }

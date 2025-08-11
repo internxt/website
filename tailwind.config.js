@@ -187,13 +187,14 @@ module.exports = {
         55: '10px',
       },
       borderRadius: {
+        2: '2px',
+        'sm-6': '6px',
+        16: '16px',
+        20: '20px',
+        32: '32px',
+        100: '100px',
         '4xl': '2.75rem',
         'full-percentage': '100%',
-        20: '20px',
-        'sm-6': '6px',
-        32: '32px',
-        2: '2px',
-        16: '16px',
       },
 
       boxShadow: {

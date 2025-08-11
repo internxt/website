@@ -12,17 +12,17 @@ const HeroSection = ({ textContent }) => (
   >
     <HeroSafeArea>
       <div
-        className={`${styles.cleanerTitleAndOnePlan} flex h-[535px] w-[498px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55`}
+        className={`${styles.cleanerTitleAndOnePlan} flex h-[473px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
       >
-        <div className="flex h-[471px] w-[434px] flex-col justify-between">
-          <div className="flex h-[391px] w-full flex-col justify-between">
-            <div className="flex h-[215px] w-full flex-col justify-between">
+        <div className="flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
+          <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
+            <div className="flex h-[190px] w-full flex-col justify-between lg:h-[215px]">
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
-              <p className="text-5xl font-semibold text-gray-100">{textContent.title}</p>
+              <p className="text-3xl font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</p>
             </div>
-            <div className="flex h-[88px] w-full flex-col justify-between">
+            <div className="flex h-[88px] w-full flex-col justify-between ">
               {textContent.features.map((feat) => (
                 <div key={feat} className="flex h-[24px] flex-row gap-2 ">
                   <Check className="hidden text-green-0 xs-md:block" weight="bold" size={24} />
@@ -31,8 +31,8 @@ const HeroSection = ({ textContent }) => (
                 </div>
               ))}
             </div>
-            <div className="h-[24px] w-full">
-              <p className="text-xl font-normal text-gray-95">{textContent.subTitle}</p>
+            <div className="h-[44px] w-full lg:h-[24px]">
+              <p className="text-base font-normal text-gray-95 lg:text-xl">{textContent.subTitle}</p>
             </div>
           </div>
           <div className="h-[48px] w-full">
@@ -45,12 +45,13 @@ const HeroSection = ({ textContent }) => (
           </div>
         </div>
       </div>
-      <div className="h-[535px] w-full items-center justify-center bg-red">
+      <div className="hidden h-[535px] w-full justify-end lg:flex ">
         <Image
-          src={getImage('/images/cleaner/hero.png')}
+          src={getImage('/images/cleaner/hero (1).png')}
           alt="Cleaner HeroSection"
-          height={400}
-          width={400}
+          style={{ objectFit: 'cover' }}
+          width={650}
+          height={100}
           quality={100}
         />
       </div>

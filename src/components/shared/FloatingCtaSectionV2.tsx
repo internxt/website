@@ -19,7 +19,7 @@ const FloatingCtaSectionv2 = ({
 }) => {
   return (
     <section
-      className="flex h-[281px] w-full items-center justify-center  lg:px-10 lg:py-9 xl:px-32 3xl:px-80"
+      className="flex h-[281px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
       style={{ background: bgGradientColor }}
     >
       <div
