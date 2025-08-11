@@ -27,6 +27,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "WhatMakesInternxtPerfectSection": {

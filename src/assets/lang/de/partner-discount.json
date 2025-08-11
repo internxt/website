@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "Tritt Internxt bei, der besten Google-Drive-Alternative, und erhalte ",
-      "blue": "85% RABATT ",
+      "blue": "87% RABATT ",
       "normal1": "auf jeden Lifetime-Plan. Speichere und teile Dateien sicher und privat."
     },
     "cta": "Wähle einen Plan"
@@ -25,7 +25,7 @@
     },
     "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
     "planDescription": "Alle Internxt-Pläne bieten vollständigen Zugriff auf unser Paket privater Lösungen mit modernster Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail.",
-    "lifetimeDescription": "Bezahlen Sie einmal und erhalten Sie Privatsphäre und Sicherheit für immer",
+
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
@@ -39,6 +39,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -88,13 +93,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Holen Sie sich jetzt ein ganzes Jahr Speicherplatz mit 85% Rabatt!",
+    "title": "Holen Sie sich jetzt ein ganzes Jahr Speicherplatz mit 87% Rabatt!",
     "description": "Internxt bietet einen exklusiven Rabatt mit garantierter Privatsphäre und Sicherheit.",
     "cta": "Wählen Sie einen Plan"
   },
   "CtaSection1": {
     "title": "Der privateste Cloud-Speicher der Welt",
-    "description": "Sichern Sie sich Ihren exklusiven Rabatt von 85%, um ein Jahr lang auf den sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt zuzugreifen.",
+    "description": "Sichern Sie sich Ihren exklusiven Rabatt von 87%, um ein Jahr lang auf den sicheren, privaten und verschlüsselten Cloud-Speicher von Internxt zuzugreifen.",
     "cta": "Finden Sie Ihren Plan"
   }
 }

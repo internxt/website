@@ -79,6 +79,11 @@
       "anonymousAccount": "匿名账户创建",
       "premiumSupport": "高级客户支持",
       "guarantee": "30 天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "WhyChooseInternxt": {

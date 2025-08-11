@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "80% AUS",
+      "line1": "{{discount}}% AUS",
       "line2": "unsere Jahrespläne"
     },
     "lifetimeTitle": {
@@ -15,7 +15,7 @@
       "thirdFeed": "Anonyme Kontenerstellung"
     },
     "cta": {
-      "title": "Erhalten Sie 80% Rabatt",
+      "title": "Erhalten Sie {{discount}}% Rabatt",
       "description": "Angebot gültig für ein Jahr. Der Plan verlängert sich zum nicht reduzierten Preis für das folgende Jahr."
     }
   },
@@ -33,7 +33,7 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Erhalten Sie ",
-      "blue2": "80% RABATT ",
+      "blue2": "{{discount}}% RABATT ",
       "normal2": "auf den sichersten Cloud-Speicher"
     },
     "howMuchStorage": "Wie viel Online-Speicherplatz benötigen Sie?",
@@ -42,17 +42,18 @@
     "offerEnds": "Endet in:"
   },
   "tableSection": {
+    "title": "Internxt Pläne",
     "ctaBanner": {
-      "label": "Spare 80%",
-      "title": "Tarife jährlich & lebenslang",
-      "subtitle": "Schütze und nimm deine Daten überall mit – diesen Sommer!",
-      "subtitle2": "Drive, Antivirus und VPN",
-      "subtitle3": "Meet, Mail, Geräte-Cleaner und Dark-Web-Überwachung",
-      "cta": "Hol dir ein Paket",
-      "cta2": "Sichere dir 80 % Rabatt",
+      "label": "Spare {{discount}}%",
+      "title": "Spare bei allen Abos!",
+      "subtitle": "Feier 5 Jahre Internxt",
+      "subtitle2": "Feier 5 Jahre Internxt",
+      "subtitle3": "Meet, Mail, Cleaner und Dark Web Monitor",
+      "cta": "Jetzt Abo wählen",
+      "cta2": "Spare {{discount}}% jetzt",
       "guarantee": "30 Tage Geld-zurück-Garantie",
-      "gift": "Gewinnspiel: Internxt-Rucksack x Swiss Peak",
-      "lastCta": "*Nur für Gratis-Konten oder neue Nutzer gültig"
+      "gift": "Verlosung signiertes Valencia-Trikot",
+      "lastCta": "*Nur für Gratis- oder neue Nutzer"
     },
     "planTitles": {
       "individuals": "Individuelle Pläne",
@@ -63,7 +64,7 @@
         "normalText": "Alle unsere exklusiven Lifetime-Pläne"
       },
       "blackFriday": {
-        "title": "Black Friday Mega-Rabatt: 80 % RABATT auf alle sichersten Cloud-Speicherpläne",
+        "title": "Black Friday Mega-Rabatt: {{discount}} % RABATT auf alle sichersten Cloud-Speicherpläne",
         "description": "Schützen Sie Ihre Daten mit Internxt, um Datenschutzverletzungen, finanzielle Verluste und Privatsphäre-Risiken zu vermeiden. Verabschieden Sie sich von Tech-Giganten, die von Ihren persönlichen Informationen profitieren."
       }
     },
@@ -89,6 +90,11 @@
       "anonymousAccount": "Anonyme Kontoerstellung",
       "premiumSupport": "Premium-Kundensupport",
       "guarantee": "30-tägige Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "ctaText": "Angebot gültig für ein Jahr. Der Plan wird im folgenden Jahr zum regulären Preis erneuert.",

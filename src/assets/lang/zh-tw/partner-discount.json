@@ -7,7 +7,7 @@
     },
     "description": {
       "normal": "加入 Internxt，Google Drive 最佳替代方案，享有 ",
-      "blue": "85% 折扣 ",
+      "blue": "87% 折扣 ",
       "normal1": "購買任何終身方案。安全私密地儲存與分享檔案。"
     },
     "cta": "選擇方案"
@@ -38,6 +38,11 @@
       "anonymousAccount": "匿名帳號創建",
       "premiumSupport": "高級客戶支援",
       "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -87,13 +92,13 @@
     ]
   },
   "CtaSection": {
-    "title": "立即以 85% 的折扣獲取整整一年的存儲空間！",
+    "title": "立即以 87% 的折扣獲取整整一年的存儲空間！",
     "description": "Internxt 提供獨家折扣，保證隱私和安全。",
     "cta": "選擇計劃"
   },
   "CtaSection1": {
     "title": "全球最私密的雲存儲",
-    "description": "享受獨家 85% 的折扣，訪問 Internxt 安全、私密和加密的雲存儲，整整一年。",
+    "description": "享受獨家 87% 的折扣，訪問 Internxt 安全、私密和加密的雲存儲，整整一年。",
     "cta": "找到您的計劃"
   }
 }

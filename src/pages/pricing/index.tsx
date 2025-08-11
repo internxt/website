@@ -50,8 +50,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SummerCampaign,
-    couponCodeForLifetime: PromoCodeName.SummerCampaign,
+    couponCode: PromoCodeName.FifthAnniversary,
+    couponCodeForLifetime: PromoCodeName.FifthAnniversary,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -125,7 +125,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-
+  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -139,9 +139,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <div className="flex justify-center pt-20 lg:pt-24">
-          <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} />
-        </div>
+        <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} percentOff={percentOff} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -159,7 +157,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="5TB"
+          popularPlanBySize="3TB"
           showPromo={true}
         />
 

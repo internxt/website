@@ -2,7 +2,7 @@ import { Interval } from '@/services/stripe.service';
 import { SealPercent } from '@phosphor-icons/react';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
-
+export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
 interface PlanSwitchProps {
   textContent: Record<string, any>;
   activeSwitchPlan: SwitchButtonOptions;

@@ -1,11 +1,11 @@
-import { HomePageBannerForMobile } from '../banners/HomePageBannerForMobile';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { HomeText } from '@/assets/types/home';
-import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import TitleAndOnePlan from './components/heroSection/TitleAndOnePlan';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
+import styles from '@/components/privacy/HeroSection.module.scss';
+import HeroSafeArea from '../HeroSafeArea';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -13,53 +13,63 @@ interface HeroSectionForHomeProps {
   textContent: HomeText['HeroSection'];
   lang: string;
   isHomePageV2?: boolean;
+  percentOff: string;
+  minimumPrice: string;
 }
 
-export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  textContent,
+  lang,
+  isHomePageV2,
+  percentOff,
+  minimumPrice,
+}: HeroSectionForHomeProps): JSX.Element {
   const router = useRouter();
-  const { dialogIsOpen } = useGlobalDialog();
-  const shouldShowMobileBanner = dialogIsOpen(GlobalDialog.MobileBannerForHome);
   const mobileImage = getImage('/images/home/image_mobile.webp');
-  const blurBgImage = getImage('/images/home/header/bg.svg');
-  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
-  const componentsFlow = isHomePageV2 ? 'flex-col-reverse' : 'flex-col';
+  const bgImage = getImage('/images/campaigns/5th-anniversary/confetti.webp');
+  const bgImage2 = getImage('/images/campaigns/5th-anniversary/visual (hero).webp');
   const titleAndOnePlanText = isHomePageV2 ? textContent.TitleAndOnePlanV2 : textContent.TitleAndOnePlan;
+
   const handleOnClick = () => {
     router.push('/pricing');
   };
   return (
-    <section className="overflow-hidden ">
-      <div className="relative">
-        <div
-          style={{
-            backgroundImage: `url('${bgImage}')`,
-            backgroundPosition: '100% 90%',
-          }}
-          className="absolute inset-y-0 left-1/2 z-0 w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block"
-        />
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center ">
-          <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
-          <div className={`flex w-screen flex-shrink-0 ${componentsFlow} px-5 pb-9 pt-24 xl:pl-28 1.5xl:pl-0 2xl:pl-0`}>
-            {!shouldShowMobileBanner ? (
-              <div className="hidden">
-                <Image
-                  loading="eager"
-                  src={mobileImage}
-                  draggable="false"
-                  quality={100}
-                  width={600}
-                  height={1000}
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  alt="HeroSection Mobile Image"
-                  onClick={handleOnClick}
-                />
-              </div>
-            ) : (
-              <HomePageBannerForMobile />
-            )}
-            <TitleAndOnePlan textContent={titleAndOnePlanText} lang={lang} />
+    <section className={`overflow-hidden ${styles.horizontalLinearGardient}`}>
+      <div
+        className="relative"
+        style={{
+          backgroundImage: ` url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <HeroSafeArea>
+          <TitleAndOnePlan
+            textContent={titleAndOnePlanText}
+            lang={lang}
+            percentOff={percentOff}
+            minimumPrice={minimumPrice}
+          />
+          <div className="relative mx-4 hidden w-full flex-col items-center justify-center lg:flex">
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/5th_anniversary_logo.png')}
+              alt="Internxt x Valencia logo"
+              width={1000}
+              height={20}
+              quality={100}
+              className="absolute top-10 z-10"
+            />
+            <Image
+              src={getImage('/images/campaigns/5th-anniversary/logos (mobile).webp')}
+              alt="Internxt x Valencia logo"
+              width={300}
+              height={200}
+              quality={100}
+              className="absolute bottom-16 right-0 z-10"
+            />
           </div>
-        </div>
+        </HeroSafeArea>
       </div>
     </section>
   );

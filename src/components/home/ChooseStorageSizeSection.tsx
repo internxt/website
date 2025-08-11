@@ -21,7 +21,7 @@ export const ChooseStorageSizeSection = ({ textContent, onButtonClicked }) => {
         </div>
         <div className="flex max-w-[540px] flex-col items-center gap-6 lg:items-start">
           <div className="flex flex-col gap-4 text-center lg:text-left">
-            <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+            <h2 className="text-30 font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
             <p className="text-lg text-gray-80 lg:text-xl">{textContent.description}</p>
             <p className="text-lg font-semibold text-gray-80 lg:text-xl">{textContent.peaceOfMind}</p>
           </div>

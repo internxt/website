@@ -2,11 +2,11 @@
   "HeroSection": {
     "title": "Secure, encrypted cloud storage",
     "subtitle": "for a lifetime of privacy",
-    "info": "Get your exclusive 85% OFF discount on our lifetime plans!",
+    "info": "Get your exclusive 87% OFF discount on our lifetime plans!",
     "cta": "Choose your plan"
   },
   "PriceTable": {
-    "header": "Unlock 85% OFF",
+    "header": "Unlock 87% OFF",
     "title": "Lifetime storage plans",
     "subtitle": "All Internxt plans come with complete access to our privacy-focused features. Secure your plan and your files with lifetime security.",
     "priceCard": {
@@ -84,6 +84,11 @@
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
