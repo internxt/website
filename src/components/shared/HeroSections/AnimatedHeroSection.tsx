@@ -77,7 +77,7 @@ export default function AnimatedHero({ textComponent, height }: AnimatedHeroSect
         <div
           className={`absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat lg:block`}
         />
-        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between lg:flex-row lg:items-center lg:pb-24">
+        <div className="relative mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center lg:flex-row lg:items-center lg:pb-24">
           <div className="absolute inset-y-0 left-1/2 z-0 hidden w-screen -translate-x-1/2 bg-cover bg-center bg-no-repeat md:flex" />
           <div
             className={`flex w-screen flex-shrink-0 flex-col items-center justify-center gap-5 px-5 text-center sm:w-auto sm:px-0 md:ml-2 lg:ml-0 lg:items-start lg:text-left`}
@@ -85,7 +85,7 @@ export default function AnimatedHero({ textComponent, height }: AnimatedHeroSect
             <div
               className={`mt-20 flex ${
                 height ? height : 'h-[450px]'
-              } w-[400px] flex-col items-center justify-between px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
+              } w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
             >
               {textComponent}
             </div>
