@@ -17,7 +17,7 @@ const HeroSection = ({ textContent, bannerText }) => {
           <p className="mt-8 text-lg font-normal">{textContent.paragraph1.body2}</p>
         </div>
         <div className="flex justify-center pt-24">
-          <PriceBannerForCampaigns textContent={bannerText} redirectTo={'/pricing'} />
+          <PriceBannerForCampaigns textContent={bannerText} redirectTo={'/pricing'} percentOff="85" />
         </div>
       </div>
       <div className="flex flex-col items-center justify-center p-5 pt-11 text-center md:p-20 md:pt-0 lg:text-left">

@@ -38,6 +38,11 @@
       "anonymousAccount": "Анонимная регистрация",
       "premiumSupport": "Премиум-поддержка",
       "guarantee": "30-дневная гарантия возврата денег"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {

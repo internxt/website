@@ -43,8 +43,8 @@ const PartnerDiscount = ({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Affiliates85,
-    couponCodeForLifetime: PromoCodeName.Affiliates85,
+    couponCode: PromoCodeName.DRIVE87,
+    couponCodeForLifetime: PromoCodeName.DRIVE87,
   });
 
   const cardsData = [
@@ -138,7 +138,7 @@ const PartnerDiscount = ({
             individuals: decimalDiscount,
             lifetime: decimalDiscountForLifetime,
           }}
-          lang="en"
+          lang={locale}
           products={products}
           popularPlanBySize={'3TB'}
           loadingCards={loadingCards}
@@ -149,6 +149,7 @@ const PartnerDiscount = ({
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           showPromo={false}
           isAffiliate
+          hideFeatures
         />
       </div>
 
@@ -198,6 +199,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
 
   return {
     props: {
+      lang,
       metatagsDescriptions,
       langJson,
       navbarLang,

@@ -37,6 +37,11 @@
       "endToEnd": "End-to-End-verschlüsselt",
       "openSource": "Open Source und überprüft",
       "anonymousAccount": "Anonyme Kontenerstellung"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {
