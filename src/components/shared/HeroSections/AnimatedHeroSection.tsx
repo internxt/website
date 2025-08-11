@@ -85,7 +85,7 @@ export default function AnimatedHero({ textComponent, height }: AnimatedHeroSect
             <div
               className={`mt-20 flex ${
                 height ? height : 'h-[450px]'
-              } w-[400px] flex-col items-center justify-between px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
+              } w-[400px] flex-col items-center justify-evenly px-6 text-start lg:mt-40 lg:h-[530px] lg:w-[550px] lg:items-start lg:px-0`}
             >
               {textComponent}
             </div>
