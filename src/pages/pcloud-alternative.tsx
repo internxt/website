@@ -1,20 +1,17 @@
-import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
-import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
-import { IsPCloudSafeSection } from '@/components/comparison/pCloud-alternative/IsPCloudSafeSection';
+import { HeroSection } from '@/components/comparison/HeroSection';
 import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
-import { CouponSection } from '@/components/comparison/pCloud-alternative/CouponSection';
-import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/shared/CtaSection';
 import cookies from '@/lib/cookies';
 import { GetServerSidePropsContext } from 'next';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
 import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
-import { SIGNUP_DRIVE_WEB } from '@/constants';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import { ComparisonHeader } from '@/components/comparison/pCloud-alternative/ComparsionHeader';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 
 const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
@@ -41,18 +38,15 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <ComparisonHeader
-        maxWithForTitle={'max-w-[600px]'}
-        textContent={langJson.HeaderSection}
-        redirectUrl={'#priceTable'}
-      />
+      <HeroSection textContent={langJson.HeroSection} redirectUrl={'#priceTable'} percentage={percentageDiscount} />
 
-      <HeroSection textContent={langJson.HeroSection} />
+      <ComparisonHeader textContent={langJson.HeaderSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -77,15 +71,47 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
         showPromo={false}
       />
 
-      <TablesSection textContent={langJson.TablesSection} />
+      <TablesSection textContent={langJson.VersusSection} />
 
-      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="#priceTable" />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <>
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
+            </div>
+          </>
+        }
+        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+      />
 
-      <IsPCloudSafeSection textContent={langJson.isPCloudSafeSection} />
+      <HorizontalScrollableSection
+        textContent={langJson.HorizontalScrollableSection}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+      />
 
-      <CtaSection textContent={langJson.CtaSection} url={SIGNUP_DRIVE_WEB} />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <>
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
+            </div>
+          </>
+        }
+        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+      />
 
-      <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
+      <HorizontalScrollableSection
+        textContent={langJson.HorizontalScrollableSectionV2}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+      />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>

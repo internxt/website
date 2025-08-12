@@ -1,8 +1,6 @@
 import { DropboxAlternativeText } from '@/assets/types/dropbox-alternative';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
 import { CouponSection } from '@/components/comparison/pCloud-alternative/CouponSection';
-import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
 import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
 import { CompetitorTable } from '@/components/comparison/pCloud-alternative/components/CompetitorTable';
 import { InxtTable } from '@/components/comparison/pCloud-alternative/components/InxtTable';
@@ -17,6 +15,8 @@ import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
 import { stripeService } from '@/services/stripe.service';
 import ReactMarkdown from 'react-markdown';
+import { HeroSection } from '@/components/comparison/HeroSection';
+import { ComparisonHeader } from '@/components/comparison/pCloud-alternative/ComparisonHeader';
 
 interface DropboxComparisonProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -81,11 +81,9 @@ const DropboxComparison = ({
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <HeroSection textContent={langJson.HeaderSection} redirectUrl={'/pricing'} percentage={25} />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
-
-      <HeroSection textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
-
+      <ComparisonHeader textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
@@ -108,11 +106,8 @@ const DropboxComparison = ({
         backgroundColorComponent="bg-gray-1"
         showPromo={false}
       />
-
       <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
-
       <CtaSection textContent={langJson.CtaSection} url="" />
-
       <div className="flex flex-col items-center gap-16 px-5 py-20">
         <div className="flex max-w-[850px] flex-col gap-6 text-center">
           <h2 className="text-3xl font-semibold lg:text-5xl">{langJson.TablesSection.title}</h2>
@@ -130,11 +125,8 @@ const DropboxComparison = ({
           ))}
         </div>
       </div>
-
       <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
-
       <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
-
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>
   );
