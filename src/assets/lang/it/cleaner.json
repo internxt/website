@@ -1,0 +1,147 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Ottieni Internxt",
+    "title": "Ottimizzazione del dispositivo integrata con Internxt Drive",
+    "features": ["Meno file inutili", "Rimuovi le minacce", "Più spazio di archiviazione"],
+    "subTitle": "Aumenta la velocità, la reattività e la salute del tuo dispositivo"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Internxt Cleaner rimuove i file inutili per aumentare la velocità e le prestazioni, mantenendo il tuo dispositivo come nuovo. La nostra VPN cripta la tua connessione per garantire privacy e protezione durante la navigazione."
+  },
+  "WhyUseSection": {
+    "title": "Perché usare un cleaner per eliminare i file inutili",
+    "description": "I file vecchi e inutili rallentano il dispositivo e occupano spazio prezioso. Scopri cosa sta occupando il tuo disco con Internxt Cleaner, una soluzione sicura e affidabile per ottimizzare l’archiviazione su PC e Mac.",
+    "scrollableSection": {
+      "titles": ["Libera spazio", "Migliora la velocità", "Proteggi la tua privacy"],
+      "descriptions": [
+        "Molti file possono restare nel dispositivo senza essere notati, occupando memoria e riducendo le prestazioni. Internxt Cleaner è uno dei migliori strumenti per trovare file duplicati ed eliminare file inutili, liberando spazio prezioso.",
+        "Libera RAM e spazio di archiviazione per ridurre lo stress sulle risorse del sistema, facendo sembrare il dispositivo come nuovo.",
+        "I file residui e i dati delle app possono contenere informazioni personali che rappresentano un rischio se il dispositivo viene perso, rubato o compromesso."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Ottimizza il tuo dispositivo per prestazioni al top",
+    "description": "Elimina i file inutili per prolungare la vita del tuo PC o Mac",
+    "cta": "Ottieni Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "Come funziona",
+    "description": "Internxt Cleaner offre il miglior strumento per rilevare e rimuovere file duplicati, offrendoti spazio extra per ciò che conta davvero e un dispositivo pulito e ottimizzato.",
+    "features": {
+      "titles": ["Pulizia intelligente", "Salute del dispositivo", "Sicuro e protetto"],
+      "descriptions": [
+        "Utilizziamo algoritmi avanzati per aiutarti a identificare e rimuovere i file inutili. Ti aiutiamo a decidere cosa eliminare con il minimo sforzo e la massima sicurezza.",
+        "Previeni il surriscaldamento, riduci l’usura dell’hardware e migliora la salute della batteria: con Internxt Cleaner il tuo dispositivo sembrerà nuovo.",
+        "Solo tu decidi cosa eliminare, mantenendo il pieno controllo dello spazio di archiviazione e della privacy dei tuoi dati."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Quando usare un cleaner per dispositivi",
+    "description": "Per aumentare il potenziale del tuo PC o Mac, un cleaner digitale aiuta a prevenire problemi di spazio e prestazioni.",
+    "features": [
+      "Dispositivo lento o poco reattivo",
+      "Spazio di archiviazione insufficiente",
+      "Dopo la disinstallazione di app",
+      "Arresti anomali o blocchi frequenti",
+      "Scarica rapida della batteria",
+      "Surriscaldamento del dispositivo",
+      "App lente",
+      "Tempi di avvio lunghi"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Trova. Pulisci. Ottimizza.",
+    "description": "Elimina i file inutili e ridai vita ai tuoi dispositivi.",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Internxt può accedere ai miei file?",
+        "answer": [
+          "No. Né Internxt né terze parti possono accedere ai tuoi file, foto o dati.",
+          "I servizi di Internxt utilizzano la crittografia a conoscenza zero, il che significa che solo tu puoi accedere e decrittare i tuoi dati. Inoltre, Internxt utilizza crittografia post-quantistica, la tecnologia più avanzata disponibile per proteggere i tuoi file da minacce future."
+        ]
+      },
+      {
+        "question": "Avrò accesso a tutti i servizi di Internxt?",
+        "answer": [
+          "Sì, un abbonamento a pagamento o una sottoscrizione a vita ti dà accesso alla suite completa per la privacy: Internxt Mail, Meet, VPN, Drive, Send, Antivirus e altri.",
+          "Il piano gratuito ti dà accesso solo a Internxt Drive."
+        ]
+      },
+      {
+        "question": "Internxt memorizza la mia password?",
+        "answer": [
+          "No. Internxt non memorizza (e non può memorizzare) la tua password.",
+          "La tua password è unica e serve per criptare e decriptare i tuoi dati. Puoi cambiarla in qualsiasi momento tramite l'app."
+        ]
+      },
+      {
+        "question": "Posso attivare l'autenticazione a due fattori (2FA)?",
+        "answer": [
+          "Sì. Puoi configurare l'autenticazione a due fattori tramite l'app web di Internxt.",
+          "Puoi anche usare Authy o qualsiasi altra app 2FA per generare il tuo codice personale con Internxt."
+        ]
+      },
+      {
+        "question": "Come creo un account Internxt?",
+        "answer": [
+          "Per creare un account gratuito, clicca sul piano desiderato qui sopra e segui le istruzioni.",
+          "Oppure visita la nostra homepage e clicca su “Inizia ora”. Riceverai subito 1 GB di spazio gratuito a vita. Basta inserire il tuo nome e l’e-mail, senza necessità di verifica dell’identità o dell’email."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovalute?",
+        "answer": [
+          "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc.), PayPal, iDEAL, Sofort e criptovalute."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia di rimborso di 30 giorni su tutti gli abbonamenti a pagamento, a partire dal giorno della sottoscrizione.",
+          "Se non sei soddisfatto, contattaci a [hello@internxt.com](mailto:hello@internxt.com) per richiedere un rimborso."
+        ]
+      },
+      {
+        "question": "Come posso annullare il mio abbonamento?",
+        "answer": [
+          "Annullare è semplice: apri l'app di Internxt, vai su impostazioni e seleziona 'Annulla abbonamento'. Il tuo account passerà automaticamente al piano gratuito.",
+          "Tieni presente che il tempo rimanente sull'abbonamento attivo non verrà rimborsato né trasferito. Ad esempio, se annulli un piano annuale con 4 mesi rimanenti, perderai quei mesi.",
+          "Puoi anche eliminare l'abbonamento e l’account (inclusi i file) dalle impostazioni."
+        ]
+      },
+      {
+        "question": "Come posso contattare l'assistenza?",
+        "answer": [
+          "Non trovi quello che cerchi? Contatta il nostro team tramite chat live o scrivici a [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Internxt offre piani a vita?",
+        "answer": [
+          "Sì, offriamo piani a vita acquistabili sul nostro sito. Offrono accesso permanente fino a 10TB di spazio con un unico pagamento."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiungere quanto spazio desideri alla tua sottoscrizione a vita. I piani sono cumulabili: acquistali con la stessa email e contattaci per unificarli nello stesso account."
+        ]
+      },
+      {
+        "question": "Internxt è una soluzione di archiviazione sostenibile ed ecologica?",
+        "answer": [
+          "Sì, Internxt promuove il cloud computing green, offrendo soluzioni di archiviazione rispettose dell’ambiente. I nostri data center sono alimentati al 92% da energia rinnovabile e progettati per ridurre emissioni, consumo di risorse e rifiuti elettronici.",
+          "Il nostro obiettivo è diventare carbon neutral entro il 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}
