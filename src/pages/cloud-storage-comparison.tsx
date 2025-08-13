@@ -12,10 +12,11 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import TestimonialsSection from '@/components/home/TestimonialsSection';
 import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
-import { ComparisonHeader } from '@/components/comparison/HeroSection';
+
 import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
+import { ComparisonHeader } from '@/components/comparison/pCloud-alternative/ComparisonHeader';
 
 const URL_REDIRECT = 'https://drive.internxt.com/new';
 
