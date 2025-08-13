@@ -81,9 +81,10 @@ const DropboxComparison = ({
       lang={lang}
     >
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+
       <HeroSection textContent={langJson.HeaderSection} redirectUrl={'/pricing'} percentage={25} />
 
-      <ComparisonHeader textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
+      <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={'/pricing'} />
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
