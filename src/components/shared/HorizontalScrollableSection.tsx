@@ -14,7 +14,7 @@ export default function HorizontalScrollableSection({ textContent, bgGradient }:
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 400;
-  const mobileCardWidth = 310;
+  const mobileCardWidth = 330;
   const gap = 32;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
@@ -67,37 +67,37 @@ export default function HorizontalScrollableSection({ textContent, bgGradient }:
 
   return (
     <section
-      className="flex h-[653px] w-full items-center justify-center bg-white lg:px-10 lg:py-9 xl:px-32 3xl:px-80"
+      className="flex h-auto w-full items-center justify-around  lg:justify-center lg:px-10 lg:py-9 xl:px-32 3xl:px-80"
       style={{ background: bgGradient }}
     >
-      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between lg:h-[509px] ">
-        <p className=" w-[350px] text-center text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
+      <div className="flex h-auto w-[832px] flex-col items-center justify-between gap-4 py-4 lg:h-[509px]">
+        <p className=" w-[330px] text-center text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
-        <p className="font-nomral w-[350px] text-center text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+        <p className="font-nomral w-[330px] text-center text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
 
         <div
           ref={scrollContainerRef}
-          className="flex w-[310px] flex-row flex-nowrap gap-8 overflow-hidden scroll-smooth lg:w-full"
+          className="flex w-[330px] flex-row flex-nowrap gap-8 overflow-hidden scroll-smooth lg:w-full"
         >
           {cardTitles.map((title, index) => (
             <div
               key={index}
-              className="flex h-[226px] w-[310px] shrink-0 flex-col items-center justify-start rounded-16 bg-white pt-10 lg:w-[400px]"
+              className="flex h-[226px] w-[330px] shrink-0 flex-col items-center justify-start rounded-16 bg-white pt-10 lg:w-[400px]"
             >
-              <div className="flex h-[24px] w-[336px] flex-row items-center justify-start gap-4">
+              <div className="flex h-[24px] w-[300px] flex-row items-center justify-start gap-4 ">
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
-              <div className="w-[336px] bg-white py-4">
+              <div className="w-[300px]  py-4">
                 <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px] ">
+        <div className="flex h-[48px] w-[310px] flex-row items-center justify-center lg:w-[832px] lg:items-end lg:justify-end ">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}

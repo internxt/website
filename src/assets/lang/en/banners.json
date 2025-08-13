@@ -64,6 +64,7 @@
       "Offer ends February 25"
     ]
   },
+
   "s3StorageBanner": {
     "label": "Available now!",
     "title": "S3 compatible object storage",
@@ -82,8 +83,8 @@
     "cta": "Sign up for free"
   },
   "SignUpPCloudAlternativeBanner": {
-    "line1": "Get end-to-end encrypted cloud storage at no extra cost.",
-    "blueText": " Join Internxt for free"
+    "line1": "Full encryption at no extra cost. ",
+    "blueText": " Choose Internxt as your secure, private alternative to pCloud"
   },
   "SignUpPCloudAlternativeBanner2": {
     "line1": "for a more secure, open, cost-effective cloud storage solution.",

@@ -1,16 +1,14 @@
-import SignUpBanner from '@/components/banners/SignUpBanner';
 import { Fragment } from 'react';
-import bannerText from '@/assets/lang/en/banners.json';
 import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 
-interface HeroSectionProps {
+interface ComparisonHeaderProps {
   textContent: any;
   logo?: string;
   hideTooltip?: boolean;
 }
 
-export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps) => {
+export const ComparisonHeader = ({ textContent, logo, hideTooltip }: ComparisonHeaderProps) => {
   const competitors = [
     {
       name: 'Internxt',
@@ -19,7 +17,8 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         codeTransparency: textContent.tableSection.internxtFeatures.codeTransparency,
         encryption: textContent.tableSection.internxtFeatures.encryption,
         pricing: textContent.tableSection.internxtFeatures.pricing,
-        securityAudits: textContent.tableSection.internxtFeatures.securityAudits,
+        features: textContent.tableSection.internxtFeatures.features,
+        comunityAudits: textContent.tableSection.internxtFeatures.comunityAudits,
         liveSupport: textContent.tableSection.internxtFeatures.liveSupport,
         dataTrackers: textContent.tableSection.internxtFeatures.dataTrackers,
         privacyLaws: textContent.tableSection.internxtFeatures.privacyLaws,
@@ -33,7 +32,8 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         codeTransparency: textContent.tableSection.features.codeTransparency,
         encryption: textContent.tableSection.features.encryption,
         pricing: textContent.tableSection.features.pricing,
-        securityAudits: textContent.tableSection.features.securityAudits,
+        features: textContent.tableSection.features.features,
+        comunityAudits: textContent.tableSection.features.comunityAudits,
         liveSupport: textContent.tableSection.features.liveSupport,
         dataTrackers: textContent.tableSection.features.dataTrackers,
         privacyLaws: textContent.tableSection.features.privacyLaws,
@@ -70,21 +70,26 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         },
         {
           id: 4,
-          title: `${textContent.tableSection.comparisons.securityAudits}`,
-          feature: getFeature('securityAudits'),
+          title: `${textContent.tableSection.comparisons.features}`,
+          feature: getFeature('features'),
         },
         {
           id: 5,
+          title: `${textContent.tableSection.comparisons.comunityAudits}`,
+          feature: getFeature('comunityAudits'),
+        },
+        {
+          id: 6,
           title: `${textContent.tableSection.comparisons.liveSupport}`,
           feature: getFeature('liveSupport'),
         },
         {
-          id: 6,
+          id: 7,
           title: `${textContent.tableSection.comparisons.dataTrackers}`,
           feature: getFeature('dataTrackers'),
         },
         {
-          id: 7,
+          id: 8,
           title: `${textContent.tableSection.comparisons.privacyLaws}`,
           feature: getFeature('privacyLaws'),
         },
@@ -101,10 +106,8 @@ export const HeroSection = ({ textContent, logo, hideTooltip }: HeroSectionProps
         </div>
         <div className="flex w-screen flex-col overflow-x-auto xl:overflow-x-visible">
           <table className="group relative mx-auto table-auto overflow-x-auto overflow-y-auto bg-none text-center text-base text-cool-gray-80">
-            {/* Competitors */}
-            <thead className="">
+            <thead className="bg-red">
               <tr className="relative table-auto">
-                {/* Drag hint */}
                 <th className="pointer-events-none align-bottom">
                   <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-10 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden">
                     <img

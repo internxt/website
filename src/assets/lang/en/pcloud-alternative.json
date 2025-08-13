@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Switch to Internxt, the pCloud alternative that respects your privacy",
+    "title": "Internxt: A Secure pCloud Alternative",
     "description": "Looking for a secure alternative to pCloud? Internxt offers the first cloud storage with post-quantum encryption and a full privacy suite of products for maximum privacy and security.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for ${{percentage}} % off",
@@ -52,6 +52,10 @@
   "VersusSection": {
     "title": "Internxt vs pCloud",
     "description": "See why Internxt’s commitment to open-source transparency and independent audits makes it a more trustworthy and secure pCloud alternative",
+    "drag": {
+      "line1": "Drag horizontally",
+      "line2": "to show competitor"
+    },
     "mainTable": {
       "inxtTable": {
         "title": "Total privacy, transparency, and trust",
@@ -219,7 +223,7 @@
     ]
   },
   "CtaSection": {
-    "title": "Switch to Internxt for 87% off",
+    "title": "Switch to Internxt with an 87% off",
     "description": "The only cloud storage you need for complete privacy online",
     "cta": "Get Internxt"
   },
@@ -259,6 +263,7 @@
     ]
   },
   "tableSection": {
+    "title": "Internxt Plans",
     "planTitles": {
       "individuals": "Individual Plans",
       "homePage": "Choose the right plan for you",
@@ -269,7 +274,7 @@
         "normalText": "all our exclusive lifetime plans"
       }
     },
-    "lifetimeDescription": "Buy once and get privacy and security forever.",
+
     "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",

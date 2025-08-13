@@ -12,6 +12,8 @@ import { stripeService } from '@/services/stripe.service';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import { ComparisonHeader } from '@/components/comparison/pCloud-alternative/ComparsionHeader';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import SignUpBanner from '@/components/banners/SignUpBanner';
+import bannerText from '@/assets/lang/en/banners.json';
 
 const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pcloud-alternative');
@@ -47,6 +49,12 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
       <HeroSection textContent={langJson.HeroSection} redirectUrl={'#priceTable'} percentage={percentageDiscount} />
 
       <ComparisonHeader textContent={langJson.HeaderSection} />
+
+      <SignUpBanner
+        textContent={bannerText.SignUpPCloudAlternativeBanner}
+        lang="en"
+        bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F9F9FC 100%)"
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
