@@ -1,145 +1,143 @@
 {
   "HeroSection": {
-    "topLabel": "Limpiador",
+    "topLabel": "Cleaner",
     "cta": "Consigue Internxt",
-    "title": "Optimización integrada del dispositivo con Internxt Drive",
-    "features": ["Menos basura", "Elimina amenazas", "Más almacenamiento"],
-    "subTitle": "Aumenta la velocidad, la capacidad de respuesta y la salud de tu dispositivo"
+    "title": "Optimización integrada con Internxt Drive",
+    "features": ["Menos basura", "Eliminar amenazas", "Más espacio"],
+    "subTitle": "Mejora la velocidad, respuesta y salud del dispositivo"
   },
   "FeatureSection": {
     "title": "Internxt Cleaner",
-    "description": "Internxt Cleaner elimina archivos basura para mejorar la velocidad y el rendimiento, manteniendo tu dispositivo como nuevo. Nuestra VPN cifra tu conexión, garantizando privacidad y protección mientras navegas."
+    "description": "Encuentra y borra archivos basura para mejorar la velocidad, respuesta y rendimiento. Internxt Cleaner mantiene tu dispositivo como nuevo sin ordenar ni borrar manualmente archivos no deseados."
   },
   "WhyUseSection": {
     "title": "Por qué usar un limpiador de dispositivos para borrar archivos basura",
-    "description": "Los archivos antiguos e innecesarios ralentizan tu dispositivo y ocupan un valioso espacio de almacenamiento. Descubre qué está ocupando espacio en tu disco con Internxt Cleaner, una forma segura y fiable de optimizar el almacenamiento para PC y Mac.",
+    "description": "Los archivos viejos ocupan espacio y ralentizan tu dispositivo. Descubre qué llena tu disco con Internxt Cleaner, una forma segura y fiable de optimizar el almacenamiento en PC y Mac.",
     "scrollableSection": {
-      "titles": ["Libera almacenamiento", "Mejora la velocidad", "Protege tu privacidad"],
+      "titles": ["Libera espacio", "Mejora la velocidad", "Protege tu privacidad"],
       "descriptions": [
-        "Muchos archivos pueden quedarse en tu dispositivo sin que lo notes, ocupando memoria y reduciendo el rendimiento. Internxt Cleaner es una de las mejores herramientas para encontrar archivos duplicados y eliminar archivos basura, liberando así un valioso espacio.",
-        "Limpia tu RAM y almacenamiento para reducir la carga sobre los recursos del sistema, haciendo que tu dispositivo vuelva a sentirse como nuevo.",
-        "Los archivos residuales y datos de aplicaciones pueden contener información personal que podría suponer un riesgo para tus datos si tu dispositivo se pierde, es robado o se ve comprometido."
+        "Muchos archivos se quedan en tu equipo sin que lo notes, ocupando memoria y bajando el rendimiento. Internxt Cleaner detecta duplicados y borra archivos basura para liberar espacio.",
+        "Limpia RAM y disco para reducir el consumo de recursos, haciendo que tu equipo parezca nuevo otra vez.",
+        "Archivos y datos sobrantes pueden contener info personal que pondría en riesgo tu privacidad si el equipo se pierde, roba o compromete."
       ]
     }
   },
   "CtaSection": {
-    "title": "Optimiza tu dispositivo para un rendimiento máximo",
-    "description": "Elimina archivos basura para aumentar la vida útil de tu PC o Mac",
-    "cta": "Consigue Internxt"
+    "title": "Optimiza tu dispositivo al máximo",
+    "description": "Borra archivos basura y alarga la vida de tu PC o Mac",
+    "cta": "Conseguir Internxt"
   },
   "HowItWorksSection": {
     "title": "Cómo funciona",
-    "description": "Internxt Cleaner ofrece el mejor buscador y eliminador de archivos duplicados para darte espacio extra para lo que importa y un dispositivo limpio y optimizado.",
+    "description": "Internxt Cleaner ofrece el mejor buscador de archivos duplicados y los elimina para darte más espacio y un dispositivo limpio y optimizado.",
     "cardDescriptions": {
-      "titles": ["Limpieza inteligente", "Mejora la salud del dispositivo", "Seguro y protegido"],
+      "titles": ["Limpieza inteligente", "Mejora la salud", "Seguro y fiable"],
       "descriptions": [
-        "Usamos algoritmos avanzados para ayudarte a identificar y eliminar archivos basura. Te ayudamos a priorizar qué archivos o datos borrar con el mínimo esfuerzo y la máxima seguridad.",
-        "Evita que tu dispositivo se sobrecaliente, reduce el desgaste del hardware y mejora la salud de la batería, haciendo que vuelva a sentirse como nuevo con Internxt Cleaner.",
-        "Solo tú decides qué borrar, dándote el control total sobre tu espacio de almacenamiento y la privacidad de tus datos."
+        "Usamos algoritmos avanzados para identificar y borrar archivos basura. Te ayudamos a priorizar qué eliminar con el mínimo esfuerzo y máxima seguridad.",
+        "Evita sobrecalentamiento, reduce desgaste del hardware y mejora la batería, haciendo que tu equipo se sienta nuevo con Internxt Cleaner.",
+        "Solo tú decides qué borrar, con control total del espacio y la privacidad de tus datos."
       ]
     }
   },
   "WhenToUseSection": {
     "title": "Cuándo usar un limpiador de dispositivos",
-    "description": "Para aumentar el potencial de tu PC o Mac, un limpiador de dispositivos realiza una limpieza digital para prevenir problemas de almacenamiento y rendimiento.",
+    "description": "Para aumentar el potencial de tu PC o Mac, un limpiador de dispositivos realiza una limpieza digital que evita problemas de espacio y de rendimiento.",
     "features": [
-      "Dispositivo lento o que no responde",
-      "Poco espacio de almacenamiento",
+      "Dispositivo lento o sin respuesta",
+      "Espacio de almacenamiento bajo",
       "Después de desinstalar aplicaciones",
-      "Bloqueos o cuelgues frecuentes",
-      "Drenaje excesivo de batería",
+      "Bloqueos frecuentes",
+      "Batería que se agota rápido",
       "Sobrecalentamiento del dispositivo",
-      "Rendimiento lento de aplicaciones",
-      "Tiempos de arranque retrasados"
+      "Aplicaciones con bajo rendimiento",
+      "Inicio del sistema muy lento"
     ]
   },
   "CtaSection2": {
     "title": "Encuéntralo. Límpialo. Optimízalo.",
-    "description": "Elimina archivos basura y devuelve la vida a tus dispositivos.",
-    "cta": "Consigue Internxt"
+    "description": "Borra archivos basura y da nueva vida a tus equipos.",
+    "cta": "Conseguir Internxt"
   },
   "FaqSection": {
-    "title": "¿Preguntas? Tenemos respuestas",
+    "title": "¿Dudas? Tenemos respuestas",
     "faq": [
       {
-        "question": "¿Puede Internxt acceder a mis archivos?",
+        "question": "¿Internxt puede acceder a mis archivos?",
         "answer": [
-          "No. Internxt, al igual que cualquier otro tercero, no puede acceder a tus archivos, fotos o datos.",
-          "Los servicios de Internxt cuentan con cifrado de conocimiento cero, lo que significa que solo tú puedes acceder y descifrar tus datos privados. Además, Internxt utiliza criptografía post-cuántica, la tecnología más avanzada disponible, para proteger tus archivos frente a amenazas futuras."
+          "No. Internxt ni terceros pueden acceder a tus archivos, fotos o datos.",
+          "Internxt usa cifrado de conocimiento cero: solo tú puedes ver y descifrar tus datos. Además, emplea criptografía poscuántica, la tecnología más avanzada, para protegerlos de futuras amenazas."
         ]
       },
       {
         "question": "¿Tendré acceso a todos los servicios de Internxt?",
         "answer": [
-          "Sí, una suscripción de pago o una membresía de por vida de Internxt te da acceso a nuestra suite todo-en-uno de privacidad, que incluye Internxt Mail, Meet, VPN, Drive, Send, Antivirus y más.",
-          "Un plan gratuito de Internxt solo te dará acceso a Internxt Drive."
+          "Sí, con una suscripción de pago o plan vitalicio accedes a toda la suite: Internxt Mail, Meet, VPN, Drive, Send, Antivirus y más.",
+          "El plan gratuito solo da acceso a Internxt Drive."
         ]
       },
       {
         "question": "¿Internxt guarda mi contraseña?",
         "answer": [
-          "No. Por lo tanto, Internxt no (y no puede) almacenar tu contraseña.",
-          "Tu contraseña de Internxt es única para ti y se utiliza para cifrar y descifrar tus datos en Internxt. Si quieres cambiarla, puedes hacerlo desde nuestra aplicación."
+          "No. Internxt no puede guardar tu contraseña.",
+          "Tu clave es única y cifra tus datos. Puedes cambiarla desde la app si lo deseas."
         ]
       },
       {
-        "question": "¿Puedo activar la autenticación en dos pasos (2FA)?",
+        "question": "¿Puedo activar 2FA?",
         "answer": [
-          "Sí. Puedes configurar la autenticación en dos pasos para tu cuenta a través de la aplicación web de Internxt.",
-          "También puedes usar Authy u otra herramienta de 2FA para generar un código personal de verificación en dos pasos con Internxt."
+          "Sí. Configura la verificación en dos pasos desde la web de Internxt.",
+          "Puedes usar Authy u otra app 2FA para generar tu código con Internxt."
         ]
       },
       {
-        "question": "¿Cómo creo una cuenta de Internxt?",
+        "question": "¿Cómo creo una cuenta Internxt?",
         "answer": [
-          "Para crear una cuenta gratuita de Internxt, simplemente haz clic en el mejor plan que aparece arriba y sigue las instrucciones.",
-          "O dirígete a nuestra página principal y haz clic en “Empezar”. Recibirás inmediatamente 1 GB de almacenamiento gratuito de por vida con la membresía gratuita de Internxt. Puedes usar tu cuenta gratuita para acceder a todos nuestros servicios. Para registrarte, solo tienes que introducir tu nombre y dirección de correo electrónico. No es necesario verificar la identidad ni el correo electrónico para empezar a usar los servicios de Internxt."
+          "Para crearla gratis, elige un plan y sigue las instrucciones.",
+          "O entra en la web y pulsa “Empezar”. Obtienes 1GB gratis de por vida. Basta con nombre y correo. No pedimos verificación de identidad ni email."
         ]
       },
       {
-        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "question": "¿Puedo pagar con tarjeta, PayPal o criptos?",
+        "answer": ["Internxt acepta tarjetas (Mastercard, VISA, Amex...), PayPal, iDEAL, Sofort y Cripto."]
+      },
+      {
+        "question": "¿Cuál es la política de reembolso?",
         "answer": [
-          "Internxt acepta actualmente tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar mediante PayPal, iDEAL, Sofort y criptomonedas."
+          "Internxt ofrece 30 días de garantía en todas sus suscripciones, contando desde el alta.",
+          "Si no quedas satisfecho, escríbenos a [hello@internxt.com](mailto:hello@internxt.com) y pide un reembolso."
         ]
       },
       {
-        "question": "¿Cuál es la política de reembolso de Internxt?",
+        "question": "¿Cómo cancelo mi suscripción?",
         "answer": [
-          "Internxt ofrece una garantía estándar de devolución de dinero de 30 días en todas sus suscripciones de pago, que comienza a contar en cuanto te suscribes.",
-          "Y si alguna vez no estás satisfecho con nuestro servicio, contáctanos en [hello@internxt.com](mailto:hello@internxt.com) y solicita un reembolso."
+          "Es fácil. Abre la app, ve a ajustes y pulsa 'Cancelar suscripción'. Pasarás al plan gratis al instante.",
+          "El tiempo restante de tu plan de pago no se devuelve ni se acumula. Ej: si cancelas un anual con 4 meses, los pierdes.",
+          "También puedes borrar cuenta y suscripción desde ajustes, lo que eliminará tus archivos."
         ]
       },
       {
-        "question": "¿Cómo puedo cancelar mi suscripción?",
+        "question": "¿Cómo contacto con soporte?",
         "answer": [
-          "Cancelar tu suscripción es muy sencillo. Abre la aplicación de Internxt, ve a configuración y selecciona 'Cancelar suscripción'. Esta acción finalizará tu suscripción de inmediato y tu cuenta pasará al plan gratuito.",
-          "Ten en cuenta que el tiempo restante de tu suscripción de pago no será reembolsado ni acumulado. Por ejemplo, si cancelas un plan anual con cuatro meses restantes, perderás el acceso a esos cuatro meses.",
-          "También puedes cancelar un plan de pago y tu cuenta de Internxt desde la configuración, lo que eliminará tu suscripción, cuenta y todos tus archivos."
-        ]
-      },
-      {
-        "question": "¿Cómo puedo contactar con el soporte?",
-        "answer": [
-          "¿No encuentras lo que buscas? Puedes ponerte en contacto con nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com)."
+          "Si no hallas lo que buscas, escribe a nuestro equipo por chat o correo: [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
         "question": "¿Internxt tiene planes de por vida?",
         "answer": [
-          "Ofrecemos planes de por vida que puedes comprar desde nuestra web. Estos te dan acceso de por vida a nuestros planes, con hasta 10 TB de almacenamiento, mediante un único pago."
+          "Sí, ofrecemos planes vitalicios en la web. Con ellos tienes hasta 10TB de espacio con un solo pago."
         ]
       },
       {
-        "question": "¿Puedo añadir más almacenamiento a mi plan de por vida?",
+        "question": "¿Puedo añadir más espacio a mi plan vitalicio?",
         "answer": [
-          "Sí, puedes añadir todo el almacenamiento que quieras a tu membresía de por vida de Internxt. Los planes de por vida de Internxt son acumulables. Solo tienes que comprarlos con el mismo correo electrónico y contactarnos en hello@internxt.com para que podamos unirlos en la misma cuenta."
+          "Sí, puedes sumar espacio a tu plan vitalicio. Son acumulables. Compra con el mismo email y escríbenos a hello@internxt.com para unirlos en tu cuenta."
         ]
       },
       {
-        "question": "¿Es Internxt una solución de almacenamiento en la nube sostenible y ecológica?",
+        "question": "¿Internxt es un servicio sostenible?",
         "answer": [
-          "Sí, Internxt está comprometido con la computación en la nube verde, ofreciendo soluciones de almacenamiento ecológicas para contribuir a un futuro más limpio y sostenible. Nuestros centros de datos funcionan con un 92% de energía renovable y están diseñados para minimizar las emisiones de carbono, el consumo de recursos y los residuos electrónicos.",
-          "Nuestros esfuerzos contribuyen al objetivo de neutralidad climática para 2050. [Más información](https://internxt.com/es/green-cloud-computing)"
+          "Sí, Internxt apuesta por la nube verde. Nuestros centros usan 92% energía renovable y minimizan emisiones, consumo y residuos.",
+          "Contribuimos a ser climáticamente neutros en 2050. [Saber más](https://internxt.com/es/green-cloud-computing)"
         ]
       }
     ]

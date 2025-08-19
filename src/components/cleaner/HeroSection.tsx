@@ -17,7 +17,7 @@ const HeroSection = ({ textContent }) => (
       >
         <div className="flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
           <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
-            <div className="flex h-[190px] w-full flex-col justify-between lg:h-[215px]">
+            <div className="flex h-[190px] w-full flex-col justify-between  lg:h-[190px]">
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
@@ -32,14 +32,14 @@ const HeroSection = ({ textContent }) => (
                 </div>
               ))}
             </div>
-            <div className="h-[44px] w-full lg:h-[24px]">
+            <div className="h-[44px] w-full lg:h-min">
               <p className="text-base font-normal text-gray-95 lg:text-xl">{textContent.subTitle}</p>
             </div>
           </div>
           <div className="h-[48px] w-full">
             <Link
               href={'/pricing'}
-              className="z-10 flex h-[48px] w-[139px] items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark"
+              className="z-10 flex h-[48px] min-w-[139px] max-w-[200px] items-center justify-center rounded-sm-6 bg-primary text-base font-normal text-white hover:bg-primary-dark"
             >
               {textContent.cta}
             </Link>
