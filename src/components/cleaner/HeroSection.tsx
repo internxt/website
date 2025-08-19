@@ -25,8 +25,8 @@ const HeroSection = ({ textContent }) => (
             <div className="flex h-[88px] w-full flex-col justify-between ">
               {textContent.features.map((feat) => (
                 <div key={feat} className="flex h-[24px] flex-row gap-2 ">
-                  <Check className="hidden text-green-0 xs-md:block" weight="bold" size={24} />
-                  <Check className="block text-green-0 xs-md:hidden" weight="bold" size={20} />
+                  <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
+                  <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
                   <p className="mb-2 text-left text-sm font-normal text-gray-95 xs-md:text-lg ">{feat}</p>
                 </div>
               ))}
@@ -45,15 +45,25 @@ const HeroSection = ({ textContent }) => (
           </div>
         </div>
       </div>
-      <div className="hidden h-[535px] w-full justify-end lg:flex ">
-        <Image
-          src={getImage('/images/cleaner/hero (1).png')}
-          alt="Cleaner HeroSection"
-          style={{ objectFit: 'cover' }}
-          width={650}
-          height={100}
-          quality={100}
-        />
+      <div className="hidden h-[535px] w-[498px] overflow-hidden lg:flex">
+        <div className="relative hidden h-full w-full  lg:flex">
+          <Image
+            src={getImage('/images/cleaner/Frame 1727.png')}
+            alt="Cleaner HeroSection"
+            width={900}
+            height={478}
+            quality={100}
+            className="absolute right-48 top-52 z-10"
+          />
+          <Image
+            src={getImage('/images/cleaner/Cleaner Enabled.png')}
+            alt="Cleaner HeroSection"
+            width={900}
+            height={478}
+            quality={100}
+            className="absolute left-10 top-20 z-0"
+          />
+        </div>
       </div>
     </HeroSafeArea>
   </section>

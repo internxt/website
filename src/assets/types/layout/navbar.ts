@@ -113,4 +113,5 @@ export interface Products {
   comingSoon: string;
   new: string;
   antivirus: string;
+  cleaner: string;
 }

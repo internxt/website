@@ -23,7 +23,8 @@
     "send": "Internxt Send",
     "comingSoon": "Proximité",
     "new": "Nouveau",
-    "antivirus": "Internxt Antivirus"
+    "antivirus": "Internxt Antivirus",
+    "cleaner": "Internxt Cleaner"
   },
   "Auth": {
     "SignUp": {
