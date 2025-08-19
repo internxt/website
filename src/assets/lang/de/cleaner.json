@@ -1,0 +1,147 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Internxt holen",
+    "title": "Integrierte Geräteoptimierung mit Internxt Drive",
+    "features": ["Weniger Datenmüll", "Bedrohungen entfernen", "Mehr Speicherplatz"],
+    "subTitle": "Steigere die Geschwindigkeit, Reaktionsfähigkeit und Gesundheit deines Geräts"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Internxt Cleaner entfernt unnötige Dateien, um die Geschwindigkeit und Leistung zu steigern und dein Gerät wie neu zu halten. Unser VPN verschlüsselt deine Verbindung und sorgt für Datenschutz und Sicherheit beim Surfen."
+  },
+  "WhyUseSection": {
+    "title": "Warum ein Cleaner zur Entfernung von Datenmüll sinnvoll ist",
+    "description": "Alte und unerwünschte Dateien verlangsamen dein Gerät und belegen wertvollen Speicherplatz. Finde heraus, was deinen Speicherplatz belegt – mit Internxt Cleaner, einer sicheren und zuverlässigen Lösung zur Speicheroptimierung für PC und Mac.",
+    "scrollableSection": {
+      "titles": ["Speicherplatz freigeben", "Geschwindigkeit verbessern", "Privatsphäre schützen"],
+      "descriptions": [
+        "Viele Dateien bleiben unbemerkt auf deinem Gerät und belegen Speicherplatz, was die Leistung verringert. Internxt Cleaner ist eines der besten Tools, um doppelte Dateien zu finden und Datenmüll zu beseitigen.",
+        "Bereinige RAM und Speicher, um die Systemressourcen zu entlasten – so fühlt sich dein Gerät wieder wie neu an.",
+        "Verbleibende Dateien und App-Daten können persönliche Informationen enthalten, die ein Risiko darstellen, wenn dein Gerät verloren geht, gestohlen oder gehackt wird."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optimiere dein Gerät für maximale Leistung",
+    "description": "Lösche Datenmüll und verlängere die Lebensdauer deines PCs oder Macs",
+    "cta": "Internxt holen"
+  },
+  "HowItWorksSection": {
+    "title": "So funktioniert's",
+    "description": "Internxt Cleaner bietet den besten Duplikatfinder und Datenreiniger, damit du mehr Platz für Wichtiges hast und dein Gerät sauber und optimiert bleibt.",
+    "features": {
+      "titles": ["Intelligente Reinigung", "Gerätezustand verbessern", "Sicher & geschützt"],
+      "descriptions": [
+        "Wir nutzen fortschrittliche Algorithmen, um Datenmüll zu erkennen und zu entfernen. Du kannst einfach priorisieren, welche Dateien gelöscht werden sollen – mit minimalem Aufwand und maximaler Sicherheit.",
+        "Verhindere Überhitzung, reduziere Hardwareverschleiß und verbessere die Akkuleistung – dein Gerät fühlt sich mit Internxt Cleaner wie neu an.",
+        "Nur du entscheidest, was gelöscht wird – so hast du volle Kontrolle über deinen Speicherplatz und deine Daten."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Wann ein Cleaner sinnvoll ist",
+    "description": "Ein Cleaner kann das volle Potenzial deines PCs oder Macs entfalten und hilft, Speicher- und Leistungsprobleme zu vermeiden.",
+    "features": [
+      "Langsames oder nicht reagierendes Gerät",
+      "Wenig Speicherplatz",
+      "Nach Deinstallation von Apps",
+      "Häufige Abstürze oder Einfrieren",
+      "Hoher Akkuverbrauch",
+      "Überhitzung des Geräts",
+      "Langsame App-Leistung",
+      "Verzögerter Systemstart"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Finden. Reinigen. Optimieren.",
+    "description": "Lösche Datenmüll und erwecke deine Geräte zu neuem Leben.",
+    "cta": "Internxt holen"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Hat Internxt Zugriff auf meine Dateien?",
+        "answer": [
+          "Nein. Internxt – genauso wie Dritte – hat keinen Zugriff auf deine Dateien, Fotos oder Daten.",
+          "Internxt verwendet Zero-Knowledge-Verschlüsselung. Nur du kannst deine privaten Daten einsehen und entschlüsseln. Zusätzlich kommt post-quantenresistente Kryptografie zum Einsatz – die sicherste verfügbare Technologie zum Schutz deiner Daten vor zukünftigen Bedrohungen."
+        ]
+      },
+      {
+        "question": "Habe ich Zugriff auf alle Internxt-Dienste?",
+        "answer": [
+          "Ja. Ein kostenpflichtiges Abonnement oder eine Lifetime-Mitgliedschaft gewährt dir Zugang zur vollständigen Datenschutz-Suite von Internxt: Mail, Meet, VPN, Drive, Send, Antivirus und mehr.",
+          "Ein kostenloser Internxt-Plan gibt dir nur Zugriff auf Internxt Drive."
+        ]
+      },
+      {
+        "question": "Speichert Internxt mein Passwort?",
+        "answer": [
+          "Nein. Internxt speichert dein Passwort nicht – und kann es auch nicht speichern.",
+          "Dein Passwort dient zur Verschlüsselung und Entschlüsselung deiner Daten. Wenn du es ändern möchtest, kannst du das jederzeit über die App tun."
+        ]
+      },
+      {
+        "question": "Kann ich die Zwei-Faktor-Authentifizierung aktivieren?",
+        "answer": [
+          "Ja. Du kannst die Zwei-Faktor-Authentifizierung über die Internxt-Web-App aktivieren.",
+          "Du kannst auch Authy oder ein anderes 2FA-Tool verwenden, um deinen persönlichen 2FA-Code mit Internxt zu erstellen."
+        ]
+      },
+      {
+        "question": "Wie erstelle ich ein Internxt-Konto?",
+        "answer": [
+          "Um ein kostenloses Konto zu erstellen, klicke einfach auf den gewünschten Plan oben und folge den Anweisungen.",
+          "Oder gehe zur Startseite und klicke auf „Jetzt starten“. Du erhältst sofort 1 GB kostenlosen Speicherplatz – lebenslang. Du musst nur deinen Namen und deine E-Mail-Adresse eingeben – keine Identitäts- oder E-Mail-Verifizierung nötig."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.), PayPal, iDEAL, Sofort und Kryptowährungen."
+        ]
+      },
+      {
+        "question": "Wie lautet die Rückerstattungsrichtlinie von Internxt?",
+        "answer": [
+          "Internxt bietet eine 30-tägige Geld-zurück-Garantie für alle kostenpflichtigen Abonnements, beginnend ab dem Kaufdatum.",
+          "Wenn du unzufrieden bist, kontaktiere uns unter [hello@internxt.com](mailto:hello@internxt.com), um eine Rückerstattung anzufordern."
+        ]
+      },
+      {
+        "question": "Wie kann ich mein Abonnement kündigen?",
+        "answer": [
+          "Die Kündigung ist einfach: Öffne die Internxt-App, gehe zu den Einstellungen und wähle „Abonnement kündigen“. Dein Konto wird sofort auf den kostenlosen Plan zurückgesetzt.",
+          "Beachte, dass verbleibende Zeit deines aktuellen Abos nicht erstattet oder übertragen wird. Wenn du z. B. ein Jahresabo mit vier verbleibenden Monaten kündigst, verlierst du diese vier Monate.",
+          "Du kannst auch dein kostenpflichtiges Abo und dein Internxt-Konto über die Einstellungen löschen – einschließlich aller Dateien."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Support kontaktieren?",
+        "answer": [
+          "Du hast nicht gefunden, was du suchst? Kontaktiere unser Support-Team per Live-Chat oder per E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Bietet Internxt Lifetime-Pläne an?",
+        "answer": [
+          "Ja, auf unserer Website kannst du Lifetime-Pläne erwerben. Damit erhältst du lebenslangen Zugriff auf unsere Dienste mit bis zu 10 TB Speicherplatz gegen eine einmalige Zahlung."
+        ]
+      },
+      {
+        "question": "Kann ich meinem Lifetime-Plan mehr Speicher hinzufügen?",
+        "answer": [
+          "Ja, du kannst beliebig viel Speicher zu deiner Lifetime-Mitgliedschaft hinzufügen. Die Pläne sind stapelbar – kaufe einfach mit derselben E-Mail-Adresse und kontaktiere uns, damit wir alles in einem Konto zusammenführen."
+        ]
+      },
+      {
+        "question": "Ist Internxt ein nachhaltiger und umweltfreundlicher Cloud-Speicher?",
+        "answer": [
+          "Ja, Internxt setzt auf grünes Cloud-Computing und bietet umweltfreundliche Speicherlösungen für eine nachhaltige Zukunft. Unsere Rechenzentren werden zu 92 % mit erneuerbarer Energie betrieben und sind auf minimale Emissionen, geringen Ressourcenverbrauch und weniger Elektroschrott ausgelegt.",
+          "Unser Ziel ist Klimaneutralität bis 2050. [Mehr erfahren](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}
