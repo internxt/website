@@ -9,15 +9,14 @@ export default function HorizontalScrollableSection({ textContent }) {
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 400;
-  const mobileCardWidth = 310; // Ancho en mobile
+  const mobileCardWidth = 320;
   const gap = 32;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
 
-  // Detectar si es mobile
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+      setIsMobile(window.innerWidth < 1024);
     };
 
     checkIsMobile();
@@ -28,10 +27,8 @@ export default function HorizontalScrollableSection({ textContent }) {
 
   const getMaxIndex = () => {
     if (isMobile) {
-      // En mobile permite scroll hasta la última card
       return Math.max(0, cardTitles.length - 1);
     } else {
-      // En desktop mantiene el comportamiento original
       return Math.max(0, cardTitles.length - 2);
     }
   };
@@ -65,21 +62,24 @@ export default function HorizontalScrollableSection({ textContent }) {
 
   return (
     <section className="flex h-[653px] w-full items-center justify-center bg-white lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between lg:h-[509px] ">
-        <p className=" w-[350px] text-center text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
+      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between  lg:h-[532px] ">
+        <p className=" w-[320px] text-left text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
-        <p className="font-nomral w-[350px] text-center text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+        <p className="font-nomral w-[320px] text-left text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
 
-        <div ref={scrollContainerRef} className="flex w-[310px] flex-row gap-8 overflow-hidden scroll-smooth lg:w-full">
+        <div
+          ref={scrollContainerRef}
+          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:w-full"
+        >
           {cardTitles.map((title, index) => (
-            <div key={index} className="w-[310px] shrink-0 bg-white lg:w-[400px]">
+            <div key={index} className="h-full w-[320px] shrink-0  lg:w-[400px]">
               <div className="flex flex-row items-center justify-start gap-4 ">
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
-              <div className="bg-white py-4">
+              <div className=" py-4">
                 <p className="text-lg font-normal text-gray-55">{cardDescriptions[index]}</p>
               </div>
             </div>

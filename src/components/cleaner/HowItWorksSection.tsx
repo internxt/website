@@ -3,7 +3,7 @@ import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
 
 const HowItWorksSection = ({ textContent }) => (
-  <section className="flex h-[780px] w-full flex-row items-center justify-center bg-neutral-15 lg:h-[807px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
+  <section className="flex h-[650px] w-full flex-row items-center justify-center bg-neutral-15  lg:h-[807px] lg:px-10 lg:py-9 lg:pb-0 xl:px-32 3xl:px-80">
     <div className="flex w-[300px] flex-col justify-between  lg:h-[719px] lg:w-full ">
       <div className="h-[58px] ">
         <p className="text-3xl font-bold text-gray-100 lg:text-5xl">{textContent.title}</p>
@@ -11,7 +11,7 @@ const HowItWorksSection = ({ textContent }) => (
       <div className="h-[44px] ">
         <p className="text-lg font-normal text-gray-55">{textContent.description}</p>
       </div>
-      <div className="flex h-[521px] flex-row justify-between pt-36 lg:hidden ">
+      <div className="mt-28 flex h-min flex-row justify-between  lg:hidden ">
         <AccordionCards textContent={textContent.cardDescriptions} />
       </div>
       <div className="hidden h-[480px] flex-row justify-between lg:flex ">

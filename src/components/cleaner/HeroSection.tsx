@@ -7,7 +7,8 @@ import { Check } from '@phosphor-icons/react';
 
 const HeroSection = ({ textContent }) => (
   <section
-    className="flex h-[695px] w-full flex-row justify-center"
+    className="h-[600 px]
+    flex w-full flex-row justify-center lg:h-[695px]"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
   >
     <HeroSafeArea>
