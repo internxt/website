@@ -72,13 +72,13 @@ export default function HorizontalScrollableSection({ textContent }) {
         <p className="w-[320px] text-left text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
-        <p className="font-nomral w-[320px] text-left text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+        <p className="w-[320px] text-left text-base font-normal text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
 
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth lg:w-full"
+          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-12 lg:w-full"
         >
           {cardTitles.map((title, index) => (
             <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">

@@ -46,7 +46,7 @@ const CleanerPage = ({
         textContent={textContent.CtaSection}
         url={'/pricing'}
         customText={
-          <div className="flex flex-col gap-4 text-center">
+          <div className="flex flex-col gap-4 px-2 text-center">
             <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
             <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
               {textContent.CtaSection.description}
