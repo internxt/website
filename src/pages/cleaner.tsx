@@ -46,14 +46,12 @@ const CleanerPage = ({
         textContent={textContent.CtaSection}
         url={'/pricing'}
         customText={
-          <>
-            <div className="flex flex-col gap-4 text-center">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
-              <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
-                {textContent.CtaSection.description}
-              </p>
-            </div>
-          </>
+          <div className="flex flex-col gap-4 text-center">
+            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection.title}</p>
+            <p className="px-10 text-base font-normal text-gray-55 lg:px-0 lg:text-xl">
+              {textContent.CtaSection.description}
+            </p>
+          </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgGradientColor="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"
@@ -68,12 +66,10 @@ const CleanerPage = ({
         textContent={textContent.CtaSection2}
         url={'/pricing'}
         customText={
-          <>
-            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
-              <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
-            </div>
-          </>
+          <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+            <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{textContent.CtaSection2.title}</p>
+            <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.CtaSection2.description}</p>
+          </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgGradientColor="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"

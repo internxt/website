@@ -14,15 +14,16 @@ const WhenToUseSection = ({ textContent }) => {
           {textContent.description}
         </p>
       </div>
-      <div className="flex h-min w-[300px] flex-col items-center justify-center gap-4   text-start text-lg font-semibold text-gray-95 lg:h-[228px] lg:w-[1012px] lg:flex-row  lg:gap-8 lg:text-left lg:text-2xl">
-        <div className="flex w-[300px] flex-col gap-4 lg:w-[420px] lg:gap-8 ">
-          {firstColumn.map((feature, index) => (
-            <p key={index}>{feature}</p>
+      <div className="flex h-min w-[300px] flex-col items-center justify-center gap-4 text-start text-lg font-semibold text-gray-95 lg:h-[228px] lg:w-[1012px] lg:flex-row lg:gap-8 lg:text-left lg:text-2xl">
+        <div className="flex w-[300px] flex-col gap-4 lg:w-[420px] lg:gap-8">
+          {firstColumn.map((feature) => (
+            <p key={feature}>{feature}</p>
           ))}
         </div>
-        <div className="flex w-[300px] flex-col gap-4 lg:w-[420px] lg:gap-8 ">
-          {secondColumn.map((feature, index) => (
-            <p key={index}>{feature}</p>
+
+        <div className="flex w-[300px] flex-col gap-4 lg:w-[420px] lg:gap-8">
+          {secondColumn.map((feature) => (
+            <p key={feature}>{feature}</p>
           ))}
         </div>
       </div>

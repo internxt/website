@@ -38,10 +38,13 @@ export default function HorizontalScrollableSection({ textContent }) {
       const newIndex = currentIndex - 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
-      scrollContainerRef.current.scrollTo({
-        left: newIndex * amount,
-        behavior: 'smooth',
-      });
+      const element = scrollContainerRef.current;
+      if (element && 'scrollTo' in element) {
+        element.scrollTo({
+          left: newIndex * amount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -51,10 +54,13 @@ export default function HorizontalScrollableSection({ textContent }) {
       const newIndex = currentIndex + 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
-      scrollContainerRef.current.scrollTo({
-        left: newIndex * amount,
-        behavior: 'smooth',
-      });
+      const element = scrollContainerRef.current;
+      if (element && 'scrollTo' in element) {
+        element.scrollTo({
+          left: newIndex * amount,
+          behavior: 'smooth',
+        });
+      }
     }
   };
 
@@ -62,8 +68,8 @@ export default function HorizontalScrollableSection({ textContent }) {
 
   return (
     <section className="flex h-[653px] w-full items-center justify-center bg-white lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between  lg:h-[532px] ">
-        <p className=" w-[320px] text-left text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
+      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between lg:h-[532px]">
+        <p className="w-[320px] text-left text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
         <p className="font-nomral w-[320px] text-left text-base text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
@@ -72,21 +78,21 @@ export default function HorizontalScrollableSection({ textContent }) {
 
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:w-full"
+          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth lg:w-full"
         >
           {cardTitles.map((title, index) => (
-            <div key={index} className="h-full w-[320px] shrink-0  lg:w-[400px]">
-              <div className="flex flex-row items-center justify-start gap-4 ">
+            <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
+              <div className="flex flex-row items-center justify-start gap-4">
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
-              <div className=" py-4">
+              <div className="py-4">
                 <p className="text-lg font-normal text-gray-55">{cardDescriptions[index]}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px] ">
+        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}

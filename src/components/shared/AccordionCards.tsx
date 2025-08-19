@@ -9,10 +9,10 @@ export default function AccordionCards({ textContent }) {
   };
 
   return (
-    <div className="flex flex-col gap-8 ">
+    <div className="flex flex-col gap-8">
       {cardTitles.map((title, index) => (
-        <div key={index} className="w-[302px] overflow-hidden rounded-16 bg-white transition-all duration-200">
-          <div
+        <div key={title} className="w-[302px] overflow-hidden rounded-16 bg-white transition-all duration-200">
+          <button
             onClick={() => handleCardClick(index)}
             className="flex cursor-pointer items-center px-4 pb-4 pt-4 duration-300"
           >
@@ -20,7 +20,7 @@ export default function AccordionCards({ textContent }) {
               <p className="text-xl font-normal text-primary">{index + 1}</p>
               <p className="text-xl font-medium text-gray-100">{title}</p>
             </div>
-          </div>
+          </button>
 
           <div
             className={`transition-all duration-300 ${
