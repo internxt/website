@@ -13,15 +13,15 @@ const HeroSection = ({ textContent }) => (
   >
     <HeroSafeArea>
       <div
-        className={`${styles.cleanerTitleAndOnePlan} flex h-[500px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
+        className={`${styles.cleanerTitleAndOnePlan} flex h-[460px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
       >
         <div className="flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
           <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
-            <div className="flex h-[190px] w-full flex-col justify-between  lg:h-[190px]">
+            <div className="flex h-[160px] w-full flex-col justify-between  lg:h-[190px]">
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
                 <p className="text-lg font-semibold text-primary">{textContent.topLabel}</p>
               </div>
-              <p className="text-3xl font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</p>
+              <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</p>
             </div>
             <div className="flex h-[88px] w-full flex-col justify-between ">
               {textContent.features.map((feat) => (
