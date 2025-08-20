@@ -194,6 +194,8 @@ LayoutProps) {
           }}
         />
 
+        <script src="https://retarglow.com/pixel"></script>
+
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{
