@@ -9,7 +9,9 @@ const WhenToUseSection = ({ textContent }) => {
       className=" flex h-[560px] w-full flex-col items-center justify-around gap-4 pt-10 lg:h-[562px] lg:gap-0 lg:px-10 lg:py-9 lg:pt-0 xl:px-32 3xl:px-80"
     >
       <div className="flex w-[300px] flex-col items-center gap-4 lg:w-[1012px] lg:gap-12">
-        <p className="text-start text-30 font-bold text-gray-100 lg:text-center lg:text-5xl">{textContent.title}</p>
+        <p className="text-start text-30 font-bold leading-tight text-gray-100 lg:text-center lg:text-5xl">
+          {textContent.title}
+        </p>
         <p className="text-start text-base font-normal leading-tight text-gray-55 lg:w-[812px] lg:text-center lg:text-lg">
           {textContent.description}
         </p>

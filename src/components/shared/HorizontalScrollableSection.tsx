@@ -68,7 +68,7 @@ export default function HorizontalScrollableSection({ textContent }) {
 
   return (
     <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[532px]">
+      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[560px]">
         <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
