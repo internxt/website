@@ -1,0 +1,133 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "获取 Internxt",
+    "title": "与 Internxt Drive 集成优化",
+    "features": ["更少垃圾", "清除威胁", "更多空间"],
+    "subTitle": "提升设备速度、响应和健康"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "查找并清理垃圾文件以提升速度、响应和性能。Internxt Cleaner 保持设备如新，无需手动整理或删除不需要的文件。"
+  },
+  "WhyUseSection": {
+    "title": "为什么用设备清理工具删除垃圾文件",
+    "description": "旧文件占用空间并拖慢设备。使用 Internxt Cleaner 发现磁盘占用，这是在 PC 和 Mac 上优化存储的安全可靠方式。",
+    "scrollableSection": {
+      "titles": ["释放空间", "提升速度", "保护隐私"],
+      "descriptions": [
+        "很多文件悄然留在设备中，占用内存并降低性能。Internxt Cleaner 检测重复并删除垃圾文件以释放空间。",
+        "清理内存和磁盘以减少资源消耗，让设备再次像新的一样。",
+        "多余的文件和数据可能包含个人信息，若设备丢失、被盗或被攻破会危及隐私。"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "最大化优化你的设备",
+    "description": "清理垃圾文件并延长 PC 或 Mac 的寿命",
+    "cta": "获取 Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "工作原理",
+    "description": "Internxt Cleaner 提供最佳重复文件查找并清理，帮你获得更多空间和干净优化的设备。",
+    "cardDescriptions": {
+      "titles": ["智能清理", "健康改善", "安全可靠"],
+      "descriptions": [
+        "我们使用先进算法识别并删除垃圾文件。帮你轻松决定删除内容，保证最小努力和最大安全。",
+        "避免过热，降低硬件磨损并改善电池，使设备使用 Internxt Cleaner 后焕然一新。",
+        "你完全决定删除哪些内容，全面掌控空间和数据隐私。"
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "何时使用设备清理工具",
+    "description": "为提升 PC 或 Mac 潜能，清理工具执行数字清洁以避免存储和性能问题。",
+    "features": [
+      "设备缓慢或无响应",
+      "存储空间不足",
+      "卸载应用后",
+      "频繁死机",
+      "电池耗尽很快",
+      "设备过热",
+      "应用性能低",
+      "系统启动过慢"
+    ]
+  },
+  "CtaSection2": {
+    "title": "找到它. 清理它. 优化它.",
+    "description": "清理垃圾文件并赋予设备新生命。",
+    "cta": "获取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt 能访问我的文件吗？",
+        "answer": [
+          "不能。Internxt 或第三方无法访问你的文件、照片或数据。",
+          "Internxt 使用零知识加密：只有你能查看和解密数据。同时采用后量子密码学，最先进技术，保护未来安全。"
+        ]
+      },
+      {
+        "question": "我能使用所有 Internxt 服务吗？",
+        "answer": [
+          "可以，付费订阅或终身计划可用全套服务：Internxt Mail、Meet、VPN、Drive、Send、Antivirus 等。",
+          "免费计划仅能访问 Internxt Drive。"
+        ]
+      },
+      {
+        "question": "Internxt 会保存我的密码吗？",
+        "answer": ["不会。Internxt 无法保存你的密码。", "你的密钥唯一并加密数据。你可在应用中随时更改。"]
+      },
+      {
+        "question": "我能启用 2FA 吗？",
+        "answer": ["可以。在 Internxt 网站设置双重验证。", "你可以用 Authy 或其他 2FA 应用生成 Internxt 验证码。"]
+      },
+      {
+        "question": "如何创建 Internxt 账户？",
+        "answer": [
+          "要免费创建，选择计划并按提示操作。",
+          "或进入官网并点击“开始”。你获得 1GB 永久免费。仅需姓名和邮箱。无需身份或邮箱验证。"
+        ]
+      },
+      {
+        "question": "我能用卡、PayPal 或加密支付吗？",
+        "answer": ["Internxt 支持银行卡 (Mastercard, VISA, Amex...)、PayPal、iDEAL、Sofort 和加密货币。"]
+      },
+      {
+        "question": "退款政策是什么？",
+        "answer": [
+          "Internxt 提供 30 天保证，适用于所有订阅，自激活日起算。",
+          "若不满意，请写信至 [hello@internxt.com](mailto:hello@internxt.com) 申请退款。"
+        ]
+      },
+      {
+        "question": "如何取消订阅？",
+        "answer": [
+          "很简单。打开应用，进入设置并点击“取消订阅”。立即转为免费计划。",
+          "付费计划剩余时间不退还也不累计。例如取消年费剩余 4 个月，将丢失。",
+          "你也可在设置删除账户和订阅，这会清除所有文件。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": ["若未找到所需，请通过聊天或邮件联系团队：[hello@internxt.com](mailto:hello@internxt.com)。"]
+      },
+      {
+        "question": "Internxt 有终身计划吗？",
+        "answer": ["有，我们在官网提供终身计划。可一次性获得高达 10TB 存储。"]
+      },
+      {
+        "question": "能为终身计划增加空间吗？",
+        "answer": ["可以，你可为终身计划增加空间。可叠加。用相同邮箱购买并写信 hello@internxt.com 绑定账户。"]
+      },
+      {
+        "question": "Internxt 是可持续服务吗？",
+        "answer": [
+          "是的，Internxt 致力绿色云。数据中心使用 92% 可再生能源并减少排放、能耗和废弃物。",
+          "我们承诺 2050 年实现气候中和。[了解更多](https://internxt.com/es/green-cloud-computing)"
+        ]
+      }
+    ]
+  }
+}

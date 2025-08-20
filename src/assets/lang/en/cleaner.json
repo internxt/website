@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Get Internxt",
+    "title": "Built-in device optimization with Internxt Drive",
+    "features": ["Less junk", "Remove threats", "More Storage"],
+    "subTitle": "Boost device speed, responsiveness, and health"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Find and clear junk files to boost device speed, responsiveness, and performance. Internxt Cleaner keeps your device running like new without manually organizing and deleting unwanted files."
+  },
+  "WhyUseSection": {
+    "title": "Why use a device cleaner to clear junk files",
+    "description": "Old and unwanted files slow down your device and take up valuable storage space. Find out what’s taking up your disk space with Internxt Cleaner, a safe, reliable way to optimize storage for PC and Mac.",
+    "scrollableSection": {
+      "titles": ["Free up storage", "Improve speed", "Protect your privacy"],
+      "descriptions": [
+        "Many files can be left on your device unnoticed, taking up your device's memory and reducing performance. Internxt Cleaner is one of the best tools to find duplicate files and clear junk files to free up valuable storage.",
+        "Clean up your RAM and storage to reduce the strain on your system’s resources, making your device feel like brand new again.",
+        "Leftover files and app data can contain personal information that could pose a risk to your data if your device is lost, stolen, or compromised."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optimize your device for peak performance",
+    "description": "Clear junk files to increase the lifespan of your PC or Mac",
+    "cta": "Get Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "How it works",
+    "description": "Internxt Cleaner offers the best duplicate file finder and cleaner to give you extra space for things that matter and a clean, optimized device.",
+    "cardDescriptions": {
+      "titles": ["Smart cleaning", "Improve device health", "Safe and secure"],
+      "descriptions": [
+        "We use advanced algorithms to help you identify and clear junk files. We help you prioritize which files or data to remove with minimal effort and maximum security.",
+        "Stop your device from overheating, reduce wear on hardware, and improve battery health, making your device feel like it was brand new with Internxt Cleaner.",
+        "Only you decide what to delete, giving you complete control over your storage space and the privacy of your data."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "When to use a device cleaner",
+    "description": "To increase the potential of your PC or Mac, a device cleaner provides digital cleanup to prevent storage and performance issues.",
+    "features": [
+      "Slow or unresponsive device",
+      "Low storage space",
+      "After uninstalling apps",
+      "Frequent crashes or freezing",
+      "Excessive battery drain",
+      "Device overheating",
+      "Slow app performance",
+      "Delayed start-up times"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Find it. Clean it. Optimize it.",
+    "description": "Clear junk files and bring new life to your devices.",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is a device cleaner, and how does it work?",
+        "answer": [
+          "Internxt Cleaner is a tool designed to clear junk files and optimize performance for your PC or Mac to keep your storage free and your device running smoothly."
+        ]
+      },
+      {
+        "question": "Is Internxt Cleaner free?",
+        "answer": [
+          "Internxt Cleaner is part of our paid Internxt Drive annual or lifetime plans.",
+          "Internxt Cleaner is available when you buy any Premium or Ultimate plans, which include many other features to protect your device and data online."
+        ]
+      },
+      {
+        "question": "Is a device cleaner safe to use?",
+        "answer": [
+          "Yes, we never delete files, giving you full control of the files you want to keep or delete to help you optimize storage and maintain the health of your system and device."
+        ]
+      },
+      {
+        "question": "How do I start using the service?",
+        "answer": [
+          "You can use our device cleaner by creating an Internxt Drive account and by purchasing a Premium or Ultimate lifetime or subscription plan, which includes Drive, VPN, Cleaner, Dark Web Monitor, Meet, and Mail."
+        ]
+      },
+      {
+        "question": "How often should I run the device cleaner?",
+        "answer": [
+          "If you notice your device is overheating, running slowly, or your battery is draining unexpectedly, it could be a sign that your computer is overworking due to too many junk files or demanding apps.",
+          "In this case, you should run a scan using Internxt Cleaner to identify and delete the unnecessary files, but running a monthly scan is recommended to maintain your device’s health."
+        ]
+      },
+      {
+        "question": "Will a device cleaner delete my important files?",
+        "answer": [
+          "No. Internxt Cleaner is designed to identify and remove only temporary files.",
+          "You can review and select the files you want to delete to ensure nothing important is removed."
+        ]
+      }
+    ]
+  }
+}

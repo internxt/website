@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Hol dir Internxt",
+    "title": "Integrierte Optimierung mit Internxt Drive",
+    "features": ["Weniger Müll", "Bedrohungen löschen", "Mehr Speicher"],
+    "subTitle": "Verbessert Tempo, Antwort u. Gesundheit des Geräts"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Finde und lösche unnütze Dateien für mehr Tempo, Antwort und Leistung. Internxt Cleaner hält dein Gerät wie neu ohne manuelles Ordnen oder Löschen unerwünschter Dateien."
+  },
+  "WhyUseSection": {
+    "title": "Warum ein Gerätereiniger nutzen um unnütze Dateien zu löschen",
+    "description": "Alte Dateien belegen Platz und bremsen dein Gerät. Entdecke was Speicher füllt mit Internxt Cleaner, eine sichere und verlässliche Methode Speicherplatz auf PC und Mac zu optimieren.",
+    "scrollableSection": {
+      "titles": ["Speicher frei", "Tempo verbessern", "Privatsphäre schützen"],
+      "descriptions": [
+        "Viele Dateien bleiben auf dem Gerät ohne dass du es merkst, sie blockieren Speicher und senken Leistung. Internxt Cleaner findet Duplikate und löscht unnütze Dateien um Speicher frei zu machen.",
+        "Reinigt RAM und Speicher um Ressourcenverbrauch zu verringern, dein Gerät fühlt sich wieder neu an.",
+        "Übrig gebliebene Dateien u. Daten können pers. Infos enthalten die deine Privatsphäre gefährden falls Gerät verloren, gestohlen oder kompromittiert wird."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optimiere dein Gerät maximal",
+    "description": "Lösche unnütze Dateien und verlängere das Leben von PC oder Mac",
+    "cta": "Internxt erhalten"
+  },
+  "HowItWorksSection": {
+    "title": "Wie es funktioniert",
+    "description": "Internxt Cleaner bietet den besten Sucher für doppelte Dateien und entfernt sie um mehr Speicher und ein sauberes, optimiertes Gerät zu haben.",
+    "cardDescriptions": {
+      "titles": ["Intelligente Reinigung", "Gesundheit verbessern", "Sicher und zuverlässig"],
+      "descriptions": [
+        "Wir nutzen fortschr. Algorithmen um unnütze Dateien zu erkennen und zu löschen. Wir helfen dir zu priorisieren was zu löschen mit minimalem Aufwand und maximaler Sicherheit.",
+        "Vermeidet Überhitzung, senkt Hardwareverschleiß und verbessert Akku, sodass dein Gerät sich neu anfühlt mit Internxt Cleaner.",
+        "Nur du entscheidest was gelöscht wird, mit voller Kontrolle über Speicher und Privatsphäre deiner Daten."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Wann einen Gerätereiniger benutzen",
+    "description": "Um Potenzial von PC oder Mac zu erhöhen, macht ein Reiniger digitalen Hausputz und verhindert Speicher- und Leistungsprobleme.",
+    "features": [
+      "Gerät langsam oder ohne Antwort",
+      "Wenig Speicherplatz frei",
+      "Nach Deinstallation von Apps",
+      "Häufige Abstürze",
+      "Akku leert sich schnell",
+      "Gerät überhitzt",
+      "Apps mit schwacher Leistung",
+      "Systemstart sehr langsam"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Finde es. Säubere es. Optimiere es.",
+    "description": "Lösche unnütze Dateien und gib deinen Geräten neues Leben.",
+    "cta": "Internxt erhalten"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist ein Geräte-Cleaner und wie funktioniert er?",
+        "answer": [
+          "Internxt Cleaner ist ein Tool, das entwickelt wurde, um Junk-Dateien zu löschen und die Leistung Ihres PCs oder Macs zu optimieren, damit Ihr Speicher frei bleibt und Ihr Gerät reibungslos läuft."
+        ]
+      },
+      {
+        "question": "Ist Internxt Cleaner kostenlos?",
+        "answer": [
+          "Internxt Cleaner ist Teil der kostenpflichtigen Jahres- oder Lifetime-Pläne von Internxt Drive.",
+          "Internxt Cleaner ist verfügbar, wenn Sie einen Premium- oder Ultimate-Plan erwerben, der viele weitere Funktionen zum Schutz Ihres Geräts und Ihrer Daten online enthält."
+        ]
+      },
+      {
+        "question": "Ist ein Geräte-Cleaner sicher zu verwenden?",
+        "answer": [
+          "Ja, wir löschen niemals Dateien ohne Ihre Zustimmung und geben Ihnen die volle Kontrolle darüber, welche Dateien Sie behalten oder löschen möchten, um Speicherplatz zu optimieren und die Gesundheit Ihres Systems und Geräts zu erhalten."
+        ]
+      },
+      {
+        "question": "Wie beginne ich mit der Nutzung des Dienstes?",
+        "answer": [
+          "Sie können unseren Geräte-Cleaner verwenden, indem Sie ein Internxt Drive-Konto erstellen und einen Premium- oder Ultimate-Plan (Lifetime oder Abonnement) erwerben, der Drive, VPN, Cleaner, Dark Web Monitor, Meet und Mail beinhaltet."
+        ]
+      },
+      {
+        "question": "Wie oft sollte ich den Geräte-Cleaner ausführen?",
+        "answer": [
+          "Wenn Sie feststellen, dass Ihr Gerät überhitzt, langsam läuft oder der Akku unerwartet schnell entladen wird, kann dies ein Zeichen dafür sein, dass Ihr Computer durch zu viele Junk-Dateien oder ressourcenintensive Apps überlastet ist.",
+          "In diesem Fall sollten Sie einen Scan mit Internxt Cleaner durchführen, um unnötige Dateien zu identifizieren und zu löschen. Ein monatlicher Scan wird empfohlen, um die Gesundheit Ihres Geräts zu erhalten."
+        ]
+      },
+      {
+        "question": "Löscht ein Geräte-Cleaner meine wichtigen Dateien?",
+        "answer": [
+          "Nein. Internxt Cleaner ist so konzipiert, dass er nur temporäre Dateien identifiziert und entfernt.",
+          "Sie können die Dateien überprüfen und auswählen, die Sie löschen möchten, um sicherzustellen, dass nichts Wichtiges entfernt wird."
+        ]
+      }
+    ]
+  }
+}
