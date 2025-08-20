@@ -62,82 +62,42 @@
     "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "Kann Internxt auf meine Dateien zugreifen?",
+        "question": "Was ist ein Geräte-Cleaner und wie funktioniert er?",
         "answer": [
-          "Nein. Weder Internxt noch Dritte können auf deine Dateien, Fotos oder Daten zugreifen.",
-          "Internxt nutzt Zero-Knowledge-Verschlüsselung: nur du kannst deine Daten sehen u. entschlüsseln. Zudem postquanten Kryptografie, modernste Technik, schützt sie vor künftigen Bedrohungen."
+          "Internxt Cleaner ist ein Tool, das entwickelt wurde, um Junk-Dateien zu löschen und die Leistung Ihres PCs oder Macs zu optimieren, damit Ihr Speicher frei bleibt und Ihr Gerät reibungslos läuft."
         ]
       },
       {
-        "question": "Bekomme ich Zugang zu allen Internxt-Diensten?",
+        "question": "Ist Internxt Cleaner kostenlos?",
         "answer": [
-          "Ja, mit Abo oder Lebensplan hast du Zugriff auf ganze Suite: Internxt Mail, Meet, VPN, Drive, Send, Antivirus u. mehr.",
-          "Der Gratisplan gibt nur Zugang zu Internxt Drive."
+          "Internxt Cleaner ist Teil der kostenpflichtigen Jahres- oder Lifetime-Pläne von Internxt Drive.",
+          "Internxt Cleaner ist verfügbar, wenn Sie einen Premium- oder Ultimate-Plan erwerben, der viele weitere Funktionen zum Schutz Ihres Geräts und Ihrer Daten online enthält."
         ]
       },
       {
-        "question": "Speichert Internxt mein Passwort?",
+        "question": "Ist ein Geräte-Cleaner sicher zu verwenden?",
         "answer": [
-          "Nein. Internxt kann dein Passwort nicht speichern.",
-          "Dein Schlüssel ist einzigartig und verschlüsselt deine Daten. Du kannst ihn in der App ändern falls gewünscht."
+          "Ja, wir löschen niemals Dateien ohne Ihre Zustimmung und geben Ihnen die volle Kontrolle darüber, welche Dateien Sie behalten oder löschen möchten, um Speicherplatz zu optimieren und die Gesundheit Ihres Systems und Geräts zu erhalten."
         ]
       },
       {
-        "question": "Kann ich 2FA aktivieren?",
+        "question": "Wie beginne ich mit der Nutzung des Dienstes?",
         "answer": [
-          "Ja. Richte Zwei-Faktor-Prüfung auf der Internxt-Webseite ein.",
-          "Du kannst Authy oder andere 2FA-App nutzen um deinen Code mit Internxt zu erzeugen."
+          "Sie können unseren Geräte-Cleaner verwenden, indem Sie ein Internxt Drive-Konto erstellen und einen Premium- oder Ultimate-Plan (Lifetime oder Abonnement) erwerben, der Drive, VPN, Cleaner, Dark Web Monitor, Meet und Mail beinhaltet."
         ]
       },
       {
-        "question": "Wie erstelle ich ein Internxt-Konto?",
+        "question": "Wie oft sollte ich den Geräte-Cleaner ausführen?",
         "answer": [
-          "Zum kostenlosen Erstellen, wähle einen Plan und folge Anweisungen.",
-          "Oder geh auf die Webseite und klick „Start“. Du erhältst 1GB gratis für immer. Nur Name und Mail nötig. Keine Identität oder Mail-Verifizierung."
+          "Wenn Sie feststellen, dass Ihr Gerät überhitzt, langsam läuft oder der Akku unerwartet schnell entladen wird, kann dies ein Zeichen dafür sein, dass Ihr Computer durch zu viele Junk-Dateien oder ressourcenintensive Apps überlastet ist.",
+          "In diesem Fall sollten Sie einen Scan mit Internxt Cleaner durchführen, um unnötige Dateien zu identifizieren und zu löschen. Ein monatlicher Scan wird empfohlen, um die Gesundheit Ihres Geräts zu erhalten."
         ]
       },
       {
-        "question": "Kann ich mit Karte, PayPal oder Krypto zahlen?",
-        "answer": ["Internxt akzeptiert Karten (Mastercard, VISA, Amex...), PayPal, iDEAL, Sofort und Krypto."]
-      },
-      {
-        "question": "Was ist die Rückerstattungspolitik?",
+        "question": "Löscht ein Geräte-Cleaner meine wichtigen Dateien?",
         "answer": [
-          "Internxt gibt 30 Tage Garantie auf alle Abos, ab Aktivierung gerechnet.",
-          "Falls du unzufrieden bist, schreib uns an [hello@internxt.com](mailto:hello@internxt.com) und fordere Rückerstattung."
-        ]
-      },
-      {
-        "question": "Wie kündige ich mein Abo?",
-        "answer": [
-          "Es ist einfach. Öffne die App, geh zu Einstellungen und klick 'Abo kündigen'. Du wechselst sofort auf Gratisplan.",
-          "Die Restzeit deines Abos wird nicht erstattet oder übertragen. Bsp: wenn du Jahresabo mit 4 Monaten kündigst, verlierst du sie.",
-          "Du kannst auch Konto u. Abo in Einstellungen löschen, damit verschwinden deine Dateien."
-        ]
-      },
-      {
-        "question": "Wie kontaktiere ich Support?",
-        "answer": [
-          "Falls du nicht findest was du suchst, schreib unserem Team per Chat oder Mail: [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Hat Internxt Lebenszeitpläne?",
-        "answer": [
-          "Ja, wir bieten Lebenszeitpläne auf Webseite. Damit hast du bis 10 TB Speicher mit nur einer Zahlung."
-        ]
-      },
-      {
-        "question": "Kann ich mehr Speicher zu Lebensplan hinzufügen?",
-        "answer": [
-          "Ja, du kannst Speicher zu Lebensplan addieren. Sie sind kumulierbar. Kaufe mit gleicher Mail und schreib uns an hello@internxt.com um sie zu vereinen."
-        ]
-      },
-      {
-        "question": "Ist Internxt ein nachhaltiger Dienst?",
-        "answer": [
-          "Ja, Internxt setzt auf grüne Cloud. Unsere Zentren nutzen 92% erneuerbare Energie und minimieren Emissionen, Verbrauch und Abfälle.",
-          "Wir tragen bei klimaneutral bis 2050 zu sein. [Mehr erfahren](https://internxt.com/es/green-cloud-computing)"
+          "Nein. Internxt Cleaner ist so konzipiert, dass er nur temporäre Dateien identifiziert und entfernt.",
+          "Sie können die Dateien überprüfen und auswählen, die Sie löschen möchten, um sicherzustellen, dass nichts Wichtiges entfernt wird."
         ]
       }
     ]

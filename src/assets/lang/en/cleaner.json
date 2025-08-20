@@ -62,84 +62,42 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Can Internxt access my files?",
+        "question": "What is a device cleaner, and how does it work?",
         "answer": [
-          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
+          "Internxt Cleaner is a tool designed to clear junk files and optimize performance for your PC or Mac to keep your storage free and your device running smoothly."
         ]
       },
       {
-        "question": "Will I get access to all Internxt services?",
+        "question": "Is Internxt Cleaner free?",
         "answer": [
-          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
-          "An Internxt Free plan will only give you access to Internxt Drive."
+          "Internxt Cleaner is part of our paid Internxt Drive annual or lifetime plans.",
+          "Internxt Cleaner is available when you buy any Premium or Ultimate plans, which include many other features to protect your device and data online."
         ]
       },
       {
-        "question": "Does Internxt store my password?",
+        "question": "Is a device cleaner safe to use?",
         "answer": [
-          "No. As such, Internxt does not (and cannot) store your password.",
-          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          "Yes, we never delete files, giving you full control of the files you want to keep or delete to help you optimize storage and maintain the health of your system and device."
         ]
       },
       {
-        "question": "Can I enable 2FA?",
+        "question": "How do I start using the service?",
         "answer": [
-          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
-          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+          "You can use our device cleaner by creating an Internxt Drive account and by purchasing a Premium or Ultimate lifetime or subscription plan, which includes Drive, VPN, Cleaner, Dark Web Monitor, Meet, and Mail."
         ]
       },
       {
-        "question": "How do I create an Internxt account?",
+        "question": "How often should I run the device cleaner?",
         "answer": [
-          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
-          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
+          "If you notice your device is overheating, running slowly, or your battery is draining unexpectedly, it could be a sign that your computer is overworking due to too many junk files or demanding apps.",
+          "In this case, you should run a scan using Internxt Cleaner to identify and delete the unnecessary files, but running a monthly scan is recommended to maintain your device’s health."
         ]
       },
       {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "question": "Will a device cleaner delete my important files?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
-        ]
-      },
-      {
-        "question": "What is Internxt’s refund policy?",
-        "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
-        ]
-      },
-      {
-        "question": "How can I cancel my subscription?",
-        "answer": [
-          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
-          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
-          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Does Internxt have lifetime plans?",
-        "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
-        ]
-      },
-      {
-        "question": "Can I add more storage to my lifetime plan?",
-        "answer": [
-          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
-        ]
-      },
-      {
-        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
-        "answer": [
-          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
-          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+          "No. Internxt Cleaner is designed to identify and remove only temporary files.",
+          "You can review and select the files you want to delete to ensure nothing important is removed."
         ]
       }
     ]

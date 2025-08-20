@@ -67,18 +67,18 @@ export default function HorizontalScrollableSection({ textContent }) {
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex h-[653px] w-full items-center justify-center bg-white lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-[600px] w-[832px] flex-col items-center justify-between lg:h-[532px]">
-        <p className="w-[320px] text-left text-3xl font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
+    <section className="flex h-[540px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
+      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[532px]">
+        <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
-        <p className="w-[320px] text-left text-base font-normal text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
 
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-12 lg:w-full"
+          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-8 lg:w-full lg:pt-12"
         >
           {cardTitles.map((title, index) => (
             <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
@@ -86,7 +86,7 @@ export default function HorizontalScrollableSection({ textContent }) {
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
               <div className="py-4">
-                <p className="text-lg font-normal text-gray-55">{cardDescriptions[index]}</p>
+                <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
               </div>
             </div>
           ))}

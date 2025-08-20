@@ -62,80 +62,42 @@
     "title": "Dubbi? Abbiamo risposte",
     "faq": [
       {
-        "question": "Internxt può accedere ai miei file?",
+        "question": "Che cos’è un pulitore di dispositivi e come funziona?",
         "answer": [
-          "No. Né Internxt né terzi possono accedere ai tuoi file, foto o dati.",
-          "Internxt usa crittografia zero-knowledge: solo tu puoi vedere e decifrare i tuoi dati. Inoltre usa crittografia post-quantistica, la tecnologia più avanzata, per proteggerli da minacce future."
+          "Internxt Cleaner è uno strumento progettato per eliminare i file inutili e ottimizzare le prestazioni del tuo PC o Mac, mantenendo libero lo spazio di archiviazione e il dispositivo fluido."
         ]
       },
       {
-        "question": "Avrò accesso a tutti i servizi Internxt?",
+        "question": "Internxt Cleaner è gratuito?",
         "answer": [
-          "Sì, con abbonamento a pagamento o piano a vita hai accesso a tutta la suite: Internxt Mail, Meet, VPN, Drive, Send, Antivirus e altro.",
-          "Il piano gratuito offre solo accesso a Internxt Drive."
+          "Internxt Cleaner fa parte dei piani a pagamento annuali o a vita di Internxt Drive.",
+          "Internxt Cleaner è disponibile acquistando uno dei piani Premium o Ultimate, che includono molte altre funzionalità per proteggere il tuo dispositivo e i tuoi dati online."
         ]
       },
       {
-        "question": "Internxt salva la mia password?",
+        "question": "Un pulitore di dispositivi è sicuro da usare?",
         "answer": [
-          "No. Internxt non può salvare la tua password.",
-          "La tua chiave è unica e cifra i tuoi dati. Puoi cambiarla dall’app se vuoi."
+          "Sì, non eliminiamo mai file senza il tuo consenso, dandoti il pieno controllo dei file che desideri conservare o eliminare, per aiutarti a ottimizzare lo spazio e mantenere la salute del tuo sistema e dispositivo."
         ]
       },
       {
-        "question": "Posso attivare 2FA?",
+        "question": "Come posso iniziare a usare il servizio?",
         "answer": [
-          "Sì. Configura verifica in due passaggi dal sito di Internxt.",
-          "Puoi usare Authy o altra app 2FA per generare il codice con Internxt."
+          "Puoi utilizzare il nostro pulitore di dispositivi creando un account Internxt Drive e acquistando un piano Premium o Ultimate, a vita o in abbonamento, che include Drive, VPN, Cleaner, Dark Web Monitor, Meet e Mail."
         ]
       },
       {
-        "question": "Come creo un account Internxt?",
+        "question": "Con quale frequenza devo eseguire il pulitore di dispositivi?",
         "answer": [
-          "Per crearlo gratis, scegli un piano e segui istruzioni.",
-          "Oppure vai sul sito e clicca “Inizia”. Ottieni 1GB gratis a vita. Basta nome e mail. Non chiediamo verifica identità o email."
+          "Se noti che il tuo dispositivo si surriscalda, funziona lentamente o la batteria si scarica inaspettatamente, potrebbe essere un segnale che il computer è sovraccarico a causa di troppi file inutili o app impegnative.",
+          "In questo caso, dovresti eseguire una scansione con Internxt Cleaner per identificare ed eliminare i file non necessari, ma si consiglia di eseguire una scansione mensile per mantenere in salute il dispositivo."
         ]
       },
       {
-        "question": "Posso pagare con carta, PayPal o cripto?",
-        "answer": ["Internxt accetta carte (Mastercard, VISA, Amex...), PayPal, iDEAL, Sofort e Cripto."]
-      },
-      {
-        "question": "Qual è la politica di rimborso?",
+        "question": "Un pulitore di dispositivi eliminerà i miei file importanti?",
         "answer": [
-          "Internxt offre 30 giorni di garanzia su tutti abbonamenti, dal giorno di attivazione.",
-          "Se non sei soddisfatto, scrivici a [hello@internxt.com](mailto:hello@internxt.com) e chiedi rimborso."
-        ]
-      },
-      {
-        "question": "Come cancello il mio abbonamento?",
-        "answer": [
-          "È facile. Apri l’app, vai in impostazioni e clicca 'Cancella abbonamento'. Passerai subito al piano gratis.",
-          "Il tempo restante del tuo abbonamento non è rimborsato né cumulato. Es: se cancelli un annuale con 4 mesi restanti, li perdi.",
-          "Puoi anche eliminare account e abbonamento da impostazioni, cancellando i tuoi file."
-        ]
-      },
-      {
-        "question": "Come contatto il supporto?",
-        "answer": [
-          "Se non trovi quello che cerchi, scrivi al nostro team via chat o mail: [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Internxt ha piani a vita?",
-        "answer": ["Sì, offriamo piani a vita sul sito. Con essi hai fino a 10TB di spazio con un solo pagamento."]
-      },
-      {
-        "question": "Posso aggiungere spazio al piano a vita?",
-        "answer": [
-          "Sì, puoi aggiungere spazio al piano a vita. Sono cumulabili. Compra con stessa mail e scrivici a hello@internxt.com per unirli al tuo account."
-        ]
-      },
-      {
-        "question": "Internxt è un servizio sostenibile?",
-        "answer": [
-          "Sì, Internxt punta sul cloud verde. I nostri centri usano 92% energia rinnovabile e riducono emissioni, consumo e rifiuti.",
-          "Contribuiamo a essere climaticamente neutri entro 2050. [Scopri di più](https://internxt.com/es/green-cloud-computing)"
+          "No. Internxt Cleaner è progettato per identificare ed eliminare solo i file temporanei.",
+          "Puoi rivedere e selezionare i file che desideri eliminare per assicurarti che nulla di importante venga rimosso."
         ]
       }
     ]

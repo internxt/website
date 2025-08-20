@@ -17,11 +17,11 @@ export default function AccordionCards({ textContent }) {
         >
           <button
             onClick={() => handleCardClick(index)}
-            className="flex cursor-pointer items-center px-4 pb-4 pt-4 duration-300"
+            className="flex cursor-pointer items-center px-6 py-6 duration-300"
           >
             <div className="flex flex-row items-center justify-center gap-4">
-              <p className="text-xl font-normal text-primary">{index + 1}</p>
-              <p className="text-xl font-medium text-gray-100">{title}</p>
+              <p className="text-base font-normal text-primary lg:text-xl">{index + 1}</p>
+              <p className="text-base font-medium text-gray-100 lg:text-xl">{title}</p>
             </div>
           </button>
 
@@ -31,7 +31,7 @@ export default function AccordionCards({ textContent }) {
             } overflow-hidden`}
           >
             <div className="bg-white px-4 pb-4">
-              <p className="text-lg font-normal text-gray-55">{cardDescriptions[index]}</p>
+              <p className="text-sm font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
             </div>
           </div>
         </div>

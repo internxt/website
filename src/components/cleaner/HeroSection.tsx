@@ -13,7 +13,7 @@ const HeroSection = ({ textContent }) => (
   >
     <HeroSafeArea>
       <div
-        className={`${styles.cleanerTitleAndOnePlan} flex h-[473px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
+        className={`${styles.cleanerTitleAndOnePlan} flex h-[500px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
       >
         <div className="flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
           <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
