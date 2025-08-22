@@ -234,7 +234,7 @@ export const PriceCard = ({
           </div>
         ) : null}
         <div
-          className={`flex h-[520px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
             isBusiness ? 'lg:h-[520px]' : 'lg:h-[485px]'
           } lg:py-6`}
         >

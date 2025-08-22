@@ -84,6 +84,7 @@
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
       "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "mobileDescription": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
       "cta": "Seleziona il piano"
     },
     "features": {
@@ -237,24 +238,20 @@
   "InfoSection": {
     "title": "Archiviazione sicura in cloud con privacy insuperabile",
     "description": "Cosa rende Internxt così speciale? Siamo un gruppo molto unito di professionisti totalmente dediti a proteggerti online. Tutto ciò che facciamo, ed ogni decisione che prendiamo è incentrata sull’impedire la violazione dei tuoi dati.",
-    "cta": "Maggiori informazioni sul Team Internxt",
+    "cta": "L’impegno di Internxt per la privacy",
     "scrollableSection": {
-      "card1": {
-        "title": "Progettato per essere privato",
-        "description": "Non memorizziamo password o altri dati dell’utente e ogni tuo dato è crittografato sia quando è memorizzato che quando è in transito. Internxt ti assicura il pieno controllo dei tuoi file. I tuoi dati sono il tuo lavoro. Proteggerli è il nostro."
-      },
-      "card2": {
-        "title": "Sicurezza senza compromessi",
-        "description": "I tuoi file vengono frammentati e crittografati end-to-end prima ancora di uscire dal tuo dispositivo. Grazie alla crittografia “zero-knowledge” AES-256, tu sei assolutamente l'unico in grado di accedere ai tuoi dati."
-      },
-      "card3": {
-        "title": "Open-source e trasparente",
-        "description": "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati."
-      },
-      "card4": {
-        "title": "Verificato in modo indipendente",
-        "description": "Siamo totalmente conformi al GDPR e sicuri al 100%, ma non devi crederci sulla parola. Internxt è stato verificato e certificato in modo indipendente da Securitum, la società di penetration testing leader in Europa."
-      }
+      "titles": [
+        "Progettato per essere privato",
+        "Sicurezza senza compromessi",
+        "Open-source e trasparente",
+        "Verificato in modo indipendente"
+      ],
+      "descriptions": [
+        "Non memorizziamo password o altri dati dell’utente e ogni tuo dato è crittografato sia quando è memorizzato che quando è in transito. Internxt ti assicura il pieno controllo dei tuoi file. I tuoi dati sono il tuo lavoro. Proteggerli è il nostro.",
+        "I tuoi file vengono frammentati e crittografati end-to-end prima ancora di uscire dal tuo dispositivo. Grazie alla crittografia “zero-knowledge” AES-256, tu sei assolutamente l'unico in grado di accedere ai tuoi dati.",
+        "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati.",
+        "Siamo totalmente conformi al GDPR e sicuri al 100%, ma non devi crederci sulla parola. Internxt è stato verificato e certificato in modo indipendente da Securitum, la società di penetration testing leader in Europa."
+      ]
     }
   },
   "InfoSectionForBusiness": {

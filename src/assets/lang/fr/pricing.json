@@ -86,8 +86,9 @@
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
-      "cta": "Seleziona il piano"
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "mobileDescription": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionnez un plan"
     },
     "features": {
       "endToEnd": "Chiffrement de bout en bout",
@@ -227,7 +228,7 @@
   "CtaSection": {
     "title": "Essayez Internxt sans risque",
     "description": "Protégez vos données vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
-    "cta": "Sélectionnez un plan maintenant"
+    "cta": "Sélectionnez un plan"
   },
   "FirstWhatWeDoSection": {
     "card1": {
@@ -249,7 +250,7 @@
   "InfoSection": {
     "title": "Stockage en nuage sécurisé avec une confidentialité incomparable",
     "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiés à la protection de vos données en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données contre l'exploitation.",
-    "cta": "Présentation de l'équipe d'Internxt",
+    "cta": "L’engagement en faveur de la vie privée",
     "scrollableSection": {
       "titles": [
         "Privé par conception",
@@ -310,6 +311,6 @@
   "lastCtaSection": {
     "title": "Le stockage en nuage le plus securisée du monde",
     "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
-    "cta": "Sélectionnez un plan maintenant"
+    "cta": "Sélectionnez un plan"
   }
 }

@@ -86,6 +86,7 @@
     "freePlanCard": {
       "eyeBrow": "Gratis",
       "description": "Consigue hasta 1 GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado.",
+      "mobileDescription": "Consigue hasta 1 GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado.",
       "cta": "Seleccionar plan"
     },
     "features": {
@@ -275,7 +276,7 @@
   "InfoSection": {
     "title": "Almacenamiento seguro en la nube con una privacidad inigualable",
     "description": "¿Qué hace que Internxt sea tan especial? Somos un equipo de profesionales completamente dedicados a protegerte. Todo lo que hacemos y cada decisión que tomamos se centra en proteger tus datos para que no sean explotados.",
-    "cta": "Presentación del equipo de Internxt",
+    "cta": "Compromiso con la privacidad",
     "scrollableSection": {
       "titles": [
         "Privado por diseño",
@@ -307,7 +308,7 @@
       "title": "Código abierto"
     },
     "card5": {
-      "title": "Verificado independientemente"
+      "title": "Verificado independiente"
     }
   },
   "lastCtaSection": {
