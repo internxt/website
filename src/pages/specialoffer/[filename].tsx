@@ -33,6 +33,7 @@ const ALLOWED_PATHS = [
   'valencia',
   'tokinprivacy',
   'achoesgratiss',
+  'afs',
 ];
 
 const COUPON_CODES = {
@@ -43,6 +44,7 @@ const COUPON_CODES = {
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,
+  afs: PromoCodeName.AFS,
 };
 
 const SpecialOfferPage = ({
