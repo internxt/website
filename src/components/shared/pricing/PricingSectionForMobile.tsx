@@ -5,10 +5,11 @@ import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from './PriceCard';
-import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, HandCoins, Headset, Keyhole, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { OpenSource } from '../icons/OpenSource';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
+import FreePlanCard from '@/components/prices/FreePlanCard';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -63,7 +64,6 @@ export const PricingSectionForMobile = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-  isAnnual,
   hideFeatures,
   showPromo,
   isAffiliate,
@@ -87,15 +87,17 @@ export const PricingSectionForMobile = ({
 
   const features = [
     {
-      icon: Lifebuoy,
+      icon: Headset,
+
       text: textContent.features.premiumSupport,
     },
     {
-      icon: CurrencyCircleDollar,
+      icon: HandCoins,
+
       text: textContent.features.guarantee,
     },
     {
-      icon: OpenSource,
+      icon: Keyhole,
       text: textContent.features.openSource,
     },
   ];
@@ -104,32 +106,26 @@ export const PricingSectionForMobile = ({
 
   return (
     <>
-      <div
-        className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}
-        id="priceTable"
-      >
-        {!hidePlanSelectorComponent && (
-          <PlanSelectorForMobile
-            textContent={textContent}
-            activeSwitchPlan={activeSwitchPlan}
-            hideBusinessSelector={hideBusinessSelector}
-            onPlanTypeChange={onPlanTypeChange}
-            onStorageChange={onStorageChange}
-            isMonthly
-            darkMode={darkMode}
-            activeStoragePlan={storageSelected}
-            hideBillingController={hideBillingController}
-          />
-        )}
-      </div>
+      <PlanSelectorForMobile
+        textContent={textContent}
+        activeSwitchPlan={activeSwitchPlan}
+        hideBusinessSelector={hideBusinessSelector}
+        onPlanTypeChange={onPlanTypeChange}
+        onStorageChange={onStorageChange}
+        isMonthly
+        darkMode={darkMode}
+        activeStoragePlan={storageSelected}
+        hideBillingController={hideBillingController}
+      />
+
       <Transition
         show={showLoadingCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
       >
-        <div className="flex flex-row flex-wrap items-end justify-center justify-items-center p-6 py-14">
-          {Array(3)
+        <div className="flex flex-row flex-wrap items-end justify-center justify-items-center">
+          {Array(1)
             .fill(0)
             .map((_, i) => (
               <CardSkeleton key={i} />
@@ -213,20 +209,23 @@ export const PricingSectionForMobile = ({
           )}
         </div>
       </Transition>
+
       {!hideFeatures && (
-        <div className="flex h-[88px] w-[300px] flex-col items-start justify-between text-center md:flex-row md:space-x-32 md:space-y-0 lg:w-full">
+        <div className="flex h-[88px] w-[345px] flex-col items-center justify-between text-center ">
           {features.map((feature) => (
-            <div key={feature.text} className="flex h-[40px] w-full flex-row items-center justify-start gap-2 ">
+            <div key={feature.text} className="flex h-[24px] w-[267px] flex-row items-center justify-start gap-2 ">
               <div>
-                <feature.icon size={40} className="shrink-0  text-primary " />
+                <feature.icon size={24} className="shrink-0  text-primary " />
               </div>
-              <p className={`justify-end  text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+              <p className={`justify-end text-base font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
                 {feature.text}
               </p>
             </div>
           ))}
         </div>
       )}
+
+      <FreePlanCard textContent={textContent.freePlanCard} />
     </>
   );
 };

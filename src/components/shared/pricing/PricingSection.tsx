@@ -7,13 +7,13 @@ import { SwitchComponent } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
+import { CurrencyCircleDollar, HandCoins, Headset, Keyhole, Lifebuoy } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
 import { OpenSource } from '../icons/OpenSource';
 
 const SKELETON_CARDS = {
-  Individuals: 4,
+  Individuals: 3,
   Business: 2,
 };
 
@@ -104,15 +104,15 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: Lifebuoy,
+      icon: Headset,
       text: textContent.features.premiumSupport,
     },
     {
-      icon: CurrencyCircleDollar,
+      icon: HandCoins,
       text: textContent.features.guarantee,
     },
     {
-      icon: OpenSource,
+      icon: Keyhole,
       text: textContent.features.openSource,
     },
   ];
@@ -128,7 +128,6 @@ export const PricingSection = ({
   return (
     <>
       <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
         {!hidePlanSelectorComponent && (
           <PlanSelector
             textContent={textContent}
@@ -140,7 +139,6 @@ export const PricingSection = ({
           />
         )}
 
-        {/* Switch buttons for Individual plans (Monthly | Annually) */}
         {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
           <SwitchComponent
             textContent={textContent}
@@ -176,7 +174,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row justify-end gap-4 pb-20">
+        <div className="content flex flex-row justify-end gap-4 ">
           {products?.individuals
             ? products.individuals[billingFrequency].map((product, cardIndex) => (
                 <PriceCard
@@ -243,15 +241,19 @@ export const PricingSection = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="flex flex-col items-center justify-center  text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row ">
-              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
+            <div key={feature.text} className="flex flex-col items-start space-x-3 md:max-w-[33%] md:flex-row ">
+              <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
+              <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                {feature.text}
+              </p>
             </div>
           ))}
         </div>
       )}
+
+      <FreePlanCard textContent={textContent.freePlanCard} />
     </>
   );
 };

@@ -1,7 +1,15 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
-export default function HorizontalScrollableSection({ textContent }) {
+interface HorizontalScrollableSectionProps {
+  textContent: Record<string, any>;
+  bgColor?: string;
+}
+export default function HorizontalScrollableSection({
+  textContent,
+  bgColor = 'bg-white',
+}: HorizontalScrollableSectionProps) {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -67,27 +75,36 @@ export default function HorizontalScrollableSection({ textContent }) {
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[570px]">
-        <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
+    <section
+      className={`flex h-min w-full items-center justify-center bg-neutral-17 lg:h-[580px] lg:px-10  lg:py-9 xl:px-32 3xl:px-80`}
+    >
+      <div className="mx-8 flex h-min w-[832px] flex-col items-center justify-center gap-8 border-t-[1px] border-neutral-25 lg:h-[620px] lg:justify-between lg:gap-0 lg:py-5">
+        <p className="w-[320px] pt-10 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
         <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
-
+        <Link
+          href="/privacy"
+          className="flex w-full cursor-pointer flex-row items-start justify-start gap-1  text-base font-medium text-primary  hover:underline"
+        >
+          {textContent.cta}
+          <CaretRight className="h-[24px] w-[24px] text-primary" />
+        </Link>
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-8 lg:w-full lg:pt-12"
+          className="flex h-min w-[320px] flex-row items-center justify-start gap-8 overflow-hidden scroll-smooth  lg:h-[207px] lg:w-full "
         >
           {cardTitles.map((title, index) => (
-            <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
-              <div className="flex flex-row items-center justify-start gap-4">
+            <div
+              key={title}
+              className="flex h-min w-[320px] shrink-0 flex-col items-start justify-center gap-6 rounded-16 bg-white p-6 lg:w-[400px]"
+            >
+              <div className="flex flex-row gap-4">
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
-              <div className="py-4">
-                <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
-              </div>
+              <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
             </div>
           ))}
         </div>
@@ -97,7 +114,7 @@ export default function HorizontalScrollableSection({ textContent }) {
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${bgColor} transition-opacity ${
                 currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >
@@ -106,7 +123,7 @@ export default function HorizontalScrollableSection({ textContent }) {
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${bgColor} transition-opacity ${
                 currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >

@@ -8,7 +8,7 @@
   "discount": "% off ",
   "commingSoon": "Coming soon",
   "planTitles": {
-    "individuals": "Individual Plans",
+    "individuals": "Individuals",
     "homePage": "Choose the right plan for you",
     "lifetime": "Lifetime Plans",
     "business": "Business Plans",
@@ -125,8 +125,7 @@
         "Backup your files",
         "Password-protected file sharing",
         "GDPR compliance",
-        "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support"
+        "Two-factor authentication (2FA)"
       ],
       "3TB": [
         "3TB zero-knowledge encrypted storage",
@@ -138,8 +137,8 @@
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support",
-        "Device Cleaner ",
+        "CLI & WebDav support",
+        "Cleaner ",
         "Dark Web Monitor"
       ],
       "5TB": [
@@ -152,8 +151,8 @@
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support",
-        "Device Cleaner ",
+        "CLI, WebDav, NAS & Rclone support",
+        "Cleaner ",
         "Dark Web Monitor",
         "Meet",
         "Mail"
@@ -172,7 +171,7 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Device Cleaner ",
+        "Cleaner ",
         "Dark Web Monitor"
       ],
       "2TB": [
@@ -187,7 +186,7 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav & Rclone support",
         "Manage account billing & payments",
-        "Device Cleaner ",
+        "Cleaner ",
         "Dark Web Monitor",
         "Meet ",
         "Mail "
