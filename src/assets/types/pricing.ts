@@ -33,12 +33,18 @@ export interface CtaSection {
   description: string;
   cta: string;
   features?: string[];
+  scrollableSection?: ScrollableSection;
   cards?: Cta[];
 }
 
 export interface Cta {
   title: string;
   description: string;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
 }
 
 export interface FAQSection {
@@ -100,6 +106,7 @@ export interface SchemaMarkupQuestions {
 }
 
 export interface TableSection {
+  title: string;
   ctaBanner: CtaBanner;
   planTitles: PlanTitles;
   lifetimeDescription: string;
@@ -144,6 +151,7 @@ export interface Features {
 export interface FreePlanCard {
   eyeBrow: string;
   description: string;
+  mobileDescription: string;
   cta: string;
 }
 

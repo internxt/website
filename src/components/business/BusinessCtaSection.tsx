@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const FloatingCtaSectionv2 = ({
+const BusinessCtaSection = ({
   textContent,
   url,
   target,
@@ -8,6 +8,7 @@ const FloatingCtaSectionv2 = ({
   bgGradientContainerColor,
   bgGradientColor,
   containerDetails,
+  bgColor,
 }: {
   textContent: any;
   url?: string;
@@ -16,10 +17,11 @@ const FloatingCtaSectionv2 = ({
   bgGradientColor?: string;
   customText?: React.ReactNode;
   containerDetails?: string;
+  bgColor?: string;
 }) => {
   return (
     <section
-      className="flex h-[351px] w-full items-start justify-center  px-10  xl:px-32 3xl:px-80"
+      className={`flex h-[400px] w-full items-start justify-center px-10 py-10  xl:px-32 3xl:px-80 ${bgColor}`}
       style={{ background: bgGradientColor }}
     >
       <div
@@ -41,4 +43,4 @@ const FloatingCtaSectionv2 = ({
   );
 };
 
-export default FloatingCtaSectionv2;
+export default BusinessCtaSection;

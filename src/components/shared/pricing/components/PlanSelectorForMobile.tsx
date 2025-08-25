@@ -1,5 +1,4 @@
 import { Interval } from '@/services/stripe.service';
-import { SealPercent } from '@phosphor-icons/react';
 
 export type SwitchButtonOptions = 'Individuals' | 'Lifetime' | 'Business';
 export type SwitchStorageOptions = 'Essential' | 'Premium' | 'Ultimate';
@@ -12,9 +11,6 @@ interface PlanSwitchProps {
   hideBusinessSelector?: boolean;
   isMonthly?: boolean;
   darkMode?: boolean;
-  isIndividualsOffer?: boolean;
-  isLifetimeOffer?: boolean;
-  isBusinessOffer?: boolean;
   hideBillingController?: boolean;
   onPlanTypeChange: (activeSwitchPlan: string, billedFrequency?: Interval) => void;
   onStorageChange: (activeStoragePlan: string) => void;
@@ -28,14 +24,12 @@ export const PlanSelectorForMobile = ({
   onPlanTypeChange,
   onStorageChange,
   darkMode,
-  isIndividualsOffer,
-  isLifetimeOffer,
-  isBusinessOffer,
+
   hideBillingController,
 }: PlanSwitchProps): JSX.Element => (
   <>
     {!hideBillingController && (
-      <div className={`flex w-full flex-row items-center justify-center border-b-2 border-gray-10 p-2`}>
+      <div className={`flex w-full flex-row items-center justify-center border-b-[1px] border-gray-10 py-2 text-base`}>
         <button
           type="button"
           onClick={() => {
@@ -46,7 +40,6 @@ export const PlanSelectorForMobile = ({
           }`}
         >
           {textContent.billingFrequency.annually}
-          {isIndividualsOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
         </button>
 
         <button
@@ -59,7 +52,6 @@ export const PlanSelectorForMobile = ({
           }`}
         >
           {textContent.billingFrequency.lifetime}
-          {isLifetimeOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
         </button>
 
         <button
@@ -76,11 +68,11 @@ export const PlanSelectorForMobile = ({
           }`}
         >
           {textContent.billingFrequency.business}
-          {isBusinessOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
         </button>
       </div>
     )}
 
+    <p className="text-sm font-normal text-gray-55">{textContent.lifetimeDescription}</p>
     <div id="billingButtons" className={`flex w-[300px] flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5`}>
       <button
         type="button"

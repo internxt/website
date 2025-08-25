@@ -3,6 +3,7 @@ import { HTMLAttributeAnchorTarget, ReactNode } from 'react';
 import RevealY from '@/components/components/RevealY';
 import { CaretRight } from '@phosphor-icons/react';
 import Link from 'next/link';
+import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 
 const InfoSection = ({
   textContent,
@@ -27,7 +28,7 @@ const InfoSection = ({
 }) => {
   return (
     <section className={`overflow-hidden ${backgroundColor ?? ''} `}>
-      <div className="flex flex-col items-center justify-center space-y-20 py-16 px-5">
+      <div className="flex flex-col items-center justify-center space-y-20 px-5 py-16">
         <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
           <p className="mb-6 text-4xl font-semibold sm:text-5xl sm:leading-tight">{textContent.title}</p>
           <p className="text-xl text-gray-80">{textContent.description}</p>

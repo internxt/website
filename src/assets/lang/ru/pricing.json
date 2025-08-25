@@ -44,19 +44,20 @@
   "tableSection": {
     "title": "Internxt планы",
     "ctaBanner": {
-      "label": "Risparmia {{discount}}%",
-      "title": "Risparmia su ogni piano!",
-      "subtitle": "Festeggia 5 anni di Internxt",
-      "subtitle2": "Festeggia 5 anni di Internxt",
-      "subtitle3": "Meet, Mail, Cleaner e Monitor Dark Web",
-      "cta": "Scegli un piano",
-      "cta2": "Risparmia {{discount}}% ora",
-      "guarantee": "30 giorni di garanzia rimborso",
-      "gift": "Maglia Valencia CF autografata",
-      "lastCta": "*Solo per account nuovi o gratuiti"
+      "label": "Экономьте {{discount}}%",
+      "title": "Экономьте на каждом плане!",
+      "subtitle": "Отметьте 5 лет Internxt",
+      "subtitle2": "Отметьте 5 лет Internxt",
+      "subtitle3": "Meet, Mail, Cleaner и Monitor Dark Web",
+      "cta": "Выберите план",
+      "cta2": "Экономьте {{discount}}% сейчас",
+      "guarantee": "30-дневная гарантия возврата денег",
+      "gift": "Футболка Valencia CF с автографом",
+      "lastCta": "*Только для новых или бесплатных аккаунтов"
     },
     "save": "Экономьте до",
     "planTitles": {
+      "header": "Выберите лучший план для себя",
       "individuals": "Индивидуальные тарифные планы",
       "lifetime": "Пожизненные планы",
       "business": "Тарифные планы для бизнеса",
@@ -83,6 +84,7 @@
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
       "description": "Получи 1GB хранилища бесплатно",
+      "mobileDescription": "Получи 1GB хранилища бесплатно",
       "cta": "Выбрать план"
     },
     "features": {
@@ -101,25 +103,16 @@
   "InfoSection": {
     "title": "Безопасное облачное хранилище с непревзойденной конфиденциальностью",
     "description": "Чем уникален Internxt? Мы - сплоченная команда профессионалов, посвятившая себя безопасности данных в Интернет. Все, что мы делаем, и каждое решение, которое мы принимаем, направлено на защиту данных.",
-    "cta": "Команда Internxt",
-    "cards": [
-      {
-        "title": "Конфиденциальность",
-        "description": "Мы не храним ни пароли, ни данные пользователей, все данные шифруются при загрузке и при хранении. Internxt предоставляет вам полный контроль над данными. Ваши данные - ваше дело. Защищать их - наше дело."
-      },
-      {
-        "title": "Безопасность",
-        "description": "Все файлы фрагментируются и шифруются с помощью сквозного шифрования при загрузке. Благодаря шифрованию AES-256 с нулевым разглашением, доступ к вашим данным есть только у вас."
-      },
-      {
-        "title": "Открытый исходный код и прозрачность",
-        "description": "Мы гордимся тем, что делаем. Наш код доступен на GitHub и может быть лично рассмотрен и проверен любым пользователем. Нам нечего скрывать, кроме ваших данных."
-      },
-      {
-        "title": "Независимый аудит",
-        "description": "Internxt полностью соответствует GDPR и на 100% конфиденциален. Internxt прошел независимый аудит и проверку ведущей европейской компанией по пентестированию Securitum."
-      }
-    ]
+    "cta": "Приверженность Internxt конфиденциальности",
+    "scrollableSection": {
+      "titles": ["Конфиденциальность", "Безопасность", "Открытый исходный код и прозрачность", "Независимый аудит"],
+      "descriptions": [
+        "Мы не храним ни пароли, ни данные пользователей, все данные шифруются при загрузке и при хранении. Internxt предоставляет вам полный контроль над данными. Ваши данные - ваше дело. Защищать их - наше дело.",
+        "Все файлы фрагментируются и шифруются с помощью сквозного шифрования при загрузке. Благодаря шифрованию AES-256 с нулевым разглашением, доступ к вашим данным есть только у вас.",
+        "Мы гордимся тем, что делаем. Наш код доступен на GitHub и может быть лично рассмотрен и проверен любым пользователем. Нам нечего скрывать, кроме ваших данных.",
+        "Internxt полностью соответствует GDPR и на 100% конфиденциален. Internxt прошел независимый аудит и проверку ведущей европейской компанией по пентестированию Securitum."
+      ]
+    }
   },
   "InfoSectionForBusiness": {
     "title": "Что вы можете сделать с Internxt?",
@@ -302,15 +295,15 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How much does an Internxt plan cost?",
+        "question": "Сколько стоит тариф Internxt?",
         "answer": [
-          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
+          "Нужно больше места? Мы также предлагаем индивидуальные планы от 20 ГБ до 2 ТБ, начиная от €0,89/месяц."
         ]
       },
       {
-        "question": "Does Internxt have lifetime plans?",
+        "question": "Есть ли у Internxt пожизненные планы?",
         "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+          "Мы предлагаем пожизненные планы, которые можно приобрести на нашем сайте. Они предоставляют пожизненный доступ к нашим планам до 10 ТБ за разовую оплату."
         ]
       }
     ]

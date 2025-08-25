@@ -18,8 +18,8 @@
         "description": "Durchschnittliche Kosten eines Datenverstoßes"
       },
       { "title": "73 Mio.", "description": "AT&T-Kundendaten, die 2024 durchgesickert sind" },
-      { "title": "318 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
-      { "title": "24%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
+      { "title": "258 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
+      { "title": "46%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
     ],
     "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2024."
   },
@@ -27,39 +27,35 @@
     "title": "Internxt schützt Ihr Unternehmen vor Datenverstößen",
     "description": [
       "Andere Anbieter besitzen die Entschlüsselungsschlüssel Ihrer Daten und können theoretisch Ihre Dateien einsehen, was Ihr Unternehmen Datenverstößen, Hacks oder Lecks aussetzt.",
-      "Wir bieten echte Datensicherheit — wir haben keinen Zugang zu Ihren Unternehmensinformationen, Ihre Daten sind vollständig verschlüsselt und nur für Sie zugänglich."
+      "Wir bieten echte Datensicherheit — wir haben keinen Zugang zu Ihren Unternehmensinformationen, Ihre Daten sind vollständig verschlüsselt und nur für Sie zugänglich."
     ]
   },
   "WhatCanWeDo": {
     "title": "Was können Sie mit Internxt tun?",
     "description": "Optimieren Sie das Datei-Management, die Sicherheit und den Datenschutz Ihrer Organisation mit unserem sicheren Cloud-Speicher für Unternehmen.",
-    "cards": [
-      {
-        "imagePathname": "internxt_b2b_feature1",
-        "selectorTab": "Verwalten Sie Ihre Organisation",
-        "description": "Internxt ermöglicht es Unternehmen, Mitglieder Ihrer Organisation zu verwalten, Arbeitsbereiche anzupassen und die Abrechnung und Zahlungen Ihres Kontos zu verwalten. Wechseln Sie mühelos zwischen Ihren Internxt-Geschäfts- und Privatkonten, um Produktivität und Dateiorganisation zu optimieren."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature2",
-        "selectorTab": "Sicherer Dateiaustausch zwischen Abteilungen",
-        "description": "Der sichere Cloud-Speicher umfasst sichere Dateifreigabefunktionen zwischen verschiedenen Abteilungen, um sicher im Team zu kollaborieren. Schützen Sie vertrauliche Dateien durch Passwörter und beschränken Sie den Zugriff auf Dateien, um sie sicher an Partner zu senden."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature3",
-        "selectorTab": "Sitzungsmanagement",
-        "description": "Der Cloud-Speicher von Internxt bietet ein fortschrittliches Sitzungsmanagement, das Echtzeit-Anmeldebenachrichtigungen und eine detaillierte Überwachung von Remote-Sitzungen (Client, OS, IP, Standort, letzte Aktivität) bietet. Diese hohe Sicherheit ermöglicht es dem Kontomanager, unbefugten Zugriff zu erkennen, Sitzungen effizient zu verwalten und sensible Daten zu schützen."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature4",
-        "selectorTab": "Flexible Speicherzuweisung",
-        "description": "Internxt bietet Ihrem Team eine flexible Speicherzuweisung, um Ihren Speicherbedarf zu decken. Mit unseren Plänen können Sie Benutzer hinzufügen, Speicher je nach Bedarf zuweisen und die Kapazität bei Bedarf erhöhen, wodurch Kosten, Skalierbarkeit und optimale Ressourcennutzung gewährleistet werden."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature5",
-        "selectorTab": "Zugriffsprotokolle",
-        "description": "Überwachen Sie ganz einfach die Aktivitäten Ihres Teams mit einem umfassenden Aktivitätsprotokoll, das einen klaren Überblick über Datei-Interaktionen und Benutzerzugriffe bietet. Verfolgen Sie, wer sich angemeldet, Dateien hochgeladen oder geändert hat, und behalten Sie die volle Kontrolle, um die Datensicherheit in Ihrem Team zu gewährleisten."
-      }
-    ]
+    "scrollableSection": {
+      "imagesPathname": [
+        "internxt_b2b_feature1",
+        "internxt_b2b_feature2",
+        "internxt_b2b_feature3",
+        "internxt_b2b_feature4",
+        "internxt_b2b_feature5"
+      ],
+      "titles": [
+        "Verwalten Sie Ihre Organisation",
+        "Sicherer Dateiaustausch zwischen Abteilungen",
+        "Sitzungsmanagement",
+        "Flexible Speicherzuweisung",
+        "Zugriffsprotokolle"
+      ],
+      "descriptions": [
+        "Internxt ermöglicht es Unternehmen, Mitglieder Ihrer Organisation zu verwalten, Arbeitsbereiche anzupassen und die Abrechnung und Zahlungen Ihres Kontos zu verwalten. Wechseln Sie mühelos zwischen Ihren Internxt-Geschäfts- und Privatkonten, um Produktivität und Dateiorganisation zu optimieren.",
+        "Der sichere Cloud-Speicher umfasst sichere Dateifreigabefunktionen zwischen verschiedenen Abteilungen, um sicher im Team zu kollaborieren. Schützen Sie vertrauliche Dateien durch Passwörter und beschränken Sie den Zugriff auf Dateien, um sie sicher an Partner zu senden.",
+        "Der Cloud-Speicher von Internxt bietet ein fortschrittliches Sitzungsmanagement, das Echtzeit-Anmeldebenachrichtigungen und eine detaillierte Überwachung von Remote-Sitzungen (Client, OS, IP, Standort, letzte Aktivität) bietet. Diese hohe Sicherheit ermöglicht es dem Kontomanager, unbefugten Zugriff zu erkennen, Sitzungen effizient zu verwalten und sensible Daten zu schützen.",
+        "Internxt bietet Ihrem Team eine flexible Speicherzuweisung, um Ihren Speicherbedarf zu decken. Mit unseren Plänen können Sie Benutzer hinzufügen, Speicher je nach Bedarf zuweisen und die Kapazität bei Bedarf erhöhen, wodurch Kosten, Skalierbarkeit und optimale Ressourcennutzung gewährleistet werden.",
+        "Überwachen Sie ganz einfach die Aktivitäten Ihres Teams mit einem umfassenden Aktivitätsprotokoll, das einen klaren Überblick über Datei-Interaktionen und Benutzerzugriffe bietet. Verfolgen Sie, wer sich angemeldet, Dateien hochgeladen oder geändert hat, und behalten Sie die volle Kontrolle, um die Datensicherheit in Ihrem Team zu gewährleisten."
+      ]
+    }
   },
   "PriceTable": {
     "planTitles": {
@@ -73,6 +69,12 @@
       "lifetime": "Lebenslang",
       "business": "Geschäftlich"
     },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1GB verschlüsselten Cloud-Speicher kostenlos",
+      "mobileDescription": "Erhalten Sie bis zu 1GB verschlüsselten Cloud-Speicher und genießen Sie unser privates Ökosystem",
+      "cta": "Plan auswählen"
+    },
     "features": {
       "endToEnd": "Ende-zu-Ende-Verschlüsselung",
       "openSource": "Open-Source und geprüft",
@@ -83,35 +85,28 @@
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
-      "ultimate": "5TB"
+      "ultimate": "5TB",
+      "standard": "1TB",
+      "pro": "2TB"
     }
   },
   "WhyChooseInternxt": {
-    "banner": {
-      "title": "Treten Sie dem sichersten Cloud-Speicher für Unternehmen bei",
-      "description": "Die Geschäftspläne von Internxt bieten unvergleichliche Datensicherheit und Datenschutz.",
-      "cta": "Plan wählen"
-    },
     "title": "Warum Internxt wählen?",
     "description": "Unsere Cloud-Speicherlösung ist für jeden konzipiert und bietet eine sichere Produktsuite, die leicht zu verstehen und zu nutzen ist, selbst wenn Sie kein Technikexperte sind. Internxt bietet eine leistungsstarke, aber intuitive verschlüsselte Cloud-Speicherung, die perfekt für den täglichen Gebrauch in verschiedenen Branchen geeignet ist.",
-    "cards": [
-      {
-        "title": "GDPR konform",
-        "description": "Die Datenschutz-Grundverordnung (GDPR) und andere europäische Datenschutzgesetze verlangen einen strengen Datenschutz. Durch die Einhaltung dieser Gesetze unternimmt Internxt alle Maßnahmen, um die Daten Ihres Unternehmens zu schützen."
-      },
-      {
-        "title": "Null Zugriff, maximale Verschlüsselung",
-        "description": "End-to-End-Verschlüsselung sichert Ihre Dateien, indem alles auf Ihrem Gerät verschlüsselt wird. Niemand, auch nicht Internxt, kann Ihre Dateien sehen. Im unwahrscheinlichen Fall einer Datenverletzung können Hacker Ihre Unternehmensdaten nicht entschlüsseln und stehlen."
-      },
-      {
-        "title": "Sie kontrollieren Ihre Daten",
-        "description": "Im Gegensatz zu Google Drive, Dropbox und OneDrive hat Internxt keine Tracker und gibt niemals Daten an Dritte weiter. Ihre Unternehmensdaten bleiben privat und sind mit den höchsten verfügbaren Sicherheitsmaßnahmen geschützt."
-      },
-      {
-        "title": "100% transparent und sicher",
-        "description": "Alle unsere Produkte werden mit Open-Source entwickelt. Der Code, den wir zum Schutz der Daten verwenden, ist für jeden einsehbar. Wir haben nichts zu verbergen, außer Ihren Daten."
-      }
-    ]
+    "scrollableSection": {
+      "titles": [
+        "GDPR konform",
+        "Null Zugriff, maximale Verschlüsselung",
+        "Sie kontrollieren Ihre Daten",
+        "100% transparent und sicher"
+      ],
+      "descriptions": [
+        "Die Datenschutz-Grundverordnung (GDPR) und andere europäische Datenschutzgesetze verlangen einen strengen Datenschutz. Durch die Einhaltung dieser Gesetze unternimmt Internxt alle Maßnahmen, um die Daten Ihres Unternehmens zu schützen.",
+        "End-to-End-Verschlüsselung sichert Ihre Dateien, indem alles auf Ihrem Gerät verschlüsselt wird. Niemand, auch nicht Internxt, kann Ihre Dateien sehen. Im unwahrscheinlichen Fall einer Datenverletzung können Hacker Ihre Unternehmensdaten nicht entschlüsseln und stehlen.",
+        "Im Gegensatz zu Google Drive, Dropbox und OneDrive hat Internxt keine Tracker und gibt niemals Daten an Dritte weiter. Ihre Unternehmensdaten bleiben privat und sind mit den höchsten verfügbaren Sicherheitsmaßnahmen geschützt.",
+        "Alle unsere Produkte werden mit Open-Source entwickelt. Der Code, den wir zum Schutz der Daten verwenden, ist für jeden einsehbar. Wir haben nichts zu verbergen, außer Ihren Daten."
+      ]
+    }
   },
   "EncryptedCloudSolution": {
     "title": "Verschlüsselte Cloud-Lösungen für Ihr Unternehmen",
@@ -190,7 +185,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Vertrieb kontaktieren",
+    "title": "Kontaktieren Sie uns",
     "description": "Füllen Sie das Kontaktformular aus und das Team wird Sie in Kürze kontaktieren.",
     "form": {
       "name": "Vollständiger Name",
@@ -211,12 +206,18 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "Wie können wir Ihnen helfen?",
-      "howWeCanHelpPlaceHolder": "Bitte geben Sie hier an, wie wir Ihnen helfen können.",
+      "howWeCanHelp": "Wie können wir Ihnen helfen? (Optional)",
+      "howWeCanHelpPlaceHolder": "Erzählen Sie uns mehr über die Bedürfnisse Ihres Unternehmens",
       "cta": "Nachricht senden",
       "ctaSending": "Senden...",
       "successMessage": "Ihre Nachricht wurde erfolgreich gesendet.",
       "errorMessage": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     }
+  },
+  "CtaSection": {
+    "title": "Treten Sie dem sichersten Cloud-Speicher für Unternehmen bei",
+    "description": "Die Geschäftspläne von Internxt bieten unvergleichliche Datensicherheit und Datenschutz",
+    "cta": "Plan auswählen",
+    "contactUs": "Kontaktieren Sie uns"
   }
 }

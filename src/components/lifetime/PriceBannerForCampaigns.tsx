@@ -21,7 +21,6 @@ export const PriceBannerForCampaigns = ({
   const shouldShowBanner = globalDialog.dialogIsOpen(GlobalDialog.PriceBannerForCampaigns);
 
   const bgImage = getImage('/images/campaigns/5th-anniversary/confetti.webp');
-  const bgImage2 = getImage('/images/campaigns/5th-anniversary/visual (hero).webp');
 
   const parsePercentText = (text: string) =>
     typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;

@@ -26,48 +26,49 @@ export const PlanSelector = ({
   isLifetimeOffer,
   isBusinessOffer,
 }: PlanSwitchProps): JSX.Element => (
-  <div id="billingButtons" className={`flex flex-row rounded-2xl ${darkMode ? 'bg-gray-90' : 'bg-cool-gray-10'} p-0.5`}>
+  <div id="billingButtons" className={`flex h-[38px] w-[423.67px] flex-row rounded-lg bg-neutral-90/10`}>
     <button
       type="button"
       onClick={() => {
         onPlanTypeChange('Individuals', Interval.Year);
       }}
-      className={`flex flex-row gap-3 rounded-2xl px-6 py-0.5 font-semibold ${
+      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Individuals'
-          ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-          : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
+          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
+          : `text-lg font-normal text-gray-105`
       }`}
     >
       {textContent.billingFrequency.annually}
-      {isIndividualsOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
+
     <button
       type="button"
       onClick={() => {
         onPlanTypeChange('Lifetime', Interval.Lifetime);
       }}
-      className={`flex flex-row items-center gap-3 rounded-2xl px-6 py-0.5 font-semibold ${
+      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Lifetime'
-          ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
-          : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
+          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
+          : `text-lg font-normal text-gray-105`
       }`}
     >
       {textContent.billingFrequency.lifetime}
-      {isLifetimeOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
     </button>
+
     <button
       type="button"
       onClick={() => {
         onPlanTypeChange('Business');
       }}
-      className={`rounded-2xl py-0.5 ${hideBusinessSelector ? 'hidden' : 'flex'} flex-row gap-3 px-6 font-semibold ${
+      className={`duration-250 rounded-2xl py-0.5 transition-all ease-out ${
+        hideBusinessSelector ? 'pointer-events-none w-0 overflow-hidden px-0 opacity-0' : 'flex w-auto px-6 opacity-100'
+      } flex-row gap-3 font-semibold ${
         activeSwitchPlan === 'Business'
           ? `${darkMode ? 'bg-gray-100 text-white' : 'bg-white text-cool-gray-80'} shadow-sm`
           : `${darkMode ? 'text-gray-40' : 'text-cool-gray-50'}`
       }`}
     >
-      {textContent.billingFrequency.business}
-      {isBusinessOffer && <SealPercent size={24} className="hidden text-green-1 sm:flex" weight="fill" />}
+      <span className="whitespace-nowrap">{textContent.billingFrequency.business}</span>
     </button>
   </div>
 );

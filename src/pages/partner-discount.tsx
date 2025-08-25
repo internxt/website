@@ -1,4 +1,3 @@
-import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import { HeroSection } from '@/components/shared/components/HeroSection';

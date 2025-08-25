@@ -47,7 +47,7 @@
     "semiannually": "/每半年",
     "annually": "/每年"
   },
-  "perUserSlash": "每用戶/",
+  "perUserSlash": "/每",
   "perUser": "每用戶",
   "users": "用戶",
   "freePlan": "免費",
