@@ -241,7 +241,7 @@ export const PricingSection = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="justify-centerh flex flex-col items-center border-b-[1px] border-neutral-25 pb-20 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="justify-centerh flex flex-col items-center text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
             <div key={feature.text} className="flex flex-col items-start gap-4 md:max-w-[33%] md:flex-row">
               <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
@@ -254,6 +254,7 @@ export const PricingSection = ({
       )}
 
       {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
+      <div className="h-[1px] w-full bg-neutral-25 lg:mx-40" />
     </>
   );
 };
