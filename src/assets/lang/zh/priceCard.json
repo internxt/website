@@ -50,7 +50,7 @@
     "semiannually": "/半年度",
     "annually": "/每年"
   },
-  "perUserSlash": "每用户/",
+  "perUserSlash": "/每",
   "perUser": "每个用户",
   "perYear": "€/年",
   "users": "用户",

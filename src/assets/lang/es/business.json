@@ -14,12 +14,12 @@
     "description": "Las violaciones de datos pueden devastar a las empresas, causando graves pérdidas financieras, interrupciones operativas y dañando la reputación de tu negocio.",
     "cards": [
       {
-        "title": "$4.88 m",
+        "title": "$4.88 M",
         "description": "Coste promedio de una violación de datos"
       },
-      { "title": "73 m", "description": "Registros de clientes de AT&T filtrados en 2024" },
-      { "title": "318 días", "description": "Tiempo promedio para identificar una violación de datos" },
-      { "title": "24%", "description": "De los ataques de ransomware apuntan a empresas" }
+      { "title": "73 M", "description": "Registros de clientes de AT&T filtrados en 2024" },
+      { "title": "258 días", "description": "Tiempo promedio para identificar una violación de datos" },
+      { "title": "46%", "description": "De los ataques de ransomware apuntan a empresas" }
     ],
     "footerText": "*Datos recopilados del Informe de Costo de una Violación de Datos de IBM Security 2024."
   },

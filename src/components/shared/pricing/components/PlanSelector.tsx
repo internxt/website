@@ -32,9 +32,9 @@ export const PlanSelector = ({
       onClick={() => {
         onPlanTypeChange('Individuals', Interval.Year);
       }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg font-semibold transition-colors duration-200 ease-out ${
+      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Individuals'
-          ? `m-1 rounded-lg bg-white text-primary shadow-sm`
+          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
           : `text-lg font-normal text-gray-105`
       }`}
     >
@@ -46,9 +46,9 @@ export const PlanSelector = ({
       onClick={() => {
         onPlanTypeChange('Lifetime', Interval.Lifetime);
       }}
-      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg font-semibold transition-colors duration-200 ease-out ${
+      className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Lifetime'
-          ? `m-1 rounded-lg bg-white text-primary shadow-sm`
+          ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
           : `text-lg font-normal text-gray-105`
       }`}
     >

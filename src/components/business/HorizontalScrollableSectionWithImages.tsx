@@ -13,7 +13,7 @@ interface HorizontalScrollableSectionProps {
   bgGardient?: string;
   bgColorCard?: string;
 }
-export default function HorizontalScrollableSection({
+export default function HorizontalScrollableSectionWithImages({
   textContent,
   bgColor = 'bg-white',
   redirection = false,
@@ -29,14 +29,14 @@ export default function HorizontalScrollableSection({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  const cardWidth = 400;
+  const cardWidth = 420;
   const mobileCardWidth = 320;
   const gap = 32;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
   const hasImages = Array.isArray(cardImages) && cardImages.length > 0;
 
-  const sectionHeight = hasImages ? 'lg:h-[1000px]' : 'lg:h-[580px]';
+  const sectionHeight = hasImages ? 'lg:h-[1100px]' : 'lg:h-[580px]';
   const innerHeight = hasImages ? 'lg:h-[1000px]' : 'lg:h-[620px]';
 
   useEffect(() => {
@@ -59,7 +59,7 @@ export default function HorizontalScrollableSection({
   };
 
   const scrollLeft = () => {
-    if (currentIndex > 0 && scrollContainerRef.current) {
+    if (currentIndex > -1 && scrollContainerRef.current) {
       const newIndex = currentIndex - 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
@@ -75,7 +75,7 @@ export default function HorizontalScrollableSection({
 
   const scrollRight = () => {
     const maxIndex = getMaxIndex();
-    if (currentIndex < maxIndex && scrollContainerRef.current) {
+    if (currentIndex < maxIndex - 1 && scrollContainerRef.current) {
       const newIndex = currentIndex + 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
@@ -93,13 +93,13 @@ export default function HorizontalScrollableSection({
 
   return (
     <section
-      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} lg:px-10 lg:py-9 xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight}  lg:px-10 lg:py-9 xl:px-32 3xl:px-80`}
       style={{ background: bgGardient }}
     >
       <div
-        className={`${containerDecoration} mx-8 flex h-min w-[832px] flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-between lg:gap-0 lg:py-5`}
+        className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 px-10 ${innerHeight} lg:justify-between lg:gap-0 lg:py-9 `}
       >
-        <p className="w-[320px] text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-3xl">
+        <p className="w-[320px] pt-10 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-3xl">
           {textContent.title}
         </p>
 
@@ -119,7 +119,7 @@ export default function HorizontalScrollableSection({
 
         <div
           ref={scrollContainerRef}
-          className="flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:h-min lg:w-full"
+          className="flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:h-min lg:w-screen lg:pl-56"
         >
           {cardTitles.map((title, index) => (
             <div

@@ -20,6 +20,7 @@ import HorizontalScrollableSection from '@/components/shared/HorizontalScrollabl
 import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
 import VerticalBusinessSection from '@/components/business/VerticalBusinessCtaSection';
+import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -63,7 +64,7 @@ export const BusinessPage = ({
       <HeroSection
         TextComponent={
           <div className="flex h-min w-[350px] flex-col gap-6 py-8 lg:w-[656px] lg:gap-8">
-            <p className="text-center text-30 font-semibold leading-tight text-white lg:text-start lg:text-5xl">
+            <p className="text-center text-30 font-semibold leading-tight text-white lg:text-start lg:text-3xl">
               {textContent.HeroSection.title}
             </p>
             <p className="text-center text-base font-normal leading-tight text-white lg:text-start lg:text-xl">
@@ -73,9 +74,9 @@ export const BusinessPage = ({
               {textContent.HeroSection.description[1]}
             </p>
             <div className="flex flex-row items-center justify-center gap-8 lg:justify-start">
-              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
+              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} hoverColor="bg-primary-dark" />
               <Button
-                className="border border-primary bg-transparent"
+                className="border border-primary bg-transparent "
                 textColor="text-primary"
                 hoverColor="hover:bg-transparent/20"
                 text={textContent.HeroSection.cta2}
@@ -99,9 +100,10 @@ export const BusinessPage = ({
 
       <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
 
-      <HorizontalScrollableSection
+      <HorizontalScrollableSectionWithImages
         textContent={textContent.WhatCanWeDo}
         bgGardient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+        containerDecoration="border-y-[1px] border-neutral-25 pb-10 lg:pb-10"
       />
 
       <PricingSectionWrapper
@@ -120,12 +122,19 @@ export const BusinessPage = ({
         backgroundColorComponent="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
+      <HorizontalScrollableSection
+        textContent={textContent.WhyChooseInternxt}
+        bgGardient="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
+        cardDecoration
+        bgColorCard="bg-white"
+      />
+
       <BusinessCtaSection
         textContent={textContent.CtaSection}
-        bgGradientColor="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
+        bgColor="bg-gray-1"
         customText={
           <>
-            <div className="flex flex-row">
+            <div className="flex flex-row justify-between overflow-hidden">
               <Image
                 src={getImage('/images/business/cta/Internxt-secure-cloud-storag_tablet.webp')}
                 alt="Tablet Image"

@@ -50,7 +50,7 @@
     "annually": "/Jährlich"
   },
   "perYear": "€/Jahr",
-  "perUserSlash": "Pro Benutzer/",
+  "perUserSlash": "/Benutzer",
   "perUser": "Pro Nutzer",
   "users": "Nutzer",
   "freePlan": "Kostenlos",

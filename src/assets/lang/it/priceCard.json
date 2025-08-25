@@ -49,7 +49,7 @@
     "semiannually": "/semestrale",
     "annually": "/annuale"
   },
-  "perUserSlash": "Per utente/",
+  "perUserSlash": "/Utente",
   "perUser": "Per utente",
   "perYear": "€/anno",
   "users": "utenti",

@@ -14,10 +14,10 @@
     "description": "Data breaches can devastate businesses, causing severe financial losses, operational disruptions, and damage your business's reputation.",
     "cards": [
       {
-        "title": "$4.88 m",
+        "title": "$4.88 M",
         "description": "Average cost of a data breach"
       },
-      { "title": "73 m", "description": "AT&T customer records leaked in 2024" },
+      { "title": "73 M", "description": "AT&T customer records leaked in 2024" },
       { "title": "258 days", "description": "Average time to identify a data breach" },
       { "title": "46%", "description": "Of breaches involve personal data" }
     ],
@@ -39,21 +39,24 @@
         "internxt_b2b_feature2",
         "internxt_b2b_feature3",
         "internxt_b2b_feature4",
-        "internxt_b2b_feature5"
+        "internxt_b2b_feature5",
+        ""
       ],
       "titles": [
         "Manage your organization",
         "Secure file sharing between departments",
         "Session management",
         "Flexible storage allocation",
-        "Access Logs"
+        "Access Logs",
+        ""
       ],
       "descriptions": [
         "Internxt empowers businesses with features to manage members of your organization, customize workspaces, and manage your account billing and payments.  Easily switch between your Internxt business and personal accounts to optimize productivity and file organization.",
         "Secure cloud storage includes secure file-sharing features within different departments to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security.",
         "Internxt cloud storage offers advanced session management, providing real-time login notifications and detailed remote session monitoring (client, OS, IP, location, last active time). This high-level security allows the account manager to detect unauthorized access, manage sessions efficiently, and protect sensitive data.",
         "Internxt gives your team full flexible storage allocation to upgrade your storage based on your needs. With our plans, you can add users, allocate storage based on needs, and increase capacity as necessary, ensuring cost efficiency, scalability, and optimal resource utilization.",
-        "Easily monitor team activity with a comprehensive activity log, offering a clear view of file interactions and user access. Track who has signed in, uploaded, or modified files, giving you total control and ensuring data security across your team."
+        "Easily monitor team activity with a comprehensive activity log, offering a clear view of file interactions and user access. Track who has signed in, uploaded, or modified files, giving you total control and ensuring data security across your team.",
+        ""
       ]
     }
   },

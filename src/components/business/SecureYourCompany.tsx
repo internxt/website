@@ -16,7 +16,7 @@ export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.
       <div className="flex flex-row flex-wrap justify-center gap-5 lg:gap-14 lg:py-9">
         {textContent.cards.map((card) => (
           <div className="flex w-[190px] flex-col gap-[15px] text-center lg:w-[230px]" key={card.title}>
-            <p className="text-3xl font-semibold text-blue-62 lg:text-5xl">{card.title}</p>
+            <p className="text-30 font-semibold text-blue-62 lg:text-3xl">{card.title}</p>
             <p className="text-base font-medium leading-tight text-white-95 lg:text-xl">{card.description}</p>
           </div>
         ))}

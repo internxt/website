@@ -241,9 +241,9 @@ export const PricingSection = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="flex flex-col items-center justify-center  text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
+        <div className="justify-centerh flex flex-col items-center border-b-[1px] border-neutral-25 pb-20 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
           {features.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-start space-x-3 md:max-w-[33%] md:flex-row ">
+            <div key={feature.text} className="flex flex-col items-start gap-4 md:max-w-[33%] md:flex-row">
               <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
               <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
                 {feature.text}

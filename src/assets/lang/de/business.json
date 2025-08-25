@@ -18,8 +18,8 @@
         "description": "Durchschnittliche Kosten eines Datenverstoßes"
       },
       { "title": "73 Mio.", "description": "AT&T-Kundendaten, die 2024 durchgesickert sind" },
-      { "title": "318 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
-      { "title": "24%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
+      { "title": "258 Tage", "description": "Durchschnittliche Zeit zur Erkennung eines Datenverstoßes" },
+      { "title": "46%", "description": "Der Ransomware-Angriffe zielen auf Unternehmen ab" }
     ],
     "footerText": "*Daten gesammelt aus dem IBM Security Cost of a Data Breach Report 2024."
   },

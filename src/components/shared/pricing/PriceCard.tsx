@@ -70,6 +70,10 @@ export const PriceCard = ({
   const showMonthlyLabel =
     (productCardPlan === 'business' && interval === 'month') ||
     (interval === 'year' && productCardPlan === 'individuals');
+
+  const showPerUserLabel =
+    (productCardPlan === 'business' && interval === 'month') ||
+    (interval === 'year' && productCardPlan === 'individuals');
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
@@ -132,7 +136,6 @@ export const PriceCard = ({
     Detective,
     VideoConference,
     Envelope,
-    CreditCard,
   ];
 
   const newFeaturesNumber = isBusiness ? 10 : 9;
@@ -172,12 +175,14 @@ export const PriceCard = ({
               </div>
               <div className="flex h-[29px] w-full flex-row items-center justify-center gap-2  lg:h-[43px] ">
                 <span className="flex h-full flex-row items-end gap-1 ">
-                  <p className="lg:mb- h-[29px] text-base font-semibold text-gray-100">{currency}</p>
+                  <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                   <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
                     {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                   </p>
-                  {showMonthlyLabel ? (
-                    <span className="i flex h-full items-end pb-1 text-base font-semibold">{contentText.perMonth}</span>
+                  {isBusiness ? (
+                    <span className="i flex h-full items-end pb-1 text-base font-semibold">
+                      {contentText.perUserSlash}
+                    </span>
                   ) : null}
                 </span>
 
@@ -185,11 +190,11 @@ export const PriceCard = ({
                   <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
                     {currency}
                   </p>
-                  <p className="pb-[1px] pr-[2px] text-lg font-bold text-gray-50 line-through lg:pt-0 lg:text-xl">
+                  <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                   </p>
-                  {showMonthlyLabel ? (
-                    <span className=" pb-[5px] text-sm font-bold text-gray-50">{contentText.perMonth}</span>
+                  {isBusiness ? (
+                    <span className=" pb-[5px] text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
                   ) : null}
                 </span>
               </div>

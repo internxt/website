@@ -50,7 +50,7 @@
     "semiannually": "/6 meses",
     "annually": "/año"
   },
-  "perUserSlash": "Por usuario/",
+  "perUserSlash": "/Usuario",
   "perUser": "Por usuario",
   "users": "usuarios",
   "freePlan": "Gratis",

@@ -48,7 +48,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
 
       <div className="relative z-10">
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">
-          <h2 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+          <h2 className="text-center text-3xl font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
 
           <div className="hidden w-full max-w-7xl xl:flex xl:items-center xl:gap-8">
             <button

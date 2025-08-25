@@ -18,8 +18,8 @@
         "description": "Coût moyen d'une violation de données"
       },
       { "title": "73 M", "description": "Dossiers clients d'AT&T divulgués en 2024" },
-      { "title": "318 jours", "description": "Temps moyen pour identifier une violation de données" },
-      { "title": "24%", "description": "Des attaques de ransomware ciblent les entreprises" }
+      { "title": "258 jours", "description": "Temps moyen pour identifier une violation de données" },
+      { "title": "46%", "description": "Des attaques de ransomware ciblent les entreprises" }
     ],
     "footerText": "*Données collectées à partir du rapport IBM Security Cost of a Data Breach 2024."
   },

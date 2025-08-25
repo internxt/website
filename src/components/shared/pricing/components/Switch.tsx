@@ -29,13 +29,12 @@ export const SwitchComponent = ({
 
   return (
     <div className={`${show ? 'flex' : 'hidden'} flex-col items-center gap-3`}>
-      {/* Versión móvil - Monthly/Annually con diseño horizontal */}
-      <div className="flex w-full flex-row items-center justify-center border-b-[1px] border-gray-10 py-2 text-base lg:hidden">
+      <div className="flex w-full flex-row items-center justify-center text-base lg:hidden">
         <button
           type="button"
           onClick={() => handleOnSwitchIsToggled(Interval.Month)}
-          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            isMonthly ? `bg-primary/10 text-primary shadow-sm` : `text-cool-gray-50`
+          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 ${
+            isMonthly ? `bg-primary/10 font-semibold text-primary shadow-sm` : `font-normal text-cool-gray-50`
           }`}
         >
           {textContent.billingFrequency.monthly}
@@ -44,21 +43,22 @@ export const SwitchComponent = ({
         <button
           type="button"
           onClick={() => handleOnSwitchIsToggled(Interval.Year)}
-          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5 font-semibold ${
-            isAnnual ? `bg-primary/10 text-primary shadow-sm` : `text-cool-gray-50`
+          className={`flex flex-row gap-3 rounded-lg px-6 py-0.5  ${
+            isAnnual ? `bg-primary/10 font-semibold text-primary shadow-sm` : `font-normal text-cool-gray-50`
           }`}
         >
           {textContent.billingFrequency.annually}
         </button>
       </div>
 
-      {/* Versión desktop - Monthly/Annually con diseño toggle */}
       <div className="hidden h-[38px] w-[423px] flex-row rounded-lg bg-neutral-90/10 lg:flex">
         <button
           type="button"
           onClick={() => handleOnSwitchIsToggled(Interval.Month)}
-          className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg font-semibold transition-colors duration-200 ease-out ${
-            isMonthly ? 'm-1 rounded-lg bg-white text-primary shadow-sm' : 'text-lg font-normal text-gray-105'
+          className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+            isMonthly
+              ? 'm-1 rounded-lg bg-white font-semibold text-primary shadow-sm'
+              : 'text-lg font-normal text-gray-105'
           }`}
         >
           {textContent.billingFrequency.monthly}
@@ -67,17 +67,19 @@ export const SwitchComponent = ({
         <button
           type="button"
           onClick={() => handleOnSwitchIsToggled(Interval.Year)}
-          className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg font-semibold transition-colors duration-200 ease-out ${
-            isAnnual ? 'm-1 rounded-lg bg-white text-primary shadow-sm' : 'text-lg font-normal text-gray-105'
+          className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
+            isAnnual
+              ? 'm-1 rounded-lg bg-white font-semibold text-primary shadow-sm'
+              : 'text-lg font-normal text-gray-105'
           }`}
         >
           {textContent.billingFrequency.annually}
         </button>
       </div>
-
+      <div className="flex h-[1px] w-screen bg-neutral-25 lg:hidden" />
       <div
         id="billingButtons"
-        className={`flex w-full flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5 lg:hidden`}
+        className={`flex w-[300px] flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5 lg:hidden`}
       >
         <button
           type="button"

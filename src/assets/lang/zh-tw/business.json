@@ -18,8 +18,8 @@
         "description": "數據洩露的平均成本"
       },
       { "title": "318 天", "description": "識別數據洩露的平均時間" },
-      { "title": "7300 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
-      { "title": "24%", "description": "勒索軟件攻擊的目標是企業" }
+      { "title": "258 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
+      { "title": "46%", "description": "勒索軟件攻擊的目標是企業" }
     ],
     "footerText": "*數據來源於 IBM 安全數據洩露成本報告 2024。"
   },

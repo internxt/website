@@ -83,6 +83,7 @@ export const PricingSectionWrapper = ({
   showPromo = true,
   isAffiliate,
   hideBillingController = false,
+  hideFreeCard,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
@@ -132,20 +133,20 @@ export const PricingSectionWrapper = ({
 
   return (
     <section
-      className={` overflow-hidden lg:px-5 lg:py-20  ${backgroundColorComponent}`}
+      className={`overflow-hidden lg:px-5 lg:pb-10 lg:pt-10  ${backgroundColorComponent}`}
       id="billingButtons"
       style={{ background: backgroundGradientColor }}
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          {!hideTitle && <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{title()}</h1>}
+          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          <span className="text-regular max-w-[831px] text-xl text-gray-80">{textContent.lifetimeDescription}</span>
+          <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
           {CustomDescription ? (
             CustomDescription
           ) : !hideDescription ? (
             <span
-              className="text-regular max-w-[932px] text-xl text-gray-80"
+              className="text-regular max-w-[932px] text-xl text-gray-55"
               dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
             />
           ) : null}
@@ -185,10 +186,11 @@ export const PricingSectionWrapper = ({
           isAffiliate={isAffiliate}
           businessStorageSelected={activeBusinessStoragePlan}
           onBusinessStorageChange={onBusinessStorageChange}
+          hideFreeCard={hideFreeCard}
         />
       </div>
       <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
-        <p className="text-30 font-bold text-gray-100">{textContent.title} </p>
+        <p className="text-30 font-bold text-gray-100">{title()} </p>
         <PricingSectionForMobile
           textContent={textContent}
           lang={lang}
@@ -223,6 +225,7 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           businessStorageSelected={activeBusinessStoragePlan}
+          hideFreeCard={hideFreeCard}
         />
       </div>
     </section>

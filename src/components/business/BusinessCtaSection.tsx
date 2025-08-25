@@ -21,7 +21,7 @@ const BusinessCtaSection = ({
 }) => {
   return (
     <section
-      className={`flex h-[351px] w-full items-start justify-center px-10  xl:px-32 3xl:px-80 ${bgColor}`}
+      className={`flex h-[400px] w-full items-start justify-center px-10 py-10  xl:px-32 3xl:px-80 ${bgColor}`}
       style={{ background: bgGradientColor }}
     >
       <div
