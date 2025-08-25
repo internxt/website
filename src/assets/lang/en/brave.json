@@ -98,6 +98,11 @@
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -146,6 +151,11 @@
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FaqSection": {

@@ -1,7 +1,7 @@
 import {
   ArrowsClockwise,
-  Backpack,
   Broom,
+  Cake,
   CirclesThreePlus,
   CodeBlock,
   CreditCard,
@@ -9,21 +9,19 @@ import {
   Detective,
   Envelope,
   Fingerprint,
-  Fire,
   Gauge,
   Key,
   LockSimple,
   Password,
   ShieldPlus,
-  SunHorizon,
+  Sparkle,
+  TShirt,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
+import styles from '@/components/privacy/HeroSection.module.scss';
 import React from 'react';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -42,6 +40,7 @@ export interface PriceCardProps {
   isFamilyPage?: boolean;
   showPromo?: boolean;
   isAffiliate?: boolean;
+  cardIndex?: number;
 }
 
 const BILLING_FREQUENCY_LIST = {
@@ -55,46 +54,38 @@ export const PriceCard = ({
   decimalDiscountValue,
   isCheckoutForLifetime,
   productCardPlan = 'individuals',
-  colorCard = 'primary',
-  labelBackground = 'bg-primary/10',
   popular,
   lang,
   redeemCodeCta,
   isFamilyPage,
-  darkMode,
   showPromo,
   onCheckoutButtonClicked,
-  isAffiliate,
+  cardIndex = 0,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
 
   const isLifetime = interval === 'lifetime';
   const isAnnual = interval === 'year';
-
   const showMonthlyLabel =
     (productCardPlan === 'business' && interval === 'month') ||
     (interval === 'year' && productCardPlan === 'individuals');
-  const showTotalDiscountPrice = interval === 'year';
-
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
-  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
+
+  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
   const monthlyPriceBefore = decimalDiscountValue
     ? Number(price / 12)
         .toFixed(2)
         .replace('.00', '')
     : undefined;
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
-  const cardMaxWidth = productCardPlan === 'individuals' ? 'max-w-xs xs:w-72' : 'max-w-[362px] w-full';
   const isBusiness = productCardPlan === 'business';
-  const backgroundClass = darkMode ? 'bg-primary' : labelBackground;
-  const textColorClass = darkMode ? 'text-white' : `text-${colorCard}`;
-  const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
+  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
+
   const planTypes = {
     '1TB': isBusiness
       ? isFamilyPage
@@ -118,6 +109,25 @@ export const PriceCard = ({
     LockSimple,
     Fingerprint,
     CodeBlock,
+    Sparkle,
+    Detective,
+    VideoConference,
+    Envelope,
+    CreditCard,
+  ];
+
+  const iconsFeaturesForBusiness = [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    CreditCard,
     Broom,
     Detective,
     VideoConference,
@@ -125,173 +135,117 @@ export const PriceCard = ({
     CreditCard,
   ];
 
+  const newFeaturesNumber = isBusiness ? 10 : 9;
+
+  const renderFeatureIcon = (index: number) => {
+    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
+    const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
+    return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
+  };
+
   return (
     <div
-      className={`${
-        !darkMode && popular ? `border-${colorCard}/50 ring-[3px]` : darkMode ? '' : 'ring-1 ring-gray-10'
-      } m-2 flex ${cardMaxWidth} ${
-        isBusiness ? 'lg:min-h-[840px]' : showPromo ? 'lg:h-[975px]' : 'lg:h-[850px]'
-      } w-[420px] flex-shrink-0 flex-grow-0 flex-col overflow-hidden rounded-2xl lg:min-w-[410px]`}
+      className={`flex flex-col items-center justify-between rounded-16 ${
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : 'h-[730px]'
+      } ${popular ? 'bg-blue-10 shadow-lg' : ''}`}
     >
-      <div
-        className={`flex h-[360px] flex-col items-center justify-center space-y-4 rounded-t-2xl ${
-          darkMode ? styles.linearGradient : 'bg-white'
-        } p-6 pb-10 pt-10`}
-      >
-        <div className="flex flex-col items-center justify-center space-y-4">
-          <div
-            className={`flex flex-row items-center justify-center space-x-2 rounded-full bg-${colorCard} px-3 py-1 ${
-              !popular ? 'invisible' : ''
-            }`}
-          >
-            <Fire size={28} className="text-white" />
-            <p className="font-semibold text-white">{contentText.mostPopular}</p>
-          </div>
-
-          <div className={`${backgroundClass} flex rounded-full px-3 py-0.5`}>
-            <p className={`${textColorClass} text-lg font-medium`}>{cardLabel}</p>
-          </div>
-        </div>
-        <div
-          className={`planPrice flex flex-col items-center justify-center ${priceBefore ? 'space-y-1' : 'space-y-4'}`}
-        >
-          <div
-            className={`priceBreakdown flex flex-row
-              items-end space-x-px text-neutral-700
-            `}
-          >
-            <p
-              className={`${
-                darkMode ? 'text-white' : 'text-gray-100'
-              } flex flex-row items-start space-x-1 whitespace-nowrap font-medium`}
-            >
-              <span className={`currency`}>{currency}</span>
-              <span className="price text-4xl font-bold">{isAnnual && !isBusiness ? monthlyPriceNow : priceNow}</span>
-              {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
-            </p>
-          </div>
-          <p
-            className={`${
-              priceBefore ? 'flex' : 'hidden'
-            } flex-row items-start space-x-1 whitespace-nowrap font-semibold ${
-              darkMode ? 'text-white' : 'text-gray-50'
-            } line-through`}
-          >
-            <span className={`text-sm`}>{currency}</span>
-            <span className="price text-2xl font-medium">
-              {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
-            </span>
-          </p>
-
-          <p className={`flex text-sm text-gray-50`}>
-            {productCardPlan === 'business' ? contentText.perUserSlash : ''}{' '}
-            {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-          </p>
-          {decimalDiscountValue && (
-            <p className="flex bg-green-1/10 px-1 py-0.5 text-sm text-green-dark">
-              {percentOff}
-              {contentText.discount}
-              {' | '}
-              {contentText.save} {annualSave}
-              {currency}
-            </p>
-          )}
-        </div>
-        <button
-          id={`planButton${storage}`}
-          onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
-          className={`flex w-full flex-col items-center rounded-lg border 
-            ${
-              popular
-                ? `border-${colorCard} bg-${colorCard} text-white hover:bg-${colorCard}-dark`
-                : darkMode
-                ? `border-${colorCard} bg-primary text-white hover:bg-${colorCard}-dark active:bg-gray-5`
-                : `border-${colorCard} text-${colorCard} hover:bg-gray-1 active:bg-gray-5`
-            } whitespace-nowrap px-20 py-2.5 font-medium`}
-        >
-          <p>{ctaText}</p>
-        </button>
+      <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
+        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
       </div>
-      {showPromo ? (
-        <div
-          style={{
-            backgroundImage: `url('${bgImage}')`,
-            backgroundPosition: '0% 80%',
-          }}
-          className={'flex flex-col items-start space-y-2 px-5 py-5'}
-        >
-          <span className="text-[13.5px] font-bold text-gray-100">
-            {contentText.productFeatures.WorldEnvironmentDay.title}
-          </span>
-          <div className="flex flex-col items-start space-y-2">
-            <div className="flex items-center space-x-2">
-              <SunHorizon size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-gray-100">
-                {contentText.productFeatures.WorldEnvironmentDay.gift1}
-              </span>
+
+      <div
+        className={`z-10 ${
+          showPromo ? (isBusiness ? 'lg:h-[939px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
+        } rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
+      >
+        <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
+          <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
+            <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
+              <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
-            <div className="flex items-center space-x-2">
-              <Backpack size={24} className="text-primary" weight="fill" />
-              <span className="text-[13.5px] text-gray-100">
-                {contentText.productFeatures.WorldEnvironmentDay.gift2}
-              </span>
+            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[190px]">
+              <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
+                <p className="text-base font-semibold text-green-0">
+                  {percentOff}
+                  {contentText.discount}
+                  {' | '}
+                  {contentText.save} {annualSave}
+                  {currency}
+                </p>
+              </div>
+              <div className="flex h-[29px] flex-row items-center justify-between gap-2 lg:h-[43px] ">
+                <span className="flex h-full flex-row items-start gap-1 ">
+                  <p className="text-base font-semibold text-gray-100">{currency}</p>
+                  <p className="text-2xl font-bold text-gray-100 lg:text-4xl">
+                    {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
+                  </p>
+                  {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
+                </span>
+                <span className="flex h-full flex-row items-end gap-1 pb-[5px]">
+                  <p className="text-md pb-[1px] font-semibold text-gray-50  lg:text-sm">{currency}</p>
+                  <p className=" text-lg font-bold text-gray-50 line-through lg:text-xl">
+                    {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+                  </p>
+                </span>
+              </div>
+              <div className="flex h-[19px] items-center justify-center">
+                <p className="text-base text-gray-50">
+                  {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
+                </p>
+              </div>
             </div>
+            <button
+              id={`planButton${storage}`}
+              onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
+              className={`${
+                popular
+                  ? 'bg-primary text-white hover:bg-primary-dark'
+                  : 'border-primary bg-white text-primary hover:bg-gray-1'
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`}
+            >
+              <p className="text-base font-medium">{ctaText}</p>
+            </button>
           </div>
         </div>
-      ) : null}
-      <div
-        className={`featureList flex flex-col  ${
-          darkMode ? 'bg-gray-100' : 'border-t border-neutral-20 bg-neutral-10'
-        } ${isBusiness ? `lg:h-[530px] ` : `lg:h-[590px]`} pb-6 text-sm`}
-      >
-        <div className="flex flex-col space-y-2 pt-6">
+        {showPromo ? (
+          <div className={`flex h-[142px] flex-col items-center justify-center  ${styles.horizontalLinearGardient}`}>
+            <div className="flex h-[120px] w-full flex-col justify-center gap-2 px-6 lg:w-[380px]">
+              <span className="text-base font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
+              <div className="flex flex-col items-start gap-2">
+                <div className="flex items-start space-x-2">
+                  <TShirt size={24} className="text-primary" />
+                  <span className="text-[13.5px] text-white">
+                    {contentText.productFeatures.promoFeatures.features[0]}
+                  </span>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <Cake size={24} className="text-primary" />
+                  <span className="text-[13.5px] text-white">
+                    {contentText.productFeatures.promoFeatures.features[1]}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
+        <div
+          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+            isBusiness ? 'lg:h-[520px]' : 'lg:h-[485px]'
+          } lg:py-6`}
+        >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
-            <div className="flex flex-row items-start space-x-2 px-6 first:font-semibold" key={feature}>
-              {isBusiness ? (
-                <>
-                  {React.createElement(
-                    index === 10
-                      ? iconsFeatures[(index + 4) % iconsFeatures.length]
-                      : index > 10
-                      ? iconsFeatures[(index - 1) % iconsFeatures.length]
-                      : iconsFeatures[index % iconsFeatures.length],
-                    {
-                      size: 24,
-                      className: 'text-primary',
-                    },
+            <div className="flex flex-row items-start" key={feature}>
+              <div className="flex min-h-[24px] flex-row items-start gap-2">
+                {renderFeatureIcon(index)}
+                <span className="text-sm font-normal text-gray-80">
+                  {feature}
+                  {index > newFeaturesNumber && (
+                    <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                      {contentText.commingSoon}
+                    </span>
                   )}
-                  <span className="text-gray-80">
-                    {feature}
-                    {index > 10 ? (
-                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
-                        {contentText.commingSoon}
-                      </span>
-                    ) : null}
-                  </span>
-                </>
-              ) : (
-                <>
-                  {React.createElement(
-                    index > 10 && storage === '3TB'
-                      ? iconsFeatures[index % iconsFeatures.length]
-                      : index >= 6 && storage === '1TB'
-                      ? iconsFeatures[(index + 1) % iconsFeatures.length]
-                      : iconsFeatures[index % iconsFeatures.length],
-                    {
-                      size: 24,
-                      className: 'text-primary',
-                    },
-                  )}
-                  <span className="text-gray-80">
-                    {feature}
-                    {index > 9 ? (
-                      <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
-                        {contentText.commingSoon}
-                      </span>
-                    ) : null}
-                  </span>
-                </>
-              )}
+                </span>
+              </div>
             </div>
           ))}
         </div>

@@ -65,6 +65,11 @@
       "anonymousAccount": "Анонимный аккаунт",
       "premiumSupport": "Премиум-поддержка",
       "guarantee": "30-дневная гарантия возврата"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "CtaSection1": {

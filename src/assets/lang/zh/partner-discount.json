@@ -1,16 +1,16 @@
 {
   "HeroSection": {
-    "header": "Internxt年度折扣",
+    "header": "特别优惠",
     "title": {
-      "normalText": "获取最安全的云存储 ",
-      "blueText": "更低价格"
+      "normalText": "最安全的云存储服务",
+      "blueText": ""
     },
     "description": {
-      "normal": "加入 Internxt，这是一款最好的 Google Drive 替代方案，享受 ",
-      "blue": "85% 折扣 ",
-      "normal1": "，适用于任何套餐。安全私密地存储和分享你的文件。"
+      "normal": "加入 Internxt，Google Drive 最佳替代方案，享受 ",
+      "blue": "87% 折扣 ",
+      "normal1": "购买任何终身套餐。安全私密地存储与分享文件。"
     },
-    "cta": "选择一个计划"
+    "cta": "选择方案"
   },
   "PaymentSection": {
     "planTitles": {
@@ -38,6 +38,11 @@
       "anonymousAccount": "匿名账户创建",
       "premiumSupport": "高级客户支持",
       "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -87,13 +92,13 @@
     ]
   },
   "CtaSection": {
-    "title": "立即以 85% 的折扣获取整整一年的存储空间！",
+    "title": "立即以 87% 的折扣获取整整一年的存储空间！",
     "description": "Internxt 提供独家折扣，保证隐私和安全。",
     "cta": "选择计划"
   },
   "CtaSection1": {
     "title": "全球最私密的云存储",
-    "description": "享受独家 85% 的折扣，访问 Internxt 安全、私密和加密的云存储，整整一年。",
+    "description": "享受独家 87% 的折扣，访问 Internxt 安全、私密和加密的云存储，整整一年。",
     "cta": "找到您的计划"
   }
 }

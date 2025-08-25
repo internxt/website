@@ -215,16 +215,17 @@ export const ConverterSection = ({ textContent, converterText, errorContent, pat
       />
       <div className="flex flex-col items-center space-y-12 px-5">
         <div className="flex flex-col items-center space-y-5 text-center">
-          <div className="flex h-[58px] flex-row items-end justify-end  text-center lg:w-[60rem] lg-xl:w-[65rem] 1.5xl:w-[72rem] 2xl:w-[80rem]">
+          <div className="relative flex h-[58px] items-center text-center lg:w-[60rem] lg-xl:w-[65rem] 1.5xl:w-[72rem] 2xl:w-[80rem]">
             <div
-              className="hidden flex-row justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50 lg:flex"
+              className="absolute left-0 hidden flex-row items-center justify-end rounded-sm-6 border-[1.5px] border-primary px-4 py-2 pt-2.5 hover:bg-white/50 lg:flex"
               onClick={() => window.history.back()}
             >
-              <CaretLeft className=" items-center text-primary" size={24} />
+              <CaretLeft className="text-primary" size={24} />
               <p className="pl-1 text-base font-medium text-primary">Back</p>
             </div>
 
-            <p className="w-full items-center justify-center text-5xl font-semibold">{formattedConverterText.title}</p>
+            {/* Título centrado */}
+            <p className="absolute left-1/2 -translate-x-1/2 text-5xl font-semibold">{formattedConverterText.title}</p>
           </div>
 
           <h2 className="max-w-[865px] pt-2 text-xl text-gray-80">{textContent.description}</h2>

@@ -137,9 +137,9 @@
   },
   "TopBarBanner": {
     "title": {
-      "boldText": "Quest’estate porta i tuoi dati sempre con te ",
-      "normalText": "Sconto dell’80% su tutti i piani!",
-      "cta": "Scegli un piano "
+      "boldText": "",
+      "normalText": "Internxt compie 5 anni! 85% di sconto su tutti i piani ",
+      "cta": "Scegli il tuo piano "
     }
   },
   "lifetimeBanner": {

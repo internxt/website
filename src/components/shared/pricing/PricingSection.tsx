@@ -88,7 +88,6 @@ export const PricingSection = ({
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const showPromos = activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
   const showSwitchComponent =
     (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
@@ -177,36 +176,29 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row flex-wrap items-start justify-center justify-items-center">
+        <div className="content flex flex-row justify-end gap-4 pb-20">
           {products?.individuals
-            ? products.individuals[billingFrequency]
-                .filter((_, index) => !(isAnnual && index === 0))
-                .map((product) => (
-                  <PriceCard
-                    isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
-                    product={product}
-                    onCheckoutButtonClicked={onCheckoutButtonClicked}
-                    label={product.storage}
-                    key={product.storage}
-                    popular={product.storage === popularPlanBySize}
-                    decimalDiscountValue={
-                      product.interval === Interval.Lifetime
-                        ? decimalDiscount?.lifetime
-                        : decimalDiscount?.subscriptions
-                    }
-                    lang={lang}
-                    darkMode={darkMode}
-                    showPromo={showPromo}
-                    isAffiliate={isAffiliate}
-                  />
-                ))
+            ? products.individuals[billingFrequency].map((product, cardIndex) => (
+                <PriceCard
+                  isCheckoutForLifetime={billingFrequency === Interval.Lifetime}
+                  product={product}
+                  onCheckoutButtonClicked={onCheckoutButtonClicked}
+                  label={product.storage}
+                  key={product.storage}
+                  popular={product.storage === popularPlanBySize}
+                  productCardPlan="individuals"
+                  decimalDiscountValue={
+                    product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
+                  }
+                  lang={lang}
+                  darkMode={darkMode}
+                  showPromo={showPromo}
+                  isAffiliate={isAffiliate}
+                  cardIndex={cardIndex}
+                />
+              ))
             : undefined}
         </div>
-        {!hideFreeCard && (
-          <div id="freeAccountCard" className="content flex w-full px-6 pb-10 md:px-0 md:pb-0">
-            <FreePlanCard textContent={textContent.freePlanCard} />
-          </div>
-        )}
       </Transition>
 
       {/* Business plans */}
@@ -217,13 +209,13 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center">
+        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center gap-6">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (
             <>
               {businessBillingFrequency && products?.business
-                ? products.business[businessBillingFrequency].map((product) => (
+                ? products.business[businessBillingFrequency].map((product, cardIndex) => (
                     <PriceCard
                       isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
                       product={product}
@@ -242,6 +234,7 @@ export const PricingSection = ({
                       lang={lang}
                       darkMode={darkMode}
                       showPromo={showPromo}
+                      cardIndex={cardIndex}
                     />
                   ))
                 : undefined}

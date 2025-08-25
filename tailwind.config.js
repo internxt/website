@@ -1,4 +1,5 @@
 /* eslint-disable no-dupe-keys */
+const { blue } = require('@mui/material/colors');
 const { defaultTheme } = require('react-select');
 
 module.exports = {
@@ -45,11 +46,12 @@ module.exports = {
         30: 'rgb(199,199,205)',
         40: 'rgb(174,174,179)',
         50: 'rgb(142,142,148)',
-        55: 'rgb(115, 115, 115)',
+        55: 'rgb(115,115,115)',
         60: 'rgb(99,99,103)',
         70: 'rgb(72,72,75)',
         80: 'rgb(58,58,59)',
         90: 'rgb(44,44,48)',
+        95: 'rgb(28, 28, 28)',
         100: 'rgb(24,24,27)',
       },
       surface: 'rgba(255, 255, 255, 0.07)',
@@ -70,6 +72,9 @@ module.exports = {
         1: 'rgb(255, 149, 0, 1)',
         100: 'rgb(255, 233, 204, 1)',
       },
+      blue: {
+        5: 'rgb(0, 102, 255, 1)',
+      },
       // OLD DESIGN SYSTEM
       'cool-gray': {
         5: 'rgb(249,250,252)',
@@ -85,12 +90,13 @@ module.exports = {
         100: 'rgb(18,22,25)',
       },
       blue: {
-        10: 'rgb(237,245,255)',
+        10: 'rgb(204, 224, 255, 1)',
         20: 'rgb(208,226,255)',
         30: 'rgb(166,200,255)',
         40: 'rgb(120,169,255)',
         50: 'rgb(69,137,255)',
         60: 'rgb(15,98,254)',
+        65: 'rgb(0,102,255, 0.1)',
         70: 'rgb(0,67,206)',
         80: 'rgb(0,45,156)',
         90: 'rgb(0,29,108)',
@@ -134,7 +140,7 @@ module.exports = {
       },
       neutral: {
         10: 'rgb(250,251,252)',
-        15: 'rgb(244, 248, 255)',
+        15: 'rgb(249,249,252)',
         20: 'rgb(244,245,247)',
         30: 'rgb(235,236,240)',
         40: 'rgb(223,225,230)',
@@ -181,13 +187,14 @@ module.exports = {
         55: '10px',
       },
       borderRadius: {
+        2: '2px',
+        'sm-6': '6px',
+        16: '16px',
+        20: '20px',
+        32: '32px',
+        100: '100px',
         '4xl': '2.75rem',
         'full-percentage': '100%',
-        20: '20px',
-        'sm-6': '6px',
-        32: '32px',
-        2: '2px',
-        16: '16px',
       },
 
       boxShadow: {
@@ -200,10 +207,13 @@ module.exports = {
       fontSize: {
         'supporting-1': '0.5rem',
         'supporting-2': '0.625rem',
+        '3xl': '2.5rem',
+        30: '1.875rem',
       },
       animation: {
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         scanning: 'scanning 1s linear infinite',
+        marquee: 'marquee 15s linear infinite',
       },
       keyframes: {
         'pingpong-v': {
@@ -265,6 +275,7 @@ module.exports = {
         fall: 'fall 5s linear infinite',
         'fill-bar': 'fill 1s linear forwards',
         'pingpong-v': 'pingpong-v 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        marquee: 'marquee 8s linear infinite',
       },
       translate: {
         25: '6.25rem',
@@ -316,6 +327,10 @@ module.exports = {
         'pingpong-v': {
           '0%, 100%': { top: '0%' },
           '50%': { top: '100%' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
 

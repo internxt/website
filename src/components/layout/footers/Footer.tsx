@@ -209,6 +209,12 @@ export default function Footer({
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
+                    <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.products.cleaner}
+                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                        {textContent.FooterSection.new}
+                      </span>
+                    </Link>
                     <Link
                       href="/business"
                       locale={'en'}
@@ -658,6 +664,9 @@ export default function Footer({
 
                       <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.antivirus}
+                      </Link>
+                      <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.products.cleaner}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>

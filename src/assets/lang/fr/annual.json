@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "header": "Obtenez votre réduction exclusive de 85 % sur tous les forfaits annuels !",
+    "header": "Obtenez votre réduction exclusive de 87 % sur tous les forfaits annuels !",
     "title": {
       "normalText": "Le stockage cloud ",
       "blueText": "le plus sûr et privé pour vos fichiers"
@@ -19,7 +19,7 @@
         "normalText": "sur tous nos forfaits à vie exclusifs"
       }
     },
-    "header": "Confidentialité totale avec 85 % de réduction",
+    "header": "Confidentialité totale avec 87 % de réduction",
     "lifetimeDescription": "Avec un paiement unique, vous bénéficiez d’une confidentialité à vie. Vous aurez un accès permanent à toutes les fonctionnalités axées sur la confidentialité et au stockage cloud chiffré d’Internxt.",
     "planDescription": "Tous les forfaits Internxt donnent un accès complet à notre suite de solutions privées : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "billingFrequency": {
@@ -40,10 +40,15 @@
       "anonymousAccount": "Création de compte anonyme",
       "premiumSupport": "Support client premium",
       "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "PaymentSection": {
-    "blueTitle": "Confidentialité totale avec 85 % de réduction",
+    "blueTitle": "Confidentialité totale avec 87 % de réduction",
     "title": "Forfaits annuels",
     "description": "Tous les forfaits Internxt donnent un accès complet à notre suite de solutions privées : Internxt Drive, Send, VPN, Antivirus, Meet et Mail.",
     "firstFeed": "Support client premium",

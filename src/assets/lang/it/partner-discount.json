@@ -1,14 +1,14 @@
 {
   "HeroSection": {
-    "header": "Sconto Annuale di Internxt",
+    "header": "Offerta speciale",
     "title": {
-      "normalText": "Lo storage cloud più sicuro ",
-      "blueText": "a meno"
+      "normalText": "Lo storage cloud più sicuro",
+      "blueText": ""
     },
     "description": {
       "normal": "Unisciti a Internxt, la miglior alternativa a Google Drive, e ottieni ",
-      "blue": "85% DI SCONTO ",
-      "normal1": " su ogni piano. Archivia e condividi in modo sicuro e privato."
+      "blue": "87% DI SCONTO ",
+      "normal1": "su qualsiasi piano a vita. Archivia e condividi file in modo sicuro e privato."
     },
     "cta": "Scegli un piano"
   },
@@ -23,7 +23,9 @@
         "normalText": "su tutti i nostri piani esclusivi a vita"
       }
     },
+    "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre",
     "planDescription": "Tutti i piani Internxt offrono accesso completo alla nostra suite di soluzioni private con l'ultima tecnologia di sicurezza: Internxt Drive, Send, VPN, Antivirus, Meet e Mail.",
+    "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",
@@ -37,6 +39,11 @@
       "anonymousAccount": "Creazione account anonima",
       "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {
@@ -86,13 +93,13 @@
     ]
   },
   "CtaSection": {
-    "title": "Ottieni un anno completo di storage con il 85% di sconto ora!",
+    "title": "Ottieni un anno completo di storage con il 87% di sconto ora!",
     "description": "Internxt offre uno sconto esclusivo con privacy e sicurezza garantite.",
     "cta": "Scegli un piano"
   },
   "CtaSection1": {
     "title": "Il storage cloud più privato al mondo",
-    "description": "Approfitta del tuo sconto esclusivo del 85% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
+    "description": "Approfitta del tuo sconto esclusivo del 87% per accedere allo storage cloud sicuro, privato e cifrato di Internxt per un intero anno.",
     "cta": "Trova il tuo piano"
   }
 }

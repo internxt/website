@@ -1,16 +1,16 @@
 {
   "HeroSection": {
-    "header": "Годовая скидка Internxt",
+    "header": "Специальное предложение",
     "title": {
-      "normalText": "Самое безопасное облако ",
-      "blueText": "за меньшую цену"
+      "normalText": "Самое безопасное облачное хранилище",
+      "blueText": ""
     },
     "description": {
-      "normal": "Присоединяйтесь к Internxt — лучшей альтернативе Google Drive, и получите ",
+      "normal": "Присоединяйтесь к Internxt — лучшей альтернативе Google Drive и получите ",
       "blue": "СКИДКУ 85% ",
-      "normal1": " на любой тариф. Храните и делитесь файлами безопасно и конфиденциально."
+      "normal1": "на любой пожизненный план. Храните и делитесь файлами безопасно и конфиденциально."
     },
-    "cta": "Выберите план"
+    "cta": "Выбрать план"
   },
   "PaymentSection": {
     "planTitles": {
@@ -38,6 +38,11 @@
       "anonymousAccount": "Анонимная регистрация",
       "premiumSupport": "Премиум-поддержка",
       "guarantee": "30-дневная гарантия возврата денег"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "FeatureSection": {

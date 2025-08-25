@@ -156,6 +156,30 @@ LayoutProps) {
 
         <script
           dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5GWZKXKB');`,
+          }}
+        />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              var _adsyq = _adsyq || [];
+              _adsyq.push(['trackPageView']);
+              (function() {
+                var u = 'https://track.adsynergix.com/';
+                var d = document, s = d.createElement('script'); s.async = true;
+                s.src = u + 'adsy.js'; d.getElementsByTagName('head')[0].appendChild(s);
+              })();
+            `,
+          }}
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
             __html: `
       var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
       (function(){
@@ -170,42 +194,8 @@ LayoutProps) {
           }}
         />
 
-        {/*{INCLUDED_PATHS_FOR_SNIGEL.includes(pathname) ? (
-          
-          <>
-            <script
-              id="adengine-config"
-              dangerouslySetInnerHTML={{
-                __html: `
-            window.snigelPubConf = {
-              "adengine": {
-                "activeAdUnits": (function() {
-                  var adUnits = ${JSON.stringify(snigelBanners)};
-                  if (window.innerWidth <= 768) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "adhesive" && unit !== "incontent_4";
-                    });
-                  }
-                  if (window.innerWidth <= 1300 && window.location.pathname.includes('temporary-email')) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "sidebar_right" && unit !== "sidebar_left";
-                    });
-                  }
-                  if (window.location.pathname.includes('temporary-email')) {
-                    adUnits = adUnits.filter(function(unit) {
-                      return unit !== "incontent_1";
-                    });
-                  }
-                  return adUnits;
-                })()
-              }
-            };
-          `,
-              }}
-            />
-            <script async data-cfasync="false" src="https://cdn.snigelweb.com/adengine/internxt.com/loader.js" />
-          </>
-        ) : null}*/}
+        <script src="https://retarglow.com/pixel"></script>
+
         {lang === 'es' && (
           <script
             dangerouslySetInnerHTML={{
@@ -230,6 +220,26 @@ LayoutProps) {
           width="0"
           style={{ display: 'none', visibility: 'hidden' }}
           title="Google Tag Manager iframe"
+        ></iframe>
+      </noscript>
+
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5GWZKXKB"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+          title="Google Tag Manager segundo contenedor"
+        ></iframe>
+      </noscript>
+
+      <noscript>
+        <iframe
+          src="https://track.adsynergix.com/adsy.js?noscript=1"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+          title="AdSynergix Pixel"
         ></iframe>
       </noscript>
 

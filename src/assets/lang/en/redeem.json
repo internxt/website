@@ -3,7 +3,7 @@
     "title": "Secure, private cloud storage",
     "subtitle": "that protects your right to privacy",
     "description": "Internxt’s open-source, web3 cloud storage protects your privacy with zero-knowledge post-quantum encryption.",
-    "info": "Redeem your exclusive lifetime Internxt plan from Stacksocial. Just click on <strong>Redeem Code</strong> and enter your purchase code.",
+    "info": "Redeem your exclusive lifetime Internxt plan from {{enterpise}}. Just click on <strong>Redeem Code</strong> and enter your purchase code.",
     "cta": "Redeem Code"
   },
   "Auth": {
@@ -87,6 +87,11 @@
       "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
       "anonymousAccount": "Anonymous account creation"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
   "GetLifetimeSection": {

@@ -89,62 +89,9 @@
     "allServices": "Accès à tous nos services"
   },
   "productFeatures": {
-    "starWarsFeatures": {
-      "title": "Édition spéciale cadeaux gratuits :",
-      "200GB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
-      "2TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
-      "5TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web"],
-      "10TB": ["Fonds d'écran Star Wars", "Thème Star Wars pour l'application Web", "Stickers Star Wars"]
-    },
-    "halloweenFeatures": {
-      "title": "Goodies sur le thème d'Internxt :",
-      "200GB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
-      "1TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
-      "2TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
-      "5TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
-      "10TB": ["Sac à dos Internxt x Swiss Peak", "Thème Halloween pour l'application Web"],
-      "tooltip": "Achetez un forfait à vie pour avoir une chance de gagner !"
-    },
-    "christmasFeatures": {
-      "title": "Les cadeaux du Père Noël :",
-      "200GB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
-      "1TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
-      "2TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
-      "5TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
-      "10TB": ["Participez à notre tirage au sort Secret Santa", "Thème de l'application web Noël"],
-      "tooltip": "Gagnez jusqu'à 10 To de stockage gratuit !"
-    },
-    "superBowlFeatures": {
-      "title": "Objets à thème Internxt :",
-      "extra": "1 To de stockage supplémentaire gratuit",
-      "gift": "Thème Super Bowl pour l'application web"
-    },
-    "valentinesFeatures": {
-      "title": "Cadeaux d'Internxt :",
-      "gift": "Tombola de 2 sacs à dos Swiss Peak x Internxt"
-    },
-    "stPatricksFeatures": {
-      "title": "Cadeaux d'Internxt :",
-      "gift": "Theme St. Patrick's Day pour l'application web"
-    },
-    "worldCloudSecurityDay": {
-      "title": "Cadeaux d'Internxt :",
-      "gift": "Tirage au sort d'un sac à dos Internxt x Swiss Peak"
-    },
-    "IdentityManagementDay": {
-      "title": "Cadeaux d'Internxt :",
-      "gift1": "Tirage au sort du sac à dos Internxt x Swiss Peak",
-      "gift2": "Thème gratuit pour l'application web"
-    },
-    "starWarsDay": {
-      "title": "Cadeaux Internxt :",
-      "gift1": "Tirage au sort pour un sac à dos Internxt x Swiss Peak",
-      "gift2": "Thème gratuit pour l'application Web"
-    },
-    "WorldEnvironmentDay": {
-      "title": "Cadeaux Internxt :",
-      "gift1": "Thème gratuit pour l'application Web",
-      "gift2": "Tirage au sort pour un sac à dos Internxt x Swiss Peak"
+    "promoFeatures": {
+      "title": "Cadeaux Internxt",
+      "features": ["Tirage maillot signé du Valencia CF", "Thème anniversaire gratuit"]
     },
     "cheaperThan": {
       "lifetime": {

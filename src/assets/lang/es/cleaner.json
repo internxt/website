@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Consigue Internxt",
+    "title": "Optimización integrada con Internxt Drive",
+    "features": ["Menos basura", "Eliminar amenazas", "Más espacio"],
+    "subTitle": "Mejora la velocidad, respuesta y salud del dispositivo"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Encuentra y borra archivos basura para mejorar la velocidad, respuesta y rendimiento. Internxt Cleaner mantiene tu dispositivo como nuevo sin ordenar ni borrar manualmente archivos no deseados."
+  },
+  "WhyUseSection": {
+    "title": "Por qué usar un limpiador de dispositivos para borrar archivos basura",
+    "description": "Los archivos viejos ocupan espacio y ralentizan tu dispositivo. Descubre qué llena tu disco con Internxt Cleaner, una forma segura y fiable de optimizar el almacenamiento en PC y Mac.",
+    "scrollableSection": {
+      "titles": ["Libera espacio", "Mejora la velocidad", "Protege tu privacidad"],
+      "descriptions": [
+        "Muchos archivos se quedan en tu equipo sin que lo notes, ocupando memoria y bajando el rendimiento. Internxt Cleaner detecta duplicados y borra archivos basura para liberar espacio.",
+        "Limpia RAM y disco para reducir el consumo de recursos, haciendo que tu equipo parezca nuevo otra vez.",
+        "Archivos y datos sobrantes pueden contener info personal que pondría en riesgo tu privacidad si el equipo se pierde, roba o compromete."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optimiza tu dispositivo al máximo",
+    "description": "Borra archivos basura y alarga la vida de tu PC o Mac",
+    "cta": "Conseguir Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "Cómo funciona",
+    "description": "Internxt Cleaner ofrece el mejor buscador de archivos duplicados y los elimina para darte más espacio y un dispositivo limpio y optimizado.",
+    "cardDescriptions": {
+      "titles": ["Limpieza inteligente", "Mejora la salud", "Seguro y fiable"],
+      "descriptions": [
+        "Usamos algoritmos avanzados para identificar y borrar archivos basura. Te ayudamos a priorizar qué eliminar con el mínimo esfuerzo y máxima seguridad.",
+        "Evita sobrecalentamiento, reduce desgaste del hardware y mejora la batería, haciendo que tu equipo se sienta nuevo con Internxt Cleaner.",
+        "Solo tú decides qué borrar, con control total del espacio y la privacidad de tus datos."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Cuándo usar un limpiador de dispositivos",
+    "description": "Para aumentar el potencial de tu PC o Mac, un limpiador de dispositivos realiza una limpieza digital que evita problemas de espacio y de rendimiento.",
+    "features": [
+      "Dispositivo lento o sin respuesta",
+      "Espacio de almacenamiento bajo",
+      "Después de desinstalar aplicaciones",
+      "Bloqueos frecuentes",
+      "Batería que se agota rápido",
+      "Sobrecalentamiento del dispositivo",
+      "Aplicaciones con bajo rendimiento",
+      "Inicio del sistema muy lento"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Encuéntralo. Límpialo. Optimízalo.",
+    "description": "Borra archivos basura y da nueva vida a tus equipos.",
+    "cta": "Conseguir Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Dudas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Qué es un limpiador de dispositivos y cómo funciona?",
+        "answer": [
+          "Internxt Cleaner es una herramienta diseñada para eliminar archivos basura y optimizar el rendimiento de tu PC o Mac, manteniendo tu almacenamiento libre y tu dispositivo funcionando sin problemas."
+        ]
+      },
+      {
+        "question": "¿Internxt Cleaner es gratuito?",
+        "answer": [
+          "Internxt Cleaner forma parte de los planes de pago anuales o de por vida de Internxt Drive.",
+          "Internxt Cleaner está disponible al adquirir cualquiera de los planes Premium o Ultimate, que incluyen muchas otras funciones para proteger tu dispositivo y tus datos en línea."
+        ]
+      },
+      {
+        "question": "¿Es seguro usar un limpiador de dispositivos?",
+        "answer": [
+          "Sí, nunca eliminamos archivos sin tu permiso, dándote el control total sobre qué archivos quieres conservar o eliminar para ayudarte a optimizar el almacenamiento y mantener la salud de tu sistema y dispositivo."
+        ]
+      },
+      {
+        "question": "¿Cómo empiezo a usar el servicio?",
+        "answer": [
+          "Puedes utilizar nuestro limpiador de dispositivos creando una cuenta de Internxt Drive y adquiriendo un plan Premium o Ultimate, ya sea de por vida o por suscripción, que incluye Drive, VPN, Cleaner, Dark Web Monitor, Meet y Mail."
+        ]
+      },
+      {
+        "question": "¿Con qué frecuencia debo ejecutar el limpiador de dispositivos?",
+        "answer": [
+          "Si notas que tu dispositivo se sobrecalienta, funciona con lentitud o tu batería se agota inesperadamente, podría ser señal de que tu ordenador está sobrecargado debido a demasiados archivos basura o aplicaciones exigentes.",
+          "En ese caso, deberías ejecutar un análisis con Internxt Cleaner para identificar y eliminar los archivos innecesarios, aunque se recomienda realizar un escaneo mensual para mantener la salud de tu dispositivo."
+        ]
+      },
+      {
+        "question": "¿Un limpiador de dispositivos eliminará mis archivos importantes?",
+        "answer": [
+          "No. Internxt Cleaner está diseñado para identificar y eliminar únicamente archivos temporales.",
+          "Puedes revisar y seleccionar los archivos que deseas eliminar para asegurarte de que nada importante sea borrado."
+        ]
+      }
+    ]
+  }
+}
