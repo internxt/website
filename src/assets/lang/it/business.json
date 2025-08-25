@@ -33,33 +33,29 @@
   "WhatCanWeDo": {
     "title": "Cosa puoi fare con Internxt?",
     "description": "Ottimizza la gestione dei file, la sicurezza e la privacy della tua organizzazione con la nostra archiviazione cloud sicura per aziende.",
-    "cards": [
-      {
-        "imagePathname": "internxt_b2b_feature1",
-        "selectorTab": "Gestisci la tua organizzazione",
-        "description": "Internxt consente alle aziende di gestire i membri della tua organizzazione, personalizzare gli spazi di lavoro e gestire la fatturazione e i pagamenti del tuo account. Passa facilmente tra i tuoi account aziendali e personali Internxt per ottimizzare la produttività e l'organizzazione dei file."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature2",
-        "selectorTab": "Condivisione sicura dei file tra reparti",
-        "description": "L'archiviazione cloud sicura include funzionalità di condivisione dei file sicura all'interno dei diversi reparti per collaborare in sicurezza in team. Proteggi con password e limita l'accesso ai file per inviare file confidenziali ai partner, garantendo di mantenere il controllo sulla loro sicurezza."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature3",
-        "selectorTab": "Gestione delle sessioni",
-        "description": "L'archiviazione cloud Internxt offre una gestione avanzata delle sessioni, fornendo notifiche di accesso in tempo reale e un monitoraggio dettagliato delle sessioni remote (client, OS, IP, posizione, ultimo tempo di attività). Questa sicurezza di alto livello consente al gestore dell'account di rilevare accessi non autorizzati, gestire le sessioni in modo efficiente e proteggere i dati sensibili."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature4",
-        "selectorTab": "Allocazione flessibile dello spazio di archiviazione",
-        "description": "Internxt offre al tuo team un'allocazione flessibile dello spazio di archiviazione per aumentare il tuo spazio in base alle tue esigenze. Con i nostri piani, puoi aggiungere utenti, allocare lo spazio di archiviazione in base alle necessità e aumentare la capacità se necessario, garantendo efficienza dei costi, scalabilità e utilizzo ottimale delle risorse."
-      },
-      {
-        "imagePathname": "internxt_b2b_feature5",
-        "selectorTab": "Registri di Accesso",
-        "description": "Monitora facilmente l'attività del tuo team con un registro completo delle attività, che offre una visione chiara delle interazioni con i file e degli accessi degli utenti. Tieni traccia di chi ha effettuato l'accesso, caricato o modificato file, garantendoti un controllo totale e assicurando la sicurezza dei dati all'interno del tuo team."
-      }
-    ]
+    "scrollableSection": {
+      "imagesPathname": [
+        "internxt_b2b_feature1",
+        "internxt_b2b_feature2",
+        "internxt_b2b_feature3",
+        "internxt_b2b_feature4",
+        "internxt_b2b_feature5"
+      ],
+      "titles": [
+        "Gestisci la tua organizzazione",
+        "Condivisione sicura dei file tra reparti",
+        "Gestione delle sessioni",
+        "Allocazione flessibile dello spazio di archiviazione",
+        "Registri di Accesso"
+      ],
+      "descriptions": [
+        "Internxt consente alle aziende di gestire i membri della tua organizzazione, personalizzare gli spazi di lavoro e gestire la fatturazione e i pagamenti del tuo account. Passa facilmente tra i tuoi account aziendali e personali Internxt per ottimizzare la produttività e l'organizzazione dei file.",
+        "L'archiviazione cloud sicura include funzionalità di condivisione dei file sicura all'interno dei diversi reparti per collaborare in sicurezza in team. Proteggi con password e limita l'accesso ai file per inviare file confidenziali ai partner, garantendo di mantenere il controllo sulla loro sicurezza.",
+        "L'archiviazione cloud Internxt offre una gestione avanzata delle sessioni, fornendo notifiche di accesso in tempo reale e un monitoraggio dettagliato delle sessioni remote (client, OS, IP, posizione, ultimo tempo di attività). Questa sicurezza di alto livello consente al gestore dell'account di rilevare accessi non autorizzati, gestire le sessioni in modo efficiente e proteggere i dati sensibili.",
+        "Internxt offre al tuo team un'allocazione flessibile dello spazio di archiviazione per aumentare il tuo spazio in base alle tue esigenze. Con i nostri piani, puoi aggiungere utenti, allocare lo spazio di archiviazione in base alle necessità e aumentare la capacità se necessario, garantendo efficienza dei costi, scalabilità e utilizzo ottimale delle risorse.",
+        "Monitora facilmente l'attività del tuo team con un registro completo delle attività, che offre una visione chiara delle interazioni con i file e degli accessi degli utenti. Tieni traccia di chi ha effettuato l'accesso, caricato o modificato file, garantendoti un controllo totale e assicurando la sicurezza dei dati all'interno del tuo team."
+      ]
+    }
   },
   "PriceTable": {
     "planTitles": {
@@ -73,6 +69,12 @@
       "lifetime": "A vita",
       "business": "Azienda"
     },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1GB di archiviazione cloud crittografata gratuitamente",
+      "mobileDescription": "Ottieni fino a 1GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato",
+      "cta": "Seleziona piano"
+    },
     "features": {
       "endToEnd": "Crittografia end-to-end",
       "openSource": "Open-source e verificato",
@@ -83,35 +85,28 @@
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
-      "ultimate": "5TB"
+      "ultimate": "5TB",
+      "standard": "1TB",
+      "pro": "2TB"
     }
   },
   "WhyChooseInternxt": {
-    "banner": {
-      "title": "Unisciti all'archiviazione cloud più sicura per le aziende",
-      "description": "I piani aziendali di Internxt offrono una sicurezza e una privacy dei dati senza pari.",
-      "cta": "Scegli un piano"
-    },
     "title": "Perché scegliere Internxt?",
     "description": "La nostra soluzione di archiviazione cloud è progettata per tutti, offrendo una suite di prodotti sicura, facile da comprendere e da utilizzare, anche se non sei un esperto di tecnologia. Internxt fornisce un'archiviazione cloud crittografata potente ma intuitiva, perfetta per l'uso quotidiano in vari settori.",
-    "cards": [
-      {
-        "title": "Conforme al GDPR",
-        "description": "Il Regolamento Generale sulla Protezione dei Dati (GDPR) e altre leggi europee sulla privacy impongono una protezione rigorosa dei dati. Seguendo queste leggi, Internxt adotta tutte le misure per proteggere i dati della tua azienda."
-      },
-      {
-        "title": "Accesso zero, crittografia massima",
-        "description": "La crittografia end-to-end protegge i tuoi file crittografando tutto sul tuo dispositivo. Nessuno, nemmeno Internxt, può vedere i tuoi file. In caso di violazione dei dati, i pirati informatici non possono decrittografare e rubare i dati della tua azienda."
-      },
-      {
-        "title": "Tu controlli i tuoi dati",
-        "description": "A differenza di Google Drive, Dropbox e OneDrive, Internxt non ha tracker e non condivide mai i dati con terze parti. I dati della tua azienda rimangono privati e protetti con le misure di sicurezza massime disponibili."
-      },
-      {
-        "title": "100% trasparente e sicuro",
-        "description": "Tutti i nostri prodotti sono costruiti utilizzando codice open-source. Il codice che utilizziamo per proteggere i dati è disponibile per chiunque possa ispezionarlo. Non abbiamo niente da nascondere tranne i tuoi dati."
-      }
-    ]
+    "scrollableSection": {
+      "titles": [
+        "Conforme al GDPR",
+        "Accesso zero, crittografia massima",
+        "Tu controlli i tuoi dati",
+        "100% trasparente e sicuro"
+      ],
+      "descriptions": [
+        "Il Regolamento Generale sulla Protezione dei Dati (GDPR) e altre leggi europee sulla privacy impongono una protezione rigorosa dei dati. Seguendo queste leggi, Internxt adotta tutte le misure per proteggere i dati della tua azienda.",
+        "La crittografia end-to-end protegge i tuoi file crittografando tutto sul tuo dispositivo. Nessuno, nemmeno Internxt, può vedere i tuoi file. In caso di violazione dei dati, i pirati informatici non possono decrittografare e rubare i dati della tua azienda.",
+        "A differenza di Google Drive, Dropbox e OneDrive, Internxt non ha tracker e non condivide mai i dati con terze parti. I dati della tua azienda rimangono privati e protetti con le misure di sicurezza massime disponibili.",
+        "Tutti i nostri prodotti sono costruiti utilizzando codice open-source. Il codice che utilizziamo per proteggere i dati è disponibile per chiunque possa ispezionarlo. Non abbiamo niente da nascondere tranne i tuoi dati."
+      ]
+    }
   },
   "EncryptedCloudSolution": {
     "title": "Soluzioni cloud crittografate per la tua azienda",
@@ -190,7 +185,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contatta vendite",
+    "title": "Contattaci",
     "description": "Compila il modulo di contatto e il team ti contatterà a breve.",
     "form": {
       "name": "Nome completo",
@@ -211,12 +206,18 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "Come possiamo aiutarti?",
-      "howWeCanHelpPlaceHolder": "Inserisci qui il tuo messaggio...",
+      "howWeCanHelp": "Come possiamo aiutarti? (Opzionale)",
+      "howWeCanHelpPlaceHolder": "Raccontaci di più sui bisogni della tua azienda",
       "cta": "Invia messaggio",
       "ctaSending": "Invio...",
       "successMessage": "Il tuo messaggio è stato inviato con successo.",
       "errorMessage": "Si è verificato un errore. Per favore riprova."
     }
+  },
+  "CtaSection": {
+    "title": "Unisciti all'archiviazione cloud più sicura per le aziende",
+    "description": "I piani aziendali di Internxt offrono una sicurezza e una privacy dei dati senza pari",
+    "cta": "Seleziona piano",
+    "contactUs": "Contattaci"
   }
 }

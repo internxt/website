@@ -235,7 +235,7 @@ export const PriceCard = ({
         ) : null}
         <div
           className={`flex h-[520px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
-            isBusiness ? 'h-[560px] lg:h-[520px]' : 'h-[520px] lg:h-[485px]'
+            isBusiness ? 'h-min lg:h-[520px]' : 'h-[520px] lg:h-[485px]'
           } lg:py-6`}
         >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

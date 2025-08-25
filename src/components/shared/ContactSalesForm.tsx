@@ -88,8 +88,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   return (
     <section className="mt-6 overflow-hidden px-8 lg:px-0">
       <div className="flex flex-col items-center gap-6 text-center">
-        <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
-        <h3 className="max-w-[774px] px-10 text-lg text-gray-80 lg:px-0" id="contactSales">
+        <h2 className="text-3xl font-semibold leading-tight text-gray-100 lg:text-5xl">{textContent.title}</h2>
+        <h3 className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">
           {textContent.description}
         </h3>
       </div>

@@ -140,13 +140,13 @@ export const BusinessPage = ({
                 <p className="w-[250px] text-base font-normal leading-tight text-gray-55 lg:w-[458px]  lg:text-center lg:text-xl">
                   {textContent.CtaSection.description}
                 </p>
-                <div className="flex w-[300px] flex-row justify-center gap-8 lg:w-[458px]">
-                  <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
+                <div className="flex w-[300px] flex-row justify-center gap-4 lg:w-[458px] lg:gap-8">
+                  <Button text={textContent.CtaSection.cta} onClick={onButtonClick} className="w-1/2" />
                   <Button
-                    className="border border-primary bg-transparent"
+                    className="w-1/2 border border-primary bg-transparent"
                     textColor="text-primary"
                     hoverColor="hover:bg-transparent/20"
-                    text={textContent.HeroSection.cta2}
+                    text={textContent.CtaSection.contactUs}
                     onClick={scrollToTop}
                   />
                 </div>

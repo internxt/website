@@ -33,33 +33,23 @@
   "WhatCanWeDo": {
     "title": "Internxt 能为您做什么？",
     "description": "使用我们的企业安全云存储优化您的组织文件管理、安全和隐私。",
-    "cards": [
-      {
-        "imagePathname": "internxt_b2b_feature1",
-        "selectorTab": "管理您的组织",
-        "description": "Internxt 使企业能够管理组织成员、自定义工作区并管理账户计费和付款。轻松切换您的 Internxt 商业和个人账户以优化生产力和文件组织。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature2",
-        "selectorTab": "部门间的安全文件共享",
-        "description": "安全云存储包括在不同部门之间进行安全文件共享的功能，以便团队安全协作。通过密码保护和限制文件访问来发送机密文件给合作伙伴，确保您对其安全性保持控制。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature3",
-        "selectorTab": "会话管理",
-        "description": "Internxt 云存储提供高级会话管理，提供实时登录通知和详细的远程会话监控（客户端、操作系统、IP、位置、最后活跃时间）。这种高级别的安全性使账户管理者能够检测未授权访问、有效管理会话并保护敏感数据。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature4",
-        "selectorTab": "灵活的存储分配",
-        "description": "Internxt 为您的团队提供灵活的存储分配，以根据您的需要升级存储。通过我们的计划，您可以添加用户，根据需要分配存储，并在必要时增加容量，确保成本效益、可扩展性和资源的最佳利用。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature5",
-        "selectorTab": "访问日志",
-        "description": "通过完整的活动日志轻松监控团队活动，提供文件交互和用户访问的清晰视图。跟踪谁已登录、上传或修改了文件，确保您对团队数据的完全控制，保障数据安全。"
-      }
-    ]
+    "scrollableSection": {
+      "imagesPathname": [
+        "internxt_b2b_feature1",
+        "internxt_b2b_feature2",
+        "internxt_b2b_feature3",
+        "internxt_b2b_feature4",
+        "internxt_b2b_feature5"
+      ],
+      "titles": ["管理您的组织", "部门间的安全文件共享", "会话管理", "灵活的存储分配", "访问日志"],
+      "descriptions": [
+        "Internxt 使企业能够管理组织成员、自定义工作区并管理账户计费和付款。轻松切换您的 Internxt 商业和个人账户以优化生产力和文件组织。",
+        "安全云存储包括在不同部门之间进行安全文件共享的功能，以便团队安全协作。通过密码保护和限制文件访问来发送机密文件给合作伙伴，确保您对其安全性保持控制。",
+        "Internxt 云存储提供高级会话管理，提供实时登录通知和详细的远程会话监控（客户端、操作系统、IP、位置、最后活跃时间）。这种高级别的安全性使账户管理者能够检测未授权访问、有效管理会话并保护敏感数据。",
+        "Internxt 为您的团队提供灵活的存储分配，以根据您的需要升级存储。通过我们的计划，您可以添加用户，根据需要分配存储，并在必要时增加容量，确保成本效益、可扩展性和资源的最佳利用。",
+        "通过完整的活动日志轻松监控团队活动，提供文件交互和用户访问的清晰视图。跟踪谁已登录、上传或修改了文件，确保您对团队数据的完全控制，保障数据安全。"
+      ]
+    }
   },
   "PriceTable": {
     "planTitles": {
@@ -73,6 +63,12 @@
       "lifetime": "终身",
       "business": "企业"
     },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得 1GB 加密云存储",
+      "mobileDescription": "获得高达 1GB 的加密云存储，享受我们的私人生态系统",
+      "cta": "选择计划"
+    },
     "features": {
       "endToEnd": "端到端加密",
       "openSource": "开源并已审核",
@@ -83,35 +79,23 @@
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
-      "ultimate": "5TB"
+      "ultimate": "5TB",
+      "standard": "1TB",
+      "pro": "2TB"
     }
   },
   "WhyChooseInternxt": {
-    "banner": {
-      "title": "加入最安全的企业云存储",
-      "description": "Internxt 的企业计划提供无与伦比的数据安全和隐私保护。",
-      "cta": "选择计划"
-    },
     "title": "为什么选择 Internxt？",
     "description": "我们的云存储解决方案适合所有人，提供一个安全的产品套件，易于理解和使用，即使您不是技术专家。Internxt 提供强大但直观的加密云存储，完美适用于各行业的日常使用。",
-    "cards": [
-      {
-        "title": "符合 GDPR",
-        "description": "《通用数据保护条例》（GDPR）和其他欧洲隐私法律强制严格的数据保护。Internxt 遵循这些法律，采取一切措施保护您的企业数据。"
-      },
-      {
-        "title": "零访问，最大加密",
-        "description": "端到端加密通过加密设备上的所有内容来保护您的文件。没有人，甚至 Internxt 都无法查看您的文件。在数据泄露的极不可能事件中，黑客无法解密和窃取您的企业数据。"
-      },
-      {
-        "title": "您掌控您的数据",
-        "description": "与 Google Drive、Dropbox 和 OneDrive 不同，Internxt 没有追踪器，且从不与第三方共享数据。您的企业数据保持私密并受到最高安全措施的保护。"
-      },
-      {
-        "title": "100% 透明和安全",
-        "description": "我们所有的产品都是使用开源代码构建的。我们用来保护数据的代码对所有人开放。我们没有什么可以隐藏，除了您的数据。"
-      }
-    ]
+    "scrollableSection": {
+      "titles": ["符合 GDPR", "零访问，最大加密", "您掌控您的数据", "100% 透明和安全"],
+      "descriptions": [
+        "《通用数据保护条例》（GDPR）和其他欧洲隐私法律强制严格的数据保护。Internxt 遵循这些法律，采取一切措施保护您的企业数据。",
+        "端到端加密通过加密设备上的所有内容来保护您的文件。没有人，甚至 Internxt 都无法查看您的文件。在数据泄露的极不可能事件中，黑客无法解密和窃取您的企业数据。",
+        "与 Google Drive、Dropbox 和 OneDrive 不同，Internxt 没有追踪器，且从不与第三方共享数据。您的企业数据保持私密并受到最高安全措施的保护。",
+        "我们所有的产品都是使用开源代码构建的。我们用来保护数据的代码对所有人开放。我们没有什么可以隐藏，除了您的数据。"
+      ]
+    }
   },
   "EncryptedCloudSolution": {
     "title": "为您的企业提供加密的云解决方案",
@@ -190,7 +174,7 @@
     ]
   },
   "ContactSales": {
-    "title": "联系销售",
+    "title": "联系我们",
     "description": "填写联系表格，团队将尽快与您联系。",
     "form": {
       "name": "全名",
@@ -211,12 +195,18 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "我们如何帮助您？",
-      "howWeCanHelpPlaceHolder": "请告诉我们您的需求",
+      "howWeCanHelp": "我们如何帮助您？ (可选)",
+      "howWeCanHelpPlaceHolder": "告诉我们更多关于您的业务需求",
       "cta": "发送消息",
       "ctaSending": "发送中...",
       "successMessage": "您的消息已成功发送。",
       "errorMessage": "发生错误。请再试一次。"
     }
+  },
+  "CtaSection": {
+    "title": "加入最安全的企业云存储",
+    "description": "Internxt 的企业计划提供无与伦比的数据安全和隐私保护",
+    "cta": "选择计划",
+    "contactUs": "联系我们"
   }
 }
