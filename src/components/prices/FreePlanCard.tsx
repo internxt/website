@@ -6,7 +6,7 @@ interface FreePlanCardProps {
 
 const FreePlanCard = ({ textContent }: FreePlanCardProps): JSX.Element => {
   const { openDialog } = useGlobalDialog();
-  console.log('Tete', textContent);
+
   return (
     <>
       <div className="hidden h-[156px] w-full flex-col items-center justify-center gap-3 rounded-16 border border-gray-10 bg-white  text-center md:px-40 lg:flex lg:h-[156px] lg:px-56 xl:px-32">

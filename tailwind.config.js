@@ -14,6 +14,7 @@ module.exports = {
       black: 'rgb(0,0,0)',
       white: 'rgb(255,255,255)',
       'white-summer': 'rgb(239, 239, 239, 0.6)',
+      'white-95': 'rgb(250,250,250)',
       'white-summer-2': 'rgb(255, 255, 255, 0.3)',
       // NEW DESIGN SYSTEM
       primary: 'rgb(0,102,255)',
@@ -94,6 +95,7 @@ module.exports = {
         40: 'rgb(120,169,255)',
         50: 'rgb(69,137,255)',
         60: 'rgb(15,98,254)',
+        62: 'rgb(14,79,178,1)',
         65: 'rgb(0,102,255, 0.1)',
         70: 'rgb(0,67,206)',
         80: 'rgb(0,45,156)',

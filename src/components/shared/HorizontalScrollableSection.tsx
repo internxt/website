@@ -1,17 +1,30 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { getImage } from '@/lib/getImage';
+import Image from 'next/image';
 
 interface HorizontalScrollableSectionProps {
   textContent: Record<string, any>;
   bgColor?: string;
+  redirection?: boolean;
+  containerDecoration?: string;
+  cardDecoration?: boolean;
+  bgGardient?: string;
+  bgColorCard?: string;
 }
 export default function HorizontalScrollableSection({
   textContent,
   bgColor = 'bg-white',
+  redirection = false,
+  containerDecoration,
+  cardDecoration = false,
+  bgGardient,
+  bgColorCard,
 }: HorizontalScrollableSectionProps) {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions;
+  const cardImages = textContent?.scrollableSection?.imagesPathname || [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -21,6 +34,10 @@ export default function HorizontalScrollableSection({
   const gap = 32;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
+  const hasImages = Array.isArray(cardImages) && cardImages.length > 0;
+
+  const sectionHeight = hasImages ? 'lg:h-[1000px]' : 'lg:h-[580px]';
+  const innerHeight = hasImages ? 'lg:h-[1000px]' : 'lg:h-[620px]';
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -76,35 +93,62 @@ export default function HorizontalScrollableSection({
 
   return (
     <section
-      className={`flex h-min w-full items-center justify-center bg-neutral-17 lg:h-[580px] lg:px-10  lg:py-9 xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} lg:px-10 lg:py-9 xl:px-32 3xl:px-80`}
+      style={{ background: bgGardient }}
     >
-      <div className="mx-8 flex h-min w-[832px] flex-col items-center justify-center gap-8 border-t-[1px] border-neutral-25 lg:h-[620px] lg:justify-between lg:gap-0 lg:py-5">
+      <div
+        className={`${containerDecoration} mx-8 flex h-min w-[832px] flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-between lg:gap-0 lg:py-5`}
+      >
         <p className="w-[320px] pt-10 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-5xl">
           {textContent.title}
         </p>
+
         <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
           {textContent.description}
         </p>
-        <Link
-          href="/privacy"
-          className="flex w-full cursor-pointer flex-row items-start justify-start gap-1  text-base font-medium text-primary  hover:underline"
-        >
-          {textContent.cta}
-          <CaretRight className="h-[24px] w-[24px] text-primary" />
-        </Link>
+
+        {redirection && (
+          <Link
+            href={'/privacy'}
+            className="flex w-full cursor-pointer flex-row items-start justify-start gap-1 text-base font-medium text-primary hover:underline"
+          >
+            {textContent.cta}
+            <CaretRight className="h-[24px] w-[24px] text-primary" />
+          </Link>
+        )}
+
         <div
           ref={scrollContainerRef}
-          className="flex h-min w-[320px] flex-row items-center justify-start gap-8 overflow-hidden scroll-smooth  lg:h-[207px] lg:w-full "
+          className="flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:h-min lg:w-full"
         >
           {cardTitles.map((title, index) => (
             <div
               key={title}
-              className="flex h-min w-[320px] shrink-0 flex-col items-start justify-center gap-6 rounded-16 bg-white p-6 lg:w-[400px]"
+              className={
+                cardDecoration
+                  ? `${bgColorCard} flex h-[207px] w-[320px] shrink-0 flex-col rounded-16 p-6 lg:w-[400px]`
+                  : 'flex h-full w-[320px] shrink-0 flex-col justify-start py-6 lg:w-[400px]'
+              }
             >
-              <div className="flex flex-row gap-4">
-                <p className="text-left text-xl font-medium text-gray-100">{title}</p>
+              <div className="flex flex-col gap-6">
+                {cardImages && cardImages[index] && (
+                  <div className="relative hidden h-[380px] w-[400px] items-end overflow-hidden lg:flex ">
+                    <Image
+                      src={getImage(`/images/business/features/${cardImages[index]}.webp`)}
+                      alt="Internxt B2B Business Solution"
+                      fill
+                      quality={100}
+                      style={{ objectFit: 'contain', objectPosition: 'bottom' }}
+                    />
+                  </div>
+                )}
+
+                <div className="flex flex-row gap-4">
+                  <p className="text-left text-xl font-medium text-gray-100">{title}</p>
+                </div>
+
+                <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
               </div>
-              <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
             </div>
           ))}
         </div>
@@ -114,7 +158,7 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${bgColor} transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >
@@ -123,7 +167,7 @@ export default function HorizontalScrollableSection({
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${bgColor} transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >

@@ -103,7 +103,13 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
         />
 
-        <HorizontalScrollableSection textContent={infoText} bgColor="bg-neutral-17" />
+        <HorizontalScrollableSection
+          textContent={infoText}
+          bgColor="bg-neutral-17"
+          redirection
+          cardDecoration
+          bgColorCard="bg-white"
+        />
 
         <BestStorageSection textContent={textContent.BestStorageSection} />
 

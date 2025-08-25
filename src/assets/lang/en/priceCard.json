@@ -160,7 +160,7 @@
     },
     "business": {
       "1TB": [
-        "1TB storage/user",
+        "1TB zero-knowledge encrypted storage per user",
         "Post-quantum encryption",
         "Ultra fast unlimited VPN (FR, DE, PL)",
         "Antivirus",
@@ -169,13 +169,13 @@
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support",
+        "CLI, WebDav support",
         "Manage account billing & payments",
         "Cleaner ",
         "Dark Web Monitor"
       ],
       "2TB": [
-        "2TB storage/user",
+        "2TB zero-knowledge encrypted storage per user",
         "Post-quantum encryption",
         "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
         "Antivirus",
@@ -184,7 +184,7 @@
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication (2FA)",
-        "CLI, WebDav & Rclone support",
+        "CLI, WebDav, Rclone & NASHHH support",
         "Manage account billing & payments",
         "Cleaner ",
         "Dark Web Monitor",

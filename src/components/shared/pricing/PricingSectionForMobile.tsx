@@ -1,15 +1,14 @@
 import { useEffect } from 'react';
 import { Transition } from '@headlessui/react';
-
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import { PriceCard } from './PriceCard';
-import { CurrencyCircleDollar, HandCoins, Headset, Keyhole, Lifebuoy } from '@phosphor-icons/react';
+import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
-import { OpenSource } from '../icons/OpenSource';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
 import FreePlanCard from '@/components/prices/FreePlanCard';
+import { SwitchComponent, SwitchStorageBusinessOptions } from './components/Switch';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -18,7 +17,9 @@ interface PriceTableProps {
   billingFrequency: Interval;
   activeSwitchPlan: SwitchButtonOptions;
   storageSelected: SwitchStorageOptions;
+  businessStorageSelected: SwitchStorageBusinessOptions;
   lang: string;
+  hideFreeCard?: boolean;
   popularPlanBySize?: string;
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
@@ -39,7 +40,10 @@ interface PriceTableProps {
   hideBillingController?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onStorageChange: (storageSelected: string) => void;
+  onBusinessStorageChange: (businessStorageSelected: string) => void;
+  onIndividualSwitchToggled: (interval: Interval) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
 }
 
@@ -49,18 +53,21 @@ export const PricingSectionForMobile = ({
   loadingCards,
   activeSwitchPlan,
   storageSelected,
+  businessStorageSelected,
   billingFrequency,
   businessBillingFrequency,
   decimalDiscount,
-  hidePlanSelectorAndSwitch,
+  hideFreeCard,
   hideBusinessCards,
-  hidePlanSelectorComponent,
   hideBusinessSelector,
   lang,
   popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
   onStorageChange,
+  onBusinessStorageChange,
+  onIndividualSwitchToggled,
+  onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
@@ -72,10 +79,13 @@ export const PricingSectionForMobile = ({
   const banner = require('@/assets/lang/en/banners.json');
 
   const isBusiness = activeSwitchPlan === 'Business';
+  const labelDiscount = '15';
   const showLoadingCards = loadingCards;
   const showBusinessCards = isBusiness && !loadingCards && !!businessBillingFrequency;
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const showIndividualCards = isIndividual && !loadingCards;
+  const showSwitchComponent =
+    (activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals') && !hideBusinessCards;
 
   useEffect(() => {
     if (isBusiness) {
@@ -85,15 +95,15 @@ export const PricingSectionForMobile = ({
     }
   }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
+  const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
+
   const features = [
     {
       icon: Headset,
-
       text: textContent.features.premiumSupport,
     },
     {
       icon: HandCoins,
-
       text: textContent.features.guarantee,
     },
     {
@@ -102,21 +112,46 @@ export const PricingSectionForMobile = ({
     },
   ];
 
+  const switchHandler = (interval: Interval) => {
+    if (isIndividual) {
+      onIndividualSwitchToggled(interval);
+    } else {
+      onBusinessSwitchToggled?.(interval);
+    }
+  };
+
   const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
+  const businessPlanStorage = businessStorageSelected === 'Standard' ? '1TB' : '2TB';
 
   return (
     <>
-      <PlanSelectorForMobile
-        textContent={textContent}
-        activeSwitchPlan={activeSwitchPlan}
-        hideBusinessSelector={hideBusinessSelector}
-        onPlanTypeChange={onPlanTypeChange}
-        onStorageChange={onStorageChange}
-        isMonthly
-        darkMode={darkMode}
-        activeStoragePlan={storageSelected}
-        hideBillingController={hideBillingController}
-      />
+      {activeSwitchPlan !== 'Business' && (
+        <PlanSelectorForMobile
+          textContent={textContent}
+          activeSwitchPlan={activeSwitchPlan}
+          hideBusinessSelector={hideBusinessSelector}
+          onPlanTypeChange={onPlanTypeChange}
+          onStorageChange={onStorageChange}
+          isMonthly
+          darkMode={darkMode}
+          activeStoragePlan={storageSelected}
+          hideBillingController={hideBillingController}
+        />
+      )}
+      {activeSwitchPlan !== 'Lifetime' && (
+        <SwitchComponent
+          textContent={textContent}
+          show={showSwitchComponent}
+          lang={lang}
+          billedFrequency={billingFrequencyForSwitch}
+          handleOnSwitchIsToggled={switchHandler}
+          labelDiscount={labelDiscount}
+          showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
+          darkMode={darkMode}
+          activeStoragePlan={businessStorageSelected}
+          onBusinessStorageChange={onBusinessStorageChange}
+        />
+      )}
 
       <Transition
         show={showLoadingCards}
@@ -152,6 +187,7 @@ export const PricingSectionForMobile = ({
                     label={product.storage}
                     key={product.storage}
                     popular={product.storage === popularPlanBySize}
+                    productCardPlan="individuals"
                     decimalDiscountValue={
                       product.interval === Interval.Lifetime
                         ? decimalDiscount?.lifetime
@@ -176,34 +212,36 @@ export const PricingSectionForMobile = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-start justify-center  justify-items-center gap-8">
+        <div className="content flex w-[329px] flex-col justify-start px-2 lg:justify-end">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (
             <>
               {businessBillingFrequency && products?.business
-                ? products.business[businessBillingFrequency].map((product, cardIndex) => (
-                    <PriceCard
-                      isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
-                      product={product}
-                      monthlyProductPrice={
-                        products.business[Interval.Month].filter(
-                          (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
-                        )[0].price
-                      }
-                      onCheckoutButtonClicked={onCheckoutButtonClicked}
-                      productCardPlan="business"
-                      label={product.storage}
-                      key={product.storage}
-                      popular={product.storage === '2TB'}
-                      decimalDiscountValue={decimalDiscount?.business}
-                      isFamilyPage={isFamilyPage}
-                      lang={lang}
-                      darkMode={darkMode}
-                      showPromo={showPromo}
-                      cardIndex={cardIndex}
-                    />
-                  ))
+                ? products.business[businessBillingFrequency]
+                    .filter((product) => product.storage === businessPlanStorage)
+                    .map((product, cardIndex) => (
+                      <PriceCard
+                        isCheckoutForLifetime={businessBillingFrequency === Interval.Lifetime}
+                        product={product}
+                        monthlyProductPrice={
+                          products.business[Interval.Month].filter(
+                            (monthlyPRoduct) => monthlyPRoduct.storage === product.storage,
+                          )[0].price
+                        }
+                        onCheckoutButtonClicked={onCheckoutButtonClicked}
+                        productCardPlan="business"
+                        label={product.storage}
+                        key={product.storage}
+                        popular={product.storage === '2TB'}
+                        decimalDiscountValue={decimalDiscount?.business}
+                        isFamilyPage={isFamilyPage}
+                        lang={lang}
+                        darkMode={darkMode}
+                        showPromo={showPromo}
+                        cardIndex={cardIndex}
+                      />
+                    ))
                 : undefined}
             </>
           )}
@@ -225,7 +263,7 @@ export const PricingSectionForMobile = ({
         </div>
       )}
 
-      <FreePlanCard textContent={textContent.freePlanCard} />
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
     </>
   );
 };

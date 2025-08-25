@@ -155,7 +155,7 @@ export const PriceCard = ({
 
       <div
         className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[939px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
+          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
         } rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
@@ -172,7 +172,7 @@ export const PriceCard = ({
               </div>
               <div className="flex h-[29px] w-full flex-row items-center justify-center gap-2  lg:h-[43px] ">
                 <span className="flex h-full flex-row items-end gap-1 ">
-                  <p className="h-[29px] text-base font-semibold text-gray-100 lg:mb-3">{currency}</p>
+                  <p className="lg:mb- h-[29px] text-base font-semibold text-gray-100">{currency}</p>
                   <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
                     {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                   </p>
@@ -234,8 +234,8 @@ export const PriceCard = ({
           </div>
         ) : null}
         <div
-          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
-            isBusiness ? 'lg:h-[520px]' : 'lg:h-[485px]'
+          className={`flex h-[520px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+            isBusiness ? 'h-[560px] lg:h-[520px]' : 'h-[520px] lg:h-[485px]'
           } lg:py-6`}
         >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (

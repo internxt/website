@@ -86,7 +86,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   };
 
   return (
-    <section className="mt-6 overflow-hidden">
+    <section className="mt-6 overflow-hidden px-8 lg:px-0">
       <div className="flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] px-10 text-lg text-gray-80 lg:px-0" id="contactSales">
@@ -95,8 +95,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
       </div>
 
       <div className="flex items-center justify-center py-8 ">
-        <div className="flex w-full max-w-[850px]">
-          <div className="flex-1 rounded-lg bg-gray-1 p-10 text-gray-100">
+        <div className="flex w-[636px]">
+          <div className="flex-1 rounded-32 bg-neutral-17 p-10 text-gray-100">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="flex flex-col lg:flex-row lg:space-x-4">
                 <div className="w-full lg:w-1/2">
@@ -199,8 +199,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
               <div className="flex pt-4">
                 <button
                   type="submit"
-                  className={`w-full rounded-lg px-4 py-2 text-white transition lg:w-1/3 ${
-                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-gray-30'
+                  className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${
+                    isFormValid ? 'bg-primary' : 'cursor-not-allowed bg-primary/40'
                   }`}
                   disabled={!isFormValid || isSubmitting}
                 >

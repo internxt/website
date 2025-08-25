@@ -3,19 +3,13 @@ import { Transition } from '@headlessui/react';
 
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
-import { SwitchComponent } from './components/Switch';
+import { SwitchComponent, SwitchStorageBusinessOptions } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { CurrencyCircleDollar, HandCoins, Headset, Keyhole, Lifebuoy } from '@phosphor-icons/react';
+import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
-import { OpenSource } from '../icons/OpenSource';
-
-const SKELETON_CARDS = {
-  Individuals: 3,
-  Business: 2,
-};
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -25,6 +19,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   popularPlanBySize?: string;
+  businessStorageSelected: SwitchStorageBusinessOptions;
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
@@ -48,6 +43,7 @@ interface PriceTableProps {
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
+  onBusinessStorageChange: (businessStorageSelected: string) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
@@ -67,16 +63,18 @@ export const PricingSection = ({
   hidePlanSelectorComponent,
   hideBusinessSelector,
   hideSwitchSelector,
+  businessStorageSelected,
   lang,
   popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
+  onBusinessStorageChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-  isAnnual,
+
   hideFeatures,
   showPromo,
   isAffiliate,
@@ -149,6 +147,8 @@ export const PricingSection = ({
             labelDiscount={labelDiscount}
             showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
             darkMode={darkMode}
+            activeStoragePlan={businessStorageSelected}
+            onBusinessStorageChange={onBusinessStorageChange}
           />
         )}
       </div>

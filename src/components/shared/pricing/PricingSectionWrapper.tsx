@@ -6,6 +6,7 @@ import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
+import { SwitchStorageBusinessOptions } from './components/Switch';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -23,6 +24,7 @@ interface PricingSectionWrapperProps {
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   startFromStorage?: SwitchStorageOptions;
+  startFromBusinessStorage?: SwitchStorageBusinessOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
   backgroundGradientColor?: string;
@@ -54,9 +56,10 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Month,
+  startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Lifetime',
   startFromStorage = 'Premium',
+  startFromBusinessStorage = 'Pro',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -84,15 +87,18 @@ export const PricingSectionWrapper = ({
   const {
     activeSwitchPlan,
     activeStoragePlan,
+    activeBusinessStoragePlan,
     billingFrequency,
     businessBillingFrequency,
     onPlanTypeChange,
     onStorageChange,
+    onBusinessStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
   } = usePlanSelection(
     startFromPlan,
     startFromStorage,
+    startFromBusinessStorage,
     startIndividualPlansFromInterval,
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
@@ -177,6 +183,8 @@ export const PricingSectionWrapper = ({
           hideFeatures={hideFeatures}
           showPromo={showPromo}
           isAffiliate={isAffiliate}
+          businessStorageSelected={activeBusinessStoragePlan}
+          onBusinessStorageChange={onBusinessStorageChange}
         />
       </div>
       <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
@@ -202,6 +210,7 @@ export const PricingSectionWrapper = ({
           activeSwitchPlan={activeSwitchPlan}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           onStorageChange={onStorageChange}
+          onBusinessStorageChange={onBusinessStorageChange}
           onPlanTypeChange={onPlanTypeChange}
           onBusinessPlansSelected={onBusinessPlansSelected}
           darkMode={darkMode}
@@ -211,6 +220,9 @@ export const PricingSectionWrapper = ({
           isAffiliate={isAffiliate}
           storageSelected={activeStoragePlan}
           hideBillingController={hideBillingController}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
+          businessStorageSelected={activeBusinessStoragePlan}
         />
       </div>
     </section>
