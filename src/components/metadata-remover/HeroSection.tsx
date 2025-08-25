@@ -454,7 +454,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                           <div className="flex flex-col rounded-lg bg-primary/7 px-4 py-2">
                             <p className="text-sm font-medium text-gray-80">{textContent.maxFileSize.description}</p>
                           </div>
-                          <p className="text-3xl font-semibold">{textContent.dropFile.line1}</p>
+                          <p className="text-30 font-semibold">{textContent.dropFile.line1}</p>
                           <button
                             type="button"
                             className="flex h-12 flex-row items-center rounded-lg bg-primary px-6 text-lg font-medium text-white transition duration-150 ease-out active:scale-98 group-hover:bg-primary group-hover:text-white sm:h-10 sm:px-5 sm:text-base"
