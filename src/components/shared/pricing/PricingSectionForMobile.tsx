@@ -264,7 +264,7 @@ export const PricingSectionForMobile = ({
       )}
 
       {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
-      <div className="h-[1px] w-full bg-neutral-25  />
+      <div className="h-[1px] w-full bg-neutral-25 " />
     </>
   );
 };
