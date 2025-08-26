@@ -148,6 +148,7 @@ export enum PromoCodeName {
   FifthAnniversary = 'INTERNXT5',
   Welcome = 'WELCOME',
   AchoEsGratiss = 'achoesgratiss',
+  Mega87 = 'MEGA87',
 }
 
 export interface PromoCodeProps {

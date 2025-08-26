@@ -25,6 +25,7 @@ interface PricingSectionWrapperProps {
   startFromStorage?: SwitchStorageOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
+  bgGradientColor?: string;
   isFamilyPage?: boolean;
   darkMode?: boolean;
   hideTitle?: boolean;
@@ -60,6 +61,7 @@ export const PricingSectionWrapper = ({
   hideBusinessCards,
   hidePlanSelectorComponent,
   backgroundColorComponent = 'bg-white',
+  bgGradientColor,
   lifetimeCoupons,
   hideSwitchSelector,
   popularPlanBySize,
@@ -124,7 +126,7 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={` overflow-hidden px-5 py-20  ${backgroundColorComponent}`} id="billingButtons">
+    <section className={` overflow-hidden px-5 py-20 `} id="billingButtons" style={{ background: bgGradientColor }}>
       <div className="hidden flex-col items-center gap-10 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
