@@ -25,20 +25,10 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = [
-  'bevalk',
-  'hacksviss',
-  'securiters',
-  'exclusiveoffer',
-  'valencia',
-  'tokinprivacy',
-  'achoesgratiss',
-  'afs',
-];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'exclusiveoffer', 'valencia', 'tokinprivacy', 'achoesgratiss', 'afs'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
-  hacksviss: PromoCodeName.Hacksviss,
   securiters: PromoCodeName.Securiters,
   exclusiveoffer: PromoCodeName.Exclusive85,
   valencia: PromoCodeName.ValenciaCF,
