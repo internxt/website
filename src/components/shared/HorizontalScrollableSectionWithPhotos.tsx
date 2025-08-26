@@ -80,7 +80,7 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
 
   return (
     <section
-      className="flex h-[860px] w-full flex-col items-center justify-center gap-12 bg-red py-20 lg:h-min"
+      className="flex h-[760px] w-full flex-col items-center justify-center gap-12 bg-red py-20 lg:h-min"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-min w-[832px] flex-col items-center gap-8 lg:gap-12">

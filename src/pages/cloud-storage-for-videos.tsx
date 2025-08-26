@@ -14,7 +14,7 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HowItWorksSection from '@/components/private-cloud-storage-for-videos/HowItWorksSection';
 import SecureAndManageSection from '@/components/private-cloud-storage-for-videos/Secure&Manage';
-import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
 
 interface CloudStorageForVideosProps {
@@ -82,7 +82,7 @@ const CloudStorageForVideos = ({
         textContent={textContent.cta}
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <p className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</p>
+            <p className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta.title}</p>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta.subtitle}</p>
           </div>
         }
@@ -102,7 +102,7 @@ const CloudStorageForVideos = ({
         textContent={textContent.cta}
         customText={
           <div className="w-[302px] items-center justify-center  text-center lg:w-[832px]">
-            <p className="text-2xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</p>
+            <p className="text-xl font-semibold leading-tight xl:text-4xl">{textContent.cta2.title}</p>
             <p className="text-base font-normal text-gray-55 lg:text-xl">{textContent.cta2.subtitle}</p>
           </div>
         }
