@@ -93,7 +93,8 @@
         "privateCloud": "Решение для частного облака",
         "cloudBakcup": "Решение для облачного резерва",
         "GDPRCloud": "Хранение GDPR",
-        "cloudPhotos": "Фотографии в облаке"
+        "cloudPhotos": "Фотографии в облаке",
+        "cloudVideos": "云端视频"
       }
     }
   },

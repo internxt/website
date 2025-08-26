@@ -259,5 +259,10 @@
     "id": "compress-zip",
     "title": "Online ZIP-Komprimierer - Internxt",
     "description": "Ein Online-ZIP-Komprimierer reduziert die Größe Ihrer ZIP-Dateien, um Speicherplatz zu sparen und Dateien ohne Größenbeschränkungen zu teilen und hochzuladen."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - Cloud-Speicher für Videodateien",
+    "description": "Internxt bietet Cloud-Speicher für Videodateien zum Speichern von HD-, 4K- und 8K-Videos, die mit Post-Quanten-Verschlüsselung für maximale Privatsphäre gesichert sind."
   }
 ]

@@ -33,7 +33,7 @@ const CloudStorageForVideos = ({
   footerLang,
   lang,
 }: CloudStorageForVideosProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-private-cloud-storage-solutions');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'cloud-for-videos');
 
   return (
     <Layout

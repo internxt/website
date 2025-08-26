@@ -468,5 +468,10 @@
     "id": "compress-zip",
     "title": "Online ZIP Compressor - Internxt",
     "description": "An online ZIP compressor reduces the size of your ZIP files to save storage, share, and upload without worrying about file size limits."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": " Internxt - Cloud Storage for Video Files",
+    "description": "Internxt offers cloud storage for video files to store HD, 4K, and 8K videos which are secured with post-quantum encryption for maximum privacy."
   }
 ]
