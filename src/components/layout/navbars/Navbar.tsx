@@ -349,6 +349,12 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                                     <p>{props.textContent.products.antivirus}</p>
                                   </div>
                                 </Link>
+
+                                <Link href="/cleaner" locale={props.lang} passHref legacyBehavior>
+                                  <div className="flex flex-row space-x-2">
+                                    <p>{props.textContent.products.cleaner}</p>
+                                  </div>
+                                </Link>
                               </Disclosure.Panel>
                             </Transition>
                           </>

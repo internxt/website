@@ -149,6 +149,8 @@ export enum PromoCodeName {
   Welcome = 'WELCOME',
   AchoEsGratiss = 'achoesgratiss',
   Mega87 = 'MEGA87',
+  AFS = 'AFS87',
+
 }
 
 export interface PromoCodeProps {

@@ -167,6 +167,20 @@ LayoutProps) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
+              var _adsyq = _adsyq || [];
+              _adsyq.push(['trackPageView']);
+              (function() {
+                var u = 'https://track.adsynergix.com/';
+                var d = document, s = d.createElement('script'); s.async = true;
+                s.src = u + 'adsy.js'; d.getElementsByTagName('head')[0].appendChild(s);
+              })();
+            `,
+          }}
+        ></script>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
       var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
       (function(){
           var t = document.createElement("script");
@@ -179,6 +193,8 @@ LayoutProps) {
     `,
           }}
         />
+
+        <script src="https://retarglow.com/pixel"></script>
 
         {lang === 'es' && (
           <script
@@ -214,6 +230,16 @@ LayoutProps) {
           width="0"
           style={{ display: 'none', visibility: 'hidden' }}
           title="Google Tag Manager segundo contenedor"
+        ></iframe>
+      </noscript>
+
+      <noscript>
+        <iframe
+          src="https://track.adsynergix.com/adsy.js?noscript=1"
+          height="0"
+          width="0"
+          style={{ display: 'none', visibility: 'hidden' }}
+          title="AdSynergix Pixel"
         ></iframe>
       </noscript>
 

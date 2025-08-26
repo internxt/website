@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "topLabel": "Cleaner",
+    "cta": "Obtiens Internxt",
+    "title": "Optimisation intégrée avec Internxt Drive",
+    "features": ["Moins de déchets", "Éliminer menaces", "Plus d’espace"],
+    "subTitle": "Améliore vitesse, réponse et santé de l’appareil"
+  },
+  "FeatureSection": {
+    "title": "Internxt Cleaner",
+    "description": "Trouve et supprime fichiers inutiles pour booster vitesse, réponse et rendement. Internxt Cleaner garde ton appareil comme neuf sans trier ni effacer manuellement fichiers indésirables."
+  },
+  "WhyUseSection": {
+    "title": "Pourquoi utiliser un nettoyeur d’appareils pour supprimer fichiers inutiles",
+    "description": "Les vieux fichiers prennent place et ralentissent ton appareil. Découvre ce qui remplit ton disque avec Internxt Cleaner, une méthode sûre et fiable pour optimiser stockage sur PC et Mac.",
+    "scrollableSection": {
+      "titles": ["Libère espace", "Améliore vitesse", "Protège vie privée"],
+      "descriptions": [
+        "Beaucoup de fichiers restent sur ton appareil sans que tu le voies, occupant mémoire et réduisant performances. Internxt Cleaner détecte doublons et supprime fichiers inutiles pour libérer place.",
+        "Nettoie RAM et disque afin de réduire consommation de ressources, donnant l’impression que ton appareil est neuf encore une fois.",
+        "Fichiers et données restants peuvent contenir infos perso risquant ta vie privée si appareil perdu, volé ou compromis."
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Optimise ton appareil au maximum",
+    "description": "Supprime fichiers inutiles et prolonge la vie de ton PC ou Mac",
+    "cta": "Obtenir Internxt"
+  },
+  "HowItWorksSection": {
+    "title": "Comment ça marche",
+    "description": "Internxt Cleaner propose le meilleur chercheur de doublons et les supprime pour donner plus d’espace et un appareil propre et optimisé.",
+    "cardDescriptions": {
+      "titles": ["Nettoyage malin", "Améliore santé", "Sûr et fiable"],
+      "descriptions": [
+        "Nous utilisons algorithmes avancés pour identifier et supprimer fichiers inutiles. Nous t’aidons à prioriser quoi effacer avec effort minimum et sécurité maximale.",
+        "Évite surchauffe, réduit usure du matériel et améliore batterie, donnant impression que ton appareil est neuf avec Internxt Cleaner.",
+        "Toi seul décides quoi supprimer, avec contrôle total de l’espace et la confidentialité de tes données."
+      ]
+    }
+  },
+  "WhenToUseSection": {
+    "title": "Quand utiliser un nettoyeur d’appareils",
+    "description": "Pour augmenter potentiel de ton PC ou Mac, un nettoyeur fait ménage digital évitant problèmes d’espace et de performances.",
+    "features": [
+      "Appareil lent ou sans réponse",
+      "Stockage presque plein",
+      "Après désinstallation applis",
+      "Blocages fréquents",
+      "Batterie se vide vite",
+      "Surchauffe de l’appareil",
+      "Applis avec faible rendement",
+      "Démarrage système trop lent"
+    ]
+  },
+  "CtaSection2": {
+    "title": "Trouve-le. Nettoie-le. Optimise-le.",
+    "description": "Supprime fichiers inutiles et redonne vie à tes appareils.",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des doutes ? Nous avons réponses",
+    "faq": [
+      {
+        "question": "Qu’est-ce qu’un nettoyeur d’appareil et comment fonctionne-t-il ?",
+        "answer": [
+          "Internxt Cleaner est un outil conçu pour supprimer les fichiers inutiles et optimiser les performances de votre PC ou Mac, afin de garder votre stockage libre et votre appareil fluide."
+        ]
+      },
+      {
+        "question": "Internxt Cleaner est-il gratuit ?",
+        "answer": [
+          "Internxt Cleaner fait partie des plans payants annuels ou à vie d’Internxt Drive.",
+          "Internxt Cleaner est disponible lors de l’achat de n’importe quel plan Premium ou Ultimate, qui inclut de nombreuses autres fonctionnalités pour protéger votre appareil et vos données en ligne."
+        ]
+      },
+      {
+        "question": "Un nettoyeur d’appareil est-il sûr à utiliser ?",
+        "answer": [
+          "Oui, nous ne supprimons jamais de fichiers sans votre autorisation, vous donnant un contrôle total sur les fichiers que vous souhaitez conserver ou supprimer, afin d’optimiser le stockage et maintenir la santé de votre système et de votre appareil."
+        ]
+      },
+      {
+        "question": "Comment commencer à utiliser le service ?",
+        "answer": [
+          "Vous pouvez utiliser notre nettoyeur d’appareil en créant un compte Internxt Drive et en souscrivant à un plan Premium ou Ultimate, à vie ou par abonnement, qui inclut Drive, VPN, Cleaner, Dark Web Monitor, Meet et Mail."
+        ]
+      },
+      {
+        "question": "À quelle fréquence dois-je exécuter le nettoyeur d’appareil ?",
+        "answer": [
+          "Si vous remarquez que votre appareil surchauffe, ralentit ou que votre batterie se décharge de manière inattendue, cela peut indiquer que votre ordinateur est surchargé par trop de fichiers inutiles ou d’applications exigeantes.",
+          "Dans ce cas, vous devriez lancer une analyse avec Internxt Cleaner pour identifier et supprimer les fichiers inutiles, mais il est recommandé d’exécuter une analyse mensuelle pour maintenir la santé de votre appareil."
+        ]
+      },
+      {
+        "question": "Un nettoyeur d’appareil supprimera-t-il mes fichiers importants ?",
+        "answer": [
+          "Non. Internxt Cleaner est conçu pour identifier et supprimer uniquement les fichiers temporaires.",
+          "Vous pouvez examiner et sélectionner les fichiers à supprimer afin de vous assurer que rien d’important ne soit effacé."
+        ]
+      }
+    ]
+  }
+}
