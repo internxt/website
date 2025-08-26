@@ -1,0 +1,159 @@
+{
+  "HeroSection": {
+    "title": "Private Cloud für Videodateien",
+    "features": ["Videos privat speichern", "Post-Quanten Verschlüsselung", "Open Source und geprüft"],
+    "subtitle": "Die sicherste Cloud für Videocreator um Videos völlig privat zu speichern.",
+    "cta": "Internxt holen"
+  },
+  "HowToChooseSection": {
+    "title": "Beste Cloud für Videodateien wählen",
+    "description": "Internxt Cleaner bietet besten Duplikat-Finder und Reiniger für extra Platz für wichtige Dinge und sauberes, optimiertes Gerät.",
+    "cardDescriptions": {
+      "titles": ["Kosten", "Sicherheit", "Speicher-Anforderungen"],
+      "descriptions": [
+        "Kostenlose Cloud für Videodateien mag für kleinere Dateien funktionieren, aber viele kostenlose Services haben Beschränkungen, und zusätzliche Features sind kostenpflichtig. Wichtig ist Preise und Features zu vergleichen und zu bestimmen ob diese Pläne Ihre Bedürfnisse erfüllen.\n\nWenn Sie Cloud für große Videodateien wollen, bietet Internxt sichere Cloud, VPN, Antivirus, Mail, und Meet in seinen Plänen. Starten Sie kostenlos oder ab 3€ pro Monat für jährliche oder Lifetime-Pläne, oder speichern Sie Petabytes von Videos mit Internxt S3 Objektspeicher für 7€/TB/Monat.",
+        "Sichere Cloud für Videodateien ist essentiell für individuellen, freiberuflichen, oder Firmengebrauch, da ohne diese Ihr Inhalt gefährdet sein könnte. Videos mit sensiblem, wertvollem, oder proprietärem Inhalt benötigen extreme Sicherheitsmaßnahmen um sicher und privat zu bleiben.\n\nWählen Sie Cloud-Anbieter der keine KI nutzt um Ihren Inhalt zu scannen um seine Modelle zu trainieren, und halten Sie Ihren Inhalt privat durch Anbieter die Zero-Knowledge-Verschlüsselung nutzen um sicherzustellen dass nur Sie Ihre Dateien sehen und darauf zugreifen können.",
+        "Eine Bibliothek großer Videodateien zu speichern kann schnell Ihren Cloud-Speicher aufbrauchen, Sie mit begrenztem Platz für neue Videos zurücklassen oder Sie zwingen alte Dateien zu löschen um Platz für neue Projekte zu schaffen, was möglicherweise nicht machbar ist.\n\nWählen Sie Cloud-Anbieter der es Ihnen erlaubt Ihren Speicher basierend auf Ihren Bedürfnissen zu skalieren. Wenn Sie einfach Ihren Plan upgraden können, müssen Sie sich keine Sorgen machen alle Ihre Videos zu einem anderen Service zu migrieren, und Sie können Ihren Workflow ununterbrochen halten."
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "intro": "Internxt bietet beste Cloud für Videos um Ihre Dateien zu speichern, teilen, und zu sichern. Verhindern Sie dass KI und Big Tech Ihre Videos ohne Ihre Zustimmung nutzen mit unserer Zero-Knowledge Cloud.",
+    "features": {
+      "feature1": {
+        "title": "Support für 4K und 8K Dateien",
+        "description": [
+          "Eine Cloud zu finden die Uploads und Cloud-Speicher für große Videodateien unterstützt kann herausfordernd sein, besonders für 4K und 8K Dateien. Mit Internxt Drive können Sie große Videodateien in die Cloud hochladen für sicheres Teilen oder Backups.",
+          "Wir bieten bis zu 5TB Cloud-Speicher für große Videodateien, genug für etwa 444 Stunden 4K oder 139 Stunden 8K Video. Sie können Ihren Plan jederzeit upgraden, so dass Ihnen nie der Speicher ausgeht."
+        ]
+      },
+      "feature2": {
+        "title": "Schnelle Upload- und Download",
+        "description": [
+          "Dank unserer ultra-schnellen Upload- und Download-Geschwindigkeiten können Sie Zeit sparen beim Verwalten Ihrer Videos ohne sich um lange Wartezeiten beim Zugriff auf Ihren Inhalt zu sorgen.",
+          "Sie müssen sich keine Sorgen um Verzögerungen beim Zugriff auf Ihre Dateien machen, da Sie schnell auf Ihre Dateien zugreifen und sie herunterladen können, so dass Ihre Videos immer da sind wenn Sie sie brauchen."
+        ]
+      },
+      "feature3": {
+        "title": "Sicheres Teilen für Videos",
+        "description": [
+          "Durch die Wahl eines sicheren Video-Datei-Sharing-Services können Sie verhindern dass Ihr Inhalt in falsche Hände gerät und sensible Informationen, wie Metadaten, geleakt werden.",
+          "Mit Internxt Drive können Sie Ihre Videos sicher teilen, da sie durch Post-Quanten-Verschlüsselung geschützt sind. Für zusätzliche Privatsphäre können Sie Passwort-Schutz zu geteilten Dateien hinzufügen um sichere Zusammenarbeit zu gewährleisten."
+        ]
+      }
+    }
+  },
+  "SecureAndManage": {
+    "title": "Sichern und verwalten Sie Ihre Videodateien mit Internxt",
+    "description": "Internxt Drive und S3 Objektspeicher sind gebaut um Ihre Dateien privat zu halten während sie schnellen, flexiblen Zugang und mächtige Tools für die Verwaltung Ihrer Videos bieten.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive ist ein Zero-Knowledge Cloud-Speicher-Anbieter und der erste mit Post-Quanten-Verschlüsselung. Er bietet die sicherste und privateste Cloud für Ihre Videos. Internxt Drive enthält auch VPN, Antivirus, Mail, und Meet, eine komplette Privacy-Suite um sicherzustellen dass Ihre Videos und Daten sicher bleiben.",
+          "Internxt unterstützt auch WebDAV und Rclone und bietet größere Flexibilität beim Verwalten Ihrer Videos. Starten Sie mit der besten Cloud für Videos und wählen Sie aus unseren erschwinglichen jährlichen oder Lifetime-Plänen."
+        ],
+        "cta": "Internxt Drive holen"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "S3 Speicher ist die beste Cloud für Videodateien weil er Dateien so speichert dass sie schnell und einfach zugänglich sind für sofortigen Abruf von Videodateien mit geringer Latenz. Internxt S3 ist eine 100% Hot Cloud-Speicher-Lösung, was bedeutet dass Sie sofort auf Videos zugreifen, sie streamen oder bearbeiten können auf Abruf.",
+          "Internxt S3 ist ein DSGVO-konformes Cloud-Speicher-System mit fortschrittlicher Verschlüsselung um Ihre Dateien sicher und privat zu halten. Unser festes Pay-as-you-go Preismodell von 7€/TB/Monat bedeutet Sie zahlen nur für den Speicher den Sie brauchen mit null Datentransfer-Gebühren."
+        ],
+        "cta": "Internxt S3 holen"
+      }
+    ]
+  },
+  "HorizontalScrollableSection": {
+    "title": "Features von Internxts Cloud-Speicher für Videos",
+    "description": "Teilen, sichern, und schützen Sie Ihre Videodateien mit großzügigen Upload-Limits und starkem Ransomware-Schutz dem Sie vertrauen können.",
+    "scrollableSection": {
+      "titles": [
+        "Großzügige Upload-Limits",
+        "Ransomware-Schutz",
+        "Post-Quanten-Kryptographie",
+        "Open Source und geprüft"
+      ],
+      "descriptions": [
+        "Internxt bietet großzügige 40GB Datei-Uploads für bis zu 3.000 Dateien, und Sie können auch große Videodateien von bis zu 10GB mit anderen über passwort-geschützten Link oder E-Mail teilen für totale Privatsphäre und sichere Zusammenarbeit.",
+        "Internxt bietet verschlüsselte Backups für Ihre Dateien, so können Sie eine Kopie Ihrer Videodateien sicher in der Cloud behalten. Da diese Videos verschlüsselt und in mehreren Rechenzentren gesichert sind, können Dateien leicht wiederhergestellt werden bei Datenverlust oder Ransomware-Angriffen.",
+        "Internxt ist der erste Cloud-Speicher für Videodateien mit Zero-Knowledge, Post-Quanten-Kryptographie, der fortschrittlichsten verfügbaren Verschlüsselung um Dateien vor der Bedrohung durch Quantencomputer zu schützen.",
+        "Internxt Drive und alle unsere Services sind Open Source. Unser Code ist auf GitHub verfügbar für jeden zum Verifizieren, Sicherheit überprüfen, und sicherstellen dass es keine Hintertüren gibt die Ihre Daten kompromittieren könnten."
+      ],
+      "imagesPathname": [
+        "/cloud-storage-for-video-files/Generous",
+        "/cloud-storage-for-video-files/Ransomware",
+        "/cloud-storage-for-video-files/PostQuantumEncryption",
+        "/cloud-storage-for-video-files/OpenSourceAndAudited"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Sicherer Cloud-Speicher für Videodateien",
+    "subtitle": "Speichern Sie Stunden von Qualitätsvideo privat",
+    "cta": "Internxt holen"
+  },
+  "cta2": {
+    "title": "Der privateste Cloud-Speicher für Videodateien ",
+    "subtitle": "Geschützt durch Post-Quanten-Verschlüsselung",
+    "cta": "Internxt holen"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Was ist der beste Cloud-Speicher für Videodateien?",
+        "answer": [
+          "Internxt bietet viele Features für Sie zu betrachten als Ihren neuen Cloud-Anbieter für Ihre Videodateien. ",
+          "Es erlaubt große Datei-Uploads, erschwingliche Speicher-Pläne, und unvergleichliche Privatsphäre dank Post-Quanten und Zero-Knowledge Verschlüsselung. ",
+          "Es ist auf allen Plattformen verfügbar, mit WebDAV und Rclone Support verfügbar über die Internxt CLI. ",
+          "Starten Sie ab nur 3€ pro Monat und bekommen Sie den sichersten, privatesten Cloud-Speicher für Ihre Videodateien. "
+        ]
+      },
+      {
+        "question": "Wie viel Speicher brauche ich für meine Videodateien?",
+        "answer": [
+          "Wenn Sie nicht wissen wie viel Cloud-Speicher Sie für Ihre Videos brauchen, für den durchschnittlichen Nutzer sind 200GB meist genug.",
+          "Profis die mit höheren Auflösungen arbeiten, wie 4K oder 8K, benötigen mindestens 1TB.",
+          "Unternehmen die eine große Anzahl von Videodateien hosten müssen profitieren am meisten von Objektspeicher, wie Internxt S3."
+        ]
+      },
+      {
+        "question": "Kann ich große Videodateien zu Internxt Drive hochladen?",
+        "answer": [
+          "Ja, Sie können bis zu 40GB Videodateien mit Internxt Drive über die Web-App hochladen.",
+          "Internxt Drive bietet auch Pläne mit bis zu 5TB, was genug ist um große Videos über die Cloud hochzuladen und zu senden.",
+          "Wenn Sie mehr Speicher brauchen, können Sie einen unserer Lifetime-Pläne kaufen und Ihren Speicher stapeln um zu vermeiden dass Ihnen der Speicher ausgeht."
+        ]
+      },
+      {
+        "question": "Was ist Zero-Knowledge-Verschlüsselung und wie schützt es meine Videos?",
+        "answer": [
+          "Zero-Knowledge-Verschlüsselung bedeutet der Verschlüsselungsprozess und Schlüssel werden auf Ihrem Gerät verwaltet, so dass niemand Ihre Dateien oder Videoinhalte sehen, überwachen oder darauf zugreifen kann.",
+          "Dies unterscheidet sich von Verschlüsselung durch Big Tech Unternehmen weil sie die Schlüssel zu Ihren Dateien halten und verwalten, was die Privatsphäre Ihres Cloud-Speichers begrenzt."
+        ]
+      },
+      {
+        "question": "Bietet Internxt Backup-Optionen für Videodateien?",
+        "answer": [
+          "Ja, Internxt bietet Backup Cloud-Speicher für Videodateien auf allen seinen Essential, Premium, und Ultimate Plänen.",
+          "Sie können Ihre Backups basierend auf Ihren Bedürfnissen planen, helfen versehentlichen Datenverlust zu verhindern, und gegen Ransomware mit unseren verschlüsselten Backups zu schützen."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Finden Sie nicht wonach Sie suchen? Sie können unser Customer Success Team über Live Chat kontaktieren oder eine E-Mail an hello@internxt.com senden"
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal, oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc).",
+          "Sie können auch über PayPal, iDEAL, Sofort, und Kryptowährung bezahlen."
+        ]
+      }
+    ]
+  }
+}

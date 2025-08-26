@@ -1,0 +1,163 @@
+{
+  "HeroSection": {
+    "title": "Almacenar videos en la nube más segura",
+    "features": [
+      "Guarda tus vídeos de forma privada",
+      "Cifrado postcuántico y de conocimiento cero",
+      "Código abierto y auditado"
+    ],
+    "subtitle": "Almacena todos tus videos en la nube más segura y en total privacidad diseñada para creadores de vídeo.",
+    "cta": "Consigue Internxt"
+  },
+  "HowToChooseSection": {
+    "title": "Elegir el mejor almacenamiento en la nube para archivos de vídeo",
+    "description": "Almacenar vídeos en la nube para todos tus archivos de vídeo puede resultar complicado debido a las restricciones de carga, la falta de privacidad o el presupuesto. Descubre qué considerar si estás buscando un proveedor de nube para almacenar tus archivos.",
+    "cardDescriptions": {
+      "titles": ["Coste", "Seguridad", "Requisitos de almacenamiento"],
+      "descriptions": [
+        "El almacenamiento gratuito puede funcionar para archivos pequeños, pero muchos servicios tienen restricciones y funciones de pago. Compara precios y características para encontrar el plan que necesitas.\n\nInternxt ofrece almacenamiento seguro, VPN, Antivirus, Mail y Meet. Desde 3€/mes para planes anuales o de por vida, o S3 por 7€/TB/mes para petabytes de vídeos.",
+        "El almacenamiento seguro es esencial para uso individual, freelance o empresarial. Los vídeos sensibles requieren medidas de seguridad extremas.\n\nElige un proveedor que no use IA para escanear tu contenido y entrenar modelos. Usa cifrado de conocimiento cero para que solo tú puedas acceder a tus archivos.",
+        "Almacenar muchos archivos grandes puede agotar tu espacio rápidamente, limitando nuevos vídeos o forzándote a eliminar archivos antiguos.\n\nElige un proveedor que permita escalar según tus necesidades. Con actualizaciones fáciles, no migras videos a otro servicio y mantienes tu flujo de trabajo."
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "intro": "Internxt ofrece el mejor almacenamiento en la nube para vídeos, para que puedas guardar, compartir y respaldar tus archivos. Evita que la IA y las grandes tecnológicas utilicen tus videos sin tu consentimiento con nuestra nube de conocimiento cero.",
+    "features": {
+      "feature1": {
+        "title": "Compatibilidad con archivos 4K y 8K",
+        "description": [
+          "Para almacenar videos en la nube, es importante encontrar un servicio de almacenamiento en la nube que admita la subida de archivos de vídeo grandes, especialmente para archivos 4K y 8K. Con Internxt Drive, puedes subir archivos de vídeo grandes a la nube para compartirlos de forma segura o crear copias de seguridad.",
+          "Ofrecemos hasta 5 TB de almacenamiento en la nube para archivos de vídeo grandes, suficiente para unas 444 horas de vídeo 4K o 139 horas de vídeo 8K. Puedes ampliar tu plan en cualquier momento para que nunca te quedes sin almacenamiento."
+        ]
+      },
+      "feature2": {
+        "title": "Carga y descarga veloz",
+        "description": [
+          "Gracias a nuestras velocidades de carga y descarga ultrarrápidas, puedes ahorrar tiempo al almacenar y administrar tus videos en la nube sin preocuparte por largas esperas para acceder a tu contenido.",
+          "No tienes que preocuparte por retrasos al acceder a tus archivos en la nube, ya que puedes acceder a ellos y descargarlos rápidamente, por lo que tus videos siempre estarán ahí cuando los necesites."
+        ]
+      },
+      "feature3": {
+        "title": "Compartir vídeos de forma segura",
+        "description": [
+          "Al elegir un servicio de nube segura para compartir archivos de vídeo, puedes evitar que tu contenido caiga en las manos equivocadas y que se filtre información confidencial, como tus metadatos.",
+          "Con Internxt Drive, puedes compartir tus vídeos de forma segura, ya que están protegidos por cifrado postcuántico. Para mayor privacidad, puedes agregar protección con contraseña a los archivos compartidos para garantizar una colaboración segura y totalmente privada."
+        ]
+      }
+    }
+  },
+  "SecureAndManage": {
+    "title": "Protege y gestiona tus archivos de vídeo con Internxt",
+    "description": "Internxt Drive y el almacenamiento de objetos S3 están diseñados para mantener la privacidad de tus archivos y, al mismo tiempo, ofrecen acceso rápido y flexible a herramientas eficientes para administrar tus videos.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive es un proveedor de almacenamiento en la nube de conocimiento cero y el primero con cifrado postcuántico. Puedes almacenar en la nube más segura y privada para tus videos con Internxt Drive, además de también incluir VPN, Antivirus, Mail, Meet, y mucho más. Creando un paquete de privacidad completo para garantizar que tus vídeos y datos permanezcan seguros.",
+          "Internxt también es compatible con WebDAV y Rclone, lo que ofrece mayor flexibilidad en la gestión de tus vídeos. Comienza con el mejor almacenamiento en la nube para videos y elige entre nuestros asequibles planes anuales o de por vida."
+        ],
+        "cta": "Elige tu plan"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "El almacenamiento S3 es el mejor almacenamiento en la nube para archivos de video porque almacena los archivos de una manera que los hace accesibles rápida y fácilmente para la recuperación inmediata de archivos de video con baja latencia. Internxt S3 es una solución de almacenamiento en la nube 100% activa, lo que significa que puede acceder, transmitir o editar videos instantáneamente a pedido.",
+          "Internxt S3 es un sistema de almacenamiento en la nube compatible con RGPD con cifrado avanzado para mantener tus archivos seguros y privados. Nuestro modelo de precio fijo de pago por uso de 7 €/TB/mes significa que solo pagas por el almacenamiento que necesitas sin tarifas de transferencia de datos."
+        ],
+        "cta": "Internxt S3"
+      }
+    ]
+  },
+  "HorizontalScrollableSection": {
+    "title": "Características del almacenamiento en la nube de Internxt para vídeos",
+    "description": "Comparte, realiza copias de seguridad y protege tus archivos de video con generosos límites de carga y una sólida protección contra ransomware en la que puedes confiar.",
+    "scrollableSection": {
+      "titles": [
+        "Límites de carga casi ilimitados",
+        "Protección ransomware",
+        "Criptografía postcuántica",
+        "Código abierto y auditado"
+      ],
+      "descriptions": [
+        "Internxt ofrece una generosa capacidad de carga de 40 GB para hasta 3000 archivos, y también puedes compartir archivos de vídeo pesados de hasta 10 GB con otras personas a través de un enlace protegido con contraseña o correo electrónico para una privacidad total y una colaboración segura.",
+        "Internxt ofrece copias de seguridad cifradas de tus archivos, para que puedas mantener una copia de tus archivos de vídeo en la nube segura. Como estos videos están cifrados y respaldados en múltiples centros de datos, los archivos se pueden recuperar fácilmente en caso de pérdida de datos o ataques de ransomware.",
+        "Internxt es el primer almacenamiento en la nube para archivos de vídeo con criptografía postcuántica de conocimiento cero, el cifrado más avanzado disponible para proteger archivos contra la amenaza de las computadoras cuánticas.",
+        "Internxt Drive y todos nuestros servicios son de código abierto. Nuestro código está disponible en GitHub para que todos lo verifiquen y puedan comprobar su seguridad y asegurarse de que no haya puertas traseras que puedan comprometer sus datos."
+      ],
+      "imagesPathname": [
+        "/cloud-storage-for-video-files/Generous",
+        "/cloud-storage-for-video-files/Ransomware",
+        "/cloud-storage-for-video-files/PostQuantumEncryption",
+        "/cloud-storage-for-video-files/OpenSourceAndAudited"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Almacena tus videos en la nube más segura",
+    "subtitle": "Todos tus vídeos de calidad en completa privacidad",
+    "cta": "Consigue Internxt"
+  },
+  "cta2": {
+    "title": "El almacenamiento en la nube para vídeo",
+    "subtitle": "Protegido por cifrado postcuántico",
+    "cta": "Obtén Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cuál es el mejor almacenamiento en la nube para archivos de vídeo?",
+        "answer": [
+          "Internxt ofrece muchas funciones para que las consideres como tu nuevo proveedor de nube para tus archivos de video.",
+          "Permite cargar archivos de gran tamaño, planes de almacenamiento asequibles y una privacidad inigualable gracias al cifrado postcuántico y de conocimiento cero.",
+          "Está disponible en todas las plataformas, con soporte WebDAV y Rclone disponible a través de Internxt CLI.",
+          "Empieza desde sólo 3 € al mes y consigue el almacenamiento en la nube privado más seguro para tus archivos de vídeo."
+        ]
+      },
+      {
+        "question": "¿Cuánto almacenamiento necesito para mis archivos de vídeo?",
+        "answer": [
+          "Si no sabes cuánto almacenamiento en la nube necesitas para tus vídeos, para el usuario medio, 200 GB suelen ser suficientes.",
+          "Los profesionales que trabajan con resoluciones más altas, como 4K u 8K, necesitarán un mínimo de 1 TB.",
+          "Las empresas que necesitan alojar una gran cantidad de archivos de vídeo serán las que más se beneficien del almacenamiento de objetos, como Internxt S3."
+        ]
+      },
+      {
+        "question": "¿Puedo subir archivos de vídeo grandes a Internxt Drive?",
+        "answer": [
+          "Sí, puedes cargar hasta 40 GB de archivos de vídeo con Internxt Drive a través de la aplicación web.",
+          "Internxt Drive también ofrece planes de hasta 5 TB, suficiente para cargar y enviar vídeos de gran tamaño a través de la nube.",
+          "Si necesitas más almacenamiento, puedes comprar uno de nuestros planes de por vida y acumular tu almacenamiento para evitar quedarte sin almacenamiento."
+        ]
+      },
+      {
+        "question": "¿Qué es el cifrado de conocimiento cero y cómo protege mis vídeos?",
+        "answer": [
+          "El cifrado de conocimiento cero significa que el proceso de cifrado y las claves se administran en tu dispositivo, de modo que nadie puede ver, monitorear o acceder a tus archivos o contenido de video.",
+          "Esto se diferencia del cifrado de las grandes empresas tecnológicas porque retienen y administran las claves de tus archivos, lo que limita la privacidad de tu almacenamiento en la nube."
+        ]
+      },
+      {
+        "question": "¿Internxt ofrece opciones de copia de seguridad para archivos de vídeo?",
+        "answer": [
+          "Sí, Internxt ofrece almacenamiento de respaldo en la nube para archivos de video en todos sus planes Essential, Premium y Ultimate.",
+          "Puede programar tus copias de seguridad según tus necesidades, ayudar a prevenir la pérdida accidental de datos y protegerse contra ransomware con nuestras copias de seguridad cifradas."
+        ]
+      },
+      {
+        "question": "¿Cómo me comunico con el soporte?",
+        "answer": [
+          "¿No encuentras lo que estás buscando? Puedes ponerte en contacto con nuestro equipo de atención al cliente a través del chat en vivo o enviando un correo electrónico a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomoneda?",
+        "answer": [
+          "Actualmente Internxt acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc).",
+          "También puedes pagar a través de PayPal, iDEAL, Sofort y Criptomoneda."
+        ]
+      }
+    ]
+  }
+}

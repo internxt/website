@@ -1,11 +1,7 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useEffect } from 'react';
 
-interface HorizontalScrollableSectionProp {
-  textContent: any;
-  hideTitle?: boolean;
-}
-export default function HorizontalScrollableSection({ textContent, hideTitle }: HorizontalScrollableSectionProp) {
+export default function HorizontalScrollableSection({ textContent }) {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -73,16 +69,12 @@ export default function HorizontalScrollableSection({ textContent, hideTitle }: 
   return (
     <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
       <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[570px]">
-        {!hideTitle && (
-          <div className="flex w-full flex-col items-center justify-center">
-            <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
-              {textContent.title}
-            </p>
-            <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
-              {textContent.description}
-            </p>
-          </div>
-        )}
+        <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
+          {textContent.title}
+        </p>
+        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+          {textContent.description}
+        </p>
 
         <div
           ref={scrollContainerRef}

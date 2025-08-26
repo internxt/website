@@ -65,7 +65,7 @@
       }
     ]
   },
-  "FeaturesSectionV2": {
+  "HorizontalScrollableSection": {
     "title": "Features of Internxt’s cloud storage for videos",
     "description": "Share, back up, and protect your video files with generous upload limits and strong ransomware protection you can trust.",
     "scrollableSection": {

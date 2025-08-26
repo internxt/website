@@ -3,7 +3,7 @@ export interface PrivateCloudStorageForVideoText {
   HowToChooseSection: HowToChooseSection;
   FeaturesSection: FeaturesSection;
   SecureAndManage: SecureAndManage;
-  FeaturesSectionV2: FeaturesSectionV2;
+  HorizontalScrollableSection: HorizontalScrollableSection;
   cta: HeroSection;
   cta2: HeroSection;
   FaqSection: FAQSection;
@@ -35,7 +35,7 @@ export interface Feature {
   description: string[];
 }
 
-export interface FeaturesSectionV2 {
+export interface HorizontalScrollableSection {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;

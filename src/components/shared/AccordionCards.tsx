@@ -35,7 +35,7 @@ export default function AccordionCards({ textContent, cardWidth }: AccordionCard
 
           <div
             className={`transition-all duration-200 ease-linear ${
-              expandedCard === index ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+              expandedCard === index ? 'max-h-[480px] opacity-100' : 'max-h-0 opacity-0'
             } overflow-hidden`}
           >
             <div className="bg-white px-6 pb-4">

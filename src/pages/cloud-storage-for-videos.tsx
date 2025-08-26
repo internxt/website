@@ -60,7 +60,7 @@ const CloudStorageForVideos = ({
                   </div>
                 ))}
               </div>
-              <p className="w-[326px] text-base font-normal text-white lg:text-xl">
+              <p className="w-[326px] text-base font-normal text-white lg:w-full lg:text-xl">
                 {textContent.HeroSection.subtitle}{' '}
               </p>
               <Link
@@ -96,7 +96,7 @@ const CloudStorageForVideos = ({
 
       <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
-      <HorizontalScrollableSectionWithPhotos textContent={textContent.FeaturesSectionV2} />
+      <HorizontalScrollableSectionWithPhotos textContent={textContent.HorizontalScrollableSection} />
 
       <FloatingCtaSectionv2
         textContent={textContent.cta}
@@ -122,7 +122,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const textContent = require(`@/assets/lang/en/private-cloud-storage-for-videos.json`);
+  const textContent = require(`@/assets/lang/${lang}/private-cloud-storage-for-videos.json`);
   const bannerJson = require(`@/assets/lang/${lang}/banners.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
