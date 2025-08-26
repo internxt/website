@@ -1,13 +1,12 @@
+import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
-interface HorizontalScrollableSectionProp {
-  textContent: any;
-  hideTitle?: boolean;
-}
-export default function HorizontalScrollableSection({ textContent, hideTitle }: HorizontalScrollableSectionProp) {
+export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions;
+  const cardImages = textContent?.scrollableSection?.imagesPathname || [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -34,6 +33,15 @@ export default function HorizontalScrollableSection({ textContent, hideTitle }: 
       return Math.max(0, cardTitles.length - 1);
     } else {
       return Math.max(0, cardTitles.length - 2);
+    }
+  };
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const newIndex = Math.round(scrollLeft / amount);
+      setCurrentIndex(Math.min(newIndex, getMaxIndex()));
     }
   };
 
@@ -71,30 +79,45 @@ export default function HorizontalScrollableSection({ textContent, hideTitle }: 
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[570px]">
-        {!hideTitle && (
-          <div className="flex w-full flex-col items-center justify-center">
-            <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
-              {textContent.title}
-            </p>
-            <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
-              {textContent.description}
-            </p>
-          </div>
-        )}
+    <section
+      className="flex h-[860px] w-full flex-col items-center justify-center gap-12 bg-red py-20 lg:h-min"
+      style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+    >
+      <div className="flex h-min w-[832px] flex-col items-center gap-8 lg:gap-12">
+        <p className="w-[320px] text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
+          {textContent.title}
+        </p>
+        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
+          {textContent.description}
+        </p>
+      </div>
 
+      <div className="flex flex-col">
+        {/* Contenedor con scroll habilitado */}
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-8 lg:w-full lg:pt-12"
+          className="scrollbar-hide flex w-[320px] snap-x snap-mandatory flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:w-[832px]"
+          onScroll={handleScroll}
         >
           {cardTitles.map((title, index) => (
-            <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
-              <div className="flex flex-row items-center justify-start gap-4">
-                <p className="text-left text-xl font-medium text-gray-100">{title}</p>
-              </div>
-              <div className="py-4">
-                <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
+            <div key={title} className="flex snap-start snap-always flex-col">
+              <Image
+                src={getImage(`/images${cardImages[index]}.webp`)}
+                alt="Internxt B2B Business Solution"
+                height={500}
+                width={400}
+                quality={100}
+                style={{ objectFit: 'contain', objectPosition: 'bottom' }}
+              />
+              <div className="h-full w-[320px] shrink-0 lg:w-[400px]">
+                <div className="flex flex-row items-center justify-start gap-4 pt-8">
+                  <p className="text-left text-xl font-medium text-gray-100">{title}</p>
+                </div>
+                <div className="py-4">
+                  <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">
+                    {cardDescriptions[index]}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -123,6 +146,16 @@ export default function HorizontalScrollableSection({ textContent, hideTitle }: 
           </div>
         </div>
       </div>
+
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-hide {
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+        }
+      `}</style>
     </section>
   );
 }

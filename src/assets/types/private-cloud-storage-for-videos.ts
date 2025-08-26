@@ -1,6 +1,8 @@
 export interface PrivateCloudStorageForVideoText {
   HeroSection: HeroSection;
+  HowToChooseSection: HowToChooseSection;
   FeaturesSection: FeaturesSection;
+  SecureAndManage: SecureAndManage;
   FeaturesSectionV2: FeaturesSectionV2;
   cta: HeroSection;
   cta2: HeroSection;
@@ -35,25 +37,42 @@ export interface Feature {
 
 export interface FeaturesSectionV2 {
   title: string;
-  subtitle: string;
-  featuresForVideos: FeaturesForVideos;
-}
-
-export interface FeaturesForVideos {
-  video1: Video;
-  video2: Video;
-  video3: Video;
-  video4: Video;
-}
-
-export interface Video {
-  title: string;
   description: string;
+  scrollableSection: ScrollableSection;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
+  imagesPathname: string[];
 }
 
 export interface HeroSection {
   title: string;
   features?: string[];
   subtitle: string;
+  cta: string;
+}
+
+export interface HowToChooseSection {
+  title: string;
+  description: string;
+  cardDescriptions: CardDescriptions;
+}
+
+export interface CardDescriptions {
+  titles: string[];
+  descriptions: string[];
+}
+
+export interface SecureAndManage {
+  title: string;
+  description: string;
+  cards: Card[];
+}
+
+export interface Card {
+  title: string;
+  description: string[];
   cta: string;
 }

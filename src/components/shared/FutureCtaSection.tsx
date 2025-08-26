@@ -1,47 +1,44 @@
-import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
-const FutureCtaSection = ({
+const FloatingCtaSectionv2 = ({
   textContent,
   url,
-  maxWidth,
   target,
-  bgImage,
-  customDescription,
+  customText,
+  bgGradientContainerColor,
+  bgGradientColor,
+  containerDetails,
 }: {
   textContent: any;
   url?: string;
-  maxWidth?: string;
   target?: string;
-  bgImage?: string;
-  customDescription?: React.ReactNode;
+  bgGradientContainerColor?: string;
+  bgGradientColor?: string;
+  customText?: React.ReactNode;
+  containerDetails?: string;
 }) => {
-  const DEFAULT_BACKGROUND = 'linear-gradient(115.95deg, #F4F8FFBF 0%, #FFFFFF14 100%)';
   return (
-    <section className="mx-20 my-10 bg-white">
+    <section
+      className="flex h-[330px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
+      style={{ background: bgGradientColor }}
+    >
       <div
-        style={{
-          background: bgImage ? `url(${getImage(bgImage)})` : DEFAULT_BACKGROUND,
-        }}
-        className="overflow-hidden rounded-[20px] bg-cover px-5 py-14 shadow-soft"
+        className={`z-10 flex h-auto w-full flex-col items-center justify-evenly gap-2 rounded-20 py-2 lg:py-10 ${containerDetails}`}
+        style={{ background: bgGradientContainerColor }}
       >
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
-          <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black`}>
-            {customDescription}
-          </div>
-          {url && (
-            <Link
-              href={url}
-              target={target}
-              className={`flex rounded-lg bg-primary px-5 py-3 text-base font-medium text-white`}
-            >
-              {textContent.cta}
-            </Link>
-          )}
-        </div>
+        {customText}
+        {url && (
+          <Link
+            href={url}
+            target={target}
+            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark xl:mr-10`}
+          >
+            {textContent.cta}
+          </Link>
+        )}
       </div>
     </section>
   );
 };
 
-export default FutureCtaSection;
+export default FloatingCtaSectionv2;
