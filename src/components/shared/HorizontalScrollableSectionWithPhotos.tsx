@@ -80,7 +80,7 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
 
   return (
     <section
-      className="flex h-[760px] w-full flex-col items-center justify-center gap-12 bg-red py-20 lg:h-min"
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-12 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-min w-[832px] flex-col items-center gap-8 lg:gap-12">
@@ -93,10 +93,9 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
       </div>
 
       <div className="flex flex-col">
-        {/* Contenedor con scroll habilitado */}
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex w-[320px] snap-x snap-mandatory flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:w-[832px]"
+          className="scrollbar-hide flex h-min w-[320px] snap-x snap-mandatory flex-row items-start justify-start overflow-x-auto scroll-smooth lg:w-[832px]"
           onScroll={handleScroll}
         >
           {cardTitles.map((title, index) => (
@@ -109,7 +108,7 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
                 quality={100}
                 style={{ objectFit: 'contain', objectPosition: 'bottom' }}
               />
-              <div className="h-full w-[320px] shrink-0 lg:w-[400px]">
+              <div className="h-min w-[320px] shrink-0 lg:h-full lg:w-[400px]">
                 <div className="flex flex-row items-center justify-start gap-4 pt-8">
                   <p className="text-left text-xl font-medium text-gray-100">{title}</p>
                 </div>
@@ -123,7 +122,7 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
           ))}
         </div>
 
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px]">
+        <div className="flex h-[48px] w-[310px] flex-row  justify-end lg:w-[832px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
