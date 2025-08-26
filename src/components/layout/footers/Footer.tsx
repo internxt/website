@@ -983,7 +983,7 @@ export default function Footer({
                       </Link>
 
                       <Link href="/cloud-storage-for-videos" locale={lang} passHref>
-                        {textContent.FooterSection.sections.features.cloudVideos}
+                        {textContent.FooterSection.sections.features.cloudVideo}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
