@@ -71,6 +71,7 @@ export interface Products {
   send: string;
   objStorage: string;
   vpn: string;
+  cleaner: string;
   antivirus: string;
   token: string;
   business: string;

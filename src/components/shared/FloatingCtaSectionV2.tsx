@@ -19,11 +19,13 @@ const FloatingCtaSectionv2 = ({
 }) => {
   return (
     <section
-      className="flex h-[281px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
+
+      className="flex h-[330px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
       style={{ background: bgGradientColor }}
     >
       <div
-        className={`z-10 flex h-[227px] w-full flex-col items-center justify-evenly rounded-20 ${containerDetails}`}
+        className={`z-10 flex h-auto w-full flex-col items-center justify-evenly gap-2 rounded-20 py-2 lg:py-10 ${containerDetails}`}
+
         style={{ background: bgGradientContainerColor }}
       >
         {customText}
