@@ -14,10 +14,10 @@
     "description": "Le violazioni dei dati possono devastare le aziende, causando gravi perdite finanziarie, interruzioni operative e danni alla reputazione della tua azienda.",
     "cards": [
       {
-        "title": "4,88 Milioni $",
+        "title": "$4.88 M",
         "description": "Costo medio di una violazione dei dati"
       },
-      { "title": "73 Milioni", "description": "Dati dei clienti AT&T trapelati nel 2024" },
+      { "title": "73M", "description": "Dati dei clienti AT&T trapelati nel 2024" },
       { "title": "258 Giorni", "description": "Tempo medio per identificare una violazione dei dati" },
       { "title": "46%", "description": "Degli attacchi ransomware mirano alle aziende" }
     ],

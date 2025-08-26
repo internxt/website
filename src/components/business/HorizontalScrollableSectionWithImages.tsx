@@ -13,6 +13,7 @@ interface HorizontalScrollableSectionProps {
   bgGardient?: string;
   bgColorCard?: string;
 }
+
 export default function HorizontalScrollableSectionWithImages({
   textContent,
   bgColor = 'bg-white',
@@ -29,7 +30,7 @@ export default function HorizontalScrollableSectionWithImages({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
-  const cardWidth = 420;
+  const cardWidth = 400;
   const mobileCardWidth = 320;
   const gap = 32;
   const scrollAmount = cardWidth + gap;
@@ -58,8 +59,17 @@ export default function HorizontalScrollableSectionWithImages({
     }
   };
 
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const newIndex = Math.round(scrollLeft / amount);
+      setCurrentIndex(Math.min(newIndex, getMaxIndex()));
+    }
+  };
+
   const scrollLeft = () => {
-    if (currentIndex > -1 && scrollContainerRef.current) {
+    if (currentIndex > 0 && scrollContainerRef.current) {
       const newIndex = currentIndex - 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
@@ -93,11 +103,11 @@ export default function HorizontalScrollableSectionWithImages({
 
   return (
     <section
-      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight}  lg:px-10 lg:py-9 xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} lg:px-10 xl:px-32 3xl:px-80`}
       style={{ background: bgGardient }}
     >
       <div
-        className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 px-10 ${innerHeight} lg:justify-between lg:gap-0 lg:py-9 `}
+        className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 px-10 ${innerHeight} lg:justify-between lg:gap-0`}
       >
         <p className="w-[320px] pt-10 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-3xl">
           {textContent.title}
@@ -119,7 +129,12 @@ export default function HorizontalScrollableSectionWithImages({
 
         <div
           ref={scrollContainerRef}
-          className="flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth  lg:h-min lg:w-screen lg:pl-56"
+          className="scrollbar-hide flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:pl-56"
+          onScroll={handleScroll}
+          style={{
+            scrollbarWidth: 'none' /* Firefox */,
+            msOverflowStyle: 'none' /* IE y Edge */,
+          }}
         >
           {cardTitles.map((title, index) => (
             <div
@@ -132,7 +147,7 @@ export default function HorizontalScrollableSectionWithImages({
             >
               <div className="flex flex-col gap-6">
                 {cardImages && cardImages[index] && (
-                  <div className="relative hidden h-[380px] w-[400px] items-end overflow-hidden lg:flex ">
+                  <div className="relative hidden h-[380px] w-[400px] items-end overflow-hidden lg:flex">
                     <Image
                       src={getImage(`/images/business/features/${cardImages[index]}.webp`)}
                       alt="Internxt B2B Business Solution"
@@ -175,7 +190,15 @@ export default function HorizontalScrollableSectionWithImages({
             </button>
           </div>
         </div>
+        <div className="my-5 h-[1px] w-full bg-neutral-25" />
       </div>
+
+      {/* CSS para ocultar scrollbar */}
+      <style jsx>{`
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
     </section>
   );
 }

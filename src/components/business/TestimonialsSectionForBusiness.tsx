@@ -50,7 +50,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">
           <h2 className="text-center text-3xl font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
 
-          <div className="hidden w-full max-w-7xl xl:flex xl:items-center xl:gap-8">
+          <div className="hidden w-full max-w-7xl lg:flex lg:items-center lg:justify-center xl:gap-8">
             <button
               onClick={scrollLeft}
               className="flex h-[48px] w-[48px] cursor-pointer items-center justify-center rounded-full border border-primary bg-transparent transition-all duration-200 hover:bg-white-summer"
@@ -92,7 +92,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
           </div>
         </div>
 
-        <div className="flex h-full w-full flex-col items-center justify-center gap-8 px-6 lg:hidden">
+        <div className="flex h-full w-full flex-col items-center justify-center gap-8 px-6 md:hidden">
           <h2 className="text-start text-30 font-bold leading-tight text-gray-100">{textContent.title}</h2>
 
           <div className="flex w-full flex-col justify-center gap-3">

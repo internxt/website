@@ -55,7 +55,7 @@ export const BusinessPage = ({
     });
   };
 
-  const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
+  const imagePath = lang === 'es' ? 'HeroImage' : 'HeroImage';
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -74,7 +74,7 @@ export const BusinessPage = ({
               {textContent.HeroSection.description[1]}
             </p>
             <div className="flex flex-row items-center justify-center gap-8 lg:justify-start">
-              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} hoverColor="bg-primary-dark" />
+              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} hoverColor="hover:bg-primary-dark" />
               <Button
                 className="border border-primary bg-transparent "
                 textColor="text-primary"
@@ -103,7 +103,6 @@ export const BusinessPage = ({
       <HorizontalScrollableSectionWithImages
         textContent={textContent.WhatCanWeDo}
         bgGardient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        containerDecoration="border-y-[1px] border-neutral-25 pb-10 lg:pb-10"
       />
 
       <PricingSectionWrapper
@@ -134,15 +133,15 @@ export const BusinessPage = ({
         bgColor="bg-gray-1"
         customText={
           <>
-            <div className="flex flex-row justify-between overflow-hidden">
+            <div className="flex flex-row justify-center overflow-hidden">
               <Image
-                src={getImage('/images/business/cta/Internxt-secure-cloud-storag_tablet.webp')}
+                src={getImage('/images/home/Internxt-secure-cloud-storage_devices.webp')}
                 alt="Tablet Image"
-                width={301}
-                height={301}
+                width={401}
+                height={401}
                 className="hidden lg:flex"
               />
-              <div className="flex w-[300px]  flex-col items-center gap-8 text-center lg:w-[458px] lg:gap-4 lg:px-0">
+              <div className="flex w-[300px] flex-col items-center gap-8 text-center lg:w-[458px] lg:gap-4 lg:px-0">
                 <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
                   {textContent.CtaSection.title}
                 </p>
@@ -150,7 +149,12 @@ export const BusinessPage = ({
                   {textContent.CtaSection.description}
                 </p>
                 <div className="flex w-[300px] flex-row justify-center gap-4 lg:w-[458px] lg:gap-8">
-                  <Button text={textContent.CtaSection.cta} onClick={onButtonClick} className="w-1/2" />
+                  <Button
+                    text={textContent.CtaSection.cta}
+                    onClick={onButtonClick}
+                    className="w-1/2"
+                    hoverColor="hover:bg-primary-dark"
+                  />
                   <Button
                     className="w-1/2 border border-primary bg-transparent"
                     textColor="text-primary"
@@ -161,16 +165,16 @@ export const BusinessPage = ({
                 </div>
               </div>
               <Image
-                src={getImage('/images/business/cta/Internxt-secure-cloud-storage_desktop.webp')}
+                src={getImage('/images/home/internxt_secure_cloud_storage_desktop.webp')}
                 alt="Tablet Image"
-                width={301}
+                width={401}
                 height={301}
                 className="hidden lg:flex"
               />
             </div>
           </>
         }
-        containerDetails="bg-blue-20 h-[350px]"
+        containerDetails="bg-blue-20"
       />
 
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
