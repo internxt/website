@@ -398,6 +398,50 @@
           "Internxt Drive offers more paid plans and greater storage options than the pCloud pricing structure. If you need a pCloud alternative that offers annual and lifetime plans, choose from any of our affordable plans with VPN, Antivirus, Mail, Meet, and more."
         ]
       }
+    },
+    "HorizontalDropboxScrollableSection": {
+      "title": "Why should you choose Internxt as your Dropbox alternative?",
+      "description": "Internxt takes every measure to secure your files and right to privacy, making it the most secure alternative to Dropbox.",
+      "scrollableSection": {
+        "titles": [
+          "Open source and transparent",
+          "Security audited",
+          "Zero-knowledge encryption",
+          "GDPR-compliant",
+          "Privacy-focused encryption",
+          "Flexible storage plans"
+        ],
+        "descriptions": [
+          "Unlike Dropbox’s proprietary software, Internxt is an open-source cloud service. All our product codes are available for review on GitHub for full transparency on how we protect and handle your data.",
+          "Internxt's services have been reviewed by security experts at a leading European penetration testing company. This ensures your data stays secure against external threats like hackers and breaches.",
+          "Internxt protects your passwords and files with ultra-powerful end-to-end encryption. Unlike Dropbox, Internxt can never access your files for any reason. Only you have the encryption keys to access your data.",
+          "Internxt operates with complete transparency, ensuring your data privacy is protected by European laws. Our GDPR compliance guarantees your information is handled securely and according to strict regulations.",
+          "Internxt includes post-quantum and zero-knowledge encryption for your free and paid accounts. Unlike Dropbox, your files are encrypted on your device, not on our servers, making Internxt a more private Dropbox alternative.",
+          "Internxt Drive offers more paid plans and greater storage options than Dropbox. If you need a Dropbox alternative that offers annual and lifetime plans, choose the right plan for you to get access to VPN, Antivirus, Mail, Meet, and more."
+        ]
+      }
+    },
+    "HorizontalMegaScrollableSection": {
+      "title": "Why should you choose Internxt as your MEGA alternative?",
+      "description": "Discover features of Internxt that make us a more secure, private MEGA alternative",
+      "scrollableSection": {
+        "titles": [
+          "Open source and transparent",
+          "Security audited",
+          "Fully open source",
+          "GDPR-compliant",
+          "Advanced encryption",
+          "Flexible storage plans"
+        ],
+        "descriptions": [
+          "Internxt is an open-source alternative to MEGA, as the code for all our products and services is available on GitHub. MEGA does not publish the backend source code that stores your data and enforces encryption policies, so there’s no way of being sure how your data is protected.",
+          "Internxt successfully passed a security audit carried out by security experts from a leading European penetration testing company. Past security audits on MEGA found vulnerabilities that could give hackers access to user data, but MEGA has since fixed these issues.",
+          "Internxt makes all its source code available on GitHub. This transparency offers you peace of mind that our encryption protects your files, and there are no backdoors that could decrypt and access your data.",
+          "Internxt is a European-based company regulated by the GDPR to guarantee your information is handled securely and according to strict regulations.",
+          "Internxt includes post-quantum encryption, the most secure and advanced cryptography available for free and paid accounts. We only store the encrypted version of your data, and only you have the key to decrypt and access it.",
+          "Internxt includes post-quantum encryption, the most secure and advanced cryptography available for free and paid accounts. This protects your data from the future threats of quantum computers, which could break current encryption methods. MEGA has yet to implement PQE."
+        ]
+      }
     }
   }
 }

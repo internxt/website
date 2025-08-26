@@ -8,7 +8,7 @@ export interface ComparisonPageText {
   WhyChooseInxtSection: Section;
   tableSection: ComparisonPageTextTableSection;
   HorizontalScrollableSection: HorizontalScrollableSection;
-  HorizontalScrollableSectionV2: Horizontal;
+  HorizontalScrollableSectionV2: HorizontalScrollableSectionV2;
 }
 
 export interface CtaSection {
@@ -64,12 +64,12 @@ export interface HeroSection {
 }
 
 export interface HorizontalScrollableSection {
-  HorizontalpCloudScrollableSection: Horizontal;
-  HorizontalDropboxScrollableSection: Horizontal;
+  HorizontalpCloudScrollableSection: HorizontalDropboxScrollableSectionClass;
+  HorizontalDropboxScrollableSection: HorizontalDropboxScrollableSectionClass;
   HorizontalMegaScrollableSection: HorizontalMegaScrollableSection;
 }
 
-export interface Horizontal {
+export interface HorizontalDropboxScrollableSectionClass {
   title: string;
   description: string;
   scrollableSection: ScrollableSection;
@@ -86,6 +86,12 @@ export interface HorizontalMegaScrollableSection {
   tile2: string;
   description2: string;
   scrollableSection: ScrollableSection;
+}
+
+export interface HorizontalScrollableSectionV2 {
+  HorizontalpCloudScrollableSection: HorizontalDropboxScrollableSectionClass;
+  HorizontalDropboxScrollableSection: HorizontalDropboxScrollableSectionClass;
+  HorizontalMegaScrollableSection: HorizontalDropboxScrollableSectionClass;
 }
 
 export interface VersusSection {
