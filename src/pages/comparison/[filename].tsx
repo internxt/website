@@ -11,10 +11,9 @@ import { ComparisonPageText } from '@/assets/types/comparisonPage';
 import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
-
-import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
+import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];

@@ -1,15 +1,32 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef, useEffect } from 'react';
 
-export default function HorizontalScrollableSection({ textContent }) {
-  const cardTitles = textContent?.scrollableSection.titles ?? [];
-  const cardDescriptions = textContent?.scrollableSection.descriptions;
+interface HorizontalScrollableSectionProps {
+  textContent: any;
+  bgGradient?: string;
+  competitor?: string;
+}
+
+export default function HorizontalScrollableSection({
+  textContent,
+  bgGradient,
+  competitor,
+}: HorizontalScrollableSectionProps) {
+  const competitorPath =
+    competitor === 'pCloud'
+      ? textContent.HorizontalpCloudScrollableSection
+      : competitor === 'MEGA'
+      ? textContent.HorizontalMegaScrollableSection
+      : textContent.HorizontalDropboxScrollableSection;
+
+  const cardTitles = competitorPath.scrollableSection.titles ?? [];
+  const cardDescriptions = competitorPath.scrollableSection.descriptions;
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 400;
-  const mobileCardWidth = 320;
+  const mobileCardWidth = 330;
   const gap = 32;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
@@ -24,6 +41,15 @@ export default function HorizontalScrollableSection({ textContent }) {
 
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
+
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const amount = isMobile ? mobileScrollAmount : scrollAmount;
+      const newIndex = Math.round(scrollLeft / amount);
+      setCurrentIndex(Math.min(newIndex, getMaxIndex()));
+    }
+  };
 
   const getMaxIndex = () => {
     if (isMobile) {
@@ -67,32 +93,39 @@ export default function HorizontalScrollableSection({ textContent }) {
   const maxIndex = getMaxIndex();
 
   return (
-    <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[570px]">
-        <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
-          {textContent.title}
+    <section
+      className="flex h-auto w-full items-center justify-around  lg:justify-center lg:px-10 lg:py-9 xl:px-32 3xl:px-80"
+      style={{ background: bgGradient }}
+    >
+      <div className="flex h-auto w-[832px] flex-col items-center justify-between gap-4 py-4 lg:h-[509px]">
+        <p className=" w-[360px] text-left text-30 font-bold  leading-tight text-gray-100 lg:w-[832px] lg:text-3xl">
+          {competitorPath.title}
         </p>
-        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
-          {textContent.description}
+        <p className="w-[360px] text-left text-base font-normal text-gray-55 lg:w-[832px] lg:text-lg">
+          {competitorPath.description}
         </p>
 
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-8 lg:w-full lg:pt-12"
+          className="flex w-[360px] flex-row flex-nowrap gap-8 overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] lg:w-full [&::-webkit-scrollbar]:hidden"
+          onScroll={handleScroll}
         >
           {cardTitles.map((title, index) => (
-            <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
-              <div className="flex flex-row items-center justify-start gap-4">
+            <div
+              key={index}
+              className="flex h-[226px] w-[360px] shrink-0 flex-col items-start justify-start rounded-16 bg-white p-8 lg:w-[400px]"
+            >
+              <div className="flex h-[24px]  flex-row items-center justify-start gap-4 ">
                 <p className="text-left text-xl font-medium text-gray-100">{title}</p>
               </div>
-              <div className="py-4">
-                <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
+              <div className=" py-4">
+                <p className="text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px]">
+        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px] ">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
