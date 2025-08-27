@@ -86,7 +86,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
   };
 
   return (
-    <section className="mx-20 overflow-hidden border-y-[1px] border-neutral-25 px-8 py-20 lg:px-0">
+    <section className=" overflow-hidden border-y-[1px] border-neutral-25 px-8 py-20 lg:px-0">
       <div className="flex flex-col items-center gap-6 text-center ">
         <h2 className="text-3xl font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">

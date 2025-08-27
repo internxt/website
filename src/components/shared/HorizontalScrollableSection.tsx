@@ -120,7 +120,7 @@ export default function HorizontalScrollableSection({
         {redirection && (
           <Link
             href={'/privacy'}
-            className="flex w-full cursor-pointer flex-row items-start justify-start gap-1 text-base font-medium text-primary hover:underline"
+            className="flex w-[320px] cursor-pointer flex-row items-start justify-start gap-1 text-base font-medium text-primary hover:underline lg:w-full"
           >
             {textContent.cta}
             <CaretRight className="h-[24px] w-[24px] text-primary" />
