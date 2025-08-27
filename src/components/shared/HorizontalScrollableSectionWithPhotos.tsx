@@ -95,7 +95,7 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
       <div className="flex flex-col">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-min w-[320px] snap-x snap-mandatory flex-row items-start justify-start overflow-x-auto scroll-smooth lg:w-[832px]"
+          className="scrollbar-hide flex h-min w-[320px] snap-x snap-mandatory flex-row items-start justify-start gap-2 overflow-x-auto scroll-smooth lg:w-[832px]"
           onScroll={handleScroll}
         >
           {cardTitles.map((title, index) => (
