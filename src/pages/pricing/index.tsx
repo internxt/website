@@ -80,8 +80,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} percentOff={percentOff} />
-
         <PricingSectionWrapper
           textContent={textContent.tableSection}
           decimalDiscount={{
