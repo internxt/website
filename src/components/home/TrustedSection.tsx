@@ -16,8 +16,8 @@ export default function TrustedSection({ textContent }: TrustedSectionProps): JS
       <p className="flex w-full items-center justify-center text-start text-30 font-bold leading-tight lg:text-center lg:text-3xl">
         {textContent.title}
       </p>
-      <div className="flex h-[370px] w-full flex-col-reverse justify-center gap-8 lg:h-[200px] lg:w-min lg:flex-row">
-        <div className="relative h-full lg:min-w-[400px]">
+      <div className="flex h-[370px] w-full flex-col-reverse justify-center gap-8 lg:h-[220px] lg:w-min lg:flex-row">
+        <div className="relative h-full w-[650px]">
           <Image
             src={getImage('/images/home/NewDesign/mujer-joven-trabajar-desde-casa.jpg')}
             alt="Woman working fromhome"
@@ -26,7 +26,7 @@ export default function TrustedSection({ textContent }: TrustedSectionProps): JS
             quality={100}
           />
         </div>
-        <div className="flex h-full flex-col justify-center gap-3 lg:min-w-[400px] lg:justify-between lg:gap-0">
+        <div className="flex h-full flex-col justify-center gap-3 lg:max-w-[400px] lg:justify-between lg:gap-0">
           <Quotes className="text-primary" height={24} width={24} weight="fill" />
           <p className="text-xs font-normal italic leading-tight text-gray-55 lg:text-base">{textContent.review}</p>
           <p className="text-xs font-semibold leading-tight text-gray-55 lg:text-base">{textContent.author}</p>
