@@ -1,28 +1,22 @@
 import { GetServerSidePropsContext } from 'next';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
-
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import RevealY from '@/components/components/RevealY';
-import { ChooseStorageSizeSection } from '@/components/home/ChooseStorageSizeSection';
 import HeroSection from '@/components/home/HeroSection';
-import TestimonialsSection from '@/components/home/TestimonialsSection';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import { stripeService } from '@/services/stripe.service';
-import Button from '@/components/shared/Button';
-import { CardGroup } from '@/components/shared/CardGroup';
-import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
-import CtaSection from '@/components/shared/CtaSection';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
-import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
-import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+import TrustedSection from '@/components/home/TrustedSection';
+import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
+import AwardWinningSection from '@/components/home/AwardWinningPrivacySection';
+import OfficialCloudProviderSection from '@/components/home/OfficilaCloudProviderSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -48,28 +42,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
-  const cardsForFeatureSection = [
-    {
-      icon: ShieldCheck,
-      title: textContent.FeatureSectionV2.cards![0].title,
-      description: textContent.FeatureSectionV2.cards![0].description,
-    },
-    {
-      icon: LockKey,
-      title: textContent.FeatureSectionV2.cards![1].title,
-      description: textContent.FeatureSectionV2.cards![1].description,
-    },
-    {
-      icon: Eye,
-      title: textContent.FeatureSectionV2.cards![2].title,
-      description: textContent.FeatureSectionV2.cards![2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: textContent.FeatureSectionV2.cards![3].title,
-      description: textContent.FeatureSectionV2.cards![3].description,
-    },
-  ];
 
   const onChooseStorageButtonClicked = () => {
     router.push('/pricing');
@@ -96,19 +68,9 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
-      <HeroSection
-        textContent={textContent.HeroSection}
-        lang={locale}
-        percentOff={percentOff}
-        minimumPrice={minimumPrice}
-      />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} minimumPrice={minimumPrice} />
 
-      <ChooseStorageSizeSection
-        textContent={textContent.ChooseStorageSizeSection}
-        onButtonClicked={onChooseStorageButtonClicked}
-      />
-
-      <TestimonialsSection textContent={textContent.TestimonialsSection} />
+      <ReviewsSection textContent={textContent.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={textContent.tableSection}
@@ -124,48 +86,18 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="3TB"
-        showPromo
-        backgroundColorComponent="bg-neutral-15"
+        backgroundColorComponent="bg-white"
       />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-30 font-semibold text-gray-100 lg:text-5xl">{textContent.FeatureSectionV2.title}</h2>
-              <p className="text-xl text-gray-80">{textContent.FeatureSectionV2.description}</p>
-            </div>
-            <div className="flex flex-col items-center gap-12">
-              <Button
-                text={textContent.FeatureSectionV2.cta}
-                onClick={() => {
-                  router.push('/pricing');
-                }}
-              />
-              <RevealY className="content flex h-full w-full flex-col px-5 pt-6">
-                <Image
-                  src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-                  alt="Internxt secure cloud storage"
-                  draggable={false}
-                  loading="lazy"
-                  width={1920}
-                  height={1080}
-                />
-              </RevealY>
-            </div>
-          </div>
-        }
-        SecondComponent={
-          <div className="flex flex-col items-center">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
-          </div>
-        }
-        backgroundColor="bg-gray-1"
-      />
+      <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} />
+
+      <AwardWinningSection textContent={textContent.AwardWinningSection} />
+
+      <HorizontalScrollableSection textContent={textContent.NextGenSection} />
+
+      <TrustedSection textContent={textContent.TrustedBySection} />
 
       <FAQSection textContent={textContent.FaqSection} />
-
-      <CtaSection textContent={textContent.CtaSection} url={'/pricing'} />
 
       <Footer textContent={footerLang} lang={locale} />
     </Layout>

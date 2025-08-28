@@ -19,7 +19,7 @@ const Button = ({ text, className, type, showSpinner, id, disabled, onClick }: B
       type={type}
       className={`flex ${className} ${
         disabled ? 'bg-gray-10' : 'bg-primary hover:bg-primary-dark'
-      } w-max justify-center rounded-lg px-5 py-3 text-xl font-medium text-white `}
+      } w-max justify-center rounded-md px-5 py-3 text-base font-medium text-white `}
     >
       {showSpinner ? <Spinner size={20} /> : <p>{text}</p>}
     </button>

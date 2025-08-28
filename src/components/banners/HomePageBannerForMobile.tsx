@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 export const HomePageBannerForMobile = () => {
   const router = useRouter();
   const lang = router.locale;
-  const textContent = require(`../../assets/lang/${lang}/home.json`);
+
   const bgImage = getImage('/images/campaigns/summer/SummerCampaign.png');
   const handleOnClick = () => {
     router.push('#priceTable');

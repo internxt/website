@@ -1,25 +1,21 @@
 {
   "HeroSection": {
-    "label": "Save {{discount}}%",
-    "title": {
-      "line1": "Secure cloud storage.",
-      "blueText": "Guaranteed.",
-      "line2": ""
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "subtitle": "Internxt is the best open source cloud storage for securely storing, sharing, and accessing data across all devices.",
-    "cta": {
-      "title": "Get 1GB",
-      "subtitle": "For free!"
-    },
-    "featuredIn": "Featured in",
     "SignUp": {
       "cta": {
         "title": "Get started with Internxt",
-        "subtitle": "Create an account now and get 1GB for FREE"
+        "subtitle": "Create an account now and get 1 GB FREE"
       },
       "disclaimer": {
-        "text": "By creating an account you accept the",
-        "link": "terms of service, and privacy policy"
+        "text": "By creating an account you accept our",
+        "link": " terms of service and privacy policy"
       },
       "fields": {
         "email": {
@@ -31,117 +27,60 @@
           "placeholder": "Password",
           "strength": {
             "complexity": "Password is not complex enough",
-            "length": "Password has to be at least 8 characters long",
+            "length": "Password must be at least 8 characters",
             "weak": "Password is weak",
             "strong": "Password is strong"
           }
         },
         "submit": {
-          "get": "Get 1GB",
-          "free": "For Free!"
+          "get": "Get 1 GB",
+          "free": "Free!"
         }
       }
     },
-    "TitleAndSurvey": {
-      "title": {
-        "line1": "Store your files safely, now ",
-        "blueText": "{{discount}}% cheaper"
-      },
-      "trustedBy": "Trusted by 330,000+ people",
-      "description": {
-        "normal1": "Protect your work and personal files with ",
-        "bold": "affordable military-grade encrypted ",
-        "normal2": "cloud storage."
-      },
-      "howMuchYouNeed": "How much online storage do you need?",
-      "upTo": "Up to: ",
-      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    "title": "**Private** by default, **secure** by design, **free** as in freedom",
+    "subtitle": "That's Internxt - secure cloud storage & much more",
+    "description": "Get {{discount}}% off now!",
+    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
+    "startFrom": {
+      "normal1": "Starting from ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /month"
     },
-    "TitleAndOnePlan": {
-      "title": {
-        "textBeforeBlueText": "",
-        "blueText": "Secure ",
-        "textAfterBlueText": " cloud storage and privacy suite"
-      },
-      "subtitle": "Full Security. Total control.",
-      "description": "Get {{discount}}% OFF our award-winning privacy services",
-      "features": [
-        "Drive, Meet, Mail, VPN, Antivirus & more",
-        "Post-quantum zero-knowledge encryption",
-        "Open source and audited"
-      ],
-
-      "startFrom": {
-        "normal1": "Start from ",
-        "price": "{{minimumPrice}}",
-        "normal2": " /month"
-      },
-      "claimDeal": "Claim deal",
-      "guarantee": "30-day money-back guarantee"
-    },
-    "TitleAndOnePlanV2": {
-      "saveLabel": "Save {{discount}}%",
-      "title": "World Environment Day",
-      "subtitle": "Annual and Lifetime plans!",
-      "cta": "Claim deal!",
-      "guarantee": "30-day money-back guarantee"
-    },
-    "youKnow": "Did you know?"
-  },
-  "FeatureSectionV2": {
-    "title": "Post-quantum and zero-knowledge encryption: the most advanced technology for data protection",
-    "description": "We protect your file’s security and privacy with advanced encryption to future-proof against emerging threats.",
-    "cta": "Select storage plan",
-    "cards": [
-      {
-        "title": "Unhackable and unleakable data",
-        "description": "We don’t store passwords or user data and all of your data is encrypted  in-transit and at-rest. Internxt puts you in full control of your files.  Your data is your business. Protecting it is ours."
-      },
-      {
-        "title": "Next-generation security",
-        "description": "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data."
-      },
-      {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can  be personally reviewed, audited, and verified by anyone. We have  nothing to hide but your data."
-      },
-      {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for  it. Internxt has been independently audited and verified by Europe’s  leading penetration testing company, Securitum."
-      }
-    ]
+    "claimDeal": "Claim deal",
+    "guarantee": "30-day money-back guarantee"
   },
   "tableSection": {
     "title": "Internxt Plans",
     "planTitles": {
-      "individuals": "Annual",
+      "individuals": "Individual Plans",
       "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime",
-      "business": "Business",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
       "lifetimeCampaign": {
-        "blueText": "Get 50% OFF",
-        "normalText": "all our exclusive lifetime plans"
+        "blueText": "50% off",
+        "normalText": "on all our exclusive lifetime plans"
       }
     },
-    "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
-    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
-    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+    "lifetimeDescription": "Pay once and enjoy privacy and security for life",
+    "planDescription": "All Internxt plans have full access to our suite of private solutions featuring the latest security technology: Internxt Drive, Send, VPN, Antivirus, Meet, and Mail. ",
+    "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
+    "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",
-      "individual": "Individual",
       "lifetime": "Lifetime",
+      "individual": "Individual",
       "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Free",
-      "description": "Get 1GB of encrypted cloud storage for free",
+      "eyeBrow": "Internxt Free",
+      "description": "Get 1 GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
-      "endToEnd": "End-to-end encrypted",
-      "openSource": "Open-source and audited",
+      "endToEnd": "End-to-end encryption",
+      "openSource": "Open source and audited",
       "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
@@ -152,231 +91,113 @@
       "ultimate": "5TB"
     }
   },
-  "ChooseStorageSizeSection": {
-    "title": "Data leaks can lead to job loss, legal troubles, and blackmailing",
-    "description": "Our cloud storage keeps your files safe, even if your device gets stolen or hacked.",
-    "peaceOfMind": "Peace of mind, guaranteed with Internxt.",
-    "cta": "Choose storage size"
-  },
-  "FirstFeaturesSection": {
-    "title": "Why choose Internxt?",
-    "subtitle": "Internxt puts you back in control of your data with zero-knowledge, military-grade encryption. ",
-    "description": "We use open source code, allowing independent verification of our security practices. Internxt empowers you to own your data, offering unparalleled privacy and peace of mind.",
-    "cta": "Choose storage"
-  },
-  "InfoSection": {
-    "title": "Secure cloud storage with unmatched privacy",
-    "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Introducing the Internxt Team",
-    "cards": [
-      {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
-      },
-      {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
-      },
-      {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
-      },
-      {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
-      }
-    ]
-  },
-  "SecondFeaturesSection": {
-    "title": "Secure cloud storage with unmatched privacy",
-    "description": "What makes Internxt so special? We value your privacy and want to protect you against the emerging threats of data breaches. Unlike Big Tech companies like Google Drive, we never monitor, collect, or profit from your data.",
-    "cta": "Our privacy values",
-    "info": [
-      {
-        "title": "Independently Verified Security",
-        "description": "Your peace of mind is our priority. That's why our services successfully passed a security audit from a leading European pen-testing company, validating that your data and files are secure against hackers."
-      },
-      {
-        "title": "Effortless collaboration",
-        "description": "Internxt offers increased control over how you manage your privacy and who can access your files. Safely share, edit, and access files with management permissions and password protection."
-      },
-      {
-        "title": "Backup storage on demand",
-        "description": "Save your data from disaster with built-in redundancy. Back up your essential work and projects across multiple fast servers throughout the EU and access them from all your devices."
-      },
-      {
-        "title": "Secure and accessible",
-        "description": "Internxt protects your data with cutting-edge encryption, so you can work and access your files from anywhere with complete peace of mind."
-      }
-    ]
-  },
-  "ThirdFeaturesSection": {
-    "title": "Get 1GB for free!",
-    "description": "Create your free account now and get full access to our suite of online privacy services.",
-    "cta": "Get started"
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "Built for the future",
-      "description": "We want to build a better World Wide Web, one that’s fair, safe, and equitable for all. The battle is raging for the future of internet privacy, and we’re at the frontline.",
-      "cta": "The fight for privacy"
-    },
-    "card2": {
-      "title": "All your devices, one seamless experience",
-      "description": "Internxt is available on all platforms, even Linux! Sync your files and photos with our mobile, web, and desktop apps, each engineered to supercharge your encrypted storage on the go.",
-      "cta": "Download apps"
-    },
-    "card3": {
-      "title": "Try Internxt for free",
-      "description": "Get 1GB free and see if privacy suits you before going all in!",
-      "cta": "Create free account"
-    }
-  },
-  "SecondWhatWeDoSection": {
-    "title": "You are not the product",
-    "description": "Internxt offers a growing family of products like Drive, Send, and VPN all built with a focus on user privacy. Trusted by leading brands worldwide, Internxt empowers individuals like you to take control of your data and privacy.",
-    "square1": {
-      "title": "Internxt Drive",
-      "subtitle": "The safest cloud storage for all your files, photos, and more",
-      "description": "Take back control of your files and data with Internxt Drive. Storing and backing up your files in complete privacy couldn’t be any easier. Modern cloud storage meets military-grade encryption.",
-      "cta": "Secure with Drive"
-    },
-    "square2": {
-      "title": "Internxt Send",
-      "subtitle": "Encrypt, share, and send large files with absolute certainty",
-      "description": "Send allows you to end-to-end encrypt and share large files fast without worrying about the security of your documents, images, or videos. Transfer to anyone in total confidentiality.",
-      "cta": "Share with Send"
-    },
-    "square3": {
-      "title": "Internxt VPN",
-      "subtitle": "Secure online photo storage for all your picture-perfect moments",
-      "description": "Internxt VPN encrypts and secures your internet connection, protecting you from data leaks, hackers, and network attacks. Keep your data private and protected from prying eyes.",
-      "cta": "Browse with VPN"
-    }
-  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
         "question": "Can Internxt access my files?",
         "answer": [
-          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
-        ]
-      },
-      {
-        "question": "Will I get access to all Internxt services?",
-        "answer": [
-          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
-          "An Internxt Free plan will only give you access to Internxt Drive."
+          "No. Internxt, along with any other third party, cannot access your files, photos, or data.",
+          "Internxt services feature zero-knowledge encryption, meaning only you can access and decrypt your private data and information. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available to protect your information from any threat. "
         ]
       },
       {
         "question": "Does Internxt store my password?",
         "answer": [
-          "No. As such, Internxt does not (and cannot) store your password.",
-          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          "No. As such, Internxt cannot store your password.",
+          "Your Internxt password is unique to you and is used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
         ]
       },
       {
-        "question": "Can I enable 2FA?",
+        "question": "Can I enable two-factor authentication (2FA)?",
         "answer": [
-          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
-          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
-        ]
-      },
-      {
-        "question": "How do I create an Internxt account?",
-        "answer": [
-          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
-          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
+          "Yes. You can set up two-factor authentication for your account through the Internxt web app.",
+          "You can also use Authy or other 2FA tools to generate a personal 2FA code with Internxt."
         ]
       },
       {
         "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, iDEAL, Sofort, and Bancontact.",
+          "Upon request, we also accept cryptocurrencies and SEPA Debit. If you have questions about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "What is Internxt’s refund policy?",
+        "question": "What is Internxt's refund policy?",
         "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+          "Internxt offers a standard 30-day money-back guarantee on all paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, contact us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
         ]
       },
       {
-        "question": "How can I cancel my subscription?",
+        "question": "How can I contact support?",
         "answer": [
-          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
-          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
-          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Does Internxt have lifetime plans?",
-        "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
-        ]
-      },
-      {
-        "question": "Can I add more storage to my lifetime plan?",
-        "answer": [
-          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
-        ]
-      },
-      {
-        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
-        "answer": [
-          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
-          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       }
     ]
   },
-  "InvestorsSection": {
-    "title": "Brands that trust us"
-  },
   "TestimonialsSection": {
     "title": {
-      "normal": "Hundreds of thousands are ditching iCloud, Google Drive, and Dropbox for ",
-      "blue": "the most secure cloud storage - Internxt Drive"
+      "normal": "Thousands of users are leaving iCloud, Google Drive, and Dropbox for",
+      "blue": " the most secure cloud storage - Internxt Drive"
     },
     "cards": [
       {
         "name": "Eva Williams",
-        "enterprise": "Journalist for FixThePhoto.com",
-        "review": "I switched to Internxt for its zero-knowledge architecture—only I can access my files. Internxt’s secure file-sharing links let me share files confidently without compromising my privacy and security online."
+        "enterprise": "Journalist at FixThePhoto.com",
+        "review": "I switched to Internxt for their zero-knowledge technology, post-quantum encryption, and open source code. Now only I can access my files and information, and I have everything protected online."
       },
       {
         "name": "Cristian M.",
-        "enterprise": "Review from GetApp",
-        "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
+        "enterprise": "GetApp Review",
+        "review": "Internxt is a private and secure cloud storage service. It has a simplified interface, easy to use, and good customer service, making it an excellent choice."
       },
       {
         "name": "Josep Carrizo",
-        "enterprise": "Review from Trustpilot",
-        "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
+        "enterprise": "Trustpilot Review",
+        "review": "Internxt is a private and secure cloud storage service. It has a simplified interface, easy to use, and good customer service, making it an excellent choice."
       }
     ]
   },
-  "CtaSection": {
-    "title": "The world's most private cloud storage",
-    "description": "Protect the really important stuff with Internxt's secure, private, and encrypted cloud storage.",
+  "ReviewSection": {
+    "pcMag": "\"Internxt is on **mega-sale**, has **excellent user reviews**, **end-to-end** and **post-quantum encryption**, and they make their code completely **open source** for total transparency with their customers.\"",
+    "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
+    "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
+  },
+  "OfficalCloudProvider": {
+    "title": "Valencia CF official cloud provider",
+    "description": "Valencia CF has reached an agreement with Internxt, where Internxt becomes the club's official cloud provider. Internxt is consolidating its position as a European leader in digital privacy with this new partnership. This agreement marks a milestone in Internxt's innovative approach that champions digital sovereignty and data protection.",
+    "cta": "Learn More"
+  },
+  "AwardWinningSection": {
+    "title": "Award winning privacy",
+    "description": "With Internxt's internationally recognized zero-knowledge encryption, only you and the people you choose can access your files — not even us.",
+    "subtitle": "Your peace of mind, our guarantee.",
     "cta": "Choose your plan"
   },
-  "GetStartedSection": {
-    "title": { "line1": "Get started and", "line2": "get 1GB for free" },
-    "subtitle": {
-      "line1": "Our clients are very happy with Internxt Drive, but",
-      "line2": "they are happier knowing they are in total privacy."
-    },
-    "cta1": "Get Internxt"
+  "NextGenSection": {
+    "title": "Next-gen encryption for ultimate protection",
+    "description": "We protect your file's security and privacy with advanced encryption to future-proof against emerging threats.",
+    "cta": "Get to know us better",
+    "cardDescriptions": {
+      "titles": [
+        "Unhackable and unleakable data",
+        "Next-generation security",
+        "Open source and transparent",
+        "Independently verified"
+      ],
+      "descriptions": [
+        "We don't store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
+        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "title": "Trusted by people like you",
+    "review": "I keep my information secure online thanks to Internxt. Their customer support is fast, and their services are incredibly reliable. The fact that they are audited, open-source and encrypted makes me rest assured that my data is always protected from third-parties.",
+    "author": "Sandra Díaz - Trustpilot Review"
   }
 }

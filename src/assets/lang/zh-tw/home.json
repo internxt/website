@@ -1,145 +1,89 @@
 {
   "HeroSection": {
-    "label": "優惠 {{discount}}%",
-    "title": {
-      "line1": "獲取最",
-      "blueText": "安全的",
-      "line2": " 雲端儲存"
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "subtitle": "使用我們的開源和加密套件，保護您的隱私。Internxt Drive、Send 等等。",
-    "cta": {
-      "title": "获取 1 GB",
-      "subtitle": "免費！"
-    },
-    "featuredIn": "在以下平台上推薦",
     "SignUp": {
       "cta": {
         "title": "開始使用 Internxt",
-        "subtitle": "立即創建帳戶，即可免費獲得 1GB"
+        "subtitle": "立即建立帳戶，免費獲得 1GB 儲存空間"
       },
       "disclaimer": {
-        "text": "創建帳戶即表示您接受",
+        "text": "建立帳戶即表示您同意我們的",
         "link": "服務條款和隱私政策"
       },
       "fields": {
         "email": {
-          "label": "電子郵件",
-          "placeholder": "電子郵件"
+          "label": "Email",
+          "placeholder": "Email"
         },
         "password": {
           "label": "密碼",
           "placeholder": "密碼",
           "strength": {
-            "complexity": "密碼不夠複雜",
-            "length": "密碼至少需 8 個字符長",
-            "weak": "密碼太弱",
-            "strong": "密碼很強"
+            "complexity": "密碼複雜度不足",
+            "length": "密碼至少需要 8 個字元",
+            "weak": "密碼強度較弱",
+            "strong": "密碼強度良好"
           }
         },
         "submit": {
-          "get": "获取 1 GB",
+          "get": "獲取 1GB",
           "free": "免費！"
         }
       }
     },
-    "TitleAndSurvey": {
-      "title": {
-        "line1": "現在安全存儲您的文件，",
-        "blueText": "便宜{{discount}}%"
-      },
-      "trustedBy": "已被330,000+人信任",
-      "description": {
-        "normal1": "使用 ",
-        "bold": "經濟實惠的軍用級加密",
-        "normal2": "雲存儲保護您的工作和個人文件。"
-      },
-      "howMuchYouNeed": "您需要多少線上存儲空間？",
-      "upTo": "最多：",
-      "buttonLabel": ["200GB", "2TB", "5TB", "10TB"]
+    "title": "**預設私密**，**安全設計**，**天然自由**",
+    "subtitle": "這就是 Internxt - 安全的雲端儲存及更多服務",
+    "description": "立享 {{discount}}% 折扣！",
+    "features": ["完整隱私套件", "後量子加密", "開源且經過稽核"],
+    "startFrom": {
+      "normal1": "起價 ",
+      "price": "{{minimumPrice}}",
+      "normal2": "/月"
     },
-    "TitleAndOnePlan": {
-      "title": {
-        "textBeforeBlueText": "生態系統 ",
-        "blueText": "安全",
-        "textAfterBlueText": " 在雲端"
-      },
-      "subtitle": "完全的安全和控制。",
-      "description": "{{discount}}%折扣",
-      "features": ["Drive, Meet, Mail, VPN, Antivirus等", "后量子加密和零知识", "开源和经过审计"],
-      "startFrom": {
-        "normal1": "从 ",
-        "price": " {{minimumPrice}}",
-        "normal2": " /月"
-      },
-      "claimDeal": "领取优惠",
-      "guarantee": "30天退款保证"
-    },
-    "TitleAndOnePlanV2": {
-      "saveLabel": "{{discount}}%優惠",
-      "title": "世界環境日",
-      "subtitle": "所有Internxt計劃",
-      "cta": "立即取得你的方案",
-      "guarantee": "30天退款保證"
-    },
-    "youKnow": "你知道吗？"
-  },
-  "FeatureSectionV2": {
-    "title": "零知識加密：只有您可以看到您的數據",
-    "description": "通過最安全的雲存儲應用程序，從您的計算機、智能手機、平板電腦或任何其他連接到互聯網的設備安全地訪問您的所有文件。",
-    "cta": "選擇存儲大小",
-    "cards": [
-      {
-        "title": "無法破解和泄漏的數據",
-        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜止時均已加密。Internxt讓您完全掌控您的文件。您的數據是您的業務。保護它是我們的責任。"
-      },
-      {
-        "title": "毫不妥協的安全性",
-        "description": "在離開您的設備之前，您的文件已端到端加密。感謝零知識AES-256加密，您是唯一能夠訪問您的數據的人。"
-      },
-      {
-        "title": "開源和透明",
-        "description": "我們為我們的工作感到自豪，因此我們的代碼在GitHub上公開，可以由任何人親自審查、審計和驗證。我們沒有什麼可隱藏的，除了您的數據。"
-      },
-      {
-        "title": "獨立驗證",
-        "description": "我們完全符合GDPR並且100%安全，但不要僅憑我們的說辭。Internxt已通過歐洲領先的滲透測試公司Securitum的獨立審計和驗證。"
-      }
-    ]
+    "claimDeal": "把握優惠",
+    "guarantee": "30 天退款保證"
   },
   "tableSection": {
     "title": "Internxt 方案",
     "planTitles": {
-      "individuals": "個人計劃",
-      "homePage": "選擇適合您的計劃",
-      "lifetime": "終身計劃",
-      "business": "企業計劃",
+      "individuals": "個人方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
       "lifetimeCampaign": {
-        "blueText": "50%折扣",
-        "normalText": "適用於我們所有獨家的終身計劃"
+        "blueText": "5 折優惠",
+        "normalText": "所有專屬終身方案"
       }
     },
-    "lifetimeDescription": "一次付款，獲得永久的隱私和安全",
-    "planDescription": "所有Internxt計劃都提供對我們私人解決方案包的完全訪問，其中包含最新的安全技術：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
-    "businessDescription": "我們目前正在開發新的Internxt計劃，專門用於保護您的企業、員工，並確保盈利能力。",
-    "businessDescription2": "通過Internxt的加密雲端儲存計劃確保公司數據的安全。",
+    "lifetimeDescription": "一次付費，終身享受隱私和安全保護",
+    "planDescription": "所有 Internxt 方案都可完整存取我們的私密解決方案套件，配備最新安全技術：Internxt Drive、Send、VPN、Antivirus、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的事業、保護員工和確保獲利而設計的全新 Internxt 企業方案。",
+    "businessDescription2": "使用 Internxt 加密雲端儲存方案確保企業資料安全。",
     "billingFrequency": {
-      "monthly": "每月",
-      "annually": "每年",
-      "individual": "個人",
+      "monthly": "月付",
+      "annually": "年付",
       "lifetime": "終身",
-      "business": "商業"
+      "individual": "個人",
+      "business": "企業"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "免費 – 免費獲取 1GB 加密雲存儲",
-      "cta": "选择方案"
+      "eyeBrow": "Internxt 免費版",
+      "description": "免費獲得 1GB 加密雲端儲存空間",
+      "cta": "選擇方案"
     },
     "features": {
-      "endToEnd": "端到端加密",
-      "openSource": "开源并已审核",
-      "anonymousAccount": "匿名账户创建",
-      "premiumSupport": "高级客户支持",
-      "guarantee": "30 天退款保证"
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過稽核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
     },
     "planStorage": {
       "essential": "1TB",
@@ -147,235 +91,108 @@
       "ultimate": "5TB"
     }
   },
-  "ChooseStorageSizeSection": {
-    "title": "數據泄露可能導致失業、法律糾紛和敲詐勒索",
-    "description": "我們的雲存儲即使在您的設備被盜或被黑客攻擊時也能保護您的文件安全。",
-    "peaceOfMind": "使用Internxt，保證安心。",
-    "cta": "選擇存儲大小"
-  },
-  "FirstFeaturesSection": {
-    "title": "為什麼選擇Internxt？",
-    "subtitle": "Internxt通過零知識和軍用級加密讓您重新掌控您的數據。",
-    "description": "我們使用開源代碼，允許獨立驗證我們的安全實踐。Internxt使您能夠擁有自己的數據，提供無與倫比的隱私和安心。",
-    "cta": "選擇存儲"
-  },
-  "InfoSection": {
-    "title": "無與倫比的隱私安全的雲存儲",
-    "description": "Internxt 有何特色？我們是一支緊密團結的專業團隊，致力於全面保護您的在線安全。我們所做的一切和每一個決定都圍繞著保護您的數據不受利用。",
-    "cta": "介紹 Internxt 團隊",
-    "cards": [
-      {
-        "title": "設計上獨具私密性",
-        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據是您的業務。保護它就是我們的業務。"
-      },
-      {
-        "title": "毫不妥協的安全性",
-        "description": "您的文件在離開您的設備之前就已進行端到端加密。多虧了零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
-      },
-      {
-        "title": "開源和透明",
-        "description": "我們對自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們除了您的數據之外，一無所隱藏。"
-      },
-      {
-        "title": "經獨立驗證",
-        "description": "我們完全符合 GDPR，並且百分之百安全，但不要聽我們的。Internxt 已經由歐洲領先的滲透測試公司 Securitum 進行了獨立審核和驗證。"
-      }
-    ]
-  },
-  "SecondFeaturesSection": {
-    "title": "擁有無與倫比隱私的安全雲存儲",
-    "description": "是什麼讓Internxt如此特別？我們重視您的隱私，並希望保護您免受數據泄露的新興威脅。與Google Drive等大型科技公司不同，我們從不監控、收集或利用您的數據獲利。",
-    "cta": "我們的隱私價值觀",
-    "info": [
-      {
-        "title": "獨立驗證的安全性",
-        "description": "您的安心是我們的首要任務。這就是為什麼我們的服務成功通過了歐洲領先的滲透測試公司的安全審計，驗證了您的數據和文件在黑客面前的安全性。"
-      },
-      {
-        "title": "輕鬆協作",
-        "description": "Internxt提供更多控制權，讓您管理隱私和誰可以訪問您的文件。通過管理權限和密碼保護安全地分享、編輯和訪問文件。"
-      },
-      {
-        "title": "按需備份存儲",
-        "description": "通過內置冗餘保護您的數據免受災害。將您的重要工作和項目備份到整個歐盟的多個快速伺服器，並從所有設備訪問它們。"
-      },
-      {
-        "title": "安全且可訪問",
-        "description": "Internxt通過先進的加密技術保護您的數據，讓您可以在任何地方安心工作和訪問文件。"
-      }
-    ]
-  },
-  "ThirdFeaturesSection": {
-    "title": "免費獲得高達10GB！",
-    "description": "立即創建您的免費帳戶，並完全使用我們的一系列在線隱私服務。",
-    "cta": "立即開始"
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "為未來而建",
-      "description": "我們希望建立一個更好的全球網際網路，一個對所有人都是公平、安全和公正的。網際網路隱私的未來之戰正在進行，而我們就在前線。",
-      "cta": "為隱私而戰"
-    },
-    "card2": {
-      "title": "所有設備，無縫體驗",
-      "description": "Internxt 在所有平台上都可用，甚至包括 Linux！使用我們的移動應用程序、網頁和桌面應用程序同步您的文件和照片，每一個都被設計成在行動中加速您的加密存儲。",
-      "cta": "下載應用程式"
-    },
-    "card3": {
-      "title": "免費試用 Internxt",
-      "description": "免費獲得高達 1GB 的空間，看看隱私對您是否合適！",
-      "cta": "創建免費帳戶"
-    }
-  },
-  "SecondWhatWeDoSection": {
-    "title": "您不是產品",
-    "description": "Internxt提供一系列以用戶隱私為重點的產品，如Drive、Send和VPN，受到全球領先品牌的信任，Internxt使像您這樣的個人能夠控制自己的數據和隱私。",
-    "square1": {
-      "title": "Internxt Drive",
-      "subtitle": "最安全的雲存儲，適合所有文件、照片等",
-      "description": "使用Internxt Drive掌控您的文件和數據。以完全隱私的方式存儲和備份文件變得如此簡單。現代雲存儲結合軍用級加密。",
-      "cta": "使用Drive保護"
-    },
-    "square2": {
-      "title": "Internxt Send",
-      "subtitle": "加密、分享和快速發送大文件，絕對安全",
-      "description": "Send允許您端到端加密並快速分享大文件，無需擔心文件、圖片或視頻的安全性。向任何人完全保密地傳輸。",
-      "cta": "使用Send分享"
-    },
-    "square3": {
-      "title": "Internxt VPN",
-      "subtitle": "為您的完美瞬間提供安全的在線照片存儲",
-      "description": "Internxt VPN加密和保護您的互聯網連接，保護您免受數據泄露、黑客攻擊和網絡攻擊。保持數據私密和保護，免受窺視。",
-      "cta": "使用VPN瀏覽"
-    }
-  },
-  "InvestorsSection": {
-    "title": "信任我們的品牌"
-  },
   "FaqSection": {
     "title": "有疑問？我們有答案",
     "faq": [
       {
-        "question": "Internxt能訪問我的文件嗎？",
+        "question": "Internxt 能存取我的檔案嗎？",
         "answer": [
-          "不能。Internxt以及任何其他第三方都無法訪問您的文件、照片或數據。",
-          "Internxt 的服務具有零知識加密，這意味著只有您可以存取和解密您的私人數據。此外，Internxt 使用後量子加密技術，這是最先進的技術，可保護您的文件免受未來威脅。"
+          "不能。Internxt 和任何其他第三方都無法存取您的檔案、照片或資料。",
+          "Internxt 服務採用零知識加密，這意味著只有您可以存取和解密您的私人資料和資訊。此外，Internxt 使用後量子密碼學，這是目前最先進的技術，可保護您的資訊免受任何威脅。"
         ]
       },
       {
-        "question": "我可以存取所有 Internxt 服務嗎？",
+        "question": "Internxt 會儲存我的密碼嗎？",
         "answer": [
-          "是的，付费的 Internxt 订阅或终身会员资格可让您访问我们的一体化隐私套件。",
-          "Internxt 免费计划仅允许您访问 Internxt Drive。"
+          "不會。因此，Internxt 無法儲存您的密碼。",
+          "您的 Internxt 密碼是您獨有的，用於加密和解密您的 Internxt 資料。但如果您想更改密碼，可以透過我們的應用程式進行。"
         ]
       },
       {
-        "question": "Internxt存儲我的密碼嗎？",
+        "question": "我能啟用雙因素身分驗證 (2FA) 嗎？",
         "answer": [
-          "不。因此，Internxt不能存儲您的密碼。",
-          "您的Internxt密碼是唯一的，用於加密和解密您的Internxt數據。如果您想更改密碼，可以在我們的應用中進行更改。"
+          "可以。您可以透過 Internxt 網頁應用程式為您的帳戶設定雙因素身分驗證。",
+          "您也可以使用 Authy 或其他 2FA 工具為 Internxt 產生個人 2FA 代碼。"
         ]
       },
       {
-        "question": "我可以啟用雙因素認證（2FA）嗎？",
+        "question": "我能用信用卡、PayPal 或加密貨幣付款嗎？",
         "answer": [
-          "可以。您可以通過Internxt Web應用為您的帳戶配置雙因素認證。",
-          "您還可以使用Authy或其他2FA工具生成與Internxt的個人2FA代碼。"
+          "Internxt 目前接受簽帳金融卡和信用卡（Mastercard、VISA、American Express 等）。您也可以透過 PayPal、iDEAL、Sofort 和 Bancontact 付款。",
+          "應要求，我們也接受加密貨幣和 SEPA 直接扣款。如果您對付款方式有疑問，請寄信至 [hello@internxt.com](mailto:hello@internxt.com)。"
         ]
       },
       {
-        "question": "如何創建Internxt帳戶？",
+        "question": "Internxt 的退款政策是什麼？",
         "answer": [
-          "要創建免費的Internxt帳戶，只需點擊上面的最佳計劃並按照說明操作。",
-          "或者訪問我們的主頁並點擊“開始使用”。您將立即獲得1GB的永久免費存儲。您可以使用您的免費會員資格訪問我們所有的服務。註冊時只需輸入您的姓名和電子郵件地址。不需要身份或電子郵件驗證即可開始使用Internxt的服務。"
+          "Internxt 對所有付費訂閱提供標準的 30 天退款保證，從您訂閱時開始計算。",
+          "如果您對我們的服務不滿意，請透過 [hello@internxt.com](mailto:hello@internxt.com) 聯絡我們申請退款。"
         ]
       },
       {
-        "question": "我可以用信用卡、PayPal或加密貨幣付款嗎？",
+        "question": "我如何聯絡客服？",
         "answer": [
-          "Internxt目前接受借記卡和信用卡（萬事達卡、VISA、美國運通等）。您還可以通過PayPal、iDEAL、Sofort和Bancontact付款。",
-          "根據請求，我們也接受加密貨幣和SEPA借記。如果您對付款方式有疑問，只需發送電子郵件至 [hello@internxt.com](mailto:hello@internxt.com)。"
-        ]
-      },
-      {
-        "question": "Internxt的退款政策是什麼？",
-        "answer": [
-          "Internxt為其所有付費訂閱提供標準的30天退款保證，自訂閱之日起計算。",
-          "如果您對我們的服務不滿意，請通過 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們並申請退款。我們會無條件滿足您的請求！"
-        ]
-      },
-      {
-        "question": "如何取消訂閱？",
-        "answer": [
-          "取消訂閱很簡單。打開Internxt應用，導航到設置並選擇“取消訂閱”。此操作將立即終止您的訂閱，您的帳戶將恢復為免費計劃。",
-          "請注意，目前付費訂閱的剩餘時間不會被退款或轉移。例如，如果您取消了一年的計劃，還剩四個月，您將失去這四個月的訪問權限。",
-          "您還可以通過設置取消付費計劃和您的Internxt帳戶，這將刪除您的訂閱、帳戶和所有文件。"
-        ]
-      },
-      {
-        "question": "如何聯繫支持？",
-        "answer": [
-          "找不到您需要的信息？您可以通過在線聊天或發送電子郵件至 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們的客戶成功團隊。"
-        ]
-      },
-      {
-        "question": "Internxt有終身計劃嗎？",
-        "answer": [
-          "我們提供可以在我們網站上購買的終身計劃。這些計劃為您提供終身訪問權限，最多可達10TB的存儲空間，僅需一次性付款。"
-        ]
-      },
-      {
-        "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
-        "answer": [
-          "是的，您可以向您的Internxt終身會員資格添加任意數量的存儲空間。Internxt終身計劃是可堆疊的。只需使用相同的電子郵件地址購買，並聯繫我們 [hello@internxt.com](mailto:hello@internxt.com)，我們可以將它們堆疊在同一帳戶上。"
-        ]
-      },
-      {
-        "question": "Internxt 是可持續且環保的雲端儲存解決方案嗎？",
-        "answer": [
-          "是的，Internxt 致力於綠色雲端運算，提供環保的儲存解決方案，支持更清潔、更可持續的未來。我們的數據中心以 92% 的可再生能源運行，旨在最大程度地減少碳排放、資源消耗和電子垃圾。",
-          "我們的努力目標是在 2050 年達成碳中和。 [了解更多](https://internxt.com/es/green-cloud-computing)"
+          "找不到您要的資訊？您可以透過線上聊天或寄信至 [hello@internxt.com](mailto:hello@internxt.com) 聯絡我們的技術支援團隊。"
         ]
       }
     ]
   },
   "TestimonialsSection": {
     "title": {
-      "normal": "數十萬人正在拋棄iCloud、Google Drive和Dropbox，選擇",
-      "blue": "最安全的雲存儲 - Internxt Drive"
+      "normal": "成千上萬使用者正在離開 iCloud、Google Drive 和 Dropbox，轉向",
+      "blue": "最安全的雲端儲存 - Internxt Drive"
     },
     "cards": [
       {
-        "name": "伊娃·威廉姆斯",
-        "enterprise": "FixThePhoto.com的記者",
-        "review": "Internxt是一個方便的雲存儲服務，適合注重隱私的客戶。它具有簡化的界面和可靠的支持團隊，使其成為需要安全存儲文件的人的理想選擇。"
+        "name": "Eva Williams",
+        "enterprise": "FixThePhoto.com 記者",
+        "review": "我選擇 Internxt 是因為他們的零知識技術、後量子加密和開源程式碼。現在只有我能存取自己的檔案和資訊，所有內容都在線上受到保護。"
       },
       {
-        "name": "克里斯蒂安 M.",
-        "enterprise": "來自GetApp的評價",
-        "review": "最好的加密Dropbox替代品。總體評價：我們需要一個替代方案，允許我們存儲客戶文件和工作（社交媒體文件），由於Internxt符合GDPR，非常適合我們！"
+        "name": "Cristian M.",
+        "enterprise": "GetApp 評價",
+        "review": "Internxt 是一個私密且安全的雲端儲存服務。它有簡化的介面，易於使用，客戶服務很好，是個絕佳的選擇。"
       },
       {
-        "name": "約瑟夫·卡里佐",
-        "enterprise": "來自Trustpilot的評價",
-        "review": "我使用Google Drive已經好幾年了，但我需要一個可以保證我數據隱私的替代方案。Google或其他知名平台無法做到這一點。因此我選擇了Internxt。"
+        "name": "Josep Carrizo",
+        "enterprise": "Trustpilot 評價",
+        "review": "Internxt 是一個私密且安全的雲端儲存服務。它有簡化的介面，易於使用，客戶服務很好，是個絕佳的選擇。"
       }
     ]
   },
-  "CtaSection": {
-    "title": "世界上最私密的雲存儲",
-    "description": "使用Internxt的安全、私密和加密雲存儲保護真正重要的東西。",
-    "cta": "選擇你的計劃"
+  "ReviewSection": {
+    "pcMag": "\"Internxt 正在**超值促銷**，擁有**優秀的使用者評價**、**端對端**和**後量子加密**，他們讓程式碼完全**開源**，對客戶完全透明。\"",
+    "mashable": "\"用 Internxt **認真保護您的重要資料**。他們將**隱私**作為**首要關注**，讓您安心知道檔案**安全無虞**，平台重視使用者**透明度**。\"",
+    "pcWorld": "\"Internxt 的**直覺式網頁存取**、**檔案同步**和**備份服務**令人**印象深刻**。這個加密的線上儲存和備份服務**簡單易用**，功能全面，目前的**終身方案**非常**划算**。\""
   },
-  "GetStartedSection": {
-    "title": {
-      "line1": "開始並",
-      "line2": "免費獲得高達10GB"
-    },
-    "subtitle": {
-      "line1": "我們的客戶非常喜歡Internxt Drive，但是",
-      "line2": "他們更喜歡知道他們的隱私得到了完全保護。"
-    },
-    "cta1": "立即開始"
+  "OfficalCloudProvider": {
+    "title": "瓦倫西亞足球俱樂部官方雲端服務提供商",
+    "description": "瓦倫西亞足球俱樂部與 Internxt 達成協議，Internxt 成為俱樂部的官方雲端服務提供商。透過這個新的合作夥伴關係，Internxt 鞏固了其作為歐洲數位隱私領導者的地位。這項協議標誌著 Internxt 倡導數位主權和資料保護的創新方式達到了新的里程碑。",
+    "cta": "瞭解更多"
+  },
+  "AwardWinningSection": {
+    "title": "屢獲殊榮的隱私保護",
+    "description": "憑藉 Internxt 國際認可的零知識加密技術，只有您和您選擇的人可以存取您的檔案——連我們都不能。",
+    "subtitle": "您的安心，我們的保證。",
+    "cta": "選擇您的方案"
+  },
+  "NextGenSection": {
+    "title": "新世代加密技術，提供終極保護",
+    "description": "我們使用先進的加密技術保護您檔案的安全和隱私，為未來的新興威脅做好準備。",
+    "cta": "更深入瞭解我們",
+    "cardDescriptions": {
+      "titles": ["無法破解和洩露的資料", "新世代安全技術", "開源且透明", "獨立驗證"],
+      "descriptions": [
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和儲存時都經過加密。Internxt 讓您完全控制自己的檔案。您的資料是您的事。保護它們是我們的事。",
+        "Internxt 是唯一一個使用端對端和後量子密碼學自動加密檔案的雲端儲存服務，這意味著只有您可以存取您的資料。",
+        "我們為自己的工作感到自豪，所以我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。除了您的資料，我們沒有什麼可隱藏的。",
+        "我們完全符合 GDPR 規定，100% 安全，但不要只聽我們的話。Internxt 已經通過歐洲領先的滲透測試公司 Securitum 的獨立稽核和驗證。"
+      ]
+    }
+  },
+  "TrustedBySection": {
+    "title": "受到像您一樣使用者的信任",
+    "review": "感謝 Internxt，我的資訊在線上保持安全。他們的客戶支援快速，服務極其可靠。他們經過稽核、開源且加密的事實讓我確信我的資料始終受到第三方保護。",
+    "author": "Sandra Díaz - Trustpilot 評價"
   }
 }
