@@ -1,19 +1,23 @@
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
+import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 
-export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
+interface HorizontalScrollableProps {
+  textContent: PrivateCloudStorageForVideoText['HorizontalScrollableSection'];
+}
+
+export default function HorizontalScrollableSection({ textContent }: HorizontalScrollableProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
-  const cardDescriptions = textContent?.scrollableSection.descriptions;
-  const cardImages = textContent?.scrollableSection?.imagesPathname || [];
+  const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 400;
-  const mobileCardWidth = 320;
-  const gap = 32;
+  const mobileCardWidth = 345;
+  const gap = 24;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
 
@@ -80,49 +84,53 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-12 lg:py-20"
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-20 lg:h-min lg:gap-16"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
-      <div className="flex h-min w-[832px] flex-col items-center gap-8 lg:gap-12">
-        <p className="w-[320px] text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-left lg:text-5xl">
-          {textContent.title}
-        </p>
-        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
-          {textContent.description}
-        </p>
+      <div className="bg-neutral-35 absolute left-8 right-8 top-0 h-[1px] lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
+        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-min w-[320px] snap-x snap-mandatory flex-row items-start justify-start gap-2 overflow-x-auto scroll-smooth lg:w-[832px]"
           onScroll={handleScroll}
+          className="w-full overflow-x-auto px-5 lg:px-20 [&::-webkit-scrollbar]:hidden"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          }}
         >
-          {cardTitles.map((title, index) => (
-            <div key={title} className="flex snap-start snap-always flex-col">
-              <Image
-                src={getImage(`/images${cardImages[index]}.webp`)}
-                alt="Internxt B2B Business Solution"
-                height={500}
-                width={400}
-                quality={100}
-                style={{ objectFit: 'contain', objectPosition: 'bottom' }}
-              />
-              <div className="h-min w-[320px] shrink-0 lg:h-full lg:w-[400px]">
-                <div className="flex flex-row items-center justify-start gap-4 pt-8">
-                  <p className="text-left text-xl font-medium text-gray-100">{title}</p>
-                </div>
-                <div className="py-4">
-                  <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">
-                    {cardDescriptions[index]}
-                  </p>
+          <div
+            className="flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48"
+            style={{
+              width: 'max-content',
+              alignItems: 'stretch',
+            }}
+          >
+            {cardTitles.map((title: string, index: number) => (
+              <div key={title} className="flex-shrink-0">
+                <Image
+                  src={getImage(`/images${textContent.scrollableSection.imagesPathname[index]}.webp`)}
+                  alt="Internxt B2B Business Solution"
+                  height={300}
+                  width={400}
+                  quality={100}
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
+                  className="rounded-t-16"
+                />
+                <div className="flex h-min w-[345px] flex-col rounded-b-16 bg-white px-4 pb-8 pt-6 lg:w-[400px]">
+                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-        <div className="flex h-[48px] w-[310px] flex-row  justify-end lg:w-[832px]">
+        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
@@ -145,16 +153,6 @@ export default function HorizontalScrollableSectionWithPhotos({ textContent }) {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-      `}</style>
     </section>
   );
 }

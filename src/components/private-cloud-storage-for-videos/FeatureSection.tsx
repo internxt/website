@@ -10,6 +10,14 @@ interface Props {
 }
 
 const FeatureSection = ({ textContent }: Props): JSX.Element => {
+  const videoSources = [
+    '/videos/cloud-storage-for-video-files/Nature_Water.mp4',
+    '/videos/cloud-storage-for-video-files/Sunset_Yoga.mp4',
+    '/videos/cloud-storage-for-video-files/Snow_Winter.mp4',
+    '/videos/cloud-storage-for-video-files/Scenic_Colorful.mp4',
+    '/videos/cloud-storage-for-video-files/Friends_Couple.mp4',
+    '/videos/cloud-storage-for-video-files/Person_People.mp4',
+  ];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -17,9 +25,9 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
   const featuresArray = Object.entries(textContent.features);
   const totalFeatures = featuresArray.length;
 
-  const cardWidth = 352; // lg:w-[352px]
-  const mobileCardWidth = 330; // w-[330px]
-  const gap = 32; // md:gap-8
+  const cardWidth = 352;
+  const mobileCardWidth = 330;
+  const gap = 32;
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -31,19 +39,18 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
 
-  const getMaxIndex = () => {
+  const getMaxIndex = useCallback(() => {
     if (isMobile) {
       return Math.max(0, totalFeatures - 1);
     } else {
       return Math.max(0, totalFeatures - 2);
     }
-  };
+  }, [isMobile, totalFeatures]);
 
-  // Función para actualizar el índice basado en la posición del scroll
   const updateIndexFromScroll = useCallback(() => {
     if (scrollContainerRef.current) {
       const scrollLeft = scrollContainerRef.current.scrollLeft;
-      const itemWidth = isMobile ? mobileCardWidth + 24 : cardWidth + gap; // gap-6 = 24px en mobile
+      const itemWidth = isMobile ? mobileCardWidth + 24 : cardWidth + gap;
       const newIndex = Math.round(scrollLeft / itemWidth);
       const maxIndex = getMaxIndex();
 
@@ -51,7 +58,6 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
     }
   }, [isMobile, getMaxIndex]);
 
-  // Event listener para el scroll manual
   useEffect(() => {
     const container = scrollContainerRef.current;
     if (container) {
@@ -61,7 +67,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         clearTimeout(scrollTimeout);
         scrollTimeout = setTimeout(() => {
           updateIndexFromScroll();
-        }, 150); // Debounce para mejor performance
+        }, 150);
       };
 
       container.addEventListener('scroll', handleScroll, { passive: true });
@@ -166,14 +172,7 @@ const FeatureSection = ({ textContent }: Props): JSX.Element => {
         </div>
       </div>
 
-      <VideoScroller />
-
-      <style jsx>{`
-        /* Ocultar scrollbar en WebKit browsers */
-        div[ref] ::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
+      <VideoScroller videoSources={videoSources} />
     </section>
   );
 };

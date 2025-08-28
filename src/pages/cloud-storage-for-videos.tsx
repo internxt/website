@@ -12,7 +12,7 @@ import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-st
 import FeatureSection from '@/components/private-cloud-storage-for-videos/FeatureSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import HowItWorksSection from '@/components/private-cloud-storage-for-videos/HowItWorksSection';
+import HowToChooseSection from '@/components/private-cloud-storage-for-videos/HowToChooseSection';
 import SecureAndManageSection from '@/components/private-cloud-storage-for-videos/Secure&Manage';
 
 import HorizontalScrollableSectionWithPhotos from '@/components/shared/HorizontalScrollableSectionWithPhotos';
@@ -90,9 +90,10 @@ const CloudStorageForVideos = ({
         bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20 py-10"
       />
 
-      <HowItWorksSection textContent={textContent.HowToChooseSection} />
+      <HowToChooseSection textContent={textContent.HowToChooseSection} />
 
       <SecureAndManageSection textContent={textContent.SecureAndManage} />
 
@@ -109,6 +110,7 @@ const CloudStorageForVideos = ({
         url="/pricing"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:py-20"
       />
 
       <FAQSection textContent={textContent.FaqSection} />

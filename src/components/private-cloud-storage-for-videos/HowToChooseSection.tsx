@@ -2,7 +2,7 @@ import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
 import AccordionCards from '../shared/AccordionCards';
 
-const HowItWorksSection = ({ textContent }) => (
+const HowToChooseSection = ({ textContent }) => (
   <section className="flex h-auto w-full flex-row items-center justify-center bg-neutral-17 lg:min-h-[1000px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
     <div className="flex w-[320px] flex-col items-center justify-between gap-2 lg:h-max lg:w-full lg:gap-12">
       <div className=" w-[320px] lg:w-[832px]">
@@ -57,4 +57,4 @@ const HowItWorksSection = ({ textContent }) => (
   </section>
 );
 
-export default HowItWorksSection;
+export default HowToChooseSection;

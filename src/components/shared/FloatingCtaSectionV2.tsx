@@ -1,3 +1,4 @@
+import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 import Link from 'next/link';
 
 const FloatingCtaSectionv2 = ({
@@ -8,18 +9,20 @@ const FloatingCtaSectionv2 = ({
   bgGradientContainerColor,
   bgGradientColor,
   containerDetails,
+  bgPadding,
 }: {
-  textContent: any;
+  textContent: PrivateCloudStorageForVideoText['cta'];
   url?: string;
   target?: string;
   bgGradientContainerColor?: string;
   bgGradientColor?: string;
   customText?: React.ReactNode;
   containerDetails?: string;
+  bgPadding?: string;
 }) => {
   return (
     <section
-      className="flex h-[260px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
+      className={`flex h-min w-full items-center justify-center px-10 ${bgPadding} xl:px-32 3xl:px-80`}
       style={{ background: bgGradientColor }}
     >
       <div

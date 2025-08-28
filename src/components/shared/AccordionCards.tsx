@@ -1,7 +1,8 @@
+import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 import { useState } from 'react';
 
 interface AccordionCardsProps {
-  textContent: any;
+  textContent: PrivateCloudStorageForVideoText['HowToChooseSection']['cardDescriptions'];
   cardWidth?: string;
 }
 
@@ -28,8 +29,8 @@ export default function AccordionCards({ textContent, cardWidth }: AccordionCard
             className="flex w-full cursor-pointer items-center px-6 py-6 duration-300"
           >
             <div className="flex w-full flex-row items-center gap-4">
-              <p className="text-base font-normal text-primary lg:text-2xl">{index + 1}</p>
-              <p className="text-base font-medium text-gray-100 lg:text-2xl">{title}</p>
+              <p className="text-xl font-normal text-primary lg:text-2xl">{index + 1}</p>
+              <p className="text-lg font-medium text-gray-100 lg:text-2xl">{title}</p>
             </div>
           </button>
 

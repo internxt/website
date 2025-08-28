@@ -40,7 +40,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
                 height={350}
                 width={350}
                 quality={100}
-                className="z-10 flex"
+                className="z-10 flex overflow-hidden"
               />
               <video
                 src={
@@ -58,7 +58,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
           </div>
         ))}
       </div>
-      <div className="flex flex-col gap-8 lg:hidden">
+      <div className="flex flex-col gap-4 lg:hidden">
         {textContent.cards.map((card, index) => (
           <div key={index} className="flex w-[340px] flex-col items-center gap-16 rounded-16 bg-white p-10">
             <div className="flex flex-col gap-6">
@@ -88,7 +88,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
                 height={350}
                 width={350}
                 quality={100}
-                className="z-10 flex"
+                className="z-10 flex overflow-hidden"
               />
               <video
                 src={
@@ -100,7 +100,7 @@ const SecureAndManageSection = ({ textContent }): JSX.Element => {
                 loop
                 muted
                 playsInline
-                className="absolute bottom-4 left-6 z-20 h-[135px] w-[215px] object-cover"
+                className="absolute bottom-4 left-6 z-10 h-[135px] w-[215px] object-cover"
               />
             </div>
           </div>
