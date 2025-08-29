@@ -1,6 +1,4 @@
 module.exports = {
-  output: 'export',
-  trailingSlash: true,
   i18n: {
     locales: ['en', 'es', 'fr', 'it', 'zh', 'ru', 'de', 'zh-tw'],
     defaultLocale: 'en',
