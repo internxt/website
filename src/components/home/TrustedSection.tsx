@@ -10,7 +10,7 @@ interface TrustedSectionProps {
 export default function TrustedSection({ textContent }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
-      className={`relative flex h-[532px] w-full flex-col items-center justify-center gap-8 overflow-hidden px-8 lg:h-min lg:gap-20 lg:px-32 lg:py-20 xl:py-32`}
+      className={`relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-8 py-10 lg:h-min lg:gap-20 lg:gap-8 lg:px-32 lg:py-20 xl:py-32`}
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
@@ -18,8 +18,8 @@ export default function TrustedSection({ textContent }: Readonly<TrustedSectionP
       <p className="flex w-full items-center justify-center text-start text-30 font-bold leading-tight lg:text-center lg:text-3xl">
         {textContent.title}
       </p>
-      <div className="flex h-[370px] w-full flex-col-reverse justify-center gap-8 lg:h-[220px] lg:w-min lg:flex-row">
-        <div className="relative h-full w-[323px] lg:w-[650px]">
+      <div className="flex h-[420px] w-full flex-col-reverse items-center justify-center lg:h-[220px] lg:w-min lg:flex-row lg:gap-8">
+        <div className="relative h-full w-full lg:w-[650px]">
           <Image
             src={getImage('/images/home/NewDesign/mujer-joven-trabajar-desde-casa.jpg')}
             alt="Woman working fromhome"
