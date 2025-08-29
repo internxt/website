@@ -39,7 +39,7 @@
       }
     },
     "title": "**Private** by default, **secure** by design, **free** as in freedom",
-    "subtitle": "That's Internxt - secure cloud storage & much more",
+    "subtitle": "That's Internxt - secure cloud storage & more",
     "description": "Get {{discount}}% off now!",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "startFrom": {
@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Pay once and enjoy privacy and security for life",
-    "planDescription": "All Internxt plans have full access to our suite of private solutions featuring the latest security technology: Internxt Drive, Send, VPN, Antivirus, Meet, and Mail. ",
+    "planDescription": "All Internxt plans have full access to our suite of private solutions featuring the latest security technology: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet, and Mail. ",
     "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
     "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {

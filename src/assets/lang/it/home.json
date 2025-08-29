@@ -3,19 +3,19 @@
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
+      "cleaner": "Pulitore",
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail"
     },
     "SignUp": {
       "cta": {
-        "title": "Inizia con Internxt",
+        "title": "Inizia a lavorare con Internxt",
         "subtitle": "Crea un account ora e ottieni 1 GB GRATIS"
       },
       "disclaimer": {
-        "text": "Creando un account accetti i nostri",
-        "link": " termini di servizio e privacy policy"
+        "text": "Creando un account accetti i",
+        "link": " termini di servizio e l'informativa sulla privacy"
       },
       "fields": {
         "email": {
@@ -27,7 +27,7 @@
           "placeholder": "Password",
           "strength": {
             "complexity": "La password non è abbastanza complessa",
-            "length": "La password deve avere almeno 8 caratteri",
+            "length": "La password deve contenere almeno 8 caratteri",
             "weak": "La password è debole",
             "strong": "La password è forte"
           }
@@ -38,17 +38,17 @@
         }
       }
     },
-    "title": "**Privato** per impostazione, **sicuro** per design",
-    "subtitle": "Questo è Internxt - archiviazione cloud sicura e molto altro",
+    "title": "Passa a un **internet** più **etico**, **privato** e **sicuro**",
+    "subtitle": "Questo è Internxt - Il tuo alleato digitale di fiducia",
     "description": "Ottieni il {{discount}}% di sconto!",
-    "features": ["Suite completa per la privacy", "Crittografia post-quantica", "Open source e verificato"],
+    "features": ["Suite digitale privata", "Crittografia post-quantistica", "Open source e verificato"],
     "startFrom": {
       "normal1": "A partire da ",
       "price": " {{minimumPrice}}",
       "normal2": " /mese"
     },
-    "claimDeal": "Approfitta dell'offerta",
-    "guarantee": "Garanzia soddisfatti o rimborsati 30 giorni"
+    "claimDeal": "Rivendica l'offerta",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
   },
   "tableSection": {
     "title": "Piani Internxt",
@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Paga una volta sola e goditi privacy e sicurezza per sempre",
-    "planDescription": "Tutti i piani Internxt hanno accesso completo alla nostra suite di soluzioni private dotate delle più recenti tecnologie di sicurezza: Internxt Drive, Send, VPN, Antivirus, Meet e Mail. ",
+    "planDescription": "Tutti i piani Internxt hanno accesso completo alla nostra suite di soluzioni private dotate delle più recenti tecnologie di sicurezza: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail. ",
     "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
     "billingFrequency": {

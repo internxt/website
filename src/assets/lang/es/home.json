@@ -38,10 +38,10 @@
         }
       }
     },
-    "title": "**Privado** por defecto, **seguro** por diseño",
-    "subtitle": "Así es Internxt - almacenamiento seguro en la nube y mucho más",
+    "title": "Pásate a un **internet** más **ético**, **privado** y **seguro**",
+    "subtitle": "Así es Internxt - Tu aliado digital fiable",
     "description": "¡Consigue un {{discount}}% de descuento!",
-    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"],
+    "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "startFrom": {
       "normal1": "Desde ",
       "price": " {{minimumPrice}}",
@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Paga una sola vez y disfruta de privacidad y seguridad de por vida",
-    "planDescription": "Todos los planes de Internxt tienen acceso completo a nuestro paquete de soluciones privadas que cuenta con la última tecnología de seguridad: Internxt Drive, Send, VPN, Antivirus, Meet y Mail. ",
+    "planDescription": "Todos los planes de Internxt dan acceso a nuestro paquete de soluciones privadas con tecnología de seguridad avanzada: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet y Mail.",
     "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender su negocio, proteger a sus empleados y asegurar su rentabilidad.",
     "businessDescription2": "Garantiza la seguridad de los datos de la empresa con los planes de almacenamiento en la nube cifrados de Internxt.",
     "billingFrequency": {
@@ -161,7 +161,7 @@
     ]
   },
   "ReviewSection": {
-    "pcMag": "\"Internxt está en **mega-oferta**, tiene **excelentes reseñas de usuarios**, cifrado **de extremo a extremo** y **post-cuántico**, y hacen su código completamente **de código abierto** para total transparencia con sus clientes.\"",
+    "pcMag": "\"Internxt está en **oferta**, tiene **excelentes reseñas de usuarios**, cifrado **de extremo a extremo** y **post-cuántico**, y hacen su código completamente **de código abierto** para total transparencia con sus clientes.\"",
     "mashable": "\"Ve **en serio** con **asegurar tus datos importantes** con Internxt. Hacen de la **privacidad** su **máxima preocupación**, para que puedas descansar tranquilo sabiendo que tus archivos están **seguros** y la plataforma valora la **transparencia** para sus usuarios.\"",
     "pcWorld": "\"El **acceso web intuitivo**, **sincronización de archivos** y **servicios de respaldo** de Internxt son **impresionantes**. Este servicio de almacenamiento y respaldo en línea cifrado es **fácil**, cubre todas las bases, y los **planes de por vida** actuales son una **ganga**.\""
   },

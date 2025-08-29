@@ -10,17 +10,17 @@
     },
     "SignUp": {
       "cta": {
-        "title": "Legen Sie mit Internxt los",
+        "title": "Starten Sie mit Internxt",
         "subtitle": "Erstellen Sie jetzt ein Konto und erhalten Sie 1 GB KOSTENLOS"
       },
       "disclaimer": {
-        "text": "Mit der Erstellung eines Kontos akzeptieren Sie unsere",
-        "link": " Nutzungsbedingungen und Datenschutzrichtlinie"
+        "text": "Durch die Erstellung eines Kontos akzeptieren Sie die",
+        "link": " Nutzungsbedingungen und die Datenschutzrichtlinie"
       },
       "fields": {
         "email": {
-          "label": "Email",
-          "placeholder": "Email"
+          "label": "E-Mail",
+          "placeholder": "E-Mail"
         },
         "password": {
           "label": "Passwort",
@@ -38,16 +38,16 @@
         }
       }
     },
-    "title": "**Privat** standardmäßig, **sicher** im Design, **frei** von Natur aus",
-    "subtitle": "Das ist Internxt - sicherer Cloud-Speicher und vieles mehr",
+    "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
+    "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
     "description": "Erhalten Sie {{discount}}% Rabatt!",
-    "features": ["Komplette Datenschutz-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {
       "normal1": "Ab ",
       "price": " {{minimumPrice}}",
-      "normal2": " /Monat"
+      "normal2": " /monat"
     },
-    "claimDeal": "Angebot sichern",
+    "claimDeal": "Angebot erhalten",
     "guarantee": "30 Tage Geld-zurück-Garantie"
   },
   "tableSection": {
@@ -63,7 +63,7 @@
       }
     },
     "lifetimeDescription": "Einmal zahlen und lebenslang Datenschutz und Sicherheit genießen",
-    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Internxt Drive, Send, VPN, Antivirus, Meet und Mail. ",
+    "planDescription": "Alle Internxt-Tarife haben vollen Zugang zu unserer Suite privater Lösungen mit neuester Sicherheitstechnologie: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail. ",
     "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
     "businessDescription2": "Gewährleisten Sie die Sicherheit Ihrer Unternehmensdaten mit Internxts verschlüsselten Cloud-Speicher-Tarifen.",
     "billingFrequency": {
