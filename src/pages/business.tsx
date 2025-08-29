@@ -135,7 +135,7 @@ export const BusinessPage = ({
               <Image
                 src={getImage('/images/home/Internxt-secure-cloud-storage_devices.webp')}
                 alt="Tablet Image"
-                width={401}
+                width={601}
                 height={401}
                 className="hidden lg:flex"
               />
