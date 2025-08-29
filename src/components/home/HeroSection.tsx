@@ -61,11 +61,19 @@ export default function HeroSection({
     },
   ];
 
-  const parsePriceText = (text: string) =>
-    typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
+  const parsePriceText = (text: string) => {
+    if (!minimumPrice || minimumPrice === '0') {
+      return <div className="bg-gray-200 h-6 w-12 animate-pulse rounded lg:h-8 lg:w-16"></div>;
+    }
+    return typeof text === 'string' ? text.replace(/{{minimumPrice}}/g, minimumPrice) : text;
+  };
 
-  const parsePercentText = (text: string) =>
-    typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+  const parsePercentText = (text: string) => {
+    if (!percentOff || percentOff === '0') {
+      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+    }
+    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+  };
 
   const HighlightText = ({ text, className = '' }) => {
     const parts = text.split(/(\*\*.*?\*\*)/);
