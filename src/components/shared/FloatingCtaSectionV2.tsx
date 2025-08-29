@@ -1,4 +1,3 @@
-import { PrivateCloudStorageForVideoText } from '@/assets/types/private-cloud-storage-for-videos';
 import Link from 'next/link';
 
 const FloatingCtaSectionv2 = ({
@@ -11,7 +10,7 @@ const FloatingCtaSectionv2 = ({
   containerDetails,
   bgPadding,
 }: {
-  textContent: PrivateCloudStorageForVideoText['cta'];
+  textContent: any;
   url?: string;
   target?: string;
   bgGradientContainerColor?: string;
