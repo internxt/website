@@ -92,7 +92,7 @@ export default function HeroSection({ textContent, percentOff, minimumPrice }: H
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
               <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80">{feature.text}</p>
@@ -112,10 +112,10 @@ export default function HeroSection({ textContent, percentOff, minimumPrice }: H
           </span>
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
-              <div key={feat} className="flex h-[24px] flex-row gap-2">
+              <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="mb-2 text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
+                <p className="text-left text-sm font-semibold text-gray-100 lg:text-lg ">{feat}</p>
               </div>
             ))}
           </div>
@@ -143,7 +143,7 @@ export default function HeroSection({ textContent, percentOff, minimumPrice }: H
               <Countdown textFont="font-medium" textHeight="text-base text-gray-100" />
             </div>
           </div>
-          <span className="flex flex-row gap-2 pt-1 text-xs font-normal leading-tight text-gray-100 lg:text-lg">
+          <span className="flex flex-row items-center gap-2 text-xs font-normal leading-tight text-gray-100 lg:text-lg">
             <Image
               src={getImage('/images/campaigns/world_environment_day/shield-blue.svg')}
               alt="Internxt Blue Shield check"
@@ -154,7 +154,7 @@ export default function HeroSection({ textContent, percentOff, minimumPrice }: H
           </span>
         </div>
       </div>
-      <div className="hidden h-[700px] w-[566px] justify-center lg:flex">
+      <div className="hidden h-[700px] w-full justify-center lg:flex">
         <Animation />
       </div>
     </section>

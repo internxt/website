@@ -47,7 +47,7 @@
       "price": " {{minimumPrice}}",
       "normal2": " /mes"
     },
-    "claimDeal": "Aprovecha la oferta",
+    "claimDeal": "Reclamar oferta",
     "guarantee": "Garantía de devolución de 30 días"
   },
   "tableSection": {

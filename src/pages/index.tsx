@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext } from 'next';
-import { useRouter } from 'next/router';
 import { HomeText } from '@/assets/types/home';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import HeroSection from '@/components/home/HeroSection';
@@ -28,7 +27,7 @@ interface HomeProps {
 
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
-  const router = useRouter();
+
   const {
     products,
     loadingCards,
@@ -42,10 +41,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
   });
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
-
-  const onChooseStorageButtonClicked = () => {
-    router.push('/pricing');
-  };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;

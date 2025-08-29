@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretRight } from '@phosphor-icons/react';
+import { HomeText } from '@/assets/types/home';
 
 interface OfficialCloudProviderProps {
-  textContent: any;
+  textContent: HomeText['OfficalCloudProvider'];
 }
-const onButtonClick = () => (window.location.href = '#priceTable');
 
 export default function OfficialCloudProviderSection({ textContent }: OfficialCloudProviderProps): JSX.Element {
   return (
     <section
-      className={`flex h-min w-full flex-col-reverse items-center justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:p-10 xl:p-32 3xl:p-80`}
+      className={`flex h-min w-full flex-col-reverse items-start justify-center gap-8 overflow-hidden px-6 py-10 lg:h-min lg:flex-row lg:p-10 xl:p-32 3xl:p-80`}
       style={{ background: 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
