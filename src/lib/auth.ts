@@ -4,7 +4,7 @@ import { PASSWORD_REGEX } from '@/components/cloud-object-storage/integrated-che
 
 export const IFRAME_AUTH_ENABLED = false;
 export const REDIRECT_AUTH_ENABLED = true;
-const AUTH_FLOW_URL = 'https://drive-web-git-checkout-fix-internxt-web-team.vercel.app/';
+const AUTH_FLOW_URL = 'https://drive.internxt.com';
 const OBJECT_STORAGE_USER_ACTIVATION_URL = process.env.NEXT_PUBLIC_OBJECT_STORAGE_USER_ACTIVATION_URL as string;
 
 export const openAuthDialog = (view: 'login' | 'signup' | 'recover'): void => {
@@ -177,7 +177,7 @@ const prepareAuthFlow = (credentials: {
 
   const cookie = `cr=${btoa(JSON.stringify(payload))};expires=${new Date(
     expiration,
-  ).toUTCString()};domain=localhost; Path=/`;
+  ).toUTCString()};domain=internxt.com; Path=/`;
 
   document.cookie = cookie;
 };

@@ -25,7 +25,15 @@ export default function OfficialCloudProviderSection({ textContent }: OfficialCl
       <div className="flex flex-1 flex-col justify-between gap-6 lg:h-auto lg:w-[842px] lg:flex-initial">
         <p className="text-30 font-bold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
         <p className="text-sm font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        <span className="flex w-max cursor-pointer flex-row gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline">
+        <span
+          onClick={() =>
+            window.open(
+              'https://blog.internxt.com/es/internxt-se-convierte-en-proveedor-oficial-de-cloud-y-partner-del-valencia-cf/',
+              '_blank',
+            )
+          }
+          className="flex w-max cursor-pointer flex-row gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
+        >
           {textContent.cta}
           <CaretRight className="pt-[2px] text-primary" size={20} />
         </span>
