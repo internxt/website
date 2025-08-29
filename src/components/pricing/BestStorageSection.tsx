@@ -38,7 +38,7 @@ const BestStorageSection = ({ textContent, hideTitleAndDescription }: BestStorag
             <p className="text-xl">{textContent.description}</p>
           </div>
         ) : undefined}
-        <div className="flex flex-col space-y-6 lg:flex-row lg:space-y-0 lg:space-x-32">
+        <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-32 lg:space-y-0">
           {features.map((feature, index) => (
             <div className="flex w-full max-w-[120px] flex-col items-center space-y-3 pt-16 text-center" key={index}>
               <feature.icon size={40} className="text-primary" />

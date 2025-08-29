@@ -14,7 +14,7 @@ interface HorizontalScrollableSectionProps {
   bgColorCard?: string;
 }
 
-export default function HorizontalScrollableSection({
+export default function HorizontalScrollableSectionWithImages({
   textContent,
   bgColor = 'bg-white',
   redirection = false,
@@ -37,6 +37,7 @@ export default function HorizontalScrollableSection({
   const mobileScrollAmount = mobileCardWidth + gap;
   const hasImages = Array.isArray(cardImages) && cardImages.length > 0;
 
+  const sectionHeight = hasImages ? 'lg:h-[1100px]' : 'lg:h-[580px]';
   const innerHeight = hasImages ? 'lg:h-[1000px]' : 'lg:h-[620px]';
 
   useEffect(() => {
@@ -84,7 +85,7 @@ export default function HorizontalScrollableSection({
 
   const scrollRight = () => {
     const maxIndex = getMaxIndex();
-    if (currentIndex < maxIndex && scrollContainerRef.current) {
+    if (currentIndex < maxIndex - 1 && scrollContainerRef.current) {
       const newIndex = currentIndex + 1;
       setCurrentIndex(newIndex);
       const amount = isMobile ? mobileScrollAmount : scrollAmount;
@@ -102,14 +103,13 @@ export default function HorizontalScrollableSection({
 
   return (
     <section
-      className={`flex h-min w-full flex-col items-center justify-center ${bgColor} lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} lg:px-10 xl:px-32 3xl:px-80`}
       style={{ background: bgGardient }}
     >
-      <div className="mb-10 mt-5 h-[1px] w-full bg-neutral-25" />
       <div
-        className={`${containerDecoration} mx-8 flex h-min w-[832px] flex-col items-center justify-center gap-10 ${innerHeight} lg:justify-between lg:gap-0 lg:py-5`}
+        className={`${containerDecoration} flex h-min w-full flex-col items-center justify-center gap-10 px-10 ${innerHeight} lg:justify-between lg:gap-0`}
       >
-        <p className="w-[320px] text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-3xl">
+        <p className="w-[320px] pt-10 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pt-0 lg:text-left lg:text-3xl">
           {textContent.title}
         </p>
 
@@ -120,7 +120,7 @@ export default function HorizontalScrollableSection({
         {redirection && (
           <Link
             href={'/privacy'}
-            className="flex w-[320px] cursor-pointer flex-row items-start justify-start gap-1 text-base font-medium text-primary hover:underline lg:w-full"
+            className="flex w-full cursor-pointer flex-row items-start justify-start gap-1 text-base font-medium text-primary hover:underline"
           >
             {textContent.cta}
             <CaretRight className="h-[24px] w-[24px] text-primary" />
@@ -129,7 +129,7 @@ export default function HorizontalScrollableSection({
 
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-full"
+          className="scrollbar-hide flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:pl-56"
           onScroll={handleScroll}
           style={{
             scrollbarWidth: 'none' /* Firefox */,
@@ -190,8 +190,10 @@ export default function HorizontalScrollableSection({
             </button>
           </div>
         </div>
+        <div className="my-5 h-[1px] w-full bg-neutral-25" />
       </div>
 
+      {/* CSS para ocultar scrollbar */}
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;

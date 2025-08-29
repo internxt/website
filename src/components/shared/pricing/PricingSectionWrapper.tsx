@@ -6,6 +6,7 @@ import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
+import { SwitchStorageBusinessOptions } from './components/Switch';
 
 interface PricingSectionWrapperProps {
   textContent: Record<string, any>;
@@ -23,8 +24,10 @@ interface PricingSectionWrapperProps {
   popularPlanBySize?: string;
   startFromPlan?: SwitchButtonOptions;
   startFromStorage?: SwitchStorageOptions;
+  startFromBusinessStorage?: SwitchStorageBusinessOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   backgroundColorComponent?: string;
+  backgroundGradientColor?: string;
   isFamilyPage?: boolean;
   darkMode?: boolean;
   hideTitle?: boolean;
@@ -53,13 +56,15 @@ export const PricingSectionWrapper = ({
   loadingCards,
   hidePlanSelectorAndSwitch,
   startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Month,
+  startBusinessPlansFromInterval = Interval.Year,
   startFromPlan = 'Lifetime',
   startFromStorage = 'Premium',
+  startFromBusinessStorage = 'Pro',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
   backgroundColorComponent = 'bg-white',
+  backgroundGradientColor,
   lifetimeCoupons,
   hideSwitchSelector,
   popularPlanBySize,
@@ -78,19 +83,23 @@ export const PricingSectionWrapper = ({
   showPromo = true,
   isAffiliate,
   hideBillingController = false,
+  hideFreeCard,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
     activeSwitchPlan,
     activeStoragePlan,
+    activeBusinessStoragePlan,
     billingFrequency,
     businessBillingFrequency,
     onPlanTypeChange,
     onStorageChange,
+    onBusinessStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
   } = usePlanSelection(
     startFromPlan,
     startFromStorage,
+    startFromBusinessStorage,
     startIndividualPlansFromInterval,
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
@@ -102,7 +111,6 @@ export const PricingSectionWrapper = ({
 
   const businessTitle = textContent.planTitles.business;
 
-  const lifetimeSubtitles = billingFrequency === Interval.Lifetime ? textContent.lifetimeDescription : '';
   const individualPLansDescription = billingFrequency === Interval.Year ? textContent.planDescription : '';
 
   const businessPlanDescription = textContent.businessDescription2;
@@ -124,20 +132,21 @@ export const PricingSectionWrapper = ({
   };
 
   return (
-    <section className={` overflow-hidden px-5 py-20  ${backgroundColorComponent}`} id="billingButtons">
-      <div className="hidden flex-col items-center gap-10 lg:flex">
+    <section
+      className={`overflow-hidden lg:px-5 lg:py-9 ${backgroundColorComponent}`}
+      id="billingButtons"
+      style={{ background: backgroundGradientColor }}
+    >
+      <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
+          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-
-          {!hideTitle && <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{title()}</h1>}
-
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">{lifetimeSubtitles}</span>
-
+          <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
           {CustomDescription ? (
             CustomDescription
           ) : !hideDescription ? (
             <span
-              className="text-regular max-w-[1000px] text-xl text-gray-80"
+              className="text-regular max-w-[932px] text-xl text-gray-55"
               dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
             />
           ) : null}
@@ -175,13 +184,13 @@ export const PricingSectionWrapper = ({
           hideFeatures={hideFeatures}
           showPromo={showPromo}
           isAffiliate={isAffiliate}
+          businessStorageSelected={activeBusinessStoragePlan}
+          onBusinessStorageChange={onBusinessStorageChange}
+          hideFreeCard={hideFreeCard}
         />
       </div>
-      <div className="flex flex-col items-center gap-10 lg:hidden ">
-        <div className="flex flex-col items-center gap-4 text-center">
-          <p className="text-30 font-bold text-gray-100">{textContent.title} </p>
-        </div>
-
+      <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
+        <p className="text-30 font-bold text-gray-100">{title()} </p>
         <PricingSectionForMobile
           textContent={textContent}
           lang={lang}
@@ -203,6 +212,7 @@ export const PricingSectionWrapper = ({
           activeSwitchPlan={activeSwitchPlan}
           onCheckoutButtonClicked={onCheckoutButtonClicked}
           onStorageChange={onStorageChange}
+          onBusinessStorageChange={onBusinessStorageChange}
           onPlanTypeChange={onPlanTypeChange}
           onBusinessPlansSelected={onBusinessPlansSelected}
           darkMode={darkMode}
@@ -212,6 +222,10 @@ export const PricingSectionWrapper = ({
           isAffiliate={isAffiliate}
           storageSelected={activeStoragePlan}
           hideBillingController={hideBillingController}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
+          businessStorageSelected={activeBusinessStoragePlan}
+          hideFreeCard={hideFreeCard}
         />
       </div>
     </section>

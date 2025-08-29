@@ -50,7 +50,7 @@
     "annually": "/Jährlich"
   },
   "perYear": "€/Jahr",
-  "perUserSlash": "Pro Benutzer/",
+  "perUserSlash": "/Benutzer",
   "perUser": "Pro Nutzer",
   "users": "Nutzer",
   "freePlan": "Kostenlos",
@@ -121,46 +121,44 @@
     "individuals": {
       "1TB": [
         "1TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR)",
+        "Post-Quanten-Kryptografie",
+        "Unbegrenztes Highspeed-VPN (FR)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
-        "DSGVO-Konformität",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung"
+        "Backups",
+        "Dateifreigabe mit Passwortschutz",
+        "DSGVO-konform",
+        "Zwei-Faktor-Authentifizierung (2FA)"
       ],
       "3TB": [
         "3TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL)",
+        "Post-Quanten-Kryptografie",
+        "Unbegrenztes Highspeed-VPN (FR, DE, PL)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Backups",
+        "Dateifreigabe mit Passwortschutz",
         "Einladen, teilen und zusammenarbeiten",
-        "DSGVO-Konformität",
+        "DSGVO-konform",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung",
+        "CLI & WebDav",
         "Gerätebereinigung",
         "Dark-Web-Überwachung"
       ],
       "5TB": [
         "5TB Zero-Knowledge-verschlüsselter Speicher",
-        "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL, CA, UK)",
+        "Post-Quanten-Kryptografie",
+        "Unbegrenztes Highspeed-VPN (FR, DE, PL, CA, UK)",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
-        "Passwortgeschütztes Datei-Sharing",
+        "Backups",
+        "Dateifreigabe mit Passwortschutz",
         "Einladen, teilen und zusammenarbeiten",
-        "DSGVO-Konformität",
+        "DSGVO-konform",
         "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung",
+        "CLI, WebDav, NAS & Rclone",
         "Gerätebereinigung",
         "Dark-Web-Überwachung",
         "Meet",
         "Mail"
-      ],
-      "10TB": []
+      ]
     },
     "business": {
       "1TB": [

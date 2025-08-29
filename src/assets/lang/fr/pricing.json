@@ -36,14 +36,14 @@
       "blue2": "{{discount}}% DE RÉDUCTION ",
       "normal2": "sur le stockage cloud le plus sécurisé"
     },
-    "howMuchStorage": "De combien de stockage en ligne avez-vous besoin ?",
     "description": "Protégez vos fichiers professionnels et personnels avec un stockage cloud crypté de qualité militaire abordable.",
     "features": [
       "Le stockage cloud le plus sécurisé",
       "Moins cher que les alternatives",
       "Garantie de remboursement de 30 jours"
     ],
-    "offerEnds": "Termine dans :"
+    "offerEnds": "Termine dans :",
+    "howMuchStorage": "De combien de stockage en ligne avez-vous besoin ?"
   },
   "tableSection": {
     "title": "Internxt forfaits",
@@ -60,6 +60,7 @@
       "lastCta": "*Offre pour comptes gratuits ou nouveaux"
     },
     "planTitles": {
+      "header": "Confidentialité totale avec {{discount}}% de réduction",
       "individuals": "Plans individuels",
       "lifetime": "Plans à vie",
       "business": "Plans d'entreprise",
@@ -79,14 +80,15 @@
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",
-      "lifetime": "Lifetime",
       "individual": "Individuel",
+      "lifetime": "Lifetime",
       "business": "Entreprise"
     },
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
-      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
-      "cta": "Seleziona il piano"
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "mobileDescription": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionnez un plan"
     },
     "features": {
       "endToEnd": "Chiffrement de bout en bout",
@@ -95,6 +97,7 @@
       "premiumSupport": "Support client premium",
       "guarantee": "Garantie de remboursement de 30 jours"
     },
+    "individuals": "Annuel",
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
@@ -203,7 +206,7 @@
       {
         "question": "Quel niveau de support technique fournissez-vous ?",
         "answer": [
-          "Nous avons une équipe de support client dédiée qui peut répondre à toutes vos questions ou préoccupations ou fournir des informations supplémentaires en fonction de vos besoins. Vous pouvez visiter notre centre d'aide ou nous contacter à [hello@internxt.com](mailto:hello@internxt.com), et notre équipe se fera un plaisir de vous aider."
+          "Nous avons une équipe de support client dédiée qui peut répondre à toutes vos questions ou préoccupations ou fournir des informations supplémentaires en fonction de vos besoins. Vous pouvez visiter notre centre d'aide ou nous contacter à hello@internxt.com, et notre équipe se fera un plaisir de vous aider."
         ]
       }
     ]
@@ -225,7 +228,7 @@
   "CtaSection": {
     "title": "Essayez Internxt sans risque",
     "description": "Protégez vos données vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
-    "cta": "Sélectionnez un plan maintenant"
+    "cta": "Sélectionnez un plan"
   },
   "FirstWhatWeDoSection": {
     "card1": {
@@ -247,25 +250,21 @@
   "InfoSection": {
     "title": "Stockage en nuage sécurisé avec une confidentialité incomparable",
     "description": "Qu'est-ce qui rend Internxt si spécial ? Nous sommes une équipe de professionnels entièrement dédiés à la protection de vos données en ligne. Tout ce que nous faisons et toutes les décisions que nous prenons sont centrées sur la protection de vos données contre l'exploitation.",
-    "cta": "Présentation de l'équipe d'Internxt",
-    "cards": [
-      {
-        "title": "Privé par conception",
-        "description": "Nous ne stockons pas les mots de passe ou les données des utilisateurs et toutes vos données sont cryptées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vous gérez vos données et nous les protégeons."
-      },
-      {
-        "title": "Sécurité sans compromis",
-        "description": "Vos fichiers sont fragmentés et chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance nulle, vous êtes le seul à avoir accès à vos données."
-      },
-      {
-        "title": "Open source et transparent",
-        "description": "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien d'autre à cacher que vos données."
-      },
-      {
-        "title": "Vérifié de manière indépendante",
-        "description": "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
-      }
-    ]
+    "cta": "L’engagement en faveur de la vie privée",
+    "scrollableSection": {
+      "titles": [
+        "Privé par conception",
+        "Sécurité sans compromis",
+        "Open source et transparent",
+        "Vérifié de manière indépendante"
+      ],
+      "descriptions": [
+        "Nous ne stockons pas les mots de passe ou les données des utilisateurs et toutes vos données sont cryptées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vous gérez vos données et nous les protégeons.",
+        "Vos fichiers sont fragmentés et chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance nulle, vous êtes le seul à avoir accès à vos données.",
+        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien d'autre à cacher que vos données.",
+        "Nous sommes entièrement conformes au GDPR et 100% sûrs. Internxt a été audité et vérifié de manière indépendante par Securitum, le leader européen des tests de pénétration."
+      ]
+    }
   },
   "InfoSectionForBusiness": {
     "title": "Que pouvez-vous faire avec Internxt ?",
@@ -312,6 +311,6 @@
   "lastCtaSection": {
     "title": "Le stockage en nuage le plus securisée du monde",
     "description": "Protégez les choses vraiment importantes avec le stockage en nuage sécurisé, privé et chiffré d'Internxt",
-    "cta": "Sélectionnez un plan maintenant"
+    "cta": "Sélectionnez un plan"
   }
 }

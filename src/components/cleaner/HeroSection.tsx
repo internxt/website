@@ -13,9 +13,9 @@ const HeroSection = ({ textContent }) => (
   >
     <HeroSafeArea>
       <div
-        className={`${styles.cleanerTitleAndOnePlan} flex h-[460px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
+        className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-[460px] w-[360px] shrink-0 items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-[535px] lg:w-[498px]`}
       >
-        <div className="flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
+        <div className="z-10 flex h-[400px] w-[330px] flex-col justify-between lg:h-[471px] lg:w-[434px]">
           <div className="flex h-[340px] w-full flex-col justify-between lg:h-[391px]">
             <div className="flex h-[160px] w-full flex-col justify-between  lg:h-[190px]">
               <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
@@ -46,8 +46,8 @@ const HeroSection = ({ textContent }) => (
           </div>
         </div>
       </div>
-      <div className="hidden h-[535px] w-[498px] overflow-hidden lg:flex">
-        <div className="relative hidden h-full w-full  lg:flex">
+      <div className="z-0 hidden h-[535px] w-[508px] lg:flex">
+        <div className="relative hidden h-full w-full lg:flex">
           <Image
             src={getImage('/images/cleaner/Frame 1727.png')}
             alt="Cleaner HeroSection"
@@ -57,7 +57,7 @@ const HeroSection = ({ textContent }) => (
             className="absolute right-48 top-52 z-10"
           />
           <Image
-            src={getImage('/images/cleaner/Cleaner Enabled.png')}
+            src={getImage('/images/cleaner/Cleaner-Enabled.webp')}
             alt="Cleaner HeroSection"
             width={900}
             height={478}
