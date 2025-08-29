@@ -30,6 +30,7 @@ export default function OfficialCloudProviderSection({ textContent }: OfficialCl
             window.open(
               'https://blog.internxt.com/es/internxt-se-convierte-en-proveedor-oficial-de-cloud-y-partner-del-valencia-cf/',
               '_blank',
+              'noopener,noreferrer',
             )
           }
           className="flex w-max cursor-pointer flex-row gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
