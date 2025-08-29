@@ -1,7 +1,7 @@
 export interface BannersText {
   changeEmailBanner: ChangeEmailBanner;
-  FreeCardPromoBanner: FreeCardPromoBanner;
   LoginBanner: BFBannerClass;
+  FreeCardPromoBanner: FreeCardPromoBanner;
   AndroidSmartBanner: AndroidSmartBanner;
   BFBanner: BFBannerClass;
   featuresBanner: FeaturesBanner;
@@ -12,6 +12,7 @@ export interface BannersText {
   SignUpPCloudAlternativeBanner2: GoogleLpBanner;
   SignUpPwdCheckerBanner: GoogleLpBanner;
   SignUpFileConverterBanner: GoogleLpBanner;
+  SignUpFileCompressorBanner: GoogleLpBanner;
   SignUpWebDAVBanner: GoogleLpBanner;
   SignUpVPNBanner: GoogleLpBanner;
   SignUpVirusScannerBanner: GoogleLpBanner;
@@ -30,7 +31,6 @@ export interface BannersText {
   TopBarBanner: TopBarBanner;
   lifetimeBanner: LifetimeBanner;
   BeforeCloseBanner: BeforeCloseBanner;
-  SignUpFileCompressorBanner: GoogleLpBanner;
 }
 
 export interface AndroidSmartBanner {
@@ -80,22 +80,22 @@ export interface FreeCardPromoBanner {
   getDealCta: string;
   freePlanCta: string;
   guarantee: string;
+  header: Header;
   products: Products;
 }
 
+export interface Header {
+  primaryText: string;
+  afterPrimaryText: string;
+}
+
 export interface Products {
-  header: Header;
   drive: string;
   antivirus: string;
   cleaner: string;
   vpn: string;
   meet: string;
   mail: string;
-}
-
-export interface Header {
-  primaryText: string;
-  afterPrimaryText: string;
 }
 
 export interface Subtitle {
