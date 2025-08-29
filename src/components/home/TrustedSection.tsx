@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { Quotes } from '@phosphor-icons/react';
+import { HomeText } from '@/assets/types/home';
 
 interface TrustedSectionProps {
-  textContent: any;
+  textContent: HomeText['TrustedBySection'];
 }
 
 export default function TrustedSection({ textContent }: TrustedSectionProps): JSX.Element {

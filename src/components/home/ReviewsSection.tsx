@@ -134,9 +134,9 @@ export default function ReviewSection({ textContent }: ReviewSectionProps): JSX.
         </div>
       </div>
 
-      <div className="hidden w-full flex-row gap-8 lg:flex">
+      <div className="hidden w-full flex-row gap-8 lg:flex ">
         {reviews.map((review, index) => (
-          <div key={index} className="flex h-[95px] min-w-0 flex-1 flex-row items-start justify-between gap-5">
+          <div key={index} className="flex h-min min-w-0 flex-1 flex-row items-start justify-between gap-5">
             <Image
               src={getImage(review.logo)}
               alt={review.alt}
