@@ -7,7 +7,7 @@ interface TrustedSectionProps {
   textContent: HomeText['TrustedBySection'];
 }
 
-export default function TrustedSection({ textContent }: TrustedSectionProps): JSX.Element {
+export default function TrustedSection({ textContent }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
       className={`relative flex h-[532px] w-full flex-col items-center justify-center gap-8 overflow-hidden px-8 lg:h-[482px] lg:gap-20 lg:px-32`}

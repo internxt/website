@@ -16,7 +16,11 @@ interface HeroSectionForHomeProps {
   minimumPrice: string;
 }
 
-export default function HeroSection({ textContent, percentOff, minimumPrice }: HeroSectionForHomeProps): JSX.Element {
+export default function HeroSection({
+  textContent,
+  percentOff,
+  minimumPrice,
+}: Readonly<HeroSectionForHomeProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
   useEffect(() => {

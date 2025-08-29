@@ -5,7 +5,7 @@ interface HorizontalScrollableProps {
   textContent: any;
 }
 
-export default function HorizontalScrollableSection({ textContent }: HorizontalScrollableProps): JSX.Element {
+export default function HorizontalScrollableSection({ textContent }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);

@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { Quotes } from '@phosphor-icons/react';
 import Button from '../shared/Button';
+import { HomeText } from '@/assets/types/home';
 
 interface AwardWinningSectionProps {
-  textContent: any;
+  textContent: HomeText['AwardWinningSection'];
 }
 const onButtonClick = () => (window.location.href = '#priceTable');
 
-export default function AwardWinningSection({ textContent }: AwardWinningSectionProps): JSX.Element {
+export default function AwardWinningSection({ textContent }: Readonly<AwardWinningSectionProps>): JSX.Element {
   return (
     <section
       className={`flex h-[641px] w-full items-center justify-center overflow-hidden bg-neutral-17 px-6 py-10 lg:h-min lg:p-10 xl:p-32 3xl:p-80 `}

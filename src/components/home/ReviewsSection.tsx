@@ -35,7 +35,7 @@ const ReviewText = ({ text }: { text: string }) => {
   );
 };
 
-export default function ReviewSection({ textContent }: ReviewSectionProps): JSX.Element {
+export default function ReviewSection({ textContent }: Readonly<ReviewSectionProps>): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
