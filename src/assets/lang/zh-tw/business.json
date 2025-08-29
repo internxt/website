@@ -2,8 +2,8 @@
   "HeroSection": {
     "title": "使用私人、安全的雲端存儲保護您的企業",
     "description": [
-      "Internxt 通過超強加密的安全雲端存儲保護您的企業免受數據丟失的影響。",
-      "我們提供您管理企業安全所需的一切。"
+      "Internxt 通過超強加密的安全雲端存儲保護您的企業免受數據丟失的影響",
+      "我們提供您管理企業安全所需的一切"
     ],
     "cta": "選擇方案",
     "separator": "|",
@@ -18,8 +18,8 @@
         "description": "數據洩露的平均成本"
       },
       { "title": "318 天", "description": "識別數據洩露的平均時間" },
-      { "title": "7300 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
-      { "title": "24%", "description": "勒索軟件攻擊的目標是企業" }
+      { "title": "258 萬", "description": "2024 年 AT&T 客戶記錄洩露" },
+      { "title": "46%", "description": "勒索軟件攻擊的目標是企業" }
     ],
     "footerText": "*數據來源於 IBM 安全數據洩露成本報告 2024。"
   },
@@ -33,33 +33,23 @@
   "WhatCanWeDo": {
     "title": "Internxt 能為您做什麼？",
     "description": "使用我們的企業安全雲端存儲優化您的組織文件管理、安全和隱私。",
-    "cards": [
-      {
-        "imagePathname": "internxt_b2b_feature1",
-        "selectorTab": "管理您的組織",
-        "description": "Internxt 使企業能夠管理組織成員、自定義工作區並管理帳戶計費和付款。輕鬆切換您的 Internxt 商業和個人帳戶以優化生產力和文件組織。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature2",
-        "selectorTab": "部門間的安全文件共享",
-        "description": "安全雲端存儲包括在不同部門之間進行安全文件共享的功能，以便團隊安全協作。通過密碼保護和限制文件訪問來發送機密文件給合作夥伴，確保您對其安全性保持控制。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature3",
-        "selectorTab": "會話管理",
-        "description": "Internxt 雲端存儲提供高級會話管理，提供實時登錄通知和詳細的遠程會話監控（客戶端、操作系統、IP、位置、最後活動時間）。這種高級別的安全性使帳戶管理者能夠檢測未授權訪問、有效管理會話並保護敏感數據。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature4",
-        "selectorTab": "靈活的存儲分配",
-        "description": "Internxt 為您的團隊提供靈活的存儲分配，以根據您的需要升級存儲。通過我們的計劃，您可以添加用戶，根據需要分配存儲，並在必要時增加容量，確保成本效益、可擴展性和資源的最佳利用。"
-      },
-      {
-        "imagePathname": "internxt_b2b_feature5",
-        "selectorTab": "訪問日誌",
-        "description": "透過完整的活動日誌輕鬆監控團隊活動，提供清晰的檔案互動與使用者訪問視圖。追蹤誰已登入、上傳或修改檔案，讓您對團隊資料擁有完全控制，確保資料安全。"
-      }
-    ]
+    "scrollableSection": {
+      "imagesPathname": [
+        "internxt_b2b_feature1",
+        "internxt_b2b_feature2",
+        "internxt_b2b_feature3",
+        "internxt_b2b_feature4",
+        "internxt_b2b_feature5"
+      ],
+      "titles": ["管理您的組織", "部門間的安全文件共享", "會話管理", "靈活的存儲分配", "訪問日誌"],
+      "descriptions": [
+        "Internxt 使企業能夠管理組織成員、自定義工作區並管理帳戶計費和付款。輕鬆切換您的 Internxt 商業和個人帳戶以優化生產力和文件組織。",
+        "安全雲端存儲包括在不同部門之間進行安全文件共享的功能，以便團隊安全協作。通過密碼保護和限制文件訪問來發送機密文件給合作夥伴，確保您對其安全性保持控制。",
+        "Internxt 雲端存儲提供高級會話管理，提供實時登錄通知和詳細的遠程會話監控（客戶端、操作系統、IP、位置、最後活動時間）。這種高級別的安全性使帳戶管理者能夠檢測未授權訪問、有效管理會話並保護敏感數據。",
+        "Internxt 為您的團隊提供靈活的存儲分配，以根據您的需要升級存儲。通過我們的計劃，您可以添加用戶，根據需要分配存儲，並在必要時增加容量，確保成本效益、可擴展性和資源的最佳利用。",
+        "透過完整的活動日誌輕鬆監控團隊活動，提供清晰的檔案互動與使用者訪問視圖。追蹤誰已登入、上傳或修改檔案，讓您對團隊資料擁有完全控制，確保資料安全。"
+      ]
+    }
   },
   "PriceTable": {
     "planTitles": {
@@ -73,45 +63,39 @@
       "lifetime": "終身",
       "business": "企業"
     },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1GB 加密雲端存儲",
+      "mobileDescription": "獲得高達 1GB 的加密雲端存儲，享受我們的私人生態系統",
+      "cta": "選擇方案"
+    },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源并已审核",
-      "anonymousAccount": "匿名账户创建",
-      "premiumSupport": "高级客户支持",
-      "guarantee": "30 天退款保证"
+      "openSource": "開源並已審核",
+      "anonymousAccount": "匿名帳戶創建",
+      "premiumSupport": "高級客戶支持",
+      "guarantee": "30 天退款保證"
     },
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
-      "ultimate": "5TB"
+      "ultimate": "5TB",
+      "standard": "1TB",
+      "pro": "2TB"
     }
   },
   "WhyChooseInternxt": {
-    "banner": {
-      "title": "加入最安全的企業雲端存儲",
-      "description": "Internxt 的企業計劃提供無與倫比的數據安全和隱私保護。",
-      "cta": "選擇計劃"
-    },
     "title": "為什麼選擇 Internxt？",
     "description": "我們的雲端存儲解決方案適合所有人，提供一個安全的產品套件，易於理解和使用，即使您不是技術專家。Internxt 提供強大但直觀的加密雲端存儲，完美適用於各行業的日常使用。",
-    "cards": [
-      {
-        "title": "符合 GDPR",
-        "description": "《通用數據保護條例》（GDPR）和其他歐洲隱私法律強制嚴格的數據保護。Internxt 遵循這些法律，採取一切措施保護您的企業數據。"
-      },
-      {
-        "title": "零訪問，最大加密",
-        "description": "端到端加密通過加密設備上的所有內容來保護您的文件。沒有人，甚至 Internxt 都無法查看您的文件。在數據洩露的極不可能事件中，黑客無法解密和竊取您的企業數據。"
-      },
-      {
-        "title": "您掌控您的數據",
-        "description": "與 Google Drive、Dropbox 和 OneDrive 不同，Internxt 沒有追蹤器，且從不與第三方共享數據。您的企業數據保持私密並受到最高安全措施的保護。"
-      },
-      {
-        "title": "100% 透明和安全",
-        "description": "我們所有的產品都是使用開源代碼構建的。我們用來保護數據的代碼對所有人開放。我們沒有什麼可以隱藏，除了您的數據。"
-      }
-    ]
+    "scrollableSection": {
+      "titles": ["符合 GDPR", "零訪問，最大加密", "您掌控您的數據", "100% 透明和安全"],
+      "descriptions": [
+        "《通用數據保護條例》（GDPR）和其他歐洲隱私法律強制嚴格的數據保護。Internxt 遵循這些法律，採取一切措施保護您的企業數據。",
+        "端到端加密通過加密設備上的所有內容來保護您的文件。沒有人，甚至 Internxt 都無法查看您的文件。在數據洩露的極不可能事件中，黑客無法解密和竊取您的企業數據。",
+        "與 Google Drive、Dropbox 和 OneDrive 不同，Internxt 沒有追蹤器，且從不與第三方共享數據。您的企業數據保持私密並受到最高安全措施的保護。",
+        "我們所有的產品都是使用開源代碼構建的。我們用來保護數據的代碼對所有人開放。我們沒有什麼可以隱藏，除了您的數據。"
+      ]
+    }
   },
   "EncryptedCloudSolution": {
     "title": "為您的企業提供加密的雲端解決方案",
@@ -190,7 +174,7 @@
     ]
   },
   "ContactSales": {
-    "title": "聯繫銷售",
+    "title": "聯繫我們",
     "description": "填寫聯絡表格，團隊將盡快與您聯繫。",
     "form": {
       "name": "全名",
@@ -211,12 +195,18 @@
         "1 - 20 PB",
         "20+ PB"
       ],
-      "howWeCanHelp": "我們如何幫助您？",
-      "howWeCanHelpPlaceHolder": "請告訴我們您的需求",
+      "howWeCanHelp": "我們如何幫助您？ (可選)",
+      "howWeCanHelpPlaceHolder": "告訴我們更多關於您的業務需求",
       "cta": "發送消息",
       "ctaSending": "發送中...",
-      "successMessage": "您的消息已成功发送。",
-      "errorMessage": "发生错误。请再试一次。"
+      "successMessage": "您的消息已成功發送。",
+      "errorMessage": "發生錯誤。請再試一次。"
     }
+  },
+  "CtaSection": {
+    "title": "加入最安全的企業雲端存儲",
+    "description": "Internxt 的企業計劃提供無與倫比的數據安全和隱私保護",
+    "cta": "選擇方案",
+    "contactUs": "聯繫我們"
   }
 }

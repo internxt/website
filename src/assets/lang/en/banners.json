@@ -29,7 +29,16 @@
     },
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
-    "guarantee": "30-day money-back guarantee"
+    "guarantee": "30-day money-back guarantee",
+    "header": { "primaryText": "Get 85% off", "afterPrimaryText": "in all Premium Plans" },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "AndroidSmartBanner": {
     "title": "Download Internxt Drive for Android"
