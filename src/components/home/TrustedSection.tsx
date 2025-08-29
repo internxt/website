@@ -10,10 +10,11 @@ interface TrustedSectionProps {
 export default function TrustedSection({ textContent }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
-      className={`relative flex h-[532px] w-full flex-col items-center justify-center gap-8 overflow-hidden px-8 lg:h-[482px] lg:gap-20 lg:px-32`}
+      className={`relative flex h-[532px] w-full flex-col items-center justify-center gap-8 overflow-hidden px-8 lg:h-min lg:gap-20 lg:px-32 lg:py-20 xl:py-32`}
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <p className="flex w-full items-center justify-center text-start text-30 font-bold leading-tight lg:text-center lg:text-3xl">
         {textContent.title}
       </p>

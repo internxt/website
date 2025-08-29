@@ -149,7 +149,7 @@ export const PriceCard = ({
   return (
     <div
       className={`flex flex-col items-center justify-start rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[870px]' : 'lg:h-[830px]'
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[870px]' : 'lg:h-[840px]'
       } ${popular ? 'bg-blue-10 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>

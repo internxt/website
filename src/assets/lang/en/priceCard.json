@@ -70,7 +70,7 @@
     "freemonth": "Get 30 days for free"
   },
   "freePlanCard": {
-    "eyeBrow": "Internxt Free",
+    "eyeBrow": " Free",
     "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
     "cta": "Select plan"
   },
