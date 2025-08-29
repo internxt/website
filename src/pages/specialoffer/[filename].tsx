@@ -30,7 +30,7 @@ const ALLOWED_PATHS = ['bevalk', 'securiters', 'exclusiveoffer', 'valencia', 'to
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   securiters: PromoCodeName.Securiters,
-  exclusiveoffer: PromoCodeName.Exclusive85,
+  exclusiveoffer: PromoCodeName.FreePlanUpsell,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,

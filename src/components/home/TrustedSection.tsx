@@ -18,7 +18,7 @@ export default function TrustedSection({ textContent }: Readonly<TrustedSectionP
         {textContent.title}
       </p>
       <div className="flex h-[370px] w-full flex-col-reverse justify-center gap-8 lg:h-[220px] lg:w-min lg:flex-row">
-        <div className="relative h-full w-[350px] lg:w-[650px]">
+        <div className="relative h-full w-[323px] lg:w-[650px]">
           <Image
             src={getImage('/images/home/NewDesign/mujer-joven-trabajar-desde-casa.jpg')}
             alt="Woman working fromhome"

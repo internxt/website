@@ -40,12 +40,10 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   const visibleTestimonialMobile = textContent.testimonials[currentIndex];
 
   return (
-    <section className="relative overflow-hidden bg-neutral-17 px-5 py-20 lg:bg-transparent">
-      <div
-        className="absolute inset-0 hidden lg:block"
-        style={{ background: 'linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 100%)' }}
-      />
-
+    <section
+      className="relative overflow-hidden bg-neutral-17 px-5 py-20 lg:bg-transparent"
+      style={{ background: 'linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 100%)' }}
+    >
       <div className="relative z-10">
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">
           <h2 className="text-center text-3xl font-bold text-gray-100 lg:text-3xl">{textContent.title}</h2>
@@ -95,7 +93,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
         <div className="flex h-full w-full flex-col items-center justify-center gap-8 px-6 md:hidden">
           <h2 className="text-start text-30 font-bold leading-tight text-gray-100">{textContent.title}</h2>
 
-          <div className="flex w-full flex-col justify-center gap-3">
+          <div className="flex h-min w-full flex-col justify-center gap-3">
             <Quotes className="text-primary" weight="fill" size={24} />
             <p className="text-xs font-normal leading-tight text-gray-55">{visibleTestimonialMobile.review}</p>
             <p className="text-xs font-bold leading-tight text-gray-55">{visibleTestimonialMobile.imageBrandName}</p>

@@ -1,10 +1,11 @@
 export interface BannersText {
   changeEmailBanner: ChangeEmailBanner;
-  LoginBanner: BFBannerClass;
   FreeCardPromoBanner: FreeCardPromoBanner;
+  LoginBanner: BFBannerClass;
   AndroidSmartBanner: AndroidSmartBanner;
   BFBanner: BFBannerClass;
   featuresBanner: FeaturesBanner;
+  s3StorageBanner: S3StorageBanner;
   tryOutInternxtGeneralBanner: GeneralBannerClass;
   tryOutInternxtPasswordCheckerBanner: GeneralBannerClass;
   SignUpPCloudAlternativeBanner: GoogleLpBanner;
@@ -14,6 +15,8 @@ export interface BannersText {
   SignUpWebDAVBanner: GoogleLpBanner;
   SignUpVPNBanner: GoogleLpBanner;
   SignUpVirusScannerBanner: GoogleLpBanner;
+  SignUpMetadataRemoverBanner: GoogleLpBanner;
+  SignUpAiDetector: GoogleLpBanner;
   SignUpByteConverterBanner: GoogleLpBanner;
   SignUpTempMailBanner: GoogleLpBanner;
   SignUpSuccessStoriesBanner: GoogleLpBanner;
@@ -27,6 +30,7 @@ export interface BannersText {
   TopBarBanner: TopBarBanner;
   lifetimeBanner: LifetimeBanner;
   BeforeCloseBanner: BeforeCloseBanner;
+  SignUpFileCompressorBanner: GoogleLpBanner;
 }
 
 export interface AndroidSmartBanner {
@@ -76,6 +80,22 @@ export interface FreeCardPromoBanner {
   getDealCta: string;
   freePlanCta: string;
   guarantee: string;
+  products: Products;
+}
+
+export interface Products {
+  header: Header;
+  drive: string;
+  antivirus: string;
+  cleaner: string;
+  vpn: string;
+  meet: string;
+  mail: string;
+}
+
+export interface Header {
+  primaryText: string;
+  afterPrimaryText: string;
 }
 
 export interface Subtitle {
@@ -115,6 +135,7 @@ export interface ChangeEmailBanner {
 export interface FeaturesBanner {
   label: string;
   title: string;
+  subtitle: string;
   cta: string;
   guarantee: string;
   lastCta: string;
@@ -126,4 +147,12 @@ export interface LifetimeBanner {
   title: string;
   cta: string;
   guarantee: string;
+}
+
+export interface S3StorageBanner {
+  label: string;
+  title: string;
+  feat: string[];
+  cta: string;
+  offerEnds: string;
 }

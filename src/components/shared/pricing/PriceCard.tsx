@@ -141,15 +141,15 @@ export const PriceCard = ({
   const newFeaturesNumber = isBusiness ? 10 : 9;
 
   const renderFeatureIcon = (index: number) => {
-    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
+    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
 
   return (
     <div
-      className={`flex flex-col items-center justify-between rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : 'h-[730px]'
+      className={`flex flex-col items-center justify-start rounded-16 ${
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[870px]' : 'lg:h-[830px]'
       } ${popular ? 'bg-blue-10 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
@@ -173,16 +173,17 @@ export const PriceCard = ({
                   {contentText.discount}
                 </p>
               </div>
-              <div className="flex h-[29px] w-full flex-row items-center justify-center gap-2  lg:h-[43px] ">
+              <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2  lg:h-[43px] ">
                 <span className="flex h-full flex-row items-end gap-1 ">
                   <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                   <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
                     {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                   </p>
                   {isBusiness ? (
-                    <span className="i flex h-full items-end pb-1 text-base font-semibold">
-                      {contentText.perUserSlash}
-                    </span>
+                    <span className="i flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
+                  ) : null}
+                  {showMonthlyLabel && !isBusiness ? (
+                    <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
                   ) : null}
                 </span>
 
@@ -194,7 +195,10 @@ export const PriceCard = ({
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                   </p>
                   {isBusiness ? (
-                    <span className=" pb-[5px] text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                    <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                  ) : null}
+                  {showMonthlyLabel && !isBusiness ? (
+                    <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
                   ) : null}
                 </span>
               </div>
@@ -239,20 +243,20 @@ export const PriceCard = ({
           </div>
         ) : null}
         <div
-          className={`flex h-[520px] flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
-            isBusiness ? 'h-min lg:h-[520px]' : 'h-[520px] lg:h-[485px]'
+          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+            isBusiness ? 'h-min lg:h-[520px]' : 'h-min lg:h-[485px]'
           } lg:py-6`}
         >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start" key={feature}>
-              <div className="flex min-h-[24px] flex-row items-start gap-2">
+              <div className="flex min-h-[24px] flex-row items-start gap-2 lg:items-center">
                 {renderFeatureIcon(index)}
-                <span className="text-sm font-normal text-gray-80">
+                <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
                   {feature}
                   {index > newFeaturesNumber && (
-                    <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                    <p className="ml-2 flex h-min items-center rounded-2 bg-orange-100 px-2 py-0.5 text-center font-semibold text-orange-1 lg:px-1">
                       {contentText.commingSoon}
-                    </span>
+                    </p>
                   )}
                 </span>
               </div>

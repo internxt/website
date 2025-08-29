@@ -16,7 +16,19 @@
     },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
-    "guarantee": "30-tägige Geld-zurück-Garantie"
+    "guarantee": "30-tägige Geld-zurück-Garantie",
+    "header": {
+      "primaryText": "Spare 85%",
+      "afterPrimaryText": "bei allen Premium-Tarifen"
+    },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "Vor dem Kauf ausprobieren.",

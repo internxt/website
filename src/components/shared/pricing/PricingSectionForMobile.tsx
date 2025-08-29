@@ -249,7 +249,7 @@ export const PricingSectionForMobile = ({
       </Transition>
 
       {!hideFeatures && (
-        <div className="flex h-min w-screen flex-col items-center justify-center gap-2 text-center">
+        <div className="flex h-min w-screen flex-col items-center justify-center gap-2 text-start">
           {features.map((feature) => (
             <div key={feature.text} className="flex h-min w-[267px] flex-row items-start justify-start gap-2 ">
               <div>
@@ -264,7 +264,6 @@ export const PricingSectionForMobile = ({
       )}
 
       {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
-      <div className="h-[1px] w-full bg-neutral-25 " />
     </>
   );
 };

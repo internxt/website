@@ -15,7 +15,6 @@ import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
-import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 
@@ -38,8 +37,8 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.FifthAnniversary,
-    couponCodeForLifetime: PromoCodeName.FifthAnniversary,
+    couponCode: PromoCodeName.SoftSales85,
+    couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
@@ -66,7 +65,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -97,17 +95,11 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessSelector
           hideSwitchSelector
           popularPlanBySize="3TB"
-          showPromo={true}
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          backgroundColorComponent="py-20"
         />
 
-        <HorizontalScrollableSection
-          textContent={infoText}
-          bgColor="bg-neutral-17"
-          redirection
-          cardDecoration
-          bgColorCard="bg-white"
-        />
+        <HorizontalScrollableSection textContent={infoText} />
 
         <BestStorageSection textContent={textContent.BestStorageSection} />
 

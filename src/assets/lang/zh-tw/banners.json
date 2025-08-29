@@ -13,7 +13,19 @@
     "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
     "getDealCta": "獲取優惠",
     "freePlanCta": "繼續使用免費計劃",
-    "guarantee": "30天退款保證"
+    "guarantee": "30天退款保證",
+    "products": {
+      "header": {
+        "primaryText": "享受85%折扣",
+        "afterPrimaryText": "適用於所有高級方案"
+      },
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "購買前先試用。",

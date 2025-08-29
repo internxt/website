@@ -13,7 +13,19 @@
     "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
     "getDealCta": "Ottieni l'offerta",
     "freePlanCta": "Continua con il piano gratuito",
-    "guarantee": "Garanzia di rimborso di 30 giorni"
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "header": {
+      "primaryText": "Ottieni l'85% di sconto",
+      "afterPrimaryText": "su tutti i Piani Premium"
+    },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "Try before you buy.",
