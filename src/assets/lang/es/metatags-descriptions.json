@@ -348,5 +348,10 @@
     "id": "compress-zip",
     "title": "Compresor de ZIP en línea - Internxt",
     "description": "Un compresor ZIP en línea reduce el tamaño de tus archivos ZIP para ahorrar almacenamiento, compartir y subir sin preocuparte por los límites de tamaño de archivo."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - Almacenar videos en la nube más segura",
+    "description": "Almacena tus videos HD, 4K y 8K en la nube más segura de Internxt protegidos con encriptación post-cuántica para máxima privacidad."
   }
 ]

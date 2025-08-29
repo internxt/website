@@ -93,7 +93,8 @@
         "privateCloud": "Soluzione cloud privato",
         "cloudBakcup": "Soluzione di backup cloud",
         "GDPRCloud": "Archiviazione GDPR",
-        "cloudPhotos": "Foto nel cloud"
+        "cloudPhotos": "Foto nel cloud",
+        "cloudVideo": "Video nel cloud"
       }
     }
   },
