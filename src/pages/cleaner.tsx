@@ -40,7 +40,9 @@ const CleanerPage = ({
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <HorizontalScrollableSection textContent={textContent.WhyUseSection} containerDecoration="lg:py-20" />
+      <div className="lg:py-18">
+        <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
+      </div>
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}

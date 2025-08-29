@@ -19,7 +19,6 @@ import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import BusinessCtaSection from '@/components/business/BusinessCtaSection';
 import Image from 'next/image';
-import VerticalBusinessSection from '@/components/business/VerticalBusinessCtaSection';
 import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
 
 interface BusinessProps {
@@ -117,23 +116,22 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        showPromo={true}
         backgroundColorComponent="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <HorizontalScrollableSection
-        textContent={textContent.WhyChooseInternxt}
-        bgGardient="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
-        cardDecoration
-        bgColorCard="bg-white"
-      />
+      <div className=" lg:pt-20">
+        <HorizontalScrollableSection
+          textContent={textContent.WhyChooseInternxt}
+          bgGradient="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
+        />
+      </div>
 
       <BusinessCtaSection
         textContent={textContent.CtaSection}
         bgColor="bg-gray-1"
         customText={
           <>
-            <div className="flex flex-row justify-center overflow-hidden">
+            <div className="flex flex-row justify-center gap-12 overflow-hidden">
               <Image
                 src={getImage('/images/home/Internxt-secure-cloud-storage_devices.webp')}
                 alt="Tablet Image"

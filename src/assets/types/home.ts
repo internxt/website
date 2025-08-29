@@ -1,34 +1,26 @@
 export interface HomeText {
   HeroSection: HeroSection;
-  FeatureSectionV2: ChooseStorageSizeSection;
   tableSection: TableSection;
-  ChooseStorageSizeSection: ChooseStorageSizeSection;
-  FirstFeaturesSection: ChooseStorageSizeSection;
-  InfoSection: ChooseStorageSizeSection;
-  SecondFeaturesSection: ChooseStorageSizeSection;
-  ThirdFeaturesSection: ChooseStorageSizeSection;
-  FirstWhatWeDoSection: FirstWhatWeDoSection;
-  SecondWhatWeDoSection: SecondWhatWeDoSection;
   FaqSection: FAQSection;
-  InvestorsSection: InvestorsSection;
   TestimonialsSection: TestimonialsSection;
-  CtaSection: ChooseStorageSizeSection;
-  GetStartedSection: GetStartedSection;
+  ReviewSection: ReviewSection;
+  OfficalCloudProvider: AwardWinningSection;
+  AwardWinningSection: AwardWinningSection;
+  NextGenSection: AwardWinningSection;
+  TrustedBySection: TrustedBySection;
 }
 
-export interface ChooseStorageSizeSection {
+export interface AwardWinningSection {
   title: string;
   description: string;
-  peaceOfMind?: string;
-  cta: string;
-  cards?: InfoElement[];
   subtitle?: string;
-  info?: InfoElement[];
+  cta: string;
+  cardDescriptions?: CardDescriptions;
 }
 
-export interface InfoElement {
-  title: string;
-  description: string;
+export interface CardDescriptions {
+  titles: string[];
+  descriptions: string[];
 }
 
 export interface FAQSection {
@@ -41,34 +33,16 @@ export interface FAQ {
   answer: string[];
 }
 
-export interface FirstWhatWeDoSection {
-  card1: ChooseStorageSizeSection;
-  card2: ChooseStorageSizeSection;
-  card3: ChooseStorageSizeSection;
-}
-
-export interface GetStartedSection {
-  title: SubtitleClass;
-  subtitle: SubtitleClass;
-  cta1: string;
-}
-
-export interface SubtitleClass {
-  line1: string;
-  line2: string;
-}
-
 export interface HeroSection {
-  label: string;
-  title: HeroSectionTitle;
-  subtitle: string;
-  cta: Cta;
-  featuredIn: string;
+  products: Products;
   SignUp: SignUp;
-  TitleAndSurvey: TitleAndSurvey;
-  TitleAndOnePlan: TitleAndOnePlan;
-  TitleAndOnePlanV2: TitleAndOnePlanV2;
-  youKnow: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  features: string[];
+  startFrom: StartFrom;
+  claimDeal: string;
+  guarantee: string;
 }
 
 export interface SignUp {
@@ -116,14 +90,13 @@ export interface Submit {
   free: string;
 }
 
-export interface TitleAndOnePlan {
-  title: TitleAndOnePlanTitle;
-  subtitle: string;
-  description: string;
-  features: string[];
-  startFrom: StartFrom;
-  claimDeal: string;
-  guarantee: string;
+export interface Products {
+  drive: string;
+  antivirus: string;
+  cleaner: string;
+  vpn: string;
+  meet: string;
+  mail: string;
 }
 
 export interface StartFrom {
@@ -132,72 +105,32 @@ export interface StartFrom {
   normal2: string;
 }
 
-export interface TitleAndOnePlanTitle {
-  textBeforeBlueText: string;
-  blueText: string;
-  textAfterBlueText: string;
-}
-
-export interface TitleAndOnePlanV2 {
-  saveLabel: string;
-  title: string;
-  subtitle: string;
-  cta: string;
-  guarantee: string;
-}
-
-export interface TitleAndSurvey {
-  title: TitleAndSurveyTitle;
-  trustedBy: string;
-  description: Description;
-  howMuchYouNeed: string;
-  upTo: string;
-  buttonLabel: string[];
-}
-
-export interface Description {
-  normal1: string;
-  bold: string;
-  normal2: string;
-}
-
-export interface TitleAndSurveyTitle {
-  line1: string;
-  blueText: string;
-}
-
-export interface HeroSectionTitle {
-  line1: string;
-  blueText: string;
-  line2: string;
-}
-
-export interface InvestorsSection {
-  title: string;
-}
-
-export interface SecondWhatWeDoSection {
-  title: string;
-  description: string;
-  square1: ChooseStorageSizeSection;
-  square2: ChooseStorageSizeSection;
-  square3: ChooseStorageSizeSection;
+export interface ReviewSection {
+  pcMag: string;
+  mashable: string;
+  pcWorld: string;
 }
 
 export interface TestimonialsSection {
-  title: TestimonialsSectionTitle;
-  cards: TestimonialsSectionCard[];
+  title: Title;
+  cards: Card[];
 }
 
-export interface TestimonialsSectionCard {
+export interface Card {
   name: string;
   enterprise: string;
   review: string;
 }
 
-export interface TestimonialsSectionTitle {
+export interface Title {
   normal: string;
   blue: string;
+}
+
+export interface TrustedBySection {
+  title: string;
+  review: string;
+  author: string;
 }
 
 export interface TableSection {
@@ -216,8 +149,8 @@ export interface TableSection {
 export interface BillingFrequency {
   monthly: string;
   annually: string;
-  individual: string;
   lifetime: string;
+  individual: string;
   business: string;
 }
 

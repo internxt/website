@@ -129,7 +129,7 @@ export default function HorizontalScrollableSectionWithImages({
 
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-[240px] w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:pl-56"
+          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:px-56 1.5xl:px-72 "
           onScroll={handleScroll}
           style={{
             scrollbarWidth: 'none' /* Firefox */,

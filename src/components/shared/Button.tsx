@@ -29,6 +29,7 @@ const Button = ({
       disabled={disabled}
       id={id}
       type={type}
+
       className={[
         'flex w-max justify-center rounded-md px-5 py-3 text-base font-medium',
         disabled ? 'bg-gray-10' : `bg-primary ${hoverColor || 'hover:bg-transparent'}`,

@@ -125,7 +125,7 @@ export const PricingSection = ({
 
   return (
     <>
-      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
+      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9 `}>
         {!hidePlanSelectorComponent && (
           <PlanSelector
             textContent={textContent}
@@ -241,15 +241,17 @@ export const PricingSection = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="flex flex-col items-center justify-center  text-center md:flex-row md:items-start md:space-x-16 md:space-y-0">
-          {features.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-start gap-3 md:max-w-[33%] md:flex-row">
-              <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
-              <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
-                {feature.text}
-              </p>
-            </div>
-          ))}
+        <div className="w-full lg:px-10 xl:px-32 3xl:px-80">
+          <div className="flex flex-col items-center justify-between text-center md:flex-row md:items-start md:space-x-16 md:space-y-0">
+            {features.map((feature) => (
+              <div key={feature.text} className="flex flex-col items-start gap-3 md:max-w-[33%] md:flex-row">
+                <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
+                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                  {feature.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
 

@@ -80,7 +80,7 @@ export const PricingSectionWrapper = ({
   darkMode,
   isBrave,
   isAnnual,
-  showPromo = true,
+  showPromo = false,
   isAffiliate,
   hideBillingController = false,
   hideFreeCard,
@@ -133,7 +133,7 @@ export const PricingSectionWrapper = ({
 
   return (
     <section
-      className={`overflow-hidden lg:px-5 lg:py-9 ${backgroundColorComponent}`}
+      className={`overflow-hidden  lg:px-5 ${backgroundColorComponent}`}
       id="billingButtons"
       style={{ background: backgroundGradientColor }}
     >

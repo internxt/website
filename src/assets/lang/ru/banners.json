@@ -16,7 +16,19 @@
     },
     "getDealCta": "Получить предложение",
     "freePlanCta": "Продолжить с бесплатным планом",
-    "guarantee": "30-дневная гарантия возврата денег"
+    "header": {
+      "primaryText": "Получите скидку 85%",
+      "afterPrimaryText": "на все Премиум планы"
+    },
+    "guarantee": "30-дневная гарантия возврата денег",
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "Попробуйте, прежде чем купить",

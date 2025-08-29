@@ -3,21 +3,17 @@ import { useRef, useState, useEffect } from 'react';
 
 interface HorizontalScrollableProps {
   textContent: any;
-  bgGradient?: string;
 }
 
-export default function HorizontalScrollableSection({
-  textContent,
-  bgGradient,
-}: Readonly<HorizontalScrollableProps>): JSX.Element {
+export default function HorizontalScrollableSection({ textContent }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [cardWidth, setCardWidth] = useState(361);
 
   const maxIndex = isMobile
-    ? textContent.scrollableSection.titles.length - 2
-    : textContent.scrollableSection.titles.length - 1;
+    ? textContent.cardDescriptions.titles.length - 2
+    : textContent.cardDescriptions.titles.length - 1;
 
   useEffect(() => {
     const updateScreenSize = () => {
@@ -64,25 +60,17 @@ export default function HorizontalScrollableSection({
   };
 
   return (
-    <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        bgGradient ? '' : 'bg-neutral-17'
-      } py-10 lg:h-min lg:gap-16 lg:py-20`}
-      style={{ background: bgGradient }}
-    >
-      {' '}
-      <div className="absolute left-8 right-8 top-0 flex h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:hidden"></div>
-      <div className="absolute left-8 right-8 hidden h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:top-0 lg:flex"></div>
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 py-10 lg:h-[663px] lg:gap-16">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        {textContent.cta && (
-          <span className="flex w-max cursor-pointer flex-row gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline">
-            {textContent.cta}
-            <CaretRight className="pt-[2px] text-primary" size={24} />
-          </span>
-        )}
+        <span className="flex w-max cursor-pointer flex-row gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline">
+          {textContent.cta}
+          <CaretRight className="pt-[2px] text-primary" size={24} />
+        </span>
       </div>
+
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
@@ -95,18 +83,18 @@ export default function HorizontalScrollableSection({
           }}
         >
           <div
-            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            className="3xl:pl-84 flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
             }}
           >
-            {textContent.scrollableSection.titles.map((title: string, index: number) => (
+            {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
                 <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
                   <p className="flex-1 text-base font-normal leading-tight text-gray-55">
-                    {textContent.scrollableSection.descriptions[index]}
+                    {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>
               </div>
