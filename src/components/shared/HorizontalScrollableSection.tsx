@@ -78,7 +78,7 @@ export default function HorizontalScrollableSection({
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         {textContent.cta && (
           <span
-            onClick={() => window.open('https://internxt.com/privacy/', 'noopener,noreferrer')}
+            onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
             className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
           >
             {textContent.cta}
