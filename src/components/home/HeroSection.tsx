@@ -146,12 +146,12 @@ export default function HeroSection({
           <div className="flex w-full flex-row items-start gap-4">
             <Link
               href={'#billingButtons'}
-              className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white hover:bg-primary-dark lg:min-w-[177px]"
+              className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
             >
               {textContent.claimDeal}
             </Link>
 
-            <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 p-5 text-primary shadow-soft lg:min-w-[177px]">
+            <div className="flex h-[48px] w-1/2 flex-col items-center justify-center rounded-sm-6 bg-primary/5 py-5 text-primary shadow-soft lg:w-[177px]">
               <Countdown textFont="font-medium" textHeight="text-base text-gray-100" />
             </div>
           </div>

@@ -93,8 +93,8 @@ export const FreeCardPromoBanner = () => {
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
             <div className="flex w-[650px] w-full flex-col items-center gap-8  text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-5 text-center lg:text-left">
-                <span className="font-regular flex flex-row gap-3 text-30 leading-tight text-gray-100 md:text-xl">
-                  <p className="rounded-2 bg-neutral-17 px-1 py-0.5 font-semibold text-primary">
+                <span className="font-regular flex w-[300px] flex-col items-center justify-center gap-1 whitespace-nowrap text-base leading-tight text-gray-100 md:text-xl lg:w-full lg:flex-row lg:justify-start lg:gap-3">
+                  <p className="w-min rounded-2 bg-neutral-17 px-1 py-0.5 font-semibold text-primary">
                     {bannerText.FreeCardPromoBanner.header.primaryText}
                   </p>
                   {bannerText.FreeCardPromoBanner.header.afterPrimaryText}
@@ -111,7 +111,11 @@ export const FreeCardPromoBanner = () => {
               </div>
               <div className="flex w-full flex-col justify-center gap-4">
                 <div className="flex flex-col items-center gap-4 lg:flex-row">
-                  <Button text={bannerText.FreeCardPromoBanner.getDealCta} onClick={onGetTheDealButtonClicked} />
+                  <Button
+                    text={bannerText.FreeCardPromoBanner.getDealCta}
+                    onClick={onGetTheDealButtonClicked}
+                    hoverColor="hover:bg-primary-dark"
+                  />
                   <Button
                     text={bannerText.FreeCardPromoBanner.freePlanCta}
                     onClick={onContinueWithFreePlanButtonClicked}
@@ -130,7 +134,7 @@ export const FreeCardPromoBanner = () => {
                 </div>
               </div>
 
-              <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
+              <div className="flex w-full flex-wrap items-start justify-start gap-2  lg:flex-nowrap lg:justify-start">
                 {products.map((feature, index) => (
                   <div
                     key={index}

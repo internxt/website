@@ -15,8 +15,8 @@
     "freePlanCta": "Continuar con el plan gratuito",
     "guarantee": "Garantía de devolución de 30 días",
     "header": {
-      "primaryText": "Hasta un 85% de descuento!",
-      "afterPrimaryText": "en todos los Planes Premium"
+      "primaryText": "Hasta un 87% de descuento!",
+      "afterPrimaryText": "en todos los Planes"
     },
     "products": {
       "drive": "Drive",
@@ -129,7 +129,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "¡Internxt cumple 5 años! 85% de descuento en todos los planes ",
+      "normalText": "¡Internxt cumple 5 años! 87% de descuento en todos los planes ",
       "cta": "Elige tu plan "
     }
   },

@@ -122,7 +122,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           }
           bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
           containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:pb-20"
+          bgPadding="lg:pb-20 pb-20"
         />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />

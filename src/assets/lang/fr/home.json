@@ -3,24 +3,24 @@
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
+      "cleaner": "Nettoyeur",
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail"
     },
     "SignUp": {
       "cta": {
-        "title": "Commencez avec Internxt",
-        "subtitle": "Créez un compte maintenant et obtenez 1 Go GRATUIT"
+        "title": "Commencez à travailler avec Internxt",
+        "subtitle": "Créez un compte maintenant et obtenez 1 GB GRATUIT"
       },
       "disclaimer": {
-        "text": "En créant un compte, vous acceptez nos",
-        "link": " conditions de service et politique de confidentialité"
+        "text": "En créant un compte, vous acceptez les",
+        "link": " conditions de service et la politique de confidentialité"
       },
       "fields": {
         "email": {
-          "label": "Email",
-          "placeholder": "Email"
+          "label": "Adresse e-mail",
+          "placeholder": "Adresse e-mail"
         },
         "password": {
           "label": "Mot de passe",
@@ -33,23 +33,24 @@
           }
         },
         "submit": {
-          "get": "Obtenez 1 Go",
+          "get": "Obtenez 1 GB",
           "free": "Gratuit !"
         }
       }
     },
-    "title": "**Privé** par défaut, **sécurisé** par conception, **libre** par nature",
-    "subtitle": "Voilà Internxt - stockage cloud sécurisé et bien plus",
+    "title": "Passez à un **internet** plus **éthique**, **privé** et **sécurisé**",
+    "subtitle": "Voici Internxt - Votre allié numérique de confiance",
     "description": "Obtenez {{discount}}% de réduction !",
-    "features": ["Suite complète de confidentialité", "Chiffrement post-quantique", "Open source et audité"],
+    "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {
       "normal1": "À partir de ",
       "price": " {{minimumPrice}}",
       "normal2": " /mois"
     },
-    "claimDeal": "Profitez de l'offre",
-    "guarantee": "Garantie satisfait ou remboursé 30 jours"
+    "claimDeal": "Réclamer l'offre",
+    "guarantee": "Garantie de remboursement de 30 jours"
   },
+
   "tableSection": {
     "title": "Plans Internxt",
     "planTitles": {
@@ -63,7 +64,7 @@
       }
     },
     "lifetimeDescription": "Payez une seule fois et profitez de confidentialité et sécurité à vie",
-    "planDescription": "Tous les plans Internxt donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Internxt Drive, Send, VPN, Antivirus, Meet et Mail. ",
+    "planDescription": "Tous les plans donnent un accès complet à notre suite de solutions privées dotées de la dernière technologie de sécurité : Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet et Mail. ",
     "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
     "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
     "billingFrequency": {
@@ -118,7 +119,7 @@
       {
         "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
         "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Bancontact.",
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort, Bancontact et Klarna.",
           "Sur demande, nous acceptons également les cryptomonnaies et SEPA Debit. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
@@ -197,7 +198,7 @@
   },
   "TrustedBySection": {
     "title": "Approuvé par des gens comme vous",
-    "review": "'Je garde mes informations sécurisées en ligne grâce à Internxt. Leur support client est rapide, et leurs services sont incroyablement fiables. Le fait qu'ils soient audités, open source et chiffrés me rassure que mes données sont toujours protégées des tiers'.",
+    "review": "Je garde mes informations sécurisées en ligne grâce à Internxt. Leur support client est rapide, et leurs services sont incroyablement fiables. Le fait qu'ils soient audités, open source et chiffrés me rassure que mes données sont toujours protégées des tiers.",
     "author": "Sandra Díaz - Avis Trustpilot"
   }
 }

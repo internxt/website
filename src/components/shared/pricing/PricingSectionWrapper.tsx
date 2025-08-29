@@ -105,13 +105,13 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-
+  const isLifetime = billingFrequency === Interval.Lifetime;
   const individualPlansTitle =
     billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
 
   const businessTitle = textContent.planTitles.business;
 
-  const individualPLansDescription = billingFrequency === Interval.Year ? textContent.planDescription : '';
+  const individualPLansDescription = textContent.planDescription;
 
   const businessPlanDescription = textContent.businessDescription2;
 
@@ -141,15 +141,13 @@ export const PricingSectionWrapper = ({
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
           {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
-          {CustomDescription ? (
-            CustomDescription
-          ) : !hideDescription ? (
-            <span
-              className="text-regular max-w-[932px] text-xl text-gray-55"
-              dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
-            />
-          ) : null}
+          {isLifetime && (
+            <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
+          )}
+          <span
+            className="text-regular max-w-[932px] text-xl text-gray-55"
+            dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
+          />
         </div>
 
         <PricingSection
