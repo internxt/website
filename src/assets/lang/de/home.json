@@ -118,7 +118,7 @@
       {
         "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
         "answer": [
-          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort und Bancontact bezahlen.",
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort Bancontact bezahlen und Klarna.",
           "Auf Anfrage akzeptieren wir auch Kryptowährungen und SEPA-Lastschrift. Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
@@ -197,7 +197,7 @@
   },
   "TrustedBySection": {
     "title": "Vertraut von Menschen wie Ihnen",
-    "review": "'Ich halte meine Informationen dank Internxt online sicher. Ihr Kundensupport ist schnell, und ihre Services sind unglaublich zuverlässig. Die Tatsache, dass sie auditiert, Open-Source und verschlüsselt sind, gibt mir die Gewissheit, dass meine Daten immer vor Dritten geschützt sind.'",
+    "review": "Ich halte meine Informationen dank Internxt online sicher. Ihr Kundensupport ist schnell, und ihre Services sind unglaublich zuverlässig. Die Tatsache, dass sie auditiert, Open-Source und verschlüsselt sind, gibt mir die Gewissheit, dass meine Daten immer vor Dritten geschützt sind.",
     "author": "Sandra Díaz - Trustpilot Bewertung"
   }
 }
