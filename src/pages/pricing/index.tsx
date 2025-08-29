@@ -96,7 +96,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideSwitchSelector
           popularPlanBySize="3TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          backgroundColorComponent="py-20"
+          backgroundColorComponent="pt-20 lg:py-20"
         />
 
         <HorizontalScrollableSection textContent={infoText} />
