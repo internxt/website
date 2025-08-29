@@ -3,8 +3,8 @@ import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/image';
 const SecureAndManageSection = ({ textContent }): JSX.Element => {
   return (
-    <section className="flex flex-col items-center justify-center gap-8 bg-neutral-17 py-20 lg:gap-12">
-      <div className="bg-neutral-35 absolute left-8 right-8 hidden  h-[1px] lg:left-32 lg:right-32 lg:top-0"></div>
+    <section className="flex flex-col items-center justify-center gap-8 bg-neutral-17 py-10 lg:gap-12 lg:py-20">
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:top-0"></div>
       <p className="w-[323px] text-center text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:text-3xl">
         {textContent.title}
       </p>

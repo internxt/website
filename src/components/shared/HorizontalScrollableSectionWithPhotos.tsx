@@ -84,10 +84,10 @@ export default function HorizontalScrollableSection({ textContent }: HorizontalS
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center justify-center gap-8 py-20 lg:h-min lg:gap-16"
+      className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
-      <div className="bg-neutral-35 absolute left-8 right-8 top-0 h-[1px] lg:bottom-0 lg:left-32 lg:right-32"></div>
+      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
