@@ -64,7 +64,7 @@ const CloudStorageForVideos = ({
                 {textContent.HeroSection.subtitle}{' '}
               </p>
               <Link
-                href={'#priceTable'}
+                href={'/pricing'}
                 className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
               >
                 {textContent.HeroSection.cta}
