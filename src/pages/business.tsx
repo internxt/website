@@ -77,7 +77,7 @@ export const BusinessPage = ({
               <Button
                 className="border border-primary bg-transparent "
                 textColor="text-primary"
-                hoverColor="hover:bg-primary/10"
+                hoverColor="hover:bg-primary/20"
                 text={textContent.HeroSection.cta2}
                 onClick={scrollToTop}
               />
@@ -156,7 +156,7 @@ export const BusinessPage = ({
                   <Button
                     className="w-1/2 border border-primary bg-transparent"
                     textColor="text-primary"
-                    hoverColor="hover:bg-transparent/20"
+                    hoverColor="hover:bg-primary/10"
                     text={textContent.CtaSection.contactUs}
                     onClick={scrollToTop}
                   />
