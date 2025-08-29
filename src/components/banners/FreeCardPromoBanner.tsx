@@ -20,7 +20,7 @@ export const FreeCardPromoBanner = () => {
 
   useEffect(() => {
     setShouldShowBanner(dialogIsOpen(GlobalDialog.FreeSpaceCardBanner));
-  }, [isDialogOpen, dialogIsOpen]);
+  }, [isDialogOpen]);
 
   const onCloseBanner = () => {
     closeDialog(GlobalDialog.FreeSpaceCardBanner);
