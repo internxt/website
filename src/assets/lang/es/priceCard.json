@@ -50,7 +50,7 @@
     "semiannually": "/6 meses",
     "annually": "/año"
   },
-  "perUserSlash": "Por usuario/",
+  "perUserSlash": "/Usuario",
   "perUser": "Por usuario",
   "users": "usuarios",
   "freePlan": "Gratis",
@@ -126,8 +126,7 @@
         "Copias de seguridad",
         "Comparte archivos protegidos con contraseña",
         "Cumple con RGPD",
-        "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone"
+        "Autenticación de dos factores (2FA)"
       ],
       "3TB": [
         "3TB de almacenamiento",
@@ -139,7 +138,7 @@
         "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone",
+        "CLI & WebDav ",
         "Limpieza de dispositivo",
         "Monitor de dark web"
       ],
@@ -153,13 +152,12 @@
         "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone",
+        "CLI, WebDav, NAS & Rclone",
         "Limpieza de dispositivo",
         "Monitor de dark web",
         "Meet",
         "Mail"
-      ],
-      "10TB": []
+      ]
     },
     "business": {
       "1TB": [
