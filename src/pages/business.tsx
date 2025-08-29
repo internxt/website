@@ -154,8 +154,8 @@ export const BusinessPage = ({
                     hoverColor="hover:bg-primary-dark"
                   />
                   <Button
-                    className="w-1/2 border border-primary bg-transparent"
-                    textColor="text-primary"
+                    className="w-1/2 border border-primary bg-transparent hover:border-primary-dark"
+                    textColor="text-primary hover:text-primary-dark"
                     hoverColor="hover:bg-primary/10"
                     text={textContent.CtaSection.contactUs}
                     onClick={scrollToTop}
