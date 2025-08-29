@@ -57,7 +57,7 @@ const Animation = ({
         <div
           className="relative left-48 top-1/2 -translate-y-1/2"
           style={{
-            boxShadow: '56px 56px 80px rgba(0,0,0,.2)',
+            boxShadow: '56px 10px 80px rgba(0,0,0,0.2)',
             width: '800px',
             height: '520px',
             borderRadius: '24px',
@@ -92,7 +92,6 @@ const Animation = ({
       <div
         className={`${headerAnimation3 ? 'animate-fade-in-r-large' : 'hidden'} absolute bottom-0 left-[416px]`}
         style={{
-          boxShadow: '16px 32px 40px rgba(0,0,0,.1)',
           width: '211px',
           height: '190px',
           borderRadius: '24px',
