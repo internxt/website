@@ -433,5 +433,10 @@
     "id": "compress-zip",
     "title": "線上 ZIP 壓縮器 - Internxt",
     "description": "線上 ZIP 壓縮器可減小 ZIP 檔案大小，節省儲存空間，無需擔心檔案大小限制即可共享和上傳。"
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - 影片檔案雲端儲存",
+    "description": "Internxt 提供影片檔案雲端儲存服務，用於儲存 HD、4K 和 8K 影片，採用後量子加密技術確保最高隱私保護。"
   }
 ]

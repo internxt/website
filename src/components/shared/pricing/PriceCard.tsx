@@ -70,6 +70,10 @@ export const PriceCard = ({
   const showMonthlyLabel =
     (productCardPlan === 'business' && interval === 'month') ||
     (interval === 'year' && productCardPlan === 'individuals');
+
+  const showPerUserLabel =
+    (productCardPlan === 'business' && interval === 'month') ||
+    (interval === 'year' && productCardPlan === 'individuals');
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
@@ -132,22 +136,21 @@ export const PriceCard = ({
     Detective,
     VideoConference,
     Envelope,
-    CreditCard,
   ];
 
   const newFeaturesNumber = isBusiness ? 10 : 9;
 
   const renderFeatureIcon = (index: number) => {
-    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
+    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
 
   return (
     <div
-      className={`flex flex-col items-center justify-between rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : 'h-[730px]'
-      } ${popular ? 'bg-blue-10 shadow-lg' : ''}`}
+      className={`flex flex-col items-center justify-start rounded-16 ${
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[840px]'
+      } ${popular ? 'bg-blue-10 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
         <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
@@ -155,7 +158,7 @@ export const PriceCard = ({
 
       <div
         className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[939px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
+          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
         } rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
@@ -163,29 +166,40 @@ export const PriceCard = ({
             <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
-            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between  lg:h-[101px] lg:w-[190px]">
+            <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[101px] lg:w-[190px]">
               <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                 <p className="text-base font-semibold text-green-0">
                   {percentOff}
                   {contentText.discount}
-                  {' | '}
-                  {contentText.save} {annualSave}
-                  {currency}
                 </p>
               </div>
-              <div className="flex h-[29px] flex-row items-center justify-between gap-2 lg:h-[43px] ">
-                <span className="flex h-full flex-row items-start gap-1 ">
-                  <p className="text-base font-semibold text-gray-100">{currency}</p>
-                  <p className="text-2xl font-bold text-gray-100 lg:text-4xl">
+              <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2  lg:h-[43px] ">
+                <span className="flex h-full flex-row items-end gap-1 ">
+                  <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+                  <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
                     {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                   </p>
-                  {showMonthlyLabel ? <span className="self-end font-semibold">{contentText.perMonth}</span> : null}
+                  {isBusiness ? (
+                    <span className="i flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
+                  ) : null}
+                  {showMonthlyLabel && !isBusiness ? (
+                    <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
+                  ) : null}
                 </span>
-                <span className="flex h-full flex-row items-end gap-1 pb-[5px]">
-                  <p className="text-md pb-[1px] font-semibold text-gray-50  lg:text-sm">{currency}</p>
-                  <p className=" text-lg font-bold text-gray-50 line-through lg:text-xl">
+
+                <span className="flex h-full flex-row items-end">
+                  <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
+                    {currency}
+                  </p>
+                  <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
                     {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                   </p>
+                  {isBusiness ? (
+                    <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                  ) : null}
+                  {showMonthlyLabel && !isBusiness ? (
+                    <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
+                  ) : null}
                 </span>
               </div>
               <div className="flex h-[19px] items-center justify-center">
@@ -230,19 +244,19 @@ export const PriceCard = ({
         ) : null}
         <div
           className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
-            isBusiness ? 'lg:h-[520px]' : 'lg:h-[485px]'
+            isBusiness ? 'h-min lg:h-[520px]' : 'h-min lg:h-[485px]'
           } lg:py-6`}
         >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div className="flex flex-row items-start" key={feature}>
-              <div className="flex min-h-[24px] flex-row items-start gap-2">
+              <div className="flex min-h-[24px] flex-row items-start gap-2 lg:items-center">
                 {renderFeatureIcon(index)}
-                <span className="text-sm font-normal text-gray-80">
+                <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
                   {feature}
                   {index > newFeaturesNumber && (
-                    <span className="ml-2 rounded-md bg-orange-100 px-1 text-center text-orange-1">
+                    <p className="ml-2 flex h-min items-center rounded-2 bg-orange-100 px-2 py-0.5 text-center font-semibold text-orange-1 lg:px-1">
                       {contentText.commingSoon}
-                    </span>
+                    </p>
                   )}
                 </span>
               </div>

@@ -130,7 +130,7 @@ export async function getServerSideProps(ctx) {
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/annual.json`);
-  const infoSectionLang = require(`@/assets/lang/${lang}/home.json`);
+
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -141,7 +141,6 @@ export async function getServerSideProps(ctx) {
       langJson,
       navbarLang,
       footerLang,
-      infoSectionLang,
     },
   };
 }

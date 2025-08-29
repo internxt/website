@@ -16,7 +16,19 @@
     },
     "getDealCta": "Obtenez l'offre",
     "freePlanCta": "Continuer avec le plan gratuit",
-    "guarantee": "Garantie de remboursement de 30 jours"
+    "guarantee": "Garantie de remboursement de 30 jours",
+    "header": {
+      "primaryText": "Obtenez 85% de réduction",
+      "afterPrimaryText": "sur tous les Plans Premium"
+    },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "featuresBanner": {
     "label": "Économisez 80% !",

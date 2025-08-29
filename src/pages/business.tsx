@@ -1,12 +1,9 @@
 import { BusinessText } from '@/assets/types/business';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { EncryptedCloudSolution } from '@/components/business/EncryptedCloudSolution';
 import { HeroSection } from '@/components/shared/components/HeroSection';
 import { InternxtProtectsYourBusiness } from '@/components/business/InternxtProtectsYourBusiness';
 import { SecureYourCompany } from '@/components/business/SecureYourCompany';
 import { TestimonialsSectionForBusiness } from '@/components/business/TestimonialsSectionForBusiness';
-import { WhatCanWeDo } from '@/components/business/WhatCanWeDo';
-import { WhyChooseInternxtForBusiness } from '@/components/business/WhyChooseInternxt';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -18,8 +15,11 @@ import { GetServerSidePropsContext } from 'next';
 import Button from '@/components/shared/Button';
 import { getImage } from '@/lib/getImage';
 import { PromoCodeName } from '@/lib/types';
-import { MarqueeComponentV2 } from '@/components/specialoffer/MarqueeComponentV2';
 import { ContactSalesForm } from '@/components/shared/ContactSalesForm';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import BusinessCtaSection from '@/components/business/BusinessCtaSection';
+import Image from 'next/image';
+import HorizontalScrollableSectionWithImages from '@/components/business/HorizontalScrollableSectionWithImages';
 
 interface BusinessProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -38,7 +38,7 @@ export const BusinessPage = ({
 }: BusinessProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((metatag) => metatag.id === 'business')[0];
   const { products, loadingCards, currencyValue, businessCoupon } = usePricing({
-    couponCodeForBusiness: PromoCodeName.SummerCampaign,
+    couponCodeForBusiness: PromoCodeName.SoftSales85,
   });
 
   const locale = lang as string;
@@ -54,7 +54,7 @@ export const BusinessPage = ({
     });
   };
 
-  const imagePath = lang === 'es' ? 'almacenamiento_la_nube_para_empresas_header' : 'Internxt_b2b_business_solution';
+  const imagePath = lang === 'es' ? 'HeroImage' : 'HeroImage';
 
   return (
     <Layout title={metatags.title} description={metatags.description}>
@@ -62,26 +62,36 @@ export const BusinessPage = ({
 
       <HeroSection
         TextComponent={
-          <div className="flex w-full flex-col items-center justify-center gap-8 text-center text-white lg:max-w-[535px] lg:items-start lg:justify-start  lg:pr-10 lg:text-start">
-            <h1 className=" text-3xl font-semibold lg:text-5xl">{textContent.HeroSection.title}</h1>
-            <div className="flex flex-col gap-4">
-              <p className="text-xl">{textContent.HeroSection.description[0]}</p>
-            </div>
-            <div className="flex flex-col items-center gap-4 lg:flex-row ">
-              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} />
-              <p className="hidden text-center text-xl text-gray-40 lg:flex">{textContent.HeroSection.separator}</p>
-              <Button text={textContent.HeroSection.cta2} onClick={scrollToTop} />
+          <div className="flex h-min w-[350px] flex-col gap-6 py-8 lg:w-[656px] lg:gap-8">
+            <p className="text-center text-30 font-semibold leading-tight text-white lg:text-start lg:text-3xl">
+              {textContent.HeroSection.title}
+            </p>
+            <p className="text-center text-base font-normal leading-tight text-white lg:text-start lg:text-xl">
+              {textContent.HeroSection.description[0]}
+            </p>
+            <p className="text-center text-base font-semibold leading-tight text-white lg:text-start lg:text-xl">
+              {textContent.HeroSection.description[1]}
+            </p>
+            <div className="flex flex-row items-center justify-center gap-8 lg:justify-start">
+              <Button text={textContent.HeroSection.cta} onClick={onButtonClick} hoverColor="hover:bg-primary-dark" />
+              <Button
+                className="border border-primary bg-transparent "
+                textColor="text-primary"
+                hoverColor="hover:bg-primary/20"
+                text={textContent.HeroSection.cta2}
+                onClick={scrollToTop}
+              />
             </div>
           </div>
         }
         style={{
-          background: 'radial-gradient(50% 50% at 50% 50%, #0058DB 0%, #161616 100%)',
+          background: 'linear-gradient(360deg, #001D6C 0%, #121923 100%)',
         }}
         imageProperties={{
           src: getImage(`/images/business/${imagePath}.webp`),
           alt: 'Internxt B2B Business Solution',
-          width: 671,
-          height: 550,
+          width: 603,
+          height: 520,
         }}
       />
 
@@ -89,7 +99,10 @@ export const BusinessPage = ({
 
       <InternxtProtectsYourBusiness textContent={textContent.InternxtProtectsYourBusiness} />
 
-      <WhatCanWeDo textContent={textContent.WhatCanWeDo} />
+      <HorizontalScrollableSectionWithImages
+        textContent={textContent.WhatCanWeDo}
+        bgGardient="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
+      />
 
       <PricingSectionWrapper
         loadingCards={loadingCards}
@@ -103,20 +116,70 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        showPromo={true}
+        backgroundColorComponent="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <WhyChooseInternxtForBusiness textContent={textContent} />
+      <div className=" lg:pt-20">
+        <HorizontalScrollableSection
+          textContent={textContent.WhyChooseInternxt}
+          bgGradient="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
+        />
+      </div>
 
-      <MarqueeComponentV2 bgColor="bg-gray-1" />
-
-      <EncryptedCloudSolution textContent={textContent.EncryptedCloudSolution} />
+      <BusinessCtaSection
+        textContent={textContent.CtaSection}
+        bgColor="bg-gray-1"
+        customText={
+          <>
+            <div className="flex flex-row justify-center gap-12 overflow-hidden">
+              <Image
+                src={getImage('/images/home/Internxt-secure-cloud-storage_devices.webp')}
+                alt="Tablet Image"
+                width={601}
+                height={401}
+                className="hidden lg:flex"
+              />
+              <div className="flex w-[300px] flex-col items-center gap-8 text-center lg:w-[458px] lg:gap-4 lg:px-0">
+                <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                  {textContent.CtaSection.title}
+                </p>
+                <p className="w-[250px] text-base font-normal leading-tight text-gray-55 lg:w-[458px]  lg:text-center lg:text-xl">
+                  {textContent.CtaSection.description}
+                </p>
+                <div className="flex w-[300px] flex-row justify-center gap-4 lg:w-[458px] lg:gap-8">
+                  <Button
+                    text={textContent.CtaSection.cta}
+                    onClick={onButtonClick}
+                    className="w-1/2"
+                    hoverColor="hover:bg-primary-dark"
+                  />
+                  <Button
+                    className="w-1/2 border border-primary bg-transparent hover:border-primary-dark"
+                    textColor="text-primary hover:text-primary-dark"
+                    hoverColor="hover:bg-primary/10"
+                    text={textContent.CtaSection.contactUs}
+                    onClick={scrollToTop}
+                  />
+                </div>
+              </div>
+              <Image
+                src={getImage('/images/home/internxt_secure_cloud_storage_desktop.webp')}
+                alt="Tablet Image"
+                width={401}
+                height={301}
+                className="hidden lg:flex"
+              />
+            </div>
+          </>
+        }
+        containerDetails="bg-blue-20"
+      />
 
       <TestimonialsSectionForBusiness textContent={textContent.TestimonialsSection} />
 
-      <FAQSection textContent={textContent.FaqSection} />
-
       <ContactSalesForm textContent={textContent.ContactSales} isBusiness />
+
+      <FAQSection textContent={textContent.FaqSection} />
 
       <Footer textContent={footerText} lang={locale} />
     </Layout>

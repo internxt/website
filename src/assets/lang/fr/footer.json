@@ -92,7 +92,8 @@
         "privateCloud": "Solution de cloud privé",
         "cloudBakcup": "Solution de sauvegarde cloud",
         "GDPRCloud": "Stockage RGPD",
-        "cloudPhotos": "Photos dans le cloud"
+        "cloudPhotos": "Photos dans le cloud",
+        "cloudVideo": "Videos dans le cloud"
       },
       "language": "Langue"
     }

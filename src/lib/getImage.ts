@@ -1,4 +1,3 @@
-// Objeto para almacenar en caché las URLs de las imágenes
 const imageCache: Record<string, string> = {};
 
 export function getImage(pathname: string, shouldCache = false): string {

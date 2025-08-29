@@ -268,5 +268,10 @@
     "id": "compress-zip",
     "title": "在线 ZIP 压缩器 - Internxt",
     "description": "在线 ZIP 压缩器可减小 ZIP 文件大小，节省存储空间，无需担心文件大小限制即可共享和上传。"
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - 视频文件云存储",
+    "description": "Internxt 提供视频文件云存储服务，用于存储 HD、4K 和 8K 视频，采用后量子加密技术确保最高隐私保护。"
   }
 ]
