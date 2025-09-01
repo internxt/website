@@ -133,7 +133,7 @@ export const PricingSectionWrapper = ({
 
   return (
     <section
-      className={`overflow-hidden  lg:px-5 ${sectionDetails}`}
+      className={`overflow-hidden lg:px-5 ${sectionDetails}`}
       id="billingButtons"
       style={{ background: backgroundGradientColor }}
     >
