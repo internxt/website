@@ -13,10 +13,10 @@ export const CliCard = ({ textContent }) => {
         <div className="flex flex-col items-center gap-12 md:flex-row md:justify-between md:pl-12">
           <div className="flex flex-col space-y-10 px-5 md:px-0">
             <div className="flex flex-col space-y-4">
-              <div className="text w-max rounded-lg bg-orange/15 px-2.5 py-1.5">
-                <p className="text-sm font-bold text-orange">{textContent.new}</p>
+              <div className="text bg-orange/15 w-max rounded-lg px-2.5 py-1.5">
+                <p className="text-orange text-sm font-bold">{textContent.new}</p>
               </div>
-              <h2 className="max-w-[550px]  text-4xl font-semibold leading-tight text-gray-100 lg:text-5xl">
+              <h2 className="max-w-[550px]  text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
                 {textContent.title.bold} <br /> <span className="text-gray-40">{textContent.title.normal}</span>
               </h2>
               <p className="max-w-[384px] text-lg text-gray-100">{textContent.description}</p>

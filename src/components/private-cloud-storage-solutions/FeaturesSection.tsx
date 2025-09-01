@@ -1,4 +1,4 @@
-import { Devices, Eye, FolderLock, Leaf, LockKey, Trophy  } from '@phosphor-icons/react';
+import { Devices, Eye, FolderLock, Leaf, LockKey, Trophy } from '@phosphor-icons/react';
 import { Fragment, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
@@ -41,9 +41,9 @@ const FeaturesSection = ({ textContent }) => {
     <section className="overflow-hidden">
       <section className="flex flex-col items-center justify-center space-y-12 overflow-hidden px-5 py-20">
         <div className="flex w-full max-w-[858px] flex-col items-center justify-center space-y-6 text-center">
-          <p className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</p>
+          <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-xl">{textContent.title}</p>
           <div className="flex flex-col space-y-6">
-            <p className="text-lg text-gray-80">{textContent.description}</p>
+            <p className="text-lg leading-tight text-gray-80">{textContent.description}</p>
           </div>
         </div>
       </section>
@@ -59,7 +59,7 @@ const FeaturesSection = ({ textContent }) => {
                   setCardIndex(index);
                 }}
               >
-                <p className="text-2xl text-left font-medium text-gray-100 hover:text-primary">{info.title}</p>
+                <p className="text-left text-2xl font-medium text-gray-100 hover:text-primary">{info.title}</p>
               </button>
               <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
             </Fragment>
@@ -70,8 +70,10 @@ const FeaturesSection = ({ textContent }) => {
             <div className="flex flex-col rounded-3xl pl-6">
               <div className="flex w-full max-w-[384px] flex-col space-y-6">
                 <DescriptionIcon className="text-primary" size={64} />
-                <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
+                <p className="text-2xl leading-tight text-gray-100 selection:font-semibold lg:text-4xl">
+                  {cardInfo[cardIndex].title}
+                </p>
+                <ReactMarkdown className="markdown text-base font-normal leading-tight text-gray-80 lg:text-xl">
                   {cardInfo[cardIndex].description}
                 </ReactMarkdown>
               </div>
@@ -79,7 +81,7 @@ const FeaturesSection = ({ textContent }) => {
           </div>
         </RevealX>
       </div>
-      <div className="flex flex-col items-center justify-center space-y-10 py-10 px-5 lg:hidden">
+      <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
         {cardInfo.map((info) => (
           <div
             key={info.title}

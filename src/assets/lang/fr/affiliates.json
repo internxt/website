@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "label": "Programme d'Affiliation Internxt",
+    "title": { "normalText": " par vente", "blueText": "Gagnez jusqu'à 300 $" },
+    "description": "Rejoignez le programme d'affiliation de classe mondiale d'Internxt et gagnez de l'argent en faisant la promotion du stockage cloud à connaissance zéro auprès de votre audience. Construisons ensemble un internet plus sûr, plus juste et meilleur.",
+    "signUp": "S'inscrire maintenant",
+    "logIn": "Connexion affilié"
+  },
+  "FeatureSection": {
+    "title": "Comment commencer ?",
+    "cards": [
+      {
+        "title": "Créer un compte d'affilié",
+        "description": "Inscrivez-vous pour devenir affilié en suivant ce lien.",
+        "cta": "S'inscrire maintenant"
+      },
+      {
+        "title": "Promouvoir Internxt",
+        "description": "Créez du contenu sur nous en utilisant vos liens de suivi uniques. Chaque fois que quelqu'un clique sur votre lien de suivi et effectue un achat, vous gagnez une commission !"
+      },
+      {
+        "title": "Soyez payé pour chaque achat !",
+        "description": "Gagnez de l'argent pour chaque utilisateur payant. Il n'y a aucune limite au nombre de paiements que nous émettons à la fin de chaque mois."
+      }
+    ]
+  },
+  "WhatIsInternxtSection": {
+    "title": "Qu'est-ce qu'Internxt ?",
+    "subtitle": "Internxt Drive est un service de stockage cloud à connaissance zéro offrant une confidentialité et une sécurité de premier ordre.",
+    "description": "Internxt n'accède pas à vos données et ne les vend pas. Contrairement aux concurrents, notre modèle économique n'est pas basé sur la publicité ou la vente d'informations utilisateur. Construit sur une technologie open-source à connaissance zéro, Internxt est conçu pour l'avenir et protège le droit à la vie privée des utilisateurs."
+  },
+  "WhyJoinSection": {
+    "title": "Pourquoi rejoindre le Programme d'Affiliation d'Internxt ?",
+    "cards": [
+      {
+        "title": "Gagnez jusqu'à 300 $ par vente"
+      },
+      {
+        "title": "Gestionnaires de compte dédiés"
+      },
+      {
+        "title": "Durée de cookie de 30 jours"
+      },
+      {
+        "title": "Ventes, offres et commissions exclusives"
+      },
+      {
+        "title": "Pages de destination ciblées"
+      },
+      {
+        "title": "Accès aux créatifs haute conversion"
+      }
+    ],
+    "cta": "S'inscrire maintenant"
+  },
+  "WhatWeDoSection": {
+    "title": "Internxt garantit confidentialité, sécurité et chiffrement de niveau militaire pour tous",
+    "description": "Rejoignez Internxt dans notre engagement à promouvoir une expérience sécurisée et privée pour tous. Le stockage cloud sécurisé d'Internxt est un outil et service conçu pour fournir à tous un stockage cloud axé sur la confidentialité.",
+    "cards": [
+      {
+        "title": "Tous vos fichiers sur tous vos appareils",
+        "description": "Accédez en toute sécurité à tous vos fichiers depuis n'importe quel appareil avec une connexion internet via nos applications web, desktop et mobiles."
+      },
+      {
+        "title": "Gardez vos fichiers organisés",
+        "description": "Internxt vous permet d'organiser vos fichiers dans des dossiers, de les renommer et de filtrer une liste de fichiers pour trouver ce que vous voulez plus rapidement."
+      },
+      {
+        "title": "Partagez vos fichiers facilement",
+        "description": "Vous choisissez avec qui vous voulez partager et combien de fois vous voulez que vos fichiers soient téléchargés."
+      },
+      {
+        "title": "Sauvegardez ce qui compte pour vous",
+        "description": "Restez à jour et préservez la dernière version de ce fichier ou dossier important sur lequel vous travaillez."
+      }
+    ],
+    "recognized": "Fièrement reconnu pour la protection de qualité"
+  },
+  "CommissionStructureSection": {
+    "title": "Notre structure de commissions",
+    "startEarning": "Commencez à gagner",
+    "cards": [
+      {
+        "OFF": "30%",
+        "plans": "sur les plans annuels"
+      },
+      {
+        "OFF": "15%",
+        "plans": "sur les ventes à vie"
+      }
+    ],
+    "cta": "S'inscrire maintenant"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "Gagnez gros en promouvant les plans B2B et B2C d'Internxt",
+      "description": [
+        "Rejoignez Internxt pour offrir aux entreprises et aux particuliers une plateforme pour sécuriser et protéger contre la perte de données avec un chiffrement ultra-puissant. ",
+        "Notre stockage cloud pour tous offre une gestion avancée des fichiers, sécurité, confidentialité et plus, permettant aux industries, familles ou particuliers de profiter des avantages du stockage cloud privé."
+      ]
+    },
+    "s3": {
+      "title": "Aidez les entreprises à gérer des données à grande échelle avec le stockage d'objets Internxt",
+      "description": [
+        "Nous offrons également un stockage d'objets compatible S3, une solution de stockage cloud abordable pour gérer les fichiers dans une infrastructure sécurisée et haute performance."
+      ]
+    },
+    "feat": [
+      {
+        "title": "100% Chaud",
+        "description": "Ultra rapide et instantanément accessible"
+      },
+      {
+        "title": "Jusqu'à 80%",
+        "description": "Plus abordable qu'AWS"
+      },
+      {
+        "title": "Zéro frais",
+        "description": "Transfert de données gratuit"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "Reconnu comme le ",
+      "blue": "n° 1 ",
+      "line2": "stockage cloud par"
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Avec quel type de partenaires Internxt travaille-t-il ?",
+        "answer": [
+          "Nous travaillons avec tous ceux qui produisent du contenu : blogueurs, sites web, influenceurs, YouTubeurs, professionnels LinkedIn, etc."
+        ]
+      },
+      {
+        "question": "Dans combien de temps puis-je recevoir mon premier paiement ?",
+        "answer": ["Nous émettons les paiements automatiquement à la fin du mois."]
+      },
+      {
+        "question": "Quelle est la meilleure façon de promouvoir Internxt ?",
+        "answer": [
+          "Personne ne connaît votre audience mieux que vous ! Cependant, une fois que vous vous inscrivez à notre programme de partenaires affiliés, vous recevrez plein de conseils et d'ressources parmi lesquels choisir."
+        ]
+      },
+      {
+        "question": "Combien de temps dure le cookie fourni ?",
+        "answer": ["Nous suivons le standard du marché d'une politique de 30 jours."]
+      },
+      {
+        "question": "Quand ma candidature sera-t-elle examinée ?",
+        "answer": ["Votre gestionnaire d'affiliés dédié vous recontactera dans environ 24 heures."]
+      },
+      {
+        "question": "Plus de questions ?",
+        "answer": [
+          "Si vous avez des questions, commentaires ou préoccupations supplémentaires, veuillez lire nos Termes et Conditions ou nous envoyer un message à [affiliates@internxt.com](mailto:affiliates@internxt.com)."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Soyez payé pour protéger le droit à la vie privée",
+    "description": "Rejoignez maintenant et promouvez le service de stockage cloud open-source le plus privé au monde.",
+    "cta": "S'inscrire maintenant"
+  }
+}

@@ -98,13 +98,13 @@ const PrivateCloudStorageSolutions = ({
         <AnimatedHeroSection
           textComponent={
             <>
-              <div className="flex flex-col px-6 text-3xl font-medium lg:text-5xl">
-                <h1 className="font-medium text-white">
+              <div className="flex flex-col px-6 py-10 text-3xl font-medium lg:text-5xl">
+                <h1 className="font-medium leading-tight text-white">
                   {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
                   <span className="text-primary">{textContent.HeroSection.TitleAndOnePlan.title.blueText}</span>
                   {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
                 </h1>
-                <p className="pt-4 text-xl text-white">
+                <p className="pt-4 text-xl leading-tight text-white">
                   <span className=" text-white">{textContent.HeroSection.TitleAndOnePlan.description}</span>
                 </p>
 
@@ -125,6 +125,7 @@ const PrivateCloudStorageSolutions = ({
               </div>
             </>
           }
+          height="h-min"
         />
 
         <FeatureSection
@@ -139,7 +140,9 @@ const PrivateCloudStorageSolutions = ({
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
-          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
+          customDescription={
+            <p className="w-full text-xl font-normal leading-tight">{textContent.CtaSection1.description}</p>
+          }
         />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
@@ -147,7 +150,9 @@ const PrivateCloudStorageSolutions = ({
         <CtaSection
           textContent={textContent.CtaSection2}
           url={CTA_URL}
-          customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
+          customDescription={
+            <p className="w-full text-xl font-normal leading-tight">{textContent.CtaSection2.description}</p>
+          }
         />
 
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />

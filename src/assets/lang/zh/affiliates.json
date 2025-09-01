@@ -1,0 +1,168 @@
+{
+  "HeroSection": {
+    "label": "Internxt 联盟计划",
+    "title": { "normalText": " 每笔销售", "blueText": "赚取高达300美元" },
+    "description": "加入Internxt世界级的联盟计划，向您的受众推广零知识云存储服务赚取收益。让我们一起构建更安全、更公平、更美好的互联网。",
+    "signUp": "立即注册",
+    "logIn": "联盟会员登录"
+  },
+  "FeatureSection": {
+    "title": "如何开始？",
+    "cards": [
+      {
+        "title": "创建联盟账户",
+        "description": "通过此链接注册成为联盟会员。",
+        "cta": "立即注册"
+      },
+      {
+        "title": "推广Internxt",
+        "description": "使用您的独特跟踪链接创建关于我们的内容。每当有人点击您的跟踪链接并完成购买，您就能获得佣金！"
+      },
+      {
+        "title": "每次购买都能获得报酬！",
+        "description": "每位付费用户都能为您带来现金收益。我们每月月底发放的佣金数量没有限制。"
+      }
+    ]
+  },
+  "WhatIsInternxtSection": {
+    "title": "什么是Internxt？",
+    "subtitle": "Internxt Drive是一个零知识云存储服务，提供一流的隐私和安全性。",
+    "description": "Internxt不会访问或出售您的数据。与竞争对手不同，我们的商业模式不基于广告或用户信息的销售。基于开源、零知识技术构建，Internxt为未来而设计，保护用户的隐私权。"
+  },
+  "WhyJoinSection": {
+    "title": "为什么要加入Internxt联盟计划？",
+    "cards": [
+      {
+        "title": "每笔销售赚取高达300美元"
+      },
+      {
+        "title": "专属客户经理"
+      },
+      {
+        "title": "30天Cookie持续期"
+      },
+      {
+        "title": "独家销售、优惠和佣金"
+      },
+      {
+        "title": "定向落地页"
+      },
+      {
+        "title": "获取高转化率创意素材"
+      }
+    ],
+    "cta": "立即注册"
+  },
+  "WhatWeDoSection": {
+    "title": "Internxt为每个人保证隐私、安全和军用级加密",
+    "description": "加入Internxt，与我们一起致力于为每个人提供安全和私密的体验。Internxt的安全云存储是为每个人提供注重隐私的云存储而构建的工具和服务。",
+    "cards": [
+      {
+        "title": "所有设备上的所有文件",
+        "description": "通过我们的网页、桌面和移动应用程序，从任何有互联网连接的设备安全访问您的所有文件。"
+      },
+      {
+        "title": "保持文件井然有序",
+        "description": "Internxt让您可以将文件整理到文件夹中，重命名它们，并筛选文件列表以更快地找到您想要的内容。"
+      },
+      {
+        "title": "轻松分享文件",
+        "description": "您可以选择与谁分享以及希望您的文件被下载多少次。"
+      },
+      {
+        "title": "备份对您重要的内容",
+        "description": "保持最新状态，保存您正在处理的重要文件或文件夹的最新版本。"
+      }
+    ],
+    "recognized": "以优质保护而自豪地获得认可"
+  },
+  "CommissionStructureSection": {
+    "title": "我们的佣金结构",
+    "startEarning": "开始赚钱",
+    "cards": [
+      {
+        "OFF": "30%",
+        "plans": "年度计划"
+      },
+      {
+        "OFF": "15%",
+        "plans": "终身销售"
+      }
+    ],
+    "cta": "立即注册"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "通过推广Internxt B2B和B2C计划赚取丰厚收益",
+      "description": [
+        "加入Internxt，为企业和个人提供一个平台，通过超强加密技术保护和防范数据丢失。",
+        "我们为每个人提供的云存储服务具备高级文件管理、安全性、隐私保护等功能，让各行各业、家庭或个人都能享受私有云存储的好处。"
+      ]
+    },
+    "s3": {
+      "title": "帮助企业使用Internxt对象存储管理大规模数据",
+      "description": [
+        "我们还提供S3兼容的对象存储，这是一种经济实惠的云存储解决方案，可在高性能、安全的基础设施内管理文件。"
+      ]
+    },
+    "feat": [
+      {
+        "title": "100%热存储",
+        "description": "超快速且可即时访问"
+      },
+      {
+        "title": "最多便宜80%",
+        "description": "比AWS更实惠"
+      },
+      {
+        "title": "零费用",
+        "description": "免费数据传输"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "被认定为",
+      "blue": "第一名",
+      "line2": "云存储服务商"
+    }
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt与什么类型的合作伙伴合作？",
+        "answer": ["我们与所有内容创作者合作：博主、网站、影响者、YouTuber、LinkedIn专家等。"]
+      },
+      {
+        "question": "我多久能收到第一笔佣金？",
+        "answer": ["我们在每月月底自动发放佣金。"]
+      },
+      {
+        "question": "推广Internxt的最佳方式是什么？",
+        "answer": [
+          "没有人比您更了解您的受众！但是，一旦您注册我们的联盟合作伙伴计划，您将获得大量可供选择的技巧和资源。"
+        ]
+      },
+      {
+        "question": "提供的Cookie持续多长时间？",
+        "answer": ["我们遵循市场标准的30天政策。"]
+      },
+      {
+        "question": "我的申请何时会得到审核？",
+        "answer": ["您的专属联盟经理将在大约24小时内与您联系。"]
+      },
+      {
+        "question": "还有其他问题？",
+        "answer": [
+          "如果您有任何其他问题、评论或疑虑，请阅读我们的条款和条件或发送消息至[affiliates@internxt.com](mailto:affiliates@internxt.com)。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "因保护隐私权而获得报酬",
+    "description": "立即加入并推广世界上最私密的开源云存储服务。",
+    "cta": "立即注册"
+  }
+}
