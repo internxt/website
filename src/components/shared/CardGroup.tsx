@@ -21,8 +21,8 @@ export const CardGroup = ({
       >
         <card.icon className={`mb-6 text-4xl ${iconColor ? iconColor : 'text-primary'}`} size={32} />
         <div className="flex w-full max-w-[400px] flex-col">
-          <p className={`mb-6 text-2xl font-medium ${textColor}`}>{card.title}</p>
-          <p className={`text-base ${textColor} sm:text-lg`}>{card.description}</p>
+          <p className={`mb-6 text-base font-medium leading-tight lg:text-2xl ${textColor}`}>{card.title}</p>
+          <p className={`text-sm ${textColor} leading-tight sm:text-lg`}>{card.description}</p>
         </div>
       </div>
     ))}

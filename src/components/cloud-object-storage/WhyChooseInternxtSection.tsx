@@ -57,8 +57,10 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
     <section className="overflow-hidden bg-gray-1 px-5 py-0 lg:py-20">
       <div className="flex flex-col items-center justify-center gap-4 lg:gap-20">
         <div className="flex flex-col items-center gap-6 text-center">
-          <h2 className="max-w-[831px] text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
-          <p className="max-w-[774px] text-xl text-gray-80">{textContent.description}</p>
+          <h2 className="max-w-[831px] text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            {textContent.title}
+          </h2>
+          <p className="max-w-[774px] text-xl leading-tight text-gray-80">{textContent.description}</p>
         </div>
         <CardGroup cards={cards} backgroundColorCard="bg-white" />
 
@@ -66,7 +68,6 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
           <MarqueeComponentV2 bgColor="bg-gray-1" />
         </div>
 
-        {/* Banner */}
         <div
           className="flex w-full max-w-[1200px] flex-row justify-between rounded-[32px]"
           style={{
@@ -84,8 +85,8 @@ export const CloudObjectStorageWhyChooseInternxtSection = ({
           </div>
           <div className="flex w-full flex-col items-center justify-center gap-9 px-5 py-20 lg:w-max lg:px-0">
             <div className="flex w-full max-w-[460px] flex-col gap-4 text-center text-white">
-              <p className="text-4xl font-semibold lg:text-5xl">{textContent.bannerText.title}</p>
-              <p className="text-xl">{textContent.bannerText.description}</p>
+              <p className="text-30 font-semibold leading-tight lg:text-3xl">{textContent.bannerText.title}</p>
+              <p className="text-xl leading-tight">{textContent.bannerText.description}</p>
             </div>
             <div className="flex flex-row items-center gap-2 lg:gap-4">
               <Button text={textContent.bannerText.cta} onClick={() => (window.location.hash = '#storageSection')} />
