@@ -46,7 +46,7 @@ const CloudObjectStorage = ({
       <HeroSection
         TextComponent={
           <div className="flex max-w-[533px] flex-col items-center justify-center gap-8 pb-6 pt-10 text-center text-white lg:items-start lg:pt-0 lg:text-left">
-            <h1 className="text-3xl font-semibold text-white lg:text-5xl">
+            <h1 className="text-3xl font-semibold leading-tight text-white lg:text-5xl">
               {lang === 'es' ? (
                 <>
                   {textContent.HeroSection.title.line2} {textContent.HeroSection.title.line1}
@@ -58,7 +58,7 @@ const CloudObjectStorage = ({
                 </>
               )}
             </h1>
-            <p className="px-10 text-xl lg:px-0">{textContent.HeroSection.description}</p>
+            <p className="px-10 text-xl leading-tight lg:px-0">{textContent.HeroSection.description}</p>
             <div className="flex flex-row items-center gap-4 pb-16 lg:pb-0">
               <Button
                 className="w-full lg:w-max"
