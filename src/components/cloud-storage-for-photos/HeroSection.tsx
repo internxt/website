@@ -105,6 +105,7 @@ export default function HeroSection({ textContent, lang, isHomePageV2 }: HeroSec
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   alt="HeroSection Mobile Image"
                   onClick={handleOnClick}
+                  className="hidden lg:flex"
                 />
               </div>
             ) : (

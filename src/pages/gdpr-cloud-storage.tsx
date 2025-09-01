@@ -133,11 +133,13 @@ const PrivateCloudStorageSolutions = ({
         <ImportanceSection textContent={textContent.Importance} ctaLink={CTA_URL} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
+
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
         />
+
         <FeatureSection
           title={textContent.FeatureSection.title}
           subtitle={textContent.FeatureSection.titleLine2}
@@ -146,18 +148,23 @@ const PrivateCloudStorageSolutions = ({
           ctaLink={CTA_URL}
           cards={cardsData}
         />
+
         <CtaSection
           textContent={textContent.CtaSection2}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
+
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
+
         <CtaSection
           textContent={textContent.CtaSection3}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection3.description}</p>}
         />
+
         <FAQSection textContent={textContent.FaqSection} />
+
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>

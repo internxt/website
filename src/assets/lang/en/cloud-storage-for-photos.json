@@ -7,11 +7,7 @@
         "textAfterBlueText": ""
       },
       "description": "Internxt cloud storage for photos lets you create private albums and securely store and share memories with friends and family.",
-      "features": [
-        "Store your photos in privacy ",
-        "Post-quantum & zero-knowledge encryption",
-        "Open source and audited"
-      ],
+      "features": ["Store your photos in privacy ", "Post-quantum encryption", "Open source and audited"],
       "claimDeal": "View plans"
     },
     "TitleAndOnePlanV2": {
