@@ -1,113 +1,170 @@
 {
   "HeroSection": {
-    "label": "Internxt's Affiliate Program",
-    "title": { "normalText": "Make the internet more secure - ", "blueText": "and get paid doing it!" },
-    "description": "Join Internxt’s world-class affiliate program and earn money promoting zero-knowledge cloud storage to your audience. Let’s build a safer, fairer, and better internet together.",
-    "signUp": "Sign up now",
-    "logIn": "Affiliate log in"
+    "label": "Internxts Affiliate-Programm",
+    "title": { "normalText": " pro Verkauf", "blueText": "Verdienen Sie bis zu 300€" },
+    "description": "Treten Sie Internxts erstklassigem Affiliate-Programm bei und verdienen Sie Geld, indem Sie Zero-Knowledge-Cloud-Speicher für Ihr Publikum bewerben. Lassen Sie uns gemeinsam ein sichereres, faireres und besseres Internet aufbauen.",
+    "signUp": "Jetzt anmelden",
+    "logIn": "Affiliate-Login"
   },
   "FeatureSection": {
-    "title": "How to get started?",
+    "title": "Wie fängt man an?",
     "cards": [
       {
-        "title": "Create an affiliate account",
-        "description": "Sign up to be an affiliate by following this link.",
-        "cta": "Sign up now"
+        "title": "Erstellen Sie ein Affiliate-Konto",
+        "description": "Melden Sie sich an, um Affiliate zu werden, indem Sie diesem Link folgen.",
+        "cta": "Jetzt anmelden"
       },
       {
-        "title": "Send subscribers to Internxt",
-        "description": "Promote Internxt to your audience. Every time someone clicks your personal link and makes a purchase, you earn a commission!"
+        "title": "Bewerben Sie Internxt",
+        "description": "Erstellen Sie Inhalte über uns mit Ihren einzigartigen Tracking-Links. Jedes Mal, wenn jemand auf Ihren Tracking-Link klickt und einen Kauf tätigt, verdienen Sie eine Provision!"
       },
       {
-        "title": "Get paid for every purchase!",
-        "description": "Earn cash for every paid subscription made using your link. There is no limit to the number of payouts we issue at the end of each month."
+        "title": "Werden Sie für jeden Kauf bezahlt!",
+        "description": "Verdienen Sie Geld für jeden zahlenden Nutzer. Es gibt keine Grenzen für die Anzahl der Auszahlungen, die wir am Ende jedes Monats leisten."
       }
     ]
   },
   "WhatIsInternxtSection": {
-    "title": "What is Internxt?",
-    "subtitle": "Internxt Drive is a zero-knowledge cloud storage service providing best-in-class privacy and security.",
-    "description": "Internxt doesn’t access or sell your data. Unlike competitors, our business model is not based on ads or the sale of user information. Built on open-source, zero-knowledge technology, Internxt is designed for the future and protects users’ right to privacy."
+    "title": "Was ist Internxt?",
+    "subtitle": "Internxt Drive ist ein Zero-Knowledge-Cloud-Speicherdienst, der erstklassige Privatsphäre und Sicherheit bietet.",
+    "description": "Internxt greift nicht auf Ihre Daten zu und verkauft sie nicht. Im Gegensatz zu Konkurrenten basiert unser Geschäftsmodell nicht auf Werbung oder dem Verkauf von Nutzerdaten. Basierend auf Open-Source-, Zero-Knowledge-Technologie ist Internxt für die Zukunft konzipiert und schützt das Recht der Nutzer auf Privatsphäre."
   },
   "WhyJoinSection": {
-    "title": "Why join Internxt’s Affiliate Program?",
+    "title": "Warum Internxts Affiliate-Programm beitreten?",
     "cards": [
       {
-        "title": "Earn up to $299 per sale"
+        "title": "Verdienen Sie bis zu 300€ pro Verkauf"
       },
       {
-        "title": "Dedicated account managers"
+        "title": "Engagierte Account-Manager"
       },
       {
-        "title": "30-days cookie duration period"
+        "title": "30-Tage Cookie-Gültigkeitsdauer"
       },
       {
-        "title": "Exclusive sales, specials, and deals"
+        "title": "Exklusive Verkäufe, Angebote und Provisionen"
+      },
+      {
+        "title": "Zielgerichtete Landingpages"
+      },
+      {
+        "title": "Zugang zu hochkonvertierenden Werbemitteln"
       }
     ],
-    "cta": "Sign up now"
+    "cta": "Jetzt anmelden"
   },
   "WhatWeDoSection": {
-    "title": "Privacy, security, and military-grade encryption for everyone",
-    "description": "Focusing on privacy, security, and the preservation of everyone’s digital rights, we want our partners to join us in promoting a safer and more ethical internet. Internxt is a tool and service built to provide the best and most secure cloud storage for everyone.",
+    "title": "Internxt garantiert Privatsphäre, Sicherheit und militärische Verschlüsselung für alle",
+    "description": "Schließen Sie sich Internxt in unserem Engagement an, eine sichere und private Erfahrung für alle zu fördern. Internxts sicherer Cloud-Speicher ist ein Tool und Service, der entwickelt wurde, um jedem privatsphäre-fokussierten Cloud-Speicher zu bieten.",
     "cards": [
       {
-        "title": "All your files on all your devices",
-        "description": "Securely access all your files from any device with a connection to the internet via our web, desktop, and mobile apps."
+        "title": "Alle Ihre Dateien auf allen Ihren Geräten",
+        "description": "Greifen Sie sicher auf alle Ihre Dateien von jedem Gerät mit Internetverbindung über unsere Web-, Desktop- und Mobile-Apps zu."
       },
       {
-        "title": "Keep your files organized",
-        "description": "Internxt lets you organize your files in folders, rename them, and filter a list of files to find what you want faster."
+        "title": "Halten Sie Ihre Dateien organisiert",
+        "description": "Internxt ermöglicht es Ihnen, Ihre Dateien in Ordnern zu organisieren, sie umzubenennen und eine Dateiliste zu filtern, um schneller zu finden, was Sie wollen."
       },
       {
-        "title": "Share your files with ease",
-        "description": "You choose who you want to share with and how many times you want your files to be downloaded."
+        "title": "Teilen Sie Ihre Dateien mit Leichtigkeit",
+        "description": "Sie entscheiden, mit wem Sie teilen möchten und wie oft Ihre Dateien heruntergeladen werden sollen."
       },
       {
-        "title": "Back up what matters to you",
-        "description": "Stay current and preserve the latest version of that important file or folder you're working on."
+        "title": "Sichern Sie, was Ihnen wichtig ist",
+        "description": "Bleiben Sie aktuell und bewahren Sie die neueste Version dieser wichtigen Datei oder des Ordners, an dem Sie arbeiten."
       }
     ],
-    "recognized": "Proudly recognized for quality protection"
+    "recognized": "Stolz anerkannt für Qualitätsschutz"
+  },
+  "CommissionStructureSection": {
+    "title": "Unsere Provisionsstruktur",
+    "startEarning": "Beginnen Sie zu verdienen",
+    "cards": [
+      {
+        "OFF": "30%",
+        "plans": "auf Jahrespläne"
+      },
+      {
+        "OFF": "15%",
+        "plans": "auf Lifetime-Verkäufe"
+      }
+    ],
+    "cta": "Jetzt anmelden"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "Verdienen Sie groß, indem Sie Internxt B2B- und B2C-Pläne bewerben",
+      "description": [
+        "Schließen Sie sich Internxt an, um Unternehmen und Einzelpersonen eine Plattform zu bieten, die mit ultra-starker Verschlüsselung vor Datenverlust sichert und schützt. ",
+        "Unser Cloud-Speicher für alle bietet erweiterte Dateiverwaltung, Sicherheit, Privatsphäre und mehr, wodurch Branchen, Familien oder Einzelpersonen die Vorteile des privaten Cloud-Speichers genießen können."
+      ]
+    },
+    "s3": {
+      "title": "Helfen Sie Unternehmen beim Management großer Datenmengen mit Internxt Object Storage",
+      "description": [
+        "Wir bieten auch S3-kompatiblen Object Storage an, eine erschwingliche Cloud-Speicherlösung zur Verwaltung von Dateien innerhalb einer hochleistungsfähigen, sicheren Infrastruktur."
+      ]
+    },
+    "feat": [
+      {
+        "title": "100% Hot",
+        "description": "Ultra-schnell und sofort zugänglich"
+      },
+      {
+        "title": "Bis zu 80%",
+        "description": "Günstiger als AWS"
+      },
+      {
+        "title": "Null Gebühren",
+        "description": "Kostenloser Datentransfer"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "Anerkannt als der ",
+      "blue": "Nr. 1 ",
+      "line2": "Cloud-Speicher von"
+    }
   },
   "FaqSection": {
-    "title": "Questions? We have answers",
+    "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "What type of partners does Internxt work with?",
+        "question": "Mit welcher Art von Partnern arbeitet Internxt zusammen?",
         "answer": [
-          "We work with everyone who produces content: bloggers, websites, influencers, YouTubers, LinkedIn pros, etc."
+          "Wir arbeiten mit allen zusammen, die Inhalte produzieren: Bloggern, Websites, Influencern, YouTubern, LinkedIn-Profis usw."
         ]
       },
       {
-        "question": "How soon can I receive my first payout?",
-        "answer": ["We issue payouts automatically at the end of the month."]
+        "question": "Wie schnell kann ich meine erste Auszahlung erhalten?",
+        "answer": ["Wir führen Auszahlungen automatisch am Ende des Monats durch."]
       },
       {
-        "question": "What is the best way to promote Internxt?",
+        "question": "Was ist der beste Weg, Internxt zu bewerben?",
         "answer": [
-          "Nobody knows your audience better than you! However, once you register for our affiliate partner program you’ll be provided a ton of tips and assets to choose from."
+          "Niemand kennt Ihr Publikum besser als Sie! Sobald Sie sich jedoch für unser Affiliate-Partner-Programm registrieren, erhalten Sie eine Menge Tipps und Assets zur Auswahl."
         ]
       },
       {
-        "question": "How long does the provided cookie last?",
-        "answer": ["We follow the market standard of a 30-day policy."]
+        "question": "Wie lange hält der bereitgestellte Cookie?",
+        "answer": ["Wir folgen dem Marktstandard einer 30-Tage-Richtlinie."]
       },
       {
-        "question": "When will my application be reviewed?",
-        "answer": ["Your dedicated affiliate manager will get back to you in about 24 hours."]
+        "question": "Wann wird meine Bewerbung überprüft?",
+        "answer": ["Ihr engagierter Affiliate-Manager wird sich in etwa 24 Stunden bei Ihnen melden."]
       },
       {
-        "question": "More questions?",
+        "question": "Weitere Fragen?",
         "answer": [
-          "If you have any additional questions, comments, or concerns please read our Terms and Conditions or message us at [affiliates@internxt.com](mailto:affiliates@internxt.com)."
+          "Wenn Sie weitere Fragen, Kommentare oder Bedenken haben, lesen Sie bitte unsere Geschäftsbedingungen oder schreiben Sie uns an [affiliates@internxt.com](mailto:affiliates@internxt.com)."
         ]
       }
     ]
   },
   "CtaSection": {
-    "title": "Get paid to protect the right to privacy",
-    "description": "Join now and promote the world's most private open-source cloud storage service.",
-    "cta": "Sign up now"
+    "title": "Werden Sie bezahlt, um das Recht auf Privatsphäre zu schützen",
+    "description": "Treten Sie jetzt bei und bewerben Sie den privatesten Open-Source-Cloud-Speicherdienst der Welt.",
+    "cta": "Jetzt anmelden"
   }
 }

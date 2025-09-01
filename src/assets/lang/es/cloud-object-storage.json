@@ -59,8 +59,8 @@
     "title": "¿Cuánto almacenamiento necesitas?",
     "description": "Descubre cuánto puedes ahorrar con el almacenamiento de objetos de Internxt. Prueba nuestra calculadora de costes para ver cómo nos comparamos con los hiperescaladores.",
     "pay-as-you-go": "Paga por lo que usas",
-    "perMonth": "/por mes",
-    "perYear": "/por año",
+    "perMonth": "/ mes",
+    "perYear": "/ año",
     "storageAmount": "Cantidad de almacenamiento",
     "percentDownloadPerMonth": "Porcentaje de descarga mensual",
     "companies": ["Internxt", "Microsoft", "Amazon", "Google"]
@@ -168,7 +168,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contacta con ventas",
+    "title": "Contáctanos",
     "description": "Completa el formulario y nuestro equipo se pondrá en contacto contigo en breves ",
     "form": {
       "name": "Nombre Completo",

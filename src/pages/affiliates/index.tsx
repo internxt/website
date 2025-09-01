@@ -59,7 +59,7 @@ const ImageAndTextRow = ({ textContent, imageUrl, alt, direction = 'right' }) =>
         />
       </div>
       <div className="flex max-w-[388px] flex-col items-center gap-4 text-center lg:items-start lg:text-left">
-        <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
+        <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.title}</h2>
         <RenderDescription description={textContent.description} />
       </div>
     </div>
@@ -142,7 +142,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 
       <HeroSection
         TextComponent={
-          <div className="flex w-full flex-col items-center space-y-4 text-center lg:items-start lg:text-left">
+          <div className="flex w-full flex-col items-center space-y-6 text-center lg:items-start lg:text-left">
             <div className="flex w-max items-center rounded-lg bg-gray-5 px-4 py-2">
               <p className="text-xl font-medium text-gray-80">{langJson.HeroSection.label}</p>
             </div>
@@ -151,9 +151,9 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
                 <span className="text-primary">{langJson.HeroSection.title.blueText}</span>
                 {langJson.HeroSection.title.normalText}
               </h1>
-              <p className="text-xl text-gray-80">{langJson.HeroSection.description}</p>
-              {/* CTA Section */}
-              <div className="flex flex-col items-center gap-4 lg:flex-row lg:items-start">
+              <p className="text-xl leading-tight text-gray-80">{langJson.HeroSection.description}</p>
+
+              <div className="flex flex-row items-center justify-center gap-4 pb-8 lg:items-start lg:justify-start">
                 <button
                   onClick={() => {
                     window.open(HERO_SECTION_CTA_BUTTON, '_blank', 'noopener noreferrer nofollow');
@@ -187,9 +187,15 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <TextAndImageColumnSection
         TextComponent={
           <div className="flex max-w-[750px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{langJson.WhatIsInternxtSection.title}</p>
-            <p className="text-2xl font-medium text-gray-100">{langJson.WhatIsInternxtSection.subtitle}</p>
-            <p className="text-xl text-gray-80">{langJson.WhatIsInternxtSection.description}</p>
+            <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+              {langJson.WhatIsInternxtSection.title}
+            </p>
+            <p className="text-xl font-medium leading-tight text-gray-100 lg:text-2xl">
+              {langJson.WhatIsInternxtSection.subtitle}
+            </p>
+            <p className="text-lg leading-tight text-gray-80 lg:text-xl">
+              {langJson.WhatIsInternxtSection.description}
+            </p>
           </div>
         }
         imageProperties={{
@@ -205,8 +211,12 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <TextAndCardsGroupColumnSection
         TextComponent={
           <div className="flex max-w-[930px] flex-col space-y-6 text-center">
-            <p className="text-5xl font-semibold text-gray-100">{langJson.WhatWeDoSection.title}</p>
-            <p className="max-w-[796px] text-xl text-gray-80">{langJson.WhatWeDoSection.description}</p>
+            <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+              {langJson.WhatWeDoSection.title}
+            </p>
+            <p className="max-w-[796px] text-lg leading-tight text-gray-80 lg:text-xl">
+              {langJson.WhatWeDoSection.description}
+            </p>
           </div>
         }
         cards={groupCards}
@@ -215,7 +225,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       <ComponentsInColumnSection
         backgroundColor="bg-gray-1"
         FirstComponent={
-          <p className="text-center text-5xl font-semibold text-gray-100">
+          <p className="text-center text-30 font-semibold text-gray-100 lg:text-3xl">
             {langJson.CommissionStructureSection.title}
           </p>
         }
@@ -233,7 +243,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
                     <p className="text-2xl font-medium">{langJson.CommissionStructureSection.startEarning}</p>
                     <div className="flex flex-col items-center gap-2">
                       {Icon ? <Icon size={48} className="text-primary" /> : null}
-                      <p className="text-5xl font-semibold">{card.OFF}</p>
+                      <p className="text-30 font-semibold lg:text-3xl">{card.OFF}</p>
                       <p className="text-2xl font-medium">{card.plans}</p>
                     </div>
                   </div>
@@ -268,8 +278,10 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
           <div className="flex flex-row flex-wrap justify-center gap-32 pt-10">
             {langJson.DescribingPlansSection.feat.map((feature) => (
               <div className="flex max-w-[220px] flex-col gap-2 text-center">
-                <p className="whitespace-nowrap text-5xl font-semibold text-primary">{feature.title}</p>
-                <p className="text-xl font-medium text-gray-80">{feature.description}</p>
+                <p className="whitespace-nowrap text-30 font-semibold leading-tight text-primary lg:text-3xl">
+                  {feature.title}
+                </p>
+                <p className="text-base font-medium text-gray-80 lg:text-xl">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -277,7 +289,7 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
       />
 
       <div className="flex flex-col items-center justify-center gap-12 bg-gray-1 px-5 py-20 text-center">
-        <h2 className="text-5xl font-semibold">
+        <h2 className="text-30 font-semibold lg:text-3xl">
           {langJson.Number1Section.title.line1}{' '}
           <span className="text-primary">{langJson.Number1Section.title.blue} </span>
           {langJson.Number1Section.title.line2}
@@ -315,10 +327,10 @@ const Affiliates = ({ langJson, lang, metatagsDescriptions, navbarLang, footerLa
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
 
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/en/affiliates.json`);
-  const navbarLang = require(`@/assets/lang/en/navbar.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const langJson = require(`@/assets/lang/${lang}/affiliates.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

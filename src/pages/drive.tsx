@@ -98,13 +98,13 @@ const Drive = ({
         <TextAndCardsGroupColumnSection
           TextComponent={
             <div className="flex max-w-3xl flex-col items-center justify-center space-y-6 text-center text-black">
-              <h3 className="text-center text-3xl font-semibold text-gray-100 lg:text-5xl">
+              <h3 className="text-center text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
                 {textContent.FeaturesSection.section7.title.line1}
                 <br />
                 {textContent.FeaturesSection.section7.title.line2}
               </h3>
 
-              <p className="mb-6 text-xl text-gray-80">
+              <p className="mb-6 text-base leading-tight text-gray-80 lg:text-xl">
                 {textContent.FeaturesSection.section7.subtitle.line1} <br className="hidden sm:flex" />
                 {textContent.FeaturesSection.section7.subtitle.line2} <br className="hidden sm:flex" />
               </p>

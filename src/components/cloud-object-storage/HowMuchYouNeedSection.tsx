@@ -115,46 +115,43 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
   }
 
   return (
-    <section className="overflow-hidden bg-gray-1 px-5 py-20">
+    <section className="hidden overflow-hidden bg-gray-1 px-5 py-20 lg:flex">
       <div className="flex w-full flex-col items-center gap-16">
         <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="text-4xl font-semibold text-gray-100 lg:text-4xl lg:text-5xl">{textContent.title}</h2>
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
           <h3 className="text-xl text-gray-80">{textContent.description}</h3>
         </div>
 
-        {/* Cards */}
         <div className="flex h-full w-full max-w-[1115px] flex-col items-stretch gap-16 md:flex-row">
           <div className="flex w-full flex-col gap-2">
-            {/* Pricing */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
               <p className="font-medium text-gray-100">{textContent['pay-as-you-go']}</p>
-              {/* Monthly price */}
+
               <div className="flex flex-row items-end gap-2">
                 <p className="text-4xl font-semibold text-primary lg:text-5xl">
                   €{Math.round((costs?.internxt.cost * 12) / 12).toLocaleString('en')}
                 </p>
-                <p className="text-3xl text-gray-50">{textContent.perMonth}</p>
+                <p className="text-base text-gray-50 lg:text-3xl">{textContent.perMonth}</p>
               </div>
-              {/* Yearly price */}
+
               <div className="flex flex-row items-end gap-2">
                 <p className="text-4xl font-semibold text-primary lg:text-5xl">
                   €{Math.round(costs?.internxt.cost * 12).toLocaleString('en')}
                 </p>
-                <p className="text-3xl text-gray-50">{textContent.perYear}</p>
+                <p className="text-base text-gray-50 lg:text-3xl">{textContent.perYear}</p>
               </div>
             </div>
 
-            {/* Sliders */}
             <div className="flex w-full flex-col gap-4 rounded-2xl bg-white p-9">
               <p className="font-medium text-gray-100">{textContent.storageAmount}</p>
-              {/* Storage amount slider */}
+
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={10240} rangeItems={[]} valueLabelFormat={storageAmountValueLabelFormat} />
                 <div className="flex w-full max-w-[90px] items-center justify-center rounded-lg border border-gray-10 px-4 py-2.5">
                   <p className="font-medium text-gray-100">{storageAmountValue}TB</p>
                 </div>
               </div>
-              {/* Percent download slider */}
+
               <p className="font-medium text-gray-100">{textContent.percentDownloadPerMonth}</p>
               <div className="flex flex-row items-end gap-4">
                 <RangeSlider min={1} max={100} rangeItems={[]} valueLabelFormat={percentDownloadValueLabelFormat} />
@@ -164,7 +161,7 @@ export const HowMuchYouNeedSection = ({ textContent }: HowMuchYouNeedSectionProp
               </div>
             </div>
           </div>
-          {/* Graphs (Comparison) */}
+
           <div className="flex w-full flex-col rounded-2xl bg-white px-9 py-10">
             <div className="flex h-full flex-row flex-wrap justify-center gap-12">
               <div className="flex flex-col items-center gap-2">

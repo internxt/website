@@ -15,7 +15,7 @@ const FeaturesSection = ({ textContent, lang, download }) => (
       <Parallax
         className="flex w-full flex-col items-center justify-center text-center"
         renderLayer={(percentage) => (
-          <h2 className="relative text-3xl font-semibold text-cool-gray-90 lg:mb-20 lg:text-5xl">
+          <h2 className="relative text-30 font-semibold text-cool-gray-90 lg:mb-20 lg:text-3xl">
             <Transition
               show={anim.trigger(percentage)}
               enter="transition-all duration-500"
@@ -69,13 +69,13 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           />
 
           <div className="mt-10 flex flex-col px-10 lg:px-0">
-            <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
+            <h3 className="mb-6 text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               {textContent.section2.title.line1} <br className="hidden sm:flex" />
               {textContent.section2.title.line2} <br className="hidden sm:flex" />
               {textContent.section2.title.line3}
             </h3>
 
-            <p className="w-full max-w-[262px] text-lg text-gray-80">
+            <p className="w-full max-w-[262px] text-lg leading-tight text-gray-80">
               {textContent.section2.subtitle.line1}
               {textContent.section2.subtitle.line2}
               {textContent.section2.subtitle.line3}
@@ -93,14 +93,14 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           {/* Keep items aligned to the left */}
           <div className="flex w-full flex-col items-center pt-10 lg:w-auto lg:items-start lg:pt-0">
             <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-28 lg:px-0">
-              <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
+              <h3 className="mb-6 text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
                 {textContent.section3.title.line1} <br className="hidden sm:flex" />
                 {textContent.section3.title.line2} <br className="hidden sm:flex" />
                 {textContent.section3.title.line3} <br className="hidden sm:flex" />
                 {textContent.section3.title.line4}
               </h3>
 
-              <p className="text-lg text-gray-80">
+              <p className="text-lg leading-tight text-gray-80">
                 {textContent.section3.subtitle.line1} <br className="hidden sm:flex" />
                 {textContent.section3.subtitle.line2} <br className="hidden sm:flex" />
                 {textContent.section3.subtitle.line3} <br className="hidden sm:flex" />
@@ -164,14 +164,14 @@ const FeaturesSection = ({ textContent, lang, download }) => (
           </div>
 
           <div className="mb-20 flex flex-col px-10 pt-10 lg:mb-24 lg:px-0">
-            <h3 className="mb-6 text-3xl font-semibold text-gray-100 lg:text-4xl">
+            <h3 className="mb-6 text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
               {textContent.section4.title.line1} <br className="hidden sm:flex" />
               {textContent.section4.title.line2} <br className="hidden sm:flex" />
               {textContent.section4.title.line3} <br className="hidden sm:flex" />
               {textContent.section4.title.line4}
             </h3>
 
-            <p className="text-lg text-gray-80">
+            <p className="text-lg leading-tight text-gray-80">
               {textContent.section4.subtitle.line1} <br className="hidden sm:flex" />
               {textContent.section4.subtitle.line2} <br className="hidden sm:flex" />
               {textContent.section4.subtitle.line3} <br className="hidden sm:flex" />

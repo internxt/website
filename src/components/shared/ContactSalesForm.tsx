@@ -90,7 +90,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
       <div className="flex flex-col items-center gap-6 text-center ">
-        <h2 className="text-3xl font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
+        <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
         <h3 className="max-w-[774px] px-10 text-lg leading-tight text-gray-80 lg:px-0" id="contactSales">
           {textContent.description}
         </h3>

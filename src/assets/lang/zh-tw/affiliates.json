@@ -1,62 +1,166 @@
 {
   "HeroSection": {
-    "label": "Internxt 的聯盟計畫",
-    "title": { "normalText": "讓互聯網更安全 - ", "blueText": "並且賺錢！" },
-    "description": "加入 Internxt 的世界級聯盟計畫，通過向您的觀眾推廣零知識雲端儲存來賺取收入。讓我們一起構建一個更安全、更公平、更好的互聯網。",
+    "label": "Internxt 聯盟行銷計劃",
+    "title": { "normalText": " 每筆銷售", "blueText": "賺取高達 $300" },
+    "description": "加入 Internxt 世界級的聯盟行銷計劃，通過向您的受眾推廣零知識雲端儲存來賺取收入。讓我們共同建立一個更安全、更公平、更美好的網路世界。",
     "signUp": "立即註冊",
-    "logIn": "聯盟登錄"
+    "logIn": "聯盟行銷登入"
   },
   "FeatureSection": {
     "title": "如何開始？",
     "cards": [
       {
-        "title": "創建聯盟賬戶",
-        "description": "通過此連結註冊成為聯盟會員。",
+        "title": "建立聯盟行銷帳戶",
+        "description": "點擊此連結註冊成為聯盟行銷夥伴。",
         "cta": "立即註冊"
       },
       {
-        "title": "將訂閱者帶到 Internxt",
-        "description": "向您的觀眾推廣 Internxt。每次有人點擊您的個人連結並購買時，您都會賺取佣金！"
+        "title": "推廣 Internxt",
+        "description": "使用您獨特的追蹤連結創建關於我們的內容。每當有人點擊您的追蹤連結並進行購買時，您就能獲得佣金！"
       },
       {
-        "title": "每次購買都會獲得報酬！",
-        "description": "通過您的連結進行的每次付費訂閱都可以賺取現金。我們每月月底發放的付款數量沒有上限。"
+        "title": "每筆購買都能獲得報酬！",
+        "description": "每個付費用戶都能為您帶來現金收入。我們在每月月底發放的獎金數量沒有限制。"
       }
     ]
   },
   "WhatIsInternxtSection": {
     "title": "什麼是 Internxt？",
-    "subtitle": "Internxt Drive 是一個提供一流隱私和安全性的零知識雲端儲存服務。",
-    "description": "Internxt 不會訪問或出售您的數據。與競爭對手不同，我們的商業模式不是基於廣告或出售用戶信息。Internxt 基於開源的零知識技術，為未來設計並保護用戶的隱私權。"
+    "subtitle": "Internxt Drive 是一個提供頂級隱私和安全性的零知識雲端儲存服務。",
+    "description": "Internxt 不會存取或販售您的資料。與競爭對手不同，我們的商業模式不基於廣告或販售用戶資訊。基於開源零知識技術構建，Internxt 專為未來設計，保護用戶的隱私權。"
   },
   "WhyJoinSection": {
-    "title": "為什麼加入 Internxt 的聯盟計畫？",
+    "title": "為什麼要加入 Internxt 的聯盟行銷計劃？",
     "cards": [
       {
-        "title": "每次銷售可賺取高達 $299"
+        "title": "每筆銷售賺取高達 $300"
       },
       {
-        "title": "專屬賬戶經理"
+        "title": "專屬客戶經理"
       },
       {
-        "title": "30 天的 cookie 有效期"
+        "title": "30天 Cookie 有效期"
       },
       {
-        "title": "獨家銷售、特惠和交易"
+        "title": "獨家銷售、優惠和佣金"
+      },
+      {
+        "title": "專門的到達頁面"
+      },
+      {
+        "title": "獲取高轉換率創意素材"
       }
     ],
     "cta": "立即註冊"
   },
   "WhatWeDoSection": {
-    "title": "為每個人提供隱私、安全和軍事級加密",
-    "description": "專注於隱私、安全和保護每個人的數位權利，我們希望我們的合作夥伴與我們一起推廣一個更安全和更道德的互聯網。Internxt 是一個旨在為每個人提供最佳和最安全的雲端儲存工具和服務。"},
+    "title": "Internxt 為所有人保證隱私、安全和軍用級加密",
+    "description": "加入 Internxt，共同致力於為每個人提供安全和私密的體驗。Internxt 的安全雲端儲存是一個專為提供注重隱私的雲端儲存而建立的工具和服務。",
     "cards": [
       {
-        "title": "所有設備上的所有文件",
-        "description": "通過我們的網頁、桌面和移動應用程式，從任何連接互聯網的設備安全訪問您的所有文件。"
+        "title": "您的所有檔案在所有設備上",
+        "description": "通過我們的網頁、桌面和行動應用程式，從任何有網路連接的設備安全地存取您的所有檔案。"
       },
       {
-        "title": "保持文件有序",
-        "description": "Internxt"} 
+        "title": "保持檔案井然有序",
+        "description": "Internxt 讓您可以將檔案整理在資料夾中、重新命名，並篩選檔案清單以更快找到您想要的內容。"
+      },
+      {
+        "title": "輕鬆分享您的檔案",
+        "description": "您可以選擇要與誰分享，以及希望您的檔案被下載多少次。"
+      },
+      {
+        "title": "備份對您重要的內容",
+        "description": "保持最新狀態，保存您正在處理的重要檔案或資料夾的最新版本。"
+      }
+    ],
+    "recognized": "因優質保護而獲得自豪認可"
+  },
+  "CommissionStructureSection": {
+    "title": "我們的佣金結構",
+    "startEarning": "開始賺錢",
+    "cards": [
+      {
+        "OFF": "30%",
+        "plans": "年度方案"
+      },
+      {
+        "OFF": "15%",
+        "plans": "終身方案銷售"
+      }
+    ],
+    "cta": "立即註冊"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "通過推廣 Internxt B2B 和 B2C 方案賺取豐厚收入",
+      "description": [
+        "加入 Internxt，為企業和個人提供一個平台，通過超強加密技術防止資料丟失並提供保護。",
+        "我們為所有人提供的雲端儲存服務提供進階檔案管理、安全性、隱私保護等功能，讓各行各業、家庭或個人都能享受私人雲端儲存的好處。"
       ]
+    },
+    "s3": {
+      "title": "幫助企業使用 Internxt 物件儲存管理大規模資料",
+      "description": [
+        "我們還提供 S3 相容的物件儲存，這是一個經濟實惠的雲端儲存解決方案，可在高效能、安全的基礎設施內管理檔案。"
+      ]
+    },
+    "feat": [
+      {
+        "title": "100% 熱儲存",
+        "description": "超快速且可立即存取"
+      },
+      {
+        "title": "高達 80%",
+        "description": "比 AWS 更實惠"
+      },
+      {
+        "title": "零費用",
+        "description": "免費資料傳輸"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "被認可為",
+      "blue": "第一名",
+      "line2": "雲端儲存服務"
     }
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt 與哪種類型的夥伴合作？",
+        "answer": ["我們與所有內容創作者合作：部落客、網站、網紅、YouTube 創作者、LinkedIn 專家等。"]
+      },
+      {
+        "question": "我多久能收到第一筆獎金？",
+        "answer": ["我們在每月月底自動發放獎金。"]
+      },
+      {
+        "question": "推廣 Internxt 的最佳方法是什麼？",
+        "answer": ["沒有人比您更了解您的受眾！不過，一旦您註冊我們的聯盟夥伴計劃，您將獲得大量技巧和素材供您選擇。"]
+      },
+      {
+        "question": "提供的 Cookie 持續多長時間？",
+        "answer": ["我們遵循市場標準的 30 天政策。"]
+      },
+      {
+        "question": "我的申請什麼時候會被審核？",
+        "answer": ["您的專屬聯盟行銷經理將在約 24 小時內與您聯繫。"]
+      },
+      {
+        "question": "還有更多問題？",
+        "answer": [
+          "如果您有任何其他問題、意見或疑慮，請閱讀我們的條款與條件或發送郵件至 [affiliates@internxt.com](mailto:affiliates@internxt.com)。"
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "獲得報酬來保護隱私權",
+    "description": "立即加入並推廣世界上最私密的開源雲端儲存服務。",
+    "cta": "立即註冊"
+  }
+}

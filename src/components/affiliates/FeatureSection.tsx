@@ -24,7 +24,7 @@ const FeatureSection = ({ textContent }): JSX.Element => {
   return (
     <section className="overflow-hidden bg-gray-1 py-20">
       <div className="flex flex-col items-center justify-center space-y-10 lg:space-y-20">
-        <p className="text-center text-5xl font-semibold">{textContent.title}</p>
+        <p className="text-center text-30 font-semibold lg:text-3xl">{textContent.title}</p>
         <RevealY className="flex w-full flex-row flex-wrap items-center justify-center gap-4 lg:gap-8">
           {cards.map((item) => (
             <div
@@ -33,7 +33,7 @@ const FeatureSection = ({ textContent }): JSX.Element => {
             >
               <item.icon className="text-primary" size={32} />
               <p className="text-2xl font-medium text-gray-100">{item.title}</p>
-              <p className="text-lg text-gray-80">{item.description}</p>
+              <p className="text-lg leading-tight text-gray-80">{item.description}</p>
               {item.cta && (
                 <button
                   onClick={() => {
