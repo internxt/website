@@ -385,6 +385,11 @@
     "description": "Internxt AI 偵測器。免費掃描內容，檢查是否由 ChatGPT、Gemini 或其他人工智慧平台生成。"
   },
   {
+    "id": "affiliates",
+    "title": "聯盟計畫 | Internxt",
+    "description": "加入Internxt的聯盟行銷計畫！如何開始以及計畫詳情、好處和特權。"
+  },
+  {
     "id": "special-offer",
     "title": "特別優惠 — Internxt",
     "description": "以獨家80%折扣獲取 Internxt 的年度和終身方案。享受隱私和安全，提供高達10TB的儲存空間。"

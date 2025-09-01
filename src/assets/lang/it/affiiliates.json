@@ -1,0 +1,170 @@
+{
+  "HeroSection": {
+    "label": "Programma di Affiliazione Internxt",
+    "title": { "normalText": " per vendita", "blueText": "Guadagna fino a $300" },
+    "description": "Unisciti al programma di affiliazione di classe mondiale di Internxt e guadagna promuovendo lo storage cloud a conoscenza zero al tuo pubblico. Costruiamo insieme un internet più sicuro, più giusto e migliore.",
+    "signUp": "Registrati ora",
+    "logIn": "Accesso affiliati"
+  },
+  "FeatureSection": {
+    "title": "Come iniziare?",
+    "cards": [
+      {
+        "title": "Crea un account affiliato",
+        "description": "Registrati per diventare affiliato seguendo questo link.",
+        "cta": "Registrati ora"
+      },
+      {
+        "title": "Promuovi Internxt",
+        "description": "Crea contenuti su di noi utilizzando i tuoi link di tracciamento unici. Ogni volta che qualcuno clicca sul tuo link di tracciamento e fa un acquisto, guadagni una commissione!"
+      },
+      {
+        "title": "Vieni pagato per ogni acquisto!",
+        "description": "Guadagna denaro per ogni utente pagante. Non ci sono limiti al numero di pagamenti che emettiamo alla fine di ogni mese."
+      }
+    ]
+  },
+  "WhatIsInternxtSection": {
+    "title": "Cos'è Internxt?",
+    "subtitle": "Internxt Drive è un servizio di storage cloud a conoscenza zero che fornisce privacy e sicurezza di prima classe.",
+    "description": "Internxt non accede né vende i tuoi dati. A differenza dei concorrenti, il nostro modello di business non è basato su pubblicità o vendita di informazioni degli utenti. Costruito su tecnologia open-source a conoscenza zero, Internxt è progettato per il futuro e protegge il diritto alla privacy degli utenti."
+  },
+  "WhyJoinSection": {
+    "title": "Perché unirsi al Programma di Affiliazione di Internxt?",
+    "cards": [
+      {
+        "title": "Guadagna fino a $300 per vendita"
+      },
+      {
+        "title": "Account manager dedicati"
+      },
+      {
+        "title": "Durata del cookie di 30 giorni"
+      },
+      {
+        "title": "Vendite, offerte e commissioni esclusive"
+      },
+      {
+        "title": "Landing page mirate"
+      },
+      {
+        "title": "Accesso a creativi ad alta conversione"
+      }
+    ],
+    "cta": "Registrati ora"
+  },
+  "WhatWeDoSection": {
+    "title": "Internxt garantisce privacy, sicurezza e crittografia di livello militare per tutti",
+    "description": "Unisciti a Internxt nella nostra dedizione a promuovere un'esperienza sicura e privata per tutti. Lo storage cloud sicuro di Internxt è uno strumento e servizio costruito per fornire a tutti uno storage cloud focalizzato sulla privacy.",
+    "cards": [
+      {
+        "title": "Tutti i tuoi file su tutti i tuoi dispositivi",
+        "description": "Accedi in modo sicuro a tutti i tuoi file da qualsiasi dispositivo con connessione internet tramite le nostre app web, desktop e mobile."
+      },
+      {
+        "title": "Mantieni i tuoi file organizzati",
+        "description": "Internxt ti permette di organizzare i tuoi file in cartelle, rinominarli e filtrare un elenco di file per trovare quello che vuoi più velocemente."
+      },
+      {
+        "title": "Condividi i tuoi file con facilità",
+        "description": "Tu scegli con chi vuoi condividere e quante volte vuoi che i tuoi file vengano scaricati."
+      },
+      {
+        "title": "Fai il backup di ciò che ti sta a cuore",
+        "description": "Rimani aggiornato e conserva l'ultima versione di quel file o cartella importante su cui stai lavorando."
+      }
+    ],
+    "recognized": "Orgogliosamente riconosciuto per la protezione di qualità"
+  },
+  "CommissionStructureSection": {
+    "title": "La nostra struttura delle commissioni",
+    "startEarning": "Inizia a guadagnare",
+    "cards": [
+      {
+        "OFF": "30%",
+        "plans": "sui piani annuali"
+      },
+      {
+        "OFF": "15%",
+        "plans": "sulle vendite a vita"
+      }
+    ],
+    "cta": "Registrati ora"
+  },
+  "DescribingPlansSection": {
+    "drive": {
+      "title": "Guadagna molto promuovendo i piani B2B e B2C di Internxt",
+      "description": [
+        "Unisciti a Internxt per dare alle aziende e ai privati una piattaforma per proteggere e prevenire la perdita di dati con crittografia ultra-potente. ",
+        "Il nostro storage cloud per tutti offre gestione avanzata dei file, sicurezza, privacy e altro, permettendo a industrie, famiglie o individui di godere dei benefici dello storage cloud privato."
+      ]
+    },
+    "s3": {
+      "title": "Aiuta le aziende a gestire dati su larga scala con lo storage a oggetti di Internxt",
+      "description": [
+        "Offriamo anche storage a oggetti compatibile con S3, una soluzione di storage cloud conveniente per gestire file all'interno di un'infrastruttura sicura e ad alte prestazioni."
+      ]
+    },
+    "feat": [
+      {
+        "title": "100% Caldo",
+        "description": "Ultra veloce e istantaneamente accessibile"
+      },
+      {
+        "title": "Fino all'80%",
+        "description": "Più conveniente di AWS"
+      },
+      {
+        "title": "Zero commissioni",
+        "description": "Trasferimento dati gratuito"
+      }
+    ]
+  },
+  "Number1Section": {
+    "title": {
+      "line1": "Riconosciuto come il ",
+      "blue": "n. 1 ",
+      "line2": "storage cloud da"
+    }
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Con che tipo di partner lavora Internxt?",
+        "answer": [
+          "Lavoriamo con tutti coloro che producono contenuti: blogger, siti web, influencer, YouTuber, professionisti LinkedIn, ecc."
+        ]
+      },
+      {
+        "question": "Quanto presto posso ricevere il mio primo pagamento?",
+        "answer": ["Emettiamo i pagamenti automaticamente alla fine del mese."]
+      },
+      {
+        "question": "Qual è il modo migliore per promuovere Internxt?",
+        "answer": [
+          "Nessuno conosce il tuo pubblico meglio di te! Tuttavia, una volta registrato al nostro programma partner affiliati, ti verranno forniti un sacco di consigli e risorse tra cui scegliere."
+        ]
+      },
+      {
+        "question": "Quanto dura il cookie fornito?",
+        "answer": ["Seguiamo lo standard di mercato di una politica di 30 giorni."]
+      },
+      {
+        "question": "Quando verrà esaminata la mia domanda?",
+        "answer": ["Il tuo account manager affiliati dedicato ti ricontatterà in circa 24 ore."]
+      },
+      {
+        "question": "Altre domande?",
+        "answer": [
+          "Se hai domande, commenti o preoccupazioni aggiuntive, per favore leggi i nostri Termini e Condizioni o inviaci un messaggio a [affiliates@internxt.com](mailto:affiliates@internxt.com)."
+        ]
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Vieni pagato per proteggere il diritto alla privacy",
+    "description": "Unisciti ora e promuovi il servizio di storage cloud open-source più privato al mondo.",
+    "cta": "Registrati ora"
+  }
+}
