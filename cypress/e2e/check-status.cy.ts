@@ -25,7 +25,7 @@ const nameFiles = [
   'pricing',
   'privacy',
   'stackcommerce',
-  'techradar-discount',
+
   'temporary-email',
   'virus-scanner',
   'what-does-google-know-about-me',
