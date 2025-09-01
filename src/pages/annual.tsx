@@ -112,7 +112,7 @@ const Annual = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }
         startIndividualPlansFromInterval={Interval.Year}
         hideFreeCard
         showPromo={false}
-        backgroundColorComponent="bg-white"
+        sectionDetails="bg-white"
         hideBillingController={true}
       />
 

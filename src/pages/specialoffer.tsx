@@ -108,7 +108,7 @@ const PartnerDiscount = ({
         hideSwitchSelector
         hideBusinessSelector
         showPromo={false}
-        backgroundColorComponent="bg-gray-1"
+        sectionDetails="bg-gray-1"
       />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />

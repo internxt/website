@@ -3,8 +3,8 @@
     "title": "Archiviazione cloud",
     "subtitle": "che protegge il tuo diritto alla privacy",
     "description": "L’archiviazione cloud Web3 open source di Internxt protegge la tua privacy con crittografia post-quantistica zero-knowledge.",
-    "info": "Ottieni il tuo <strong>sconto esclusivo dell’85%</strong> su tutti i piani annuali e a vita.",
-    "cta": "Ottieni l’85% di sconto"
+    "info": "Ottieni il tuo <strong>sconto esclusivo dell’{{discount}}%</strong> su tutti i piani annuali e a vita.",
+    "cta": "Ottieni l’{{discount}}% di sconto"
   },
   "MostSecureSection": {
     "description": "Internxt Drive è una soluzione di archiviazione cloud open source e con crittografia end-to-end per archiviare, eseguire backup e condividere i tuoi file in piena privacy. Offre crittografia post-quantistica e controllo totale sui tuoi dati.",
@@ -44,7 +44,7 @@
         "normalText": "su tutti i nostri piani a vita esclusivi"
       }
     },
-    "header": "Privacy totale con l’85% di sconto",
+    "header": "Privacy totale con l’{{discount}}% di sconto",
     "lifetimeDescription": "Con un pagamento una tantum, avrai privacy a vita. Accesso completo a tutte le funzionalità e allo storage cifrato di Internxt.",
     "planDescription": "Tutti i piani Internxt includono pieno accesso alle funzionalità orientate alla privacy. Abbonati e proteggi i tuoi file per un anno.",
     "billingFrequency": {
