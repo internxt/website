@@ -6,7 +6,7 @@ import Link from 'next/link';
 const ImportanceSection = ({ textContent, ctaLink }) => {
   return (
     <section className="overflow-hidden px-5">
-      <div className="flex flex-col items-center justify-center space-y-16 bg-gray-1 pt-20">
+      <div className="flex flex-col items-center justify-center space-y-16">
         <div>
           <div
             className={`flex flex-col items-center justify-center space-y-8 pb-10 text-center md:flex-row md:justify-between md:space-x-8 md:pb-20 md:text-start`}
@@ -26,8 +26,8 @@ const ImportanceSection = ({ textContent, ctaLink }) => {
             <div
               className={`flex w-full max-w-[100%] flex-col items-center justify-center space-y-4 md:max-w-[500px] md:items-start md:space-y-6 md:pl-10`}
             >
-              <p className="text-3xl font-semibold sm:text-5xl sm:leading-tight md:text-5xl">{textContent.title}</p>
-              <p className="font-regular text-base sm:text-lg md:text-xl">
+              <p className="text-30 font-semibold leading-tight lg:text-3xl">{textContent.title}</p>
+              <p className="font-regular text-base leading-tight sm:text-lg md:text-xl">
                 {Array.isArray(textContent.description)
                   ? textContent.description.map((line, index) => (
                       <span key={index}>
