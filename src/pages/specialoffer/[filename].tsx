@@ -25,7 +25,16 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'exclusiveoffer', 'valencia', 'tokinprivacy', 'achoesgratiss', 'afs'];
+const ALLOWED_PATHS = [
+  'bevalk',
+  'securiters',
+  'exclusiveoffer',
+  'valencia',
+  'tokinprivacy',
+  'achoesgratiss',
+  'afs',
+  'techpresso',
+];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -35,6 +44,7 @@ const COUPON_CODES = {
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,
   afs: PromoCodeName.AFS,
+  techPresso: PromoCodeName.Techpresso,
 };
 
 const SpecialOfferPage = ({
