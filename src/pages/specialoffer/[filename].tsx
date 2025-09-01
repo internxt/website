@@ -44,7 +44,7 @@ const COUPON_CODES = {
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,
   afs: PromoCodeName.AFS,
-  techPresso: PromoCodeName.Techpresso,
+  techpresso: PromoCodeName.Techpresso,
 };
 
 const SpecialOfferPage = ({
@@ -90,6 +90,8 @@ const SpecialOfferPage = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const percentOff = decimalDiscount === 13 ? '87' : '85';
+
+  console.log(couponCode);
 
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
 
