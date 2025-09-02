@@ -27,6 +27,7 @@ export const EmailToolbar = ({ textContent, isFetchingData, handleCheckEmail }: 
           text={isFetchingData ? textContent.checking : textContent.check}
           onClick={() => email && handleCheckEmail(email)}
           disabled={!email || isFetchingData}
+          hoverColor="hover:bg-primary-dark"
         />
       </div>
 

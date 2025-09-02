@@ -71,9 +71,6 @@ export const PriceCard = ({
     (productCardPlan === 'business' && interval === 'month') ||
     (interval === 'year' && productCardPlan === 'individuals');
 
-  const showPerUserLabel =
-    (productCardPlan === 'business' && interval === 'month') ||
-    (interval === 'year' && productCardPlan === 'individuals');
   const priceNow = decimalDiscountValue
     ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
     : Number(price).toFixed(2).replace('.00', '');
@@ -88,7 +85,6 @@ export const PriceCard = ({
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
-  const annualSave = (Number(price) - Number(priceNow)).toFixed(0);
 
   const planTypes = {
     '1TB': isBusiness
@@ -141,7 +137,7 @@ export const PriceCard = ({
   const newFeaturesNumber = isBusiness ? 10 : 9;
 
   const renderFeatureIcon = (index: number) => {
-    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index : index;
+    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };

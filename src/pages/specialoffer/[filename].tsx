@@ -91,9 +91,8 @@ const SpecialOfferPage = ({
 
   const percentOff = decimalDiscount === 13 ? '87' : '85';
 
-  console.log(couponCode);
-
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
+  console.log(parseText(langJson.HeroSection.info));
 
   function redirectToPricingTable() {
     window.location.href = '#priceTable';
@@ -107,8 +106,10 @@ const SpecialOfferPage = ({
         textComponent={
           <>
             <div className="flex  flex-col justify-center space-y-4">
-              <h1 className="text-4xl font-bold text-white lg:text-5xl">{langJson.HeroSection.title}</h1>
-              <h2 className="text-2xl font-semibold text-primary lg:text-3xl">{langJson.HeroSection.subtitle}</h2>
+              <h1 className="text-4xl font-bold leading-tight text-white lg:text-5xl">{langJson.HeroSection.title}</h1>
+              <h2 className="text-2xl font-semibold leading-tight text-primary lg:text-3xl">
+                {langJson.HeroSection.subtitle}
+              </h2>
             </div>
 
             <div className="flex flex-row items-start space-x-2.5 rounded-lg bg-primary/25 p-2 xl:items-center">
@@ -125,6 +126,7 @@ const SpecialOfferPage = ({
       />
 
       <MostSecureSection textContent={langJson.MostSecureSection} />
+
       <ScrollableSection textContent={langJson.ScrollableSection} />
 
       <PricingSectionWrapper
@@ -147,7 +149,7 @@ const SpecialOfferPage = ({
         hideSwitchSelector
         hideBusinessSelector
         showPromo={false}
-        backgroundColorComponent="bg-gray-1"
+        sectionDetails="bg-gray-1 py-10"
       />
 
       <CtaSection
@@ -164,11 +166,12 @@ const SpecialOfferPage = ({
 };
 
 export async function getServerSideProps(ctx) {
-  const lang = 'es';
+  const lang = ctx.locale;
+
   const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/es/specialoffer/specialOffer.json`);
+  const langJson = require(`@/assets/lang/${lang}/specialoffer/specialOffer.json`);
   const navbarLang = require(`@/assets/lang/es/navbar.json`);
   const footerLang = require(`@/assets/lang/es/footer.json`);
 

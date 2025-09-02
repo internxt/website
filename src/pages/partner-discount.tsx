@@ -16,6 +16,7 @@ import { PartnerDiscountText } from '@/assets/types/partner-discount';
 import Image from 'next/image';
 import { CardGroup } from '@/components/shared/CardGroup';
 import { GetServerSidePropsContext } from 'next';
+import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 
 interface PartnerDiscountProps {
   lang: GetServerSidePropsContext['locale'];
@@ -99,14 +100,14 @@ const PartnerDiscount = ({
               </div>
               <div className="flex flex-col space-y-8">
                 <div className="flex flex-col text-center lg:text-start">
-                  <p className="text-4xl font-semibold lg:text-6xl">
+                  <p className="text-3xl font-semibold leading-tight lg:text-5xl">
                     {langJson.HeroSection.title.normalText}
-                    <span className="text-4xl font-semibold text-primary lg:text-6xl">
+                    <span className="text-4xl font-semibold text-primary lg:text-5xl">
                       {langJson.HeroSection.title.blueText}
                     </span>
                   </p>
                 </div>
-                <p className="text-center text-base text-gray-80 lg:text-left lg:text-xl">
+                <p className="text-center text-lg text-gray-80 lg:text-left lg:text-xl">
                   {langJson.HeroSection.description.normal}{' '}
                   <span className="font-bold text-primary">{langJson.HeroSection.description.blue}</span>
                   {langJson.HeroSection.description.normal1}
@@ -130,36 +131,39 @@ const PartnerDiscount = ({
         }}
       />
 
-      <div className="-mt-20">
-        <PricingSectionWrapper
-          textContent={langJson.PaymentSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscountForLifetime,
-          }}
-          lang={locale}
-          products={products}
-          popularPlanBySize={'3TB'}
-          loadingCards={loadingCards}
-          startIndividualPlansFromInterval={Interval.Lifetime}
-          hideBusinessCards
-          hideBusinessSelector
-          hideFreeCard
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          showPromo={false}
-          isAffiliate
-          hideFeatures
-        />
-      </div>
+      <PricingSectionWrapper
+        textContent={langJson.PaymentSection}
+        decimalDiscount={{
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
+        }}
+        lang={locale}
+        products={products}
+        popularPlanBySize={'3TB'}
+        loadingCards={loadingCards}
+        startIndividualPlansFromInterval={Interval.Lifetime}
+        hideBusinessCards
+        hideBusinessSelector
+        hideFreeCard
+        onCheckoutButtonClicked={onCheckoutButtonClicked}
+        showPromo={false}
+        isAffiliate
+        hideFeatures
+        sectionDetails="py-10 lg:py-20"
+      />
 
       <CtaSection textContent={langJson.CtaSection} url={`#priceTable`} />
 
       <ComponentsInColumnSection
         FirstComponent={
-          <div className="flex flex-col items-center gap-9">
-            <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{langJson.FeatureSection.title}</h2>
-              <h3 className="max-w-[774px] text-xl text-gray-80">{langJson.FeatureSection.description}</h3>
+          <div className="flex flex-col items-center lg:gap-9">
+            <div className="flex w-[323px] flex-col items-center gap-4 text-center lg:w-full">
+              <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+                {langJson.FeatureSection.title}
+              </h2>
+              <h3 className="w-[323px] text-xl leading-tight text-gray-80 lg:w-[832px] ">
+                {langJson.FeatureSection.description}
+              </h3>
             </div>
             <div className="content flex h-full w-full flex-col px-5 pt-6">
               <Image
@@ -169,6 +173,7 @@ const PartnerDiscount = ({
                 loading="lazy"
                 width={1920}
                 height={1080}
+                className="hidden lg:flex"
               />
             </div>
           </div>
@@ -178,12 +183,14 @@ const PartnerDiscount = ({
             <CardGroup cards={cardsData} backgroundColorCard="bg-white" />
           </div>
         }
-        backgroundColor="bg-gray-1"
+        backgroundColor="bg-gray-1 "
       />
 
       <TestimonialsSection textContent={langJson.TestimonialsSection} />
 
       <CtaSection textContent={langJson.CtaSection1} url={`#priceTable`} />
+
+      <MinimalFooter footerLang={footerLang.FooterSection} lang={locale} />
     </Layout>
   );
 };
