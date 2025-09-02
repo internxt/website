@@ -637,7 +637,6 @@ export default function Footer({
                     >
                       <Link href="/drive" locale={lang} passHref legacyBehavior>
                         <div className="flex flex-row space-x-2">
-                          <HardDrives className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.drive}</p>
                         </div>
                       </Link>
@@ -666,20 +665,12 @@ export default function Footer({
                         className="flex flex-row items-center"
                       >
                         <div className="flex flex-row space-x-2">
-                          <PaperPlaneTilt className={`h-6 w-6 ${!darkMode && 'text-gray-80'}`} />
                           <p>{textContent.FooterSection.sections.products.send}</p>
                         </div>
                       </a>
 
                       <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.products.vpn}
-                      </Link>
-
-                      <Link href="/antivirus" locale={lang} passHref className="items-center hover:text-primary">
-                        {textContent.FooterSection.sections.products.antivirus}
-                      </Link>
-                      <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
-                        {textContent.FooterSection.sections.products.cleaner}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
