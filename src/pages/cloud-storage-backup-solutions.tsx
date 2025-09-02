@@ -92,8 +92,8 @@ const CloudStorageBackupSolutions = ({
         <AnimatedHeroSection
           textComponent={
             <>
-              <div className="flex flex-col">
-                <h1 className=" text-3xl font-semibold text-white lg:text-5xl">
+              <div className="flex flex-col px-6 py-10 text-3xl font-medium lg:text-5xl">
+                <h1 className=" text-3xl font-semibold leading-tight text-white lg:text-5xl">
                   {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
                   <span className="text-primary"> {textContent.HeroSection.TitleAndOnePlan.title.blueText} </span>
                   {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
@@ -113,12 +113,13 @@ const CloudStorageBackupSolutions = ({
               </div>
               <Link
                 href={'/pricing'}
-                className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                className={`z-10 mb-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark lg:text-xl`}
               >
                 {textContent.HeroSection.TitleAndOnePlan.claimDeal}
               </Link>
             </>
           }
+          height="h-min"
         />
 
         <FeatureSection

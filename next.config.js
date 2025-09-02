@@ -212,6 +212,11 @@ module.exports = {
         destination: '/redeem/stackcommerce',
         permanent: false,
       },
+      {
+        source: '/driffle',
+        destination: '/redeem/driffle',
+        permanent: false,
+      },
     ];
   },
   images: {

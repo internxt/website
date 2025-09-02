@@ -25,7 +25,16 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'exclusiveoffer', 'valencia', 'tokinprivacy', 'achoesgratiss', 'afs'];
+const ALLOWED_PATHS = [
+  'bevalk',
+  'securiters',
+  'exclusiveoffer',
+  'valencia',
+  'tokinprivacy',
+  'achoesgratiss',
+  'afs',
+  'techpresso',
+];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -35,6 +44,7 @@ const COUPON_CODES = {
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,
   afs: PromoCodeName.AFS,
+  techpresso: PromoCodeName.Techpresso,
 };
 
 const SpecialOfferPage = ({
@@ -80,6 +90,8 @@ const SpecialOfferPage = ({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const percentOff = decimalDiscount === 13 ? '87' : '85';
+
+  console.log(couponCode);
 
   const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text);
 

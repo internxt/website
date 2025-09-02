@@ -7,7 +7,7 @@
     "description": "Eine sichere, erschwingliche und skalierbare Cloud-Speicherlösung zur Speicherung, zum Zugriff und zur Verwaltung großer Datenmengen.",
     "cta": "Jetzt starten",
     "separator": "|",
-    "cta2": "Vertrieb kontaktieren"
+    "cta2": "Kontaktiere uns"
   },
   "PredictablePricingSection": {
     "title": "Einfache und vorhersehbare Preise ohne API-Gebühren",
@@ -99,7 +99,7 @@
       "description": "Erleben Sie eine überlegene Datenverwaltung, Geschwindigkeit und Effizienz",
       "cta": "Jetzt starten",
       "separator": "|",
-      "cta2": "Vertrieb kontaktieren"
+      "cta2": "Kontaktiere uns"
     }
   },
   "FaqSection": {
@@ -181,7 +181,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Vertrieb kontaktieren",
+    "title": "Kontaktiere uns",
     "description": "Füllen Sie das Kontaktformular aus und das Team wird Sie in Kürze kontaktieren.",
     "form": {
       "name": "Vollständiger Name",

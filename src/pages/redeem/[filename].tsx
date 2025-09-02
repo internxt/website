@@ -21,7 +21,7 @@ interface RedeemPageProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['stackcommerce', 'coingate'];
+const ALLOWED_PATHS = ['stackcommerce', 'coingate', 'driffle'];
 
 const SpecialOfferPage = ({
   metatagsDescriptions,
@@ -48,7 +48,7 @@ const SpecialOfferPage = ({
     setOpenDialog(true);
   };
 
-  const ALLOWED_PROVIDERS = ['STACKCOMMERCE', 'COINGATE'] as const;
+  const ALLOWED_PROVIDERS = ['STACKCOMMERCE', 'COINGATE', 'DRIFFLE'] as const;
 
   type Provider = typeof ALLOWED_PROVIDERS[number];
 
