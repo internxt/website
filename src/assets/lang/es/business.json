@@ -10,7 +10,7 @@
     "cta2": "Contáctanos"
   },
   "SecureYourCompany": {
-    "title": "Protege tu empresa con el almacenamiento en la nube de empresas de Internxt",
+    "title": "Protege tu empresa con el almacenamiento en la nube de Internxt",
     "description": "Las violaciones de datos pueden devastar a las empresas, causando graves pérdidas financieras, interrupciones operativas y dañando la reputación de tu negocio.",
     "cards": [
       {
@@ -18,8 +18,8 @@
         "description": "Coste promedio de una violación de datos"
       },
       { "title": "73 M", "description": "Registros de clientes de AT&T filtrados en 2024" },
-      { "title": "258 días", "description": "Tiempo promedio para identificar una violación de datos" },
-      { "title": "46%", "description": "De los ataques de ransomware apuntan a empresas" }
+      { "title": "258 días", "description": "Tiempo medio para identificar filtraciones" },
+      { "title": "46%", "description": "De los ataques apuntan a empresas" }
     ],
     "footerText": "*Datos recopilados del Informe de Costo de una Violación de Datos de IBM Security 2024."
   },
@@ -35,11 +35,11 @@
     "description": "Optimiza la gestión de archivos, seguridad y privacidad de tu organización con nuestro almacenamiento en la nube para empresas.",
     "scrollableSection": {
       "imagesPathname": [
-        "almacenamiento_en_la_nube_para_empresas_feature_1_es",
-        "almacenamiento_en_la_nube_para_empresas_feature_2_es",
-        "almacenamiento_en_la_nube_para_empresas_feature_3_es",
-        "almacenamiento_en_la_nube_para_empresas_feature_4_es",
-        "almacenamiento_en_la_nube_para_empresas_feature_5_es"
+        "internxt_b2b_feature1",
+        "internxt_b2b_feature2",
+        "internxt_b2b_feature3",
+        "internxt_b2b_feature4",
+        "internxt_b2b_feature5"
       ],
       "titles": [
         "Gestiona tu organización",
