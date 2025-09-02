@@ -69,7 +69,7 @@ const FeatureSection = ({ textContent }) => {
         </RevealX>
       </div>
       {/* Mobile view */}
-      <div className="flex flex-col items-center justify-center space-y-10 py-10 px-5 lg:hidden">
+      <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
         {cardInfo.map((info) => (
           <div
             key={info.title}
@@ -83,42 +83,41 @@ const FeatureSection = ({ textContent }) => {
           </div>
         ))}
       </div>
-      {/* Hiring people Section */}
-      <div className="flex flex-col-reverse items-center justify-center bg-gray-1 px-5 pt-16 pb-20 text-center md:flex-row md:space-y-0 md:space-x-24 md:text-start">
-        <RevealX direction="right" className="flex flex-col rounded-3xl pt-10 md:pt-0">
+
+      <section className="flex flex-row items-center justify-center gap-8 border bg-white py-20">
+        <RevealX direction="right" className="flex">
           <Image
             src={getImage('/images/about/photos/Internxt-gift.webp')}
-            width={496}
+            width={554}
             height={520}
             quality={100}
             layout="intrinsic"
-            className="rounded-3xl"
+            className="rounded-2xl"
             draggable={false}
             alt="Internxt gift"
             loading="eager"
           />
         </RevealX>
-        <div className="flex max-w-[390px] flex-col items-center justify-center space-y-6 md:items-start">
-          <ShieldStar size={60} className="text-primary" />
-          <p className="mb-6 text-4xl font-semibold text-gray-100 md:text-5xl md:leading-tight">
+        <div className="flex w-[554px] flex-col items-center justify-center space-y-6 md:items-start">
+          <p className="text-30 font-bold leading-tight text-gray-100 lg:text-4xl">
             {textContent.BetterFutureSection.title}
           </p>
-          <ReactMarkdown className="text-xl font-normal text-gray-80">
+          <p className="text-base font-normal leading-tight text-gray-55">
             {textContent.BetterFutureSection.description}
-          </ReactMarkdown>
-          <div className="flex flex-row items-center space-x-1">
+          </p>
+          <div className="flex flex-row items-center justify-center space-x-1 hover:underline">
             <button
-              className="cursor-pointer text-lg font-semibold text-primary hover:text-primary-dark hover:underline"
+              className="cursor-pointer text-base font-medium text-primary hover:text-primary-dark"
               onClick={() => {
-                window.open('mailTo:hello@internxt.com', '_blank', 'noopener noreferrer');
+                window.open('https://internxt.com/pricing', '_blank', 'noopener noreferrer');
               }}
             >
               {textContent.BetterFutureSection.cta}
             </button>
-            <CaretRight size={10} className="text-primary" />
+            <CaretRight size={20} className="text-primary" />
           </div>
         </div>
-      </div>
+      </section>
     </section>
   );
 };
