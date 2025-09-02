@@ -18,7 +18,7 @@ const SignUpBanner = ({
       <div className="flex w-full flex-col items-center justify-center md:w-max md:flex-row">
         <div className="flex flex-col items-center justify-center space-y-6 md:ml-11 md:items-start md:space-y-8 lg:w-[600px]">
           <div className="w-full text-center md:w-[600px] md:text-left">
-            <p className="text-3xl font-semibold md:text-4xl">
+            <p className="text-30 font-semibold md:text-3xl">
               {changeTextOrder ? (
                 <>
                   <span className="text-primary">{textContent.blueText}</span>

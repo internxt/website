@@ -399,6 +399,7 @@ export default function Footer({
                     <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.resources.cyberAwareness}
                     </Link>
+
                     <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
@@ -406,6 +407,10 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
+                    </Link>
+
+                    <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.resources.WebDAV}
                     </Link>
                   </div>
                 </div>
@@ -875,6 +880,9 @@ export default function Footer({
                         className="items-center hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.whatGoogleKnowsAboutMe}
+                      </Link>
+                      <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.resources.WebDAV}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
