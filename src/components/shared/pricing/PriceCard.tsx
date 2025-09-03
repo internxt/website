@@ -146,7 +146,7 @@ export const PriceCard = ({
     <div
       className={`flex flex-col items-center justify-start rounded-16 ${
         showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[840px]'
-      } ${popular ? 'bg-blue-10 shadow-xl' : ''}`}
+      } ${popular ? ' bg-blue-10 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
         <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
@@ -155,7 +155,7 @@ export const PriceCard = ({
       <div
         className={`z-10 ${
           showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
-        } rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
+        } rounded-16 border ${popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
