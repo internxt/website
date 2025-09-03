@@ -25,21 +25,11 @@ interface PartnerDiscountProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = [
-  'bevalk',
-  'securiters',
-  'exclusiveoffer',
-  'valencia',
-  'tokinprivacy',
-  'achoesgratiss',
-  'afs',
-  'techpresso',
-];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'achoesgratiss', 'afs', 'techpresso'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   securiters: PromoCodeName.Securiters,
-  exclusiveoffer: PromoCodeName.FreePlanUpsell,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
   achoesgratiss: PromoCodeName.AchoEsGratiss,
@@ -170,10 +160,10 @@ export async function getServerSideProps(ctx) {
 
   const pathname = ctx.params.filename;
 
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/specialoffer/specialOffer.json`);
-  const navbarLang = require(`@/assets/lang/es/navbar.json`);
-  const footerLang = require(`@/assets/lang/es/footer.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {

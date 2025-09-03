@@ -217,6 +217,16 @@ module.exports = {
         destination: '/redeem/driffle',
         permanent: false,
       },
+      {
+        source: '/special-offer/:filename',
+        destination: '/specialoffer/:filename',
+        permanent: false,
+      },
+      {
+        source: '/:lang/special-offer/:filename',
+        destination: '/:lang/specialoffer/:filename',
+        permanent: false,
+      },
     ];
   },
   images: {
