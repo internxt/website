@@ -1,37 +1,30 @@
 import Layout from '@/components/layout/Layout';
-import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
+
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
-import Button from '@/components/shared/Button';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
-import RevealY from '@/components/components/RevealY';
-import PriceTable from '@/components/annual-plans-for-affiliates/components/PriceTable';
 import usePricing from '@/hooks/usePricing';
-import { checkout } from '@/lib/auth';
-import { ComponentsInColumnSection } from '@/components/shared/components/ComponentsInColumnSection';
-import { CardGroup } from '@/components/shared/CardGroup';
+
 import Navbar from '@/components/layout/navbars/Navbar';
-import HeroSection from '@/components/annual-plans-for-affiliates/HeroSection';
-import CtaSection from '@/components/shared/CtaSection';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { AffiliatesPartnersText } from '@/assets/types/afiliates-partners';
+import HeroSection from '@/components/partnersTemplate/HeroSection';
+import ReviewsSection from '@/components/home/ReviewsSection';
+import TrustedSection from '@/components/home/TrustedSection';
+import HorizontalScrollableSection from '@/components/home/HorizontalScrollableSection';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
-  langJson: AffiliatesPartnersText;
+  langJson: any;
   footerLang: FooterText;
   lang: string;
 }
 
-export type CardsType = 'all' | 'one';
-
 function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLang }: CloudWardsProps): JSX.Element {
   const metatags = metatagsDescriptions.filter((item) => item.id === 'cloudwards');
-  const offerDiscount = 13;
+
   const {
     products,
     loadingCards,
@@ -44,45 +37,15 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     couponCodeForLifetime: PromoCodeName.CLOUDWARDS87,
   });
 
-  function handlePriceCardButton(planId, coupon) {
-    checkout({
-      planId: planId,
-      planType: 'individual',
-      mode: 'payment',
-      currency: currencyValue,
-      promoCodeId: PromoCodeName.CLOUDWARDS87 ?? undefined,
-    });
-  }
-
-  const cardsForFeatureSection = [
-    {
-      icon: ShieldCheck,
-      title: langJson.FeatureSection.cards![0].title,
-      description: langJson.FeatureSection.cards![0].description,
-    },
-    {
-      icon: LockKey,
-      title: langJson.FeatureSection.cards![1].title,
-      description: langJson.FeatureSection.cards![1].description,
-    },
-    {
-      icon: Eye,
-      title: langJson.FeatureSection.cards![2].title,
-      description: langJson.FeatureSection.cards![2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: langJson.FeatureSection.cards![3].title,
-      description: langJson.FeatureSection.cards![3].description,
-    },
-  ];
-
-  const InfoTextComponent = (
-    <p className="text-xl text-gray-80">
-      {langJson.HeroSectionV2.info}
-      <span className="font-semibold text-gray-80">{langJson.HeroSectionV2.infoHighlight}</span>
-    </p>
-  );
+  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const parsePercentText = (text: string) => {
+    if (!percentOff || percentOff === '0') {
+      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+    }
+    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+  };
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
@@ -100,89 +63,80 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSectionV2} InfoTextComponent={InfoTextComponent} isCloudWards />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+
+      <ReviewsSection textContent={langJson.ReviewSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
-          individuals: offerDiscount,
-          lifetime: offerDiscount,
+          individuals: decimalDiscount,
+          lifetime: decimalDiscountForLifetime,
         }}
         lifetimeCoupons={lifetimeCoupons}
-        lang={'en'}
+        lang={lang}
         products={products}
         loadingCards={loadingCards}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="5TB"
-        showPromo={false}
+        popularPlanBySize="3TB"
+        sectionDetails="bg-white lg:py-10 xl:py-16"
         hideFreeCard
       />
 
-      <ComponentsInColumnSection
-        FirstComponent={
-          <div className="flex w-full flex-col items-center gap-9">
-            <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-              <h2 className="text-5xl font-semibold text-gray-100">{langJson.FeatureSection.title}</h2>
-              <p className="text-xl text-gray-80">{langJson.FeatureSection.description}</p>
-            </div>
+      <FloatingCtaSectionv2
+        textContent={langJson.ctaSection}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {parsePercentText(langJson.ctaSection.title)}
+            </p>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              {parsePercentText(langJson.ctaSection.description)}
+            </p>
           </div>
         }
-        SecondComponent={
-          <div className="flex flex-col items-center">
-            <CardGroup cards={cardsForFeatureSection} backgroundColorCard="bg-white" />
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:pb-20 pb-20"
+        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+      />
+
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} />
+
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+
+      <FloatingCtaSectionv2
+        textContent={langJson.ctaSection2}
+        url={'/pricing'}
+        customText={
+          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+              {parsePercentText(langJson.ctaSection.title)}
+            </p>
+            <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
+              {parsePercentText(langJson.ctaSection2.description)}
+            </p>
           </div>
         }
-        backgroundColor="bg-gray-1"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+        containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="lg:pb-20 pb-10"
+        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
-      <div className="mt-20 flex w-full flex-col items-center gap-9">
-        <div className="flex max-w-[774px] flex-col items-center gap-6 text-center">
-          <h2 className="max-w-[550px] text-5xl font-semibold text-gray-100">{langJson.FeatureSectionV2.title}</h2>
-          <p className="text-xl text-gray-80">{langJson.FeatureSectionV2.description}</p>
-        </div>
-        <div className="flex flex-col items-center ">
-          <Button
-            text={langJson.FeatureSectionV2.cta}
-            onClick={() => {
-              document.querySelector('#payment')?.scrollIntoView({
-                behavior: 'smooth',
-                block: 'end',
-              });
-            }}
-          />
-          <RevealY className="content flex h-full w-full flex-col px-5 py-5 pb-5">
-            <Image
-              src={getImage('/images/home/internxt_secure_cloud_storage.webp')}
-              alt="Internxt secure cloud storage"
-              draggable={false}
-              loading="lazy"
-              width={757}
-              height={426}
-            />
-          </RevealY>
-        </div>
-      </div>
-
-      <CtaSection
-        textContent={langJson.CtaSection['two']}
-        url="#payment"
-        customDescription={
-          <p className="font-regular max-w-[500px] text-xl text-white">{langJson.CtaSection['two'].description}</p>
-        }
-      />
+      <Footer textContent={footerLang} lang={lang} />
     </Layout>
   );
 }
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-
   const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const langJson = require(`@/assets/lang/en/affiliates-partners-template.json`);
-
+  const langJson = require(`@/assets/lang/en/cloudwards.json`);
   const footerLang = require(`@/assets/lang/en/footer.json`);
 
   return {

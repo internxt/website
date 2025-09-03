@@ -5,16 +5,19 @@ import { HomeText } from '@/assets/types/home';
 
 interface TrustedSectionProps {
   textContent: HomeText['TrustedBySection'];
+  bottomBar?: boolean;
 }
 
-export default function TrustedSection({ textContent }: Readonly<TrustedSectionProps>): JSX.Element {
+export default function TrustedSection({ textContent, bottomBar = true }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
       className={`relative flex h-min w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:gap-8 lg:px-32 lg:py-20 xl:py-32`}
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
-      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      {bottomBar && (
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
+      )}
       <p className="flex w-[260px] items-start justify-start text-start text-30 font-bold leading-tight lg:w-full lg:items-center lg:justify-center lg:text-center lg:text-3xl">
         {textContent.title}
       </p>
