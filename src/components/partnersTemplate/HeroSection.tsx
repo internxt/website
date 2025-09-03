@@ -1,6 +1,15 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import {
+  CellTower,
+  Check,
+  CloudArrowUp,
+  Envelope,
+  ShieldPlus,
+  Sparkle,
+  VideoConference,
+  X,
+} from '@phosphor-icons/react';
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
@@ -8,9 +17,14 @@ import { useEffect, useState } from 'react';
 interface HeroSectionForPartnerProps {
   textContent: any;
   percentOff: string;
+  cloudWards?: boolean;
 }
 
-export default function HeroSection({ textContent, percentOff }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
+export default function HeroSection({
+  textContent,
+  percentOff,
+  cloudWards = false,
+}: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
   useEffect(() => {
@@ -83,6 +97,26 @@ export default function HeroSection({ textContent, percentOff }: Readonly<HeroSe
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[566px] lg:justify-between">
+        {cloudWards && (
+          <div className="flex flex-row items-center justify-center space-x-3.5 lg:justify-start ">
+            <Image
+              src={getImage('/images/partnerships/cloudwards/logo.svg')}
+              width={117}
+              height={27}
+              alt="Brave logo"
+            />
+            <X size={16} />
+            <Image
+              loading="lazy"
+              className="select-none"
+              src={`../../logos/internxt/cool-gray-90.svg`}
+              alt="Internxt logo"
+              width={130}
+              height={16}
+            />
+          </div>
+        )}
+
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div

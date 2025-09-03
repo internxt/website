@@ -13,11 +13,12 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
+import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
 
 interface CloudWardsProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
-  langJson: any;
+  langJson: SpecialOfferText;
   footerLang: FooterText;
   lang: string;
 }
@@ -63,7 +64,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} cloudWards />
 
       <ReviewsSection textContent={langJson.ReviewSection} />
 
@@ -134,10 +135,10 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/en/metatags-descriptions.json`);
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
-  const langJson = require(`@/assets/lang/en/cloudwards.json`);
-  const footerLang = require(`@/assets/lang/en/footer.json`);
+  const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {
