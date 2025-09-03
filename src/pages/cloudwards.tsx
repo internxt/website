@@ -87,7 +87,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
@@ -110,7 +110,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
