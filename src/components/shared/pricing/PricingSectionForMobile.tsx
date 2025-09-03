@@ -175,7 +175,7 @@ export const PricingSectionForMobile = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex w-[329px] flex-col justify-start px-2 lg:justify-end">
+        <div className="content flex w-[345px] flex-col justify-start lg:justify-end">
           {products?.individuals
             ? products.individuals[billingFrequency]
                 .filter((product) => product.storage === planStorage)

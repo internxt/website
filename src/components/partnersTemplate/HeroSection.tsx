@@ -102,7 +102,9 @@ export default function HeroSection({ textContent, percentOff }: Readonly<HeroSe
             <p className="w-min whitespace-nowrap rounded-2 bg-neutral-37 px-1 py-0.5 text-base font-semibold leading-tight text-primary lg:text-xl">
               {parsePercentText(textContent.subtitle)}
             </p>
-            <p className="font-regular text-lg leading-tight text-gray-100 lg:text-xl">{textContent.description}</p>
+            <p className="font-regular text-lg leading-tight text-gray-100 lg:text-xl">
+              {parsePercentText(textContent.description)}
+            </p>
           </div>
         </div>
 
