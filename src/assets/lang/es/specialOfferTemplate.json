@@ -8,9 +8,9 @@
       "meet": "Meet",
       "mail": "Mail"
     },
-    "title": "El almacenamiento en la nube más seguro **por menos**",
+    "title": "El almacenamiento más seguro **por menos**",
     "description": "Almacenamiento seguro en la nube por menos. Reclama tu descuento especial hoy. Accede a la galardonada suite de privacidad de Internxt con almacenamiento en la nube encriptado post-cuántico y mucho más.",
-    "subtitle": "Obtén {{discount}}% de descuento ahora",
+    "subtitle": "Obtén un {{discount}}% de descuento",
     "claimDeal": "Reclamar oferta"
   },
   "ReviewSection": {
@@ -19,7 +19,7 @@
     "pcWorld": "\"El acceso web, sincronización de archivos y servicios de respaldo de Internxt son **impresionantes**. Este servicio de **almacenamiento online encriptado** es **fácil,** y los planes actuales son una ganga.\""
   },
   "TrustedBySection": {
-    "title": "De confianza para personas como tú",
+    "title": "Con la confianza de personas como tú",
     "review": "Mantengo mi información segura online gracias a Internxt. Su atención al cliente es rápida, y sus servicios son increíblemente confiables. El hecho de que sean auditados, de código abierto y encriptados me tranquiliza sabiendo que mis datos siempre están protegidos de terceros.",
     "author": "Sandra Díaz - Reseña de Trustpilot"
   },
@@ -45,12 +45,12 @@
   "ctaSection": {
     "titleWithoutDiscount": "Suite Completa de Privacidad Digital",
     "title": "Máxima Privacidad con {{discount}}% de descuento",
-    "description": "Obtén tranquilidad con este descuento exclusivo. Privacidad y seguridad total.",
+    "description": "Obtén tranquilidad con este descuento exclusivo.",
     "cta": "Aceptar Invitación"
   },
   "ctaSection2": {
     "title": "El almacenamiento en la nube más privado del mundo",
-    "description": "Reclama tu descuento exclusivo del {{discount}}% para acceder a la suite de privacidad de Internxt por un año",
+    "description": "Reclama tu descuento exclusivo del {{discount}}% para acceder a la suite digital de Internxt durante un año",
     "descriptionWithoutDisocunt": "Experimenta la privacidad digital completa con Internxt",
     "cta": "Elegir Plan"
   },
