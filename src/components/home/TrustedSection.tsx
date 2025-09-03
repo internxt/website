@@ -11,7 +11,7 @@ interface TrustedSectionProps {
 export default function TrustedSection({ textContent, bottomBar = true }: Readonly<TrustedSectionProps>): JSX.Element {
   return (
     <section
-      className={`relative flex h-min w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:gap-8 lg:px-32 lg:py-20 xl:py-32`}
+      className={`relative flex h-min w-full flex-col items-start justify-start overflow-hidden px-8 py-10 lg:h-min lg:items-center lg:justify-center lg:gap-20 lg:gap-8 lg:px-32 lg:py-20`}
       style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>

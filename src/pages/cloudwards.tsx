@@ -81,7 +81,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="3TB"
-        sectionDetails="bg-white lg:py-10 xl:py-16"
+        sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />
 
@@ -100,7 +100,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-20"
+        bgPadding="lg:pY-20 pb-20"
         bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
