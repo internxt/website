@@ -66,9 +66,6 @@ export default function HeroSection({
   ];
 
   const parsePercentText = (text: string) => {
-    if (!percentOff || percentOff === '0') {
-      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
-    }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
 
@@ -133,9 +130,11 @@ export default function HeroSection({
         </p>
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p className="w-min whitespace-nowrap rounded-2 bg-neutral-37 px-1 py-0.5 text-base font-semibold leading-tight text-primary lg:text-xl">
-              {parsePercentText(textContent.subtitle)}
-            </p>
+            {percentOff !== '0' && (
+              <p className="w-min whitespace-nowrap rounded-2 bg-neutral-37 px-1 py-0.5 text-base font-semibold leading-tight text-primary lg:text-xl">
+                {parsePercentText(textContent.subtitle)}
+              </p>
+            )}
             <p className="font-regular text-lg leading-tight text-gray-100 lg:text-xl">
               {parsePercentText(textContent.description)}
             </p>

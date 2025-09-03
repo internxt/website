@@ -43,6 +43,7 @@
     }
   },
   "ctaSection": {
+    "titleWithoutDiscount": "Complete Digital Privacy Suite",
     "title": "Maximum Privacy with {{discount}}% off",
     "description": "Get peace of mind with this exclusive discount. Total privacy and security.",
     "cta": "Accept Invite"
@@ -50,6 +51,7 @@
   "ctaSection2": {
     "title": "The world’s most private cloud storage",
     "description": "Claim your exclusive {{discount}}% discount to access Internxt’s privacy suite for a year",
+    "descriptionWithoutDisocunt": "Experience complete digital privacy with Internxt",
     "cta": "Choose Plan"
   },
   "tableSection": {

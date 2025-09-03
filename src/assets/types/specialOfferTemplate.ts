@@ -30,6 +30,8 @@ export interface NextGenSection {
   description: string;
   cta: string;
   cardDescriptions?: CardDescriptions;
+  titleWithoutDiscount?: string;
+  descriptionWithoutDisocunt?: string;
 }
 
 export interface CardDescriptions {

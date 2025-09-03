@@ -1,5 +1,4 @@
 import Layout from '@/components/layout/Layout';
-import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -40,10 +39,7 @@ function LifetimeSpecial({
     coupon: individualCoupon,
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.FreePlanUpsell,
-    couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
-  });
+  } = usePricing({});
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   const parsePercentText = (text: string) => {
@@ -66,6 +62,14 @@ function LifetimeSpecial({
       couponCodeForCheckout?.name,
     );
   };
+
+  console.log(percentOff);
+  const ctaText =
+    percentOff === '0' ? langJson.ctaSection.titleWithoutDiscount : parsePercentText(langJson.ctaSection.title);
+  const ctaText2 =
+    percentOff === '0'
+      ? langJson.ctaSection2.descriptionWithoutDisocunt
+      : parsePercentText(langJson.ctaSection2.description);
 
   return (
     <Layout
@@ -104,11 +108,9 @@ function LifetimeSpecial({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection.description)}
+              {langJson.ctaSection.description}
             </p>
           </div>
         }
@@ -128,10 +130,10 @@ function LifetimeSpecial({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection2.title)}
+              {langJson.ctaSection2.title}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection2.description)}
+              {ctaText2}
             </p>
           </div>
         }
