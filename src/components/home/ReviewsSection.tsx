@@ -86,7 +86,7 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
       <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
       <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
 
-      <div className="flex w-full flex-col gap-8 lg:hidden ">
+      <div className="flex w-[345px] flex-col gap-8 lg:hidden lg:w-full ">
         <div
           ref={scrollContainerRef}
           className="scrollbar-none flex w-full snap-x snap-mandatory gap-6 overflow-x-auto [&::-webkit-scrollbar]:hidden"
@@ -94,7 +94,7 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="flex h-min w-full flex-shrink-0 snap-center flex-row items-start justify-center gap-5  px-4"
+              className="flex h-min w-full flex-shrink-0 snap-center flex-row items-start justify-center gap-5  lg:px-4"
             >
               <Image
                 src={getImage(review.logo)}

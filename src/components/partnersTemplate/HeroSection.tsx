@@ -90,7 +90,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 xl:pl-32 3xl:pl-80`}
+      className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[566px] lg:justify-between">
@@ -153,7 +153,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="hidden h-[529px] w-[562px] justify-center lg:flex">
+      <div className="hidden h-[420px] w-[500px] justify-center lg:flex">
         <Image
           src={getImage('/images/affiliates/internxt-private-cloud.webp')}
           alt="Internxt Partners HeroSection Image"

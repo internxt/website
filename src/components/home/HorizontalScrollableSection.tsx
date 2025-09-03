@@ -93,9 +93,9 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           >
             {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                <div className="flex h-full w-[345px] flex-col gap-4 rounded-16 bg-white p-6 lg:w-[400px]">
+                  <p className="text-lg font-medium text-gray-95 lg:text-xl">{title}</p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

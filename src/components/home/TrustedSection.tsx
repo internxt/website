@@ -33,8 +33,8 @@ export default function TrustedSection({ textContent, bottomBar = true }: Readon
         </div>
         <div className="flex h-full flex-col justify-center gap-3 lg:max-w-[400px] lg:justify-between lg:gap-0">
           <Quotes className="text-primary" height={24} width={24} weight="fill" />
-          <p className="text-xs font-normal italic leading-tight text-gray-55 lg:text-base">{textContent.review}</p>
-          <p className="text-xs font-semibold leading-tight text-gray-55 lg:text-base">{textContent.author}</p>
+          <p className="text-sm font-normal italic leading-tight text-gray-55 lg:text-base">{textContent.review}</p>
+          <p className="text-sm font-semibold leading-tight text-gray-55 lg:text-base">{textContent.author}</p>
         </div>
       </div>
     </section>
