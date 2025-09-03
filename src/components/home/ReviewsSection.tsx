@@ -19,7 +19,7 @@ const ReviewText = ({ text }: { text: string }) => {
       if (part.startsWith('**') && part.endsWith('**')) {
         const boldText = part.slice(2, -2);
         return (
-          <strong key={index} className="font-regular text-xs lg:text-sm">
+          <strong key={index} className="font-regular text-xs leading-tight lg:text-sm">
             {boldText}
           </strong>
         );
@@ -29,9 +29,7 @@ const ReviewText = ({ text }: { text: string }) => {
   };
 
   return (
-    <p className="w-full text-xs font-normal leading-tight text-gray-55 lg:w-[321px] lg:text-base">
-      {formatText(text)}
-    </p>
+    <p className="w-full text-xs font-normal leading-tight text-gray-55 lg:w-[321px] lg:text-sm">{formatText(text)}</p>
   );
 };
 
