@@ -141,7 +141,7 @@
         "Autenticazione a due fattori (2FA)",
         "CLI & WebDav",
         "Pulizia del dispositivo",
-        "Monitoraggio del dark web"
+        "Monitoraggio "
       ],
       "5TB": [
         "5TB di archiviazione con crittografia Zero-Knowledge",
@@ -155,7 +155,7 @@
         "Autenticazione a due fattori (2FA)",
         "CLI, WebDav, NAS & Rclone",
         "Pulizia del dispositivo",
-        "Monitoraggio del dark web",
+        "Monitoraggio ",
         "Meet",
         "Mail"
       ]

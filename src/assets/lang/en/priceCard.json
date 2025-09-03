@@ -139,7 +139,7 @@
         "Two-factor authentication (2FA)",
         "CLI & WebDav support",
         "Cleaner ",
-        "Dark Web Monitor"
+        "Monitor"
       ],
       "5TB": [
         "5TB zero-knowledge encrypted storage",
@@ -153,7 +153,7 @@
         "Two-factor authentication (2FA)",
         "CLI, WebDav, NAS & Rclone support",
         "Cleaner ",
-        "Dark Web Monitor",
+        "Monitor",
         "Meet",
         "Mail"
       ]
@@ -172,7 +172,7 @@
         "CLI, WebDav support",
         "Manage account billing & payments",
         "Cleaner ",
-        "Dark Web Monitor"
+        "Monitor"
       ],
       "2TB": [
         "2TB zero-knowledge encrypted storage per user",
@@ -187,7 +187,7 @@
         "CLI, WebDav, Rclone & NAS support",
         "Manage account billing & payments",
         "Cleaner ",
-        "Dark Web Monitor",
+        "Monitor",
         "Meet ",
         "Mail "
       ]
