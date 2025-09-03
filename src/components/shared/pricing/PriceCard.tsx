@@ -209,7 +209,7 @@ export const PriceCard = ({
               </div>
             ) : (
               <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[101px] lg:w-[190px]">
-                <div className="flex h-[29px] w-full flex-row items-start justify-center gap-2 lg:h-[60px] ">
+                <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2  lg:h-[60px] ">
                   <span className="flex h-full flex-row items-end gap-1 pr-2">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
