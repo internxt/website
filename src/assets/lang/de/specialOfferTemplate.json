@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Der sicherste Cloud-Speicher **für weniger**",
+    "description": "Sicherer Cloud-Speicher für weniger. Sichern Sie sich noch heute Ihren besonderen Rabatt. Erhalten Sie Zugang zu Internxts preisgekrönter Privatsphäre-Suite mit post-quantenverschlüsseltem Cloud-Speicher und vielem mehr.",
+    "subtitle": "Jetzt {{discount}}% Rabatt erhalten",
+    "claimDeal": "Angebot beanspruchen"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt ist im Mega-Sale, hat **ausgezeichnete Nutzerbewertungen**, **Ende-zu-Ende- und Post-Quanten-Verschlüsselung** und macht ihren Code vollständig **Open Source**.\"",
+    "mashable": "\"Nehmen Sie den **Schutz** Ihrer **wichtigen Daten** mit Internxt **ernst**. Sie machen **Privatsphäre zu ihrer obersten Priorität,** damit Sie beruhigt sein können, dass Ihre Dateien **sicher** sind.\"",
+    "pcWorld": "\"Internxts Web-Zugang, Dateisynchronisation und Backup-Services sind **beeindruckend**. Dieser **verschlüsselte Online-Speicher**-Service ist **einfach,** und die aktuellen Tarife sind ein Schnäppchen.\""
+  },
+  "TrustedBySection": {
+    "title": "Vertraut von Menschen wie Ihnen",
+    "review": "Ich halte meine Informationen dank Internxt online sicher. Ihr Kundensupport ist schnell und ihre Services sind unglaublich zuverlässig. Die Tatsache, dass sie auditiert, open-source und verschlüsselt sind, gibt mir die Gewissheit, dass meine Daten immer vor Dritten geschützt sind.",
+    "author": "Sandra Díaz - Trustpilot Bewertung"
+  },
+  "NextGenSection": {
+    "title": "Warum Internxt wählen?",
+    "description": "Internxt gibt Ihnen die Kontrolle über Ihre Privatsphäre zurück. Im Gegensatz zu herkömmlichen Cloud-Speichern stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben und wir speichern oder verkaufen Ihre Daten nicht an Dritte. Wir unternehmen jeden Schritt, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
+    "cta": "Lernen Sie uns besser kennen",
+    "cardDescriptions": {
+      "titles": [
+        "Unhackbare und unleckbare Daten",
+        "Sicherheit der nächsten Generation",
+        "Open Source und transparent",
+        "Unabhängig verifiziert"
+      ],
+      "descriptions": [
+        "Wir speichern keine Passwörter oder Nutzerdaten und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihr Geschäft. Sie zu schützen ist unseres.",
+        "Internxt ist der einzige Cloud-Speicher, der Ihre Dateien automatisch mit Ende-zu-Ende- und Post-Quanten-Kryptographie verschlüsselt, was bedeutet, dass nur Sie auf Ihre Daten zugreifen können.",
+        "Wir sind stolz auf das, was wir tun, deshalb wird unser Code auf GitHub öffentlich gemacht und kann von jedem persönlich überprüft, auditiert und verifiziert werden. Wir haben nichts zu verbergen außer Ihren Daten.",
+        "Wir sind vollständig DSGVO-konform und 100% sicher, aber verlassen Sie sich nicht nur auf unser Wort. Internxt wurde unabhängig auditiert und verifiziert von Europas führendem Penetration-Testing-Unternehmen, Securitum."
+      ]
+    }
+  },
+  "ctaSection": {
+    "titleWithoutDiscount": "Komplette Digitale Privatsphäre-Suite",
+    "title": "Maximale Privatsphäre mit {{discount}}% Rabatt",
+    "description": "Erlangen Sie Seelenruhe mit diesem exklusiven Rabatt. Totale Privatsphäre und Sicherheit.",
+    "cta": "Einladung annehmen"
+  },
+  "ctaSection2": {
+    "title": "Der privateste Cloud-Speicher der Welt",
+    "description": "Sichern Sie sich Ihren exklusiven {{discount}}% Rabatt für den Zugang zu Internxts Privatsphäre-Suite für ein Jahr",
+    "descriptionWithoutDisocunt": "Erleben Sie komplette digitale Privatsphäre mit Internxt",
+    "cta": "Tarif wählen"
+  },
+  "tableSection": {
+    "title": "Internxt Tarife",
+    "planTitles": {
+      "individuals": "Jahrestärife",
+      "homePage": "Wählen Sie den richtigen Tarif für Sie",
+      "lifetime": "Lebenslange Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven lebenslangen Tarife"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und lebenslang Privatsphäre und Sicherheit genießen",
+    "planDescription": "Alle Internxt-Tarife sind vollständig ausgestattet mit komplettem Zugang zu unserer preisgekrönten Privatsphäre-Suite bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Tarifen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihre Rentabilität zu sichern.",
+    "businessDescription2": "Stellen Sie die Datensicherheit Ihres Unternehmens mit Internxts verschlüsselten Cloud-Speicher-Tarifen sicher.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang",
+      "individual": "Individuell",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-Verschlüsselung",
+      "openSource": "Open Source und auditiert",
+      "anonymousAccount": "Anonyme Kontenerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

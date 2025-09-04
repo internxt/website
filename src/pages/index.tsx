@@ -81,7 +81,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="3TB"
-        backgroundColorComponent="bg-white lg:py-20 xl:py-32"
+        sectionDetails="bg-white lg:py-20 xl:py-32"
       />
 
       <OfficialCloudProviderSection textContent={textContent.OfficalCloudProvider} />

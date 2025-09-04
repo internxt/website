@@ -105,7 +105,7 @@ export default function BravePage({
         startIndividualPlansFromInterval={Interval.Lifetime}
         hideFreeCard
         showPromo={false}
-        backgroundColorComponent="bg-gray-1"
+        sectionDetails="bg-gray-1"
       />
 
       <CtaSection

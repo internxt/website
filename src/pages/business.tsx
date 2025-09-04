@@ -116,7 +116,7 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        backgroundColorComponent="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+        sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
       <div className=" lg:pt-20">

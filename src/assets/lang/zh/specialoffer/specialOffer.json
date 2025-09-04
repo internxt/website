@@ -3,8 +3,8 @@
     "title": "云存储",
     "subtitle": "保护你的隐私权",
     "description": "Internxt 的 Web3 开源云存储通过后量子零知识加密保护你的隐私。",
-    "info": "立即享受<strong>85% 专属折扣</strong>，适用于所有年付和终身计划。",
-    "cta": "立即享受 85% 折扣"
+    "info": "立即享受<strong>{{discount}}% 专属折扣</strong>，适用于所有年付和终身计划。",
+    "cta": "立即享受 {{discount}}% 折扣"
   },
   "MostSecureSection": {
     "description": "Internxt Drive 是一款开源、端到端加密的云存储解决方案，用于私密地存储、备份和共享你的文件。提供后量子加密和对数据的完全控制。",
@@ -44,7 +44,7 @@
         "normalText": "适用于所有专属终身计划"
       }
     },
-    "header": "隐私保护高达 85% 折扣",
+    "header": "隐私保护高达 {{discount}}% 折扣",
     "lifetimeDescription": "一次性支付，终身享受隐私保护。访问 Internxt 所有功能和加密云存储。",
     "planDescription": "Internxt 所有计划都包括完整的隐私功能。立即订阅，享受一年加密云存储。",
     "billingFrequency": {

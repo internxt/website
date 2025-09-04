@@ -3,8 +3,8 @@
     "title": "雲端儲存空間",
     "subtitle": "保障你的隱私權",
     "description": "Internxt 的 Web3 開源雲端儲存使用後量子零知識加密技術，保障你的隱私。",
-    "info": "立即獲得<strong>85% 獨家折扣</strong>，適用於所有年費與終身方案。",
-    "cta": "立即享 85% 折扣"
+    "info": "立即獲得<strong>{{discount}}% 獨家折扣</strong>，適用於所有年費與終身方案。",
+    "cta": "立即享 {{discount}}% 折扣"
   },
   "MostSecureSection": {
     "description": "Internxt Drive 是一套開源且具端對端加密的雲端儲存解決方案，可安全儲存、備份與分享你的檔案。支援後量子加密，全面掌控資料。",
@@ -44,7 +44,7 @@
         "normalText": "適用所有獨家終身方案"
       }
     },
-    "header": "完整隱私保障，高達 85% 折扣",
+    "header": "完整隱私保障，高達 {{discount}}% 折扣",
     "lifetimeDescription": "一次付款，終身受益。完整存取 Internxt 的私密功能與加密雲端儲存。",
     "planDescription": "所有 Internxt 方案皆含完整隱私功能。訂閱即可享一年加密雲端儲存。",
     "billingFrequency": {

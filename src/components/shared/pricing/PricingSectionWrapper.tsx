@@ -26,7 +26,7 @@ interface PricingSectionWrapperProps {
   startFromStorage?: SwitchStorageOptions;
   startFromBusinessStorage?: SwitchStorageBusinessOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
-  backgroundColorComponent?: string;
+  sectionDetails?: string;
   backgroundGradientColor?: string;
   isFamilyPage?: boolean;
   darkMode?: boolean;
@@ -63,7 +63,7 @@ export const PricingSectionWrapper = ({
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
-  backgroundColorComponent = 'bg-white',
+  sectionDetails = 'bg-white',
   backgroundGradientColor,
   lifetimeCoupons,
   hideSwitchSelector,
@@ -133,7 +133,7 @@ export const PricingSectionWrapper = ({
 
   return (
     <section
-      className={`overflow-hidden  lg:px-5 ${backgroundColorComponent}`}
+      className={`overflow-hidden lg:px-5 ${sectionDetails}`}
       id="billingButtons"
       style={{ background: backgroundGradientColor }}
     >
