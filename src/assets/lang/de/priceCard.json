@@ -141,7 +141,7 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI & WebDav",
         "Gerätebereinigung",
-        "Dark-Web-Überwachung"
+        "Überwachung"
       ],
       "5TB": [
         "5TB Zero-Knowledge-verschlüsselter Speicher",
@@ -155,7 +155,7 @@
         "Zwei-Faktor-Authentifizierung (2FA)",
         "CLI, WebDav, NAS & Rclone",
         "Gerätebereinigung",
-        "Dark-Web-Überwachung",
+        "Überwachung",
         "Meet",
         "Mail"
       ]
@@ -174,7 +174,7 @@
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Verwaltung von Kontorechnungen & Zahlungen",
         "Gerätereiniger",
-        "Dark Web Monitor"
+        "Monitor"
       ],
       "2TB": [
         "2TB Speicher/Nutzer",
@@ -189,7 +189,7 @@
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Verwaltung von Kontorechnungen & Zahlungen",
         "Gerätereiniger",
-        "Dark Web Monitor",
+        "Monitor",
         "Meet",
         "Mail"
       ]

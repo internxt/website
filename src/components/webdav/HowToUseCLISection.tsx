@@ -24,10 +24,10 @@ export const HowToUseCLISection = ({ textContent }) => {
   ];
 
   return (
-    <section className="overflow-hidden py-20 px-5">
+    <section className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center justify-center gap-12">
         <div className="flex max-w-[850px] flex-col gap-6 text-center">
-          <h2 className="text-5xl font-semibold text-gray-100">{textContent.title}</h2>
+          <h2 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h2>
           <p className="text-xl text-gray-80">{textContent.description}</p>
         </div>
         <div className="flex w-full flex-row flex-wrap justify-center gap-8">

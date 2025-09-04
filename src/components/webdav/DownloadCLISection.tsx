@@ -18,9 +18,9 @@ const DownloadOSPlatform = ({ downloadText, installationText, logo }) => (
 
 export const DownloadCLISection = ({ textContent }) => {
   return (
-    <section id="downloadCli" className="overflow-hidden py-20 px-5">
+    <section id="downloadCli" className="overflow-hidden px-5 py-20">
       <div className="flex flex-col items-center gap-12">
-        <p className="text-center text-5xl font-semibold text-gray-100 md:text-left">{textContent.title}</p>
+        <p className="text-center text-30 font-semibold text-gray-100 md:text-left lg:text-3xl">{textContent.title}</p>
         <div className="flex w-full flex-row flex-wrap justify-center gap-5">
           <DownloadOSPlatform
             downloadText={textContent.downloads[0]}

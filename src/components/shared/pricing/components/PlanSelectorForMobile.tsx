@@ -74,7 +74,7 @@ export const PlanSelectorForMobile = ({
     {activeSwitchPlan === 'Lifetime' && (
       <p className="px-10 text-center text-sm font-normal text-gray-55">{textContent.lifetimeDescription}</p>
     )}
-    <div id="billingButtons" className={`flex w-[300px] flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5`}>
+    <div id="billingButtons" className={`flex w-[345px] flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5`}>
       <button
         type="button"
         onClick={() => {

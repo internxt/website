@@ -88,6 +88,7 @@ export interface Resources {
   directoryOfPrivacyOrganizations: string;
   cyberAwareness: string;
   whatGoogleKnowsAboutMe: string;
+  WebDAV: string;
 }
 
 export interface Tools {

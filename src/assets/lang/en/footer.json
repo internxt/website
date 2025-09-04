@@ -70,7 +70,8 @@
         "dropboxAlternative": "Dropbox Alternative",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "What Google Knows"
+        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "WebDAV": "WebDAV"
       },
       "tools": {
         "title": "Free Tools",

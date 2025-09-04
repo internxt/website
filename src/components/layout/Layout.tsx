@@ -135,20 +135,6 @@ export default function Layout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              var _adsyq = _adsyq || [];
-              _adsyq.push(['trackPageView']);
-              (function() {
-                var u = 'https://track.adsynergix.com/';
-                var d = document, s = d.createElement('script'); s.async = true;
-                s.src = u + 'adsy.js'; d.getElementsByTagName('head')[0].appendChild(s);
-              })();
-            `,
-          }}
-        ></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
               var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
               (function(){
                   var t = document.createElement("script");

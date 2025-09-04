@@ -3,8 +3,8 @@
     "title": "Stockage cloud",
     "subtitle": "qui protège votre droit à la vie privée",
     "description": "Le stockage cloud Web3 open source d'Internxt protège votre vie privée grâce à un chiffrement post-quantique sans connaissance.",
-    "info": "Profitez de votre <strong>remise exclusive de 85 %</strong> sur tous les forfaits annuels et à vie.",
-    "cta": "Obtenez 85 % de réduction"
+    "info": "Profitez de votre <strong>remise exclusive de {{discount}} %</strong> sur tous les forfaits annuels et à vie.",
+    "cta": "Obtenez {{discount}} % de réduction"
   },
   "MostSecureSection": {
     "description": "Internxt Drive est une solution de stockage cloud open source avec chiffrement de bout en bout pour stocker, sauvegarder et partager vos fichiers en toute confidentialité. Internxt Drive offre un chiffrement post-quantique et un contrôle total de vos données.",
@@ -44,7 +44,7 @@
         "normalText": "sur tous nos forfaits à vie exclusifs"
       }
     },
-    "header": "Confidentialité totale avec 85 % de réduction",
+    "header": "Confidentialité totale avec {{discount}} % de réduction",
     "lifetimeDescription": "Avec un paiement unique, vous bénéficiez de la confidentialité à vie. Accédez à toutes les fonctionnalités de confidentialité et au stockage chiffré d’Internxt à vie.",
     "planDescription": "Tous les forfaits Internxt incluent un accès complet à nos fonctionnalités de confidentialité. Abonnez-vous et bénéficiez d’un an de stockage cloud chiffré.",
     "billingFrequency": {
