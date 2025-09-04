@@ -87,7 +87,7 @@ export default function HorizontalScrollableSection({
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${
-        header ? 'gap-8 lg:gap-16' : 'gap-6 bg-neutral-17 lg:gap-12'
+        header ? 'gap-8 lg:gap-16' : ' gap-6 bg-neutral-17 lg:gap-12'
       } lg:py-20 xl:py-32`}
       style={header ? { background: 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)' } : undefined}
     >
@@ -95,8 +95,8 @@ export default function HorizontalScrollableSection({
 
       <p
         className={`whitespace-pre-line ${
-          header ? 'text-center' : 'text-start'
-        } w-[345px] pl-20 text-30 font-bold leading-tight text-gray-95 lg:w-[853px] lg:text-5xl`}
+          header ? 'text-start lg:text-center' : 'text-start lg:pl-20'
+        } w-[345px] text-30 font-bold leading-tight text-gray-95 lg:w-[853px] lg:text-5xl`}
       >
         {textContent.title}
       </p>
