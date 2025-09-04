@@ -1,91 +1,15 @@
-import { CaretRight, HandHeart, Lightbulb, RocketLaunch, ShieldStar, UsersThree } from '@phosphor-icons/react';
+import { CaretRight } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
-import { Fragment, useState } from 'react';
-import ReactMarkdown from 'react-markdown';
 import RevealX from '@/components/components/RevealX';
 import { getImage } from '@/lib/getImage';
+import HorizontalScrollableSection from './HorizontalScrollableSection';
 
 const FeatureSection = ({ textContent }) => {
-  const [cardIndex, setCardIndex] = useState(0);
-
-  const cardInfo = [
-    {
-      icon: RocketLaunch,
-      title: textContent.info[0].title,
-      description: textContent.info[0].description,
-    },
-    {
-      icon: Lightbulb,
-      title: textContent.info[1].title,
-      description: textContent.info[1].description,
-    },
-    {
-      icon: UsersThree,
-      title: textContent.info[2].title,
-      description: textContent.info[2].description,
-    },
-    {
-      icon: HandHeart,
-      title: textContent.info[3].title,
-      description: textContent.info[3].description,
-    },
-  ];
-
-  const DescriptionIcon = cardInfo[cardIndex].icon;
-
   return (
-    <section className="overflow-hidden">
-      {/* Info cards Section */}
-      <div className="hidden flex-row items-start justify-center py-20 lg:flex">
-        <div className="flex max-w-[288px] flex-col">
-          {textContent.info.map((info, index) => (
-            <Fragment key={info.title}>
-              <button
-                className={`flex ${
-                  cardIndex === index ? 'border-gray-80' : 'border-gray-10'
-                } cursor-pointer flex-row items-center border-r-4 p-2 pr-8`}
-                onClick={() => {
-                  setCardIndex(index);
-                }}
-              >
-                <p className="text-2xl font-medium text-gray-100  hover:text-primary">{info.title}</p>
-              </button>
-              <div className="h-8 border-r-4 border-gray-10 pr-8 last:hidden" />
-            </Fragment>
-          ))}
-        </div>
-        <RevealX direction="left" className="flex flex-col justify-start">
-          <div className="flex w-auto justify-center px-6">
-            <div className="flex flex-col rounded-3xl pl-6">
-              <div className="flex  w-full max-w-[384px] flex-col space-y-6">
-                <DescriptionIcon className="text-primary" size={64} />
-                <p className="text-4xl font-semibold text-gray-100">{cardInfo[cardIndex].title}</p>
-                <ReactMarkdown className="markdown text-xl font-normal text-gray-80">
-                  {cardInfo[cardIndex].description}
-                </ReactMarkdown>
-              </div>
-            </div>
-          </div>
-        </RevealX>
-      </div>
-      {/* Mobile view */}
-      <div className="flex flex-col items-center justify-center space-y-10 px-5 py-10 lg:hidden">
-        {cardInfo.map((info) => (
-          <div
-            key={info.title}
-            className="flex flex-col items-start justify-start rounded-2xl bg-gray-1 p-8 sm:p-10 md:max-w-[488px]"
-          >
-            <info.icon className="mb-6 text-4xl text-primary" size={32} />
-            <div className="flex w-full max-w-[400px] flex-col">
-              <p className="mb-6 text-2xl font-medium text-gray-100">{info.title}</p>
-              <ReactMarkdown className="text-base text-cool-gray-80 sm:text-lg">{info.description}</ReactMarkdown>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <section className="flex flex-row items-center justify-center gap-8 border bg-white py-20">
-        <RevealX direction="right" className="flex">
+    <section className="overflow-hidden" style={{ background: 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)' }}>
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} />
+      <section className="flex flex-col-reverse items-center justify-center gap-8 bg-white py-10 lg:flex-row lg:px-10 lg:py-20 xl:px-32 3xl:px-80">
+        <RevealX direction="right" className="hidden lg:flex">
           <Image
             src={getImage('/images/about/photos/Internxt-gift.webp')}
             width={554}
@@ -98,14 +22,27 @@ const FeatureSection = ({ textContent }) => {
             loading="eager"
           />
         </RevealX>
+        <RevealX direction="right" className="flex lg:hidden">
+          <Image
+            src={getImage('/images/about/photos/Internxt-gift.webp')}
+            width={345}
+            height={324}
+            quality={100}
+            layout="intrinsic"
+            className="rounded-2xl"
+            draggable={false}
+            alt="Internxt gift"
+            loading="eager"
+          />
+        </RevealX>
         <div className="flex w-[554px] flex-col items-center justify-center space-y-6 md:items-start">
-          <p className="text-30 font-bold leading-tight text-gray-100 lg:text-4xl">
+          <p className="w-[345px] text-30 font-bold leading-tight text-gray-100 lg:w-[480px] lg:text-5xl">
             {textContent.BetterFutureSection.title}
           </p>
-          <p className="text-base font-normal leading-tight text-gray-55">
+          <p className="w-[345px] text-base font-normal leading-tight text-gray-55 lg:w-[554px]">
             {textContent.BetterFutureSection.description}
           </p>
-          <div className="flex flex-row items-center justify-center space-x-1 hover:underline">
+          <div className="flex w-[345px] flex-row items-center justify-start space-x-1 hover:underline lg:w-full">
             <button
               className="cursor-pointer text-base font-medium text-primary hover:text-primary-dark"
               onClick={() => {
@@ -114,7 +51,7 @@ const FeatureSection = ({ textContent }) => {
             >
               {textContent.BetterFutureSection.cta}
             </button>
-            <CaretRight size={20} className="text-primary" />
+            <CaretRight size={20} className="pt-[2px] text-primary" />
           </div>
         </div>
       </section>

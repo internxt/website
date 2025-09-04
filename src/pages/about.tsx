@@ -5,9 +5,7 @@ import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
 import Navbar from '@/components/layout/navbars/Navbar';
 import cookies from '@/lib/cookies';
-import CtaSection from '@/components/shared/CtaSection';
-
-const CTA_URL = 'https://internxt.com/pricing';
+import HorizontalScrollableSection from '@/components/about/HorizontalScrollableSection';
 
 const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptions }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'about');
@@ -19,6 +17,8 @@ const AboutUs = ({ lang, textContent, footerLang, navbarLang, metatagsDescriptio
       <HeroSection textContent={textContent.HeroSection} />
 
       <WhatWeDoSection textContent={textContent.WhatWeDoSection} />
+
+      <HorizontalScrollableSection textContent={textContent.ScrollableSection} header={false} />
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
