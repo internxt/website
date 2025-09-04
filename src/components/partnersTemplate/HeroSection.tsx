@@ -153,7 +153,7 @@ export default function HeroSection({
         </div>
       </div>
 
-      <div className="hidden h-[420px] w-[500px] justify-center lg:flex">
+      <div className="hidden h-[500px] w-[562px] justify-center lg:flex">
         <Image
           src={getImage('/images/affiliates/internxt-private-cloud.webp')}
           alt="Internxt Partners HeroSection Image"
