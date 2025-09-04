@@ -96,7 +96,7 @@ export default function HorizontalScrollableSection({
       <p
         className={`whitespace-pre-line ${
           header ? 'text-center' : 'text-start'
-        } w-[345px] text-start text-30 font-bold leading-tight text-gray-95 lg:w-[749px] lg:text-center lg:text-5xl`}
+        } w-[345px] pl-20 text-30 font-bold leading-tight text-gray-95 lg:w-[853px] lg:text-5xl`}
       >
         {textContent.title}
       </p>

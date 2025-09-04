@@ -23,7 +23,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
             }}
           ></h1>
 
-          <p className="w-full text-base font-normal leading-tight text-gray-55 lg:w-[850px] lg:text-xl">
+          <p className="w-full text-center text-base font-normal leading-tight text-gray-55 lg:w-[976px] lg:text-xl">
             {textContent.description}
           </p>
         </div>
