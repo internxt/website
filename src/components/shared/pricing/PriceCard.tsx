@@ -134,10 +134,11 @@ export const PriceCard = ({
     Envelope,
   ];
 
-  const newFeaturesNumber = isBusiness ? 10 : 9;
+  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 8 : 9;
 
   const renderFeatureIcon = (index: number) => {
-    const adjustedIndex = !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : index;
+    const adjustedIndex =
+      !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : cardIndex === 1 && index >= 9 ? index + 1 : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
