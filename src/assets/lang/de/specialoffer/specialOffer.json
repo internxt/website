@@ -3,8 +3,8 @@
     "title": "Cloud-Speicher",
     "subtitle": "der dein Recht auf Privatsphäre schützt",
     "description": "Internxts Web3 Open-Source-Cloud-Speicher schützt deine Privatsphäre mit postquantenfähiger Zero-Knowledge-Verschlüsselung.",
-    "info": "Sichere dir deinen <strong>exklusiven 85%-Rabatt</strong> auf alle Jahres- und Lebenspläne.",
-    "cta": "85 % Rabatt sichern"
+    "info": "Sichere dir deinen <strong>exklusiven {{discount}}%-Rabatt</strong> auf alle Jahres- und Lebenspläne.",
+    "cta": "{{discount}} % Rabatt sichern"
   },
   "MostSecureSection": {
     "description": "Internxt Drive ist eine Open-Source-Cloud-Speicherlösung mit Ende-zu-Ende-Verschlüsselung, um deine Dateien sicher zu speichern, zu sichern und zu teilen. Mit postquantenfähiger Verschlüsselung und voller Datenkontrolle.",
@@ -44,7 +44,7 @@
         "normalText": "auf alle exklusiven lebenslangen Pläne"
       }
     },
-    "header": "Vollständige Privatsphäre mit 85 % Rabatt",
+    "header": "Vollständige Privatsphäre mit {{discount}} % Rabatt",
     "lifetimeDescription": "Einmal bezahlen und ein Leben lang Privatsphäre genießen. Voller Zugriff auf alle datenschutzorientierten Funktionen von Internxt.",
     "planDescription": "Alle Internxt-Pläne beinhalten umfassende Datenschutzfunktionen. Abonniere und sichere dir ein Jahr verschlüsselten Cloud-Speicher.",
     "billingFrequency": {

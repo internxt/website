@@ -61,7 +61,7 @@ const TestimonialsSection = ({
       <div className="flex flex-col items-center gap-20">
         <div className="flex max-w-5xl">
           {textComponent}
-          <p className="text-center text-30 font-semibold !leading-tight sm:text-5xl">
+          <p className="text-center text-30 font-semibold leading-tight sm:text-3xl">
             {textContent.title.normal} <span className="text-primary">{textContent.title.blue}</span>
           </p>
         </div>
