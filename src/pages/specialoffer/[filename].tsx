@@ -24,7 +24,16 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'achoesgratiss', 'afs', 'techpresso'];
+const ALLOWED_PATHS = [
+  'bevalk',
+  'securiters',
+  'valencia',
+  'tokinprivacy',
+  'achoesgratiss',
+  'afs',
+  'techpresso',
+  'trickyhash',
+];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -34,6 +43,7 @@ const COUPON_CODES = {
   achoesgratiss: PromoCodeName.AchoEsGratiss,
   afs: PromoCodeName.AFS,
   techpresso: PromoCodeName.Techpresso,
+  trickyhash: PromoCodeName.Trickyhash,
 };
 
 function CombinedSpecialOffer({
