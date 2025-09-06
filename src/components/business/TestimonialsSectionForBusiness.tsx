@@ -42,7 +42,7 @@ export const TestimonialsSectionForBusiness = ({ textContent }: TestimonialsSect
   return (
     <section
       className="relative overflow-hidden bg-neutral-17 px-5 py-20 lg:bg-transparent"
-      style={{ background: 'linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 100%)' }}
+      style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="relative z-10">
         <div className="hidden h-full w-full flex-col items-center justify-center gap-20 lg:flex">

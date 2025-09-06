@@ -85,7 +85,7 @@ export const BusinessPage = ({
           </div>
         }
         style={{
-          background: 'linear-gradient(360deg, #001D6C 0%, #121923 100%)',
+          background: 'linear-gradient(180deg, #001D6C 0%, #F4F8FF 100%)',
         }}
         imageProperties={{
           src: getImage(`/images/business/${imagePath}.webp`),
@@ -116,19 +116,19 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+        sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%) lg:py-10"
       />
 
-      <div className=" lg:pt-20">
+      <div className=" lg:pt-10">
         <HorizontalScrollableSection
           textContent={textContent.WhyChooseInternxt}
-          bgGradient="linear-gradient(360deg, #F9F9FC 0%, #FFFFFF 100%)"
+          bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
         />
       </div>
 
       <BusinessCtaSection
         textContent={textContent.CtaSection}
-        bgColor="bg-gray-1"
+        bgColor="bg-neutral-17"
         customText={
           <>
             <div className="flex flex-row justify-center gap-12 overflow-hidden">
@@ -139,7 +139,7 @@ export const BusinessPage = ({
                 height={401}
                 className="hidden lg:flex"
               />
-              <div className="flex w-[300px] flex-col items-center gap-8 text-center lg:w-[458px] lg:gap-4 lg:px-0">
+              <div className="flex w-[300px] flex-col items-center justify-start gap-8 text-center lg:w-[458px] lg:justify-center lg:gap-4 lg:px-0">
                 <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
                   {textContent.CtaSection.title}
                 </p>

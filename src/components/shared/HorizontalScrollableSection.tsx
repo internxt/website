@@ -70,10 +70,9 @@ export default function HorizontalScrollableSection({
       } py-10 lg:h-min lg:gap-16 lg:py-20`}
       style={{ background: bgGradient }}
     >
-      {' '}
-      <div className="absolute left-8 right-8 top-0 flex h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:hidden"></div>
-      <div className="absolute left-8 right-8 hidden h-[1px] bg-neutral-35 lg:left-32 lg:right-32 lg:top-0 lg:flex"></div>
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
         {textContent.cta && (
