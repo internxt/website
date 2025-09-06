@@ -64,13 +64,15 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        <span
-          onClick={() => window.open('https://internxt.com/about/', '_blank', 'noopener,noreferrer')}
-          className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
-        >
-          {textContent.cta}
-          <CaretRight className="pt-[2px] text-primary" size={24} />
-        </span>
+        {textContent.cta !== undefined && (
+          <span
+            onClick={() => window.open('https://internxt.com/about/', '_blank', 'noopener,noreferrer')}
+            className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
+          >
+            {textContent.cta}
+            <CaretRight className="pt-[2px] text-primary" size={24} />
+          </span>
+        )}
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">

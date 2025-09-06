@@ -1,73 +1,60 @@
 {
   "HeroSection": {
-    "title": {
-      "line1": "我们设计和建造",
-      "line2": {
-        "substring1": "世界级的",
-        "substring2": "应用程序"
-      },
-      "line3": {
-        "substring1": "构建世界级的应用程序，重视数字",
-        "substring2": "权利"
-      }
+    "title": "我们相信一个在线隐私和数字**自由**的世界",
+    "description": "Internxt成立于2020年，愿景是构建一个隐私和安全优先的互联网，只有您控制自己的数据。",
+    "recognitionsTitle": "因出色的工作而自豪地获得认可"
+  },
+  "WhatWeDoSection": {
+    "title": "Internxt的故事",
+    "section1": {
+      "title": "由Fran Villalba Segarra于2020年创立，Internxt是一个欧洲开源隐私生态系统，包括Drive、Send、VPN、杀毒软件、清理工具、邮件、会议等更多服务。",
+      "description": [
+        "我们创建Internxt是为了保护您的数据免受贪婪企业的监视和剥削。我们通过成为首个具有后量子密码学和零知识方法的云存储服务来实现这一目标，让您的数据完全在您的控制之下。",
+        "自成立以来，一个原则指导着公司的每一个决定：隐私是基本人权。今天，我们正在帮助超过一百万活跃用户保护他们的在线隐私。"
+      ]
     },
-    "figures": {
-      "activeUsers": {
-        "figure": "1M",
-        "caption": "Users trust Internxt"
-      },
-      "awards": {
-        "figure": "30",
-        "caption": "Awards and Mentions"
-      }
-    },
-    "description": {
-      "line1": "我们创造强大的工具和服务，尊重并赋予用户权力。",
-      "line2": ""
-    },
-    "recognitions": {
-      "title": "因出色的工作而自豪地获得认可",
-      "brands": {
-        "forbes": {
-          "caption1": "Next 1000"
-        },
-        "southsummit": {
-          "caption1": "Best Startup"
-        },
-        "tnw": {
-          "caption1": "T500"
-        },
-        "startupvalencia": {
-          "caption1": "Best Startup"
-        }
-      }
+    "bitSection": {
+      "title": "隐私革命：Internxt创始人兼首席执行官Fran Villalba Segarra的旅程",
+      "description": "Internxt正在创造一个尊重用户隐私的数字世界，通过实现终极的web-3隐私优先套件。Internxt Drive、邮件、发送、会议、清理工具、杀毒软件、VPN等更多服务。",
+      "cta": "阅读更多"
     }
   },
-  "CompanySection": {
-    "values": {
-      "title": "我们的核心价值观",
-      "items": {
-        "achieve": {
-          "title": "当努力与道德相遇时，成功就会到来 ",
-          "description": "我们确信，当某件事看起来不可能时，那只是因为还没有足够的尝试。 我们正在进一步突破技术极限，为现代问题提供创新和合乎道德的解决方案。"
-        },
-        "privacy": {
-          "title": "生活和工作学习",
-          "description": "同时开发多个产品的周期性迭代会促使我们不断前进，并迫使我们永不满足。 我们愿意出于正确的理由承担一些风险，并且一直在寻求学习和改进我们的产品。"
-        },
-        "family": {
-          "title": "我们的核心价值观",
-          "description": "无论您是在家工作还是喜欢将一切都留在办公室，我们都希望您感觉自己是团队中重要的一员。 没有我们的团队成员，Internx 什么都不是。 我们分享奋斗，我们分享成功。"
-        },
-        "growth": {
-          "title": "妥协，这并不是我们的原则",
-          "description": "我们正在开发我们希望在未来看到的技术。 仅受安全、隐私和以用户为中心的设计的限制，我们构建的一切都必须改善人类的在线体验并尊重基本的数字权利。"
-        }
+  "ScrollableSection": {
+    "title": "欧洲替代方案，替代\n隐私保护薄弱的大科技服务",
+    "cardDescriptions": {
+      "titles": ["获奖隐私保护", "得到行业领袖支持", "瓦伦西亚足球俱乐部官方云服务提供商", "财务和专业增长"],
+      "descriptions": [
+        "荣获西班牙数据保护局奖，Internxt因开发先进的数据保护和自然语言处理技术而受到表彰，认可我们通过创新技术保护您隐私的使命。",
+        "由Fran Villalba Segarra创立，Internxt的增长还得到了知名领袖如Juan Roig、Prosegur、Telefónica、Notion Capital、Andorra Telecom和欧盟基金的投资支持，使我们能够构建您可以信任的安全、以隐私为中心的云服务。",
+        "Internxt自豪地为其主队瓦伦西亚足球俱乐部提供安全、以隐私为中心的云存储。我们的合作伙伴关系体现了我们对数据保护和数字主权的奉献，确保俱乐部信息以最高的安全和信任标准进行管理。",
+        "在30人才华横溢团队的推动下，Internxt实现了100%的年同比增长和财务稳定，帮助我们在在线隐私领域确立为可信赖的长期公司。"
+      ]
+    }
+  },
+  "FeatureSection": {
+    "ScrollableSection": {
+      "title": "欧洲替代方案，替代\n隐私保护薄弱的大科技服务",
+      "description": "自2020年Internxt Drive推出以来，Internxt已发展成为**首个具有后量子加密的云存储服务，为大科技公司提供以隐私为中心的替代方案**，优先考虑用户隐私而非利润。\n \n 现在，Internxt提供广泛的以隐私为中心的产品套件，帮助每个人加入我们完全在线隐私的使命。Internxt通过保护您的数据免受第三方、数据泄露和黑客攻击，让您完全控制在线隐私。",
+      "cardDescriptions": {
+        "titles": ["德勤科技快50强", "下一代加密技术", "完全透明和经过审计", "欧洲制造", "尊重地球的技术"],
+        "descriptions": [
+          "Internxt被评为增长最快的50家科技公司之一。在多个盈利季度和政府支持之后，我们准备增长并推动下一代以隐私为先的产品。",
+          "我们开发了后量子加密技术，为下一代计算威胁做准备。在Internxt，我们的目标是用先进技术保护您的数据，让您的隐私现在和将来都安全。",
+          "真正的在线隐私取决于开放性和信任，这就是为什么我们选择完全开源。我们对开源软件的承诺意味着完全透明，不会隐藏访问您的数据。我们所有的代码都经过领先的渗透测试公司Securitum独立验证，认证我们的平台免受黑客和网络攻击。",
+          "Internxt总部位于西班牙瓦伦西亚，遵循GDPR——欧洲最严格的隐私标准。我们以完全透明的方式安全地管理您的数据，确保尊重您的隐私权，您完全控制个人信息。",
+          "技术不必以环境为代价。我们致力于可持续实践，使用绿色能源并优化基础设施以减少环境足迹。"
+        ]
       }
     },
-    "careers": {
+    "BetterFutureSection": {
       "title": "让我们一起建设更美好的未来",
-      "link": "Internxt 的职业"
+      "description": "隐私对您和对我们一样重要吗？今天就加入Internxt，获得最私密的云存储和为保护您数据而设计的产品套件。",
+      "cta": "获取Internxt"
     }
+  },
+  "CtaSection": {
+    "title": "无风险试用Internxt",
+    "description": "用Internxt安全、私密和加密的云存储保护真正重要的东西。",
+    "cta": "现在选择计划"
   }
 }
