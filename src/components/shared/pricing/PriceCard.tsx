@@ -138,7 +138,11 @@ export const PriceCard = ({
 
   const renderFeatureIcon = (index: number) => {
     const adjustedIndex =
-      !isBusiness && cardIndex === 0 && index >= 6 ? index + 1 : cardIndex === 1 && index >= 9 ? index + 1 : index;
+      !isBusiness && cardIndex === 0 && index >= 6
+        ? index + 1
+        : !isBusiness && cardIndex === 1 && index >= 9
+        ? index + 1
+        : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
