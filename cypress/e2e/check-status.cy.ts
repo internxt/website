@@ -6,7 +6,6 @@ const nameFiles = [
   '',
   'about',
   'affiliates',
-  'black-friday',
   'byte-converter',
   'cloud-storage-comparison',
   'cloudwards',
