@@ -169,7 +169,7 @@ export const PricingSectionForMobile = ({
       </Transition>
 
       <Transition
-        show={showBusinessCards}
+        show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
@@ -207,7 +207,7 @@ export const PricingSectionForMobile = ({
       {/* Business plans */}
 
       <Transition
-        show={showIndividualCards}
+        show={showBusinessCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
