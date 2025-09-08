@@ -7,8 +7,8 @@ const HeroSection = ({ textContent }): JSX.Element => (
     className="relative flex w-full flex-col overflow-hidden pt-10 lg:pt-20"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #F4F8FF 100%)' }}
   >
-    <div className="relative flex flex-col items-center justify-center py-10 lg:py-20">
-      <div className="flex flex-col items-center justify-center space-y-16 px-6">
+    <div className="relative flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-12 px-6 pt-20">
         <div className="flex w-[345px] flex-col space-y-6 text-start lg:w-[976px] lg:text-center">
           <h1
             className="hidden w-full px-20 text-30 font-semibold leading-tight text-gray-100 lg:block lg:text-5xl"
@@ -75,12 +75,13 @@ const HeroSection = ({ textContent }): JSX.Element => (
           </div>
         </div>
 
-        <div className="flex h-min w-[345px] flex-col justify-center gap-8 py-10 lg:w-full lg:gap-16 lg:py-20">
+        <div className="flex h-min w-[345px] flex-col justify-center gap-8  py-10 lg:w-full lg:gap-16 lg:py-10">
           <h4 className="text-center text-2xl font-bold text-gray-100 lg:text-4xl lg:font-semibold">
             {textContent.recognitionsTitle}
           </h4>
           <CompanyLogosRecognitions />
         </div>
+        <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
       </div>
     </div>
   </section>

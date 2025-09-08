@@ -1,5 +1,4 @@
 import Image from 'next/image';
-
 import { getImage } from '@/lib/getImage';
 
 interface Logo {
@@ -23,13 +22,13 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.svg',
     alt: 'Lanzadera Logo',
     width: 254,
     height: 32,
   },
   {
-    src: '/images/about/logos/telefónica.webp',
+    src: '/images/about/logos/telefónica.svg',
     alt: 'Telefonica Logo',
     width: 133,
     height: 32,
@@ -59,7 +58,7 @@ const logos: Logo[] = [
     height: 408,
   },
   {
-    src: '/images/about/logos/mashable.webp',
+    src: '/images/about/logos/mashable.svg',
     alt: 'Mashable Logo',
     width: 201,
     height: 32,

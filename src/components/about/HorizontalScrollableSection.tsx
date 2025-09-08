@@ -16,6 +16,7 @@ export default function HorizontalScrollableSection({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
+  const [isBigDesktop, setIsBigDesktop] = useState(false);
   const [cardWidth, setCardWidth] = useState(359);
   const [visibleCards, setVisibleCards] = useState(1);
 
@@ -23,6 +24,12 @@ export default function HorizontalScrollableSection({
     if (typeof window !== 'undefined') {
       const screenWidth = window.innerWidth;
       if (screenWidth >= 1024) {
+        const containerPadding = header ? 192 * 2 : 192 + 384;
+        const availableWidth = screenWidth - containerPadding;
+        const gap = 24;
+        return Math.floor((availableWidth + gap) / (359 + gap));
+      }
+      if (screenWidth >= 1536) {
         const containerPadding = header ? 192 * 2 : 192 + 384;
         const availableWidth = screenWidth - containerPadding;
         const gap = 24;
@@ -38,7 +45,9 @@ export default function HorizontalScrollableSection({
   useEffect(() => {
     const updateScreenSize = () => {
       const desktop = window.innerWidth >= 1024;
+      const bigDesktop = window.innerWidth >= 1536;
       setIsDesktop(desktop);
+      setIsBigDesktop(bigDesktop);
       setCardWidth(359);
       setVisibleCards(calculateVisibleCards());
 
@@ -54,7 +63,7 @@ export default function HorizontalScrollableSection({
   const scrollLeft = () => {
     if (scrollContainerRef.current && currentIndex > 0) {
       const newIndex = currentIndex - 1;
-      const gap = isDesktop ? 24 : 16;
+      const gap = isDesktop ? 24 : 0;
       scrollContainerRef.current.scrollTo({
         left: newIndex * (cardWidth + gap),
         behavior: 'smooth',
@@ -66,7 +75,7 @@ export default function HorizontalScrollableSection({
   const scrollRight = () => {
     if (scrollContainerRef.current && currentIndex < maxIndex) {
       const newIndex = currentIndex + 1;
-      const gap = isDesktop ? 24 : 16;
+      const gap = isDesktop ? 24 : 0;
       scrollContainerRef.current.scrollTo({
         left: newIndex * (cardWidth + gap),
         behavior: 'smooth',
@@ -88,7 +97,7 @@ export default function HorizontalScrollableSection({
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:h-min ${
         header ? 'gap-8 lg:gap-16' : ' gap-6 bg-neutral-17 lg:gap-12'
-      } lg:py-20 xl:py-32`}
+      } lg:py-20 `}
       style={header ? { background: 'linear-gradient(180deg, #F4F8FF 63.1%, #FFFFFF 100%)' } : undefined}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
@@ -165,8 +174,8 @@ export default function HorizontalScrollableSection({
         >
           <div
             className={`flex gap-4 lg:gap-6 ${
-              header ? 'lg:pl-48 lg:pr-48' : 'lg:pl-48 lg:pr-48'
-            } 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-80 2xl:pr-72`}
+              header ? 'lg:pl-48 lg:pr-48 2xl:pl-[500px]' : 'lg:pl-48 lg:pr-48  2xl:pl-[520px]'
+            } 1.5xl:pl-64 1.5xl:pr-64  2xl:pr-[520px]`}
             style={{
               width: 'max-content',
               alignItems: 'stretch',
