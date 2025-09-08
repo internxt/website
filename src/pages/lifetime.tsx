@@ -1,7 +1,4 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
-import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -13,58 +10,28 @@ import HorizontalScrollableSection from '@/components/home/HorizontalScrollableS
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
+import cookies from '@/lib/cookies';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { PromoCodeName } from '@/lib/types';
 
-interface CombinedSpecialOfferProps {
+interface LifetimeSpecialProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
   footerLang: FooterText;
-  pathname: string;
   lang: string;
+  testimonialsJson: any;
 }
 
-const ALLOWED_PATHS = [
-  'bevalk',
-  'securiters',
-  'valencia',
-  'tokinprivacy',
-  'achoesgratiss',
-  'afs',
-  'techpresso',
-  'trickyhash',
-];
-
-const COUPON_CODES = {
-  bevalk: PromoCodeName.Bevalk,
-  securiters: PromoCodeName.Securiters,
-  valencia: PromoCodeName.ValenciaCF,
-  tokinprivacy: PromoCodeName.TokinPrivacy,
-  achoesgratiss: PromoCodeName.AchoEsGratiss,
-  afs: PromoCodeName.AFS,
-  techpresso: PromoCodeName.Techpresso,
-  trickyhash: PromoCodeName.Trickyhash,
-};
-
-function CombinedSpecialOffer({
+function LifetimeSpecial({
   langJson,
   lang,
   metatagsDescriptions,
   footerLang,
   navbarLang,
-  pathname,
-}: CombinedSpecialOfferProps): JSX.Element {
-  const router = useRouter();
-  const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-
-  useEffect(() => {
-    if (!selectedPathname) {
-      router.replace('/specialoffer');
-    }
-  }, [selectedPathname, router]);
-
-  const couponCode = COUPON_CODES[pathname];
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
+  testimonialsJson,
+}: LifetimeSpecialProps): JSX.Element {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'lifetime');
 
   const {
     products,
@@ -74,21 +41,19 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode,
-    couponCodeForLifetime: couponCode,
+    couponCode: PromoCodeName.DRIVE87,
+    couponCodeForLifetime: PromoCodeName.DRIVE87,
   });
 
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-
-  const percentOff = decimalDiscount === 13 ? '87' : '85';
-
+  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   const parsePercentText = (text: string) => {
-    if (!individualCoupon?.percentOff) {
+    if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
   };
+  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
+  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = isCheckoutForLifetime ? lifetimeCoupon : individualCoupon;
@@ -102,17 +67,27 @@ function CombinedSpecialOffer({
     );
   };
 
-  if (!selectedPathname) {
-    return <></>;
-  }
+  console.log(percentOff);
+  const ctaText =
+    percentOff === '0' ? langJson.ctaSection.titleWithoutDiscount : parsePercentText(langJson.ctaSection.title);
+  const ctaText2 =
+    percentOff === '0'
+      ? langJson.ctaSection2.descriptionWithoutDisocunt
+      : parsePercentText(langJson.ctaSection2.description);
 
   return (
-    <Layout title={metatags[0]?.title} description={metatags[0]?.description} segmentName="Partners" lang={lang}>
+    <Layout
+      title={metatags[0].title}
+      description={metatags[0].description}
+      segmentName="Lifetime"
+      lang={lang}
+      specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
+    >
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 
-      <ReviewsSection textContent={langJson.ReviewSection} />
+      <ReviewsSection textContent={langJson.ReviewSection || testimonialsJson.TestimonialsSection} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -137,17 +112,15 @@ function CombinedSpecialOffer({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
+            <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">{ctaText}</p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection.description)}
+              {langJson.ctaSection.description}
             </p>
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pY-20 pb-20"
+        bgPadding="lg:py-20 pb-20"
         bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
@@ -161,10 +134,10 @@ function CombinedSpecialOffer({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {parsePercentText(langJson.ctaSection.title)}
+              {langJson.ctaSection2.title}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[698px] lg:text-center lg:text-xl">
-              {parsePercentText(langJson.ctaSection2.description)}
+              {ctaText2}
             </p>
           </div>
         }
@@ -181,23 +154,24 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const pathname = ctx.params.filename;
-
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
+  const testimonialsJson = require(`@/assets/lang/${lang}/home.json`);
+
+  cookies.setReferralCookie(ctx);
 
   return {
     props: {
       lang,
-      pathname,
       metatagsDescriptions,
       navbarLang,
       langJson,
       footerLang,
+      testimonialsJson,
     },
   };
 }
 
-export default CombinedSpecialOffer;
+export default LifetimeSpecial;
