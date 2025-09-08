@@ -58,7 +58,7 @@
     "save": "Risparmia fino al",
     "planTitles": {
       "header": "Privacy totale con {{discount}}% di sconto",
-      "individuals": "Piani individuali",
+      "individuals": "Piani annuale ",
       "lifetime": "Piani a vita",
       "business": "Piani aziendali",
       "lifetimeCampaign": {
@@ -202,7 +202,7 @@
       {
         "question": "Quanto costa un piano Internxt?",
         "answer": [
-          "Avete bisogno di più spazio di archiviazione? Offriamo anche piani individuali che vanno da 20 GB a 2 TB, a partire da 0,89 €/mese."
+          "Avete bisogno di più spazio di archiviazione? Offriamo anche piani annuale  che vanno da 20 GB a 2 TB, a partire da 0,89 €/mese."
         ]
       },
       {
