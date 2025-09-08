@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "El almacenamiento más seguro **por menos**",
+    "description": "Almacenamiento seguro en la nube por menos. Reclama tu descuento especial hoy. Accede a la galardonada suite de privacidad de Internxt con almacenamiento en la nube encriptado post-cuántico y mucho más.",
+    "subtitle": "Obtén un {{discount}}% de descuento",
+    "claimDeal": "Reclamar oferta"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt está en mega-oferta, tiene **excelentes reseñas de usuarios**, cifrado **de extremo a extremo y post-cuántico**, y hacen su código completamente **de código abierto**.\"",
+    "mashable": "\"Tómate **en serio** la **seguridad** de tus **datos importantes** con Internxt. Hacen de la **privacidad su principal preocupación,** así que puedes estar tranquilo sabiendo que tus archivos están **seguros**.\"",
+    "pcWorld": "\"El acceso web, sincronización de archivos y servicios de respaldo de Internxt son **impresionantes**. Este servicio de **almacenamiento online encriptado** es **fácil,** y los planes actuales son una ganga.\""
+  },
+  "TrustedBySection": {
+    "title": "Con la confianza de personas como tú",
+    "review": "Mantengo mi información segura online gracias a Internxt. Su atención al cliente es rápida, y sus servicios son increíblemente confiables. El hecho de que sean auditados, de código abierto y encriptados me tranquiliza sabiendo que mis datos siempre están protegidos de terceros.",
+    "author": "Sandra Díaz - Reseña de Trustpilot"
+  },
+  "NextGenSection": {
+    "title": "¿Por qué elegir Internxt?",
+    "description": "Internxt te devuelve el control de tu privacidad. A diferencia del almacenamiento en la nube tradicional, nos aseguramos de que solo tú tengas las llaves de tus datos encriptados y no almacenamos ni vendemos tus datos a terceros. Tomamos todas las medidas para garantizar que tu información permanezca segura.",
+    "cta": "Conócenos mejor",
+    "cardDescriptions": {
+      "titles": [
+        "Datos invulnerables e infiltrables",
+        "Seguridad de nueva generación",
+        "Código abierto y transparente",
+        "Verificado independientemente"
+      ],
+      "descriptions": [
+        "No almacenamos contraseñas ni datos de usuarios y todos tus datos están encriptados en tránsito y en reposo. Internxt te pone en control total de tus archivos. Tus datos son tu negocio. Protegerlos es el nuestro.",
+        "Internxt es el único almacenamiento en la nube que encripta automáticamente tus archivos usando criptografía de extremo a extremo y post-cuántica, lo que significa que solo tú puedes acceder a tus datos.",
+        "Estamos orgullosos de lo que hacemos, por lo que nuestro código se hace público en GitHub y puede ser revisado, auditado y verificado personalmente por cualquiera. No tenemos nada que ocultar excepto tus datos.",
+        "Cumplimos completamente con GDPR y somos 100% seguros, pero no te fíes solo de nuestra palabra. Internxt ha sido auditado y verificado independientemente por la empresa líder de pruebas de penetración de Europa, Securitum."
+      ]
+    }
+  },
+  "ctaSection": {
+    "titleWithoutDiscount": "Suite Completa de Privacidad Digital",
+    "title": "Máxima Privacidad con {{discount}}% de descuento",
+    "description": "Obtén tranquilidad con este descuento exclusivo.",
+    "cta": "Aceptar Invitación"
+  },
+  "ctaSection2": {
+    "title": "El almacenamiento en la nube más privado del mundo",
+    "description": "Reclama tu descuento exclusivo del {{discount}}% para acceder a la suite digital de Internxt durante un año",
+    "descriptionWithoutDisocunt": "Experimenta la privacidad digital completa con Internxt",
+    "cta": "Elegir Plan"
+  },
+  "tableSection": {
+    "title": "Planes de Internxt",
+    "planTitles": {
+      "individuals": "Planes Anuales",
+      "homePage": "Elige el plan adecuado para ti",
+      "lifetime": "Planes de Por Vida",
+      "business": "Planes Empresariales",
+      "lifetimeCampaign": {
+        "blueText": "50% de descuento",
+        "normalText": "en todos nuestros planes exclusivos de por vida"
+      }
+    },
+    "lifetimeDescription": "Paga una vez y disfruta de privacidad y seguridad de por vida",
+    "planDescription": "Todos los planes de Internxt incluyen funcionalidades completas con acceso total a nuestra galardonada suite de privacidad que consiste en Internxt Drive, Send, VPN, Antivirus, Cleaner, Monitor de Dark Web, Meet y Mail.",
+    "businessDescription": "Actualmente estamos trabajando en nuevos planes de Internxt diseñados exclusivamente para defender tu negocio, proteger a tus empleados y asegurar tu rentabilidad.",
+    "businessDescription2": "Asegura la seguridad de datos de tu empresa con los planes de almacenamiento en la nube encriptado de Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensual",
+      "annually": "Anual",
+      "lifetime": "De por vida",
+      "individual": "Individual",
+      "business": "Empresarial"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Gratuito",
+      "description": "Obtén 1 GB de almacenamiento en la nube encriptado gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "endToEnd": "Cifrado de extremo a extremo",
+      "openSource": "Código abierto y auditado",
+      "anonymousAccount": "Creación de cuenta anónima",
+      "premiumSupport": "Soporte premium al cliente",
+      "guarantee": "Garantía de devolución de dinero de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

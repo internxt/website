@@ -138,9 +138,9 @@
         "Inviter, partager et collaborer",
         "Conforme au RGPD",
         "Authentification à deux facteurs (2FA)",
-        "CLI & WebDav",
+
         "Nettoyage de l’appareil",
-        "Surveillance du dark web"
+        "Surveillance "
       ],
       "5TB": [
         "5 To de stockage",
@@ -154,7 +154,7 @@
         "Authentification à deux facteurs (2FA)",
         "CLI, WebDav, NAS & Rclone",
         "Nettoyage de l’appareil",
-        "Surveillance du dark web",
+        "Surveillance ",
         "Meet",
         "Mail"
       ]
@@ -173,7 +173,7 @@
         "Support CLI, WebDav & Rclone",
         "Gérez la facturation et les paiements du compte",
         "Nettoyeur d'appareil",
-        "Surveillance du Dark Web"
+        "Surveillance "
       ],
       "2TB": [
         "2 To de stockage/utilisateur",
@@ -188,7 +188,7 @@
         "Support CLI, WebDav & Rclone",
         "Gérez la facturation et les paiements du compte",
         "Nettoyeur d'appareil",
-        "Surveillance du Dark Web",
+        "Surveillance ",
         "Meet",
         "Mail"
       ]

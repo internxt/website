@@ -34,7 +34,7 @@ const MostSecureSection: React.FC<MostSecureSectionProps> = ({
         />
       </div>
 
-      <div className="flex w-[323px] flex-col items-center justify-center space-y-8 text-center lg:max-w-[550px] lg:items-start lg:text-left">
+      <div className="flex w-[323px] flex-col items-center justify-center space-y-8 text-center lg:w-[550px] lg:items-start lg:text-left">
         <div className="flex flex-col space-y-4">
           <h1 className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</h1>
           <h2 className="font-regular text-lg leading-tight text-gray-80 lg:text-xl">{textContent.description}</h2>

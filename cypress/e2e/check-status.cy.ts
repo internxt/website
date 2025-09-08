@@ -6,8 +6,6 @@ const nameFiles = [
   '',
   'about',
   'affiliates',
-  'annual',
-  'black-friday',
   'byte-converter',
   'cloud-storage-comparison',
   'cloudwards',
@@ -15,7 +13,6 @@ const nameFiles = [
   'drive',
   'legal',
   'lifetime_special',
-  'lifetime',
   'media-area',
   'open-source',
   'partner-discount',
@@ -28,7 +25,6 @@ const nameFiles = [
   'temporary-email',
   'virus-scanner',
   'what-does-google-know-about-me',
-  'startpage',
   'file-converter',
 ];
 

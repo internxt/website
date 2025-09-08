@@ -37,9 +37,7 @@ const ScrollableSection = ({ textContent }) => {
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-center space-y-0 text-center lg:pb-10">
           <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">{textContent.title}</p>
           <div className="flex flex-col space-y-6">
-            <p className="w-[323px] pt-10 text-lg leading-tight text-gray-80 lg:max-w-[980px]">
-              {textContent.description}
-            </p>
+            <p className="w-[323px] pt-10 text-lg leading-tight text-gray-80 lg:w-[980px]">{textContent.description}</p>
           </div>
         </div>
       </section>
