@@ -8,14 +8,14 @@ export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.
     <div className="flex flex-col items-center justify-center gap-12">
       <div className="flex w-[350px] flex-col gap-4 text-center lg:w-[800px] lg:gap-8">
         <h2 className="text-30 font-bold leading-tight text-gray-100 lg:text-3xl ">{textContent.title}</h2>
-        <h3 className="text-base font-normal leading-tight text-gray-100 lg:text-xl">{textContent.description}</h3>
+        <h3 className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</h3>
       </div>
 
       <div className="flex flex-row flex-wrap justify-center gap-5 lg:gap-14 lg:py-9">
         {textContent.cards.map((card) => (
           <div className="flex w-[190px] flex-col gap-[15px] text-center lg:w-[230px]" key={card.title}>
             <p className="text-30 font-semibold text-blue-62 lg:text-3xl">{card.title}</p>
-            <p className="text-base font-medium leading-tight text-gray-100 lg:text-xl">{card.description}</p>
+            <p className="text-base font-medium leading-6 text-gray-100 lg:text-xl">{card.description}</p>
           </div>
         ))}
       </div>

@@ -55,7 +55,7 @@ export default function HorizontalScrollableSectionWithImages({
     if (isMobile) {
       return Math.max(0, cardTitles.length - 1);
     } else {
-      return Math.max(0, cardTitles.length - 2);
+      return Math.max(0, cardTitles.length - 1);
     }
   };
 
@@ -131,7 +131,7 @@ export default function HorizontalScrollableSectionWithImages({
 
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen 1.5xl:pl-64 1.5xl:pr-64  2xl:pl-[540px] 2xl:pr-[540px] "
+          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:pl-56 lg:pr-80 1.5xl:pl-64 1.5xl:pr-64  2xl:pl-[540px] 2xl:pr-[540px] "
           onScroll={handleScroll}
           style={{
             scrollbarWidth: 'none',

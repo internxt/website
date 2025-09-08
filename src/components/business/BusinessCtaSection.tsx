@@ -21,11 +21,11 @@ const BusinessCtaSection = ({
 }) => {
   return (
     <section
-      className={`flex h-[400px] w-full items-start justify-center px-10 py-10  xl:px-32 3xl:px-80 ${bgColor}`}
+      className={`flex h-[400px] items-start justify-center py-10 lg:w-full  xl:px-32 3xl:px-80 ${bgColor}`}
       style={{ background: bgGradientColor }}
     >
       <div
-        className={`z-10 flex h-auto w-full flex-col items-center justify-evenly gap-4 rounded-20 py-6 lg:py-10 ${containerDetails}`}
+        className={`z-10 flex h-auto w-[345px] flex-col items-center justify-evenly gap-4 rounded-20 py-6 lg:w-full lg:py-10 ${containerDetails}`}
         style={{ background: bgGradientContainerColor }}
       >
         {customText}
