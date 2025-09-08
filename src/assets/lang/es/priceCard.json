@@ -7,7 +7,7 @@
   "discount": "% off",
   "commingSoon": "Próximamente",
   "planTitles": {
-    "individuals": "Planes individuales",
+    "individuals": "Planes Anuales",
     "homePage": "Elige el plan adecuado para ti",
     "lifetime": "Planes de por vida",
     "business": "Planes para empresas",
@@ -139,7 +139,7 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
 
-        "Limpiador!",
+        "Limpiador",
         "Monitor"
       ],
       "5TB": [
@@ -153,7 +153,7 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI, WebDav, NAS & Rclone",
-        "Limpiador!",
+        "Limpiador",
         "Monitor",
         "Meet",
         "Mail"
@@ -172,7 +172,7 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpiador!",
+        "Limpiador",
         "Monitor"
       ],
       "2TB": [
@@ -187,7 +187,7 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpiador!",
+        "Limpiador",
         "Monitor",
         "Meet ",
         "Mail "

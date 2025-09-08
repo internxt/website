@@ -60,7 +60,7 @@
     },
     "planTitles": {
       "header": "Privacidad total con {{discount}}% de descuento",
-      "individuals": "Planes individuales",
+      "individuals": "Planes Anuales",
       "lifetime": "Planes de por vida",
       "business": "Planes para empresas",
       "lifetimeCampaign": {

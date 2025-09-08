@@ -61,7 +61,7 @@
     },
     "planTitles": {
       "header": "Confidentialité totale avec {{discount}}% de réduction",
-      "individuals": "Plans individuels",
+      "individuals": "Plans annuel ",
       "lifetime": "Plans à vie",
       "business": "Plans d'entreprise",
       "lifetimeCampaign": {
@@ -164,7 +164,7 @@
       },
       {
         "question": "Combien coûte un plan Internxt ?",
-        "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
+        "answer": ["Internxt propose des plans annuel  allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
       },
       {
         "question": "Internxt a-t-il des plans à vie ?",
@@ -215,7 +215,7 @@
     "faq": [
       {
         "question": "Combien coûte un plan Internxt ?",
-        "answer": ["Internxt propose des plans individuels allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
+        "answer": ["Internxt propose des plans annuel  allant de 20 Go à 2 To, à partir de 0,89 euros/mois."]
       },
       {
         "question": "Internxt a-t-il des plans à vie ?",

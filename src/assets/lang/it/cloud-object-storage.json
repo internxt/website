@@ -108,7 +108,7 @@
       {
         "question": "Che cos'è l'archiviazione oggetti?",
         "answer": [
-          "L'archiviazione oggetti è un tipo di archiviazione che memorizza grandi quantità di dati (come foto, video e email) come oggetti individuali, ciascuno con un identificatore unico.",
+          "L'archiviazione oggetti è un tipo di archiviazione che memorizza grandi quantità di dati (come foto, video e email) come oggetti annuale , ciascuno con un identificatore unico.",
           "A differenza dell'archiviazione file tradizionale, l'archiviazione oggetti conserva i dati in uno spazio di indirizzi piatto, solitamente su infrastrutture di archiviazione distribuite.",
           "L'archiviazione oggetti nel cloud è più scalabile, permette un accesso rapido agli oggetti singoli e offre una riduzione dei costi rispetto all'archiviazione tradizionale."
         ]
