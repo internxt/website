@@ -169,7 +169,7 @@ export const PricingSectionForMobile = ({
       </Transition>
 
       <Transition
-        show={showIndividualCards}
+        show={showBusinessCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
@@ -205,14 +205,15 @@ export const PricingSectionForMobile = ({
       </Transition>
 
       {/* Business plans */}
+
       <Transition
-        show={showBusinessCards}
+        show={showIndividualCards}
         enter="transition duration-500 ease-out"
         enterFrom="scale-95 translate-y-20 opacity-0"
         enterTo="scale-100 translate-y-0 opacity-100"
-        className="flex w-full flex-col gap-4"
+        className="flex flex-col gap-4"
       >
-        <div className="content flex w-[329px] flex-col justify-start px-2 lg:justify-end">
+        <div className="content flex w-[345px] flex-col justify-start lg:justify-end">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (
