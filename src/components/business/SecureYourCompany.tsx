@@ -4,7 +4,6 @@ interface SecureYourCompanyProps {
 
 export const SecureYourCompany = ({ textContent }: SecureYourCompanyProps): JSX.Element => (
   <section className="overflow-hidden bg-neutral-17 px-5 py-10 lg:py-20">
-    <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
     <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
     <div className="flex flex-col items-center justify-center gap-12">
       <div className="flex w-[350px] flex-col gap-4 text-center lg:w-[800px] lg:gap-8">

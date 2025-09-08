@@ -116,7 +116,7 @@ export const BusinessPage = ({
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%) lg:py-10"
+        sectionDetails="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%) lg:py-20"
       />
 
       <div className=" lg:pt-10">
@@ -165,8 +165,8 @@ export const BusinessPage = ({
               <Image
                 src={getImage('/images/home/internxt_secure_cloud_storage_desktop.webp')}
                 alt="Tablet Image"
-                width={401}
-                height={301}
+                width={491}
+                height={401}
                 className="hidden lg:flex"
               />
             </div>

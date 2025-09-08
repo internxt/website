@@ -99,8 +99,8 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
       <div className="flex items-center justify-center py-8 ">
         <div className="flex w-[636px]">
           <div className="flex-1 rounded-32 bg-neutral-17 p-10 text-gray-100">
-            <form className="space-y-4" onSubmit={handleSubmit}>
-              <div className="flex flex-col lg:flex-row lg:space-x-4">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
                   <label className="mb-1 block text-sm" htmlFor="name">
                     {textContent.form.name}
@@ -129,7 +129,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                 </div>
               </div>
 
-              <div className="flex flex-col lg:flex-row lg:space-x-4">
+              <div className="flex flex-col space-y-6 lg:flex-row lg:space-x-4 lg:space-y-0">
                 <div className="w-full lg:w-1/2">
                   <label className="mb-1 block text-sm" htmlFor="email">
                     {textContent.form.email}
@@ -198,7 +198,7 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                 />
               </div>
 
-              <div className="flex pt-4">
+              <div className="flex">
                 <button
                   type="submit"
                   className={`w-full rounded-md px-6 py-4 text-white transition lg:w-1/3 ${
@@ -209,15 +209,16 @@ export const ContactSalesForm = ({ textContent, isBusiness }: ContactSalesFormPr
                   {isSubmitting ? textContent.form.ctaSending : textContent.form.cta}
                 </button>
               </div>
+
               {formStatus === 'success' && (
-                <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <CheckCircle height={24} width={24} weight="fill" className="text-green-1" />
                   <p className="ml-2 text-sm text-gray-80">{textContent.form.successMessage}</p>
                 </div>
               )}
 
               {formStatus === 'error' && (
-                <div className="mt-4 flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
+                <div className="flex items-center justify-center rounded-md border border-highlight bg-white px-5 py-2">
                   <WarningCircle height={24} width={24} weight="fill" className="text-red" />
                   <p className="ml-2 text-sm text-gray-80">{textContent.form.errorMessage}</p>
                 </div>

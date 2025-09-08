@@ -37,8 +37,8 @@ export default function HorizontalScrollableSectionWithImages({
   const mobileScrollAmount = mobileCardWidth + gap;
   const hasImages = Array.isArray(cardImages) && cardImages.length > 0;
 
-  const sectionHeight = hasImages ? 'lg:h-[940px]' : 'lg:h-[580px]';
-  const innerHeight = hasImages ? 'lg:h-[840px]' : 'lg:h-[620px]';
+  const sectionHeight = hasImages ? 'lg:h-[1080px]' : 'lg:h-[580px]';
+  const innerHeight = hasImages ? 'lg:h-[900px]' : 'lg:h-[620px]';
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -103,7 +103,7 @@ export default function HorizontalScrollableSectionWithImages({
 
   return (
     <section
-      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} pb-10 lg:px-10 lg:py-10 xl:px-32 3xl:px-80`}
+      className={`flex h-min w-full items-center justify-center ${bgColor} ${sectionHeight} pb-10 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
       style={{ background: bgGardient }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
@@ -131,7 +131,7 @@ export default function HorizontalScrollableSectionWithImages({
 
         <div
           ref={scrollContainerRef}
-          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen lg:px-56 1.5xl:px-72 "
+          className="scrollbar-hide flex h-min w-[320px] flex-row items-start justify-start gap-8 overflow-x-auto scroll-smooth lg:h-min lg:w-screen 1.5xl:pl-64 1.5xl:pr-64  2xl:pl-[540px] 2xl:pr-[540px] "
           onScroll={handleScroll}
           style={{
             scrollbarWidth: 'none',
