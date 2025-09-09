@@ -136,9 +136,9 @@ export default function HorizontalScrollableSection({
             </RevealX>
             <RevealX direction="right" className="flex lg:hidden">
               <Image
-                src={getImage('/images/about/logos/GDPR.webp')}
+                src={getImage('/images/about/logos/mobile GDPR.png')}
                 width={345}
-                height={324}
+                height={150}
                 quality={100}
                 layout="intrinsic"
                 className="rounded-2xl"
