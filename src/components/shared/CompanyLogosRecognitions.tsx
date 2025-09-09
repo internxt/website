@@ -22,13 +22,13 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/lanzadera.svg',
+    src: '/images/about/logos/lanzadera.webp',
     alt: 'Lanzadera Logo',
     width: 254,
     height: 32,
   },
   {
-    src: '/images/about/logos/telefónica.svg',
+    src: '/images/about/logos/telefónica.webp',
     alt: 'Telefonica Logo',
     width: 133,
     height: 32,
@@ -58,7 +58,7 @@ const logos: Logo[] = [
     height: 408,
   },
   {
-    src: '/images/about/logos/mashable.svg',
+    src: '/images/about/logos/mashable.webp',
     alt: 'Mashable Logo',
     width: 201,
     height: 32,
@@ -78,7 +78,7 @@ export const CompanyLogosRecognitions = () => (
       style={{ width: `${200 * logos.length * 2}px` }}
     >
       {logos.map((logo, index) => (
-        <div key={`first-${index}`} className="flex min-w-[200px] flex-shrink-0 items-center justify-center px-8">
+        <div key={`first-${index}`} className="flex min-w-[50px] flex-shrink-0 items-center justify-center px-8">
           <Image
             src={getImage(logo.src)}
             width={logo.width}
@@ -91,7 +91,7 @@ export const CompanyLogosRecognitions = () => (
         </div>
       ))}
       {logos.map((logo, index) => (
-        <div key={`second-${index}`} className="flex min-w-[200px] flex-shrink-0 items-center justify-center px-8">
+        <div key={`second-${index}`} className="flex min-w-[1px] flex-shrink-0 items-center justify-center px-8">
           <Image
             src={getImage(logo.src)}
             width={logo.width}

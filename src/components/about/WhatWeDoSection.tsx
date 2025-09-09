@@ -47,8 +47,8 @@ const WhatWeDoSection = ({ textContent }) => {
               <div className="hidden flex-row gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
-                  width={175}
-                  height={100}
+                  width={190}
+                  height={175}
                   alt="BitCoin Logo"
                   loading="eager"
                   className="hidden lg:flex"
@@ -56,11 +56,11 @@ const WhatWeDoSection = ({ textContent }) => {
                 <p className="text-xl font-medium leading-tight text-gray-95">{textContent.bitSection.title}</p>
               </div>
               <div className="flex flex-col gap-4 lg:hidden">
-                <div className="h-8 w-8">
+                <div className="h-2 w-2">
                   <Image
                     src={getImage('/images/about/logos/BitCoin.webp')}
-                    height={32}
-                    width={32}
+                    height={48}
+                    width={48}
                     alt="BitCoin Logo"
                     className="hidden lg:flex"
                   />
@@ -73,7 +73,13 @@ const WhatWeDoSection = ({ textContent }) => {
                 {textContent.bitSection.description}
               </p>
               <span
-                onClick={() => window.open('https://internxt.com/pricing', '_blank', 'noopener,noreferrer')}
+                onClick={() =>
+                  window.open(
+                    ' https://news.bitcoin.com/privacy-revolution-the-internxt-journey-with-founder-and-ceo-fran-villalba-segarra/',
+                    '_blank',
+                    'noopener,noreferrer',
+                  )
+                }
                 className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
               >
                 {textContent.bitSection.cta}

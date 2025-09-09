@@ -13,7 +13,7 @@ const FeatureSection = ({ textContent }) => {
         <RevealX direction="right" className="hidden lg:flex">
           <Image
             src={getImage('/images/about/photos/Internxt-gift.webp')}
-            width={554}
+            width={500}
             height={520}
             quality={100}
             layout="intrinsic"

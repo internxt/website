@@ -37,6 +37,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
               draggable="false"
               width={752}
               height={320}
+              quality={100}
               alt="Internxt headquarters"
             />
           </div>
@@ -48,6 +49,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
               width={364}
               height={320}
               draggable="false"
+              quality={100}
               alt="Internxt office"
             />
           </div>
@@ -59,6 +61,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
               width={558}
               height={320}
               draggable="false"
+              quality={100}
               alt="Internxt team"
             />
           </div>
@@ -70,6 +73,7 @@ const HeroSection = ({ textContent }): JSX.Element => (
               width={558}
               height={320}
               draggable="false"
+              quality={100}
               alt="Team at Internxt"
             />
           </div>
