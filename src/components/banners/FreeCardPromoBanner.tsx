@@ -33,7 +33,7 @@ export const FreeCardPromoBanner = () => {
       label: 'User accepts the promo',
       value: '',
     });
-    router.push('/specialoffer/exclusiveoffer');
+    router.push('/specialoffer');
     onCloseBanner();
   };
 
