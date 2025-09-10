@@ -185,7 +185,7 @@ export default function HorizontalScrollableSection({
               <div key={index} className="flex-shrink-0">
                 <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-6 lg:w-[450px] lg:p-8">
                   <p className=" pb-4 text-xl font-medium text-gray-95 lg:pb-6">{title}</p>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55">
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>

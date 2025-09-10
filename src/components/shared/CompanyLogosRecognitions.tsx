@@ -43,13 +43,13 @@ const logos: Logo[] = [
   {
     src: '/images/about/logos/startup.png',
     alt: 'Startup Logo',
-    width: 90,
+    width: 120,
     height: 32,
   },
   {
     src: '/images/about/logos/gobierno.webp',
     alt: 'Gobierno Logo',
-    width: 83,
+    width: 100,
     height: 32,
   },
   {
@@ -109,7 +109,7 @@ const logos: Logo[] = [
   {
     src: '/images/about/logos/gobierno.webp',
     alt: 'Gobierno Logo',
-    width: 83,
+    width: 100,
     height: 32,
   },
   {

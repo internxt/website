@@ -44,7 +44,7 @@ const WhatWeDoSection = ({ textContent }) => {
               })}
             </div>
             <div className="flex h-min w-full flex-col justify-center gap-4 rounded-16 bg-white p-6 lg:gap-6 lg:p-8">
-              <div className="hidden flex-row gap-5 lg:flex">
+              <div className="hidden flex-row items-center justify-center gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
                   width={196}
