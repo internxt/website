@@ -29,7 +29,7 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/telefónica.webp',
+    src: '/images/about/logos/Telefónica_2021.png',
     alt: 'Telefonica Logo',
     width: 250,
     height: 1024,
@@ -89,7 +89,7 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/telefónica.png',
+    src: '/images/about/logos/Telefónica_2021.png',
     alt: 'Telefonica Logo',
     width: 250,
     height: 1024,
@@ -132,10 +132,194 @@ const logos: Logo[] = [
   },
 ];
 
+const logosMobile: Logo[] = [
+  {
+    src: '/images/about/logos/valencia.webp',
+    alt: 'Valencia Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/forbes.webp',
+    alt: 'Forbes Logo',
+    width: 61,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/lanzadera.webp',
+    alt: 'Lanzadera Logo',
+    width: 127,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/Telefónica_2021.png',
+    alt: 'Telefonica Logo',
+    width: 125,
+    height: 512,
+  },
+  {
+    src: '/images/about/logos/deloitte.webp',
+    alt: 'Deloitte Logo',
+    width: 73,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/startup.png',
+    alt: 'Startup Logo',
+    width: 45,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/gobierno.webp',
+    alt: 'Gobierno Logo',
+    width: 41,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/levante.webp',
+    alt: 'Levante Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/mashable.webp',
+    alt: 'Mashable Logo',
+    width: 100,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/prosegur.webp',
+    alt: 'Prosegur Logo',
+    width: 85,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/valencia.webp',
+    alt: 'Valencia Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/forbes.webp',
+    alt: 'Forbes Logo',
+    width: 61,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/lanzadera.webp',
+    alt: 'Lanzadera Logo',
+    width: 127,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/Telefónica_2021.png',
+    alt: 'Telefonica Logo',
+    width: 125,
+    height: 512,
+  },
+  {
+    src: '/images/about/logos/deloitte.webp',
+    alt: 'Deloitte Logo',
+    width: 73,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/startup.png',
+    alt: 'Startup Logo',
+    width: 45,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/gobierno.webp',
+    alt: 'Gobierno Logo',
+    width: 41,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/levante.webp',
+    alt: 'Levante Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/mashable.webp',
+    alt: 'Mashable Logo',
+    width: 100,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/prosegur.webp',
+    alt: 'Prosegur Logo',
+    width: 85,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/valencia.webp',
+    alt: 'Valencia Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/forbes.webp',
+    alt: 'Forbes Logo',
+    width: 61,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/lanzadera.webp',
+    alt: 'Lanzadera Logo',
+    width: 127,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/Telefónica_2021.png',
+    alt: 'Telefonica Logo',
+    width: 125,
+    height: 512,
+  },
+  {
+    src: '/images/about/logos/deloitte.webp',
+    alt: 'Deloitte Logo',
+    width: 73,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/startup.png',
+    alt: 'Startup Logo',
+    width: 45,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/gobierno.webp',
+    alt: 'Gobierno Logo',
+    width: 41,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/levante.webp',
+    alt: 'Levante Logo',
+    width: 204,
+    height: 204,
+  },
+  {
+    src: '/images/about/logos/mashable.webp',
+    alt: 'Mashable Logo',
+    width: 100,
+    height: 16,
+  },
+  {
+    src: '/images/about/logos/prosegur.webp',
+    alt: 'Prosegur Logo',
+    width: 85,
+    height: 16,
+  },
+];
+
 export const CompanyLogosRecognitions = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos];
+  const duplicatedLogosMobile = [...logosMobile, ...logosMobile, ...logosMobile, ...logosMobile, ...logosMobile];
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -148,8 +332,7 @@ export const CompanyLogosRecognitions = () => {
       if (scrollContainer) {
         scrollContainer.scrollLeft += scrollSpeed;
 
-        // Calcular el ancho de un conjunto (con padding)
-        const logoWidth = 200; // Ancho aproximado por logo con padding
+        const logoWidth = 200;
         const singleSetWidth = logos.length * logoWidth;
 
         if (scrollContainer.scrollLeft >= singleSetWidth) {
@@ -178,7 +361,7 @@ export const CompanyLogosRecognitions = () => {
           msOverflowStyle: 'none',
         }}
       >
-        <div className="flex">
+        <div className="hidden lg:flex">
           {duplicatedLogos.map((logo, index) => (
             <div
               key={`${logo.src}-${index}`}
@@ -196,9 +379,26 @@ export const CompanyLogosRecognitions = () => {
             </div>
           ))}
         </div>
+        <div className="flex lg:hidden">
+          {duplicatedLogosMobile.map((logo, index) => (
+            <div
+              key={`${logo.src}-${index}`}
+              className="flex min-w-[50px] flex-shrink-0 items-center justify-center px-4"
+            >
+              <Image
+                src={getImage(logo.src)}
+                width={logo.width}
+                height={logo.height}
+                loading="lazy"
+                alt={logo.alt}
+                draggable={false}
+                className="max-h-12 w-auto object-contain"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Gradientes para el fade effect */}
       <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-gradient-to-r from-white to-transparent"></div>
       <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-gradient-to-l from-white to-transparent"></div>
     </div>

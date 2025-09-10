@@ -47,10 +47,11 @@ const WhatWeDoSection = ({ textContent }) => {
               <div className="hidden flex-row gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
-                  width={179}
-                  height={149}
+                  width={196}
+                  height={196}
                   alt="BitCoin Logo"
                   className="hidden lg:flex"
+                  quality={100}
                 />
                 <p className="text-xl font-medium leading-tight text-gray-95">{textContent.bitSection.title}</p>
               </div>
