@@ -1,7 +1,4 @@
 /* eslint-disable no-dupe-keys */
-const { blue } = require('@mui/material/colors');
-const { defaultTheme } = require('react-select');
-
 module.exports = {
   content: [
     './src/**',
@@ -17,6 +14,7 @@ module.exports = {
       black: 'rgb(0,0,0)',
       white: 'rgb(255,255,255)',
       'white-summer': 'rgb(239, 239, 239, 0.6)',
+      'white-95': 'rgb(250,250,250)',
       'white-summer-2': 'rgb(255, 255, 255, 0.3)',
       // NEW DESIGN SYSTEM
       primary: 'rgb(0,102,255)',
@@ -46,14 +44,14 @@ module.exports = {
         30: 'rgb(199,199,205)',
         40: 'rgb(174,174,179)',
         50: 'rgb(142,142,148)',
-        55: 'rgb(115,115,115)',
-        55: 'rgb(115,115,115)',
+        55: 'rgb(115, 115, 115)',
         60: 'rgb(99,99,103)',
         70: 'rgb(72,72,75)',
         80: 'rgb(58,58,59)',
         90: 'rgb(44,44,48)',
         95: 'rgb(28, 28, 28)',
         100: 'rgb(24,24,27)',
+        105: 'rgb(13,13,13)',
       },
       surface: 'rgba(255, 255, 255, 0.07)',
       gradients: {
@@ -61,17 +59,12 @@ module.exports = {
       },
       green: {
         0: 'rgb(30, 117, 51, 1)',
-        10: 'rgb(45, 175, 77, 1)',
         1: 'rgb(50,195,86)',
         8: 'rgb(50, 195, 86, 0.08)',
         25: 'rgb(204, 240, 213)',
         40: 'rgb(173, 231, 187)',
         55: 'rgb(142, 222, 162)',
         100: 'rgb(214, 243, 221, 1)',
-        110: 'rgb(234, 249, 238)',
-        120: 'rgb(236, 236, 236)',
-        110: 'rgb(234, 249, 238)',
-        120: 'rgb(236, 236, 236)',
         dark: 'rgb(45, 174, 77, 1)',
       },
       orange: {
@@ -102,6 +95,7 @@ module.exports = {
         40: 'rgb(120,169,255)',
         50: 'rgb(69,137,255)',
         60: 'rgb(15,98,254)',
+        62: 'rgb(14,79,178,1)',
         65: 'rgb(0,102,255, 0.1)',
         70: 'rgb(0,67,206)',
         80: 'rgb(0,45,156)',
@@ -110,11 +104,7 @@ module.exports = {
       },
       'red-old': {
         10: 'rgb(255,241,241)',
-        15: 'rgb(255, 230, 229)',
-        15: 'rgb(255, 230, 229)',
         20: 'rgb(255,215,217)',
-        25: 'rgb(255, 206, 204)',
-        25: 'rgb(255, 206, 204)',
         30: 'rgb(255,179,184)',
         40: 'rgb(255,131,137)',
         50: 'rgb(250,77,86)',
@@ -149,18 +139,20 @@ module.exports = {
         100: 'rgb(7,25,8)',
       },
       neutral: {
-        5: 'rgb(250, 250, 250)',
         10: 'rgb(250,251,252)',
         15: 'rgb(249,249,252)',
         17: 'rgb(244,248,255)',
         20: 'rgb(244,245,247)',
+        25: 'rgb(236,236,236)',
         30: 'rgb(235,236,240)',
-        35: 'rgb(229,239,255)',
+        35: 'rgb(236,236,236)',
+        37: 'rgb(229, 239, 255)',
         40: 'rgb(223,225,230)',
         50: 'rgb(193,199,208)',
         60: 'rgb(179,186,197)',
         70: 'rgb(165,173,186)',
         80: 'rgb(151,160,175)',
+        90: 'rgb(140,140,140)',
         100: 'rgb(122,134,154)',
         200: 'rgb(107,119,140)',
         300: 'rgb(94,108,132)',
@@ -208,13 +200,6 @@ module.exports = {
         100: '100px',
         '4xl': '2.75rem',
         'full-percentage': '100%',
-        20: '20px',
-        'sm-6': '6px',
-        32: '32px',
-        2: '2px',
-        16: '16px',
-        100: '100px',
-        100: '100px',
       },
 
       boxShadow: {
@@ -227,7 +212,6 @@ module.exports = {
       fontSize: {
         'supporting-1': '0.5rem',
         'supporting-2': '0.625rem',
-        10: '10px',
         '3xl': '2.5rem',
         30: '1.875rem',
       },
@@ -244,6 +228,10 @@ module.exports = {
         'scroll-x': {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       transitionDelay: {
@@ -352,6 +340,10 @@ module.exports = {
         marquee: {
           '0%': { transform: 'translateX(100%)' },
           '100%': { transform: 'translateX(-100%)' },
+        },
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
 
