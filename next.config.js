@@ -227,6 +227,21 @@ module.exports = {
         destination: '/comparison/mega-alternative',
         permanent: false,
       },
+      {
+        source: '/pcloud-alternative',
+        destination: '/comparison/pcloud-alternative',
+        permanent: false,
+      },
+      {
+        source: '/dropbox-alternative',
+        destination: '/comparison/dropbox-alternative',
+        permanent: false,
+      },
+      {
+        source: '/mega-alternative',
+        destination: '/comparison/mega-alternative',
+        permanent: false,
+      },
     ];
   },
   images: {
