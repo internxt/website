@@ -225,6 +225,7 @@ module.exports = {
       {
         source: '/mega-alternative',
         destination: '/comparison/mega-alternative',
+        permanent: false,
       },
       {
         source: '/driffle',
