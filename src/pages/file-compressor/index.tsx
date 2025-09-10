@@ -35,7 +35,7 @@ const FileConverter = ({
       <CtaSection
         textContent={textContent.CtaSection}
         url="https://internxt.com"
-        customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
+        customText={<p className="w-full text-xl font-normal">{textContent.CtaSection.description}</p>}
       />
 
       <ToolsSection textContent={toolsContent} lang={lang} />
@@ -43,7 +43,7 @@ const FileConverter = ({
       <CtaSection
         textContent={textContent.CtaSection2}
         url="https://drive.internxt.com/new"
-        customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
+        customText={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
       />
 
       <QASection textContent={textContent.QASection} />

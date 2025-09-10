@@ -81,6 +81,22 @@ export interface FreeCardPromoBanner {
   getDealCta: string;
   freePlanCta: string;
   guarantee: string;
+  header: Header;
+  products: Products;
+}
+
+export interface Header {
+  primaryText: string;
+  afterPrimaryText: string;
+}
+
+export interface Products {
+  drive: string;
+  antivirus: string;
+  cleaner: string;
+  vpn: string;
+  meet: string;
+  mail: string;
 }
 
 export interface Subtitle {

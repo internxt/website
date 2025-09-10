@@ -27,9 +27,11 @@ const ProductCard = ({
       direction={animationDirection}
       className={`flex flex-col overflow-hidden rounded-2xl bg-gray-100 lg:flex-row lg:gap-0`}
     >
-      <div className="flex h-full flex-col items-center justify-center p-7 text-center lg:order-last lg:items-start lg:pl-20 lg:text-start">
-        <h4 className="mb-10 max-w-xs text-4xl font-semibold text-white lg:text-4xl">{textContent.title}</h4>
-        <h5 className="mb-4 max-w-[340px] text-xl text-white">{textContent.description}</h5>
+      <div className="flex h-min flex-col items-center justify-center p-7 text-center lg:order-last lg:items-start lg:text-center">
+        <h4 className="my-10 max-w-xs text-30 font-semibold leading-tight text-white lg:text-3xl">
+          {textContent.title}
+        </h4>
+        <h5 className="mb-4 max-w-[340px] text-base leading-tight text-white lg:text-xl">{textContent.description}</h5>
         <div className="flex justify-start">
           <Link
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"

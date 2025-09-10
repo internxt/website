@@ -1,39 +1,37 @@
-import { getImage } from '@/lib/getImage';
 import Link from 'next/link';
 
-const CtaSection = ({
+const FloatingCtaSectionv2 = ({
   textContent,
   url,
-  maxWidth,
   target,
-  bgImage,
-  customDescription,
+  customText,
+  bgGradientContainerColor,
+  bgGradientColor,
+  containerDetails,
 }: {
   textContent: any;
   url?: string;
-  maxWidth?: string;
   target?: string;
-  bgImage?: string;
-  customDescription?: React.ReactNode;
+  bgGradientContainerColor?: string;
+  bgGradientColor?: string;
+  customText?: React.ReactNode;
+  containerDetails?: string;
 }) => {
-  const DEFAULT_BACKGROUND = 'radial-gradient(ellipse at center, #F9F9FC 0%, #E5EFFF 100%)';
   return (
     <section
-      style={{
-        background: bgImage ? `url(${getImage(bgImage)})` : DEFAULT_BACKGROUND,
-      }}
-      className="overflow-hidden bg-cover px-5 py-14"
+      className="flex h-[330px] w-full items-center justify-center px-10 lg:py-9 xl:px-32 3xl:px-80"
+      style={{ background: bgGradientColor }}
     >
-      <div className="flex flex-col items-center justify-center space-y-8 text-center">
-        <div className={`flex ${maxWidth} flex-col items-center space-y-4 text-center text-black`}>
-          <p className="text-3xl font-semibold xl:text-4xl">{textContent.title}</p>
-          {customDescription}
-        </div>
+      <div
+        className={`z-10 flex h-auto w-full flex-col items-center justify-evenly gap-2 rounded-20 py-2 lg:py-10 ${containerDetails}`}
+        style={{ background: bgGradientContainerColor }}
+      >
+        {customText}
         {url && (
           <Link
             href={url}
             target={target}
-            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white`}
+            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark xl:mr-10`}
           >
             {textContent.cta}
           </Link>
@@ -43,4 +41,4 @@ const CtaSection = ({
   );
 };
 
-export default CtaSection;
+export default FloatingCtaSectionv2;

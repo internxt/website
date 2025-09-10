@@ -72,7 +72,8 @@
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Consapevolezza informatica",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "comparison": "Confronto tra i servizi cloud"
+        "comparison": "Confronto tra i servizi cloud",
+        "WebDAV": "CLI & WebDAV"
       },
       "tools": {
         "title": "Strumenti gratuiti",
@@ -93,7 +94,8 @@
         "privateCloud": "Soluzione cloud privato",
         "cloudBakcup": "Soluzione di backup cloud",
         "GDPRCloud": "Archiviazione GDPR",
-        "cloudPhotos": "Foto nel cloud"
+        "cloudPhotos": "Foto nel cloud",
+        "cloudVideo": "Video nel cloud"
       }
     }
   },

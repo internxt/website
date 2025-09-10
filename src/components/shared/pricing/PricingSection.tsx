@@ -3,19 +3,13 @@ import { Transition } from '@headlessui/react';
 
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { PlanSelector, SwitchButtonOptions } from './components/PlanSelector';
-import { SwitchComponent } from './components/Switch';
+import { SwitchComponent, SwitchStorageBusinessOptions } from './components/Switch';
 import CardSkeleton from '@/components/components/CardSkeleton';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { PriceCard } from './PriceCard';
-import { CurrencyCircleDollar, Lifebuoy } from '@phosphor-icons/react';
+import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
-import { OpenSource } from '../icons/OpenSource';
-
-const SKELETON_CARDS = {
-  Individuals: 4,
-  Business: 2,
-};
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -25,6 +19,7 @@ interface PriceTableProps {
   activeSwitchPlan: SwitchButtonOptions;
   lang: string;
   popularPlanBySize?: string;
+  businessStorageSelected: SwitchStorageBusinessOptions;
   hideBusinessSelector?: boolean;
   hidePlanSelectorComponent?: boolean;
   hideBusinessCards?: boolean;
@@ -48,6 +43,7 @@ interface PriceTableProps {
   isAffiliate?: boolean;
   onPlanTypeChange: (activeSwitchPlan: SwitchButtonOptions, interval: Interval) => void;
   onIndividualSwitchToggled: (interval: Interval) => void;
+  onBusinessStorageChange: (businessStorageSelected: string) => void;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
@@ -67,16 +63,18 @@ export const PricingSection = ({
   hidePlanSelectorComponent,
   hideBusinessSelector,
   hideSwitchSelector,
+  businessStorageSelected,
   lang,
   popularPlanBySize = '3TB',
   isFamilyPage,
   onPlanTypeChange,
+  onBusinessStorageChange,
   onIndividualSwitchToggled,
   onBusinessSwitchToggled,
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-  isAnnual,
+
   hideFeatures,
   showPromo,
   isAffiliate,
@@ -104,15 +102,15 @@ export const PricingSection = ({
 
   const features = [
     {
-      icon: Lifebuoy,
+      icon: Headset,
       text: textContent.features.premiumSupport,
     },
     {
-      icon: CurrencyCircleDollar,
+      icon: HandCoins,
       text: textContent.features.guarantee,
     },
     {
-      icon: OpenSource,
+      icon: Keyhole,
       text: textContent.features.openSource,
     },
   ];
@@ -127,8 +125,7 @@ export const PricingSection = ({
 
   return (
     <>
-      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9`}>
-        {/* Switch buttons (Individual plans | Lifetime plans | Business) */}
+      <div className={`${hidePlanSelectorAndSwitch ? 'hidden' : 'flex'} flex-col items-center space-y-9 `}>
         {!hidePlanSelectorComponent && (
           <PlanSelector
             textContent={textContent}
@@ -140,7 +137,6 @@ export const PricingSection = ({
           />
         )}
 
-        {/* Switch buttons for Individual plans (Monthly | Annually) */}
         {!hideSwitchSelector && activeSwitchPlan !== 'Lifetime' && (
           <SwitchComponent
             textContent={textContent}
@@ -151,6 +147,8 @@ export const PricingSection = ({
             labelDiscount={labelDiscount}
             showLabelDiscount={activeSwitchPlan === 'Business' || activeSwitchPlan === 'Individuals'}
             darkMode={darkMode}
+            activeStoragePlan={businessStorageSelected}
+            onBusinessStorageChange={onBusinessStorageChange}
           />
         )}
       </div>
@@ -176,7 +174,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row justify-end gap-4 pb-20">
+        <div className="content flex flex-row justify-end gap-4 ">
           {products?.individuals
             ? products.individuals[billingFrequency].map((product, cardIndex) => (
                 <PriceCard
@@ -243,15 +241,21 @@ export const PricingSection = ({
         </div>
       </Transition>
       {!hideFeatures && (
-        <div className="flex flex-col items-center justify-center space-y-8 text-center md:flex-row md:items-start md:space-x-32 md:space-y-0">
-          {features.map((feature) => (
-            <div key={feature.text} className="flex flex-col items-center space-x-3 md:max-w-[33%] md:flex-row ">
-              <feature.icon size={40} className="!h-[40px] !w-[40px] shrink-0 text-primary md:pb-0" />
-              <p className={`text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>{feature.text}</p>
-            </div>
-          ))}
+        <div className="w-full lg:px-10 xl:px-32 3xl:px-80">
+          <div className="flex flex-col items-center justify-between text-center md:flex-row md:items-start md:space-x-16 md:space-y-0">
+            {features.map((feature) => (
+              <div key={feature.text} className="flex flex-col items-start gap-3 md:max-w-[33%] md:flex-row">
+                <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
+                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                  {feature.text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       )}
+
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
     </>
   );
 };

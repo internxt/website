@@ -71,7 +71,8 @@
         "dropboxAlternative": "Dropbox-Alternative",
         "cyberSecurityGlossary": "Cyber Security Glossary",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "Was Google weiß"
+        "whatGoogleKnowsAboutMe": "Was Google weiß",
+        "WebDAV": "CLI & WebDAV"
       },
       "tools": {
         "title": "Kostenlose Tools",
@@ -91,7 +92,8 @@
         "privateCloud": "Private-Cloud-Lösung",
         "cloudBakcup": "Cloud-Backup-Lösung",
         "GDPRCloud": "DSGVO-Speicher",
-        "cloudPhotos": "Fotos in der Cloud"
+        "cloudPhotos": "Fotos in der Cloud",
+        "cloudVideo": "Videos in der Cloud"
       }
     }
   },

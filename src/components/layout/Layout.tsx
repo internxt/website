@@ -1,20 +1,15 @@
+/* eslint-disable @next/next/next-script-for-ga */
+/* eslint-disable @next/next/no-sync-scripts */
+/* eslint-disable @next/next/no-css-tags */
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
 import TopBanner from '@/components/banners/TopBanner';
-import {
-  SNIGEL_BANNERS,
-  INCLUDED_PATHS_FOR_SNIGEL,
-  INTERNXT_URL,
-  PATHS_WITH_CUSTOM_SNIGEL_BANNERS,
-  EXCLUDED_PATHS_FOR_BANNER,
-} from '@/constants';
+import { INTERNXT_URL, EXCLUDED_PATHS_FOR_BANNER } from '@/constants';
 import { GlobalDialog, useGlobalDialog } from '@/contexts/GlobalUIManager';
 import { handleImpact } from '@/services/impact.service';
 import { saveGclidToCookie } from '@/lib/cookies';
-
-const IMPACT_API = process.env.NEXT_PUBLIC_IMPACT_API as string;
 
 const slogan = {
   en: "Internxt is a secure cloud storage service based on encryption and absolute privacy. Internxt's open-source suite of cloud storage services protects your right to privacy. Internxt Drive, Photos, Send, and more.",
@@ -48,33 +43,15 @@ export default function Layout({
   pathnameForSEO,
   disableDrift = true,
   isBannerFixed,
-  isProduction = process.env.NODE_ENV === 'production',
-}: // lang
-LayoutProps) {
-  const pageURL = segmentName === 'home' ? '' : segmentName;
+}: LayoutProps) {
   const router = useRouter();
   const { dialogIsOpen } = useGlobalDialog();
   const pathname = pathnameForSEO ? pathnameForSEO : router.pathname === '/' ? '' : router.pathname;
   const lang = router.locale;
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
 
-  const snigelBanners = PATHS_WITH_CUSTOM_SNIGEL_BANNERS.includes(pathname)
-    ? [...SNIGEL_BANNERS.DEFAULT_BANNERS, ...SNIGEL_BANNERS.CUSTOM_BANNERS]
-    : SNIGEL_BANNERS.DEFAULT_BANNERS;
-
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
   const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
-
-  function getCookie(cookieName: string) {
-    const cookies = document.cookie.split(';');
-    for (const cookie of cookies) {
-      const [name, value] = cookie.trim().split('=');
-      if (name === cookieName) {
-        return decodeURIComponent(value);
-      }
-    }
-    return null;
-  }
 
   // THIS USE EFFECT SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
@@ -103,15 +80,6 @@ LayoutProps) {
       <Head>
         <title>{title}</title>
         <link rel="canonical" href={`${INTERNXT_URL}${lang === 'en' ? '' : `/${lang}`}${pathname}`} />
-        <link rel="alternate" hrefLang={'en'} href={`${INTERNXT_URL}${pathname}`} />
-        <link rel="alternate" hrefLang={'it'} href={`${INTERNXT_URL}/it${pathname}`} />
-        <link rel="alternate" hrefLang={'es'} href={`${INTERNXT_URL}/es${pathname}`} />
-        <link rel="alternate" hrefLang={'zh'} href={`${INTERNXT_URL}/zh${pathname}`} />
-        <link rel="alternate" hrefLang={'fr'} href={`${INTERNXT_URL}/fr${pathname}`} />
-        <link rel="alternate" hrefLang={'ru'} href={`${INTERNXT_URL}/ru${pathname}`} />
-        <link rel="alternate" hrefLang={'de'} href={`${INTERNXT_URL}/de${pathname}`} />
-        <link rel="alternate" hrefLang={'zh-tw'} href={`${INTERNXT_URL}/zh-tw${pathname}`} />
-        <link rel="alternate" hrefLang="x-default" href={`${INTERNXT_URL}${pathname}`} />
         <meta charSet="utf-8" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -167,34 +135,32 @@ LayoutProps) {
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              var _adsyq = _adsyq || [];
-              _adsyq.push(['trackPageView']);
-              (function() {
-                var u = 'https://track.adsynergix.com/';
-                var d = document, s = d.createElement('script'); s.async = true;
-                s.src = u + 'adsy.js'; d.getElementsByTagName('head')[0].appendChild(s);
+              var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
+              (function(){
+                  var t = document.createElement("script");
+                  t.type = "text/javascript";
+                  t.async = true;
+                  t.id = "AddShoppers";
+                  t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
+                  document.getElementsByTagName("head")[0].appendChild(t);
               })();
             `,
-          }}
-        ></script>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-      var AddShoppersWidgetOptions = { loadCss: false, pushResponse: false };
-      (function(){
-          var t = document.createElement("script");
-          t.type = "text/javascript";
-          t.async = true;
-          t.id = "AddShoppers";
-          t.src = "https://shop.pe/widget/widget_async.js#686e92fe5eacb3be0df9b1d8";
-          document.getElementsByTagName("head")[0].appendChild(t);
-      })();
-    `,
           }}
         />
 
         <script src="https://retarglow.com/pixel"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-CHHGLQTHSB');
+            `,
+          }}
+        />
 
         {lang === 'es' && (
           <script

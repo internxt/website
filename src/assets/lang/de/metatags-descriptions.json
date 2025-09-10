@@ -25,6 +25,11 @@
     "description": "Erhalten Sie 75% Rabatt auf jeden Internxt-Plan, um Ihre Dateien privat zu halten und sich nie wieder Sorgen um Platzmangel zu machen."
   },
   {
+    "id": "affiliates",
+    "title": "Partner-Programm | Internxt",
+    "description": "Treten Sie Internxts Affiliate-Marketing-Programm bei! Wie Sie anfangen plus Programmdetails, Vorteile und Vergünstigungen."
+  },
+  {
     "id": "drive",
     "title": "Internxt Drive – Privater und sicherer Cloud-Speicher",
     "description": "Speichere, teile und sichere deine Dateien und Fotos mit Internxt Drive in der Cloud. Open-Source- und end-to-end verschlüsselte Dateispeicherung und Online-Sicherung."
@@ -259,5 +264,10 @@
     "id": "compress-zip",
     "title": "Online ZIP-Komprimierer - Internxt",
     "description": "Ein Online-ZIP-Komprimierer reduziert die Größe Ihrer ZIP-Dateien, um Speicherplatz zu sparen und Dateien ohne Größenbeschränkungen zu teilen und hochzuladen."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - Cloud-Speicher für Videodateien",
+    "description": "Internxt bietet Cloud-Speicher für Videodateien zum Speichern von HD-, 4K- und 8K-Videos, die mit Post-Quanten-Verschlüsselung für maximale Privatsphäre gesichert sind."
   }
 ]

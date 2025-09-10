@@ -13,7 +13,19 @@
     "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
     "getDealCta": "獲取優惠",
     "freePlanCta": "繼續使用免費計劃",
-    "guarantee": "30天退款保證"
+    "guarantee": "30天退款保證",
+    "header": {
+      "primaryText": "享受87%折扣",
+      "afterPrimaryText": "適用於所有高級方案"
+    },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "購買前先試用。",
@@ -160,7 +172,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Internxt 五週年！所有方案享85%折扣 ",
+      "normalText": "Internxt 五週年！所有方案享87%折扣 ",
       "cta": "選擇你的方案 "
     }
   },

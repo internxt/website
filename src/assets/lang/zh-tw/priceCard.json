@@ -47,7 +47,7 @@
     "semiannually": "/每半年",
     "annually": "/每年"
   },
-  "perUserSlash": "每用戶/",
+  "perUserSlash": "/每",
   "perUser": "每用戶",
   "users": "用戶",
   "freePlan": "免費",
@@ -138,7 +138,7 @@
         "邀請、分享與協作",
         "符合 GDPR 规定",
         "双重身份验证（2FA）",
-        "支持 CLI、WebDav 和 Rclone",
+
         "裝置清理",
         "暗網監控"
       ],

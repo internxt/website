@@ -52,6 +52,7 @@
     },
     "save": "節省高達",
     "planTitles": {
+      "header": "選擇最適合您的方案",
       "individuals": "個人計劃",
       "lifetime": "終身計劃",
       "business": "商業計劃",
@@ -65,7 +66,7 @@
       }
     },
     "lifetimeDescription": "一次購買，永久享受隱私和安全。",
-    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor,Meet和Mail。",
     "businessDescription": "我們目前正在開發新的 Internxt 計劃，專門用於保護您的業務，保護您的員工，並確保您的底線安全。",
     "businessDescription2": "通過 Internxt 的加密雲存儲計劃確保企業數據安全。",
     "billingFrequency": {
@@ -78,6 +79,7 @@
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
       "description": "免费 – 免费获取 1GB 加密云存储",
+      "mobileDescription": "免费 – 免费获取 1GB 加密云存储",
       "cta": "选择方案"
     },
     "features": {
@@ -92,6 +94,84 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "InfoSection": {
+    "title": "無與倫比的隱私安全的雲存儲",
+    "description": "Internxt 有何特色？我們是一支緊密團結的專業團隊，致力於全面保護您的在線安全。我們所做的一切和每一個決定都圍繞著保護您的數據不受利用。",
+    "cta": "介紹 Internxt 團隊",
+    "scrollableSection": {
+      "titles": ["設計上獨具私密性", "毫不妥協的安全性", "開源和透明", "經獨立驗證"],
+      "descriptions": [
+        "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據是您的業務。保護它就是我們的業務。",
+        "您的文件在離開您的設備之前就已進行端到端加密。多虧了零知識 AES-256 加密，您是唯一可以訪問您的數據的人。",
+        "我們對自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們除了您的數據之外，一無所隱藏。",
+        "我們完全符合 GDPR，並且百分之百安全，但不要聽我們的。Internxt 已經由歐洲領先的滲透測試公司 Securitum 進行了獨立審核和驗證。"
+      ]
+    }
+  },
+  "InfoSectionForBusiness": {
+    "title": "使用 Internxt 可以做什麼？",
+    "description": "使用我們的安全雲存儲為企業優化您的組織文件管理、安全性和隱私性。",
+    "cta": "Internxt 對隱私的承諾",
+    "cards": [
+      {
+        "title": "管理您的組織",
+        "description": "Internxt 為企業提供了簡化的用戶和團隊管理、靈活的存儲分配和可自定義的工作區。輕鬆切換業務和個人任務以優化生產力和組織性。"
+      },
+      {
+        "title": "安全發送機密文件",
+        "description": "安全的雲存儲包括安全的文件共享功能，以便在團隊中安全協作。使用密碼保護和限制文件訪問權限，將機密文件發送給合作夥伴，確保您保持對其安全性的控制。"
+      },
+      {
+        "title": "備份重要文件",
+        "description": "備份文件以防止數據丟失。此外，Internxt 在不同的歐盟伺服器上存儲和備份同一份文件，以增加安全性，使其成為最安全的企業雲備份。"
+      },
+      {
+        "title": "隨時隨地與團隊合作",
+        "description": "適用於 Windows、Mac、Linux、iOS、Android 和 Web。隨時隨地在任何設備上訪問文件，確保您和您的團隊無論身在何處都能安全工作。"
+      }
+    ]
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "核心隱私",
+      "description": "在我們所做的一切中，我們始終把用戶和他們的權利放在首位。我們的使命很簡單，就是創建更好的工具和服務，讓最終用戶重獲主動權。",
+      "cta": "我們對隱私的承諾"
+    },
+    "card2": {
+      "title": "無縫體驗",
+      "description": "Internxt 在所有平台上都可用，甚至還有 Linux！使用我們的移動應用程序、Web 和桌面應用程序同步您的文件和照片，每個都被設計成在您移動時提供超強加密存儲。",
+      "cta": "下載應用程序"
+    },
+    "card3": {
+      "title": "免費試用 Internxt！",
+      "description": "获得 1GB 的免费存储空间，在完全投入之前看看隐私是否适合你。",
+      "cta": "創建免費帳戶"
+    }
+  },
+  "BestStorageSection": {
+    "title": "為未來而建",
+    "description": "我們希望建立一個更好的全球互聯網，一個對所有人都公平、安全和公正的互聯網。互聯網隱私的未來戰爭正在進行中，我們正處於前沿。",
+    "card1": {
+      "title": "分散式工作"
+    },
+    "card2": {
+      "title": "AES-256 加密"
+    },
+    "card3": {
+      "title": "內置冗餘"
+    },
+    "card4": {
+      "title": "開源代碼"
+    },
+    "card5": {
+      "title": "獨立驗證"
+    }
+  },
+  "lastCtaSection": {
+    "title": "全球最私密的雲存儲",
+    "description": "保護 Internxt 安全、私密且加密的雲存儲中的真正重要的內容。",
+    "cta": "立即選擇計劃"
   },
   "FaqSection": {
     "title": "有問題嗎？我們有答案",
@@ -197,23 +277,7 @@
       {
         "question": "您提供什麼級別的技術支持？",
         "answer": [
-          "我們有一個專門的客戶支持團隊，可以回答任何問題或疑慮，或根據您的需要提供額外的信息。您可以訪問我們的幫助中心或通過 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們，我們的團隊將很樂意為您提供幫助。"
-        ]
-      }
-    ]
-  },
-  "SchemaMarkupQuestions": {
-    "faq": [
-      {
-        "question": "Internxt 是否有終身計劃？",
-        "answer": [
-          "我們提供從我們的網站購買的終身計劃。這些計劃讓您終身訪問我們的計劃，一次性付款可獲得高達 10TB 的存儲空間。"
-        ]
-      },
-      {
-        "question": "我可以向我的終身計劃添加更多存儲空間嗎？",
-        "answer": [
-          "是的，您可以向您的 Internxt 終身會員賬戶添加任意多的存儲空間。Internxt 終身計劃是可堆疊的。只需使用相同的電子郵件地址購買它們，然後聯繫我們的 hello@internxt.com，我們將在同一帳戶上為您堆疊它們。"
+          "我們有一個專門的客戶支持團隊，可以回答任何問題或疑慮，或根據您的需要提供額外的信息。您可以訪問我們的幫助中心或通過 hello@internxt.com 聯繫我們，我們的團隊將很樂意為您提供幫助。"
         ]
       }
     ]
@@ -223,91 +287,16 @@
     "description": "注册并免费获得 Internxt 提供的 1 GB 端到端加密云存储空间。",
     "cta": "創建免費帳戶"
   },
-  "InfoSection": {
-    "title": "無與倫比的隱私安全的雲存儲",
-    "description": "Internxt 有何特色？我們是一支緊密團結的專業團隊，致力於全面保護您的在線安全。我們所做的一切和每一個決定都圍繞著保護您的數據不受利用。",
-    "cta": "介紹 Internxt 團隊",
-    "cards": [
+  "SchemaMarkupQuestions": {
+    "faq": [
       {
-        "title": "設計上獨具私密性",
-        "description": "我們不存儲密碼或用戶數據，您的所有數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據是您的業務。保護它就是我們的業務。"
+        "question": "Internxt 的計劃多少錢？",
+        "answer": ["需要更多存储空间？我们还提供从 20GB 到 2TB 的单独计划，起价为 €0.89/月。"]
       },
       {
-        "title": "毫不妥協的安全性",
-        "description": "您的文件在離開您的設備之前就已進行端到端加密。多虧了零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
-      },
-      {
-        "title": "開源和透明",
-        "description": "我們對自己的工作感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們除了您的數據之外，一無所隱藏。"
-      },
-      {
-        "title": "經獨立驗證",
-        "description": "我們完全符合 GDPR，並且百分之百安全，但不要聽我們的。Internxt 已經由歐洲領先的滲透測試公司 Securitum 進行了獨立審核和驗證。"
+        "question": "Internxt 是否提供终身计划？",
+        "answer": ["我们提供可以在我们网站上购买的终身计划。这些计划提供最高 10TB 的终身访问权限，只需一次性付款。"]
       }
     ]
-  },
-  "InfoSectionForBusiness": {
-    "title": "使用 Internxt 可以做什麼？",
-    "description": "使用我們的安全雲存儲為企業優化您的組織文件管理、安全性和隱私性。",
-    "cta": "",
-    "cards": [
-      {
-        "title": "管理您的組織",
-        "description": "Internxt 為企業提供了簡化的用戶和團隊管理、靈活的存儲分配和可自定義的工作區。輕鬆切換業務和個人任務以優化生產力和組織性。"
-      },
-      {
-        "title": "安全發送機密文件",
-        "description": "安全的雲存儲包括安全的文件共享功能，以便在團隊中安全協作。使用密碼保護和限制文件訪問權限，將機密文件發送給合作夥伴，確保您保持對其安全性的控制。"
-      },
-      {
-        "title": "備份重要文件",
-        "description": "備份文件以防止數據丟失。此外，Internxt 在不同的歐盟伺服器上存儲和備份同一份文件，以增加安全性，使其成為最安全的企業雲備份。"
-      },
-      {
-        "title": "隨時隨地與團隊合作",
-        "description": "適用於 Windows、Mac、Linux、iOS、Android 和 Web。隨時隨地在任何設備上訪問文件，確保您和您的團隊無論身在何處都能安全工作。"
-      }
-    ]
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "核心隱私",
-      "description": "在我們所做的一切中，我們始終把用戶和他們的權利放在首位。我們的使命很簡單，就是創建更好的工具和服務，讓最終用戶重獲主動權。",
-      "cta": "我們對隱私的承諾"
-    },
-    "card2": {
-      "title": "無縫體驗",
-      "description": "Internxt 在所有平台上都可用，甚至還有 Linux！使用我們的移動應用程序、Web 和桌面應用程序同步您的文件和照片，每個都被設計成在您移動時提供超強加密存儲。",
-      "cta": "下載應用程序"
-    },
-    "card3": {
-      "title": "免費試用 Internxt！",
-      "description": "获得 1GB 的免费存储空间，在完全投入之前看看隐私是否适合你。",
-      "cta": "創建免費帳戶"
-    }
-  },
-  "BestStorageSection": {
-    "title": "為未來而建",
-    "description": "我們希望建立一個更好的全球互聯網，一個對所有人都公平、安全和公正的互聯網。互聯網隱私的未來戰爭正在進行中，我們正處於前沿。",
-    "card1": {
-      "title": "分散式工作"
-    },
-    "card2": {
-      "title": "AES-256 加密"
-    },
-    "card3": {
-      "title": "內置冗餘"
-    },
-    "card4": {
-      "title": "開源代碼"
-    },
-    "card5": {
-      "title": "獨立驗證"
-    }
-  },
-  "lastCtaSection": {
-    "title": "全球最私密的雲存儲",
-    "description": "保護 Internxt 安全、私密且加密的雲存儲中的真正重要的內容。",
-    "cta": "立即選擇計劃"
   }
 }

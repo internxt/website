@@ -29,7 +29,16 @@
     },
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
-    "guarantee": "30-day money-back guarantee"
+    "guarantee": "30-day money-back guarantee",
+    "header": { "primaryText": "Get 87% off", "afterPrimaryText": "in all Paid Plans" },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "AndroidSmartBanner": {
     "title": "Download Internxt Drive for Android"
@@ -163,7 +172,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Celebrate 5 years of Internxt with 85% off",
+      "normalText": "Celebrate 5 years of Internxt with 87% off",
       "cta": " Claim deal"
     }
   },

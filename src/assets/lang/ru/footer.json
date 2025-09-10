@@ -72,7 +72,8 @@
         "writeForUs": "Написать нам",
         "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
         "cyberAwareness": "Осведомленность о кибербезопасности",
-        "whatGoogleKnowsAboutMe": "Что Google знает обо мне"
+        "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
+        "WebDAV": "CLI & WebDAV"
       },
       "tools": {
         "title": "Бесплатные инструменты",
@@ -93,7 +94,8 @@
         "privateCloud": "Решение для частного облака",
         "cloudBakcup": "Решение для облачного резерва",
         "GDPRCloud": "Хранение GDPR",
-        "cloudPhotos": "Фотографии в облаке"
+        "cloudPhotos": "Фотографии в облаке",
+        "cloudVideo": "云端视频"
       }
     }
   },

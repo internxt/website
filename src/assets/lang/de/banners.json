@@ -16,7 +16,19 @@
     },
     "getDealCta": "Angebot erhalten",
     "freePlanCta": "Mit kostenlosem Plan fortfahren",
-    "guarantee": "30-tägige Geld-zurück-Garantie"
+    "guarantee": "30-tägige Geld-zurück-Garantie",
+    "header": {
+      "primaryText": "Spare 87%",
+      "afterPrimaryText": "bei allen Bezahlt-Tarifen"
+    },
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    }
   },
   "LoginBanner": {
     "head": "Vor dem Kauf ausprobieren.",
@@ -138,7 +150,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "¡Internxt wird 5 Jahre alt! 85 % Rabatt auf alle Tarife ",
+      "normalText": "¡Internxt wird 5 Jahre alt! 87 % Rabatt auf alle Tarife ",
       "cta": "Wähle deinen Tarif "
     }
   },

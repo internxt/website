@@ -100,20 +100,20 @@ const PrivateCloudStorageSolutions = ({
         <AnimatedHeroSection
           textComponent={
             <>
-              <div className="flex w-[350px] flex-col text-3xl font-medium lg:w-auto lg:text-5xl">
-                <h1 className="font-medium text-white">
+              <div className="flex w-[350px] flex-col py-10 text-3xl font-medium lg:w-auto lg:py-0 lg:text-5xl">
+                <h1 className="font-medium leading-tight text-white">
                   {textContent.HeroSection.TitleAndOnePlan.title.textAfterBlueText}
                   <span className="text-primary">{textContent.HeroSection.TitleAndOnePlan.title.blueText}</span>
                   {textContent.HeroSection.TitleAndOnePlan.title.textBeforeBlueText}
                 </h1>
-                <p className="pt-4 text-xl text-white">
+                <p className="pt-4 text-xl leading-tight text-white">
                   <span className=" text-white">{textContent.HeroSection.TitleAndOnePlan.description}</span>
                 </p>
 
                 <div className="flex flex-col items-center pt-10 lg:flex-row">
                   <Link
                     href={'/pricing'}
-                    className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-xl font-medium text-white hover:bg-primary-dark`}
+                    className={`z-10 flex w-max justify-center rounded-lg bg-primary px-6 py-3 text-base font-medium text-white hover:bg-primary-dark lg:text-xl`}
                   >
                     {textContent.HeroSection.TitleAndOnePlan.claimDeal}
                   </Link>
@@ -127,16 +127,19 @@ const PrivateCloudStorageSolutions = ({
               </div>
             </>
           }
+          height="h-min"
         />
 
         <ImportanceSection textContent={textContent.Importance} ctaLink={CTA_URL} />
 
         <FeaturesSection textContent={textContent.FeaturesSection} />
+
         <CtaSection
           textContent={textContent.CtaSection1}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection1.description}</p>}
         />
+
         <FeatureSection
           title={textContent.FeatureSection.title}
           subtitle={textContent.FeatureSection.titleLine2}
@@ -145,18 +148,23 @@ const PrivateCloudStorageSolutions = ({
           ctaLink={CTA_URL}
           cards={cardsData}
         />
+
         <CtaSection
           textContent={textContent.CtaSection2}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
         />
+
         <WhatWeDo textContent={textContent.WhatWeDo} lang={lang} products={products} />
+
         <CtaSection
           textContent={textContent.CtaSection3}
           url={CTA_URL}
           customDescription={<p className="w-full text-xl font-normal">{textContent.CtaSection3.description}</p>}
         />
+
         <FAQSection textContent={textContent.FaqSection} />
+
         <Footer textContent={footerLang} lang={lang} />
       </Layout>
     </>

@@ -5,9 +5,9 @@
       "line2": "Stockage d'objets compatible Cloud"
     },
     "description": "Une solution de stockage cloud sécurisée, abordable et évolutive pour stocker, accéder et gérer de grandes quantités de données.",
-    "cta": "Commencer maintenant",
+    "cta": "Commencez",
     "separator": "|",
-    "cta2": "Contacter les ventes"
+    "cta2": "Contactez-nous"
   },
   "PredictablePricingSection": {
     "title": "Des prix simples et prévisibles sans frais API",
@@ -181,7 +181,7 @@
     ]
   },
   "ContactSales": {
-    "title": "Contacter les ventes",
+    "title": "Contactez-nous",
     "description": "Remplissez le formulaire de contact et l'équipe vous contactera sous peu.",
     "form": {
       "name": "Nom complet",

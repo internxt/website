@@ -25,23 +25,24 @@ export const HeroSection = ({
 }: HeroSectionProps): JSX.Element => {
   return (
     <section className={`overflow-hidden  ${background}`} style={style}>
-      <HeroSectionSafeArea>
-        <div className={`flex h-[850px] w-full flex-col items-center lg:h-[600px] lg:flex-row lg:justify-between`}>
-          <div className="flex w-[350px] flex-col lg:w-[750px]  ">{TextComponent}</div>
-          <div className="flex  flex-col items-center ">
-            {ImageComponent}
-            {imageProperties && (
-              <Image
-                src={imageProperties.src}
-                alt={imageProperties.alt}
-                width={imageProperties.width}
-                height={imageProperties.height}
-                draggable={false}
-              />
-            )}
-          </div>
+      <div
+        className={`mt-20 flex h-min w-full flex-col items-center p-10 lg:h-min lg:flex-row lg:justify-between lg:gap-16 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      >
+        <div className="flex w-[350px] flex-col lg:w-[656px] ">{TextComponent}</div>
+        <div className="flex flex-shrink-0 flex-col items-center">
+          {ImageComponent}
+          {imageProperties && (
+            <Image
+              src={imageProperties.src}
+              alt={imageProperties.alt}
+              width={imageProperties.width}
+              height={imageProperties.height}
+              draggable={false}
+              className="hidden shrink-0 lg:flex"
+            />
+          )}
         </div>
-      </HeroSectionSafeArea>
+      </div>
     </section>
   );
 };

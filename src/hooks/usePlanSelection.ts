@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Interval } from '@/services/stripe.service';
 import { SwitchButtonOptions, SwitchStorageOptions } from '@/components/shared/pricing/components/PlanSelector';
+import { SwitchStorageBusinessOptions } from '@/components/shared/pricing/components/Switch';
 
 export const usePlanSelection = (
   initialPlan: SwitchButtonOptions,
   initialStorage: SwitchStorageOptions,
+  initialBusinessStorage: SwitchStorageBusinessOptions,
   initialInterval: Interval,
   initialIntervalForBusiness: Interval,
   setPageName?: (pageName: string) => void,
@@ -13,6 +15,8 @@ export const usePlanSelection = (
   const [billingFrequency, setBillingFrequency] = useState<Interval>(initialInterval);
   const [businessBillingFrequency, setBusinessBillingFrequency] = useState<Interval>(initialIntervalForBusiness);
   const [activeStoragePlan, setAactiveStoragePlan] = useState<SwitchStorageOptions>(initialStorage);
+  const [activeBusinessStoragePlan, setBusinessAactiveStoragePlan] =
+    useState<SwitchStorageBusinessOptions>(initialBusinessStorage);
 
   const onPlanTypeChange = (plan: SwitchButtonOptions, interval?: Interval) => {
     setActiveSwitchPlan(plan);
@@ -34,13 +38,19 @@ export const usePlanSelection = (
     setAactiveStoragePlan(storage);
   };
 
+  const onBusinessStorageChange = (storage: SwitchStorageBusinessOptions) => {
+    setBusinessAactiveStoragePlan(storage);
+  };
+
   return {
     activeSwitchPlan,
     billingFrequency,
     businessBillingFrequency,
     activeStoragePlan,
+    activeBusinessStoragePlan,
     onPlanTypeChange,
     onStorageChange,
+    onBusinessStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
   };

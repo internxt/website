@@ -70,7 +70,8 @@
         "dropboxAlternative": "Dropbox Alternative",
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "cyberAwareness": "Cyber Awareness",
-        "whatGoogleKnowsAboutMe": "What Google Knows"
+        "whatGoogleKnowsAboutMe": "What Google Knows",
+        "WebDAV": "CLI & WebDAV"
       },
       "tools": {
         "title": "Free Tools",
@@ -90,7 +91,8 @@
         "privateCloud": "Private cloud storage",
         "cloudBakcup": "Cloud storage backup",
         "GDPRCloud": "GDPR Cloud Storage",
-        "cloudPhotos": "Storage for photos"
+        "cloudPhotos": "Storage for photos",
+        "cloudVideo": "Storage for videos"
       }
     }
   },

@@ -1,35 +1,22 @@
 import { useState } from 'react';
 import Script from 'next/script';
 import { GetServerSidePropsContext } from 'next';
-import {
-  ClockCounterClockwise,
-  Eye,
-  Fingerprint,
-  FolderSimpleLock,
-  LockKey,
-  ShieldCheck,
-  Sliders,
-  UsersThree,
-} from '@phosphor-icons/react';
-
 import Footer from '@/components/layout/footers/Footer';
 import Navbar from '@/components/layout/navbars/Navbar';
 import Layout from '@/components/layout/Layout';
 import cookies from '@/lib/cookies';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import CtaSection from '@/components/pricing/CtaSection';
-
 import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generator';
-import BestStorageSection from '@/components/pricing/BestStorageSection';
+import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
-import InfoSection from '@/components/shared/sections/InfoSection';
 import usePricing from '@/hooks/usePricing';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
-import { PriceBannerForCampaigns } from '@/components/lifetime/PriceBannerForCampaigns';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -50,62 +37,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.FifthAnniversary,
-    couponCodeForLifetime: PromoCodeName.FifthAnniversary,
+    couponCode: PromoCodeName.SoftSales85,
+    couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
-  const individualCardsData = [
-    {
-      icon: ShieldCheck,
-      title: textContent.InfoSection.cards?.[0].title,
-      description: textContent.InfoSection.cards?.[0].description,
-    },
-    {
-      icon: LockKey,
-      title: textContent.InfoSection.cards?.[1].title,
-      description: textContent.InfoSection.cards?.[1].description,
-    },
-    {
-      icon: Eye,
-      title: textContent.InfoSection.cards?.[2].title,
-      description: textContent.InfoSection.cards?.[2].description,
-    },
-    {
-      icon: Fingerprint,
-      title: textContent.InfoSection.cards?.[3].title,
-      description: textContent.InfoSection.cards?.[3].description,
-    },
-  ];
-
-  const businessCardsData = [
-    {
-      icon: Sliders,
-      title: textContent.InfoSectionForBusiness.cards?.[0].title,
-      description: textContent.InfoSectionForBusiness.cards?.[0].description,
-    },
-    {
-      icon: FolderSimpleLock,
-      title: textContent.InfoSectionForBusiness.cards?.[1].title,
-      description: textContent.InfoSectionForBusiness.cards?.[1].description,
-    },
-    {
-      icon: ClockCounterClockwise,
-      title: textContent.InfoSectionForBusiness.cards?.[2].title,
-      description: textContent.InfoSectionForBusiness.cards?.[2].description,
-    },
-    {
-      icon: UsersThree,
-      title: textContent.InfoSectionForBusiness.cards?.[3].title,
-      description: textContent.InfoSectionForBusiness.cards?.[3].description,
-    },
-  ];
-
   const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
-  const infoCards = isBusiness ? businessCardsData : individualCardsData;
 
   const onBusinessPlansSelected = (isBusiness: boolean) => {
     setIsBusiness(isBusiness);
@@ -125,7 +65,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -138,8 +77,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
-
-        <PriceBannerForCampaigns textContent={textContent.tableSection.ctaBanner} percentOff={percentOff} />
 
         <PricingSectionWrapper
           textContent={textContent.tableSection}
@@ -158,20 +95,35 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessSelector
           hideSwitchSelector
           popularPlanBySize="3TB"
-          showPromo={true}
+          backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+          sectionDetails="pt-20 lg:py-20"
         />
 
-        {isBusiness ? <div className="flex w-screen border border-gray-10" /> : undefined}
+        <HorizontalScrollableSection textContent={infoText} />
 
-        <InfoSection textContent={infoText} withoutCta={isBusiness} lang={lang} cards={infoCards} />
-
-        <BestStorageSection hideTitleAndDescription textContent={textContent.BestStorageSection} />
+        <BestStorageSection textContent={textContent.BestStorageSection} />
 
         <FileParallaxSection />
 
         <FAQSection textContent={faqSection} />
 
-        {!isBusiness ? <CtaSection textContent={textContent.lastCtaSection} /> : undefined}
+        <FloatingCtaSectionv2
+          textContent={textContent.lastCtaSection}
+          url={'/pricing'}
+          customText={
+            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                {textContent.lastCtaSection.title}
+              </p>
+              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                {textContent.lastCtaSection.description}
+              </p>
+            </div>
+          }
+          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+          containerDetails="shadow-lg backdrop-blur-[55px]"
+          bgPadding="lg:pb-20 pb-20"
+        />
 
         <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
       </Layout>

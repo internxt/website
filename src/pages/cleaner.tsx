@@ -40,7 +40,9 @@ const CleanerPage = ({
 
       <FeatureSection textContent={textContent.FeatureSection} />
 
-      <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
+      <div className="lg:py-18">
+        <HorizontalScrollableSection textContent={textContent.WhyUseSection} />
+      </div>
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -56,6 +58,7 @@ const CleanerPage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgGradientColor="linear-gradient(0deg, #F9F9FC 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="py-10"
       />
 
       <HowItWorksSection textContent={textContent.HowItWorksSection} />
@@ -74,6 +77,7 @@ const CleanerPage = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgGradientColor="linear-gradient(0deg, #E5EEFB 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
+        bgPadding="py-10"
       />
 
       <FAQSection textContent={textContent.FaqSection} />

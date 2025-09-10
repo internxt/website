@@ -1,0 +1,98 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Il cloud storage più sicuro **a meno**",
+    "description": "Cloud storage sicuro a meno. Rivendica il tuo sconto speciale oggi. Accedi alla pluripremiata suite per la privacy di Internxt con cloud storage crittografato post-quantico e molto altro.",
+    "subtitle": "Ottieni {{discount}}% di sconto ora",
+    "claimDeal": "Rivendica l'offerta"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt è in mega-saldo, ha **eccellenti recensioni degli utenti**, crittografia **end-to-end e post-quantica**, e rende il loro codice completamente **open source**.\"",
+    "mashable": "\"Prendi **sul serio** la **protezione** dei tuoi **dati importanti** con Internxt. Fanno della **privacy la loro priorità principale,** così puoi stare tranquillo sapendo che i tuoi file sono **al sicuro**.\"",
+    "pcWorld": "\"L'accesso web, la sincronizzazione dei file e i servizi di backup di Internxt sono **impressionanti**. Questo servizio di **archiviazione online crittografata** è **facile,** e i piani attuali sono un affare.\""
+  },
+  "TrustedBySection": {
+    "title": "Di fiducia per persone come te",
+    "review": "Mantengo le mie informazioni sicure online grazie a Internxt. Il loro supporto clienti è veloce, e i loro servizi sono incredibilmente affidabili. Il fatto che siano verificati, open-source e crittografati mi rassicura sapendo che i miei dati sono sempre protetti da terze parti.",
+    "author": "Sandra Díaz - Recensione Trustpilot"
+  },
+  "NextGenSection": {
+    "title": "Perché scegliere Internxt?",
+    "description": "Internxt ti restituisce il controllo della tua privacy. A differenza del cloud storage tradizionale, ci assicuriamo che solo tu abbia le chiavi dei tuoi dati crittografati e non archiviamo né vendiamo i tuoi dati a terze parti. Prendiamo ogni misura per garantire che le tue informazioni rimangano sicure.",
+    "cta": "Conoscici meglio",
+    "cardDescriptions": {
+      "titles": [
+        "Dati inviolabili e non trapelabili",
+        "Sicurezza di nuova generazione",
+        "Open source e trasparente",
+        "Verificato indipendentemente"
+      ],
+      "descriptions": [
+        "Non archiviamo password o dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti dà il pieno controllo dei tuoi file. I tuoi dati sono affari tuoi. Proteggerli è il nostro lavoro.",
+        "Internxt è l'unico cloud storage che crittografa automaticamente i tuoi file utilizzando crittografia end-to-end e post-quantica, il che significa che solo tu puoi accedere ai tuoi dati.",
+        "Siamo orgogliosi di quello che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente recensito, verificato e controllato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati.",
+        "Siamo completamente conformi al GDPR e sicuri al 100%, ma non credere solo alla nostra parola. Internxt è stato verificato e controllato indipendentemente dalla principale azienda di penetration testing d'Europa, Securitum."
+      ]
+    }
+  },
+  "ctaSection": {
+    "titleWithoutDiscount": "Suite Completa per la Privacy Digitale",
+    "title": "Massima Privacy con {{discount}}% di sconto",
+    "description": "Ottieni tranquillità con questo sconto esclusivo. Privacy e sicurezza totali.",
+    "cta": "Accetta l'invito"
+  },
+  "ctaSection2": {
+    "title": "Il cloud storage più privato al mondo",
+    "description": "Rivendica il tuo sconto esclusivo del {{discount}}% per accedere alla suite per la privacy di Internxt per un anno",
+    "descriptionWithoutDisocunt": "Sperimenta la privacy digitale completa con Internxt",
+    "cta": "Scegli il piano"
+  },
+  "tableSection": {
+    "title": "Piani Internxt",
+    "planTitles": {
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a Vita",
+      "business": "Piani Business",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri piani a vita esclusivi"
+      }
+    },
+    "lifetimeDescription": "Paga una volta e goditi privacy e sicurezza a vita",
+    "planDescription": "Tutti i piani Internxt sono completamente equipaggiati con accesso completo alla nostra pluripremiata suite per la privacy composta da Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
+    "businessDescription2": "Garantisci la sicurezza dei dati della tua azienda con i piani di cloud storage crittografato di Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Internxt Gratuito",
+      "description": "Ottieni 1 GB di cloud storage crittografato gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "endToEnd": "Crittografia end-to-end",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonima",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  }
+}

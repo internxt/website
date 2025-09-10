@@ -1,0 +1,159 @@
+{
+  "HeroSection": {
+    "title": "Cloud privato per file video",
+    "features": ["Archivia i tuoi video in privato", "Crittografia post-quantistica", "Open source e verificato"],
+    "subtitle": "Il cloud più sicuro creato per video creator che archiviano i loro video in totale privacy.",
+    "cta": "Ottieni Internxt"
+  },
+  "HowToChooseSection": {
+    "title": "Come scegliere il miglior cloud per file video",
+    "description": "Trovare uno storage cloud per i file video può essere difficile a causa delle restrizioni di caricamento dei file, della mancanza di privacy o del budget.",
+    "cardDescriptions": {
+      "titles": ["Costo", "Sicurezza", "Requisiti di archiviazione"],
+      "descriptions": [
+        "Cloud gratuito per file video può funzionare per file piccoli, ma molti servizi gratuiti hanno restrizioni, e funzionalità aggiuntive sono a pagamento. È importante confrontare prezzi e funzionalità e determinare se questi piani soddisfano le tue esigenze.\n\nSe vuoi cloud per file video grandi, Internxt offre cloud sicuro, VPN, Antivirus, Mail, e Meet nei suoi piani. Inizia gratis o da €3 al mese per piani annuali o lifetime, o archivia petabyte di video con Internxt S3 object storage per €7/TB/mese.",
+        "Cloud sicuro per file video è essenziale per uso individuale, freelance, o aziendale, poiché senza di esso, i tuoi contenuti potrebbero essere a rischio. Video contenenti contenuto sensibile, prezioso, o proprietario richiedono misure di sicurezza estreme per rimanere sicuri e privati.\n\nScegli un provider cloud che non usa AI per scansionare i tuoi contenuti per allenare i suoi modelli, e mantieni i tuoi contenuti privati con provider che usano crittografia zero-knowledge per assicurare che solo tu possa visualizzare e accedere ai tuoi file.",
+        "Archiviare una libreria di file video grandi può rapidamente esaurire il tuo cloud storage, lasciandoti con spazio limitato per nuovi video o costringendoti a cancellare vecchi file per fare spazio a nuovi progetti, che potrebbe non essere fattibile.\n\nScegli un provider cloud che ti permette di scalare il tuo storage basato sulle tue esigenze. Quando puoi facilmente aggiornare il tuo piano, non devi preoccuparti di migrare tutti i tuoi video ad un altro servizio, e puoi mantenere il tuo workflow ininterrotto."
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "intro": "Internxt fornisce il miglior cloud per video per archiviare, condividere, e fare backup dei tuoi file. Previeni AI e Big Tech dall'usare i tuoi video senza il tuo consenso con il nostro cloud storage zero-knowledge.",
+    "features": {
+      "feature1": {
+        "title": "Supporto per file 4K e 8K",
+        "description": [
+          "Trovare un cloud storage che supporta upload e cloud storage per file video grandi può essere sfidante, specialmente per file 4K e 8K. Con Internxt Drive, puoi caricare file video grandi nel cloud per condivisione sicura o backup.",
+          "Offriamo fino a 5TB di cloud storage per file video grandi, abbastanza per circa 444 ore di 4K o 139 ore di video 8K. Puoi aggiornare il tuo piano in qualsiasi momento, così non rimani mai senza storage."
+        ]
+      },
+      "feature2": {
+        "title": "Velocità upload e download rapide",
+        "description": [
+          "Grazie alle nostre velocità ultra-rapide di upload e download, puoi risparmiare tempo gestendo i tuoi video senza preoccuparti di lunghe attese per accedere al tuo contenuto.",
+          "Non devi preoccuparti di ritardi quando accedi ai tuoi file, poiché puoi accedere e scaricare i tuoi file rapidamente, così i tuoi video sono sempre lì quando ne hai bisogno."
+        ]
+      },
+      "feature3": {
+        "title": "Condivisione sicura per video",
+        "description": [
+          "Scegliendo un servizio sicuro di condivisione file video, puoi prevenire che i tuoi contenuti cadano nelle mani sbagliate e informazioni sensibili, come metadata, vengano divulgate.",
+          "Con Internxt Drive, puoi condividere i tuoi video in sicurezza, poiché sono protetti da crittografia post-quantistica. Per privacy aggiuntiva, puoi aggiungere protezione password ai file condivisi per assicurare collaborazione sicura."
+        ]
+      }
+    }
+  },
+  "SecureAndManage": {
+    "title": "Proteggi e gestisci i tuoi file video con Internxt",
+    "description": "Internxt Drive e S3 object storage sono costruiti per mantenere i tuoi file privati offrendo accesso rapido, flessibile e strumenti potenti per gestire i tuoi video.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive è un provider di cloud storage zero-knowledge e il primo con crittografia post-quantistica. Offre il cloud più sicuro e privato per i tuoi video. Internxt Drive include anche VPN, Antivirus, Mail, e Meet, una suite privacy completa per assicurare che i tuoi video e dati rimangano sicuri.",
+          "Internxt supporta anche WebDAV e Rclone, offrendo maggiore flessibilità nella gestione dei tuoi video. Inizia con il miglior cloud storage per video e scegli dai nostri piani annuali o lifetime convenienti."
+        ],
+        "cta": "Ottieni Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "S3 storage è il miglior cloud storage per file video perché archivia file in un modo che li rende rapidamente e facilmente accessibili per recupero immediato di file video con bassa latenza. Internxt S3 è una soluzione 100% hot cloud storage, significa che puoi istantaneamente accedere, streammare, o editare video su richiesta.",
+          "Internxt S3 è un sistema cloud storage conforme GDPR con crittografia avanzata per mantenere i tuoi file sicuri e privati. Il nostro modello prezzi fisso pay-as-you-go di €7/TB/Mese significa che paghi solo per lo storage di cui hai bisogno con zero tasse trasferimento dati."
+        ],
+        "cta": "Ottieni Internxt S3"
+      }
+    ]
+  },
+  "HorizontalScrollableSection": {
+    "title": "Funzionalità del cloud storage di Internxt per video",
+    "description": "Condividi, fai backup, e proteggi i tuoi file video con limiti upload generosi e protezione ransomware di cui ti puoi fidare.",
+    "scrollableSection": {
+      "titles": [
+        "Limiti upload generosi",
+        "Protezione ransomware",
+        "Crittografia post-quantistica",
+        "Open source e verificato"
+      ],
+      "descriptions": [
+        "Internxt offre generosi 40GB di upload file per fino a 3.000 file, e puoi anche condividere file video grandi fino a 10GB con altri via link protetto da password o email per privacy totale e collaborazione sicura.",
+        "Internxt offre backup crittografati per i tuoi file, così puoi tenere una copia dei tuoi file video sicura nel cloud. Poiché questi video sono crittografati e salvati in multipli data center, i file possono essere facilmente recuperati in caso di perdita dati o attacchi ransomware.",
+        "Internxt è il primo cloud storage per file video con crittografia zero-knowledge, post-quantistica, la crittografia più avanzata disponibile per proteggere file contro la minaccia dei computer quantistici.",
+        "Internxt Drive e tutti i nostri servizi sono open source. Il nostro codice è disponibile su GitHub per chiunque da verificare, controllare la sicurezza, e assicurare che non ci sono backdoor che potrebbero compromettere i tuoi dati."
+      ],
+      "imagesPathname": [
+        "/cloud-storage-for-video-files/Generous",
+        "/cloud-storage-for-video-files/Ransomware",
+        "/cloud-storage-for-video-files/PostQuantumEncryption",
+        "/cloud-storage-for-video-files/OpenSourceAndAudited"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Cloud storage sicuro per file video",
+    "subtitle": "Archivia ore di video di qualità in privato",
+    "cta": "Ottieni Internxt"
+  },
+  "cta2": {
+    "title": "Il cloud storage più privato per file video ",
+    "subtitle": "Protetto da crittografia post-quantistica",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Qual è il miglior cloud storage per file video?",
+        "answer": [
+          "Internxt offre molte funzionalità da considerare come tuo nuovo provider cloud per i tuoi file video. ",
+          "Permette upload di file grandi, piani storage convenienti, e privacy ineguagliabile grazie alla crittografia post-quantistica e zero-knowledge. ",
+          "È disponibile su tutte le piattaforme, con supporto WebDAV e Rclone disponibile via Internxt CLI. ",
+          "Inizia da solo €3 al mese e ottieni il cloud storage più sicuro, privato per i tuoi file video. "
+        ]
+      },
+      {
+        "question": "Quanto storage ho bisogno per i miei file video?",
+        "answer": [
+          "Se non sai quanto cloud storage hai bisogno per i tuoi video, per l'utente medio, 200GB è solitamente abbastanza.",
+          "Professionisti che lavorano con risoluzioni più alte, come 4K o 8K, richiederanno un minimo di 1TB.",
+          "Aziende che hanno bisogno di ospitare un gran numero di file video beneficeranno di più dall'object storage, come Internxt S3."
+        ]
+      },
+      {
+        "question": "Posso caricare file video grandi su Internxt Drive?",
+        "answer": [
+          "Sì, puoi caricare fino a 40GB di file video con Internxt Drive via web app.",
+          "Internxt Drive offre anche piani con fino a 5TB, che è abbastanza per caricare e inviare video grandi via cloud.",
+          "Se hai bisogno di più storage, puoi acquistare uno dei nostri piani lifetime e accumulare il tuo storage per evitare di rimanere senza storage."
+        ]
+      },
+      {
+        "question": "Cos'è la crittografia zero-knowledge, e come protegge i miei video?",
+        "answer": [
+          "Crittografia zero-knowledge significa che il processo crittografia e chiavi sono gestiti sul tuo dispositivo, così nessuno può visualizzare, monitorare, o accedere ai tuoi file o contenuto video.",
+          "Questo differisce dalla crittografia delle compagnie Big Tech perché tengono e gestiscono le chiavi dei tuoi file, limitando la privacy del tuo cloud storage."
+        ]
+      },
+      {
+        "question": "Internxt offre opzioni backup per file video?",
+        "answer": [
+          "Sì, Internxt offre backup cloud storage per file video su tutti i suoi piani Essential, Premium, e Ultimate.",
+          "Puoi programmare i tuoi backup basati sulle tue esigenze, aiutare a prevenire perdita dati accidentale, e proteggere contro ransomware con i nostri backup crittografati."
+        ]
+      },
+      {
+        "question": "Come contatto il supporto?",
+        "answer": [
+          "Non trovi quello che cerchi? Puoi contattare il nostro team Customer Success via chat live o inviando una email a hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal, o criptovaluta?",
+        "answer": [
+          "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc).",
+          "Puoi anche pagare via PayPal, iDEAL, Sofort, e Criptovaluta."
+        ]
+      }
+    ]
+  }
+}

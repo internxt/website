@@ -56,7 +56,7 @@
     },
     "planTitles": {
       "header": "Total privacy for {{discount}}% off",
-      "individuals": "Individual Plans",
+      "individuals": "Individuals",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
       "lifetimeCampaign": {
@@ -68,8 +68,8 @@
         "description": "Protect your data with Internxt to avoid breaches, financial loss, and privacy risks. Say goodbye to tech giants that profit from your personal information."
       }
     },
-    "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Meet and Mail.",
+    "lifetimeDescription": "Pay once and get privacy and security forever.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -82,6 +82,7 @@
     "freePlanCard": {
       "eyeBrow": "Free",
       "description": "Get 1GB of encrypted cloud storage for free",
+      "mobileDescription": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem",
       "cta": "Select plan"
     },
     "features": {
@@ -271,25 +272,21 @@
   "InfoSection": {
     "title": "Secure cloud storage with unmatched privacy",
     "description": "What makes Internxt so special? We’re a tight-knit team of professionals completely dedicated to protecting you online. Everything we do and every decision we make is centered on protecting your data from being exploited.",
-    "cta": "Meet the Internxt Team",
-    "cards": [
-      {
-        "title": "Private by design",
-        "description": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
-      },
-      {
-        "title": "Uncompromising security",
-        "description": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
-      },
-      {
-        "title": "Open source and transparent",
-        "description": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
-      },
-      {
-        "title": "Independently verified",
-        "description": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
-      }
-    ]
+    "cta": "Internxt’s commitment to privacy",
+    "scrollableSection": {
+      "titles": [
+        "Private by design",
+        "Uncompromising security",
+        "Open source and transparent",
+        "Independently verified"
+      ],
+      "descriptions": [
+        "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
+        "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
+      ]
+    }
   },
   "BestStorageSection": {
     "title": "Built for the future",

@@ -1,0 +1,159 @@
+{
+  "HeroSection": {
+    "title": "Cloud privé pour fichiers vidéo",
+    "features": ["Stockez vos vidéos en privé", "Chiffrement post-quantique", "Open source et audité"],
+    "subtitle": "Le cloud le plus sécurisé conçu pour créateurs vidéo qui stockent leurs vidéos en toute confidentialité.",
+    "cta": "Obtenir Internxt"
+  },
+  "HowToChooseSection": {
+    "title": "Comment choisir le meilleur cloud pour fichiers vidéo",
+    "description": "Trouver un stockage cloud pour les fichiers vidéo peut être difficile en raison des restrictions de téléchargement de fichiers, du manque de confidentialité ou du budget.",
+    "cardDescriptions": {
+      "titles": ["Coût", "Sécurité", "Besoins de stockage"],
+      "descriptions": [
+        "Le stockage cloud gratuit peut marcher pour petits fichiers, mais beaucoup de services gratuits ont des restrictions, et les fonctionnalités supplémentaires sont payantes. Il faut comparer prix et fonctionnalités et déterminer si ces plans répondent à vos besoins.\n\nSi vous voulez du cloud pour gros fichiers vidéo, Internxt offre cloud sécurisé, VPN, Antivirus, Mail, et Meet dans ses plans. Commencez gratuitement ou à partir de 3€ par mois pour plans annuels ou à vie, ou stockez des pétaoctets de vidéos avec Internxt S3 object storage pour 7€/TB/mois.",
+        "Le stockage cloud sécurisé pour fichiers vidéo est essentiel pour usage individuel, freelance, ou entreprise, car sans cela, votre contenu pourrait être en danger. Les vidéos contenant du contenu sensible, précieux, ou propriétaire nécessitent des mesures de sécurité extrêmes pour rester sécurisées et privées.\n\nChoisissez un fournisseur cloud qui n'utilise pas l'IA pour scanner votre contenu pour entraîner ses modèles, et gardez votre contenu privé par des fournisseurs qui utilisent le chiffrement zéro-connaissance pour garantir que seul vous pouvez voir et accéder à vos fichiers.",
+        "Stocker une bibliothèque de gros fichiers vidéo peut rapidement épuiser votre stockage cloud, vous laissant avec un espace limité pour nouvelles vidéos ou vous forçant à supprimer anciens fichiers pour faire place aux nouveaux projets, ce qui peut ne pas être faisable.\n\nChoisissez un fournisseur cloud qui vous permet d'adapter votre stockage selon vos besoins. Quand vous pouvez facilement upgrader votre plan, vous n'avez pas à vous soucier de migrer toutes vos vidéos vers un autre service, et vous pouvez garder votre flux de travail ininterrompu."
+      ]
+    }
+  },
+  "FeaturesSection": {
+    "intro": "Internxt fournit le meilleur cloud pour vidéos pour stocker, partager, et sauvegarder vos fichiers. Empêchez l'IA et les Big Tech d'utiliser vos vidéos sans votre consentement avec notre stockage cloud zéro-connaissance.",
+    "features": {
+      "feature1": {
+        "title": "Support pour fichiers 4K et 8K",
+        "description": [
+          "Trouver un stockage cloud qui supporte les uploads et le stockage cloud pour gros fichiers vidéo peut être difficile, surtout pour fichiers 4K et 8K. Avec Internxt Drive, vous pouvez uploader gros fichiers vidéo dans le cloud pour partage sécurisé ou sauvegardes.",
+          "Nous offrons jusqu'à 5TB de stockage cloud pour gros fichiers vidéo, assez pour environ 444 heures de 4K ou 139 heures de 8K vidéo. Vous pouvez upgrader votre plan à tout moment, donc vous ne manquez jamais de stockage."
+        ]
+      },
+      "feature2": {
+        "title": "Chargement téléchargement rapides",
+        "description": [
+          "Grâce à nos vitesses ultra-rapides d'upload et téléchargement, vous pouvez économiser du temps en gérant vos vidéos sans vous soucier de longues attentes pour accéder à votre contenu.",
+          "Vous n'avez pas à vous soucier de retards quand vous accédez à vos fichiers, car vous pouvez accéder et télécharger vos fichiers rapidement, donc vos vidéos sont toujours là quand vous en avez besoin."
+        ]
+      },
+      "feature3": {
+        "title": "Partage sécurisé pour vidéos",
+        "description": [
+          "En choisissant un service sécurisé de partage de fichiers vidéo, vous pouvez empêcher votre contenu de tomber entre de mauvaises mains et des informations sensibles, comme les métadonnées, d'être divulguées.",
+          "Avec Internxt Drive, vous pouvez partager vos vidéos en sécurité, car elles sont protégées par chiffrement post-quantique. Pour confidentialité supplémentaire, vous pouvez ajouter protection par mot de passe aux fichiers partagés pour assurer collaboration sécurisée."
+        ]
+      }
+    }
+  },
+  "SecureAndManage": {
+    "title": "Sécurisez et gérez vos fichiers vidéo avec Internxt",
+    "description": "Internxt Drive et le stockage objet S3 sont conçus pour garder vos fichiers privés tout en offrant accès rapide, flexible et outils puissants pour gérer vos vidéos.",
+    "cards": [
+      {
+        "title": "Internxt Drive",
+        "description": [
+          "Internxt Drive est un fournisseur de stockage cloud zéro-connaissance et le premier avec chiffrement post-quantique. Il offre le cloud le plus sécurisé et privé pour vos vidéos. Internxt Drive inclut aussi VPN, Antivirus, Mail, et Meet, une suite complète de confidentialité pour assurer que vos vidéos et données restent sécurisées.",
+          "Internxt supporte aussi WebDAV et Rclone, offrant plus de flexibilité dans la gestion de vos vidéos. Commencez avec le meilleur stockage cloud pour vidéos et choisissez parmi nos plans annuels ou à vie abordables."
+        ],
+        "cta": "Obtenir Internxt Drive"
+      },
+      {
+        "title": "Internxt S3",
+        "description": [
+          "Le stockage S3 est le meilleur stockage cloud pour fichiers vidéo car il stocke fichiers d'une manière qui les rend rapidement et facilement accessibles pour récupération immédiate de fichiers vidéo avec faible latence. Internxt S3 est une solution de stockage cloud 100% hot, signifiant que vous pouvez instantanément accéder, streamer, ou éditer vidéos sur demande.",
+          "Internxt S3 est un système de stockage cloud conforme GDPR avec chiffrement avancé pour garder vos fichiers sécurisés et privés. Notre modèle de prix fixe pay-as-you-go de 7€/TB/Mois signifie que vous payez seulement pour le stockage dont vous avez besoin avec zéro frais de transfert de données."
+        ],
+        "cta": "Obtenir Internxt S3"
+      }
+    ]
+  },
+  "HorizontalScrollableSection": {
+    "title": "Fonctionnalités du stockage cloud d'Internxt pour vidéos",
+    "description": "Partagez, sauvegardez, et protégez vos fichiers vidéo avec limites d'upload généreuses et protection ransomware de confiance.",
+    "scrollableSection": {
+      "titles": [
+        "Limites d'upload généreuses",
+        "Protection ransomware",
+        "Cryptographie post-quantique",
+        "Open source et audité"
+      ],
+      "descriptions": [
+        "Internxt offre généreux 40GB d'uploads de fichiers pour jusqu'à 3,000 fichiers, et vous pouvez aussi partager gros fichiers vidéo de jusqu'à 10GB avec d'autres via lien protégé par mot de passe ou email pour confidentialité totale et collaboration sécurisée.",
+        "Internxt offre sauvegardes chiffrées pour vos fichiers, donc vous pouvez garder une copie de vos fichiers vidéo sécurisée dans le cloud. Comme ces vidéos sont chiffrées et sauvegardées dans multiples centres de données, fichiers peuvent être facilement récupérés en cas de perte de données ou attaques ransomware.",
+        "Internxt est le premier stockage cloud pour fichiers vidéo avec cryptographie zéro-connaissance, post-quantique, le chiffrement le plus avancé disponible pour protéger fichiers contre la menace des ordinateurs quantiques.",
+        "Internxt Drive et tous nos services sont open source. Notre code est disponible sur GitHub pour que tout le monde vérifie, vérifie la sécurité, et assure qu'il n'y a pas de portes dérobées qui pourraient compromettre vos données."
+      ],
+      "imagesPathname": [
+        "/cloud-storage-for-video-files/Generous",
+        "/cloud-storage-for-video-files/Ransomware",
+        "/cloud-storage-for-video-files/PostQuantumEncryption",
+        "/cloud-storage-for-video-files/OpenSourceAndAudited"
+      ]
+    }
+  },
+  "cta": {
+    "title": "Stockage cloud sécurisé pour fichiers vidéo",
+    "subtitle": "Stockez des heures de vidéo de qualité en privé",
+    "cta": "Obtenir Internxt"
+  },
+  "cta2": {
+    "title": "Le stockage cloud le plus privé pour fichiers vidéo ",
+    "subtitle": "Protégé par chiffrement post-quantique",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Quel est le meilleur stockage cloud pour fichiers vidéo ?",
+        "answer": [
+          "Internxt offre beaucoup de fonctionnalités pour vous à considérer comme votre nouveau fournisseur cloud pour vos fichiers vidéo. ",
+          "Il permet gros uploads de fichiers, plans de stockage abordables, et confidentialité inégalée grâce au chiffrement post-quantique et zéro-connaissance. ",
+          "Il est disponible sur toutes plateformes, avec support WebDAV et Rclone disponible via Internxt CLI. ",
+          "Commencez à partir de seulement 3€ par mois et obtenez le stockage cloud le plus sécurisé, privé pour vos fichiers vidéo. "
+        ]
+      },
+      {
+        "question": "Combien de stockage ai-je besoin pour mes fichiers vidéo ?",
+        "answer": [
+          "Si vous ne savez pas combien de stockage cloud vous avez besoin pour vos vidéos, pour l'utilisateur moyen, 200GB est habituellement assez.",
+          "Professionnels travaillant avec résolutions plus élevées, comme 4K ou 8K, nécessiteront un minimum de 1TB.",
+          "Entreprises qui ont besoin d'héberger un grand nombre de fichiers vidéo bénéficieront le plus du stockage objet, tel qu'Internxt S3."
+        ]
+      },
+      {
+        "question": "Puis-je uploader gros fichiers vidéo sur Internxt Drive ?",
+        "answer": [
+          "Oui, vous pouvez uploader jusqu'à 40GB de fichiers vidéo avec Internxt Drive via l'app web.",
+          "Internxt Drive offre aussi plans avec jusqu'à 5TB, qui est assez pour uploader et envoyer grosses vidéos via le cloud.",
+          "Si vous avez besoin de plus de stockage, vous pouvez acheter un de nos plans à vie et empiler votre stockage pour éviter de manquer de stockage."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement zéro-connaissance, et comment protège-t-il mes vidéos ?",
+        "answer": [
+          "Le chiffrement zéro-connaissance signifie que le processus de chiffrement et les clés sont gérés sur votre appareil, donc personne ne peut voir, surveiller, ou accéder à vos fichiers ou contenu vidéo.",
+          "Ceci diffère du chiffrement par les compagnies Big Tech car elles détiennent et gèrent les clés de vos fichiers, limitant la confidentialité de votre stockage cloud."
+        ]
+      },
+      {
+        "question": "Internxt offre-t-il options de sauvegarde pour fichiers vidéo ?",
+        "answer": [
+          "Oui, Internxt offre stockage cloud de sauvegarde pour fichiers vidéo sur tous ses plans Essential, Premium, et Ultimate.",
+          "Vous pouvez planifier vos sauvegardes selon vos besoins, aider à prévenir perte accidentelle de données, et protéger contre ransomware avec nos sauvegardes chiffrées."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe Customer Success via chat en direct ou en envoyant un email à hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Puis-je payer avec carte de crédit, PayPal, ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte actuellement cartes de débit et crédit (Mastercard, VISA, American Express, etc).",
+          "Vous pouvez aussi payer via PayPal, iDEAL, Sofort, et Cryptomonnaie."
+        ]
+      }
+    ]
+  }
+}

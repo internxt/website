@@ -385,6 +385,11 @@
     "description": "Internxt AI 偵測器。免費掃描內容，檢查是否由 ChatGPT、Gemini 或其他人工智慧平台生成。"
   },
   {
+    "id": "affiliates",
+    "title": "聯盟計畫 | Internxt",
+    "description": "加入Internxt的聯盟行銷計畫！如何開始以及計畫詳情、好處和特權。"
+  },
+  {
     "id": "special-offer",
     "title": "特別優惠 — Internxt",
     "description": "以獨家80%折扣獲取 Internxt 的年度和終身方案。享受隱私和安全，提供高達10TB的儲存空間。"
@@ -433,5 +438,10 @@
     "id": "compress-zip",
     "title": "線上 ZIP 壓縮器 - Internxt",
     "description": "線上 ZIP 壓縮器可減小 ZIP 檔案大小，節省儲存空間，無需擔心檔案大小限制即可共享和上傳。"
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - 影片檔案雲端儲存",
+    "description": "Internxt 提供影片檔案雲端儲存服務，用於儲存 HD、4K 和 8K 影片，採用後量子加密技術確保最高隱私保護。"
   }
 ]

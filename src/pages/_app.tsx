@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
@@ -102,8 +102,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
         ]}
       >
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="AJfAg8JhxYbS3NkIKdlang" defer />
-
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

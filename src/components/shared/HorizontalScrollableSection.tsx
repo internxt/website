@@ -1,103 +1,126 @@
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
-import { useState, useRef, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
-export default function HorizontalScrollableSection({ textContent }) {
-  const cardTitles = textContent?.scrollableSection.titles ?? [];
-  const cardDescriptions = textContent?.scrollableSection.descriptions;
+interface HorizontalScrollableProps {
+  textContent: any;
+  bgGradient?: string;
+}
+
+export default function HorizontalScrollableSection({
+  textContent,
+  bgGradient,
+}: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [cardWidth, setCardWidth] = useState(361);
 
-  const cardWidth = 400;
-  const mobileCardWidth = 320;
-  const gap = 32;
-  const scrollAmount = cardWidth + gap;
-  const mobileScrollAmount = mobileCardWidth + gap;
+  const maxIndex = isMobile
+    ? textContent.scrollableSection.titles.length - 2
+    : textContent.scrollableSection.titles.length - 1;
 
   useEffect(() => {
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 1024);
+    const updateScreenSize = () => {
+      const isDesktop = window.innerWidth >= 1024;
+      setIsMobile(isDesktop);
+      setCardWidth(isDesktop ? 424 : 361);
     };
 
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
+    updateScreenSize();
 
-    return () => window.removeEventListener('resize', checkIsMobile);
+    window.addEventListener('resize', updateScreenSize);
+
+    return () => window.removeEventListener('resize', updateScreenSize);
   }, []);
 
-  const getMaxIndex = () => {
-    if (isMobile) {
-      return Math.max(0, cardTitles.length - 1);
-    } else {
-      return Math.max(0, cardTitles.length - 2);
-    }
-  };
-
   const scrollLeft = () => {
-    if (currentIndex > 0 && scrollContainerRef.current) {
+    if (scrollContainerRef.current && currentIndex > 0) {
       const newIndex = currentIndex - 1;
+      scrollContainerRef.current.scrollTo({
+        left: newIndex * cardWidth,
+        behavior: 'smooth',
+      });
       setCurrentIndex(newIndex);
-      const amount = isMobile ? mobileScrollAmount : scrollAmount;
-      const element = scrollContainerRef.current;
-      if (element && 'scrollTo' in element) {
-        element.scrollTo({
-          left: newIndex * amount,
-          behavior: 'smooth',
-        });
-      }
     }
   };
 
   const scrollRight = () => {
-    const maxIndex = getMaxIndex();
-    if (currentIndex < maxIndex && scrollContainerRef.current) {
+    if (scrollContainerRef.current && currentIndex < maxIndex) {
       const newIndex = currentIndex + 1;
+      scrollContainerRef.current.scrollTo({
+        left: newIndex * cardWidth,
+        behavior: 'smooth',
+      });
       setCurrentIndex(newIndex);
-      const amount = isMobile ? mobileScrollAmount : scrollAmount;
-      const element = scrollContainerRef.current;
-      if (element && 'scrollTo' in element) {
-        element.scrollTo({
-          left: newIndex * amount,
-          behavior: 'smooth',
-        });
-      }
     }
   };
 
-  const maxIndex = getMaxIndex();
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const scrollLeft = scrollContainerRef.current.scrollLeft;
+      const newIndex = Math.round(scrollLeft / cardWidth);
+      setCurrentIndex(newIndex);
+    }
+  };
 
   return (
-    <section className="flex h-[560px] w-full items-center justify-center bg-white lg:h-[653px] lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
-      <div className="flex h-full w-[832px] flex-col items-center justify-between py-5 lg:h-[570px]">
-        <p className="w-[320px] pb-4 text-left text-30 font-bold leading-tight text-gray-100 lg:w-[832px] lg:pb-12 lg:text-left lg:text-5xl">
-          {textContent.title}
-        </p>
-        <p className="w-[320px] text-left text-base font-normal leading-tight text-gray-55 lg:w-[832px] lg:text-left lg:text-lg">
-          {textContent.description}
-        </p>
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+        bgGradient ? '' : 'bg-neutral-17'
+      } py-10 lg:h-min lg:gap-16 lg:py-20`}
+      style={{ background: bgGradient }}
+    >
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
+        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
 
+        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
+        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        {textContent.cta && (
+          <span
+            onClick={() => window.open('https://internxt.com/privacy/', '_blank', 'noopener,noreferrer')}
+            className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
+          >
+            {textContent.cta}
+            <CaretRight className="pt-[2px] text-primary" size={24} />
+          </span>
+        )}
+      </div>
+      <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
         <div
           ref={scrollContainerRef}
-          className="flex w-[320px] flex-row items-start justify-start gap-8 overflow-hidden scroll-smooth pt-8 lg:w-full lg:pt-12"
+          onScroll={handleScroll}
+          className="w-full overflow-x-auto px-5 lg:px-20 [&::-webkit-scrollbar]:hidden"
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          }}
         >
-          {cardTitles.map((title, index) => (
-            <div key={title} className="h-full w-[320px] shrink-0 lg:w-[400px]">
-              <div className="flex flex-row items-center justify-start gap-4">
-                <p className="text-left text-xl font-medium text-gray-100">{title}</p>
+          <div
+            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 2xl:pl-[440px]"
+            style={{
+              width: 'max-content',
+              alignItems: 'stretch',
+            }}
+          >
+            {textContent.scrollableSection.titles.map((title: string, index: number) => (
+              <div key={index} className="flex-shrink-0">
+                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
+                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
+                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                    {textContent.scrollableSection.descriptions[index]}
+                  </p>
+                </div>
               </div>
-              <div className="py-4">
-                <p className="text-base font-normal leading-tight text-gray-55 lg:text-lg">{cardDescriptions[index]}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-
-        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[832px]">
+        <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >
@@ -106,7 +129,7 @@ export default function HorizontalScrollableSection({ textContent }) {
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
                 currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
               }`}
             >

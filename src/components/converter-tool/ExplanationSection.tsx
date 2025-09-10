@@ -17,7 +17,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
       <div className="flex flex-col items-center justify-start space-y-16 px-5 pb-16 pt-14 lg:px-10">
         <div className="flex w-full flex-col items-center justify-center">
           <Image
-            src={getImage(`/banners/728x90.webp`)}
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -25,7 +25,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
             style={{ cursor: 'pointer' }}
             onClick={() =>
               window.open(
-                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
                 '_blank',
                 'noopener noreferrer',
               )
@@ -68,7 +68,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
         </div>
         <div className="flex w-full flex-col items-center justify-center">
           <Image
-            src={getImage(`/banners/728x90.webp`)}
+            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
             alt="File Arrow Up icon"
             width={800}
             height={110}
@@ -76,7 +76,7 @@ const ExplanationSection = ({ textContent, bannerText, lang }) => {
             style={{ cursor: 'pointer' }}
             onClick={() =>
               window.open(
-                `https://surfshark.com/es/pricing?coupon=Internxt25&transaction_id=102e5f37c792cb21ba70bc20f11ebe&of[%E2%80%A6]um=38984&utm_campaign=affiliate&recurring_goal_id=919`,
+                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
                 '_blank',
                 'noopener noreferrer',
               )

@@ -7,7 +7,7 @@
   "discount": "% off",
   "commingSoon": "Próximamente",
   "planTitles": {
-    "individuals": "Planes individuales",
+    "individuals": "Planes Anuales",
     "homePage": "Elige el plan adecuado para ti",
     "lifetime": "Planes de por vida",
     "business": "Planes para empresas",
@@ -50,7 +50,7 @@
     "semiannually": "/6 meses",
     "annually": "/año"
   },
-  "perUserSlash": "Por usuario/",
+  "perUserSlash": "/Usuario",
   "perUser": "Por usuario",
   "users": "usuarios",
   "freePlan": "Gratis",
@@ -72,7 +72,7 @@
     "freemonth": "Consigue 30 días gratis"
   },
   "freePlanCard": {
-    "eyeBrow": "Internxt Gratis",
+    "eyeBrow": "Gratis",
     "description": "Obtén hasta 1GB de almacenamiento en la nube cifrado y disfruta de nuestro ecosistema privado: VPN (FR), CLI/WebDav/Rclone y mucho más.",
     "cta": "Seleccionar plan"
   },
@@ -126,8 +126,7 @@
         "Copias de seguridad",
         "Comparte archivos protegidos con contraseña",
         "Cumple con RGPD",
-        "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone"
+        "Autenticación de dos factores (2FA)"
       ],
       "3TB": [
         "3TB de almacenamiento",
@@ -139,9 +138,9 @@
         "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone",
-        "Limpieza de dispositivo",
-        "Monitor de dark web"
+
+        "Limpiador",
+        "Monitor"
       ],
       "5TB": [
         "5TB de almacenamiento",
@@ -153,13 +152,12 @@
         "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI, WebDav & Rclone",
-        "Limpieza de dispositivo",
-        "Monitor de dark web",
+        "CLI, WebDav, NAS & Rclone",
+        "Limpiador",
+        "Monitor",
         "Meet",
         "Mail"
-      ],
-      "10TB": []
+      ]
     },
     "business": {
       "1TB": [
@@ -174,8 +172,8 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpieza de dispositivo",
-        "Monitor de dark web"
+        "Limpiador",
+        "Monitor"
       ],
       "2TB": [
         "2TB de almacenamiento",
@@ -189,8 +187,8 @@
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
         "Gestiona la facturación y los pagos de la cuenta",
-        "Limpieza de dispositivo",
-        "Monitor de dark web",
+        "Limpiador",
+        "Monitor",
         "Meet ",
         "Mail "
       ]

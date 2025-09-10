@@ -25,6 +25,11 @@
     "description": "Découvrez les données que Google conserve sur vous. Comment consulter et télécharger vos données Google, comment les supprimer et comment désactiver la collecte de données par Google."
   },
   {
+    "id": "affiliates",
+    "title": "Programme d'Affiliation | Internxt",
+    "description": "Rejoignez le programme de marketing d'affiliation d'Internxt ! Comment commencer plus les détails du programme, avantages et privilèges."
+  },
+  {
     "id": "photos",
     "title": "Internxt – Photos",
     "description": "Alternative cryptée, privée, gratuite et sécurisée à zéro connaissance à Google Photos. Stockez gratuitement vos photos sur le cloud en toute sécurité."
@@ -248,5 +253,10 @@
     "id": "compress-zip",
     "title": "Compresseur ZIP en ligne - Internxt",
     "description": "Un compresseur ZIP en ligne réduit la taille de vos fichiers ZIP pour économiser de l'espace de stockage, partager et télécharger sans vous soucier des limites de taille."
+  },
+  {
+    "id": "cloud-for-videos",
+    "title": "Internxt - Stockage Cloud pour Fichiers Vidéo",
+    "description": "Internxt propose un stockage cloud pour fichiers vidéo afin de stocker des vidéos HD, 4K et 8K qui sont sécurisées avec un chiffrement post-quantique pour une confidentialité maximale."
   }
 ]

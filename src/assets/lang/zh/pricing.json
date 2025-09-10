@@ -31,8 +31,8 @@
       "blue2": "{{discount}}% 折扣 ",
       "normal2": "的最安全云存储"
     },
-    "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
     "howMuchStorage": "您需要多少在线存储空间？",
+    "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
     "features": ["最安全的云存储", "比其他选择更便宜", "30天退款保证"],
     "offerEnds": "优惠结束于:"
   },
@@ -52,9 +52,11 @@
     },
     "save": "省高达",
     "planTitles": {
-      "individuals": "个人计划",
-      "lifetime": "终身计划",
-      "business": "商业计划",
+      "header": {
+        "individuals": "个人计划",
+        "lifetime": "终身计划",
+        "business": "商业计划"
+      },
       "lifetimeCampaign": {
         "blueText": "五折优惠",
         "normalText": "我们的所有独家终身计划"
@@ -65,7 +67,7 @@
       }
     },
     "lifetimeDescription": "购买一次，永远获得隐私和安全。",
-    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive、Send、VPN、Antivirus、Meet和Mail。",
+    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor,Meet和Mail。",
     "businessDescription": "我们目前正在开发新的 Internxt 计划，专为保护您的业务、保护您的员工和确保您的利润而设计。",
     "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",
     "billingFrequency": {
@@ -79,6 +81,7 @@
     "freePlanCard": {
       "eyeBrow": "Internxt Free",
       "description": "免费 – 免费获取 1GB 加密云存储",
+      "mobileDescription": "免费 – 免费获取 1GB 加密云存储",
       "cta": "选择方案"
     },
     "features": {
@@ -93,6 +96,84 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "InfoSection": {
+    "title": "安全的云存储，拥有无与伦比的隐私",
+    "description": "是什么让 Internxt 如此特别？ 我们是一个紧密团结的专业团队，完全致力于保护您的在线安全。 我们所做的一切和做出的每一个决定都以保护您的数据不被利用为中心。",
+    "cta": "Internxt 对隐私的承诺",
+    "scrollableSection": {
+      "titles": ["为隐私而生", "不妥协的安全", "开源和透明化", "经独立验证"],
+      "descriptions": [
+        "我们不存储密码或用户数据，你的所有数据在传输途中和闲置时都被加密。Internxt让你完全控制你的文件。你的数据是你的业务。保护它是我们的事。",
+        "你的文件在离开你的设备之前就已经被分割和端到端加密了。由于采用了零知识架构的AES-256加密，你绝对是唯一能够访问你的数据的人。",
+        "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。",
+        "我们完全符合GDPR标准和100%安全。行动胜于语言，Internxt已被欧洲领先的渗透测试公司Securitum独立审计和验证。"
+      ]
+    }
+  },
+  "InfoSectionForBusiness": {
+    "title": "使用 Internxt 可以做什么？",
+    "description": "使用我们的安全云存储为企业优化您的组织文件管理、安全性和隐私性。",
+    "cta": "",
+    "cards": [
+      {
+        "title": "管理您的组织",
+        "description": "Internxt 为企业提供了简化的用户和团队管理、灵活的存储分配和可自定义的工作区。轻松切换业务和个人任务以优化生产力和组织性。"
+      },
+      {
+        "title": "安全发送机密文件",
+        "description": "安全的云存储包括安全的文件共享功能，以便在团队中安全协作。使用密码保护和限制文件访问权限，将机密文件发送给合作伙伴，确保您保持对其安全性的控制。"
+      },
+      {
+        "title": "备份重要文件",
+        "description": "备份文件以防止数据丢失。此外，Internxt 在不同的欧盟服务器上存储和备份同一份文件，以增加安全性，使其成为最安全的企业云备份。"
+      },
+      {
+        "title": "随时随地与团队合作",
+        "description": "适用于 Windows、Mac、Linux、iOS、Android 和 Web。随时随地在任何设备上访问文件，确保您和您的团队无论身在何处都能安全工作。"
+      }
+    ]
+  },
+  "FirstWhatWeDoSection": {
+    "card1": {
+      "title": "私下的核心",
+      "description": "在我们所做的一切中，我们把用户和他们的权利放在第一位。我们的使命很简单，就是创造更好的工具和服务，把机构还给最终用户。",
+      "cta": "我们对隐私的承诺"
+    },
+    "card2": {
+      "title": "一个无缝的体验",
+      "description": "Internxt可以在所有平台上使用，甚至是Linux! 用我们的移动、网络和桌面应用来同步你的文件和照片，每一个应用都是为了在旅途中为你的加密存储提供超强的动力。",
+      "cta": "下载应用程序"
+    },
+    "card3": {
+      "title": "免费试用Internxt!",
+      "description": "免费获得高达10GB的存储空间，在全身心投入之前看看隐私是否适合你! 2GB用于创建账户，然后将你的免费存储空间扩展到完整的10GB，用于帮助宣传。",
+      "cta": "创建免费账户"
+    }
+  },
+  "BestStorageSection": {
+    "title": "为未来而生",
+    "description": "我们希望建立一个更好的万维网，一个对所有人都公平、安全和公正的网络。互联网隐私的未来之战正在激烈进行，而我们正处于前线。",
+    "card1": {
+      "title": "分布式存储"
+    },
+    "card2": {
+      "title": "AES 256 CTR 加密协议"
+    },
+    "card3": {
+      "title": "内置冗余功能"
+    },
+    "card4": {
+      "title": "代码开源"
+    },
+    "card5": {
+      "title": "已经过独立审计"
+    }
+  },
+  "lastCtaSection": {
+    "title": "世界上最隐私的云存储",
+    "description": "用Internxt的安全、隐私和加密的云存储来保护真正重要的东西",
+    "cta": "现在选择一个计划"
   },
   "FaqSection": {
     "title": "有问题吗？我们有答案",
@@ -199,12 +280,17 @@
       }
     ]
   },
+  "CtaSection": {
+    "title": "尝试Internxt无风险",
+    "description": "注册并免费获得高达10GB的Internxt端到端加密云存储",
+    "cta": "创建免费账户"
+  },
   "SchemaMarkupQuestions": {
     "faq": [
       {
         "question": "How much does an Internxt plan cost?",
         "answer": [
-          "Need more storage? We also offer individual plans that range from 20GB to 2TB, from as low as €0.89/month."
+          "Need more storage? We also offer Annual Plans that range from 20GB to 2TB, from as low as €0.89/month."
         ]
       },
       {
@@ -214,97 +300,5 @@
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "尝试Internxt无风险",
-    "description": "注册并免费获得高达10GB的Internxt端到端加密云存储",
-    "cta": "创建免费账户"
-  },
-  "InfoSection": {
-    "title": "安全的云存储，拥有无与伦比的隐私",
-    "description": "是什么让 Internxt 如此特别？ 我们是一个紧密团结的专业团队，完全致力于保护您的在线安全。 我们所做的一切和做出的每一个决定都以保护您的数据不被利用为中心。",
-    "cta": "有关Internxt的更多信息",
-    "cards": [
-      {
-        "title": "为隐私而生",
-        "description": "我们不存储密码或用户数据，你的所有数据在传输途中和闲置时都被加密。Internxt让你完全控制你的文件。你的数据是你的业务。保护它是我们的事。"
-      },
-      {
-        "title": "不妥协的安全",
-        "description": "你的文件在离开你的设备之前就已经被分割和端到端加密了。由于采用了零知识架构的AES-256加密，你绝对是唯一能够访问你的数据的人。"
-      },
-      {
-        "title": "开源和透明化",
-        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
-      },
-      {
-        "title": "经独立验证",
-        "description": "我们完全符合GDPR标准和100%安全。行动胜于语言，Internxt已被欧洲领先的渗透测试公司Securitum独立审计和验证。"
-      }
-    ]
-  },
-  "InfoSectionForBusiness": {
-    "title": "使用 Internxt 可以做什么？",
-    "description": "使用我们的安全云存储为企业优化您的组织文件管理、安全性和隐私性。",
-    "cta": "",
-    "cards": [
-      {
-        "title": "管理您的组织",
-        "description": "Internxt 为企业提供了简化的用户和团队管理、灵活的存储分配和可自定义的工作区。轻松切换业务和个人任务以优化生产力和组织性。"
-      },
-      {
-        "title": "安全发送机密文件",
-        "description": "安全的云存储包括安全的文件共享功能，以便在团队中安全协作。使用密码保护和限制文件访问权限，将机密文件发送给合作伙伴，确保您保持对其安全性的控制。"
-      },
-      {
-        "title": "备份重要文件",
-        "description": "备份文件以防止数据丢失。此外，Internxt 在不同的欧盟服务器上存储和备份同一份文件，以增加安全性，使其成为最安全的企业云备份。"
-      },
-      {
-        "title": "随时随地与团队合作",
-        "description": "适用于 Windows、Mac、Linux、iOS、Android 和 Web。随时随地在任何设备上访问文件，确保您和您的团队无论身在何处都能安全工作。"
-      }
-    ]
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "私下的核心",
-      "description": "在我们所做的一切中，我们把用户和他们的权利放在第一位。我们的使命很简单，就是创造更好的工具和服务，把机构还给最终用户。",
-      "cta": "我们对隐私的承诺"
-    },
-    "card2": {
-      "title": "一个无缝的体验",
-      "description": "Internxt可以在所有平台上使用，甚至是Linux! 用我们的移动、网络和桌面应用来同步你的文件和照片，每一个应用都是为了在旅途中为你的加密存储提供超强的动力。",
-      "cta": "下载应用程序"
-    },
-    "card3": {
-      "title": "免费试用Internxt!",
-      "description": "免费获得高达10GB的存储空间，在全身心投入之前看看隐私是否适合你! 2GB用于创建账户，然后将你的免费存储空间扩展到完整的10GB，用于帮助宣传。",
-      "cta": "创建免费账户"
-    }
-  },
-  "BestStorageSection": {
-    "title": "为未来而生",
-    "description": "我们希望建立一个更好的万维网，一个对所有人都公平、安全和公正的网络。互联网隐私的未来之战正在激烈进行，而我们正处于前线。",
-    "card1": {
-      "title": "分布式存储"
-    },
-    "card2": {
-      "title": "AES 256 CTR 加密协议"
-    },
-    "card3": {
-      "title": "内置冗余功能"
-    },
-    "card4": {
-      "title": "代码开源"
-    },
-    "card5": {
-      "title": "已经过独立审计"
-    }
-  },
-  "lastCtaSection": {
-    "title": "世界上最隐私的云存储",
-    "description": "用Internxt的安全、隐私和加密的云存储来保护真正重要的东西",
-    "cta": "现在选择一个计划"
   }
 }

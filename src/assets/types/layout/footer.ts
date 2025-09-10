@@ -88,6 +88,7 @@ export interface Resources {
   directoryOfPrivacyOrganizations: string;
   cyberAwareness: string;
   whatGoogleKnowsAboutMe: string;
+  WebDAV: string;
 }
 
 export interface Tools {
@@ -111,6 +112,7 @@ export interface Features {
   cloudBakcup: string;
   GDPRCloud: string;
   cloudPhotos: string;
+  cloudVideo: string;
 }
 
 export interface NewsletterSection {
