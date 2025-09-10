@@ -281,14 +281,6 @@ export default function Footer({
                     </Link>
 
                     <Link
-                      href="/media-area"
-                      locale={lang}
-                      passHref
-                      className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                    >
-                      {textContent.FooterSection.sections.company.mediaArea}
-                    </Link>
-                    <Link
                       href="/green-cloud-computing"
                       locale={lang}
                       passHref
@@ -332,10 +324,6 @@ export default function Footer({
                     >
                       {textContent.FooterSection.sections.join.whitePaper}
                     </a>
-
-                    <Link href="/newsletter-subscribe" className="hover:text-primary">
-                      {textContent.FooterSection.sections.join.newsletter}
-                    </Link>
 
                     <Link
                       href="https://github.com/internxt"
@@ -394,10 +382,6 @@ export default function Footer({
                       className="w-full max-w-[160px] hover:text-primary"
                     >
                       {textContent.FooterSection.sections.resources.dropboxAlternative}
-                    </Link>
-
-                    <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.resources.cyberAwareness}
                     </Link>
 
                     <Link
@@ -728,15 +712,6 @@ export default function Footer({
                       <Link href="/legal" locale={lang} passHref>
                         {textContent.FooterSection.sections.company.legal}
                       </Link>
-
-                      <Link
-                        href="/media-area"
-                        locale={lang}
-                        passHref
-                        className="flex max-w-[200px] flex-row items-center hover:text-primary"
-                      >
-                        {textContent.FooterSection.sections.company.mediaArea}
-                      </Link>
                     </Disclosure.Panel>
                   </Transition>
                 </>
@@ -785,10 +760,6 @@ export default function Footer({
                       >
                         {textContent.FooterSection.sections.join.whitePaper}
                       </a>
-
-                      <Link href="/newsletter-subscribe" className="hover:text-primary">
-                        {textContent.FooterSection.sections.join.newsletter}
-                      </Link>
 
                       <Link
                         href="https://github.com/internxt"
@@ -861,9 +832,6 @@ export default function Footer({
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
                       </Link>
 
-                      <Link href="/cyber-awareness" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.resources.cyberAwareness}
-                      </Link>
                       <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}
