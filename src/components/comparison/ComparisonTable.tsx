@@ -4,250 +4,291 @@ import { Info } from '@phosphor-icons/react';
 import { Tooltip } from 'react-tooltip';
 import { getImage } from '@/lib/getImage';
 import SignUpBanner from '../banners/SignUpBanner';
+import bannerText from '@/assets/lang/en/banners.json';
 
 interface ComparisonTableProps {
   textContent: any;
   logo?: string;
   hideTooltip?: boolean;
-  competitor: string;
+  competitor: 'pCloud' | 'MEGA' | 'Dropbox';
 }
 
-export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: ComparisonTableProps) => {
-  const competitorPath =
-    competitor === 'pCloud'
-      ? textContent.tableSection.pcloudFeatures
-      : competitor === 'MEGA'
-      ? textContent.tableSection.megaFeatures
-      : textContent.tableSection.dropboxFeatures;
+interface CompetitorFeatures {
+  codeTransparency: string;
+  encryption: string;
+  pricing: string;
+  features: string;
+  communityAudits: string;
+  liveSupport: string;
+  dataTrackers: string;
+  privacyLaws: string;
+  postQuantumEncryption: string;
+}
 
-  const comunityAuditsFeature =
-    competitor === 'Dropbox'
-      ? textContent.tableSection.internxtFeatures.securityAudits
-      : textContent.tableSection.internxtFeatures.comunityAudits;
+interface CompetitorData {
+  name: string;
+  logo: string;
+  features: CompetitorFeatures;
+}
 
-  const dataFeature =
-    competitor === 'Dropbox'
-      ? textContent.tableSection.internxtFeatures.privacyPolicy
-      : textContent.tableSection.internxtFeatures.dataTrackers;
-  const competitors = [
+interface TableRow {
+  id: number;
+  title: string;
+  feature: string[];
+}
+
+// Configuración de competidores
+const COMPETITOR_CONFIG = {
+  pCloud: {
+    featuresPath: 'pcloudFeatures',
+    description: 'pCloudDescription',
+    defaultLogo: '../../../logos/pcloud-alternative/pcloud-logo-and-name.svg',
+  },
+  MEGA: {
+    featuresPath: 'megaFeatures',
+    description: 'megaDescription',
+    defaultLogo: '../../../logos/pcloud-alternative/mega-logo-and-name.svg',
+  },
+  Dropbox: {
+    featuresPath: 'dropboxFeatures',
+    description: 'dropboxDescription',
+    defaultLogo: '../../../logos/pcloud-alternative/dropbox-logo-and-name.svg',
+  },
+} as const;
+
+// Mapeo de características especiales por competidor
+const FEATURE_OVERRIDES = {
+  Dropbox: {
+    communityAudits: 'securityAudits',
+    dataTrackers: 'privacyPolicy',
+  },
+} as const;
+
+export const ComparisonTable = ({ textContent, logo, hideTooltip = false, competitor }: ComparisonTableProps) => {
+  // Helpers
+  const getCompetitorFeatures = (): CompetitorFeatures => {
+    const config = COMPETITOR_CONFIG[competitor];
+    return textContent.tableSection[config.featuresPath];
+  };
+
+  const getInternxtFeatures = (): CompetitorFeatures => {
+    const baseFeatures = textContent.tableSection.internxtFeatures;
+    const overrides = FEATURE_OVERRIDES[competitor] || {};
+
+    return {
+      ...baseFeatures,
+      communityAudits: baseFeatures[overrides.communityAudits] || baseFeatures.communityAudits,
+      dataTrackers: baseFeatures[overrides.dataTrackers] || baseFeatures.dataTrackers,
+    };
+  };
+
+  const parseText = (text: string): string => {
+    return typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text;
+  };
+
+  const getCompetitorLogo = (): string => {
+    return logo || COMPETITOR_CONFIG[competitor].defaultLogo;
+  };
+
+  const getDescription = (): string => {
+    const descriptionKey = COMPETITOR_CONFIG[competitor].description;
+    return textContent[descriptionKey];
+  };
+
+  // Data preparation
+  const competitors: CompetitorData[] = [
     {
       name: 'Internxt',
       logo: '../../../logos/pcloud-alternative/inxt-logo-and-name.svg',
-      features: {
-        codeTransparency: textContent.tableSection.internxtFeatures.codeTransparency,
-        encryption: textContent.tableSection.internxtFeatures.encryption,
-        postQuantumEncryption: textContent.tableSection.internxtFeatures.postQuantumEncryption,
-        pricing: textContent.tableSection.internxtFeatures.pricing,
-        features: textContent.tableSection.internxtFeatures.features,
-        comunityAudits: comunityAuditsFeature,
-        liveSupport: textContent.tableSection.internxtFeatures.liveSupport,
-        dataTrackers: dataFeature,
-        privacyLaws: textContent.tableSection.internxtFeatures.privacyLaws,
-      },
+      features: getInternxtFeatures(),
     },
     {
       name: competitor,
-      logo: logo ? logo : '../../../logos/pcloud-alternative/pcloud-logo-and-name.svg',
-      features: {
-        codeTransparency: competitorPath.codeTransparency,
-        encryption: competitorPath.encryption,
-        pricing: competitorPath.pricing,
-        features: competitorPath.features,
-        comunityAudits: competitorPath.comunityAudits,
-        liveSupport: competitorPath.liveSupport,
-        dataTrackers: competitorPath.dataTrackers,
-        privacyLaws: competitorPath.privacyLaws,
-        postQuantumEncryption: competitorPath.postQuantumEncryption,
-      },
+      logo: getCompetitorLogo(),
+      features: getCompetitorFeatures(),
     },
   ];
 
-  const bannerText = require(`@/assets/lang/en/banners.json`);
-  const getFeature = (feature) => competitors.map((brand) => brand.features[feature]);
-  const parseText = (text: string) => (typeof text === 'string' ? text.replace(/{{competitor}}/g, competitor) : text);
-  const description =
-    competitor === 'pCloud'
-      ? textContent.pCloudDescription
-      : competitor === 'MEGA'
-      ? textContent.megaDescription
-      : textContent.dropboxDescription;
-  const table = [
+  const getFeatureValues = (featureKey: keyof CompetitorFeatures): string[] => {
+    return competitors.map((brand) => brand.features[featureKey]);
+  };
+
+  const tableRows: TableRow[] = [
     {
-      name: `tableComparison`,
-      rows: [
-        {
-          id: 0,
-          title: `${textContent.tableSection.comparisons.codeTransparency}`,
-          feature: getFeature('codeTransparency'),
-        },
-        {
-          id: 1,
-          title: `${textContent.tableSection.comparisons.encryption}`,
-          feature: getFeature('encryption'),
-        },
-        {
-          id: 2,
-          title: `${textContent.tableSection.comparisons.postQuantumEncryption}`,
-          feature: getFeature('postQuantumEncryption'),
-        },
-        {
-          id: 3,
-          title: `${textContent.tableSection.comparisons.pricing}`,
-          feature: getFeature('pricing'),
-        },
-        {
-          id: 4,
-          title: `${textContent.tableSection.comparisons.features}`,
-          feature: getFeature('features'),
-        },
-        {
-          id: 5,
-          title: `${textContent.tableSection.comparisons.comunityAudits}`,
-          feature: getFeature('comunityAudits'),
-        },
-        {
-          id: 6,
-          title: `${textContent.tableSection.comparisons.liveSupport}`,
-          feature: getFeature('liveSupport'),
-        },
-        {
-          id: 7,
-          title: `${textContent.tableSection.comparisons.dataTrackers}`,
-          feature: getFeature('dataTrackers'),
-        },
-        {
-          id: 8,
-          title: `${textContent.tableSection.comparisons.privacyLaws}`,
-          feature: getFeature('privacyLaws'),
-        },
-      ],
+      id: 0,
+      title: textContent.tableSection.comparisons.codeTransparency,
+      feature: getFeatureValues('codeTransparency'),
+    },
+    {
+      id: 1,
+      title: textContent.tableSection.comparisons.encryption,
+      feature: getFeatureValues('encryption'),
+    },
+    {
+      id: 2,
+      title: textContent.tableSection.comparisons.postQuantumEncryption,
+      feature: getFeatureValues('postQuantumEncryption'),
+    },
+    {
+      id: 3,
+      title: textContent.tableSection.comparisons.pricing,
+      feature: getFeatureValues('pricing'),
+    },
+    {
+      id: 4,
+      title: textContent.tableSection.comparisons.features,
+      feature: getFeatureValues('features'),
+    },
+    {
+      id: 5,
+      title: textContent.tableSection.comparisons.communityAudits,
+      feature: getFeatureValues('communityAudits'),
+    },
+    {
+      id: 6,
+      title: textContent.tableSection.comparisons.liveSupport,
+      feature: getFeatureValues('liveSupport'),
+    },
+    {
+      id: 7,
+      title: textContent.tableSection.comparisons.dataTrackers,
+      feature: getFeatureValues('dataTrackers'),
+    },
+    {
+      id: 8,
+      title: textContent.tableSection.comparisons.privacyLaws,
+      feature: getFeatureValues('privacyLaws'),
     },
   ];
+
+  // Style helpers
+  const getRowBackgroundClass = (index: number, isInternxt: boolean = false): string => {
+    const baseClass = index % 2 === 0 ? 'bg-neutral-5' : 'bg-white';
+    if (isInternxt) {
+      return index % 2 === 0 ? 'bg-neutral-35' : 'bg-neutral-17';
+    }
+    return baseClass;
+  };
+
+  const getRowCornerClass = (index: number, position: 'left' | 'right'): string => {
+    if (index === 0) return position === 'left' ? 'rounded-tl-16' : '';
+    if (index === tableRows.length - 1) {
+      return position === 'left' ? 'rounded-bl-16' : 'rounded-br-16';
+    }
+    return '';
+  };
+
+  // Components
+  const TableHeader = () => (
+    <thead>
+      <tr>
+        <th className="pointer-events-none align-bottom" aria-label="Feature comparison"></th>
+        {competitors.map((competitor, index) => (
+          <th key={competitor.name} scope="col">
+            <div
+              className={`flex h-[128px] w-[446px] flex-col items-center justify-center px-20 py-12 ring-1 ring-green-120 ${
+                index === 0 ? 'rounded-tl-2xl bg-primary/6' : 'rounded-tr-2xl bg-white'
+              }`}
+            >
+              <img
+                loading="lazy"
+                src={index === 0 ? competitor.logo : getImage(competitor.logo)}
+                draggable="false"
+                height={31.29}
+                width={128}
+                alt={`${competitor.name} logo`}
+              />
+            </div>
+          </th>
+        ))}
+      </tr>
+    </thead>
+  );
+
+  const TableRow = ({ row, index }: { row: TableRow; index: number }) => (
+    <tr className="h-14 md:h-16" key={row.title}>
+      {/* Feature name column */}
+      <td className="sticky-left">
+        <div
+          className={`flex h-[64px] items-center justify-start overflow-hidden whitespace-nowrap px-6 text-left text-base font-normal text-gray-95 ring-1 ring-green-120 ${getRowBackgroundClass(
+            index,
+          )} ${getRowCornerClass(index, 'left')}`}
+        >
+          {row.title}
+        </div>
+      </td>
+
+      {/* Internxt column */}
+      <td>
+        <div
+          className={`flex h-[64px] flex-col items-center justify-center ring-1 ring-green-120 ${getRowBackgroundClass(
+            index,
+            true,
+          )}`}
+        >
+          {typeof row.feature[0] === 'string' && (
+            <span className="text-base font-semibold text-gray-100">{row.feature[0]}</span>
+          )}
+        </div>
+      </td>
+
+      {/* Competitor column */}
+      <td className="h-14 md:h-16">
+        <div
+          className={`flex h-full flex-row items-center justify-center gap-3 ring-1 ring-green-120 ${getRowBackgroundClass(
+            index,
+          )} ${getRowCornerClass(index, 'right')}`}
+        >
+          {typeof row.feature[1] === 'string' && (
+            <span className="text-base font-normal text-gray-100">{row.feature[1]}</span>
+          )}
+          {index === tableRows.length - 1 && !hideTooltip && (
+            <div className="hidden lg:flex">
+              <Tooltip
+                variant="dark"
+                id="info-icon"
+                delayShow={400}
+                className="z-40 max-w-xs rounded-lg drop-shadow-md"
+              >
+                {textContent.tooltip}
+              </Tooltip>
+              <Info data-tooltip-id="info-icon" className="text-primary" />
+            </div>
+          )}
+        </div>
+      </td>
+    </tr>
+  );
 
   return (
     <section className="space-y-10 overflow-hidden bg-white">
       <div className="flex flex-col items-center justify-center gap-6 lg:gap-16">
+        {/* Header Section */}
         <div className="flex flex-col items-center gap-6 text-center">
           <h2
             className="w-[320px] text-3xl font-semibold text-gray-100 lg:w-full lg:text-5xl"
             dangerouslySetInnerHTML={{ __html: parseText(textContent.title) }}
-          ></h2>
-          <p className="w-[320px] text-base text-gray-80 lg:w-[774px] lg:text-xl">{description}</p>
+          />
+          <p className="w-[320px] text-base text-gray-80 lg:w-[774px] lg:text-xl">{getDescription()}</p>
         </div>
-        <div className="flex w-screen flex-col overflow-x-auto xl:overflow-x-visible">
-          <table className="group relative mx-auto table-auto border-collapse overflow-x-auto overflow-y-auto bg-none text-center text-base text-cool-gray-80">
-            <thead className="">
-              <tr className="">
-                <th className="pointer-events-none align-bottom">
-                  <div className="duration-250 flex h-32 flex-row items-center justify-start space-x-4 p-10 opacity-100 transition-opacity delay-1000 group-hover:opacity-0 xl:hidden">
-                    <img
-                      loading="lazy"
-                      className="h-8 w-8 object-cover object-center"
-                      src="/images/comparison/drag_horizontal.webp"
-                      draggable="false"
-                      alt="Drag horizontal"
-                    />
-                    <div className="mt-1 flex flex-col items-start justify-center text-left text-sm font-medium leading-tight text-gray-40">
-                      <span>{textContent.tableSection.drag.line1}</span>
-                      <span>{textContent.tableSection.drag.line2}</span>
-                    </div>
-                  </div>
-                </th>
 
-                <th key={competitors[0].name}>
-                  <div className="flex h-[128px] w-[446px] flex-col items-center justify-center rounded-tl-2xl bg-primary/6 px-20  py-12 ring-1 ring-green-120">
-                    <img
-                      loading="lazy"
-                      src={`${competitors[0].logo}`}
-                      draggable="false"
-                      height={31.29}
-                      width={128}
-                      alt={`${competitors[0].name} logo`}
-                    />
-                  </div>
-                </th>
-
-                <th key={competitors[1].name}>
-                  <div className="flex h-[128px] w-[446px] flex-col items-center justify-center rounded-tr-2xl bg-white px-20  py-12 ring-1 ring-green-120">
-                    <img
-                      loading="lazy"
-                      src={getImage(competitors[1].logo)}
-                      draggable="false"
-                      height={31.29}
-                      width={128}
-                      alt={`${competitors[1].name} logo`}
-                    />
-                  </div>
-                </th>
-              </tr>
-            </thead>
-
-            {table.map((section) => (
-              <Fragment key={section.name}>
-                <tbody className="">
-                  {section.rows.map((row, index) => (
-                    <tr className="h-14 md:h-16 " key={row.title}>
-                      <td>
-                        <div
-                          className={`flex h-[64px] items-center justify-start whitespace-nowrap px-6 text-left text-base font-normal text-gray-95 ring-1 ring-green-120
-                          ${index % 2 === 0 ? 'bg-neutral-5' : 'bg-white'}
-                          ${index === 0 ? 'rounded-tl-16' : ''}
-                          ${index === section.rows.length - 1 ? 'rounded-bl-16' : ''}
-                          overflow-hidden
-                        `}
-                        >
-                          {row.title}
-                        </div>
-                      </td>
-                      <td>
-                        <div
-                          className={`flex h-[64px] flex-col items-center justify-center ring-1 ring-green-120 ${
-                            index % 2 === 0 ? 'bg-neutral-35' : 'bg-neutral-17'
-                          }`}
-                        >
-                          {typeof row.feature[0] === 'string' && (
-                            <span className="text-base font-semibold text-gray-100">{row.feature[0]}</span>
-                          )}
-                        </div>
-                      </td>
-                      {row.feature.slice(1).map((feature, columnIndex) => (
-                        <td className="h-14 md:h-16" key={`${row.title}${columnIndex.toString()}`}>
-                          <div
-                            className={`flex h-full flex-row items-center justify-center gap-3 ring-1 ring-green-120   ${
-                              index % 2 === 0 ? 'bg-neutral-5' : 'bg-white'
-                            }
-                             ${index === section.rows.length - 1 ? 'rounded-br-16' : ''}`}
-                          >
-                            {typeof feature === 'string' && (
-                              <span className="text-base font-normal text-gray-100">{feature}</span>
-                            )}
-                            {row.id === section.rows.length - 1 && !hideTooltip && (
-                              <div className="hidden lg:flex">
-                                <Tooltip
-                                  variant="dark"
-                                  id="info-icon"
-                                  delayShow={400}
-                                  className="z-40 max-w-xs rounded-lg drop-shadow-md"
-                                >
-                                  {textContent.tooltip}
-                                </Tooltip>
-                                <Info data-tooltip-id="info-icon" className="text-primary" />
-                              </div>
-                            )}
-                          </div>
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </Fragment>
-            ))}
+        {/* Comparison Table */}
+        <div className="flex w-screen flex-col overflow-x-auto pl-6 xl:overflow-x-visible">
+          <table className="group relative mx-auto min-w-[800px] table-auto border-collapse bg-none text-center text-base text-cool-gray-80">
+            <TableHeader />
+            <tbody>
+              {tableRows.map((row, index) => (
+                <TableRow key={row.id} row={row} index={index} />
+              ))}
+            </tbody>
           </table>
         </div>
       </div>
+
+      {/* Sign Up Banner */}
       <SignUpBanner
         textContent={bannerText.SignUpComparison}
-        lang={'en'}
+        lang="en"
         bgGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F9F9FC 100%)"
       />
     </section>

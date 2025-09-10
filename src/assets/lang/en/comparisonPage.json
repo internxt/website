@@ -443,5 +443,158 @@
         ]
       }
     }
+  },
+
+  "FaqSectionpCloud": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to pCloud?",
+        "answer": [
+          "Yes, Internxt offers more advanced features to protect your data without charging you extra for them. Post-quantum and zero-knowledge encryption guarantees nobody but you can view your files.",
+          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail, features not currently available with pCloud, also offer you additional protection from hackers and data breaches."
+        ]
+      },
+      {
+        "question": "What is post-quantum encryption, and is it more secure?",
+        "answer": [
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure pCloud alternative.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
+        ]
+      },
+      {
+        "question": "Is pCloud pricing more expensive than Internxt?",
+        "answer": [
+          "With your exclusive 87% discount, all our plans are cheaper than pCloud pricing options currently available, with the benefit of offering many more features and privacy than pCloud."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
+        ]
+      }
+    ]
+  },
+
+  "FaqSectionDropbox": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to Dropbox?",
+        "answer": [
+          "Yes, Internxt is designed to be a more secure and private alternative to Dropbox. Thanks to zero-knowledge and post-quantum encryption, only you can access and decrypt your files.",
+          "Unlike Dropbox, Internxt does not scan, track, or sell your data, ensuring full privacy for all your information."
+        ]
+      },
+      {
+        "question": "Does Dropbox use zero-knowledge encryption?",
+        "answer": [
+          "No, Dropbox does not offer zero-knowledge encryption. This means Dropbox employees or third parties could potentially access your stored files.",
+          "Internxt guarantees that nobody, not even our team, can see your data."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, and complies with strict European GDPR privacy regulations.",
+          "This ensures higher privacy standards compared to providers like Dropbox, which are based in the United States and may be subject to surveillance laws."
+        ]
+      },
+      {
+        "question": "Is Internxt pricing cheaper than Dropbox?",
+        "answer": [
+          "Yes, with our exclusive discounts, Internxt plans are more affordable than Dropbox’s, while including additional privacy-focused features at no extra cost."
+        ]
+      },
+      {
+        "question": "What extra features does Internxt offer that Dropbox doesn’t?",
+        "answer": [
+          "Internxt includes features like a built-in VPN, antivirus, device cleaner, dark web monitor, and private email (Mail).",
+          "These tools add extra layers of security and privacy not available with Dropbox."
+        ]
+      },
+      {
+        "question": "How can I contact Internxt support?",
+        "answer": [
+          "If you need help, you can reach our Customer Success team by emailing hello@internxt.com or using the live chat on our website."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Yes, Internxt accepts debit and credit cards (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort, and cryptocurrency."
+        ]
+      }
+    ]
+  },
+  "FaqSectionMEGA": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to MEGA?",
+        "answer": [
+          "Yes, Internxt is a more secure and private alternative to MEGA. Our zero-knowledge and post-quantum encryption ensure that only you can access your data.",
+          "Unlike MEGA, Internxt does not rely on third-party services or trackers, offering a truly private environment for your files."
+        ]
+      },
+      {
+        "question": "Does MEGA offer the same level of encryption as Internxt?",
+        "answer": [
+          "MEGA uses encryption, but Internxt takes security further by implementing post-quantum encryption, which protects your data even against future quantum computing threats.",
+          "This technology is included in every Internxt plan at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, and complies with strict European GDPR privacy laws.",
+          "This provides stronger privacy protection compared to services like MEGA, which may be subject to different jurisdictions and regulations."
+        ]
+      },
+      {
+        "question": "Is Internxt more affordable than MEGA?",
+        "answer": [
+          "Yes, with exclusive discounts, Internxt offers more affordable lifetime and subscription plans while including additional security and privacy features without hidden costs."
+        ]
+      },
+      {
+        "question": "What extra features does Internxt offer that MEGA doesn’t?",
+        "answer": [
+          "Internxt includes a VPN, antivirus, device cleaner, dark web monitor, and secure email service (Mail) — features that MEGA doesn’t offer.",
+          "These extra tools give you enhanced protection from hackers, leaks, and online threats."
+        ]
+      },
+      {
+        "question": "How can I contact Internxt support?",
+        "answer": [
+          "If you need assistance, you can email hello@internxt.com or use the live chat on our website. Our Customer Success team will be happy to help you."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Yes, Internxt accepts major credit and debit cards (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, and cryptocurrency."
+        ]
+      }
+    ]
   }
 }

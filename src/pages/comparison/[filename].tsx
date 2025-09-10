@@ -14,6 +14,8 @@ import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSect
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import { defaultTextFieldAppearanceProvider } from 'pdf-lib';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -86,6 +88,13 @@ const SpecialOfferPage = ({
       ? '/images/comparison/competitors/Mega_Letters.webp'
       : '/images/comparison/competitors/Dropbox_Letters.webp';
 
+  const FAQSText =
+    selectedPathname === 'pcloud-alternative'
+      ? langJson.FaqSectionpCloud
+      : selectedPathname === 'mega-alternative'
+      ? langJson.FaqSectionMEGA
+      : langJson.FaqSectionDropbox;
+
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="pCloud Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
@@ -115,8 +124,6 @@ const SpecialOfferPage = ({
         showPromo={false}
       />
 
-      <TablesSection textContent={langJson.VersusSection} competitor={competitor} logo={competitorImage} />
-
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
         url={'/pricing'}
@@ -137,6 +144,8 @@ const SpecialOfferPage = ({
         competitor={competitor}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
       />
+
+      <TablesSection textContent={langJson.VersusSection} competitor={competitor} logo={competitorImage} />
 
       <FloatingCtaSectionv2
         textContent={langJson.CtaSection}
@@ -173,6 +182,8 @@ const SpecialOfferPage = ({
         containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
       />
+
+      <FAQSection textContent={FAQSText} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>

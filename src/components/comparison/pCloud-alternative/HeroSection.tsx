@@ -20,7 +20,7 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
 
   return (
     <div
-      className="flex h-[680px] w-full flex-col items-center justify-between gap-8 pt-20 lg:h-[550px] lg:justify-center "
+      className="flex h-[680px] w-full flex-col items-center justify-between gap-8 py-20 pt-20 lg:h-min lg:justify-center "
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-full w-full flex-col items-center justify-around text-center xs-md:mx-10 lg:h-[389px] lg:justify-around xl:mx-32 3xl:mx-80 4xl:mx-96">
@@ -35,10 +35,10 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
             </p>
             <div className="flex h-[88px] flex-col justify-between">
               {textContent.features?.map((feat) => (
-                <div key={feat} className="flex h-[24px] flex-row gap-2">
-                  <Check className="hidden text-green-dark xs-md:block" weight="bold" size={24} />
-                  <Check className="block text-green-dark xs-md:hidden" weight="bold" size={20} />
-                  <p className="mb-2 break-keep text-left text-sm font-normal text-gray-95 xs-md:text-lg">{feat}</p>
+                <div key={feat} className="flex h-[24px] flex-row items-center gap-2">
+                  <Check className="hidden text-green-10 xs-md:block" size={24} />
+                  <Check className="block text-green-10 xs-md:hidden" size={20} />
+                  <p className=" break-keep text-left text-sm font-normal text-gray-95 xs-md:text-lg">{feat}</p>
                 </div>
               ))}
             </div>
@@ -54,7 +54,6 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
           {textContent.cta}
         </Link>
       </div>
-      <div className="h-[1px] w-[320px] bg-green-120 lg:w-10/12 " />
     </div>
   );
 };

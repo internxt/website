@@ -9,12 +9,25 @@ export interface ComparisonPageText {
   tableSection: ComparisonPageTextTableSection;
   HorizontalScrollableSection: HorizontalScrollableSection;
   HorizontalScrollableSectionV2: HorizontalScrollableSectionV2;
+  FaqSectionpCloud: FAQSection;
+  FaqSectionDropbox: FAQSection;
+  FaqSectionMEGA: FAQSection;
 }
 
 export interface CtaSection {
   title: string;
   description: string;
   cta: string;
+}
+
+export interface FAQSection {
+  title: string;
+  faq: FAQ[];
+}
+
+export interface FAQ {
+  question: string;
+  answer: string[];
 }
 
 export interface HeaderSection {

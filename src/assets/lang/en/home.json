@@ -254,88 +254,52 @@
       "cta": "Browse with VPN"
     }
   },
+
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Can Internxt access my files?",
+        "question": "Is Internxt a more secure and private alternative to pCloud?",
         "answer": [
-          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          "Internxt’s services feature zero-knowledge encryption, meaning only you can access and decrypt your private data. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available, to protect your files from future threats."
+          "Yes, Internxt offers more advanced features to protect your data without charging you extra for them. Post-quantum and zero-knowledge encryption guarantees nobody but you can view your files.",
+          "Additional features such as VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet, and Mail, features not currently available with pCloud, also offer you additional protection from hackers and data breaches."
         ]
       },
       {
-        "question": "Will I get access to all Internxt services?",
+        "question": "What is post-quantum encryption, and is it more secure?",
         "answer": [
-          "Yes, a paid Internxt subscription or lifetime membership grant you access to our all-in-one privacy suite, consisting of Internxt Mail, Meet, VPN, Drive, Send, Antivirus, and more.",
-          "An Internxt Free plan will only give you access to Internxt Drive."
+          "Unlike standard encryption, post-quantum encryption algorithms are built to resist powerful quantum attacks, making PQE a more secure pCloud alternative.",
+          "This cryptography method is used by Internxt to ensure that your lifetime cloud storage plan protects you against future cybersecurity threats and is available for all plans at no extra cost."
         ]
       },
       {
-        "question": "Does Internxt store my password?",
+        "question": "Where is Internxt based?",
         "answer": [
-          "No. As such, Internxt does not (and cannot) store your password.",
-          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          "Internxt is based in Valencia, Spain, making it a GDPR compliant cloud storage solution that follows strict laws to ensure your data and privacy are protected."
         ]
       },
       {
-        "question": "Can I enable 2FA?",
+        "question": "Is pCloud pricing more expensive than Internxt?",
         "answer": [
-          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
-          "You can also use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
-        ]
-      },
-      {
-        "question": "How do I create an Internxt account?",
-        "answer": [
-          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
-          "Or head to our homepage and click on “Get started.” You will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership to access all our services. To sign up, simply enter your name and email address. No identity nor email verification is required to start using Internxt's services."
-        ]
-      },
-      {
-        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
-        "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort and Cryptocurrency."
-        ]
-      },
-      {
-        "question": "What is Internxt’s refund policy?",
-        "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
-        ]
-      },
-      {
-        "question": "How can I cancel my subscription?",
-        "answer": [
-          "Canceling your subscription is simple. Open the Internxt app, navigate to settings, and select 'Cancel Subscription.' This action will terminate your subscription immediately, and your account will revert to a free plan.",
-          "Please note that any remaining time on your current paid subscription will not be refunded or carried over. For instance, if you cancel a one-year plan with four months remaining, you will lose access to those remaining four months.",
-          "You can also cancel a paid plan and your Internxt account via settings, which will delete your subscription, account, and all your files."
+          "With your exclusive 87% discount, all our plans are cheaper than pCloud pricing options currently available, with the benefit of offering many more features and privacy than pCloud."
         ]
       },
       {
         "question": "How do I contact support?",
         "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Does Internxt have lifetime plans?",
-        "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage for a unique, one-time payment."
+          "If you have any more questions, requests, or need assistance, you can contact hello@internxt.com and our Customer Success Team will be happy to help."
         ]
       },
       {
         "question": "Can I add more storage to my lifetime plan?",
         "answer": [
-          "Yes, you can add as much storage as you want to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and contact us at hello@internxt.com so we can stack them together for you on the same account."
+          "Yes, you can upgrade your plan from the settings of your Internxt account if you need to add more storage."
         ]
       },
       {
-        "question": "Is Internxt a sustainable and eco-friendly cloud storage solution?",
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
         "answer": [
-          "Yes, Internxt is committed to green cloud computing, offering eco-friendly storage solutions to support a cleaner, sustainable future. Our data centers are powered by 92% renewable energy and are designed to minimize carbon emissions, resource consumption, and e-waste.",
-          "Our efforts contribute to a climate-neutral goal by 2050. [Learn more](https://internxt.com/es/green-cloud-computing)"
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, iDEAL, Sofort, and Cryptocurrency."
         ]
       }
     ]
