@@ -148,9 +148,12 @@ export enum PromoCodeName {
   FifthAnniversary = 'INTERNXT5',
   Welcome = 'WELCOME',
   AchoEsGratiss = 'achoesgratiss',
-  Mega87 = 'MEGA87',
   AFS = 'AFS87',
-
+  SoftSales85 = '85OFF',
+  FreePlanUpsell = 'EXCLUSIVE87',
+  Techpresso = 'Techpresso',
+  Trickyhash = 'trickyhash',
+  Mega87 = 'MEGA87',
 }
 
 export interface PromoCodeProps {
