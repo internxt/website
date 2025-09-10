@@ -23,7 +23,7 @@ const WhatWeDoSection = ({ textContent }) => {
           </RevealX>
           <RevealX direction="right" className="flex lg:hidden">
             <div
-              className="h-[195px] w-[345px] bg-cover lg:hidden"
+              className="h-[195px] w-[345px] rounded-16 bg-cover lg:hidden"
               style={{
                 backgroundImage: `url(${getImage('/images/about/photos/Fran-Villalba-Segarra.webp')})`,
                 backgroundPosition: '50% 0%',
@@ -44,19 +44,19 @@ const WhatWeDoSection = ({ textContent }) => {
               })}
             </div>
             <div className="flex h-min w-full flex-col justify-center gap-4 rounded-16 bg-white p-6 lg:gap-6 lg:p-8">
-              <div className="hidden flex-row gap-5 lg:flex">
+              <div className="hidden flex-row items-center justify-center gap-5 lg:flex">
                 <Image
                   src={getImage('/images/about/logos/BitCoin.webp')}
-                  width={190}
-                  height={175}
+                  width={196}
+                  height={196}
                   alt="BitCoin Logo"
-                  loading="eager"
                   className="hidden lg:flex"
+                  quality={100}
                 />
                 <p className="text-xl font-medium leading-tight text-gray-95">{textContent.bitSection.title}</p>
               </div>
               <div className="flex flex-col gap-4 lg:hidden">
-                <div className="h-2 w-2">
+                <div className="h-8 w-8">
                   <Image
                     src={getImage('/images/about/logos/BitCoin.webp')}
                     height={48}

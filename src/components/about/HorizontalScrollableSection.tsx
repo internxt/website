@@ -136,9 +136,9 @@ export default function HorizontalScrollableSection({
             </RevealX>
             <RevealX direction="right" className="flex lg:hidden">
               <Image
-                src={getImage('/images/about/logos/GDPR.webp')}
+                src={getImage('/images/about/logos/mobile GDPR.png')}
                 width={345}
-                height={324}
+                height={150}
                 quality={100}
                 layout="intrinsic"
                 className="rounded-2xl"
@@ -183,9 +183,9 @@ export default function HorizontalScrollableSection({
           >
             {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[450px]">
-                  <p className=" pb-6 text-xl font-medium text-gray-95">{title}</p>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-6 lg:w-[450px] lg:p-8">
+                  <p className=" pb-4 text-xl font-medium text-gray-95 lg:pb-6">{title}</p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55">
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>
