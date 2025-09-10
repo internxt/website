@@ -12,7 +12,7 @@ const nameFiles = [
   'drive',
   'legal',
   'lifetime_special',
-  'media-area',
+
   'open-source',
   'partner-discount',
   'password-checker',
