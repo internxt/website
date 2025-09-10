@@ -12,10 +12,9 @@ import { TablesSection } from '@/components/comparison/pCloud-alternative/Tables
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
 import FAQSection from '@/components/shared/sections/FaqSection';
-import { defaultTextFieldAppearanceProvider } from 'pdf-lib';
+import { ComparisonTablePCloud } from '@/components/comparison/ComparisonTablePcloud';
 
 interface PartnerDiscountProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -106,7 +105,17 @@ const SpecialOfferPage = ({
         competitor={competitor}
       />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor={competitor} logo={competitorImage} />
+      <ComparisonTablePCloud
+        textContent={langJson.HeaderSection}
+        competitor={competitor}
+        logo="/images/comparison/competitors/pCloud.png"
+      />
+
+      <ComparisonTablePCloud
+        textContent={langJson.HeaderSection}
+        competitor={competitor}
+        logo="/images/comparison/competitors/dropbox.webp"
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -120,7 +129,8 @@ const SpecialOfferPage = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        sectionDetails="bg-neutral-15"
+        backgroundGradientColor="linear-gradient(180deg, #F9F9FC 0%, #FFFFFF 100%)"
+        sectionDetails="py-10 lg:py-20"
         showPromo={false}
       />
 

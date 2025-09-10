@@ -57,8 +57,8 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
   return (
     <section className="flex flex-col items-center justify-center gap-8 overflow-hidden bg-white py-8 lg:py-20">
       <div className="flex flex-col items-center justify-center gap-6 text-center">
-        <h2 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{parseText(textContent.title)}</h2>
-        <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{textContent.description}</p>
+        <h2 className="text-30 font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>
+        <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{parseText(textContent.description)}</p>
 
         <div className="flex h-full w-screen flex-row items-center justify-center py-6">
           <InxtTable textContent={textContent.mainTable.inxtTable} />

@@ -31,9 +31,8 @@
         "codeTransparency": "Open-Source",
         "encryption": "Included in all plans",
         "postQuantumEncryption": "Yes",
-        "pricing": "Competitive, no hidden costs",
-        "features": "Drive, VPN, Antivirus, Meet,  Mail, and more",
-
+        "pricing": "Competitive, 87% discount",
+        "features": "Drive, VPN, Antivirus, Meet,  Mail and more",
         "comunityAudits": "Regular security audits ",
         "liveSupport": "Yes",
         "dataTrackers": "No",
@@ -68,7 +67,7 @@
         "postQuantumEncryption": "No",
         "pricing": "More expensive plans",
         "features": "Cloud storage, Dropbox Paper, and eSignature support",
-        "securityAudits": "Regular security audits",
+        "comunityAudits": "Regular security audits",
         "liveSupport": "Paid feature",
         "privacyPolicy": "Can access files under certain circumstances",
         "privacyLaws": "Less privacy: EU-U.S. Data Privacy Framework"
@@ -288,7 +287,7 @@
   "tableSection": {
     "title": "Internxt Plans",
     "planTitles": {
-      "individuals": "Individual Plans",
+      "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",

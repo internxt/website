@@ -24,21 +24,21 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-full w-full flex-col items-center justify-around text-center xs-md:mx-10 lg:h-[389px] lg:justify-around xl:mx-32 3xl:mx-80 4xl:mx-96">
-        <div className="flex h-[390px] w-[320px] flex-col justify-between  text-4xl  lg:h-[271px] lg:w-min lg:whitespace-nowrap">
+        <div className="flex h-[390px] w-[320px] flex-col justify-between text-4xl lg:h-[271px] lg:w-min lg:whitespace-nowrap">
           <p
-            className="text-start text-4xl font-semibold text-gray-95 lg:text-center lg:text-5xl"
+            className="text-start text-30 font-semibold text-gray-95 lg:text-center lg:text-5xl"
             dangerouslySetInnerHTML={{ __html: parseText(textContent.title) }}
           />
           <div className="flex h-[250px] flex-col-reverse justify-around lg:h-[120px] lg:flex-row">
-            <p className="whitespace-pre-line text-start text-base font-normal text-gray-55 lg:text-xl">
+            <p className="whitespace-pre-line text-start text-base font-normal leading-tight text-gray-55 lg:text-xl">
               {description}
             </p>
             <div className="flex h-[88px] flex-col justify-between">
               {textContent.features?.map((feat) => (
                 <div key={feat} className="flex h-[24px] flex-row items-center gap-2">
-                  <Check className="hidden text-green-10 xs-md:block" size={24} />
-                  <Check className="block text-green-10 xs-md:hidden" size={20} />
-                  <p className=" break-keep text-left text-sm font-normal text-gray-95 xs-md:text-lg">{feat}</p>
+                  <Check className="hidden text-green-1 xs-md:block" size={24} />
+                  <Check className="block text-green-1 xs-md:hidden" size={20} />
+                  <p className=" break-keep text-left text-sm font-medium text-gray-95 xs-md:text-lg">{feat}</p>
                 </div>
               ))}
             </div>
