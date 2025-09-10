@@ -120,7 +120,7 @@ const SpecialOfferPage = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        backgroundColorComponent="bg-neutral-15"
+        sectionDetails="bg-neutral-15"
         showPromo={false}
       />
 
