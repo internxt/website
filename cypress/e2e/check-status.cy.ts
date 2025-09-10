@@ -9,7 +9,6 @@ const nameFiles = [
   'byte-converter',
   'cloud-storage-comparison',
   'cloudwards',
-  'cyber-awareness',
   'drive',
   'legal',
   'lifetime_special',
