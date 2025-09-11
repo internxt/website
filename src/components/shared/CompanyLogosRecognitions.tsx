@@ -23,7 +23,67 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
+    alt: 'Lanzadera Logo',
+    width: 254,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/Telefónica_2021.png',
+    alt: 'Telefonica Logo',
+    width: 250,
+    height: 1024,
+  },
+  {
+    src: '/images/about/logos/deloitte.webp',
+    alt: 'Deloitte Logo',
+    width: 147,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/startup.png',
+    alt: 'Startup Logo',
+    width: 1028,
+    height: 64,
+  },
+  {
+    src: '/images/about/logos/gobierno.webp',
+    alt: 'Gobierno Logo',
+    width: 100,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/levante.webp',
+    alt: 'Levante Logo',
+    width: 408,
+    height: 408,
+  },
+  {
+    src: '/images/about/logos/mashable.webp',
+    alt: 'Mashable Logo',
+    width: 201,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/prosegur.webp',
+    alt: 'Prosegur Logo',
+    width: 170,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/valencia.webp',
+    alt: 'Valencia Logo',
+    width: 408,
+    height: 408,
+  },
+  {
+    src: '/images/about/logos/forbes.webp',
+    alt: 'Forbes Logo',
+    width: 123,
+    height: 32,
+  },
+  {
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 254,
     height: 32,
@@ -70,66 +130,6 @@ const logos: Logo[] = [
     width: 170,
     height: 32,
   },
-  {
-    src: '/images/about/logos/valencia.webp',
-    alt: 'Valencia Logo',
-    width: 408,
-    height: 408,
-  },
-  {
-    src: '/images/about/logos/forbes.webp',
-    alt: 'Forbes Logo',
-    width: 123,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/lanzadera.webp',
-    alt: 'Lanzadera Logo',
-    width: 254,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/Telefónica_2021.png',
-    alt: 'Telefonica Logo',
-    width: 250,
-    height: 1024,
-  },
-  {
-    src: '/images/about/logos/deloitte.webp',
-    alt: 'Deloitte Logo',
-    width: 147,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 90,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 100,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/levante.webp',
-    alt: 'Levante Logo',
-    width: 408,
-    height: 408,
-  },
-  {
-    src: '/images/about/logos/mashable.webp',
-    alt: 'Mashable Logo',
-    width: 201,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/prosegur.webp',
-    alt: 'Prosegur Logo',
-    width: 170,
-    height: 32,
-  },
 ];
 
 const logosMobile: Logo[] = [
@@ -146,7 +146,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -166,8 +166,8 @@ const logosMobile: Logo[] = [
   {
     src: '/images/about/logos/startup.png',
     alt: 'Startup Logo',
-    width: 45,
-    height: 16,
+    width: 120,
+    height: 32,
   },
   {
     src: '/images/about/logos/gobierno.webp',
@@ -206,7 +206,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -226,8 +226,8 @@ const logosMobile: Logo[] = [
   {
     src: '/images/about/logos/startup.png',
     alt: 'Startup Logo',
-    width: 45,
-    height: 16,
+    width: 120,
+    height: 32,
   },
   {
     src: '/images/about/logos/gobierno.webp',
@@ -266,7 +266,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -286,8 +286,8 @@ const logosMobile: Logo[] = [
   {
     src: '/images/about/logos/startup.png',
     alt: 'Startup Logo',
-    width: 45,
-    height: 16,
+    width: 120,
+    height: 32,
   },
   {
     src: '/images/about/logos/gobierno.webp',

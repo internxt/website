@@ -221,7 +221,7 @@ export const PriceCard = ({
                       {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                     </p>
                     {isBusiness ? (
-                      <span className="i flex h-full items-center pt-2 text-base font-semibold">
+                      <span className="i flex h-full items-center pt-4 text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
                     ) : null}
