@@ -168,14 +168,14 @@ export const PriceCard = ({
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
             {(percentOff ?? 0) > 0 ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[101px] lg:w-[190px]">
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[81px] lg:w-[190px]">
                 <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                   <p className="text-base font-semibold text-green-0">
                     {percentOff}
                     {contentText.discount}
                   </p>
                 </div>
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2  lg:h-[43px] ">
+                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
                   <span className="flex h-full flex-row items-end gap-1 ">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
@@ -206,14 +206,9 @@ export const PriceCard = ({
                     ) : null}
                   </span>
                 </div>
-                <div className="flex h-[19px] items-center justify-center">
-                  <p className="text-base text-gray-50">
-                    {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-                  </p>
-                </div>
               </div>
             ) : (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[101px] lg:w-[190px]">
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[71px] lg:w-[190px]">
                 <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px] ">
                   <span className="flex h-full flex-row items-center gap-1 pr-2">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
@@ -231,11 +226,6 @@ export const PriceCard = ({
                       </span>
                     ) : null}
                   </span>
-                </div>
-                <div className="flex h-[19px] items-center justify-center">
-                  <p className="items-center text-base text-gray-50">
-                    {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-                  </p>
                 </div>
               </div>
             )}
