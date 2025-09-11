@@ -40,7 +40,7 @@
     },
     "title": "Passez à un **internet** plus **éthique**, **privé** et **sécurisé**",
     "subtitle": "Voici Internxt - Votre allié numérique de confiance",
-    "description": "Obtenez {{discount}}% de réduction maintenant",
+    "description": "Obtenez {{discount}}% de réduction ",
     "descriptionNormal": "sur tous les plans à vie",
     "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {

@@ -40,7 +40,7 @@
     },
     "title": "**Private** by default, **secure** by design, **free** as in freedom",
     "subtitle": "That's Internxt - secure cloud storage & more",
-    "description": "Get {{discount}}% off now",
+    "description": "Get {{discount}}% off ",
     "descriptionNormal": "in all lifetime plans",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "startFrom": {
