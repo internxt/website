@@ -37,7 +37,7 @@
       "2TB": "Family Premium"
     }
   },
-  "perYear": "€/an",
+  "perYear": "/an",
   "billingFrequencyLabel": {
     "lifetime": "Paiement unique",
     "monthly": "Facturé mensuellement",

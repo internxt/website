@@ -40,7 +40,8 @@
     },
     "title": "Passa a un **internet** più **etico**, **privato** e **sicuro**",
     "subtitle": "Questo è Internxt - Il tuo alleato digitale di fiducia",
-    "description": "Ottieni il {{discount}}% di sconto!",
+    "description": "Ottieni il {{discount}}% di sconto ora",
+    "descriptionNormal": "su tutti i piani a vita",
     "features": ["Suite digitale privata", "Crittografia post-quantistica", "Open source e verificato"],
     "startFrom": {
       "normal1": "A partire da ",
