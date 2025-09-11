@@ -30,7 +30,7 @@
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
     "guarantee": "30-day money-back guarantee",
-    "header": { "primaryText": "Get 87% off", "afterPrimaryText": "in all Paid Plans" },
+    "header": { "primaryText": "Get 87% off", "afterPrimaryText": "in all Lifetime Plans" },
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",

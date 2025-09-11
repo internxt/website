@@ -39,6 +39,7 @@ export interface HeroSection {
   title: string;
   subtitle: string;
   description: string;
+  descriptionNormal: string;
   features: string[];
   startFrom: StartFrom;
   claimDeal: string;

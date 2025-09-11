@@ -36,7 +36,6 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.SoftSales85,
     couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
   const locale = lang as string;
@@ -56,8 +55,8 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
-  const minimumPrice = decimalDiscount !== undefined ? (10 * (decimalDiscount / 100)).toFixed(2) : '0.00';
+  const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
+  const minimumPrice = decimalDiscount !== undefined ? (10 * (decimalDiscount / 100)).toFixed(2) : '9.99';
 
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>

@@ -23,7 +23,7 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 254,
     height: 32,
@@ -40,18 +40,7 @@ const logos: Logo[] = [
     width: 147,
     height: 32,
   },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 120,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 100,
-    height: 32,
-  },
+
   {
     src: '/images/about/logos/levante.webp',
     alt: 'Levante Logo',
@@ -83,7 +72,7 @@ const logos: Logo[] = [
     height: 32,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 254,
     height: 32,
@@ -100,18 +89,7 @@ const logos: Logo[] = [
     width: 147,
     height: 32,
   },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 90,
-    height: 32,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 100,
-    height: 32,
-  },
+
   {
     src: '/images/about/logos/levante.webp',
     alt: 'Levante Logo',
@@ -146,7 +124,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -163,18 +141,7 @@ const logosMobile: Logo[] = [
     width: 73,
     height: 16,
   },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 45,
-    height: 16,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 41,
-    height: 16,
-  },
+
   {
     src: '/images/about/logos/levante.webp',
     alt: 'Levante Logo',
@@ -206,7 +173,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -223,18 +190,7 @@ const logosMobile: Logo[] = [
     width: 73,
     height: 16,
   },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 45,
-    height: 16,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 41,
-    height: 16,
-  },
+
   {
     src: '/images/about/logos/levante.webp',
     alt: 'Levante Logo',
@@ -266,7 +222,7 @@ const logosMobile: Logo[] = [
     height: 16,
   },
   {
-    src: '/images/about/logos/lanzadera.webp',
+    src: '/images/about/logos/lanzadera.png',
     alt: 'Lanzadera Logo',
     width: 127,
     height: 16,
@@ -283,18 +239,7 @@ const logosMobile: Logo[] = [
     width: 73,
     height: 16,
   },
-  {
-    src: '/images/about/logos/startup.png',
-    alt: 'Startup Logo',
-    width: 45,
-    height: 16,
-  },
-  {
-    src: '/images/about/logos/gobierno.webp',
-    alt: 'Gobierno Logo',
-    width: 41,
-    height: 16,
-  },
+
   {
     src: '/images/about/logos/levante.webp',
     alt: 'Levante Logo',

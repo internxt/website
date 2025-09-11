@@ -32,15 +32,7 @@ export default function BravePage({
 
   const lang = 'en';
 
-  const {
-    products,
-    loadingCards,
-    currencyValue,
-    coupon: individualCoupon,
-    lifetimeCoupons,
-  } = usePricing({
-    couponCode: PromoCodeName.Brave,
-  });
+  const { products, loadingCards, currencyValue, coupon: individualCoupon, lifetimeCoupons } = usePricing({});
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
     const couponCodeForCheckout = individualCoupon?.name;
