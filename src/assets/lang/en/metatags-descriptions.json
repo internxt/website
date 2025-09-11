@@ -1,7 +1,7 @@
 [
   {
     "id": "home",
-    "title": "Internxt - Private & Secure Cloud Storage",
+    "title": "Internxt — Say Hi to Privacy",
     "description": "Stand for privacy, switch to Internxt. Internxt's open-source cloud storage services protect your right to privacy. Internxt Drive, Photos, Send, and more."
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "id": "family",
-    "title": "Internxt for Family Plan — The Most Secure Family Cloud Storage",
+    "title": "Internxt for Families — The Most Secure Family Cloud Storage",
     "description": "Manage your family's online privacy with our Internxt cloud storage for family plans. Securely store, organize, and share your family’s private documents in one place."
   },
   {
@@ -26,12 +26,12 @@
   },
   {
     "id": "what-google-knows",
-    "title": "What Does Google Know About Me | Internxt",
+    "title": "Internxt — What Does Google Know About Me",
     "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
   },
   {
     "id": "media-area",
-    "title": "Media Area | Internxt",
+    "title": "Media Area — Internxt",
     "description": "Internxt Media Area - Find out more about Internxt’s products and mission and download our media kit of screenshots and mockups for the media and journalists."
   },
   {
@@ -41,8 +41,8 @@
   },
   {
     "id": "pricing",
-    "title": "Internxt Pricing – Get 1GB Free!",
-    "description": "Sign up for an Internxt secure cloud storage subscription and get access to our monthly newsletter filled with the latest tech news and updates."
+    "title": "Internxt Pricing – Lifetime Encrypted Cloud Storage",
+    "description": "Internxt offers affordable, secure, free, and encrypted cloud storage with annual and lifetime payment option plans."
   },
   {
     "id": "about",
@@ -51,13 +51,13 @@
   },
   {
     "id": "legal",
-    "title": "Internxt – Legal Terms and Conditions of use",
+    "title": "Internxt – Legal Terms and Conditions of Use",
     "description": "Internxt legal terms and conditions of use. Read all terms and conditions where we explain how we process your data."
   },
   {
     "id": "privacy",
-    "title": "Internxt Privacy – Free Privacy Tools & Resources",
-    "description": "Free tools to protect your privacy: Password Checker, Virus Scanner, Directory of Privacy Organizations, and more. Internxt defends your right to privacy."
+    "title": "Internxt Privacy – Our core values",
+    "description": "Here at Internxt, protecting user privacy is our mission. Make the switch to Internxt's all-in-one privacy suite. Internxt Drive, Meet, Mail, Cleaner, and more."
   },
   {
     "id": "open-source",
@@ -76,27 +76,27 @@
   },
   {
     "id": "converter-tool",
-    "title": "Byte Converter: GB to TB | Internxt",
+    "title": "Internxt Byte Converter",
     "description": "Internxt’s free Byte Converter: Find out how much storage you have, how many gigabytes are in a terabyte, and convert to-and-from B, KB, MB, GB, and TB."
   },
   {
     "id": "lifetime",
-    "title": "Internxt Lifetime Plans – Secure Cloud Storage For Life!",
-    "description": "Internxt Lifetime Deal: Pay once and get 1TB, 3TB, or 5TB of secure cloud storage forever. Sign up or upgrade to a Internxt lifetime plan for lifelong privacy! Only for a limited time."
+    "title": "Internxt Lifetime Plans – Affordable and Secure Lifetime Cloud Storage",
+    "description": "Internxt Lifetime Cloud Storage. Pay once and get 1TB, 3TB, or 5TB of secure cloud storage for life. Sign up or upgrade to an Internxt lifetime plan for lifelong privacy!"
   },
   {
     "id": "partner-discount",
-    "title": "Partner Discount — Internxt",
+    "title": "Internxt — Partner Discount",
     "description": "Get Internxt annual plans at an exclusive 75% discount. Enjoy privacy and security with up to 10TB storage."
   },
   {
     "id": "special-offer",
-    "title": "Special Offer — Internxt",
+    "title": "Internxt — Special Offer",
     "description": "Get Internxt annual and lifetime plans at an exclusive 80% discount. Enjoy privacy and security with up to 10TB storage."
   },
   {
     "id": "affiliates",
-    "title": "Affiliate Program | Internxt",
+    "title": "Internxt — Affiliate Program",
     "description": "Join Internxt’s affiliate marketing program! How to get started plus program details, benefits, and perks."
   },
   {
@@ -121,7 +121,7 @@
   },
   {
     "id": "dropbox-alternative",
-    "title": "Internxt — A Secure, Encrypted, and Open Source Alternative to Dropbox",
+    "title": "Internxt — A Secure, Encrypted Alternative to Dropbox",
     "description": "Internxt cloud storage is a secure Dropbox alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
   },
   {
@@ -132,12 +132,12 @@
   {
     "id": "black-friday",
     "title": "Internxt Black Friday Deal – Cloud Storage Sale!",
-    "description": "Internxt Black Friday Deal 2024: Enjoy a 85% discount on all our annual plans. Save big on Internxt cloud storage today!"
+    "description": "Internxt Black Friday Deal 2025: Enjoy a 87% discount on all our annual plans. Save big on Internxt cloud storage today!"
   },
   {
     "id": "cloudwards",
     "title": "Internxt Lifetime Special Offer for Cloudwards Users",
-    "description": "Internxt is offering 80% off all lifetime cloud storage plans to Cloudwards customers. Secure your files for a lifetime with a single payment."
+    "description": "Internxt is offering 87% off all lifetime cloud storage plans to Cloudwards customers. Secure your files for a lifetime with a single payment."
   },
   {
     "id": "guru99",
@@ -166,12 +166,12 @@
   },
   {
     "id": "password-generator",
-    "title": "Strong Password Generator | Internxt",
+    "title": "Internxt — Strong Password Generator",
     "description": "Free and secure password generator. An easy and effective tool to instantly create random and secure passwords to keep your accounts safe."
   },
   {
     "id": "cyber-awareness",
-    "title": "Cyber Awareness | Internxt",
+    "title": "Cyber Awareness — Internxt",
     "description": "What is cyber awareness, how to stay safe online, and everything you need to know about Cybersecurity Awareness Month this October."
   },
   {
@@ -256,22 +256,22 @@
   },
   {
     "id": "file-converter",
-    "title": "Online File Converter | Internxt",
+    "title": "Online File Converter - Internxt",
     "description": "Internxt’s free online file converter. Convert your files to different formats and sizes. Convert PDF, Word, Excel, and more."
   },
   {
     "id": "word-to-pdf",
-    "title": "Convert PDF to Word Files Online for Free | Internxt",
+    "title": "Convert PDF to Word Files Online for Free - Internxt",
     "description": "Internxt’s File Converter converts PDF to Word files for free. Our PDF to Word converter is an easy, fast, and secure way to convert your files."
   },
   {
     "id": "png-to-pdf",
-    "title": "Convert PNG to PDF Files Online for Free | Internxt",
+    "title": "Convert PNG to PDF Files Online for Free - Internxt",
     "description": "Internxt’s File Converter converts PNG to PDF files for free. Our PNG to PDF converter is an easy, fast, and secure way to convert your files."
   },
   {
     "id": "html-to-pdf",
-    "title": "Convert HTML to PDF Files Online for Free | Internxt",
+    "title": "Convert HTML to PDF Files Online for Free - Internxt",
     "description": "Internxt’s File Converter converts HTML to PDF files for free. Our HTML to PDF converter is an easy, fast, and secure way to convert your files."
   },
   {
@@ -281,12 +281,12 @@
   },
   {
     "id": "pdf-to-html",
-    "title": "Convert PDF to HTML Files Online for Free | Internxt",
+    "title": "Convert PDF to HTML Files Online for Free - Internxt",
     "description": "Internxt’s File Converter converts PDF to HTML files for free. Our PDF to HTML converter is an easy, fast, and secure way to convert your files."
   },
   {
     "id": "word-to-html",
-    "title": "Convert DOCX to HTML Files Online for Free | Internxt",
+    "title": "Convert DOCX to HTML Files Online for Free - Internxt",
     "description": "Internxt’s File Converter converts DOCX to HTML files for free. Our DOCX to HTML converter is an easy, fast, and secure way to convert your files."
   },
   {
@@ -426,17 +426,17 @@
   },
   {
     "id": "file-compressor",
-    "title": "File Compressor - Internxt",
+    "title": "Internxt - File Compressor",
     "description": "Internxt file compressor,  the best file compressor to reduce the file size of videos, photos, and documents for free."
   },
   {
     "id": "compress-mov",
-    "title": "Compress MOV File - Internxt",
+    "title": "Internxt - Compress MOV File",
     "description": "Internxt lets you compress a MOV file for free to reduce file size and send large video files online without worrying about file size limits."
   },
   {
     "id": "compress-pdf",
-    "title": "Compress PDF File - Internxt",
+    "title": "Internxt - Compress PDF File",
     "description": "Internxt’s free tool is the best way to compress a PDF file so you can secure and send your documents with ease."
   },
   {
@@ -446,27 +446,27 @@
   },
   {
     "id": "compress-png",
-    "title": "Compress PNG File - Internxt",
+    "title": "Internxt - Compress PNG File",
     "description": "Internxt’s free tool is the best way to compress a PNG file so you can secure and send your photos with ease."
   },
   {
     "id": "compress-ppt",
-    "title": "Compress PPT File - Internxt",
+    "title": "Internxt Compress - PPT File",
     "description": "Internxt lets you compress a PPT file for free to reduce file size for easier storage and file sharing management."
   },
   {
     "id": "compress-word",
-    "title": "Compress Word File - Internxt",
+    "title": "Internxt - Compress Word File",
     "description": "Compress Word (DOC) files for free to reduce file size for easier storage and file sharing management for your documents."
   },
   {
     "id": "compress-excel",
-    "title": "Compress Excel File - Internxt",
+    "title": "Internxt - Compress Excel File",
     "description": "Compress Excel (XLS) files for free to reduce file size for easier storage and file sharing management for your spreadsheets."
   },
   {
     "id": "compress-zip",
-    "title": "Online ZIP Compressor - Internxt",
+    "title": "Internxt - Online ZIP Compressor",
     "description": "An online ZIP compressor reduces the size of your ZIP files to save storage, share, and upload without worrying about file size limits."
   },
   {
