@@ -137,11 +137,11 @@ const Pricing = ({
           hideBusinessSelector
           hideSwitchSelector
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="pt-20 lg:py-20"
+          sectionDetails="pt-30 lg:py-20"
           billingFrequency={billingFrequency}
           activeSwitchPlan={activeSwitchPlan}
           businessBillingFrequency={businessBillingFrequency}
-          popularPlanBySize={'3TB'}
+          popularPlanBySize={'5TB'}
           onPlanTypeChange={onPlanTypeChange}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}

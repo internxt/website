@@ -140,6 +140,7 @@ export interface SchemaMarkupQuestions {
 
 export interface TableSection {
   title: string;
+  tileLabel: string;
   ctaBanner: CtaBanner;
   planTitles: PlanTitles;
   lifetimeDescription: string;
@@ -151,6 +152,7 @@ export interface TableSection {
   features: Features;
   individuals: string;
   planStorage: PlanStorage;
+  ctaCompare: string;
 }
 
 export interface BillingFrequency {

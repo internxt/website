@@ -150,7 +150,8 @@ export default function ComparisonTableSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center lg:h-min lg:gap-16 lg:py-20"
+      id="#comparisonTable"
+      className="flex h-min w-full flex-col items-center gap-8 py-10 lg:h-min lg:gap-0 lg:gap-16 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <p className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</p>

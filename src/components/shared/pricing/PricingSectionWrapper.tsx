@@ -130,7 +130,7 @@ export const PricingSectionWrapper = ({
       return businessPlanDescription;
     }
   };
-
+  const totalDiscount = 100 - (decimalDiscount?.individuals ?? 0);
   return (
     <section
       className={`overflow-hidden lg:px-5 ${sectionDetails}`}
@@ -139,7 +139,13 @@ export const PricingSectionWrapper = ({
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
+          <div className="flex h-min w-min flex-row items-center justify-center gap-4 whitespace-nowrap">
+            {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
+            <p className="mt-2 flex  flex-row bg-neutral-37 text-primary">
+              {textContent.tileLabel.replace('{{discount}}', totalDiscount)}
+              🔥
+            </p>
+          </div>
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {isLifetime && (
             <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>

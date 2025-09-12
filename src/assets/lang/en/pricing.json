@@ -43,6 +43,7 @@
   },
   "tableSection": {
     "title": "Internxt Plans",
+    "tileLabel": "{{discount}}% off",
     "ctaBanner": {
       "label": "Save {{discount}}%",
       "title": "All plans included",
@@ -97,8 +98,10 @@
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
-    }
+    },
+    "ctaCompare": "Compare all plans"
   },
+
   "ComparisonTable": {
     "title": "Plans and features",
     "cta": "Get started",
