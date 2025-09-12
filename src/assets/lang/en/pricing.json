@@ -57,7 +57,7 @@
     },
     "planTitles": {
       "header": "Total privacy for {{discount}}% off",
-      "individuals": "Individuals",
+      "individuals": "Annual plans",
       "lifetime": "Lifetime Plans",
       "business": "Business Plans",
       "lifetimeCampaign": {
