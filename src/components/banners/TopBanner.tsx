@@ -21,7 +21,10 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
       >
         <div className="mx-auto flex flex-row items-center justify-center">
           <div className="flex cursor-default">
-            <p className=" text-base font-semibold">{textContent.title.normalText} 🔥</p>
+            <p className=" text-base font-semibold">
+              {textContent.title.normalText} 🎂
+              <span className="pl-2"> {' ' + textContent.title.boldText}</span>
+            </p>
           </div>
           <Link href={'/pricing'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center">
             <p className="font-semibold hover:underline">{textContent.title.cta}</p>
@@ -38,7 +41,7 @@ const TopBanner = ({ isBannerFixed }: TopBannerProps) => {
           <div className="flex animate-marquee flex-row whitespace-nowrap">
             <p className="mx-1 flex items-center justify-center gap-1 text-base font-semibold">
               <span>{textContent.title.normalText}</span>
-              🔥
+              🎂
             </p>
             <Link href={'/pricing'} id={'topBannerActionButton'} className="flex cursor-pointer flex-row items-center ">
               <p className="text-base font-medium underline hover:no-underline">{textContent.title.cta}</p>

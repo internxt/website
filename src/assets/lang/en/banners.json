@@ -30,7 +30,7 @@
     "getDealCta": "Get the deal",
     "freePlanCta": "Continue with free plan",
     "guarantee": "30-day money-back guarantee",
-    "header": { "primaryText": "Get 87% off", "afterPrimaryText": "in all Plans" },
+    "header": { "primaryText": "Get 87% off", "afterPrimaryText": "in all Lifetime Plans" },
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
@@ -168,7 +168,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Get 85% off all annual and lifetime plans now! ",
+      "normalText": "Celebrate 5 years of Internxt with 87% off",
       "cta": " Claim deal"
     }
   },

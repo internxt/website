@@ -19,7 +19,7 @@
     "guarantee": "Garantie de remboursement de 30 jours",
     "header": {
       "primaryText": "Obtenez 87% de réduction",
-      "afterPrimaryText": "dans tous les forfaits "
+      "afterPrimaryText": "dans tous les forfaits à vie"
     },
     "products": {
       "drive": "Drive",
@@ -125,7 +125,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Obtenez 85% de réduction sur tous les plans maintenant !",
+      "normalText": "Internxt fête ses 5 ans ! 87% de réduction sur tous les forfaits ",
       "cta": "Choisissez votre forfait "
     }
   },
