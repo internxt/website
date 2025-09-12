@@ -168,10 +168,10 @@ export const PriceCard = ({
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
             {(percentOff ?? 0) > 0 ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[60px] lg:w-[190px]">
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
-                  <span className="flex h-full flex-row items-end gap-1 ">
-                    <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+              <div className="flex h-[57px] w-[180px] flex-col items-center justify-between lg:h-[60px] lg:w-[190px]">
+                <div className="flex h-[63px] w-full flex-row items-center justify-center gap-2 lg:h-[43px] ">
+                  <span className="flex h-full flex-row items-center gap-1 ">
+                    <p className="self-center pb-3 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">{priceNow}</p>
                     {isBusiness ? (
                       <span className="i flex h-full items-end text-base font-semibold">
@@ -180,8 +180,8 @@ export const PriceCard = ({
                     ) : null}
                   </span>
 
-                  <span className="flex h-full flex-row items-end">
-                    <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
+                  <span className="flex h-full flex-row items-center">
+                    <p className=" h-[26px] items-center self-center pb-6 pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
                       {currency}
                     </p>
                     <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">

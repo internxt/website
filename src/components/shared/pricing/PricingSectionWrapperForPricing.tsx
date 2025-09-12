@@ -182,7 +182,13 @@ export const PricingSectionWrapperForPricing = ({
         />
       </div>
       <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
-        <p className="text-30 font-bold text-gray-100">{title()} </p>
+        <div className="flex h-min w-min flex-col items-center justify-center gap-4 whitespace-nowrap">
+          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
+          <p className="flex flex-col rounded-2 bg-neutral-37 px-2 py-1 text-primary">
+            {textContent.tileLabel.replace('{{discount}}', totalDiscount)}
+            🔥
+          </p>
+        </div>
         <PricingSectionForMobile
           textContent={textContent}
           lang={lang}
