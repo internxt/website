@@ -130,7 +130,7 @@ export const PricingSectionWrapper = ({
       return businessPlanDescription;
     }
   };
-  const totalDiscount = 100 - (decimalDiscount?.individuals ?? 0);
+  const totalDiscount = 100 - (decimalDiscount?.individuals ?? decimalDiscount?.business ?? 0);
   return (
     <section
       className={`overflow-hidden lg:px-5 ${sectionDetails}`}
