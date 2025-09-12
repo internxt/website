@@ -41,6 +41,7 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.DRIVE87,
     couponCodeForLifetime: PromoCodeName.DRIVE87,
   });
 

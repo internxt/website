@@ -99,6 +99,313 @@
       "ultimate": "5TB"
     }
   },
+  "ComparisonTable": {
+    "title": "Plans and features",
+    "cta": "Get started",
+    "billedAnnualy": "Billed annually",
+    "billedOnce": "One-time payment",
+    "plans": [
+      {
+        "id": "Essential",
+        "name": "Essential",
+        "order": 0
+      },
+      {
+        "id": "Premium",
+        "name": "Premium",
+        "order": 1
+      },
+      {
+        "id": "Ultimate",
+        "name": "Ultimate",
+        "order": 2
+      }
+    ],
+    "categories": [
+      {
+        "name": "Storage",
+        "features": [
+          {
+            "id": "storage_Essential",
+            "name": "1TB",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Premium",
+            "name": "3TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Ultimate",
+            "name": "5TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Apps and accessibility",
+        "features": [
+          {
+            "id": "linux_windows_macos_app",
+            "name": "Linux, Windows and macOS app",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "android_ios_app",
+            "name": "iOS and Andorid apps",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "web_app",
+            "name": "Web app",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Privacy and security",
+        "features": [
+          {
+            "id": "zero_knowledge_architecture",
+            "name": "Zero-knowledge encryption",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "post_quantum_encryption",
+            "name": "Post-quantum encryption",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "gdpr_compliance",
+            "name": "GDPR compliance",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "hipaa_compliance",
+            "name": "HIPAA compliance",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "iso27001_compliance",
+            "name": "ISO 27001 compliance",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "soc2_compliance",
+            "name": "SOC 2 compliance",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Two_factor_authentication",
+            "name": "Two-factor authentication (2FA)",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "pentesting_audited",
+            "name": "Pentested & Audited",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "VPN",
+        "features": [
+          {
+            "id": "vpn_Essential",
+            "name": "France",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Premium",
+            "name": "France, Germany, Poland",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Ultimate",
+            "name": "France, Germany, Poland, Canada, Uk",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Support and Service",
+        "features": [
+          {
+            "id": "premium_customer_support",
+            "name": "Premium Customer Support",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Advanced tools",
+        "features": [
+          {
+            "id": "antivirus",
+            "name": "Antivirus",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "File_backups",
+            "name": "File backups",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Password-protected-sharing",
+            "name": "Password-protected sharing",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Invite_share_&_collaborate",
+            "name": "Invite, share & collaborate",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Cleaner",
+            "name": "Cleaner",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Dark_Web_Monitor",
+            "name": "Dark Web Monitor",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "cli_webdav_support",
+            "name": "CLI & WebDAV support",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "NAS_&_Rclone_support",
+            "name": "NAS & Rclone support",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "meet",
+            "name": "Meet",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      }
+    ]
+  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [

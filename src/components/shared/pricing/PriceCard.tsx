@@ -178,16 +178,11 @@ export const PriceCard = ({
                 <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
                   <span className="flex h-full flex-row items-end gap-1 ">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
-                      {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
-                    </p>
+                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">{priceNow}</p>
                     {isBusiness ? (
                       <span className="i flex h-full items-end text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
-                    ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
                     ) : null}
                   </span>
 
@@ -196,13 +191,10 @@ export const PriceCard = ({
                       {currency}
                     </p>
                     <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+                      {priceBefore}
                     </p>
                     {isBusiness ? (
                       <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
-                    ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
                     ) : null}
                   </span>
                 </div>
