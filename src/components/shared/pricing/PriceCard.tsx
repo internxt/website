@@ -184,7 +184,7 @@ export const PriceCard = ({
                     <p className=" h-[26px] items-center self-center pb-6 pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
                       {currency}
                     </p>
-                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
+                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-2 lg:text-xl">
                       {priceBefore}
                     </p>
                     {isBusiness ? (
