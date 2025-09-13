@@ -53,6 +53,7 @@
   },
   "tableSection": {
     "title": "Internxt Plans",
+    "tileLabel": "{{discount}}% off",
     "planTitles": {
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",

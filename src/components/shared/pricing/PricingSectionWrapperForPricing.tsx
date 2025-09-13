@@ -1,14 +1,11 @@
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
-import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { highlightKeywords } from '@/utils/highlightKeywords';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
-import { SwitchStorageBusinessOptions } from './components/Switch';
 
-interface PricingSectionWrapperProps {
+interface PricingSectionWrapperForPricingProps {
   textContent: Record<string, any>;
   products: ProductsDataProps | undefined;
   lang: string;
@@ -19,12 +16,6 @@ interface PricingSectionWrapperProps {
   hidePlanSelectorComponent?: boolean;
   hideSwitchSelector?: boolean;
   hideFreeCard?: boolean;
-  startIndividualPlansFromInterval?: Interval;
-  startBusinessPlansFromInterval?: Interval;
-  popularPlanBySize?: string;
-  startFromPlan?: SwitchButtonOptions;
-  startFromStorage?: SwitchStorageOptions;
-  startFromBusinessStorage?: SwitchStorageBusinessOptions;
   lifetimeCoupons?: Record<string, PromoCodeProps>;
   sectionDetails?: string;
   backgroundGradientColor?: string;
@@ -36,6 +27,8 @@ interface PricingSectionWrapperProps {
     lifetime?: number;
     business?: number;
   };
+  billingFrequency;
+  activeSwitchPlan;
   hideDescription?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
@@ -47,19 +40,23 @@ interface PricingSectionWrapperProps {
   showPromo?: boolean;
   isAffiliate?: boolean;
   hideBillingController?: boolean;
+  businessBillingFrequency: any;
+  popularPlanBySize: any;
+  onPlanTypeChange: any;
+  onIndividualSwitchToggled: any;
+  onBusinessSwitchToggled: any;
+  activeBusinessStoragePlan: any;
+  onBusinessStorageChange: any;
+  onStorageChange: any;
+  activeStoragePlan: any;
 }
 
-export const PricingSectionWrapper = ({
+export const PricingSectionWrapperForPricing = ({
   textContent,
   products,
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Lifetime',
-  startFromStorage = 'Premium',
-  startFromBusinessStorage = 'Pro',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -67,16 +64,14 @@ export const PricingSectionWrapper = ({
   backgroundGradientColor,
   lifetimeCoupons,
   hideSwitchSelector,
-  popularPlanBySize,
+  activeSwitchPlan,
   decimalDiscount,
   isFamilyPage,
   hideTitle,
-  hideDescription,
   hideFeatures,
   onCheckoutButtonClicked,
-  handlePageNameUpdate,
+  billingFrequency,
   onBusinessPlansSelected,
-  CustomDescription,
   darkMode,
   isBrave,
   isAnnual,
@@ -84,26 +79,16 @@ export const PricingSectionWrapper = ({
   isAffiliate,
   hideBillingController = false,
   hideFreeCard,
-}: PricingSectionWrapperProps): JSX.Element => {
-  const {
-    activeSwitchPlan,
-    activeStoragePlan,
-    activeBusinessStoragePlan,
-    billingFrequency,
-    businessBillingFrequency,
-    onPlanTypeChange,
-    onStorageChange,
-    onBusinessStorageChange,
-    onIndividualSwitchToggled,
-    onBusinessSwitchToggled,
-  } = usePlanSelection(
-    startFromPlan,
-    startFromStorage,
-    startFromBusinessStorage,
-    startIndividualPlansFromInterval,
-    startBusinessPlansFromInterval,
-    handlePageNameUpdate,
-  );
+  businessBillingFrequency,
+  popularPlanBySize,
+  onPlanTypeChange,
+  onIndividualSwitchToggled,
+  onBusinessSwitchToggled,
+  activeBusinessStoragePlan,
+  onBusinessStorageChange,
+  onStorageChange,
+  activeStoragePlan,
+}: PricingSectionWrapperForPricingProps): JSX.Element => {
   const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
   const isLifetime = billingFrequency === Interval.Lifetime;
   const individualPlansTitle =
@@ -130,7 +115,8 @@ export const PricingSectionWrapper = ({
       return businessPlanDescription;
     }
   };
-  const totalDiscount = 100 - (decimalDiscount?.individuals ?? decimalDiscount?.business ?? 0);
+
+  const totalDiscount = 100 - (decimalDiscount?.individuals ?? 0);
   return (
     <section
       className={`overflow-hidden lg:px-5 ${sectionDetails}`}
@@ -146,6 +132,7 @@ export const PricingSectionWrapper = ({
               🔥
             </p>
           </div>
+
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {isLifetime && (
             <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
@@ -191,6 +178,7 @@ export const PricingSectionWrapper = ({
           businessStorageSelected={activeBusinessStoragePlan}
           onBusinessStorageChange={onBusinessStorageChange}
           hideFreeCard={hideFreeCard}
+          redirectComparison
         />
       </div>
       <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
@@ -236,6 +224,7 @@ export const PricingSectionWrapper = ({
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           businessStorageSelected={activeBusinessStoragePlan}
           hideFreeCard={hideFreeCard}
+          redirectComparison
         />
       </div>
     </section>

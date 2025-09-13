@@ -62,6 +62,7 @@
     "planTitles": {
       "business": "Business plans"
     },
+    "tileLabel": "{{discount}}% off",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
       "monthly": "Monthly",

@@ -40,6 +40,7 @@ function SpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.FreePlanUpsell,
     couponCodeForLifetime: PromoCodeName.FreePlanUpsell,
   });
 
