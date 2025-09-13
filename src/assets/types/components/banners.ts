@@ -23,6 +23,7 @@ export interface BannersText {
   SignUpSuccessStoriesBanner: GoogleLpBanner;
   SignUpCyberAwareness: GoogleLpBanner;
   SignUpPasswordGenerator: GoogleLpBanner;
+  SignUpComparison: GoogleLpBanner;
   privacyDirectoryBanner: GoogleLpBanner;
   GeneralBanner: GeneralBannerClass;
   GoogleLPBanner: GoogleLpBanner;

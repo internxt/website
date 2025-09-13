@@ -1,0 +1,604 @@
+{
+  "HeroSection": {
+    "title": "Internxt: Eine sichere {{competitor}} Alternative",
+    "pCloudDescription": "Suchen Sie nach einer sicheren Alternative zu pCloud? Internxt bietet den ersten Cloud-Speicher mit Post-Quantum-Verschlüsselung und einer vollständigen Datenschutz-Suite für maximale Privatsphäre und Sicherheit.",
+    "dropboxDescription": "Eine vergangene Dropbox-Datenpanne führte zur Preisgabe von 68 Millionen Passwörtern. Möchten Sie verhindern, dass Ihnen das passiert? Schließen Sie sich Internxt für vollständige Sicherheit und Privatsphäre an und erhalten Sie maximalen Schutz vor Datenpannen.",
+    "megaDescription": "Frühere Schwachstellen in MEGAs Kryptographie und der Mangel an vollständig quelloffener Software könnten Ihre Privatsphäre und Daten gefährden. Wählen Sie Internxt für Post-Quantum-Verschlüsselung, VPN, Mail, Meet und mehr.",
+    "features": [
+      "Speichern Sie Ihre Videos privat",
+      "Post-Quantum & Zero-Knowledge-Verschlüsselung",
+      "Open Source und geprüft"
+    ],
+    "getPrivacy": "Erhalten Sie vollständige Privatsphäre für {{percentage}}% Rabatt",
+    "cta": "Plan auswählen"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} Überblick",
+    "pCloudDescription": "Sehen Sie, warum sich Internxt mit erweiterten Datenschutzfunktionen, sicherer Architektur und einer umfassenden Produktsuite auszeichnet, die Sie vor Cyberangriffen schützt.",
+    "dropboxDescription": "Entdecken Sie die Eigenschaften von Internxt, die es zu einer privateren und sichereren Alternative zu Dropbox machen",
+    "megaDescription": "Sehen Sie, warum sich Internxt als sichere Alternative zu MEGA dank fortschrittlicher Kryptographie und einer umfassenden Produktsuite auszeichnet.",
+    "tableSection": {
+      "comparisons": {
+        "codeTransparency": "Code-Transparenz",
+        "encryption": "Verschlüsselung",
+        "postQuantumEncryption": "Post-Quantum-Verschlüsselung",
+        "pricing": "Preisgestaltung",
+        "features": "Funktionen",
+        "securityAudits": "Sicherheitsprüfungen",
+        "comunityAudits": "Community-Audits",
+        "liveSupport": "Live-Support",
+        "dataTrackers": "Daten-Tracker",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "privacyLaws": "Datenschutzgesetze"
+      },
+      "internxtFeatures": {
+        "codeTransparency": "Open-Source",
+        "encryption": "In allen Tarifen enthalten",
+        "postQuantumEncryption": "Ja",
+        "pricing": "Wettbewerbsfähig, 87% Rabatt",
+        "features": "Drive, VPN, Antivirus, Meet, Mail und mehr",
+        "comunityAudits": "Regelmäßige Sicherheitsprüfungen",
+        "liveSupport": "Ja",
+        "dataTrackers": "Nein",
+        "privacyPolicy": "Kann niemals auf Ihre Dateien zugreifen",
+        "privacyLaws": "DSGVO, spanische Datenschutzgesetze"
+      },
+      "pcloudFeatures": {
+        "codeTransparency": "Closed-Source",
+        "encryption": "Kostenpflichtig extra (pCloud Crypto)",
+        "postQuantumEncryption": "Nein",
+        "pricing": "Erschwinglich, aber extra für Verschlüsselung",
+        "features": "Cloud-Speicher, pCloud Pass",
+        "comunityAudits": "Nicht verfügbar",
+        "liveSupport": "Nein",
+        "dataTrackers": "Ja (Facebook Pixel, TikTok, LinkedIn, etc.)",
+        "privacyLaws": "Behauptet Schweizer Datenschutzgesetze"
+      },
+      "megaFeatures": {
+        "codeTransparency": "Teilweise",
+        "encryption": "In allen Tarifen enthalten",
+        "postQuantumEncryption": "Nein",
+        "pricing": "Kann doppelt so teuer sein, keine Lifetime-Pläne",
+        "features": "Cloud-Speicher, VPN, Pass, Meet und Chat",
+        "comunityAudits": "Ja, mit früheren Verschlüsselungsschwachstellen",
+        "liveSupport": "E-Mail-Support für bezahlte Konten",
+        "dataTrackers": "Ja",
+        "privacyLaws": "DSGVO & Neuseeland"
+      },
+      "dropboxFeatures": {
+        "codeTransparency": "Closed-Source",
+        "encryption": "Von Dropbox verschlüsselt",
+        "postQuantumEncryption": "Nein",
+        "pricing": "Teurere Pläne",
+        "features": "Cloud-Speicher, Dropbox Paper und eSignature-Unterstützung",
+        "comunityAudits": "Regelmäßige Sicherheitsprüfungen",
+        "liveSupport": "Kostenpflichtige Funktion",
+        "privacyPolicy": "Kann unter bestimmten Umständen auf Dateien zugreifen",
+        "privacyLaws": "Weniger Privatsphäre: EU-U.S. Data Privacy Framework"
+      },
+      "drag": {
+        "line1": "Horizontal ziehen",
+        "line2": "um Konkurrenten anzuzeigen"
+      }
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Sehen Sie, warum Internxts Engagement für Open-Source-Transparenz und unabhängige Audits es zu einer vertrauenswürdigeren und sichereren {{competitor}} Alternative macht",
+    "drag": {
+      "line1": "Horizontal ziehen",
+      "line2": "um Konkurrenten anzuzeigen"
+    },
+    "mainTable": {
+      "inxtTable": {
+        "title": "Vollständige Privatsphäre, Transparenz und Vertrauen",
+        "features": [
+          {
+            "title": "Open-Source-Code",
+            "description": "Da Internxts Code für alle auf GitHub zugänglich ist, kann jeder ihn einsehen und seine Sicherheit gewährleisten. Diese Transparenz garantiert, dass es keine versteckten Hintertüren gibt."
+          },
+          {
+            "title": "Ende-zu-Ende-Verschlüsselung",
+            "description": "Ihre Daten werden clientseitig verschlüsselt, was garantiert, dass nur Sie darauf zugreifen können."
+          },
+          {
+            "title": "Vollständig geprüft",
+            "description": "Internxts Dienste wurden von Sicherheitsexperten eines führenden europäischen Penetration-Testing-Unternehmens überprüft. Dies stellt sicher, dass Ihre Daten vor externen Bedrohungen wie Hackern und Datenpannen sicher bleiben."
+          }
+        ]
+      },
+      "pCloudTable": {
+        "title": "Was ist mit Ihrer Privatsphäre?",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "Der Closed-Source-Aspekt von pClouds Code bedeutet, dass nur das Unternehmen Zugang dazu hat. Sie haben keine Möglichkeit zu überprüfen, was mit ihren Daten passiert."
+          },
+          {
+            "title": "pCloud Crypto",
+            "description": "Diese Verschlüsselungsfunktion ist nicht Open-Source und eine kostenpflichtige Zusatzfunktion (kostenlose Nutzer sind nicht geschützt). Dies stellt ihre echte Sicherheit und Transparenz in Frage."
+          },
+          {
+            "title": "Bedenken zur Passwort-Speicherung",
+            "description": "Ohne Open-Source-Verifikation, wie können Sie sicher sein, dass pCloud Ihr Passwort nicht speichert oder dass andere Personen nicht darauf zugreifen können?"
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "Kosten und Wert",
+      "inxtTable": {
+        "title": "Sicherheit und Privatsphäre ohne Zusatzkosten",
+        "features": [
+          {
+            "title": "Vernünftige Pläne",
+            "description": "87% exklusives Angebot ohne versteckte Gebühren."
+          },
+          {
+            "title": "Vollständiger Schutz",
+            "description": "Alle Pläne beinhalten Post-Quantum- und Zero-Knowledge-Verschlüsselung sowie Sicherheitsfunktionen kostenlos."
+          }
+        ]
+      },
+      "pCloudTable": {
+        "title": "Mehr zahlen für vollständige Privatsphäre",
+        "features": [
+          {
+            "title": "Extra zahlen für Zero-Knowledge-Verschlüsselung",
+            "description": "Sie müssen für das pCloud Crypto Add-on bezahlen, um private Verschlüsselung zu erhalten."
+          },
+          {
+            "title": "Versteckte Kosten",
+            "description": "Obwohl pCloud-Pläne erschwinglich erscheinen mögen, können die zusätzlichen Kosten für wesentliche clientseitige Verschlüsselung oder zusätzlichen Download-Traffic sie teuer machen."
+          }
+        ]
+      }
+    },
+    "transparencyAndTrust": {
+      "title": "Transparenz und Vertrauen",
+      "inxtTable": {
+        "title": "Auf Vertrauen aufgebaut",
+        "features": [
+          {
+            "title": "Community-gesteuerte Entwicklung",
+            "description": "Da Internxt Open Source ist, kann es durch Community-Beiträge und häufige Bewertungen von Sicherheitsexperten verbessert werden."
+          },
+          {
+            "title": "Keine Geheimnisse",
+            "description": "Klare Richtlinien und Open-Source-Code sorgen dafür, dass es keine Überraschungen gibt."
+          }
+        ]
+      },
+      "pCloudTable": {
+        "title": "Keine Transparenz",
+        "features": [
+          {
+            "title": "Proprietäre Software",
+            "description": "pCloud ist nicht transparent, da es Closed-Source-Software verwendet"
+          },
+          {
+            "title": "Vertrauensprobleme",
+            "description": "Nutzer müssen pCloud blind mit ihren Daten vertrauen, ohne es überprüfen zu können."
+          }
+        ]
+      }
+    },
+    "userExpAndFeatures": {
+      "title": "Benutzererfahrung und Funktionen",
+      "inxtTable": {
+        "title": "Modernes, benutzerfreundliches Design",
+        "features": [
+          {
+            "title": "Einfache Benutzeroberfläche",
+            "description": "Einfach zu verwenden mit Fokus auf Sicherheit und Privatsphäre."
+          },
+          {
+            "title": "Plattformübergreifend",
+            "description": "Funktioniert auf allen wichtigen Plattformen, einschließlich WebDAV und Rclone."
+          },
+          {
+            "title": "Mehrere Pläne",
+            "description": "Internxt bietet Familien-, Business- und S3-Objektspeicher-Pläne mit API-Zugang für Unternehmen und Entwickler."
+          }
+        ]
+      },
+      "pCloudTable": {
+        "title": "Zusätzliche Funktionen, aber zu einem Preis",
+        "features": [
+          {
+            "title": "Funktionsumfang",
+            "description": "pCloud bietet viele Funktionen, aber sie kommen zu zusätzlichen Kosten und Datenschutzproblemen."
+          },
+          {
+            "title": "Zugänglichkeit",
+            "description": "Extra zu zahlen für wesentliche Funktionen wie Verschlüsselung beeinträchtigt die Gesamterfahrung."
+          },
+          {
+            "title": "Speicheroptionen",
+            "description": "Hat mehrere Pläne, aber kein S3-Objektspeicher schränkt die Skalierbarkeit und Cloud-native Nutzung für Unternehmen und Entwickler ein."
+          }
+        ]
+      }
+    },
+    "switchToInternxt": {
+      "title": "Wechseln Sie zu Internxt für eine sicherere, offene, kostengünstige Cloud-Speicherlösung",
+      "cta": "Internxt kostenlos testen"
+    }
+  },
+  "isPCloudSafeSection": {
+    "title": "Ist pCloud sicher?",
+    "description": "pClouds Closed-Source-Verschlüsselung macht es schwierig, ihre Sicherheitseffektivität zu überprüfen, was Bedenken über den Zugriff auf Ihre Dateien aufwirft.",
+    "cards": [
+      {
+        "title": "Verdächtige E-Mails",
+        "description": "Viele pCloud-Nutzer haben Phishing-E-Mails von Betrügern erhalten. Es ist unklar, wie Hacker diese E-Mails erhalten haben, aber pCloud bestreitet eine Datenpanne."
+      },
+      {
+        "title": "Verschlüsselung",
+        "description": "Zero-Knowledge-Verschlüsselung ist bei pCloud ein zusätzlicher Kostenpunkt. Folglich könnten kostenlose oder sogar bezahlte Nutzer ihre Informationen weniger geschützt finden."
+      },
+      {
+        "title": "Inhalts-Scanning",
+        "description": "Viele pCloud-Nutzer haben berichtet, dass ihre Konten ungerechtfertigt beendet und ohne Warnung wegen verdächtiger Markenrechtsverletzungen oder illegaler Inhalte gelöscht wurden."
+      },
+      {
+        "title": "Tracker",
+        "description": "pCloud verwendet Tracker auf seiner Website (von Facebook, Twitter und TikTok), um Ihre Daten zu sammeln, was das Risiko von Datenschutzverletzungen und unerwünschtem Marketing erhöht"
+      }
+    ]
+  },
+  "CtaSection": {
+    "title": "Wechseln Sie zu Internxt mit 87% Rabatt",
+    "description": "Der einzige Cloud-Speicher, den Sie für vollständige Online-Privatsphäre benötigen",
+    "cta": "Internxt holen"
+  },
+  "CtaSection2": {
+    "title": "Keine Tracker. Keine Probleme.",
+    "description": "Erhalten Sie vollständige Privatsphäre für Ihre Dateien mit Internxt",
+    "cta": "Kostenlos anmelden"
+  },
+  "WhyChooseInxtSection": {
+    "title": "Warum sollten Sie Internxt als Ihre pCloud-Alternative wählen?",
+    "description": "Entdecken Sie Funktionen von Internxt, die uns zu einer sichereren, privateren pCloud-Alternative machen",
+    "cards": [
+      {
+        "title": "Open Source und transparent",
+        "description": "Internxt ist eine Open-Source-Alternative zu pCloud, da der Code für alle unsere Produkte und Dienste auf GitHub verfügbar ist. Unser Engagement für Datensicherheit garantiert Transparenz darüber, wie Ihre Daten behandelt und geschützt werden."
+      },
+      {
+        "title": "Sicherheitsgeprüft",
+        "description": "Internxts Dienste wurden von Sicherheitsexperten eines führenden europäischen Penetration-Testing-Unternehmens überprüft. Dies stellt sicher, dass Ihre Daten vor externen Bedrohungen wie Hackern und Datenpannen sicher bleiben."
+      },
+      {
+        "title": "Keine Datenverfolgung",
+        "description": "Wenn Sie nicht möchten, dass Ihre Daten überwacht werden, um personalisierte Werbung zu zeigen, dann ist Internxt eine privatere Alternative zu pCloud. Wir verwenden keine Tracker auf unserer Website, die Ihr Surfen überprüfen, überwachen oder davon profitieren können."
+      },
+      {
+        "title": "DSGVO-konform",
+        "description": "Internxt operiert mit vollständiger Transparenz und stellt sicher, dass Ihr Datenschutz durch europäische Gesetze geschützt ist. Unsere DSGVO-Konformität garantiert, dass Ihre Informationen sicher und nach strengen Vorschriften behandelt werden."
+      },
+      {
+        "title": "Erweiterte Verschlüsselung",
+        "description": "Internxt beinhaltet Post-Quantum-Verschlüsselung, die sicherste und fortschrittlichste Kryptographie, die für kostenlose und bezahlte Konten verfügbar ist. Wir speichern nur die verschlüsselte Version Ihrer Daten, und nur Sie haben den Schlüssel, um sie zu entschlüsseln und darauf zuzugreifen."
+      },
+      {
+        "title": "Flexible Speicherpläne",
+        "description": "Internxt Drive bietet mehr bezahlte Pläne und größere Speicheroptionen als die pCloud-Preisstruktur. Wenn Sie eine pCloud-Alternative benötigen, die monatliche, jährliche und Lifetime-Pläne bietet, wählen Sie aus unseren erschwinglichen Plänen, beginnend bei 200GB bis 10TB."
+      }
+    ]
+  },
+  "tableSection": {
+    "title": "Internxt Pläne",
+    "planTitles": {
+      "individuals": "Individuelle Pläne",
+      "homePage": "Wählen Sie den richtigen Plan für Sie",
+      "lifetime": "Lifetime-Pläne",
+      "business": "Business-Pläne",
+      "lifetimeCampaign": {
+        "blueText": "50% RABATT erhalten",
+        "normalText": "auf alle unsere exklusiven Lifetime-Pläne"
+      }
+    },
+    "planDescription": "Alle Internxt-Pläne sind vollständig ausgestattet mit vollständigem Zugang zu allen unseren Datenschutzdiensten. Sicherheit für alle Formen und Größen.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die exklusiv dafür entwickelt wurden, Ihr Unternehmen zu verteidigen, Ihre Mitarbeiter zu schützen und Ihren Gewinn zu sichern.",
+    "businessDescription2": "Stellen Sie die Datensicherheit Ihres Unternehmens mit Internxts verschlüsselten Cloud-Speicherplänen sicher.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "individual": "Jährlich",
+      "lifetime": "Lifetime",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "getStarted": "Beginnen Sie mit unserem kostenlosen Plan",
+      "enjoy10gb": "Genießen Sie 1GB für immer und erhalten Sie Zugang zu allen unseren Diensten",
+      "upTo": "1GB",
+      "freeForever": "Für immer kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "endToEnd": "Ende-zu-Ende-verschlüsselt",
+      "openSource": "Open-Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "HorizontalpCloudScrollableSection": {
+      "title": "Ist pCloud sicher?",
+      "description": "pClouds Closed-Source-Verschlüsselung macht es schwierig, ihre Sicherheitseffektivität zu überprüfen, was Bedenken über den Zugriff auf Ihre Dateien aufwirft.",
+      "scrollableSection": {
+        "titles": ["Verdächtige E-Mails", "Verschlüsselung", "Inhalts-Scanning", "Tracker"],
+        "descriptions": [
+          "Viele pCloud-Nutzer haben Phishing-E-Mails von Betrügern erhalten. Es ist unklar, wie Hacker diese E-Mails erhalten haben, aber pCloud bestreitet eine Datenpanne.",
+          "Zero-Knowledge-Verschlüsselung kostet extra mit pCloud Crypto. Alle Nutzer ohne diese haben deutlich schwächeren Schutz. Ohne diese zusätzliche Verschlüsselung kann pCloud Nutzerdateien scannen und darauf zugreifen.",
+          "Viele pCloud-Nutzer haben berichtet, dass ihre Konten ungerechtfertigt beendet und ohne Warnung wegen verdächtiger Markenrechtsverletzungen oder illegaler Inhalte gelöscht wurden.",
+          "pCloud verwendet Tracker auf seiner Website (Facebook, Twitter, TikTok), um Ihre Daten zu sammeln, was das Risiko von Datenschutzverletzungen und unerwünschtem Marketing erhöht"
+        ]
+      }
+    },
+    "HorizontalDropboxScrollableSection": {
+      "title": "Ist Dropbox sicher?",
+      "description": "Seit 2011 war Dropbox mit zahlreichen Sicherheitsverletzungen konfrontiert. Riskieren Sie nicht Ihre Daten; sichern Sie sie mit Internxt Drive und schützen Sie Ihre Online-Privatsphäre.",
+      "scrollableSection": {
+        "titles": [
+          "2011: Passwort-Bug",
+          "2012: Passwort-Verletzung",
+          "2018: Daten ohne Zustimmung geteilt",
+          "2022: Phishing-Angriff"
+        ],
+        "descriptions": [
+          "Im Juni 2011 erlebte Dropbox eine große Sicherheitsverletzung aufgrund eines Bugs, der es jedem Passwort ermöglichte, vier Stunden lang auf jedes Konto zuzugreifen, vorausgesetzt ein Hacker hatte Zugang zur E-Mail oder zum Benutzernamen. Während dieser vier Stunden waren alle Dropbox-Konten verwundbar.",
+          "2012 wurden Dropbox-Benutzernamen und Passwörter von anderen Seiten gestohlen, was zu einer großen Verletzung führte. Dropbox gab das volle Ausmaß erst 2016 bekannt und enthüllte, dass 68 Millionen Nutzer kompromittiert wurden, was es zu einer der größten Cloud-Speicher- und Internet-Verletzungen in der Geschichte machte.",
+          "2018 verwendete eine Harvard-Studie anonymisierte Daten von Dropbox ohne Nutzerzustimmung zur Zusammenarbeit mit Forschungsteams. Obwohl die Daten anonymisiert waren, ist das Teilen von Nutzerdaten mit Dritten ohne Erlaubnis ein enormer Vertrauensbruch, Transparenz- und Online-Privatsphäre-Verletzung.",
+          "Im November 2022 stahl ein Phishing-Angriff die Anmeldedaten eines Dropbox-Mitarbeiters, indem er sich als GitHub ausgab. Der Angriff stahl und veröffentlichte auch E-Mails und Passwörter zahlreicher Mitarbeiter online. GitHub, nicht Dropbox, entdeckte den Angriff."
+        ]
+      }
+    },
+    "HorizontalMegaScrollableSection": {
+      "title": "Ist MEGA sicher?",
+      "description": "Forscher der ETH Zürich entdeckten große kryptographische Schwächen in MEGA, die über 250 Millionen Nutzer und über 1.000 Petabytes an Daten betreffen.",
+      "tile2": "MEGA: Malleable Encryption Goes Awry",
+      "description2": "Forscher der ETH Zürich entdeckten große kryptographische Schwächen in MEGA, die über 250 Millionen Nutzer und über 1.000 Petabytes an Daten betreffen. Vier Hauptschwachstellen wurden identifiziert:",
+      "scrollableSection": {
+        "titles": [
+          "RSA-Schlüssel-Wiederherstellung",
+          "Klartext-Wiederherstellung",
+          "Framing-Angriff",
+          "GaP-Bleichenbacher-Angriff"
+        ],
+        "descriptions": [
+          "MEGAs Anmeldeprozess gibt Hinweise auf Ihren privaten RSA-Schlüssel preis, wenn Angreifer (mit Serverzugang) Ihren verschlüsselten Schlüssel modifizieren. Ursprünglich erforderte es 512 Anmeldungen, Forscher reduzierten dies später auf nur sechs. Einmal erhalten, ermöglicht der Schlüssel Angreifern den Zugang zu Dateien, Chats und mehr.",
+          "Mit Ihrem RSA-Schlüssel können Angreifer MEGAs AES-ECB-Verschlüsselung ausnutzen, um auf Node-, Chat- und Signing-Schlüssel zuzugreifen - was vollen Zugang zu Dateien und Nachrichten gewährt.",
+          "Ein Angreifer kann gefälschte, belastende Dateien in Ihr Konto einpflanzen, die als legitime Uploads erscheinen und Sie potenziell belasten.",
+          "Eine 'Guess-and-Purge'-Technik zielt auf MEGAs fehlerhafte RSA-Padding-Prüfungen während verschlüsselter Chat-Schlüssel-Austausche ab. Nach etwa 100.000 Anmeldeversuchen können Angreifer geheime Nachrichten entschlüsseln."
+        ]
+      }
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "HorizontalpCloudScrollableSection": {
+      "title": "Warum sollten Sie Internxt als Ihre pCloud-Alternative wählen?",
+      "description": "Entdecken Sie Funktionen von Internxt, die uns zu einer sichereren, privateren pCloud-Alternative machen",
+      "scrollableSection": {
+        "titles": [
+          "Open Source und transparent",
+          "Sicherheitsgeprüft",
+          "Keine Datenverfolgung",
+          "DSGVO-konform",
+          "Erweiterte Verschlüsselung",
+          "Flexible Speicherpläne"
+        ],
+        "descriptions": [
+          "Internxt ist eine Open-Source-Alternative zu pCloud, da der Code für alle unsere Produkte und Dienste auf GitHub verfügbar ist. Unser Engagement für Datensicherheit garantiert Transparenz darüber, wie Ihre Daten behandelt und geschützt werden.",
+          "Internxts Dienste wurden von Sicherheitsexperten eines führenden europäischen Penetration-Testing-Unternehmens überprüft. Dies stellt sicher, dass Ihre Daten vor externen Bedrohungen wie Hackern und Datenpannen sicher bleiben.",
+          "Wenn Sie nicht möchten, dass Ihre Daten überwacht werden, um personalisierte Werbung zu zeigen, dann ist Internxt eine privatere Alternative zu pCloud. Wir verwenden keine Tracker auf unserer Website, die Ihr Surfen überprüfen, überwachen oder davon profitieren können.",
+          "Internxt operiert mit vollständiger Transparenz und stellt sicher, dass Ihr Datenschutz durch europäische Gesetze geschützt ist. Unsere DSGVO-Konformität garantiert, dass Ihre Informationen sicher und nach strengen Vorschriften behandelt werden.",
+          "Internxt beinhaltet Post-Quantum-Verschlüsselung, die sicherste und fortschrittlichste Kryptographie, die für kostenlose und bezahlte Konten verfügbar ist. Wir speichern nur die verschlüsselte Version Ihrer Daten, und nur Sie haben den Schlüssel, um sie zu entschlüsseln und darauf zuzugreifen.",
+          "Internxt Drive bietet mehr bezahlte Pläne und größere Speicheroptionen als die pCloud-Preisstruktur. Wenn Sie eine pCloud-Alternative benötigen, die jährliche und Lifetime-Pläne bietet, wählen Sie aus unseren erschwinglichen Plänen mit VPN, Antivirus, Mail, Meet und mehr."
+        ]
+      }
+    },
+    "HorizontalDropboxScrollableSection": {
+      "title": "Warum sollten Sie Internxt als Ihre Dropbox-Alternative wählen?",
+      "description": "Internxt ergreift alle Maßnahmen, um Ihre Dateien und Ihr Recht auf Privatsphäre zu sichern, was es zur sichersten Alternative zu Dropbox macht.",
+      "scrollableSection": {
+        "titles": [
+          "Open Source und transparent",
+          "Sicherheitsgeprüft",
+          "Zero-Knowledge-Verschlüsselung",
+          "DSGVO-konform",
+          "Datenschutz-fokussierte Verschlüsselung",
+          "Flexible Speicherpläne"
+        ],
+        "descriptions": [
+          "Im Gegensatz zu Dropbox' proprietärer Software ist Internxt ein Open-Source-Cloud-Service. Alle unsere Produktcodes sind zur Überprüfung auf GitHub verfügbar für vollständige Transparenz darüber, wie wir Ihre Daten schützen und handhaben.",
+          "Internxts Dienste wurden von Sicherheitsexperten eines führenden europäischen Penetration-Testing-Unternehmens überprüft. Dies stellt sicher, dass Ihre Daten vor externen Bedrohungen wie Hackern und Datenpannen sicher bleiben.",
+          "Internxt schützt Ihre Passwörter und Dateien mit ultra-starker Ende-zu-Ende-Verschlüsselung. Im Gegensatz zu Dropbox kann Internxt niemals aus irgendeinem Grund auf Ihre Dateien zugreifen. Nur Sie haben die Verschlüsselungsschlüssel, um auf Ihre Daten zuzugreifen.",
+          "Internxt operiert mit vollständiger Transparenz und stellt sicher, dass Ihr Datenschutz durch europäische Gesetze geschützt ist. Unsere DSGVO-Konformität garantiert, dass Ihre Informationen sicher und nach strengen Vorschriften behandelt werden.",
+          "Internxt beinhaltet Post-Quantum- und Zero-Knowledge-Verschlüsselung für Ihre kostenlosen und bezahlten Konten. Im Gegensatz zu Dropbox werden Ihre Dateien auf Ihrem Gerät verschlüsselt, nicht auf unseren Servern, was Internxt zu einer privateren Dropbox-Alternative macht.",
+          "Internxt Drive bietet mehr bezahlte Pläne und größere Speicheroptionen als Dropbox. Wenn Sie eine Dropbox-Alternative benötigen, die jährliche und Lifetime-Pläne bietet, wählen Sie den richtigen Plan für Sie, um Zugang zu VPN, Antivirus, Mail, Meet und mehr zu erhalten."
+        ]
+      }
+    },
+    "HorizontalMegaScrollableSection": {
+      "title": "Warum sollten Sie Internxt als Ihre MEGA-Alternative wählen?",
+      "description": "Entdecken Sie Funktionen von Internxt, die uns zu einer sichereren, privateren MEGA-Alternative machen",
+      "scrollableSection": {
+        "titles": [
+          "Open Source und transparent",
+          "Sicherheitsgeprüft",
+          "Vollständig Open Source",
+          "DSGVO-konform",
+          "Erweiterte Verschlüsselung",
+          "Flexible Speicherpläne"
+        ],
+        "descriptions": [
+          "Internxt ist eine Open-Source-Alternative zu MEGA, da der Code für alle unsere Produkte und Dienste auf GitHub verfügbar ist. MEGA veröffentlicht nicht den Backend-Quellcode, der Ihre Daten speichert und Verschlüsselungsrichtlinien durchsetzt, so dass es keine Möglichkeit gibt, sicher zu sein, wie Ihre Daten geschützt werden.",
+          "Internxt hat erfolgreich eine Sicherheitsprüfung bestanden, die von Sicherheitsexperten eines führenden europäischen Penetration-Testing-Unternehmens durchgeführt wurde. Frühere Sicherheitsprüfungen bei MEGA fanden Schwachstellen, die Hackern Zugang zu Nutzerdaten geben könnten, aber MEGA hat diese Probleme seitdem behoben.",
+          "Internxt macht seinen gesamten Quellcode auf GitHub verfügbar. Diese Transparenz bietet Ihnen die Gewissheit, dass unsere Verschlüsselung Ihre Dateien schützt und es keine Hintertüren gibt, die Ihre Daten entschlüsseln und darauf zugreifen könnten.",
+          "Internxt ist ein europäisches Unternehmen, das von der DSGVO reguliert wird, um zu garantieren, dass Ihre Informationen sicher und nach strengen Vorschriften behandelt werden.",
+          "Internxt beinhaltet Post-Quantum-Verschlüsselung, die sicherste und fortschrittlichste Kryptographie, die für kostenlose und bezahlte Konten verfügbar ist. Wir speichern nur die verschlüsselte Version Ihrer Daten, und nur Sie haben den Schlüssel, um sie zu entschlüsseln und darauf zuzugreifen.",
+          "Internxt beinhaltet Post-Quantum-Verschlüsselung, die sicherste und fortschrittlichste Kryptographie, die für kostenlose und bezahlte Konten verfügbar ist. Dies schützt Ihre Daten vor den zukünftigen Bedrohungen von Quantencomputern, die aktuelle Verschlüsselungsmethoden brechen könnten. MEGA hat noch keine PQE implementiert."
+        ]
+      }
+    }
+  },
+  "FaqSectionpCloud": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu pCloud?",
+        "answer": [
+          "Ja, Internxt bietet erweiterte Funktionen zum Schutz Ihrer Daten, ohne Ihnen dafür extra zu berechnen. Post-Quantum- und Zero-Knowledge-Verschlüsselung garantiert, dass niemand außer Ihnen Ihre Dateien einsehen kann.",
+          "Zusätzliche Funktionen wie VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet und Mail - Funktionen, die derzeit bei pCloud nicht verfügbar sind - bieten Ihnen auch zusätzlichen Schutz vor Hackern und Datenpannen."
+        ]
+      },
+      {
+        "question": "Was ist Post-Quantum-Verschlüsselung und ist sie sicherer?",
+        "answer": [
+          "Im Gegensatz zur Standard-Verschlüsselung sind Post-Quantum-Verschlüsselungsalgorithmen darauf ausgelegt, mächtigen Quantenangriffen zu widerstehen, was PQE zu einer sichereren pCloud-Alternative macht.",
+          "Diese Kryptographie-Methode wird von Internxt verwendet, um sicherzustellen, dass Ihr Lifetime-Cloud-Speicherplan Sie vor zukünftigen Cybersicherheitsbedrohungen schützt und ist für alle Pläne ohne zusätzliche Kosten verfügbar."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, was es zu einer DSGVO-konformen Cloud-Speicherlösung macht, die strengen Gesetzen folgt, um sicherzustellen, dass Ihre Daten und Privatsphäre geschützt sind."
+        ]
+      },
+      {
+        "question": "Ist die pCloud-Preisgestaltung teurer als Internxt?",
+        "answer": [
+          "Mit Ihrem exklusiven 87%-Rabatt sind alle unsere Pläne günstiger als die derzeit verfügbaren pCloud-Preisoptionen, mit dem Vorteil, viel mehr Funktionen und Privatsphäre als pCloud zu bieten."
+        ]
+      },
+      {
+        "question": "Wie kontaktiere ich den Support?",
+        "answer": [
+          "Wenn Sie weitere Fragen, Anfragen haben oder Hilfe benötigen, können Sie hello@internxt.com kontaktieren und unser Kundenerfolgsteam wird Ihnen gerne helfen."
+        ]
+      },
+      {
+        "question": "Kann ich mehr Speicher zu meinem Lifetime-Plan hinzufügen?",
+        "answer": [
+          "Ja, Sie können Ihren Plan in den Einstellungen Ihres Internxt-Kontos upgraden, wenn Sie mehr Speicher hinzufügen müssen."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, iDEAL, Sofort und Kryptowährung bezahlen."
+        ]
+      }
+    ]
+  },
+  "FaqSectionDropbox": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu Dropbox?",
+        "answer": [
+          "Ja, Internxt ist darauf ausgelegt, eine sicherere und privatere Alternative zu Dropbox zu sein. Dank Zero-Knowledge- und Post-Quantum-Verschlüsselung können nur Sie auf Ihre Dateien zugreifen und sie entschlüsseln.",
+          "Im Gegensatz zu Dropbox scannt, verfolgt oder verkauft Internxt Ihre Daten nicht und gewährleistet vollständige Privatsphäre für alle Ihre Informationen."
+        ]
+      },
+      {
+        "question": "Verwendet Dropbox Zero-Knowledge-Verschlüsselung?",
+        "answer": [
+          "Nein, Dropbox bietet keine Zero-Knowledge-Verschlüsselung. Das bedeutet, dass Dropbox-Mitarbeiter oder Dritte potenziell auf Ihre gespeicherten Dateien zugreifen könnten.",
+          "Internxt garantiert, dass niemand, nicht einmal unser Team, Ihre Daten einsehen kann."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und befolgt die strengen europäischen DSGVO-Datenschutzbestimmungen.",
+          "Dies gewährleistet höhere Datenschutzstandards im Vergleich zu Anbietern wie Dropbox, die in den Vereinigten Staaten ansässig sind und Überwachungsgesetzen unterliegen können."
+        ]
+      },
+      {
+        "question": "Ist die Internxt-Preisgestaltung günstiger als Dropbox?",
+        "answer": [
+          "Ja, mit unseren exklusiven Rabatten sind Internxt-Pläne erschwinglicher als die von Dropbox und beinhalten zusätzliche datenschutz-fokussierte Funktionen ohne zusätzliche Kosten."
+        ]
+      },
+      {
+        "question": "Welche zusätzlichen Funktionen bietet Internxt, die Dropbox nicht hat?",
+        "answer": [
+          "Internxt beinhaltet Funktionen wie ein integriertes VPN, Antivirus, Device Cleaner, Dark Web Monitor und private E-Mail (Mail).",
+          "Diese Tools bieten zusätzliche Sicherheits- und Datenschutzebenen, die bei Dropbox nicht verfügbar sind."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Internxt-Support kontaktieren?",
+        "answer": [
+          "Wenn Sie Hilfe benötigen, können Sie unser Kundenerfolgsteam per E-Mail an hello@internxt.com erreichen oder den Live-Chat auf unserer Website nutzen."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Ja, Internxt akzeptiert Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort und Kryptowährung."
+        ]
+      }
+    ]
+  },
+  "FaqSectionMEGA": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Ist Internxt eine sicherere und privatere Alternative zu MEGA?",
+        "answer": [
+          "Ja, Internxt ist eine sicherere und privatere Alternative zu MEGA. Unsere Zero-Knowledge- und Post-Quantum-Verschlüsselung stellt sicher, dass nur Sie auf Ihre Daten zugreifen können.",
+          "Im Gegensatz zu MEGA verlässt sich Internxt nicht auf Drittanbieter-Services oder Tracker und bietet eine wirklich private Umgebung für Ihre Dateien."
+        ]
+      },
+      {
+        "question": "Bietet MEGA das gleiche Verschlüsselungsniveau wie Internxt?",
+        "answer": [
+          "MEGA verwendet Verschlüsselung, aber Internxt geht mit der Implementierung von Post-Quantum-Verschlüsselung noch weiter, die Ihre Daten sogar vor zukünftigen Quantencomputer-Bedrohungen schützt.",
+          "Diese Technologie ist in jedem Internxt-Plan ohne zusätzliche Kosten enthalten."
+        ]
+      },
+      {
+        "question": "Wo hat Internxt seinen Sitz?",
+        "answer": [
+          "Internxt hat seinen Sitz in Valencia, Spanien, und befolgt die strengen europäischen DSGVO-Datenschutzgesetze.",
+          "Dies bietet stärkeren Datenschutz im Vergleich zu Services wie MEGA, die anderen Rechtsordnungen und Vorschriften unterliegen können."
+        ]
+      },
+      {
+        "question": "Ist Internxt erschwinglicher als MEGA?",
+        "answer": [
+          "Ja, mit exklusiven Rabatten bietet Internxt erschwinglichere Lifetime- und Abonnement-Pläne und beinhaltet zusätzliche Sicherheits- und Datenschutzfunktionen ohne versteckte Kosten."
+        ]
+      },
+      {
+        "question": "Welche zusätzlichen Funktionen bietet Internxt, die MEGA nicht hat?",
+        "answer": [
+          "Internxt beinhaltet ein VPN, Antivirus, Device Cleaner, Dark Web Monitor und sicheren E-Mail-Service (Mail) — Funktionen, die MEGA nicht bietet.",
+          "Diese zusätzlichen Tools geben Ihnen erweiterten Schutz vor Hackern, Lecks und Online-Bedrohungen."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Internxt-Support kontaktieren?",
+        "answer": [
+          "Wenn Sie Hilfe benötigen, können Sie hello@internxt.com eine E-Mail senden oder den Live-Chat auf unserer Website nutzen. Unser Kundenerfolgsteam wird Ihnen gerne helfen."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Ja, Internxt akzeptiert gängige Kredit- und Debitkarten (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort und Kryptowährung."
+        ]
+      }
+    ]
+  }
+}
