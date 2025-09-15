@@ -229,7 +229,7 @@ export default function ComparisonTableSection({
       </div>
 
       <div className="w-full px-4 lg:hidden">
-        <div className="sticky top-0 z-10 grid grid-cols-2 gap-0">
+        <div className="sticky top-10 z-10 grid grid-cols-2 gap-0">
           <CustomPlanSelector
             plans={textContent.plans}
             selectedPlan={selectedPlanA}

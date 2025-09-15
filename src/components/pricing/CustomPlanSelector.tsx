@@ -40,7 +40,7 @@ export default function CustomPlanSelector({
   };
 
   return (
-    <div className="flex flex-col py-10 pt-10">
+    <div className="z-10 flex  flex-col pt-10">
       <div className={`border border-neutral-25 bg-neutral-16 p-4 ${isLeftColumn ? 'border-r-0' : ''}`}>
         {/* Clean Dropdown Button */}
         <div className="relative mb-4">
@@ -61,7 +61,7 @@ export default function CustomPlanSelector({
           {isOpen && (
             <>
               {/* Backdrop */}
-              <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
+              <div className="fixed inset-0 " onClick={() => setIsOpen(false)} />
 
               {/* Options */}
               <div className=" absolute left-0 top-full z-20 mt-2 w-full min-w-[140px] rounded-lg  bg-white shadow-lg">
@@ -96,7 +96,7 @@ export default function CustomPlanSelector({
               {currency}
               {getPlanPrice(selectedPlan)}
             </span>
-            <span className="text-gray-500 text-sm">{billingText}</span>
+            <span className="text-gray-500 whitespace-nowrap text-sm">{billingText}</span>
           </div>
         </div>
 
