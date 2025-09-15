@@ -9,6 +9,7 @@ import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PlanSelectorForMobile } from './components/PlanSelectorForMobile';
 import FreePlanCard from '@/components/prices/FreePlanCard';
 import { SwitchComponent, SwitchStorageBusinessOptions } from './components/Switch';
+import Button from '../Button';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -45,6 +46,7 @@ interface PriceTableProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  redirectComparison?: boolean;
 }
 
 export const PricingSectionForMobile = ({
@@ -75,6 +77,7 @@ export const PricingSectionForMobile = ({
   showPromo,
   isAffiliate,
   hideBillingController,
+  redirectComparison = false,
 }: PriceTableProps): JSX.Element => {
   const banner = require('@/assets/lang/en/banners.json');
 
@@ -122,6 +125,16 @@ export const PricingSectionForMobile = ({
 
   const planStorage = storageSelected === 'Essential' ? '1TB' : storageSelected === 'Premium' ? '3TB' : '5TB';
   const businessPlanStorage = businessStorageSelected === 'Standard' ? '1TB' : '2TB';
+
+  const scrollToComparison = () => {
+    const element = document.getElementById('#comparisonTable');
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
 
   return (
     <>
@@ -248,6 +261,16 @@ export const PricingSectionForMobile = ({
           )}
         </div>
       </Transition>
+
+      {redirectComparison && (
+        <Button
+          text={textContent.ctaCompare}
+          onClick={scrollToComparison}
+          className="border-[1.5px] border-primary bg-transparent"
+          textColor="text-primary"
+          icon
+        />
+      )}
 
       {!hideFeatures && (
         <div className="flex h-min w-screen flex-col items-center justify-center gap-2 text-start">
