@@ -72,14 +72,14 @@ export const PriceCard = ({
     (interval === 'year' && productCardPlan === 'individuals');
 
   const priceNow = decimalDiscountValue
-    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
-    : Number(price).toFixed(2).replace('.00', '');
-  const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
+    ? ((price * decimalDiscountValue) / 100).toFixed(0).replace('.00', '')
+    : Number(price).toFixed(0).replace('.00', '');
+  const priceBefore = decimalDiscountValue ? Number(price).toFixed(0).replace('.00', '') : undefined;
 
-  const monthlyPriceNow = Number(priceNow).toFixed(2).replace('.88', '');
+  const monthlyPriceNow = Number(priceNow).toFixed(0).replace('.88', '');
   const monthlyPriceBefore = decimalDiscountValue
     ? Number(price / 12)
-        .toFixed(2)
+        .toFixed(0)
         .replace('.00', '')
     : undefined;
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
@@ -179,15 +179,12 @@ export const PriceCard = ({
                   <span className="flex h-full flex-row items-end gap-1 ">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
-                      {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
+                      {isBusiness ? priceNow : isAnnual ? priceNow : priceNow}
                     </p>
                     {isBusiness ? (
                       <span className="i flex h-full items-end text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
-                    ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
                     ) : null}
                   </span>
 
@@ -196,13 +193,10 @@ export const PriceCard = ({
                       {currency}
                     </p>
                     <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+                      {isBusiness ? priceBefore : isAnnual ? priceBefore : isLifetime ? priceBefore : priceNow}
                     </p>
                     {isBusiness ? (
                       <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
-                    ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
                     ) : null}
                   </span>
                 </div>
