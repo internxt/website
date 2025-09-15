@@ -186,6 +186,9 @@ export const PriceCard = ({
                         {contentText.perUserSlash}
                       </span>
                     ) : null}
+                    {isAnnual ? (
+                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
+                    ) : null}
                   </span>
 
                   <span className="flex h-full flex-row items-end">
@@ -197,6 +200,9 @@ export const PriceCard = ({
                     </p>
                     {isBusiness ? (
                       <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                    ) : null}
+                    {isAnnual ? (
+                      <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
                     ) : null}
                   </span>
                 </div>
