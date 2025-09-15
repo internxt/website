@@ -85,7 +85,9 @@ export default function Navbar(props: Readonly<NavbarProps>) {
   return (
     <div
       id="navbar"
-      className={`${props.hide ? 'hidden' : ''} top-18 fixed left-0 flex h-20 w-full items-center ${
+      className={`${props.hide ? 'hidden' : ''} ${
+        props.isLinksHidden ? 'top-0' : 'top-18'
+      } top-18 fixed left-0 flex h-20 w-full items-center ${
         props.darkMode ? (scrolled ? 'bg-black bg-opacity-100' : 'bg-black bg-opacity-0') : 'bg-white'
       } transition-all duration-100 lg:h-16 ${
         props.fixed ? (props.darkMode ? 'bg-opacity-0' : 'bg-opacity-100') : ''
@@ -93,7 +95,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
-      <div className="mx-4 w-full  lg:mx-10 lg:pt-0 xl:mx-32">
+      <div className="mx-4 w-full  lg:mx-10 lg:pt-1 xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
