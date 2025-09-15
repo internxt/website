@@ -69,7 +69,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
               key={`desktop-${index}`}
               feature={feature}
               iconSize={32}
-              containerWidth="w-[111px]"
+              containerWidth="w-[150px]"
               textSize="text-lg"
             />
           ))}
