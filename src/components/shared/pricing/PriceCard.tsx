@@ -65,6 +65,14 @@ export const PriceCard = ({
     : Number(price).toFixed(0).replace('.00', '');
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(0).replace('.00', '') : undefined;
 
+  const monthlyPriceNow = Number(priceNow).toFixed(0).replace('.88', '');
+  const monthlyPriceBefore = decimalDiscountValue
+    ? Number(price / 12)
+        .toFixed(0)
+        .replace('.00', '')
+    : undefined;
+  const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
+
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
 
@@ -202,6 +210,7 @@ export const PriceCard = ({
                 ) : null}
               </span>
             </div>
+
           </div>
 
           <button
