@@ -37,6 +37,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.SoftSales85,
     couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
 
