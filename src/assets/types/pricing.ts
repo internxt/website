@@ -3,7 +3,6 @@ export interface PricingText {
   HeroSectionAlternative: CtaSection;
   PriceTableForAlternativePricing: PriceTableForAlternativePricing;
   tableSection: TableSection;
-  ComparisonTable: ComparisonTable;
   FaqSection: FAQSection;
   FaqSectionForBusiness: FAQSection;
   SchemaMarkupQuestions: SchemaMarkupQuestions;
@@ -27,38 +26,6 @@ export interface BestStorageSection {
 
 export interface Card {
   title: string;
-}
-
-export interface ComparisonTable {
-  title: string;
-  cta: string;
-  billedAnnualy: string;
-  billedOnce: string;
-  plans: Plan[];
-  categories: Category[];
-}
-
-export interface Category {
-  name: string;
-  features: Feature[];
-}
-
-export interface Feature {
-  id: string;
-  name: string;
-  avalability: Avalability;
-}
-
-export interface Avalability {
-  Essential: boolean;
-  Premium: boolean;
-  Ultimate: boolean;
-}
-
-export interface Plan {
-  id: string;
-  name: string;
-  order: number;
 }
 
 export interface CtaSection {
@@ -140,7 +107,6 @@ export interface SchemaMarkupQuestions {
 
 export interface TableSection {
   title: string;
-  tileLabel: string;
   ctaBanner: CtaBanner;
   planTitles: PlanTitles;
   lifetimeDescription: string;
@@ -152,7 +118,6 @@ export interface TableSection {
   features: Features;
   individuals: string;
   planStorage: PlanStorage;
-  ctaCompare: string;
 }
 
 export interface BillingFrequency {

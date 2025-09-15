@@ -1,4 +1,3 @@
-import { ArrowDown } from '@phosphor-icons/react';
 import Spinner from './Spinner';
 
 interface ButtonProps {
@@ -11,7 +10,6 @@ interface ButtonProps {
   textColor?: string;
   hoverColor?: string;
   onClick?: () => void;
-  icon?: boolean;
 }
 
 const Button = ({
@@ -24,7 +22,6 @@ const Button = ({
   textColor,
   hoverColor,
   onClick,
-  icon = false,
 }: ButtonProps): JSX.Element => {
   return (
     <button
@@ -33,14 +30,13 @@ const Button = ({
       id={id}
       type={type}
       className={[
-        'flex w-max justify-center gap-2 rounded-md px-5 py-3 text-base font-medium',
+        'flex w-max justify-center rounded-md px-5 py-3 text-base font-medium',
         disabled ? 'bg-gray-10' : `bg-primary ${hoverColor}`,
         textColor || 'text-white',
         className || '',
       ].join(' ')}
     >
       {showSpinner ? <Spinner size={20} /> : <p>{text}</p>}
-      {icon && <ArrowDown className="text-primary" height={24} width={24} />}
     </button>
   );
 };

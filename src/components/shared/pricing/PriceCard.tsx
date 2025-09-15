@@ -3,7 +3,6 @@ import {
   Broom,
   Cake,
   CirclesThreePlus,
-  Code,
   CodeBlock,
   CreditCard,
   Database,
@@ -44,6 +43,12 @@ export interface PriceCardProps {
   cardIndex?: number;
 }
 
+const BILLING_FREQUENCY_LIST = {
+  lifetime: 'lifetime',
+  month: 'monthly',
+  year: 'annually',
+};
+
 export const PriceCard = ({
   product,
   decimalDiscountValue,
@@ -59,6 +64,8 @@ export const PriceCard = ({
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
+
+  const isLifetime = interval === 'lifetime';
   const isAnnual = interval === 'year';
   const showMonthlyLabel =
     (productCardPlan === 'business' && interval === 'month') ||
@@ -70,6 +77,11 @@ export const PriceCard = ({
   const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
 
   const monthlyPriceNow = Number(priceNow).toFixed(2).replace('.88', '');
+  const monthlyPriceBefore = decimalDiscountValue
+    ? Number(price / 12)
+        .toFixed(2)
+        .replace('.00', '')
+    : undefined;
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
   const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
@@ -89,20 +101,19 @@ export const PriceCard = ({
   const iconsFeatures = [
     Database,
     Key,
-    LockSimple,
-    Fingerprint,
-    ArrowsClockwise,
-    Password,
     Gauge,
     ShieldPlus,
+    ArrowsClockwise,
+    Password,
     CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
     CodeBlock,
-    Code,
     Sparkle,
     Detective,
     VideoConference,
-    CreditCard,
     Envelope,
+    CreditCard,
   ];
 
   const iconsFeaturesForBusiness = [
@@ -123,72 +134,75 @@ export const PriceCard = ({
     Envelope,
   ];
 
-  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 9 : 11;
+  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 8 : 9;
 
   const renderFeatureIcon = (index: number) => {
     const adjustedIndex =
-      !isBusiness && cardIndex === 2 && index >= 12 ? index + 1 : cardIndex === 1 && index >= 9 ? index + 2 : index;
+      !isBusiness && cardIndex === 0 && index >= 6
+        ? index + 1
+        : !isBusiness && cardIndex === 1 && index >= 9
+        ? index + 1
+        : index;
     const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
     return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
   };
 
-  const formatTextWithBold = (text) => {
-    const parts = text.split(/(\*\*.*?\*\*)/);
-
-    return parts.map((part, index) => {
-      if (part.startsWith('**') && part.endsWith('**')) {
-        const boldText = part.slice(2, -2);
-        return (
-          <span key={index}>
-            <strong>{boldText}</strong>&nbsp;
-          </span>
-        );
-      }
-      return part;
-    });
-  };
   return (
     <div
       className={`flex flex-col items-center justify-start rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[1023px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[825px]'
-      } ${popular ? ' bg-neutral-250 shadow-xl' : ''}`}
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[840px]'
+      } ${popular ? ' bg-blue-10 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
-        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold text-white`}>{contentText.mostPopular}</p>
+        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
       </div>
 
       <div
         className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[781px]'
+          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
         } rounded-16 border ${popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
-        <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[243px] lg:px-6 lg:py-8">
+        <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
             <div className="flex h-[36px] items-center justify-center lg:h-[48px]">
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
             {(percentOff ?? 0) > 0 ? (
-              <div className="flex h-[57px] w-[180px] flex-col items-center justify-between lg:h-[60px] lg:w-[190px]">
-                <div className="flex h-[63px] w-full flex-row items-center justify-center gap-2 lg:h-[43px] ">
-                  <span className="flex h-full flex-row items-center gap-1 ">
-                    <p className="self-center pb-3 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">{priceNow}</p>
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[81px] lg:w-[190px]">
+                <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
+                  <p className="text-base font-semibold text-green-0">
+                    {percentOff}
+                    {contentText.discount}
+                  </p>
+                </div>
+                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
+                  <span className="flex h-full flex-row items-end gap-1 ">
+                    <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
+                      {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
+                    </p>
                     {isBusiness ? (
                       <span className="i flex h-full items-end text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
                     ) : null}
+                    {showMonthlyLabel && !isBusiness ? (
+                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
+                    ) : null}
                   </span>
 
-                  <span className="flex h-full flex-row items-center">
-                    <p className=" h-[26px] items-center self-center pb-6 pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
+                  <span className="flex h-full flex-row items-end">
+                    <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
                       {currency}
                     </p>
-                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-2 lg:text-xl">
-                      {priceBefore}
+                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
+                      {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
                     </p>
                     {isBusiness ? (
                       <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                    ) : null}
+                    {showMonthlyLabel && !isBusiness ? (
+                      <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
                     ) : null}
                   </span>
                 </div>
@@ -250,8 +264,8 @@ export const PriceCard = ({
           </div>
         ) : null}
         <div
-          className={`flex h-min flex-col gap-2 rounded-b-16 bg-white px-6 py-4 ${
-            isBusiness ? 'h-min lg:h-[520px]' : 'h-min lg:h-[520px]'
+          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
+            isBusiness ? 'h-min lg:h-[520px]' : 'h-min lg:h-[485px]'
           } lg:py-6`}
         >
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
@@ -259,9 +273,9 @@ export const PriceCard = ({
               <div className="flex min-h-[24px] flex-row items-start gap-2 lg:items-center">
                 {renderFeatureIcon(index)}
                 <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
-                  {formatTextWithBold(feature)}
+                  {feature}
                   {index > newFeaturesNumber && (
-                    <p className="ml-2 flex h-min items-center rounded-2 bg-purple-1 px-2 py-0.5 text-center font-semibold text-purple-10 lg:px-1">
+                    <p className="ml-2 flex h-min items-center rounded-2 bg-orange-100 px-2 py-0.5 text-center font-semibold text-orange-1 lg:px-1">
                       {contentText.commingSoon}
                     </p>
                   )}

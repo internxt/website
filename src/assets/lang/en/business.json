@@ -1,225 +1,196 @@
 {
-  "HeroSection": {
-    "title": "Protect your business with private, secure cloud storage",
-    "description": [
-      "Internxt secures your business from data loss with secure cloud storage built with ultra-powerful encryption",
-      "We provide everything you need to manage your business securely"
-    ],
-    "cta": "Select plan",
-    "separator": "|",
-    "cta2": "Contact us"
+  "mostPopular": "Recommended",
+  "mostPopularPlan": "Most Popular Plan",
+  "valentines": "Special Valentine’s Day offer!",
+  "onlyForNewClients": "Only for new customers",
+  "redeemCode": "Redeem code",
+  "save": "Save ",
+  "discount": "% off ",
+  "commingSoon": "Coming soon",
+  "planTitles": {
+    "individuals": "Individuals",
+    "homePage": "Choose the right plan for you",
+    "lifetime": "Lifetime Plans",
+    "business": "Business Plans",
+    "lifetimeCampaign": {
+      "blueText": "Get 50% OFF",
+      "normalText": "all our exclusive lifetime plans"
+    }
   },
-  "SecureYourCompany": {
-    "title": "Secure your company’s future with Internxt encrypted cloud storage",
-    "description": "Data breaches can devastate businesses, causing severe financial losses, operational disruptions, and damage your business's reputation.",
-    "cards": [
-      {
-        "title": "$4.88 M",
-        "description": "Average cost of a data breach"
+  "lifetimeDescription": "Buy once and get privacy and security forever.",
+  "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
+  "businessDescription": "Ensure business data security with Internxt's encrypted cloud storage plans.",
+  "billingFrequency": {
+    "monthly": "Monthly",
+    "annually": "Annually",
+    "individual": "Individual",
+    "lifetime": "Lifetime",
+    "business": "Business"
+  },
+  "businessLabels": {
+    "1TB": "Standard",
+    "2TB": "Pro",
+    "family": {
+      "1TB": "Family Essentials",
+      "2TB": "Family Premium"
+    }
+  },
+  "billingFrequencyLabel": {
+    "lifetime": "One-time payment",
+    "monthly": "Billed monthly",
+    "semiannually": "Billed semiannually",
+    "annually": "Billed annually",
+    "afterMonth": "after 30 days"
+  },
+  "billingFrequencyLabelSmall": {
+    "monthly": "/monthly",
+    "semiannually": "/semiannually",
+    "annually": "/annually"
+  },
+  "perUserSlash": "/user",
+  "perUser": "Per user",
+  "users": "users",
+  "freePlan": "Free",
+  "price": {
+    "freeForever": "Free forever",
+    "free": "Up to "
+  },
+  "perYear": "/year",
+  "perMonth": "/mo",
+  "firstMonth": "First 30 days",
+  "cta": {
+    "getStarted": "Get started",
+    "signUpNow": "Sign up now",
+    "buy": "Buy",
+    "get": "Get",
+    "selectPlan": "Select plan",
+    "redeem": "Redeem code",
+    "discount": "BEST VALUE!",
+    "claimTheDeal": "Claim the deal",
+    "freemonth": "Get 30 days for free"
+  },
+  "freePlanCard": {
+    "eyeBrow": " Free",
+    "description": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem: VPN (FR), CLI/WebDav/Rclone, and much more.",
+    "cta": "Select plan"
+  },
+  "features": {
+    "enjoyForever": {
+      "enjoy": "Enjoy",
+      "enjoyUpTo": "Enjoy up to",
+      "forFree": "for free",
+      "forever": "forever"
+    },
+    "moneyBack": "30-day money-back guarantee",
+    "encryptedFiles": "Encrypted file storage & sharing",
+    "accessFromAnywhere": "Access your files from any device",
+    "allServices": "Get access to all our services",
+    "dataAccess": "No unauthorized data access"
+  },
+  "productFeatures": {
+    "promoFeatures": {
+      "title": "Internxt themed goodies:",
+      "features": ["Win a signed Valencia T-Shirt", "Free anniversary theme for Web app"]
+    },
+    "cheaperThan": {
+      "lifetime": {
+        "normal": "Up to ",
+        "bold": "4x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
       },
-      { "title": "73 M", "description": "AT&T customer records leaked in 2024" },
-      { "title": "258 days", "description": "Average time to identify a data breach" },
-      { "title": "46%", "description": "Of breaches involve personal data" }
-    ],
-    "footerText": "*Data collected from IBM Security Cost of a Data Breach Report 2024."
-  },
-  "InternxtProtectsYourBusiness": {
-    "title": "Internxt protects your business from data breaches",
-    "description": [
-      "Other providers hold the decryption keys to your data and can theoretically view your files, exposing your business to data breaches, hacks, or leaks.",
-      "We offer true data privacy  — we don't have access to your business information, your data is fully encrypted and accessible only to you."
-    ]
-  },
-  "WhatCanWeDo": {
-    "title": "What can you do with Internxt?",
-    "description": "Optimize your organization's file management, security, and privacy with our secure cloud storage for business.",
-    "scrollableSection": {
-      "imagesPathname": [
-        "internxt_b2b_feature1",
-        "internxt_b2b_feature2",
-        "internxt_b2b_feature3",
-        "internxt_b2b_feature4",
-        "internxt_b2b_feature5"
+      "year": {
+        "normal": "Up to ",
+        "bold": "3x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      },
+      "month": {
+        "normal": "Up to ",
+        "bold": "2x cheaper ",
+        "normal2": "than other secure cloud storage alternatives"
+      }
+    },
+    "planTypes": {
+      "essentials": "Essential",
+      "standard": "Standard",
+      "premium": "Premium",
+      "ultimate": "Ultimate",
+      "pro": "Pro"
+    },
+    "individuals": {
+      "1TB": [
+        "1TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "GDPR compliance",
+        "Two-factor authentication (2FA)"
       ],
-      "titles": [
-        "Manage your organization",
-        "Secure file sharing between departments",
-        "Session management",
-        "Flexible storage allocation",
-        "Access Logs",
-        ""
+      "3TB": [
+        "3TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "Invite, share & collaborate",
+        "GDPR compliance",
+        "Two-factor authentication (2FA)",
+
+        "Cleaner ",
+        "Monitor"
       ],
-      "descriptions": [
-        "Internxt empowers businesses with features to manage members of your organization, customize workspaces, and manage your account billing and payments.  Easily switch between your Internxt business and personal accounts to optimize productivity and file organization.",
-        "Secure cloud storage includes secure file-sharing features within different departments to collaborate safely in teams. Password-protect and restrict file access to send confidential files with partners, ensuring you maintain control over their security.",
-        "Internxt cloud storage offers advanced session management, providing real-time login notifications and detailed remote session monitoring (client, OS, IP, location, last active time). This high-level security allows the account manager to detect unauthorized access, manage sessions efficiently, and protect sensitive data.",
-        "Internxt gives your team full flexible storage allocation to upgrade your storage based on your needs. With our plans, you can add users, allocate storage based on needs, and increase capacity as necessary, ensuring cost efficiency, scalability, and optimal resource utilization.",
-        "Easily monitor team activity with a comprehensive activity log, offering a clear view of file interactions and user access. Track who has signed in, uploaded, or modified files, giving you total control and ensuring data security across your team."
+      "5TB": [
+        "5TB zero-knowledge encrypted storage",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "Invite, share & collaborate",
+        "GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "CLI, WebDav, NAS & Rclone support",
+        "Cleaner ",
+        "Monitor",
+        "Meet",
+        "Mail"
+      ]
+    },
+    "business": {
+      "1TB": [
+        "1TB zero-knowledge encrypted storage per user",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "Invite, share & collaborate",
+        "GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "CLI, WebDav support",
+        "Manage account billing & payments",
+        "Cleaner ",
+        "Monitor"
+      ],
+      "2TB": [
+        "2TB zero-knowledge encrypted storage per user",
+        "Post-quantum encryption",
+        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "Antivirus",
+        "Backup your files",
+        "Password-protected file sharing",
+        "Invite, share & collaborate",
+        "GDPR compliance",
+        "Two-factor authentication (2FA)",
+        "CLI, WebDav, Rclone & NAS support",
+        "Manage account billing & payments",
+        "Cleaner ",
+        "Monitor",
+        "Meet ",
+        "Mail "
       ]
     }
-  },
-  "PriceTable": {
-    "planTitles": {
-      "business": "Business plans"
-    },
-    "tileLabel": "{{discount}}% off",
-    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
-    "billingFrequency": {
-      "monthly": "Monthly",
-      "annually": "Annually",
-      "individual": "Individual",
-      "lifetime": "Lifetime",
-      "business": "Business"
-    },
-    "freePlanCard": {
-      "eyeBrow": "Free",
-      "description": "Get 1GB of encrypted cloud storage for free",
-      "mobileDescription": "Get up to 1GB of encrypted cloud storage and enjoy our private ecosystem",
-      "cta": "Select plan"
-    },
-    "features": {
-      "endToEnd": "End-to-end encrypted",
-      "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation",
-      "premiumSupport": "Premium customer support",
-      "guarantee": "30-day money-back guarantee"
-    },
-    "planStorage": {
-      "essential": "1TB",
-      "premium": "3TB",
-      "ultimate": "5TB",
-      "standard": "1TB",
-      "pro": "2TB"
-    }
-  },
-  "WhyChooseInternxt": {
-    "title": "Why choose Internxt?",
-    "description": "Our cloud storage solution is designed for everyone, offering a secure product suite that's easy to understand and use, even if you're not a tech expert. Internxt provides powerful yet intuitive encrypted cloud storage, perfect for everyday use across various industries.",
-    "scrollableSection": {
-      "titles": [
-        "GDPR compliant",
-        "Zero access, maximum encryption",
-        "You control your data",
-        "100% transparent and secure"
-      ],
-      "descriptions": [
-        "The General Data Protection Regulation (GDPR) and other European privacy laws enforce strict data protection. By following these laws, Internxt takes every measure to protect your business data.",
-        "End-to-end encryption secures your files by encrypting everything on your device. Nobody, not even Internxt, can view your files. In the unlikely event of a data breach, hackers cannot decrypt and steal your business data.",
-        "Unlike Google Drive, Dropbox, and OneDrive, Internxt has zero trackers and never shares data with third parties. Your business data remains private and protected with the maximum security measures available.",
-        "All our products are built using open source. The code we use to protect data is available for everyone to inspect. We have nothing to hide except your data."
-      ]
-    }
-  },
-  "EncryptedCloudSolution": {
-    "title": "Encrypted cloud solutions for your business",
-    "description": "Internxt provides advanced cloud storage security with military-grade encryption for file-sharing and storage to securely manage your organization."
-  },
-  "TestimonialsSection": {
-    "title": "What experts are saying about us",
-    "testimonials": [
-      {
-        "imageBrandName": "techradar",
-        "brand": "Techradar",
-        "review": "Internxt is an excellent cloud storage service due to its affordable plans and intuitive interface. It excels in privacy making it a top choice for business users prioritizing security."
-      },
-      {
-        "imageBrandName": "PCWorld",
-        "brand": "PCWorld",
-        "review": "Internxt’s intuitively blended web access, file sync, and true backup services are impressive. This online storage and backup service is easy, covers all bases, and the lifetime plans are a steal."
-      },
-      {
-        "imageBrandName": "cloudwards",
-        "brand": "Cloudwards",
-        "review": "Internxt is known as a secure cloud storage solution that prioritizes user privacy. If privacy and security are your highest concerns with cloud storage, it’s definitely worth considering Internxt."
-      },
-      {
-        "imageBrandName": "bitcatcha",
-        "brand": "Bitcatcha",
-        "review": "Internxt goes above and beyond in protecting you and gives you ownership of your data, so they’re excellent for businesses. Recommended for anyone who values privacy."
-      },
-      {
-        "imageBrandName": "ffstoppers",
-        "brand": "Fstoppers",
-        "review": "Why choose Internxt? I would say the streamlined and simple nature of how it works. It's simply just a no-nonsense 256-bit encrypted cloud storage option that anyone can use."
-      },
-      {
-        "imageBrandName": "guru99",
-        "brand": "Guru99",
-        "review": "Internxt Drive is the best secure cloud storage service for privacy and encryption. It enables you and your team to store different types of files with total security."
-      }
-    ]
-  },
-  "FaqSection": {
-    "title": "Questions? We have answers",
-    "faq": [
-      {
-        "question": "What is Internxt for business?",
-        "answer": [
-          "Our cloud storage for businesses provides companies of all sizes with a secure cloud storage solution that protects business files against data breaches. Business plans include access to Internxt Drive, VPN, and Send, as well as our upcoming new products, Internxt Mail and Meet."
-        ]
-      },
-      {
-        "question": "Is Internxt the right cloud storage for my business?",
-        "answer": [
-          "Internxt is built for everyone, including businesses of any size looking for a secure cloud storage solution that keeps personal and confidential information private.",
-          "Our encrypted suite of products includes the highest industry security standards for companies who need to share files or folders without worrying about data leaks."
-        ]
-      },
-      {
-        "question": "Is Internxt more secure than other cloud storage services?",
-        "answer": [
-          "Unlike Big Tech companies, Internxt is trusted to provide secure file storage for business because your business data is encrypted on your device for maximum security.",
-          "To prevent the threat of data breaches, Internxt provides additional security measures, including encrypted file sharing, Two-Factor authentication, Password Generator, and more."
-        ]
-      },
-      {
-        "question": "What if I reach my plan’s storage limit?",
-        "answer": [
-          "Our plans are fully flexible to meet your business needs. You can easily add more users or upgrade your storage capacity as required, ensuring scalability and cost-efficiency."
-        ]
-      },
-      {
-        "question": "What level of technical support do you provide?",
-        "answer": [
-          "We have a dedicated customer support team that can answer any questions or concerns or provide additional information based on your needs. You can visit our help center or contact us at [hello@internxt.com](mailto:hello@internxt.com), and our team will be happy to assist you."
-        ]
-      }
-    ]
-  },
-  "ContactSales": {
-    "title": "Contact us",
-    "description": "Fill out the contact form and the team will contact you shortly.",
-    "form": {
-      "name": "Full Name",
-      "email": "Email address",
-      "company": "Company Name",
-      "phone": "Phone number",
-      "howMuchStorage": "How much storage do you need?",
-      "totalCharacters": " /1000",
-      "options": [
-        "Select",
-        "1 - 10TB",
-        "15 - 25TB",
-        "25 - 50 TB",
-        "50 - 100 TB",
-        "100 - 150 TB",
-        "150 - 200 TB",
-        "250 - 500 TB",
-        "1 - 20 PB",
-        "20+ PB"
-      ],
-      "howWeCanHelp": "How can we help you? (Optional)",
-      "howWeCanHelpPlaceHolder": "Tell us more about your business needs",
-      "cta": "Send message",
-      "ctaSending": "Sending...",
-      "successMessage": "Your message has been sent successfully.",
-      "errorMessage": "An error occurred. Please try again."
-    }
-  },
-  "CtaSection": {
-    "title": "Join the most secure cloud storage for businesses",
-    "description": "Internxt business plans offer unmatched data security and privacy",
-    "cta": "Select plan",
-    "contactUs": "Contact us"
   }
 }

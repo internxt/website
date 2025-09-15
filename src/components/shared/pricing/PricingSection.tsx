@@ -10,7 +10,6 @@ import { PriceCard } from './PriceCard';
 import { HandCoins, Headset, Keyhole } from '@phosphor-icons/react';
 import BusinessBanner from '@/components/banners/BusinessBanner';
 import { PromoCodeProps } from '@/lib/types';
-import Button from '../Button';
 
 interface PriceTableProps {
   textContent: Record<string, any>;
@@ -48,7 +47,6 @@ interface PriceTableProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
-  redirectComparison?: boolean;
 }
 
 export const PricingSection = ({
@@ -76,7 +74,7 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-  redirectComparison = false,
+
   hideFeatures,
   showPromo,
   isAffiliate,
@@ -122,16 +120,6 @@ export const PricingSection = ({
       onIndividualSwitchToggled(interval);
     } else {
       onBusinessSwitchToggled?.(interval);
-    }
-  };
-
-  const scrollToComparison = () => {
-    const element = document.getElementById('#comparisonTable');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
     }
   };
 
@@ -252,17 +240,6 @@ export const PricingSection = ({
           )}
         </div>
       </Transition>
-
-      {redirectComparison && (
-        <Button
-          text={textContent.ctaCompare}
-          onClick={scrollToComparison}
-          className="border-[1.5px] border-primary bg-transparent"
-          textColor="text-primary"
-          icon
-        />
-      )}
-
       {!hideFeatures && (
         <div className="w-full lg:px-10 xl:px-32 3xl:px-80">
           <div className="flex flex-col items-center justify-between text-center md:flex-row md:items-start md:space-x-16 md:space-y-0">

@@ -130,7 +130,7 @@ export const PricingSectionWrapper = ({
       return businessPlanDescription;
     }
   };
-  const totalDiscount = 100 - (decimalDiscount?.individuals ?? decimalDiscount?.business ?? 0);
+
   return (
     <section
       className={`overflow-hidden lg:px-5 ${sectionDetails}`}
@@ -139,13 +139,7 @@ export const PricingSectionWrapper = ({
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          <div className="flex h-min w-min flex-row items-center justify-center gap-4 whitespace-nowrap">
-            {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
-            <p className="mt-2 flex  flex-row bg-neutral-37 text-primary">
-              {textContent.tileLabel.replace('{{discount}}', totalDiscount)}
-              🔥
-            </p>
-          </div>
+          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
           {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
           {isLifetime && (
             <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
@@ -194,13 +188,7 @@ export const PricingSectionWrapper = ({
         />
       </div>
       <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
-        <div className="flex h-min w-min flex-col items-center justify-center gap-4 whitespace-nowrap">
-          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
-          <p className="flex flex-col rounded-2 bg-neutral-37 px-2 py-1 text-primary">
-            {textContent.tileLabel.replace('{{discount}}', totalDiscount)}
-            🔥
-          </p>
-        </div>
+        <p className="text-30 font-bold text-gray-100">{title()} </p>
         <PricingSectionForMobile
           textContent={textContent}
           lang={lang}
