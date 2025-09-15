@@ -2,6 +2,7 @@ import { PricingText } from '@/assets/types/pricing';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { useState } from 'react';
+import CustomPlanSelector from './CustomPlanSelector';
 
 interface ComparisonTableProps {
   textContent: PricingText['ComparisonTable'];
@@ -149,7 +150,7 @@ export default function ComparisonTableSection({
 
   return (
     <section
-      className="flex h-min w-full flex-col items-center lg:h-min lg:gap-16 lg:py-20"
+      className="flex h-min w-full flex-col items-center py-10 lg:h-min lg:gap-16 lg:py-20"
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <p className="text-30 font-bold text-gray-95 lg:text-3xl">{textContent.title}</p>
@@ -228,39 +229,30 @@ export default function ComparisonTableSection({
       </div>
 
       <div className="w-full px-4 lg:hidden">
-        <div className="grid grid-cols-2">
-          {[selectedPlanA, selectedPlanB].map((selectedPlan, columnIndex) => (
-            <div key={columnIndex} className="flex flex-col">
-              <div className="border border-neutral-25 bg-white p-4">
-                <select
-                  value={selectedPlan}
-                  onChange={(e) =>
-                    columnIndex === 0 ? setSelectedPlanA(e.target.value) : setSelectedPlanB(e.target.value)
-                  }
-                  className="mb-3 w-full  p-2 text-base font-medium text-primary"
-                >
-                  {textContent.plans.map((plan) => (
-                    <option key={plan.id} value={plan.id}>
-                      {plan.name}
-                    </option>
-                  ))}
-                </select>
-                <div className="mb-3">
-                  <span className="text-base font-bold text-gray-95">
-                    {currency}
-                    {getPlanByIdAndGetPrice(selectedPlan)}
-                  </span>
-                  <span className="ml-1 whitespace-nowrap text-xs text-gray-55">{billingText}</span>
-                </div>
-                <button
-                  onClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlan), isLifetime)}
-                  className="h-[48px] w-full rounded-md border-[1.5px] border-primary bg-primary text-white hover:bg-primary-dark"
-                >
-                  <p className="text-base font-medium">{textContent.cta}</p>
-                </button>
-              </div>
-            </div>
-          ))}
+        <div className="sticky top-0 z-10 grid grid-cols-2 gap-0">
+          <CustomPlanSelector
+            plans={textContent.plans}
+            selectedPlan={selectedPlanA}
+            onPlanChange={setSelectedPlanA}
+            currency={currency}
+            getPlanPrice={getPlanByIdAndGetPrice}
+            billingText={billingText}
+            ctaText={textContent.cta}
+            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanA), isLifetime)}
+            isLeftColumn={true}
+          />
+
+          <CustomPlanSelector
+            plans={textContent.plans}
+            selectedPlan={selectedPlanB}
+            onPlanChange={setSelectedPlanB}
+            currency={currency}
+            getPlanPrice={getPlanByIdAndGetPrice}
+            billingText={billingText}
+            ctaText={textContent.cta}
+            onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanB), isLifetime)}
+            isLeftColumn={false}
+          />
         </div>
 
         <div>
