@@ -41,7 +41,7 @@
     "title": "**Private** by default, **secure** by design, **free** as in freedom",
     "subtitle": "That's Internxt - secure cloud storage & more",
     "description": "Get {{discount}}% off ",
-    "descriptionNormal": "all lifetime plans",
+    "descriptionNormal": "all plans",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "startFrom": {
       "normal1": "Starting from ",
@@ -53,6 +53,7 @@
   },
   "tableSection": {
     "title": "Internxt Plans",
+
     "planTitles": {
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
