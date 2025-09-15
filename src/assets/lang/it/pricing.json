@@ -1,31 +1,31 @@
 {
   "HeroSection": {
     "title": {
-      "line1": "{{discount}}% OFF",
-      "line2": "i nostri piani annuali"
+      "line1": "{{discount}}% di sconto",
+      "line2": "sui nostri piani annuali"
     },
     "lifetimeTitle": {
-      "line1": "Ottenete un piano Internxt ",
-      "blueText": " a vita",
-      "line2": "!"
+      "line1": "Ottieni un piano",
+      "blueText": " a vita ",
+      "line2": " di Internxt!"
     },
     "feeds": {
       "firstFeed": "Garanzia di rimborso di 30 giorni",
-      "secondFeed": "Pagamento sicuro al 100%",
-      "thirdFeed": "Creazione di un account anonimo"
+      "secondFeed": "Pagamento 100% sicuro",
+      "thirdFeed": "Creazione account anonimo"
     },
     "cta": {
-      "title": "Ottieni l'{{discount}}% di sconto",
-      "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo non scontato per l'anno successivo."
+      "title": "Ottieni {{discount}}% di sconto",
+      "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo senza sconto per l'anno successivo."
     }
   },
   "HeroSectionAlternative": {
-    "title": "Quanta memoria online ti serve?",
+    "title": "Di quanto spazio di archiviazione online hai bisogno?",
     "description": "Seleziona la quantità per vedere i piani che si adattano alle tue esigenze.",
     "cta": "Trova il tuo piano ideale",
     "features": [
       "Il cloud storage più sicuro",
-      "Creazione di account anonimo",
+      "Creazione account anonimo",
       "Crittografia di livello militare",
       "I tuoi dati non vengono venduti"
     ]
@@ -33,166 +33,484 @@
   "PriceTableForAlternativePricing": {
     "title": {
       "normal1": "Ottieni ",
-      "blue2": "{{discount}}% DI SCONTO ",
+      "blue2": "{{discount}}% di sconto ",
       "normal2": "sul cloud storage più sicuro"
     },
-    "howMuchStorage": "Quanta memoria online ti serve?",
-    "description": "Proteggi i tuoi file di lavoro e personali con un cloud storage crittografato di livello militare a prezzi accessibili.",
-    "features": ["Il cloud storage più sicuro", "Più economico delle alternative", "Garanzia di rimborso di 30 giorni"],
-    "offerEnds": "Termina tra:"
+    "description": "Proteggi i tuoi file professionali e personali con un cloud storage crittografato di livello militare e conveniente.",
+    "features": ["Il cloud storage più sicuro", "Meno costoso delle alternative", "Garanzia di rimborso di 30 giorni"],
+    "offerEnds": "L'offerta termina tra:",
+    "howMuchStorage": "Di quanto spazio di archiviazione online hai bisogno?"
   },
   "tableSection": {
-    "title": "Internxt Piani",
+    "title": "Piani Internxt",
     "ctaBanner": {
       "label": "Risparmia {{discount}}%",
-      "title": "Risparmia su ogni piano!",
-      "subtitle": "Festeggia 5 anni di Internxt",
-      "subtitle2": "Festeggia 5 anni di Internxt",
-      "subtitle3": "Meet, Mail, Cleaner e Monitor Dark Web",
-      "cta": "Scegli un piano",
-      "cta2": "Risparmia {{discount}}% ora",
-      "guarantee": "30 giorni di garanzia rimborso",
-      "gift": "Maglia Valencia CF autografata",
-      "lastCta": "*Solo per account nuovi o gratuiti"
+      "title": "Tutti i piani inclusi",
+      "subtitle": "Celebra il 5° anniversario di Internxt",
+      "subtitle2": "Offerta anniversario di Internxt",
+      "subtitle3": "Meet, Mail, Device Cleaner e Dark Web Monitoring",
+      "cta": "Approfitta dell'offerta!",
+      "guarantee": "Garanzia di rimborso di 30 giorni",
+      "gift": "Possibilità di vincere uno zaino Internxt",
+      "lastCta": "* L'offerta è per account gratuiti o nuovi clienti"
     },
-    "save": "Risparmia fino al",
     "planTitles": {
-      "header": "Privacy totale con {{discount}}% di sconto",
-      "individuals": "Piani annuale ",
-      "lifetime": "Piani a vita",
-      "business": "Piani aziendali",
+      "header": "Privacy totale per {{discount}}% in meno",
+      "individuals": "Piani Annuali",
+      "lifetime": "Piani a Vita",
+      "business": "Piani Business",
       "lifetimeCampaign": {
-        "blueText": "Sconto del 50%",
+        "blueText": "Ottieni 50% di sconto",
         "normalText": "su tutti i nostri piani esclusivi a vita"
       },
       "blackFriday": {
-        "title": "Mega offerta Black Friday: ottieni l'{{discount}}% DI SCONTO su tutti i piani di archiviazione cloud più sicuri",
-        "description": "Proteggi i tuoi dati con Internxt per evitare violazioni, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
+        "title": "Mega offerta Black Friday: ottieni {{discount}}% di sconto su tutti i piani del cloud storage più sicuro",
+        "description": "Proteggi i tuoi dati con Internxt per evitare fughe di notizie, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
       }
     },
-    "lifetimeDescription": "Acquistate una volta e otterrete privacy e sicurezza per sempre.",
-    "planDescription": "Tutti i piani Internxt hanno accesso completo alla nostra suite di soluzioni private dotate delle più recenti tecnologie di sicurezza: Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet e Mail. ",
-    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e garantire la tua redditività.",
-    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",
+    "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre.",
+    "planDescription": "Tutti i piani Internxt includono funzionalità complete con accesso totale alla nostra suite di strumenti per la privacy premiata che include Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitoring, Meet e Mail.",
+    "businessDescription": "Stiamo attualmente lavorando su nuovi piani Internxt progettati esclusivamente per difendere la tua azienda, proteggere i tuoi dipendenti e mettere in sicurezza i tuoi risultati.",
+    "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di cloud storage crittografato di Internxt.",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",
-      "lifetime": "A vita",
       "individual": "Individuale",
+      "lifetime": "A vita",
       "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
-      "mobileDescription": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1GB di cloud storage crittografato gratuito",
+      "mobileDescription": "Ottieni fino a 1GB di cloud storage crittografato e goditi il nostro ecosistema privato",
       "cta": "Seleziona il piano"
     },
     "features": {
       "endToEnd": "Crittografia end-to-end",
-      "openSource": "Open-source e verificato",
-      "anonymousAccount": "Creazione anonima dell'account",
-      "premiumSupport": "Assistenza clienti premium",
+      "openSource": "Open source e verificato",
+      "anonymousAccount": "Creazione account anonimo",
+      "premiumSupport": "Supporto clienti premium",
       "guarantee": "Garanzia di rimborso di 30 giorni"
     },
+    "individuals": "Annuale",
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
     }
   },
+  "ComparisonTable": {
+    "title": "Piani e funzionalità",
+    "cta": "Inizia",
+    "billedAnnualy": "Fatturato annualmente",
+    "billedOnce": "Pagamento unico",
+    "plans": [
+      {
+        "id": "Essential",
+        "name": "Essential",
+        "order": 0
+      },
+      {
+        "id": "Premium",
+        "name": "Premium",
+        "order": 1
+      },
+      {
+        "id": "Ultimate",
+        "name": "Ultimate",
+        "order": 2
+      }
+    ],
+    "categories": [
+      {
+        "name": "Archiviazione",
+        "features": [
+          {
+            "id": "storage_Essential",
+            "name": "1TB",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Premium",
+            "name": "3TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Ultimate",
+            "name": "5TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Applicazioni e accessibilità",
+        "features": [
+          {
+            "id": "linux_windows_macos_app",
+            "name": "Applicazione per Linux, Windows e macOS",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "android_ios_app",
+            "name": "Applicazioni per iOS e Android",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "web_app",
+            "name": "Applicazione web",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Privacy e sicurezza",
+        "features": [
+          {
+            "id": "zero_knowledge_architecture",
+            "name": "Crittografia zero-knowledge",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "post_quantum_encryption",
+            "name": "Crittografia post-quantistica",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "gdpr_compliance",
+            "name": "Conformità GDPR",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "hipaa_compliance",
+            "name": "Conformità HIPAA",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "iso27001_compliance",
+            "name": "Conformità ISO 27001",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "soc2_compliance",
+            "name": "Conformità SOC 2",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Two_factor_authentication",
+            "name": "Autenticazione a due fattori (2FA)",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "pentesting_audited",
+            "name": "Test di penetrazione e verificato",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "VPN",
+        "features": [
+          {
+            "id": "vpn_Essential",
+            "name": "Francia",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Premium",
+            "name": "Francia, Germania, Polonia",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Ultimate",
+            "name": "Francia, Germania, Polonia, Canada, Regno Unito",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Supporto e servizio",
+        "features": [
+          {
+            "id": "premium_customer_support",
+            "name": "Supporto clienti premium",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Strumenti avanzati",
+        "features": [
+          {
+            "id": "antivirus",
+            "name": "Antivirus",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "File_backups",
+            "name": "Backup dei file",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Password-protected-sharing",
+            "name": "Condivisione protetta da password",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Invite_share_&_collaborate",
+            "name": "Invita, condividi e collabora",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Cleaner",
+            "name": "Cleaner",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Dark_Web_Monitor",
+            "name": "Dark Web Monitoring",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "cli_webdav_support",
+            "name": "Supporto CLI e WebDAV",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "NAS_&_Rclone_support",
+            "name": "Supporto NAS e Rclone",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "meet",
+            "name": "Meet",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      }
+    ]
+  },
   "FaqSection": {
-    "title": "Domande? Abbiamo le risposte",
+    "title": "Hai domande? Abbiamo le risposte",
     "faq": [
       {
         "question": "Internxt può accedere ai miei file?",
         "answer": [
-          "No. Internxt, così come qualsiasi altra terza parte, non può accedere ai vostri file, foto o dati.",
-          "I servizi Internxt sono dotati di crittografia a conoscenza zero, il che significa che solo voi potete accedere ai vostri dati privati. Inoltre, l'architettura di Internxt frammenta i vostri file prima di crittografarli, in modo che un server non conservi mai un file intero, ma solo un frammento crittografato che solo voi potete decifrare."
+          "No. Internxt, così come qualsiasi altra terza parte, non può accedere ai tuoi file, foto o dati.",
+          " I servizi di Internxt hanno crittografia zero-knowledge, il che significa che solo tu puoi veramente accedere ai tuoi dati privati. Inoltre, l'architettura di Internxt frammenta i tuoi file prima di crittografarli, quindi un server non contiene mai un file completo, ma solo un frammento crittografato di esso, che solo tu puoi decrittografare."
         ]
       },
       {
         "question": "Internxt memorizza la mia password?",
         "answer": [
-          "No. Internxt non memorizza (e non può memorizzare) la vostra password.",
-          "La password Internxt è unica per voi e viene utilizzata per criptare e decriptare i vostri dati Internxt. Se volete cambiare la vostra password, potete farlo dalla nostra app."
+          "No. Pertanto, Internxt non memorizza (né può memorizzare) la tua password.",
+          "La tua password Internxt è unica per te ed è utilizzata per crittografare e decrittografare i tuoi dati Internxt. Ma se vuoi cambiare la tua password, puoi farlo dalla nostra applicazione."
         ]
       },
       {
-        "question": "Posso abilitare la 2FA?",
+        "question": "Posso attivare la 2FA?",
         "answer": [
-          "Sì. È possibile configurare l'autenticazione a due fattori per il proprio account tramite l'applicazione web Internxt.",
-          "È inoltre possibile utilizzare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
+          "Sì. Puoi configurare l'autenticazione a due fattori per il tuo account tramite l'applicazione web di Internxt.",
+          "Puoi anche usare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
         ]
       },
       {
-        "question": "Come si crea un account Internxt?",
+        "question": "Come creare un account Internxt?",
         "answer": [
-          "Per creare un account Internxt gratuito, è sufficiente fare clic sul piano migliore in alto e seguire le istruzioni.",
-          "Oppure visitate la nostra homepage e fate clic su \"Inizia\". In questo modo otterrete immediatamente 1 GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. L'iscrizione gratuita può essere utilizzata per tutti i nostri servizi. Per iscriversi è sufficiente inserire un nome e un indirizzo e-mail. Non è richiesta alcuna verifica dell'identità o dell'e-mail per iniziare a utilizzare i servizi di Internxt."
+          "Per creare un account Internxt gratuito, clicca semplicemente sul miglior piano sopra e segui le istruzioni.",
+          "Oppure vai alla nostra homepage e clicca su \"Inizia\". Lì, otterrai istantaneamente 1GB di spazio gratuito a vita con un abbonamento Internxt gratuito. Puoi usare il tuo abbonamento gratuito su tutti i nostri servizi. Per registrarti, inserisci semplicemente un nome e un indirizzo email. Non è richiesta alcuna verifica di identità o email per iniziare a usare i servizi di Internxt."
         ]
       },
       {
-        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "question": "Posso pagare con carta di credito, PayPal o criptovalute?",
         "answer": [
-          "Internxt accetta attualmente carte di debito e di credito (Mastercard, VISA, American Express, ecc.). È possibile pagare anche tramite Apple & Google Pay e PayPal.",
-          "Accettiamo anche iDeal, Cryptocurrency, Bancontact, EPS, Giropay, SEPA Debit, P24, PayPal e Sofort."
+          "Internxt accetta attualmente carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort e Bancontact.",
+          "Su richiesta, accettiamo anche criptovalute e addebito diretto SEPA. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
         "question": "Qual è la politica di rimborso di Internxt?",
         "answer": [
-          "Internxt offre una garanzia di rimborso standard di 30 giorni per tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento dell'iscrizione.",
-          "Se non siete soddisfatti del nostro servizio, contattateci all'indirizzo hello@internxt.com e richiedete un rimborso."
+          "Internxt offre una garanzia di rimborso standard di 30 giorni su tutti i suoi abbonamenti a pagamento, che inizia a decorrere dal momento in cui ti abboni.",
+          "E se non sei mai soddisfatto del nostro servizio, contattaci a [hello@internxt.com](mailto:hello@internxt.com) e richiedi un rimborso."
         ]
       },
       {
         "question": "Come posso cancellare il mio abbonamento?",
         "answer": [
-          "L'annullamento dell'abbonamento è molto semplice e può essere fatto facilmente tramite l'app Internxt, entrando nelle impostazioni e cancellando il proprio account. In questo modo l'abbonamento e l'account verranno cancellati.",
-          "Se desiderate annullare un piano a pagamento e rimanere con il nostro servizio gratuito, potete inviarci un'e-mail all'indirizzo hello@internxt.com e provvederemo a elaborare la cancellazione dell'abbonamento in modo che possiate mantenere il vostro account sul piano gratuito."
+          "Cancellare il tuo abbonamento è molto semplice e può essere fatto facilmente tramite l'applicazione Internxt, andando nelle impostazioni e cancellando il tuo account. Questo terminerà il tuo abbonamento e il tuo account.",
+          "Se vuoi cancellare un piano a pagamento e rimanere con il nostro servizio gratuito, puoi inviarci un'email a [hello@internxt.com](mailto:hello@internxt.com) e processeremo la cancellazione dell'abbonamento in modo che tu possa mantenere il tuo account attivo sul nostro piano gratuito."
         ]
       },
       {
-        "question": "Come posso contattare l'assistenza?",
+        "question": "Come contattare il supporto?",
         "answer": [
-          "Non riuscite a trovare quello che state cercando? Potete contattare il nostro team di Customer Success tramite live chat o inviando un'e-mail a hello@internxt.com."
+          "Non trovi quello che stai cercando? Puoi contattare il nostro team di Assistenza Clienti tramite live chat o inviando un'email a [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Internxt ha piani a vita?",
+        "answer": [
+          "Offriamo piani a vita che puoi acquistare dal nostro sito web. Questi ti danno accesso a vita ai nostri piani, con fino a 10TB di spazio per un pagamento unico."
+        ]
+      },
+      {
+        "question": "Posso aggiungere più spazio al mio piano a vita?",
+        "answer": [
+          "Sì, puoi aggiungere tutto lo spazio che vuoi al tuo abbonamento a vita Internxt. I piani a vita di Internxt sono cumulabili. Acquistali semplicemente con lo stesso indirizzo email e contattaci a [hello@internxt.com](mailto:hello@internxt.com) così possiamo cumularli insieme nello stesso account."
         ]
       }
     ]
   },
   "FaqSectionForBusiness": {
-    "title": "Domande? Abbiamo risposte",
+    "title": "Hai domande? Abbiamo le risposte",
     "faq": [
       {
         "question": "Cos'è Internxt per le aziende?",
         "answer": [
-          "Il nostro storage cloud per le aziende fornisce alle aziende di tutte le dimensioni una soluzione di archiviazione cloud sicura che protegge i file aziendali dalle violazioni dei dati. I piani aziendali includono l'accesso a Internxt Drive, VPN e Send, nonché ai nostri nuovi prodotti in arrivo, Internxt Mail e Meet."
+          "Il nostro cloud storage per aziende fornisce alle imprese di tutte le dimensioni una soluzione di cloud storage sicura che protegge i file aziendali dalle violazioni dei dati. I piani aziendali includono l'accesso a Internxt Drive, VPN e Send, così come ai nostri nuovi prodotti in arrivo, Internxt Mail e Meet."
         ]
       },
       {
-        "question": "Internxt è il giusto storage cloud per la mia azienda?",
+        "question": "Internxt è il cloud storage giusto per la mia azienda?",
         "answer": [
-          "Internxt è progettato per tutti, comprese le aziende di qualsiasi dimensione che cercano una soluzione di storage cloud sicura che mantenga private le informazioni personali e riservate.",
-          "La nostra suite di prodotti crittografati include i più alti standard di sicurezza del settore per le aziende che necessitano di condividere file o cartelle senza preoccuparsi delle perdite di dati."
+          "Internxt è progettato per tutti, incluse le aziende di qualsiasi dimensione che cercano una soluzione di cloud storage sicura che mantenga private le informazioni personali e riservate.",
+          "La nostra suite di prodotti crittografati include i più alti standard di sicurezza del settore per le aziende che hanno bisogno di condividere file o cartelle senza preoccuparsi delle violazioni dei dati."
         ]
       },
       {
-        "question": "Internxt è più sicuro di altri servizi di storage cloud?",
+        "question": "Internxt è più sicuro di altri servizi di cloud storage?",
         "answer": [
-          "A differenza delle grandi aziende tecnologiche, Internxt è riconosciuta per fornire un'archiviazione sicura dei file aziendali perché i tuoi dati aziendali vengono crittografati sul tuo dispositivo per la massima sicurezza.",
-          "Per prevenire la minaccia di violazioni dei dati, Internxt fornisce ulteriori misure di sicurezza, inclusi la condivisione di file crittografati, l'autenticazione a due fattori, il generatore di password e altro ancora."
+          "A differenza delle grandi aziende tecnologiche, Internxt è affidabile per fornire archiviazione file sicura per le aziende perché i dati della tua azienda sono crittografati sul tuo dispositivo per la massima sicurezza.",
+          "Per prevenire la minaccia delle violazioni dei dati, Internxt fornisce misure di sicurezza aggiuntive, inclusa la condivisione di file crittografati, l'autenticazione a due fattori, il generatore di password e altro ancora."
         ]
       },
       {
-        "question": "Cosa succede se raggiungo il limite di archiviazione del mio piano?",
+        "question": "Cosa succede se raggiungo il limite di spazio del mio piano?",
         "answer": [
-          "I nostri piani sono completamente flessibili per soddisfare le esigenze della tua azienda. Puoi aggiungere facilmente più utenti o aggiornare la tua capacità di archiviazione secondo necessità, garantendo scalabilità ed efficienza dei costi."
+          "I nostri piani sono completamente flessibili per soddisfare le esigenze della tua azienda. Puoi facilmente aggiungere più utenti o aggiornare la tua capacità di archiviazione secondo necessità, garantendo scalabilità ed efficienza dei costi."
         ]
       },
       {
         "question": "Che livello di supporto tecnico fornite?",
         "answer": [
-          "Abbiamo un team di supporto clienti dedicato che può rispondere a qualsiasi domanda o preoccupazione o fornire ulteriori informazioni in base alle tue esigenze. Puoi visitare il nostro centro assistenza o contattarci a hello@internxt.com, e il nostro team sarà felice di aiutarti."
+          "Abbiamo un team di supporto clienti dedicato che può rispondere a qualsiasi domanda o preoccupazione o fornire informazioni aggiuntive basate sulle tue esigenze. Puoi visitare il nostro centro assistenza o contattarci a [hello@internxt.com](mailto:hello@internxt.com), e il nostro team sarà felice di aiutarti."
         ]
       }
     ]
@@ -200,105 +518,105 @@
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "Quanto costa un piano Internxt?",
+        "question": "Internxt ha piani a vita?",
         "answer": [
-          "Avete bisogno di più spazio di archiviazione? Offriamo anche piani annuale  che vanno da 20 GB a 2 TB, a partire da 0,89 €/mese."
+          "Offriamo piani a vita che puoi acquistare dal nostro sito web. Questi ti danno accesso a vita ai nostri piani, con fino a 10TB di spazio per un pagamento unico."
         ]
       },
       {
-        "question": "Internxt ha piani a vita?",
+        "question": "Posso aggiungere più spazio al mio piano a vita?",
         "answer": [
-          "Offriamo piani a vita che potete acquistare dal nostro sito web. Questi vi garantiscono l'accesso a vita ai nostri piani, con un massimo di 10 TB di spazio di archiviazione, a fronte di un pagamento unico."
+          "Sì, puoi aggiungere tutto lo spazio che vuoi al tuo abbonamento a vita Internxt. I piani a vita di Internxt sono cumulabili. Acquistali semplicemente con lo stesso indirizzo email e contattaci a [hello@internxt.com](mailto:hello@internxt.com) così possiamo cumularli insieme nello stesso account."
         ]
       }
     ]
   },
   "CtaSection": {
     "title": "Prova Internxt senza rischi",
-    "description": "Iscrivetevi e ottenete gratuitamente 1 GB di spazio di archiviazione cloud crittografato end-to-end di Internxt.",
+    "description": "Registrati e ottieni 1GB del cloud storage end-to-end crittografato di Internxt gratuitamente.",
     "cta": "Crea un account gratuito"
   },
   "FirstWhatWeDoSection": {
     "card1": {
-      "title": "Privato al nucleo",
-      "description": "Mettiamo l'utente e i suoi diritti al primo posto in tutto ciò che facciamo. La nostra missione è semplice: creare strumenti e servizi migliori che restituiscano l'agenzia all'utente finale.",
+      "title": "Privato fino al midollo",
+      "description": "Mettiamo l'utente e i suoi diritti al primo posto in tutto quello che facciamo. La nostra missione è semplice: creare strumenti e servizi migliori che restituiscano il controllo all'utente finale.",
       "cta": "Il nostro impegno per la privacy"
     },
     "card2": {
-      "title": "Un'unica esperienza senza soluzione di continuità",
-      "description": "Internxt è disponibile su tutte le piattaforme, anche su Linux! Sincronizza i tuoi file e le tue foto con le nostre app per cellulari, web e desktop, ognuna progettata per potenziare il tuo storage criptato in movimento",
+      "title": "Un'esperienza perfetta",
+      "description": "Internxt è disponibile su tutte le piattaforme, anche Linux! Sincronizza i tuoi file e foto con le nostre app mobile, web e desktop, ognuna progettata per alimentare il tuo spazio crittografato in movimento.",
       "cta": "Scarica l'app"
     },
     "card3": {
       "title": "Prova Internxt gratuitamente!",
-      "description": "Ottieni 1GB gratuiti e vedi se la privacy ti si addice prima di fare il salto di qualità!",
+      "description": "Ottieni 1GB gratuito e vedi se la privacy fa per te prima di impegnarti completamente!",
       "cta": "Crea un account gratuito"
-    }
-  },
-  "InfoSection": {
-    "title": "Archiviazione sicura in cloud con privacy insuperabile",
-    "description": "Cosa rende Internxt così speciale? Siamo un gruppo molto unito di professionisti totalmente dediti a proteggerti online. Tutto ciò che facciamo, ed ogni decisione che prendiamo è incentrata sull’impedire la violazione dei tuoi dati.",
-    "cta": "L’impegno di Internxt per la privacy",
-    "scrollableSection": {
-      "titles": [
-        "Progettato per essere privato",
-        "Sicurezza senza compromessi",
-        "Open-source e trasparente",
-        "Verificato in modo indipendente"
-      ],
-      "descriptions": [
-        "Non memorizziamo password o altri dati dell’utente e ogni tuo dato è crittografato sia quando è memorizzato che quando è in transito. Internxt ti assicura il pieno controllo dei tuoi file. I tuoi dati sono il tuo lavoro. Proteggerli è il nostro.",
-        "I tuoi file vengono frammentati e crittografati end-to-end prima ancora di uscire dal tuo dispositivo. Grazie alla crittografia “zero-knowledge” AES-256, tu sei assolutamente l'unico in grado di accedere ai tuoi dati.",
-        "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati.",
-        "Siamo totalmente conformi al GDPR e sicuri al 100%, ma non devi crederci sulla parola. Internxt è stato verificato e certificato in modo indipendente da Securitum, la società di penetration testing leader in Europa."
-      ]
     }
   },
   "InfoSectionForBusiness": {
     "title": "Cosa puoi fare con Internxt?",
-    "description": "Ottimizza la gestione dei file, la sicurezza e la privacy della tua organizzazione con il nostro storage cloud sicuro per le aziende.",
+    "description": "Ottimizza la gestione dei file, la sicurezza e la privacy della tua organizzazione con il nostro cloud storage sicuro per aziende.",
     "cta": "",
     "cards": [
       {
         "title": "Gestisci la tua organizzazione",
-        "description": "Internxt consente alle aziende di gestire facilmente utenti e team, allocare lo spazio di archiviazione in modo flessibile e personalizzare gli spazi di lavoro. Passa facilmente dalle attività aziendali a quelle personali per ottimizzare la produttività e l'organizzazione."
+        "description": "Internxt potenzia le aziende con gestione semplificata di utenti e team, allocazione flessibile dello spazio e spazi di lavoro personalizzabili. Passa facilmente tra attività aziendali e personali per ottimizzare produttività e organizzazione."
       },
       {
-        "title": "Invia file riservati in modo sicuro",
-        "description": "Lo storage cloud sicuro include funzionalità di condivisione file sicura per collaborare in sicurezza nei team. Proteggi con password e limita l'accesso ai file per inviare file riservati ai partner, garantendo di mantenere il controllo sulla loro sicurezza."
+        "title": "Invia file riservati in sicurezza",
+        "description": "Il cloud storage sicuro include funzionalità di condivisione file sicura per collaborare in sicurezza in team. Proteggi con password e limita l'accesso ai file per inviare file riservati con i partner, garantendo che tu mantenga il controllo sulla loro sicurezza."
       },
       {
-        "title": "Esegui il backup di ciò che è importante",
-        "description": "Esegui il backup dei tuoi file per prevenire la perdita di dati. Inoltre, Internxt memorizza e salva la stessa copia dei tuoi file su diversi server UE per una maggiore sicurezza, rendendolo il backup cloud più sicuro per la tua azienda."
+        "title": "Fai il backup dell'importante",
+        "description": "Fai il backup dei tuoi file per prevenire la perdita di dati. Inoltre, Internxt memorizza e fa il backup della stessa copia dei tuoi file su diversi server UE per sicurezza aggiuntiva, rendendolo il backup cloud più sicuro per la tua azienda."
       },
       {
-        "title": "Lavora con il tuo team da qualsiasi luogo",
+        "title": "Lavora con il tuo team da ovunque",
         "description": "Disponibile per Windows, Mac, Linux, iOS, Android e Web. Accedi ai tuoi file su qualsiasi dispositivo, in qualsiasi momento, garantendo che tu e il tuo team possiate lavorare in sicurezza ovunque vi troviate."
       }
     ]
   },
+  "InfoSection": {
+    "title": "Cloud storage sicuro con privacy senza pari",
+    "description": "Cosa rende Internxt così speciale? Siamo un team unito di professionisti completamente dedicati a proteggerti online. Tutto quello che facciamo e ogni decisione che prendiamo si concentra sulla protezione dei tuoi dati dallo sfruttamento.",
+    "cta": "L'impegno di Internxt per la privacy",
+    "scrollableSection": {
+      "titles": [
+        "Privato per design",
+        "Sicurezza senza compromessi",
+        "Open source e trasparente",
+        "Verificato indipendentemente"
+      ],
+      "descriptions": [
+        "Non memorizziamo password né dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti mette in controllo totale dei tuoi file. I tuoi dati sono affari tuoi. Proteggerli è il nostro.",
+        "I tuoi file sono crittografati end-to-end prima di lasciare il tuo dispositivo. Grazie alla crittografia AES-256 zero-knowledge, sei assolutamente l'unico con accesso ai tuoi dati.",
+        "Siamo orgogliosi di quello che facciamo, ecco perché il nostro codice è reso pubblico su GitHub e può essere revisionato, verificato e controllato personalmente da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati.",
+        "Siamo completamente conformi al GDPR e 100% sicuri, ma non crederci sulla parola. Internxt è stato verificato e controllato indipendentemente dalla principale azienda di penetration testing d'Europa, Securitum."
+      ]
+    }
+  },
   "BestStorageSection": {
-    "title": "Costruito per il futuro",
-    "description": "Vogliamo costruire un World Wide Web migliore, che sia giusto, sicuro ed equo per tutti. La battaglia per il futuro della privacy su Internet è in corso e noi siamo in prima linea",
+    "title": "Progettato per il futuro",
+    "description": "Vogliamo costruire un World Wide Web migliore, che sia giusto, sicuro ed equo per tutti. La battaglia infuria per il futuro della privacy su internet, e noi siamo in prima linea.",
     "card1": {
-      "title": "Lavoro distribuito"
+      "title": "Cancella in qualsiasi momento"
     },
     "card2": {
-      "title": "Crittografia AES-256"
+      "title": "Crittografia post-quantistica"
     },
     "card3": {
-      "title": "Ridondanza integrata"
+      "title": "Fonti energetiche sostenibili"
     },
     "card4": {
-      "title": "Codice open-source"
+      "title": "Open source"
     },
     "card5": {
-      "title": "Verificato in modo indipendente"
+      "title": "Verificato indipendentemente"
     }
   },
   "lastCtaSection": {
-    "title": "I vostri file sono sicuri e privati per sempre",
-    "description": "Trattiamo i nostri utenti come una famiglia e la famiglia è per sempre!",
+    "title": "Il cloud storage più privato al mondo",
+    "description": "Proteggi le cose veramente importanti con il cloud storage sicuro, privato e crittografato di Internxt.",
     "cta": "Seleziona un piano ora"
   }
 }
