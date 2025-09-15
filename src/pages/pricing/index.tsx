@@ -10,13 +10,18 @@ import { sm_faq, sm_breadcrumb } from '@/components/utils/schema-markup-generato
 import BestStorageSection from '@/components/pricing/NewBestStorageSection';
 import FileParallaxSection from '@/components/home/FileParallaxSection';
 import usePricing from '@/hooks/usePricing';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import { stripeService } from '@/services/stripe.service';
+import { Interval, stripeService } from '@/services/stripe.service';
 import { PricingText } from '@/assets/types/pricing';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import ComparisonTableSection from '@/components/pricing/ComparisonPlansTable';
+
+import { SwitchButtonOptions, SwitchStorageOptions } from '@/components/shared/pricing/components/PlanSelector';
+import { SwitchStorageBusinessOptions } from '@/components/shared/pricing/components/Switch';
+import { usePlanSelection } from '@/hooks/usePlanSelection';
+import { PricingSectionWrapperForPricing } from '@/components/shared/pricing/PricingSectionWrapperForPricing';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -24,9 +29,26 @@ interface PricingProps {
   footerLang: FooterText;
   lang: string;
   textContent: PricingText;
+  startIndividualPlansFromInterval?: Interval;
+  startBusinessPlansFromInterval?: Interval;
+  popularPlanBySize?: string;
+  startFromPlan?: SwitchButtonOptions;
+  startFromStorage?: SwitchStorageOptions;
+  startFromBusinessStorage?: SwitchStorageBusinessOptions;
 }
 
-const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textContent }: PricingProps): JSX.Element => {
+const Pricing = ({
+  metatagsDescriptions,
+  navbarLang,
+  footerLang,
+  lang,
+  textContent,
+  startIndividualPlansFromInterval = Interval.Lifetime,
+  startBusinessPlansFromInterval = Interval.Year,
+  startFromPlan = 'Lifetime',
+  startFromStorage = 'Premium',
+  startFromBusinessStorage = 'Pro',
+}: PricingProps): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
 
   const {
@@ -63,6 +85,26 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     );
   };
 
+  const {
+    activeSwitchPlan,
+    activeStoragePlan,
+    activeBusinessStoragePlan,
+    billingFrequency,
+    businessBillingFrequency,
+    onPlanTypeChange,
+    onStorageChange,
+    onBusinessStorageChange,
+    onIndividualSwitchToggled,
+    onBusinessSwitchToggled,
+  } = usePlanSelection(
+    startFromPlan,
+    startFromStorage,
+    startFromBusinessStorage,
+    startIndividualPlansFromInterval,
+    startBusinessPlansFromInterval,
+    setPageName,
+  );
+
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   return (
@@ -78,7 +120,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
       <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <PricingSectionWrapper
+        <PricingSectionWrapperForPricing
           textContent={textContent.tableSection}
           decimalDiscount={{
             individuals: decimalDiscount,
@@ -94,9 +136,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="3TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="pt-20 lg:py-20"
+          sectionDetails="pt-30 lg:py-20"
+          billingFrequency={billingFrequency}
+          activeSwitchPlan={activeSwitchPlan}
+          businessBillingFrequency={businessBillingFrequency}
+          popularPlanBySize={'5TB'}
+          onPlanTypeChange={onPlanTypeChange}
+          onIndividualSwitchToggled={onIndividualSwitchToggled}
+          onBusinessSwitchToggled={onBusinessSwitchToggled}
+          activeBusinessStoragePlan={activeBusinessStoragePlan}
+          onBusinessStorageChange={onBusinessStorageChange}
+          onStorageChange={onStorageChange}
+          activeStoragePlan={activeStoragePlan}
         />
 
         <HorizontalScrollableSection textContent={infoText} />
@@ -104,6 +156,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <BestStorageSection textContent={textContent.BestStorageSection} />
 
         <FileParallaxSection />
+
+        <ComparisonTableSection
+          textContent={textContent.ComparisonTable}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          products={products}
+          billingFrequency={billingFrequency}
+          decimalDiscount={decimalDiscount}
+          currencyValue={currencyValue}
+        />
 
         <FAQSection textContent={faqSection} />
 

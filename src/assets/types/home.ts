@@ -136,6 +136,7 @@ export interface TrustedBySection {
 
 export interface TableSection {
   title: string;
+  tileLabel: string;
   planTitles: PlanTitles;
   lifetimeDescription: string;
   planDescription: string;
