@@ -252,7 +252,7 @@ export const PricingSectionForMobile = ({
       {!hideFeatures && (
         <div className="flex h-min w-screen flex-col items-center justify-center gap-2 text-start">
           {features.map((feature) => (
-            <div key={feature.text} className="flex h-min w-[267px] flex-row items-start justify-start gap-2 ">
+            <div key={feature.text} className="flex h-min w-[352px] flex-row items-start justify-start gap-2  px-3 ">
               <div>
                 <feature.icon size={24} className="shrink-0  text-primary " />
               </div>

@@ -174,7 +174,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex flex-col gap-4"
       >
-        <div className="content flex flex-row justify-end gap-4">
+        <div className="content grid w-full grid-cols-3 items-stretch gap-8 border">
           {products?.individuals
             ? products.individuals[billingFrequency].map((product, cardIndex) => (
                 <PriceCard

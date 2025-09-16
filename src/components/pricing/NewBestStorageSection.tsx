@@ -61,15 +61,15 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
   );
 
   return (
-    <section className="overflow-hidden bg-neutral-17">
-      <div className="hidden items-center justify-center py-16 lg:flex">
-        <div className="flex w-full max-w-4xl flex-row justify-between gap-4 px-4">
+    <section className="overflow-hidden  bg-neutral-17">
+      <div className="hidden items-center justify-center pb-16 lg:flex">
+        <div className="flex w-full max-w-5xl flex-row justify-between gap-8 px-4">
           {features.map((feature, index) => (
             <FeatureItem
               key={`desktop-${index}`}
               feature={feature}
               iconSize={32}
-              containerWidth="w-[150px]"
+              containerWidth="w-[370px]"
               textSize="text-lg"
             />
           ))}

@@ -25,7 +25,7 @@ export default function ComparisonTableSection({
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 3000); // activa si hemos bajado algo
+      setScrolled(window.scrollY > 3450);
     };
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
@@ -83,7 +83,7 @@ export default function ComparisonTableSection({
     return `h-[72px] ${
       isLastColumn(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border-t-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        : 'border--[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
   };
 
@@ -106,7 +106,7 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isLastColumn(planIndex)) {
-      baseStyles += ' border-neutral-25 bg-neutral-17 shadow-lg';
+      baseStyles += ' border border-neutral-25 bg-neutral-17 shadow-lg';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
         baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
       }
@@ -123,7 +123,6 @@ export default function ComparisonTableSection({
   };
 
   const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
-    // Storage no debe mostrar iconos
     const showIcon = categoryName !== 'Storage';
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
@@ -151,13 +150,11 @@ export default function ComparisonTableSection({
 
   const renderMobileFeatureContent = (planId: string, category: any) => {
     if (isExclusiveCategory(category)) {
-      // Para Storage y VPN, solo mostrar la feature disponible para este plan
       const availableFeature = category.features.find((feature: any) => feature.avalability[planId]);
       if (availableFeature) {
         return renderFeatureContent(availableFeature, category.name, true, category);
       }
     } else {
-      // Para otras categorías, mostrar todas las features con su estado
       return category.features.map((feature: any, index: number) => (
         <div key={`${feature.id}-${index}`} className="mb-2 last:mb-0">
           {renderFeatureContent(feature, category.name, feature.avalability[planId], category)}

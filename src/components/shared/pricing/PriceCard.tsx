@@ -146,7 +146,7 @@ export const PriceCard = ({
       : cardIndex === 1
       ? iconsFeatures[index]
       : iconsFeaturesForUltimate[index];
-    return Icon ? <Icon className="h-6 w-6 flex-shrink-0 text-primary" /> : null;
+    return Icon ? <Icon className="h-6 w-6 flex-shrink-0 pt-1 text-primary" /> : null;
   };
 
   const renderFeatureText = (text: string, index: number) => {
@@ -165,7 +165,7 @@ export const PriceCard = ({
 
   return (
     <div
-      className={`flex w-[352px] flex-col items-center justify-start rounded-16 ${
+      className={`flex h-full w-[352px] flex-col items-center justify-start rounded-16 ${
         popular ? 'z-0 bg-neutral-250 shadow-xl' : ''
       }`}
     >
@@ -178,7 +178,7 @@ export const PriceCard = ({
       <div
         className={`z-10 w-full overflow-hidden rounded-16 border bg-white ${
           popular ? ' border-blue-10' : 'border-gray-10'
-        } flex h-[920px] flex-col`}
+        } flex h-full flex-col`}
       >
         <div className="flex flex-col items-center justify-center gap-8 border-b-red bg-white py-4 lg:px-8 lg:py-6">
           <p className="px-4 text-center text-30 font-semibold lg:text-3xl">{cardLabel}</p>
@@ -236,11 +236,11 @@ export const PriceCard = ({
         <div className="flex flex-grow flex-col gap-4 bg-white px-8 pb-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div key={feature}>
-              <div className="flex flex-row items-start">
-                <div className="flex min-h-[24px] flex-row items-start gap-3">
+              <div className="flex flex-row items-center">
+                <div className="flex min-h-[24px] flex-row items-start justify-center gap-3">
                   {renderFeatureIcon(index)}
-                  <div className="flex flex-grow flex-row items-start gap-2 pt-[2px] text-sm font-normal leading-relaxed text-gray-80">
-                    <span className="flex-grow hyphens-auto break-words">{renderFeatureText(feature, index)}</span>
+                  <div className=" flex flex-grow flex-row items-center gap-2 text-base font-normal leading-relaxed text-gray-80 lg:text-lg">
+                    <span className="flex-grow">{renderFeatureText(feature, index)}</span>
                     {index > newFeaturesNumber && (
                       <p className="inline-flex h-min w-fit flex-shrink-0 rounded-2 bg-purple-1 px-2 py-0.5 text-center text-xs font-semibold text-purple-10">
                         {contentText.commingSoon}
