@@ -119,7 +119,7 @@ export const PricingSectionWrapperForPricing = ({
           {!hideTitle && (
             <>
               <h1 className="py-0.5 text-30 font-semibold  text-gray-100 lg:text-3xl">{title()}</h1>
-              <p className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">85% off 🔥</p>
+              <p className="rounded-md bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">85% off 🔥</p>
             </>
           )}
         </div>

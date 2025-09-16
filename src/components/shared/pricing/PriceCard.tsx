@@ -166,19 +166,21 @@ export const PriceCard = ({
   return (
     <div
       className={`flex flex-col items-center justify-start rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[891px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[937px]'
+        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[8px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[980px]'
       } ${popular ? ' ml-6 w-min bg-neutral-250 shadow-xl' : ''}`}
     >
       <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}  items-center justify-center`}>
-        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold text-white`}>{contentText.mostPopular}</p>
+        <p className={`${popular ? 'flex' : 'hidden'}  text-base font-semibold text-white lg:text-2xl`}>
+          {contentText.mostPopular}
+        </p>
       </div>
 
       <div
         className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[891px]') : 'lg:h-[937px]'
+          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[891px]') : 'lg:h-[980px]'
         } overflow-hidden rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
       >
-        <div className="flex h-min flex-col items-center justify-center gap-4 overflow-hidden bg-white py-4 lg:h-min lg:px-6 lg:py-8">
+        <div className="flex h-min flex-col items-center justify-center gap-8 overflow-hidden bg-white py-4 lg:h-min lg:px-6 lg:py-8">
           <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
           <div className="flex h-min w-[180px] flex-col items-center justify-between  lg:h-[59px] lg:w-[190px]">
             <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2 lg:h-[43px] ">
@@ -210,7 +212,6 @@ export const PriceCard = ({
                 ) : null}
               </span>
             </div>
-
           </div>
 
           <button
@@ -243,7 +244,7 @@ export const PriceCard = ({
                 </div>
               </div>
 
-              {index === 0 && <div className="mt-4 h-[1px] w-[238px] bg-neutral-35"></div>}
+              {index === 0 && <div className="mt-4 h-[1px] w-full bg-neutral-35"></div>}
             </div>
           ))}
         </div>

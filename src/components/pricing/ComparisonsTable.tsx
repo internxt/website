@@ -1,7 +1,7 @@
 import { PricingText } from '@/assets/types/pricing';
 import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
 
 interface ComparisonTableProps {
@@ -21,6 +21,15 @@ export default function ComparisonTableSection({
   decimalDiscount,
   currencyValue,
 }: Readonly<ComparisonTableProps>): JSX.Element {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 3000); // activa si hemos bajado algo
+    };
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
   const [selectedPlanA, setSelectedPlanA] = useState(textContent.plans[0].id);
   const [selectedPlanB, setSelectedPlanB] = useState(textContent.plans[textContent.plans.length - 1].id);
 
@@ -47,16 +56,18 @@ export default function ComparisonTableSection({
     return plan ? getPlanPriceId(plan.order) : '';
   };
 
+  const isExclusiveCategory = (category: any) => {
+    return category.features.every((feature: any) => Object.values(feature.avalability).filter(Boolean).length === 1);
+  };
+
   const isLastColumn = (index: number) => index === textContent.plans.length - 1;
   const isSecondToLastColumn = (index: number) => index === textContent.plans.length - 2;
   const isLastCategory = (index: number) => index === textContent.categories.length - 1;
   const isLastFeature = (categoryFeatures: any[], featureIndex: number) => featureIndex === categoryFeatures.length - 1;
 
   const getHeaderStyles = (planIndex: number) => {
-    return `items-start p-6 text-start sticky top-[60px] z-10 ${
-      isLastColumn(planIndex)
-        ? 'rounded-2xl border-x-[1px] border-t-[1px] border-neutral-25 bg-neutral-17 shadow-lg'
-        : 'bg-neutral-16'
+    return `items-start p-6 text-start  ${
+      isLastColumn(planIndex) ? 'rounded-t-2xl outline outline-1 outline-neutral-25  bg-neutral-17' : 'bg-neutral-16'
     }`;
   };
 
@@ -72,7 +83,7 @@ export default function ComparisonTableSection({
     return `h-[72px] ${
       isLastColumn(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border-y-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        : 'border-t-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
   };
 
@@ -80,12 +91,12 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isLastColumn(planIndex)) {
-      baseStyles += ' border-x-[1px] border-neutral-25 bg-neutral-17 shadow-lg';
+      baseStyles += ' bg-neutral-17 outline outline-1 outline-neutral-25';
       if (isLastCategory(categoryIndex)) {
-        baseStyles += ' rounded-br-16';
+        baseStyles += 'outline outline-1 outline-neutral-25 rounded-br-16';
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += ' border-x-[1px] border-neutral-25';
+      baseStyles += ' border-t-[1px] border-neutral-25';
     }
 
     return baseStyles;
@@ -97,16 +108,22 @@ export default function ComparisonTableSection({
     if (isLastColumn(planIndex)) {
       baseStyles += ' border-neutral-25 bg-neutral-17 shadow-lg';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += ' rounded-b-16 border-[1px] border-neutral-25';
+        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += ' border-[1px] border-neutral-25';
+      baseStyles += ' border-t-[1px] border-neutral-25';
     }
 
     return baseStyles;
   };
 
-  const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean) => {
+  const getMobilePlanStyles = (planId: string) => {
+    const isUltimate = planId === textContent.plans[textContent.plans.length - 1].id;
+    return isUltimate ? 'bg-neutral-17' : 'bg-white';
+  };
+
+  const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
+    // Storage no debe mostrar iconos
     const showIcon = categoryName !== 'Storage';
     const Icon = isAvailable ? CheckCircle : XCircle;
     const iconColor = isAvailable ? 'text-primary' : 'text-gray-95/50';
@@ -133,15 +150,17 @@ export default function ComparisonTableSection({
   };
 
   const renderMobileFeatureContent = (planId: string, category: any) => {
-    if (category.name === 'Storage' || category.name === 'VPN') {
+    if (isExclusiveCategory(category)) {
+      // Para Storage y VPN, solo mostrar la feature disponible para este plan
       const availableFeature = category.features.find((feature: any) => feature.avalability[planId]);
       if (availableFeature) {
-        return renderFeatureContent(availableFeature, category.name, true);
+        return renderFeatureContent(availableFeature, category.name, true, category);
       }
     } else {
+      // Para otras categorías, mostrar todas las features con su estado
       return category.features.map((feature: any, index: number) => (
         <div key={`${feature.id}-${index}`} className="mb-2 last:mb-0">
-          {renderFeatureContent(feature, category.name, feature.avalability[planId])}
+          {renderFeatureContent(feature, category.name, feature.avalability[planId], category)}
         </div>
       ));
     }
@@ -157,7 +176,7 @@ export default function ComparisonTableSection({
 
       <div className="hidden h-min w-full justify-center lg:flex lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
         <table>
-          <thead>
+          <thead className={`sticky top-[60px] z-10 bg-white transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
             <tr>
               {textContent.plans.map((plan, planIndex) => (
                 <th key={plan.id} className={getHeaderStyles(planIndex)}>
@@ -193,14 +212,14 @@ export default function ComparisonTableSection({
                   ))}
                 </tr>
 
-                {category.name === 'Storage' || category.name === 'VPN' ? (
+                {isExclusiveCategory(category) ? (
                   <tr key={`special-${categoryIndex}`}>
                     {textContent.plans.map((plan, planIndex) => (
                       <td key={`special-${plan.id}`} className={getSpecialFeatureStyles(planIndex, categoryIndex)}>
                         {category.features
                           .filter((feature) => feature.avalability[plan.id])
                           .map((feature) => (
-                            <div key={feature.id}>{renderFeatureContent(feature, category.name, true)}</div>
+                            <div key={feature.id}>{renderFeatureContent(feature, category.name, true, category)}</div>
                           ))}
                       </td>
                     ))}
@@ -209,14 +228,14 @@ export default function ComparisonTableSection({
                   category.features.map((feature, featureIndex) => (
                     <tr
                       key={`${category.name}-${feature.id}-${featureIndex}`}
-                      className={`border-y-[1px] border-neutral-25 ${featureIndex === 0 ? 'border-t-[1px]' : ''}`}
+                      className={`border-t-[1px] border-neutral-25 ${featureIndex === 0 ? 'border-t-[1px]' : ''}`}
                     >
                       {textContent.plans.map((plan, planIndex) => (
                         <td
                           key={`${feature.id}-${plan.id}`}
                           className={getRegularFeatureStyles(planIndex, categoryIndex, category, featureIndex)}
                         >
-                          {renderFeatureContent(feature, category.name, feature.avalability[plan.id])}
+                          {renderFeatureContent(feature, category.name, feature.avalability[plan.id], category)}
                         </td>
                       ))}
                     </tr>
@@ -229,7 +248,7 @@ export default function ComparisonTableSection({
       </div>
 
       <div className="w-full px-4 lg:hidden">
-        <div className="sticky top-10 z-10 grid grid-cols-2 gap-0">
+        <div className="sticky top-10 z-10 grid grid-cols-2 gap-0 shadow-lg">
           <CustomPlanSelector
             plans={textContent.plans}
             selectedPlan={selectedPlanA}
@@ -240,6 +259,7 @@ export default function ComparisonTableSection({
             ctaText={textContent.cta}
             onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanA), isLifetime)}
             isLeftColumn={true}
+            customBackgroundClass={getMobilePlanStyles(selectedPlanA)}
           />
 
           <CustomPlanSelector
@@ -252,24 +272,77 @@ export default function ComparisonTableSection({
             ctaText={textContent.cta}
             onCheckoutClick={() => onCheckoutButtonClicked(getPlanByIdAndGetPriceId(selectedPlanB), isLifetime)}
             isLeftColumn={false}
+            customBackgroundClass={getMobilePlanStyles(selectedPlanB)}
           />
         </div>
 
-        <div>
+        <div className="overflow-hidden rounded-2xl">
           {textContent.categories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
+              {/* Header de categoría */}
               <div className="grid grid-cols-2">
-                <div className="border border-y-[1px] border-neutral-25 p-3">
+                <div
+                  className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanA)} ${
+                    categoryIndex === 0 ? 'rounded-tl-2xl' : ''
+                  }`}
+                >
                   <h3 className="font-medium text-gray-95">{category.name}</h3>
                 </div>
-                <div className="border border-y-[1px] border-neutral-25 p-3"></div>
-              </div>
-              <div className="grid grid-cols-2">
-                <div className="min-h-[40px] items-center border border-neutral-25 p-3">
-                  {renderMobileFeatureContent(selectedPlanA, category)}
+                <div
+                  className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanB)} ${
+                    categoryIndex === 0 ? 'rounded-tr-2xl' : ''
+                  }`}
+                >
+                  <h3 className="font-medium text-gray-95">{category.name}</h3>
                 </div>
-                <div className="min-h-[40px] items-center justify-center border border-neutral-25 p-3">
-                  {renderMobileFeatureContent(selectedPlanB, category)}
+              </div>
+
+              {/* Features de la categoría */}
+              <div className="grid grid-cols-2">
+                <div
+                  className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanA)} ${
+                    categoryIndex === textContent.categories.length - 1 ? '' : ''
+                  }`}
+                >
+                  {isExclusiveCategory(category) ? (
+                    <div className="min-h-[40px] items-center p-3">
+                      {renderMobileFeatureContent(selectedPlanA, category)}
+                    </div>
+                  ) : (
+                    category.features.map((feature, featureIndex) => (
+                      <div
+                        key={`${feature.id}-${featureIndex}-planA`}
+                        className={`min-h-[40px] items-center p-3 ${
+                          featureIndex < category.features.length - 1 ? 'border-b border-neutral-25' : ''
+                        }`}
+                      >
+                        {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanA], category)}
+                      </div>
+                    ))
+                  )}
+                </div>
+
+                <div
+                  className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanB)} ${
+                    categoryIndex === textContent.categories.length - 1 ? '' : ''
+                  }`}
+                >
+                  {isExclusiveCategory(category) ? (
+                    <div className="min-h-[40px] items-center p-3">
+                      {renderMobileFeatureContent(selectedPlanB, category)}
+                    </div>
+                  ) : (
+                    category.features.map((feature, featureIndex) => (
+                      <div
+                        key={`${feature.id}-${featureIndex}-planB`}
+                        className={`min-h-[40px] items-center p-3 ${
+                          featureIndex < category.features.length - 1 ? 'border-b border-neutral-25' : ''
+                        }`}
+                      >
+                        {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanB], category)}
+                      </div>
+                    ))
+                  )}
                 </div>
               </div>
             </div>
