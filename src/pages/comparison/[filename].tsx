@@ -111,12 +111,6 @@ const SpecialOfferPage = ({
         logo="/images/comparison/competitors/pCloud.png"
       />
 
-      <ComparisonTablePCloud
-        textContent={langJson.HeaderSection}
-        competitor={competitor}
-        logo="/images/comparison/competitors/dropbox.webp"
-      />
-
       <PricingSectionWrapper
         textContent={langJson.tableSection}
         decimalDiscount={{
