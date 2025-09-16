@@ -138,7 +138,7 @@ export const PriceCard = ({
     Envelope,
   ];
 
-  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 9 : 11;
+  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 9 : 12;
 
   const renderFeatureIcon = (index: number) => {
     const Icon = isBusiness
@@ -146,7 +146,7 @@ export const PriceCard = ({
       : cardIndex === 1
       ? iconsFeatures[index]
       : iconsFeaturesForUltimate[index];
-    return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
+    return Icon ? <Icon className="h-6 w-6 flex-shrink-0 text-primary" /> : null;
   };
 
   const renderFeatureText = (text: string, index: number) => {
@@ -165,50 +165,56 @@ export const PriceCard = ({
 
   return (
     <div
-      className={`flex flex-col items-center justify-start rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[8px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[980px]'
-      } ${popular ? ' ml-6 w-min bg-neutral-250 shadow-xl' : ''}`}
+      className={`flex w-[352px] flex-col items-center justify-start rounded-16 ${
+        popular ? 'z-0 bg-neutral-250 shadow-xl' : ''
+      }`}
     >
-      <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}  items-center justify-center`}>
-        <p className={`${popular ? 'flex' : 'hidden'}  text-base font-semibold text-white lg:text-2xl`}>
+      <div className="flex h-[61px] items-center justify-center">
+        <p className={`${popular ? 'flex' : 'hidden'} text-base font-semibold text-white lg:text-2xl`}>
           {contentText.mostPopular}
         </p>
       </div>
 
       <div
-        className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[891px]') : 'lg:h-[980px]'
-        } overflow-hidden rounded-16 border ${popular ? 'border-[1.5px] border-blue-10' : 'border-gray-10'} `}
+        className={`z-10 w-full overflow-hidden rounded-16 border bg-white ${
+          popular ? ' border-blue-10' : 'border-gray-10'
+        } flex h-[920px] flex-col`}
       >
-        <div className="flex h-min flex-col items-center justify-center gap-8 overflow-hidden bg-white py-4 lg:h-min lg:px-6 lg:py-8">
-          <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
-          <div className="flex h-min w-[180px] flex-col items-center justify-between  lg:h-[59px] lg:w-[190px]">
-            <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2 lg:h-[43px] ">
-              <span className="flex h-full flex-row items-end gap-1 ">
+        <div className="flex flex-col items-center justify-center gap-8 border-b-red bg-white py-4 lg:px-8 lg:py-6">
+          <p className="px-4 text-center text-30 font-semibold lg:text-3xl">{cardLabel}</p>
+          <div className="flex w-auto min-w-[180px] max-w-[300px] flex-col items-center justify-between px-4">
+            <div className="flex w-full flex-row flex-wrap items-end justify-center gap-2">
+              <span className="flex flex-row items-end gap-1">
                 <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
+                <p className="text-2xl font-bold text-gray-100 lg:text-4xl">
                   {isBusiness ? priceNow : isAnnual ? priceNow : priceNow}
                 </p>
                 {isBusiness ? (
-                  <span className="i flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
+                  <span className="flex items-end whitespace-nowrap text-base font-semibold">
+                    {contentText.perUserSlash}
+                  </span>
                 ) : null}
                 {isAnnual ? (
-                  <span className="i flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
+                  <span className="flex items-end whitespace-nowrap text-base font-semibold">
+                    {contentText.perYear}
+                  </span>
                 ) : null}
               </span>
 
-              <span className="flex h-full flex-row items-end">
-                <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
+              <span className="flex flex-row items-end">
+                <p className="h-[26px] items-center self-start pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
                   {currency}
                 </p>
                 <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
                   {isBusiness ? priceBefore : isAnnual ? priceBefore : isLifetime ? priceBefore : priceNow}
                 </p>
                 {isBusiness ? (
-                  <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
+                  <span className="whitespace-nowrap text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
                 ) : null}
                 {isAnnual ? (
-                  <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
+                  <span className="whitespace-nowrap pb-[2px] text-sm font-normal text-gray-50">
+                    {contentText.perYear}
+                  </span>
                 ) : null}
               </span>
             </div>
@@ -221,26 +227,26 @@ export const PriceCard = ({
               popular
                 ? 'bg-primary text-white hover:bg-primary-dark'
                 : 'border-primary bg-white text-primary hover:bg-gray-1'
-            } flex h-[48px] w-[230px] items-center justify-center rounded-md border-[1.5px] lg:w-[288px]`}
+            } mx-4 flex h-[48px] w-full min-w-[230px] max-w-[288px] items-center justify-center rounded-md border-[1.5px]`}
           >
-            <p className="text-base font-medium">{ctaText}</p>
+            <p className="px-4 text-center text-base font-medium leading-tight">{ctaText}</p>
           </button>
         </div>
 
-        <div className="flex h-full flex-col gap-4 bg-white px-6 pb-6">
+        <div className="flex flex-grow flex-col gap-4 bg-white px-8 pb-6">
           {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
             <div key={feature}>
               <div className="flex flex-row items-start">
-                <div className="flex min-h-[24px] flex-row items-start gap-2 lg:items-center">
+                <div className="flex min-h-[24px] flex-row items-start gap-3">
                   {renderFeatureIcon(index)}
-                  <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
-                    {renderFeatureText(feature, index)}
+                  <div className="flex flex-grow flex-row items-start gap-2 pt-[2px] text-sm font-normal leading-relaxed text-gray-80">
+                    <span className="flex-grow hyphens-auto break-words">{renderFeatureText(feature, index)}</span>
                     {index > newFeaturesNumber && (
-                      <p className="items-centerh ml-2 flex h-min rounded-2 bg-purple-1 px-2 py-0.5 text-center font-semibold text-purple-10 lg:px-1">
+                      <p className="inline-flex h-min w-fit flex-shrink-0 rounded-2 bg-purple-1 px-2 py-0.5 text-center text-xs font-semibold text-purple-10">
                         {contentText.commingSoon}
                       </p>
                     )}
-                  </span>
+                  </div>
                 </div>
               </div>
 
