@@ -29,7 +29,7 @@
     "individual": "Individual",
     "business": "Empresa"
   },
-  "perYear": "€/año",
+  "perYear": "/año",
   "businessLabels": {
     "1TB": "Standard",
     "2TB": "Pro",

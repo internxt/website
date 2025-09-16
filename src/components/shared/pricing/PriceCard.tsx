@@ -72,14 +72,14 @@ export const PriceCard = ({
     (interval === 'year' && productCardPlan === 'individuals');
 
   const priceNow = decimalDiscountValue
-    ? ((price * decimalDiscountValue) / 100).toFixed(2).replace('.00', '')
-    : Number(price).toFixed(2).replace('.00', '');
-  const priceBefore = decimalDiscountValue ? Number(price).toFixed(2).replace('.00', '') : undefined;
+    ? ((price * decimalDiscountValue) / 100).toFixed(0).replace('.00', '')
+    : Number(price).toFixed(0).replace('.00', '');
+  const priceBefore = decimalDiscountValue ? Number(price).toFixed(0).replace('.00', '') : undefined;
 
-  const monthlyPriceNow = (Number(priceNow) / 12).toFixed(2).replace('.00', '');
+  const monthlyPriceNow = Number(priceNow).toFixed(0).replace('.88', '');
   const monthlyPriceBefore = decimalDiscountValue
     ? Number(price / 12)
-        .toFixed(2)
+        .toFixed(0)
         .replace('.00', '')
     : undefined;
   const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
@@ -164,30 +164,30 @@ export const PriceCard = ({
       >
         <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
-            <div className="flex h-[36px] items-center justify-center  lg:h-[48px]">
+            <div className="flex h-[36px] items-center justify-center lg:h-[48px]">
               <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
             </div>
             {(percentOff ?? 0) > 0 ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[101px] lg:w-[190px]">
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[81px] lg:w-[190px]">
                 <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
                   <p className="text-base font-semibold text-green-0">
                     {percentOff}
                     {contentText.discount}
                   </p>
                 </div>
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2  lg:h-[43px] ">
+                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
                   <span className="flex h-full flex-row items-end gap-1 ">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
-                      {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
+                      {isBusiness ? priceNow : isAnnual ? priceNow : priceNow}
                     </p>
                     {isBusiness ? (
                       <span className="i flex h-full items-end text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
                     ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
+                    {isAnnual ? (
+                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
                     ) : null}
                   </span>
 
@@ -196,44 +196,36 @@ export const PriceCard = ({
                       {currency}
                     </p>
                     <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {isBusiness ? priceBefore : isAnnual ? monthlyPriceBefore : isLifetime ? priceBefore : priceNow}
+                      {isBusiness ? priceBefore : isAnnual ? priceBefore : isLifetime ? priceBefore : priceNow}
                     </p>
                     {isBusiness ? (
                       <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
                     ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="text-sm font-normal text-gray-50">{contentText.perMonth}</span>
+                    {isAnnual ? (
+                      <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
                     ) : null}
                   </span>
                 </div>
-                <div className="flex h-[19px] items-center justify-center">
-                  <p className="text-base text-gray-50">
-                    {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-                  </p>
-                </div>
               </div>
             ) : (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[101px] lg:w-[190px]">
-                <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2  lg:h-[60px] ">
-                  <span className="flex h-full flex-row items-end gap-1 pr-2">
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[71px] lg:w-[190px]">
+                <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px] ">
+                  <span className="flex h-full flex-row items-center gap-1 pr-2">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
                       {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
                     </p>
                     {isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">
+                      <span className="i flex h-full items-center pt-4 text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
                     ) : null}
                     {showMonthlyLabel && !isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perMonth}</span>
+                      <span className="i flex h-full items-center pt-4 text-base font-semibold">
+                        {contentText.perYear}
+                      </span>
                     ) : null}
                   </span>
-                </div>
-                <div className="flex h-[19px] items-center justify-center">
-                  <p className="text-base text-gray-50">
-                    {contentText.billingFrequencyLabel[BILLING_FREQUENCY_LIST[interval]]}
-                  </p>
                 </div>
               </div>
             )}

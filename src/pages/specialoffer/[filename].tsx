@@ -24,25 +24,13 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = [
-  'bevalk',
-  'securiters',
-  'valencia',
-  'tokinprivacy',
-  'achoesgratiss',
-  'afs',
-  'techpresso',
-  'trickyhash',
-];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'trickyhash'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   securiters: PromoCodeName.Securiters,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
-  achoesgratiss: PromoCodeName.AchoEsGratiss,
-  afs: PromoCodeName.AFS,
-  techpresso: PromoCodeName.Techpresso,
   trickyhash: PromoCodeName.Trickyhash,
 };
 
@@ -74,7 +62,7 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode,
+    couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
 

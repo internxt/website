@@ -16,7 +16,7 @@
     "guarantee": "30天退款保證",
     "header": {
       "primaryText": "享受87%折扣",
-      "afterPrimaryText": "適用於所有高級方案"
+      "afterPrimaryText": "在所有終身方案中"
     },
     "products": {
       "drive": "Drive",
@@ -172,7 +172,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Internxt 五週年！所有方案享87%折扣 ",
+      "normalText": "立即享受所有年度和終身計劃85%的折扣！   ",
       "cta": "選擇你的方案 "
     }
   },

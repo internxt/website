@@ -40,7 +40,8 @@
     },
     "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
     "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
-    "description": "Erhalten Sie {{discount}}% Rabatt!",
+    "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
+    "descriptionNormal": "auf alle Pläne",
     "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {
       "normal1": "Ab ",
