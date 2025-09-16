@@ -162,7 +162,7 @@ export const PricingSectionWrapperForPricing = ({
         />
       </div>
       <div className=" flex flex-col items-center justify-center gap-6  py-10 lg:hidden">
-        <div className="flex flex-col items-center justify-center gap-4 rounded-2 text-center" id="priceTable">
+        <div className="flex flex-col items-center justify-center gap-4 rounded-md text-center" id="priceTable">
           <p className="text-30 font-bold text-gray-100">{title()} </p>
           <p className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">85% off 🔥</p>
         </div>

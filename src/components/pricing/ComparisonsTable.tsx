@@ -25,10 +25,17 @@ export default function ComparisonTableSection({
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 3450);
+      const isMobile = window.innerWidth < 1024;
+      const scrollThreshold = isMobile ? 2950 : 3450;
+      setScrolled(window.scrollY > scrollThreshold);
     };
+
     window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('resize', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
   }, []);
   const [selectedPlanA, setSelectedPlanA] = useState(textContent.plans[0].id);
   const [selectedPlanB, setSelectedPlanB] = useState(textContent.plans[textContent.plans.length - 1].id);
@@ -83,7 +90,7 @@ export default function ComparisonTableSection({
     return `h-[72px] ${
       isLastColumn(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border--[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        : 'border-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
   };
 
@@ -108,10 +115,10 @@ export default function ComparisonTableSection({
     if (isLastColumn(planIndex)) {
       baseStyles += ' border border-neutral-25 bg-neutral-17 shadow-lg';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
+        baseStyles += ' rounded-16 outline outline-1 outline-neutral-25';
       }
     } else if (isSecondToLastColumn(planIndex)) {
-      baseStyles += ' border-t-[1px] border-neutral-25';
+      baseStyles += 'border-t-[1px] border-neutral-25';
     }
 
     return baseStyles;
@@ -119,7 +126,7 @@ export default function ComparisonTableSection({
 
   const getMobilePlanStyles = (planId: string) => {
     const isUltimate = planId === textContent.plans[textContent.plans.length - 1].id;
-    return isUltimate ? 'bg-neutral-17' : 'bg-white';
+    return isUltimate ? 'bg-neutral-17' : 'bg-neutral-16';
   };
 
   const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
@@ -244,8 +251,8 @@ export default function ComparisonTableSection({
         </table>
       </div>
 
-      <div className="w-full px-4 lg:hidden">
-        <div className="sticky top-10 z-10 grid grid-cols-2 gap-0 shadow-lg">
+      <div className="w-full bg-neutral-16 px-4 lg:hidden">
+        <div className={`sticky top-10 z-10 grid grid-cols-2 gap-0 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
           <CustomPlanSelector
             plans={textContent.plans}
             selectedPlan={selectedPlanA}
@@ -273,32 +280,30 @@ export default function ComparisonTableSection({
           />
         </div>
 
-        <div className="overflow-hidden rounded-2xl">
+        <div className="overflow-hidden pb-10">
           {textContent.categories.map((category, categoryIndex) => (
             <div key={categoryIndex}>
-              {/* Header de categoría */}
               <div className="grid grid-cols-2">
                 <div
                   className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanA)} ${
-                    categoryIndex === 0 ? 'rounded-tl-2xl' : ''
+                    categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
                   <h3 className="font-medium text-gray-95">{category.name}</h3>
                 </div>
                 <div
                   className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanB)} ${
-                    categoryIndex === 0 ? 'rounded-tr-2xl' : ''
+                    categoryIndex === 0 ? '' : ''
                   }`}
                 >
                   <h3 className="font-medium text-gray-95">{category.name}</h3>
                 </div>
               </div>
 
-              {/* Features de la categoría */}
               <div className="grid grid-cols-2">
                 <div
                   className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanA)} ${
-                    categoryIndex === textContent.categories.length - 1 ? '' : ''
+                    categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
                   {isExclusiveCategory(category) ? (
@@ -321,7 +326,7 @@ export default function ComparisonTableSection({
 
                 <div
                   className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanB)} ${
-                    categoryIndex === textContent.categories.length - 1 ? '' : ''
+                    categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''
                   }`}
                 >
                   {isExclusiveCategory(category) ? (

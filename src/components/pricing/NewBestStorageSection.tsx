@@ -76,7 +76,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
         </div>
       </div>
 
-      <div className="flex min-h-[256px] w-full flex-col items-center justify-center gap-6 p-4 lg:hidden">
+      <div className="flex h-min w-full flex-col items-center justify-center gap-6 p-4 lg:hidden">
         <div className="flex w-full max-w-sm flex-row justify-center gap-6">
           {features.slice(0, 3).map((feature, index) => (
             <FeatureItem
@@ -89,7 +89,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
           ))}
         </div>
 
-        <div className="flex w-full max-w-sm flex-row justify-center gap-6">
+        <div className="flex w-full max-w-sm flex-row justify-center gap-6 pb-8">
           {features.slice(3, 5).map((feature, index) => (
             <FeatureItem
               key={`mobile-row2-${index}`}
