@@ -5,7 +5,6 @@ import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
-import { useBilling } from '@/hooks/useBillingContext';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
 
 const FULL_PERCENTAGE = 100;
@@ -56,6 +55,18 @@ interface PricingSectionWrapperProps {
   showPromo?: boolean;
   isAffiliate?: boolean;
   hideBillingController?: boolean;
+
+  // Props para override desde componente padre
+  overrideBillingFrequency?: Interval;
+  overrideBusinessBillingFrequency?: Interval;
+  overrideActiveSwitchPlan?: SwitchButtonOptions;
+  overrideActiveStoragePlan?: SwitchStorageOptions;
+  overrideActiveBusinessStoragePlan?: SwitchStorageBusinessOptions;
+  overrideOnPlanTypeChange?: (plan: SwitchButtonOptions) => void;
+  overrideOnStorageChange?: (storage: SwitchStorageOptions) => void;
+  overrideOnBusinessStorageChange?: (storage: SwitchStorageBusinessOptions) => void;
+  overrideOnIndividualSwitchToggled?: (interval: Interval) => void;
+  overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -81,10 +92,7 @@ const HotLabel = ({ textContent, discountValue }) => {
 };
 
 const PricingHeader = ({ textContent, discountValue, className = '' }) => (
-  <div
-    className={`flex flex-col items-center justify-center gap-4 text-center lg:flex-row ${className}`}
-    id="priceTable"
-  >
+  <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
     <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
     <HotLabel textContent={textContent} discountValue={discountValue} />
   </div>
@@ -121,10 +129,20 @@ export const PricingSectionWrapper = ({
   startFromStorage = 'Premium',
   startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
+
+  // Props de override
+  overrideBillingFrequency,
+  overrideBusinessBillingFrequency,
+  overrideActiveSwitchPlan,
+  overrideActiveStoragePlan,
+  overrideActiveBusinessStoragePlan,
+  overrideOnPlanTypeChange,
+  overrideOnStorageChange,
+  overrideOnBusinessStorageChange,
+  overrideOnIndividualSwitchToggled,
+  overrideOnBusinessSwitchToggled,
 }: PricingSectionWrapperProps): JSX.Element => {
-
-  const billingContext = useBilling();
-
+  // Estado local como fallback
   const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
@@ -134,19 +152,17 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
 
-
-  const {
-    activeSwitchPlan,
-    activeStoragePlan,
-    activeBusinessStoragePlan,
-    billingFrequency,
-    businessBillingFrequency,
-    onPlanTypeChange,
-    onStorageChange,
-    onBusinessStorageChange,
-    onIndividualSwitchToggled,
-    onBusinessSwitchToggled,
-  } = billingContext || localPlanSelection;
+  // Usar overrides si existen, sino usar estado local
+  const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
+  const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
+  const activeBusinessStoragePlan = overrideActiveBusinessStoragePlan ?? localPlanSelection.activeBusinessStoragePlan;
+  const billingFrequency = overrideBillingFrequency ?? localPlanSelection.billingFrequency;
+  const businessBillingFrequency = overrideBusinessBillingFrequency ?? localPlanSelection.businessBillingFrequency;
+  const onPlanTypeChange = overrideOnPlanTypeChange ?? localPlanSelection.onPlanTypeChange;
+  const onStorageChange = overrideOnStorageChange ?? localPlanSelection.onStorageChange;
+  const onBusinessStorageChange = overrideOnBusinessStorageChange ?? localPlanSelection.onBusinessStorageChange;
+  const onIndividualSwitchToggled = overrideOnIndividualSwitchToggled ?? localPlanSelection.onIndividualSwitchToggled;
+  const onBusinessSwitchToggled = overrideOnBusinessSwitchToggled ?? localPlanSelection.onBusinessSwitchToggled;
 
   const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
 

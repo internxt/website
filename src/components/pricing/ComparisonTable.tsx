@@ -3,12 +3,12 @@ import { CheckCircle, XCircle } from '@phosphor-icons/react';
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
 import { useEffect, useState } from 'react';
 import CustomPlanSelector from './CustomPlanSelector';
-import { useBilling } from '@/hooks/useBillingContext';
 
 interface ComparisonTableProps {
   textContent: PricingText['ComparisonTable'];
   products: ProductsDataProps | undefined;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
+  billingFrequency: Interval;
   decimalDiscount: any;
   currencyValue: any;
 }
@@ -17,12 +17,11 @@ export default function ComparisonTableSection({
   textContent,
   onCheckoutButtonClicked,
   products,
+  billingFrequency,
   decimalDiscount,
   currencyValue,
 }: Readonly<ComparisonTableProps>): JSX.Element {
   const [scrolled, setScrolled] = useState(false);
-
-  const { billingFrequency = Interval.Year } = useBilling() || {};
 
   useEffect(() => {
     const onScroll = () => {
@@ -47,14 +46,13 @@ export default function ComparisonTableSection({
   const isLifetime = billingFrequency === Interval.Lifetime;
 
   const getPlanPrice = (planOrder: number) => {
-    const basePrice = products?.individuals[billingFrequency][planOrder]?.price ?? 0;
+    const basePrice = products?.individuals?.[billingFrequency]?.[planOrder]?.price ?? 0;
     const finalPrice = decimalDiscount ? basePrice * (decimalDiscount / 100) : basePrice;
-
     return finalPrice.toFixed(0);
   };
 
   const getPlanPriceId = (planOrder: number) => {
-    return products?.individuals[billingFrequency][planOrder].priceId ?? '';
+    return products?.individuals?.[billingFrequency]?.[planOrder]?.priceId ?? '';
   };
 
   const getPlanByIdAndGetPrice = (planId: string) => {
