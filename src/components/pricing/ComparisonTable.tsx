@@ -119,7 +119,7 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isLastColumn(planIndex)) {
-      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 shadow-lg';
+      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 shadow-lg  outline outline-1 outline-neutral-25';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
         baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
       }
@@ -147,7 +147,7 @@ export default function ComparisonTableSection({
     const planOrder = plan?.order ?? 0;
 
     if (planOrder === 0 || planOrder === 1) {
-      return 'border-y-[1px] border-neutral-25';
+      return 'border-t-[1px] border-neutral-25';
     }
 
     return 'border border-neutral-25';
@@ -362,7 +362,7 @@ export default function ComparisonTableSection({
                       <div
                         key={`${feature.id}-${featureIndex}-planB`}
                         className={`min-h-[40px] items-center p-3 ${
-                          featureIndex < category.features.length - 1 ? 'b-b border-neutral-25' : ''
+                          featureIndex < category.features.length - 1 ? 'border-b border-neutral-25' : ''
                         }`}
                       >
                         {renderFeatureContent(feature, category.name, feature.avalability[selectedPlanB], category)}
