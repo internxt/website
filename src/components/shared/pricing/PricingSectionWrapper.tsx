@@ -18,7 +18,7 @@ const DEFAULTS = {
 };
 
 interface PricingSectionWrapperProps {
-  textContent: PricingText['tableSection'];
+  textContent: any;
   products: ProductsDataProps | undefined;
   lang: string;
   loadingCards: boolean;

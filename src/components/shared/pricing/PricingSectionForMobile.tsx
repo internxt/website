@@ -195,7 +195,6 @@ export const PricingSectionForMobile = ({
                     }
                     lang={lang}
                     darkMode={darkMode}
-                    showPromo={showPromo}
                     isAffiliate={isAffiliate}
                     cardIndex={cardIndex}
                   />
@@ -239,7 +238,6 @@ export const PricingSectionForMobile = ({
                         isFamilyPage={isFamilyPage}
                         lang={lang}
                         darkMode={darkMode}
-                        showPromo={showPromo}
                         cardIndex={cardIndex}
                       />
                     ))

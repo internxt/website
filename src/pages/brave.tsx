@@ -96,7 +96,6 @@ export default function BravePage({
         startFromPlan="Lifetime"
         startIndividualPlansFromInterval={Interval.Lifetime}
         hideFreeCard
-        showPromo={false}
         sectionDetails="bg-gray-1"
       />
 
