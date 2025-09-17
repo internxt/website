@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
 import { useBilling } from '@/hooks/useBillingContext';
+import { usePlanSelection } from '@/hooks/usePlanSelection';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -80,7 +81,10 @@ const HotLabel = ({ textContent, discountValue }) => {
 };
 
 const PricingHeader = ({ textContent, discountValue, className = '' }) => (
-  <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
+  <div
+    className={`flex flex-col items-center justify-center gap-4 text-center lg:flex-row ${className}`}
+    id="priceTable"
+  >
     <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
     <HotLabel textContent={textContent} discountValue={discountValue} />
   </div>
@@ -111,7 +115,27 @@ export const PricingSectionWrapper = ({
   isAffiliate,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
+  startIndividualPlansFromInterval = Interval.Lifetime,
+  startBusinessPlansFromInterval = Interval.Year,
+  startFromPlan = 'Lifetime',
+  startFromStorage = 'Premium',
+  startFromBusinessStorage = 'Pro',
+  handlePageNameUpdate,
 }: PricingSectionWrapperProps): JSX.Element => {
+  // Intentar usar el contexto, si no existe usar estado local
+  const billingContext = useBilling();
+
+  // Siempre ejecutar el hook local (reglas de hooks)
+  const localPlanSelection = usePlanSelection(
+    startFromPlan,
+    startFromStorage,
+    startFromBusinessStorage,
+    startIndividualPlansFromInterval,
+    startBusinessPlansFromInterval,
+    handlePageNameUpdate,
+  );
+
+  // Usar contexto si existe, sino usar estado local
   const {
     activeSwitchPlan,
     activeStoragePlan,
@@ -123,7 +147,7 @@ export const PricingSectionWrapper = ({
     onBusinessStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
-  } = useBilling();
+  } = billingContext || localPlanSelection;
 
   const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
 

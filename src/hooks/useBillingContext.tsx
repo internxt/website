@@ -39,8 +39,5 @@ export const BillingProvider = ({ children, handlePageNameUpdate }: BillingProvi
 
 export const useBilling = () => {
   const context = useContext(BillingContext);
-  if (context === undefined) {
-    throw new Error('useBilling must be used within a BillingProvider');
-  }
   return context;
 };
