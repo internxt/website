@@ -4,12 +4,21 @@ import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
-import { highlightKeywords } from '@/utils/highlightKeywords';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
+import { PricingText } from '@/assets/types/pricing';
+
+const FULL_PERCENTAGE = 100;
+const MINIMUM_DISCOUNT = 0;
+
+const DEFAULTS = {
+  sectionDetails: 'bg-white',
+  showPromo: false,
+  hideBillingController: false,
+};
 
 interface PricingSectionWrapperProps {
-  textContent: Record<string, any>;
+  textContent: PricingText['tableSection'];
   products: ProductsDataProps | undefined;
   lang: string;
   loadingCards: boolean;
@@ -49,6 +58,35 @@ interface PricingSectionWrapperProps {
   hideBillingController?: boolean;
 }
 
+const calculateDiscountPercentage = (decimalValue?: number) => {
+  if (!decimalValue || decimalValue <= 0) return undefined;
+  const discountPercentage = FULL_PERCENTAGE - decimalValue;
+  return discountPercentage > MINIMUM_DISCOUNT ? discountPercentage : undefined;
+};
+
+const formatDiscountLabel = (label: string, discountValue: number) => {
+  return label.replace('{{discount}}', discountValue.toString());
+};
+
+const HotLabel = ({ textContent, discountValue }) => {
+  if (!discountValue || discountValue <= MINIMUM_DISCOUNT) {
+    return null;
+  }
+
+  return (
+    <span className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
+      {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
+    </span>
+  );
+};
+
+const PricingHeader = ({ textContent, discountValue, className = '' }) => (
+  <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
+    <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
+    <HotLabel textContent={textContent} discountValue={discountValue} />
+  </div>
+);
+
 export const PricingSectionWrapper = ({
   textContent,
   products,
@@ -63,26 +101,22 @@ export const PricingSectionWrapper = ({
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
-  sectionDetails = 'bg-white',
+  sectionDetails = DEFAULTS.sectionDetails,
   backgroundGradientColor,
   lifetimeCoupons,
   hideSwitchSelector,
   popularPlanBySize,
   decimalDiscount,
   isFamilyPage,
-  hideTitle,
-  hideDescription,
   hideFeatures,
   onCheckoutButtonClicked,
   handlePageNameUpdate,
   onBusinessPlansSelected,
-  CustomDescription,
   darkMode,
-  isBrave,
   isAnnual,
-  showPromo = false,
+  showPromo = DEFAULTS.showPromo,
   isAffiliate,
-  hideBillingController = false,
+  hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
 }: PricingSectionWrapperProps): JSX.Element => {
   const {
@@ -104,31 +138,40 @@ export const PricingSectionWrapper = ({
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
   );
-  const isIndividual = activeSwitchPlan === 'Individuals' || activeSwitchPlan === 'Lifetime';
-  const isLifetime = billingFrequency === Interval.Lifetime;
-  const individualPlansTitle =
-    billingFrequency === Interval.Lifetime ? textContent.planTitles.lifetime : textContent.planTitles.individuals;
 
-  const businessTitle = textContent.planTitles.business;
+  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
 
-  const individualPLansDescription = textContent.planDescription;
-
-  const businessPlanDescription = textContent.businessDescription2;
-
-  const title = () => {
-    if (isIndividual) {
-      return individualPlansTitle;
-    } else {
-      return businessTitle;
-    }
-  };
-
-  const description = () => {
-    if (isIndividual) {
-      return individualPLansDescription;
-    } else {
-      return businessPlanDescription;
-    }
+  const commonPricingProps = {
+    textContent,
+    lang,
+    billingFrequency,
+    businessBillingFrequency,
+    lifetimeCoupons,
+    isFamilyPage,
+    decimalDiscount: {
+      subscriptions: decimalDiscount?.individuals,
+      lifetime: decimalDiscount?.lifetime,
+      business: decimalDiscount?.business,
+    },
+    products,
+    popularPlanBySize,
+    hideBusinessSelector,
+    hidePlanSelectorComponent,
+    hideBusinessCards,
+    hidePlanSelectorAndSwitch,
+    loadingCards,
+    activeSwitchPlan,
+    onCheckoutButtonClicked,
+    onPlanTypeChange,
+    onBusinessPlansSelected,
+    darkMode,
+    isAnnual,
+    hideFeatures,
+    showPromo,
+    isAffiliate,
+    businessStorageSelected: activeBusinessStoragePlan,
+    onBusinessStorageChange,
+    hideFreeCard,
   };
 
   return (
@@ -138,92 +181,27 @@ export const PricingSectionWrapper = ({
       style={{ background: backgroundGradientColor }}
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
-        <div className="flex flex-col items-center gap-4 text-center" id="priceTable">
-          {!hideTitle && <h1 className="text-30 font-semibold text-gray-100 lg:text-3xl">{title()}</h1>}
-          {isBrave ? <p className="text-4xl font-semibold text-primary">{textContent.header}</p> : null}
-          {isLifetime && (
-            <span className="text-regular max-w-[831px] text-xl text-gray-55">{textContent.lifetimeDescription}</span>
-          )}
-          <span
-            className="text-regular max-w-[932px] text-xl text-gray-55"
-            dangerouslySetInnerHTML={{ __html: highlightKeywords(description()) }}
-          />
-        </div>
+        <PricingHeader textContent={textContent} discountValue={actualDiscountValue} />
 
         <PricingSection
-          textContent={textContent}
-          lang={lang}
-          billingFrequency={billingFrequency}
-          businessBillingFrequency={businessBillingFrequency}
-          lifetimeCoupons={lifetimeCoupons}
-          isFamilyPage={isFamilyPage}
-          decimalDiscount={{
-            subscriptions: decimalDiscount?.individuals,
-            lifetime: decimalDiscount?.lifetime,
-            business: decimalDiscount?.business,
-          }}
-          products={products}
-          popularPlanBySize={popularPlanBySize}
-          hideBusinessSelector={hideBusinessSelector}
-          hidePlanSelectorComponent={hidePlanSelectorComponent}
-          hideBusinessCards={hideBusinessCards}
-          hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
-          loadingCards={loadingCards}
-          activeSwitchPlan={activeSwitchPlan}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          onPlanTypeChange={onPlanTypeChange}
+          {...commonPricingProps}
+          hideSwitchSelector={hideSwitchSelector}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
-          onBusinessPlansSelected={onBusinessPlansSelected}
-          hideSwitchSelector={hideSwitchSelector}
           isMonthly
-          darkMode={darkMode}
-          isAnnual={isAnnual}
-          hideFeatures={hideFeatures}
-          showPromo={showPromo}
-          isAffiliate={isAffiliate}
-          businessStorageSelected={activeBusinessStoragePlan}
-          onBusinessStorageChange={onBusinessStorageChange}
-          hideFreeCard={hideFreeCard}
         />
       </div>
-      <div className=" flex flex-col items-center gap-6  py-10 lg:hidden">
-        <p className="text-30 font-bold text-gray-100">{title()} </p>
+
+      <div className="flex flex-col items-center gap-6 py-10 lg:hidden">
+        <PricingHeader textContent={textContent} discountValue={actualDiscountValue} className="flex-col" />
+
         <PricingSectionForMobile
-          textContent={textContent}
-          lang={lang}
-          billingFrequency={billingFrequency}
-          businessBillingFrequency={businessBillingFrequency}
-          isFamilyPage={isFamilyPage}
-          decimalDiscount={{
-            subscriptions: decimalDiscount?.individuals,
-            lifetime: decimalDiscount?.lifetime,
-            business: decimalDiscount?.business,
-          }}
-          products={products}
-          popularPlanBySize={popularPlanBySize}
-          hideBusinessSelector={hideBusinessSelector}
-          hidePlanSelectorComponent={hidePlanSelectorComponent}
-          hideBusinessCards={hideBusinessCards}
-          hidePlanSelectorAndSwitch={hidePlanSelectorAndSwitch}
-          loadingCards={loadingCards}
-          activeSwitchPlan={activeSwitchPlan}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          {...commonPricingProps}
           onStorageChange={onStorageChange}
-          onBusinessStorageChange={onBusinessStorageChange}
-          onPlanTypeChange={onPlanTypeChange}
-          onBusinessPlansSelected={onBusinessPlansSelected}
-          darkMode={darkMode}
-          isAnnual={isAnnual}
-          hideFeatures={hideFeatures}
-          showPromo={showPromo}
-          isAffiliate={isAffiliate}
           storageSelected={activeStoragePlan}
           hideBillingController={hideBillingController}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
-          businessStorageSelected={activeBusinessStoragePlan}
-          hideFreeCard={hideFreeCard}
         />
       </div>
     </section>

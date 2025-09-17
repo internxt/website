@@ -1,8 +1,8 @@
 import {
   ArrowsClockwise,
   Broom,
-  Cake,
   CirclesThreePlus,
+  Code,
   CodeBlock,
   CreditCard,
   Database,
@@ -15,13 +15,72 @@ import {
   Password,
   ShieldPlus,
   Sparkle,
-  TShirt,
   VideoConference,
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import styles from '@/components/privacy/HeroSection.module.scss';
 import React from 'react';
+
+const NEW_FEATURE_THRESHOLDS = {
+  BUSINESS: 10,
+  INDIVIDUAL_FIRST_CARD: 9,
+  INDIVIDUAL_OTHER_CARDS: 12,
+};
+
+const ICON_MAPS = {
+  individuals: [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    Sparkle,
+    Detective,
+    VideoConference,
+    Envelope,
+    CreditCard,
+  ],
+  ultimate: [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    Code,
+    Sparkle,
+    VideoConference,
+    Detective,
+    Envelope,
+    CreditCard,
+  ],
+  business: [
+    Database,
+    Key,
+    Gauge,
+    ShieldPlus,
+    ArrowsClockwise,
+    Password,
+    CirclesThreePlus,
+    LockSimple,
+    Fingerprint,
+    CodeBlock,
+    CreditCard,
+    Broom,
+    Detective,
+    VideoConference,
+    Envelope,
+  ],
+};
 
 export interface PriceCardProps {
   product: TransformedProduct;
@@ -38,16 +97,9 @@ export interface PriceCardProps {
   darkMode?: boolean;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   isFamilyPage?: boolean;
-  showPromo?: boolean;
   isAffiliate?: boolean;
   cardIndex?: number;
 }
-
-const BILLING_FREQUENCY_LIST = {
-  lifetime: 'lifetime',
-  month: 'monthly',
-  year: 'annually',
-};
 
 export const PriceCard = ({
   product,
@@ -58,33 +110,19 @@ export const PriceCard = ({
   lang,
   redeemCodeCta,
   isFamilyPage,
-  showPromo,
   onCheckoutButtonClicked,
   cardIndex = 0,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
   const { currency, interval, price, storage, priceId } = product;
-
-  const isLifetime = interval === 'lifetime';
-  const isAnnual = interval === 'year';
-  const showMonthlyLabel =
-    (productCardPlan === 'business' && interval === 'month') ||
-    (interval === 'year' && productCardPlan === 'individuals');
-
-  const priceNow = decimalDiscountValue
-    ? ((price * decimalDiscountValue) / 100).toFixed(0).replace('.00', '')
-    : Number(price).toFixed(0).replace('.00', '');
-  const priceBefore = decimalDiscountValue ? Number(price).toFixed(0).replace('.00', '') : undefined;
-
-  const monthlyPriceNow = Number(priceNow).toFixed(0).replace('.88', '');
-  const monthlyPriceBefore = decimalDiscountValue
-    ? Number(price / 12)
-        .toFixed(0)
-        .replace('.00', '')
-    : undefined;
-  const percentOff = decimalDiscountValue ? 100 - decimalDiscountValue : 0;
-  const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
   const isBusiness = productCardPlan === 'business';
+  const isAnnual = interval === 'year';
+
+  const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
+  const currentPrice = hasDiscount
+    ? ((Number(price) * decimalDiscountValue) / 100).toFixed(0)
+    : Number(price).toFixed(0);
+  const originalPrice = hasDiscount ? Number(price).toFixed(0) : undefined;
 
   const planTypes = {
     '1TB': isBusiness
@@ -96,139 +134,90 @@ export const PriceCard = ({
     '3TB': contentText.productFeatures.planTypes.premium,
     '5TB': contentText.productFeatures.planTypes.ultimate,
   };
-  const cardLabel = planTypes[product.storage] || null;
+  const planLabel = planTypes[storage] || null;
 
-  const iconsFeatures = [
-    Database,
-    Key,
-    Gauge,
-    ShieldPlus,
-    ArrowsClockwise,
-    Password,
-    CirclesThreePlus,
-    LockSimple,
-    Fingerprint,
-    CodeBlock,
-    Sparkle,
-    Detective,
-    VideoConference,
-    Envelope,
-    CreditCard,
-  ];
+  const newFeatureThreshold = isBusiness
+    ? NEW_FEATURE_THRESHOLDS.BUSINESS
+    : cardIndex === 1
+    ? NEW_FEATURE_THRESHOLDS.INDIVIDUAL_FIRST_CARD
+    : NEW_FEATURE_THRESHOLDS.INDIVIDUAL_OTHER_CARDS;
 
-  const iconsFeaturesForBusiness = [
-    Database,
-    Key,
-    Gauge,
-    ShieldPlus,
-    ArrowsClockwise,
-    Password,
-    CirclesThreePlus,
-    LockSimple,
-    Fingerprint,
-    CodeBlock,
-    CreditCard,
-    Broom,
-    Detective,
-    VideoConference,
-    Envelope,
-  ];
-
-  const newFeaturesNumber = isBusiness ? 10 : cardIndex === 1 ? 8 : 9;
-
-  const renderFeatureIcon = (index: number) => {
-    const adjustedIndex =
-      !isBusiness && cardIndex === 0 && index >= 6
-        ? index + 1
-        : !isBusiness && cardIndex === 1 && index >= 9
-        ? index + 1
-        : index;
-    const Icon = isBusiness ? iconsFeaturesForBusiness[adjustedIndex] : iconsFeatures[adjustedIndex];
-    return Icon ? <Icon className="h-6 w-6 text-primary" /> : null;
+  const ctaText = redeemCodeCta === 'redeem' ? contentText.cta.redeem : contentText.cta.selectPlan;
+  const features = contentText.productFeatures[productCardPlan][storage];
+  const getIconMap = () => {
+    if (storage === '5TB') return ICON_MAPS.ultimate;
+    return ICON_MAPS[productCardPlan] || ICON_MAPS.individuals;
   };
+  const icons = getIconMap();
 
   return (
     <div
-      className={`flex flex-col items-center justify-start rounded-16 ${
-        showPromo ? (isBusiness ? 'lg:h-[1000px]' : 'lg:h-[983px]') : isBusiness ? 'lg:h-[876px]' : 'lg:h-[840px]'
-      } ${popular ? ' bg-blue-10 shadow-xl' : ''}`}
+      className={`flex h-full flex-col items-center justify-start rounded-16 ${
+        popular ? 'bg-neutral-250 shadow-xl' : ''
+      }`}
     >
-      <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'}   items-center justify-center`}>
-        <p className={`${popular ? 'flex' : 'hidden'}  text-2xl font-semibold`}>{contentText.mostPopular}</p>
+      <div className={`flex ${popular ? 'h-[61px]' : 'lg:h-[61px]'} items-center justify-center`}>
+        <p className={`${popular ? 'flex' : 'hidden'} text-2xl font-semibold text-white`}>{contentText.mostPopular}</p>
       </div>
 
       <div
-        className={`z-10 ${
-          showPromo ? (isBusiness ? 'lg:h-[1000px] ' : 'lg:h-[922px]') : 'lg:h-[671px]'
-        } rounded-16 border ${popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'} `}
+        className={`z-10 h-full rounded-16 border bg-red ${
+          popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'
+        }`}
       >
-        <div className="flex h-[243px] flex-col rounded-t-16  bg-white py-4 lg:h-[293px] lg:px-6 lg:py-8">
-          <div className="flex h-full w-full flex-col items-center justify-between gap-2 ">
-            <div className="flex h-[36px] items-center justify-center lg:h-[48px]">
-              <p className="text-30 font-semibold lg:text-3xl">{cardLabel}</p>
-            </div>
-            {(percentOff ?? 0) > 0 ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-between lg:h-[81px] lg:w-[190px]">
-                <div className="flex h-[23px] items-center justify-center rounded-2 bg-green-100 px-1 py-0.5">
-                  <p className="text-base font-semibold text-green-0">
-                    {percentOff}
-                    {contentText.discount}
-                  </p>
-                </div>
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2   lg:h-[43px] ">
-                  <span className="flex h-full flex-row items-end gap-1 ">
+        <div className="flex h-full flex-col rounded-16 bg-white py-4 lg:px-6 lg:py-8">
+          <div className="flex h-full w-full flex-col items-center justify-start gap-4">
+            <p className="text-30 font-semibold lg:text-3xl">{planLabel}</p>
+
+            {hasDiscount ? (
+              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
+                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
+                  <span className="flex h-full flex-row items-end gap-1">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
-                      {isBusiness ? priceNow : isAnnual ? priceNow : priceNow}
-                    </p>
-                    {isBusiness ? (
-                      <span className="i flex h-full items-end text-base font-semibold">
-                        {contentText.perUserSlash}
-                      </span>
-                    ) : null}
-                    {isAnnual ? (
-                      <span className="i flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
-                    ) : null}
+                    <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
+                    {isBusiness && (
+                      <span className="flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
+                    )}
+                    {isAnnual && (
+                      <span className="flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
+                    )}
                   </span>
 
                   <span className="flex h-full flex-row items-end">
-                    <p className=" thext-sm h-[26px] items-center self-start pr-1 font-semibold text-gray-50 lg:pt-2">
+                    <p className="h-[26px] items-center self-start pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
                       {currency}
                     </p>
                     <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {isBusiness ? priceBefore : isAnnual ? priceBefore : isLifetime ? priceBefore : priceNow}
+                      {originalPrice}
                     </p>
-                    {isBusiness ? (
-                      <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>
-                    ) : null}
-                    {isAnnual ? (
+                    {isBusiness && <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>}
+                    {isAnnual && (
                       <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
-                    ) : null}
+                    )}
                   </span>
                 </div>
               </div>
             ) : (
               <div className="flex h-[87px] w-[180px] flex-col items-center justify-start gap-2 lg:h-[71px] lg:w-[190px]">
-                <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px] ">
+                <div className="flex h-[50px] w-full flex-row items-start justify-center gap-2 lg:h-[60px]">
                   <span className="flex h-full flex-row items-center gap-1 pr-2">
                     <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="ih-full text-2xl font-bold text-gray-100 lg:text-4xl">
-                      {isBusiness ? priceNow : isAnnual ? monthlyPriceNow : priceNow}
-                    </p>
-                    {isBusiness ? (
-                      <span className="i flex h-full items-center pt-4 text-base font-semibold">
+                    <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
+                    {isBusiness && (
+                      <span className="flex h-full items-center pt-4 text-base font-semibold">
                         {contentText.perUserSlash}
                       </span>
-                    ) : null}
-                    {showMonthlyLabel && !isBusiness ? (
-                      <span className="i flex h-full items-center pt-4 text-base font-semibold">
+                    )}
+                    {isAnnual && !isBusiness && (
+                      <span className="flex h-full items-center pt-4 text-base font-semibold">
                         {contentText.perYear}
                       </span>
-                    ) : null}
+                    )}
                   </span>
                 </div>
               </div>
             )}
+
             <button
               id={`planButton${storage}`}
               onClick={() => onCheckoutButtonClicked(priceId, isCheckoutForLifetime)}
@@ -236,53 +225,58 @@ export const PriceCard = ({
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
                   : 'border-primary bg-white text-primary hover:bg-gray-1'
-              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] lg:w-[340px]`}
+              } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[340px]`}
             >
               <p className="text-base font-medium">{ctaText}</p>
             </button>
-          </div>
-        </div>
-        {showPromo ? (
-          <div className={`flex h-[142px] flex-col items-center justify-center  ${styles.horizontalLinearGardient}`}>
-            <div className="flex h-[120px] w-full flex-col justify-center gap-2 px-6 lg:w-[380px]">
-              <span className="text-base font-bold text-white">{contentText.productFeatures.promoFeatures.title}</span>
-              <div className="flex flex-col items-start gap-2">
-                <div className="flex items-start space-x-2">
-                  <TShirt size={24} className="text-primary" />
-                  <span className="text-[13.5px] text-white">
-                    {contentText.productFeatures.promoFeatures.features[0]}
-                  </span>
-                </div>
-                <div className="flex items-start space-x-2">
-                  <Cake size={24} className="text-primary" />
-                  <span className="text-[13.5px] text-white">
-                    {contentText.productFeatures.promoFeatures.features[1]}
-                  </span>
-                </div>
-              </div>
+
+            <div className="flex w-full flex-col justify-start gap-4 pt-4">
+              {features.map((feature, index) => {
+                let adjustedIndex = index;
+                if (!isBusiness) {
+                  if (cardIndex === 0 && index >= 6) adjustedIndex = index + 1;
+                  if (cardIndex === 1 && index >= 9) adjustedIndex = index + 1;
+                }
+                const renderText = () => {
+                  if (index === 0 && feature.includes('**')) {
+                    return feature
+                      .split(/(\*\*.*?\*\*)/)
+                      .map((part, i) =>
+                        part.startsWith('**') && part.endsWith('**') ? (
+                          <strong key={i}>{part.slice(2, -2)}&nbsp;</strong>
+                        ) : (
+                          part
+                        ),
+                      );
+                  }
+                  return feature;
+                };
+
+                const Icon = icons[adjustedIndex];
+
+                return (
+                  <div className="flex flex-col items-start" key={feature}>
+                    <div
+                      className={`flex min-h-[24px] flex-row items-start gap-2 lg:items-center ${
+                        index === 0 ? '' : ''
+                      }`}
+                    >
+                      {Icon && <Icon className="h-6 w-6 text-primary" />}
+                      <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
+                        {renderText()}
+                        {index > newFeatureThreshold && (
+                          <p className="ml-2 flex h-min items-center rounded-2 bg-purple-1 px-2 py-0.5 text-center font-semibold text-purple-10 lg:px-1">
+                            {contentText.commingSoon}
+                          </p>
+                        )}
+                      </span>
+                    </div>
+                    {index === 0 && <div className=" mt-4 h-[1px] w-full bg-neutral-25" />}
+                  </div>
+                );
+              })}
             </div>
           </div>
-        ) : null}
-        <div
-          className={`flex h-min flex-col gap-2 rounded-b-16 bg-neutral-20 px-6 py-4 ${
-            isBusiness ? 'h-min lg:h-[520px]' : 'h-min lg:h-[485px]'
-          } lg:py-6`}
-        >
-          {contentText.productFeatures[productCardPlan][storage].map((feature, index) => (
-            <div className="flex flex-row items-start" key={feature}>
-              <div className="flex min-h-[24px] flex-row items-start gap-2 lg:items-center">
-                {renderFeatureIcon(index)}
-                <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
-                  {feature}
-                  {index > newFeaturesNumber && (
-                    <p className="ml-2 flex h-min items-center rounded-2 bg-orange-100 px-2 py-0.5 text-center font-semibold text-orange-1 lg:px-1">
-                      {contentText.commingSoon}
-                    </p>
-                  )}
-                </span>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>

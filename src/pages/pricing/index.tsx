@@ -37,6 +37,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.SoftSales85,
     couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
 
@@ -93,9 +94,9 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="3TB"
+          popularPlanBySize="5TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="pt-20 lg:py-20"
+          sectionDetails="py-10 lg:py-20 lg:pt-32"
         />
 
         <HorizontalScrollableSection textContent={infoText} />
