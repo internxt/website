@@ -122,10 +122,9 @@ export const PricingSectionWrapper = ({
   startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
 }: PricingSectionWrapperProps): JSX.Element => {
-  // Intentar usar el contexto, si no existe usar estado local
+
   const billingContext = useBilling();
 
-  // Siempre ejecutar el hook local (reglas de hooks)
   const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
@@ -135,7 +134,7 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
 
-  // Usar contexto si existe, sino usar estado local
+
   const {
     activeSwitchPlan,
     activeStoragePlan,
