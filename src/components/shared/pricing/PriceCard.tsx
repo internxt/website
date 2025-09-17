@@ -161,20 +161,20 @@ export const PriceCard = ({
       </div>
 
       <div
-        className={`z-10 h-full rounded-16 border bg-red ${
-          popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'
+        className={`z-10 h-full w-full rounded-16 border  ${
+          popular ? ' border-[1.5px] border-blue-10' : 'border-gray-10 px-8 lg:px-0'
         }`}
       >
         <div className="flex h-full flex-col rounded-16 bg-white py-4 lg:px-6 lg:py-8">
-          <div className="flex h-full w-full flex-col items-center justify-start gap-4">
+          <div className="flex h-full w-full flex-col items-center justify-start gap-8 lg:gap-4">
             <p className="text-30 font-semibold lg:text-3xl">{planLabel}</p>
 
             {hasDiscount ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
-                  <span className="flex h-full flex-row items-end gap-1">
-                    <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
+              <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
+                <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
+                  <span className="flex h-full flex-row items-end gap-1 ">
+                    <p className="self-start pb-4 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+                    <p className=" text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
                     {isBusiness && (
                       <span className="flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
                     )}
@@ -184,12 +184,10 @@ export const PriceCard = ({
                   </span>
 
                   <span className="flex h-full flex-row items-end">
-                    <p className="h-[26px] items-center self-start pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
+                    <p className="items-center self-start pr-1 pt-1 text-sm font-semibold text-gray-50 lg:pt-0">
                       {currency}
                     </p>
-                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {originalPrice}
-                    </p>
+                    <p className=" text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">{originalPrice}</p>
                     {isBusiness && <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>}
                     {isAnnual && (
                       <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>

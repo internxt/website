@@ -27,7 +27,7 @@ export default function ComparisonTableSection({
   useEffect(() => {
     const onScroll = () => {
       const isMobile = window.innerWidth < 1024;
-      const scrollThreshold = isMobile ? 2950 : 3450;
+      const scrollThreshold = isMobile ? 2850 : 3380;
       setScrolled(window.scrollY > scrollThreshold);
     };
 
@@ -94,7 +94,7 @@ export default function ComparisonTableSection({
     return `h-[72px] ${
       isLastColumn(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        : 'border-y-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
   };
 
@@ -255,7 +255,7 @@ export default function ComparisonTableSection({
         </table>
       </div>
 
-      <div className="bg-neutral-16 w-full px-4 lg:hidden">
+      <div className="w-full bg-neutral-16 px-4 lg:hidden">
         <div className={`sticky top-10 z-10 grid grid-cols-2 gap-0 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
           <CustomPlanSelector
             plans={textContent.plans}
