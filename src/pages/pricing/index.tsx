@@ -17,6 +17,8 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import ComparisonTableSection from '@/components/pricing/ComparisonTable';
+import { BillingProvider } from '@/hooks/useBillingContext';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -65,6 +67,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -75,58 +78,68 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         {sm_breadcrumb('Pricing', 'pricing')}
       </Script>
 
-      <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
-        <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <BillingProvider handlePageNameUpdate={setPageName}>
+        <Layout segmentName={pageName} title={metatags[0].title} description={metatags[0].description} lang={lang}>
+          <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-        <PricingSectionWrapper
-          textContent={textContent.tableSection}
-          decimalDiscount={{
-            individuals: decimalDiscount,
-            lifetime: decimalDiscountForLifetime,
-          }}
-          lang={lang}
-          products={products}
-          loadingCards={loadingCards}
-          handlePageNameUpdate={setPageName}
-          onBusinessPlansSelected={onBusinessPlansSelected}
-          onCheckoutButtonClicked={onCheckoutButtonClicked}
-          lifetimeCoupons={lifetimeCoupons}
-          hideBusinessCards
-          hideBusinessSelector
-          hideSwitchSelector
-          popularPlanBySize="5TB"
-          backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="py-10 lg:py-20 lg:pt-32"
-        />
+          <PricingSectionWrapper
+            textContent={textContent.tableSection}
+            decimalDiscount={{
+              individuals: decimalDiscount,
+              lifetime: decimalDiscountForLifetime,
+            }}
+            lang={lang}
+            products={products}
+            loadingCards={loadingCards}
+            handlePageNameUpdate={setPageName}
+            onBusinessPlansSelected={onBusinessPlansSelected}
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+            lifetimeCoupons={lifetimeCoupons}
+            hideBusinessCards
+            hideBusinessSelector
+            hideSwitchSelector
+            popularPlanBySize="5TB"
+            backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
+            sectionDetails="py-10 lg:py-20 lg:pt-32"
+          />
 
-        <HorizontalScrollableSection textContent={infoText} />
+          <HorizontalScrollableSection textContent={infoText} />
 
-        <BestStorageSection textContent={textContent.BestStorageSection} />
+          <BestStorageSection textContent={textContent.BestStorageSection} />
 
-        <FileParallaxSection />
+          <FileParallaxSection />
 
-        <FAQSection textContent={faqSection} />
+          <ComparisonTableSection
+            textContent={textContent.ComparisonTable}
+            onCheckoutButtonClicked={onCheckoutButtonClicked}
+            products={products}
+            decimalDiscount={decimalDiscount}
+            currencyValue={currencyValue}
+          />
 
-        <FloatingCtaSectionv2
-          textContent={textContent.lastCtaSection}
-          url={'/pricing'}
-          customText={
-            <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-              <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-                {textContent.lastCtaSection.title}
-              </p>
-              <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-                {textContent.lastCtaSection.description}
-              </p>
-            </div>
-          }
-          bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-          containerDetails="shadow-lg backdrop-blur-[55px]"
-          bgPadding="lg:pb-20 pb-20"
-        />
+          <FAQSection textContent={faqSection} />
 
-        <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
-      </Layout>
+          <FloatingCtaSectionv2
+            textContent={textContent.lastCtaSection}
+            url={'/pricing'}
+            customText={
+              <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+                <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
+                  {textContent.lastCtaSection.title}
+                </p>
+                <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
+                  {textContent.lastCtaSection.description}
+                </p>
+              </div>
+            }
+            bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+            containerDetails="shadow-lg backdrop-blur-[55px]"
+            bgPadding="lg:pb-20 pb-20"
+          />
+
+          <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />
+        </Layout>
+      </BillingProvider>
     </>
   );
 };

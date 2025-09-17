@@ -1,12 +1,11 @@
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
-import { PricingText } from '@/assets/types/pricing';
+import { useBilling } from '@/hooks/useBillingContext';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -93,11 +92,6 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Lifetime',
-  startFromStorage = 'Premium',
-  startFromBusinessStorage = 'Pro',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -110,7 +104,6 @@ export const PricingSectionWrapper = ({
   isFamilyPage,
   hideFeatures,
   onCheckoutButtonClicked,
-  handlePageNameUpdate,
   onBusinessPlansSelected,
   darkMode,
   isAnnual,
@@ -130,14 +123,7 @@ export const PricingSectionWrapper = ({
     onBusinessStorageChange,
     onIndividualSwitchToggled,
     onBusinessSwitchToggled,
-  } = usePlanSelection(
-    startFromPlan,
-    startFromStorage,
-    startFromBusinessStorage,
-    startIndividualPlansFromInterval,
-    startBusinessPlansFromInterval,
-    handlePageNameUpdate,
-  );
+  } = useBilling();
 
   const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
 
