@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Check, CaretDown } from '@phosphor-icons/react';
 
 interface Plan {
@@ -41,6 +41,25 @@ export default function CustomPlanSelector({
     setIsOpen(false);
   };
 
+  // Effect para cerrar el dropdown al hacer scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      // Agregar listener cuando el dropdown está abierto
+      window.addEventListener('scroll', handleScroll, true);
+    }
+
+    // Cleanup: remover listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll, true);
+    };
+  }, [isOpen]);
+
   return (
     <div className="z-10 flex flex-col pt-10">
       <div
@@ -72,12 +91,13 @@ export default function CustomPlanSelector({
                     <li key={plan.id} role="option">
                       <button
                         onClick={() => handlePlanSelect(plan.id)}
-                        className="flex w-full items-center justify-between  px-4 py-2 text-left hover:bg-gray-50 focus:bg-gray-50 focus:outline-none"
+                        className={`${
+                          plan.id === selectedPlan ? 'bg-highlight/10' : ''
+                        } flex w-full items-center justify-between  px-4 py-2 text-left transition-colors duration-150 hover:bg-highlight/5 focus:bg-highlight/10 focus:outline-none`}
                       >
                         <span
-                          className={`text-base font-medium ${
-                            plan.id === selectedPlan ? 'text-gray-100' : 'text-gray-100'
-                          }`}
+                          className={`'text-gray-100' text-base font-medium
+                          `}
                         >
                           {plan.name}
                         </span>

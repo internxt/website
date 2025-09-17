@@ -161,11 +161,11 @@ export const PriceCard = ({
       </div>
 
       <div
-        className={`z-10 h-full w-full rounded-16 border  ${
-          popular ? ' border-[1.5px] border-blue-10' : 'border-gray-10 px-8 lg:px-0'
+        className={`z-10 h-full w-full rounded-16 bg-white ring-[1px]  ${
+          popular ? '   ring-blue-10' : 'px-8 ring-gray-10 lg:px-0'
         }`}
       >
-        <div className="flex h-full flex-col rounded-16 bg-white py-4 lg:px-6 lg:py-8">
+        <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-start gap-8 lg:gap-4">
             <p className="text-30 font-semibold lg:text-3xl">{planLabel}</p>
 
@@ -222,7 +222,7 @@ export const PriceCard = ({
               className={`${
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
-                  : 'border-primary bg-white text-primary hover:bg-gray-1'
+                  : 'border-primary bg-transparent text-primary hover:bg-gray-1'
               } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[340px]`}
             >
               <p className="text-base font-medium">{ctaText}</p>
@@ -260,7 +260,7 @@ export const PriceCard = ({
                       }`}
                     >
                       {Icon && <Icon className="h-6 w-6 text-primary" />}
-                      <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
+                      <span className="flex flex-row pt-[2px] text-base font-normal text-gray-80">
                         {renderText()}
                         {index > newFeatureThreshold && (
                           <p className="ml-2 flex h-min items-center rounded-2 bg-purple-1 px-2 py-0.5 text-center font-semibold text-purple-10 lg:px-1">

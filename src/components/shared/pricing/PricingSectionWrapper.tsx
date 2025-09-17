@@ -74,7 +74,7 @@ const HotLabel = ({ textContent, discountValue }) => {
   }
 
   return (
-    <span className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
+    <span className="flex rounded-2 bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
       {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
     </span>
   );
