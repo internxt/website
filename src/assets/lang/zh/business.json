@@ -52,7 +52,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
+      "header": "选择您的计划 ",
       "business": "企业计划"
     },
     "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",

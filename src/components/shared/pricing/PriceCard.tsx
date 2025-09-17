@@ -22,7 +22,7 @@ import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import React from 'react';
 
 const NEW_FEATURE_THRESHOLDS = {
-  BUSINESS: 10,
+  BUSINESS: 11,
   INDIVIDUAL_FIRST_CARD: 9,
   INDIVIDUAL_OTHER_CARDS: 12,
 };

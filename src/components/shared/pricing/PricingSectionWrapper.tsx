@@ -149,7 +149,7 @@ export const PricingSectionWrapper = ({
     onBusinessSwitchToggled,
   } = billingContext || localPlanSelection;
 
-  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
+  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
 
   const commonPricingProps = {
     textContent,
