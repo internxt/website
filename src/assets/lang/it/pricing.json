@@ -1,72 +1,12 @@
 {
-  "HeroSection": {
-    "title": {
-      "line1": "{{discount}}% di sconto",
-      "line2": "sui nostri piani annuali"
-    },
-    "lifetimeTitle": {
-      "line1": "Ottieni un piano",
-      "blueText": " a vita ",
-      "line2": " di Internxt!"
-    },
-    "feeds": {
-      "firstFeed": "Garanzia di rimborso di 30 giorni",
-      "secondFeed": "Pagamento 100% sicuro",
-      "thirdFeed": "Creazione account anonimo"
-    },
-    "cta": {
-      "title": "Ottieni {{discount}}% di sconto",
-      "description": "Offerta valida per un anno. Il piano si rinnoverà al prezzo senza sconto per l'anno successivo."
-    }
-  },
-  "HeroSectionAlternative": {
-    "title": "Di quanto spazio di archiviazione online hai bisogno?",
-    "description": "Seleziona la quantità per vedere i piani che si adattano alle tue esigenze.",
-    "cta": "Trova il tuo piano ideale",
-    "features": [
-      "Il cloud storage più sicuro",
-      "Creazione account anonimo",
-      "Crittografia di livello militare",
-      "I tuoi dati non vengono venduti"
-    ]
-  },
-  "PriceTableForAlternativePricing": {
-    "title": {
-      "normal1": "Ottieni ",
-      "blue2": "{{discount}}% di sconto ",
-      "normal2": "sul cloud storage più sicuro"
-    },
-    "description": "Proteggi i tuoi file professionali e personali con un cloud storage crittografato di livello militare e conveniente.",
-    "features": ["Il cloud storage più sicuro", "Meno costoso delle alternative", "Garanzia di rimborso di 30 giorni"],
-    "offerEnds": "L'offerta termina tra:",
-    "howMuchStorage": "Di quanto spazio di archiviazione online hai bisogno?"
-  },
   "tableSection": {
     "title": "Piani Internxt",
-    "ctaBanner": {
-      "label": "Risparmia {{discount}}%",
-      "title": "Tutti i piani inclusi",
-      "subtitle": "Celebra il 5° anniversario di Internxt",
-      "subtitle2": "Offerta anniversario di Internxt",
-      "subtitle3": "Meet, Mail, Device Cleaner e Dark Web Monitoring",
-      "cta": "Approfitta dell'offerta!",
-      "guarantee": "Garanzia di rimborso di 30 giorni",
-      "gift": "Possibilità di vincere uno zaino Internxt",
-      "lastCta": "* L'offerta è per account gratuiti o nuovi clienti"
-    },
+    "hotLabel": "{{discount}}% sconto",
     "planTitles": {
-      "header": "Privacy totale per {{discount}}% in meno",
+      "header": "Scegli il tuo piano",
       "individuals": "Piani Annuali",
       "lifetime": "Piani a Vita",
-      "business": "Piani Business",
-      "lifetimeCampaign": {
-        "blueText": "Ottieni 50% di sconto",
-        "normalText": "su tutti i nostri piani esclusivi a vita"
-      },
-      "blackFriday": {
-        "title": "Mega offerta Black Friday: ottieni {{discount}}% di sconto su tutti i piani del cloud storage più sicuro",
-        "description": "Proteggi i tuoi dati con Internxt per evitare fughe di notizie, perdite finanziarie e rischi per la privacy. Dì addio ai giganti della tecnologia che traggono profitto dalle tue informazioni personali."
-      }
+      "business": "Piani Business"
     },
     "lifetimeDescription": "Paga una volta e ottieni privacy e sicurezza per sempre.",
     "planDescription": "Tutti i piani Internxt includono funzionalità complete con accesso totale alla nostra suite di strumenti per la privacy premiata che include Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitoring, Meet e Mail.",
@@ -536,28 +476,6 @@
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "Prova Internxt senza rischi",
-    "description": "Registrati e ottieni 1GB del cloud storage end-to-end crittografato di Internxt gratuitamente.",
-    "cta": "Crea un account gratuito"
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "Privato fino al midollo",
-      "description": "Mettiamo l'utente e i suoi diritti al primo posto in tutto quello che facciamo. La nostra missione è semplice: creare strumenti e servizi migliori che restituiscano il controllo all'utente finale.",
-      "cta": "Il nostro impegno per la privacy"
-    },
-    "card2": {
-      "title": "Un'esperienza perfetta",
-      "description": "Internxt è disponibile su tutte le piattaforme, anche Linux! Sincronizza i tuoi file e foto con le nostre app mobile, web e desktop, ognuna progettata per alimentare il tuo spazio crittografato in movimento.",
-      "cta": "Scarica l'app"
-    },
-    "card3": {
-      "title": "Prova Internxt gratuitamente!",
-      "description": "Ottieni 1GB gratuito e vedi se la privacy fa per te prima di impegnarti completamente!",
-      "cta": "Crea un account gratuito"
-    }
   },
   "InfoSectionForBusiness": {
     "title": "Cosa puoi fare con Internxt?",

@@ -1,67 +1,12 @@
 {
-  "HeroSection": {
-    "title": {
-      "line1": "{{discount}}% 折扣",
-      "line2": "年度計劃"
-    },
-    "lifetimeTitle": {
-      "line1": "獲取",
-      "blueText": " 終身計劃 ",
-      "line2": " 來自 Internxt！"
-    },
-    "feeds": {
-      "firstFeed": "30天退款保證",
-      "secondFeed": "100% 安全付款",
-      "thirdFeed": "匿名帳戶創建"
-    },
-    "cta": {
-      "title": "獲取 {{discount}}% 折扣",
-      "description": "優惠有效期為一年。計劃將在下一年以全價自動續訂。"
-    }
-  },
-  "HeroSectionAlternative": {
-    "title": "您需要多少線上儲存？",
-    "description": "選擇容量，查看符合您需求的計劃。",
-    "cta": "找到您的理想計劃",
-    "features": ["最安全的雲端儲存", "匿名帳戶創建", "軍用級加密", "您的資料不會被出售"]
-  },
-  "PriceTableForAlternativePricing": {
-    "title": {
-      "normal1": "獲取 ",
-      "blue2": "{{discount}}% 折扣 ",
-      "normal2": "最安全的雲端儲存"
-    },
-    "description": "使用軍用加密的經濟實惠雲端儲存保護您的工作和個人檔案。",
-    "features": ["最安全的雲端儲存", "比替代方案更便宜", "30天退款保證"],
-    "offerEnds": "優惠結束時間：",
-    "howMuchStorage": "您需要多少線上儲存？"
-  },
   "tableSection": {
     "title": "Internxt 計劃",
-    "ctaBanner": {
-      "label": "節省 {{discount}}%",
-      "title": "所有計劃包含",
-      "subtitle": "慶祝 Internxt 5週年",
-      "subtitle2": "Internxt 週年優惠",
-      "subtitle3": "Meet、Mail、裝置清理器和暗網監控",
-      "cta": "利用優惠！",
-      "guarantee": "30天退款保證",
-      "gift": "贏取 Internxt 背包的機會",
-      "lastCta": "* 優惠適用於免費帳戶或新客戶"
-    },
+    "hotLabel": "{{discount}}% 折扣 ",
     "planTitles": {
-      "header": "完全隱私，節省 {{discount}}%",
+      "header": " 選擇您的計劃",
       "individuals": "年度計劃",
       "lifetime": "終身計劃",
-      "business": "商業計劃",
-      "lifetimeCampaign": {
-        "blueText": "獲取 50% 折扣",
-        "normalText": "所有獨家終身計劃"
-      },
-      "blackFriday": {
-        "title": "黑色星期五超級優惠：獲取 {{discount}}% 折扣，最安全的雲端儲存所有計劃",
-        "description": "使用 Internxt 保護您的資料，避免資料洩露、財務損失和隱私風險。告別利用您個人資訊獲利的科技巨頭。"
-      }
+      "business": "商業計劃"
     },
     "lifetimeDescription": "一次付費，永享隱私和安全。",
     "planDescription": "所有 Internxt 計劃都包含完整功能，完全訪問我們屢獲殊榮的隱私工具套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitoring、Meet 和 Mail。",

@@ -1,67 +1,12 @@
 {
-  "HeroSection": {
-    "title": {
-      "line1": "{{discount}}% 折扣",
-      "line2": "年度计划"
-    },
-    "lifetimeTitle": {
-      "line1": "获取",
-      "blueText": " 终身计划 ",
-      "line2": " 来自 Internxt！"
-    },
-    "feeds": {
-      "firstFeed": "30天退款保证",
-      "secondFeed": "100% 安全支付",
-      "thirdFeed": "匿名账户创建"
-    },
-    "cta": {
-      "title": "获取 {{discount}}% 折扣",
-      "description": "优惠有效期为一年。计划将在下一年以全价自动续订。"
-    }
-  },
-  "HeroSectionAlternative": {
-    "title": "您需要多少在线存储？",
-    "description": "选择容量，查看符合您需求的计划。",
-    "cta": "找到您的理想计划",
-    "features": ["最安全的云存储", "匿名账户创建", "军用级加密", "您的数据不会被出售"]
-  },
-  "PriceTableForAlternativePricing": {
-    "title": {
-      "normal1": "获取 ",
-      "blue2": "{{discount}}% 折扣 ",
-      "normal2": "最安全的云存储"
-    },
-    "description": "使用军用加密的经济实惠云存储保护您的工作和个人文件。",
-    "features": ["最安全的云存储", "比替代方案更便宜", "30天退款保证"],
-    "offerEnds": "优惠结束时间：",
-    "howMuchStorage": "您需要多少在线存储？"
-  },
   "tableSection": {
     "title": "Internxt 计划",
-    "ctaBanner": {
-      "label": "节省 {{discount}}%",
-      "title": "所有计划包含",
-      "subtitle": "庆祝 Internxt 5周年",
-      "subtitle2": "Internxt 周年优惠",
-      "subtitle3": "Meet、Mail、设备清理器和暗网监控",
-      "cta": "利用优惠！",
-      "guarantee": "30天退款保证",
-      "gift": "赢取 Internxt 背包的机会",
-      "lastCta": "* 优惠适用于免费账户或新客户"
-    },
+    "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
-      "header": "完全隐私，节省 {{discount}}%",
+      "header": "选择您的计划 ",
       "individuals": "年度计划",
       "lifetime": "终身计划",
-      "business": "商业计划",
-      "lifetimeCampaign": {
-        "blueText": "获取 50% 折扣",
-        "normalText": "所有独家终身计划"
-      },
-      "blackFriday": {
-        "title": "黑色星期五超级优惠：获取 {{discount}}% 折扣，最安全的云存储所有计划",
-        "description": "使用 Internxt 保护您的数据，避免数据泄露、财务损失和隐私风险。告别利用您个人信息获利的科技巨头。"
-      }
+      "business": "商业计划"
     },
     "lifetimeDescription": "一次付费，永享隐私和安全。",
     "planDescription": "所有 Internxt 计划都包含完整功能，完全访问我们屡获殊荣的隐私工具套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitoring、Meet 和 Mail。",
@@ -532,28 +477,7 @@
       }
     ]
   },
-  "CtaSection": {
-    "title": "无风险试用 Internxt",
-    "description": "注册并免费获得 1GB Internxt 端到端加密云存储。",
-    "cta": "创建免费账户"
-  },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "彻底的私密性",
-      "description": "我们将用户及其权利置于我们所做一切的中心。我们的使命很简单：创造更好的工具和服务，将控制权交还给最终用户。",
-      "cta": "我们对隐私的承诺"
-    },
-    "card2": {
-      "title": "无缝体验",
-      "description": "Internxt 在所有平台上都可用，甚至 Linux！使用我们的移动、Web 和桌面应用程序同步您的文件和照片，所有这些都是为了管理您的加密存储而设计的。",
-      "cta": "下载应用程序"
-    },
-    "card3": {
-      "title": "免费试用 Internxt！",
-      "description": "免费获得 1GB，在完全承诺之前看看隐私是否适合您！",
-      "cta": "创建免费账户"
-    }
-  },
+
   "InfoSectionForBusiness": {
     "title": "您可以用 Internxt 做什么？",
     "description": "使用我们的安全商业云存储简化您组织的文件管理、安全性和隐私。",
