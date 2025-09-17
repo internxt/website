@@ -162,7 +162,7 @@ export const PriceCard = ({
 
       <div
         className={`z-10 h-full w-full rounded-16 bg-white ring-[1px]  ${
-          popular ? '   ring-blue-10' : 'px-8 ring-gray-10 lg:px-0'
+          popular ? '   ring-blue-10' : ' ring-gray-10 lg:px-0'
         }`}
       >
         <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
@@ -228,7 +228,7 @@ export const PriceCard = ({
               <p className="text-base font-medium">{ctaText}</p>
             </button>
 
-            <div className="flex w-full flex-col justify-start gap-4 pt-4">
+            <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
               {features.map((feature, index) => {
                 let adjustedIndex = index;
                 if (!isBusiness) {

@@ -233,8 +233,8 @@
       {
         "question": "Can I enable 2FA?",
         "answer": [
-          "You can use Authy or any other 2FA tools to generate a personal 2FA code with Internxt.",
-          "Yes. You can configure two-factor Authentication for your account through the Internxt web app."
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
         ]
       },
       {
@@ -247,8 +247,7 @@
       {
         "question": "Can I pay with Card, PayPal, or Crypto?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, Crypto, Klarna, and others.",
-          "Under request, we also accept, Cryptocurrency and SEPA Debit. If you have doubts about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, Crypto, Klarna, and others."
         ]
       },
       {
