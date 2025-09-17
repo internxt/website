@@ -161,7 +161,7 @@ export const PriceCard = ({
       </div>
 
       <div
-        className={`z-10 h-full rounded-16 border bg-red ${
+        className={`z-10 h-full rounded-16 border ${
           popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'
         }`}
       >
