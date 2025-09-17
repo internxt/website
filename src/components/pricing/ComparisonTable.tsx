@@ -22,7 +22,7 @@ export default function ComparisonTableSection({
 }: Readonly<ComparisonTableProps>): JSX.Element {
   const [scrolled, setScrolled] = useState(false);
 
-  const { billingFrequency } = useBilling();
+  const { billingFrequency = Interval.Year } = useBilling() || {};
 
   useEffect(() => {
     const onScroll = () => {
