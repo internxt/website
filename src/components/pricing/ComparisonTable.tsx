@@ -119,7 +119,7 @@ export default function ComparisonTableSection({
     if (isLastColumn(planIndex)) {
       baseStyles += ' border border-neutral-25 bg-neutral-17 shadow-lg';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += ' rounded-16 outline outline-1 outline-neutral-25';
+        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
       }
     } else if (isSecondToLastColumn(planIndex)) {
       baseStyles += 'border-t-[1px] border-neutral-25';
