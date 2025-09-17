@@ -40,7 +40,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
     },
   ];
 
-  // Función para procesar el texto y convertir el primer espacio en salto de línea
+ 
   const formatText = (text: string) => {
     const firstSpaceIndex = text.indexOf(' ');
     if (firstSpaceIndex === -1) return text;
