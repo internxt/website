@@ -56,7 +56,6 @@ interface PricingSectionWrapperProps {
   isAffiliate?: boolean;
   hideBillingController?: boolean;
 
-
   overrideBillingFrequency?: Interval;
   overrideBusinessBillingFrequency?: Interval;
   overrideActiveSwitchPlan?: SwitchButtonOptions;
@@ -80,7 +79,7 @@ const formatDiscountLabel = (label: string, discountValue: number) => {
 };
 
 const HotLabel = ({ textContent, discountValue }) => {
-  if (!discountValue || discountValue <= MINIMUM_DISCOUNT) {
+  if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
   }
 
@@ -90,7 +89,6 @@ const HotLabel = ({ textContent, discountValue }) => {
     </span>
   );
 };
-
 const PricingHeader = ({ textContent, discountValue, className = '' }) => (
   <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
     <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
@@ -130,7 +128,6 @@ export const PricingSectionWrapper = ({
   startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
 
-
   overrideBillingFrequency,
   overrideBusinessBillingFrequency,
   overrideActiveSwitchPlan,
@@ -142,7 +139,6 @@ export const PricingSectionWrapper = ({
   overrideOnIndividualSwitchToggled,
   overrideOnBusinessSwitchToggled,
 }: PricingSectionWrapperProps): JSX.Element => {
-
   const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
@@ -151,7 +147,6 @@ export const PricingSectionWrapper = ({
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
   );
-
 
   const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
   const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
