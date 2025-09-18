@@ -40,12 +40,6 @@ const FileConverter = ({
 
       <ToolsSection textContent={toolsContent} lang={lang} />
 
-      <CtaSection
-        textContent={textContent.CtaSection2}
-        url="https://drive.internxt.com/new"
-        customText={<p className="w-full text-xl font-normal">{textContent.CtaSection2.description}</p>}
-      />
-
       <QASection textContent={textContent.QASection} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />

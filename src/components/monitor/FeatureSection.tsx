@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { useRouter } from 'next/router';
+
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import Card from '../shared/Card';
 import { RedirectButton } from '../shared/RedirectButton';
@@ -72,27 +72,9 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent, lang }) =>
     },
   ];
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section>
       <div className="my-10 mb-20 flex flex-col items-center space-y-12 md:my-20 md:mb-32">
-        <div className="flex w-full flex-col items-center justify-center px-6 pb-10">
-          <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
-            width={800}
-            height={110}
-            quality={100}
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                '_blank',
-                'noopener noreferrer',
-              )
-            }
-          />
-        </div>
         <div className="mx-auto max-w-full px-4 text-center md:max-w-[774px]">
           <p className="text-3xl font-semibold text-gray-100 md:text-5xl">{textContent.title}</p>
           <p className="mt-6 text-lg font-bold text-gray-100 md:mt-12 md:text-xl">{textContent.description}</p>
@@ -123,23 +105,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent, lang }) =>
             )}
           </div>
         ))}
-      </div>
-      <div className="flex w-full flex-col items-center justify-center px-6 pb-20">
-        <Image
-          src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-          alt="File Arrow Up icon"
-          width={800}
-          height={110}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
       </div>
     </section>
   );

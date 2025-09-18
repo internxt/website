@@ -3,8 +3,7 @@ import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
-import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
+
 const CheckboxButton = ({ checked, id }) => (
   <>
     <div
@@ -40,27 +39,8 @@ const HeroSection = ({ textContent, lang }) => {
   const passwordProperties = { length: 13 };
   const passphraseProperties = { words: 5 };
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32">
-      <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={180}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div>
       <div className="flex w-full flex-col items-center justify-center space-y-10  ">
         <div className="flex flex-col items-center justify-center space-y-16">
           <div className="flex flex-col items-center space-y-5 text-center">
@@ -168,23 +148,6 @@ const HeroSection = ({ textContent, lang }) => {
             )}
           </div>
         </div>
-      </div>
-      <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={180}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
       </div>
     </section>
   );
