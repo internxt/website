@@ -163,6 +163,7 @@ export const PriceCard = ({
       <div
         className={`z-10 h-full w-full rounded-16 bg-white ring-[1px]  ${
           popular ? '   ring-blue-10' : ' ring-gray-10 lg:px-0'
+
         }`}
       >
         <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
