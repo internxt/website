@@ -22,7 +22,7 @@ import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import React from 'react';
 
 const NEW_FEATURE_THRESHOLDS = {
-  BUSINESS: 10,
+  BUSINESS: 11,
   INDIVIDUAL_FIRST_CARD: 9,
   INDIVIDUAL_OTHER_CARDS: 12,
 };
@@ -161,20 +161,21 @@ export const PriceCard = ({
       </div>
 
       <div
-        className={`z-10 h-full rounded-16 border ${
-          popular ? 'w-full border-[1.5px] border-blue-10' : 'border-gray-10'
+        className={`z-10 h-full w-full rounded-16 bg-white ring-[1px]  ${
+          popular ? '   ring-blue-10' : ' ring-gray-10 lg:px-0'
+
         }`}
       >
-        <div className="flex h-full flex-col rounded-16 bg-white py-4 lg:px-6 lg:py-8">
-          <div className="flex h-full w-full flex-col items-center justify-start gap-4">
+        <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
+          <div className="flex h-full w-full flex-col items-center justify-start gap-8 lg:gap-4">
             <p className="text-30 font-semibold lg:text-3xl">{planLabel}</p>
 
             {hasDiscount ? (
-              <div className="flex h-[87px] w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
-                <div className="flex h-[29px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
-                  <span className="flex h-full flex-row items-end gap-1">
-                    <p className="text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
-                    <p className="text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
+              <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
+                <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
+                  <span className="flex h-full flex-row items-end gap-1 ">
+                    <p className="self-start pb-4 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+                    <p className=" text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
                     {isBusiness && (
                       <span className="flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
                     )}
@@ -184,12 +185,10 @@ export const PriceCard = ({
                   </span>
 
                   <span className="flex h-full flex-row items-end">
-                    <p className="h-[26px] items-center self-start pr-1 text-sm font-semibold text-gray-50 lg:pt-2">
+                    <p className="items-center self-start pr-1 pt-1 text-sm font-semibold text-gray-50 lg:pt-0">
                       {currency}
                     </p>
-                    <p className="pb-[1px] pr-[2px] text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">
-                      {originalPrice}
-                    </p>
+                    <p className=" text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">{originalPrice}</p>
                     {isBusiness && <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>}
                     {isAnnual && (
                       <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
@@ -224,13 +223,13 @@ export const PriceCard = ({
               className={`${
                 popular
                   ? 'bg-primary text-white hover:bg-primary-dark'
-                  : 'border-primary bg-white text-primary hover:bg-gray-1'
+                  : 'border-primary bg-transparent text-primary hover:bg-gray-1'
               } flex h-[48px] w-[270px] items-center justify-center rounded-md border-[1.5px] text-base lg:w-[340px]`}
             >
               <p className="text-base font-medium">{ctaText}</p>
             </button>
 
-            <div className="flex w-full flex-col justify-start gap-4 pt-4">
+            <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
               {features.map((feature, index) => {
                 let adjustedIndex = index;
                 if (!isBusiness) {
@@ -262,7 +261,7 @@ export const PriceCard = ({
                       }`}
                     >
                       {Icon && <Icon className="h-6 w-6 text-primary" />}
-                      <span className="flex flex-row pt-[2px] text-sm font-normal text-gray-80">
+                      <span className="flex flex-row pt-[2px] text-base font-normal text-gray-80">
                         {renderText()}
                         {index > newFeatureThreshold && (
                           <p className="ml-2 flex h-min items-center rounded-2 bg-purple-1 px-2 py-0.5 text-center font-semibold text-purple-10 lg:px-1">

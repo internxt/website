@@ -97,7 +97,7 @@ export default function HorizontalScrollableSection({
           }}
         >
           <div
-            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 2xl:pl-[440px]"
+            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-60 2xl:pl-64 2xl:pr-[288px]"
             style={{
               width: 'max-content',
               alignItems: 'stretch',

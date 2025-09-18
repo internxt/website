@@ -40,6 +40,23 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
     },
   ];
 
+ 
+  const formatText = (text: string) => {
+    const firstSpaceIndex = text.indexOf(' ');
+    if (firstSpaceIndex === -1) return text;
+
+    const firstPart = text.substring(0, firstSpaceIndex);
+    const secondPart = text.substring(firstSpaceIndex + 1);
+
+    return (
+      <>
+        {firstPart}
+        <br />
+        {secondPart}
+      </>
+    );
+  };
+
   const FeatureItem = ({
     feature,
     iconSize,
@@ -56,7 +73,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
         size={iconSize}
         className="mb-2 text-primary transition-colors duration-200 hover:text-primary/80"
       />
-      <p className={`${textSize} font-medium text-gray-100`}>{feature.title}</p>
+      <p className={`${textSize} font-medium text-gray-100`}>{formatText(feature.title)}</p>
     </div>
   );
 
@@ -69,7 +86,7 @@ const BestStorageSection = ({ textContent }: BestStorageSectionProps): JSX.Eleme
               key={`desktop-${index}`}
               feature={feature}
               iconSize={32}
-              containerWidth="w-[111px]"
+              containerWidth="w-[370px]"
               textSize="text-lg"
             />
           ))}
