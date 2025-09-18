@@ -17,39 +17,55 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [error, setError] = useState<string | null>(null);
   const uploadFileRef = createRef<HTMLInputElement>();
 
-  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value);
+  const resetDetectionState = () => {
     setDetectionScore(null);
     setError(null);
+  };
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setText(e.target.value);
+    resetDetectionState();
+  };
+
+  const processPdfFile = async (file: File) => {
+    try {
+      const text = await pdfToText(file);
+      setText(text);
+      resetDetectionState();
+    } catch (err) {
+      setError(textContent.error.fileReadError);
+      console.error('Error reading PDF:', err);
+    }
+  };
+
+  const processTextFile = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const fileText = event.target?.result as string;
+      setText(fileText);
+      resetDetectionState();
+    };
+    reader.readAsText(file);
+  };
+
+  const isValidFileType = (file: File): boolean => {
+    return file.type === 'application/pdf' || file.type === 'text/plain' || file.name.endsWith('.txt');
   };
 
   const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
+    if (!isValidFileType(file)) {
+      setError(textContent.error.unsupportedFile);
+      return;
+    }
+
     try {
       if (file.type === 'application/pdf') {
-        pdfToText(file)
-          .then((text: string) => {
-            setText(text);
-            setDetectionScore(null);
-            setError(null);
-          })
-          .catch((err: any) => {
-            setError(textContent.error.fileReadError);
-            console.error('Error reading PDF:', err);
-          });
-      } else if (file.type === 'text/plain' || file.name.endsWith('.txt')) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          const fileText = event.target?.result as string;
-          setText(fileText);
-          setDetectionScore(null);
-          setError(null);
-        };
-        reader.readAsText(file);
+        await processPdfFile(file);
       } else {
-        setError(textContent.error.unsupportedFile);
+        processTextFile(file);
       }
     } catch (err) {
       setError(textContent.error.fileReadError);
@@ -57,23 +73,30 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
     }
   };
 
+  const processApiResponse = (result: any) => {
+    if (!result.success || !result.data) {
+      throw new Error('Invalid response format');
+    }
+
+    const aiPercentage = parseFloat(result.data.fakePercentage);
+    const humanPercentage = Math.round(100 - aiPercentage);
+    setDetectionScore(humanPercentage);
+  };
+
   const handleScan = async () => {
     if (text.length < MIN_CHARS) {
       setError(textContent.error.minChars);
       return;
     }
+
     setIsScanning(true);
     setError(null);
 
     try {
       const response = await fetch('/api/ai-detector', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          input_text: text,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ input_text: text }),
       });
 
       if (!response.ok) {
@@ -81,14 +104,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
       }
 
       const result = await response.json();
-
-      if (result.success && result.data) {
-        const aiPercentage = parseFloat(result.data.fakePercentage);
-        const humanPercentage = Math.round(100 - aiPercentage);
-        setDetectionScore(humanPercentage);
-      } else {
-        throw new Error('Invalid response format');
-      }
+      processApiResponse(result);
     } catch (err) {
       setError(textContent.error.apiError);
       console.error('Error:', err);
@@ -97,8 +113,60 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
     }
   };
 
+  const getProgressBarColor = (score: number): string => {
+    if (score > 60) return 'bg-green-1';
+    if (score > 30) return 'bg-yellow';
+    return 'bg-red';
+  };
+
+  const renderDetectionResult = () => {
+    if (isScanning) {
+      return (
+        <div className="mb-4 flex flex-col items-center">
+          <div className="loader mb-2"></div>
+          <span className="text-lg font-medium text-gray-100">Scanning...</span>
+        </div>
+      );
+    }
+
+    return (
+      <>
+        <div className="mb-4 text-6xl font-semibold text-gray-50">
+          {detectionScore !== null ? <span className="text-semibold text-gray-100">{detectionScore}%</span> : '%'}
+        </div>
+
+        <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
+          {detectionScore !== null && (
+            <div
+              className={`flex h-8 items-center justify-end rounded-full pr-4 text-lg font-bold transition-all duration-500 ${getProgressBarColor(
+                detectionScore,
+              )}`}
+              style={{ width: `${detectionScore}%` }}
+            ></div>
+          )}
+        </div>
+
+        <div className="mb-4 text-xl font-medium text-gray-50">
+          {detectionScore !== null && (
+            <span className="text-semibold text-gray-100">{textContent.humanGeneratedText}</span>
+          )}
+        </div>
+
+        <div className="text-base font-semibold text-gray-50">
+          {detectionScore === null ? (
+            textContent.detectionScore
+          ) : (
+            <div className="text-center text-base font-semibold text-gray-50">
+              {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
+            </div>
+          )}
+        </div>
+      </>
+    );
+  };
+
   return (
-    <section className="relative flex flex-row  items-center justify-center pb-20 pt-32">
+    <section className="relative flex flex-row items-center justify-center pb-20 pt-32">
       <section className="flex flex-col items-center justify-center space-y-6">
         <div className="flex w-full flex-col items-center justify-center space-y-6 pb-10 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
@@ -159,58 +227,7 @@ const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
               {error && <div className="text-red-500 mt-2 text-sm">{error}</div>}
             </div>
             <div className="flex w-full flex-col items-center justify-center rounded-br-2xl rounded-tr-2xl bg-gray-1 p-8 md:w-[320px]">
-              <div className="flex w-full flex-col items-center">
-                {isScanning ? (
-                  <>
-                    <div className="mb-4 flex flex-col items-center">
-                      <div className="loader mb-2"></div>
-                      <span className="text-lg font-medium text-gray-100">Scanning...</span>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="mb-4 text-6xl font-semibold text-gray-50">
-                      {detectionScore !== null ? (
-                        <span className="text-semibold text-gray-100">{detectionScore}%</span>
-                      ) : (
-                        '%'
-                      )}
-                    </div>
-
-                    <div className="relative mb-4 h-8 w-3/4 overflow-hidden rounded-full bg-gray-10 shadow-inner">
-                      {detectionScore !== null && (
-                        <div
-                          className={[
-                            'flex h-8 items-center justify-end rounded-full pr-4 text-lg font-bold transition-all duration-500',
-                            detectionScore > 60 ? 'bg-green-1' : detectionScore > 30 ? 'bg-yellow' : 'bg-red',
-                          ].join(' ')}
-                          style={{
-                            width: `${detectionScore}%`,
-                          }}
-                        ></div>
-                      )}
-                    </div>
-                    <div className="mb-4 text-xl font-medium text-gray-50">
-                      {detectionScore !== null ? (
-                        <span className="text-semibold text-gray-100">{textContent.humanGeneratedText}</span>
-                      ) : (
-                        ''
-                      )}
-                    </div>
-                    <div className="text-base font-semibold text-gray-50">
-                      {detectionScore === null ? (
-                        textContent.detectionScore
-                      ) : (
-                        <>
-                          <div className=" text-center text-base font-semibold text-gray-50">
-                            {detectionScore >= 50 ? textContent.likelyHumanText : textContent.likelyAiText}
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </>
-                )}
-              </div>
+              <div className="flex w-full flex-col items-center">{renderDetectionResult()}</div>
             </div>
           </div>
         </div>
