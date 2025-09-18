@@ -58,7 +58,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% sconto",
     "planTitles": {
+      "header": "Scegli il tuo piano",
       "business": "Piani aziendali"
     },
     "businessDescription2": "Garantisci la sicurezza dei dati aziendali con i piani di archiviazione cloud crittografati di Internxt.",

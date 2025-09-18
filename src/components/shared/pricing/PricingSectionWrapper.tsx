@@ -1,12 +1,11 @@
 import { Interval, ProductsDataProps } from '@/services/stripe.service';
-import { usePlanSelection } from '@/hooks/usePlanSelection';
 import { PricingSection } from './PricingSection';
 import { SwitchButtonOptions, SwitchStorageOptions } from './components/PlanSelector';
 import { PromoCodeProps } from '@/lib/types';
 import { ReactNode } from 'react';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
-import { PricingText } from '@/assets/types/pricing';
+import { usePlanSelection } from '@/hooks/usePlanSelection';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -56,6 +55,18 @@ interface PricingSectionWrapperProps {
   showPromo?: boolean;
   isAffiliate?: boolean;
   hideBillingController?: boolean;
+
+
+  overrideBillingFrequency?: Interval;
+  overrideBusinessBillingFrequency?: Interval;
+  overrideActiveSwitchPlan?: SwitchButtonOptions;
+  overrideActiveStoragePlan?: SwitchStorageOptions;
+  overrideActiveBusinessStoragePlan?: SwitchStorageBusinessOptions;
+  overrideOnPlanTypeChange?: (plan: SwitchButtonOptions) => void;
+  overrideOnStorageChange?: (storage: SwitchStorageOptions) => void;
+  overrideOnBusinessStorageChange?: (storage: SwitchStorageBusinessOptions) => void;
+  overrideOnIndividualSwitchToggled?: (interval: Interval) => void;
+  overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -74,7 +85,7 @@ const HotLabel = ({ textContent, discountValue }) => {
   }
 
   return (
-    <span className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
+    <span className="flex rounded-sm bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
       {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
     </span>
   );
@@ -93,11 +104,6 @@ export const PricingSectionWrapper = ({
   lang,
   loadingCards,
   hidePlanSelectorAndSwitch,
-  startIndividualPlansFromInterval = Interval.Lifetime,
-  startBusinessPlansFromInterval = Interval.Year,
-  startFromPlan = 'Lifetime',
-  startFromStorage = 'Premium',
-  startFromBusinessStorage = 'Pro',
   hideBusinessSelector,
   hideBusinessCards,
   hidePlanSelectorComponent,
@@ -110,7 +116,6 @@ export const PricingSectionWrapper = ({
   isFamilyPage,
   hideFeatures,
   onCheckoutButtonClicked,
-  handlePageNameUpdate,
   onBusinessPlansSelected,
   darkMode,
   isAnnual,
@@ -118,19 +123,27 @@ export const PricingSectionWrapper = ({
   isAffiliate,
   hideBillingController = DEFAULTS.hideBillingController,
   hideFreeCard,
+  startIndividualPlansFromInterval = Interval.Lifetime,
+  startBusinessPlansFromInterval = Interval.Year,
+  startFromPlan = 'Lifetime',
+  startFromStorage = 'Premium',
+  startFromBusinessStorage = 'Pro',
+  handlePageNameUpdate,
+
+
+  overrideBillingFrequency,
+  overrideBusinessBillingFrequency,
+  overrideActiveSwitchPlan,
+  overrideActiveStoragePlan,
+  overrideActiveBusinessStoragePlan,
+  overrideOnPlanTypeChange,
+  overrideOnStorageChange,
+  overrideOnBusinessStorageChange,
+  overrideOnIndividualSwitchToggled,
+  overrideOnBusinessSwitchToggled,
 }: PricingSectionWrapperProps): JSX.Element => {
-  const {
-    activeSwitchPlan,
-    activeStoragePlan,
-    activeBusinessStoragePlan,
-    billingFrequency,
-    businessBillingFrequency,
-    onPlanTypeChange,
-    onStorageChange,
-    onBusinessStorageChange,
-    onIndividualSwitchToggled,
-    onBusinessSwitchToggled,
-  } = usePlanSelection(
+
+  const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
     startFromBusinessStorage,
@@ -139,7 +152,19 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
 
-  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
+
+  const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
+  const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
+  const activeBusinessStoragePlan = overrideActiveBusinessStoragePlan ?? localPlanSelection.activeBusinessStoragePlan;
+  const billingFrequency = overrideBillingFrequency ?? localPlanSelection.billingFrequency;
+  const businessBillingFrequency = overrideBusinessBillingFrequency ?? localPlanSelection.businessBillingFrequency;
+  const onPlanTypeChange = overrideOnPlanTypeChange ?? localPlanSelection.onPlanTypeChange;
+  const onStorageChange = overrideOnStorageChange ?? localPlanSelection.onStorageChange;
+  const onBusinessStorageChange = overrideOnBusinessStorageChange ?? localPlanSelection.onBusinessStorageChange;
+  const onIndividualSwitchToggled = overrideOnIndividualSwitchToggled ?? localPlanSelection.onIndividualSwitchToggled;
+  const onBusinessSwitchToggled = overrideOnBusinessSwitchToggled ?? localPlanSelection.onBusinessSwitchToggled;
+
+  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
 
   const commonPricingProps = {
     textContent,

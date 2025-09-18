@@ -58,7 +58,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% remise",
     "planTitles": {
+      "header": "Choisissez votre plan",
       "business": "Plans d'entreprise"
     },
     "businessDescription2": "Assurez la sécurité des données de l'entreprise avec les plans de stockage cloud crypté d'Internxt.",

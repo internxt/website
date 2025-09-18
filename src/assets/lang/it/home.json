@@ -53,8 +53,9 @@
   },
   "tableSection": {
     "title": "Piani Internxt",
+    "hotLabel": "{{discount}}% sconto",
     "planTitles": {
-      "individuals": "Piani annuale ",
+      "header": "Scegli il tuo piano",
       "homePage": "Scegli il piano giusto per te",
       "lifetime": "Piani a vita",
       "business": "Piani business",
