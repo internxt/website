@@ -51,7 +51,9 @@
   },
   "tableSection": {
     "title": "Internxt方案",
+    "hotLabel": "{{discount}}% 折扣 ",
     "planTitles": {
+      "header": " 選擇您的計劃",
       "individuals": "年度方案",
       "homePage": "選擇適合您的方案",
       "lifetime": "終身方案",

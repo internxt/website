@@ -56,7 +56,9 @@
   },
   "tableSection": {
     "title": "Forfaits Internxt",
+    "hotLabel": "{{discount}}% remise",
     "planTitles": {
+      "header": "Choisissez votre plan",
       "individuals": "Forfaits Annuels",
       "homePage": "Choisissez le bon forfait pour vous",
       "lifetime": "Forfaits À Vie",

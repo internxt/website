@@ -56,7 +56,9 @@
   },
   "tableSection": {
     "title": "Тарифы Internxt",
+    "hotLabel": "{{discount}}% скидка ",
     "planTitles": {
+      "header": " Выберите свой план",
       "individuals": "Годовые тарифы",
       "homePage": "Выберите подходящий вам тариф",
       "lifetime": "Пожизненные тарифы",
