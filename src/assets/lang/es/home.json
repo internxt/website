@@ -41,7 +41,7 @@
     "title": "Pásate a un **internet** más **ético**, **privado** y **seguro**",
     "subtitle": "Así es Internxt - Tu aliado digital fiable",
     "description": "{{discount}}% de descuento",
-    "descriptionNormal": "en todos los planes de por vida",
+    "descriptionNormal": "en todos los planes",
     "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "startFrom": {
       "normal1": "Desde ",
@@ -53,7 +53,9 @@
   },
   "tableSection": {
     "title": "Planes de Internxt",
+    "hotLabel": "{{discount}}% de descuento",
     "planTitles": {
+      "header": "Elige tu plan",
       "individuals": "Planes Anuales",
       "homePage": "Elige el plan adecuado para ti",
       "lifetime": "Planes de por vida",

@@ -41,7 +41,7 @@
     "title": "**預設私密**，**安全設計**，**天然自由**",
     "subtitle": "這就是 Internxt - 安全的雲端儲存及更多服務",
     "description": "立即享受 {{discount}}% 折扣",
-    "descriptionNormal": "適用於所有終身方案",
+    "descriptionNormal": "在各个方面",
     "features": ["完整隱私套件", "後量子加密", "開源且經過稽核"],
     "startFrom": {
       "normal1": "起價 ",
@@ -53,8 +53,9 @@
   },
   "tableSection": {
     "title": "Internxt 方案",
+    "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
-      "individuals": "個人方案",
+      "header": "选择您的计划 ",
       "homePage": "選擇適合您的方案",
       "lifetime": "終身方案",
       "business": "企業方案",

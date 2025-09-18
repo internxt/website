@@ -41,7 +41,7 @@
     "title": "Passez à un **internet** plus **éthique**, **privé** et **sécurisé**",
     "subtitle": "Voici Internxt - Votre allié numérique de confiance",
     "description": "Obtenez {{discount}}% de réduction ",
-    "descriptionNormal": "sur tous les plans à vie",
+    "descriptionNormal": "sur tous les plans",
     "features": ["Suite numérique privée", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {
       "normal1": "À partir de ",
@@ -54,8 +54,9 @@
 
   "tableSection": {
     "title": "Plans Internxt",
+    "hotLabel": "{{discount}}% remise",
     "planTitles": {
-      "individuals": "Plans annuel ",
+      "header": "Choisissez votre plan",
       "homePage": "Choisissez le plan qui vous convient",
       "lifetime": "Plans à vie",
       "business": "Plans entreprise",

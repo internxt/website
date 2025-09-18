@@ -52,7 +52,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% 折扣 ",
     "planTitles": {
+      "header": " 選擇您的計劃",
       "business": "企業計劃"
     },
     "businessDescription2": "通過 Internxt 的加密雲端存儲計劃確保企業數據安全。",

@@ -1,304 +1,542 @@
 {
-  "HeroSection": {
-    "title": {
-      "line1": "八折优惠",
-      "line2": "我们的年度计划"
-    },
-    "lifetimeTitle": {
-      "line1": "获得",
-      "blueText": "终身",
-      "line2": " Internxt 计划！"
-    },
-    "feeds": {
-      "firstFeed": "30天退款保证",
-      "secondFeed": "100%安全支付",
-      "thirdFeed": "匿名账户创建"
-    },
-    "cta": {
-      "title": "八折优惠",
-      "description": "优惠有效期为一年。 计划将在下一年以非折扣价续订。"
-    }
-  },
-  "HeroSectionAlternative": {
-    "title": "您需要多少在线存储空间？",
-    "description": "选择数量以查看适合您需求的计划。",
-    "cta": "找到您的理想计划",
-    "features": ["最安全的云存储", "匿名账户创建", "军用级加密", "您的数据不会被出售"]
-  },
-  "PriceTableForAlternativePricing": {
-    "title": {
-      "normal1": "享受 ",
-      "blue2": "{{discount}}% 折扣 ",
-      "normal2": "的最安全云存储"
-    },
-    "howMuchStorage": "您需要多少在线存储空间？",
-    "description": "使用价格实惠的军用级加密云存储保护您的工作和个人文件。",
-    "features": ["最安全的云存储", "比其他选择更便宜", "30天退款保证"],
-    "offerEnds": "优惠结束于:"
-  },
   "tableSection": {
-    "title": "Internxt 方案",
-    "ctaBanner": {
-      "label": "立省{{discount}}%",
-      "title": "所有方案享优惠！",
-      "subtitle": "庆祝 Internxt 五周年",
-      "subtitle2": "庆祝 Internxt 五周年",
-      "subtitle3": "Meet、Mail、清理工具和暗网监控",
-      "cta": "选择方案",
-      "cta2": "立享{{discount}}%折扣",
-      "guarantee": "30天退款保证",
-      "gift": "抽奖赢瓦伦西亚签名球衣",
-      "lastCta": "*适用于免费或新账户"
-    },
-    "save": "省高达",
+    "title": "Internxt 计划",
+    "hotLabel": "{{discount}}% 折扣",
     "planTitles": {
-      "header": {
-        "individuals": "个人计划",
-        "lifetime": "终身计划",
-        "business": "商业计划"
-      },
-      "lifetimeCampaign": {
-        "blueText": "五折优惠",
-        "normalText": "我们的所有独家终身计划"
-      },
-      "blackFriday": {
-        "title": "黑色星期五超级促销：最安全的云存储方案立享{{discount}}%折扣",
-        "description": "使用 Internxt 保护您的数据，避免数据泄露、财务损失和隐私风险。告别那些从您的个人信息中牟利的科技巨头。"
-      }
+      "header": "选择您的计划 ",
+      "individuals": "年度计划",
+      "lifetime": "终身计划",
+      "business": "商业计划"
     },
-    "lifetimeDescription": "购买一次，永远获得隐私和安全。",
-    "planDescription": "所有Internxt计划都提供对我们私人解决方案包的完全访问，其中包含最新的安全技术：Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor,Meet和Mail。",
-    "businessDescription": "我们目前正在开发新的 Internxt 计划，专为保护您的业务、保护您的员工和确保您的利润而设计。",
-    "businessDescription2": "通过 Internxt 的加密云存储计划确保企业数据安全。",
+    "lifetimeDescription": "一次付费，永享隐私和安全。",
+    "planDescription": "所有 Internxt 计划都包含完整功能，完全访问我们屡获殊荣的隐私工具套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitoring、Meet 和 Mail。",
+    "businessDescription": "我们目前正在开发新的 Internxt 计划，专门设计用于保护您的业务、保护您的员工并确保您的成果。",
+    "businessDescription2": "使用 Internxt 的加密云存储计划确保企业数据安全。",
     "billingFrequency": {
-      "monthly": "月度",
-      "semiannually": "Semiannually",
-      "annually": "每年一次",
-      "lifetime": "终身",
+      "monthly": "每月",
+      "annually": "每年",
       "individual": "个人",
+      "lifetime": "终身",
       "business": "商业"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
-      "description": "免费 – 免费获取 1GB 加密云存储",
-      "mobileDescription": "免费 – 免费获取 1GB 加密云存储",
-      "cta": "选择方案"
+      "eyeBrow": "免费",
+      "description": "获取 1GB 免费加密云存储",
+      "mobileDescription": "获取高达 1GB 的加密云存储，享受我们的私人生态系统",
+      "cta": "选择计划"
     },
     "features": {
       "endToEnd": "端到端加密",
-      "openSource": "开源并已审核",
+      "openSource": "开源且经过验证",
       "anonymousAccount": "匿名账户创建",
       "premiumSupport": "高级客户支持",
-      "guarantee": "30 天退款保证"
+      "guarantee": "30天退款保证"
     },
+    "individuals": "年度",
     "planStorage": {
       "essential": "1TB",
       "premium": "3TB",
       "ultimate": "5TB"
     }
   },
-  "InfoSection": {
-    "title": "安全的云存储，拥有无与伦比的隐私",
-    "description": "是什么让 Internxt 如此特别？ 我们是一个紧密团结的专业团队，完全致力于保护您的在线安全。 我们所做的一切和做出的每一个决定都以保护您的数据不被利用为中心。",
-    "cta": "Internxt 对隐私的承诺",
-    "scrollableSection": {
-      "titles": ["为隐私而生", "不妥协的安全", "开源和透明化", "经独立验证"],
-      "descriptions": [
-        "我们不存储密码或用户数据，你的所有数据在传输途中和闲置时都被加密。Internxt让你完全控制你的文件。你的数据是你的业务。保护它是我们的事。",
-        "你的文件在离开你的设备之前就已经被分割和端到端加密了。由于采用了零知识架构的AES-256加密，你绝对是唯一能够访问你的数据的人。",
-        "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。",
-        "我们完全符合GDPR标准和100%安全。行动胜于语言，Internxt已被欧洲领先的渗透测试公司Securitum独立审计和验证。"
-      ]
-    }
-  },
-  "InfoSectionForBusiness": {
-    "title": "使用 Internxt 可以做什么？",
-    "description": "使用我们的安全云存储为企业优化您的组织文件管理、安全性和隐私性。",
-    "cta": "",
-    "cards": [
+  "ComparisonTable": {
+    "title": "计划和功能",
+    "cta": "开始",
+    "billedAnnualy": "年度计费",
+    "billedOnce": "一次性付款",
+    "plans": [
       {
-        "title": "管理您的组织",
-        "description": "Internxt 为企业提供了简化的用户和团队管理、灵活的存储分配和可自定义的工作区。轻松切换业务和个人任务以优化生产力和组织性。"
+        "id": "Essential",
+        "name": "Essential",
+        "order": 0
       },
       {
-        "title": "安全发送机密文件",
-        "description": "安全的云存储包括安全的文件共享功能，以便在团队中安全协作。使用密码保护和限制文件访问权限，将机密文件发送给合作伙伴，确保您保持对其安全性的控制。"
+        "id": "Premium",
+        "name": "Premium",
+        "order": 1
       },
       {
-        "title": "备份重要文件",
-        "description": "备份文件以防止数据丢失。此外，Internxt 在不同的欧盟服务器上存储和备份同一份文件，以增加安全性，使其成为最安全的企业云备份。"
+        "id": "Ultimate",
+        "name": "Ultimate",
+        "order": 2
+      }
+    ],
+    "categories": [
+      {
+        "name": "存储",
+        "features": [
+          {
+            "id": "storage_Essential",
+            "name": "1TB",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Premium",
+            "name": "3TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "storage_Ultimate",
+            "name": "5TB",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
       },
       {
-        "title": "随时随地与团队合作",
-        "description": "适用于 Windows、Mac、Linux、iOS、Android 和 Web。随时随地在任何设备上访问文件，确保您和您的团队无论身在何处都能安全工作。"
+        "name": "应用程序和可访问性",
+        "features": [
+          {
+            "id": "linux_windows_macos_app",
+            "name": "Linux、Windows 和 macOS 应用程序",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "android_ios_app",
+            "name": "iOS 和 Android 应用程序",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "web_app",
+            "name": "Web 应用程序",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "隐私和安全",
+        "features": [
+          {
+            "id": "zero_knowledge_architecture",
+            "name": "零知识加密",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "post_quantum_encryption",
+            "name": "后量子加密",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "gdpr_compliance",
+            "name": "GDPR 合规",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "hipaa_compliance",
+            "name": "HIPAA 合规",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "iso27001_compliance",
+            "name": "ISO 27001 合规",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "soc2_compliance",
+            "name": "SOC 2 合规",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Two_factor_authentication",
+            "name": "双重身份验证 (2FA)",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "pentesting_audited",
+            "name": "渗透测试和已验证",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "VPN",
+        "features": [
+          {
+            "id": "vpn_Essential",
+            "name": "法国",
+            "avalability": {
+              "Essential": true,
+              "Premium": false,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Premium",
+            "name": "法国、德国、波兰",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": false
+            }
+          },
+          {
+            "id": "vpn_Ultimate",
+            "name": "法国、德国、波兰、加拿大、英国",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "支持和服务",
+        "features": [
+          {
+            "id": "premium_customer_support",
+            "name": "高级客户支持",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "高级工具",
+        "features": [
+          {
+            "id": "antivirus",
+            "name": "杀毒软件",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "File_backups",
+            "name": "文件备份",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Password-protected-sharing",
+            "name": "密码保护共享",
+            "avalability": {
+              "Essential": true,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Invite_share_&_collaborate",
+            "name": "邀请、共享和协作",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Cleaner",
+            "name": "清理器",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "Dark_Web_Monitor",
+            "name": "暗网监控",
+            "avalability": {
+              "Essential": false,
+              "Premium": true,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "cli_webdav_support",
+            "name": "CLI 和 WebDAV 支持",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "NAS_&_Rclone_support",
+            "name": "NAS 和 Rclone 支持",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "meet",
+            "name": "Meet",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          },
+          {
+            "id": "mail",
+            "name": "Mail",
+            "avalability": {
+              "Essential": false,
+              "Premium": false,
+              "Ultimate": true
+            }
+          }
+        ]
       }
     ]
   },
-  "FirstWhatWeDoSection": {
-    "card1": {
-      "title": "私下的核心",
-      "description": "在我们所做的一切中，我们把用户和他们的权利放在第一位。我们的使命很简单，就是创造更好的工具和服务，把机构还给最终用户。",
-      "cta": "我们对隐私的承诺"
-    },
-    "card2": {
-      "title": "一个无缝的体验",
-      "description": "Internxt可以在所有平台上使用，甚至是Linux! 用我们的移动、网络和桌面应用来同步你的文件和照片，每一个应用都是为了在旅途中为你的加密存储提供超强的动力。",
-      "cta": "下载应用程序"
-    },
-    "card3": {
-      "title": "免费试用Internxt!",
-      "description": "免费获得高达10GB的存储空间，在全身心投入之前看看隐私是否适合你! 2GB用于创建账户，然后将你的免费存储空间扩展到完整的10GB，用于帮助宣传。",
-      "cta": "创建免费账户"
-    }
-  },
-  "BestStorageSection": {
-    "title": "为未来而生",
-    "description": "我们希望建立一个更好的万维网，一个对所有人都公平、安全和公正的网络。互联网隐私的未来之战正在激烈进行，而我们正处于前线。",
-    "card1": {
-      "title": "分布式存储"
-    },
-    "card2": {
-      "title": "AES 256 CTR 加密协议"
-    },
-    "card3": {
-      "title": "内置冗余功能"
-    },
-    "card4": {
-      "title": "代码开源"
-    },
-    "card5": {
-      "title": "已经过独立审计"
-    }
-  },
-  "lastCtaSection": {
-    "title": "世界上最隐私的云存储",
-    "description": "用Internxt的安全、隐私和加密的云存储来保护真正重要的东西",
-    "cta": "现在选择一个计划"
-  },
   "FaqSection": {
-    "title": "有问题吗？我们有答案",
+    "title": "Вопросы? У нас есть ответы",
     "faq": [
       {
-        "question": "Internxt可以访问我的文件吗？",
+        "question": "Может ли Internxt получить доступ к моим файлам?",
         "answer": [
-          "不，Internxt和任何其他第三方都不能访问你的文件、照片或数据。",
-          "Internxt的服务具有零知识加密的特点，这意味着只有你能真正访问你的私人数据。此外，Internxt的架构在加密前会对你的文件进行分割，所以服务器永远不会持有整个文件，而只是一个加密的碎片，只有你能解密。"
+          "Нет. Internxt, как и любая другая третья сторона, не может получить доступ к вашим файлам, фотографиям или данным.",
+          " Сервисы Internxt используют шифрование с нулевым разглашением, что означает, что только вы можете действительно получить доступ к своим частным данным. Кроме того, архитектура Internxt фрагментирует ваши файлы перед их шифрованием, поэтому сервер никогда не содержит целый файл, а только зашифрованный фрагмент, который можете расшифровать только вы."
         ]
       },
       {
-        "question": "Internxt是否存储我的密码？",
+        "question": "Хранит ли Internxt мой пароль?",
         "answer": [
-          "没有。因此，Internxt不会（也不能）存储你的密码。",
-          "你的Internxt密码对你来说是独一无二的，用于加密和解密你的Internxt数据。但如果你想修改你的密码，你可以在我们的应用程序中做到。"
+          "Нет. Поэтому Internxt не хранит (и не может хранить) ваш пароль.",
+          "Ваш пароль Internxt уникален для вас и используется для шифрования и расшифровки ваших данных Internxt. Но если вы хотите изменить пароль, вы можете сделать это через наше приложение."
         ]
       },
       {
-        "question": "我可以启用2FA吗？",
+        "question": "Могу ли я включить 2FA?",
         "answer": [
-          "是的，你可以通过Internxt web应用为你的账户配置双因素认证。",
-          "你也可以使用Authy或任何其他2FA工具，用Internxt生成一个个人2FA代码。"
+          "Вы можете использовать Authy или любой другой инструмент 2FA для генерации персонального 2FA-кода с Internxt.",
+          "Да. Вы можете настроить двухфакторную аутентификацию для вашего аккаунта через веб-приложение Internxt."
         ]
       },
       {
-        "question": "我如何创建一个Internxt账户？",
+        "question": "Как создать аккаунт Internxt?",
         "answer": [
-          "要创建一个免费的Internxt账户，只需点击上面的最佳计划并按照指示操作。",
-          "或前往我们的主页，点击 \"开始\"。在那里，你将立即获得10GB的终身免费存储空间，并获得免费的Internxt会员资格。你可以在我们所有的服务中使用你的免费会员资格。要注册，只需输入一个名字和电子邮件地址。在开始使用Internxt的服务时，不需要身份或电子邮件验证。"
+          "Чтобы создать бесплатный аккаунт Internxt, просто нажмите на лучший план выше и следуйте инструкциям.",
+          "Или перейдите на нашу главную страницу и нажмите \"Начать\". Там вы мгновенно получите 1 ГБ бесплатного хранилища на всю жизнь с бесплатным членством Internxt. Вы можете использовать свое бесплатное членство во всех наших сервисах. Для регистрации просто введите имя и адрес электронной почты. Для начала использования сервисов Internxt не требуется подтверждение личности или электронной почты."
         ]
       },
       {
-        "question": "我可以用信用卡、PayPal或加密货币支付吗？",
+        "question": "Могу ли я платить картой, PayPal или криптовалютой?",
         "answer": [
-          "Internxt目前接受借记卡和信用卡（万事达卡、VISA卡、美国运通卡等）。你也可以通过苹果和谷歌支付。我们不接受PayPal支付。",
-          "根据要求，我们也接受iDeal、加密货币、Bancontact、EPS、Giropay、SEPA借记、P24和Sofort。要使用上述替代方法之一索取发票，只需向我们发送电子邮件，hello@internxt.com。"
+          "Internxt в настоящее время принимает дебетовые и кредитные карты (Mastercard, VISA, American Express и др.). Вы также можете платить через PayPal, криптовалюты, Klarna и другими способами.",
+          "По запросу мы также принимаем криптовалюты и SEPA прямое дебетование. Если у вас есть вопросы о способах оплаты, просто напишите нам на [hello@internxt.com](mailto:hello@internxt.com)."
         ]
       },
       {
-        "question": "Internxt的退款政策是什么？退款保证？",
+        "question": "Какова политика возврата средств Internxt?",
         "answer": [
-          "Internxt在其所有付费订阅中提供标准的30天退款保证，从你订阅时就开始计算。",
-          "如果你对我们的服务不满意，请用英语联系我们，hello@internxt.com，要求退款。我们将尊重你的要求，不问任何问题！"
+          "Internxt предлагает стандартную 30-дневную гарантию возврата денег на все платные подписки, которая начинает действовать с момента подписки.",
+          "И если вы когда-либо будете недовольны нашим сервисом, свяжитесь с нами по адресу [hello@internxt.com](mailto:hello@internxt.com) и запросите возврат средств."
         ]
       },
       {
-        "question": "我怎样才能取消我的订阅？",
+        "question": "Как я могу отменить подписку?",
         "answer": [
-          "取消你的订阅是非常直接的，可以通过Internxt应用程序轻松完成，进入设置并删除你的账户。这将终止你的订阅和你的账户。",
-          "如果你想取消付费计划并继续使用我们的免费服务，你可以给我们发电子邮件：hello@internxt.com，我们会处理取消订阅的事宜，这样你就可以在我们的免费计划中保持你的账户存在。"
+          "Отмена подписки очень проста и может быть легко выполнена через приложение Internxt, перейдя в настройки и удалив свой аккаунт. Это завершит вашу подписку и ваш аккаунт.",
+          "Если вы хотите отменить платный план и остаться с нашим бесплатным сервисом, вы можете написать нам на [hello@internxt.com](mailto:hello@internxt.com), и мы обработаем отмену подписки, чтобы вы могли сохранить свой аккаунт активным на нашем бесплатном плане."
         ]
       },
       {
-        "question": "我如何联系技术支持？",
-        "answer": ["找不到你要找的东西？你可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的客户成功团队。"]
-      },
-      {
-        "question": "Internxt计划的费用是多少？",
-        "answer": ["需要更多的存储空间？我们也提供个人计划，范围从20GB到2TB，低至0.89欧元/月。"]
-      },
-      {
-        "question": "Internxt是否有终身计划？",
+        "question": "Как связаться с поддержкой?",
         "answer": [
-          "我们提供终身计划，你可以从我们的网站购买。这些授予你终身访问我们的计划，有高达10TB的存储空间，只需一次性付款。"
+          "Не можете найти то, что ищете? Вы можете связаться с нашей командой поддержки клиентов через онлайн-чат или отправив электронное письмо на [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Что такое пожизненные планы Internxt?",
+        "answer": [
+          "Мы предлагаем пожизненные планы, которые вы можете приобрести на нашем веб-сайте. Они предоставляют вам пожизненный доступ к нашим планам за единовременную оплату. Наслаждайтесь до 5 ТБ хранилища на всю жизнь с единовременной оплатой."
+        ]
+      },
+      {
+        "question": "Могу ли я добавить больше места к моему пожизненному плану?",
+        "answer": [
+          "Да, вы можете добавить до 100 ТБ хранилища к вашему пожизненному членству Internxt. Пожизненные планы Internxt суммируются. Просто покупайте их с тем же адресом электронной почты, и хранилище будет автоматически добавлено к вашему аккаунту."
+        ]
+      },
+      {
+        "question": "Могу ли я разделить мой пожизненный платеж?",
+        "answer": [
+          "Да, теперь вы можете разделить ваши пожизненные платежи на несколько беспроцентных взносов, используя Klarna. Наслаждайтесь пожизненным планом с удобством оплаты его легкими взносами!"
         ]
       }
     ]
   },
   "FaqSectionForBusiness": {
-    "title": "有问题吗？我们有答案",
+    "title": "有疑问？我们有答案",
     "faq": [
       {
-        "question": "什么是 Internxt for business？",
+        "question": "什么是 Internxt 商业版？",
         "answer": [
-          "我们的企业云存储为各种规模的公司提供安全的云存储解决方案，保护企业文件免遭数据泄露。企业计划包括访问 Internxt Drive、VPN 和 Send 以及我们即将推出的新产品 Internxt Mail 和 Meet。"
+          "我们的商业云存储为任何规模的公司提供安全的云存储解决方案，保护企业文件免受数据泄露。商业计划包括访问 Internxt Drive、VPN 和 Send，以及我们即将推出的新产品 Internxt Mail 和 Meet。"
         ]
       },
       {
-        "question": "Internxt 是我企业的合适云存储吗？",
+        "question": "Internxt 是适合我业务的云存储吗？",
         "answer": [
-          "Internxt 适用于所有人，包括任何规模的企业，这些企业正在寻找安全的云存储解决方案，以确保个人和机密信息的隐私。",
-          "我们的加密产品套件包括需要共享文件或文件夹而无需担心数据泄露的公司的最高行业安全标准。"
+          "Internxt 为每个人设计，包括任何规模的寻求安全云存储解决方案的公司，保持个人和机密信息的私密性。",
+          "我们的加密产品套件包括行业内最高的安全标准，适用于需要共享文件或文件夹而无需担心数据泄露的企业。"
         ]
       },
       {
         "question": "Internxt 比其他云存储服务更安全吗？",
         "answer": [
-          "与大科技公司不同，Internxt 被信任提供安全的企业文件存储，因为您的企业数据在您的设备上被加密，以实现最大的安全性。",
-          "为了防止数据泄露的威胁，Internxt 提供了额外的安全措施，包括加密文件共享、两因素身份验证、密码生成器等。"
+          "与大型科技公司不同，Internxt 为企业提供安全文件存储值得信赖，因为您公司的数据在您的设备上加密以实现最大安全性。",
+          "为了防止数据泄露威胁，Internxt 提供额外的安全措施，包括加密文件共享、双重身份验证、密码生成器等。"
         ]
       },
       {
-        "question": "如果达到我的计划存储限制怎么办？",
+        "question": "如果我达到计划的存储限制会怎样？",
         "answer": [
-          "我们的计划完全灵活，可以满足您的业务需求。您可以根据需要轻松添加更多用户或升级存储容量，确保可扩展性和成本效益。"
+          "我们的计划完全灵活，可满足您业务的需求。您可以根据需要轻松添加更多用户或升级存储容量，确保可扩展性和成本效益。"
         ]
       },
       {
         "question": "您提供什么级别的技术支持？",
         "answer": [
-          "我们有一个专门的客户支持团队，可以回答任何问题或疑虑，或根据您的需要提供额外的信息。您可以访问我们的帮助中心或通过 [hello@internxt.com](mailto:hello@internxt.com) 联系我们，我们的团队将很乐意为您提供帮助。"
+          "我们有专门的客户服务团队，可以回答任何问题或疑虑，或根据您的需求提供其他信息。您可以访问我们的帮助中心或通过 [hello@internxt.com](mailto:hello@internxt.com) 联系我们，我们的团队将很乐意为您提供帮助。"
         ]
       }
     ]
-  },
-  "CtaSection": {
-    "title": "尝试Internxt无风险",
-    "description": "注册并免费获得高达10GB的Internxt端到端加密云存储",
-    "cta": "创建免费账户"
   },
   "SchemaMarkupQuestions": {
     "faq": [
       {
-        "question": "How much does an Internxt plan cost?",
+        "question": "Internxt 有终身计划吗？",
         "answer": [
-          "Need more storage? We also offer Annual Plans that range from 20GB to 2TB, from as low as €0.89/month."
+          "我们提供可从我们网站购买的终身计划。这些计划通过一次性付款为您提供多达 10TB 存储空间的终身访问权限。"
         ]
       },
       {
-        "question": "Does Internxt have lifetime plans?",
+        "question": "我可以为我的终身计划添加更多存储空间吗？",
         "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, with up to 10TB of storage, for a one-time payment."
+          "是的，您可以为您的终身 Internxt 订阅添加任意数量的存储空间。Internxt 的终身计划是可累积的。只需使用相同的电子邮件地址购买，并通过 [hello@internxt.com](mailto:hello@internxt.com) 联系我们，以便我们可以将它们合并到同一个账户中。"
         ]
       }
     ]
+  },
+
+  "InfoSectionForBusiness": {
+    "title": "您可以用 Internxt 做什么？",
+    "description": "使用我们的安全商业云存储简化您组织的文件管理、安全性和隐私。",
+    "cta": "",
+    "cards": [
+      {
+        "title": "管理您的组织",
+        "description": "Internxt 通过简化的用户和团队管理、灵活的存储分配和可定制的工作空间为企业赋能。在业务和个人任务之间无缝切换，优化生产力和组织。"
+      },
+      {
+        "title": "安全发送机密文件",
+        "description": "安全云存储包括安全文件共享功能，用于安全的团队协作。使用密码保护并限制对文件的访问，以向合作伙伴发送机密文件，确保您保持对其安全性的控制。"
+      },
+      {
+        "title": "备份重要内容",
+        "description": "备份您的文件以防止数据丢失。此外，Internxt 在不同的欧盟服务器上存储和备份您文件的相同副本，以获得额外安全性，使其成为您业务最安全的云备份。"
+      },
+      {
+        "title": "与您的团队从任何地方工作",
+        "description": "适用于 Windows、Mac、Linux、iOS、Android 和 Web。从任何设备随时访问您的文件，确保您和您的团队无论身在何处都能安全工作。"
+      }
+    ]
+  },
+  "InfoSection": {
+    "title": "具有无与伦比隐私的安全云存储",
+    "description": "是什么让 Internxt 如此特别？我们是一个由专业人士组成的团结团队，完全致力于您的在线保护。我们所做的一切和我们做出的每一个决定都专注于保护您的数据免受剥削。",
+    "cta": "Internxt 对隐私的承诺",
+    "scrollableSection": {
+      "titles": ["设计即私密", "毫不妥协的安全", "开源且透明", "独立验证"],
+      "descriptions": [
+        "我们不存储密码或用户数据，您的所有数据在传输和静止时都是加密的。Internxt 让您完全控制您的文件。您的数据是您的事。保护它们是我们的事。",
+        "您的文件在离开设备之前就经过端到端加密。借助 AES-256 零知识加密，您绝对是唯一可以访问您数据的人。",
+        "我们为我们所做的感到自豪，这就是为什么我们的代码在 GitHub 上公开，任何人都可以亲自检查、验证和审计。除了您的数据，我们没有什么可隐藏的。",
+        "我们完全符合 GDPR 并且 100% 安全，但不要只相信我们的话。Internxt 已由欧洲领先的渗透测试公司 Securitum 独立验证和审计。"
+      ]
+    }
+  },
+  "BestStorageSection": {
+    "title": "为未来而建",
+    "description": "我们希望构建一个更好的万维网，对所有人公平、安全和公正。关于互联网隐私未来的战斗正在激烈进行，我们站在最前线。",
+    "card1": {
+      "title": "随时取消"
+    },
+    "card2": {
+      "title": "后量子加密"
+    },
+    "card3": {
+      "title": "可持续能源"
+    },
+    "card4": {
+      "title": "开源"
+    },
+    "card5": {
+      "title": "独立验证"
+    }
+  },
+  "lastCtaSection": {
+    "title": "世界上最私密的云存储",
+    "description": "使用 Internxt 安全、私密和加密的云存储保护真正重要的内容。",
+    "cta": "立即选择计划"
   }
 }

@@ -12,7 +12,7 @@ export const PriceBannerForCampaigns = ({
   redirectTo,
   percentOff,
 }: {
-  textContent: PricingText['tableSection']['ctaBanner'];
+  textContent: any;
   redirectTo?: string;
   percentOff: string;
 }) => {

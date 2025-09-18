@@ -58,9 +58,12 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% Rabatt",
     "planTitles": {
-      "business": "Geschäftspläne"
+      "business": "Geschäftspläne",
+      "header": "Wählen Sie Ihren Plan"
     },
+
     "businessDescription2": "Sichern Sie die Datensicherheit Ihres Unternehmens mit den verschlüsselten Cloud-Speicherplänen von Internxt.",
     "billingFrequency": {
       "monthly": "Monatlich",

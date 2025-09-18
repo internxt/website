@@ -1,50 +1,59 @@
 export interface PricingText {
-  HeroSection: HeroSection;
-  HeroSectionAlternative: CtaSection;
-  PriceTableForAlternativePricing: PriceTableForAlternativePricing;
   tableSection: TableSection;
+  ComparisonTable: ComparisonTable;
   FaqSection: FAQSection;
   FaqSectionForBusiness: FAQSection;
   SchemaMarkupQuestions: SchemaMarkupQuestions;
-  CtaSection: CtaSection;
-  FirstWhatWeDoSection: FirstWhatWeDoSection;
-  InfoSectionForBusiness: CtaSection;
-  InfoSection: CtaSection;
+  InfoSectionForBusiness: InfoSection;
+  InfoSection: InfoSection;
   BestStorageSection: BestStorageSection;
-  lastCtaSection: CtaSection;
+  lastCtaSection: InfoSection;
 }
 
 export interface BestStorageSection {
   title: string;
   description: string;
-  card1: Card;
-  card2: Card;
-  card3: Card;
-  card4: Card;
-  card5: Card;
+  card1: Card1Class;
+  card2: Card1Class;
+  card3: Card1Class;
+  card4: Card1Class;
+  card5: Card1Class;
 }
 
-export interface Card {
+export interface Card1Class {
   title: string;
 }
 
-export interface CtaSection {
+export interface ComparisonTable {
   title: string;
-  description: string;
   cta: string;
-  features?: string[];
-  scrollableSection?: ScrollableSection;
-  cards?: Cta[];
+  billedAnnualy: string;
+  billedOnce: string;
+  plans: Plan[];
+  categories: Category[];
 }
 
-export interface Cta {
-  title: string;
-  description: string;
+export interface Category {
+  name: string;
+  features: Feature[];
 }
 
-export interface ScrollableSection {
-  titles: string[];
-  descriptions: string[];
+export interface Feature {
+  id: string;
+  name: string;
+  avalability: Avalability;
+}
+
+export interface Avalability {
+  Essential: boolean;
+  Premium: boolean;
+  Ultimate: boolean;
+}
+
+export interface Plan {
+  id: string;
+  name: string;
+  order: number;
 }
 
 export interface FAQSection {
@@ -57,48 +66,22 @@ export interface FAQ {
   answer: string[];
 }
 
-export interface FirstWhatWeDoSection {
-  card1: CtaSection;
-  card2: CtaSection;
-  card3: CtaSection;
-}
-
-export interface HeroSection {
-  title: HeroSectionTitle;
-  lifetimeTitle: LifetimeTitle;
-  feeds: Feeds;
-  cta: Cta;
-}
-
-export interface Feeds {
-  firstFeed: string;
-  secondFeed: string;
-  thirdFeed: string;
-}
-
-export interface LifetimeTitle {
-  line1: string;
-  blueText: string;
-  line2: string;
-}
-
-export interface HeroSectionTitle {
-  line1: string;
-  line2: string;
-}
-
-export interface PriceTableForAlternativePricing {
-  title: PriceTableForAlternativePricingTitle;
+export interface InfoSection {
+  title: string;
   description: string;
-  features: string[];
-  offerEnds: string;
-  howMuchStorage: string;
+  cta: string;
+  scrollableSection?: ScrollableSection;
+  cards?: CardElement[];
 }
 
-export interface PriceTableForAlternativePricingTitle {
-  normal1: string;
-  blue2: string;
-  normal2: string;
+export interface CardElement {
+  title: string;
+  description: string;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
 }
 
 export interface SchemaMarkupQuestions {
@@ -107,7 +90,7 @@ export interface SchemaMarkupQuestions {
 
 export interface TableSection {
   title: string;
-  ctaBanner: CtaBanner;
+  hotLabel: string;
   planTitles: PlanTitles;
   lifetimeDescription: string;
   planDescription: string;
@@ -116,7 +99,6 @@ export interface TableSection {
   billingFrequency: BillingFrequency;
   freePlanCard: FreePlanCard;
   features: Features;
-  individuals: string;
   planStorage: PlanStorage;
 }
 
@@ -126,18 +108,6 @@ export interface BillingFrequency {
   individual: string;
   lifetime: string;
   business: string;
-}
-
-export interface CtaBanner {
-  label: string;
-  title: string;
-  subtitle: string;
-  subtitle2: string;
-  subtitle3: string;
-  cta: string;
-  guarantee: string;
-  gift: string;
-  lastCta: string;
 }
 
 export interface Features {
@@ -166,11 +136,4 @@ export interface PlanTitles {
   individuals: string;
   lifetime: string;
   business: string;
-  lifetimeCampaign: LifetimeCampaign;
-  blackFriday: Cta;
-}
-
-export interface LifetimeCampaign {
-  blueText: string;
-  normalText: string;
 }

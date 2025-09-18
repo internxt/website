@@ -41,7 +41,7 @@
     "title": "Wechseln Sie zu einem **ethischeren**, **privateren**",
     "subtitle": "Das ist Internxt - Ihr vertrauensvoller Partner",
     "description": "Erhalten Sie jetzt {{discount}}% Rabatt",
-    "descriptionNormal": "auf alle Lifetime-Pläne",
+    "descriptionNormal": "auf alle Pläne",
     "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {
       "normal1": "Ab ",
@@ -53,8 +53,9 @@
   },
   "tableSection": {
     "title": "Internxt Tarife",
+    "hotLabel": "{{discount}}% Rabatt",
     "planTitles": {
-      "individuals": "jährlich",
+      "header": "Wählen Sie Ihren Plan",
       "homePage": "Wählen Sie den richtigen Tarif für Sie",
       "lifetime": "Lifetime-Tarife",
       "business": "Business-Tarife",
