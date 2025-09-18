@@ -24,7 +24,7 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'trickyhash'];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'trickyhash', 'reddit'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -32,6 +32,7 @@ const COUPON_CODES = {
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
   trickyhash: PromoCodeName.Trickyhash,
+  reddit: PromoCodeName.Reddit,
 };
 
 function CombinedSpecialOffer({
