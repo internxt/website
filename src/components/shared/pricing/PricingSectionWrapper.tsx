@@ -130,7 +130,7 @@ export const PricingSectionWrapper = ({
   startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
 
-  // Props de override
+
   overrideBillingFrequency,
   overrideBusinessBillingFrequency,
   overrideActiveSwitchPlan,
@@ -142,7 +142,7 @@ export const PricingSectionWrapper = ({
   overrideOnIndividualSwitchToggled,
   overrideOnBusinessSwitchToggled,
 }: PricingSectionWrapperProps): JSX.Element => {
-  // Estado local como fallback
+
   const localPlanSelection = usePlanSelection(
     startFromPlan,
     startFromStorage,
@@ -152,7 +152,7 @@ export const PricingSectionWrapper = ({
     handlePageNameUpdate,
   );
 
-  // Usar overrides si existen, sino usar estado local
+
   const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
   const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
   const activeBusinessStoragePlan = overrideActiveBusinessStoragePlan ?? localPlanSelection.activeBusinessStoragePlan;
