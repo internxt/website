@@ -1,7 +1,6 @@
 import Image from 'next/legacy/image';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
-import { getImage } from '@/lib/getImage';
 
 const language = {
   en: 'EN',
@@ -10,7 +9,6 @@ const language = {
 
 const ExplanationSection = ({ textContent, bannerText, lang }) => {
   const langUpperCase = language[lang] || 'EN';
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="overflow-hidden bg-gray-1">

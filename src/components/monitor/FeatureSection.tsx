@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import { useRouter } from 'next/router';
+
 import { HaveIbeenPwnedText } from '@/assets/types/have-i-been-pawned';
 import Card from '../shared/Card';
 import { RedirectButton } from '../shared/RedirectButton';
@@ -72,7 +72,6 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ textContent, lang }) =>
     },
   ];
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section>
       <div className="my-10 mb-20 flex flex-col items-center space-y-12 md:my-20 md:mb-32">

@@ -4,7 +4,6 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
-import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
@@ -265,7 +264,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
     return null;
   };
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   return (
     <section
       className="relative flex flex-row items-center justify-center pb-20 pt-32"

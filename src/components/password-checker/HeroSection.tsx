@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
-import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
 
 const HeroSection = ({ textContent, lang }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
@@ -75,8 +73,6 @@ const HeroSection = ({ textContent, lang }) => {
       setCrackTimeInSeconds(crack.crack_times_seconds.offline_slow_hashing_1e4_per_second);
     }
   };
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className=" flex flex-row items-center justify-center pb-8 pt-32">

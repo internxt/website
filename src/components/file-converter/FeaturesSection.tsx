@@ -1,9 +1,6 @@
 import RenderDescription from '../shared/RenderDescription';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 
 export const FeaturesSection = ({ textContent, lang }) => {
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section className="overflow-hidden px-5 py-20">
       <div className="flex w-full flex-col items-center space-y-16">

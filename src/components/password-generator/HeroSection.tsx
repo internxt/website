@@ -3,8 +3,7 @@ import { ArrowsClockwise, Copy, Info } from '@phosphor-icons/react';
 import { notificationService } from '@/components/Snackbar';
 import PasswordSettings from './components/PasswordSettings';
 import PassphraseSettings from './components/PassphraseSettings';
-import Image from 'next/image';
-import { getImage } from '@/lib/getImage';
+
 const CheckboxButton = ({ checked, id }) => (
   <>
     <div
@@ -39,8 +38,6 @@ const HeroSection = ({ textContent, lang }) => {
   const [crackScore, setCrackScore] = useState(0);
   const passwordProperties = { length: 13 };
   const passphraseProperties = { words: 5 };
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="flex items-start justify-center overflow-hidden px-10 pb-20 pt-32">

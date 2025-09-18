@@ -1,6 +1,4 @@
 import { useState, Fragment, createRef } from 'react';
-import Image from 'next/legacy/image';
-import { getImage } from '@/lib/getImage';
 import { AiDetectorText } from '@/assets/types/aiDetector';
 import pdfToText from 'react-pdftotext';
 
@@ -12,7 +10,7 @@ interface HeroSectionProps {
 const MIN_CHARS = 250;
 const MAX_CHARS = 15000;
 
-const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [text, setText] = useState('');
   const [detectionScore, setDetectionScore] = useState<number | null>(null);
   const [isScanning, setIsScanning] = useState(false);
@@ -98,7 +96,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsScanning(false);
     }
   };
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="relative flex flex-row  items-center justify-center pb-20 pt-32">

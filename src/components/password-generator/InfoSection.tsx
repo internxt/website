@@ -3,8 +3,7 @@ import { useRouter } from 'next/router';
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import CtaSection from '@/components/shared/CtaSection';
 import RenderDescription from '@/components/shared/RenderDescription';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/legacy/image';
+
 const allowedLangForImage = ['en', 'es', 'ru'];
 
 const InfoSection = ({
@@ -44,8 +43,6 @@ const InfoSection = ({
       description: textContent.infoCards1[2].description,
     },
   ];
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   const getSectionText = (text) => {
     return (

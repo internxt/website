@@ -1,6 +1,5 @@
 import Image from 'next/legacy/image';
 import Link from 'next/link';
-import { getImage } from '@/lib/getImage';
 
 const language = {
   en: 'EN',
@@ -9,7 +8,6 @@ const language = {
 
 const ConversionTableSection = ({ textContent, lang }) => {
   const langUpperCase = language[lang] || 'EN';
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   const table = [
     {

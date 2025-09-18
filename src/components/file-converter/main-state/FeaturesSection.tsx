@@ -1,8 +1,6 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Browsers, CopySimple, FolderSimpleDashed, Keyhole, Planet, UserCircleMinus } from '@phosphor-icons/react';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 
 export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   const cards = [
@@ -37,8 +35,6 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
       description: textContent.cards[5].description,
     },
   ];
-
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
     <section className="overflow-hidden">

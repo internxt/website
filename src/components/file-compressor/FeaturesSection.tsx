@@ -1,6 +1,4 @@
-import { getImage } from '@/lib/getImage';
 import { Asterisk } from '@phosphor-icons/react';
-import Image from 'next/image';
 import SignUpBanner from '../banners/SignUpBanner';
 
 const FirstBold = ({ text, className = '' }) => {
@@ -14,7 +12,6 @@ const FirstBold = ({ text, className = '' }) => {
 };
 
 export const FeaturesSection = ({ textContent, bannerText, lang }) => {
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section className="overflow-hidden px-5 py-20">
       <div className="flex w-full flex-col items-center space-y-8">

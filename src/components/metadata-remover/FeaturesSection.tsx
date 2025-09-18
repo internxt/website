@@ -1,8 +1,6 @@
-import { getImage } from '@/lib/getImage';
 import SignUpBanner from '../banners/SignUpBanner';
-import Image from 'next/legacy/image';
+
 const FeaturesSection = ({ textContent, bannerText, lang }) => {
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
   return (
     <section className="relative bg-gray-1 ">
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center space-y-5 px-5 lg:p-16">
