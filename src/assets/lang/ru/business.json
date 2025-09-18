@@ -58,7 +58,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% скидка ",
     "planTitles": {
+      "header": " Выберите свой план",
       "business": "Бизнес-планы"
     },
     "businessDescription2": "Обеспечьте безопасность данных компании с зашифрованными облачными планами Internxt.",

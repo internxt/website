@@ -85,7 +85,7 @@ const HotLabel = ({ textContent, discountValue }) => {
   }
 
   return (
-    <span className="bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
+    <span className="flex rounded-sm bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
       {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
     </span>
   );
@@ -164,7 +164,7 @@ export const PricingSectionWrapper = ({
   const onIndividualSwitchToggled = overrideOnIndividualSwitchToggled ?? localPlanSelection.onIndividualSwitchToggled;
   const onBusinessSwitchToggled = overrideOnBusinessSwitchToggled ?? localPlanSelection.onBusinessSwitchToggled;
 
-  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals);
+  const actualDiscountValue = calculateDiscountPercentage(decimalDiscount?.individuals || decimalDiscount?.business);
 
   const commonPricingProps = {
     textContent,

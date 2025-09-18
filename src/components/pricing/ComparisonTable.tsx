@@ -26,7 +26,7 @@ export default function ComparisonTableSection({
   useEffect(() => {
     const onScroll = () => {
       const isMobile = window.innerWidth < 1024;
-      const scrollThreshold = isMobile ? 2950 : 3450;
+      const scrollThreshold = isMobile ? 2850 : 3380;
       setScrolled(window.scrollY > scrollThreshold);
     };
 
@@ -76,7 +76,9 @@ export default function ComparisonTableSection({
 
   const getHeaderStyles = (planIndex: number) => {
     return `items-start p-6 text-start  ${
-      isLastColumn(planIndex) ? 'rounded-t-2xl outline outline-1 outline-neutral-25  bg-neutral-17' : 'bg-neutral-16'
+      isLastColumn(planIndex)
+        ? 'flex rounded-t-2xl ring-[1px] ring-neutral-25 bg-neutral-17'
+        : 'bg-neutral-16 ring-[1px] ring-neutral-25'
     }`;
   };
 
@@ -92,7 +94,7 @@ export default function ComparisonTableSection({
     return `h-[72px] ${
       isLastColumn(planIndex)
         ? `border-[1px] border-neutral-25 bg-neutral-17 shadow-lg`
-        : 'border-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
+        : 'border-y-[1px] border-neutral-25 p-6 text-xl font-medium text-gray-95'
     }`;
   };
 
@@ -115,9 +117,9 @@ export default function ComparisonTableSection({
     let baseStyles = 'px-6 py-4';
 
     if (isLastColumn(planIndex)) {
-      baseStyles += ' border border-neutral-25 bg-neutral-17 shadow-lg';
+      baseStyles += 'ring-[1px] ring-neutral-25 bg-neutral-17 shadow-lg  outline outline-1 outline-neutral-25';
       if (isLastCategory(categoryIndex) && isLastFeature(category.features, featureIndex)) {
-        baseStyles += ' rounded-16 outline outline-1 outline-neutral-25';
+        baseStyles += ' rounded-b-16 outline outline-1 outline-neutral-25';
       }
     } else if (isSecondToLastColumn(planIndex)) {
       baseStyles += 'border-t-[1px] border-neutral-25';
@@ -127,8 +129,26 @@ export default function ComparisonTableSection({
   };
 
   const getMobilePlanStyles = (planId: string) => {
+    const plan = textContent.plans.find((p) => p.id === planId);
+    const planOrder = plan?.order ?? 0;
+
+    if (planOrder === 0 || planOrder === 1) {
+      return 'bg-neutral-16';
+    }
+
     const isUltimate = planId === textContent.plans[textContent.plans.length - 1].id;
     return isUltimate ? 'bg-neutral-17' : 'bg-neutral-16';
+  };
+
+  const getMobileBorderStyles = (planId: string) => {
+    const plan = textContent.plans.find((p) => p.id === planId);
+    const planOrder = plan?.order ?? 0;
+
+    if (planOrder === 0 || planOrder === 1) {
+      return 'border-t-[1px] border-neutral-25';
+    }
+
+    return 'border border-neutral-25';
   };
 
   const renderFeatureContent = (feature: any, categoryName: string, isAvailable: boolean, category?: any) => {
@@ -182,7 +202,7 @@ export default function ComparisonTableSection({
 
       <div className="hidden h-min w-full justify-center lg:flex lg:px-10 lg:py-9 xl:px-32 3xl:px-80">
         <table>
-          <thead className={`sticky top-[60px] z-10 bg-white transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
+          <thead className={`sticky top-[60px] z-10 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
             <tr>
               {textContent.plans.map((plan, planIndex) => (
                 <th key={plan.id} className={getHeaderStyles(planIndex)}>
@@ -253,7 +273,7 @@ export default function ComparisonTableSection({
         </table>
       </div>
 
-      <div className="bg-neutral-16 w-full px-4 lg:hidden">
+      <div className="w-full bg-neutral-16 px-4 lg:hidden">
         <div className={`sticky top-10 z-10 grid grid-cols-2 gap-0 transition-shadow ${scrolled ? 'shadow-lg' : ''}`}>
           <CustomPlanSelector
             plans={textContent.plans}
@@ -287,14 +307,14 @@ export default function ComparisonTableSection({
             <div key={categoryIndex}>
               <div className="grid grid-cols-2">
                 <div
-                  className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanA)} ${
+                  className={`${getMobileBorderStyles(selectedPlanA)} p-3 ${getMobilePlanStyles(selectedPlanA)} ${
                     categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
                   <h3 className="font-medium text-gray-95">{category.name}</h3>
                 </div>
                 <div
-                  className={`border border-y-[1px] border-neutral-25 p-3 ${getMobilePlanStyles(selectedPlanB)} ${
+                  className={`${getMobileBorderStyles(selectedPlanB)} p-3 ${getMobilePlanStyles(selectedPlanB)} ${
                     categoryIndex === 0 ? '' : ''
                   }`}
                 >
@@ -304,7 +324,7 @@ export default function ComparisonTableSection({
 
               <div className="grid grid-cols-2">
                 <div
-                  className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanA)} ${
+                  className={`${getMobileBorderStyles(selectedPlanA)} ${getMobilePlanStyles(selectedPlanA)} ${
                     categoryIndex === textContent.categories.length - 1 ? 'rounded-bl-16' : ''
                   }`}
                 >
@@ -327,7 +347,7 @@ export default function ComparisonTableSection({
                 </div>
 
                 <div
-                  className={`border border-neutral-25 ${getMobilePlanStyles(selectedPlanB)} ${
+                  className={`${getMobileBorderStyles(selectedPlanB)} ${getMobilePlanStyles(selectedPlanB)} ${
                     categoryIndex === textContent.categories.length - 1 ? 'rounded-b-16' : ''
                   }`}
                 >
