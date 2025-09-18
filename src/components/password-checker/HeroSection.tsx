@@ -79,24 +79,7 @@ const HeroSection = ({ textContent, lang }) => {
   const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
 
   return (
-    <section className=" relative flex flex-row items-start pb-8 pt-32">
-      <div className="hidden h-full w-full flex-col items-center justify-center lg:flex">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={180}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div>
+    <section className=" flex flex-row items-center justify-center pb-8 pt-32">
       <div className="flex flex-col items-center justify-center space-y-6 px-2">
         <div className="lg:max flex flex-col items-center space-y-5 px-4 text-center lg:max-w-2xl lg:px-0">
           <h1 className="text-3xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h1>
@@ -181,23 +164,6 @@ const HeroSection = ({ textContent, lang }) => {
             <span className="text-sm text-gray-50">{textContent.result.crack.subtitle}</span>
           </div>
         </div>
-      </div>
-      <div className="hidden h-full w-full flex-col items-center justify-center  lg:flex">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={180}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
       </div>
     </section>
   );

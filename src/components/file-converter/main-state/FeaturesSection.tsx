@@ -43,23 +43,6 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
-        <div className="flex w-full flex-col items-center justify-center">
-          <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
-            width={800}
-            height={110}
-            quality={100}
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                '_blank',
-                'noopener noreferrer',
-              )
-            }
-          />
-        </div>
         <SignUpBanner textContent={bannerText} lang={'en'} />
         {/* Text sections */}
         <div className="flex max-w-[672px] flex-col space-y-16">
@@ -98,23 +81,6 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex w-full flex-col items-center justify-center">
-          <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
-            width={800}
-            height={110}
-            quality={100}
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                '_blank',
-                'noopener noreferrer',
-              )
-            }
-          />
         </div>
       </div>
     </section>

@@ -46,13 +46,6 @@ const FileConverter = ({
         lang={lang}
       />
 
-      <CtaSection
-        textContent={textContent.CtaSection}
-        customDescription={textContent.CtaSection.description}
-        url="https://drive.internxt.com/new"
-        image="/logos/internxt/internxt.svg"
-      />
-
       <ToolsSection textContent={toolsContent} lang={lang} />
 
       <Footer textContent={footerLang} lang={lang} hideNewsletter={false} />

@@ -102,23 +102,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
   return (
     <section className="relative flex flex-row  items-center justify-center pb-20 pt-32">
-      <div className="hidden flex-col  items-center justify-center lg:flex lg:px-10 ">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={700}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div>
       <section className="flex flex-col items-center justify-center space-y-6">
         <div className="flex w-full flex-col items-center justify-center space-y-6 pb-10 text-center">
           <p className="text-4xl font-semibold text-gray-100 lg:text-6xl">{textContent.mainTitle}</p>
@@ -235,23 +218,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           </div>
         </div>
       </section>
-      <div className="hidden flex-col items-center justify-center lg:flex lg:px-10">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={700}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div>
     </section>
   );
 };
