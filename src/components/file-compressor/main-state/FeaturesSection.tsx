@@ -1,8 +1,6 @@
 import SignUpBanner from '@/components/banners/SignUpBanner';
 import RenderDescription from '@/components/shared/RenderDescription';
 import { Detective, File, FileZip, LockSimple, Tray, UploadSimple } from '@phosphor-icons/react';
-import { getImage } from '@/lib/getImage';
-import Image from 'next/image';
 
 const FirstBold = ({ text, className = '' }) => {
   if (!text) return null;
@@ -48,29 +46,9 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
     },
   ];
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section className="overflow-hidden">
       <div className="flex flex-col items-center space-y-16 px-5 py-16">
-        <div className="flex w-full flex-col items-center justify-center">
-          <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
-            width={800}
-            height={110}
-            quality={100}
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                '_blank',
-                'noopener noreferrer',
-              )
-            }
-          />
-        </div>
-
         <SignUpBanner textContent={bannerText} lang="en" />
 
         <div className="flex max-w-[966px] flex-col space-y-16">
@@ -115,24 +93,6 @@ export const FeaturesSection = ({ textContent, bannerText, lang }) => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="flex w-full flex-col items-center justify-center">
-          <Image
-            src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
-            alt="File Arrow Up icon"
-            width={800}
-            height={110}
-            quality={100}
-            style={{ cursor: 'pointer' }}
-            onClick={() =>
-              window.open(
-                `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-                '_blank',
-                'noopener noreferrer',
-              )
-            }
-          />
         </div>
       </div>
     </section>

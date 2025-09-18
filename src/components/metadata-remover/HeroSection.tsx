@@ -4,7 +4,6 @@ import { CheckCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { MetadataRemoverText } from '@/assets/types/metadata-remover';
 import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
-import { getImage } from '@/lib/getImage';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
@@ -265,7 +264,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
 
     return null;
   };
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
+
   return (
     <section
       className="relative flex flex-row items-center justify-center pb-20 pt-32"
@@ -275,23 +274,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         handleDragEnter();
       }}
     >
-      <div className="hidden flex-col  items-center justify-center lg:flex lg:px-10 ">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={700}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
-      </div>
       <label className="pointer-events-none absolute h-0 w-0 overflow-hidden">
         <input type="file" id="uploadFile" ref={uploadFileRef} tabIndex={-1} onChange={() => handleFileInput()} />
       </label>
@@ -505,23 +487,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           </div>
         </div>
         <div id="incontent_1" className="flex w-full max-w-[1000px] justify-center"></div>
-      </div>
-      <div className="hidden flex-col  items-center justify-center lg:flex lg:px-10 ">
-        <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
-          alt="BitDefender Vertical Banner"
-          width={180}
-          height={700}
-          quality={100}
-          style={{ cursor: 'pointer' }}
-          onClick={() =>
-            window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
-              '_blank',
-              'noopener noreferrer',
-            )
-          }
-        />
       </div>
     </section>
   );
