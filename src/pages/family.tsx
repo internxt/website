@@ -153,7 +153,6 @@ export const FamilyLP = ({ metatagsDescriptions, navbarText, textContent, footer
         hidePlanSelectorComponent={true}
         textContent={textContent.PriceTable}
         onCheckoutButtonClicked={onCheckoutButtonClicked}
-        showPromo
       />
 
       <SelectFeatureInfoSection

@@ -106,7 +106,6 @@ const DropboxComparison = ({
           </span>
         }
         sectionDetails="bg-gray-1"
-        showPromo={false}
       />
 
       <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
