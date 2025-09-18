@@ -56,7 +56,7 @@ interface PricingSectionWrapperProps {
   isAffiliate?: boolean;
   hideBillingController?: boolean;
 
-  // Props para override desde componente padre
+
   overrideBillingFrequency?: Interval;
   overrideBusinessBillingFrequency?: Interval;
   overrideActiveSwitchPlan?: SwitchButtonOptions;
