@@ -17,6 +17,9 @@ import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/typ
 import { PromoCodeName } from '@/lib/types';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
+import ComparisonTableSection from '@/components/pricing/ComparisonTable';
+import { usePlanSelection } from '@/hooks/usePlanSelection';
+import { Interval } from '@/services/stripe.service';
 
 interface PricingProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,11 +40,26 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
+    couponCode: PromoCodeName.SoftSales85,
     couponCodeForLifetime: PromoCodeName.SoftSales85,
   });
 
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
+
+  // Elevar el estado de billing al componente padre
+  const {
+    activeSwitchPlan,
+    activeStoragePlan,
+    activeBusinessStoragePlan,
+    billingFrequency,
+    businessBillingFrequency,
+    onPlanTypeChange,
+    onStorageChange,
+    onBusinessStorageChange,
+    onIndividualSwitchToggled,
+    onBusinessSwitchToggled,
+  } = usePlanSelection('Lifetime', 'Premium', 'Pro', Interval.Lifetime, Interval.Year, setPageName);
 
   const infoText = isBusiness ? textContent.InfoSectionForBusiness : textContent.InfoSection;
   const faqSection = isBusiness ? textContent.FaqSectionForBusiness : textContent.FaqSection;
@@ -64,6 +82,7 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
 
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+
   return (
     <>
       <Script type="application/ld+json" strategy="beforeInteractive">
@@ -93,9 +112,19 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
           hideBusinessCards
           hideBusinessSelector
           hideSwitchSelector
-          popularPlanBySize="3TB"
+          popularPlanBySize="5TB"
           backgroundGradientColor="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-          sectionDetails="pt-20 lg:py-20"
+          sectionDetails="py-10 lg:py-20 lg:pt-32"
+          overrideBillingFrequency={billingFrequency}
+          overrideBusinessBillingFrequency={businessBillingFrequency}
+          overrideActiveSwitchPlan={activeSwitchPlan}
+          overrideActiveStoragePlan={activeStoragePlan}
+          overrideActiveBusinessStoragePlan={activeBusinessStoragePlan}
+          overrideOnPlanTypeChange={onPlanTypeChange}
+          overrideOnStorageChange={onStorageChange}
+          overrideOnBusinessStorageChange={onBusinessStorageChange}
+          overrideOnIndividualSwitchToggled={onIndividualSwitchToggled}
+          overrideOnBusinessSwitchToggled={onBusinessSwitchToggled}
         />
 
         <HorizontalScrollableSection textContent={infoText} />
@@ -103,6 +132,15 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
         <BestStorageSection textContent={textContent.BestStorageSection} />
 
         <FileParallaxSection />
+
+        <ComparisonTableSection
+          textContent={textContent.ComparisonTable}
+          onCheckoutButtonClicked={onCheckoutButtonClicked}
+          products={products}
+          billingFrequency={billingFrequency}
+          decimalDiscount={decimalDiscount}
+          currencyValue={currencyValue}
+        />
 
         <FAQSection textContent={faqSection} />
 

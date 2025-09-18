@@ -59,7 +59,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% off",
     "planTitles": {
+      "header": "Select your Plan",
       "business": "Business plans"
     },
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",

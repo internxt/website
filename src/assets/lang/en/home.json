@@ -53,8 +53,9 @@
   },
   "tableSection": {
     "title": "Internxt Plans",
-
+    "hotLabel": "{{discount}}% off",
     "planTitles": {
+      "header": "Select your Plan",
       "individuals": "Annual Plans",
       "homePage": "Choose the right plan for you",
       "lifetime": "Lifetime Plans",

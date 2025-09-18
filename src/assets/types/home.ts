@@ -136,6 +136,7 @@ export interface TrustedBySection {
 
 export interface TableSection {
   title: string;
+  hotLabel: string;
   planTitles: PlanTitles;
   lifetimeDescription: string;
   planDescription: string;
@@ -176,6 +177,7 @@ export interface PlanStorage {
 }
 
 export interface PlanTitles {
+  header: string;
   individuals: string;
   homePage: string;
   lifetime: string;

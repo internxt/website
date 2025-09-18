@@ -58,7 +58,9 @@
     }
   },
   "PriceTable": {
+    "hotLabel": "{{discount}}% de descuento",
     "planTitles": {
+      "header": "Elige tu plan",
       "business": "Planes para empresa"
     },
     "businessDescription2": "Asegura la seguridad de los datos de tu negocio con los planes de almacenamiento en la nube cifrados de Internxt.",
