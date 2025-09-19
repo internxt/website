@@ -56,7 +56,9 @@
   },
   "tableSection": {
     "title": "Planes de Internxt",
+    "hotLabel": "{{discount}}% de descuento",
     "planTitles": {
+      "header": "Elige tu plan",
       "individuals": "Planes Anuales",
       "homePage": "Elige el plan adecuado para ti",
       "lifetime": "Planes de Por Vida",

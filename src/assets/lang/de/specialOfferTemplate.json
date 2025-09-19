@@ -56,7 +56,9 @@
   },
   "tableSection": {
     "title": "Internxt Tarife",
+    "hotLabel": "{{discount}}% Rabatt",
     "planTitles": {
+      "header": "Wählen Sie Ihren Plan",
       "individuals": "Jahrestärife",
       "homePage": "Wählen Sie den richtigen Tarif für Sie",
       "lifetime": "Lebenslange Tarife",

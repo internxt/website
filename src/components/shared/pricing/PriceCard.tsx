@@ -31,30 +31,26 @@ const ICON_MAPS = {
   individuals: [
     Database,
     Key,
-    Gauge,
-    ShieldPlus,
-    ArrowsClockwise,
-    Password,
-    CirclesThreePlus,
     LockSimple,
     Fingerprint,
-    CodeBlock,
+    ArrowsClockwise,
+    Password,
+    Gauge,
+    ShieldPlus,
+    CirclesThreePlus,
     Sparkle,
     Detective,
-    VideoConference,
-    Envelope,
-    CreditCard,
   ],
   ultimate: [
     Database,
     Key,
-    Gauge,
-    ShieldPlus,
-    ArrowsClockwise,
-    Password,
-    CirclesThreePlus,
     LockSimple,
     Fingerprint,
+    ArrowsClockwise,
+    Password,
+    Gauge,
+    ShieldPlus,
+    CirclesThreePlus,
     CodeBlock,
     Code,
     Sparkle,
@@ -67,6 +63,7 @@ const ICON_MAPS = {
     Database,
     Key,
     Gauge,
+
     ShieldPlus,
     ArrowsClockwise,
     Password,
@@ -163,7 +160,6 @@ export const PriceCard = ({
       <div
         className={`z-10 h-full w-full rounded-16 bg-white ring-[1px]  ${
           popular ? '   ring-blue-10' : ' ring-gray-10 lg:px-0'
-
         }`}
       >
         <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
@@ -231,11 +227,8 @@ export const PriceCard = ({
 
             <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
               {features.map((feature, index) => {
-                let adjustedIndex = index;
-                if (!isBusiness) {
-                  if (cardIndex === 0 && index >= 6) adjustedIndex = index + 1;
-                  if (cardIndex === 1 && index >= 9) adjustedIndex = index + 1;
-                }
+                const adjustedIndex = index;
+
                 const renderText = () => {
                   if (index === 0 && feature.includes('**')) {
                     return feature
