@@ -385,6 +385,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/mega-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.megaAlternative}
+                    </Link>
+
+                    <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
@@ -830,6 +839,15 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
+                      </Link>
+
+                      <Link
+                        href="/mega-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
 
                       <Link
