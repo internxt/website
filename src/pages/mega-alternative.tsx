@@ -14,8 +14,8 @@ import HorizontalScrollableSection from '@/components/comparison/HorizontalScrol
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 
-const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
+const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'mega-alternative');
   const {
     products,
     loadingCards,
@@ -23,7 +23,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Dropbox87,
+    couponCode: PromoCodeName.Mega87,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -42,22 +42,17 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
   const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (
-    <Layout
-      title={metatags[0].title}
-      description={metatags[0].description}
-      segmentName="dropbox Comparison"
-      lang={lang}
-    >
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="mega Comparison" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
       <HeroSection
         textContent={langJson.HeroSection}
         redirectUrl={'/pricing'}
         percentage={percentageDiscount}
-        competitor={'dropbox'}
+        competitor={'mega'}
       />
 
-      <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -97,8 +92,8 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <TablesSection
         textContent={langJson.VersusSection}
-        competitor={'dropbox'}
-        logo="/images/comparison/competitors/Dropbox_Letters.webp"
+        competitor={'mega'}
+        logo="/images/comparison/competitors/Mega_Letters.webp"
       />
 
       <FloatingCtaSectionv2
@@ -132,7 +127,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const langJson = require(`@/assets/lang/${lang}/dropbox-alternative.json`);
+  const langJson = require(`@/assets/lang/${lang}/mega-alternative.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
@@ -149,4 +144,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   };
 }
 
-export default DropboxComparison;
+export default MegaComparison;
