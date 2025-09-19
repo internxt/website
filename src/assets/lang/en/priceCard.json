@@ -122,7 +122,7 @@
         "Post-quantum encryption",
         "Zero-knowledge encryption",
         "Two-factor authentication (2FA)",
-        "Files backup",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR)",
         "Antivirus"
@@ -132,20 +132,20 @@
         "Post-quantum encryption",
         "Zero-knowledge encryption",
         "Two-factor authentication (2FA)",
-        "Files backup",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR,DE, PL)",
         "Antivirus",
         "Invite, share & collaborate",
         "Cleaner",
-        "Monitor"
+        "Dark Web Monitor"
       ],
       "5TB": [
         "**5TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
         "Two-factor authentication (2FA)",
-        "Files backup",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR,DE, PL,CA, UK)",
         "Antivirus",
@@ -154,7 +154,7 @@
         "NAS & Rclone support",
         "Cleaner",
         "Meet",
-        "Monitor",
+        "Dark Web Monitor",
         "Mail"
       ]
     },
@@ -172,7 +172,7 @@
         "CLI, WebDav support",
         "Manage account billing & payments",
         "Cleaner ",
-        "Monitor"
+        "Dark Web Monitor"
       ],
       "2TB": [
         "2TB encrypted storage per user",
@@ -187,7 +187,7 @@
         "CLI, WebDav, Rclone & NAS support",
         "Manage account billing & payments",
         "Cleaner ",
-        "Monitor",
+        "Dark Web Monitor",
         "Meet ",
         "Mail "
       ]

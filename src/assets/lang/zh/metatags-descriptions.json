@@ -21,7 +21,7 @@
   },
   {
     "id": "what-google-knows",
-    "title": "What Does Google Know About Me | Internxt",
+    "title": "What Does Google Know About Me – Internxt",
     "description": "Find out what data Google keeps on you. How to view and download your Google data, how to delete it, and how to disable Google data collection."
   },
   {
@@ -31,7 +31,7 @@
   },
   {
     "id": "affiliates",
-    "title": "联盟计划 | Internxt",
+    "title": "联盟计划 – Internxt",
     "description": "加入Internxt的联盟营销计划！如何开始以及计划详情、好处和特权。"
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "id": "open-source",
-    "title": "Internxt--开源安全云存储",
+    "title": "Internxt–开源安全云存储",
     "description": "了解开源 (OSS) 软件的优势，以及 Internxt 使用开源软件提供云存储，确保数据安全的原因。"
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "id": "converter-tool",
-    "title": "字节转换器: 从GB 到 TB | Internxt",
+    "title": "字节转换器: 从GB 到 TB – Internxt",
     "description": "Internxt 的免费字节转换器：了解您有多少存储空间，1 TB 中有多少千兆字节，并在 B、KB、MB、GB 和 TB 之间进行转换。"
   },
   {
@@ -86,12 +86,12 @@
   },
   {
     "id": "partner-discount",
-    "title": "合作伙伴交易 - 在 Internxt 云存储上节省大笔费用！",
+    "title": "合作伙伴交易 – 在 Internxt 云存储上节省大笔费用！",
     "description": "兑换由经过认证的 Internxt 合作伙伴提供的专属优惠券代码。 获得 Internxt 安全云存储的特别折扣。"
   },
   {
     "id": "techradar-discount",
-    "title": "TechRadar 合作伙伴优惠 - 在 Internxt 云存储上节省大笔费用！",
+    "title": "TechRadar 合作伙伴优惠 – 在 Internxt 云存储上节省大笔费用！",
     "description": "兑换我们的合作伙伴 TechRadar 提供的专属优惠券代码。 获得 Internxt 安全云存储的特别折扣。"
   },
   {
@@ -141,22 +141,22 @@
   },
   {
     "id": "password-generator",
-    "title": "强密码生成器 | Internxt",
+    "title": "强密码生成器 – Internxt",
     "description": "免费且安全的密码生成器。一个简单有效的工具，可立即创建随机且安全的密码，保护您的帐户安全。"
   },
   {
     "id": "cyber-awareness",
-    "title": "网络意识 | Internxt",
+    "title": "网络意识 – Internxt",
     "description": "什么是网络意识、如何保持在线安全以及您需要了解的有关今年 10 月网络安全意识月的所有信息。"
   },
   {
     "id": "cloud-storage-for-education",
-    "title": "Cloud Storage Discount for Education | Internxt",
+    "title": "Cloud Storage Discount for Education – Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
   },
   {
     "id": "singles-day",
-    "title": "Internxt 光棍节特惠 - 终身云存储促销！",
+    "title": "Internxt 光棍节特惠 – 终身云存储促销！",
     "description": "Internxt 光棍节 2024 特惠：享受我们所有高级终身存储计划 80% 的折扣。立即在 Internxt 云存储上省钱！"
   },
   {
@@ -186,22 +186,22 @@
   },
   {
     "id": "vpn-extension",
-    "title": "Internxt 免费安全 VPN | Internxt",
+    "title": "Internxt 免费安全 VPN – Internxt",
     "description": "Internxt 免费 VPN Chrome 扩展：安全浏览、加密 Wi-Fi 和隐私保护。下载我们的安全 VPN，在网上保护您的数据。"
   },
   {
     "id": "internxt-private-cloud-storage-solutions",
-    "title": "Internxt - 私人云存储",
+    "title": "Internxt – 私人云存储",
     "description": "什么是私人云存储，Internxt 如何通过后量子加密、杀毒软件和 VPN 保护您的信息"
   },
   {
     "id": "internxt-cloud-storage-backup-solutions",
-    "title": "Internxt - 云存储备份解决方案",
+    "title": "Internxt – 云存储备份解决方案",
     "description": "Internxt的云存储备份解决方案使用冗余和获奖的加密技术，保护您和您的企业免受数据丢失的风险。"
   },
   {
     "id": "internxt-gdpr-cloud-storage",
-    "title": "Internxt - 符合GDPR的云存储",
+    "title": "Internxt – 符合GDPR的云存储",
     "description": "Internxt 是一项云存储服务，符合GDPR及欧盟严格的隐私法律，以保护您的信息。"
   },
   {
@@ -216,12 +216,12 @@
   },
   {
     "id": "internxt-metadata-remover",
-    "title": "Internxt 元数据清除器 - 如何在线清除 PDF、照片和文档中的元数据",
+    "title": "Internxt 元数据清除器 – 如何在线清除 PDF、照片和文档中的元数据",
     "description": "几秒钟内即可移除文件中的隐藏数据。Internxt 的元数据清除器在您分享前清理文档，最大程度保护隐私。"
   },
   {
     "id": "zerogpt-ai-checker",
-    "title": "Internxt AI 检测器 - 免费 AI 文本检测工具",
+    "title": "Internxt AI 检测器 – 免费 AI 文本检测工具",
     "description": "Internxt AI 检测器。免费扫描内容，检查其是否由 ChatGPT、Gemini 或其他人工智能平台生成。"
   },
   {
@@ -231,7 +231,7 @@
   },
   {
     "id": "file-compressor",
-    "title": "文件压缩器 - Internxt",
+    "title": "文件压缩器 – Internxt",
     "description": "Internxt 文件压缩器是最佳免费工具，可减少视频、照片和文档的文件大小。"
   },
   {
@@ -271,12 +271,12 @@
   },
   {
     "id": "compress-zip",
-    "title": "在线 ZIP 压缩器 - Internxt",
+    "title": "在线 ZIP 压缩器 – Internxt",
     "description": "在线 ZIP 压缩器可减小 ZIP 文件大小，节省存储空间，无需担心文件大小限制即可共享和上传。"
   },
   {
     "id": "cloud-for-videos",
-    "title": "Internxt - 视频文件云存储",
+    "title": "Internxt – 视频文件云存储",
     "description": "Internxt 提供视频文件云存储服务，用于存储 HD、4K 和 8K 视频，采用后量子加密技术确保最高隐私保护。"
   }
 ]
