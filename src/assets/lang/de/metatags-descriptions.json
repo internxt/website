@@ -269,5 +269,20 @@
     "id": "cloud-for-videos",
     "title": "Internxt - Cloud-Speicher für Videodateien",
     "description": "Internxt bietet Cloud-Speicher für Videodateien zum Speichern von HD-, 4K- und 8K-Videos, die mit Post-Quanten-Verschlüsselung für maximale Privatsphäre gesichert sind."
+  },
+  {
+    "id": "dropbox-alternative",
+    "title": "Internxt — Eine sichere, verschlüsselte Alternative zu Dropbox",
+    "description": "Internxt Cloud-Speicher ist eine sichere Dropbox-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
+  },
+  {
+    "id": "pcloud-alternative",
+    "title": "Internxt — Eine sichere, verschlüsselte, Open-Source-Alternative zu pCloud",
+    "description": "Internxt Cloud-Speicher ist eine sichere pCloud-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
+  },
+  {
+    "id": "mega-alternative",
+    "title": "Internxt — Eine sichere, verschlüsselte, Open-Source-Alternative zu MEGA",
+    "description": "Internxt Cloud-Speicher ist eine sichere MEGA-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
   }
 ]

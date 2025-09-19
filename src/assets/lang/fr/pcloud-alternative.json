@@ -1,0 +1,311 @@
+{
+  "HeroSection": {
+    "title": "Internxt : Une alternative sécurisée à {{competitor}}",
+    "description": "Vous cherchez une alternative sécurisée à pCloud ? Internxt offre le premier stockage cloud avec chiffrement post-quantique et une suite complète de produits de confidentialité pour un maximum de sécurité et de confidentialité.",
+    "features": [
+      "Stockez vos vidéos en privé",
+      "Chiffrement post-quantique et zéro connaissance",
+      "Open source et audité"
+    ],
+    "getPrivacy": "Obtenez une confidentialité totale avec ${{percentage}}% de réduction",
+    "cta": "Sélectionner un forfait"
+  },
+  "HeaderSection": {
+    "title": "Aperçu Internxt vs {{competitor}}",
+    "description": "Découvrez pourquoi Internxt se démarque avec des fonctionnalités de confidentialité avancées, une architecture sécurisée et une suite de produits complète conçue pour vous protéger des cyberattaques.",
+    "tableSection": {
+      "comparisons": [
+        "Transparence du code",
+        "Chiffrement",
+        "Chiffrement post-quantique",
+        "Tarification",
+        "Fonctionnalités",
+        "Audits de sécurité",
+        "Support en direct",
+        "Politique de confidentialité",
+        "Lois sur la confidentialité"
+      ],
+      "internxtFeatures": [
+        "Open Source",
+        "Chiffré sur votre appareil",
+        "Oui",
+        "Compétitif, sans coûts cachés",
+        "Drive, VPN, Antivirus, Meet, Mail et plus",
+        "Audits de sécurité réguliers",
+        "Oui",
+        "Ne peut jamais accéder à vos fichiers",
+        "Confidentialité complète : RGPD, Lois espagnoles de protection des données"
+      ],
+      "competitorFeatures": [
+        "Code fermé",
+        "Payant en extra (pCloud Crypto)",
+        "Non",
+        "Abordable, mais extra pour le chiffrement",
+        "Stockage cloud, pCloud Pass",
+        "Non disponible",
+        "Non",
+        "Oui (pixel Facebook, TikTok, LinkedIn, etc.)",
+        "Prétend respecter les lois suisses sur la confidentialité"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Découvrez pourquoi l'engagement d'Internxt envers la transparence open source et les audits indépendants en fait une alternative à {{competitor}} plus fiable et sécurisée",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Confidentialité totale, transparence et confiance",
+        "features": [
+          {
+            "title": "Code Open Source",
+            "description": "Comme le code d'Internxt est ouvert à tous sur GitHub, n'importe qui peut l'examiner et garantir sa sécurité. Cette transparence assure qu'il n'y a pas de portes dérobées cachées."
+          },
+          {
+            "title": "Chiffrement de bout en bout",
+            "description": "Vos données sont chiffrées côté client, ce qui garantit que vous seul pouvez y accéder."
+          },
+          {
+            "title": "Entièrement audité",
+            "description": "Les services d'Internxt ont été examinés par des experts en sécurité d'une entreprise européenne leader en tests de pénétration. Cela garantit que vos données restent sécurisées contre les menaces externes comme les pirates et les violations."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Qu'en est-il de votre confidentialité ?",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "L'aspect code fermé du code de pCloud signifie que seule l'entreprise y a accès. Vous n'avez aucun moyen de vérifier ce qui se passe avec leurs données."
+          },
+          {
+            "title": "pCloud Crypto",
+            "description": "Cette fonctionnalité de chiffrement n'est pas open source et est une fonctionnalité payante supplémentaire (les utilisateurs gratuits ne sont pas protégés). Cela remet en question sa sécurité et sa transparence réelles."
+          },
+          {
+            "title": "Préoccupations concernant le stockage des mots de passe",
+            "description": "Sans vérification open source, comment pouvez-vous être sûr que pCloud ne sauvegarde pas votre mot de passe ou que d'autres personnes ne peuvent pas y accéder ?"
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "Coût et valeur",
+      "inxtTable": {
+        "title": "Sécurité et confidentialité sans coût supplémentaire",
+        "features": [
+          {
+            "title": "Forfaits raisonnables",
+            "description": "Offre exclusive de 87%, sans frais cachés."
+          },
+          {
+            "title": "Protection complète",
+            "description": "Tous les forfaits incluent le chiffrement post-quantique et zéro connaissance et les fonctionnalités de sécurité gratuitement."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Payez plus pour une confidentialité totale",
+        "features": [
+          {
+            "title": "Payez en extra pour le chiffrement zéro connaissance",
+            "description": "Vous devez payer pour l'add-on pCloud Crypto pour obtenir un chiffrement privé."
+          },
+          {
+            "title": "Coûts cachés",
+            "description": "Bien que les forfaits pCloud puissent sembler abordables, le coût supplémentaire pour un chiffrement côté client essentiel ou un trafic de téléchargement supplémentaire peut le rendre cher."
+          }
+        ]
+      }
+    },
+    "transparencyAndTrust": {
+      "title": "Transparence et confiance",
+      "inxtTable": {
+        "title": "Construit sur la confiance",
+        "features": [
+          {
+            "title": "Développement piloté par la communauté",
+            "description": "Parce qu'Internxt est open source, il peut être amélioré grâce aux contributions de la communauté et aux évaluations fréquentes par des professionnels de la sécurité."
+          },
+          {
+            "title": "Pas de secrets",
+            "description": "Des politiques claires et un code open source garantissent qu'il n'y a pas de surprises."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Aucune transparence",
+        "features": [
+          {
+            "title": "Logiciel propriétaire",
+            "description": "pCloud n'est pas transparent car il utilise un logiciel à code fermé"
+          },
+          {
+            "title": "Problèmes de confiance",
+            "description": "Les utilisateurs doivent faire aveuglément confiance à pCloud avec leurs données sans pouvoir le vérifier."
+          }
+        ]
+      }
+    },
+    "userExpAndFeatures": {
+      "title": "Expérience utilisateur et fonctionnalités",
+      "inxtTable": {
+        "title": "Design moderne et convivial",
+        "features": [
+          {
+            "title": "Interface facile",
+            "description": "Simple à utiliser avec un focus sur la sécurité et la confidentialité."
+          },
+          {
+            "title": "Multiplateforme",
+            "description": "Fonctionne sur toutes les principales plateformes, y compris WebDAV et Rclone."
+          },
+          {
+            "title": "Plusieurs forfaits",
+            "description": "Internxt propose des forfaits famille, entreprise et stockage d'objets S3 avec accès API pour les entreprises et développeurs."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Fonctionnalités supplémentaires mais à un prix",
+        "features": [
+          {
+            "title": "Ensemble de fonctionnalités",
+            "description": "pCloud offre de nombreuses fonctionnalités mais elles viennent avec un coût supplémentaire et des problèmes de confidentialité."
+          },
+          {
+            "title": "Accessibilité",
+            "description": "Payer en extra pour des fonctionnalités essentielles comme le chiffrement nuit à l'expérience globale."
+          },
+          {
+            "title": "Options de stockage",
+            "description": "A plusieurs forfaits, mais aucun stockage d'objets S3 limite la scalabilité et l'utilisation cloud-native pour les entreprises et développeurs."
+          }
+        ]
+      }
+    },
+    "switchToInternxt": {
+      "title": "Passez à Internxt pour une solution de stockage cloud plus sécurisée, ouverte et rentable",
+      "cta": "Essayez Internxt gratuitement"
+    }
+  },
+  "CtaSection": {
+    "title": "Passez à Internxt avec 87% de réduction",
+    "description": "Le seul stockage cloud dont vous avez besoin pour une confidentialité complète en ligne",
+    "cta": "Obtenir Internxt"
+  },
+  "CtaSection2": {
+    "title": "Pas de trackers. Pas de problèmes.",
+    "description": "Obtenez une confidentialité complète pour vos fichiers avec Internxt",
+    "cta": "S'inscrire gratuitement"
+  },
+  "tableSection": {
+    "title": "Forfaits Internxt",
+    "hotLabel": "{{discount}}% de réduction",
+    "planTitles": {
+      "header": "Sélectionnez votre forfait"
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1 To",
+      "premium": "3 To",
+      "ultimate": "5 To"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "title": "pCloud est-il sûr ?",
+    "description": "Le chiffrement à code fermé de pCloud rend difficile la vérification de son efficacité sécuritaire, soulevant des préoccupations concernant l'accès à vos fichiers.",
+    "scrollableSection": {
+      "titles": ["E-mails suspects", "Chiffrement", "Analyse de contenu", "Trackers"],
+      "descriptions": [
+        "Beaucoup d'utilisateurs de pCloud ont reçu des e-mails de phishing d'escrocs. Il n'est pas clair comment les pirates ont obtenu ces e-mails, mais pCloud nie une violation de données.",
+        "Le chiffrement zéro connaissance coûte cher avec pCloud Crypto. Tous les utilisateurs sans cela ont une protection considérablement plus faible. Sans ce chiffrement supplémentaire, pCloud peut analyser et accéder aux fichiers des utilisateurs.",
+        "Beaucoup d'utilisateurs de pCloud ont signalé que leurs comptes ont été injustement résiliés et supprimés sans avertissement en raison de violations présumées de marques ou de contenu illégal.",
+        "pCloud utilise des trackers sur son site web (Facebook, Twitter, TikTok) pour collecter vos données, augmentant le risque de violations de confidentialité et de marketing indésirable"
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "Pourquoi devriez-vous choisir Internxt comme alternative à pCloud ?",
+    "description": "Découvrez les fonctionnalités d'Internxt qui font de nous une alternative pCloud plus sécurisée et privée",
+    "scrollableSection": {
+      "titles": [
+        "Open source et transparent",
+        "Audité pour la sécurité",
+        "Zéro suivi des données",
+        "Conforme au RGPD",
+        "Chiffrement avancé",
+        "Forfaits de stockage flexibles"
+      ],
+      "descriptions": [
+        "Internxt est une alternative open source à pCloud, car le code de tous nos produits et services est disponible sur GitHub. Notre engagement envers la sécurité des données garantit la transparence sur la façon dont vos données sont traitées et protégées.",
+        "Les services d'Internxt ont été examinés par des experts en sécurité d'une entreprise européenne leader en tests de pénétration. Cela garantit que vos données restent sécurisées contre les menaces externes comme les pirates et les violations.",
+        "Si vous ne voulez pas que vos données soient surveillées pour afficher des publicités personnalisées, alors Internxt est une alternative plus privée à pCloud. Nous n'utilisons aucun tracker sur notre site web qui peut examiner, surveiller ou profiter de votre navigation.",
+        "Internxt opère avec une transparence complète, garantissant que votre confidentialité des données est protégée par les lois européennes. Notre conformité RGPD garantit que vos informations sont traitées de manière sécurisée et selon des réglementations strictes.",
+        "Internxt inclut le chiffrement post-quantique, la cryptographie la plus sécurisée et avancée disponible pour les comptes gratuits et payants. Nous ne stockons que la version chiffrée de vos données, et vous seul avez la clé pour les déchiffrer et y accéder.",
+        "Internxt Drive offre plus de forfaits payants et de plus grandes options de stockage que la structure tarifaire de pCloud. Si vous avez besoin d'une alternative à pCloud qui offre des forfaits annuels et à vie, choisissez parmi nos forfaits abordables avec VPN, Antivirus, Mail, Meet et plus."
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Internxt est-il une alternative plus sécurisée et privée à pCloud ?",
+        "answer": [
+          "Oui, Internxt offre des fonctionnalités plus avancées pour protéger vos données sans vous facturer en extra pour elles. Le chiffrement post-quantique et zéro connaissance garantit que personne d'autre que vous ne peut voir vos fichiers.",
+          "Des fonctionnalités supplémentaires comme VPN, Antivirus, Nettoyeur d'appareil, Moniteur Dark Web, Meet et Mail, fonctionnalités actuellement non disponibles avec pCloud, vous offrent également une protection supplémentaire contre les pirates et les violations de données."
+        ]
+      },
+      {
+        "question": "Qu'est-ce que le chiffrement post-quantique, et est-il plus sécurisé ?",
+        "answer": [
+          "Contrairement au chiffrement standard, les algorithmes de chiffrement post-quantique sont conçus pour résister aux puissantes attaques quantiques, faisant du PQE une alternative plus sécurisée à pCloud.",
+          "Cette méthode cryptographique est utilisée par Internxt pour s'assurer que votre forfait de stockage cloud à vie vous protège contre les futures menaces de cybersécurité et est disponible pour tous les forfaits sans coût supplémentaire."
+        ]
+      },
+      {
+        "question": "Où Internxt est-il basé ?",
+        "answer": [
+          "Internxt est basé à Valence, en Espagne, en faisant une solution de stockage cloud conforme au RGPD qui suit des lois strictes pour garantir que vos données et votre confidentialité sont protégées."
+        ]
+      },
+      {
+        "question": "La tarification de pCloud est-elle plus chère qu'Internxt ?",
+        "answer": [
+          "Avec votre réduction exclusive de 87%, tous nos forfaits sont moins chers que les options tarifaires de pCloud actuellement disponibles, avec l'avantage d'offrir beaucoup plus de fonctionnalités et de confidentialité que pCloud."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Si vous avez d'autres questions, demandes ou avez besoin d'assistance, vous pouvez contacter hello@internxt.com et notre équipe de succès client sera ravie de vous aider."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon forfait à vie ?",
+        "answer": [
+          "Oui, vous pouvez mettre à niveau votre forfait depuis les paramètres de votre compte Internxt si vous avez besoin d'ajouter plus de stockage."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, iDEAL, Sofort et Cryptomonnaie."
+        ]
+      }
+    ]
+  }
+}

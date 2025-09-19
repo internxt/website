@@ -443,5 +443,20 @@
     "id": "cloud-for-videos",
     "title": "Internxt - 影片檔案雲端儲存",
     "description": "Internxt 提供影片檔案雲端儲存服務，用於儲存 HD、4K 和 8K 影片，採用後量子加密技術確保最高隱私保護。"
+  },
+  {
+    "id": "dropbox-alternative",
+    "title": "Internxt — Dropbox的安全加密替代方案",
+    "description": "Internxt雲端儲存是Dropbox的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
+  },
+  {
+    "id": "pcloud-alternative",
+    "title": "Internxt — pCloud的安全、加密、開源替代方案",
+    "description": "Internxt雲端儲存是pCloud的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
+  },
+  {
+    "id": "mega-alternative",
+    "title": "Internxt — MEGA的安全、加密、開源替代方案",
+    "description": "Internxt雲端儲存是MEGA的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
   }
 ]
