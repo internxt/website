@@ -79,7 +79,7 @@
           },
           {
             "id": "android_ios_app",
-            "name": "iOS and Andorid apps",
+            "name": "iOS and Android apps",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {
