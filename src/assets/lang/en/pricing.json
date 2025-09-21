@@ -149,7 +149,7 @@
           },
           {
             "id": "vpn_Ultimate",
-            "name": "France, Germany, Poland, Canada, Uk",
+            "name": "France, Germany, Poland, Canada, UK",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]
