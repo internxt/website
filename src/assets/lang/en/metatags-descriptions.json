@@ -16,12 +16,12 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt — Object Storage",
+    "title": "Internxt — Affordable S3 Object Storage",
     "description": "Internxt provides private and affordable object storage for securely storing data using the S3 protocol to manage your storage needs effectively."
   },
   {
     "id": "drive",
-    "title": "Internxt Drive – Private & Secure Cloud Storage",
+    "title": "Internxt Drive – Secure & Encrypted Cloud Storage",
     "description": "Store, share, and back up your files and photos to the cloud with Internxt Drive. Open-source and end-to-end encrypted file storage and online backup."
   },
   {
@@ -76,7 +76,7 @@
   },
   {
     "id": "converter-tool",
-    "title": "Internxt Byte Converter",
+    "title": "Internxt - Byte Converter",
     "description": "Internxt’s free Byte Converter: Find out how much storage you have, how many gigabytes are in a terabyte, and convert to-and-from B, KB, MB, GB, and TB."
   },
   {
