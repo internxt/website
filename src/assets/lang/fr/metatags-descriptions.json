@@ -1,8 +1,8 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Stockage en nuage securisée",
-    "description": "La mission d'Internxt est d'aider à façonner un monde qui respecte les droits à la vie privée. Internxt Drive fournit un service de stockage en nuage sécurisé, privé et crypté."
+    "title": "Plans à vie Internxt – Stockage cloud à vie abordable et sécurisé",
+    "description": "Stockage cloud à vie d'Internxt. Payez une fois et obtenez 1TB, 3TB ou 5TB de stockage cloud sécurisé à vie. Inscrivez-vous ou passez à un plan à vie Internxt pour une confidentialité à vie !"
   },
   {
     "id": "drive",
@@ -46,13 +46,13 @@
   },
   {
     "id": "pricing",
-    "title": "Internxt – Pricing",
-    "description": "Les tarifs d'Internxt. Une seule adhésion pour tous nos services. Internxt Drive, Internxt Send, Internxt Photos. Bienvenue sur Internxt."
+    "title": "Internxt Prix – Stockage Crypté dans le cloud à vie",
+    "description": "Internxt offre un stockage cloud abordable, sécurisé, gratuit et crypté avec des plans de paiement annuels et à vie"
   },
   {
     "id": "about",
-    "title": "Internxt – À propos de nous",
-    "description": "Rencontrez l'équipe d'Internxt. Fran Villalba Segarra, Fondateur et PDG d'Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+    "title": "Internxt Confidentialité – Nos valeurs fondamentales",
+    "description": "Chez Internxt, protéger la confidentialité de l'utilisateur est notre mission. Passez à la suite de confidentialité tout-en-un d'Internxt. Internxt Drive, Meet, Mail, Cleaner et plus."
   },
   {
     "id": "legal",
@@ -258,5 +258,10 @@
     "id": "cloud-for-videos",
     "title": "Internxt – Stockage Cloud pour Fichiers Vidéo",
     "description": "Internxt propose un stockage cloud pour fichiers vidéo afin de stocker des vidéos HD, 4K et 8K qui sont sécurisées avec un chiffrement post-quantique pour une confidentialité maximale."
+  },
+  {
+    "id": "internxt-cleaner",
+    "title": "Internxt cleaner",
+    "description": "Internxt Cleaner – Trouvez et supprimez les fichiers indésirables pour améliorer la vitesse, la réactivité et les performances"
   }
 ]

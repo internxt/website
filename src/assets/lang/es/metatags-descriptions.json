@@ -1,7 +1,7 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Almacenamiento en la nube seguro",
+    "title": "Internxt – Pásate a un internet más Ético y Seguro",
     "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
   },
   {
@@ -11,7 +11,7 @@
   },
   {
     "id": "family",
-    "title": "Internxt para el Plan Familiar: el almacenamiento en la nube familiar más seguro",
+    "title": "Internxt para Familias: el almacenamiento en la nube familiar más seguro",
     "description": "Gestiona la privacidad online de tu familia con nuestro almacenamiento en la nube Internxt para planes familiares."
   },
   {
@@ -41,13 +41,13 @@
   },
   {
     "id": "affiliates",
-    "title": "Programa de Afiliados — Internxt",
+    "title": "Internxt — Programa de Afiliados",
     "description": "¡Únete al programa de marketing de afiliados de Internxt! Cómo empezar además de detalles del programa, beneficios y ventajas."
   },
   {
     "id": "pricing",
-    "title": "Internxt Precios – Obtén 1GB gratis!",
-    "description": "Internxt – Precios y planes"
+    "title": "Internxt Precios – Almacenamineto Encriptado en la nube de por vida",
+    "description": "Internxt ofrece almacenamiento en la nube asequible, seguro, gratuito y encriptado con planes de pago anuales y de por vida"
   },
   {
     "id": "about",
@@ -61,8 +61,8 @@
   },
   {
     "id": "privacy",
-    "title": "Internxt Privacidad – Herramientas y recursos gratuitos",
-    "description": "Internxt Privacidad – Herramientas y recursos gratuitos"
+    "title": "Internxt Privacidad – Nuestros valores fundamentales",
+    "description": "Aquí en Internxt, proteger la privacidad del usuario es nuestra misión. Cambia a la suite de privacidad todo en uno de Internxt. Internxt Drive, Meet, Mail, Cleaner y más."
   },
   {
     "id": "virus-scanner",
@@ -76,13 +76,13 @@
   },
   {
     "id": "converter-tool",
-    "title": "Convertidor de unidades online gratuito — Internxt",
+    "title": "Internxt convertidor de bytes",
     "description": "Averigua cuánto espacio de almacenamiento tienes, cuántos gigabytes hay en un terabyte y convierte de B, KB, MB, GB y TB."
   },
   {
     "id": "lifetime",
-    "title": "Internxt – Lifetime de almacenamiento en la nube (España)",
-    "description": "Consigue el mejor, más barato y más seguro almacenamiento en la nube de por vida. Paga una vez y disfruta de Internxt para siempre."
+    "title": "Planes de por vida de Internxt – Almacenamiento en la nube de por vida asequible y seguro",
+    "description": "Almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 1TB, 3TB o 5TB de almacenamiento seguro en la nube de por vida. ¡Regístrate o actualiza a un plan de por vida de Internxt para privacidad de por vida!"
   },
   {
     "id": "comparison",
@@ -92,7 +92,7 @@
   {
     "id": "black-friday",
     "title": "Internxt Black Friday Deal – ¡Rebajas en el almacenamiento en la nube!",
-    "description": "Internxt Black Friday Deal 2022: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
+    "description": "Internxt Black Friday Deal 2025: Sign up or upgrade and get over half off Internxt’s 2TB subscription for 1 year. Get your Black Friday discount on Internxt’s largest cloud storage plan today!"
   },
   {
     "id": "cloudwards",
@@ -131,112 +131,112 @@
   },
   {
     "id": "password-generator",
-    "title": "Generador de contraseñas seguras — Internxt",
+    "title": "Internxt — Generador de contraseñas seguras",
     "description": "Generador de contraseñas seguras. Una herramienta gratis para crear contraseñas aleatorias y seguras para mantener tus cuentas a salvo."
   },
   {
     "id": "cloud-storage-for-education",
-    "title": "Ahorra en almacenamiento en la nube para estudiantes — Internxt",
+    "title": "Internxt — Ahorra en almacenamiento en la nube para estudiantes",
     "description": "Ahorra un 50% en cualquier plan de almacenamiento en la nube para estudiantes, escuelas y universidades. ¡Mantén tus archivos seguros con Internxt!"
   },
   {
     "id": "file-converter",
-    "title": "Convertidor de archivos en línea — Internxt",
+    "title": "Internxt — Convertidor de archivos en línea",
     "description": "Convertidor de archivos en línea gratuito de Internxt. Convierte tus archivos a diferentes formatos y tamaños. Convierte PDF, Word, Excel y más."
   },
   {
     "id": "word-to-pdf",
-    "title": "Convierte PDF a archivos de Word en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PDF a archivos de Word en línea de forma gratuit",
     "description": "El convertidor de archivos de Internxt convierte PDF a archivos de Word de forma gratuita. Nuestro convertidor de PDF a Word es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "png-to-pdf",
-    "title": "Convierte PNG a archivos PDF en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PNG a archivos PDF en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte PNG a archivos PDF de forma gratuita. Nuestro convertidor de PNG a PDF es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "html-to-pdf",
-    "title": "Convierte HTML a archivos PDF en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte HTML a archivos PDF en línea de forma gratuita — Internxt",
     "description": "El convertidor de archivos de Internxt convierte HTML a archivos PDF de forma gratuita. Nuestro convertidor de HTML a PDF es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "excel-to-pdf",
-    "title": "Convierte EXCEL a archivos PDF en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte EXCEL a archivos PDF en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte EXCEL a archivos PDF de forma gratuita. Nuestro convertidor de EXCEL a PDF es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "pdf-to-html",
-    "title": "Convierte PDF a archivos HTML en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PDF a archivos HTML en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte PDF a archivos HTML de forma gratuita. Nuestro convertidor de PDF a HTML es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "word-to-html",
-    "title": "Convierte DOCX a archivos HTML en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte DOCX a archivos HTML en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte DOCX a archivos HTML de forma gratuita. Nuestro convertidor de DOCX a HTML es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "pptx-to-pdf",
-    "title": "Convierte PPTX a archivos PDF en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PPTX a archivos PDF en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte PPTX a archivos PDF de forma gratuita. Nuestro convertidor de PPTX a PDF es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "jpg-to-png",
-    "title": "Convierte JPG a archivos PNG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte JPG a archivos PNG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte JPG a archivos PNG de forma gratuita. Nuestro convertidor de JPG a PNG es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "jpg-to-heic",
-    "title": "Convierte JPG a imágenes HEIC en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte JPG a imágenes HEIC en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte tus JPG a imágenes HEIC de forma gratuita. Nuestro convertidor de JPG a HEIC es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "jpg-to-webp",
-    "title": "Convierte JPG a archivos WEBP en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte JPG a archivos WEBP en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte JPG a archivos WEBP de forma gratuita. Nuestro convertidor de JPG a WEBP es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "png-to-webp",
-    "title": "Convierte PNG a archivos WEBP en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PNG a archivos WEBP en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte PNG a archivos WEBP de forma gratuita. Nuestro convertidor de PNG a WEBP es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "png-to-jpg",
-    "title": "Convierte PNG a archivos JPG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PNG a archivos JPG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte PNG a archivos JPG de forma gratuita. Nuestro convertidor de PNG a JPG es una manera fácil, rápida y segura de convertir tus archivos."
   },
   {
     "id": "png-to-heic",
-    "title": "Convierte PNG a imágenes HEIC en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte PNG a imágenes HEIC en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte tus PNG a imágenes HEIC de forma gratuita. Nuestro convertidor de PNG a HEIC es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "webp-to-png",
-    "title": "Convierte archivos WEBP a PNG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte archivos WEBP a PNG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte archivos WEBP a PNG de forma gratuita. Nuestro convertidor de WEBP a PNG es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "webp-to-jpg",
-    "title": "Convierte archivos WEBP a JPG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte archivos WEBP a JPG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte archivos WEBP a JPG de forma gratuita. Nuestro convertidor de WEBP a JPG es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "heic-to-jpg",
-    "title": "Convierte imágenes HEIC a JPG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte imágenes HEIC a JPG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte tus imágenes HEIC a JPG de forma gratuita. Nuestro convertidor de HEIC a JPG es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "heic-to-png",
-    "title": "Convierte imágenes HEIC a PNG en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte imágenes HEIC a PNG en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte tus imágenes HEIC a PNG de forma gratuita. Nuestro convertidor de HEIC a PNG es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "image-to-text",
-    "title": "Convierte imágenes a archivos de texto en línea de forma gratuita — Internxt",
+    "title": "Internxt — Convierte imágenes a archivos de texto en línea de forma gratuita",
     "description": "El convertidor de archivos de Internxt convierte tus imágenes a archivos de texto de forma gratuita. Nuestro convertidor de imágenes a texto es rápido y seguro, manteniendo tus archivos 100% privados."
   },
   {
     "id": "halloween-campaign",
-    "title": "Internxt – Almacenamiento en la nube seguro",
+    "title": "Internxt – Pásate a un internet más Ético y Seguro",
     "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
   },
   {
@@ -246,7 +246,7 @@
   },
   {
     "id": "cloud-object-storage",
-    "title": "Internxt – Almacenamiento en la nube seguro",
+    "title": "Internxt – Pásate a un internet más Ético y Seguro",
     "description": "Internxt ofrece almacenamiento de objetos privado y asequible para almacenar datos de forma segura utilizando el protocolo S3 para gestionar tus necesidades de almacenamiento de manera efectiva."
   },
   {
@@ -256,7 +256,7 @@
   },
   {
     "id": "partner-discount",
-    "title": "Descuento para Socios — Internxt",
+    "title": "Internxt — Descuento para Socios",
     "description": "Obtén los planes anuales de Internxt con un exclusivo 75% de descuento. Disfruta de privacidad y seguridad con hasta 10TB de almacenamiento."
   },
   {
@@ -266,7 +266,7 @@
   },
   {
     "id": "vpn-extension",
-    "title": "VPN segura y gratis de Internxt — Internxt",
+    "title": "Internxt — VPN segura y gratis de Internxt",
     "description": "Extensión VPN gratuita para Chrome de Internxt: navegación segura y Wi-Fi cifrado. Descarga nuestra VPN privada para proteger tus datos en línea."
   },
   {
@@ -306,12 +306,12 @@
   },
   {
     "id": "special-offer",
-    "title": "Oferta especial — Internxt",
+    "title": "Internxt — Oferta especial",
     "description": "Obtén planes anuales y de por vida de Internxt con un descuento exclusivo del 80 %. Disfruta de privacidad y seguridad con hasta 10 TB de almacenamiento."
   },
   {
     "id": "file-compressor",
-    "title": "Compresor de archivos — Internxt",
+    "title": "Internxt — Compresor de archivos ",
     "description": "Compresor de archivos de Internxt, el mejor para reducir gratis el tamaño de vídeos, fotos y documentos."
   },
   {

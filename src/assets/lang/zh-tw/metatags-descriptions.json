@@ -1,8 +1,8 @@
 [
   {
     "id": "home",
-    "title": "Internxt – 私密且安全的雲端儲存",
-    "description": "捍衛隱私，轉換至Internxt。Internxt 的開源雲端儲存服務保護您的隱私權。Internxt Drive、Photos、Send等等。"
+    "title": "Internxt 終身計劃 – 實惠安全的終身雲端儲存",
+    "description": "Internxt 終身雲端儲存。一次付費，獲得 1TB、3TB 或 5TB 的安全雲端儲存終身使用權。註冊或升級到 Internxt 終身計劃，享受終身隱私保護！"
   },
   {
     "id": "drive",
@@ -41,13 +41,14 @@
   },
   {
     "id": "pricing",
-    "title": "Internxt 價格 – 高達10GB免費！",
-    "description": "註冊Internxt安全雲端儲存訂閱，並獲得我們充滿最新技術新聞和更新的每月通訊。"
+
+    "title": "Internxt 價格 – 終身加密雲端儲存",
+    "description": "Internxt 提供實惠、安全、免費和加密的雲端儲存，包含年付和終身付費計劃"
   },
   {
     "id": "about",
-    "title": "Internxt – 關於我們",
-    "description": "認識Internxt的團隊。Fran Villalba Segarra，Internxt的創始人兼CEO。Lanzadera、Angels Capital、The Venture City、Internxt、ESADE BAN。"
+    "title": "Internxt 隱私 – 我們的核心價值觀",
+    "description": "在 Internxt，保護使用者隱私是我們的使命。切換到 Internxt 一體化隱私套件。Internxt Drive、Meet、Mail、Cleaner 等更多服務。"
   },
   {
     "id": "legal",
@@ -443,5 +444,10 @@
     "id": "cloud-for-videos",
     "title": "Internxt – 影片檔案雲端儲存",
     "description": "Internxt 提供影片檔案雲端儲存服務，用於儲存 HD、4K 和 8K 影片，採用後量子加密技術確保最高隱私保護。"
+  },
+  {
+    "id": "internxt-cleaner",
+    "title": "Internxt cleaner",
+    "description": "Internxt Cleaner – 尋找並刪除垃圾檔案，提升速度、回應性和效能"
   }
 ]

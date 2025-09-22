@@ -1,8 +1,8 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Archiviazione cloud privata e sicura",
-    "description": "Difendi la privacy, passa a Internxt. La suite open–source di servizi di cloud storage di Internxt protegge il vostro diritto alla privacy. Internxt Drive, Photos, Send e molto altro."
+    "title": "Piani a vita Internxt – Archiviazione cloud a vita conveniente e sicura",
+    "description": "Archiviazione cloud a vita di Internxt. Paga una volta e ottieni 1TB, 3TB o 5TB di archiviazione cloud sicura a vita. Registrati o passa a un piano a vita Internxt per la privacy a vita!"
   },
   {
     "id": "drive",
@@ -41,13 +41,14 @@
   },
   {
     "id": "pricing",
-    "title": "Prezzi Internxt – 1 GB gratuiti!",
-    "description": "Registratevi per un abbonamento al cloud storage sicuro di Internxt e accedete alla nostra newsletter mensile con le ultime novità e aggiornamenti tecnologici."
+    "title": "Internxt Prezzi – Archiviazione Crittografata nel cloud a vita",
+    "description": "Internxt offre archiviazione cloud conveniente, sicura, gratuita e crittografata con piani di pagamento annuali e a vita"
   },
   {
     "id": "about",
-    "title": "Internxt – Chi siamo",
-    "description": "Incontra il team di Internxt. Fran Villalba Segarra, Fondatore e CEO di Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+
+    "title": "Internxt Privacy – I nostri valori fondamentali",
+    "description": "Qui in Internxt, proteggere la privacy dell'utente è la nostra missione. Passa alla suite di privacy tutto-in-uno di Internxt. Internxt Drive, Meet, Mail, Cleaner e altro."
   },
   {
     "id": "legal",
@@ -273,5 +274,10 @@
     "id": "cloud–for–videos",
     "title": "Internxt – Archiviazione Cloud per File Video",
     "description": "Internxt offre archiviazione cloud per file video per memorizzare video HD, 4K e 8K che sono protetti con crittografia post–quantistica per la massima privacy."
+  },
+  {
+    "id": "internxt–cleaner",
+    "title": "Internxt cleaner",
+    "description": "Internxt Cleaner – Trova ed elimina file spazzatura per migliorare velocità, reattività e prestazioni"
   }
 ]

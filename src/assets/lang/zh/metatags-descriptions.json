@@ -1,8 +1,8 @@
 [
   {
     "id": "home",
-    "title": "Internxt – 私有和安全的云存储",
-    "description": "站在隐私的角度,切换到Internxt。用我们的开源和加密的安全云服务套件来保护你的隐私。Internxt Drive, Photos, Send, 和更多。"
+    "title": "Internxt 终身计划 – 实惠安全的终身云存储",
+    "description": "Internxt 终身云存储。一次付费，获得 1TB、3TB 或 5TB 的安全云存储终身使用权。注册或升级到 Internxt 终身计划，享受终身隐私保护！"
   },
   {
     "id": "drive",
@@ -41,8 +41,8 @@
   },
   {
     "id": "pricing",
-    "title": "Internxt 价格 – 免费获得高达 1GB 的空间！",
-    "description": "注册一个 Internxt 安全云存储订阅并获得我们的每月时事通讯，其中包含最新的技术新闻和更新。"
+    "title": "Internxt 价格 – 终身加密云存储",
+    "description": "Internxt 提供实惠、安全、免费和加密的云存储，包含年付和终身付费计划"
   },
   {
     "id": "open-source",
@@ -51,8 +51,9 @@
   },
   {
     "id": "about",
-    "title": "Internxt – 关于我们",
-    "description": "认识 Internxt 的团队。 Internxt 创始人兼首席执行官 Fran Villalba Segarra。 Shuttle、Angels Capital、The Venture City、Internxt、ESADE BAN。"
+
+    "title": "Internxt 隐私 – 我们的核心价值观",
+    "description": "在 Internxt，保护用户隐私是我们的使命。切换到 Internxt 一体化隐私套件。Internxt Drive、Meet、Mail、Cleaner 等更多服务。"
   },
   {
     "id": "legal",
@@ -278,5 +279,10 @@
     "id": "cloud-for-videos",
     "title": "Internxt – 视频文件云存储",
     "description": "Internxt 提供视频文件云存储服务，用于存储 HD、4K 和 8K 视频，采用后量子加密技术确保最高隐私保护。"
+  },
+  {
+    "id": "internx-cleaner",
+    "title": "Internxt cleaner",
+    "description": "Internxt Cleaner – 查找并删除垃圾文件，提升速度、响应性和性能"
   }
 ]
