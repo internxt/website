@@ -161,7 +161,7 @@
     }
   },
   "HorizontalScrollableSection": {
-    "title": "Is Mega safe?",
+    "title": "Is MEGA safe?",
     "description": "After a research study, vulnerabilities in MEGA's encryption methods were found by experts in cryptography, which put the data and privacy of millions of their users at risk.",
     "tile2": "MEGA: Malleable Encryption Goes Awry",
     "description2": "Researchers from ETH Zurich discovered major cryptographic flaws in MEGA, affecting 250M+ users and over 1,000 Petabytes of data. Four key vulnerabilities were identified:",

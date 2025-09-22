@@ -49,8 +49,10 @@
     "title": "Internxt vs {{competitor}}",
     "description": "See why Internxt’s commitment to open-source transparency and independent audits makes it a more trustworthy and secure {{competitor}} alternative",
     "mainTable": {
+      "title": "Privacy and security",
+      "description": "Internxt offers affordable and scalable plans for everyone, focusing on maximum security that protects your privacy.",
       "inxtTable": {
-        "title": "Privacy and security",
+        "title": "Total privacy, transparency, and trust",
         "description": "Internxt gives you total control over your files and data through open-source software, zero-knowledge encryption, and a fully private ecosystem.",
         "features": [
           {
@@ -130,8 +132,8 @@
     "cta": "Get Internxt"
   },
   "CtaSection2": {
-    "title": "No trackers. No problems.",
-    "description": "Get complete privacy for your files with Internxt",
+    "title": "",
+    "description": "Use code DROPBOX87 for 87% off secure, encrypted cloud storage",
     "cta": "Sign up for free"
   },
   "tableSection": {

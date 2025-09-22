@@ -121,8 +121,8 @@
         "**1TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication (2FA)",
-        "Files backup",
+        "Two-factor authentication ",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR)",
         "Antivirus"
@@ -131,21 +131,20 @@
         "**3TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication (2FA)",
-        "Files backup",
+        "Two-factor authentication ",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR,DE, PL)",
         "Antivirus",
         "Invite, share & collaborate",
-        "Cleaner",
-        "Monitor"
+        "Cleaner"
       ],
       "5TB": [
         "**5TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication (2FA)",
-        "Files backup",
+        "Two-factor authentication ",
+        "Backup your computer",
         "Password-protected file sharing",
         "VPN (FR,DE, PL,CA, UK)",
         "Antivirus",
@@ -154,7 +153,7 @@
         "NAS & Rclone support",
         "Cleaner",
         "Meet",
-        "Monitor",
+
         "Mail"
       ]
     },
@@ -162,32 +161,29 @@
       "1TB": [
         "1TB encrypted storage per user",
         "Post-quantum encryption",
-        "Ultra fast unlimited VPN (FR, DE, PL)",
+        "VPN (FR, DE, PL)",
         "Antivirus",
-        "Backup your files",
+        "Backup your computer",
         "Password-protected file sharing",
         "Invite, share & collaborate",
         "GDPR compliance",
-        "Two-factor authentication (2FA)",
-        "CLI, WebDav support",
-        "Manage account billing & payments",
-        "Cleaner ",
-        "Monitor"
+        "Two-factor authentication ",
+        "Organization management",
+        "Cleaner "
       ],
       "2TB": [
         "2TB encrypted storage per user",
         "Post-quantum encryption",
-        "Ultra fast unlimited VPN (FR, DE, PL, CA, UK)",
+        "VPN (FR, DE, PL, CA, UK)",
         "Antivirus",
-        "Backup your files",
+        "Backup your computer",
         "Password-protected file sharing",
         "Invite, share & collaborate",
         "GDPR compliance",
-        "Two-factor authentication (2FA)",
+        "Two-factor authentication ",
         "CLI, WebDav, Rclone & NAS support",
-        "Manage account billing & payments",
+        "Organization management",
         "Cleaner ",
-        "Monitor",
         "Meet ",
         "Mail "
       ]

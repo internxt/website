@@ -14,25 +14,25 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
 
   return (
     <div
-      className=" flex h-min w-full flex-col items-center justify-between gap-8 lg:h-min lg:justify-center"
+      className="flex h-min w-full flex-col items-center justify-between gap-8 lg:h-min lg:justify-center"
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
       <div className="flex h-full w-full flex-col items-center justify-around gap-8 pb-20 pt-32 text-center xs-md:mx-10 lg:h-min lg:justify-around xl:mx-32 3xl:mx-80 4xl:mx-96">
-        <div className="flex h-min w-[320px] flex-col items-center justify-between gap-8 text-4xl lg:h-min lg:w-min lg:whitespace-nowrap">
+        <div className="flex h-min w-fit flex-col items-center justify-between gap-8 text-4xl lg:h-min">
           <p
             className="text-start text-30 font-semibold text-gray-95 lg:text-center lg:text-5xl"
             dangerouslySetInnerHTML={{ __html: parseText(textContent.title) }}
           />
-          <div className="flex h-[250px] flex-col-reverse justify-around gap-8 lg:h-min lg:flex-row">
-            <p className="w whitespace-pre-line text-start text-base font-normal leading-tight text-gray-55 lg:text-xl">
+          <div className="flex h-[250px] w-full flex-col-reverse justify-around gap-8 lg:h-min lg:flex-row">
+            <p className="w-[393px] whitespace-pre-line text-start text-base font-normal leading-tight text-gray-55 lg:text-xl">
               {textContent.description}
             </p>
             <div className="flex h-[88px] flex-col justify-between">
               {textContent.features?.map((feat) => (
                 <div key={feat} className="flex h-[24px] flex-row items-start gap-1 lg:items-center lg:gap-2">
-                  <Check className="hidden text-green-1 xs-md:block" size={24} />
+                  <Check className="hidden text-green-1 xs-md:block" size={20} />
                   <Check className="block text-green-1 xs-md:hidden" size={18} />
-                  <p className=" break-keep text-left text-sm font-medium text-gray-95 xs-md:text-lg">{feat}</p>
+                  <p className="text-left text-sm font-medium text-gray-95 xs-md:text-lg">{feat}</p>
                 </div>
               ))}
             </div>

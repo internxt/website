@@ -49,7 +49,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
         textContent={langJson.HeroSection}
         redirectUrl={'/pricing'}
         percentage={percentageDiscount}
-        competitor={'mega'}
+        competitor={'Mega'}
       />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="MEGA" />
@@ -92,7 +92,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
 
       <TablesSection
         textContent={langJson.VersusSection}
-        competitor={'mega'}
+        competitor={'Mega'}
         logo="/images/comparison/competitors/Mega_Letters.webp"
       />
 

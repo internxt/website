@@ -77,7 +77,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
       <div className="flex flex-col items-center justify-center gap-8 lg:gap-16">
         <div className="flex flex-col items-center gap-4 text-center lg:gap-6">
           <h2 className="text-2xl font-semibold text-gray-100 lg:text-3xl">{parseText(textContent.title)}</h2>
-          <p className="max-w-[345px] text-sm leading-tight text-gray-80 lg:max-w-[845px] lg:text-xl">
+          <p className="max-w-[345px] text-sm leading-tight text-gray-80 lg:max-w-[774px] lg:text-xl">
             {parseText(textContent.description)}
           </p>
         </div>
@@ -109,7 +109,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
             </div>
 
             <div ref={scrollRef} className="flex-1 overflow-x-auto">
-              <div className="w-[650px]">
+              <div className="w-[830px]">
                 <div className="flex">
                   <div className="w-1/2">
                     <div className="flex h-[48px] flex-col items-center justify-center rounded-tl-2xl border border-green-120 bg-neutral-17 p-3 lg:h-[128px] lg:px-20 lg:py-12">

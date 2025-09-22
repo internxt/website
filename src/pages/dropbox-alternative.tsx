@@ -54,7 +54,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
         textContent={langJson.HeroSection}
         redirectUrl={'/pricing'}
         percentage={percentageDiscount}
-        competitor={'dropbox'}
+        competitor={'Dropbox'}
       />
 
       <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" />
@@ -97,7 +97,7 @@ const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, f
 
       <TablesSection
         textContent={langJson.VersusSection}
-        competitor={'dropbox'}
+        competitor={'Dropbox'}
         logo="/images/comparison/competitors/Dropbox_Letters.webp"
       />
 

@@ -9,6 +9,8 @@ type TablesSectionProps = {
     title: string;
     description: string;
     mainTable: {
+      title?: string;
+      description?: string;
       inxtTable: any;
       competitorTable: any;
     };
@@ -83,10 +85,24 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
         <p className="w-[330px] text-base text-gray-80 lg:w-[832px] lg:text-xl">{parseText(textContent.description)}</p>
 
         {textContent.mainTable && (
-          <div className="flex h-full w-screen flex-row items-center justify-center py-6">
-            <InxtTable textContent={textContent.mainTable.inxtTable} />
-            <CompetitorTable textContent={textContent.mainTable.competitorTable} logo={logo} />
-          </div>
+          <>
+            <div className="flex flex-col items-center justify-center">
+              {textContent.mainTable.title && (
+                <h2 className="pb-6 pt-8 text-30 font-semibold text-gray-100 lg:text-3xl">
+                  {textContent.mainTable.title}
+                </h2>
+              )}
+              {textContent.mainTable.description && (
+                <p className="w-[330px]  text-base text-gray-80 lg:w-[832px] lg:text-xl">
+                  {textContent.mainTable.description}
+                </p>
+              )}
+              <div className="flex h-full w-screen flex-row items-center justify-center pb-6 pt-6">
+                <InxtTable textContent={textContent.mainTable.inxtTable} />
+                <CompetitorTable textContent={textContent.mainTable.competitorTable} logo={logo} />
+              </div>
+            </div>
+          </>
         )}
       </div>
 
@@ -118,7 +134,7 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
                   </p>
 
                   {section.data.description && (
-                    <p className="text- hidden w-[330px] text-center font-normal text-gray-55 lg:block lg:w-[832px] lg:text-xl">
+                    <p className="text- hidden w-[330px] pb-5 text-center font-normal text-gray-55 lg:block lg:w-[832px] lg:text-xl">
                       {parseText(section.data.description)}
                     </p>
                   )}
@@ -129,7 +145,7 @@ export const TablesSection = ({ textContent, logo, competitor }: TablesSectionPr
                     isOpen ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'
                   } lg:block lg:max-h-none lg:opacity-100`}
                 >
-                  <div className="flex h-full w-screen flex-row justify-center pt-5 sm:min-w-full">
+                  <div className="flex h-full w-screen flex-row justify-center sm:min-w-full">
                     <InxtTable textContent={section.data.inxtTable} />
                     <CompetitorTable textContent={section.data.competitorTable} logo={logo} />
                   </div>

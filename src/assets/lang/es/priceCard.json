@@ -138,8 +138,7 @@
         "VPN (FR, DE, PL)",
         "Antivirus",
         "Invita, comparte y colabora",
-        "Limpiador",
-        "Monitor"
+        "Limpiador"
       ],
       "5TB": [
         "**5TB** de almacenamiento cifrado",
@@ -155,7 +154,6 @@
         "Soporte NAS y Rclone",
         "Limpiador",
         "Meet",
-        "Monitor",
         "Mail"
       ]
     },
@@ -170,10 +168,8 @@
         "Invita, comparte y colabora",
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
-        "CLI/WebDav/Rclone",
-        "Gestiona la facturación y los pagos de la cuenta",
-        "Limpiador",
-        "Monitor"
+        "Gestion de la empresa",
+        "Limpiador"
       ],
       "2TB": [
         "2TB de almacenamiento",
@@ -186,9 +182,8 @@
         "Cumple con RGPD",
         "Autenticación de dos factores (2FA)",
         "CLI/WebDav/Rclone",
-        "Gestiona la facturación y los pagos de la cuenta",
+        "Gestion de la empresa",
         "Limpiador",
-        "Monitor",
         "Meet ",
         "Mail "
       ]
