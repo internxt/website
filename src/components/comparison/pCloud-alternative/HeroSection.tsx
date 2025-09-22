@@ -17,8 +17,8 @@ export const HeroSection = ({ textContent, redirectUrl, percentage, competitor }
       className="flex h-min w-full flex-col items-center justify-between gap-8 lg:h-min lg:justify-center"
       style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
     >
-      <div className="flex h-full w-full flex-col items-center justify-around gap-8 pb-20 pt-32 text-center xs-md:mx-10 lg:h-min lg:justify-around xl:mx-32 3xl:mx-80 4xl:mx-96">
-        <div className="flex h-min w-fit flex-col items-center justify-between gap-8 text-4xl lg:h-min">
+      <div className="flex h-full w-[355px] flex-col items-center justify-around gap-8 pb-20 pt-32 text-center xs-md:mx-10 lg:h-min lg:w-full lg:justify-around xl:mx-32 3xl:mx-80 4xl:mx-96">
+        <div className="flex h-min w-full flex-col items-center justify-between gap-8 text-4xl lg:h-min">
           <p
             className="text-start text-30 font-semibold text-gray-95 lg:text-center lg:text-5xl"
             dangerouslySetInnerHTML={{ __html: parseText(textContent.title) }}
