@@ -1,10 +1,10 @@
 {
   "HeroSection": {
-    "title": "Internxt: A Secure {{competitor}} Alternative",
+    "title": "Internxt,  A Secure {{competitor}} Alternative",
     "description": "Looking for a secure alternative to pCloud? Internxt offers the first cloud storage with post quantum encryption and a full privacy suite of products for maximum privacy and security.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for ${{percentage}} % off",
-    "cta": "Select plan"
+    "cta": "Claim deal"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}} overview",
@@ -30,7 +30,7 @@
         "Regular security audits ",
         "Yes",
         "Can never access your files",
-        "Full privacy: GDPR, Spanish Data Protection Laws"
+        "Full privacy: GDPR, EU Data Protection Laws"
       ],
       "competitorFeatures": [
         "Closed-Source",

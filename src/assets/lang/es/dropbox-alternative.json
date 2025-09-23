@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt: Una Alternativa Segura a {{competitor}}",
+    "title": "Internxt,  la Alternativa Segura a {{competitor}}",
     "description": "Una brecha de datos pasada de Dropbox filtró 68 millones de contraseñas. ¿Quieres evitar que esto te pase a ti? Únete a Internxt para obtener seguridad y privacidad completa, proporcionando máxima protección contra brechas de datos.",
     "features": [
       "Almacena tus vídeos en privado",
@@ -34,7 +34,7 @@
         "Auditorías de seguridad regulares",
         "Sí",
         "Nunca puede acceder a tus archivos",
-        "Privacidad completa: GDPR, Leyes Españolas de Protección de Datos"
+        "Privacidad completa: GDPR, Leyes Europeas de Protección de Datos"
       ],
       "competitorFeatures": [
         "Código Cerrado",

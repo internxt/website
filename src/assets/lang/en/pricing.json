@@ -9,7 +9,7 @@
       "business": "Business Plans"
     },
     "lifetimeDescription": "Pay once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet and Mail.",
+    "planDescription": "All Internxt plans are fully featured with complete access to our award-winning privacy suite consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet, and Mail.",
     "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
     "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -79,7 +79,7 @@
           },
           {
             "id": "android_ios_app",
-            "name": "iOS and Andorid apps",
+            "name": "iOS and Android apps",
             "avalability": { "Essential": true, "Premium": true, "Ultimate": true }
           },
           {
@@ -149,7 +149,7 @@
           },
           {
             "id": "vpn_Ultimate",
-            "name": "France, Germany, Poland, Canada, Uk",
+            "name": "France, Germany, Poland, Canada, UK",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           }
         ]
@@ -194,8 +194,8 @@
           },
           {
             "id": "Dark_Web_Monitor",
-            "name": "Dark Web Monitor",
-            "avalability": { "Essential": false, "Premium": true, "Ultimate": true }
+            "name": "File Versioning",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
           {
             "id": "cli_webdav_support",
@@ -209,6 +209,16 @@
           },
           { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } },
           { "id": "mail", "name": "Mail", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } }
+        ]
+      },
+      {
+        "name": "Comming soon",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "File Versioning",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
         ]
       }
     ]

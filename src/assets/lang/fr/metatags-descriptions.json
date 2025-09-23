@@ -1,8 +1,8 @@
 [
   {
     "id": "home",
-    "title": "Internxt – Stockage en nuage securisée",
-    "description": "La mission d'Internxt est d'aider à façonner un monde qui respecte les droits à la vie privée. Internxt Drive fournit un service de stockage en nuage sécurisé, privé et crypté."
+    "title": "Plans à vie Internxt – Stockage cloud à vie abordable et sécurisé",
+    "description": "Stockage cloud à vie d'Internxt. Payez une fois et obtenez 1TB, 3TB ou 5TB de stockage cloud sécurisé à vie. Inscrivez-vous ou passez à un plan à vie Internxt pour une confidentialité à vie !"
   },
   {
     "id": "drive",
@@ -21,12 +21,12 @@
   },
   {
     "id": "what-google-knows",
-    "title": "Ce que Google sait de moi | Internxt",
+    "title": "Ce que Google sait de moi – Internxt",
     "description": "Découvrez les données que Google conserve sur vous. Comment consulter et télécharger vos données Google, comment les supprimer et comment désactiver la collecte de données par Google."
   },
   {
     "id": "affiliates",
-    "title": "Programme d'Affiliation | Internxt",
+    "title": "Programme d'Affiliation – Internxt",
     "description": "Rejoignez le programme de marketing d'affiliation d'Internxt ! Comment commencer plus les détails du programme, avantages et privilèges."
   },
   {
@@ -41,18 +41,18 @@
   },
   {
     "id": "lifetime",
-    "title": "Internxt Plan à vie - Cloud sécurisé pour la vie !",
+    "title": "Internxt Plan à vie – Cloud sécurisé pour la vie !",
     "description": "Internxt Lifetime Deal : payez une fois et obtenez 1TB, 3TB ou 5TB de stockage cloud sécurisé pour toujours."
   },
   {
     "id": "pricing",
-    "title": "Internxt – Pricing",
-    "description": "Les tarifs d'Internxt. Une seule adhésion pour tous nos services. Internxt Drive, Internxt Send, Internxt Photos. Bienvenue sur Internxt."
+    "title": "Internxt Prix – Stockage Crypté dans le cloud à vie",
+    "description": "Internxt offre un stockage cloud abordable, sécurisé, gratuit et crypté avec des plans de paiement annuels et à vie"
   },
   {
     "id": "about",
-    "title": "Internxt – À propos de nous",
-    "description": "Rencontrez l'équipe d'Internxt. Fran Villalba Segarra, Fondateur et PDG d'Internxt. Lanzadera, Angels Capital, The Venture City, Internxt, ESADE BAN."
+    "title": "Internxt Confidentialité – Nos valeurs fondamentales",
+    "description": "Chez Internxt, protéger la confidentialité de l'utilisateur est notre mission. Passez à la suite de confidentialité tout-en-un d'Internxt. Internxt Drive, Meet, Mail, Cleaner et plus."
   },
   {
     "id": "legal",
@@ -71,12 +71,12 @@
   },
   {
     "id": "temporary-email",
-    "title": "Internxt - Courriel temporaire gratuit",
+    "title": "Internxt – Courriel temporaire gratuit",
     "description": "Gardez votre compte email propre, sécurisé et libre de tout courrier indésirable avec l'email temporaire gratuit d'Internxt. Internxt fournit une adresse email temporaire, sécurisée, anonyme et gratuite."
   },
   {
     "id": "converter-tool",
-    "title": "Convertisseur d'octets (Ko, Mo, Go, To) | Internxt",
+    "title": "Convertisseur d'octets (Ko, Mo, Go, To) – Internxt",
     "description": "Convertisseur d'octets gratuit d'Internxt : Découvrez votre capacité de stockage, le nombre de Go dans un To, et convertissez en Ko, Mo, Go, To et plus."
   },
   {
@@ -121,17 +121,17 @@
   },
   {
     "id": "password-generator",
-    "title": "Générateur de mot de passe | Internxt",
+    "title": "Générateur de mot de passe – Internxt",
     "description": "Générateur de mots de passe gratuit et sécurisé. Un outil simple et efficace pour créer instantanément des mots de passe aléatoires."
   },
   {
     "id": "cyber-awareness",
-    "title": "Cyber Awareness | Internxt",
+    "title": "Cyber Awareness – Internxt",
     "description": "Qu'est-ce que la sensibilisation à la cybersécurité, comment rester en sécurité en ligne et tout ce que vous devez savoir sur le Mois de la sensibilisation à la cybersécurité en octobre."
   },
   {
     "id": "cloud-storage-for-education",
-    "title": "Cloud Storage Discount for Education | Internxt",
+    "title": "Cloud Storage Discount for Education – Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
   },
   {
@@ -166,22 +166,22 @@
   },
   {
     "id": "vpn-extension",
-    "title": "Internxt VPN gratuit et sécurisé | Internxt",
+    "title": "Internxt VPN gratuit et sécurisé – Internxt",
     "description": "Extension VPN gratuite d’Internxt pour Chrome : navigation sécurisée, Wi-Fi chiffré et protection de la vie privée. Téléchargez notre VPN sécurisé pour protéger vos données en ligne."
   },
   {
     "id": "internxt-private-cloud-storage-solutions",
-    "title": "Internxt - Stockage en cloud privé",
+    "title": "Internxt – Stockage en cloud privé",
     "description": "Qu'est-ce que le stockage en cloud privé et comment Internxt protège vos informations avec de la cryptographie post-quantique, un antivirus et un VPN"
   },
   {
     "id": "internxt-cloud-storage-backup-solutions",
-    "title": "Internxt - Solutions de Sauvegarde de Stockage Cloud",
+    "title": "Internxt – Solutions de Sauvegarde de Stockage Cloud",
     "description": "Les solutions de sauvegarde de stockage cloud d'Internxt utilisent la redondance et un chiffrement primé qui protège vous et votre entreprise contre la perte de données."
   },
   {
     "id": "internxt-gdpr-cloud-storage",
-    "title": "Internxt - Stockage cloud conforme au RGPD",
+    "title": "Internxt – Stockage cloud conforme au RGPD",
     "description": "Internxt est un service de stockage en nuage conforme au RGPD et aux lois strictes de confidentialité de l'UE pour protéger vos informations."
   },
   {
@@ -201,7 +201,7 @@
   },
   {
     "id": "zerogpt-ai-checker",
-    "title": "Internxt Détecteur d'IA - Détecteur de texte IA gratuit",
+    "title": "Internxt Détecteur d'IA – Détecteur de texte IA gratuit",
     "description": "Internxt Détecteur d'IA. Analysez gratuitement le contenu pour vérifier s'il a été rédigé par ChatGPT, Gemini ou d'autres plateformes d'intelligence artificielle."
   },
   {
@@ -211,7 +211,7 @@
   },
   {
     "id": "file-compressor",
-    "title": "Compresseur de fichiers - Internxt",
+    "title": "Compresseur de fichiers – Internxt",
     "description": "Le compresseur de fichiers d'Internxt, le meilleur outil pour réduire gratuitement la taille des vidéos, photos et documents."
   },
   {
@@ -256,10 +256,15 @@
   },
   {
     "id": "cloud-for-videos",
-    "title": "Internxt - Stockage Cloud pour Fichiers Vidéo",
+    "title": "Internxt – Stockage Cloud pour Fichiers Vidéo",
     "description": "Internxt propose un stockage cloud pour fichiers vidéo afin de stocker des vidéos HD, 4K et 8K qui sont sécurisées avec un chiffrement post-quantique pour une confidentialité maximale."
   },
   {
+
+    "id": "internxt-cleaner",
+    "title": "Internxt cleaner",
+    "description": "Internxt Cleaner – Trouvez et supprimez les fichiers indésirables pour améliorer la vitesse, la réactivité et les performances"
+  },{
     "id": "dropbox-alternative",
     "title": "Internxt — Une alternative sécurisée et chiffrée à Dropbox",
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Dropbox. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
@@ -273,5 +278,6 @@
     "id": "mega-alternative",
     "title": "Internxt — Une alternative sécurisée, chiffrée et open source à MEGA",
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à MEGA. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
+
   }
 ]
