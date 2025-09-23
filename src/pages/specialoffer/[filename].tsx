@@ -52,7 +52,7 @@ function CombinedSpecialOffer({
   }, [selectedPathname, router]);
 
   const couponCode = COUPON_CODES[pathname];
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const {
     products,
@@ -75,7 +75,7 @@ function CombinedSpecialOffer({
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string' ? text.replaceAll(/{{discount}}/g, percentOff) : text;
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
