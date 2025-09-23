@@ -154,7 +154,8 @@
         "Soporte NAS y Rclone",
         "Limpiador",
         "Meet",
-        "Mail"
+        "Mail",
+        "Control de versiones de archivos"
       ]
     },
     "business": {

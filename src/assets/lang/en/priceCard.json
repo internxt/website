@@ -156,7 +156,8 @@
         "NAS & Rclone support",
         "Cleaner",
         "Meet",
-        "Mail"
+        "Mail",
+        "File Versioning"
       ]
     },
     "business": {

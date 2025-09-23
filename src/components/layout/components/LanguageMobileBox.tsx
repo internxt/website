@@ -21,11 +21,11 @@ const languages = [
 export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobileBoxProps) {
   const router = useRouter();
   const lang = router.locale || 'en';
-  const selectedLanguage = languages.find(language => language.lang === lang)?.text || 'Select Language';
+  const selectedLanguage = languages.find((language) => language.lang === lang)?.text || 'Select Language';
 
   // Filtramos idiomas si estamos en singlesDay
   const filteredLanguages = singlesDay
-    ? languages.filter(language => ['en', 'zh', 'zh-tw'].includes(language.lang))
+    ? languages.filter((language) => ['en', 'zh', 'zh-tw'].includes(language.lang))
     : languages;
 
   return (
@@ -33,7 +33,7 @@ export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobi
       <Disclosure as="div" className="w-screen">
         {({ open }) => (
           <>
-            <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4">
+            <Disclosure.Button className="flex w-full items-center justify-between px-8 py-4 text-gray-100">
               <div className="flex flex-row items-center space-x-2">
                 <Globe className={darkMode ? 'text-white' : 'text-black'} size={20} weight="regular" />
                 <span className="flex flex-row">{selectedLanguage}</span>
@@ -51,7 +51,7 @@ export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobi
               <Disclosure.Panel
                 className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
                   darkMode ? 'text-gray-30' : 'text-gray-60'
-                } space-y-2 max-h-48 overflow-y-auto p-4`}
+                } max-h-48 space-y-2 overflow-y-auto p-4`}
               >
                 {filteredLanguages.map((language) => (
                   <button
@@ -59,7 +59,7 @@ export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobi
                     onClick={() => {
                       router.push(router.pathname, router.pathname, { locale: language.lang });
                     }}
-                    className="w-full text-center py-2"
+                    className="w-full py-2 text-center"
                   >
                     {language.text}
                   </button>

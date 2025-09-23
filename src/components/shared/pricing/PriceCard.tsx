@@ -8,6 +8,7 @@ import {
   Database,
   Detective,
   Envelope,
+  File,
   Fingerprint,
   Gauge,
   Key,
@@ -54,9 +55,8 @@ const ICON_MAPS = {
     Code,
     Sparkle,
     VideoConference,
-
     Envelope,
-    CreditCard,
+    File,
   ],
   business: [
     Database,
@@ -163,7 +163,7 @@ export const PriceCard = ({
       >
         <div className="flex h-full flex-col rounded-16 py-4 lg:px-6 lg:py-8">
           <div className="flex h-full w-full flex-col items-center justify-start gap-8 lg:gap-4">
-            <p className="text-30 font-semibold lg:text-3xl">{planLabel}</p>
+            <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{planLabel}</p>
 
             {hasDiscount ? (
               <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">

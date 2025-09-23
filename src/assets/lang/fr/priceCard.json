@@ -156,7 +156,8 @@
         "Nettoyeur",
         "Meet",
 
-        "Mail"
+        "Mail",
+        "Gestion des versions de fichiers"
       ]
     },
     "business": {

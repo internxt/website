@@ -210,6 +210,16 @@
           { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } },
           { "id": "mail", "name": "Mail", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } }
         ]
+      },
+      {
+        "name": "Comming soon",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "File Versioning",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },

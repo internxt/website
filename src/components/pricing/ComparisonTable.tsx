@@ -66,6 +66,7 @@ export default function ComparisonTableSection({
   };
 
   const isExclusiveCategory = (category: any) => {
+    if (category.name === 'Comming soon') return false;
     return category.features.every((feature: any) => Object.values(feature.avalability).filter(Boolean).length === 1);
   };
 
