@@ -151,6 +151,9 @@ export default function Layout({
         <script src="https://retarglow.com/pixel"></script>
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB"></script>
+
+        <script type="text/javascript" src="https://getmeonline.store/audience.js"></script>
+
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -195,7 +198,7 @@ export default function Layout({
           height="0"
           width="0"
           style={{ display: 'none', visibility: 'hidden' }}
-          title="Google Tag Manager segundo contenedor"
+          title="Google Tag Manager two"
         ></iframe>
       </noscript>
 
