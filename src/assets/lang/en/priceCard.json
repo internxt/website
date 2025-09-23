@@ -121,7 +121,8 @@
         "**1TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication",
+        "Two-factor authentication (2FA)",
+
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -131,7 +132,8 @@
         "**3TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication",
+
+        "Two-factor authentication (2FA)",
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -143,7 +145,8 @@
         "**5TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication",
+
+        "Two-factor authentication (2FA)",
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -153,7 +156,6 @@
         "NAS & Rclone support",
         "Cleaner",
         "Meet",
-
         "Mail"
       ]
     },
@@ -171,7 +173,7 @@
         "CLI, WebDav, Rclone & NAS support",
         "Manage account billing & payments",
         "Cleaner ",
-        "Monitor"
+        "Dark Web Monitor"
       ],
       "2TB": [
         "2TB encrypted storage per user",
