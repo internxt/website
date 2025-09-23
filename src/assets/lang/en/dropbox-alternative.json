@@ -1,10 +1,10 @@
 {
   "HeroSection": {
-    "title": "Internxt: A Secure {{competitor}} Alternative",
+    "title": "Internxt,  A Secure {{competitor}} Alternative",
     "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you? Join Internxt for complete security and privacy, providing maximum protection against data breaches.",
     "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
     "getPrivacy": "Get total privacy for ${{percentage}} % off",
-    "cta": "Select plan"
+    "cta": "Claim deal"
   },
   "HeaderSection": {
     "title": "Internxt vs {{competitor}} overview",
@@ -30,7 +30,7 @@
         "Regular security audits ",
         "Yes",
         "Can never access your files",
-        "Full privacy: GDPR, Spanish Data Protection Laws"
+        "Full privacy: GDPR, EU Data Protection Laws"
       ],
       "competitorFeatures": [
         "Closed-Source",

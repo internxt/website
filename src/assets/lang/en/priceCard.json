@@ -121,7 +121,7 @@
         "**1TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-        "Two-factor authentication (2FA)",
+        "Two-factor authentication ",
 
         "Backup your computer",
         "Password-protected file sharing",
@@ -133,7 +133,7 @@
         "Post-quantum encryption",
         "Zero-knowledge encryption",
 
-        "Two-factor authentication (2FA)",
+        "Two-factor authentication ",
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -146,7 +146,7 @@
         "Post-quantum encryption",
         "Zero-knowledge encryption",
 
-        "Two-factor authentication (2FA)",
+        "Two-factor authentication ",
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -182,6 +182,7 @@
         "Antivirus",
         "Backup your computer",
         "Password-protected file sharing",
+        "File Versioning",
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication",

@@ -73,7 +73,7 @@
   },
   "freePlanCard": {
     "eyeBrow": " Kostenlos",
-    "description": "Erhalte bis zu 1GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
+    "description": "Erhalte bis zu 1GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: Verschlüsseltes VPN, CLI/WebDav/Rclone und vieles mehr.",
     "cta": "Plan auswählen"
   },
   "features": {
@@ -126,7 +126,7 @@
         "Zwei-Faktor-Authentifizierung ",
         "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR)",
+        "Verschlüsseltes VPN",
         "Antivirus"
       ],
       "3TB": [
@@ -136,7 +136,7 @@
         "Zwei-Faktor-Authentifizierung ",
         "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR, DE, PL)",
+        "Verschlüsseltes VPN",
         "Antivirus",
         "Organization managementn",
         "Cleaner"
@@ -148,7 +148,7 @@
         "Zwei-Faktor-Authentifizierung ",
         "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR, DE, PL, CA, UK)",
+        "Verschlüsseltes VPN",
         "Antivirus",
         "Organization managementn",
         "CLI & WebDav-Unterstützung",
@@ -162,7 +162,7 @@
       "1TB": [
         "1TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
-        "VPN (FR, DE, PL)",
+        "Verschlüsseltes VPN",
         "Antivirus",
         "Sichern Sie Ihren Computer",
         "Passwortgeschütztes Teilen von Dateien",
@@ -175,7 +175,7 @@
       "2TB": [
         "2TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
-        "VPN (FR, DE, PL, CA, UK)",
+        "Verschlüsseltes VPN",
         "Antivirus",
         "Sichern Sie Ihren Computer",
         "Passwortgeschütztes Teilen von Dateien",

@@ -53,7 +53,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
   const competitors = [
     {
       name: 'Internxt',
-      logo: '../../../logos/pcloud-alternative/inxt-logo-and-name.svg',
+      logo: '/images/comparison/competitors/Internxt_Letters.webp',
     },
     {
       name: competitor,
@@ -109,13 +109,13 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
             </div>
 
             <div ref={scrollRef} className="flex-1 overflow-x-auto">
-              <div className="w-[830px]">
+              <div className="w-[430px] lg:w-[830px]">
                 <div className="flex">
                   <div className="w-1/2">
                     <div className="flex h-[48px] flex-col items-center justify-center rounded-tl-2xl border border-green-120 bg-neutral-17 p-3 lg:h-[128px] lg:px-20 lg:py-12">
                       <img
                         loading="lazy"
-                        src={competitors[0].logo}
+                        src={getImage(competitors[0].logo)}
                         draggable="false"
                         alt={`${competitors[0].name} logo`}
                         className="h-auto max-h-[24px] max-w-full lg:max-h-none"
@@ -129,7 +129,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
                         src={getImage(competitors[1].logo)}
                         draggable="false"
                         alt={`${competitors[1].name} logo`}
-                        className="h-auto max-h-[24px] max-w-full lg:max-h-none"
+                        className="h-auto max-h-[216px] max-w-full lg:max-h-none"
                         width={128}
                         height={32}
                       />

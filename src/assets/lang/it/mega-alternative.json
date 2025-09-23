@@ -1,6 +1,6 @@
 {
   "HeroSection": {
-    "title": "Internxt: Un'alternativa sicura a {{competitor}}",
+    "title": "Internxt,  Un'alternativa sicura a {{competitor}}",
     "description": "Le vulnerabilità passate nella crittografia di MEGA e la mancanza di software completamente open source potrebbero mettere a rischio la tua privacy e i tuoi dati. Scegli Internxt per la crittografia post-quantistica, VPN, Mail, Meet e molto altro.",
     "features": [
       "Memorizza i tuoi video in privacy",
@@ -34,7 +34,7 @@
         "Audit di sicurezza regolari",
         "Sì",
         "No",
-        "GDPR, Leggi spagnole sulla protezione dei dati"
+        "GDPR, Leggi europea sulla protezione dei dati"
       ],
       "competitorFeatures": [
         "Parzialmente",

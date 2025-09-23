@@ -169,7 +169,9 @@ export const PriceCard = ({
               <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
                 <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
                   <span className="flex h-full flex-row items-end ">
-                    <p className="self-start pb-4 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
+                    <p className="self-start pb-4 pr-1 text-base font-semibold text-gray-100 lg:mb-[18px]">
+                      {currency}
+                    </p>
                     <p className=" text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
                     {isBusiness && (
                       <span className="flex h-full items-end pl-1 text-base font-semibold">
@@ -182,7 +184,7 @@ export const PriceCard = ({
                   </span>
 
                   <span className="flex h-full flex-row items-end">
-                    <p className="items-center self-start pr-1 pt-3 text-sm font-semibold text-gray-50 lg:pt-2">
+                    <p className="items-center self-start pr-1 pt-[6px] text-sm font-semibold text-gray-50 lg:pt-3">
                       {currency}
                     </p>
                     <p className=" text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">{originalPrice}</p>
