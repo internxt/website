@@ -126,8 +126,13 @@
   },
   {
     "id": "pcloud-alternative",
-    "title": "Internxt – A Secure, Encrypted, Open Source pCloud Alternative",
+    "title": "Internxt — A Secure, Encrypted, Open Source pCloud Alternative",
     "description": "Internxt cloud storage is a secure pCloud alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
+  },
+  {
+    "id": "mega-alternative",
+    "title": "Internxt — A Secure, Encrypted, Open Source mega Alternative",
+    "description": "Internxt cloud storage is a secure mega alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
   },
   {
     "id": "black-friday",

@@ -1,0 +1,241 @@
+{
+  "HeroSection": {
+    "title": "Internxt：{{competitor}}的安全替代方案",
+    "description": "MEGA加密技術的過往漏洞以及缺乏完全開源軟體可能會讓您的隱私和資料面臨風險。選擇Internxt獲得後量子加密、VPN、郵件、會議等功能。",
+    "features": ["私密儲存您的影片", "後量子和零知識加密", "開源且經過稽核"],
+    "getPrivacy": "享受${{percentage}}%折扣，獲得完全隱私保護",
+    "cta": "選擇方案"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}}概覽",
+    "description": "瞭解為什麼Internxt憑藉先進的加密技術和全面的產品套件，成為MEGA的安全替代方案。",
+    "tableSection": {
+      "comparisons": [
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "定價",
+        "功能",
+        "社群稽核",
+        "線上支援",
+        "資料追蹤器",
+        "隱私法律"
+      ],
+      "internxtFeatures": [
+        "開源",
+        "在您的裝置上加密",
+        "是",
+        "具有競爭力，無隱藏費用",
+        "雲端硬碟、VPN、防毒軟體、會議、郵件等",
+        "定期安全稽核",
+        "是",
+        "無",
+        "GDPR、西班牙資料保護法"
+      ],
+      "competitorFeatures": [
+        "部分開源",
+        "可能貴一倍，無終身方案",
+        "否",
+        "可能貴一倍，無終身方案",
+        "雲端儲存、VPN、密碼管理、會議和聊天",
+        "是，但有過往加密漏洞",
+        "付費帳戶的郵件支援",
+        "是",
+        "GDPR和紐西蘭"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Internxt提供無與倫比的安全性，具有MEGA無法匹敵的功能，如後量子加密和防駭客保護",
+    "mainTable": {
+      "inxtTable": {
+        "title": "隱私和安全",
+        "description": "Internxt透過開源軟體、零知識加密和完全私密的生態系統，讓您完全控制檔案和資料。",
+        "features": [
+          {
+            "title": "開源程式碼",
+            "description": "由於Internxt的程式碼在GitHub上對所有人開放，任何人都可以檢查並確保其安全性。這種透明度確保沒有隱藏的後門。"
+          },
+          {
+            "title": "端到端加密",
+            "description": "您的資料在客戶端加密，確保只有您可以存取。"
+          },
+          {
+            "title": "完全稽核",
+            "description": "Internxt的服務已經由歐洲領先滲透測試公司的安全專家審查。這確保您的資料在面對駭客和資料外洩等外部威脅時保持安全。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隱私如何？",
+        "features": [
+          {
+            "title": "非完全開源",
+            "description": "MEGA對公眾隱藏後端原始碼。沒有透明度，就無法確切知道MEGA如何處理或保護您的資料。"
+          },
+          {
+            "title": "零知識",
+            "description": "MEGA目前使用的RSA和ECC容易受到Shor演算法和量子電腦攻擊。"
+          },
+          {
+            "title": "加密漏洞",
+            "description": "2022年，一組研究人員發表了一篇論文，揭露了MEGA金鑰管理系統中的幾個加密漏洞。"
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "成本和價值",
+      "inxtTable": {
+        "title": "安全和隱私無需額外費用",
+        "features": [
+          {
+            "title": "合理方案",
+            "description": "87%獨家優惠，無任何隱藏費用。"
+          },
+          {
+            "title": "全面保護",
+            "description": "所有方案都免費包含後量子和零知識加密以及安全功能。"
+          },
+          {
+            "title": "終身方案",
+            "description": "透過一次性付款享受87%折扣，永久存取我們的服務，避免重複訂閱。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "為完全隱私支付更多",
+        "features": [
+          {
+            "title": "有限且昂貴的方案",
+            "description": "根據您選擇的方案，MEGA的定價可能使其成為最昂貴的雲端儲存提供商之一。"
+          },
+          {
+            "title": "功能存取",
+            "description": "要存取MEGA的所有功能，您必須使用最高級的方案。這限制了重要功能的可存取性，使安全和隱私變得不那麼容易獲得。"
+          },
+          {
+            "title": "基於訂閱",
+            "description": "3TB年度方案貴68%，且沒有終身方案可用。"
+          }
+        ]
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "使用Internxt保護您的檔案免受資料外洩",
+    "description": "使用代碼MEGA87享受87%折扣",
+    "cta": "獲取Internxt"
+  },
+  "CtaSection2": {
+    "title": "無追蹤器。無問題。",
+    "description": "使用Internxt為您的檔案獲得完全隱私",
+    "cta": "免費註冊"
+  },
+  "tableSection": {
+    "title": "Internxt方案",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "選擇您的方案"
+    },
+    "billingFrequency": {
+      "annually": "年付",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得1GB加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過稽核",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "title": "Mega",
+    "description": "经过一项研究，密码学专家在MEGA的加密方法中发现了漏洞，这使得数百万用户的数据和隐私面临风险。",
+    "tile2": "MEGA：可塑加密出錯",
+    "description2": "蘇黎世聯邦理工學院的研究人員在MEGA中發現了重大加密缺陷，影響超過2.5億使用者和超過1000PB的資料。識別出四個關鍵漏洞：",
+    "scrollableSection": {
+      "titles": ["RSA金鑰恢復", "明文恢復", "陷害攻擊", "GaP-Bleichenbacher攻擊"],
+      "descriptions": [
+        "如果攻擊者（具有伺服器存取權限）修改您的加密金鑰，MEGA的登入過程會洩露有關您私有RSA金鑰的提示。最初需要512次登入，研究人員後來將其減少到僅6次。一旦獲得，金鑰允許攻擊者存取檔案、聊天等。",
+        "使用您的RSA金鑰，攻擊者可以利用MEGA的AES-ECB加密存取節點、聊天和簽名金鑰——獲得對檔案和訊息的完全存取權限。",
+        "攻擊者可以在您的帳戶中植入虛假的、有罪證的檔案，這些檔案看起來像合法上傳，可能陷害您。",
+        "「猜測和清除」技術針對MEGA在加密聊天金鑰交換期間有缺陷的RSA填充檢查。經過約10萬次登入嘗試後，攻擊者可以解密祕密訊息。"
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "為什麼您應該選擇Internxt作為MEGA的替代方案？",
+    "description": "發現Internxt的功能，這些功能使我們成為更安全、更私密的MEGA替代方案",
+    "scrollableSection": {
+      "titles": ["開源且透明", "安全稽核", "完全開源", "符合GDPR", "先進加密", "彈性儲存方案"],
+      "descriptions": [
+        "Internxt是MEGA的開源替代方案，因為我們所有產品和服務的程式碼都在GitHub上可用。MEGA不發布儲存您資料和執行加密策略的後端原始碼，因此無法確定您的資料如何受到保護。",
+        "Internxt成功通過了由歐洲領先滲透測試公司的安全專家進行的安全稽核。過去對MEGA的安全稽核發現了可能讓駭客存取使用者資料的漏洞，但MEGA已經修復了這些問題。",
+        "Internxt在GitHub上提供所有原始碼。這種透明度讓您放心，我們的加密保護您的檔案，沒有可能解密和存取您資料的後門。",
+        "Internxt是一家總部位於歐洲的公司，受GDPR監管，確保您的資訊得到安全處理並符合嚴格的法規。",
+        "Internxt包含後量子加密，這是免費和付費帳戶可用的最安全和最先進的加密技術。我們只儲存您資料的加密版本，只有您擁有解密和存取的金鑰。",
+        "Internxt包含後量子加密，這是免費和付費帳戶可用的最安全和最先進的加密技術。這保護您的資料免受量子電腦的未來威脅，量子電腦可能會破解目前的加密方法。MEGA尚未實施PQE。"
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "Internxt是比MEGA更安全和私密的替代方案嗎？",
+        "answer": [
+          "是的，Internxt是比MEGA更安全和私密的替代方案。我們的零知識和後量子加密確保只有您可以存取您的資料。",
+          "與MEGA不同，Internxt不依賴第三方服務或追蹤器，為您的檔案提供真正私密的環境。"
+        ]
+      },
+      {
+        "question": "MEGA是否提供與Internxt相同級別的加密？",
+        "answer": [
+          "MEGA使用加密，但Internxt透過實施後量子加密在安全方面更進一步，即使面對未來的量子運算威脅也能保護您的資料。",
+          "這項技術包含在每個Internxt方案中，無需額外費用。"
+        ]
+      },
+      {
+        "question": "Internxt的總部在哪裡？",
+        "answer": [
+          "Internxt總部位於西班牙瓦倫西亞，符合嚴格的歐洲GDPR隱私法律。",
+          "與可能受不同司法管轄區和法規約束的MEGA等服務相比，這提供了更強的隱私保護。"
+        ]
+      },
+      {
+        "question": "Internxt比MEGA更便宜嗎？",
+        "answer": ["是的，透過獨家折扣，Internxt提供更實惠的終身和訂閱方案，同時包含額外的安全和隱私功能，無隱藏費用。"]
+      },
+      {
+        "question": "Internxt提供哪些MEGA沒有的額外功能？",
+        "answer": [
+          "Internxt包含VPN、防毒軟體、裝置清理器、暗網監控和安全郵件服務(Mail)——這些功能MEGA都不提供。",
+          "這些額外工具為您提供增強的保護，防範駭客、外洩和線上威脅。"
+        ]
+      },
+      {
+        "question": "我如何聯絡Internxt支援？",
+        "answer": [
+          "如果您需要幫助，可以發送郵件至hello@internxt.com或使用我們網站上的線上聊天。我們的客戶成功團隊將很樂意為您提供幫助。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal或加密貨幣付款嗎？",
+        "answer": [
+          "是的，Internxt接受主要信用卡和借記卡(Mastercard、VISA、American Express)、PayPal、iDEAL、Sofort和加密貨幣。"
+        ]
+      }
+    ]
+  }
+}

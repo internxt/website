@@ -358,5 +358,20 @@
     "id": "cloud-for-videos",
     "title": "Internxt — Almacenar videos en la nube más segura",
     "description": "Almacena tus videos HD, 4K y 8K en la nube más segura de Internxt protegidos con encriptación post-cuántica para máxima privacidad."
+  },
+  {
+    "id": "dropbox-alternative",
+    "title": "Internxt — Una alternativa segura y cifrada a Dropbox",
+    "description": "El almacenamiento en la nube de Internxt es una alternativa segura a Dropbox. Protegemos tus archivos con cifrado de extremo a extremo, software de código abierto y características centradas en la privacidad."
+  },
+  {
+    "id": "pcloud-alternative",
+    "title": "Internxt — Una alternativa segura, cifrada y de código abierto a pCloud",
+    "description": "El almacenamiento en la nube de Internxt es una alternativa segura a pCloud. Protegemos tus archivos con cifrado de extremo a extremo, software de código abierto y características centradas en la privacidad."
+  },
+  {
+    "id": "mega-alternative",
+    "title": "Internxt — Una alternativa segura, cifrada y de código abierto a MEGA",
+    "description": "El almacenamiento en la nube de Internxt es una alternativa segura a MEGA. Protegemos tus archivos con cifrado de extremo a extremo, software de código abierto y características centradas en la privacidad."
   }
 ]

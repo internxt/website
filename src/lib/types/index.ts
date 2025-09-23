@@ -154,6 +154,7 @@ export enum PromoCodeName {
   Techpresso = 'Techpresso',
   Trickyhash = 'trickyhash',
   Reddit = 'REDDIT87',
+  Mega87 = 'MEGA87',
 }
 
 export interface PromoCodeProps {

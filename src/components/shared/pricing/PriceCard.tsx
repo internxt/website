@@ -22,7 +22,7 @@ import { LifetimeMode } from '@/components/lifetime/PaymentSection';
 import React from 'react';
 
 const NEW_FEATURE_THRESHOLDS = {
-  BUSINESS: 11,
+  BUSINESS: 12,
   INDIVIDUAL_FIRST_CARD: 9,
   INDIVIDUAL_OTHER_CARDS: 12,
 };
@@ -39,7 +39,6 @@ const ICON_MAPS = {
     ShieldPlus,
     CirclesThreePlus,
     Sparkle,
-    Detective,
   ],
   ultimate: [
     Database,
@@ -55,7 +54,7 @@ const ICON_MAPS = {
     Code,
     Sparkle,
     VideoConference,
-    Detective,
+
     Envelope,
     CreditCard,
   ],
@@ -73,7 +72,7 @@ const ICON_MAPS = {
     CodeBlock,
     CreditCard,
     Broom,
-    Detective,
+
     VideoConference,
     Envelope,
   ],
@@ -169,11 +168,13 @@ export const PriceCard = ({
             {hasDiscount ? (
               <div className="flex h-min w-[180px] flex-col items-center justify-start lg:h-min lg:w-[190px]">
                 <div className="flex h-[35px] w-full flex-row items-end justify-center gap-2 lg:h-[43px]">
-                  <span className="flex h-full flex-row items-end gap-1 ">
+                  <span className="flex h-full flex-row items-end ">
                     <p className="self-start pb-4 text-base font-semibold text-gray-100 lg:mb-[18px]">{currency}</p>
                     <p className=" text-2xl font-bold text-gray-100 lg:text-4xl">{currentPrice}</p>
                     {isBusiness && (
-                      <span className="flex h-full items-end text-base font-semibold">{contentText.perUserSlash}</span>
+                      <span className="flex h-full items-end pl-1 text-base font-semibold">
+                        {contentText.perUserSlash}
+                      </span>
                     )}
                     {isAnnual && (
                       <span className="flex h-full items-end text-base font-semibold">{contentText.perYear}</span>
@@ -181,14 +182,12 @@ export const PriceCard = ({
                   </span>
 
                   <span className="flex h-full flex-row items-end">
-                    <p className="items-center self-start pr-1 pt-1 text-sm font-semibold text-gray-50 lg:pt-0">
+                    <p className="items-center self-start pr-1 pt-3 text-sm font-semibold text-gray-50 lg:pt-2">
                       {currency}
                     </p>
                     <p className=" text-lg font-normal text-gray-50 line-through lg:pt-0 lg:text-xl">{originalPrice}</p>
                     {isBusiness && <span className="text-sm font-normal text-gray-50">{contentText.perUserSlash}</span>}
-                    {isAnnual && (
-                      <span className="pb-[2px] text-sm font-normal text-gray-50">{contentText.perYear}</span>
-                    )}
+                    {isAnnual && <span className=" text-sm font-normal text-gray-50">{contentText.perYear}</span>}
                   </span>
                 </div>
               </div>
@@ -227,7 +226,14 @@ export const PriceCard = ({
 
             <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
               {features.map((feature, index) => {
-                const adjustedIndex = index;
+                const getAdjustedIndex = () => {
+                  if (cardIndex === 0 && isBusiness && index >= 9) {
+                    return index + 1;
+                  }
+                  return index;
+                };
+
+                const adjustedIndex = getAdjustedIndex();
 
                 const renderText = () => {
                   if (index === 0 && feature.includes('**')) {

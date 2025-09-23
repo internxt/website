@@ -206,7 +206,7 @@ export const PricingSection = ({
         enterTo="scale-100 translate-y-0 opacity-100"
         className="flex w-full flex-col gap-4"
       >
-        <div className="content flex w-full flex-row flex-wrap items-start justify-center justify-items-center gap-6">
+        <div className="content grid w-3/4 grid-cols-2 items-stretch gap-8 ">
           {hideBusinessCards ? (
             <BusinessBanner textContent={banner.BusinessBanner} />
           ) : (

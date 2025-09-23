@@ -1,226 +1,256 @@
 {
-  "HeaderSection": {
-    "title": "Internxt: A Secure, Private Dropbox Alternative for Your Cloud Storage",
-    "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you?",
-    "useCode": {
-      "line1": "Use code ",
-      "code": "DROPBOX87",
-      "line2": " at checkout for 87% off any Internxt plan!"
-    },
-    "cta": "Choose plan"
-  },
   "HeroSection": {
-    "title": "Internxt vs. Dropbox comparison",
+    "title": "Internxt: A Secure {{competitor}} Alternative",
+    "description": "A past Dropbox data breach leaked 68 million passwords. Want to stop this from happening to you? Join Internxt for complete security and privacy, providing maximum protection against data breaches.",
+    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
+    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "cta": "Select plan"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} overview",
     "description": "Discover characteristics of Internxt that make it a more private and secure alternative to Dropbox",
     "tableSection": {
-      "comparisons": {
-        "codeTransparency": "Code transparency",
-        "encryption": "Encryption",
-        "postQuantumEncryption": "Post-quantum encryption",
-        "pricing": "Pricing",
-        "securityAudits": "Security Audits",
-        "liveSupport": "Live Support",
-        "dataTrackers": "Privacy policy",
-        "privacyLaws": "Privacy Laws"
-      },
-      "internxtFeatures": {
-        "codeTransparency": "Open-Source",
-        "encryption": "Encrypted on your device",
-        "postQuantumEncryption": "Yes",
-        "pricing": "Competitive, no hidden costs",
-        "securityAudits": "Regular security audits",
-        "liveSupport": "Yes",
-        "dataTrackers": "Can never access your files",
-        "privacyLaws": "Full privacy: GDPR, Spanish Data Protection Laws"
-      },
-      "features": {
-        "codeTransparency": "Closed-Source",
-        "encryption": "Encrypted by Dropbox",
-        "postQuantumEncryption": "No",
-        "pricing": "More expensive plans",
-        "securityAudits": "Regular security audits",
-        "liveSupport": "Paid feature",
-        "dataTrackers": "Can access files under certain circumstances.",
-        "privacyLaws": "Less privacy: EU-U.S. Data Privacy Framework"
-      },
-      "drag": {
-        "line1": "Drag horizontally",
-        "line2": "to show competitor"
-      }
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-Quantum Encryption",
+        "Pricing",
+        "Features",
+        "Security Audits",
+        "Live Support",
+        "Privacy Policy",
+        "Privacy Laws"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Encrypted on your device",
+        "Yes",
+        "Competitive, no hidden costs",
+        "Drive, VPN, Antivirus, Meet,  Mail and more",
+        "Regular security audits ",
+        "Yes",
+        "Can never access your files",
+        "Full privacy: GDPR, Spanish Data Protection Laws"
+      ],
+      "competitorFeatures": [
+        "Closed-Source",
+        "Encrypted by Dropbox",
+        "No",
+        "More expensive plans",
+        "Cloud storage, Dropbox Paper, and eSignature support",
+        "Regular security audits",
+        "Paid feature",
+        "Can access files under certain circumstances",
+        "Less privacy: EU-U.S. Data Privacy Framework"
+      ]
     }
   },
-  "IsDropboxSafeSection": {
-    "title": "Is Dropbox safe?",
-    "description": "Since 2011, Dropbox has faced numerous security breaches. Don’t risk your data—secure it with Internxt Drive and protect your online privacy.",
-    "breaches": [
-      {
-        "title": "2011: Password bug",
-        "description": "In June 2011, Dropbox experienced a major security breach due to a bug that allowed any password to access any account for four hours—provided a hacker had access to the email or username. During those four hours, all Dropbox accounts were vulnerable."
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "See why Internxt’s commitment to open-source transparency and independent audits makes it a more trustworthy and secure {{competitor}} alternative",
+    "mainTable": {
+      "title": "Privacy and security",
+      "description": "Internxt offers affordable and scalable plans for everyone, focusing on maximum security that protects your privacy.",
+      "inxtTable": {
+        "title": "Total privacy, transparency, and trust",
+        "description": "Internxt gives you total control over your files and data through open-source software, zero-knowledge encryption, and a fully private ecosystem.",
+        "features": [
+          {
+            "title": "Open-Source Code",
+            "description": "As Internxt's code is open to everybody on GitHub, anyone may examine it and ensure its security. This transparency guarantees there are no hidden backdoors."
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Your data is encrypted client-side, which guarantees that only you can access it."
+          },
+          {
+            "title": "Fully audited",
+            "description": "Internxt's services have been reviewed by security experts from a leading European penetration testing company. This ensures your data stays secure against external threats like hackers and breaches."
+          }
+        ]
       },
-      {
-        "title": "2012: Password breach",
-        "description": "In 2012, Dropbox usernames and passwords were stolen from other sites, leading to a major breach. Dropbox didn't disclose the full extent until 2016, revealing that 68 million users were compromised, making it one of the largest cloud storage and internet breaches in history."
-      },
-      {
-        "title": "2018: Data shared without consent",
-        "description": "In 2018, a Harvard study* used anonymized data from Dropbox without users' consent to collaborate with research teams. Although the data was anonymized, sharing user data with third parties without permission is a huge breach of trust, transparency, and your online privacy. [Link to study](https://hbr.org/2018/07/a-study-of-thousands-of-dropbox-projects-reveals-how-successful-teams-collaborate)"
-      },
-      {
-        "title": "2022: Phishing attack",
-        "description": "In November 2022, a phishing attack stole a Dropbox employee’s credentials by impersonating GitHub. The attack also stole and leaked emails and passwords from numerous employees online. GitHub, not Dropbox, detected the attack. "
+      "competitorTable": {
+        "title": "What about your privacy?",
+        "features": [
+          {
+            "title": "Proprietary software",
+            "description": "Dropbox keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Dropbox handles or protects your data."
+          },
+          {
+            "title": "Encrypted by Dropbox",
+            "description": "As Dropbox holds the encryption keys, they can theoretically decrypt and access the files if they receive a legal request (such as a subpoena)."
+          },
+          {
+            "title": "Data breaches",
+            "description": "Dropbox has a terrible track record of data breaches that have leaked customer passwords and employee information."
+          }
+        ]
       }
-    ]
+    },
+    "costAndValue": {
+      "title": "Cost and value",
+      "description": "Internxt offers affordable and scalable plans for everyone, focusing on maximum security that protects your privacy.",
+      "inxtTable": {
+        "title": "Security and privacy at no extra cost",
+        "features": [
+          {
+            "title": "Reasonable plans",
+            "description": "87% exclusive offer, without any hidden charges."
+          },
+          {
+            "title": "Full protection",
+            "description": "All plans include post-quantum and zero-knowledge encryption and security features for free."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for 87% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Pay more for total privacy",
+        "features": [
+          {
+            "title": "Limited, expensive plans",
+            "description": "Dropbox is one of the most expensive cloud storage providers and offers users very few storage options. This limits your ability to scale your storage as and when needed."
+          },
+          {
+            "title": "Access to features",
+            "description": "Dropbox is one of the most expensive cloud storage providers and offers users very few storage options. This limits your ability to scale your storage as and when needed."
+          },
+          {
+            "title": "Subscription based",
+            "description": "14% more expensive 5TB plans, and only offers monthly or annual subscriptions."
+          }
+        ]
+      }
+    }
   },
   "CtaSection": {
     "title": "Secure your files from data breaches with Internxt",
-    "description": "Get 87% OFF with code DROPBOX87",
-    "cta": "Choose plan"
+    "description": "Get 87% off with code DROPBOX87",
+    "cta": "Get Internxt"
   },
-  "TablesSection": {
-    "title": "Internxt vs. Dropbox",
-    "description": "Internxt offers unparalleled security with features Dropbox can’t match, such as client-side encryption and protection from hackers.",
-    "tables": [
-      {
-        "title": "Privacy and security",
-        "inxtTable": {
-          "title": "Your Files, Your Control",
-          "features": [
-            {
-              "title": "Open-Source Code",
-              "description": "Internxt's code is open for everyone to examine it and ensure its security via our GitHub. This transparency guarantees that no vulnerabilities are hidden."
-            },
-            {
-              "title": "End-to-End Encryption",
-              "description": "Your data is encrypted on the client side, guaranteeing that only you can access it."
-            },
-            {
-              "title": "Audited",
-              "description": "Security experts at a leading European penetration testing company have reviewed and verified Internxt's services as secure against data breaches and hacks."
-            }
-          ]
-        },
-        "table": {
-          "title": "Secure, but private?",
-          "features": [
-            {
-              "title": "Proprietary software",
-              "description": "Dropbox keeps its source code hidden from the public. With no transparency, there is no way to know for sure how Dropbox handles or protects your data."
-            },
-            {
-              "title": "Encryption by Dropbox",
-              "description": "As Dropbox holds the encryption keys, it means that Dropbox (and potentially anyone who gains access to Dropbox’s systems) can theoretically decrypt and access the files if it receives a legal request (such as a subpoena)."
-            },
-            {
-              "title": "Data breaches",
-              "description": "Dropbox has a terrible track record of data breaches that have leaked customer passwords and employee information. It also has a history of working with third parties, which can increase your risk of a data breach by sharing data with other companies."
-            }
-          ]
-        }
-      },
-      {
-        "title": "Cost and value",
-        "inxtTable": {
-          "title": "Complete Security at No Extra Cost",
-          "features": [
-            {
-              "title": "Affordable, flexible plans",
-              "description": "Our attractive and diverse storage plans are suitable for personal or business use."
-            },
-            {
-              "title": "Anonymous account creation",
-              "description": "All data, including passwords and email, is encrypted and protected from the moment you create an account."
-            }
-          ]
-        },
-        "table": {
-          "title": "More money, less privacy",
-          "features": [
-            {
-              "title": "Limited, expensive plans",
-              "description": "Dropbox is one of the most expensive cloud storage providers and offers users very few storage options. This limits your ability to scale your storage as and when needed."
-            },
-            {
-              "title": "Access to features",
-              "description": "To access all of Dropbox’s features, you must be on the most premium plan. This limits accessibility to important features, making security and privacy more inaccessible."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "UseCodeSection": {
-    "title": {
-      "line1": "Use code ",
-      "code": "DROPBOX87 ",
-      "line2": "for 87% off secure, encrypted cloud storage"
-    },
-    "cta": "Choose plan"
-  },
-  "WhyChooseInxtSection": {
-    "title": "Why should you choose Internxt as your Dropbox alternative?",
-    "description": "Internxt takes every measure to secure your files and right to privacy, making it the most secure alternative to Dropbox.",
-    "cards": [
-      {
-        "title": "Open source and transparent",
-        "description": "Unlike Dropbox’s proprietary software, Internxt is an open-source cloud service. All our product codes are available for review on GitHub for full transparency on how we protect and handle your data."
-      },
-      {
-        "title": "Security audited",
-        "description": "Internxt's services have been reviewed by security experts at a leading European penetration testing company. This ensures your data stays secure against external threats like hackers and breaches."
-      },
-      {
-        "title": "Zero data tracking",
-        "description": "Internxt protects your passwords and files with ultra-powerful end-to-end encryption. Unlike Dropbox, Internxt can never access your files for any reason. Only you have the encryption keys to access your data."
-      },
-      {
-        "title": "GDPR-compliant",
-        "description": "Internxt operates with complete transparency, ensuring your data privacy is protected by European laws. Our GDPR compliance guarantees your information is handled securely and according to strict regulations."
-      },
-      {
-        "title": "Privacy-focused encryption",
-        "description": "Internxt includes zero knowledge and end-to-end encryption for your free and paid accounts. Unlike Dropbox, your files are encrypted on your device, not on our own servers, making Internxt a more private Dropbox alternative."
-      },
-      {
-        "title": "Flexible storage plans",
-        "description": "Internxt Drive offers more paid plans and greater storage options than Dropbox’s pricing. If you need a Dropbox alternative for business or monthly, annual, and lifetime plans, choose from any of our affordable plans, starting at 200GB to 10TB."
-      }
-    ]
+  "CtaSection2": {
+    "title": "",
+    "description": "Use code DROPBOX87 for 87% off secure, encrypted cloud storage",
+    "cta": "Sign up for free"
   },
   "tableSection": {
+    "title": "Internxt Plans",
+    "hotLabel": "{{discount}}% off",
     "planTitles": {
-      "individuals": "Annual Plans",
-      "homePage": "Choose the right plan for you",
-      "lifetime": "Lifetime Plans",
-      "business": "Business Plans",
-      "lifetimeCampaign": {
-        "blueText": "Get 50% OFF",
-        "normalText": "all our exclusive lifetime plans"
-      }
+      "header": "Select your Plan"
     },
-    "lifetimeDescription": "Buy once and get privacy and security forever.",
-    "planDescription": "All Internxt plans are fully featured with complete access to all of our privacy services. Security for all shapes and sizes.",
-    "businessDescription": "We’re currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your bottom line.",
-    "businessDescription2": "Ensure business data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
-      "monthly": "Monthly",
-      "annually": "Annually",
-      "individual": "Individual",
-      "lifetime": "Lifetime",
-      "business": "Business"
+      "annually": "Annual",
+      "lifetime": "Lifetime"
     },
     "freePlanCard": {
-      "getStarted": "Get started with our free plan",
-      "enjoy10gb": "Enjoy 1GB forever and get access to all our services",
-      "upTo": "1GB",
-      "freeForever": "Free forever",
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
       "cta": "Select plan"
     },
     "features": {
-      "endToEnd": "End-to-end encrypted",
       "openSource": "Open-source and audited",
-      "anonymousAccount": "Anonymous account creation",
       "premiumSupport": "Premium customer support",
       "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
+  },
+  "HorizontalScrollableSection": {
+    "title": "Is Dropbox safe?",
+    "description": "Since 2011, Dropbox has faced numerous security breaches. Don’t risk your data; secure it with Internxt Drive and protect your online privacy.",
+    "scrollableSection": {
+      "titles": [
+        "2011: Password bug",
+        "2012: Password breach",
+        "2018: Data shared without consent",
+        "2022: Phishing attack"
+      ],
+      "descriptions": [
+        "In June 2011, Dropbox experienced a major security breach due to a bug that allowed any password to access any account for four hours, provided a hacker had access to the email or username. During those four hours, all Dropbox accounts were vulnerable.",
+        "In 2012, Dropbox usernames and passwords were stolen from other sites, leading to a major breach. Dropbox didn't disclose the full extent until 2016, revealing that 68 million users were compromised, making it one of the largest cloud storage and internet breaches in history.",
+        "In 2018, a Harvard study used anonymized data from Dropbox without users' consent to collaborate with research teams. Although the data was anonymized, sharing user data with third parties without permission is a huge breach of trust, transparency, and your online privacy.",
+        "In November 2022, a phishing attack stole a Dropbox employee’s credentials by impersonating GitHub. The attack also stole and leaked emails and passwords from numerous employees online. GitHub, not Dropbox, detected the attack. "
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "Why should you choose Internxt as your Dropbox alternative?",
+    "description": "Internxt takes every measure to secure your files and right to privacy, making it the most secure alternative to Dropbox.",
+    "scrollableSection": {
+      "titles": [
+        "Open source and transparent",
+        "Security audited",
+        "Zero-knowledge encryption",
+        "GDPR-compliant",
+        "Privacy-focused encryption",
+        "Flexible storage plans"
+      ],
+      "descriptions": [
+        "Unlike Dropbox’s proprietary software, Internxt is an open-source cloud service. All our product codes are available for review on GitHub for full transparency on how we protect and handle your data.",
+        "Internxt's services have been reviewed by security experts at a leading European penetration testing company. This ensures your data stays secure against external threats like hackers and breaches.",
+        "Internxt protects your passwords and files with ultra-powerful end-to-end encryption. Unlike Dropbox, Internxt can never access your files for any reason. Only you have the encryption keys to access your data.",
+        "Internxt operates with complete transparency, ensuring your data privacy is protected by European laws. Our GDPR compliance guarantees your information is handled securely and according to strict regulations.",
+        "Internxt includes post-quantum and zero-knowledge encryption for your free and paid accounts. Unlike Dropbox, your files are encrypted on your device, not on our servers, making Internxt a more private Dropbox alternative.",
+        "Internxt Drive offers more paid plans and greater storage options than Dropbox. If you need a Dropbox alternative that offers annual and lifetime plans, choose the right plan for you to get access to VPN, Antivirus, Mail, Meet, and more."
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to Dropbox?",
+        "answer": [
+          "Yes, Internxt is designed to be a more secure and private alternative to Dropbox. Thanks to zero-knowledge and post-quantum encryption, only you can access and decrypt your files.",
+          "Unlike Dropbox, Internxt does not scan, track, or sell your data, ensuring full privacy for all your information."
+        ]
+      },
+      {
+        "question": "Does Dropbox use zero-knowledge encryption?",
+        "answer": [
+          "No, Dropbox does not offer zero-knowledge encryption. This means Dropbox employees or third parties could potentially access your stored files.",
+          "Internxt guarantees that nobody, not even our team, can see your data."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, and complies with strict European GDPR privacy regulations.",
+          "This ensures higher privacy standards compared to providers like Dropbox, which are based in the United States and may be subject to surveillance laws."
+        ]
+      },
+      {
+        "question": "Is Internxt pricing cheaper than Dropbox?",
+        "answer": [
+          "Yes, with our exclusive discounts, Internxt plans are more affordable than Dropbox’s, while including additional privacy-focused features at no extra cost."
+        ]
+      },
+      {
+        "question": "What extra features does Internxt offer that Dropbox doesn’t?",
+        "answer": [
+          "Internxt includes features like a built-in VPN, antivirus, device cleaner, dark web monitor, and private email (Mail).",
+          "These tools add extra layers of security and privacy not available with Dropbox."
+        ]
+      },
+      {
+        "question": "How can I contact Internxt support?",
+        "answer": [
+          "If you need help, you can reach our Customer Success team by emailing hello@internxt.com or using the live chat on our website."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Yes, Internxt accepts debit and credit cards (Mastercard, VISA, American Express, etc.), PayPal, iDEAL, Sofort, and cryptocurrency."
+        ]
+      }
+    ]
   }
 }

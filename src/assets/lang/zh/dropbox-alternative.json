@@ -1,0 +1,238 @@
+{
+  "HeroSection": {
+    "title": "Internxt：{{competitor}}的安全替代方案",
+    "description": "过去的Dropbox数据泄露事件导致6800万个密码泄露。想要避免这种情况发生在您身上吗？加入Internxt，获得完整的安全和隐私保护，提供针对数据泄露的最大防护。",
+    "features": ["私密存储您的视频", "后量子和零知识加密", "开源且经过审计"],
+    "getPrivacy": "以${{percentage}}%的折扣获得完全隐私保护",
+    "cta": "选择计划"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} 概览",
+    "description": "发现Internxt的特点，这些特点使其成为比Dropbox更私密和安全的替代方案",
+    "tableSection": {
+      "comparisons": [
+        "代码透明度",
+        "加密",
+        "后量子加密",
+        "定价",
+        "功能",
+        "安全审计",
+        "实时支持",
+        "隐私政策",
+        "隐私法律"
+      ],
+      "internxtFeatures": [
+        "开源",
+        "在您的设备上加密",
+        "是",
+        "有竞争力，无隐藏费用",
+        "Drive、VPN、杀毒软件、Meet、邮件等",
+        "定期安全审计",
+        "是",
+        "永远无法访问您的文件",
+        "完全隐私：GDPR、西班牙数据保护法"
+      ],
+      "competitorFeatures": [
+        "闭源",
+        "由Dropbox加密",
+        "否",
+        "更昂贵的计划",
+        "云存储、Dropbox Paper和电子签名支持",
+        "定期安全审计",
+        "付费功能",
+        "在某些情况下可以访问文件",
+        "较少隐私：欧盟-美国数据隐私框架"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "了解为什么Internxt对开源透明度和独立审计的承诺使其成为比{{competitor}}更值得信赖和安全的替代方案",
+    "mainTable": {
+      "inxtTable": {
+        "title": "隐私和安全",
+        "description": "Internxt通过开源软件、零知识加密和完全私有的生态系统，让您完全控制您的文件和数据。",
+        "features": [
+          {
+            "title": "开源代码",
+            "description": "由于Internxt的代码在GitHub上对所有人开放，任何人都可以检查并确保其安全性。这种透明度保证没有隐藏的后门。"
+          },
+          {
+            "title": "端到端加密",
+            "description": "您的数据在客户端加密，保证只有您可以访问它们。"
+          },
+          {
+            "title": "完全审计",
+            "description": "Internxt的服务已经由欧洲领先的渗透测试公司的安全专家进行了审查。这确保您的数据在黑客和泄露等外部威胁面前保持安全。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "您的隐私怎么样？",
+        "features": [
+          {
+            "title": "专有软件",
+            "description": "Dropbox将其源代码对公众隐藏。没有透明度，就无法确切知道Dropbox如何处理或保护您的数据。"
+          },
+          {
+            "title": "由Dropbox加密",
+            "description": "由于Dropbox持有加密密钥，如果他们收到法律请求（如传票），理论上可以解密并访问文件。"
+          },
+          {
+            "title": "数据泄露",
+            "description": "Dropbox有可怕的数据泄露记录，泄露了客户密码和员工信息。"
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "成本和价值",
+      "description": "Internxt为每个人提供负担得起的可扩展计划，专注于保护您隐私的最大安全性。",
+      "inxtTable": {
+        "title": "安全和隐私无需额外费用",
+        "features": [
+          {
+            "title": "合理计划",
+            "description": "87%独家优惠，没有任何隐藏费用。"
+          },
+          {
+            "title": "全面保护",
+            "description": "所有计划都免费包含后量子和零知识加密以及安全功能。"
+          },
+          {
+            "title": "终身计划",
+            "description": "通过一次性付款避免重复订阅，以87%的折扣永久访问我们的服务。"
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "为完全隐私付更多钱",
+        "features": [
+          {
+            "title": "有限、昂贵的计划",
+            "description": "Dropbox是最昂贵的云存储提供商之一，为用户提供的存储选项非常少。这限制了您根据需要扩展存储的能力。"
+          },
+          {
+            "title": "功能访问",
+            "description": "Dropbox是最昂贵的云存储提供商之一，为用户提供的存储选项非常少。这限制了您根据需要扩展存储的能力。"
+          },
+          {
+            "title": "基于订阅",
+            "description": "5TB计划贵14%，只提供月度或年度订阅。"
+          }
+        ]
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "使用Internxt保护您的文件免受数据泄露",
+    "description": "使用代码DROPBOX87获得87%折扣",
+    "cta": "获取Internxt"
+  },
+  "CtaSection2": {
+    "title": "无跟踪器。无问题。",
+    "description": "使用Internxt为您的文件获得完全隐私",
+    "cta": "免费注册"
+  },
+  "tableSection": {
+    "title": "Internxt计划",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "选择您的计划"
+    },
+    "billingFrequency": {
+      "annually": "年付",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得1GB加密云存储",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "title": "Dropbox安全吗？",
+    "description": "自2011年以来，Dropbox面临了众多安全漏洞。不要冒险使用您的数据；使用Internxt Drive保护它们并保护您的在线隐私。",
+    "scrollableSection": {
+      "titles": ["2011年：密码漏洞", "2012年：密码泄露", "2018年：未经同意共享数据", "2022年：钓鱼攻击"],
+      "descriptions": [
+        "2011年6月，Dropbox由于一个漏洞遭受了重大安全漏洞，该漏洞允许任何密码在四小时内访问任何账户，前提是黑客可以访问电子邮件或用户名。在那四个小时内，所有Dropbox账户都是脆弱的。",
+        "2012年，Dropbox用户名和密码从其他网站被盗，导致重大泄露。直到2016年，Dropbox才披露全部范围，透露6800万用户受到影响，使其成为历史上最大的云存储和互联网泄露之一。",
+        "2018年，哈佛的一项研究在未经用户同意的情况下使用Dropbox的匿名数据与研究团队合作。尽管数据是匿名的，但在没有许可的情况下与第三方共享用户数据是对信任、透明度和您在线隐私的巨大违背。",
+        "2022年11月，一次钓鱼攻击通过冒充GitHub窃取了Dropbox员工的凭据。该攻击还窃取并在线泄露了众多员工的电子邮件和密码。是GitHub而不是Dropbox检测到了这次攻击。"
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "为什么您应该选择Internxt作为Dropbox替代方案？",
+    "description": "Internxt采取一切措施保护您的文件和隐私权，使其成为Dropbox最安全的替代方案。",
+    "scrollableSection": {
+      "titles": ["开源且透明", "安全审计", "零知识加密", "符合GDPR", "注重隐私的加密", "灵活的存储计划"],
+      "descriptions": [
+        "与Dropbox的专有软件不同，Internxt是一个开源云服务。我们所有的产品代码都可在GitHub上审查，完全透明地展示我们如何保护和处理您的数据。",
+        "Internxt的服务已由欧洲领先渗透测试公司的安全专家审查。这确保您的数据在面对黑客和泄露等外部威胁时保持安全。",
+        "Internxt使用超强的端到端加密保护您的密码和文件。与Dropbox不同，Internxt永远无法出于任何原因访问您的文件。只有您拥有访问数据的加密密钥。",
+        "Internxt以完全透明的方式运营，确保您的数据隐私受到欧洲法律保护。我们的GDPR合规性保证您的信息得到安全处理，符合严格的规定。",
+        "Internxt为您的免费和付费账户包含后量子和零知识加密。与Dropbox不同，您的文件在您的设备上加密，而不是在我们的服务器上，这使Internxt成为比Dropbox更私密的替代方案。",
+        "Internxt Drive提供比Dropbox更多的付费计划和更大的存储选项。如果您需要一个提供年度和终身计划的Dropbox替代方案，请为您选择合适的计划，以获得VPN、杀毒软件、邮件、Meet等的访问权限。"
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt是比Dropbox更安全和私密的替代方案吗？",
+        "answer": [
+          "是的，Internxt被设计为比Dropbox更安全和私密的替代方案。由于零知识和后量子加密，只有您可以访问和解密您的文件。",
+          "与Dropbox不同，Internxt不扫描、跟踪或出售您的数据，确保所有信息的完全隐私。"
+        ]
+      },
+      {
+        "question": "Dropbox使用零知识加密吗？",
+        "answer": [
+          "不，Dropbox不提供零知识加密。这意味着Dropbox员工或第三方可能可以访问您存储的文件。",
+          "Internxt保证没有人，甚至我们的团队，都无法看到您的数据。"
+        ]
+      },
+      {
+        "question": "Internxt总部在哪里？",
+        "answer": [
+          "Internxt总部位于西班牙瓦伦西亚，符合严格的欧洲GDPR隐私法规。",
+          "与总部位于美国且可能受到监控法律约束的Dropbox等提供商相比，这确保了更高的隐私标准。"
+        ]
+      },
+      {
+        "question": "Internxt的价格比Dropbox便宜吗？",
+        "answer": ["是的，通过我们的独家折扣，Internxt计划比Dropbox更实惠，同时免费包含额外的注重隐私的功能。"]
+      },
+      {
+        "question": "Internxt提供哪些Dropbox没有的额外功能？",
+        "answer": [
+          "Internxt包含内置VPN、杀毒软件、设备清理器、暗网监控和私人电子邮件（Mail）等功能。",
+          "这些工具添加了Dropbox无法提供的额外安全和隐私层。"
+        ]
+      },
+      {
+        "question": "我如何联系Internxt支持？",
+        "answer": [
+          "如果您需要帮助，可以通过发送电子邮件至hello@internxt.com或使用我们网站上的实时聊天联系我们的客户成功团队。"
+        ]
+      },
+      {
+        "question": "我可以用信用卡、PayPal或加密货币付款吗？",
+        "answer": ["是的，Internxt接受借记卡和信用卡（万事达卡、Visa、美国运通等）、PayPal、iDEAL、Sofort和加密货币。"]
+      }
+    ]
+  }
+}

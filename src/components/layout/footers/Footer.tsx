@@ -385,6 +385,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/mega-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.megaAlternative}
+                    </Link>
+
+                    <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
@@ -515,6 +524,12 @@ export default function Footer({
 
             {/* Logos */}
             <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
+              <Image
+                src={getImage('/icons/social/ISO-27001-logo-eturia.png')}
+                alt="Eturia logo"
+                width={60}
+                height={60}
+              />
               {lang !== 'es' ? (
                 <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
               ) : (
@@ -830,6 +845,15 @@ export default function Footer({
                         className="w-full max-w-[160px] hover:text-primary"
                       >
                         {textContent.FooterSection.sections.resources.dropboxAlternative}
+                      </Link>
+
+                      <Link
+                        href="/mega-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.megaAlternative}
                       </Link>
 
                       <Link
