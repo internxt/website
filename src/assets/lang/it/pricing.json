@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "Prossimamente",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "Versionamento dei file",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },

@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "Скоро",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "Управление версиями файлов",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },
