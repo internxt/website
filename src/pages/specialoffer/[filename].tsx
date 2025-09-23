@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
@@ -75,7 +76,7 @@ function CombinedSpecialOffer({
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replaceAll(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
