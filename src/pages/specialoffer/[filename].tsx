@@ -95,7 +95,7 @@ function CombinedSpecialOffer({
   }
 
   return (
-    <Layout title={metatags[0]?.title} description={metatags[0]?.description} segmentName="Partners" lang={lang}>
+    <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
