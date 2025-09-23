@@ -31,7 +31,7 @@ interface LayoutProps {
   readonly pathnameForSEO?: string;
 }
 
-const imageLang = ['ES', 'FR', 'EN'];
+const imageLang = new Set(['ES', 'FR', 'EN']);
 
 export default function Layout({
   children,
@@ -51,11 +51,11 @@ export default function Layout({
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname) && dialogIsOpen(GlobalDialog.TopBanner);
 
   const langToUpperCase = lang?.toLocaleUpperCase() as string;
-  const imagePreview = imageLang.includes(langToUpperCase) ? langToUpperCase : 'EN';
+  const imagePreview = imageLang.has(langToUpperCase) ? langToUpperCase : 'EN';
 
   // THIS USE EFFECT SHOULD NOT BE REMOVED OR MODIFIED IN ANY WAY BECAUSE IT IS USED TO SEE THE NUMBER OF VISITS TO THE WEBSITE FROM AFFILIATES IN IMPACT
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const params = new URLSearchParams(globalThis.location.search);
     const source = params.get('utm_source');
     const gclid = params.get('gclid');
 
@@ -69,7 +69,7 @@ export default function Layout({
       userAgent: navigator.userAgent,
       source,
       page: {
-        url: window.location.href,
+        url: globalThis.location.href,
         referrer: document.referrer,
       },
     });
