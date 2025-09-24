@@ -31,7 +31,7 @@ const COUPON_CODES = {
   securiters: PromoCodeName.Securiters,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
-  trickyhash: PromoCodeName.Trickyhash,
+  trickyhash: PromoCodeName.Secure,
   reddit: PromoCodeName.Reddit,
 };
 
