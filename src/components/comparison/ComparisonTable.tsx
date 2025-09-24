@@ -120,7 +120,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
                         alt={`${competitors[0].name} logo`}
                         className="h-auto max-h-[24px] max-w-full lg:max-h-none"
                         quality={100}
-                        width={128}
+                        width={160}
                         height={32}
                       />
                     </div>
