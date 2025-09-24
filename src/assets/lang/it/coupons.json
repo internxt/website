@@ -1,0 +1,161 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "**Sconti** e **promozioni** Internxt",
+    "subtitle": "Hai sbloccato l'87% di sconto! Ottieni il tuo codice coupon Internxt qui",
+    "descriptionNormal": "tutti i piani",
+    "features": ["Suite completa per la privacy", "Crittografia post-quantistica", "Open source e verificato"],
+    "startFrom": {
+      "normal1": "A partire da ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /mese"
+    },
+    "claimDeal": "Rivendica l'offerta"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt è in **mega-sconto**, ha **eccellenti recensioni degli utenti**, crittografia **end-to-end** e **post-quantistica**, e rendono il loro codice completamente **open source** per totale trasparenza con i loro clienti.\"",
+    "mashable": "\"Prendi **sul serio** la **sicurezza dei tuoi dati importanti** con Internxt. Fanno della **privacy** la loro **preoccupazione principale**, così puoi stare tranquillo sapendo che i tuoi file sono **al sicuro** e la piattaforma valorizza la **trasparenza** per i suoi utenti.\"",
+    "pcWorld": "\"L'**accesso web intuitivo**, la **sincronizzazione dei file** e i **servizi di backup** di Internxt sono **impressionanti**. Questo servizio di archiviazione online crittografata e backup è **facile**, copre tutte le basi, e gli attuali **piani a vita** sono un **affare**.\""
+  },
+  "tableSection": {
+    "title": "Piani Internxt",
+    "hotLabel": "{{discount}}% di sconto",
+    "planTitles": {
+      "header": "Seleziona il tuo Piano"
+    },
+    "billingFrequency": {
+      "monthly": "Mensile",
+      "annually": "Annuale",
+      "lifetime": "A vita",
+      "individual": "Individuale",
+      "business": "Business"
+    },
+    "discountLabel": "Codice coupon {{coupon}} applicato con successo",
+    "freePlanCard": {
+      "eyeBrow": "Internxt Gratuito",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open source e verificato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "howToRedeemSection": {
+    "title": "Come riscattare i coupon Internxt",
+    "description": "Rivendica il tuo codice coupon Internxt seguendo questi tre semplici passaggi:",
+    "cards": {
+      "titles": ["Scegli il tuo piano", "Vai al checkout", "Conferma e goditi!"],
+      "descriptions": [
+        "Scegli tra i nostri 3 piani annuali o a vita dalla nostra tabella sopra e clicca 'Seleziona piano' per riscattare il tuo coupon Internxt.",
+        "Una volta che vai al checkout, il tuo codice coupon Internxt viene applicato automaticamente! Da qui, devi solo inserire i tuoi dettagli per procedere al pagamento.",
+        "Una volta che clicchi 'Paga', il tuo pagamento sarà elaborato, e sarai pronto a goderti il tuo nuovo account Internxt e tutte le sue funzionalità!"
+      ]
+    }
+  },
+  "NextGenSection": {
+    "title": "Crittografia di nuova generazione per la massima protezione",
+    "description": "Proteggiamo la sicurezza e la privacy dei tuoi file con crittografia avanzata per prepararti alle minacce emergenti.",
+    "cta": "Conoscici meglio",
+    "cardDescriptions": {
+      "titles": [
+        "Dati non hackerabili e non trapelabili",
+        "Sicurezza di nuova generazione",
+        "Open source e trasparente",
+        "Verificato indipendentemente"
+      ],
+      "descriptions": [
+        "Non memorizziamo password o dati utente e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti dà il pieno controllo sui tuoi file. I tuoi dati sono affari tuoi. Proteggerli è il nostro lavoro.",
+        "Internxt è l'unico cloud storage che crittografa automaticamente i tuoi file utilizzando crittografia end-to-end e post-quantistica, il che significa che solo tu puoi accedere ai tuoi dati.",
+        "Siamo orgogliosi di quello che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente rivisto, verificato e controllato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati.",
+        "Siamo completamente conformi al GDPR e sicuri al 100%, ma non crederci sulla parola. Internxt è stato verificato e controllato indipendentemente dalla principale azienda di penetration testing d'Europa, Securitum."
+      ]
+    }
+  },
+  "WhatsIncludedSection": {
+    "title": "Cosa è incluso con il tuo coupon Internxt",
+    "description": "Il tuo codice coupon Internxt si applica a tutti i nostri piani annuali e a vita Essential, Premium e Ultimate.",
+    "cta": "Conoscici meglio",
+    "cardDescriptions": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
+      "descriptions": [
+        "Internxt Drive viene con crittografia post-quantistica e a conoscenza zero, quindi nessuno tranne te può accedere ai tuoi file. Ottieni archiviazione cloud crittografata e backup per le tue foto, video e file. \n\n Inoltre, backup crittografati e condivisione di file protetta da password offrono la massima protezione contro ransomware e violazioni dei dati.",
+        "Tutti i piani a pagamento includono anche Internxt Antivirus per una maggiore protezione contro le crescenti minacce che affrontiamo online. \n\n  Esegui scansioni complete o personalizzate dall'app Internxt per difenderti da malware, phishing e ransomware, e pulisci e proteggi il tuo dispositivo da perdita di dati o violazioni.",
+        "Ottieni la nostra VPN ultra-veloce e illimitata per fino a 5 località per crittografare e proteggere la tua connessione con la nostra VPN privata. \n\n  Crittografa il tuo traffico per prevenire spionaggio esterno sulla tua connessione, che potrebbe far trapelare le tue informazioni personali, e goditi la privacy totale quando navighi online.",
+        "Internxt Cleaner migliora le prestazioni e la salute del tuo dispositivo rimuovendo file spazzatura o duplicati dal tuo computer. \n\n   Libera spazio di archiviazione, migliora la velocità del dispositivo e proteggi la tua privacy eliminando file indesiderati con un clic di un pulsante.",
+        "Internxt Meet offre videochiamate completamente private alimentate da crittografia post-quantistica, garantendo che i tuoi meeting siano sicuri, confidenziali e liberi da tracker. \n\n   Ospita e partecipa a videochiamate con amici, famiglia o colleghi in completa privacy, libero da aziende esterne che monitorano le tue chat.",
+        "Disponibile su Windows, Mac, Linux e mobile, Internxt ti permette di prendere il controllo totale del tuo cloud storage accedendo al tuo cloud da qualsiasi luogo, su qualsiasi dispositivo. \n\n  Per utenti avanzati, Internxt offre supporto per WebDAV, Rclone e NAS, offrendo tutto ciò di cui hai bisogno per gestire i tuoi file in totale privacy."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Rivendica il tuo coupon Internxt esclusivo",
+    "description": "Ottieni la massima privacy con l'87% di sconto",
+    "cta": "Rivendica l'offerta"
+  },
+  "ctaSectionV2": {
+    "title": "Privacy completa con l'87% di sconto",
+    "description": "Ottieni l'affare della tua vita con il tuo codice coupon Internxt",
+    "cta": "Rivendica l'offerta"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Internxt può accedere ai miei file?",
+        "answer": [
+          "No. Internxt, insieme a qualsiasi altra terza parte, non può accedere ai tuoi file, foto o dati.",
+          "I servizi Internxt dispongono di crittografia a conoscenza zero, il che significa che solo tu puoi accedere e decrittografare i tuoi dati e informazioni private. Inoltre, Internxt utilizza crittografia post-quantistica, la tecnologia più avanzata disponibile per proteggere le tue informazioni da qualsiasi minaccia."
+        ]
+      },
+      {
+        "question": "Internxt memorizza la mia password?",
+        "answer": [
+          "No. Come tale, Internxt non può memorizzare la tua password.",
+          "La tua password Internxt è unica per te ed è utilizzata per crittografare e decrittografare i tuoi dati Internxt. Ma se vuoi cambiare la tua password, puoi farlo dalla nostra app."
+        ]
+      },
+      {
+        "question": "Posso abilitare l'autenticazione a due fattori (2FA)?",
+        "answer": [
+          "Sì. Puoi impostare l'autenticazione a due fattori per il tuo account tramite l'app web Internxt.",
+          "Puoi anche utilizzare Authy o altri strumenti 2FA per generare un codice 2FA personale con Internxt."
+        ]
+      },
+      {
+        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "answer": [
+          "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, Crypto e Klarna.",
+          "Su richiesta, accettiamo anche criptovalute e addebito diretto SEPA. Se hai domande sui metodi di pagamento, inviaci semplicemente un'email a [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia standard di rimborso di 30 giorni su tutti gli abbonamenti a pagamento, che inizia a contare non appena ti iscrivi.",
+          "E se non sei mai soddisfatto del nostro servizio, contattaci a [hello@internxt.com](mailto:hello@internxt.com) e richiedi un rimborso."
+        ]
+      },
+      {
+        "question": "Come posso contattare il supporto?",
+        "answer": [
+          "Non riesci a trovare quello che cerchi? Puoi contattare il nostro team di supporto tecnico tramite live chat o inviando un'email a [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      }
+    ]
+  }
+}
