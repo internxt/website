@@ -449,7 +449,8 @@
     "id": "internxt-cleaner",
     "title": "Internxt cleaner",
     "description": "Internxt Cleaner – 尋找並刪除垃圾檔案，提升速度、回應性和效能"
-  },{
+  },
+  {
     "id": "dropbox-alternative",
     "title": "Internxt — Dropbox的安全加密替代方案",
     "description": "Internxt雲端儲存是Dropbox的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
@@ -460,8 +461,8 @@
     "description": "Internxt雲端儲存是pCloud的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
   },
   {
-    "id": "mega-alternative",
-    "title": "Internxt — MEGA的安全、加密、開源替代方案",
-    "description": "Internxt雲端儲存是MEGA的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
+    "id": "Mega-alternative",
+    "title": "Internxt — Mega的安全、加密、開源替代方案",
+    "description": "Internxt雲端儲存是Mega的安全替代方案。我們透過端到端加密、開源軟體和注重隱私的功能保護您的檔案。"
   }
 ]

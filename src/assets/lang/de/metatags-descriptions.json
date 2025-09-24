@@ -274,7 +274,8 @@
     "id": "internxt-cleaner",
     "title": "Internxt cleaner",
     "description": "Internxt Cleaner – Finden und löschen Sie Junk-Dateien, um Geschwindigkeit, Reaktionszeit und Leistung zu verbessern"
-  },{
+  },
+  {
     "id": "dropbox-alternative",
     "title": "Internxt — Eine sichere, verschlüsselte Alternative zu Dropbox",
     "description": "Internxt Cloud-Speicher ist eine sichere Dropbox-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
@@ -286,7 +287,7 @@
   },
   {
     "id": "mega-alternative",
-    "title": "Internxt — Eine sichere, verschlüsselte, Open-Source-Alternative zu MEGA",
-    "description": "Internxt Cloud-Speicher ist eine sichere MEGA-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
+    "title": "Internxt — Eine sichere, verschlüsselte, Open-Source-Alternative zu Mega",
+    "description": "Internxt Cloud-Speicher ist eine sichere Mega-Alternative. Wir schützen Ihre Dateien mit Ende-zu-Ende-Verschlüsselung, Open-Source-Software und datenschutzorientierten Funktionen."
   }
 ]

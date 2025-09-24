@@ -284,7 +284,8 @@
     "id": "internx-cleaner",
     "title": "Internxt cleaner",
     "description": "Internxt Cleaner – 查找并删除垃圾文件，提升速度、响应性和性能"
-  },{
+  },
+  {
     "id": "dropbox-alternative",
     "title": "Internxt — Dropbox的安全加密替代方案",
     "description": "Internxt云存储是Dropbox的安全替代方案。我们通过端到端加密、开源软件和注重隐私的功能保护您的文件。"
@@ -296,8 +297,7 @@
   },
   {
     "id": "mega-alternative",
-    "title": "Internxt — MEGA的安全、加密、开源替代方案",
-    "description": "Internxt云存储是MEGA的安全替代方案。我们通过端到端加密、开源软件和注重隐私的功能保护您的文件。"
-
+    "title": "Internxt — Mega的安全、加密、开源替代方案",
+    "description": "Internxt云存储是Mega的安全替代方案。我们通过端到端加密、开源软件和注重隐私的功能保护您的文件。"
   }
 ]

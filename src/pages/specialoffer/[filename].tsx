@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-non-null-assertion */
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
@@ -24,7 +25,7 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'trickyhash', 'reddit'];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'reddit', 'trickyhash'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -53,7 +54,7 @@ function CombinedSpecialOffer({
   }, [selectedPathname, router]);
 
   const couponCode = COUPON_CODES[pathname];
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'special-offer');
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const {
     products,
@@ -76,7 +77,7 @@ function CombinedSpecialOffer({
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string' ? text.replaceAll('{{discount}}', percentOff) : text;
   };
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {
@@ -96,7 +97,7 @@ function CombinedSpecialOffer({
   }
 
   return (
-    <Layout title={metatags[0]?.title} description={metatags[0]?.description} segmentName="Partners" lang={lang}>
+    <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
@@ -116,7 +117,7 @@ function CombinedSpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="5TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />
