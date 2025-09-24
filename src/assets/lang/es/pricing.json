@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "Próximamente",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "Control de versiones ",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },

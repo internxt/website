@@ -73,7 +73,7 @@
   },
   "freePlanCard": {
     "eyeBrow": "Internxt Gratuito",
-    "description": "Ottieni fino a 1GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato: VPN (FR), CLI/WebDav/Rclone e molto altro.",
+    "description": "Ottieni fino a 1GB di archiviazione cloud crittografata e goditi il nostro ecosistema privato: VPN crittografata, CLI/WebDav/Rclone e molto altro.",
     "cta": "Seleziona il piano"
   },
   "features": {
@@ -123,73 +123,70 @@
         "**1TB** di archiviazione crittografata",
         "Crittografia post-quantistica",
         "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori (2FA)",
-        "Backup dei file",
+        "Autenticazione a due fattori ",
+        "Esegui il backup del tuo computer",
         "Condivisione file protetta da password",
-        "VPN (FR)",
+        "VPN crittografata",
         "Antivirus"
       ],
       "3TB": [
         "**3TB** di archiviazione crittografata",
         "Crittografia post-quantistica",
         "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori (2FA)",
-        "Backup dei file",
+        "Autenticazione a due fattori ",
+        "Esegui il backup del tuo computer",
         "Condivisione file protetta da password",
-        "VPN (FR, DE, PL)",
+        "VPN crittografata",
         "Antivirus",
         "Invita, condividi e collabora",
-        "Cleaner",
-        "Monitor"
+        "Cleaner"
       ],
       "5TB": [
         "**5TB** di archiviazione crittografata",
         "Crittografia post-quantistica",
         "Crittografia a conoscenza zero",
-        "Autenticazione a due fattori (2FA)",
-        "Backup dei file",
+        "Autenticazione a due fattori ",
+        "Esegui il backup del tuo computer",
         "Condivisione file protetta da password",
-        "VPN (FR, DE, PL, CA, UK)",
+        "VPN crittografata",
         "Antivirus",
         "Invita, condividi e collabora",
         "Supporto CLI e WebDav",
         "Supporto NAS e Rclone",
         "Cleaner",
         "Meet",
-        "Monitor",
-        "Mail"
+        "Mail",
+        "Versionamento dei file"
       ]
     },
     "business": {
       "1TB": [
         "1TB di spazio per utente",
         "Crittografia post-quantistica",
-        "VPN illimitata ultraveloce (FR, DE, PL)",
+        "VPN crittografata",
         "Antivirus",
-        "Backup dei tuoi file",
+        "Esegui il backup del tuo computer",
         "Condivisione file protetta da password",
         "Invita, condividi e collabora",
         "Conformità GDPR",
-        "Autenticazione a due fattori (2FA)",
-        "Supporto CLI, WebDav e Rclone",
-        "Gestisci fatturazione e pagamenti account",
-        "Pulitore dispositivo",
-        "Monitoraggio Dark Web"
+        "Autenticazione a due fattori ",
+
+        "Gestione dell'organizzazione",
+        "Pulitore dispositivo"
       ],
       "2TB": [
         "2TB di spazio per utente",
         "Crittografia post-quantistica",
-        "VPN illimitata ultraveloce (FR, DE, PL, CA, UK)",
+        "VPN crittografata",
         "Antivirus",
-        "Backup dei tuoi file",
+        "Esegui il backup del tuo computer",
         "Condivisione file protetta da password",
         "Invita, condividi e collabora",
         "Conformità GDPR",
-        "Autenticazione a due fattori (2FA)",
+        "Autenticazione a due fattori ",
         "Supporto CLI, WebDav e Rclone",
-        "Gestisci fatturazione e pagamenti account",
+        "Gestione dell'organizzazione",
         "Pulitore dispositivo",
-        "Monitoraggio Dark Web",
         "Meet",
         "Mail"
       ]

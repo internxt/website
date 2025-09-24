@@ -163,7 +163,9 @@ export default function Footer({
             <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.products.title}</h3>
+                  <h3 className="text-lg font-medium text-gray-100">
+                    {textContent.FooterSection.sections.products.title}
+                  </h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -240,7 +242,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.company.title}</h3>
                   <div
@@ -292,7 +294,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
                   <div
@@ -341,7 +343,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
                   <div
@@ -385,6 +387,15 @@ export default function Footer({
                     </Link>
 
                     <Link
+                      href="/mega-alternative"
+                      locale={lang}
+                      passHref
+                      className="w-full max-w-[160px] hover:text-primary"
+                    >
+                      {textContent.FooterSection.sections.resources.megaAlternative}
+                    </Link>
+
+                    <Link
                       href="/what-does-google-know-about-me"
                       locale={lang}
                       passHref
@@ -399,7 +410,7 @@ export default function Footer({
                   </div>
                 </div>
               </div>
-              <div className="flex max-w-[18%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
                   <div
@@ -458,7 +469,7 @@ export default function Footer({
                 </div>
               </div>
 
-              <div className="flex max-w-[14%] flex-1 flex-col items-center lg:flex-none">
+              <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
                   <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
                   <div
@@ -515,11 +526,25 @@ export default function Footer({
 
             {/* Logos */}
             <div className="flex w-screen max-w-[1140px] flex-row justify-between px-5">
-              {lang !== 'es' ? (
-                <Image src={getImage('/icons/social/gdpr-internxt.svg')} alt="GDPR Internxt" width={146} height={48} />
-              ) : (
-                <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
-              )}
+              <div className="flex flex-row gap-10">
+                <Image
+                  src={getImage('/icons/social/ISO-27001-logo-eturia.png')}
+                  alt="Eturia logo"
+                  width={60}
+                  height={60}
+                />
+                {lang !== 'es' ? (
+                  <Image
+                    src={getImage('/icons/social/gdpr-internxt.svg')}
+                    alt="GDPR Internxt"
+                    width={146}
+                    height={48}
+                  />
+                ) : (
+                  <Image src={getImage('/icons/social/cdti.png')} alt="GDPR Internxt" width={200} height={60} />
+                )}
+              </div>
+
               <div className="flex flex-row items-center space-x-4">
                 <Link href="/" locale={lang} className="flex flex-shrink-0">
                   <Image
@@ -603,7 +628,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -615,7 +640,7 @@ export default function Footer({
                     leave="transition duration-200 ease-out"
                   >
                     <Disclosure.Panel
-                      className={`flex flex-col px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
+                      className={`flex flex-col px-6 font-semibold text-gray-100 ${!open ? 'hidden' : 'flex'} ${
                         darkMode ? 'bg-black text-gray-30' : 'bg-gray-1 text-gray-60'
                       } space-y-8 p-4`}
                     >
@@ -664,7 +689,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -720,7 +745,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -781,7 +806,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -833,6 +858,15 @@ export default function Footer({
                       </Link>
 
                       <Link
+                        href="/mega-alternative"
+                        locale={lang}
+                        passHref
+                        className="w-full max-w-[160px] hover:text-primary"
+                      >
+                        {textContent.FooterSection.sections.resources.megaAlternative}
+                      </Link>
+
+                      <Link
                         href="/what-does-google-know-about-me"
                         locale={lang}
                         passHref
@@ -851,7 +885,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -917,7 +951,7 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium">
+                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -960,7 +994,7 @@ export default function Footer({
             {/* Language selection for mobile view */}
             <LanguageMobileBox darkMode={darkMode} />
 
-            <div className="flex flex-col items-center space-y-4 py-10">
+            <div className="flex flex-col items-center space-y-4 py-10 text-gray-100">
               <div className="flex flex-row gap-5">
                 <Link href="https://twitter.com/Internxt" target="_blank" rel="noreferrer">
                   <Image
@@ -1022,7 +1056,7 @@ export default function Footer({
                 {textContent.FooterSection.copyright.line1 + year + textContent.FooterSection.copyright.line2}
               </p>
 
-              <Link href="/" locale={lang} className="flex flex-shrink-0">
+              <Link href="/" locale={lang} className="flex flex-shrink-0 text-gray-100">
                 <Image
                   width={96}
                   height={10.5}

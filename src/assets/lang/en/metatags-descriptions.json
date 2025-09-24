@@ -71,7 +71,7 @@
   },
   {
     "id": "temporary-email",
-    "title": "Temp Mail - Free Temporary Email",
+    "title": "Temp Mail – Free Temporary Email",
     "description": "Keep your email account free of unwanted mail with Internxt’s Free Temporary Email. Temp Mail provides a temporary, secure, anonymous, and free email address."
   },
   {
@@ -111,7 +111,7 @@
   },
   {
     "id": "techradar-discount",
-    "title": "TechRadar Partner Deals - Save big on Internxt cloud storage!",
+    "title": "TechRadar Partner Deals – Save big on Internxt cloud storage!",
     "description": "Redeem your exclusive coupon code provided by our partner TechRadar. Get a special discount on Internxt secure cloud storage."
   },
   {
@@ -126,8 +126,13 @@
   },
   {
     "id": "pcloud-alternative",
-    "title": "Internxt - A Secure, Encrypted, Open Source pCloud Alternative",
+    "title": "Internxt — A Secure, Encrypted, Open Source pCloud Alternative",
     "description": "Internxt cloud storage is a secure pCloud alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
+  },
+  {
+    "id": "mega-alternative",
+    "title": "Internxt — A Secure, Encrypted, Open Source mega Alternative",
+    "description": "Internxt cloud storage is a secure mega alternative. We protect your files with end-to-end encryption, open-source software, and privacy-focused features."
   },
   {
     "id": "black-friday",
@@ -176,72 +181,72 @@
   },
   {
     "id": "cyber-security-quiz",
-    "title": "Cyber Security Quiz: Test your Cyber Security Skills | Internxt",
+    "title": "Cyber Security Quiz: Test your Cyber Security Skills – Internxt",
     "description": "Test your cyber awareness with this interactive cyber security quiz! Find out if you know the basics of cybersecurity required to protect your online privacy."
   },
   {
     "id": "use-cases",
-    "title": "Use Cases | Internxt",
+    "title": "Use Cases – Internxt",
     "description": "Discover how Internxt cloud storage has given individuals and businesses effective solutions to improve online security and privacy in these successful case studies examples."
   },
   {
     "id": "internxt-for-journalists",
-    "title": "Internxt for journalists | Internxt",
+    "title": "Internxt for journalists – Internxt",
     "description": "With these in-depth case study examples, learn how Internxt private cloud storage benefits journalists and writers by helping them store information securely."
   },
   {
     "id": "internxt-for-digital-nomads",
-    "title": "Internxt for digital nomads | Internxt",
+    "title": "Internxt for digital nomads – Internxt",
     "description": "Discover why Internxt is the ideal choice in helping digital nomads secure their files and protecting their online privacy while working on the go."
   },
   {
     "id": "internxt-for-students",
-    "title": "Internxt for students | Internxt",
+    "title": "Internxt for students – Internxt",
     "description": "Use these case studies to learn how students are utilizing Internxt to effectively organize, collaborate, and secure their projects with a secure cloud service."
   },
   {
     "id": "internxt-for-photographers",
-    "title": "Internxt for photographers | Internxt",
+    "title": "Internxt for photographers – Internxt",
     "description": "Looking for a cloud solution for storing the pictures and images securely? Check out these use cases on how Internxt can be helpful for photographers."
   },
   {
     "id": "internxt-for-tech-companies",
-    "title": "Internxt for tech companies | Internxt",
+    "title": "Internxt for tech companies – Internxt",
     "description": "Discover how Internxt has effectively assisted tech companies in securing sensitive information to meet their data storage requirements."
   },
   {
     "id": "internxt-for-lawyers",
-    "title": "Internxt for lawyers | Internxt",
+    "title": "Internxt for lawyers – Internxt",
     "description": "Examine these use cases to understand why law firms and attorneys should begin adopting cloud storage for securely storing sensitive client and court case data."
   },
   {
     "id": "internxt-library",
-    "title": "Internxt Library: Free eBooks for Online Privacy | Internxt",
+    "title": "Internxt Library: Free eBooks for Online Privacy – Internxt",
     "description": "Learn the fundamentals of online privacy for individuals and parents with Internxt’s library of free eBooks to ensure a safer, secure internet experience."
   },
   {
     "id": "online-privacy-ebook",
-    "title": "Free Online Privacy eBook for Individuals | Internxt",
+    "title": "Free Online Privacy eBook for Individuals – Internxt",
     "description": "Internxt’s free eBook on online privacy is designed to help individuals protect themselves against cyberthreats and secure their online data. Download it here."
   },
   {
     "id": "child-safety-ebook",
-    "title": "Free Child Safety eBook for Parents | Internxt",
+    "title": "Free Child Safety eBook for Parents – Internxt",
     "description": "Internxt’s free child safety eBook offers parents tips to secure their children’s online privacy and protect them from internet threats. Download it here."
   },
   {
     "id": "cloud-storage-for-education",
-    "title": "Cloud Storage Discount for Education | Internxt",
+    "title": "Cloud Storage Discount for Education – Internxt",
     "description": "Internxt cloud storage discount for education, schools, and universities. 50% off any cloud storage subscription plans. Keep your files secure with Internxt!"
   },
   {
     "id": "newsletter-subscribe",
-    "title": "Online Privacy Newsletter | Internxt",
+    "title": "Online Privacy Newsletter – Internxt",
     "description": "Subscribe to Internxt’s online privacy newsletter for the latest updates, tips, and resources to help you protect your online data and security."
   },
   {
     "id": "webDAV",
-    "title": "Internxt CLI and WebDAV | Internxt",
+    "title": "Internxt CLI and WebDAV – Internxt",
     "description": "Access your Internxt Drive account with Internxt CLI and WebDAV features. Experience a new method to manage and control your files privately."
   },
   {
@@ -356,7 +361,7 @@
   },
   {
     "id": "resurrection-campaign",
-    "title": "Internxt Cloud Storage Offer - 90% off Subscription and Lifetime Plans!",
+    "title": "Internxt Cloud Storage Offer – 90% off Subscription and Lifetime Plans!",
     "description": "Internxt is offering 90% off our new and improved private cloud storage. Choose from our subscription and lifetime plans to get huge savings."
   },
   {
@@ -381,7 +386,7 @@
   },
   {
     "id": "internxt-brave",
-    "title": "Internxt x Brave - Special offer for Brave Private Browser users",
+    "title": "Internxt x Brave – Special offer for Brave Private Browser users",
     "description": "Internxt has partnered with Brave Private Browser to offer secure, private, and encrypted cloud storage."
   },
   {
@@ -391,87 +396,92 @@
   },
   {
     "id": "internxt-private-cloud-storage-solutions",
-    "title": "Internxt - Private Cloud Storage Solutions",
+    "title": "Internxt – Private Cloud Storage Solutions",
     "description": "Learn more about private cloud storage solutions and how Internxt protects your data with post-quantum encryption, antivirus, and VPN"
   },
   {
     "id": "internxt-cloud-storage-backup-solutions",
-    "title": "Internxt - Cloud Storage Backup Solutions ",
+    "title": "Internxt – Cloud Storage Backup Solutions ",
     "description": "Internxt cloud storage backup solutions use redundancy and award-winning encryption that protects you and your business from data loss. "
   },
   {
     "id": "internxt-gdpr-cloud-storage",
-    "title": "Internxt - GDPR Cloud Storage",
+    "title": "Internxt – GDPR Cloud Storage",
     "description": "Internxt is a GDPR cloud storage service committed to protecting your data by complying with strict EU privacy laws that prioritize privacy."
   },
   {
     "id": "internxt-cloud-storage-for-photos",
-    "title": "Internxt - Cloud Storage for Photos",
+    "title": "Internxt – Cloud Storage for Photos",
     "description": "Internxt offers cloud storage for photos, Antivirus, and VPN with post-quantum encryption for maximum security and privacy."
   },
   {
     "id": "internxt-annual",
-    "title": "Internxt - Get a discount on any Internxt annual plans",
+    "title": "Internxt – Get a discount on any Internxt annual plans",
     "description": "Meta description: Get a special offer for any Internxt annual plan. All plans include private cloud storage, VPN, and Antivirus."
   },
   {
+    "id": "internxt-cleaner",
+    "title": "Internxt –  Optimize and Clean your Computer",
+    "description": "Find and clear junk files to boost device speed, responsiveness, and performance."
+  },
+  {
     "id": "internxt-metadata-remover",
-    "title": "Internxt Metadata Remover - Clean Your File’s Metadata Online",
+    "title": "Internxt Metadata Remover – Clean Your File’s Metadata Online",
     "description": "Remove hidden data from your files in seconds. Internxt’s Metadata Remover cleans your documents for maximum privacy before sharing."
   },
   {
     "id": "zerogpt-ai-checker",
-    "title": "Internxt ZeroGPT AI Checker - Free AI Checker Tool",
+    "title": "Internxt ZeroGPT AI Checker – Free AI Checker Tool",
     "description": "Internxt ZeroGPT AI checker. Scan content to check if it’s been written by ChatGPT, Gemini, or other AI platforms. Try now for free!"
   },
   {
     "id": "file-compressor",
-    "title": "Internxt - File Compressor",
+    "title": "Internxt – File Compressor",
     "description": "Internxt file compressor,  the best file compressor to reduce the file size of videos, photos, and documents for free."
   },
   {
     "id": "compress-mov",
-    "title": "Internxt - Compress MOV File",
+    "title": "Internxt – Compress MOV File",
     "description": "Internxt lets you compress a MOV file for free to reduce file size and send large video files online without worrying about file size limits."
   },
   {
     "id": "compress-pdf",
-    "title": "Internxt - Compress PDF File",
+    "title": "Internxt – Compress PDF File",
     "description": "Internxt’s free tool is the best way to compress a PDF file so you can secure and send your documents with ease."
   },
   {
     "id": "compress-jpg",
-    "title": "Compress JPG File - Internxt",
+    "title": "Compress JPG File – Internxt",
     "description": "Internxt’s free tool is the best way to compress a JPG file so you can secure and send your photos with ease."
   },
   {
     "id": "compress-png",
-    "title": "Internxt - Compress PNG File",
+    "title": "Internxt – Compress PNG File",
     "description": "Internxt’s free tool is the best way to compress a PNG file so you can secure and send your photos with ease."
   },
   {
     "id": "compress-ppt",
-    "title": "Internxt Compress - PPT File",
+    "title": "Internxt Compress – PPT File",
     "description": "Internxt lets you compress a PPT file for free to reduce file size for easier storage and file sharing management."
   },
   {
     "id": "compress-word",
-    "title": "Internxt - Compress Word File",
+    "title": "Internxt – Compress Word File",
     "description": "Compress Word (DOC) files for free to reduce file size for easier storage and file sharing management for your documents."
   },
   {
     "id": "compress-excel",
-    "title": "Internxt - Compress Excel File",
+    "title": "Internxt – Compress Excel File",
     "description": "Compress Excel (XLS) files for free to reduce file size for easier storage and file sharing management for your spreadsheets."
   },
   {
     "id": "compress-zip",
-    "title": "Internxt - Online ZIP Compressor",
+    "title": "Internxt – Online ZIP Compressor",
     "description": "An online ZIP compressor reduces the size of your ZIP files to save storage, share, and upload without worrying about file size limits."
   },
   {
     "id": "cloud-for-videos",
-    "title": " Internxt - Cloud Storage for Video Files",
+    "title": " Internxt – Cloud Storage for Video Files",
     "description": "Internxt offers cloud storage for video files to store HD, 4K, and 8K videos which are secured with post-quantum encryption for maximum privacy."
   }
 ]
