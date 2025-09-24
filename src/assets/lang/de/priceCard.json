@@ -73,7 +73,7 @@
   },
   "freePlanCard": {
     "eyeBrow": " Kostenlos",
-    "description": "Erhalte bis zu 1GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
+    "description": "Erhalte bis zu 1GB verschlüsselten Cloud-Speicher und genieße unser privates Ökosystem: Verschlüsseltes VPN, CLI/WebDav/Rclone und vieles mehr.",
     "cta": "Plan auswählen"
   },
   "features": {
@@ -123,73 +123,69 @@
         "**1TB** verschlüsselter Speicher",
         "Post-Quanten-Verschlüsselung",
         "Zero-Knowledge-Verschlüsselung",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "Datei-Backup",
+        "Zwei-Faktor-Authentifizierung ",
+        "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR)",
+        "Verschlüsseltes VPN",
         "Antivirus"
       ],
       "3TB": [
         "**3TB** verschlüsselter Speicher",
         "Post-Quanten-Verschlüsselung",
         "Zero-Knowledge-Verschlüsselung",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "Datei-Backup",
+        "Zwei-Faktor-Authentifizierung ",
+        "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR, DE, PL)",
+        "Verschlüsseltes VPN",
         "Antivirus",
-        "Einladen, teilen und zusammenarbeiten",
-        "Cleaner",
-        "Monitor"
+        "Organization managementn",
+        "Cleaner"
       ],
       "5TB": [
         "**5TB** verschlüsselter Speicher",
         "Post-Quanten-Verschlüsselung",
         "Zero-Knowledge-Verschlüsselung",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "Datei-Backup",
+        "Zwei-Faktor-Authentifizierung ",
+        "Sichern Sie Ihren Computer",
         "Passwort-geschütztes Teilen von Dateien",
-        "VPN (FR, DE, PL, CA, UK)",
+        "Verschlüsseltes VPN",
         "Antivirus",
-        "Einladen, teilen und zusammenarbeiten",
+        "Organization managementn",
         "CLI & WebDav-Unterstützung",
         "NAS & Rclone-Unterstützung",
         "Cleaner",
         "Meet",
-        "Monitor",
-        "Mail"
+        "Mail",
+        "Dateiversionierung"
       ]
     },
     "business": {
       "1TB": [
         "1TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL)",
+        "Verschlüsseltes VPN",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
+        "Sichern Sie Ihren Computer",
         "Passwortgeschütztes Teilen von Dateien",
         "Einladen, Teilen & Zusammenarbeiten",
         "DSGVO-Konformität",
-        "Zwei-Faktor-Authentifizierung (2FA)",
-        "CLI-, WebDav- & Rclone-Unterstützung",
+        "Zwei-Faktor-Authentifizierung ",
         "Verwaltung von Kontorechnungen & Zahlungen",
-        "Gerätereiniger",
-        "Monitor"
+        "Gerätereiniger"
       ],
       "2TB": [
         "2TB Speicher/Nutzer",
         "Post-Quanten-Verschlüsselung",
-        "Ultraschnelles unbegrenztes VPN (FR, DE, PL, CA, UK)",
+        "Verschlüsseltes VPN",
         "Antivirus",
-        "Sichern Sie Ihre Dateien",
+        "Sichern Sie Ihren Computer",
         "Passwortgeschütztes Teilen von Dateien",
         "Einladen, Teilen & Zusammenarbeiten",
         "DSGVO-Konformität",
-        "Zwei-Faktor-Authentifizierung (2FA)",
+        "Zwei-Faktor-Authentifizierung ",
         "CLI-, WebDav- & Rclone-Unterstützung",
         "Verwaltung von Kontorechnungen & Zahlungen",
         "Gerätereiniger",
-        "Monitor",
         "Meet",
         "Mail"
       ]

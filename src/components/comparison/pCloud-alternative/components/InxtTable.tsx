@@ -1,34 +1,46 @@
 import { getImage } from '@/lib/getImage';
-import { Check } from '@phosphor-icons/react';
 import Image from 'next/image';
 
 export const InxtTable = ({ textContent }) => (
-  <div className="flex h-full w-screen max-w-[400px] flex-1 flex-col px-5 md:px-0">
-    <div className="flex w-full items-center space-x-4 bg-primary/5 py-4 pl-6">
+  <div className="flex h-min w-[180.5px] flex-col rounded-l-16  lg:w-[570px]">
+    <div className="flex h-[46.5px] w-full flex-col items-center justify-center gap-3 rounded-tl-16 bg-green-110 ring-[1px] ring-green-120 lg:h-[112px]">
       <Image
-        width={32}
+        width={180}
         height={32}
-        src={getImage('/images/comparison/competitors/internxt.webp')}
+        src={getImage('/images/comparison/competitors/Internxt_Letters.webp')}
         alt="Internxt icon"
+        className="hidden lg:flex"
       />
-      <p className="text-lg font-semibold text-gray-100">{textContent.title}</p>
+      <Image
+        width={108}
+        height={13}
+        src={getImage('/images/comparison/competitors/Internxt_Letters.webp')}
+        alt="Internxt icon"
+        className="flex lg:hidden"
+      />
+      <p className="hidden text-lg font-normal text-gray-95 lg:flex">{textContent.title}</p>
     </div>
-    <div className="flex h-full flex-col">
-      {textContent.features.map((item) => (
-        <div className="flex h-full w-full flex-row items-center bg-green-dark/7 bg-opacity-3" key={item.title}>
-          <div className="flex h-full w-full max-w-xs flex-row items-center justify-between border-b border-primary border-opacity-3 bg-gray-1 pl-6">
-            <div className="flex flex-col space-y-4 py-4 pr-3">
-              <p className="text-lg font-semibold text-gray-100">{item.title}</p>
-              <p className="text-gray-100">{item.description}</p>
-            </div>
+    <div className="flex flex-col justify-between">
+      {textContent.features.map((item, index) => {
+        const isEven = index % 2 === 0;
+        const isLast = index === textContent.features.length - 1;
+
+        return (
+          <div
+            key={index}
+            className={`h-[156px] lg:h-[110px] ${isEven ? 'bg-green-100' : 'bg-green-110'} ${
+              isLast ? 'rounded-bl-16' : ''
+            } flex  flex-col items-center justify-start gap-2 p-4 ring-[1px] ring-green-120 lg:justify-center`}
+          >
+            <p className="w-[156.5px] text-start text-xs font-semibold leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-base">
+              {item.title}
+            </p>
+            <p className="w-[156.5px] text-start text-10 font-normal leading-tight text-gray-100 lg:w-[538px] lg:text-center lg:text-sm">
+              {item.description}
+            </p>
           </div>
-          <div className="mx-auto flex h-full w-max flex-col">
-            <div className="flex flex-grow flex-col items-center justify-center">
-              <Check size={32} className="text-green-dark" weight="bold" />
-            </div>
-          </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 );

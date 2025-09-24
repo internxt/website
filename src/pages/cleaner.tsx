@@ -28,7 +28,7 @@ const CleanerPage = ({
   navbarLang,
   footerLang,
 }: CleanerProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'internxt-cleaner');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 

@@ -1,0 +1,259 @@
+{
+  "HeroSection": {
+    "title": "Internxt,  la alternativa segura a {{competitor}}",
+    "description": "Las vulnerabilidades pasadas en la criptografía de MEGA y la falta de software completamente de código abierto podrían poner en riesgo tu privacidad y datos. Elige Internxt para cifrado post-cuántico, VPN, Mail, Meet y más.",
+    "features": [
+      "Almacena tus videos con privacidad",
+      "Cifrado post-cuántico y de conocimiento cero",
+      "Código abierto y auditado"
+    ],
+    "getPrivacy": "Obtén privacidad total con ${{percentage}}% de descuento",
+    "cta": "Seleccionar plan"
+  },
+  "HeaderSection": {
+    "title": "Comparativa Internxt vs {{competitor}}",
+    "description": "Descubre por qué Internxt destaca como una alternativa segura a MEGA gracias a su criptografía avanzada y suite integral de productos.",
+    "tableSection": {
+      "comparisons": [
+        "Transparencia del código",
+        "Cifrado",
+        "Cifrado post-cuántico",
+        "Precios",
+        "Características",
+        "Auditorías de la comunidad",
+        "Soporte en vivo",
+        "Rastreadores de datos",
+        "Leyes de privacidad"
+      ],
+      "internxtFeatures": [
+        "Código abierto",
+        "Cifrado en tu dispositivo",
+        "Sí",
+        "Competitivo, sin costes ocultos",
+        "Drive, VPN, Antivirus, Meet, Mail y más",
+        "Auditorías de seguridad regulares",
+        "Sí",
+        "No",
+        "RGPD, Leyes españolas de protección de datos"
+      ],
+      "competitorFeatures": [
+        "Parcialmente",
+        "Puede ser el doble de caro, sin planes de por vida",
+        "No",
+        "Puede ser el doble de caro, sin planes de por vida",
+        "Almacenamiento en la nube, VPN, Pass, Meet y Chat",
+        "Sí, con vulnerabilidades de cifrado pasadas",
+        "Soporte por email para cuentas de pago",
+        "Sí",
+        "RGPD y Nueva Zelanda"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Internxt ofrece seguridad sin igual con características que MEGA no puede igualar, como cifrado post-cuántico y protección contra hackers",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Privacidad y seguridad",
+        "description": "Internxt te da control total sobre tus archivos y datos a través de software de código abierto, cifrado de conocimiento cero y un ecosistema completamente privado.",
+        "features": [
+          {
+            "title": "Código abierto",
+            "description": "Como el código de Internxt está abierto para todos en GitHub, cualquiera puede examinarlo y asegurar su seguridad. Esta transparencia garantiza que no hay puertas traseras ocultas."
+          },
+          {
+            "title": "Cifrado de extremo a extremo",
+            "description": "Tus datos se cifran del lado del cliente, lo que garantiza que solo tú puedes acceder a ellos."
+          },
+          {
+            "title": "Completamente auditado",
+            "description": "Los servicios de Internxt han sido revisados por expertos en seguridad de una empresa europea líder en pruebas de penetración. Esto asegura que tus datos permanezcan seguros contra amenazas externas como hackers y brechas."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "¿Qué pasa con tu privacidad?",
+        "features": [
+          {
+            "title": "No completamente de código abierto",
+            "description": "MEGA mantiene el código fuente del backend oculto del público. Sin transparencia, no hay manera de saber con certeza cómo MEGA maneja o protege tus datos."
+          },
+          {
+            "title": "Conocimiento cero",
+            "description": "El uso actual de RSA y ECC por parte de MEGA sería vulnerable al algoritmo de Shor y ataques de computadoras cuánticas."
+          },
+          {
+            "title": "Vulnerabilidades criptográficas",
+            "description": "En 2022, un grupo de investigadores publicó un artículo revelando varias vulnerabilidades criptográficas en el sistema de gestión de claves de MEGA."
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "Coste y valor",
+      "inxtTable": {
+        "title": "Seguridad y privacidad sin coste adicional",
+        "features": [
+          {
+            "title": "Planes razonables",
+            "description": "Oferta exclusiva del 87%, sin cargos ocultos."
+          },
+          {
+            "title": "Protección completa",
+            "description": "Todos los planes incluyen cifrado post-cuántico y de conocimiento cero y características de seguridad gratis."
+          },
+          {
+            "title": "Planes de por vida",
+            "description": "Evita suscripciones repetidas con un pago único para acceder a nuestros servicios para siempre con 87% de descuento."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Paga más por privacidad total",
+        "features": [
+          {
+            "title": "Planes limitados y caros",
+            "description": "Dependiendo del plan que elijas, los precios de MEGA pueden convertirlo en uno de los proveedores de almacenamiento en la nube más caros."
+          },
+          {
+            "title": "Acceso a características",
+            "description": "Para acceder a todas las características de MEGA, debes estar en el plan más premium. Esto limita la accesibilidad a características importantes, haciendo que la seguridad y privacidad sean menos accesibles."
+          },
+          {
+            "title": "Basado en suscripción",
+            "description": "68% más caro para un plan anual de 3TB, y no hay planes de por vida disponibles."
+          }
+        ]
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "Protege tus archivos de brechas de datos con Internxt",
+    "description": "Obtén 87% de descuento con el código MEGA87",
+    "cta": "Obtener Internxt"
+  },
+  "CtaSection2": {
+    "title": "Sin rastreadores. Sin problemas.",
+    "description": "Obtén privacidad completa para tus archivos con Internxt",
+    "cta": "Regístrate gratis"
+  },
+  "tableSection": {
+    "title": "Planes de Internxt",
+    "hotLabel": "{{discount}}% de descuento",
+    "planTitles": {
+      "header": "Selecciona tu plan"
+    },
+    "billingFrequency": {
+      "annually": "Anual",
+      "lifetime": "De por vida"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratis",
+      "description": "Obtén 1GB de almacenamiento cifrado en la nube gratis",
+      "cta": "Seleccionar plan"
+    },
+    "features": {
+      "openSource": "Código abierto y auditado",
+      "premiumSupport": "Soporte al cliente premium",
+      "guarantee": "Garantía de devolución de dinero de 30 días"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "title": "¿Es seguro Mega?",
+    "description": "Después de un estudio de investigación, expertos en criptografía encontraron vulnerabilidades en los métodos de cifrado de MEGA, lo que puso en riesgo los datos y la privacidad de millones de sus usuarios.",
+    "tile2": "MEGA: El cifrado maleable sale mal",
+    "description2": "Investigadores de ETH Zurich descubrieron fallas criptográficas importantes en MEGA, afectando a más de 250M de usuarios y más de 1,000 Petabytes de datos. Se identificaron cuatro vulnerabilidades clave:",
+    "scrollableSection": {
+      "titles": [
+        "Recuperación de clave RSA",
+        "Recuperación de texto plano",
+        "Ataque de incriminación",
+        "Ataque GaP-Bleichenbacher"
+      ],
+      "descriptions": [
+        "El proceso de inicio de sesión de MEGA filtra pistas sobre tu clave RSA privada si los atacantes (con acceso al servidor) modifican tu clave cifrada. Inicialmente requería 512 inicios de sesión, los investigadores luego lo redujeron a solo seis. Una vez obtenida, la clave permite a los atacantes acceder a archivos, chats y más.",
+        "Con tu clave RSA, los atacantes pueden explotar el cifrado AES-ECB de MEGA para acceder a claves de nodo, chat y firma, otorgando acceso completo a archivos y mensajes.",
+        "Un atacante puede plantar archivos falsos e incriminatorios en tu cuenta que aparecen como subidas legítimas, potencialmente incriminándote.",
+        "Una técnica de 'Adivinar y Purgar' ataca las verificaciones de relleno RSA defectuosas de MEGA durante los intercambios de claves de chat cifradas. Después de ~100,000 intentos de inicio de sesión, los atacantes pueden descifrar mensajes secretos."
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "¿Por qué deberías elegir Internxt como tu alternativa a MEGA?",
+    "description": "Descubre las características de Internxt que nos hacen una alternativa a MEGA más segura y privada",
+    "scrollableSection": {
+      "titles": [
+        "Código abierto y transparente",
+        "Auditado en seguridad",
+        "Completamente de código abierto",
+        "Compatible con RGPD",
+        "Cifrado avanzado",
+        "Planes de almacenamiento flexibles"
+      ],
+      "descriptions": [
+        "Internxt es una alternativa de código abierto a MEGA, ya que el código de todos nuestros productos y servicios está disponible en GitHub. MEGA no publica el código fuente del backend que almacena tus datos y aplica políticas de cifrado, por lo que no hay manera de estar seguro de cómo se protegen tus datos.",
+        "Internxt pasó exitosamente una auditoría de seguridad realizada por expertos en seguridad de una empresa europea líder en pruebas de penetración. Auditorías de seguridad pasadas en MEGA encontraron vulnerabilidades que podrían dar acceso a hackers a datos de usuarios, pero MEGA ha arreglado estos problemas desde entonces.",
+        "Internxt hace disponible todo su código fuente en GitHub. Esta transparencia te ofrece tranquilidad de que nuestro cifrado protege tus archivos, y no hay puertas traseras que podrían descifrar y acceder a tus datos.",
+        "Internxt es una empresa con base europea regulada por el RGPD para garantizar que tu información se maneja de forma segura y según regulaciones estrictas.",
+        "Internxt incluye cifrado post-cuántico, la criptografía más segura y avanzada disponible para cuentas gratuitas y de pago. Solo almacenamos la versión cifrada de tus datos, y solo tú tienes la clave para descifrar y acceder a ellos.",
+        "Internxt incluye cifrado post-cuántico, la criptografía más segura y avanzada disponible para cuentas gratuitas y de pago. Esto protege tus datos de las amenazas futuras de las computadoras cuánticas, que podrían romper los métodos de cifrado actuales. MEGA aún no ha implementado PQE."
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Es Internxt una alternativa más segura y privada a MEGA?",
+        "answer": [
+          "Sí, Internxt es una alternativa más segura y privada a MEGA. Nuestro cifrado de conocimiento cero y post-cuántico aseguran que solo tú puedes acceder a tus datos.",
+          "A diferencia de MEGA, Internxt no depende de servicios de terceros o rastreadores, ofreciendo un ambiente verdaderamente privado para tus archivos."
+        ]
+      },
+      {
+        "question": "¿MEGA ofrece el mismo nivel de cifrado que Internxt?",
+        "answer": [
+          "MEGA usa cifrado, pero Internxt lleva la seguridad más allá implementando cifrado post-cuántico, que protege tus datos incluso contra futuras amenazas de computación cuántica.",
+          "Esta tecnología está incluida en cada plan de Internxt sin coste adicional."
+        ]
+      },
+      {
+        "question": "¿Dónde tiene su sede Internxt?",
+        "answer": [
+          "Internxt tiene su sede en Valencia, España, y cumple con las estrictas leyes de privacidad RGPD europeas.",
+          "Esto proporciona protección de privacidad más fuerte comparado con servicios como MEGA, que pueden estar sujetos a diferentes jurisdicciones y regulaciones."
+        ]
+      },
+      {
+        "question": "¿Es Internxt más asequible que MEGA?",
+        "answer": [
+          "Sí, con descuentos exclusivos, Internxt ofrece planes de por vida y de suscripción más asequibles mientras incluye características adicionales de seguridad y privacidad sin costes ocultos."
+        ]
+      },
+      {
+        "question": "¿Qué características adicionales ofrece Internxt que MEGA no tiene?",
+        "answer": [
+          "Internxt incluye VPN, antivirus, limpiador de dispositivos, monitor de la web oscura y servicio de email seguro (Mail) — características que MEGA no ofrece.",
+          "Estas herramientas adicionales te dan protección mejorada contra hackers, filtraciones y amenazas en línea."
+        ]
+      },
+      {
+        "question": "¿Cómo puedo contactar al soporte de Internxt?",
+        "answer": [
+          "Si necesitas asistencia, puedes enviar un email a hello@internxt.com o usar el chat en vivo en nuestro sitio web. Nuestro equipo de Éxito del Cliente estará feliz de ayudarte."
+        ]
+      },
+      {
+        "question": "¿Puedo pagar con tarjeta de crédito, PayPal o criptomonedas?",
+        "answer": [
+          "Sí, Internxt acepta las principales tarjetas de crédito y débito (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort y criptomonedas."
+        ]
+      }
+    ]
+  }
+}

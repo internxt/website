@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "即將推出",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "檔案版本控制",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },

@@ -1,0 +1,251 @@
+{
+  "HeroSection": {
+    "title": "Internxt,  A Secure {{competitor}} Alternative",
+    "description": "Past vulnerabilities in MEGA’s cryptography and lack of full open source software could put your privacy and data at risk. Choose Internxt for post-quantum encryption, VPN, Mail, Meet, and more.",
+    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
+    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "cta": "Claim deal"
+  },
+  "HeaderSection": {
+    "title": "Internxt vs {{competitor}} overview",
+    "description": "See why Internxt stands out as a secure alternative to MEGA thanks to advanced cryptography and a comprehensive product suite.",
+    "tableSection": {
+      "comparisons": [
+        "Code transparency",
+        "Encryption",
+        "Post-Quantum Encryption",
+        "Pricing",
+        "Features",
+        "Community Audits",
+        "Live Support",
+        "Data Trackers",
+        "Privacy Laws"
+      ],
+      "internxtFeatures": [
+        "Open-Source",
+        "Encrypted on your device",
+        "Yes",
+        "Competitive, no hidden costs",
+        "Drive, VPN, Antivirus, Meet,  Mail and more",
+        "Regular security audits ",
+        "Yes",
+        "No",
+        "GDPR, EU Data Protection Laws"
+      ],
+      "competitorFeatures": [
+        "Partially",
+        "Can be twice as expensive, no lifetime plans",
+        "No",
+        "Can be twice as expensive, no lifetime plans",
+        "Cloud storage, VPN, Pass, Meet, and Chat",
+        "Yes, with past encryption vulnerabilities",
+        "Email support for paid accounts",
+        "Yes",
+        "GDPR & New Zealand"
+      ]
+    }
+  },
+  "VersusSection": {
+    "title": "Internxt vs {{competitor}}",
+    "description": "Internxt offers unparalleled security with features that MEGA can’t match, such as post-quantum encryption and protection from hackers",
+    "mainTable": {
+      "inxtTable": {
+        "title": "Privacy and security",
+        "description": "Internxt gives you total control over your files and data through open-source software, zero-knowledge encryption, and a fully private ecosystem.",
+        "features": [
+          {
+            "title": "Open-Source Code",
+            "description": "As Internxt's code is open to everybody on GitHub, anyone may examine it and ensure its security. This transparency guarantees there are no hidden backdoors."
+          },
+          {
+            "title": "End-to-End Encryption",
+            "description": "Your data is encrypted client-side, which guarantees that only you can access it."
+          },
+          {
+            "title": "Fully audited",
+            "description": "Internxt's services have been reviewed by security experts from a leading European penetration testing company. This ensures your data stays secure against external threats like hackers and breaches."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "What about your privacy?",
+        "features": [
+          {
+            "title": "Not fully open source",
+            "description": "MEGA keeps the backend source code hidden from the public. With no transparency, there is no way to know for sure how MEGA handles or protects your data."
+          },
+          {
+            "title": "Zero-knowledge",
+            "description": "MEGA’s current use of RSA and ECC would be vulnerable to Shor’s algorithm and quantum computer attacks."
+          },
+          {
+            "title": "Cryptography vulnerabilities",
+            "description": "In 2022, a group of researchers published a paper revealing several cryptographic vulnerabilities in MEGA’s key management system."
+          }
+        ]
+      }
+    },
+    "costAndValue": {
+      "title": "Cost and value",
+
+      "inxtTable": {
+        "title": "Security and privacy at no extra cost",
+        "features": [
+          {
+            "title": "Reasonable plans",
+            "description": "87% exclusive offer, without any hidden charges."
+          },
+          {
+            "title": "Full protection",
+            "description": "All plans include post-quantum and zero-knowledge encryption and security features for free."
+          },
+          {
+            "title": "Lifetime plans",
+            "description": "Avoid repeated subscriptions with a one-time payment to access our services forever for 87% off."
+          }
+        ]
+      },
+      "competitorTable": {
+        "title": "Pay more for total privacy",
+        "features": [
+          {
+            "title": "Limited, expensive plans",
+            "description": "Depending on the plan you choose, MEGA pricing can make it one of the most expensive cloud storage providers."
+          },
+          {
+            "title": "Access to features",
+            "description": "To access all of MEGA’s features, you must be on the most premium plan. This limits accessibility to important features, making security and privacy more inaccessible."
+          },
+          {
+            "title": "Subscription based",
+            "description": "68% more expensive for a 3TB annual plan, and no lifetime plans are available."
+          }
+        ]
+      }
+    }
+  },
+  "CtaSection": {
+    "title": "Secure your files from data breaches with Internxt",
+    "description": "Get 87% off with code MEGA87",
+    "cta": "Get Internxt"
+  },
+  "CtaSection2": {
+    "title": "No trackers. No problems.",
+    "description": "Get complete privacy for your files with Internxt",
+    "cta": "Sign up for free"
+  },
+  "tableSection": {
+    "title": "Internxt Plans",
+    "hotLabel": "{{discount}}% off",
+    "planTitles": {
+      "header": "Select your Plan"
+    },
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1GB of encrypted cloud storage for free",
+      "cta": "Select plan"
+    },
+    "features": {
+      "openSource": "Open-source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "HorizontalScrollableSection": {
+    "title": "Is MEGA safe?",
+    "description": "After a research study, vulnerabilities in MEGA's encryption methods were found by experts in cryptography, which put the data and privacy of millions of their users at risk.",
+    "tile2": "MEGA: Malleable Encryption Goes Awry",
+    "description2": "Researchers from ETH Zurich discovered major cryptographic flaws in MEGA, affecting 250M+ users and over 1,000 Petabytes of data. Four key vulnerabilities were identified:",
+    "scrollableSection": {
+      "titles": ["RSA key recovery", "Plaintext recovery", "Framing attack", "GaP-Bleichenbacher Attack"],
+      "descriptions": [
+        "MEGA’s login process leaks hints about your private RSA key if attackers (with server access) modify your encrypted key. Initially requiring 512 logins, researchers later reduced this to just six. Once obtained, the key allows attackers to access files, chats, and more.",
+        "With your RSA key, attackers can exploit MEGA’s AES-ECB encryption to access node, chat, and signing keys—granting full access to files and messages.",
+        "An attacker can plant fake, incriminating files in your account that appear as legitimate uploads, potentially framing you.",
+        "A “Guess-and-Purge” technique targets MEGA’s flawed RSA padding checks during encrypted chat key exchanges. After ~100,000 login attempts, attackers can decrypt secret messages. "
+      ]
+    }
+  },
+  "HorizontalScrollableSectionV2": {
+    "title": "Why should you choose Internxt as your MEGA alternative?",
+    "description": "Discover features of Internxt that make us a more secure, private MEGA alternative",
+    "scrollableSection": {
+      "titles": [
+        "Open source and transparent",
+        "Security audited",
+        "Fully open source",
+        "GDPR-compliant",
+        "Advanced encryption",
+        "Flexible storage plans"
+      ],
+      "descriptions": [
+        "Internxt is an open-source alternative to MEGA, as the code for all our products and services is available on GitHub. MEGA does not publish the backend source code that stores your data and enforces encryption policies, so there’s no way of being sure how your data is protected.",
+        "Internxt successfully passed a security audit carried out by security experts from a leading European penetration testing company. Past security audits on MEGA found vulnerabilities that could give hackers access to user data, but MEGA has since fixed these issues.",
+        "Internxt makes all its source code available on GitHub. This transparency offers you peace of mind that our encryption protects your files, and there are no backdoors that could decrypt and access your data.",
+        "Internxt is a European-based company regulated by the GDPR to guarantee your information is handled securely and according to strict regulations.",
+        "Internxt includes post-quantum encryption, the most secure and advanced cryptography available for free and paid accounts. We only store the encrypted version of your data, and only you have the key to decrypt and access it.",
+        "Internxt includes post-quantum encryption, the most secure and advanced cryptography available for free and paid accounts. This protects your data from the future threats of quantum computers, which could break current encryption methods. MEGA has yet to implement PQE."
+      ]
+    }
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Is Internxt a more secure and private alternative to MEGA?",
+        "answer": [
+          "Yes, Internxt is a more secure and private alternative to MEGA. Our zero-knowledge and post-quantum encryption ensure that only you can access your data.",
+          "Unlike MEGA, Internxt does not rely on third-party services or trackers, offering a truly private environment for your files."
+        ]
+      },
+      {
+        "question": "Does MEGA offer the same level of encryption as Internxt?",
+        "answer": [
+          "MEGA uses encryption, but Internxt takes security further by implementing post-quantum encryption, which protects your data even against future quantum computing threats.",
+          "This technology is included in every Internxt plan at no extra cost."
+        ]
+      },
+      {
+        "question": "Where is Internxt based?",
+        "answer": [
+          "Internxt is based in Valencia, Spain, and complies with strict European GDPR privacy laws.",
+          "This provides stronger privacy protection compared to services like MEGA, which may be subject to different jurisdictions and regulations."
+        ]
+      },
+      {
+        "question": "Is Internxt more affordable than MEGA?",
+        "answer": [
+          "Yes, with exclusive discounts, Internxt offers more affordable lifetime and subscription plans while including additional security and privacy features without hidden costs."
+        ]
+      },
+      {
+        "question": "What extra features does Internxt offer that MEGA doesn’t?",
+        "answer": [
+          "Internxt includes a VPN, antivirus, device cleaner, dark web monitor, and secure email service (Mail) — features that MEGA doesn’t offer.",
+          "These extra tools give you enhanced protection from hackers, leaks, and online threats."
+        ]
+      },
+      {
+        "question": "How can I contact Internxt support?",
+        "answer": [
+          "If you need assistance, you can email hello@internxt.com or use the live chat on our website. Our Customer Success team will be happy to help you."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Yes, Internxt accepts major credit and debit cards (Mastercard, VISA, American Express), PayPal, iDEAL, Sofort, and cryptocurrency."
+        ]
+      }
+    ]
+  }
+}

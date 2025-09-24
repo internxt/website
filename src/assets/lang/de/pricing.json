@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "Kommt bald",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "Dateiversionierung",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },

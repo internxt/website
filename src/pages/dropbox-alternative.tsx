@@ -1,53 +1,20 @@
-import { DropboxAlternativeText } from '@/assets/types/dropbox-alternative';
-import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
-import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
-import { CouponSection } from '@/components/comparison/pCloud-alternative/CouponSection';
 import { HeroSection } from '@/components/comparison/pCloud-alternative/HeroSection';
-import { WhyChooseInxtSection } from '@/components/comparison/pCloud-alternative/WhyChooseInxtSection';
-import { CompetitorTable } from '@/components/comparison/pCloud-alternative/components/CompetitorTable';
-import { InxtTable } from '@/components/comparison/pCloud-alternative/components/InxtTable';
+import { TablesSection } from '@/components/comparison/pCloud-alternative/TablesSection';
 import Layout from '@/components/layout/Layout';
 import { MinimalFooter } from '@/components/layout/footers/MinimalFooter';
 import Navbar from '@/components/layout/navbars/Navbar';
-import CtaSection from '@/components/shared/CtaSection';
-import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
-import usePricing from '@/hooks/usePricing';
 import cookies from '@/lib/cookies';
-import { getImage } from '@/lib/getImage';
+import { GetServerSidePropsContext } from 'next';
+import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { PromoCodeName } from '@/lib/types';
+import usePricing from '@/hooks/usePricing';
 import { stripeService } from '@/services/stripe.service';
-import ReactMarkdown from 'react-markdown';
+import FAQSection from '@/components/shared/sections/FaqSection';
+import HorizontalScrollableSection from '@/components/comparison/HorizontalScrollableSection';
+import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
+import { ComparisonTable } from '@/components/comparison/ComparisonTable';
 
-interface DropboxComparisonProps {
-  metatagsDescriptions: MetatagsDescription[];
-  langJson: DropboxAlternativeText;
-  lang: string;
-  navbarLang: NavigationBarText;
-  footerLang: FooterText;
-}
-
-const IsDropboxSafe = ({ textContent }: { textContent: DropboxAlternativeText['IsDropboxSafeSection'] }) => (
-  <div className="flex flex-col items-center gap-16 px-5 py-20">
-    <div className="flex max-w-[850px] flex-col gap-6 text-center">
-      <h2 className="text-4xl font-semibold text-gray-100 lg:text-5xl">{textContent.title}</h2>
-      <h3 className="text-xl text-gray-80">{textContent.description}</h3>
-    </div>
-    {textContent.breaches.map((breach) => (
-      <div key={breach.title} className="flex max-w-[800px] flex-col gap-3">
-        <p className="text-3xl font-semibold text-gray-100">{breach.title}</p>
-        <ReactMarkdown className="markdown text-xl text-gray-80">{breach.description}</ReactMarkdown>
-      </div>
-    ))}
-  </div>
-);
-
-const DropboxComparison = ({
-  metatagsDescriptions,
-  langJson,
-  lang,
-  navbarLang,
-  footerLang,
-}: DropboxComparisonProps): JSX.Element => {
+const DropboxComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, footerLang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'dropbox-alternative');
   const {
     products,
@@ -72,19 +39,25 @@ const DropboxComparison = ({
   };
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
+  const percentageDiscount = decimalDiscount ? 100 - decimalDiscount : 0;
 
   return (
     <Layout
       title={metatags[0].title}
       description={metatags[0].description}
-      segmentName="Dropbox Comparison"
+      segmentName="dropbox Comparison"
       lang={lang}
     >
-      <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
+      <Navbar textContent={navbarLang} lang={lang} cta={['priceTable']} fixed />
 
-      <ComparisonHeader textContent={langJson.HeaderSection} redirectUrl={'/pricing'} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        redirectUrl={'/pricing'}
+        percentage={percentageDiscount}
+        competitor={'Dropbox'}
+      />
 
-      <HeroSection textContent={langJson.HeroSection} hideTooltip logo={getImage('/logos/dropbox-logo.svg')} />
+      <ComparisonTable textContent={langJson.HeaderSection} competitor="Dropbox" />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -99,48 +72,64 @@ const DropboxComparison = ({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideSwitchSelector
         hideBusinessSelector
-        hideFreeCard
-        CustomDescription={
-          <span className="text-regular max-w-[800px] text-xl text-gray-80">
-            {langJson.tableSection.planDescription}
-          </span>
-        }
-        sectionDetails="bg-gray-1"
+        sectionDetails="bg-white lg:py-20 py-10"
       />
 
-      <IsDropboxSafe textContent={langJson.IsDropboxSafeSection} />
+      <HorizontalScrollableSection
+        textContent={langJson.HorizontalScrollableSection}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #FFCECC 50%, #FFFFFF 100%)"
+      />
 
-      <CtaSection textContent={langJson.CtaSection} url="" />
-
-      <div className="flex flex-col items-center gap-16 px-5 py-20">
-        <div className="flex max-w-[850px] flex-col gap-6 text-center">
-          <h2 className="text-3xl font-semibold lg:text-5xl">{langJson.TablesSection.title}</h2>
-          <h3 className="text-xl text-gray-80">{langJson.TablesSection.description}</h3>
-        </div>
-        <div className="flex flex-col gap-16">
-          {langJson.TablesSection.tables.map((table) => (
-            <div key={table.title} className="flex flex-col items-center gap-10 lg:gap-16">
-              <p className="text-center text-3xl font-semibold text-gray-100">{table.title}</p>
-              <div className=" flex h-full flex-col gap-10 md:flex-row">
-                <InxtTable textContent={table.inxtTable} />
-                <CompetitorTable textContent={table.table} logo={getImage('/icons/dropbox-icon.svg')} />
-              </div>
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <>
+            <div className="flex flex-col gap-4 px-10 lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection.description}</p>
             </div>
-          ))}
-        </div>
-      </div>
+          </>
+        }
+        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+      />
 
-      <CouponSection textContent={langJson.UseCodeSection} redirectUrl="/pricing" />
+      <TablesSection
+        textContent={langJson.VersusSection}
+        competitor={'Dropbox'}
+        logo="/images/comparison/competitors/Dropbox_Letters.webp"
+      />
 
-      <WhyChooseInxtSection textContent={langJson.WhyChooseInxtSection} />
+      <FloatingCtaSectionv2
+        textContent={langJson.CtaSection}
+        url={'/pricing'}
+        customText={
+          <>
+            <div className="flex flex-col gap-4 px-10 text-center lg:px-0">
+              <p className="text-2xl font-semibold text-gray-95 lg:text-4xl">{langJson.CtaSection2.title}</p>
+              <p className="text-base font-normal text-gray-55 lg:text-xl">{langJson.CtaSection2.description}</p>
+            </div>
+          </>
+        }
+        containerDetails="shadow-lg backdrop-blur-[55px] bg-white"
+        bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
+      />
+
+      <HorizontalScrollableSection
+        textContent={langJson.HorizontalScrollableSectionV2}
+        bgGradient="linear-gradient(180deg, #FFFFFF 0%, #D6F3DD 50%, #FFFFFF 100%)"
+      />
+
+      <FAQSection textContent={langJson.FaqSection} />
 
       <MinimalFooter footerLang={footerLang.FooterSection} lang={lang} bgColor="bg-gray-1" />
     </Layout>
   );
 };
 
-export async function getServerSideProps(ctx) {
-  const lang = 'en';
+export async function getServerSideProps(ctx: GetServerSidePropsContext) {
+  const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const langJson = require(`@/assets/lang/${lang}/dropbox-alternative.json`);

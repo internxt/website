@@ -343,6 +343,16 @@
             }
           }
         ]
+      },
+      {
+        "name": "Bientôt disponible",
+        "features": [
+          {
+            "id": "file_versioning",
+            "name": "Gestion des versions de fichiers",
+            "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
+          }
+        ]
       }
     ]
   },
