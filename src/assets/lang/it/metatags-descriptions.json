@@ -279,7 +279,8 @@
     "id": "internxt–cleaner",
     "title": "Internxt cleaner",
     "description": "Internxt Cleaner – Trova ed elimina file spazzatura per migliorare velocità, reattività e prestazioni"
-  },{
+  },
+  {
     "id": "cloud-for-videos",
     "title": "Internxt - Archiviazione Cloud per File Video",
     "description": "Internxt offre archiviazione cloud per file video per memorizzare video HD, 4K e 8K che sono protetti con crittografia post-quantistica per la massima privacy."
@@ -296,8 +297,7 @@
   },
   {
     "id": "mega-alternative",
-    "title": "Internxt — Un'alternativa sicura, crittografata e open source a MEGA",
-    "description": "L'archiviazione cloud di Internxt è un'alternativa sicura a MEGA. Proteggiamo i tuoi file con crittografia end-to-end, software open source e funzionalità incentrate sulla privacy."
-
+    "title": "Internxt — Un'alternativa sicura, crittografata e open source a Mega",
+    "description": "L'archiviazione cloud di Internxt è un'alternativa sicura a Mega. Proteggiamo i tuoi file con crittografia end-to-end, software open source e funzionalità incentrate sulla privacy."
   }
 ]

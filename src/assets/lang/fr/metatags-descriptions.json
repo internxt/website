@@ -260,11 +260,11 @@
     "description": "Internxt propose un stockage cloud pour fichiers vidéo afin de stocker des vidéos HD, 4K et 8K qui sont sécurisées avec un chiffrement post-quantique pour une confidentialité maximale."
   },
   {
-
     "id": "internxt-cleaner",
     "title": "Internxt cleaner",
     "description": "Internxt Cleaner – Trouvez et supprimez les fichiers indésirables pour améliorer la vitesse, la réactivité et les performances"
-  },{
+  },
+  {
     "id": "dropbox-alternative",
     "title": "Internxt — Une alternative sécurisée et chiffrée à Dropbox",
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Dropbox. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
@@ -276,8 +276,7 @@
   },
   {
     "id": "mega-alternative",
-    "title": "Internxt — Une alternative sécurisée, chiffrée et open source à MEGA",
-    "description": "Le stockage cloud d'Internxt est une alternative sécurisée à MEGA. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
-
+    "title": "Internxt — Une alternative sécurisée, chiffrée et open source à Mega",
+    "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Mega. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
   }
 ]

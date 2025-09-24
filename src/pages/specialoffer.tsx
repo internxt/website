@@ -87,7 +87,7 @@ function SpecialOffer({
         onCheckoutButtonClicked={onCheckoutButtonClicked}
         hideBusinessCards
         hideBusinessSelector
-        popularPlanBySize="3TB"
+        popularPlanBySize="5TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
       />

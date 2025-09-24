@@ -113,12 +113,15 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
                 <div className="flex">
                   <div className="w-1/2">
                     <div className="flex h-[48px] flex-col items-center justify-center rounded-tl-2xl border border-green-120 bg-neutral-17 p-3 lg:h-[128px] lg:px-20 lg:py-12">
-                      <img
+                      <Image
                         loading="lazy"
                         src={getImage(competitors[0].logo)}
                         draggable="false"
                         alt={`${competitors[0].name} logo`}
                         className="h-auto max-h-[24px] max-w-full lg:max-h-none"
+                        quality={100}
+                        width={128}
+                        height={32}
                       />
                     </div>
                   </div>
@@ -132,6 +135,7 @@ export const ComparisonTable = ({ textContent, logo, hideTooltip, competitor }: 
                         className="h-auto max-h-[216px] max-w-full lg:max-h-none"
                         width={128}
                         height={32}
+                        quality={100}
                       />
                     </div>
                   </div>
