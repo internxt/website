@@ -4,11 +4,15 @@ import { useRef, useState, useEffect } from 'react';
 interface HorizontalScrollableProps {
   textContent: any;
   bgGradient?: string;
+  cardsWidth?: string;
+  cardsHeight?: string;
 }
 
 export default function HorizontalScrollableSection({
   textContent,
   bgGradient,
+  cardsWidth = '345px',
+  cardsHeight = 'auto',
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +27,13 @@ export default function HorizontalScrollableSection({
     const updateScreenSize = () => {
       const isDesktop = window.innerWidth >= 1024;
       setIsMobile(isDesktop);
-      setCardWidth(isDesktop ? 424 : 361);
+
+      if (cardsWidth && cardsWidth !== '345px' && cardsWidth !== '400px') {
+        const widthNumber = parseInt(cardsWidth.replace(/[^\d]/g, ''));
+        setCardWidth(widthNumber + 16);
+      } else {
+        setCardWidth(isDesktop ? 424 : 361);
+      }
     };
 
     updateScreenSize();
@@ -31,7 +41,7 @@ export default function HorizontalScrollableSection({
     window.addEventListener('resize', updateScreenSize);
 
     return () => window.removeEventListener('resize', updateScreenSize);
-  }, []);
+  }, [cardsWidth]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current && currentIndex > 0) {
@@ -61,6 +71,13 @@ export default function HorizontalScrollableSection({
       const newIndex = Math.round(scrollLeft / cardWidth);
       setCurrentIndex(newIndex);
     }
+  };
+
+  const getCardWidth = () => {
+    if (cardsWidth) {
+      return cardsWidth;
+    }
+    return window.innerWidth >= 1024 ? '400px' : '345px';
   };
 
   return (
@@ -97,7 +114,7 @@ export default function HorizontalScrollableSection({
           }}
         >
           <div
-            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-60 2xl:pl-64 2xl:pr-[288px]"
+            className=" flex gap-4 lg:gap-6 lg:pl-32 lg:pr-72 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-64 2xl:pr-[288px]"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
@@ -105,7 +122,14 @@ export default function HorizontalScrollableSection({
           >
             {textContent.scrollableSection.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col rounded-16 bg-white p-8 lg:w-[400px]">
+                <div
+                  className="flex flex-col rounded-16 bg-white p-8"
+                  style={{
+                    width: getCardWidth(),
+                    height: cardsHeight,
+                    minHeight: cardsHeight === 'auto' ? 'auto' : cardsHeight,
+                  }}
+                >
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
                   <p className="flex-1 text-base font-normal leading-tight text-gray-55">
                     {textContent.scrollableSection.descriptions[index]}
