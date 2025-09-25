@@ -1,0 +1,139 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "**Confidentialité inégalée pour des** appels vidéo sécurisés",
+    "description": "Internxt Meet offre des appels vidéo entièrement privés alimentés par la cryptographie post-quantique, garantissant que vos réunions sont sécurisées, privées et confidentielles.",
+    "cta": "Obtenir Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "Profitez de la liberté d'expression et de la confidentialité",
+    "description": "Chattez avec d'autres via notre plateforme de chat vidéo chiffrée pour des réunions privées protégées par le chiffrement post-quantique le plus avancé.",
+    "scrollableSection": {
+      "titles": [
+        "Appels vidéo privés",
+        "Sécurité",
+        "Vitesse et qualité vidéo supérieures",
+        "Open source et transparent"
+      ],
+      "descriptions": [
+        "Utilisez Internxt Meet pour des appels vidéo ou audio que vous voulez garder privés. Zéro traceur. Zéro collecte de données et rien ne vous lie, vous ou qui que ce soit d'autre, à vos appels.",
+        "Toutes vos conversations, vidéos, chats et messages sont sécurisés avec un chiffrement à connaissance zéro. Nous vous donnons un contrôle total de votre confidentialité, et nous n'accédons jamais à vos conversations ou messages.",
+        "L'IA alimente des appels vidéo cristallins à la vitesse de l'éclair, optimisant la bande passante et la qualité tout en assurant un chiffrement de bout en bout pour une confidentialité totale.",
+        "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par n'importe qui. Nous n'avons rien à cacher sauf vos données."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Rencontrez-vous en toute confidentialité",
+    "description": "Connectez-vous en toute tranquillité d'esprit.",
+    "cta": "Obtenir Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "L'alternative Meet la plus sécurisée aux Big Tech",
+    "description": "L'alternative Meet la plus sécurisée aux Big Tech \n\nProfitez de Mail, Meet, Antivirus, Cleaner, Drive et VPN dans le cadre de votre plan Internxt.",
+    "accordionSection": {
+      "titles": ["Confidentialité Européenne", "Sécurité", "Durabilité"],
+      "descriptions": [
+        "Internxt se conforme au RGPD, qui protège vos données avec les meilleures lois de confidentialité pour la sécurité et la transparence de vos informations personnelles.",
+        "Internxt utilise un chiffrement de bout en bout et post-quantique, vous fournissant la plateforme de visioconférence la plus sécurisée pour votre confidentialité.",
+        "Internxt utilise un chiffrement de bout en bout et post-quantique, vous fournissant la plateforme de visioconférence la plus sécurisée pour votre confidentialité."
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "Conçu pour répondre à tous les besoins de confidentialité",
+    "description": "Nous croyons que chacun a droit à la confidentialité, c'est pourquoi Internxt Mail est conçu pour répondre aux besoins de tous ceux qui ont besoin d'un fournisseur d'email sécurisé.",
+    "scrollableSection": {
+      "images": ["personal", "business", "lawyers", "medical"],
+      "titles": ["Personnel", "Entreprise", "Avocats", "Médical"],
+      "descriptions": [
+        "Organisez des appels vidéo privés via un lien sécurisé et chattez avec vos invités, sachant que vos conversations sont protégées.",
+        "Rencontrez-vous en privé avec vos clients, équipe ou départements pour garder les informations sensibles ou confidentielles privées et protégées des fuites.",
+        "Rencontrez-vous avec d'autres pour partager et discuter d'informations en toute confidentialité pour protéger les privilèges clients.",
+        "Réduisez le risque de violations de données médicales en organisant et partageant votre propre appel vidéo privé avec les patients."
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Appels vidéo axés sur la confidentialité",
+    "description": "Parlez librement et connectez-vous en sécurité.",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "answer": [
+          "Non. Internxt, ainsi que tout autre tiers, ne peut pas accéder à vos fichiers, photos ou données.",
+          " Les services Internxt utilisent un chiffrement à connaissance zéro, ce qui signifie que vous seul pouvez vraiment accéder à vos données privées. De plus, l'architecture d'Internxt fragmente vos fichiers avant de les chiffrer, donc un serveur ne détient jamais un fichier entier, juste un fragment chiffré à la place, que vous seul pouvez déchiffrer."
+        ]
+      },
+      {
+        "question": "Internxt stocke-t-il mon mot de passe ?",
+        "answer": [
+          "Non. En tant que tel, Internxt ne stocke pas (et ne peut pas stocker) votre mot de passe.",
+          "Votre mot de passe Internxt vous est unique et est utilisé pour chiffrer et déchiffrer vos données Internxt. Mais si vous voulez changer votre mot de passe, vous pouvez le faire depuis notre application."
+        ]
+      },
+      {
+        "question": "Puis-je activer la 2FA ?",
+        "answer": [
+          "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web Internxt.",
+          "Vous pouvez utiliser Authy ou tout autre outil 2FA pour générer un code 2FA personnel avec Internxt."
+        ]
+      },
+      {
+        "question": "Comment créer un compte Internxt ?",
+        "answer": [
+          "Pour créer un compte Internxt gratuit, cliquez simplement sur le meilleur plan ci-dessus et suivez les instructions.",
+          "Ou rendez-vous sur notre page d'accueil et cliquez sur \"Commencer\". Là, vous obtiendrez instantanément 1 Go de stockage gratuit à vie avec un abonnement Internxt gratuit. Vous pouvez utiliser votre abonnement gratuit sur tous nos services. Pour vous inscrire, entrez simplement un nom et une adresse email. Aucune vérification d'identité ni d'email n'est requise pour commencer à utiliser les services d'Internxt."
+        ]
+      },
+      {
+        "question": "Puis-je payer avec une Carte, PayPal ou des Cryptos ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto, Klarna et autres."
+        ]
+      },
+      {
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "answer": [
+          "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à compter dès que vous vous abonnez.",
+          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
+        ]
+      },
+      {
+        "question": "Comment puis-je annuler mon abonnement ?",
+        "answer": [
+          "Annuler votre abonnement est très simple et peut être fait facilement via l'application Internxt, en allant dans les paramètres et en supprimant votre compte. Cela terminera votre abonnement et votre compte.",
+          "Si vous souhaitez annuler un plan payant et rester avec notre service gratuit, vous pouvez nous envoyer un email à [hello@internxt.com](mailto:hello@internxt.com) et nous traiterons l'annulation de l'abonnement afin que vous puissiez garder votre compte actif sur notre plan gratuit."
+        ]
+      },
+      {
+        "question": "Comment contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de Support Client via le chat en direct ou en envoyant un email à [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Que sont les plans à vie Internxt ?",
+        "answer": [
+          "Nous offrons des plans à vie que vous pouvez acheter sur notre site web. Ceux-ci vous accordent un accès à vie à nos plans, pour un paiement unique. Profitez jusqu'à 5 To de stockage à vie avec un paiement unique."
+        ]
+      },
+      {
+        "question": "Puis-je ajouter plus de stockage à mon plan à vie ?",
+        "answer": [
+          "Oui, vous pouvez ajouter jusqu'à 100 To de stockage à votre abonnement à vie Internxt. Les plans à vie Internxt sont cumulables. Achetez-les simplement avec la même adresse email et le stockage sera ajouté automatiquement à votre compte."
+        ]
+      },
+      {
+        "question": "Puis-je diviser mon paiement à vie ?",
+        "answer": [
+          "Oui, vous pouvez maintenant diviser vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un plan à vie avec la facilité de le payer en versements faciles !"
+        ]
+      }
+    ]
+  }
+}

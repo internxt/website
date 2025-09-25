@@ -1,0 +1,134 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "Unmatched **privacy for secure** video calls",
+    "description": "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, private and confidential.",
+    "cta": "Get Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "Enjoy freedom of speech and privacy",
+    "description": "Chat with others with our encrypted video chat platform for private meetings protected with the most advanced post-quantum encryption.",
+    "scrollableSection": {
+      "titles": ["Private video calls", "Security", "Higher speed and video quality", "Open source and transparent"],
+      "descriptions": [
+        "Use Internxt Meet for video or audio calls you want to keep private. Zero trackers. Zero data collection and nothing linking you or anybody else to your calls.",
+        "All your conversations, videos, chats, and messages are kept secure with zero-knowledge encryption. We give you total control of your privacy, and we never access your conversations or messages.",
+        "AI powers crystal-clear video calls at lightning speed, optimizing bandwidth and quality while ensuring end-to-end encryption for total privacy.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Meet in total privacy",
+    "description": "Connect with peace of mind.",
+    "cta": "Get Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "The most secure meet alternative to Big Tech",
+    "description": "Join Internxt in building a more secure, private web experience with our encrypted, private suite of products designed to give you control of your privacy.  \n\nEnjoy Mail, Meet, Antivirus, Cleaner, Drive, and VPN as part of your Internxt plan.",
+    "accordionSection": {
+      "titles": ["European Privacy", "Security", "Sustainability"],
+      "descriptions": [
+        "Internxt complies with the GDPR, that protects your data with the best privacy laws for security and transparency over your personal information.",
+        "Internxt uses end-to-end and post-quantum encryption, providing you with the most secure video conferencing platform for your privacy.",
+        "Internxt uses end-to-end and post-quantum encryption, providing you with the most secure video conferencing platform for your privacy."
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "Designed to meet al privacy needs",
+    "description": "We believe everyone has the right to privacy, which is why Internxt Mail is built to meet the needs of everyone who needs a secure email provider.",
+    "scrollableSection": {
+      "images": ["personal", "business", "lawyers", "medical"],
+      "titles": ["Personal", "Business", "Lawyers", "Medical"],
+      "descriptions": [
+        "Host private video calls via a secure link and chat with your guests, knowing your conversations are protected.",
+        "Meet in privacy with your clients, team, or departments to keep sensitive or confidential private and protected from leaks.",
+        "Meet with others to share and discuss information in complete privacy to protect client privileges.",
+        "Reduce the risk of medical data breaches by hosting and sharing your own private video call with patients."
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Privacy-first video calls",
+    "description": "Talk freely and connect securely.",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
+          " Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt does not (and cannot) store your password.",
+          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable 2FA?",
+        "answer": [
+          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
+          "You can use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "How do I create an Internxt account?",
+        "answer": [
+          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
+          "Or head to our homepage and click on “Get started”. There, you will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
+        ]
+      },
+      {
+        "question": "Can I pay with Card, PayPal, or Crypto?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, Crypto, Klarna, and others."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+        ]
+      },
+      {
+        "question": "How can I cancel my subscription?",
+        "answer": [
+          "Canceling your subscription is very straightforward and can be done easily through the Internxt app, by going into settings and deleting your account. This will terminate your subscription and your account.",
+          "If you would like to cancel a paid plan and remain with our free service, you can email us at [hello@internxt.com](mailto:hello@internxt.com) and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "What are Internxt lifetime plans?",
+        "answer": [
+          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, for unique, one-time payment.  Enjoy up to 5TB of storage for life with a unique, one-time payment."
+        ]
+      },
+      {
+        "question": "Can I add more storage to my lifetime plan?",
+        "answer": [
+          "Yes, you can add up to 100 TB of storage to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and the storage will be added to your account automatically."
+        ]
+      },
+      {
+        "question": "Can I split my lifetime payment?",
+        "answer": [
+          "Yes you can now split your lifetime payments in multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
+        ]
+      }
+    ]
+  }
+}
