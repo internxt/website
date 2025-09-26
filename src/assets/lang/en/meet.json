@@ -1,0 +1,99 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "Unmatched **privacy for secure** video calls",
+    "description": "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, private and confidential.",
+    "cta": "Get Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "Enjoy freedom of speech and privacy",
+    "description": "Chat with others with our encrypted video chat platform for private meetings protected with the most advanced post-quantum encryption.",
+    "scrollableSection": {
+      "titles": ["Private video calls", "Security", "Higher speed and video quality", "Open source and transparent"],
+      "descriptions": [
+        "Use Internxt Meet for video or audio calls you want to keep private. Zero trackers. Zero data collection and nothing linking you or anybody else to your calls.",
+        "All your conversations, videos, chats, and messages are kept secure with zero-knowledge encryption. We give you total control of your privacy, and we never access your conversations or messages.",
+        "AI powers crystal-clear video calls at lightning speed, optimizing bandwidth and quality while ensuring end-to-end encryption for total privacy.",
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Meet in total privacy",
+    "description": "Connect with peace of mind.",
+    "cta": "Get Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "The most secure meet alternative to Big Tech",
+    "description": "Join Internxt in building a more secure, private web experience with our encrypted, private suite of products designed to give you control of your privacy.  \n\nEnjoy Mail, Meet, Antivirus, Cleaner, Drive, and VPN as part of your Internxt plan.",
+    "accordionSection": {
+      "titles": ["European Privacy", "Security", "Sustainability"],
+      "descriptions": [
+        "Internxt complies with the GDPR, that protects your data with the best privacy laws for security and transparency over your personal information.",
+        "Internxt uses end-to-end and post-quantum encryption, providing you with the most secure video conferencing platform for your privacy.",
+        "Internxt uses end-to-end and post-quantum encryption, providing you with the most secure video conferencing platform for your privacy."
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "Designed to meet al privacy needs",
+    "description": "We believe everyone has the right to privacy, which is why Internxt Mail is built to meet the needs of everyone who needs a secure email provider.",
+    "scrollableSection": {
+      "images": ["personal", "business", "lawyers", "medical"],
+      "titles": ["Personal", "Business", "Lawyers", "Medical"],
+      "descriptions": [
+        "Host private video calls via a secure link and chat with your guests, knowing your conversations are protected.",
+        "Meet in privacy with your clients, team, or departments to keep sensitive or confidential private and protected from leaks.",
+        "Meet with others to share and discuss information in complete privacy to protect client privileges.",
+        "Reduce the risk of medical data breaches by hosting and sharing your own private video call with patients."
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Privacy-first video calls",
+    "description": "Talk freely and connect securely.",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "What is Internxt Meet?",
+        "answer": [
+          "Internxt Meet is the most secure video conferencing platform where you can talk, chat, and host meetings in complete privacy. With Internxt Meet, all your conversations and calls are held in complete privacy thanks to our advanced and award-winning encryption. All calls between you and your team are kept private and secure."
+        ]
+      },
+      {
+        "question": "Is Internxt Meet an alternative to Google Meet?",
+        "answer": [
+          "Yes, Internxt Meet is a secure alternative to Google Meet, Zoom, and Teams. We use zero-knowledge encryption with post-quantum cryptography to ensure only you can hear or see your video calls. Not even Internxt has access to your chats or calls. "
+        ]
+      },
+      {
+        "question": "Is Internxt Meet free?",
+        "answer": [
+          "Internxt Meet is available when you subscribe to any of our premium plans, offering access to our full suite of privacy-focused products, including Internxt Drive, Mail, Antivirus, and VPN."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Can I pay with Card, PayPal, or Crypto?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc). You can also pay via PayPal, Crypto, Klarna, and others."
+        ]
+      },
+      {
+        "question": "What is Internxt’s refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+        ]
+      }
+    ]
+  }
+}

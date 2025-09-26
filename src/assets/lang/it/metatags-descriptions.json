@@ -299,5 +299,10 @@
     "id": "mega-alternative",
     "title": "Internxt — Un'alternativa sicura, crittografata e open source a Mega",
     "description": "L'archiviazione cloud di Internxt è un'alternativa sicura a Mega. Proteggiamo i tuoi file con crittografia end-to-end, software open source e funzionalità incentrate sulla privacy."
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet - Videochiamate Sicure e Private",
+    "description": "Meet offre videochiamate private con crittografia post-quantistica e end-to-end per le videoconferenze più sicure."
   }
 ]
