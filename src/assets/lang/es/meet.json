@@ -1,7 +1,7 @@
 {
   "HeroSection": {
     "label": "Meet",
-    "title": "**Privacidad incomparable** para videollamadas seguras",
+    "title": "**Privacidad** para videollamadas",
     "description": "Internxt Meet ofrece videollamadas completamente privadas impulsadas por criptografía post-cuántica, asegurando que tus reuniones sean seguras, privadas y confidenciales.",
     "cta": "Obtener Internxt"
   },
@@ -30,7 +30,7 @@
   },
   "accordionSection": {
     "title": "La alternativa de reuniones más segura a las Big Tech",
-    "description": "La alternativa de reuniones más segura a las Big Tech \n\nDisfruta de Mail, Meet, Antivirus, Cleaner, Drive y VPN como parte de tu plan Internxt.",
+    "description": "Únete a Internxt en la construcción de una experiencia web más segura y privada con nuestra suite encriptada y privada de productos diseñada para darte control sobre tu privacidad \n\nDisfruta de Mail, Meet, Antivirus, Cleaner, Drive y VPN como parte de tu plan Internxt.",
     "accordionSection": {
       "titles": ["Privacidad Europea", "Seguridad", "Sostenibilidad"],
       "descriptions": [
