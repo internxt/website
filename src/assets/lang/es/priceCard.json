@@ -155,7 +155,7 @@
         "Limpiador",
         "Meet",
         "Mail",
-        "Versionado "
+        "Versionado archivos"
       ]
     },
     "business": {
@@ -186,6 +186,7 @@
         "Gestion de la empresa",
         "Limpiador",
         "Meet ",
+        "Versionado archivos",
         "Mail "
       ]
     }

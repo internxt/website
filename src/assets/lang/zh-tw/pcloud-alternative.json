@@ -1,222 +1,222 @@
 {
   "HeroSection": {
-    "title": "Internxt,  Un'alternativa sicura a {{competitor}}",
-    "description": "Stai cercando un'alternativa sicura a pCloud? Internxt offre il primo cloud storage con crittografia post-quantistica e una suite completa di prodotti per la privacy per massima privacy e sicurezza.",
+    "title": "Internxt，{{competitor}}的安全替代方案",
+    "description": "正在尋找pCloud的安全替代方案？Internxt提供首個具有後量子加密的雲端儲存服務，以及完整的隱私產品套件，確保最大的隱私和安全性。",
     "features": [
-      "Archivia i tuoi video in privato",
-      "Crittografia post-quantistica e zero knowledge",
-      "Open source e verificato"
+      "私密儲存您的影片",
+      "後量子加密和零知識加密",
+      "開源且經過驗證"
     ],
-    "getPrivacy": "Ottieni privacy totale con il ${{percentage}}% di sconto",
-    "cta": "Seleziona piano"
+    "getPrivacy": "享受{{percentage}}%的折扣，獲得完全隱私保護",
+    "cta": "選擇方案"
   },
   "HeaderSection": {
-    "title": "Confronto Internxt vs {{competitor}}",
-    "description": "Scopri perché Internxt si distingue con funzionalità avanzate per la privacy, architettura sicura e una suite di prodotti completa progettata per proteggerti dai cyberattacchi.",
+    "title": "Internxt與{{competitor}}對比",
+    "description": "瞭解為什麼Internxt憑藉先進的隱私功能、安全架構和旨在保護您免受網路攻擊的完整產品套件而脫穎而出。",
     "tableSection": {
       "comparisons": [
-        "Trasparenza del codice",
-        "Crittografia",
-        "Crittografia post-quantistica",
-        "Prezzi",
-        "Funzionalità",
-        "Audit di sicurezza",
-        "Supporto dal vivo",
-        "Politica sulla privacy",
-        "Leggi sulla privacy"
+        "程式碼透明度",
+        "加密",
+        "後量子加密",
+        "價格",
+        "功能",
+        "安全稽核",
+        "即時支援",
+        "隱私政策",
+        "隱私法律"
       ],
       "internxtFeatures": [
-        "Open Source",
-        "Crittografato sul tuo dispositivo",
-        "Sì",
-        "Competitivo, nessun costo nascosto",
-        "Drive, VPN, Antivirus, Meet, Mail e altro",
-        "Audit di sicurezza regolari",
-        "Sì",
-        "Non può mai accedere ai tuoi file",
-        "Privacy completa: GDPR, Leggi spagnole sulla protezione dei dati"
+        "開源",
+        "在您的裝置上加密",
+        "是",
+        "具競爭力，無隱藏費用",
+        "Drive、VPN、防毒軟體、Meet、Mail等",
+        "定期安全稽核",
+        "是",
+        "永遠無法存取您的檔案",
+        "完全隱私：GDPR、西班牙資料保護法"
       ],
       "competitorFeatures": [
-        "Codice chiuso",
-        "A pagamento extra (pCloud Crypto)",
-        "No",
-        "Conveniente, ma extra per la crittografia",
-        "Cloud storage, pCloud Pass",
-        "Non disponibile",
-        "No",
-        "Sì (pixel Facebook, TikTok, LinkedIn, ecc.)",
-        "Sostiene le leggi svizzere sulla privacy"
+        "閉源程式碼",
+        "額外付費（pCloud Crypto）",
+        "否",
+        "實惠，但加密需額外費用",
+        "雲端儲存、pCloud Pass",
+        "不可用",
+        "否",
+        "是（Facebook、TikTok、LinkedIn等像素追蹤）",
+        "支援瑞士隱私法"
       ]
     }
   },
   "VersusSection": {
-    "title": "Internxt vs {{competitor}}",
-    "description": "Scopri perché l'impegno di Internxt per la trasparenza open source e gli audit indipendenti lo rendono un'alternativa a {{competitor}} più affidabile e sicura",
+    "title": "Internxt對比{{competitor}}",
+    "description": "瞭解為什麼Internxt對開源透明度和獨立稽核的承諾使其成為比{{competitor}}更可靠和安全的替代方案",
     "mainTable": {
       "inxtTable": {
-        "title": "Privacy totale, trasparenza e fiducia",
+        "title": "完全隱私、透明度和信任",
         "features": [
           {
-            "title": "Codice Open Source",
-            "description": "Poiché il codice di Internxt è aperto a tutti su GitHub, chiunque può esaminarlo e garantirne la sicurezza. Questa trasparenza assicura che non ci siano backdoor nascoste."
+            "title": "開源程式碼",
+            "description": "由於Internxt的程式碼在GitHub上對所有人開放，任何人都可以檢查並確保其安全性。這種透明度確保沒有隱藏的後門。"
           },
           {
-            "title": "Crittografia end-to-end",
-            "description": "I tuoi dati sono crittografati lato client, il che garantisce che solo tu possa accedervi."
+            "title": "端對端加密",
+            "description": "您的資料在用戶端加密，確保只有您可以存取。"
           },
           {
-            "title": "Completamente verificato",
-            "description": "I servizi di Internxt sono stati esaminati da esperti di sicurezza di una leading azienda europea di penetration testing. Questo assicura che i tuoi dati rimangano sicuri contro minacce esterne come hacker e violazioni."
+            "title": "完全驗證",
+            "description": "Internxt的服務已經過歐洲領先滲透測試公司的安全專家審查。這確保您的資料對駭客和資料外洩等外部威脅保持安全。"
           }
         ]
       },
       "competitorTable": {
-        "title": "E la tua privacy?",
+        "title": "您的隱私如何？",
         "features": [
           {
-            "title": "Software proprietario",
-            "description": "L'aspetto closed source del codice di pCloud significa che solo l'azienda vi ha accesso. Non hai modo di verificare cosa sta succedendo con i loro dati."
+            "title": "專有軟體",
+            "description": "pCloud程式碼的閉源性質意味著只有公司可以存取。您無法驗證他們的資料發生了什麼。"
           },
           {
             "title": "pCloud Crypto",
-            "description": "Questa funzionalità di crittografia non è open source ed è una funzionalità a pagamento extra (gli utenti gratuiti non sono protetti). Questo mette in discussione la sua reale sicurezza e trasparenza."
+            "description": "這個加密功能不是開源的，是一個額外付費功能（免費使用者沒有保護）。這質疑了其真正的安全性和透明度。"
           },
           {
-            "title": "Preoccupazioni per l'archiviazione delle password",
-            "description": "Senza verifica open source, come puoi essere sicuro che pCloud non salvi la tua password o che altre persone non possano accedervi?"
+            "title": "密碼儲存擔憂",
+            "description": "沒有開源驗證，您如何確定pCloud不會儲存您的密碼或其他人無法存取？"
           }
         ]
       }
     },
     "costAndValue": {
-      "title": "Costo e valore",
+      "title": "成本和價值",
       "inxtTable": {
-        "title": "Sicurezza e privacy senza costi aggiuntivi",
+        "title": "安全和隱私無額外費用",
         "features": [
           {
-            "title": "Piani ragionevoli",
-            "description": "Offerta esclusiva dell'87%, senza costi nascosti."
+            "title": "合理的方案",
+            "description": "87%的獨家優惠，無隱藏費用。"
           },
           {
-            "title": "Protezione completa",
-            "description": "Tutti i piani includono crittografia post-quantistica e zero knowledge e funzionalità di sicurezza gratuitamente."
+            "title": "完整保護",
+            "description": "所有方案都免費包含後量子加密、零知識加密和安全功能。"
           }
         ]
       },
       "competitorTable": {
-        "title": "Paga di più per la privacy totale",
+        "title": "為完全隱私支付更多",
         "features": [
           {
-            "title": "Paga extra per la crittografia zero knowledge",
-            "description": "Devi pagare per l'add-on pCloud Crypto per ottenere crittografia privata."
+            "title": "為零知識加密額外付費",
+            "description": "您必須為pCloud Crypto附加元件付費才能獲得私人加密。"
           },
           {
-            "title": "Costi nascosti",
-            "description": "Sebbene i piani pCloud possano sembrare convenienti, il costo aggiuntivo per crittografia lato client essenziale o traffico di download aggiuntivo può renderlo costoso."
+            "title": "隱藏費用",
+            "description": "雖然pCloud方案可能看起來實惠，但基本用戶端加密或額外下載流量的額外費用可能使其變得昂貴。"
           }
         ]
       }
     },
     "transparencyAndTrust": {
-      "title": "Trasparenza e fiducia",
+      "title": "透明度和信任",
       "inxtTable": {
-        "title": "Costruito sulla fiducia",
+        "title": "建立在信任之上",
         "features": [
           {
-            "title": "Sviluppo guidato dalla comunità",
-            "description": "Poiché Internxt è open source, può essere migliorato attraverso contributi della comunità e valutazioni frequenti da parte di professionisti della sicurezza."
+            "title": "社群驅動開發",
+            "description": "由於Internxt是開源的，可以透過社群貢獻和安全專業人員的頻繁評估來改進。"
           },
           {
-            "title": "Nessun segreto",
-            "description": "Politiche chiare e codice open source assicurano che non ci siano sorprese."
+            "title": "沒有祕密",
+            "description": "清晰的政策和開源程式碼確保沒有意外。"
           }
         ]
       },
       "competitorTable": {
-        "title": "Nessuna trasparenza",
+        "title": "缺乏透明度",
         "features": [
           {
-            "title": "Software proprietario",
-            "description": "pCloud non è trasparente perché utilizza software closed source"
+            "title": "專有軟體",
+            "description": "pCloud不透明，因為它使用閉源軟體"
           },
           {
-            "title": "Problemi di fiducia",
-            "description": "Gli utenti devono fidarsi ciecamente di pCloud con i loro dati senza poterlo verificare."
+            "title": "信任問題",
+            "description": "使用者必須盲目信任pCloud處理他們的資料，而無法驗證。"
           }
         ]
       }
     },
     "userExpAndFeatures": {
-      "title": "Esperienza utente e funzionalità",
+      "title": "使用者體驗和功能",
       "inxtTable": {
-        "title": "Design moderno e user-friendly",
+        "title": "現代化使用者友善設計",
         "features": [
           {
-            "title": "Interfaccia facile",
-            "description": "Semplice da usare con focus su sicurezza e privacy."
+            "title": "簡單介面",
+            "description": "專注於安全和隱私，使用簡單。"
           },
           {
-            "title": "Cross-platform",
-            "description": "Funziona su tutte le principali piattaforme, inclusi WebDAV e Rclone."
+            "title": "跨平台",
+            "description": "適用於所有主要平台，包括WebDAV和Rclone。"
           },
           {
-            "title": "Piani multipli",
-            "description": "Internxt offre piani famiglia, business e object storage S3 con accesso API per aziende e sviluppatori."
+            "title": "多種方案",
+            "description": "Internxt提供家庭、商業和S3物件儲存方案，為企業和開發者提供API存取。"
           }
         ]
       },
       "competitorTable": {
-        "title": "Funzionalità aggiuntive ma a un prezzo",
+        "title": "額外功能但有代價",
         "features": [
           {
-            "title": "Set di funzionalità",
-            "description": "pCloud offre molte funzionalità ma vengono con costi aggiuntivi e problemi di privacy."
+            "title": "功能集",
+            "description": "pCloud提供許多功能，但伴隨額外費用和隱私問題。"
           },
           {
-            "title": "Accessibilità",
-            "description": "Pagare extra per funzionalità essenziali come la crittografia danneggia l'esperienza complessiva."
+            "title": "可存取性",
+            "description": "為加密等基本功能額外付費會損害整體體驗。"
           },
           {
-            "title": "Opzioni di storage",
-            "description": "Ha piani multipli, ma nessun object storage S3 limita la scalabilità e l'uso cloud-native per aziende e sviluppatori."
+            "title": "儲存選項",
+            "description": "有多種方案，但沒有S3物件儲存限制了企業和開發者的可擴充性和雲原生使用。"
           }
         ]
       }
     },
     "switchToInternxt": {
-      "title": "Passa a Internxt per una soluzione di cloud storage più sicura, aperta ed economica",
-      "cta": "Prova Internxt gratis"
+      "title": "切換到Internxt，享受更安全、開放且經濟的雲端儲存解決方案",
+      "cta": "免費試用Internxt"
     }
   },
   "CtaSection": {
-    "title": "Passa a Internxt con l'87% di sconto",
-    "description": "L'unico cloud storage di cui hai bisogno per la privacy completa online",
-    "cta": "Ottieni Internxt"
+    "title": "以87%的折扣切換到Internxt",
+    "description": "您需要的唯一雲端儲存，實現完全線上隱私",
+    "cta": "取得Internxt"
   },
   "CtaSection2": {
-    "title": "Nessun tracker. Nessun problema.",
-    "description": "Ottieni privacy completa per i tuoi file con Internxt",
-    "cta": "Registrati gratis"
+    "title": "無追蹤器。無問題。",
+    "description": "使用Internxt為您的檔案獲得完全隱私",
+    "cta": "免費註冊"
   },
   "tableSection": {
-    "title": "Piani Internxt",
-    "hotLabel": "{{discount}}% di sconto",
+    "title": "Internxt方案",
+    "hotLabel": "{{discount}}%折扣",
     "planTitles": {
-      "header": "Seleziona il tuo piano"
+      "header": "選擇您的方案"
     },
     "billingFrequency": {
-      "annually": "Annuale",
-      "lifetime": "A vita"
+      "annually": "年付",
+      "lifetime": "終身"
     },
     "freePlanCard": {
-      "eyeBrow": "Gratuito",
-      "description": "Ottieni 1GB di cloud storage crittografato gratuitamente",
-      "cta": "Seleziona piano"
+      "eyeBrow": "免費",
+      "description": "免費獲得1GB加密雲端儲存",
+      "cta": "選擇方案"
     },
     "features": {
-      "openSource": "Open source e verificato",
-      "premiumSupport": "Supporto clienti premium",
-      "guarantee": "Garanzia soddisfatti o rimborsati di 30 giorni"
+      "openSource": "開源且經過驗證",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天滿意保證或退款"
     },
     "planStorage": {
       "essential": "1TB",
@@ -225,85 +225,85 @@
     }
   },
   "HorizontalScrollableSection": {
-    "title": "pCloud è sicuro?",
-    "description": "La crittografia closed source di pCloud rende difficile verificare la sua efficacia di sicurezza, sollevando preoccupazioni sull'accesso ai tuoi file.",
+    "title": "pCloud安全嗎？",
+    "description": "pCloud的閉源加密使其安全有效性難以驗證，引發了對您檔案存取權限的擔憂。",
     "scrollableSection": {
-      "titles": ["Email sospette", "Crittografia", "Scansione contenuti", "Tracker"],
+      "titles": ["可疑郵件", "加密", "內容掃描", "追蹤器"],
       "descriptions": [
-        "Molti utenti di pCloud hanno ricevuto email di phishing da truffatori. Non è chiaro come gli hacker abbiano ottenuto queste email, ma pCloud nega una violazione dei dati.",
-        "La crittografia zero knowledge costa extra con pCloud Crypto. Tutti gli utenti senza di essa hanno una protezione significativamente più debole. Senza questa crittografia aggiuntiva, pCloud può scansionare e accedere ai file degli utenti.",
-        "Molti utenti di pCloud hanno segnalato che i loro account sono stati ingiustamente terminati e chiusi senza preavviso a causa di presunte violazioni di marchi o contenuti illegali.",
-        "pCloud utilizza tracker sul suo sito web (Facebook, Twitter, TikTok) per raccogliere i tuoi dati, aumentando il rischio di violazioni della privacy e marketing indesiderato"
+        "許多pCloud使用者收到了來自詐騙者的網路釣魚郵件。駭客如何獲得這些郵件地址尚不清楚，但pCloud否認資料外洩。",
+        "零知識加密需要額外付費購買pCloud Crypto。沒有它的所有使用者保護明顯較弱。沒有這種額外加密，pCloud可以掃描和存取使用者檔案。",
+        "許多pCloud使用者報告他們的帳戶因涉嫌商標侵權或非法內容而被不公正地終止和關閉，且沒有事先通知。",
+        "pCloud在其網站上使用追蹤器（Facebook、Twitter、TikTok）收集您的資料，增加隱私外洩和不受歡迎行銷的風險"
       ]
     }
   },
   "HorizontalScrollableSectionV2": {
-    "title": "Perché dovresti scegliere Internxt come alternativa a pCloud?",
-    "description": "Scopri le funzionalità di Internxt che ci rendono un'alternativa a pCloud più sicura e privata",
+    "title": "為什麼選擇Internxt作為pCloud的替代方案？",
+    "description": "瞭解Internxt的功能，瞭解我們為什麼是比pCloud更安全和私密的替代方案",
     "scrollableSection": {
       "titles": [
-        "Open source e trasparente",
-        "Verificato per la sicurezza",
-        "Zero tracking dei dati",
-        "Conforme al GDPR",
-        "Crittografia avanzata",
-        "Piani di storage flessibili"
+        "開源且透明",
+        "安全驗證",
+        "零資料追蹤",
+        "GDPR合規",
+        "先進加密",
+        "彈性儲存方案"
       ],
       "descriptions": [
-        "Internxt è un'alternativa open source a pCloud, poiché il codice per tutti i nostri prodotti e servizi è disponibile su GitHub. Il nostro impegno per la sicurezza dei dati garantisce trasparenza su come i tuoi dati vengono gestiti e protetti.",
-        "I servizi di Internxt sono stati esaminati da esperti di sicurezza di una leading azienda europea di penetration testing. Questo assicura che i tuoi dati rimangano sicuri contro minacce esterne come hacker e violazioni.",
-        "Se non vuoi che i tuoi dati vengano monitorati per mostrare annunci personalizzati, allora Internxt è un'alternativa più privata a pCloud. Non utilizziamo alcun tracker sul nostro sito web che possa esaminare, monitorare o trarre profitto dalla tua navigazione.",
-        "Internxt opera con completa trasparenza, assicurando che la tua privacy dei dati sia protetta dalle leggi europee. La nostra conformità GDPR garantisce che le tue informazioni vengano gestite in modo sicuro e secondo normative rigorose.",
-        "Internxt include crittografia post-quantistica, la crittografia più sicura e avanzata disponibile per account gratuiti e a pagamento. Memorizziamo solo la versione crittografata dei tuoi dati, e solo tu hai la chiave per decrittarla e accedervi.",
-        "Internxt Drive offre più piani a pagamento e maggiori opzioni di storage rispetto alla struttura dei prezzi di pCloud. Se hai bisogno di un'alternativa a pCloud che offra piani annuali e a vita, scegli tra i nostri piani convenienti con VPN, Antivirus, Mail, Meet e altro."
+        "Internxt是pCloud的開源替代方案，我們所有產品和服務的程式碼都在GitHub上可用。我們對資料安全的承諾確保您的資料如何處理和保護的透明度。",
+        "Internxt的服務已經過歐洲領先滲透測試公司的安全專家審查。這確保您的資料對駭客和資料外洩等外部威脅保持安全。",
+        "如果您不希望您的資料被追蹤以顯示個人化廣告，那麼Internxt是比pCloud更私密的替代方案。我們在網站上不使用任何可能檢查、監控或從您的瀏覽中獲利的追蹤器。",
+        "Internxt以完全透明的方式營運，確保您的資料隱私受到歐洲法律的保護。我們的GDPR合規確保您的資訊得到安全處理並符合嚴格的規定。",
+        "Internxt包含後量子加密，這是免費和付費帳戶可用的最安全和先進的加密。我們只儲存您資料的加密版本，只有您擁有解密和存取的金鑰。",
+        "Internxt Drive比pCloud的定價結構提供更多付費方案和更多儲存選項。如果您需要提供年付和終身方案的pCloud替代方案，請從我們包含VPN、防毒軟體、Mail、Meet等的實惠方案中選擇。"
       ]
     }
   },
   "FaqSection": {
-    "title": "Domande? Abbiamo le risposte",
+    "title": "有問題？我們有答案",
     "faq": [
       {
-        "question": "Internxt è un'alternativa più sicura e privata a pCloud?",
+        "question": "Internxt是比pCloud更安全和私密的替代方案嗎？",
         "answer": [
-          "Sì, Internxt offre funzionalità più avanzate per proteggere i tuoi dati senza farti pagare extra per esse. La crittografia post-quantistica e zero knowledge garantisce che nessuno tranne te possa vedere i tuoi file.",
-          "Funzionalità aggiuntive come VPN, Antivirus, Device Cleaner, Dark Web Monitor, Meet e Mail, funzionalità attualmente non disponibili con pCloud, ti offrono anche protezione aggiuntiva contro hacker e violazioni dei dati."
+          "是的，Internxt提供更先進的功能來保護您的資料，而無需為此額外付費。後量子和零知識加密確保除了您之外沒有人可以看到您的檔案。",
+          "VPN、防毒軟體、裝置清理器、暗網監控、Meet和Mail等附加功能（pCloud目前不提供這些功能）也為您提供額外的保護，防止駭客和資料外洩。"
         ]
       },
       {
-        "question": "Cos'è la crittografia post-quantistica ed è più sicura?",
+        "question": "什麼是後量子加密，它更安全嗎？",
         "answer": [
-          "A differenza della crittografia standard, gli algoritmi di crittografia post-quantistica sono costruiti per resistere a potenti attacchi quantistici, rendendo PQE un'alternativa più sicura a pCloud.",
-          "Questo metodo crittografico è utilizzato da Internxt per assicurare che il tuo piano di cloud storage a vita ti protegga contro future minacce di cybersicurezza ed è disponibile per tutti i piani senza costi aggiuntivi."
+          "與標準加密不同，後量子加密演算法專為抵禦強大的量子攻擊而構建，使PQE成為比pCloud更安全的替代方案。",
+          "這種加密方法被Internxt使用，以確保您的終身雲端儲存方案保護您免受未來的網路安全威脅，並且所有方案都可使用，無需額外費用。"
         ]
       },
       {
-        "question": "Dove ha sede Internxt?",
+        "question": "Internxt總部在哪裡？",
         "answer": [
-          "Internxt ha sede a Valencia, Spagna, rendendolo una soluzione di cloud storage conforme al GDPR che segue leggi rigorose per assicurare che i tuoi dati e la tua privacy siano protetti."
+          "Internxt總部位於西班牙瓦倫西亞，使其成為符合GDPR的雲端儲存解決方案，遵循嚴格的法律確保您的資料和隱私得到保護。"
         ]
       },
       {
-        "question": "I prezzi di pCloud sono più costosi di Internxt?",
+        "question": "pCloud的價格比Internxt更貴嗎？",
         "answer": [
-          "Con il tuo sconto esclusivo dell'87%, tutti i nostri piani sono più economici delle opzioni di prezzo di pCloud attualmente disponibili, con il vantaggio di offrire molte più funzionalità e privacy rispetto a pCloud."
+          "憑藉您專享的87%折扣，我們所有方案都比pCloud目前提供的定價選項更便宜，優勢是提供比pCloud更多的功能和隱私。"
         ]
       },
       {
-        "question": "Come contatto il supporto?",
+        "question": "如何聯絡支援？",
         "answer": [
-          "Se hai altre domande, richieste o hai bisogno di assistenza, puoi contattare hello@internxt.com e il nostro Team di Successo Clienti sarà felice di aiutarti."
+          "如果您有其他問題、請求或需要協助，可以聯絡hello@internxt.com，我們的客戶成功團隊很樂意為您提供協助。"
         ]
       },
       {
-        "question": "Posso aggiungere più storage al mio piano a vita?",
+        "question": "我可以向終身方案新增更多儲存空間嗎？",
         "answer": [
-          "Sì, puoi aggiornare il tuo piano dalle impostazioni del tuo account Internxt se hai bisogno di aggiungere più storage."
+          "是的，如果您需要新增更多儲存空間，可以從Internxt帳戶設定中升級您的方案。"
         ]
       },
       {
-        "question": "Posso pagare con carta di credito, PayPal o criptovaluta?",
+        "question": "我可以用信用卡、PayPal或加密貨幣付款嗎？",
         "answer": [
-          "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, iDEAL, Sofort e Criptovaluta."
+          "Internxt目前接受借記卡和信用卡（Mastercard、VISA、American Express等）。您還可以透過PayPal、iDEAL、Sofort和加密貨幣付款。"
         ]
       }
     ]
