@@ -183,7 +183,7 @@
         "Antivirus",
         "Backup your computer",
         "Password-protected file sharing",
-        "File Versioning",
+
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication",
@@ -191,6 +191,7 @@
         "Organization management",
         "Cleaner ",
         "Meet ",
+        "File Versioning",
         "Mail "
       ]
     }

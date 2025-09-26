@@ -62,18 +62,18 @@ const ICON_MAPS = {
     Database,
     Key,
     Gauge,
-
     ShieldPlus,
     ArrowsClockwise,
     Password,
+
     CirclesThreePlus,
     LockSimple,
     Fingerprint,
     CodeBlock,
     CreditCard,
     Broom,
-
     VideoConference,
+    File,
     Envelope,
   ],
 };
