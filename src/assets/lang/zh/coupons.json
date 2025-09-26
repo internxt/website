@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "选择您的套餐"
     },
+    "appliedCupon": "优惠券代码 '{{couponCode}}' 应用成功",
     "billingFrequency": {
       "monthly": "按月",
       "annually": "按年",

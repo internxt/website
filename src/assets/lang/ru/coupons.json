@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "Выберите свой план"
     },
+    "appliedCupon": "Код купона '{{couponCode}}' успешно применен",
     "billingFrequency": {
       "monthly": "Ежемесячно",
       "annually": "Ежегодно",

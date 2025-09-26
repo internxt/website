@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "Sélectionnez votre forfait"
     },
+    "appliedCupon": "De coupon '{{couponCode}}' appliqué avec succès",
     "billingFrequency": {
       "monthly": "Mensuel",
       "annually": "Annuel",

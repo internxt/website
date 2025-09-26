@@ -27,6 +27,7 @@
   "tableSection": {
     "title": "Planes de Internxt",
     "hotLabel": "{{discount}}% de descuento",
+    "appliedCupon": "El cupón '{{couponCode}}' aplicado exitosamente",
     "planTitles": {
       "header": "Selecciona tu Plan"
     },

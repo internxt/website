@@ -86,6 +86,7 @@ export interface TableSection {
   title: string;
   hotLabel: string;
   planTitles: PlanTitles;
+  appliedCupon: string;
   billingFrequency: BillingFrequency;
   discountLabel: string;
   freePlanCard: FreePlanCard;

@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "Seleziona il tuo Piano"
     },
+    "appliedCupon": "Codice coupon '{{couponCode}}' applicato con successo",
     "billingFrequency": {
       "monthly": "Mensile",
       "annually": "Annuale",

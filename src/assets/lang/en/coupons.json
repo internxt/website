@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "Select your Plan"
     },
+    "appliedCupon": "Coupon code '{{couponCode}}' applied successfully",
     "billingFrequency": {
       "monthly": "Monthly",
       "annually": "Annual",

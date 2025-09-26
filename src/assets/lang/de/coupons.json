@@ -30,6 +30,7 @@
     "planTitles": {
       "header": "Wählen Sie Ihren Tarif"
     },
+    "appliedCupon": "Gutscheincode '{{couponCode}}' erfolgreich angewendet",
     "billingFrequency": {
       "monthly": "Monatlich",
       "annually": "Jährlich",
