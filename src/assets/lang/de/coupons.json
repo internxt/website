@@ -71,7 +71,7 @@
     "title": "Next-Gen-Verschlüsselung für ultimativen Schutz",
     "description": "Wir schützen die Sicherheit und Privatsphäre Ihrer Dateien mit fortschrittlicher Verschlüsselung, um Sie gegen aufkommende Bedrohungen zu wappnen.",
     "cta": "Lernen Sie uns besser kennen",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Unhackbare und unleakbare Daten",
         "Sicherheit der nächsten Generation",
@@ -90,7 +90,7 @@
     "title": "Was in Ihrem Internxt-Gutschein enthalten ist",
     "description": "Ihr Internxt-Gutscheincode gilt für alle unsere Essential-, Premium- und Ultimate-Jahres- und Lifetime-Tarife.",
     "cta": "Lernen Sie uns besser kennen",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
       "descriptions": [

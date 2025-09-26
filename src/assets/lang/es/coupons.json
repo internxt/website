@@ -71,7 +71,7 @@
     "title": "Cifrado de nueva generación para máxima protección",
     "description": "Protegemos la seguridad y privacidad de tus archivos con cifrado avanzado para prepararte contra amenazas emergentes.",
     "cta": "Conoce más sobre nosotros",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Datos imposibles de hackear y filtrar",
         "Seguridad de nueva generación",
@@ -90,7 +90,7 @@
     "title": "Qué incluye tu cupón de Internxt",
     "description": "Tu código de cupón de Internxt se aplica a todos nuestros planes anuales y de por vida Esencial, Premium y Ultimate.",
     "cta": "Conoce más sobre nosotros",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Limpiador", "Meet", "Herramientas avanzadas"],
       "descriptions": [

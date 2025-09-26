@@ -71,7 +71,7 @@
     "title": "Chiffrement nouvelle génération pour une protection ultime",
     "description": "Nous protégeons la sécurité et la confidentialité de vos fichiers avec un chiffrement avancé pour vous préparer aux menaces émergentes.",
     "cta": "Apprenez-en plus sur nous",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Données inpiratables et infuites",
         "Sécurité de nouvelle génération",
@@ -90,7 +90,7 @@
     "title": "Ce qui est inclus avec votre code promo Internxt",
     "description": "Votre code promo Internxt s'applique à tous nos forfaits annuels et à vie Essential, Premium et Ultimate.",
     "cta": "Apprenez-en plus sur nous",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
       "descriptions": [

@@ -49,10 +49,10 @@ export interface NextGenSection {
   title: string;
   description: string;
   cta: string;
-  cardDescriptions?: Card;
+  scrollableSection?: ScrollableSection;
 }
 
-export interface Card {
+export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
 }
@@ -67,10 +67,10 @@ export interface WhatsIncludedSection {
   title: string;
   description: string;
   cta: string;
-  cardDescriptions: CardDescriptions;
+  scrollableSection: WhatsIncludedSectionScrollableSection;
 }
 
-export interface CardDescriptions {
+export interface WhatsIncludedSectionScrollableSection {
   imagesPathname: string[];
   titles: string[];
   descriptions: string[];
@@ -79,7 +79,7 @@ export interface CardDescriptions {
 export interface HowToRedeemSection {
   title: string;
   description: string;
-  cards: Card;
+  cards: ScrollableSection;
 }
 
 export interface TableSection {

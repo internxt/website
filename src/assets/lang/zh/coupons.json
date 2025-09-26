@@ -71,7 +71,7 @@
     "title": "新一代加密技术，提供终极保护",
     "description": "我们使用先进的加密技术保护您文件的安全和隐私，为您应对新兴威胁做好准备。",
     "cta": "更好地了解我们",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": ["无法破解和泄露的数据", "新一代安全", "开源且透明", "独立验证"],
       "descriptions": [
         "我们不存储密码或用户数据，您的所有数据在传输和静态时都经过加密。Internxt让您完全控制您的文件。您的数据是您的事务。保护它们是我们的工作。",
@@ -85,7 +85,7 @@
     "title": "您的Internxt优惠券包含什么",
     "description": "您的Internxt优惠券代码适用于我们所有的Essential、Premium和Ultimate年度和终身套餐。",
     "cta": "更好地了解我们",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [

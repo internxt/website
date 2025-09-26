@@ -71,7 +71,7 @@
     "title": "Шифрование нового поколения для максимальной защиты",
     "description": "Мы защищаем безопасность и конфиденциальность ваших файлов с помощью передового шифрования для подготовки к появляющимся угрозам.",
     "cta": "Узнайте нас лучше",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Невзламываемые и неутекающие данные",
         "Безопасность нового поколения",
@@ -90,7 +90,7 @@
     "title": "Что включено в ваш промокод Internxt",
     "description": "Ваш промокод Internxt действует на все наши годовые и пожизненные планы Essential, Premium и Ultimate.",
     "cta": "Узнайте нас лучше",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Расширенные инструменты"],
       "descriptions": [

@@ -71,7 +71,7 @@
     "title": "Crittografia di nuova generazione per la massima protezione",
     "description": "Proteggiamo la sicurezza e la privacy dei tuoi file con crittografia avanzata per prepararti alle minacce emergenti.",
     "cta": "Conoscici meglio",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Dati non hackerabili e non trapelabili",
         "Sicurezza di nuova generazione",
@@ -90,7 +90,7 @@
     "title": "Cosa è incluso con il tuo coupon Internxt",
     "description": "Il tuo codice coupon Internxt si applica a tutti i nostri piani annuali e a vita Essential, Premium e Ultimate.",
     "cta": "Conoscici meglio",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Strumenti avanzati"],
       "descriptions": [

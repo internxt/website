@@ -71,7 +71,7 @@
     "title": "Next-gen encryption for ultimate protection",
     "description": "We protect your file's security and privacy with advanced encryption to future-proof against emerging threats.",
     "cta": "Get to know us better",
-    "cardDescriptions": {
+    "scrollableSection": {
       "titles": [
         "Unhackable and unleakable data",
         "Next-generation security",
@@ -90,7 +90,7 @@
     "title": "What’s included with your Internxt coupon",
     "description": "Your Internxt coupon code applies to all our Essential, Premium, and Ultimate annual and lifetime plans.",
     "cta": "Get to know us better",
-    "cardDescriptions": {
+    "scrollableSection": {
       "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
       "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
