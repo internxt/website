@@ -116,6 +116,7 @@ export const ItemsNavigation = ({
             { href: '/antivirus', text: textContent.products.antivirus },
             { href: '/vpn', text: textContent.products.vpn },
             { href: '/cleaner', text: textContent.products.cleaner },
+            { href: '/meet', text: textContent.products.meet },
           ]}
           darkMode={darkMode}
           lang={lang}
