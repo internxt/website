@@ -27,12 +27,12 @@ const CleanerPage = ({
   navbarLang,
   footerLang,
 }: CleanerProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'meet');
   const locale = lang as string;
   const navbarCta = 'chooseStorage';
 
   return (
-    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Home" lang={lang}>
+    <Layout title={metatags[0].title} description={metatags[0].description} segmentName="meet" lang={lang}>
       <Navbar textContent={navbarLang} lang={locale} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={textContent.HeroSection} />
