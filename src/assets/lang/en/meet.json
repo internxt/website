@@ -58,31 +58,27 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Can Internxt access my files?",
+        "question": "What is Internxt Meet?",
         "answer": [
-          "No. Internxt, along with any other third-party, cannot access your files, photos, or data.",
-          " Internxt services feature zero-knowledge encryption, meaning that only you can truly access your private data. Additionally, Internxt's architecture fragments your files before encrypting them, so a server never holds a whole file, just an encrypted shard of it instead, which only you can decrypt."
+          "Internxt Meet is the most secure video conferencing platform where you can talk, chat, and host meetings in complete privacy. With Internxt Meet, all your conversations and calls are held in complete privacy thanks to our advanced and award-winning encryption. All calls between you and your team are kept private and secure."
         ]
       },
       {
-        "question": "Does Internxt store my password?",
+        "question": "Is Internxt Meet an alternative to Google Meet?",
         "answer": [
-          "No. As such, Internxt does not (and cannot) store your password.",
-          "Your Internxt password is unique to you and used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+          "Yes, Internxt Meet is a secure alternative to Google Meet, Zoom, and Teams. We use zero-knowledge encryption with post-quantum cryptography to ensure only you can hear or see your video calls. Not even Internxt has access to your chats or calls. "
         ]
       },
       {
-        "question": "Can I enable 2FA?",
+        "question": "Is Internxt Meet free?",
         "answer": [
-          "Yes. You can configure two-factor Authentication for your account through the Internxt web app.",
-          "You can use Authy or any other 2FA tools to generate a personal 2FA code with Internxt."
+          "Internxt Meet is available when you subscribe to any of our premium plans, offering access to our full suite of privacy-focused products, including Internxt Drive, Mail, Antivirus, and VPN."
         ]
       },
       {
-        "question": "How do I create an Internxt account?",
+        "question": "How do I contact support?",
         "answer": [
-          "To create a free Internxt account, simply click the best plan above and follow the instructions.",
-          "Or head to our homepage and click on “Get started”. There, you will instantly get 1GB of free storage for life with a free Internxt membership. You can use your free membership across all our services. To sign up, simply enter a name and email address. No identity nor email verification is required to start using Internxt's services."
+          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com."
         ]
       },
       {
@@ -96,37 +92,6 @@
         "answer": [
           "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
           "And if you're ever unsatisfied with our service, reach out to us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
-        ]
-      },
-      {
-        "question": "How can I cancel my subscription?",
-        "answer": [
-          "Canceling your subscription is very straightforward and can be done easily through the Internxt app, by going into settings and deleting your account. This will terminate your subscription and your account.",
-          "If you would like to cancel a paid plan and remain with our free service, you can email us at [hello@internxt.com](mailto:hello@internxt.com) and we’ll process the subscription cancellation so that you can keep your account live on our free plan."
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Can't find what you're looking for? You can contact our Customer Success team via live chat or by sending an email to [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "What are Internxt lifetime plans?",
-        "answer": [
-          "We offer lifetime plans which you can purchase from our website. These grant you lifetime access to our plans, for unique, one-time payment.  Enjoy up to 5TB of storage for life with a unique, one-time payment."
-        ]
-      },
-      {
-        "question": "Can I add more storage to my lifetime plan?",
-        "answer": [
-          "Yes, you can add up to 100 TB of storage to your Internxt lifetime membership. Internxt lifetime plans are stackable. Simply purchase them with the same email address and the storage will be added to your account automatically."
-        ]
-      },
-      {
-        "question": "Can I split my lifetime payment?",
-        "answer": [
-          "Yes you can now split your lifetime payments in multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
         ]
       }
     ]

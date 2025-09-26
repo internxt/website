@@ -55,77 +55,42 @@
     "cta": "获取 Internxt"
   },
   "FaqSection": {
-    "title": "有疑问？我们有答案",
+    "title": "有疑问？我们为您解答",
     "faq": [
       {
-        "question": "Internxt 可以访问我的文件吗？",
+        "question": "什么是 Internxt Meet？",
         "answer": [
-          "不可以。Internxt 以及任何其他第三方都无法访问您的文件、照片或数据。",
-          "Internxt 服务采用零知识加密，这意味着只有您才能真正访问您的私人数据。此外，Internxt 的架构在加密文件之前将其分片，因此服务器永远不会保存完整文件，而只是保存加密的碎片，只有您可以解密。"
+          "Internxt Meet 是最安全的视频会议平台，您可以在其中完全私密地聊天、通话和举办会议。通过 Internxt Meet，借助我们先进且屡获殊荣的加密技术，您的所有对话和通话都完全保密。您与团队之间的所有通话都保持私密和安全。"
         ]
       },
       {
-        "question": "Internxt 存储我的密码吗？",
+        "question": "Internxt Meet 是 Google Meet 的替代品吗？",
         "answer": [
-          "不存储。因此，Internxt 不会（也不能）存储您的密码。",
-          "您的 Internxt 密码对您是唯一的，用于加密和解密您的 Internxt 数据。但如果您想更改密码，可以通过我们的应用程序进行更改。"
+          "是的，Internxt Meet 是 Google Meet、Zoom 和 Teams 的安全替代品。我们使用零知识加密和后量子密码学，确保只有您能听到或看到您的视频通话。即使是 Internxt 也无法访问您的聊天或通话。"
         ]
       },
       {
-        "question": "我可以启用双重认证吗？",
+        "question": "Internxt Meet 免费吗？",
         "answer": [
-          "可以。您可以通过 Internxt 网络应用程序为您的账户配置双重身份验证。",
-          "您可以使用 Authy 或任何其他双重认证工具与 Internxt 生成个人双重认证代码。"
+          "当您订阅我们的任何高级套餐时，即可使用 Internxt Meet，可访问我们专注于隐私的完整产品套件，包括 Internxt Drive、Mail、Antivirus 和 VPN。"
         ]
       },
       {
-        "question": "如何创建 Internxt 账户？",
-        "answer": [
-          "要创建免费的 Internxt 账户，只需点击上面的最佳计划并按照说明操作。",
-          "或者访问我们的主页并点击开始使用。在那里，您将立即获得 1GB 的免费终身存储空间和免费的 Internxt 会员资格。您可以在我们所有服务中使用您的免费会员资格。要注册，只需输入姓名和电子邮件地址。开始使用 Internxt 服务不需要身份或电子邮件验证。"
-        ]
+        "question": "如何联系支持团队？",
+        "answer": ["找不到您要寻找的内容？您可以通过在线聊天或发送邮件至 hello@internxt.com 联系我们的客户成功团队。"]
       },
       {
         "question": "我可以用银行卡、PayPal 或加密货币付款吗？",
         "answer": [
-          "Internxt 目前接受借记卡和信用卡（万事达卡、VISA、美国运通等）。您也可以通过 PayPal、加密货币、Klarna 等方式付款。"
+          "Internxt 目前接受借记卡和信用卡（万事达卡、VISA、美国运通等）。您也可以通过 PayPal、加密货币、Klarna 等其他方式付款。"
         ]
       },
       {
         "question": "Internxt 的退款政策是什么？",
         "answer": [
-          "Internxt 为所有付费订阅提供标准的 30 天退款保证，从您订阅时开始计算。",
-          "如果您对我们的服务不满意，请通过 [hello@internxt.com](mailto:hello@internxt.com) 联系我们并申请退款。"
+          "Internxt 为所有付费订阅提供标准的30天退款保证，从您订阅之日起开始计算。",
+          "如果您对我们的服务不满意，请通过 hello@internxt.com 联系我们并申请退款。"
         ]
-      },
-      {
-        "question": "如何取消我的订阅？",
-        "answer": [
-          "取消订阅非常简单，可以通过 Internxt 应用程序轻松完成，进入设置并删除您的账户。这将终止您的订阅和账户。",
-          "如果您想取消付费计划并继续使用我们的免费服务，您可以发送电子邮件至 [hello@internxt.com](mailto:hello@internxt.com)，我们将处理订阅取消，以便您可以在我们的免费计划上保持账户活跃。"
-        ]
-      },
-      {
-        "question": "如何联系客服？",
-        "answer": [
-          "找不到您要找的内容？您可以通过实时聊天或发送电子邮件至 [hello@internxt.com](mailto:hello@internxt.com) 联系我们的客户成功团队。"
-        ]
-      },
-      {
-        "question": "什么是 Internxt 终身计划？",
-        "answer": [
-          "我们提供可从我们网站购买的终身计划。这些计划通过一次性付款为您提供终身访问权限。通过一次性付款享受高达 5TB 的终身存储空间。"
-        ]
-      },
-      {
-        "question": "我可以为我的终身计划添加更多存储空间吗？",
-        "answer": [
-          "可以，您可以为您的 Internxt 终身会员资格添加高达 100TB 的存储空间。Internxt 终身计划是可叠加的。只需使用相同的电子邮件地址购买，存储空间将自动添加到您的账户。"
-        ]
-      },
-      {
-        "question": "我可以分期支付终身费用吗？",
-        "answer": ["可以，您现在可以使用 Klarna 将终身付款分成多个无息分期付款。享受终身计划，轻松分期付款！"]
       }
     ]
   }

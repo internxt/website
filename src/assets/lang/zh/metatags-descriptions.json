@@ -299,5 +299,10 @@
     "id": "mega-alternative",
     "title": "Internxt — Mega的安全、加密、开源替代方案",
     "description": "Internxt云存储是Mega的安全替代方案。我们通过端到端加密、开源软件和注重隐私的功能保护您的文件。"
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet - 安全私密的视频通话",
+    "description": "Meet 提供具有后量子和端到端加密的私人视频通话，打造最安全的视频会议体验。"
   }
 ]

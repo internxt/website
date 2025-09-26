@@ -63,75 +63,40 @@
     "title": "Fragen? Wir haben Antworten",
     "faq": [
       {
-        "question": "Kann Internxt auf meine Dateien zugreifen?",
+        "question": "Was ist Internxt Meet?",
         "answer": [
-          "Nein. Internxt kann zusammen mit anderen Dritten nicht auf Ihre Dateien, Fotos oder Daten zugreifen.",
-          " Internxt-Dienste verfügen über Zero-Knowledge-Verschlüsselung, was bedeutet, dass nur Sie wirklich auf Ihre privaten Daten zugreifen können. Zusätzlich fragmentiert die Internxt-Architektur Ihre Dateien, bevor sie verschlüsselt werden, sodass ein Server niemals eine ganze Datei enthält, sondern stattdessen nur einen verschlüsselten Shard, den nur Sie entschlüsseln können."
+          "Internxt Meet ist die sicherste Videokonferenz-Plattform, auf der Sie sprechen, chatten und Meetings in völliger Privatsphäre abhalten können. Mit Internxt Meet werden alle Ihre Gespräche und Anrufe dank unserer fortschrittlichen und preisgekrönten Verschlüsselung in völliger Privatsphäre geführt. Alle Anrufe zwischen Ihnen und Ihrem Team bleiben privat und sicher."
         ]
       },
       {
-        "question": "Speichert Internxt mein Passwort?",
+        "question": "Ist Internxt Meet eine Alternative zu Google Meet?",
         "answer": [
-          "Nein. Als solches speichert Internxt Ihr Passwort nicht (und kann es nicht speichern).",
-          "Ihr Internxt-Passwort ist einzigartig für Sie und wird verwendet, um Ihre Internxt-Daten zu verschlüsseln und zu entschlüsseln. Aber wenn Sie Ihr Passwort ändern möchten, können Sie das über unsere App tun."
+          "Ja, Internxt Meet ist eine sichere Alternative zu Google Meet, Zoom und Teams. Wir verwenden Zero-Knowledge-Verschlüsselung mit Post-Quantum-Kryptographie, um sicherzustellen, dass nur Sie Ihre Videoanrufe hören oder sehen können. Nicht einmal Internxt hat Zugang zu Ihren Chats oder Anrufen."
         ]
       },
       {
-        "question": "Kann ich 2FA aktivieren?",
+        "question": "Ist Internxt Meet kostenlos?",
         "answer": [
-          "Ja. Sie können die Zwei-Faktor-Authentifizierung für Ihr Konto über die Internxt-Web-App konfigurieren.",
-          "Sie können Authy oder andere 2FA-Tools verwenden, um einen persönlichen 2FA-Code mit Internxt zu generieren."
-        ]
-      },
-      {
-        "question": "Wie erstelle ich ein Internxt-Konto?",
-        "answer": [
-          "Um ein kostenloses Internxt-Konto zu erstellen, klicken Sie einfach auf den besten Plan oben und folgen Sie den Anweisungen.",
-          "Oder gehen Sie zu unserer Homepage und klicken Sie auf \"Loslegen\". Dort erhalten Sie sofort 1GB kostenlosen Speicher auf Lebenszeit mit einer kostenlosen Internxt-Mitgliedschaft. Sie können Ihre kostenlose Mitgliedschaft für alle unsere Dienste verwenden. Um sich anzumelden, geben Sie einfach einen Namen und eine E-Mail-Adresse ein. Keine Identitäts- oder E-Mail-Verifizierung ist erforderlich, um mit der Nutzung der Internxt-Dienste zu beginnen."
-        ]
-      },
-      {
-        "question": "Kann ich mit Karte, PayPal oder Krypto bezahlen?",
-        "answer": [
-          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, usw.). Sie können auch über PayPal, Krypto, Klarna und andere bezahlen."
-        ]
-      },
-      {
-        "question": "Was ist Internxts Rückerstattungsrichtlinie?",
-        "answer": [
-          "Internxt bietet eine Standard-30-Tage-Geld-zurück-Garantie für alle bezahlten Abonnements, die ab dem Zeitpunkt des Abonnements zu zählen beginnt.",
-          "Und wenn Sie jemals unzufrieden mit unserem Service sind, kontaktieren Sie uns unter [hello@internxt.com](mailto:hello@internxt.com) und fordern Sie eine Rückerstattung an."
-        ]
-      },
-      {
-        "question": "Wie kann ich mein Abonnement kündigen?",
-        "answer": [
-          "Die Kündigung Ihres Abonnements ist sehr einfach und kann einfach über die Internxt-App durchgeführt werden, indem Sie zu den Einstellungen gehen und Ihr Konto löschen. Dies beendet Ihr Abonnement und Ihr Konto.",
-          "Wenn Sie einen bezahlten Plan kündigen und bei unserem kostenlosen Service bleiben möchten, können Sie uns unter [hello@internxt.com](mailto:hello@internxt.com) eine E-Mail senden, und wir werden die Abonnement-Kündigung bearbeiten, damit Sie Ihr Konto mit unserem kostenlosen Plan aktiv halten können."
+          "Internxt Meet ist verfügbar, wenn Sie sich für einen unserer Premium-Pläne anmelden und Zugang zu unserer vollständigen Suite datenschutzfokussierter Produkte erhalten, einschließlich Internxt Drive, Mail, Antivirus und VPN."
         ]
       },
       {
         "question": "Wie kontaktiere ich den Support?",
         "answer": [
-          "Können Sie nicht finden, wonach Sie suchen? Sie können unser Kundenerfolgs-Team über Live-Chat kontaktieren oder eine E-Mail an [hello@internxt.com](mailto:hello@internxt.com) senden."
+          "Können Sie nicht finden, wonach Sie suchen? Sie können unser Kundenservice-Team über den Live-Chat oder per E-Mail an hello@internxt.com kontaktieren."
         ]
       },
       {
-        "question": "Was sind Internxt-Lebenszeitpläne?",
+        "question": "Kann ich mit Karte, PayPal oder Krypto bezahlen?",
         "answer": [
-          "Wir bieten Lebenszeitpläne an, die Sie von unserer Website kaufen können. Diese gewähren Ihnen lebenslangen Zugang zu unseren Plänen für eine einmalige, einzigartige Zahlung. Genießen Sie bis zu 5TB Speicher auf Lebenszeit mit einer einmaligen, einzigartigen Zahlung."
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express, etc.). Sie können auch über PayPal, Krypto, Klarna und andere bezahlen."
         ]
       },
       {
-        "question": "Kann ich mehr Speicher zu meinem Lebenszeitplan hinzufügen?",
+        "question": "Wie lautet Internxts Rückerstattungsrichtlinie?",
         "answer": [
-          "Ja, Sie können bis zu 100 TB Speicher zu Ihrer Internxt-Lebenszeitmitgliedschaft hinzufügen. Internxt-Lebenszeitpläne sind stapelbar. Kaufen Sie sie einfach mit derselben E-Mail-Adresse und der Speicher wird automatisch zu Ihrem Konto hinzugefügt."
-        ]
-      },
-      {
-        "question": "Kann ich meine Lebenszeitahlung aufteilen?",
-        "answer": [
-          "Ja, Sie können jetzt Ihre Lebenszeitahlungen in mehrere zinsfreie Raten mit Klarna aufteilen. Genießen Sie einen Lebenszeitplan mit der Leichtigkeit, ihn in einfachen Raten zu bezahlen!"
+          "Internxt bietet eine standardmäßige 30-Tage-Geld-zurück-Garantie für alle bezahlten Abonnements, die ab dem Moment Ihres Abonnements zu laufen beginnt.",
+          "Und wenn Sie jemals mit unserem Service unzufrieden sind, kontaktieren Sie uns unter hello@internxt.com und fordern Sie eine Rückerstattung an."
         ]
       }
     ]

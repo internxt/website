@@ -60,34 +60,30 @@
     "cta": "Ottieni Internxt"
   },
   "FaqSection": {
-    "title": "Domande? Abbiamo risposte",
+    "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Internxt può accedere ai miei file?",
+        "question": "Cos'è Internxt Meet?",
         "answer": [
-          "No. Internxt, insieme a qualsiasi altra terza parte, non può accedere ai tuoi file, foto o dati.",
-          " I servizi Internxt presentano crittografia a conoscenza zero, il che significa che solo tu puoi veramente accedere ai tuoi dati privati. Inoltre, l'architettura di Internxt frammenta i tuoi file prima di crittografarli, quindi un server non contiene mai un file intero, solo un frammento crittografato di esso invece, che solo tu puoi decifrare."
+          "Internxt Meet è la piattaforma di videoconferenza più sicura dove puoi parlare, chattare e organizzare riunioni in completa privacy. Con Internxt Meet, tutte le tue conversazioni e chiamate si svolgono in completa privacy grazie alla nostra crittografia avanzata e pluripremiata. Tutte le chiamate tra te e il tuo team rimangono private e sicure."
         ]
       },
       {
-        "question": "Internxt memorizza la mia password?",
+        "question": "Internxt Meet è un'alternativa a Google Meet?",
         "answer": [
-          "No. Come tale, Internxt non memorizza (e non può memorizzare) la tua password.",
-          "La tua password Internxt è unica per te e utilizzata per crittografare e decifrare i tuoi dati Internxt. Ma se vuoi cambiare la tua password, puoi farlo dalla nostra app."
+          "Sì, Internxt Meet è un'alternativa sicura a Google Meet, Zoom e Teams. Utilizziamo crittografia a conoscenza zero con crittografia post-quantistica per garantire che solo tu possa sentire o vedere le tue videochiamate. Nemmeno Internxt ha accesso ai tuoi chat o chiamate."
         ]
       },
       {
-        "question": "Posso abilitare la 2FA?",
+        "question": "Internxt Meet è gratuito?",
         "answer": [
-          "Sì. Puoi configurare l'Autenticazione a Due Fattori per il tuo account attraverso l'app web Internxt.",
-          "Puoi utilizzare Authy o qualsiasi altro strumento 2FA per generare un codice 2FA personale con Internxt."
+          "Internxt Meet è disponibile quando ti abboni a uno dei nostri piani premium, offrendo accesso alla nostra suite completa di prodotti focalizzati sulla privacy, inclusi Internxt Drive, Mail, Antivirus e VPN."
         ]
       },
       {
-        "question": "Come creo un account Internxt?",
+        "question": "Come posso contattare il supporto?",
         "answer": [
-          "Per creare un account Internxt gratuito, clicca semplicemente sul miglior piano sopra e segui le istruzioni.",
-          "O vai alla nostra homepage e clicca su \"Inizia\". Lì, otterrai istantaneamente 1GB di spazio di archiviazione gratuito a vita con un abbonamento Internxt gratuito. Puoi utilizzare il tuo abbonamento gratuito per tutti i nostri servizi. Per registrarti, inserisci semplicemente un nome e un indirizzo email. Non è richiesta alcuna verifica di identità o email per iniziare a utilizzare i servizi di Internxt."
+          "Non riesci a trovare quello che stai cercando? Puoi contattare il nostro team di Assistenza Clienti tramite chat dal vivo o inviando un'email a hello@internxt.com."
         ]
       },
       {
@@ -99,39 +95,8 @@
       {
         "question": "Qual è la politica di rimborso di Internxt?",
         "answer": [
-          "Internxt offre una garanzia standard di rimborso di 30 giorni su tutti i suoi abbonamenti a pagamento, che inizia a contare non appena ti abboni.",
-          "E se non sei mai soddisfatto del nostro servizio, contattaci a [hello@internxt.com](mailto:hello@internxt.com) e richiedi un rimborso."
-        ]
-      },
-      {
-        "question": "Come posso cancellare il mio abbonamento?",
-        "answer": [
-          "Cancellare il tuo abbonamento è molto semplice e può essere fatto facilmente attraverso l'app Internxt, andando nelle impostazioni ed eliminando il tuo account. Questo terminerà il tuo abbonamento e il tuo account.",
-          "Se vuoi cancellare un piano a pagamento e rimanere con il nostro servizio gratuito, puoi inviarci un'email a [hello@internxt.com](mailto:hello@internxt.com) e elaboreremo la cancellazione dell'abbonamento in modo che tu possa mantenere il tuo account attivo sul nostro piano gratuito."
-        ]
-      },
-      {
-        "question": "Come contatto il supporto?",
-        "answer": [
-          "Non riesci a trovare quello che stai cercando? Puoi contattare il nostro team di Customer Success tramite live chat o inviando un'email a [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "Cosa sono i piani a vita di Internxt?",
-        "answer": [
-          "Offriamo piani a vita che puoi acquistare dal nostro sito web. Questi ti concedono accesso a vita ai nostri piani, per un pagamento unico. Goditi fino a 5TB di storage a vita con un pagamento unico."
-        ]
-      },
-      {
-        "question": "Posso aggiungere più storage al mio piano a vita?",
-        "answer": [
-          "Sì, puoi aggiungere fino a 100 TB di storage alla tua membership a vita Internxt. I piani a vita Internxt sono impilabili. Semplicemente acquistali con lo stesso indirizzo email e lo storage verrà aggiunto automaticamente al tuo account."
-        ]
-      },
-      {
-        "question": "Posso dividere il mio pagamento a vita?",
-        "answer": [
-          "Sì, ora puoi dividere i tuoi pagamenti a vita in più rate senza interessi utilizzando Klarna. Goditi un piano a vita con la facilità di pagarlo a rate facili!"
+          "Internxt offre una garanzia standard di rimborso di 30 giorni su tutti gli abbonamenti a pagamento, che inizia a decorrere dal momento in cui ti abboni.",
+          "E se mai non fossi soddisfatto del nostro servizio, contattaci a hello@internxt.com e richiedi un rimborso."
         ]
       }
     ]

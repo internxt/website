@@ -63,75 +63,40 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [
       {
-        "question": "¿Puede Internxt acceder a mis archivos?",
+        "question": "¿Qué es Internxt Meet?",
         "answer": [
-          "No. Internxt, junto con cualquier otro tercero, no puede acceder a tus archivos, fotos o datos.",
-          " Los servicios de Internxt cuentan con cifrado de conocimiento cero, lo que significa que solo tú puedes acceder verdaderamente a tus datos privados. Además, la arquitectura de Internxt fragmenta tus archivos antes de cifrarlos, por lo que un servidor nunca contiene un archivo completo, solo un fragmento cifrado del mismo, que solo tú puedes descifrar."
+          "Internxt Meet es la plataforma de videoconferencia más segura donde puedes hablar, chatear y organizar reuniones con total privacidad. Con Internxt Meet, todas tus conversaciones y llamadas se mantienen en completa privacidad gracias a nuestro cifrado avanzado y galardonado. Todas las llamadas entre tú y tu equipo se mantienen privadas y seguras."
         ]
       },
       {
-        "question": "¿Internxt almacena mi contraseña?",
+        "question": "¿Es Internxt Meet una alternativa a Google Meet?",
         "answer": [
-          "No. Como tal, Internxt no almacena (y no puede almacenar) tu contraseña.",
-          "Tu contraseña de Internxt es única para ti y se usa para cifrar y descifrar tus datos de Internxt. Pero si quieres cambiar tu contraseña, puedes hacerlo desde nuestra aplicación."
+          "Sí, Internxt Meet es una alternativa segura a Google Meet, Zoom y Teams. Utilizamos cifrado de conocimiento cero con criptografía post-cuántica para garantizar que solo tú puedas escuchar o ver tus videollamadas. Ni siquiera Internxt tiene acceso a tus chats o llamadas."
         ]
       },
       {
-        "question": "¿Puedo habilitar 2FA?",
+        "question": "¿Es gratuito Internxt Meet?",
         "answer": [
-          "Sí. Puedes configurar la Autenticación de Dos Factores para tu cuenta a través de la aplicación web de Internxt.",
-          "Puedes usar Authy o cualquier otra herramienta de 2FA para generar un código 2FA personal con Internxt."
+          "Internxt Meet está disponible cuando te suscribes a cualquiera de nuestros planes premium, ofreciendo acceso a nuestra suite completa de productos enfocados en la privacidad, incluyendo Internxt Drive, Mail, Antivirus y VPN."
         ]
       },
       {
-        "question": "¿Cómo creo una cuenta de Internxt?",
+        "question": "¿Cómo contacto con soporte?",
         "answer": [
-          "Para crear una cuenta gratuita de Internxt, simplemente haz clic en el mejor plan arriba y sigue las instrucciones.",
-          "O dirígete a nuestra página principal y haz clic en \"Comenzar\". Allí, obtendrás instantáneamente 1GB de almacenamiento gratuito de por vida con una membresía gratuita de Internxt. Puedes usar tu membresía gratuita en todos nuestros servicios. Para registrarte, simplemente ingresa un nombre y dirección de correo electrónico. No se requiere verificación de identidad ni de correo electrónico para comenzar a usar los servicios de Internxt."
+          "¿No encuentras lo que buscas? Puedes contactar con nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un email a hello@internxt.com."
         ]
       },
       {
         "question": "¿Puedo pagar con Tarjeta, PayPal o Criptomonedas?",
         "answer": [
-          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, Criptomonedas, Klarna y otros."
+          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc). También puedes pagar a través de PayPal, Crypto, Klarna y otros."
         ]
       },
       {
-        "question": "¿Cuál es la política de reembolso de Internxt?",
+        "question": "¿Cuál es la política de reembolsos de Internxt?",
         "answer": [
-          "Internxt ofrece una garantía estándar de devolución de dinero de 30 días en todas sus suscripciones de pago, que comienza a contar tan pronto como te suscribes.",
-          "Y si alguna vez no estás satisfecho con nuestro servicio, contáctanos en [hello@internxt.com](mailto:hello@internxt.com) y solicita un reembolso."
-        ]
-      },
-      {
-        "question": "¿Cómo puedo cancelar mi suscripción?",
-        "answer": [
-          "Cancelar tu suscripción es muy sencillo y se puede hacer fácilmente a través de la aplicación Internxt, yendo a configuraciones y eliminando tu cuenta. Esto terminará tu suscripción y tu cuenta.",
-          "Si deseas cancelar un plan de pago y permanecer con nuestro servicio gratuito, puedes enviarnos un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com) y procesaremos la cancelación de la suscripción para que puedas mantener tu cuenta activa en nuestro plan gratuito."
-        ]
-      },
-      {
-        "question": "¿Cómo contacto al soporte?",
-        "answer": [
-          "¿No puedes encontrar lo que buscas? Puedes contactar a nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un correo electrónico a [hello@internxt.com](mailto:hello@internxt.com)."
-        ]
-      },
-      {
-        "question": "¿Qué son los planes de por vida de Internxt?",
-        "answer": [
-          "Ofrecemos planes de por vida que puedes comprar desde nuestro sitio web. Estos te otorgan acceso de por vida a nuestros planes, por un pago único. Disfruta hasta 5TB de almacenamiento de por vida con un pago único."
-        ]
-      },
-      {
-        "question": "¿Puedo agregar más almacenamiento a mi plan de por vida?",
-        "answer": [
-          "Sí, puedes agregar hasta 100 TB de almacenamiento a tu membresía de por vida de Internxt. Los planes de por vida de Internxt son acumulables. Simplemente cómpralos con la misma dirección de correo electrónico y el almacenamiento se agregará automáticamente a tu cuenta."
-        ]
-      },
-      {
-        "question": "¿Puedo dividir mi pago de por vida?",
-        "answer": [
-          "Sí, ahora puedes dividir tus pagos de por vida en múltiples cuotas sin intereses usando Klarna. ¡Disfruta de un plan de por vida con la facilidad de pagarlo en cómodas cuotas!"
+          "Internxt ofrece una garantía estándar de devolución de dinero de 30 días en todas sus suscripciones de pago, que comienza a contar desde el momento en que te suscribes.",
+          "Y si alguna vez no estás satisfecho con nuestro servicio, contáctanos en hello@internxt.com y solicita un reembolso."
         ]
       }
     ]
