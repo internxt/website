@@ -6,6 +6,7 @@ import { ReactNode } from 'react';
 import { PricingSectionForMobile } from './PricingSectionForMobile';
 import { SwitchStorageBusinessOptions } from './components/Switch';
 import { usePlanSelection } from '@/hooks/usePlanSelection';
+import { CheckCircle } from '@phosphor-icons/react';
 
 const FULL_PERCENTAGE = 100;
 const MINIMUM_DISCOUNT = 0;
@@ -45,6 +46,7 @@ interface PricingSectionWrapperProps {
     business?: number;
   };
   hideDescription?: boolean;
+  couponCodeName?: string;
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   handlePageNameUpdate?: (pageName: string) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
@@ -55,7 +57,6 @@ interface PricingSectionWrapperProps {
   showPromo?: boolean;
   isAffiliate?: boolean;
   hideBillingController?: boolean;
-
   overrideBillingFrequency?: Interval;
   overrideBusinessBillingFrequency?: Interval;
   overrideActiveSwitchPlan?: SwitchButtonOptions;
@@ -78,6 +79,10 @@ const formatDiscountLabel = (label: string, discountValue: number) => {
   return label.replace('{{discount}}', discountValue.toString());
 };
 
+const couponNameLabel = (label: string, couponName: string) => {
+  return label.replace('{{coupon}}', couponName);
+};
+
 const HotLabel = ({ textContent, discountValue }) => {
   if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
@@ -93,6 +98,17 @@ const PricingHeader = ({ textContent, discountValue, className = '' }) => (
   <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
     <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
     <HotLabel textContent={textContent} discountValue={discountValue} />
+  </div>
+);
+
+const CouponCodeHeader = ({ textContent, couponCode }) => (
+  <div
+    className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center`}
+  >
+    <CheckCircle className="text-green-1" weight="fill" />
+    <p className="text-30 font-medium text-gray-95 lg:text-base">
+      {couponNameLabel(textContent.discountLabel, couponCode)}
+    </p>
   </div>
 );
 
@@ -127,7 +143,7 @@ export const PricingSectionWrapper = ({
   startFromStorage = 'Premium',
   startFromBusinessStorage = 'Pro',
   handlePageNameUpdate,
-
+  couponCodeName,
   overrideBillingFrequency,
   overrideBusinessBillingFrequency,
   overrideActiveSwitchPlan,
@@ -201,7 +217,10 @@ export const PricingSectionWrapper = ({
       style={{ background: backgroundGradientColor }}
     >
       <div className="hidden flex-col items-center gap-16 lg:flex">
-        <PricingHeader textContent={textContent} discountValue={actualDiscountValue} />
+        <div className=" flex h-min flex-col items-center justify-center gap-6">
+          <PricingHeader textContent={textContent} discountValue={actualDiscountValue} />
+          <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />
+        </div>
 
         <PricingSection
           {...commonPricingProps}
