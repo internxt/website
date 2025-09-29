@@ -18,7 +18,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   const [isMobile, setIsMobile] = useState(false);
 
   const cardWidth = 350;
-  const mobileCardWidth = 345;
+  const mobileCardWidth = 300;
   const gap = 24;
   const scrollAmount = cardWidth + gap;
   const mobileScrollAmount = mobileCardWidth + gap;
@@ -90,7 +90,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
       style={{ background: 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
+      <div className="flex h-min w-[350px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
@@ -122,9 +122,18 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   width={352}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
-                  className="rounded-t-16"
+                  className="hidden rounded-t-16 lg:flex"
                 />
-                <div className="flex h-min w-[345px] flex-col rounded-b-16 bg-white pb-8 pt-6 lg:w-[350px]">
+                <Image
+                  src={getImage(`/images/meet/${textContent.scrollableSection.images[index]}.webp`)}
+                  alt="Internxt Meet Solution"
+                  height={320}
+                  width={300}
+                  quality={100}
+                  style={{ objectFit: 'contain', objectPosition: 'center' }}
+                  className="flex rounded-t-16 lg:hidden"
+                />
+                <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
                   <p className="flex-1 text-base font-normal leading-tight text-gray-55">{cardDescriptions[index]}</p>
                 </div>

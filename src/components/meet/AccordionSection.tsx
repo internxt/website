@@ -31,7 +31,7 @@ export default function AccordionSectionSection({ textContent }: AccordionSectio
         </p>
       </div>
 
-      <div className="flex w-[345px] flex-row lg:w-full xl:pl-44">
+      <div className="flex w-[345px] flex-row lg:w-full lg:pl-52 1.5xl:pl-64 2xl:pl-80 ">
         <div className="space-y-4">
           {cardTitles.map((title, index) => (
             <div key={index} className="w-[352px] overflow-hidden rounded-2xl bg-white">

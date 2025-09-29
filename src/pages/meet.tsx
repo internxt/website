@@ -10,7 +10,7 @@ import HeroSection from '@/components/meet/HeroSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/meet/HorizontalScrollableSection';
-import AccordionSectionSection from '@/components/meet/AccordionSection';
+import AccordionSection from '@/components/meet/AccordionSection';
 
 interface CleanerProps {
   lang: GetServerSidePropsContext['locale'];
@@ -40,7 +40,7 @@ const CleanerPage = ({
       <HorizontalScrollableSection
         textContent={textContent.enjoyPrivacySection}
         bgGradient="linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)"
-        cardsHeight="226px"
+        cardsHeight="245px"
         cardsWidth="352px"
       />
 
@@ -59,10 +59,10 @@ const CleanerPage = ({
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-20 bg-neutral-17"
+        bgPadding="bg-neutral-17 px-8"
       />
 
-      <AccordionSectionSection textContent={textContent.accordionSection} />
+      <AccordionSection textContent={textContent.accordionSection} />
 
       <HorizontalScrollableSectionWithPhotosSection textContent={textContent.desginedSection} />
 
@@ -81,7 +81,7 @@ const CleanerPage = ({
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
-        bgPadding="lg:py-20 bg-white"
+        bgPadding="lg:pb-20 bg-white px-8"
       />
 
       <FAQSection textContent={textContent.FaqSection} />

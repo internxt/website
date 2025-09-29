@@ -31,13 +31,13 @@ const HeroSection = ({ textContent }) => (
   >
     <div
       className={
-        'flex h-min w-[360px] shrink-0 flex-col items-center justify-center rounded-20 shadow-soft backdrop-blur-55 lg:h-min lg:w-[580px]'
+        'flex h-min w-[360px] shrink-0 flex-col items-center justify-center rounded-xl shadow-soft backdrop-blur-55 lg:h-min lg:w-[580px]'
       }
       style={{
         background: 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
       }}
     >
-      <div className="flex flex-col gap-4 p-10 lg:gap-8">
+      <div className="flex flex-col gap-4  p-6 lg:gap-8">
         <div className="flex flex-col gap-4">
           <div className="flex h-[26px] w-[75px] flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 ">
             <p className="text-lg font-semibold text-primary">{textContent.label}</p>
