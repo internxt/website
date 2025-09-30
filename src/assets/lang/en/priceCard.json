@@ -122,7 +122,6 @@
         "Post-quantum encryption",
         "Zero-knowledge encryption",
         "Two-factor authentication ",
-
         "Backup your computer",
         "Password-protected file sharing",
         "Encrypted VPN",
@@ -132,7 +131,6 @@
         "**3TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-
         "Two-factor authentication ",
         "Backup your computer",
         "Password-protected file sharing",
@@ -145,7 +143,6 @@
         "**5TB** encrypted storage",
         "Post-quantum encryption",
         "Zero-knowledge encryption",
-
         "Two-factor authentication ",
         "Backup your computer",
         "Password-protected file sharing",
@@ -171,10 +168,9 @@
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication",
-        "CLI, WebDav, Rclone & NAS support",
-        "Manage account billing & payments",
-        "Cleaner ",
-        "Dark Web Monitor"
+        "CLI & WebDav",
+        "Organization management",
+        "Cleaner "
       ],
       "2TB": [
         "2TB encrypted storage per user",
@@ -183,7 +179,6 @@
         "Antivirus",
         "Backup your computer",
         "Password-protected file sharing",
-
         "Invite, share & collaborate",
         "GDPR compliance",
         "Two-factor authentication",

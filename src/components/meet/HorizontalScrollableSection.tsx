@@ -118,11 +118,10 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                 <Image
                   src={getImage(`/images/meet/${textContent.scrollableSection.images[index]}.webp`)}
                   alt="Internxt Meet Solution"
-                  height={320}
+                  height={200}
                   width={352}
                   quality={100}
-                  style={{ objectFit: 'contain', objectPosition: 'center' }}
-                  className="hidden rounded-t-16 lg:flex"
+                  className="hidden rounded-16 lg:flex"
                 />
                 <Image
                   src={getImage(`/images/meet/${textContent.scrollableSection.images[index]}.webp`)}
@@ -131,7 +130,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                   width={300}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
-                  className="flex rounded-t-16 lg:hidden"
+                  className="flex rounded-16 lg:hidden"
                 />
                 <div className="flex h-min w-[300px] flex-col rounded-b-16 pb-8 pt-6 lg:w-[350px]">
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>

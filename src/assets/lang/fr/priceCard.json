@@ -162,33 +162,34 @@
     },
     "business": {
       "1TB": [
-        "1 To de stockage/utilisateur",
+        "1To de stockage chiffré par utilisateur",
         "Chiffrement post-quantique",
         "VPN chiffré",
         "Antivirus",
-        "Sauvegardez votre ordinateur",
+        "Sauvegarde de votre ordinateur",
         "Partage de fichiers protégé par mot de passe",
-        "Invitez, partagez & collaborez",
+        "Inviter, partager et collaborer",
         "Conformité RGPD",
-        "Authentification à deux facteurs ",
-        "Gestion d'organisation",
-        "Nettoyeur d'appareil"
+        "Authentification à deux facteurs",
+        "CLI et WebDav",
+        "Gestion de l'organisation",
+        "Nettoyeur"
       ],
       "2TB": [
-        "2 To de stockage/utilisateur",
+        "2To de stockage chiffré par utilisateur",
         "Chiffrement post-quantique",
         "VPN chiffré",
         "Antivirus",
-        "Sauvegardez votre ordinateur",
+        "Sauvegarde de votre ordinateur",
         "Partage de fichiers protégé par mot de passe",
-        "Invitez, partagez & collaborez",
+        "Inviter, partager et collaborer",
         "Conformité RGPD",
-        "Authentification à deux facteurs ",
-        "Support CLI, WebDav & Rclone",
-        "Gestion d'organisation",
-        "Nettoyeur d'appareil",
+        "Authentification à deux facteurs",
+        "Support CLI, WebDav, Rclone et NAS",
+        "Gestion de l'organisation",
+        "Nettoyeur",
         "Meet",
-        "Gestion des versions de fichiers",
+        "Versioning des fichiers",
         "Mail"
       ]
     }

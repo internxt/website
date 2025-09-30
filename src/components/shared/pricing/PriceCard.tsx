@@ -65,7 +65,6 @@ const ICON_MAPS = {
     ShieldPlus,
     ArrowsClockwise,
     Password,
-
     CirclesThreePlus,
     LockSimple,
     Fingerprint,
@@ -229,9 +228,6 @@ export const PriceCard = ({
             <div className="flex w-full flex-col justify-start gap-4 px-6 pt-4">
               {features.map((feature, index) => {
                 const getAdjustedIndex = () => {
-                  if (cardIndex === 0 && isBusiness && index >= 9) {
-                    return index + 1;
-                  }
                   return index;
                 };
 
