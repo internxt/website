@@ -13,7 +13,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
-  const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'terminal'];
+  const images = ['Drive', 'antivirus', 'vpn', 'cleaner', 'meet', 'Terminal'];
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -114,7 +114,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
             }}
           >
             {cardTitles.map((title: string, index: number) => (
-              <div key={title} className="flex flex-shrink-0 flex-col">
+              <div key={title} className="flex flex-shrink-0 flex-col items-center justify-between">
                 <div className="flex h-min w-[345px] flex-col pb-8 pt-6 lg:w-[350px]">
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
                   <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
