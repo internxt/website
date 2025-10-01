@@ -1,0 +1,125 @@
+{
+  "heroSection": {
+    "title": "人们对Internxt的**评价**",
+    "subtitle": "了解为什么人们信任Internxt保护他们的数据",
+    "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"]
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt正在**大促销**，拥有**出色的用户评价**、**端到端**和**后量子加密**，并且他们完全**开源**代码，对客户完全透明。\"",
+    "mashable": "\"使用Internxt**认真对待****保护您的重要数据**。他们将**隐私**作为**首要关注点**，因此您可以放心，您的文件是**安全的**，平台重视用户的**透明度**。\"",
+    "pcWorld": "\"Internxt的**直观网页访问**、**文件同步**和**备份服务**令人**印象深刻**。这种加密的在线存储和备份服务**简单易用**，涵盖所有基础功能，而且目前的**终身计划**非常**划算**。\""
+  },
+  "ReviewFromIndustrySection": {
+    "title": "来自行业专家和用户的评价",
+    "description": "Internxt拥有超过100万满意用户，他们给该服务评分为5星中的4星",
+    "underStars": "Google评论",
+    "reviewers": {
+      "reviewers": {
+        "Trustpilot": "Trustpilot",
+        "Techexperts": "技术专家"
+      },
+      "TruspilotReviews": {
+        "reviews": [
+          "我将文件从Google Drive转移到Internxt，因为我终于想要真正的隐私。通过后量子和零知识加密，我知道除了我之外没有人可以访问我的数据。",
+          "使用Internxt存储我的文件毫无压力。出色的隐私保护、可靠的欧盟服务器和开源代码让我放心，我的文件是安全和私密的。",
+          "我喜欢Internxt主动采取措施使服务能够抵御量子计算机攻击；这让我感到真正安全。我与他们的支持团队的体验也很满意，因为他们回复非常快。我对Internxt非常满意。",
+          "我真的很欣赏Internxt的透明度。他们的开源代码表明他们没有什么可隐瞒的，这让我更加信任他们处理我的数据。",
+          "一家从不让人失望的公司。在线隐私和安全是我的优先事项之一，这就是为什么我多年来一直在使用Internxt。他们始终努力成长和改进，关心用户并提供出色的客户服务。",
+          "Internxt的开源代码可在GitHub上获得，确保完全透明。用户可以验证服务的安全性，增强对致力于隐私和完整性的平台的信心。",
+          "注册提供的计划时服务非常个性化。通过电子邮件沟通顺畅且易于使用。隐私方面当然令人难以置信且可靠。强烈推荐。",
+          "非常好的支持。他们以非常高效的方式专业而友善地解决了我的问题。购买终身版并享受。",
+          "老实说，Internxt超级易用。我安装了它，不到一分钟就开始上传我的东西了。一点也不复杂，我很欣赏这一点。"
+        ],
+        "authors": [
+          "Brian Carter",
+          "Fiona Nelson",
+          "Jose Maria GL",
+          "Ethan Foster",
+          "Guillermo Gwebs",
+          "Brian Jimenez",
+          "Juan",
+          "doMfree",
+          "Javier Caldea"
+        ]
+      }
+    },
+    "TechReviews": {
+      "titles": ["价格极其实惠的存储", "注重隐私和安全的云提供商", "Internxt提供出色的安全性和隐私保护"],
+      "description": [
+        "Internxt直观地融合了网页访问、文件同步和备份（镜像）服务，令人印象深刻。然而，价格极其实惠的终身计划无疑是最突出的方面。",
+        "Internxt是一项出色的云存储服务，因其实惠的定价计划、直观的界面和可靠的支持而受到好评。它在安全措施和对隐私的承诺方面表现出色，使其成为首选。",
+        "Internxt是一个注重隐私的云存储解决方案，提供客户端加密、后量子安全性、开源软件和位于欧盟的服务器，以极具竞争力的价格提供安全合规的存储。"
+      ],
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+    }
+  },
+  "videoSection": {
+    "company": "Cloudwards",
+    "description": "3.16万订阅者"
+  },
+  "supportSection": {
+    "title": "随时为您提供支持",
+    "description": "需要帮助？Internxt提供实时客户服务，为您提供所需的一切支持。",
+    "cards": {
+      "card1": {
+        "title": "客户支持团队",
+        "description": "我们经验丰富的客户支持人员随时为您提供帮助，帮助您设置Internxt账户以及您需要的任何其他事项，为您提供最佳体验。"
+      },
+      "card2": {
+        "title": "深入的帮助中心",
+        "description": "在我们的帮助中心找到您需要的内容，包含分步教程、常见问题解答，并快速解决问题，让您更轻松地充分利用Internxt。"
+      }
+    }
+  },
+  "ctaSection": {
+    "title": "准备好转向隐私保护了吗？",
+    "description": "加入100万已经离开大型科技公司的满意用户",
+    "cta": "获取Internxt"
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt能访问我的文件吗？",
+        "answer": [
+          "不能。Internxt以及任何其他第三方都无法访问您的文件、照片或数据。",
+          "Internxt服务采用零知识加密，这意味着只有您可以访问和解密您的私人数据和信息。此外，Internxt使用后量子密码学，这是保护您的信息免受任何威胁的最先进技术。"
+        ]
+      },
+      {
+        "question": "Internxt会存储我的密码吗？",
+        "answer": [
+          "不会。因此，Internxt无法存储您的密码。",
+          "您的Internxt密码是您独有的，用于加密和解密您的Internxt数据。但如果您想更改密码，可以通过我们的应用程序进行更改。"
+        ]
+      },
+      {
+        "question": "我可以启用双因素身份验证（2FA）吗？",
+        "answer": [
+          "可以。您可以通过Internxt网页应用为您的账户设置双因素身份验证。",
+          "您还可以使用Authy或其他2FA工具与Internxt生成个人2FA代码。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal或加密货币支付吗？",
+        "answer": [
+          "Internxt目前接受借记卡和信用卡（Mastercard、VISA、American Express等）。您还可以通过PayPal、Crypto和Klarna支付。",
+          "应要求，我们还接受加密货币和SEPA直接扣款。如果您对支付方式有疑问，只需发送电子邮件至[hello@internxt.com](mailto:hello@internxt.com)。"
+        ]
+      },
+      {
+        "question": "Internxt的退款政策是什么？",
+        "answer": [
+          "Internxt对所有付费订阅提供标准的30天退款保证，从您订阅之日起开始计算。",
+          "如果您对我们的服务不满意，请通过[hello@internxt.com](mailto:hello@internxt.com)联系我们并要求退款。"
+        ]
+      },
+      {
+        "question": "我如何联系支持团队？",
+        "answer": [
+          "找不到您要找的内容？您可以通过实时聊天或发送电子邮件至[hello@internxt.com](mailto:hello@internxt.com)联系我们的技术支持团队。"
+        ]
+      }
+    ]
+  }
+}

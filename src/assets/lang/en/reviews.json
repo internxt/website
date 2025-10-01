@@ -1,0 +1,129 @@
+{
+  "heroSection": {
+    "title": "What people are **saying** about Internxt",
+    "subtitle": "Find out why people trust Internxt with their data",
+    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"]
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt is on **mega-sale**, has **excellent user reviews**, **end-to-end** and **post-quantum encryption**, and they make their code completely **open source** for total transparency with their customers.\"",
+    "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
+    "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
+  },
+  "ReviewFromIndustrySection": {
+    "title": "Reviews from industry experts and users",
+    "description": "Internxt has over 1 million happy users, who rated the service with 4 out of 5 stars ",
+    "underStars": "Google Reviews",
+    "reviewers": {
+      "reviewers": {
+        "Trustpilot": "Trustpilot",
+        "Techexperts": "Tech Experts"
+      },
+      "TruspilotReviews": {
+        "reviews": [
+          "I moved my files from Google Drive to Internxt because I finally wanted real privacy. With post-quantum and zero-knowledge encryption, I know nobody but me can access my data.",
+          "Storing my files with Internxt is stress-free. Great privacy, reliable EU servers, and open source make me feel at ease that my files are secure and private.",
+          "I love that Internxt has taken the initiative to make the service quantum computer attack-proof; it makes me feel truly secure. My experience with their support was also satisfactory, as they responded very quickly. I am very happy with Internxt.",
+          "I really appreciate how transparent Internxt is. Their open-source code shows they have nothing to hide, which makes me trust them even more with my data.",
+          "A company that never disappoints. Online privacy and security are among my priorities, which is why I have been using Internxt for several years. They are always striving to grow and improve, looking out for the user and providing excellent customer service.",
+          "Internxt's open source code, available on GitHub, ensures complete transparency. Users can verify the security of the service, reinforcing confidence in a platform committed to privacy and integrity.",
+          "Excellent personalised service when signing up for the plan offered. Smooth communication by email and easy to use. The privacy aspect is, of course, incredible and reliable. Highly recommended.",
+          "Very good support. They resolved my issues professionally and kindly in a very efficient manner. Purchase Lifetime and enjoy.",
+          "Honestly, Internxt is super easy to use. I installed it and within a minute I was already uploading my stuff. It wasn't complicated at all, and I appreciate that."
+        ],
+        "authors": [
+          "Brian Carter",
+          "Fiona Nelson",
+          "Jose Maria GL",
+          "Ethan Foster",
+          "Guillermo Gwebs",
+          "Brian Jimenez",
+          "Juan",
+          "doMfree",
+          "Javier Caldea"
+        ]
+      }
+    },
+    "TechReviews": {
+      "titles": [
+        "Fantastically affordable storage",
+        "A cloud provider big on privacy and security",
+        "Internxt offers excellent security and privacy"
+      ],
+      "description": [
+        "Internxt’s intuitively blended web access, file sync, and backup (mirroring) services are impressive. However, the incredibly affordable lifetime plans are by far the most outstanding aspect.",
+        "Internxt is an excellent cloud storage service due to its affordable pricing plans, intuitive interface, and reliable support. It excels in security measures and commitment to privacy, making it a top choice.",
+        "Internxt is a privacy-focused cloud storage solution offering client-side encryption, post-quantum security, open-source software, and EU-based servers, delivering secure and compliant storage at an excellent value."
+      ],
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+    }
+  },
+  "videoSection": {
+    "company": "Cloudwards",
+    "description": "31,6K subscribers"
+  },
+  "supportSection": {
+    "title": "Support whenever you need it",
+    "description": "Need help? Internxt offers live customer service to support you with anything you need.",
+    "cards": {
+      "card1": {
+        "title": "Customer support team",
+        "description": "Our experienced customer support staff is here to help you set up your Internxt account and anything else you need to give you the best experience possible."
+      },
+      "card2": {
+        "title": "In-depth help center",
+        "description": "Find what you need from our help center with step-by-step tutorials, answer common questions, and troubleshoot issues quickly, making it easier for you to get the most out of Internxt."
+      }
+    }
+  },
+  "ctaSection": {
+    "title": "Ready to switch to privacy?",
+    "description": "Join 1,000,000 happy users who moved away from Big Tech",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "Can Internxt access my files?",
+        "answer": [
+          "No. Internxt, along with any other third party, cannot access your files, photos, or data.",
+          "Internxt services feature zero-knowledge encryption, meaning only you can access and decrypt your private data and information. Additionally, Internxt uses post-quantum cryptography, the most advanced technology available to protect your information from any threat. "
+        ]
+      },
+      {
+        "question": "Does Internxt store my password?",
+        "answer": [
+          "No. As such, Internxt cannot store your password.",
+          "Your Internxt password is unique to you and is used to encrypt and decrypt your Internxt data. But if you want to change your password, you can do so from our app."
+        ]
+      },
+      {
+        "question": "Can I enable two-factor authentication (2FA)?",
+        "answer": [
+          "Yes. You can set up two-factor authentication for your account through the Internxt web app.",
+          "You can also use Authy or other 2FA tools to generate a personal 2FA code with Internxt."
+        ]
+      },
+      {
+        "question": "Can I pay with credit card, PayPal, or cryptocurrency?",
+        "answer": [
+          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, Crypto and Klarna.",
+          "Upon request, we also accept cryptocurrencies and SEPA Debit. If you have questions about payment methods, simply email us at [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "What is Internxt's refund policy?",
+        "answer": [
+          "Internxt offers a standard 30-day money-back guarantee on all paid subscriptions, which starts counting as soon as you subscribe.",
+          "And if you're ever unsatisfied with our service, contact us at [hello@internxt.com](mailto:hello@internxt.com) and request a refund."
+        ]
+      },
+      {
+        "question": "How can I contact support?",
+        "answer": [
+          "Can't find what you're looking for? You can contact our technical support team through live chat or by emailing [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      }
+    ]
+  }
+}

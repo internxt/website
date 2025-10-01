@@ -1,0 +1,129 @@
+{
+  "heroSection": {
+    "title": "Ce que les gens **disent** d'Internxt",
+    "subtitle": "Découvrez pourquoi les gens font confiance à Internxt pour leurs données",
+    "features": ["Suite complète de confidentialité", "Chiffrement post-quantique", "Open source et audité"]
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt est en **méga-promotion**, a d'**excellents avis d'utilisateurs**, un chiffrement **de bout en bout** et **post-quantique**, et ils rendent leur code complètement **open source** pour une transparence totale avec leurs clients.\"",
+    "mashable": "\"Prenez **au sérieux** la **sécurisation de vos données importantes** avec Internxt. Ils font de la **confidentialité** leur **priorité absolue**, vous pouvez donc être tranquille en sachant que vos fichiers sont **en sécurité** et que la plateforme valorise la **transparence** pour ses utilisateurs.\"",
+    "pcWorld": "\"L'**accès web intuitif**, la **synchronisation de fichiers** et les **services de sauvegarde** d'Internxt sont **impressionnants**. Ce service de stockage et de sauvegarde en ligne chiffré est **facile**, couvre tous les aspects, et les **plans à vie** actuels sont une **aubaine**.\""
+  },
+  "ReviewFromIndustrySection": {
+    "title": "Avis d'experts de l'industrie et d'utilisateurs",
+    "description": "Internxt compte plus d'1 million d'utilisateurs satisfaits, qui ont évalué le service avec 4 étoiles sur 5",
+    "underStars": "Avis Google",
+    "reviewers": {
+      "reviewers": {
+        "Trustpilot": "Trustpilot",
+        "Techexperts": "Experts Techniques"
+      },
+      "TruspilotReviews": {
+        "reviews": [
+          "J'ai déplacé mes fichiers de Google Drive vers Internxt parce que je voulais enfin une vraie confidentialité. Avec le chiffrement post-quantique et à connaissance nulle, je sais que personne d'autre que moi ne peut accéder à mes données.",
+          "Stocker mes fichiers avec Internxt est sans stress. Excellente confidentialité, serveurs UE fiables et open source me font sentir en sécurité que mes fichiers sont protégés et privés.",
+          "J'adore qu'Internxt ait pris l'initiative de rendre le service à l'épreuve des attaques d'ordinateurs quantiques ; cela me fait me sentir vraiment en sécurité. Mon expérience avec leur support a également été satisfaisante, car ils ont répondu très rapidement. Je suis très content d'Internxt.",
+          "J'apprécie vraiment la transparence d'Internxt. Leur code open source montre qu'ils n'ont rien à cacher, ce qui me fait leur faire encore plus confiance avec mes données.",
+          "Une entreprise qui ne déçoit jamais. La confidentialité et la sécurité en ligne font partie de mes priorités, c'est pourquoi j'utilise Internxt depuis plusieurs années. Ils s'efforcent toujours de grandir et de s'améliorer, en veillant sur l'utilisateur et en fournissant un excellent service client.",
+          "Le code open source d'Internxt, disponible sur GitHub, garantit une transparence totale. Les utilisateurs peuvent vérifier la sécurité du service, renforçant la confiance dans une plateforme engagée pour la confidentialité et l'intégrité.",
+          "Excellent service personnalisé lors de la souscription au plan proposé. Communication fluide par email et facile à utiliser. L'aspect confidentialité est, bien sûr, incroyable et fiable. Hautement recommandé.",
+          "Très bon support. Ils ont résolu mes problèmes de manière professionnelle et aimable de façon très efficace. Achetez à vie et profitez.",
+          "Honnêtement, Internxt est super facile à utiliser. Je l'ai installé et en une minute je téléchargeais déjà mes affaires. Ce n'était pas du tout compliqué, et j'apprécie ça."
+        ],
+        "authors": [
+          "Brian Carter",
+          "Fiona Nelson",
+          "Jose Maria GL",
+          "Ethan Foster",
+          "Guillermo Gwebs",
+          "Brian Jimenez",
+          "Juan",
+          "doMfree",
+          "Javier Caldea"
+        ]
+      }
+    },
+    "TechReviews": {
+      "titles": [
+        "Stockage fantastiquement abordable",
+        "Un fournisseur cloud axé sur la confidentialité et la sécurité",
+        "Internxt offre une excellente sécurité et confidentialité"
+      ],
+      "description": [
+        "Les services d'accès web, de synchronisation de fichiers et de sauvegarde (mise en miroir) d'Internxt, combinés de manière intuitive, sont impressionnants. Cependant, les plans à vie incroyablement abordables sont de loin l'aspect le plus remarquable.",
+        "Internxt est un excellent service de stockage cloud grâce à ses plans tarifaires abordables, son interface intuitive et son support fiable. Il excelle dans les mesures de sécurité et l'engagement envers la confidentialité, en faisant un choix de premier plan.",
+        "Internxt est une solution de stockage cloud axée sur la confidentialité offrant un chiffrement côté client, une sécurité post-quantique, un logiciel open source et des serveurs basés dans l'UE, fournissant un stockage sécurisé et conforme à un excellent rapport qualité-prix."
+      ],
+      "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
+    }
+  },
+  "videoSection": {
+    "company": "Cloudwards",
+    "description": "31,6K abonnés"
+  },
+  "supportSection": {
+    "title": "Support quand vous en avez besoin",
+    "description": "Besoin d'aide ? Internxt offre un service client en direct pour vous aider avec tout ce dont vous avez besoin.",
+    "cards": {
+      "card1": {
+        "title": "Équipe de support client",
+        "description": "Notre personnel de support client expérimenté est là pour vous aider à configurer votre compte Internxt et tout ce dont vous avez besoin pour vous offrir la meilleure expérience possible."
+      },
+      "card2": {
+        "title": "Centre d'aide approfondi",
+        "description": "Trouvez ce dont vous avez besoin dans notre centre d'aide avec des tutoriels étape par étape, des réponses aux questions courantes et résolvez rapidement les problèmes, vous permettant de tirer le meilleur parti d'Internxt."
+      }
+    }
+  },
+  "ctaSection": {
+    "title": "Prêt à passer à la confidentialité ?",
+    "description": "Rejoignez 1 000 000 d'utilisateurs satisfaits qui ont quitté les géants de la tech",
+    "cta": "Obtenir Internxt"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Internxt peut-il accéder à mes fichiers ?",
+        "answer": [
+          "Non. Internxt, ainsi que tout autre tiers, ne peut pas accéder à vos fichiers, photos ou données.",
+          "Les services d'Internxt disposent d'un chiffrement à connaissance nulle, ce qui signifie que vous seul pouvez accéder et déchiffrer vos données et informations privées. De plus, Internxt utilise la cryptographie post-quantique, la technologie la plus avancée disponible pour protéger vos informations contre toute menace."
+        ]
+      },
+      {
+        "question": "Internxt stocke-t-il mon mot de passe ?",
+        "answer": [
+          "Non. Par conséquent, Internxt ne peut pas stocker votre mot de passe.",
+          "Votre mot de passe Internxt est unique et est utilisé pour chiffrer et déchiffrer vos données Internxt. Mais si vous souhaitez modifier votre mot de passe, vous pouvez le faire depuis notre application."
+        ]
+      },
+      {
+        "question": "Puis-je activer l'authentification à deux facteurs (2FA) ?",
+        "answer": [
+          "Oui. Vous pouvez configurer l'authentification à deux facteurs pour votre compte via l'application web d'Internxt.",
+          "Vous pouvez également utiliser Authy ou d'autres outils 2FA pour générer un code 2FA personnel avec Internxt."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna.",
+          "Sur demande, nous acceptons également les cryptomonnaies et le prélèvement SEPA. Si vous avez des questions sur les méthodes de paiement, envoyez-nous simplement un email à [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      },
+      {
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "answer": [
+          "Internxt offre une garantie de remboursement standard de 30 jours sur tous les abonnements payants, qui commence à compter dès votre souscription.",
+          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) et demandez un remboursement."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou par email à [hello@internxt.com](mailto:hello@internxt.com)."
+        ]
+      }
+    ]
+  }
+}
