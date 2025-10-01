@@ -25,6 +25,7 @@ const nameFiles = [
   'virus-scanner',
   'what-does-google-know-about-me',
   'file-converter',
+  'cleaner',
 ];
 
 const langs = {
