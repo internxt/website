@@ -8,7 +8,7 @@ export default function RedeemCouponsSectionSection({ textContent }: Readonly<Re
   return (
     <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 lg:h-min lg:gap-16 lg:p-20 ">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
-      <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
+
       <div className="flex h-min w-full flex-col justify-center gap-12">
         <div className="flex h-min w-full flex-col items-center justify-center gap-6">
           <p className="text-5xl font-bold text-gray-100">{textContent.title}</p>

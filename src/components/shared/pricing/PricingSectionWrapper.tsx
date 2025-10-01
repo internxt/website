@@ -80,7 +80,7 @@ const formatDiscountLabel = (label: string, discountValue: number) => {
 };
 
 const couponNameLabel = (label: string, couponName: string) => {
-  return label.replace('{{coupon}}', couponName);
+  return label.replace('{{coupon}}', `'${couponName}'`);
 };
 
 const HotLabel = ({ textContent, discountValue }) => {
@@ -103,7 +103,7 @@ const PricingHeader = ({ textContent, discountValue, className = '' }) => (
 
 const CouponCodeHeader = ({ textContent, couponCode }) => (
   <div
-    className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center`}
+    className={`flex w-min flex-row items-center justify-center gap-1.5 whitespace-nowrap rounded-lg bg-green-110 p-3 text-center shadow-lg`}
   >
     <CheckCircle className="text-green-1" weight="fill" />
     <p className="text-30 font-medium text-gray-95 lg:text-base">
@@ -219,7 +219,7 @@ export const PricingSectionWrapper = ({
       <div className="hidden flex-col items-center gap-16 lg:flex">
         <div className=" flex h-min flex-col items-center justify-center gap-6">
           <PricingHeader textContent={textContent} discountValue={actualDiscountValue} />
-          <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />
+          {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
 
         <PricingSection
