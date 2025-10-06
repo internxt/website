@@ -66,9 +66,9 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
           <p className="font-regular text-base leading-tight text-gray-55 lg:text-lg">{textContent.description}</p>
         </div>
 
-        <div className="hidden items-stretch lg:flex lg:flex-row lg:justify-center lg:gap-8">
+        <div className="hidden items-stretch lg:flex lg:flex-row lg:justify-center lg:gap-8 xl:px-20 3xl:px-52">
           {textContent.cards.titles.map((card, index) => (
-            <div key={index} className="flex h-[220px] w-[352px] flex-col gap-6 rounded-16 bg-white p-8">
+            <div key={index} className="flex h-[220px] w-full flex-col gap-6 rounded-16 bg-white p-8">
               <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95">
                 <p className="text-2xl text-primary ">{index + 1}</p>
                 {card}
@@ -92,14 +92,16 @@ export default function RedeemCouponsSection({ textContent }: Readonly<RedeemCou
             }}
           >
             <div
-              className="flex gap-4"
+              className="flex items-stretch gap-4"
               style={{
                 width: 'max-content',
-                alignItems: 'stretch',
               }}
             >
               {textContent.cards.titles.map((card, index) => (
-                <div key={index} className="flex h-full w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white p-8">
+                <div
+                  key={index}
+                  className="flex h-[220px] w-[345px] flex-shrink-0 flex-col gap-6 rounded-16 bg-white p-8"
+                >
                   <span className="flex flex-row items-center gap-4 text-xl font-medium text-gray-95">
                     <p className="text-2xl text-primary ">{index + 1}</p>
                     {card}

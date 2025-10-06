@@ -81,7 +81,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        sectionDetails="lg:py-20 xl:py-32"
+        sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />

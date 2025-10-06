@@ -107,7 +107,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
           }}
         >
           <div
-            className="flex gap-4 lg:gap-6 lg:pl-32 lg:pr-64 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            className="flex gap-4 px-4 lg:gap-6 lg:pl-32 lg:pr-64 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
@@ -124,8 +124,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                 <Image
                   src={getImage(`/images/coupons/${images[index]}.webp`)}
                   alt="Internxt Meet Solution"
-                  height={320}
-                  width={352}
+                  height={420}
+                  width={420}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
                   className="rounded-t-16"
