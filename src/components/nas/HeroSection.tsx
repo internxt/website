@@ -43,7 +43,7 @@ const HeroSection = ({ textContent }) => (
           <div key={feat} className="flex h-[24px] flex-row items-center justify-center gap-2">
             <Check className="hidden text-green-dark xs-md:block" size={24} />
             <Check className="block text-green-dark xs-md:hidden" size={20} />
-            <p className="text-left text-sm font-normal text-gray-55 xs-md:text-lg">{feat}</p>
+            <p className="text-left text-sm font-medium text-gray-55 xs-md:text-lg">{feat}</p>
           </div>
         ))}
       </div>

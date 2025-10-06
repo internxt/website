@@ -54,7 +54,7 @@ const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLa
         bgPadding="lg:pb-20 bg-neutral-17 px-10"
       />
 
-      <HorizontalScrollableSection textContent={textContent.horizontalScrollableSection} />
+      <HorizontalScrollableSection textContent={textContent.horizontalScrollableSection} needsDivider={false} />
 
       <ThreeCardsSection textContent={textContent.whatInternxtOffersSection} />
 
