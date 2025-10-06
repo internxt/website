@@ -146,15 +146,14 @@ export default function HorizontalScrollableSection({
               <div key={index} className="flex-shrink-0">
                 <div
                   ref={(el) => (cardRefs.current[index] = el)}
-                  className="flex flex-col rounded-16 bg-white p-8"
+                  className="flex flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
                   style={{
                     width: getCardWidth(),
-                    height: getCardHeight(),
                     minHeight: cardsHeight === 'auto' ? 'auto' : cardsHeight,
                   }}
                 >
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                  <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
                     {textContent.scrollableSection.descriptions[index]}
                   </p>
                 </div>

@@ -25,7 +25,7 @@ const FloatingCtaSectionv2 = ({
       style={{ background: bgGradientColor }}
     >
       <div
-        className={`z-10 flex h-auto flex-col items-center gap-6 rounded-20  py-6 text-center lg:w-full lg:py-10 ${containerDetails}`}
+        className={`z-10 flex h-auto flex-col items-center gap-6 rounded-20 py-6 text-center lg:w-full lg:py-10 ${containerDetails}`}
         style={{ background: bgGradientContainerColor }}
       >
         {customText}

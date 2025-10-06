@@ -94,8 +94,8 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
                 className="flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
               >
                 <div className="flex flex-col">
-                  <span className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100">
-                    {hasCta && <p className="text-lg font-medium text-primary lg:text-2xl">{index + 1}</p>}
+                  <span className="flex items-center justify-start gap-4 text-lg font-medium text-gray-100">
+                    {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
                     {title}
                   </span>
                   <p className="pt-[16px] text-sm font-normal leading-tight text-gray-55 lg:pt-6 lg:text-base">
@@ -140,9 +140,9 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
         </div>
       </div>
 
-      <div className="hidden grid-cols-3 justify-center gap-8 lg:grid">
+      <div className="hidden w-full grid-cols-3 justify-center gap-8 lg:grid xl:px-32 3xl:px-80">
         {textContent.cards.titles.map((title: string, index: number) => (
-          <div key={title} className="flex w-[352px] flex-col justify-between gap-6 rounded-16 bg-white p-8">
+          <div key={title} className="flex w-full flex-col justify-between gap-6 rounded-16 bg-white p-8">
             <div className="flex flex-col">
               <span className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100">
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
