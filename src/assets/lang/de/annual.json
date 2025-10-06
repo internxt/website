@@ -30,7 +30,7 @@
       "business": "Business"
     },
     "freePlanCard": {
-      "eyeBrow": "Internxt Free",
+      "eyeBrow": "Free",
       "description": "Erhalte bis zu 1 GB verschlüsselten Cloud-Speicher und nutze unser privates Ökosystem: VPN (FR), CLI/WebDav/Rclone und vieles mehr.",
       "cta": "Plan auswählen"
     },

@@ -152,7 +152,7 @@ export default function HeroSection({
         </div>
       </div>
       <div className="hidden w-full justify-center lg:flex">
-        <Image src={getImage('/images/coupons/hero.webp')} alt={'Coupon HeroSection Page'} height={532} width={532} />
+        <Image src={getImage('/images/coupons/hero.webp')} alt={'Coupon HeroSection Page'} height={600} width={600} />
       </div>
       ;
     </section>
