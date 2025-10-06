@@ -15,9 +15,11 @@ export default function HorizontalScrollableSection({
   cardsHeight = 'auto',
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [cardWidth, setCardWidth] = useState(361);
+  const [maxCardHeight, setMaxCardHeight] = useState<number | null>(null);
 
   const maxIndex = isMobile
     ? textContent.scrollableSection.titles.length - 2
@@ -37,11 +39,20 @@ export default function HorizontalScrollableSection({
     };
 
     updateScreenSize();
-
     window.addEventListener('resize', updateScreenSize);
-
     return () => window.removeEventListener('resize', updateScreenSize);
   }, [cardsWidth]);
+
+  useEffect(() => {
+    if (cardsHeight === 'auto' && cardRefs.current.length > 0) {
+      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref!.offsetHeight);
+
+      if (heights.length > 0) {
+        const max = Math.max(...heights);
+        setMaxCardHeight(max);
+      }
+    }
+  }, [textContent, cardsHeight]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current && currentIndex > 0) {
@@ -78,6 +89,13 @@ export default function HorizontalScrollableSection({
       return cardsWidth;
     }
     return window.innerWidth >= 1024 ? '400px' : '345px';
+  };
+
+  const getCardHeight = () => {
+    if (cardsHeight !== 'auto') {
+      return cardsHeight;
+    }
+    return maxCardHeight ? `${maxCardHeight}px` : 'auto';
   };
 
   return (
@@ -123,10 +141,11 @@ export default function HorizontalScrollableSection({
             {textContent.scrollableSection.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
                 <div
+                  ref={(el) => (cardRefs.current[index] = el)}
                   className="flex flex-col rounded-16 bg-white p-8"
                   style={{
                     width: getCardWidth(),
-                    height: cardsHeight,
+                    height: getCardHeight(),
                     minHeight: cardsHeight === 'auto' ? 'auto' : cardsHeight,
                   }}
                 >

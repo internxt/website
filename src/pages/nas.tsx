@@ -50,8 +50,8 @@ const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLa
           </div>
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20 bg-neutral-17 px-10"
+        containerDetails="backdrop-blur-[55px] shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)]"
+        bgPadding="lg:pb-20 bg-neutral-17 px-10"
       />
 
       <HorizontalScrollableSection textContent={textContent.horizontalScrollableSection} />
@@ -75,8 +75,8 @@ const NASPage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLa
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgGradientColor="linear-gradient(0deg, #FFFFFF 0%, #F4F8FF 100%)"
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20"
+        containerDetails="shadow-[0px_4px_20px_0px_rgba(0,0,0,0.1)] backdrop-blur-[55px]"
+        bgPadding="lg:pb-20"
       />
 
       <FAQSection textContent={textContent.FaqSection} />

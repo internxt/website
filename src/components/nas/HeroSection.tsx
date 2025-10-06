@@ -25,11 +25,11 @@ const HighlightText = ({ text, className = '' }) => {
 
 const HeroSection = ({ textContent }) => (
   <section
-    className="flex h-min w-full flex-col justify-center gap-8 pb-10 pl-4 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40"
+    className="flex h-min w-full flex-col items-center justify-center gap-8 pb-10 pt-28 lg:flex-row lg:gap-16 lg:pb-20 lg:pl-40 lg:pt-40"
     style={{ background: 'linear-gradient(360deg, #FFFFFF 0%, #E5EFFF 85.17%)' }}
   >
     <div
-      className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-20 p-8 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8`}
+      className={`${styles.cleanerTitleAndOnePlan} z-20 flex h-min w-[360px] shrink-0 flex-col items-start justify-center gap-4 rounded-xl p-6 shadow-soft backdrop-blur-55 lg:h-min lg:w-[509px] lg:gap-8 lg:rounded-16 lg:p-8`}
     >
       <div className="flex flex-col items-center justify-center rounded-2 border border-primary px-1 py-0.5 lg:h-[26px] lg:w-[75px]">
         <p className="text-sm font-semibold text-primary lg:text-lg">{textContent.label}</p>

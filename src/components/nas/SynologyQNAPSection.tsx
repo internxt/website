@@ -17,8 +17,8 @@ interface NASBoxProps {
 
 function NASBox({ title, description, image, alt, imageWidth, imageHeight }: NASBoxProps) {
   return (
-    <div className="flex w-full flex-col items-center gap-10 rounded-16 bg-white p-6 lg:w-1/2  lg:p-10">
-      <div className="flex flex-col gap-6">
+    <div className="flex w-full flex-col items-center gap-4 rounded-16 bg-white p-6 lg:w-1/2 lg:gap-10  lg:p-10">
+      <div className="flex flex-col gap-4 lg:gap-6">
         <p className="text-30 font-semibold text-gray-95">{title}</p>
         <p className="text-base font-normal leading-tight text-gray-55">{description}</p>
       </div>
@@ -46,7 +46,7 @@ export default function SynologyQNAPSection({ textContent }: Readonly<SynologyQN
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
       </div>
 
-      <div className="flex flex-col justify-center gap-8 px-6 lg:flex-row">
+      <div className="flex flex-col justify-center gap-4 px-6 lg:flex-row lg:gap-8">
         <NASBox
           title={textContent.synologyBox.title}
           description={textContent.synologyBox.description}
