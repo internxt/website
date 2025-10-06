@@ -4,7 +4,10 @@ import Link from 'next/link';
 
 export const HeroSection = ({ textContent }) => {
   return (
-    <section className=" overflow-hidden px-5 py-10">
+    <section
+      className=" overflow-hidden px-5 py-10"
+      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+    >
       <HeroSectionSafeArea>
         <div className="flex w-full flex-col-reverse items-center justify-between gap-5 md:flex-row md:gap-0">
           <div className="flex h-full max-w-[553px] flex-col items-center justify-center gap-8 text-center md:items-start md:text-left">

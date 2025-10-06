@@ -413,6 +413,10 @@ export default function Footer({
                     <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.WebDAV}
                     </Link>
+
+                    <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.resources.nas}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -882,6 +886,9 @@ export default function Footer({
                       </Link>
                       <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.WebDAV}
+                      </Link>
+                      <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.resources.nas}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
