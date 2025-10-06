@@ -124,8 +124,8 @@ export default function HorizontalScrollableSectionWithPhotosSection({
                 <Image
                   src={getImage(`/images/coupons/${images[index]}.webp`)}
                   alt="Internxt Meet Solution"
-                  height={420}
-                  width={420}
+                  height={index === 2 ? 350 : 400}
+                  width={index === 2 ? 350 : 400}
                   quality={100}
                   style={{ objectFit: 'contain', objectPosition: 'center' }}
                   className="rounded-t-16"
