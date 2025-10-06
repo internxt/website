@@ -383,5 +383,10 @@
     "id": "internxt-cleaner",
     "title": "Internxt – Optimiza y Limpia tu Ordenador",
     "description": "Encuentra y elimina archivos basura para aumentar la velocidad, capacidad de respuesta y rendimiento del dispositivo."
+  },
+  {
+    "id": "nas",
+    "title": "Internxt – NAS QNAP y Synology",
+    "description": "Haz copias de seguridad de tus dispositivos NAS QNAP y Synology en la nube con Internxt."
   }
 ]

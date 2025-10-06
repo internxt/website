@@ -72,7 +72,9 @@
         "dropboxAlternative": "Dropbox 替代品",
         "megaAlternative": "Mega 替代品",
         "cyberAwareness": "網絡安全意識",
-        "whatGoogleKnowsAboutMe": "Google 了解我什麼"
+        "whatGoogleKnowsAboutMe": "Google 了解我什麼",
+        "WebDAV": "CLI & WebDAV",
+        "nas": "NAS"
       },
       "tools": {
         "title": "免費工具",

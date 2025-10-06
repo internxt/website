@@ -74,7 +74,8 @@
         "cyberSecurityGlossary": "Глоссарий по кибербезопасности",
         "cyberAwareness": "Осведомленность о кибербезопасности",
         "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
-        "WebDAV": "CLI & WebDAV"
+        "WebDAV": "CLI & WebDAV",
+        "nas": "NAS"
       },
       "tools": {
         "title": "Бесплатные инструменты",

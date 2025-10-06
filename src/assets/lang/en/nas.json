@@ -1,0 +1,107 @@
+{
+  "HeroSection": {
+    "label": "NAS",
+    "title": "QNAP & Synology **NAS Support**",
+    "subtitle": "Connect your NAS device to Internxt Drive for secure file storage and backups.",
+    "features": ["Synology and QNAP", "Secure transfers", "Encrypted syncing and backups"],
+    "cta": "Get Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "What is a NAS device, and why should I use it?",
+    "description": [
+      "A NAS (Network Attached Storage) is a dedicated storage system that connects to your home or office network, acting as a personal server for your files. Using it with Internxt lets you back up, sync, and manage data securely while keeping full control and ownership of your files.",
+      "Your data is encrypted and secure with Internxt’s post-quantum encryption, and the keys are managed on your device. This offers the convenience of NAS devices with the security and privacy of Internxt Drive."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Internxt NAS integrations",
+    "description": "Install the Docker app to connect your NAS to Synology or QNAP. This setup lets you securely access, manage, and sync your files while keeping full control over your data.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Synology is a popular NAS system that allows you to store, organize, and access your files from multiple devices. You can run apps, manage your backups, and share data securely.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "By connecting Internxt via Docker, you can securely manage, sync, and access your files directly on your QNAP NAS.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Internxt Drive for NAS",
+    "description": "Keep your files safe, accessible, and private",
+    "cta": "Get Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Backup your NAS in the cloud",
+    "description": "Manage, sync, and back up your data in the cloud with Internxt’s NAS support. Thanks to Internxt’s post-quantum encryption, your privacy is always guaranteed.",
+    "scrollableSection": {
+      "titles": ["Data loss protection", "Real-time syncing", "Security", "Own your data"],
+      "descriptions": [
+        "Never worry about losing your files. Internxt syncs your NAS automatically, so every document, photo, and project is safely backed up in the cloud. This protects against hardware failures or accidental deletion.",
+        "Keep your files up-to-date across all devices. Any changes you make on your NAS or in Internxt Drive are automatically reflected everywhere, ensuring your team or personal devices always have the latest version.",
+        "Your data is protected with post-quantum and zero-knowledge encryption, so all keys are managed and stored on your device for maximum privacy. Only you can access your files, and no hackers, third parties, or even Internxt can read your data.",
+        "Network Attached Storage, or NAS, lets you manage storage, set permissions, and create backups on your own terms, giving you flexibility and ownership over your information with the convenience and privacy of Internxt Drive."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "What Internxt offers with NAS devices",
+    "description": "Connect Internxt Drive to your NAS system for a secure cloud solution to backup and sync your files in total privacy.",
+    "cards": {
+      "titles": ["QNAP & Synology devices", "Access from anywhere", "Ransomware protection"],
+      "descriptions": [
+        "Enjoy all the benefits of Internxt with the flexibility and control of QNAP and Synology devices for effortless cloud storage management.",
+        "Get secure remote access to your files from anywhere, while giving you full control over your data.",
+        "Protect your files against ransomware with encrypted backups that let you quickly restore files affected by ransomware or accidental data loss."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "How to set up your NAS device with Internxt",
+    "description": "Instructions on how to set up and configure your NAS device with Internxt Drive:",
+    "cards": {
+      "titles": ["ReadMe", "User guide", "Open source"],
+      "descriptions": [
+        "Get the information you need about NAS capabilities with Internxt and usage instructions for different platforms from our GitHub page.",
+        "Learn how to set up your Network Attached Storage device with Internxt with examples and explanations.",
+        "Verify the security of Internxt and stay updated for new updates and features."
+      ],
+      "cta": ["Read guide", "Learn more", "See details"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Your files, your control",
+    "description": "Manage your NAS with Internxt",
+    "cta": "Get Internxt"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How do I set up my NAS system with Internxt?",
+        "answer": [
+          "First, you must install the Docker app, then connect it to Internxt. Once set up, you can manage and sync your files securely on NAS devices, servers, or any environment where Docker is supported."
+        ]
+      },
+      {
+        "question": "Do I need Docker to run Internxt on my NAS?",
+        "answer": [
+          "Yes, Internxt runs through Docker, which makes setup simple and ensures compatibility on popular NAS devices like QNAP or Synology."
+        ]
+      },
+      {
+        "question": "Which plan includes NAS support?",
+        "answer": [
+          "NAS support is included with the Ultimate plan, available as either a lifetime or annual subscription. If you already have an Internxt plan, you can upgrade your current lifetime plan to get more storage, access to NAS support, and enjoy all the other features of an Ultimate plan."
+        ]
+      },
+      {
+        "question": "How do I contact support?",
+        "answer": [
+          "You can contact our Customer Success team via live chat or by sending an email to hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}
