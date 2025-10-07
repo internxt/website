@@ -1,0 +1,157 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Internxt **折扣**与**促销**",
+    "subtitle": "您已解锁87%的折扣！在此获取您的Internxt优惠券代码",
+    "descriptionNormal": "所有套餐",
+    "features": ["完整隐私套件", "后量子加密", "开源且经过审计"],
+    "startFrom": {
+      "normal1": "起价 ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /月"
+    },
+    "claimDeal": "领取优惠"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt正在进行**超级促销**，拥有**出色的用户评价**，**端到端**和**后量子加密**，他们让自己的代码完全**开源**，对客户完全透明。\"",
+    "mashable": "\"使用Internxt**认真对待**您**重要数据的安全**。他们将**隐私**作为**首要关注点**，让您安心知道您的文件是**安全的**，平台重视用户的**透明度**。\"",
+    "pcWorld": "\"Internxt的**直观网页访问**、**文件同步**和**备份服务**令人**印象深刻**。这个加密的在线存储和备份服务**简单易用**，涵盖所有基础功能，当前的**终身套餐**是一个**超值优惠**。\""
+  },
+  "tableSection": {
+    "title": "Internxt套餐",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "选择您的套餐"
+    },
+    "appliedCupon": "优惠券代码 '{{couponCode}}' 应用成功",
+    "billingFrequency": {
+      "monthly": "按月",
+      "annually": "按年",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "discountLabel": "优惠券代码{{coupon}}已成功应用",
+    "freePlanCard": {
+      "eyeBrow": "Internxt免费版",
+      "description": "免费获得1GB加密云存储",
+      "cta": "选择套餐"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "howToRedeemSection": {
+    "title": "如何使用Internxt优惠券",
+    "description": "按照这三个简单步骤领取您的Internxt优惠券代码：",
+    "cards": {
+      "titles": ["选择您的套餐", "前往结算", "确认并享受！"],
+      "descriptions": [
+        "从上表中选择我们的3个年度或终身套餐之一，点击'选择套餐'来使用您的Internxt优惠券。",
+        "当您前往结算时，您的Internxt优惠券代码会自动应用！从这里，您只需输入详细信息即可进行付款。",
+        "一旦您点击'支付'，您的付款将被处理，您就可以开始享受新的Internxt账户及其所有功能了！"
+      ]
+    }
+  },
+  "NextGenSection": {
+    "title": "新一代加密技术，提供终极保护",
+    "description": "我们使用先进的加密技术保护您文件的安全和隐私，为您应对新兴威胁做好准备。",
+    "cta": "更好地了解我们",
+    "scrollableSection": {
+      "titles": ["无法破解和泄露的数据", "新一代安全", "开源且透明", "独立验证"],
+      "descriptions": [
+        "我们不存储密码或用户数据，您的所有数据在传输和静态时都经过加密。Internxt让您完全控制您的文件。您的数据是您的事务。保护它们是我们的工作。",
+        "Internxt是唯一使用端到端和后量子密码学自动加密您文件的云存储服务，这意味着只有您可以访问您的数据。",
+        "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了您的数据，我们没有什么可隐藏的。",
+        "我们完全符合GDPR并且100%安全，但不要只听我们的话。Internxt已经被欧洲领先的渗透测试公司Securitum独立审计和验证。"
+      ]
+    }
+  },
+  "WhatsIncludedSection": {
+    "title": "您的Internxt优惠券包含什么",
+    "description": "您的Internxt优惠券代码适用于我们所有的Essential、Premium和Ultimate年度和终身套餐。",
+    "cta": "更好地了解我们",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "Terminal", "antivirus", "cleaner", "hero", "meet", "vpn"],
+      "titles": ["Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
+      "descriptions": [
+        "Internxt Drive具有后量子和零知识加密功能，因此除了您之外没有人可以访问您的文件。为您的照片、视频和文件获得加密的云存储和备份。\n\n此外，加密备份和密码保护的文件共享提供针对勒索软件和数据泄露的最大保护。",
+        "所有付费套餐还包括Internxt Antivirus，为我们在线面临的日益增长的威胁提供增强保护。\n\n从Internxt应用程序运行完整或自定义扫描，以防御恶意软件、钓鱼和勒索软件，并清理和保护您的设备免受数据丢失或泄露。",
+        "获得我们的超快速、无限制VPN，最多支持5个位置，使用我们的私人VPN加密和保护您的连接。\n\n加密您的流量以防止外部对您连接的监视，这可能会泄露您的个人信息，在线浏览时享受完全隐私。",
+        "Internxt Cleaner通过从您的计算机中删除垃圾文件或重复文件来提升设备性能和健康状况。\n\n释放存储空间，提高设备速度，并通过一键删除不需要的文件来保护您的隐私。",
+        "Internxt Meet提供由后量子密码学驱动的完全私密视频通话，确保您的会议安全、保密且无追踪器。\n\n在完全隐私中与朋友、家人或团队成员主持和参加视频通话，不受外部公司监控您的聊天。",
+        "Internxt在Windows、Mac、Linux和移动设备上可用，让您通过从任何地方、任何设备访问您的云来完全控制您的云存储。\n\n对于高级用户，Internxt提供对WebDAV、Rclone和NAS的支持，提供您在完全隐私中管理文件所需的一切。"
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "领取您的专属Internxt优惠券",
+    "description": "87%折扣获得最大隐私保护",
+    "cta": "领取优惠"
+  },
+  "ctaSectionV2": {
+    "title": "87%折扣获得完整隐私保护",
+    "description": "使用您的Internxt优惠券代码获得一生难得的优惠",
+    "cta": "领取优惠"
+  },
+  "FaqSection": {
+    "title": "有疑问？我们有答案",
+    "faq": [
+      {
+        "question": "Internxt能访问我的文件吗？",
+        "answer": [
+          "不能。Internxt以及任何其他第三方都无法访问您的文件、照片或数据。",
+          "Internxt服务具有零知识加密功能，这意味着只有您可以访问和解密您的私人数据和信息。此外，Internxt使用后量子密码学，这是保护您的信息免受任何威胁的最先进技术。"
+        ]
+      },
+      {
+        "question": "Internxt存储我的密码吗？",
+        "answer": [
+          "不会。因此，Internxt无法存储您的密码。",
+          "您的Internxt密码对您来说是独一无二的，用于加密和解密您的Internxt数据。但如果您想更改密码，可以从我们的应用程序中进行更改。"
+        ]
+      },
+      {
+        "question": "我可以启用双因素身份验证(2FA)吗？",
+        "answer": [
+          "可以。您可以通过Internxt网页应用程序为您的账户设置双因素身份验证。",
+          "您也可以使用Authy或其他2FA工具为Internxt生成个人2FA代码。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal或加密货币支付吗？",
+        "answer": [
+          "Internxt目前接受借记卡和信用卡（Mastercard、VISA、American Express等）。您也可以通过PayPal、Crypto和Klarna支付。",
+          "根据要求，我们也接受加密货币和SEPA直接借记。如果您对支付方式有疑问，只需发送邮件至[hello@internxt.com](mailto:hello@internxt.com)。"
+        ]
+      },
+      {
+        "question": "Internxt的退款政策是什么？",
+        "answer": [
+          "Internxt对所有付费订阅提供标准的30天退款保证，从您订阅时开始计算。",
+          "如果您对我们的服务不满意，请通过[hello@internxt.com](mailto:hello@internxt.com)联系我们并申请退款。"
+        ]
+      },
+      {
+        "question": "如何联系客服？",
+        "answer": [
+          "找不到您要找的内容？您可以通过在线聊天或发送邮件至[hello@internxt.com](mailto:hello@internxt.com)联系我们的技术支持团队。"
+        ]
+      }
+    ]
+  }
+}

@@ -2,12 +2,8 @@
   "HeroSection": {
     "title": "Internxt，{{competitor}}的安全替代方案",
     "description": "正在寻找pCloud的安全替代方案？Internxt提供首个具有后量子加密的云存储服务，以及完整的隐私产品套件，确保最大的隐私和安全性。",
-    "features": [
-      "私密存储您的视频",
-      "后量子加密和零知识加密",
-      "开源且经过验证"
-    ],
-    "getPrivacy": "享受{{percentage}}%的折扣，获得完全隐私保护",
+    "features": ["私密存储您的视频", "后量子加密和零知识加密", "开源且经过验证"],
+    "getPrivacy": "享受${{percentage}}%的折扣，获得完全隐私保护",
     "cta": "选择套餐"
   },
   "HeaderSection": {
@@ -241,14 +237,7 @@
     "title": "为什么选择Internxt作为pCloud的替代方案？",
     "description": "了解Internxt的功能，了解我们为什么是比pCloud更安全和私密的替代方案",
     "scrollableSection": {
-      "titles": [
-        "开源且透明",
-        "安全验证",
-        "零数据追踪",
-        "GDPR合规",
-        "先进加密",
-        "灵活存储套餐"
-      ],
+      "titles": ["开源且透明", "安全验证", "零数据追踪", "GDPR合规", "先进加密", "灵活存储套餐"],
       "descriptions": [
         "Internxt是pCloud的开源替代方案，我们所有产品和服务的代码都在GitHub上可用。我们对数据安全的承诺确保您的数据如何处理和保护的透明度。",
         "Internxt的服务已经过欧洲领先渗透测试公司的安全专家审查。这确保您的数据对黑客和数据泄露等外部威胁保持安全。",
@@ -296,9 +285,7 @@
       },
       {
         "question": "我可以向终身套餐添加更多存储空间吗？",
-        "answer": [
-          "是的，如果您需要添加更多存储空间，可以从Internxt账户设置中升级您的套餐。"
-        ]
+        "answer": ["是的，如果您需要添加更多存储空间，可以从Internxt账户设置中升级您的套餐。"]
       },
       {
         "question": "我可以用信用卡、PayPal或加密货币付款吗？",
