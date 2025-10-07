@@ -1,18 +1,10 @@
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import {
-  CellTower,
-  Check,
-  CloudArrowUp,
-  Envelope,
-  ShieldPlus,
-  Sparkle,
-  VideoConference,
-  X,
-} from '@phosphor-icons/react';
+import { CellTower, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference, X } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
+import { HighlightText } from '../components/HighlightText';
 
 interface HeroSectionForPartnerProps {
   textContent: any;
@@ -67,25 +59,6 @@ export default function HeroSection({
 
   const parsePercentText = (text: string) => {
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
-  };
-
-  const HighlightText = ({ text, className = '' }) => {
-    const parts = text.split(/(\*\*.*?\*\*)/);
-
-    return (
-      <span className={className}>
-        {parts.map((part, index) => {
-          if (part.startsWith('**') && part.endsWith('**')) {
-            return (
-              <span key={index} className="text-primary">
-                {part.slice(2, -2)}
-              </span>
-            );
-          }
-          return <span key={index}>{part}</span>;
-        })}
-      </span>
-    );
   };
 
   return (

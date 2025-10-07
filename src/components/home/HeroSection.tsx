@@ -7,6 +7,7 @@ import Link from 'next/link';
 import Countdown from '../components/Countdown';
 import { currencyService } from '@/services/currency.service';
 import { useEffect, useState } from 'react';
+import { HighlightText } from '../components/HighlightText';
 
 const Animation = dynamic(() => import('./components/Animation'));
 
@@ -73,25 +74,6 @@ export default function HeroSection({
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
     return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
-  };
-
-  const HighlightText = ({ text, className = '' }) => {
-    const parts = text.split(/(\*\*.*?\*\*)/);
-
-    return (
-      <span className={className}>
-        {parts.map((part, index) => {
-          if (part.startsWith('**') && part.endsWith('**')) {
-            return (
-              <span key={index} className="text-primary">
-                {part.slice(2, -2)}
-              </span>
-            );
-          }
-          return <span key={index}>{part}</span>;
-        })}
-      </span>
-    );
   };
 
   return (
