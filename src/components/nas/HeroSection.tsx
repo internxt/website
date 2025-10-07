@@ -54,7 +54,7 @@ const HeroSection = ({ textContent }) => (
         {textContent.cta}
       </Link>
     </div>
-    <Image src={getImage('/images/NAS/NAS.webp')} alt="NAS HeroSection" width={800} height={500} quality={100} />
+    <Image src={getImage('/images/NAS/NAS.webp')} alt="NAS Cloud Image" width={800} height={500} quality={100} />
   </section>
 );
 
