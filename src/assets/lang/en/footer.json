@@ -32,7 +32,8 @@
         "token": "Token",
         "pricing": "Pricing",
         "business": "Internxt for Business",
-        "family": "Internxt for Families"
+        "family": "Internxt for Families",
+        "nas": "NAS"
       },
       "company": {
         "title": "Company",
@@ -73,8 +74,7 @@
         "directoryOfPrivacyOrganizations": "Directory of Privacy Organizations",
         "cyberAwareness": "Cyber Awareness",
         "whatGoogleKnowsAboutMe": "What Google Knows",
-        "WebDAV": "CLI & WebDAV",
-        "nas": "NAS"
+        "WebDAV": "CLI & WebDAV"
       },
       "tools": {
         "title": "Free Tools",
