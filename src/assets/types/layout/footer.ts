@@ -91,6 +91,7 @@ export interface Resources {
   cyberAwareness: string;
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
+  coupons: string;
 }
 
 export interface Tools {
