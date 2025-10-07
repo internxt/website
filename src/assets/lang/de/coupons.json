@@ -40,7 +40,7 @@
     },
     "discountLabel": "Gutscheincode {{coupon}} erfolgreich angewendet",
     "freePlanCard": {
-      "eyeBrow": "Internxt Kostenlos",
+      "eyeBrow": "Kostenlos",
       "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
       "cta": "Tarif wählen"
     },
