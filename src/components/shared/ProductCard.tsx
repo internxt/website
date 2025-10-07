@@ -31,7 +31,9 @@ const ProductCard = ({
         <h4 className="my-10 max-w-xs text-30 font-semibold leading-tight text-white lg:text-3xl">
           {textContent.title}
         </h4>
-        <h5 className="mb-4 max-w-[340px] text-base leading-tight text-white lg:text-xl">{textContent.description}</h5>
+        <h5 className="mb-4 max-w-[340px] text-start text-base leading-tight text-white lg:text-xl">
+          {textContent.description}
+        </h5>
         <div className="flex justify-start">
           <Link
             className="flex w-max items-center rounded-lg bg-primary px-5 py-3 font-medium text-white"
