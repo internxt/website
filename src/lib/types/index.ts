@@ -155,7 +155,9 @@ export enum PromoCodeName {
   Trickyhash = 'trickyhash',
   Reddit = 'REDDIT87',
   Mega87 = 'MEGA87',
-  Secure ='SECURE'
+  Secure = 'SECURE',
+  Toquederetoque = 'TOQUEDERETOQUE',
+  VIPVLC = 'VIPVLC',
 }
 
 export interface PromoCodeProps {

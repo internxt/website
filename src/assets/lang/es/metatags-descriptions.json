@@ -373,5 +373,15 @@
     "id": "mega-alternative",
     "title": "Internxt — Una alternativa segura, cifrada y de código abierto a Mega",
     "description": "El almacenamiento en la nube de Internxt es una alternativa segura a Mega. Protegemos tus archivos con cifrado de extremo a extremo, software de código abierto y características centradas en la privacidad."
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet – Videollamadas Seguras y Privadas",
+    "description": "Meet ofrece videollamadas privadas con cifrado post-cuántico y de extremo a extremo para las videoconferencias más seguras."
+  },
+  {
+    "id": "internxt-cleaner",
+    "title": "Internxt – Optimiza y Limpia tu Ordenador",
+    "description": "Encuentra y elimina archivos basura para aumentar la velocidad, capacidad de respuesta y rendimiento del dispositivo."
   }
 ]

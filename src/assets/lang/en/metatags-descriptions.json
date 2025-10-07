@@ -421,7 +421,7 @@
   },
   {
     "id": "internxt-cleaner",
-    "title": "Internxt –  Optimize and Clean your Computer",
+    "title": "Internxt Cleaner — Optimize and Clean your Computer",
     "description": "Find and clear junk files to boost device speed, responsiveness, and performance."
   },
   {
@@ -483,5 +483,10 @@
     "id": "cloud-for-videos",
     "title": " Internxt – Cloud Storage for Video Files",
     "description": "Internxt offers cloud storage for video files to store HD, 4K, and 8K videos which are secured with post-quantum encryption for maximum privacy."
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet – Secure and Private Video Calls",
+    "description": "Meet offers private video calls with post-quantum and end-to-end encryption for the most secure video conferencing."
   }
 ]

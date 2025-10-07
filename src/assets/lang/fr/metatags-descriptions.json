@@ -278,5 +278,10 @@
     "id": "mega-alternative",
     "title": "Internxt — Une alternative sécurisée, chiffrée et open source à Mega",
     "description": "Le stockage cloud d'Internxt est une alternative sécurisée à Mega. Nous protégeons vos fichiers avec un chiffrement de bout en bout, des logiciels open source et des fonctionnalités axées sur la confidentialité."
+  },
+  {
+    "id": "meet",
+    "title": "Internxt Meet – Appels Vidéo Sécurisés et Privés",
+    "description": "Meet offre des appels vidéo privés avec chiffrement post-quantique et de bout en bout pour les visioconférences les plus sécurisées."
   }
 ]

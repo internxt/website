@@ -1,0 +1,104 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "**Privacy impareggiabile per** videochiamate sicure",
+    "description": "Internxt Meet offre videochiamate completamente private alimentate da crittografia post-quantistica, garantendo che le tue riunioni siano sicure, private e confidenziali.",
+    "cta": "Ottieni Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "Goditi la libertà di parola e la privacy",
+    "description": "Chatta con altri attraverso la nostra piattaforma di video chat crittografata per riunioni private protette con la più avanzata crittografia post-quantistica.",
+    "scrollableSection": {
+      "titles": [
+        "Videochiamate private",
+        "Sicurezza",
+        "Velocità e qualità video superiori",
+        "Open source e trasparente"
+      ],
+      "descriptions": [
+        "Usa Internxt Meet per videochiamate o chiamate audio che vuoi mantenere private. Zero tracker. Zero raccolta dati e niente che colleghi te o chiunque altro alle tue chiamate.",
+        "Tutte le tue conversazioni, video, chat e messaggi sono tenuti sicuri con crittografia a conoscenza zero. Ti diamo il controllo totale della tua privacy, e non accediamo mai alle tue conversazioni o messaggi.",
+        "L'IA alimenta videochiamate cristalline alla velocità della luce, ottimizzando larghezza di banda e qualità garantendo al contempo crittografia end-to-end per privacy totale.",
+        "Siamo orgogliosi di quello che facciamo, quindi il nostro codice è reso pubblico su GitHub e può essere personalmente rivisto, controllato e verificato da chiunque. Non abbiamo nulla da nascondere tranne i tuoi dati."
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "Incontrati in totale privacy",
+    "description": "Connettiti con tranquillità.",
+    "cta": "Ottieni Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "L'alternativa Meet più sicura alle Big Tech",
+    "description": "Unisciti a Internxt nella costruzione di un'esperienza web più sicura e privata con la nostra suite crittografata e privata di prodotti progettata per darti il controllo della tua privacy. \n\nGoditi Mail, Meet, Antivirus, Cleaner, Drive e VPN come parte del tuo piano Internxt.",
+    "accordionSection": {
+      "titles": ["Privacy Europea", "Sicurezza", "Sostenibilità"],
+      "descriptions": [
+        "Internxt rispetta il GDPR, che protegge i tuoi dati con le migliori leggi sulla privacy per sicurezza e trasparenza sulle tue informazioni personali.",
+        "Internxt utilizza crittografia end-to-end e post-quantistica, fornendoti la piattaforma di videoconferenza più sicura per la tua privacy.",
+        "Siamo impegnati per un futuro più sostenibile e verde, quindi i nostri prodotti utilizzano solo tecnologie di alimentazione rinnovabili ed efficienti dal punto di vista energetico."
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "Progettato per soddisfare tutte le esigenze di privacy",
+    "description": "Crediamo che tutti abbiano diritto alla privacy, ecco perché Internxt Mail è costruito per soddisfare le esigenze di tutti coloro che necessitano di un provider email sicuro.",
+    "scrollableSection": {
+      "images": ["personal", "business", "lawyers", "medical"],
+      "titles": ["Personale", "Aziendale", "Avvocati", "Medico"],
+      "descriptions": [
+        "Organizza videochiamate private tramite un link sicuro e chatta con i tuoi ospiti, sapendo che le tue conversazioni sono protette.",
+        "Incontrati in privato con i tuoi clienti, team o dipartimenti per mantenere informazioni sensibili o confidenziali private e protette da fughe di notizie.",
+        "Incontra altri per condividere e discutere informazioni in completa privacy per proteggere i privilegi del cliente.",
+        "Riduci il rischio di violazioni dei dati medici organizzando e condividendo la tua videochiamata privata con i pazienti."
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Videochiamate che danno priorità alla privacy",
+    "description": "Parla liberamente e connettiti in sicurezza.",
+    "cta": "Ottieni Internxt"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo le risposte",
+    "faq": [
+      {
+        "question": "Cos'è Internxt Meet?",
+        "answer": [
+          "Internxt Meet è la piattaforma di videoconferenza più sicura dove puoi parlare, chattare e organizzare riunioni in completa privacy. Con Internxt Meet, tutte le tue conversazioni e chiamate si svolgono in completa privacy grazie alla nostra crittografia avanzata e pluripremiata. Tutte le chiamate tra te e il tuo team rimangono private e sicure."
+        ]
+      },
+      {
+        "question": "Internxt Meet è un'alternativa a Google Meet?",
+        "answer": [
+          "Sì, Internxt Meet è un'alternativa sicura a Google Meet, Zoom e Teams. Utilizziamo crittografia a conoscenza zero con crittografia post-quantistica per garantire che solo tu possa sentire o vedere le tue videochiamate. Nemmeno Internxt ha accesso ai tuoi chat o chiamate."
+        ]
+      },
+      {
+        "question": "Internxt Meet è gratuito?",
+        "answer": [
+          "Internxt Meet ist verfügbar, wenn Sie unsere Ultimate-Pläne abonnieren und bietet Zugang zu unserer vollständigen Suite datenschutzorientierter Produkte, einschließlich Internxt Drive, Mail, Antivirus, Meet, Cleaner und VPN."
+        ]
+      },
+      {
+        "question": "Come posso contattare il supporto?",
+        "answer": [
+          "Non riesci a trovare quello che stai cercando? Puoi contattare il nostro team di Assistenza Clienti tramite chat dal vivo o inviando un'email a hello@internxt.com."
+        ]
+      },
+      {
+        "question": "Posso pagare con Carta, PayPal o Crypto?",
+        "answer": [
+          "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, Crypto, Klarna e altri."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia standard di rimborso di 30 giorni su tutti gli abbonamenti a pagamento, che inizia a decorrere dal momento in cui ti abboni.",
+          "E se mai non fossi soddisfatto del nostro servizio, contattaci a hello@internxt.com e richiedi un rimborso."
+        ]
+      }
+    ]
+  }
+}

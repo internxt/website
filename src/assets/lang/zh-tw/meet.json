@@ -1,0 +1,97 @@
+{
+  "HeroSection": {
+    "label": "Meet",
+    "title": "**無與倫比的隱私**保護安全視訊通話",
+    "description": "Internxt Meet 提供由後量子密碼學驅動的完全私密視訊通話，確保您的會議安全、私密且保密。",
+    "cta": "獲取 Internxt"
+  },
+  "enjoyPrivacySection": {
+    "title": "享受言論自由和隱私保護",
+    "description": "透過我們的加密視訊聊天平台與他人聊天，享受受最先進後量子加密保護的私人會議。",
+    "scrollableSection": {
+      "titles": ["私密視訊通話", "安全", "更高速度和視訊品質", "開源透明"],
+      "descriptions": [
+        "使用 Internxt Meet 進行您想保持私密的視訊或音訊通話。零追蹤器。零資料收集，沒有任何東西將您或其他任何人與您的通話聯繫起來。",
+        "您的所有對話、視訊、聊天和訊息都透過零知識加密保持安全。我們給您完全控制您的隱私，我們永遠不會存取您的對話或訊息。",
+        "AI 驅動閃電般快速的水晶般清晰視訊通話，優化頻寬和品質，同時確保端對端加密以實現完全隱私。",
+        "我們為自己所做的感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。除了您的資料外，我們沒有什麼可隱藏的。"
+      ]
+    }
+  },
+  "ctaSection": {
+    "title": "在完全隱私中會面",
+    "description": "安心連接。",
+    "cta": "獲取 Internxt Meet"
+  },
+  "accordionSection": {
+    "title": "最安全的大科技公司 Meet 替代方案",
+    "description": "加入 Internxt，與我們一起建構更安全、更私密的網路體驗，我們的加密私密產品套件旨在讓您控制自己的隱私。\n\n享受郵件、Meet、防毒軟體、清理工具、雲端硬碟和 VPN 作為您 Internxt 計劃的一部分。",
+    "accordionSection": {
+      "titles": ["歐洲隱私保護", "安全性", "永續性"],
+      "descriptions": [
+        "Internxt 遵守 GDPR，用最佳的隱私法保護您的資料，確保您個人資訊的安全和透明度。",
+        "Internxt 使用端對端和後量子加密，為您提供最安全的視訊會議平台來保護您的隱私。",
+        "我们致力于创造更可持续和绿色的未来,因此我们的产品仅使用可再生和节能的电力技术。"
+      ]
+    }
+  },
+  "desginedSection": {
+    "title": "專為滿足所有隱私需求而設計",
+    "description": "我們相信每個人都有隱私權，這就是為什麼 Internxt Mail 專為滿足所有需要安全電子郵件提供商的人的需求而建構。",
+    "scrollableSection": {
+      "images": ["personal", "business", "lawyers", "medical"],
+      "titles": ["個人", "商務", "律師", "醫療"],
+      "descriptions": [
+        "透過安全連結舉辦私人視訊通話，與您的來賓聊天，知道您的對話受到保護。",
+        "與您的客戶、團隊或部門私密會面，保持敏感或機密資訊的私密性並防止洩露。",
+        "與他人會面，在完全隱私中分享和討論資訊，以保護客戶特權。",
+        "透過舉辦和分享您自己與患者的私人視訊通話，降低醫療資料洩露的風險。"
+      ]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "隱私優先的視訊通話",
+    "description": "自由交談，安全連接。",
+    "cta": "獲取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有疑問？我們為您解答",
+    "faq": [
+      {
+        "question": "什麼是 Internxt Meet？",
+        "answer": [
+          "Internxt Meet 是最安全的視訊會議平台，您可以在其中完全私密地聊天、通話和舉辦會議。透過 Internxt Meet，藉助我們先進且屢獲殊榮的加密技術，您的所有對話和通話都完全保密。您與團隊之間的所有通話都保持私密和安全。"
+        ]
+      },
+      {
+        "question": "Internxt Meet 是 Google Meet 的替代品嗎？",
+        "answer": [
+          "是的，Internxt Meet 是 Google Meet、Zoom 和 Teams 的安全替代品。我們使用零知識加密和後量子密碼學，確保只有您能聽到或看到您的視訊通話。即使是 Internxt 也無法存取您的聊天或通話。"
+        ]
+      },
+      {
+        "question": "Internxt Meet 免費嗎？",
+        "answer": [
+          "订阅我们的旗舰版套餐即可使用 Internxt Meet，该套餐可访问我们专注于隐私的全套产品，包括 Internxt Drive、Mail、Antivirus、Meet、Cleaner 和 VPN"
+        ]
+      },
+      {
+        "question": "如何聯絡支援團隊？",
+        "answer": ["找不到您要尋找的內容？您可以透過線上聊天或發送郵件至 hello@internxt.com 聯絡我們的客戶成功團隊。"]
+      },
+      {
+        "question": "我可以用銀行卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受借記卡和信用卡（萬事達卡、VISA、美國運通等）。您也可以透過 PayPal、加密貨幣、Klarna 等其他方式付款。"
+        ]
+      },
+      {
+        "question": "Internxt 的退款政策是什麼？",
+        "answer": [
+          "Internxt 為所有付費訂閱提供標準的30天退款保證，從您訂閱之日起開始計算。",
+          "如果您對我們的服務不滿意，請透過 hello@internxt.com 聯絡我們並申請退款。"
+        ]
+      }
+    ]
+  }
+}

@@ -114,4 +114,5 @@ export interface Products {
   new: string;
   antivirus: string;
   cleaner: string;
+  meet: string;
 }
