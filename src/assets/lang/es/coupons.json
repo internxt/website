@@ -40,7 +40,7 @@
     },
     "discountLabel": "Código de cupón {{coupon}} aplicado exitosamente",
     "freePlanCard": {
-      "eyeBrow": "Internxt Gratuito",
+      "eyeBrow": "Gratuito",
       "description": "Obtén 1 GB de almacenamiento en la nube cifrado gratis",
       "cta": "Seleccionar plan"
     },

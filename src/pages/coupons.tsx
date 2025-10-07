@@ -12,10 +12,10 @@ import { PromoCodeName } from '@/lib/types';
 import ReviewsSection from '@/components/home/ReviewsSection';
 import { CouponPageText } from '@/assets/types/couponsPage';
 import HeroSection from '@/components/coupons/HeroSection';
-import RedeemCouponsSectionSection from '@/components/coupons/ReedeemCouponSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import HorizontalScrollableSectionWithPhotosSection from '@/components/coupons/HorizontalScrollableSectionWithPhotos';
+import RedeemCouponsSection from '@/components/coupons/ReedeemCouponSection';
 
 interface HomeProps {
   lang: GetServerSidePropsContext['locale'];
@@ -81,12 +81,12 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        sectionDetails="lg:py-20 xl:py-32"
+        sectionDetails="lg:py-20"
         couponCodeName={individualCoupon?.name}
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <RedeemCouponsSectionSection textContent={textContent.howToRedeemSection} />
+      <RedeemCouponsSection textContent={textContent.howToRedeemSection} />
 
       <HorizontalScrollableSection
         textContent={textContent.NextGenSection}
@@ -108,7 +108,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-20"
+        bgPadding="lg:pb-20 pb-20 p-10"
       />
 
       <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} />
@@ -128,7 +128,7 @@ const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerL
         }
         bgGradientContainerColor="background: linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-20"
+        bgPadding="lg:pb-20 pb-20 p-10"
         bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 
