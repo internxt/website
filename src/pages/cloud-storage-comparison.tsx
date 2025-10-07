@@ -17,7 +17,7 @@ import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 
-const URL_REDIRECT = 'https://drive.internxt.com/new';
+const URL_REDIRECT = 'https://internxt.com/specialoffer';
 
 const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, footerLang, lang }) => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'comparison');

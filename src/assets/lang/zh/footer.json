@@ -32,8 +32,7 @@
         "token": "Token",
         "pricing": "价格",
         "business": "Internxt 企业版",
-        "family": "Internxt 为家庭",
-        "nas": "NAS"
+        "family": "Internxt 为家庭"
       },
       "company": {
         "title": "公司",
@@ -77,7 +76,8 @@
         "whatGoogleKnowsAboutMe": "What Google Knows",
         "comparison": "比较",
         "WebDAV": "CLI & WebDAV",
-        "coupons": "优惠券"
+        "coupons": "优惠券",
+        "nas": "NAS"
       },
       "tools": {
         "title": "免费的工具",

@@ -31,8 +31,7 @@
         "token": "Токен",
         "pricing": "Тарифные планы",
         "business": "Internxt для Бизнеса",
-        "family": "Internxt для Семей",
-        "nas": "NAS"
+        "family": "Internxt для Семей"
       },
       "company": {
         "title": "Компания",
@@ -76,7 +75,8 @@
         "cyberAwareness": "Осведомленность о кибербезопасности",
         "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
         "WebDAV": "CLI & WebDAV",
-        "coupons": "Купоны"
+        "coupons": "Купоны",
+        "nas": "NAS"
       },
       "tools": {
         "title": "Бесплатные инструменты",

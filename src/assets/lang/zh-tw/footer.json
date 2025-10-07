@@ -32,8 +32,7 @@
         "antivirus": "Internxt Antivirus",
         "pricing": "價格",
         "business": "Internxt 企業版",
-        "family": "Internxt 為家庭",
-        "nas": "NAS"
+        "family": "Internxt 為家庭"
       },
       "company": {
         "title": "公司",
@@ -75,7 +74,8 @@
         "cyberAwareness": "網絡安全意識",
         "whatGoogleKnowsAboutMe": "Google 了解我什麼",
         "WebDAV": "CLI & WebDAV",
-        "coupons": "優惠券"
+        "coupons": "優惠券",
+        "nas": "NAS"
       },
       "tools": {
         "title": "免費工具",
@@ -107,4 +107,3 @@
     "close": "好的，關閉"
   }
 }
-
