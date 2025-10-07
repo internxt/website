@@ -6,6 +6,7 @@ interface HorizontalScrollableProps {
   bgGradient?: string;
   cardsWidth?: string;
   cardsHeight?: string;
+  needsDivider?: boolean;
 }
 
 export default function HorizontalScrollableSection({
@@ -13,11 +14,14 @@ export default function HorizontalScrollableSection({
   bgGradient,
   cardsWidth = '345px',
   cardsHeight = 'auto',
+  needsDivider = true,
 }: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [cardWidth, setCardWidth] = useState(361);
+  const [maxCardHeight, setMaxCardHeight] = useState<number | null>(null);
 
   const maxIndex = isMobile
     ? textContent.scrollableSection.titles.length - 2
@@ -37,11 +41,20 @@ export default function HorizontalScrollableSection({
     };
 
     updateScreenSize();
-
     window.addEventListener('resize', updateScreenSize);
-
     return () => window.removeEventListener('resize', updateScreenSize);
   }, [cardsWidth]);
+
+  useEffect(() => {
+    if (cardsHeight === 'auto' && cardRefs.current.length > 0) {
+      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref!.offsetHeight);
+
+      if (heights.length > 0) {
+        const max = Math.max(...heights);
+        setMaxCardHeight(max);
+      }
+    }
+  }, [textContent, cardsHeight]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current && currentIndex > 0) {
@@ -80,6 +93,13 @@ export default function HorizontalScrollableSection({
     return window.innerWidth >= 1024 ? '400px' : '345px';
   };
 
+  const getCardHeight = () => {
+    if (cardsHeight !== 'auto') {
+      return cardsHeight;
+    }
+    return maxCardHeight ? `${maxCardHeight}px` : 'auto';
+  };
+
   return (
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
@@ -88,7 +108,9 @@ export default function HorizontalScrollableSection({
       style={{ background: bgGradient }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+        {needsDivider && (
+          <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32"></div>
+        )}
 
         <p className="text-30 font-bold leading-tight text-gray-95 lg:w-[700px] lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
@@ -123,15 +145,15 @@ export default function HorizontalScrollableSection({
             {textContent.scrollableSection.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
                 <div
-                  className="flex flex-col rounded-16 bg-white p-8"
+                  ref={(el) => (cardRefs.current[index] = el)}
+                  className="flex flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
                   style={{
                     width: getCardWidth(),
-                    height: cardsHeight,
                     minHeight: cardsHeight === 'auto' ? 'auto' : cardsHeight,
                   }}
                 >
-                  <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
-                  <p className="flex-1 text-base font-normal leading-tight text-gray-55">
+                  <p className="pb-[16px] text-lg font-medium text-gray-95 lg:pb-6 lg:text-xl">{title}</p>
+                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
                     {textContent.scrollableSection.descriptions[index]}
                   </p>
                 </div>
