@@ -47,7 +47,7 @@ export default function HorizontalScrollableSection({
 
   useEffect(() => {
     if (cardsHeight === 'auto' && cardRefs.current.length > 0) {
-      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref.offsetHeight);
+      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref!.offsetHeight);
 
       if (heights.length > 0) {
         const max = Math.max(...heights);
