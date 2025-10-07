@@ -469,5 +469,10 @@
     "id": "meet",
     "title": "Internxt Meet – 安全私密的視訊通話",
     "description": "Meet 提供具有後量子和端到端加密的私人視訊通話，打造最安全的視訊會議體驗。"
+  },
+  {
+    "id": "nas",
+    "title": "Internxt – QNAP 和 Synology NAS",
+    "description": "使用 Internxt 在云端备份您的 QNAP 和 Synology NAS 设备。"
   }
 ]

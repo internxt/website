@@ -304,5 +304,10 @@
     "id": "meet",
     "title": "Internxt Meet – Videochiamate Sicure e Private",
     "description": "Meet offre videochiamate private con crittografia post-quantistica e end-to-end per le videoconferenze più sicure."
+  },
+  {
+    "id": "nas",
+    "title": "Internxt – NAS QNAP e Synology",
+    "description": "Esegui il backup dei tuoi dispositivi NAS QNAP e Synology nel cloud con Internxt."
   }
 ]

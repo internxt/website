@@ -32,7 +32,8 @@
         "token": "Token",
         "business": "Internxt para Empresas",
         "family": "Internxt para Familias",
-        "pricing": "Precios"
+        "pricing": "Precios",
+        "nas": "NAS"
       },
       "company": {
         "title": "Compañía",

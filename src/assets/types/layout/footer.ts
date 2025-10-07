@@ -78,6 +78,7 @@ export interface Products {
   business: string;
   pricing: string;
   family: string;
+  nas: string;
 }
 
 export interface Resources {

@@ -1,0 +1,105 @@
+{
+  "HeroSection": {
+    "label": "NAS",
+    "title": "QNAP 和 Synology **NAS 支持**",
+    "subtitle": "将您的 NAS 设备连接到 Internxt Drive，实现安全的文件存储和备份。",
+    "features": ["Synology 和 QNAP", "安全传输", "加密同步和备份"],
+    "cta": "获取 Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "什么是 NAS 设备，我为什么要使用它？",
+    "description": [
+      "NAS（网络附加存储）是一个专用存储系统，连接到您的家庭或办公网络，充当您文件的个人服务器。将其与 Internxt 配合使用，可让您安全地备份、同步和管理数据，同时保持对文件的完全控制和所有权。",
+      "您的数据通过 Internxt 的后量子加密进行加密和保护，密钥在您的设备上管理。这提供了 NAS 设备的便利性以及 Internxt Drive 的安全性和隐私性。"
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Internxt NAS 集成",
+    "description": "安装 Docker 应用程序以将您的 NAS 连接到 Synology 或 QNAP。此设置让您可以安全地访问、管理和同步文件，同时保持对数据的完全控制。",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Synology 是一个流行的 NAS 系统，允许您从多个设备存储、组织和访问文件。您可以运行应用程序、管理备份并安全地共享数据。",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "通过 Docker 连接 Internxt，您可以直接在 QNAP NAS 上安全地管理、同步和访问文件。",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "用于 NAS 的 Internxt Drive",
+    "description": "让您的文件保持安全、可访问和私密",
+    "cta": "获取 Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "在云端备份您的 NAS",
+    "description": "使用 Internxt 的 NAS 支持在云端管理、同步和备份您的数据。借助 Internxt 的后量子加密，您的隐私始终得到保障。",
+    "scrollableSection": {
+      "titles": ["数据丢失保护", "实时同步", "安全性", "拥有您的数据"],
+      "descriptions": [
+        "永远不用担心丢失文件。Internxt 自动同步您的 NAS，因此每个文档、照片和项目都安全地备份在云端。这可以防止硬件故障或意外删除。",
+        "在所有设备上保持文件最新。您在 NAS 或 Internxt Drive 中所做的任何更改都会自动在所有地方反映，确保您的团队或个人设备始终拥有最新版本。",
+        "您的数据受到后量子和零知识加密的保护，因此所有密钥都在您的设备上管理和存储，以实现最大的隐私保护。只有您可以访问您的文件，任何黑客、第三方甚至 Internxt 都无法读取您的数据。",
+        "网络附加存储（NAS）让您可以按照自己的条件管理存储、设置权限和创建备份，为您提供对信息的灵活性和所有权，同时享受 Internxt Drive 的便利性和隐私性。"
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Internxt 为 NAS 设备提供的功能",
+    "description": "将 Internxt Drive 连接到您的 NAS 系统，获得安全的云解决方案，以完全隐私的方式备份和同步文件。",
+    "cards": {
+      "titles": ["QNAP 和 Synology 设备", "随时随地访问", "勒索软件保护"],
+      "descriptions": [
+        "享受 Internxt 的所有优势，以及 QNAP 和 Synology 设备的灵活性和控制，轻松管理云存储。",
+        "从任何地方安全地远程访问您的文件，同时完全控制您的数据。",
+        "通过加密备份保护您的文件免受勒索软件攻击，让您可以快速恢复受勒索软件或意外数据丢失影响的文件。"
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "如何使用 Internxt 设置您的 NAS 设备",
+    "description": "有关如何使用 Internxt Drive 设置和配置 NAS 设备的说明：",
+    "cards": {
+      "titles": ["自述文件", "用户指南", "开源"],
+      "descriptions": [
+        "从我们的 GitHub 页面获取有关 Internxt NAS 功能的信息以及不同平台的使用说明。",
+        "通过示例和解释学习如何使用 Internxt 设置网络附加存储设备。",
+        "验证 Internxt 的安全性，并及时了解新的更新和功能。"
+      ],
+      "cta": ["阅读指南", "了解更多", "查看详情"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "您的文件，您的控制",
+    "description": "使用 Internxt 管理您的 NAS",
+    "cta": "获取 Internxt"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "如何使用 Internxt 设置我的 NAS 系统？",
+        "answer": [
+          "首先，您必须安装 Docker 应用程序，然后将其连接到 Internxt。设置完成后，您可以在 NAS 设备、服务器或任何支持 Docker 的环境中安全地管理和同步文件。"
+        ]
+      },
+      {
+        "question": "我需要 Docker 才能在 NAS 上运行 Internxt 吗？",
+        "answer": [
+          "是的，Internxt 通过 Docker 运行，这使得设置简单，并确保与 QNAP 或 Synology 等流行 NAS 设备的兼容性。"
+        ]
+      },
+      {
+        "question": "哪个计划包括 NAS 支持？",
+        "answer": [
+          "NAS 支持包含在 Ultimate 计划中，可作为终身或年度订阅使用。如果您已经有 Internxt 计划，可以升级当前的终身计划以获得更多存储空间、访问 NAS 支持并享受 Ultimate 计划的所有其他功能。"
+        ]
+      },
+      {
+        "question": "如何联系支持？",
+        "answer": ["您可以通过在线聊天或发送电子邮件至 hello@internxt.com 联系我们的客户成功团队。"]
+      }
+    ]
+  }
+}

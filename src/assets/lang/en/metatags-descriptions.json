@@ -488,5 +488,10 @@
     "id": "meet",
     "title": "Internxt Meet – Secure and Private Video Calls",
     "description": "Meet offers private video calls with post-quantum and end-to-end encryption for the most secure video conferencing."
+  },
+  {
+    "id": "nas",
+    "title": "Internxt – QNAP and Synology NAS",
+    "description": "Back up your QNAS and Synology NAS devices in the cloud with Internxt."
   }
 ]

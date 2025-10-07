@@ -1,0 +1,112 @@
+{
+  "HeroSection": {
+    "label": "NAS",
+    "title": "**Soporte para NAS** QNAP y Synology",
+    "subtitle": "Conecta tu dispositivo NAS a Internxt Drive para un almacenamiento seguro de archivos y copias de seguridad.",
+    "features": ["Synology y QNAP", "Transferencias seguras", "Sincronización segura y copias cifradas"],
+    "cta": "Obtener Internxt"
+  },
+  "WhatIsNASSection": {
+    "title": "¿Qué es un dispositivo NAS y por qué usarlo?",
+    "description": [
+      "Un NAS (almacenamiento conectado a la red) es un sistema de almacenamiento dedicado que se conecta a tu red doméstica u oficina, actuando como un servidor personal para tus archivos. Usarlo con Internxt te permite hacer copias de seguridad, sincronizar y gestionar datos de forma segura mientras mantienes el control total y la propiedad de tus archivos.",
+      "Tus datos están cifrados y seguros con el cifrado post-cuántico de Internxt, y las claves se gestionan en tu dispositivo. Esto ofrece la comodidad de los dispositivos NAS con la seguridad y privacidad de Internxt Drive."
+    ]
+  },
+  "InternxtNASIntegrations": {
+    "title": "Integraciones NAS de Internxt",
+    "description": "Instala la aplicación Docker para conectar tu NAS a Synology o QNAP. Esta configuración te permite acceder, gestionar y sincronizar tus archivos de forma segura mientras mantienes el control total sobre tus datos.",
+    "synologyBox": {
+      "title": "Synology",
+      "description": "Synology es un sistema NAS popular que te permite almacenar, organizar y acceder a tus archivos desde múltiples dispositivos. Puedes ejecutar aplicaciones, gestionar tus copias de seguridad y compartir datos de forma segura.",
+      "image": "synology"
+    },
+    "QNAPBox": {
+      "title": "QNAP",
+      "description": "Al conectar Internxt a través de Docker, puedes gestionar, sincronizar y acceder de forma segura a tus archivos directamente en tu NAS QNAP.",
+      "image": "QNAP"
+    }
+  },
+  "ctaSection": {
+    "title": "Internxt Drive para NAS",
+    "description": "Mantén tus archivos seguros, accesibles y privados",
+    "cta": "Obtener Internxt"
+  },
+  "horizontalScrollableSection": {
+    "title": "Haz copia de seguridad de tu NAS en la nube",
+    "description": "Gestiona, sincroniza y haz copias de seguridad de tus datos en la nube con el soporte NAS de Internxt. Gracias al cifrado post-cuántico de Internxt, tu privacidad siempre está garantizada.",
+    "scrollableSection": {
+      "titles": [
+        "Protección contra pérdida de datos",
+        "Sincronización en tiempo real",
+        "Seguridad",
+        "Tus datos te pertenecen"
+      ],
+      "descriptions": [
+        "Nunca te preocupes por perder tus archivos. Internxt sincroniza tu NAS automáticamente, por lo que cada documento, foto y proyecto tiene una copia de seguridad en la nube. Esto te protege contra fallos de hardware o eliminación accidental.",
+        "Mantén tus archivos actualizados en todos los dispositivos. Cualquier cambio que hagas en tu NAS o en Internxt Drive se refleja automáticamente en todas partes, asegurando que tu equipo o dispositivos personales siempre tengan la última versión.",
+        "Tus datos están protegidos con cifrado post-cuántico y de conocimiento cero, por lo que todas las claves se gestionan y almacenan en tu dispositivo para máxima privacidad. Solo tú puedes acceder a tus archivos, y ningún hacker, terceros o incluso Internxt puede leer tus datos.",
+        "El almacenamiento conectado a la red, o NAS, te permite gestionar el almacenamiento, establecer permisos y crear copias de seguridad según tus propios términos, dándote flexibilidad y propiedad sobre tu información con la comodidad y privacidad de Internxt Drive."
+      ]
+    }
+  },
+  "whatInternxtOffersSection": {
+    "title": "Lo que Internxt ofrece con dispositivos NAS",
+    "description": "Conecta Internxt Drive a tu sistema NAS para una solución en la nube segura que hace copias de seguridad y sincroniza tus archivos con total privacidad.",
+    "cards": {
+      "titles": ["Dispositivos QNAP y Synology", "Acceso desde cualquier lugar", "Protección contra ransomware"],
+      "descriptions": [
+        "Disfruta de todos los beneficios de Internxt con la flexibilidad y control de los dispositivos QNAP y Synology para una gestión de almacenamiento en la nube sin esfuerzo.",
+        "Obtén acceso remoto seguro a tus archivos desde cualquier lugar, mientras mantienes el control total sobre tus datos.",
+        "Protege tus archivos contra ransomware con copias de seguridad cifradas que te permiten restaurar rápidamente archivos afectados por ransomware o pérdida accidental de datos."
+      ]
+    }
+  },
+  "howSetupSection": {
+    "title": "Configurar dispositivo NAS con Internxt",
+    "description": "Instrucciones sobre cómo configurar tu dispositivo NAS con Internxt Drive:",
+    "cards": {
+      "titles": ["ReadMe", "Guía de usuario", "Código abierto"],
+      "descriptions": [
+        "Obtén la información que necesitas sobre las capacidades NAS con Internxt e instrucciones de uso para diferentes plataformas desde nuestra página de GitHub.",
+        "Aprende cómo configurar tu dispositivo de almacenamiento conectado a la red con Internxt con ejemplos y explicaciones.",
+        "Verifica la seguridad de Internxt y mantente actualizado con nuevas actualizaciones y características."
+      ],
+      "cta": ["Leer guía", "Más información", "Ver detalles"]
+    }
+  },
+  "ctaSectionV2": {
+    "title": "Tus archivos, tu control",
+    "description": "Gestiona tu NAS con Internxt",
+    "cta": "Obtener Internxt"
+  },
+  "FaqSection": {
+    "title": "¿Preguntas? Tenemos respuestas",
+    "faq": [
+      {
+        "question": "¿Cómo configuro mi sistema NAS con Internxt?",
+        "answer": [
+          "Primero, debes instalar la aplicación Docker y luego conectarla a Internxt. Una vez configurado, puedes gestionar y sincronizar tus archivos de forma segura en dispositivos NAS, servidores o cualquier entorno donde Docker sea compatible."
+        ]
+      },
+      {
+        "question": "¿Necesito Docker para ejecutar Internxt en mi NAS?",
+        "answer": [
+          "Sí, Internxt funciona a través de Docker, lo que hace que la configuración sea sencilla y garantiza la compatibilidad con dispositivos NAS populares como QNAP o Synology."
+        ]
+      },
+      {
+        "question": "¿Qué plan incluye soporte para NAS?",
+        "answer": [
+          "El soporte para NAS está incluido en el plan Ultimate, disponible como suscripción de por vida o anual. Si ya tienes un plan de Internxt, puedes mejorar tu plan de por vida actual para obtener más almacenamiento, acceso al soporte NAS y disfrutar de todas las demás características de un plan Ultimate."
+        ]
+      },
+      {
+        "question": "¿Cómo contacto con el soporte técnico?",
+        "answer": [
+          "Puedes contactar con nuestro equipo de Atención al Cliente a través del chat en vivo o enviando un correo electrónico a hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}
