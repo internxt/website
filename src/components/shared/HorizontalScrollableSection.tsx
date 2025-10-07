@@ -47,7 +47,7 @@ export default function HorizontalScrollableSection({
 
   useEffect(() => {
     if (cardsHeight === 'auto' && cardRefs.current.length > 0) {
-      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref!.offsetHeight);
+      const heights = cardRefs.current.filter((ref) => ref !== null).map((ref) => ref.offsetHeight);
 
       if (heights.length > 0) {
         const max = Math.max(...heights);
@@ -91,13 +91,6 @@ export default function HorizontalScrollableSection({
       return cardsWidth;
     }
     return window.innerWidth >= 1024 ? '400px' : '345px';
-  };
-
-  const getCardHeight = () => {
-    if (cardsHeight !== 'auto') {
-      return cardsHeight;
-    }
-    return maxCardHeight ? `${maxCardHeight}px` : 'auto';
   };
 
   return (

@@ -103,13 +103,15 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
                   </p>
                 </div>
                 {hasCta && (
-                  <span
+                  <a
+                    href={redirections[index]}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex cursor-pointer flex-row items-center gap-1 font-medium text-primary hover:underline"
-                    onClick={() => window.open(redirections[index], '_blank')}
                   >
                     {textContent.cards.cta[index]}
                     <CaretRight height={24} width={24} />
-                  </span>
+                  </a>
                 )}
               </div>
             ))}
@@ -153,13 +155,15 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
               </p>
             </div>
             {hasCta && (
-              <span
+              <a
+                href={redirections[index]}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex cursor-pointer flex-row items-center gap-1 font-medium text-primary hover:underline"
-                onClick={() => window.open(redirections[index], '_blank')}
               >
                 {textContent.cards.cta[index]}
                 <CaretRight height={24} width={24} />
-              </span>
+              </a>
             )}
           </div>
         ))}

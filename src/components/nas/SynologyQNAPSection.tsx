@@ -15,7 +15,7 @@ interface NASBoxProps {
   imageHeight: number;
 }
 
-function NASBox({ title, description, image, alt, imageWidth, imageHeight }: NASBoxProps) {
+function NASBox({ title, description, image, alt, imageWidth, imageHeight }: Readonly<NASBoxProps>) {
   return (
     <div className="flex w-full flex-col items-center gap-4 rounded-16 bg-white p-6 lg:w-1/2 lg:gap-10  lg:p-10">
       <div className="flex flex-col gap-4 lg:gap-6">

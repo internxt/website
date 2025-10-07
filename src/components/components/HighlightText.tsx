@@ -6,12 +6,12 @@ export const HighlightText = ({ text, className = '' }) => {
       {parts.map((part, index) => {
         if (part.startsWith('**') && part.endsWith('**')) {
           return (
-            <span key={index} className="text-primary">
+            <span key={`highlight-${part}-${index}`} className="text-primary">
               {part.slice(2, -2)}
             </span>
           );
         }
-        return <span key={index}>{part}</span>;
+        return <span key={`text-${part}-${index}`}>{part}</span>;
       })}
     </span>
   );
