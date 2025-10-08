@@ -13,7 +13,6 @@ import TestimonialsSection from '@/components/home/TestimonialsSection';
 import ThirdFeaturesSection from '@/components/home/ThirdFeaturesSection';
 import CtaSection from '@/components/shared/CtaSection';
 import { ComparisonHeader } from '@/components/comparison/ComparisonHeader';
-import { SIGNUP_DRIVE_WEB } from '@/constants';
 import { Eye, Fingerprint, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import InfoSection from '@/components/shared/sections/InfoSection';
 
@@ -63,7 +62,7 @@ const CloudStorageComparison = ({ metatagsDescriptions, langJson, navbarLang, fo
       >
         <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed darkMode={false} />
 
-        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={SIGNUP_DRIVE_WEB} />
+        <ComparisonHeader textContent={langJson.HeroSection} redirectUrl={URL_REDIRECT} />
 
         <TableSection textContent={langJson.HeroSection} />
 
