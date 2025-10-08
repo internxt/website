@@ -78,7 +78,6 @@ export interface Products {
   business: string;
   pricing: string;
   family: string;
-  nas: string;
 }
 
 export interface Resources {
@@ -93,6 +92,7 @@ export interface Resources {
   whatGoogleKnowsAboutMe: string;
   WebDAV: string;
   coupons: string;
+  nas: string;
 }
 
 export interface Tools {

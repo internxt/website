@@ -244,13 +244,6 @@ export default function Footer({
                     <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                       {textContent.FooterSection.sections.products.pricing}
                     </Link>
-
-                    <Link href="/nas" locale={lang} passHref className="hover:text-primary">
-                      {textContent.FooterSection.sections.products.nas}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
-                        {textContent.FooterSection.new}
-                      </span>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -419,6 +412,10 @@ export default function Footer({
 
                     <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.WebDAV}
+                    </Link>
+
+                    <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.resources.nas}
                     </Link>
 
                     <Link href="/coupons" locale={lang} passHref className="items-center hover:text-primary">
@@ -894,6 +891,9 @@ export default function Footer({
                       <Link href="/webdav" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.WebDAV}
                       </Link>
+                      <Link href="/nas" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.resources.nas}
+                      </Link>
                       <Link href="/coupons" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.coupons}
                       </Link>
@@ -962,9 +962,6 @@ export default function Footer({
                       </Link>
                       <Link href="/pricing" locale={lang} passHref className="hover:text-primary">
                         {textContent.FooterSection.sections.products.pricing}
-                      </Link>
-                      <Link href="/nas" locale={lang} passHref className="hover:text-primary">
-                        {textContent.FooterSection.sections.products.nas}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
