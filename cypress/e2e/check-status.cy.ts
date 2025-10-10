@@ -26,6 +26,7 @@ const nameFiles = [
   'what-does-google-know-about-me',
   'file-converter',
   'cleaner',
+  'coupons',
 ];
 
 const langs = {
