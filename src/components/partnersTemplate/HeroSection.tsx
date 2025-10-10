@@ -118,7 +118,7 @@ export default function HeroSection({
           <div className="flex w-full flex-row items-start gap-4">
             <Link
               href={'#billingButtons'}
-              className="no z-10 flex h-[48px] w-1/2 items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
+              className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary px-6 py-4 text-base font-medium text-white hover:bg-primary-dark"
             >
               {textContent.claimDeal}
             </Link>

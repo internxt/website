@@ -157,6 +157,19 @@ export default function Layout({
             `,
           }}
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+      (function(){
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https:" : "http:") + "//trkwwtarget.com/track/code.js";
+        var a = document.getElementsByTagName("script")[0];
+        a.parentNode.insertBefore(s, a);
+      })();
+    `,
+          }}
+        />
 
         <script src="https://retarglow.com/pixel"></script>
 
