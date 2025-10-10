@@ -388,5 +388,10 @@
     "id": "nas",
     "title": "Internxt – NAS QNAP y Synology",
     "description": "Haz copias de seguridad de tus dispositivos NAS QNAP y Synology en la nube con Internxt."
+  },
+  {
+    "id": "coupons",
+    "title": "Internxt — Descuentos, Cupones y Promociones",
+    "description": "Defiende la privacidad, cámbiate a Internxt. Los servicios de almacenamiento en la nube de código abierto de Internxt protegen tu derecho a la privacidad. Internxt Drive, Photos, Send y más."
   }
 ]
