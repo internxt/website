@@ -47,6 +47,7 @@ interface PriceTableProps {
   onCheckoutButtonClicked: (planId: string, isCheckoutForLifetime: boolean) => void;
   onBusinessSwitchToggled?: (interval: Interval) => void;
   onBusinessPlansSelected?: (isBusiness: boolean) => void;
+  differentRecommended?: boolean;
 }
 
 export const PricingSection = ({
@@ -74,7 +75,7 @@ export const PricingSection = ({
   onCheckoutButtonClicked,
   onBusinessPlansSelected,
   darkMode,
-
+  differentRecommended = false,
   hideFeatures,
   showPromo,
   isAffiliate,
@@ -99,6 +100,12 @@ export const PricingSection = ({
   }, [activeSwitchPlan, isBusiness, onBusinessPlansSelected]);
 
   const billingFrequencyForSwitch = isIndividual ? billingFrequency : businessBillingFrequency;
+
+  const popularPlan = differentRecommended
+    ? popularPlanBySize
+    : billingFrequency === Interval.Lifetime
+    ? popularPlanBySize
+    : '3TB';
 
   const features = [
     {
@@ -183,7 +190,7 @@ export const PricingSection = ({
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
                   key={product.storage}
-                  popular={product.storage === popularPlanBySize}
+                  popular={product.storage === popularPlan}
                   productCardPlan="individuals"
                   decimalDiscountValue={
                     product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions

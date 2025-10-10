@@ -20,7 +20,8 @@ import {
 } from '@phosphor-icons/react';
 import { TransformedProduct } from '@/services/stripe.service';
 import { LifetimeMode } from '@/components/lifetime/PaymentSection';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { currencyService } from '@/services/currency.service';
 
 const NEW_FEATURE_THRESHOLDS = {
   BUSINESS: 12,
@@ -109,9 +110,21 @@ export const PriceCard = ({
   cardIndex = 0,
 }: PriceCardProps): JSX.Element => {
   const contentText = require(`@/assets/lang/${lang}/priceCard.json`);
-  const { currency, interval, price, storage, priceId } = product;
+  const { interval, price, storage, priceId } = product;
   const isBusiness = productCardPlan === 'business';
   const isAnnual = interval === 'year';
+  const [currency, setCurrency] = useState<string>('€');
+
+  useEffect(() => {
+    currencyService
+      .filterCurrencyByCountry()
+      .then((currency) => {
+        setCurrency(currency.currency);
+      })
+      .catch(() => {
+        //
+      });
+  }, []);
 
   const hasDiscount = decimalDiscountValue && decimalDiscountValue > 0;
   const currentPrice = hasDiscount
