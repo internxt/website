@@ -5,6 +5,7 @@ export const currency = {
   CA: '$',
   usd: '$',
   eur: '€',
+  IN: '$',
 };
 
 export const priceValue = {

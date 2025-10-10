@@ -34,6 +34,7 @@ const ALLOWED_PATHS = [
   'trickyhash',
   'toquederetoque',
   'vipvlc',
+  'grabon',
 ];
 
 const COUPON_CODES = {
@@ -45,6 +46,7 @@ const COUPON_CODES = {
   reddit: PromoCodeName.Reddit,
   toquederetoque: PromoCodeName.Toquederetoque,
   vipvlc: PromoCodeName.VIPVLC,
+  grabon: PromoCodeName.GRABON,
 };
 
 function CombinedSpecialOffer({
