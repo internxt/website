@@ -227,6 +227,11 @@ module.exports = {
         destination: '/:lang/specialoffer/:filename',
         permanent: false,
       },
+      {
+        source: '/:lang/affiliates/:filename',
+        destination: '/:lang/specialoffer/',
+        permanent: false,
+      },
     ];
   },
   images: {
