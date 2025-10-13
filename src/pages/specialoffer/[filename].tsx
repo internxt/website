@@ -25,16 +25,30 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'reddit', 'vipvlc', 'grabon'];
+const ALLOWED_PATHS = [
+  'bevalk',
+  'securiters',
+  'valencia',
+  'tokinprivacy',
+  'reddit',
+  'trickyhash',
+  'toquederetoque',
+  'vipvlc',
+  'grabon',
+  'pcmag',
+];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   securiters: PromoCodeName.Securiters,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
+  trickyhash: PromoCodeName.Secure,
   reddit: PromoCodeName.Reddit,
+  toquederetoque: PromoCodeName.Toquederetoque,
   vipvlc: PromoCodeName.VIPVLC,
   grabon: PromoCodeName.GRABON,
+  pcmag: PromoCodeName.PcmagCoupon,
 };
 
 function CombinedSpecialOffer({
@@ -72,7 +86,9 @@ function CombinedSpecialOffer({
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
 
-  const percentOff = decimalDiscount === 13 ? '87' : '85';
+  const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+
+  console.log(percentOff);
 
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
