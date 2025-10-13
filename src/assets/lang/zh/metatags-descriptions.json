@@ -309,5 +309,10 @@
     "id": "nas",
     "title": "Internxt – QNAP 和 Synology NAS",
     "description": "使用 Internxt 在云端备份您的 QNAP 和 Synology NAS 设备。"
+  },
+  {
+    "id": "coupons",
+    "title": "Internxt — 折扣、优惠券和促销",
+    "description": "捍卫隐私,选择 Internxt。Internxt 的开源云存储服务保护您的隐私权。Internxt Drive、Photos、Send 等更多服务。"
   }
 ]

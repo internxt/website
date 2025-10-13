@@ -5,11 +5,13 @@ export const currency = {
   CA: '$',
   usd: '$',
   eur: '€',
+  IN: '$',
 };
 
 export const priceValue = {
   US: 'usd',
   CA: 'usd',
+  IN: 'usd',
 };
 
 const getCountry = async () => {
