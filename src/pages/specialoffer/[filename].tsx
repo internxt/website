@@ -25,26 +25,14 @@ interface CombinedSpecialOfferProps {
   lang: string;
 }
 
-const ALLOWED_PATHS = [
-  'bevalk',
-  'securiters',
-  'valencia',
-  'tokinprivacy',
-  'reddit',
-  'trickyhash',
-  'toquederetoque',
-  'vipvlc',
-  'grabon',
-];
+const ALLOWED_PATHS = ['bevalk', 'securiters', 'valencia', 'tokinprivacy', 'reddit', 'vipvlc', 'grabon'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
   securiters: PromoCodeName.Securiters,
   valencia: PromoCodeName.ValenciaCF,
   tokinprivacy: PromoCodeName.TokinPrivacy,
-  trickyhash: PromoCodeName.Secure,
   reddit: PromoCodeName.Reddit,
-  toquederetoque: PromoCodeName.Toquederetoque,
   vipvlc: PromoCodeName.VIPVLC,
   grabon: PromoCodeName.GRABON,
 };

@@ -228,8 +228,8 @@ module.exports = {
         permanent: false,
       },
       {
-        source: '/:lang/affiliates/:filename',
-        destination: '/:lang/specialoffer/',
+        source: '/affiliates/:filename',
+        destination: '/specialoffer',
         permanent: false,
       },
     ];
