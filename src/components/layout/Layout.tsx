@@ -175,8 +175,6 @@ export default function Layout({
 
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-CHHGLQTHSB"></script>
 
-        <script type="text/javascript" src="https://getmeonline.store/audience.js"></script>
-
         <script
           dangerouslySetInnerHTML={{
             __html: `
