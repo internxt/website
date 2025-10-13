@@ -1,181 +1,141 @@
 {
-  "blackFriday": {
-    "HeroSection": {
-      "title": {
-        "line1": "Der Black Friday",
-        "line2": "ist vorbei"
-      },
-      "description": "Aber Sie können trotzdem Privatsphäre zu einem großartigen Preis erhalten!",
-      "pricingTable": {
-        "only": "Nur",
-        "priceNow": "3,59",
-        "month": "/Monat",
-        "priceBefore": "8,99",
-        "footer": {
-          "line1": "Verschlüsselter Dateispeicher und -freigabe",
-          "line2": "Zugriff auf Ihre Dateien von jedem Gerät",
-          "line3": "Zugang zu all unseren Dienstleistungen"
-        }
-      },
-      "timer": {
-        "timeTitle": "Black Friday Angebot endet in:",
-        "days": "Tage",
-        "hours": "Stunden",
-        "minutes": "Minuten",
-        "seconds": "Sekunden"
-      },
-      "features": [
-        "Verschlüsselter Dateispeicher und -freigabe",
-        "Zugriff auf Ihre Dateien von jedem Gerät",
-        "Zugang zu all unseren Dienstleistungen",
-        "Kein unbefugter Datenzugriff"
-      ]
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "BestStorage": {
-      "title": "Das beste Black Friday Cloud-Speicherangebot",
-      "subtitle": "Internxt's Rabatt für Privatsphäre und Seelenfrieden wird nächstes Jahr wieder da sein!"
+    "title": "**Black Friday** Angebot",
+    "subtitle": "Holen Sie sich das beste Black Friday Angebot 2025 mit 90% Rabatt auf alle Internxt-Tarife.",
+    "description": "Jetzt {{discount}}% Rabatt sichern!",
+    "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "claimDeal": "Angebot sichern"
+  },
+  "DontMissSection": {
+    "title": "Verpassen Sie nicht Ihr Black Friday Angebot!",
+    "description": [
+      "Schützen Sie Ihre Daten online mit Internxt dank unserer vollständig ausgestatteten Datenschutz-Suite, die Backups, Antivirus, VPN, Cleaner, Meet, Mail und vieles mehr umfasst.",
+      "Erhalten Sie die beste Privatsphäre und Sicherheit online mit Internxts 90% Black Friday Rabatt."
+    ]
+  },
+  "TableSection": {
+    "title": "Ihr Alles-in-einem für Datenschutz",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Plan",
+      "individuals": "Jahrespläne",
+      "lifetime": "Lebenslange Pläne",
+      "business": "Business-Pläne"
     },
-    "SuiteSection": {
-      "title": "Mehr für weniger: sichere Cloud-Speicherpläne zu unschlagbaren Preisen!",
-      "subtitle": "Holen Sie sich die Kontrolle über Ihre Daten mit Internxt zurück, genießen Sie volle Online-Privatsphäre und schützen Sie sich, Ihr Unternehmen oder Ihre Familie vor Cyberangriffen und Firmen, die von Ihren Daten profitieren.",
-      "drive": {
-        "title": "Internxt Drive",
-        "subtitle": "Laden Sie Ihre Dateien hoch, speichern und teilen Sie sie in absoluter Privatsphäre mit unserem verschlüsselten Cloud-Dienst. Sichern und synchronisieren Sie Ihre Dateien, um Datenverluste zu vermeiden und eine reibungslose Zusammenarbeit zu gewährleisten.",
-        "cta": "Sichern mit Drive",
-        "image": "drive",
-        "alt": "Internxt Drive"
-      },
-      "photos": {
-        "title": "Internxt für Unternehmen",
-        "subtitle": "Alles, was Sie brauchen, um Ihr Unternehmen sicher zu verwalten. Sichere Dateifreigabe, Speicherzuweisung und Sitzungsmanagement sorgen dafür, dass Internxt all Ihren geschäftlichen Anforderungen gerecht wird.",
-        "cta": "Internxt für Unternehmen erhalten",
-        "image": "business",
-        "alt": "Internxt für Unternehmen"
-      },
-      "send": {
-        "title": "Internxt für Familien",
-        "subtitle": "Komplette Seelenruhe für Ihre Familie. Speichern, teilen und verwalten Sie Ihre wertvollsten Erinnerungen auf einer einzigen, verschlüsselten Cloud-Plattform.",
-        "cta": "Internxt für Familien erhalten",
-        "image": "family",
-        "alt": "Internxt für Familien"
-      }
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang"
     },
-    "FeatureSection": {
-      "title": "Warum Internxt wählen?",
-      "subtitle": "Wir entwickeln all unsere Produkte mit einem Fokus auf Privatsphäre. Wir betreiben unser Geschäft nicht mit Daten oder Werbung, sondern bauen es auf Vertrauen auf. Unsere verschlüsselte Technologie schützt Ihre Dateien und stellt sicher, dass Sie Ihr fundamentales Recht auf Privatsphäre behalten.",
-      "feature1": {
-        "title": "Unknackbare und unverletzbare Daten",
-        "subtitle1": "Wir speichern keine Passwörter oder Benutzerdaten und alle Ihre Daten werden während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihre Sache. Der Schutz ist unsere."
-      },
-      "feature2": {
-        "title": "Kompromisslose Sicherheit",
-        "subtitle1": "Ihre Dateien werden bereits auf Ihrem Gerät Ende-zu-Ende-verschlüsselt. Dank der Zero-Knowledge AES-256-Verschlüsselung sind Sie der Einzige, der Zugriff auf Ihre Daten hat."
-      },
-      "feature3": {
-        "title": "Open Source und transparent",
-        "subtitle1": "Wir sind stolz auf das, was wir tun, deshalb ist unser Code öffentlich auf GitHub und kann von jedem persönlich geprüft, auditiert und verifiziert werden. Wir haben nichts zu verbergen, außer Ihre Daten."
-      },
-      "feature4": {
-        "title": "Unabhängig verifiziert",
-        "subtitle1": "Wir sind vollständig DSGVO-konform und 100 % sicher, aber vertrauen Sie nicht nur auf unser Wort. Internxt wurde von Europas führendem Unternehmen für Penetrationstests, Securitum, unabhängig geprüft und verifiziert."
-      }
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
     },
-    "PlatformSection": {
-      "title": "Greifen Sie überall und jederzeit auf Ihre Dateien zu",
-      "subtitle": "Internxt ist auf allen Plattformen verfügbar, was bedeutet, dass Ihre Dateien nur einen Klick entfernt sind!",
-      "web": "Web",
-      "linux": "Linux",
-      "windows": "Windows",
-      "mac": "MacOS",
-      "android": "Android",
-      "iOS": "iOS"
+    "features": {
+      "openSource": "Open Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
     },
-    "TestimonialsSection": {
-      "title": "Was unsere Nutzer über uns sagen",
-      "cards": [
-        {
-          "name": "Eva Williams",
-          "enterprise": "Journalistin bei FixThePhoto.com",
-          "review": "Internxt ist ein praktischer Cloud-Speicherdienst für datenschutzbewusste Kunden. Es hat eine übersichtliche Benutzeroberfläche und ein zuverlässiges Support-Team, was es zu einer großartigen Option für diejenigen macht, die ihre Dateien sicher speichern möchten."
-        },
-        {
-          "name": "Cristian M.",
-          "enterprise": "Bewertung von GetApp",
-          "review": "Die beste verschlüsselte Alternative zu Dropbox. Fazit: Wir brauchten eine Alternative, die uns ermöglichte, Kundenakten und Arbeitsmaterialien (Social Media-Dateien) zu speichern, und da Internxt DSGVO-freundlich ist, passte es perfekt zu uns!"
-        },
-        {
-          "name": "Josep Carrizo",
-          "enterprise": "Bewertung von Trustpilot",
-          "review": "Ich habe Google Drive seit mehreren Jahren genutzt, aber ich brauchte eine Alternative, die mir die Privatsphäre meiner Daten garantierte. Etwas, das Google oder andere bekannte Plattformen nicht bieten können. Deshalb bin ich zu Internxt gewechselt."
-        }
-      ]
-    },
-    "faq": {
-      "title": "Fragen? Wir haben Antworten",
-      "faq": [
-        {
-          "question": "Wie bekomme ich den Black Friday Rabatt?",
-          "answer": [
-            "Um von unserem Black Friday Rabatt zu profitieren, müssen Sie auf einen der „Angebot holen“-Buttons auf dieser Seite klicken und werden direkt zur Kasse weitergeleitet, wo der Rabatt bereits auf Ihren neuen 2TB-Internxt-Plan angewendet wurde."
-          ]
-        },
-        {
-          "question": "Wann endet die Aktion?",
-          "answer": ["Unser Black Friday Angebot läuft vom 21. November bis 5. Dezember 2022."]
-        },
-        {
-          "question": "Wer ist für diesen Rabatt berechtigt?",
-          "answer": [
-            "Neue Benutzer oder jeder mit einem kostenlosen Internxt-, 20-GB- oder 200-GB-Abonnement kann an unserem Black Friday Angebot teilnehmen."
-          ]
-        },
-        {
-          "question": "Behalte ich den Rabatt, wenn mein Plan endet?",
-          "answer": [
-            "Der Rabatt gilt für das erste volle Jahr des Dienstes. Sie haben also ein Jahr lang Zugang zu unserem 2-TB-Abonnementplan zu diesem reduzierten Preis.",
-            "Wenn Sie das bestehende Abonnement mit dem Angebot fortsetzen möchten, wird Ihr Konto im Folgejahr zum Standardpreis des 2-TB-Plans belastet."
-          ]
-        },
-        {
-          "question": "Welche Zahlungsmethoden akzeptiert Internxt?",
-          "answer": [
-            "Wir akzeptieren derzeit Zahlungen per Kredit- und Debitkarten (Mastercard, VISA, American Express, etc.). Sie können auch über Apple und Google Pay, Cartes Bancaires, Alipay, Wechat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay und SEPA Direct Debit bezahlen."
-          ]
-        },
-        {
-          "question": "Bieten Sie Rabatte für gemeinnützige Organisationen oder Studenten an?",
-          "answer": [
-            "Ja, Sie erhalten 50% Rabatt auf jeden Internxt-Abonnementplan, wenn Sie Mitglied einer gemeinnützigen Organisation oder NGO sind. Kontaktieren Sie uns unter [hello@internxt.com](mailto:hello@internxt.com) mit den Unterlagen Ihrer Organisation, damit wir Ihre Berechtigung überprüfen und Ihren Rabatt anwenden können.",
-            "Sie können auch einen Rabatt von 50% erhalten, wenn Sie Student sind. Fordern Sie den Rabatt an und überprüfen Sie Ihre Berechtigung, indem Sie uns eine E-Mail von Ihrer Universitäts-E-Mail-Adresse an [hello@internxt.com](mailto:hello@internxt.com) senden."
-          ]
-        },
-        {
-          "question": "Weitere Fragen?",
-          "answer": [
-            "Wenn Sie weitere Fragen haben, können Sie uns gerne unter [hello@internxt.com](mailto:hello@internxt.com) kontaktieren oder uns in den sozialen Medien erreichen. Wir freuen uns immer von Ihnen zu hören!"
-          ]
-        }
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "cards": {
+      "titles": [
+        "Ein vollständig privates Ökosystem",
+        "Die fortschrittlichste Verschlüsselung",
+        "Unser größtes Angebot"
+      ],
+      "descriptions": [
+        "Alle kostenpflichtigen Internxt-Tarife beinhalten Post-Quanten-verschlüsselten Speicher, Backups und Antivirus. Für vollständigen Online-Schutz erhalten Sie auch VPN, Cleaner, Meet und Mail, alles was Sie brauchen, um online sicher zu bleiben.",
+        "Erhalten Sie den ersten Cloud-Speicher mit Post-Quanten-Verschlüsselung, um Ihre Dateien in absoluter Privatsphäre hochzuladen, zu speichern und zu teilen dank unseres Ende-zu-Ende-verschlüsselten Cloud-Dienstes. Sichern und synchronisieren Sie Ihre Dateien, um Datenverlust zu vermeiden und eine reibungslose Zusammenarbeit mit Freunden, Familie oder Kollegen zu gewährleisten.",
+        "Nutzen Sie unser bisher größtes Black Friday Angebot mit noch mehr Funktionen zum Schutz Ihrer Daten und Dateien online. Mit einem massiven Rabatt von 90% ist jetzt der perfekte Zeitpunkt, um das beste Preis-Leistungs-Verhältnis für sicheren und privaten Cloud-Speicher zu erhalten, und vieles mehr!"
       ]
     }
   },
-  "FooterSection": {
-    "title": "Stellen Sie sich auf die Seite der Privatsphäre. Wählen Sie Internxt!",
-    "subtitle": "Sichern Sie sich einen Rabatt auf Privatsphäre und Seelenfrieden.",
-    "subtitle1": "Erhalten Sie 60 % Rabatt auf ein ganzes Jahr unseres größten 2TB-Plans!",
-    "only": "Nur",
-    "priceNow": "3,59",
-    "month": "/Monat"
+  "CtaSection": {
+    "title": "Entdecken Sie riesige Black Friday Rabatte",
+    "description": "90% Rabatt auf alle unsere Premium-Tarife",
+    "cta": "Angebot sichern"
   },
-  "cta": {
-    "title": "Der Black Friday ist vorbei!",
-    "subtitle": "Aber Sie können trotzdem Privatsphäre zu einem großartigen Preis erhalten!",
-    "cta": "Plan wählen",
-    "guarantee": "30 Tage Geld-zurück-Garantie"
+  "HorizontalScrollableSection": {
+    "title": "Der sicherste Cloud-Speicher für weniger",
+    "description": "Wir entwickeln alle unsere Produkte mit Fokus auf Datenschutz. Wir bauen unser Geschäft nicht auf Daten oder Werbung auf; wir bauen es auf Vertrauen auf. Unsere Post-Quanten- und Zero-Knowledge-Verschlüsselung stellt sicher, dass Sie, und nur Sie, auf Ihre Dateien zugreifen können.",
+    "features": [
+      "Jederzeit kündbar",
+      "Post-Quanten-Verschlüsselung",
+      "Nachhaltige Energiequellen",
+      "Open Source",
+      "Unabhängig verifiziert"
+    ],
+    "scrollableSection": {
+      "titles": [
+        "Unhackbare und unknackbare Daten",
+        "Kompromisslose Sicherheit",
+        "Open Source und geprüft",
+        "Compliance"
+      ],
+      "descriptions": [
+        "Wir speichern keine Passwörter oder Benutzerdaten, und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihre Sache. Sie zu schützen ist unsere.",
+        "Ihre Dateien werden Ende-zu-Ende verschlüsselt, bevor sie Ihr Gerät verlassen. Dank Zero-Knowledge- und Post-Quanten-Verschlüsselung sind Sie absolut der Einzige mit Zugriff auf Ihre Daten.",
+        "Wir sind stolz auf das, was wir tun, deshalb ist unser Code auf GitHub öffentlich; wir haben nichts zu verbergen außer Ihren Daten. Internxt wurde auch unabhängig von Europas führendem Penetrationstestunternehmen Securitum geprüft und verifiziert.",
+        "Internxt ist GDPR-, HIPAA-, ISO 27001- und SOC 2-konform. Ob Sie Cloud-Speicher für Gesundheitswesen, Finanzen oder persönliche Nutzung benötigen, Internxt stellt sicher, dass Ihre Daten und Dateien den höchsten Datenschutzstandards entsprechen."
+      ]
+    }
   },
-  "cta2": {
-    "title": "Der Black Friday ist vorbei!",
-    "subtitle": "Sie können sich immer noch eine erschwingliche Privatsphäre leisten!",
-    "cta": "Plan wählen",
-    "guarantee": "30 Tage Geld-zurück-Garantie"
+  "CtaSectionV2": {
+    "title": "Die besten Black Friday Angebote",
+    "description": "90% Rabatt auf alle Tarife",
+    "cta": "Angebot sichern"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wie kann ich den Black Friday Rabatt erhalten?",
+        "answer": [
+          "Um Ihren Black Friday Rabatt zu beanspruchen, wählen Sie Ihren bevorzugten Einzel-, Geschäfts- oder Familientarif und gehen Sie zur Checkout-Seite. Ihr 85% Rabatt wird automatisch an der Kasse angewendet."
+        ]
+      },
+      {
+        "question": "Wann endet die Aktion?",
+        "answer": ["Das Black Friday Angebot endet am 3. Dezember 2024."]
+      },
+      {
+        "question": "Wer ist für diesen Rabatt berechtigt?",
+        "answer": [
+          "Neue Benutzer oder jeder mit einem kostenlosen Internxt-Konto ist berechtigt, an unserem Black Friday Sale teilzunehmen."
+        ]
+      },
+      {
+        "question": "Behalte ich den Rabatt, wenn mein Tarif endet?",
+        "answer": [
+          "Das Black Friday Angebot gilt bis zum Ende des Abonnementzeitraums. Ihr Abonnement wird zum regulären Preis erneuert, sobald dieser Abonnementzeitraum am Ende des Monats oder Jahres endet. Da lebenslange Tarife nur eine Zahlung erfordern, gilt Ihr Rabatt für immer."
+        ]
+      },
+      {
+        "question": "Welche Zahlungsmethoden akzeptiert Internxt?",
+        "answer": [
+          "Derzeit akzeptieren wir Zahlungen per Kredit- und Debitkarte (einschließlich Mastercard, VISA, American Express und mehr), und wir akzeptieren auch Paypal, Bankcontact, iDEAL und SOFORT."
+        ]
+      },
+      {
+        "question": "Haben Sie weitere Fragen?",
+        "answer": [
+          "Zögern Sie nicht, uns unter [hello@internxt.com](mailto:hello@internxt.com) zu kontaktieren oder uns in den sozialen Medien zu grüßen. Wir freuen uns immer, von Ihnen zu hören!"
+        ]
+      }
+    ]
   }
 }

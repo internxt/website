@@ -1,135 +1,113 @@
 export interface BlackFridayText {
-  blackFriday: BlackFridayClass;
-  cta: Cta;
-  cta2: Cta;
-}
-
-export interface BlackFridayClass {
   HeroSection: HeroSection;
-  BestStorage: BestStorage;
-  SuiteSection: SuiteSection;
-  FeatureSection: FeatureSection;
-  PlatformSection: PlatformSection;
-  TestimonialsSection: TestimonialsSection;
-  faq: BlackFridayFAQ;
-  FooterSection: FooterSection;
+  DontMissSection: DontMissSection;
+  TableSection: TableSection;
+  WhyChooseSection: WhyChooseSection;
+  CtaSection: CtaSection;
+  HorizontalScrollableSection: HorizontalScrollableSection;
+  CtaSectionV2: CtaSection;
+  FaqSection: FAQSection;
 }
 
-export interface BestStorage {
+export interface CtaSection {
   title: string;
-  subtitle: string;
-}
-
-export interface FeatureSection {
-  title: string;
-  subtitle: string;
-  feature1: Feature;
-  feature2: Feature;
-  feature3: Feature;
-  feature4: Feature;
-}
-
-export interface Feature {
-  title: string;
-  subtitle1: string;
-}
-
-export interface FooterSection {
-  title: string;
-  subtitle: string;
-  subtitle1: string;
-  only: string;
-  priceNow: string;
-  month: string;
-}
-
-export interface HeroSection {
-  title: Title;
   description: string;
-  guarantee: string;
-  pricingTable: PricingTable;
-  timer: Timer;
-  features: string[];
-}
-
-export interface PricingTable {
-  only: string;
-  priceNow: string;
-  month: string;
-  priceBefore: string;
-  footer: Footer;
-}
-
-export interface Footer {
-  line1: string;
-  line2: string;
-  line3: string;
-}
-
-export interface Timer {
-  timeTitle: string;
-  days: string;
-  hours: string;
-  minutes: string;
-  seconds: string;
-}
-
-export interface Title {
-  line1: string;
-  line2: string;
-}
-
-export interface PlatformSection {
-  title: string;
-  subtitle: string;
-  web: string;
-  linux: string;
-  windows: string;
-  mac: string;
-  android: string;
-  iOS: string;
-}
-
-export interface SuiteSection {
-  title: string;
-  subtitle: string;
-  drive: Drive;
-  photos: Drive;
-  send: Drive;
-}
-
-export interface Drive {
-  title: string;
-  subtitle: string;
   cta: string;
-  image: string;
-  alt: string;
 }
 
-export interface TestimonialsSection {
+export interface DontMissSection {
   title: string;
-  cards: Card[];
+  description: string[];
 }
 
-export interface Card {
-  name: string;
-  enterprise: string;
-  review: string;
-}
-
-export interface BlackFridayFAQ {
+export interface FAQSection {
   title: string;
-  faq: FAQElement[];
+  faq: FAQ[];
 }
 
-export interface FAQElement {
+export interface FAQ {
   question: string;
   answer: string[];
 }
 
-export interface Cta {
+export interface HeroSection {
+  products: Products;
   title: string;
   subtitle: string;
-  cta: string;
+  description: string;
+  features: string[];
+  claimDeal: string;
+}
+
+export interface Products {
+  drive: string;
+  antivirus: string;
+  cleaner: string;
+  vpn: string;
+  meet: string;
+  mail: string;
+}
+
+export interface HorizontalScrollableSection {
+  title: string;
+  description: string;
+  features: string[];
+  scrollableSection: ScrollableSection;
+}
+
+export interface ScrollableSection {
+  titles: string[];
+  descriptions: string[];
+}
+
+export interface TableSection {
+  title: string;
+  hotLabel: string;
+  planTitles: PlanTitles;
+  billingFrequency: BillingFrequency;
+  freePlanCard: FreePlanCard;
+  features: Features;
+  planStorage: PlanStorage;
+}
+
+export interface BillingFrequency {
+  annually: string;
+  lifetime: string;
+}
+
+export interface Features {
+  openSource: string;
+  premiumSupport: string;
   guarantee: string;
+}
+
+export interface FreePlanCard {
+  eyeBrow: string;
+  description: string;
+  cta: string;
+}
+
+export interface PlanStorage {
+  essential: string;
+  premium: string;
+  ultimate: string;
+}
+
+export interface PlanTitles {
+  header: string;
+  individuals: string;
+  homePage: string;
+  lifetime: string;
+  business: string;
+  lifetimeCampaign: LifetimeCampaign;
+}
+
+export interface LifetimeCampaign {
+  blueText: string;
+  normalText: string;
+}
+
+export interface WhyChooseSection {
+  title: string;
+  cards: ScrollableSection;
 }

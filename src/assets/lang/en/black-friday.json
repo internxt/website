@@ -1,174 +1,138 @@
 {
-  "blackFriday": {
-    "HeroSection": {
-      "title": {
-        "line1": "Black Friday",
-        "line2": "is over..."
-      },
-      "description": "But you can still get privacy for a great price!",
-
-      "pricingTable": {
-        "only": "Only",
-        "priceNow": "3.59",
-        "month": "/mo",
-        "priceBefore": "8.99",
-        "footer": {
-          "line1": "Encrypted file storage and sharing",
-          "line2": "Access your files from any device",
-          "line3": "Get access to all our services"
-        }
-      },
-      "timer": {
-        "timeTitle": "Black Friday deal will expire in:",
-        "days": "days",
-        "hours": "hours",
-        "minutes": "minutes",
-        "seconds": "seconds"
-      },
-      "features": [
-        "Encrypted file storage and sharing",
-        "Access your files from any device",
-        "Get access to all our services",
-        "No unauthorized data access"
-      ]
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "BestStorage": {
-      "title": "The best cloud storage Black Friday deal",
-      "subtitle": "Internxt's discount on privacy and peace of mind will be back next year!"
-    },
-    "SuiteSection": {
-      "title": "Get more for less: secure cloud storage plans at unbeatable prices!",
-      "subtitle": "Take back control of your data with Internxt, get total online privacy, and protect yourself, your business, or your family from cyberattacks and companies profiting from your data. ",
-      "drive": {
-        "title": "Internxt Drive",
-        "subtitle": "Upload, store, and share your files in total privacy with our encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration.",
-        "cta": "Secure with Drive",
-        "image": "drive",
-        "alt": "Internxt Drive"
-      },
-      "photos": {
-        "title": "Internxt for Business",
-        "subtitle": "Everything you need to manage your business securely. Secure file sharing, storage allocation, and session management features ensure that Internxt meets all your business needs.",
-        "cta": "Get Internxt for Business",
-        "image": "business",
-        "alt": "Internxt for Business"
-      },
-      "send": {
-        "title": "Internxt for Families",
-        "subtitle": "Complete peace of mind for your family. Securely store, share, and manage your best memories from one single, encrypted cloud platform. ",
-        "cta": "Get Internxt for Family",
-        "image": "family",
-        "alt": "Internxt for Families"
+    "title": "**Black Friday** deal",
+    "subtitle": "Get the best Black Friday deal of 2025 with 90% off all Internxt plans.",
+    "description": "Get {{discount}}% off now!",
+    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
+    "claimDeal": "Claim deal"
+  },
+  "DontMissSection": {
+    "title": "Don’t miss your Black Friday deal!",
+    "description": [
+      "Protect your data online with Internxt with our fully equipped privacy suite that includes backups, Antivirus, VPN, Cleaner, Meet, Mail, and more.",
+      "Get the best privacy and security online with Internxt’s 90% Black Friday discount."
+    ]
+  },
+  "TableSection": {
+    "title": "Your all-in-one privacy ally",
+    "hotLabel": "{{discount}}% off",
+    "planTitles": {
+      "header": "Select your Plan",
+      "individuals": "Annual Plans",
+      "homePage": "Choose the right plan for you",
+      "lifetime": "Lifetime Plans",
+      "business": "Business Plans",
+      "lifetimeCampaign": {
+        "blueText": "50% off",
+        "normalText": "on all our exclusive lifetime plans"
       }
     },
-    "FeatureSection": {
-      "title": "Why choose Internxt?",
-      "subtitle": "We build all our products with privacy in mind. We don’t run our business on data or advertising; we build it on trust. Our encrypted technology protects your files and ensures you keep your fundamental right to privacy. ",
-      "feature1": {
-        "title": "Unhackable and unleakable data",
-        "subtitle1": "We don’t store passwords or user data and all of your data is encrypted in-transit and at-rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours."
-      },
-      "feature2": {
-        "title": "Uncompromising security",
-        "subtitle1": "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge AES-256 encryption, you are the absolutely only one with access to your data."
-      },
-      "feature3": {
-        "title": "Open source and transparent",
-        "subtitle1": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
-      },
-      "feature4": {
-        "title": "Independently verified",
-        "subtitle1": "We’re wholly GDPR compliant and 100% safe, but don’t take our word for it. Internxt has been independently audited and verified by Europe’s leading penetration testing company, Securitum."
-      }
+    "billingFrequency": {
+      "annually": "Annual",
+      "lifetime": "Lifetime"
     },
-    "PlatformSection": {
-      "title": "Access your files anywhere, anytime",
-      "subtitle": "Internxt is available on all platforms, meaning your files are just a click away!",
-      "web": "Web",
-      "linux": "Linux",
-      "windows": "Windows",
-      "mac": "MacOS",
-      "android": "Android",
-      "iOS": "iOS"
+    "freePlanCard": {
+      "eyeBrow": "Free",
+      "description": "Get 1 GB of encrypted cloud storage for free",
+      "cta": "Select plan"
     },
-    "TestimonialsSection": {
-      "title": "What our users are saying about us",
-      "cards": [
-        {
-          "name": "Eva Williams",
-          "enterprise": "Journalist for FixThePhoto.com",
-          "review": "Internxt is a convenient cloud storage service for privacy-conscious clients. It has a streamlined interface and a reliable support team, which makes it a great option for those who need to store their files securely."
-        },
-        {
-          "name": "Cristian M.",
-          "enterprise": "Review from GetApp",
-          "review": "The best encrypted Dropbox alternative. Overall: We needed an alternative that allowed us to store client files and work (social media files) and as Internxt is GDPR friendly fit perfectly for us!"
-        },
-        {
-          "name": "Josep Carrizo",
-          "enterprise": "Review from Trustpilot",
-          "review": "I've been using Google Drive for several years, but I needed an alternative which granted me the privacy of my data. Something that Google or other well known platforms can't do. That's why I moved to Internxt."
-        }
-      ]
+    "features": {
+      "openSource": "Open source and audited",
+      "premiumSupport": "Premium customer support",
+      "guarantee": "30-day money-back guarantee"
     },
-    "faq": {
-      "title": "Questions? We have answers",
-      "faq": [
-        {
-          "question": "How can I get the Black Friday discount?",
-          "answer": [
-            "To claim your Black Friday discount, choose your preferred individual, business, or family plan and head to the checkout page. Your 85% discount is automatically applied at the checkout. "
-          ]
-        },
-        {
-          "question": "When does the promotion end?",
-          "answer": ["The Black Friday sale ends December 3rd, 2024."]
-        },
-        {
-          "question": "Who is eligible for this discount?",
-          "answer": [
-            "New users or anyone with a free Internxt account is eligible to take part in our Black Friday Sale."
-          ]
-        },
-        {
-          "question": "Will I keep the discount when my plan ends?",
-          "answer": [
-            "The Black Friday deal is until the end of the subscription period. Your subscription will renew at the regular price once this subscription period ends at the end of the month or year. As lifetime plans only require one payment, your discount will last forever. "
-          ]
-        },
-        {
-          "question": "What payment methods does Internxt accept?",
-          "answer": [
-            "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
-          ]
-        },
-        {
-          "question": "Have more questions?",
-          "answer": [
-            "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
-          ]
-        }
-      ]
-    },
-    "FooterSection": {
-      "title": "Stand with privacy. Choose Internxt!",
-      "subtitle": "Get a discount on privacy and peace of mind.",
-      "subtitle1": "Get 60% off one whole year of our largest 2TB plan!",
-      "only": "Only",
-      "priceNow": "3.59",
-      "month": "/mo"
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
     }
   },
-  "cta": {
-    "title": "Black Friday is over!",
-    "subtitle": "But you can still get privacy for a great price!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
+  "WhyChooseSection": {
+    "title": "Why choose Internxt’s Black Friday deal?",
+    "cards": {
+      "titles": ["A fully private ecosystem", "The most advanced encryption", "Our biggest Black Friday deal"],
+      "descriptions": [
+        "All paid Internxt plans include post-quantum encrypted storage, backups, and Antivirus. For complete online protection, you also get VPN, Cleaner, Meet, and Mail, everything you need to stay secure online.",
+        "Get the first cloud storage with post-quantum encryption to upload, store, and share your files in total privacy with our end-to-end encrypted cloud service. Backup and sync your files to prevent data loss and ensure smooth collaboration with friends, family, or colleagues.",
+        "Take advantage of our biggest Black Friday offer yet with even more features to protect your data and files online. With a massive 90% off, now is the perfect time to get the best value on secure and private cloud storage, and more! "
+      ]
+    }
   },
-  "cta2": {
-    "title": "Bye bye Black Friday...",
-    "subtitle": "You can still get affordable privacy!",
-    "cta": "Choose plan",
-    "guarantee": "30-day money-back guarantee"
+  "CtaSection": {
+    "title": "Unlock massive Black Friday savings",
+    "description": "90% off all our premium plans",
+    "cta": "Claim deal"
+  },
+  "HorizontalScrollableSection": {
+    "title": "The most secure cloud storage, and more, for less",
+    "description": "We build all our products with privacy in mind. We don’t run our business on data or advertising; we build it on trust. Our post-quantum and zero-knowledge encryption ensures you, and only you, can access your files.",
+    "features": [
+      "Cancel Anytime",
+      "Post-quantum encryption",
+      "Sustainable Energy sources",
+      "Open-source code",
+      "Independently verified"
+    ],
+    "scrollableSection": {
+      "titles": ["Unhackable and unleakable data", "Uncompromising security", "Open source and audited", "Compliance"],
+      "descriptions": [
+        "We don’t store passwords or user data, and all of your data is encrypted in transit and at rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "Your files are end-to-end encrypted before ever leaving your device. Thanks to zero-knowledge and post-quantum encryption, you are the absolutely only one with access to your data.",
+        "We are proud of what we do, so our code is made public on GitHub; we have nothing to hide but your data. Internxt has also been independently audited and verified by Europe’s leading penetration testing company, Securitum.",
+        "Internxt is GDPR, HIPAA, ISO 27001, and SOC 2 compliant. Whether you need cloud storage for healthcare, finance, or personal use, Internxt ensures your data and files meet the highest standards of data protection."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "The best Black Friday deals",
+    "description": "90% off all plans",
+    "cta": "Claim deal"
+  },
+  "FaqSection": {
+    "title": "Questions? We have answers",
+    "faq": [
+      {
+        "question": "How can I get the Black Friday discount?",
+        "answer": [
+          "To claim your Black Friday discount, choose your preferred individual, business, or family plan and head to the checkout page. Your 85% discount is automatically applied at the checkout. "
+        ]
+      },
+      {
+        "question": "When does the promotion end?",
+        "answer": ["The Black Friday sale ends December 3rd, 2024."]
+      },
+      {
+        "question": "Who is eligible for this discount?",
+        "answer": [
+          "New users or anyone with a free Internxt account is eligible to take part in our Black Friday Sale."
+        ]
+      },
+      {
+        "question": "Will I keep the discount when my plan ends?",
+        "answer": [
+          "The Black Friday deal is until the end of the subscription period. Your subscription will renew at the regular price once this subscription period ends at the end of the month or year. As lifetime plans only require one payment, your discount will last forever. "
+        ]
+      },
+      {
+        "question": "What payment methods does Internxt accept?",
+        "answer": [
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
+        ]
+      },
+      {
+        "question": "Have more questions?",
+        "answer": [
+          "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
+        ]
+      }
+    ]
   }
 }

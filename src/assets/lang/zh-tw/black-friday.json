@@ -1,176 +1,124 @@
 {
-  "blackFriday": {
-    "HeroSection": {
-      "title": {
-        "line1": "結束了",
-        "line2": "黑色星期五"
-      },
-      "description": "但您仍然可以以優惠的價格獲得隱私保護！",
-      "pricingTable": {
-        "only": "僅",
-        "priceNow": "3.59",
-        "month": "/月",
-        "priceBefore": "8.99",
-        "footer": {
-          "line1": "加密文件儲存與分享",
-          "line2": "隨時隨地訪問您的文件",
-          "line3": "獲得所有服務的訪問權限"
-        }
-      },
-      "timer": {
-        "timeTitle": "黑色星期五優惠將於以下時間到期：",
-        "days": "天",
-        "hours": "小時",
-        "minutes": "分鐘",
-        "seconds": "秒"
-      },
-      "features": ["加密文件儲存與分享", "隨時隨地訪問您的文件", "獲得所有服務的訪問權限", "無未經授權的數據訪問"]
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "BestStorage": {
-      "title": "最佳雲端儲存黑色星期五優惠",
-      "subtitle": "Internxt 的隱私與安心折扣明年將會回歸！"
+    "title": "**黑色星期五**優惠",
+    "subtitle": "以 90% 的折扣獲得 2025 年最佳黑色星期五優惠，適用於所有 Internxt 方案。",
+    "description": "立即獲得 {{discount}}% 折扣！",
+    "features": ["私人數位套件", "後量子加密", "開源且經過審核"],
+    "claimDeal": "領取優惠"
+  },
+  "DontMissSection": {
+    "title": "別錯過您的黑色星期五優惠！",
+    "description": [
+      "使用 Internxt 保護您的線上數據，我們完整的隱私套件包括備份、防毒軟體、VPN、Cleaner、Meet、Mail 等更多功能。",
+      "透過 Internxt 的 90% 黑色星期五折扣，獲得最佳的線上隱私和安全性。"
+    ]
+  },
+  "TableSection": {
+    "title": "您的隱私一體化方案",
+    "hotLabel": "{{discount}}% 折扣",
+    "planTitles": {
+      "header": " 選擇您的計劃",
+      "individuals": "年度計劃",
+      "lifetime": "終身計劃",
+      "business": "商業計劃"
     },
-    "SuiteSection": {
-      "title": "以更少的價格獲得更多：安全的雲端儲存計劃，價格無法比擬！",
-      "subtitle": "透過 Internxt 重新掌控您的數據，獲得全面的線上隱私，並保護自己、您的企業或您的家人免受網路攻擊和公司從您的數據中獲利。",
-      "drive": {
-        "title": "Internxt 驅動",
-        "subtitle": "使用我們的加密雲服務以完全隱私上傳、儲存和分享您的文件。備份和同步您的文件以防止數據丟失並確保順利合作。",
-        "cta": "使用驅動保護",
-        "image": "drive",
-        "alt": "Internxt 驅動"
-      },
-      "photos": {
-        "title": "Internxt 企業版",
-        "subtitle": "滿足您企業安全管理所需的一切。安全的文件分享、儲存分配和會話管理功能確保 Internxt 滿足您所有的商業需求。",
-        "cta": "獲得 Internxt 企業版",
-        "image": "business",
-        "alt": "Internxt 企業版"
-      },
-      "send": {
-        "title": "Internxt 家庭版",
-        "subtitle": "為您的家人提供全面的安心。安全地儲存、分享和管理您最珍貴的回憶，從一個單一的加密雲平台中獲得。",
-        "cta": "獲得 Internxt 家庭版",
-        "image": "family",
-        "alt": "Internxt 家庭版"
-      }
+    "billingFrequency": {
+      "annually": "年繳",
+      "lifetime": "終身"
     },
-    "FeatureSection": {
-      "title": "為什麼選擇 Internxt？",
-      "subtitle": "我們所有的產品都是以隱私為核心來構建的。我們不以數據或廣告為業務基礎，而是建立在信任之上。我們的加密技術保護您的文件，確保您保持基本的隱私權。",
-      "feature1": {
-        "title": "無法駭入且不會洩露的數據",
-        "subtitle1": "我們不儲存密碼或用戶數據，您所有的數據在傳輸和靜態時都是加密的。Internxt 讓您完全掌控您的文件。您的數據就是您的事業，保護它是我們的責任。"
-      },
-      "feature2": {
-        "title": "無妥協的安全性",
-        "subtitle1": "您的文件在離開設備之前就已進行端對端加密。憑藉零知識 AES-256 加密，您是唯一可以訪問您的數據的人。"
-      },
-      "feature3": {
-        "title": "開源和透明",
-        "subtitle1": "我們為自己所做的感到自豪，因此我們的代碼在 GitHub 上公開，任何人都可以進行個人審查、審計和驗證。我們沒有任何隱瞞，只有您的數據。"
-      },
-      "feature4": {
-        "title": "經獨立驗證",
-        "subtitle1": "我們完全符合 GDPR 規範且 100% 安全，但不要僅僅相信我們的話。Internxt 已經經過歐洲領先的滲透測試公司 Securitum 獨立審計和驗證。"
-      }
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1 GB 加密雲端儲存空間",
+      "cta": "選擇方案"
     },
-    "PlatformSection": {
-      "title": "隨時隨地訪問您的文件",
-      "subtitle": "Internxt 可在所有平台上使用，意味著您的文件隨時都在您指尖！",
-      "web": "網頁",
-      "linux": "Linux",
-      "windows": "Windows",
-      "mac": "MacOS",
-      "android": "Android",
-      "iOS": "iOS"
+    "features": {
+      "openSource": "開源且經過審核",
+      "premiumSupport": "優質客戶支援",
+      "guarantee": "30 天退款保證"
     },
-    "TestimonialsSection": {
-      "title": "我們的用戶對我們的評價",
-      "cards": [
-        {
-          "name": "Eva Williams",
-          "enterprise": "FixThePhoto.com 的記者",
-          "review": "Internxt 是一個便捷的雲端儲存服務，適合重視隱私的客戶。它擁有流暢的介面和可靠的支持團隊，是需要安全儲存文件的絕佳選擇。"
-        },
-        {
-          "name": "Cristian M.",
-          "enterprise": "來自 GetApp 的評價",
-          "review": "最好的加密 Dropbox 替代品。總體而言：我們需要一個可以儲存客戶文件和工作的替代方案（社交媒體文件），而且因為 Internxt 符合 GDPR，因此完美適合我們！"
-        },
-        {
-          "name": "Josep Carrizo",
-          "enterprise": "來自 Trustpilot 的評價",
-          "review": "我使用 Google Drive 已經幾年了，但我需要一個可以保障我數據隱私的替代方案。這是 Google 或其他知名平台無法做到的。因此，我轉向了 Internxt。"
-        }
-      ]
-    },
-    "faq": {
-      "title": "有問題嗎？我們有答案",
-      "faq": [
-        {
-          "question": "我如何獲得黑色星期五折扣？",
-          "answer": [
-            "要享受我們的黑色星期五折扣，您必須點擊本頁面上的「獲取優惠」按鈕之一，然後您將直接跳轉到結帳頁面，折扣已經應用於您的新 2TB Internxt 計劃。"
-          ]
-        },
-        {
-          "question": "促銷活動什麼時候結束？",
-          "answer": ["我們的黑色星期五促銷活動將從 11 月 21 日持續到 2022 年 12 月 5 日。"]
-        },
-        {
-          "question": "誰有資格獲得這個折扣？",
-          "answer": ["新用戶或任何擁有 Internxt 免費、20GB 或 200GB 訂閱計劃的人均可參加我們的黑色星期五促銷活動。"]
-        },
-        {
-          "question": "當我的計劃結束時，我會保留折扣嗎？",
-          "answer": [
-            "該折扣適用於第一個完整的服務年度。因此，您將以折扣價格獲得我們 2TB 訂閱計劃的服務，僅限一年。",
-            "如果您選擇在使用優惠後繼續現有訂閱，您的帳戶將在下一年按標準 2TB 計劃價格收費。"
-          ]
-        },
-        {
-          "question": "Internxt 接受哪些付款方式？",
-          "answer": [
-            "我們目前接受信用卡和借記卡（Mastercard、VISA、美國運通等）付款。您還可以通過 Apple 和 Google Pay、Cartes Banaires、Alipay、Wechat Pay、Bancontact、EPS、GiroPay、iDEAL、Przelewy24、Sofort、Blik、Klarna、Afterpay、SEPA 直接借記付款。"
-          ]
-        },
-        {
-          "question": "你們是否為非營利組織或學生提供折扣？",
-          "answer": [
-            "是的，如果您是非營利組織或 NGO 的成員，您可以享受任何 Internxt 訂閱計劃 50% 的折扣。請通過 [hello@internxt.com](mailto:hello@internxt.com) 聯繫我們，提供您組織的憑證，以便我們能夠驗證您的資格並為您應用折扣。",
-            "如果您是學生，您也可以獲得 50% 的折扣。請通過您大學的電子郵件地址發送電子郵件至 [hello@internxt.com](mailto:hello@internxt.com) 以申請折扣並驗證您的資格。"
-          ]
-        },
-        {
-          "question": "有更多問題嗎？",
-          "answer": [
-            "如果您有更多問題，請隨時聯繫我們 [hello@internxt.com](mailto:hello@internxt.com) 或在社交媒體上與我們打招呼。我們隨時樂意聆聽您的聲音！"
-          ]
-        }
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "cards": {
+      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們最大的優惠"],
+      "descriptions": [
+        "所有 Internxt 付費方案都包含後量子加密儲存、備份和防毒軟體。為了獲得完整的線上保護，您還可以獲得 VPN、Cleaner、Meet 和 Mail，這是您在線上保持安全所需的一切。",
+        "獲得首個具有後量子加密的雲端儲存，透過我們的端對端加密雲端服務，以完全隱私的方式上傳、儲存和分享您的檔案。備份和同步您的檔案以防止資料遺失，並確保與朋友、家人或同事順暢協作。",
+        "利用我們迄今為止最大的黑色星期五優惠，獲得更多功能來保護您的線上數據和檔案。憑藉高達 90% 的巨額折扣，現在是獲得安全且私密的雲端儲存最佳性價比的完美時機，還有更多優惠！"
       ]
     }
   },
-  "FooterSection": {
-    "title": "支持隱私。選擇 Internxt！",
-    "subtitle": "獲得隱私和安心的折扣。",
-    "subtitle1": "我們最大的 2TB 計劃可享 60% 折扣一整年！",
-    "only": "僅需",
-    "priceNow": "3.59",
-    "month": "/月"
+  "CtaSection": {
+    "title": "發現黑色星期五的巨大優惠",
+    "description": "所有優質方案 90% 折扣",
+    "cta": "領取優惠"
   },
-  "cta": {
-    "title": "黑色星期五已經結束！",
-    "subtitle": "但您仍然可以以優惠的價格獲得隱私保護！",
-    "only": "僅需",
-    "priceNow": "3.59",
-    "month": "/月"
+  "HorizontalScrollableSection": {
+    "title": "最安全的雲端儲存，價格更優惠",
+    "description": "我們在開發所有產品時都以隱私為重。我們的業務不建立在數據或廣告之上；而是建立在信任之上。我們的後量子和零知識加密確保只有您，並且只有您，才能存取您的檔案。",
+    "features": ["隨時取消", "後量子加密", "永續能源", "開源", "獨立驗證"],
+    "scrollableSection": {
+      "titles": ["無法駭入和洩露的數據", "毫不妥協的安全性", "開源且經過審核", "合規性"],
+      "descriptions": [
+        "我們不儲存密碼或使用者數據，並且您的所有數據在傳輸和靜態時都經過加密。Internxt 讓您完全控制您的檔案。您的數據是您的事。保護它們是我們的事。",
+        "您的檔案在離開您的裝置之前就已進行端對端加密。憑藉零知識和後量子加密，您絕對是唯一可以存取您數據的人。",
+        "我們為我們所做的事情感到自豪，因此我們的程式碼在 GitHub 上公開；我們除了您的數據之外沒有什麼可隱藏的。Internxt 還經過歐洲領先的滲透測試公司 Securitum 的獨立審核和驗證。",
+        "Internxt 符合 GDPR、HIPAA、ISO 27001 和 SOC 2 標準。無論您是需要用於醫療保健、金融還是個人用途的雲端儲存，Internxt 都能確保您的數據和檔案符合最高的數據保護標準。"
+      ]
+    }
   },
-  "cta2": {
-    "title": "黑色星期五已經結束！",
-    "subtitle": "您仍然可以獲得負擔得起的隱私保護！",
-    "only": "僅需",
-    "priceNow": "3.59",
-    "month": "/月"
+  "CtaSectionV2": {
+    "title": "最佳黑色星期五優惠",
+    "description": "所有方案 90% 折扣",
+    "cta": "領取優惠"
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "如何獲得黑色星期五折扣？",
+        "answer": [
+          "要領取您的黑色星期五折扣，請選擇您偏好的個人、企業或家庭方案，然後前往結帳頁面。您的 85% 折扣將在結帳時自動套用。"
+        ]
+      },
+      {
+        "question": "促銷何時結束？",
+        "answer": ["黑色星期五優惠於 2024 年 12 月 3 日結束。"]
+      },
+      {
+        "question": "誰有資格享受此折扣？",
+        "answer": ["新使用者或任何擁有免費 Internxt 帳戶的人都有資格參加我們的黑色星期五優惠。"]
+      },
+      {
+        "question": "當我的方案結束時，我會保留折扣嗎？",
+        "answer": [
+          "黑色星期五優惠持續到訂閱期結束。一旦此訂閱期在月底或年底結束，您的訂閱將以正常價格續訂。由於終身方案只需要一次付款，您的折扣將永遠持續。"
+        ]
+      },
+      {
+        "question": "Internxt 接受哪些付款方式？",
+        "answer": [
+          "目前，我們接受信用卡和簽帳卡付款（包括 Mastercard、VISA、American Express 等），我們也接受 Paypal、Bankcontact、iDEAL 和 SOFORT。"
+        ]
+      },
+      {
+        "question": "還有其他問題？",
+        "answer": [
+          "請隨時透過 [hello@internxt.com](mailto:hello@internxt.com) 與我們聯繫，或在社群媒體上向我們打招呼。我們總是很高興聽到您的消息！"
+        ]
+      }
+    ]
   }
 }
