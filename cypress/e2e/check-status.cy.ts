@@ -27,6 +27,7 @@ const nameFiles = [
   'file-converter',
   'cleaner',
   'deals/black-friday-internxt',
+  'coupons',
 ];
 
 const langs = {

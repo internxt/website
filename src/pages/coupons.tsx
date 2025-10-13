@@ -26,7 +26,7 @@ interface HomeProps {
 }
 
 const HomePage = ({ metatagsDescriptions, textContent, lang, navbarLang, footerLang }: HomeProps): JSX.Element => {
-  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'home');
+  const metatags = metatagsDescriptions.filter((desc) => desc.id === 'coupons');
 
   const {
     products,

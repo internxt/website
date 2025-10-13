@@ -288,5 +288,10 @@
     "id": "nas",
     "title": "Internxt – NAS QNAP et Synology",
     "description": "Sauvegardez vos appareils NAS QNAP et Synology dans le cloud avec Internxt."
+  },
+  {
+    "id": "coupons",
+    "title": "Internxt — Réductions, Coupons et Promotions",
+    "description": "Défendez la vie privée, passez à Internxt. Les services de stockage cloud open source d'Internxt protègent votre droit à la vie privée. Internxt Drive, Photos, Send et plus encore."
   }
 ]
