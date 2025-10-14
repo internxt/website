@@ -83,22 +83,28 @@ const couponNameLabel = (label: string, couponName: string) => {
   return label.replace('{{coupon}}', `'${couponName}'`);
 };
 
-const HotLabel = ({ textContent, discountValue }) => {
+const HotLabel = ({ textContent, discountValue, darkMode }) => {
   if (!discountValue || discountValue <= MINIMUM_DISCOUNT || !textContent?.hotLabel) {
     return null;
   }
 
   return (
-    <span className="flex rounded-sm bg-neutral-37 px-1 py-0.5 text-xl font-semibold text-primary">
+    <span
+      className={`flex rounded-sm ${
+        darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
+      } px-1 py-0.5 text-xl font-semibold `}
+    >
       {formatDiscountLabel(textContent.hotLabel, discountValue)} 🔥
     </span>
   );
 };
-const PricingHeader = ({ textContent, discountValue, className = '', couponCodeName }) => (
+const PricingHeader = ({ textContent, discountValue, className = '', couponCodeName, darkMode }) => (
   <div className={`flex flex-col items-center gap-4 text-center lg:flex-row ${className}`} id="priceTable">
-    <p className="text-30 font-semibold text-gray-100 lg:text-3xl">{textContent.planTitles.header}</p>
+    <p className={`text-30 font-semibold ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-3xl`}>
+      {textContent.planTitles.header}
+    </p>
     <div className={couponCodeName ? 'hidden lg:block' : ''}>
-      <HotLabel textContent={textContent} discountValue={discountValue} />
+      <HotLabel textContent={textContent} discountValue={discountValue} darkMode={darkMode} />
     </div>
   </div>
 );
@@ -165,7 +171,6 @@ export const PricingSectionWrapper = ({
     startBusinessPlansFromInterval,
     handlePageNameUpdate,
   );
-
   const activeSwitchPlan = overrideActiveSwitchPlan ?? localPlanSelection.activeSwitchPlan;
   const activeStoragePlan = overrideActiveStoragePlan ?? localPlanSelection.activeStoragePlan;
   const activeBusinessStoragePlan = overrideActiveBusinessStoragePlan ?? localPlanSelection.activeBusinessStoragePlan;
@@ -224,6 +229,7 @@ export const PricingSectionWrapper = ({
             textContent={textContent}
             discountValue={actualDiscountValue}
             couponCodeName={couponCodeName}
+            darkMode={darkMode}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -234,6 +240,7 @@ export const PricingSectionWrapper = ({
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           isMonthly
+          darkMode={darkMode}
         />
       </div>
 
@@ -243,6 +250,7 @@ export const PricingSectionWrapper = ({
             textContent={textContent}
             discountValue={actualDiscountValue}
             couponCodeName={couponCodeName}
+            darkMode={darkMode}
           />
           {couponCodeName && <CouponCodeHeader textContent={textContent} couponCode={couponCodeName} />}
         </div>
@@ -254,6 +262,7 @@ export const PricingSectionWrapper = ({
           hideBillingController={hideBillingController}
           onIndividualSwitchToggled={onIndividualSwitchToggled}
           onBusinessSwitchToggled={onBusinessSwitchToggled}
+          darkMode={darkMode}
         />
       </div>
     </section>
