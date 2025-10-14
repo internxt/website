@@ -70,24 +70,6 @@ export default function ThreeCardsSection({ textContent, darkMode }: Readonly<Th
   const hasCta = textContent.cards.cta;
 
   return (
-<<<<<<< Updated upstream:src/components/nas/ThreeCardsSection.tsx
-    <section
-      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
-        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
-      } p-lg:py-20 py-10 lg:h-min lg:gap-16`}
-    >
-      <div
-        className={`absolute left-8 right-8 top-0 h-[1px] ${
-          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
-        } lg:bottom-0 lg:left-32 lg:right-32`}
-      ></div>
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
-        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
-          {textContent.title}
-        </p>
-        {textContent.description && (
-          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-=======
     <section
       className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
         darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
@@ -104,8 +86,6 @@ export default function ThreeCardsSection({ textContent, darkMode }: Readonly<Th
         </p>
         {textContent.description && (
           <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
-        )}
->>>>>>> Stashed changes:src/components/shared/sections/ThreeCardsSection.tsx
         )}
       </div>
 
