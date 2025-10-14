@@ -7,10 +7,10 @@ import FAQSection from '@/components/shared/sections/FaqSection';
 import cookies from '@/lib/cookies';
 import { NASPageText } from '@/assets/types/nas';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
-import ThreeCardsSection from '@/components/nas/ThreeCardsSection';
+import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import HorizontalScrollableSection from '@/components/shared/HorizontalScrollableSection';
 import SynologyQNAPSection from '@/components/nas/SynologyQNAPSection';
-import WhatIsNASSection from '@/components/nas/WhatIsNAS';
+import WhatIsNASSection from '@/components/shared/components/TitleAndDescriptionSection';
 import HeroSection from '@/components/nas/HeroSection';
 
 interface NASPageProps {
