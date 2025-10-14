@@ -2,7 +2,7 @@ import { GetServerSidePropsContext } from 'next';
 
 import { getBlackFridayDealProps } from '@/lib/blackFridayDeals.helper';
 import { PromoCodeName } from '@/lib/types';
-import BlackFridayDealsTemplate from './blackFridayDealsTemplate';
+import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
 
 const BlackFridayPage = (props) => {
   return <BlackFridayDealsTemplate {...props} />;
