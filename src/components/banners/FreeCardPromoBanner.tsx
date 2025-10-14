@@ -99,10 +99,10 @@ export const FreeCardPromoBanner = () => {
             <X size={32} />
           </button>
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
-            <div className="flex w-[650px] flex-col items-center gap-8  text-center lg:items-start lg:text-left">
+            <div className="flex w-full flex-col items-center gap-8 text-center lg:w-[650px] lg:items-start lg:text-left">
               <div className="flex flex-col gap-5 text-center lg:text-left">
                 <span
-                  className={`font-regular flex w-[300px] flex-col items-center justify-center gap-1 whitespace-nowrap text-base leading-tight ${
+                  className={`font-regular flex w-[300px] flex-col items-center justify-center gap-1 whitespace-nowrap  text-base leading-tight ${
                     darkMode ? 'text-white-95' : 'text-gray-100'
                   } md:text-xl lg:w-full lg:flex-row lg:justify-start lg:gap-3`}
                 >
@@ -117,14 +117,14 @@ export const FreeCardPromoBanner = () => {
                 </span>
                 <span className="flex flex-col justify-center gap-4">
                   <p
-                    className={`w-[500px] text-30 font-bold leading-tight ${
+                    className={`w-[300px] text-30 font-bold leading-tight lg:w-[500px] ${
                       darkMode ? 'text-white-95' : 'text-gray-100'
                     } md:text-3xl`}
                   >
                     {bannerText.FreeCardPromoBanner.title}
                   </p>
                   <p
-                    className={`text-xl font-semibold leading-tight ${
+                    className={`w-[300px]  text-xl font-semibold leading-tight lg:w-full ${
                       darkMode ? 'text-white-95' : 'text-gray-100'
                     } lg:text-2xl`}
                   >
