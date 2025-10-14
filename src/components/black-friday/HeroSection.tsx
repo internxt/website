@@ -1,71 +1,119 @@
-import { Alarm, CheckCircle } from '@phosphor-icons/react';
-import styles from '@/components/black-friday/BF-HeroSection.module.scss';
-import ButtonDeal from '@/components/black-friday/components/ButtonDeal';
-import Countdown from '@/components/components/Countdown';
-import { getImage } from '@/lib/getImage';
 import Image from 'next/image';
+import { getImage } from '@/lib/getImage';
+import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
+import Link from 'next/link';
+import { HighlightText } from '../components/HighlightText';
+import { BlackFridayText } from '@/assets/types/blackFriday';
 
-const HeroSection = ({ textContent, lang }) => {
+interface HeroSectionBlackFridayProps {
+  textContent: BlackFridayText['HeroSection'];
+  percentOff: string;
+}
+
+export default function HeroSection({ textContent, percentOff }: Readonly<HeroSectionBlackFridayProps>): JSX.Element {
+  const products = [
+    {
+      icon: CloudArrowUp,
+      text: textContent.products.drive,
+    },
+    {
+      icon: ShieldPlus,
+      text: textContent.products.antivirus,
+    },
+    {
+      icon: Sparkle,
+      text: textContent.products.cleaner,
+    },
+    {
+      icon: CellTower,
+      text: textContent.products.vpn,
+    },
+    {
+      icon: VideoConference,
+      text: textContent.products.meet,
+    },
+    {
+      icon: Envelope,
+      text: textContent.products.mail,
+    },
+  ];
+
+  const parsePercentText = (text: string) => {
+    if (!percentOff || percentOff === '0') {
+      return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
+    }
+    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+  };
+
   return (
-    <section className="relative flex w-full flex-col overflow-hidden">
-      {/* Desktop Version */}
-      <div className="hidden items-center justify-center overflow-hidden md:flex">
-        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-10 sm:mb-6 sm:pt-0 md:flex-row md:space-y-0 lg:mx-32 lg:justify-between lg:space-x-11">
-          <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-5 text-center sm:w-auto md:my-8 md:max-w-md md:items-start md:text-left lg:max-w-lg">
-            <div className="flex flex-row">
-              <Alarm size={32} className="mr-4 text-primary" />
-              <Countdown dt={'2024-12-03T00:00:00'} textColor={'white'} />
+    <section
+      className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-12 lg:pl-10 xl:pl-32 3xl:pl-80`}
+      style={{ background: 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)' }}
+    >
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[566px] lg:justify-between">
+        <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
+          {products.map((feature, index) => (
+            <div
+              key={index}
+              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+            >
+              <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
+              <p className="whitespace-nowrap text-sm font-medium leading-tight text-neutral-37">{feature.text}</p>
             </div>
-            <p className="text-4xl font-bold text-white sm:text-6xl">
-              {textContent.HeroSection.title.line1}
-              <br />
-              {textContent.HeroSection.title.line2}
+          ))}
+        </div>
+
+        <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
+          <div className="flex flex-col justify-center gap-4">
+            <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+              <HighlightText text={textContent.title} className="text-white-95" />
             </p>
-            <p className="text-2xl font-bold text-white sm:text-4xl">{textContent.HeroSection.description}</p>
-            <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-              <ButtonDeal lang={lang} />
-            </div>
+            <p className="font-regular flex text-lg leading-tight text-gray-1 lg:w-[600px] lg:text-2xl">
+              {textContent.subtitle}
+            </p>
           </div>
-          <div className="flex w-full flex-col md:mt-0 md:max-w-none md:flex-row">
-            <div className="relative flex items-center justify-center md:h-[600px] lg:left-16 lg:mt-10">
-              <Image
-                src={getImage('/images/black-friday/internxt_black_friday_2024.webp')}
-                alt={'Black Friday Discounts'}
-                width={520}
-                height={520}
-              />
-            </div>
+          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
+            <p className="bg-purple-100 px-1 py-0.5 text-purple-8 ">{parsePercentText(textContent.description)}</p>
+          </span>
+          <div className="flex flex-col justify-center gap-1 lg:gap-2">
+            {textContent.features.map((feat) => (
+              <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
+                <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
+                <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
+                <p className="text-left text-sm font-semibold text-gray-1 lg:text-lg ">{feat}</p>
+              </div>
+            ))}
           </div>
         </div>
-        <div
-          className={`absolute left-0 top-0 -z-10 flex h-full w-screen ${styles.radialGradient} pointer-events-none origin-center`}
+        <Link
+          href={'#billingButtons'}
+          className="z-10 flex items-center justify-center whitespace-nowrap rounded-sm-6 bg-primary  py-4 text-base font-medium text-white hover:bg-primary-dark lg:w-[177px]"
+        >
+          {textContent.claimDeal}
+        </Link>
+      </div>
+
+      <div className="hidden w-full justify-end lg:flex">
+        <Image
+          src={getImage('/images/black-friday/hero.webp')}
+          alt="DriveWeb DarkMode image desktop"
+          height={700}
+          width={722}
+          quality={100}
+          className="flex-shrink-0"
         />
       </div>
 
-      {/* Mobile Version */}
-      <div className="flex items-center justify-center overflow-hidden md:hidden">
-        <div className="flex w-full max-w-screen-xl flex-col items-center justify-center space-y-10 py-10 sm:mb-6 sm:pt-0 lg:mx-32 lg:justify-between lg:space-x-11">
-          <div className="mt-16 flex w-screen flex-shrink-0 flex-col items-center justify-center space-y-6 pt-6 text-center sm:w-auto lg:max-w-lg">
-            <div className="flex flex-row items-center space-x-4">
-              <Alarm size={32} className="text-primary" />
-              <Countdown dt={'2024-12-03T00:00:00'} textColor={'white'} textHeight="text-3xl" />
-            </div>
-            <p className="text-5xl font-bold text-white">
-              {textContent.HeroSection.title.line1}
-              <br />
-              {textContent.HeroSection.title.line2}
-            </p>
-            <p className="max-w-xs text-4xl font-bold text-white sm:max-w-md">{textContent.HeroSection.description}</p>
-            <div className="flex flex-col items-center space-y-4">
-              <ButtonDeal lang={lang} />
-            </div>
-          </div>
-        </div>
-        <div
-          className={`absolute left-0 top-0 -z-10 flex h-full w-screen ${styles.radialGradient} pointer-events-none origin-center`}
+      <div className="flex w-max items-center justify-center lg:hidden">
+        <Image
+          src={getImage('/images/black-friday/hero.webp')}
+          alt="DriveWeb DarkMode image desktop"
+          height={400}
+          width={400}
+          quality={100}
+          className="flex-shrink-0 pl-10"
         />
       </div>
     </section>
   );
-};
-export default HeroSection;
+}
