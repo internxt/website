@@ -25,7 +25,6 @@ import useWindowFocus from '@/hooks/useWindowFocus';
 import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
-import BitdefenderBanner from '../banners/BitdefenderBanner';
 
 export const HeroSection = ({ textContent, lang }) => {
   const isFocused = useWindowFocus();
@@ -258,8 +257,6 @@ export const HeroSection = ({ textContent, lang }) => {
           onDelete={onDeleteEmailButtonClicked}
           textContent={textContent}
         />
-
-        <BitdefenderBanner languageForImage={languageForImage} isTempMail />
 
         <Inbox
           textContent={textContent.inbox}
