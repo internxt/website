@@ -9,25 +9,19 @@
     "cancelCta": "Отмена"
   },
   "FreeCardPromoBanner": {
-    "title": "Получите эксклюзивную скидку!",
-    "subtitle": {
-      "blue": "Специальное предложение:",
-      "normal": " храните файлы конфиденциально за меньшую цену"
-    },
+    "title": "Получите специальное предложение Черной пятницы!",
+    "subtitle": "**Самая большая** скидка для **максимальной конфиденциальности**",
     "getDealCta": "Получить предложение",
-    "freePlanCta": "Продолжить с бесплатным планом",
-    "header": {
-      "primaryText": "Получите скидку 87%",
-      "afterPrimaryText": "во всех пожизненных тарифах"
-    },
+    "freePlanCta": "Продолжить с бесплатным тарифом",
     "guarantee": "30-дневная гарантия возврата денег",
+    "header": { "primaryText": "Получите скидку 90%", "afterPrimaryText": "на все тарифы" },
     "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
+      "drive": "Диск",
+      "antivirus": "Антивирус",
+      "cleaner": "Очиститель",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Mail"
+      "mail": "Почта"
     }
   },
   "LoginBanner": {

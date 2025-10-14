@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "**黑色星期五**優惠",
-    "subtitle": "以 90% 的折扣獲得 2025 年最佳黑色星期五優惠，適用於所有 Internxt 方案。",
+    "subtitle": "以 90% 的折扣獲得 2025 年最佳黑色星期五優惠，適用於所有 Internxt 方案",
     "description": "立即獲得 {{discount}}% 折扣！",
     "features": ["私人數位套件", "後量子加密", "開源且經過審核"],
     "claimDeal": "領取優惠"
