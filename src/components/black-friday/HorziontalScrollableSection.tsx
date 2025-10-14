@@ -113,23 +113,23 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
         size={iconSize}
         className="mb-2 text-primary transition-colors duration-200 hover:text-primary/80"
       />
-      <p className={`${textSize} font-medium text-white-95`}>{formatText(feature.title)}</p>
+      <p className={`${textSize} whitespace-nowrap font-medium text-white-95`}>{formatText(feature.title)}</p>
     </div>
   );
   return (
     <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[#1C1C1C] pb-10 lg:h-min lg:gap-16 lg:py-20 ">
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[780px]">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[780px] lg:gap-12">
         <p className="text-30 font-bold leading-tight text-white-95 lg:w-[680px] lg:text-3xl">{textContent.title}</p>
         <p className="text-base font-normal leading-tight text-green-120 lg:w-[680px] lg:text-xl">
           {textContent.description}
         </p>
-        <div className="hidden w-full max-w-4xl flex-row justify-between gap-4 px-4 lg:flex">
+        <div className="b hidden w-full flex-row justify-center gap-8 lg:flex">
           {features.map((feature, index) => (
             <FeatureItem
               key={`desktop-${index}`}
               feature={feature}
               iconSize={32}
-              containerWidth="w-[370px]"
+              containerWidth="w-min"
               textSize="text-lg"
             />
           ))}

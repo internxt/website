@@ -7,16 +7,19 @@ import { CellTower, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference
 import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { event } from '@/lib/gtag';
+import { HighlightText } from '../components/HighlightText';
 
 export const FreeCardPromoBanner = () => {
   const router = useRouter();
   const lang = router.locale;
 
-  const { dialogIsOpen, closeDialog } = useGlobalDialog();
+  const { dialogIsOpen, closeDialog, getDialogData } = useGlobalDialog();
   const [shouldShowBanner, setShouldShowBanner] = useState<boolean>(false);
   const bannerText = require(`@/assets/lang/${lang}/banners.json`);
 
   const isDialogOpen = dialogIsOpen(GlobalDialog.FreeSpaceCardBanner);
+  const dialogData = getDialogData(GlobalDialog.FreeSpaceCardBanner) as { darkMode?: boolean } | null;
+  const darkMode = dialogData?.darkMode ?? true;
 
   useEffect(() => {
     setShouldShowBanner(dialogIsOpen(GlobalDialog.FreeSpaceCardBanner));
@@ -84,28 +87,48 @@ export const FreeCardPromoBanner = () => {
           className={`relative flex h-auto w-full flex-col overflow-hidden rounded-2xl
         text-neutral-900 lg:w-full lg:max-w-6xl`}
           style={{
-            background: 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
+            background: darkMode
+              ? 'linear-gradient(360deg, #082D66 0%, #1C1C1C 100%)'
+              : 'linear-gradient(360deg, #E5EFFF 0%, #FFFFFF 100%)',
           }}
         >
-          <button className="absolute right-0 top-0 z-50 m-5 flex w-auto text-gray-100" onClick={onCloseBanner}>
+          <button
+            className={`${darkMode ? 'text-white-95' : 'text-gray-100'} absolute right-0 top-0 z-50 m-5 flex w-auto`}
+            onClick={onCloseBanner}
+          >
             <X size={32} />
           </button>
           <div className="flex flex-col items-center gap-12 px-5 pb-10 pt-16 lg:flex-row lg:justify-between lg:py-10 lg:pl-10">
-            <div className="flex w-[650px] w-full flex-col items-center gap-8  text-center lg:items-start lg:text-left">
+            <div className="flex w-[650px] flex-col items-center gap-8  text-center lg:items-start lg:text-left">
               <div className="flex flex-col gap-5 text-center lg:text-left">
-                <span className="font-regular flex w-[300px] flex-col items-center justify-center gap-1 whitespace-nowrap text-base leading-tight text-gray-100 md:text-xl lg:w-full lg:flex-row lg:justify-start lg:gap-3">
-                  <p className="w-min rounded-2 bg-neutral-17 px-1 py-0.5 font-semibold text-primary">
+                <span
+                  className={`font-regular flex w-[300px] flex-col items-center justify-center gap-1 whitespace-nowrap text-base leading-tight ${
+                    darkMode ? 'text-white-95' : 'text-gray-100'
+                  } md:text-xl lg:w-full lg:flex-row lg:justify-start lg:gap-3`}
+                >
+                  <p
+                    className={`w-min rounded-2 px-1 py-0.5 font-semibold ${
+                      darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'
+                    }`}
+                  >
                     {bannerText.FreeCardPromoBanner.header.primaryText}
                   </p>
                   {bannerText.FreeCardPromoBanner.header.afterPrimaryText}
                 </span>
                 <span className="flex flex-col justify-center gap-4">
-                  <p className="text-30 font-bold leading-tight text-gray-100 md:text-3xl">
+                  <p
+                    className={`w-[500px] text-30 font-bold leading-tight ${
+                      darkMode ? 'text-white-95' : 'text-gray-100'
+                    } md:text-3xl`}
+                  >
                     {bannerText.FreeCardPromoBanner.title}
                   </p>
-                  <p className="text-xl font-semibold leading-tight text-gray-100 lg:text-2xl">
-                    <span className="text-primary">{bannerText.FreeCardPromoBanner.subtitle.blue}</span>
-                    {bannerText.FreeCardPromoBanner.subtitle.normal}
+                  <p
+                    className={`text-xl font-semibold leading-tight ${
+                      darkMode ? 'text-white-95' : 'text-gray-100'
+                    } lg:text-2xl`}
+                  >
+                    <HighlightText text={bannerText.FreeCardPromoBanner.subtitle} />
                   </p>
                 </span>
               </div>
@@ -130,7 +153,9 @@ export const FreeCardPromoBanner = () => {
                     width={24}
                     height={24}
                   />
-                  <p className="font-medium text-gray-100 lg:text-lg">{bannerText.FreeCardPromoBanner.guarantee}</p>
+                  <p className={`font-medium ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-lg`}>
+                    {bannerText.FreeCardPromoBanner.guarantee}
+                  </p>
                 </div>
               </div>
 
@@ -138,22 +163,40 @@ export const FreeCardPromoBanner = () => {
                 {products.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+                    className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
+                      darkMode ? 'bg-white/10' : 'bg-white/50'
+                    } px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
                   >
                     <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-                    <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80">{feature.text}</p>
+                    <p
+                      className={`whitespace-nowrap text-sm font-medium leading-tight ${
+                        darkMode ? 'text-white-95' : 'text-gray-100'
+                      }`}
+                    >
+                      {feature.text}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="hidden lg:flex">
-              <Image
-                src={getImage('/images/banners/freeCardPromoBanner/image_internxt.webp')}
-                alt="Free Card Promo Banner"
-                width={500}
-                height={359}
-                className="translate-x-5 translate-y-5"
-              />
+            <div className="hidden border border-white pl-10 lg:flex">
+              {darkMode ? (
+                <Image
+                  src={getImage('/images/black-friday/web_banner.webp')}
+                  alt="DriveWeb DarkMode image desktop"
+                  fill
+                  quality={100}
+                  className="translate-x-[480px] translate-y-16 object-contain"
+                />
+              ) : (
+                <Image
+                  src={getImage('/images/banners/freeCardPromoBanner/image_internxt.webp')}
+                  alt="Free Card Promo Banner"
+                  width={500}
+                  height={359}
+                  className="translate-x-5 translate-y-5"
+                />
+              )}
             </div>
           </div>
         </div>

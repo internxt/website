@@ -286,8 +286,10 @@ export const PriceCard = ({
               className={`${
                 popular
                   ? darkMode
-                    ? 'border-blue-55  bg-blue-55 text-white hover:bg-gray-90'
+                    ? 'border-blue-55  bg-blue-55 text-white hover:bg-primary-dark'
                     : 'bg-primary text-white hover:bg-primary-dark'
+                  : darkMode
+                  ? 'border-blue-55  bg-transparent text-primary hover:bg-gray-90'
                   : darkMode
                   ? 'border-blue-55  bg-transparent text-white hover:bg-gray-90'
                   : 'border-primary bg-transparent text-primary hover:bg-gray-1'
