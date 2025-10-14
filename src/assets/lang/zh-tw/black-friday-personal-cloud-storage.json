@@ -1,0 +1,155 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "最佳**黑色星期五**個人雲端儲存優惠",
+    "subtitle": "獲取2025年最佳黑色星期五優惠，所有Internxt方案享受90%折扣。",
+    "description": "立即獲得{{discount}}%折扣！",
+    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
+    "claimDeal": "領取優惠",
+    "moreDeals": {
+      "title": "更多黑色星期五優惠",
+      "description": "找到適合您雲端儲存和隱私需求的黑色星期五優惠",
+      "links": [
+        {
+          "text": "Internxt黑色星期五優惠",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "黑色星期五雲端儲存優惠",
+          "url": "/deals/black-friday-cloud-storage"
+        }
+      ]
+    }
+  },
+  "DontMissSection": {
+    "title": "Internxt的黑色星期五個人雲端儲存優惠！",
+    "description": [
+      "使用Internxt的全套隱私套件在線保護您的數據，包括備份、防毒軟體、VPN、Cleaner、Meet、Mail等。",
+      "透過Internxt的90%黑色星期五折扣，獲得最佳的線上隱私和安全。"
+    ]
+  },
+  "TableSection": {
+    "title": "您的一體化隱私助手",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "選擇您的方案",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "終身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得1 GB加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "openSource": "開源且經過審計",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "為什麼選擇我們的黑色星期五個人雲端儲存優惠？",
+    "cards": {
+      "titles": ["完全私密的生態系統", "最先進的加密技術", "我們有史以來最大的黑色星期五優惠"],
+      "descriptions": [
+        "所有Internxt付費方案都包括後量子加密儲存、備份和防毒軟體。為了獲得完整的線上保護，您還可以獲得VPN、Cleaner、Meet和Mail——線上安全所需的一切。",
+        "獲得第一個具有後量子加密的雲端儲存，透過我們的端對端加密雲端服務以完全隱私的方式上傳、儲存和共享您的檔案。備份和同步您的檔案以防止數據丟失，並確保與朋友、家人或同事的順暢協作。",
+        "利用我們迄今為止最大的黑色星期五優惠，獲得更多功能來保護您的線上數據和檔案。憑藉高達90%的折扣，現在是獲得安全和私密雲端儲存以及更多服務的最佳價值的完美時機！"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "解鎖黑色星期五巨大優惠",
+    "description": "所有高級方案享受90%折扣",
+    "cta": "領取優惠"
+  },
+  "HorizontalScrollableSection": {
+    "title": "最安全的雲端儲存及更多，價格更低",
+    "description": "我們在設計所有產品時都考慮到隱私。我們不依賴數據或廣告開展業務；我們建立在信任之上。我們的後量子和零知識加密確保只有您可以存取您的檔案。",
+    "features": ["隨時取消", "後量子加密", "可持續能源", "開源代碼", "獨立驗證"],
+    "scrollableSection": {
+      "titles": ["不可破解和不可洩露的數據", "毫不妥協的安全性", "開源且經過審計", "合規性"],
+      "descriptions": [
+        "我們不儲存密碼或使用者數據，您的所有數據在傳輸和靜止時都經過加密。Internxt讓您完全控制您的檔案。您的數據是您的事。保護它是我們的事。",
+        "您的檔案在離開裝置之前就已經過端對端加密。得益於零知識和後量子加密，您是唯一可以存取您數據的人。",
+        "我們為所做的工作感到自豪，因此我們的代碼在GitHub上公開；除了您的數據，我們沒有什麼可隱藏的。Internxt還經過歐洲領先的滲透測試公司Securitum的獨立審計和驗證。",
+        "Internxt符合GDPR、HIPAA、ISO 27001和SOC 2標準。無論您需要用於醫療保健、金融還是個人使用的雲端儲存，Internxt都能確保您的數據和檔案符合最高的數據保護標準。"
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "最佳黑色星期五優惠",
+    "description": "所有方案享受90%折扣",
+    "cta": "領取優惠"
+  },
+  "FaqSection": {
+    "title": "有問題？我們有答案",
+    "faq": [
+      {
+        "question": "如何獲得Internxt黑色星期五折扣？",
+        "answer": [
+          "要領取您的折扣，請從我們的Essential、Premium或Ultimate方案中選擇，然後前往結帳頁面。您的90%折扣將在結帳時自動套用。"
+        ]
+      },
+      {
+        "question": "黑色星期五個人雲端儲存優惠何時結束？",
+        "answer": ["黑色星期五促銷於2025年12月3日結束。"]
+      },
+      {
+        "question": "誰有資格享受這些黑色星期五雲端儲存優惠？",
+        "answer": [
+          "如果您是新使用者，可以透過建立帳戶享受此折扣。如果您擁有終身方案，可以升級以獲得更多儲存空間和額外功能，如Cleaner、Meet和Mail。"
+        ]
+      },
+      {
+        "question": "當我的方案結束時，我會保留折扣嗎？",
+        "answer": [
+          "黑色星期五優惠在訂閱期結束前有效。一旦此訂閱期在年底結束，您的訂閱將以常規價格自動續訂。由於終身方案只需一次付款，您的折扣將永久有效。"
+        ]
+      },
+      {
+        "question": "你們接受哪些支付方式？",
+        "answer": [
+          "Internxt目前接受借記卡和信用卡（Mastercard、VISA、American Express等）。您還可以透過PayPal、加密貨幣和Klarna付款。"
+        ]
+      },
+      {
+        "question": "我可以分期支付終身方案嗎？",
+        "answer": ["是的，您現在可以使用Klarna將終身付款分成多個無息分期付款。享受終身方案，輕鬆分期付款！"]
+      },
+      {
+        "question": "如何聯絡客服？",
+        "answer": ["請隨時透過[hello@internxt.com](mailto:hello@internxt.com)聯絡我們或造訪我們的幫助中心。"]
+      },
+      {
+        "question": "Internxt的退款政策是什麼？",
+        "answer": [
+          "Internxt為所有付費訂閱提供標準的30天退款保證，從您訂閱之日起計算。",
+          "如果您對我們的服務不滿意，請透過hello@internxt.com聯絡我們並申請退款。"
+        ]
+      }
+    ]
+  }
+}

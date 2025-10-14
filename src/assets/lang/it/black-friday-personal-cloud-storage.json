@@ -1,0 +1,174 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Migliori Offerte di **Black Friday** per l'Archiviazione Cloud Personale",
+    "subtitle": "Ottieni la migliore offerta del Black Friday 2025 con il 90% di sconto su tutti i piani Internxt.",
+    "description": "Ottieni il {{discount}}% di sconto ora!",
+    "features": ["Suite completa per la privacy", "Crittografia post-quantistica", "Open source e verificato"],
+    "claimDeal": "Richiedi l'offerta",
+    "moreDeals": {
+      "title": "Più offerte del Black Friday",
+      "description": "Trova l'offerta del Black Friday giusta per le tue esigenze di archiviazione cloud e privacy",
+      "links": [
+        {
+          "text": "Offerta Black Friday di Internxt",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "Offerte di archiviazione cloud del Black Friday",
+          "url": "/deals/black-friday-cloud-storage"
+        }
+      ]
+    }
+  },
+  "DontMissSection": {
+    "title": "Offerte di archiviazione cloud personale del Black Friday su Internxt!",
+    "description": [
+      "Proteggi i tuoi dati online con Internxt con la nostra suite per la privacy completamente attrezzata che include backup, Antivirus, VPN, Cleaner, Meet, Mail e altro.",
+      "Ottieni la migliore privacy e sicurezza online con lo sconto del 90% del Black Friday di Internxt."
+    ]
+  },
+  "TableSection": {
+    "title": "Il tuo alleato tutto-in-uno per la privacy",
+    "hotLabel": "{{discount}}% di sconto",
+    "planTitles": {
+      "header": "Seleziona il tuo Piano",
+      "individuals": "Piani Annuali",
+      "homePage": "Scegli il piano giusto per te",
+      "lifetime": "Piani a Vita",
+      "business": "Piani Business",
+      "lifetimeCampaign": {
+        "blueText": "50% di sconto",
+        "normalText": "su tutti i nostri piani esclusivi a vita"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Annuale",
+      "lifetime": "A vita"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuito",
+      "description": "Ottieni 1 GB di archiviazione cloud crittografata gratuitamente",
+      "cta": "Seleziona piano"
+    },
+    "features": {
+      "openSource": "Open source e verificato",
+      "premiumSupport": "Supporto clienti premium",
+      "guarantee": "Garanzia di rimborso di 30 giorni"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "Perché scegliere le nostre offerte di archiviazione cloud personale del Black Friday?",
+    "cards": {
+      "titles": [
+        "Un ecosistema completamente privato",
+        "La crittografia più avanzata",
+        "La nostra più grande offerta del Black Friday di sempre"
+      ],
+      "descriptions": [
+        "Tutti i piani a pagamento di Internxt includono archiviazione crittografata post-quantistica, backup e Antivirus. Per una protezione online completa, ottieni anche VPN, Cleaner, Meet e Mail, tutto ciò di cui hai bisogno per stare al sicuro online.",
+        "Ottieni il primo archiviazione cloud con crittografia post-quantistica per caricare, archiviare e condividere i tuoi file in totale privacy con il nostro servizio cloud crittografato end-to-end. Esegui il backup e sincronizza i tuoi file per prevenire la perdita di dati e garantire una collaborazione fluida con amici, familiari o colleghi.",
+        "Approfitta della nostra più grande offerta del Black Friday fino ad oggi con ancora più funzionalità per proteggere i tuoi dati e file online. Con un enorme sconto del 90%, ora è il momento perfetto per ottenere il miglior rapporto qualità-prezzo su archiviazione cloud sicura e privata, e altro ancora!"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Sblocca enormi risparmi del Black Friday",
+    "description": "90% di sconto su TUTTI i nostri piani premium",
+    "cta": "Richiedi l'offerta"
+  },
+  "HorizontalScrollableSection": {
+    "title": "L'archiviazione cloud più sicura, e altro, per meno",
+    "description": "Costruiamo tutti i nostri prodotti con la privacy in mente. Non basiamo il nostro business sui dati o sulla pubblicità; lo costruiamo sulla fiducia. La nostra crittografia post-quantistica e a conoscenza zero garantisce che tu, e solo tu, possa accedere ai tuoi file.",
+    "features": [
+      "Cancella in qualsiasi momento",
+      "Crittografia post-quantistica",
+      "Fonti di energia sostenibili",
+      "Codice open source",
+      "Verificato indipendentemente"
+    ],
+    "scrollableSection": {
+      "titles": [
+        "Dati non hackerabili e non trapelabili",
+        "Sicurezza senza compromessi",
+        "Open source e verificato",
+        "Conformità"
+      ],
+      "descriptions": [
+        "Non memorizziamo password o dati utente, e tutti i tuoi dati sono crittografati in transito e a riposo. Internxt ti mette in pieno controllo dei tuoi file. I tuoi dati sono affari tuoi. Proteggerli è nostro compito.",
+        "I tuoi file sono crittografati end-to-end prima di lasciare il tuo dispositivo. Grazie alla crittografia a conoscenza zero e post-quantistica, sei assolutamente l'unico ad avere accesso ai tuoi dati.",
+        "Siamo orgogliosi di ciò che facciamo, quindi il nostro codice è reso pubblico su GitHub; non abbiamo nulla da nascondere tranne i tuoi dati. Internxt è stato anche verificato e controllato indipendentemente dalla principale azienda europea di penetration testing, Securitum.",
+        "Internxt è conforme a GDPR, HIPAA, ISO 27001 e SOC 2. Che tu abbia bisogno di archiviazione cloud per la sanità, la finanza o l'uso personale, Internxt garantisce che i tuoi dati e file soddisfino i più alti standard di protezione dei dati."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Le migliori offerte del Black Friday",
+    "description": "90% di sconto su tutti i piani",
+    "cta": "Richiedi l'offerta"
+  },
+  "FaqSection": {
+    "title": "Domande? Abbiamo risposte",
+    "faq": [
+      {
+        "question": "Come posso ottenere lo sconto del Black Friday di Internxt?",
+        "answer": [
+          "Per richiedere il tuo sconto, scegli tra il nostro piano Essential, Premium o Ultimate e vai alla pagina di checkout. Il tuo sconto del 90% viene applicato automaticamente al checkout."
+        ]
+      },
+      {
+        "question": "Quando finiscono le offerte di archiviazione cloud personale del Black Friday?",
+        "answer": ["La vendita del Black Friday termina il 3 dicembre 2025."]
+      },
+      {
+        "question": "Chi è idoneo per queste offerte di archiviazione cloud del Black Friday?",
+        "answer": [
+          "Se sei un nuovo utente, puoi usufruire di questo sconto creando un account. Se hai un piano a vita, puoi effettuare l'upgrade per ottenere più spazio di archiviazione e le funzionalità aggiuntive come Cleaner, Meet e Mail."
+        ]
+      },
+      {
+        "question": "Manterrò il mio sconto quando il mio piano termina?",
+        "answer": [
+          "L'offerta del Black Friday è valida fino alla fine del periodo di abbonamento. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine dell'anno. Poiché i piani a vita richiedono solo un pagamento, il tuo sconto durerà per sempre."
+        ]
+      },
+      {
+        "question": "Quali metodi di pagamento accettate?",
+        "answer": [
+          "Internxt attualmente accetta carte di debito e credito (Mastercard, VISA, American Express, ecc.). Puoi anche pagare tramite PayPal, Crypto e Klarna."
+        ]
+      },
+      {
+        "question": "Posso dividere il mio pagamento a vita?",
+        "answer": [
+          "Sì, ora puoi dividere i tuoi pagamenti a vita in più rate senza interessi usando Klarna. Goditi un piano a vita con la comodità di pagarlo in rate facili!"
+        ]
+      },
+      {
+        "question": "Come posso contattare il supporto?",
+        "answer": [
+          "Sentiti libero di contattarci all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) o visita il nostro centro assistenza."
+        ]
+      },
+      {
+        "question": "Qual è la politica di rimborso di Internxt?",
+        "answer": [
+          "Internxt offre una garanzia di rimborso standard di 30 giorni su tutti i suoi abbonamenti a pagamento, che inizia a decorrere non appena ti iscrivi.",
+          "E se mai non sei soddisfatto del nostro servizio, contattaci all'indirizzo hello@internxt.com e richiedi un rimborso."
+        ]
+      }
+    ]
+  }
+}

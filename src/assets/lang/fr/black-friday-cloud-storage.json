@@ -1,0 +1,169 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Offres de Stockage Cloud **Black Friday** d'Internxt",
+    "subtitle": "Obtenez la meilleure offre du Black Friday 2025 avec 90% de réduction sur tous les forfaits Internxt.",
+    "description": "Obtenez {{discount}}% de réduction maintenant !",
+    "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
+    "claimDeal": "Obtenir l'offre",
+    "moreDeals": {
+      "title": "Plus d'offres du Black Friday",
+      "description": "Trouvez l'offre du Black Friday adaptée à vos besoins en matière de stockage cloud et de confidentialité",
+      "links": [
+        {
+          "text": "Offre Black Friday d'Internxt",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "Offres de stockage cloud personnel du Black Friday",
+          "url": "/deals/black-friday-personal-cloud-storage"
+        }
+      ]
+    }
+  },
+  "DontMissSection": {
+    "title": "Offres de stockage cloud du Black Friday chez Internxt !",
+    "description": [
+      "Protégez vos données en ligne avec Internxt grâce à notre suite de confidentialité entièrement équipée qui comprend les sauvegardes, l'Antivirus, le VPN, le Cleaner, Meet, Mail et plus encore.",
+      "Obtenez la meilleure confidentialité et sécurité en ligne avec la réduction de 90% du Black Friday d'Internxt."
+    ]
+  },
+  "TableSection": {
+    "title": "Votre allié tout-en-un pour la confidentialité",
+    "hotLabel": "{{discount}}% de réduction",
+    "planTitles": {
+      "header": "Sélectionnez votre Forfait",
+      "individuals": "Forfaits Annuels",
+      "homePage": "Choisissez le forfait qui vous convient",
+      "lifetime": "Forfaits à Vie",
+      "business": "Forfaits Professionnels",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur tous nos forfaits exclusifs à vie"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le forfait"
+    },
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1To",
+      "premium": "3To",
+      "ultimate": "5To"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "Pourquoi choisir nos offres de stockage cloud du Black Friday ?",
+    "cards": {
+      "titles": [
+        "Un écosystème entièrement privé",
+        "Le chiffrement le plus avancé",
+        "Notre plus grande offre du Black Friday"
+      ],
+      "descriptions": [
+        "Tous les forfaits payants d'Internxt incluent un stockage chiffré post-quantique, des sauvegardes et un Antivirus. Pour une protection en ligne complète, vous bénéficiez également du VPN, du Cleaner, de Meet et de Mail, tout ce dont vous avez besoin pour rester en sécurité en ligne.",
+        "Obtenez le premier stockage cloud avec chiffrement post-quantique pour télécharger, stocker et partager vos fichiers en toute confidentialité avec notre service cloud chiffré de bout en bout. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et assurer une collaboration fluide avec vos amis, votre famille ou vos collègues.",
+        "Profitez de notre plus grande offre du Black Friday à ce jour avec encore plus de fonctionnalités pour protéger vos données et fichiers en ligne. Avec une réduction massive de 90%, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix sur un stockage cloud sécurisé et privé, et plus encore !"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Débloquez des économies massives du Black Friday",
+    "description": "90% de réduction sur TOUS nos forfaits premium",
+    "cta": "Obtenir l'offre"
+  },
+  "HorizontalScrollableSection": {
+    "title": "Le stockage cloud le plus sécurisé, et plus, pour moins",
+    "description": "Nous construisons tous nos produits en pensant à la confidentialité. Nous ne basons pas notre activité sur les données ou la publicité ; nous la construisons sur la confiance. Notre chiffrement post-quantique et à connaissance nulle garantit que vous, et vous seul, pouvez accéder à vos fichiers.",
+    "features": [
+      "Annulez à tout moment",
+      "Chiffrement post-quantique",
+      "Sources d'énergie durables",
+      "Code open source",
+      "Vérifié indépendamment"
+    ],
+    "scrollableSection": {
+      "titles": ["Données inviolables et infuites", "Sécurité sans compromis", "Open source et audité", "Conformité"],
+      "descriptions": [
+        "Nous ne stockons pas les mots de passe ni les données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
+        "Vos fichiers sont chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement à connaissance nulle et post-quantique, vous êtes absolument le seul à avoir accès à vos données.",
+        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub ; nous n'avons rien à cacher sauf vos données. Internxt a également été audité et vérifié indépendamment par la principale société européenne de tests de pénétration, Securitum.",
+        "Internxt est conforme au RGPD, à l'HIPAA, à l'ISO 27001 et au SOC 2. Que vous ayez besoin d'un stockage cloud pour la santé, la finance ou un usage personnel, Internxt garantit que vos données et fichiers répondent aux normes les plus élevées de protection des données."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Les meilleures offres du Black Friday",
+    "description": "90% de réduction sur tous les forfaits",
+    "cta": "Obtenir l'offre"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Comment puis-je obtenir la réduction du Black Friday d'Internxt ?",
+        "answer": [
+          "Pour obtenir votre réduction, choisissez parmi notre forfait Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 90% est automatiquement appliquée lors du paiement."
+        ]
+      },
+      {
+        "question": "Quand se terminent les offres de stockage cloud du Black Friday ?",
+        "answer": ["La vente du Black Friday se termine le 3 décembre 2025."]
+      },
+      {
+        "question": "Qui est éligible à ces offres de stockage cloud du Black Friday ?",
+        "answer": [
+          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez un forfait à vie, vous pouvez faire une mise à niveau pour obtenir plus de stockage et les fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
+        ]
+      },
+      {
+        "question": "Vais-je conserver ma réduction lorsque mon forfait se termine ?",
+        "answer": [
+          "L'offre du Black Friday est valable jusqu'à la fin de la période d'abonnement. Votre abonnement se renouvellera automatiquement au prix normal une fois cette période d'abonnement terminée à la fin de l'année. Comme les forfaits à vie ne nécessitent qu'un seul paiement, votre réduction durera éternellement."
+        ]
+      },
+      {
+        "question": "Quels modes de paiement acceptez-vous ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna."
+        ]
+      },
+      {
+        "question": "Puis-je fractionner mon paiement à vie ?",
+        "answer": [
+          "Oui, vous pouvez désormais fractionner vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un forfait à vie avec la facilité de le payer en plusieurs versements !"
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter le support ?",
+        "answer": [
+          "N'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou visitez notre centre d'aide."
+        ]
+      },
+      {
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "answer": [
+          "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à partir du moment où vous vous abonnez.",
+          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
+        ]
+      }
+    ]
+  }
+}

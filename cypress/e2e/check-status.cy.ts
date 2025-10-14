@@ -25,6 +25,7 @@ const nameFiles = [
   'what-does-google-know-about-me',
   'file-converter',
   'cleaner',
+  'deals/black-friday-internxt',
   'coupons',
 ];
 
