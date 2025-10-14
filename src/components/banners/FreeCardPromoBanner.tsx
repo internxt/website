@@ -36,7 +36,7 @@ export const FreeCardPromoBanner = () => {
       label: 'User accepts the promo',
       value: '',
     });
-    router.push('/specialoffer');
+    router.push('/deals/black-friday-internxt');
     onCloseBanner();
   };
 
