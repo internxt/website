@@ -3,9 +3,7 @@ import { Transition } from '@headlessui/react';
 import { CheckCircle, WarningCircle } from '@phosphor-icons/react';
 import Image from 'next/legacy/image';
 import { getImage } from '@/lib/getImage';
-import BitdefenderBanner from '../banners/BitdefenderBanner';
 import { VirusScannerText } from '@/assets/types/virusScanner';
-const FILE_SCANNER_URL = process.env.NEXT_PUBLIC_FILE_SCANNER_URL;
 
 interface HeroSectionProps {
   textContent: VirusScannerText['HeroSection'];
@@ -222,7 +220,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                       </div>
                       {isScanFinished ? (
                         <>
-                          {showPopup && <BitdefenderBanner languageForImage={languageForImage} />}
                           {scanResult.isInfected ? (
                             <div className="flex h-full w-full flex-col items-center justify-center">
                               <p className="text-2xl font-semibold">Virus identified:</p>
