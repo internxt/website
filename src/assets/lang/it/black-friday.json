@@ -96,40 +96,40 @@
     "cta": "Richiedi l'offerta"
   },
   "FaqSection": {
-    "title": "Domande? Abbiamo risposte",
+    "title": "Domande? Abbiamo le risposte",
     "faq": [
       {
-        "question": "Come posso ottenere lo sconto del Black Friday?",
+        "question": "Come posso ottenere lo sconto Black Friday di Internxt?",
         "answer": [
-          "Per richiedere il tuo sconto del Black Friday, scegli il tuo piano individuale, aziendale o familiare preferito e vai alla pagina di checkout. Il tuo sconto dell'85% viene applicato automaticamente al checkout."
+          "Per richiedere il tuo sconto, scegli tra i nostri piani Essential, Premium o Ultimate e vai alla pagina di checkout. Il tuo sconto del 90% viene applicato automaticamente al momento del pagamento."
         ]
       },
       {
-        "question": "Quando termina la promozione?",
-        "answer": ["L'offerta del Black Friday termina il 3 dicembre 2024."]
+        "question": "Quando termina l'offerta Black Friday di Internxt?",
+        "answer": ["La vendita del Black Friday termina il 3 dicembre 2025."]
       },
       {
-        "question": "Chi è idoneo per questo sconto?",
+        "question": "Chi può usufruire di questo sconto?",
         "answer": [
-          "I nuovi utenti o chiunque abbia un account Internxt gratuito è idoneo a partecipare alla nostra Offerta Black Friday."
+          "Se sei un nuovo utente, puoi usufruire di questo sconto creando un account. Se hai un piano a vita, puoi effettuare l'upgrade per ottenere più spazio di archiviazione e funzionalità aggiuntive come Cleaner, Meet e Mail."
         ]
       },
       {
-        "question": "Manterrò lo sconto quando il mio piano termina?",
+        "question": "Manterrò il mio sconto quando terminerà il mio piano?",
         "answer": [
-          "L'offerta del Black Friday dura fino alla fine del periodo di abbonamento. Il tuo abbonamento si rinnoverà al prezzo regolare una volta terminato questo periodo di abbonamento alla fine del mese o dell'anno. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
+          "L'offerta del Black Friday è valida fino alla fine del periodo di abbonamento. Il tuo abbonamento si rinnoverà automaticamente al prezzo normale una volta terminato questo periodo di abbonamento alla fine dell'anno. Poiché i piani a vita richiedono un solo pagamento, il tuo sconto durerà per sempre."
         ]
       },
       {
         "question": "Quali metodi di pagamento accetta Internxt?",
         "answer": [
-          "Attualmente, accettiamo pagamenti tramite carte di credito e debito (incluse Mastercard, VISA, American Express e altre), e accettiamo anche Paypal, Bankcontact, iDEAL e SOFORT."
+          "Attualmente accettiamo pagamenti tramite carte di credito e debito (inclusi Mastercard, VISA, American Express e altri), e accettiamo anche Paypal, bankcontact, iDEAL e SOFORT."
         ]
       },
       {
         "question": "Hai altre domande?",
         "answer": [
-          "Non esitare a contattarci all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) o a salutarci sui social media. Siamo sempre lieti di sentirti!"
+          "Sentiti libero di contattarci all'indirizzo [hello@internxt.com](mailto:hello@internxt.com) o di salutarci sui social media. Siamo sempre felici di sentirti!"
         ]
       }
     ]

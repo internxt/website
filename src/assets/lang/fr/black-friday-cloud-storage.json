@@ -115,53 +115,40 @@
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Des questions ? Nous avons les réponses",
     "faq": [
       {
-        "question": "Comment puis-je obtenir la réduction du Black Friday d'Internxt ?",
+        "question": "Comment obtenir la réduction Black Friday d'Internxt ?",
         "answer": [
-          "Pour obtenir votre réduction, choisissez parmi notre forfait Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 90% est automatiquement appliquée lors du paiement."
+          "Pour bénéficier de votre réduction, choisissez parmi nos plans Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 90% est automatiquement appliquée lors du paiement."
         ]
       },
       {
-        "question": "Quand se terminent les offres de stockage cloud du Black Friday ?",
-        "answer": ["La vente du Black Friday se termine le 3 décembre 2025."]
+        "question": "Quand se termine l'offre Black Friday d'Internxt ?",
+        "answer": ["Les soldes du Black Friday se terminent le 3 décembre 2025."]
       },
       {
-        "question": "Qui est éligible à ces offres de stockage cloud du Black Friday ?",
+        "question": "Qui est éligible à cette réduction ?",
         "answer": [
-          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez un forfait à vie, vous pouvez faire une mise à niveau pour obtenir plus de stockage et les fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
+          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez un plan à vie, vous pouvez effectuer une mise à niveau pour obtenir plus de stockage et des fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
         ]
       },
       {
-        "question": "Vais-je conserver ma réduction lorsque mon forfait se termine ?",
+        "question": "Vais-je conserver ma réduction à la fin de mon abonnement ?",
         "answer": [
-          "L'offre du Black Friday est valable jusqu'à la fin de la période d'abonnement. Votre abonnement se renouvellera automatiquement au prix normal une fois cette période d'abonnement terminée à la fin de l'année. Comme les forfaits à vie ne nécessitent qu'un seul paiement, votre réduction durera éternellement."
+          "L'offre Black Friday est valable jusqu'à la fin de la période d'abonnement. Votre abonnement sera automatiquement renouvelé au prix normal une fois cette période d'abonnement terminée à la fin de l'année. Comme les plans à vie ne nécessitent qu'un seul paiement, votre réduction durera éternellement."
         ]
       },
       {
-        "question": "Quels modes de paiement acceptez-vous ?",
+        "question": "Quels modes de paiement Internxt accepte-t-il ?",
         "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna."
+          "Actuellement, nous acceptons les paiements par cartes de crédit et de débit (y compris Mastercard, VISA, American Express, et plus), et nous acceptons également Paypal, bankcontact, iDEAL et SOFORT."
         ]
       },
       {
-        "question": "Puis-je fractionner mon paiement à vie ?",
+        "question": "Vous avez d'autres questions ?",
         "answer": [
-          "Oui, vous pouvez désormais fractionner vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un forfait à vie avec la facilité de le payer en plusieurs versements !"
-        ]
-      },
-      {
-        "question": "Comment puis-je contacter le support ?",
-        "answer": [
-          "N'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou visitez notre centre d'aide."
-        ]
-      },
-      {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
-        "answer": [
-          "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à partir du moment où vous vous abonnez.",
-          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
+          "N'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou à nous saluer sur les réseaux sociaux. Nous sommes toujours ravis d'avoir de vos nouvelles !"
         ]
       }
     ]

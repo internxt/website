@@ -115,53 +115,40 @@
     "cta": "Obtenir l'offre"
   },
   "FaqSection": {
-    "title": "Des questions ? Nous avons des réponses",
+    "title": "Вопросы? У нас есть ответы",
     "faq": [
       {
-        "question": "Comment puis-je obtenir la réduction du Black Friday d'Internxt ?",
+        "question": "Как получить скидку Black Friday от Internxt?",
         "answer": [
-          "Pour obtenir votre réduction, choisissez parmi notre forfait Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 90% est automatiquement appliquée lors du paiement."
+          "Чтобы получить скидку, выберите один из планов Essential, Premium или Ultimate и перейдите на страницу оформления заказа. Ваша скидка 90% применяется автоматически при оформлении заказа."
         ]
       },
       {
-        "question": "Quand se terminent les offres de stockage cloud personnel du Black Friday ?",
-        "answer": ["La vente du Black Friday se termine le 3 décembre 2025."]
+        "question": "Когда заканчивается предложение Black Friday от Internxt?",
+        "answer": ["Распродажа Black Friday заканчивается 3 декабря 2025 года."]
       },
       {
-        "question": "Qui est éligible à ces offres de stockage cloud du Black Friday ?",
+        "question": "Кто имеет право на эту скидку?",
         "answer": [
-          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez un forfait à vie, vous pouvez faire une mise à niveau pour obtenir plus de stockage et les fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
+          "Если вы новый пользователь, вы можете воспользоваться этой скидкой, создав учетную запись. Если у вас есть пожизненный план, вы можете обновиться, чтобы получить больше места для хранения и дополнительные функции, такие как Cleaner, Meet и Mail."
         ]
       },
       {
-        "question": "Vais-je conserver ma réduction lorsque mon forfait se termine ?",
+        "question": "Сохраню ли я свою скидку по окончании плана?",
         "answer": [
-          "L'offre du Black Friday est valable jusqu'à la fin de la période d'abonnement. Votre abonnement se renouvellera automatiquement au prix normal une fois cette période d'abonnement terminée à la fin de l'année. Comme les forfaits à vie ne nécessitent qu'un seul paiement, votre réduction durera éternellement."
+          "Предложение Black Friday действует до конца периода подписки. Ваша подписка автоматически продлится по обычной цене после окончания этого периода подписки в конце года. Поскольку пожизненные планы требуют только одного платежа, ваша скидка будет действовать навсегда."
         ]
       },
       {
-        "question": "Quels modes de paiement acceptez-vous ?",
+        "question": "Какие способы оплаты принимает Internxt?",
         "answer": [
-          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, Crypto et Klarna."
+          "В настоящее время мы принимаем платежи кредитными и дебетовыми картами (включая Mastercard, VISA, American Express и другие), а также принимаем Paypal, bankcontact, iDEAL и SOFORT."
         ]
       },
       {
-        "question": "Puis-je fractionner mon paiement à vie ?",
+        "question": "Есть еще вопросы?",
         "answer": [
-          "Oui, vous pouvez désormais fractionner vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un forfait à vie avec la facilité de le payer en plusieurs versements !"
-        ]
-      },
-      {
-        "question": "Comment puis-je contacter le support ?",
-        "answer": [
-          "N'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou visitez notre centre d'aide."
-        ]
-      },
-      {
-        "question": "Quelle est la politique de remboursement d'Internxt ?",
-        "answer": [
-          "Internxt offre une garantie de remboursement standard de 30 jours sur tous ses abonnements payants, qui commence à partir du moment où vous vous abonnez.",
-          "Et si vous n'êtes jamais satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
+          "Не стесняйтесь обращаться к нам по адресу [hello@internxt.com](mailto:hello@internxt.com) или приветствовать нас в социальных сетях. Мы всегда рады услышать вас!"
         ]
       }
     ]

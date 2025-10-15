@@ -123,50 +123,37 @@
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [
       {
-        "question": "¿Cómo puedo obtener el descuento de Black Friday de Internxt?",
+        "question": "¿Cómo obtengo el descuento de Black Friday de Internxt?",
         "answer": [
-          "Para reclamar tu descuento, elige entre nuestro plan Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 90% se aplica automáticamente en el checkout."
+          "Para reclamar tu descuento, elige entre nuestros planes Essential, Premium o Ultimate y dirígete a la página de pago. Tu descuento del 90% se aplica automáticamente al finalizar la compra."
         ]
       },
       {
-        "question": "¿Cuándo terminan las ofertas de almacenamiento en la nube personal de Black Friday?",
+        "question": "¿Cuándo termina la oferta de Black Friday de Internxt?",
         "answer": ["La venta de Black Friday termina el 3 de diciembre de 2025."]
       },
       {
-        "question": "¿Quién es elegible para estas ofertas de almacenamiento en la nube de Black Friday?",
+        "question": "¿Quién es elegible para este descuento?",
         "answer": [
-          "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes actualizar para obtener más almacenamiento y las funciones adicionales como Cleaner, Meet y Mail."
+          "Si eres un usuario nuevo, puedes disfrutar de este descuento creando una cuenta. Si tienes un plan de por vida, puedes actualizar para obtener más almacenamiento y funciones adicionales como Cleaner, Meet y Mail."
         ]
       },
       {
         "question": "¿Mantendré mi descuento cuando termine mi plan?",
         "answer": [
-          "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez finalice este período de suscripción al final del año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
+          "La oferta de Black Friday es válida hasta el final del período de suscripción. Tu suscripción se renovará automáticamente al precio regular una vez que finalice este período de suscripción a fin de año. Como los planes de por vida solo requieren un pago, tu descuento durará para siempre."
         ]
       },
       {
-        "question": "¿Qué métodos de pago aceptáis?",
+        "question": "¿Qué métodos de pago acepta Internxt?",
         "answer": [
-          "Internxt actualmente acepta tarjetas de débito y crédito (Mastercard, VISA, American Express, etc.). También puedes pagar a través de PayPal, Crypto y Klarna."
+          "Actualmente aceptamos pagos con tarjetas de crédito y débito (incluyendo Mastercard, VISA, American Express y más), y también aceptamos Paypal, bankcontact, iDEAL y SOFORT."
         ]
       },
       {
-        "question": "¿Puedo dividir mi pago de por vida?",
+        "question": "¿Tienes más preguntas?",
         "answer": [
-          "Sí, ahora puedes dividir tus pagos de por vida en múltiples cuotas sin intereses usando Klarna. ¡Disfruta de un plan de por vida con la facilidad de pagarlo en cómodas cuotas!"
-        ]
-      },
-      {
-        "question": "¿Cómo puedo contactar con soporte?",
-        "answer": [
-          "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o visita nuestro centro de ayuda."
-        ]
-      },
-      {
-        "question": "¿Cuál es la política de reembolso de Internxt?",
-        "answer": [
-          "Internxt ofrece una garantía de devolución de dinero de 30 días estándar en todas sus suscripciones de pago, que comienza a contar tan pronto como te suscribes.",
-          "Y si alguna vez no estás satisfecho con nuestro servicio, contáctanos en hello@internxt.com y solicita un reembolso."
+          "No dudes en contactarnos en [hello@internxt.com](mailto:hello@internxt.com) o saludarnos en redes sociales. ¡Siempre estamos encantados de saber de ti!"
         ]
       }
     ]

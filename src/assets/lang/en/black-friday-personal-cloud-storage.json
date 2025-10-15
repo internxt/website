@@ -110,6 +110,7 @@
     "description": "90% off all plans",
     "cta": "Claim deal"
   },
+
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [
@@ -120,11 +121,11 @@
         ]
       },
       {
-        "question": "When do the Black Friday personal cloud storage deals end?",
+        "question": "When does the Black Friday Internxt Deal end?",
         "answer": ["The Black Friday sale ends December 3rd, 2025."]
       },
       {
-        "question": "Who is eligible for these Black Friday cloud storage deals?",
+        "question": "Who is eligible for this discount?",
         "answer": [
           "If you're a new user, you can enjoy this discount by creating an account. If you have a lifetime plan, you can upgrade to get more storage and the extra features such as Cleaner, Meet, and Mail."
         ]
@@ -136,28 +137,15 @@
         ]
       },
       {
-        "question": "What payment methods do you accept?",
+        "question": "What payment methods does Internxt accept?",
         "answer": [
-          "Internxt currently accepts debit and credit cards (Mastercard, VISA, American Express, etc.). You can also pay through PayPal, Crypto, and Klarna."
+          "Currently, we accept payments via credit and debit cards (including Mastercard, VISA, American Express, and more), and we also accept Paypal, bankcontact, iDEAL, and SOFORT."
         ]
       },
       {
-        "question": "Can I split my lifetime payment?",
+        "question": "Have more questions?",
         "answer": [
-          "Yes, you can now split your lifetime payments into multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
-        ]
-      },
-      {
-        "question": "How do I contact support?",
-        "answer": [
-          "Feel free to contact us at [hello@internxt.com](mailto:hello@internxt.com) or visit our help center."
-        ]
-      },
-      {
-        "question": "What is Internxt's refund policy?",
-        "answer": [
-          "Internxt offers a standard 30-day money-back guarantee across all its paid subscriptions, which starts counting as soon as you subscribe.",
-          "And if you're ever unsatisfied with our service, reach out to us at hello@internxt.com and request a refund."
+          "Feel free to reach out to us at [hello@internxt.com](mailto:hello@internxt.com) or say hello on social media. We are always delighted to hear from you!"
         ]
       }
     ]

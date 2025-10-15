@@ -109,44 +109,35 @@
       {
         "question": "如何获得Internxt黑色星期五折扣？",
         "answer": [
-          "要领取您的折扣，请从我们的Essential、Premium或Ultimate计划中选择，然后前往结账页面。您的90%折扣将在结账时自动应用。"
+          "要获取折扣，请从我们的Essential、Premium或Ultimate计划中进行选择，然后前往结账页面。您的90%折扣将在结账时自动应用。"
         ]
       },
       {
-        "question": "黑色星期五个人云存储优惠何时结束？",
-        "answer": ["黑色星期五促销于2025年12月3日结束。"]
+        "question": "Internxt黑色星期五优惠何时结束？",
+        "answer": ["黑色星期五促销活动将于2025年12月3日结束。"]
       },
       {
-        "question": "谁有资格享受这些黑色星期五云存储优惠？",
+        "question": "谁有资格享受此折扣？",
         "answer": [
-          "如果您是新用户，可以通过创建账户享受此折扣。如果您拥有终身计划，可以升级以获得更多存储空间和额外功能，如Cleaner、Meet和Mail。"
+          "如果您是新用户，可以通过创建帐户来享受此折扣。如果您拥有终身计划，可以升级以获得更多存储空间和额外功能，例如Cleaner、Meet和Mail。"
         ]
       },
       {
-        "question": "当我的计划结束时，我会保留折扣吗？",
+        "question": "计划结束后我还能保留折扣吗？",
         "answer": [
-          "黑色星期五优惠在订阅期结束前有效。一旦此订阅期在年底结束，您的订阅将以常规价格自动续订。由于终身计划只需一次付款，您的折扣将永久有效。"
+          "黑色星期五优惠在订阅期结束前有效。订阅期在年底结束后，您的订阅将自动以正常价格续订。由于终身计划只需一次付款，您的折扣将永久有效。"
         ]
       },
       {
-        "question": "你们接受哪些支付方式？",
+        "question": "Internxt接受哪些付款方式？",
         "answer": [
-          "Internxt目前接受借记卡和信用卡（Mastercard、VISA、American Express等）。您还可以通过PayPal、加密货币和Klarna付款。"
+          "目前，我们接受信用卡和借记卡付款（包括Mastercard、VISA、American Express等），我们还接受Paypal、bankcontact、iDEAL和SOFORT。"
         ]
       },
       {
-        "question": "我可以分期支付终身计划吗？",
-        "answer": ["是的，您现在可以使用Klarna将终身付款分成多个无息分期付款。享受终身计划，轻松分期付款！"]
-      },
-      {
-        "question": "如何联系客服？",
-        "answer": ["请随时通过[hello@internxt.com](mailto:hello@internxt.com)联系我们或访问我们的帮助中心。"]
-      },
-      {
-        "question": "Internxt的退款政策是什么？",
+        "question": "还有其他问题？",
         "answer": [
-          "Internxt为所有付费订阅提供标准的30天退款保证，从您订阅之日起计算。",
-          "如果您对我们的服务不满意，请通过hello@internxt.com联系我们并申请退款。"
+          "欢迎通过[hello@internxt.com](mailto:hello@internxt.com)与我们联系，或在社交媒体上打招呼。我们随时乐意听到您的声音！"
         ]
       }
     ]
