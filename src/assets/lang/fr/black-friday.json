@@ -51,6 +51,7 @@
     }
   },
   "WhyChooseSection": {
+    "title": "Pourquoi choisir l'offre Black Friday d'Internxt ?",
     "cards": {
       "titles": ["Un écosystème entièrement privé", "Le chiffrement le plus avancé", "Notre plus grande offre"],
       "descriptions": [

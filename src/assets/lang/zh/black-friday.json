@@ -51,6 +51,7 @@
     }
   },
   "WhyChooseSection": {
+    "title": "为什么选择 Internxt 的黑色星期五优惠?",
     "cards": {
       "titles": ["完全私密的生态系统", "最先进的加密技术", "我们最大的优惠"],
       "descriptions": [
