@@ -194,7 +194,6 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           </div>
         </div>
 
-        {/* Botones de navegación */}
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
