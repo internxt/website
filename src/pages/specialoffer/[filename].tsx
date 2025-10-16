@@ -36,7 +36,10 @@ const ALLOWED_PATHS = [
   'vipvlc',
   'grabon',
   'pcmag',
+  'baitybait',
 ];
+
+const DARK_MODE_PATHS = ['baitybait'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -49,6 +52,7 @@ const COUPON_CODES = {
   vipvlc: PromoCodeName.VIPVLC,
   grabon: PromoCodeName.GRABON,
   pcmag: PromoCodeName.PcmagCoupon,
+  BaityBait: PromoCodeName.BaityBait,
 };
 
 function CombinedSpecialOffer({
@@ -61,6 +65,7 @@ function CombinedSpecialOffer({
 }: CombinedSpecialOfferProps): JSX.Element {
   const router = useRouter();
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
+  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
 
   useEffect(() => {
     if (!selectedPathname) {
@@ -88,8 +93,6 @@ function CombinedSpecialOffer({
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
 
-  console.log(percentOff);
-
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
@@ -112,6 +115,8 @@ function CombinedSpecialOffer({
   if (!selectedPathname) {
     return <></>;
   }
+
+  console.log(isDarkMode);
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
@@ -137,6 +142,7 @@ function CombinedSpecialOffer({
         popularPlanBySize="5TB"
         sectionDetails="bg-white lg:py-20"
         hideFreeCard
+        darkMode
       />
 
       <FloatingCtaSectionv2
