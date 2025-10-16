@@ -115,7 +115,7 @@ const BlackFridayDealsTemplate = ({
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-20 pb-20 bg-[#1C1C1C]"
+        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
       />
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />

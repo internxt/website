@@ -173,7 +173,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           }}
         >
           <div
-            className="3xl:pl-84 flex gap-4 lg:gap-6 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            className="3xl:pl-84 flex gap-4 lg:gap-8 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
@@ -181,7 +181,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           >
             {textContent.scrollableSection.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col gap-4 rounded-16 bg-gray-105 p-6 lg:w-[400px]">
+                <div className="flex h-full w-[345px] flex-col gap-4 rounded-16 bg-gray-105 p-6 lg:w-[400px] lg:p-8">
                   <p className="text-lg font-medium text-white-95 lg:text-xl">{title}</p>
                   <p className="flex-1 text-sm font-normal leading-tight text-green-120 lg:text-base">
                     {textContent.scrollableSection.descriptions[index]}

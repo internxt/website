@@ -14,7 +14,7 @@ const FAQSection = ({ textContent, bgColor, cardColor, textColor }: FAQSectionPr
         <p className={`text-center text-30 font-semibold ${textColor ? textColor : 'text- gray-100'} lg:text-3xl`}>
           {textContent.title}
         </p>
-        <div className="flex w-full max-w-[850px] flex-col space-y-2">
+        <div className="flex w-full flex-col space-y-2 lg:max-w-[850px]">
           {textContent.faq.map((item) => (
             <div className={`rounded-lg ${cardColor} border border-gray-20 px-5`} key={item.question}>
               <FaqAccordion
