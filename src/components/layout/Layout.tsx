@@ -197,6 +197,13 @@ export default function Layout({
             }}
           />
         )}
+
+        <script
+          async
+          type="text/javascript"
+          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=VBJnZ5"
+        ></script>
+
         <script async src="/js/cookiebanner.script.js" />
 
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
