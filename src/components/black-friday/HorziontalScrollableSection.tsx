@@ -81,6 +81,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
       title: textContent.features[4],
     },
   ];
+
   const formatText = (text: string) => {
     const firstSpaceIndex = text.indexOf(' ');
     if (firstSpaceIndex === -1) return text;
@@ -116,24 +117,25 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
       <p className={`${textSize} whitespace-nowrap font-medium text-white-95`}>{formatText(feature.title)}</p>
     </div>
   );
+
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[#1C1C1C] pb-10 lg:h-min lg:gap-16 lg:py-20 ">
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[780px] lg:gap-12">
-        <p className="text-30 font-bold leading-tight text-white-95 lg:w-[680px] lg:text-3xl">{textContent.title}</p>
-        <p className="text-base font-normal leading-tight text-green-120 lg:w-[680px] lg:text-xl">
-          {textContent.description}
-        </p>
-        <div className="b hidden w-full flex-row justify-center gap-8 lg:flex">
+    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-[#1C1C1C] lg:gap-16">
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 pt-10 lg:w-full lg:gap-12 lg:px-80 lg:pt-20 2xl:px-[510px]">
+        <p className="text-30 font-bold leading-tight text-white-95 lg:text-3xl">{textContent.title}</p>
+        <p className="text-base font-normal leading-tight text-green-120 lg:text-xl">{textContent.description}</p>
+
+        <div className="hidden w-full flex-row justify-between lg:flex">
           {features.map((feature, index) => (
             <FeatureItem
               key={`desktop-${index}`}
               feature={feature}
               iconSize={32}
-              containerWidth="w-min"
+              containerWidth="flex-1"
               textSize="text-lg"
             />
           ))}
         </div>
+
         <div className="flex h-min w-full flex-col items-center justify-center gap-6 pr-6 lg:hidden">
           <div className="flex w-full max-w-sm flex-row justify-center gap-6">
             {features.slice(0, 3).map((feature, index) => (
@@ -161,7 +163,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
         </div>
       </div>
 
-      <div className="flex h-min w-full flex-col items-center gap-4 lg:gap-8">
+      <div className="flex h-min w-full flex-col items-center gap-4 pb-10 lg:gap-8 lg:pb-20">
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
@@ -173,7 +175,7 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           }}
         >
           <div
-            className="3xl:pl-84 flex gap-4 lg:gap-8 lg:pl-32 lg:pr-48 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            className="flex gap-4 lg:gap-8 lg:pl-60 2xl:px-[410px]"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
@@ -191,6 +193,8 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
             ))}
           </div>
         </div>
+
+        {/* Botones de navegación */}
         <div className="flex h-[48px] w-[310px] flex-row items-end justify-end lg:w-[850px]">
           <div className="flex w-[120px] justify-between">
             <button
