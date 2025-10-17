@@ -37,11 +37,11 @@ const ALLOWED_PATHS = [
   'vipvlc',
   'grabon',
   'pcmag',
-  'baitybait',
+  'baity',
 ];
 
-const DARK_MODE_PATHS = ['baitybait'];
-const hasCustomImage = ['baitybait'];
+const DARK_MODE_PATHS = ['baity'];
+const hasCustomImage = ['baity'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
