@@ -105,7 +105,7 @@ export enum PromoCodeName {
   Lifetime78OFF = 'BACK2WORK',
   CyberAwarenessPromoCode = 'CYBER80',
   PartnerDiscount75OFF = 'partner75',
-  BlackFriday = 'BLACKFRIDAY85',
+  BlackFriday = 'BF2025',
   SinglesDay = 'SELFLOVE83',
   Resurrection = 'COMEBACK',
   Halloween = 'HORROR80',
@@ -159,6 +159,7 @@ export enum PromoCodeName {
   Toquederetoque = 'TOQUEDERETOQUE',
   VIPVLC = 'VIPVLC',
   GRABON = 'GRABON87',
+  BaityBait = 'BAITY',
 }
 
 export interface PromoCodeProps {

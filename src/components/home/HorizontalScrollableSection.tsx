@@ -3,9 +3,13 @@ import { useRef, useState, useEffect } from 'react';
 
 interface HorizontalScrollableProps {
   textContent: any;
+  darkMode?: boolean;
 }
 
-export default function HorizontalScrollableSection({ textContent }: Readonly<HorizontalScrollableProps>): JSX.Element {
+export default function HorizontalScrollableSection({
+  textContent,
+  darkMode = false,
+}: Readonly<HorizontalScrollableProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -60,10 +64,22 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
   };
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 lg:h-min lg:gap-16 lg:py-20 ">
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+      } pb-10 lg:h-min lg:gap-16 lg:py-20 `}
+    >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-3xl`}>
+          {textContent.title}
+        </p>
+        <p
+          className={`${
+            darkMode ? 'text-green-120' : 'text-gray-55'
+          } text-base font-normal leading-tight text-gray-55 lg:text-xl`}
+        >
+          {textContent.description}
+        </p>
         {textContent.cta !== undefined && (
           <span
             onClick={() => window.open('https://internxt.com/about/', '_blank', 'noopener,noreferrer')}
@@ -95,9 +111,19 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
           >
             {textContent.cardDescriptions.titles.map((title: string, index: number) => (
               <div key={index} className="flex-shrink-0">
-                <div className="flex h-full w-[345px] flex-col gap-4 rounded-16 bg-white p-6 lg:w-[400px]">
-                  <p className="text-lg font-medium text-gray-95 lg:text-xl">{title}</p>
-                  <p className="flex-1 text-sm font-normal leading-tight text-gray-55 lg:text-base">
+                <div
+                  className={`flex h-full w-[345px] flex-col gap-4 rounded-16 ${
+                    darkMode ? 'bg-gray-105' : 'bg-white'
+                  } p-6 lg:w-[400px]`}
+                >
+                  <p className={`text-lg font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'} lg:text-xl`}>
+                    {title}
+                  </p>
+                  <p
+                    className={`${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    } flex-1 text-sm font-normal leading-tight  lg:text-base`}
+                  >
                     {textContent.cardDescriptions.descriptions[index]}
                   </p>
                 </div>
@@ -110,8 +136,12 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -119,8 +149,12 @@ export default function HorizontalScrollableSection({ textContent }: Readonly<Ho
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-transparent transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />

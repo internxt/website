@@ -3,9 +3,10 @@ import { useRef, useState, useEffect } from 'react';
 
 interface ThreeCardsProps {
   textContent: any;
+  darkMode?: boolean;
 }
 
-export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsProps>): JSX.Element {
+export default function ThreeCardsSection({ textContent, darkMode }: Readonly<ThreeCardsProps>): JSX.Element {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -69,11 +70,23 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
   const hasCta = textContent.cards.cta;
 
   return (
-    <section className="flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden bg-neutral-17 pb-10 pt-10 lg:h-min lg:gap-16 lg:py-20">
-      <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
-      <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[850px] lg:text-center">
-        <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
-        <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+    <section
+      className={`flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-neutral-17'
+      } py-10 lg:h-min lg:gap-16 lg:py-20`}
+    >
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32`}
+      ></div>
+      <div className="flex h-min w-[345px] flex-col justify-center gap-6 text-start lg:w-[1000px] lg:text-center">
+        <p className={`text-30 font-bold leading-tight ${darkMode ? 'text-gray-1' : 'text-gray-95'} lg:text-3xl`}>
+          {textContent.title}
+        </p>
+        {textContent.description && (
+          <p className="text-base font-normal leading-tight text-gray-55 lg:text-xl">{textContent.description}</p>
+        )}
       </div>
 
       <div className="flex h-min w-full flex-col items-center gap-4 lg:hidden">
@@ -91,14 +104,24 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
             {textContent.cards.titles.map((title: string, index: number) => (
               <div
                 key={title}
-                className="flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
+                className={`flex w-[calc(100vw-32px)] flex-shrink-0 snap-center flex-col justify-between gap-6 rounded-xl ${
+                  darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+                } p-6 lg:rounded-16 lg:p-8`}
               >
                 <div className="flex flex-col">
-                  <span className="flex items-center justify-start gap-4 text-lg font-medium text-gray-100">
+                  <span
+                    className={`flex items-center justify-start gap-4 text-lg font-medium ${
+                      darkMode ? 'text-white-95' : 'text-gray-100'
+                    }`}
+                  >
                     {hasCta && <p className="text-xl font-medium text-primary lg:text-2xl">{index + 1}</p>}
                     {title}
                   </span>
-                  <p className="pt-[16px] text-sm font-normal leading-tight text-gray-55 lg:pt-6 lg:text-base">
+                  <p
+                    className={`pt-[16px] text-sm font-normal leading-tight ${
+                      darkMode ? 'text-green-120' : 'text-gray-55'
+                    } lg:pt-6 lg:text-base`}
+                  >
                     {textContent.cards.descriptions[index]}
                   </p>
                 </div>
@@ -144,13 +167,25 @@ export default function ThreeCardsSection({ textContent }: Readonly<ThreeCardsPr
 
       <div className="hidden w-full grid-cols-3 justify-center gap-8 lg:grid xl:px-32 3xl:px-80">
         {textContent.cards.titles.map((title: string, index: number) => (
-          <div key={title} className="flex w-full flex-col justify-between gap-6 rounded-16 bg-white p-8">
+          <div
+            key={title}
+            className={`flex w-full flex-col justify-between gap-6 rounded-16 ${
+              darkMode ? 'bg-gray-105' : 'bg-neutral-17'
+            } p-8`}
+          >
             <div className="flex flex-col">
-              <span className="flex items-center justify-start gap-4 text-xl font-medium text-gray-100">
+              <span
+                className={`flex items-center justify-start gap-4 text-xl font-medium  ${
+                  darkMode ? 'text-white-95' : 'text-gray-100'
+                }`}
+              >
                 {hasCta && <p className="text-2xl font-medium text-primary">{index + 1}</p>}
                 {title}
               </span>
-              <p className="pt-6 text-base font-normal leading-tight text-gray-55">
+              <p
+                className={`${darkMode ? 'text-green-120' : 'text-gray-55'} pt-6 text-base font-normal
+                leading-tight`}
+              >
                 {textContent.cards.descriptions[index]}
               </p>
             </div>
