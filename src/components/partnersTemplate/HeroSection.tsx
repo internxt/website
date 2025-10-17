@@ -154,11 +154,7 @@ export default function HeroSection({
 
       <div className="hidden h-[500px] w-[562px] justify-center lg:flex">
         <Image
-          src={
-            image
-              ? getImage(`/images/influencers/${image}.webp`)
-              : getImage('/images/influencers/internxt-private-cloud.webp')
-          }
+          src={getImage(`/images/influencers/${image}.webp`)}
           alt="Internxt Partners HeroSection Image"
           height={529}
           width={562}

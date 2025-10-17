@@ -37,11 +37,11 @@ const ALLOWED_PATHS = [
   'vipvlc',
   'grabon',
   'pcmag',
-  'baitybait',
+  'baity',
 ];
 
-const DARK_MODE_PATHS = ['baitybait'];
-const hasCustomImage = ['baitybait'];
+const DARK_MODE_PATHS = ['baity'];
+const IMAGES_PATHS = ['baity'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -54,7 +54,7 @@ const COUPON_CODES = {
   vipvlc: PromoCodeName.VIPVLC,
   grabon: PromoCodeName.GRABON,
   pcmag: PromoCodeName.PcmagCoupon,
-  baitybait: PromoCodeName.BaityBait,
+  baity: PromoCodeName.BaityBait,
 };
 
 function CombinedSpecialOffer({
@@ -68,7 +68,7 @@ function CombinedSpecialOffer({
   const router = useRouter();
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
-
+  const hasImage = selectedPathname ? IMAGES_PATHS.includes(selectedPathname) : false;
   useEffect(() => {
     if (!selectedPathname) {
       router.replace('/specialoffer');
@@ -126,7 +126,7 @@ function CombinedSpecialOffer({
         textContent={langJson.HeroSection}
         percentOff={percentOff}
         darkMode={isDarkMode}
-        image={selectedPathname}
+        image={hasImage ? selectedPathname : 'internxt-private-cloud'}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
