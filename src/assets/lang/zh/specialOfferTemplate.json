@@ -91,5 +91,126 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "各类文件",
+        "line2": "各类设备"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "都可以在",
+        "line3": "您的所有设备"
+      },
+      "subtitle": {
+        "line1": "从你的电脑、智能手机和平板电脑安全地访问你的所有文件 ",
+        "line2": "你的电脑、智能手机、平板电脑 ",
+        "line3": "或任何连接互联网的设备 ",
+        "line4": "具备最安全的云存储应用 ",
+        "line5": "存储应用。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "让你的文件井井有条,",
+        "line2": "并可从任何地方访问。",
+        "line3": "",
+        "line4": ""
+      },
+      "subtitle": {
+        "line1": "Internxt Drive让你在文件夹中组织你的",
+        "line2": "文件夹中，重命名它们，并过滤",
+        "line3": "文件列表，以便更快地找到你想要的东西。",
+        "line4": "你甚至可以备份你的电脑",
+        "line5": "文件夹，比如你的文档文件夹，所以",
+        "line6": "你总是有最新的",
+        "line7": "你最重要的文件的最新变化。"
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "轻松地分享你的文件、",
+        "line2": "我们负责",
+        "line3": "的安全问题"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive专注于隐私和",
+        "line2": "安全性，所以你只需要关注",
+        "line3": "对你来说很重要的事情，比如与同事分享",
+        "line4": "与同事分享文件或飞机票",
+        "line5": "与你的家人分享文件或机票。你 ",
+        "line6": "你可以选择你想与谁分享",
+        "line7": "哪些人，以及你希望下载多少次",
+        "line8": "他们被下载的次数。"
+      }
+    },
+    "section5": {
+      "eyebrow": "新功能",
+      "title": {
+        "line1": "备份重要的东西",
+        "line2": "对你来说很重要"
+      },
+      "subtitle": {
+        "line1": "现在你可以保留你的那个超级重要的项目的最后一个版本",
+        "line2": "你正在进行的那个超级重要项目的",
+        "line3": "你正在进行的那个超级重要的项目的最后一个版本，你的文档文件夹、",
+        "line4": "或你的大学作业、",
+        "line5": "都安全地保存在你的Internxt Drive中。"
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "同步你的文件",
+        "line2": "在完全保密的情况下"
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "你的所有文件",
+        "line2": "安全和隐私"
+      },
+      "subtitle": {
+        "line1": "隐私和安全是我们一切工作的核心，我们的业务并不依赖于数据或广告，而是依赖于",
+        "line2": "于信任。我们尊重你的权利，并围绕它们建立惊人的工具，而不是反对它们。"
+      },
+      "cta": "我们对隐私的承诺",
+      "card1": {
+        "title": "下一代安全",
+        "subtitle": "Internxt Drive 使用端到端和后量子加密来保护您的文件。我们是第一个保护数据免受量子计算机未来威胁的云存储服务。"
+      },
+      "card2": {
+        "title": "零知识技术",
+        "subtitle": "我们从不以未加密或未散列的形式存储或传输文件、用户密码或加密密钥。"
+      },
+      "card3": {
+        "title": "为隐私而生",
+        "subtitle": "我们在开发产品时考虑到了用户，在我们所处的数据驱动的世界里，用户的隐私是必须的。"
+      },
+      "card4": {
+        "title": "开源和透明化",
+        "description": "我们为自己的工作感到自豪，所以我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了你的数据，我们没有什么可隐藏的。"
+      }
+    },
+    "DownloadLinks": {
+      "downloadTitle": "下载Internxt Drive",
+      "or": "或",
+      "downloadFor": "为<>下载",
+      "orDownloadFor": "或为<>下载",
+      "downloadOnThe": "在<>上下载",
+      "orDownloadOnThe": "或在<>上下载",
+      "getOn": "从<>上获取",
+      "orGetOn": "或从<>上获取",
+      "openDriveWeb": "打开 Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }

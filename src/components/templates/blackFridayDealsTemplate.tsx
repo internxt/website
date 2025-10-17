@@ -12,7 +12,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import TitleAndDescriptionSection from '@/components/shared/components/TitleAndDescriptionSection';
 import HeroSection from '@/components/black-friday/HeroSection';
-import HorizontalScrollableSection from '@/components/black-friday/HorzontalScrollableSection';
+import HorizontalScrollableSection from '@/components/black-friday/HorziontalScrollableSection';
 
 interface BlackFridayDealConfig {
   metatagsId: string;
@@ -115,7 +115,7 @@ const BlackFridayDealsTemplate = ({
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-20 pb-20 bg-[#1C1C1C]"
+        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
       />
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
@@ -135,7 +135,7 @@ const BlackFridayDealsTemplate = ({
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-20 pb-20 bg-[#1C1C1C]"
+        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
       />
 
       <FAQSection

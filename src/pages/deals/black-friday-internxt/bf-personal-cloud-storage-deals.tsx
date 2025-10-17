@@ -13,8 +13,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     ctx,
     {
       metatagsId: 'black-friday-personal-cloud-storage',
-      couponCode: PromoCodeName.SoftSales85,
-      couponCodeForLifetime: PromoCodeName.SoftSales85,
+      couponCode: PromoCodeName.BlackFriday,
+      couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,

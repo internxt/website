@@ -96,5 +96,125 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Tutti i tipi di file,",
+        "line2": "con ogni dispositivo"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Tutti i tuoi file",
+        "line2": "disponibili, su",
+        "line3": "tutti i tuoi dispositivi."
+      },
+      "subtitle": {
+        "line1": "Accedi in modo sicuro a tutti i tuoi ",
+        "line2": "file dal tuo computer, dal tuo smartphone, tablet ",
+        "line3": "o da qualsiasi dispositivo dotato di connessione ",
+        "line4": "a Internet, tramite una app di archiviazione ",
+        "line5": "cloud che ti assicura la massima sicurezza possibile."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Organizza i tuoi",
+        "line2": "file e accedi a",
+        "line3": "loro da qualsiasi",
+        "line4": "luogo."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive ti consente di organizzare i tuoi",
+        "line2": " file in cartelle, di rinominarli e di filtrarli",
+        "line3": "per trovare velocemente ciò che desideri.",
+        "line4": "Puoi persino eseguire il backup delle cartelle",
+        "line5": "del tuo computer, come ad esempio la cartella Documenti,",
+        "line6": " in modo da avere sempre al sicuro le versioni",
+        "line7": "più recenti dei tuoi file più importanti."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Condividi facilmente",
+        "line2": "i tuoi file, alla",
+        "line3": "sicurezza ci pensiamo noi."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive si occupa della privacy e",
+        "line2": "della sicurezza, in modo che tu possa concentrarti",
+        "line3": " solo su ciò che per te è importante, come condividere",
+        "line4": "dei file con i tuoi colleghi, oppure i biglietti aerei",
+        "line5": "per la prossima vacanza con la tua famiglia. Scegli",
+        "line6": "con chi vuoi condividere i tuoi file e quante volte",
+        "line7": " vuoi che possano essere scaricati.",
+        "line8": ""
+      }
+    },
+    "section5": {
+      "eyebrow": "NUOVA FUNZIONALITÀ",
+      "title": {
+        "line1": "Esegui il backup di",
+        "line2": "ciò che per te è importante."
+      },
+      "subtitle": {
+        "line1": "Ora puoi conservare al sicuro l'ultima versione",
+        "line2": "di quel progetto importante su cui stai lavorando,",
+        "line3": "oppure la tua cartella Documenti, o i tuoi compiti",
+        "line4": "universitari: tutto al sicuro nel tuo Internxt Drive.",
+        "line5": ""
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Inizia ora a sincronizzare",
+        "line2": "i tuoi file, in totale privacy."
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Tutti i tuoi file,",
+        "line2": "al sicuro e privati."
+      },
+      "subtitle": {
+        "line1": "La privacy e la sicurezza sono al centro di ogni cosa che facciamo la nostra attività non è basata sull’utilizzo dei dati o",
+        "line2": "sulla pubblicità, ma sulla fiducia. Noi rispettiamo i tuoi diritti e costruiamo strumenti straordinari intorno a loro, non contro di loro."
+      },
+      "cta": "Il nostro impegno per la privacy",
+      "card1": {
+        "title": "Sicurezza di prossima generazione",
+        "subtitle": "Internxt Drive protegge i tuoi file utilizzando crittografia end-to-end e post-quantistica. Siamo il primo servizio di archiviazione cloud a proteggere i dati contro le minacce future dei computer quantistici."
+      },
+      "card2": {
+        "title": "Tecnologia zero-knowledge.",
+        "subtitle": "Non archiviamo e non trasmettiamo mai nessun file, nessuna password utente o chiave di crittografia in forma non crittografata o senza hashing."
+      },
+      "card3": {
+        "title": "Privacy by design.",
+        "subtitle": "Sviluppiamo i nostri prodotti pensando all'utente e, nel mondo basato sui dati in cui viviamo, consideriamo la sua privacy sacra."
+      },
+      "card4": {
+        "title": "Open-source e trasparente",
+        "description": "Siamo orgogliosi di ciò che facciamo, e per questo motivo il nostro codice sorgente è reso pubblico su GitHub e può essere revisionato, controllato e verificato personalmente da chiunque. Non abbiamo nulla da nascondere, se non i tuoi dati."
+      }
+    },
+    "DownloadLinks": {
+      "or": "o",
+      "downloadFor": "Scarica per",
+      "orDownloadFor": "O scarica per",
+      "downloadOnThe": "Scaricare sul sito",
+      "orDownloadOnThe": "O Scaricare sul sito",
+      "getOn": "Scarica da",
+      "orGetOn": "O scarica da",
+      "openDriveWeb": "Apri Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }

@@ -197,6 +197,7 @@ export default function Layout({
             }}
           />
         )}
+
         <script async src="/js/cookiebanner.script.js" />
 
         {!disableMailerlite && <Script defer src="/js/mailerlite.js" />}
