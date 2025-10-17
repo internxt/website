@@ -9,16 +9,22 @@
     "cancelCta": "Annuler"
   },
   "FreeCardPromoBanner": {
-    "title": "Profitez de votre offre spéciale Black Friday !",
-    "subtitle": "La **plus grande** réduction pour une **confidentialité maximale**",
-    "getDealCta": "Obtenir l'offre",
-    "freePlanCta": "Continuer avec le forfait gratuit",
+    "title": "Obtenez une remise exclusive!",
+    "subtitle": {
+      "blue": "Offre spéciale :",
+      "normal": " stockez vos fichiers en toute confidentialité pour moins cher"
+    },
+    "getDealCta": "Obtenez l'offre",
+    "freePlanCta": "Continuer avec le plan gratuit",
     "guarantee": "Garantie de remboursement de 30 jours",
-    "header": { "primaryText": "Obtenez 90% de réduction", "afterPrimaryText": "sur tous les forfaits" },
+    "header": {
+      "primaryText": "Obtenez 87% de réduction",
+      "afterPrimaryText": "dans tous les forfaits"
+    },
     "products": {
       "drive": "Drive",
       "antivirus": "Antivirus",
-      "cleaner": "Nettoyeur",
+      "cleaner": "Cleaner",
       "vpn": "VPN",
       "meet": "Meet",
       "mail": "Mail"
@@ -119,7 +125,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Économies massives pour le Black Friday — pour une durée limitée seulement!",
+      "normalText": "Obtenez 85% de réduction sur tous les plans annuels et à vie dès maintenant!",
       "cta": "Choisissez votre forfait "
     }
   },

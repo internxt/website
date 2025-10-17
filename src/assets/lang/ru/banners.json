@@ -1,177 +1,178 @@
 {
   "changeEmailBanner": {
-    "title": "Изменить адрес электронной почты?",
+    "title": "Cambiare l'indirizzo email?",
     "description": [
-      "Это действие удалит ваш текущий адрес электронной почты ${{email}} и все электронные письма в вашем почтовом ящике.",
-      "Вы мгновенно получите новый временный адрес электронной почты."
+      "Quest'azione eliminerà il tuo attuale indirizzo email ${{email}} e tutte le email nella tua casella di posta in arrivo.",
+      "Riceverai immediatamente un nuovo indirizzo email temporaneo."
     ],
-    "actionCta": "Получить новую электронную почту",
-    "cancelCta": "Отмена"
+    "actionCta": "Ottieni una nuova email",
+    "cancelCta": "Annulla"
   },
   "FreeCardPromoBanner": {
-    "title": "Получите специальное предложение Черной пятницы!",
-    "subtitle": "**Самая большая** скидка для **максимальной конфиденциальности**",
-    "getDealCta": "Получить предложение",
-    "freePlanCta": "Продолжить с бесплатным тарифом",
-    "guarantee": "30-дневная гарантия возврата денег",
-    "header": { "primaryText": "Получите скидку 90%", "afterPrimaryText": "на все тарифы" },
+    "title": "Ottieni uno sconto esclusivo!",
+    "subtitle": { "blue": "Offerta speciale:", "normal": " archivia i file in modo privato a meno" },
+    "getDealCta": "Ottieni l'offerta",
+    "freePlanCta": "Continua con il piano gratuito",
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "header": {
+      "primaryText": "Ottieni l'87% di sconto",
+      "afterPrimaryText": "in tutti i Piani"
+    },
     "products": {
-      "drive": "Диск",
-      "antivirus": "Антивирус",
-      "cleaner": "Очиститель",
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
       "vpn": "VPN",
       "meet": "Meet",
-      "mail": "Почта"
+      "mail": "Mail"
     }
   },
   "LoginBanner": {
-    "head": "Попробуйте, прежде чем купить",
-    "title": "Получите Internxt бесплатно!",
-    "buttonText": "Зарегистрируйтесь сейчас",
+    "head": "Try before you buy.",
+    "title": "Get Internxt for free!",
+    "buttonText": "Sign up now",
     "card": {
-      "title1": "Получите до 1 ГБ бесплатно",
-      "title2": "Надежное и безопасное облачное хранилище",
-      "title3": "Резервное копирование файлов и фотографий",
-      "title4": "Сквозное шифрование данных",
-      "title5": "Отсутствие несанкционированного доступа",
-      "title6": "Доступно на всех устройствах"
+      "title1": "Get 1GB free",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available on all devices"
     }
   },
   "BFBanner": {
-    "head": "Не переплачивайте за защиту данных",
-    "title": "Предложение от Internxt на Черную Пяницу",
-    "buttonText": "Получить скидку",
+    "head": "Save big on privacy.",
+    "title": "Internxt’s Black Friday Deal",
+    "buttonText": "Get the deal",
     "card": {
-      "title1": "Получите 60% скидку на тарифный план 2 ТБ",
-      "title2": "Надежное и безопасное облачное хранилище",
-      "title3": "Резервное копирование файлов и фотографий",
-      "title4": "Сквозное шифрование данных",
-      "title5": "Отсутствие несанкционированного доступа",
-      "title6": "Доступно до 5 декабря"
+      "title1": "Get 60% off our 2TB plan",
+      "title2": "Safe and secure cloud storage",
+      "title3": "Private file and photo backup",
+      "title4": "End-to-end encrypted transfers",
+      "title5": "No unauthorized access",
+      "title6": "Available until Dec 5th"
     }
   },
   "featuresBanner": {
-    "label": "Сэкономьте 80%!",
-    "title": "Лучшие предложения на Черную Пятницу",
-    "subtitle": "Получите наш премиум-рюкзак с нашими пожизненными планами.",
-    "cta": "Выберите свой план",
-    "guarantee": "30-дневная гарантия возврата денег",
-    "lastCta": "*Предложение действительно для бесплатных аккаунтов или новых клиентов",
+    "label": "Risparmia l'80%!",
+    "title": "Le migliori offerte del Black Friday",
+    "subtitle": "Ottieni il nostro zaino premium con i nostri piani a vita.",
+    "cta": "Scegli il tuo piano",
+    "guarantee": "Garanzia di rimborso di 30 giorni",
+    "lastCta": "*L'offerta è valida per account gratuiti o nuovi clienti",
     "features": [
-      "Сэкономьте на всех премиум-планах",
-      "Личное и зашифрованное облачное хранилище",
-      "Открытый исходный код и проверка",
-      "Зашифрованные передачи от конца до конца",
-      "Без несанкционированного доступа",
-      "Предложение заканчивается 3 декабря"
+      "Risparmia su tutti i piani premium",
+      "Archivio cloud privato e crittografato",
+      "Open source e verificato",
+      "Trasferimenti crittografati end-to-end",
+      "Nessun accesso non autorizzato",
+      "L'offerta termina il 3 dicembre"
     ]
   },
   "s3StorageBanner": {
-    "label": "Доступно сейчас!",
-    "title": "Объектное хранение, совместимое с S3",
-    "feat": ["На 80% дешевле, чем AWS", "Безопасное, масштабируемое, совместимое с S3", "Родная поддержка Rclone"],
-    "cta": "Получите 1TB бесплатно",
-    "offerEnds": "*Предложение действует только первый месяц"
+    "label": "Disponibile ora!",
+    "title": "Archiviazione di oggetti compatibile S3",
+    "feat": ["Fino all'80% più economico di AWS", "Sicuro, scalabile, compatibile S3", "Supporto nativo Rclone"],
+    "cta": "Ottieni 1TB gratis",
+    "offerEnds": "*Offerta valida solo per il primo mese"
   },
   "tryOutInternxtGeneralBanner": {
-    "title": "Познакомьтесь с Internxt",
-    "description": "Безопасное надежное облачное хранилище",
-    "cta": "Создать аккаунт"
+    "title": "Try Internxt",
+    "description": "Secure cloud storage based on total privacy and encryption.",
+    "cta": "Sign up for free"
   },
   "tryOutInternxtPasswordCheckerBanner": {
-    "title": "Попробуйте Internxt",
-    "description": "Безопасное хранение файлов с технологией защиты паролем",
-    "cta": "Зарегистрируйтесь бесплатно"
+    "title": "Try Internxt",
+    "description": "Secure file storage with password-protected technology for your files.",
+    "cta": "Sign up for free"
   },
   "SignUpPCloudAlternativeBanner": {
-    "line1": "Получите облачное хранилище с шифрованием от начала до конца без дополнительных расходов.",
-    "blueText": " Присоединяйтесь к Internxt бесплатно"
+    "line1": "Ottieni storage cloud crittografato end-to-end senza costi aggiuntivi.",
+    "blueText": " Unisciti a Internxt gratuitamente"
   },
   "SignUpPCloudAlternativeBanner2": {
-    "line1": "для более безопасного, открытого и экономичного решения облачного хранилища.",
-    "blueText": "Перейдите на Internxt "
+    "line1": "per una soluzione di storage cloud più sicura, aperta ed economica.",
+    "blueText": "Passa a Internxt "
   },
   "SignUpPwdCheckerBanner": {
-    "line1": "Используйте надежный пароль для",
-    "blueText": "бесплатного аккаунта Internxt"
+    "line1": "Utilizzate la vostra password forte con un",
+    "blueText": "conto Internxt gratuito"
   },
   "SignUpVirusScannerBanner": {
-    "line1": "Храните файлы в безопасности",
-    "blueText": "зарегистрируйте бесплатный аккаунт Internxt"
+    "line1": "Tieni al sicuro quei file ormai puliti",
+    "blueText": "unisciti gratuitamente a Internxt"
   },
   "SignUpMetadataRemoverBanner": {
-    "line1": "Удаляйте метаданные, раскрывающие информацию, из ваших файлов.",
-    "blueText": "Очистите свою цифровую репутацию с помощью Internxt"
+    "line1": "Rimuovi i metadati rivelatori dai tuoi file.",
+    "blueText": "Pulisci la tua impronta digitale con Internxt"
   },
   "SignUpAiDetector": {
-    "line1": "Обнаруживайте ИИ-контент, обеспечивайте подлинность и",
-    "blueText": "публикуйте с уверенностью вместе с Internxt"
+    "line1": "Rileva contenuti AI, garantisci l'autenticità e",
+    "blueText": "pubblica con sicurezza con Internxt"
   },
-  "SignUpByteConverterBanner": {
-    "line1": "Получите гигабайты безопасного облачного хранилища",
-    "blueText": "с Internxt"
-  },
+  "SignUpByteConverterBanner": { "line1": "Ottieni byte e byte di cloud storage sicuro", "blueText": "con Internxt" },
   "SignUpTempMailBanner": {
-    "line1": "Защитите почтовый ящик от спама, и храните файлы в безопасности",
-    "blueText": "с Internxt"
-  },
-  "SignUpCyberAwareness": {
-    "line1": "Теперь вы знаете, как защитить свои данные",
-    "blueText": "Безопасное облачное хранилище Internxt"
+    "line1": "Mantieni le tue e-mail pulite e i tuoi file al sicuro",
+    "blueText": "con Internxt"
   },
   "SignUpPasswordGenerator": {
-    "line1": "Защитите свой аккаунт уникальным паролем.",
-    "blueText": "Присоединяйтесь к Internxt."
+    "line1": "Shield your accounts with unique passwords,",
+    "blueText": "join Internxt for free"
   },
-  "privacyDirectoryBanner": {
-    "line1": "Присоединяйтесь к нашим безопасным онлайн сервисам",
-    "blueText": "с Internxt"
+  "SignUpCyberAwareness": {
+    "line1": "Now that you’re aware, protect yourself with",
+    "blueText": "Internxt secure cloud storage"
   },
   "SignUpVPNBanner": {
-    "line1": "Безопасность во время серфинга.",
-    "blueText": "Наслаждайтесь более приватным онлайн-опытом с Internxt"
+    "line1": "Sicuro mentre navighi.",
+    "blueText": "Goditi un'esperienza online più privata con Internxt"
+  },
+  "privacyDirectoryBanner": {
+    "line1": "Join the fight for privacy and build a better internet",
+    "blueText": "with Internxt"
   },
   "GeneralBanner": {
-    "title": "Пока вы не ушли...",
-    "description": "Получите 90% скидку на тарифный план 2 ТБ на один год",
-    "cta": "Конечно, я попробую",
-    "ctaCancel": "Нет, спасибо"
+    "title": "Before you bounce...",
+    "description": "Get 80% off our 2TB plan for the first year.",
+    "cta": "Sure, I'll try it out",
+    "ctaCancel": "No, thanks"
+  },
+  "AndroidSmartBanner": {
+    "title": "Scarica Internxt Drive per Android"
   },
   "GoogleLPBanner": {
     "line1": "Don’t let Google cash in on your data,",
     "blueText": "keep your files private with Internxt"
   },
   "GoogleKnows": {
-    "title": "Max out your Google privacy settings with our What Google Knows page"
+    "title": "Ottimizzate le impostazioni sulla privacy di Google con la nostra nuova pagina sulla privacy"
   },
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "Огромные скидки в Черную пятницу — только ограниченное время!",
-      "cta": "Выберите свой тариф "
+      "normalText": "Ottieni l'85% di sconto su tutti i piani annuali e a vita ora! ",
+      "cta": "Scegli il tuo piano "
     }
   },
-  "AndroidSmartBanner": {
-    "title": "Годовой абонемент со скидкой 50%! Выбрать тарифный план"
-  },
   "lifetimeBanner": {
-    "label": "Защитите свои файлы навсегда",
-    "title": "Получите пожизненный доступ в Internxt!",
-    "cta": "Выберите свой план",
-    "guarantee": "Гарантия возврата денег в течение 30 дней"
+    "label": "Proteggi i tuoi file per sempre",
+    "title": "Ottieni l'accesso a vita allo storage cloud sicuro e privato con Internxt!",
+    "cta": "Scegli il tuo piano",
+    "guarantee": "Garanzia di rimborso entro 30 giorni"
   },
+
   "BeforeCloseBanner": {
     "title": {
-      "normal1": "Подождите! Специальное предложение ",
-      "blue": "Скидка 80% ",
+      "normal1": "Aspetta! Offerta speciale ",
+      "blue": "80% DI SCONTO ",
       "normal2": "!"
     },
-    "subtitle": "Вас ждет эксклюзивное предложение.",
-    "cta": "Скидка 80%",
-    "guarantee": "30-дневная гарантия возврата денег"
+    "subtitle": "C'è un'offerta esclusiva che ti aspetta.",
+    "cta": "80% DI SCONTO",
+    "guarantee": "Garanzia di rimborso di 30 giorni"
   },
   "SignUpFileCompressorBanner": {
-    "line1": "Экономьте место на диске с Internxt",
-    "blueText": "Сжимайте файлы бесплатно, чтобы оптимизировать облако"
+    "line1": "Risparmia spazio di archiviazione con Internxt",
+    "blueText": "Comprimi gratuitamente i tuoi file per ottimizzare il cloud"
   }
 }
