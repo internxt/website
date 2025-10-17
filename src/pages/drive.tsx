@@ -18,7 +18,7 @@ import { CliCard } from '@/components/drive/CliCard';
 import { DriveText } from '@/assets/types/drive';
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import { TextAndCardsGroupColumnSection } from '@/components/shared/components/TextAndCardsGroupColumnSection';
-import { CaretRight, Eye, Key, LockKey, Password, ShieldCheck } from '@phosphor-icons/react';
+import { CaretRight, Eye, Key, LockKey, ShieldCheck } from '@phosphor-icons/react';
 import Link from 'next/link';
 
 interface DriveProps {

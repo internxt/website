@@ -25,7 +25,7 @@ const FloatingCtaSectionv2 = ({
       style={{ background: bgGradientColor }}
     >
       <div
-        className={`z-10 flex h-auto flex-col items-center gap-6 rounded-20 py-6 text-center lg:w-full lg:py-10 ${containerDetails}`}
+        className={`z-10 flex h-auto w-full flex-col items-center justify-center gap-6 rounded-20 py-6 text-center lg:w-full lg:py-10 ${containerDetails}`}
         style={{ background: bgGradientContainerColor }}
       >
         {customText}
@@ -33,7 +33,7 @@ const FloatingCtaSectionv2 = ({
           <Link
             href={url}
             target={target}
-            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark xl:mr-10`}
+            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark`}
           >
             {textContent.cta}
           </Link>

@@ -96,5 +96,125 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Tous les types de fichiers,",
+        "line2": "sur tous vos appareils"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Tous vos fichiers",
+        "line2": "sont disponibles sur",
+        "line3": "tous vos appareils."
+      },
+      "subtitle": {
+        "line1": "Accédez en toute sécurité à tous vos ",
+        "line2": "fichiers depuis votre ordinateur, votre smartphone, ",
+        "line3": "votre tablette ou tout appareil disposant d'une ",
+        "line4": "connexion à Internet via l'application la ",
+        "line5": "plus sécurisée."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Gardez vos fichiers ",
+        "line2": "organisés et",
+        "line3": "accessibles de",
+        "line4": "n'importe où."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive vous permet d'organiser vos",
+        "line2": "fichiers dans des dossiers, de les renommer et",
+        "line3": "de filtrer une liste de fichiers pour trouver ce",
+        "line4": "que vous voulez plus rapidement. Vous pouvez même",
+        "line5": "sauvegarder les dossiers de votre ordinateur, afin",
+        "line6": "de toujours avoi es dernières modifications",
+        "line7": "de vos fichiers les plus importants."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Partagez vos fichiers",
+        "line2": "en toute simplicité,",
+        "line3": "la sécurité est de notre côté."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive se concentre sur la confidentialité",
+        "line2": "et la sécurité, afin que vous n'ayez à vous concentrer",
+        "line3": "que sur ce qui compte pour vous, comme le partage",
+        "line4": "de fichiers avec vos collègues de travail, ou les",
+        "line5": "photos de votre dernier voyage avec votre famille.",
+        "line6": "Vous choisissez avec qui vous voulez les",
+        "line7": "partager et combien de fois vous voulez",
+        "line8": "qu'ils soient téléchargés."
+      }
+    },
+    "section5": {
+      "eyebrow": "NOUVELLE FONCTION",
+      "title": {
+        "line1": "Faitez une copie de sauvegarde",
+        "line2": "de ce qui compte pour vous."
+      },
+      "subtitle": {
+        "line1": "Vous pouvez désormais conserver la dernière",
+        "line2": "version de ce projet super important sur",
+        "line3": "lequel vous travaillez, votre dossier",
+        "line4": " de documents ou vos devoirs universitaires,",
+        "line5": "tous en sécurité dans votre Internxt Drive."
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Commencez à synchroniser vos fichiers",
+        "line2": "en toute confidentialité."
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Tous vos fichiers,",
+        "line2": "sécurisés et privés."
+      },
+      "subtitle": {
+        "line1": "Le respect de la vie privée et la sécurité sont au cœur de nos préoccupations. Notre activité ne repose pas sur les données",
+        "line2": "ou la publicité mais sur la confiance. Nous respectons vos droits et construisons des outils autour d'eux, pas contre eux."
+      },
+      "cta": "Notre engagement en matière de confidentialité",
+      "card1": {
+        "title": "Sécurité de prochaine génération",
+        "subtitle": "Internxt Drive protège vos fichiers en utilisant une cryptographie de bout en bout et post-quantique. Nous sommes le premier service de stockage en nuage à protéger les données contre les futures menaces des ordinateurs quantiques."
+      },
+      "card2": {
+        "title": "Technologie connaissance zéro.",
+        "subtitle": "Nous ne stockons ni ne transmettons jamais de fichiers, de mots de passe d'utilisateur ou de clés de chiffrement sous une forme non chiffrée."
+      },
+      "card3": {
+        "title": "Protection de la vie privée dès la conception.",
+        "subtitle": "Nous développons nos produits en pensant à l'utilisateur, dont la confidentialité est une nécessité dans le monde axé sur les données dans lequel nous vivons."
+      },
+      "card4": {
+        "title": "Protection pour vos meilleurs moments",
+        "description": "Stockez toutes vos photos dans une seule galerie et accédez-y de partout. Enregistrez vos souvenirs directement sur votre téléphone et visualisez-les où que vous soyez."
+      }
+    },
+    "DownloadLinks": {
+      "or": "ou",
+      "downloadFor": "Téléchargez pour",
+      "orDownloadFor": "Ou téléchargez pour",
+      "downloadOnThe": "Téléchargez sur",
+      "orDownloadOnThe": "Ou téléchargez sur",
+      "getOn": "Téléchargez sur",
+      "orGetOn": "Ou téléchargez sur",
+      "openDriveWeb": "Ouvrez Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }
