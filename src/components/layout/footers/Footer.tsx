@@ -56,10 +56,10 @@ export default function Footer({
     <section
       id="footer"
       className={`flex w-full flex-col overflow-hidden lg:pb-10 ${
-        darkMode ? 'bg-[#111111] text-white' : 'bg-gray-5 bg-opacity-50'
+        darkMode ? 'bg-[#1C1C1C] text-white' : 'bg-gray-5 bg-opacity-50'
       }`}
     >
-      <div className="flex w-full flex-col items-center justify-center px-6 pt-16 sm:p-20 sm:py-12">
+      <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
         <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
 
@@ -163,7 +163,7 @@ export default function Footer({
             <div className="flex w-full flex-row justify-between space-x-20 md:justify-center md:space-x-12">
               <div className="flex max-w-[30%] flex-1 flex-col items-center lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium text-gray-100">
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
                     {textContent.FooterSection.sections.products.title}
                   </h3>
                   <div
@@ -191,7 +191,11 @@ export default function Footer({
                       className="items-center hover:text-primary"
                     >
                       {textContent.FooterSection.sections.products.antivirus}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
@@ -207,19 +211,31 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
                     <Link href="/meet" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.meet}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
@@ -250,7 +266,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.company.title}</h3>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                    {textContent.FooterSection.sections.company.title}
+                  </h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -302,7 +320,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.join.title}</h3>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                    {textContent.FooterSection.sections.join.title}
+                  </h3>
                   <div
                     className={`flex flex-col items-start space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -351,7 +371,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.resources.title}</h3>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                    {textContent.FooterSection.sections.resources.title}
+                  </h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -426,7 +448,9 @@ export default function Footer({
               </div>
               <div className="flex max-w-[18%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.tools.title}</h3>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                    {textContent.FooterSection.sections.tools.title}
+                  </h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -457,25 +481,41 @@ export default function Footer({
                     </Link>
                     <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
                     <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.aiDetector}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileCompressor}
-                      <span className="ml-2  h-max items-center justify-center rounded-full bg-primary bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary">
+                      <span
+                        className={`ml-2  h-max items-center justify-center rounded-full ${
+                          darkMode ? 'bg-primary/10' : 'bg-primary'
+                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
+                      >
                         {textContent.FooterSection.new}
                       </span>
                     </Link>
@@ -485,7 +525,9 @@ export default function Footer({
 
               <div className="flex max-w-[14%] flex-1 flex-col items-center text-gray-100 lg:flex-none">
                 <div className="flex flex-shrink-0 flex-col space-y-3">
-                  <h3 className="text-lg font-medium">{textContent.FooterSection.sections.features.title}</h3>
+                  <h3 className={`text-lg font-medium ${darkMode ? 'text-gray-1' : 'text-gray-100'} `}>
+                    {textContent.FooterSection.sections.features.title}
+                  </h3>
                   <div
                     className={`flex flex-col space-y-1.5 text-base ${
                       darkMode ? 'text-cool-gray-30' : 'text-cool-gray-60'
@@ -636,13 +678,17 @@ export default function Footer({
           {/* Mobile version */}
           <div
             className={`${
-              darkMode ? 'bg-[#111111] text-white' : 'bg-gray-5 bg-opacity-50'
+              darkMode ? 'bg-[#1C1C1C] text-white' : 'bg-gray-5 bg-opacity-50'
             } flex flex-col overflow-hidden lg:hidden`}
           >
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.products.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -655,7 +701,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col px-6 font-semibold text-gray-100 ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'bg-gray-1 text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'bg-gray-1 text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/drive" locale={lang} passHref legacyBehavior>
@@ -703,7 +749,11 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.company.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -716,7 +766,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/about" locale={lang} passHref>
@@ -759,7 +809,11 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.join.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -772,7 +826,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <a href="https://drive.internxt.com/new" target="_top" className="hover:text-primary">
@@ -820,7 +874,11 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.resources.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -833,7 +891,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <a
@@ -905,7 +963,11 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.tools.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -918,7 +980,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/byte-converter" locale={lang} passHref>
@@ -971,7 +1033,11 @@ export default function Footer({
             <Disclosure as="div" className="w-screen">
               {({ open }) => (
                 <>
-                  <Disclosure.Button className="flex w-full items-center justify-between px-6 py-4 text-lg font-medium text-gray-100">
+                  <Disclosure.Button
+                    className={`${
+                      darkMode ? 'text-gray-1' : 'text-gray-100'
+                    } flex w-full items-center justify-between px-6 py-4 text-lg font-medium`}
+                  >
                     <span className="flex flex-row">{textContent.FooterSection.sections.features.title}</span>
                     <CaretDown className={`${open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
                     <CaretUp className={`${!open ? 'hidden' : 'flex'} text-gray-80`} weight="bold" />
@@ -984,7 +1050,7 @@ export default function Footer({
                   >
                     <Disclosure.Panel
                       className={`flex flex-col bg-gray-1 px-6 font-semibold ${!open ? 'hidden' : 'flex'} ${
-                        darkMode ? 'bg-black text-gray-30' : 'text-gray-60'
+                        darkMode ? 'bg-gray-71 text-green-120' : 'text-gray-60'
                       } space-y-8 p-4`}
                     >
                       <Link href="/private-cloud-storage-solutions" locale={lang} passHref>

@@ -190,7 +190,7 @@ export const PricingSection = ({
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
                   key={product.storage}
-                  popular={product.storage === popularPlan}
+                  popular={product.storage === '5TB'}
                   productCardPlan="individuals"
                   decimalDiscountValue={
                     product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
@@ -251,7 +251,7 @@ export const PricingSection = ({
             {features.map((feature) => (
               <div key={feature.text} className="flex flex-col items-start gap-3 md:max-w-[33%] md:flex-row">
                 <feature.icon size={36} className="!h-[36px] !w-[36px] shrink-0 text-primary md:pb-0" />
-                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-white' : 'text-gray-80'}`}>
+                <p className={`pt-[6px] text-xl font-medium ${darkMode ? 'text-green-120' : 'text-gray-80'}`}>
                   {feature.text}
                 </p>
               </div>
@@ -260,7 +260,7 @@ export const PricingSection = ({
         </div>
       )}
 
-      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} />}
+      {!hideFreeCard && <FreePlanCard textContent={textContent.freePlanCard} darkMode={darkMode} />}
     </>
   );
 };

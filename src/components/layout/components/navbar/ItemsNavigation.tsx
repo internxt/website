@@ -8,6 +8,7 @@ interface NavigationLinkProps {
   isActive: boolean;
   isDarkMode: boolean;
   lang: string;
+  className?: string;
 }
 
 interface DropdownMenuItem {
@@ -46,8 +47,8 @@ const getLinkClasses = (isDarkMode: boolean, isActive: boolean) => {
   return `${baseClasses} ${isActive ? 'text-primary' : darkModeClasses}`;
 };
 
-const NavigationLink = ({ href, text, isActive, isDarkMode, lang }: NavigationLinkProps) => (
-  <Link href={href} locale={lang} className={getLinkClasses(isDarkMode, isActive)}>
+const NavigationLink = ({ href, text, isActive, isDarkMode, lang, className = '' }: NavigationLinkProps) => (
+  <Link href={href} locale={lang} className={`${getLinkClasses(isDarkMode, isActive)} ${className}`}>
     {text}
   </Link>
 );
@@ -109,6 +110,15 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        <NavigationLink
+          href="/deals/black-friday-internxt"
+          text={textContent.links.blackFriday}
+          isActive={currentPath === getTitles.links.pricing.trim().toLowerCase()}
+          isDarkMode={darkMode}
+          lang={lang}
+          className="text-primary hover:text-primary-dark"
+        />
+
         <DropdownMenu
           label={textContent.links.products}
           items={[

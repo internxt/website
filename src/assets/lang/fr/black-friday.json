@@ -1,181 +1,138 @@
 {
-  "blackFriday": {
-    "HeroSection": {
-      "title": {
-        "line1": "C'est fini",
-        "line2": "le Black Friday"
-      },
-      "description": "Mais vous pouvez toujours obtenir de la confidentialité à un excellent prix !",
-      "pricingTable": {
-        "only": "Seulement",
-        "priceNow": "3.59",
-        "month": "/mois",
-        "priceBefore": "8.99",
-        "footer": {
-          "line1": "Stockage et partage de fichiers chiffrés",
-          "line2": "Accédez à vos fichiers depuis n'importe quel appareil",
-          "line3": "Accédez à tous nos services"
-        }
-      },
-      "timer": {
-        "timeTitle": "L'offre Black Friday expirera dans:",
-        "days": "jours",
-        "hours": "heures",
-        "minutes": "minutes",
-        "seconds": "secondes"
-      },
-      "features": [
-        "Stockage et partage de fichiers chiffrés",
-        "Accédez à vos fichiers depuis n'importe quel appareil",
-        "Accédez à tous nos services",
-        "Aucun accès non autorisé aux données"
-      ]
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
     },
-    "BestStorage": {
-      "title": "La meilleure offre de stockage cloud pour le Black Friday",
-      "subtitle": "La remise d'Internxt sur la confidentialité et la tranquillité d'esprit sera de retour l'année prochaine!"
+    "title": "Offre **Black Friday**",
+    "subtitle": "Obtenez la meilleure offre Black Friday 2025 avec 90% de réduction sur tous les forfaits Internxt",
+    "description": "Obtenez {{discount}}% de réduction maintenant !",
+    "features": ["Suite digitale privée", "Chiffrement post-quantique", "Open source et audité"],
+    "claimDeal": "Profiter de l'offre"
+  },
+  "DontMissSection": {
+    "title": "Ne manquez pas votre offre Black Friday !",
+    "description": [
+      "Protégez vos données en ligne avec Internxt grâce à notre suite de confidentialité entièrement équipée qui comprend des sauvegardes, Antivirus, VPN, Cleaner, Meet, Mail et bien plus encore.",
+      "Obtenez la meilleure confidentialité et sécurité en ligne avec la réduction Black Friday de 90% d'Internxt."
+    ]
+  },
+  "TableSection": {
+    "title": "Votre tout-en-un pour la confidentialité",
+    "hotLabel": "{{discount}}% de réduction",
+    "planTitles": {
+      "header": "Choisissez votre plan",
+      "individuals": "Plans Annuels",
+      "lifetime": "Plans à Vie",
+      "business": "Plans Entreprise"
     },
-    "SuiteSection": {
-      "title": "Obtenez plus pour moins : des plans de stockage cloud sécurisés à des prix imbattables!",
-      "subtitle": "Reprenez le contrôle de vos données avec Internxt, bénéficiez d'une confidentialité totale en ligne et protégez-vous, votre entreprise ou votre famille contre les cyberattaques et les entreprises qui tirent profit de vos données.",
-      "drive": {
-        "title": "Internxt Drive",
-        "subtitle": "Téléchargez, stockez et partagez vos fichiers en toute confidentialité avec notre service de cloud chiffré. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et assurer une collaboration fluide.",
-        "cta": "Sécuriser avec Drive",
-        "image": "drive",
-        "alt": "Internxt Drive"
-      },
-      "photos": {
-        "title": "Internxt pour Entreprises",
-        "subtitle": "Tout ce dont vous avez besoin pour gérer votre entreprise en toute sécurité. Partage de fichiers sécurisé, allocation de stockage et gestion de sessions assurent qu'Internxt répond à tous vos besoins professionnels.",
-        "cta": "Obtenez Internxt pour Entreprises",
-        "image": "business",
-        "alt": "Internxt pour Entreprises"
-      },
-      "send": {
-        "title": "Internxt pour Familles",
-        "subtitle": "Tranquillité d'esprit totale pour votre famille. Stockez, partagez et gérez vos souvenirs les plus précieux depuis une seule plateforme cloud chiffrée.",
-        "cta": "Obtenez Internxt pour Familles",
-        "image": "family",
-        "alt": "Internxt pour Familles"
-      }
+    "billingFrequency": {
+      "annually": "Annuel",
+      "lifetime": "À vie"
     },
-    "FeatureSection": {
-      "title": "Pourquoi choisir Internxt?",
-      "subtitle": "Nous concevons tous nos produits avec la confidentialité à l'esprit. Nous ne basons pas notre activité sur les données ou la publicité; nous la construisons sur la confiance. Notre technologie chiffrée protège vos fichiers et garantit votre droit fondamental à la confidentialité.",
-      "feature1": {
-        "title": "Données incassables et inviolables",
-        "subtitle1": "Nous ne stockons pas de mots de passe ou de données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne un contrôle total sur vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre."
-      },
-      "feature2": {
-        "title": "Sécurité sans compromis",
-        "subtitle1": "Vos fichiers sont chiffrés de bout en bout avant même de quitter votre appareil. Grâce au chiffrement AES-256 à connaissance zéro, vous êtes absolument le seul à avoir accès à vos données."
-      },
-      "feature3": {
-        "title": "Open source et transparent",
-        "subtitle1": "Nous sommes fiers de ce que nous faisons, donc notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par quiconque. Nous n'avons rien à cacher sauf vos données."
-      },
-      "feature4": {
-        "title": "Vérifié indépendamment",
-        "subtitle1": "Nous sommes entièrement conformes au RGPD et 100% sûrs, mais ne nous croyez pas sur parole. Internxt a été audité et vérifié indépendamment par la principale société de tests de pénétration en Europe, Securitum."
-      }
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le forfait"
     },
-    "PlatformSection": {
-      "title": "Accédez à vos fichiers n'importe où, n'importe quand",
-      "subtitle": "Internxt est disponible sur toutes les plateformes, vos fichiers ne sont qu'à un clic!",
-      "web": "Web",
-      "linux": "Linux",
-      "windows": "Windows",
-      "mac": "MacOS",
-      "android": "Android",
-      "iOS": "iOS"
+    "features": {
+      "openSource": "Open source et audité",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
     },
-    "TestimonialsSection": {
-      "title": "Ce que nos utilisateurs disent de nous",
-      "cards": [
-        {
-          "name": "Eva Williams",
-          "enterprise": "Journaliste pour FixThePhoto.com",
-          "review": "Internxt est un service de stockage cloud pratique pour les clients soucieux de la confidentialité. Il dispose d'une interface simplifiée et d'une équipe de support fiable, ce qui en fait une excellente option pour ceux qui ont besoin de stocker leurs fichiers en toute sécurité."
-        },
-        {
-          "name": "Cristian M.",
-          "enterprise": "Avis de GetApp",
-          "review": "La meilleure alternative Dropbox chiffrée. En résumé : Nous avions besoin d'une alternative qui nous permettait de stocker les fichiers des clients et le travail (fichiers pour les réseaux sociaux) et comme Internxt est conforme au RGPD, il répond parfaitement à nos besoins!"
-        },
-        {
-          "name": "Josep Carrizo",
-          "enterprise": "Avis de Trustpilot",
-          "review": "J'ai utilisé Google Drive pendant plusieurs années, mais j'avais besoin d'une alternative qui garantisse la confidentialité de mes données. Quelque chose que Google ou d'autres plateformes bien connues ne peuvent pas faire. C'est pourquoi je suis passé à Internxt."
-        }
-      ]
-    },
-    "faq": {
-      "title": "Des questions? Nous avons des réponses",
-      "faq": [
-        {
-          "question": "Comment puis-je obtenir la remise du Black Friday?",
-          "answer": [
-            "Pour profiter de notre remise du Black Friday, vous devez cliquer sur l'un des boutons « Obtenir l'offre » situés sur cette page, et vous serez directement redirigé vers le paiement avec la remise déjà appliquée à votre nouveau plan Internxt de 2 To."
-          ]
-        },
-        {
-          "question": "Quand la promotion se termine-t-elle?",
-          "answer": ["Notre vente du Black Friday se déroule du 21 novembre au 5 décembre 2022."]
-        },
-        {
-          "question": "Qui est éligible à cette remise?",
-          "answer": [
-            "Les nouveaux utilisateurs ou toute personne ayant un abonnement Internxt gratuit, 20 Go ou 200 Go peuvent participer à notre vente du Black Friday."
-          ]
-        },
-        {
-          "question": "Conserverai-je la remise lorsque mon plan se terminera?",
-          "answer": [
-            "La remise est appliquée pour la première année complète de service. Par conséquent, vous aurez accès à notre plan de 2 To à ce prix réduit pour une année seulement.",
-            "Si vous choisissez de continuer votre abonnement existant avec l'offre, votre compte sera facturé au tarif standard du plan de 2 To pour l'année suivante."
-          ]
-        },
-        {
-          "question": "Quels moyens de paiement Internxt accepte-t-il?",
-          "answer": [
-            "Nous acceptons actuellement les paiements par carte de crédit et de débit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via Apple et Google Pay, Cartes Bancaires, Alipay, WeChat Pay, Bancontact, EPS, GiroPay, iDEAL, Przelewy24, Sofort, Blik, Klarna, Afterpay, SEPA Direct Debit."
-          ]
-        },
-        {
-          "question": "Offrez-vous des réductions pour les ONG ou les étudiants?",
-          "answer": [
-            "Oui, vous pouvez obtenir 50% de réduction sur tout plan d'abonnement Internxt si vous êtes membre d'une organisation à but non lucratif ou d'une ONG. Contactez-nous à [hello@internxt.com](mailto:hello@internxt.com) avec les informations de votre organisation afin que nous puissions vérifier votre éligibilité et appliquer votre remise.",
-            "Vous pouvez également obtenir une réduction de 50% si vous êtes étudiant. Demandez la réduction et vérifiez votre éligibilité en nous envoyant un e-mail à [hello@internxt.com](mailto:hello@internxt.com) depuis votre adresse e-mail universitaire."
-          ]
-        },
-        {
-          "question": "D'autres questions?",
-          "answer": [
-            "Si vous avez d'autres questions, n'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou à nous dire bonjour sur les réseaux sociaux. Nous sommes toujours ravis de vous entendre!"
-          ]
-        }
+    "planStorage": {
+      "essential": "1To",
+      "premium": "3To",
+      "ultimate": "5To"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "Pourquoi choisir l'offre Black Friday d'Internxt ?",
+    "cards": {
+      "titles": ["Un écosystème entièrement privé", "Le chiffrement le plus avancé", "Notre plus grande offre"],
+      "descriptions": [
+        "Tous les forfaits payants Internxt incluent le stockage chiffré post-quantique, les sauvegardes et l'Antivirus. Pour une protection en ligne complète, vous obtenez également VPN, Cleaner, Meet et Mail, tout ce dont vous avez besoin pour rester en sécurité en ligne.",
+        "Obtenez le premier stockage cloud avec chiffrement post-quantique pour télécharger, stocker et partager vos fichiers en toute confidentialité grâce à notre service cloud avec chiffrement de bout en bout. Sauvegardez et synchronisez vos fichiers pour éviter la perte de données et garantir une collaboration fluide avec vos amis, votre famille ou vos collègues.",
+        "Profitez de notre plus grande offre Black Friday à ce jour avec encore plus de fonctionnalités pour protéger vos données et fichiers en ligne. Avec une réduction massive de 90%, c'est le moment idéal pour obtenir le meilleur rapport qualité-prix en matière de stockage cloud sécurisé et privé, et bien plus encore !"
       ]
     }
   },
-  "FooterSection": {
-    "title": "Soutenez la confidentialité. Choisissez Internxt!",
-    "subtitle": "Obtenez une remise sur la tranquillité d'esprit et la confidentialité.",
-    "subtitle1": "Obtenez 60% de réduction sur un an entier de notre plus grand plan de 2TB!",
-    "only": "Seulement",
-    "priceNow": "3.59",
-    "month": "/mois"
+  "CtaSection": {
+    "title": "Découvrez d'énormes réductions Black Friday",
+    "description": "90% de réduction sur tous nos forfaits premium",
+    "cta": "Profiter de l'offre"
   },
-  "cta": {
-    "title": "Le Black Friday est terminé !",
-    "subtitle": "Mais vous pouvez toujours obtenir de la confidentialité à un excellent prix !",
-    "cta": "Choisir le plan",
-    "guarantee": "Garantie de remboursement de 30 jours"
+  "HorizontalScrollableSection": {
+    "title": "Le stockage cloud le plus sécurisé pour moins cher",
+    "description": "Nous développons tous nos produits en pensant à la confidentialité. Nous ne basons pas notre activité sur les données ou la publicité ; nous la construisons sur la confiance. Notre chiffrement post-quantique et à connaissance nulle garantit que vous, et vous seul, pouvez accéder à vos fichiers.",
+    "features": [
+      "Annulez à tout moment",
+      "Chiffrement post-quantique",
+      "Sources d'énergie durables",
+      "Open source",
+      "Vérifié indépendamment"
+    ],
+    "scrollableSection": {
+      "titles": [
+        "Données impossibles à pirater et à divulguer",
+        "Sécurité sans compromis",
+        "Open source et audité",
+        "Conformité"
+      ],
+      "descriptions": [
+        "Nous ne stockons pas de mots de passe ni de données utilisateur, et toutes vos données sont chiffrées en transit et au repos. Internxt vous donne le contrôle total de vos fichiers. Vos données vous appartiennent. Les protéger est notre affaire.",
+        "Vos fichiers sont chiffrés de bout en bout avant de quitter votre appareil. Grâce au chiffrement à connaissance nulle et post-quantique, vous êtes absolument le seul à avoir accès à vos données.",
+        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est public sur GitHub ; nous n'avons rien à cacher sauf vos données. Internxt a également été audité et vérifié indépendamment par la principale entreprise européenne de tests d'intrusion, Securitum.",
+        "Internxt est conforme au RGPD, HIPAA, ISO 27001 et SOC 2. Que vous ayez besoin de stockage cloud pour la santé, la finance ou un usage personnel, Internxt garantit que vos données et fichiers répondent aux normes les plus élevées de protection des données."
+      ]
+    }
   },
-  "cta2": {
-    "title": "Le Black Friday est terminé !",
-    "subtitle": "Vous pouvez toujours obtenir une confidentialité abordable !",
-    "cta": "Choisir le plan",
-    "guarantee": "Garantie de remboursement de 30 jours"
+  "CtaSectionV2": {
+    "title": "Les meilleures offres Black Friday",
+    "description": "90% de réduction sur tous les forfaits",
+    "cta": "Profiter de l'offre"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons les réponses",
+    "faq": [
+      {
+        "question": "Comment obtenir la réduction Black Friday d'Internxt ?",
+        "answer": [
+          "Pour bénéficier de votre réduction, choisissez parmi nos plans Essential, Premium ou Ultimate et rendez-vous sur la page de paiement. Votre réduction de 90% est automatiquement appliquée lors du paiement."
+        ]
+      },
+      {
+        "question": "Quand se termine l'offre Black Friday d'Internxt ?",
+        "answer": ["Les soldes du Black Friday se terminent le 3 décembre 2025."]
+      },
+      {
+        "question": "Qui est éligible à cette réduction ?",
+        "answer": [
+          "Si vous êtes un nouvel utilisateur, vous pouvez profiter de cette réduction en créant un compte. Si vous avez un plan à vie, vous pouvez effectuer une mise à niveau pour obtenir plus de stockage et des fonctionnalités supplémentaires telles que Cleaner, Meet et Mail."
+        ]
+      },
+      {
+        "question": "Vais-je conserver ma réduction à la fin de mon abonnement ?",
+        "answer": [
+          "L'offre Black Friday est valable jusqu'à la fin de la période d'abonnement. Votre abonnement sera automatiquement renouvelé au prix normal une fois cette période d'abonnement terminée à la fin de l'année. Comme les plans à vie ne nécessitent qu'un seul paiement, votre réduction durera éternellement."
+        ]
+      },
+      {
+        "question": "Quels modes de paiement Internxt accepte-t-il ?",
+        "answer": [
+          "Actuellement, nous acceptons les paiements par cartes de crédit et de débit (y compris Mastercard, VISA, American Express, et plus), et nous acceptons également Paypal, bankcontact, iDEAL et SOFORT."
+        ]
+      },
+      {
+        "question": "Vous avez d'autres questions ?",
+        "answer": [
+          "N'hésitez pas à nous contacter à [hello@internxt.com](mailto:hello@internxt.com) ou à nous saluer sur les réseaux sociaux. Nous sommes toujours ravis d'avoir de vos nouvelles !"
+        ]
+      }
+    ]
   }
 }

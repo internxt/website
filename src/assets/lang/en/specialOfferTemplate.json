@@ -96,5 +96,108 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "All kinds of files,",
+        "line2": "all kinds of devices"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Find your files",
+        "line2": "on all your",
+        "line3": "devices"
+      },
+      "subtitle": {
+        "line1": "Securely access all your files from ",
+        "line2": "your computer, smartphone, tablet, ",
+        "line3": "or any device with a connection to ",
+        "line4": "the internet via the most secure ",
+        "line5": "cloud storage app."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Keep your files",
+        "line2": "organized and",
+        "line3": "accessible from",
+        "line4": "anywhere"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive lets you organize your",
+        "line2": "files in folders, rename them, and filter",
+        "line3": "a list of files to find what you want faster.",
+        "line4": "You can even backup your computer",
+        "line5": "folders so you always have the most",
+        "line6": "recent changes of your most important files",
+        "line7": ""
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Share your files",
+        "line2": "with ease,",
+        "line3": "security is on us"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive focuses on privacy and",
+        "line2": "security, so you only have to focus on",
+        "line3": "what matters to you, like sharing files",
+        "line4": "with your coworkers, or the plane tickets",
+        "line5": "for your next holiday with family. You",
+        "line6": "choose who you want to share them with",
+        "line7": "and how many times you want",
+        "line8": "them to be downloaded."
+      }
+    },
+    "section5": {
+      "eyebrow": "NEW FEATURE",
+      "title": {
+        "line1": "Back up what",
+        "line2": "matters to you"
+      },
+      "subtitle": {
+        "line1": "Now you can keep the latest draft",
+        "line2": "of that super important project",
+        "line3": "or your university homework you are",
+        "line4": "working on, safe and current in your",
+        "line5": "Internxt Drive."
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Sync your files in total privacy",
+        "line2": ""
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Keep your files secure",
+        "line2": "and private"
+      },
+      "subtitle": {
+        "line1": "Privacy and security are at the heart of all we do, we don’t run our business on data or",
+        "line2": "advertising, but on trust. We respect your rights and build amazing tools around them, not against them."
+      },
+      "cta": "Our commitment on privacy",
+      "card1": {
+        "title": "Next-generation security",
+        "subtitle": "Internxt Drive protects your files using end-to-end and post-quantum cryptography. We are the first cloud storage service to protect data against future threats from quantum computers."
+      },
+      "card2": {
+        "title": "Zero-knowledge technology",
+        "subtitle": "We never store or transmit files, user passwords, or encryption keys in an unencrypted or unhashed form."
+      },
+      "card3": {
+        "title": "Privacy by design",
+        "subtitle": "We develop our products with the user in mind, and their privacy is a must in the data-driven world we live in."
+      },
+      "card4": {
+        "title": "Open source and transparent",
+        "subtitle": "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+      }
+    }
   }
 }

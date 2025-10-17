@@ -10,12 +10,16 @@ interface HeroSectionForPartnerProps {
   textContent: any;
   percentOff: string;
   cloudWards?: boolean;
+  darkMode?: boolean;
+  image?: any;
 }
 
 export default function HeroSection({
   textContent,
   percentOff,
   cloudWards = false,
+  darkMode = false,
+  image,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -64,7 +68,11 @@ export default function HeroSection({
   return (
     <section
       className={`mt-20 flex h-min w-full flex-row items-center justify-center overflow-hidden py-10 lg:mt-16 lg:h-[657px] lg:justify-between lg:pl-10 lg:pr-4 xl:pl-32 xl:pr-16 3xl:pl-80 3xl:pr-60`}
-      style={{ background: 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-[392px] lg:w-[566px] lg:justify-between">
         {cloudWards && (
@@ -91,24 +99,42 @@ export default function HeroSection({
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/50 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded ${
+                darkMode ? 'bg-white/10' : 'bg-white/50'
+              }  px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1`}
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p className="whitespace-nowrap text-sm font-medium leading-tight text-gray-80">{feature.text}</p>
+              <p
+                className={`whitespace-nowrap text-sm font-medium leading-tight lg:pt-[2px] ${
+                  darkMode ? 'text-neutral-37' : 'text-gray-80'
+                }`}
+              >
+                {feature.text}
+              </p>
             </div>
           ))}
         </div>
-        <p className="text-30 font-semibold leading-tight text-gray-100 lg:text-5xl">
+        <p
+          className={`text-30 font-semibold leading-tight ${darkMode ? 'text-white-95' : 'text-gray-100'} lg:text-5xl`}
+        >
           <HighlightText text={textContent.title} />
         </p>
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
             {percentOff !== '0' && (
-              <p className="w-min whitespace-nowrap rounded-2 bg-neutral-37 px-1 py-0.5 text-base font-semibold leading-tight text-primary lg:text-xl">
+              <p
+                className={`w-min whitespace-nowrap rounded-2 ${
+                  darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary '
+                }  px-1 py-0.5 text-base font-semibold leading-tight lg:text-xl`}
+              >
                 {parsePercentText(textContent.subtitle)}
               </p>
             )}
-            <p className="font-regular text-lg leading-tight text-gray-100 lg:text-xl">
+            <p
+              className={`font-regular ${
+                darkMode ? 'text-white-95' : 'text-gray-100'
+              } text-lg leading-tight lg:text-xl`}
+            >
               {parsePercentText(textContent.description)}
             </p>
           </div>
@@ -128,7 +154,11 @@ export default function HeroSection({
 
       <div className="hidden h-[500px] w-[562px] justify-center lg:flex">
         <Image
-          src={getImage('/images/affiliates/internxt-private-cloud.webp')}
+          src={
+            image
+              ? getImage(`/images/influencers/${image}.webp`)
+              : getImage('/images/influencers/internxt-private-cloud.webp')
+          }
           alt="Internxt Partners HeroSection Image"
           height={529}
           width={562}

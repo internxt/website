@@ -35,7 +35,7 @@ export const PlanSelector = ({
       className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Individuals'
           ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
-          : `text-lg font-normal text-gray-105`
+          : `text-lg font-normal ${darkMode ? 'text-white-95' : 'text-gray-105'}`
       }`}
     >
       {textContent.billingFrequency.annually}
@@ -49,7 +49,7 @@ export const PlanSelector = ({
       className={`flex w-1/2 flex-row items-center justify-center rounded-lg px-6 text-center text-lg  transition-colors duration-200 ease-out ${
         activeSwitchPlan === 'Lifetime'
           ? `m-1 rounded-lg bg-white font-semibold text-primary shadow-sm`
-          : `text-lg font-normal text-gray-105`
+          : `text-lg font-normal  ${darkMode ? 'text-white-95' : 'text-gray-105'}`
       }`}
     >
       {textContent.billingFrequency.lifetime}
