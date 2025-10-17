@@ -91,5 +91,120 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "各種文件，",
+        "line2": "各種設備"
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "在您的所有",
+        "line2": "設備上查找",
+        "line3": "您的文件"
+      },
+      "subtitle": {
+        "line1": "從您的電腦、智能手機、平板電腦",
+        "line2": "或任何連接到互聯網的設備中，安全",
+        "line3": "訪問您的所有文件，通過最安全的",
+        "line4": "雲存儲應用程序。"
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "使您的文件",
+        "line2": "有序並且可以",
+        "line3": "從任何地方",
+        "line4": "訪問"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive允許您將文件組織在",
+        "line2": "文件夾中、重命名它們，並篩選",
+        "line3": "文件列表以更快地找到所需的內容。",
+        "line4": "您甚至可以備份您的計算機文件，",
+        "line5": "以便始終擁有您最重要文件的最新更改。",
+        "line6": ""
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "輕鬆分享您的文件",
+        "line2": "安全由我們來負責"
+      },
+      "subtitle": {
+        "line1": "Internxt Drive注重隱私和",
+        "line2": "安全，因此您只需專注於",
+        "line3": "對您重要的事情，例如與同事分享",
+        "line4": "文件，或者是下一次與家人度假的",
+        "line5": "機票。您可以選擇與誰分享",
+        "line6": "以及要下載多少次。"
+      }
+    },
+    "section5": {
+      "eyebrow": "新功能",
+      "title": {
+        "line1": "備份",
+        "line2": "對您來說至關重要的"
+      },
+      "subtitle": {
+        "line1": "現在，您可以將超級重要項目的",
+        "line2": "最新草稿或您正在進行的大學",
+        "line3": "作業安全且及時地保存在您的",
+        "line4": "Internxt Drive中。"
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "在完全隱私中同步您的文件",
+        "line2": ""
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "保護您的文件安全",
+        "line2": "和私密"
+      },
+      "subtitle": {
+        "line1": "隱私和安全是我們一切的核心，我們不通過數據或",
+        "line2": "廣告來運營我們的業務，而是建立在信任的基礎上。我們尊重您的權利，並圍繞這些權利",
+        "line3": "構建了出色的工具，而不是反對它們。"
+      },
+      "cta": "我們對隱私的承諾",
+      "card1": {
+        "title": "下一代安全",
+        "subtitle": "Internxt Drive 使用端對端和後量子加密來保護您的檔案。我們是第一個保護資料免受量子電腦未來威脅的雲端儲存服務。"
+      },
+      "card2": {
+        "title": "零知識技術",
+        "subtitle": "我們從不以未加密或未雜湊的形式存儲或傳輸文件、用戶密碼或加密密鑰。"
+      },
+      "card3": {
+        "title": "隱私設計",
+        "subtitle": "我們為用戶設計產品，他們的隱私是我們生活在數據驅動世界中的必要條件。"
+      },
+      "card4": {
+        "title": "開源和透明",
+        "subtitle": "我們對我們所做的事情感到自豪，因此我們的代碼在GitHub上公開，任何人都可以進行個人審查、審核和驗證。我們除了您的數據外，沒有什麼可隱藏的。"
+      }
+    },
+    "DownloadLinks": {
+      "or": "或",
+      "downloadFor": "下載",
+      "orDownloadFor": "或下載",
+      "downloadOnThe": "在",
+      "orDownloadOnThe": "或在",
+      "getOn": "下載",
+      "orGetOn": "或在",
+      "openDriveWeb": "打開 Drive 網頁",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }

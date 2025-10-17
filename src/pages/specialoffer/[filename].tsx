@@ -15,6 +15,7 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import FeaturesSection from '@/components/drive/FeaturesSection';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -40,6 +41,7 @@ const ALLOWED_PATHS = [
 ];
 
 const DARK_MODE_PATHS = ['baitybait'];
+const hasCustomImage = ['baitybait'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -120,7 +122,12 @@ function CombinedSpecialOffer({
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode={isDarkMode} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        percentOff={percentOff}
+        darkMode={isDarkMode}
+        image={selectedPathname}
+      />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
@@ -143,6 +150,14 @@ function CombinedSpecialOffer({
         darkMode={isDarkMode}
       />
 
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={lang}
+        download={false}
+        showLastSection={false}
+        darkMode
+      />
+
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection}
         url={'/pricing'}
@@ -157,7 +172,7 @@ function CombinedSpecialOffer({
             </p>
             <p
               className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
+                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
               }`}
             >
               {parsePercentText(langJson.ctaSection.description)}

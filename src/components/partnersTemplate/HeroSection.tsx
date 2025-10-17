@@ -11,6 +11,7 @@ interface HeroSectionForPartnerProps {
   percentOff: string;
   cloudWards?: boolean;
   darkMode?: boolean;
+  image?: any;
 }
 
 export default function HeroSection({
@@ -18,6 +19,7 @@ export default function HeroSection({
   percentOff,
   cloudWards = false,
   darkMode = false,
+  image,
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 
@@ -152,7 +154,11 @@ export default function HeroSection({
 
       <div className="hidden h-[500px] w-[562px] justify-center lg:flex">
         <Image
-          src={getImage('/images/affiliates/internxt-private-cloud.webp')}
+          src={
+            image
+              ? getImage(`/images/influencers/${image}.webp`)
+              : getImage('/images/influencers/internxt-private-cloud.webp')
+          }
           alt="Internxt Partners HeroSection Image"
           height={529}
           width={562}
