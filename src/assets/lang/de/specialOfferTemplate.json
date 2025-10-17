@@ -96,5 +96,125 @@
       "premium": "3TB",
       "ultimate": "5TB"
     }
+  },
+  "FeaturesSection": {
+    "section1": {
+      "title": {
+        "line1": "Alle Arten von Dateien.",
+        "line2": "Auf allen deiner Geräte."
+      }
+    },
+    "section2": {
+      "title": {
+        "line1": "Alle deine Dateien sind",
+        "line2": "auf allen deinen",
+        "line3": "Geräte verfügbar."
+      },
+      "subtitle": {
+        "line1": "Greifen Sie über die sicherste",
+        "line2": "Cloud-Speicher-App sicher auf alle ",
+        "line3": "Ihre Dateien von Ihrem Computer, Smartphone,",
+        "line4": "Tablet oder jedem anderen Gerät mit ",
+        "line5": "Internetverbindung zu."
+      }
+    },
+    "section3": {
+      "title": {
+        "line1": "Halte deine Dateien",
+        "line2": "geordnet und",
+        "line3": "erreichbar von",
+        "line4": "überall."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive ermöglicht dir das Ordnen deiner",
+        "line2": "Dateien in Ordnern, umbenennen und filtern",
+        "line3": "Eine Liste von Dateien, um schneller zu finden, was du suchst.",
+        "line4": "Du kannst sogar ein Backup deines Computers erstellen",
+        "line5": "Ordner wie dein Dokumentenordner, so",
+        "line6": "hast du immer die neuesten",
+        "line7": "Änderungen deiner wichtigsten Dateien."
+      }
+    },
+    "section4": {
+      "title": {
+        "line1": "Teile deine Dateien",
+        "line2": "mit Leichtigkeit,",
+        "line3": "die Sicherheit liegt bei uns."
+      },
+      "subtitle": {
+        "line1": "Internxt Drive konzentriert sich auf Privatsphäre und",
+        "line2": "Sicherheit, sodass Sie sich nur darauf konzentrieren müssen",
+        "line3": "was dir wichtig ist, wie zum Beispiel das Teilen von Dateien",
+        "line4": "mit deinen Kollegen oder die Fotos von",
+        "line5": "deiner letzten Reise mit der Familie. Du",
+        "line6": "wählst aus, mit wem du teilen möchtest",
+        "line7": "und wie oft es",
+        "line8": "runtergeladen werden darf."
+      }
+    },
+    "section5": {
+      "eyebrow": "NEUE FUNKTION",
+      "title": {
+        "line1": "Sichere was",
+        "line2": "dir wichtig ist."
+      },
+      "subtitle": {
+        "line1": "Jetzt kannst du die letzte Version behalten",
+        "line2": "von diesem superwichtigen Projekt, an dem",
+        "line3": "du arbeitest, deinen Dokumenten-Ordner,",
+        "line4": "oder deine Uni-Hausaufgaben,",
+        "line5": "alle sicher auf deinem Internxt-Laufwerk."
+      }
+    },
+    "section6": {
+      "title": {
+        "line1": "Beginne mit der Synchronisierung deiner Dateien",
+        "line2": "in absoluter Privatsphäre."
+      }
+    },
+    "section7": {
+      "title": {
+        "line1": "Alle deine Dateien",
+        "line2": "Sicher und privat."
+      },
+      "subtitle": {
+        "line1": "Datenschutz und Sicherheit stehen bei uns im Mittelpunkt, unser Geschäft basiert nicht auf Daten oder Werbung, sondern",
+        "line2": "auf Vertrauen. Wir respektieren deine Rechte und entwickeln erstaunliche Tools um dich herum, nicht gegen dich."
+      },
+      "cta": "Unser Engagement für den Datenschutz",
+      "card1": {
+        "title": "Sicherheit der nächsten Generation",
+        "subtitle": "Internxt Drive schützt deine Dateien mit Ende-zu-Ende- und Post-Quantum-Kryptografie. Wir sind der erste Cloud-Speicher-Service, der Daten vor zukünftigen Bedrohungen durch Quantencomputer schützt."
+      },
+      "card2": {
+        "title": "Zero-Knowledge Technologie.",
+        "subtitle": "Wir speichern oder übertragen niemals Dateien, Benutzerkennwörter oder Schlüssel in unverschlüsselter oder nicht gehashter Form."
+      },
+      "card3": {
+        "title": "Datenschutz durch Design.",
+        "subtitle": "Wir entwickeln unsere Produkte mit Blick auf den Nutzer, und die Privatsphäre ist in der datengesteuerten Welt, in der wir leben, ein Muss."
+      },
+      "card4": {
+        "title": "Von Grund auf sicher.",
+        "subtitle": "Da Sicherheitslücken und Skandale an der Tagesordnung sind, stellen wir sicher, dass unsere Systeme deine Daten und Dateien vor Angreifern schützen."
+      }
+    },
+    "DownloadLinks": {
+      "or": "oder",
+      "downloadFor": "Download für",
+      "orDownloadFor": "Oder Download für",
+      "downloadOnThe": "Download bei",
+      "orDownloadOnThe": "Oder download bei",
+      "getOn": "Weiter",
+      "orGetOn": "Oder weiter",
+      "openDriveWeb": "Öffne Drive Web",
+      "iPhone": "App Store",
+      "iPad": "App Store",
+      "Android": "Play Store",
+      "Windows": "Windows",
+      "Linux": "Linux",
+      "UNIX": "Linux",
+      "MacOS": "Mac"
+    }
   }
 }
