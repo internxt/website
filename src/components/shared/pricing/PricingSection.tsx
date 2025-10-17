@@ -190,7 +190,7 @@ export const PricingSection = ({
                   onCheckoutButtonClicked={onCheckoutButtonClicked}
                   label={product.storage}
                   key={product.storage}
-                  popular={product.storage === popularPlan}
+                  popular={product.storage === '5TB'}
                   productCardPlan="individuals"
                   decimalDiscountValue={
                     product.interval === Interval.Lifetime ? decimalDiscount?.lifetime : decimalDiscount?.subscriptions
