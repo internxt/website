@@ -30,7 +30,7 @@ const FreePlanCard = ({ textContent, darkMode }: FreePlanCardProps): JSX.Element
               darkMode ? 'bg-[#1C1C1C] hover:bg-gray-90 ' : 'bg-white hover:bg-gray-1'
             } px-6 py-2 text-center text-lg font-medium text-primary `}
             onClick={() => {
-              openDialog(GlobalDialog.FreeSpaceCardBanner);
+              openDialog(GlobalDialog.FreeSpaceCardBanner, { data: { darkMode } });
             }}
           >
             {textContent.cta}
@@ -56,7 +56,7 @@ const FreePlanCard = ({ textContent, darkMode }: FreePlanCardProps): JSX.Element
             darkMode ? 'bg-[#1C1C1C] hover:bg-[#111111]/10 ' : 'bg-white hover:bg-gray-1'
           } px-6 py-2 text-center text-lg font-medium text-primary `}
           onClick={() => {
-            openDialog(GlobalDialog.FreeSpaceCardBanner);
+            openDialog(GlobalDialog.FreeSpaceCardBanner, { data: { darkMode } });
           }}
         >
           {textContent.cta}

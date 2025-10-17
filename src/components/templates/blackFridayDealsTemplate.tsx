@@ -102,7 +102,7 @@ const BlackFridayDealsTemplate = ({
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
@@ -122,7 +122,7 @@ const BlackFridayDealsTemplate = ({
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
-        url={'/pricing'}
+        url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
