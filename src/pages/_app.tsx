@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           {
             key: GlobalDialog.TopBanner,
-            isOpen: true,
+            isOpen: false,
           },
           {
             key: GlobalDialog.BottomBanner,
