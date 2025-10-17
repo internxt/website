@@ -3,6 +3,7 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef } from 'react';
 import { BlobOptions } from 'buffer';
+import { dark } from '@mui/material/styles/createPalette';
 
 interface ReviewSectionProps {
   textContent: {
@@ -30,7 +31,6 @@ const ReviewText = ({ text, darkMode }: { text: string; darkMode?: boolean }) =>
     });
   };
 
-  console.log(darkMode);
   return (
     <p
       className={`w-full text-xs font-normal leading-tight lg:w-[321px] lg:text-sm ${
@@ -53,12 +53,12 @@ export default function ReviewSection({ textContent, darkMode = false }: Readonl
       text: textContent.pcMag,
     },
     {
-      logo: '/images/home/NewDesign/mashable.png',
+      logo: darkMode ? '/images/home/NewDesign/mashable-dark.webp' : '/images/home/NewDesign/mashable.png',
       alt: 'mashable Logo',
       text: textContent.mashable,
     },
     {
-      logo: '/images/home/NewDesign/pcworld.png',
+      logo: darkMode ? '/images/home/NewDesign/pcworld-dark.webp' : '/images/home/NewDesign/pcworld.png',
       alt: 'pcworld Logo',
       text: textContent.pcWorld,
     },

@@ -116,8 +116,6 @@ function CombinedSpecialOffer({
     return <></>;
   }
 
-  console.log(isDarkMode);
-
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
