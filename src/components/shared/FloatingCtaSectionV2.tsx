@@ -33,7 +33,7 @@ const FloatingCtaSectionv2 = ({
           <Link
             href={url}
             target={target}
-            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark xl:mr-10`}
+            className={`flex rounded-lg bg-primary px-5 py-3 text-lg font-medium text-white hover:bg-primary-dark`}
           >
             {textContent.cta}
           </Link>

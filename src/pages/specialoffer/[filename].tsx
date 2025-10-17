@@ -172,7 +172,7 @@ function CombinedSpecialOffer({
             </p>
             <p
               className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
+                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
               }`}
             >
               {parsePercentText(langJson.ctaSection.description)}
