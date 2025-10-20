@@ -157,7 +157,7 @@ function CombinedSpecialOffer({
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/es/navbar.json`);
   const langJson = require(`@/assets/lang/es/specialOfferTemplate.json`);
   const footerLang = require(`@/assets/lang/es/footer.json`);
