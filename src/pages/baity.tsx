@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
@@ -22,38 +20,8 @@ interface CombinedSpecialOfferProps {
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
   footerLang: FooterText;
-  pathname: string;
   lang: string;
 }
-
-const ALLOWED_PATHS = [
-  'bevalk',
-  'securiters',
-  'valencia',
-  'tokinprivacy',
-  'reddit',
-  'trickyhash',
-  'toquederetoque',
-  'vipvlc',
-  'grabon',
-  'pcmag',
-];
-
-const DARK_MODE_PATHS = ['baity'];
-const IMAGES_PATHS = ['baity'];
-
-const COUPON_CODES = {
-  bevalk: PromoCodeName.Bevalk,
-  securiters: PromoCodeName.Securiters,
-  valencia: PromoCodeName.ValenciaCF,
-  tokinprivacy: PromoCodeName.TokinPrivacy,
-  trickyhash: PromoCodeName.Secure,
-  reddit: PromoCodeName.Reddit,
-  toquederetoque: PromoCodeName.Toquederetoque,
-  vipvlc: PromoCodeName.VIPVLC,
-  grabon: PromoCodeName.GRABON,
-  pcmag: PromoCodeName.PcmagCoupon,
-};
 
 function CombinedSpecialOffer({
   langJson,
@@ -61,19 +29,7 @@ function CombinedSpecialOffer({
   metatagsDescriptions,
   footerLang,
   navbarLang,
-  pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
-  const router = useRouter();
-  const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
-  const hasImage = selectedPathname ? IMAGES_PATHS.includes(selectedPathname) : false;
-  useEffect(() => {
-    if (!selectedPathname) {
-      router.replace('/specialoffer');
-    }
-  }, [selectedPathname, router]);
-
-  const couponCode = COUPON_CODES[pathname];
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const {
@@ -84,8 +40,8 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: couponCode,
-    couponCodeForLifetime: couponCode,
+    couponCode: PromoCodeName.BaityBait,
+    couponCodeForLifetime: PromoCodeName.BaityBait,
   });
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
@@ -111,23 +67,15 @@ function CombinedSpecialOffer({
       couponCodeForCheckout?.name,
     );
   };
-
-  if (!selectedPathname) {
-    return <></>;
-  }
+  const navbarCta = 'priceTable';
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection
-        textContent={langJson.HeroSection}
-        percentOff={percentOff}
-        darkMode={isDarkMode}
-        image={hasImage ? selectedPathname : 'internxt-private-cloud'}
-      />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode image={'baity'} />
 
-      <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -143,9 +91,17 @@ function CombinedSpecialOffer({
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        sectionDetails="bg-[#1C1C1C] lg:py-20"
         hideFreeCard
-        darkMode={isDarkMode}
+        darkMode
+      />
+
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={lang}
+        download={false}
+        showLastSection={false}
+        darkMode
       />
 
       <FloatingCtaSectionv2
@@ -153,76 +109,54 @@ function CombinedSpecialOffer({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
-            >
+            <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${'text-white'}`}>
               {parsePercentText(langJson.ctaSection.title)}
             </p>
-            <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
-              }`}
-            >
+            <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${'text-white lg:w-[690px]'}`}>
               {parsePercentText(langJson.ctaSection.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+          'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
         }
-        bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgPadding={'pb-10  lg:pt-10 bg-[#1C1C1C]'}
+        bgGradientColor={undefined}
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
-            >
+            <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${'text-white'}`}>
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
-            <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
-              }`}
-            >
+            <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${'text-white lg:w-[633px]'}`}>
               {parsePercentText(langJson.ctaSection2.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+          'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
         }
-        bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgPadding={'lg:pb-10  bg-[#1C1C1C]'}
+        bgGradientColor={undefined}
       />
 
-      <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />
+      <Footer textContent={footerLang} lang={lang} darkMode />
     </Layout>
   );
 }
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const pathname = ctx.params.filename;
-
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
   const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
@@ -231,7 +165,6 @@ export async function getServerSideProps(ctx) {
   return {
     props: {
       lang,
-      pathname,
       metatagsDescriptions,
       navbarLang,
       langJson,

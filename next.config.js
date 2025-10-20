@@ -232,6 +232,11 @@ module.exports = {
         destination: '/specialoffer',
         permanent: false,
       },
+      {
+        source: '/black-friday',
+        destination: '/deals/black-friday-internxt',
+        permanent: false,
+      },
     ];
   },
   images: {
