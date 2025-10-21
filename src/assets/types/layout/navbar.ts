@@ -96,6 +96,7 @@ export interface Links {
   chooseStorage: string;
   checkout: string;
   business: string;
+  blackFriday: string;
 }
 
 export interface OurValues {

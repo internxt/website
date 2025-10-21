@@ -70,7 +70,7 @@ function SpecialOffer({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Partners" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} image={'internxt-private-cloud'} />
 
       <ReviewsSection textContent={langJson.ReviewSection} />
 

@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useState, useRef } from 'react';
+import { BlobOptions } from 'buffer';
+import { dark } from '@mui/material/styles/createPalette';
 
 interface ReviewSectionProps {
   textContent: {
@@ -9,9 +11,10 @@ interface ReviewSectionProps {
     mashable: string;
     pcWorld: string;
   };
+  darkMode?: boolean;
 }
 
-const ReviewText = ({ text }: { text: string }) => {
+const ReviewText = ({ text, darkMode }: { text: string; darkMode?: boolean }) => {
   const formatText = (text: string) => {
     const parts = text.split(/(\*\*[^*]+\*\*)/g);
 
@@ -29,11 +32,17 @@ const ReviewText = ({ text }: { text: string }) => {
   };
 
   return (
-    <p className="w-full text-xs font-normal leading-tight text-gray-55 lg:w-[321px] lg:text-sm">{formatText(text)}</p>
+    <p
+      className={`w-full text-xs font-normal leading-tight lg:w-[321px] lg:text-sm ${
+        darkMode ? 'text-white-95' : 'text-gray-55'
+      }`}
+    >
+      {formatText(text)}
+    </p>
   );
 };
 
-export default function ReviewSection({ textContent }: Readonly<ReviewSectionProps>): JSX.Element {
+export default function ReviewSection({ textContent, darkMode = false }: Readonly<ReviewSectionProps>): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -44,12 +53,12 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
       text: textContent.pcMag,
     },
     {
-      logo: '/images/home/NewDesign/mashable.png',
+      logo: darkMode ? '/images/home/NewDesign/mashable-dark.webp' : '/images/home/NewDesign/mashable.png',
       alt: 'mashable Logo',
       text: textContent.mashable,
     },
     {
-      logo: '/images/home/NewDesign/pcworld.png',
+      logo: darkMode ? '/images/home/NewDesign/pcworld-dark.webp' : '/images/home/NewDesign/pcworld.png',
       alt: 'pcworld Logo',
       text: textContent.pcWorld,
     },
@@ -82,7 +91,11 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
   };
 
   return (
-    <section className="relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80">
+    <section
+      className={`${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+      } relative flex h-min w-full flex-col items-center justify-center overflow-hidden px-6 py-10 lg:flex-row lg:gap-12 lg:px-10 lg:py-20 xl:px-32 3xl:px-80`}
+    >
       <div className="absolute bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32 lg:h-[1px]" />
       <div className="absolute bottom-0 left-8 right-8 h-[1px] bg-neutral-35 lg:left-32 lg:right-32 " />
 
@@ -104,7 +117,7 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
                 quality={100}
                 className="flex-shrink-0"
               />
-              <ReviewText text={review.text} />
+              <ReviewText text={review.text} darkMode={darkMode} />
             </div>
           ))}
         </div>
@@ -113,8 +126,12 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
             <button
               onClick={scrollLeft}
               disabled={currentIndex === 0}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === 0 ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === 0
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretLeft className="h-[24px] w-[24px] text-primary" />
@@ -122,8 +139,12 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
             <button
               onClick={scrollRight}
               disabled={currentIndex === maxIndex}
-              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary bg-white transition-opacity ${
-                currentIndex === maxIndex ? 'cursor-not-allowed opacity-50' : 'cursor-pointer hover:bg-white-summer'
+              className={`flex h-[48px] w-[48px] items-center justify-center rounded-100 border border-primary ${
+                darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+              } transition-opacity ${
+                currentIndex === maxIndex
+                  ? 'cursor-not-allowed opacity-50'
+                  : `cursor-pointer ${darkMode ? 'hover:bg-gray-105' : 'hover:bg-white-summer'}`
               }`}
             >
               <CaretRight className="h-[24px] w-[24px] text-primary" />
@@ -143,7 +164,7 @@ export default function ReviewSection({ textContent }: Readonly<ReviewSectionPro
               quality={100}
               className="flex-shrink-0"
             />
-            <ReviewText text={review.text} />
+            <ReviewText text={review.text} darkMode={darkMode} />
           </div>
         ))}
       </div>

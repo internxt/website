@@ -72,7 +72,12 @@ export const PlanSelectorForMobile = ({
       </div>
     )}
 
-    <div id="billingButtons" className={`flex w-[345px] flex-row justify-between rounded-lg bg-cool-gray-10 p-0.5`}>
+    <div
+      id="billingButtons"
+      className={`flex w-[345px] flex-row justify-between rounded-lg ${
+        darkMode ? 'bg-neutral-90/10' : 'bg-cool-gray-10'
+      } p-0.5`}
+    >
       <button
         type="button"
         onClick={() => {
@@ -81,7 +86,7 @@ export const PlanSelectorForMobile = ({
         className={`rounded-6 flex w-[107px] flex-row items-center justify-center gap-3 rounded-lg px-3 py-1 text-sm ${
           activeStoragePlan === 'Essential'
             ? `bg-white font-semibold text-primary shadow-sm`
-            : `font-regular text-cool-gray-50`
+            : `font-regular text-cool-gray-50 `
         }`}
       >
         {textContent.planStorage.essential}

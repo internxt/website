@@ -1,0 +1,145 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "最佳**黑色星期五**个人云存储优惠",
+    "subtitle": "获取2025年最佳黑色星期五优惠，所有Internxt计划享受90%折扣",
+    "description": "立即获得{{discount}}%折扣！",
+    "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"],
+    "claimDeal": "领取优惠",
+    "moreDeals": {
+      "title": "更多黑色星期五优惠",
+      "description": "找到适合您云存储和隐私需求的黑色星期五优惠",
+      "links": [
+        {
+          "text": "Internxt黑色星期五优惠",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "黑色星期五云存储优惠",
+          "url": "/deals/black-friday-cloud-storage"
+        }
+      ]
+    }
+  },
+  "DontMissSection": {
+    "title": "Internxt的黑色星期五个人云存储优惠！",
+    "description": [
+      "使用Internxt的全套隐私套件在线保护您的数据，包括备份、杀毒软件、VPN、Cleaner、Meet、Mail等。",
+      "通过Internxt的90%黑色星期五折扣，获得最佳的在线隐私和安全。"
+    ]
+  },
+  "TableSection": {
+    "title": "您的一体化隐私助手",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "选择您的计划",
+      "individuals": "年度计划",
+      "homePage": "选择适合您的计划",
+      "lifetime": "终身计划",
+      "business": "商业计划",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有独家终身计划"
+      }
+    },
+    "billingFrequency": {
+      "annually": "年度",
+      "lifetime": "终身"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得1 GB加密云存储",
+      "cta": "选择计划"
+    },
+    "features": {
+      "openSource": "开源且经过审计",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "为什么选择我们的黑色星期五个人云存储优惠？",
+    "cards": {
+      "titles": ["完全私密的生态系统", "最先进的加密技术", "我们有史以来最大的黑色星期五优惠"],
+      "descriptions": [
+        "所有Internxt付费计划都包括后量子加密存储、备份和杀毒软件。为了获得完整的在线保护，您还可以获得VPN、Cleaner、Meet和Mail——在线安全所需的一切。",
+        "获得第一个具有后量子加密的云存储，通过我们的端到端加密云服务以完全隐私的方式上传、存储和共享您的文件。备份和同步您的文件以防止数据丢失，并确保与朋友、家人或同事的顺畅协作。",
+        "利用我们迄今为止最大的黑色星期五优惠，获得更多功能来保护您的在线数据和文件。凭借高达90%的折扣，现在是获得安全和私密云存储以及更多服务的最佳价值的完美时机！"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "解锁黑色星期五巨大优惠",
+    "description": "所有高级计划享受90%折扣",
+    "cta": "领取优惠"
+  },
+  "HorizontalScrollableSection": {
+    "title": "最安全的云存储及更多，价格更低",
+    "description": "我们在设计所有产品时都考虑到隐私。我们不依赖数据或广告开展业务；我们建立在信任之上。我们的后量子和零知识加密确保只有您可以访问您的文件。",
+    "features": ["随时取消", "后量子加密", "可持续能源", "开源代码", "独立验证"],
+    "scrollableSection": {
+      "titles": ["不可破解和不可泄露的数据", "毫不妥协的安全性", "开源且经过审计", "合规性"],
+      "descriptions": [
+        "您的文件在离开设备之前就已经过端到端加密。得益于零知识和后量子加密，您是唯一可以访问您数据的人。",
+        "我们为所做的工作感到自豪，因此我们的代码在GitHub上公开；除了您的数据，我们没有什么可隐藏的。Internxt还经过欧洲领先的渗透测试公司Securitum的独立审计和验证。",
+        "Internxt符合GDPR、HIPAA、ISO 27001和SOC 2标准。无论您需要用于医疗保健、金融还是个人使用的云存储，Internxt都能确保您的数据和文件符合最高的数据保护标准。"
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "最佳黑色星期五优惠",
+    "description": "所有计划享受90%折扣",
+    "cta": "领取优惠"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "如何获得Internxt黑色星期五折扣？",
+        "answer": [
+          "要获取折扣，请从我们的Essential、Premium或Ultimate计划中进行选择，然后前往结账页面。您的90%折扣将在结账时自动应用。"
+        ]
+      },
+      {
+        "question": "Internxt黑色星期五优惠何时结束？",
+        "answer": ["黑色星期五促销活动将于2025年12月3日结束。"]
+      },
+      {
+        "question": "谁有资格享受此折扣？",
+        "answer": [
+          "如果您是新用户，可以通过创建帐户来享受此折扣。如果您拥有终身计划，可以升级以获得更多存储空间和额外功能，例如Cleaner、Meet和Mail。"
+        ]
+      },
+      {
+        "question": "计划结束后我还能保留折扣吗？",
+        "answer": [
+          "黑色星期五优惠在订阅期结束前有效。订阅期在年底结束后，您的订阅将自动以正常价格续订。由于终身计划只需一次付款，您的折扣将永久有效。"
+        ]
+      },
+      {
+        "question": "Internxt接受哪些付款方式？",
+        "answer": [
+          "目前，我们接受信用卡和借记卡付款（包括Mastercard、VISA、American Express等），我们还接受Paypal、bankcontact、iDEAL和SOFORT。"
+        ]
+      },
+      {
+        "question": "还有其他问题？",
+        "answer": [
+          "欢迎通过[hello@internxt.com](mailto:hello@internxt.com)与我们联系，或在社交媒体上打招呼。我们随时乐意听到您的声音！"
+        ]
+      }
+    ]
+  }
+}

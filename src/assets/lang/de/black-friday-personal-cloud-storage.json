@@ -1,0 +1,161 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Beste **Black Friday** Persönliche Cloud-Speicher-Angebote",
+    "subtitle": "Holen Sie sich das beste Black Friday-Angebot 2025 mit 90% Rabatt auf alle Internxt-Tarife",
+    "description": "Jetzt {{discount}}% Rabatt sichern!",
+    "features": ["Komplette Privacy-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "claimDeal": "Angebot sichern",
+    "moreDeals": {
+      "title": "Weitere Black Friday-Angebote",
+      "description": "Finden Sie das richtige Black Friday-Angebot für Ihre Cloud-Speicher- und Datenschutzbedürfnisse",
+      "links": [
+        {
+          "text": "Black Friday Internxt-Angebot",
+          "url": "/deals/black-friday-internxt"
+        },
+        {
+          "text": "Black Friday Cloud-Speicher-Angebote",
+          "url": "/deals/black-friday-cloud-storage"
+        }
+      ]
+    }
+  },
+  "DontMissSection": {
+    "title": "Black Friday persönliche Cloud-Speicher-Angebote bei Internxt!",
+    "description": [
+      "Schützen Sie Ihre Daten online mit Internxt mit unserer vollständig ausgestatteten Privacy-Suite, die Backups, Antivirus, VPN, Cleaner, Meet, Mail und mehr umfasst.",
+      "Holen Sie sich die beste Privatsphäre und Sicherheit online mit Internxts 90% Black Friday-Rabatt."
+    ]
+  },
+  "TableSection": {
+    "title": "Ihr All-in-One Privacy-Partner",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Wählen Sie Ihren Tarif",
+      "individuals": "Jahrestarife",
+      "homePage": "Wählen Sie den richtigen Tarif für sich",
+      "lifetime": "Lifetime-Tarife",
+      "business": "Business-Tarife",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Tarife"
+      }
+    },
+    "billingFrequency": {
+      "annually": "Jährlich",
+      "lifetime": "Lifetime"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Tarif auswählen"
+    },
+    "features": {
+      "openSource": "Open Source und geprüft",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "WhyChooseSection": {
+    "title": "Warum unsere Black Friday persönliche Cloud-Speicher-Angebote wählen?",
+    "cards": {
+      "titles": [
+        "Ein vollständig privates Ökosystem",
+        "Die fortschrittlichste Verschlüsselung",
+        "Unser größtes Black Friday-Angebot aller Zeiten"
+      ],
+      "descriptions": [
+        "Alle bezahlten Internxt-Tarife beinhalten post-quanten-verschlüsselten Speicher, Backups und Antivirus. Für vollständigen Online-Schutz erhalten Sie auch VPN, Cleaner, Meet und Mail – alles, was Sie für Sicherheit online benötigen.",
+        "Erhalten Sie den ersten Cloud-Speicher mit Post-Quanten-Verschlüsselung, um Ihre Dateien in absoluter Privatsphäre hochzuladen, zu speichern und zu teilen mit unserem Ende-zu-Ende-verschlüsselten Cloud-Service. Sichern und synchronisieren Sie Ihre Dateien, um Datenverlust zu verhindern und eine reibungslose Zusammenarbeit mit Freunden, Familie oder Kollegen zu gewährleisten.",
+        "Nutzen Sie unser bisher größtes Black Friday-Angebot mit noch mehr Funktionen zum Schutz Ihrer Daten und Dateien online. Mit massiven 90% Rabatt ist jetzt der perfekte Zeitpunkt, um das beste Preis-Leistungs-Verhältnis für sicheren und privaten Cloud-Speicher und mehr zu erhalten!"
+      ]
+    }
+  },
+  "CtaSection": {
+    "title": "Massive Black Friday-Ersparnisse freischalten",
+    "description": "90% Rabatt auf ALLE unsere Premium-Tarife",
+    "cta": "Angebot sichern"
+  },
+  "HorizontalScrollableSection": {
+    "title": "Der sicherste Cloud-Speicher und mehr für weniger",
+    "description": "Wir entwickeln alle unsere Produkte mit Fokus auf Privatsphäre. Wir betreiben unser Geschäft nicht mit Daten oder Werbung; wir bauen es auf Vertrauen auf. Unsere Post-Quanten- und Zero-Knowledge-Verschlüsselung stellt sicher, dass Sie und nur Sie auf Ihre Dateien zugreifen können.",
+    "features": [
+      "Jederzeit kündbar",
+      "Quantensichere Verschlüsselung",
+      "Nachhaltige Energiequellen",
+      "Open-Source-Code",
+      "Unabhängig verifiziert"
+    ],
+    "scrollableSection": {
+      "titles": [
+        "Unhackbare und unleckbare Daten",
+        "Kompromisslose Sicherheit",
+        "Open Source und geprüft",
+        "Compliance"
+      ],
+      "descriptions": [
+        "Wir speichern keine Passwörter oder Benutzerdaten, und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihre Sache. Sie zu schützen ist unsere.",
+        "Ihre Dateien werden Ende-zu-Ende verschlüsselt, bevor sie Ihr Gerät verlassen. Dank Zero-Knowledge- und Post-Quanten-Verschlüsselung sind Sie absolut der Einzige mit Zugriff auf Ihre Daten.",
+        "Wir sind stolz auf das, was wir tun, daher ist unser Code öffentlich auf GitHub; wir haben nichts zu verbergen außer Ihren Daten. Internxt wurde auch unabhängig geprüft und verifiziert von Europas führendem Penetrationstestunternehmen, Securitum.",
+        "Internxt ist DSGVO-, HIPAA-, ISO 27001- und SOC 2-konform. Ob Sie Cloud-Speicher für Gesundheitswesen, Finanzen oder persönliche Nutzung benötigen, Internxt stellt sicher, dass Ihre Daten und Dateien die höchsten Datenschutzstandards erfüllen."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Die besten Black Friday-Angebote",
+    "description": "90% Rabatt auf alle Tarife",
+    "cta": "Angebot sichern"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wie erhalte ich den Internxt Black Friday Rabatt?",
+        "answer": [
+          "Um Ihren Rabatt in Anspruch zu nehmen, wählen Sie einen unserer Pläne Essential, Premium oder Ultimate und gehen Sie zur Checkout-Seite. Ihr 90%-Rabatt wird beim Bezahlen automatisch angewendet."
+        ]
+      },
+      {
+        "question": "Wann endet das Internxt Black Friday Angebot?",
+        "answer": ["Der Black Friday Sale endet am 3. Dezember 2025."]
+      },
+      {
+        "question": "Wer ist für diesen Rabatt berechtigt?",
+        "answer": [
+          "Wenn Sie ein neuer Benutzer sind, können Sie diesen Rabatt genießen, indem Sie ein Konto erstellen. Wenn Sie einen Lifetime-Plan haben, können Sie ein Upgrade durchführen, um mehr Speicherplatz und zusätzliche Funktionen wie Cleaner, Meet und Mail zu erhalten."
+        ]
+      },
+      {
+        "question": "Behalte ich meinen Rabatt, wenn mein Plan endet?",
+        "answer": [
+          "Das Black Friday Angebot gilt bis zum Ende des Abonnementzeitraums. Ihr Abonnement wird automatisch zum regulären Preis verlängert, sobald dieser Abonnementzeitraum am Jahresende endet. Da Lifetime-Pläne nur eine Zahlung erfordern, gilt Ihr Rabatt für immer."
+        ]
+      },
+      {
+        "question": "Welche Zahlungsmethoden akzeptiert Internxt?",
+        "answer": [
+          "Derzeit akzeptieren wir Zahlungen per Kredit- und Debitkarten (einschließlich Mastercard, VISA, American Express und mehr), und wir akzeptieren auch Paypal, bankcontact, iDEAL und SOFORT."
+        ]
+      },
+      {
+        "question": "Haben Sie weitere Fragen?",
+        "answer": [
+          "Kontaktieren Sie uns gerne unter [hello@internxt.com](mailto:hello@internxt.com) oder grüßen Sie uns in den sozialen Medien. Wir freuen uns immer, von Ihnen zu hören!"
+        ]
+      }
+    ]
+  }
+}

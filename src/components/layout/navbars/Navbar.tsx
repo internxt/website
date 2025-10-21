@@ -95,7 +95,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
-      <div className="mx-4 w-full  lg:mx-10 lg:pt-1 xl:mx-32">
+      <div className="mx-4 w-full  lg:mx-16 lg:pt-1 1.5xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
