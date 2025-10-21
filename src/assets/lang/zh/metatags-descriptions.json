@@ -324,5 +324,10 @@
     "id": "coupons",
     "title": "Internxt — 折扣、优惠券和促销",
     "description": "捍卫隐私,选择 Internxt。Internxt 的开源云存储服务保护您的隐私权。Internxt Drive、Photos、Send 等更多服务。"
+  },
+  {
+    "id": "free-cloud-storage-deals",
+    "title": "Internxt — 免费云存储优惠",
+    "description": "直接来自Internxt的免费云存储优惠，以87%的折扣升级您的计划，获得安全、加密的云存储等服务"
   }
 ]

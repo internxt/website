@@ -1,0 +1,178 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Internxt **免费云存储**优惠",
+    "description": "升级您的隐私保护，所有套餐享受{{percentage}}%折扣",
+    "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"],
+    "startFrom": {
+      "normal1": "起价 ",
+      "price": "{{minimumPrice}}",
+      "normal2": " /月"
+    },
+    "claimDeal": "领取优惠"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt正在进行**超级促销**，拥有**出色的用户评价**，**端到端**和**后量子加密**，他们将代码完全**开源**，以实现与客户的完全透明。\"",
+    "mashable": "\"通过Internxt**认真**对待**保护您的重要数据**。他们将**隐私**作为**首要关注点**，因此您可以放心，知道您的文件是**安全的**，平台重视用户的**透明度**。\"",
+    "pcWorld": "\"Internxt的**直观网页访问**、**文件同步**和**备份服务**令人**印象深刻**。这项加密的在线存储和备份服务**易于使用**，涵盖所有基础功能，目前的**终身套餐**是一笔**划算的交易**。\""
+  },
+  "MoreDealsSection": {
+    "title": "更多免费云存储优惠",
+    "description": "找到合适的优惠以满足您的云存储和隐私需求",
+    "links": [
+      {
+        "text": "Internxt优惠",
+        "url": "/deals"
+      },
+      {
+        "text": "云存储终身优惠",
+        "url": "/deals/cloud-storage-lifetime-deals"
+      }
+    ]
+  },
+  "tableSection": {
+    "title": "Internxt套餐",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "您的一体化隐私保护盟友",
+      "individuals": "年度套餐",
+      "homePage": "选择适合您的套餐",
+      "lifetime": "终身套餐",
+      "business": "企业套餐",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "所有独家终身套餐"
+      }
+    },
+    "lifetimeDescription": "一次付费，终身享受隐私和安全。",
+    "planDescription": "Internxt免费云存储优惠让您有机会升级到我们功能齐全的屡获殊荣的隐私套件，包括Internxt Drive、Send、VPN、Antivirus、Cleaner、Dark Web Monitor、Meet和Mail。",
+    "businessDescription": "我们目前正在开发专为保护您的业务、保护您的员工和确保您的盈利能力而设计的新Internxt套餐。",
+    "businessDescription2": "通过Internxt的加密云存储套餐确保您公司的数据安全。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "lifetime": "终身",
+      "individual": "个人",
+      "business": "企业"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免费",
+      "description": "免费获得1GB加密云存储",
+      "cta": "选择套餐"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "开源且经过审计",
+      "anonymousAccount": "匿名账户创建",
+      "premiumSupport": "高级客户支持",
+      "guarantee": "30天退款保证"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "升级您的存储空间和隐私保护",
+    "description": "所有Internxt套餐享受{{percentage}}%折扣",
+    "cta": "领取优惠"
+  },
+  "WhatsIncludedSection": {
+    "title": "免费云存储优惠以升级您的存储空间",
+    "description": "Internxt保护您的隐私而不是从中获利。通过安全的云存储等方式为您的在线数据提供终极保护。",
+    "cta": "更好地了解我们",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "高级工具"],
+      "descriptions": [
+        "Internxt Drive配备后量子和零知识加密，因此除了您之外没有人可以访问您的文件。为您的照片、视频和文件获取加密云存储和备份。\n\n 此外，加密备份和密码保护的文件共享提供针对勒索软件和数据泄露的最大保护。",
+        "所有付费套餐还包括Internxt Antivirus，以增强对我们在线面临的日益增长的威胁的保护。\n\n 从Internxt应用程序运行完整或自定义扫描，以防御恶意软件、网络钓鱼和勒索软件，并清理和保护您的设备免受数据丢失或泄露。",
+        "获得我们的超快无限VPN，支持最多5个位置，通过我们的私人VPN加密和保护您的连接。\n\n 加密您的流量以防止在公共场所对您的连接进行外部监视，绕过地理限制并防止数据泄漏。Internxt VPN在在线冲浪时提供完全的隐私保护。",
+        "Internxt Cleaner通过从您的计算机中删除垃圾文件或重复文件来提升设备性能和健康状况。\n\n 释放存储空间，提高设备速度，并通过一键删除不需要的文件来保护您的隐私。",
+        "Internxt Meet提供由后量子密码学支持的完全私密的视频通话，确保您的会议安全、保密且不受跟踪器干扰。\n\n 在完全隐私的情况下与朋友、家人或团队成员主持和加入视频通话，不受外部公司监控您的聊天。",
+        "使用Internxt Mail起草、发送和接收电子邮件，这是一个完全加密和私密的电子邮件，以确保除您和您的联系人之外没有人可以查看您的消息。\n\n 通过Internxt Mail，我们保证除您之外没有人可以访问您的消息或附件，所有这些都受到后量子和零知识加密的保护。",
+        "Internxt可在Windows、Mac、Linux和移动设备上使用，让您可以从任何地方、任何设备访问云，完全控制您的云存储。\n\n 对于高级用户，Internxt提供对WebDAV、Rclone和NAS的支持，提供您在完全隐私中管理文件所需的一切。"
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "为什么选择Internxt的终身套餐？",
+    "description": "我们的免费云存储优惠让您重新掌控隐私。如果您拥有免费的Internxt账户或希望升级，这就是适合您的优惠。我们确保只有您拥有加密数据的密钥，我们不会存储或向第三方出售您的数据。我们采取一切措施确保您的信息保持安全。",
+    "cta": "更好地了解我们",
+    "scrollableSection": {
+      "titles": ["升级您的免费存储空间", "不可破解且不可泄露的数据", "下一代安全保护", "开源且透明"],
+      "descriptions": [
+        "免费云存储优惠通常会用大量免费存储空间换取您的数据。但使用Internxt，您可以为所有账户获得零知识和后量子加密。如果您想要最好的在线隐私保护套餐，请以87%的折扣升级您的Internxt存储空间。",
+        "我们不存储密码或用户数据，您的所有数据在传输和静止状态下都使用后量子和零知识加密进行加密。Internxt让您完全控制您的文件。您的数据是您的事。保护它们是我们的事。",
+        "Internxt是唯一一个使用端到端和后量子密码学自动加密您的文件的云存储，这意味着只有您可以访问您的数据。",
+        "我们为自己所做的事情感到自豪，因此我们的代码在GitHub上公开，任何人都可以亲自审查、审计和验证。除了您的数据，我们没有什么可隐藏的。"
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "完全隐私保护，享受87%折扣",
+    "description": "通过Internxt获得终身优惠",
+    "cta": "领取优惠"
+  },
+  "FaqSection": {
+    "title": "有问题？我们有答案",
+    "faq": [
+      {
+        "question": "谁可以申请这些免费云存储优惠？",
+        "answer": [
+          "这些Internxt优惠适用于新客户或拥有免费账户的客户，或希望以87%的折扣升级其当前终身套餐以访问我们新功能的客户。"
+        ]
+      },
+      {
+        "question": "如果我已经有套餐，我可以使用Internxt优惠吗？",
+        "answer": [
+          "如果您目前在Internxt拥有免费账户，您可以通过选择最适合您的套餐来升级。",
+          "如果您有终身套餐并希望向当前账户添加存储空间并访问高级或旗舰套餐的功能，您可以使用此优惠升级您的账户。"
+        ]
+      },
+      {
+        "question": "我的优惠到期后会发生什么？",
+        "answer": [
+          "如果您使用Internxt优惠购买年度套餐，这仅适用于第一年。第一年到期后，您的套餐将自动以我们定价部分列出的全价续订。",
+          "如果您想避免订阅费用，您可以购买终身套餐，一次性付款，永不再付款，除非您选择升级存储空间。"
+        ]
+      },
+      {
+        "question": "以后如何升级或添加更多存储空间？",
+        "answer": [
+          "如果您有终身套餐，您可以随时堆叠或升级您的套餐以获得更多存储空间。年度套餐无法升级或添加更多存储空间。请关注我们的网站以获取最新的优惠券代码和优惠。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal或加密货币支付吗？",
+        "answer": [
+          "Internxt目前接受借记卡和信用卡（Mastercard、VISA、American Express等）。您还可以通过PayPal、加密货币付款，或使用Klarna分期付款您的终身套餐。",
+          "如果您对付款方式有疑问，只需发送电子邮件至hello@internxt.com"
+        ]
+      },
+      {
+        "question": "我可以分期支付终身套餐吗？",
+        "answer": ["是的，您现在可以使用Klarna将终身付款分成多个免息分期付款。享受终身套餐，轻松分期付款！"]
+      },
+      {
+        "question": "Internxt的退款政策是什么？",
+        "answer": [
+          "Internxt对所有付费订阅提供标准的30天退款保证，从您订阅之日起开始计算。",
+          "如果您对我们的服务不满意，请通过hello@internxt.com与我们联系并申请退款。"
+        ]
+      },
+      {
+        "question": "如何联系支持团队？",
+        "answer": ["找不到您要找的内容？您可以通过实时聊天或发送电子邮件至hello@internxt.com联系我们的技术支持团队"]
+      }
+    ]
+  }
+}
