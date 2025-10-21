@@ -15,11 +15,7 @@ interface DealContent {
   jsonFileName: string;
 }
 
-export const getBlackFridayDealProps = async (
-  ctx: GetServerSidePropsContext,
-  config: DealConfig,
-  content: DealContent,
-) => {
+export const getDealsProps = async (ctx: GetServerSidePropsContext, config: DealConfig, content: DealContent) => {
   const lang = ctx.locale;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);

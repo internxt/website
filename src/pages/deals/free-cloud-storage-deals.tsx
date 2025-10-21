@@ -1,14 +1,14 @@
 import { GetServerSidePropsContext } from 'next';
-import { getBlackFridayDealProps } from '@/lib/blackFridayDeals.helper';
 import { PromoCodeName } from '@/lib/types';
 import DealsTemplate from '@/components/templates/dealsTemplate';
+import { getDealsProps } from '@/lib/helpers/deals';
 
 const DealsPage = (props) => {
   return <DealsTemplate {...props} />;
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  return getBlackFridayDealProps(
+  return getDealsProps(
     ctx,
     {
       metatagsId: 'free-cloud-storage-deals',

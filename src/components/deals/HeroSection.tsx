@@ -4,7 +4,7 @@ import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoCon
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
 
-interface HeroSectionBlackFridayProps {
+interface HeroSectionDealsProps {
   textContent: any;
   percentOff: string;
   darkMode?: boolean;
@@ -14,7 +14,7 @@ export default function HeroSection({
   textContent,
   percentOff,
   darkMode = true,
-}: Readonly<HeroSectionBlackFridayProps>): JSX.Element {
+}: Readonly<HeroSectionDealsProps>): JSX.Element {
   const products = [
     {
       icon: CloudArrowUp,

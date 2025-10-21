@@ -1,17 +1,17 @@
 import { GetServerSidePropsContext } from 'next';
-import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
-import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
+import DealsTemplate from '@/components/templates/dealsTemplate';
+import { getDealsProps } from '@/lib/helpers/deals';
 
-const BlackFridayPage = (props) => {
-  return <BlackFridayDealsTemplate {...props} />;
+const DealsPage = (props) => {
+  return <DealsTemplate {...props} />;
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getDealsProps(
     ctx,
     {
-      metatagsId: 'black-friday-personal-cloud-storage',
+      metatagsId: 'free-cloud-storage-lifetime-deals',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
@@ -19,9 +19,9 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       hideBusinessSelector: true,
     },
     {
-      jsonFileName: 'black-friday-personal-cloud-storage',
+      jsonFileName: 'cloud-storage-lifetime',
     },
   );
 }
 
-export default BlackFridayPage;
+export default DealsPage;

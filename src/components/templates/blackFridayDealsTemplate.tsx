@@ -11,7 +11,7 @@ import { BlackFridayText } from '@/assets/types/blackFriday';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import TitleAndDescriptionSection from '@/components/shared/components/TitleAndDescriptionSection';
-import HeroSection from '@/components/black-friday/HeroSection';
+import HeroSection from '@/components/deals/HeroSection';
 import HorizontalScrollableSection from '@/components/black-friday/HorziontalScrollableSection';
 
 interface BlackFridayDealConfig {

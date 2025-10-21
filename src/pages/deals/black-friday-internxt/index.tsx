@@ -1,6 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
-
-import { getBlackFridayDealProps } from '@/lib/blackFridayDeals.helper';
+import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
 import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
 
@@ -9,7 +8,7 @@ const BlackFridayPage = (props) => {
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  return getBlackFridayDealProps(
+  return getDealsProps(
     ctx,
     {
       metatagsId: 'black-friday',

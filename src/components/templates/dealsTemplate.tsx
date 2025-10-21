@@ -9,10 +9,11 @@ import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { FreeCloudPageText } from '@/assets/types/freeCloudStorage';
 import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
-import HeroSection from '../black-friday/HeroSection';
+import HeroSection from '../deals/HeroSection';
 import ReviewsSection from '../home/ReviewsSection';
-import HorizontalScrollableSectionWithPhotosSection from '../coupons/HorizontalScrollableSectionWithPhotos';
+
 import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
+import HorizontalScrollableSectionWithPhotosSection from '../coupons/HorizontalScrollableSectionWithPhotos';
 
 interface DealsConfig {
   metatagsId: string;
