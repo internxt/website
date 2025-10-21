@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Offres de **stockage cloud gratuit** Internxt",
-    "description": "Améliorez votre confidentialité et économisez {{percentage}}% sur tous les forfaits",
+    "subtitle": "Améliorez votre confidentialité et économisez {{discount}}% sur tous les forfaits",
     "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
     "startFrom": {
       "normal1": "À partir de ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "Offres de stockage cloud gratuit pour améliorer votre stockage",
     "description": "Internxt protège votre vie privée plutôt que d'en tirer profit. Obtenez la protection ultime pour vos données en ligne avec un stockage cloud sécurisé et plus encore.",
-    "cta": "Apprenez à mieux nous connaître",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Outils avancés"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Outils avancés"],
       "descriptions": [
         "Internxt Drive est doté d'un chiffrement post-quantique et à connaissance zéro, de sorte que personne d'autre que vous ne peut accéder à vos fichiers. Obtenez un stockage cloud chiffré et des sauvegardes pour vos photos, vidéos et fichiers. \n\n De plus, les sauvegardes chiffrées et le partage de fichiers protégé par mot de passe offrent une protection maximale contre les ransomwares et les violations de données.",
         "Tous les forfaits payants incluent également Internxt Antivirus pour une protection accrue contre les menaces croissantes auxquelles nous sommes confrontés en ligne. \n\n  Effectuez des analyses complètes ou personnalisées depuis l'application Internxt pour vous défendre contre les malwares, le phishing et les ransomwares, et nettoyez et protégez votre appareil contre la perte ou les violations de données.",
         "Obtenez notre VPN ultra-rapide et illimité pour jusqu'à 5 emplacements pour chiffrer et sécuriser votre connexion avec notre VPN privé. \n\n  Chiffrez votre trafic pour empêcher l'espionnage externe de votre connexion dans les espaces publics, contournez les restrictions géographiques et évitez les fuites de données. Internxt VPN offre une confidentialité totale lors de la navigation en ligne.",
         "Internxt Cleaner améliore les performances et la santé de votre appareil en supprimant les fichiers indésirables ou en double de votre ordinateur. \n\n   Libérez de l'espace de stockage, améliorez la vitesse de l'appareil et protégez votre vie privée en supprimant les fichiers indésirables en un clic.",
         "Internxt Meet propose des appels vidéo entièrement privés alimentés par la cryptographie post-quantique, garantissant que vos réunions sont sécurisées, confidentielles et exemptes de trackers. \n\n   Organisez et rejoignez des appels vidéo avec des amis, de la famille ou des coéquipiers en toute confidentialité, sans que des entreprises externes surveillent vos discussions.",
-        "Rédigez, envoyez et recevez des e-mails avec Internxt Mail, un e-mail entièrement chiffré et privé pour garantir que personne d'autre que vous et vos contacts ne puisse voir vos messages. \n\n   Avec Internxt Mail, nous garantissons que personne d'autre que vous ne peut accéder à vos messages ou pièces jointes, qui sont tous sécurisés avec un chiffrement post-quantique et à connaissance zéro.",
         "Disponible sur Windows, Mac, Linux et mobile, Internxt vous permet de prendre le contrôle total de votre stockage cloud en accédant à votre cloud de n'importe où, sur n'importe quel appareil. \n\n  Pour les utilisateurs avancés, Internxt offre la prise en charge de WebDAV, Rclone et NAS, offrant tout ce dont vous avez besoin pour gérer vos fichiers en toute confidentialité."
       ]
     }

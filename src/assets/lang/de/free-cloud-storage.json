@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Internxt **kostenloser Cloud-Speicher** Angebote",
-    "description": "Verbessern Sie Ihre Privatsphäre und sparen Sie {{percentage}}% bei allen Tarifen",
+    "subtitle": "Verbessern Sie Ihre Privatsphäre und sparen Sie {{discount}}% bei allen Tarifen",
     "features": ["Komplette Privacy-Suite", "Post-Quantum-Verschlüsselung", "Open Source und geprüft"],
     "startFrom": {
       "normal1": "Ab ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "Kostenlose Cloud-Speicher-Angebote zur Erweiterung Ihres Speichers",
     "description": "Internxt schützt Ihre Privatsphäre, anstatt davon zu profitieren. Holen Sie sich den ultimativen Schutz für Ihre Daten online mit sicherem Cloud-Speicher und mehr.",
-    "cta": "Lernen Sie uns besser kennen",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Erweiterte Tools"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Erweiterte Tools"],
       "descriptions": [
         "Internxt Drive kommt mit Post-Quantum- und Zero-Knowledge-Verschlüsselung, sodass niemand außer Ihnen auf Ihre Dateien zugreifen kann. Erhalten Sie verschlüsselten Cloud-Speicher und Backups für Ihre Fotos, Videos und Dateien. \n\n Außerdem bieten verschlüsselte Backups und passwortgeschütztes Datei-Sharing maximalen Schutz vor Ransomware und Datenlecks.",
         "Alle kostenpflichtigen Tarife beinhalten auch Internxt Antivirus für erhöhten Schutz gegen die zunehmenden Online-Bedrohungen. \n\n  Führen Sie vollständige oder benutzerdefinierte Scans über die Internxt-App durch, um sich gegen Malware, Phishing und Ransomware zu verteidigen und Ihr Gerät vor Datenverlust oder -lecks zu schützen.",
         "Erhalten Sie unser ultraschnelles, unbegrenztes VPN für bis zu 5 Standorte, um Ihre Verbindung mit unserem privaten VPN zu verschlüsseln und zu sichern. \n\n  Verschlüsseln Sie Ihren Datenverkehr, um externe Spionage Ihrer Verbindung in öffentlichen Räumen zu verhindern, geografische Beschränkungen zu umgehen und Datenlecks zu verhindern. Internxt VPN bietet absolute Privatsphäre beim Online-Surfen.",
         "Internxt Cleaner steigert die Leistung und Gesundheit Ihres Geräts, indem unnötige oder doppelte Dateien von Ihrem Computer entfernt werden. \n\n   Geben Sie Speicherplatz frei, verbessern Sie die Gerätegeschwindigkeit und schützen Sie Ihre Privatsphäre, indem Sie unerwünschte Dateien mit einem Klick löschen.",
         "Internxt Meet bietet vollständig private Videoanrufe, die durch Post-Quantum-Kryptographie gesichert sind und sicherstellen, dass Ihre Meetings sicher, vertraulich und frei von Trackern sind. \n\n   Hosten und nehmen Sie an Videoanrufen mit Freunden, Familie oder Teammitgliedern in völliger Privatsphäre teil, frei von externen Unternehmen, die Ihre Chats überwachen.",
-        "Verfassen, senden und empfangen Sie E-Mails mit Internxt Mail, einer vollständig verschlüsselten und privaten E-Mail, um sicherzustellen, dass niemand außer Ihnen und Ihren Kontakten Ihre Nachrichten sehen kann. \n\n   Mit Internxt Mail garantieren wir, dass niemand außer Ihnen auf Ihre Nachrichten oder Anhänge zugreifen kann, die alle mit Post-Quantum- und Zero-Knowledge-Verschlüsselung gesichert sind.",
         "Verfügbar für Windows, Mac, Linux und Mobilgeräte ermöglicht Internxt Ihnen die volle Kontrolle über Ihren Cloud-Speicher, indem Sie von überall und auf jedem Gerät auf Ihre Cloud zugreifen können. \n\n  Für fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und bietet alles, was Sie brauchen, um Ihre Dateien in völliger Privatsphäre zu verwalten."
       ]
     }

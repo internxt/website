@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Internxt **免费云存储**优惠",
-    "description": "升级您的隐私保护，所有套餐享受{{percentage}}%折扣",
+    "subtitle": "升级您的隐私保护，所有套餐享受{{discount}}%折扣",
     "features": ["完整的隐私套件", "后量子加密", "开源且经过审计"],
     "startFrom": {
       "normal1": "起价 ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "免费云存储优惠以升级您的存储空间",
     "description": "Internxt保护您的隐私而不是从中获利。通过安全的云存储等方式为您的在线数据提供终极保护。",
-    "cta": "更好地了解我们",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "高级工具"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "高级工具"],
       "descriptions": [
         "Internxt Drive配备后量子和零知识加密，因此除了您之外没有人可以访问您的文件。为您的照片、视频和文件获取加密云存储和备份。\n\n 此外，加密备份和密码保护的文件共享提供针对勒索软件和数据泄露的最大保护。",
         "所有付费套餐还包括Internxt Antivirus，以增强对我们在线面临的日益增长的威胁的保护。\n\n 从Internxt应用程序运行完整或自定义扫描，以防御恶意软件、网络钓鱼和勒索软件，并清理和保护您的设备免受数据丢失或泄露。",
         "获得我们的超快无限VPN，支持最多5个位置，通过我们的私人VPN加密和保护您的连接。\n\n 加密您的流量以防止在公共场所对您的连接进行外部监视，绕过地理限制并防止数据泄漏。Internxt VPN在在线冲浪时提供完全的隐私保护。",
         "Internxt Cleaner通过从您的计算机中删除垃圾文件或重复文件来提升设备性能和健康状况。\n\n 释放存储空间，提高设备速度，并通过一键删除不需要的文件来保护您的隐私。",
         "Internxt Meet提供由后量子密码学支持的完全私密的视频通话，确保您的会议安全、保密且不受跟踪器干扰。\n\n 在完全隐私的情况下与朋友、家人或团队成员主持和加入视频通话，不受外部公司监控您的聊天。",
-        "使用Internxt Mail起草、发送和接收电子邮件，这是一个完全加密和私密的电子邮件，以确保除您和您的联系人之外没有人可以查看您的消息。\n\n 通过Internxt Mail，我们保证除您之外没有人可以访问您的消息或附件，所有这些都受到后量子和零知识加密的保护。",
         "Internxt可在Windows、Mac、Linux和移动设备上使用，让您可以从任何地方、任何设备访问云，完全控制您的云存储。\n\n 对于高级用户，Internxt提供对WebDAV、Rclone和NAS的支持，提供您在完全隐私中管理文件所需的一切。"
       ]
     }

@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Internxt **free cloud storage** deals",
-    "description": "Upgrade your privacy and save big with {{percentage}}% off all plans",
+    "subtitle": "Upgrade your privacy and save big with {{discount}}% off all plans",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "startFrom": {
       "normal1": "Starting from ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "Free cloud storage deals to upgrade your storage",
     "description": "Internxt protects your privacy rather than profits from it. Get the ultimate protection for your data online with secure cloud storage and more.",
-    "cta": "Get to know us better",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Advanced tools"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
       "descriptions": [
         "Internxt Drive comes with post-quantum and zero-knowledge encryption, so nobody but you can access your files. Get encrypted cloud storage and backups for your photos, videos, and files. \n\n Plus, encrypted backups and password-protected file sharing offer maximum protection against ransomware and data breaches.",
         "All paid plans also include Internxt Antivirus for increased protection against the increasing threats we face online. \n\n  Run full or custom scans from the Internxt app to defend against malware, phishing, and ransomware, and clean and protect your device from data loss or breaches.",
         "Get our ultra-fast, unlimited VPN for up to 5 locations to encrypt and secure your connection with our private VPN. \n\n  Encrypt your traffic to prevent external spying on your connection in public spaces, bypass geographic restrictions, and prevent data leaks. Internxt VPN provides total privacy when surfing online.",
         "Internxt Cleaner boosts your device performance and health by removing junk or duplicate files from your computer. \n\n   Free up storage, improve device speeds, and protect your privacy by deleting unwanted files with a click of a button.",
         "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, confidential, and free from trackers. \n\n   Host and join video calls with friends, family, or teammates in complete privacy, free from external companies monitoring your chats.",
-        "Draft, send, and receive emails with Internxt Mail, a fully encrypted and private email to ensure nobody but you and your contacts can view your messages. \n\n   With Internxt Mail, we guarantee that nobody but you can access your messages or attachments, which are all secured with post-quantum and zero-knowledge encryption.",
         "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device. \n\n  For advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
       ]
     }

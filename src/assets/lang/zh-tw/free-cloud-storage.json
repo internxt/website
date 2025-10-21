@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Internxt **免費雲端儲存**優惠",
-    "description": "升級您的隱私保護，所有方案享有{{percentage}}%折扣",
+    "subtitle": "升級您的隱私保護，所有方案享有{{discount}}%折扣",
     "features": ["完整的隱私套件", "後量子加密", "開源且經過稽核"],
     "startFrom": {
       "normal1": "起價 ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "免費雲端儲存優惠以升級您的儲存空間",
     "description": "Internxt保護您的隱私而不是從中獲利。透過安全的雲端儲存等方式為您的線上資料提供終極保護。",
-    "cta": "更好地瞭解我們",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "進階工具"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "進階工具"],
       "descriptions": [
         "Internxt Drive配備後量子和零知識加密，因此除了您之外沒有人可以存取您的檔案。為您的照片、影片和檔案獲取加密雲端儲存和備份。\n\n 此外，加密備份和密碼保護的檔案共享提供針對勒索軟體和資料外洩的最大保護。",
         "所有付費方案還包括Internxt Antivirus，以增強對我們在線上面臨的日益增長的威脅的保護。\n\n 從Internxt應用程式執行完整或自訂掃描，以防禦惡意軟體、網路釣魚和勒索軟體，並清理和保護您的裝置免受資料遺失或外洩。",
         "獲得我們的超快無限VPN，支援最多5個位置，透過我們的私人VPN加密和保護您的連線。\n\n 加密您的流量以防止在公共場所對您的連線進行外部監視，繞過地理限制並防止資料外洩。Internxt VPN在線上衝浪時提供完全的隱私保護。",
         "Internxt Cleaner透過從您的電腦中刪除垃圾檔案或重複檔案來提升裝置效能和健康狀況。\n\n 釋放儲存空間，提高裝置速度，並透過一鍵刪除不需要的檔案來保護您的隱私。",
         "Internxt Meet提供由後量子密碼學支援的完全私密的視訊通話，確保您的會議安全、保密且不受追蹤器干擾。\n\n 在完全隱私的情況下與朋友、家人或團隊成員主持和加入視訊通話，不受外部公司監控您的聊天。",
-        "使用Internxt Mail起草、發送和接收電子郵件，這是一個完全加密和私密的電子郵件，以確保除您和您的聯絡人之外沒有人可以查看您的訊息。\n\n 透過Internxt Mail，我們保證除您之外沒有人可以存取您的訊息或附件，所有這些都受到後量子和零知識加密的保護。",
         "Internxt可在Windows、Mac、Linux和行動裝置上使用，讓您可以從任何地方、任何裝置存取雲端，完全控制您的雲端儲存。\n\n 對於進階使用者，Internxt提供對WebDAV、Rclone和NAS的支援，提供您在完全隱私中管理檔案所需的一切。"
       ]
     }

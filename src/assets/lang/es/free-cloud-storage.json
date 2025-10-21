@@ -9,7 +9,7 @@
       "mail": "Mail"
     },
     "title": "Ofertas de **almacenamiento en la nube gratuito** de Internxt",
-    "description": "Mejora tu privacidad y ahorra un {{percentage}}% en todos los planes",
+    "subtitle": "Mejora tu privacidad y ahorra un {{discount}}% en todos los planes",
     "features": ["Suite digital privada", "Cifrado post-cuántico", "Código abierto y auditado"],
     "startFrom": {
       "normal1": "Desde ",
@@ -88,17 +88,15 @@
   "WhatsIncludedSection": {
     "title": "Ofertas de almacenamiento para mejorar tu privacidad",
     "description": "Internxt protege tu privacidad. Obtén la máxima protección para tus datos en línea con almacenamiento en la nube seguro y más.",
-    "cta": "Conócenos mejor",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Herramientas avanzadas"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Herramientas avanzadas"],
       "descriptions": [
         "Internxt Drive viene con encriptación post-cuántica y de conocimiento cero, por lo que nadie más que tú puede acceder a tus archivos. Obtén almacenamiento en la nube encriptado y copias de seguridad para tus fotos, vídeos y archivos. \n\n Además, las copias de seguridad encriptadas y el compartir archivos protegidos con contraseña ofrecen la máxima protección contra ransomware y filtraciones de datos.",
         "Todos los planes de pago también incluyen Internxt Antivirus para una mayor protección contra las crecientes amenazas que enfrentamos en línea. \n\n  Ejecuta escaneos completos o personalizados desde la aplicación de Internxt para defenderte del malware, phishing y ransomware, y limpia y protege tu dispositivo de pérdida de datos o filtraciones.",
         "Obtén nuestra VPN ultra rápida e ilimitada para hasta 5 ubicaciones para encriptar y asegurar tu conexión con nuestra VPN privada. \n\n  Encripta tu tráfico para evitar el espionaje externo de tu conexión en espacios públicos, omite restricciones geográficas y previene filtraciones de datos. Internxt VPN proporciona total privacidad al navegar en línea.",
         "Internxt Cleaner mejora el rendimiento y la salud de tu dispositivo eliminando archivos basura o duplicados de tu ordenador. \n\n   Libera espacio de almacenamiento, mejora la velocidad del dispositivo y protege tu privacidad eliminando archivos no deseados con un clic.",
         "Internxt Meet ofrece videollamadas completamente privadas impulsadas por criptografía post-cuántica, asegurando que tus reuniones sean seguras, confidenciales y libres de rastreadores. \n\n   Organiza y únete a videollamadas con amigos, familiares o compañeros de equipo en completa privacidad, sin que empresas externas monitoreen tus chats.",
-        "Redacta, envía y recibe correos electrónicos con Internxt Mail, un correo electrónico completamente encriptado y privado para garantizar que nadie más que tú y tus contactos puedan ver tus mensajes. \n\n   Con Internxt Mail, garantizamos que nadie más que tú pueda acceder a tus mensajes o archivos adjuntos, que están todos protegidos con encriptación post-cuántica y de conocimiento cero.",
         "Disponible en Windows, Mac, Linux y móviles, Internxt te permite tomar el control total de tu almacenamiento en la nube accediendo a tu nube desde cualquier lugar, en cualquier dispositivo. \n\n  Para usuarios avanzados, Internxt ofrece soporte para WebDAV, Rclone y NAS, ofreciendo todo lo que necesitas para gestionar tus archivos en total privacidad."
       ]
     }
