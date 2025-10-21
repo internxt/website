@@ -96,6 +96,22 @@
     "description": "90% de descuento en todos los planes",
     "cta": "Reclamar oferta"
   },
+  "MoreDetailsSection": {
+    "title": "Más ofertas de Internxt",
+    "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
+    "cards": {
+      "card1": {
+        "title": "Todas las ofertas Black Friday de Internxt 2025",
+        "description": "Descubre todas las ofertas en nuestras herramientas de privacidad y soluciones de almacenamiento",
+        "cta": "Ver todas las ofertas"
+      },
+      "card2": {
+        "title": "Ofertas Black Friday de almacenamiento en la nube",
+        "description": "Ahorra en almacenamiento en la nube cifrado para tus archivos",
+        "cta": "Ver ofertas de almacenamiento"
+      }
+    }
+  },
   "FaqSection": {
     "title": "¿Preguntas? Tenemos respuestas",
     "faq": [

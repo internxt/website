@@ -6,6 +6,7 @@ export interface BlackFridayText {
   CtaSection: CtaSection;
   HorizontalScrollableSection: HorizontalScrollableSection;
   CtaSectionV2: CtaSection;
+  MoreDealsSection: MoreDealsSection;
   FaqSection: FAQSection;
 }
 
@@ -58,6 +59,17 @@ export interface HorizontalScrollableSection {
 export interface ScrollableSection {
   titles: string[];
   descriptions: string[];
+}
+
+export interface MoreDealsSection {
+  title: string;
+  description: string;
+  cards: Cards;
+}
+
+export interface Cards {
+  card1: CtaSection;
+  card2: CtaSection;
 }
 
 export interface TableSection {

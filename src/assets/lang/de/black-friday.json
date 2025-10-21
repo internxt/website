@@ -100,6 +100,22 @@
     "description": "90% Rabatt auf alle Tarife",
     "cta": "Angebot sichern"
   },
+  "MoreDetailsSection": {
+    "title": "Weitere Internxt-Angebote",
+    "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
+    "cards": {
+      "card1": {
+        "title": "Alle Internxt Black Friday-Angebote 2025",
+        "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
+        "cta": "Alle Angebote ansehen"
+      },
+      "card2": {
+        "title": "Cloud-Speicher Black Friday-Angebote",
+        "description": "Sparen Sie bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
+        "cta": "Speicher-Angebote ansehen"
+      }
+    }
+  },
   "FaqSection": {
     "title": "Fragen? Wir haben Antworten",
     "faq": [

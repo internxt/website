@@ -13,6 +13,7 @@ import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import TitleAndDescriptionSection from '@/components/shared/components/TitleAndDescriptionSection';
 import HeroSection from '@/components/black-friday/HeroSection';
 import HorizontalScrollableSection from '@/components/black-friday/HorziontalScrollableSection';
+import MoreDealsSection from '../deals/MoreDealsSection';
 
 interface BlackFridayDealConfig {
   metatagsId: string;
@@ -117,6 +118,8 @@ const BlackFridayDealsTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
       />
+
+      <MoreDealsSection textContent={textContent.MoreDealsSection} darkMode />
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
 

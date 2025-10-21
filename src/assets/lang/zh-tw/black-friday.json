@@ -85,6 +85,22 @@
     "description": "所有方案 90% 折扣",
     "cta": "領取優惠"
   },
+  "MoreDealsSection": {
+    "title": "更多 Internxt 優惠",
+    "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
+    "cards": {
+      "card1": {
+        "title": "所有 Internxt 2025 黑色星期五優惠",
+        "description": "探索我們隱私工具和儲存解決方案的所有優惠",
+        "cta": "查看所有優惠"
+      },
+      "card2": {
+        "title": "雲端儲存黑色星期五優惠",
+        "description": "在加密雲端儲存上節省大筆費用",
+        "cta": "查看儲存優惠"
+      }
+    }
+  },
   "FaqSection": {
     "title": "有问题？我们有答案",
     "faq": [
