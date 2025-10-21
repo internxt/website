@@ -139,8 +139,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
     );
   };
 
-  const languageForImage = ['zh', 'zh-tw', 'ru', 'en'].includes(lang) ? 'en' : lang;
-
   return (
     <section
       className="relative pb-10 pt-32 lg:pb-20"
