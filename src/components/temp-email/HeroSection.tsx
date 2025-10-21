@@ -228,7 +228,7 @@ export const HeroSection = ({ textContent, lang }) => {
     <section className="flex items-start justify-center overflow-hidden  px-6 pb-20 pt-32">
       <div className="flex w-full flex-col items-center justify-center ">
         <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
           width={180}
           height={180}
@@ -236,7 +236,7 @@ export const HeroSection = ({ textContent, lang }) => {
           style={{ cursor: 'pointer' }}
           onClick={() =>
             window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt`,
               '_blank',
               'noopener noreferrer',
             )
@@ -276,7 +276,7 @@ export const HeroSection = ({ textContent, lang }) => {
       </div>
       <div className="flex w-full flex-col items-center justify-center">
         <Image
-          src={getImage(`/banners/Ban_Internext_160x600_en.jpg`)}
+          src={getImage(`/banners/Ban_Internxt_160x600_en.jpg`)}
           alt="BitDefender Vertical Banner"
           width={180}
           height={180}
@@ -284,7 +284,7 @@ export const HeroSection = ({ textContent, lang }) => {
           style={{ cursor: 'pointer' }}
           onClick={() =>
             window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/voucher-ts-ps/?vcampaign=internxt/`,
               '_blank',
               'noopener noreferrer',
             )

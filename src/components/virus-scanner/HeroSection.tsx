@@ -247,7 +247,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                                     </div>
 
                                     <a
-                                      href={`https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`}
+                                      href={`https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="button-primary"
@@ -468,7 +468,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       </div>
       <div className="flex w-full flex-col items-center justify-center px-6 ">
         <Image
-          src={getImage(`/banners/Ban_Internext_728x90_${languageForImage}.jpg`)}
+          src={getImage(`/banners/Ban_Internxt_728x90_en.jpg`)}
           alt="File Arrow Up icon"
           width={800}
           height={110}
@@ -476,7 +476,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
           style={{ cursor: 'pointer' }}
           onClick={() =>
             window.open(
-              `https://www.bitdefender.com/pages/consumer/${languageForImage}/new/trial/ts-trial-3m/internxt/`,
+              `https://www.bitdefender.com/pages/consumer/en/new/voucher-ts-ps/?vcampaign=internxt`,
               '_blank',
               'noopener noreferrer',
             )
