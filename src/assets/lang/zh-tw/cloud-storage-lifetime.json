@@ -1,0 +1,176 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "最佳 Internxt 雲端儲存**終身優惠**",
+    "subtitle": "所有方案享{{discount}}%折扣。一次性付款。終身隱私",
+    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
+    "startFrom": {
+      "normal1": "起價 ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /月"
+    },
+    "claimDeal": "獲取優惠"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt 正在進行**超級促銷**，擁有**出色的用戶評價**、**端到端**和**後量子加密**，他們使程式碼完全**開源**，對客戶完全透明。\"",
+    "mashable": "\"使用 Internxt **認真對待****保護您的重要資料**。他們將**隱私**作為**首要關注點**，讓您可以放心，知道您的檔案是**安全的**，平台重視用戶的**透明度**。\"",
+    "pcWorld": "\"Internxt 的**直觀網頁存取**、**檔案同步**和**備份服務**令人**印象深刻**。這種加密的線上儲存和備份服務**簡單易用**，涵蓋所有基礎功能，目前的**終身方案**非常**划算**。\""
+  },
+  "MoreDealsSection": {
+    "title": "更多雲端儲存終身優惠",
+    "description": "找到滿足您雲端儲存和隱私需求的合適優惠",
+    "links": [
+      {
+        "text": "Internxt 優惠",
+        "url": "/deals"
+      },
+      {
+        "text": "免費雲端儲存優惠",
+        "url": "/deals"
+      }
+    ]
+  },
+  "tableSection": {
+    "title": "Internxt 方案",
+    "hotLabel": "{{discount}}%折扣",
+    "planTitles": {
+      "header": "您的一體化隱私盟友",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "企業方案",
+      "lifetimeCampaign": {
+        "blueText": "50%折扣",
+        "normalText": "適用於我們所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次性付款，終身享受隱私和安全。",
+    "planDescription": "Internxt 雲端儲存終身優惠功能齊全，可完全存取我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的企業、保護您的員工和確保您的獲利能力而設計的新 Internxt 方案。",
+    "businessDescription2": "使用 Internxt 的加密雲端儲存方案確保您公司的資料安全。",
+    "billingFrequency": {
+      "monthly": "月付",
+      "annually": "年付",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "企業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1 GB 加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端到端加密",
+      "openSource": "開源且經過審計",
+      "anonymousAccount": "匿名帳戶創建",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "告別訂閱模式",
+    "description": "一次性付款，永久使用，享{{percentage}}%折扣",
+    "cta": "獲取優惠"
+  },
+  "WhatsIncludedSection": {
+    "title": "最佳雲端儲存終身優惠，實現完整的線上隱私",
+    "description": "Internxt 保護您的隱私而不是從中獲利。透過安全的雲端儲存等功能為您的線上資料提供終極保護。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "進階工具"],
+      "descriptions": [
+        "Internxt Drive 配備後量子和零知識加密，因此只有您可以存取您的檔案。為您的照片、影片和檔案獲取加密雲端儲存和備份。\n\n此外，加密備份和密碼保護的檔案共享可提供針對勒索軟體和資料外洩的最大保護。",
+        "所有付費方案還包括 Internxt Antivirus，以增強對我們在線上面臨的日益增長的威脅的保護。\n\n從 Internxt 應用程式執行完整或自訂掃描，以防禦惡意軟體、網路釣魚和勒索軟體，並清潔和保護您的裝置免受資料遺失或外洩。",
+        "獲取我們的超快速、無限制 VPN，支援最多 5 個位置，使用我們的私有 VPN 加密和保護您的連線。\n\n加密您的流量以防止在公共場所對您的連線進行外部監視，繞過地理限制，並防止資料外洩。Internxt VPN 在線上瀏覽時提供完全的隱私保護。",
+        "Internxt Cleaner 透過從您的電腦中刪除垃圾或重複檔案來提升裝置效能和健康狀況。\n\n釋放儲存空間，提高裝置速度，並透過單擊按鈕刪除不需要的檔案來保護您的隱私。",
+        "Internxt Meet 提供由後量子密碼學支援的完全私密的視訊通話，確保您的會議安全、保密且無追蹤器。\n\n在完全隱私的情況下與朋友、家人或團隊成員主持和加入視訊通話，沒有外部公司監控您的聊天。",
+        "使用 Internxt Mail 起草、傳送和接收電子郵件，這是一個完全加密和私密的電子郵件，確保只有您和您的聯絡人可以查看您的訊息。\n\n使用 Internxt Mail，我們保證只有您可以存取您的訊息或附件，所有這些都使用後量子和零知識加密進行保護。",
+        "Internxt 可在 Windows、Mac、Linux 和行動裝置上使用，讓您可以從任何地方、任何裝置存取雲端，完全控制您的雲端儲存。\n\n對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供您在完全隱私下管理檔案所需的一切。"
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "為什麼選擇 Internxt 的終身方案？",
+    "description": "我們的終身雲端儲存優惠讓您重新掌控自己的隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，我們不會儲存或向第三方出售您的資料。我們採取一切措施確保您的資訊保持安全。",
+    "cta": "更好地了解我們",
+    "scrollableSection": {
+      "titles": ["一次性付款，永久使用", "無法破解和洩露的資料", "下一代安全性", "開源且透明"],
+      "descriptions": [
+        "使用我們的雲端儲存終身優惠告別訂閱模式和不可預測的續訂成本。只需一次付款，您就可以永久存取您的儲存和功能，無需再支付任何費用。",
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜止狀態下都使用後量子和零知識加密進行加密。Internxt 讓您完全控制您的檔案。您的資料是您的事。保護它們是我們的事。",
+        "Internxt 是唯一使用端到端和後量子密碼學自動加密您的檔案的雲端儲存，這意味著只有您可以存取您的資料。",
+        "我們為所做的工作感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、審計和驗證。除了您的資料，我們沒有什麼可隱藏的。"
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "完整隱私享87%折扣",
+    "description": "使用 Internxt 獲得終身優惠",
+    "cta": "獲取優惠"
+  },
+  "FaqSection": {
+    "title": "有疑問？我們有答案",
+    "faq": [
+      {
+        "question": "誰可以申請這些雲端儲存終身優惠？",
+        "answer": [
+          "這些 Internxt 優惠適用於新客戶或擁有免費帳戶的客戶，或希望以 87% 的折扣升級其當前終身方案以存取我們新功能的客戶。"
+        ]
+      },
+      {
+        "question": "如果我已經有終身方案，可以使用 Internxt 優惠嗎？",
+        "answer": [
+          "如果您目前擁有終身方案並希望向您目前的帳戶新增儲存空間並存取高級或旗艦方案的功能，您可以使用此優惠升級您的帳戶。"
+        ]
+      },
+      {
+        "question": "我的優惠到期後會發生什麼？",
+        "answer": [
+          "如果您使用 Internxt 優惠購買年度方案，這僅適用於第一年。一旦第一年到期，您的方案將自動以我們定價部分列出的全價續訂。",
+          "如果您想避免訂閱費用，可以一次性付款購買終身方案，永遠不再付費，除非您選擇升級儲存空間。"
+        ]
+      },
+      {
+        "question": "以後如何升級或新增更多儲存空間？",
+        "answer": [
+          "如果您有終身方案，可以隨時疊加或升級方案以獲得更多儲存空間。年度方案無法升級或新增更多儲存空間。請關注我們的網站以獲取最新的優惠券代碼和優惠。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣支付嗎？",
+        "answer": [
+          "Internxt 目前接受借記卡和信用卡（Mastercard、VISA、American Express 等）。您還可以透過 PayPal、加密貨幣支付，或使用 Klarna 分期支付終身方案。",
+          "如果您對付款方式有疑問，只需發送電子郵件至 hello@internxt.com"
+        ]
+      },
+      {
+        "question": "我可以分期支付終身方案嗎？",
+        "answer": ["是的，您現在可以使用 Klarna 將終身付款分成多個免息分期付款。享受終身方案，輕鬆分期付款！"]
+      },
+      {
+        "question": "Internxt 的退款政策是什麼？",
+        "answer": [
+          "Internxt 對所有付費訂閱提供標準的 30 天退款保證，從您訂閱之日起開始計算。",
+          "如果您對我們的服務不滿意，請透過 hello@internxt.com 聯絡我們並申請退款。"
+        ]
+      },
+      {
+        "question": "如何聯絡支援團隊？",
+        "answer": ["找不到您要找的內容？您可以透過線上聊天或發送電子郵件至 hello@internxt.com 聯絡我們的技術支援團隊"]
+      }
+    ]
+  }
+}
