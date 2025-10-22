@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { FooterText, MetatagsDescription, NavigationBarText } from '@/assets/types/layout/types';
 import Footer from '@/components/layout/footers/Footer';
 import Layout from '@/components/layout/Layout';
@@ -67,13 +68,40 @@ const BlackFridayDealsTemplate = ({
       isCheckoutForLifetime,
       couponCodeForCheckout?.name,
     );
-  };
+=======
+import { CaretRight } from '@phosphor-icons/react';
 
-  const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-  const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
-  const percentOff = lifetimeCoupon?.percentOff !== undefined ? String(lifetimeCoupon.percentOff) : '0';
+interface MoreDealsSectionProps {
+  textContent: {
+    title: string;
+    description: string;
+    cards: {
+      card1: {
+        title: string;
+        description: string;
+        cta: string;
+      };
+      card2: {
+        title: string;
+        description: string;
+        cta: string;
+      };
+    };
+>>>>>>> Stashed changes
+  };
+  urls: {
+    card1: string;
+    card2: string;
+  };
+  darkMode?: boolean;
+}
+
+const MoreDealsSection = ({ textContent, urls, darkMode = false }: MoreDealsSectionProps) => {
+  const cards = [textContent.cards.card1, textContent.cards.card2];
+  const urlsArray = [urls.card1, urls.card2];
 
   return (
+<<<<<<< Updated upstream
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
@@ -112,43 +140,36 @@ const BlackFridayDealsTemplate = ({
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSection.description}
             </p>
+=======
+    <section
+      className={`flex w-full flex-col items-center justify-center gap-16 overflow-hidden py-20 xl:px-32 3xl:px-80 ${
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-white'
+      }`}
+    >
+      <div className="flex flex-col items-center gap-6">
+        <h2 className={`text-30 font-bold lg:text-3xl ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
+          {textContent.title}
+        </h2>
+        <p className="text-sm font-normal text-white-95 lg:text-lg">{textContent.description}</p>
+      </div>
+      <div className="flex w-full flex-row items-stretch justify-center gap-8">
+        {cards.map((card, index) => (
+          <div key={index} className="flex w-full max-w-[50%] flex-1 flex-col gap-8 rounded-16 bg-gray-105 p-8">
+            <h3 className="text-xl font-medium text-white-95">{card.title}</h3>
+            <p className="flex-grow text-base font-normal text-green-120">{card.description}</p>
+            <a
+              href={urlsArray[index]}
+              className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
+            >
+              {card.cta}
+              <CaretRight className="pt-[2px] text-primary" size={24} />
+            </a>
+>>>>>>> Stashed changes
           </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
-      />
-
-      <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
-
-      <FloatingCtaSectionv2
-        textContent={textContent.CtaSectionV2}
-        url={'#billingButtons'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
-              {textContent.CtaSectionV2.title}
-            </p>
-            <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
-            </p>
-          </div>
-        }
-        containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor="linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
-        bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
-      />
-
-      <FAQSection
-        textContent={textContent.FaqSection}
-        bgColor="bg-[#1C1C1C] text-white"
-        cardColor="bg-[#1C1C1C]"
-        textColor="text-white"
-      />
-
-      <Footer textContent={footerLang} lang={lang} darkMode />
-    </Layout>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export default BlackFridayDealsTemplate;
+export default MoreDealsSection;

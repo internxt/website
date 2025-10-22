@@ -18,6 +18,10 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,
+      moreDealsUrls: {
+        card1: 'deals/cloud-storage-lifetime',
+        card2: 'deals',
+      },
     },
     {
       jsonFileName: 'free-cloud-storage',

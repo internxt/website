@@ -18,6 +18,10 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,
+      moreDealsUrls: {
+        card1: 'black-friday-internxt/bf-cloud-storage-deals',
+        card2: '/deals/black-friday-internxt',
+      },
     },
     {
       jsonFileName: 'black-friday-personal-cloud-storage',

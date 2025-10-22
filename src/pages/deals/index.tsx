@@ -12,15 +12,19 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     ctx,
     {
       heroImage: '/images/deals/deals-generic.webp',
-      metatagsId: 'free-cloud-storage-lifetime-deals',
+      metatagsId: 'deals',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,
+      moreDealsUrls: {
+        card1: 'deals/cloud-storage-lifetime',
+        card2: 'deals/free-cloud-storage-deals',
+      },
     },
     {
-      jsonFileName: 'cloud-storage-lifetime',
+      jsonFileName: 'deals',
     },
   );
 }

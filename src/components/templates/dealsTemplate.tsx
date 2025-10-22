@@ -7,13 +7,12 @@ import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectio
 import FAQSection from '@/components/shared/sections/FaqSection';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
-import { FreeCloudPageText } from '@/assets/types/freeCloudStorage';
+import { DealsPageText } from '@/assets/types/freeCloudStorage';
 import FloatingCtaSectionv2 from '../shared/FloatingCtaSectionV2';
 import HeroSection from '../deals/HeroSection';
 import ReviewsSection from '../home/ReviewsSection';
-
 import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
-import HorizontalScrollableSectionWithPhotosSection from '../coupons/HorizontalScrollableSectionWithPhotos';
+import MoreDealsSection from '../black-friday/MoreDealsSection';
 
 interface DealsConfig {
   heroImage: string;
@@ -23,13 +22,17 @@ interface DealsConfig {
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;
+  moreDealsUrls: {
+    card1: string;
+    card2: string;
+  };
 }
 
 interface DealsTemplateProps {
   lang: string;
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
-  textContent: FreeCloudPageText;
+  textContent: DealsPageText;
   footerLang: FooterText;
   config: DealsConfig;
 }
@@ -111,13 +114,15 @@ const DealsTemplate = ({
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
+      <MoreDealsSection textContent={textContent.MoreDealsSection} urls={config.moreDealsUrls} darkMode={false} />
+
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSection.title}
+              {parsePercentText(textContent.CtaSection.title)}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
               {parsePercentText(textContent.CtaSection.description)}
@@ -126,11 +131,8 @@ const DealsTemplate = ({
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
         bgPadding="py-8 lg:py-14"
       />
-
-      <HorizontalScrollableSectionWithPhotosSection textContent={textContent.WhatsIncludedSection} bgColor="bg-white" />
 
       <HorizontalScrollableSection
         textContent={textContent.WhyChooseInternxtSection}
@@ -143,10 +145,10 @@ const DealsTemplate = ({
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
             <p className="text-2xl font-semibold leading-tight text-gray-95 lg:text-4xl">
-              {textContent.CtaSectionV2.title}
+              {parsePercentText(textContent.CtaSectionV2.title)}
             </p>
             <p className="text-base font-normal leading-tight text-gray-55 lg:w-[633px] lg:text-center lg:text-xl">
-              {textContent.CtaSectionV2.description}
+              {parsePercentText(textContent.CtaSectionV2.description)}
             </p>
           </div>
         }

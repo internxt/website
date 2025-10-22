@@ -10,6 +10,10 @@ interface DealConfig {
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;
+  moreDealsUrls: {
+    card1: string;
+    card2: string;
+  };
 }
 
 interface DealContent {
@@ -33,7 +37,12 @@ export const getDealsProps = async (ctx: GetServerSidePropsContext, config: Deal
       textContent,
       navbarLang,
       footerLang,
-      config,
+      config: {
+        ...config,
+        moreDealsUrls: {
+          ...config.moreDealsUrls,
+        },
+      },
     },
   };
 };
