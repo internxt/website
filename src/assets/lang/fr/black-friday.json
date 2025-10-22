@@ -26,14 +26,14 @@
     "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
     "cards": {
       "card1": {
-        "title": "Toutes les offres Internxt Black Friday 2025",
-        "description": "Découvrez toutes les offres sur nos outils de confidentialité et solutions de stockage",
-        "cta": "Voir toutes les offres"
-      },
-      "card2": {
         "title": "Offres Black Friday stockage cloud",
         "description": "Économisez sur le stockage cloud chiffré pour vos fichiers",
         "cta": "Voir les offres de stockage"
+      },
+      "card2": {
+        "title": "Offres Black Friday stockage cloud personnel",
+        "description": "Réductions exclusives pour les particuliers et forfaits personnels",
+        "cta": "Voir les offres personnelles"
       }
     }
   },
