@@ -1,0 +1,178 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "最佳 Internxt 雲端儲存**終身優惠**",
+    "subtitle": "所有方案享受 {{discount}}% 折扣。一次性付款。終身隱私保護",
+    "features": ["完整的隱私套件", "後量子加密", "開源且經過審核"],
+    "startFrom": {
+      "normal1": "起價 ",
+      "price": "{{minimumPrice}}",
+      "normal2": " /月"
+    },
+    "claimDeal": "領取優惠"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt 正在進行**超級促銷**，擁有**優秀的使用者評價**、**端對端**和**後量子加密**，並且他們將程式碼完全**開源**，為客戶提供完全的透明度。\"",
+    "mashable": "\"使用 Internxt **認真對待****保護您的重要資料**。他們將**隱私**作為**首要任務**，讓您放心知道您的檔案是**安全的**，平台重視使用者的**透明度**。\"",
+    "pcWorld": "\"Internxt 的**直觀網頁存取**、**檔案同步**和**備份服務**令人**印象深刻**。這項加密的線上儲存和備份服務**簡單易用**，涵蓋所有基礎功能，目前的**終身方案**是一筆**划算的交易**。\""
+  },
+  "MoreDealsSection": {
+    "title": "更多 Internxt 優惠",
+    "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
+    "cards": {
+      "card1": {
+        "title": "所有 Internxt 黑色星期五優惠 2025",
+        "description": "探索我們隱私工具和儲存解決方案的所有優惠",
+        "cta": "查看所有優惠"
+      },
+      "card2": {
+        "title": "雲端儲存黑色星期五優惠",
+        "description": "在加密雲端儲存上節省大筆費用",
+        "cta": "查看儲存優惠"
+      }
+    }
+  },
+  "tableSection": {
+    "title": "Internxt 方案",
+    "hotLabel": "{{discount}}% 折扣",
+    "planTitles": {
+      "header": "您的一體化隱私保護夥伴",
+      "individuals": "年度方案",
+      "homePage": "選擇適合您的方案",
+      "lifetime": "終身方案",
+      "business": "商業方案",
+      "lifetimeCampaign": {
+        "blueText": "50% 折扣",
+        "normalText": "所有獨家終身方案"
+      }
+    },
+    "lifetimeDescription": "一次性付款，終身享受隱私和安全保護。",
+    "planDescription": "Internxt 雲端儲存終身優惠功能齊全，可完全存取我們屢獲殊榮的隱私套件，包括 Internxt Drive、Send、VPN、Antivirus、Cleaner、Meet 和 Mail。",
+    "businessDescription": "我們目前正在開發專為保護您的業務、保護您的員工和確保盈利能力而設計的新 Internxt 方案。",
+    "businessDescription2": "使用 Internxt 的加密雲端儲存方案確保您公司的資料安全。",
+    "billingFrequency": {
+      "monthly": "每月",
+      "annually": "每年",
+      "lifetime": "終身",
+      "individual": "個人",
+      "business": "商業"
+    },
+    "freePlanCard": {
+      "eyeBrow": "免費",
+      "description": "免費獲得 1 GB 加密雲端儲存",
+      "cta": "選擇方案"
+    },
+    "features": {
+      "endToEnd": "端對端加密",
+      "openSource": "開源且經過審核",
+      "anonymousAccount": "匿名帳戶建立",
+      "premiumSupport": "高級客戶支援",
+      "guarantee": "30 天退款保證"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "告別訂閱",
+    "description": "一次性付款，永久使用，享受 {{percentage}}% 折扣",
+    "cta": "領取優惠"
+  },
+  "WhatsIncludedSection": {
+    "title": "最佳雲端儲存終身優惠，實現完全線上隱私",
+    "description": "Internxt 保護您的隱私，而不是從中獲利。透過安全的雲端儲存等獲得線上資料的終極保護。",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "進階工具"],
+      "descriptions": [
+        "Internxt Drive 配備後量子和零知識加密，因此除您之外沒有人可以存取您的檔案。為您的照片、影片和檔案獲取加密雲端儲存和備份。\n\n此外，加密備份和受密碼保護的檔案共享可提供針對勒索軟體和資料外洩的最大保護。",
+        "所有付費方案還包括 Internxt Antivirus，以增強對我們在線上面臨的日益增長的威脅的保護。\n\n從 Internxt 應用程式執行完整或自訂掃描，以防禦惡意軟體、網路釣魚和勒索軟體，並清理和保護您的裝置免受資料遺失或外洩。",
+        "獲取我們的超快速無限 VPN，支援最多 5 個位置，使用我們的私人 VPN 加密和保護您的連線。\n\n加密您的流量以防止在公共場所對您的連線進行外部監視，繞過地理限制並防止資料外洩。Internxt VPN 在線上瀏覽時提供完全的隱私保護。",
+        "Internxt Cleaner 透過從您的電腦中刪除垃圾或重複檔案來提升裝置效能和健康狀況。\n\n釋放儲存空間，提高裝置速度，並透過按一下按鈕刪除不需要的檔案來保護您的隱私。",
+        "Internxt Meet 提供由後量子密碼學提供支援的完全私密視訊通話，確保您的會議安全、保密且無追蹤器。\n\n在完全隱私的情況下與朋友、家人或團隊成員主持和加入視訊通話，無需外部公司監控您的聊天。",
+        "使用 Internxt Mail 起草、傳送和接收電子郵件，這是一個完全加密和私密的電子郵件，確保除您和您的聯絡人之外沒有人可以查看您的訊息。\n\n使用 Internxt Mail，我們保證除您之外沒有人可以存取您的訊息或附件，所有這些都透過後量子和零知識加密進行保護。",
+        "Internxt 可在 Windows、Mac、Linux 和行動裝置上使用，讓您可以從任何地方、任何裝置存取您的雲端，從而完全控制您的雲端儲存。\n\n對於進階使用者，Internxt 提供對 WebDAV、Rclone 和 NAS 的支援，提供在完全隱私的情況下管理檔案所需的一切。"
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "為什麼選擇 Internxt？",
+    "description": "我們提供這些 Internxt 優惠是為了讓您重新掌控自己的隱私。與傳統雲端儲存不同，我們確保只有您擁有加密資料的金鑰，我們不會將您的資料儲存或出售給第三方。我們採取一切措施確保您的資訊保持安全。",
+    "cta": "更好地了解我們",
+    "scrollableSection": {
+      "titles": ["無法破解且不可外洩的資料", "下一代安全", "開源且透明", "獨立驗證"],
+      "descriptions": [
+        "我們不儲存密碼或使用者資料，您的所有資料在傳輸和靜止狀態下都進行加密。Internxt 讓您完全控制您的檔案。您的資料是您的事。保護它是我們的事。",
+        "Internxt 是唯一使用端對端和後量子密碼學自動加密檔案的雲端儲存，這意味著只有您可以存取您的資料。",
+        "我們為自己所做的感到自豪，因此我們的程式碼在 GitHub 上公開，任何人都可以親自審查、稽核和驗證。我們除了您的資料之外沒有什麼可隱藏的。",
+        "我們完全符合 GDPR 且 100% 安全，但不要只相信我們的話。Internxt 已由歐洲領先的滲透測試公司 Securitum 進行獨立稽核和驗證。"
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "完全隱私享受 {{discount}}% 折扣",
+    "description": "透過 Internxt 獲得終身優惠",
+    "cta": "領取優惠"
+  },
+  "FaqSection": {
+    "title": "有問題嗎？我們有答案",
+    "faq": [
+      {
+        "question": "誰可以領取這些 Internxt 優惠？",
+        "answer": [
+          "這些 Internxt 優惠適用於新客戶或擁有免費帳戶的客戶，或希望以 {{discount}}% 的折扣升級其目前終身方案以存取我們新功能的客戶。"
+        ]
+      },
+      {
+        "question": "如果我已經有方案，還能使用 Internxt 優惠嗎？",
+        "answer": [
+          "如果您目前擁有終身方案並希望向目前帳戶新增儲存空間並存取高級或旗艦方案的功能，您可以使用此優惠升級您的帳戶。"
+        ]
+      },
+      {
+        "question": "我的優惠到期後會怎樣？",
+        "answer": [
+          "如果您使用 Internxt 優惠購買年度方案，這僅適用於第一年。第一年到期後，您的方案將自動以我們定價部分列出的全價續訂。",
+          "如果您想避免訂閱費用，您可以一次性付款購買終身方案，永遠不再付款，除非您選擇升級儲存空間。"
+        ]
+      },
+      {
+        "question": "以後如何升級或新增更多儲存空間？",
+        "answer": [
+          "是的，如果您擁有終身方案，您可以隨時累積或升級您的方案以獲得更多儲存空間。年度方案無法升級或新增更多儲存空間。請關注我們的網站以獲取最新的優惠券代碼和優惠。"
+        ]
+      },
+      {
+        "question": "我可以使用信用卡、PayPal 或加密貨幣付款嗎？",
+        "answer": [
+          "Internxt 目前接受金融卡和信用卡（萬事達卡、VISA、美國運通卡等）。您還可以透過 PayPal、加密貨幣付款，或使用 Klarna 分期支付您的終身方案。",
+          "如果您對付款方式有疑問，請傳送電子郵件至 hello@internxt.com"
+        ]
+      },
+      {
+        "question": "我可以分期支付終身付款嗎？",
+        "answer": ["是的，您現在可以使用 Klarna 將終身付款分成多次免息分期付款。享受終身方案，輕鬆分期付款！"]
+      },
+      {
+        "question": "Internxt 的退款政策是什麼？",
+        "answer": [
+          "Internxt 為所有付費訂閱提供標準的 30 天退款保證，從您訂閱之日起開始計算。",
+          "如果您對我們的服務不滿意，請透過 hello@internxt.com 聯絡我們並要求退款。"
+        ]
+      },
+      {
+        "question": "如何聯絡支援團隊？",
+        "answer": ["找不到您要找的內容？您可以透過線上聊天或傳送電子郵件至 hello@internxt.com 聯絡我們的技術支援團隊"]
+      }
+    ]
+  }
+}

@@ -1,10 +1,10 @@
-export interface FreeCloudPageText {
+export interface DealsPageText {
   HeroSection: HeroSection;
   ReviewSection: ReviewSection;
   MoreDealsSection: MoreDealsSection;
   tableSection: TableSection;
   CtaSection: CtaSection;
-  WhatsIncludedSection: CtaSection;
+  WhatsIncludedSection: WhatsIncludedSection;
   WhyChooseInternxtSection: CtaSection;
   CtaSectionV2: CtaSection;
   FaqSection: FAQSection;
@@ -14,11 +14,10 @@ export interface CtaSection {
   title: string;
   description: string;
   cta: string;
-  scrollableSection?: ScrollableSection;
+  scrollableSection?: CtaSectionScrollableSection;
 }
 
-export interface ScrollableSection {
-  imagesPathname?: string[];
+export interface CtaSectionScrollableSection {
   titles: string[];
   descriptions: string[];
 }
@@ -36,7 +35,7 @@ export interface FAQ {
 export interface HeroSection {
   products: Products;
   title: string;
-  description: string;
+  subtitle: string;
   features: string[];
   startFrom: StartFrom;
   claimDeal: string;
@@ -60,18 +59,30 @@ export interface StartFrom {
 export interface MoreDealsSection {
   title: string;
   description: string;
-  links: Link[];
+  cards: Cards;
 }
 
-export interface Link {
-  text: string;
-  url: string;
+export interface Cards {
+  card1: CtaSection;
+  card2: CtaSection;
 }
 
 export interface ReviewSection {
   pcMag: string;
   mashable: string;
   pcWorld: string;
+}
+
+export interface WhatsIncludedSection {
+  title: string;
+  description: string;
+  scrollableSection: WhatsIncludedSectionScrollableSection;
+}
+
+export interface WhatsIncludedSectionScrollableSection {
+  imagesPathname: string[];
+  titles: string[];
+  descriptions: string[];
 }
 
 export interface TableSection {

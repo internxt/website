@@ -8,8 +8,8 @@
       "meet": "Meet",
       "mail": "Mail"
     },
-    "title": "Internxt **free cloud storage** deals",
-    "subtitle": "Upgrade your privacy and save big with {{discount}}% off all plans",
+    "title": "The best Internxt cloud storage **lifetime deals**",
+    "subtitle": "{{discount}}% off all plans. One-time payment. Lifetime privacy",
     "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
     "startFrom": {
       "normal1": "Starting from ",
@@ -23,7 +23,6 @@
     "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
     "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
   },
-
   "MoreDealsSection": {
     "title": "More Internxt deals",
     "description": "Expand your protection with exclusive discounts across all Internxt products",
@@ -55,7 +54,7 @@
       }
     },
     "lifetimeDescription": "Pay once and enjoy privacy and security for life.",
-    "planDescription": "Internxt free cloud storage deals give the chance to upgrade to our fully featured award-winning privacy suite, consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Dark Web Monitor, Meet, and Mail.",
+    "planDescription": "Internxt cloud storage lifetime deals are fully featured with complete access to our award-winning privacy suite, consisting of Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet, and Mail.",
     "businessDescription": "We're currently working on new Internxt plans designed exclusively to defend your business, protect your employees, and secure your profitability.",
     "businessDescription2": "Ensure your company's data security with Internxt's encrypted cloud storage plans.",
     "billingFrequency": {
@@ -84,47 +83,48 @@
     }
   },
   "CtaSection": {
-    "title": "Upgrade your storage and privacy",
-    "description": "{{percentage}}% off all Internxt Plans",
+    "title": "Say goodbye to subscriptions",
+    "description": "Pay once, use forever for {{percentage}}% off",
     "cta": "Claim deal"
   },
   "WhatsIncludedSection": {
-    "title": "Free cloud storage deals to upgrade your storage",
+    "title": "The best cloud storage lifetime deals for full privacy online",
     "description": "Internxt protects your privacy rather than profits from it. Get the ultimate protection for your data online with secure cloud storage and more.",
     "scrollableSection": {
-      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "Terminal"],
-      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Advanced tools"],
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Advanced tools"],
       "descriptions": [
-        "Internxt Drive comes with post-quantum and zero-knowledge encryption, so nobody but you can access your files. Get encrypted cloud storage and backups for your photos, videos, and files. \n\n Plus, encrypted backups and password-protected file sharing offer maximum protection against ransomware and data breaches.",
-        "All paid plans also include Internxt Antivirus for increased protection against the increasing threats we face online. \n\n  Run full or custom scans from the Internxt app to defend against malware, phishing, and ransomware, and clean and protect your device from data loss or breaches.",
-        "Get our ultra-fast, unlimited VPN for up to 5 locations to encrypt and secure your connection with our private VPN. \n\n  Encrypt your traffic to prevent external spying on your connection in public spaces, bypass geographic restrictions, and prevent data leaks. Internxt VPN provides total privacy when surfing online.",
-        "Internxt Cleaner boosts your device performance and health by removing junk or duplicate files from your computer. \n\n   Free up storage, improve device speeds, and protect your privacy by deleting unwanted files with a click of a button.",
-        "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, confidential, and free from trackers. \n\n   Host and join video calls with friends, family, or teammates in complete privacy, free from external companies monitoring your chats.",
-        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device. \n\n  For advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
+        "Internxt Drive comes with post-quantum and zero-knowledge encryption, so nobody but you can access your files. Get encrypted cloud storage and backups for your photos, videos, and files.\n\nPlus, encrypted backups and password-protected file sharing offer maximum protection against ransomware and data breaches.",
+        "All paid plans also include Internxt Antivirus for increased protection against the increasing threats we face online.\n\nRun full or custom scans from the Internxt app to defend against malware, phishing, and ransomware, and clean and protect your device from data loss or breaches.",
+        "Get our ultra-fast, unlimited VPN for up to 5 locations to encrypt and secure your connection with our private VPN.\n\nEncrypt your traffic to prevent external spying on your connection in public spaces, bypass geographic restrictions, and prevent data leaks. Internxt VPN provides total privacy when surfing online.",
+        "Internxt Cleaner boosts your device performance and health by removing junk or duplicate files from your computer.\n\nFree up storage, improve device speeds, and protect your privacy by deleting unwanted files with a click of a button.",
+        "Internxt Meet offers fully private video calls powered by post-quantum cryptography, ensuring your meetings are secure, confidential, and free from trackers.\n\nHost and join video calls with friends, family, or teammates in complete privacy, free from external companies monitoring your chats.",
+        "Draft, send, and receive emails with Internxt Mail, a fully encrypted and private email to ensure nobody but you and your contacts can view your messages.\n\nWith Internxt Mail, we guarantee that nobody but you can access your messages or attachments, which are all secured with post-quantum and zero-knowledge encryption.",
+        "Available on Windows, Mac, Linux, and mobile, Internxt lets you take total control of your cloud storage by accessing your cloud from anywhere, on any device.\n\nFor advanced users, Internxt offers support for WebDAV, Rclone, and NAS, offering everything you need to manage your files in total privacy."
       ]
     }
   },
   "WhyChooseInternxtSection": {
-    "title": "Why choose Internxt's lifetime plans?",
-    "description": "Our free cloud storage deals give you back control of your privacy. If you have a free Internxt account or looking to upgrade, this is the deal for you. We ensure only you have the keys to your encrypted data, and we don't store or sell your data to third parties. We take every step to ensure your information remains secure.",
+    "title": "Why choose Internxt?",
+    "description": "We're offering these Internxt Deals to give you back control of your privacy. Unlike traditional cloud storage, we ensure only you have the keys to your encrypted data, and we don't store or sell your data to third parties. We take every step to ensure your information remains secure.",
     "cta": "Get to know us better",
     "scrollableSection": {
       "titles": [
-        "Upgrade your free storage",
         "Unhackable and unleakable data",
         "Next-generation security",
-        "Open source and transparent"
+        "Open source and transparent",
+        "Independently verified"
       ],
       "descriptions": [
-        "Free cloud storage deals often trade large amounts of free storage in exchange for your data. But with Internxt, you get zero-knowledge and post-quantum for all accounts. If you want the best package for your online privacy, upgrade your storage with Internxt for 87% off.",
-        "We don't store passwords or user data, and all of your data is encrypted in transit and at rest with post-quantum and zero-knowledge encryption. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
+        "We don't store passwords or user data, and all of your data is encrypted in transit and at rest. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
         "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
-        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
+        "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data.",
+        "We're wholly GDPR compliant and 100% safe, but don't take our word for it. Internxt has been independently audited and verified by Europe's leading penetration testing company, Securitum."
       ]
     }
   },
   "CtaSectionV2": {
-    "title": "Full privacy for 87% off",
+    "title": "Full privacy for {{discount}}% off",
     "description": "Get the deal of a lifetime with Internxt",
     "cta": "Claim deal"
   },
@@ -132,16 +132,15 @@
     "title": "Questions? We have answers",
     "faq": [
       {
-        "question": "Who can claim these free cloud storage deals?",
+        "question": "Who can claim these Internxt deals?",
         "answer": [
-          "These Internxt deals are for new customers or customers with a free account, or customers who wish to upgrade their current lifetime plan for 87% off to get access to our new features."
+          "These Internxt deals are for new customers or customers with a free account or customers who wish to upgrade their current lifetime plan for {{discount}}% off to get access to our new features."
         ]
       },
       {
         "question": "Can I use an Internxt deal if I already have a plan?",
         "answer": [
-          "If you currently have a free account with Internxt, you can upgrade this by selecting whichever plan suits you best.",
-          "If you have a lifetime plan and wish to stack storage to your current account and access the features of a Premium or Ultimate plan, you can use this deal to upgrade your account."
+          "If you currently have a lifetime plan and wish to stack storage to your current account and access the features of a Premium or Ultimate plan, you can use this deal to upgrade your account."
         ]
       },
       {
@@ -154,7 +153,7 @@
       {
         "question": "How can I upgrade or add more storage later?",
         "answer": [
-          "If you have a lifetime plan, you can stack or upgrade your plan anytime to get more storage. It is not possible to upgrade or add more storage for annual plans. Keep an eye out on our website for the latest coupon codes and offers."
+          "Yes, if you have a lifetime plan, you can stack or upgrade your plan anytime to get more storage. It is not possible to upgrade or add more storage for annual plans. Keep an eye out on our website for the latest coupon codes and offers."
         ]
       },
       {
@@ -167,7 +166,7 @@
       {
         "question": "Can I split my lifetime payment?",
         "answer": [
-          "Yes, you can now split your lifetime payments into multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
+          "Yes, you can now split your lifetime payments in multiple interest-free installments using Klarna. Enjoy a lifetime plan with the ease of paying for it in easy installments!"
         ]
       },
       {

@@ -18,6 +18,22 @@
     },
     "claimDeal": "Angebot sichern"
   },
+  "MoreDetailsSection": {
+    "title": "Weitere Internxt-Angebote",
+    "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
+    "cards": {
+      "card1": {
+        "title": "Alle Internxt Black Friday-Angebote 2025",
+        "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
+        "cta": "Alle Angebote ansehen"
+      },
+      "card2": {
+        "title": "Cloud-Speicher Black Friday-Angebote",
+        "description": "Sparen Sie bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
+        "cta": "Speicher-Angebote ansehen"
+      }
+    }
+  },
   "ReviewSection": {
     "pcMag": "\"Internxt ist im **Mega-Sale**, hat **hervorragende Nutzerbewertungen**, **End-to-End** und **Post-Quantum-Verschlüsselung**, und sie machen ihren Code komplett **Open Source** für totale Transparenz gegenüber ihren Kunden.\"",
     "mashable": "\"Nehmen Sie die **Sicherung Ihrer wichtigen Daten** mit Internxt **ernst**. Sie machen **Privatsphäre** zu ihrer **obersten Priorität**, sodass Sie beruhigt sein können, dass Ihre Dateien **sicher** sind und die Plattform **Transparenz** für ihre Nutzer schätzt.\"",

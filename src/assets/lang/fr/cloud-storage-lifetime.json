@@ -24,18 +24,20 @@
     "pcWorld": "\"L'**accès web intuitif**, la **synchronisation de fichiers** et les **services de sauvegarde** d'Internxt sont **impressionnants**. Ce service de stockage et de sauvegarde en ligne crypté est **facile**, couvre toutes les bases, et les **plans à vie** actuels sont une **aubaine**.\""
   },
   "MoreDealsSection": {
-    "title": "Plus d'offres de stockage cloud à vie",
-    "description": "Trouvez les bonnes offres pour répondre à vos besoins en stockage cloud et en confidentialité",
-    "links": [
-      {
-        "text": "Offres Internxt",
-        "url": "/deals"
+    "title": "Plus d'offres Internxt",
+    "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
+    "cards": {
+      "card1": {
+        "title": "Toutes les offres Internxt Black Friday 2025",
+        "description": "Découvrez toutes les offres sur nos outils de confidentialité et solutions de stockage",
+        "cta": "Voir toutes les offres"
       },
-      {
-        "text": "Offres de stockage cloud gratuit",
-        "url": "/deals"
+      "card2": {
+        "title": "Offres Black Friday stockage cloud",
+        "description": "Économisez sur le stockage cloud chiffré pour vos fichiers",
+        "cta": "Voir les offres de stockage"
       }
-    ]
+    }
   },
   "tableSection": {
     "title": "Plans Internxt",

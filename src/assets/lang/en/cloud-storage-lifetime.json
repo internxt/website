@@ -24,18 +24,20 @@
     "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
   },
   "MoreDealsSection": {
-    "title": "More cloud storage lifetime deals",
-    "description": "Find the right deals to meet your cloud storage and privacy needs",
-    "links": [
-      {
-        "text": "Internxt deals",
-        "url": "/deals"
+    "title": "More Internxt deals",
+    "description": "Expand your protection with exclusive discounts across all Internxt products",
+    "cards": {
+      "card1": {
+        "title": "All Internxt Black Friday deals 2025",
+        "description": "Discover all offers across our privacy tools and storage solutions",
+        "cta": "View all deals"
       },
-      {
-        "text": "Free cloud storage deals",
-        "url": "/deals"
+      "card2": {
+        "title": "Cloud storage Black Friday deals",
+        "description": "Save big on encrypted cloud storage for your files",
+        "cta": "See storage deals"
       }
-    ]
+    }
   },
   "tableSection": {
     "title": "Internxt Plans",

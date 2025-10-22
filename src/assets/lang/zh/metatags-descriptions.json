@@ -2,7 +2,7 @@
   {
     "id": "home",
     "title": "Internxt 终身计划 – 实惠安全的终身云存储",
-    "description": "Internxt 终身云存储。一次付费，获得 1TB、3TB 或 5TB 的安全云存储终身使用权。注册或升级到 Internxt 终身计划，享受终身隐私保护！"
+    "description": "捍卫隐私，切换到 Internxt。Internxt 的开源云存储服务保护您的隐私权。Internxt Drive、Meet、Mail、Antivirus、Cleaner、Send 等"
   },
   {
     "id": "drive",
@@ -331,8 +331,8 @@
     "description": "直接来自Internxt的免费云存储优惠，以87%的折扣升级您的计划，获得安全、加密的云存储等服务"
   },
   {
-    "id": "free-cloud-storage-lifetime-deals",
-    "title": "Internxt — Internxt 官方云存储终身优惠87%折扣",
-    "description": "从 Internxt 获得最佳的云存储终身优惠。一次性付款，永久享受私密加密云存储87%折扣。"
+    "id": "deals",
+    "title": "Internxt — Internxt 官方優惠，所有方案享受 87% 折扣",
+    "description": "領取您的專屬 87% 折扣。這些 Internxt 優惠包括私密加密雲端儲存等，價格無與倫比。"
   }
 ]

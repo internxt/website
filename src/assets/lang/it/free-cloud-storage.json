@@ -24,18 +24,20 @@
     "pcWorld": "\"L'**accesso web intuitivo**, la **sincronizzazione dei file** e i **servizi di backup** di Internxt sono **impressionanti**. Questo servizio di archiviazione e backup online crittografato è **facile**, copre tutte le basi, e gli attuali **piani a vita** sono un **affare**.\""
   },
   "MoreDealsSection": {
-    "title": "Altre offerte di cloud storage gratuito",
-    "description": "Trova le offerte giuste per soddisfare le tue esigenze di cloud storage e privacy",
-    "links": [
-      {
-        "text": "Offerte Internxt",
-        "url": "/deals"
+    "title": "Plus d'offres Internxt",
+    "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
+    "cards": {
+      "card1": {
+        "title": "Toutes les offres Internxt Black Friday 2025",
+        "description": "Découvrez toutes les offres sur nos outils de confidentialité et solutions de stockage",
+        "cta": "Voir toutes les offres"
       },
-      {
-        "text": "Offerte a vita di cloud storage",
-        "url": "/deals/cloud-storage-lifetime-deals"
+      "card2": {
+        "title": "Offres Black Friday stockage cloud",
+        "description": "Économisez sur le stockage cloud chiffré pour vos fichiers",
+        "cta": "Voir les offres de stockage"
       }
-    ]
+    }
   },
   "tableSection": {
     "title": "Piani Internxt",

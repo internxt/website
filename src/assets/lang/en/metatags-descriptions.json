@@ -2,7 +2,7 @@
   {
     "id": "home",
     "title": "Internxt — Say Hi to Privacy",
-    "description": "Stand for privacy, switch to Internxt. Internxt's open-source cloud storage services protect your right to privacy. Internxt Drive, Photos, Send, and more."
+    "description": "Stand for privacy, switch to Internxt. Internxt's open-source cloud storage services protect your right to privacy. Internxt Drive, Meet, Mail, Antivirus, Cleaner, Send, and more"
   },
   {
     "id": "business",
@@ -518,5 +518,10 @@
     "id": "free-cloud-storage-lifetime-deals",
     "title": "Internxt — Official Internxt Cloud Storage Lifetime Deals for 87%",
     "description": "Get the best cloud storage lifetime deals from Internxt. Pay once to get 87% off private, encrypted cloud storage, forever."
+  },
+  {
+    "id": "deals",
+    "title": "Internxt — Official Internxt Deals for 87% off All Plans",
+    "description": "Claim your exclusive 87% discount. These Internxt deals include private, encrypted cloud storage, and more at an unbeatable price."
   }
 ]

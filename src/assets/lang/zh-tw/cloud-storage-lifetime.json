@@ -24,18 +24,20 @@
     "pcWorld": "\"Internxt 的**直觀網頁存取**、**檔案同步**和**備份服務**令人**印象深刻**。這種加密的線上儲存和備份服務**簡單易用**，涵蓋所有基礎功能，目前的**終身方案**非常**划算**。\""
   },
   "MoreDealsSection": {
-    "title": "更多雲端儲存終身優惠",
-    "description": "找到滿足您雲端儲存和隱私需求的合適優惠",
-    "links": [
-      {
-        "text": "Internxt 優惠",
-        "url": "/deals"
+    "title": "更多 Internxt 优惠",
+    "description": "通过所有 Internxt 产品的独家折扣扩展您的保护",
+    "cards": {
+      "card1": {
+        "title": "所有 Internxt 2025 黑色星期五优惠",
+        "description": "探索我们隐私工具和存储解决方案的所有优惠",
+        "cta": "查看所有优惠"
       },
-      {
-        "text": "免費雲端儲存優惠",
-        "url": "/deals"
+      "card2": {
+        "title": "云存储黑色星期五优惠",
+        "description": "在加密云存储上节省大笔费用",
+        "cta": "查看存储优惠"
       }
-    ]
+    }
   },
   "tableSection": {
     "title": "Internxt 方案",
