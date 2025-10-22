@@ -25,7 +25,7 @@ interface MoreDealsSectionProps {
   percentOff: any;
 }
 
-const MoreDealsSection = ({ textContent, urls, darkMode = false, percentOff }: MoreDealsSectionProps) => {
+const MoreDealsSection = ({ textContent, urls, darkMode = true, percentOff }: MoreDealsSectionProps) => {
   const cards = [textContent.cards.card1, textContent.cards.card2];
   const urlsArray = [urls.card1, urls.card2];
   const parsePercentText = (text: string) => {
