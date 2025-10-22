@@ -16,6 +16,7 @@ import HorizontalScrollableSection from '../shared/HorizontalScrollableSection';
 import HorizontalScrollableSectionWithPhotosSection from '../coupons/HorizontalScrollableSectionWithPhotos';
 
 interface DealsConfig {
+  heroImage: string;
   metatagsId: string;
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;
@@ -83,7 +84,12 @@ const DealsTemplate = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection percentOff={percentOff} textContent={textContent.HeroSection} darkMode={false} />
+      <HeroSection
+        percentOff={percentOff}
+        textContent={textContent.HeroSection}
+        darkMode={false}
+        image={config.heroImage}
+      />
 
       <ReviewsSection textContent={textContent.ReviewSection} />
 

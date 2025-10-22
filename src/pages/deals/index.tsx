@@ -11,8 +11,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getDealsProps(
     ctx,
     {
-      heroImage: '/images/deals/free-cloud-storage.webp',
-      metatagsId: 'free-cloud-storage-deals',
+      heroImage: '/images/deals/deals-generic.webp',
+      metatagsId: 'free-cloud-storage-lifetime-deals',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
@@ -20,7 +20,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       hideBusinessSelector: true,
     },
     {
-      jsonFileName: 'free-cloud-storage',
+      jsonFileName: 'cloud-storage-lifetime',
     },
   );
 }

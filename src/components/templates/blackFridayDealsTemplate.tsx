@@ -15,6 +15,7 @@ import HeroSection from '@/components/deals/HeroSection';
 import HorizontalScrollableSection from '@/components/black-friday/HorziontalScrollableSection';
 
 interface BlackFridayDealConfig {
+  heroImage: string;
   metatagsId: string;
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;
@@ -76,7 +77,7 @@ const BlackFridayDealsTemplate = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} image={config.heroImage} />
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
 

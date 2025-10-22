@@ -8,12 +8,14 @@ interface HeroSectionDealsProps {
   textContent: any;
   percentOff: string;
   darkMode?: boolean;
+  image: string;
 }
 
 export default function HeroSection({
   textContent,
   percentOff,
   darkMode = true,
+  image,
 }: Readonly<HeroSectionDealsProps>): JSX.Element {
   const products = [
     {
@@ -131,7 +133,7 @@ export default function HeroSection({
 
       <div className="hidden w-full justify-end lg:flex">
         <Image
-          src={getImage('/images/black-friday/hero.webp')}
+          src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
           height={700}
           width={722}
@@ -142,7 +144,7 @@ export default function HeroSection({
 
       <div className="flex w-max items-center justify-center lg:hidden">
         <Image
-          src={getImage('/images/black-friday/hero.webp')}
+          src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
           height={400}
           width={400}

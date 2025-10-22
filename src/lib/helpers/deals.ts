@@ -3,6 +3,7 @@ import { PromoCodeName } from '@/lib/types';
 import cookies from '@/lib/cookies';
 
 interface DealConfig {
+  heroImage: string;
   metatagsId: string;
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;

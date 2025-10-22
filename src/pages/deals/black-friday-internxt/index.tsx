@@ -11,6 +11,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getDealsProps(
     ctx,
     {
+      heroImage: '/images/black-friday/bf-general.webp',
       metatagsId: 'black-friday',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,

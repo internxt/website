@@ -11,6 +11,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
   return getDealsProps(
     ctx,
     {
+      heroImage: '/images/deals/cloud-storage-lifetime.webp',
       metatagsId: 'free-cloud-storage-lifetime-deals',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,
