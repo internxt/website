@@ -35,6 +35,22 @@
       "透過Internxt的90%黑色星期五折扣，獲得最佳的線上隱私和安全。"
     ]
   },
+  "MoreDealsSection": {
+    "title": "更多 Internxt 优惠",
+    "description": "通过所有 Internxt 产品的独家折扣扩展您的保护",
+    "cards": {
+      "card1": {
+        "title": "所有 Internxt 2025 黑色星期五优惠",
+        "description": "探索我们隐私工具和存储解决方案的所有优惠",
+        "cta": "查看所有优惠"
+      },
+      "card2": {
+        "title": "云存储黑色星期五优惠",
+        "description": "在加密云存储上节省大笔费用",
+        "cta": "查看存储优惠"
+      }
+    }
+  },
   "TableSection": {
     "title": "您的一體化隱私助手",
     "hotLabel": "{{discount}}%折扣",
