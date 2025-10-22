@@ -38,10 +38,14 @@ const MoreDealsSection = ({ textContent, urls, darkMode = true, percentOff }: Mo
   return (
     <section
       className={`flex w-full flex-col items-center justify-center gap-8 overflow-hidden py-10 lg:gap-16 lg:py-20 xl:px-32 3xl:px-80 ${
-        darkMode ? 'bg-[#1C1C1C]' : undefined
+        darkMode ? 'bg-[#1C1C1C]' : 'bg-[#F4F8FF]'
       }`}
-      style={{ background: darkMode ? '' : 'linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)' }}
     >
+      <div
+        className={`absolute left-8 right-8 top-0 h-[1px] ${
+          darkMode ? 'bg-gray-71' : 'bg-neutral-35'
+        } lg:bottom-0 lg:left-32 lg:right-32`}
+      ></div>
       <div className="flex flex-col items-center gap-6 px-6 text-center">
         <h2 className={`text-30 font-bold lg:text-3xl ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
           {textContent.title}
