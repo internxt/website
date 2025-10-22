@@ -81,7 +81,9 @@ const DealsTemplate = ({
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replace(/{{percentage}}/g, percentOff) : text;
+    return typeof text === 'string'
+      ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
+      : text;
   };
   return (
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
@@ -114,7 +116,12 @@ const DealsTemplate = ({
         backgroundGradientColor="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
       />
 
-      <MoreDealsSection textContent={textContent.MoreDealsSection} urls={config.moreDealsUrls} darkMode={false} />
+      <MoreDealsSection
+        textContent={textContent.MoreDealsSection}
+        urls={config.moreDealsUrls}
+        darkMode={false}
+        percentOff={percentOff}
+      />
 
       <FloatingCtaSectionv2
         textContent={textContent.CtaSection}
@@ -131,7 +138,7 @@ const DealsTemplate = ({
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="py-8 lg:py-14"
+        bgPadding="pb-8 lg:py-14"
       />
 
       <HorizontalScrollableSection
@@ -155,7 +162,7 @@ const DealsTemplate = ({
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientColor="linear-gradient(180deg, #F4F8FF 0%, #FFFFFF 100%)"
-        bgPadding="py-14"
+        bgPadding="pb-8 lg:py-14"
       />
 
       <FAQSection textContent={textContent.FaqSection} />
