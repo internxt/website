@@ -23,19 +23,19 @@
     "mashable": "\"Ve **en serio** con **asegurar tus datos importantes** con Internxt. Hacen de la **privacidad** su **máxima preocupación**, para que puedas descansar tranquilo sabiendo que tus archivos están **seguros** y la plataforma valora la **transparencia** para sus usuarios.\"",
     "pcWorld": "\"El **acceso web intuitivo**, **sincronización de archivos** y **servicios de respaldo** de Internxt son **impresionantes**. Este servicio de almacenamiento y respaldo en línea cifrado es **fácil**, cubre todas las bases, y los **planes de por vida** actuales son una **ganga**.\""
   },
-  "MoreDetailsSection": {
+  "MoreDealsSection": {
     "title": "Más ofertas de Internxt",
     "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
     "cards": {
       "card1": {
-        "title": "Todas las ofertas Black Friday de Internxt 2025",
+        "title": "Ofertas de Internxt — ahorra un {{discount}}% en todos los planes",
         "description": "Descubre todas las ofertas en nuestras herramientas de privacidad y soluciones de almacenamiento",
         "cta": "Ver todas las ofertas"
       },
       "card2": {
-        "title": "Ofertas Black Friday de almacenamiento en la nube",
-        "description": "Ahorra en almacenamiento en la nube cifrado para tus archivos",
-        "cta": "Ver ofertas de almacenamiento"
+        "title": "Ofertas de almacenamiento en la nube de por vida",
+        "description": "Paga una vez y posee tu almacenamiento seguro para siempre con un {{discount}}% de descuento",
+        "cta": "Obtener oferta de por vida"
       }
     }
   },

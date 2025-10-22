@@ -25,17 +25,17 @@
   },
   "MoreDealsSection": {
     "title": "Altre offerte Internxt",
-    "description": "Amplia la tua protezione con sconti esclusivi su tutti i prodotti Internxt",
+    "description": "Trova sconti esclusivi su soluzioni di archiviazione cloud sicura per ogni esigenza",
     "cards": {
       "card1": {
-        "title": "Tutte le offerte Black Friday Internxt 2025",
-        "description": "Scopri tutte le offerte sui nostri strumenti per la privacy e soluzioni di archiviazione",
-        "cta": "Vedi tutte le offerte"
+        "title": "Offerte di archiviazione cloud gratuita",
+        "description": "Inizia con archiviazione crittografata gratuita e aggiorna con fino al {{discount}}% di sconto",
+        "cta": "Esplora offerte gratuite"
       },
       "card2": {
-        "title": "Offerte Black Friday per il cloud storage",
-        "description": "Risparmia tantissimo sul cloud storage crittografato per i tuoi file",
-        "cta": "Vedi le offerte di archiviazione"
+        "title": "Offerte di archiviazione cloud a vita",
+        "description": "Paga una volta e possiedi il tuo spazio sicuro per sempre con il {{discount}}% di sconto",
+        "cta": "Ottieni offerta a vita"
       }
     }
   },
@@ -124,7 +124,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Privacy totale per {{discount}}% di sconto",
+    "title": "Privacy totale per {{percentage}}% di sconto",
     "description": "Ottieni l'offerta della tua vita con Internxt",
     "cta": "Richiedi l'offerta"
   },

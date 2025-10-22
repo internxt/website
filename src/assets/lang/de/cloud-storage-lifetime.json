@@ -23,36 +23,23 @@
     "mashable": "\"Nehmen Sie den **Schutz Ihrer wichtigen Daten** mit Internxt **ernst**. Sie machen **Privatsphäre** zu ihrer **obersten Priorität**, damit Sie sich entspannen können, weil Sie wissen, dass Ihre Dateien **sicher** sind und die Plattform **Transparenz** für ihre Nutzer schätzt.\"",
     "pcWorld": "\"Internxts **intuitiver Web-Zugang**, **Dateisynchronisierung** und **Backup-Services** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Service ist **einfach**, deckt alle Grundlagen ab, und die aktuellen **Lifetime-Pläne** sind ein **Schnäppchen**.\""
   },
-  "MoreDetailsSection": {
+  "MoreDealsSection": {
     "title": "Weitere Internxt-Angebote",
     "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
     "cards": {
       "card1": {
-        "title": "Alle Internxt Black Friday-Angebote 2025",
-        "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
+        "title": "Internxt-Angebote — {{discount}}% Rabatt auf alle Tarife",
+        "description": "Entdecken Sie exklusive Rabatte auf alle Internxt-Apps und -Dienste",
         "cta": "Alle Angebote ansehen"
       },
       "card2": {
-        "title": "Cloud-Speicher Black Friday-Angebote",
-        "description": "Sparen Sie bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
+        "title": "Kostenlose Cloud-Speicher-Angebote",
+        "description": "Starten Sie mit kostenlosem verschlüsseltem Speicher und upgraden Sie mit bis zu {{discount}}% Rabatt",
         "cta": "Speicher-Angebote ansehen"
       }
     }
   },
-  "MoreDealsSection": {
-    "title": "Weitere Cloud-Speicher Lifetime-Angebote",
-    "description": "Finden Sie die richtigen Angebote für Ihre Cloud-Speicher- und Datenschutzbedürfnisse",
-    "links": [
-      {
-        "text": "Internxt Angebote",
-        "url": "/deals"
-      },
-      {
-        "text": "Kostenlose Cloud-Speicher-Angebote",
-        "url": "/deals"
-      }
-    ]
-  },
+
   "tableSection": {
     "title": "Internxt Pläne",
     "hotLabel": "{{discount}}% Rabatt",
@@ -138,7 +125,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Vollständige Privatsphäre für 87% Rabatt",
+    "title": "Vollständige Privatsphäre für {{percentage}}% Rabatt",
     "description": "Holen Sie sich das Angebot Ihres Lebens mit Internxt",
     "cta": "Angebot sichern"
   },

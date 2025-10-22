@@ -25,17 +25,17 @@
   },
   "MoreDealsSection": {
     "title": "更多 Internxt 優惠",
-    "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
+    "description": "為各種需求尋找安全雲端儲存解決方案的獨家折扣",
     "cards": {
       "card1": {
-        "title": "所有 Internxt 黑色星期五優惠 2025",
-        "description": "探索我們隱私工具和儲存解決方案的所有優惠",
-        "cta": "查看所有優惠"
+        "title": "免費雲端儲存優惠",
+        "description": "從免費加密儲存開始，升級可享受高達 {{discount}}% 的折扣",
+        "cta": "探索免費優惠"
       },
       "card2": {
-        "title": "雲端儲存黑色星期五優惠",
-        "description": "在加密雲端儲存上節省大筆費用",
-        "cta": "查看儲存優惠"
+        "title": "終身雲端儲存優惠",
+        "description": "一次付費，永久擁有安全儲存空間，享受 {{discount}}% 折扣",
+        "cta": "獲取終身優惠"
       }
     }
   },
@@ -119,7 +119,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "完全隱私享受 {{discount}}% 折扣",
+    "title": "完全隱私享受 {{percentage}}% 折扣",
     "description": "透過 Internxt 獲得終身優惠",
     "cta": "領取優惠"
   },

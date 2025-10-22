@@ -25,17 +25,17 @@
   },
   "MoreDealsSection": {
     "title": "Más ofertas de Internxt",
-    "description": "Amplía tu protección con descuentos exclusivos en todos los productos de Internxt",
+    "description": "Encuentra descuentos exclusivos en soluciones de almacenamiento en la nube seguro para cada necesidad",
     "cards": {
       "card1": {
-        "title": "Todas las ofertas del Black Friday de Internxt 2025",
-        "description": "Descubre todas las ofertas en nuestras herramientas de privacidad y soluciones de almacenamiento",
-        "cta": "Ver todas las ofertas"
+        "title": "Ofertas de almacenamiento en la nube gratuito",
+        "description": "Comienza con almacenamiento cifrado gratuito y mejora con hasta un {{discount}}% de descuento",
+        "cta": "Explorar ofertas gratuitas"
       },
       "card2": {
-        "title": "Ofertas de Black Friday en almacenamiento en la nube",
-        "description": "Ahorra en grande en almacenamiento en la nube encriptado para tus archivos",
-        "cta": "Ver ofertas de almacenamiento"
+        "title": "Ofertas de almacenamiento en la nube de por vida",
+        "description": "Paga una vez y posee tu almacenamiento seguro para siempre con un {{discount}}% de descuento",
+        "cta": "Obtener oferta de por vida"
       }
     }
   },
@@ -124,7 +124,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Privacidad total por {{discount}}% de descuento",
+    "title": "Privacidad total por {{percentage}}% de descuento",
     "description": "Obtén la oferta de tu vida con Internxt",
     "cta": "Reclamar oferta"
   },

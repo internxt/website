@@ -28,14 +28,14 @@
     "description": "透過所有 Internxt 產品的獨家折扣擴展您的保護",
     "cards": {
       "card1": {
-        "title": "所有 Internxt 2025 黑色星期五優惠",
-        "description": "探索我們隱私工具和儲存解決方案的所有優惠",
-        "cta": "查看所有優惠"
+        "title": "Internxt 优惠 — 所有套餐节省 {{discount}}%",
+        "description": "探索我们隐私工具和存储解决方案的所有优惠",
+        "cta": "查看所有优惠"
       },
       "card2": {
-        "title": "雲端儲存黑色星期五優惠",
-        "description": "在加密雲端儲存上節省大筆費用",
-        "cta": "查看儲存優惠"
+        "title": "终身云存储优惠",
+        "description": "一次付费，永久拥有安全存储空间，享受 {{discount}}% 折扣",
+        "cta": "获取终身优惠"
       }
     }
   },

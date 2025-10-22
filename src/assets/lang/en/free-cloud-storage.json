@@ -23,20 +23,19 @@
     "mashable": "\"Get **serious** about **securing your important data** with Internxt. They make **privacy** their **top concern**, so you can rest easy knowing your files are **safe** and the platform values **transparency** for its users.\"",
     "pcWorld": "\"Internxt's **intuitively web access**, **file sync**, and **backup services** are **impressive**. This encrypted online storage and backup service is **easy**, covers all the bases, and the current **lifetime plans** are a **steal**.\""
   },
-
   "MoreDealsSection": {
     "title": "More Internxt deals",
     "description": "Expand your protection with exclusive discounts across all Internxt products",
     "cards": {
       "card1": {
-        "title": "All Internxt Black Friday deals 2025",
+        "title": "Internxt deals — save {{discount}}% on all plans",
         "description": "Discover all offers across our privacy tools and storage solutions",
         "cta": "View all deals"
       },
       "card2": {
-        "title": "Cloud storage Black Friday deals",
-        "description": "Save big on encrypted cloud storage for your files",
-        "cta": "See storage deals"
+        "title": "Lifetime Cloud Storage Offers",
+        "description": "Pay once and own your secure storage forever with {{discount}}% off",
+        "cta": "Get lifetime deal"
       }
     }
   },
@@ -116,7 +115,7 @@
         "Open source and transparent"
       ],
       "descriptions": [
-        "Free cloud storage deals often trade large amounts of free storage in exchange for your data. But with Internxt, you get zero-knowledge and post-quantum for all accounts. If you want the best package for your online privacy, upgrade your storage with Internxt for 87% off.",
+        "Free cloud storage deals often trade large amounts of free storage in exchange for your data. But with Internxt, you get zero-knowledge and post-quantum for all accounts. If you want the best package for your online privacy, upgrade your storage with Internxt for {{discount}}% off.",
         "We don't store passwords or user data, and all of your data is encrypted in transit and at rest with post-quantum and zero-knowledge encryption. Internxt puts you in full control of your files. Your data is your business. Protecting it is ours.",
         "Internxt is the only cloud storage that automatically encrypts your files using end-to-end and post-quantum cryptography, meaning only you can access your data.",
         "We are proud of what we do, so our code is made public on GitHub and can be personally reviewed, audited, and verified by anyone. We have nothing to hide but your data."
@@ -124,7 +123,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Full privacy for 87% off",
+    "title": "Full privacy for {{discount}}% off",
     "description": "Get the deal of a lifetime with Internxt",
     "cta": "Claim deal"
   },

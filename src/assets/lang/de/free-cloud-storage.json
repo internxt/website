@@ -18,19 +18,19 @@
     },
     "claimDeal": "Angebot sichern"
   },
-  "MoreDetailsSection": {
+  "MoreDealsSection": {
     "title": "Weitere Internxt-Angebote",
     "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
     "cards": {
       "card1": {
-        "title": "Alle Internxt Black Friday-Angebote 2025",
+        "title": "Internxt-Angebote — {{discount}}% Rabatt auf alle Tarife",
         "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
         "cta": "Alle Angebote ansehen"
       },
       "card2": {
-        "title": "Cloud-Speicher Black Friday-Angebote",
-        "description": "Sparen Sie bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
-        "cta": "Speicher-Angebote ansehen"
+        "title": "Lebenslange Cloud-Speicher-Angebote",
+        "description": "Einmal zahlen und Ihren sicheren Speicher für immer besitzen mit {{discount}}% Rabatt",
+        "cta": "Lebenslange Angebote sichern"
       }
     }
   },
@@ -39,20 +39,7 @@
     "mashable": "\"Nehmen Sie die **Sicherung Ihrer wichtigen Daten** mit Internxt **ernst**. Sie machen **Privatsphäre** zu ihrer **obersten Priorität**, sodass Sie beruhigt sein können, dass Ihre Dateien **sicher** sind und die Plattform **Transparenz** für ihre Nutzer schätzt.\"",
     "pcWorld": "\"Internxts **intuitiver Webzugriff**, **Dateisynchronisierung** und **Backup-Dienste** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Dienst ist **einfach**, deckt alle Grundlagen ab, und die aktuellen **Lifetime-Tarife** sind ein **Schnäppchen**.\""
   },
-  "MoreDealsSection": {
-    "title": "Weitere kostenlose Cloud-Speicher-Angebote",
-    "description": "Finden Sie die richtigen Angebote für Ihre Cloud-Speicher- und Datenschutzbedürfnisse",
-    "links": [
-      {
-        "text": "Internxt-Angebote",
-        "url": "/deals"
-      },
-      {
-        "text": "Cloud-Speicher Lifetime-Angebote",
-        "url": "/deals/cloud-storage-lifetime-deals"
-      }
-    ]
-  },
+
   "tableSection": {
     "title": "Internxt Tarife",
     "hotLabel": "{{discount}}% Rabatt",

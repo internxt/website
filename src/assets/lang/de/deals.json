@@ -25,17 +25,17 @@
   },
   "MoreDealsSection": {
     "title": "Weitere Internxt-Angebote",
-    "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
+    "description": "Finden Sie exklusive Rabatte auf sichere Cloud-Speicherlösungen für jeden Bedarf",
     "cards": {
       "card1": {
-        "title": "Alle Internxt Black Friday Angebote 2025",
-        "description": "Entdecken Sie alle Angebote für unsere Datenschutz-Tools und Speicherlösungen",
-        "cta": "Alle Angebote ansehen"
+        "title": "Kostenlose Cloud-Speicher-Angebote",
+        "description": "Starten Sie mit kostenlosem verschlüsseltem Speicher und upgraden Sie mit bis zu {{discount}}% Rabatt",
+        "cta": "Kostenlose Angebote entdecken"
       },
       "card2": {
-        "title": "Cloud-Speicher Black Friday Angebote",
-        "description": "Sparen Sie viel bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
-        "cta": "Speicher-Angebote ansehen"
+        "title": "Lebenslange Cloud-Speicher-Angebote",
+        "description": "Einmal zahlen und Ihren sicheren Speicher für immer besitzen mit {{discount}}% Rabatt",
+        "cta": "Lebenslange Angebote sichern"
       }
     }
   },
@@ -124,7 +124,7 @@
     }
   },
   "CtaSectionV2": {
-    "title": "Vollständiger Datenschutz für {{discount}}% Rabatt",
+    "title": "Vollständiger Datenschutz für {{percentage}}% Rabatt",
     "description": "Holen Sie sich das Angebot Ihres Lebens mit Internxt",
     "cta": "Angebot sichern"
   },
