@@ -36,7 +36,7 @@ export const getBlackFridayDealProps = async (
   return {
     props: {
       lang,
-      metatagsDescriptions
+      metatagsDescriptions,
       textContent,
       navbarLang,
       footerLang,
