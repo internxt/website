@@ -22,6 +22,10 @@ interface BlackFridayDealConfig {
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;
+  moreDealsUrls: {
+    card1: string;
+    card2: string;
+  };
 }
 
 interface BlackFridayDealsTemplateProps {
@@ -119,7 +123,7 @@ const BlackFridayDealsTemplate = ({
         bgPadding="lg:py-10 pb-10 bg-[#1C1C1C]"
       />
 
-      <MoreDealsSection textContent={textContent.MoreDealsSection} darkMode />
+      <MoreDealsSection textContent={textContent.MoreDealsSection} urls={config.moreDealsUrls} darkMode />
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
 

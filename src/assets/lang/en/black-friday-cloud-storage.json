@@ -105,6 +105,22 @@
       ]
     }
   },
+  "MoreDealsSection": {
+    "title": "More Internxt deals",
+    "description": "Expand your protection with exclusive discounts across all Internxt products",
+    "cards": {
+      "card1": {
+        "title": "All Internxt Black Friday deals 2025",
+        "description": "Discover all offers across our privacy tools and storage solutions",
+        "cta": "View all deals"
+      },
+      "card2": {
+        "title": "Cloud storage Black Friday deals",
+        "description": "Save big on encrypted cloud storage for your files",
+        "cta": "See storage deals"
+      }
+    }
+  },
   "CtaSectionV2": {
     "title": "The best Black Friday deals",
     "description": "90% off all plans",

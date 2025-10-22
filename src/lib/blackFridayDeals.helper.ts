@@ -9,6 +9,10 @@ interface DealConfig {
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;
+  moreDealsUrls: {
+    card1: string;
+    card2: string;
+  };
 }
 
 interface DealContent {
@@ -36,7 +40,12 @@ export const getBlackFridayDealProps = async (
       textContent,
       navbarLang,
       footerLang,
-      config,
+      config: {
+        ...config,
+        moreDealsUrls: {
+          ...config.moreDealsUrls,
+        },
+      },
     },
   };
 };

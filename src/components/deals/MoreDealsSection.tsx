@@ -9,25 +9,24 @@ interface MoreDealsSectionProps {
         title: string;
         description: string;
         cta: string;
-        url?: string;
       };
       card2: {
         title: string;
         description: string;
         cta: string;
-        url?: string;
       };
     };
+  };
+  urls: {
+    card1: string;
+    card2: string;
   };
   darkMode?: boolean;
 }
 
-const MoreDealsSection = ({ textContent, darkMode = false }: MoreDealsSectionProps) => {
+const MoreDealsSection = ({ textContent, urls, darkMode = false }: MoreDealsSectionProps) => {
   const cards = [textContent.cards.card1, textContent.cards.card2];
-
-  const handleCardClick = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  };
+  const urlsArray = [urls.card1, urls.card2];
 
   return (
     <section
@@ -41,20 +40,18 @@ const MoreDealsSection = ({ textContent, darkMode = false }: MoreDealsSectionPro
         </h2>
         <p className="text-sm font-normal text-white-95 lg:text-lg">{textContent.description}</p>
       </div>
-
       <div className="flex w-full flex-row items-stretch justify-center gap-8">
         {cards.map((card, index) => (
           <div key={index} className="flex w-full max-w-[50%] flex-1 flex-col gap-8 rounded-16 bg-gray-105 p-8">
             <h3 className="text-xl font-medium text-white-95">{card.title}</h3>
             <p className="flex-grow text-base font-normal text-green-120">{card.description}</p>
-            <button
-              onClick={() => handleCardClick(card.url || 'https://internxt.com/privacy/')}
+            <a
+              href={urlsArray[index]}
               className="flex w-max cursor-pointer flex-row items-center gap-1 text-base font-normal leading-tight text-primary hover:text-primary-dark hover:underline"
-              type="button"
             >
               {card.cta}
               <CaretRight className="pt-[2px] text-primary" size={24} />
-            </button>
+            </a>
           </div>
         ))}
       </div>

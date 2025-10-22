@@ -84,6 +84,22 @@
       ]
     }
   },
+  "MoreDealsSection": {
+    "title": "Altre offerte Internxt",
+    "description": "Amplia la tua protezione con sconti esclusivi su tutti i prodotti Internxt",
+    "cards": {
+      "card1": {
+        "title": "Tutte le offerte Internxt Black Friday 2025",
+        "description": "Scopri tutte le offerte sui nostri strumenti per la privacy e soluzioni di archiviazione",
+        "cta": "Visualizza tutte le offerte"
+      },
+      "card2": {
+        "title": "Offerte Black Friday archiviazione cloud",
+        "description": "Risparmia sull'archiviazione cloud crittografata per i tuoi file",
+        "cta": "Vedi offerte archiviazione"
+      }
+    }
+  },
   "CtaSection": {
     "title": "Sblocca enormi risparmi del Black Friday",
     "description": "90% di sconto su TUTTI i nostri piani premium",
