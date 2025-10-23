@@ -2,14 +2,15 @@ import { getImage } from '@/lib/getImage';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 import { useRef, useState, useEffect } from 'react';
 import Image from 'next/image';
-import { CouponPageText } from '@/assets/types/couponsPage';
 
 interface HorizontalScrollableSectionWithPhotosProps {
-  textContent: CouponPageText['WhatsIncludedSection'];
+  textContent: any;
+  bgColor?: any;
 }
 
 export default function HorizontalScrollableSectionWithPhotosSection({
   textContent,
+  bgColor,
 }: HorizontalScrollableSectionWithPhotosProps): JSX.Element {
   const cardTitles = textContent?.scrollableSection.titles ?? [];
   const cardDescriptions = textContent?.scrollableSection.descriptions ?? [];
@@ -21,8 +22,9 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   const cardWidth = 350;
   const mobileCardWidth = 345;
   const gap = 24;
+  const mobileGap = 64;
   const scrollAmount = cardWidth + gap;
-  const mobileScrollAmount = mobileCardWidth + gap;
+  const mobileScrollAmount = mobileCardWidth + mobileGap;
 
   useEffect(() => {
     const checkIsMobile = () => {
@@ -88,7 +90,9 @@ export default function HorizontalScrollableSectionWithPhotosSection({
   return (
     <section
       className="flex h-min w-full flex-col items-center justify-center gap-8 py-10 lg:h-min lg:gap-16 lg:py-20"
-      style={{ background: 'linear-gradient(360deg, #F4F8FF 0%, #FFFFFF 100%)' }}
+      style={{
+        background: bgColor ? '' : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:w-[850px]">
         <p className="text-30 font-bold leading-tight text-gray-95 lg:text-3xl">{textContent.title}</p>
@@ -99,7 +103,7 @@ export default function HorizontalScrollableSectionWithPhotosSection({
         <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
-          className="w-full overflow-x-auto px-5 lg:px-20 [&::-webkit-scrollbar]:hidden"
+          className="w-full overflow-x-auto lg:px-20 [&::-webkit-scrollbar]:hidden"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
@@ -107,15 +111,15 @@ export default function HorizontalScrollableSectionWithPhotosSection({
           }}
         >
           <div
-            className="flex gap-4 px-4 lg:gap-6 lg:pl-32 lg:pr-64 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
+            className="flex gap-4 pr-20 lg:gap-6 lg:pl-32 lg:pr-64 1.5xl:pl-48 1.5xl:pr-64 2xl:pl-60 2xl:pr-72"
             style={{
               width: 'max-content',
               alignItems: 'stretch',
             }}
           >
             {cardTitles.map((title: string, index: number) => (
-              <div key={title} className="flex flex-shrink-0 flex-col items-center justify-between">
-                <div className="flex h-min w-[345px] flex-col pb-8 pt-6 lg:w-[350px]">
+              <div key={title} className="flex-1 flex-shrink-0 flex-col items-center justify-between">
+                <div className="flex h-min w-[345px] flex-col px-6 pb-2 pt-6 lg:w-[350px] lg:px-0 lg:pb-8">
                   <p className="pb-6 text-xl font-medium text-gray-95">{title}</p>
                   <p className="flex flex-1 whitespace-pre-line text-base font-normal leading-tight text-gray-55">
                     {cardDescriptions[index]}

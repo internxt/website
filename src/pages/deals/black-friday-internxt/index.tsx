@@ -1,6 +1,5 @@
 import { GetServerSidePropsContext } from 'next';
-
-import { getBlackFridayDealProps } from '@/lib/blackFridayDeals.helper';
+import { getDealsProps } from '@/lib/helpers/deals';
 import { PromoCodeName } from '@/lib/types';
 import BlackFridayDealsTemplate from '../../../components/templates/blackFridayDealsTemplate';
 
@@ -9,15 +8,20 @@ const BlackFridayPage = (props) => {
 };
 
 export async function getServerSideProps(ctx: GetServerSidePropsContext) {
-  return getBlackFridayDealProps(
+  return getDealsProps(
     ctx,
     {
+      heroImage: '/images/black-friday/bf-general.webp',
       metatagsId: 'black-friday',
       couponCode: PromoCodeName.BlackFriday,
       couponCodeForLifetime: PromoCodeName.BlackFriday,
       popularPlanSize: '5TB',
       hideBusinessCards: true,
       hideBusinessSelector: true,
+      moreDealsUrls: {
+        card1: 'black-friday-internxt/bf-cloud-storage-deals',
+        card2: '/deals/black-friday-internxt',
+      },
     },
     {
       jsonFileName: 'black-friday',

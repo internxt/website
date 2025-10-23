@@ -3,14 +3,20 @@ import { getImage } from '@/lib/getImage';
 import { CellTower, Check, CloudArrowUp, Envelope, ShieldPlus, Sparkle, VideoConference } from '@phosphor-icons/react';
 import Link from 'next/link';
 import { HighlightText } from '../components/HighlightText';
-import { BlackFridayText } from '@/assets/types/blackFriday';
 
-interface HeroSectionBlackFridayProps {
-  textContent: BlackFridayText['HeroSection'];
+interface HeroSectionDealsProps {
+  textContent: any;
   percentOff: string;
+  darkMode?: boolean;
+  image: string;
 }
 
-export default function HeroSection({ textContent, percentOff }: Readonly<HeroSectionBlackFridayProps>): JSX.Element {
+export default function HeroSection({
+  textContent,
+  percentOff,
+  darkMode = true,
+  image,
+}: Readonly<HeroSectionDealsProps>): JSX.Element {
   const products = [
     {
       icon: CloudArrowUp,
@@ -42,45 +48,79 @@ export default function HeroSection({ textContent, percentOff }: Readonly<HeroSe
     if (!percentOff || percentOff === '0') {
       return <div className="bg-gray-200 h-4 w-16 animate-pulse rounded"></div>;
     }
-    return typeof text === 'string' ? text.replace(/{{discount}}/g, percentOff) : text;
+    return typeof text === 'string'
+      ? text.replace(/{{percentage}}/g, percentOff).replace(/{{discount}}/g, percentOff)
+      : text;
   };
 
   return (
     <section
       className={`mt-8 flex h-min w-full flex-col items-center justify-center gap-8 overflow-hidden pb-10 pt-20 lg:mt-16 lg:flex-row lg:justify-between lg:gap-12 lg:pl-10 xl:pl-32 3xl:pl-80`}
-      style={{ background: 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)' }}
+      style={{
+        background: darkMode
+          ? 'linear-gradient(180deg, #082D66 0%, #1C1C1C 100%)'
+          : 'linear-gradient(180deg, #E5EFFF 0%, #FFFFFF 100%)',
+      }}
     >
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-[566px] lg:justify-between">
         <div className="flex w-full flex-wrap items-start justify-start gap-2 lg:flex-nowrap lg:justify-between">
           {products.map((feature, index) => (
             <div
               key={index}
-              className="flex h-6 w-min flex-row items-center justify-center gap-1 rounded bg-white/10 px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1"
+              className={`flex h-6 w-min flex-row items-center justify-center gap-1 rounded px-1 py-0.5 shadow-sm lg:h-8 lg:px-2 lg:py-1 ${
+                darkMode ? 'bg-white/10' : 'bg-white/50'
+              }`}
             >
               <feature.icon className="h-5 w-5 text-primary lg:h-6 lg:w-6" />
-              <p className="whitespace-nowrap text-sm font-medium leading-tight text-neutral-37">{feature.text}</p>
+              <p
+                className={`whitespace-nowrap text-sm font-medium leading-tight ${
+                  darkMode ? 'text-neutral-37' : 'text-gray-80'
+                }`}
+              >
+                {feature.text}
+              </p>
             </div>
           ))}
         </div>
 
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <p className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
-              <HighlightText text={textContent.title} className="text-white-95" />
-            </p>
-            <p className="font-regular flex text-lg leading-tight text-gray-1 lg:w-[600px] lg:text-2xl">
-              {textContent.subtitle}
-            </p>
+            <h1
+              className={`w-full text-30 font-semibold leading-tight lg:text-3xl ${
+                darkMode ? 'text-gray-100' : 'text-gray-100'
+              }`}
+            >
+              <HighlightText text={textContent.title} className={darkMode ? 'text-white-95' : ''} />
+            </h1>
+            <h2
+              className={`font-regularflex text-lg leading-tight lg:w-[600px] lg:text-2xl ${
+                darkMode ? 'text-gray-1' : 'text-gray-100'
+              }`}
+            >
+              {parsePercentText(textContent.subtitle)}
+            </h2>
           </div>
-          <span className="flex w-min flex-nowrap items-center gap-1 whitespace-nowrap rounded-2 text-base font-semibold leading-tight text-gray-100 lg:text-xl">
-            <p className="bg-purple-100 px-1 py-0.5 text-purple-8 ">{parsePercentText(textContent.description)}</p>
-          </span>
+          {textContent.description && (
+            <span
+              className={`flex w-full flex-nowrap items-center gap-1 rounded-2 text-base font-semibold leading-tight lg:w-min lg:whitespace-nowrap lg:text-xl ${
+                darkMode ? 'text-gray-100' : 'text-gray-100'
+              }`}
+            >
+              <p className={`px-1 py-0.5 ${darkMode ? 'bg-purple-100 text-purple-8' : 'bg-neutral-37 text-primary'}`}>
+                {parsePercentText(textContent.description)}
+              </p>
+            </span>
+          )}
           <div className="flex flex-col justify-center gap-1 lg:gap-2">
             {textContent.features.map((feat) => (
               <div key={feat} className="flex h-[24px] flex-row items-center gap-2 ">
                 <Check className="hidden text-green-1 xs-md:block" weight="bold" size={24} />
                 <Check className="block text-green-1 xs-md:hidden" weight="bold" size={20} />
-                <p className="text-left text-sm font-semibold text-gray-1 lg:text-lg ">{feat}</p>
+                <p
+                  className={`text-left text-sm font-semibold lg:text-lg ${darkMode ? 'text-gray-1' : 'text-gray-100'}`}
+                >
+                  {feat}
+                </p>
               </div>
             ))}
           </div>
@@ -95,7 +135,7 @@ export default function HeroSection({ textContent, percentOff }: Readonly<HeroSe
 
       <div className="hidden w-full justify-end lg:flex">
         <Image
-          src={getImage('/images/black-friday/hero.webp')}
+          src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
           height={700}
           width={722}
@@ -106,7 +146,7 @@ export default function HeroSection({ textContent, percentOff }: Readonly<HeroSe
 
       <div className="flex w-max items-center justify-center lg:hidden">
         <Image
-          src={getImage('/images/black-friday/hero.webp')}
+          src={getImage(image)}
           alt="DriveWeb DarkMode image desktop"
           height={400}
           width={400}

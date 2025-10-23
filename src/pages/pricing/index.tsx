@@ -47,7 +47,6 @@ const Pricing = ({ metatagsDescriptions, navbarLang, footerLang, lang, textConte
   const [pageName, setPageName] = useState('Pricing Individuals Annually');
   const [isBusiness, setIsBusiness] = useState<boolean>(false);
 
-  // Elevar el estado de billing al componente padre
   const {
     activeSwitchPlan,
     activeStoragePlan,

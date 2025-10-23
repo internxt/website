@@ -136,7 +136,7 @@ export default function HorizontalScrollableSection({
             }}
           >
             {textContent.scrollableSection.titles.map((title: string, index: number) => (
-              <div key={index} className="flex-shrink-0">
+              <div key={index} className="flex flex-shrink-0">
                 <div
                   ref={(el) => (cardRefs.current[index] = el)}
                   className="flex flex-col rounded-xl bg-white p-6 lg:rounded-16 lg:p-8"
