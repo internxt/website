@@ -1,6 +1,7 @@
 export interface BlackFridayText {
   HeroSection: HeroSection;
   DontMissSection: DontMissSection;
+  MoreDealsSection: MoreDealsSection;
   TableSection: TableSection;
   WhyChooseSection: WhyChooseSection;
   CtaSection: CtaSection;
@@ -60,6 +61,17 @@ export interface ScrollableSection {
   descriptions: string[];
 }
 
+export interface MoreDealsSection {
+  title: string;
+  description: string;
+  cards: Cards;
+}
+
+export interface Cards {
+  card1: CtaSection;
+  card2: CtaSection;
+}
+
 export interface TableSection {
   title: string;
   hotLabel: string;
@@ -96,15 +108,8 @@ export interface PlanStorage {
 export interface PlanTitles {
   header: string;
   individuals: string;
-  homePage: string;
   lifetime: string;
   business: string;
-  lifetimeCampaign: LifetimeCampaign;
-}
-
-export interface LifetimeCampaign {
-  blueText: string;
-  normalText: string;
 }
 
 export interface WhyChooseSection {

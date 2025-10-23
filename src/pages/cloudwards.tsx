@@ -64,7 +64,12 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="Affiliates" lang={lang}>
       <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} cloudWards />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        percentOff={percentOff}
+        cloudWards
+        image={'internxt-private-cloud'}
+      />
 
       <ReviewsSection textContent={langJson.ReviewSection} />
 
@@ -107,7 +112,11 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} />
+      <TrustedSection
+        textContent={langJson.TrustedBySection}
+        bottomBar={false}
+        image="/images/home/NewDesign/mauricio-hoody-techbg.webp"
+      />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
@@ -124,7 +133,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:pb-20 pb-10"
+        bgPadding="lg:py-20 pb-10"
         bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
       />
 

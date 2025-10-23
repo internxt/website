@@ -2,7 +2,7 @@
   {
     "id": "home",
     "title": "Internxt – Pásate a un internet más Ético y Seguro",
-    "description": "La misión de Internxt es proteger los datos del usuario, siendo la plataforma de almacenamiento en la nube más segura del mundo."
+    "description": "Defiende la privacidad, cámbiate a Internxt. Los servicios de almacenamiento en la nube de código abierto de Internxt protegen tu derecho a la privacidad. Internxt Drive, Meet, Mail, Antivirus, Cleaner, Send y más"
   },
   {
     "id": "drive",
@@ -96,7 +96,7 @@
   },
   {
     "id": "black-friday-cloud-storage",
-    "title": "Internxt — Oferta Black Friday 2025",
+    "title": "Internxt — Oferta Black Friday Almacenamiento en la Nube 2025",
     "description": "Black Friday Internxt 2025 — 90% de descuento en almacenamiento en la nube, Antivirus, Limpiador, VPN, Meet y Mail."
   },
   {
@@ -403,5 +403,20 @@
     "id": "coupons",
     "title": "Internxt — Descuentos, Cupones y Promociones",
     "description": "Defiende la privacidad, cámbiate a Internxt. Los servicios de almacenamiento en la nube de código abierto de Internxt protegen tu derecho a la privacidad. Internxt Drive, Photos, Send y más."
+  },
+  {
+    "id": "free-cloud-storage-deals",
+    "title": "Internxt — Ofertas de Almacenamiento en la Nube Gratuito",
+    "description": "Ofertas de almacenamiento en la nube gratuito directamente de Internxt para mejorar tu plan con un 87% de descuento en almacenamiento en la nube seguro y encriptado y más"
+  },
+  {
+    "id": "free-cloud-storage-lifetime-deals",
+    "title": "Internxt — Ofertas Oficiales de Almacenamiento en la Nube de por Vida de Internxt con 87% de Descuento",
+    "description": "Obtén las mejores ofertas de almacenamiento en la nube de por vida de Internxt. Paga una vez y obtén 87% de descuento en almacenamiento en la nube privado y encriptado, para siempre."
+  },
+  {
+    "id": "deals",
+    "title": "Internxt — Ofertas oficiales de Internxt con 87% de descuento en todos los planes",
+    "description": "Reclama tu descuento exclusivo del 87%. Estas ofertas de Internxt incluyen almacenamiento en la nube privado y encriptado, y más a un precio inmejorable."
   }
 ]

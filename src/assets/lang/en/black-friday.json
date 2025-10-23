@@ -96,7 +96,22 @@
     "description": "90% off all plans",
     "cta": "Claim deal"
   },
-
+  "MoreDealsSection": {
+    "title": "More Internxt deals",
+    "description": "Expand your protection with exclusive discounts across all Internxt products",
+    "cards": {
+      "card1": {
+        "title": "Cloud storage Black Friday deals",
+        "description": "Save big on encrypted cloud storage for your files",
+        "cta": "See storage deals"
+      },
+      "card2": {
+        "title": "Personal cloud storage Black Friday offers",
+        "description": "Exclusive discounts for individuals and personal plans",
+        "cta": "View personal deals"
+      }
+    }
+  },
   "FaqSection": {
     "title": "Questions? We have answers",
     "faq": [

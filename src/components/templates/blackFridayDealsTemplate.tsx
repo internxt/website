@@ -11,16 +11,22 @@ import { BlackFridayText } from '@/assets/types/blackFriday';
 import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import ThreeCardsSection from '@/components/shared/sections/ThreeCardsSection';
 import TitleAndDescriptionSection from '@/components/shared/components/TitleAndDescriptionSection';
-import HeroSection from '@/components/black-friday/HeroSection';
 import HorizontalScrollableSection from '@/components/black-friday/HorziontalScrollableSection';
+import HeroSection from '../deals/HeroSection';
+import MoreDealsSection from '../black-friday/MoreDealsSection';
 
 interface BlackFridayDealConfig {
+  heroImage: string;
   metatagsId: string;
   couponCode: PromoCodeName;
   couponCodeForLifetime: PromoCodeName;
   popularPlanSize?: string;
   hideBusinessCards?: boolean;
   hideBusinessSelector?: boolean;
+  moreDealsUrls: {
+    card1: string;
+    card2: string;
+  };
 }
 
 interface BlackFridayDealsTemplateProps {
@@ -76,7 +82,7 @@ const BlackFridayDealsTemplate = ({
     <Layout title={metatags[0].title} description={metatags[0].description} segmentName="BlackFridayDeals" lang={lang}>
       <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
-      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} />
+      <HeroSection textContent={textContent.HeroSection} percentOff={percentOff} darkMode image={config.heroImage} />
 
       <TitleAndDescriptionSection textContent={textContent.DontMissSection} darkMode />
 
@@ -105,9 +111,9 @@ const BlackFridayDealsTemplate = ({
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
+            <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
               {textContent.CtaSection.title}
-            </p>
+            </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSection.description}
             </p>
@@ -120,14 +126,20 @@ const BlackFridayDealsTemplate = ({
 
       <HorizontalScrollableSection textContent={textContent.HorizontalScrollableSection} />
 
+      <MoreDealsSection
+        textContent={textContent.MoreDealsSection}
+        urls={config.moreDealsUrls}
+        percentOff={percentOff}
+      />
+
       <FloatingCtaSectionv2
         textContent={textContent.CtaSectionV2}
         url={'#billingButtons'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
+            <h2 className="text-2xl font-semibold leading-tight text-white lg:text-4xl">
               {textContent.CtaSectionV2.title}
-            </p>
+            </h2>
             <p className="text-base font-normal leading-tight text-white lg:w-[633px] lg:text-center lg:text-xl">
               {textContent.CtaSectionV2.description}
             </p>

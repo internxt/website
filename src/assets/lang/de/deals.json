@@ -1,0 +1,187 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Die besten **Lifetime-Angebote** für Internxt Cloud-Speicher",
+    "subtitle": "{{discount}}% Rabatt auf alle Pläne. Einmalige Zahlung. Datenschutz auf Lebenszeit",
+    "features": ["Komplette Datenschutz-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "startFrom": {
+      "normal1": "Ab ",
+      "price": "{{minimumPrice}}",
+      "normal2": " /Monat"
+    },
+    "claimDeal": "Angebot sichern"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt hat einen **Mega-Sale**, hat **hervorragende Nutzerbewertungen**, **End-to-End-** und **Post-Quanten-Verschlüsselung**, und sie machen ihren Code komplett **Open Source** für totale Transparenz gegenüber ihren Kunden.\"",
+    "mashable": "\"Nehmen Sie den **Schutz Ihrer wichtigen Daten** **ernst** mit Internxt. Sie machen **Datenschutz** zu ihrer **obersten Priorität**, damit Sie beruhigt sein können, dass Ihre Dateien **sicher** sind und die Plattform **Transparenz** für ihre Nutzer schätzt.\"",
+    "pcWorld": "\"Internxts **intuitiver Web-Zugang**, **Dateisynchronisierung** und **Backup-Dienste** sind **beeindruckend**. Dieser verschlüsselte Online-Speicher- und Backup-Service ist **einfach**, deckt alle Bereiche ab, und die aktuellen **Lifetime-Pläne** sind ein **Schnäppchen**.\""
+  },
+  "MoreDealsSection": {
+    "title": "Weitere Internxt-Angebote",
+    "description": "Finden Sie exklusive Rabatte auf sichere Cloud-Speicherlösungen für jeden Bedarf",
+    "cards": {
+      "card1": {
+        "title": "Kostenlose Cloud-Speicher-Angebote",
+        "description": "Starten Sie mit kostenlosem verschlüsseltem Speicher und upgraden Sie mit bis zu {{discount}}% Rabatt",
+        "cta": "Kostenlose Angebote entdecken"
+      },
+      "card2": {
+        "title": "Lebenslange Cloud-Speicher-Angebote",
+        "description": "Einmal zahlen und Ihren sicheren Speicher für immer besitzen mit {{discount}}% Rabatt",
+        "cta": "Lebenslange Angebote sichern"
+      }
+    }
+  },
+  "tableSection": {
+    "title": "Internxt-Pläne",
+    "hotLabel": "{{discount}}% Rabatt",
+    "planTitles": {
+      "header": "Ihr All-in-One-Datenschutz-Partner",
+      "individuals": "Jahrespläne",
+      "homePage": "Wählen Sie den richtigen Plan für sich",
+      "lifetime": "Lifetime-Pläne",
+      "business": "Business-Pläne",
+      "lifetimeCampaign": {
+        "blueText": "50% Rabatt",
+        "normalText": "auf alle unsere exklusiven Lifetime-Pläne"
+      }
+    },
+    "lifetimeDescription": "Einmal zahlen und Datenschutz und Sicherheit auf Lebenszeit genießen.",
+    "planDescription": "Die Internxt Cloud-Speicher Lifetime-Angebote sind vollständig ausgestattet mit komplettem Zugang zu unserer preisgekrönten Datenschutz-Suite, bestehend aus Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet und Mail.",
+    "businessDescription": "Wir arbeiten derzeit an neuen Internxt-Plänen, die exklusiv entwickelt wurden, um Ihr Unternehmen zu schützen, Ihre Mitarbeiter zu sichern und Ihre Rentabilität zu gewährleisten.",
+    "businessDescription2": "Sichern Sie die Daten Ihres Unternehmens mit Internxts verschlüsselten Cloud-Speicher-Plänen.",
+    "billingFrequency": {
+      "monthly": "Monatlich",
+      "annually": "Jährlich",
+      "lifetime": "Lebenslang",
+      "individual": "Individuell",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Kostenlos",
+      "description": "Erhalten Sie 1 GB verschlüsselten Cloud-Speicher kostenlos",
+      "cta": "Plan auswählen"
+    },
+    "features": {
+      "endToEnd": "End-to-End-Verschlüsselung",
+      "openSource": "Open Source und geprüft",
+      "anonymousAccount": "Anonyme Kontoerstellung",
+      "premiumSupport": "Premium-Kundensupport",
+      "guarantee": "30-Tage-Geld-zurück-Garantie"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "Verabschieden Sie sich von Abonnements",
+    "description": "Einmal zahlen, für immer nutzen mit {{percentage}}% Rabatt",
+    "cta": "Angebot sichern"
+  },
+  "WhatsIncludedSection": {
+    "title": "Die besten Cloud-Speicher Lifetime-Angebote für vollständigen Online-Datenschutz",
+    "description": "Internxt schützt Ihre Privatsphäre, anstatt davon zu profitieren. Erhalten Sie den ultimativen Schutz für Ihre Daten online mit sicherem Cloud-Speicher und mehr.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Erweiterte Tools"],
+      "descriptions": [
+        "Internxt Drive verfügt über Post-Quanten- und Zero-Knowledge-Verschlüsselung, sodass niemand außer Ihnen auf Ihre Dateien zugreifen kann. Erhalten Sie verschlüsselten Cloud-Speicher und Backups für Ihre Fotos, Videos und Dateien.\n\nDarüber hinaus bieten verschlüsselte Backups und passwortgeschütztes Datei-Sharing maximalen Schutz vor Ransomware und Datenlecks.",
+        "Alle kostenpflichtigen Pläne beinhalten auch Internxt Antivirus für erhöhten Schutz gegen die zunehmenden Bedrohungen, denen wir online begegnen.\n\nFühren Sie vollständige oder benutzerdefinierte Scans von der Internxt-App aus durch, um sich gegen Malware, Phishing und Ransomware zu verteidigen und Ihr Gerät vor Datenverlust oder -lecks zu bereinigen und zu schützen.",
+        "Erhalten Sie unser ultraschnelles, unbegrenztes VPN für bis zu 5 Standorte, um Ihre Verbindung mit unserem privaten VPN zu verschlüsseln und zu sichern.\n\nVerschlüsseln Sie Ihren Datenverkehr, um externe Überwachung Ihrer Verbindung in öffentlichen Bereichen zu verhindern, geografische Beschränkungen zu umgehen und Datenlecks zu vermeiden. Internxt VPN bietet totale Privatsphäre beim Surfen im Internet.",
+        "Internxt Cleaner verbessert die Leistung und Gesundheit Ihres Geräts, indem es Junk- oder doppelte Dateien von Ihrem Computer entfernt.\n\nSchaffen Sie Speicherplatz, verbessern Sie die Gerätegeschwindigkeit und schützen Sie Ihre Privatsphäre, indem Sie unerwünschte Dateien mit einem Klick löschen.",
+        "Internxt Meet bietet vollständig private Videoanrufe, die durch Post-Quanten-Kryptographie gesichert sind und sicherstellen, dass Ihre Meetings sicher, vertraulich und frei von Trackern sind.\n\nVeranstalten Sie und nehmen Sie an Videoanrufen mit Freunden, Familie oder Teammitgliedern in vollständiger Privatsphäre teil, ohne dass externe Unternehmen Ihre Chats überwachen.",
+        "Verfassen, senden und empfangen Sie E-Mails mit Internxt Mail, einer vollständig verschlüsselten und privaten E-Mail, um sicherzustellen, dass niemand außer Ihnen und Ihren Kontakten Ihre Nachrichten sehen kann.\n\nMit Internxt Mail garantieren wir, dass niemand außer Ihnen auf Ihre Nachrichten oder Anhänge zugreifen kann, die alle mit Post-Quanten- und Zero-Knowledge-Verschlüsselung gesichert sind.",
+        "Verfügbar unter Windows, Mac, Linux und Mobilgeräten ermöglicht Ihnen Internxt die vollständige Kontrolle über Ihren Cloud-Speicher, indem Sie von überall und auf jedem Gerät auf Ihre Cloud zugreifen können.\n\nFür fortgeschrittene Benutzer bietet Internxt Unterstützung für WebDAV, Rclone und NAS und bietet alles, was Sie brauchen, um Ihre Dateien in vollständiger Privatsphäre zu verwalten."
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Warum Internxt wählen?",
+    "description": "Wir bieten diese Internxt-Angebote an, um Ihnen die Kontrolle über Ihre Privatsphäre zurückzugeben. Im Gegensatz zu traditionellem Cloud-Speicher stellen wir sicher, dass nur Sie die Schlüssel zu Ihren verschlüsselten Daten haben, und wir speichern oder verkaufen Ihre Daten nicht an Dritte. Wir unternehmen jeden Schritt, um sicherzustellen, dass Ihre Informationen sicher bleiben.",
+    "cta": "Lernen Sie uns besser kennen",
+    "scrollableSection": {
+      "titles": [
+        "Unhackbare und unknackbare Daten",
+        "Sicherheit der nächsten Generation",
+        "Open Source und transparent",
+        "Unabhängig verifiziert"
+      ],
+      "descriptions": [
+        "Wir speichern keine Passwörter oder Benutzerdaten, und alle Ihre Daten sind während der Übertragung und im Ruhezustand verschlüsselt. Internxt gibt Ihnen die volle Kontrolle über Ihre Dateien. Ihre Daten sind Ihre Sache. Sie zu schützen ist unsere.",
+        "Internxt ist der einzige Cloud-Speicher, der Ihre Dateien automatisch mit End-to-End- und Post-Quanten-Kryptographie verschlüsselt, was bedeutet, dass nur Sie auf Ihre Daten zugreifen können.",
+        "Wir sind stolz auf das, was wir tun, daher ist unser Code auf GitHub öffentlich und kann von jedem persönlich überprüft, geprüft und verifiziert werden. Wir haben nichts zu verbergen außer Ihren Daten.",
+        "Wir sind vollständig DSGVO-konform und zu 100% sicher, aber verlassen Sie sich nicht nur auf unser Wort. Internxt wurde unabhängig geprüft und verifiziert von Europas führendem Penetrationstestunternehmen Securitum."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Vollständiger Datenschutz für {{percentage}}% Rabatt",
+    "description": "Holen Sie sich das Angebot Ihres Lebens mit Internxt",
+    "cta": "Angebot sichern"
+  },
+  "FaqSection": {
+    "title": "Fragen? Wir haben Antworten",
+    "faq": [
+      {
+        "question": "Wer kann diese Internxt-Angebote in Anspruch nehmen?",
+        "answer": [
+          "Diese Internxt-Angebote sind für Neukunden oder Kunden mit einem kostenlosen Konto oder Kunden, die ihren aktuellen Lifetime-Plan für {{discount}}% Rabatt upgraden möchten, um Zugang zu unseren neuen Funktionen zu erhalten."
+        ]
+      },
+      {
+        "question": "Kann ich ein Internxt-Angebot nutzen, wenn ich bereits einen Plan habe?",
+        "answer": [
+          "Wenn Sie derzeit einen Lifetime-Plan haben und Speicherplatz zu Ihrem aktuellen Konto hinzufügen und auf die Funktionen eines Premium- oder Ultimate-Plans zugreifen möchten, können Sie dieses Angebot nutzen, um Ihr Konto zu upgraden."
+        ]
+      },
+      {
+        "question": "Was passiert, wenn mein Angebot abläuft?",
+        "answer": [
+          "Wenn Sie einen Jahresplan mit Ihrem Internxt-Angebot kaufen, gilt dies nur für das erste Jahr. Sobald Ihr erstes Jahr abläuft, wird Ihr Plan automatisch zum vollen Preis verlängert, der in unserem Preisbereich aufgeführt ist.",
+          "Wenn Sie Abonnementgebühren vermeiden möchten, können Sie einen Lifetime-Plan mit einer einmaligen Zahlung erwerben und nie wieder zahlen, es sei denn, Sie entscheiden sich, Ihren Speicher zu upgraden."
+        ]
+      },
+      {
+        "question": "Wie kann ich später upgraden oder mehr Speicherplatz hinzufügen?",
+        "answer": [
+          "Ja, wenn Sie einen Lifetime-Plan haben, können Sie Ihren Plan jederzeit stapeln oder upgraden, um mehr Speicherplatz zu erhalten. Es ist nicht möglich, bei Jahresplänen zu upgraden oder mehr Speicherplatz hinzuzufügen. Halten Sie Ausschau auf unserer Website nach den neuesten Gutscheincodes und Angeboten."
+        ]
+      },
+      {
+        "question": "Kann ich mit Kreditkarte, PayPal oder Kryptowährung bezahlen?",
+        "answer": [
+          "Internxt akzeptiert derzeit Debit- und Kreditkarten (Mastercard, VISA, American Express usw.). Sie können auch über PayPal, Kryptowährung bezahlen oder die Zahlung Ihres Lifetime-Plans mit Klarna aufteilen.",
+          "Wenn Sie Fragen zu Zahlungsmethoden haben, senden Sie uns einfach eine E-Mail an hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Kann ich meine Lifetime-Zahlung aufteilen?",
+        "answer": [
+          "Ja, Sie können Ihre Lifetime-Zahlungen jetzt in mehrere zinsfreie Raten mit Klarna aufteilen. Genießen Sie einen Lifetime-Plan mit der Leichtigkeit, ihn in bequemen Raten zu bezahlen!"
+        ]
+      },
+      {
+        "question": "Was ist Internxts Rückerstattungsrichtlinie?",
+        "answer": [
+          "Internxt bietet eine standardmäßige 30-Tage-Geld-zurück-Garantie für alle kostenpflichtigen Abonnements, die ab dem Zeitpunkt Ihrer Anmeldung zu zählen beginnt.",
+          "Und wenn Sie jemals mit unserem Service unzufrieden sind, kontaktieren Sie uns unter hello@internxt.com und fordern Sie eine Rückerstattung an."
+        ]
+      },
+      {
+        "question": "Wie kann ich den Support kontaktieren?",
+        "answer": [
+          "Können Sie nicht finden, was Sie suchen? Sie können unser technisches Support-Team über Live-Chat kontaktieren oder eine E-Mail an hello@internxt.com senden"
+        ]
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@
   {
     "id": "home",
     "title": "Plans à vie Internxt – Stockage cloud à vie abordable et sécurisé",
-    "description": "Stockage cloud à vie d'Internxt. Payez une fois et obtenez 1TB, 3TB ou 5TB de stockage cloud sécurisé à vie. Inscrivez-vous ou passez à un plan à vie Internxt pour une confidentialité à vie !"
+    "description": "Défendez la confidentialité, passez à Internxt. Les services de stockage cloud open source d'Internxt protègent votre droit à la vie privée. Internxt Drive, Meet, Mail, Antivirus, Cleaner, Send et plus encore"
   },
   {
     "id": "drive",
@@ -91,7 +91,7 @@
   },
   {
     "id": "black-friday-cloud-storage",
-    "title": "Internxt — Offre Black Friday 2025",
+    "title": "Internxt — Offre Black Friday Stockage Cloud 2025",
     "description": "Black Friday Internxt 2025 — 90% de réduction sur le stockage cloud, Antivirus, Cleaner, VPN, Meet et Mail."
   },
   {
@@ -303,5 +303,20 @@
     "id": "coupons",
     "title": "Internxt — Réductions, Coupons et Promotions",
     "description": "Défendez la vie privée, passez à Internxt. Les services de stockage cloud open source d'Internxt protègent votre droit à la vie privée. Internxt Drive, Photos, Send et plus encore."
+  },
+  {
+    "id": "free-cloud-storage-deals",
+    "title": "Internxt — Offres de Stockage Cloud Gratuit",
+    "description": "Offres de stockage cloud gratuit directement d'Internxt pour améliorer votre forfait avec 87% de réduction sur le stockage cloud sécurisé et chiffré et plus encore"
+  },
+  {
+    "id": "free-cloud-storage-lifetime-deals",
+    "title": "Internxt — Offres Officielles de Stockage Cloud à Vie Internxt avec 87% de Réduction",
+    "description": "Obtenez les meilleures offres de stockage cloud à vie d'Internxt. Payez une fois pour obtenir 87% de réduction sur le stockage cloud privé et chiffré, pour toujours."
+  },
+  {
+    "id": "deals",
+    "title": "Internxt — Offres officielles Internxt avec 87% de réduction sur tous les forfaits",
+    "description": "Profitez de votre réduction exclusive de 87%. Ces offres Internxt incluent un stockage cloud privé et chiffré, et plus encore à un prix imbattable."
   }
 ]

@@ -14,6 +14,22 @@
     "features": ["Private digitale Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
     "claimDeal": "Angebot sichern"
   },
+  "MoreDetailsSection": {
+    "title": "Weitere Internxt-Angebote",
+    "description": "Erweitern Sie Ihren Schutz mit exklusiven Rabatten auf alle Internxt-Produkte",
+    "cards": {
+      "card1": {
+        "title": "Cloud-Speicher Black Friday Angebote",
+        "description": "Sparen Sie bei verschlüsseltem Cloud-Speicher für Ihre Dateien",
+        "cta": "Speicher-Angebote ansehen"
+      },
+      "card2": {
+        "title": "Persönlicher Cloud-Speicher Black Friday Angebote",
+        "description": "Exklusive Rabatte für Einzelpersonen und persönliche Tarife",
+        "cta": "Persönliche Angebote ansehen"
+      }
+    }
+  },
   "DontMissSection": {
     "title": "Verpassen Sie nicht Ihr Black Friday Angebot!",
     "description": [

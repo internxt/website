@@ -2,7 +2,7 @@
   {
     "id": "home",
     "title": "Internxt Lebenslange Pläne – Erschwingliche und sichere lebenslange Cloud-Speicherung",
-    "description": "Lebenslange Cloud-Speicherung von Internxt. Einmal zahlen und 1TB, 3TB oder 5TB sicheren Cloud-Speicher auf Lebenszeit erhalten. Registrieren Sie sich oder upgraden Sie zu einem lebenslangen Internxt-Plan für lebenslange Privatsphäre!"
+    "description": "Setzen Sie sich für Privatsphäre ein, wechseln Sie zu Internxt. Internxts Open-Source-Cloud-Speicherdienste schützen Ihr Recht auf Privatsphäre. Internxt Drive, Meet, Mail, Antivirus, Cleaner, Send und mehr"
   },
   {
     "id": "what-google-knows",
@@ -111,7 +111,7 @@
   },
   {
     "id": "black-friday-cloud-storage",
-    "title": "Internxt — Black Friday Angebot 2025",
+    "title": "Internxt — Black Friday Angebot Cloud-Speicher 2025",
     "description": "Black Friday Internxt 2025 — 90% Rabatt auf Cloud-Speicher, Antivirus, Cleaner, VPN, Meet und Mail."
   },
   {
@@ -314,5 +314,20 @@
     "id": "coupons",
     "title": "Internxt — Rabatte, Gutscheine und Aktionen",
     "description": "Setzen Sie sich für Privatsphäre ein, wechseln Sie zu Internxt. Die Open-Source-Cloud-Speicherdienste von Internxt schützen Ihr Recht auf Privatsphäre. Internxt Drive, Photos, Send und mehr."
+  },
+  {
+    "id": "free-cloud-storage-deals",
+    "title": "Internxt — Kostenlose Cloud-Speicher-Angebote",
+    "description": "Kostenlose Cloud-Speicher-Angebote direkt von Internxt, um Ihren Tarif mit 87% Rabatt auf sicheren, verschlüsselten Cloud-Speicher und mehr zu upgraden"
+  },
+  {
+    "id": "free-cloud-storage-lifetime-deals",
+    "title": "Internxt — Offizielle Internxt Cloud-Speicher Lifetime-Angebote mit 87% Rabatt",
+    "description": "Holen Sie sich die besten Cloud-Speicher Lifetime-Angebote von Internxt. Zahlen Sie einmal und erhalten Sie 87% Rabatt auf privaten, verschlüsselten Cloud-Speicher, für immer."
+  },
+  {
+    "id": "deals",
+    "title": "Internxt — Offizielle Internxt-Angebote mit 87% Rabatt auf alle Pläne",
+    "description": "Sichern Sie sich Ihren exklusiven Rabatt von 87%. Diese Internxt-Angebote umfassen privaten, verschlüsselten Cloud-Speicher und mehr zu einem unschlagbaren Preis."
   }
 ]

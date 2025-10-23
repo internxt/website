@@ -1,0 +1,187 @@
+{
+  "HeroSection": {
+    "products": {
+      "drive": "Drive",
+      "antivirus": "Antivirus",
+      "cleaner": "Cleaner",
+      "vpn": "VPN",
+      "meet": "Meet",
+      "mail": "Mail"
+    },
+    "title": "Les meilleures offres de stockage cloud Internxt **à vie**",
+    "subtitle": "{{discount}}% de réduction sur tous les plans. Paiement unique. Confidentialité à vie",
+    "features": ["Suite de confidentialité complète", "Chiffrement post-quantique", "Open source et audité"],
+    "startFrom": {
+      "normal1": "À partir de ",
+      "price": " {{minimumPrice}}",
+      "normal2": " /mois"
+    },
+    "claimDeal": "Obtenir l'offre"
+  },
+  "ReviewSection": {
+    "pcMag": "\"Internxt est en **méga-promotion**, a d'**excellents avis d'utilisateurs**, un chiffrement **de bout en bout** et **post-quantique**, et ils rendent leur code complètement **open source** pour une transparence totale avec leurs clients.\"",
+    "mashable": "\"Prenez au **sérieux** la **sécurisation de vos données importantes** avec Internxt. Ils font de la **confidentialité** leur **priorité absolue**, pour que vous puissiez être tranquille en sachant que vos fichiers sont **en sécurité** et que la plateforme valorise la **transparence** pour ses utilisateurs.\"",
+    "pcWorld": "\"L'**accès web intuitif**, la **synchronisation de fichiers** et les **services de sauvegarde** d'Internxt sont **impressionnants**. Ce service de stockage et de sauvegarde en ligne crypté est **facile**, couvre toutes les bases, et les **plans à vie** actuels sont une **aubaine**.\""
+  },
+  "MoreDealsSection": {
+    "title": "Plus d'offres Internxt",
+    "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
+    "cards": {
+      "card1": {
+        "title": "Offres Internxt — économisez {{discount}}% sur tous les forfaits",
+        "description": "Découvrez des réductions exclusives sur toutes les applications et services Internxt",
+        "cta": "Voir toutes les offres"
+      },
+      "card2": {
+        "title": "Offres de stockage cloud gratuit",
+        "description": "Commencez avec un stockage chiffré gratuit et passez à la version supérieure avec jusqu'à {{discount}}% de réduction",
+        "cta": "Voir les offres de stockage"
+      }
+    }
+  },
+  "tableSection": {
+    "title": "Plans Internxt",
+    "hotLabel": "{{discount}}% de réduction",
+    "planTitles": {
+      "header": "Votre allié tout-en-un pour la confidentialité",
+      "individuals": "Plans Annuels",
+      "homePage": "Choisissez le plan qui vous convient",
+      "lifetime": "Plans à Vie",
+      "business": "Plans Business",
+      "lifetimeCampaign": {
+        "blueText": "50% de réduction",
+        "normalText": "sur tous nos plans à vie exclusifs"
+      }
+    },
+    "lifetimeDescription": "Payez une fois et profitez de la confidentialité et de la sécurité à vie.",
+    "planDescription": "Les offres de stockage cloud à vie d'Internxt sont entièrement équipées avec un accès complet à notre suite de confidentialité primée, composée d'Internxt Drive, Send, VPN, Antivirus, Cleaner, Meet et Mail.",
+    "businessDescription": "Nous travaillons actuellement sur de nouveaux plans Internxt conçus exclusivement pour défendre votre entreprise, protéger vos employés et sécuriser votre rentabilité.",
+    "businessDescription2": "Assurez la sécurité des données de votre entreprise avec les plans de stockage cloud chiffrés d'Internxt.",
+    "billingFrequency": {
+      "monthly": "Mensuel",
+      "annually": "Annuel",
+      "lifetime": "À vie",
+      "individual": "Individuel",
+      "business": "Business"
+    },
+    "freePlanCard": {
+      "eyeBrow": "Gratuit",
+      "description": "Obtenez 1 Go de stockage cloud chiffré gratuitement",
+      "cta": "Sélectionner le plan"
+    },
+    "features": {
+      "endToEnd": "Chiffrement de bout en bout",
+      "openSource": "Open source et audité",
+      "anonymousAccount": "Création de compte anonyme",
+      "premiumSupport": "Support client premium",
+      "guarantee": "Garantie de remboursement de 30 jours"
+    },
+    "planStorage": {
+      "essential": "1TB",
+      "premium": "3TB",
+      "ultimate": "5TB"
+    }
+  },
+  "CtaSection": {
+    "title": "Dites adieu aux abonnements",
+    "description": "Payez une fois, utilisez pour toujours avec {{percentage}}% de réduction",
+    "cta": "Obtenir l'offre"
+  },
+  "WhatsIncludedSection": {
+    "title": "Les meilleures offres de stockage cloud à vie pour une confidentialité totale en ligne",
+    "description": "Internxt protège votre confidentialité plutôt que d'en tirer profit. Obtenez la protection ultime pour vos données en ligne avec un stockage cloud sécurisé et plus encore.",
+    "scrollableSection": {
+      "imagesPathname": ["Drive", "antivirus", "vpn", "cleaner", "meet", "mail", "Terminal"],
+      "titles": ["Internxt Drive", "Antivirus", "VPN", "Cleaner", "Meet", "Mail", "Outils avancés"],
+      "descriptions": [
+        "Internxt Drive est fourni avec un chiffrement post-quantique et à connaissance nulle, de sorte que personne d'autre que vous ne peut accéder à vos fichiers. Obtenez un stockage cloud chiffré et des sauvegardes pour vos photos, vidéos et fichiers.\n\nDe plus, les sauvegardes chiffrées et le partage de fichiers protégé par mot de passe offrent une protection maximale contre les ransomwares et les violations de données.",
+        "Tous les plans payants incluent également Internxt Antivirus pour une protection accrue contre les menaces croissantes auxquelles nous sommes confrontés en ligne.\n\nEffectuez des analyses complètes ou personnalisées depuis l'application Internxt pour vous défendre contre les malwares, le phishing et les ransomwares, et nettoyez et protégez votre appareil contre la perte de données ou les violations.",
+        "Obtenez notre VPN ultra-rapide et illimité pour jusqu'à 5 emplacements pour chiffrer et sécuriser votre connexion avec notre VPN privé.\n\nChiffrez votre trafic pour empêcher l'espionnage externe de votre connexion dans les espaces publics, contournez les restrictions géographiques et empêchez les fuites de données. Internxt VPN offre une confidentialité totale lors de la navigation en ligne.",
+        "Internxt Cleaner améliore les performances et la santé de votre appareil en supprimant les fichiers indésirables ou en double de votre ordinateur.\n\nLibérez de l'espace de stockage, améliorez la vitesse de l'appareil et protégez votre confidentialité en supprimant les fichiers indésirables d'un simple clic.",
+        "Internxt Meet propose des appels vidéo entièrement privés alimentés par la cryptographie post-quantique, garantissant que vos réunions sont sécurisées, confidentielles et exemptes de traqueurs.\n\nOrganisez et rejoignez des appels vidéo avec des amis, de la famille ou des coéquipiers en toute confidentialité, sans que des entreprises externes surveillent vos conversations.",
+        "Rédigez, envoyez et recevez des e-mails avec Internxt Mail, un e-mail entièrement chiffré et privé pour garantir que personne d'autre que vous et vos contacts ne peut voir vos messages.\n\nAvec Internxt Mail, nous garantissons que personne d'autre que vous ne peut accéder à vos messages ou pièces jointes, qui sont tous sécurisés avec un chiffrement post-quantique et à connaissance nulle.",
+        "Disponible sur Windows, Mac, Linux et mobile, Internxt vous permet de prendre le contrôle total de votre stockage cloud en accédant à votre cloud de n'importe où, sur n'importe quel appareil.\n\nPour les utilisateurs avancés, Internxt offre un support pour WebDAV, Rclone et NAS, offrant tout ce dont vous avez besoin pour gérer vos fichiers en toute confidentialité."
+      ]
+    }
+  },
+  "WhyChooseInternxtSection": {
+    "title": "Pourquoi choisir les plans à vie d'Internxt ?",
+    "description": "Nos offres de stockage cloud à vie vous redonnent le contrôle de votre confidentialité. Contrairement au stockage cloud traditionnel, nous veillons à ce que vous seul ayez les clés de vos données chiffrées, et nous ne stockons ni ne vendons vos données à des tiers. Nous prenons toutes les mesures pour garantir que vos informations restent sécurisées.",
+    "cta": "Apprenez à mieux nous connaître",
+    "scrollableSection": {
+      "titles": [
+        "Payez une fois et utilisez pour toujours",
+        "Données impossibles à pirater et à divulguer",
+        "Sécurité de nouvelle génération",
+        "Open source et transparent"
+      ],
+      "descriptions": [
+        "Dites adieu aux modèles d'abonnement et aux coûts de renouvellement imprévisibles avec nos offres de stockage cloud à vie. Avec un seul paiement, vous pouvez accéder à votre stockage et à vos fonctionnalités pour toujours sans aucun paiement supplémentaire nécessaire.",
+        "Nous ne stockons pas les mots de passe ni les données utilisateur, et toutes vos données sont chiffrées en transit et au repos avec un chiffrement post-quantique et à connaissance nulle. Internxt vous donne le contrôle total de vos fichiers. Vos données sont votre affaire. Les protéger est la nôtre.",
+        "Internxt est le seul stockage cloud qui chiffre automatiquement vos fichiers en utilisant la cryptographie de bout en bout et post-quantique, ce qui signifie que vous seul pouvez accéder à vos données.",
+        "Nous sommes fiers de ce que nous faisons, c'est pourquoi notre code est rendu public sur GitHub et peut être personnellement examiné, audité et vérifié par quiconque. Nous n'avons rien à cacher sauf vos données."
+      ]
+    }
+  },
+  "CtaSectionV2": {
+    "title": "Confidentialité totale pour {{percentage}}% de réduction",
+    "description": "Obtenez l'offre de votre vie avec Internxt",
+    "cta": "Obtenir l'offre"
+  },
+  "FaqSection": {
+    "title": "Des questions ? Nous avons des réponses",
+    "faq": [
+      {
+        "question": "Qui peut bénéficier de ces offres de stockage cloud à vie ?",
+        "answer": [
+          "Ces offres Internxt sont destinées aux nouveaux clients ou aux clients avec un compte gratuit, ou aux clients qui souhaitent mettre à niveau leur plan à vie actuel avec 87% de réduction pour accéder à nos nouvelles fonctionnalités."
+        ]
+      },
+      {
+        "question": "Puis-je utiliser une offre Internxt si j'ai déjà un plan à vie ?",
+        "answer": [
+          "Si vous avez actuellement un plan à vie et souhaitez cumuler du stockage sur votre compte actuel et accéder aux fonctionnalités d'un plan Premium ou Ultimate, vous pouvez utiliser cette offre pour mettre à niveau votre compte."
+        ]
+      },
+      {
+        "question": "Que se passe-t-il lorsque mon offre expire ?",
+        "answer": [
+          "Si vous achetez un plan annuel avec votre offre Internxt, cela s'applique uniquement à la première année. Une fois votre première année expirée, votre plan se renouvellera automatiquement au prix complet indiqué dans notre section tarification.",
+          "Si vous souhaitez éviter les frais d'abonnement, vous pouvez acheter un plan à vie avec un paiement unique et ne plus jamais payer, sauf si vous choisissez de mettre à niveau votre stockage."
+        ]
+      },
+      {
+        "question": "Comment puis-je mettre à niveau ou ajouter plus de stockage plus tard ?",
+        "answer": [
+          "Si vous avez un plan à vie, vous pouvez cumuler ou mettre à niveau votre plan à tout moment pour obtenir plus de stockage. Il n'est pas possible de mettre à niveau ou d'ajouter plus de stockage pour les plans annuels. Gardez un œil sur notre site web pour les derniers codes promo et offres."
+        ]
+      },
+      {
+        "question": "Puis-je payer par carte de crédit, PayPal ou cryptomonnaie ?",
+        "answer": [
+          "Internxt accepte actuellement les cartes de débit et de crédit (Mastercard, VISA, American Express, etc.). Vous pouvez également payer via PayPal, cryptomonnaie ou diviser le paiement de votre plan à vie avec Klarna.",
+          "Si vous avez des questions sur les modes de paiement, envoyez-nous simplement un e-mail à hello@internxt.com"
+        ]
+      },
+      {
+        "question": "Puis-je diviser mon paiement à vie ?",
+        "answer": [
+          "Oui, vous pouvez maintenant diviser vos paiements à vie en plusieurs versements sans intérêt en utilisant Klarna. Profitez d'un plan à vie avec la facilité de le payer en versements pratiques !"
+        ]
+      },
+      {
+        "question": "Quelle est la politique de remboursement d'Internxt ?",
+        "answer": [
+          "Internxt offre une garantie standard de remboursement de 30 jours sur tous les abonnements payants, qui commence à compter dès que vous vous abonnez.",
+          "Et si jamais vous n'êtes pas satisfait de notre service, contactez-nous à hello@internxt.com et demandez un remboursement."
+        ]
+      },
+      {
+        "question": "Comment puis-je contacter le support ?",
+        "answer": [
+          "Vous ne trouvez pas ce que vous cherchez ? Vous pouvez contacter notre équipe de support technique via le chat en direct ou en envoyant un e-mail à hello@internxt.com"
+        ]
+      }
+    ]
+  }
+}

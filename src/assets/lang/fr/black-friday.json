@@ -21,6 +21,22 @@
       "Obtenez la meilleure confidentialité et sécurité en ligne avec la réduction Black Friday de 90% d'Internxt."
     ]
   },
+  "MoreDealsSection": {
+    "title": "Plus d'offres Internxt",
+    "description": "Renforcez votre protection avec des réductions exclusives sur tous les produits Internxt",
+    "cards": {
+      "card1": {
+        "title": "Offres Black Friday stockage cloud",
+        "description": "Économisez sur le stockage cloud chiffré pour vos fichiers",
+        "cta": "Voir les offres de stockage"
+      },
+      "card2": {
+        "title": "Offres Black Friday stockage cloud personnel",
+        "description": "Réductions exclusives pour les particuliers et forfaits personnels",
+        "cta": "Voir les offres personnelles"
+      }
+    }
+  },
   "TableSection": {
     "title": "Votre tout-en-un pour la confidentialité",
     "hotLabel": "{{discount}}% de réduction",
