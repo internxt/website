@@ -15,7 +15,6 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import FeaturesSection from '@/components/drive/FeaturesSection';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -37,10 +36,11 @@ const ALLOWED_PATHS = [
   'vipvlc',
   'grabon',
   'pcmag',
+  'nextjump',
 ];
 
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon'];
 const DARK_MODE_PATHS = ['baity'];
-const IMAGES_PATHS = ['baity'];
 
 const COUPON_CODES = {
   bevalk: PromoCodeName.Bevalk,
@@ -66,7 +66,11 @@ function CombinedSpecialOffer({
   const router = useRouter();
   const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
   const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
-  const hasImage = selectedPathname ? IMAGES_PATHS.includes(selectedPathname) : false;
+
+  const alternateRecommendedPlan = selectedPathname
+    ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
+    : false;
+
   useEffect(() => {
     if (!selectedPathname) {
       router.replace('/specialoffer');
@@ -124,7 +128,7 @@ function CombinedSpecialOffer({
         textContent={langJson.HeroSection}
         percentOff={percentOff}
         darkMode={isDarkMode}
-        image={hasImage ? selectedPathname : 'internxt-private-cloud'}
+        image={'internxt-private-cloud'}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
@@ -146,6 +150,7 @@ function CombinedSpecialOffer({
         sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
+        differentRecommended={alternateRecommendedPlan}
       />
 
       <FloatingCtaSectionv2

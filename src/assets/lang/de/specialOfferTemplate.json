@@ -21,7 +21,9 @@
   "TrustedBySection": {
     "title": "Vertraut von Menschen wie Ihnen",
     "review": "Ich halte meine Informationen dank Internxt online sicher. Ihr Kundensupport ist schnell und ihre Services sind unglaublich zuverlässig. Die Tatsache, dass sie auditiert, open-source und verschlüsselt sind, gibt mir die Gewissheit, dass meine Daten immer vor Dritten geschützt sind.",
-    "author": "Sandra Díaz - Trustpilot Bewertung"
+    "cloudwardsReview": "Bei Cloudwards haben wir Dutzende von Cloud-Speicher-Anbietern getestet, und Internxt sticht durch sein Engagement für die Privatsphäre der Nutzer hervor. Mit Zero-Knowledge-Verschlüsselung und Post-Quanten-Sicherheit ist es eine der sichersten verfügbaren Optionen – besonders in dieser Preisklasse. Es ist erfrischend, einen Dienst zu sehen, der Privatsphäre an erste Stelle setzt und sie erschwinglich macht.",
+    "author": "Sandra Díaz - Trustpilot-Bewertung",
+    "cloudwardsAuthor": "Mauricio Hoody - CEO bei Cloudwards"
   },
   "NextGenSection": {
     "title": "Warum Internxt wählen?",

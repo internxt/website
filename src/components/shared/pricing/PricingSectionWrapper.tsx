@@ -67,6 +67,7 @@ interface PricingSectionWrapperProps {
   overrideOnBusinessStorageChange?: (storage: SwitchStorageBusinessOptions) => void;
   overrideOnIndividualSwitchToggled?: (interval: Interval) => void;
   overrideOnBusinessSwitchToggled?: (interval: Interval) => void;
+  differentRecommended?: boolean;
 }
 
 const calculateDiscountPercentage = (decimalValue?: number) => {
@@ -162,6 +163,7 @@ export const PricingSectionWrapper = ({
   overrideOnBusinessStorageChange,
   overrideOnIndividualSwitchToggled,
   overrideOnBusinessSwitchToggled,
+  differentRecommended,
 }: PricingSectionWrapperProps): JSX.Element => {
   const localPlanSelection = usePlanSelection(
     startFromPlan,
@@ -215,6 +217,7 @@ export const PricingSectionWrapper = ({
     businessStorageSelected: activeBusinessStoragePlan,
     onBusinessStorageChange,
     hideFreeCard,
+    differentRecommended,
   };
 
   return (
@@ -241,6 +244,7 @@ export const PricingSectionWrapper = ({
           onBusinessSwitchToggled={onBusinessSwitchToggled}
           isMonthly
           darkMode={darkMode}
+          differentRecommended={differentRecommended}
         />
       </div>
 
