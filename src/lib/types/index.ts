@@ -160,6 +160,7 @@ export enum PromoCodeName {
   VIPVLC = 'VIPVLC',
   GRABON = 'GRABON87',
   BaityBait = 'BAITY',
+  NextJump = 'PERKS',
 }
 
 export interface PromoCodeProps {

@@ -53,6 +53,7 @@ const COUPON_CODES = {
   vipvlc: PromoCodeName.VIPVLC,
   grabon: PromoCodeName.GRABON,
   pcmag: PromoCodeName.PcmagCoupon,
+  nextjump: PromoCodeName.NextJump,
 };
 
 function CombinedSpecialOffer({
