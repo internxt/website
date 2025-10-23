@@ -30,16 +30,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
-const ALLOWED_LIST_IDS = [process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID].filter(Boolean) as string[];
+const ALLOWED_LIST_ID = process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID;
+
+if (!ALLOWED_LIST_ID) {
+  throw new Error('NEXT_PUBLIC_KLAVIYO_LIST_ID environment variable must be configured');
+}
 
 async function createUser(email: string, groups: string[], firstName?: string) {
-  const listId = groups?.[0] || process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID;
+  const listId = groups?.[0] || ALLOWED_LIST_ID;
 
-  if (!listId) {
-    throw new Error('No list ID provided');
-  }
-
-  if (!ALLOWED_LIST_IDS.includes(listId)) {
+  if (listId !== ALLOWED_LIST_ID) {
     throw new Error('Invalid list ID');
   }
 
