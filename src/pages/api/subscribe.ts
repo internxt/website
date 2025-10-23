@@ -37,6 +37,10 @@ async function createUser(email: string, groups: string[], firstName?: string) {
     throw new Error('No list ID provided');
   }
 
+  if (!/^[a-zA-Z0-9]+$/.test(listId)) {
+    throw new Error('Invalid list ID format');
+  }
+
   const profilePayload: any = {
     data: {
       type: 'profile',
