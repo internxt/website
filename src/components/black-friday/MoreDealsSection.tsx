@@ -60,7 +60,7 @@ const MoreDealsSection = ({ textContent, urls, darkMode = true, percentOff }: Mo
             key={index}
             className={`${
               darkMode ? 'bg-gray-105' : 'bg-white'
-            } flex w-full flex-1 flex-col gap-4 rounded-xl p-6 lg:max-w-[50%] lg:gap-8 lg:rounded-16 lg:p-8`}
+            } flex w-full flex-1 flex-col gap-4 rounded-xl p-6 lg:max-w-[50%] lg:gap-6 lg:rounded-16 lg:p-8`}
           >
             <h3 className={`text-xl font-medium ${darkMode ? 'text-white-95' : 'text-gray-95'}`}>
               {parsePercentText(card.title)}

@@ -145,6 +145,7 @@ const DealsTemplate = ({
       <HorizontalScrollableSection
         textContent={textContent.WhyChooseInternxtSection}
         bgGradient="linear-gradient(180deg, #FFFFFF 0%, #F4F8FF 100%)"
+        needsDivider={false}
       />
 
       <FloatingCtaSectionv2
