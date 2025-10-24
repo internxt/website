@@ -9,8 +9,40 @@ const KLAVIYO_API_REVISION = '2024-10-15';
 if (!KLAVIYO_PRIVATE_API_KEY) {
   throw new Error('KLAVIYO_PRIVATE_API_KEY environment variable must be configured');
 }
+
 if (!ALLOWED_LIST_ID) {
   throw new Error('NEXT_PUBLIC_KLAVIYO_LIST_ID environment variable must be configured');
+}
+
+interface KlaviyoErrorResponse {
+  errors?: Array<{
+    detail?: string;
+    code?: string;
+    status?: number;
+  }>;
+}
+
+interface KlaviyoProfilePayload {
+  data: {
+    type: 'profile';
+    attributes: {
+      email: string;
+      first_name?: string;
+    };
+  };
+}
+
+interface KlaviyoProfileResponse {
+  data: {
+    id: string;
+  };
+}
+
+interface KlaviyoSubscribePayload {
+  data: Array<{
+    type: 'profile';
+    id: string;
+  }>;
 }
 
 const klaviyoAxios = axios.create({
@@ -24,7 +56,7 @@ const klaviyoAxios = axios.create({
 });
 
 async function createUser(email: string, firstName?: string) {
-  const profilePayload: any = {
+  const profilePayload: KlaviyoProfilePayload = {
     data: {
       type: 'profile',
       attributes: {
@@ -37,10 +69,10 @@ async function createUser(email: string, firstName?: string) {
     profilePayload.data.attributes.first_name = firstName;
   }
 
-  const profileResponse = await klaviyoAxios.post('/profiles/', profilePayload);
+  const profileResponse = await klaviyoAxios.post<KlaviyoProfileResponse>('/profiles/', profilePayload);
   const profileId = profileResponse.data.data.id;
 
-  const subscribePayload = {
+  const subscribePayload: KlaviyoSubscribePayload = {
     data: [
       {
         type: 'profile',
@@ -72,7 +104,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await createUser(email, firstName);
     res.status(200).json({ status: 'OK', email: email });
   } catch (error) {
-    const axiosError = error as AxiosError;
+    const axiosError = error as AxiosError<KlaviyoErrorResponse>;
 
     if (axiosError.response?.status === 409) {
       return res.status(409).json({
@@ -81,7 +113,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       });
     }
 
-    const klaviyoDetail = (axiosError.response?.data as any)?.errors?.[0]?.detail;
+    const klaviyoDetail = axiosError.response?.data?.errors?.[0]?.detail;
     const errorMessage = klaviyoDetail || axiosError.message || 'Subscription failed';
 
     res.status(500).json({
