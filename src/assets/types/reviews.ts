@@ -63,6 +63,7 @@ export interface HeroSection {
   title: string;
   subtitle: string;
   features: string[];
+  cta: string;
 }
 
 export interface SupportSection {

@@ -2,7 +2,8 @@
   "heroSection": {
     "title": "Ce que les gens **disent** d'Internxt",
     "subtitle": "Découvrez pourquoi les gens font confiance à Internxt pour leurs données",
-    "features": ["Suite complète de confidentialité", "Chiffrement post-quantique", "Open source et audité"]
+    "features": ["Suite complète de confidentialité", "Chiffrement post-quantique", "Open source et audité"],
+    "cta": "Obtenir Internxt"
   },
   "ReviewSection": {
     "pcMag": "\"Internxt est en **méga-promotion**, a d'**excellents avis d'utilisateurs**, un chiffrement **de bout en bout** et **post-quantique**, et ils rendent leur code complètement **open source** pour une transparence totale avec leurs clients.\"",

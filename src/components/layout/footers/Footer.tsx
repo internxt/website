@@ -443,6 +443,9 @@ export default function Footer({
                     <Link href="/coupons" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.resources.coupons}
                     </Link>
+                    <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
+                      {textContent.FooterSection.sections.resources.reviews}
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -954,6 +957,9 @@ export default function Footer({
                       </Link>
                       <Link href="/coupons" locale={lang} passHref className="items-center hover:text-primary">
                         {textContent.FooterSection.sections.resources.coupons}
+                      </Link>
+                      <Link href="/reviews" locale={lang} passHref className="items-center hover:text-primary">
+                        {textContent.FooterSection.sections.resources.reviews}
                       </Link>
                     </Disclosure.Panel>
                   </Transition>
