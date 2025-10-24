@@ -42,7 +42,7 @@ export default function Footer({
     await axios
       .post(`/api/subscribe`, {
         email,
-        groups: [process.env.NEXT_PUBLIC_FREE_GROUP_ID],
+        groups: [process.env.NEXT_PUBLIC_KLAVIYO_LIST_ID],
       })
       .then(() => {
         notificationService.openSuccessToast('Successfully submitted');

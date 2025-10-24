@@ -19,7 +19,7 @@ export default function HeroSection({
   percentOff,
   cloudWards = false,
   darkMode = false,
-  image,
+  image = 'internxt-private-cloud',
 }: Readonly<HeroSectionForPartnerProps>): JSX.Element {
   const [currency, setCurrency] = useState<string>('€');
 

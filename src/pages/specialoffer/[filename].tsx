@@ -37,6 +37,7 @@ const ALLOWED_PATHS = [
   'grabon',
   'pcmag',
   'nextjump',
+  'kripesh',
 ];
 
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon'];
@@ -54,6 +55,7 @@ const COUPON_CODES = {
   grabon: PromoCodeName.GRABON,
   pcmag: PromoCodeName.PcmagCoupon,
   nextjump: PromoCodeName.NextJump,
+  kripesh: PromoCodeName.Kripesh,
 };
 
 function CombinedSpecialOffer({
