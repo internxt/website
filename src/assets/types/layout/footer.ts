@@ -94,6 +94,7 @@ export interface Resources {
   coupons: string;
   nas: string;
   reviews: string;
+  deals: string;
 }
 
 export interface Tools {

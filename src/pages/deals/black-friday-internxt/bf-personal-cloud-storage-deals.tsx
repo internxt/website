@@ -20,8 +20,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       hideBusinessSelector: true,
 
       moreDealsUrls: {
-        card1: 'bf-cloud-storage-deals',
-        card2: '/deals/black-friday-internxt',
+        card1: '/deals/black-friday-internxt',
+        card2: 'bf-cloud-storage-deals',
       },
     },
     {

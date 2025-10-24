@@ -19,8 +19,8 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       hideBusinessCards: true,
       hideBusinessSelector: true,
       moreDealsUrls: {
-        card1: 'deals/cloud-storage-lifetime',
-        card2: 'deals/free-cloud-storage-deals',
+        card1: 'deals/free-cloud-storage-deals',
+        card2: 'deals/cloud-storage-lifetime',
       },
     },
     {
