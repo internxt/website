@@ -28,6 +28,14 @@ interface TechReviewCardProps {
 }
 
 const TechReviewCard = ({ title, description, author, companyLogo }: TechReviewCardProps): JSX.Element => {
+  const logoSizes: Record<string, { width: number; height: number }> = {
+    'pcworld-logo.png': { width: 60, height: 32 },
+    'techradar2@3x.png': { width: 45, height: 32 },
+    'cloudwards.png': { width: 60, height: 32 },
+  };
+
+  const { width, height } = logoSizes[companyLogo] || { width: 30, height: 32 };
+
   return (
     <div className="flex h-[400px] w-[345px] flex-shrink-0 flex-col items-start justify-between gap-4 rounded-xl bg-white p-6 lg:h-[380px] lg:w-[400px] lg:gap-6 lg:rounded-16 lg:p-8">
       <div className="flex w-full flex-col gap-4 lg:gap-6">
@@ -35,8 +43,8 @@ const TechReviewCard = ({ title, description, author, companyLogo }: TechReviewC
           <Image
             src={getImage(`/images/reviews/${companyLogo}`)}
             alt={`${author.split(' - ')[1]} logo`}
-            height={32}
-            width={30}
+            height={height}
+            width={width}
             className="object-contain"
           />
           <h3 className="text-lg font-medium leading-tight text-gray-95 lg:text-xl">{title}</h3>

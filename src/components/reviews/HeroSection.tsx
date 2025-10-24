@@ -19,7 +19,7 @@ export default function HeroSection({ textContent }: Readonly<HeroSectionDealsPr
       <div className="flex h-min w-[345px] flex-col justify-center gap-6 lg:h-min lg:w-1/2 lg:gap-8">
         <div className="flex w-full flex-col justify-center gap-4 lg:gap-8">
           <div className="flex flex-col justify-center gap-4">
-            <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:text-3xl">
+            <h1 className="w-full text-30 font-semibold leading-tight text-gray-100 lg:w-5/6 lg:text-3xl">
               <HighlightText text={textContent.title} />
             </h1>
             <h2 className="text-lg leading-tight text-gray-55 lg:w-[600px] lg:text-2xl">{textContent.subtitle}</h2>
