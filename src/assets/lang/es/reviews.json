@@ -1,8 +1,9 @@
 {
   "heroSection": {
     "title": "Lo que la gente está **diciendo** sobre Internxt",
-    "subtitle": "Descubre por qué la gente confía en Internxt con sus datos",
-    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"]
+    "subtitle": "Descubre por qué la gente confía en Internxt sus datos",
+    "features": ["Suite completa de privacidad", "Cifrado post-cuántico", "Código abierto y auditado"],
+    "cta": "Obtener Internxt"
   },
   "ReviewSection": {
     "pcMag": "\"Internxt está en **mega-oferta**, tiene **excelentes reseñas de usuarios**, cifrado **de extremo a extremo** y **post-cuántico**, y hacen su código completamente **de código abierto** para total transparencia con sus clientes.\"",
@@ -16,7 +17,7 @@
     "reviewers": {
       "reviewers": {
         "Trustpilot": "Trustpilot",
-        "Techexperts": "Expertos Técnicos"
+        "Techexperts": "Expertos"
       },
       "TruspilotReviews": {
         "reviews": [

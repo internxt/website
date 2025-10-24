@@ -2,7 +2,8 @@
   "heroSection": {
     "title": "What people are **saying** about Internxt",
     "subtitle": "Find out why people trust Internxt with their data",
-    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"]
+    "features": ["Complete privacy suite", "Post-quantum encryption", "Open source and audited"],
+    "cta": "Get Internxt"
   },
   "ReviewSection": {
     "pcMag": "\"Internxt is on **mega-sale**, has **excellent user reviews**, **end-to-end** and **post-quantum encryption**, and they make their code completely **open source** for total transparency with their customers.\"",

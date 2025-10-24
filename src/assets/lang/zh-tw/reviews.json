@@ -2,7 +2,8 @@
   "heroSection": {
     "title": "人們對Internxt的**評價**",
     "subtitle": "了解為什麼人們信任Internxt保護他們的數據",
-    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"]
+    "features": ["完整的隱私套件", "後量子加密", "開源且經過審計"],
+    "cta": "獲取 Internxt"
   },
   "ReviewSection": {
     "pcMag": "\"Internxt正在**大促銷**，擁有**出色的用戶評價**、**端到端**和**後量子加密**，並且他們完全**開源**代碼，對客戶完全透明。\"",

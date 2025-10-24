@@ -2,7 +2,8 @@
   "heroSection": {
     "title": "Was die Leute über Internxt **sagen**",
     "subtitle": "Erfahren Sie, warum Menschen Internxt mit ihren Daten vertrauen",
-    "features": ["Vollständige Privatsphäre-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"]
+    "features": ["Vollständige Privatsphäre-Suite", "Post-Quanten-Verschlüsselung", "Open Source und geprüft"],
+    "cta": "Obtener Internxt"
   },
   "ReviewSection": {
     "pcMag": "\"Internxt ist im **Mega-Angebot**, hat **hervorragende Nutzerbewertungen**, **Ende-zu-Ende** und **Post-Quanten-Verschlüsselung**, und sie machen ihren Code vollständig **Open Source** für totale Transparenz gegenüber ihren Kunden.\"",
