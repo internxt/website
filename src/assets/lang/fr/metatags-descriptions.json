@@ -318,5 +318,10 @@
     "id": "deals",
     "title": "Internxt — Offres officielles Internxt avec 87% de réduction sur tous les forfaits",
     "description": "Profitez de votre réduction exclusive de 87%. Ces offres Internxt incluent un stockage cloud privé et chiffré, et plus encore à un prix imbattable."
+  },
+  {
+    "id": "reviews",
+    "title": "Internxt — Lisez les avis clients sur Internxt",
+    "description": "Lisez des avis honnêtes sur Internxt selon les commentaires d'experts en technologie et d'utilisateurs. Découvrez ce qui fait d'Internxt le service le plus fiable pour votre confidentialité en ligne."
   }
 ]
