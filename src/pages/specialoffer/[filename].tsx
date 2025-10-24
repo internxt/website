@@ -40,7 +40,7 @@ const ALLOWED_PATHS = [
   'kripesh',
 ];
 
-const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon'];
+const ALTERNATE_RECOMENDATED_PLAN_PATHS = ['grabon', 'kripesh'];
 const DARK_MODE_PATHS = ['baity'];
 
 const COUPON_CODES = {

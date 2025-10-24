@@ -76,7 +76,9 @@
         "whatGoogleKnowsAboutMe": "Что Google знает обо мне",
         "WebDAV": "CLI & WebDAV",
         "coupons": "Купоны",
-        "nas": "NAS"
+        "nas": "NAS",
+        "reviews": "Oтзывы",
+        "deals": "Offerte"
       },
       "tools": {
         "title": "Бесплатные инструменты",

@@ -93,6 +93,8 @@ export interface Resources {
   WebDAV: string;
   coupons: string;
   nas: string;
+  reviews: string;
+  deals: string;
 }
 
 export interface Tools {

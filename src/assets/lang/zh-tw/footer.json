@@ -75,7 +75,9 @@
         "whatGoogleKnowsAboutMe": "Google 了解我什麼",
         "WebDAV": "CLI & WebDAV",
         "coupons": "優惠券",
-        "nas": "NAS"
+        "nas": "NAS",
+        "reviews": "评论",
+        "deals": "優惠"
       },
       "tools": {
         "title": "免費工具",

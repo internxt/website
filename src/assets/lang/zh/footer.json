@@ -77,7 +77,9 @@
         "comparison": "比较",
         "WebDAV": "CLI & WebDAV",
         "coupons": "优惠券",
-        "nas": "NAS"
+        "nas": "NAS",
+        "reviews": "評論",
+        "deals": "优惠"
       },
       "tools": {
         "title": "免费的工具",
