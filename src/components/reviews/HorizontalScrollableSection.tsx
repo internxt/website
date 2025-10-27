@@ -208,7 +208,7 @@ const HorizontalScrollableSection = ({ textContent }: Readonly<HorizontalScrolla
             <p className="text-sm font-normal text-gray-55">{textContent.underStars}</p>
           </div>
         </div>
-        <div className="flex justify-center">
+        <div className="flex w-full justify-center ">
           <ReviewersSelector
             textContent={textContent.reviewers.reviewers}
             activeSwitchPlan={activeSwitchPlan}
