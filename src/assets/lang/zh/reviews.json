@@ -52,7 +52,8 @@
         "Internxt是一个注重隐私的云存储解决方案，提供客户端加密、后量子安全性、开源软件和位于欧盟的服务器，以极具竞争力的价格提供安全合规的存储。"
       ],
       "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
-    }
+    },
+    "readMore": "在 Trustpilot 上阅读更多评论"
   },
   "videoSection": {
     "company": "Cloudwards",
