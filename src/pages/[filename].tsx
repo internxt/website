@@ -27,7 +27,7 @@ interface CombinedSpecialOfferProps {
 
 const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
 const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-const DARK_MODE_PATHS = ['baity'];
+const DARK_MODE_PATHS = new Set<string>(['baity']);
 const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
   xavier: PromoCodeName.Xavier,
@@ -47,7 +47,7 @@ const useOfferConfig = (pathname: string) => {
       };
     }
 
-    const isDarkMode = DARK_MODE_PATHS.includes(selectedPathname);
+    const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname];
 
