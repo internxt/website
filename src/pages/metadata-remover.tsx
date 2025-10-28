@@ -104,7 +104,7 @@ const Scan = ({ metatagsDescriptions, langJson, toolsContent, footerLang, navbar
 
       <Navbar textContent={navbarLang} lang={lang} cta={['default']} fixed />
 
-      <HeroSection textContent={langJson.HeroSection} lang={lang} />
+      <HeroSection textContent={langJson.HeroSection} />
 
       <TryInternxtBanner
         textContent={bannerLang.tryOutInternxtGeneralBanner}
