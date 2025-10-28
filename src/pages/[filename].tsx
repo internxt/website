@@ -69,6 +69,35 @@ const usePathRedirect = (selectedPathname: string | null) => {
   }, [selectedPathname, router]);
 };
 
+const getThemeClasses = (isDarkMode: boolean) => ({
+  title: isDarkMode ? 'text-white' : 'text-gray-95',
+  description: isDarkMode ? 'text-white' : 'text-gray-55',
+  bgGradientContainer: isDarkMode
+    ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+    : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)',
+  bgGradient: isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)',
+  sectionBg: isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white',
+});
+
+const renderCtaContent = (
+  title: string,
+  description: string,
+  parsePercentText: (text: string) => JSX.Element | string,
+  themeClasses: ReturnType<typeof getThemeClasses>,
+  descriptionWidth: string,
+) => (
+  <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
+    <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${themeClasses.title}`}>
+      {parsePercentText(title)}
+    </p>
+    <p
+      className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${themeClasses.description} ${descriptionWidth}`}
+    >
+      {parsePercentText(description)}
+    </p>
+  </div>
+);
+
 function CombinedSpecialOffer({
   langJson,
   lang,
@@ -96,12 +125,12 @@ function CombinedSpecialOffer({
   if (!selectedPathname) {
     return <></>;
   }
-  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
-
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
+  const themeClasses = getThemeClasses(isDarkMode);
 
   const parsePercentText = (text: string) => {
     if (!individualCoupon?.percentOff) {
@@ -121,10 +150,6 @@ function CombinedSpecialOffer({
       couponCodeForCheckout?.name,
     );
   };
-
-  if (!selectedPathname) {
-    return <></>;
-  }
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
@@ -153,7 +178,7 @@ function CombinedSpecialOffer({
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
+        sectionDetails={`${themeClasses.sectionBg} lg:py-20`}
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
@@ -162,32 +187,17 @@ function CombinedSpecialOffer({
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection}
         url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
-            >
-              {parsePercentText(langJson.ctaSection.title)}
-            </p>
-            <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
-              }`}
-            >
-              {parsePercentText(langJson.ctaSection.description)}
-            </p>
-          </div>
-        }
+        customText={renderCtaContent(
+          langJson.ctaSection.title,
+          langJson.ctaSection.description,
+          parsePercentText,
+          themeClasses,
+          'lg:w-[690px]',
+        )}
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
+        bgGradientContainerColor={themeClasses.bgGradientContainer}
         bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgGradientColor={themeClasses.bgGradient}
       />
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
@@ -197,32 +207,17 @@ function CombinedSpecialOffer({
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'/pricing'}
-        customText={
-          <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p
-              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
-                isDarkMode ? 'text-white' : 'text-gray-95'
-              }`}
-            >
-              {parsePercentText(langJson.ctaSection2.title)}
-            </p>
-            <p
-              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
-                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
-              }`}
-            >
-              {parsePercentText(langJson.ctaSection2.description)}
-            </p>
-          </div>
-        }
+        customText={renderCtaContent(
+          langJson.ctaSection2.title,
+          langJson.ctaSection2.description,
+          parsePercentText,
+          themeClasses,
+          'lg:w-[633px]',
+        )}
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgGradientContainerColor={
-          isDarkMode
-            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
-        }
+        bgGradientContainerColor={themeClasses.bgGradientContainer}
         bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
-        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
+        bgGradientColor={themeClasses.bgGradient}
       />
 
       <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />
