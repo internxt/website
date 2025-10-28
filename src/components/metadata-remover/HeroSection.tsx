@@ -7,21 +7,18 @@ import { removeMetadata as removeFileMetadata } from '@/lib/metadataRemover';
 
 interface HeroSectionProps {
   textContent: MetadataRemoverText['HeroSection'];
-  lang: string;
 }
 
-const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
+const HeroSection = ({ textContent }: HeroSectionProps): JSX.Element => {
   const [isSelectedFile, setIsSelectedFile] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
   const [isError, setIsError] = useState(false);
   const [isProcessFinished, setIsProcessFinished] = useState(false);
-  const [processResult, setProcessResult] = useState<any>(null);
   const [dragEnter, setDragEnter] = useState(false);
   const [fileSizeLimitReached, setFileSizeLimitReached] = useState(false);
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
   const uploadFileRef = createRef<HTMLInputElement>();
   const [file, setFile] = useState<File | null>(null);
-  const [showPopup, setShowPopup] = useState(true);
   const isDragging = dragEnter;
   const maxFileSize = 104_857_600;
 
@@ -37,7 +34,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   const handleMetadataRemoval = async () => {
-    setProcessResult(null);
     const fileInput = uploadFileRef.current;
     if (!fileInput?.files?.[0]) return;
 
@@ -50,9 +46,7 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       const url = URL.createObjectURL(cleanedFileBlob);
       setDownloadUrl(url);
 
-      setProcessResult({ success: true });
       setIsProcessFinished(true);
-      setShowPopup(true);
 
       const downloadLink = document.createElement('a');
       downloadLink.href = url;
@@ -66,7 +60,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       setIsSelectedFile(false);
       setIsProcessing(false);
       setIsProcessFinished(false);
-      setShowPopup(false);
     }
   };
 
@@ -90,12 +83,10 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
   };
 
   const handleRestartProcess = () => {
-    setProcessResult(null);
     setIsSelectedFile(false);
     setIsProcessing(false);
     setIsProcessFinished(false);
     setIsError(false);
-    setShowPopup(false);
     setFile(null);
   };
 
@@ -142,30 +133,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
       fileInput.files = e.dataTransfer.files;
       handleFiles();
     }
-  };
-
-  const processAgainButton = () => {
-    return (
-      <Transition
-        as={Fragment}
-        show={!isError && isProcessFinished}
-        enter="transition duration-200 ease-in-out"
-        enterFrom="opacity-0 translate-y-2"
-        enterTo="opacity-100 translate-y-0"
-      >
-        <div className="flex w-full flex-row justify-center pt-6">
-          <button
-            type="button"
-            className="group -bottom-16 z-10 flex h-12 flex-row items-center justify-center space-x-2 rounded-lg border border-gray-10 bg-primary px-6 text-lg text-white transition duration-150 ease-out active:scale-98 sm:-bottom-14 sm:h-10 sm:px-5 sm:text-base"
-            onClick={() => {
-              handleRestartProcess();
-            }}
-          >
-            <p className="text-base font-medium">{textContent.scanAgain}</p>
-          </button>
-        </div>
-      </Transition>
-    );
   };
 
   const renderProcessStatus = () => {
@@ -287,7 +254,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
         onDrop={(e) => handleDrop(e)}
         onDragOver={(e) => e.preventDefault()}
       />
-
       <div className="mx-10 flex flex-col items-center space-y-16 lg:mx-10 xl:mx-32">
         <div
           className={`z-20 mx-auto flex w-full max-w-screen-xl flex-col items-center justify-between ${
@@ -306,7 +272,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
               </p>
             </div>
           </div>
-
           <div className="flex h-full w-full max-w-2xl rounded-2xl border-4 border-primary border-opacity-6 bg-primary bg-opacity-3">
             {isSelectedFile ? (
               <>
@@ -324,7 +289,6 @@ const HeroSection = ({ textContent, lang }: HeroSectionProps): JSX.Element => {
                           <p className="text-sm text-cool-gray-60">{file?.type}</p>
                         </div>
                       </div>
-
                       {renderProcessStatus()}
                     </div>
                   </>

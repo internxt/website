@@ -1,18 +1,17 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import zxcvbn from 'zxcvbn';
 import { Info, Eye, EyeSlash, WarningCircle } from '@phosphor-icons/react';
 import pwnedpasswords from '@/lib/checker';
 
-const HeroSection = ({ textContent, lang }) => {
+const HeroSection = ({ textContent }) => {
   const [inputTypePassword, setInputTypePassword] = useState(true);
   const [passwordLength, setPasswordLength] = useState(0);
   const [pwned, setPwned] = useState('-');
   const [crackFeedback, setCrackFeedback] = useState('-');
   const [crackScore, setCrackScore] = useState(0);
   const [crackTime, setCrackTime] = useState('-');
-  const [crackTimeInSeconds, setCrackTimeInSeconds] = useState(0);
 
   const toggleShowPassword = () => {
     setInputTypePassword(!inputTypePassword);
@@ -48,7 +47,6 @@ const HeroSection = ({ textContent, lang }) => {
     if (password === '') {
       setPwned('-');
       setCrackTime('-');
-      setCrackTimeInSeconds(0);
       setCrackFeedback('-');
       setCrackScore(0);
     } else {
@@ -70,7 +68,6 @@ const HeroSection = ({ textContent, lang }) => {
       }
       setCrackScore(crack.score);
       setCrackTime(getTimeTranslation(crack.crack_times_display.offline_slow_hashing_1e4_per_second));
-      setCrackTimeInSeconds(crack.crack_times_seconds.offline_slow_hashing_1e4_per_second);
     }
   };
 

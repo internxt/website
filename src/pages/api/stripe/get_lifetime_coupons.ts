@@ -8,7 +8,6 @@ const getCoupon = async (promoCodeName: string) => {
       promotionCode: promoCodeName,
     },
   });
-
   return promoCodeData;
 };
 
@@ -20,7 +19,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     try {
       const coupons = await Promise.all([twoTBCoupon, fiveTBCoupon, tenTBCoupon]);
-
       const [twoTB, fiveTB, tenTB] = coupons;
 
       const couponCodes = {
@@ -29,13 +27,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         '10TB': tenTB,
       };
 
-      res.status(200).send(couponCodes);
+      res.status(200).json(couponCodes);
     } catch (err) {
-      res.status(500).send({
+      console.error('Error fetching coupon codes:', err);
+      res.status(500).json({
         message: 'Internal Server Error',
       });
     }
   } else {
-    res.status(405).end(); // Method Not Allowed
+    res.status(405).json({ message: 'Method Not Allowed' });
   }
 }

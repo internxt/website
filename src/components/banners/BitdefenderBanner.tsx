@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { getImage } from '@/lib/getImage';
 import { X } from '@phosphor-icons/react';
 import Image from 'next/image';
@@ -10,7 +9,6 @@ interface BitdefenderBannerProps {
 }
 
 const BitdefenderBanner = ({ languageForImage, isTempMail }: BitdefenderBannerProps) => {
-  const router = useRouter();
   const [showBanner, setShowBanner] = useState<boolean>(false);
 
   useEffect(() => {

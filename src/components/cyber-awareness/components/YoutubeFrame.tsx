@@ -7,7 +7,6 @@ const YoutubeFrame = ({ videoId }) => {
         id="embeddedVideo"
         src={`https://www.youtube.com/embed/${videoId}`}
         className="md:h-[503px] md:w-[893px]"
-        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; scriptaccess"
         allowFullScreen
         title="Embedded youtube"

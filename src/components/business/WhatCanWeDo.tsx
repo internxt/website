@@ -11,7 +11,6 @@ interface WhatCanWeDoProps {
 
 export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState<number>(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const onRightArrowClick = () => {
     const newIndex = selectedTab === textContent.cards.length - 1 ? 0 : selectedTab + 1;
@@ -25,13 +24,10 @@ export const WhatCanWeDo = ({ textContent }: WhatCanWeDoProps): JSX.Element => {
 
   const onTabSelectorButtonClicked = (tabId: number) => {
     if (selectedTab !== tabId) {
-      setIsTransitioning(true);
-      setTimeout(() => {
-        setSelectedTab(tabId);
-        setIsTransitioning(false);
-      }, 200);
+      setSelectedTab(tabId);
     }
   };
+
   const isLastTab = selectedTab === textContent.cards.length - 1;
 
   return (

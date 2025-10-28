@@ -1,6 +1,5 @@
 import { memo, useEffect } from 'react';
 import { AppProps } from 'next/app';
-import Script from 'next/script';
 import { useRouter } from 'next/router';
 import { Intercom, LiveChatLoaderProvider } from 'react-live-chat-loader';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -22,29 +21,11 @@ const EXCLUDE_INTERCOM_PATHS = [
   '/lifetime/celebration/[filename]',
 ];
 
-const EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER = [
-  '/affiliates/[filename]',
-  '/cloudwards',
-  '/lifetime/celebration/[filename]',
-  '/lifetime/security82',
-  '/pccomponentes-products',
-  '/pccomponentes-business',
-  '/pccomponentes-products-b2b',
-  '/cloud-object-storage',
-  '/cloud-object-storage/checkout',
-  '/',
-  '/pricing',
-  '/family',
-  '/business',
-];
-
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathname = router.pathname;
-  const lang = router.locale;
 
   const shouldShowBanner = !EXCLUDED_PATHS_FOR_BANNER.includes(pathname);
-  const shouldShowBeforeYouGoBanner = !EXCLUDED_PATHS_FOR_BEFORE_YOU_GO_BANNER.includes(pathname);
 
   const hideIntercomButton = EXCLUDE_INTERCOM_PATHS.includes(pathname);
 

@@ -1,10 +1,8 @@
 import exifr from 'exifr';
-import { PDFDocument, PDFPage } from 'pdf-lib';
-import { Document, Packer, Paragraph, TextRun, ISectionOptions } from 'docx';
-import { parseFile, IAudioMetadata } from 'music-metadata';
-import { fetchFile } from '@ffmpeg/util';
+import { PDFDocument } from 'pdf-lib';
+import { Document, Packer, Paragraph, TextRun } from 'docx';
+import { IAudioMetadata } from 'music-metadata';
 import { parseBuffer } from 'music-metadata';
-import { Buffer } from 'buffer';
 
 // Initialize FFmpeg only on client side
 let ffmpeg: any = null;
@@ -246,31 +244,6 @@ async function handlePdfMetadata(file: File): Promise<Blob> {
 
 async function handleWordMetadata(file: File): Promise<Blob> {
   const arrayBuffer = await file.arrayBuffer();
-  const uint8Array = new Uint8Array(arrayBuffer);
-
-  // Create a new document with minimal metadata
-  const doc = new Document({
-    sections: [
-      {
-        properties: {},
-        children: [
-          new Paragraph({
-            children: [new TextRun('')],
-          }),
-        ],
-      },
-    ],
-    styles: {
-      default: {
-        document: {
-          run: {
-            font: 'Calibri',
-            size: 24,
-          },
-        },
-      },
-    },
-  });
 
   // Copy content from original document but without metadata
   try {

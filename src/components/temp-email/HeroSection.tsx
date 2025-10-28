@@ -104,7 +104,7 @@ export const HeroSection = ({ textContent, lang }) => {
       localStorage.setItem(SETUP_TIME_STORAGE_KEY, String(TIME_NOW));
       localStorage.setItem(EMAIL_STORAGE_KEY, JSON.stringify(emailData));
     } catch (error) {
-      // NO OP
+      console.error('Error fetching new email:', error);
     }
   };
 
@@ -126,8 +126,8 @@ export const HeroSection = ({ textContent, lang }) => {
         setMessages([...inboxInLocalStorage, ...newMessages]);
       }
     } catch (err) {
-      // NO OP
       const error = err as Error;
+      console.error('Error fetching inbox:', error);
 
       if (error.message.includes('404')) {
         await onDeleteEmailButtonClicked();
@@ -165,7 +165,7 @@ export const HeroSection = ({ textContent, lang }) => {
         setMessages(inboxInLocalStorage);
       } catch (err) {
         const error = err as Error;
-        console.log({ errorMessage: error.message });
+        console.error('Error fetching message data:', error);
       }
     }
   };

@@ -79,11 +79,13 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
       dispatch({ type: 'SET_CURRENCY', payload: res.currency });
       dispatch({ type: 'SET_CURRENCY_VALUE', payload: res.currencyValue });
     } catch (err) {
+      console.error('Error fetching currency or prices:', err);
+
       try {
         const prices = await stripeService.getPrices('eur');
         dispatch({ type: 'SET_PRODUCTS', payload: prices });
       } catch (error) {
-        console.error('Error getting prices:', error);
+        console.error('Error getting fallback EUR prices:', error);
       }
 
       dispatch({ type: 'SET_CURRENCY', payload: '€' });
@@ -93,27 +95,31 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
     if (fetchLifetimeCoupons) {
       try {
         const lifetimeCoupons = await stripeService.getLifetimeCoupons();
-
         dispatch({ type: 'SET_LIFETIME_COUPONS', payload: lifetimeCoupons });
       } catch (error) {
-        //NO OP
+        console.error('Error fetching lifetime coupons:', error);
+        // Lifetime coupons are optional, continue without them
       }
     }
 
     if (couponCode) {
       try {
         const coupon = await stripeService.getCoupon(couponCode);
-
         dispatch({ type: 'SET_COUPON', payload: coupon });
       } catch (err) {
-        // NO OP
+        console.error('Error fetching coupon:', err);
+        // Coupon is optional, continue without it
       }
     }
 
     if (couponCodeForLifetime) {
-      const lifetimeCoupon = await stripeService.getCoupon(couponCodeForLifetime);
-
-      dispatch({ type: 'SET_COUPON_LIFETIME', payload: lifetimeCoupon });
+      try {
+        const lifetimeCoupon = await stripeService.getCoupon(couponCodeForLifetime);
+        dispatch({ type: 'SET_COUPON_LIFETIME', payload: lifetimeCoupon });
+      } catch (err) {
+        console.error('Error fetching lifetime coupon:', err);
+        // Lifetime coupon is optional, continue without it
+      }
     }
 
     if (couponCodeForBusiness) {
@@ -121,7 +127,8 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
         const businessCoupon = await stripeService.getCoupon(couponCodeForBusiness);
         dispatch({ type: 'SET_BUSINESS_COUPON', payload: businessCoupon });
       } catch (err) {
-        // NO OP
+        console.error('Error fetching business coupon:', err);
+        // Business coupon is optional, continue without it
       }
     }
   };
@@ -139,8 +146,9 @@ function usePricing(options: UsePricingOptions = {}): UseStripeProductsAndCurren
         .then((coupon) => {
           dispatch({ type: 'SET_COUPON', payload: coupon });
         })
-        .catch(() => {
-          //
+        .catch((error) => {
+          console.error('Error fetching coupon in useEffect:', error);
+          // Coupon fetch failed, continue without updating state
         });
     }
   }, [couponCode]);

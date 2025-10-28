@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Layout from '@/components/layout/Layout';
-import { Interval, stripeService } from '@/services/stripe.service';
+import { stripeService } from '@/services/stripe.service';
 import usePricing from '@/hooks/usePricing';
 import { PromoCodeName } from '@/lib/types';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
@@ -10,10 +10,9 @@ const ALLOWED_LANGUAGES = ['es', 'fr', 'pt-br'];
 
 const PCComponentesBusiness = ({ metatagsDescriptions, textContent, lang }): JSX.Element => {
   const metatags = metatagsDescriptions.filter((desc) => desc.id === 'pricing');
-  const [pageName, setPageName] = useState('Pricing Individuals Annually');
+  const [pageName] = useState('Pricing Individuals Annually');
 
-  const [billingFrequency, setBillingFrequency] = useState<Interval>(Interval.Year);
-  const { products, currency, currencyValue, loadingCards, businessCoupon } = usePricing({
+  const { products, currencyValue, loadingCards, businessCoupon } = usePricing({
     couponCodeForBusiness: PromoCodeName.PcComponentesCoupon,
   });
 

@@ -23,7 +23,6 @@ const PCComponentesProducts = ({ metatagsDescriptions, textContent, lang }): JSX
   const contentText = textContent;
 
   const isIndividual = activeSwitchPlan !== 'Business';
-  const isIndividualSwitchEnabled = billingFrequency === Interval.Year;
   const isSubscription = activeSwitchPlan === 'Individuals';
   const isLifetime = activeSwitchPlan === 'Lifetime';
 

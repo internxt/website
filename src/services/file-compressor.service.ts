@@ -29,7 +29,8 @@ const compressImage = async (file: File): Promise<Blob> => {
     const compressedFile = await imageCompression(file, options);
     return compressedFile;
   } catch (error) {
-    throw new Error('Image compression failed');
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`Image compression failed: ${errorMessage}`);
   }
 };
 
@@ -50,7 +51,8 @@ const compressPDF = async (file: File): Promise<Blob> => {
 
     return new Blob([compressedPdfBytes], { type: 'application/pdf' });
   } catch (error) {
-    throw new Error('PDF compression failed');
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`PDF compression failed: ${errorMessage}`);
   }
 };
 
@@ -65,9 +67,6 @@ const compressExcelFile = async (file: File): Promise<Blob> => {
     // Optimize the workbook by removing unnecessary data
     workbook.SheetNames.forEach((sheetName) => {
       const worksheet = workbook.Sheets[sheetName];
-
-      // Remove empty rows and columns
-      const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1');
 
       // Clean up the worksheet by removing empty cells
       Object.keys(worksheet).forEach((key) => {
@@ -90,7 +89,8 @@ const compressExcelFile = async (file: File): Promise<Blob> => {
       type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     });
   } catch (error) {
-    throw new Error('Excel compression failed');
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`Excel compression failed: ${errorMessage}`);
   }
 };
 
@@ -115,7 +115,8 @@ const compressWordFile = async (file: File): Promise<Blob> => {
     // In a real implementation, you might want to recreate a Word document
     return new Blob([simplifiedContent], { type: 'text/plain' });
   } catch (error) {
-    throw new Error('Word compression failed');
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`Word compression failed: ${errorMessage}`);
   }
 };
 
@@ -199,12 +200,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
       let contentEnd = uint8Array.length;
 
       // Look for common PPT file endings and remove trailing data
-      const pptEndings = [
-        // Common PPT file endings
-        [0x00, 0x00, 0x00, 0x00], // Null padding
-        [0xff, 0xff, 0xff, 0xff], // Filled padding
-        [0x20, 0x20, 0x20, 0x20], // Space padding
-      ];
 
       // Remove trailing zeros and padding
       while (contentEnd > 0) {
@@ -288,7 +283,8 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
     // Fallback: return original file
     return file;
   } catch (error) {
-    throw new Error(`PowerPoint compression failed: ${error.message}`);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`PowerPoint compression failed: ${errorMessage}`);
   }
 };
 
@@ -298,8 +294,6 @@ const compressPowerPointFile = async (file: File, fileExtension: string): Promis
  */
 const compressOfficeDocument = async (file: File, fileExtension: string): Promise<Blob> => {
   try {
-    const arrayBuffer = await file.arrayBuffer();
-
     // Handle Excel files with xlsx library
     if (['xls', 'xlsx'].includes(fileExtension.toLowerCase())) {
       return await compressExcelFile(file);
@@ -318,7 +312,8 @@ const compressOfficeDocument = async (file: File, fileExtension: string): Promis
     // Fallback: return original file
     return file;
   } catch (error) {
-    throw new Error(`${fileExtension.toUpperCase()} compression failed`);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`${fileExtension.toUpperCase()} compression failed: ${errorMessage}`);
   }
 };
 
@@ -352,7 +347,8 @@ const compressZIP = async (file: File): Promise<Blob> => {
 
     return compressedZip;
   } catch (error) {
-    throw new Error('ZIP compression failed');
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`ZIP compression failed: ${errorMessage}`);
   }
 };
 

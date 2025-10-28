@@ -1,13 +1,6 @@
-import Image from 'next/legacy/image';
-import SignUpBanner from '@/components/banners/SignUpBanner';
 import Link from 'next/link';
 
-const language = {
-  en: 'EN',
-  es: 'ES',
-};
-const ExplanationSection = ({ textContent, lang, ctaText, ctaLink }) => {
-  const langUpperCase = language[lang] || 'EN';
+const ExplanationSection = ({ textContent, ctaText, ctaLink }) => {
   return (
     <section className="overflow-hidden bg-white">
       {/* Header Section */}

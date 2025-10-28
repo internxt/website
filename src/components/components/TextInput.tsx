@@ -69,7 +69,7 @@ export interface TextInputProps {
   style?: CSSProperties;
 }
 
-const validatePassword = (password) => {
+const validatePassword = (password: string) => {
   const minLength = /.{6,}/;
   const hasDigit = /\d/;
   const hasUpperCase = /[A-Z]/;
@@ -96,6 +96,16 @@ const validatePassword = (password) => {
 
 const TextInput = (props: TextInputProps) => {
   const { register } = props;
+
+  const handleChange = (e: any) => {
+    if (props.onChange) {
+      props.onChange(e);
+    }
+    if (props.onChangeText) {
+      props.onChangeText(e.target.value);
+    }
+  };
+
   return (
     <input
       type={props.type ?? 'text'}
@@ -127,8 +137,7 @@ const TextInput = (props: TextInputProps) => {
       } focus:shadow-none focus:ring focus:ring-primary/10 disabled:cursor-not-allowed disabled:border-gray-10 ${
         props.disabledText ?? 'disabled:text-gray-30'
       } md:text-base ${props.className ?? ''}`}
-      onChange={props.onChange}
-      onKeyPress={() => props.onChangeText}
+      onChange={handleChange}
       onFocus={(e) => {
         if (props.autoCompleteOnFocus) {
           e.target.removeAttribute('readonly');
