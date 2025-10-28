@@ -23,7 +23,7 @@ const PCloudComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, fo
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.PCLOUD87,
+    couponCode: PromoCodeName.BlackFriday,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {

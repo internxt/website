@@ -110,6 +110,14 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        <NavigationLink
+          href="/deals/black-friday-internxt"
+          text={textContent.links.blackFriday}
+          isActive={currentPath === getTitles.links.pricing.trim().toLowerCase()}
+          isDarkMode={darkMode}
+          lang={lang}
+          className="text-primary hover:text-primary-dark"
+        />
 
         <DropdownMenu
           label={textContent.links.products}

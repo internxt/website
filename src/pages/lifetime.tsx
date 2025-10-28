@@ -41,8 +41,8 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE87,
-    couponCodeForLifetime: PromoCodeName.DRIVE87,
+    couponCode: PromoCodeName.BlackFriday,
+    couponCodeForLifetime: PromoCodeName.BlackFriday,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';

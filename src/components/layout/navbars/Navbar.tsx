@@ -31,6 +31,25 @@ export interface NavbarProps {
   hideLoginButton?: boolean;
 }
 
+const EXCLUDED_PATHS_FOR_RIBBON = [
+  '/pricing',
+  '/pricing/b',
+  '/lifetime',
+  '/partner-discount',
+  '/techradar-discount',
+  '/stackcommerce',
+  '/dealfuel',
+  '/mightydeals',
+  '/temporary-email',
+  '/locker',
+  '/startpage',
+  '/oystervpn',
+  '/pccomponentes-products',
+  '/lifetime_special',
+  '/lifetime/celebration/[filename]',
+  '/affiliates/[filename]',
+];
+
 const DRIVE_WEB_URL = 'https://drive.internxt.com';
 
 export default function Navbar(props: Readonly<NavbarProps>) {
@@ -76,7 +95,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
         menuState ? 'bg-opacity-100' : ''
       } z-40 border-b border-black`}
     >
-      <div className="mx-4 w-full lg:mx-10 lg:pt-1 xl:mx-32 3xl:mx-80">
+      <div className="mx-4 w-full  lg:mx-16 lg:pt-1 1.5xl:mx-32">
         <div className="mx-auto flex max-w-screen-xl items-center justify-between">
           <div className="flex flex-row gap-12">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
@@ -287,6 +306,21 @@ export default function Navbar(props: Readonly<NavbarProps>) {
                         }`}
                       >
                         {props.textContent.links.pricing}
+                      </Link>
+
+                      <Link
+                        href="/deals/black-friday-internxt"
+                        locale={props.lang}
+                        role="link"
+                        tabIndex={0}
+                        onClick={() => {
+                          setMenuState(false);
+                        }}
+                        className={`flex w-full translate-y-0 px-8 py-4 text-primary outline-none transition delay-100 duration-300 ${
+                          menuState ? 'opacity-100' : '-translate-y-4 opacity-0'
+                        }`}
+                      >
+                        {props.textContent.links.blackFriday}
                       </Link>
 
                       <Disclosure

@@ -162,6 +162,7 @@ export enum PromoCodeName {
   BaityBait = 'BAITY',
   NextJump = 'PERKS',
   Kripesh = 'KRIPESH',
+  OFF75 = '75OFF',
 }
 
 export interface PromoCodeProps {
