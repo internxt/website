@@ -1,7 +1,13 @@
 import { isMobile } from 'react-device-detect';
 import { ArrowCircleRight } from '@phosphor-icons/react';
 
-const DownloadComponent = ({ textContent, download }) => {
+interface DownloadComponentProps {
+  textContent: any;
+  download: any;
+  lang: string;
+}
+
+const DownloadComponent = ({ textContent, download, lang }: DownloadComponentProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-center space-y-9 pb-6">
       <p className="text-center text-4xl font-semibold text-gray-100">{textContent.downloadTitle}</p>
