@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
@@ -26,14 +26,47 @@ interface CombinedSpecialOfferProps {
 }
 
 const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
-
 const ALTERNATE_RECOMENDATED_PLAN_PATHS: string[] = [];
 const DARK_MODE_PATHS = ['baity'];
-
 const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
   xavier: PromoCodeName.Xavier,
   oscar: PromoCodeName.Oscar,
+};
+
+const useOfferConfig = (pathname: string) => {
+  return useMemo(() => {
+    const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
+
+    if (!selectedPathname) {
+      return {
+        selectedPathname: null,
+        isDarkMode: false,
+        alternateRecommendedPlan: false,
+        couponCode: undefined,
+      };
+    }
+
+    const isDarkMode = DARK_MODE_PATHS.includes(selectedPathname);
+    const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname);
+    const couponCode = COUPON_CODES[selectedPathname];
+
+    return {
+      selectedPathname,
+      isDarkMode,
+      alternateRecommendedPlan,
+      couponCode,
+    };
+  }, [pathname]);
+};
+
+const usePathRedirect = (selectedPathname: string | null) => {
+  const router = useRouter();
+  useEffect(() => {
+    if (!selectedPathname) {
+      router.replace('/specialoffer');
+    }
+  }, [selectedPathname, router]);
 };
 
 function CombinedSpecialOffer({
@@ -44,22 +77,7 @@ function CombinedSpecialOffer({
   navbarLang,
   pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
-  const router = useRouter();
-  const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
-
-  const alternateRecommendedPlan = selectedPathname
-    ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
-    : false;
-
-  useEffect(() => {
-    if (!selectedPathname) {
-      router.replace('/specialoffer');
-    }
-  }, [selectedPathname, router]);
-
-  const couponCode = COUPON_CODES[pathname];
-  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
+  const { selectedPathname, isDarkMode, alternateRecommendedPlan, couponCode } = useOfferConfig(pathname);
 
   const {
     products,
@@ -72,6 +90,13 @@ function CombinedSpecialOffer({
     couponCode: couponCode,
     couponCodeForLifetime: couponCode,
   });
+
+  usePathRedirect(selectedPathname);
+
+  if (!selectedPathname) {
+    return <></>;
+  }
+  const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
   const decimalDiscountForLifetime = lifetimeCoupon?.percentOff && 100 - lifetimeCoupon.percentOff;
