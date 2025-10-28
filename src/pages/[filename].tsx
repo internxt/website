@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
 import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
@@ -13,15 +15,26 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
-import FeaturesSection from '@/components/drive/FeaturesSection';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
   navbarLang: NavigationBarText;
   langJson: SpecialOfferText;
   footerLang: FooterText;
+  pathname: string;
   lang: string;
 }
+
+const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
+
+const ALTERNATE_RECOMENDATED_PLAN_PATHS: string[] = [];
+const DARK_MODE_PATHS = ['baity'];
+
+const COUPON_CODES = {
+  baity: PromoCodeName.BaityBait,
+  xavier: PromoCodeName.Xavier,
+  oscar: PromoCodeName.Oscar,
+};
 
 function CombinedSpecialOffer({
   langJson,
@@ -29,7 +42,23 @@ function CombinedSpecialOffer({
   metatagsDescriptions,
   footerLang,
   navbarLang,
+  pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
+  const router = useRouter();
+  const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
+  const isDarkMode = selectedPathname ? DARK_MODE_PATHS.includes(selectedPathname) : false;
+
+  const alternateRecommendedPlan = selectedPathname
+    ? !ALTERNATE_RECOMENDATED_PLAN_PATHS.includes(selectedPathname)
+    : false;
+
+  useEffect(() => {
+    if (!selectedPathname) {
+      router.replace('/specialoffer');
+    }
+  }, [selectedPathname, router]);
+
+  const couponCode = COUPON_CODES[pathname];
   const metatags = metatagsDescriptions.find((desc) => desc.id === 'special-offer');
 
   const {
@@ -40,8 +69,8 @@ function CombinedSpecialOffer({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.BaityBait,
-    couponCodeForLifetime: PromoCodeName.BaityBait,
+    couponCode: couponCode,
+    couponCodeForLifetime: couponCode,
   });
 
   const decimalDiscount = individualCoupon?.percentOff && 100 - individualCoupon.percentOff;
@@ -67,15 +96,23 @@ function CombinedSpecialOffer({
       couponCodeForCheckout?.name,
     );
   };
-  const navbarCta = 'priceTable';
+
+  if (!selectedPathname) {
+    return <></>;
+  }
 
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
-      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
+      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
 
-      <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} darkMode image={'baity'} />
+      <HeroSection
+        textContent={langJson.HeroSection}
+        percentOff={percentOff}
+        darkMode={isDarkMode}
+        image={'internxt-private-cloud'}
+      />
 
-      <ReviewsSection textContent={langJson.ReviewSection} darkMode />
+      <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -91,17 +128,10 @@ function CombinedSpecialOffer({
         hideBusinessCards
         hideBusinessSelector
         popularPlanBySize="5TB"
-        sectionDetails="bg-[#1C1C1C] lg:py-20"
+        sectionDetails={`${isDarkMode ? 'bg-[#1C1C1C]' : 'bg-white'} lg:py-20`}
         hideFreeCard
-        darkMode
-      />
-
-      <FeaturesSection
-        textContent={langJson.FeaturesSection}
-        lang={lang}
-        download={false}
-        showLastSection={false}
-        darkMode
+        darkMode={isDarkMode}
+        differentRecommended={alternateRecommendedPlan}
       />
 
       <FloatingCtaSectionv2
@@ -109,62 +139,85 @@ function CombinedSpecialOffer({
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${'text-white'}`}>
+            <p
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
+                isDarkMode ? 'text-white' : 'text-gray-95'
+              }`}
+            >
               {parsePercentText(langJson.ctaSection.title)}
             </p>
-            <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${'text-white lg:w-[690px]'}`}>
+            <p
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
+                isDarkMode ? 'text-white lg:w-[690px]' : 'text-gray-55 lg:w-[698px]'
+              }`}
+            >
               {parsePercentText(langJson.ctaSection.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor={
-          'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+          isDarkMode
+            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
         }
-        bgPadding={'pb-10  lg:pt-10 bg-[#1C1C1C]'}
-        bgGradientColor={undefined}
+        bgPadding={isDarkMode ? 'pb-10  lg:pt-10 bg-[#1C1C1C]' : 'pb-10  lg:py-10'}
+        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
       />
 
-      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode />
+      <HorizontalScrollableSection textContent={langJson.NextGenSection} darkMode={isDarkMode} />
 
-      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode />
+      <TrustedSection textContent={langJson.TrustedBySection} bottomBar={false} darkMode={isDarkMode} />
 
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'/pricing'}
         customText={
           <div className="flex flex-col items-center gap-4 px-10 text-center lg:px-0">
-            <p className={`text-2xl font-semibold leading-tight lg:text-4xl ${'text-white'}`}>
+            <p
+              className={`text-2xl font-semibold leading-tight lg:text-4xl ${
+                isDarkMode ? 'text-white' : 'text-gray-95'
+              }`}
+            >
               {parsePercentText(langJson.ctaSection2.title)}
             </p>
-            <p className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${'text-white lg:w-[633px]'}`}>
+            <p
+              className={`text-base font-normal leading-tight lg:text-center lg:text-xl ${
+                isDarkMode ? 'text-white lg:w-[633px]' : 'text-gray-55 lg:w-[698px]'
+              }`}
+            >
               {parsePercentText(langJson.ctaSection2.description)}
             </p>
           </div>
         }
         containerDetails="shadow-lg backdrop-blur-[55px]"
         bgGradientContainerColor={
-          'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+          isDarkMode
+            ? 'linear-gradient(115.95deg, rgba(255, 255, 255, 0.3) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
+            : 'linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)'
         }
-        bgPadding={'lg:pb-10  bg-[#1C1C1C]'}
-        bgGradientColor={undefined}
+        bgPadding={isDarkMode ? 'lg:pb-10  bg-[#1C1C1C]' : 'lg:pb-20 pb-10'}
+        bgGradientColor={isDarkMode ? undefined : 'linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)'}
       />
 
-      <Footer textContent={footerLang} lang={lang} darkMode />
+      <Footer textContent={footerLang} lang={lang} darkMode={isDarkMode} />
     </Layout>
   );
 }
 
 export async function getServerSideProps(ctx) {
   const lang = ctx.locale;
-  const metatagsDescriptions = require(`@/assets/lang/es/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/es/navbar.json`);
-  const langJson = require(`@/assets/lang/es/specialOfferTemplate.json`);
-  const footerLang = require(`@/assets/lang/es/footer.json`);
+  const pathname = ctx.params.filename;
+
+  const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
+  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
+  const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
   return {
     props: {
       lang,
+      pathname,
       metatagsDescriptions,
       navbarLang,
       langJson,
