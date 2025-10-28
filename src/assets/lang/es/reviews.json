@@ -56,7 +56,8 @@
         "Internxt es una solución de almacenamiento en la nube centrada en la privacidad que ofrece cifrado del lado del cliente, seguridad post-cuántica, software de código abierto y servidores con sede en la UE, proporcionando almacenamiento seguro y conforme a un excelente precio."
       ],
       "authors": ["Jon Jacobi - {{company}}", "Craig Hale - {{company}}", "Aleksandar Kochovski - {{company}}"]
-    }
+    },
+    "readMore": "Lee más reseñas en Trustpilot"
   },
   "videoSection": {
     "company": "Cloudwards",

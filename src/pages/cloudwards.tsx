@@ -70,8 +70,13 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         cloudWards
         image={'internxt-private-cloud'}
       />
-
       <ReviewsSection textContent={langJson.ReviewSection} />
+
+      <TrustedSection
+        textContent={langJson.TrustedBySection}
+        bottomBar={true}
+        image="/images/home/NewDesign/mauricio-hoody-techbg.webp"
+      />
 
       <PricingSectionWrapper
         textContent={langJson.tableSection}
@@ -112,12 +117,6 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
 
       <HorizontalScrollableSection textContent={langJson.NextGenSection} />
 
-      <TrustedSection
-        textContent={langJson.TrustedBySection}
-        bottomBar={false}
-        image="/images/home/NewDesign/mauricio-hoody-techbg.webp"
-      />
-
       <FloatingCtaSectionv2
         textContent={langJson.ctaSection2}
         url={'#billingButtons'}
@@ -133,8 +132,7 @@ function Cloudwards({ langJson, lang, metatagsDescriptions, footerLang, navbarLa
         }
         bgGradientContainerColor="linear-gradient(115.95deg, rgba(244, 248, 255, 0.75) 10.92%, rgba(255, 255, 255, 0.08) 96.4%)"
         containerDetails="shadow-lg backdrop-blur-[55px]"
-        bgPadding="lg:py-20 pb-10"
-        bgGradientColor="linear-gradient(0deg, #F4F8FF 0%, #FFFFFF 100%)"
+        bgPadding="lg:py-20 pb-10 bg-neutral-17"
       />
 
       <Footer textContent={footerLang} lang={lang} />

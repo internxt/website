@@ -24,6 +24,7 @@ export interface ReviewFromIndustrySection {
   underStars: string;
   reviewers: ReviewFromIndustrySectionReviewers;
   TechReviews: TechReviews;
+  readMore: string;
 }
 
 export interface TechReviews {

@@ -24,7 +24,7 @@ const SupportSection = ({ textContent }: Readonly<SupportSectionProps>): JSX.Ele
   const cards = Object.values(textContent.cards);
 
   return (
-    <section className="flex h-min w-full flex-col-reverse items-center justify-center gap-8 bg-neutral-17 px-6 py-10 lg:flex-row lg:gap-8 lg:p-10">
+    <section className="flex h-min w-full flex-col-reverse items-center justify-center gap-8 bg-neutral-17 px-6 py-10 lg:flex-row lg:gap-8 lg:p-20">
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:left-32 lg:right-32" />
 
       <div className="flex justify-center lg:w-1/2">
