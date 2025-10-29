@@ -1,9 +1,11 @@
 import { useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { PromoCodeName } from '@/lib/types';
+
 export const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
 export const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
 export const DARK_MODE_PATHS = new Set<string>(['baity']);
+export const ALTERNATIVE_IMAGES_PATHS = new Set<string>(['baity']);
 export const COUPON_CODES = {
   baity: PromoCodeName.BaityBait,
   xavier: PromoCodeName.Xavier,
@@ -15,6 +17,7 @@ interface OfferConfig {
   isDarkMode: boolean;
   alternateRecommendedPlan: boolean;
   couponCode: PromoCodeName | undefined;
+  alternativeImages: string | null;
 }
 
 export const useOfferConfig = (pathname: string): OfferConfig => {
@@ -27,6 +30,7 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
         isDarkMode: false,
         alternateRecommendedPlan: false,
         couponCode: undefined,
+        alternativeImages: null,
       };
     }
 
@@ -34,11 +38,16 @@ export const useOfferConfig = (pathname: string): OfferConfig => {
     const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
     const couponCode = COUPON_CODES[selectedPathname as keyof typeof COUPON_CODES];
 
+    const alternativeImages = ALTERNATIVE_IMAGES_PATHS.has(selectedPathname)
+      ? selectedPathname
+      : 'internxt-private-cloud';
+
     return {
       selectedPathname,
       isDarkMode,
       alternateRecommendedPlan,
       couponCode,
+      alternativeImages,
     };
   }, [pathname]);
 };
