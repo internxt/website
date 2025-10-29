@@ -192,7 +192,7 @@ function CombinedSpecialOffer({
 }
 
 export async function getServerSideProps(ctx) {
-  const lang = 'en';
+  const lang = 'es';
   const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
