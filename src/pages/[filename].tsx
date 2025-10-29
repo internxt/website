@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
-import { useEffect, useMemo } from 'react';
-import { useRouter } from 'next/router';
 import Layout from '@/components/layout/Layout';
-import { PromoCodeName } from '@/lib/types';
 import Footer from '@/components/layout/footers/Footer';
 import usePricing from '@/hooks/usePricing';
 import Navbar from '@/components/layout/navbars/Navbar';
@@ -15,6 +12,8 @@ import FloatingCtaSectionv2 from '@/components/shared/FloatingCtaSectionV2';
 import { PricingSectionWrapper } from '@/components/shared/pricing/PricingSectionWrapper';
 import { stripeService } from '@/services/stripe.service';
 import { SpecialOfferText } from '@/assets/types/specialOfferTemplate';
+import { useOfferConfig, usePathRedirect } from '@/hooks/useSpecialOfferConfig';
+import FeaturesSection from '@/components/drive/FeaturesSection';
 
 interface CombinedSpecialOfferProps {
   metatagsDescriptions: MetatagsDescription[];
@@ -24,50 +23,6 @@ interface CombinedSpecialOfferProps {
   pathname: string;
   lang: string;
 }
-
-const ALLOWED_PATHS = ['baity', 'xavier', 'oscar'];
-const ALTERNATE_RECOMENDATED_PLAN_PATHS = new Set<string>([]);
-const DARK_MODE_PATHS = new Set<string>(['baity']);
-const COUPON_CODES = {
-  baity: PromoCodeName.BaityBait,
-  xavier: PromoCodeName.Xavier,
-  oscar: PromoCodeName.Oscar,
-};
-
-const useOfferConfig = (pathname: string) => {
-  return useMemo(() => {
-    const selectedPathname = ALLOWED_PATHS.find((p) => p === pathname);
-
-    if (!selectedPathname) {
-      return {
-        selectedPathname: null,
-        isDarkMode: false,
-        alternateRecommendedPlan: false,
-        couponCode: undefined,
-      };
-    }
-
-    const isDarkMode = DARK_MODE_PATHS.has(selectedPathname);
-    const alternateRecommendedPlan = !ALTERNATE_RECOMENDATED_PLAN_PATHS.has(selectedPathname);
-    const couponCode = COUPON_CODES[selectedPathname];
-
-    return {
-      selectedPathname,
-      isDarkMode,
-      alternateRecommendedPlan,
-      couponCode,
-    };
-  }, [pathname]);
-};
-
-const usePathRedirect = (selectedPathname: string | null) => {
-  const router = useRouter();
-  useEffect(() => {
-    if (!selectedPathname) {
-      router.replace('/specialoffer');
-    }
-  }, [selectedPathname, router]);
-};
 
 const getThemeClasses = (isDarkMode: boolean) => ({
   title: isDarkMode ? 'text-white' : 'text-gray-95',
@@ -182,6 +137,14 @@ function CombinedSpecialOffer({
         hideFreeCard
         darkMode={isDarkMode}
         differentRecommended={alternateRecommendedPlan}
+      />
+
+      <FeaturesSection
+        textContent={langJson.FeaturesSection}
+        lang={lang}
+        download={false}
+        showLastSection={false}
+        darkMode={isDarkMode}
       />
 
       <FloatingCtaSectionv2
