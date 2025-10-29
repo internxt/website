@@ -61,7 +61,8 @@ function CombinedSpecialOffer({
   navbarLang,
   pathname,
 }: CombinedSpecialOfferProps): JSX.Element {
-  const { selectedPathname, isDarkMode, alternateRecommendedPlan, couponCode } = useOfferConfig(pathname);
+  const { selectedPathname, isDarkMode, alternateRecommendedPlan, couponCode, alternativeImages } =
+    useOfferConfig(pathname);
 
   const {
     products,
@@ -106,15 +107,17 @@ function CombinedSpecialOffer({
     );
   };
 
+  const navbarCta = 'priceTable';
+
   return (
     <Layout title={metatags!.title} description={metatags!.description} segmentName="Partners" lang={lang}>
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection
         textContent={langJson.HeroSection}
         percentOff={percentOff}
         darkMode={isDarkMode}
-        image={'internxt-private-cloud'}
+        image={alternativeImages}
       />
 
       <ReviewsSection textContent={langJson.ReviewSection} darkMode={isDarkMode} />
@@ -189,11 +192,11 @@ function CombinedSpecialOffer({
 }
 
 export async function getServerSideProps(ctx) {
-  const lang = ctx.locale;
+  const lang = 'en';
   const pathname = ctx.params.filename;
 
   const metatagsDescriptions = require(`@/assets/lang/${lang}/metatags-descriptions.json`);
-  const navbarLang = require(`@/assets/lang/${lang}/navbar.json`);
+  const navbarLang = require(`@/assets/lang/en/navbar.json`);
   const langJson = require(`@/assets/lang/${lang}/specialOfferTemplate.json`);
   const footerLang = require(`@/assets/lang/${lang}/footer.json`);
 
