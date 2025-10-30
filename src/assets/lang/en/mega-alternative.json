@@ -1,9 +1,8 @@
 {
   "HeroSection": {
-    "title": "Internxt,  A Secure {{competitor}} Alternative",
-    "description": "Past vulnerabilities in MEGA’s cryptography and lack of full open source software could put your privacy and data at risk. Choose Internxt for post-quantum encryption, VPN, Mail, Meet, and more.",
-    "features": ["Store your videos in privacy", "Post-quantum & zero-knowledge encryption", "Open source and audited"],
-    "getPrivacy": "Get total privacy for ${{percentage}} % off",
+    "title": "Internxt: a **secure** {{competitor}} alternative",
+    "description": "Past vulnerabilities in MEGA's cryptography and lack of full open source software could put your privacy and data at risk. Choose Internxt for **post-quantum encryption**, VPN, Mail, Meet, and more.",
+    "getPrivacy": "Get total privacy for ${{percentage}}% off",
     "cta": "Claim deal"
   },
   "HeaderSection": {

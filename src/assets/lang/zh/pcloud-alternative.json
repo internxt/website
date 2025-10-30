@@ -1,10 +1,9 @@
 {
   "HeroSection": {
-    "title": "Internxt，{{competitor}}的安全替代方案",
-    "description": "正在寻找pCloud的安全替代方案？Internxt提供首个具有后量子加密的云存储服务，以及完整的隐私产品套件，确保最大的隐私和安全性。",
-    "features": ["私密存储您的视频", "后量子加密和零知识加密", "开源且经过验证"],
-    "getPrivacy": "享受${{percentage}}%的折扣，获得完全隐私保护",
-    "cta": "选择套餐"
+    "title": "Internxt：**安全的** {{competitor}} 替代方案",
+    "description": "正在寻找 pCloud 的安全替代方案？Internxt 提供首个具有**后量子加密**的云存储和完整的隐私产品套件，实现最大程度的隐私和安全。",
+    "getPrivacy": "享受完全隐私，**{{percentage}}% 折扣**",
+    "cta": "领取优惠"
   },
   "HeaderSection": {
     "title": "Internxt与{{competitor}}对比",

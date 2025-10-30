@@ -40,6 +40,8 @@ export const EXCLUDED_PATHS_FOR_BANNER = [
   '/brave',
   '/specialoffer',
   '/pcloud-alternative',
+  '/dropbox-alternative',
+  '/mega-alternative',
   '/specialoffer/[filename]',
   '/redeem/[filename]',
   '/[filename]',
