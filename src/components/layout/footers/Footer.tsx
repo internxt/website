@@ -211,13 +211,6 @@ export default function Footer({
 
                     <Link href="/vpn" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.vpn}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/cleaner" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.products.cleaner}
@@ -487,43 +480,15 @@ export default function Footer({
                     </Link>
                     <Link href="/dark-web-monitor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.haveIBeenPwned}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/metadata-remover" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.metadataRemover}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/ai-detector" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.aiDetector}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                     <Link href="/file-compressor" locale={lang} passHref className="items-center hover:text-primary">
                       {textContent.FooterSection.sections.tools.fileCompressor}
-                      <span
-                        className={`ml-2  h-max items-center justify-center rounded-full ${
-                          darkMode ? 'bg-primary/10' : 'bg-primary'
-                        } bg-opacity-15 px-2 py-1 text-xs font-medium uppercase text-primary`}
-                      >
-                        {textContent.FooterSection.new}
-                      </span>
                     </Link>
                   </div>
                 </div>
