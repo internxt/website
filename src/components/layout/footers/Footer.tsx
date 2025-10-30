@@ -60,44 +60,54 @@ export default function Footer({
       }`}
     >
       <div className="flex w-full flex-col items-center justify-center px-6 pt-10 sm:p-20 sm:py-12 lg:pt-16">
-        <div className="flex w-full max-w-[896px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
+        <div className="flex w-full max-w-[1200px] flex-col items-center justify-center space-y-8 pb-9 text-center lg:flex-row lg:items-start lg:space-x-32 lg:space-y-0 lg:text-left">
           {/* Download app for iOS and Android */}
+          <div className="flex w-[900px] flex-row gap-6">
+            <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
+              <div className="flex flex-col space-y-1 ">
+                <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
+                <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} text-sm`}>
+                  {textContent.DownloadApp.description}
+                </p>
+              </div>
+              {/* Images */}
+              <div className="flex flex-col space-y-4  lg:flex-row lg:space-x-4 lg:space-y-0">
+                <div className="flex">
+                  <Image
+                    src={getImage('/images/footer/app-store.svg')}
+                    width={148}
+                    height={44}
+                    quality={100}
+                    className="cursor-pointer"
+                    alt="Download on the App Store"
+                    onClick={() => {
+                      platforms && window.open(platforms.iPhone, '_blank');
+                    }}
+                  />
+                </div>
+                <div className="flex">
+                  <Image
+                    src={getImage('/images/footer/store-for-android.svg')}
+                    onClick={() => {
+                      platforms && window.open(platforms.Android, '_blank');
+                    }}
+                    width={148}
+                    height={44}
+                    className="cursor-pointer"
+                    alt="Get it on Google Play"
+                  />
+                </div>
+              </div>
+            </div>
 
-          <div className="flex w-full max-w-[384px] flex-col items-center justify-center space-y-3 lg:items-start">
-            <div className="flex flex-col space-y-1">
-              <h2 className="text-lg font-medium ">{textContent.DownloadApp.title}</h2>
-              <p className={`${darkMode ? 'text-cool-gray-30' : 'text-gray-80'} text-sm`}>
-                {textContent.DownloadApp.description}
-              </p>
-            </div>
-            {/* Images */}
-            <div className="flex flex-col space-y-4 lg:flex-row lg:space-x-4 lg:space-y-0">
-              <div className="flex">
-                <Image
-                  src={getImage('/images/footer/app-store.svg')}
-                  width={148}
-                  height={44}
-                  quality={100}
-                  className="cursor-pointer"
-                  alt="Download on the App Store"
-                  onClick={() => {
-                    platforms && window.open(platforms.iPhone, '_blank');
-                  }}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  src={getImage('/images/footer/store-for-android.svg')}
-                  onClick={() => {
-                    platforms && window.open(platforms.Android, '_blank');
-                  }}
-                  width={148}
-                  height={44}
-                  className="cursor-pointer"
-                  alt="Get it on Google Play"
-                />
-              </div>
-            </div>
+            <Image
+              src={getImage('/images/components/AppDownload.webp')}
+              width={130}
+              height={130}
+              quality={100}
+              className="cursor-pointer"
+              alt="QR code for download Internxt APP"
+            />
           </div>
 
           <div
