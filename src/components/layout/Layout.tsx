@@ -107,6 +107,17 @@ export default function Layout({
         <link rel="icon" href="/favicon.ico" />
 
         <link rel="stylesheet" href="/cookiebanner.style.css" />
+
+        <link rel="alternate" hrefLang="en-US" href={`https://internxt.com${pathname}`} />
+        <link rel="alternate" hrefLang="es-ES" href={`https://internxt.com/es${pathname}`} />
+        <link rel="alternate" hrefLang="de-DE" href={`https://internxt.com/de${pathname}`} />
+        <link rel="alternate" hrefLang="fr-FR" href={`https://internxt.com/fr${pathname}`} />
+        <link rel="alternate" hrefLang="it-IT" href={`https://internxt.com/it${pathname}`} />
+        <link rel="alternate" hrefLang="ru-RU" href={`https://internxt.com/ru${pathname}`} />
+        <link rel="alternate" hrefLang="zh-CN" href={`https://internxt.com/zh${pathname}`} />
+        <link rel="alternate" hrefLang="zh-TW" href={`https://internxt.com/zh-tw${pathname}`} />
+        <link rel="alternate" hrefLang="x-default" href={`https://internxt.com${pathname}`} />
+
         <style
           style={{ margin: 0, padding: 0, textDecoration: 'none', listStyle: 'none', boxSizing: 'border-box' }}
         ></style>
