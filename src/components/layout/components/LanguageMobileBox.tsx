@@ -60,7 +60,7 @@ export default function LanguageMobileBox({ darkMode, singlesDay }: LanguageMobi
                 {filteredLanguages.map((language) => (
                   <a
                     key={language.text}
-                    href={`/${language.lang === 'en' ? '' : language.lang}${router.pathname}`}
+                    href={`${language.lang === 'en' ? '' : `/${language.lang}`}${router.pathname}`}
                     onClick={(e) => {
                       e.preventDefault();
                       router.push(router.pathname, router.pathname, { locale: language.lang });
