@@ -17,7 +17,7 @@ export default function OfficialCloudProviderSection({ textContent, lang }: Offi
       <div className="absolute left-8 right-8 top-0 h-[1px] bg-neutral-35 lg:bottom-0 lg:left-32 lg:right-32"></div>
 
       <Image
-        src={getImage('/images/home/NewDesign/LevanteUD.webp')}
+        src={getImage('/images/home/NewDesign/levante.png')}
         alt="Internxt official cloud storage partner of Levante UD"
         height={430}
         width={352}
