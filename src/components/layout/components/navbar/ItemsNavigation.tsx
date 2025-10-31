@@ -101,7 +101,7 @@ export const ItemsNavigation = ({
 
   return (
     <div className="links">
-      <div className="hidden items-center space-x-2 lg:inline-flex">
+      <div className="hidden items-center space-x-0 lg:inline-flex">
         <NavigationLink
           href="/pricing"
           text={textContent.links.pricing}

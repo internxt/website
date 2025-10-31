@@ -97,7 +97,7 @@ export default function Navbar(props: Readonly<NavbarProps>) {
     >
       <div className=" w-full lg:px-10 lg:pt-1 xl:pl-32 3xl:pl-80">
         <div className="flex items-center justify-between">
-          <div className="flex flex-row gap-12">
+          <div className="flex flex-row gap-8">
             <div className="flex flex-row items-center justify-start space-x-4 lg:space-x-0">
               {props.hideLogoLink ? (
                 <Image
