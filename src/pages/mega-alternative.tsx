@@ -23,7 +23,7 @@ const MegaComparison = ({ metatagsDescriptions, langJson, lang, navbarLang, foot
     coupon: individualCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.Mega87,
+    couponCode: PromoCodeName.BlackFriday,
   });
 
   const onCheckoutButtonClicked = (priceId: string, isCheckoutForLifetime: boolean) => {

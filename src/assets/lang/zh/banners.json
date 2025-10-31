@@ -9,22 +9,19 @@
     "cancelCta": "取消"
   },
   "FreeCardPromoBanner": {
-    "title": "獲得獨家折扣",
-    "subtitle": { "blue": "特別優惠：", "normal": "更便宜地私人存儲文件" },
+    "title": "領取您的黑色星期五特別優惠!",
+    "subtitle": "**最大**折扣享受**最高隱私**",
     "getDealCta": "獲取優惠",
     "freePlanCta": "繼續使用免費計劃",
     "guarantee": "30天退款保證",
-    "header": {
-      "primaryText": "享受87%折扣",
-      "afterPrimaryText": "在所有終身方案中"
-    },
+    "header": { "primaryText": "享受90%折扣", "afterPrimaryText": "所有套餐" },
     "products": {
-      "drive": "Drive",
-      "antivirus": "Antivirus",
-      "cleaner": "Cleaner",
+      "drive": "雲端硬碟",
+      "antivirus": "防毒軟體",
+      "cleaner": "清理工具",
       "vpn": "VPN",
-      "meet": "Meet",
-      "mail": "Mail"
+      "meet": "會議",
+      "mail": "郵箱"
     }
   },
   "LoginBanner": {
@@ -172,7 +169,7 @@
   "TopBarBanner": {
     "title": {
       "boldText": "",
-      "normalText": "立即享受所有年度和終身計劃85%的折扣！   ",
+      "normalText": "黑色星期五大優惠——僅限時供應！",
       "cta": "選擇你的方案 "
     }
   },

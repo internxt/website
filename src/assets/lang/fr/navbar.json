@@ -1,13 +1,13 @@
 {
   "links": {
     "products": "Produits",
-    "about": "À propos",
-    "ourValues": "Nos valeurs",
+    "about": "Propos",
+    "ourValues": "Valeurs",
     "pricing": "Tarifs",
-    "login": "Se connecter",
+    "login": "Connecter",
     "blackFriday": "Black Friday",
     "getStarted": "Commencer",
-    "chooseStorage": "Choisir le stockage",
+    "chooseStorage": "Choisir stockage",
     "checkout": "Offre de réclamation",
     "business": "Entreprises"
   },
@@ -32,7 +32,7 @@
     "SignUp": {
       "title": "Créer un compte en Internxt",
       "or": "o",
-      "login": "Se connecter",
+      "login": "Connecter",
       "disclaimer": {
         "text": "En vous abonnant, vous acceptez",
         "link": "notre politique de confidentialité"
