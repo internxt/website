@@ -332,15 +332,6 @@
               "Premium": false,
               "Ultimate": true
             }
-          },
-          {
-            "id": "mail",
-            "name": "Mail",
-            "avalability": {
-              "Essential": false,
-              "Premium": false,
-              "Ultimate": true
-            }
           }
         ]
       },

@@ -207,8 +207,7 @@
             "name": "NAS & Rclone support",
             "avalability": { "Essential": false, "Premium": false, "Ultimate": true }
           },
-          { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } },
-          { "id": "mail", "name": "Mail", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } }
+          { "id": "meet", "name": "Meet", "avalability": { "Essential": false, "Premium": false, "Ultimate": true } }
         ]
       },
       {
