@@ -166,7 +166,7 @@ export enum PromoCodeName {
   Xavier = 'XAVIER',
   Oscar = 'OSCAR',
   Bevalk90 = 'BEVALK90',
-  TokinPrivacy90 = 'TOKINPRIVACY90',
+  TokinPrivacy90 = 'TOKIN90',
   GRABON90 = 'GRABON90',
 }
 
