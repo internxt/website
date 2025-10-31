@@ -41,8 +41,8 @@ function LifetimeSpecial({
     lifetimeCoupon: lifetimeCoupon,
     lifetimeCoupons,
   } = usePricing({
-    couponCode: PromoCodeName.DRIVE87,
-    couponCodeForLifetime: PromoCodeName.DRIVE87,
+    couponCode: PromoCodeName.BlackFriday,
+    couponCodeForLifetime: PromoCodeName.BlackFriday,
   });
 
   const percentOff = individualCoupon?.percentOff !== undefined ? String(individualCoupon.percentOff) : '0';
@@ -67,13 +67,13 @@ function LifetimeSpecial({
     );
   };
 
-  console.log(percentOff);
   const ctaText =
     percentOff === '0' ? langJson.ctaSection.titleWithoutDiscount : parsePercentText(langJson.ctaSection.title);
   const ctaText2 =
     percentOff === '0'
       ? langJson.ctaSection2.descriptionWithoutDisocunt
       : parsePercentText(langJson.ctaSection2.description);
+  const navbarCta = 'chooseStorage';
 
   return (
     <Layout
@@ -83,7 +83,7 @@ function LifetimeSpecial({
       lang={lang}
       specialOffer={`https://internxt.com/images/previewLink/LifetimePreviewLink.png`}
     >
-      <Navbar lang={lang} textContent={navbarLang} cta={['payment']} isLinksHidden hideLogoLink hideCTA />
+      <Navbar textContent={navbarLang} lang={lang} cta={[navbarCta]} fixed />
 
       <HeroSection textContent={langJson.HeroSection} percentOff={percentOff} />
 

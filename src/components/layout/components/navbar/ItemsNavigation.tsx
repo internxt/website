@@ -101,7 +101,7 @@ export const ItemsNavigation = ({
 
   return (
     <div className="links">
-      <div className="hidden items-center space-x-2 lg:inline-flex">
+      <div className="hidden items-center space-x-0 lg:inline-flex">
         <NavigationLink
           href="/pricing"
           text={textContent.links.pricing}
@@ -109,6 +109,14 @@ export const ItemsNavigation = ({
           isDarkMode={darkMode}
           lang={lang}
         />
+        <NavigationLink
+          href="/deals/black-friday-internxt"
+          text={textContent.links.blackFriday}
+          isDarkMode={darkMode}
+          lang={lang}
+          isActive
+        />
+
         <DropdownMenu
           label={textContent.links.products}
           items={[
